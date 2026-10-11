@@ -52,3 +52,10 @@ README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATR
 - 左右资料栏默认关闭；地图层和图例也默认折叠；底图 OSM 标准服务，航线悬停简述、点击详情。
 - 英格兰紫色、苏格兰蓝灰；significance 为事件重要性分层；不确定落点使用虚线问号大标记。
 - 参考文献与分级解释见 docs/EVENT_VISUAL_HIERARCHY.md。待用户在实际 GitHub Pages 页面验证无遮挡、底图加载和缩放稳定。
+
+## 2026-10-11 · 首屏可读性热修复
+- 现有 main 的 v0.2.1 页面将左侧章节栏设为默认展开（workspace 初始不含 sidebar-collapsed），右侧仍默认收起；按钮 aria-expanded 与初始状态一致。
+- 首页导语采用1497年当时的历史视角，但严格基于英王亨利七世特许、布里斯托尔远航及寻求亚洲贸易航路的可靠资料。
+- Leaflet atlas-hover 浮窗固定可读宽度与两行短文；避免截图中细长、竖排的悬浮框。
+- 已拟制涵盖16种基础类别、三级历史重要性、地理确定性和视觉语法的 Word 标准预审稿，等用户确认后才可上传并冻结为正式规范。之前仓库 docs/EVENT_VISUAL_HIERARCHY.md 为既有草案，不代表对这次Word版本的批准。
+- 静态代码检查通过；最终浏览器像素效果还需要用户重新打开已部署站点验证。
