@@ -1,0 +1,350 @@
+{
+  "dataset_id": "cabot-1497-1500-pilot-v1",
+  "period": {
+    "from": 1497,
+    "to": 1500
+  },
+  "updated": "2026-10-11",
+  "status": "historical-pilot-reviewed-for-source-consistency",
+  "methodology": {
+    "map": "Present-day geographic basemap; not a reconstructed map of the late fifteenth century.",
+    "uncertainty": "Suggested routes are illustrative and are not georeferenced historical tracks. Landfall hypotheses are not confirmed landing points. No colonial possession polygons are asserted in North America.",
+    "profits": "No reliable colony-related profit or forced-labor total is inferred for 1497–1500.",
+    "monarch": "Henry VII, Kingdom of England; Scotland was a separate kingdom under James IV.",
+    "date_logic": "Each record carries start_year/end_year; the 10-year scale is interface ticks, not a historical time bucket."
+  },
+  "sources": [
+    {
+      "id": "bristol-patent-1496",
+      "title": "First Letters Patent granted by Henry VII to John Cabot, 5 March 1496",
+      "publisher": "University of Bristol, source edition; manuscript National Archives",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1496cabotpatent.htm",
+      "kind": "primary-document-edition"
+    },
+    {
+      "id": "pasqualigo-1497",
+      "title": "Pasqualigo letter, August 1497",
+      "publisher": "University of Bristol, documentary edition",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1497pasqualigo.htm",
+      "kind": "primary-document-edition"
+    },
+    {
+      "id": "soncino-1497",
+      "title": "Raimondo de Soncino letter, December 1497",
+      "publisher": "University of Bristol, documentary edition",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1497soncino.htm",
+      "kind": "primary-document-edition"
+    },
+    {
+      "id": "heritage-1497",
+      "title": "John Cabot's Voyage of 1497",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/cabot-1497.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-landfall",
+      "title": "Evidence for a Northern Landfall",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/northern-landfall.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-newfoundland",
+      "title": "Newfoundland Landfall Argument",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/newfoundland-landfall-argument-cabot.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-cape-breton",
+      "title": "Cape Breton Landfall Argument",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/cape-breton-landfall.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-1498",
+      "title": "John Cabot's Voyage of 1498",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/cabot-1498.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "dcb-cabot",
+      "title": "CABOT, JOHN",
+      "publisher": "Dictionary of Canadian Biography / University of Toronto and Université Laval",
+      "url": "https://www.biographi.ca/en/bio/cabot_jean_1F.html",
+      "kind": "scholarly-biography"
+    }
+  ],
+  "polities": [
+    {
+      "id": "england",
+      "name": "英格兰王国",
+      "name_en": "Kingdom of England",
+      "start_year": 1497,
+      "end_year": 1500,
+      "status": "sovereign",
+      "note": "亨利七世在位；1497远航得到英格兰王室授权。威尔士已处于英格兰王权统治之下。",
+      "location": [
+        52.1,
+        -1.6
+      ],
+      "boundary_status": "modern-boundary-proxy-not-historical",
+      "source_ids": [
+        "bristol-patent-1496"
+      ]
+    },
+    {
+      "id": "scotland",
+      "name": "苏格兰王国",
+      "name_en": "Kingdom of Scotland",
+      "start_year": 1497,
+      "end_year": 1500,
+      "status": "sovereign",
+      "note": "詹姆斯四世在位；1497—1500并非英格兰王国的一部分。",
+      "location": [
+        56.5,
+        -4
+      ],
+      "boundary_status": "modern-boundary-proxy-not-historical",
+      "source_ids": []
+    }
+  ],
+  "events": [
+    {
+      "id": "patent-1496",
+      "year": 1496,
+      "start_year": 1496,
+      "end_year": 1496,
+      "visible_from": 1497,
+      "date_label": "1496年3月5日（前史）",
+      "name": "亨利七世颁发首份远航特许状",
+      "category": "political",
+      "lat": 51.5,
+      "lng": -0.13,
+      "geo_precision": "representative-city",
+      "description": "英格兰国王亨利七世授予卡博特及其儿子远航和相关权利。1497年的航行有此法律背景；特许授权不等于已实际占领海外领土。",
+      "source_ids": [
+        "bristol-patent-1496"
+      ],
+      "certainty": "documented"
+    },
+    {
+      "id": "bristol-sail-1497",
+      "year": 1497,
+      "start_year": 1497,
+      "end_year": 1497,
+      "visible_from": 1497,
+      "date_label": "1497年5月",
+      "name": "“马修号”从布里斯托尔启航",
+      "category": "voyage",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "city",
+      "description": "约翰·卡博特率船员从布里斯托尔出航，尝试向西横跨大西洋。具体出航日、远洋航行路线没有可核实的精确轨迹。",
+      "source_ids": [
+        "heritage-1497",
+        "soncino-1497"
+      ],
+      "certainty": "documented"
+    },
+    {
+      "id": "landfall-1497",
+      "year": 1497,
+      "start_year": 1497,
+      "end_year": 1497,
+      "visible_from": 1497,
+      "date_label": "约1497年6月24日",
+      "name": "北美沿岸登陆（位置未定）",
+      "category": "claim",
+      "lat": 48.8,
+      "lng": -57.2,
+      "geo_precision": "regional-symbol-only",
+      "description": "卡博特1497年抵达北美沿岸的历史事件得到史料支持，准确地点尚无定论。此符号位于争议区域中央，仅供地图引导，不能视为登陆坐标。同期存在为英格兰王权作出宣称的记载，但未建立永久殖民统治。",
+      "source_ids": [
+        "pasqualigo-1497",
+        "heritage-landfall",
+        "heritage-newfoundland"
+      ],
+      "certainty": "place-uncertain"
+    },
+    {
+      "id": "return-1497",
+      "year": 1497,
+      "start_year": 1497,
+      "end_year": 1497,
+      "visible_from": 1497,
+      "date_label": "1497年8月6日",
+      "name": "船队返回布里斯托尔",
+      "category": "voyage",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "city",
+      "description": "卡博特结束1497年航行返回布里斯托尔。该航行未形成持续性的英格兰殖民据点。",
+      "source_ids": [
+        "heritage-1497",
+        "heritage-1498"
+      ],
+      "certainty": "documented"
+    },
+    {
+      "id": "patent-1498",
+      "year": 1498,
+      "start_year": 1498,
+      "end_year": 1498,
+      "visible_from": 1498,
+      "date_label": "1498年2月3日",
+      "name": "第二份远航特许状",
+      "category": "political",
+      "lat": 51.5,
+      "lng": -0.13,
+      "geo_precision": "representative-city",
+      "description": "国王授予卡博特第二份特许状，允许筹备新的航行。该许可并不能证明新的殖民地已出现。",
+      "source_ids": [
+        "dcb-cabot",
+        "heritage-1498"
+      ],
+      "certainty": "documented"
+    },
+    {
+      "id": "departure-1498",
+      "year": 1498,
+      "start_year": 1498,
+      "end_year": 1498,
+      "visible_from": 1498,
+      "date_label": "1498年5月",
+      "name": "卡博特率船队再次出航",
+      "category": "voyage",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "city",
+      "description": "1498年舰队约有五艘船只，后续航程及卡博特本人的结局仍然存在重大史料缺口。网页仅绘制可能远航方向的虚线，不做精确定位。",
+      "source_ids": [
+        "heritage-1498",
+        "dcb-cabot"
+      ],
+      "certainty": "outcome-uncertain"
+    },
+    {
+      "id": "status-1500",
+      "year": 1500,
+      "start_year": 1500,
+      "end_year": 1500,
+      "visible_from": 1500,
+      "date_label": "截至1500年",
+      "name": "尚无已证实的英格兰北美永久殖民地",
+      "category": "status",
+      "lat": 49.4,
+      "lng": -60.9,
+      "geo_precision": "regional-symbol-only",
+      "description": "尽管有远航与主权宣称的记载，此阶段不应绘制北美英格兰有效控制区。这里的'无已证实据点'是史料现状说明，并非对所有可能短期停靠活动的否定。",
+      "source_ids": [
+        "heritage-1497",
+        "heritage-1498"
+      ],
+      "certainty": "synthesis"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "bonavista",
+      "name": "博纳维斯塔角 · 纽芬兰",
+      "lat": 48.7,
+      "lng": -53.08,
+      "source_ids": [
+        "heritage-newfoundland"
+      ],
+      "note": "与较晚的纽芬兰地方传统相关；并未确认为实际登陆点。"
+    },
+    {
+      "id": "capebreton",
+      "name": "布雷顿角岛 · 新斯科舍",
+      "lat": 46.8,
+      "lng": -60.5,
+      "source_ids": [
+        "heritage-cape-breton"
+      ],
+      "note": "历史研究中的另一种登陆地点假说，并非确认坐标。"
+    },
+    {
+      "id": "northern",
+      "name": "纽芬兰北部／拉布拉多方向",
+      "lat": 51.9,
+      "lng": -55.8,
+      "source_ids": [
+        "heritage-landfall"
+      ],
+      "note": "部分学者支持北方登陆假说；图钉只是地理方向示意。"
+    }
+  ],
+  "routes": [
+    {
+      "id": "route1497",
+      "year": 1497,
+      "name": "1497年航行方向示意",
+      "certainty": "illustrative",
+      "note": "非卡博特实际GPS轨迹；从布里斯托尔经爱尔兰西岸到北美的点列仅作跨洋方向展示。",
+      "coords": [
+        [
+          51.4545,
+          -2.5879
+        ],
+        [
+          51.1,
+          -5.6
+        ],
+        [
+          52.2,
+          -10.7
+        ],
+        [
+          53.1,
+          -24
+        ],
+        [
+          52.1,
+          -40
+        ],
+        [
+          49.4,
+          -51.5
+        ],
+        [
+          48.8,
+          -57.2
+        ]
+      ],
+      "source_ids": [
+        "heritage-1497",
+        "heritage-landfall"
+      ]
+    },
+    {
+      "id": "route1498",
+      "year": 1498,
+      "name": "1498年可能远航方向（未知具体航线）",
+      "certainty": "highly-uncertain",
+      "note": "仅证明从布里斯托尔出航；虚线箭头表现推测的西航方向，终点无史料支持，不能用于具体航程判断。",
+      "coords": [
+        [
+          51.4545,
+          -2.5879
+        ],
+        [
+          54,
+          -15
+        ],
+        [
+          54.7,
+          -27
+        ]
+      ],
+      "source_ids": [
+        "heritage-1498",
+        "dcb-cabot"
+      ]
+    }
+  ]
+}
