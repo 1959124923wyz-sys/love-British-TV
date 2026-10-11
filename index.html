@@ -3,34 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f7f4ed">
+<meta name="theme-color" content="#081422">
 <meta name="description" content="英格兰—苏格兰—大不列颠—联合王国殖民扩张及其延续：以可溯源的历史地图展示领土、远航、经济网络、抵抗与独立。1497—1500 首版试运行。">
 <title>帝国的代价 | 大英殖民历史地图 · 1497—1500</title>
-<link rel="preconnect" href="https://basemaps.cartocdn.com">
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=20261011-2">
 </head>
 <body>
 <div class="site">
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>THE COST OF EMPIRE · HISTORICAL ATLAS</small></div></div>
  <div class="head-center"><span class="chapter-tag">历史地图 · 第一章</span><span class="head-divider"></span><span>远航与主权宣称</span></div>
- <div class="head-actions"><span class="version">1497—1500 · PILOT v0.1</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1500 · PILOT v0.2</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
-<div class="workspace">
+<div class="workspace sidebar-collapsed dossier-collapsed" id="workspace">
  <aside class="sidebar">
   <div class="sidebar-main">
    <div class="eyebrow">CHAPTER 001 / 1497—1500</div>
    <h1>大西洋彼岸<br><em>的第一道声索</em></h1>
    <p class="intro">1497年，英格兰王室支持的远航抵达北美沿岸。它成为后来殖民扩张叙事中的重要起点，但当时尚未形成北美永久殖民地。</p>
    <div class="chapter-facts"><div><b>0</b><span>已证实北美<br>永久殖民据点</span></div><div><b>1497</b><span>第一次成功<br>跨大西洋航行</span></div><div><b>1498</b><span>第二次远航<br>结果尚存争议</span></div></div>
-   <div class="side-section-head"><span>历史事件</span><span id="eventCount">—</span></div>
+   <div class="side-section-head"><span>历史事件</span><span id="eventCount">—</span></div><p class="priority-hint">◆ 重大节点优先；其余事件按重要性分级。点击条目查看证据。</p>
    <div id="eventList" class="event-list"><div class="loading">正在读取历史资料……</div></div>
   </div>
   <div class="sidebar-footer"><span class="small-icon">ⓘ</span> 这是一张研究地图。虚线表示不确定性；现代底图不是15世纪行政边界。</div>
  </aside>
  <main class="map-stage" aria-label="1497—1500年历史地图">
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
+  <div class="map-toolbuttons"><button id="toggleSidebarBtn" type="button" aria-controls="eventList" aria-expanded="false" title="显示或隐藏历史事件资料">☰ <span>事件资料</span></button><button id="toggleDossierBtn" type="button" aria-controls="dossierBody" aria-expanded="false" title="显示或隐藏史料详情">▤ <span>史料详情</span></button></div>
   <div class="map-top">
    <div class="map-year-card"><small>当前年份 · YEAR</small><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
    <div class="layers" aria-label="地图图层">
@@ -38,26 +40,28 @@
     <label><input type="checkbox" id="toggleRoutes" checked><span class="layer-dot route"></span>航海示意</label>
     <label><input type="checkbox" id="toggleCandidates" checked><span class="layer-dot ring"></span>登陆假说</label>
     <label><input type="checkbox" id="toggleClaims" checked><span class="layer-dot claim"></span>主权宣称</label>
+    <label><input type="checkbox" id="toggleEvents" checked><span class="layer-dot major"></span>历史事件</label>
+    <label class="secondary-layer"><input type="checkbox" id="toggleMinorEvents"><span class="layer-dot minor"></span>次要事件</label>
    </div>
   </div>
   <div class="map-bottom-left">
    <button id="focusAtlantic" type="button" class="mapbutton">◫ 大西洋全景</button><button id="focusAmerica" type="button" class="mapbutton">◎ 北美候选地</button>
   </div>
-  <div class="map-legend"><b>图例</b><div><i class="swatch control"></i>历史国家地理参考</div><div><i class="swatch dash"></i>推测航海方向</div><div><i class="swatch question"></i>不确定登陆地点</div><div><i class="swatch claim"></i>主权宣称（非殖民地）</div></div>
+  <div class="map-legend"><b>视觉引导</b><div><i class="swatch major"></i>重大节点 · 大标记</div><div><i class="swatch medium"></i>区域节点 · 中标记</div><div><i class="swatch minor"></i>细节事件 · 默认隐藏</div><div><i class="swatch control"></i>英格兰紫色 · 苏格兰蓝灰</div><div><i class="swatch dash"></i>推测航海方向</div><div><i class="swatch question"></i>不确定登陆地点</div><div><i class="swatch claim"></i>主权宣称（非殖民地）</div></div>
   <div class="time-panel">
    <div class="timeline-head"><div><strong>历史时间轴</strong><span>逐年驱动 · 十年主刻度 · 关键年份独立标记</span></div><div class="year-buttons"><button id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button id="nextYear" aria-label="下一年">›</button><button id="playBtn" aria-label="播放时间轴">▶</button></div></div>
    <div class="range-wrap"><input id="yearRange" type="range" min="1497" max="1500" value="1497" step="1" aria-label="拖动年份"><div class="ticks"><span>1497 <small>首次航行</small></span><span>1498 <small>第二次远航</small></span><span>1499</span><span>1500 <small>阶段结束</small></span></div></div>
   </div>
-  <div class="map-sources-tag">地理底图：© OpenStreetMap contributors · © CARTO</div>
+  <div class="map-sources-tag">地理底图：© OpenStreetMap contributors</div>
  </main>
  <aside class="dossier" id="dossier" aria-live="polite">
    <div class="dossier-top"><span>HISTORICAL DOSSIER</span><button id="resetDossier" type="button" title="返回概览">↶</button></div>
    <div id="dossierBody">
-    <div class="dossier-kicker">地图阅读指南</div><h2>史料能够<br>告诉我们什么？</h2>
+    <div class="dossier-kicker">地图阅读指南</div><h2>关注地图，<br>按需探索</h2>
     <p>1497年远航是真实的历史事件，但它的精确航线、登陆位置和随后发生的许多细节尚不能确定。</p>
     <p>本地图将<strong>文献支持的事实</strong>、<strong>历史学者的推测</strong>与<strong>制图示意</strong>分开呈现。</p>
     <div class="dossier-note"><strong>重要区别</strong><p>1497年卡博特为英格兰王室进行的主权宣称，不代表对北美当地原住民土地形成有效统治。地图不会据此把北美画成英格兰殖民地。</p></div>
-    <div class="mini-heading">如何使用</div><p>拖动底部年份滑块，或点击地图上的圆点、虚线与候选地点查看证据和来源。</p>
+    <div class="mini-heading">如何使用</div><p>悬停在标记或航线上读简述，点击查看证据和来源。左右资料栏默认隐藏；在上方按钮中按需展开。</p>
    </div>
    <div class="dossier-bottom"><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/data/atlas-1497-1500.json" target="_blank" rel="noopener">查看可核验数据 ↗</a><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/RESEARCH_HANDOFF.md" target="_blank" rel="noopener">研究交接记录 ↗</a></div>
  </aside>
@@ -65,6 +69,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=pilot1"></script>
+<script src="app.js?v=pilot2-dark"></script>
 </body>
 </html>
