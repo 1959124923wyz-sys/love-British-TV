@@ -144,3 +144,48 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
   }
   .sidebar .intro{font-size:11px;line-height:1.75}
 }
+
+/* v0.3 — compact intro + unified legend: supersedes legacy separated panels. */
+.sidebar-main{padding:12px 14px 16px}
+.chapter-card{margin:0 0 12px;border:1px solid #2b435e;border-radius:10px;background:#13243a;overflow:hidden}
+.chapter-card>summary{list-style:none;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:12px 13px 10px;cursor:pointer;color:#eef3fa}
+.chapter-card>summary::-webkit-details-marker{display:none}
+.chapter-headline{display:flex;flex-direction:column;gap:7px;min-width:0;flex:1}
+.chapter-headline .eyebrow{font-size:9px;letter-spacing:1.45px;white-space:normal;word-break:normal}
+.chapter-title{display:block;font-family:"Noto Serif SC",serif;font-weight:700;font-size:22px;line-height:1.42;letter-spacing:.25px}
+.chapter-title em{display:block;font-style:normal;color:#e7b18f}
+.chapter-chevron{font-size:16px;line-height:1.4;color:#c1cede;transition:transform .18s}
+.chapter-card:not([open]) .chapter-chevron{transform:rotate(180deg)}
+.chapter-body{padding:0 13px 14px}
+.chapter-body .intro{font-size:11px;line-height:1.8;margin:0;color:#c0cedc}
+.chapter-card:not([open]) .chapter-title{font-size:17px}
+.chapter-card:not([open]) .chapter-headline{gap:4px}
+.chapter-facts{margin:12px 0 16px}
+.sidebar-footer,.priority-hint,.map-bottom-left{display:none!important}
+.map-top{pointer-events:none}
+.map-top .map-controls{pointer-events:auto}
+.map-controls{display:block;position:relative;z-index:710;width:155px;margin-left:auto;min-width:155px;padding:0;border:0;background:none;box-shadow:none}
+.map-controls>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center;padding:10px 12px;border:1px solid #3a526a;border-radius:9px;background:#12283ef5;color:#e9f0f8;font-size:11px;font-weight:700;box-shadow:0 5px 20px #0005}
+.map-controls>summary::-webkit-details-marker{display:none}
+.panel-chevron{color:#c5ade8}
+.map-controls .controls-body{position:absolute;top:41px;right:0;width:240px;max-height:min(70vh,540px);overflow:auto;padding:12px;border:1px solid #344e66;border-radius:10px;background:#102238f9;box-shadow:0 12px 30px #0009}
+.map-controls:not([open]) .controls-body{display:none}
+.map-controls .layer-options{display:flex!important;position:static!important;width:auto!important;min-width:0!important;flex-direction:column;gap:1px;padding:0;border:0;background:transparent;box-shadow:none}
+.control-heading{font-size:10px;font-weight:700;letter-spacing:.5px;color:#e0bd9c;margin:0 0 5px}
+.map-controls .layer-options label{display:flex!important;align-items:center;gap:9px;color:#d9e5f0;border:0!important;border-radius:5px;background:transparent!important;box-shadow:none!important;padding:7px 8px;font-size:11px;white-space:nowrap}
+.map-controls .layer-options label:hover{background:#23394e!important}
+.map-controls input{width:13px;height:13px;accent-color:#a48dd8}
+.layer-dot.kingdom{background:#815fd5}
+.layer-dot.route{background:transparent;border:2px dashed #d69d6c}
+.layer-dot.ring{background:transparent;border:2px dashed #e6b77d}
+.layer-dot.claim{background:transparent;border:1px dotted #e7ccab}
+.layer-dot.major{background:#d3a26f}
+.layer-dot.minor{background:#808e9e}
+.control-divider{height:1px;background:#31465a;margin:9px 0 11px}
+.legend-items>div{display:flex;align-items:center;gap:8px;min-height:26px;color:#c2d0df;font-size:10px;line-height:1.35}
+.legend-items i{flex:none;margin-right:0}
+.swatch.control{background:#815fd5;border:1px solid #c0aaea}
+.swatch.question{border:2px dashed #e9bb7e;border-radius:50%;width:13px;height:13px}
+.dossier .event-context{color:#adc0d2;font-size:11px;border-left:2px solid #8496a8;padding-left:10px}
+@media(max-width:1250px){.chapter-title{font-size:20px}.map-controls .controls-body{max-height:64vh}}
+@media(max-width:680px){.chapter-title{font-size:17px}.chapter-body .intro{font-size:10px}.map-controls{right:0;top:auto;min-width:118px;width:118px}.map-controls>summary{padding:8px 9px;font-size:10px}.map-controls .controls-body{width:min(230px,72vw);max-height:65vh}.map-year-card{top:55px}.map-toolbuttons{left:8px;top:8px}}
