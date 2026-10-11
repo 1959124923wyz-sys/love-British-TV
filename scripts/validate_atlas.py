@@ -30,6 +30,12 @@ for key in ("events", "candidates", "routes", "polities"):
                 assert -90 <= lat <= 90 and -180 <= lng <= 180
         if key == "candidates":
             assert -90 <= record["lat"] <= 90 and -180 <= record["lng"] <= 180
+for e in a["events"]:
+    significance = e.get("significance")
+    assert isinstance(significance, dict), ("Missing significance", e["id"])
+    assert type(significance.get("level")) is int and significance["level"] in (1,2,3), ("Invalid tier",e["id"])
+    assert significance.get("rationale"), ("Missing reason",e["id"])
+assert a.get("visual_system",{}).get("importance_independent_of_certainty") is True
 assert not a.get("colonial_polygons"), "Never paint unverified 1497 colonies"
 geo = json.loads((ROOT/"data/modern-uk-regions.topojson").read_text(encoding="utf-8"))
 assert geo["type"] == "Topology"
