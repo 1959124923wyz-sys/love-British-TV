@@ -32,3 +32,8 @@
 
 ## 接力读取顺序
 README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATRIX.md → 数据文件 → 对应研究分支PROGRESS.md及最近Git提交/PR。
+
+## 部署激活检查 · 2026-10-11
+- 用户提供的 GitHub Settings → Pages 截图显示 Source 已设为 GitHub Actions。
+- 本次更新提交至 main 后，应触发仓库内 .github/workflows/pages.yml 的 push 自动发布流程。
+- 暂未取得 GitHub Actions 运行成功与实际地图返回内容的可核验结果，不能标记为已上线；请检查仓库 Actions 页面的 Publish historical atlas。
