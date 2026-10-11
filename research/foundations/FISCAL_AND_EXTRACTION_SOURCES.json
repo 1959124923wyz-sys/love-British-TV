@@ -1,0 +1,154 @@
+{
+  "dataset_id": "british-colonial-finance-source-foundation-v1",
+  "compiled": "2026-10-11",
+  "purpose": "Start with territorial control, then trace distinct economic beneficiaries",
+  "publication_status": "not_a_numeric_time_series",
+  "sources": [
+    {
+      "id": "TNA-BLUE-BOOKS",
+      "title": "Colonies and dependencies from 1782 — statistical blue books",
+      "body": "The National Archives",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/colonies-dependencies-further-research/",
+      "evidence": "Colonial governments annually returned staff/military figures, local taxes and revenue, spending, budgets, trade and shipping",
+      "risk": "Non-standardised columns and missing years; cannot infer metropolitan profit from gross local revenue",
+      "priority": "A"
+    },
+    {
+      "id": "TNA-CO238-QLD",
+      "title": "Colonial Office: Queensland Miscellanea / blue books",
+      "body": "The National Archives (Discovery)",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C4429",
+      "evidence": "CO 238 series of Queensland statistical blue books 1859–1920, 62 volumes",
+      "risk": "Series metadata not individual audited fiscal facts; Australian regional source not automatically global",
+      "priority": "B"
+    },
+    {
+      "id": "TNA-T71-NDO4",
+      "title": "1833 Slavery Abolition and Compensation Claims",
+      "body": "The National Archives",
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/1833-abolition-of-slavery-act-and-compensation-claims/",
+      "evidence": "T 71 slave registrations and claims; NDO 4 compensation payments",
+      "risk": "Compensation to slaveowners; not abolition compensation paid to the enslaved; payments cannot be added to shipping profit",
+      "priority": "A"
+    },
+    {
+      "id": "UCL-LEGACIES",
+      "title": "Legacies of British Slave-Ownership",
+      "body": "University College London",
+      "url": "https://www.ucl.ac.uk/social-historical-sciences/history/research/research-projects-and-centres/centre-study-legacies-british-slavery-cslbs/cslbs-projects-and-partners/legacies-british-slave-ownership",
+      "evidence": "1833 slaveholder/plantation/compensation network, tracks estate ownership back to 1763; UCL states >40,000 slaveowners at 1833 abolition",
+      "risk": "Ownership ≠ investor ≠ shipment; owner can have multiple properties; rights to copy database unverified",
+      "priority": "A"
+    },
+    {
+      "id": "SLAVEVOYAGES-2019",
+      "title": "Trans-Atlantic Slave Trade Database downloads",
+      "body": "SlaveVoyages",
+      "url": "https://www.slavevoyages.org/blog/the-transatlantic-slave-trade-database/163",
+      "evidence": "December 2019 download with 36,108 voyages total across national participation; 274 variables",
+      "risk": "ALL nationalities, not British voyage count; individual rows incomplete; method uses imputation, deduplicate by voyage ID and data version",
+      "priority": "B"
+    },
+    {
+      "id": "SLAVEVOYAGES-METHODOLOGY",
+      "title": "Methodology: Trans-Atlantic Slave Trade Database",
+      "body": "SlaveVoyages",
+      "url": "https://legacy.slavevoyages.org/blog/methodology-trans-atlantic",
+      "evidence": "How observed vs imputed values, ports and captive counts are constructed; voyages not all equal one voyage of British origin",
+      "risk": "Database completeness uneven by region/time and some location values imputed; cannot treat all as exact point lines",
+      "priority": "B"
+    },
+    {
+      "id": "BL-ECONOMIC-IORLE",
+      "title": "India Office Economic Department Records",
+      "body": "British Library",
+      "url": "https://searcharchives.bl.uk/catalog/032-000184227",
+      "evidence": "Revenue and economic departments; relevant to India fiscal system and opium/salt/customs",
+      "risk": "The catalogue is not a profit ledger; institution and dates of series span long time; company and crown government distinct",
+      "priority": "A"
+    },
+    {
+      "id": "HANSARD-COLONIAL-1823",
+      "title": "Colonial Revenue and Expenditure — 25 Feb 1823",
+      "body": "UK Parliament Hansard",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1823/feb/25/colonial-revenue-and-expenditure",
+      "evidence": "Debate contrasting local colonial revenues and British military/civil expenditures, with individual-year examples",
+      "risk": "Speaker's reported numbers in parliamentary debate, not independently audited; colonial revenues not London treasury transfer",
+      "priority": "B"
+    },
+    {
+      "id": "HANSARD-CROWN-1820",
+      "title": "Revenues of the Crown — 28 April 1820",
+      "body": "UK Parliament Hansard",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1820/apr/28/revenues-of-the-crown",
+      "evidence": "Returns on Crown receipts, West Indies duties and some Gibraltar surplus remittances 1760–1820",
+      "risk": "Different accounting windows and categories; material often earmarked for salaries/other disbursements; do not compare without controls",
+      "priority": "B"
+    },
+    {
+      "id": "HANSARD-COLONIAL-1830",
+      "title": "Supply — 10 May 1830",
+      "body": "UK Parliament Hansard",
+      "url": "https://hansard.parliament.uk/Commons/1830-05-10/debates/cdca0dbb-52e4-44b3-8873-cd7b7e37cffb/Supply",
+      "evidence": "Contemporaneous Treasury communications on deficits of selected crown colonies over prior multi-year period",
+      "risk": "Debate/quoted correspondence rather than independently checked accounts; selection excludes many colonies",
+      "priority": "B"
+    },
+    {
+      "id": "HANSARD-PLANTERS-1807",
+      "title": "West India Planters Petition, 12 March 1807",
+      "body": "UK Parliament Hansard",
+      "url": "https://hansard.parliament.uk/Commons/1807-03-12/debates/ca66567a-63b7-4f62-9030-1dce010848d0/WestIndiaPlantersPetition",
+      "evidence": "Planters' explicit contemporaneous economic argument distributing sugar price among duties, freight, commissions and others",
+      "risk": "Interested-party lobbying, not empirical audit; useful for actors/category structure only",
+      "priority": "C"
+    }
+  ],
+  "illustrative_claims_pending_original_account_review": [
+    {
+      "id": "EX-1823-CEYLON-1817",
+      "source_id": "HANSARD-COLONIAL-1823",
+      "raw_statement": "Ceylon 1817 revenue £378,812; expenditure £450,816",
+      "claim_status": "parliamentary_report_not_independently_reconciled",
+      "period_year": 1817,
+      "currency": "GBP nominal",
+      "accounting_entity": "Ceylon colonial government",
+      "period_type": "reported_year",
+      "display_use": "illustrates need to retain expense and local revenue separately; do not interpret as British profit or loss",
+      "published_to_map": false
+    },
+    {
+      "id": "EX-1820-GIBRALTAR-1760-1820",
+      "source_id": "HANSARD-CROWN-1820",
+      "raw_statement": "Reported surplus of Gibraltar revenue remitted to England from 1760 to 1820 after garrison expenses: £124,256 10s 7d",
+      "claim_status": "parliamentary_return_not_independently_reconciled",
+      "period_year": [
+        1760,
+        1820
+      ],
+      "currency": "GBP nominal (pre-decimal)",
+      "accounting_entity": "Crown revenues",
+      "display_use": "illustrates remittance differs from local revenue and total imperial gain; caveat broad interval",
+      "published_to_map": false
+    }
+  ],
+  "mandatory_columns": [
+    "amount_value_raw",
+    "currency_and_unit",
+    "account_year_start",
+    "account_year_end",
+    "financial_year_or_calendar_year",
+    "accounting_entity",
+    "payer",
+    "recipient",
+    "account_category",
+    "gross_or_net",
+    "same_entry_double_count_risk",
+    "source_id",
+    "original_page_or_archive_item",
+    "estimation_method",
+    "reported_vs_audited",
+    "territorial_control_episode_id",
+    "metadata_rights_status"
+  ]
+}
