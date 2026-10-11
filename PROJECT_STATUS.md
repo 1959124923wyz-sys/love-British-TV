@@ -47,3 +47,8 @@ README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATR
 - 折叠按钮 toggleSidebarBtn、toggleDossierBtn；图层 toggleEvents、toggleMinorEvents。不要误将这些功能与德国地图旧代码混在一起。
 - 已于本次提交后执行 GitHub 远端 JS 语法静态校验、HTML 节点映射检查与 JSON 来源/等级检查。未能从此会话直接完成页面像素级浏览器验证；须在实际 Pages 网址复查。
 - 下一步：验证实际黑色界面与底图；检查地图标记重叠、交互命中、历史边界精度和触屏表现；扩展后续历史。
+
+### v0.2 当前精简状态
+- 左右资料栏默认关闭；地图层和图例也默认折叠；底图 OSM 标准服务，航线悬停简述、点击详情。
+- 英格兰紫色、苏格兰蓝灰；significance 为事件重要性分层；不确定落点使用虚线问号大标记。
+- 参考文献与分级解释见 docs/EVENT_VISUAL_HIERARCHY.md。待用户在实际 GitHub Pages 页面验证无遮挡、底图加载和缩放稳定。
