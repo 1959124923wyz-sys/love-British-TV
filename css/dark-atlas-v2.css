@@ -74,3 +74,19 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 @media(max-width:1250px){.workspace{grid-template-columns:258px minmax(0,1fr) 295px}.workspace.sidebar-collapsed{grid-template-columns:0 minmax(0,1fr) 295px}.workspace.dossier-collapsed{grid-template-columns:258px minmax(0,1fr) 0}.workspace.sidebar-collapsed.dossier-collapsed{grid-template-columns:0 minmax(0,1fr) 0}.layers{max-width:380px}}
 @media(max-width:980px){.workspace,.workspace.sidebar-collapsed,.workspace.dossier-collapsed,.workspace.sidebar-collapsed.dossier-collapsed{display:block;position:relative;height:calc(100vh - 60px)}.map-stage{height:100%;width:100%}.sidebar,.dossier{position:absolute;top:0;bottom:0;width:min(315px,88vw);z-index:700;box-shadow:0 0 35px #0009;transition:transform .22s}.sidebar{left:0;transform:translateX(0)}.dossier{right:0;transform:translateX(0)}.workspace.sidebar-collapsed .sidebar{transform:translateX(-110%)}.workspace.dossier-collapsed .dossier{transform:translateX(110%)}.layers{max-width:50%}}
 @media(max-width:680px){.masthead{height:55px}.workspace,.workspace.sidebar-collapsed,.workspace.dossier-collapsed,.workspace.sidebar-collapsed.dossier-collapsed{height:calc(100vh - 55px)}.map-toolbuttons{top:10px;left:8px}.map-toolbuttons button{font-size:10px;padding:8px}.map-toolbuttons button span{display:none}.map-year-card{top:57px;left:8px}.layers{right:8px;top:9px;max-width:68%;gap:3px}.layers label{padding:5px 6px;font-size:9px}.map-bottom-left{left:8px;bottom:155px}.time-panel{left:7px;right:7px;bottom:21px}.map-legend{display:none}.leaflet-control-zoom{display:none}.head-center{display:none}}
+
+/* Progressive disclosure: only two small buttons compete with the map, not a ribbon of switches. */
+.layers{display:block;position:relative;flex:none;max-width:none;min-width:87px;margin-left:auto;padding:0;border:0;background:transparent;box-shadow:none}
+.layers>summary,.map-legend>summary{list-style:none;cursor:pointer;user-select:none;border:1px solid #38516a;border-radius:7px;background:#13283de9;color:#e6eef6;font-size:11px;font-weight:600;padding:10px 13px;box-shadow:0 4px 16px #0004}
+.layers>summary::-webkit-details-marker,.map-legend>summary::-webkit-details-marker{display:none}
+.layers summary span,.map-legend summary span{float:right;margin-left:9px;color:#c0a1e4}
+.layer-options{position:absolute;right:0;top:41px;min-width:185px;padding:9px;display:flex;flex-direction:column;align-items:stretch;gap:5px;border:1px solid #334e66;border-radius:10px;background:#0f2034f5;box-shadow:0 8px 25px #0009}
+.layers:not([open]) .layer-options{display:none}
+.layer-options label{justify-content:flex-start;border:0!important;background:transparent!important;box-shadow:none!important;padding:8px 9px;font-size:11px;white-space:nowrap}
+.layer-options label:hover{background:#213850!important}
+.map-legend{display:block;min-width:0;width:170px;bottom:147px;padding:5px;background:#0f2034ed}
+.map-legend summary{display:block;font-size:10px;padding:8px 9px;border:0;border-radius:5px;background:transparent;box-shadow:none}
+.map-legend>div{margin:7px 8px;font-size:10px}
+.map-legend:not([open])>div{display:none}
+.map-sources-tag a{color:#b0c7d9}
+@media(max-width:680px){.layers{position:relative;top:auto;right:auto;max-width:none}.layer-options{max-height:70vh;overflow:auto}.map-legend{display:block;right:7px;bottom:158px;width:150px}.map-legend[open]{width:175px}}
