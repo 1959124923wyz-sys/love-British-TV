@@ -15,3 +15,8 @@
 - GitHub Pages 如尚未启用，须在 Settings → Pages 启用发布来源；发布状态以实际访问和 Actions 日志为准。
 
 所有重要变更仍应配合 Git 提交 SHA、PR 与分支历史；本文件不替代 Git 的逐次提交记录。
+
+### v0.1.0 后续加固
+- 将英国现代区域轮廓 TopoJSON 按开放资料许可与来源归档进 data/modern-uk-regions.topojson，避免运行时依赖第三方 GitHub CDN。
+- 增加 scripts/validate_atlas.py：核验数据字段、年份、坐标、来源引用及地理资源，加入 Pages 工作流发布前校验。
+- 创建 research/cabot-1497-1500 专题研究分支并提交 PROGRESS.md。
