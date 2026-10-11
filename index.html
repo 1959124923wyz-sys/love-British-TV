@@ -35,19 +35,19 @@
   <div class="map-toolbuttons"><button id="toggleSidebarBtn" type="button" aria-controls="eventList" aria-expanded="false" title="显示或隐藏历史事件资料">☰ <span>事件资料</span></button><button id="toggleDossierBtn" type="button" aria-controls="dossierBody" aria-expanded="false" title="显示或隐藏史料详情">▤ <span>史料详情</span></button></div>
   <div class="map-top">
    <div class="map-year-card"><small>当前年份 · YEAR</small><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
-   <div class="layers" aria-label="地图图层">
+   <details class="layers" aria-label="地图图层"><summary>◫ 图层 <span>▾</span></summary><div class="layer-options">
     <label><input type="checkbox" id="toggleKingdom" checked><span class="layer-dot amber"></span>王国范围</label>
     <label><input type="checkbox" id="toggleRoutes" checked><span class="layer-dot route"></span>航海示意</label>
     <label><input type="checkbox" id="toggleCandidates" checked><span class="layer-dot ring"></span>登陆假说</label>
     <label><input type="checkbox" id="toggleClaims" checked><span class="layer-dot claim"></span>主权宣称</label>
     <label><input type="checkbox" id="toggleEvents" checked><span class="layer-dot major"></span>历史事件</label>
     <label class="secondary-layer"><input type="checkbox" id="toggleMinorEvents"><span class="layer-dot minor"></span>次要事件</label>
-   </div>
+    </div></details>
   </div>
   <div class="map-bottom-left">
    <button id="focusAtlantic" type="button" class="mapbutton">◫ 大西洋全景</button><button id="focusAmerica" type="button" class="mapbutton">◎ 北美候选地</button>
   </div>
-  <div class="map-legend"><b>视觉引导</b><div><i class="swatch major"></i>重大节点 · 大标记</div><div><i class="swatch medium"></i>区域节点 · 中标记</div><div><i class="swatch minor"></i>细节事件 · 默认隐藏</div><div><i class="swatch control"></i>英格兰紫色 · 苏格兰蓝灰</div><div><i class="swatch dash"></i>推测航海方向</div><div><i class="swatch question"></i>不确定登陆地点</div><div><i class="swatch claim"></i>主权宣称（非殖民地）</div></div>
+  <details class="map-legend"><summary>图例与标记说明 <span>▾</span></summary><div><i class="swatch major"></i>重大节点 · 大标记</div><div><i class="swatch medium"></i>区域节点 · 中标记</div><div><i class="swatch minor"></i>细节事件 · 默认隐藏</div><div><i class="swatch control"></i>英格兰紫色 · 苏格兰蓝灰</div><div><i class="swatch dash"></i>推测航海方向</div><div><i class="swatch question"></i>不确定登陆地点</div><div><i class="swatch claim"></i>主权宣称（非殖民地）</div></details>
   <div class="time-panel">
    <div class="timeline-head"><div><strong>历史时间轴</strong><span>逐年驱动 · 十年主刻度 · 关键年份独立标记</span></div><div class="year-buttons"><button id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button id="nextYear" aria-label="下一年">›</button><button id="playBtn" aria-label="播放时间轴">▶</button></div></div>
    <div class="range-wrap"><input id="yearRange" type="range" min="1497" max="1500" value="1497" step="1" aria-label="拖动年份"><div class="ticks"><span>1497 <small>首次航行</small></span><span>1498 <small>第二次远航</small></span><span>1499</span><span>1500 <small>阶段结束</small></span></div></div>
