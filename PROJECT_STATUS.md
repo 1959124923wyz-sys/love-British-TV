@@ -37,3 +37,13 @@ README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATR
 - 用户提供的 GitHub Settings → Pages 截图显示 Source 已设为 GitHub Actions。
 - 本次更新提交至 main 后，应触发仓库内 .github/workflows/pages.yml 的 push 自动发布流程。
 - 暂未取得 GitHub Actions 运行成功与实际地图返回内容的可核验结果，不能标记为已上线；请检查仓库 Actions 页面的 Publish historical atlas。
+
+
+## UI v0.2.0 交接 — 2026-10-11
+- main 已写入深色地图 v0.2：index.html、css/dark-atlas-v2.css、app.js、data/atlas-1497-1500.json。
+- 首屏：左右资料面板默认折叠；不取消底图和时间轴；折叠/展开后需刷新 Leaflet 容器尺寸。仅用户明确点定位按钮才调整地图视角。
+- 实际地图瓦片源改为 https://tile.openstreetmap.org/{z}/{x}/{y}.png，消除旧 CARTO API KEY REQUIRED 占位问题。
+- 历史事件按 significance.level 显示3级醒目、2级普通、1级按需；与 certainty/geoprecision 独立。规范 docs/EVENT_VISUAL_HIERARCHY.md。
+- 折叠按钮 toggleSidebarBtn、toggleDossierBtn；图层 toggleEvents、toggleMinorEvents。不要误将这些功能与德国地图旧代码混在一起。
+- 已于本次提交后执行 GitHub 远端 JS 语法静态校验、HTML 节点映射检查与 JSON 来源/等级检查。未能从此会话直接完成页面像素级浏览器验证；须在实际 Pages 网址复查。
+- 下一步：验证实际黑色界面与底图；检查地图标记重叠、交互命中、历史边界精度和触屏表现；扩展后续历史。
