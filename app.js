@@ -90,7 +90,7 @@ async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
   if(typeof topojson==='undefined')throw new Error('TopoJSON decoder unavailable');
-  const uri='https://cdn.jsdelivr.net/gh/ONSvisual/topojson_boundaries@master/geogUKregion.json';
+  const uri='data/modern-uk-regions.topojson';
   const res=await fetch(uri);if(!res.ok)throw new Error('HTTP '+res.status);
   const topology=await res.json();
   const objects=topology.objects||{};
