@@ -1,0 +1,106 @@
+{
+  "dataset_id": "territorial-control-baseline-checks-v0.1",
+  "prepared_on": "2026-10-11",
+  "publication_state": "research-only-no-polygons",
+  "warning": "These are evidence-workbench cases, NOT approved effective-control boundaries. Do not publish any region fill from these leads.",
+  "cases": [
+    {
+      "id": "PILOT-IRELAND-1490S",
+      "title": "英格兰王权在1490年代爱尔兰的实际治理区",
+      "start_year": 1490,
+      "end_year": 1499,
+      "actor": "Kingdom of England; local Anglo-Irish authorities",
+      "status": "requires_earlier_primary_sources",
+      "relationship": "unresolved_partial_administration",
+      "is_actual_control_polygon_approved": false,
+      "polygon": null,
+      "assertions": [
+        {
+          "claim": "不能根据王权对全岛的权利宣称，将整个爱尔兰画成1490年代实际受英格兰统治。",
+          "kind": "methodological_caution",
+          "source_ids": [
+            "TNA-IRELAND-SP-1509-1782"
+          ],
+          "limitation": "官方SP系列自1509开始；不可把该系列误认为1490年代直接证据。"
+        }
+      ],
+      "next_document_tasks": [
+        "检索15世纪后期爱尔兰议会、英王驻都柏林政府、都柏林城周围Pale史料",
+        "取得有年代的原始地图或专题历史制图材料核实Pale边界",
+        "核查有效税务、法庭、军力辖区与当地领主的权力"
+      ],
+      "geometry_evidence": "not_collected",
+      "rights_checked": false
+    },
+    {
+      "id": "PILOT-JAMESTOWN-1607",
+      "title": "1607年詹姆斯敦英语殖民定居点",
+      "start_year": 1607,
+      "end_year": 1607,
+      "actor": "Virginia Company / Kingdom of England",
+      "status": "settlement_fact_source_checked_polygon_pending",
+      "relationship": "candidate_effective_company_administration_point",
+      "is_actual_control_polygon_approved": false,
+      "polygon": null,
+      "assertions": [
+        {
+          "claim": "英格兰的Jamestown殖民定居点于1607年5月建立。",
+          "kind": "government_heritage_history",
+          "source_ids": [
+            "USNPS-JAMESTOWN"
+          ]
+        },
+        {
+          "claim": "建立Jamestown不能用于填满现今弗吉尼亚州或当年特许状声称的全部领地。",
+          "kind": "cartographic_caution",
+          "source_ids": [
+            "USNPS-JAMESTOWN",
+            "TNA-EARLY-COLONIES-1574-1782"
+          ]
+        }
+      ],
+      "next_document_tasks": [
+        "取得1607—1609年殖民公司及官员记录",
+        "收集关于殖民聚落附近实际设施和波瓦坦政体领土范围的独立研究",
+        "判定是否只显示据点点位，不主张polygon"
+      ],
+      "geometry_evidence": "settlement-place-only",
+      "rights_checked": false
+    },
+    {
+      "id": "PILOT-DOWN-SURVEY-1656",
+      "title": "1656—1658年克伦威尔征服后的爱尔兰土地丈量",
+      "start_year": 1656,
+      "end_year": 1658,
+      "actor": "Commonwealth-era English administration in Ireland",
+      "status": "primary_survey_collection_verified_extraction_pending",
+      "relationship": "land_ownership_transfer_evidence_not_territorial_control_direct",
+      "is_actual_control_polygon_approved": false,
+      "polygon": null,
+      "assertions": [
+        {
+          "claim": "征服后制作的Down Survey可与1641、1670土地所有权变化相联系。",
+          "kind": "research_gis_project_description",
+          "source_ids": [
+            "TCD-DOWN-SURVEY",
+            "TNA-IRELAND-SP-1509-1782"
+          ]
+        },
+        {
+          "claim": "土地所有权转移分布不能直接代替政治统治疆界。",
+          "kind": "cartographic_caution",
+          "source_ids": [
+            "TCD-DOWN-SURVEY"
+          ]
+        }
+      ],
+      "next_document_tasks": [
+        "核定TCD GIS 数据和地图再利用条款",
+        "建立县—barony—parish—townland历史层级与当期土地账目关系",
+        "区分土地所有者、财政受益者和政治行政权力"
+      ],
+      "geometry_evidence": "unlicensed_or_not_extracted",
+      "rights_checked": false
+    }
+  ]
+}
