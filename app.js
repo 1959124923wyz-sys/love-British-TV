@@ -19,7 +19,6 @@ const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
 function syncPanels(){
- $('toggleSidebarBtn').setAttribute('aria-expanded',String(!workspace.classList.contains('sidebar-collapsed')));
  $('toggleDossierBtn').setAttribute('aria-expanded',String(!workspace.classList.contains('dossier-collapsed')));
  setTimeout(()=>map.invalidateSize({pan:false}),250);
 }
@@ -43,11 +42,8 @@ function openDossier(item,typ){
  const title=item.name;const date=isCandidate?'1497年 · 登陆候选地点':isRoute?item.year+'年 · 航线示意':item.date_label;
  const label=isCandidate?'位置假说':isRoute?'方向示意':(categoryName[item.category]||'历史资料');
  const desc=isCandidate?item.note:isRoute?item.note:item.description;
- let details='';
- if(!isCandidate&&!isRoute){details='<div class="dossier-meta"><span class="meta-chip">'+escapeHTML(item.certainty)+'</span><span class="meta-chip">'+escapeHTML(item.geo_precision)+'</span></div>';}
- else details='<div class="dossier-meta"><span class="meta-chip">地理不确定</span><span class="meta-chip">不得作为精确轨迹或实际控制区</span></div>';
- const warning=(isCandidate||isRoute||item.category==='claim'||item.category==='status')?'<div class="dossier-note"><strong>史料边界</strong><p>地图上的位置或形状用于辨识历史问题，并不表示实际登陆点、精确航路或已确立的殖民统治边界。</p></div>':'';
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(title)+'</h2>'+details+'<p>'+escapeHTML(desc)+'</p>'+warning+'<div class="mini-heading">文献与研究来源</div>'+listSources(item.source_ids);
+ const caveat=isCandidate?'准确登陆地点还没有定论。':isRoute?'虚线表示航行方向，不代表已知的逐段航迹。':item.category==='claim'?'王室宣称不等于已经建立了殖民地。':'';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(desc)+'</p>'+(caveat?'<p class="event-context">'+escapeHTML(caveat)+'</p>':'')+'<div class="mini-heading">历史资料</div>'+listSources(item.source_ids);
  openPanel('dossier');
  document.querySelectorAll('.event-item').forEach(n=>n.classList.toggle('selected',n.dataset.eid===selected));
 }
@@ -109,8 +105,6 @@ function setYear(v){
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===1500)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1500){stopPlay();return}setYear(year+1)},1250)}
-function fitAtlantic(){map.fitBounds([[33,-75],[65,13]],{padding:[35,35],animate:true})}
-function fitAmerica(){map.fitBounds([[42,-70],[57,-49]],{padding:[35,35],animate:true})}
 async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
@@ -142,7 +136,7 @@ async function loadKingdomBoundaries(){
 function openPolity(group){
  const p=atlas.polities.find(x=>x.id===(group==='scotland'?'scotland':'england'));if(!p)return;
  const subtitle=group==='wales'?'英格兰王权统治下的威尔士（现代边界参考）':p.name;
- $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · 1497—1500</div><h2>'+escapeHTML(subtitle)+'</h2><p>'+escapeHTML(p.note)+'</p><div class="dossier-note"><strong>地图边界说明</strong><p>着色形状来自现代英国统计区边界，仅用于定位英格兰、苏格兰及威尔士的地理范围；不是1497年的精确政治边界，不可据此判断边境争议地区的历史归属。</p></div>'+listSources(p.source_ids);
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · 1497—1500</div><h2>'+escapeHTML(subtitle)+'</h2><p>'+escapeHTML(p.note)+'</p>'+listSources(p.source_ids);
  openPanel('dossier');
 }
 async function boot(){
@@ -160,18 +154,15 @@ $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target
 $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)});
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
-$('focusAtlantic').addEventListener('click',fitAtlantic);
-$('focusAmerica').addEventListener('click',fitAmerica);
 $('resetDossier').addEventListener('click',resetDossier);
 ['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{
  if(!atlas)return;
  if(id==='toggleMinorEvents'||id==='toggleClaims')renderPoints();
  else updateVisibility();
 }));
-$('toggleSidebarBtn').addEventListener('click',()=>togglePanel('sidebar'));
 $('toggleDossierBtn').addEventListener('click',()=>togglePanel('dossier'));
 syncPanels();
-window.addEventListener('keydown',e=>{if(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()==='s'){e.preventDefault();togglePanel('sidebar');return;}if(!atlas)return;if(e.key==='ArrowLeft'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year+1)}});
+window.addEventListener('keydown',e=>{if(!atlas)return;if(e.key==='ArrowLeft'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year+1)}});
 window.addEventListener('resize',()=>map.invalidateSize());
 setTimeout(()=>map.invalidateSize(),150);
 boot();
