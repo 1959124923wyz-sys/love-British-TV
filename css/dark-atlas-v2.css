@@ -95,3 +95,52 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .map-pin.uncertain{display:flex;align-items:center;justify-content:center;background:#152c41!important;border:2px dashed #f3ce95!important;color:#f3ce95;box-shadow:0 0 0 4px #c1955a33,0 0 15px #ddaa6a66!important}
 .map-pin.uncertain span{font:700 12px/1 system-ui,sans-serif}
 .map-pin.uncertain.tier-2 span{font-size:9px}
+
+/* Hotfix 2026-10-11: avoid the narrow vertical hover strip seen on the Newfoundland screenshot. */
+.leaflet-tooltip.atlas-hover {
+  display:block!important;
+  box-sizing:border-box!important;
+  width:256px!important;
+  min-width:256px!important;
+  max-width:256px!important;
+  height:auto!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  line-height:1.5!important;
+  padding:10px 12px!important;
+  writing-mode:horizontal-tb!important;
+}
+.leaflet-tooltip.atlas-hover strong {
+  display:block;
+  font-size:12px;
+  line-height:1.45;
+  margin:0 0 4px;
+}
+.leaflet-tooltip.atlas-hover .atlas-hover-summary {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+  font-size:11px;
+  line-height:1.55;
+  max-height:3.1em;
+}
+.leaflet-tooltip.atlas-hover small {
+  display:block;
+  font-size:10px;
+  color:#aec0d2;
+  margin-top:5px;
+}
+.sidebar .intro {
+  font-size:12px;
+  line-height:1.85;
+}
+@media(max-width:680px) {
+  .leaflet-tooltip.atlas-hover {
+    width:210px!important;
+    min-width:210px!important;
+    max-width:210px!important;
+  }
+  .sidebar .intro{font-size:11px;line-height:1.75}
+}
