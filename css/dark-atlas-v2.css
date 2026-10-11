@@ -90,3 +90,8 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .map-legend:not([open])>div{display:none}
 .map-sources-tag a{color:#b0c7d9}
 @media(max-width:680px){.layers{position:relative;top:auto;right:auto;max-width:none}.layer-options{max-height:70vh;overflow:auto}.map-legend{display:block;right:7px;bottom:158px;width:150px}.map-legend[open]{width:175px}}
+
+/* Salience ≠ certainty. A world-significant landfall with uncertain coordinates stays large, but hollow/dashed. */
+.map-pin.uncertain{display:flex;align-items:center;justify-content:center;background:#152c41!important;border:2px dashed #f3ce95!important;color:#f3ce95;box-shadow:0 0 0 4px #c1955a33,0 0 15px #ddaa6a66!important}
+.map-pin.uncertain span{font:700 12px/1 system-ui,sans-serif}
+.map-pin.uncertain.tier-2 span{font-size:9px}
