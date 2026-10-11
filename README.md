@@ -1,13 +1,27 @@
-# 大英殖民扩张历史地图 / Imperial Expansion Atlas
+# 帝国的代价 · 英格兰—苏格兰—大不列颠—联合王国殖民扩张历史地图
 
-1490年代至今的英格兰—苏格兰—大不列颠—联合王国殖民扩张、殖民经济、抵抗与独立历史地理资料库。
+基于可核验史料、精确年份、历史主体与不确定性标记的全球动态地图。
 
-**首版试运行：1497—1500年。** 研究用途。历史不确定的航海路线和登陆位置均作为示意呈现，不将王室宣称误标为有效殖民统治。
+## 地图链接
 
-- 网页入口：`index.html`
-- 数据与史料：`data/`
-- 项目现况：`PROJECT_STATUS.md`
-- 更新记录：`CHANGELOG.md`
-- 研究交接：`RESEARCH_HANDOFF.md`
+- **GitHub Pages 正式地址（仓库 Pages 服务启用并成功部署后）**：https://1959124923wyz-sys.github.io/love-British-TV/
+- **即时临时预览（第三方 raw.githack；可能先显示一次安全确认页）**：https://raw.githack.com/1959124923wyz-sys/love-British-TV/main/index.html
 
-本项目按事件时的实际历史政治主体分别归属英格兰、苏格兰等，不以现代国名回填历史。
+若正式地址暂时不可访问：仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**；随后在 Actions 中查看 Publish historical atlas 的运行情况。
+
+## 首批试运行
+
+**1497—1500**：英王亨利七世支持的约翰·卡博特远航、第一次北美登陆地假说、1498年二次远航、王室对海外土地的象征性主张。北美不绘制无证据支持的殖民统治区。航线为方向示意，不是史实精确路径。
+
+## 多对话交接
+
+- [PROJECT_STATUS.md](PROJECT_STATUS.md)：项目当前状态、已知问题与待办。
+- [CHANGELOG.md](CHANGELOG.md)：正式变更日志。
+- [RESEARCH_HANDOFF.md](RESEARCH_HANDOFF.md)：研究与网页维护的任务分工、分支与合并机制。
+- [SOURCE_MATRIX.md](SOURCE_MATRIX.md)：资料来源。
+- [数据文件](data/atlas-1497-1500.json)：机器可读史料和地理不确定性信息。
+- [专题研究分支](../../tree/research/cabot-1497-1500)：研究日志 PROGRESS.md。
+
+开发：静态 HTML + CSS + JavaScript / Leaflet；部署通过 GitHub Pages；本地英国区域轮廓基于 ONS 开放数据，**现代轮廓只用于定位，不代表1497年政治边界**。
+
+网页使用 © OpenStreetMap contributors / © CARTO 底图；地域边界来源为 ONSvisual/topojson_boundaries，含 ONS/OS 开放地理数据，详见来源清单。
