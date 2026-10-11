@@ -14,7 +14,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
 const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'世界／帝国级节点',2:'区域重要节点',1:'地方与补充事件'};
-const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+'"></div>';
+const isUncertain=item=>item.geo_precision==='regional-symbol-only'||/uncertain/i.test(String(item.certainty||''));
+const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，地点不确定':'')+'">'+(isUncertain(item)?'<span aria-hidden="true">?</span>':'')+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div>'+escapeHTML(String(summary).slice(0,110))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查阅史料</small>':'<small>示意信息 · 点击查阅史料</small>');
 const workspace=$('workspace');
 function syncPanels(){
