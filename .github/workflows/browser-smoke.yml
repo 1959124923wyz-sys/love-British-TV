@@ -1,0 +1,26 @@
+name: Desktop atlas browser smoke
+on:
+  pull_request:
+    paths:
+      - "scripts/browser_smoke.py"
+      - "app.js"
+      - "index.html"
+      - ".github/workflows/browser-smoke.yml"
+  workflow_dispatch:
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install browser testing library
+        run: pip install selenium
+      - name: Serve the local atlas and execute browser checks
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_smoke.py
+      - name: Save screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-map-screenshots
+          path: browser-smoke-results/
