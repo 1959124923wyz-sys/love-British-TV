@@ -42,3 +42,7 @@
 ## 独立网页研究预览（新增）
 
 [interactive_research_preview.html](interactive_research_preview.html) 支持1530—1539年的逐年事件揭示、七处延续政治位置、八块概略地理参考，并实现**双击左侧事件平滑定位＋高亮、不改缩放**。预览与主站完全分离，须在克隆文件后通过本地HTTP服务启动（如在仓库根目录运行 `python3 -m http.server 8000`，打开 `http://localhost:8000/research/periods/1530-1539/interactive_research_preview.html`）。其GIS文件是研究示意，尚未经过真实浏览器人工验收。CI增加Node.js语法检查。
+
+## 已制作1539→1540研究继承种子
+
+[NEXT_DECADE_1539_1540_RESEARCH_SEED.json](NEXT_DECADE_1539_1540_RESEARCH_SEED.json)记录截至1539研究的**8条稳定政治身份**及需向1540年代交接的状态，保留图尔奈1519退出，并把**1541爱尔兰国王称号、1542威尔士第二法令及苏格兰王位继承**列为下一时期需证实的事项。**不得把种子当成1540已通过的历史控制地图**。自动检查程序已经核验这8条记录没有被新年代遗漏。
