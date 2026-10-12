@@ -114,14 +114,19 @@
       "date_precision": "year",
       "title_zh": "萨里军攻陷奥康纳家族的莫纳斯特罗里斯城堡",
       "category": "siege",
-      "summary_zh": "1521年7月，萨里军以火炮围攻奥康纳·法利的一处主要城堡莫纳斯特罗里斯，攻取后留下驻军。驻军持续时间仍需查原始账簿。",
+      "summary_zh": "1521年，萨里总督军队围攻莫纳斯特罗里斯。爱尔兰方济各会记录其修道院曾作为当地人的防御工事并在围攻中严重受损；1550年的另一份调查另记当地有两座城堡。是否是同一驻军建筑仍需核查。",
       "source_ids": [
-        "IR-ELLIS-2023"
+        "IR-ELLIS-2023",
+        "IR-FRANCISCANS-MONASTERORIS",
+        "IR-NMS-MONASTERORIS-SMR"
       ],
-      "location_hint": "Monasteroris Castle, Uí Failghe/Offaly",
-      "coordinate": null,
-      "coordinate_type": "historical_site_only_not_geocoded",
-      "certainty": "source_based_event",
+      "location_hint": "Monasteroris medieval fortified friary ruins ~53.34635,-7.08544 (approx); garrison castle location UNVERIFIED",
+      "coordinate": [
+        53.34635313,
+        -7.08543742
+      ],
+      "coordinate_type": "approximate_surviving_friary_ruins_NOT_1521_troop_garrison_castle",
+      "certainty": "siege_high_friary_attested_historical_castle_association_uncertain",
       "significance_suggestion": 2,
       "control_effect": "fortress_capture_temporary_garrison_not_whole_Offaly",
       "funding_relation": null,
@@ -419,7 +424,7 @@
     {
       "id": "1522-MORLAIX-SACK",
       "year": 1522,
-      "date_label": "1522年7月（具体日有分歧）",
+      "date_label": "1522年7月初",
       "date_precision": "month",
       "title_zh": "英军袭击并洗劫法国布列塔尼的莫尔莱",
       "category": "raid_sack",
@@ -427,7 +432,8 @@
       "source_ids": [
         "FR-MORLAIX-CITY-2022",
         "FR-MORLAIX-BAY-HERITAGE",
-        "FR-MURPHY-2021-SCORCHED"
+        "FR-MURPHY-2021-SCORCHED",
+        "FR-MORLAIX-CITY-MAG"
       ],
       "location_hint": "Morlaix (France) historic town center",
       "coordinate": null,
@@ -445,10 +451,12 @@
       "date_precision": "month",
       "title_zh": "英军洗劫苏格兰边境的杰德堡",
       "category": "raid_sack",
-      "summary_zh": "1523年英苏战争期间，英军在边境发动破坏性袭击，杰德堡（Jedburgh）遭洗劫。对城镇的攻击没有改变苏格兰作为独立王国的地位。",
+      "summary_zh": "1523年9月，英军袭击并焚毁杰德堡城镇与防御建筑。萨里伯爵当年战报称围攻修道院却未成功攻下，故不能据此说修道院当时亦已被英军摧毁。苏格兰仍保持独立。",
       "source_ids": [
         "SC-MURPHY-2024-ANGLO-SCOTS",
-        "SC-MURPHY-2024-BOOK-ORIGINAL"
+        "SC-MURPHY-2024-BOOK-ORIGINAL",
+        "SC-SURREY-LETTER-1523-PRINTED",
+        "SC-BL-COTTON-BII"
       ],
       "location_hint": "Jedburgh, Scottish Borders",
       "coordinate": null,
@@ -499,9 +507,58 @@
       "control_effect": "existing_English_held_crossing_fortified_no_new_formal_sovereignty",
       "funding_relation": "fortress_expense_amount_unknown_for_1521_1526",
       "review_status": "candidate_not_live"
+    },
+    {
+      "id": "1523-CESSFORD-SIEGE",
+      "year": 1523,
+      "date_label": "1523年（具体月份待原始军报核对）",
+      "date_precision": "year",
+      "title_zh": "英军围攻苏格兰塞斯福德城堡",
+      "category": "siege",
+      "summary_zh": "英军于1523年围攻塞斯福德城堡。苏格兰历史环境署认为现存遗迹中的部分土工设施可能与这次围城有关；其后当地没有建立持续的英王行政统治。",
+      "source_ids": [
+        "SC-HES-CESSFORD-SM1710",
+        "SC-HES-CESSFORD-TROVE"
+      ],
+      "location_hint": "Cessford Castle NT73759 23853 approx lat55.5077 lon-2.417",
+      "coordinate": [
+        55.5077,
+        -2.417
+      ],
+      "coordinate_type": "modern_HES_site_not_siege_works_exact",
+      "certainty": "year_government_historic_designation",
+      "significance_suggestion": 2,
+      "control_effect": "temporary_siege_no_Scottish_annexation",
+      "funding_relation": null,
+      "review_status": "candidate_not_live"
+    },
+    {
+      "id": "1523-FERNIEHIRST-DEMOLISHED",
+      "year": 1523,
+      "date_label": "1523年9月",
+      "date_precision": "month",
+      "title_zh": "英军攻取并拆毁费尼赫斯特城堡",
+      "category": "siege",
+      "summary_zh": "萨里伯爵的1523年战报称，英军在杰德堡附近与费尼赫斯特守军交战，用火炮攻入并拆毁堡垒，未建立长期英王城堡行政管辖。",
+      "source_ids": [
+        "SC-BL-COTTON-BII",
+        "SC-SURREY-LETTER-1523-PRINTED",
+        "SC-HES-FERNIEHIRST-LB13369"
+      ],
+      "location_hint": "Ferniehirst Castle LB13369 NT65235 17969, ~lat55.4543 lon-2.5512",
+      "coordinate": [
+        55.4543,
+        -2.5512
+      ],
+      "coordinate_type": "HES_site_coordinates_original_1523_structure_later_modified",
+      "certainty": "autograph_catalog_plus_edited_commander_letter",
+      "significance_suggestion": 2,
+      "control_effect": "temporary_local_military_capture_not_castle_annexation",
+      "funding_relation": null,
+      "review_status": "candidate_not_live"
     }
   ],
-  "events_count": 24,
+  "events_count": 26,
   "no_implied_permanent_conquest_from_event": true,
   "geolocating": "null explicitly: separate source-backed modern gazetteer positions may be added by editorial analyst, do not invent coordinates or exact 1527 voyage polyline"
 }
