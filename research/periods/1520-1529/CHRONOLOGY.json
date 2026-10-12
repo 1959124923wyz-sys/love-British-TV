@@ -511,19 +511,20 @@
     {
       "id": "1523-CESSFORD-SIEGE",
       "year": 1523,
-      "date_label": "1523年（具体月份待原始军报核对）",
-      "date_precision": "year",
+      "date_label": "1523年5月（19日炮击为原档待核线索）",
+      "date_precision": "month_with_unverified_exact_day",
       "title_zh": "英军围攻苏格兰塞斯福德城堡",
       "category": "siege",
       "summary_zh": "英军于1523年围攻塞斯福德城堡。苏格兰历史环境署认为现存遗迹中的部分土工设施可能与这次围城有关；其后当地没有建立持续的英王行政统治。",
       "source_ids": [
         "SC-HES-CESSFORD-SM1710",
-        "SC-HES-CESSFORD-TROVE"
+        "SC-HES-CESSFORD-TROVE",
+        "SC-EDIN-CESSFORD-SIEGE-19MAY"
       ],
       "location_hint": "Cessford Castle NT73759 23853 approx lat55.5077 lon-2.417",
       "coordinate": [
-        55.5077,
-        -2.417
+        55.50773533158564,
+        -2.4170252121385114
       ],
       "coordinate_type": "modern_HES_site_not_siege_works_exact",
       "certainty": "year_government_historic_designation",
@@ -547,8 +548,8 @@
       ],
       "location_hint": "Ferniehirst Castle LB13369 NT65235 17969, ~lat55.4543 lon-2.5512",
       "coordinate": [
-        55.4543,
-        -2.5512
+        55.45433335692256,
+        -2.551239283870413
       ],
       "coordinate_type": "HES_site_coordinates_original_1523_structure_later_modified",
       "certainty": "autograph_catalog_plus_edited_commander_letter",
@@ -556,9 +557,34 @@
       "control_effect": "temporary_local_military_capture_not_castle_annexation",
       "funding_relation": null,
       "review_status": "candidate_not_live"
+    },
+    {
+      "id": "1523-WARK-SCOTS-FRENCH-SIEGE",
+      "year": 1523,
+      "date_label": "1523年11月初",
+      "date_precision": "month",
+      "title_zh": "苏法联军围攻英格兰沃克城堡，但未能攻陷",
+      "category": "siege",
+      "summary_zh": "1523年，苏格兰摄政奥尔巴尼公爵率苏法联军进攻英格兰边境沃克城堡，外层防御一度被突破，但守军坚持至英军来援，围攻失败。",
+      "source_ids": [
+        "ENG-HE-WARK-SM1013100",
+        "ENG-BL-WARK-1523-AUTOGRAPH",
+        "SC-MURPHY-ALBANY-2024"
+      ],
+      "location_hint": "Wark-on-Tweed Castle Carham Northumberland Scheduled Monument 1013100",
+      "coordinate": [
+        55.64175258837099,
+        -2.2812653568241483
+      ],
+      "coordinate_type": "English Heritage listed ruin reference point, not siege front line",
+      "certainty": "national_designation_plus_original_letter_1523_archival_index",
+      "significance_suggestion": 2,
+      "control_effect": "Scottish_counterattack_failed_English_frontier_castle_still_English",
+      "funding_relation": null,
+      "review_status": "candidate_not_live"
     }
   ],
-  "events_count": 26,
+  "events_count": 27,
   "no_implied_permanent_conquest_from_event": true,
   "geolocating": "null explicitly: separate source-backed modern gazetteer positions may be added by editorial analyst, do not invent coordinates or exact 1527 voyage polyline"
 }
