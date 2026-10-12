@@ -411,3 +411,11 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  background:transparent;pointer-events:none;
 }
 .leaflet-controlAreaPane-pane,.leaflet-control-area-pane{pointer-events:auto}
+
+/* Map-first v1.2 — historical dependency symbols and restrained archive control. */
+.chapter-archive-toggle{display:flex;align-items:center;gap:7px;padding:7px 3px 10px;color:#b5c9d9;font-size:10px;cursor:pointer;border-bottom:1px solid rgba(149,165,183,.14)}
+.chapter-archive-toggle input{width:13px;height:13px;accent-color:#d2aa80}
+.layer-dot.dependency{width:14px;height:14px;border-radius:3px;border:1.5px solid #b3a2d8;background:repeating-linear-gradient(135deg,#b3a2d8 0 2px,#18304a 2px 5px)}
+.legend-items .swatch.dependency{width:17px;height:12px;border:1px solid #baadd2;background:repeating-linear-gradient(135deg,#b6a3d3 0 2px,transparent 2px 5px)}
+.leaflet-marker-icon.political-relation-symbol{border:0!important;background:transparent!important;box-shadow:none!important}
+.event-item.event-upcoming{opacity:.58}
