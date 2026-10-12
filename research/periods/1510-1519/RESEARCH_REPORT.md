@@ -73,3 +73,15 @@
 
 ## 已知不足
 原始绝大多数档案未直接逐页核证。特别是600,000金币与2,264 livres目前属于历史著作或检索摘录的候选统计；Tournai圈是任意可视半径，不是古代实际城墙；英苏/爱尔兰各地宏观地界尚待跨时代资料拟合。第三方历史制图版权未取得重新发布授权。研究员按审稿门槛逐条处理，网页维护者单独决定正式上线。
+
+
+## 1510—1519年补充审计（2026-10-12，优先于初稿中有关1519 Surrey的简写）
+**1517年英王资助的北美殖民定居准备**：David B. Quinn撰写的加拿大传记辞典[Rastell传记](https://www.biographi.ca/en/bio/rastell_john_1E.html)明确记载1517年3月5日Henry VIII致支持信并向John Rastell the elder、John Howting、Richard Spicer提供少量贷款；至少四条载有定居物资的船被准备，沿桑威奇、达特茅斯、普利茅斯、法尔茅斯等港口因争执而终止原计划，未建立北美定居点。**这是与Sebastian Cabot/Thomas Pert 1516/1517据称海外航行不同的研究事件**。可以在1517时间轴显示定居企划及失败，但不能给纽芬兰或拉布拉多绘制英王已占领的殖民地。
+
+**1515爱尔兰治理报告**：BL [Add MS4792 ff96–110](https://searcharchives.bl.uk/catalog/040-002110309)馆藏约1515治理建议文本，Add MS4763 ff481–495为17世纪抄本；William Darcy于1515年6月24日提交王室枢密院的方案有Bodleian Laud Misc611摘录/NLI微缩资料。现仍属馆藏定位与专业论文总结，尚未把报道的“四郡半数服从王法”误译为精确50%地籍测量。
+
+**1519治理职务时间纠正**：E. G. Ellis (2023), [*Prelude to the Tudor Conquest*](https://www.cambridge.org/core/journals/irish-historical-studies/article/prelude-to-the-tudor-conquest-henry-viii-and-the-irish-expedition-of-thomas-howard-earl-of-surrey-152022/A73EF1BFDA236A75D51F98162D616640) 依据TNA SP1/30 f90及SP60/1 ff70–73提出：1519年召基尔代尔进宫廷问讯、11月决定换人，正式由Surrey享有更高头衔的lieutenant和随军任命发生1520年2月。1519年地图应展示王室**筹划行政更替**，不要把萨里1520—22军事远征前移一年。
+
+**图尔奈外围行政空间：重要待拓展**：[瓦隆地区历史地图集（1513—1519）](https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-sous-influence-anglaise)记录图尔奈城及其外围Tournaisis均曾处于英格兰影响范围；[里尔大学2013年历史学博士论文](https://pepite.univ-lille.fr/ori-oai-search/notice/view/2013LIL30041)指出当地约60个乡村教区涉及封建领主、城市法院与bailli行政框架。因此前一版图尔奈城市中心1.15km圆圈只具有**地点符号**功能，尚待针对乡村司法/税赋核查后以虚线描述外围范围。原历史地图版权未获许可，资料包仅保存链接，**未复制原图及其数字化边界**。瓦隆网页称英国下议院席位，Davies (1998)学术研究反对，此处维持审慎处理。
+
+详见[RESEARCH_GAPS_AND_PRIORITY_20261012.json](RESEARCH_GAPS_AND_PRIORITY_20261012.json)按地图影响和证据可靠度排序的8项待办。
