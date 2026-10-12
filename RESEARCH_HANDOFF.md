@@ -1,3 +1,9 @@
+## 2026-10-12 · 面向所有新调查员的长期强制接棒流程
+
+**必须按 [AGENTS.md](AGENTS.md) 和 [跨年代疆域连续性工作纲领](docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md)执行**。研究员不能在新十年从空白地图开始。先读取上一期 `places`、城市实际控制、间接政体与虚线研究几何，再完整登记每个 `stable_id` 去向；逐年比较领土增减、终止日期、不同政体权力，不得将 `observed_through_year` 当历史撤军日。若证据不够，保留研究虚线和待核状态，不得硬填实心边界。
+
+每期必须提交 [统一过渡模板](research/continuity/templates/DECADE_TRANSITION_TEMPLATE.json) 与 [主编交接模板](research/continuity/templates/EDITOR_HANDOFF_TEMPLATE.md)，至少包含所有上期ID的去向、年末快照、数据源谱系、历史可用GIS图层、具体不确定性、下一期接棒；通过通用脚本 `python3 scripts/validate_control_transition.py --previous <上一期JSON> --transition <本期过渡JSON>`（首次可`--self-test`），并记录真实执行结果。项目历史案例与现有逐年关联见 [1497—1529研究连续台账](research/continuity/CONTROL_TIMELINE_1497_1529.json) 和 [PR #10 主编手册](research/continuity/EDITOR_HANDOFF_1497_1529.md)。研究阶段按独立分支和草稿PR提交；主编仍负责审定、发布和网页交互验收。**该流程与地图优先及v0.9已批准交互共同适用。**
+
 ## 用户批准的地图交互长期规则 · 2026-10-12
 
 **接手必读：[正式v0.9交互规范](docs/APPROVED_MAP_INTERACTION_STANDARD.md)。** 这一批准版覆盖之前的v0.7满图图标扇出构想和早期聚合列表设计。
