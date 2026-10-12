@@ -130,7 +130,7 @@ assert "expanded-event" in app
 assert "leaflet-marker-icon.atlas-flyout-icon" in css
 assert "background:transparent!important" in css
 assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
-assert "PILOT v1.1" in html
+assert "PILOT v1.2" in html
 
 # Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
@@ -176,7 +176,7 @@ assert "data/atlas-1510-1519.json" in app
 assert "data/geography-1510-1519-hypotheses.geojson" in app
 assert "year>=1513&&year<=1518" in app
 assert 'id="chapterThree"' in html and 'max="1519"' in html
-assert "renderEventList();renderControlAreas();renderPoints();renderHypotheses();renderMilestones()" in app
+assert "renderEventList();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app
 assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
 assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
 # MAP-FIRST French urban control polygons are explicitly symbols, not surveyed historic city walls.
@@ -203,9 +203,21 @@ assert active_city_symbols(1519) == {"calais-crown"}
 assert "function renderControlAreas()" in app
 assert "controlAreaPane" in app
 assert "calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type)" in app
-assert "renderControlAreas();renderPoints();renderHypotheses()" in app
+assert "renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()" in app
 assert 'id="toggleControlAreas"' in html
 assert (ROOT/"docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md").is_file()
+# v1.2 political relationship coverage and chronological-event reveal.
+relations=json.loads((ROOT/"data/political-relations-1500-1519.geojson").read_text(encoding="utf-8"))
+assert relations["type"]=="FeatureCollection" and len(relations["features"])==5
+relation_types={f["properties"]["political_relation"] for f in relations["features"]}
+assert {"crown_dependency","autonomous_lordship","scottish_crown_territory","crown_administration_core"} <= relation_types
+assert all(f["geometry"]["type"]=="Point" and f["properties"]["historic_polygon_verified"] is False for f in relations["features"])
+assert "function renderPoliticalRelationAreas()" in app
+assert "if((atlas===atlasEarly&&e.year>1499)||e.year>year)continue;" in app
+assert "fullArchive||e.year<=year" in app
+assert 'id="showFullChapterArchive"' in html
+assert 'id="togglePoliticalRelations"' in html
+
 
 
 assert "data/historical-detail-notes.json" in app and "renderHypotheses()" in app
