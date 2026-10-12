@@ -116,8 +116,8 @@ assert "atlas-aggregate" in app and "clusterExpanded" in app
 assert "map.containerPointToLatLng" in app and "map.latLngToContainerPoint" in app
 assert "Math.ceil(Math.sqrt(n))" not in app
 assert "uncertain-badge" not in app
-assert "calais(f)?3.4:2.7" in app
-assert "fillOpacity:f.geometry.type==='LineString'?0:calais(f)?.12:.07" in app
+assert "weight:calais?3.4:2.7" in app and "dashArray:'7 5'" in app
+assert "fillOpacity:f.geometry.type==='LineString'?0:.08" in app
 # v0.9: regression checks for transparent fan-out and readable event descriptions.
 assert "map.createPane('eventTooltipPane')" in app
 assert "map.getPane('eventTooltipPane').style.zIndex='820'" in app
@@ -130,7 +130,7 @@ assert "expanded-event" in app
 assert "leaflet-marker-icon.atlas-flyout-icon" in css
 assert "background:transparent!important" in css
 assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
-assert "PILOT v1.3" in html
+assert "PILOT v1.4" in html
 
 # Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
