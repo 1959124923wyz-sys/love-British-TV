@@ -1,0 +1,129 @@
+{
+  "schema": "love-british-tv-map-evidence-v1",
+  "period": {
+    "from": 1520,
+    "to": 1529
+  },
+  "updated": "2026-10-12",
+  "role": "Supplement to existing PR #8 54-source research register and PR #9 editor reference list. Not a claim to have read protected manuscripts.",
+  "synthesis": [
+    {
+      "id": "MAP-HRP-1520",
+      "institution": "Historic Royal Palaces",
+      "title": "The Field of Cloth of Gold",
+      "url": "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/the-field-of-cloth-of-gold/",
+      "read_scope": "Institutional historical narrative reviewed",
+      "relevant_claim": "Guînes was English-owned in 1520; Ardres was French; neutral meeting ground between the two. The meeting is no annexation.",
+      "evidence_for": "english_guines_and_french_ardres; neutral_diplomatic_event",
+      "limitations": "The page is not a parcel-scale survey or sixteenth-century cadastral plan."
+    },
+    {
+      "id": "MAP-MUNBY-2016",
+      "institution": "English Heritage Historical Review / Taylor & Francis",
+      "title": "Julian Munby, The Field of Cloth of Gold: Guînes and the Calais Pale Revisited",
+      "url": "https://www.tandfonline.com/doi/abs/10.1179/1752016915Z.00000000026",
+      "read_scope": "Publisher abstract and publicly indexed notes, not complete paywalled article",
+      "relevant_claim": "The historical landscape and fortresses of the Calais Pale can be studied from Tudor surveys and historic maps; no source here gives our inherited 1520s polygon exact status.",
+      "evidence_for": "historical_Pale_context; survey_archive_leads",
+      "limitations": "TNA E315/371–372 surveying dates to 1556 and the cited Pas-de-Calais CPL 1414 is a much later tracing; neither was directly accessed or copied. Later surveys may not be silently applied to 1520 boundaries."
+    },
+    {
+      "id": "MAP-MURPHY-2025",
+      "institution": "Northumbria University / Routledge",
+      "title": "Neil Murphy, Tudor England's French Frontier: The Laws of Guînes (1529) and the Defence of the Calais Pale",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tudor-englands-french-frontier-the-laws-of-gu%C3%AEnes-1529-and-the-de/",
+      "read_scope": "University publisher/repository abstract only; embargoed full chapter not examined",
+      "relevant_claim": "1525 commission for Guînes settlement/security and 1529 legal restrictions/English settler incentives. This does not show measured rural border or law enforcement counts.",
+      "evidence_for": "guines_frontier_governance; 1529_anglicisation_policy",
+      "limitations": "No numbers of actually relocated/expelled tenant farmers; no verified parcel or period-specific 1529 GeoJSON."
+    },
+    {
+      "id": "MAP-ELLIS-PALE-2021",
+      "institution": "Boydell & Brewer / Cambridge Core",
+      "title": "Steven G. Ellis, Ireland's English Pale, 1470–1550",
+      "url": "https://www.cambridge.org/core/books/irelands-english-pale-14701550/75C7AB64DF6AAF406B9544F2D2BCDCFA/listing",
+      "read_scope": "Publisher-hosted extracts and chapter summary, not full book or period-era maps",
+      "relevant_claim": "The English Pale concerned actual restricted administration in parts of four shires; a 1515 reform treatise reported only about half of four medieval shires under king's law. Medieval county limits are not valid Tudor real-control boundaries.",
+      "evidence_for": "irish_pale_not_whole_ireland; legal_area_not_surveyed_control",
+      "limitations": "No exact 1520-1529 boundary polygon proved; cannot fill the four modern counties."
+    },
+    {
+      "id": "MAP-ELLIS-2023",
+      "institution": "Irish Historical Studies / Cambridge University Press",
+      "title": "Steven G. Ellis, Prelude to the Tudor conquest: Henry VIII and the Irish expedition of Thomas Howard, earl of Surrey, 1520–22",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/prelude-to-the-tudor-conquest-henry-viii-and-the-irish-expedition-of-thomas-howard-earl-of-surrey-152022/A73EF1BFDA236A75D51F98162D616640",
+      "read_scope": "Referenced by original investigator as full open-access article; bibliography and record inspected in existing research package",
+      "relevant_claim": "Deputy-led military operations do not demonstrate routine English direct administration over entire Ireland; Monasteroris garrison bounds and retreat need independent original evidence.",
+      "evidence_for": "crown_dublin_1520s; temporary_castle_capture_not_provincial_control",
+      "limitations": "Exact garrison footprint and withdrawal date unresolved."
+    },
+    {
+      "id": "MAP-JOYCE-1488",
+      "institution": "Historic Dublin local history / printed 1488-1495 statutes",
+      "title": "The English Pale (transcribed locations and medieval law)",
+      "url": "https://chaptersofdublin.ie/Neighbourhood/chapter40.html",
+      "read_scope": "Later historical transcription/source narrative, not an original 1520-1529 measured border",
+      "relevant_claim": "A 1488 law names a frontier sequence and 1494-1495 action contemplated defensive ditches, but does not prove each segment continuously enforced in 1520s.",
+      "evidence_for": "dashed_legacy_1488_reference_only",
+      "limitations": "Old statute sequence and present-day geocoded place centers must never be treated as current 1520s surveyed control polygon."
+    },
+    {
+      "id": "MAP-HRP-MAP-COPYRIGHT",
+      "institution": "Historic Royal Palaces / British Library",
+      "title": "Historic plan of Guînes Castle, Cotton MS Augustus I ii 23",
+      "url": "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/the-field-of-cloth-of-gold/",
+      "read_scope": "Reproduction identified by heritage institution; original image not used",
+      "relevant_claim": "A dated landscape/fortification plan exists for research; copying/digitizing its linework requires independent rights and period check.",
+      "evidence_for": "geography_research_queue",
+      "limitations": "No historic drawing has been traced/reproduced for this GeoJSON."
+    },
+    {
+      "id": "MAP-GITHUB-CARTOGRAPHY",
+      "institution": "Love British TV project / historical GIS provenance",
+      "title": "Approved 1497–1519 territorial-footprints research reference layer",
+      "url": "https://github.com/1959124923wyz-sys/love-British-TV/blob/main/data/territorial-footprints-1497-1519.geojson",
+      "read_scope": "Current repository GeoJSON examined",
+      "relevant_claim": "Geometries for Calais Pale, Irish Pale and crown-dependent/Scottish islands are pre-existing. Regional hulls represent cited-place enclosures; islands use modern coastal outline.",
+      "evidence_for": "inherited_geojson_geometry_exact_file_provenance",
+      "limitations": "Historical coastlines not measured; existing geometry should carry forward only as dashed/hatched contextual visualization, no area calculations; source GPL-3.0-or-later applies to derived modern coastlines."
+    }
+  ],
+  "archival_targets": [
+    {
+      "institution": "The National Archives (UK)",
+      "shelfmark": "E 315/371–372",
+      "document_year": 1556,
+      "purpose": "Reconstruct later survey of Calais Marches as dated comparative evidence. Folio-level source checks required before connecting to 1520s border.",
+      "read_status": "not_examined",
+      "identified_in": "MAP-MUNBY-2016"
+    },
+    {
+      "institution": "Archives départementales du Pas-de-Calais",
+      "shelfmark": "CPL 1414",
+      "document_year": null,
+      "purpose": "Check provenance of 1876 map copy of an older undated/lost original and reproduction terms; map features not digitized in this task.",
+      "read_status": "not_examined",
+      "identified_in": "MAP-MUNBY-2016"
+    },
+    {
+      "institution": "British Library",
+      "shelfmark": "Cotton MS Augustus I ii 23",
+      "document_year": null,
+      "purpose": "Verify Guînes plan date, royal holdings, reuse permission, and what it depicts before digitizing.",
+      "read_status": "not_examined",
+      "identified_in": "MAP-HRP-MAP-COPYRIGHT"
+    }
+  ],
+  "drawing_rules": [
+    "All regional envelopes are historical-geography illustrations with dashed boundaries, never real measured 1520s jurisdiction.",
+    "Modern island coastlines may only be contextual extents with hatching/patterned political relation styles, not exact year-1525 measured beaches.",
+    "No polygon in this batch can be appended to atlas.colonial_polygons; use standalone dashed reference layer.",
+    "Do not infer English control from battle icons in Scotland, France, Ireland or Newfoundland.",
+    "Persistent 1519-to-1520 identities and 1529-to-1530 handoff must preserve exact historical temporal status, not erase because of JSON file range."
+  ],
+  "copyright": {
+    "original_basemap_derived_from": "georgique/world-geojson subset as noted in upstream GeoJSON",
+    "license": "GPL-3.0-or-later (inherited polygon subset)",
+    "condition": "Retain upstream original notices and source attribution. Do not copy publisher illustration / archival maps without license."
+  }
+}
