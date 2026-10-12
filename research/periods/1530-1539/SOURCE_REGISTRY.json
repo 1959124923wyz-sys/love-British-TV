@@ -324,7 +324,96 @@
       "read_scope": "university_page_full_html",
       "precision_warning": "Summary chronology not parcel boundaries or original documentary proof.",
       "primary_original_examined": false
+    },
+    {
+      "id": "IR-EXCAVATIONS-MAYNOOTH-1996",
+      "title": "Maynooth Castle 1996 archaeological trenches",
+      "institution": "Excavations.ie (Irish archaeological reports)",
+      "url": "https://excavations.ie/report/1996/Kildare/0002324/",
+      "kind": "archaeology_official_report",
+      "finding": "Recorded archaeological positions of medieval keep and curtain wall; national grid/ITM and WGS84 may refer to excavation plot not castle centroid.",
+      "read_scope": "full_excavation_record",
+      "precision_warning": "Coordinate 53.379655,-6.597224 is excavation record reference and differs from mapped castle landmark; do not use to draw 1535 walls.",
+      "primary_original_examined": false
+    },
+    {
+      "id": "IR-MAP-MAYNOOTH",
+      "title": "Maynooth Castle site coordinates",
+      "institution": "Mapcarta / OpenStreetMap",
+      "url": "https://mapcarta.com/W31510307",
+      "kind": "modern_gazetteer_coordinates",
+      "finding": "Modern Maynooth Castle attraction centre approximate coordinates 53.38116 N, -6.59407 W.",
+      "read_scope": "map_metadata",
+      "precision_warning": "Modern geom does not assert 1535 castle perimeter.",
+      "primary_original_examined": false
+    },
+    {
+      "id": "SC-HES-BLACKNESS-COORD",
+      "title": "Blackness Castle, site NRHE 49516",
+      "institution": "Historic Environment Scotland / Trove",
+      "url": "https://www.trove.scot/place/49516",
+      "kind": "official_heritage_geolocation",
+      "finding": "Castle monument point WGS84 lat 56.00588 lon -3.51631",
+      "read_scope": "official_full_record",
+      "precision_warning": "Centroid of current protected site; not a 1537 remodel perimeter.",
+      "primary_original_examined": false
+    },
+    {
+      "id": "SC-HES-LINLITHGOW-COORD",
+      "title": "Linlithgow Palace, NRHE 49261",
+      "institution": "Historic Environment Scotland / Trove",
+      "url": "https://www.trove.scot/place/49261",
+      "kind": "official_heritage_geolocation",
+      "finding": "Palace modern location WGS84 lat 55.97850 lon -3.60097",
+      "read_scope": "official_record",
+      "precision_warning": "Modern site centre, not the 1538 fountain's exact position.",
+      "primary_original_examined": false
+    },
+    {
+      "id": "ENG-EH-DEAL-COORD",
+      "title": "Deal Castle visitor directions",
+      "institution": "English Heritage",
+      "url": "https://www.english-heritage.org.uk/visit/places/deal-castle/plan-your-visit/directions/",
+      "kind": "official_heritage_geolocation",
+      "finding": "Deal Castle GPS lat 51.218563 lon 1.405085",
+      "read_scope": "official_full_record",
+      "precision_warning": "Site center rather than exact 1539 building footprint.",
+      "primary_original_examined": false
+    },
+    {
+      "id": "ENG-EH-PORTLAND-COORD",
+      "title": "Portland Castle visitor directions",
+      "institution": "English Heritage",
+      "url": "https://www.english-heritage.org.uk/visit/places/portland-castle/plan-your-visit/directions/",
+      "kind": "official_heritage_geolocation",
+      "finding": "Portland Castle GPS lat 50.567516 lon -2.445752",
+      "read_scope": "official_full_record",
+      "precision_warning": "Site center rather than exact 1539 building footprint.",
+      "primary_original_examined": false
+    },
+    {
+      "id": "ENG-HE-MOATS-BULWARK-COORD",
+      "title": "Moats Bulwark Dover site, historic record 467990",
+      "institution": "Historic England Heritage Gateway",
+      "url": "https://historicengland.org.uk/listing/heritage-gateway/results/record/0d636742-8028-4a8c-8b7c-e1f9aaf2d338/de661b9a-4ac7-48da-9d8e-dde81957bd77",
+      "kind": "official_heritage_geolocation",
+      "finding": "GPS lat 51.125639 lon 1.321561; historical work 1539–40, present fabric later.",
+      "read_scope": "official_record",
+      "precision_warning": "The named landmark lies in England; marker is new fortification, not expansion of empire.",
+      "primary_original_examined": false
+    },
+    {
+      "id": "ENG-HE-CAMBER-REC",
+      "title": "Camber Castle Grade I listing 1234738",
+      "institution": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1234738",
+      "kind": "official_heritage_heritage",
+      "finding": "Building complex marked 1538 and later 1539–40 remodeling; central tower earlier 1512–14.",
+      "read_scope": "official_full_record",
+      "precision_warning": "Conflicting timeline across layers; don't assert full build finished 1538.",
+      "primary_original_examined": false
     }
   ],
-  "batch_2_additions": 6
+  "batch_2_additions": 6,
+  "batch_3_geolocation": 8
 }
