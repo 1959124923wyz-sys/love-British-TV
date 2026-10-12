@@ -522,6 +522,8 @@ function setYear(v){
  }
  if(focusedEventId&&!chosen.events.some(e=>e.id===focusedEventId&&occurredByYear(e,next)))focusedEventId=null;
  focusRequestToken++;
+ // Full-archive preview belongs to one chapter; never carry future events into the next.
+ if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
  year=next;atlas=chosen;
  $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520;
@@ -641,13 +643,22 @@ $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)}
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
 $('resetDossier').addEventListener('click',resetDossier);
-['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{if(atlas)renderPoints()}));
-$('toggleHypotheses').addEventListener('change',()=>{if(atlas){renderTerritories();renderHypotheses()}});
-$('toggleControlAreas').addEventListener('change',()=>{if(atlas){renderTerritories();renderControlAreas();renderPoints()}});
-$('togglePoliticalRelations').addEventListener('change',()=>{if(atlas){renderTerritories();renderPoliticalRelationAreas();renderPoints()}});
-$('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas){renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()}});
+['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{
+ // Explicitly hiding the event layer must remove any temporary double-click focus.
+ if(id==='toggleEvents'&&!$('toggleEvents').checked){focusedEventId=null;focusRequestToken++}
+ if(atlas)renderPoints();
+}));
+function refreshHistoricalLayers(){
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();
+}
+$('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
+$('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
+$('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
+$('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
 map.on('zoomend',()=>{if(atlas){renderPoints();renderTerritories();renderControlAreas();renderPoliticalRelationAreas()}});
+// Opening/closing dossier or sidebar changes the map viewport without changing zoom.
+map.on('resize',()=>{if(atlas)renderPoints()});
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
 
 syncPanels();

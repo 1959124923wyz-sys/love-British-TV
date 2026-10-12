@@ -40,6 +40,6 @@ assert.ok(setYear.includes('selectedItemYear>next'),
 assert.ok(setYear.includes('renderEventList();renderTerritories();'),
   'Year change must update event and historic territory layers together');
 const html=read('index.html');
-assert.ok(html.includes('app.js?v=chapter4-v141'),'Browser must load current JavaScript, not cached chronology');
+assert.ok(html.includes('app.js?v=chapter4-v142'),'Browser must load current JavaScript, not cached chronology');
 assert.ok(html.includes('css/dark-atlas-v2.css?v=chapter4-v141'),'Browser must load fixed click style');
 console.log('OK: vector focus, geographic provenance, urban core, dossier persistence and cache');
