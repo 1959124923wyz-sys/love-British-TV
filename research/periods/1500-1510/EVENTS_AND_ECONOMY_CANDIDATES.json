@@ -1,0 +1,608 @@
+{
+  "schema": "1500s-events-research-candidates-v1",
+  "compiled": "2026-10-12",
+  "period": "1500-1509 core; 1510 as adjacent boundary year",
+  "total": 13,
+  "status": "research_needs_editorial_review",
+  "data_rules": {
+    "no_polygons": true,
+    "no_made_up_coords": true,
+    "revenue_is_not_profit": true,
+    "not_all_voyages_verified": true
+  },
+  "events": [
+    {
+      "id": "1500-WESTON-ROYAL-REWARD",
+      "title_zh": "英王向威廉·韦斯顿提供30英镑航海奖励",
+      "year_start": 1500,
+      "year_end": 1500,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "royal_voyage_expenditure",
+      "actors": [
+        "Henry VII of England",
+        "William Weston"
+      ],
+      "claims": [
+        "王室会计档案经2018年布里斯托尔大学研究者识别记录1500年支付30英镑，以支持韦斯顿探索新发现的土地。",
+        "该奖励并非殖民地贸易利润；不要将1499年的推定远航另算为1500年实际出航。"
+      ],
+      "source_ids": [
+        "BRIS-WESTON-2018",
+        "BRIS-WESTON-2018-NEWS"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Kingdom of England, royal accounts",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [
+        {
+          "amount": 30,
+          "currency": "GBP",
+          "year": 1500,
+          "accounting_category": "crown_reward_expenditure",
+          "payer": "English Crown",
+          "recipient": "William Weston",
+          "colonial_profit": false
+        }
+      ],
+      "unresolved": [
+        "需原始账卷编号、月份与账目页码；年份已见学者报道"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1501-ANGLO-PORTUGUESE-PATENT",
+      "title_zh": "1501年英王向英葡联合商团授予西航许可",
+      "year_start": 1501,
+      "year_end": 1501,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "royal_discovery_patent",
+      "actors": [
+        "Henry VII",
+        "Richard Warde",
+        "Thomas Asshehurst",
+        "John Thomas",
+        "João Fernandes",
+        "Francisco Fernandes",
+        "João Gonsalves"
+      ],
+      "claims": [
+        "《加拿大传记辞典》记载1501年3月19日皇家授权，涉及三名布里斯托尔商人及三名葡萄牙航海者。",
+        "许可表明英王参与的商业探险合作，不等于北美已被英格兰占领。"
+      ],
+      "source_ids": [
+        "DCB-GONSALVES",
+        "WILLIAMSON-MUN"
+      ],
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域制度或权力关系的重要变化；需经史料审稿"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Bristol, Kingdom of England",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "找到皇家特许状原本及权利条款",
+        "核查名字拼写与商团具体股权关系"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1502-GABRIEL-BOUNTY",
+      "title_zh": "1502年1月7日王室资助购置Gabriel号",
+      "year_start": 1502,
+      "year_end": 1502,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "royal_ship_purchase_subsidy",
+      "actors": [
+        "Henry VII",
+        "Robert Thorne",
+        "William Thorne",
+        "Hugh Eliot"
+      ],
+      "claims": [
+        "2025年出版的布里斯托尔大学原始文书译注确认1502年1月7日王室给三名商人购置Gabriel号的奖励。",
+        "2010年已刊文指出金额20英镑；此为国王拨款，不是殖民地收入。"
+      ],
+      "source_ids": [
+        "BRIS-GABRIEL-2025",
+        "JONES-2010-CONDON"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Bristol, Kingdom of England",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [
+        {
+          "amount": 20,
+          "currency": "GBP",
+          "year": 1502,
+          "accounting_category": "royal_ship_acquisition_bounty",
+          "payer": "English Crown",
+          "recipient": "Bristol merchant group",
+          "colonial_profit": false
+        }
+      ],
+      "unresolved": [
+        "取得2025年编辑原文和官方案号并核对20英镑单位",
+        "Gabriel吨数和出航日期待按原始材料审阅"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1500-1502-ELIOT-100",
+      "title_zh": "1500—1502年间向休·埃利奥特相关商团支付100英镑",
+      "year_start": 1500,
+      "year_end": 1502,
+      "exact_day": null,
+      "date_precision": "range",
+      "category": "royal_voyage_expenditure",
+      "actors": [
+        "Henry VII",
+        "Hugh Eliot",
+        "associates"
+      ],
+      "claims": [
+        "皇家葡萄酒关税收支账户记录以两船航行新发现之地为由作出100英镑奖励。",
+        "该文件所载支付在1500—1502账期内，研究者推断与1502年相关，不能将确切付款日伪造为1502年某月。"
+      ],
+      "source_ids": [
+        "JONES-2010-CONDON"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Bristol, England — royal port accounts",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [
+        {
+          "amount": 100,
+          "currency": "GBP",
+          "year_from": 1500,
+          "year_to": 1502,
+          "accounting_category": "royal_reward_expenditure",
+          "payer": "English Crown revenues from prisage/butlerage",
+          "recipient": "Hugh Eliot and associates",
+          "colonial_profit": false
+        }
+      ],
+      "unresolved": [
+        "比对E351/454原始账页",
+        "与1502年9月另行20英镑赏金是否独立需要排重"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1502-MERCHANT-RETURN-REWARD",
+      "title_zh": "1502年秋对曾赴新发现土地的布里斯托尔商人给予赏金",
+      "year_start": 1502,
+      "year_end": 1502,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "royal_voyage_expenditure",
+      "actors": [
+        "Henry VII",
+        "Bristol merchants"
+      ],
+      "claims": [
+        "2010年历史研究文章引用1502年9月末向曾赴新发现土地的商人支付20英镑的条目。",
+        "原条目不能单独判定所有被赏者、每艘船精确航线及获利。"
+      ],
+      "source_ids": [
+        "JONES-2010-CONDON"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Bristol, Kingdom of England",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [
+        {
+          "amount": 20,
+          "currency": "GBP",
+          "year": 1502,
+          "accounting_category": "voyage_reward",
+          "payer": "English Crown",
+          "recipient": "unidentified Bristol merchants",
+          "colonial_profit": false
+        }
+      ],
+      "unresolved": [
+        "皇家账目条目号和付款日期待原始核查"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1502-ANGLO-PORTUGUESE-PATENT",
+      "title_zh": "1502年12月9日英王更新海外探索许可",
+      "year_start": 1502,
+      "year_end": 1502,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "royal_discovery_patent",
+      "actors": [
+        "Henry VII",
+        "Hugh Eliot",
+        "Thomas Asshehurst",
+        "João Gonsalves",
+        "Francisco Fernandes"
+      ],
+      "claims": [
+        "有1502年12月9日的后续特许状；《加拿大传记辞典》列出四名受权人。",
+        "授权与真实抵达海外、长期占领和土地产权均应分开。"
+      ],
+      "source_ids": [
+        "DCB-GONSALVES",
+        "JONES-2010-CONDON",
+        "WILLIAMSON-MUN"
+      ],
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域制度或权力关系的重要变化；需经史料审稿"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Kingdom of England (patent) / North Atlantic (target)",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "原始拉丁文许可证和可行权区域未逐字比对"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1501-1502-INDIGENOUS-AT-COURT",
+      "title_zh": "约1501—1502年三名来自北大西洋彼岸的人被带至英王宫廷",
+      "year_start": 1501,
+      "year_end": 1502,
+      "exact_day": null,
+      "date_precision": "range",
+      "category": "indigenous_people_moved_to_english_court",
+      "actors": [
+        "unknown Indigenous individuals (names not confirmed)",
+        "English voyagers",
+        "Henry VII court"
+      ],
+      "claims": [
+        "《伦敦大编年史》所载1501年9月至1502年9月伦敦市政年间，有三名来自所谓新发现岛屿的人被带到国王面前，编年史使用了带歧视性的外貌和行为描述。",
+        "原文使用taken及brought，不能由此单独推定三人的身份、所受强制程度、法律上的奴隶身份、原籍精确位置或后续命运；不重现编年史贬损称谓作为地图文案。",
+        "16世纪后期出版者把1498航行归于Sebastian Cabot的署名存在编辑增补，不能据此确定押送者。"
+      ],
+      "source_ids": [
+        "BRIS-LONDON-CHRONICLES"
+      ],
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域制度或权力关系的重要变化；需经史料审稿"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Kingdom of England, royal court (unknown original homeland)",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "考证原始《大编年史》手稿出处",
+        "结合现代 Indigenous historiography 研究并避免欧洲来源为唯一叙事"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1504-KNOCKDOE",
+      "title_zh": "1504年诺克多战役：基尔代尔伯爵在爱尔兰西部获胜",
+      "year_start": 1504,
+      "year_end": 1504,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "regional_battle_and_contested_governance",
+      "actors": [
+        "Gerald FitzGerald Earl of Kildare and Gaelic allies",
+        "Ulick Fionn Burke of Clanrickard",
+        "Turlough Donn O’Brien of Thomond",
+        "Aodh Ruadh O’Donnell and allied forces"
+      ],
+      "claims": [
+        "1504年8月19日，在戈尔韦东北约八英里处的Knockdoe，基尔代尔伯爵以英王总督身份率多方联军取胜。",
+        "Egan发表于2024年的同行评审研究指出，胜利对爱尔兰西部总体势力均衡的改变有限，因此不能将胜利区域当作王室稳固占领区。"
+      ],
+      "source_ids": [
+        "EGAN-2024-EHR",
+        "EGAN-2024-KILDARE",
+        "TCD-ANNALS"
+      ],
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域制度或权力关系的重要变化；需经史料审稿"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Knockdoe, near Galway, Ireland (approximate locality)",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "核对Annals of Ulster及Annals of Four Masters记年",
+        "伤亡数字不同传统偏差较大，当前不予发布"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1505-SEBASTIAN-PENSION",
+      "title_zh": "1505年4月3日塞巴斯蒂安·卡博特获年金",
+      "year_start": 1505,
+      "year_end": 1505,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "royal_service_pension",
+      "actors": [
+        "Henry VII",
+        "Sebastian Cabot"
+      ],
+      "claims": [
+        "《加拿大传记辞典》引用英王账簿显示授予塞巴斯蒂安·卡博特每年20英镑年金。",
+        "给付年金不证明他曾于该年航行，也不能证明他参加了1501—1506商团或拥有任何殖民地。"
+      ],
+      "source_ids": [
+        "DCB-SEBASTIAN"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Bristol / English Crown accounts",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [
+        {
+          "amount": 20,
+          "currency": "GBP_per_year",
+          "year": 1505,
+          "accounting_category": "annuity_authorized",
+          "payer": "English Crown",
+          "recipient": "Sebastian Cabot",
+          "colonial_profit": false
+        }
+      ],
+      "unresolved": [
+        "比对PRO E159 20 Hen VII号条目",
+        "清楚区分年度授权20镑与已支付的实际总额"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1500-CALAIS-ETAPLES",
+      "title_zh": "1500—1501年加来经手英法条约支付和保管",
+      "year_start": 1500,
+      "year_end": 1501,
+      "exact_day": null,
+      "date_precision": "range",
+      "category": "calais_treaty_payments_admin",
+      "actors": [
+        "Henry VII",
+        "Calais royal commissioners",
+        "Louis XII of France"
+      ],
+      "claims": [
+        "英国图书馆馆藏目录记录1500年加来皇家收款委员会及1501年向加来城堡转存按Étáp​​les条约收取款项的文书。",
+        "该款项属于英法外交条约体系，不能等同于殖民地税收或加来港口贸易利润。"
+      ],
+      "source_ids": [
+        "BL-CALAIS-CHARTERS"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Calais, Crown of England-held enclave",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "逐件核查Add Ch 74072-74073原件；查法国支付额与实际净存",
+        "不要将条约约定的金额简单视作到账"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1509-PORT-CUSTOMS",
+      "title_zh": "1509年布里斯托尔港海关与葡萄酒税账册",
+      "year_start": 1509,
+      "year_end": 1509,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "domestic_trade_accounting",
+      "actors": [
+        "Port of Bristol customs officials",
+        "English Crown"
+      ],
+      "claims": [
+        "布里斯托尔大学公布了1509年9月29日至1510年1月间的海关控制员账册，以及1509—1510年酒税与其补遗的机器可读转录版本。",
+        "港口海关收入是英格兰本土财政资料，不可直接视为北美殖民贸易或强制劳动利润；账册跨1510应按交易日期划分。"
+      ],
+      "source_ids": [
+        "BRIS-CABOT-PUBLICATIONS",
+        "BRIS-CUSTOMS-DATA"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Bristol, Kingdom of England",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "下载及版权许可逐数据集核实，账户缺漏段落不得估填",
+        "不重复计算补充残页"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    },
+    {
+      "id": "1508-1509-SEBASTIAN-VOYAGE-QUESTION",
+      "title_zh": "关于塞巴斯蒂安·卡博特1508—1509年北大西洋航行的后世记载",
+      "year_start": 1508,
+      "year_end": 1509,
+      "exact_day": null,
+      "date_precision": "range",
+      "category": "unverified_voyage_attribution",
+      "actors": [
+        "Sebastian Cabot"
+      ],
+      "claims": [
+        "文献含有1508—1509年塞巴斯蒂安远航的后世论述，但早期记载与当时原始文书、航程和登陆地点之间存在问题。",
+        "不能仅凭后世描述就绘制实际航迹、北美殖民地或定论为某一年已完成航行。"
+      ],
+      "source_ids": [
+        "DCB-SEBASTIAN",
+        "BRIS-CABOT-PUBLICATIONS"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "North Atlantic (speculative route, no coordinate)",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "查F. Guidi Bruscoli、Evan Jones、Heather Dalton现有关于1508行程的考证",
+        "将成功航行、筹备、后世记载分开"
+      ],
+      "review_status": "unverified_do_not_publish_as_certain_voyage"
+    },
+    {
+      "id": "1509-ACCESSION",
+      "title_zh": "1509年亨利八世继承英格兰王位",
+      "year_start": 1509,
+      "year_end": 1509,
+      "exact_day": null,
+      "date_precision": "year",
+      "category": "political_transition",
+      "actors": [
+        "Henry VII",
+        "Henry VIII"
+      ],
+      "claims": [
+        "这一年英格兰王位更替，下一阶段外交及财政文书需以相应王朝纪年转换。",
+        "该更替并未使英格兰与苏格兰合并，也不能自动改变加来与爱尔兰控制区地图。"
+      ],
+      "source_ids": [
+        "TNA-CALAIS",
+        "BL-CALAIS-CHARTERS"
+      ],
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "geography": {
+        "geometry_type": "none",
+        "coordinates": null,
+        "place_label": "Kingdom of England",
+        "representative_place_only": true,
+        "accuracy": "source_label_only_no_geocode",
+        "approved_control_polygon": false
+      },
+      "control_relationship": "not_an_automatic_colonial_polygon",
+      "economic_fields": [],
+      "unresolved": [
+        "核对精确继位日期与即位程序，再填日月",
+        "别将王位更替作为英属控制新扩张"
+      ],
+      "review_status": "documentary_synthesis_checked"
+    }
+  ]
+}
