@@ -410,15 +410,23 @@ function renderHypotheses(){
  // 1500s and 1510s; it is a dashed estimate, not a surveyed control border.
  if(geographicHypotheses){
   const calais=f=>String(f.properties?.id||'').startsWith('calais');
+  if(!$('toggleTerritorialFootprints').checked){
+   L.geoJSON(geographicHypotheses,{
+    filter:f=>calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
+    interactive:false,
+    style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false}
+   }).addTo(groups.hypotheses);
+  }
   L.geoJSON(geographicHypotheses,{
-   filter:f=>calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
-   interactive:false,
-   style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false}
-  }).addTo(groups.hypotheses);
-  L.geoJSON(geographicHypotheses,{
-   filter:f=>year<1510?['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type):
-     (calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type))||
-     String(f.properties?.id||'').startsWith('irish-pale-'),
+   filter:f=>{
+    const id=String(f.properties?.id||'');
+    // One persistent territory layer owns the 1497-1519 filled Calais and Pale envelopes.
+    // Avoid redrawing its same geometry as a second disconnected legacy hypothesis.
+    if($('toggleTerritorialFootprints').checked &&
+      (calais(f)||id==='irish-pale-1500-presentation-envelope'))return false;
+    return year<1510?['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type):
+      (calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type))||id.startsWith('irish-pale-');
+   },
    style:f=>({color:f.geometry.type==='LineString'?'#e9b06e':calais(f)?'#c58dfb':'#d4aa70',
     weight:calais(f)?3.4:2.7,dashArray:'7 5',opacity:calais(f)?1:.91,
     fill:f.geometry.type!=='LineString',fillColor:calais(f)?'#b58bea':'#d4aa70',
