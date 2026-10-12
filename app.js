@@ -47,17 +47,28 @@ const infoDefault=$('dossierBody').innerHTML;
 const earlyIntro=$('chapterIntro').textContent;
 function setWarning(msg){let e=$('boundaryWarning');if(!e){e=document.createElement('div');e.id='boundaryWarning';e.className='map-warning';$('map').parentElement.appendChild(e)}e.textContent=msg;}
 function hideWarning(){let e=$('boundaryWarning');if(e)e.remove();}
-function listSources(ids){if(!ids||!ids.length)return '<p>本条资料尚未列出单独的引文索引。</p>';return '<div class="source-list">'+ids.map(id=>{const s=atlas.sources.find(v=>v.id===id);return s?'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>':''}).join('')+'</div>';}
+function listSources(ids){
+ const refs=(ids||[]).map(id=>atlas.sources.find(src=>src.id===id)).filter(Boolean);
+ if(!refs.length)return '';
+ return '<details class="source-details"><summary>历史文献 · '+refs.length+'项 <span>▾</span></summary><div class="source-list">'+refs.map(x=>'<a class="source-link" href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.publisher)+' · '+escapeHTML(x.title)+' ↗</a>').join('')+'</div></details>';
+}
 function openDossier(item,typ){
  if(!item)return;
- const isCandidate=typ==='candidate'; const isRoute=typ==='route';const isPlace=typ==='place'; selected=item.id;
- const title=item.name;const date=isPlace?'1500年代 · 政治据点':isCandidate?'1497年 · 登陆候选地点':isRoute?item.year+'年 · 航线示意':item.date_label;
- const label=isPlace?'政治关系':isCandidate?'位置假说':isRoute?'方向示意':(categoryName[item.category]||'历史资料');
- const desc=isCandidate?item.note:isRoute?item.note:item.description;
- const caveat=isPlace?'此标记代表城市或群岛，不能当作领土边界。':isCandidate?'准确登陆地点还没有定论。':isRoute?'虚线表示航行方向，不代表已知的逐段航迹。':item.category==='claim'?'王室宣称不等于已经建立了殖民地。':isUncertain(item)?'地图标记位于相关城市或大致区域，并非事件发生位置的精确坐标。':'';
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(desc)+'</p>'+(caveat?'<p class="event-context">'+escapeHTML(caveat)+'</p>':'')+'<div class="mini-heading">历史资料</div>'+listSources(item.source_ids);
+ const candidate=typ==='candidate',route=typ==='route',place=typ==='place';
+ selected=item.id;
+ const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
+ const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
+ const description=candidate?item.note:route?item.note:item.description;
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+listSources(item.source_ids);
  openPanel('dossier');
- document.querySelectorAll('.event-item').forEach(n=>n.classList.toggle('selected',n.dataset.eid===selected));
+ document.querySelectorAll('.event-item').forEach(el=>el.classList.toggle('selected',el.dataset.eid===selected));
+}
+function openCollection(items,title){
+ if(!items.length)return;
+ const choices=items.slice().sort((a,b)=>Number(b.item.significance?.level||1)-Number(a.item.significance?.level||1)||Number(a.item.year||0)-Number(b.item.year||0));
+ $('dossierBody').innerHTML='<div class="dossier-kicker">同一地区的历史记录</div><h2>'+escapeHTML(title||'附近事件')+'</h2><div class="cluster-list">'+choices.map((x,i)=>'<button type="button" class="cluster-entry" data-record="'+i+'"><span class="cluster-entry-icon">'+svgIcon(x.item,'atlas-list-icon')+'</span><span><small>'+escapeHTML(x.item.date_label||'持续状态')+'</small><strong>'+escapeHTML(x.item.name)+'</strong></span><span class="cluster-entry-arrow">›</span></button>').join('')+'</div>';
+ openPanel('dossier');
+ $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
 function resetDossier(){selected='';$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels()}
 function renderEventList(){
