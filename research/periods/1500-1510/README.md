@@ -25,3 +25,17 @@ D. **苏格兰与群岛**：英苏1502和平条约NRS SP6/31、奥克尼/设得�
 - 源ID检查通过，但机器不能证明历史论断的真实性。
 
 请在各自独立研究分支写PROGRESS.md保存Git提交SHA并通过草稿PR交接，禁止直接更改main。下一位同事只要先读本文件和[CONTROL_AND_CHRONOLOGY_REVIEW.md](CONTROL_AND_CHRONOLOGY_REVIEW.md)，即可接力，无需回顾聊天。
+
+
+## 第二轮深入研究成果（2026-10-12）
+**请优先阅读 [DEEP_FINDINGS_CALAISES_AND_IRELAND.md](DEEP_FINDINGS_CALAISES_AND_IRELAND.md)，为第二轮最新总结。**
+- [CALAIS_DEEP_SOURCES.json](CALAIS_DEEP_SOURCES.json)：13条加来具体原始档号和历史测图研究索引。
+- [CALAIS_CONTROL_FINANCE_DEEP_EVIDENCE.json](CALAIS_CONTROL_FINANCE_DEEP_EVIDENCE.json)：7条加来驻军、教区/控制、经费分配与历史地图不可跨年代使用的提醒。1502城堡驻军名册号 E101/55/23。
+- [CALAIS_STAPLE_CROWN_REMITTANCES.json](CALAIS_STAPLE_CROWN_REMITTANCES.json)：5条财政研究来源、4条学者账目重建；重点 E101/201/28。1505—09用于薪饷平均约£5,784/年、入英王之手约£4,020/年，1500—09向王室累计接近£32,000。**全部原账待核，不是殖民净利润，重叠数字不能相加。**
+- [CALAIS_PARISH_AND_MAP_DATING_INDEX.json](CALAIS_PARISH_AND_MAP_DATING_INDEX.json)：5条历史地理来源、13个历史地名及堡垒候选；1482—83年土地租册 E315/407并不能生成1500年确定疆界；后来的1556地图也不得倒推。
+- [IRELAND_PALE_DEEP_EVIDENCE.json](IRELAND_PALE_DEEP_EVIDENCE.json)：7条史学与档案入口、8条文书支持的英格兰Pale行政与军事权力论断；中世纪名义郡≠现代郡≠实际统治。
+- [GAELIC_ANNALS_LOCAL_POWER_EVENTS.json](GAELIC_ANNALS_LOCAL_POWER_EVENTS.json)：《四大师编年史》8条1503—09爱尔兰地方政权、攻占城堡和临时进军史事；已按UCC CELT**正式刊行版编号校正**。
+- [CASTLE_CONTROL_TURNOVER_1503_1512.json](CASTLE_CONTROL_TURNOVER_1503_1512.json)：1507 Carrickfergus及1509 Omagh由《阿尔斯特编年史》再核对；1512 Omagh重建作为下一期证据，而非1509英方长期领有。
+- [NEXT_AGENT_ARCHIVAL_ACTION_QUEUE.json](NEXT_AGENT_ARCHIVAL_ACTION_QUEUE.json)：11项下一位同事可直接执行的档号级研究任务。
+
+**史料分级**：加来驻军551/553和商人财政£5,784/£4,020/£32,000来自Grummitt学术著作对英国国家档案馆卷册的整理，当前尚未直接见到原始账册或兵员名册，不得标为原件核证；爱尔兰编年史仅以独立文字转述保存，未复制第三方受限原文。此次仍为0个可批准的1500—09殖民控制面。
