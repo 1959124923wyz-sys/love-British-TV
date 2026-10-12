@@ -38,3 +38,7 @@
 - Source ID无实证现地经纬度的历史事件不强行绘点。所有地图建议均保留`verified_historical_border=false`及`fill_authorized=false`。
 - 1535《威尔士法律法》的会期名称与1536通称须说明，具体法界需要按条款列出原边区领主名后才可升级。
 - 1530年代爱尔兰仍为英王的Lordship of Ireland；**1541年取得King of Ireland称号属于下一历史十年**。
+
+## 独立网页研究预览（新增）
+
+[interactive_research_preview.html](interactive_research_preview.html) 支持1530—1539年的逐年事件揭示、七处延续政治位置、八块概略地理参考，并实现**双击左侧事件平滑定位＋高亮、不改缩放**。预览与主站完全分离，须在克隆文件后通过本地HTTP服务启动（如在仓库根目录运行 `python3 -m http.server 8000`，打开 `http://localhost:8000/research/periods/1530-1539/interactive_research_preview.html`）。其GIS文件是研究示意，尚未经过真实浏览器人工验收。CI增加Node.js语法检查。
