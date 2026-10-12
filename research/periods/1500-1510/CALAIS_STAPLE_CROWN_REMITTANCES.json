@@ -1,0 +1,175 @@
+{
+  "dataset_id": "calais-staple-fiscal-reconstruction-1500s-v1",
+  "date": "2026-10-12",
+  "period": [
+    1500,
+    1509
+  ],
+  "status": "promising_secondary_scholarly_account_figures_primary_archive_unchecked",
+  "sources": [
+    {
+      "id": "CALAIS-FIN-GRUMMITT-CH7",
+      "publisher": "Boydell & Brewer / Cambridge Core",
+      "author": "David Grummitt",
+      "title": "The Calais Garrison (2008), Ch. 7: Financing and Supplying the Garrison",
+      "url": "https://www.cambridge.org/core/books/abs/calais-garrison/financing-and-supplying-the-garrison/C5D89F586F7A2176CC2B51192A3D0166",
+      "type": "scholarly_monograph_chapter",
+      "original_refs": [
+        "TNA E 101/201/28 - summary of staple accounts per scholarly footnote",
+        "19 Hen VII c27 act of retainer under 1504 statute"
+      ],
+      "read_status": "publisher_summary_verified; numerical extract seen in digital third-party reproduction, NOT original archive"
+    },
+    {
+      "id": "CALAIS-FIN-ROSE-CH6",
+      "publisher": "Boydell & Brewer / Cambridge Core",
+      "author": "Susan Rose",
+      "title": "Calais: An English Town in France, 1347–1558 (2008), chapter 6: Heyday of the Company of Staple",
+      "url": "https://www.cambridge.org/core/books/abs/calais/heyday-of-the-company-of-the-staple-merchants-and-their-lives/B5177937F9D38F0293236E5A7F6DC9A1",
+      "type": "scholarly_monograph_chapter",
+      "read_status": "publisher_summary_verified",
+      "original_refs": [
+        "1473 ratification; 1504 renewed Act of Retainer"
+      ],
+      "note": "Second independent scholar contextualizes merchant company receiving wool duties and bearing military responsibilities; not corroboration of exact numeric 1505–09 amounts"
+    },
+    {
+      "id": "CALAIS-FIN-HARPER",
+      "publisher": "University of London School of Advanced Study (SAS-Space)",
+      "author": "Samantha Patricia Harper",
+      "title": "London and the Crown in the Reign of Henry VII",
+      "url": "https://sas-space.sas.ac.uk/6261/1/HARPER%2C%20Samantha%20Patricia%20-%20Henry%20VII%20and%20London%20-%20final.pdf",
+      "type": "scholarly_dissertation_secondary",
+      "read_status": "web indexed passages only; full PDF not reviewed; requires PDF screenshot before analysing",
+      "original_refs": [
+        "TNA E 364",
+        "TNA E 358",
+        "TNA E 404/79",
+        "Act of Retainer 19 Hen VII; source footnote reports c22, conflicting with Grummitt c27"
+      ],
+      "note": "Institutional thesis not independent of Grummitt because cites it; useful to locate fiscal machinery and Crown chamber accounting shift"
+    },
+    {
+      "id": "CALAIS-FIN-ARCHIVE",
+      "publisher": "The National Archives",
+      "title": "French lands of the English kings: Calais finance archive series",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "type": "official_archival_guide",
+      "read_status": "guide_read",
+      "original_refs": [
+        "E 36/269–272",
+        "E 364",
+        "E 122",
+        "E 159",
+        "DL 28/2/1–11"
+      ],
+      "note": "Series exist, not yet read original annual entries"
+    },
+    {
+      "id": "CALAIS-FIN-PRIMARY-E101",
+      "publisher": "The National Archives item cited in David Grummitt",
+      "title": "Summary of Calais Staple accounts during Henry VII",
+      "url": "https://www.cambridge.org/core/books/abs/calais-garrison/financing-and-supplying-the-garrison/C5D89F586F7A2176CC2B51192A3D0166",
+      "type": "original_archive_item_locator_by_scholarly_note",
+      "read_status": "original_not_seen",
+      "original_refs": [
+        "E 101/201/28"
+      ],
+      "note": "Exact annual cash transfers 1505–09 and c1500–09 must be verified against this item before map financial charts"
+    }
+  ],
+  "figures": [
+    {
+      "id": "CALAIS-WOOL-RETAINER-1504",
+      "time": {
+        "year": 1504
+      },
+      "value_raw": "£10,022 4s 8d per annum",
+      "value_pounds_decimal": null,
+      "accounting_type": "contracted_annual_garrison_wage_allowance",
+      "payer": "Wool staple merchants from customs/subsidy receipts",
+      "recipient": "Calais garrison",
+      "source_ids": [
+        "CALAIS-FIN-GRUMMITT-CH7",
+        "CALAIS-FIN-ROSE-CH6"
+      ],
+      "archive_refs": [
+        "19 Hen VII c27 (review regnal statute and chapter no.; Harper footnote conflicting c22)"
+      ],
+      "primary_checked": false,
+      "account_status": "statutory_terms_not_confirmed_cash_disbursement",
+      "financial_interpretation": "This contractual annual allowed payroll cannot be multiplied by 10 as actual spending; not profit."
+    },
+    {
+      "id": "CALAIS-WOOL-1505-1509-GARRISON",
+      "time": {
+        "from_approx": "1505-04",
+        "to_approx": "1509-04"
+      },
+      "value": 5784,
+      "unit": "GBP nominal/year",
+      "accounting_type": "average_annual_paid_toward_garrison_wages_reported_by_historian",
+      "payer": "Wool staple merchants / customs proceeds",
+      "recipient": "Calais military payroll",
+      "source_ids": [
+        "CALAIS-FIN-GRUMMITT-CH7"
+      ],
+      "archive_refs": [
+        "TNA E 101/201/28"
+      ],
+      "primary_checked": false,
+      "account_status": "secondary_reconstruction",
+      "financial_interpretation": "Not the total historical military cost; 4-year historical average and affected by accounting/disbursement schedule."
+    },
+    {
+      "id": "CALAIS-WOOL-1505-1509-CROWN",
+      "time": {
+        "from_approx": "1505-04",
+        "to_approx": "1509-04"
+      },
+      "value": 4020,
+      "unit": "GBP nominal/year",
+      "accounting_type": "average_annual_surplus_paid_to_king_reported_by_historian",
+      "payer": "Wool staple merchants / customs receipts",
+      "recipient": "King Henry VII's chamber / Crown",
+      "source_ids": [
+        "CALAIS-FIN-GRUMMITT-CH7"
+      ],
+      "archive_refs": [
+        "TNA E 101/201/28"
+      ],
+      "primary_checked": false,
+      "account_status": "secondary_reconstruction",
+      "financial_interpretation": "This can evidence some remittance to English Crown, but it is not total or net empire colonial profit; garrison wages and subsidies in same fiscal structure."
+    },
+    {
+      "id": "CALAIS-WOOL-1500-1509-CROWN",
+      "time": {
+        "from": 1500,
+        "to": 1509
+      },
+      "value_approx": 32000,
+      "unit": "GBP nominal total over historical period",
+      "accounting_type": "approximately_total_staple_sums_paid_to_king_reported_by_historian",
+      "payer": "Wool staple merchants / customs receipts",
+      "recipient": "King Henry VII",
+      "source_ids": [
+        "CALAIS-FIN-GRUMMITT-CH7"
+      ],
+      "archive_refs": [
+        "TNA E 101/201/28"
+      ],
+      "primary_checked": false,
+      "account_status": "secondary_reconstruction",
+      "financial_interpretation": "Approximately 32k total already includes overlapping 1505–09 receipts. NEVER add it to 4020/year; do not assign as UK GDP gain."
+    }
+  ],
+  "memo": "First concrete remittance lead: 1500–09 nearly £32k paid to king, 1505–09 £4020/year average royal remittance from Calais Staple, 1505–09 £5784/year average towards garrison wages. Grummitt based on TNA E101/201/28. These are different slices of SAME account and cannot be added or called net imperial profit. Annual payroll contractual £10022 4s 8d not actual annual pay. 1504 Act chapter numbering conflict (Grummitt c27 vs Harper c22) must be resolved by Statutes of the Realm or Parliament Rolls before external publication.",
+  "publication_blockers": [
+    "Primary E101/201/28 not independently viewed; numerical values secondary scholarly reconstruction",
+    "Verify statute chapter conflicting c22/c27 (likely c27, but do not assert as checked original)",
+    "Check 1505-1509 4 fiscal-year boundaries and nominal values; compare exact annual lines with total £32000",
+    "Do not mix Calais UK Crown transfers with resident commerce profits, military payroll, or French treaty pensions",
+    "Remittances ultimately draw on wool customs exported from England, not proof of profits extracted from local Calais inhabitants"
+  ]
+}
