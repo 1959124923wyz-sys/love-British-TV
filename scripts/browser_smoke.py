@@ -34,6 +34,8 @@ try:
     wait.until(lambda d: d.execute_script("return document.querySelector('#eventCount')?.textContent==='4项'"))
     verify("chapter 4 not active at 1520", "document.querySelector('#chapterFour').classList.contains('active')", driver)
     verify("1520 list leaked 1529 historical event", "!document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
+    verify("modern representative 1520s locations lost dashed uncertainty markers",
+           "document.querySelectorAll('#map .map-pin.uncertain').length>=1", driver)
     driver.save_screenshot(str(OUT / "chapter4-1520.png"))
     # With research Pale hidden, the documented Dublin relation must get its own glyph.
     def toggle_layer(layer_id, enabled):
