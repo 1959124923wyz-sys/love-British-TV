@@ -35,6 +35,24 @@ try:
     verify("chapter 4 not active at 1520", "document.querySelector('#chapterFour').classList.contains('active')", driver)
     verify("1520 list leaked 1529 historical event", "!document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     driver.save_screenshot(str(OUT / "chapter4-1520.png"))
+    # With research Pale hidden, the documented Dublin relation must get its own glyph.
+    def toggle_layer(layer_id, enabled):
+        driver.execute_script("""
+          const control=document.getElementById(arguments[0]);
+          control.checked=arguments[1];
+          control.dispatchEvent(new Event('change',{bubbles:true}));
+        """, layer_id, enabled)
+        time.sleep(0.2)
+    toggle_layer("toggleHypotheses", False)
+    verify("Dublin's historical relation vanished when Pale hypothesis was hidden",
+           "document.querySelectorAll('.political-relation-symbol').length>=1", driver)
+    toggle_layer("toggleHypotheses", True)
+    toggle_layer("toggleTerritorialFootprints", False)
+    verify("historical relationship markers missing when reference polygons are off",
+           "document.querySelectorAll('.political-relation-symbol').length>=5", driver)
+    driver.save_screenshot(str(OUT / "chapter4-political-markers-no-polygons.png"))
+    toggle_layer("toggleTerritorialFootprints", True)
+
 
     def set_year(year, expected):
         driver.execute_script("""
@@ -47,7 +65,12 @@ try:
     set_year(1529, 24)
     verify("1529 final event missing", "document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     driver.save_screenshot(str(OUT / "chapter4-1529.png"))
+    # Full-chapter previews are opt-in per decade; returning to an earlier decade
+    # must not leak future 1520s events into the 1510s or vice versa.
+    toggle_layer("showFullChapterArchive", True)
     set_year(1519, 15)
+    verify("complete-archive preview leaked into a new chapter",
+           "!document.querySelector('#showFullChapterArchive').checked", driver)
     verify("switch to third chapter failed", "document.querySelector('#chapterThree').classList.contains('active')", driver)
     set_year(1520, 4)
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
