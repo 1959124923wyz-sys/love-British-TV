@@ -42,3 +42,9 @@
 - [TRANSITION_1529_1530_RESEARCH_SEED.json](TRANSITION_1529_1530_RESEARCH_SEED.json)：1529年末八种记录完整递交1530年代；因为1530尚未查证，**没有生成1530已确认政治控制区**。
 
 注意：自始至终区别**政治状态存续**、**史料最后记录年份**和**地图象征性几何**。本轮shadow JS已通过静态JS语法解析、远端JSON来源交叉验证；尚未在正式网页浏览器完成手工视觉/交互验收。
+
+## 版本说明：V1与V2过渡格式
+
+- `TRANSITION_1519_1520.json` 是原始研究的V1交接记载，保留供历史追溯；`check_transition.py` 只检查这一旧结构。
+- `transitions/TRANSITION_1519_1520_V2.json` 为标准化的机器过渡格式，未来新十年应沿用 `templates/DECADE_TRANSITION_TEMPLATE.json` 所示V2字段，由 `scripts/validate_control_transition.py` 进行审核。
+- 跨十年连续控制图层在 `staged/`，第四章为候审版本，预览见 [独立地图](../../preview-continuity-1497-1529.html)。
