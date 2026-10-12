@@ -8,7 +8,8 @@
   "origin": {
     "research_branch": "research/territorial-1520-1529-20261012",
     "source_events": "research/periods/1520-1529/CHRONOLOGY.json",
-    "date": "2026-10-12"
+    "date": "2026-10-12",
+    "extended_map_detail": "research/periods/1520-1529/MAP_SITES_DEEP_GEO.geojson"
   },
   "editorial_status": "CANDIDATES_ONLY_NOT_PUBLISHED_OR_EDITOR_APPROVED",
   "intro": "1520年代，英王继续控制加来边区，并加强吉讷的防务与移民法规。英军在法国和苏格兰实施军事袭击；爱尔兰王室军队主要防守都柏林周边，地方盖尔首领继续掌握军政权力。1527年，英王支持的航行抵达纽芬兰。",
@@ -156,14 +157,16 @@
       "name": "萨里军攻陷奥康纳家族的莫纳斯特罗里斯城堡",
       "category": "siege",
       "icon_code": "WAR",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "null_unverified_location_no_fake_map_pin",
-      "geography_label": "Monasteroris Castle, Uí Failghe/Offaly",
-      "description": "1521年7月，萨里军以火炮围攻奥康纳·法利的一处主要城堡莫纳斯特罗里斯，攻取后留下驻军。驻军持续时间仍需查原始账簿。",
-      "short_description": "1521年7月，萨里军以火炮围攻奥康纳·法利的一处主要城堡莫纳斯特罗里斯，攻取后留下驻军。驻军持续时间仍需查原始账簿。",
+      "lat": 53.34635313,
+      "lng": -7.08543742,
+      "geo_precision": "approximate surviving Franciscan friary ruins, not 1521 garrison castle",
+      "geography_label": "Monasteroris friary (SMR OF011-009001-) near Edenderry; site reference and 2010 nearby archaeology",
+      "description": "1521年，萨里总督军队围攻莫纳斯特罗里斯。爱尔兰方济各会记录其修道院曾作为当地人的防御工事并在围攻中严重受损；1550年的另一份调查另记当地有两座城堡。是否是同一驻军建筑仍需核查。",
+      "short_description": "1521年，萨里总督军队围攻莫纳斯特罗里斯。爱尔兰方济各会记录其修道院曾作为当地人的防御工事并在围攻中严重受损；1550年的另一份调查另记当地有两座城堡。是否是同一驻军建筑仍需核查。",
       "source_ids": [
-        "IR-ELLIS-2023"
+        "IR-ELLIS-2023",
+        "IR-FRANCISCANS-MONASTERORIS",
+        "IR-NMS-MONASTERORIS-SMR"
       ],
       "certainty": "source_based_event",
       "significance": {
@@ -177,7 +180,7 @@
       "research_event_id": "1521-MONASTERORIS",
       "economic_fields": [],
       "geographic_rule": "fortress_capture_temporary_garrison_not_whole_Offaly",
-      "review_note": "历史地点尚无足够准确的现代对应GPS，列表可显示；地图点留空。"
+      "review_note": "1521英王总督围攻的方济各会修道院有宗教团体旧址记载；1550另载当地两座城堡，撤兵与留守的具体设施不能强行同址。坐标为现代遗址参考。"
     },
     {
       "id": "1522-SURREY-END-IRELAND",
@@ -589,7 +592,7 @@
       "start_year": 1522,
       "end_year": 1522,
       "visible_from": 1522,
-      "date_label": "1522年7月（具体日有分歧）",
+      "date_label": "1522年7月初",
       "name": "英军袭击并洗劫法国布列塔尼的莫尔莱",
       "category": "raid_sack",
       "icon_code": "REP",
@@ -603,7 +606,7 @@
         "FR-MORLAIX-CITY-2022",
         "FR-MORLAIX-BAY-HERITAGE",
         "FR-MURPHY-2021-SCORCHED",
-        "GEO-GEONAMES-MORLAIX"
+        "FR-MORLAIX-CITY-MAG"
       ],
       "certainty": "year_high_exact_day_disputed",
       "significance": {
@@ -633,12 +636,13 @@
       "lng": -2.552004,
       "geo_precision": "modern-city-or-harbour-representative-reference",
       "geography_label": "GeoNames Jedburgh",
-      "description": "1523年英苏战争期间，英军在边境发动破坏性袭击，杰德堡（Jedburgh）遭洗劫。对城镇的攻击没有改变苏格兰作为独立王国的地位。",
-      "short_description": "1523年英苏战争期间，英军在边境发动破坏性袭击，杰德堡（Jedburgh）遭洗劫。对城镇的攻击没有改变苏格兰作为独立王国的地位。",
+      "description": "1523年9月，英军袭击并焚毁杰德堡城镇与防御建筑。萨里伯爵当年战报称围攻修道院却未成功攻下，故不能据此说修道院当时亦已被英军摧毁。苏格兰仍保持独立。",
+      "short_description": "1523年9月，英军袭击并焚毁杰德堡城镇与防御建筑。萨里伯爵当年战报称围攻修道院却未成功攻下，故不能据此说修道院当时亦已被英军摧毁。苏格兰仍保持独立。",
       "source_ids": [
         "SC-MURPHY-2024-ANGLO-SCOTS",
         "SC-MURPHY-2024-BOOK-ORIGINAL",
-        "GEO-GEONAMES-JEDBURGH"
+        "SC-SURREY-LETTER-1523-PRINTED",
+        "SC-BL-COTTON-BII"
       ],
       "certainty": "scholarly_monograph_contents_month_needs_check",
       "significance": {
@@ -652,7 +656,7 @@
       "research_event_id": "1523-JEDBURGH-SACK",
       "economic_fields": [],
       "geographic_rule": "military_raid_not_annexation",
-      "review_note": "Modern Jedburgh town center"
+      "review_note": "萨里1523战报记载杰德堡城区焚毁，却称未攻取修道院。此前后世记述“修道院也被焚毁”不能当作原始可靠事实。"
     },
     {
       "id": "1527-JOHN-RUT-STJOHNS",
@@ -721,6 +725,75 @@
       "economic_fields": [],
       "geographic_rule": "existing_English_held_crossing_fortified_no_new_formal_sovereignty",
       "review_note": "历史地点尚无足够准确的现代对应GPS，列表可显示；地图点留空。"
+    },
+    {
+      "id": "1523-CESSFORD-SIEGE",
+      "year": 1523,
+      "start_year": 1523,
+      "end_year": 1523,
+      "visible_from": 1523,
+      "date_label": "1523年（具体月份待原始军报核对）",
+      "name": "1523年英军围攻塞斯福德城堡",
+      "category": "siege",
+      "icon_code": "WAR",
+      "lat": 55.5077,
+      "lng": -2.417,
+      "geo_precision": "modern officially recorded historical castle site; event exact footprint not measured",
+      "geography_label": "Cessford Castle NT73759 23853 approx lat55.5077 lon-2.417",
+      "description": "英军于1523年围攻塞斯福德城堡。苏格兰历史环境署认为现存遗迹中的部分土工设施可能与这次围城有关；其后当地没有建立持续的英王行政统治。",
+      "short_description": "英军于1523年围攻塞斯福德城堡。苏格兰历史环境署认为现存遗迹中的部分土工设施可能与这次围城有关；其后当地没有建立持续的英王行政统治。",
+      "source_ids": [
+        "SC-HES-CESSFORD-SM1710",
+        "SC-HES-CESSFORD-TROVE"
+      ],
+      "certainty": "year_government_historic_designation",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "具体城堡围攻地点的官方文保档案与同期战报"
+      },
+      "colonial_profit": false,
+      "position_type": "historic_castle_modern_site_reference_not_territory",
+      "editorial_status": "pending_editorial_review",
+      "research_event_id": "1523-CESSFORD-SIEGE",
+      "economic_fields": [],
+      "geographic_rule": "temporary_siege_no_Scottish_annexation",
+      "review_note": "HES SM1710，土工迹象可能属1523围攻，非英方长期管辖；政府古迹保护面积不等于当年战区。"
+    },
+    {
+      "id": "1523-FERNIEHIRST-DEMOLISHED",
+      "year": 1523,
+      "start_year": 1523,
+      "end_year": 1523,
+      "visible_from": 1523,
+      "date_label": "1523年9月",
+      "name": "1523年英军攻取并拆毁费尼赫斯特城堡",
+      "category": "siege",
+      "icon_code": "WAR",
+      "lat": 55.4543,
+      "lng": -2.5512,
+      "geo_precision": "modern officially recorded historical castle site; event exact footprint not measured",
+      "geography_label": "Ferniehirst Castle LB13369 NT65235 17969, ~lat55.4543 lon-2.5512",
+      "description": "萨里伯爵的1523年战报称，英军在杰德堡附近与费尼赫斯特守军交战，用火炮攻入并拆毁堡垒，未建立长期英王城堡行政管辖。",
+      "short_description": "萨里伯爵的1523年战报称，英军在杰德堡附近与费尼赫斯特守军交战，用火炮攻入并拆毁堡垒，未建立长期英王城堡行政管辖。",
+      "source_ids": [
+        "SC-BL-COTTON-BII",
+        "SC-SURREY-LETTER-1523-PRINTED",
+        "SC-HES-FERNIEHIRST-LB13369"
+      ],
+      "certainty": "autograph_catalog_plus_edited_commander_letter",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "具体城堡围攻地点的官方文保档案与同期战报"
+      },
+      "colonial_profit": false,
+      "position_type": "historic_castle_modern_site_reference_not_territory",
+      "editorial_status": "pending_editorial_review",
+      "research_event_id": "1523-FERNIEHIRST-DEMOLISHED",
+      "economic_fields": [],
+      "geographic_rule": "temporary_local_military_capture_not_castle_annexation",
+      "review_note": "HES LB13369 现代城堡遗址含后来建筑；1523具体被毁建筑与存世部分未完全重合。"
     }
   ],
   "places": [
@@ -1117,6 +1190,78 @@
       "kind": "archive",
       "evidence_read_level": "prior main source, verify archival detail",
       "origin": "main/data/atlas-1500-1509.json"
+    },
+    {
+      "id": "IR-FRANCISCANS-MONASTERORIS",
+      "title": "IR-FRANCISCANS-MONASTERORIS",
+      "publisher": "Irish Franciscans, original religious order of site",
+      "url": "https://www.franciscans.ie/our-friaries/former-friaries/leinster/monasteroris-co-offaly/",
+      "kind": "religious order historical site summary",
+      "evidence_read_level": "Full webpage read",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "IR-NMS-MONASTERORIS-SMR",
+      "title": "IR-NMS-MONASTERORIS-SMR",
+      "publisher": "National Monuments Service SMR content reproduced by private heritage index",
+      "url": "https://www.danielkirkpatrick.co.uk/baronies/coolestown-offaly-heritage-profile/",
+      "kind": "official-record text in secondary mirror, not accessed directly",
+      "evidence_read_level": "Indexed SMR OF011-009001- and 1550 Offaly survey excerpt",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "FR-MORLAIX-CITY-MAG",
+      "title": "FR-MORLAIX-CITY-MAG",
+      "publisher": "Ville de Morlaix 2022 municipal history magazine pp14",
+      "url": "https://www.morlaix.bzh/fileadmin/mediatheque_ville-de-morlaix/kiosque/Morlaixmag/V6.pdf",
+      "kind": "local government historical retrospective",
+      "evidence_read_level": "PDF text indexed p14; full page screenshot request timed out",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "SC-SURREY-LETTER-1523-PRINTED",
+      "title": "SC-SURREY-LETTER-1523-PRINTED",
+      "publisher": "Original Surrey letter printed in Walter Scott Minstrelsy / ElectricScotland edition",
+      "url": "https://electricscotland.com/hiStory/other/minstrelsy_apdx1.htm",
+      "kind": "edited transcription of Tudor first-person dispatch, not autograph",
+      "evidence_read_level": "Letter text directly read on web",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "SC-BL-COTTON-BII",
+      "title": "SC-BL-COTTON-BII",
+      "publisher": "British Library Archives and Manuscripts",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102369",
+      "kind": "official original archive register with manuscript folio",
+      "evidence_read_level": "Catalogue directly read",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "SC-HES-CESSFORD-SM1710",
+      "title": "SC-HES-CESSFORD-SM1710",
+      "publisher": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM1710",
+      "kind": "national scheduled monument designation",
+      "evidence_read_level": "Direct protected-site page read NGR NT73759 23853",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "SC-HES-CESSFORD-TROVE",
+      "title": "SC-HES-CESSFORD-TROVE",
+      "publisher": "Historic Environment Scotland national historic environment record",
+      "url": "https://www.trove.scot/place/58306",
+      "kind": "government historic-site archaeological note",
+      "evidence_read_level": "Site archaeology summary read",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "SC-HES-FERNIEHIRST-LB13369",
+      "title": "SC-HES-FERNIEHIRST-LB13369",
+      "publisher": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,LB13369",
+      "kind": "national heritage listed building designation",
+      "evidence_read_level": "Official page read NGR NT65235 17969",
+      "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
     }
   ],
   "routes": [],
