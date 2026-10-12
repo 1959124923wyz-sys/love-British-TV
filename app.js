@@ -15,7 +15,11 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
 map.createPane('eventTooltipPane');
 map.getPane('eventTooltipPane').style.zIndex='820';
 map.getPane('eventTooltipPane').style.pointerEvents='none';
-const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+// High visibility historic control-area symbols; derived from documented city governance,
+// not from invented town-wall polygons. Keep beneath Leaflet event markers.
+map.createPane('controlAreaPane');
+map.getPane('controlAreaPane').style.zIndex='465';
+const groups={kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary','associated-modern-town-centre'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
@@ -45,7 +49,7 @@ function togglePanel(which){
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let year=1497; let selected=''; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 let clusterObstacles=[];
 const cancelClusterClose=()=>{if(clusterCloseTimer){clearTimeout(clusterCloseTimer);clusterCloseTimer=null}};
@@ -253,48 +257,82 @@ function renderPoints(){
  }
  updateVisibility();
 }
+function renderControlAreas(){
+ groups.controlAreas.clearLayers();
+ if(!frenchCityAreas||!$('toggleControlAreas').checked)return;
+ for(const f of frenchCityAreas.features||[]){
+  const p=f.properties||{};
+  // Every selected year represents its year-end political snapshot.
+  if(year<(p.start_year||1497)||year>(p.observed_through_year||1519))continue;
+  const coords=f.geometry?.coordinates;
+  if(f.geometry?.type!=='Point'||!coords||coords.length!==2)continue;
+  const center=[coords[1],coords[0]],zoom=map.getZoom();
+  const isTournai=String(f.id).includes('tournai');
+  const mainColor=isTournai?'#c5a0f1':'#9867dd';
+  const glowColor=isTournai?'#e0bfff':'#a57de3';
+  const radius=Math.max(p.min_radius_px||14,Math.min(23,(p.render_radius_px||17)+Math.max(0,zoom-5)*1.3));
+  const halo=L.circleMarker(center,{pane:'controlAreaPane',radius:radius+10,
+   color:glowColor,weight:0,opacity:0,fillColor:glowColor,fillOpacity:.18,interactive:false})
+   .addTo(groups.controlAreas);
+  const core=L.circleMarker(center,{pane:'controlAreaPane',radius,
+   color:mainColor,weight:3,opacity:1,fill:true,fillColor:mainColor,fillOpacity:.52,
+   bubblingMouseEvents:false})
+   .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.description)+'</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
+   .on('click',()=>{
+    const record=(atlas.places||[]).find(q=>q.id===p.source_place_id)
+      ||(atlasThird?.places||[]).find(q=>q.id===p.source_place_id)
+      ||(atlasLater?.places||[]).find(q=>q.id===p.source_place_id);
+    if(record)openDossier(record,'place');
+   }).addTo(groups.controlAreas);
+  // Low-key geo-label shows which urban area changes, with no blocking background.
+  if(zoom>=6){
+   const label=L.divIcon({className:'',html:'<span class="control-area-label">'+escapeHTML(p.draw_label)+'</span>',
+    iconSize:[60,17],iconAnchor:[30,-radius-4]});
+   L.marker(center,{icon:label,interactive:false,pane:'controlAreaPane',zIndexOffset:0})
+    .addTo(groups.controlAreas);
+  }
+ }
+}
 function renderHypotheses(){
  groups.hypotheses.clearLayers();
  if(year<1500||!$('toggleHypotheses').checked)return;
- if(year>=1510){
-  if(!geographicHypothesesThird || year<1513 || year>1518)return;
+ // Keep the Calais region's historically attested place-hull readable for both the
+ // 1500s and 1510s; it is a dashed estimate, not a surveyed control border.
+ if(geographicHypotheses){
+  const calais=f=>String(f.properties?.id||'').startsWith('calais');
+  L.geoJSON(geographicHypotheses,{
+   filter:f=>calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
+   interactive:false,
+   style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false}
+  }).addTo(groups.hypotheses);
+  L.geoJSON(geographicHypotheses,{
+   filter:f=>year<1510?['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type):
+     calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
+   style:f=>({color:f.geometry.type==='LineString'?'#e9b06e':calais(f)?'#c58dfb':'#d4aa70',
+    weight:calais(f)?3.4:2.7,dashArray:'7 5',opacity:calais(f)?1:.91,
+    fill:f.geometry.type!=='LineString',fillColor:calais(f)?'#b58bea':'#d4aa70',
+    fillOpacity:f.geometry.type==='LineString'?0:calais(f)?.12:.07}),
+   onEachFeature:(feature,layer)=>{
+    const p=feature.properties||{};
+    layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+    layer.on('click',()=>openHypothesis(feature));
+   }
+  }).addTo(groups.hypotheses);
+ }
+ if(year>=1513&&year<=1518&&geographicHypothesesThird){
   L.geoJSON(geographicHypothesesThird,{
    filter:f=>f.geometry?.type==='Polygon'&&f.properties?.fill_authorized===false&&f.properties?.active_years?.includes(year),
    style:{color:'#e2b16e',weight:3,dashArray:'7 5',opacity:.98,fill:true,fillColor:'#d9a65f',fillOpacity:.09},
    onEachFeature:(feature,layer)=>{
     const p=feature.properties||{};
     layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'图尔奈周边')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
-      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
     layer.on('click',()=>openHypothesis(feature));
    }
   }).addTo(groups.hypotheses);
-  return;
  }
- if(!geographicHypotheses)return;
- const calais=feature=>String(feature.properties?.id||'').startsWith('calais');
- // Soft, noninteractive silhouette under dashed lines. Display does not signify actual territorial control.
- L.geoJSON(geographicHypotheses,{
-  filter:f=>calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
-  interactive:false,
-  style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false}
- }).addTo(groups.hypotheses);
- L.geoJSON(geographicHypotheses,{
-  filter:f=>['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type),
-  style:f=>({
-   color:f.geometry.type==='LineString'?'#e9b06e':calais(f)?'#c58dfb':'#d4aa70',
-   weight:calais(f)?3.4:2.7,
-   dashArray:f.geometry.type==='LineString'?'7 5':'7 5',
-   opacity:calais(f)?1:.91,
-   fill:f.geometry.type!=='LineString',
-   fillColor:calais(f)?'#b58bea':'#d4aa70',
-   fillOpacity:f.geometry.type==='LineString'?0:calais(f)?.12:.07
-  }),
-  onEachFeature:(feature,layer)=>{
-   const p=feature.properties||{};
-   layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
-   layer.on('click',()=>openHypothesis(feature));
-  }
- }).addTo(groups.hypotheses);
 }
 function updateVisibility(){
  for(const [id,group] of [['toggleKingdom',groups.kingdom],['toggleRoutes',groups.routes],['toggleCandidates',groups.candidate],['toggleClaims',groups.claim]]){
@@ -347,7 +385,7 @@ function setYear(v){
  $('chapterThree').classList.toggle('active',third);
  $('timelineContext').textContent=third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='本章所有事件保留在事件列表和地图中，年份调整当时持续的政治状态。';
- renderEventList();renderPoints();renderHypotheses();renderMilestones();
+ renderEventList();renderControlAreas();renderPoints();renderHypotheses();renderMilestones();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===1519)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1519){stopPlay();return}setYear(year+1)},1250)}
@@ -407,14 +445,16 @@ async function boot(){
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
   }catch(_e){ /* Existing fallback codes remain available. */ }
   try{
-   const [notesResponse,geoResponse,thirdGeoResponse]=await Promise.all([
+   const [notesResponse,geoResponse,thirdGeoResponse,controlResponse]=await Promise.all([
     fetch('data/historical-detail-notes.json',{cache:'no-store'}),
     fetch('data/geography-1500-hypotheses.geojson',{cache:'no-store'}),
-    fetch('data/geography-1510-1519-hypotheses.geojson',{cache:'no-store'})
+    fetch('data/geography-1510-1519-hypotheses.geojson',{cache:'no-store'}),
+    fetch('data/french-urban-control-1500-1519.geojson',{cache:'no-store'})
    ]);
    if(notesResponse.ok)researchNotes=(await notesResponse.json()).records||{};
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
    if(thirdGeoResponse.ok)geographicHypothesesThird=await thirdGeoResponse.json();
+   if(controlResponse.ok)frenchCityAreas=await controlResponse.json();
   }catch(_e){ /* Text and all vetted history records remain usable. */ }
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
@@ -438,7 +478,8 @@ $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
 $('resetDossier').addEventListener('click',resetDossier);
 ['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{if(atlas)renderPoints()}));
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)renderHypotheses()});
-map.on('zoomend',()=>{if(atlas)renderPoints()});
+$('toggleControlAreas').addEventListener('change',()=>{if(atlas)renderControlAreas()});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas()}});
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
 
 syncPanels();
