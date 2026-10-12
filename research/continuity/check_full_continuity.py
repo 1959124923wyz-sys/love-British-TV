@@ -61,7 +61,7 @@ assert cp["tournai-occupied-city-1513"]["historic_end_date"]=="1519-02"
 assert cp["guines-crown-1520s"]["is_new_territory"] is False
 for p in [*cp.values(),*pp.values()]:
     assert p["historical_boundary_confirmed"] is False
-    assert p["actual_area_sqkm"] is None or p.get("measured_area_sqkm") is None
+    assert p["actual_area_sqkm"] is None, "invented area measurement"
     if p.get("source_place_id")!="tournai-occupied-city-1513" and "observed_through_year" in p:
         assert p["observed_through_year"]==1529
 for f in G["features"]:
