@@ -15,7 +15,18 @@ const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map)
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'世界／帝国级节点',2:'区域重要节点',1:'地方与补充事件'};
 const isUncertain=item=>item.geo_precision==='regional-symbol-only'||/uncertain/i.test(String(item.certainty||''));
-const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，地点不确定':'')+'">'+(isUncertain(item)?'<span aria-hidden="true">?</span>':'')+'</div>';
+const fallbackCodes={political:'POL',voyage:'EXP',colonial_control:'TER',war:'WAR',repression:'REP',enslavement:'SLV',slavery:'SLV',forced_labour:'LAB',wealth_flow:'ECO',economy:'ECO',displacement:'DIS',famine:'FAM',resistance:'RES',abolition:'ABO',independence:'IND',infrastructure:'INF',claim:'CLM',documentary:'DOC',status:'DOC'};
+let iconCatalog=null;
+const iconMeta=item=>{
+ const code=item.icon_code||fallbackCodes[item.category]||'DOC';
+ const record=iconCatalog?.categories?.find(x=>x.code===code);
+ return {code,color:record?.color||'#c99569'};
+};
+const svgIcon=(item,klass='atlas-glyph')=>{
+ const meta=iconMeta(item);
+ return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
+};
+const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，地点待考':'')+'">'+svgIcon(item)+(isUncertain(item)?'<span class="uncertain-badge" aria-hidden="true">?</span>':'')+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
 function syncPanels(){
@@ -29,7 +40,7 @@ function togglePanel(which){
  workspace.classList.toggle(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');syncPanels();
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
-const categorySymbol={political:'♜',voyage:'➤',claim:'⚑',status:'✓'};
+const categorySymbol=fallbackCodes;
 let atlas=null; let year=1497; let selected=''; let timer=null;
 let vectors={};
 const infoDefault=$('dossierBody').innerHTML;
@@ -51,7 +62,7 @@ function resetDossier(){selected='';$('dossierBody').innerHTML=infoDefault;docum
 function renderEventList(){
  const events=atlas.events.filter(e=>(e.visible_from||e.year)<=year).sort((a,b)=>levelOf(b)-levelOf(a)||a.year-b.year);
  $('eventCount').textContent=events.length+'项';
- $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" class="event-item '+(e.id===selected?'selected':'')+'" data-eid="'+escapeHTML(e.id)+'"><span class="event-icon">'+(categorySymbol[e.category]||'•')+'</span><span><small>'+escapeHTML(e.date_label)+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
+ $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" class="event-item '+(e.id===selected?'selected':'')+'" data-eid="'+escapeHTML(e.id)+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  document.querySelectorAll('.event-item').forEach(n=>n.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===n.dataset.eid),'event')));
 }
 function renderPoints(){
@@ -60,7 +71,7 @@ function renderPoints(){
   if(e.category==='status')return; // Status has no evidenced point geometry
   if(e.category==='claim'&&!$('toggleClaims').checked)return;
   if(levelOf(e)===1&&!$('toggleMinorEvents').checked)return; // Curiosity-first; minor markers are opt-in
-  const k=levelOf(e),d=k===3?23:k===2?16:11;
+  const k=levelOf(e),d=k===3?34:k===2?27:21;
   const ico=L.divIcon({className:'',html:iconHTML(e),iconSize:[d,d],iconAnchor:[d/2,d/2]});
   L.marker([e.lat,e.lng],{icon:ico,title:e.name,zIndexOffset:k*250})
    .bindTooltip(hoverCard(e.name,e.description,e),{sticky:true,direction:'top',className:'atlas-hover',opacity:0.98})
@@ -144,6 +155,10 @@ async function boot(){
   const res=await fetch('data/atlas-1497-1500.json',{cache:'no-store'});if(!res.ok)throw new Error('HTTP '+res.status);
   atlas=await res.json();
   if(!atlas||!Array.isArray(atlas.events)||!Array.isArray(atlas.routes))throw new Error('数据结构错误');
+  try{
+   const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
+   if(iconResponse.ok)iconCatalog=await iconResponse.json();
+  }catch(_e){ /* Existing fallback codes remain available. */ }
   setYear(1497); loadKingdomBoundaries();
  }catch(e){
   $('eventList').innerHTML='<div class="loading">无法读取历史资料，请刷新页面或查看 GitHub 原始数据。</div>';
