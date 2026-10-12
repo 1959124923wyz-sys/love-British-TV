@@ -1,4 +1,4 @@
-## v1.3.2 地图焦点与规范维护 · 待合并（2026-10-12）
+## v1.3.2 地图焦点与规范维护 · 已发布（2026-10-12，e2bbc798）
 
 - 地理轮廓点击后的矩形 SVG 焦点框改为非矩形焦点反馈，键盘聚焦保留柔和光晕。
 - 图尔奈、加来、Irish Pale 的研究链接改按独立 GeoJSON Feature 的 `source_path` 查找，而不看当前年份。
@@ -6,7 +6,7 @@
 - 更换年份/章节保留已打开的史料抽屉；回退至尚未发生的具体事件之前，只清除其详情。
 - 逐年历史演示规范进入正式交互规范和叙事规范，历史JSON元信息同步修正。
 - 新增 `scripts/test_map_interactions.js` 并加入两项 CI；历史审计与后续拆分队列见 `docs/MAINTENANCE_AUDIT_AND_QUEUE.md`。
-- **仅记录分支已实现功能，合并及 Pages 流水线成功之前不得标注正式发布**。
+- **状态已核验**：PR #12 合并入 main，Approved map UI contract 与 Publish historical atlas 的 Actions 均通过；实际桌面截图仍需人工复核。
 
 ## 已发布修复 · 2026-10-12 · 十年内历史事件严格逐年出现（PR #11；6a6f556）
 
