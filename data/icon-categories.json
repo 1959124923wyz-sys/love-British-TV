@@ -1,0 +1,131 @@
+{
+  "version": "2.0-approved",
+  "approved_on": "2026-10-12",
+  "design": "16-category icon semantics accepted by user, redrawn as editable 24x24 SVG symbols",
+  "sprite": "assets/atlas-icons.svg",
+  "categories": [
+    {
+      "code": "POL",
+      "label": "王权法令",
+      "key": "royal_charter",
+      "color": "#9372d8",
+      "important": true
+    },
+    {
+      "code": "EXP",
+      "label": "远航探险",
+      "key": "voyage",
+      "color": "#d18e50",
+      "important": true
+    },
+    {
+      "code": "TER",
+      "label": "殖民控制",
+      "key": "colonial_control",
+      "color": "#b8793f",
+      "important": true
+    },
+    {
+      "code": "WAR",
+      "label": "战争征服",
+      "key": "war",
+      "color": "#c85055",
+      "important": true
+    },
+    {
+      "code": "REP",
+      "label": "暴力镇压",
+      "key": "repression",
+      "color": "#ba4850",
+      "important": true
+    },
+    {
+      "code": "SLV",
+      "label": "奴隶贩运",
+      "key": "enslavement",
+      "color": "#b15b51",
+      "important": true
+    },
+    {
+      "code": "LAB",
+      "label": "强制劳动",
+      "key": "forced_labour",
+      "color": "#ae534c",
+      "important": true
+    },
+    {
+      "code": "ECO",
+      "label": "财富流动",
+      "key": "wealth_flow",
+      "color": "#c59141",
+      "important": true
+    },
+    {
+      "code": "DIS",
+      "label": "驱逐迁移",
+      "key": "displacement",
+      "color": "#7191bf",
+      "important": true
+    },
+    {
+      "code": "FAM",
+      "label": "饥荒危机",
+      "key": "famine",
+      "color": "#a3765e",
+      "important": true
+    },
+    {
+      "code": "RES",
+      "label": "抵抗运动",
+      "key": "resistance",
+      "color": "#489977",
+      "important": true
+    },
+    {
+      "code": "ABO",
+      "label": "废奴改革",
+      "key": "abolition",
+      "color": "#45a487",
+      "important": true
+    },
+    {
+      "code": "IND",
+      "label": "民族独立",
+      "key": "independence",
+      "color": "#31975d",
+      "important": true
+    },
+    {
+      "code": "INF",
+      "label": "港口设施",
+      "key": "infrastructure",
+      "color": "#598eb5",
+      "important": true
+    },
+    {
+      "code": "CLM",
+      "label": "主权声索",
+      "key": "claim",
+      "color": "#c39748",
+      "important": true
+    },
+    {
+      "code": "DOC",
+      "label": "史料争议",
+      "key": "documentary",
+      "color": "#85919e",
+      "important": true
+    }
+  ],
+  "scale": {
+    "1": 21,
+    "2": 27,
+    "3": 34
+  },
+  "semantics": {
+    "color": "event type",
+    "size": "historical significance level",
+    "dashed": "geographical uncertainty",
+    "source": "individual event record"
+  }
+}
