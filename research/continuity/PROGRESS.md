@@ -50,3 +50,21 @@
 
 ### 未经批准绝不自动发布
 主干main及Pages未触及；1520年代事件、地理精准度与财政仍以PR #8/#9为深层证据。主编批准事件、时段与源后再按独立预览选择性移植到官方app与data目录。上一时期Calais与Pale的现代地理参考虚线可以持续显示，但这仍非16世纪实测国土边界。
+
+
+## 2026-10-12｜用户确认：将控制区连续性固化为所有调查员的指导纲领
+用户明确要求未来调查永远以地图疆域真实演变为优先，并要求写入GitHub成为可传承流程；本批成果均保存在**研究分支PR #10**，未覆盖主站main。
+
+新增可持续使用文件（由主编合并后在主干生效）：
+
+1. **`AGENTS.md`**（提交 `18133ff6b722837fa726fdee884dec9dd2e6574e`）：仓库根目录的调查员必读入口，永远强调控制区跨十年接棒、不编造边界、区分独立政体。
+2. **`docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md`**（`8b9821fbb7fff53dc7bc62dd41b243c8f152463b`）：七步闭环“基线—变化—制图—逐年—校验—交接”，包含三种年代语义、实心/虚线面积审批门槛与七项离岗验收。
+3. **`research/continuity/templates/DECADE_TRANSITION_TEMPLATE.json`**（`ba7ac7ee6ff5a3a70e3ba1ffbb6cb19083cddcc7`）和 **`EDITOR_HANDOFF_TEMPLATE.md`**（`f36a3468d8717cea855d51ee7e7444bff73184ea`）：每新十年强制按同一字段提交“前期所有控制关系去向、逐年状态和地理变更”，不能从空白数据重写。
+4. **`research/continuity/transitions/TRANSITION_1519_1520_V2.json`**（`2beca212f7a5fd5b446044755aa6098d31b06c14`）：真实历史范例，上一期六处活跃关系全部有去向，图尔奈因1519-02归还列入退出档案；吉讷属于旧加来控制区的新独立地图点。10份逐年快照完整。未核的特殊政制1519后的新期资料不能冒称已核。
+5. **`scripts/validate_control_transition.py`**（`07f5ae99c6384b1fdfc574d50934c0bd15921ee2`）：跨期机器验收程序、合成虚构自测（测试数据只在代码中，不作历史事实），检查任何前期控制ID断档、年份无缝、历史撤军证据、无真实边界时的非法面积填色。
+6. **`.github/workflows/territory-continuity-audit.yml`**（`e9be233407d6aba9ecc38d22c949e6b02704c212`）：PR阶段尝试运行自测、所有标准化过渡台账和现有1497—1529研究回归。
+7. **入口联动已更新**：根目录`README.md`、`RESEARCH_HANDOFF.md`、`research/continuity/README.md`、既有`docs/TERRITORY_CONTINUITY_RULE.md`，确保新人无须知道本次对话也能找到指南。
+
+**独立审核**：GitHub远端回读13份相关文档/脚本/数据，核对实际范例六处有效继承、图尔奈退出、吉讷旧区新点、10年快照、全部来源编号、33年基线与文档引用，结果0结构性问题。**尚未取得Actions运行结论；不声称自动脚本已在CI真实执行通过。** 主编审核并合入前，新的AGENTS工作纲领仅在本分支，主站发布不受影响。
+
+恢复路径：GitHub PR #10 → 根目录`AGENTS.md` →`docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md` → templates/ →新期独立研究分支；合并后新调查员先阅读这些规范再接棒。
