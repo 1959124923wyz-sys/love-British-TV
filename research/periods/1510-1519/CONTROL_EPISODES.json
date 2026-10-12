@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "period": {
+    "from": 1510,
+    "to": 1519,
+    "interval_end_exclusive": 1520
+  },
+  "compiled_on": "2026-10-12",
+  "editorial": "research_candidates_not_main",
+  "controls": [
+    {
+      "id": "CONT1510-ENGLAND-CALAIS",
+      "historical_region": "Calais, Guînes, Hames and English Pale of Calais",
+      "legal_claimant": "Kingdom of England; Henry VIII",
+      "effective_authority": "Governor of Calais and English officers/garrisons",
+      "relationship": "effective_crown_civil_military_control",
+      "period": {
+        "observed_from": 1510,
+        "observed_to": 1519,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "English garrison/royal treasury/staple and marcher settlements continued with local courts and border-defense structures; frontier edges changed by royal works and war.",
+        "Original town/castle and selected surrounding strongpoints are stronger proofs than a fully outlined March polygon."
+      ],
+      "source_ids": [
+        "TNA-SP1-HENRY8-GUIDE",
+        "MURPHY-2025-GUINES"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Use c1500 prior research hypothesis as starting point, but the later 1525 commission shows frontier contest; do not mechanically retain a 10-year fixed polygon",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "MODERATE"
+      },
+      "editorial_status": "source_checked_candidate",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1510-ENGLAND-IRISH-PALE",
+      "historical_region": "English Pale around Dublin and certain legal/government boroughs",
+      "legal_claimant": "Henry VIII as Lord of Ireland",
+      "effective_authority": "Gerald FitzGerald VIII Earl Kildare (to 1513), Gerald IX Earl (1513–19), then Lord Surrey appointed 1519",
+      "relationship": "effective_delegated_crown_rule_with_mixed_authority",
+      "period": {
+        "observed_from": 1510,
+        "observed_to": 1519,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "Kildare VIII deputy reappointed 1510-11-08; successor IX earl Lord Deputy from late 1513 until dismissal in 1519.",
+        "Local Gaelic lords and rival urban/pale factions held powers beyond shifting effective Pale boundary; four shire limits are not 1510 actual maps."
+      ],
+      "source_ids": [
+        "RIA-GEAROID-MOR",
+        "RIA-GEAROID-OG",
+        "RIA-ROBERT-COWLEY"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Inherited 1488 legal defensive line should be dashed historical proxy, not continuous decade-long actual tax district",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "MODERATE"
+      },
+      "editorial_status": "source_checked_candidate",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1513-TOURNAI",
+      "historical_region": "Tournai city (today Belgium), English king's French dominion",
+      "legal_claimant": "Henry VIII as claimant King of France (title used for occupation); France contested",
+      "effective_authority": "Crown-appointed English garrison/governor and locally retained municipal institutions",
+      "relationship": "effective_occupied_city_civil_and_military_administration",
+      "period": {
+        "observed_from": 1513,
+        "observed_to": 1519,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": [
+          "If 1519 shows as snapshot post-February, former English occupation layer must disappear."
+        ]
+      },
+      "documented_control_fact": [
+        "23 Sep 1513 city capitulation to Henry VIII forces; Tudor government and local municipality functioned under English royal authority.",
+        "Treaty for cession dated 4 October 1518; actual physical return Feb 1519 in Neil Murphy's scholarly reconstruction.",
+        "Henry VIII ruled Tournai separately from England, in his claimed capacity as king of France; not incorporated into English parliamentary constituencies."
+      ],
+      "source_ids": [
+        "TOURNAI-MIL-MUSEUM",
+        "BL-TOURNAI-1518-TREATY",
+        "DAVIES-1998-TOURNAI",
+        "MURPHY-2014-TOURNAI"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Use approximate historic city/tower point or small urban visual envelope with dashed outline; do not fill today's Tournai commune or bishopric",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "HIGH_FOR_URBAN_GOVERNANCE_LOW_FOR_RURAL_BOUNDARY"
+      },
+      "editorial_status": "date_source_checked_spatial_hypothesis",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1513-THEROUANNE",
+      "historical_region": "Thérouanne (French town in Artois)",
+      "legal_claimant": "Kingdom of France",
+      "effective_authority": "English/Habsburg allied occupying forces during siege and aftermath; French after return",
+      "relationship": "temporary_military_capture_urban_destruction",
+      "period": {
+        "observed_from": 1513,
+        "observed_to": 1513,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "City capitulated around 23 Aug 1513 to Henry VIII and Maximilian forces; sections razed.",
+        "Local municipality states French King Francis I oversaw rebuilding walls by 1518: cannot claim long-lasting Tudor colonial civil administration during 1514–19."
+      ],
+      "source_ids": [
+        "FRANCE-1513-CAMPAIGN",
+        "THEROUANNE-OFFICIAL"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Single temporary military event point with aftermath; no 1513–1519 persistent English area",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "HIGH_FOR_SIEGE_NOT_POLYGON"
+      },
+      "editorial_status": "source_checked_candidate",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1513-WARK",
+      "historical_region": "Wark Castle, English Scottish border",
+      "legal_claimant": "English Crown; disputed in active war",
+      "effective_authority": "briefly forces of James IV of Scotland then English controlled again",
+      "relationship": "temporary_military_capture_and_restore",
+      "period": {
+        "observed_from": 1513,
+        "observed_to": 1513,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "Historic England scheduled monument record directly records Scots took Wark Castle before Flodden in 1513 and English king directed strengthening after campaign.",
+        "A captured fortress does not imply Northumberland county became Scottish Crown territory."
+      ],
+      "source_ids": [
+        "HE-WARK-1513"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Point marker for short 1513 capture; after 1513 controlled by English Crown again and restoration surveyed 1517",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "HIGH_FOR_CASTLE_MEDIUM_FOR_EXACT_HANDOVER_DAY"
+      },
+      "editorial_status": "government_designation_checked",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1513-SCOTLAND",
+      "historical_region": "Kingdom of Scotland under James IV, then minor James V",
+      "legal_claimant": "Kingdom of Scotland",
+      "effective_authority": "Scottish Council, Margaret Tudor regency and John Duke of Albany (from 1515), with noble faction competition",
+      "relationship": "sovereign_independent_kingdom_with_regency",
+      "period": {
+        "observed_from": 1510,
+        "observed_to": 1519,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "Flodden English victory Sep 9 1513 killed James IV; James V became Scottish king and Scotland's own Crown, councils, treasury and laws continued.",
+        "1515 Albany regency and noble faction politics did not convert Scottish kingdom into an English territory."
+      ],
+      "source_ids": [
+        "NRS-FLODDEN",
+        "NRS-FLODDEN-ARCHIVES",
+        "NRS-PC-1517"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Historical Scottish kingdom boundary based on sourced early modern maps, regional contest marked dashed; no new English orange fill",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "HIGH_FOR_SOVEREIGNTY"
+      },
+      "editorial_status": "source_checked_candidate",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1510-ISLES",
+      "historical_region": "Orkney and Shetland and Scotland western Isles",
+      "legal_claimant": "Crown of Scotland",
+      "effective_authority": "Scottish royal representatives in northern isles; Western Isles varied lordship/clans",
+      "relationship": "scottish_suzerainty_with_locally_varied_enforcement",
+      "period": {
+        "observed_from": 1510,
+        "observed_to": 1519,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "Northern isles under Scottish Crown since 1472; Western Isles after 1493 forfeiture included substantial local power.",
+        "1513 Flodden did not transfer them to English sovereignty."
+      ],
+      "source_ids": [
+        "NRS-FLODDEN",
+        "NRS-PC-1517"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "No assumption homogeneous continuous direct royal rule of all western isles; existing 1500s source package carries early island-specific records",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "MODERATE"
+      },
+      "editorial_status": "inherited_earlier_source",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1510-CROWN-DEPENDENCIES",
+      "historical_region": "Channel Islands and Isle of Man",
+      "legal_claimant": "English monarch as Crown lord of Channel Islands; Stanley lordship in Isle of Man",
+      "effective_authority": "Jersey/Guernsey bailiwicks; Isle of Man's local lord and Tynwald",
+      "relationship": "special_crown_related_lordship_not_incorporated_english_regions",
+      "period": {
+        "observed_from": 1510,
+        "observed_to": 1519,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "Separate local laws and relationships with English Parliament, actual local government.",
+        "Imperial category should distinguish Crown dependencies from colonial conquest and ordinary English counties."
+      ],
+      "source_ids": [
+        "LAW-CHANNEL-MAN-2025"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Use island locations with distinct pattern rather than England-region fill",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "HIGH_FOR_CONSTITUTIONAL_DISTINCTION"
+      },
+      "editorial_status": "academic_general_period_checked",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1512-OMAGH",
+      "historical_region": "Omagh Castle, Tyrone",
+      "legal_claimant": "O'Donnell family and competing Gaelic dynasties",
+      "effective_authority": "O'Donnell garrison left at Omagh in 1512 according to Irish annals",
+      "relationship": "gaelic_local_castle_administration",
+      "period": {
+        "observed_from": 1512,
+        "observed_to": 1512,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "Annals of the Four Masters M1512.8 records O'Donnell rebuilt castle torn down earlier by Earl Kildare and left his own warders.",
+        "Gaelic control is active local political governance; English Crown cannot be portrayed as uniformly governing all Ulster."
+      ],
+      "source_ids": [
+        "UCC-FOURMASTERS-1510s"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Only site-level point once accurately geolocated, no whole Tyrone polygon",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "MEDIUM_17TH_C_SOURCE"
+      },
+      "editorial_status": "edited_primary_chronicle_checked",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1512-ROSCOMMON",
+      "historical_region": "Roscommon Castle, Connacht",
+      "legal_claimant": "multiple Irish polities with an English royal deputy expedition",
+      "effective_authority": "Kildare deputy temporarily garrisoned Roscommon in 1512 according to Gaelic annal",
+      "relationship": "military_expedition_with_garrison_indefinite",
+      "period": {
+        "observed_from": 1512,
+        "observed_to": 1512,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "M1512.9 records the royal deputy Kildare raided, took Roscommon, and left warders.",
+        "This is some evidence for a limited new local military foothold; end of garrison and extent of jurisdiction not confirmed."
+      ],
+      "source_ids": [
+        "UCC-FOURMASTERS-1510s",
+        "RIA-GEAROID-MOR"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Point or fortified urban site only, not County Roscommon orange",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "MEDIUM"
+      },
+      "editorial_status": "chronicle_and_biography",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1516-SLIGO",
+      "historical_region": "Sligo and adjacent castles, western Ireland",
+      "legal_claimant": "O'Donnell Gaelic political power versus rival Gaelic dynasties",
+      "effective_authority": "O'Donnell forces took Sligo and some nearby castles and left warders at some sites",
+      "relationship": "local_gaelic_military_control",
+      "period": {
+        "observed_from": 1516,
+        "observed_to": 1516,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "M1516.7 details O'Donnell castle attack assisted by a French knight's artillery ship and takeover at Sligo; garrisons or hostages followed.",
+        "Local military authority and foreign arms do not automatically equal English Crown control, or prove exact harbours and shipping routes."
+      ],
+      "source_ids": [
+        "UCC-FOURMASTERS-1510s"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "Site-level position only, no entire Sligo/Connacht map under any modern county borders",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "MEDIUM"
+      },
+      "editorial_status": "edited_chronicle_checked",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1516-OCARROLL",
+      "historical_region": "O'Carroll castle in Offaly region, Leim-Ui-Bhanain",
+      "legal_claimant": "O'Carroll Gaelic lordship and Henry VIII's deputy",
+      "effective_authority": "Kildare ninth earl military force broke fortifications in 1516",
+      "relationship": "temporary_capture_and_destroy",
+      "period": {
+        "observed_from": 1516,
+        "observed_to": 1516,
+        "date_precision": "year_except_explicit_dated_events",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "M1516.12 records Kildare took fortified O'Carroll castle and destroyed it.",
+        "Castle attack not equal to durable crown local governance."
+      ],
+      "source_ids": [
+        "UCC-FOURMASTERS-1510s",
+        "RIA-GEAROID-OG"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no_surveyed_period_polygon",
+        "historical_area_basis": "No exact point until historical place-name identity established",
+        "representation": "dashed_inferred_or_point_only",
+        "certainty": "MEDIUM"
+      },
+      "editorial_status": "edited_chronicle_checked",
+      "royal_net_income_established": false
+    }
+  ],
+  "map_rules": [
+    "calais historical proxy from previous decade, not automatic fixed decade control polygon",
+    "Tournai English military civil administration is strongest 1513–1519 new European example, city-size only",
+    "Treaty of Tournai 1518 legal decision; historical garrison 1519 February returned",
+    "Scotland independent after 1513 Flodden",
+    "Irish castle episodes no broad English county polygon"
+  ],
+  "generated_control_polygons": 0
+}
