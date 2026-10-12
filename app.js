@@ -25,6 +25,8 @@ const territoryRenderer=L.svg({pane:'territoryPane'});
 const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
+// Shared year gate for archive, map symbols and voyage tracks.
+function occurredByYear(item,selectedYear){return Number.isFinite(Number(item?.year))&&Number(item.year)<=selectedYear;}
 const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary','associated-modern-town-centre'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
 const fallbackCodes={political:'POL',voyage:'EXP',colonial_control:'TER',war:'WAR',repression:'REP',enslavement:'SLV',slavery:'SLV',forced_labour:'LAB',wealth_flow:'ECO',economy:'ECO',displacement:'DIS',famine:'FAM',resistance:'RES',abolition:'ABO',independence:'IND',infrastructure:'INF',claim:'CLM',documentary:'DOC',status:'DOC'};
 let iconCatalog=null;
@@ -124,8 +126,8 @@ function renderEventList(){
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
  const fullArchive=$('showFullChapterArchive').checked;
- const events=atlas.events.filter(e=>(atlas!==atlasEarly||e.year<=1499)&&(fullArchive||e.year<=year))
-  .sort((a,b)=>levelOf(b)-levelOf(a)||a.year-b.year||a.name.localeCompare(b.name,'zh'));
+ const events=atlas.events.filter(e=>(atlas!==atlasEarly||e.year<=1499)&&(fullArchive||occurredByYear(e,year)))
+  .sort((a,b)=>a.year-b.year||levelOf(b)-levelOf(a)||a.name.localeCompare(b.name,'zh'));
  const chapterTotal=atlas.events.filter(e=>atlas!==atlasEarly||e.year<=1499).length;
  $('eventCount').textContent=events.length+'项';
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
@@ -197,7 +199,7 @@ function renderPoints(){
  const showAll=map.getZoom()>=4||$('toggleMinorEvents').checked;
  if($('toggleEvents').checked){
   for(const e of atlas.events){
-   if((atlas===atlasEarly&&e.year>1499)||e.year>year)continue;
+   if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;
    if(e.category==='status'||!Number.isFinite(e.lat)||!Number.isFinite(e.lng))continue;
    if(e.category==='claim'&&!$('toggleClaims').checked)continue;
    if(levelOf(e)===1&&!showAll)continue;
@@ -258,6 +260,7 @@ function renderPoints(){
   }
  }
  for(const r of atlas.routes||[]){
+  if(!occurredByYear(r,year))continue;
   const line=L.polyline(r.coords,{color:r.year===1497?'#d4a47d':'#97a9bc',weight:2.7,dashArray:'8 9',opacity:.88,interactive:false}).addTo(groups.routes);
   L.polyline(r.coords,{color:'#fff',weight:18,opacity:.015,interactive:true})
    .bindTooltip(hoverCard(r.name,r.note),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
@@ -585,6 +588,8 @@ async function boot(){
    const param=new URLSearchParams(window.location?.search||'').get('year');
    if(param && /^[0-9]{4}$/.test(param))startYear=Number(param);
   }catch(_error){}
+  // Open each load in chronological mode. Full-period archival preview stays opt-in.
+  $('showFullChapterArchive').checked=false;
   setYear(startYear);loadKingdomBoundaries();
  }catch(e){
   $('eventList').innerHTML='<div class="loading">无法读取历史资料，请刷新页面或查看 GitHub 原始数据。</div>';
