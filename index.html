@@ -9,14 +9,14 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=20261012-10">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=20261012-11">
 </head>
 <body>
 <div class="site">
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>THE COST OF EMPIRE · HISTORICAL ATLAS</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
- <div class="head-actions"><span class="version">1497—1519 · PILOT v1.0</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1519 · PILOT v1.1</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
@@ -36,6 +36,7 @@
     <div class="controls-body">
      <div class="control-heading">地图图层</div>
      <div class="layer-options">
+      <label><input type="checkbox" id="toggleControlAreas" checked><i class="layer-dot area-control"></i>实际控制城市 · 实色区域</label>
       <label><input type="checkbox" id="toggleKingdom" checked><i class="layer-dot kingdom"></i>王国范围与政治据点</label>
       <label><input type="checkbox" id="toggleRoutes" checked><i class="layer-dot route"></i>航海示意</label>
       <label><input type="checkbox" id="toggleCandidates" checked><i class="layer-dot ring"></i>登陆位置</label>
@@ -46,6 +47,7 @@
      <div class="control-divider"></div>
      <div class="control-heading">标记说明</div>
      <div class="legend-items">
+      <div><i class="swatch city-occupation"></i>实色圆面 · 有证据的城市控制核心</div>
       <div><i class="swatch control"></i>英格兰 · 紫色 / 苏格兰 · 蓝灰</div>
       <div><i class="swatch dash"></i>航海方向</div>
       <div><i class="swatch major"></i>重大事件</div>
@@ -86,6 +88,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=third-1510-1519-v1"></script>
+<script src="app.js?v=map-first-france-1513-v1"></script>
 </body>
 </html>
