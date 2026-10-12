@@ -1,0 +1,551 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Research-only 1510–1519 territorial-control cartographic hypotheses",
+    "compiled": "2026-10-12",
+    "political_scope": "England and Scotland were independent states",
+    "safe_use": "Optional dashed hypothesis/reference layer only; no historically confirmed precise effective-border polygons",
+    "source_lineage": "Calais and Irish Pale geometries inherited verbatim from research/hypothetical-boundaries-1500-1510-20261012 and never actual territorial boundaries",
+    "projection": "EPSG:4326 lon-lat",
+    "external_coordinate_attribution": "GeoNames CC BY; Historic England / UK planning open data, exact reuse license per dataset to verify",
+    "rights": "Do not redistribute historical map scans."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.540556,
+            53.859722
+          ],
+          [
+            -6.645119,
+            53.808527
+          ],
+          [
+            -6.8791667,
+            53.7263889
+          ],
+          [
+            -6.91434,
+            53.623266
+          ],
+          [
+            -6.791667,
+            53.555
+          ],
+          [
+            -6.670833,
+            53.402222
+          ],
+          [
+            -6.689167,
+            53.291389
+          ],
+          [
+            -6.666944,
+            53.215833
+          ],
+          [
+            -6.6152,
+            53.13348
+          ],
+          [
+            -6.554626,
+            53.2174
+          ],
+          [
+            -6.5247222,
+            53.235
+          ],
+          [
+            -6.4444444,
+            53.2802778
+          ],
+          [
+            -6.3734436,
+            53.285896
+          ],
+          [
+            -6.1002778,
+            53.2783333
+          ]
+        ]
+      },
+      "properties": {
+        "id": "irish-pale-1488-legal-frontier-test-v1",
+        "type": "inferred_legal_frontier_polyline",
+        "historical_reference": "1488-1489 statute, Joyce1921 reconstruction",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "dashed",
+        "on_map_legal": "not_actual_control_boundary",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-STATUTE-TEXT"
+        ],
+        "method": "linear_segments_between_modern_geocoded_town_centers; original legal dyke may have never formed continuous earthwork; intervals not drawn from surveying",
+        "approval": "never_render_as_published_actual_control",
+        "unconfirmed_modern_midpoint_excluded": "Rathcoole was kept as optional modern reference point but removed from nominal 1488 statute legal-line vertices because its status as a statute-listed boundary point is not confirmed.",
+        "inherited_from_branch": "research/hypothetical-boundaries-1500-1510-20261012",
+        "period_from": 1510,
+        "period_to": 1519,
+        "note": "Visual proxy carried forward from earlier decade only. Military/control changes in 1510s not digitally known; original polygons were not official historical borders."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.645119,
+              53.808527
+            ],
+            [
+              -6.8791667,
+              53.7263889
+            ],
+            [
+              -6.91434,
+              53.623266
+            ],
+            [
+              -6.791667,
+              53.555
+            ],
+            [
+              -6.670833,
+              53.402222
+            ],
+            [
+              -6.689167,
+              53.291389
+            ],
+            [
+              -6.666944,
+              53.215833
+            ],
+            [
+              -6.6152,
+              53.13348
+            ],
+            [
+              -6.554626,
+              53.2174
+            ],
+            [
+              -6.5247222,
+              53.235
+            ],
+            [
+              -6.4444444,
+              53.2802778
+            ],
+            [
+              -6.3734436,
+              53.285896
+            ],
+            [
+              -6.1002778,
+              53.2783333
+            ],
+            [
+              -6.1358643,
+              53.2939516
+            ],
+            [
+              -6.248889,
+              53.333056
+            ],
+            [
+              -6.218056,
+              53.459722
+            ],
+            [
+              -6.3477778,
+              53.7188889
+            ],
+            [
+              -6.416667,
+              54
+            ],
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.540556,
+              53.859722
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "irish-pale-1510s-presentation-envelope",
+        "type": "visual_influence_envelope_not_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "VERY_HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "1488-1489 inland legal-place sequence + modern town centers along coast; geographic closure through settled sites is NOT historical coastline tracing",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-ELLIS-2021"
+        ],
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "inherited_from_branch": "research/hypothetical-boundaries-1500-1510-20261012",
+        "period_from": 1510,
+        "period_to": 1519,
+        "note": "Visual proxy carried forward from earlier decade only. Military/control changes in 1510s not digitally known; original polygons were not official historical borders."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.753207,
+              50.945644
+            ],
+            [
+              1.843379,
+              50.881781
+            ],
+            [
+              1.870254,
+              50.867081
+            ],
+            [
+              1.943655,
+              50.860735
+            ],
+            [
+              1.997517,
+              50.915701
+            ],
+            [
+              2.042758,
+              50.977126
+            ],
+            [
+              1.753207,
+              50.945644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "calais-1510s-attested-sites-hull-only",
+        "type": "spatial_envelope_of_attested_settlements_NOT_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "mathematical convex hull of 10 geocoded place centers mentioned in the English-held district, not a historical survey; intentionally not buffered; contains points with uneven certainty",
+        "source_ids": [
+          "FR-MINISTRY-2026",
+          "FR-TNA-CALAIS",
+          "FR-ROSE-GRUMMITT",
+          "GEONAMES-FR"
+        ],
+        "warning": "Hull does not necessarily match whole 1500 march: some named marginal places may be disputed; 300 sq.km French ministry is long-period general statement, not area of hull",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "inherited_from_branch": "research/hypothetical-boundaries-1500-1510-20261012",
+        "period_from": 1510,
+        "period_to": 1519,
+        "note": "Visual proxy carried forward from earlier decade only. Military/control changes in 1510s not digitally known; original polygons were not official historical borders."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.4055990078630805,
+              50.60715
+            ],
+            [
+              3.40539859857448,
+              50.60876605852314
+            ],
+            [
+              3.4048023054504863,
+              50.610342324322055
+            ],
+            [
+              3.403824811206794,
+              50.61183998450144
+            ],
+            [
+              3.4024901849958007,
+              50.61322216169723
+            ],
+            [
+              3.400831289744192,
+              50.61445482211969
+            ],
+            [
+              3.3988889729586194,
+              50.61550761357825
+            ],
+            [
+              3.396711060924524,
+              50.616354612853186
+            ],
+            [
+              3.394351181064261,
+              50.61697496401131
+            ],
+            [
+              3.3918674414519816,
+              50.61735339194829
+            ],
+            [
+              3.389321,
+              50.61748057851239
+            ],
+            [
+              3.386774558548018,
+              50.61735339194829
+            ],
+            [
+              3.384290818935739,
+              50.61697496401131
+            ],
+            [
+              3.3819309390754757,
+              50.616354612853186
+            ],
+            [
+              3.3797530270413803,
+              50.61550761357825
+            ],
+            [
+              3.3778107102558077,
+              50.61445482211969
+            ],
+            [
+              3.376151815004199,
+              50.61322216169723
+            ],
+            [
+              3.3748171887932057,
+              50.61183998450144
+            ],
+            [
+              3.3738396945495133,
+              50.610342324322055
+            ],
+            [
+              3.3732434014255195,
+              50.60876605852314
+            ],
+            [
+              3.373042992136919,
+              50.60715
+            ],
+            [
+              3.3732434014255195,
+              50.60553394147686
+            ],
+            [
+              3.3738396945495133,
+              50.60395767567794
+            ],
+            [
+              3.3748171887932057,
+              50.60246001549856
+            ],
+            [
+              3.376151815004199,
+              50.601077838302764
+            ],
+            [
+              3.3778107102558077,
+              50.599845177880304
+            ],
+            [
+              3.3797530270413803,
+              50.59879238642174
+            ],
+            [
+              3.3819309390754757,
+              50.59794538714681
+            ],
+            [
+              3.384290818935739,
+              50.59732503598868
+            ],
+            [
+              3.386774558548018,
+              50.5969466080517
+            ],
+            [
+              3.389321,
+              50.5968194214876
+            ],
+            [
+              3.3918674414519816,
+              50.5969466080517
+            ],
+            [
+              3.394351181064261,
+              50.59732503598868
+            ],
+            [
+              3.396711060924524,
+              50.59794538714681
+            ],
+            [
+              3.3988889729586194,
+              50.59879238642174
+            ],
+            [
+              3.400831289744192,
+              50.599845177880304
+            ],
+            [
+              3.4024901849958007,
+              50.601077838302764
+            ],
+            [
+              3.403824811206794,
+              50.60246001549856
+            ],
+            [
+              3.4048023054504863,
+              50.60395767567794
+            ],
+            [
+              3.40539859857448,
+              50.60553394147686
+            ],
+            [
+              3.4055990078630805,
+              50.60715
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "TOURNAI-1513-1519-URBAN-VISUAL-FOOTPRINT",
+        "label": "图尔奈1513—1519年英王占领城市的大致位置（示意）",
+        "period_from": 1513,
+        "period_to": 1519,
+        "last_occupation_month": "1519-02",
+        "source_ids": [
+          "TOURNAI-MIL-MUSEUM",
+          "TOURNAI-DAVIES-1998",
+          "MURPHY-2014-TOURNAI",
+          "BL-TOURNAI-1518-TREATY"
+        ],
+        "polygon_type": "fixed_1.15km_radius_cartographic_marker_not_historic_wall",
+        "uncertainty": "HIGH_for_perimeter_LOW_for_occupation",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "dashed": true,
+        "geometry_note": "Circle of 1.15km drawn around modern GeoNames center as visual symbol, radius editorial choice, NOT measured 1513 city walls, occupation possibly extended beyond walls. It must disappear after Feb 1519 if exact-date filtering.",
+        "rights": "self-generated circle + GeoNames modern coordinate CC BY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.389321,
+          50.60715
+        ]
+      },
+      "properties": {
+        "id": "TOURNAI-1513-1519",
+        "label": "图尔奈英王治理1513—1519年",
+        "reference_source": "GeoNames Tournai 50.60715,3.389321 / Tournai Museum",
+        "period_from": 1513,
+        "period_to": 1519,
+        "modern_site_only": true,
+        "represents_historical_point_not_exact": true,
+        "control_meaning": "English city administration, returned Feb 1519",
+        "precision": "modern_town_center_not_historical_wall",
+        "effective_end_month": "1519-02"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.167046,
+          55.626989
+        ]
+      },
+      "properties": {
+        "id": "FLODDEN-1513",
+        "label": "弗洛登1513战场示意",
+        "reference_source": "Historic England list 1000011 / UK planning open data",
+        "period_from": 1513,
+        "period_to": 1513,
+        "modern_site_only": true,
+        "represents_historical_point_not_exact": true,
+        "control_meaning": "battlefield location does not change sovereignty of Scotland",
+        "precision": "official_registered_battlefield_label_center"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2561,
+          50.6381
+        ]
+      },
+      "properties": {
+        "id": "THEROUANNE-1513",
+        "label": "泰鲁阿讷1513围城示意",
+        "reference_source": "Commune de Thérouanne local history; current commune representative coordinate from civic/Wikipedia",
+        "period_from": 1513,
+        "period_to": 1513,
+        "modern_site_only": true,
+        "represents_historical_point_not_exact": true,
+        "control_meaning": "temporary seizure and town demolition, not ongoing English occupied polygon",
+        "precision": "modern_commune_center_not_exact_historic_wall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.46943,
+          54.26969
+        ]
+      },
+      "properties": {
+        "id": "SLIGO-1516",
+        "label": "斯莱戈城堡控制1516年事件的城市参照",
+        "reference_source": "GeoNames 2961423 / UCC Four Masters M1516.7",
+        "period_from": 1516,
+        "period_to": 1516,
+        "modern_site_only": true,
+        "represents_historical_point_not_exact": true,
+        "control_meaning": "Gaelic O'Donnell castle seizure, not English control",
+        "precision": "modern_town_center_not_citadel"
+      }
+    }
+  ]
+}
