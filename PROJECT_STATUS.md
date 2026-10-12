@@ -67,3 +67,13 @@ README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATR
 - 左栏“研究地图”免责声明及重复学术争议段落从首屏清除；保留真正有历史意义的证据边界、数据来源与地理精度字段。
 - JS、HTML、CSS 已提交 main；版本参数更新至 pilot v0.3。待确认 GitHub Pages 实际页面效果，必要时 Ctrl+F5。
 - 新版 Word 16图标提案属于单独待审草案，**没有上传GitHub**；当前线上标记继续沿用已有基础等级显示，等待用户确认正式图标后再整体替换。
+
+
+## 正式批准版图标上线交接 v0.4.0 · 2026-10-12
+- 用户已批准新版16类视觉符号意象。正式规范 docs/ICON_SYSTEM_V2_APPROVED.md；16类SVG assets/atlas-icons.svg；机器目录 data/icon-categories.json。
+- 字段事件 icon_code 已写入 data/atlas-1497-1500.json（POL/EXP/CLM/DOC）；地图和左侧列表通过同一个 svgIcon() 生成 <svg><use href="assets/atlas-icons.svg#CODE"></use></svg>，符号不再是旧 emoji 或光圆点。
+- 重要性级别 3/2/1 对应 34/27/21 像素；地理不确定性由虚线外框+问号独立表达，不与等级混淆。未来 LAB 皮鞭、FAM 骨骸、RES 持矛拳臂等已在SVG符号源登记，但首个1497—1500切片没有强制添加不存在的此类事件。
+- 首屏章节独立折叠、图层与图例合并、两个快捷按钮删除、旧免责声明删除、底图用OSM无需API key、航线悬停/点击查看史料等改动保留。
+- 工作流 scripts/validate_atlas.py 将验证 SVG图标ID与类别目录、全部event.icon_code；版本更新 v0.4.0。
+- 公开地图 URL: https://1959124923wyz-sys.github.io/love-British-TV/ 。**外部访问与运行效果未独立证实**；不能标记为端到端验收完成。
+- 尚需 UI 回归：实际看图标是否清楚、重叠、悬停尺寸、移动端和地图瓦片服务可用性；如用户发截图，应先修复实际缺陷再扩大研究年代。
