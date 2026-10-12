@@ -48,3 +48,6 @@
 - **主编候选**：[TOURNAISIS_OPTIONAL_OVERLAY.geojson](TOURNAISIS_OPTIONAL_OVERLAY.geojson)，从专项研究分支独立生成的参考范围（19 Feature），包含全部研究原来源与版权状态；不用扫描/描摹瓦隆历史地图和UNamur受保护历史地理图。
 - **研究文档**：`research/territorial-1510-1519-20261012/research/periods/1510-1519/TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json`（11种来源、8项判断）及同目录 GeoJSON原件。
 - **上线准则**：[TOURNAISIS_PUBLISH_GATE.md](TOURNAISIS_PUBLISH_GATE.md)，支持沿用main的独立`groups.hypotheses`图层，1513 开始、1519年2月结束英王城市占领；外围研究包络只显示于1513—1518年末。对主干公开网站无自动代码修改。
+
+
+**最新索引补充（2026-10-12）**：旧项目索引的9份/126记录/100 URL为建立时快照；加入11份图尔奈区域来源记录后，现为**10份源清单、137条原来源记录、109个URL**，新增的学术书评/区域司法/河流边界线索均保留原source_id。当前独立地图试播：[TOURNAISIS_REVIEW_MAP.html](TOURNAISIS_REVIEW_MAP.html)。
