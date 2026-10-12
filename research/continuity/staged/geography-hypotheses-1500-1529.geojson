@@ -1,0 +1,484 @@
+{
+  "type": "FeatureCollection",
+  "name": "CONTINUITY STAGED DASHED research-only geography 1500-1529",
+  "metadata": {
+    "schema": "continuity-staged-hypotheses-v2",
+    "from_older_origins": [
+      "main:data/geography-1500-hypotheses.geojson",
+      "main:data/geography-1510-1519-hypotheses.geojson"
+    ],
+    "historic_geometry_reconstructed_count": 0,
+    "measurement_sqkm_allowed": false,
+    "render_policy": "dashed low opacity; 1520s inherited Calais and Pale outlines are stale hypotheses and must NOT imply surveyed 1520s facts.",
+    "review_gate": "publisher_has_not_verified_1520_tenant_parish_boundaries"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.540556,
+            53.859722
+          ],
+          [
+            -6.645119,
+            53.808527
+          ],
+          [
+            -6.8791667,
+            53.7263889
+          ],
+          [
+            -6.91434,
+            53.623266
+          ],
+          [
+            -6.791667,
+            53.555
+          ],
+          [
+            -6.670833,
+            53.402222
+          ],
+          [
+            -6.689167,
+            53.291389
+          ],
+          [
+            -6.666944,
+            53.215833
+          ],
+          [
+            -6.6152,
+            53.13348
+          ],
+          [
+            -6.554626,
+            53.2174
+          ],
+          [
+            -6.5247222,
+            53.235
+          ],
+          [
+            -6.4444444,
+            53.2802778
+          ],
+          [
+            -6.3734436,
+            53.285896
+          ],
+          [
+            -6.1002778,
+            53.2783333
+          ]
+        ]
+      },
+      "properties": {
+        "id": "irish-pale-1488-legal-frontier-test-v1",
+        "type": "inferred_legal_frontier_polyline",
+        "historical_reference": "1488-1489 statute, Joyce1921 reconstruction",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "dashed",
+        "on_map_legal": "not_actual_control_boundary",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-STATUTE-TEXT"
+        ],
+        "method": "linear_segments_between_modern_geocoded_town_centers; original legal dyke may have never formed continuous earthwork; intervals not drawn from surveying",
+        "approval": "research_only",
+        "unconfirmed_modern_midpoint_excluded": "Rathcoole was kept as optional modern reference point but removed from nominal 1488 statute legal-line vertices because its status as a statute-listed boundary point is not confirmed.",
+        "public_title": "爱尔兰 Pale：1488年边防法令地点序列",
+        "public_summary": "1488年爱尔兰议会边防法令涉及的城镇，按现代位置连成线段。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "source_geometry_origin": "main:data/geography-1500-hypotheses.geojson",
+        "valid_years": [
+          1500,
+          1501,
+          1502,
+          1503,
+          1504,
+          1505,
+          1506,
+          1507,
+          1508,
+          1509,
+          1510,
+          1511,
+          1512,
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518,
+          1519,
+          1520,
+          1521,
+          1522,
+          1523,
+          1524,
+          1525,
+          1526,
+          1527,
+          1528,
+          1529
+        ],
+        "cartographic_continuity": "carry_old_reference_as_dashed_through_1529_without_claiming_new_survey",
+        "actual_control_polygon": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.645119,
+              53.808527
+            ],
+            [
+              -6.8791667,
+              53.7263889
+            ],
+            [
+              -6.91434,
+              53.623266
+            ],
+            [
+              -6.791667,
+              53.555
+            ],
+            [
+              -6.670833,
+              53.402222
+            ],
+            [
+              -6.689167,
+              53.291389
+            ],
+            [
+              -6.666944,
+              53.215833
+            ],
+            [
+              -6.6152,
+              53.13348
+            ],
+            [
+              -6.554626,
+              53.2174
+            ],
+            [
+              -6.5247222,
+              53.235
+            ],
+            [
+              -6.4444444,
+              53.2802778
+            ],
+            [
+              -6.3734436,
+              53.285896
+            ],
+            [
+              -6.1002778,
+              53.2783333
+            ],
+            [
+              -6.1358643,
+              53.2939516
+            ],
+            [
+              -6.248889,
+              53.333056
+            ],
+            [
+              -6.218056,
+              53.459722
+            ],
+            [
+              -6.3477778,
+              53.7188889
+            ],
+            [
+              -6.416667,
+              54
+            ],
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.540556,
+              53.859722
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "irish-pale-1500-presentation-envelope",
+        "type": "visual_influence_envelope_not_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "VERY_HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "1488-1489 inland legal-place sequence + modern town centers along coast; geographic closure through settled sites is NOT historical coastline tracing",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-ELLIS-2021"
+        ],
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "public_title": "爱尔兰东部：地理位置推定范围",
+        "public_summary": "连接历史文献记载的爱尔兰东部城镇，呈现当时活动的主要地理区域。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "source_geometry_origin": "main:data/geography-1500-hypotheses.geojson",
+        "valid_years": [
+          1500,
+          1501,
+          1502,
+          1503,
+          1504,
+          1505,
+          1506,
+          1507,
+          1508,
+          1509,
+          1510,
+          1511,
+          1512,
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518,
+          1519,
+          1520,
+          1521,
+          1522,
+          1523,
+          1524,
+          1525,
+          1526,
+          1527,
+          1528,
+          1529
+        ],
+        "cartographic_continuity": "carry_old_reference_as_dashed_through_1529_without_claiming_new_survey",
+        "actual_control_polygon": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.753207,
+              50.945644
+            ],
+            [
+              1.843379,
+              50.881781
+            ],
+            [
+              1.870254,
+              50.867081
+            ],
+            [
+              1.943655,
+              50.860735
+            ],
+            [
+              1.997517,
+              50.915701
+            ],
+            [
+              2.042758,
+              50.977126
+            ],
+            [
+              1.753207,
+              50.945644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "calais-1500-attested-sites-hull-only",
+        "type": "spatial_envelope_of_attested_settlements_NOT_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "mathematical convex hull of 10 geocoded place centers mentioned in the English-held district, not a historical survey; intentionally not buffered; contains points with uneven certainty",
+        "source_ids": [
+          "FR-MINISTRY-2026",
+          "FR-TNA-CALAIS",
+          "FR-ROSE-GRUMMITT",
+          "GEONAMES-FR"
+        ],
+        "warning": "Hull does not necessarily match whole 1500 march: some named marginal places may be disputed; 300 sq.km French ministry is long-period general statement, not area of hull",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "public_title": "加来地区：历史记载地点分布范围",
+        "public_summary": "根据加来、吉讷及周边十处有记录的地点构建参考范围。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "source_geometry_origin": "main:data/geography-1500-hypotheses.geojson",
+        "valid_years": [
+          1500,
+          1501,
+          1502,
+          1503,
+          1504,
+          1505,
+          1506,
+          1507,
+          1508,
+          1509,
+          1510,
+          1511,
+          1512,
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518,
+          1519,
+          1520,
+          1521,
+          1522,
+          1523,
+          1524,
+          1525,
+          1526,
+          1527,
+          1528,
+          1529
+        ],
+        "cartographic_continuity": "carry_old_reference_as_dashed_through_1529_without_claiming_new_survey",
+        "actual_control_polygon": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.280126,
+              50.6441
+            ],
+            [
+              3.304292,
+              50.573579
+            ],
+            [
+              3.4492,
+              50.56765
+            ],
+            [
+              3.48798,
+              50.589232
+            ],
+            [
+              3.444683,
+              50.653217
+            ],
+            [
+              3.400671,
+              50.65429
+            ],
+            [
+              3.337045,
+              50.651609
+            ],
+            [
+              3.280126,
+              50.6441
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-CENTRAL-LOCALITIES-RESEARCH-HULL-1513-1519",
+        "title_zh": "图尔奈城外历史地区研究包络（据现代地名构成）",
+        "semantic_type": "historical_district_orientation_only_not_an_effective_crown_control_polygon",
+        "political_interpretation": "Regional bailiwick under English influence, but exact parish-level royal vs seigneurial jurisdiction not verified.",
+        "geometry_method": "convex hull of modern gazetteer village centers Templeuve,Blandain,Esplechin,Ere,Saint-Maur,Antoing,Gaurain-Ramecroix,Havinnes,Mourcourt,Mont-Saint-Aubert,Ramegnies-Chin. Intentionally excludes southern bailiwick nodes Mortagne and Saint-Amand due special local rights; no buffer and no copying of historic copyrighted maps.",
+        "uncertainty": "VERY_HIGH_for_segment_edges_and_jurisdiction",
+        "legal_historic_territory_area_sqkm": null,
+        "measured_effective_control_area_sqkm": null,
+        "render_style": "light_translucent_gold_dashed_outline_optional",
+        "opacity_suggestion": 0.08,
+        "line_style": "dashed",
+        "start_year": 1513,
+        "start_month": 9,
+        "end_year": 1519,
+        "end_month": 2,
+        "year_end_snapshot_while_english_present": [
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518
+        ],
+        "shown_as_solid_English_control": false,
+        "review_state": "optional_illustrative_overlay_NOT_APPROVED_ACTUAL_TERRITORY",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "source_ids": [
+          "WALLONIA-1188-1513-SEPARATE",
+          "WALLONIA-1513-1519-TWOAREAS",
+          "HOQUET-1900-DHERBOMEZ-1901",
+          "MARIAGE-2013-BAILLIAGE",
+          "GEO-BE-NAMES-ANCHOR",
+          "DHERBOMEZ-1899-TOURNAISIS-RIVERS"
+        ],
+        "rights": "self-built original geometric convex-hull from sourced modern coordinates; NOT traced from Atlas de la Wallonie or UNamur protected map",
+        "public_title": "图尔奈周边：英王时期乡村分布参考",
+        "public_summary": "1513年英军占据图尔奈后，周边乡村与当地领主处在复杂的军政联系中。虚线概括文献所述历史区域的现代地名分布。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "show_in_1510s_review_layer": true,
+        "active_years": [
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518
+        ],
+        "source_path": "editorial/1510-1519/TOURNAISIS_OPTIONAL_OVERLAY.geojson",
+        "source_geometry_origin": "main:data/geography-1510-1519-hypotheses.geojson",
+        "valid_years": [
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518
+        ],
+        "cartographic_continuity": "must_expire_after_1518_year_end_due_to_1519_French_return",
+        "actual_control_polygon": false
+      }
+    }
+  ]
+}
