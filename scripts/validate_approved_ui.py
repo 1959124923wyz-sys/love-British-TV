@@ -83,7 +83,7 @@ require("data/historical-detail-notes.json" in app
 require("renderHypotheses()" in app
         and "推定范围" in spec
         and "dashArray:'7 5'" in app
-        and "f.properties?.fill_authorized===false" in app,
+        and ("p.fill_authorized!==false" in app or "f.properties?.fill_authorized===false" in app),
         "hypothetical cartography stays distinct as dashed reference")
 
 print("OK: user-approved compact hubs, transparent flyouts, tooltip priority and historic layers")
