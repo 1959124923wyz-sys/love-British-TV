@@ -1,0 +1,102 @@
+{
+  "schema": "map_boundary_source_followup_v1",
+  "period": "1520-1529",
+  "date": "2026-10-12",
+  "purpose": "Improve defensible Calais/Guines historical cartography by investigating actual archival surveys and dated historical maps before upgrading schematic dashed regional envelopes.",
+  "current_research_status": "archival_leads_only_no_historical_geometry_approved",
+  "priority": "P0 - Calais Pale / Guînes actual frontier outline",
+  "already_known": "SOURCE_REGISTRY.json contains Murphy (2025) for Guînes 1529 laws, and earlier decades' map-dating inventory includes Nicolay and a later 1556 survey. This supplement specifies additional shelfmarks and chain of custody; deduplicate before public adoption.",
+  "sources": [
+    {
+      "id": "CAL-MUNBY-2016-PALE-MAPPING",
+      "title": "Julian Munby, The Field of Cloth of Gold: Guînes and the Calais Pale Revisited",
+      "year": 2016,
+      "publication": "English Heritage Historical Review, 9(1), pp. 30–63",
+      "doi": "10.1179/1752016915Z.00000000026",
+      "url": "https://www.tandfonline.com/doi/abs/10.1179/1752016915Z.00000000026",
+      "read_scope": "Publisher metadata/abstract and indexed article footnotes; complete article not examined",
+      "importance": "Scholarly landscape reconstruction addressing 1520 Guînes, mapped frontier sites, historic surveys and later maps; use primary footnotes as archival pointers, not proof of an exact 1520 boundary."
+    },
+    {
+      "id": "CAL-TNA-E315-371-372-1556",
+      "title": "Survey of Calais and the Marches (1556), Court of Augmentations Miscellaneous Books",
+      "archive": "The National Archives (UK)",
+      "shelfmarks": [
+        "E 315/371",
+        "E 315/372"
+      ],
+      "dating": "1556 (2–3 Philip and Mary)",
+      "url": "https://www.tandfonline.com/doi/abs/10.1179/1752016915Z.00000000026",
+      "read_scope": "Shelfmarks and contents description reported in Munby (2016) footnote 20; archive volumes not inspected",
+      "content_pointer": "First volume folios 1–277 covers Calais; second volume folios 278–545 concerns much of the rural parishes; described as limits, ways, watercourses, and parish divisions measured by compass.",
+      "dating_caution": "1556 is 27–36 years after target 1520–1529; may not describe original boundaries during that earlier decade. Compare with dated 1520s controls, never silently back-date."
+    },
+    {
+      "id": "CAL-AD62-CPL1414-HISTORICAL-TRACE",
+      "title": "Historical Calais Pale map: 1876 tracing of earlier map, ref CPL 1414",
+      "archive": "Archives départementales du Pas-de-Calais",
+      "shelfmark": "CPL 1414 (verify official current catalogue title)",
+      "url": "https://www.tandfonline.com/doi/abs/10.1179/1752016915Z.00000000026",
+      "read_scope": "Historical provenance reported by Munby (2016) footnote 19; archival map copy itself not directly examined",
+      "provenance": "An original map now lost was lent in 1868 for a tracing; the extant 1876 copy was made from that tracing by J.-A. Cottel. See S. Curveiller (2008) for historical background.",
+      "dating_caution": "Date and precision of the lost original must be established before any 1520–1529 georeferencing; copying in 1876 is not proof of measured Tudor-period borders."
+    },
+    {
+      "id": "CAL-CURVEILLER-2008-MAP",
+      "title": "Stéphane Curveiller, Un document exceptionnel: une carte du Calaisis sous la domination anglaise de 1346 à 1558",
+      "publication": "Le prince, l'argent, les hommes au Moyen Âge (Presses universitaires de Rennes), 2008, pp. 559–570",
+      "url": "https://books.openedition.org/pur/5385",
+      "read_scope": "Bibliographic title verified via scholarly citation and institutional record; full book chapter blocked by publisher bot protection",
+      "importance": "Historical-map provenance and treatment of political Calais geography; verify archival source date and cartographic meaning before digitization."
+    },
+    {
+      "id": "CAL-GUINES-1541-PLAN-CHRONOLOGY",
+      "title": "Les fortifications anglaises de Guînes au XVIe siècle: 1541 fortified town plans",
+      "publisher": "Publications de l’Institut de recherches historiques du Septentrion / OpenEdition",
+      "url": "https://books.openedition.org/irhis/11499",
+      "read_scope": "Indexed historical-plan image and publisher entry, full article not directly accessible",
+      "dating_caution": "1541 fortification design postdates 1529 and follows 1530s rebuilding; useful as retrospective archaeological context, not to draw 1520s fortress walls or territorial extent."
+    },
+    {
+      "id": "CAL-MURPHY-2025-GUINES-POLICY",
+      "title": "Neil Murphy, Tudor England's French Frontier: The Laws of Guînes (1529) and the Defence of the Calais Pale",
+      "publisher": "Routledge, Borders and Boundaries: Historical Perspectives, 2025",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tudor-englands-french-frontier-the-laws-of-gu%C3%AEnes-1529-and-the-de/",
+      "read_scope": "University research portal full abstract and bibliographic metadata; complete chapter under embargo, not read",
+      "importance": "1525 commission and 1529 legal settlement policies provide context for disputed lands; does not prove enforcement totals or a historically surveyed frontier line."
+    }
+  ],
+  "action_steps": [
+    {
+      "rank": 1,
+      "description": "Request/locate archival descriptions and digitized accessible originals of TNA E315/371, E315/372. Create place names / measurements / dating table with folio citations. First verify provenance and 1556 dating; do not back-date geometry."
+    },
+    {
+      "rank": 2,
+      "description": "Locate Pas-de-Calais archive CPL 1414 and Curveiller 2008 discussion; determine dating of lost original, copy stages, scale, place names, and reuse rights."
+    },
+    {
+      "rank": 3,
+      "description": "Use Munby 2016 to isolate specifically 1520-year fort/site evidence; separate town/castle footprints from border administrative bounds; compare to Murphy 2025 policy evidence."
+    },
+    {
+      "rank": 4,
+      "description": "Cross-check any proposed boundary segments against 1520–1529 contemporaneous rentals, jurisdiction, military garrison, tax rolls or dated statutes. Assign confirmed/potential/disputed by segment; trace modern-to-early Tudor toponyms."
+    },
+    {
+      "rank": 5,
+      "description": "Only once independently checked, output GeoJSON with metadata archival_call_number, folio, survey_date, applicable_year_from/to, control_class, geometry_method, geometry_confidence, rights. All inferred stretches should be dashed, area calculations prohibited."
+    }
+  ],
+  "no_false_claims": [
+    "Not personally read or digitally reproduced the original TNA manuscripts or historic maps during this investigation.",
+    "Neither 1556 TNA survey nor 1541 Guînes fortress plans establishes an exact 1520–1529 control border.",
+    "A 19th-century tracing of a lost map requires original dating and archive confirmation.",
+    "Guînes 1529 policy restrictions prove legislative intent, not number of deportees, exact settler land grants, or territorial gain."
+  ],
+  "previous_known_remaining_gaps": [
+    "Pale's dated parishes and agrarian law enforcement",
+    "Newenhambridge original 1521–26 works and garrison footprint",
+    "Archival rights and geographic georeferencing"
+  ]
+}
