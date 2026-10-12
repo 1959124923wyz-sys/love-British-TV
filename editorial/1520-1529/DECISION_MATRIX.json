@@ -2,8 +2,8 @@
   "schema": "1520-1529-editorial-decision-matrix-v1",
   "compiled": "2026-10-12",
   "counts": {
-    "research_events": 26,
-    "editorial_candidates": 23,
+    "research_events": 27,
+    "editorial_candidates": 24,
     "held": 3
   },
   "mapping": [
@@ -297,7 +297,8 @@
       "decision": "CURATED_EDITORIAL_CANDIDATE",
       "source_ids": [
         "SC-HES-CESSFORD-SM1710",
-        "SC-HES-CESSFORD-TROVE"
+        "SC-HES-CESSFORD-TROVE",
+        "SC-EDIN-CESSFORD-SIEGE-19MAY"
       ],
       "reason": "official listed archaeological site + contemporary letter/editorially safe short military event, not territorial rule",
       "importance_level": 2
@@ -313,6 +314,19 @@
         "SC-HES-FERNIEHIRST-LB13369"
       ],
       "reason": "official listed archaeological site + contemporary letter/editorially safe short military event, not territorial rule",
+      "importance_level": 2
+    },
+    {
+      "original_event_id": "1523-WARK-SCOTS-FRENCH-SIEGE",
+      "year": 1523,
+      "editor_candidate_id": "1523-WARK-SCOTS-FRENCH-SIEGE",
+      "decision": "CURATED_EDITORIAL_CANDIDATE",
+      "source_ids": [
+        "ENG-HE-WARK-SM1013100",
+        "ENG-BL-WARK-1523-AUTOGRAPH",
+        "SC-MURPHY-ALBANY-2024"
+      ],
+      "reason": "2023 government heritage catalog + dated British Library letter record; failed foreign army siege, no territorial transfer",
       "importance_level": 2
     }
   ],
