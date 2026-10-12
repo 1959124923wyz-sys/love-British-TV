@@ -1,0 +1,364 @@
+{
+  "type": "FeatureCollection",
+  "meta": {
+    "title": "1520—1529年代地理参考图（不等于实际统治疆界）",
+    "compiled": "2026-10-12",
+    "inherited_geometry_source": "main/data/geography-1500-hypotheses.geojson",
+    "inherited_earlier_primary_evidence": "research/territorial-1500-1510-20261012 and research/hypothetical-boundaries-1500-1510-20261012",
+    "history_warning": "Ireland 1488 legal line has no new 1520s site-by-site source check; 1520 Pale legal/real influence edge changed. Use as historical context only.",
+    "status": "research_only",
+    "colonial_control_polygons_approved": 0,
+    "dating": "All features scene reference 1520–29. No site capture automatically confers land.",
+    "copyright": "Original earlier research-derived GeoJSON geometry; previous source attribution retained. Historical maps from publishers not copied.",
+    "editorial_use": "Reference dash optional. Inherited 1488 Irish Pale historical area is an old statute proxy, not independently checked 1520 fiscal jurisdiction. Stop before using for actual British territorial fill.",
+    "legal_gate": "No Tournai occupied city point or outline in 1520s; territory returned 1519-02. No new colony in North America.",
+    "source_reference": "prior 1500s main and 1520-29 research source registry; point geographies modern town locations. Icon placement not a historic surveyed site."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.540556,
+            53.859722
+          ],
+          [
+            -6.645119,
+            53.808527
+          ],
+          [
+            -6.8791667,
+            53.7263889
+          ],
+          [
+            -6.91434,
+            53.623266
+          ],
+          [
+            -6.791667,
+            53.555
+          ],
+          [
+            -6.670833,
+            53.402222
+          ],
+          [
+            -6.689167,
+            53.291389
+          ],
+          [
+            -6.666944,
+            53.215833
+          ],
+          [
+            -6.6152,
+            53.13348
+          ],
+          [
+            -6.554626,
+            53.2174
+          ],
+          [
+            -6.5247222,
+            53.235
+          ],
+          [
+            -6.4444444,
+            53.2802778
+          ],
+          [
+            -6.3734436,
+            53.285896
+          ],
+          [
+            -6.1002778,
+            53.2783333
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1520s-context-irish-pale-1488-legal-frontier-test-v1",
+        "type": "inferred_legal_frontier_polyline",
+        "historical_reference": "1488-1489 statute, Joyce1921 reconstruction",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "dashed",
+        "on_map_legal": "not_actual_control_boundary",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-STATUTE-TEXT"
+        ],
+        "method": "linear_segments_between_modern_geocoded_town_centers; original legal dyke may have never formed continuous earthwork; intervals not drawn from surveying",
+        "approval": "never_render_as_published_actual_control",
+        "unconfirmed_modern_midpoint_excluded": "Rathcoole was kept as optional modern reference point but removed from nominal 1488 statute legal-line vertices because its status as a statute-listed boundary point is not confirmed.",
+        "public_title": "爱尔兰 Pale：1488年边防法令地点序列（1520年代地理参考）",
+        "public_summary": "沿用早期文献地点关系的粗略参考范围；本期实际辖地边缘仍在调查。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "decade_start": 1520,
+        "decade_end": 1529,
+        "carried_forward_from": "main/data/geography-1500-hypotheses.geojson",
+        "historical_geography_deemed_current": "not_verified; 1488 Ireland frontier is inherited geographical reference only",
+        "new_spatial_evidence_1520_1529": "none_for_outline",
+        "visualization_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.645119,
+              53.808527
+            ],
+            [
+              -6.8791667,
+              53.7263889
+            ],
+            [
+              -6.91434,
+              53.623266
+            ],
+            [
+              -6.791667,
+              53.555
+            ],
+            [
+              -6.670833,
+              53.402222
+            ],
+            [
+              -6.689167,
+              53.291389
+            ],
+            [
+              -6.666944,
+              53.215833
+            ],
+            [
+              -6.6152,
+              53.13348
+            ],
+            [
+              -6.554626,
+              53.2174
+            ],
+            [
+              -6.5247222,
+              53.235
+            ],
+            [
+              -6.4444444,
+              53.2802778
+            ],
+            [
+              -6.3734436,
+              53.285896
+            ],
+            [
+              -6.1002778,
+              53.2783333
+            ],
+            [
+              -6.1358643,
+              53.2939516
+            ],
+            [
+              -6.248889,
+              53.333056
+            ],
+            [
+              -6.218056,
+              53.459722
+            ],
+            [
+              -6.3477778,
+              53.7188889
+            ],
+            [
+              -6.416667,
+              54
+            ],
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.540556,
+              53.859722
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1520s-context-irish-pale-1500-presentation-envelope",
+        "type": "visual_influence_envelope_not_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "VERY_HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "1488-1489 inland legal-place sequence + modern town centers along coast; geographic closure through settled sites is NOT historical coastline tracing",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-ELLIS-2021"
+        ],
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "public_title": "爱尔兰东部：地理位置推定范围（1520年代地理参考）",
+        "public_summary": "沿用早期文献地点关系的粗略参考范围；本期实际辖地边缘仍在调查。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "decade_start": 1520,
+        "decade_end": 1529,
+        "carried_forward_from": "main/data/geography-1500-hypotheses.geojson",
+        "historical_geography_deemed_current": "not_verified; 1488 Ireland frontier is inherited geographical reference only",
+        "new_spatial_evidence_1520_1529": "none_for_outline"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.753207,
+              50.945644
+            ],
+            [
+              1.843379,
+              50.881781
+            ],
+            [
+              1.870254,
+              50.867081
+            ],
+            [
+              1.943655,
+              50.860735
+            ],
+            [
+              1.997517,
+              50.915701
+            ],
+            [
+              2.042758,
+              50.977126
+            ],
+            [
+              1.753207,
+              50.945644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1520s-context-calais-1500-attested-sites-hull-only",
+        "type": "spatial_envelope_of_attested_settlements_NOT_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "mathematical convex hull of 10 geocoded place centers mentioned in the English-held district, not a historical survey; intentionally not buffered; contains points with uneven certainty",
+        "source_ids": [
+          "FR-MINISTRY-2026",
+          "FR-TNA-CALAIS",
+          "FR-ROSE-GRUMMITT",
+          "GEONAMES-FR"
+        ],
+        "warning": "Hull does not necessarily match whole 1500 march: some named marginal places may be disputed; 300 sq.km French ministry is long-period general statement, not area of hull",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "public_title": "加来地区：历史记载地点分布范围（1520年代地理参考）",
+        "public_summary": "沿用早期文献地点关系的粗略参考范围；本期实际辖地边缘仍在调查。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "decade_start": 1520,
+        "decade_end": 1529,
+        "carried_forward_from": "main/data/geography-1500-hypotheses.geojson",
+        "historical_geography_deemed_current": "not_verified; 1488 Ireland frontier is inherited geographical reference only",
+        "new_spatial_evidence_1520_1529": "none_for_outline"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "id": "GUINES-1520-1529",
+        "public_title": "吉讷：英王边防及1525—1529移民法规相关地点",
+        "geo_precision": "modern_populated_place_centroid_only",
+        "historical_site_exact_coordinates": false,
+        "authority": "English_held_military_city",
+        "source_ids": [
+          "CAL-ROYAL-HRP-1520"
+        ],
+        "illustrative": false,
+        "decade_start": 1520,
+        "decade_end": 1529,
+        "approval": "point_reference_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.981678,
+          50.857863
+        ]
+      },
+      "properties": {
+        "id": "ARDRES-1520",
+        "public_title": "阿德尔：1520年法国王室控制城镇",
+        "geo_precision": "modern_populated_place_centroid_only",
+        "historical_site_exact_coordinates": false,
+        "authority": "French_control_no_English_annexation",
+        "source_ids": [
+          "CAL-ROYAL-HRP-1520"
+        ],
+        "illustrative": false,
+        "decade_start": 1520,
+        "decade_end": 1529,
+        "approval": "point_reference_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8587,
+          50.9513
+        ]
+      },
+      "properties": {
+        "id": "CALAIS-1520-1529",
+        "public_title": "加来：英王长期军事及行政驻地",
+        "geo_precision": "modern_populated_place_centroid_only",
+        "historical_site_exact_coordinates": false,
+        "authority": "English_Crown_held_city",
+        "source_ids": [
+          "TNA-FRENCH-LANDS"
+        ],
+        "illustrative": false,
+        "decade_start": 1520,
+        "decade_end": 1529,
+        "approval": "point_reference_only"
+      }
+    }
+  ]
+}
