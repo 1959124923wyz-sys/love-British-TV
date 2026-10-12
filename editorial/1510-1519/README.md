@@ -42,3 +42,8 @@
 - 任何文件修改请保留源码谱系和交接记录；审核后可以原目录留存所有未通过的记录。
 
 **GitHub审核入口**：本期资料整理草稿 [PR #7](https://github.com/1959124923wyz-sys/love-British-TV/pull/7)；原始深度研究 [PR #6](https://github.com/1959124923wyz-sys/love-British-TV/pull/6)。公开网站主干没有因本任务改变。
+
+
+## 图尔奈外围范围上线专项（2026-10-12，新增）
+主编若马上衔接1510—1519章，请直接查看：[TOURNAISIS_PUBLISH_GATE.md](TOURNAISIS_PUBLISH_GATE.md)；原料为[TOURNAISIS_OPTIONAL_OVERLAY.geojson](TOURNAISIS_OPTIONAL_OVERLAY.geojson)。这是单独的**可关闭、浅色虚线、现代地名凸包参考图层**（1面、1个英王实际治理城市点、17个现代村镇参考点），有13个可追溯来源记录。**城市点可以作为高信度实控标记；数学凸包不属于可以自动填色的1513年领土面。**
+重要地理区分：旧图尔奈城堡领地、1383后图尔奈—Tournaisis—Mortagne—Saint-Amand联合行政辖区，以及1513—19英王实际驻军与司法，是三种不同的地理语义；法国/比利时现代行政辖区也不适合作古代替身。
