@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "period": [
+    1510,
+    1519
+  ],
+  "compiled": "2026-10-12",
+  "purpose": "Source-layer deep dive for Tournai regional government and Ireland early Tudor reform; preserve type of statement (proposed, asserted, observed, verified account).",
+  "sources": [
+    {
+      "id": "MURPHY-2014-TOURNAI-AAM",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tournai-under-tudor-rule-cooperation-or-opposition/",
+      "publisher": "Northumbria University",
+      "author": "Neil Murphy",
+      "date": "2014",
+      "evidence_type": "peer-reviewed-article",
+      "read_scope": "Publisher abstract plus web-indexed excerpts of accepted manuscript; full PDF server gave 403",
+      "qualifier": "Study emphasizes negotiated local government, Tournai unlike Calais not colonially assimilated"
+    },
+    {
+      "id": "DAVIES-1998-TOURNAI-POLITY",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/abs/tournai-and-the-english-crown-15131519/B07E63FC8D447BD02398FDD99F09BB62",
+      "publisher": "The Historical Journal",
+      "author": "C.S.L. Davies",
+      "date": "1998",
+      "evidence_type": "peer-reviewed-article",
+      "read_scope": "Published abstract; complete article not read",
+      "qualifier": "Tournai not incorporated into English kingdom parliamentary polity; held as Henry's claimed kingdom of France"
+    },
+    {
+      "id": "ELLIS-2023-IRELAND-FULL",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/prelude-to-the-tudor-conquest-henry-viii-and-the-irish-expedition-of-thomas-howard-earl-of-surrey-152022/A73EF1BFDA236A75D51F98162D616640",
+      "publisher": "Irish Historical Studies / Cambridge Core",
+      "author": "Steven G. Ellis",
+      "date": "2023-05-31",
+      "evidence_type": "peer-reviewed-article-open-html",
+      "read_scope": "Substantial full HTML including original source footnotes directly examined",
+      "qualifier": "Specifically locates 1515 Darcy documents and discusses unreliable hypothetical revenue estimates from 1520"
+    },
+    {
+      "id": "BL-4792-REFORM",
+      "url": "https://searcharchives.bl.uk/catalog/040-002110309",
+      "publisher": "British Library",
+      "date": "circa 1515",
+      "evidence_type": "official-manuscript-catalogue",
+      "original": "Add MS 4792 ff96-110; another later copy Add MS 4763 ff481-495",
+      "read_scope": "Official catalogue description; manuscript not directly read"
+    },
+    {
+      "id": "CAREW-635-DARCY",
+      "url": "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/cromwellian-reform-and-the-origins-of-the-kildare-rebellion-153334/7F7EC1444415747202312AE8BF3A8AAD",
+      "publisher": "The Royal Historical Society article reference 6",
+      "date": "1515, source edition later",
+      "evidence_type": "manuscript-source-citation",
+      "original": "Lambeth Carew MS 635 pp188-189; Cal. Carew MSS i no2; compare 1515 Darcy distinct from Finglas MS635 ff185–187",
+      "read_scope": "Footnote exact source checked; manuscript not read"
+    },
+    {
+      "id": "TNA-SP60-1-9-IRELAND",
+      "url": "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/cromwellian-reform-and-the-origins-of-the-kildare-rebellion-153334/7F7EC1444415747202312AE8BF3A8AAD",
+      "publisher": "The National Archives UK (locator attested in Royal Historical Society journal notes)",
+      "date": "circa 1515",
+      "evidence_type": "manuscript-source-citation",
+      "original": "TNA SP 60/1 no.9 - extended anonymous reform treatise, version of Add MS4792 manuscript (exact relation unverified)",
+      "read_scope": "Secondary scholarly footnote, TNA original not directly seen"
+    },
+    {
+      "id": "TNA-SP1-13-1516",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tournai-under-tudor-rule-cooperation-or-opposition/",
+      "publisher": "The National Archives UK locator cited by Neil Murphy",
+      "date": "1516-02",
+      "evidence_type": "original-letter-source-citation",
+      "original": "TNA SP 1/13 ff28r–29v; L&P Henry VIII vol2 no1607",
+      "read_scope": "Passage summarized in indexed manuscript, original not read"
+    },
+    {
+      "id": "BL-CALIGULA-E1-1516",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tournai-under-tudor-rule-cooperation-or-opposition/",
+      "publisher": "British Library original letter referenced by Murphy",
+      "date": "1516",
+      "evidence_type": "original-letter-source-citation",
+      "original": "BL Cotton Caligula E/I ff58r–59v; L&P Henry VIII vol2 no812",
+      "read_scope": "Scholarly indexed reference only, original not read"
+    },
+    {
+      "id": "WALLONIA-ATLAS-TOURNAISIS",
+      "url": "https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-sous-influence-anglaise",
+      "publisher": "Institut Destrée / SEGEFA",
+      "date": "modern historical atlas",
+      "evidence_type": "historical-thematic-map",
+      "original": "2013 copyrighted atlas map; no derivative polygons extracted",
+      "read_scope": "Historical map caption/coverage read; specific each parish jurisdiction not proven"
+    }
+  ],
+  "claims": [
+    {
+      "id": "TOU-1513-CITY-PRIVILEGES",
+      "years": [
+        1513,
+        1513
+      ],
+      "assertion_zh": "1513年11月，亨利八世向图尔奈市议会确认其特许权；英方另设由英格兰官员组成的治理机构，原有市政议会仍继续处理许多日常事务。",
+      "evidence_status": "scholarly-secondary-with-archival-citation",
+      "sources": [
+        "MURPHY-2014-TOURNAI-AAM"
+      ],
+      "control_facets": [
+        "royal_governor",
+        "council",
+        "retained_local_city_corporation"
+      ],
+      "impact_for_map": "dual royal governor and native civic council; no forced assimilation claim",
+      "geography_precision": "historic-town-only",
+      "original_read": false
+    },
+    {
+      "id": "TOU-1513-DAVIES-STATUS",
+      "years": [
+        1513,
+        1519
+      ],
+      "assertion_zh": "图尔奈在亨利八世所宣称的法兰西王国名义下管理，与英格兰王国分立；专门学术研究否定其具有英格兰议会代表权的说法。",
+      "evidence_status": "peer-reviewed-abstract",
+      "sources": [
+        "DAVIES-1998-TOURNAI-POLITY"
+      ],
+      "control_facets": [
+        "royal_governor",
+        "legal_french_claim"
+      ],
+      "impact_for_map": "effective English-king rule but not identical to English domestic counties",
+      "geography_precision": "historic-town-and-associated-control",
+      "original_read": false
+    },
+    {
+      "id": "TOU-1516-CITY-FINANCE-CLAIMS",
+      "years": [
+        1516,
+        1516
+      ],
+      "assertion_zh": "1516年2月当地市议会向英方总督陈述：曾缴纳50,000克朗，并为城防修缮支付16,000当地货币单位。此为参与者向英方提交的主张，尚未与城市账簿逐条核对。",
+      "evidence_status": "historical-municipal-party-claim-quoted-in-academic-article",
+      "sources": [
+        "MURPHY-2014-TOURNAI-AAM",
+        "TNA-SP1-13-1516"
+      ],
+      "economic_objects": [
+        {
+          "raw_value": 50000,
+          "currency": "crowns, denomination unknown",
+          "category": "alleged_municipal_payment",
+          "asserted_by": "municipal_council",
+          "realised_audit": null
+        },
+        {
+          "raw_value": 16000,
+          "currency": "livres (to verify)",
+          "category": "claimed_fortification_repairs_cost",
+          "asserted_by": "municipal_council",
+          "realised_audit": null
+        }
+      ],
+      "impact_for_map": "Local costs and resistance claims separate from confirmed English royal benefit",
+      "geography_precision": "city-government",
+      "original_read": false
+    },
+    {
+      "id": "TOU-1516-TOURNAISIS-LABOR-OFFER",
+      "years": [
+        1516,
+        1516
+      ],
+      "assertion_zh": "英方总督向图尔奈市区及外围地区公告堡垒修建计划，部分乡村表示愿意免费提供劳动力；目前所见材料只能证明此类承诺或报价，不能推定全部劳役已实际完成。",
+      "evidence_status": "indexed-passage-peer-reviewed-work",
+      "sources": [
+        "MURPHY-2014-TOURNAI-AAM",
+        "BL-CALIGULA-E1-1516"
+      ],
+      "control_facets": [
+        "governor_public_proclamations",
+        "rural_labor_offered"
+      ],
+      "impact_for_map": "Evidence of governance influence beyond town, not verified jurisdiction over whole Tournaisis",
+      "geography_precision": "district_townships_unnamed",
+      "original_read": false
+    },
+    {
+      "id": "IRE-1515-REFORM-MANUSCRIPTS",
+      "years": [
+        1515,
+        1515
+      ],
+      "assertion_zh": "爱尔兰改革方案存有不同手稿版本与后世抄本：BL Add MS4792 ff96–110；TNA SP60/1 no9；Darcy在1515年另有献策手稿 Carew MS635 pp188–189。内容和作者尚应逐件校勘。",
+      "evidence_status": "archival-reference-backed-not-manuscript-read",
+      "sources": [
+        "BL-4792-REFORM",
+        "TNA-SP60-1-9-IRELAND",
+        "CAREW-635-DARCY",
+        "ELLIS-2023-IRELAND-FULL"
+      ],
+      "control_facets": [
+        "governance_reform_proposal"
+      ],
+      "impact_for_map": "No new actual-control polygon without account/tax enforcement proof",
+      "geography_precision": "Pale region conceptual",
+      "original_read": false
+    },
+    {
+      "id": "IRE-1515-QUARTERING-EXCEPTION",
+      "years": [
+        1515,
+        1515
+      ],
+      "assertion_zh": "达西1515年针对基尔代尔的投诉涉及驻军在领主土地上的食宿供给与1488边地法令；研究指出基尔代尔郡十四个男爵辖区中只有大约两个处于maghery，说明边区军事供给制度与平原地区不同。",
+      "evidence_status": "open-access-peer-reviewed-synthesis-with-footnote",
+      "sources": [
+        "ELLIS-2023-IRELAND-FULL"
+      ],
+      "control_facets": [
+        "military_quartering",
+        "pale_marches",
+        "landlords"
+      ],
+      "impact_for_map": "Two of fourteen is region/barony category, not measured 2/14 of land area and not England's total controlled footprint",
+      "geography_precision": "historical_baronies_not_rebuilt",
+      "original_read": false
+    },
+    {
+      "id": "IRE-1520-UNREALISED-TAX-PROJECTION",
+      "years": [
+        1520,
+        1520
+      ],
+      "assertion_zh": "1520年代改革规划曾用假定土地面积与统一征税计算出每年23,900英镑的全爱尔兰税收预期；学术研究认定其计算基础虚构，不能作为1515或1519年实际收益。",
+      "evidence_status": "peer-reviewed-academic-critique",
+      "sources": [
+        "ELLIS-2023-IRELAND-FULL"
+      ],
+      "impact_for_map": "DO NOT import number into 1510–19 revenue chart. Adjacent period caution",
+      "accounting_category": "unrealised_policy_projection_not_actual_tax",
+      "geography_precision": "whole_island_claim_unsupported",
+      "original_read": false
+    }
+  ],
+  "publisher_note": "Research JSON stores no copyrighted scans. Long 1515/1516 source passages paraphrased with archival references; socioeconomic assertions are not conflated with independent audits."
+}
