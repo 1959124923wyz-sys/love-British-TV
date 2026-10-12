@@ -157,7 +157,7 @@ function updateVisibility(){
 function renderMilestones(){
  const all=[...atlasEarly.events,...atlasLater.events];
  const rail=$('milestoneDots');
- const years=[...new Set(all.map(e=>e.year).filter(y=>y>=1497&&y<=1509&&!(e.id==='status-1500')))].sort((a,b)=>a-b);
+ const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=1509))].sort((a,b)=>a-b);
  rail.innerHTML=years.map(y=>{
   const yearEvents=all.filter(e=>e.year===y);
   const peak=Math.max(...yearEvents.map(e=>levelOf(e)));
