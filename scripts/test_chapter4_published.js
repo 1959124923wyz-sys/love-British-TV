@@ -57,7 +57,7 @@ for(const feature of grounds.features){
 }
 assert.match(html,/id="chapterFour"/);
 assert.match(html,/max="1529"/);
-assert.match(html,/app\.js\?v=chapter4-v140/);
+assert.match(html,/app\.js\?v=chapter4-v141/);
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1529.geojson'"));
 assert.ok(app.includes("Math.min(1529"),'Years capped at old third chapter');
