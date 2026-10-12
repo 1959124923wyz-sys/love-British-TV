@@ -25,3 +25,16 @@ D. **苏格兰与群岛**：英苏1502和平条约NRS SP6/31、奥克尼/设得�
 - 源ID检查通过，但机器不能证明历史论断的真实性。
 
 请在各自独立研究分支写PROGRESS.md保存Git提交SHA并通过草稿PR交接，禁止直接更改main。下一位同事只要先读本文件和[CONTROL_AND_CHRONOLOGY_REVIEW.md](CONTROL_AND_CHRONOLOGY_REVIEW.md)，即可接力，无需回顾聊天。
+
+## 主干试运行增补（2026-10-12；由网页维护对话加入）
+
+首批已归档10份后，调查员1号又向研究分支提交8份深化研究文件，网页维护对话已把这些文件另行快照入 main：
+
+- CALAIS_CONTROL_FINANCE_DEEP_EVIDENCE.json / CALAIS_DEEP_SOURCES.json：加来驻军及财政史料定位；
+- CALAIS_PARISH_AND_MAP_DATING_INDEX.json：教区与不同年代地图索引；
+- CALAIS_STAPLE_CROWN_REMITTANCES.json：羊毛贸易枢纽和王室汇款研究线索；
+- CASTLE_CONTROL_TURNOVER_1503_1512.json / GAELIC_ANNALS_LOCAL_POWER_EVENTS.json：爱尔兰局部城堡和权力争夺；
+- IRELAND_PALE_DEEP_EVIDENCE.json：English Pale行政区域及边界问题；
+- NEXT_AGENT_ARCHIVAL_ACTION_QUEUE.json：下一轮调查优先任务。
+
+**正式网页接入**：main/data/atlas-1500-1509.json（14条可读事件、6政治据点、50来源）；年份滑块1497—1509。政治据点只用具名城市/群岛位置标记，尚无新增可公开核验的殖民统治polygon。额外研究文件中的账目和冲突详情尚未全部转成地图条目，须先校验原始档案及地理位置。研究分支仍继续收集，主干快照不会自动同步。
