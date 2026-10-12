@@ -1,0 +1,62 @@
+name: Territory continuity research gate
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'RESEARCH_HANDOFF.md'
+      - 'docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md'
+      - 'docs/TERRITORY_CONTINUITY_RULE.md'
+      - 'research/continuity/**'
+      - 'research/periods/**'
+      - 'editorial/**'
+      - 'data/atlas-*.json'
+      - 'data/*control*.geojson'
+      - 'data/political-relations*.geojson'
+      - 'scripts/validate_control_transition.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  historical-control-chain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generic ten-year transition checker self-test
+        run: python3 scripts/validate_control_transition.py --self-test
+      - name: Audit every completed standardized transition
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          files = sorted(Path('research/continuity/transitions').glob('TRANSITION_*.json'))
+          assert files, 'No real transition examples or handoffs are present.'
+          for file in files:
+              data = json.loads(file.read_text(encoding='utf-8'))
+              previous = data['previous_snapshot']['source_file']
+              # Accepted source name is a local repository path, optionally main: prefixed.
+              if previous.startswith('main:'):
+                  previous = previous[5:]
+              previous = previous.split('#', 1)[0]
+              if ':' in previous or not Path(previous).is_file():
+                  raise SystemExit(f'{file}: previous source must exist in this checkout: {previous}')
+              subprocess.run([
+                  sys.executable, 'scripts/validate_control_transition.py',
+                  '--previous', previous, '--transition', str(file)
+              ], check=True)
+          print(f'PASS: {len(files)} standardized continuity transition(s)')
+          PY
+      - name: Audit current 1497–1529 research chain
+        run: |
+          python3 research/continuity/check_transition.py
+          python3 research/continuity/check_full_continuity.py
