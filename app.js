@@ -58,7 +58,16 @@ function listSources(ids,item){
   ['财政核算',note?.accounting]
  ].filter(x=>x[1]);
  const questions=(note?.archive_questions||[]).map(text=>'<li>'+escapeHTML(text)+'</li>').join('');
- const sums=(note?.economic_records||[]).map(row=>'<li>'+escapeHTML(JSON.stringify(row))+'</li>').join('');
+ const accountingNames={crown_reward_expenditure:'王室远航奖励',royal_ship_acquisition_bounty:'购船补助',royal_grant_expenditure:'王室拨款',royal_pension:'王室年金'};
+ const sums=(note?.economic_records||[]).map(row=>{
+  const time=row.year||[row.year_from,row.year_to].filter(Boolean).join('—')||'相关账期';
+  const parts=[row.amount!=null?String(row.amount)+' '+(row.currency==='GBP'?'英镑':row.currency||''):'',
+   row.accounting_category?(accountingNames[row.accounting_category]||row.accounting_category):'',
+   row.payer?'付款方：'+row.payer:'',
+   row.recipient?'收款方：'+row.recipient:'',
+   '年份：'+time].filter(Boolean);
+  return '<li>'+escapeHTML(parts.join('；'))+'</li>';
+ }).join('');
  return '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
    '<div class="research-body">'+fields.map(([head,text])=>'<h3>'+escapeHTML(head)+'</h3><p>'+escapeHTML(text)+'</p>').join('')+
    (questions?'<h3>待进一步核对的档案</h3><ul>'+questions+'</ul>':'')+
@@ -286,12 +295,13 @@ async function loadKingdomBoundaries(){
   }
   if(!count)throw new Error('Region names could not be decoded');
   hideWarning();
- }catch(err){setWarning('王国地理参考轮廓暂时不可用；地图事件与航线仍可独立浏览。此时不使用臆造历史边界。');}
+ }catch(err){console.warn('Modern background geography unavailable',err);}
 }
 function openPolity(group){
  const p=atlasEarly.polities.find(x=>x.id===(group==='scotland'?'scotland':'england'));if(!p)return;
- const subtitle=group==='wales'?'英格兰王权统治下的威尔士（现代边界参考）':p.name;
- $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · 1497—1500</div><h2>'+escapeHTML(subtitle)+'</h2><p>'+escapeHTML(p.note)+'</p>'+listSources(p.source_ids);
+ const title=group==='wales'?'英格兰王权时期的威尔士':p.name;
+ const text=group==='scotland'?'1500年前后，苏格兰由詹姆斯四世统治，王室、贵族与地方氏族共同参与本土及群岛的治理。':'1500年前后，英格兰由都铎王朝统治，王室在英格兰本土、加来和部分爱尔兰地区设立军事与行政机构。';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · 1500年前后</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(text)+'</p>'+listSources(p.source_ids,p);
  openPanel('dossier');
 }
 async function boot(){
