@@ -1,0 +1,224 @@
+{
+  "type": "FeatureCollection",
+  "name": "Tournai 1513–1518 independently dashed spatial reference",
+  "description": "Self-built modern village geographic hull representing research geography only",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.280126,
+              50.6441
+            ],
+            [
+              3.304292,
+              50.573579
+            ],
+            [
+              3.4492,
+              50.56765
+            ],
+            [
+              3.48798,
+              50.589232
+            ],
+            [
+              3.444683,
+              50.653217
+            ],
+            [
+              3.400671,
+              50.65429
+            ],
+            [
+              3.337045,
+              50.651609
+            ],
+            [
+              3.280126,
+              50.6441
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-CENTRAL-LOCALITIES-RESEARCH-HULL-1513-1519",
+        "title_zh": "图尔奈城外历史地区研究包络（据现代地名构成）",
+        "semantic_type": "historical_district_orientation_only_not_an_effective_crown_control_polygon",
+        "political_interpretation": "Regional bailiwick under English influence, but exact parish-level royal vs seigneurial jurisdiction not verified.",
+        "geometry_method": "convex hull of modern gazetteer village centers Templeuve,Blandain,Esplechin,Ere,Saint-Maur,Antoing,Gaurain-Ramecroix,Havinnes,Mourcourt,Mont-Saint-Aubert,Ramegnies-Chin. Intentionally excludes southern bailiwick nodes Mortagne and Saint-Amand due special local rights; no buffer and no copying of historic copyrighted maps.",
+        "uncertainty": "VERY_HIGH_for_segment_edges_and_jurisdiction",
+        "legal_historic_territory_area_sqkm": null,
+        "measured_effective_control_area_sqkm": null,
+        "render_style": "light_translucent_gold_dashed_outline_optional",
+        "opacity_suggestion": 0.08,
+        "line_style": "dashed",
+        "start_year": 1513,
+        "start_month": 9,
+        "end_year": 1519,
+        "end_month": 2,
+        "year_end_snapshot_while_english_present": [
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518
+        ],
+        "shown_as_solid_English_control": false,
+        "review_state": "optional_illustrative_overlay_NOT_APPROVED_ACTUAL_TERRITORY",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "source_ids": [
+          "WALLONIA-1188-1513-SEPARATE",
+          "WALLONIA-1513-1519-TWOAREAS",
+          "HOQUET-1900-DHERBOMEZ-1901",
+          "MARIAGE-2013-BAILLIAGE",
+          "GEO-BE-NAMES-ANCHOR",
+          "DHERBOMEZ-1899-TOURNAISIS-RIVERS"
+        ],
+        "rights": "self-built original geometric convex-hull from sourced modern coordinates; NOT traced from Atlas de la Wallonie or UNamur protected map",
+        "public_title": "图尔奈周边：英王时期乡村分布参考",
+        "public_summary": "1513年英军占据图尔奈后，周边乡村与当地领主处在复杂的军政联系中。虚线概括文献所述历史区域的现代地名分布。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "show_in_1510s_review_layer": true,
+        "active_years": [
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518
+        ],
+        "source_path": "editorial/1510-1519/TOURNAISIS_OPTIONAL_OVERLAY.geojson"
+      }
+    }
+  ],
+  "origin": {
+    "branch": "editorial/intake-1510-1519-20261012",
+    "file": "editorial/1510-1519/TOURNAISIS_OPTIONAL_OVERLAY.geojson"
+  },
+  "sources": [
+    {
+      "id": "WALLONIA-1188-1513-SEPARATE",
+      "url": "https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-1188-1513",
+      "title": "Tournai et le Tournaisis 1188–1513",
+      "institution": "Service public de Wallonie / Institut Destrée / Segefa",
+      "source_grade": "authoritative_regional_historical_atlas",
+      "read_scope": "Full institutional text plus its period thematic map",
+      "licensing": "Map © original Atlas de la Wallonie, link only; not digitized"
+    },
+    {
+      "id": "WALLONIA-1513-1519-TWOAREAS",
+      "url": "https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-sous-influence-anglaise",
+      "title": "Tournai et le Tournaisis sous influence anglaise (1513–1519)",
+      "institution": "Service public de Wallonie / Institut Destrée / Segefa",
+      "source_grade": "authoritative_regional_historical_atlas_with_known_error_in_MP_claim",
+      "read_scope": "Full institutional text and illustration; cross-checked academic MP controversy",
+      "licensing": "Map © Atlas de la Wallonie, link only; must not trace or mirror in repo"
+    },
+    {
+      "id": "HOQUET-1900-DHERBOMEZ-1901",
+      "url": "https://www.persee.fr/doc/bec_0373-6237_1901_num_62_1_461164_t1_0397_0000_1",
+      "title": "Armand d'Herbomez review of Adolphe Hocquet, Tournai et l'occupation anglaise, 1513–1519",
+      "institution": "Bibliothèque de l'École des chartes / Persée",
+      "source_grade": "professional_archival_study_book_review",
+      "read_scope": "Original published 1901 review accessible, original 1900/01 Hocquet monograph not read",
+      "licensing": "Citation/paraphrase only"
+    },
+    {
+      "id": "MARIAGE-2013-BAILLIAGE",
+      "url": "https://pepite.univ-lille.fr/ori-oai-search/notice/view/2013LIL30041",
+      "title": "Royal bailiff, lords and village communities: Tournaisis late 14th–16th centuries",
+      "institution": "Université de Lille doctoral repository",
+      "source_grade": "doctoral_specialist_detailed_abstract",
+      "read_scope": "University bilingual detailed dissertation abstract; chapters and archival appendix not read",
+      "licensing": "Dissertation author retains copyright; link and paraphrase only"
+    },
+    {
+      "id": "MARIAGE-2015-P104-MAP",
+      "url": "https://bouquetwallon.unamur.be/s/bcw/item/443",
+      "title": "Coutumes dans le bailliage de Tournai-Tournaisis au 16e siècle (2015, p.104)",
+      "institution": "UNamur Bibliothèque Universitaire Moretus Plantin / Bouquet Cartographique Wallon",
+      "source_grade": "specialist_legal_geography_thematic_map_catalogue",
+      "read_scope": "Item catalog and copyright notice; historical map content NOT downloaded, not digitized",
+      "licensing": "Copyright Protected, open access for reading, NO automatic permission to vectorize"
+    },
+    {
+      "id": "COMMONS-TRAD-TOURNAISIS-CCBY4",
+      "url": "https://commons.wikimedia.org/wiki/File:Map_of_Tournaisis.svg",
+      "title": "Carte du pays traditionnel du Tournaisis",
+      "institution": "Wikimedia Commons / cartographer FL00 80, based on Léon Vanderkindere (1902)",
+      "source_grade": "licensed_modern_schematic_traditional_historic_region_not_1513_control",
+      "read_scope": "Commons license and image overview, did not retrieve SVG content",
+      "licensing": "CC BY 4.0, reuse permitted with author FL00 80 attribution, license link and adaptation notice, but not traced in this release"
+    },
+    {
+      "id": "MORTAGNE-SAINTAMAND-SEIGNEURIES",
+      "url": "https://fr.wikipedia.org/wiki/Tournaisis_fran%C3%A7ais",
+      "title": "Tournaisis français — historical seigneurial holdings (secondary wiki lead)",
+      "institution": "French-language encyclopaedia, weak contextual reference",
+      "source_grade": "low_secondary_orientation_only",
+      "read_scope": "Summary of Saint-Amand abbey temporal powers and Mortagne lordship; citation by itself insufficient to assert same government 1513–1519",
+      "licensing": "Cite only not delimitation basis"
+    },
+    {
+      "id": "GEO-BE-NAMES-ANCHOR",
+      "url": "https://www.geonames.org/search.html?country=BE&q=Tournai",
+      "title": "GeoNames Tournai localities reference coordinates",
+      "institution": "GeoNames",
+      "source_grade": "modern_geodata_place_anchor",
+      "read_scope": "Indexed modern populated-place coordinates only; not historical survey",
+      "licensing": "GeoNames database CC BY attribution; coordinates reproduced as modern city nodes with source"
+    },
+    {
+      "id": "DHERBOMEZ-1899-TOURNAISIS-RIVERS",
+      "url": "https://www.persee.fr/doc/bec_0373-6237_1899_num_60_1_452542_t1_0518_0000_2?pageId=T1_519",
+      "title": "Lefranc's 1899 critical review of Armand d'Herbomez, Histoire des châtelains de Tournai de la maison de Mortagne",
+      "institution": "Bibliothèque de l'École des chartes / Persée",
+      "source_grade": "academic_historical_geography_secondary_book_review",
+      "read_scope": "Full accessible 1899 review page 519 (historic analysis of much earlier châtellenie, not direct 1513 register)",
+      "licensing": "paraphrase and link only; no derived historic map tracing"
+    },
+    {
+      "id": "BELNET-TOURNAI-JUDICIAL-SCHEMA",
+      "url": "https://orfeo.belnet.be/bitstream/handle/internal/14454/EP4803_2_2_Tournai_Institutions_r%C3%A9gionales.pdf?isAllowed=y&sequence=10",
+      "title": "Tournai-Tournaisis historical regional institutions diagram 1383–1793",
+      "institution": "Belgian science institution via Belnet ORFEO",
+      "source_grade": "published_historical_government_diagram_search_excerpt_only",
+      "read_scope": "Search system extract from PDF only, original PDF returned 403; OCR/table may mislabel Henry VIII as Henry VII, verification pending",
+      "licensing": "citation only, do not reuse copyright diagram or its depiction"
+    },
+    {
+      "id": "GEO-MORTAGNE-SAINTAMAND",
+      "url": "https://mapcarta.com/18329082",
+      "title": "Modern geocoded historical jurisdictional seats Saint-Amand-les-Eaux / Mortagne-du-Nord",
+      "institution": "Mapcarta / OSM / GeoNames",
+      "source_grade": "modern_location_catalogue_only",
+      "read_scope": "Modern settlement center coordinates sourced; not historic land-ownership map",
+      "licensing": "underlying OSM/GeoNames open data attribution applies"
+    },
+    {
+      "id": "DAVIES-1998-TOURNAI",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/abs/tournai-and-the-english-crown-15131519/B07E63FC8D447BD02398FDD99F09BB62",
+      "title": "Tournai and the English Crown, 1513–1519",
+      "institution": "The Historical Journal",
+      "source_grade": "peer_reviewed_abstract",
+      "read_scope": "Abstract reviewed",
+      "licensing": "citation only"
+    },
+    {
+      "id": "MURPHY-2014-TOURNAI",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tournai-under-tudor-rule-cooperation-or-opposition/",
+      "title": "Tournai under Tudor Rule: Cooperation or Opposition?",
+      "institution": "Northumbria University",
+      "source_grade": "peer_reviewed_paper",
+      "read_scope": "Publisher abstract and scholarly excerpts; original PDF access limited",
+      "licensing": "citation only"
+    }
+  ]
+}
