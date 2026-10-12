@@ -36,3 +36,5 @@
 开发：静态 HTML + CSS + JavaScript / Leaflet；部署通过 GitHub Pages；本地英国区域轮廓基于 ONS 开放数据，**现代轮廓只用于定位，不代表1497年政治边界**。
 
 网页使用 © OpenStreetMap contributors / © CARTO 底图；地域边界来源为 ONSvisual/topojson_boundaries，含 ONS/OS 开放地理数据，详见来源清单。
+
+- [查看16种正式SVG图标（网页预览）](icon-gallery.html) — GitHub Pages 地址：https://1959124923wyz-sys.github.io/love-British-TV/icon-gallery.html
