@@ -64,6 +64,31 @@ def verify():
     assert any(x["id"]=="1517-RASTELL-ABORTED-COLONIZATION" and x["lat"] is None for x in d["events"])
     rastell=next(x for x in sources if x["id"]=="DCB-RASTELL-1517")
     assert rastell["url"].endswith("/rastell_john_1F.html"),"Wrong DCB URL (1F vs 1E)"
+    # 1513–1519 Tournaisis spatial handoff: verify its only polygon is explicitly illustrative.
+    extent=read(HERE/"TOURNAISIS_OPTIONAL_OVERLAY.geojson")
+    assert extent["type"]=="FeatureCollection"
+    shapes=extent["features"]
+    polygon=[f for f in shapes if f["geometry"]["type"]=="Polygon"]
+    actual_city=[f for f in shapes if f["properties"].get("id")=="TOURNAI-ENGLISH-CITY-RULE-CERTAIN"]
+    assert len(shapes)==19 and len(polygon)==1 and len(actual_city)==1
+    p=polygon[0]["properties"]
+    assert p["approval"]=="never_render_as_published_actual_control"
+    assert p["fill_authorized"] is False and p["visualization_only"] is True
+    assert p["year_end_snapshot_while_english_present"]==[1513,1514,1515,1516,1517,1518]
+    assert (p["start_year"],p["start_month"],p["end_year"],p["end_month"])==(1513,9,1519,2)
+    ring=polygon[0]["geometry"]["coordinates"][0]
+    assert ring[0]==ring[-1] and len(ring)>=4, "Unclosed polygon"
+    assert all(3.0<=c[0]<=4.0 and 50.0<=c[1]<=51.0 for c in ring), "Unexpected polygon location"
+    src={s["id"] for s in extent["meta"]["source_registry"]}
+    assert len(src)==len(extent["meta"]["source_registry"]), "Duplicate boundary sources"
+    for f in shapes:
+        for id in f["properties"].get("source_ids",[]):
+            assert id in src, (f["properties"]["id"],id)
+        coord_source=f["properties"].get("coord_source_id")
+        assert not coord_source or coord_source in src, f["properties"]["id"]
+    assert actual_city[0]["geometry"]["type"]=="Point"
+    assert actual_city[0]["properties"]["end_month"]=="1519-02"
+    assert extent["meta"]["geometry_status"]=="no_approved_actual_historical_boundary_geometry"
     return len(d["events"]),len(d["places"]),len(d["sources"])
 
 if __name__=="__main__":
