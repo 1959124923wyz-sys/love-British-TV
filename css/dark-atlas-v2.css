@@ -189,3 +189,18 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .dossier .event-context{color:#adc0d2;font-size:11px;border-left:2px solid #8496a8;padding-left:10px}
 @media(max-width:1250px){.chapter-title{font-size:20px}.map-controls .controls-body{max-height:64vh}}
 @media(max-width:680px){.chapter-title{font-size:17px}.chapter-body .intro{font-size:10px}.map-controls{right:0;top:auto;min-width:118px;width:118px}.map-controls>summary{padding:8px 9px;font-size:10px}.map-controls .controls-body{width:min(230px,72vw);max-height:65vh}.map-year-card{top:55px}.map-toolbuttons{left:8px;top:8px}}
+
+/* v0.4: approved reusable SVG icon system; silhouette/category remains readable on dark maps. */
+.map-pin{box-sizing:border-box;display:flex!important;align-items:center;justify-content:center;position:relative;border-radius:50%;background:#0e2033!important;border:1.5px solid #536578!important;box-shadow:0 2px 10px #000b!important;overflow:visible;color:#e4c8a4}
+.map-pin.tier-3{height:34px!important;width:34px!important;border:2px solid #f2d5b4!important;box-shadow:0 0 0 4px #c38d5060,0 4px 14px #000b!important}
+.map-pin.tier-2{height:27px!important;width:27px!important;border:1.7px solid #d4ae87!important;box-shadow:0 0 0 2px #8e663e50,0 3px 10px #0009!important}
+.map-pin.tier-1{height:21px!important;width:21px!important;border:1px solid #77889c!important;box-shadow:0 2px 7px #0008!important}
+.map-pin .atlas-glyph{width:68%;height:68%;display:block;overflow:visible;flex:none}
+.map-pin.uncertain{background:#102437!important;border-style:dashed!important;box-shadow:0 0 0 4px #9b835436,0 4px 14px #000a!important}
+.map-pin.uncertain .atlas-glyph{width:59%;height:59%}
+.map-pin.uncertain .uncertain-badge{position:absolute;bottom:-5px;right:-6px;width:12px;height:12px;border-radius:50%;display:grid;place-items:center;background:#e0b77c;color:#102035;font:bold 10px/1 sans-serif;border:1px solid #12253b}
+.event-item .event-icon{display:flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;border-radius:50%;background:#1e3045;border:1px solid #405b75}
+.event-item[data-tier="3"] .event-icon{background:#2b2b36;border-color:#af835d}
+.event-item .atlas-list-icon{display:block;width:20px;height:20px}
+.event-item[data-tier="1"] .atlas-list-icon{width:16px;height:16px}
+@media(prefers-reduced-motion:reduce){.map-pin,.event-item{transition:none!important}}
