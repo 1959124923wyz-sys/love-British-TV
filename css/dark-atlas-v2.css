@@ -256,3 +256,79 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .time-panel{padding:10px 11px 7px}
 .timeline-notice{font-size:9px}
 }
+
+/* v0.7: full-bleed cartography. All optional map controls live in the sidebar. */
+@media(min-width:981px){
+ .workspace,.workspace.dossier-collapsed,.workspace.sidebar-collapsed,.workspace.sidebar-collapsed.dossier-collapsed{position:relative;display:grid;grid-template-columns:260px minmax(0,1fr) 0;overflow:hidden}
+ .workspace .sidebar{grid-column:1;grid-row:1;min-width:0}
+ .workspace .map-stage{grid-column:2;grid-row:1;min-width:0}
+ .workspace .dossier{grid-row:1;position:absolute;right:0;top:0;bottom:0;width:min(370px,37vw);min-width:0;z-index:750;box-shadow:-9px 0 28px #0009;transform:translateX(0);transition:transform .2s ease}
+ .workspace.dossier-collapsed .dossier{transform:translateX(105%);pointer-events:none}
+}
+.masthead{height:56px;padding:0 17px}
+.site{min-height:480px}
+.sidebar-main{padding:10px 13px 16px}
+.chapter-facts{margin:10px 0 13px}
+.event-item{padding:8px 5px;min-height:55px}
+.event-item strong{font-size:11px}
+.map-stage{overflow:hidden}
+.map-top{top:12px;left:13px;right:auto;width:auto;pointer-events:none}
+.map-year-card{display:flex;align-items:baseline;gap:9px;min-width:0;padding:8px 13px;border-radius:9px;background:#0c2032ee;box-shadow:0 4px 18px #0005;pointer-events:none}
+.map-year-card strong{font-size:27px;line-height:1;color:#f2c8a7;margin:0}
+.map-year-card span{font-size:11px;white-space:nowrap;color:#c3d2e2}
+.map-toolbuttons,.map-bottom-left,.map-legend,.map-sources-tag{display:none!important}
+.time-panel{left:12px;right:12px;bottom:12px;padding:7px 11px 6px;box-shadow:0 5px 18px #0008;background:#102237f2}
+.timeline-head strong{font-size:11px}
+.year-buttons button{height:23px;width:24px}
+.year-buttons span{font-size:15px!important}
+.chapter-track{margin:5px 0 6px;gap:4px}
+.chapter-segment{min-height:30px;padding:4px 9px;border-radius:5px}
+.chapter-segment span{font-size:10px}
+.chapter-segment small{font-size:9px;display:inline;margin-left:5px}
+.range-wrap{padding:1px 7px 0}
+.range-wrap #yearRange{margin:7px 0 0;height:5px}
+.milestone-dots{top:-5px;left:7px;right:7px}
+.time-panel .ticks{margin:2px 0 0;height:13px}
+.timeline-notice{display:none}
+.leaflet-control-zoom{display:none!important}
+.leaflet-control-attribution{display:block!important;background:#0c2039b8!important;border-radius:4px;color:#b8cad7!important;font-size:8px!important;line-height:1.1!important;margin:0 5px 2px 0!important;padding:2px 5px!important}
+.leaflet-control-attribution a{color:#d6c0a7!important}
+.sidebar-settings-wrap{border-top:1px solid #2c445b;margin-top:15px;padding-top:11px}
+.sidebar-settings-wrap .sidebar-map-controls{width:100%;min-width:0;margin:0;position:relative}
+.sidebar-settings-wrap .sidebar-map-controls>summary{padding:9px 11px;background:#172b40;border:1px solid #314963;font-size:11px}
+.sidebar-settings-wrap .sidebar-map-controls .controls-body{position:static;width:100%;max-height:none;box-shadow:none;border:0;background:#102136;border-radius:0 0 9px 9px;padding:12px 8px;margin-top:0}
+.sidebar-settings-wrap .sidebar-map-controls .layer-options{width:100%!important}
+.sidebar-settings-wrap .sidebar-map-controls .layer-options label{white-space:normal;font-size:10px}
+.sidebar-settings-wrap .hypothesis-label{display:flex;align-items:center;gap:8px;margin:9px 0;padding:10px 5px;color:#e1bf8f;font-size:10px;cursor:pointer}
+.sidebar-settings-wrap .hypothesis-key{font-size:10px;line-height:1.5;color:#9babbf;margin:0 0 10px}
+.layer-dot.hypothetical{border-radius:0;border-bottom:2px dashed #dcb37e;width:14px;height:9px}
+.dossier #dossierBody{padding:24px 19px}
+.dossier h2{font-size:22px;line-height:1.55}
+.dossier .source-details{margin-top:22px}
+.source-details .research-body{border-left:2px solid #57718a;padding-left:11px;margin:12px 0}
+.research-body h3{color:#ddb995;font-size:12px;margin:13px 0 7px;font-weight:650;letter-spacing:.2px}
+.research-body p{font-size:11px;line-height:1.8;color:#bed0e0}
+.research-body ul{color:#b8c7d8;font-size:10px;line-height:1.8;padding-left:18px}
+.research-body .accounting-list{font-family:ui-monospace,monospace;font-size:9px;overflow-wrap:anywhere}
+.map-pin.tier-3{height:30px!important;width:30px!important}
+.map-pin.tier-2{height:27px!important;width:27px!important}
+.map-pin.tier-1{height:23px!important;width:23px!important}
+@media(max-width:980px){
+ .workspace,.workspace.dossier-collapsed,.workspace.sidebar-collapsed,.workspace.sidebar-collapsed.dossier-collapsed{display:block;position:relative;height:calc(100vh - 56px)}
+ .map-stage{width:100%;height:100%}
+ .sidebar{width:min(300px,76vw)}
+ .dossier{top:0;bottom:0;right:0;max-width:90vw;z-index:760}
+ .time-panel{left:7px;right:7px;bottom:9px}
+}
+@media(max-width:680px){
+ .masthead{height:54px}
+ .workspace,.workspace.dossier-collapsed,.workspace.sidebar-collapsed,.workspace.sidebar-collapsed.dossier-collapsed{height:calc(100vh - 54px)}
+ .map-top{top:7px;left:7px;right:auto;max-width:95%;width:auto}
+ .map-year-card{padding:7px 9px}
+ .map-year-card strong{font-size:23px}
+ .map-year-card span{font-size:9px;white-space:normal}
+ .time-panel{padding:7px}
+ .chapter-segment small{display:none}
+ .chapter-segment{padding:5px}
+ .sidebar{top:0;left:0;max-height:100%;height:100%;border-radius:0}
+}
