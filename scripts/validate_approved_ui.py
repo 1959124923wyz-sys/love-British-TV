@@ -73,7 +73,7 @@ require("data/historical-detail-notes.json" in app
         and "历史文献与详细考证" in app,
         "two-level primary narrative and supporting archive")
 require("renderHypotheses()" in app
-        and "independent" in spec
+        and "推定范围" in spec
         and "dashArray:f.geometry.type==='LineString'" in app,
         "hypothetical cartography stays distinct as dashed reference")
 
