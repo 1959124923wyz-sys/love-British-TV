@@ -22,6 +22,6 @@ for(const file of ['app.js','app-continuity-1497-1529-preview.js']){
   /(modern|representative|approximate|not-exact|reference)/i.test(e.geo_precision||''));
  assert.ok(modern.length>=20,'Expected enough geo-referenced events for a meaningful audit');
  for(const e of modern)assert.equal(isUncertain(e),true,file+': approximate historical location published solid: '+e.id);
- assert.match(code,/\.uncertain/,'marker uncertainty styling integration');
+ assert.ok(code.includes("(isUncertain(item)?' uncertain':'')"),file+': marker missing uncertain style flag');
 }
 console.log('PASS: representative or modern-reference 1510–1529 geocodes consistently display dashed, with no invented coordinates');
