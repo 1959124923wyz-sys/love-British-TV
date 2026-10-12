@@ -415,9 +415,73 @@
       "control_effect": "crown_settler_law_attested_enforcement_extent_unknown",
       "funding_relation": null,
       "review_status": "candidate_not_live"
+    },
+    {
+      "id": "1522-MORLAIX-SACK",
+      "year": 1522,
+      "date_label": "1522年7月（具体日有分歧）",
+      "date_precision": "month",
+      "title_zh": "英军袭击并洗劫法国布列塔尼的莫尔莱",
+      "category": "raid_sack",
+      "summary_zh": "1522年，英国舰队袭击布列塔尼的莫尔莱（Morlaix），抢掠并破坏城镇。法国地方力量随后进行了反击。",
+      "source_ids": [
+        "FR-MORLAIX-CITY-2022",
+        "FR-MORLAIX-BAY-HERITAGE",
+        "FR-MURPHY-2021-SCORCHED"
+      ],
+      "location_hint": "Morlaix (France) historic town center",
+      "coordinate": null,
+      "coordinate_type": "historic_city_name_no_surveyed_attack_area",
+      "certainty": "year_high_exact_day_disputed",
+      "significance_suggestion": 2,
+      "control_effect": "short_burning_raid_no_permanent_English_control",
+      "funding_relation": "plunder_claim_without_audited_value",
+      "review_status": "candidate_not_live"
+    },
+    {
+      "id": "1523-JEDBURGH-SACK",
+      "year": 1523,
+      "date_label": "1523年9月",
+      "date_precision": "month",
+      "title_zh": "英军洗劫苏格兰边境的杰德堡",
+      "category": "raid_sack",
+      "summary_zh": "1523年英苏战争期间，英军在边境发动破坏性袭击，杰德堡（Jedburgh）遭洗劫。对城镇的攻击没有改变苏格兰作为独立王国的地位。",
+      "source_ids": [
+        "SC-MURPHY-2024-ANGLO-SCOTS",
+        "SC-MURPHY-2024-BOOK-ORIGINAL"
+      ],
+      "location_hint": "Jedburgh, Scottish Borders",
+      "coordinate": null,
+      "coordinate_type": "modern_town_reference_only",
+      "certainty": "scholarly_monograph_contents_month_needs_check",
+      "significance_suggestion": 2,
+      "control_effect": "military_raid_not_annexation",
+      "funding_relation": null,
+      "review_status": "candidate_not_live"
+    },
+    {
+      "id": "1527-JOHN-RUT-STJOHNS",
+      "year": 1527,
+      "date_label": "1527年8月3日",
+      "date_precision": "day",
+      "title_zh": "约翰·拉特从纽芬兰圣约翰港致信亨利八世",
+      "category": "Atlantic_documentation",
+      "summary_zh": "1527年8月3日，英国船长约翰·拉特在纽芬兰圣约翰港给亨利八世写信，记录船队所见的法国及葡萄牙捕鱼船。该港口已有多国渔民往来，英王尚未在此设立殖民政府。",
+      "source_ids": [
+        "NA-RUT-DCB",
+        "NA-RUT-BIGGAR"
+      ],
+      "location_hint": "St. John's, Newfoundland (modern urban site)",
+      "coordinate": null,
+      "coordinate_type": "historic_harbor_modern_coordinate_not_yet_audited",
+      "certainty": "Rut_letter_edited_in_secondary_academic_biography",
+      "significance_suggestion": 2,
+      "control_effect": "port_visit_and_letter_no_territorial_control",
+      "funding_relation": null,
+      "review_status": "candidate_not_live"
     }
   ],
-  "events_count": 20,
+  "events_count": 23,
   "no_implied_permanent_conquest_from_event": true,
   "geolocating": "null explicitly: separate source-backed modern gazetteer positions may be added by editorial analyst, do not invent coordinates or exact 1527 voyage polyline"
 }
