@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "name": "1520s verified named governed places; Map symbols not territory polygons",
+  "metadata": {
+    "period": {
+      "from": 1520,
+      "to": 1529
+    },
+    "editorial_status": "candidate",
+    "render_semantics": "Point symbols draw independent from dashed regional research geography",
+    "area_calculation_allowed": false,
+    "verified_historic_city_wall_geometry": 0,
+    "requires_separate_layer": true
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "calais-urban-core-continuing-1520-1529",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8587,
+          50.9513
+        ]
+      },
+      "properties": {
+        "name": "加来 · 英王实际控制的城市核心",
+        "polity": "Kingdom of England",
+        "historical_state": "documented-english-royal-governance",
+        "visual_role": "schematic_controlled_city_area",
+        "control_class": "direct_urban_control",
+        "historical_boundary_confirmed": false,
+        "render_radius_px": 17,
+        "min_radius_px": 14,
+        "source_place_id": "calais-crown",
+        "start_year": 1520,
+        "observed_through_year": 1529,
+        "end_year": null,
+        "draw_label": "加来",
+        "description": "英王在加来城设有总督和驻军，港口参与羊毛贸易与王室财政。",
+        "source_ids": [
+          "TNA-FRENCH-LANDS",
+          "MAP-HRP-1520",
+          "MAP-MUNBY-2016"
+        ],
+        "reference_geometry_id": "calais-1500-attested-sites-hull-only",
+        "ui_precision": "urban-city-symbol-not-Pale-boundary",
+        "historic_rule_started": 1347,
+        "stable_id": "calais-crown",
+        "first_visualized_year": 1497,
+        "render_mode": "solid_city_core_SYMBOL_only",
+        "pixel_symbol_only": true,
+        "prohibit_area_calculations": true,
+        "area_sqkm": null,
+        "notes": "English royal garrison and administration in 1520s. Screen circle is symbolic, never an audited historical castle wall or city perimeter."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "guines-fortified-core-existing-english-1520-1529",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "name": "吉讷 · 已有英属边区军事城镇",
+        "stable_id": "guines-crown-1520s",
+        "parent_stable_id": "calais-crown",
+        "start_year": 1520,
+        "observed_through_year": 1529,
+        "historical_acquisition_date": null,
+        "first_individual_map_marker_year": 1520,
+        "control_class": "existing_english_frontier_fortified_town",
+        "historical_boundary_confirmed": false,
+        "render_mode": "solid_city_core_SYMBOL_only",
+        "render_radius_px": 14,
+        "min_radius_px": 11,
+        "pixel_symbol_only": true,
+        "prohibit_area_calculations": true,
+        "area_sqkm": null,
+        "source_ids": [
+          "MAP-HRP-1520",
+          "MAP-MURPHY-2025",
+          "MAP-MUNBY-2016"
+        ],
+        "classification": "existing_site_newly_mapped_not_documented_new_conquest",
+        "notes": "Guînes English-held as of 1520 meeting; 1529 laws address settlement. Point is modern town reference, not 1520 fortress perimeter or new territory."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dublin-crown-administration-core-1520-1529",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "name": "都柏林：英王在爱尔兰的行政核心之一",
+        "political_relation": "crown_administration_core",
+        "render_mode": "solid_crown_administration_SYMBOL_only",
+        "stroke_color": "#9264d4",
+        "description": "都柏林是英王在爱尔兰的主要行政中心之一，周边的贵族与地方领主共同参与政治和军事事务。",
+        "annotation": "英王在爱尔兰的行政中心",
+        "source_place_id": "dublin-pale",
+        "source_ids": [
+          "EGAN-2024-EHR",
+          "MAP-ELLIS-PALE-2021",
+          "MAP-ELLIS-2023"
+        ],
+        "start_year": 1520,
+        "observed_through_year": 1529,
+        "render_radius_px": 16,
+        "boundary_precision": "representative-place-area-symbol",
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "stable_id": "dublin-pale",
+        "control_class": "crown_administration_city_not_entire_irish_pale",
+        "historical_boundary_confirmed": false,
+        "pixel_symbol_only": true,
+        "prohibit_area_calculations": true,
+        "area_sqkm": null,
+        "notes": "Seat of crown deputy and institutions: local lordships remain, Pale outside city is hypothetical historical location envelope, not verified border."
+      }
+    }
+  ]
+}

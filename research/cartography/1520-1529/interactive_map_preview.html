@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>爱英TV — 1520—1529年研究地图预览</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+*{box-sizing:border-box}body{background:#111820;color:#e7e8ee;font:14px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;margin:0}
+#app{display:grid;grid-template-columns:360px minmax(0,1fr);height:100vh}
+aside{padding:18px;overflow:auto;background:#19212a;border-right:1px solid #3c4752}
+h1{font-size:19px;margin:0 0 6px}h2{font-size:14px;color:#efc99e;margin:15px 0 7px}
+.muted{color:#aeb7c1;font-size:12px}.year{font-size:31px;font-weight:700;color:#ffd19f}
+input[type=range]{width:100%;accent-color:#c8742f}
+#map{height:100vh;width:100%;background:#2a3034}
+legend,.legend{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;margin:10px 0 14px}
+.tag{padding:3px 8px;border:1px dashed #b68557;border-radius:5px}
+#events{max-height:36vh;overflow:auto}
+.event{border:1px solid #34424c;background:#202c36;border-radius:6px;padding:7px 9px;margin:6px 0;cursor:pointer}
+.event:hover{border-color:#c78e57}
+.event .date{color:#efbc8f;font-size:11px}
+#detail{border-top:1px solid #3b4852;padding-top:10px;font-size:13px}
+a{color:#efbd87;overflow-wrap:anywhere}
+.leaflet-container{background:#263039}
+.pin{background:#202633;color:#fff;border:1px solid #e4a45d;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;box-shadow:0 1px 8px #111a}
+.pin.dependency{border-color:#ae96e5}.pin.independent{border-color:#7ca8d5}.pin.event{background:#7e3d27}
+.warn{font-size:12px;color:#e0bb9a}
+label{display:block;margin:5px 0;color:#c4d0d8}
+@media(max-width:850px){#app{grid-template-columns:300px minmax(0,1fr)}}
+</style></head>
+<body><div id="app">
+<aside><h1>1520—1529｜第四章研究预览</h1>
+<p class="muted">独立资料预览；不修改正式地图。按年末政治状态显示，历史事件在到达真实年份时才出现。</p>
+<div class="year" id="yearValue">1520</div>
+<input type="range" id="yearSlider" min="1520" max="1529" value="1520" step="1"/>
+<div class="legend"><span class="tag">橙色：英王城市核心</span><span class="tag">虚线：推定范围</span><span class="tag">紫色：特殊法权</span><span class="tag">蓝色：独立苏格兰</span></div>
+<label><input id="showAreas" type="checkbox" checked> 显示概略区域（非历史实测边界）</label>
+<label><input id="showCores" type="checkbox" checked> 已有英王城市/行政核心</label>
+<label><input id="showEvents" type="checkbox" checked> 截至当前年的事件点</label>
+<label><input id="showSites" type="checkbox"> 附加10处现代遗址定位（研究层）</label>
+<p class="warn">加来Pale与爱尔兰Pale只以虚线地理参考表示；现代岛屿轮廓不代表1520年实测海岸。不能用这里的几何计算殖民面积。</p>
+<h2 id="eventsHeading">已发生事件</h2><div id="events"></div>
+<h2>地图记录与出处</h2><div id="detail" class="muted">点击地图标记或左侧事件查看对应记录与史料。</div>
+<p class="muted">史料与图层准入规则见同目录 <a href="./EDITOR_HANDOFF.md">EDITOR_HANDOFF.md</a>。底图© OpenStreetMap贡献者。</p>
+</aside><div id="map"></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const map=L.map('map',{zoomControl:true}).setView([52.4,-1.1],5);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+const areas=L.layerGroup().addTo(map),cores=L.layerGroup().addTo(map),eventLayer=L.layerGroup().addTo(map),siteLayer=L.layerGroup().addTo(map);
+let atlas,outline,core,sites,year=1520;
+function icon(text,type){const size=type==='event'?25:24;return L.divIcon({className:'',html:'<div class="pin '+esc(type)+'" style="width:'+size+'px;height:'+size+'px">'+esc(text)+'</div>',iconSize:[size,size],iconAnchor:[size/2,size/2]});}
+function dossier(title,body,refs){
+ const src=Array.isArray(refs)?refs:[];const links=src.map(id=>{const s=atlas.sources.find(s=>s.id===id);return s?'<li><a target="_blank" rel="noopener" href="'+esc(s.url)+'">'+esc(s.title||s.publisher||id)+'</a></li>':'<li>'+esc(id)+'（详见研究来源索引）</li>'}).join('');
+ $('detail').innerHTML='<strong>'+esc(title)+'</strong><p>'+esc(body||'有史料关联的地图记录。')+'</p>'+(src.length?'<small>来源：<ul>'+links+'</ul></small>':'');
+}
+function addAreaFeatures(){
+ areas.clearLayers();if(!$('showAreas').checked)return;
+ L.geoJSON(outline,{style:f=>{const p=f.properties;return {color:p.historical_control_type==='scottish_crown_territory'?'#6ca6d4':p.historical_control_type==='crown_dependency'?'#9d91e1':p.historical_control_type==='autonomous_lordship'?'#c6a36f':'#efa55e',weight:1.8,opacity:0.9,dashArray:p.dash_array||'7 5',fillColor:p.historical_control_type==='scottish_crown_territory'?'#6ca6d4':'#d9a06a',fillOpacity:p.fill_opacity||0.05};},onEachFeature:(f,l)=>{l.bindTooltip(esc(f.properties.name)+' · 概略参考');l.on('click',()=>dossier(f.properties.name,f.properties.uncertainty_note,f.properties.new_research_support_ids));}}).addTo(areas);
+}
+function addCoreFeatures(){
+ cores.clearLayers();if(!$('showCores').checked)return;
+ for(const f of core.features){const p=f.properties;let lat=f.geometry.coordinates[1],lon=f.geometry.coordinates[0];
+ let m=L.marker([lat,lon],{icon:icon('◆',p.stable_id==='dublin-pale'?'dependency':'control')}).addTo(cores);
+ m.bindTooltip(esc(p.name));m.on('click',()=>dossier(p.name,p.notes,p.source_ids));
+ }
+}
+function drawEvents(){
+ eventLayer.clearLayers();siteLayer.clearLayers();const visible=atlas.events.filter(e=>e.year<=year);
+ $('eventsHeading').textContent='截至'+year+'年已发生事件 · '+visible.length+' / '+atlas.events.length;
+ $('events').innerHTML='';
+ for(const e of visible){
+ const div=document.createElement('div');div.className='event';div.innerHTML='<div class="date">'+esc(e.date_label||e.year)+'</div><strong>'+esc(e.name)+'</strong>';
+ div.addEventListener('click',()=>dossier(e.name,e.description,e.source_ids));$('events').appendChild(div);
+ }
+ if($('showEvents').checked){
+  const buckets=new Map();
+  for(const e of visible){if(e.lat==null||e.lng==null)continue;const k=e.lat.toFixed(3)+'/'+e.lng.toFixed(3);if(!buckets.has(k))buckets.set(k,[]);buckets.get(k).push(e);}
+  for(const items of buckets.values()){let e=items[0],m=L.marker([e.lat,e.lng],{icon:icon(items.length>1?items.length:'•','event')}).addTo(eventLayer);
+   m.bindTooltip(esc(items.length>1?items.length+'项史事 · '+e.geography_label:e.name));
+   m.on('click',()=>{if(items.length===1)dossier(e.name,e.description,e.source_ids);else{$('detail').innerHTML='<b>'+items.length+'项史事</b>'+items.map(x=>'<p><b>'+esc(x.year+' '+x.name)+'</b> · '+esc(x.short_description||x.description)+'</p>').join('');}});
+  }
+ }
+ if($('showSites').checked){for(const f of sites.features){let p=f.properties;let targetYear=Number(p.year)||1520;if(targetYear>year)continue;
+ let v=f.geometry.coordinates,m=L.circleMarker([v[1],v[0]],{radius:5,color:'#a3d6d1',weight:1.5,fillOpacity:.6}).addTo(siteLayer);
+ m.bindTooltip(esc(p.title_zh||p.name||p.id));m.on('click',()=>dossier(p.title_zh||p.name||p.id,p.site_identity_notes||p.precision||'现代地理定位，仅供历史研究参考。',p.source_ids));}}
+}
+function render(){year=Number($('yearSlider').value);$('yearValue').textContent=year;addAreaFeatures();addCoreFeatures();drawEvents();}
+async function boot(){const files=["ATLAS_EDITOR_CANDIDATE_1520_1529.json","APPROXIMATE_REFERENCE_OUTLINES_1520_1529.geojson","CONTROL_CORES_1520_1529.geojson","EVENT_SITES_1520_1529.geojson"];
+const data=await Promise.all(files.map(async f=>{const r=await fetch('./'+f,{cache:'no-store'});if(!r.ok)throw Error(f+' HTTP '+r.status);return r.json()}));[atlas,outline,core,sites]=data;render();
+}
+for(const el of document.querySelectorAll('input'))el.addEventListener('input',()=>{if(atlas)render()});
+boot().catch(e=>{$('detail').textContent='加载失败：'+e.message+'。请通过GitHub Pages/HTTP预览，不要以本地 file:// 协议打开。';});
+</script></body></html>
