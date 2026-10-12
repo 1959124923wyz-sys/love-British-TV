@@ -32,3 +32,5 @@
 2. 将审核结果移至data/atlas-1510-1519.json并配置app.js章节加载；更新scripts/validate_atlas.py年代校验。
 3. 浏览器回归测试地图点位聚合、年份切换与1519图尔奈结束、历史资料展开；检查GitHub Pages成功部署。
 4. Tournai外围Tournaisis、1515爱尔兰Pale实际司法区仍需进一步史学核查，至多保留虚线研究层。
+
+**GitHub审核入口**：本期资料整理草稿 [PR #7](https://github.com/1959124923wyz-sys/love-British-TV/pull/7)；原始深度研究 [PR #6](https://github.com/1959124923wyz-sys/love-British-TV/pull/6)。公开网站主干没有因本任务改变。
