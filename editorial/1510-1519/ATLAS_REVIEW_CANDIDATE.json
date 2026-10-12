@@ -1,0 +1,815 @@
+{
+  "dataset_id": "atlas-1510-1519-editorial-intake-v1",
+  "period": {
+    "from": 1510,
+    "to": 1519,
+    "next": 1520
+  },
+  "origin": {
+    "baseline": "main/data/atlas-1500-1509.json (preserving prior six political locations)",
+    "research_branch": "research/territorial-1510-1519-20261012",
+    "study": "Pending evidence/editorial review; not incorporated into live app"
+  },
+  "editorial_status": "CURATED_CANDIDATES_ONLY_NOT_APPROVED_FOR_AUTOMATIC_PUBLICATION",
+  "chapter_label": "1510—1519｜欧洲战场与短暂的英王海外统治",
+  "intro": "1513年，亨利八世攻占图尔奈，在当地设置驻军并管理城市。英格兰与苏格兰军队同年在弗洛登交战，苏格兰王国延续。爱尔兰各地的王室官员和盖尔地方领主仍在调整城堡、军队与治理权。1517年，英格兰商人筹备北美定居航行，未能完成计划。",
+  "sources": [
+    {
+      "id": "RIA-GEAROID-MOR",
+      "title": "FitzGerald, Gerald (Gearóid Mór) 8th Earl of Kildare",
+      "publisher": "Royal Irish Academy / Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/index.php/biography/fitzgerald-gerald-gearoid-mor-a3148",
+      "kind": "academic_biography",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id RIA-GEAROID-MOR"
+    },
+    {
+      "id": "RIA-GEAROID-OG",
+      "title": "FitzGerald, Gerald (Gearóid Óg) 9th Earl of Kildare",
+      "publisher": "Royal Irish Academy / Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/fitzgerald-gerald-gearoid-og-garrett-mcalison-a3152",
+      "kind": "academic_biography",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id RIA-GEAROID-OG"
+    },
+    {
+      "id": "UCC-FOURMASTERS-1510s",
+      "title": "Annals of the Four Masters (19th c English edited translation of 17th c compilation), 1510–1519",
+      "publisher": "University College Cork CELT",
+      "url": "https://celt.ucc.ie/published/T100005E.html",
+      "kind": "academic/reference",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id UCC-FOURMASTERS-1510s"
+    },
+    {
+      "id": "THEROUANNE-OFFICIAL",
+      "title": "Histoire de Thérouanne",
+      "publisher": "Commune de Thérouanne",
+      "url": "https://www.therouanne.fr/histoire-de-therouanne/",
+      "kind": "municipal_local_history",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id THEROUANNE-OFFICIAL"
+    },
+    {
+      "id": "FRANCE-1513-CAMPAIGN",
+      "title": "Review of C. G. Cruickshank Army Royal / Henry VIII Invasion of France",
+      "publisher": "Review via Persée",
+      "url": "https://www.persee.fr/doc/rbph_0035-0818_1971_num_49_2_2872_t1_0590_0000_2?pageId=T1_591",
+      "kind": "scholarly_review",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id FRANCE-1513-CAMPAIGN"
+    },
+    {
+      "id": "NRS-FLODDEN",
+      "title": "Flodden 1513 archival education project",
+      "publisher": "National Records of Scotland",
+      "url": "https://www.scottisharchivesforschools.org/Flodden/floddenIndex.asp",
+      "kind": "official_archive_guide",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id NRS-FLODDEN"
+    },
+    {
+      "id": "NRS-FLODDEN-ARCHIVES",
+      "title": "The Battle of Flodden and aftermath",
+      "publisher": "National Records of Scotland",
+      "url": "https://www.scottisharchivesforschools.org/Flodden/battleIndex.asp",
+      "kind": "official_primary_archive_guide",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id NRS-FLODDEN-ARCHIVES"
+    },
+    {
+      "id": "TOURNAI-MIL-MUSEUM",
+      "title": "Tournai, a city with a rich military past",
+      "publisher": "Musée d'Histoire militaire de Tournai (municipal)",
+      "url": "https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past",
+      "kind": "municipal_history",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id TOURNAI-MIL-MUSEUM"
+    },
+    {
+      "id": "DAVIES-1998-TOURNAI",
+      "title": "Tournai and the English Crown, 1513–1519",
+      "publisher": "C. S. L. Davies / Historical Journal",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/abs/tournai-and-the-english-crown-15131519/B07E63FC8D447BD02398FDD99F09BB62",
+      "kind": "peer_reviewed",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id DAVIES-1998-TOURNAI"
+    },
+    {
+      "id": "MURPHY-2014-TOURNAI",
+      "title": "Neil Murphy, Tournai under Tudor Rule: Cooperation or Opposition? (2014)",
+      "publisher": "Northumbria University / Société royale d’histoire et d’archéologie de Tournai",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tournai-under-tudor-rule-cooperation-or-opposition/",
+      "kind": "academic/reference",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id MURPHY-2014-TOURNAI"
+    },
+    {
+      "id": "TOURNAI-MUNICIPAL-TOWER",
+      "title": "TOURNAI-MUNICIPAL-TOWER",
+      "publisher": "City of Tournai",
+      "url": "https://www.tournai.be/patrimoine/tour-henry-viii",
+      "kind": "academic/reference",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id TOURNAI-MUNICIPAL-TOWER"
+    },
+    {
+      "id": "TNA-TREATY-TOURNAI-1518",
+      "title": "Add MS 48002, ff.150v–152v: warrant for Treaty for Cession of Tournai, 4 Oct 1518",
+      "publisher": "British Library",
+      "url": "https://searcharchives.bl.uk/catalog/040-001951011",
+      "kind": "archival_primary_catalogue",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id TNA-TREATY-TOURNAI-1518"
+    },
+    {
+      "id": "BL-TOURNAI-1518-TREATY",
+      "title": "Add MS 48003, ff.123r–235r: Tournai cession treaty documentary group",
+      "publisher": "British Library",
+      "url": "https://searcharchives.bl.uk/catalog/040-001951012",
+      "kind": "archival_primary_catalogue",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id BL-TOURNAI-1518-TREATY"
+    },
+    {
+      "id": "ELLIS-2023-SURREY-DECISION",
+      "title": "Prelude to the Tudor conquest: Henry VIII and the Irish expedition of Thomas Howard, earl of Surrey, 1520–22",
+      "publisher": "Irish Historical Studies / Cambridge University Press",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/prelude-to-the-tudor-conquest-henry-viii-and-the-irish-expedition-of-thomas-howard-earl-of-surrey-152022/A73EF1BFDA236A75D51F98162D616640",
+      "kind": "academic/reference",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id ELLIS-2023-SURREY-DECISION"
+    },
+    {
+      "id": "DCB-RASTELL-1517",
+      "title": "Rastell, John (son): biographical article containing John Rastell the elder's 1517 colonial expedition",
+      "publisher": "University of Toronto / Université Laval, Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio/rastell_john_1F.html",
+      "kind": "academic/reference",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id DCB-RASTELL-1517"
+    },
+    {
+      "id": "BL-ADD4792-1515-IRELAND",
+      "title": "Report on the State of Ireland with proposals for reform circa 1515",
+      "publisher": "British Library Archives and Manuscripts",
+      "url": "https://searcharchives.bl.uk/catalog/040-002110309",
+      "kind": "academic/reference",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id BL-ADD4792-1515-IRELAND"
+    },
+    {
+      "id": "NRS-PC-1517",
+      "title": "Records of Privy Council of Scotland, PC category",
+      "publisher": "National Records of Scotland",
+      "url": "https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?reference=PC",
+      "kind": "academic/reference",
+      "research_source_ref": "research/territorial-1510-1519-20261012/research/periods/1510-1519/ source id NRS-PC-1517"
+    },
+    {
+      "id": "TNA-FRENCH-LANDS",
+      "title": "French lands of the English kings",
+      "publisher": "The National Archives UK",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "kind": "national-archive-finding-guide"
+    },
+    {
+      "id": "EGAN-2024-EHR",
+      "title": "The English Lordship of Ireland and the Irish Sea World: Re-assessing the Origins of the Kildare Ascendancy, c.1390–c.1513",
+      "publisher": "English Historical Review / Queen's University Belfast",
+      "url": "https://doi.org/10.1093/ehr/ceae207",
+      "kind": "peer-reviewed-scholarship"
+    },
+    {
+      "id": "JERSEY-HISTORY-GOV",
+      "title": "Jersey's history and constitutional position",
+      "publisher": "Government of Jersey",
+      "url": "https://www.gov.je/Leisure/Jersey/pages/history.aspx",
+      "kind": "official_history"
+    },
+    {
+      "id": "CAMBRIDGE-LORDSHIP-MAN",
+      "title": "Lordship and Sovereignty in the Territories of the English Crown: Sub-kingship and Its Implications, 1300–1600",
+      "publisher": "Journal of British Studies",
+      "url": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/lordship-and-sovereignty-in-the-territories-of-the-english-crown-subkingship-and-its-implications-13001600/B84E5F7DFCC599634E20564622F84020",
+      "kind": "peer_reviewed_research"
+    },
+    {
+      "id": "SHETLAND-MUSEUM-1472",
+      "title": "550 Years Ago: how Shetland became part of Scotland",
+      "publisher": "Shetland Museum and Archives",
+      "url": "https://www.shetlandmuseumandarchives.org.uk/blog/550-years-ago-how-shetland-became-part-of-scotland",
+      "kind": "archive"
+    }
+  ],
+  "events": [
+    {
+      "id": "1510-KILDARE-DEPUTY",
+      "year": 1510,
+      "start_year": 1510,
+      "end_year": 1510,
+      "visible_from": 1510,
+      "date_label": "1510年11月8日",
+      "name": "第八代基尔代尔伯爵再任爱尔兰副总督",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "not-geocoded",
+      "geography_label": "仅归入历史时间线，发生位置未核精确坐标",
+      "description": "亨利八世重新任命基尔代尔伯爵治理爱尔兰的王室属地。他继续依托都柏林的官署及当地贵族网络维持统治。",
+      "short_description": "亨利八世重新任命基尔代尔伯爵治理爱尔兰的王室属地。他继续依托都柏林的官署及当地贵族网络维持统治。",
+      "source_ids": [
+        "RIA-GEAROID-MOR"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "当地历史与背景事件"
+      },
+      "colonial_profit": false,
+      "position_type": "no_map_marker_until_geocoded",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1512-OMAGH-ODONNELL",
+      "year": 1512,
+      "start_year": 1512,
+      "end_year": 1512,
+      "visible_from": 1512,
+      "date_label": "1512年",
+      "name": "奥唐奈重建奥马城堡并派兵驻守",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 54.6,
+      "lng": -7.3,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "奥马 · 现代城镇中心示意（城堡地点待核）",
+      "description": "奥唐奈家族重建曾被基尔代尔军队毁坏的奥马城堡，并安排守军。这座城堡继续成为当地盖尔政治势力争夺的据点。",
+      "short_description": "奥唐奈家族重建曾被基尔代尔军队毁坏的奥马城堡，并安排守军。这座城堡继续成为当地盖尔政治势力争夺的据点。",
+      "source_ids": [
+        "UCC-FOURMASTERS-1510s"
+      ],
+      "certainty": "published-chronicle-later-compilation",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1513-THEROUANNE-SIEGE",
+      "year": 1513,
+      "start_year": 1513,
+      "end_year": 1513,
+      "visible_from": 1513,
+      "date_label": "1513年8月23日前后",
+      "name": "亨利八世与盟军攻陷泰鲁阿讷",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 50.6381,
+      "lng": 2.2561,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "泰鲁阿讷 · 现代村镇位置示意",
+      "description": "英军和哈布斯堡盟军围攻泰鲁阿讷，守军投降。城防设施遭到破坏，法国方面后来开始恢复城市防御。",
+      "short_description": "英军和哈布斯堡盟军围攻泰鲁阿讷，守军投降。城防设施遭到破坏，法国方面后来开始恢复城市防御。",
+      "source_ids": [
+        "THEROUANNE-OFFICIAL",
+        "FRANCE-1513-CAMPAIGN"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1513-FLODDEN",
+      "year": 1513,
+      "start_year": 1513,
+      "end_year": 1513,
+      "visible_from": 1513,
+      "date_label": "1513年9月9日",
+      "name": "弗洛登战役：苏格兰国王詹姆斯四世战死",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 55.626989,
+      "lng": -2.167046,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "弗洛登 · 英国历史战场名录位置",
+      "description": "英格兰与苏格兰军队在弗洛登交战，苏格兰国王詹姆斯四世阵亡，幼年詹姆斯五世继位。苏格兰继续由本国王室及摄政机构治理。",
+      "short_description": "英格兰与苏格兰军队在弗洛登交战，苏格兰国王詹姆斯四世阵亡，幼年詹姆斯五世继位。苏格兰继续由本国王室及摄政机构治理。",
+      "source_ids": [
+        "NRS-FLODDEN",
+        "NRS-FLODDEN-ARCHIVES"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 3,
+        "review_status": "provisional",
+        "rationale": "长期政治制度或大规模区域权力重大变化"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1513-TOURNAI-OCCUPATION",
+      "year": 1513,
+      "start_year": 1513,
+      "end_year": 1513,
+      "visible_from": 1513,
+      "date_label": "1513年9月23日",
+      "name": "图尔奈向亨利八世投降，英方建立驻军",
+      "category": "territorial",
+      "icon_code": "TER",
+      "lat": 50.60715,
+      "lng": 3.389321,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "图尔奈 · 现代城市中心示意",
+      "description": "图尔奈向亨利八世军队投降。英王设置总督及驻军，并继续利用当地市议会处理城市事务，形成持续数年的实际统治。",
+      "short_description": "图尔奈向亨利八世军队投降。英王设置总督及驻军，并继续利用当地市议会处理城市事务，形成持续数年的实际统治。",
+      "source_ids": [
+        "TOURNAI-MIL-MUSEUM",
+        "DAVIES-1998-TOURNAI",
+        "MURPHY-2014-TOURNAI"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1513-KILDARE-NINTH",
+      "year": 1513,
+      "start_year": 1513,
+      "end_year": 1513,
+      "visible_from": 1513,
+      "date_label": "1513年末",
+      "name": "第九代基尔代尔伯爵继任爱尔兰副总督",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "not-geocoded",
+      "geography_label": "仅归入历史时间线，发生位置未核精确坐标",
+      "description": "第八代基尔代尔伯爵去世后，其子继承家族在爱尔兰的主要政治地位，并继续担任英王副总督。",
+      "short_description": "第八代基尔代尔伯爵去世后，其子继承家族在爱尔兰的主要政治地位，并继续担任英王副总督。",
+      "source_ids": [
+        "RIA-GEAROID-OG",
+        "RIA-GEAROID-MOR"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "当地历史与背景事件"
+      },
+      "colonial_profit": false,
+      "position_type": "no_map_marker_until_geocoded",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1515-IRELAND-REFORM-MANUSCRIPT",
+      "year": 1515,
+      "start_year": 1515,
+      "end_year": 1515,
+      "visible_from": 1515,
+      "date_label": "约1515年",
+      "name": "爱尔兰治理状况与改革建议报告形成",
+      "category": "documentary",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "not-geocoded",
+      "geography_label": "仅归入历史时间线，发生位置未核精确坐标",
+      "description": "约1515年的爱尔兰治理报告讨论了王室司法、地方防务与行政改革。相关手稿留下了当时英王属地治理范围与地方权力关系的材料。",
+      "short_description": "约1515年的爱尔兰治理报告讨论了王室司法、地方防务与行政改革。相关手稿留下了当时英王属地治理范围与地方权力关系的材料。",
+      "source_ids": [
+        "BL-ADD4792-1515-IRELAND",
+        "ELLIS-2023-SURREY-DECISION"
+      ],
+      "certainty": "archive-catalogue-and-scholarly-synthesis",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "no_map_marker_until_geocoded",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1515-SCOTLAND-ALBANY",
+      "year": 1515,
+      "start_year": 1515,
+      "end_year": 1515,
+      "visible_from": 1515,
+      "date_label": "1515年",
+      "name": "奥尔巴尼公爵参与苏格兰摄政",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "not-geocoded",
+      "geography_label": "仅归入历史时间线，发生位置未核精确坐标",
+      "description": "詹姆斯五世年幼期间，奥尔巴尼公爵到达苏格兰并承担摄政职责，苏格兰的王国政府继续运作。",
+      "short_description": "詹姆斯五世年幼期间，奥尔巴尼公爵到达苏格兰并承担摄政职责，苏格兰的王国政府继续运作。",
+      "source_ids": [
+        "NRS-FLODDEN-ARCHIVES",
+        "NRS-PC-1517"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "当地历史与背景事件"
+      },
+      "colonial_profit": false,
+      "position_type": "no_map_marker_until_geocoded",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1516-SLIGO-ODONNELL",
+      "year": 1516,
+      "start_year": 1516,
+      "end_year": 1516,
+      "visible_from": 1516,
+      "date_label": "1516年",
+      "name": "奥唐奈军队攻取斯莱戈城堡",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 54.26969,
+      "lng": -8.46943,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "斯莱戈 · 现代城市中心示意",
+      "description": "奥唐奈家族在军事行动中利用外来的火炮船，攻取斯莱戈及附近据点，并调整部分城堡的驻守安排。",
+      "short_description": "奥唐奈家族在军事行动中利用外来的火炮船，攻取斯莱戈及附近据点，并调整部分城堡的驻守安排。",
+      "source_ids": [
+        "UCC-FOURMASTERS-1510s"
+      ],
+      "certainty": "published-chronicle-later-compilation",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1517-RASTELL-ABORTED-COLONIZATION",
+      "year": 1517,
+      "start_year": 1517,
+      "end_year": 1517,
+      "visible_from": 1517,
+      "date_label": "1517年3月5日获王室支持",
+      "name": "拉斯特尔组织北美定居船队，远航计划中止",
+      "category": "voyage",
+      "icon_code": "EXP",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "not-geocoded",
+      "geography_label": "仅归入历史时间线，发生位置未核精确坐标",
+      "description": "亨利八世支持约翰·拉斯特尔与伦敦商人筹备前往纽芬兰或拉布拉多的定居航行。船队在英格兰沿海发生内部分歧，未能建立计划中的北美定居点。",
+      "short_description": "亨利八世支持约翰·拉斯特尔与伦敦商人筹备前往纽芬兰或拉布拉多的定居航行。船队在英格兰沿海发生内部分歧，未能建立计划中的北美定居点。",
+      "source_ids": [
+        "DCB-RASTELL-1517"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "no_map_marker_until_geocoded",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1517-TOURNAI-FORT-WORKS",
+      "year": 1517,
+      "start_year": 1517,
+      "end_year": 1517,
+      "visible_from": 1517,
+      "date_label": "1517年",
+      "name": "图尔奈的英王堡垒工程持续推进",
+      "category": "infrastructure",
+      "icon_code": "INF",
+      "lat": 50.60715,
+      "lng": 3.389321,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "图尔奈 · 现代城市中心示意",
+      "description": "英王在图尔奈推进堡垒工程，当地市政当局和居民参与相关安排。该工程增加了城市的防御设施，也引发财政与劳动力协调问题。",
+      "short_description": "英王在图尔奈推进堡垒工程，当地市政当局和居民参与相关安排。该工程增加了城市的防御设施，也引发财政与劳动力协调问题。",
+      "source_ids": [
+        "MURPHY-2014-TOURNAI",
+        "TOURNAI-MUNICIPAL-TOWER"
+      ],
+      "certainty": "scholarly-synthesis-numeric-claims-excluded",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "当地历史与背景事件"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1518-TOURNAI-CESSION",
+      "year": 1518,
+      "start_year": 1518,
+      "end_year": 1518,
+      "visible_from": 1518,
+      "date_label": "1518年10月4日",
+      "name": "英法达成归还图尔奈的条约",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 50.60715,
+      "lng": 3.389321,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "图尔奈 · 现代城市中心示意",
+      "description": "英法就归还图尔奈达成条约。1518年末双方继续处理移交安排，英方驻军此时仍在当地。",
+      "short_description": "英法就归还图尔奈达成条约。1518年末双方继续处理移交安排，英方驻军此时仍在当地。",
+      "source_ids": [
+        "TNA-TREATY-TOURNAI-1518",
+        "BL-TOURNAI-1518-TREATY"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1519-TOURNAI-RETURN",
+      "year": 1519,
+      "start_year": 1519,
+      "end_year": 1519,
+      "visible_from": 1519,
+      "date_label": "1519年2月",
+      "name": "图尔奈英军撤离，法王恢复统治",
+      "category": "territorial",
+      "icon_code": "TER",
+      "lat": 50.60715,
+      "lng": 3.389321,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "图尔奈 · 现代城市中心示意",
+      "description": "1519年2月，英王驻图尔奈军队撤离，法兰西国王弗朗索瓦一世恢复对城市的统治。",
+      "short_description": "1519年2月，英王驻图尔奈军队撤离，法兰西国王弗朗索瓦一世恢复对城市的统治。",
+      "source_ids": [
+        "MURPHY-2014-TOURNAI",
+        "BL-TOURNAI-1518-TREATY"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1519-IRELAND-GOVERNANCE-DECISION",
+      "year": 1519,
+      "start_year": 1519,
+      "end_year": 1519,
+      "visible_from": 1519,
+      "date_label": "1519年末",
+      "name": "亨利八世决定调整爱尔兰副总督人选",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "not-geocoded",
+      "geography_label": "仅归入历史时间线，发生位置未核精确坐标",
+      "description": "基尔代尔伯爵被召往英格兰宫廷。亨利八世决定改变爱尔兰治理人选，新任萨里伯爵的正式任命及出征安排延续到1520年。",
+      "short_description": "基尔代尔伯爵被召往英格兰宫廷。亨利八世决定改变爱尔兰治理人选，新任萨里伯爵的正式任命及出征安排延续到1520年。",
+      "source_ids": [
+        "ELLIS-2023-SURREY-DECISION",
+        "RIA-GEAROID-OG"
+      ],
+      "certainty": "candidate_review",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域统治、战争或持续制度的重要转折"
+      },
+      "colonial_profit": false,
+      "position_type": "no_map_marker_until_geocoded",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    },
+    {
+      "id": "1519-ONEILL-SUCCESSION",
+      "year": 1519,
+      "start_year": 1519,
+      "end_year": 1519,
+      "visible_from": 1519,
+      "date_label": "1519年",
+      "name": "泰隆奥尼尔家族首领更替",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 54.6,
+      "lng": -7.3,
+      "geo_precision": "modern-site-reference-not-historic-exact",
+      "geography_label": "泰隆 · 区域示意",
+      "description": "阿特·奥尼尔去世后，康·巴卡赫·奥尼尔继任当地首领，泰隆的氏族政治继续运作。",
+      "short_description": "阿特·奥尼尔去世后，康·巴卡赫·奥尼尔继任当地首领，泰隆的氏族政治继续运作。",
+      "source_ids": [
+        "UCC-FOURMASTERS-1510s"
+      ],
+      "certainty": "published-chronicle-later-compilation",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "当地历史与背景事件"
+      },
+      "colonial_profit": false,
+      "position_type": "representative-location-with-documentation",
+      "editorial_status": "pending-editorial-review",
+      "dossier_ref": "research/periods/1510-1519/CHRONOLOGY_AND_LOCAL_POWERS.json"
+    }
+  ],
+  "places": [
+    {
+      "id": "calais-crown",
+      "name": "加来：英王在法国的控制据点",
+      "lat": 50.9513,
+      "lng": 1.8587,
+      "status": "english-crown-controlled-city",
+      "description": "加来城由英王派驻的官员与军队管理，也是羊毛贸易和税收的重要口岸。",
+      "source_ids": [
+        "TNA-FRENCH-LANDS"
+      ],
+      "icon_code": "TER",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1519,
+      "end_year": null,
+      "carryover_from_1500_1509": true,
+      "editorial_status": "carryover-review"
+    },
+    {
+      "id": "dublin-pale",
+      "name": "都柏林：英王在爱尔兰的行政核心之一",
+      "lat": 53.3498,
+      "lng": -6.2603,
+      "status": "crown-administration-city",
+      "description": "都柏林是英王在爱尔兰的主要行政中心之一，周边的贵族与地方领主共同参与政治和军事事务。",
+      "source_ids": [
+        "EGAN-2024-EHR"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1519,
+      "end_year": null,
+      "carryover_from_1500_1509": true,
+      "editorial_status": "carryover-review"
+    },
+    {
+      "id": "channel-jersey",
+      "name": "泽西岛：英王属地",
+      "lat": 49.2144,
+      "lng": -2.1313,
+      "status": "crown-dependency",
+      "description": "泽西岛受英王统辖，沿用当地的法律和行政制度。",
+      "source_ids": [
+        "JERSEY-HISTORY-GOV"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1519,
+      "end_year": null,
+      "carryover_from_1500_1509": true,
+      "editorial_status": "carryover-review"
+    },
+    {
+      "id": "isle-of-man",
+      "name": "马恩岛：特殊领主制度",
+      "lat": 54.235,
+      "lng": -4.56,
+      "status": "autonomous-lordship",
+      "description": "马恩岛由斯坦利家族等当地领主治理，保留独特的岛屿政制。",
+      "source_ids": [
+        "CAMBRIDGE-LORDSHIP-MAN"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1519,
+      "end_year": null,
+      "carryover_from_1500_1509": true,
+      "editorial_status": "carryover-review"
+    },
+    {
+      "id": "orkney-scotland",
+      "name": "奥克尼：苏格兰王权相关群岛",
+      "lat": 59,
+      "lng": -3.1,
+      "status": "scottish-crown-territory",
+      "description": "奥克尼群岛处于苏格兰王权之下，拥有自己的地方治理传统。",
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1519,
+      "end_year": null,
+      "carryover_from_1500_1509": true,
+      "editorial_status": "carryover-review"
+    },
+    {
+      "id": "shetland-scotland",
+      "name": "设得兰：苏格兰王权相关群岛",
+      "lat": 60.15,
+      "lng": -1.15,
+      "status": "scottish-crown-territory",
+      "description": "设得兰群岛处于苏格兰王权关系之内，延续北方群岛的地方制度。",
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1519,
+      "end_year": null,
+      "carryover_from_1500_1509": true,
+      "editorial_status": "carryover-review"
+    },
+    {
+      "id": "tournai-occupied-city-1513",
+      "name": "图尔奈：英王1513—1519年实际驻守并治理的城市",
+      "lat": 50.60715,
+      "lng": 3.389321,
+      "status": "occupied-city-english-king-french-claim",
+      "description": "1513年9月，图尔奈向亨利八世投降。英王设置总督和驻军，市议会继续承担城市日常事务；1519年2月英军撤离，法王恢复治理。",
+      "source_ids": [
+        "TOURNAI-MIL-MUSEUM",
+        "DAVIES-1998-TOURNAI",
+        "MURPHY-2014-TOURNAI"
+      ],
+      "icon_code": "TER",
+      "geo_precision": "representative-modern-city-centre-only",
+      "certainty": "historically-attested-urban-rule-boundary-uncertain",
+      "state_type": "political_relationship",
+      "start_year": 1513,
+      "observed_through_year": 1518,
+      "end_year": 1519,
+      "end_month": 2,
+      "governance_type": "foreign_conquest_city_with_continuing_civic_autonomy",
+      "spatial_status": "no-approved-city-or-tournaisis-polygon",
+      "editorial_status": "candidate_only"
+    }
+  ],
+  "routes": [],
+  "colonial_polygons": [],
+  "source_status": "all claims reference original research source IDs; primary manuscript inspection is incomplete",
+  "geometry_policy": "Map sites modern representative coordinates or null; no Tudor control polygons approved",
+  "presentation": {
+    "chapter": {
+      "event_visibility": "all-significant-events-throughout-chapter",
+      "state_visibility": "persists-while-supported"
+    }
+  },
+  "review_requirements": [
+    "Review 1515 manuscript original and distinguish Darcy report versions",
+    "Confirm 1517 Rastell primary royal letters and historical ships",
+    "Tournai Feb 1519 endpoint; keep occupied city 1513–1518 for end-of-year snapshots",
+    "Treat surrounding Tournaisis as further provisional district, not city circle polygon",
+    "Separate royal benefit, civic expenses and troop cost before publishing monetary values"
+  ]
+}
