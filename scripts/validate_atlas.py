@@ -110,8 +110,14 @@ for shape in hypotheses["features"]:
 app = (ROOT/"app.js").read_text(encoding="utf-8")
 html = (ROOT/"index.html").read_text(encoding="utf-8")
 css = (ROOT/"css/dark-atlas-v2.css").read_text(encoding="utf-8")
-assert "atlas-event-cluster" not in app, "Large numeric marker UI should be removed"
-assert "Math.ceil(Math.sqrt(n))" in app and "map.layerPointToLatLng" in app
+# v0.8: compact numeric hub is intentional; original v0.7 full-map fan must not return.
+assert "function expandCluster(group,pin=false)" in app
+assert "atlas-aggregate" in app and "clusterExpanded" in app
+assert "map.containerPointToLatLng" in app and "map.latLngToContainerPoint" in app
+assert "Math.ceil(Math.sqrt(n))" not in app
+assert "uncertain-badge" not in app
+assert "calais(f)?3.4:2.7" in app
+assert "fillOpacity:f.geometry.type==='LineString'?0:calais(f)?.12:.07" in app
 assert "data/historical-detail-notes.json" in app and "renderHypotheses()" in app
 assert 'id="toggleHypotheses"' in html and 'id="mapControls"' in html
 assert html.index('id="mapControls"') < html.index('<main class="map-stage"')
