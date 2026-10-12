@@ -42,7 +42,7 @@
       "id": "CONT1510-ENGLAND-IRISH-PALE",
       "historical_region": "English Pale around Dublin and certain legal/government boroughs",
       "legal_claimant": "Henry VIII as Lord of Ireland",
-      "effective_authority": "Gerald FitzGerald VIII Earl Kildare (to 1513), Gerald IX Earl (1513–19), then Lord Surrey appointed 1519",
+      "effective_authority": "Gerald FitzGerald VIII Earl of Kildare (to 1513), Gerald IX Earl (1513–19); replacement decision cNov 1519, Surrey lieutenant grant February 1520",
       "relationship": "effective_delegated_crown_rule_with_mixed_authority",
       "period": {
         "observed_from": 1510,
@@ -51,13 +51,14 @@
         "unknown_transition_days": []
       },
       "documented_control_fact": [
-        "Kildare VIII deputy reappointed 1510-11-08; successor IX earl Lord Deputy from late 1513 until dismissal in 1519.",
+        "Kildare IX was summoned to London 1519, and around November Henry VIII decided to replace him; the enhanced Surrey lieutenant grant occurred Feb 1520 and belongs to next decade.",
         "Local Gaelic lords and rival urban/pale factions held powers beyond shifting effective Pale boundary; four shire limits are not 1510 actual maps."
       ],
       "source_ids": [
         "RIA-GEAROID-MOR",
         "RIA-GEAROID-OG",
-        "RIA-ROBERT-COWLEY"
+        "RIA-ROBERT-COWLEY",
+        "ELLIS-2023-SURREY-DECISION"
       ],
       "spatial": {
         "geometry": null,
@@ -369,6 +370,35 @@
         "certainty": "MEDIUM"
       },
       "editorial_status": "edited_chronicle_checked",
+      "royal_net_income_established": false
+    },
+    {
+      "id": "CONT1517-RASTELL-PLANNED-SETTLEMENT",
+      "historical_region": "Prospective English settlement in Newfoundland or Labrador (intended, not established)",
+      "legal_claimant": "Henry VIII supported expedition through letters and small loan",
+      "effective_authority": "No English settler government formed at intended North American destination",
+      "relationship": "royal_backed_settlement_attempt_abortive_no_control",
+      "period": {
+        "observed_from": 1517,
+        "observed_to": 1517,
+        "date_precision": "royal_letters_Mar_5_departure_attempt_late_summer",
+        "unknown_transition_days": []
+      },
+      "documented_control_fact": [
+        "1517 John Rastell the elder, John Howting and Richard Spicer planned Atlantic settlement; at least four vessels prepared and dispersed in English/Irish/French coastal travel.",
+        "Lack of colonizing landing prevents territorial control fill."
+      ],
+      "source_ids": [
+        "DCB-RASTELL-1517"
+      ],
+      "spatial": {
+        "geometry": null,
+        "geometry_status": "no North American settlement location because none established",
+        "historical_area_basis": "Intended Newfoundland/Labrador, only England coast prep ports observed",
+        "representation": "domestic_royal_preparation_point_or_cancelled_route_only",
+        "certainty": "HIGH_FOR_FAILED_PLAN_ZERO_FOR_COLONIAL_TERRITORY"
+      },
+      "editorial_status": "academic_biography_royal_letters_unchecked",
       "royal_net_income_established": false
     }
   ],
