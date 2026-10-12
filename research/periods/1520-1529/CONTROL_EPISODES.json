@@ -1,0 +1,247 @@
+{
+  "schema": "1520-1529-control-episodes-v1",
+  "period": {
+    "from": 1520,
+    "to": 1529,
+    "next": 1530
+  },
+  "generated": "2026-10-12",
+  "records": [
+    {
+      "id": "CAL-1520-1529-ENGLISH-PALE",
+      "name": "Calais, Guînes, Hames; English Crown fortified Pale",
+      "period_from": 1520,
+      "period_to": 1529,
+      "type": "continuing_English_Crown_frontier_governance",
+      "authority": "Henry VIII of England via royal governor/garrison",
+      "summary": "Continued English-administered town/fortified jurisdiction. Calais/Guînes English fortification archaeology; 1525 commission & 1529 settlement laws reveal disputed countryside; no precise Tudor survey-derived polygon.",
+      "source_ids": [
+        "TNA-FRENCH-LANDS",
+        "CAL-MURPHY-2025-GUINES",
+        "CAL-CD62-ARCHEO"
+      ],
+      "geometry": null,
+      "spatial_method": "reference_previous_Calais_dashed_not_direct_crown_claim_all_adjacent_land",
+      "confidence": "high_on_garrison_low_on_frontier",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "CAL-1525-GUINES-SETTLEMENT",
+      "name": "Guînes militarized frontier agricultural tenant district",
+      "period_from": 1525,
+      "period_to": 1529,
+      "type": "colonial_settler_laws_territorial_control_endeavour",
+      "authority": "Henry VIII Guînes commission and later ordinances",
+      "summary": "1525 Crown commission investigated English settler colonization and security; 1529 laws sought to move English arable farmers in, expel foreign tenant farmers, restrict mixed marriages and compel English language. Important legal state action; actual demographic execution is separate evidence.",
+      "source_ids": [
+        "CAL-MURPHY-2025-GUINES"
+      ],
+      "geometry": null,
+      "spatial_method": "Guines_site_plus_disputed_dashed_border; no assumed area increases",
+      "confidence": "high_on_law_low_on_enforcement",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "FR-1520-ARDRÉS",
+      "name": "Ardres, French fortified town near Guînes",
+      "period_from": 1520,
+      "period_to": 1529,
+      "type": "non_English_fortified_neighbour",
+      "authority": "Francis I French officers",
+      "summary": "1520 Field of Cloth of Gold on neutral ground between English Guînes and French Ardres; France retains Ardres as separate town.",
+      "source_ids": [
+        "CAL-ROYAL-HRP-1520",
+        "CAL-ROYALMINT-1520"
+      ],
+      "geometry": null,
+      "spatial_method": "French_neighbour_point, not England orange",
+      "confidence": "high",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "FR-1522-RAIDS",
+      "name": "Northern France/Brittany invaded and raided 1522–1523",
+      "period_from": 1522,
+      "period_to": 1523,
+      "type": "short_raids_scorched_earth_no_lastingly_held_province",
+      "authority": "Thomas Howard Earl of Surrey and Charles Brandon Duke of Suffolk, with allies",
+      "summary": "Destructive English operations in France and Scotland attacked rural populations and towns; no scholarly evidence for stable new Tudor-run province from these campaigns.",
+      "source_ids": [
+        "FR-MURPHY-2021-SCORCHED",
+        "FR-ANGLO-1997-FOREIGN"
+      ],
+      "geometry": null,
+      "spatial_method": "temporary_events_only_not_filled_French_counties",
+      "confidence": "high_on_no_enduring_gain",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "IR-1520-SURREY",
+      "name": "Irish English Pale under Thomas Howard earl of Surrey",
+      "period_from": 1520,
+      "period_to": 1522,
+      "type": "Pale_defensive_royal_military_governance",
+      "authority": "Henry VIII-appointed lieutenant Surrey, separate local borough, Pale lords and Irish chiefs",
+      "summary": "Surrey appointed 10 Mar1520, physically governs Pale 1520–March1522. Crown soldiers supplemented forces and made frontier raids; royal programme for wholesale extension of common law/land revenue failed. Not whole-island control.",
+      "source_ids": [
+        "IR-ELLIS-2023",
+        "IR-QUINN-2008"
+      ],
+      "geometry": null,
+      "spatial_method": "dashed_prior_1488_legal_Pale_line_approx; city sites known, don't paint 4 modern shires",
+      "confidence": "high_on_governance_low_on_outer_limits",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "IR-1521-MONASTERORIS",
+      "name": "Monasteroris Castle, O'Connor Faly lordship",
+      "period_from": 1521,
+      "period_to": 1521,
+      "type": "short_English_deputy_castle_capture_and_garrison",
+      "authority": "Surrey's force left ward in captured O'Connor castle",
+      "summary": "1521 July Deputy Surrey besieged castle with ordnance, took and garrisoned, time to evacuation unknown. This does not make all Offaly royal administered.",
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ],
+      "geometry": null,
+      "spatial_method": "point_only_site_historical_identity_to_verify",
+      "confidence": "strong_on_siege_unknown_garrison_end",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "IR-1522-ORMOND",
+      "name": "Irish deputy Piers Butler Ormond/Ossory",
+      "period_from": 1522,
+      "period_to": 1524,
+      "type": "delegated_royal_governor",
+      "authority": "Piers Butler, successor to Surrey as deputy",
+      "summary": "From March1522 Ormond office/militia replaced expensive Surrey retinue; Kildare restored to deputy in 1524. Local authority remained contested with Gaelic chiefs and Earl Kildare.",
+      "source_ids": [
+        "IR-ELLIS-2023",
+        "IR-QUINN-2008"
+      ],
+      "geometry": null,
+      "spatial_method": "Pale_or_local_strongholds_only; no province geometry",
+      "confidence": "high",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "IR-1524-KILDARE",
+      "name": "Restored Kildare deputy rule 1524–26",
+      "period_from": 1524,
+      "period_to": 1526,
+      "type": "delegated_royal_governance",
+      "authority": "Gerald ninth Earl of Kildare under Henry VIII",
+      "summary": "Kildare regained deputy position in 1524 but recalled 1526 amid factional and political dispute; continued authority of local Gaelic dynasties across Ireland.",
+      "source_ids": [
+        "IR-QUINN-2008",
+        "IR-DIB-KILDARE"
+      ],
+      "geometry": null,
+      "spatial_method": "Pale_dashed_plus_Dublin_office_only",
+      "confidence": "high_for_term",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "IR-1527-DELVIN",
+      "name": "Lord Delvin Lord Deputy 1527–1528",
+      "period_from": 1527,
+      "period_to": 1528,
+      "type": "frail_crown_deputy_governance",
+      "authority": "Richard Nugent Baron Delvin under Henry VIII",
+      "summary": "Henry attempted cheap defensive governance through border baron; in May1528 O'Connor Faly captured the deputy; effective power of Dublin crown administrators severely weakened.",
+      "source_ids": [
+        "IR-ELLIS-2019-DELVIN",
+        "IR-DIB-OCONNOR"
+      ],
+      "geometry": null,
+      "spatial_method": "Dublin_Pale_core_only; no modern Offaly orange",
+      "confidence": "high",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "IR-1528-OCONNOR",
+      "name": "Offaly Uí Failghe/ O'Connor lordship",
+      "period_from": 1527,
+      "period_to": 1529,
+      "type": "Gaelic_political_local_control_resistance",
+      "authority": "Brian O'Connor Faly and factional local competitors",
+      "summary": "Brian O'Connor raided Pale, held royal deputy Delvin May 1528 until Jan1529; royal grant/royal supremacy claims did not translate into territorial governance.",
+      "source_ids": [
+        "IR-DIB-OCONNOR",
+        "IR-ELLIS-2019-DELVIN"
+      ],
+      "geometry": null,
+      "spatial_method": "Gaelic_lordship_approximate_region_contested_no_map_polygon_yet",
+      "confidence": "high_on_leader_event_low_on_boundary",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "IR-1528-OSSORY",
+      "name": "Ossory/Piers Butler crown deputy 1528–29",
+      "period_from": 1528,
+      "period_to": 1529,
+      "type": "crown_deputy_subject_to_local_politics",
+      "authority": "Piers Ruadh Butler, Earl of Ossory",
+      "summary": "Appointed deputy 4 Aug1528, investiture Oct; 1529–30 replaced with commission; territorial efficacy in Pale is subject of conflict between local nobles.",
+      "source_ids": [
+        "IR-DIB-OCONNOR",
+        "IR-QUINN-2008"
+      ],
+      "geometry": null,
+      "spatial_method": "Pale_and_royal_cities_only",
+      "confidence": "moderate_high",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "SC-1520-1529-INDEPENDENT",
+      "name": "Kingdom of Scotland (James V)",
+      "period_from": 1520,
+      "period_to": 1529,
+      "type": "sovereign_kingdom_with_internal_factional_rule",
+      "authority": "James V Scottish Crown, Albany regency, Angus control until 1528",
+      "summary": "Remained independent Kingdom of Scotland. English attacks 1522–24 and 1523 border burns did not mean English annexation. King escaped Angus in 1528 and exercised own power.",
+      "source_ids": [
+        "SC-MURPHY-2024-ANGLO-SCOTS",
+        "SC-HES-LINLITHGOW"
+      ],
+      "geometry": null,
+      "spatial_method": "distinct_Scotland_polygon_from_period_historical_sources_and_contested_local_borders",
+      "confidence": "high",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    },
+    {
+      "id": "NA-1527-ENGLISH-VOYAGE",
+      "name": "Newfoundland/Labrador visited by John Rut royal-backed voyage",
+      "period_from": 1527,
+      "period_to": 1527,
+      "type": "sea_expedition_without_settlement_or_colonial_governance",
+      "authority": "John Rut expedition sponsored by Henry VIII",
+      "summary": "Mary Guildford visited Newfoundland/Labrador in 1527, no Royal administrative land title or English permanent settlement demonstrated. Samson separated, fate uncertain.",
+      "source_ids": [
+        "NA-RUT-DCB",
+        "NA-RUT-BIGGAR"
+      ],
+      "geometry": null,
+      "spatial_method": "documented_coast_or_port_point_and_schematic_voyage_optional_only",
+      "confidence": "high_on_voyage_none_on_colony",
+      "approval": "research_control_episode_only",
+      "note": "A single military capture or royal acknowledgement does not transfer a whole province; some periods are documented only as discrete events."
+    }
+  ],
+  "public_colonial_polygons": [],
+  "continuity": "England, Ireland Lordship, Scotland, crown-related islands are distinct political frameworks",
+  "new_map_land_changes": "No unambiguous long-lived overseas territory conquest in 1520s. Military raids and urban fortifications are treated as events and local influence, not annexed county boundaries."
+}
