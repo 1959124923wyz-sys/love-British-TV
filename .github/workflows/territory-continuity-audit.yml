@@ -77,3 +77,4 @@ jobs:
         run: |
           node --check app-continuity-1497-1529-preview.js
           node scripts/test_continuity_preview.js
+          node scripts/test_event_focus.js
