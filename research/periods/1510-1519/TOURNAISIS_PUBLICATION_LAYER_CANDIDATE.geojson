@@ -10,7 +10,15 @@
     "time_rule": "Occupied city roughly 1513-09-23 to 1519-02. 1519 annual end-year snapshot removes English city state; retain cession in 1518 and handover event in 1519.",
     "license_status": "Generated hull original; linked Walloon Atlas and UNamur copyrighted maps NOT copied or traced. GeoNames geocoder data CC BY; display credit.",
     "source_ids_pointer": "TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json",
-    "provenance": "Modern gazetteer centroids from web and GeoNames, NOT exact medieval boundary points. Some anchor villages may not be in same 1513 directly governed district, hence points are contextual only."
+    "provenance": "Modern gazetteer centroids from web and GeoNames, NOT exact medieval boundary points. Some anchor villages may not be in same 1513 directly governed district, hence points are contextual only.",
+    "publisher_guidance": "The GIS polygon is an optional geographical orientation envelope, not an English sovereignty/control polygon. Tournai city POINT is historically attested. Keep polygon line dashed and low-opacity, never use to calculate 1513 territory area or choose direct English rulers for all 11 anchor towns.",
+    "special_feudal_history": "1899 academic review of d'Herbomez identifies older feudal châtellenie bounded by Scheldt/Scarpe/Elnon/Espierre, but excluded Tournai city and certain Mortagne/Saint-Amand lands. Our modern convex hull is NOT traced from older feudal lines nor dated 1513.",
+    "required_attributions": [
+      "GeoNames (modern populated place coordinates), CC BY attribution",
+      "Wikimedia Commons FL00 80 (CC BY 4.0) consulted as context only, no derivative geometry used",
+      "Wallonia Atlas © Institut Destrée / SEGEFA maps linked only, NOT digitised",
+      "UNamur © protected thematic map linked only"
+    ]
   },
   "features": [
     {
@@ -87,9 +95,15 @@
           "WALLONIA-1513-1519-TWOAREAS",
           "HOQUET-1900-DHERBOMEZ-1901",
           "MARIAGE-2013-BAILLIAGE",
-          "GEO-BE-NAMES-ANCHOR"
+          "GEO-BE-NAMES-ANCHOR",
+          "DHERBOMEZ-1899-TOURNAISIS-RIVERS"
         ],
-        "rights": "self-built original geometric convex-hull from sourced modern coordinates; NOT traced from Atlas de la Wallonie or UNamur protected map"
+        "rights": "self-built original geometric convex-hull from sourced modern coordinates; NOT traced from Atlas de la Wallonie or UNamur protected map",
+        "public_title": "图尔奈城外：乡村辖区的大致参考区域",
+        "public_summary": "根据周边历史地区研究和现代村镇位置构建的疏略分布包络；地方领主与城镇行政权力交错。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "show_in_1510s_review_layer": true
       }
     },
     {
@@ -124,7 +138,11 @@
           "DAVIES-1998-TOURNAI",
           "MURPHY-2014-TOURNAI"
         ],
-        "public_event_eligible": true
+        "public_event_eligible": true,
+        "public_title": "图尔奈：1513—1519年英王驻军与市政治理",
+        "public_summary": "1513年英军占领，1518年达成交还协议，1519年2月英军撤离。",
+        "display_mode": "point_marker",
+        "fill_authorized": false
       }
     },
     {
