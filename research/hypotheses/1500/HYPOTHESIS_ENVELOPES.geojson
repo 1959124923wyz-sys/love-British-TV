@@ -140,10 +140,6 @@
             53.235
           ],
           [
-            -6.472778,
-            53.282778
-          ],
-          [
             -6.4444444,
             53.2802778
           ],
@@ -171,7 +167,8 @@
           "IR-STATUTE-TEXT"
         ],
         "method": "linear_segments_between_modern_geocoded_town_centers; original legal dyke may have never formed continuous earthwork; intervals not drawn from surveying",
-        "approval": "research_only"
+        "approval": "research_only",
+        "unconfirmed_modern_midpoint_excluded": "Rathcoole was kept as optional modern reference point but removed from nominal 1488 statute legal-line vertices because its status as a statute-listed boundary point is not confirmed."
       }
     },
     {
@@ -223,10 +220,6 @@
             [
               -6.5247222,
               53.235
-            ],
-            [
-              -6.472778,
-              53.282778
             ],
             [
               -6.4444444,
@@ -565,7 +558,7 @@
         "region": "Ireland",
         "label": "Rathcoole",
         "coord_source": "GEONAMES-IE",
-        "role": "town_center",
+        "role": "supplementary_modern_reference_not_verified_in_1488_statute",
         "geometry_certainty": "modern_location_only",
         "historical_control_not_inferred_from_point": true
       }
