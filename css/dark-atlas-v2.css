@@ -204,3 +204,55 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .event-item .atlas-list-icon{display:block;width:20px;height:20px}
 .event-item[data-tier="1"] .atlas-list-icon{width:16px;height:16px}
 @media(prefers-reduced-motion:reduce){.map-pin,.event-item{transition:none!important}}
+
+/* v0.6 chapter-long history, persistent state and decluttered source reading. */
+.chapter-track{display:flex;gap:4px;width:100%;margin:9px 0 13px;align-items:stretch}
+.chapter-segment{border:1px solid #34465d;min-width:0;min-height:39px;border-radius:7px;color:#bbcadd;background:#202b43;cursor:pointer;text-align:left;padding:7px 11px;box-shadow:none}
+.chapter-segment:first-child{flex:3 1 0;background:#352d4d}
+.chapter-segment:last-child{flex:10 1 0;background:#293446}
+.chapter-segment.active{border-color:#d5a275;box-shadow:inset 0 0 0 1px #b8845c,0 0 13px #b8845c17}
+.chapter-segment span{display:block;font-size:11px;font-weight:700;line-height:1.35;color:#f3dfcb}
+.chapter-segment small{display:block;margin-top:3px;font-size:10px;line-height:1.2;color:#bcc0d1}
+.chapter-segment:hover{filter:brightness(1.2)}
+.time-panel{padding:11px 17px 8px}
+.range-wrap{position:relative;padding:4px 9px 0}
+.range-wrap #yearRange{position:relative;width:100%;z-index:2;accent-color:#d19fca;margin:12px 0 0;cursor:ew-resize}
+.milestone-dots{position:absolute;z-index:3;top:0;left:9px;right:9px;height:13px;pointer-events:none}
+.milestone-dot{pointer-events:auto;position:absolute;transform:translate(-50%,-1px);border:1px solid #122238;border-radius:50%;width:9px;height:9px;background:#a88caf;padding:0;box-shadow:0 0 0 1px #acbcd333;cursor:pointer}
+.milestone-dot.tier-3{background:#ecc08e;width:13px;height:13px}
+.milestone-dot.tier-2{background:#cb9972;width:11px;height:11px}
+.milestone-dot.current{box-shadow:0 0 0 3px #d4adff66}
+.milestone-dot span{display:none}
+.milestone-dot:hover{filter:brightness(1.6);transform:translate(-50%,-1px) scale(1.25)}
+.time-panel .ticks{position:relative;height:18px;margin:6px 0 0;display:block}
+.time-panel .ticks span{display:block;position:absolute;top:0;color:#b5a5d1;font-size:10px}
+.time-panel .ticks span:nth-child(1){left:0}
+.time-panel .ticks span:nth-child(2){left:25%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(3){left:41.666%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(4){left:58.333%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(5){right:0}
+.timeline-notice{font-size:10px;line-height:1.4;color:#849aad;margin-top:3px;white-space:normal}
+.event-item.event-upcoming{border-left-color:#5b718b}
+.event-item.event-upcoming small{color:#a7b4c7}
+.atlas-event-cluster{display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid #e7be8e;background:#1c3048;box-shadow:0 0 0 4px #d59d5440,0 4px 14px #000b;width:100%;height:100%;border-radius:50%;color:#f6e4d1;line-height:1}
+.atlas-event-cluster strong{font:bold 16px/1 system-ui,sans-serif}
+.atlas-event-cluster small{margin-top:2px;font-size:8px;color:#eac9a7}
+.cluster-list{display:flex;flex-direction:column;gap:6px;margin-top:14px}
+.cluster-entry{width:100%;display:flex;align-items:center;gap:11px;text-align:left;border:1px solid #284159;border-radius:9px;padding:10px;background:#15263b;color:#edf2f8;cursor:pointer}
+.cluster-entry:hover{background:#263e56;border-color:#b59475}
+.cluster-entry-icon{width:28px;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid #385671;background:#1f3449;border-radius:50%}
+.cluster-entry-icon svg{width:19px;height:19px}
+.cluster-entry small{display:block;font-size:10px;color:#d0a982;margin-bottom:4px}
+.cluster-entry strong{font-size:12px;line-height:1.45;display:block;font-weight:600}
+.cluster-entry-arrow{margin-left:auto;font-size:23px;color:#b7a2d3}
+.source-details{border-top:1px solid #2c4157;margin-top:22px;padding-top:12px}
+.source-details>summary{list-style:none;display:flex;justify-content:space-between;cursor:pointer;color:#cba785;font-size:12px;padding:8px 0}
+.source-details>summary::-webkit-details-marker{display:none}
+.source-details .source-list{margin-top:9px}
+@media(max-width:680px){
+.chapter-segment{padding:6px 8px;min-height:37px}
+.chapter-segment span{font-size:10px}
+.chapter-segment small{font-size:8px}
+.time-panel{padding:10px 11px 7px}
+.timeline-notice{font-size:9px}
+}
