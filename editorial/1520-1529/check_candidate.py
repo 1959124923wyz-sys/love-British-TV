@@ -24,7 +24,7 @@ def check():
     assert atlas["editorial_status"]=="CANDIDATES_ONLY_NOT_PUBLISHED_OR_EDITOR_APPROVED"
     assert atlas["routes"]==[] and atlas["colonial_polygons"]==[]
     events,places,sources=atlas["events"],atlas["places"],atlas["sources"]
-    assert (len(events),len(places),len(sources))==(24,7,40)
+    assert (len(events),len(places),len(sources))==(24,7,44)
     srcids={s["id"] for s in sources}
     assert len(srcids)==len(sources)
     assert all(urlsplit(s["url"]).scheme=="https" for s in sources)
@@ -65,10 +65,10 @@ def check():
     # Evidence-based sites added in the map-detail research pass.
     details=rd(HERE/"MAP_DETAIL_POINTS.geojson")
     locs=details["features"]
-    assert len(locs)==9
+    assert len(locs)==10
     assert all(f["geometry"]["type"]=="Point" for f in locs)
     idset={f["properties"]["id"] for f in locs}
-    assert len(idset)==9
+    assert len(idset)==10
     for f in locs:
         for srcid in f["properties"]["source_ids"]:
             assert any(s["id"]==srcid for s in sources),srcid
@@ -79,6 +79,10 @@ def check():
     assert len([x for x in events if x["id"] in ("1523-CESSFORD-SIEGE","1523-FERNIEHIRST-DEMOLISHED","1523-WARK-SCOTS-FRENCH-SIEGE")])==3
     assert all(e["lat"] is not None for e in events if e["id"] in ("1523-CESSFORD-SIEGE","1523-FERNIEHIRST-DEMOLISHED","1523-WARK-SCOTS-FRENCH-SIEGE"))
     assert any(e["id"]=="1529-GUINES-LAWS" for e in events)
+    fort=next(e for e in events if e["id"]=="1525-NEWEMBRIDGE-REFORTIFICATION")
+    assert (fort["lat"],fort["lng"])==(50.946075,1.816194)
+    assert "FRA-FORTNIEULAY-REGISTER" in fort["source_ids"]
+    assert "Vauban" in fort["geo_precision"]
     return len(events),len(sources),len(places)
 
 if __name__=="__main__":
