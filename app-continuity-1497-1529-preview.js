@@ -102,7 +102,7 @@ function openDossier(item,typ){
 function openHypothesis(feature){
  const p=feature.properties||{};
  const title=p.public_title||'推定地理范围';
- const url=year>=1510?'research/periods/1510-1519/TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json':'research/hypotheses/1500/README.md';
+ const url=String(p.id||'').includes('TOURNAISIS')?'https://github.com/1959124923wyz-sys/love-British-TV/blob/research/territorial-1510-1519-20261012/research/periods/1510-1519/TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json':'https://github.com/1959124923wyz-sys/love-British-TV/blob/research/territory-continuity-20261012/research/continuity/staged/geography-hypotheses-1500-1529.geojson';
  $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(p.public_summary||'根据历史记载的地点绘制的范围示意。')+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
  '<div class="research-body"><h3>构建方法</h3><p>'+escapeHTML(p.method||'按有史料的地名构建地理形状。')+'</p><h3>资料类型</h3><p>当地城镇及历史记载地点的现代地理参考，用于分析可能范围。正式边界研究持续进行。</p></div>'+
