@@ -3,7 +3,7 @@
   "name": "1530s sourced event sites in calendar years",
   "metadata": {
     "no_automatically_assumed_colonial_claims": true,
-    "feature_count": 8,
+    "feature_count": 9,
     "modern_site_centroids_not_historic_area": true
   },
   "features": [
@@ -229,6 +229,32 @@
         "area_sqkm": null,
         "kind": "event_or_modern_ruin_point",
         "period": "1530-1539",
+        "no_land_acquisition_inferred": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-1530S-E024",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "name": "爱尔兰议会通过英语、衣着及行为习惯同化法令",
+        "year": 1537,
+        "source_ids": [
+          "IR-CAMBRIDGE-LANGUAGE-1537",
+          "IR-CAMBRIDGE-STATUTE-1537",
+          "IR-CONNOLLY-STATUTE-1536-37"
+        ],
+        "source_event_id": "1530S-E024",
+        "political_control_effect": "coercive_anglicisation_legislation_enforcement_not_proven",
+        "site_accuracy": "Modern coordinate for documentary anchor, NOT historical footprint or claimed sovereignty",
+        "area_sqkm": null,
+        "kind": "event_or_modern_site_point",
         "no_land_acquisition_inferred": true
       }
     }
