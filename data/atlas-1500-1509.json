@@ -128,7 +128,7 @@
       "start_year": 1501,
       "end_year": 1501,
       "visible_from": 1501,
-      "date_label": "1501年",
+      "date_label": "1501年3月19日",
       "name": "1501年英王向英葡联合商团授予西航许可",
       "category": "political",
       "icon_code": "POL",
@@ -185,7 +185,7 @@
       "start_year": 1502,
       "end_year": 1502,
       "visible_from": 1502,
-      "date_label": "1502年",
+      "date_label": "1502年1月7日",
       "name": "1502年1月7日王室资助购置Gabriel号",
       "category": "voyage",
       "icon_code": "EXP",
@@ -262,7 +262,7 @@
       "start_year": 1502,
       "end_year": 1502,
       "visible_from": 1502,
-      "date_label": "1502年",
+      "date_label": "1502年12月9日",
       "name": "1502年12月9日英王更新海外探索许可",
       "category": "political",
       "icon_code": "POL",
@@ -345,7 +345,7 @@
       "start_year": 1504,
       "end_year": 1504,
       "visible_from": 1504,
-      "date_label": "1504年",
+      "date_label": "1504年8月19日",
       "name": "1504年诺克多战役：基尔代尔伯爵在爱尔兰西部获胜",
       "category": "war",
       "icon_code": "WAR",
@@ -376,7 +376,7 @@
       "start_year": 1505,
       "end_year": 1505,
       "visible_from": 1505,
-      "date_label": "1505年",
+      "date_label": "1505年4月3日",
       "name": "1505年4月3日塞巴斯蒂安·卡博特获年金",
       "category": "political",
       "icon_code": "POL",
@@ -443,7 +443,7 @@
       "start_year": 1509,
       "end_year": 1509,
       "visible_from": 1509,
-      "date_label": "1509年",
+      "date_label": "1509年4月21日",
       "name": "1509年亨利八世继承英格兰王位",
       "category": "political",
       "icon_code": "POL",
@@ -910,5 +910,13 @@
   "excluded_candidate_ids": [
     "1508-1509-SEBASTIAN-VOYAGE-QUESTION"
   ],
-  "editorial": "Payments not colonial profits. Unverified voyage not mapped; geographic points refer to documented/representative places only."
+  "editorial": "Payments not colonial profits. Unverified voyage not mapped; geographic points refer to documented/representative places only.",
+  "publishing": {
+    "visibility": "public-preview",
+    "editorial_date": "2026-10-12",
+    "scope": "14 source-linked historical items + 6 site-level political relationship markers",
+    "excluded_uncertain_voyage": "1508–1509 Sebastian voyage attribution",
+    "geometry_rule": "no-new-polygons",
+    "integration_notes": "Known town/city centers shown; exact site/administrative territorial edges not assumed"
+  }
 }
