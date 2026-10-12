@@ -76,13 +76,14 @@ require("renderTerritories()" in app and "territoryPane" in app and "toggleTerri
 require("year>=1502?'1502':'—'" in app and "year>=1513?'1513':'—'" in app, "future-year chapter cards stay hidden")
 require("y<=year" in app and "y>=1497&&y<=year" in app,
         "milestone dots only appear on or after the current year")
-require("e.year>year)continue;" in app and "fullArchive||e.year<=year" in app and "showFullChapterArchive" in html, "chronological events with explicitly accessible chapter archive")
+require("!occurredByYear(e,year)" in app and "fullArchive||occurredByYear(e,year)" in app and "showFullChapterArchive" in html, "chronological events with explicitly accessible chapter archive")
 require("data/historical-detail-notes.json" in app
         and "历史文献与详细考证" in app,
         "two-level primary narrative and supporting archive")
 require("renderHypotheses()" in app
         and "推定范围" in spec
-        and "dashArray:f.geometry.type==='LineString'" in app,
+        and "dashArray:'7 5'" in app
+        and "f.properties?.fill_authorized===false" in app,
         "hypothetical cartography stays distinct as dashed reference")
 
 print("OK: user-approved compact hubs, transparent flyouts, tooltip priority and historic layers")

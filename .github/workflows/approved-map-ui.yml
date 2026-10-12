@@ -20,4 +20,6 @@ jobs:
       - name: Validate atlas sources and geometry
         run: python3 scripts/validate_atlas.py
       - name: Parse JavaScript
-        run: node --check app.js
+        run: |
+          node --check app.js
+          node scripts/test_chronology.js
