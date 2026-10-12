@@ -19,7 +19,10 @@ map.getPane('eventTooltipPane').style.pointerEvents='none';
 // not from invented town-wall polygons. Keep beneath Leaflet event markers.
 map.createPane('controlAreaPane');
 map.getPane('controlAreaPane').style.zIndex='465';
-const groups={kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+map.createPane('territoryPane');
+map.getPane('territoryPane').style.zIndex='455';
+const territoryRenderer=L.svg({pane:'territoryPane'});
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary','associated-modern-town-centre'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
@@ -49,7 +52,7 @@ function togglePanel(which){
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let year=1497; let selected=''; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 let clusterObstacles=[];
 const cancelClusterClose=()=>{if(clusterCloseTimer){clearTimeout(clusterCloseTimer);clusterCloseTimer=null}};
@@ -124,7 +127,7 @@ function renderEventList(){
  const events=atlas.events.filter(e=>(atlas!==atlasEarly||e.year<=1499)&&(fullArchive||e.year<=year))
   .sort((a,b)=>levelOf(b)-levelOf(a)||a.year-b.year||a.name.localeCompare(b.name,'zh'));
  const chapterTotal=atlas.events.filter(e=>atlas!==atlasEarly||e.year<=1499).length;
- $('eventCount').textContent=events.length+' / '+chapterTotal+'项';
+ $('eventCount').textContent=events.length+'项';
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event')));
 }
@@ -203,7 +206,7 @@ function renderPoints(){
  }
  if($('toggleKingdom').checked&&year>=1500){
   for(const q of atlas.places||[]){
-   const alreadyDrawnAsArea=($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id));
+   const alreadyDrawnAsArea=footprintEnabledFor(q.id)||($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id));
    if(alreadyDrawnAsArea)continue;
    const start=q.start_year??1500;
    if(year<start||(q.end_year!=null&&year>q.end_year)||(q.observed_through_year!=null&&year>q.observed_through_year))continue;
@@ -263,12 +266,85 @@ function renderPoints(){
  }
  updateVisibility();
 }
+function ensureTerritorialPatterns(){
+ // Geographic polygons are rendered with SVG so political classification can use true hatching.
+ const root=territoryRenderer._container;
+ if(!root||!root.ownerDocument||root.querySelector('#atlas-hatch-manx'))return;
+ const ns='http://www.w3.org/2000/svg',doc=root.ownerDocument;
+ let defs=root.querySelector('defs');
+ if(!defs){defs=doc.createElementNS(ns,'defs');root.insertBefore(defs,root.firstChild)}
+ for(const [id,color,cross] of [
+  ['atlas-hatch-manx','#cdb18b',true],
+  ['atlas-hatch-crown','#cfb0f2',false]
+ ]){
+  const pattern=doc.createElementNS(ns,'pattern');
+  for(const [k,v] of Object.entries({id,width:'10',height:'10',patternUnits:'userSpaceOnUse'}))pattern.setAttribute(k,v);
+  const bg=doc.createElementNS(ns,'rect');bg.setAttribute('width','10');bg.setAttribute('height','10');
+  bg.setAttribute('fill',color);bg.setAttribute('fill-opacity','.27');pattern.appendChild(bg);
+  const l=doc.createElementNS(ns,'path');l.setAttribute('d','M-2 10 L10 -2 M4 12 L12 4');
+  l.setAttribute('stroke',color);l.setAttribute('stroke-width','1.7');l.setAttribute('opacity','.86');
+  pattern.appendChild(l);
+  if(cross){const c=doc.createElementNS(ns,'path');c.setAttribute('d','M-2 -2 L12 12');
+   c.setAttribute('stroke',color);c.setAttribute('stroke-width','1.2');c.setAttribute('opacity','.68');pattern.appendChild(c)}
+  defs.appendChild(pattern);
+ }
+}
+function footprintEnabledFor(placeId){
+ if(!$('toggleTerritorialFootprints').checked||!territorialFootprints)return false;
+ return territorialFootprints.features.some(f=>f.properties?.source_place_id===placeId
+ &&year>=f.properties.start_year&&year<=f.properties.observed_through_year
+ &&(f.properties.display_group==='control'?$('toggleControlAreas').checked:
+   f.properties.display_group==='political'?$('togglePoliticalRelations').checked:$('toggleHypotheses').checked));
+}
+function renderTerritories(){
+ groups.territory.clearLayers();
+ if(!territorialFootprints||!$('toggleTerritorialFootprints').checked)return;
+ const selected=territorialFootprints.features.filter(f=>{
+  const p=f.properties||{};
+  if(year<p.start_year||year>p.observed_through_year)return false;
+  return p.display_group==='control'?$('toggleControlAreas').checked:
+    p.display_group==='political'?$('togglePoliticalRelations').checked:$('toggleHypotheses').checked;
+ });
+ if(!selected.length)return;
+ const geo=L.geoJSON({type:'FeatureCollection',features:selected},{
+  renderer:territoryRenderer,pane:'territoryPane',
+  style:f=>{
+   const p=f.properties,rel=p.relation_type;
+   const research=p.display_group==='research',calais=rel==='direct_crown_control';
+   const hatch=rel==='autonomous_lordship'?'atlas-hatch-manx':
+     rel==='crown_dependency'?'atlas-hatch-crown':'';
+   return {pane:'territoryPane',color:p.color||'#a78cdb',weight:calais?3.8:research?2.7:2.3,
+    opacity:1,dashArray:research?'7 6':calais?'7 5':null,
+    fillColor:p.color||'#9871cc',fillOpacity:research?.12:calais?.3:rel==='scottish_crown_territory'?.22:.26,
+    className:hatch?'atlas-territory-'+(rel==='autonomous_lordship'?'manx':'crown'):'atlas-territory-solid'};
+  },
+  onEachFeature:(feature,layer)=>{
+   const p=feature.properties||{};
+   const rel=p.relation_type,klass=rel==='autonomous_lordship'?'atlas-territory-manx':rel==='crown_dependency'?'atlas-territory-crown':'atlas-territory-solid';
+   layer.options.className=klass;
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.history_description)+'</div>',
+      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',()=>{
+    const place=(atlas?.places||[]).find(x=>x.id===p.source_place_id) ||
+      (atlasLater?.places||[]).find(x=>x.id===p.source_place_id) ||
+      (atlasThird?.places||[]).find(x=>x.id===p.source_place_id);
+    if(place){openDossier(place,'place');return}
+    const citations=(p.source_urls||[]).filter(x=>/^https:\/\//.test(x))
+     .map(url=>'<p><a href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看地理与史料来源 ↗</a></p>').join('');
+    $('dossierBody').innerHTML='<div class="dossier-kicker">历史政治地理 · '+year+'年</div><h2>'+escapeHTML(p.name)+
+      '</h2><p>'+escapeHTML(p.history_description)+'</p>'+citations;
+    openPanel('dossier');
+   });
+  }
+ }).addTo(groups.territory);
+ ensureTerritorialPatterns();
+}
 function renderPoliticalRelationAreas(){
  groups.politicalRelations.clearLayers();
  if(!politicalRelationAreas||!$('togglePoliticalRelations').checked||year<1500)return;
  for(const f of politicalRelationAreas.features||[]){
   const p=f.properties||{},lnglat=f.geometry?.coordinates;
-  if(f.geometry?.type!=='Point'||!lnglat||year<(p.start_year||1500)||year>(p.observed_through_year||1519))continue;
+  if(f.geometry?.type!=='Point'||!lnglat||year<(p.start_year||1500)||year>(p.observed_through_year||1519)||footprintEnabledFor(p.source_place_id))continue;
   const center=[lnglat[1],lnglat[0]],color=p.stroke_color||'#b2a1d0';
   const radius=p.render_radius_px||19;
   const uid=String(f.id).replace(/[^a-z0-9]/gi,'-');
@@ -296,7 +372,7 @@ function renderControlAreas(){
  for(const f of frenchCityAreas.features||[]){
   const p=f.properties||{};
   // Every selected year represents its year-end political snapshot.
-  if(year<(p.start_year||1497)||year>(p.observed_through_year||1519))continue;
+  if(year<(p.start_year||1497)||year>(p.observed_through_year||1519)||footprintEnabledFor(p.source_place_id))continue;
   const coords=f.geometry?.coordinates;
   if(f.geometry?.type!=='Point'||!coords||coords.length!==2)continue;
   const center=[coords[1],coords[0]],zoom=map.getZoom();
@@ -378,7 +454,7 @@ function updateVisibility(){
 function renderMilestones(){
  const all=[...atlasEarly.events,...atlasLater.events,...atlasThird.events];
  const rail=$('milestoneDots');
- const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=1519))].sort((a,b)=>a-b);
+ const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=year))].sort((a,b)=>a-b);
  rail.innerHTML=years.map(y=>{
   const yearEvents=all.filter(e=>e.year===y);
   const peak=Math.max(...yearEvents.map(e=>levelOf(e)));
@@ -419,7 +495,7 @@ function setYear(v){
  $('chapterThree').classList.toggle('active',third);
  $('timelineContext').textContent=third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='历史事件逐年出现；已发生事件在本章保留，政治控制按实际有效年份延续。';
- renderEventList();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===1519)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1519){stopPlay();return}setYear(year+1)},1250)}
@@ -479,18 +555,20 @@ async function boot(){
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
   }catch(_e){ /* Existing fallback codes remain available. */ }
   try{
-   const [notesResponse,geoResponse,thirdGeoResponse,controlResponse,politicalResponse]=await Promise.all([
+   const [notesResponse,geoResponse,thirdGeoResponse,controlResponse,politicalResponse,footprintResponse]=await Promise.all([
     fetch('data/historical-detail-notes.json',{cache:'no-store'}),
     fetch('data/geography-1500-hypotheses.geojson',{cache:'no-store'}),
     fetch('data/geography-1510-1519-hypotheses.geojson',{cache:'no-store'}),
     fetch('data/french-urban-control-1500-1519.geojson',{cache:'no-store'}),
-    fetch('data/political-relations-1500-1519.geojson',{cache:'no-store'})
+    fetch('data/political-relations-1500-1519.geojson',{cache:'no-store'}),
+    fetch('data/territorial-footprints-1497-1519.geojson',{cache:'no-store'})
    ]);
    if(notesResponse.ok)researchNotes=(await notesResponse.json()).records||{};
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
    if(thirdGeoResponse.ok)geographicHypothesesThird=await thirdGeoResponse.json();
    if(controlResponse.ok)frenchCityAreas=await controlResponse.json();
    if(politicalResponse.ok)politicalRelationAreas=await politicalResponse.json();
+   if(footprintResponse.ok)territorialFootprints=await footprintResponse.json();
   }catch(_e){ /* Text and all vetted history records remain usable. */ }
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
@@ -513,11 +591,12 @@ $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)}
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
 $('resetDossier').addEventListener('click',resetDossier);
 ['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{if(atlas)renderPoints()}));
-$('toggleHypotheses').addEventListener('change',()=>{if(atlas)renderHypotheses()});
-$('toggleControlAreas').addEventListener('change',()=>{if(atlas)renderControlAreas()});
-$('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)renderPoliticalRelationAreas()});
+$('toggleHypotheses').addEventListener('change',()=>{if(atlas){renderTerritories();renderHypotheses()}});
+$('toggleControlAreas').addEventListener('change',()=>{if(atlas){renderTerritories();renderControlAreas();renderPoints()}});
+$('togglePoliticalRelations').addEventListener('change',()=>{if(atlas){renderTerritories();renderPoliticalRelationAreas();renderPoints()}});
+$('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas){renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()}});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderPoliticalRelationAreas()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderTerritories();renderControlAreas();renderPoliticalRelationAreas()}});
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
 
 syncPanels();
