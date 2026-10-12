@@ -1,3 +1,7 @@
+**最新可供主编选择的1520年代地图素材（2026-10-12）**：本候审包现为**24事件、7处持续政治地点、49条可追踪文献记录**；原研究27事件中另3条保留。请优先看 [MAP_DETAIL_HANDOFF.md](MAP_DETAIL_HANDOFF.md)、[MAP_DETAIL_POINTS.geojson](MAP_DETAIL_POINTS.geojson)（10点）及 [interactive_research_preview.html](interactive_research_preview.html)。2026-10-12之前本页旧的21/28计数仅代表第一轮快照。现在1523年苏格兰/英格兰边境有Cessford、Ferniehirst、Jedburgh、Wark分别可定位，1521爱尔兰Monasteroris与1521—26加来Newenhambridge也已定位。未经历史轮廓复核，0个获准的英国新增领土多边形。
+
+---
+
 # 主编直接使用｜1520—1529年地图候审包
 **2026-10-12｜仅供编辑审阅，不修改main、不自动上线**
 
