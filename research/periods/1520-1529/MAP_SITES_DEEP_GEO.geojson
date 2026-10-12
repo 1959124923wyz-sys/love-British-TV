@@ -9,7 +9,8 @@
     "legal_status": "research sites not editor-approved",
     "guidance": "Only draw sourced archaeological sites and modern locality references. Never infer continuous English territorial control from castle raids. Monasteroris religious house may differ from named Surrey-garrisoned castle. No geographic site from the 1530–1545 Guînes modern bastion map reverse-dated to 1529.",
     "source_file": "MAP_DETAIL_SOURCES_1520S.json",
-    "rights": "coordinates derived from site gazetteers/official monument registries. No historic copyrighted maps copied or digitised."
+    "rights": "coordinates derived from site gazetteers/official monument registries. No historic copyrighted maps copied or digitised.",
+    "official_grids_converted": "Historic England/HES NGR points transformed EPSG:27700 to EPSG:4326 with pyproj; historical battle exactness still unknown"
   },
   "features": [
     {
@@ -73,15 +74,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.417,
-          55.5077
+          -2.4170252121385114,
+          55.50773533158564
         ]
       },
       "properties": {
         "id": "SC-1523-CESSFORD-SIEGE",
         "title_zh": "1523 塞斯福德城堡：英军围城",
         "year": 1523,
-        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "precision": "official Historic Environment Scotland NGR NT73759 23853 transformed EPSG27700->EPSG4326; modern heritage site point",
         "event_type": "siege_archaeological_evidence",
         "source_ids": [
           "SC-HES-CESSFORD-SM1710",
@@ -101,15 +102,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.5512,
-          55.4543
+          -2.551239283870413,
+          55.45433335692256
         ]
       },
       "properties": {
         "id": "SC-1523-FERNIEHIRST",
         "title_zh": "1523 费尼赫斯特城堡：攻取与拆毁",
         "year": 1523,
-        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "precision": "official Historic Environment Scotland NGR NT65235 17969 transformed EPSG27700->EPSG4326; modern listed site point",
         "event_type": "short_capture_and_demolition",
         "source_ids": [
           "SC-HES-FERNIEHIRST-LB13369",
@@ -236,6 +237,35 @@
         "popup_zh": "阿德尔在本时期是法王控制的边境要塞，与英属吉讷隔境相望，不应涂成英国殖民地。",
         "map_eligible": true,
         "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2812653568241483,
+          55.64175258837099
+        ]
+      },
+      "properties": {
+        "id": "ENG-1523-WARK-ALBANY-SIEGE",
+        "title_zh": "1523 沃克城堡：苏法联军围攻英军未克",
+        "year": 1523,
+        "precision": "official Historic England NGR NT82394 38725 transformed EPSG27700->EPSG4326",
+        "event_type": "Scottish_and_French_army_sieged_English_frontier_castle",
+        "source_ids": [
+          "ENG-HE-WARK-SM1013100",
+          "ENG-BL-WARK-1523-AUTOGRAPH",
+          "SC-MURPHY-ALBANY-2024"
+        ],
+        "confidence": "HIGH government designation + dated original correspondence index",
+        "effective_control_semantics": "English held Wark despite short breach of outer ward. No sustained Scottish Crown control. No large England county shaded.",
+        "site_identity_notes": "Historic England 1013100 English Carham/Wark-on-Tweed, not Warkworth Castle. 1513 briefly Scots took Wark, 1523 siege repelled.",
+        "popup_zh": "1523年，奥尔巴尼公爵的苏法联军围攻英格兰边境沃克城堡，攻入外围防线后被击退。双方边境军事控制没有产生长期改界。",
+        "map_eligible": true,
+        "appearance": "military_frontier_event_point_only",
         "no_area_claim": true
       }
     }
