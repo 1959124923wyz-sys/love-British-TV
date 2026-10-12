@@ -13,7 +13,7 @@ const fourth=data('data/atlas-1520-1529.json');
 const third=data('data/atlas-1510-1519.json');
 const prior=data('data/atlas-1500-1509.json');
 const core=data('data/french-urban-control-1497-1529.geojson');
-const relations=data('research/continuity/staged/political-relations-1500-1529.geojson');
+const relations=data('data/political-relations-1500-1529.geojson');
 const grounds=data('data/territorial-footprints-1497-1529.geojson');
 const hypotheses=data('data/geography-hypotheses-1500-1529.geojson');
 assert.deepEqual(fourth.period,{from:1520,to:1529,next:1530});
