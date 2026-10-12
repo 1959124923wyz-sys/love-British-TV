@@ -66,10 +66,12 @@ require('id="yearRange"' in html
         and 'id="chapterOne"' in html
         and 'id="chapterTwo"' in html,
         "chapter navigation and year timeline")
-require("renderEventList();renderControlAreas();renderPoints();renderHypotheses();renderMilestones()" in app,
+require("renderEventList();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app,
         "chapter-long events plus persistent state updates")
 require("observed_through_year" in app, "evidence-limited state persistence")
 require("controlAreaPane" in app and "toggleControlAreas" in html, "map-first urban territorial layer with separate control")
+require("renderPoliticalRelationAreas()" in app and "togglePoliticalRelations" in html, "patterned secondary political relationships")
+require("e.year>year)continue;" in app and "fullArchive||e.year<=year" in app and "showFullChapterArchive" in html, "chronological events with explicitly accessible chapter archive")
 require("data/historical-detail-notes.json" in app
         and "历史文献与详细考证" in app,
         "two-level primary narrative and supporting archive")
