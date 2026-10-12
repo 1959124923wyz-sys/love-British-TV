@@ -53,7 +53,7 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let year=1497; let selected=''; let timer=null;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let year=1497; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 let clusterObstacles=[];
@@ -97,6 +97,7 @@ function openDossier(item,typ){
  if(!item)return;
  const candidate=typ==='candidate',route=typ==='route',place=typ==='place';
  selected=item.id;
+ selectedItemYear=typ==='event'&&Number.isFinite(Number(item.year))?Number(item.year):null;
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
@@ -107,7 +108,8 @@ function openDossier(item,typ){
 function openHypothesis(feature){
  const p=feature.properties||{};
  const title=p.public_title||'推定地理范围';
- const url=year>=1510?'research/periods/1510-1519/TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json':'research/hypotheses/1500/README.md';
+ const url=p.source_path||'research/hypotheses/1500/README.md';
+ selectedItemYear=null;
  $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(p.public_summary||'根据历史记载的地点绘制的范围示意。')+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
  '<div class="research-body"><h3>构建方法</h3><p>'+escapeHTML(p.method||'按有史料的地名构建地理形状。')+'</p><h3>资料类型</h3><p>当地城镇及历史记载地点的现代地理参考，用于分析可能范围。正式边界研究持续进行。</p></div>'+
@@ -121,7 +123,7 @@ function openCollection(items,title){
  openPanel('dossier');
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
-function resetDossier(){selected='';$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels()}
+function resetDossier(){selected='';selectedItemYear=null;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels()}
 function renderEventList(){
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
@@ -375,7 +377,8 @@ function renderControlAreas(){
  for(const f of frenchCityAreas.features||[]){
   const p=f.properties||{};
   // Every selected year represents its year-end political snapshot.
-  if(year<(p.start_year||1497)||year>(p.observed_through_year||1519)||footprintEnabledFor(p.source_place_id))continue;
+  // An approximate district polygon must never hide a documented urban control core.
+  if(year<(p.start_year||1497)||year>(p.observed_through_year||1519))continue;
   const coords=f.geometry?.coordinates;
   if(f.geometry?.type!=='Point'||!coords||coords.length!==2)continue;
   const center=[coords[1],coords[0]],zoom=map.getZoom();
@@ -483,8 +486,11 @@ function setYear(v){
  const next=Math.max(1497,Math.min(1519,Math.round(Number(v)||1497)));
  const chosen=next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
  if(!chosen)return;
- const changed=atlas!==chosen;
- if(changed){selected='';$('dossierBody').innerHTML=infoDefault;workspace.classList.add('dossier-collapsed');syncPanels();}
+ // Keep the already open dossier while scrubbing; clear details only when rewinding before the event.
+ if(selectedItemYear!==null&&selectedItemYear>next){
+  selected='';selectedItemYear=null;
+  $('dossierBody').innerHTML='<div class="dossier-kicker">历史地图 · '+next+'年</div><h2>当年历史</h2><p>请在地图或事件列表中选择此时已经发生的历史记录。</p>';
+ }
  year=next;atlas=chosen;
  $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,third=year>=1510,second=!first&&!third;
