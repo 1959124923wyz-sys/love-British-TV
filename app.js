@@ -11,7 +11,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
  maxZoom:19,maxNativeZoom:19,
  attribution:'&copy; OpenStreetMap contributors'
 }).addTo(map);
-const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map)};
+const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'世界／帝国级节点',2:'区域重要节点',1:'地方与补充事件'};
 const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
@@ -72,61 +72,86 @@ function openCollection(items,title){
 }
 function resetDossier(){selected='';$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels()}
 function renderEventList(){
- const events=atlas.events.filter(e=>(e.visible_from||e.year)<=year).sort((a,b)=>levelOf(b)-levelOf(a)||a.year-b.year);
+ // The whole chapter remains available at every point of its ten-year window.
+ const events=[...atlas.events].sort((a,b)=>levelOf(b)-levelOf(a)||a.year-b.year||a.name.localeCompare(b.name,'zh'));
  $('eventCount').textContent=events.length+'项';
- $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" class="event-item '+(e.id===selected?'selected':'')+'" data-eid="'+escapeHTML(e.id)+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
- document.querySelectorAll('.event-item').forEach(n=>n.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===n.dataset.eid),'event')));
+ $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 本章稍后':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
+ $('eventList').querySelectorAll('.event-item').forEach(node=>node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event')));
 }
 function renderPoints(){
- groups.event.clearLayers();groups.candidate.clearLayers();groups.routes.clearLayers();groups.claim.clearLayers();groups.place.clearLayers();
- atlas.events.filter(e=>(e.visible_from||e.year)<=year).forEach(e=>{
-  if(e.category==='status'||!Number.isFinite(e.lat)||!Number.isFinite(e.lng))return; // Never invent an event coordinate
-  if(e.category==='claim'&&!$('toggleClaims').checked)return;
-  if(levelOf(e)===1&&!$('toggleMinorEvents').checked)return; // Curiosity-first; minor markers are opt-in
-  const k=levelOf(e),d=k===3?34:k===2?27:21;
-  const ico=L.divIcon({className:'',html:iconHTML(e),iconSize:[d,d],iconAnchor:[d/2,d/2]});
-  L.marker([e.lat,e.lng],{icon:ico,title:e.name,zIndexOffset:k*250})
-   .bindTooltip(hoverCard(e.name,e.description,e),{sticky:true,direction:'top',className:'atlas-hover',opacity:0.98})
-   .on('click',()=>openDossier(e,'event')).addTo(groups.event);
- });
+ for(const name of ['event','candidate','routes','claim','place','cluster'])groups[name].clearLayers();
+ const shown=[];
+ if($('toggleEvents').checked){
+  for(const e of atlas.events){
+   if(e.category==='status'||!Number.isFinite(e.lat)||!Number.isFinite(e.lng))continue;
+   if(e.category==='claim'&&!$('toggleClaims').checked)continue;
+   if(levelOf(e)===1&&!$('toggleMinorEvents').checked)continue;
+   shown.push({item:e,type:'event',lat:e.lat,lng:e.lng});
+  }
+ }
+ if($('toggleKingdom').checked && year>=1500){
+  for(const q of atlasLater.places){
+   const started=q.start_year==null?1500:q.start_year;
+   if(started>year || (q.end_year!=null&&q.end_year<year))continue;
+   shown.push({item:{...q,significance:{level:2}},type:'place',lat:q.lat,lng:q.lng});
+  }
+ }
+ // Visual clustering is screen-space only. Original geographic coordinates remain unchanged.
+ const clusters=[];
+ for(const item of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item))){
+  const pt=map.latLngToLayerPoint([item.lat,item.lng]);
+  let group=clusters.find(g=>Math.hypot(pt.x-g.pt.x,pt.y-g.pt.y)<42);
+  if(!group){group={pt,items:[]};clusters.push(group);}
+  group.items.push(item);
+ }
+ for(const cluster of clusters){
+  const items=cluster.items,first=items[0],max=Math.max(...items.map(x=>levelOf(x.item)));
+  const center=map.layerPointToLatLng(cluster.pt);
+  if(items.length===1){
+   const item=first.item,k=levelOf(item),d=k===3?34:k===2?27:21;
+   const icon=L.divIcon({className:'',html:iconHTML(item),iconSize:[d,d],iconAnchor:[d/2,d/2]});
+   L.marker(center,{icon,title:item.name,zIndexOffset:k*250})
+    .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'top',className:'atlas-hover',opacity:.98})
+    .on('click',()=>openDossier(item,first.type)).addTo(groups.cluster);
+  }else{
+   const d=max===3?44:39;
+   const icon=L.divIcon({className:'',html:'<div class="atlas-event-cluster"><strong>'+items.length+'</strong><small>项</small></div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
+   const tooltip='<strong>附近'+items.length+'项记录</strong><div class="atlas-hover-summary">'+escapeHTML(items.slice(0,3).map(x=>x.item.name).join('、').slice(0,62))+'</div><small>点击逐条选择</small>';
+   L.marker(center,{icon,title:'附近'+items.length+'项历史记录',zIndexOffset:500})
+    .bindTooltip(tooltip,{sticky:true,direction:'top',className:'atlas-hover',opacity:.98})
+    .on('click',()=>openCollection(items,'此处汇集'+items.length+'条历史记录')).addTo(groups.cluster);
+  }
+ }
  if(atlas.candidates && year<=1499){
-  atlas.candidates.forEach(c=>{
-   const ico=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
-   L.marker([c.lat,c.lng],{icon:ico,title:'候选地：'+c.name})
-     .bindTooltip(hoverCard(c.name,c.note),{direction:'top',className:'atlas-hover',opacity:0.98})
-     .on('click',()=>openDossier(c,'candidate')).addTo(groups.candidate);
-  });
-  // A ring is used only as a symbol for a reported royal claim, NOT a territorial boundary.
-  L.circleMarker([48.8,-57.2],{radius:23,color:'#b98540',weight:2,dashArray:'4 5',opacity:.9,fill:false,interactive:true})
-    .on('click',()=>openDossier(atlas.events.find(e=>e.id==='landfall-1497'),'event'))
-    .bindTooltip(hoverCard('1497年主权宣称','王室宣称并不等于英格兰对北美的有效殖民控制。'),{sticky:true,direction:'top',className:'atlas-hover',opacity:0.98})
-    .addTo(groups.claim);
+  for(const c of atlas.candidates){
+   const icon=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
+   L.marker([c.lat,c.lng],{icon,title:c.name})
+    .bindTooltip(hoverCard(c.name,c.note),{sticky:true,direction:'top',className:'atlas-hover'})
+    .on('click',()=>openDossier(c,'candidate')).addTo(groups.candidate);
+  }
+  if($('toggleClaims').checked){
+   L.circleMarker([48.8,-57.2],{radius:23,color:'#b98540',weight:2,dashArray:'4 5',fill:false})
+    .bindTooltip(hoverCard('1497年王室声索','卡博特航行期间产生的英王海外权利主张。'),{className:'atlas-hover'})
+    .on('click',()=>openDossier(atlas.events.find(e=>e.id==='landfall-1497'),'event')).addTo(groups.claim);
+  }
  }
- if(year>=1500 && atlas.places){
-  atlas.places.forEach(q=>{
-   const d=25, placeItem={...q,category:'political',significance:{level:2}};
-   const icon=L.divIcon({className:'',html:iconHTML(placeItem),iconSize:[d,d],iconAnchor:[d/2,d/2]});
-   L.marker([q.lat,q.lng],{icon,title:q.name,zIndexOffset:95})
-    .bindTooltip(hoverCard(q.name,q.description),{sticky:true,direction:'top',className:'atlas-hover',opacity:.98})
-    .on('click',()=>openDossier(q,'place')).addTo(groups.place);
-  });
- }
- atlas.routes.filter(r=>r.year<=year).forEach(r=>{
-  const routeColor=r.year===1497?'#d4a47d':'#97a9bc';
-  // Draw the line independently from a wide invisible pointer target; hover is easy without increasing visual clutter.
-  const visible=L.polyline(r.coords,{color:routeColor,weight:r.year===1497?2.8:2.1,dashArray:r.year===1497?'8 9':'4 12',opacity:.88,interactive:false,smoothFactor:1.6}).addTo(groups.routes);
-  L.polyline(r.coords,{color:'#ffffff',weight:19,opacity:.012,interactive:true,smoothFactor:1.6})
-   .bindTooltip(hoverCard(r.name,r.note),{sticky:true,direction:'top',className:'atlas-hover',opacity:0.98})
-   .on('mouseover',()=>visible.setStyle({weight:4.5,opacity:1}))
-   .on('mouseout',()=>visible.setStyle({weight:r.year===1497?2.8:2.1,opacity:.88}))
+ for(const r of atlas.routes||[]){
+  const color=r.year===1497?'#d4a47d':'#97a9bc';
+  const visible=L.polyline(r.coords,{color,weight:2.8,dashArray:'8 9',opacity:.88,interactive:false}).addTo(groups.routes);
+  L.polyline(r.coords,{color:'#ffffff',weight:18,opacity:.015,interactive:true})
+   .bindTooltip(hoverCard(r.name,r.note),{sticky:true,direction:'top',className:'atlas-hover'})
+   .on('mouseover',()=>visible.setStyle({weight:4}))
+   .on('mouseout',()=>visible.setStyle({weight:2.8}))
    .on('click',()=>openDossier(r,'route')).addTo(groups.routes);
- });
+ }
  updateVisibility();
 }
 function updateVisibility(){
- for(const [id,group] of [['toggleKingdom',groups.kingdom],['toggleRoutes',groups.routes],['toggleCandidates',groups.candidate],['toggleClaims',groups.claim],['toggleEvents',groups.event],['toggleKingdom',groups.place]]){
-   if($(id).checked){if(!map.hasLayer(group))map.addLayer(group)}else if(map.hasLayer(group)){map.removeLayer(group)}
+ for(const [id,group] of [['toggleKingdom',groups.kingdom],['toggleRoutes',groups.routes],['toggleCandidates',groups.candidate],['toggleClaims',groups.claim]]){
+  if($(id).checked){if(!map.hasLayer(group))map.addLayer(group)}
+  else if(map.hasLayer(group))map.removeLayer(group);
  }
+ if(!map.hasLayer(groups.cluster))map.addLayer(groups.cluster);
 }
 function setYear(v){
  const next=Math.max(1497,Math.min(1509,Math.round(Number(v)||1497)));
@@ -212,11 +237,8 @@ $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)}
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
 $('resetDossier').addEventListener('click',resetDossier);
-['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{
- if(!atlas)return;
- if(id==='toggleMinorEvents'||id==='toggleClaims')renderPoints();
- else updateVisibility();
-}));
+['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{if(atlas)renderPoints()}));
+map.on('zoomend',()=>{if(atlas)renderPoints()});
 $('toggleDossierBtn').addEventListener('click',()=>togglePanel('dossier'));
 syncPanels();
 window.addEventListener('keydown',e=>{if(!atlas)return;if(e.key==='ArrowLeft'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year+1)}});
