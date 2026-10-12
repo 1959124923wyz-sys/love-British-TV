@@ -1,0 +1,22 @@
+name: "1520s research cartography validation"
+on:
+  pull_request:
+    paths:
+      - "research/cartography/1520-1529/**"
+      - ".github/workflows/1520s-cartography-research.yml"
+  push:
+    branches:
+      - "research/territory-outlines-1520-1529-20261012"
+    paths:
+      - "research/cartography/1520-1529/**"
+      - ".github/workflows/1520s-cartography-research.yml"
+permissions:
+  contents: read
+jobs:
+  historical-map-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read repository tree
+        uses: actions/checkout@v4
+      - name: Validate 1520-1529 research cartography
+        run: python3 research/cartography/1520-1529/validate_cartography.py
