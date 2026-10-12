@@ -1,0 +1,859 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "1500–1509 provisional spatial envelopes and legal frontier, NOT historical colonial control polygons",
+    "compiled": "2026-10-12",
+    "author_role": "爱英TV 信息搜集人1号",
+    "license": "Original code/reconstruction CC0; linked GeoNames locations CC BY and attribution required, other intellectual property stays with respective owners",
+    "spatial_crs": "EPSG:4326",
+    "scope": "Two test regions only: Calais and Irish Pale",
+    "status": "research_only_experimental_never_merge_to_public_control_layer",
+    "semantic_warning": "The SVG/GeoJSON contains display envelopes, explicitly not valid map claims about 1500 territory; Irish polygon coastline closure connects modern points and is historically inaccurate; never quote area from geometry; no real sovereignty polygon approved",
+    "uncertainty_semantics": {
+      "points": "modern place locators, not medieval structures",
+      "line": "1488-89 legal frontier simplified by city center connectors, not a surveyed earthwork",
+      "polygon": "spatial visualization envelope only, not a real front-line or provincial control area"
+    }
+  },
+  "sources": {
+    "IR-STATUTE-1488-JOYCE-1921": {
+      "url": "https://commons.wikimedia.org/wiki/File:The_Pale_According_to_the_Statute_of_1488.jpg",
+      "kind": "1921 public-domain historical reconstruction of 1488 statute",
+      "reused_as": "place sequence, not manually digitized boundary",
+      "rights": "public-domain marker, locality uncertain"
+    },
+    "IR-OKEEFFE-1992": {
+      "url": "https://deremilitari.org/2014/06/medieval-frontiers-and-fortification-the-pale-and-its-evolution/",
+      "kind": "published academic study based on 1488/1489 statute, archaeological fortifications, maghery",
+      "reused_as": "legal frontier and actual control distinction",
+      "rights": "citation only"
+    },
+    "IR-ELLIS-2021": {
+      "url": "https://www.cambridge.org/core/books/irelands-english-pale-14701550/75C7AB64DF6AAF406B9544F2D2BCDCFA/listing",
+      "kind": "research monograph on effective Pale authority c1470–1550",
+      "reused_as": "avoid interpreting four nominal medieval shires as actual",
+      "rights": "citation only"
+    },
+    "IR-STATUTE-TEXT": {
+      "url": "https://chaptersofdublin.ie/Neighbourhood/chapter40.html",
+      "kind": "local history reproducing 1488 statute boundary passage",
+      "reused_as": "listed localities, lower edition precision",
+      "rights": "citation only, original statute unviewed"
+    },
+    "FR-MINISTRY-2026": {
+      "url": "https://www.culture.gouv.fr/mc/content/download/337416/pdf_file/SRA_GUINES-WEB.pdf?inLanguage=fre-FR&version=48",
+      "kind": "French Ministry of Culture / archaeology D.A. Pas de Calais map and 300km² historical figure",
+      "reused_as": "visual plausibility and named royal forts, not a 1500 exact polygon",
+      "rights": "map ©Jean-Michel Willot DA62, do not embed derivative of its image"
+    },
+    "FR-TNA-CALAIS": {
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "kind": "UK National Archives archival search guide",
+      "reused_as": "contemporary English administrative/land records",
+      "rights": "source metadata only"
+    },
+    "FR-ROSE-GRUMMITT": {
+      "url": "https://www.cambridge.org/core/books/calais-garrison/6D76638AD8C8E6D7348A9943F2DDF919",
+      "kind": "scholarly garrison history c1436–1558",
+      "reused_as": "fortress identification, not extent",
+      "rights": "citation only"
+    },
+    "GEONAMES-IE": {
+      "url": "https://www.geonames.org/search.html?country=IE",
+      "kind": "CC BY modern place coordinates; corroborated with local archaeological records for ambiguities",
+      "reused_as": "modern coordinate anchors, not historic fort limits",
+      "rights": "CC BY, cite GeoNames"
+    },
+    "GEONAMES-FR": {
+      "url": "https://www.geonames.org/search.html?country=FR&q=Calais%2C+Nauw",
+      "kind": "CC BY modern place coordinates",
+      "reused_as": "modern coordinate anchors, not imperial boundary",
+      "rights": "CC BY, cite GeoNames"
+    },
+    "IR-RATHMORE-ARCHAEOLOGY": {
+      "url": "https://excavations.ie/report/1993/Kildare/0001513/",
+      "kind": "archaeological record of Rathmore Kildare at Naas, separate from homonym in North Kildare",
+      "reused_as": "place disambiguation",
+      "rights": "citation only"
+    },
+    "IR-SIDDAN-ARCHAEOLOGY": {
+      "url": "https://irishhistory.com/places/site-of-siddan-castle-siddan-co-meath/",
+      "kind": "secondary archaeological gazetteer for Siddan castle location",
+      "reused_as": "uncertain castle site only",
+      "rights": "citation only"
+    },
+    "IR-BALLYMORE-PLACE": {
+      "url": "https://mapcarta.com/18278670",
+      "kind": "OSM/GeoNames locality modern",
+      "reused_as": "coordinate anchor only",
+      "rights": "underlying OSM ODbL, GeoNames CC BY"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.540556,
+            53.859722
+          ],
+          [
+            -6.645119,
+            53.808527
+          ],
+          [
+            -6.8791667,
+            53.7263889
+          ],
+          [
+            -6.91434,
+            53.623266
+          ],
+          [
+            -6.791667,
+            53.555
+          ],
+          [
+            -6.670833,
+            53.402222
+          ],
+          [
+            -6.689167,
+            53.291389
+          ],
+          [
+            -6.666944,
+            53.215833
+          ],
+          [
+            -6.6152,
+            53.13348
+          ],
+          [
+            -6.554626,
+            53.2174
+          ],
+          [
+            -6.5247222,
+            53.235
+          ],
+          [
+            -6.472778,
+            53.282778
+          ],
+          [
+            -6.4444444,
+            53.2802778
+          ],
+          [
+            -6.3734436,
+            53.285896
+          ],
+          [
+            -6.1002778,
+            53.2783333
+          ]
+        ]
+      },
+      "properties": {
+        "id": "irish-pale-1488-legal-frontier-test-v1",
+        "type": "inferred_legal_frontier_polyline",
+        "historical_reference": "1488-1489 statute, Joyce1921 reconstruction",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "dashed",
+        "on_map_legal": "not_actual_control_boundary",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-STATUTE-TEXT"
+        ],
+        "method": "linear_segments_between_modern_geocoded_town_centers; original legal dyke may have never formed continuous earthwork; intervals not drawn from surveying",
+        "approval": "research_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.645119,
+              53.808527
+            ],
+            [
+              -6.8791667,
+              53.7263889
+            ],
+            [
+              -6.91434,
+              53.623266
+            ],
+            [
+              -6.791667,
+              53.555
+            ],
+            [
+              -6.670833,
+              53.402222
+            ],
+            [
+              -6.689167,
+              53.291389
+            ],
+            [
+              -6.666944,
+              53.215833
+            ],
+            [
+              -6.6152,
+              53.13348
+            ],
+            [
+              -6.554626,
+              53.2174
+            ],
+            [
+              -6.5247222,
+              53.235
+            ],
+            [
+              -6.472778,
+              53.282778
+            ],
+            [
+              -6.4444444,
+              53.2802778
+            ],
+            [
+              -6.3734436,
+              53.285896
+            ],
+            [
+              -6.1002778,
+              53.2783333
+            ],
+            [
+              -6.1358643,
+              53.2939516
+            ],
+            [
+              -6.248889,
+              53.333056
+            ],
+            [
+              -6.218056,
+              53.459722
+            ],
+            [
+              -6.3477778,
+              53.7188889
+            ],
+            [
+              -6.416667,
+              54
+            ],
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.540556,
+              53.859722
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "irish-pale-1500-presentation-envelope",
+        "type": "visual_influence_envelope_not_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "VERY_HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "1488-1489 inland legal-place sequence + modern town centers along coast; geographic closure through settled sites is NOT historical coastline tracing",
+        "source_ids": [
+          "IR-STATUTE-1488-JOYCE-1921",
+          "IR-OKEEFFE-1992",
+          "IR-ELLIS-2021"
+        ],
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.753207,
+              50.945644
+            ],
+            [
+              1.843379,
+              50.881781
+            ],
+            [
+              1.870254,
+              50.867081
+            ],
+            [
+              1.943655,
+              50.860735
+            ],
+            [
+              1.997517,
+              50.915701
+            ],
+            [
+              2.042758,
+              50.977126
+            ],
+            [
+              1.753207,
+              50.945644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "calais-1500-attested-sites-hull-only",
+        "type": "spatial_envelope_of_attested_settlements_NOT_control_boundary",
+        "hypothetical_target_year": 1500,
+        "uncertainty": "HIGH",
+        "render_style": "translucent_with_dashed_border",
+        "method": "mathematical convex hull of 10 geocoded place centers mentioned in the English-held district, not a historical survey; intentionally not buffered; contains points with uneven certainty",
+        "source_ids": [
+          "FR-MINISTRY-2026",
+          "FR-TNA-CALAIS",
+          "FR-ROSE-GRUMMITT",
+          "GEONAMES-FR"
+        ],
+        "warning": "Hull does not necessarily match whole 1500 march: some named marginal places may be disputed; 300 sq.km French ministry is long-period general statement, not area of hull",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.540556,
+          53.859722
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-ardee",
+        "region": "Ireland",
+        "label": "Ardee",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.645119,
+          53.808527
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-siddan",
+        "region": "Ireland",
+        "label": "Siddan",
+        "coord_source": "IR-SIDDAN-ARCHAEOLOGY",
+        "role": "castle_site_uncertain",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8791667,
+          53.7263889
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-kells",
+        "region": "Ireland",
+        "label": "Kells",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.91434,
+          53.623266
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-athboy",
+        "region": "Ireland",
+        "label": "Athboy",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.791667,
+          53.555
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-trim",
+        "region": "Ireland",
+        "label": "Trim",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.670833,
+          53.402222
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-kilcock",
+        "region": "Ireland",
+        "label": "Kilcock",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.689167,
+          53.291389
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-clane",
+        "region": "Ireland",
+        "label": "Clane",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.666944,
+          53.215833
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-naas",
+        "region": "Ireland",
+        "label": "Naas",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.6152,
+          53.13348
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-ballymore-eustace",
+        "region": "Ireland",
+        "label": "Ballymore Eustace",
+        "coord_source": "IR-BALLYMORE-PLACE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.554626,
+          53.2174
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-rathmore--naas-south-",
+        "region": "Ireland",
+        "label": "Rathmore (Naas South)",
+        "coord_source": "IR-RATHMORE-ARCHAEOLOGY",
+        "role": "medieval_rathmore_near_Naas",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.5247222,
+          53.235
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-kilteel",
+        "region": "Ireland",
+        "label": "Kilteel",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.472778,
+          53.282778
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-rathcoole",
+        "region": "Ireland",
+        "label": "Rathcoole",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4444444,
+          53.2802778
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-saggart",
+        "region": "Ireland",
+        "label": "Saggart",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3734436,
+          53.285896
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-tallaght",
+        "region": "Ireland",
+        "label": "Tallaght",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1002778,
+          53.2783333
+        ]
+      },
+      "properties": {
+        "record_id": "Ireland-dalkey",
+        "region": "Ireland",
+        "label": "Dalkey",
+        "coord_source": "GEONAMES-IE",
+        "role": "town_center",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.858889,
+          50.951111
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-calais",
+        "region": "Calais",
+        "label": "Calais",
+        "coord_source": "FR-TNA-CALAIS",
+        "role": "royal_town_garrison",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.753207,
+          50.945644
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-sangatte",
+        "region": "Calais",
+        "label": "Sangatte",
+        "coord_source": "GEONAMES-FR",
+        "role": "historical_royal_lordship_locality",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.843379,
+          50.881781
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-hames-boucres",
+        "region": "Calais",
+        "label": "Hames-Boucres",
+        "coord_source": "GEONAMES-FR",
+        "role": "historical_garrison_locality",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-gu-nes",
+        "region": "Calais",
+        "label": "Guînes",
+        "coord_source": "GEONAMES-FR",
+        "role": "historical_garrison_town",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.943655,
+          50.860735
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-balinghem",
+        "region": "Calais",
+        "label": "Balinghem",
+        "coord_source": "GEONAMES-FR",
+        "role": "peripheral_historic_place_not_direct_governance_proved",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.997517,
+          50.915701
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-guemps",
+        "region": "Calais",
+        "label": "Guemps",
+        "coord_source": "GEONAMES-FR",
+        "role": "royal_rent_or_parish_place_uncertain",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.042758,
+          50.977126
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-oye-plage",
+        "region": "Calais",
+        "label": "Oye-Plage",
+        "coord_source": "GEONAMES-FR",
+        "role": "royal_lordship_locality_not_current_beach_boundary",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.943275,
+          50.948965
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-marck",
+        "region": "Calais",
+        "label": "Marck",
+        "coord_source": "GEONAMES-FR",
+        "role": "royal_lordship_locality",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.881367,
+          50.924633
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-coulogne",
+        "region": "Calais",
+        "label": "Coulogne",
+        "coord_source": "GEONAMES-FR",
+        "role": "historically_named_lordship",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.82472,
+          50.91694
+        ]
+      },
+      "properties": {
+        "record_id": "Calais-fr-thun",
+        "region": "Calais",
+        "label": "Fréthun",
+        "coord_source": "GEONAMES-FR",
+        "role": "peripheral_site",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.981678,
+          50.857863
+        ]
+      },
+      "properties": {
+        "record_id": "CalaisExcluded-ardres",
+        "region": "CalaisExcluded",
+        "label": "Ardres",
+        "coord_source": "GEONAMES-FR",
+        "role": "French fortified place",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.128073,
+          50.986514
+        ]
+      },
+      "properties": {
+        "record_id": "CalaisExcluded-gravelines",
+        "region": "CalaisExcluded",
+        "label": "Gravelines",
+        "coord_source": "GEONAMES-FR",
+        "role": "Flemish town, not England",
+        "geometry_certainty": "modern_location_only",
+        "historical_control_not_inferred_from_point": true
+      }
+    }
+  ]
+}
