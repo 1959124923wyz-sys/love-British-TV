@@ -413,52 +413,31 @@ function renderControlAreas(){
 }
 function renderHypotheses(){
  groups.hypotheses.clearLayers();
- if(year<1500||!$('toggleHypotheses').checked)return;
- // Keep the Calais region's historically attested place-hull readable for both the
- // 1500s and 1510s; it is a dashed estimate, not a surveyed control border.
- if(geographicHypotheses){
-  const calais=f=>String(f.properties?.id||'').startsWith('calais');
-  if(!$('toggleTerritorialFootprints').checked){
-   L.geoJSON(geographicHypotheses,{
-    filter:f=>calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
-    interactive:false,
-    style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false}
-   }).addTo(groups.hypotheses);
+ if(year<1500||!$('toggleHypotheses').checked||!geographicHypotheses)return;
+ // One legacy reference geometry appears once; the territory layer owns the matching envelope.
+ L.geoJSON(geographicHypotheses,{
+  filter:f=>{
+   const p=f.properties||{},id=String(p.id||'');
+   if(p.fill_authorized!==false||!p.valid_years?.includes(year))return false;
+   return !($('toggleTerritorialFootprints').checked &&
+    (id==='calais-1500-attested-sites-hull-only'||id==='irish-pale-1500-presentation-envelope'));
+  },
+  style:f=>{
+   const id=String(f.properties?.id||'');
+   const calais=id.startsWith('calais'),tournai=id.includes('TOURNAISIS');
+   return {color:tournai?'#e2b16e':calais?'#c58dfb':'#d4aa70',
+    weight:calais?3.4:2.7,dashArray:'7 5',opacity:.96,
+    fill:f.geometry.type!=='LineString',fillColor:calais?'#b58bea':'#d4aa70',
+    fillOpacity:f.geometry.type==='LineString'?0:.08};
+  },
+  onEachFeature:(feature,layer)=>{
+   const p=feature.properties||{};
+   layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+
+    '</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',()=>openHypothesis(feature));
   }
-  L.geoJSON(geographicHypotheses,{
-   filter:f=>{
-    const id=String(f.properties?.id||'');
-    // One persistent territory layer owns the 1497-1519 filled Calais and Pale envelopes.
-    // Avoid redrawing its same geometry as a second disconnected legacy hypothesis.
-    if($('toggleTerritorialFootprints').checked &&
-      (calais(f)||id==='irish-pale-1500-presentation-envelope'))return false;
-    return year<1510?['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type):
-      (calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type))||id.startsWith('irish-pale-');
-   },
-   style:f=>({color:f.geometry.type==='LineString'?'#e9b06e':calais(f)?'#c58dfb':'#d4aa70',
-    weight:calais(f)?3.4:2.7,dashArray:'7 5',opacity:calais(f)?1:.91,
-    fill:f.geometry.type!=='LineString',fillColor:calais(f)?'#b58bea':'#d4aa70',
-    fillOpacity:f.geometry.type==='LineString'?0:calais(f)?.12:.07}),
-   onEachFeature:(feature,layer)=>{
-    const p=feature.properties||{};
-    layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
-     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
-    layer.on('click',()=>openHypothesis(feature));
-   }
-  }).addTo(groups.hypotheses);
- }
- if(year>=1513&&year<=1518&&geographicHypothesesThird){
-  L.geoJSON(geographicHypothesesThird,{
-   filter:f=>f.geometry?.type==='Polygon'&&f.properties?.fill_authorized===false&&f.properties?.active_years?.includes(year),
-   style:{color:'#e2b16e',weight:3,dashArray:'7 5',opacity:.98,fill:true,fillColor:'#d9a65f',fillOpacity:.09},
-   onEachFeature:(feature,layer)=>{
-    const p=feature.properties||{};
-    layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'图尔奈周边')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
-     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
-    layer.on('click',()=>openHypothesis(feature));
-   }
-  }).addTo(groups.hypotheses);
- }
+ }).addTo(groups.hypotheses);
 }
 function updateVisibility(){
  for(const [id,group] of [['toggleKingdom',groups.kingdom],['toggleRoutes',groups.routes],['toggleCandidates',groups.candidate],['toggleClaims',groups.claim]]){
@@ -468,14 +447,17 @@ function updateVisibility(){
  if(!map.hasLayer(groups.cluster))map.addLayer(groups.cluster);
 }
 function renderMilestones(){
- const all=[...atlasEarly.events,...atlasLater.events,...atlasThird.events];
+ const all=[...atlasEarly.events,...atlasLater.events,...atlasThird.events,...atlasFourth.events];
  const rail=$('milestoneDots');
- const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=year))].sort((a,b)=>a-b);
+ const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year)
+   .filter(y=>y>=1497&&y<=year))].sort((a,b)=>a-b);
  rail.innerHTML=years.map(y=>{
-  const yearEvents=all.filter(e=>e.year===y);
-  const peak=Math.max(...yearEvents.map(e=>levelOf(e)));
-  const percent=(y-1497)/22*100;
-  return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+'" style="left:'+percent+'%" data-year="'+y+'" title="'+escapeHTML(y+'年 · '+(y<=year?yearEvents.map(e=>e.name).slice(0,3).join(' / '):'待到该年揭晓'))+'" aria-label="'+y+'年：'+yearEvents.length+'个事件"><span>'+y+'</span></button>';
+  const events=all.filter(e=>e.year===y);
+  const peak=Math.max(...events.map(e=>levelOf(e)));
+  return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+
+   '" style="left:'+((y-1497)/32*100)+'%" data-year="'+y+
+   '" title="'+escapeHTML(y+'年 · '+events.map(e=>e.name).slice(0,3).join(' / '))+
+   '" aria-label="'+y+'年：'+events.length+'个事件"><span>'+y+'</span></button>';
  }).join('');
  rail.querySelectorAll('.milestone-dot').forEach(node=>node.addEventListener('click',()=>{
   const y=Number(node.dataset.year);stopPlay();setYear(y);
