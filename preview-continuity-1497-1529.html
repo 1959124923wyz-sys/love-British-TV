@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081422">
+<meta name="description" content="英格兰—苏格兰—大不列颠—联合王国殖民扩张及其延续：以可溯源的历史地图展示领土、远航、经济网络、抵抗与独立。1497—1529 四个历史切片（第四章为候审预览）。">
+<title>帝国的代价 | 大英殖民历史地图 · 1497—1529（研究预览）</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css?v=pilot1">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=focus-safe-20261012">
+<style>
+/* Fourth chapter preview: 3 + 10 + 10 + 10 years proportional timeline. */
+.chapter-track #chapterOne{flex:3 1 0}
+.chapter-track #chapterTwo,.chapter-track #chapterThree,.chapter-track #chapterFour{flex:10 1 0}
+.chapter-track #chapterFour{background:#33455b}
+.chapter-track #chapterFour.active{background:#51454a;border-color:#deb38d}
+.time-panel .ticks span:nth-child(2){left:9.375%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(3){left:40.625%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(4){left:71.875%;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+<div class="site">
+<header class="masthead">
+ <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>THE COST OF EMPIRE · HISTORICAL ATLAS</small></div></div>
+ <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
+ <div class="head-actions"><span class="version">1497—1529 · RESEARCH PREVIEW（第四章待审核）</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+</header>
+<div class="workspace dossier-collapsed" id="workspace">
+ <aside class="sidebar">
+  <div class="sidebar-main">
+   <details class="chapter-card" id="chapterCard" open>
+    <summary aria-label="展开或折叠本章导语">
+     <span class="chapter-headline"><span class="eyebrow"><span id="chapterLabel">CHAPTER 001 / 1497—1499</span></span><span class="chapter-title"><span id="chapterTitlePrimary">大西洋彼岸</span><em id="chapterTitleSecondary">的第一道声索</em></span></span>
+     <span class="chapter-chevron" aria-hidden="true">⌃</span>
+    </summary>
+    <div class="chapter-body"><p class="intro" id="chapterIntro">1497年5月，“马修号”从布里斯托尔驶向大西洋。卡博特持有英王亨利七世的特许状，希望找到通往亚洲的西方航路和新的贸易机会。数周后，船员们望见北美海岸；那里早已有人居住，而他们尚不知眼前的土地究竟位于何处。</p></div>
+   </details>
+   <div class="chapter-facts"><div><b id="factA">0</b><span id="factADesc">已证实北美<br>永久殖民据点</span></div><div><b id="factB">1497</b><span id="factBDesc">英格兰远航<br>抵达北美沿岸</span></div><div><b id="factC">1498</b><span id="factCDesc">第二次远航<br>结果尚存争议</span></div></div>
+   <div class="side-section-head"><span>已发生事件</span><span id="eventCount">—</span></div>
+   <label class="chapter-archive-toggle"><input type="checkbox" id="showFullChapterArchive">查阅本章完整档案</label>
+   <div id="eventList" class="event-list"><div class="loading">正在读取历史资料……</div></div>
+   <div class="sidebar-settings-wrap">   <details class="map-controls sidebar-map-controls" id="mapControls">
+    <summary>☷ 图层与历史地理 <span class="panel-chevron">▾</span></summary>
+    <div class="controls-body">
+     <div class="control-heading">地图图层</div>
+     <div class="layer-options">
+      <label><input type="checkbox" id="toggleTerritorialFootprints" checked><i class="layer-dot territory"></i>历史疆域与岛屿轮廓 · 概略地图</label>
+      <label><input type="checkbox" id="toggleControlAreas" checked><i class="layer-dot area-control"></i>实际控制城市 · 实色区域</label>
+      <label><input type="checkbox" id="togglePoliticalRelations" checked><i class="layer-dot dependency"></i>附属领地与特殊领主制度 · 纹理</label>
+      <label><input type="checkbox" id="toggleKingdom" checked><i class="layer-dot kingdom"></i>王国范围与政治据点</label>
+      <label><input type="checkbox" id="toggleRoutes" checked><i class="layer-dot route"></i>航海示意</label>
+      <label><input type="checkbox" id="toggleCandidates" checked><i class="layer-dot ring"></i>登陆位置</label>
+      <label><input type="checkbox" id="toggleClaims" checked><i class="layer-dot claim"></i>主权宣称</label>
+      <label><input type="checkbox" id="toggleEvents" checked><i class="layer-dot major"></i>历史事件</label>
+      <label><input type="checkbox" id="toggleMinorEvents"><i class="layer-dot minor"></i>次要事件</label>
+     </div>
+     <div class="control-divider"></div>
+     <div class="control-heading">标记说明</div>
+     <div class="legend-items">
+      <div><i class="swatch territory"></i>紫色填充＋虚线 · 加来概略范围</div>
+      <div><i class="swatch city-occupation"></i>实色圆面 · 有证据的城市控制核心</div>
+      <div><i class="swatch dependency"></i>斜线或交叉纹 · 特殊领地关系</div>
+      <div><i class="swatch control"></i>英格兰 · 紫色 / 苏格兰 · 蓝灰</div>
+      <div><i class="swatch dash"></i>航海方向</div>
+      <div><i class="swatch major"></i>重大事件</div>
+      <div><i class="swatch medium"></i>区域事件</div>
+      <div><i class="swatch minor"></i>细节事件</div>
+      <div><i class="swatch question"></i>地点待考</div>
+     </div>
+      <label class="hypothesis-label"><input type="checkbox" id="toggleHypotheses" checked><i class="layer-dot hypothetical"></i>历史地理推定范围（虚线）</label>
+      <p class="hypothesis-key">虚线表示依据历史地点重建的地理范围</p>
+    </div>
+   </details></div>
+  </div>
+
+ </aside>
+ <main class="map-stage" aria-label="1497—1519年历史地图">
+  <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
+
+  <div class="map-top">
+   <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
+
+  </div>
+  <div class="time-panel">
+   <div class="timeline-head"><div><strong>历史时间轴</strong><span id="timelineContext">第一章 · 1497—1499</span></div><div class="year-buttons"><button id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button id="nextYear" aria-label="下一年">›</button><button id="playBtn" aria-label="播放时间轴">▶</button></div></div>
+   <div class="chapter-track" role="group" aria-label="历史章节"><button type="button" id="chapterOne" class="chapter-segment" data-period="early" title="1497—1499年历史事件"><span>第一章</span><small>1497—1499 · 大西洋彼岸</small></button><button type="button" id="chapterTwo" class="chapter-segment" data-period="later" title="1500—1509年历史事件"><span>第二章</span><small>1500—1509 · 通往未知海岸</small></button><button type="button" id="chapterThree" class="chapter-segment" data-period="third" title="1510—1519年历史事件"><span>第三章</span><small>1510—1519 · 王冠越过海峡</small></button><button type="button" id="chapterFour" class="chapter-segment" data-period="fourth" title="1520—1529年研究预览"><span>第四章</span><small>1520—1529 · 边区与远航</small></button></div><div class="range-wrap"><div id="milestoneDots" class="milestone-dots" aria-label="历史转折与事件年份"></div><input id="yearRange" type="range" min="1497" max="1529" value="1497" step="1" aria-label="拖动年份"><div class="ticks"><span>1497</span><span>1500</span><span>1510</span><span>1520</span><span>1529</span></div><div id="timelineNotice" class="timeline-notice" aria-live="polite">点击上方章节可回顾已收纳事件；地图持续显示当时的政治状态。</div></div>
+  </div>
+  
+ </main>
+ <aside class="dossier" id="dossier" aria-live="polite">
+   <div class="dossier-top"><span>HISTORICAL DOSSIER</span><button id="resetDossier" type="button" title="返回概览">↶</button></div>
+   <div id="dossierBody">
+    <div class="dossier-kicker">1497—1500 · 本章</div><h2>向西驶去</h2>
+    <p>从布里斯托尔起航的“马修号”，将英格兰王室支持的远航带到了北美海岸。</p>
+    <p>把鼠标移到航线和标记上，可看到事件简介。点击后可以继续阅读经过与历史资料。</p>
+   </div>
+   <div class="dossier-bottom"><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/data/atlas-1510-1519.json" target="_blank" rel="noopener">查看第三阶段数据 ↗</a><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/RESEARCH_HANDOFF.md" target="_blank" rel="noopener">研究交接记录 ↗</a></div>
+ </aside>
+</div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="app-continuity-1497-1529-preview.js?v=pr10-reviewed-v2"></script>
+</body>
+</html>
