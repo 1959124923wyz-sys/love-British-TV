@@ -86,3 +86,11 @@
 - 新增 [政治关系纹理面积符号数据](data/political-relations-1500-1519.geojson)：英王属地、马恩岛特殊领主制度、都柏林英王行政核心、苏格兰王权岛屿分别绘制，不将多种制度简化为英格兰本土实控。
 - 加来与图尔奈可见的实色城市核心面积符号仍随年变化；新增威尔士差异化地图色与1510年代可查阅的1488 Pale历史地理参考。
 - **[1497—1519领土绘制覆盖审计](docs/TERRITORIAL_COVERAGE_AUDIT_1497_1519.md)** 已逐项列出目前还没画成可靠历史边界的地区及下一步研究重点。历史地图绘制必须继续优先于事件点数量。
+
+## 连续疆域研究底座与第四章候审预览
+
+- [调查员跨十年控制关系纲领](docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md)与 [AGENTS.md](AGENTS.md) 是后续调查员开工入口。
+- [1497—1529年33份年末控制台账](research/continuity/CONTROL_TIMELINE_1497_1529.json)、[1519→1520年过渡](research/continuity/transitions/TRANSITION_1519_1520_V2.json)和[1520年代候审数据](research/continuity/staged/atlas-1520-1529.json)已经作为独立研究档案保存。新章必须继承既有控制关系，不从空白重新制作。
+- [第四章1497—1529独立预览](preview-continuity-1497-1529.html)仅用于主编审核；1520—1529年24条事件、49项来源尚未全部获得正式发布审核。正式首页仍以1497—1519年为准。
+- 概略Pale与现代海岸线为参考地图，不是实测历史疆界。参见 [持续疆域研究审计](docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md)；研究数据与正式发布数据互不覆盖。
+- 自检：`python3 scripts/validate_control_transition.py --self-test`、`python3 research/continuity/check_full_continuity.py`、`node scripts/test_continuity_preview.js`，并查看GitHub Actions。
