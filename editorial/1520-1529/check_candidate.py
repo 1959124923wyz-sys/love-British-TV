@@ -24,7 +24,7 @@ def check():
     assert atlas["editorial_status"]=="CANDIDATES_ONLY_NOT_PUBLISHED_OR_EDITOR_APPROVED"
     assert atlas["routes"]==[] and atlas["colonial_polygons"]==[]
     events,places,sources=atlas["events"],atlas["places"],atlas["sources"]
-    assert (len(events),len(places),len(sources))==(24,7,44)
+    assert (len(events),len(places),len(sources))==(24,7,49)
     srcids={s["id"] for s in sources}
     assert len(srcids)==len(sources)
     assert all(urlsplit(s["url"]).scheme=="https" for s in sources)
