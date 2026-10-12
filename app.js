@@ -6,12 +6,12 @@
 const $ = id=>document.getElementById(id);
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const map = L.map('map',{zoomControl:false,worldCopyJump:false,preferCanvas:true,minZoom:2,maxZoom:11,scrollWheelZoom:true}).setView([51,-31],3);
-L.control.zoom({position:'topright'}).addTo(map);
+// Zoom by wheel, touch or double-click; the map surface stays free of floating controls.
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
  maxZoom:19,maxNativeZoom:19,
  attribution:'&copy; OpenStreetMap contributors'
 }).addTo(map);
-const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map)};
+const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary','associated-modern-town-centre'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
@@ -30,8 +30,7 @@ const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
 function syncPanels(){
- $('toggleDossierBtn').setAttribute('aria-expanded',String(!workspace.classList.contains('dossier-collapsed')));
- setTimeout(()=>map.invalidateSize({pan:false}),250);
+setTimeout(()=>map.invalidateSize({pan:false}),250);
 }
 function openPanel(which){
  workspace.classList.remove(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');syncPanels();
@@ -42,15 +41,30 @@ function togglePanel(which){
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let year=1497; let selected=''; let timer=null;
+let researchNotes={};let geographicHypotheses=null;
 let vectors={};
 const infoDefault=$('dossierBody').innerHTML;
 const earlyIntro=$('chapterIntro').textContent;
 function setWarning(msg){let e=$('boundaryWarning');if(!e){e=document.createElement('div');e.id='boundaryWarning';e.className='map-warning';$('map').parentElement.appendChild(e)}e.textContent=msg;}
 function hideWarning(){let e=$('boundaryWarning');if(e)e.remove();}
-function listSources(ids){
+function listSources(ids,item){
  const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[])].find(src=>src.id===id)).filter(Boolean);
- if(!refs.length)return '';
- return '<details class="source-details"><summary>历史文献 · '+refs.length+'项 <span>▾</span></summary><div class="source-list">'+refs.map(x=>'<a class="source-link" href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.publisher)+' · '+escapeHTML(x.title)+' ↗</a>').join('')+'</div></details>';
+ const note=researchNotes[item?.id];
+ if(!refs.length&&!note)return '';
+ const fields=[
+  ['史料背景',note?.context],
+  ['历史影响',note?.impact],
+  ['地理与权力关系',note?.geography],
+  ['财政核算',note?.accounting]
+ ].filter(x=>x[1]);
+ const questions=(note?.archive_questions||[]).map(text=>'<li>'+escapeHTML(text)+'</li>').join('');
+ const sums=(note?.economic_records||[]).map(row=>'<li>'+escapeHTML(JSON.stringify(row))+'</li>').join('');
+ return '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
+   '<div class="research-body">'+fields.map(([head,text])=>'<h3>'+escapeHTML(head)+'</h3><p>'+escapeHTML(text)+'</p>').join('')+
+   (questions?'<h3>待进一步核对的档案</h3><ul>'+questions+'</ul>':'')+
+   (sums?'<h3>原始账目字段</h3><ul class="accounting-list">'+sums+'</ul>':'')+
+   '</div>'+
+   (refs.length?'<div class="mini-heading">文献出处 · '+refs.length+'项</div><div class="source-list">'+refs.map(x=>'<a class="source-link" href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.publisher)+' · '+escapeHTML(x.title)+' ↗</a>').join('')+'</div>':'')+'</details>';
 }
 function openDossier(item,typ){
  if(!item)return;
@@ -59,9 +73,19 @@ function openDossier(item,typ){
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+listSources(item.source_ids);
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+listSources(item.source_ids,item);
  openPanel('dossier');
  document.querySelectorAll('.event-item').forEach(el=>el.classList.toggle('selected',el.dataset.eid===selected));
+}
+function openHypothesis(feature){
+ const p=feature.properties||{};
+ const title=p.public_title||'推定地理范围';
+ const url='research/hypotheses/1500/README.md';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(p.public_summary||'根据历史记载的地点绘制的范围示意。')+'</p>'+
+ '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
+ '<div class="research-body"><h3>构建方法</h3><p>'+escapeHTML(p.method||'按有史料的地名构建地理形状。')+'</p><h3>资料类型</h3><p>当地城镇及历史记载地点的现代地理参考，用于分析可能范围。正式边界研究持续进行。</p></div>'+
+ '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看原始地理研究 ↗</a></details>';
+ openPanel('dossier');
 }
 function openCollection(items,title){
  if(!items.length)return;
