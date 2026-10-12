@@ -62,3 +62,8 @@
 - [调查员的三项地理参考线面](data/geography-1500-hypotheses.geojson)：独立淡色虚线，在1500—1509年可见，可在侧栏关闭。 [原30项研究素材](research/hypotheses/1500/HYPOTHESIS_ENVELOPES.geojson) 保留供继续考证。
 - [第二级历史文献与考证库](data/historical-detail-notes.json)：34条记录，一层读故事、二层看具体档案和统计口径。
 - [最新项目状态](PROJECT_STATUS.md) / [完整更新日志](CHANGELOG.md)。
+
+
+### v0.8 · 地图浏览方式（2026-10-12）
+
+多事件地区默认使用小型数字主标记；鼠标悬停或点击主标记展开独立史事SVG图标；点击空白收起。加来历史地理推定包络更醒目，但保持紫色虚线与低透明度。数据集和源档无变动，详见 [更新日志](CHANGELOG.md) 与 [项目现状](PROJECT_STATUS.md)。
