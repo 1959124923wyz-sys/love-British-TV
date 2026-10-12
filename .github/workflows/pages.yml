@@ -27,6 +27,7 @@ jobs:
           node scripts/test_chronology.js
           node scripts/test_map_interactions.js
           node scripts/test_event_focus.js
+          node scripts/test_chapter4_published.js
           grep -q 'id="toggleEvents"' index.html
           grep -q 'css/dark-atlas-v2.css' index.html
           grep -q 'tile.openstreetmap.org' app.js
