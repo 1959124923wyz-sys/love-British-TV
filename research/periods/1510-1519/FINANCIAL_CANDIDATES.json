@@ -1,0 +1,107 @@
+{
+  "dataset_id": "1510s-economic-ledgers-and-obligations-v1",
+  "compiled": "2026-10-12",
+  "scope": "Tournai and France treaty finance, Irish governance: categories of expenditure/receipt and pending original ledger",
+  "source_ids": [
+    "UCL-LETTERS-TUDOR-1518",
+    "MURPHY-2014-TOURNAI",
+    "BL-FRANCE-TREATIES",
+    "TNA-TREATY-TOURNAI-1518",
+    "TOURNAI-PRIMARY-1507-BISHOP",
+    "TNA-SP1-HENRY8-GUIDE",
+    "MURPHY-2025-GUINES"
+  ],
+  "claims": [
+    {
+      "id": "F1518-600k-Tournai",
+      "time": "1518 treaty, instalments intended over 12 years",
+      "amount": 600000,
+      "unit": "crowns of gold (specified in contemporary chronicle, precise numismatic denomination to verify)",
+      "amount_type": "contractual_cession_consideration_promised",
+      "payer": "Francis I of France",
+      "recipient": "Henry VIII of England",
+      "source_ids": [
+        "UCL-LETTERS-TUDOR-1518",
+        "TNA-TREATY-TOURNAI-1518"
+      ],
+      "source_status": "early modern narrative + BL treaty catalogue, original text not yet transcribed",
+      "realised_royal_receipts": null,
+      "local_extraction_profit": null,
+      "avoid_addition_to": "1514/1515 one-million-crowns French payments (different treaty items), later arrears and Treasury payments",
+      "historical_effect": "Payment commitment linked to cession of Tournai; no profit computation."
+    },
+    {
+      "id": "F1517-TOURNAI-MUNICIPAL-WORKS",
+      "time": "1517-04 to 1517-10",
+      "amount": 2264,
+      "unit": "livres (local municipal budget, currency unit and accounting year must be checked)",
+      "amount_type": "local_municipal_expenditure_on_English_citadel_work",
+      "payer": "Tournai municipal government",
+      "recipient": "citadel building labour/materials (item-specific) ",
+      "source_ids": [
+        "MURPHY-2014-TOURNAI"
+      ],
+      "source_status": "search-indexed passage from peer-reviewed author accepted manuscript PDF inaccessible to full inspection; original local city accounts not checked",
+      "realised_royal_receipts": null,
+      "local_extraction_profit": null,
+      "historical_effect": "Occupation imposed municipal works obligations but exact numbers not ready for public display."
+    },
+    {
+      "id": "F1515-FRANCE-1m-GOLD",
+      "time": "1514 agreement, 1515-03-14 French plenipotentiary paperwork",
+      "amount": 1000000,
+      "unit": "gold crowns (French-England diplomatic treaty)",
+      "amount_type": "promised_diplomatic_payment_to_English_crown",
+      "payer": "Louis XII/Francis I France under prior peace undertaking",
+      "recipient": "Henry VIII",
+      "source_ids": [
+        "BL-FRANCE-TREATIES"
+      ],
+      "source_status": "BL Add MS48002 1515 commissioners paperwork is for promised one million crowns, not audited actual disbursements",
+      "realised_royal_receipts": null,
+      "local_extraction_profit": null,
+      "historical_effect": "Distinguish international treaty payments from control-area taxes or wealth extracted from occupied Tournai."
+    },
+    {
+      "id": "F1514-1518-TOURNAI-BISHOP",
+      "time": "1514–1518",
+      "amount": null,
+      "unit": null,
+      "amount_type": "ecclesiastical_bishopric_income_contested",
+      "payer": "Tournai bishopric ecclesiastical landed income",
+      "recipient": "Thomas Wolsey and competing French bishop candidates contested",
+      "source_ids": [
+        "TOURNAI-PRIMARY-1507-BISHOP",
+        "DAVIES-1998-TOURNAI"
+      ],
+      "source_status": "academic transcription of earlier E36/82 church receipts + peer-reviewed constitutional research; value not yet extracted for Tudor occupation",
+      "realised_royal_receipts": null,
+      "local_extraction_profit": null,
+      "historical_effect": "Royal political control and bishopric church revenues are separate categories."
+    },
+    {
+      "id": "F1513-CALAIS-TOURNAI-CAMPAIGN",
+      "time": "1513-1519",
+      "amount": null,
+      "unit": null,
+      "amount_type": "english_army_and_occupation_costs",
+      "payer": "English Crown, allies and local occupation government",
+      "recipient": "army, garrisons, fortification; separate accounts",
+      "source_ids": [
+        "HRP-FRANCE-1513",
+        "TNA-SP1-HENRY8-GUIDE"
+      ],
+      "source_status": "historical overview; no period-specific verified cost ledger yet",
+      "realised_royal_receipts": null,
+      "local_extraction_profit": null,
+      "historical_effect": "Occupation can be fiscally costly and should not be called net gain by default."
+    }
+  ],
+  "economic_policy": [
+    "1518 treaty 600,000 crowns and 1515 promise 1,000,000 crowns are not a verified sum of payments actually received.",
+    "Municipal spending of 2264 livres, if authenticated, is local cost, not automatically a transfer to English treasury.",
+    "No GBP conversion, inflation adjustment or combined totals without exact exchange-rate/accounting reference.",
+    "Separate local residents' experience, tax receipts, military wages and dynastic diplomatic funds."
+  ],
+  "public_chart_approved": false
+}
