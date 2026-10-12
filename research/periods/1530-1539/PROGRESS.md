@@ -23,3 +23,10 @@
 ## 剩余疑点
 
 原始Calais 1530年代边界、Irish Pale和O'Connor地区实际驻军、Kildare没收庄园位置、威尔士边区旧领主地界、Richard Hore精准航程、1537衣着语言法的实际执行，均在`ARCHIVAL_ACTION_QUEUE.json`列明，不要为了完成地图就编造精准多边形。继续确保下一十年1539→1540递交已核实的7个名称与状态。
+
+## 后续加深并已分批提交（2026-10-13）
+
+- `df6082a942d2`：`interactive_research_preview.html`，独立Leaflet地图，包含逐年时间轴、概略地理、多政治类型、事件点击详情、双击平滑定位和高亮（不放大）。
+- `c71410a9695c`：研究CI增加提取HTML内联JavaScript、Node `--check`语法校验；原自动历史结构检查保留。
+- 最终CI状态应以GitHub Actions当前提交实际结论为准。先前版本`df6082a942...`已确认研究数据、跨年持续性及旧UI合同三类PR检查均成功；追加语法检查等待相应提交运行后核对。
+- 本独立研究分支PR #25已建立： https://github.com/1959124923wyz-sys/love-British-TV/pull/25 。
