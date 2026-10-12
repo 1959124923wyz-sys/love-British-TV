@@ -47,3 +47,6 @@
 ## 图尔奈外围范围上线专项（2026-10-12，新增）
 主编若马上衔接1510—1519章，请直接查看：[TOURNAISIS_PUBLISH_GATE.md](TOURNAISIS_PUBLISH_GATE.md)；原料为[TOURNAISIS_OPTIONAL_OVERLAY.geojson](TOURNAISIS_OPTIONAL_OVERLAY.geojson)。这是单独的**可关闭、浅色虚线、现代地名凸包参考图层**（1面、1个英王实际治理城市点、17个现代村镇参考点），有13个可追溯来源记录。**城市点可以作为高信度实控标记；数学凸包不属于可以自动填色的1513年领土面。**
 重要地理区分：旧图尔奈城堡领地、1383后图尔奈—Tournaisis—Mortagne—Saint-Amand联合行政辖区，以及1513—19英王实际驻军与司法，是三种不同的地理语义；法国/比利时现代行政辖区也不适合作古代替身。
+
+
+**当前最新图层与索引（2026-10-12）**：可先用[TOURNAISIS_REVIEW_MAP.html](TOURNAISIS_REVIEW_MAP.html)试播1510—1519年图尔奈实际城内驻军点与虚线区域；静态HTML只用于研究预览，需要在线OSM底图。跨期索引已进一步把专项11条Tournaisis地理来源纳入，**共10份清单、137条原始来源记录、109个不同URL**，历史修订日志中的九清单126条是上一阶段的真实快照，不是最新版。明细见[CROSS_DECADE_SOURCE_INDEX.json](CROSS_DECADE_SOURCE_INDEX.json)。
