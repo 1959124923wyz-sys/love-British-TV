@@ -10,6 +10,8 @@ on:
       - 'scripts/validate_control_transition.py'
       - 'scripts/test_continuity_preview.js'
       - 'app-continuity-1497-1529-preview.js'
+      - 'data/atlas-1520-1529.json'
+      - 'data/territorial-footprints-1497-1529.geojson'
       - 'preview-continuity-1497-1529.html'
   pull_request:
     paths:
@@ -78,3 +80,4 @@ jobs:
           node --check app-continuity-1497-1529-preview.js
           node scripts/test_continuity_preview.js
           node scripts/test_event_focus.js
+          node scripts/test_chapter4_published.js
