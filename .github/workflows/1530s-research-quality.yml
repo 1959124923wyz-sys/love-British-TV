@@ -16,3 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate control continuity and evidence
         run: python3 research/periods/1530-1539/validate_research.py
+      - name: Check independent research preview JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          html=Path("research/periods/1530-1539/interactive_research_preview.html").read_text()
+          blocks=re.findall(r'<script[^>]*>(.*?)</script>', html, flags=re.S|re.I)
+          assert blocks and blocks[-1].strip(), "inline map logic missing"
+          Path("/tmp/1530s-preview.js").write_text(blocks[-1])
+          PY
+          node --check /tmp/1530s-preview.js
