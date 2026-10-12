@@ -50,3 +50,7 @@
 - 比利时国家档案馆2015年专题介绍确认Tournaisis有复杂的封建领主、司法与村庄社群权力结构，因此任何宏观英王影响区只能是多层次暂拟边界。
 - `FOLLOWUP_EVIDENCE_SOURCES.json` 已修正《加拿大传记辞典》网址为 `rastell_john_1F.html`，并分清John Rastell父亲组织1517年殖民定居计划，儿子是传记标题人物、后期另有航行。
 - 为避免主编反复翻阅历史源档，另建 `editorial/intake-1510-1519-20261012` 审阅分支，整理了15条符合主站数据契约的预审候选及19→15+4研究去向表；该分支不自动修改正式地图。见其 `editorial/1510-1519/README.md`。
+
+### 图尔奈几何原件去重记录（2026-10-12）
+
+此前目录中的 `TOURNAISIS_PUBLICATION_LAYER_CANDIDATE.geojson` 与 `editorial/1510-1519/TOURNAISIS_OPTIONAL_OVERLAY.geojson` **完全相同**（Git blob SHA `5abce1836e0f69e12b1b92f9e64dec1cdf6962c6`）。为减少双份文件引起的修订分叉，工作树仅保留已在主编出版门禁和审核文档中引用的 `editorial/1510-1519/TOURNAISIS_OPTIONAL_OVERLAY.geojson`；研究原始版本与删除提交仍保留在Git历史中。几何、来源、审核等级均没有修改，研究用的外围凸包依然属于不确定虚线参考。

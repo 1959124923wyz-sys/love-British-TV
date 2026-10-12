@@ -56,6 +56,8 @@ const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let year=1497; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
+// Transient focus target; historical event coordinates remain immutable.
+let focusedEventId=null,focusRequestToken=0;
 let clusterObstacles=[];
 const cancelClusterClose=()=>{if(clusterCloseTimer){clearTimeout(clusterCloseTimer);clusterCloseTimer=null}};
 function closeCluster(){cancelClusterClose();activeClusterKey=null;expandedPinned=false;groups.clusterExpanded.clearLayers()}
@@ -123,7 +125,7 @@ function openCollection(items,title){
  openPanel('dossier');
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
-function resetDossier(){selected='';selectedItemYear=null;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels()}
+function resetDossier(){selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels();if(atlas)renderPoints()}
 function renderEventList(){
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
@@ -132,8 +134,46 @@ function renderEventList(){
   .sort((a,b)=>a.year-b.year||levelOf(b)-levelOf(a)||a.name.localeCompare(b.name,'zh'));
  const chapterTotal=atlas.events.filter(e=>atlas!==atlasEarly||e.year<=1499).length;
  $('eventCount').textContent=events.length+'项';
- $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
- $('eventList').querySelectorAll('.event-item').forEach(node=>node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event')));
+ $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
+ $('eventList').querySelectorAll('.event-item').forEach(node=>{
+  node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event'));
+  node.addEventListener('dblclick',ev=>{
+   ev.preventDefault();
+   focusEventFromSidebar(atlas.events.find(e=>e.id===node.dataset.eid));
+  });
+ });
+}
+// No map movement without a valid and already occurred source location.
+function canLocateEvent(item,atYear){
+ return Boolean(item&&occurredByYear(item,atYear)&&
+  Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&
+  Math.abs(item.lat)<=90&&Math.abs(item.lng)<=180);
+}
+function focusEventFromSidebar(item){
+ if(!item)return;
+ openDossier(item,'event');
+ focusRequestToken++;
+ focusedEventId=null;
+ if(!canLocateEvent(item,year)){
+  const note=!occurredByYear(item,year)?'请先将时间轴移至事件发生年份。':'此事件位置尚未核实，无法地图定位。';
+  $('dossierBody').insertAdjacentHTML('beforeend','<p class="atlas-location-note">'+escapeHTML(note)+'</p>');
+  renderPoints();
+  return;
+ }
+ stopPlay();
+ focusedEventId=item.id;
+ const token=focusRequestToken,position=[item.lat,item.lng];
+ setTimeout(()=>{
+  if(token!==focusRequestToken||focusedEventId!==item.id||!canLocateEvent(item,year))return;
+  // Wait for dossier layout and then pan; never call flyTo, setZoom or change year.
+  map.invalidateSize({pan:false});
+  map.stop();
+  map.once('moveend',()=>{
+   if(token===focusRequestToken&&focusedEventId===item.id)renderPoints();
+  });
+  map.panTo(position,{animate:true,duration:0.9,easeLinearity:0.22});
+  renderPoints();
+ },300);
 }
 function expandCluster(group,pin=false){
  // Expand only one group; never paint a shared opaque background over the map.
@@ -183,7 +223,7 @@ function expandCluster(group,pin=false){
  }
  coords.forEach((pos,i)=>{
   const record=items[i],item=record.item,d=27;
-  const icon=L.divIcon({className:'atlas-flyout-icon',html:'<div class="expanded-event">'+iconHTML(item)+'</div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
+  const icon=L.divIcon({className:'atlas-flyout-icon'+(item.id===focusedEventId?' atlas-target-marker':''),html:'<div class="expanded-event">'+iconHTML(item)+'</div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
   const marker=L.marker(map.containerPointToLatLng(L.point(pos.x,pos.y)),{icon,title:item.name,zIndexOffset:1800+i,bubblingMouseEvents:false})
    .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[14,0]})
@@ -199,12 +239,14 @@ function renderPoints(){
  for(const name of ['event','candidate','routes','claim','place','cluster'])groups[name].clearLayers();
  const shown=[];
  const showAll=map.getZoom()>=4||$('toggleMinorEvents').checked;
- if($('toggleEvents').checked){
+ if($('toggleEvents').checked||focusedEventId){
   for(const e of atlas.events){
    if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;
-   if(e.category==='status'||!Number.isFinite(e.lat)||!Number.isFinite(e.lng))continue;
-   if(e.category==='claim'&&!$('toggleClaims').checked)continue;
-   if(levelOf(e)===1&&!showAll)continue;
+   if(!Number.isFinite(e.lat)||!Number.isFinite(e.lng))continue;
+   if(!$('toggleEvents').checked&&e.id!==focusedEventId)continue;
+   if(e.category==='status'&&e.id!==focusedEventId)continue;
+   if(e.category==='claim'&&!$('toggleClaims').checked&&e.id!==focusedEventId)continue;
+   if(levelOf(e)===1&&!showAll&&e.id!==focusedEventId)continue;
    shown.push({item:e,type:'event',lat:e.lat,lng:e.lng});
   }
  }
@@ -234,14 +276,14 @@ function renderPoints(){
   if(g.items.length===1){
    const record=g.items[0],item=record.item;
    const d=levelOf(item)===3?30:levelOf(item)===2?27:23;
-   const ico=L.divIcon({className:'',html:iconHTML(item),iconSize:[d,d],iconAnchor:[d/2,d/2]});
+   const ico=L.divIcon({className:item.id===focusedEventId?'atlas-target-marker':'',html:iconHTML(item),iconSize:[d,d],iconAnchor:[d/2,d/2]});
    L.marker([record.lat,record.lng],{icon:ico,title:item.name,zIndexOffset:500+levelOf(item)*60})
     .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
     .on('click',()=>openDossier(item,record.type)).addTo(groups.cluster);
    continue;
   }
   const important=g.items.some(x=>levelOf(x.item)===3);
-  const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+'"><strong>'+g.items.length+'</strong></div>',iconSize:[36,36],iconAnchor:[18,18]});
+  const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+(g.items.some(x=>x.item.id===focusedEventId)?' atlas-target-aggregate':'')+'"><strong>'+g.items.length+'</strong></div>',iconSize:[36,36],iconAnchor:[18,18]});
   L.marker(g.latlng,{icon:ico,title:g.items.length+'项历史记录',zIndexOffset:950})
    .on('mouseover',()=>{if(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|'))expandCluster(g)})
    .on('mouseout',scheduleClusterClose)
@@ -270,6 +312,9 @@ function renderPoints(){
    .on('click',()=>openDossier(r,'route')).addTo(groups.routes);
  }
  updateVisibility();
+ // Expand a dense group so the exact target glyph, not only the hub, is highlighted.
+ const targetGroup=focusedEventId&&nearby.find(g=>g.items.some(x=>x.item.id===focusedEventId));
+ if(targetGroup&&targetGroup.items.length>1)expandCluster(targetGroup,true);
 }
 function ensureTerritorialPatterns(){
  // Geographic polygons are rendered with SVG so political classification can use true hatching.
@@ -491,6 +536,8 @@ function setYear(v){
   selected='';selectedItemYear=null;
   $('dossierBody').innerHTML='<div class="dossier-kicker">历史地图 · '+next+'年</div><h2>当年历史</h2><p>请在地图或事件列表中选择此时已经发生的历史记录。</p>';
  }
+ if(focusedEventId&&!chosen.events.some(e=>e.id===focusedEventId&&occurredByYear(e,next)))focusedEventId=null;
+ focusRequestToken++;
  year=next;atlas=chosen;
  $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,third=year>=1510,second=!first&&!third;

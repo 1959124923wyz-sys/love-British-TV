@@ -447,3 +447,30 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
   outline:none!important;
   filter:drop-shadow(0 0 3px rgba(244,206,154,.88));
 }
+
+/* Sidebar event location finder: transient and non-obscuring; no extra map labels. */
+.leaflet-marker-icon.atlas-target-marker{
+  background:transparent!important;
+  border:0!important;
+}
+.leaflet-marker-icon.atlas-target-marker .map-pin{
+  border-color:#ffe1a6!important;
+  box-shadow:0 0 0 4px rgba(251,194,94,.62),0 0 24px 7px rgba(250,180,68,.65)!important;
+  animation:atlas-target-pulse 1.05s ease-out 2;
+}
+.atlas-aggregate.atlas-target-aggregate{
+  border-color:#ffe1a6!important;
+  box-shadow:0 0 0 5px rgba(251,194,94,.46),0 0 25px rgba(250,180,68,.72)!important;
+}
+.atlas-location-note{
+  margin-top:12px!important;
+  font-size:11px!important;
+  color:#d6b58f!important;
+}
+@keyframes atlas-target-pulse{
+  0%,100%{filter:brightness(1)}
+  45%{filter:brightness(1.65) drop-shadow(0 0 8px #f8c27b)}
+}
+@media(prefers-reduced-motion:reduce){
+  .leaflet-marker-icon.atlas-target-marker .map-pin{animation:none!important}
+}
