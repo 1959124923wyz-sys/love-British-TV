@@ -1,0 +1,143 @@
+{
+  "type": "FeatureCollection",
+  "name": "1520-1529 map control and cartography change points; no historically surveyed new polygons",
+  "metadata": {
+    "period": {
+      "from": 1520,
+      "to": 1529
+    },
+    "new_verified_controlling_polygons": 0,
+    "method": "Place/transition-based marker changes only. Not a measured geography delta.",
+    "map_year_model": "year-end for political states; historically timed event points appear at event year.",
+    "editorial_status": "research",
+    "geometry_role": "Point reference, never area",
+    "link_transition_file": "CONTROL_TRANSITION_1519_1529.json"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "delta-1519-tournai-cessation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.389,
+          50.607
+        ]
+      },
+      "properties": {
+        "name": "图尔奈：英军1519年2月撤离",
+        "change_year": 1519,
+        "change_month": 2,
+        "render_in_years_1520_1529": false,
+        "stable_id": "tournai-occupied-city-1513",
+        "change_type": "historic_cessation_before_this_chapter",
+        "political_result": "no English control after 1519-02",
+        "geometry_semantics": "modern town center display only; original main city center may differ slightly",
+        "source_ids": [
+          "DAVIES-1998-TOURNAI",
+          "MURPHY-2014-TOURNAI"
+        ],
+        "no_map_control_area_generated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-1520-guines-existing-site-new-marker",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "name": "吉讷：英属边区既有要塞单独上图",
+        "change_year": 1520,
+        "render_in_years_1520_1529": true,
+        "stable_id": "guines-crown-1520s",
+        "parent_stable_id": "calais-crown",
+        "change_type": "existing_site_newly_mapped_not_new_conquest",
+        "political_result": "Continued English fortified border governance",
+        "source_ids": [
+          "MAP-HRP-1520",
+          "MAP-MUNBY-2016"
+        ],
+        "site_precision": "modern town reference",
+        "no_map_control_area_generated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-1521-newenham-fortification",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.816194,
+          50.946075
+        ]
+      },
+      "properties": {
+        "name": "纽纳姆桥：加固既有英属要塞",
+        "change_year": 1521,
+        "editorial_event_year": 1525,
+        "render_in_years_1520_1529": true,
+        "change_type": "military_fortification_change_not_territory_acquisition",
+        "political_result": "Existing English-held Calais border strengthened; works dated 1521–1526.",
+        "source_ids": [
+          "CAL-GRUMMITT-2008-FORT",
+          "ACADEMIC-ROSE-NEWENHAM-NIEULAY"
+        ],
+        "site_precision": "Fort Nieulay modern site near early bridge; Vauban rebuilding precludes copying current walls",
+        "no_map_control_area_generated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-1521-monasteroris-temporary-garrison",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.08543742,
+          53.34635313
+        ]
+      },
+      "properties": {
+        "name": "莫纳斯特罗里斯：军事围攻与短时驻守",
+        "change_year": 1521,
+        "render_in_years_1520_1529": true,
+        "change_type": "temporary_military_occupation_not_verified_long_term_area",
+        "political_result": "English deputy siege/garrison in local O'Connor lordship, departure year not proven",
+        "source_ids": [
+          "IR-ELLIS-2023",
+          "IR-FRANCISCANS-MONASTERORIS"
+        ],
+        "site_precision": "modern Franciscan site, not proven exact garrison castle footprint",
+        "no_map_control_area_generated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-1520-ardres-french-frontier",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.981678,
+          50.857863
+        ]
+      },
+      "properties": {
+        "name": "阿德尔：法王边区控制参照",
+        "change_year": 1520,
+        "render_in_years_1520_1529": true,
+        "change_type": "neighbouring_french_control_no_change",
+        "political_result": "French Ardres distinct from English Guînes; Field of Cloth of Gold is on neutral ground",
+        "source_ids": [
+          "MAP-HRP-1520",
+          "MAP-MUNBY-2016"
+        ],
+        "site_precision": "modern town reference",
+        "no_map_control_area_generated": true
+      }
+    }
+  ]
+}
