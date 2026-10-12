@@ -9,14 +9,14 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=20261012-6">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=20261012-7">
 </head>
 <body>
 <div class="site">
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>THE COST OF EMPIRE · HISTORICAL ATLAS</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
- <div class="head-actions"><span class="version">1497—1509 · PILOT v0.6</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1509 · PILOT v0.7</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
@@ -31,16 +31,8 @@
    <div class="chapter-facts"><div><b id="factA">0</b><span id="factADesc">已证实北美<br>永久殖民据点</span></div><div><b id="factB">1497</b><span id="factBDesc">英格兰远航<br>抵达北美沿岸</span></div><div><b id="factC">1498</b><span id="factCDesc">第二次远航<br>结果尚存争议</span></div></div>
    <div class="side-section-head"><span>本章事件</span><span id="eventCount">—</span></div>
    <div id="eventList" class="event-list"><div class="loading">正在读取历史资料……</div></div>
-  </div>
-
- </aside>
- <main class="map-stage" aria-label="1497—1500年历史地图">
-  <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
-  <div class="map-toolbuttons"><button id="toggleDossierBtn" type="button" aria-controls="dossierBody" aria-expanded="false" title="显示或隐藏史料详情">▤ <span>史料详情</span></button></div>
-  <div class="map-top">
-   <div class="map-year-card"><small>当前年份 · YEAR</small><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
-   <details class="map-controls" id="mapControls">
-    <summary>☷ 图层与图例 <span class="panel-chevron">▾</span></summary>
+   <div class="sidebar-settings-wrap">   <details class="map-controls sidebar-map-controls" id="mapControls">
+    <summary>☷ 图层与历史地理 <span class="panel-chevron">▾</span></summary>
     <div class="controls-body">
      <div class="control-heading">地图图层</div>
      <div class="layer-options">
@@ -61,14 +53,25 @@
       <div><i class="swatch minor"></i>细节事件</div>
       <div><i class="swatch question"></i>地点待考</div>
      </div>
+      <label class="hypothesis-label"><input type="checkbox" id="toggleHypotheses" checked><i class="layer-dot hypothetical"></i>1500年代 · 推定疆界（虚线）</label>
+      <p class="hypothesis-key">虚线：边防法令和历史地点推算的示意范围</p>
     </div>
-   </details>
+   </details></div>
+  </div>
+
+ </aside>
+ <main class="map-stage" aria-label="1497—1509年历史地图">
+  <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
+
+  <div class="map-top">
+   <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
+
   </div>
   <div class="time-panel">
    <div class="timeline-head"><div><strong>历史时间轴</strong><span id="timelineContext">第一章 · 1497—1499</span></div><div class="year-buttons"><button id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button id="nextYear" aria-label="下一年">›</button><button id="playBtn" aria-label="播放时间轴">▶</button></div></div>
    <div class="chapter-track" role="group" aria-label="历史章节"><button type="button" id="chapterOne" class="chapter-segment" data-period="early" title="1497—1499年历史事件"><span>第一章</span><small>1497—1499 · 大西洋彼岸</small></button><button type="button" id="chapterTwo" class="chapter-segment" data-period="later" title="1500—1509年历史事件"><span>第二章</span><small>1500—1509 · 通往未知海岸</small></button></div><div class="range-wrap"><div id="milestoneDots" class="milestone-dots" aria-label="历史转折与事件年份"></div><input id="yearRange" type="range" min="1497" max="1509" value="1497" step="1" aria-label="拖动年份"><div class="ticks"><span>1497</span><span>1500</span><span>1502</span><span>1504</span><span>1509</span></div><div id="timelineNotice" class="timeline-notice" aria-live="polite">点击上方章节可回顾已收纳事件；地图持续显示当时的政治状态。</div></div>
   </div>
-  <div class="map-sources-tag">底图：<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></div>
+  
  </main>
  <aside class="dossier" id="dossier" aria-live="polite">
    <div class="dossier-top"><span>HISTORICAL DOSSIER</span><button id="resetDossier" type="button" title="返回概览">↶</button></div>
@@ -83,6 +86,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=pilot6-chapter"></script>
+<script src="app.js?v=pilot7-fan-hypotheses"></script>
 </body>
 </html>
