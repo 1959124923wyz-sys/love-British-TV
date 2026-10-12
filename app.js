@@ -11,7 +11,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
  maxZoom:19,maxNativeZoom:19,
  attribution:'&copy; OpenStreetMap contributors'
 }).addTo(map);
-const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map)};
+const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'世界／帝国级节点',2:'区域重要节点',1:'地方与补充事件'};
 const isUncertain=item=>item.geo_precision==='regional-symbol-only'||/uncertain/i.test(String(item.certainty||''));
@@ -41,19 +41,20 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null; let year=1497; let selected=''; let timer=null;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let year=1497; let selected=''; let timer=null;
 let vectors={};
 const infoDefault=$('dossierBody').innerHTML;
+const earlyIntro=$('chapterIntro').textContent;
 function setWarning(msg){let e=$('boundaryWarning');if(!e){e=document.createElement('div');e.id='boundaryWarning';e.className='map-warning';$('map').parentElement.appendChild(e)}e.textContent=msg;}
 function hideWarning(){let e=$('boundaryWarning');if(e)e.remove();}
 function listSources(ids){if(!ids||!ids.length)return '<p>本条资料尚未列出单独的引文索引。</p>';return '<div class="source-list">'+ids.map(id=>{const s=atlas.sources.find(v=>v.id===id);return s?'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>':''}).join('')+'</div>';}
 function openDossier(item,typ){
  if(!item)return;
- const isCandidate=typ==='candidate'; const isRoute=typ==='route'; selected=item.id;
- const title=item.name;const date=isCandidate?'1497年 · 登陆候选地点':isRoute?item.year+'年 · 航线示意':item.date_label;
- const label=isCandidate?'位置假说':isRoute?'方向示意':(categoryName[item.category]||'历史资料');
+ const isCandidate=typ==='candidate'; const isRoute=typ==='route';const isPlace=typ==='place'; selected=item.id;
+ const title=item.name;const date=isPlace?'1500年代 · 政治据点':isCandidate?'1497年 · 登陆候选地点':isRoute?item.year+'年 · 航线示意':item.date_label;
+ const label=isPlace?'政治关系':isCandidate?'位置假说':isRoute?'方向示意':(categoryName[item.category]||'历史资料');
  const desc=isCandidate?item.note:isRoute?item.note:item.description;
- const caveat=isCandidate?'准确登陆地点还没有定论。':isRoute?'虚线表示航行方向，不代表已知的逐段航迹。':item.category==='claim'?'王室宣称不等于已经建立了殖民地。':'';
+ const caveat=isPlace?'此标记代表城市或群岛，不能当作领土边界。':isCandidate?'准确登陆地点还没有定论。':isRoute?'虚线表示航行方向，不代表已知的逐段航迹。':item.category==='claim'?'王室宣称不等于已经建立了殖民地。':'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(desc)+'</p>'+(caveat?'<p class="event-context">'+escapeHTML(caveat)+'</p>':'')+'<div class="mini-heading">历史资料</div>'+listSources(item.source_ids);
  openPanel('dossier');
  document.querySelectorAll('.event-item').forEach(n=>n.classList.toggle('selected',n.dataset.eid===selected));
@@ -66,9 +67,9 @@ function renderEventList(){
  document.querySelectorAll('.event-item').forEach(n=>n.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===n.dataset.eid),'event')));
 }
 function renderPoints(){
- groups.event.clearLayers();groups.candidate.clearLayers();groups.routes.clearLayers();groups.claim.clearLayers();
+ groups.event.clearLayers();groups.candidate.clearLayers();groups.routes.clearLayers();groups.claim.clearLayers();groups.place.clearLayers();
  atlas.events.filter(e=>(e.visible_from||e.year)<=year).forEach(e=>{
-  if(e.category==='status')return; // Status has no evidenced point geometry
+  if(e.category==='status'||!Number.isFinite(e.lat)||!Number.isFinite(e.lng))return; // Never invent an event coordinate
   if(e.category==='claim'&&!$('toggleClaims').checked)return;
   if(levelOf(e)===1&&!$('toggleMinorEvents').checked)return; // Curiosity-first; minor markers are opt-in
   const k=levelOf(e),d=k===3?34:k===2?27:21;
@@ -77,7 +78,7 @@ function renderPoints(){
    .bindTooltip(hoverCard(e.name,e.description,e),{sticky:true,direction:'top',className:'atlas-hover',opacity:0.98})
    .on('click',()=>openDossier(e,'event')).addTo(groups.event);
  });
- if(year>=1497){
+ if(atlas.candidates && year<=1499){
   atlas.candidates.forEach(c=>{
    const ico=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
    L.marker([c.lat,c.lng],{icon:ico,title:'候选地：'+c.name})
@@ -89,6 +90,15 @@ function renderPoints(){
     .on('click',()=>openDossier(atlas.events.find(e=>e.id==='landfall-1497'),'event'))
     .bindTooltip(hoverCard('1497年主权宣称','王室宣称并不等于英格兰对北美的有效殖民控制。'),{sticky:true,direction:'top',className:'atlas-hover',opacity:0.98})
     .addTo(groups.claim);
+ }
+ if(year>=1500 && atlas.places){
+  atlas.places.forEach(q=>{
+   const d=25, placeItem={...q,category:'political',significance:{level:2}};
+   const icon=L.divIcon({className:'',html:iconHTML(placeItem),iconSize:[d,d],iconAnchor:[d/2,d/2]});
+   L.marker([q.lat,q.lng],{icon,title:q.name,zIndexOffset:95})
+    .bindTooltip(hoverCard(q.name,q.description),{sticky:true,direction:'top',className:'atlas-hover',opacity:.98})
+    .on('click',()=>openDossier(q,'place')).addTo(groups.place);
+  });
  }
  atlas.routes.filter(r=>r.year<=year).forEach(r=>{
   const routeColor=r.year===1497?'#d4a47d':'#97a9bc';
@@ -103,19 +113,35 @@ function renderPoints(){
  updateVisibility();
 }
 function updateVisibility(){
- for(const [id,group] of [['toggleKingdom',groups.kingdom],['toggleRoutes',groups.routes],['toggleCandidates',groups.candidate],['toggleClaims',groups.claim],['toggleEvents',groups.event]]){
+ for(const [id,group] of [['toggleKingdom',groups.kingdom],['toggleRoutes',groups.routes],['toggleCandidates',groups.candidate],['toggleClaims',groups.claim],['toggleEvents',groups.event],['toggleKingdom',groups.place]]){
    if($(id).checked){if(!map.hasLayer(group))map.addLayer(group)}else if(map.hasLayer(group)){map.removeLayer(group)}
  }
 }
 function setYear(v){
- year=Math.max(1497,Math.min(1500,Math.round(Number(v)||1497)));
+ const next=Math.max(1497,Math.min(1509,Math.round(Number(v)||1497)));
+ const chosen=next>=1500?atlasLater:atlasEarly;
+ if(!chosen)return;
+ if(atlas!==chosen){selected='';$('dossierBody').innerHTML=infoDefault;workspace.classList.add('dossier-collapsed');syncPanels();}
+ year=next;atlas=chosen;
  $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
- $('periodTitle').textContent=year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':year===1499?'英格兰与苏格兰仍为独立王国':'阶段观察 · 无已证实殖民地';
+ const later=year>=1500;
+ $('chapterNav').textContent=later?'历史地图 · 第二章':'历史地图 · 第一章';
+ $('chapterNavName').textContent=later?'通往未知海岸的第二程':'远航与主权宣称';
+ $('chapterLabel').textContent=later?'CHAPTER 002 / 1500—1509':'CHAPTER 001 / 1497—1499';
+ $('chapterTitlePrimary').textContent=later?'通往未知海岸':'大西洋彼岸';
+ $('chapterTitleSecondary').textContent=later?'的第二程':'的第一道声索';
+ $('chapterIntro').textContent=later?atlasLater.intro.description:earlyIntro;
+ $('factA').textContent=later?'加来':'0';
+ $('factADesc').innerHTML=later?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
+ $('factB').textContent=later?'1502':'1497';
+ $('factBDesc').innerHTML=later?'英格兰与苏格兰<br>缔结和约':'英格兰远航<br>抵达北美沿岸';
+ $('factC').textContent=later?'1504':'1498';
+ $('factCDesc').innerHTML=later?'爱尔兰<br>诺克多战役':'第二次远航<br>结果尚存争议';
+ $('periodTitle').textContent=!later?(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'英格兰与苏格兰分别统治'):year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国';
  renderEventList();renderPoints();
- // Deliberately do not pan, fit bounds, or reset zoom on time changes.
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
-function togglePlay(){if(timer){stopPlay();return}if(year===1500)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1500){stopPlay();return}setYear(year+1)},1250)}
+function togglePlay(){if(timer){stopPlay();return}if(year===1509)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1509){stopPlay();return}setYear(year+1)},1250)}
 async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
@@ -145,16 +171,21 @@ async function loadKingdomBoundaries(){
  }catch(err){setWarning('王国地理参考轮廓暂时不可用；地图事件与航线仍可独立浏览。此时不使用臆造历史边界。');}
 }
 function openPolity(group){
- const p=atlas.polities.find(x=>x.id===(group==='scotland'?'scotland':'england'));if(!p)return;
+ const p=atlasEarly.polities.find(x=>x.id===(group==='scotland'?'scotland':'england'));if(!p)return;
  const subtitle=group==='wales'?'英格兰王权统治下的威尔士（现代边界参考）':p.name;
  $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · 1497—1500</div><h2>'+escapeHTML(subtitle)+'</h2><p>'+escapeHTML(p.note)+'</p>'+listSources(p.source_ids);
  openPanel('dossier');
 }
 async function boot(){
  try{
-  const res=await fetch('data/atlas-1497-1500.json',{cache:'no-store'});if(!res.ok)throw new Error('HTTP '+res.status);
-  atlas=await res.json();
-  if(!atlas||!Array.isArray(atlas.events)||!Array.isArray(atlas.routes))throw new Error('数据结构错误');
+  const [res,laterRes]=await Promise.all([
+    fetch('data/atlas-1497-1500.json',{cache:'no-store'}),
+    fetch('data/atlas-1500-1509.json',{cache:'no-store'})
+  ]);
+  if(!res.ok||!laterRes.ok)throw new Error('历史切片未正确加载');
+  atlasEarly=await res.json();
+  atlasLater=await laterRes.json();
+  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places))throw new Error('历史数据结构错误');
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
