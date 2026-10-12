@@ -134,7 +134,8 @@
         "level": 2,
         "rationale": "为1497年远航提供政治授权，属于重要背景，但本身不是殖民地建立。",
         "review_status": "provisional"
-      }
+      },
+      "icon_code": "POL"
     },
     {
       "id": "bristol-sail-1497",
@@ -158,7 +159,8 @@
         "level": 3,
         "rationale": "英格兰王室支持的跨大西洋远航关键节点，改变后续海外探索的历史可能性。",
         "review_status": "provisional"
-      }
+      },
+      "icon_code": "EXP"
     },
     {
       "id": "landfall-1497",
@@ -183,7 +185,8 @@
         "level": 3,
         "rationale": "远航抵达北美是跨大西洋接触史的重大节点；地理精度低且绝不代表有效统治。",
         "review_status": "provisional"
-      }
+      },
+      "icon_code": "CLM"
     },
     {
       "id": "return-1497",
@@ -207,7 +210,8 @@
         "level": 1,
         "rationale": "此次航行的回程记录，作为主远航事件的补充。",
         "review_status": "provisional"
-      }
+      },
+      "icon_code": "EXP"
     },
     {
       "id": "patent-1498",
@@ -231,7 +235,8 @@
         "level": 1,
         "rationale": "第二份远航许可，主要为后续航行提供背景。",
         "review_status": "provisional"
-      }
+      },
+      "icon_code": "POL"
     },
     {
       "id": "departure-1498",
@@ -255,7 +260,8 @@
         "level": 2,
         "rationale": "第二次远航及结局不明，是主要研究问题，但证据不足以宣称新的殖民控制。",
         "review_status": "provisional"
-      }
+      },
+      "icon_code": "EXP"
     },
     {
       "id": "status-1500",
@@ -279,7 +285,8 @@
         "level": 1,
         "rationale": "阶段性历史认定；无明确地理发生点，不应使用地图点标记。",
         "review_status": "provisional"
-      }
+      },
+      "icon_code": "DOC"
     }
   ],
   "candidates": [
@@ -383,8 +390,8 @@
     }
   ],
   "visual_system": {
-    "version": "1.0",
-    "standard": "docs/EVENT_VISUAL_HIERARCHY.md",
+    "version": "2.0-approved",
+    "standard": "docs/ICON_SYSTEM_V2_APPROVED.md",
     "importance_independent_of_certainty": true,
     "levels": {
       "1": "地方细节或辅助背景",
@@ -396,6 +403,9 @@
       2
     ],
     "minor_explicit_opt_in": true,
-    "undocumented_significance_default": 1
+    "undocumented_significance_default": 1,
+    "sprite": "assets/atlas-icons.svg",
+    "catalog": "data/icon-categories.json",
+    "symbols": 16
   }
 }
