@@ -1,0 +1,101 @@
+{
+  "schema": "territory-transition-v2",
+  "template_only": true,
+  "stage": "research_draft",
+  "period": {
+    "previous_from": null,
+    "previous_to": null,
+    "next_from": null,
+    "next_to": null
+  },
+  "previous_snapshot": {
+    "year": null,
+    "source_file": "",
+    "active_stable_ids": [],
+    "historical_exits_kept_in_archive": []
+  },
+  "records": [],
+  "new_entities": [],
+  "annual_snapshots": [],
+  "cartography": {
+    "verified_new_or_changed_control_polygons": 0,
+    "unverified_reference_geometry_ids": [],
+    "open_spatial_questions": [],
+    "geojson_files": [],
+    "map_delta_file": null
+  },
+  "editorial": {
+    "ready_for_publication": false,
+    "reviewer": null,
+    "open_issues": [],
+    "source_registry_file": "",
+    "control_episode_file": "",
+    "handoff_file": "",
+    "archival_queue_file": "",
+    "last_verified_commit_sha": null
+  },
+  "instructions": "Copy this file, remove template_only or set false, populate previous snapshot from actual prior data, one records entry for EACH previous active stable_id, new_entities for newly tracked names, ten annual snapshots year-by-year. Keys with null are 'unknown': do not invent dates, coordinates or area. The _schema examples below are descriptions ONLY, not historical claims; drop template_record_shapes before validating real file.",
+  "template_record_shapes": {
+    "records": [],
+    "record_schema": {
+      "stable_id": "same-ID-as-previous-decade",
+      "name_zh": "",
+      "previous_controller": "",
+      "new_controller": null,
+      "parent_stable_id": null,
+      "previous_control_class": "",
+      "new_control_class": "",
+      "transition": "continued | expanded | contracted | transferred | ended | split_or_merged | uncertain_continuity | not_a_control_area",
+      "previous_status": "",
+      "next_status": "confirmed_active | confirmed_ended | disputed | unverified",
+      "historic_start_date": null,
+      "historic_end_date": null,
+      "last_documented_date": null,
+      "change_effective_date": null,
+      "source_ids": [],
+      "source_file_paths": [],
+      "evidence_scope": "",
+      "geography": {
+        "feature_ids": [],
+        "prior_geometry_source": null,
+        "current_geometry_source": null,
+        "geometry_type": "Point | LineString | Polygon | MultiPolygon | null",
+        "geometry_source_period": null,
+        "period_reverified": false,
+        "actual_historical_control_polygon_verified": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "uncertainty": "",
+        "draw_mode": "city_core_symbol | verified_solid | dashed_reference | no_area | political_relation_symbol"
+      },
+      "editorial_gate": "pending_history_and_map_review",
+      "notes": ""
+    },
+    "new_entities_schema": {
+      "stable_id": "unique-new-identity",
+      "parent_stable_id": null,
+      "name_zh": "",
+      "first_explicitly_mapped_year": null,
+      "classification": "existing_site_newly_mapped | documented_new_control | not_a_control_area",
+      "actual_acquisition_date": null,
+      "control_class": "",
+      "source_ids": [],
+      "source_file_paths": [],
+      "geometry": {
+        "actual_historical_control_polygon_verified": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "site_point | dashed_reference | verified_solid | no_area"
+      },
+      "review_status": "unreviewed"
+    },
+    "annual_snapshot_schema": {
+      "year": null,
+      "confirmed_active_stable_ids": [],
+      "unverified_continuity_stable_ids": [],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [],
+      "note": ""
+    }
+  }
+}
