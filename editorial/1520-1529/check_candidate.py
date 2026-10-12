@@ -24,7 +24,7 @@ def check():
     assert atlas["editorial_status"]=="CANDIDATES_ONLY_NOT_PUBLISHED_OR_EDITOR_APPROVED"
     assert atlas["routes"]==[] and atlas["colonial_polygons"]==[]
     events,places,sources=atlas["events"],atlas["places"],atlas["sources"]
-    assert (len(events),len(places),len(sources))==(23,7,36)
+    assert (len(events),len(places),len(sources))==(24,7,40)
     srcids={s["id"] for s in sources}
     assert len(srcids)==len(sources)
     assert all(urlsplit(s["url"]).scheme=="https" for s in sources)
@@ -47,7 +47,7 @@ def check():
         assert p["start_year"]<=1529 and p["observed_through_year"]>=1529,p["id"]
     assert not any("tournai" in r["id"].lower() for r in places),"Tournai English-held role ended 1519"
     assert {e["id"] for e in events}.isdisjoint({e["id"] for e in previous["events"]})
-    assert mapping["counts"]=={"research_events":26,"editorial_candidates":23,"held":3}
+    assert mapping["counts"]=={"research_events":27,"editorial_candidates":24,"held":3}
     assert len(mapping["mapping"])==24
     assert {m["editor_candidate_id"] for m in mapping["mapping"] if m["editor_candidate_id"]}=={e["id"] for e in events}
     assert delta["all_staged_source_records"]==len(sources)
@@ -65,10 +65,10 @@ def check():
     # Evidence-based sites added in the map-detail research pass.
     details=rd(HERE/"MAP_DETAIL_POINTS.geojson")
     locs=details["features"]
-    assert len(locs)==8
+    assert len(locs)==9
     assert all(f["geometry"]["type"]=="Point" for f in locs)
     idset={f["properties"]["id"] for f in locs}
-    assert len(idset)==8
+    assert len(idset)==9
     for f in locs:
         for srcid in f["properties"]["source_ids"]:
             assert any(s["id"]==srcid for s in sources),srcid
@@ -76,8 +76,8 @@ def check():
     monasteroris=next(e for e in events if e["id"]=="1521-MONASTERORIS")
     assert (monasteroris["lat"],monasteroris["lng"])==(53.34635313,-7.08543742)
     assert "friary" in monasteroris["geo_precision"]
-    assert len([x for x in events if x["id"] in ("1523-CESSFORD-SIEGE","1523-FERNIEHIRST-DEMOLISHED")])==2
-    assert all(e["lat"] is not None for e in events if e["id"] in ("1523-CESSFORD-SIEGE","1523-FERNIEHIRST-DEMOLISHED"))
+    assert len([x for x in events if x["id"] in ("1523-CESSFORD-SIEGE","1523-FERNIEHIRST-DEMOLISHED","1523-WARK-SCOTS-FRENCH-SIEGE")])==3
+    assert all(e["lat"] is not None for e in events if e["id"] in ("1523-CESSFORD-SIEGE","1523-FERNIEHIRST-DEMOLISHED","1523-WARK-SCOTS-FRENCH-SIEGE"))
     assert any(e["id"]=="1529-GUINES-LAWS" for e in events)
     return len(events),len(sources),len(places)
 
