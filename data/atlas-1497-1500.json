@@ -11,7 +11,8 @@
     "uncertainty": "Suggested routes are illustrative and are not georeferenced historical tracks. Landfall hypotheses are not confirmed landing points. No colonial possession polygons are asserted in North America.",
     "profits": "No reliable colony-related profit or forced-labor total is inferred for 1497–1500.",
     "monarch": "Henry VII, Kingdom of England; Scotland was a separate kingdom under James IV.",
-    "date_logic": "Each record carries start_year/end_year; the 10-year scale is interface ticks, not a historical time bucket."
+    "date_logic": "Each record carries start_year/end_year; the 10-year scale is interface ticks, not a historical time bucket.",
+    "prose_publication_rule": "Factual short prose in public cards, primary source links remain expandable"
   },
   "sources": [
     {
@@ -125,7 +126,7 @@
       "lat": 51.5,
       "lng": -0.13,
       "geo_precision": "representative-city",
-      "description": "英格兰国王亨利七世授予卡博特及其儿子远航和相关权利。1497年的航行有此法律背景；特许授权不等于已实际占领海外领土。",
+      "description": "1496年3月，英王亨利七世授予卡博特及其儿子跨大西洋远航特许状，允许他们为王室探索新的贸易通路。",
       "source_ids": [
         "bristol-patent-1496"
       ],
@@ -135,7 +136,8 @@
         "rationale": "为1497年远航提供政治授权，属于重要背景，但本身不是殖民地建立。",
         "review_status": "provisional"
       },
-      "icon_code": "POL"
+      "icon_code": "POL",
+      "short_description": "1496年3月，英王亨利七世授予卡博特及其儿子跨大西洋远航特许状，允许他们为王室探索新的贸易通路。"
     },
     {
       "id": "bristol-sail-1497",
@@ -149,7 +151,7 @@
       "lat": 51.4545,
       "lng": -2.5879,
       "geo_precision": "city",
-      "description": "约翰·卡博特率船员从布里斯托尔出航，尝试向西横跨大西洋。具体出航日、远洋航行路线没有可核实的精确轨迹。",
+      "description": "1497年5月，约翰·卡博特乘“马修号”从布里斯托尔启航，带领船员横渡大西洋，寻找通往亚洲的航路。",
       "source_ids": [
         "heritage-1497",
         "soncino-1497"
@@ -160,7 +162,8 @@
         "rationale": "英格兰王室支持的跨大西洋远航关键节点，改变后续海外探索的历史可能性。",
         "review_status": "provisional"
       },
-      "icon_code": "EXP"
+      "icon_code": "EXP",
+      "short_description": "1497年5月，约翰·卡博特乘“马修号”从布里斯托尔启航，带领船员横渡大西洋，寻找通往亚洲的航路。"
     },
     {
       "id": "landfall-1497",
@@ -174,7 +177,7 @@
       "lat": 48.8,
       "lng": -57.2,
       "geo_precision": "regional-symbol-only",
-      "description": "卡博特1497年抵达北美沿岸的历史事件得到史料支持，准确地点尚无定论。此符号位于争议区域中央，仅供地图引导，不能视为登陆坐标。同期存在为英格兰王权作出宣称的记载，但未建立永久殖民统治。",
+      "description": "1497年6月下旬，卡博特与船员望见北美沿岸，随后为英格兰王室提出海外土地权利主张。登陆地点在后来的历史研究中出现多种解释。",
       "source_ids": [
         "pasqualigo-1497",
         "heritage-landfall",
@@ -186,7 +189,8 @@
         "rationale": "远航抵达北美是跨大西洋接触史的重大节点；地理精度低且绝不代表有效统治。",
         "review_status": "provisional"
       },
-      "icon_code": "CLM"
+      "icon_code": "CLM",
+      "short_description": "1497年6月下旬，卡博特与船员望见北美沿岸，随后为英格兰王室提出海外土地权利主张。登陆地点在后来的历史研究中出现多种解释。"
     },
     {
       "id": "return-1497",
@@ -200,7 +204,7 @@
       "lat": 51.4545,
       "lng": -2.5879,
       "geo_precision": "city",
-      "description": "卡博特结束1497年航行返回布里斯托尔。该航行未形成持续性的英格兰殖民据点。",
+      "description": "1497年8月，卡博特的船返回布里斯托尔，向英王呈报航行见闻。",
       "source_ids": [
         "heritage-1497",
         "heritage-1498"
@@ -211,7 +215,8 @@
         "rationale": "此次航行的回程记录，作为主远航事件的补充。",
         "review_status": "provisional"
       },
-      "icon_code": "EXP"
+      "icon_code": "EXP",
+      "short_description": "1497年8月，卡博特的船返回布里斯托尔，向英王呈报航行见闻。"
     },
     {
       "id": "patent-1498",
@@ -225,7 +230,7 @@
       "lat": 51.5,
       "lng": -0.13,
       "geo_precision": "representative-city",
-      "description": "国王授予卡博特第二份特许状，允许筹备新的航行。该许可并不能证明新的殖民地已出现。",
+      "description": "1498年2月，亨利七世再次批准卡博特组织远航船队。",
       "source_ids": [
         "dcb-cabot",
         "heritage-1498"
@@ -236,7 +241,8 @@
         "rationale": "第二份远航许可，主要为后续航行提供背景。",
         "review_status": "provisional"
       },
-      "icon_code": "POL"
+      "icon_code": "POL",
+      "short_description": "1498年2月，亨利七世再次批准卡博特组织远航船队。"
     },
     {
       "id": "departure-1498",
@@ -250,7 +256,7 @@
       "lat": 51.4545,
       "lng": -2.5879,
       "geo_precision": "city",
-      "description": "1498年舰队约有五艘船只，后续航程及卡博特本人的结局仍然存在重大史料缺口。网页仅绘制可能远航方向的虚线，不做精确定位。",
+      "description": "1498年5月，卡博特率约五艘船再次从布里斯托尔出发。船队驶入大西洋，后来留下的航行消息十分有限。",
       "source_ids": [
         "heritage-1498",
         "dcb-cabot"
@@ -261,7 +267,8 @@
         "rationale": "第二次远航及结局不明，是主要研究问题，但证据不足以宣称新的殖民控制。",
         "review_status": "provisional"
       },
-      "icon_code": "EXP"
+      "icon_code": "EXP",
+      "short_description": "1498年5月，卡博特率约五艘船再次从布里斯托尔出发。船队驶入大西洋，后来留下的航行消息十分有限。"
     },
     {
       "id": "status-1500",
@@ -275,7 +282,7 @@
       "lat": 49.4,
       "lng": -60.9,
       "geo_precision": "regional-symbol-only",
-      "description": "尽管有远航与主权宣称的记载，此阶段不应绘制北美英格兰有效控制区。这里的'无已证实据点'是史料现状说明，并非对所有可能短期停靠活动的否定。",
+      "description": "1500年前后，英格兰商人与王室继续关注北美航路，西航许可与王室账簿成为这一时期探索活动的重要线索。",
       "source_ids": [
         "heritage-1497",
         "heritage-1498"
@@ -286,7 +293,8 @@
         "rationale": "阶段性历史认定；无明确地理发生点，不应使用地图点标记。",
         "review_status": "provisional"
       },
-      "icon_code": "DOC"
+      "icon_code": "DOC",
+      "short_description": "1500年前后，英格兰商人与王室继续关注北美航路，西航许可与王室账簿成为这一时期探索活动的重要线索。"
     }
   ],
   "candidates": [
