@@ -30,3 +30,8 @@
 - `c71410a9695c`：研究CI增加提取HTML内联JavaScript、Node `--check`语法校验；原自动历史结构检查保留。
 - 最终CI状态应以GitHub Actions当前提交实际结论为准。先前版本`df6082a942...`已确认研究数据、跨年持续性及旧UI合同三类PR检查均成功；追加语法检查等待相应提交运行后核对。
 - 本独立研究分支PR #25已建立： https://github.com/1959124923wyz-sys/love-British-TV/pull/25 。
+
+## 研究包最终延续交接（新增）
+
+- `c87778d06a4e5fef7464a67cdc3dbe48495e8c6e`：保存`NEXT_DECADE_1539_1540_RESEARCH_SEED.json`，继承1539年的8个政治身份至1540年代待审核队列，不冒称新年代已证实。
+- `4c6b8145a28cd7c66acc22ab51999f130527d5b9`：加强`validate_research.py`，核对1539→1540过渡文件完整性。PR #25上该SHA对应的历史数据检查、跨十年研究检查和已批准UI合同检查**全部成功**。新提交后以新的SHA运行结果为最终准据。
