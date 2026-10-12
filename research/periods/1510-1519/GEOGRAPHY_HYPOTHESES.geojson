@@ -83,7 +83,15 @@
         "rights": "underlying OSM ODbL, GeoNames CC BY"
       }
     },
-    "inherited_geometries_permission": "Research-derived land/site visual envelopes only, no scanned maps copied, original source metadata and rights preserved"
+    "inherited_geometries_permission": "Research-derived land/site visual envelopes only, no scanned maps copied, original source metadata and rights preserved",
+    "new_larger_tournaisis_source": {
+      "source_id": "WALLONIA-ATLAS-1513-1519",
+      "url": "https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-sous-influence-anglaise",
+      "source_kind": "modern historical atlas",
+      "status": "regional influence documented in modern cartography, detailed 1513-1519 parish-level effective control unverified",
+      "rights": "© Institut Destrée / SEGEFA; digital copying or vector tracing not authorized",
+      "implication": "A 1.15km city circle was chosen as marker footprint, it substantially underrepresents scope of the regional Tournaisis candidate. The GIS feature must never be used as territorial-control polygon."
+    }
   },
   "features": [
     {
@@ -518,7 +526,7 @@
       },
       "properties": {
         "id": "TOURNAI-1513-1519-URBAN-VISUAL-FOOTPRINT",
-        "label": "图尔奈1513—1519年英王占领城市的大致位置（示意）",
+        "label": "图尔奈市城中心示意圈；外围Tournaisis还需单独核实司法行政范围",
         "period_from": 1513,
         "period_to": 1519,
         "last_occupation_month": "1519-02",
@@ -534,7 +542,10 @@
         "visualization_only": true,
         "dashed": true,
         "geometry_note": "Circle of 1.15km drawn around modern GeoNames center as visual symbol, radius editorial choice, NOT measured 1513 city walls, occupation possibly extended beyond walls. It must disappear after Feb 1519 if exact-date filtering.",
-        "rights": "self-generated circle + GeoNames modern coordinate CC BY"
+        "rights": "self-generated circle + GeoNames modern coordinate CC BY",
+        "rural_extent_excluded": "Tournaisis surrounds Tournai city. Institutional historical atlas maps wider English influence, not all parcels yet verified as direct English governance.",
+        "superseding_cartographic_research_source": "WALLONIA-ATLAS-1513-1519",
+        "cartographic_limit": "marker_not_extent_1.15km_radius_must_not_be_taken_as_all_English_influence"
       }
     },
     {
