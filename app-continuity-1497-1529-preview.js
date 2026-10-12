@@ -27,7 +27,12 @@ const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1))
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
 function occurredByYear(item,selectedYear){return Number.isFinite(Number(item?.year))&&Number(item.year)<=selectedYear;}
-const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary','associated-modern-town-centre'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
+// Historical facts may be well sourced while modern geocoding is only approximate.
+const isUncertain=item=>{
+ const precision=String(item?.geo_precision||'').toLowerCase();
+ return /regional|associated|representative|approximate|modern|unverified|reference|unknown|not[-_ ]?(?:historic|historical|exact|geocoded|measured|precise)/.test(precision)
+  || /uncertain/i.test(String(item?.certainty||''));
+};
 const fallbackCodes={political:'POL',voyage:'EXP',colonial_control:'TER',war:'WAR',repression:'REP',enslavement:'SLV',slavery:'SLV',forced_labour:'LAB',wealth_flow:'ECO',economy:'ECO',displacement:'DIS',famine:'FAM',resistance:'RES',abolition:'ABO',independence:'IND',infrastructure:'INF',claim:'CLM',documentary:'DOC',status:'DOC'};
 let iconCatalog=null;
 const iconMeta=item=>{
@@ -39,7 +44,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  const meta=iconMeta(item);
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
-const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，地点待考':'')+'">'+svgIcon(item)+'</div>';
+const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，历史定位为参考位置':'')+'">'+svgIcon(item)+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
 function syncPanels(){
