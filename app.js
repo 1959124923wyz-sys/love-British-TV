@@ -383,7 +383,7 @@ function renderMilestones(){
   const yearEvents=all.filter(e=>e.year===y);
   const peak=Math.max(...yearEvents.map(e=>levelOf(e)));
   const percent=(y-1497)/22*100;
-  return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+'" style="left:'+percent+'%" data-year="'+y+'" title="'+escapeHTML(y+'年 · '+(y<=year?yearEvents.map(e=>e.name).slice(0,3).join(' / '):['待到该年揭晓']).join(' / '))+'" aria-label="'+y+'年：'+yearEvents.length+'个事件"><span>'+y+'</span></button>';
+  return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+'" style="left:'+percent+'%" data-year="'+y+'" title="'+escapeHTML(y+'年 · '+(y<=year?yearEvents.map(e=>e.name).slice(0,3).join(' / '):'待到该年揭晓'))+'" aria-label="'+y+'年：'+yearEvents.length+'个事件"><span>'+y+'</span></button>';
  }).join('');
  rail.querySelectorAll('.milestone-dot').forEach(node=>node.addEventListener('click',()=>{
   const y=Number(node.dataset.year);stopPlay();setYear(y);
