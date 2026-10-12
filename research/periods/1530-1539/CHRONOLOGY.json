@@ -513,9 +513,57 @@
       "map_area_effect": "NO new verified territorial polygons",
       "fiscal_amount": null,
       "coordinate_precision": "not_verified_archcliffe_site"
+    },
+    {
+      "year": 1536,
+      "title_zh": "伦敦商人理查德·霍尔组织船队抵达纽芬兰",
+      "icon_code": "EXP",
+      "location_hint": "纽芬兰（具体登陆地未获证实）",
+      "coordinate": null,
+      "date_precision": "year",
+      "source_ids": [
+        "NA-DCB-HORE-QUINN",
+        "NA-MUN-CARTIER-HORE"
+      ],
+      "summary_zh": "1536年Richard Hore商业及航海远征到纽芬兰捕鱼和考察。Quinn校勘指出后世Hakluyt版本相互矛盾，无法确认全部航线或某些逸闻；不能画英国殖民地或杜撰固定航线。",
+      "control_effect": "voyage_without_settlement_or_governance",
+      "significance": {
+        "level": 2
+      },
+      "review_status": "source_anchored_candidate",
+      "category": "EXP",
+      "id": "1530S-E023",
+      "map_area_effect": "no_proven_new_sovereign_polygon",
+      "fiscal_amount": null
+    },
+    {
+      "year": 1537,
+      "title_zh": "爱尔兰议会通过英语、衣着及行为习惯同化法令",
+      "icon_code": "REP",
+      "location_hint": "都柏林立法，爱尔兰各地执行程度不明",
+      "coordinate": {
+        "lat": 53.3498,
+        "lng": -6.2603
+      },
+      "date_precision": "year",
+      "source_ids": [
+        "IR-CAMBRIDGE-LANGUAGE-1537",
+        "IR-CAMBRIDGE-STATUTE-1537",
+        "IR-CONNOLLY-STATUTE-1536-37"
+      ],
+      "summary_zh": "1537年《英式秩序、服饰及语言法》试图限制爱尔兰传统衣着与语言，法条记载1539年5月部分条款生效。法律意图确凿，但不得由此断言所有盖尔居民实际改用英语或英王治理全岛。",
+      "control_effect": "coercive_anglicisation_legislation_enforcement_not_proven",
+      "significance": {
+        "level": 1
+      },
+      "review_status": "source_anchored_candidate",
+      "category": "REP",
+      "id": "1530S-E024",
+      "map_area_effect": "no_proven_new_sovereign_polygon",
+      "fiscal_amount": null
     }
   ],
-  "count": 22,
+  "count": 24,
   "confirmed_control_polygons": 0,
   "editorial_notes": "Maynooth site centroid is modern mapped attraction not siege-line. Archcliffe event is NOT located at Moats Bulwark: remove approximate coordinate until official site center verified."
 }
