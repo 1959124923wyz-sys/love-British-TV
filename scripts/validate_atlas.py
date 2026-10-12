@@ -175,8 +175,8 @@ assert geo_layer["properties"]["fill_authorized"] is False
 assert geo_layer["properties"]["active_years"] == [1513,1514,1515,1516,1517,1518]
 assert "data/atlas-1510-1519.json" in app
 assert "data/geography-1510-1519-hypotheses.geojson" in app
-assert "year>=1513&&year<=1518" in app
-assert 'id="chapterThree"' in html and 'max="1519"' in html
+assert "p.valid_years?.includes(year)" in app, "Tournaisis appears only during supported 1513–1518 years"
+assert 'id="chapterThree"' in html and 'id="chapterFour"' in html and 'max="1529"' in html
 assert "renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app
 assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
 assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
@@ -224,7 +224,7 @@ for f in footprints["features"]:
     assert polygons and all(ring[0]==ring[-1] for poly in polygons for ring in poly), f["id"]
 assert "function renderTerritories()" in app
 assert "map.createPane('territoryPane')" in app and "ensureTerritorialPatterns()" in app
-assert "const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=year))]" in app
+assert 'y>=1497&&y<=year' in app and 'atlasFourth.events' in app, 'Milestones must remain chronological across all four chapters'
 assert 'id="toggleTerritorialFootprints"' in html
 assert (ROOT/"data/TERRITORIAL_FOOTPRINT_SOURCES.md").is_file()
 
