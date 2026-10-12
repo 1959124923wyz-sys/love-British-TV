@@ -23,3 +23,5 @@
 3. 各地图年份切换保留视角与事件列表，既有同地点SVG图标聚合保持主编规定；
 4. 如要沿用本期GeoJSON，确保可关闭、淡色虚线，旧1488法令折线不能误当1520王权实际司法区；
 5. 浏览器/Pages实际交互检查及部署仍由主编执行。
+
+**2026-10-12 GitHub 草稿审查入口：**[PR #8 完整历史研究](https://github.com/1959124923wyz-sys/love-British-TV/pull/8)；[PR #9 1520—1529年主编预审包](https://github.com/1959124923wyz-sys/love-British-TV/pull/9)。两份 PR 均为 Draft，main 不受本轮影响。
