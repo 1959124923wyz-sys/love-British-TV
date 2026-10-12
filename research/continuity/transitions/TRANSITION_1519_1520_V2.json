@@ -1,0 +1,543 @@
+{
+  "schema": "territory-transition-v2",
+  "template_only": false,
+  "stage": "research_exemplar_not_publication_approved",
+  "period": {
+    "previous_from": 1510,
+    "previous_to": 1519,
+    "next_from": 1520,
+    "next_to": 1529
+  },
+  "previous_snapshot": {
+    "year": 1519,
+    "source_file": "main:data/atlas-1510-1519.json",
+    "active_stable_ids": [
+      "calais-crown",
+      "dublin-pale",
+      "channel-jersey",
+      "isle-of-man",
+      "orkney-scotland",
+      "shetland-scotland"
+    ],
+    "historical_exits_kept_in_archive": [
+      "tournai-occupied-city-1513"
+    ]
+  },
+  "records": [
+    {
+      "stable_id": "calais-crown",
+      "name_zh": "加来：英王在法国的控制据点",
+      "previous_controller": "Kingdom of England",
+      "new_controller": "Kingdom of England",
+      "parent_stable_id": null,
+      "previous_control_class": "direct_urban_control",
+      "new_control_class": "direct_urban_control",
+      "transition": "continued",
+      "previous_status": "previously_tracked_in_main_through_1519",
+      "next_status": "confirmed_active",
+      "historic_start_date": "1347",
+      "historic_end_date": null,
+      "last_documented_date": "1529",
+      "change_effective_date": null,
+      "source_ids": [
+        "TNA-FRENCH-LANDS",
+        "CAL-MURPHY-2025-GUINES"
+      ],
+      "source_file_paths": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "evidence_scope": "1520s scholar/project documented ongoing named governmental center; no audited precise rural outer border",
+      "geography": {
+        "feature_ids": [
+          "calais-crown"
+        ],
+        "prior_geometry_source": "data/french-urban-control-1500-1519.geojson#calais-urban-core-1497-1519",
+        "current_geometry_source": "data/french-urban-control-1500-1519.geojson#calais-urban-core-1497-1519",
+        "geometry_type": "Point",
+        "geometry_source_period": "1497–1519 (map symbol) not proof of 1529 survey",
+        "period_reverified": false,
+        "actual_historical_control_polygon_verified": false,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "uncertainty": "outer historical boundary unmeasured",
+        "draw_mode": "city_core_symbol"
+      },
+      "editorial_gate": "research_transition_only_no_automatic_production_approval",
+      "notes": "1520s research confirms continued border governance; Guînes separately identified but is not a newly conquered district"
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name_zh": "都柏林：英王在爱尔兰的行政核心之一",
+      "previous_controller": "Kingdom of England (through local deputy officials)",
+      "new_controller": "Kingdom of England (through local deputy officials)",
+      "parent_stable_id": null,
+      "previous_control_class": "crown_administration_core_not_entire_island",
+      "new_control_class": "crown_administration_core_not_entire_island",
+      "transition": "continued",
+      "previous_status": "previously_tracked_in_main_through_1519",
+      "next_status": "confirmed_active",
+      "historic_start_date": null,
+      "historic_end_date": null,
+      "last_documented_date": "1529",
+      "change_effective_date": null,
+      "source_ids": [
+        "EGAN-2024-EHR",
+        "IR-ELLIS-2023"
+      ],
+      "source_file_paths": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "evidence_scope": "1520s scholar/project documented ongoing named governmental center; no audited precise rural outer border",
+      "geography": {
+        "feature_ids": [
+          "dublin-pale"
+        ],
+        "prior_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-dublin-pale",
+        "current_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-dublin-pale",
+        "geometry_type": "Point",
+        "geometry_source_period": "1497–1519 (map symbol) not proof of 1529 survey",
+        "period_reverified": false,
+        "actual_historical_control_polygon_verified": false,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "uncertainty": "outer historical boundary unmeasured",
+        "draw_mode": "political_relation_symbol"
+      },
+      "editorial_gate": "research_transition_only_no_automatic_production_approval",
+      "notes": "Surrey 1520-22 and later deputies change officeholder not the entire area's control; boundaries need independent tax and legal review"
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name_zh": "泽西岛：英王属地",
+      "previous_controller": "English Crown with local laws",
+      "new_controller": "English Crown with local laws",
+      "parent_stable_id": null,
+      "previous_control_class": "crown_dependency_not_direct_english_county",
+      "new_control_class": "crown_dependency_not_direct_english_county",
+      "transition": "uncertain_continuity",
+      "previous_status": "previously_tracked_in_main_through_1519",
+      "next_status": "unverified",
+      "historic_start_date": null,
+      "historic_end_date": null,
+      "last_documented_date": "1519",
+      "change_effective_date": null,
+      "source_ids": [
+        "JERSEY-HISTORY-GOV"
+      ],
+      "source_file_paths": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "evidence_scope": "Carried administrative/legal affiliation identity; this bundle has no independent original parish/island act document rechecked in 1520s. Pending source audit.",
+      "geography": {
+        "feature_ids": [
+          "channel-jersey"
+        ],
+        "prior_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-channel-jersey",
+        "current_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-channel-jersey",
+        "geometry_type": "Point",
+        "geometry_source_period": "1497–1519 (map symbol) not proof of 1529 survey",
+        "period_reverified": false,
+        "actual_historical_control_polygon_verified": false,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "uncertainty": "outer historical boundary unmeasured",
+        "draw_mode": "political_relation_symbol"
+      },
+      "editorial_gate": "research_transition_only_no_automatic_production_approval",
+      "notes": "Continued in 1520s candidate; verify evidence applicable to each decade and avoid treating all crown dependencies as directly administered colonies"
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name_zh": "马恩岛：特殊领主制度",
+      "previous_controller": "Stanley family lordship under distinct legal system",
+      "new_controller": "Stanley family lordship under distinct legal system",
+      "parent_stable_id": null,
+      "previous_control_class": "autonomous_lordship_not_english_crown_county",
+      "new_control_class": "autonomous_lordship_not_english_crown_county",
+      "transition": "uncertain_continuity",
+      "previous_status": "previously_tracked_in_main_through_1519",
+      "next_status": "unverified",
+      "historic_start_date": null,
+      "historic_end_date": null,
+      "last_documented_date": "1519",
+      "change_effective_date": null,
+      "source_ids": [
+        "CAMBRIDGE-LORDSHIP-MAN"
+      ],
+      "source_file_paths": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "evidence_scope": "Carried administrative/legal affiliation identity; this bundle has no independent original parish/island act document rechecked in 1520s. Pending source audit.",
+      "geography": {
+        "feature_ids": [
+          "isle-of-man"
+        ],
+        "prior_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-isle-of-man",
+        "current_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-isle-of-man",
+        "geometry_type": "Point",
+        "geometry_source_period": "1497–1519 (map symbol) not proof of 1529 survey",
+        "period_reverified": false,
+        "actual_historical_control_polygon_verified": false,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "uncertainty": "outer historical boundary unmeasured",
+        "draw_mode": "political_relation_symbol"
+      },
+      "editorial_gate": "research_transition_only_no_automatic_production_approval",
+      "notes": "Do not replace crosshatch with direct English solid control"
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name_zh": "奥克尼：苏格兰王权相关群岛",
+      "previous_controller": "Kingdom of Scotland",
+      "new_controller": "Kingdom of Scotland",
+      "parent_stable_id": null,
+      "previous_control_class": "scottish_crown_territory_not_english_colony",
+      "new_control_class": "scottish_crown_territory_not_english_colony",
+      "transition": "uncertain_continuity",
+      "previous_status": "previously_tracked_in_main_through_1519",
+      "next_status": "unverified",
+      "historic_start_date": null,
+      "historic_end_date": null,
+      "last_documented_date": "1519",
+      "change_effective_date": null,
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "source_file_paths": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "evidence_scope": "Carried administrative/legal affiliation identity; this bundle has no independent original parish/island act document rechecked in 1520s. Pending source audit.",
+      "geography": {
+        "feature_ids": [
+          "orkney-scotland"
+        ],
+        "prior_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-orkney-scotland",
+        "current_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-orkney-scotland",
+        "geometry_type": "Point",
+        "geometry_source_period": "1497–1519 (map symbol) not proof of 1529 survey",
+        "period_reverified": false,
+        "actual_historical_control_polygon_verified": false,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "uncertainty": "outer historical boundary unmeasured",
+        "draw_mode": "political_relation_symbol"
+      },
+      "editorial_gate": "research_transition_only_no_automatic_production_approval",
+      "notes": "Scotland remains separate kingdom; distinguish from English imperial holdings"
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name_zh": "设得兰：苏格兰王权相关群岛",
+      "previous_controller": "Kingdom of Scotland",
+      "new_controller": "Kingdom of Scotland",
+      "parent_stable_id": null,
+      "previous_control_class": "scottish_crown_territory_not_english_colony",
+      "new_control_class": "scottish_crown_territory_not_english_colony",
+      "transition": "uncertain_continuity",
+      "previous_status": "previously_tracked_in_main_through_1519",
+      "next_status": "unverified",
+      "historic_start_date": null,
+      "historic_end_date": null,
+      "last_documented_date": "1519",
+      "change_effective_date": null,
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "source_file_paths": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "evidence_scope": "Carried administrative/legal affiliation identity; this bundle has no independent original parish/island act document rechecked in 1520s. Pending source audit.",
+      "geography": {
+        "feature_ids": [
+          "shetland-scotland"
+        ],
+        "prior_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-shetland-scotland",
+        "current_geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-shetland-scotland",
+        "geometry_type": "Point",
+        "geometry_source_period": "1497–1519 (map symbol) not proof of 1529 survey",
+        "period_reverified": false,
+        "actual_historical_control_polygon_verified": false,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "uncertainty": "outer historical boundary unmeasured",
+        "draw_mode": "political_relation_symbol"
+      },
+      "editorial_gate": "research_transition_only_no_automatic_production_approval",
+      "notes": "Scotland remains independent; island political identity not automatically English"
+    }
+  ],
+  "new_entities": [
+    {
+      "stable_id": "guines-crown-1520s",
+      "parent_stable_id": "calais-crown",
+      "name_zh": "吉讷英王既有边境要塞",
+      "first_explicitly_mapped_year": 1520,
+      "classification": "existing_site_newly_mapped",
+      "actual_acquisition_date": null,
+      "control_class": "fortified_frontier_governance_not_new_conquest",
+      "source_ids": [
+        "CAL-ROYAL-HRP-1520",
+        "CAL-MURPHY-2025-GUINES"
+      ],
+      "source_file_paths": [
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry": {
+        "actual_historical_control_polygon_verified": false,
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "site_point"
+      },
+      "review_status": "research_only",
+      "notes": "New independent map icon for a pre-existing English fortified town, NOT new sovereignty or area."
+    }
+  ],
+  "annual_snapshots": [
+    {
+      "year": 1520,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "1519 handover: Tournai excluded; Guînes newly indexed existing border town."
+    },
+    {
+      "year": 1521,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1522,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1523,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1524,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1525,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1526,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1527,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1528,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    },
+    {
+      "year": 1529,
+      "confirmed_active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "guines-crown-1520s"
+      ],
+      "unverified_continuity_stable_ids": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "independent_political_entities": [
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "note": "Research-only carry forward; unverified island-specific 1520s archival acts not promoted to direct English control."
+    }
+  ],
+  "cartography": {
+    "verified_new_or_changed_control_polygons": 0,
+    "unverified_reference_geometry_ids": [
+      "calais-1500-attested-sites-hull-only",
+      "irish-pale-1500-presentation-envelope",
+      "irish-pale-1488-legal-frontier-test-v1"
+    ],
+    "open_spatial_questions": [
+      "Guînes farm/parish 1529 act territorial implementation remains undetermined.",
+      "Ireland Pale 1488 legal dyke cannot be treated as 1520 validated actual control boundary."
+    ],
+    "geojson_files": [
+      "research/continuity/staged/french-urban-control-1497-1529.geojson",
+      "research/continuity/staged/political-relations-1500-1529.geojson",
+      "research/continuity/staged/geography-hypotheses-1500-1529.geojson"
+    ],
+    "map_delta_file": "research/continuity/staged/geography-hypotheses-1500-1529.geojson"
+  },
+  "editorial": {
+    "ready_for_publication": false,
+    "reviewer": null,
+    "open_issues": [
+      "Prior six places accounted for; exact outer control limits unknown.",
+      "Guînes new map feature is not area expansion.",
+      "Separate early government possession of Calais vs dates of 1520s re-recording."
+    ],
+    "source_registry_file": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json#sources",
+    "control_episode_file": "research/territorial-1520-1529-20261012:research/periods/1520-1529/CONTROL_EPISODES.json",
+    "handoff_file": "research/continuity/EDITOR_HANDOFF_1497_1529.md",
+    "archival_queue_file": "research/territorial-1520-1529-20261012:research/periods/1520-1529/ARCHIVAL_ACTION_QUEUE.json",
+    "last_verified_commit_sha": null
+  },
+  "disclaimer": "This case is an honest migration of 1519→1520 prior ledger to the reusable schema. The distinction 'uncertain_continuity' flags four special polity archival reviews, not a claim that island or Scots institutions truly disappeared. No historical border is invented."
+}
