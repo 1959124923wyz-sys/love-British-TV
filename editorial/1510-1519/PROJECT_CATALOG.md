@@ -42,3 +42,9 @@
 - 依据保留现代坐标点以便导航，但不允许把它们自动转为古代行政疆界。虚线推测图仅研究用途。
 
 **GitHub审核入口**：本期资料整理草稿 [PR #7](https://github.com/1959124923wyz-sys/love-British-TV/pull/7)；原始深度研究 [PR #6](https://github.com/1959124923wyz-sys/love-British-TV/pull/6)。公开网站主干没有因本任务改变。
+
+
+## 图尔奈地方辖区新增地图源（2026-10-12）
+- **主编候选**：[TOURNAISIS_OPTIONAL_OVERLAY.geojson](TOURNAISIS_OPTIONAL_OVERLAY.geojson)，从专项研究分支独立生成的参考范围（19 Feature），包含全部研究原来源与版权状态；不用扫描/描摹瓦隆历史地图和UNamur受保护历史地理图。
+- **研究文档**：`research/territorial-1510-1519-20261012/research/periods/1510-1519/TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json`（11种来源、8项判断）及同目录 GeoJSON原件。
+- **上线准则**：[TOURNAISIS_PUBLISH_GATE.md](TOURNAISIS_PUBLISH_GATE.md)，支持沿用main的独立`groups.hypotheses`图层，1513 开始、1519年2月结束英王城市占领；外围研究包络只显示于1513—1518年末。对主干公开网站无自动代码修改。
