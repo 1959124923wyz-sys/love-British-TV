@@ -467,36 +467,33 @@ function renderMilestones(){
  }));
 }
 function setYear(v){
- const next=Math.max(1497,Math.min(1519,Math.round(Number(v)||1497)));
- const chosen=next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
+ const next=Math.max(1497,Math.min(1529,Math.round(Number(v)||1497)));
+ const chosen=next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
  if(!chosen)return;
- // Keep the already open dossier while scrubbing; clear details only when rewinding before the event.
+ // Keep map viewport and open dossier; avoid displaying a selected event from the future.
  if(selectedItemYear!==null&&selectedItemYear>next){
   selected='';selectedItemYear=null;
-  $('dossierBody').innerHTML='<div class="dossier-kicker">历史地图 · '+next+'年</div><h2>当年历史</h2><p>请在地图或事件列表中选择此时已经发生的历史记录。</p>';
+  $('dossierBody').innerHTML='<div class="dossier-kicker">历史地图 · '+next+'年</div><h2>当年历史</h2><p>请选择此时已发生的历史记录。</p>';
  }
  year=next;atlas=chosen;
  $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
- const first=year<1500,third=year>=1510,second=!first&&!third;
- $('chapterNav').textContent=third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
- $('chapterNavName').textContent=third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
- $('chapterLabel').textContent=third?'CHAPTER 003 / 1510—1519':second?'CHAPTER 002 / 1500—1509':'CHAPTER 001 / 1497—1499';
- $('chapterTitlePrimary').textContent=third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
- $('chapterTitleSecondary').textContent=third?'海峡':second?'的第二程':'的第一道声索';
- $('chapterIntro').textContent=third?atlasThird.intro.description:second?atlasLater.intro.description:earlyIntro;
- // Front-page fact cards also obey the selected year; do not reveal later battles or treaties.
- $('factA').textContent=third?(year>=1513?'1513':'—'):second?'加来':'0';
- $('factADesc').innerHTML=third?(year>=1513?'弗洛登战役<br>苏格兰国王阵亡':''):second?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
- $('factB').textContent=third?(year>=1513?'1513':'—'):second?(year>=1502?'1502':'—'):'1497';
- $('factBDesc').innerHTML=third?(year>=1513?'英军占领<br>图尔奈':''):second?(year>=1502?'英格兰与苏格兰<br>缔结和约':''):'英格兰远航<br>抵达北美沿岸';
- $('factC').textContent=third?(year>=1519?'1519':'—'):second?(year>=1504?'1504':'—'):(year>=1498?'1498':'—');
- $('factCDesc').innerHTML=third?(year>=1519?'英军撤离<br>图尔奈':''):second?(year>=1504?'爱尔兰<br>诺克多战役':''):(year>=1498?'第二次远航<br>后续出航':'');
- $('periodTitle').textContent=third?(year===1513?'亨利八世 · 海峡战事':year===1519?'亨利八世 · 图尔奈交还':'亨利八世 · 英格兰王国'):second?(year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国'):(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国');
- $('chapterOne').classList.toggle('active',first);
- $('chapterTwo').classList.toggle('active',second);
- $('chapterThree').classList.toggle('active',third);
- $('timelineContext').textContent=third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
- $('timelineNotice').textContent='历史事件逐年出现；已发生事件在本章保留，政治控制按实际有效年份延续。';
+ const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520;
+ $('chapterNav').textContent=fourth?'历史地图 · 第四章（研究预览）':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
+ $('chapterNavName').textContent=fourth?'边区与远航':third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
+ $('chapterLabel').textContent=fourth?'CHAPTER 004 / 1520—1529':third?'CHAPTER 003 / 1510—1519':second?'CHAPTER 002 / 1500—1509':'CHAPTER 001 / 1497—1499';
+ $('chapterTitlePrimary').textContent=fourth?'边区与':third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
+ $('chapterTitleSecondary').textContent=fourth?'远航':third?'海峡':second?'的第二程':'的第一道声索';
+ $('chapterIntro').textContent=fourth?(typeof atlasFourth.intro==='string'?atlasFourth.intro:atlasFourth.intro?.description||''):third?atlasThird.intro.description:second?atlasLater.intro.description:earlyIntro;
+ $('factA').textContent=fourth?'加来':third?(year>=1513?'1513':'—'):second?'加来':'0';
+ $('factADesc').innerHTML=fourth?'英王控制核心<br>持续存在':third?(year>=1513?'弗洛登战役<br>苏格兰国王阵亡':''):second?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
+ $('factB').textContent=fourth?(year>=1523?'1523':'—'):third?(year>=1513?'1513':'—'):second?(year>=1502?'1502':'—'):'1497';
+ $('factBDesc').innerHTML=fourth?(year>=1523?'边区战事':''):third?(year>=1513?'英军占领<br>图尔奈':''):second?(year>=1502?'英格兰与苏格兰<br>缔结和约':''):'英格兰远航<br>抵达北美沿岸';
+ $('factC').textContent=fourth?(year>=1527?'1527':'—'):third?(year>=1519?'1519':'—'):second?(year>=1504?'1504':'—'):(year>=1498?'1498':'—');
+ $('factCDesc').innerHTML=fourth?(year>=1527?'北美远航':''):third?(year>=1519?'英军撤离<br>图尔奈':''):second?(year>=1504?'爱尔兰<br>诺克多战役':''):(year>=1498?'第二次远航<br>后续出航':'');
+ $('periodTitle').textContent=fourth?'亨利八世 · 英格兰王国（研究预览）':third?'亨利八世 · 英格兰王国':second?(year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国'):(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国');
+ for(const [id,on] of [['chapterOne',first],['chapterTwo',second],['chapterThree',third],['chapterFour',fourth]])$(id).classList.toggle('active',on);
+ $('timelineContext').textContent=fourth?'第四章 · 1520—1529年候审事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
+ $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。第四章为研究预览。';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
