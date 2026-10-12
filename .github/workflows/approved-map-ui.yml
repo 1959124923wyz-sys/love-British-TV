@@ -1,0 +1,23 @@
+name: Approved map UI contract
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-approved-interaction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate approved map interaction contract
+        run: python3 scripts/validate_approved_ui.py
+      - name: Validate atlas sources and geometry
+        run: python3 scripts/validate_atlas.py
+      - name: Parse JavaScript
+        run: node --check app.js
