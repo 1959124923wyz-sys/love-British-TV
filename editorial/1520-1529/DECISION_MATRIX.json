@@ -2,8 +2,8 @@
   "schema": "1520-1529-editorial-decision-matrix-v1",
   "compiled": "2026-10-12",
   "counts": {
-    "research_events": 24,
-    "editorial_candidates": 21,
+    "research_events": 26,
+    "editorial_candidates": 23,
     "held": 3
   },
   "mapping": [
@@ -69,7 +69,9 @@
       "editor_candidate_id": "1521-MONASTERORIS",
       "decision": "CURATED_EDITORIAL_CANDIDATE",
       "source_ids": [
-        "IR-ELLIS-2023"
+        "IR-ELLIS-2023",
+        "IR-FRANCISCANS-MONASTERORIS",
+        "IR-NMS-MONASTERORIS-SMR"
       ],
       "reason": "Period event considered editorially significant; no invented map coordinate; remains chapter-list-only pending geocoding.",
       "importance_level": 2
@@ -245,7 +247,8 @@
       "source_ids": [
         "FR-MORLAIX-CITY-2022",
         "FR-MORLAIX-BAY-HERITAGE",
-        "FR-MURPHY-2021-SCORCHED"
+        "FR-MURPHY-2021-SCORCHED",
+        "FR-MORLAIX-CITY-MAG"
       ],
       "reason": "Editorial candidate may use explicitly modern symbolic city/harbour point, NOT historic footprint.",
       "importance_level": 2
@@ -257,7 +260,9 @@
       "decision": "CURATED_EDITORIAL_CANDIDATE",
       "source_ids": [
         "SC-MURPHY-2024-ANGLO-SCOTS",
-        "SC-MURPHY-2024-BOOK-ORIGINAL"
+        "SC-MURPHY-2024-BOOK-ORIGINAL",
+        "SC-SURREY-LETTER-1523-PRINTED",
+        "SC-BL-COTTON-BII"
       ],
       "reason": "Editorial candidate may use explicitly modern symbolic city/harbour point, NOT historic footprint.",
       "importance_level": 2
@@ -284,9 +289,36 @@
       ],
       "reason": "Period event considered editorially significant; no invented map coordinate; remains chapter-list-only pending geocoding.",
       "importance_level": 2
+    },
+    {
+      "original_event_id": "1523-CESSFORD-SIEGE",
+      "year": 1523,
+      "editor_candidate_id": "1523-CESSFORD-SIEGE",
+      "decision": "CURATED_EDITORIAL_CANDIDATE",
+      "source_ids": [
+        "SC-HES-CESSFORD-SM1710",
+        "SC-HES-CESSFORD-TROVE"
+      ],
+      "reason": "official listed archaeological site + contemporary letter/editorially safe short military event, not territorial rule",
+      "importance_level": 2
+    },
+    {
+      "original_event_id": "1523-FERNIEHIRST-DEMOLISHED",
+      "year": 1523,
+      "editor_candidate_id": "1523-FERNIEHIRST-DEMOLISHED",
+      "decision": "CURATED_EDITORIAL_CANDIDATE",
+      "source_ids": [
+        "SC-BL-COTTON-BII",
+        "SC-SURREY-LETTER-1523-PRINTED",
+        "SC-HES-FERNIEHIRST-LB13369"
+      ],
+      "reason": "official listed archaeological site + contemporary letter/editorially safe short military event, not territorial rule",
+      "importance_level": 2
     }
   ],
   "history_protected": true,
   "source_branch": "research/territorial-1520-1529-20261012",
-  "notes": "No two historically distinct events combined without retaining original IDs. Held macro-events remain research for mapping detailed raids."
+  "notes": "No two historically distinct events combined without retaining original IDs. Held macro-events remain research for mapping detailed raids.",
+  "last_updated": "2026-10-12",
+  "new_focus": "site-specific sieges and Friary/fort separation"
 }
