@@ -130,7 +130,7 @@ assert "expanded-event" in app
 assert "leaflet-marker-icon.atlas-flyout-icon" in css
 assert "background:transparent!important" in css
 assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
-assert "PILOT v1.2" in html
+assert "PILOT v1.3" in html
 
 # Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
@@ -176,7 +176,7 @@ assert "data/atlas-1510-1519.json" in app
 assert "data/geography-1510-1519-hypotheses.geojson" in app
 assert "year>=1513&&year<=1518" in app
 assert 'id="chapterThree"' in html and 'max="1519"' in html
-assert "renderEventList();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app
+assert "renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app
 assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
 assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
 # MAP-FIRST French urban control polygons are explicitly symbols, not surveyed historic city walls.
@@ -203,9 +203,30 @@ assert active_city_symbols(1519) == {"calais-crown"}
 assert "function renderControlAreas()" in app
 assert "controlAreaPane" in app
 assert "calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type)" in app
-assert "renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()" in app
+assert "renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()" in app
 assert 'id="toggleControlAreas"' in html
 assert (ROOT/"docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md").is_file()
+# v1.3: real coastline polygons and research-grade approximate historic territorial envelopes.
+footprints=json.loads((ROOT/"data/territorial-footprints-1497-1519.geojson").read_text(encoding="utf-8"))
+assert footprints["type"] == "FeatureCollection" and len(footprints["features"]) == 7
+control=next(f for f in footprints["features"] if f["id"] == "calais-pale-sourced-places-approx-1497-1519")
+assert control["properties"]["start_year"] == 1497 and control["properties"]["observed_through_year"] == 1519
+assert control["properties"]["geometry_role"] == "attested_settlement_envelope_not_surveyed_border"
+assert control["properties"]["display_group"] == "control"
+assert sum(f["properties"]["display_group"]=="political" for f in footprints["features"]) == 5
+assert sum(f["properties"]["display_group"]=="research" for f in footprints["features"]) == 1
+for f in footprints["features"]:
+    assert f["geometry"]["type"] in ("Polygon","MultiPolygon"), f["id"]
+    assert f["properties"]["historical_boundary_precision"], f["id"]
+    assert f["properties"]["start_year"]<=1500 and f["properties"]["observed_through_year"]>=1519
+    polygons=f["geometry"]["coordinates"] if f["geometry"]["type"]=="MultiPolygon" else [f["geometry"]["coordinates"]]
+    assert polygons and all(ring[0]==ring[-1] for poly in polygons for ring in poly), f["id"]
+assert "function renderTerritories()" in app
+assert "map.createPane('territoryPane')" in app and "ensureTerritorialPatterns()" in app
+assert "const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=year))]" in app
+assert 'id="toggleTerritorialFootprints"' in html
+assert (ROOT/"data/TERRITORIAL_FOOTPRINT_SOURCES.md").is_file()
+
 # v1.2 political relationship coverage and chronological-event reveal.
 relations=json.loads((ROOT/"data/political-relations-1500-1519.geojson").read_text(encoding="utf-8"))
 assert relations["type"]=="FeatureCollection" and len(relations["features"])==5
