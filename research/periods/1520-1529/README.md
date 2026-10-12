@@ -1,3 +1,7 @@
+**地图点位深挖更新（2026-10-12）**：已从31来源／24事件初稿扩至**54条研究来源、27条历史事件、10个有出处的地图细节点**。直接读 [MAP_DETAIL_REPORT.md](MAP_DETAIL_REPORT.md)、[MAP_SITES_DEEP_GEO.geojson](MAP_SITES_DEEP_GEO.geojson) 和 [MAP_DETAIL_SOURCES_1520S.json](MAP_DETAIL_SOURCES_1520S.json)，其余仍保留在本目录。主编审阅包为**24事件／7地点／49条链接来源**（见 PR #9），遗址对位一律不当16世纪的准确占领面。
+
+---
+
 # 爱英TV · 1520—1529年英国殖民实际控制资料包
 研究员1号，2026-10-12；资料分支 `research/territorial-1520-1529-20261012`；本目录尚未并入 `main`。
 
