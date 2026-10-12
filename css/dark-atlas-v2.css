@@ -399,3 +399,15 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .chapter-segment small{display:none!important}
  .chapter-track .chapter-segment{min-height:29px}
 }
+
+/* v1.1 MAP FIRST: sustained control (filled urban area-symbol) above incident markers' map backdrop. */
+.layer-dot.area-control{background:#9d73dd;border:2px solid #d8b7ff;width:14px;height:14px;box-sizing:border-box;border-radius:3px}
+.legend-items .swatch.city-occupation{display:inline-block;width:16px;height:13px;border:2px solid #c49be9;background:#8f62d6a6;border-radius:3px}
+.control-area-label{
+ display:inline-block;min-width:48px;padding:1px 5px;
+ color:#f7e7ff;font:700 11px/1.4 system-ui,"Noto Sans SC",sans-serif;letter-spacing:.5px;
+ text-align:center;white-space:nowrap;
+ text-shadow:0 1px 3px #13243c,0 0 5px #13243c,1px 1px #13243c,-1px -1px #13243c;
+ background:transparent;pointer-events:none;
+}
+.leaflet-controlAreaPane-pane,.leaflet-control-area-pane{pointer-events:auto}
