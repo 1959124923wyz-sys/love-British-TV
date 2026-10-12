@@ -1,0 +1,1686 @@
+{
+  "schema": "cross-period-control-timeline-v2",
+  "period": [
+    1497,
+    1529
+  ],
+  "compiled": "2026-10-12",
+  "branch": "research/territory-continuity-20261012",
+  "stage": "historical_research_and_PR9_editorial_candidate_NOT_main_published",
+  "base_sources": [
+    "main:data/atlas-1497-1500.json",
+    "main:data/atlas-1500-1509.json",
+    "main:data/atlas-1510-1519.json",
+    "research/continuity/TRANSITION_1519_1520.json",
+    "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+  ],
+  "semantic_rules": [
+    "Year end active does not imply each entire surrounding territory verified.",
+    "Guines name new in 1520s layer means new map point, not new political conquest.",
+    "1497-1499 atlas has no places array: missing data is not disappearance of real polity.",
+    "Tournai ends in 1519 February not 1518 treaty.",
+    "Orkney and Shetland belong Scotland; Man autonomous; Jersey Crown dependency: not English administered colonies.",
+    "City cores and regional pale envelopes are symbols not historical survey polygons."
+  ],
+  "stable_states": [
+    {
+      "stable_id": "calais-crown",
+      "display_name": "加来：英王在法国的控制据点",
+      "controller": "Kingdom of England",
+      "control_class": "direct_urban_control",
+      "map_relation": "English_royal_city",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1497,
+      "known_historic_start": "1347-08-03",
+      "known_historic_end": null,
+      "year_end_active": [
+        1497,
+        1498,
+        1499,
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": 1519,
+      "documented_or_researched_next_through": 1529,
+      "scope_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "TNA-FRENCH-LANDS"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "TNA-FRENCH-LANDS"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "TNA-FRENCH-LANDS"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "candidate_review_from_editorial_PR9"
+    },
+    {
+      "stable_id": "dublin-pale",
+      "display_name": "都柏林：英王在爱尔兰的行政核心之一",
+      "controller": "Kingdom of England (through local deputy officials)",
+      "control_class": "crown_administration_core_not_entire_island",
+      "map_relation": "limited_English_royal_administration",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1500,
+      "known_historic_start": null,
+      "known_historic_end": null,
+      "year_end_active": [
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": 1519,
+      "documented_or_researched_next_through": 1529,
+      "scope_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "EGAN-2024-EHR"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "EGAN-2024-EHR"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "EGAN-2024-EHR"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "candidate_review_from_editorial_PR9"
+    },
+    {
+      "stable_id": "channel-jersey",
+      "display_name": "泽西岛：英王属地",
+      "controller": "English Crown with local laws",
+      "control_class": "crown_dependency_not_direct_english_county",
+      "map_relation": "crown_dependency",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1500,
+      "known_historic_start": null,
+      "known_historic_end": null,
+      "year_end_active": [
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": 1519,
+      "documented_or_researched_next_through": 1529,
+      "scope_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "JERSEY-HISTORY-GOV"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "JERSEY-HISTORY-GOV"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "JERSEY-HISTORY-GOV"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "candidate_review_from_editorial_PR9"
+    },
+    {
+      "stable_id": "isle-of-man",
+      "display_name": "马恩岛：特殊领主制度",
+      "controller": "Stanley family lordship under distinct legal system",
+      "control_class": "autonomous_lordship_not_english_crown_county",
+      "map_relation": "autonomous_lordship",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1500,
+      "known_historic_start": null,
+      "known_historic_end": null,
+      "year_end_active": [
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": 1519,
+      "documented_or_researched_next_through": 1529,
+      "scope_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "CAMBRIDGE-LORDSHIP-MAN"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "CAMBRIDGE-LORDSHIP-MAN"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "CAMBRIDGE-LORDSHIP-MAN"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "candidate_review_from_editorial_PR9"
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "display_name": "奥克尼：苏格兰王权相关群岛",
+      "controller": "Kingdom of Scotland",
+      "control_class": "scottish_crown_territory_not_english_colony",
+      "map_relation": "independent_Scottish_non_English",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1500,
+      "known_historic_start": null,
+      "known_historic_end": null,
+      "year_end_active": [
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": 1519,
+      "documented_or_researched_next_through": 1529,
+      "scope_warning": "Scotland independent of English Crown; not English colonial territory.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "candidate_review_from_editorial_PR9"
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "display_name": "设得兰：苏格兰王权相关群岛",
+      "controller": "Kingdom of Scotland",
+      "control_class": "scottish_crown_territory_not_english_colony",
+      "map_relation": "independent_Scottish_non_English",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1500,
+      "known_historic_start": null,
+      "known_historic_end": null,
+      "year_end_active": [
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": 1519,
+      "documented_or_researched_next_through": 1529,
+      "scope_warning": "Scotland independent of English Crown; not English colonial territory.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "candidate_review_from_editorial_PR9"
+    },
+    {
+      "stable_id": "tournai-occupied-city-1513",
+      "display_name": "图尔奈：英王1513—1519年实际驻守并治理的城市",
+      "controller": "English Crown until return to France",
+      "control_class": "military_occupation_and_royal_urban_governance",
+      "map_relation": "temporary_English_occupied_city",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1513,
+      "known_historic_start": "1513-09-23",
+      "known_historic_end": "1519-02",
+      "year_end_active": [
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518
+      ],
+      "documented_last_in_main": 1518,
+      "documented_or_researched_next_through": null,
+      "scope_warning": "Physical transfer Feb 1519; no English 1519 year-end occupation.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "TOURNAI-MIL-MUSEUM",
+            "DAVIES-1998-TOURNAI",
+            "MURPHY-2014-TOURNAI"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "previously_main_documented_but_1520_decade_source_check_pending"
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "display_name": "吉讷：加来边区英王军事与定居管理中心",
+      "controller": "Kingdom of England",
+      "control_class": "fortified_frontier_governance_not_new_conquest",
+      "map_relation": "existing_English_Calais_child_site",
+      "map_group_id": "calais-crown",
+      "first_year_in_current_dataset": 1520,
+      "known_historic_start": null,
+      "known_historic_end": null,
+      "year_end_active": [
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": null,
+      "documented_or_researched_next_through": 1529,
+      "scope_warning": "Existing Calais border stronghold, newly separate marker != newly acquired land.",
+      "sources": [
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "CAL-ROYAL-HRP-1520",
+            "CAL-MURPHY-2025-GUINES"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "candidate_review_from_editorial_PR9"
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "display_name": "独立苏格兰王国",
+      "controller": "Kingdom of Scotland (James V)",
+      "control_class": "independent_kingdom_external_to_english_control",
+      "map_relation": "independent_Scottish_non_English",
+      "map_group_id": null,
+      "first_year_in_current_dataset": 1497,
+      "known_historic_start": null,
+      "known_historic_end": null,
+      "year_end_active": [
+        1497,
+        1498,
+        1499,
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529
+      ],
+      "documented_last_in_main": null,
+      "documented_or_researched_next_through": null,
+      "scope_warning": "Scotland independent of English Crown; not English colonial territory.",
+      "sources": [
+        {
+          "ref": "main:data/atlas-1497-1500.json#polities.scotland",
+          "ids": []
+        },
+        {
+          "ref": "research/continuity/TRANSITION_1519_1520.json#kingdom-of-scotland",
+          "ids": [
+            "SC-MURPHY-2024-ANGLO-SCOTS"
+          ]
+        },
+        {
+          "ref": "research/territorial-1520-1529-20261012:research/periods/1520-1529/CONTROL_EPISODES.json",
+          "ids": [
+            "SC-MURPHY-2024-ANGLO-SCOTS"
+          ]
+        }
+      ],
+      "geometry": {
+        "approved_actual_polygon": false,
+        "reference_only": true,
+        "area_sqkm": null
+      },
+      "publication_gate": "Scotland sovereign political background, never English-control color; modern outline not 1520 measured frontier"
+    }
+  ],
+  "year_end_snapshots": [
+    {
+      "year": 1497,
+      "period": "1497-1499",
+      "active_stable_ids": [
+        "calais-crown",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [],
+      "evidence_status": "city_core_and_kingdom_context_only_other_relations_not_structured_in_early_atlas",
+      "note": null
+    },
+    {
+      "year": 1498,
+      "period": "1497-1499",
+      "active_stable_ids": [
+        "calais-crown",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [],
+      "evidence_status": "city_core_and_kingdom_context_only_other_relations_not_structured_in_early_atlas",
+      "note": null
+    },
+    {
+      "year": 1499,
+      "period": "1497-1499",
+      "active_stable_ids": [
+        "calais-crown",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [],
+      "evidence_status": "city_core_and_kingdom_context_only_other_relations_not_structured_in_early_atlas",
+      "note": null
+    },
+    {
+      "year": 1500,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1501,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1502,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1503,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1504,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1505,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1506,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1507,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1508,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1509,
+      "period": "1500-1509",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1510,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1511,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1512,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1513,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "tournai-occupied-city-1513",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale",
+        "tournai-occupied-city-1513"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": "Tournai occupied in September, on year-end snapshot."
+    },
+    {
+      "year": 1514,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "tournai-occupied-city-1513",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale",
+        "tournai-occupied-city-1513"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1515,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "tournai-occupied-city-1513",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale",
+        "tournai-occupied-city-1513"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1516,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "tournai-occupied-city-1513",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale",
+        "tournai-occupied-city-1513"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1517,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "tournai-occupied-city-1513",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale",
+        "tournai-occupied-city-1513"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1518,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "tournai-occupied-city-1513",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale",
+        "tournai-occupied-city-1513"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": null
+    },
+    {
+      "year": 1519,
+      "period": "1510-1519",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "main_published",
+      "note": "Tournai back to France Feb, off year-end snapshot."
+    },
+    {
+      "year": 1520,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": "Guines explicit symbol is not territorial expansion."
+    },
+    {
+      "year": 1521,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1522,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1523,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1524,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1525,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1526,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1527,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1528,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    },
+    {
+      "year": 1529,
+      "period": "1520-1529",
+      "active_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland"
+      ],
+      "direct_English_royal": [
+        "calais-crown",
+        "dublin-pale"
+      ],
+      "existing_English_subsites": [
+        "guines-crown-1520s"
+      ],
+      "independent_Scottish": [
+        "orkney-scotland",
+        "shetland-scotland",
+        "kingdom-of-scotland"
+      ],
+      "related_autonomous": [
+        "channel-jersey",
+        "isle-of-man"
+      ],
+      "evidence_status": "PR9_candidate_plus_prior_continuity",
+      "note": null
+    }
+  ],
+  "changes": [
+    {
+      "transition": "1499-to-1500",
+      "kind": "dataset_newly_tracking_not_new_conquest",
+      "unchanged": [
+        "calais-crown",
+        "kingdom-of-scotland"
+      ],
+      "newly_explicit": [
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "ended": [],
+      "source": "main:data/atlas-1500-1509.json"
+    },
+    {
+      "transition": "1509-to-1510",
+      "kind": "ongoing_historical_control",
+      "unchanged": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "newly_explicit": [],
+      "ended": [],
+      "source": "main:data/atlas-1510-1519.json"
+    },
+    {
+      "transition": "1512-to-1513",
+      "kind": "new_royal_city_occupation",
+      "unchanged": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "newly_explicit": [
+        "tournai-occupied-city-1513"
+      ],
+      "change_date": "1513-09-23",
+      "ended": [],
+      "source": "main:data/atlas-1510-1519.json"
+    },
+    {
+      "transition": "1518-to-1519",
+      "kind": "royal_city_occupation_terminated",
+      "unchanged": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "newly_explicit": [],
+      "ended": [
+        "tournai-occupied-city-1513"
+      ],
+      "change_date": "1519-02",
+      "source": "main:data/french-urban-control-1500-1519.geojson"
+    },
+    {
+      "transition": "1519-to-1520",
+      "kind": "new_marker_existing_land",
+      "unchanged": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "newly_explicit": [
+        "guines-crown-1520s"
+      ],
+      "ended": [],
+      "source": "research/continuity/TRANSITION_1519_1520.json"
+    },
+    {
+      "transition": "1520-to-1529",
+      "kind": "colonial_policy_and_local_fort_episodes_not_conquest",
+      "unchanged": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "newly_explicit": [],
+      "ended": [],
+      "source": "research/territorial-1520-1529-20261012:research/periods/1520-1529/CONTROL_EPISODES.json"
+    }
+  ],
+  "approved_territorial_control_polygons": 0
+}
