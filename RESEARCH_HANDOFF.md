@@ -48,3 +48,11 @@
 - 网页正式 UI 已采用左栏章节标题/导语独立折叠、合并的“图层与图例”、取消快捷地图跳转和不必要的学术式警告文案。
 - 研究仍然必须记录有效统治与王室宣称的差别，以及来源与不确定性；这些字段不能因首屏简化而删除。
 - 新的 LAB（皮鞭）、FAM（骨骸）、RES（奋起持矛手臂）及其他16类图标设计只存在 Word 修订预审稿中，**尚待用户批准，未上传仓库，任何协作对话不得视为正式规范**。
+
+
+## 2026-10-12 正式图标标准取代先前待审稿
+- 用户明确同意新版16种图标规则。以 docs/ICON_SYSTEM_V2_APPROVED.md、assets/atlas-icons.svg、data/icon-categories.json 为唯一有效的图标编码规范；旧 Word 预审稿不再作为批准版。
+- 所有研究分支在每条events数据中使用 icon_code（POL EXP TER WAR REP SLV LAB ECO DIS FAM RES ABO IND INF CLM DOC）。
+- 重要性 significance.level=1/2/3 依旧必须独立填写理由；geo_precision 不准确仍必须保留。网页渲染大小与类别色严格读取正式manifest，禁止“只用颜色说明史实”。
+- 未在1497—1500数据里出现的罪行类别图标仅是类型资源，不代表当时已经发生；资料团队不能为了展示新图标而捏造事件。
+- 研究者新对话先读取 PROJECT_STATUS.md + approved icon spec + icon-categories.json + CHANGELOG.md + 对应PROGRESS.md，之后提交分支并追加研究日志。
