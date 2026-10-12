@@ -101,7 +101,7 @@ function renderPoints(){
  const clusters=[];
  for(const item of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item))){
   const pt=map.latLngToLayerPoint([item.lat,item.lng]);
-  let group=clusters.find(g=>Math.hypot(pt.x-g.pt.x,pt.y-g.pt.y)<42);
+  let group=clusters.find(g=>Math.hypot(pt.x-g.pt.x,pt.y-g.pt.y)<24);
   if(!group){group={pt,items:[]};clusters.push(group);}
   group.items.push(item);
  }
