@@ -14,7 +14,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
 const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'世界／帝国级节点',2:'区域重要节点',1:'地方与补充事件'};
-const isUncertain=item=>item.geo_precision==='regional-symbol-only'||/uncertain/i.test(String(item.certainty||''));
+const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
 const fallbackCodes={political:'POL',voyage:'EXP',colonial_control:'TER',war:'WAR',repression:'REP',enslavement:'SLV',slavery:'SLV',forced_labour:'LAB',wealth_flow:'ECO',economy:'ECO',displacement:'DIS',famine:'FAM',resistance:'RES',abolition:'ABO',independence:'IND',infrastructure:'INF',claim:'CLM',documentary:'DOC',status:'DOC'};
 let iconCatalog=null;
 const iconMeta=item=>{
@@ -54,7 +54,7 @@ function openDossier(item,typ){
  const title=item.name;const date=isPlace?'1500年代 · 政治据点':isCandidate?'1497年 · 登陆候选地点':isRoute?item.year+'年 · 航线示意':item.date_label;
  const label=isPlace?'政治关系':isCandidate?'位置假说':isRoute?'方向示意':(categoryName[item.category]||'历史资料');
  const desc=isCandidate?item.note:isRoute?item.note:item.description;
- const caveat=isPlace?'此标记代表城市或群岛，不能当作领土边界。':isCandidate?'准确登陆地点还没有定论。':isRoute?'虚线表示航行方向，不代表已知的逐段航迹。':item.category==='claim'?'王室宣称不等于已经建立了殖民地。':'';
+ const caveat=isPlace?'此标记代表城市或群岛，不能当作领土边界。':isCandidate?'准确登陆地点还没有定论。':isRoute?'虚线表示航行方向，不代表已知的逐段航迹。':item.category==='claim'?'王室宣称不等于已经建立了殖民地。':isUncertain(item)?'地图标记位于相关城市或大致区域，并非事件发生位置的精确坐标。':'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(desc)+'</p>'+(caveat?'<p class="event-context">'+escapeHTML(caveat)+'</p>':'')+'<div class="mini-heading">历史资料</div>'+listSources(item.source_ids);
  openPanel('dossier');
  document.querySelectorAll('.event-item').forEach(n=>n.classList.toggle('selected',n.dataset.eid===selected));
