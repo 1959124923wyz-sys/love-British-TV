@@ -130,7 +130,55 @@ assert "expanded-event" in app
 assert "leaflet-marker-icon.atlas-flyout-icon" in css
 assert "background:transparent!important" in css
 assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
-assert "PILOT v0.9" in html
+assert "PILOT v1.0" in html
+
+# Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
+third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
+assert third["period"] == {"from":1510,"to":1519,"next":1520}
+assert len(third["events"]) == 15 and len(third["places"]) == 7
+assert len(third["sources"]) == 22
+assert not third["colonial_polygons"] and not third["routes"]
+third_source_ids = {row["id"] for row in third["sources"]}
+assert len(third_source_ids) == len(third["sources"])
+for src in third["sources"]:
+    assert urlsplit(src["url"]).scheme in ("http","https")
+ids_third = set()
+for rec in third["events"]+third["places"]:
+    assert rec["id"] not in ids_third, rec["id"]
+    ids_third.add(rec["id"])
+    assert rec["icon_code"] in svg_codes, rec["id"]
+    assert rec["source_ids"] and all(sid in third_source_ids for sid in rec["source_ids"]), rec["id"]
+    assert (rec["lat"] is None) == (rec["lng"] is None), rec["id"]
+    if rec["lat"] is not None:
+        assert -90 <= rec["lat"] <= 90 and -180 <= rec["lng"] <= 180
+for e in third["events"]:
+    assert 1510 <= e["year"] <= 1519 and 1510 <= e["start_year"] <= e["end_year"] <= 1519
+    assert e["significance"]["level"] in (1,2,3)
+    assert not e.get("colonial_profit")
+for q in third["places"]:
+    assert q["state_type"] == "political_relationship"
+    assert q["start_year"] <= q["observed_through_year"] <= 1519
+    assert q["end_year"] is None or q["end_year"] >= q["observed_through_year"]
+tournai = next(p for p in third["places"] if p["id"] == "tournai-occupied-city-1513")
+assert tournai["start_year"] == 1513 and tournai["observed_through_year"] == 1518
+assert tournai["end_year"] == 1519 and tournai["end_month"] == 2
+assert {e["id"] for e in third["events"]} & ids_later == set()
+assert {"1513-FLODDEN","1513-TOURNAI-OCCUPATION","1518-TOURNAI-CESSION","1519-TOURNAI-RETURN","1517-RASTELL-ABORTED-COLONIZATION"} <= {e["id"] for e in third["events"]}
+assert all(e["id"] in details["records"] for e in third["events"])
+assert all(p["id"] in details["records"] for p in third["places"])
+refgeo = json.loads((ROOT/"data/geography-1510-1519-hypotheses.geojson").read_text(encoding="utf-8"))
+assert refgeo["type"] == "FeatureCollection" and len(refgeo["features"]) == 1
+geo_layer = refgeo["features"][0]
+assert geo_layer["geometry"]["type"] == "Polygon"
+assert geo_layer["properties"]["fill_authorized"] is False
+assert geo_layer["properties"]["active_years"] == [1513,1514,1515,1516,1517,1518]
+assert "data/atlas-1510-1519.json" in app
+assert "data/geography-1510-1519-hypotheses.geojson" in app
+assert "year<1513 || year>1518" in app
+assert 'id="chapterThree"' in html and 'max="1519"' in html
+assert "renderEventList();renderPoints();renderHypotheses();renderMilestones()" in app
+assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
+assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
 
 assert "data/historical-detail-notes.json" in app and "renderHypotheses()" in app
 assert 'id="toggleHypotheses"' in html and 'id="mapControls"' in html
