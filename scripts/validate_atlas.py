@@ -203,7 +203,7 @@ assert {"calais-crown","tournai-occupied-city-1513"} <= active_city_symbols(1518
 assert "calais-crown" in active_city_symbols(1519) and "tournai-occupied-city-1513" not in active_city_symbols(1519)
 assert "function renderControlAreas()" in app
 assert "controlAreaPane" in app
-assert "calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type)" in app
+assert "p.display_group==='control'" in app and "renderer:territoryRenderer" in app, "Historical envelopes must remain separately drawn geographic reference layers"
 assert "renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()" in app
 assert 'id="toggleControlAreas"' in html
 assert (ROOT/"docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md").is_file()
