@@ -1,3 +1,6 @@
+> **所有新时期调查员必读｜控制区连续性工作纲领（2026-10-12）**：[入口 AGENTS.md](AGENTS.md) · [七步完整工作流程](docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md) · [跨期过渡模板](research/continuity/templates/DECADE_TRANSITION_TEMPLATE.json)。
+> **十年不是政治控制的结束期限**：每次必须带入上一期的完整政治状态，查明其存续、扩张、收缩、易手、撤军或未核实；地图上的真实疆域变化先于新事件点。当前规范在研究 PR #10，待审核合入 `main` 后成为主干常规要求。
+
 # 帝国的代价 · 英格兰—苏格兰—大不列颠—联合王国殖民扩张历史地图
 
 > **当前正式视觉与交互基线：v0.9（2026-10-12，用户已批准）。**
