@@ -1,0 +1,48 @@
+name: Historical territory continuity checks
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'docs/TERRITORY_CONTINUITY_RULE.md'
+      - 'docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md'
+      - 'research/continuity/**'
+      - 'scripts/validate_control_transition.py'
+      - '.github/workflows/control-continuity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'docs/TERRITORY_CONTINUITY_RULE.md'
+      - 'docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md'
+      - 'research/continuity/**'
+      - 'scripts/validate_control_transition.py'
+      - '.github/workflows/control-continuity.yml'
+  workflow_dispatch:
+
+jobs:
+  continuity:
+    name: Data integrity (not historical source verification)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Python availability
+        run: python3 --version
+      - name: Test reusable transition validator
+        run: python3 scripts/validate_control_transition.py --self-test
+      - name: Test 1497–1529 continuity baseline when provided
+        shell: bash
+        run: |
+          if [[ -f research/continuity/CONTROL_TIMELINE_1497_1529.json && \
+                -f research/continuity/staged/atlas-1520-1529.json && \
+                -f research/continuity/check_full_continuity.py ]]; then
+            python3 research/continuity/check_full_continuity.py
+          else
+            echo "1497–1529 draft baseline not present; generic validator still checked."
+          fi
+      - name: Clarify scope
+        run: |
+          echo "Passing these checks does not certify manuscript accuracy,"
+          echo "historical sovereignty claims, historical GIS boundaries,"
+          echo "or real browser rendering. Chief editor approval is required."
