@@ -94,3 +94,7 @@
 - [第四章1497—1529独立预览](preview-continuity-1497-1529.html)仅用于主编审核；1520—1529年24条事件、49项来源尚未全部获得正式发布审核。正式首页仍以1497—1519年为准。
 - 概略Pale与现代海岸线为参考地图，不是实测历史疆界。参见 [持续疆域研究审计](docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md)；研究数据与正式发布数据互不覆盖。
 - 自检：`python3 scripts/validate_control_transition.py --self-test`、`python3 research/continuity/check_full_continuity.py`、`node scripts/test_continuity_preview.js`，并查看GitHub Actions。
+
+### 地图事件快速定位
+
+左侧事件**单击**打开历史档案；**双击**后地图平滑移动到事件已核实的代表位置，并高亮目标标记。定位不改变年份或缩放，滚轮放大由读者自主控制。若历史地点缺少可靠经纬度（例如1517年拉斯特尔未完成的北美远航计划），保留文献，但不捏造地图坐标。聚合事件会展开并突出被选中的具体SVG图标。
