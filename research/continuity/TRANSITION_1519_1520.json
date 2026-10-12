@@ -1,0 +1,317 @@
+{
+  "schema": "territory-transition-v1",
+  "project": "爱英TV",
+  "transition_id": "1519-to-1520",
+  "status": "research_audit_not_published",
+  "compiled_on": "2026-10-12",
+  "subject": "carry_forward_control_status_not_new_event_count",
+  "previous_period": "1510-1519",
+  "next_period": "1520-1529",
+  "reference_files": {
+    "previous_publication": "data/atlas-1510-1519.json",
+    "previous_city_area": "data/french-urban-control-1500-1519.geojson",
+    "previous_political_relations": "data/political-relations-1500-1519.geojson",
+    "next_editorial_candidate": "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+    "next_control_research": "research/territorial-1520-1529-20261012/research/periods/1520-1529/CONTROL_EPISODES.json",
+    "cartography": "docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md",
+    "continuity_standard": "docs/TERRITORY_CONTINUITY_RULE.md"
+  },
+  "policy": {
+    "expected_prior_places": 7,
+    "continuing_prior_places_research": 6,
+    "ended_prior_places": 1,
+    "editorial_candidate_places_1520s": 7,
+    "uncertain_geometry_as_solid_polygon_allowed": false,
+    "previous_documented_until_is_termination_date": false,
+    "unreviewed_carryover_is_automatically_published": false
+  },
+  "records": [
+    {
+      "stable_id": "calais-crown",
+      "name_zh": "加来英王城市行政与驻军",
+      "controller": "Kingdom of England",
+      "control_class": "direct_urban_control",
+      "previous_status": "published_current_at_1518_and_1519",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1519,
+        "historic_start_year": 1347,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "editorial_candidate_to_1529",
+        "confirm_latest_documents": true,
+        "recorded_in_next_editorial": true,
+        "notes": "1520s research confirms continued border governance; Guînes separately identified but is not a newly conquered district"
+      },
+      "source_ids": [
+        "TNA-FRENCH-LANDS",
+        "CAL-MURPHY-2025-GUINES"
+      ],
+      "source_file": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry_status": "city_core_schematic_symbol_only",
+      "geometry_source": "data/french-urban-control-1500-1519.geojson#calais-urban-core-1497-1519",
+      "publication_gate": "maintain_current_control_if_historically_justified_and_chief_editor_reviews_1520s"
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name_zh": "都柏林英王行政核心与爱尔兰Pale",
+      "controller": "Kingdom of England (through local deputy officials)",
+      "control_class": "crown_administration_core_not_entire_island",
+      "previous_status": "published_1510s",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1519,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "editorial_candidate_to_1529",
+        "confirm_latest_documents": true,
+        "recorded_in_next_editorial": true,
+        "notes": "Surrey 1520-22 and later deputies change officeholder not the entire area's control; boundaries need independent tax and legal review"
+      },
+      "source_ids": [
+        "EGAN-2024-EHR",
+        "IR-ELLIS-2023"
+      ],
+      "source_file": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry_status": "place_symbol_and_dashed_reference_only",
+      "geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-dublin-pale",
+      "publication_gate": "needs_real_boundary_audit_before_solid_area"
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name_zh": "泽西岛王室属地",
+      "controller": "English Crown with local laws",
+      "control_class": "crown_dependency_not_direct_english_county",
+      "previous_status": "published_1510s",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1519,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "editorial_candidate_to_1529",
+        "confirm_latest_documents": true,
+        "recorded_in_next_editorial": true,
+        "notes": "Continued in 1520s candidate; verify evidence applicable to each decade and avoid treating all crown dependencies as directly administered colonies"
+      },
+      "source_ids": [
+        "JERSEY-HISTORY-GOV"
+      ],
+      "source_file": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry_status": "patterned_representative_area_symbol_only",
+      "geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-channel-jersey",
+      "publication_gate": "editorial_review_pending"
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name_zh": "马恩岛领主制度",
+      "controller": "Stanley family lordship under distinct legal system",
+      "control_class": "autonomous_lordship_not_english_crown_county",
+      "previous_status": "published_1510s",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1519,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "editorial_candidate_to_1529",
+        "confirm_latest_documents": true,
+        "recorded_in_next_editorial": true,
+        "notes": "Do not replace crosshatch with direct English solid control"
+      },
+      "source_ids": [
+        "CAMBRIDGE-LORDSHIP-MAN"
+      ],
+      "source_file": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry_status": "patterned_representative_area_symbol_only",
+      "geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-isle-of-man",
+      "publication_gate": "editorial_review_pending"
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name_zh": "奥克尼苏格兰王权关系",
+      "controller": "Kingdom of Scotland",
+      "control_class": "scottish_crown_territory_not_english_colony",
+      "previous_status": "published_1510s",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1519,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "editorial_candidate_to_1529",
+        "confirm_latest_documents": true,
+        "recorded_in_next_editorial": true,
+        "notes": "Scotland remains separate kingdom; distinguish from English imperial holdings"
+      },
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "source_file": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry_status": "scottish_representative_area_symbol_only",
+      "geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-orkney-scotland",
+      "publication_gate": "editorial_review_pending"
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name_zh": "设得兰苏格兰王权关系",
+      "controller": "Kingdom of Scotland",
+      "control_class": "scottish_crown_territory_not_english_colony",
+      "previous_status": "published_1510s",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1519,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "editorial_candidate_to_1529",
+        "confirm_latest_documents": true,
+        "recorded_in_next_editorial": true,
+        "notes": "Scotland remains independent; island political identity not automatically English"
+      },
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "source_file": [
+        "data/atlas-1510-1519.json",
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry_status": "scottish_representative_area_symbol_only",
+      "geometry_source": "data/political-relations-1500-1519.geojson#polity-area-symbol-shetland-scotland",
+      "publication_gate": "editorial_review_pending"
+    },
+    {
+      "stable_id": "tournai-occupied-city-1513",
+      "name_zh": "图尔奈英方城市占领",
+      "controller": "English Crown until return to France",
+      "control_class": "military_occupation_and_royal_urban_governance",
+      "previous_status": "published_historic_1513_to_1518_ended_by_1519_end_of_year",
+      "transition": "ended",
+      "evidence_interval": {
+        "last_documented_year": 1518,
+        "known_end_date": "1519-02",
+        "known_start_date": "1513-09-23"
+      },
+      "next_period_review": {
+        "status": "excluded_from_1520s_english_control_correctly",
+        "confirm_latest_documents": false,
+        "recorded_in_next_editorial": false,
+        "notes": "French control restored February 1519; keep historic return event but remove English rule area from 1519 year-end and later"
+      },
+      "source_ids": [
+        "DAVIES-1998-TOURNAI",
+        "MURPHY-2014-TOURNAI"
+      ],
+      "source_file": [
+        "data/atlas-1510-1519.json",
+        "data/french-urban-control-1500-1519.geojson"
+      ],
+      "geometry_status": "schematic_city_core_end_not_real_polygon",
+      "geometry_source": "data/french-urban-control-1500-1519.geojson#tournai-urban-core-1513-1518",
+      "publication_gate": "exclude_english_control_from_1520s"
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "name_zh": "吉讷英王既有边境要塞",
+      "controller": "Kingdom of England",
+      "control_class": "fortified_frontier_governance_not_new_conquest",
+      "previous_status": "inside_existing_calais_frontier_not_separately_mapped",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1529,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "new_separate_marker_in_editorial_1520s",
+        "confirm_latest_documents": true,
+        "recorded_in_next_editorial": true,
+        "notes": "Separately highlighted because 1525 and 1529 policies; does not establish acquisition of new county territory"
+      },
+      "source_ids": [
+        "CAL-ROYAL-HRP-1520",
+        "CAL-MURPHY-2025-GUINES"
+      ],
+      "source_file": [
+        "editorial/intake-1520-1529-20261012/editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json"
+      ],
+      "geometry_status": "named_fortified_place_marker_no_approved_polygon",
+      "geometry_source": null,
+      "publication_gate": "site_marker_only_until_border_archival_audit"
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "name_zh": "苏格兰独立王国",
+      "controller": "Kingdom of Scotland (James V)",
+      "control_class": "independent_kingdom_external_to_english_control",
+      "previous_status": "sovereign_kingdom_1510s",
+      "transition": "continued",
+      "evidence_interval": {
+        "last_documented_year": 1529,
+        "known_end_date": null
+      },
+      "next_period_review": {
+        "status": "research_attested_to_1529",
+        "confirm_latest_documents": false,
+        "recorded_in_next_editorial": false,
+        "notes": "English raids and temporary border occupations do not mean England rules Scotland"
+      },
+      "source_ids": [
+        "SC-MURPHY-2024-ANGLO-SCOTS"
+      ],
+      "source_file": [
+        "research/territorial-1520-1529-20261012/research/periods/1520-1529/CONTROL_EPISODES.json"
+      ],
+      "geometry_status": "no_new_boundary_approved",
+      "geometry_source": null,
+      "publication_gate": "historical_context_only_not_english_area"
+    }
+  ],
+  "new_episode_watchlist": [
+    {
+      "id": "IR-1521-MONASTERORIS",
+      "year": 1521,
+      "type": "temporary_castle_capture_and_garrison",
+      "known": "Capture/garrison supported in current research",
+      "unknown": "Garrison withdrawal date and spatial jurisdiction",
+      "prevent_auto_extend_to_1529": true,
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ]
+    },
+    {
+      "id": "NA-1527-ENGLISH-VOYAGE",
+      "year": 1527,
+      "type": "voyage_without_colonial_administration",
+      "known": "John Rut transatlantic royal-backed voyage",
+      "unknown": "Precise route beyond attested port record",
+      "prevent_colonial_area_creation": true,
+      "source_ids": [
+        "NA-RUT-DCB"
+      ]
+    }
+  ],
+  "audit_instructions": [
+    "All seven prior main/1510s political places must map to exactly one transition record, including Tournai (ended).",
+    "Carryover does not constitute new conquest.",
+    "A historic end date cannot be replaced by evidence-last-observed, and vice versa.",
+    "Geometry is evidence-graded; representative area symbols and inferred dashed hulls are not true polygons.",
+    "This research ledger cannot deploy or change main; chief editor must approve new chapter rendering."
+  ]
+}
