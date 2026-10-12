@@ -14,7 +14,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
 const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
-const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
+const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary','associated-modern-town-centre'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
 const fallbackCodes={political:'POL',voyage:'EXP',colonial_control:'TER',war:'WAR',repression:'REP',enslavement:'SLV',slavery:'SLV',forced_labour:'LAB',wealth_flow:'ECO',economy:'ECO',displacement:'DIS',famine:'FAM',resistance:'RES',abolition:'ABO',independence:'IND',infrastructure:'INF',claim:'CLM',documentary:'DOC',status:'DOC'};
 let iconCatalog=null;
 const iconMeta=item=>{
@@ -93,7 +93,7 @@ function renderPoints(){
  if($('toggleKingdom').checked && year>=1500){
   for(const q of atlasLater.places){
    const started=q.start_year==null?1500:q.start_year;
-   if(started>year || (q.end_year!=null&&q.end_year<year))continue;
+   if(started>year || (q.end_year!=null&&q.end_year<year) || (q.observed_through_year!=null&&year>q.observed_through_year))continue;
    shown.push({item:{...q,significance:{level:2}},type:'place',lat:q.lat,lng:q.lng});
   }
  }
