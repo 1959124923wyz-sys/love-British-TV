@@ -732,19 +732,20 @@
       "start_year": 1523,
       "end_year": 1523,
       "visible_from": 1523,
-      "date_label": "1523年（具体月份待原始军报核对）",
+      "date_label": "1523年5月（19日炮击为原档待核线索）",
       "name": "1523年英军围攻塞斯福德城堡",
       "category": "siege",
       "icon_code": "WAR",
-      "lat": 55.5077,
-      "lng": -2.417,
+      "lat": 55.50773533158564,
+      "lng": -2.4170252121385114,
       "geo_precision": "modern officially recorded historical castle site; event exact footprint not measured",
       "geography_label": "Cessford Castle NT73759 23853 approx lat55.5077 lon-2.417",
       "description": "英军于1523年围攻塞斯福德城堡。苏格兰历史环境署认为现存遗迹中的部分土工设施可能与这次围城有关；其后当地没有建立持续的英王行政统治。",
       "short_description": "英军于1523年围攻塞斯福德城堡。苏格兰历史环境署认为现存遗迹中的部分土工设施可能与这次围城有关；其后当地没有建立持续的英王行政统治。",
       "source_ids": [
         "SC-HES-CESSFORD-SM1710",
-        "SC-HES-CESSFORD-TROVE"
+        "SC-HES-CESSFORD-TROVE",
+        "SC-EDIN-CESSFORD-SIEGE-19MAY"
       ],
       "certainty": "year_government_historic_designation",
       "significance": {
@@ -758,7 +759,7 @@
       "research_event_id": "1523-CESSFORD-SIEGE",
       "economic_fields": [],
       "geographic_rule": "temporary_siege_no_Scottish_annexation",
-      "review_note": "HES SM1710，土工迹象可能属1523围攻，非英方长期管辖；政府古迹保护面积不等于当年战区。"
+      "review_note": "May1523 siege; 19 May artillery start only indexed scholarly PDF, exact day requires primary calendar. HES 1523 earthworks protected site."
     },
     {
       "id": "1523-FERNIEHIRST-DEMOLISHED",
@@ -770,8 +771,8 @@
       "name": "1523年英军攻取并拆毁费尼赫斯特城堡",
       "category": "siege",
       "icon_code": "WAR",
-      "lat": 55.4543,
-      "lng": -2.5512,
+      "lat": 55.45433335692256,
+      "lng": -2.551239283870413,
       "geo_precision": "modern officially recorded historical castle site; event exact footprint not measured",
       "geography_label": "Ferniehirst Castle LB13369 NT65235 17969, ~lat55.4543 lon-2.5512",
       "description": "萨里伯爵的1523年战报称，英军在杰德堡附近与费尼赫斯特守军交战，用火炮攻入并拆毁堡垒，未建立长期英王城堡行政管辖。",
@@ -794,6 +795,41 @@
       "economic_fields": [],
       "geographic_rule": "temporary_local_military_capture_not_castle_annexation",
       "review_note": "HES LB13369 现代城堡遗址含后来建筑；1523具体被毁建筑与存世部分未完全重合。"
+    },
+    {
+      "id": "1523-WARK-SCOTS-FRENCH-SIEGE",
+      "year": 1523,
+      "start_year": 1523,
+      "end_year": 1523,
+      "visible_from": 1523,
+      "date_label": "1523年11月初",
+      "name": "苏法联军围攻英格兰沃克城堡，但未能攻陷",
+      "category": "siege",
+      "icon_code": "WAR",
+      "lat": 55.64175258837099,
+      "lng": -2.2812653568241483,
+      "geo_precision": "official Historic England scheduled site NT82394 38725 converted WGS84 (not precise 1523 siege line)",
+      "geography_label": "Wark-on-Tweed Castle Carham Northumberland Scheduled Monument 1013100",
+      "description": "1523年，苏格兰摄政奥尔巴尼公爵率苏法联军进攻英格兰边境沃克城堡，外层防御一度被突破，但守军坚持至英军来援，围攻失败。",
+      "short_description": "1523年，苏格兰摄政奥尔巴尼公爵率苏法联军进攻英格兰边境沃克城堡，外层防御一度被突破，但守军坚持至英军来援，围攻失败。",
+      "source_ids": [
+        "ENG-HE-WARK-SM1013100",
+        "ENG-BL-WARK-1523-AUTOGRAPH",
+        "SC-MURPHY-ALBANY-2024"
+      ],
+      "certainty": "national_designation_plus_original_letter_1523_archival_index",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "苏法联合围攻边境英军要塞，保存当年报告"
+      },
+      "colonial_profit": false,
+      "position_type": "modern_heritage_site_reference_only",
+      "editorial_status": "pending_editorial_review",
+      "research_event_id": "1523-WARK-SCOTS-FRENCH-SIEGE",
+      "economic_fields": [],
+      "geographic_rule": "Scottish_counterattack_failed_English_frontier_castle_still_English",
+      "review_note": "1523年苏法联军攻入沃克外层防御但未攻下城堡。与1513年苏军一度攻取沃克事件分开。"
     }
   ],
   "places": [
@@ -1262,6 +1298,42 @@
       "kind": "national heritage listed building designation",
       "evidence_read_level": "Official page read NGR NT65235 17969",
       "origin": "research/territorial-1520-1529-20261012/MAP_DETAIL_SOURCES_1520S.json (via SOURCE_REGISTRY)"
+    },
+    {
+      "id": "SC-EDIN-CESSFORD-SIEGE-19MAY",
+      "title": "SC-EDIN-CESSFORD-SIEGE-19MAY",
+      "publisher": "University of Edinburgh doctoral thesis volume II",
+      "url": "https://era.ed.ac.uk/bitstream/1842/6848/2/253253_vol2.pdf",
+      "kind": "scholarly dissertation quoting Tudor original",
+      "evidence_read_level": "Web search-indexed passage from PDF, full PDF pages not screenshot verified",
+      "origin": "research/territorial-1520-1529-20261012/SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "ENG-HE-WARK-SM1013100",
+      "title": "ENG-HE-WARK-SM1013100",
+      "publisher": "Historic England National Heritage List",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1013100",
+      "kind": "UK scheduled monument official record",
+      "evidence_read_level": "Official full protected entry directly examined, NGR NT82394 38725",
+      "origin": "research/territorial-1520-1529-20261012/SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "ENG-BL-WARK-1523-AUTOGRAPH",
+      "title": "ENG-BL-WARK-1523-AUTOGRAPH",
+      "publisher": "PastPerfect site records British Library Cotton Caligula B VI fols 354–355",
+      "url": "https://www.pastperfect.org.uk/sites/wark/ms/surrey.html",
+      "kind": "historical letter facsimile catalogue / original letter transcribed by heritage project",
+      "evidence_read_level": "Text indexed title and 3 November 1523 archive shelfmark; original manuscript images not opened (403)",
+      "origin": "research/territorial-1520-1529-20261012/SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "SC-MURPHY-ALBANY-2024",
+      "title": "SC-MURPHY-ALBANY-2024",
+      "publisher": "Neil Murphy, Cambridge Core historical monograph",
+      "url": "https://www.cambridge.org/core/books/abs/henry-viii-the-duke-of-albany-and-the-angloscottish-war-of-15221524/albanys-march-on-wark-to-the-treaty-of-berwick-september-1523january-1526/65E3E212EEAAF37592D7113240A898B8",
+      "kind": "peer-reviewed specialist published chapter summary",
+      "evidence_read_level": "Academic publisher full abstract directly read",
+      "origin": "research/territorial-1520-1529-20261012/SOURCE_REGISTRY.json"
     }
   ],
   "routes": [],
