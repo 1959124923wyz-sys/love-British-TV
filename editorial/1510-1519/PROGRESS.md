@@ -34,3 +34,11 @@
 4. Tournai外围Tournaisis、1515爱尔兰Pale实际司法区仍需进一步史学核查，至多保留虚线研究层。
 
 **GitHub审核入口**：本期资料整理草稿 [PR #7](https://github.com/1959124923wyz-sys/love-British-TV/pull/7)；原始深度研究 [PR #6](https://github.com/1959124923wyz-sys/love-British-TV/pull/6)。公开网站主干没有因本任务改变。
+
+
+## 图尔奈区域边界专项（2026-10-12）
+- `1f87df1ca35f4472a0c159516c73c141f3d539b6`：`TOURNAISIS_OPTIONAL_OVERLAY.geojson`建立，19 Feature、1透明研究包络、1实际英王城市点、17个现代地名点，全部和历年实际控制多边形分开。
+- `2b01ce25b72c1ad3e018b6ea632ad5679a5334ca`：更新GeoJSON内嵌13个来源索引（馆藏/学术地图/现代地名），原图版权不被默认为已授权数字化。
+- `fe30681e2c31cce20dbb9017d074597630e16754`：`TOURNAISIS_PUBLISH_GATE.md`把主站Leaflet的字段、显示条件、数据契约、1513 到1519年2月的时段、禁用殖民利润及授权问题写清。
+- 研究分支来源 `1b9ebce3161d1d8cad73c100059cbb37497632e3`、修订 `d0fc3510cc0041128b16db0a353e711e65061074`、空间原文件 `15c3a254aa6c2971c439d370e85c3556295fe71d`。
+- 地图包络约纬50.56765—50.65429、经3.280126—3.48798，凸包只代表现代村庄的分布外壳而非任何1513年正式勘界；明示不包含南面有独立领主法制的Saint-Amand与Mortagne。源地理证据发现早期旧封建城堡领地曾将图尔奈城排除，不能合并时代不同的边界。
