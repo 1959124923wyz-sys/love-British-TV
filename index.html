@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#081422">
-<meta name="description" content="英格兰—苏格兰—大不列颠—联合王国殖民扩张及其延续：以可溯源的历史地图展示领土、远航、经济网络、抵抗与独立。1497—1509 两个历史切片。">
-<title>帝国的代价 | 大英殖民历史地图 · 1497—1509</title>
+<meta name="description" content="英格兰—苏格兰—大不列颠—联合王国殖民扩张及其延续：以可溯源的历史地图展示领土、远航、经济网络、抵抗与独立。1497—1519 三个历史切片。">
+<title>帝国的代价 | 大英殖民历史地图 · 1497—1519</title>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=20261012-9">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=20261012-10">
 </head>
 <body>
 <div class="site">
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>THE COST OF EMPIRE · HISTORICAL ATLAS</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
- <div class="head-actions"><span class="version">1497—1509 · PILOT v0.9</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1519 · PILOT v1.0</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
@@ -53,14 +53,14 @@
       <div><i class="swatch minor"></i>细节事件</div>
       <div><i class="swatch question"></i>地点待考</div>
      </div>
-      <label class="hypothesis-label"><input type="checkbox" id="toggleHypotheses" checked><i class="layer-dot hypothetical"></i>1500年代 · 推定疆界（虚线）</label>
+      <label class="hypothesis-label"><input type="checkbox" id="toggleHypotheses" checked><i class="layer-dot hypothetical"></i>历史地理推定范围（虚线）</label>
       <p class="hypothesis-key">虚线表示依据历史地点重建的地理范围</p>
     </div>
    </details></div>
   </div>
 
  </aside>
- <main class="map-stage" aria-label="1497—1509年历史地图">
+ <main class="map-stage" aria-label="1497—1519年历史地图">
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
 
   <div class="map-top">
@@ -69,7 +69,7 @@
   </div>
   <div class="time-panel">
    <div class="timeline-head"><div><strong>历史时间轴</strong><span id="timelineContext">第一章 · 1497—1499</span></div><div class="year-buttons"><button id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button id="nextYear" aria-label="下一年">›</button><button id="playBtn" aria-label="播放时间轴">▶</button></div></div>
-   <div class="chapter-track" role="group" aria-label="历史章节"><button type="button" id="chapterOne" class="chapter-segment" data-period="early" title="1497—1499年历史事件"><span>第一章</span><small>1497—1499 · 大西洋彼岸</small></button><button type="button" id="chapterTwo" class="chapter-segment" data-period="later" title="1500—1509年历史事件"><span>第二章</span><small>1500—1509 · 通往未知海岸</small></button></div><div class="range-wrap"><div id="milestoneDots" class="milestone-dots" aria-label="历史转折与事件年份"></div><input id="yearRange" type="range" min="1497" max="1509" value="1497" step="1" aria-label="拖动年份"><div class="ticks"><span>1497</span><span>1500</span><span>1502</span><span>1504</span><span>1509</span></div><div id="timelineNotice" class="timeline-notice" aria-live="polite">点击上方章节可回顾已收纳事件；地图持续显示当时的政治状态。</div></div>
+   <div class="chapter-track" role="group" aria-label="历史章节"><button type="button" id="chapterOne" class="chapter-segment" data-period="early" title="1497—1499年历史事件"><span>第一章</span><small>1497—1499 · 大西洋彼岸</small></button><button type="button" id="chapterTwo" class="chapter-segment" data-period="later" title="1500—1509年历史事件"><span>第二章</span><small>1500—1509 · 通往未知海岸</small></button><button type="button" id="chapterThree" class="chapter-segment" data-period="third" title="1510—1519年历史事件"><span>第三章</span><small>1510—1519 · 王冠越过海峡</small></button></div><div class="range-wrap"><div id="milestoneDots" class="milestone-dots" aria-label="历史转折与事件年份"></div><input id="yearRange" type="range" min="1497" max="1519" value="1497" step="1" aria-label="拖动年份"><div class="ticks"><span>1497</span><span>1500</span><span>1510</span><span>1513</span><span>1519</span></div><div id="timelineNotice" class="timeline-notice" aria-live="polite">点击上方章节可回顾已收纳事件；地图持续显示当时的政治状态。</div></div>
   </div>
   
  </main>
@@ -80,12 +80,12 @@
     <p>从布里斯托尔起航的“马修号”，将英格兰王室支持的远航带到了北美海岸。</p>
     <p>把鼠标移到航线和标记上，可看到事件简介。点击后可以继续阅读经过与历史资料。</p>
    </div>
-   <div class="dossier-bottom"><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/data/atlas-1500-1509.json" target="_blank" rel="noopener">查看第二阶段数据 ↗</a><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/RESEARCH_HANDOFF.md" target="_blank" rel="noopener">研究交接记录 ↗</a></div>
+   <div class="dossier-bottom"><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/data/atlas-1510-1519.json" target="_blank" rel="noopener">查看第三阶段数据 ↗</a><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/RESEARCH_HANDOFF.md" target="_blank" rel="noopener">研究交接记录 ↗</a></div>
  </aside>
 </div>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=pilot9-top-tooltips"></script>
+<script src="app.js?v=third-1510-1519-v1"></script>
 </body>
 </html>
