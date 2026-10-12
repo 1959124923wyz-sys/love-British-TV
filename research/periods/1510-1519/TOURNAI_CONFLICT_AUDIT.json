@@ -1,0 +1,79 @@
+{
+  "dataset_id": "1510s-tournai-source-contradiction-audit-v1",
+  "compiled": "2026-10-12",
+  "sources": [
+    {
+      "id": "TOURNAI-MUNICIPAL-TOWER",
+      "url": "https://www.tournai.be/patrimoine/tour-henry-viii",
+      "institution": "City of Tournai",
+      "finding": "Official municipal heritage locates decision to construct internal citadel under governor Edward Poynings in 1515; separates northern walled sector; local municipal and military friction; identifies Pont des Trous and internal gate design.",
+      "status": "official_local_archaeology_page_read"
+    },
+    {
+      "id": "TOURNAI-WALLONIA-ARCH",
+      "url": "https://connaitrelawallonie.wallonie.be/culture-et-patrimoine/patrimoine/tour-henri-viii",
+      "institution": "Institut du Patrimoine wallon",
+      "finding": "Heritage entry says English urban rule 1513–1519, tower survived; internal citadel expected large garrison; geography of walls in northern part.",
+      "status": "regional_government_heritage_page_read"
+    },
+    {
+      "id": "TOURNAI-OFFICIAL-TOURISM",
+      "url": "https://en.visittournai.be/exciting/tournai-ville-belge-henri8/",
+      "institution": "Visit Tournai municipal tourism",
+      "finding": "Says English troops departed in 1519 and city was bought back by Francis I; also inaccurately says Tournai had Westminster MPs, contradicted by C.S.L. Davies 1998; do not rely for parliamentary claim.",
+      "status": "tourist_history_page_read_contains_error"
+    },
+    {
+      "id": "TOURNAI-MURPHY-2014",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/tournai-under-tudor-rule-cooperation-or-opposition/",
+      "institution": "Northumbria University",
+      "finding": "Peer reviewed source supports town council's negotiated local privileges and February 1519 practical return; English imposition not identical to Calais territorial incorporation.",
+      "status": "scholarly_publisher_abstract_checked"
+    },
+    {
+      "id": "TOURNAI-DAVIES-1998",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/abs/tournai-and-the-english-crown-15131519/B07E63FC8D447BD02398FDD99F09BB62",
+      "institution": "The Historical Journal",
+      "finding": "Academic paper says no representation in English Parliament and legal title was Henry VIII's French kingdom, not England proper.",
+      "status": "journal_abstract_checked"
+    }
+  ],
+  "issues": [
+    {
+      "id": "T-1513-TOWER-CONSTRUCTION",
+      "claim": "Tournai English citadel built in 1513 immediately after town captured",
+      "resolution": "misleading / historically imprecise",
+      "best_evidence": "Municipality identifies decision for internal castle in 1515; Murphy article discusses Tournai workers April–Oct 1517 and garrison occupation January 1518. 1513 official tourism may summarize occupation beginning as construction date. 1513 = capture, 1515/17/18 = fort process.",
+      "impact": "Do not put citadel-complete icon at 1513; historical English tower survives today but not an instant 1513 building."
+    },
+    {
+      "id": "T-PARL-REPRESENTATION",
+      "claim": "Henry VIII let Tournai send MPs to the House of Commons (official visitor webpage)",
+      "resolution": "academically disputed / incorrect according to expert reassessment",
+      "best_evidence": "C.S.L. Davies 1998 peer-reviewed study specifically states Tournai was NOT granted representation in the English Parliament; tourist page asserts MPs without primary citation.",
+      "impact": "Use Davies claim pending original Commons returns; do not repeat tourist anecdote as fact."
+    },
+    {
+      "id": "T-1518-1519-WITHDRAWAL",
+      "claim": "Tourist brochure says English rule 1513–1518; local military museum says six years; scholarly sources 1513–1519.",
+      "resolution": "distinguish legal cession 1518 from actual occupation to Feb 1519",
+      "best_evidence": "British Library Add MS48002 4 Oct 1518 cession treaty; Murphy scholarly paper details English garrison until February 1519; tourist VisitTournai explicitly says troops left 1519.",
+      "impact": "1518 treaty transition event but retain Tournai English-control until Feb 1519; 1519 snapshot after February show French."
+    },
+    {
+      "id": "T-LEFT-RIGHT-BANK",
+      "claim": "City pages disagree on which Scheldt river bank held Henry VIII citadel",
+      "resolution": "uncertain mapping nomenclature / requires historical-geographic verification",
+      "best_evidence": "Municipal French description 'rive droite de l'Escaut'; Wallonia heritage text says 'protéger la rive gauche'. Direction may distinguish bank of structure vs bank being protected. Detailed gate/topography could resolve.",
+      "impact": "Place tower via separately validated address Place Verte, no precise digitized citadel polygon yet."
+    },
+    {
+      "id": "T-600K-CROWNS",
+      "claim": "1518 600,000 crowns 'profit made' by English Crown from Tournai",
+      "resolution": "treaty obligation, not cash receipts",
+      "best_evidence": "Polydore Vergil contemporary later narrative details Francis I to pay 600k crowns over 12 years at 50k per annum, a bargain price term; later arrears and net expenses unknown.",
+      "impact": "Use monetary_type=promised_cession_consideration; do not totalize as realised extracted colonial net income; verify BL Add MS48002 treaty."
+    }
+  ],
+  "editorial_note": "Do not assume municipal tourist information on MPs and 1513 citadel construction is correct when contemporary archival/paper data conflict."
+}
