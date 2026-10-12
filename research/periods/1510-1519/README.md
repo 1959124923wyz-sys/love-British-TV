@@ -43,3 +43,10 @@
 - **1519/1520纠错**：Ellis(2023)指出约1519-11亨利八世决定撤换Kildare，但Surrey获增强军队的lieutenant正式任命为1520-02，实际英国军官治理与远征属于1520年代。此前“1519 Surrey已实际主政”简化现已修订事件和控制数据库。
 - **重要空间新资料**：[Wallonia historical atlas 1513–1519 Tournai and Tournaisis](https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-sous-influence-anglaise) 显示城市之外还有大片Tournaisis研究对象，约60乡村教区受复杂乡村司法体系管辖（[Lille 2013 dissertation](https://pepite.univ-lille.fr/ori-oai-search/notice/view/2013LIL30041)）。原1.15km图尔奈圆圈只是地名标签，不能视为当年所有英方影响/行政疆界；地区图仅保留文献链接，未经制图授权未描摹。
 - [FOLLOWUP_EVIDENCE_SOURCES.json](FOLLOWUP_EVIDENCE_SOURCES.json)：5条新的文献/档号说明。[SPATIAL_GOVERNANCE_FOLLOWUP_SOURCES.json](SPATIAL_GOVERNANCE_FOLLOWUP_SOURCES.json)：5条地区地图、地方政府、苏格兰群岛资料。现累计53条不同来源索引记录（原43+新增10）。
+
+## 第二轮深挖与主编交接（2026-10-12）
+- 新增 `PRIMARY_DOCUMENTS_DEEP_DIVE_1515_1518.json`：**10个**涉及1515年爱尔兰改革、1516年图尔奈市政与外围乡村的档案/同行评审来源，**8条**带原始档号的关键论断。其中英国国家档案馆 `SP 60/1 no.9`、英国图书馆 `Add MS 4792 ff96–110`、兰贝斯 `Carew MS 635 pp188–189`是不同来源/版本，需审稿人校勘。
+- 图尔奈英王总督与当地市政议会共治，部分外围村庄表示提供城堡工役；**提出免费劳力**不等于确证实施或强迫劳动，未增加LAB图标。相关馆藏线索 `TNA SP1/13 ff28r–29v`、`BL Cotton Caligula E/I ff58r–59v`；早期地方财务申述也非独立审计账本。
+- 比利时国家档案馆2015年专题介绍确认Tournaisis有复杂的封建领主、司法与村庄社群权力结构，因此任何宏观英王影响区只能是多层次暂拟边界。
+- `FOLLOWUP_EVIDENCE_SOURCES.json` 已修正《加拿大传记辞典》网址为 `rastell_john_1F.html`，并分清John Rastell父亲组织1517年殖民定居计划，儿子是传记标题人物、后期另有航行。
+- 为避免主编反复翻阅历史源档，另建 `editorial/intake-1510-1519-20261012` 审阅分支，整理了15条符合主站数据契约的预审候选及19→15+4研究去向表；该分支不自动修改正式地图。见其 `editorial/1510-1519/README.md`。
