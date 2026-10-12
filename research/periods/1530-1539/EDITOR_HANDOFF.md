@@ -35,3 +35,7 @@
 [ARCHIVAL_ACTION_QUEUE.json](ARCHIVAL_ACTION_QUEUE.json)收录17项，其中9项P0，包括Calais边区1540前边线、Guînes防务、Kildare逐庄园、Maynooth驻军时间、Welsh marcher法令名录、Irish Pale财政法界、Leixlip纪年分歧、1537文化法令执法。每一项属于**研究未核完成**，不得以代码通过冒称资料无误。
 
 完成主编正式数据选择后，需要把1539年末的**7个控制地名及各自审核状态**交给1540年代调查员；下一十年1541爱尔兰主权称号改革先以史料核实。
+
+## 独立交互可直接验收
+
+预览文件 [interactive_research_preview.html](interactive_research_preview.html)：年份滑块依年推进24项事件、加来/爱尔兰Pale参考虚线、独立苏格兰蓝色政治图层；左侧点击读史料，**双击有地理位置的事件平滑转至地点并在原缩放比例高亮**。从仓库根目录执行`python3 -m http.server 8000`后用浏览器打开对应路径。这里是调查组测试平台，不能直接替换主编既有的v0.9／v1.2已批准UI，也不代表用户生产地图已经上线。
