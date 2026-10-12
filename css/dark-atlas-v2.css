@@ -385,3 +385,17 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 @media(max-width:680px){
  .leaflet-tooltip.atlas-hover{width:190px!important;min-width:190px!important;max-width:190px!important}
 }
+
+/* v1.0 timeline extension: three balanced historical chapters, 1497–1519. */
+.chapter-track #chapterOne{flex:3 1 0;min-width:0}
+.chapter-track #chapterTwo{flex:10 1 0;min-width:0}
+.chapter-track #chapterThree{flex:10 1 0;min-width:0;background:#42354a}
+.chapter-segment#chapterThree.active{background:#574348;border-color:#deb38d}
+.time-panel .ticks span:nth-child(2){left:13.636%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(3){left:59.091%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(4){left:72.727%;transform:translateX(-50%)}
+.time-panel .ticks span:nth-child(5){right:0}
+@media(max-width:850px){
+ .chapter-segment small{display:none!important}
+ .chapter-track .chapter-segment{min-height:29px}
+}
