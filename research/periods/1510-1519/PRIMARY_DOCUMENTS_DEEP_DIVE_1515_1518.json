@@ -90,6 +90,15 @@
       "evidence_type": "historical-thematic-map",
       "original": "2013 copyrighted atlas map; no derivative polygons extracted",
       "read_scope": "Historical map caption/coverage read; specific each parish jurisdiction not proven"
+    },
+    {
+      "id": "BELGIUM-STATE-ARCHIVES-MARIAGE",
+      "url": "https://www.arch.be/index.php?a=2015-09-16-jeux-et-enjeux-de-pouvoirs-en-tournaisis-aux-xive-et-xvie-siecles&l=fr&m=actualites&r=toutes-les-actualites",
+      "publisher": "Archives de l'État en Belgique (Belgian State Archives)",
+      "date": "2015-09-16",
+      "evidence_type": "national-archives-publisher_summary_of_specialist_monograph",
+      "read_scope": "Official archives announcement with historical synopsis read; underlying 2015 book not fully read",
+      "qualifier": "Tournaisis regional political jurisdiction woven through seigneurial enclaves and village communities, distinct from large city Tournai; later Habsburg changes should not be projected to 1513."
     }
   ],
   "claims": [
@@ -239,6 +248,23 @@
       "impact_for_map": "DO NOT import number into 1510–19 revenue chart. Adjacent period caution",
       "accounting_category": "unrealised_policy_projection_not_actual_tax",
       "geography_precision": "whole_island_claim_unsupported",
+      "original_read": false
+    },
+    {
+      "id": "TOU-TOURNAISIS-INSTITUTIONS",
+      "years": [
+        1513,
+        1519
+      ],
+      "assertion_zh": "比利时国家档案馆介绍的乡村行政专题研究将Tournaisis描绘为有多个领主辖区、村庄社群和中央王室司法层级的碎片化地区。1513—1519年英王对外围的影响需沿这些行政机构逐一核证，不能把当代历史图上的整片影响区视为统一直接占领。",
+      "evidence_status": "state_archive_description_of_specialist_book_plus_regional_map",
+      "sources": [
+        "BELGIUM-STATE-ARCHIVES-MARIAGE",
+        "WALLONIA-ATLAS-TOURNAISIS",
+        "MURPHY-2014-TOURNAI-AAM"
+      ],
+      "impact_for_map": "A two-layer map of effective urban rule vs external influence/jurisdiction, tentative dashed boundary only, no unlicensed tracing",
+      "geography_precision": "Tournaisis_bailiwick_no_1513_parish_polygons",
       "original_read": false
     }
   ],
