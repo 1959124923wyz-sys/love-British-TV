@@ -1,3 +1,6 @@
+> **今后每个十年都按此调查纲领执行：**[调查员七步工作流程](../../docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md)，[根目录 AGENTS 接手入口](../../AGENTS.md)，[十年过渡台账模板](templates/DECADE_TRANSITION_TEMPLATE.json)，[主编交接模板](templates/EDITOR_HANDOFF_TEMPLATE.md)。
+> 通用结构校验脚本：`python3 scripts/validate_control_transition.py --previous <上期数据文件> --transition <本期过渡JSON>`。任何上一期身份遗漏、旧边界未经核验就实心着色，都必须阻止移交。
+
 # 跨年代控制区交接｜研究入口
 
 **研究分支**：`research/territory-continuity-20261012`。本目录是跨十年的持续状态账簿，不改任何正式地图数据或网站代码。
