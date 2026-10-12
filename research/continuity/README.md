@@ -24,3 +24,18 @@
 本台账不是原始档案的替代品。有关吉讷乡村边界、爱尔兰Pale法权线、驻防持续日期的核验仍必须继续，相关史料直接去当前研究分支查阅。
 
 **1530—1539年调查时不得从空白地图开工**：先将上述未证实终止的状态与1520年代经审核的新增政治关系逐一传递至1529→1530年度过渡表，发现实质变化后再改动政治控制图层。
+
+
+## 最新：1497—1529全链条已经组装（2026-10-12）
+请从 [EDITOR_HANDOFF_1497_1529.md](EDITOR_HANDOFF_1497_1529.md) 开始：**不用重新读各十年全部事件与控制记录**。
+
+- [CONTROL_TIMELINE_1497_1529.json](CONTROL_TIMELINE_1497_1529.json)：9个政治主体/控制关系、33个年末时间状态、6次有明确去向的关键变迁，均保留源文件引用。
+- [staged/atlas-1520-1529.json](staged/atlas-1520-1529.json)：把PR #9的24件候审事件、7处历史政治地点、49条来源直接放进第四章接棒结构；未被错误宣布为已经审核通过。
+- [staged/french-urban-control-1497-1529.geojson](staged/french-urban-control-1497-1529.geojson)：加来保留至1529；图尔奈只保留1513—1518；既有加来区内的Guînes从1520起独立显示。
+- [staged/political-relations-1500-1529.geojson](staged/political-relations-1500-1529.geojson)：都柏林、泽西、马恩、奥克尼、设得兰跨年保留，但继续区分各自政制，**奥克尼/设得兰属独立苏格兰，绝非英属殖民地**。
+- [staged/geography-hypotheses-1500-1529.geojson](staged/geography-hypotheses-1500-1529.geojson)：加来与爱尔兰Pale老地图参考虚线不断档，图尔奈外围参考在1519年停用；未复原成历史实测领土多边形。
+- [独立连续网站样图](../../preview-continuity-1497-1529.html) / [JS](../../app-continuity-1497-1529-preview.js)：在**不改main**前提下直接试播1497—1529四章、32次年间转换。主编审核后参考此实现合入正式地图。
+- [check_full_continuity.py](check_full_continuity.py)：自动核六处原有地点不中断、图尔奈停止、吉讷仅新增显示、历史地理仍为虚线、1520s源引用及33年切片完整。上一版 [check_transition.py](check_transition.py) 继续保留。
+- [TRANSITION_1529_1530_RESEARCH_SEED.json](TRANSITION_1529_1530_RESEARCH_SEED.json)：1529年末八种记录完整递交1530年代；因为1530尚未查证，**没有生成1530已确认政治控制区**。
+
+注意：自始至终区别**政治状态存续**、**史料最后记录年份**和**地图象征性几何**。本轮shadow JS已通过静态JS语法解析、远端JSON来源交叉验证；尚未在正式网页浏览器完成手工视觉/交互验收。
