@@ -120,9 +120,10 @@ function expandCluster(group,pin=false){
  const key=group.items.map(x=>x.item.id).sort().join('|');
  cancelClusterClose();
  if(activeClusterKey===key && expandedPinned && pin){closeCluster();return}
- if(activeClusterKey!==key)groups.clusterExpanded.clearLayers();
+ const wasSame=activeClusterKey===key;
+ if(!wasSame)groups.clusterExpanded.clearLayers();
  activeClusterKey=key;
- expandedPinned=pin||expandedPinned&&activeClusterKey===key;
+ expandedPinned=Boolean(pin||(wasSame&&expandedPinned));
  groups.clusterExpanded.clearLayers();
  const items=group.items;
  const pt=map.latLngToContainerPoint(group.latlng),viewport=map.getSize();
@@ -233,7 +234,8 @@ function renderHypotheses(){
  // Soft, noninteractive silhouette under dashed lines. Display does not signify actual territorial control.
  L.geoJSON(geographicHypotheses,{
   filter:f=>calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
-  style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false,interactive:false}
+  interactive:false,
+  style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false}
  }).addTo(groups.hypotheses);
  L.geoJSON(geographicHypotheses,{
   filter:f=>['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type),
