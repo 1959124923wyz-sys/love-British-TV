@@ -13,7 +13,7 @@ const fourth=data('data/atlas-1520-1529.json');
 const third=data('data/atlas-1510-1519.json');
 const prior=data('data/atlas-1500-1509.json');
 const core=data('data/french-urban-control-1497-1529.geojson');
-const relations=data('research/continuity/staged/political-relations-1500-1529.geojson');
+const relations=data('data/political-relations-1500-1529.geojson');
 const grounds=data('data/territorial-footprints-1497-1529.geojson');
 const hypotheses=data('data/geography-hypotheses-1500-1529.geojson');
 assert.deepEqual(fourth.period,{from:1520,to:1529,next:1530});
@@ -57,7 +57,7 @@ for(const feature of grounds.features){
 }
 assert.match(html,/id="chapterFour"/);
 assert.match(html,/max="1529"/);
-assert.match(html,/app\.js\?v=chapter4-v140/);
+assert.match(html,/app\.js\?v=chapter4-v141/);
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1529.geojson'"));
 assert.ok(app.includes("Math.min(1529"),'Years capped at old third chapter');
