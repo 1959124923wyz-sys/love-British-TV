@@ -118,6 +118,20 @@ assert "Math.ceil(Math.sqrt(n))" not in app
 assert "uncertain-badge" not in app
 assert "calais(f)?3.4:2.7" in app
 assert "fillOpacity:f.geometry.type==='LineString'?0:calais(f)?.12:.07" in app
+# v0.9: regression checks for transparent fan-out and readable event descriptions.
+assert "map.createPane('eventTooltipPane')" in app
+assert "map.getPane('eventTooltipPane').style.zIndex='820'" in app
+assert "otherPoints=clusterObstacles" in app
+assert "occlusion*5" in app
+assert "atlas-flyout-icon" in app
+assert "closeTooltip()" in app
+assert "移至主标记或点击，展开具体事件图标" not in app
+assert "expanded-event" in app
+assert "leaflet-marker-icon.atlas-flyout-icon" in css
+assert "background:transparent!important" in css
+assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
+assert "PILOT v0.9" in html
+
 assert "data/historical-detail-notes.json" in app and "renderHypotheses()" in app
 assert 'id="toggleHypotheses"' in html and 'id="mapControls"' in html
 assert html.index('id="mapControls"') < html.index('<main class="map-stage"')
