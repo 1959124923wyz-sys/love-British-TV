@@ -1,0 +1,257 @@
+{
+  "dataset_id": "calais-parish-royal-land-and-historical-cartographic-timeline",
+  "time_window": [
+    1482,
+    1558
+  ],
+  "target": [
+    1500,
+    1509
+  ],
+  "compiled": "2026-10-12",
+  "sources": [
+    {
+      "id": "DILLON-1893",
+      "author": "Harold Arthur Dillon",
+      "year": 1893,
+      "title": "XV.—Calais and the Pale",
+      "publisher": "Archaeologia 53(2):289–388 / Society of Antiquaries of London",
+      "url": "https://www.cambridge.org/core/journals/archaeologia/article/abs/xvcalais-and-the-pale/E7FD917F82CBB317B98CC3C7EEE400BA",
+      "doi": "10.1017/S0261340900005932",
+      "archive_refs": [
+        "E 315/407",
+        "E 315/371-372",
+        "Harley MS 380"
+      ],
+      "read_status": "publisher excerpt, footnotes, bibliographic records; article full text not completely rechecked",
+      "value": "Footnote identifies 1482-83 terrier names and 1556 survey bounds, and later arguments about border rivers; care about source date"
+    },
+    {
+      "id": "MUNBY-2016",
+      "author": "Julian Munby",
+      "year": 2016,
+      "title": "The Field of Cloth of Gold: Guînes and the Calais Pale Revisited",
+      "publisher": "English Heritage Historical Review 9(1):30–63",
+      "url": "https://www.tandfonline.com/doi/abs/10.1179/1752016915Z.00000000026",
+      "doi": "10.1179/1752016915Z.00000000026",
+      "archive_refs": [
+        "Tudor measured plans",
+        "Napoleonic cadastre"
+      ],
+      "read_status": "publisher abstract; full text restricted",
+      "value": "Shows rigorous multidisciplinary method for locating lost Guînes castle and Pale landscapes; reproducing 1520 mapped palace into 1500 wrong"
+    },
+    {
+      "id": "ROSE-2008-LAND",
+      "author": "Susan Rose",
+      "year": 2008,
+      "title": "Calais: An English Town in France, 1347–1558, town and trade chapter",
+      "publisher": "Boydell & Brewer / JSTOR",
+      "url": "https://www.jstor.org/stable/10.7722/j.ctt81h8v",
+      "archive_refs": [
+        "early-sixteenth-century plats",
+        "terrars",
+        "rentals"
+      ],
+      "read_status": "JSTOR public previews only",
+      "value": "Chronological maps 'early sixteenth century' not necessarily year 1500 exact"
+    },
+    {
+      "id": "TNA-LANDS",
+      "author": "The National Archives",
+      "year": null,
+      "title": "French lands of the English kings / Calais archival finding guide",
+      "publisher": "The National Archives",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "archive_refs": [
+        "E 315/407",
+        "E 315/371-372",
+        "LR 2/88",
+        "LR 2/59",
+        "SC 12"
+      ],
+      "read_status": "official archive guide read",
+      "value": "Proper series and dating"
+    },
+    {
+      "id": "NLI-1558",
+      "author": "Nicolas de Nicolay / National Library of Ireland",
+      "year": 1558,
+      "title": "Calais and Boulonnais 1558 map, reproduced in 1592 Ortelius atlas",
+      "publisher": "National Library of Ireland",
+      "url": "https://catalogue.nli.ie/Record/vtls000300814",
+      "archive_refs": [
+        "MS 48,518/25"
+      ],
+      "read_status": "catalogue read",
+      "value": "Anachronistic 1558 regional map includes Ardres / Boulogne; should not infer all were English 1500"
+    }
+  ],
+  "localities": [
+    {
+      "name_original": "St Omerkerk parish",
+      "source_period": "1482-1483 terrier copied later",
+      "type": "estate_or_parish_in_royal_rental",
+      "modern_name_guess": null,
+      "control_strength": "dated_royal_landholding_claim_only",
+      "source_ids": [
+        "DILLON-1893",
+        "TNA-LANDS"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Hereway parish",
+      "source_period": "1482-1483 terrier copied later",
+      "type": "estate_or_parish_in_royal_rental",
+      "modern_name_guess": null,
+      "control_strength": "dated_royal_landholding_claim_only",
+      "source_ids": [
+        "DILLON-1893",
+        "TNA-LANDS"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Hofkirk parish",
+      "source_period": "1482-1483 terrier copied later",
+      "type": "estate_or_parish_in_royal_rental",
+      "modern_name_guess": null,
+      "control_strength": "dated_royal_landholding_claim_only",
+      "source_ids": [
+        "DILLON-1893",
+        "TNA-LANDS"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Mark / Marke lordship and parish",
+      "source_period": "1482-1483 terrier copied later",
+      "type": "royal_lordship_and_parish",
+      "modern_name_guess": null,
+      "control_strength": "dated_land_and_rents_account_not_entire_polygon",
+      "source_ids": [
+        "DILLON-1893",
+        "TNA-LANDS"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Guempe parish",
+      "source_period": "1482-1483 terrier copied later",
+      "type": "estate_or_parish_in_royal_rental",
+      "modern_name_guess": null,
+      "control_strength": "dated_royal_landholding_claim_only",
+      "source_ids": [
+        "DILLON-1893",
+        "TNA-LANDS"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Newkirk parish",
+      "source_period": "1482-1483 terrier copied later",
+      "type": "estate_or_parish_in_royal_rental",
+      "modern_name_guess": null,
+      "control_strength": "dated_royal_landholding_claim_only",
+      "source_ids": [
+        "DILLON-1893",
+        "TNA-LANDS"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "St George Church parish",
+      "source_period": "1482-1483 terrier copied later",
+      "type": "estate_or_parish_in_royal_rental",
+      "modern_name_guess": null,
+      "control_strength": "dated_royal_landholding_claim_only",
+      "source_ids": [
+        "DILLON-1893",
+        "TNA-LANDS"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Calais town & castle",
+      "source_period": "15th-16th cent",
+      "type": "town_crown_and_garrison_governance",
+      "modern_name_guess": "Calais (location lookup only)",
+      "control_strength": "effective_royal_control_1500_1509",
+      "source_ids": [
+        "TNA-LANDS",
+        "ROSE-2008-LAND"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Guînes / Guysnes castle",
+      "source_period": "15th-16th cent",
+      "type": "fortress_and_town_royal_garrison",
+      "modern_name_guess": "Guînes (lookup only)",
+      "control_strength": "effective_royal_garrison_1500_1509",
+      "source_ids": [
+        "TNA-LANDS",
+        "MUNBY-2016",
+        "ROSE-2008-LAND"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Hames / Hammes castle",
+      "source_period": "15th-16th cent",
+      "type": "fortress_garrison",
+      "modern_name_guess": "Hames-Boucres (approximate commune lookup only)",
+      "control_strength": "effective_royal_garrison_1500_1509",
+      "source_ids": [
+        "MUNBY-2016",
+        "ROSE-2008-LAND"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Gravelines / Graveling",
+      "source_period": "16th cent later maps",
+      "type": "regional_comparator",
+      "modern_name_guess": "Gravelines",
+      "control_strength": "not_proven_English_1500_and_location_in_neighbouring_Flanders",
+      "source_ids": [
+        "DILLON-1893",
+        "NLI-1558"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Ardres / Arde",
+      "source_period": "16th cent later boundary disputes",
+      "type": "French_fortress_comparator",
+      "modern_name_guess": "Ardres",
+      "control_strength": "French_fortress_not_English_1500",
+      "source_ids": [
+        "DILLON-1893",
+        "NLI-1558"
+      ],
+      "geo": null
+    },
+    {
+      "name_original": "Boulogne",
+      "source_period": "1558 map and Tudor campaigns later than period",
+      "type": "regional_comparator_not_english_1500",
+      "modern_name_guess": "Boulogne-sur-Mer",
+      "control_strength": "not_English_1500",
+      "source_ids": [
+        "NLI-1558"
+      ],
+      "geo": null
+    }
+  ],
+  "original_1482_terrier": "TNA E 315/407 (record later copying of Edward IV-era rental noted in Dillon 1893)",
+  "original_1556_map": "TNA E 315/371-372 (later cadastre, no automatic rights to draw 1500 boundary)",
+  "map_guidance": [
+    "A list of royal rents from a parish does not prove 100% of parish under effective royal governance.",
+    "Original spelling kept as is, modern name left null until historians verify identity.",
+    "1556 survey and reconstructed Napoleonic cadastre may help terrain matching, not 1500 political authority without same-period corroboration.",
+    "Ardres French and Gravelines in Flanders must be excluded from English territorial layer unless newly proven; geographical presence on a regional map is not evidence of legal control."
+  ],
+  "approved_polygons": 0
+}

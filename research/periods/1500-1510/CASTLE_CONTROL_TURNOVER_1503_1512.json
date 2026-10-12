@@ -1,0 +1,104 @@
+{
+  "dataset": "carrickfergus-omagh-rapid-control-events-1500s",
+  "compiled": "2026-10-12",
+  "geography_type": "point_or_site_reference_only_geocoded_locations_not_verified",
+  "map_rendering": "Event markers ONLY after individual site/date approval, no decade-long infill polygons",
+  "core_period": [
+    1500,
+    1509
+  ],
+  "adjacent_period_event": "U1512.4 included for subsequent-verification only",
+  "sources": [
+    {
+      "id": "CELT-FOURMASTERS",
+      "url": "https://celt.ucc.ie/published/T100005E/text001.html",
+      "work": "Annals of the Four Masters",
+      "edition": "John O'Donovan English edition; 17th c compilation, 19th c translation"
+    },
+    {
+      "id": "CELT-ULSTER-1507",
+      "url": "https://celt.ucc.ie/published/T100001C/text130.html",
+      "work": "The Annals of Ulster, U1507.6"
+    },
+    {
+      "id": "CELT-ULSTER-1509",
+      "url": "https://celt.ucc.ie/published/T100001C.html",
+      "work": "The Annals of Ulster, U1509.8"
+    },
+    {
+      "id": "CELT-ULSTER-1512",
+      "url": "https://celt.ucc.ie/published/T100001C/text135.html",
+      "work": "The Annals of Ulster, U1512.4"
+    },
+    {
+      "id": "RIA-DIB-NIALL",
+      "url": "https://www.dib.ie/biography/oneill-niall-mor-a6964",
+      "work": "Royal Irish Academy Dictionary of Irish Biography on Niall O'Neill"
+    }
+  ],
+  "sequences": [
+    {
+      "id": "AFM-1503-12",
+      "year": 1503,
+      "actor": "Gerald FitzGerald of Kildare and military coalition",
+      "place": "Carrickfergus/Belfast",
+      "basis": "Four Masters M1503.12",
+      "kind": "campaign_with_governor_appointment",
+      "claim": "Kildare marched into Carrickfergus and destroyed Belfast castle; appointed a local military administrator at Carrickfergus.",
+      "control_end_unknown": true,
+      "not_automatic_proof": "No proven countywide permanent English Crown administration"
+    },
+    {
+      "id": "AFM-1507-13",
+      "year": 1507,
+      "actor": "Niall son of Con O'Neill and local Gaelic forces",
+      "place": "Carrickfergus Great Castle",
+      "basis": "Four Masters M1507.13 AND Ulster U1507.6; DIB Niall Mór O'Neill",
+      "kind": "recapture_or_violent_control_reversal",
+      "claim": "Niall O'Neill captured the great castle of Carrickfergus, including town mayor / held hostages, after earlier imprisonment and release.",
+      "control_end_unknown": true,
+      "not_automatic_proof": "Neither all town government nor County Antrim automatically changed long-term sovereignty"
+    },
+    {
+      "id": "AFM-1508-12",
+      "year": 1508,
+      "actor": "O'Donnell and Maguire local dynasties",
+      "place": "Enniskillen Castle",
+      "basis": "Four Masters M1508.12",
+      "kind": "gaelic_territorial_castle_administration",
+      "claim": "O'Donnell force took Enniskillen fortress and handed it to a Maguire ally, showing inter-Gaelic rights and offices.",
+      "control_end_unknown": true,
+      "not_automatic_proof": "Not Crown of England castle; exact building/location/reign dates require archaeological/historical corroboration"
+    },
+    {
+      "id": "AFM-1509-04",
+      "year": 1509,
+      "actor": "Gerald FitzGerald Earl of Kildare / sons of Con O'Neill",
+      "place": "Dungannon, then Omagh Castle",
+      "basis": "Four Masters M1509.4 AND Ulster U1509.8",
+      "kind": "royal_deputy_campaign_demolition_without_permanent_occupation",
+      "claim": "O'Neill allied faction seized Dungannon before Kildare arrived; Kildare took Omagh and demolished it, then returned home.",
+      "control_end_unknown": false,
+      "not_automatic_proof": "English deputy's army not remaining after demolition; do NOT show Omagh as permanent 1509–1510 English-controlled city or district"
+    },
+    {
+      "id": "U1512-04",
+      "year": 1512,
+      "actor": "O'Donnell and Gaelic warband",
+      "place": "Omagh Castle (rebuilt on same site)",
+      "basis": "Ulster U1512.4",
+      "kind": "later_independent_confirmation_of_reconstruction",
+      "claim": "1512 annal reports O'Donnell rebuilt in a week the Omagh castle earlier demolished by Kildare in 1509, and left his own garrison.",
+      "control_end_unknown": true,
+      "not_automatic_proof": "Later adjacent decade event is a retrospective crosscheck of 1509 destruction, NOT a 1509 occurrence."
+    }
+  ],
+  "reliability_cautions": [
+    "Annals of Ulster and Four Masters are different compilations, but may share historiographical traditions; do not call fully independent eyewitness reports.",
+    "Written modern line identifications for Gaelic castles require separate historical-archaeological concordance.",
+    "A castle attack is neither a complete map of political sovereignty nor reliable continuous full-decade legal rule.",
+    "1512 Omagh rebuild reference supports that 1509 Kildare demolition occurred but does not independently prove the timing of 1509 occupation to the day.",
+    "CELT source text only paraphrased; copyright permission for bulk reuse not assumed."
+  ],
+  "approved_polygons": 0
+}
