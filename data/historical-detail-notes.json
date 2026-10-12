@@ -1,0 +1,453 @@
+{
+  "schema": "atlas-event-notes-v1",
+  "compiled": "2026-10-12",
+  "rules": {
+    "public": "One- or two-sentence narrative in description",
+    "expanded": "Source-based detail in historical documents foldout; preserve precision, unresolved questions, accounting boundaries"
+  },
+  "records": {
+    "patent-1496": {
+      "context": "1496年3月，英王亨利七世授予卡博特及其儿子跨大西洋远航特许状，允许他们为王室探索新的贸易通路。",
+      "source_ids": [
+        "bristol-patent-1496"
+      ]
+    },
+    "bristol-sail-1497": {
+      "context": "1497年5月，约翰·卡博特乘“马修号”从布里斯托尔启航，带领船员横渡大西洋，寻找通往亚洲的航路。",
+      "source_ids": [
+        "heritage-1497",
+        "soncino-1497"
+      ]
+    },
+    "landfall-1497": {
+      "context": "1497年6月下旬，卡博特与船员望见北美沿岸，随后为英格兰王室提出海外土地权利主张。登陆地点在后来的历史研究中出现多种解释。",
+      "source_ids": [
+        "pasqualigo-1497",
+        "heritage-landfall",
+        "heritage-newfoundland"
+      ]
+    },
+    "return-1497": {
+      "context": "1497年8月，卡博特的船返回布里斯托尔，向英王呈报航行见闻。",
+      "source_ids": [
+        "heritage-1497",
+        "heritage-1498"
+      ]
+    },
+    "patent-1498": {
+      "context": "1498年2月，亨利七世再次批准卡博特组织远航船队。",
+      "source_ids": [
+        "dcb-cabot",
+        "heritage-1498"
+      ]
+    },
+    "departure-1498": {
+      "context": "1498年5月，卡博特率约五艘船再次从布里斯托尔出发。船队驶入大西洋，后来留下的航行消息十分有限。",
+      "source_ids": [
+        "heritage-1498",
+        "dcb-cabot"
+      ]
+    },
+    "status-1500": {
+      "context": "1500年前后，英格兰商人与王室继续关注北美航路，西航许可与王室账簿成为这一时期探索活动的重要线索。",
+      "source_ids": [
+        "heritage-1497",
+        "heritage-1498"
+      ]
+    },
+    "1500-WESTON-ROYAL-REWARD": {
+      "context": "王室会计档案经2018年布里斯托尔大学研究者识别记录1500年支付30英镑，以支持韦斯顿探索新发现的土地。",
+      "impact": "该奖励并非殖民地贸易利润；不要将1499年的推定远航另算为1500年实际出航。",
+      "geography": "文献所关联的地点：Kingdom of England, royal accounts。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "需原始账卷编号、月份与账目页码；年份已见学者报道"
+      ],
+      "economic_records": [
+        {
+          "amount": 30,
+          "currency": "GBP",
+          "year": 1500,
+          "accounting_category": "crown_reward_expenditure",
+          "payer": "English Crown",
+          "recipient": "William Weston",
+          "colonial_profit": false
+        }
+      ],
+      "actors": [
+        "Henry VII of England",
+        "William Weston"
+      ],
+      "source_ids": [
+        "BRIS-WESTON-2018",
+        "BRIS-WESTON-2018-NEWS"
+      ]
+    },
+    "1500-1502-ELIOT-100": {
+      "context": "皇家葡萄酒关税收支账户记录以两船航行新发现之地为由作出100英镑奖励。",
+      "impact": "该文件所载支付在1500—1502账期内，研究者推断与1502年相关，不能将确切付款日伪造为1502年某月。",
+      "geography": "文献所关联的地点：Bristol, England — royal port accounts。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "比对E351/454原始账页",
+        "与1502年9月另行20英镑赏金是否独立需要排重"
+      ],
+      "economic_records": [
+        {
+          "amount": 100,
+          "currency": "GBP",
+          "year_from": 1500,
+          "year_to": 1502,
+          "accounting_category": "royal_reward_expenditure",
+          "payer": "English Crown revenues from prisage/butlerage",
+          "recipient": "Hugh Eliot and associates",
+          "colonial_profit": false
+        }
+      ],
+      "actors": [
+        "Henry VII",
+        "Hugh Eliot",
+        "associates"
+      ],
+      "source_ids": [
+        "JONES-2010-CONDON"
+      ]
+    },
+    "1500-CALAIS-ETAPLES": {
+      "context": "英国图书馆馆藏目录记录1500年加来皇家收款委员会及1501年向加来城堡转存按Étáp​​les条约收取款项的文书。",
+      "impact": "该款项属于英法外交条约体系，不能等同于殖民地税收或加来港口贸易利润。",
+      "geography": "文献所关联的地点：Calais, Crown of England-held enclave。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "逐件核查Add Ch 74072-74073原件；查法国支付额与实际净存",
+        "不要将条约约定的金额简单视作到账"
+      ],
+      "actors": [
+        "Henry VII",
+        "Calais royal commissioners",
+        "Louis XII of France"
+      ],
+      "source_ids": [
+        "BL-CALAIS-CHARTERS"
+      ]
+    },
+    "1501-ANGLO-PORTUGUESE-PATENT": {
+      "context": "《加拿大传记辞典》记载1501年3月19日皇家授权，涉及三名布里斯托尔商人及三名葡萄牙航海者。",
+      "impact": "许可表明英王参与的商业探险合作，不等于北美已被英格兰占领。",
+      "geography": "文献所关联的地点：Bristol, Kingdom of England。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "找到皇家特许状原本及权利条款",
+        "核查名字拼写与商团具体股权关系"
+      ],
+      "actors": [
+        "Henry VII",
+        "Richard Warde",
+        "Thomas Asshehurst",
+        "John Thomas",
+        "João Fernandes",
+        "Francisco Fernandes",
+        "João Gonsalves"
+      ],
+      "source_ids": [
+        "DCB-GONSALVES",
+        "WILLIAMSON-MUN"
+      ]
+    },
+    "1501-1502-INDIGENOUS-AT-COURT": {
+      "context": "《伦敦大编年史》所载1501年9月至1502年9月伦敦市政年间，有三名来自所谓新发现岛屿的人被带到国王面前，编年史使用了带歧视性的外貌和行为描述。",
+      "impact": "原文使用taken及brought，不能由此单独推定三人的身份、所受强制程度、法律上的奴隶身份、原籍精确位置或后续命运；不重现编年史贬损称谓作为地图文案。",
+      "geography": "文献所关联的地点：Kingdom of England, royal court (unknown original homeland)。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "考证原始《大编年史》手稿出处",
+        "结合现代 Indigenous historiography 研究并避免欧洲来源为唯一叙事"
+      ],
+      "actors": [
+        "unknown Indigenous individuals (names not confirmed)",
+        "English voyagers",
+        "Henry VII court"
+      ],
+      "source_ids": [
+        "BRIS-LONDON-CHRONICLES"
+      ]
+    },
+    "1502-ANGLO-PORTUGUESE-PATENT": {
+      "context": "有1502年12月9日的后续特许状；《加拿大传记辞典》列出四名受权人。",
+      "impact": "授权与真实抵达海外、长期占领和土地产权均应分开。",
+      "geography": "文献所关联的地点：Kingdom of England (patent) / North Atlantic (target)。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "原始拉丁文许可证和可行权区域未逐字比对"
+      ],
+      "actors": [
+        "Henry VII",
+        "Hugh Eliot",
+        "Thomas Asshehurst",
+        "João Gonsalves",
+        "Francisco Fernandes"
+      ],
+      "source_ids": [
+        "DCB-GONSALVES",
+        "JONES-2010-CONDON",
+        "WILLIAMSON-MUN"
+      ]
+    },
+    "1502-PERPETUAL-PEACE": {
+      "context": "1502年英苏两国订立永久和平条约。亨利七世确认条约的原件载于苏格兰国家档案馆 SP6/31。",
+      "impact": "两国王室随后通过1503年婚姻加强联络，英格兰与苏格兰仍各自设立王权与机构。",
+      "geography": "条约确认文书关联威斯敏斯特；地图定位于该地区。",
+      "source_ids": [
+        "NRS-SP6-31",
+        "NRS-TREATY-1502"
+      ]
+    },
+    "1502-GABRIEL-BOUNTY": {
+      "context": "2025年出版的布里斯托尔大学原始文书译注确认1502年1月7日王室给三名商人购置Gabriel号的奖励。",
+      "impact": "2010年已刊文指出金额20英镑；此为国王拨款，不是殖民地收入。",
+      "geography": "文献所关联的地点：Bristol, Kingdom of England。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "取得2025年编辑原文和官方案号并核对20英镑单位",
+        "Gabriel吨数和出航日期待按原始材料审阅"
+      ],
+      "economic_records": [
+        {
+          "amount": 20,
+          "currency": "GBP",
+          "year": 1502,
+          "accounting_category": "royal_ship_acquisition_bounty",
+          "payer": "English Crown",
+          "recipient": "Bristol merchant group",
+          "colonial_profit": false
+        }
+      ],
+      "actors": [
+        "Henry VII",
+        "Robert Thorne",
+        "William Thorne",
+        "Hugh Eliot"
+      ],
+      "source_ids": [
+        "BRIS-GABRIEL-2025",
+        "JONES-2010-CONDON"
+      ]
+    },
+    "1502-MERCHANT-RETURN-REWARD": {
+      "context": "2010年历史研究文章引用1502年9月末向曾赴新发现土地的商人支付20英镑的条目。",
+      "impact": "原条目不能单独判定所有被赏者、每艘船精确航线及获利。",
+      "geography": "文献所关联的地点：Bristol, Kingdom of England。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "皇家账目条目号和付款日期待原始核查"
+      ],
+      "economic_records": [
+        {
+          "amount": 20,
+          "currency": "GBP",
+          "year": 1502,
+          "accounting_category": "voyage_reward",
+          "payer": "English Crown",
+          "recipient": "unidentified Bristol merchants",
+          "colonial_profit": false
+        }
+      ],
+      "actors": [
+        "Henry VII",
+        "Bristol merchants"
+      ],
+      "source_ids": [
+        "JONES-2010-CONDON"
+      ]
+    },
+    "1503-ROYAL-MARRIAGE": {
+      "context": "詹姆斯四世与玛格丽特·都铎在爱丁堡成婚。婚姻安排与1502年英苏永久和平条约共同构成这一时期的外交背景。",
+      "impact": "联姻为后来两国的王朝继承留下了重要纽带。",
+      "geography": "地图标记于爱丁堡地区。",
+      "source_ids": [
+        "NRS-TREATY-1502"
+      ]
+    },
+    "1503-CARRICKFERGUS": {
+      "context": "《四大师编年史》M1503.12叙述基尔代尔伯爵率军抵达卡里克弗格斯，拆毁贝尔法斯特城堡，随后任命卡里克弗格斯城堡长官。",
+      "impact": "1503年当地出现驻军与城堡管理的变化。",
+      "geography": "现代卡里克弗格斯城镇中心用于展示多条同地史事。",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ]
+    },
+    "1504-KNOCKDOE": {
+      "context": "1504年8月19日，基尔代尔伯爵率领英王在爱尔兰的代理军及盖尔地方盟军，在戈尔韦附近诺克多与克兰里卡德·伯克及盟友交战，战后联军赴戈尔韦与阿森里。",
+      "impact": "战役推动了爱尔兰地方贵族之间力量与联盟的重新安排；战役地与行政辖区分别记录。",
+      "geography": "使用诺克多所在的大致地区定位；地名与战场记录可参看地方遗产资料及爱尔兰编年史。",
+      "archive_questions": [
+        "核对Annals of Ulster及Annals of Four Masters记年",
+        "伤亡数字不同传统偏差较大，当前不予发布"
+      ],
+      "actors": [
+        "Gerald FitzGerald Earl of Kildare and Gaelic allies",
+        "Ulick Fionn Burke of Clanrickard",
+        "Turlough Donn O’Brien of Thomond",
+        "Aodh Ruadh O’Donnell and allied forces"
+      ],
+      "source_ids": [
+        "EGAN-2024-EHR",
+        "EGAN-2024-KILDARE",
+        "TCD-ANNALS",
+        "KNOCKDOE-LOCAL-HERITAGE"
+      ]
+    },
+    "1504-OKELLY-CASTLES": {
+      "context": "《四大师编年史》M1504.13记载克兰里卡德·伯克的力量摧毁奥凯利家族在康诺特地区的三座堡垒，奥凯利随后向英王在爱尔兰的代理官求援。",
+      "impact": "这场冲突成为同年诺克多战役的前奏。",
+      "geography": "相关堡垒的具体位置保留在档案调查中，暂以列表呈现。",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ]
+    },
+    "1505-CALAIS-STAPLE-ROYAL-PAYMENTS": {
+      "context": "David Grummitt在《The Calais Garrison》第七章使用加来羊毛贸易商团账簿重建1505年4月至1509年4月的军费和英王收款。研究认为这一时期平均每年汇付英王约4,020英镑，平均每年驻军薪饷约5,784英镑。",
+      "impact": "财政资金连接英格兰出口羊毛税、加来贸易商团、当地驻军与英王国库。",
+      "geography": "王室收款与贸易商团会计资料指向加来口岸和英格兰政府。",
+      "accounting": "£4,020为上述四年时期的年均汇款重建；与全时期约£32,000的累计汇款存在重叠，不能累计加总。该款项与当地殖民居民财产剥夺的净利润分属不同统计口径。",
+      "source_ids": [
+        "GRUMMITT-CALAIS-FINANCE-2008"
+      ]
+    },
+    "1505-SEBASTIAN-PENSION": {
+      "context": "《加拿大传记辞典》引用英王账簿显示授予塞巴斯蒂安·卡博特每年20英镑年金。",
+      "impact": "给付年金不证明他曾于该年航行，也不能证明他参加了1501—1506商团或拥有任何殖民地。",
+      "geography": "文献所关联的地点：Bristol / English Crown accounts。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "比对PRO E159 20 Hen VII号条目",
+        "清楚区分年度授权20镑与已支付的实际总额"
+      ],
+      "economic_records": [
+        {
+          "amount": 20,
+          "currency": "GBP_per_year",
+          "year": 1505,
+          "accounting_category": "annuity_authorized",
+          "payer": "English Crown",
+          "recipient": "Sebastian Cabot",
+          "colonial_profit": false
+        }
+      ],
+      "actors": [
+        "Henry VII",
+        "Sebastian Cabot"
+      ],
+      "source_ids": [
+        "DCB-SEBASTIAN"
+      ]
+    },
+    "1507-CARRICKFERGUS-O-NEILL": {
+      "context": "《四大师编年史》M1507.13与《阿尔斯特编年史》U1507.6均记载尼尔·奥尼尔率军取得卡里克弗格斯大城堡，俘获市长，并释放己方人质。",
+      "impact": "城堡权力由奥尼尔一方掌握，反映这一地区持续的地方冲突。",
+      "geography": "地点以卡里克弗格斯现代地名中心表示。",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S",
+        "UCC-ULSTER-1507"
+      ]
+    },
+    "1508-ENNISKILLEN": {
+      "context": "《四大师编年史》M1508.12记载奥唐奈从厄恩湖水路进军，夺取恩尼斯基林城堡，并将城堡管理交给马圭尔家族的一支。",
+      "impact": "城堡控制权转交当地盟友，体现盖尔地方政权间的军事与治理关系。",
+      "geography": "使用恩尼斯基林地区的现代城市坐标。",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ]
+    },
+    "1509-OMAGH": {
+      "context": "《四大师编年史》M1509.4与《阿尔斯特编年史》U1509.8载基尔代尔军占领奥马城堡，俘获守军，随后拆毁堡垒并撤回。",
+      "impact": "城堡于1509年遭毁。1512年《阿尔斯特编年史》U1512.4记载当地力量将堡垒重建，属于下一章节的历史。",
+      "geography": "以奥马城镇地区为定位参考。",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S",
+        "UCC-ULSTER-1509"
+      ]
+    },
+    "1509-PORT-CUSTOMS": {
+      "context": "布里斯托尔大学公布了1509年9月29日至1510年1月间的海关控制员账册，以及1509—1510年酒税与其补遗的机器可读转录版本。",
+      "impact": "港口海关收入是英格兰本土财政资料，不可直接视为北美殖民贸易或强制劳动利润；账册跨1510应按交易日期划分。",
+      "geography": "文献所关联的地点：Bristol, Kingdom of England。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "下载及版权许可逐数据集核实，账户缺漏段落不得估填",
+        "不重复计算补充残页"
+      ],
+      "actors": [
+        "Port of Bristol customs officials",
+        "English Crown"
+      ],
+      "source_ids": [
+        "BRIS-CABOT-PUBLICATIONS",
+        "BRIS-CUSTOMS-DATA"
+      ]
+    },
+    "1509-ACCESSION": {
+      "context": "这一年英格兰王位更替，下一阶段外交及财政文书需以相应王朝纪年转换。",
+      "impact": "该更替并未使英格兰与苏格兰合并，也不能自动改变加来与爱尔兰控制区地图。",
+      "geography": "文献所关联的地点：Kingdom of England。地图坐标按既有定位方式呈现。",
+      "archive_questions": [
+        "核对精确继位日期与即位程序，再填日月",
+        "别将王位更替作为英属控制新扩张"
+      ],
+      "actors": [
+        "Henry VII",
+        "Henry VIII"
+      ],
+      "source_ids": [
+        "TNA-CALAIS",
+        "BL-CALAIS-CHARTERS"
+      ]
+    },
+    "1509-O-NEILL-SUCCESSION": {
+      "context": "《四大师编年史》M1509.5载1509年8月6日泰隆首领唐纳尔·奥尼尔去世，阿特·奥尼尔继任。",
+      "impact": "当地氏族王权完成继承交接。",
+      "geography": "事件涉及泰隆地区，地图暂采用列表浏览。",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ]
+    },
+    "calais-crown": {
+      "context": "加来城由英王派驻的官员与军队管理，也是羊毛贸易和税收的重要口岸。",
+      "impact": "史料归属类别：english-crown-controlled-city",
+      "geography": "地理展示基于当地城市或岛屿的代表位置，治理制度及边界分期详见相关档案。",
+      "source_ids": [
+        "TNA-FRENCH-LANDS"
+      ]
+    },
+    "dublin-pale": {
+      "context": "都柏林是英王在爱尔兰的主要行政中心之一，周边的贵族与地方领主共同参与政治和军事事务。",
+      "impact": "史料归属类别：crown-administration-city",
+      "geography": "地理展示基于当地城市或岛屿的代表位置，治理制度及边界分期详见相关档案。",
+      "source_ids": [
+        "EGAN-2024-EHR"
+      ]
+    },
+    "channel-jersey": {
+      "context": "泽西岛受英王统辖，沿用当地的法律和行政制度。",
+      "impact": "史料归属类别：crown-dependency",
+      "geography": "地理展示基于当地城市或岛屿的代表位置，治理制度及边界分期详见相关档案。",
+      "source_ids": [
+        "JERSEY-HISTORY-GOV"
+      ]
+    },
+    "isle-of-man": {
+      "context": "马恩岛由斯坦利家族等当地领主治理，保留独特的岛屿政制。",
+      "impact": "史料归属类别：autonomous-lordship",
+      "geography": "地理展示基于当地城市或岛屿的代表位置，治理制度及边界分期详见相关档案。",
+      "source_ids": [
+        "CAMBRIDGE-LORDSHIP-MAN"
+      ]
+    },
+    "orkney-scotland": {
+      "context": "奥克尼群岛处于苏格兰王权之下，拥有自己的地方治理传统。",
+      "impact": "史料归属类别：scottish-crown-territory",
+      "geography": "地理展示基于当地城市或岛屿的代表位置，治理制度及边界分期详见相关档案。",
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ]
+    },
+    "shetland-scotland": {
+      "context": "设得兰群岛处于苏格兰王权关系之内，延续北方群岛的地方制度。",
+      "impact": "史料归属类别：scottish-crown-territory",
+      "geography": "地理展示基于当地城市或岛屿的代表位置，治理制度及边界分期详见相关档案。",
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ]
+    }
+  }
+}
