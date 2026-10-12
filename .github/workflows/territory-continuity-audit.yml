@@ -14,6 +14,9 @@ on:
       - 'data/*control*.geojson'
       - 'data/political-relations*.geojson'
       - 'scripts/validate_control_transition.py'
+      - 'scripts/test_continuity_preview.js'
+      - 'app-continuity-1497-1529-preview.js'
+      - 'preview-continuity-1497-1529.html'
   workflow_dispatch:
 
 permissions:
@@ -60,3 +63,7 @@ jobs:
         run: |
           python3 research/continuity/check_transition.py
           python3 research/continuity/check_full_continuity.py
+      - name: Validate fourth-chapter independent preview
+        run: |
+          node --check app-continuity-1497-1529-preview.js
+          node scripts/test_continuity_preview.js
