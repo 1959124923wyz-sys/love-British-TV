@@ -85,6 +85,10 @@ try:
     if before and after:
         assert before==after, f"Event locator changed tile zoom {before}->{after}"
     driver.save_screenshot(str(OUT / "focus-flodden-1513.png"))
+    toggle_layer("toggleEvents", False)
+    verify("a hidden event layer kept a previously focused marker visible",
+           "document.querySelectorAll('.atlas-target-marker').length===0", driver)
+    toggle_layer("toggleEvents", True)
     browser = driver.get_log("browser")
     critical = [x["message"] for x in browser if re.search(r"Uncaught (TypeError|ReferenceError|SyntaxError)|Uncaught \w+Error", x["message"])]
     assert not critical, "Browser JavaScript errors: " + str(critical[:8])
