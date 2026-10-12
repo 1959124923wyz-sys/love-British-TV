@@ -1,0 +1,24 @@
+# Operating system / temporary editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+
+# Local caches and build/test artifacts (not historic research files)
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+node_modules/
+coverage/
+playwright-report/
+test-results/
+*.log
+
+# Local environment secrets
+.env
+.env.local
+.env.*.local
