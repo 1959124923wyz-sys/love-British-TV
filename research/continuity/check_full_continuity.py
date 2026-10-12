@@ -47,7 +47,7 @@ for year in years:
         assert "tournai-occupied-city-1513" not in active
 assert lookup["tournai-occupied-city-1513"]["known_historic_end"]=="1519-02"
 assert lookup["guines-crown-1520s"]["map_group_id"]=="calais-crown"
-assert lookup["guines-crown-1520s"]["scope_warning"].lower().find("not new")>=0
+assert "newly acquired land" in lookup["guines-crown-1520s"]["scope_warning"].lower()
 assert not any(x["stable_id"]=="kingdom-of-scotland" and x["map_relation"].startswith("English") for x in L["stable_states"])
 assert len(L["changes"])==6
 assert len(C["features"])==3 and len(P["features"])==5 and len(G["features"])==4
