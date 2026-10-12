@@ -53,7 +53,7 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let year=1497; let selected=''; let selectedItemYear=null; let timer=null;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let year=1497; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 let clusterObstacles=[];
@@ -66,7 +66,7 @@ const earlyIntro=$('chapterIntro').textContent;
 function setWarning(msg){let e=$('boundaryWarning');if(!e){e=document.createElement('div');e.id='boundaryWarning';e.className='map-warning';$('map').parentElement.appendChild(e)}e.textContent=msg;}
 function hideWarning(){let e=$('boundaryWarning');if(e)e.remove();}
 function listSources(ids,item){
- const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[]),...(atlasThird?.sources||[])].find(src=>src.id===id)).filter(Boolean);
+ const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[]),...(atlasThird?.sources||[]),...(atlasFourth?.sources||[])].find(src=>src.id===id)).filter(Boolean);
  const note=researchNotes[item?.id];
  if(!refs.length&&!note)return '';
  const fields=[
@@ -332,7 +332,8 @@ function renderTerritories(){
    layer.on('click',()=>{
     const place=(atlas?.places||[]).find(x=>x.id===p.source_place_id) ||
       (atlasLater?.places||[]).find(x=>x.id===p.source_place_id) ||
-      (atlasThird?.places||[]).find(x=>x.id===p.source_place_id);
+      (atlasThird?.places||[]).find(x=>x.id===p.source_place_id) ||
+      (atlasFourth?.places||[]).find(x=>x.id===p.source_place_id);
     if(place){openDossier(place,'place');return}
     const citations=(p.source_urls||[]).filter(x=>/^https:\/\//.test(x))
      .map(url=>'<p><a href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看地理与史料来源 ↗</a></p>').join('');
@@ -397,7 +398,8 @@ function renderControlAreas(){
    .on('click',()=>{
     const record=(atlas.places||[]).find(q=>q.id===p.source_place_id)
       ||(atlasThird?.places||[]).find(q=>q.id===p.source_place_id)
-      ||(atlasLater?.places||[]).find(q=>q.id===p.source_place_id);
+      ||(atlasLater?.places||[]).find(q=>q.id===p.source_place_id)
+      ||(atlasFourth?.places||[]).find(q=>q.id===p.source_place_id);
     if(record)openDossier(record,'place');
    }).addTo(groups.controlAreas);
   // Low-key geo-label shows which urban area changes, with no blocking background.
@@ -516,7 +518,7 @@ function setYear(v){
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
-function togglePlay(){if(timer){stopPlay();return}if(year===1519)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1519){stopPlay();return}setYear(year+1)},1250)}
+function togglePlay(){if(timer){stopPlay();return}if(year===1529)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1529){stopPlay();return}setYear(year+1)},1250)}
 async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
@@ -558,16 +560,18 @@ function openPolity(group){
 }
 async function boot(){
  try{
-  const [res,laterRes,thirdRes]=await Promise.all([
+  const [res,laterRes,thirdRes,fourthRes]=await Promise.all([
     fetch('data/atlas-1497-1500.json',{cache:'no-store'}),
     fetch('data/atlas-1500-1509.json',{cache:'no-store'}),
-    fetch('data/atlas-1510-1519.json',{cache:'no-store'})
+    fetch('data/atlas-1510-1519.json',{cache:'no-store'}),
+    fetch('research/continuity/staged/atlas-1520-1529.json',{cache:'no-store'})
   ]);
-  if(!res.ok||!laterRes.ok||!thirdRes.ok)throw new Error('历史切片未正确加载');
+  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok)throw new Error('历史切片未正确加载');
   atlasEarly=await res.json();
   atlasLater=await laterRes.json();
   atlasThird=await thirdRes.json();
-  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places))throw new Error('历史数据结构错误');
+  atlasFourth=await fourthRes.json();
+  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places))throw new Error('历史数据结构错误');
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
@@ -575,11 +579,11 @@ async function boot(){
   try{
    const [notesResponse,geoResponse,thirdGeoResponse,controlResponse,politicalResponse,footprintResponse]=await Promise.all([
     fetch('data/historical-detail-notes.json',{cache:'no-store'}),
-    fetch('data/geography-1500-hypotheses.geojson',{cache:'no-store'}),
+    fetch('research/continuity/staged/geography-hypotheses-1500-1529.geojson',{cache:'no-store'}),
     fetch('data/geography-1510-1519-hypotheses.geojson',{cache:'no-store'}),
-    fetch('data/french-urban-control-1500-1519.geojson',{cache:'no-store'}),
-    fetch('data/political-relations-1500-1519.geojson',{cache:'no-store'}),
-    fetch('data/territorial-footprints-1497-1519.geojson',{cache:'no-store'})
+    fetch('research/continuity/staged/french-urban-control-1497-1529.geojson',{cache:'no-store'}),
+    fetch('research/continuity/staged/political-relations-1500-1529.geojson',{cache:'no-store'}),
+    fetch('research/continuity/staged/territorial-footprints-1497-1529.geojson',{cache:'no-store'})
    ]);
    if(notesResponse.ok)researchNotes=(await notesResponse.json()).records||{};
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
@@ -606,6 +610,7 @@ $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target
 $('chapterOne').addEventListener('click',()=>{stopPlay();if(atlasEarly)setYear(1497)});
 $('chapterTwo').addEventListener('click',()=>{stopPlay();if(atlasLater)setYear(1500)});
 $('chapterThree').addEventListener('click',()=>{stopPlay();if(atlasThird)setYear(1510)});
+$('chapterFour').addEventListener('click',()=>{stopPlay();if(atlasFourth)setYear(1520)});
 $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)});
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
