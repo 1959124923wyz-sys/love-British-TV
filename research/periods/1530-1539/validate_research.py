@@ -37,6 +37,7 @@ sites=load("EVENT_SITES_1530_1539.geojson")
 delta=load("MAP_DELTA_1530_1539.geojson")
 atlas=load("ATLAS_REVIEW_CANDIDATE.json")
 queue=load("ARCHIVAL_ACTION_QUEUE.json")
+next_seed=load("NEXT_DECADE_1539_1540_RESEARCH_SEED.json")
 prior=json.loads((ROOT/"data/atlas-1520-1529.json").read_text(encoding="utf-8"))
 old_area=json.loads((ROOT/"data/territorial-footprints-1497-1529.geojson").read_text(encoding="utf-8"))
 src_ids={s["id"] for s in sources["records"]}
@@ -113,6 +114,9 @@ require(not atlas["colonial_polygons"], "must not publish unconfirmed ancient po
 require(len(episodes["records"])>=15 and all(x["actual_historical_polygon"] is None for x in episodes["records"]), "unverified estate conquest")
 require(len(finance["records"])>=7 and all(x["amount_value"] is None for x in finance["records"]), "fake finance numerical figures")
 require(len(queue["tasks"])>=17, "archival queue lost")
+require(next_seed["from_snapshot_year"]==1539, "next-decade seed wrong year")
+require({r["stable_id"] for r in next_seed["incoming_stable_ids"]}==lead_ids, "one of the 1539 inherited polities was dropped from 1540 research seed")
+require(next_seed["new_1540_year_end_snapshot"] is None and next_seed["verified_new_1540_polygon_count"]==0, "fabricated 1540 atlas state")
 print("PASS 1530-1539: sources=%d events=%d atlas_sources=%d geography=8 (7 inherited+Wales legal only) "
       "political_cores=3 relationships=4 event_sites=%d change_features=%d control_episodes=%d "
       "fiscal_objects=%d priorities=%d year_slices=10 ; zero fictional actual-control polygons."
