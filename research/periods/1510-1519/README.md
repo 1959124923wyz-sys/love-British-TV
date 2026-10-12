@@ -38,7 +38,7 @@
 
 ## 第二次查漏补缺（2026-10-12）
 请优先查阅 [RESEARCH_GAPS_AND_PRIORITY_20261012.json](RESEARCH_GAPS_AND_PRIORITY_20261012.json)，包含8项分级档号/研究任务（4个P0，3个P1，1个P2）。
-- **重要新增1517**：John Rastell the elder 及John Howting、Richard Spicer获英王1517-03-05文书支持准备北美殖民定居，至少4艘船在英吉利海峡沿岸发生争执后未建立定居点；已纳入事件和控制关系库。可靠二手来源 David B. Quinn 载于[加拿大传记辞典](https://www.biographi.ca/en/bio/rastell_john_1E.html)。与原有Sebastian Cabot/Thomas Pert“航行传闻”是两条不同史料主张，不能互相代替。
+- **重要新增1517**：John Rastell the elder 及John Howting、Richard Spicer获英王1517-03-05文书支持准备北美殖民定居，至少4艘船在英吉利海峡沿岸发生争执后未建立定居点；已纳入事件和控制关系库。可靠二手来源 David B. Quinn 载于[加拿大传记辞典](https://www.biographi.ca/en/bio/rastell_john_1F.html)。与原有Sebastian Cabot/Thomas Pert“航行传闻”是两条不同史料主张，不能互相代替。
 - **1515爱尔兰行政原件入口**：British Library Add MS4792 ff96–110（国家状况/改革建议）、Add MS4763 ff481–495（后世抄本）；Sir William Darcy 1515-06-24文章在Bodleian Laud Misc611存有摘录。待核原文与作者/司法覆盖范围。
 - **1519/1520纠错**：Ellis(2023)指出约1519-11亨利八世决定撤换Kildare，但Surrey获增强军队的lieutenant正式任命为1520-02，实际英国军官治理与远征属于1520年代。此前“1519 Surrey已实际主政”简化现已修订事件和控制数据库。
 - **重要空间新资料**：[Wallonia historical atlas 1513–1519 Tournai and Tournaisis](https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-sous-influence-anglaise) 显示城市之外还有大片Tournaisis研究对象，约60乡村教区受复杂乡村司法体系管辖（[Lille 2013 dissertation](https://pepite.univ-lille.fr/ori-oai-search/notice/view/2013LIL30041)）。原1.15km图尔奈圆圈只是地名标签，不能视为当年所有英方影响/行政疆界；地区图仅保留文献链接，未经制图授权未描摹。
