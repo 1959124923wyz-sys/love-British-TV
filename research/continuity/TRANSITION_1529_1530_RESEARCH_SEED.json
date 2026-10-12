@@ -1,0 +1,267 @@
+{
+  "schema": "territory-next-decade-seed-v1",
+  "compiled": "2026-10-12",
+  "from_snapshot_year": 1529,
+  "aimed_research_period": "1530-1539",
+  "review_state": "START_OF_RESEARCH_ONLY_NOT_1530_CONFIRMED",
+  "metadata": "All 1529 recorded identities are handed off. No one is allowed to call an unstudied 1530 transfer confirmed or delete a political area just because decade switched.",
+  "incoming_states": [
+    {
+      "stable_id": "calais-crown",
+      "display_name": "加来：英王在法国的控制据点",
+      "predecessor_control_class": "direct_urban_control",
+      "previous_controller": "Kingdom of England",
+      "previous_1529_status": "English_royal_city",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "TNA-FRENCH-LANDS"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "TNA-FRENCH-LANDS"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "TNA-FRENCH-LANDS"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": false,
+      "cartographic_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "requested_research_action": "Check 1530 onward Guines bastion building and 1529 policy enforcement, update actual control footprint only after evidence."
+    },
+    {
+      "stable_id": "dublin-pale",
+      "display_name": "都柏林：英王在爱尔兰的行政核心之一",
+      "predecessor_control_class": "crown_administration_core_not_entire_island",
+      "previous_controller": "Kingdom of England (through local deputy officials)",
+      "previous_1529_status": "limited_English_royal_administration",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "EGAN-2024-EHR"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "EGAN-2024-EHR"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "EGAN-2024-EHR"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": false,
+      "cartographic_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "requested_research_action": "Compare 1529–30 Irish government and tax jurisdiction with existing Pale; preserve Gaelic rulers independently."
+    },
+    {
+      "stable_id": "channel-jersey",
+      "display_name": "泽西岛：英王属地",
+      "predecessor_control_class": "crown_dependency_not_direct_english_county",
+      "previous_controller": "English Crown with local laws",
+      "previous_1529_status": "crown_dependency",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "JERSEY-HISTORY-GOV"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "JERSEY-HISTORY-GOV"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "JERSEY-HISTORY-GOV"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": false,
+      "cartographic_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "requested_research_action": "Verify continuing historic political relation from original source; do not fabricate termination."
+    },
+    {
+      "stable_id": "isle-of-man",
+      "display_name": "马恩岛：特殊领主制度",
+      "predecessor_control_class": "autonomous_lordship_not_english_crown_county",
+      "previous_controller": "Stanley family lordship under distinct legal system",
+      "previous_1529_status": "autonomous_lordship",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "CAMBRIDGE-LORDSHIP-MAN"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "CAMBRIDGE-LORDSHIP-MAN"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "CAMBRIDGE-LORDSHIP-MAN"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": false,
+      "cartographic_warning": "Continuity of point/place does not certify that full surrounding historical polygon stayed unchanged.",
+      "requested_research_action": "Verify continuing historic political relation from original source; do not fabricate termination."
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "display_name": "奥克尼：苏格兰王权相关群岛",
+      "predecessor_control_class": "scottish_crown_territory_not_english_colony",
+      "previous_controller": "Kingdom of Scotland",
+      "previous_1529_status": "independent_Scottish_non_English",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": false,
+      "cartographic_warning": "Scotland independent of English Crown; not English colonial territory.",
+      "requested_research_action": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory."
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "display_name": "设得兰：苏格兰王权相关群岛",
+      "predecessor_control_class": "scottish_crown_territory_not_english_colony",
+      "previous_controller": "Kingdom of Scotland",
+      "previous_1529_status": "independent_Scottish_non_English",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "main:data/atlas-1500-1509.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "main:data/atlas-1510-1519.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        },
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "SHETLAND-MUSEUM-1472"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": false,
+      "cartographic_warning": "Scotland independent of English Crown; not English colonial territory.",
+      "requested_research_action": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory."
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "display_name": "吉讷：加来边区英王军事与定居管理中心",
+      "predecessor_control_class": "fortified_frontier_governance_not_new_conquest",
+      "previous_controller": "Kingdom of England",
+      "previous_1529_status": "existing_English_Calais_child_site",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+          "ids": [
+            "CAL-ROYAL-HRP-1520",
+            "CAL-MURPHY-2025-GUINES"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": true,
+      "cartographic_warning": "Existing Calais border stronghold, newly separate marker != newly acquired land.",
+      "requested_research_action": "Check 1530 onward Guines bastion building and 1529 policy enforcement, update actual control footprint only after evidence."
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "display_name": "独立苏格兰王国",
+      "predecessor_control_class": "independent_kingdom_external_to_english_control",
+      "previous_controller": "Kingdom of Scotland (James V)",
+      "previous_1529_status": "independent_Scottish_non_English",
+      "next_1530_status": "uncertain_continuity_until_1530_research",
+      "historical_end_date_known": null,
+      "source_chain": [
+        {
+          "ref": "main:data/atlas-1497-1500.json#polities.scotland",
+          "ids": []
+        },
+        {
+          "ref": "research/continuity/TRANSITION_1519_1520.json#kingdom-of-scotland",
+          "ids": [
+            "SC-MURPHY-2024-ANGLO-SCOTS"
+          ]
+        },
+        {
+          "ref": "research/territorial-1520-1529-20261012:research/periods/1520-1529/CONTROL_EPISODES.json",
+          "ids": [
+            "SC-MURPHY-2024-ANGLO-SCOTS"
+          ]
+        }
+      ],
+      "geometry_status": "inherit_previous_dashed_hypothesis_as_reference_only_not_claim_of_1530_boundary",
+      "historically_already_inside_English_Calais": false,
+      "cartographic_warning": "Scotland independent of English Crown; not English colonial territory.",
+      "requested_research_action": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory."
+    }
+  ],
+  "historically_terminated_but_keep_as_archived": [
+    "tournai-occupied-city-1513"
+  ],
+  "year_1530_snapshot_not_generated": true,
+  "approved_polygon_count": 0,
+  "main_editor_instruction": "Do not import 1529 IDs wholesale as confirmed effective land in 1530; start with this inventory, research changes, then explicitly mark continued/end/transferred/uncertain."
+}
