@@ -57,7 +57,7 @@ later = json.loads((ROOT/"data/atlas-1500-1509.json").read_text(encoding="utf-8"
 assert later["period"]["from"] == 1500 and later["period"]["to"] == 1509
 assert not later["colonial_polygons"], "Do not infer unverified Calais / Pale polygons"
 assert not later["routes"], "No sourced new exact voyages"
-assert len(later["events"]) >= 10 and len(later["places"]) >= 5
+assert len(later["events"]) >= 20 and len(later["places"]) >= 5
 later_sources = {v["id"] for v in later["sources"]}
 assert len(later_sources) == len(later["sources"])
 for src in later["sources"]:
@@ -77,6 +77,19 @@ for ev in later["events"]:
     assert ev["significance"]["level"] in (1,2,3), ev["id"]
     assert ev.get("colonial_profit") is not True, ev["id"]
 assert "1508-1509-SEBASTIAN-VOYAGE-QUESTION" not in ids_later
+# Prevent regression where one co-located item overwrote a different historical record.
+assert {"1501-1502-INDIGENOUS-AT-COURT","1502-PERPETUAL-PEACE"} <= ids_later
+assert {"1503-CARRICKFERGUS","1507-CARRICKFERGUS-O-NEILL",
+        "1508-ENNISKILLEN","1509-OMAGH"} <= ids_later
+assert len({e["id"] for e in later["events"]}) == len(later["events"])
+for place in later["places"]:
+    assert place["state_type"] == "political_relationship"
+    assert place["start_year"] <= 1500
+    assert place["observed_through_year"] >= 1509
+    assert place["end_year"] is None
+assert later["presentation"]["chapter"]["event_visibility"] == "all-significant-events-throughout-chapter"
+assert later["presentation"]["chapter"]["state_visibility"] == "persists-while-supported"
+
 for f in ("research/periods/1500-1510/PROGRESS.md",
           "research/periods/1500-1510/CONTROL_AND_CHRONOLOGY_REVIEW.md"):
     assert (ROOT/f).is_file(), f
