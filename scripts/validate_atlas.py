@@ -36,6 +36,22 @@ for e in a["events"]:
     assert type(significance.get("level")) is int and significance["level"] in (1,2,3), ("Invalid tier",e["id"])
     assert significance.get("rationale"), ("Missing reason",e["id"])
 assert a.get("visual_system",{}).get("importance_independent_of_certainty") is True
+# Approved category vocabulary and sprite must remain in sync with event records.
+catalog = json.loads((ROOT/"data/icon-categories.json").read_text(encoding="utf-8"))
+assert catalog["version"] == "2.0-approved"
+categories = catalog["categories"]
+assert len(categories) == 16
+symbol_codes = [entry["code"] for entry in categories]
+assert len(set(symbol_codes)) == 16
+assert len(set(entry["key"] for entry in categories)) == 16
+sprite = (ROOT/"assets/atlas-icons.svg").read_text(encoding="utf-8")
+from xml.etree import ElementTree as ET
+icons = ET.fromstring(sprite)
+svg_codes = {el.get("id") for el in icons.iter() if el.tag.endswith("symbol")}
+assert set(symbol_codes) == svg_codes, (set(symbol_codes) ^ svg_codes)
+for e in a["events"]:
+    assert e["icon_code"] in svg_codes, e["id"]
+assert a["visual_system"]["version"] == "2.0-approved"
 assert not a.get("colonial_polygons"), "Never paint unverified 1497 colonies"
 geo = json.loads((ROOT/"data/modern-uk-regions.topojson").read_text(encoding="utf-8"))
 assert geo["type"] == "Topology"
