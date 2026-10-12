@@ -341,9 +341,9 @@ function renderHypotheses(){
    style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false}
   }).addTo(groups.hypotheses);
   L.geoJSON(geographicHypotheses,{
-   filter:f=>year<1510?['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type):
+   filter:f=>{if(!f.properties?.valid_years?.includes(year))return false;return year<1510?['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type):
      (calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type))||
-     String(f.properties?.id||'').startsWith('irish-pale-'),
+     String(f.properties?.id||'').startsWith('irish-pale-')},
    style:f=>({color:f.geometry.type==='LineString'?'#e9b06e':calais(f)?'#c58dfb':'#d4aa70',
     weight:calais(f)?3.4:2.7,dashArray:'7 5',opacity:calais(f)?1:.91,
     fill:f.geometry.type!=='LineString',fillColor:calais(f)?'#b58bea':'#d4aa70',
