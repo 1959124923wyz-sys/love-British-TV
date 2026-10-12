@@ -37,3 +37,5 @@
 
 ## 交互预览（独立验收文件）
 [interactive_research_preview.html](interactive_research_preview.html) 内嵌本期已候审21条事件、7处持续政治地点与6项粗略地理参考，支持1520—1529年滑块、全部事件左栏、地图聚焦按钮与独立虚线图层开关。**仅作为主编试阅，不是已改动正式app.js**。有GPS的11事件用现代地名/官方港湾坐标；其余10事件仍留在章节列表，不设伪造地图点。
+
+**2026-10-12 GitHub 草稿审查入口：**[PR #8 完整历史研究](https://github.com/1959124923wyz-sys/love-British-TV/pull/8)；[PR #9 1520—1529年主编预审包](https://github.com/1959124923wyz-sys/love-British-TV/pull/9)。两份 PR 均为 Draft，main 不受本轮影响。
