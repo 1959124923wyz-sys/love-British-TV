@@ -11,10 +11,10 @@
 | P1 历史状态和章节切换分散 | 本轮局部修复，仍待重构 | 事件 `occurredByYear` 固定；城市年份截止与跨章持续保持；切换章节不自动关闭右侧详情；后续抽象统一 `isActiveAtYear` 并覆盖所有状态层 |
 | P2 `style.css` / `css/dark-atlas-v2.css` 双样式载入 | 保留运行，待安全合并 | 前者包含旧布局基础样式，贸然删除会损坏页面；先建立像素/布局回归后再抽取真正使用的基础变量 |
 | P2 旧研究分支和PR未关闭 | 分类保留，待审核归档 | PR #1—#9 主要为研究或独立编辑审核成果；部分内容已进入main，后续逐PR比较差异，禁止整批自动合并/删除 |
-| 地图点击边界出现白色方框 | 本轮待发布修复 | SVG `path.leaflet-interactive` 点击焦点去掉矩形outline；键盘焦点保留柔和光晕 |
-| 加来城市核心被概略Pale轮廓取代 | 本轮待发布修复 | 概略控制包络显示时也必须保留已考城市实控核心符号（且两图层证据等级分开） |
-| 老Pale点击跳至图尔奈资料 | 本轮待发布修复 | 史料链接绑定GeoJSON单个Feature的`source_path`，不依赖当前章节年份 |
-| 逐年时间轴规范未完全进入基础文件 | 本轮待发布修复 | 更新 `APPROVED_MAP_INTERACTION_STANDARD.md`、`PUBLIC_NARRATIVE_AND_TIME_MODEL.md` 和历史JSON的 `event_visibility` |
+| 地图点击边界出现白色方框 | 代码修复并已发布，待浏览器视觉验收 | SVG `path.leaflet-interactive` 点击焦点去掉矩形outline；键盘焦点保留柔和光晕 |
+| 加来城市核心被概略Pale轮廓取代 | 代码修复并已发布，待浏览器视觉验收 | 概略控制包络显示时也必须保留已考城市实控核心符号（且两图层证据等级分开） |
+| 老Pale点击跳至图尔奈资料 | 代码修复并已发布，待浏览器视觉验收 | 史料链接绑定GeoJSON单个Feature的`source_path`，不依赖当前章节年份 |
+| 逐年时间轴规范未完全进入基础文件 | 已固化于数据与正式文档 | 更新 `APPROVED_MAP_INTERACTION_STANDARD.md`、`PUBLIC_NARRATIVE_AND_TIME_MODEL.md` 和历史JSON的 `event_visibility` |
 
 ## 历史时间轴不可回退的验收约束
 
