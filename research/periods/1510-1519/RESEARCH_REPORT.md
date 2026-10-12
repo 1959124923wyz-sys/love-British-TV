@@ -76,7 +76,7 @@
 
 
 ## 1510—1519年补充审计（2026-10-12，优先于初稿中有关1519 Surrey的简写）
-**1517年英王资助的北美殖民定居准备**：David B. Quinn撰写的加拿大传记辞典[Rastell传记](https://www.biographi.ca/en/bio/rastell_john_1E.html)明确记载1517年3月5日Henry VIII致支持信并向John Rastell the elder、John Howting、Richard Spicer提供少量贷款；至少四条载有定居物资的船被准备，沿桑威奇、达特茅斯、普利茅斯、法尔茅斯等港口因争执而终止原计划，未建立北美定居点。**这是与Sebastian Cabot/Thomas Pert 1516/1517据称海外航行不同的研究事件**。可以在1517时间轴显示定居企划及失败，但不能给纽芬兰或拉布拉多绘制英王已占领的殖民地。
+**1517年英王资助的北美殖民定居准备**：David B. Quinn撰写的加拿大传记辞典[Rastell传记](https://www.biographi.ca/en/bio/rastell_john_1F.html)明确记载1517年3月5日Henry VIII致支持信并向John Rastell the elder、John Howting、Richard Spicer提供少量贷款；至少四条载有定居物资的船被准备，沿桑威奇、达特茅斯、普利茅斯、法尔茅斯等港口因争执而终止原计划，未建立北美定居点。**这是与Sebastian Cabot/Thomas Pert 1516/1517据称海外航行不同的研究事件**。可以在1517时间轴显示定居企划及失败，但不能给纽芬兰或拉布拉多绘制英王已占领的殖民地。
 
 **1515爱尔兰治理报告**：BL [Add MS4792 ff96–110](https://searcharchives.bl.uk/catalog/040-002110309)馆藏约1515治理建议文本，Add MS4763 ff481–495为17世纪抄本；William Darcy于1515年6月24日提交王室枢密院的方案有Bodleian Laud Misc611摘录/NLI微缩资料。现仍属馆藏定位与专业论文总结，尚未把报道的“四郡半数服从王法”误译为精确50%地籍测量。
 
