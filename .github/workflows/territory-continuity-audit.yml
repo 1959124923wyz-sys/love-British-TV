@@ -1,6 +1,16 @@
 name: Territory continuity research gate
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/continuity/**'
+      - 'docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md'
+      - 'docs/TERRITORY_CONTINUITY_RULE.md'
+      - 'scripts/validate_control_transition.py'
+      - 'scripts/test_continuity_preview.js'
+      - 'app-continuity-1497-1529-preview.js'
+      - 'preview-continuity-1497-1529.html'
   pull_request:
     paths:
       - 'AGENTS.md'

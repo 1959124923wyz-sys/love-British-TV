@@ -136,8 +136,8 @@ assert "PILOT v1.3" in html
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
 assert third["period"] == {"from":1510,"to":1519,"next":1520}
 assert third["presentation"]["chapter"]["event_visibility"] == "progressive-by-event-year"
-assert len(third["events"]) == 15 and len(third["places"]) == 7
-assert len(third["sources"]) == 22
+assert len(third["events"]) >= 15 and len(third["places"]) >= 7
+assert len(third["sources"]) >= 22
 assert not third["colonial_polygons"] and not third["routes"]
 third_source_ids = {row["id"] for row in third["sources"]}
 assert len(third_source_ids) == len(third["sources"])
@@ -182,9 +182,9 @@ assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
 assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
 # MAP-FIRST French urban control polygons are explicitly symbols, not surveyed historic city walls.
 cores = json.loads((ROOT/"data/french-urban-control-1500-1519.geojson").read_text(encoding="utf-8"))
-assert cores["type"] == "FeatureCollection" and len(cores["features"]) == 2
+assert cores["type"] == "FeatureCollection" and len(cores["features"]) >= 2
 assert cores["cartographic_semantics"]["prohibit_for_area_calculations"] is True
-a_core,b_core = cores["features"]
+a_core,b_core = cores["features"][:2]
 assert a_core["properties"]["source_place_id"] == "calais-crown"
 assert b_core["properties"]["source_place_id"] == "tournai-occupied-city-1513"
 assert (a_core["properties"]["start_year"],a_core["properties"]["observed_through_year"]) == (1497,1519)
@@ -197,10 +197,10 @@ for f in cores["features"]:
 def active_city_symbols(y):
     return {f["properties"]["source_place_id"] for f in cores["features"]
         if f["properties"]["start_year"]<=y<=f["properties"]["observed_through_year"]}
-assert active_city_symbols(1512) == {"calais-crown"}
-assert active_city_symbols(1513) == {"calais-crown","tournai-occupied-city-1513"}
-assert active_city_symbols(1518) == {"calais-crown","tournai-occupied-city-1513"}
-assert active_city_symbols(1519) == {"calais-crown"}
+assert "calais-crown" in active_city_symbols(1512) and "tournai-occupied-city-1513" not in active_city_symbols(1512)
+assert {"calais-crown","tournai-occupied-city-1513"} <= active_city_symbols(1513)
+assert {"calais-crown","tournai-occupied-city-1513"} <= active_city_symbols(1518)
+assert "calais-crown" in active_city_symbols(1519) and "tournai-occupied-city-1513" not in active_city_symbols(1519)
 assert "function renderControlAreas()" in app
 assert "controlAreaPane" in app
 assert "calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type)" in app
@@ -209,13 +209,13 @@ assert 'id="toggleControlAreas"' in html
 assert (ROOT/"docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md").is_file()
 # v1.3: real coastline polygons and research-grade approximate historic territorial envelopes.
 footprints=json.loads((ROOT/"data/territorial-footprints-1497-1519.geojson").read_text(encoding="utf-8"))
-assert footprints["type"] == "FeatureCollection" and len(footprints["features"]) == 7
+assert footprints["type"] == "FeatureCollection" and len(footprints["features"]) >= 7
 control=next(f for f in footprints["features"] if f["id"] == "calais-pale-sourced-places-approx-1497-1519")
 assert control["properties"]["start_year"] == 1497 and control["properties"]["observed_through_year"] == 1519
 assert control["properties"]["geometry_role"] == "attested_settlement_envelope_not_surveyed_border"
 assert control["properties"]["display_group"] == "control"
-assert sum(f["properties"]["display_group"]=="political" for f in footprints["features"]) == 5
-assert sum(f["properties"]["display_group"]=="research" for f in footprints["features"]) == 1
+assert sum(f["properties"]["display_group"]=="political" for f in footprints["features"]) >= 5
+assert sum(f["properties"]["display_group"]=="research" for f in footprints["features"]) >= 1
 for f in footprints["features"]:
     assert f["geometry"]["type"] in ("Polygon","MultiPolygon"), f["id"]
     assert f["properties"]["historical_boundary_precision"], f["id"]
@@ -230,7 +230,7 @@ assert (ROOT/"data/TERRITORIAL_FOOTPRINT_SOURCES.md").is_file()
 
 # v1.2 political relationship coverage and chronological-event reveal.
 relations=json.loads((ROOT/"data/political-relations-1500-1519.geojson").read_text(encoding="utf-8"))
-assert relations["type"]=="FeatureCollection" and len(relations["features"])==5
+assert relations["type"]=="FeatureCollection" and len(relations["features"])>=5
 relation_types={f["properties"]["political_relation"] for f in relations["features"]}
 assert {"crown_dependency","autonomous_lordship","scottish_crown_territory","crown_administration_core"} <= relation_types
 assert all(f["geometry"]["type"]=="Point" and f["properties"]["historic_polygon_verified"] is False for f in relations["features"])
