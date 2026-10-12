@@ -87,7 +87,7 @@ for place in later["places"]:
     assert place["start_year"] <= 1500
     assert place["observed_through_year"] >= 1509
     assert place["end_year"] is None
-assert later["presentation"]["chapter"]["event_visibility"] == "all-significant-events-throughout-chapter"
+assert later["presentation"]["chapter"]["event_visibility"] == "progressive-by-event-year"
 assert later["presentation"]["chapter"]["state_visibility"] == "persists-while-supported"
 
 # V0.7: 21 visible events at Britain/Ireland map zoom, separate atlas geography hypotheses and
@@ -135,6 +135,7 @@ assert "PILOT v1.3" in html
 # Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
 assert third["period"] == {"from":1510,"to":1519,"next":1520}
+assert third["presentation"]["chapter"]["event_visibility"] == "progressive-by-event-year"
 assert len(third["events"]) == 15 and len(third["places"]) == 7
 assert len(third["sources"]) == 22
 assert not third["colonial_polygons"] and not third["routes"]
