@@ -381,9 +381,13 @@ async function loadKingdomBoundaries(){
 }
 function openPolity(group){
  const p=atlasEarly.polities.find(x=>x.id===(group==='scotland'?'scotland':'england'));if(!p)return;
- const title=group==='wales'?'英格兰王权时期的威尔士':p.name;
- const text=group==='scotland'?'1500年前后，苏格兰由詹姆斯四世统治，王室、贵族与地方氏族共同参与本土及群岛的治理。':'1500年前后，英格兰由都铎王朝统治，王室在英格兰本土、加来和部分爱尔兰地区设立军事与行政机构。';
- $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · 1500年前后</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(text)+'</p>'+listSources(p.source_ids,p);
+ const title=group==='wales'?'英王治下的威尔士':p.name;
+ const isScotland=group==='scotland';
+ const text=isScotland?
+  (year>=1513?'1513年弗洛登战役中詹姆斯四世阵亡，幼王詹姆斯五世继位。苏格兰由摄政机构与王国贵族参与治理，继续保持独立王权。':'詹姆斯四世统治下的苏格兰王国由王室、议会、贵族和地方氏族共同参与治理。'):
+  (year>=1509?'亨利八世统治英格兰，英王在加来驻有官员和军队，并通过地方贵族及都柏林机构管理爱尔兰的部分区域。':'都铎王朝英王统治英格兰本土，王室在加来设有军政机构，爱尔兰的部分区域由王室委任地方官员治理。');
+ const sources=(p.source_ids||[]).concat(isScotland&&year>=1513?['NRS-FLODDEN']:[]);
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · '+year+'年</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(text)+'</p>'+listSources(sources,p);
  openPanel('dossier');
 }
 async function boot(){
@@ -412,7 +416,13 @@ async function boot(){
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
    if(thirdGeoResponse.ok)geographicHypothesesThird=await thirdGeoResponse.json();
   }catch(_e){ /* Text and all vetted history records remain usable. */ }
-  setYear(1497);loadKingdomBoundaries();
+  // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
+  let startYear=1497;
+  try{
+   const param=new URLSearchParams(window.location?.search||'').get('year');
+   if(param && /^[0-9]{4}$/.test(param))startYear=Number(param);
+  }catch(_error){}
+  setYear(startYear);loadKingdomBoundaries();
  }catch(e){
   $('eventList').innerHTML='<div class="loading">无法读取历史资料，请刷新页面或查看 GitHub 原始数据。</div>';
   setWarning('历史数据未能加载：'+String(e.message||e));
