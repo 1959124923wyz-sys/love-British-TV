@@ -11,6 +11,10 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
  maxZoom:19,maxNativeZoom:19,
  attribution:'&copy; OpenStreetMap contributors'
 }).addTo(map);
+// Tooltip descriptions use their own pane, always above Leaflet markers and historical outlines.
+map.createPane('eventTooltipPane');
+map.getPane('eventTooltipPane').style.zIndex='820';
+map.getPane('eventTooltipPane').style.pointerEvents='none';
 const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
@@ -43,6 +47,7 @@ const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let year=1497; let selected=''; let timer=null;
 let researchNotes={};let geographicHypotheses=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
+let clusterObstacles=[];
 const cancelClusterClose=()=>{if(clusterCloseTimer){clearTimeout(clusterCloseTimer);clusterCloseTimer=null}};
 function closeCluster(){cancelClusterClose();activeClusterKey=null;expandedPinned=false;groups.clusterExpanded.clearLayers()}
 function scheduleClusterClose(){cancelClusterClose();if(!expandedPinned)clusterCloseTimer=setTimeout(()=>{if(!expandedPinned)closeCluster()},480)}
@@ -116,43 +121,60 @@ function renderEventList(){
  $('eventList').querySelectorAll('.event-item').forEach(node=>node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event')));
 }
 function expandCluster(group,pin=false){
- // A single local expansion at a time. Children remain individual event records.
+ // Expand only one group; never paint a shared opaque background over the map.
  const key=group.items.map(x=>x.item.id).sort().join('|');
  cancelClusterClose();
- if(activeClusterKey===key && expandedPinned && pin){closeCluster();return}
+ if(activeClusterKey===key&&expandedPinned&&pin){closeCluster();return}
  const wasSame=activeClusterKey===key;
- if(!wasSame)groups.clusterExpanded.clearLayers();
  activeClusterKey=key;
  expandedPinned=Boolean(pin||(wasSame&&expandedPinned));
  groups.clusterExpanded.clearLayers();
- const items=group.items;
- const pt=map.latLngToContainerPoint(group.latlng),viewport=map.getSize();
- const count=items.length,cell=35;
- let cols=count<=5?count:Math.min(4,Math.ceil(count/2));
- let rows=Math.ceil(count/cols);
- // Choose an on-screen horizontal side; for crowded or narrow maps use a grid.
- const fullWidth=cols*cell,canRight=pt.x+50+fullWidth<viewport.x-12,canLeft=pt.x-50-fullWidth>12;
- let direction=canRight?'right':canLeft?'left':'above';
- if(direction==='above'){
-  cols=Math.min(4,Math.max(2,Math.ceil(Math.sqrt(count))));
-  rows=Math.ceil(count/cols);
+ const items=group.items,count=items.length;
+ const pt=map.latLngToContainerPoint(group.latlng),size=map.getSize();
+ const spacing=34,diameter=28,margin=14;
+ const otherPoints=clusterObstacles.filter(p=>p.key!==key);
+ const layouts=[];
+ const widths=[Math.min(count,5),Math.min(count,4),Math.min(count,3)];
+ for(const cols of [...new Set(widths)]){
+  const rows=Math.ceil(count/cols),w=(cols-1)*spacing,h=(rows-1)*spacing;
+  for(const side of ['right','above','left','below']){
+   const x=side==='right'?pt.x+54:side==='left'?pt.x-54-w:pt.x-w/2;
+   const y=side==='above'?pt.y-53-h:side==='below'?pt.y+54:pt.y-h/2;
+   const positions=items.map((_,i)=>({x:x+(i%cols)*spacing,y:y+Math.floor(i/cols)*spacing}));
+   let overflow=0,occlusion=0;
+   for(const p of positions){
+    overflow+=Math.max(0,margin+diameter/2-p.x)+Math.max(0,p.x+diameter/2-(size.x-margin));
+    overflow+=Math.max(0,margin+diameter/2-p.y)+Math.max(0,p.y+diameter/2-(size.y-margin));
+    for(const o of otherPoints){
+     const gap=Math.hypot(p.x-o.x,p.y-o.y);
+     if(gap<37)occlusion+=(37-gap)*(37-gap);
+    }
+    // Keep the parent hub itself unobstructed.
+    const fromAnchor=Math.hypot(p.x-pt.x,p.y-pt.y);
+    if(fromAnchor<44)occlusion+=(44-fromAnchor)*(44-fromAnchor);
+   }
+   // Prefer the sketch's right-side group when positions are comparably clear.
+   const preference={right:0,above:36,left:55,below:75}[side];
+   layouts.push({positions,score:overflow*250+occlusion*5+preference+rows*8,side});
+  }
  }
- const gridWidth=(cols-1)*cell;
- const originX=direction==='right'?pt.x+54:
-   direction==='left'?pt.x-54-gridWidth:Math.max(18,Math.min(viewport.x-gridWidth-18,pt.x-gridWidth/2));
- const originY=direction==='above'?Math.max(20,pt.y-53-(rows-1)*cell):
-   Math.max(18,Math.min(viewport.y-24-(rows-1)*cell,pt.y-(rows-1)*cell/2));
- const first=map.containerPointToLatLng(L.point(originX,originY));
- L.polyline([group.latlng,first],{color:'#e1bf9c',weight:1.4,opacity:.43,interactive:false,dashArray:'3 5'}).addTo(groups.clusterExpanded);
- items.forEach((record,i)=>{
-  const col=i%cols,row=Math.floor(i/cols),item=record.item;
-  const x=originX+col*cell,y=originY+row*cell;
-  const d=27,ico=L.divIcon({className:'',html:'<div class="expanded-event">'+iconHTML(item)+'</div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
-  const marker=L.marker(map.containerPointToLatLng(L.point(x,y)),{icon:ico,title:item.name,zIndexOffset:1800+i})
-   .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'top',className:'atlas-hover'})
+ layouts.sort((a,b)=>a.score-b.score);
+ const choice=layouts[0];
+ // Positions are transient screen offsets, not modifications to historical coordinates.
+ const coords=choice.positions;
+ if(coords.length){
+  L.polyline([group.latlng,map.containerPointToLatLng(L.point(coords[0].x,coords[0].y))],
+    {color:'#d6ae87',weight:1,opacity:.35,interactive:false,dashArray:'2 6'}).addTo(groups.clusterExpanded);
+ }
+ coords.forEach((pos,i)=>{
+  const record=items[i],item=record.item,d=27;
+  const icon=L.divIcon({className:'atlas-flyout-icon',html:'<div class="expanded-event">'+iconHTML(item)+'</div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
+  const marker=L.marker(map.containerPointToLatLng(L.point(pos.x,pos.y)),{icon,title:item.name,zIndexOffset:1800+i,bubblingMouseEvents:false})
+   .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[14,0]})
    .on('mouseover',cancelClusterClose)
    .on('mouseout',scheduleClusterClose)
-   .on('click',()=>{expandedPinned=true;cancelClusterClose();openDossier(item,record.type)});
+   .on('click',()=>{expandedPinned=true;cancelClusterClose();marker.closeTooltip();openDossier(item,record.type)});
   marker.addTo(groups.clusterExpanded);
  });
 }
@@ -186,20 +208,24 @@ function renderPoints(){
   if(!g){g={pt:point,latlng:map.layerPointToLatLng(point),items:[]};nearby.push(g)}
   g.items.push(record);
  }
+ // Obstacles contain all visible group hubs and singleton icons in container pixels.
+ clusterObstacles=nearby.map(g=>{
+  const at=map.latLngToContainerPoint(g.latlng);
+  return {x:at.x,y:at.y,key:g.items.map(x=>x.item.id).sort().join('|')};
+ });
  for(const g of nearby){
   if(g.items.length===1){
    const record=g.items[0],item=record.item;
    const d=levelOf(item)===3?30:levelOf(item)===2?27:23;
    const ico=L.divIcon({className:'',html:iconHTML(item),iconSize:[d,d],iconAnchor:[d/2,d/2]});
    L.marker([record.lat,record.lng],{icon:ico,title:item.name,zIndexOffset:500+levelOf(item)*60})
-    .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'top',className:'atlas-hover'})
+    .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
     .on('click',()=>openDossier(item,record.type)).addTo(groups.cluster);
    continue;
   }
   const important=g.items.some(x=>levelOf(x.item)===3);
   const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+'"><strong>'+g.items.length+'</strong></div>',iconSize:[36,36],iconAnchor:[18,18]});
   L.marker(g.latlng,{icon:ico,title:g.items.length+'项历史记录',zIndexOffset:950})
-   .bindTooltip('<strong>'+g.items.length+'项历史事件</strong><div class="atlas-hover-summary">移至主标记或点击，展开具体事件图标</div>',{direction:'top',className:'atlas-hover',opacity:.96})
    .on('mouseover',()=>{if(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|'))expandCluster(g)})
    .on('mouseout',scheduleClusterClose)
    .on('click',()=>expandCluster(g,true))
@@ -209,7 +235,7 @@ function renderPoints(){
   for(const c of atlas.candidates){
    const ico=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
    L.marker([c.lat,c.lng],{icon:ico,title:c.name})
-    .bindTooltip(hoverCard(c.name,c.note),{direction:'top',className:'atlas-hover'})
+    .bindTooltip(hoverCard(c.name,c.note),{direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
     .on('click',()=>openDossier(c,'candidate')).addTo(groups.candidate);
   }
   if($('toggleClaims').checked){
@@ -221,7 +247,7 @@ function renderPoints(){
  for(const r of atlas.routes||[]){
   const line=L.polyline(r.coords,{color:r.year===1497?'#d4a47d':'#97a9bc',weight:2.7,dashArray:'8 9',opacity:.88,interactive:false}).addTo(groups.routes);
   L.polyline(r.coords,{color:'#fff',weight:18,opacity:.015,interactive:true})
-   .bindTooltip(hoverCard(r.name,r.note),{sticky:true,direction:'top',className:'atlas-hover'})
+   .bindTooltip(hoverCard(r.name,r.note),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('mouseover',()=>line.setStyle({weight:4})).on('mouseout',()=>line.setStyle({weight:2.7}))
    .on('click',()=>openDossier(r,'route')).addTo(groups.routes);
  }
@@ -250,7 +276,7 @@ function renderHypotheses(){
   }),
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
-   layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',{sticky:true,className:'atlas-hover'});
+   layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',()=>openHypothesis(feature));
   }
  }).addTo(groups.hypotheses);
