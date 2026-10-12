@@ -1,0 +1,212 @@
+{
+  "dataset_id": "1500s-territorial-control-candidate-register",
+  "date": "2026-10-12",
+  "period_exclusive": {
+    "start": 1500,
+    "end": 1510
+  },
+  "status": "research_candidate_all_geometry_null",
+  "purpose": "Identify actually governed lands vs charters, while holding all unverified polygons",
+  "cases": [
+    {
+      "id": "T1500-CALAIS",
+      "historical_name": "Calais and English Pale around Calais",
+      "country_modern": "France",
+      "political_actor_1500s": "Crown of England",
+      "governing_actor": "Calais captain, treasurer, controller, garrison and staple/municipal institutions",
+      "range": {
+        "from": 1500,
+        "to": 1509
+      },
+      "control_class": "effective_crown_garrison_and_admin",
+      "confidence_of_core": "strong",
+      "evidence": [
+        "English rule over Calais 1347–1558 confirmed by UK National Archives",
+        "Treasurer and controller accounts and Calais staple fiscal archive under Henry VII",
+        "Calais branch of English Crown administered territory and forts"
+      ],
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+        "https://searcharchives.bl.uk/catalog/036-002165542"
+      ],
+      "geometry": {
+        "type": "none",
+        "status": "historic_pale_boundary_not_verified",
+        "precision": "L1",
+        "polygon": null,
+        "representative_place": "Calais (city only; not a purported exact polygon)"
+      },
+      "accounting_evidence": "E 36/269–272; DL 28/2/1–11; E 122; E 364; Calais staple",
+      "limits": [
+        "An explicit English garrison does not prove polygon of the entire claimed march",
+        "Revenue/cost must be reconciled from primary accounts; wool profits cannot be invented"
+      ],
+      "review_state": "source_checked"
+    },
+    {
+      "id": "T1500-IRELAND-PALE",
+      "historical_name": "English Pale around Dublin (partial)",
+      "country_modern": "Ireland",
+      "political_actor_1500s": "King of England as Lord of Ireland (NOT King of Ireland until 1541/1542)",
+      "governing_actor": "Lord Deputy Gerald FitzGerald, eighth Earl of Kildare; Irish colonial parliament and officials",
+      "range": {
+        "from": 1500,
+        "to": 1509
+      },
+      "control_class": "effective_crown_indirect_through_kildare_and_local_institutions",
+      "confidence_of_core": "strong",
+      "evidence": [
+        "Egan EHR 2025 identifies English colony and Dublin Pale",
+        "Contemporaneous Irish Parliament subject to Poynings' Law"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1093/ehr/ceae207",
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/poynings-law/"
+      ],
+      "geometry": {
+        "type": "none",
+        "status": "four_obedient_shires_are_not_exact_pale_effective_boundary",
+        "precision": "L1",
+        "polygon": null,
+        "representative_place": "Dublin / Drogheda legal-administrative nodes"
+      },
+      "limits": [
+        "Do not paint Ireland island entirely",
+        "Cannot paint modern Dublin, Meath, Louth, Kildare counties as uniformly obedient",
+        "Local Gaelic and Gaelicised authorities retain own political power, varying by locale"
+      ],
+      "review_state": "source_checked"
+    },
+    {
+      "id": "T1500-IRELAND-PORT-TOWNS",
+      "historical_name": "English-linked port towns on Ireland's eastern/southern seaboard",
+      "country_modern": "Ireland",
+      "political_actor_1500s": "English lordship of Ireland and town corporations",
+      "governing_actor": "Chartered port towns and locally controlled borough councils under variable royal influence",
+      "range": {
+        "from": 1500,
+        "to": 1509
+      },
+      "control_class": "candidate_city_level_autonomy_and_royal_links",
+      "confidence_of_core": "moderate",
+      "evidence": [
+        "Egan paper summarizes English king's authority as unevenly effective in eastern and southern maritime regions"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1093/ehr/ceae207"
+      ],
+      "geometry": {
+        "type": "none",
+        "status": "no_city_list_independently_verified_in_this_pass",
+        "precision": "L0",
+        "polygon": null,
+        "representative_place": null
+      },
+      "limits": [
+        "Need specific 1500–1510 town charter, courts and subsidy accounts before adding any points",
+        "Do not automatically include Galway area because the Lord Deputy won a battle there"
+      ],
+      "review_state": "research_candidate"
+    },
+    {
+      "id": "T1500-CHANNEL-ISLANDS",
+      "historical_name": "Bailiwicks of Jersey and Guernsey / Channel Islands",
+      "country_modern": "Jersey / Guernsey (Crown dependencies)",
+      "political_actor_1500s": "English monarch as successor to Duke of Normandy",
+      "governing_actor": "Local Bailiffs, Royal Courts and Crown-appointed governors",
+      "range": {
+        "from": 1500,
+        "to": 1509
+      },
+      "control_class": "crown_dependency_with_separate_laws",
+      "confidence_of_core": "strong",
+      "evidence": [
+        "States of Jersey government explains retention after 1204 and local courts",
+        "Cambridge 2024 scholarly study details 1500 ecclesiastical jurisdiction transfer"
+      ],
+      "source_urls": [
+        "https://www.gov.je/Leisure/Jersey/pages/history.aspx",
+        "https://www.cambridge.org/core/journals/journal-of-ecclesiastical-history/article/jersey-guernsey-and-english-ecclesiastical-jurisdiction-under-henry-vii/5710C0575A2F7F2116C2C64CE71AD9AF"
+      ],
+      "geometry": {
+        "type": "none",
+        "status": "modern coast geometry usable only after historic land and coastal source checks",
+        "precision": "L1",
+        "polygon": null,
+        "representative_place": "Jersey; Guernsey"
+      },
+      "limits": [
+        "Not part of Kingdom of England; their constitutional autonomy differs from an overseas plantation colony",
+        "Do not infer 1500 local economy enriched England Crown absent ledgers"
+      ],
+      "review_state": "source_checked"
+    },
+    {
+      "id": "T1500-ISLE-OF-MAN",
+      "historical_name": "Isle of Man under Stanley hereditary lordship",
+      "country_modern": "Isle of Man",
+      "political_actor_1500s": "Stanley Lords/Kings of Mann, linked to English Crown",
+      "governing_actor": "Stanley lordship, Manx officials and Tynwald",
+      "range": {
+        "from": 1500,
+        "to": 1509
+      },
+      "control_class": "hereditary_distinct_lordship_not_direct_crown_admin",
+      "confidence_of_core": "strong",
+      "evidence": [
+        "Manx National Heritage explains Stanley family and local administration",
+        "Cambridge peer reviewed research distinguishes Manx sub-kingship and English crown sovereignty relationships"
+      ],
+      "source_urls": [
+        "https://www.tynwald.im/history/1417",
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/lordship-and-sovereignty-in-the-territories-of-the-english-crown-subkingship-and-its-implications-13001600/B84E5F7DFCC599634E20564622F84020",
+        "https://manxnationalheritage.im/wp-content/uploads/2016/11/Castle-Rushen-Teachers-Guide.pdf"
+      ],
+      "geometry": {
+        "type": "none",
+        "status": "avoid_generic_English_Crown_colonial_fill",
+        "precision": "L1",
+        "polygon": null,
+        "representative_place": "Isle of Man"
+      },
+      "limits": [
+        "Common claim Henry VII forced title King of Mann to be surrendered in 1504 is questioned in recent peer-reviewed scholarship; do not assert this as settled",
+        "Not to be rolled into Kingdom of England territorial polygon"
+      ],
+      "review_state": "source_checked"
+    },
+    {
+      "id": "T1500-NORTH-AMERICA",
+      "historical_name": "North Atlantic discovered and visited regions",
+      "country_modern": "Canada / North Atlantic",
+      "political_actor_1500s": "English royal explorers and privately financed merchants; local Indigenous polities",
+      "governing_actor": "No verified English resident territorial administration in 1500–1509",
+      "range": {
+        "from": 1500,
+        "to": 1509
+      },
+      "control_class": "voyage_and_charter_only",
+      "confidence_of_core": "no_control_evidence",
+      "evidence": [
+        "Published Bristol Cabot research gives voyages, letters patent, payments and gifts but no verifiable territorial government"
+      ],
+      "source_urls": [
+        "https://www.bristol.ac.uk/history/research/cabot/publications/",
+        "https://onlinelibrary.wiley.com/doi/10.1111/j.1468-2281.2009.00519.x"
+      ],
+      "geometry": {
+        "type": "none",
+        "status": "no_colonial_effective_control_polygon",
+        "precision": "L0",
+        "polygon": null,
+        "representative_place": null
+      },
+      "limits": [
+        "Absence of documentary proof of control does not prove absence of Indigenous governments or intermittent European encounters",
+        "Not enough to map real itineraries or exact landfalls",
+        "Royal 1501/1502 patents or royal money must not be presented as colonial income"
+      ],
+      "review_state": "source_checked"
+    }
+  ]
+}
