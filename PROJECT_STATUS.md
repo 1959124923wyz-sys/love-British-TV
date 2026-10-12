@@ -93,3 +93,14 @@ README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATR
 ### 2026-10-12 研究归档补充
 - main/research/periods/1500-1510/ 现包含18份调查员1号研究快照。额外8份涉及 Calais 1502驻军、St​​aple财政摘要与实际应收、Calais March划界来源日期、Irish Pale行政范围、Carrickfergus/Ulster争夺等。
 - 文献标题、数字、历史控制更替事件需后续独立核对时段和原档，不直接加到14条公开事件或新增polygon。下一阶段采用 NEXT_AGENT_ARCHIVAL_ACTION_QUEUE.json 的优先级检验。
+
+
+## 当前状态：v0.6.0（2026-10-12；替代先前v0.5叙述）
+- 公开数据：main/data/atlas-1500-1509.json，21条事件、6条政治关系位置、54条来源；main/data/atlas-1497-1500.json 第一章节来源继续保留。地图时间轴1497—1509。
+- 章节制：1497—1499、1500—1509，点击色带进入章节，当前年份为焦点，左侧与地图显示本章全部正式事件；时间轴事件年份圆点可查看该年记录。
+- 同位置事件：像素近邻聚合成数量标记，选择列表点击各自历史详情；缩放时重新归组，不修改原地理坐标。验证1501—1502北大西洋来客和1502和平条约都能通过列表与聚合结构分别访问。
+- 地理持续状态：atlas-1500-1509.json places 带start_year、observed_through_year、end_year，在证据年份内保留并能与章内事件聚合，任何短期城堡占领不自动添加永久行政区。
+- 新归档研究：main/research/periods/1500-1510/共19份当前快照（含最新DEEP_FINDINGS_CALAISES_AND_IRELAND.md）；main/research/hypotheses/1500/存储实验包络GeoJSON、两份说明/日志及交互实验页，**只供研究**。
+- 新增爱尔兰1503/1507/1508/1509城堡权力更迭及Calais羊毛商团财政关系；细节与source_ids在数据文件。加来£4,020为学术重建名义年均汇款，不与~£32,000累计相加、没有计为殖民净利润。
+- 正式叙事规范：docs/PUBLIC_NARRATIVE_AND_TIME_MODEL.md。所有公开内容以短篇平铺直叙为优先；底层数据保留证据约束；用户可展开历史文献。
+- 静态验收：JS语法、HTML元素、54条来源引用、SVG图标码、年份节点与事件聚合代码均检查通过。Pages部署与真实浏览器/触屏仍待最终核验。
