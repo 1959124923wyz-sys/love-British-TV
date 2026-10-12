@@ -52,6 +52,35 @@ assert set(symbol_codes) == svg_codes, (set(symbol_codes) ^ svg_codes)
 for e in a["events"]:
     assert e["icon_code"] in svg_codes, e["id"]
 assert a["visual_system"]["version"] == "2.0-approved"
+# Collector 1 preview: 1500–1509 must never contain invented control polygons or speculative 1508 tracks.
+later = json.loads((ROOT/"data/atlas-1500-1509.json").read_text(encoding="utf-8"))
+assert later["period"]["from"] == 1500 and later["period"]["to"] == 1509
+assert not later["colonial_polygons"], "Do not infer unverified Calais / Pale polygons"
+assert not later["routes"], "No sourced new exact voyages"
+assert len(later["events"]) >= 10 and len(later["places"]) >= 5
+later_sources = {v["id"] for v in later["sources"]}
+assert len(later_sources) == len(later["sources"])
+for src in later["sources"]:
+    assert urlsplit(src["url"]).scheme in ("http","https"), src["id"]
+ids_later=set()
+for rec in later["events"]+later["places"]:
+    assert rec["id"] not in ids_later, rec["id"]
+    ids_later.add(rec["id"])
+    assert rec["icon_code"] in svg_codes, rec["id"]
+    assert rec["source_ids"] and all(src in later_sources for src in rec["source_ids"]), rec["id"]
+    if rec["lat"] is None or rec["lng"] is None:
+        assert rec["lat"] is None and rec["lng"] is None, rec["id"]
+    else:
+        assert -90 <= rec["lat"] <= 90 and -180 <= rec["lng"] <= 180, rec["id"]
+for ev in later["events"]:
+    assert 1500 <= ev["start_year"] <= ev["end_year"] <= 1509, ev["id"]
+    assert ev["significance"]["level"] in (1,2,3), ev["id"]
+    assert ev.get("colonial_profit") is not True, ev["id"]
+assert "1508-1509-SEBASTIAN-VOYAGE-QUESTION" not in ids_later
+for f in ("research/periods/1500-1510/PROGRESS.md",
+          "research/periods/1500-1510/CONTROL_AND_CHRONOLOGY_REVIEW.md"):
+    assert (ROOT/f).is_file(), f
+
 assert not a.get("colonial_polygons"), "Never paint unverified 1497 colonies"
 geo = json.loads((ROOT/"data/modern-uk-regions.topojson").read_text(encoding="utf-8"))
 assert geo["type"] == "Topology"
