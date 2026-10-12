@@ -1,0 +1,82 @@
+{
+  "type": "FeatureCollection",
+  "name": "France English royal city-control cores — schematic render, 1500–1519",
+  "cartographic_semantics": {
+    "fill": "documented effective control of named city",
+    "geometry": "point anchor; rendered as a size-stable circular area-symbol, NOT a measured historical city wall/boundary",
+    "surrounding_reference": "independent dashed geographic envelopes reconstructed from historic placenames",
+    "prohibit_for_area_calculations": true,
+    "historical_snapshot": "year-end; Tournai garrison departed February 1519"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "calais-urban-core-1500-1519",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8587,
+          50.9513
+        ]
+      },
+      "properties": {
+        "name": "加来 · 英王实际控制的城市核心",
+        "polity": "Kingdom of England",
+        "historical_state": "documented-english-royal-governance",
+        "visual_role": "schematic_controlled_city_area",
+        "control_class": "direct_urban_control",
+        "historical_boundary_confirmed": false,
+        "render_radius_px": 17,
+        "min_radius_px": 14,
+        "source_place_id": "calais-crown",
+        "start_year": 1500,
+        "observed_through_year": 1519,
+        "end_year": null,
+        "draw_label": "加来",
+        "description": "英王在加来城设有总督和驻军，港口参与羊毛贸易与王室财政。",
+        "source_ids": [
+          "TNA-FRENCH-LANDS"
+        ],
+        "reference_geometry_id": "calais-1500-attested-sites-hull-only",
+        "ui_precision": "urban-city-symbol-not-Pale-boundary"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tournai-urban-core-1513-1518",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.389321,
+          50.60715
+        ]
+      },
+      "properties": {
+        "name": "图尔奈 · 英王1513年占领的城市核心",
+        "polity": "Kingdom of England",
+        "historical_state": "documented-english-royal-governance",
+        "visual_role": "schematic_controlled_city_area",
+        "control_class": "occupied_urban_center",
+        "historical_boundary_confirmed": false,
+        "render_radius_px": 17,
+        "min_radius_px": 14,
+        "source_place_id": "tournai-occupied-city-1513",
+        "start_date": "1513-09-23",
+        "end_date": "1519-02",
+        "start_year": 1513,
+        "observed_through_year": 1518,
+        "end_year": 1519,
+        "end_month": 2,
+        "draw_label": "图尔奈",
+        "description": "1513年9月图尔奈投降，英王驻军与总督进入城市，1519年2月法国恢复治理。",
+        "source_ids": [
+          "TOURNAI-MIL-MUSEUM",
+          "DAVIES-1998-TOURNAI",
+          "MURPHY-2014-TOURNAI"
+        ],
+        "reference_geometry_id": "TOURNAISIS-CENTRAL-LOCALITIES-RESEARCH-HULL-1513-1519",
+        "ui_precision": "urban-city-symbol-not-1513-city-wall"
+      }
+    }
+  ]
+}
