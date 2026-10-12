@@ -703,14 +703,18 @@
       "name": "英王加强加来纽纳姆桥（Newembridge）边境要塞",
       "category": "fortification",
       "icon_code": "INF",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "null_unverified_location_no_fake_map_pin",
-      "geography_label": "Newembridge, Calais Pale, historic fortified bridge and sluices",
-      "description": "1521年起，英方在加来通道已有的纽纳姆桥防御设施增加堡垒、火炮土墙和驻军设施，到1525—1526年形成较完整的新式堡垒。",
-      "short_description": "1521年起，英方在加来通道已有的纽纳姆桥防御设施增加堡垒、火炮土墙和驻军设施，到1525—1526年形成较完整的新式堡垒。",
+      "lat": 50.946075,
+      "lng": 1.816194,
+      "geo_precision": "modern Fort Nieulay heritage coordinate; 1521–26 English Newenhambridge crossing near current Vauban-rebuilt fort, historical Tudor footprint unknown",
+      "geography_label": "Fort Nieulay, Calais western former Newenhambridge bridge and lock; modern memorial approx 50.946075 1.816194",
+      "description": "1521年起英王加强加来西门纽纳姆桥旧关卡、水闸及堡垒设施，至1525—1526年有更完整的防御工事。其历史地点对应今天的尼厄莱堡附近，但目前可见堡体经17世纪沃邦重建，原英军堡垒界线尚不能确定。",
+      "short_description": "1521年起英王加强加来西门纽纳姆桥旧关卡、水闸及堡垒设施，至1525—1526年有更完整的防御工事。其历史地点对应今天的尼厄莱堡附近，但目前可见堡体经17世纪沃邦重建，原英军堡垒界线尚不能确定。",
       "source_ids": [
-        "CAL-GRUMMITT-2008-FORT"
+        "CAL-GRUMMITT-2008-FORT",
+        "ACADEMIC-ROSE-NEWENHAM-NIEULAY",
+        "FRA-CALAIS-NIEULAY-OFFICIAL",
+        "FRA-FORTNIEULAY-REGISTER",
+        "RCTR-NEWNHAM-1558"
       ],
       "certainty": "scholarly_source_new_works_start_1521_completed_1525_26",
       "significance": {
@@ -724,7 +728,7 @@
       "research_event_id": "1521-1526-NEWEMBRIDGE",
       "economic_fields": [],
       "geographic_rule": "existing_English_held_crossing_fortified_no_new_formal_sovereignty",
-      "review_note": "历史地点尚无足够准确的现代对应GPS，列表可显示；地图点留空。"
+      "review_note": "Historical Newenhambridge site corresponds to modern Fort Nieulay area. 1670s Vauban reconstructed location, 1558 historical map only later context. Do not trace modern walls as 1525 Tudor earthworks."
     },
     {
       "id": "1523-CESSFORD-SIEGE",
@@ -1334,6 +1338,42 @@
       "kind": "peer-reviewed specialist published chapter summary",
       "evidence_read_level": "Academic publisher full abstract directly read",
       "origin": "research/territorial-1520-1529-20261012/SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "ACADEMIC-ROSE-NEWENHAM-NIEULAY",
+      "title": "Susan Rose, Calais: An English Town in France 1347–1558, figure Fort Nieulay on Newenham Bridge site",
+      "publisher": "Susan Rose / Boydell & Brewer scholarly monograph preview",
+      "url": "https://api.pageplace.de/preview/DT0400.9781846156151_A47141070/preview-9781846156151_A47141070.pdf",
+      "kind": "scholarly_monograph_figure_index_only",
+      "evidence_read_level": "Figure identity indexed by publisher preview, original figure not examined or copied",
+      "origin": "research/periods/1520-1529/SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "FRA-CALAIS-NIEULAY-OFFICIAL",
+      "title": "Le Fort Nieulay, former medieval toll bridge, sluice fort reconstructed by Vauban",
+      "publisher": "Calais XXL Tourist Office municipal tourism",
+      "url": "https://www.calaisxxl.com/en/offers/have-to-do/Fort-Nieulay/",
+      "kind": "official_local_heritage_history",
+      "evidence_read_level": "Official page text read including bridge and subsequent French Vauban rebuild",
+      "origin": "research/periods/1520-1529/SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "FRA-FORTNIEULAY-REGISTER",
+      "title": "Fort Nieulay French heritage registered PA62000181 (05 Nov 2024)",
+      "publisher": "French Ministry of Culture POP listing via heritage registry mirror",
+      "url": "https://www.plan-du-patrimoine.fr/monument-historique/62/calais/fort-nieulay/PA62000181/",
+      "kind": "government_heritage_register_mirror",
+      "evidence_read_level": "Monument registration number, protective parcel context and coordinates read; official POP source linked as provenance",
+      "origin": "research/periods/1520-1529/SOURCE_REGISTRY.json"
+    },
+    {
+      "id": "RCTR-NEWNHAM-1558",
+      "title": "Siege of Calais 1558 historical military map Newnham Bridge site",
+      "publisher": "Royal Collection Trust British royal map collection",
+      "url": "https://militarymaps.rct.uk/other-16th-century-conflicts/view-of-the-siege-of-calais-1558-calais-nord-pas-de-calais-france-50deg5707n-01deg5122e-0",
+      "kind": "royal_historical_cartographic_catalogue",
+      "evidence_read_level": "Royal Collection historical item catalogue, do not copy map",
+      "origin": "research/periods/1520-1529/SOURCE_REGISTRY.json"
     }
   ],
   "routes": [],
