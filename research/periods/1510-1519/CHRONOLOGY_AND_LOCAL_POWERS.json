@@ -377,24 +377,25 @@
       "year": 1519,
       "exact_date": null,
       "date_precision": "year",
-      "title_zh": "亨利八世撤换基尔代尔，改派萨里伯爵治理爱尔兰",
+      "title_zh": "1519年亨利八世决定撤换基尔代尔，筹划调整爱尔兰统治",
       "kind": "governance_change",
       "claims": [
-        "Kildare ninth earl called to court and removed in 1519 amid competing Pale elite complaints, replaced with Earl of Surrey.",
-        "The new appointment did not establish direct rule over all of Ireland."
+        "Ellis (2023) records Kildare summoned in January 1519 and arriving at court in September; around November Henry VIII decided to replace him.",
+        "Surrey's more prestigious Lieutenant appointment with larger English force is documented by grant in February 1520 (SP 1/30 f.90 and SP 60/1 ff.70–73). Actual expedition/arrival and government are 1520s research tasks."
       ],
       "source_ids": [
         "RIA-GEAROID-OG",
-        "RIA-ROBERT-COWLEY"
+        "RIA-ROBERT-COWLEY",
+        "ELLIS-2023-SURREY-DECISION"
       ],
       "actors": [
         "Henry VIII",
         "Gerald 9th Earl of Kildare",
-        "Thomas Howard Earl of Surrey"
+        "Thomas Howard Earl of Surrey (future 1520 lieutenant)"
       ],
       "location_description": "Irish Pale / Dublin",
-      "impact_zh": "英王调整爱尔兰副总督职务，反映当地贵族与王室之间的权力博弈。",
-      "control_effect": "governor_change_only",
+      "impact_zh": "王室准备结束由基尔代尔长期代理的治理安排；新的总督任命与实际远征进入1520年代。",
+      "control_effect": "1519_decision_only_surrey_effective_governorship_in_1520_not_1519",
       "map_geometry": null,
       "map_confidence": "anchor-only no invented coordinates",
       "review": "source_checked"
@@ -448,13 +449,73 @@
       "map_geometry": null,
       "map_confidence": "anchor-only no invented coordinates",
       "review": "lead_disputed"
+    },
+    {
+      "id": "E1515-STATE-OF-IRELAND-REFORM",
+      "year": 1515,
+      "exact_date": null,
+      "date_precision": "circa_year",
+      "title_zh": "约1515年英王属地爱尔兰状况报告与治理改革主张",
+      "kind": "colonial_administration_report",
+      "claims": [
+        "The British Library archives catalogue confirms a state-of-Ireland reform report dated circa 1515, surviving at Add MS 4792 ff.96–110 and another 17th-c copy at Add MS 4763 ff.481–495.",
+        "Sir William Darcy submitted separate articles to the King's Council on 24 June 1515; preserved in Bodleian-related manuscript extracts.",
+        "Ellis scholarship reports 1515 description that only half of four obedient shires were subject to royal laws; treat 'half' as an official historical qualitative claim, not a measured GIS area."
+      ],
+      "source_ids": [
+        "BL-ADD4792-1515-IRELAND",
+        "NLI-BOdLEIAN-DARCY-1515",
+        "ELLIS-2021-FOURSHIRES-1515"
+      ],
+      "actors": [
+        "Irish Pale colonial administration",
+        "Sir William Darcy",
+        "English Crown and Irish council"
+      ],
+      "location_description": "Dublin English Pale and royal court (location of original reports not yet fully established)",
+      "impact_zh": "英王在爱尔兰的治理范围与财政、司法困境成为具体改革议题。",
+      "control_effect": "administrative_report_legal_claims_not_territorial_expansion",
+      "map_geometry": null,
+      "map_confidence": "no exact map or coordinates",
+      "review": "catalogue+historian_excerpt; manuscript not read"
+    },
+    {
+      "id": "E1517-RASTELL-ABORTED-NEWFOUNDLAND",
+      "year": 1517,
+      "exact_date": "1517-03-05",
+      "date_precision": "day_for_royal_letters; expedition_later_in_1517",
+      "title_zh": "亨利八世支持拉斯特尔北美定居计划，船队未能完成远航",
+      "kind": "royal_backed_aborted_colonisation_expedition",
+      "claims": [
+        "David B. Quinn's Dictionary of Canadian Biography account dates royal letters to March 5 1517 for older John Rastell and London merchants John Howting and Richard Spicer, with a small royal loan.",
+        "At least four vessels with colonisation materials were prepared under Sir Thomas Spert; ships lingered at Sandwich, Dartmouth, Plymouth, Falmouth, one reached Ireland and then France, while projected Newfoundland/Labrador settlement was never established.",
+        "The 1517 venture is separately documented as a planned colony and must not be merged with the contested Sebastian Cabot / Thomas Pert reported Caribbean navigation story."
+      ],
+      "source_ids": [
+        "DCB-RASTELL-1517"
+      ],
+      "actors": [
+        "Henry VIII",
+        "John Rastell the elder",
+        "John Howting",
+        "Richard Spicer",
+        "Thomas Spert"
+      ],
+      "location_description": "England southern ports, with Newfoundland/Labrador as intended destination only",
+      "impact_zh": "王室支持的北美定居计划在准备和出航阶段中止，后续未形成当地殖民行政。",
+      "control_effect": "planned_settlement_no_attested_effective_american_control",
+      "map_geometry": null,
+      "map_confidence": "ports named; no actual transatlantic route reconstructed",
+      "review": "expert_biography_read_primary_royal_letters_not_seen"
     }
   ],
   "editorial_semantics": {
     "significance": "Event political importance and precision separate; editor to assign final levels",
     "no_fabricated_coordinates": true,
     "chronology": "month-only 1519 handover represented exact_date=null and claims say February; do not fabricate a day",
-    "geometry": "all null until separate spatial-hypothesis layer"
+    "geometry": "all null until separate spatial-hypothesis layer",
+    "omissions_audited_at": "2026-10-12",
+    "corrected_surrey_boundary": "1519 replacement decision vs actual lieutenant appointment 1520; not direct rule of all Ireland in 1519."
   },
   "approved_for_public": 0
 }
