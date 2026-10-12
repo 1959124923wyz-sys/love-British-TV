@@ -81,6 +81,36 @@
       "read": "Indexed modern populated-place coordinates only; not historical survey",
       "finding": "Verified modern centers of Tournai, Mont-Saint-Aubert, Templeuve, Blandain, Froyennes, Mourcourt, Havinnes, Ere, Esplechin, Antoing; former 1977 Tournai municipality cannot stand for 1513 bailliwick.",
       "publication_rights": "GeoNames database CC BY attribution; coordinates reproduced as modern city nodes with source"
+    },
+    {
+      "id": "DHERBOMEZ-1899-TOURNAISIS-RIVERS",
+      "title": "Lefranc's 1899 critical review of Armand d'Herbomez, Histoire des châtelains de Tournai de la maison de Mortagne",
+      "institution": "Bibliothèque de l'École des chartes / Persée",
+      "url": "https://www.persee.fr/doc/bec_0373-6237_1899_num_60_1_452542_t1_0518_0000_2?pageId=T1_519",
+      "level": "academic_historical_geography_secondary_book_review",
+      "read": "Full accessible 1899 review page 519 (historic analysis of much earlier châtellenie, not direct 1513 register)",
+      "finding": "Older châtellenie / Tournaisis limits were Scheldt (Escaut), Scarpe, Elnon and Espierre river landmarks; Tournai town and suburbs EXCLUDED from historical châtellenie and parts of Saint-Amand/Mortagne lands similarly excluded. Distinguish early feudal geography from unified 1383 bailiwick and 1513 Tudor occupancy.",
+      "publication_rights": "paraphrase and link only; no derived historic map tracing"
+    },
+    {
+      "id": "BELNET-TOURNAI-JUDICIAL-SCHEMA",
+      "title": "Tournai-Tournaisis historical regional institutions diagram 1383–1793",
+      "institution": "Belgian science institution via Belnet ORFEO",
+      "url": "https://orfeo.belnet.be/bitstream/handle/internal/14454/EP4803_2_2_Tournai_Institutions_r%C3%A9gionales.pdf?isAllowed=y&sequence=10",
+      "level": "published_historical_government_diagram_search_excerpt_only",
+      "read": "Search system extract from PDF only, original PDF returned 403; OCR/table may mislabel Henry VIII as Henry VII, verification pending",
+      "finding": "The court appeal chain for bailliage changes under English occupancy ca 1514–1519 (London Chancery appellate venue from 1517–19 in indexed extract), confirming distinct legal-administrative region; exact years and monarch in original figure unverified.",
+      "publication_rights": "citation only, do not reuse copyright diagram or its depiction"
+    },
+    {
+      "id": "GEO-MORTAGNE-SAINTAMAND",
+      "title": "Modern geocoded historical jurisdictional seats Saint-Amand-les-Eaux / Mortagne-du-Nord",
+      "institution": "Mapcarta / OSM / GeoNames",
+      "url": "https://mapcarta.com/18329082",
+      "level": "modern_location_catalogue_only",
+      "read": "Modern settlement center coordinates sourced; not historic land-ownership map",
+      "finding": "Mortagne-du-Nord ~lat50.50368 lon3.45524, Saint-Amand-les-Eaux ~lat50.4492 lon3.4281 (separate mapcarta listing); historic seigneurial rights may differ from royal bailiwick.",
+      "publication_rights": "underlying OSM/GeoNames open data attribution applies"
     }
   ],
   "claims": [
@@ -150,6 +180,28 @@
       ],
       "status": "rights_and_historical_scope_review",
       "map": "Generate original rough schematic from independent verified modern place centroid anchors; call it analytic distribution envelope, NOT digitised historical jurisdiction"
+    },
+    {
+      "id": "C-FEUDAL-OLDER-OUTLINE",
+      "label": "Rivers are historical old castellany guide, not the 1513 outer border",
+      "what": "Specialist 1899 review of Herbomez identifies old châtellenie Tournaisis by rivers Escaut/Scheldt, Scarpe, Elnon, Espierre, while expressly excluding city and banlieue plus parts of Mortagne/Saint-Amand lands. This relates to medieval feudal castellany which must not be equated automatically with 1383 later enlarged combined bailliage and actual English control after 1513.",
+      "proof": [
+        "DHERBOMEZ-1899-TOURNAISIS-RIVERS",
+        "MARIAGE-2013-BAILLIAGE"
+      ],
+      "status": "historical_geography_secondary_but_chronological_scope_differs",
+      "map": "Future GIS may follow waterways only for earlier feudal entity with its own date; not use as 1513 direct crown boundaries."
+    },
+    {
+      "id": "C-MAP-OLD-BAILLIWICK",
+      "label": "Institutional appellate chain changed after English occupation",
+      "what": "Belgian research publication indexed diagram proposes English Crown sovereign court for 1514-1515 and London Chancery 1517-1519 as appellate venue for Tournai Tournaisis bailiwick. Its PDF presently inaccessible and a monarch numeral potentially OCR-corrupted; corroboration with institution's primary court register required.",
+      "proof": [
+        "BELNET-TOURNAI-JUDICIAL-SCHEMA",
+        "MARIAGE-2013-BAILLIAGE"
+      ],
+      "status": "source_lead_PDF_403_original_uninspected",
+      "map": "Administrative reach strengthens need to map separate bailliwick layer; no numerical parish-level claim established."
     }
   ],
   "approved_historical_political_area_polygon": false,
