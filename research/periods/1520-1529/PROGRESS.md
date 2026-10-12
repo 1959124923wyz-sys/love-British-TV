@@ -1,3 +1,7 @@
+**本批最新完成（2026-10-12）**：`MAP_DETAIL_SOURCES_1520S.json`23条专门地理/档案文献；`SOURCE_REGISTRY.json`累计54条来源；`CHRONOLOGY.json`累计27事件；`MAP_SITES_DEEP_GEO.geojson`10处遗址地点；`MAP_DETAIL_REPORT.md`记录定位、史实、政权归属、资料误读及主编使用说明。现代英苏边境三座城堡国家网格坐标已转换WGS84；Monasteroris修道院不等于1550的两座城堡；Newenhambridge＝现Fort Nieulay地理附近，但堡墙经过Vauban重建。所有研究提交在本分支，main未改。
+
+---
+
 # PROGRESS · 1520—1529年史料与实际控制
 更新：2026-10-12｜分支 `research/territorial-1520-1529-20261012`
 **状态：史料第一轮深度调查及数据整理已保存到远端GitHub；主干未变。**
