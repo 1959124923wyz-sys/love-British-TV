@@ -1,0 +1,129 @@
+{
+  "version": "1.0",
+  "prepared": "2026-10-12",
+  "scope": "1500-1509 Calais & Ireland; rights and ledger checks",
+  "instructions": "Each future investigator create new research branch, retain original document date, exact archive shelfmark, evidence confidence, rights. A missing document means null, never guessed polygons.",
+  "tasks": [
+    {
+      "id": "C-01",
+      "priority": 1,
+      "place": "Calais",
+      "action": "Retrieve original Calais Staple summarized accounts and check each annual nominal ledger amount against Grummitt 2008",
+      "archive": "TNA E 101/201/28",
+      "source_url": "https://www.cambridge.org/core/books/abs/calais-garrison/financing-and-supplying-the-garrison/C5D89F586F7A2176CC2B51192A3D0166",
+      "deliverable": "Transcription with fiscal year, wages to garrison, surpluses remitted Crown, unknown/arrears separate",
+      "current_state": "secondary scholarly table extracted; primary not read",
+      "gate": "No net profit chart without reconciliation"
+    },
+    {
+      "id": "C-02",
+      "priority": 1,
+      "place": "Calais",
+      "action": "View 1502 original muster and distinguish actual vs authorized staffing by fort",
+      "archive": "TNA E 101/55/23",
+      "source_url": "https://www.cambridge.org/core/books/abs/calais-garrison/organisation-of-the-garrison/1742DC25BBA4BA4886653E349E9906B5",
+      "deliverable": "Person name row, date, unit, Calais town/castle vs Guines/Hammes/Rysbank; 551 vs 553 verification",
+      "current_state": "scholarly figure only",
+      "gate": "No user-facing exact troop headcount until source checks"
+    },
+    {
+      "id": "C-03",
+      "priority": 1,
+      "place": "Calais",
+      "action": "Date 1482–83 royal terrier and copy, verify named parish holdings and property boundaries",
+      "archive": "TNA E 315/407",
+      "source_url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "deliverable": "Period-specific parish names with original spellings, property attributes, mapped holdings only if suitable",
+      "current_state": "official guide and Dillon 1893 published extract",
+      "gate": "Landholding map != full political actual-control map"
+    },
+    {
+      "id": "C-04",
+      "priority": 1,
+      "place": "Calais",
+      "action": "Establish exact creation and historical reference date of individual parishes survey documents",
+      "archive": "TNA LR 2/88 draft, LR 2/59 duplicate",
+      "source_url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "deliverable": "Precise document metadata, periods represented, property/river name to modern place concordance",
+      "current_state": "series located, dating not established",
+      "gate": "Undated later survey forbidden as 1500 boundary"
+    },
+    {
+      "id": "C-05",
+      "priority": 2,
+      "place": "Calais",
+      "action": "Review 1555–56 survey and contemporaneous maps only for retrospective differences; identify changes since 1500",
+      "archive": "TNA E 315/371–372; BL Cotton MS Augustus I ii; NLI MS 48,518/25",
+      "source_url": "https://www.cambridge.org/core/journals/archaeologia/article/abs/xvcalais-and-the-pale/E7FD917F82CBB317B98CC3C7EEE400BA",
+      "deliverable": "Historical map chronology table, region claims vs actual, river realignments, cited change evidence",
+      "current_state": "later map metadata found",
+      "gate": "Cannot reverse-date into 1500 without corroboration"
+    },
+    {
+      "id": "C-06",
+      "priority": 1,
+      "place": "Calais",
+      "action": "Resolve 1504 Staple retention Act chapter numbering and fiscal contract actual terms",
+      "archive": "19 Hen VII c27 per Grummitt; c22 per Harper 2015; verify Statutes of the Realm Vol II",
+      "source_url": "https://www.cambridge.org/core/books/abs/calais-garrison/financing-and-supplying-the-garrison/C5D89F586F7A2176CC2B51192A3D0166",
+      "deliverable": "Original legal clause and nominal £10,022 4s 8d obligations vs real wages; explain c22/c27 discrepancy",
+      "current_state": "secondary scholarship chapter number conflict",
+      "gate": "No primary legal fact asserting exact chapter until resolved"
+    },
+    {
+      "id": "C-07",
+      "priority": 2,
+      "place": "Calais",
+      "action": "Check Guînes 1502 garrison reduction order and 500 marks annual planned repairs budget in original calendar",
+      "archive": "Calendar of Close Rolls Henry VII 1500–1509 p.99; C 76/183 and C 76/185 captain indentures",
+      "source_url": "https://doi.org/10.1484/J.NMS.3.314",
+      "deliverable": "Actual calendar passage and funding type; do not confuse budget saving with receipt",
+      "current_state": "Grummitt scholarly intermediary only",
+      "gate": "500 marks is savings earmarked for local repair, not Crown net extraction"
+    },
+    {
+      "id": "I-01",
+      "priority": 1,
+      "place": "Ireland",
+      "action": "Open Steven Ellis 2021 Pale historical maps and introductory boundary chapters with rights checks",
+      "archive": "Ireland's English Pale 1470–1550 front-matter map, chapters 1–4",
+      "source_url": "https://www.cambridge.org/core/books/irelands-english-pale-14701550/75C7AB64DF6AAF406B9544F2D2BCDCFA/listing",
+      "deliverable": "Polygon plausibility and original shire changes vs modern county lines; uncertainty",
+      "current_state": "publisher excerpts and 8 claims",
+      "gate": "Medieval nominal county boundaries != actual jurisdiction"
+    },
+    {
+      "id": "I-02",
+      "priority": 1,
+      "place": "Ireland",
+      "action": "Corroborate English Pale and Kildare fiscal/governance 1500–1509 with original Irish and local archives",
+      "archive": "Kildare 1504 treasury appointment, 1496 deputy patent, Irish parliamentary/port and court records",
+      "source_url": "https://www.dib.ie/index.php/biography/fitzgerald-gerald-gearoid-mor-a3148",
+      "deliverable": "Dublin legal courts/tax/fort points with confidence and period start-end",
+      "current_state": "scholarly biography and index only",
+      "gate": "Do not use entire four shires as effective control map"
+    },
+    {
+      "id": "I-03",
+      "priority": 1,
+      "place": "Ireland",
+      "action": "Crosscheck Carrickfergus 1507 and Omagh 1509 in Gaelic annals; separately date their control changes and reconstruct archaeology",
+      "archive": "CELT Annals of Ulster U1507.6, U1509.8, U1512.4; Four Masters M1507.13, M1509.4",
+      "source_url": "https://celt.ucc.ie/published/T100001C.html",
+      "deliverable": "Castles with explicit capture/demolition/retreat; optional site point after coordinates confirmed",
+      "current_state": "two chronicle versions already verified; full source provenance remains",
+      "gate": "A castle capture != county-wide and full-decade conquest"
+    },
+    {
+      "id": "I-04",
+      "priority": 2,
+      "place": "Ireland",
+      "action": "Find fiscal separation between Crown treasury and Kildare dynasty personal rental, and direct English royal intervention",
+      "archive": "Kildare family rent book BL Harley MS 3756 from 1518; 1504 Irish treasurer ledger to locate",
+      "source_url": "https://www.dib.ie/index.php/biography/fitzgerald-gerald-gearoid-mor-a3148",
+      "deliverable": "Distinguish landlord rent, Irish Dublin government funds, and remittance to English Treasury",
+      "current_state": "Harley 1518 is postperiod retrospective",
+      "gate": "1513 Kildare estate c£1800 yearly not a 1504 payment to Crown"
+    }
+  ]
+}
