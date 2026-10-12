@@ -89,3 +89,7 @@ README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATR
 - 新阶段核心研究：加来，Dublin/Pale，1501–02英葡商团，1502和约，1504诺克多战役，1509英王继位。公认区域实控点≠经过证明的统治区域边界；专有名称和金钱性质均保留。
 - 未来由调查员继续核验主张、具体边界、资料许可证，网页维护者再按数据审核口径增量合并。
 - 检查：已核对JS语法、DOM引用存在、50条source ID与14条事件绑定、图标代码及坐标空值规则。尚未核实实际发布的网页能否访问、能否交互及所有外部瓦片可用。
+
+### 2026-10-12 研究归档补充
+- main/research/periods/1500-1510/ 现包含18份调查员1号研究快照。额外8份涉及 Calais 1502驻军、St​​aple财政摘要与实际应收、Calais March划界来源日期、Irish Pale行政范围、Carrickfergus/Ulster争夺等。
+- 文献标题、数字、历史控制更替事件需后续独立核对时段和原档，不直接加到14条公开事件或新增polygon。下一阶段采用 NEXT_AGENT_ARCHIVAL_ACTION_QUEUE.json 的优先级检验。
