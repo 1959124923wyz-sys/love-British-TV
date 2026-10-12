@@ -218,5 +218,32 @@
   ],
   "finance_policy": "All amounts from published scholarship still require primary ledger review. '500 marks/year' is a proposed cost reduction, not a positive receipt.",
   "map_policy": "Known fortress locations can eventually become sourced individual points, not hard-coded coordinates here. LR2 parish survey date unverified; no Calais-Pale region polygon created.",
-  "authorized_geometry_count": 0
+  "authorized_geometry_count": 0,
+  "cartographic_anachronisms_to_block": [
+    {
+      "id": "NEWHAM-BRIDGE",
+      "issue": "Newembridge / Newenham Bridge later fortress",
+      "evidence": "Grummitt (2008) in chapter 3 describes the new fort at Newembridge as built in 1525–1526; do not include as existing garrison in 1500–1509.",
+      "citation": "https://www.cambridge.org/core/books/abs/calais-garrison/organisation-of-the-garrison/1742DC25BBA4BA4886653E349E9906B5",
+      "review": "Secondary book excerpt consulted, original royal works accounts not checked.",
+      "geography_1500": null
+    },
+    {
+      "id": "BOULOGNE",
+      "issue": "Boulogne was not English-controlled Calais Pale c1500",
+      "evidence": "1558 Nicolas de Nicolay Calais+Boulonnais cartographic region includes areas controlled by distinct polities; a single regional map does not express c1500 English boundary.",
+      "citation": "https://catalogue.nli.ie/Record/vtls000300814",
+      "review": "National Library of Ireland catalogue, not contemporaneous c1500 map.",
+      "geography_1500": null
+    },
+    {
+      "id": "CALAISES_LR2",
+      "issue": "LR 2/88 Calais parish survey lacks a verified date",
+      "evidence": "TNA research guide gives shelfmarks LR2/88 and LR2/59 but not the survey's year; should be dated before any use for c1500 geometry.",
+      "citation": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "review": "Official guide read, actual item not read.",
+      "geography_1500": null
+    }
+  ],
+  "research_next_step": "Locate 1502 garrison roll E101/55/23 and Guînes 1502 and Hammes 1503 captain indentures (scholarly leads C76/183 and C76/185), then crosscheck medieval site remains before drawing any 1500s point."
 }
