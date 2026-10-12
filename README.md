@@ -55,3 +55,10 @@
 - 新的数据：[1500—1509正式事件](data/atlas-1500-1509.json)（21条事件、6处政治据点、54条来源）。
 - 调查员持续上传的文献：[1500—1509深入调查报告](research/periods/1500-1510/DEEP_FINDINGS_CALAISES_AND_IRELAND.md) 与 [假设地理包络研究](research/hypotheses/1500/README.md)；后者仅存档研究。
 - 公众事件写作与十年分段的长期规范：[叙事与时间状态规范](docs/PUBLIC_NARRATIVE_AND_TIME_MODEL.md)。
+
+## 2026-10-12 · v0.7 正式地图布局与地理参考预览
+- [在线历史地图](https://1959124923wyz-sys.github.io/love-British-TV/)：地图仅保留紧凑年份卡与章节时间轴；右侧考证采用覆盖式抽屉。
+- 1500—1509年度英国范围缩放显示全部21个事件图标和可证时段内6个政治关系据点；同一地点图标向上错列，而非数字圆圈。
+- [调查员的三项地理参考线面](data/geography-1500-hypotheses.geojson)：独立淡色虚线，在1500—1509年可见，可在侧栏关闭。 [原30项研究素材](research/hypotheses/1500/HYPOTHESIS_ENVELOPES.geojson) 保留供继续考证。
+- [第二级历史文献与考证库](data/historical-detail-notes.json)：34条记录，一层读故事、二层看具体档案和统计口径。
+- [最新项目状态](PROJECT_STATUS.md) / [完整更新日志](CHANGELOG.md)。
