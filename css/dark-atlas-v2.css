@@ -436,3 +436,14 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  fill-opacity:1!important;
 }
 .leaflet-territoryPane-pane .atlas-territory-solid{stroke-linejoin:round}
+
+/* Historic SVG paths use unobtrusive focus. Leaflet/browser default SVG outlines
+   follow the feature's rectangular bounding box and obscure the map after a click.
+   Preserve a glow for keyboard focus without drawing a white/black rectangle. */
+#map path.leaflet-interactive:focus{
+  outline:none!important;
+}
+#map path.leaflet-interactive:focus-visible{
+  outline:none!important;
+  filter:drop-shadow(0 0 3px rgba(244,206,154,.88));
+}
