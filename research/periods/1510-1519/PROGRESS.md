@@ -36,3 +36,14 @@
 **最优先**：BL Add MS48002/Cotton Vitellius与Caligula D VII，找1518图尔奈条约全文、具体给付机制、1519交城文件和实收条款；1515图尔奈市政文书与城堡工役；皇家财政入账、法币单位、地方出资/英王军费分类。  
 **第二**：将两套爱尔兰编年史与DIB、Irish statutory/local records核定Roscommon/Sligo/Omagh军政持续时间和地方政体。  
 **第三**：下一个1520—1529时段要继承1519英国已撤出图尔奈、1520金缕衣会（Field of Cloth of Gold）和1525—1529 Guînes边防的后续政策；不把1518条约利益重复计入1520年代。
+
+
+## 2026-10-12 P0查漏补缺：提交与更正
+- `4fcedecdce9b1ce218b2f507dd690451b95c3878`：FOLLOWUP_EVIDENCE_SOURCES.json，新5条1515爱尔兰、1517殖民企划、1519/1520爱尔兰治理史料。
+- `2a116ddec3d04ff288c15b97dc956eee01357084`：CHRONOLOGY_AND_LOCAL_POWERS.json由17增至19条事件；新增1515报告和1517北美殖民失败尝试；修正1519 Surrey说法。
+- `2865726dc4c82d53cb010cbdaf9fe8b6549d57c6`：CONTROL_EPISODES.json由12增至13条；追加1517有意殖民但当地无实际英方行政的案例；修正1519与1520的代理人。
+- `2fe3e474026f77ac37e5648fb023a12750e7f973`：SPATIAL_GOVERNANCE_FOLLOWUP_SOURCES.json，新5条Tournaisis乡村司法范围/历史地图/爱尔兰各级官府与苏格兰岛屿资料。
+- `8ff66106507d2850e356be4fc40660c8daaaccce`：地图GeoJSON新增Wallonia atlas的版权、农村地区管辖空白警告，禁止将1.15km圈视作图尔奈全部英王统治区。
+- `b0844df28aa2c532d8d5cb5960171f62b21898e3`：同步互动研究地图嵌入史事数据，1515/1517新事件已可按年显示。
+- `a6c69b83877090210244a4dce647ea6f80afdb84`：RESEARCH_GAPS_AND_PRIORITY_20261012.json，8项P0—P2档号级研究任务。
+**注意**：上方初版统计的17事件、12控制关系应以最新版本19事件、13控制关系为准；新增的专门资料10条，原始入档已有43条，总计53。
