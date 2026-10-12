@@ -77,3 +77,5 @@ README.md → 本文件 → CHANGELOG.md → RESEARCH_HANDOFF.md → SOURCE_MATR
 - 工作流 scripts/validate_atlas.py 将验证 SVG图标ID与类别目录、全部event.icon_code；版本更新 v0.4.0。
 - 公开地图 URL: https://1959124923wyz-sys.github.io/love-British-TV/ 。**外部访问与运行效果未独立证实**；不能标记为端到端验收完成。
 - 尚需 UI 回归：实际看图标是否清楚、重叠、悬停尺寸、移动端和地图瓦片服务可用性；如用户发截图，应先修复实际缺陷再扩大研究年代。
+
+- 图标预览页：/icon-gallery.html（直接引用同一SVG sprite）。部署后可查看真实网页图标外观，后续修改图标请一并回归检查此页。
