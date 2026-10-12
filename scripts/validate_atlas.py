@@ -130,7 +130,7 @@ assert "expanded-event" in app
 assert "leaflet-marker-icon.atlas-flyout-icon" in css
 assert "background:transparent!important" in css
 assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
-assert "PILOT v1.0" in html
+assert "PILOT v1.1" in html
 
 # Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
@@ -174,11 +174,39 @@ assert geo_layer["properties"]["fill_authorized"] is False
 assert geo_layer["properties"]["active_years"] == [1513,1514,1515,1516,1517,1518]
 assert "data/atlas-1510-1519.json" in app
 assert "data/geography-1510-1519-hypotheses.geojson" in app
-assert "year<1513 || year>1518" in app
+assert "year>=1513&&year<=1518" in app
 assert 'id="chapterThree"' in html and 'max="1519"' in html
-assert "renderEventList();renderPoints();renderHypotheses();renderMilestones()" in app
+assert "renderEventList();renderControlAreas();renderPoints();renderHypotheses();renderMilestones()" in app
 assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
 assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
+# MAP-FIRST French urban control polygons are explicitly symbols, not surveyed historic city walls.
+cores = json.loads((ROOT/"data/french-urban-control-1500-1519.geojson").read_text(encoding="utf-8"))
+assert cores["type"] == "FeatureCollection" and len(cores["features"]) == 2
+assert cores["cartographic_semantics"]["prohibit_for_area_calculations"] is True
+a_core,b_core = cores["features"]
+assert a_core["properties"]["source_place_id"] == "calais-crown"
+assert b_core["properties"]["source_place_id"] == "tournai-occupied-city-1513"
+assert (a_core["properties"]["start_year"],a_core["properties"]["observed_through_year"]) == (1497,1519)
+assert (b_core["properties"]["start_year"],b_core["properties"]["observed_through_year"],b_core["properties"]["end_year"],b_core["properties"]["end_month"]) == (1513,1518,1519,2)
+for f in cores["features"]:
+    assert f["geometry"]["type"] == "Point"
+    assert f["properties"]["visual_role"] == "schematic_controlled_city_area"
+    assert f["properties"]["historical_boundary_confirmed"] is False
+    assert f["properties"]["source_ids"]
+def active_city_symbols(y):
+    return {f["properties"]["source_place_id"] for f in cores["features"]
+        if f["properties"]["start_year"]<=y<=f["properties"]["observed_through_year"]}
+assert active_city_symbols(1512) == {"calais-crown"}
+assert active_city_symbols(1513) == {"calais-crown","tournai-occupied-city-1513"}
+assert active_city_symbols(1518) == {"calais-crown","tournai-occupied-city-1513"}
+assert active_city_symbols(1519) == {"calais-crown"}
+assert "function renderControlAreas()" in app
+assert "controlAreaPane" in app
+assert "calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type)" in app
+assert "renderControlAreas();renderPoints();renderHypotheses()" in app
+assert 'id="toggleControlAreas"' in html
+assert (ROOT/"docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md").is_file()
+
 
 assert "data/historical-detail-notes.json" in app and "renderHypotheses()" in app
 assert 'id="toggleHypotheses"' in html and 'id="mapControls"' in html
