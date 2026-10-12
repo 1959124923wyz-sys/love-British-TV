@@ -1,0 +1,183 @@
+{
+  "dataset_id": "scottish-crown-territories-and-border-1500-1509",
+  "updated_on": "2026-10-12",
+  "status": "research_only; all historic polygons unapproved",
+  "sources": [
+    {
+      "id": "NRS-TREATY-1502-ORIGINAL",
+      "title": "Ratification Henry VII of Treaty of Perpetual Peace, SP6/31",
+      "institution": "National Records of Scotland",
+      "url": "https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?df=&di=y&dt=&k=&ko=a&r=SP6%2F31&reference=SP6%2F31&ro=s&st=1&tc=y&tl=n&tn=n&tp=n",
+      "verified_level": "primary_item_catalogue",
+      "original_reference": "SP6/31",
+      "date": "1502-10-31",
+      "rights": "digital image NRS search room, purchase licensed; no republication permission granted"
+    },
+    {
+      "id": "NRS-STATEPAPERS",
+      "title": "Scottish State Papers archival record series SP1 SP6 SP8",
+      "institution": "National Records of Scotland",
+      "url": "https://www.nrscotland.gov.uk/learning-and-events/research-guides/state-papers/?section=the-records",
+      "verified_level": "official_archival_guide",
+      "original_reference": "SP1 (1505–1631), SP6 (1328–1605), SP8 (1312–1589)",
+      "rights": "rights of individual digitized documents to be confirmed"
+    },
+    {
+      "id": "NRS-EDUCATION-TREATY",
+      "title": "Scotland's relations with England",
+      "institution": "National Records of Scotland educational archive programme",
+      "url": "https://www.scottisharchivesforschools.org/Flodden/scotlandAndEngland.asp",
+      "verified_level": "primary_treaty_extract_and_education",
+      "original_reference": "SP6/31; English counterpart E39/81",
+      "rights": "text reuse limits not separately checked"
+    },
+    {
+      "id": "NRS-JAMESIV-TIMELINE",
+      "title": "The Reign of James IV 1488–1513",
+      "institution": "National Records of Scotland educational archive programme",
+      "url": "https://www.scottisharchivesforschools.org/flodden/Timeline.asp",
+      "verified_level": "official_archival_history",
+      "original_reference": "multiple",
+      "rights": "check image and transcript terms"
+    },
+    {
+      "id": "SHETLAND-1472",
+      "title": "550 Years Ago: how Shetland became part of Scotland",
+      "institution": "Shetland Museum and Archives",
+      "url": "https://www.shetlandmuseumandarchives.org.uk/blog/550-years-ago-how-shetland-became-part-of-scotland",
+      "verified_level": "museum_historical_analysis",
+      "original_reference": "Scottish crown annexation 1472 and governors / tax collectors",
+      "rights": "site content not automatically redistributable"
+    },
+    {
+      "id": "CATHCART-2014-HEBRIDES",
+      "title": "A Spent Force? The Clan Donald in the aftermath of 1493",
+      "institution": "University of Strathclyde repository / Brill",
+      "author": "Alison Cathcart",
+      "year": 2014,
+      "doi": "10.1163/9789004280359_013",
+      "url": "https://strathprints.strath.ac.uk/60239/",
+      "verified_level": "academic_abstract_checked",
+      "original_reference": "The Lordship of the Isles pp.254–270",
+      "rights": "published version restricted; repository abstract accessible"
+    },
+    {
+      "id": "NRS-KING-JAMESIV-ADMIN",
+      "title": "The Government of King James IV",
+      "institution": "National Records of Scotland educational archive programme",
+      "url": "https://www.scottisharchivesforschools.org/Flodden/reignJamesIvIndex.asp",
+      "verified_level": "official_archival_history",
+      "original_reference": "royal Great/Privy seal and administration",
+      "rights": "images not sublicensed"
+    }
+  ],
+  "territories": [
+    {
+      "id": "SCOTLAND-KINGDOM-1500",
+      "title": "Kingdom of Scotland – politically independent of England",
+      "period": [
+        1500,
+        1509
+      ],
+      "legal_actor": "James IV, King of Scots",
+      "control_status": "independent_polity_with_local_authority_varies",
+      "evidence": [
+        "A separate Scottish king's government, royal seals, judiciary and treaties continued throughout 1500–1509.",
+        "Treaty ratified by Henry VII on 1502-10-31 and 1503 dynastic marriage explicitly involved two distinct states; no territorial union."
+      ],
+      "sources": [
+        "NRS-TREATY-1502-ORIGINAL",
+        "NRS-EDUCATION-TREATY",
+        "NRS-KING-JAMESIV-ADMIN"
+      ],
+      "geometry": {
+        "polygon": null,
+        "precision": "no-contemporary-full-border-geometry-yet",
+        "map_rendering": "separate_scotland_political_layer_only_after_historical_bounds_review"
+      },
+      "revenue_note": "Do not attribute Scottish taxation to England or UK in 1500–1509.",
+      "review": "source_checked"
+    },
+    {
+      "id": "ORKNEY-SHETLAND-SCOTTISH",
+      "title": "Orkney and Shetland under Scottish Crown with surviving local institutions",
+      "period": [
+        1500,
+        1509
+      ],
+      "legal_actor": "Scottish Crown and appointed representatives",
+      "control_status": "royal_sovereignty_with_distinct_local_law",
+      "evidence": [
+        "1468–69 pledged to King James III; king annexed islands 1472-02-20.",
+        "Museum research cites Scottish royal governors and tax collectors, while local lawmen and institutions continued."
+      ],
+      "sources": [
+        "SHETLAND-1472",
+        "NRS-STATEPAPERS"
+      ],
+      "geometry": {
+        "polygon": null,
+        "precision": "15th-c coast / local boundary not digitized",
+        "map_rendering": "scotland-linked-not-English"
+      },
+      "revenue_note": "Tax remittance in 1500–1509 not quantified yet.",
+      "review": "source_checked"
+    },
+    {
+      "id": "WESTERN-ISLES-1500",
+      "title": "Western Isles and Highlands – authority contested after Lordship of the Isles forfeiture",
+      "period": [
+        1500,
+        1509
+      ],
+      "legal_actor": "Scottish Crown; Clan Donald; regional nobles and clan leadership",
+      "control_status": "contested_or_delegated_indirect_rule",
+      "evidence": [
+        "1493 forfeiture did not imply immediate collapse of Clan Donald influence.",
+        "Specialist scholarship finds continuing local power and repeated Crown intervention with regional delegated administration."
+      ],
+      "sources": [
+        "CATHCART-2014-HEBRIDES",
+        "NRS-JAMESIV-TIMELINE"
+      ],
+      "geometry": {
+        "polygon": null,
+        "precision": "authority and local boundaries not established",
+        "map_rendering": "contested / limited royal control, no fully solid shaded Hebrides"
+      },
+      "revenue_note": "No verified fiscal magnitude.",
+      "review": "academic_abstract_checked"
+    },
+    {
+      "id": "ANGLO-SCOTTISH-TREATY-1502",
+      "title": "Treaty of Perpetual Peace 1502",
+      "period": [
+        1502,
+        1502
+      ],
+      "legal_actor": "Separate kings Henry VII and James IV",
+      "control_status": "treaty_between_states_not_territorial_change",
+      "evidence": [
+        "NRS original signed 1502-10-31 in Westminster SP6/31; 1502 Scottish ratification separately sent to English archives.",
+        "1503 dynastic marriage did not merge administrations or control areas."
+      ],
+      "sources": [
+        "NRS-TREATY-1502-ORIGINAL",
+        "NRS-EDUCATION-TREATY"
+      ],
+      "geometry": {
+        "polygon": null,
+        "precision": "treaty no terrain geometry",
+        "map_rendering": "optional diplomatic event icon"
+      },
+      "review": "archival_catalogue_checked"
+    }
+  ],
+  "unapproved_polygon_count": 0,
+  "cautions": [
+    "Scotland as an independent political actor must not be painted as England in 1500–1509.",
+    "Shetland/Orkney not transferred to England by a 1503 royal marriage.",
+    "1493 forfeiture of title over Western Isles is not evidence of uniform effective royal governance.",
+    "Regional local law autonomy is compatible with Scottish Crown sovereignty; do not treat all law differences as identical political independence."
+  ]
+}
