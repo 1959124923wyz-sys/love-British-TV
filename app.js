@@ -491,12 +491,13 @@ function setYear(v){
  $('chapterTitlePrimary').textContent=third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
  $('chapterTitleSecondary').textContent=third?'海峡':second?'的第二程':'的第一道声索';
  $('chapterIntro').textContent=third?atlasThird.intro.description:second?atlasLater.intro.description:earlyIntro;
- $('factA').textContent=third?'1513':second?'加来':'0';
- $('factADesc').innerHTML=third?'弗洛登战役<br>苏格兰国王阵亡':second?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
- $('factB').textContent=third?'1513':second?'1502':'1497';
- $('factBDesc').innerHTML=third?'英军占领<br>图尔奈':second?'英格兰与苏格兰<br>缔结和约':'英格兰远航<br>抵达北美沿岸';
- $('factC').textContent=third?'1519':second?'1504':'1498';
- $('factCDesc').innerHTML=third?'英军撤离<br>图尔奈':second?'爱尔兰<br>诺克多战役':'第二次远航<br>后续出航';
+ // Front-page fact cards also obey the selected year; do not reveal later battles or treaties.
+ $('factA').textContent=third?(year>=1513?'1513':'—'):second?'加来':'0';
+ $('factADesc').innerHTML=third?(year>=1513?'弗洛登战役<br>苏格兰国王阵亡':''):second?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
+ $('factB').textContent=third?(year>=1513?'1513':'—'):second?(year>=1502?'1502':'—'):'1497';
+ $('factBDesc').innerHTML=third?(year>=1513?'英军占领<br>图尔奈':''):second?(year>=1502?'英格兰与苏格兰<br>缔结和约':''):'英格兰远航<br>抵达北美沿岸';
+ $('factC').textContent=third?(year>=1519?'1519':'—'):second?(year>=1504?'1504':'—'):(year>=1498?'1498':'—');
+ $('factCDesc').innerHTML=third?(year>=1519?'英军撤离<br>图尔奈':''):second?(year>=1504?'爱尔兰<br>诺克多战役':''):(year>=1498?'第二次远航<br>后续出航':'');
  $('periodTitle').textContent=third?(year===1513?'亨利八世 · 海峡战事':year===1519?'亨利八世 · 图尔奈交还':'亨利八世 · 英格兰王国'):second?(year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国'):(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国');
  $('chapterOne').classList.toggle('active',first);
  $('chapterTwo').classList.toggle('active',second);
