@@ -11,7 +11,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
  maxZoom:19,maxNativeZoom:19,
  attribution:'&copy; OpenStreetMap contributors'
 }).addTo(map);
-const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary','associated-modern-town-centre'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
@@ -26,7 +26,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  const meta=iconMeta(item);
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
-const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，地点待考':'')+'">'+svgIcon(item)+(isUncertain(item)?'<span class="uncertain-badge" aria-hidden="true">?</span>':'')+'</div>';
+const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，地点待考':'')+'">'+svgIcon(item)+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
 function syncPanels(){
@@ -42,6 +42,10 @@ const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室
 const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let year=1497; let selected=''; let timer=null;
 let researchNotes={};let geographicHypotheses=null;
+let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
+const cancelClusterClose=()=>{if(clusterCloseTimer){clearTimeout(clusterCloseTimer);clusterCloseTimer=null}};
+function closeCluster(){cancelClusterClose();activeClusterKey=null;expandedPinned=false;groups.clusterExpanded.clearLayers()}
+function scheduleClusterClose(){cancelClusterClose();if(!expandedPinned)clusterCloseTimer=setTimeout(()=>{if(!expandedPinned)closeCluster()},480)}
 let vectors={};
 const infoDefault=$('dossierBody').innerHTML;
 const earlyIntro=$('chapterIntro').textContent;
@@ -111,11 +115,52 @@ function renderEventList(){
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 本章稍后':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event')));
 }
+function expandCluster(group,pin=false){
+ // A single local expansion at a time. Children remain individual event records.
+ const key=group.items.map(x=>x.item.id).sort().join('|');
+ cancelClusterClose();
+ if(activeClusterKey===key && expandedPinned && pin){closeCluster();return}
+ if(activeClusterKey!==key)groups.clusterExpanded.clearLayers();
+ activeClusterKey=key;
+ expandedPinned=pin||expandedPinned&&activeClusterKey===key;
+ groups.clusterExpanded.clearLayers();
+ const items=group.items;
+ const pt=map.latLngToContainerPoint(group.latlng),viewport=map.getSize();
+ const count=items.length,cell=35;
+ let cols=count<=5?count:Math.min(4,Math.ceil(count/2));
+ let rows=Math.ceil(count/cols);
+ // Choose an on-screen horizontal side; for crowded or narrow maps use a grid.
+ const fullWidth=cols*cell,canRight=pt.x+50+fullWidth<viewport.x-12,canLeft=pt.x-50-fullWidth>12;
+ let direction=canRight?'right':canLeft?'left':'above';
+ if(direction==='above'){
+  cols=Math.min(4,Math.max(2,Math.ceil(Math.sqrt(count))));
+  rows=Math.ceil(count/cols);
+ }
+ const gridWidth=(cols-1)*cell;
+ const originX=direction==='right'?pt.x+54:
+   direction==='left'?pt.x-54-gridWidth:Math.max(18,Math.min(viewport.x-gridWidth-18,pt.x-gridWidth/2));
+ const originY=direction==='above'?Math.max(20,pt.y-53-(rows-1)*cell):
+   Math.max(18,Math.min(viewport.y-24-(rows-1)*cell,pt.y-(rows-1)*cell/2));
+ const first=map.containerPointToLatLng(L.point(originX,originY));
+ L.polyline([group.latlng,first],{color:'#e1bf9c',weight:1.4,opacity:.43,interactive:false,dashArray:'3 5'}).addTo(groups.clusterExpanded);
+ items.forEach((record,i)=>{
+  const col=i%cols,row=Math.floor(i/cols),item=record.item;
+  const x=originX+col*cell,y=originY+row*cell;
+  const d=27,ico=L.divIcon({className:'',html:'<div class="expanded-event">'+iconHTML(item)+'</div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
+  const marker=L.marker(map.containerPointToLatLng(L.point(x,y)),{icon:ico,title:item.name,zIndexOffset:1800+i})
+   .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'top',className:'atlas-hover'})
+   .on('mouseover',cancelClusterClose)
+   .on('mouseout',scheduleClusterClose)
+   .on('click',()=>{expandedPinned=true;cancelClusterClose();openDossier(item,record.type)});
+  marker.addTo(groups.clusterExpanded);
+ });
+}
 function renderPoints(){
+ // Screen-space regrouping restores compact anchor markers on year/zoom/layer changes.
+ closeCluster();
  for(const name of ['event','candidate','routes','claim','place','cluster'])groups[name].clearLayers();
  const shown=[];
- const zoom=map.getZoom();
- const showAll=zoom>=4 || $('toggleMinorEvents').checked;
+ const showAll=map.getZoom()>=4||$('toggleMinorEvents').checked;
  if($('toggleEvents').checked){
   for(const e of atlas.events){
    if(atlas===atlasEarly&&e.year>1499)continue;
@@ -127,59 +172,43 @@ function renderPoints(){
  }
  if($('toggleKingdom').checked&&year>=1500){
   for(const q of atlasLater.places){
-   const from=q.start_year==null?1500:q.start_year;
-   if(year<from||(q.end_year!=null&&year>q.end_year)||(q.observed_through_year!=null&&year>q.observed_through_year))continue;
+   const start=q.start_year??1500;
+   if(year<start||(q.end_year!=null&&year>q.end_year)||(q.observed_through_year!=null&&year>q.observed_through_year))continue;
    shown.push({item:{...q,significance:{level:2}},type:'place',lat:q.lat,lng:q.lng});
   }
  }
- // Screen-space grouping only plans a fan of real SVG icons, never replacing them with number bubbles.
- const groupsNearby=[];
- for(const item of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item)||a.item.id.localeCompare(b.item.id))){
-  const point=map.latLngToLayerPoint([item.lat,item.lng]);
-  let group=groupsNearby.find(g=>Math.hypot(point.x-g.anchor.x,point.y-g.anchor.y)<34);
-  if(!group){group={anchor:point,items:[]};groupsNearby.push(group)}
-  group.items.push(item);
+ // Aggregate by screen distance, without changing the historically stored coordinates.
+ const nearby=[];
+ for(const record of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item)||a.item.id.localeCompare(b.item.id))){
+  const point=map.latLngToLayerPoint([record.lat,record.lng]);
+  let g=nearby.find(x=>Math.hypot(x.pt.x-point.x,x.pt.y-point.y)<32);
+  if(!g){g={pt:point,latlng:map.layerPointToLatLng(point),items:[]};nearby.push(g)}
+  g.items.push(record);
  }
- const occupied=[];
- const collides=box=>occupied.some(x=>!(box.x2<x.x1||box.x1>x.x2||box.y2<x.y1||box.y1>x.y2));
- for(const g of groupsNearby){
-  const n=g.items.length;
-  const columns=n===1?1:Math.min(5,Math.ceil(Math.sqrt(n)));
-  const rows=Math.ceil(n/columns);
-  const step=32;
-  const boundsWidth=(columns-1)*step+31;
-  const boundsHeight=(rows-1)*step+31;
-  const offsets=[];
-  // Prefer placing event icons above their associated city; if nearby labels collide, slide the entire fan sideways.
-  for(const slide of [0,-45,45,-90,90,-135,135,-180,180]){
-   const yBase=n>1?-(rows*step+10):0;
-   const bbox={x1:g.anchor.x+slide-boundsWidth/2-5,x2:g.anchor.x+slide+boundsWidth/2+5,y1:g.anchor.y+yBase-5,y2:g.anchor.y+yBase+boundsHeight+5};
-   if(!collides(bbox)){offsets.push(slide,yBase,bbox);break}
-  }
-  if(!offsets.length){const yBase=n>1?-(rows*step+10):0;offsets.push(0,yBase,{x1:g.anchor.x-boundsWidth/2-5,x2:g.anchor.x+boundsWidth/2+5,y1:g.anchor.y+yBase-5,y2:g.anchor.y+yBase+boundsHeight+5})}
-  const [slide,yBase,bbox]=offsets;occupied.push(bbox);
-  if(n>1){
-   const topCenter=map.layerPointToLatLng(L.point(g.anchor.x+slide,g.anchor.y+yBase+boundsHeight));
-   const origin=map.layerPointToLatLng(g.anchor);
-   L.polyline([origin,topCenter],{color:'#d8bd97',weight:1,opacity:.45,interactive:false,dashArray:'2 5'}).addTo(groups.cluster);
-  }
-  for(let i=0;i<n;i++){
-   const record=g.items[i],item=record.item,k=levelOf(item);
-   const d=k===3?30:k===2?27:23;
-   const col=i%columns,row=Math.floor(i/columns);
-   const x=g.anchor.x+slide+(col-(columns-1)/2)*step;
-   const y=g.anchor.y+yBase+row*step+(n>1?15:0);
-   const displayLatLng=map.layerPointToLatLng(L.point(x,y));
-   const icon=L.divIcon({className:'',html:iconHTML(item),iconSize:[d,d],iconAnchor:[d/2,d/2]});
-   L.marker(displayLatLng,{icon,title:item.name,zIndexOffset:500+k*50+i})
+ for(const g of nearby){
+  if(g.items.length===1){
+   const record=g.items[0],item=record.item;
+   const d=levelOf(item)===3?30:levelOf(item)===2?27:23;
+   const ico=L.divIcon({className:'',html:iconHTML(item),iconSize:[d,d],iconAnchor:[d/2,d/2]});
+   L.marker([record.lat,record.lng],{icon:ico,title:item.name,zIndexOffset:500+levelOf(item)*60})
     .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'top',className:'atlas-hover'})
     .on('click',()=>openDossier(item,record.type)).addTo(groups.cluster);
+   continue;
   }
+  const important=g.items.some(x=>levelOf(x.item)===3);
+  const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+'"><strong>'+g.items.length+'</strong></div>',iconSize:[36,36],iconAnchor:[18,18]});
+  L.marker(g.latlng,{icon:ico,title:g.items.length+'项历史记录',zIndexOffset:950})
+   .bindTooltip('<strong>'+g.items.length+'项历史事件</strong><div class="atlas-hover-summary">移至主标记或点击，展开具体事件图标</div>',{direction:'top',className:'atlas-hover',opacity:.96})
+   .on('mouseover',()=>{if(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|'))expandCluster(g)})
+   .on('mouseout',scheduleClusterClose)
+   .on('click',()=>expandCluster(g,true))
+   .addTo(groups.cluster);
  }
  if(atlas.candidates&&year<=1499){
   for(const c of atlas.candidates){
-   const icon=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
-   L.marker([c.lat,c.lng],{icon,title:c.name}).bindTooltip(hoverCard(c.name,c.note),{direction:'top',className:'atlas-hover'})
+   const ico=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
+   L.marker([c.lat,c.lng],{icon:ico,title:c.name})
+    .bindTooltip(hoverCard(c.name,c.note),{direction:'top',className:'atlas-hover'})
     .on('click',()=>openDossier(c,'candidate')).addTo(groups.candidate);
   }
   if($('toggleClaims').checked){
@@ -200,12 +229,22 @@ function renderPoints(){
 function renderHypotheses(){
  groups.hypotheses.clearLayers();
  if(!geographicHypotheses||year<1500||!$('toggleHypotheses').checked)return;
+ const calais=feature=>String(feature.properties?.id||'').startsWith('calais');
+ // Soft, noninteractive silhouette under dashed lines. Display does not signify actual territorial control.
+ L.geoJSON(geographicHypotheses,{
+  filter:f=>calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
+  style:{color:'#b68cf0',weight:9,opacity:.16,dashArray:'7 5',fill:false,interactive:false}
+ }).addTo(groups.hypotheses);
  L.geoJSON(geographicHypotheses,{
   filter:f=>['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type),
   style:f=>({
-   color:f.geometry.type==='LineString'?'#e9b06e':f.properties?.id?.startsWith('calais')?'#ae85e0':'#d4aa70',
-   weight:2.1,dashArray:f.geometry.type==='LineString'?'7 7':'5 7',opacity:.83,
-   fill:f.geometry.type!=='LineString',fillOpacity:f.geometry.type==='LineString'?0:.035
+   color:f.geometry.type==='LineString'?'#e9b06e':calais(f)?'#c58dfb':'#d4aa70',
+   weight:calais(f)?3.4:2.7,
+   dashArray:f.geometry.type==='LineString'?'7 5':'7 5',
+   opacity:calais(f)?1:.91,
+   fill:f.geometry.type!=='LineString',
+   fillColor:calais(f)?'#b58bea':'#d4aa70',
+   fillOpacity:f.geometry.type==='LineString'?0:calais(f)?.12:.07
   }),
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
@@ -342,6 +381,7 @@ $('resetDossier').addEventListener('click',resetDossier);
 ['toggleKingdom','toggleRoutes','toggleCandidates','toggleClaims','toggleEvents','toggleMinorEvents'].forEach(id=>$(id).addEventListener('change',()=>{if(atlas)renderPoints()}));
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)renderHypotheses()});
 map.on('zoomend',()=>{if(atlas)renderPoints()});
+map.on('click',()=>{if(activeClusterKey)closeCluster()});
 
 syncPanels();
 window.addEventListener('keydown',e=>{if(!atlas)return;if(e.key==='ArrowLeft'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year+1)}});
