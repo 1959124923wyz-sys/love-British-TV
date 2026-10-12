@@ -1,0 +1,187 @@
+{
+  "project": "love-British-TV",
+  "period": [
+    1510,
+    1519
+  ],
+  "compiled": "2026-10-12",
+  "decision": "Decade has an important 1517 omitted colonization attempt and 1515/1519 documentary questions; enough broad history for current stage, but P0 research should be completed before marking 'historically complete'.",
+  "priorities": [
+    {
+      "id": "P0-1517-RASTELL",
+      "rank": 1,
+      "phase": "P0",
+      "topic": "Aborted Newfoundland/Labrador settlement project of John Rastell the elder",
+      "importance": "Large missing expansion-intent event; required to explain planned overseas colonization without false possession",
+      "known": [
+        "Henry VIII royal letters 1517-03-05 and small loan; four+ ships; ports English coast then breakup; no North American settlement"
+      ],
+      "sources": [
+        "DCB-RASTELL-1517"
+      ],
+      "next_actions": [
+        "Identify exact royal letters/warrant shelfmark from Williamson's Cabot Voyages, 1962 and Tudor LP Calendar",
+        "Verify four ship names, dates, port calls, loan value and whether money disbursed, all using originals",
+        "Add event point at historically verified England departure port only; do not invent transatlantic route"
+      ],
+      "map_effect": "Add 1517 colonial-settlement-plan aborted event; no North American fill",
+      "work_status": "event_added_primary_archive_check_pending"
+    },
+    {
+      "id": "P0-TOURNAISIS-1513-19",
+      "rank": 2,
+      "phase": "P0",
+      "topic": "Tournai versus Tournaisis: reach of Tudor administration across parishes",
+      "importance": "Potentially substantial difference in CONTROLLED EXTENT; prior 1.15km disc is a locator only",
+      "known": [
+        "Institut Destrée/Segefa Wallonia history atlas maps Tournai and surrounding Tournaisis English influence in 1513–1519",
+        "University Lille PhD gives roughly 60 regional rural parishes and rival bailli/seigneurial institutions",
+        "Davies specialist study denies MPs, contra Wallonia atlas prose"
+      ],
+      "sources": [
+        "WALLONIA-ATLAS-1513-1519",
+        "LILLE-MARIAGE-2013",
+        "PERSEE-TOURNAISIS-CUSTOMS",
+        "TOURNAI-DAVIES-1998"
+      ],
+      "next_actions": [
+        "Identify archival tax bailiwick and village-level courts/royal officers within the occupied years",
+        "Separate city administration, rural bailliage, Flemish/Hainaut suzerainties and bishopric land claims",
+        "Seek permission to use historical atlas graphic, or independently georeference only verified primary parishes",
+        "Represent broader influence as dashed region only if area supported by sources"
+      ],
+      "map_effect": "Prior city circle remains event locator; add separate possible rural administrative layer after review",
+      "work_status": "regional_source_discovered_detailed_control_not_audited"
+    },
+    {
+      "id": "P0-IRISH-1515",
+      "rank": 3,
+      "phase": "P0",
+      "topic": "1515 English Pale governance reformation report and true law enforcement",
+      "importance": "Period's best documentary opportunity to separate de jure shires from effective Royal justice and taxation",
+      "known": [
+        "BL Add MS4792 ff96–110 contains circa1515 reform report, later copy Add MS4763 ff481–495",
+        "Bodleian Laud Misc611 and NLI microfilm locate William Darcy articles dated 1515-06-24",
+        "Ellis cites claim that only half four obedient shires subject to King's laws"
+      ],
+      "sources": [
+        "BL-ADD4792-1515-IRELAND",
+        "NLI-BOdLEIAN-DARCY-1515",
+        "ELLIS-2021-FOURSHIRES-1515"
+      ],
+      "next_actions": [
+        "Inspect original catalogue manuscripts and ascertain later copy relation and authorship",
+        "Extract named forts, sub-shires, town lands, subsidy/tax or courts showing real administration",
+        "Do not treat 'half' as measured 50% GIS or modern county area"
+      ],
+      "map_effect": "Refine Dublin, Kildare, Meath and Louth 1515 dashed control; no automatic 50% polygon",
+      "work_status": "primary_shelfmark_located_full_text_not_read"
+    },
+    {
+      "id": "P0-1519-SURREY-CHRONOLOGY",
+      "rank": 4,
+      "phase": "P0",
+      "topic": "1519 dismissal planning versus Surrey's 1520 appointment/arrival",
+      "importance": "Corrects map dynamic control actor and eliminates future decade crossover",
+      "known": [
+        "Kildare summoned 1519-01 arrived royal court 1519-09, c1519-11 decision replace; 1520-02 Surrey lieutenant patent TNA SP1/30 f90 and SP60/1 ff70–73"
+      ],
+      "sources": [
+        "ELLIS-2023-SURREY-DECISION"
+      ],
+      "next_actions": [
+        "Fetch TNA SP1/30 f90 & SP60/1 ff70–73 scans or published calendar",
+        "Verify 1519 remaining local deputy/council caretaker period until new governor took effective office",
+        "Record 1520 as next decade handoff"
+      ],
+      "map_effect": "Show 1519 administrative decision only, not Surrey occupying Irish land in 1519",
+      "work_status": "event_and_control_data_corrected"
+    },
+    {
+      "id": "P1-TOURNAI-FINANCE",
+      "rank": 5,
+      "phase": "P1",
+      "topic": "Military expenses, Tournai borough labor and funds actually received by Crown",
+      "importance": "User's emphasis on actual benefit; current numbers are promised treaty amounts and scholar's municipal wages not King's net profit",
+      "known": [
+        "1518 promised 600000 gold crowns in a multi-year treaty; 1517 city paid for citadel labor, candidate 2264 local livres; actual cash receipts unknown"
+      ],
+      "sources": [
+        "MURPHY-2014-TOURNAI",
+        "BL-CALIGULA-DVII-1518",
+        "BL-FRANCE-TREATIES"
+      ],
+      "next_actions": [
+        "Obtain BL Tournai surrender and royal receipt registers; reconcile municipal cash-books vs monarchy military costs",
+        "Confirm currency, payment schedules, arrears and independently verified balances",
+        "Avoid adding 600k-crown treaty figure to all 1510s colonial extraction as realized revenue"
+      ],
+      "map_effect": "Economic ledger separated from territorial fill",
+      "work_status": "source_locator_only"
+    },
+    {
+      "id": "P1-IRISH-URBAN-LODHIPS",
+      "rank": 6,
+      "phase": "P1",
+      "topic": "Anglo-Irish charters and lordships beyond Dublin Pale",
+      "importance": "Cork Waterford Galway Wexford and Butlers/Desmond local lordship jurisdictions could be incorrectly omitted/absorbed",
+      "known": [
+        "Quinn 1939 specialist study records Dublin Crown competence declining across different territory groups; original Ormond deed rolls and Irish Exchequer Memoranda Rolls exist"
+      ],
+      "sources": [
+        "QUINN-1939-LOCAL-IRELAND"
+      ],
+      "next_actions": [
+        "Build 1510s town-by-town borough/royal charter and sheriff tax records by location",
+        "Contrast corporate municipality vs independent Gaelic lordship vs inherited Anglo-Irish feudal landlord powers",
+        "Only names verified for decade may enter map; do not assign all ports direct central administration"
+      ],
+      "map_effect": "Add sourced point/partial municipal polygons without expanding Pale falsely",
+      "work_status": "high_value_untouched"
+    },
+    {
+      "id": "P1-SCOTTISH-ISLES",
+      "rank": 7,
+      "phase": "P1",
+      "topic": "1513–1519 western Scottish Isles local autonomy and Donald of Lochalsh revolt",
+      "importance": "Flodden after-effects may change Scottish Crown effective administration locally even though sovereignty unchanged",
+      "known": [
+        "Older clan history documents rebellions/submissions c1513–17, but original charter/royal records not yet crosschecked"
+      ],
+      "sources": [
+        "NLS-CLAN-DONALD-OLD"
+      ],
+      "next_actions": [
+        "Corroborate against National Records of Scotland entries and modern peer-reviewed Highlands history",
+        "Split Scottish sovereignty from actual clan/royal office holdings by island",
+        "Mark contested places dashed, no blanket English rule"
+      ],
+      "map_effect": "Potential regional uncertainty hatching, no change Scotland independent national status",
+      "work_status": "historical_lead_only"
+    },
+    {
+      "id": "P2-CALAIS-THEROUANNE",
+      "rank": 8,
+      "phase": "P2",
+      "topic": "Calais Pale and 1513 Thérouanne siege aftermath geographic precision",
+      "importance": "Incremental refinements to existing 1500s territory and one-year siege event",
+      "known": [
+        "Calais military establishment continued; Thérouanne fell 1513 and French fortifications later rebuilt"
+      ],
+      "sources": [
+        "TNA-SP1-HENRY8-GUIDE",
+        "THEROUANNE-OFFICIAL"
+      ],
+      "next_actions": [
+        "Map which specific Calais border forts were repaired or changed 1510–19",
+        "Confirm English/Imperial departure from Thérouanne and French reconstruction date",
+        "Do not convert 1513 battle into permanent colonial administrative region"
+      ],
+      "map_effect": "Short military action points and separate Calais control envelope only",
+      "work_status": "background_present_original_geometry_missing"
+    }
+  ],
+  "editorial_published_no_new_geometries": true,
+  "source_quality": "Current linked institutions and scholarship only; primary folios not all directly read",
+  "policy": "Geometries optional dashed when anchored in reliable sources, never count arbitrary circle as actual historical area; incomes need audited payments"
+}
