@@ -56,3 +56,11 @@
 - 重要性 significance.level=1/2/3 依旧必须独立填写理由；geo_precision 不准确仍必须保留。网页渲染大小与类别色严格读取正式manifest，禁止“只用颜色说明史实”。
 - 未在1497—1500数据里出现的罪行类别图标仅是类型资源，不代表当时已经发生；资料团队不能为了展示新图标而捏造事件。
 - 研究者新对话先读取 PROJECT_STATUS.md + approved icon spec + icon-categories.json + CHANGELOG.md + 对应PROGRESS.md，之后提交分支并追加研究日志。
+
+
+## 1500—1509 首批研究上图交接（2026-10-12）
+- main/research/periods/1500-1510/ 是调查员1号当时的已提交**快照**；研究员继续在 research/territorial-1500-1510-20261012 改进资料，主站不得从该分支自动覆盖数据。
+- 正式网页读取 main/data/atlas-1500-1509.json 中14条事件、6处代表政治据点，不直接读取研究候选文件。未来研究追加数据应先更新源文件、核对source_ids，然后按正式数据格式提交PR。
+- 地图只用可证地理中心展示 Calais、Dublin、Channel Islands、Isle of Man、Orkney、Shetland 和有位置依据的事件。English Pale/Calais March 及西部群岛的历史边界尚未获得可复核geometry，严禁大面积实心涂色。
+- 1508–1509 Sebastian Cabot后世远航叙述仍在后台，不属于已确认可视化航线。三名被带至英王宫廷的人不能武断标作法律奴隶或强制迁移。
+- 主站 v0.5 已更新到1509，后续1510年独立接段；避免1509–10财政账册跨年代重复累计。任何经济金额须保留支出/承诺/收入/利润的原始口径。
