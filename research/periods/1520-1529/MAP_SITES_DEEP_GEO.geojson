@@ -1,0 +1,243 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "爱英TV 1520—1529地图细节：考古遗址、战争城镇、法英边防",
+    "updated": "2026-10-12",
+    "geometry_type": "point-only",
+    "projection": "EPSG:4326",
+    "actual_control_polygons_approved": 0,
+    "legal_status": "research sites not editor-approved",
+    "guidance": "Only draw sourced archaeological sites and modern locality references. Never infer continuous English territorial control from castle raids. Monasteroris religious house may differ from named Surrey-garrisoned castle. No geographic site from the 1530–1545 Guînes modern bastion map reverse-dated to 1529.",
+    "source_file": "MAP_DETAIL_SOURCES_1520S.json",
+    "rights": "coordinates derived from site gazetteers/official monument registries. No historic copyrighted maps copied or digitised."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.08543742,
+          53.34635313
+        ]
+      },
+      "properties": {
+        "id": "IR-1521-MONASTERORIS-FRIARY",
+        "title_zh": "1521 莫纳斯特罗里斯：防御修道院遭围攻",
+        "year": 1521,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "besieged_local_fortified_religious_house",
+        "source_ids": [
+          "IR-FRANCISCANS-MONASTERORIS",
+          "IR-NMS-MONASTERORIS-SMR",
+          "IR-FRIARY-LOCATOR-2026"
+        ],
+        "confidence": "event_high_modern_monastery_site_medial_100_500m_uncertainty",
+        "effective_control_semantics": "royal_deputy_siege_of_Irish_held_friary_not_whole_Offaly",
+        "site_identity_notes": "Surviving ruin at graveyard; note 1550 survey recorded TWO separate castles and ruined friary. Cannot say friary exact = garrison castle.",
+        "popup_zh": "1521年，英王总督围攻当地盖尔人用作堡垒的方济各会修道院，建筑严重受损。原址附近仍有遗迹；驻军城堡的准确身份继续核查。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.08784,
+          53.345777
+        ]
+      },
+      "properties": {
+        "id": "IR-1521-MONASTERORIS-EXCAVATION",
+        "title_zh": "莫纳斯特罗里斯中世纪村落考古点",
+        "year": 1521,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "archaeological_reference_unrelated_event",
+        "source_ids": [
+          "IR-EXCAV-2010-MONASTERORIS"
+        ],
+        "confidence": "excavation_coordinates_high_historic_1521_role_unverified",
+        "effective_control_semantics": "not_claimed_historic_1521_siege_site",
+        "site_identity_notes": "SMR OF011-009006 and ITM E660737/N733226 record neighbouring deserted medieval settlement. 2010 excavation, NOT friary nor two identified 1550 castles.",
+        "popup_zh": "2010年考古发现的中世纪村落地点，用来比对1521年战事周边地理，不应作为另一处已经证实的英军攻击点。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.417,
+          55.5077
+        ]
+      },
+      "properties": {
+        "id": "SC-1523-CESSFORD-SIEGE",
+        "title_zh": "1523 塞斯福德城堡：英军围城",
+        "year": 1523,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "siege_archaeological_evidence",
+        "source_ids": [
+          "SC-HES-CESSFORD-SM1710",
+          "SC-HES-CESSFORD-TROVE"
+        ],
+        "confidence": "high_heritage_designation_site_low_siege_extent",
+        "effective_control_semantics": "siege_of_Scottish_clan_castle_not_English_annexation",
+        "site_identity_notes": "HES SM1710 NGR NT73759 23853; remains include possible English 1523 siegeworks. 1543/1544 subsequent damage excluded.",
+        "popup_zh": "1523年，英军围攻苏格兰塞斯福德城堡。现存遗址的部分土工设施可能与此次围城有关，周边土地并未转为英王持续治理区。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5512,
+          55.4543
+        ]
+      },
+      "properties": {
+        "id": "SC-1523-FERNIEHIRST",
+        "title_zh": "1523 费尼赫斯特城堡：攻取与拆毁",
+        "year": 1523,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "short_capture_and_demolition",
+        "source_ids": [
+          "SC-HES-FERNIEHIRST-LB13369",
+          "SC-BL-COTTON-BII",
+          "SC-SURREY-LETTER-1523-PRINTED"
+        ],
+        "confidence": "high_modern_castle_site_original_letter_edited",
+        "effective_control_semantics": "English_military_attack_no_longterm_English_castle_civil_governance",
+        "site_identity_notes": "HES LB13369 NT65235 17969. Current late 16th building incorporates earlier fabric; original 1523 demolished structure may differ.",
+        "popup_zh": "1523年9月，英军在杰德堡附近攻取并拆毁费尼赫斯特城堡。萨里伯爵的当年战报记载守军抵抗及英军动用火炮。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.552004,
+          55.479972
+        ]
+      },
+      "properties": {
+        "id": "SC-1523-JEDBURGH",
+        "title_zh": "1523 杰德堡：城区遭英军焚毁",
+        "year": 1523,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "town_burning_scorched_earth",
+        "source_ids": [
+          "SC-BL-COTTON-BII",
+          "SC-SURREY-LETTER-1523-PRINTED",
+          "SC-MURPHY-2024-BORDERS"
+        ],
+        "confidence": "high_primary_letter_transcribed_modern_town_center",
+        "effective_control_semantics": "raid_and_burn_not_annexation",
+        "site_identity_notes": "Surrey original letter says town/towers burnt but abbey assault FAILED; avoid saying Jedburgh abbey destroyed in 1523 without contrary original verification.",
+        "popup_zh": "1523年9月英军突袭并焚毁杰德堡市镇与防御塔。萨里伯爵的战报称修道院当时未能攻下；此战没有改变苏格兰的独立地位。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.82792,
+          48.57784
+        ]
+      },
+      "properties": {
+        "id": "FR-1522-MORLAIX",
+        "title_zh": "1522 莫尔莱：英军劫掠并撤离",
+        "year": 1522,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "coastal_sack_raid",
+        "source_ids": [
+          "FR-MORLAIX-CITY-MAG",
+          "FR-MORLAIX-CITY-2022"
+        ],
+        "confidence": "high_raid_modern_city_center",
+        "effective_control_semantics": "short_raid_then_withdrawal_no_direct_English_governance",
+        "site_identity_notes": "City municipality dates early July. Coastal landing forest/river localities not geocoded separately; do not infer exact troop route or numbers.",
+        "popup_zh": "1522年7月初，英国舰队袭击法国布列塔尼的莫尔莱，抢掠并焚毁城市建筑。当地民兵和增援部队随后反击。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "id": "FRONTIER-ENGLISH-GUINES",
+        "title_zh": "1529 吉讷：英王定居与租佃法规",
+        "year": 1529,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "crown_settler_law_existing_fortress",
+        "source_ids": [
+          "CAL-MURPHY-2025-GUINES",
+          "GUINES-MURPHY-2025-SECOND",
+          "FRA-MCC-2025-GUINES"
+        ],
+        "confidence": "high_royal_policies_modern_center_no_farmland_geocodes",
+        "effective_control_semantics": "existing_English_Crown_military_control_new_restrictions_not_new_sovereign_area",
+        "site_identity_notes": "No 1529 maps of individual evicted tenants or direct-rule village boundaries; French culture p2 shows circa 1530-1545 bastions NOT within 1529.",
+        "popup_zh": "1529年英王在吉讷边区推行定居法规，鼓励英格兰农民迁入，对法国和佛兰德居民的租佃与语言等作出限制。实际执行地点与人数仍待查。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.981678,
+          50.857863
+        ]
+      },
+      "properties": {
+        "id": "FRONTIER-FRENCH-ARDRES",
+        "title_zh": "阿德尔：法军边境驻地",
+        "year": 1529,
+        "precision": "modern_location_of_named_site_not_16th_century_military_footprint",
+        "event_type": "French_fortified_comparator",
+        "source_ids": [
+          "FRA-MCC-2025-GUINES",
+          "CAL-ROYAL-HRP-1520"
+        ],
+        "confidence": "high_source_french_city_status_location_modern",
+        "effective_control_semantics": "French_Crown_garrison_never_English_held_in_this_period",
+        "site_identity_notes": "French Culture Ministry official archaeology p2 map labels French garrison Ardres and English Guînes.",
+        "popup_zh": "阿德尔在本时期是法王控制的边境要塞，与英属吉讷隔境相望，不应涂成英国殖民地。",
+        "map_eligible": true,
+        "appearance": "historical_event_point_only",
+        "no_area_claim": true
+      }
+    }
+  ]
+}
