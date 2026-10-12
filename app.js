@@ -13,7 +13,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
 }).addTo(map);
 const groups={kingdom:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
-const rankName={3:'世界／帝国级节点',2:'区域重要节点',1:'地方与补充事件'};
+const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 const isUncertain=item=>['regional-symbol-only','associated-city','representative-capital-city','approximate-area','documented-area-not-exact-battle-boundary'].includes(item.geo_precision)||/uncertain/i.test(String(item.certainty||''));
 const fallbackCodes={political:'POL',voyage:'EXP',colonial_control:'TER',war:'WAR',repression:'REP',enslavement:'SLV',slavery:'SLV',forced_labour:'LAB',wealth_flow:'ECO',economy:'ECO',displacement:'DIS',famine:'FAM',resistance:'RES',abolition:'ABO',independence:'IND',infrastructure:'INF',claim:'CLM',documentary:'DOC',status:'DOC'};
 let iconCatalog=null;
@@ -48,7 +48,7 @@ const earlyIntro=$('chapterIntro').textContent;
 function setWarning(msg){let e=$('boundaryWarning');if(!e){e=document.createElement('div');e.id='boundaryWarning';e.className='map-warning';$('map').parentElement.appendChild(e)}e.textContent=msg;}
 function hideWarning(){let e=$('boundaryWarning');if(e)e.remove();}
 function listSources(ids){
- const refs=(ids||[]).map(id=>atlas.sources.find(src=>src.id===id)).filter(Boolean);
+ const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[])].find(src=>src.id===id)).filter(Boolean);
  if(!refs.length)return '';
  return '<details class="source-details"><summary>历史文献 · '+refs.length+'项 <span>▾</span></summary><div class="source-list">'+refs.map(x=>'<a class="source-link" href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.publisher)+' · '+escapeHTML(x.title)+' ↗</a>').join('')+'</div></details>';
 }
@@ -73,7 +73,7 @@ function openCollection(items,title){
 function resetDossier(){selected='';$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels()}
 function renderEventList(){
  // The whole chapter remains available at every point of its ten-year window.
- const events=[...atlas.events].sort((a,b)=>levelOf(b)-levelOf(a)||a.year-b.year||a.name.localeCompare(b.name,'zh'));
+ const events=atlas.events.filter(e=>atlas!==atlasEarly||e.year<=1499).sort((a,b)=>levelOf(b)-levelOf(a)||a.year-b.year||a.name.localeCompare(b.name,'zh'));
  $('eventCount').textContent=events.length+'项';
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 本章稍后':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event')));
@@ -83,6 +83,7 @@ function renderPoints(){
  const shown=[];
  if($('toggleEvents').checked){
   for(const e of atlas.events){
+   if(atlas===atlasEarly&&e.year>1499)continue;
    if(e.category==='status'||!Number.isFinite(e.lat)||!Number.isFinite(e.lng))continue;
    if(e.category==='claim'&&!$('toggleClaims').checked)continue;
    if(levelOf(e)===1&&!$('toggleMinorEvents').checked)continue;
@@ -156,7 +157,7 @@ function updateVisibility(){
 function renderMilestones(){
  const all=[...atlasEarly.events,...atlasLater.events];
  const rail=$('milestoneDots');
- const years=[...new Set(all.map(e=>e.year).filter(y=>y>=1497&&y<=1509))].sort((a,b)=>a-b);
+ const years=[...new Set(all.map(e=>e.year).filter(y=>y>=1497&&y<=1509&&!(e.id==='status-1500')))].sort((a,b)=>a-b);
  rail.innerHTML=years.map(y=>{
   const yearEvents=all.filter(e=>e.year===y);
   const peak=Math.max(...yearEvents.map(e=>levelOf(e)));
