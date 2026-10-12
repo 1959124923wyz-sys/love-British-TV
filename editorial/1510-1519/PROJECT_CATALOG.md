@@ -40,3 +40,5 @@
 - `editorial/1510-1519/check_candidate.py` 进行结构和来源引用校验，**不检查历史真假**；主项目自有 `scripts/validate_atlas.py` 也继续适用。
 - 1517年Rastell条目《加拿大传记辞典》网址为 `rastell_john_1F.html`；**同名父子不可混**。
 - 依据保留现代坐标点以便导航，但不允许把它们自动转为古代行政疆界。虚线推测图仅研究用途。
+
+**GitHub审核入口**：本期资料整理草稿 [PR #7](https://github.com/1959124923wyz-sys/love-British-TV/pull/7)；原始深度研究 [PR #6](https://github.com/1959124923wyz-sys/love-British-TV/pull/6)。公开网站主干没有因本任务改变。
