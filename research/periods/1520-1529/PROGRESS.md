@@ -33,3 +33,5 @@
 
 ## 下批最高优先级（不必重新规划）
 查看 [ARCHIVAL_ACTION_QUEUE.json](ARCHIVAL_ACTION_QUEUE.json)：`A01` Guînes1529详细租佃法条与农户地图；`A02` Newembridge要塞原测图与英兵名册；`A04` Monasteroris Castle准确原址/1521撤军时间；`A06` John Stile真实税收簿；`A07` 1523苏格兰边境被烧村庄清单；`A09` Rut原信件。不得将未完成任务误标为已审核。
+
+**2026-10-12 GitHub 草稿审查入口：**[PR #8 完整历史研究](https://github.com/1959124923wyz-sys/love-British-TV/pull/8)；[PR #9 1520—1529年主编预审包](https://github.com/1959124923wyz-sys/love-British-TV/pull/9)。两份 PR 均为 Draft，main 不受本轮影响。
