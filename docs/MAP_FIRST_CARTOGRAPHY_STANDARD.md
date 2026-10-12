@@ -95,3 +95,7 @@
 主编以 [七步调查纲领](RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md)、[跨年代控制规则](TERRITORY_CONTINUITY_RULE.md) 和 [机器过渡审计](../scripts/validate_control_transition.py) 为发布依据。已知结束年份、最后一次档案记载和可视化示意年份分别保存。旧地图凸包、现代海岸参考和屏幕圆形符号不能作为经测量的历史实际控制多边形；争议边界沿用独立虚线。
 
 主编集成的 1497—1529研究数据和未审第四章样图见 [连续控制档案](../research/continuity/README.md)。历史记录进入 `data/` 和正式首页前仍需编辑复核、GitHub Actions以及实际浏览器检查。
+
+## 地点坐标的视觉精度（2026-10-13审核）
+
+历史事件的发生有史料支撑，并不代表其屏幕经纬度就是16世纪的精确战场、军营或城墙。凡事件字段 `geo_precision` 明示现代遗址、现代城市代表点、approximate、reference、not exact、not historic 等含义，都必须使用地图的空心/虚线不确定标记；可核的城镇地理位置与具体历史事件现场精度应分开管理。无坐标的记录继续只显示在事件列表，绝不虚构地理点。未来调查员不得只修改历史显著等级来掩盖地理不确定性。
