@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "compiled": "2026-10-12",
+  "period": {
+    "from": 1500,
+    "to": 1509
+  },
+  "status": "research_only_zero_polygons",
+  "records": [
+    {
+      "id": "CALAIS-GEOGRAPHY-MARCH-1500",
+      "date_context": "1500–1509",
+      "historical_place": "Calais town + its marches / Pale",
+      "control_type": "CROWN_DIRECT_TERRITORIAL_ADMINISTRATION",
+      "claims": [
+        "An English-held fortified town with surrounding march was governed and supplied by the English Crown until its recapture by France in 1558.",
+        "The Calais Pale was a small frontier district; not all the areas shown on broader 1558 maps of Calais and Boulogne were English-controlled in 1500."
+      ],
+      "sources": [
+        "CALAIS-TNA-GUIDE",
+        "CALAIS-GRUMMITT-BOOK",
+        "CALAIS-NLI-NICOLAY-1558"
+      ],
+      "inferred_area_km2": null,
+      "geometry": null,
+      "grade": "L1",
+      "publication": "text_only_after_editorial_review",
+      "remaining": [
+        "Precise surveyed historic Calais boundaries for c1500 not yet extracted",
+        "TNA LR 2/88 and LR 2/59 parish survey first identify exact dates; compare with E315/407 (1482-83) and SC12"
+      ]
+    },
+    {
+      "id": "CALAIS-FORTIFICATIONS-1502",
+      "date_context": "1502",
+      "historical_place": "Calais town and castle, Rysbank Tower, Guînes, Hammes",
+      "control_type": "FORTIFIED_GARRISONS",
+      "claims": [
+        "Grummitt scholarly monograph describes distinct regular garrisons at Calais town and castle, Guînes, Hammes and Rysbank.",
+        "The surviving 1502 Calais town/castle muster is cited as The National Archives E 101/55/23.",
+        "These named places are strongly supported station candidates, but a list of fortresses is not a connected territorial polygon and modern point coordinates would require separate historic site location checking."
+      ],
+      "sources": [
+        "CALAIS-E101-1502-MUSTER",
+        "CALAIS-GRUMMITT-BOOK"
+      ],
+      "geometry": null,
+      "grade": "L2_possible_only_after_location_check",
+      "publication": "source_checked_site_names_not_approved_geocoding",
+      "remaining": [
+        "Verify exact muster roll E101/55/23 original",
+        "Independently check castle and Rysbank Tower location and shoreline changes"
+      ]
+    },
+    {
+      "id": "CALAIS-MUSTER-1502",
+      "date_context": "1502",
+      "historical_place": "Calais town and castle",
+      "control_type": "ROYAL_GARRISON_PERSONNEL",
+      "claims": [
+        "Grummitt (2008), chapter 3, reports 551 men listed in muster vs 553 provided for by Lord Daubeney's indenture.",
+        "The cited archive is E 101/55/23. The numbers concern the town and castle, not total men in the entire march. A quoted 712 for ordinary establishments including outworks is not necessarily the same 1502 actual headcount."
+      ],
+      "sources": [
+        "CALAIS-E101-1502-MUSTER",
+        "CALAIS-GRUMMITT-BOOK"
+      ],
+      "numeric": [
+        {
+          "value": 551,
+          "unit": "persons",
+          "account_type": "muster_reported",
+          "year": 1502,
+          "source": "Grummitt 2008 ch3 pp44–62; archival primary E101/55/23 not viewed",
+          "original_checked": false
+        },
+        {
+          "value": 553,
+          "unit": "persons",
+          "account_type": "indented_regular_establishment",
+          "year": 1502,
+          "source": "Grummitt ch3; charter indenture original verify",
+          "original_checked": false
+        },
+        {
+          "value": 712,
+          "unit": "persons",
+          "account_type": "estimated_ordinary_establishment_all_fortifications",
+          "year": null,
+          "source": "Grummitt ch3; not 1502 actual muster",
+          "original_checked": false
+        }
+      ],
+      "geometry": null,
+      "grade": "L1",
+      "publication": "candidate_numbers_until_primary_roll_checked",
+      "remaining": [
+        "Examine E101/55/23 and indenture; ensure duplicated names avoided",
+        "Estimate ordinary strength separately from muster/absent employees"
+      ]
+    },
+    {
+      "id": "CALAIS-GUINES-1502-SAVING",
+      "date_context": "1502",
+      "historical_place": "Guînes castle",
+      "control_type": "CROWN_MILITARY_FINANCE_POLICY",
+      "claims": [
+        "Secondary scholarly account citing the Calendar of Close Rolls Henry VII 1500–1509 p.99 reports Henry VII ordered Guînes peacetime garrison limited to 60 men instead of 100.",
+        "The same account reports expected reduction in wage bill of 500 marks annually earmarked for repairs of the castle.",
+        "An authorized budget reduction is not evidence that those savings became cash remitted to England, nor evidence that the projected sum accrued for the decade."
+      ],
+      "sources": [
+        "CALAIS-CLOSE-ROLLS-1502",
+        "CALAIS-GRUMMITT-BOOK"
+      ],
+      "numeric": [
+        {
+          "value": 100,
+          "unit": "persons",
+          "account_type": "prior_establishment",
+          "year": 1502,
+          "original_checked": false
+        },
+        {
+          "value": 60,
+          "unit": "persons",
+          "account_type": "ordered_peacetime_garrison",
+          "year": 1502,
+          "original_checked": false
+        },
+        {
+          "value": 500,
+          "unit": "marks_English_per_year",
+          "account_type": "expected_wage_saving_repair_appropriation",
+          "year": 1502,
+          "original_checked": false,
+          "actual_revenue": null
+        }
+      ],
+      "geometry": null,
+      "grade": "L1",
+      "publication": "candidate_await_original_CCR",
+      "remaining": [
+        "Read actual Calendar of Close Rolls 1500–1509 p99 and archival roll",
+        "Distinguish marks of money (not £ sterling) and annual wage budget order from realized annual cash"
+      ]
+    },
+    {
+      "id": "CALAIS-ROYAL-COMMERCE-FINANCE",
+      "date_context": "c1500 through early 16th century",
+      "historical_place": "English wool staple at Calais",
+      "control_type": "CROWN_COMMERCE_GARRISON_FINANCE",
+      "claims": [
+        "English staple merchants and Crown paid for the garrison and defense using revenues generated from English wool exports through Calais.",
+        "Early 16th century export contraction increased the difficulty of meeting defense costs.",
+        "This mechanism does not give a trustworthy number for Calais fiscal net benefit to the Crown; wool shipment gross value, staple charges, and garrison outlays must be reconciled separately."
+      ],
+      "sources": [
+        "CALAIS-GRUMMITT-CH7",
+        "CALAIS-TNA-VAL-FISCAL"
+      ],
+      "numeric": [],
+      "geometry": null,
+      "grade": "L1",
+      "publication": "qualitative_accounting_only",
+      "remaining": [
+        "Extract DL28 and E36 for matching regnal years",
+        "Find customs E122 and staple E364 and repeatable nominal accounting categories",
+        "Never treat military fiscal savings as export income"
+      ]
+    },
+    {
+      "id": "CALAIS-MAP-16TH-C-WARNING",
+      "date_context": "1545–1558 evidence for earlier mapping only",
+      "historical_place": "Calais/Guînes area",
+      "control_type": "LATER_MAPS_NOT_EARLY_BOUNDARIES",
+      "claims": [
+        "Several surviving official catalogued maps have secure later dates, e.g. 1545 Thomas Pettyt outskirts and Nicolay 1558 map.",
+        "1558 Calais/Boulonnais map depicts terrain, rivers, names including Ardres and Boulogne but is not a map of English effective control in 1500.",
+        "Published 1558 map, reprinted 1592, would be anachronistic if directly used as 1500 English Pale polygon."
+      ],
+      "sources": [
+        "CALAIS-COTTON-1545-PETTYT",
+        "CALAIS-COTTON-COUNTRYSIDE",
+        "CALAIS-COTTON-1546-COAST",
+        "CALAIS-NLI-NICOLAY-1558"
+      ],
+      "geometry": null,
+      "grade": "L0",
+      "publication": "map_reference_only",
+      "remaining": [
+        "Verify date, licensing and provenance before any georeferencing",
+        "Only derive town/terrain toponyms as candidate contemporary locations with separate time-stamped evidence"
+      ]
+    },
+    {
+      "id": "CALAIS-GOVERNOR-1505",
+      "date_context": "1505",
+      "historical_place": "Calais",
+      "control_type": "ROYAL_APPOINTED_GARRISON_ADMIN",
+      "claims": [
+        "Published scholarly history discusses end of Giles Lord Daubeney governorship in 1505 and appointment of Sir Gilbert Talbot, associated with disputes over financial conduct.",
+        "The specific account of alleged large sums must not be treated as proven embezzlement or net transfer without original investigation."
+      ],
+      "sources": [
+        "CALAIS-GRUMMITT-BOOK",
+        "CALAIS-GRUMMITT-NMS-2000"
+      ],
+      "numeric": [],
+      "geometry": null,
+      "grade": "L1",
+      "publication": "candidate_admin_event",
+      "remaining": [
+        "Verify royal appointment patent date and record reference",
+        "Financial allegations only after independent corroboration"
+      ]
+    }
+  ],
+  "finance_policy": "All amounts from published scholarship still require primary ledger review. '500 marks/year' is a proposed cost reduction, not a positive receipt.",
+  "map_policy": "Known fortress locations can eventually become sourced individual points, not hard-coded coordinates here. LR2 parish survey date unverified; no Calais-Pale region polygon created.",
+  "authorized_geometry_count": 0
+}
