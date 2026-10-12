@@ -73,6 +73,7 @@ require("controlAreaPane" in app and "toggleControlAreas" in html, "map-first ur
 require("renderPoliticalRelationAreas()" in app and "togglePoliticalRelations" in html, "patterned secondary political relationships")
 require("renderTerritories()" in app and "territoryPane" in app and "toggleTerritorialFootprints" in html,
         "historically sourced territorial footprints and permanent Calais spatial continuity")
+require("year>=1502?'1502':'—'" in app and "year>=1513?'1513':'—'" in app, "future-year chapter cards stay hidden")
 require("y<=year" in app and "y>=1497&&y<=year" in app,
         "milestone dots only appear on or after the current year")
 require("e.year>year)continue;" in app and "fullArchive||e.year<=year" in app and "showFullChapterArchive" in html, "chronological events with explicitly accessible chapter archive")
