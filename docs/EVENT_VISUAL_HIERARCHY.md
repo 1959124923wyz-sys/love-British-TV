@@ -1,3 +1,5 @@
+> **规范版本提示（2026-10-12）：** 原 v1.0 中的三级历史重要性研究方法继续有效，但具体16类符号、色彩、SVG资产和尺寸，以已获批准的 [ICON_SYSTEM_V2_APPROVED.md](ICON_SYSTEM_V2_APPROVED.md) 及 [icon-categories.json](../data/icon-categories.json) 为准。若与旧规范矛盾，采用批准版 v2.0。
+
 # 历史事件视觉层级与注意力引导规范 v1.0
 
 状态：正式设计规范（2026-10-11）；应用范围：1490年代至当代的所有专题。
