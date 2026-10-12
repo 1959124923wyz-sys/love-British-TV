@@ -608,7 +608,7 @@ async function boot(){
     fetch('data/geography-hypotheses-1500-1529.geojson',{cache:'no-store'}),
     fetch('data/geography-1510-1519-hypotheses.geojson',{cache:'no-store'}),
     fetch('data/french-urban-control-1497-1529.geojson',{cache:'no-store'}),
-    fetch('research/continuity/staged/political-relations-1500-1529.geojson',{cache:'no-store'}),
+    fetch('data/political-relations-1500-1529.geojson',{cache:'no-store'}),
     fetch('data/territorial-footprints-1497-1529.geojson',{cache:'no-store'})
    ]);
    if(notesResponse.ok)researchNotes=(await notesResponse.json()).records||{};
