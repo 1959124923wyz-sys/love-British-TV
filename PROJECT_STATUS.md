@@ -1,3 +1,14 @@
+## 研究工作制度已固定｜跨十年控制区连续性（2026-10-12，PR #10草稿）
+
+**所有新年代调查必须先继承上期实际政治控制状态，逐项追踪延续、扩张、缩减、易手、撤军和结束；不可因换十年重置地图。** 根目录 [AGENTS.md](AGENTS.md) 是新研究智能体的统一入口；强制的[七步调查纲领](docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md) 和 [历史控制地理底线](docs/TERRITORY_CONTINUITY_RULE.md) 分别规定取证、GIS类型、年份快照与交接门禁。
+
+- 模板：[十年过渡台账](research/continuity/templates/DECADE_TRANSITION_TEMPLATE.json)、[主编交接清单](research/continuity/templates/EDITOR_HANDOFF_TEMPLATE.md)，要求上一年全部 `stable_id` 有据可追、有期限、有去向。
+- 自动核对：[通用脚本](scripts/validate_control_transition.py)及[独立CI门禁](.github/workflows/control-continuity.yml)；先运行 `python3 scripts/validate_control_transition.py --self-test`。GitHub Actions结果以CI实际执行状态为准，不能仅凭文件已经存在便声明检查通过。
+- 第一组案例：[1497—1529年33个年末状态](research/continuity/CONTROL_TIMELINE_1497_1529.json)、[主编集成说明](research/continuity/EDITOR_HANDOFF_1497_1529.md)、[下一年代接棒种子](research/continuity/TRANSITION_1529_1530_RESEARCH_SEED.json)。1519图尔奈退出，1520吉讷单独上图不等于新领土；加来持续。
+- 正式网站 `main` 尚未合并这一草稿；PR #10是待主编审核的研究工作制度。所有1520s数据、试播JS与研究虚线仅供审核，公众Pages不因这些文件而自动更新。
+
+---
+
 
 ## 当前更新：v1.2 · 2026-10-12 · 政治关系绘图与时间揭示
 
