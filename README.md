@@ -38,3 +38,12 @@
 网页使用 © OpenStreetMap contributors / © CARTO 底图；地域边界来源为 ONSvisual/topojson_boundaries，含 ONS/OS 开放地理数据，详见来源清单。
 
 - [查看16种正式SVG图标（网页预览）](icon-gallery.html) — GitHub Pages 地址：https://1959124923wyz-sys.github.io/love-British-TV/icon-gallery.html
+
+## 1500—1509：信息搜集员1号资料首次上线（2026-10-12）
+
+- **地图时间范围已扩展到1497—1509年**；拖动滑块到1500年进入第二章。
+- 新增公开正式数据：[1500—1509事件和代表性政治据点](data/atlas-1500-1509.json)，包括14条来源关联事件、6处有证据的具名地区位置与50条史料来源索引。
+- 研究员原始成果 [research/periods/1500-1510/](research/periods/1500-1510/README.md) 完整按已提交状态快照入库；研究分支仍继续使用，不发生自动覆盖。
+- [来源与制图审查](research/periods/1500-1510/CONTROL_AND_CHRONOLOGY_REVIEW.md) 指出 Calais March、English Pale 等区域的可复核边界尚未就绪，**目前没有新增任何殖民地实心控制多边形**。
+- 史料上没有确认的1508—09卡博特远航轨迹不作为确定路线发布；钱款注明性质，王室航海拨款/年金与外交收款不计为殖民利润。
+
