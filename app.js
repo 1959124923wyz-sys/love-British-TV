@@ -203,6 +203,8 @@ function renderPoints(){
  }
  if($('toggleKingdom').checked&&year>=1500){
   for(const q of atlas.places||[]){
+   const alreadyDrawnAsArea=($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id));
+   if(alreadyDrawnAsArea)continue;
    const start=q.start_year??1500;
    if(year<start||(q.end_year!=null&&year>q.end_year)||(q.observed_through_year!=null&&year>q.observed_through_year))continue;
    shown.push({item:{...q,significance:{level:2}},type:'place',lat:q.lat,lng:q.lng});
@@ -339,7 +341,8 @@ function renderHypotheses(){
   }).addTo(groups.hypotheses);
   L.geoJSON(geographicHypotheses,{
    filter:f=>year<1510?['LineString','Polygon','MultiPolygon'].includes(f.geometry?.type):
-     calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type),
+     (calais(f)&&['Polygon','MultiPolygon'].includes(f.geometry?.type))||
+     String(f.properties?.id||'').startsWith('irish-pale-'),
    style:f=>({color:f.geometry.type==='LineString'?'#e9b06e':calais(f)?'#c58dfb':'#d4aa70',
     weight:calais(f)?3.4:2.7,dashArray:'7 5',opacity:calais(f)?1:.91,
     fill:f.geometry.type!=='LineString',fillColor:calais(f)?'#b58bea':'#d4aa70',
@@ -440,8 +443,8 @@ async function loadKingdomBoundaries(){
    else if(/north east|north west|yorkshire|east midlands|west midlands|east of england|london|south east|south west/.test(p))group='england';
    if(!group)continue;
    count++;
-   const c=group==='scotland'?'#588ba8':'#815fd5';
-   const layer=L.geoJSON(f,{style:{color:c,weight:1.4,fillColor:c,fillOpacity:group==='scotland'?.25:.35,opacity:.95},interactive:true})
+   const c=group==='scotland'?'#588ba8':group==='wales'?'#a78acb':'#815fd5';
+   const layer=L.geoJSON(f,{style:{color:c,weight:group==='wales'?1.8:1.4,dashArray:group==='wales'?'6 5':null,fillColor:c,fillOpacity:group==='scotland'?.25:group==='wales'?.18:.35,opacity:.95},interactive:true})
      .on('click',()=>openPolity(group)).addTo(groups.kingdom);
   }
   if(!count)throw new Error('Region names could not be decoded');
