@@ -153,11 +153,29 @@ function updateVisibility(){
  }
  if(!map.hasLayer(groups.cluster))map.addLayer(groups.cluster);
 }
+function renderMilestones(){
+ const all=[...atlasEarly.events,...atlasLater.events];
+ const rail=$('milestoneDots');
+ const years=[...new Set(all.map(e=>e.year).filter(y=>y>=1497&&y<=1509))].sort((a,b)=>a-b);
+ rail.innerHTML=years.map(y=>{
+  const yearEvents=all.filter(e=>e.year===y);
+  const peak=Math.max(...yearEvents.map(e=>levelOf(e)));
+  const percent=(y-1497)/12*100;
+  return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+'" style="left:'+percent+'%" data-year="'+y+'" title="'+escapeHTML(y+'年 · '+yearEvents.map(e=>e.name).slice(0,3).join(' / '))+'" aria-label="'+y+'年：'+yearEvents.length+'个事件"><span>'+y+'</span></button>';
+ }).join('');
+ rail.querySelectorAll('.milestone-dot').forEach(node=>node.addEventListener('click',()=>{
+  const y=Number(node.dataset.year);stopPlay();setYear(y);
+  const matches=atlas.events.filter(e=>e.year===y);
+  if(matches.length===1)openDossier(matches[0],'event');
+  else if(matches.length>1)openCollection(matches.map(item=>({item,type:'event'})),y+'年的历史事件');
+ }));
+}
 function setYear(v){
  const next=Math.max(1497,Math.min(1509,Math.round(Number(v)||1497)));
  const chosen=next>=1500?atlasLater:atlasEarly;
  if(!chosen)return;
- if(atlas!==chosen){selected='';$('dossierBody').innerHTML=infoDefault;workspace.classList.add('dossier-collapsed');syncPanels();}
+ const changed=atlas!==chosen;
+ if(changed){selected='';$('dossierBody').innerHTML=infoDefault;workspace.classList.add('dossier-collapsed');syncPanels();}
  year=next;atlas=chosen;
  $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
  const later=year>=1500;
@@ -172,9 +190,14 @@ function setYear(v){
  $('factB').textContent=later?'1502':'1497';
  $('factBDesc').innerHTML=later?'英格兰与苏格兰<br>缔结和约':'英格兰远航<br>抵达北美沿岸';
  $('factC').textContent=later?'1504':'1498';
- $('factCDesc').innerHTML=later?'爱尔兰<br>诺克多战役':'第二次远航<br>结果尚存争议';
- $('periodTitle').textContent=!later?(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'英格兰与苏格兰分别统治'):year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国';
- renderEventList();renderPoints();
+ $('factCDesc').innerHTML=later?'爱尔兰<br>诺克多战役':'第二次远航<br>后续出航';
+ $('periodTitle').textContent=!later?(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国'):year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国';
+ $('chapterOne').classList.toggle('active',!later);
+ $('chapterTwo').classList.toggle('active',later);
+ $('timelineContext').textContent=later?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
+ $('timelineNotice').textContent=later?'第二章全部事件已展开 · 第一章可在紫色章节带中回顾':'第一章全部事件已展开 · 点击右侧章节带进入1500年代';
+ renderEventList();renderPoints();renderMilestones();
+ // Selected year changes focus only, never removes events from its chapter.
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===1509)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1509){stopPlay();return}setYear(year+1)},1250)}
@@ -233,6 +256,8 @@ async function boot(){
  }
 }
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
+$('chapterOne').addEventListener('click',()=>{stopPlay();if(atlasEarly)setYear(1497)});
+$('chapterTwo').addEventListener('click',()=>{stopPlay();if(atlasLater)setYear(1500)});
 $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)});
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
