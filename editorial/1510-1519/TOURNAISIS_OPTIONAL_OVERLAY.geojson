@@ -1,0 +1,523 @@
+{
+  "type": "FeatureCollection",
+  "meta": {
+    "title": "Tournai/Tournaisis 1513–1519 research-to-editor cartographic candidate v1.1",
+    "compiled": "2026-10-12",
+    "geodesy": "WGS84 GeoJSON [longitude,latitude]",
+    "political_subject": "Henry VIII was King of England and claimed King of France; Tournai held in claimed French kingdom legal framework. Scotland independent.",
+    "map_reading": "City point = strong occupation claim. Gold dashed central district convex hull = independent cartographic schematic only (VERY HIGH border uncertainty). Mortagne/St-Amand = named separate jurisdiction sites (points) NOT automatic King of England's control. This is not actual jurisdiction map or official border.",
+    "geometry_status": "no_approved_actual_historical_boundary_geometry",
+    "time_rule": "Occupied city roughly 1513-09-23 to 1519-02. 1519 annual end-year snapshot removes English city state; retain cession in 1518 and handover event in 1519.",
+    "license_status": "Generated hull original; linked Walloon Atlas and UNamur copyrighted maps NOT copied or traced. GeoNames geocoder data CC BY; display credit.",
+    "source_ids_pointer": "TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json",
+    "provenance": "Modern gazetteer centroids from web and GeoNames, NOT exact medieval boundary points. Some anchor villages may not be in same 1513 directly governed district, hence points are contextual only.",
+    "publisher_guidance": "The GIS polygon is an optional geographical orientation envelope, not an English sovereignty/control polygon. Tournai city POINT is historically attested. Keep polygon line dashed and low-opacity, never use to calculate 1513 territory area or choose direct English rulers for all 11 anchor towns.",
+    "special_feudal_history": "1899 academic review of d'Herbomez identifies older feudal châtellenie bounded by Scheldt/Scarpe/Elnon/Espierre, but excluded Tournai city and certain Mortagne/Saint-Amand lands. Our modern convex hull is NOT traced from older feudal lines nor dated 1513.",
+    "required_attributions": [
+      "GeoNames (modern populated place coordinates), CC BY attribution",
+      "Wikimedia Commons FL00 80 (CC BY 4.0) consulted as context only, no derivative geometry used",
+      "Wallonia Atlas © Institut Destrée / SEGEFA maps linked only, NOT digitised",
+      "UNamur © protected thematic map linked only"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.280126,
+              50.6441
+            ],
+            [
+              3.304292,
+              50.573579
+            ],
+            [
+              3.4492,
+              50.56765
+            ],
+            [
+              3.48798,
+              50.589232
+            ],
+            [
+              3.444683,
+              50.653217
+            ],
+            [
+              3.400671,
+              50.65429
+            ],
+            [
+              3.337045,
+              50.651609
+            ],
+            [
+              3.280126,
+              50.6441
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-CENTRAL-LOCALITIES-RESEARCH-HULL-1513-1519",
+        "title_zh": "图尔奈城外历史地区研究包络（据现代地名构成）",
+        "semantic_type": "historical_district_orientation_only_not_an_effective_crown_control_polygon",
+        "political_interpretation": "Regional bailiwick under English influence, but exact parish-level royal vs seigneurial jurisdiction not verified.",
+        "geometry_method": "convex hull of modern gazetteer village centers Templeuve,Blandain,Esplechin,Ere,Saint-Maur,Antoing,Gaurain-Ramecroix,Havinnes,Mourcourt,Mont-Saint-Aubert,Ramegnies-Chin. Intentionally excludes southern bailiwick nodes Mortagne and Saint-Amand due special local rights; no buffer and no copying of historic copyrighted maps.",
+        "uncertainty": "VERY_HIGH_for_segment_edges_and_jurisdiction",
+        "legal_historic_territory_area_sqkm": null,
+        "measured_effective_control_area_sqkm": null,
+        "render_style": "light_translucent_gold_dashed_outline_optional",
+        "opacity_suggestion": 0.08,
+        "line_style": "dashed",
+        "start_year": 1513,
+        "start_month": 9,
+        "end_year": 1519,
+        "end_month": 2,
+        "year_end_snapshot_while_english_present": [
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518
+        ],
+        "shown_as_solid_English_control": false,
+        "review_state": "optional_illustrative_overlay_NOT_APPROVED_ACTUAL_TERRITORY",
+        "approval": "never_render_as_published_actual_control",
+        "visualization_only": true,
+        "source_ids": [
+          "WALLONIA-1188-1513-SEPARATE",
+          "WALLONIA-1513-1519-TWOAREAS",
+          "HOQUET-1900-DHERBOMEZ-1901",
+          "MARIAGE-2013-BAILLIAGE",
+          "GEO-BE-NAMES-ANCHOR",
+          "DHERBOMEZ-1899-TOURNAISIS-RIVERS"
+        ],
+        "rights": "self-built original geometric convex-hull from sourced modern coordinates; NOT traced from Atlas de la Wallonie or UNamur protected map",
+        "public_title": "图尔奈城外：乡村辖区的大致参考区域",
+        "public_summary": "根据周边历史地区研究和现代村镇位置构建的疏略分布包络；地方领主与城镇行政权力交错。",
+        "display_mode": "independent_dashed_hypothesis",
+        "fill_authorized": false,
+        "show_in_1510s_review_layer": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.389321,
+          50.60715
+        ]
+      },
+      "properties": {
+        "id": "TOURNAI-ENGLISH-CITY-RULE-CERTAIN",
+        "title_zh": "图尔奈城：1513年英王征服、1519年交还",
+        "semantic_type": "attested_English_royal_city_governorship_and_garrison",
+        "start_date": "1513-09-23",
+        "end_month": "1519-02",
+        "end_day": null,
+        "year_end_snapshot_while_english_present": [
+          1513,
+          1514,
+          1515,
+          1516,
+          1517,
+          1518
+        ],
+        "spatial_extent": "city_center_marker_no_historical_wall_polygon",
+        "confidence": "HIGH_on_historic_city_rule; modern site anchor",
+        "source_ids": [
+          "HOQUET-1900-DHERBOMEZ-1901",
+          "WALLONIA-1513-1519-TWOAREAS",
+          "DAVIES-1998-TOURNAI",
+          "MURPHY-2014-TOURNAI"
+        ],
+        "public_event_eligible": true,
+        "public_title": "图尔奈：1513—1519年英王驻军与市政治理",
+        "public_summary": "1513年英军占领，1518年达成交还协议，1519年2月英军撤离。",
+        "display_mode": "point_marker",
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.389321,
+          50.60715
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-TOURNAI",
+        "label": "Tournai",
+        "geometry_role": "historic_occupied_city_center",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": "1513-09-23",
+        "date_last": "1519-02",
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "city_governed_by_Henry_VIII_from_1513_to_1519"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.280126,
+          50.6441
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-TEMPLEUVE",
+        "label": "Templeuve",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.30353,
+          50.6249
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-BLANDAIN",
+        "label": "Blandain",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.304292,
+          50.573579
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-ESPLECHIN",
+        "label": "Esplechin",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.36765,
+          50.58226
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-ERE",
+        "label": "Ere",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.394683,
+          50.572655
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-SAINT-MAUR",
+        "label": "Saint-Maur",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4492,
+          50.56765
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-ANTOING",
+        "label": "Antoing",
+        "geometry_role": "neighbouring_historical_jurisdiction_UNVERIFIED_as_English",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.48798,
+          50.589232
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-GAURAIN-RAMECROIX",
+        "label": "Gaurain-Ramecroix",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.463406,
+          50.616578
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-HAVINNES",
+        "label": "Havinnes",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.444683,
+          50.653217
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-MOURCOURT",
+        "label": "Mourcourt",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.400671,
+          50.65429
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-MONT-SAINT-AUBERT",
+        "label": "Mont-Saint-Aubert",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.337045,
+          50.651609
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-RAMEGNIES-CHIN",
+        "label": "Ramegnies-Chin",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.349241,
+          50.603217
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-ORCQ",
+        "label": "Orcq",
+        "geometry_role": "historically_1513_siege_site_city_approach_not_control_proof",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.354558,
+          50.621851
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-FROYENNES",
+        "label": "Froyennes",
+        "geometry_role": "modern_neighbourhood_anchor",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.45524,
+          50.50368
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-MORTAGNE-DU-NORD",
+        "label": "Mortagne-du-Nord",
+        "geometry_role": "historical_seigneurial_bailiwick_component_SEPARATE_FROM_direct_English",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "MORTAGNE-SAINTAMAND-SEIGNEURIES",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4281,
+          50.4492
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-SAINT-AMAND-LES-EAUX",
+        "label": "Saint-Amand-les-Eaux",
+        "geometry_role": "abbey_lordship_bailiwick_component_SEPARATE_FROM_direct_English",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "MORTAGNE-SAINTAMAND-SEIGNEURIES",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.42698,
+          50.54164
+        ]
+      },
+      "properties": {
+        "id": "TOURNAISIS-SITE-HOLLAIN",
+        "label": "Hollain",
+        "geometry_role": "regional_modern_locator_no_direct_English_proof",
+        "coord_basis": "modern_gazetteer_reference_not_1513_survey",
+        "coord_source_id": "GEO-BE-NAMES-ANCHOR",
+        "positional_historical_precision": "modern_city_or_village_center",
+        "date_first": null,
+        "date_last": null,
+        "fact_claim": "place_name_anchor_only",
+        "english_control_claim": "not_verified_for_this_place"
+      }
+    }
+  ]
+}
