@@ -22,6 +22,7 @@ jobs:
       - name: Validate atlas data and static assets
         run: |
           python3 scripts/validate_atlas.py
+          python3 scripts/validate_approved_ui.py
           node --check app.js
           grep -q 'id="toggleEvents"' index.html
           grep -q 'css/dark-atlas-v2.css' index.html
