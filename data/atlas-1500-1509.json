@@ -26,10 +26,10 @@
       "name": "英王向威廉·韦斯顿提供30英镑航海奖励",
       "category": "wealth_flow",
       "icon_code": "ECO",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not-geocoded",
-      "geography_label": "Kingdom of England, royal accounts",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "geo_precision": "regional-symbol-only",
+      "geography_label": "英格兰王室会计 · 伦敦地区示意",
       "description": "1500年，亨利七世向威廉·韦斯顿支付30英镑航海奖励，支持前往大西洋彼岸的探索。",
       "short_description": "1500年，亨利七世向威廉·韦斯顿支付30英镑航海奖励，支持前往大西洋彼岸的探索。",
       "source_ids": [
@@ -53,7 +53,8 @@
           "colonial_profit": false
         }
       ],
-      "colonial_profit": false
+      "colonial_profit": false,
+      "position_type": "region_or_associated_city_symbol"
     },
     {
       "id": "1500-1502-ELIOT-100",
@@ -408,9 +409,9 @@
       "short_description": "编年史记载，克兰里卡德伯克的军队拆毁奥凯利家族三座堡垒，随后双方争端引向诺克多战役。",
       "category": "war",
       "icon_code": "WAR",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not-geocoded",
+      "lat": 53.2783,
+      "lng": -9.0504,
+      "geo_precision": "regional-symbol-only",
       "source_ids": [
         "UCC-FOUR-MASTERS-1500S"
       ],
@@ -420,7 +421,9 @@
         "rationale": "区域冲突相关背景",
         "review_status": "documented-in-published-annals"
       },
-      "colonial_profit": false
+      "colonial_profit": false,
+      "geography_label": "康诺特地区 · 戈尔韦参考点",
+      "position_type": "region_or_associated_city_symbol"
     },
     {
       "id": "1505-CALAIS-STAPLE-ROYAL-PAYMENTS",
@@ -470,10 +473,10 @@
       "name": "1505年4月3日塞巴斯蒂安·卡博特获年金",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not-geocoded",
-      "geography_label": "Bristol / English Crown accounts",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "associated-city",
+      "geography_label": "布里斯托尔 · 航海人物与王室年金相关城市",
       "description": "1505年4月，亨利七世授予塞巴斯蒂安·卡博特每年20英镑的王室年金。",
       "short_description": "1505年4月，亨利七世授予塞巴斯蒂安·卡博特每年20英镑的王室年金。",
       "source_ids": [
@@ -496,7 +499,8 @@
           "colonial_profit": false
         }
       ],
-      "colonial_profit": false
+      "colonial_profit": false,
+      "position_type": "region_or_associated_city_symbol"
     },
     {
       "id": "1507-CARRICKFERGUS-O-NEILL",
@@ -648,9 +652,9 @@
       "short_description": "1509年8月，泰隆首领唐纳尔·奥尼尔去世，阿特·奥尼尔继任，延续当地氏族政治。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not-geocoded",
+      "lat": 54.6,
+      "lng": -7.3,
+      "geo_precision": "regional-symbol-only",
       "source_ids": [
         "UCC-FOUR-MASTERS-1500S"
       ],
@@ -660,7 +664,9 @@
         "rationale": "区域冲突相关背景",
         "review_status": "documented-in-published-annals"
       },
-      "colonial_profit": false
+      "colonial_profit": false,
+      "geography_label": "泰隆地区 · 城镇参考点",
+      "position_type": "region_or_associated_city_symbol"
     }
   ],
   "places": [
