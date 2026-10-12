@@ -44,8 +44,8 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let year=1497; let selected=''; let timer=null;
-let researchNotes={};let geographicHypotheses=null;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let year=1497; let selected=''; let timer=null;
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 let clusterObstacles=[];
 const cancelClusterClose=()=>{if(clusterCloseTimer){clearTimeout(clusterCloseTimer);clusterCloseTimer=null}};
@@ -57,7 +57,7 @@ const earlyIntro=$('chapterIntro').textContent;
 function setWarning(msg){let e=$('boundaryWarning');if(!e){e=document.createElement('div');e.id='boundaryWarning';e.className='map-warning';$('map').parentElement.appendChild(e)}e.textContent=msg;}
 function hideWarning(){let e=$('boundaryWarning');if(e)e.remove();}
 function listSources(ids,item){
- const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[])].find(src=>src.id===id)).filter(Boolean);
+ const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[]),...(atlasThird?.sources||[])].find(src=>src.id===id)).filter(Boolean);
  const note=researchNotes[item?.id];
  if(!refs.length&&!note)return '';
  const fields=[
@@ -98,7 +98,7 @@ function openDossier(item,typ){
 function openHypothesis(feature){
  const p=feature.properties||{};
  const title=p.public_title||'推定地理范围';
- const url='research/hypotheses/1500/README.md';
+ const url=year>=1510?'research/periods/1510-1519/TOURNAISIS_BOUNDARY_EVIDENCE_1513_1519.json':'research/hypotheses/1500/README.md';
  $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(p.public_summary||'根据历史记载的地点绘制的范围示意。')+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
  '<div class="research-body"><h3>构建方法</h3><p>'+escapeHTML(p.method||'按有史料的地名构建地理形状。')+'</p><h3>资料类型</h3><p>当地城镇及历史记载地点的现代地理参考，用于分析可能范围。正式边界研究持续进行。</p></div>'+
@@ -194,7 +194,7 @@ function renderPoints(){
   }
  }
  if($('toggleKingdom').checked&&year>=1500){
-  for(const q of atlasLater.places){
+  for(const q of atlas.places||[]){
    const start=q.start_year??1500;
    if(year<start||(q.end_year!=null&&year>q.end_year)||(q.observed_through_year!=null&&year>q.observed_through_year))continue;
    shown.push({item:{...q,significance:{level:2}},type:'place',lat:q.lat,lng:q.lng});
@@ -255,7 +255,22 @@ function renderPoints(){
 }
 function renderHypotheses(){
  groups.hypotheses.clearLayers();
- if(!geographicHypotheses||year<1500||!$('toggleHypotheses').checked)return;
+ if(year<1500||!$('toggleHypotheses').checked)return;
+ if(year>=1510){
+  if(!geographicHypothesesThird || year<1513 || year>1518)return;
+  L.geoJSON(geographicHypothesesThird,{
+   filter:f=>f.geometry?.type==='Polygon'&&f.properties?.fill_authorized===false&&f.properties?.active_years?.includes(year),
+   style:{color:'#e2b16e',weight:3,dashArray:'7 5',opacity:.98,fill:true,fillColor:'#d9a65f',fillOpacity:.09},
+   onEachFeature:(feature,layer)=>{
+    const p=feature.properties||{};
+    layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'图尔奈周边')+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
+      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+    layer.on('click',()=>openHypothesis(feature));
+   }
+  }).addTo(groups.hypotheses);
+  return;
+ }
+ if(!geographicHypotheses)return;
  const calais=feature=>String(feature.properties?.id||'').startsWith('calais');
  // Soft, noninteractive silhouette under dashed lines. Display does not signify actual territorial control.
  L.geoJSON(geographicHypotheses,{
@@ -289,13 +304,13 @@ function updateVisibility(){
  if(!map.hasLayer(groups.cluster))map.addLayer(groups.cluster);
 }
 function renderMilestones(){
- const all=[...atlasEarly.events,...atlasLater.events];
+ const all=[...atlasEarly.events,...atlasLater.events,...atlasThird.events];
  const rail=$('milestoneDots');
- const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=1509))].sort((a,b)=>a-b);
+ const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year).filter(y=>y>=1497&&y<=1519))].sort((a,b)=>a-b);
  rail.innerHTML=years.map(y=>{
   const yearEvents=all.filter(e=>e.year===y);
   const peak=Math.max(...yearEvents.map(e=>levelOf(e)));
-  const percent=(y-1497)/12*100;
+  const percent=(y-1497)/22*100;
   return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+'" style="left:'+percent+'%" data-year="'+y+'" title="'+escapeHTML(y+'年 · '+yearEvents.map(e=>e.name).slice(0,3).join(' / '))+'" aria-label="'+y+'年：'+yearEvents.length+'个事件"><span>'+y+'</span></button>';
  }).join('');
  rail.querySelectorAll('.milestone-dot').forEach(node=>node.addEventListener('click',()=>{
@@ -306,36 +321,36 @@ function renderMilestones(){
  }));
 }
 function setYear(v){
- const next=Math.max(1497,Math.min(1509,Math.round(Number(v)||1497)));
- const chosen=next>=1500?atlasLater:atlasEarly;
+ const next=Math.max(1497,Math.min(1519,Math.round(Number(v)||1497)));
+ const chosen=next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
  if(!chosen)return;
  const changed=atlas!==chosen;
  if(changed){selected='';$('dossierBody').innerHTML=infoDefault;workspace.classList.add('dossier-collapsed');syncPanels();}
  year=next;atlas=chosen;
  $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
- const later=year>=1500;
- $('chapterNav').textContent=later?'历史地图 · 第二章':'历史地图 · 第一章';
- $('chapterNavName').textContent=later?'通往未知海岸的第二程':'远航与主权宣称';
- $('chapterLabel').textContent=later?'CHAPTER 002 / 1500—1509':'CHAPTER 001 / 1497—1499';
- $('chapterTitlePrimary').textContent=later?'通往未知海岸':'大西洋彼岸';
- $('chapterTitleSecondary').textContent=later?'的第二程':'的第一道声索';
- $('chapterIntro').textContent=later?atlasLater.intro.description:earlyIntro;
- $('factA').textContent=later?'加来':'0';
- $('factADesc').innerHTML=later?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
- $('factB').textContent=later?'1502':'1497';
- $('factBDesc').innerHTML=later?'英格兰与苏格兰<br>缔结和约':'英格兰远航<br>抵达北美沿岸';
- $('factC').textContent=later?'1504':'1498';
- $('factCDesc').innerHTML=later?'爱尔兰<br>诺克多战役':'第二次远航<br>后续出航';
- $('periodTitle').textContent=!later?(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国'):year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国';
- $('chapterOne').classList.toggle('active',!later);
- $('chapterTwo').classList.toggle('active',later);
- $('timelineContext').textContent=later?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
- $('timelineNotice').textContent=later?'第二章全部事件已展开 · 第一章可在紫色章节带中回顾':'第一章全部事件已展开 · 点击右侧章节带进入1500年代';
+ const first=year<1500,third=year>=1510,second=!first&&!third;
+ $('chapterNav').textContent=third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
+ $('chapterNavName').textContent=third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
+ $('chapterLabel').textContent=third?'CHAPTER 003 / 1510—1519':second?'CHAPTER 002 / 1500—1509':'CHAPTER 001 / 1497—1499';
+ $('chapterTitlePrimary').textContent=third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
+ $('chapterTitleSecondary').textContent=third?'海峡':second?'的第二程':'的第一道声索';
+ $('chapterIntro').textContent=third?atlasThird.intro.description:second?atlasLater.intro.description:earlyIntro;
+ $('factA').textContent=third?'1513':second?'加来':'0';
+ $('factADesc').innerHTML=third?'弗洛登战役<br>苏格兰国王阵亡':second?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
+ $('factB').textContent=third?'1513':second?'1502':'1497';
+ $('factBDesc').innerHTML=third?'英军占领<br>图尔奈':second?'英格兰与苏格兰<br>缔结和约':'英格兰远航<br>抵达北美沿岸';
+ $('factC').textContent=third?'1519':second?'1504':'1498';
+ $('factCDesc').innerHTML=third?'英军撤离<br>图尔奈':second?'爱尔兰<br>诺克多战役':'第二次远航<br>后续出航';
+ $('periodTitle').textContent=third?(year===1513?'亨利八世 · 海峡战事':year===1519?'亨利八世 · 图尔奈交还':'亨利八世 · 英格兰王国'):second?(year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国'):(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国');
+ $('chapterOne').classList.toggle('active',first);
+ $('chapterTwo').classList.toggle('active',second);
+ $('chapterThree').classList.toggle('active',third);
+ $('timelineContext').textContent=third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
+ $('timelineNotice').textContent='本章所有事件保留在事件列表和地图中，年份调整当时持续的政治状态。';
  renderEventList();renderPoints();renderHypotheses();renderMilestones();
- // Selected year changes focus only, never removes events from its chapter.
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
-function togglePlay(){if(timer){stopPlay();return}if(year===1509)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1509){stopPlay();return}setYear(year+1)},1250)}
+function togglePlay(){if(timer){stopPlay();return}if(year===1519)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1519){stopPlay();return}setYear(year+1)},1250)}
 async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
@@ -373,25 +388,29 @@ function openPolity(group){
 }
 async function boot(){
  try{
-  const [res,laterRes]=await Promise.all([
+  const [res,laterRes,thirdRes]=await Promise.all([
     fetch('data/atlas-1497-1500.json',{cache:'no-store'}),
-    fetch('data/atlas-1500-1509.json',{cache:'no-store'})
+    fetch('data/atlas-1500-1509.json',{cache:'no-store'}),
+    fetch('data/atlas-1510-1519.json',{cache:'no-store'})
   ]);
-  if(!res.ok||!laterRes.ok)throw new Error('历史切片未正确加载');
+  if(!res.ok||!laterRes.ok||!thirdRes.ok)throw new Error('历史切片未正确加载');
   atlasEarly=await res.json();
   atlasLater=await laterRes.json();
-  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places))throw new Error('历史数据结构错误');
+  atlasThird=await thirdRes.json();
+  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places))throw new Error('历史数据结构错误');
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
   }catch(_e){ /* Existing fallback codes remain available. */ }
   try{
-   const [notesResponse,geoResponse]=await Promise.all([
+   const [notesResponse,geoResponse,thirdGeoResponse]=await Promise.all([
     fetch('data/historical-detail-notes.json',{cache:'no-store'}),
-    fetch('data/geography-1500-hypotheses.geojson',{cache:'no-store'})
+    fetch('data/geography-1500-hypotheses.geojson',{cache:'no-store'}),
+    fetch('data/geography-1510-1519-hypotheses.geojson',{cache:'no-store'})
    ]);
    if(notesResponse.ok)researchNotes=(await notesResponse.json()).records||{};
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
+   if(thirdGeoResponse.ok)geographicHypothesesThird=await thirdGeoResponse.json();
   }catch(_e){ /* Text and all vetted history records remain usable. */ }
   setYear(1497);loadKingdomBoundaries();
  }catch(e){
@@ -402,6 +421,7 @@ async function boot(){
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
 $('chapterOne').addEventListener('click',()=>{stopPlay();if(atlasEarly)setYear(1497)});
 $('chapterTwo').addEventListener('click',()=>{stopPlay();if(atlasLater)setYear(1500)});
+$('chapterThree').addEventListener('click',()=>{stopPlay();if(atlasThird)setYear(1510)});
 $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)});
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
