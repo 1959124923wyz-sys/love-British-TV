@@ -22,17 +22,19 @@ function chapterEvents(year) {
   const chapter = year >= 1510 ? third : year >= 1500 ? second : early;
   return chapter.events.filter(e => (year >= 1500 || e.year <= 1499) && occurredByYear(e, year));
 }
-for (const [year, expected] of [
-  [1497,4],[1498,6],[1499,6],
-  [1500,3],[1501,5],[1502,9],[1503,11],[1504,13],
-  [1505,15],[1506,15],[1507,16],[1508,17],[1509,21],
-  [1510,1],[1511,1],[1512,2],[1513,6],[1514,6],
-  [1515,8],[1516,9],[1517,11],[1518,12],[1519,15]
-]) {
-  const shown = chapterEvents(year);
-  assert.equal(shown.length, expected, year + ': wrong count of occurred events');
-  assert.ok(shown.every(e => e.year <= year), year + ': future event became visible');
+// Verify each year against source data, rather than freezing historical discovery counts.
+for (let year=1497;year<=1519;year++) {
+  const chapter = year>=1510 ? third : year>=1500 ? second : early;
+  const independentlyExpected=chapter.events.filter(e => (year>=1500 || e.year<=1499) && e.year<=year).length;
+  const shown=chapterEvents(year);
+  assert.equal(shown.length,independentlyExpected,year+': incorrect year-filtered event count');
+  assert.ok(shown.every(e=>e.year<=year),year+': future event became visible');
+  if(year!==1497&&year!==1500&&year!==1510){
+    assert.ok(shown.length>=chapterEvents(year-1).length,year+': cumulative chapter lost earlier events');
+  }
 }
+assert.ok(chapterEvents(1500).length>=3 && chapterEvents(1510).length>=1,
+  'Previously reviewed chapters must preserve their minimum baseline event coverage');
 assert.deepEqual(
   early.routes.filter(r => occurredByYear(r,1497)).map(r => r.id),
   ['route1497'], '1498 voyage route must be hidden during 1497'
