@@ -25,6 +25,7 @@ jobs:
           python3 scripts/validate_approved_ui.py
           node --check app.js
           node scripts/test_chronology.js
+          node scripts/test_map_interactions.js
           grep -q 'id="toggleEvents"' index.html
           grep -q 'css/dark-atlas-v2.css' index.html
           grep -q 'tile.openstreetmap.org' app.js
