@@ -90,6 +90,34 @@ for place in later["places"]:
 assert later["presentation"]["chapter"]["event_visibility"] == "all-significant-events-throughout-chapter"
 assert later["presentation"]["chapter"]["state_visibility"] == "persists-while-supported"
 
+# V0.7: 21 visible events at Britain/Ireland map zoom, separate atlas geography hypotheses and
+# source-backed second-level historical notes.
+assert all(-90 <= e["lat"] <= 90 and -180 <= e["lng"] <= 180 for e in later["events"])
+assert len(later["events"]) >= 21
+details = json.loads((ROOT/"data/historical-detail-notes.json").read_text(encoding="utf-8"))
+required_notes = {e["id"] for e in a["events"] + later["events"] + later["places"]}
+assert required_notes <= set(details["records"])
+for id in required_notes:
+    note = details["records"][id]
+    assert note.get("context") and note.get("source_ids")
+hypotheses = json.loads((ROOT/"data/geography-1500-hypotheses.geojson").read_text(encoding="utf-8"))
+assert hypotheses["type"] == "FeatureCollection"
+assert len(hypotheses["features"]) == 3
+assert {f["geometry"]["type"] for f in hypotheses["features"]} == {"Polygon", "LineString"}
+for shape in hypotheses["features"]:
+    assert shape["properties"]["fill_authorized"] is False
+    assert shape["properties"]["display_mode"] == "independent_dashed_hypothesis"
+app = (ROOT/"app.js").read_text(encoding="utf-8")
+html = (ROOT/"index.html").read_text(encoding="utf-8")
+css = (ROOT/"css/dark-atlas-v2.css").read_text(encoding="utf-8")
+assert "atlas-event-cluster" not in app, "Large numeric marker UI should be removed"
+assert "Math.ceil(Math.sqrt(n))" in app and "map.layerPointToLatLng" in app
+assert "data/historical-detail-notes.json" in app and "renderHypotheses()" in app
+assert 'id="toggleHypotheses"' in html and 'id="mapControls"' in html
+assert html.index('id="mapControls"') < html.index('<main class="map-stage"')
+assert "leaflet-control-attribution{display:block!important" in css
+
+
 for f in ("research/periods/1500-1510/PROGRESS.md",
           "research/periods/1500-1510/CONTROL_AND_CHRONOLOGY_REVIEW.md"):
     assert (ROOT/f).is_file(), f
