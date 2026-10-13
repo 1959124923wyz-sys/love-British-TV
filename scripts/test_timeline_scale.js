@@ -31,7 +31,9 @@ assert.doesNotMatch(html,/id="chapterOne"/,'Rendered navigation must use registr
 assert.match(app,/function browseDecade\(decade\)/);
 assert.match(app,/function browseCentury\(century\)/);
 assert.match(app,/function renderTimelineNavigation\(\)/);
-assert.match(app,/decades=\[browsingDecade-10,browsingDecade,browsingDecade\+10\]/);
+assert.match(app,/decades=Array\.from\(\{length:5\}/);
+assert.match(app,/const halfCenturyPageForYear=y=>y<1500\?1490:Math\.floor\(y\/50\)\*50/);
+assert.match(app,/current===1500&&direction<0\?1490/);
 const decadeFn=app.match(/const decadeForYear=y=>[^;]+;/)?.[0];
 assert.ok(decadeFn);
 const decadeForYear=vm.runInNewContext(decadeFn+'\ndecadeForYear');
@@ -40,23 +42,26 @@ assert.equal(decadeForYear(1500),1500);
 assert.equal(decadeForYear(1539),1530);
 assert.equal(decadeForYear(1600),1600);
 assert.equal(decadeForYear(1997),1990);
-// Synthetic 50-/500-year navigation must use constant count of only three decade slots.
+// Every aligned 50-year half-century contains exactly five ten-year chapters.
 for(const span of [50,500]){
  let maxSlots=0;
- for(let d=1490;d<=1490+span;d+=10){
-  const cells=[d-10,d,d+10].filter(y=>y>=1490&&y<=2090);
+ for(let page=1500;page<1500+span;page+=50){
+  const cells=Array.from({length:5},(_,i)=>page+i*10);
+  assert.equal(cells[4]-cells[0],40);
   maxSlots=Math.max(maxSlots,cells.length);
  }
- assert.equal(maxSlots,3);
+ assert.equal(maxSlots,5);
 }
+assert.deepEqual(Array.from({length:5},(_,i)=>1500+i*10),[1500,1510,1520,1530,1540]);
+assert.deepEqual(Array.from({length:5},(_,i)=>1550+i*10),[1550,1560,1570,1580,1590]);
 const timelineBlock=app.split('function browseDecade(decade){')[1]?.split('function browseCentury(')[0]||'';
 assert.ok(!timelineBlock.includes('setYear('),'Browsing is NOT authorized to change map history');
 const centuryBlock=app.split('function browseCentury(century){')[1]?.split('function renderTimelineNavigation(')[0]||'';
 assert.ok(!centuryBlock.includes('setYear('));
 assert.ok(app.includes('slider.min=currentChapter.start;slider.max=currentChapter.end;slider.value=year;'),'Year range must be local');
 assert.ok(app.includes('e.year>=chapter.start&&e.year<=year'),'Only past current-decade events may be shown as milestones');
-assert.ok(app.includes("if(!chapter){")&&app.includes("browseDecade(decade);"),'Unpublished chapters must not fake data');
+assert.ok(app.includes("if(!chapter){")&&app.includes("timelineStatus(decade+"),'Unpublished chapters must not fake data');
 assert.ok(app.includes('lastPublishedYear'),'Actual atlas must remain bounded by published history');
 assert.match(css,/\.timeline-centuries\{display:grid;grid-template-columns:repeat\(7,minmax\(0,1fr\)\)/);
-assert.match(css,/\.chapter-track\{display:grid;grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
-console.log('PASS timeline: five reviewed chapters, seven centuries, decade-local years, exactly three virtual navigation slots for 50 and 500 years');
+assert.match(css,/\.chapter-track\{display:grid;grid-template-columns:repeat\(5,minmax\(0,1fr\)\)/);
+console.log('PASS timeline: five reviewed chapters, seven centuries, decade-local years, exactly five virtual half-century navigation slots for 50 and 500 years');
