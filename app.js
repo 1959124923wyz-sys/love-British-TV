@@ -563,25 +563,53 @@ function renderWartimeVicinities(){
   }
  }).addTo(groups.warVicinity);
 }
-// Real blue/violet SVG crosshatching instead of one ambiguous semi-solid color.
-// Military reach is neither British sovereignty nor year-end area-wide occupation.
-// PR38 gives four evidence-anchored coarse illustrative bands, not surveyed borders.
+// Purple military reach is a SOURCE-ANCHORED DIRECTIONAL LINE, not an occupation polygon.
+// HES Pinkie: 1547 coast march from Berwick with naval support.
+// HES Dunglass SOS: English fort guarded communications to Haddington, but
+// HES Haddington: French/Scottish cavalry INTERRUPTED access to the besieged city.
 function renderWarReachCorridors(){
  groups.warReach.clearLayers();
  if(year<1540||!warReachAreas||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
- const selected=warReachAreas.features.filter(f=>f.properties?.zone_type==='war_reach_schematic'
+ const selected=(warReachAreas.features||[]).filter(f=>
+  f.geometry?.type==='LineString'&&f.properties?.zone_type==='war_reach_schematic'
   &&f.properties?.historical_boundary_confirmed===false&&f.properties?.fill_authorized===false
-  &&yearValidWarZone(f,year));
+  &&f.properties?.area_sqkm==null&&yearValidWarZone(f,year));
  if(!selected.length)return;
- L.geoJSON({type:'FeatureCollection',features:selected},{
+ const collection={type:'FeatureCollection',features:selected};
+ const zoom=map.getZoom(),scale=zoom>=8?1:zoom>=6?.85:.62;
+ // SCREEN-SPACE width of the halo is not a geographically measured occupation area.
+ L.geoJSON(collection,{
+  renderer:warReachRenderer,pane:'warReachPane',interactive:false,
+  style:f=>({color:f.properties.halo_color||'#9573d3',
+   weight:Math.max(8,Number(f.properties.halo_weight_px||24)*scale),
+   opacity:Number(f.properties.halo_opacity||.16),
+   fill:false,lineCap:'round',lineJoin:'round',className:'atlas-war-reach-halo'})
+ }).addTo(groups.warReach);
+ L.geoJSON(collection,{
+  renderer:warReachRenderer,pane:'warReachPane',interactive:false,
+  style:f=>({color:f.properties.stroke_color||'#c2a1f1',
+   weight:Math.max(2,Number(f.properties.stroke_weight_px||3)),
+   opacity:.9,dashArray:f.properties.stroke_dashes||'8 8',
+   fill:false,lineCap:'round',lineJoin:'round',className:'atlas-war-reach-schematic'})
+ }).addTo(groups.warReach);
+ // Transparent hit strokes increase click accessibility without increasing visual territory.
+ L.geoJSON(collection,{
   renderer:warReachRenderer,pane:'warReachPane',interactive:true,bubblingMouseEvents:false,
-  style:f=>({color:f.properties?.border_color||'#c5a4f8',weight:2.2,opacity:.85,
-   dashArray:'9 7',fill:true,fillColor:f.properties?.color||'#9473d8',
-   fillOpacity:Math.min(.22,Number(f.properties?.fill_opacity||.16)),
-   className:'atlas-war-reach-schematic'}),
+  style:()=>({color:'#b59be6',weight:17,opacity:.015,fill:false,
+   lineCap:'round',lineJoin:'round',className:'atlas-war-reach-hit'}),
   onEachFeature:(feature,layer)=>{
-   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">有据英军战役推进／补给影响示意，非真实疆界；点击查看来源</div>',{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
-   layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'war-reach')});
+   const contested=feature.properties?.route_role==='interdicted_reinforcement_link_not_secure_territory';
+   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong>'+
+    '<div class="atlas-hover-summary">'+(contested
+      ?'苏法联军封锁的争夺通路：并非畅通英军控制走廊'
+      :'史料支持的行军／驻防交通方向；不等于沿途全境英国占领')+
+     ' · 点击查看史料</div>',{
+     sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'
+   });
+   layer.on('click',e=>{
+    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+    openTerritoryDossier(feature,'war-reach');
+   });
   }
  }).addTo(groups.warReach);
 }
