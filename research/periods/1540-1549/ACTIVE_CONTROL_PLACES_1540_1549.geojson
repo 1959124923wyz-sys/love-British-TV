@@ -7,11 +7,12 @@
       "to": 1549
     },
     "inherited_1539_named_polities": 7,
-    "newly_observed_fort_or_city_garrisons": 7,
+    "newly_observed_fort_or_city_garrisons": 9,
     "dating_rule": "Only display confirmed garrisons at year end: Inchcolm 1547 only, Haddington 1548 only, English Boulogne 1544–1549, Broughty/Eyemouth 1547–1549, Lauder 1548–1549, Hailes 1548 confirmed and 1549 uncertain.",
     "inferred_polygon_area_uses": "none",
     "active_timeline_source": "CONTROL_TRANSITION_1539_1549.json",
-    "note": "The Scottish kingdom remains independent even during local English garrison occupation."
+    "note": "The Scottish kingdom remains independent even during local English garrison occupation.",
+    "dunglass_caution": "Site coordinate is HES designated garden reference, English hill camp is WEST of the house and its true borders are NOT pinpointed."
   },
   "features": [
     {
@@ -449,6 +450,69 @@
         "is_English_colonial_conquest": false,
         "is_temporary_Scottish_occupation": true,
         "uncertainty": "Evidence for 1548 castle garrison; 1549 status unknown, DO NOT mark known retreat or silently carry confirmed control"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-lochmaben-english-1544-1545",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.43092,
+          55.11633
+        ]
+      },
+      "properties": {
+        "stable_id": "lochmaben-english-1544-1545",
+        "name": "洛赫马本城堡：英军1544年暂时占领，1545苏军收复",
+        "year_end_start": 1544,
+        "year_end_stop": 1544,
+        "confirmed_control_through_year": 1544,
+        "historical_actual_end_year": 1545,
+        "political_status": "English_held_castle_in_independent_Scottish_kingdom",
+        "controller": "English garrison, Scottish kingdom remains sovereign",
+        "source_ids": [
+          "SC-HES-LOCHMABEN-HISTORY",
+          "SC-HES-LOCHMABEN-SITE"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "symbolic_castle_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Castle historic control known from HES 1544–1545 narrative; no surveyed Tudor wall. Note modern NRHE 66315 Lochmaben Castle, NOT NRHE 66314 Old Castle."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-dunglass-camp-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.38613,
+          55.93584
+        ]
+      },
+      "properties": {
+        "stable_id": "dunglass-camp-english-1548-1549",
+        "name": "Dunglass英军营垒：1548—1549年，苏格兰东洛锡安",
+        "year_end_start": 1548,
+        "year_end_stop": 1549,
+        "confirmed_control_through_year": 1549,
+        "historical_actual_end_year": null,
+        "political_status": "English_earthwork_camp_inside_independent_Scotland",
+        "controller": "English garrison, Scottish sovereignty separately maintained",
+        "source_ids": [
+          "SC-HES-DUNGLASS-CAMP"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "approximate_reference_site_point_not_camp_exact_position",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Coordinate modern East Lothian Dunglass landscape reference; military encampment on west-of-house hill and unknown accurate walls; not the Dunglass Castle in West Dunbartonshire. Dismantled shortly after 1548-49, exact month unknown."
       }
     }
   ]
