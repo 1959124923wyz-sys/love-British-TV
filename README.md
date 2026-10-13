@@ -6,6 +6,12 @@
 
 基于可核验史料、精确年份、历史主体与不确定性标记的全球动态地图。
 
+## 当前已出版范围（2026-10-13，正式上线以Pages为准）
+
+- 1497—1549年六个历史章节，半世纪每页五张十年目录；逐年筛选真实史事与控制点。
+- [第六章正式史料](data/atlas-1540-1549.json) / [地图点源数据](data/military-control-points-1540-1549.geojson) / [历史准入审核](editorial/1540-1549/PUBLISH_REVIEW.md) / [调查补缺清单](editorial/1540-1549/RESEARCH_GAPS_TO_PR27.md)。
+- 1540年代英军局部堡垒和法国对抗据点采用具名地点Point，仍没有可靠的精准历史疆域Polygon；原地图参考轮廓只连续延伸不改变古界。
+
 ## 地图链接
 
 - **GitHub Pages 正式地址（仓库 Pages 服务启用并成功部署后）**：https://1959124923wyz-sys.github.io/love-British-TV/
