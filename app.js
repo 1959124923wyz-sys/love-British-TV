@@ -1,4 +1,4 @@
-/* Imperial Expansion Atlas · 1497–1529 historical atlas
+/* Imperial Expansion Atlas · scalable century/decade/year timeline
    Facts, geography and provenance live in data/atlas-1497-1500.json.
    All speculative routes are marked illustrative. */
 (function(){
@@ -62,7 +62,9 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let year=1497; let selected=''; let selectedItemYear=null; let timer=null;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let year=1497;
+// Browsing the multi-century navigator never changes the verified year on the map.
+let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1539; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 // Transient focus target; historical event coordinates remain immutable.
@@ -512,18 +514,86 @@ function updateVisibility(){
  }
  if(!map.hasLayer(groups.cluster))map.addLayer(groups.cluster);
 }
+// The chapter registry is the only authority for published decade cards.
+// Future centuries remain navigable, but never render fictitious future atlas states.
+const decadeForYear=y=>Math.floor(y/10)*10;
+const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>decadeForYear(c.start)===d);
+const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end);
+const clampBrowseDecade=d=>Math.max(chapterRegistry?.navigation?.firstDecade||1490,
+ Math.min(chapterRegistry?.navigation?.lastDecade||2090,d));
+function timelineStatus(message){$('timelineNotice').textContent=message||''}
+function browseDecade(decade){
+ browsingDecade=clampBrowseDecade(decade);
+ renderTimelineNavigation();
+ // Navigation is deliberately read-only until the reader selects published data.
+ if(browsingDecade!==decadeForYear(year))timelineStatus('仅浏览章节目录。地图仍显示'+year+'年；尚未发布的年代不能作为历史地图查看。');
+ else timelineStatus('');
+}
+function browseCentury(century){
+ const first=chapterRegistry.navigation.firstDecade;
+ browseDecade(Math.max(first,century));
+}
+function renderTimelineNavigation(){
+ if(!chapterRegistry)return;
+ const cent=$('centuryNav'),start=chapterRegistry.navigation.firstCentury,end=chapterRegistry.navigation.lastCentury;
+ cent.innerHTML=Array.from({length:(end-start)/100+1},(_,i)=>{
+  const century=start+i*100,chosen=decadeForYear(browsingDecade/100*10*10)===century;
+  // Also retain a subtle cue showing the period the map is actually displaying.
+  const actual=Math.floor(year/100)*100===century;
+  return '<button type="button" class="timeline-century'+(chosen?' viewing':'')+(actual?' map-current':'')+
+   '" data-century="'+century+'" aria-pressed="'+chosen+'" title="'+(century+1)+'—'+(century+100)+'年 · 浏览世纪（不会改动地图）">'+(i+15)+'世纪</button>';
+ }).join('');
+ cent.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>browseCentury(Number(btn.dataset.century))));
+ const frame=$('chapterTrack'),decades=[browsingDecade-10,browsingDecade,browsingDecade+10];
+ frame.innerHTML=decades.map((d,i)=>{
+  if(d<chapterRegistry.navigation.firstDecade||d>chapterRegistry.navigation.lastDecade)
+   return '<span class="chapter-placeholder" aria-hidden="true"></span>';
+  const chapter=chapterForDecade(d),published=!!chapter;
+  const from=chapter?chapter.start:d,to=chapter?chapter.end:d+9;
+  const onMap=published&&year>=from&&year<=to;
+  return '<button type="button" class="chapter-segment'+(published?' published':' unpublished')+
+    (i===1?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
+    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+from+'年：'+chapter.label:'此十年尚无正式历史资料')+'">'+
+    '<span>'+(published?'第'+chapter.number+'章':'尚未发布')+'</span>'+
+    '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 待研究')+'</small></button>';
+ }).join('');
+ frame.querySelectorAll('button[data-decade]').forEach(btn=>btn.addEventListener('click',()=>{
+  const decade=Number(btn.dataset.decade),chapter=chapterForDecade(decade);
+  if(!chapter){
+   browseDecade(decade);
+   timelineStatus(decade+'—'+(decade+9)+'年暂无已审核地图资料，仍显示'+year+'年。');
+   return;
+  }
+  stopPlay();setYear(chapter.start);
+ }));
+ $('browseDecadePrev').disabled=browsingDecade<=chapterRegistry.navigation.firstDecade;
+ $('browseDecadeNext').disabled=browsingDecade>=chapterRegistry.navigation.lastDecade;
+ const currentChapter=chapterForYear(year);
+ if(currentChapter){
+  const slider=$('yearRange');
+  slider.min=currentChapter.start;slider.max=currentChapter.end;slider.value=year;
+  $('yearStartLabel').textContent=currentChapter.start;
+  $('yearEndLabel').textContent=currentChapter.end;
+  $('localYearTitle').textContent=year+'年';
+  $('jumpYear').max=lastPublishedYear;
+  $('jumpYear').value=year;
+ }
+ $('timelineAvailability').textContent=browsingDecade===decadeForYear(year)
+  ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
+  :'浏览目录中 · 地图为'+year+'年';
+}
 function renderMilestones(){
- const all=[...atlasEarly.events,...atlasLater.events,...atlasThird.events,...atlasFourth.events,...atlasFifth.events];
- const rail=$('milestoneDots');
- const years=[...new Set(all.filter(e=>e.id!=='status-1500').map(e=>e.year)
-   .filter(y=>y>=1497&&y<=year))].sort((a,b)=>a-b);
+ const rail=$('milestoneDots'),chapter=chapterForYear(year);
+ if(!chapter||!atlas){rail.innerHTML='';return;}
+ const all=atlas.events.filter(e=>e.id!=='status-1500'&&e.year>=chapter.start&&e.year<=year);
+ const years=[...new Set(all.map(e=>e.year))].sort((a,b)=>a-b);
+ const span=Math.max(1,chapter.end-chapter.start);
  rail.innerHTML=years.map(y=>{
-  const events=all.filter(e=>e.year===y);
-  const peak=Math.max(...events.map(e=>levelOf(e)));
+  const events=all.filter(e=>e.year===y),peak=Math.max(...events.map(e=>levelOf(e)));
   return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+
-   '" style="left:'+((y-1497)/42*100)+'%" data-year="'+y+
-   '" title="'+escapeHTML(y+'年 · '+events.map(e=>e.name).slice(0,3).join(' / '))+
-   '" aria-label="'+y+'年：'+events.length+'个事件"><span>'+y+'</span></button>';
+    '" style="left:'+((y-chapter.start)/span*100)+'%" data-year="'+y+
+    '" title="'+escapeHTML(y+'年 · '+events.map(e=>e.name).slice(0,3).join(' / '))+
+    '" aria-label="'+y+'年：'+events.length+'个事件"><span>'+y+'</span></button>';
  }).join('');
  rail.querySelectorAll('.milestone-dot').forEach(node=>node.addEventListener('click',()=>{
   const y=Number(node.dataset.year);stopPlay();setYear(y);
@@ -533,7 +603,7 @@ function renderMilestones(){
  }));
 }
 function setYear(v){
- const next=Math.max(1497,Math.min(1539,Math.round(Number(v)||1497)));
+ const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
  const chosen=next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
  if(!chosen)return;
  // Keep map viewport and open dossier; avoid displaying a selected event from the future.
@@ -546,7 +616,7 @@ function setYear(v){
  // Full-archive preview belongs to one chapter; never carry future events into the next.
  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
  year=next;atlas=chosen;
- $('yearRange').value=year;$('bigYear').textContent=year;$('timeYear').textContent=year;
+ $('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530;
  $('chapterNav').textContent=fifth?'历史地图 · 第五章':fourth?'历史地图 · 第四章':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
  $('chapterNavName').textContent=fifth?'法权与边区':fourth?'边区与远航':third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
@@ -561,13 +631,13 @@ function setYear(v){
  $('factC').textContent=fifth?(year>=1535?'1535':'—'):fourth?(year>=1527?'1527':'—'):third?(year>=1519?'1519':'—'):second?(year>=1504?'1504':'—'):(year>=1498?'1498':'—');
  $('factCDesc').innerHTML=fifth?(year>=1535?'梅努斯城堡<br>王室攻取':''):fourth?(year>=1527?'北美远航':''):third?(year>=1519?'英军撤离<br>图尔奈':''):second?(year>=1504?'爱尔兰<br>诺克多战役':''):(year>=1498?'第二次远航<br>后续出航':'');
  $('periodTitle').textContent=fifth?'亨利八世 · 英格兰王国':fourth?'亨利八世 · 英格兰王国':third?'亨利八世 · 英格兰王国':second?(year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国'):(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国');
- for(const [id,on] of [['chapterOne',first],['chapterTwo',second],['chapterThree',third],['chapterFour',fourth],['chapterFifth',fifth]])$(id).classList.toggle('active',on);
+ browsingDecade=decadeForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
-function togglePlay(){if(timer){stopPlay();return}if(year===1539)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===1539){stopPlay();return}setYear(year+1)},1250)}
+function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
 async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
@@ -622,6 +692,13 @@ async function boot(){
   atlasThird=await thirdRes.json();
   atlasFourth=await fourthRes.json();
   atlasFifth=await fifthRes.json();
+  const chapterRes=await fetch('data/chapters.json',{cache:'no-store'});
+  if(!chapterRes.ok)throw new Error('章节目录未正确加载');
+  chapterRegistry=await chapterRes.json();
+  if(!Array.isArray(chapterRegistry?.chapters)||!chapterRegistry.chapters.length)throw new Error('历史章节目录为空');
+  const ordered=chapterRegistry.chapters;
+  if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
+  lastPublishedYear=ordered[ordered.length-1].end;
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places))throw new Error('历史数据结构错误');
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
@@ -658,11 +735,19 @@ async function boot(){
  }
 }
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
-$('chapterOne').addEventListener('click',()=>{stopPlay();if(atlasEarly)setYear(1497)});
-$('chapterTwo').addEventListener('click',()=>{stopPlay();if(atlasLater)setYear(1500)});
-$('chapterThree').addEventListener('click',()=>{stopPlay();if(atlasThird)setYear(1510)});
-$('chapterFour').addEventListener('click',()=>{stopPlay();if(atlasFourth)setYear(1520)});
-$('chapterFifth').addEventListener('click',()=>{stopPlay();if(atlasFifth)setYear(1530)});
+function jumpToEnteredYear(){
+ if(!atlas)return;
+ const raw=$('jumpYear').value.trim(),v=Number(raw);
+ if(!/^\\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>lastPublishedYear){
+  timelineStatus('仅支持1497—'+lastPublishedYear+'年已发布的历史资料；地图仍停留'+year+'年。');return;
+ }
+ stopPlay();setYear(v);
+}
+$('jumpYear').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();jumpToEnteredYear()}});
+$('jumpYear').addEventListener('change',jumpToEnteredYear);
+$('chapterTrack').addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&chapterRegistry){e.preventDefault();browseDecade(browsingDecade+(e.deltaX>0?10:-10))}},{passive:false});
+$('browseDecadePrev').addEventListener('click',()=>{if(chapterRegistry)browseDecade(browsingDecade-10)});
+$('browseDecadeNext').addEventListener('click',()=>{if(chapterRegistry)browseDecade(browsingDecade+10)});
 $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)});
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});
@@ -686,7 +771,7 @@ map.on('resize',()=>{if(atlas)renderPoints()});
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
 
 syncPanels();
-window.addEventListener('keydown',e=>{if(!atlas)return;if(e.key==='ArrowLeft'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'&&document.activeElement.tagName!=='INPUT'){stopPlay();setYear(year+1)}});
+window.addEventListener('keydown',e=>{if(!atlas||e.target?.closest?.('input,button,select,textarea,[contenteditable="true"]'))return;if(e.key==='ArrowLeft'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'){stopPlay();setYear(year+1)}});
 window.addEventListener('resize',()=>map.invalidateSize());
 setTimeout(()=>map.invalidateSize(),150);
 boot();
