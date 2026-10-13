@@ -49,7 +49,7 @@ const contestedZoneRenderer=L.svg({pane:'contestedZonePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),chapter7Geographies:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -116,7 +116,7 @@ function syncMapLayers(){
  if(atlas)refreshHistoricalLayers();
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let seventhGeographicAnchors=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -229,6 +229,68 @@ function openCollection(items,title){
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
 function resetDossier(){selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels();if(atlas)renderPoints()}
+
+// Chapter 7's atlas keeps events with unknown GPS at null coordinates.
+// Separate modern geographical reading anchors DO NOT become event waypoints,
+// accurate ship routes, English-controlled West African/Russian soil or Irish estate borders.
+function seventhGeographicEvents(feature){
+ const ids=feature.properties?.related_event_ids||[];
+ return ids.map(id=>atlasSeventh?.events?.find(e=>e.id===id)).filter(e=>e&&occurredByYear(e,year));
+}
+function openSeventhGeographicDossier(feature){
+ const p=feature.properties||{},related=seventhGeographicEvents(feature);
+ const summary='<div class="dossier-kicker">第七章 · 地理阅读参考 · '+year+'年</div>'+
+  '<h2>'+escapeHTML(p.name)+'</h2>'+
+  '<p>'+escapeHTML(p.precision_note||'现代地名参照，不是当年事件的准确位置。')+'</p>'+
+  '<p class="zone-editorial-warning">地图点仅用于定位阅读：不代表1550年代船舶真实航线、人口奴役发生的具体地点、殖民土地的边界或英王海外主权。</p>'+
+  '<h3 class="zone-links-heading">截至'+year+'年已发生的关联史事（'+related.length+'项）</h3>'+
+  '<div class="zone-related">'+related.map((e,i)=>'<button type="button" class="zone-record-link" data-story-event="'+i+'">'+escapeHTML(e.year+'年 · '+e.name)+'</button>').join('')+'</div>'+
+  listSources(p.source_ids||[],{id:feature.id})+
+  '<div class="zone-source-links"><h3 class="zone-links-heading">现代地名与史料位置依据</h3>'+
+  (p.locator_source_urls||[]).filter(url=>/^https:\/\//.test(url)).map(url=>'<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">核查地点／历史研究 ↗</a>').join('')+'</div>';
+ selected='';selectedItemYear=null;$('dossierBody').innerHTML=summary;openPanel('dossier');
+ $('dossierBody').querySelectorAll('[data-story-event]').forEach(node=>node.addEventListener('click',()=>openDossier(related[Number(node.dataset.storyEvent)],'event')));
+}
+function navigateSeventhGeography(feature){
+ if(!$('mapLayerEvents').checked||!feature?.geometry?.coordinates)return;
+ const [lng,lat]=feature.geometry.coordinates;
+ // Navigation is an explicit user request: pan only, never set zoom or change year.
+ map.stop();map.panTo([lat,lng],{animate:false});
+ openSeventhGeographicDossier(feature);
+}
+function renderSeventhGeographies(){
+ groups.chapter7Geographies.clearLayers();
+ const pane=$('chapter7GeographyNav');
+ if(!pane)return;
+ pane.innerHTML='';
+ if(year<1550||!seventhGeographicAnchors||!$('toggleEvents').checked){pane.hidden=true;return;}
+ const candidates=seventhGeographicAnchors.features.filter(f=>f.geometry?.type==='Point'&&year>=f.properties.year_start&&year<=f.properties.year_end);
+ if(!candidates.length){pane.hidden=true;return;}
+ pane.hidden=false;
+ pane.innerHTML='<div class="atlas-ch7-nav-caption">本章地理线索 <span>现代地点参照 · 非历史航迹与占地界</span></div>'+
+  '<div class="atlas-ch7-nav-links">'+candidates.map(f=>{
+   const p=f.properties,linked=seventhGeographicEvents(f);
+   const id=escapeHTML(f.id),caption=escapeHTML(p.short_label);
+   return '<button type="button" data-geo-anchor="'+id+'" aria-label="查看'+caption+'相关的'+linked.length+'项已发生史事">'+
+    caption+'<span>'+linked.length+'项</span></button>';
+  }).join('')+'</div>';
+ pane.querySelectorAll('[data-geo-anchor]').forEach(btn=>btn.addEventListener('click',()=>{
+  const feature=candidates.find(f=>f.id===btn.dataset.geoAnchor);navigateSeventhGeography(feature);
+ }));
+ for(const f of candidates){
+  const p=f.properties,[lng,lat]=f.geometry.coordinates,linked=seventhGeographicEvents(f);
+  if(!linked.length)continue;
+  const icon=L.divIcon({className:'atlas-ch7-geo-icon',html:
+   '<div class="atlas-ch7-geo-marker"><span class="atlas-ch7-geo-dot"></span><strong>'+escapeHTML(p.short_label)+
+   '</strong><small>'+linked.length+'项史事 · 地理参照</small></div>',
+   iconSize:[154,36],iconAnchor:[16,35]});
+  L.marker([lat,lng],{icon,zIndexOffset:1150,bubblingMouseEvents:false})
+   .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.precision_note)+'</div>',
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
+   .on('click',()=>openSeventhGeographicDossier(f)).addTo(groups.chapter7Geographies);
+ }
+}
+
 function renderEventList(){
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
@@ -964,7 +1026,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderSeventhGeographies();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -1088,6 +1150,11 @@ async function boot(){
   politicalRelationAreas.features.push(...newRelations.features);
   frenchCityAreas.features.push(...newUrban.features);
   seventhControlSites=newMilitary;
+  const readingResponse=await fetch('data/seventh-event-geographic-anchors.geojson',{cache:'no-store'});
+  if(!readingResponse.ok)throw new Error('第七章跨区域历史事件导航未能加载');
+  seventhGeographicAnchors=await readingResponse.json();
+  if(seventhGeographicAnchors?.type!=='FeatureCollection'||!Array.isArray(seventhGeographicAnchors.features))
+   throw new Error('第七章区域史事锚点无效');
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
   try{
@@ -1128,7 +1195,7 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderSeventhGeographies();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
