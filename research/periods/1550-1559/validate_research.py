@@ -137,4 +137,49 @@ check("leith-french-allied-fortifications-1559" in {x["stable_id"] for x in seed
 check("inchkeith-franco-scottish-fort-1556-1564" in {x["stable_id"] for x in seed["place_controller_at_1559"]},"Inchkeith 1556-64 cross-decade fort missing")
 check("dunbar-french-allied-fort-built-1550" in {x["stable_id"] for x in seed["place_controller_at_1559"]},"Dunbar 1560 demolition next-decade handoff missing")
 check(all(row["period_surveys_authorizing_filled_polygons"]==0 for row in gap["year_end_matrix"]),"Unverified military boundaries copied into polygons")
-print("PASS 1550s research: %s sources, %s events, 18 named sites, 15 dated map deltas, 8 dashed existing geographic outlines, 10 yearly snapshots, 9 inherited political identities, 2 legally contested Irish colony shires, 6 voyage references, zero fabricated period territorial polygons." % (len(sources),len(events["records"])))
+
+# Chapter 7 war-zone candidate guard: historical status != authenticated outline.
+war_control=load("WAR_CONTROL_ZONES_CANDIDATE_1550_1559.geojson")
+war_contested=load("WAR_CONTESTED_ZONES_CANDIDATE_1550_1559.geojson")
+war_front=load("WAR_FRONT_NOTES_1550_1559.json")
+war_outposts=load("WAR_ISOLATED_OUTPOSTS_CANDIDATE_1550_1559.json")
+check(len(war_control["features"])==6,"war control candidates missing")
+check(len(war_contested["features"])==4,"contested front candidates missing")
+check(len(war_front["annual_year_end"])==10,"war map must present all 1550–1559 end years")
+check(len(war_front["narrative_stages"])==15,"war front historical stages missing")
+check(len(war_outposts["items"])==8,"outpost proposal count does not match editor spec")
+check(war_control["metadata"]["verified_period_control_polygon_count"]==0,"unverified outlines promoted to authentic military control")
+reference=next(f for f in areas["features"] if f["id"]=="calais-pale-sourced-places-approx-1497-1519")
+check(reference["geometry"]["type"]=="Polygon" and reference["properties"]["historical_boundary_confirmed"] is False,"unexpected true Pale border assertion")
+for z in (war_control,war_contested):
+    keys=[f["properties"]["id"] for f in z["features"]]
+    check(len(keys)==len(set(keys)),"duplicate war zone id")
+    for f in z["features"]:
+        p=f["properties"]
+        check(f["id"]==p["id"],"mismatched war zone stable id")
+        check(p["fill_authorized"] is False and p["historic_polygon_verified"] is False,"guessed Polygon given confirmed-area authorization "+f["id"])
+        check(p["area_sqkm"] is None and p["area_calculation_allowed"] is False,"unjustified acreage in war zone "+f["id"])
+        check(1550<=p["start_year"]<=p["end_year"]<=1559,"invalid war-zone year "+f["id"])
+        check(set(p["source_ids"])<=sources,"war-zone source registry missing "+f["id"])
+        if f["geometry"] is not None:
+            check(f["geometry"]==reference["geometry"] and p.get("reference_geometry_reused_feature_id")==reference["id"],"new hand-drawn speculative political border was added "+f["id"])
+            check(p.get("preview_schematic_fill_allowed") is True,"drawn guess not marked strictly schematic "+f["id"])
+        else:
+            check(p.get("preview_schematic_fill_allowed") is False,"null-geometry war zone labeled as drawable filled land "+f["id"])
+check(sum(f["geometry"] is not None for f in war_control["features"])==2,"control candidates used unsourced Polygon")
+check(sum(f["geometry"] is not None for f in war_contested["features"])==1,"contested candidates used unsourced front geometry")
+check({f["id"] for f in war_control["features"] if f["geometry"] is not None}=={"c7-calais-pale-english-core-1550-1557","c7-calais-pale-french-return-1558-1559"},"Pale 1558 switch candidate wrongly mapped")
+check(war_contested["features"][1]["properties"]["active_at_year_end"] is False,"1558 French Calais must not be indefinitely contested")
+for row in war_front["annual_year_end"]:
+    y=row["year"]
+    check((row["english_calais_overlay"] is not None)==(y<=1557),"English Pale resurrected or prematurely removed "+str(y))
+    check((row["french_recovered_calais_overlay"] is not None)==(y>=1558),"French recovery date missing "+str(y))
+    check(row["Scotland_English_stable_occupied_polygon"] is None,"fake 1550s English annexation of Scotland")
+    check(row["any_exact_surveyed_16c_war_control_polygons"]==0,"fabricated verified historic control area")
+check(war_front["annual_year_end"][0]["Scotland_English_1550_withdrawal_story"] is not None,"1550 retreat absent from historical playback")
+for x in war_outposts["items"]:
+    check(set(x["source_ids"])<=sources,"outpost source registry missing "+x["id"])
+    if x["id"] in ("c7-outpost-hammes-1550-1558","c7-outpost-leith-1559"):
+        check(x["coordinate"] is None,"unknown castle or 1559 wall has a fabricated specific pin")
+check(war_outposts["editorial_status"]=="candidate_not_published","candidate stage mislabeled published")
+print("PASS 1550s research: %s sources, %s events, 18 named sites, 15 dated map deltas, 6 control/4 contested strictly schematic war-zone candidates, 8 dashed existing geographic outlines, 10 yearly snapshots, 9 inherited political identities, 2 legally contested Irish colony shires, 6 voyage references, zero fabricated period territorial polygons." % (len(sources),len(events["records"])))
