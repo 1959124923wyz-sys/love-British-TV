@@ -31,7 +31,7 @@ check(not any(s["sixteenth_century_original_manuscript_read"] for s in src["reco
 check(events["count"]==len(events["records"])>=20, "historical chronology short or count mismatched")
 check(len({e["id"] for e in events["records"]})==len(events["records"]), "duplicate event IDs")
 check(len(atlas["events"])==len(events["records"]), "atlas event mismatch")
-check(len(atlas["places"])==len(points["features"])==16, "named site count mismatch")
+check(len(atlas["places"])==len(points["features"])==18, "named site count mismatch")
 candidate={s["id"] for s in atlas["sources"]}
 check(len(candidate)==len(atlas["sources"]), "duplicate candidate source")
 for e in events["records"]:
@@ -77,7 +77,7 @@ for f in areas["features"]:
     if f["id"].startswith("calais-pale"):
         check(p["French_control_change_year"]==1558,"Calais pale stays English after French conquest")
 check(areas["metadata"]["authorised_new_exact_Tudor_control_polygons"]==0,"unsourced border polygon approved")
-check(len(delta["features"])==13,"map deltas do not match approved historic changes")
+check(len(delta["features"])==15,"map deltas do not match approved historic changes")
 check(all(f["geometry"]["type"]=="Point" for f in points["features"]+delta["features"]),"modern fort exact area falsely created")
 for f in points["features"]+delta["features"]:
     lng,lat=f["geometry"]["coordinates"]
@@ -107,18 +107,34 @@ check({"calais-crown","guines-crown-1520s"}<={x["stable_id"] for x in seed["poli
 # Collector3 PR33 map-first continuity checks: changes vs published baseline.
 gap=load("TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json")
 check(len(gap["year_end_matrix"])==10,"Collector3 annual matrix missing")
-check(len(gap["episodes"])>=8,"Hammes / Eyemouth historic control episodes missing")
+check(len(gap["episodes"])>=11,"Hammes / Eyemouth historic control episodes missing")
 check("hailes-english-1548-date_unknown" in {x["stable_id"] for x in ctl["closed_before_1550"]},"Hailes 1548 Scottish recapture erroneously carried to 1550")
 check("hailes-english-1548-date_unknown" not in {x["stable_id"] for x in ctl["unresolved_1550_departure_and_local_continuity"]},"Hailes already Scottish should not be 1550 unknown")
 check("eyemouth-french-allied-1557-1559" in site,"French allied Eyemouth 1557–1558 fort omitted")
 check(site["eyemouth-french-allied-1557-1559"]["Scottish_sovereignty_remains"] is True,"Foreign French troops mistaken for French sovereignty over Scotland")
 check(site["eyemouth-french-allied-1557-1559"]["year_end_stop"]==1558,"Eyemouth French 1559 departure uncertainty silently extended")
-check("hammes-castle-english-pale-pre1550-1558" in ctl["Hammes_castle_lost_historical_garrison"]["stable_id"],"Hammes final English Pale garrison erased")
+check(ctl["Hammes_castle_lost_historical_garrison"]["stable_id"]=="hammes-castle-english-pale-pre1550-1558","Hammes final English Pale garrison erased")
 check(ctl["Hammes_castle_lost_historical_garrison"]["coordinates"] is None,"Hammes unsurveyed castle has fabricated map pin")
 check(all(s["Hailes_English_garrison_yearend"] is False for s in snap),"Hailes wrongly revived in later decade")
 check(all(s["Eyemouth_English_garrison_yearend"] is False for s in snap),"Old 1547 English Eyemouth wrongly revived after summer 1550")
 check(all((s["year"] < 1558) == s["Hammes_English_Pale_fort_without_geolocated_polygon"].startswith("English continued") for s in snap),"Hammes regional control changes fail 1558")
 check(all(x["properties"].get("fill_authorized") is False for x in delta["features"] if x["id"].startswith("delta-eyemouth")),"Eyemouth imaginary true historic polygon")
 check("SC-HES-HAILES-SOS-2019" in sources and "FR-RCT-GUINES-SIEGE-1558" in sources,"Hailes or Hammes official verification source missing")
-check(len(queue["tasks"])==queue["count"]==20,"new 1550s archive action list incomplete")
-print("PASS 1550s research: %s sources, %s events, 16 named sites, 13 dated map deltas, 8 dashed existing geographic outlines, 10 yearly snapshots, 9 inherited political identities, 2 legally contested Irish colony shires, 6 voyage references, zero fabricated period territorial polygons." % (len(sources),len(events["records"])))
+check(len(queue["tasks"])==queue["count"]==23,"new 1550s archive action list incomplete")
+
+# Source-backed Scottish-allied 1550s fortification stages (not sovereign annexations).
+check(len(events["records"])==29,"Missing Dunbar Inchkeith Leith and Eyemouth Hammes event corrections")
+check(len(sources)>=62,"Missing official HES and BL catalogue sources")
+check(len(ctl["Franco_Scottish_fortification_phases_1550s"])==3,"Dunbar, Inchkeith or Leith fort phases absent")
+for key,year in (("dunbar-french-allied-fort-built-1550",1550),("inchkeith-franco-scottish-fort-1556-1564",1556)):
+    check(key in site,"Missing verified Scottish French-built fort heritage Point: "+key)
+    check(site[key]["year_end_start"]==year and site[key]["Scottish_sovereignty_remains"] is True, "Allied fort mislabeled political controller: "+key)
+    check(site[key]["fill_authorized"] is False and site[key]["actual_historic_control_area"] is None, "Invented old military fort polygon: "+key)
+check(all(row["Dunbar_French_built_fort_architecture_active_reference_since_1550"] for row in snap),"Dunbar 1550 structure fails yearly carryover")
+check(all(row["Inchkeith_Franco_Scottish_fortification_phase_from_1556"]==(row["year"]>=1556) for row in snap),"Inchkeith 1556 timeline incorrect")
+check(all(row["Leith_French_defences_attested_from_1559"]==(row["year"]>=1559) for row in snap),"Leith French 1559 event chronology incorrect")
+check("leith-french-allied-fortifications-1559" in {x["stable_id"] for x in seed["place_controller_at_1559"]},"1559 Leith fort absent 1560 seed")
+check("inchkeith-franco-scottish-fort-1556-1564" in {x["stable_id"] for x in seed["place_controller_at_1559"]},"Inchkeith 1556-64 cross-decade fort missing")
+check("dunbar-french-allied-fort-built-1550" in {x["stable_id"] for x in seed["place_controller_at_1559"]},"Dunbar 1560 demolition next-decade handoff missing")
+check(all(row["period_surveys_authorizing_filled_polygons"]==0 for row in gap["year_end_matrix"]),"Unverified military boundaries copied into polygons")
+print("PASS 1550s research: %s sources, %s events, 18 named sites, 15 dated map deltas, 8 dashed existing geographic outlines, 10 yearly snapshots, 9 inherited political identities, 2 legally contested Irish colony shires, 6 voyage references, zero fabricated period territorial polygons." % (len(sources),len(events["records"])))
