@@ -1,0 +1,89 @@
+{
+  "schema": "aytv-cartography-release-v1",
+  "template_only": false,
+  "period": {
+    "start": 1560,
+    "end": 1569
+  },
+  "chapter_id": "chapterEighth",
+  "release_stage": "planned",
+  "source_research_prs": [],
+  "research_branch": "",
+  "editor_pr_url": null,
+  "yearend_reference_path": null,
+  "source_registry_path": null,
+  "map_delta_path": null,
+  "atlas_path": null,
+  "covered_stable_ids": [],
+  "critical_years": [
+    1560,
+    1569
+  ],
+  "material_changes": [],
+  "change_record_model": {
+    "id": "historical stable_id from previous or new evidence",
+    "year": null,
+    "change": "continued | gained | lost | recovered | disputed | unknown",
+    "control_class": "legal_sovereignty | effective_occupation | siege_dispute | temporary_raid | military_route | claim_only",
+    "map_layer": "territory | events",
+    "source_ids": [],
+    "geometry_status": "verified_period_polygon | official_site_point | dashed_schematic | no_geometry",
+    "area_counting_allowed": false,
+    "reason": "",
+    "notes": ""
+  },
+  "unresolved_history_questions": [
+    "Follow 1559→1560 English/Scottish/French/Irish political identities individually, do not reset or invent"
+  ],
+  "uncertainty_disposition": "preserve_unknown_and_block_solid_fill",
+  "boundary_provenance": {
+    "true_period_polygon_count": 0,
+    "schematic_polygon_count": 0,
+    "not_verified_restrictions": [
+      "no modern county as 1540s front",
+      "no occupied hectares from point/road buffers"
+    ],
+    "historic_geometry_licence_review": "pending"
+  },
+  "map_readiness": {
+    "source_citations_reviewed": false,
+    "annual_snapshots_checked": false,
+    "pr_editor_cherry_pick_confirmed": false,
+    "two_public_layers_verified": false,
+    "period_change_diffs_verified": false
+  },
+  "visual_acceptance": {
+    "status": "not_run",
+    "desktop": {
+      "status": "not_run",
+      "tested_years": [],
+      "evidence_url": null
+    },
+    "mobile": {
+      "status": "not_run",
+      "tested_years": [],
+      "evidence_url": null
+    },
+    "tested_critical_years": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": "Click territory & events separately/together, zoom out/in, see years changes and no false purple."
+  },
+  "ci_acceptance": {
+    "status": "not_run",
+    "run_url": null
+  },
+  "publication": {
+    "github_main_integration": false,
+    "pages_deployed": false,
+    "live_url": null,
+    "verified_at": null
+  },
+  "approval": {
+    "chief_editor": null,
+    "approved_at": null,
+    "decision": "pending"
+  },
+  "instructions": "On every new CHAPTER >=1550: fill source references into local checkout files, include a complete annual snapshot range, critical dates incl. first/end and disputed war changes, no P0 release blockers, recorded desktop/mobile browser evidence, actual CI run link, chief editor approval. Never mark published simply because a research PR exists.",
+  "notes": "Not started. Must inherit chapter7 final snapshot. No historical area geometry approved."
+}
