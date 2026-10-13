@@ -8,11 +8,108 @@
     "collection": "investigator_takeover_research_1530_1539",
     "source_branch": "research/territorial-1530-1539-20261013",
     "previous_chapter": "main/data/atlas-1520-1529.json",
-    "source_registry": "SOURCE_REGISTRY.json"
+    "source_registry": "SOURCE_REGISTRY.json",
+    "chief_editor_PR25_gap_analysis": "2026-10-13 targeted research additions; prior main published version requires manual data cherry-pick/update"
   },
   "editorial_status": "RESEARCH_PENDING_HISTORY_EDITOR",
-  "intro": "1530—1539年：英王继续控制加来及有限的爱尔兰行政中心。1534—1536爱尔兰基尔代尔叛乱及王室镇压改变个别城堡和庄园法权；威尔士边区法律重组，苏格兰独立。英国海外新增实测领土边界未获证明。",
+  "intro": "1530—1539年：延续加来、吉讷、都柏林的有限英王统治及特殊海岛法权，1531年莱克斯利普地方庄园权利仲裁、1532年加来英王军事治理实证与独立苏格兰司法改革；1534—1535基尔代尔叛乱，1535/36威尔士边区法定重组。所有控制古界仍以虚线或Point示意，不伪造领土面积。",
   "events": [
+    {
+      "id": "1530S-E025",
+      "year": 1531,
+      "start_year": 1531,
+      "end_year": 1531,
+      "visible_from": 1531,
+      "date_label": "1531-04-12 original legal matter described in county transcript",
+      "name": "莱克斯利普庄园继承与收益争议获得仲裁",
+      "category": "POL",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "location_not_authentically_verified",
+      "geography_label": "爱尔兰莱克斯利普庄园（会议地点未核实）",
+      "description": "基尔代尔郡图书馆转引PRONI D/3078/1/10及MIC 541/6：1531年4月12日玛格丽特与詹姆斯·菲茨杰拉德就Leixlip及周围地产权属争议进行仲裁，判给玛格丽特终身每年20英镑收益。此处是私人产权与地方税租关系，不能当作1531年英王新增占地或王室殖民现金收入；仲裁具体地点未记载，不强设坐标。",
+      "short_description": "基尔代尔郡图书馆转引PRONI D/3078/1/10及MIC 541/6：1531年4月12日玛格丽特与詹姆斯·菲茨杰拉德就Leixlip及周围地产权属争议进行仲裁，判给玛格丽特终身每年20英镑收益。此处是私人产权与地方税租关系，不能当作1531年英王新增占地或王室殖民现金收入；仲裁具体地点未记载，不强设坐标。",
+      "source_ids": [
+        "IR-KILDARE-LEIXLIP-1531",
+        "IR-PRONI-LEIXLIP-1531-MS"
+      ],
+      "certainty": "official_heritage_or_archived_secondary_transcription_not_historical_survey",
+      "significance": {
+        "level": 2
+      },
+      "colonial_profit": null,
+      "position_type": "chronology_only_without_fabricated_pin",
+      "editorial_status": "research_draft_awaits_editor",
+      "research_event_id": "1530S-E025",
+      "economic_fields": null,
+      "geographic_rule": "no_new_territorial_colonial_area",
+      "review_note": "local_estate_tenure_arbitration_no_royal_territorial_conquest"
+    },
+    {
+      "id": "1530S-E026",
+      "year": 1532,
+      "start_year": 1532,
+      "end_year": 1532,
+      "visible_from": 1532,
+      "date_label": "1532-10-25 Francis I enters English Calais as visiting monarch according Hall chronicle; Historic Royal Palaces corroborates 1532 meeting",
+      "name": "亨利八世在加来接待法王弗朗索瓦一世；加来城防持续运作",
+      "category": "POL",
+      "icon_code": "POL",
+      "lat": 50.9513,
+      "lng": 1.8587,
+      "geo_precision": "modern_Calais_city_diplomatic_event_English_garrison_continued",
+      "geography_label": "加来英王城镇防务中心（可定位），城墙及新桥堡具体城防线未实测",
+      "description": "官方英国皇家宫殿管理机构确认亨利八世与法王1532年在加来再会；都铎史家Edward Hall记载同年10月英王视察加来城墙、塔楼与防御工事，10月25日两王从布洛涅到加来，经过英方新桥堡、Rysbank和城门。法国国王是外交访客，绝不能因此将加来视为1532年法国占领区。",
+      "short_description": "官方英国皇家宫殿管理机构确认亨利八世与法王1532年在加来再会；都铎史家Edward Hall记载同年10月英王视察加来城墙、塔楼与防御工事，10月25日两王从布洛涅到加来，经过英方新桥堡、Rysbank和城门。法国国王是外交访客，绝不能因此将加来视为1532年法国占领区。",
+      "source_ids": [
+        "CAL-HRP-1532-MEETING",
+        "CAL-HALL-CHRONICLE-1532"
+      ],
+      "certainty": "official_heritage_or_archived_secondary_transcription_not_historical_survey",
+      "significance": {
+        "level": 1
+      },
+      "colonial_profit": null,
+      "position_type": "modern_English_Calais_reference",
+      "editorial_status": "research_draft_awaits_editor",
+      "research_event_id": "1530S-E026",
+      "economic_fields": null,
+      "geographic_rule": "no_new_territorial_colonial_area",
+      "review_note": "demonstrated_continuing_English_garrison_in_Calais_not_new_territory"
+    },
+    {
+      "id": "1530S-E027",
+      "year": 1532,
+      "start_year": 1532,
+      "end_year": 1532,
+      "visible_from": 1532,
+      "date_label": "1532 parliamentary reform institution date",
+      "name": "独立苏格兰王国重组最高民事法庭（Court of Session）",
+      "category": "POL",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "location_not_authentically_verified",
+      "geography_label": "苏格兰王国，爱丁堡（1532法庭真实原址未据本材料确定）",
+      "description": "苏格兰法院服务局与国家档案馆明确记载1532年詹姆斯五世时期设立常任受薪法官的司法制度，Court of Session记录由CS5转入CS6系列；苏格兰仍是独立王国，不能把本国法庭绘为英格兰治理。由于现代Parliament House建筑并不能代表1532年开庭实际房间，本事件暂不强加地理坐标。",
+      "short_description": "苏格兰法院服务局与国家档案馆明确记载1532年詹姆斯五世时期设立常任受薪法官的司法制度，Court of Session记录由CS5转入CS6系列；苏格兰仍是独立王国，不能把本国法庭绘为英格兰治理。由于现代Parliament House建筑并不能代表1532年开庭实际房间，本事件暂不强加地理坐标。",
+      "source_ids": [
+        "SC-SCTS-1532",
+        "SC-NRS-CS-1532"
+      ],
+      "certainty": "official_heritage_or_archived_secondary_transcription_not_historical_survey",
+      "significance": {
+        "level": 2
+      },
+      "colonial_profit": null,
+      "position_type": "chronology_only_without_fabricated_pin",
+      "editorial_status": "research_draft_awaits_editor",
+      "research_event_id": "1530S-E027",
+      "economic_fields": null,
+      "geographic_rule": "no_new_territorial_colonial_area",
+      "review_note": "independent_Scottish_institutional_reform_no_English_control"
+    },
     {
       "id": "1530S-E001",
       "year": 1533,
@@ -211,7 +308,7 @@
       "start_year": 1536,
       "end_year": 1536,
       "visible_from": 1536,
-      "date_label": "1536",
+      "date_label": "官方法令年1535／常见执行描述1536",
       "name": "威尔士及边区领主制开始依《威尔士法律法》重组",
       "category": "POL",
       "icon_code": "POL",
@@ -222,7 +319,8 @@
       "description": "法律史上的1535年法令（27 Hen. 8 c.26，常以1536年执行及叙述）将威尔士及边区领主制纳入英格兰法院和郡县安排。当地不是1536年突然被英格兰从外国征服的国土。",
       "short_description": "法律史上的1535年法令（27 Hen. 8 c.26，常以1536年执行及叙述）将威尔士及边区领主制纳入英格兰法院和郡县安排。当地不是1536年突然被英格兰从外国征服的国土。",
       "source_ids": [
-        "WAL-UK-LEG-1535"
+        "WAL-UK-LEG-1535",
+        "WLS-1535-ACT-SECTIONS"
       ],
       "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
       "significance": {
@@ -234,7 +332,7 @@
       "research_event_id": "1530S-E007",
       "economic_fields": null,
       "geographic_rule": "no_territorial_area_inferred_from_event",
-      "review_note": "legal_internal_administrative_reform_not_new_conquest"
+      "review_note": "Legal statute explicitly 1535 27 Hen VIII c26; conventional 1536 implementation. Do not paint modern Wales as new conquest."
     },
     {
       "id": "1530S-E008",
@@ -367,6 +465,38 @@
       "review_note": "resistance_internal_English_kingdom"
     },
     {
+      "id": "1530S-E023",
+      "year": 1536,
+      "start_year": 1536,
+      "end_year": 1536,
+      "visible_from": 1536,
+      "date_label": "1536",
+      "name": "伦敦商人理查德·霍尔组织船队抵达纽芬兰",
+      "category": "EXP",
+      "icon_code": "EXP",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "not_verified_for_map",
+      "geography_label": "纽芬兰（具体登陆地未获证实）",
+      "description": "1536年Richard Hore商业及航海远征到纽芬兰捕鱼和考察。Quinn校勘指出后世Hakluyt版本相互矛盾，无法确认全部航线或某些逸闻；不能画英国殖民地或杜撰固定航线。",
+      "short_description": "1536年Richard Hore商业及航海远征到纽芬兰捕鱼和考察。Quinn校勘指出后世Hakluyt版本相互矛盾，无法确认全部航线或某些逸闻；不能画英国殖民地或杜撰固定航线。",
+      "source_ids": [
+        "NA-DCB-HORE-QUINN",
+        "NA-MUN-CARTIER-HORE"
+      ],
+      "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
+      "significance": {
+        "level": 2
+      },
+      "colonial_profit": null,
+      "position_type": "chronology_only",
+      "editorial_status": "research_draft_awaits_editor",
+      "research_event_id": "1530S-E023",
+      "economic_fields": null,
+      "geographic_rule": "no_territorial_area_inferred_from_event",
+      "review_note": "voyage_without_settlement_or_governance"
+    },
+    {
       "id": "1530S-E012",
       "year": 1537,
       "start_year": 1537,
@@ -428,6 +558,39 @@
       "economic_fields": null,
       "geographic_rule": "no_territorial_area_inferred_from_event",
       "review_note": "Scottish_sovereign_fortification_not_English"
+    },
+    {
+      "id": "1530S-E024",
+      "year": 1537,
+      "start_year": 1537,
+      "end_year": 1537,
+      "visible_from": 1537,
+      "date_label": "1537",
+      "name": "爱尔兰议会通过英语、衣着及行为习惯同化法令",
+      "category": "REP",
+      "icon_code": "REP",
+      "lat": 53.3498,
+      "lng": -6.2603,
+      "geo_precision": "verified_modern_place_or_archaeological_reference_not_historical_walls",
+      "geography_label": "都柏林立法，爱尔兰各地执行程度不明",
+      "description": "1537年《英式秩序、服饰及语言法》试图限制爱尔兰传统衣着与语言，法条记载1539年5月部分条款生效。法律意图确凿，但不得由此断言所有盖尔居民实际改用英语或英王治理全岛。",
+      "short_description": "1537年《英式秩序、服饰及语言法》试图限制爱尔兰传统衣着与语言，法条记载1539年5月部分条款生效。法律意图确凿，但不得由此断言所有盖尔居民实际改用英语或英王治理全岛。",
+      "source_ids": [
+        "IR-CAMBRIDGE-LANGUAGE-1537",
+        "IR-CAMBRIDGE-STATUTE-1537",
+        "IR-CONNOLLY-STATUTE-1536-37"
+      ],
+      "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
+      "significance": {
+        "level": 1
+      },
+      "colonial_profit": null,
+      "position_type": "modern_site_reference",
+      "editorial_status": "research_draft_awaits_editor",
+      "research_event_id": "1530S-E024",
+      "economic_fields": null,
+      "geographic_rule": "no_territorial_area_inferred_from_event",
+      "review_note": "coercive_anglicisation_legislation_enforcement_not_proven"
     },
     {
       "id": "1530S-E014",
@@ -499,25 +662,26 @@
       "start_year": 1538,
       "end_year": 1538,
       "visible_from": 1538,
-      "date_label": "1538",
+      "date_label": "year",
       "name": "切特西修道院建筑被拆，石材供应王室宫殿",
       "category": "ECO",
       "icon_code": "ECO",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not_verified_for_map",
+      "lat": 51.393451,
+      "lng": -0.500148,
+      "geo_precision": "Modern Historic England scheduled Abbey site. The abbey/site is relevant to dismantling, not geographic footprint of stone shipments.",
       "geography_label": "英格兰萨里",
-      "description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。",
-      "short_description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。",
+      "description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。 修道院遗址现址可由英国历史环境机构的保护遗址名录定位，遗址界并非1538年王室财产的历史边界。",
+      "short_description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。 修道院遗址现址可由英国历史环境机构的保护遗址名录定位，遗址界并非1538年王室财产的历史边界。",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-CHERTSEY-HE-SITE"
       ],
       "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
       "significance": {
         "level": 2
       },
       "colonial_profit": null,
-      "position_type": "chronology_only",
+      "position_type": "modern_archaeological_monastery_site_only_no_extent",
       "editorial_status": "research_draft_awaits_editor",
       "research_event_id": "1530S-E016",
       "economic_fields": null,
@@ -530,25 +694,27 @@
       "start_year": 1538,
       "end_year": 1538,
       "visible_from": 1538,
-      "date_label": "1538",
+      "date_label": "1538 surrender according TNA E322/39 and Historic England scheduled monument; Grade I listing describes final dissolution 1540; separate dates not reconciled",
       "name": "比沙姆修道院向英王政府交出地产",
       "category": "ECO",
       "icon_code": "ECO",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not_verified_for_map",
+      "lat": 51.5577,
+      "lng": -0.7798,
+      "geo_precision": "Modern Bisham Abbey building historical landmark, not surveyed Tudor ecclesiastical estate boundary",
       "geography_label": "英格兰伯克郡",
-      "description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。",
-      "short_description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。",
+      "description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。 英国Historic England两处官方名录用语存在1538交还与1540解散的纪年差别，资料暂保留1538交还的来源主张，不能据此断言已于1538年完全废除所有机构活动。",
+      "short_description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。 英国Historic England两处官方名录用语存在1538交还与1540解散的纪年差别，资料暂保留1538交还的来源主张，不能据此断言已于1538年完全废除所有机构活动。",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-BISHAM-HE-SITE",
+        "ENG-BISHAM-HE-BUILDING"
       ],
       "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
       "significance": {
         "level": 3
       },
       "colonial_profit": null,
-      "position_type": "chronology_only",
+      "position_type": "modern_archaeological_monastery_site_only_no_extent",
       "editorial_status": "research_draft_awaits_editor",
       "research_event_id": "1530S-E017",
       "economic_fields": null,
@@ -714,71 +880,6 @@
       "economic_fields": null,
       "geographic_rule": "no_territorial_area_inferred_from_event",
       "review_note": "fortification_program_not_overseas_claim"
-    },
-    {
-      "id": "1530S-E023",
-      "year": 1536,
-      "start_year": 1536,
-      "end_year": 1536,
-      "visible_from": 1536,
-      "date_label": "1536",
-      "name": "伦敦商人理查德·霍尔组织船队抵达纽芬兰",
-      "category": "EXP",
-      "icon_code": "EXP",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not_verified_for_map",
-      "geography_label": "纽芬兰（具体登陆地未获证实）",
-      "description": "1536年Richard Hore商业及航海远征到纽芬兰捕鱼和考察。Quinn校勘指出后世Hakluyt版本相互矛盾，无法确认全部航线或某些逸闻；不能画英国殖民地或杜撰固定航线。",
-      "short_description": "1536年Richard Hore商业及航海远征到纽芬兰捕鱼和考察。Quinn校勘指出后世Hakluyt版本相互矛盾，无法确认全部航线或某些逸闻；不能画英国殖民地或杜撰固定航线。",
-      "source_ids": [
-        "NA-DCB-HORE-QUINN",
-        "NA-MUN-CARTIER-HORE"
-      ],
-      "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
-      "significance": {
-        "level": 2
-      },
-      "colonial_profit": null,
-      "position_type": "chronology_only",
-      "editorial_status": "research_draft_awaits_editor",
-      "research_event_id": "1530S-E023",
-      "economic_fields": null,
-      "geographic_rule": "no_territorial_area_inferred_from_event",
-      "review_note": "voyage_without_settlement_or_governance"
-    },
-    {
-      "id": "1530S-E024",
-      "year": 1537,
-      "start_year": 1537,
-      "end_year": 1537,
-      "visible_from": 1537,
-      "date_label": "1537",
-      "name": "爱尔兰议会通过英语、衣着及行为习惯同化法令",
-      "category": "REP",
-      "icon_code": "REP",
-      "lat": 53.3498,
-      "lng": -6.2603,
-      "geo_precision": "verified_modern_place_or_archaeological_reference_not_historical_walls",
-      "geography_label": "都柏林立法，爱尔兰各地执行程度不明",
-      "description": "1537年《英式秩序、服饰及语言法》试图限制爱尔兰传统衣着与语言，法条记载1539年5月部分条款生效。法律意图确凿，但不得由此断言所有盖尔居民实际改用英语或英王治理全岛。",
-      "short_description": "1537年《英式秩序、服饰及语言法》试图限制爱尔兰传统衣着与语言，法条记载1539年5月部分条款生效。法律意图确凿，但不得由此断言所有盖尔居民实际改用英语或英王治理全岛。",
-      "source_ids": [
-        "IR-CAMBRIDGE-LANGUAGE-1537",
-        "IR-CAMBRIDGE-STATUTE-1537",
-        "IR-CONNOLLY-STATUTE-1536-37"
-      ],
-      "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
-      "significance": {
-        "level": 1
-      },
-      "colonial_profit": null,
-      "position_type": "modern_site_reference",
-      "editorial_status": "research_draft_awaits_editor",
-      "research_event_id": "1530S-E024",
-      "economic_fields": null,
-      "geographic_rule": "no_territorial_area_inferred_from_event",
-      "review_note": "coercive_anglicisation_legislation_enforcement_not_proven"
     }
   ],
   "places": [
@@ -936,6 +1037,31 @@
       "carryover_from": "main/data/atlas-1520-1529.json",
       "editorial_note": "1530s historical polity continuity carried as research candidate; islands need local 1530s record verification; never exact administrative area",
       "geometry_status": "Point/patterned relationship only; ancient boundary not surveyed"
+    },
+    {
+      "id": "channel-guernsey",
+      "name": "根西岛：英王王室属地与岛内皇家法院（1530年代延续）",
+      "lat": 49.45,
+      "lng": -2.5333,
+      "status": "crown_dependency_separate_bailiwick",
+      "description": "英王任命驻岛总督的历史延续及当地皇家法院制度均有根西政府和议会官方历史资料支持。属于独立制度的王室属地；已有根西现代海岛参考范围，但此前缺独立政治地点。1530年代不属于英格兰郡县。",
+      "source_ids": [
+        "GUE-GOV-HOUSE-HISTORY",
+        "GUE-PARLIAMENT-ROYAL-COURT",
+        "GUE-UK-MOJ-CROWN",
+        "GUE-GETTY-ST-PETER"
+      ],
+      "icon_code": "TER",
+      "geo_precision": "Getty modern St Peter Port centre; no 1530 court or precise original island boundary",
+      "certainty": "constitutional_institutional_presence_high_historical_border_not_verified",
+      "state_type": "crown_dependency_with_local_judiciary",
+      "start_year": 1500,
+      "observed_through_year": 1539,
+      "end_year": null,
+      "carryover_from": "main/data/territorial-footprints-1497-1539.geojson:guernsey-crown-island-outline",
+      "data_purpose": "add_missing_already_existing_political_place_symbol_not_new_territorial_conquest",
+      "editorial_note": "Guernsey polity and island footprint existed before 1530; do not mistakenly portray year 1530 as annexation or mix with Jersey.",
+      "geometry_status": "Point only, modern context coastline previously in main; no Tudor coastline surveyed."
     }
   ],
   "sources": [
@@ -1341,6 +1467,146 @@
       "evidence_read_level": "government_statute_contents_read",
       "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
       "precision_warning": "Regnal/sessional dating 1535, often described as 1536 enactment. Do not mistake for newly conquered sovereign Wales; no ancient polygons extracted."
+    },
+    {
+      "id": "IR-KILDARE-LEIXLIP-1531",
+      "title": "Leixlip Chronology 1500–1549, 1531 12 April manor arbitration and 1538/39 grants",
+      "publisher": "Kildare County Libraries eHistory / John Colgan",
+      "url": "https://kildarelibraries.ie/ehistory/leixlip-chronology-1500-1549/",
+      "kind": "county_public_library_research_transcribing_older_records",
+      "evidence_read_level": "county-public-library research text read, original PRONI deeds/manuscripts NOT examined",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "£20/year is court-ordered income/life interest, NOT Crown tax receipt or colonial profits. Repeal/session date 1536/37 disputed scholarly vs local chronology."
+    },
+    {
+      "id": "IR-PRONI-LEIXLIP-1531-MS",
+      "title": "PRONI D/3078/1/10, original 12 April 1531 Leixlip manor arbitral document",
+      "publisher": "Public Record Office of Northern Ireland, ref cited in Kildare County Libraries",
+      "url": "https://kildarelibraries.ie/ehistory/leixlip-chronology-1500-1549/",
+      "kind": "original_archive_document_identifier_via_secondary_transcription",
+      "evidence_read_level": "Original archived document NOT opened; only library's citation and description read",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Do not assert direct paleographic verification or that 1531 manor boundary accurately surveyed."
+    },
+    {
+      "id": "CAL-HRP-1532-MEETING",
+      "title": "Field of Cloth of Gold: 1532 second meeting at Calais",
+      "publisher": "Historic Royal Palaces",
+      "url": "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/the-field-of-cloth-of-gold/",
+      "kind": "official_national_heritage_historical_explanation",
+      "evidence_read_level": "public heritage page opened",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "English-held Calais context, but 1532 court visit doesn't give Pale parish outer border."
+    },
+    {
+      "id": "CAL-HALL-CHRONICLE-1532",
+      "title": "Edward Hall, The Union of the Two Noble and Illustre Families of Lancastre and Yorke, 1532 entries",
+      "publisher": "Edward Hall contemporary Tudor chronicle, transcription All About History",
+      "url": "https://www.allabouthistory.co.uk/History/m7/Halls-Chronicle-1532",
+      "kind": "contemporary_written_historical_narrative_online_transcription",
+      "evidence_read_level": "Hall chronicle edited online transcription read, not original 1548 printing pages",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Date details chronicle vs other contemporaneous accounts vary 15/16 October for French embassies; no historic fortress polygons; 1532 French monarch VISITING Calais is not French military rule."
+    },
+    {
+      "id": "SC-SCTS-1532",
+      "title": "Court of Session founded/reorganized 1532, Scottish supreme civil court",
+      "publisher": "Scottish Courts and Tribunals Service",
+      "url": "https://www.scotcourts.gov.uk/courts-and-tribunals/the-supreme-courts/the-court-of-session/",
+      "kind": "Scottish_official_court_institutional_history",
+      "evidence_read_level": "Scottish official judiciary page read",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Court established/reformed 1532; old Session body existed before, avoid asserting Scotland had no courts before 1532."
+    },
+    {
+      "id": "SC-NRS-CS-1532",
+      "title": "Court of Session records CS5 (through 1532) and CS6 (1532–1559)",
+      "publisher": "National Records of Scotland official catalogue",
+      "url": "https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?r=GD45%2F12&reference=CS",
+      "kind": "national_archival_finding_aid",
+      "evidence_read_level": "NRS detailed catalogue read",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Court institution not Crown English administration or annexation."
+    },
+    {
+      "id": "WLS-1535-ACT-SECTIONS",
+      "title": "Laws in Wales Act 1535 (27 Henry VIII c.26) sections on marcher lordship county annexation",
+      "publisher": "UK Legislation / The National Archives",
+      "url": "https://www.legislation.gov.uk/aep/Hen8/27/26/contents",
+      "kind": "official_legislation_statute_contents",
+      "evidence_read_level": "official source table of contents; not full clause-by-clause original manuscript",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Legal shire names are verifiable, their original sixteenth-century polygons NOT. Statute Year 1535; familiar 1536 execution requires distinction."
+    },
+    {
+      "id": "GUE-GOV-HOUSE-HISTORY",
+      "title": "History of Past Governors and Lieutenant-Governors in the Bailiwick of Guernsey",
+      "publisher": "Government House Guernsey official Crown representative",
+      "url": "https://www.governmenthouse.gg/the-role-of-the-lieutenant-governor-in-the-bailiwick-of-guernsey/history-past-governors-and-lieutenant-governors/",
+      "kind": "official_guernsey_crown_heritage",
+      "evidence_read_level": "government historic office webpage",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "No year-specific 1530 bailiff personnel name confirmed by official source; do not miscall Guernsey directly English shire."
+    },
+    {
+      "id": "GUE-PARLIAMENT-ROYAL-COURT",
+      "title": "States of Deliberation P.2024/52 appendix: History of the Royal Court",
+      "publisher": "States of Guernsey parliament",
+      "url": "https://parliament.gg/parliamentary-business/assets/propositions/p2024-52",
+      "kind": "official_guernsey_parliament_archival_history",
+      "evidence_read_level": "Official 2024 PDF appendix excerpt; modern historical summary",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Early local court in town is NOT map of its jurisdiction/1530 court building."
+    },
+    {
+      "id": "GUE-UK-MOJ-CROWN",
+      "title": "Crown Dependencies: Jersey, Guernsey and the Isle of Man",
+      "publisher": "UK Ministry of Justice",
+      "url": "https://www.gov.uk/government/publications/crown-dependencies-jersey-guernsey-and-the-isle-of-man",
+      "kind": "official_uk_constitutional_guidance",
+      "evidence_read_level": "government constitutional overview (modern)",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Modern constitutional statement cannot alone certify all sixteenth-century institutional details; pair historic Government House record."
+    },
+    {
+      "id": "GUE-GETTY-ST-PETER",
+      "title": "Getty Thesaurus of Geographic Names: St Peter Port Guernsey ID 7017233",
+      "publisher": "J. Paul Getty Trust research vocabulary",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=1039921&nation=&place=&subjectid=7017233",
+      "kind": "institutional_geographic_authority",
+      "evidence_read_level": "institutional gazetteer verified",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Town center only, not 1530 royal court building or colonial shorelines."
+    },
+    {
+      "id": "ENG-CHERTSEY-HE-SITE",
+      "title": "Chertsey Abbey Scheduled Monument 1008524",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1008524",
+      "kind": "official_historic_site",
+      "evidence_read_level": "published monument register",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Do not interpret modern protected area as Tudor actual manor perimeter."
+    },
+    {
+      "id": "ENG-BISHAM-HE-SITE",
+      "title": "Bisham Abbey archaeological site (NHLE 1007934)",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1007934",
+      "kind": "official_heritage_monastery_archaeology",
+      "evidence_read_level": "official scheduled monument listing",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Historic England's Grade I Listed Building record NHLE 1303584 instead describes dissolution in 1540; exact surrender/cessation status needs dating of original E322/39. Modern site is not 1538 land boundary."
+    },
+    {
+      "id": "ENG-BISHAM-HE-BUILDING",
+      "title": "Bisham Abbey Grade I Listed Building NHLE 1303584",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1303584",
+      "kind": "official_heritage_building_history",
+      "evidence_read_level": "official Grade I heritage listing",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Disputed dates must be separated by legal surrender/refoundation/final dissolution; present structure partially later."
     }
   ],
   "routes": [],
@@ -1359,7 +1625,7 @@
     "do_not_change_approved_UI": true
   },
   "publication": {
-    "status": "research_not_published",
+    "status": "research_edit_candidate_updated_not_auto_published",
     "historical_border_approved_polygons": 0,
     "editor_review_required": true,
     "source_originals_not_claimed_read": true
