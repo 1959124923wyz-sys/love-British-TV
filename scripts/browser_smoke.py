@@ -132,7 +132,7 @@ try:
     verify("Crown Calais controls lost at 1529/1530",
            "document.querySelectorAll('#map .control-area-label').length>=0", driver)
     driver.save_screenshot(str(OUT / "chapter5-1530.png"))
-    for annual, expected in [(1533,1),(1534,3),(1535,6),(1536,12),(1537,15),(1538,19),(1539,24)]:
+    for annual, expected in [(1531,1),(1532,3),(1533,4),(1534,6),(1535,9),(1536,15),(1537,18),(1538,22),(1539,27)]:
         set_year(annual, expected)
     verify("1539 lost 1535 Maynooth event",
            "document.querySelector('#eventList').textContent.includes('梅努斯城堡')", driver)
@@ -141,7 +141,7 @@ try:
     set_year(1529, 24)
     verify("Fifth chapter archive leaked into fourth",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
-    set_year(1535, 6)
+    set_year(1535, 9)
     maynooth = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1530S-E004"]')
     zoom_before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(maynooth).perform()
@@ -157,8 +157,8 @@ try:
     current = driver.execute_script("return document.getElementById('bigYear').textContent")
     driver.execute_script("document.querySelector('#centuryNav [data-century=\"1700\"]').click()")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
-    verify("century browser must retain three decade slots",
-           "document.querySelectorAll('#chapterTrack .chapter-segment').length===3", driver)
+    verify("century browser must retain five decade slots",
+           "document.querySelectorAll('#chapterTrack .chapter-segment').length===5", driver)
     verify("1700s century is not a published map",
            "document.querySelector('#chapterTrack [data-decade=\"1700\"]').classList.contains('unpublished')", driver)
     driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1700\"]').click()")
@@ -168,8 +168,8 @@ try:
       document.querySelector('#centuryNav [data-century="1400"]').click();
       for(let i=0;i<50;i++)document.getElementById('browseDecadeNext').click();
     """)
-    verify("500-year navigation rendered more than three chapter cards",
-           "document.querySelectorAll('#chapterTrack .chapter-segment').length<=3", driver)
+    verify("500-year navigation rendered more than five chapter cards",
+           "document.querySelectorAll('#chapterTrack .chapter-segment').length===5", driver)
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     # A return to a published chapter works even after browsing centuries ahead.
     driver.execute_script("document.querySelector('#centuryNav [data-century=\"1500\"]').click()")
@@ -178,6 +178,15 @@ try:
     wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent==='1500'"))
     verify("decade-local year slider must cover 1500–1509, not all 500 years",
            "document.getElementById('yearRange').min==='1500'&&document.getElementById('yearRange').max==='1509'", driver)
+    # Arrow advances an entire half-century, not a single decade.
+    driver.execute_script("document.getElementById('browseDecadeNext').click()")
+    verify("first half-century arrow did not show 1550–1599",
+           "document.querySelectorAll('#chapterTrack .chapter-segment').length===5 && document.querySelector('#chapterTrack [data-decade=\"1550\"]') && document.querySelector('#chapterTrack [data-decade=\"1590\"]')", driver)
+    assert driver.execute_script("return document.getElementById('bigYear').textContent")=="1500"
+    driver.execute_script("document.getElementById('browseDecadePrev').click()")
+    verify("previous arrow did not return to 1500–1549",
+           "document.querySelector('#chapterTrack [data-decade=\"1500\"]') && document.querySelector('#chapterTrack [data-decade=\"1540\"]')", driver)
+    driver.save_screenshot(str(OUT / "half-century-5-chapters.png"))
     # Change one year with the third-tier slider and check chronology.
     driver.execute_script("""
       const el=document.getElementById('yearRange');
@@ -191,7 +200,7 @@ try:
           const cards=[...document.querySelectorAll('#chapterTrack .chapter-segment')];
           return {count:cards.length,smallest:Math.min(...cards.map(x=>x.getBoundingClientRect().width)),overflow:document.querySelector('#chapterTrack').scrollWidth-document.querySelector('#chapterTrack').clientWidth};
         """)
-        assert dims['count']<=3 and dims['smallest']>=70 and dims['overflow']<=2, f"Timeline clipped at {width}px: {dims}"
+        assert dims['count']==5 and dims['smallest']>=60 and dims['overflow']<=2, f"Timeline clipped at {width}px: {dims}"
     driver.save_screenshot(str(OUT / "three-tier-century-decade-year.png"))
     browser = driver.get_log("browser")
     critical = [x["message"] for x in browser if re.search(r"Uncaught (TypeError|ReferenceError|SyntaxError)|Uncaught \w+Error", x["message"])]
