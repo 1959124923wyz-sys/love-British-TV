@@ -1,0 +1,455 @@
+{
+  "type": "FeatureCollection",
+  "name": "1540-1549 differentiated historical continuing polities and dated actual English garrison sites",
+  "metadata": {
+    "period": {
+      "from": 1540,
+      "to": 1549
+    },
+    "inherited_1539_named_polities": 7,
+    "newly_observed_fort_or_city_garrisons": 7,
+    "dating_rule": "Only display confirmed garrisons at year end: Inchcolm 1547 only, Haddington 1548 only, English Boulogne 1544–1549, Broughty/Eyemouth 1547–1549, Lauder 1548–1549, Hailes 1548 confirmed and 1549 uncertain.",
+    "inferred_polygon_area_uses": "none",
+    "active_timeline_source": "CONTROL_TRANSITION_1539_1549.json",
+    "note": "The Scottish kingdom remains independent even during local English garrison occupation."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "control-calais-crown",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8587,
+          50.9513
+        ]
+      },
+      "properties": {
+        "name": "加来：英王在法国的控制据点",
+        "stable_id": "calais-crown",
+        "role": "inherited_royal_city_or_distinct_political_status",
+        "political_status": "english-crown-controlled-city",
+        "controller": "Kingdom of England / its Crown officers",
+        "year_end_start": 1540,
+        "year_end_stop": 1549,
+        "actually_verified_modern_site_anchor": true,
+        "verified_1540s_historic_border": false,
+        "city_symbol_only": true,
+        "is_English_colonial_conquest": false,
+        "existing_not_newly_conquered": true,
+        "source_ids": [
+          "TNA-FRENCH-LANDS"
+        ],
+        "source_reference": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
+        "uncertainty": "Current Atlas prior political identity continues, but no period-specific exact original border inferred."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-dublin-pale",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "name": "都柏林：英王在爱尔兰的行政核心之一",
+        "stable_id": "dublin-pale",
+        "role": "inherited_royal_city_or_distinct_political_status",
+        "political_status": "crown-administration-city",
+        "controller": "Kingdom of England / its Crown officers",
+        "year_end_start": 1540,
+        "year_end_stop": 1549,
+        "actually_verified_modern_site_anchor": true,
+        "verified_1540s_historic_border": false,
+        "city_symbol_only": true,
+        "is_English_colonial_conquest": false,
+        "existing_not_newly_conquered": true,
+        "source_ids": [
+          "EGAN-2024-EHR"
+        ],
+        "source_reference": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
+        "uncertainty": "Current Atlas prior political identity continues, but no period-specific exact original border inferred."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-channel-jersey",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1313,
+          49.2144
+        ]
+      },
+      "properties": {
+        "name": "泽西岛：英王属地",
+        "stable_id": "channel-jersey",
+        "role": "inherited_royal_city_or_distinct_political_status",
+        "political_status": "crown-dependency",
+        "controller": "English Crown dependency, separate local law",
+        "year_end_start": 1540,
+        "year_end_stop": 1549,
+        "actually_verified_modern_site_anchor": true,
+        "verified_1540s_historic_border": false,
+        "city_symbol_only": true,
+        "is_English_colonial_conquest": false,
+        "existing_not_newly_conquered": true,
+        "source_ids": [
+          "JERSEY-HISTORY-GOV"
+        ],
+        "source_reference": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
+        "uncertainty": "Current Atlas prior political identity continues, but no period-specific exact original border inferred."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-isle-of-man",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.56,
+          54.235
+        ]
+      },
+      "properties": {
+        "name": "马恩岛：特殊领主制度",
+        "stable_id": "isle-of-man",
+        "role": "inherited_royal_city_or_distinct_political_status",
+        "political_status": "autonomous-lordship",
+        "controller": "autonomous local lordship",
+        "year_end_start": 1540,
+        "year_end_stop": 1549,
+        "actually_verified_modern_site_anchor": true,
+        "verified_1540s_historic_border": false,
+        "city_symbol_only": true,
+        "is_English_colonial_conquest": false,
+        "existing_not_newly_conquered": true,
+        "source_ids": [
+          "CAMBRIDGE-LORDSHIP-MAN"
+        ],
+        "source_reference": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
+        "uncertainty": "Current Atlas prior political identity continues, but no period-specific exact original border inferred."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-orkney-scotland",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1,
+          59
+        ]
+      },
+      "properties": {
+        "name": "奥克尼：苏格兰王权相关群岛",
+        "stable_id": "orkney-scotland",
+        "role": "inherited_royal_city_or_distinct_political_status",
+        "political_status": "scottish-crown-territory",
+        "controller": "Kingdom of Scotland (independent)",
+        "year_end_start": 1540,
+        "year_end_stop": 1549,
+        "actually_verified_modern_site_anchor": true,
+        "verified_1540s_historic_border": false,
+        "city_symbol_only": true,
+        "is_English_colonial_conquest": false,
+        "existing_not_newly_conquered": true,
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ],
+        "source_reference": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
+        "uncertainty": "Current Atlas prior political identity continues, but no period-specific exact original border inferred."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-shetland-scotland",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.15,
+          60.15
+        ]
+      },
+      "properties": {
+        "name": "设得兰：苏格兰王权相关群岛",
+        "stable_id": "shetland-scotland",
+        "role": "inherited_royal_city_or_distinct_political_status",
+        "political_status": "scottish-crown-territory",
+        "controller": "Kingdom of Scotland (independent)",
+        "year_end_start": 1540,
+        "year_end_stop": 1549,
+        "actually_verified_modern_site_anchor": true,
+        "verified_1540s_historic_border": false,
+        "city_symbol_only": true,
+        "is_English_colonial_conquest": false,
+        "existing_not_newly_conquered": true,
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ],
+        "source_reference": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
+        "uncertainty": "Current Atlas prior political identity continues, but no period-specific exact original border inferred."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-guines-crown-1520s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "name": "吉讷：加来边区英王军事与定居管理中心",
+        "stable_id": "guines-crown-1520s",
+        "role": "inherited_royal_city_or_distinct_political_status",
+        "political_status": "English-Crown-guines-fortified-border-district",
+        "controller": "Kingdom of England / its Crown officers",
+        "year_end_start": 1540,
+        "year_end_stop": 1549,
+        "actually_verified_modern_site_anchor": true,
+        "verified_1540s_historic_border": false,
+        "city_symbol_only": true,
+        "is_English_colonial_conquest": false,
+        "existing_not_newly_conquered": true,
+        "source_ids": [
+          "CAL-ROYAL-HRP-1520",
+          "CAL-MURPHY-2025-GUINES"
+        ],
+        "source_reference": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
+        "uncertainty": "Current Atlas prior political identity continues, but no period-specific exact original border inferred."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-boulogne-english-1544-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6169,
+          50.7256
+        ]
+      },
+      "properties": {
+        "stable_id": "boulogne-english-1544-1550",
+        "name": "布洛涅英王驻军与殖民治理城市核心",
+        "year_end_start": 1544,
+        "year_end_stop": 1549,
+        "confirmed_control_through_year": 1549,
+        "historical_actual_end_year": 1550,
+        "political_status": "foreign_English_conquered_urban_core",
+        "controller": "English Crown",
+        "source_ids": [
+          "FR-MURPHY-2019-BOULOGNE",
+          "FR-MURPHY-2019-SETTLE",
+          "FR-BOULOGNE-MUSEUM-SITE"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_or_urban_core_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": true,
+        "is_temporary_Scottish_occupation": false,
+        "uncertainty": "Military conquest 1544, English king garrison city until 1550; map modern old château centroid not historic border"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-broughty-english-1547-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87022,
+          56.46293
+        ]
+      },
+      "properties": {
+        "stable_id": "broughty-english-1547-1550",
+        "name": "布劳蒂城堡1547—1549英军驻守",
+        "year_end_start": 1547,
+        "year_end_stop": 1549,
+        "confirmed_control_through_year": 1549,
+        "historical_actual_end_year": 1550,
+        "political_status": "English_military_fort_within_Scottish_sovereign_kingdom",
+        "controller": "English garrison/Scottish independent kingdom",
+        "source_ids": [
+          "SC-HES-BROUGHTY",
+          "SC-HES-BROUGHTY-SITE"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_or_urban_core_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Captured 1547, not returned before end of 1549; no entire Dundee territorial control"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-inchcolm-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.30171,
+          56.03001
+        ]
+      },
+      "properties": {
+        "stable_id": "inchcolm-english-1547-1548",
+        "name": "因奇科姆岛英军驻营（1548年3月撤）",
+        "year_end_start": 1547,
+        "year_end_stop": 1547,
+        "confirmed_control_through_year": 1547,
+        "historical_actual_end_year": 1548,
+        "political_status": "short_English_island_garrison_in_Scottish_waters",
+        "controller": "English garrison/Scottish independent kingdom",
+        "source_ids": [
+          "SC-HES-INCHCOLM",
+          "SC-UVA-INCHCOLM-SITE"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_or_urban_core_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Show at 1547 yearend ONLY; abandoned March 1548, highlight exit event in 1548"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-haddington-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.77198,
+          55.95332
+        ]
+      },
+      "properties": {
+        "stable_id": "haddington-english-1548-1549",
+        "name": "哈丁顿城英军围城驻防（1549年撤）",
+        "year_end_start": 1548,
+        "year_end_stop": 1548,
+        "confirmed_control_through_year": 1548,
+        "historical_actual_end_year": 1549,
+        "political_status": "English_town_garrison_in_Scottish_sovereign_kingdom",
+        "controller": "English garrison/Scottish independent kingdom",
+        "source_ids": [
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-HADDINGTON-SITE"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_or_urban_core_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Show at 1548 year-end only; empty after 1549 withdrawal"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-lauder-english-1548-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.74838,
+          55.71936
+        ]
+      },
+      "properties": {
+        "stable_id": "lauder-english-1548-1550",
+        "name": "劳德尔1548—1549英军要塞",
+        "year_end_start": 1548,
+        "year_end_stop": 1549,
+        "confirmed_control_through_year": 1549,
+        "historical_actual_end_year": 1550,
+        "political_status": "English_supply_fort_in_independent_Scotland",
+        "controller": "English garrison/Scottish independent kingdom",
+        "source_ids": [
+          "SC-HES-LAUDER",
+          "SC-LAUDER-MODERN-LOC"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_or_urban_core_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Fort controlled until 1550 per HES, point is modern Lauder town not exact former bastion"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-eyemouth-fort-English-1547-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09156,
+          55.87731
+        ]
+      },
+      "properties": {
+        "stable_id": "eyemouth-fort-English-1547-1550",
+        "name": "埃茅斯炮台1547—1549英军驻守",
+        "year_end_start": 1547,
+        "year_end_stop": 1549,
+        "confirmed_control_through_year": 1549,
+        "historical_actual_end_year": 1550,
+        "political_status": "English_trace_italienne_fort_inside_independent_Scotland",
+        "controller": "English garrison/Scottish independent kingdom",
+        "source_ids": [
+          "SC-CALDWELL-EYEMOUTH",
+          "SC-HES-EYEMOUTH-FORT-SM4577",
+          "SC-EYEMOUTH-GEOGRAPH-PIN"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_or_urban_core_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Eyemouth archaeologically attested original fort 1547 until 1550; modern fort location approximate"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-hailes-english-1548-date_unknown",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6832,
+          55.973
+        ]
+      },
+      "properties": {
+        "stable_id": "hailes-english-1548-date_unknown",
+        "name": "海尔斯城堡英军占领（1549存续待核）",
+        "year_end_start": 1548,
+        "year_end_stop": 1548,
+        "confirmed_control_through_year": 1548,
+        "historical_actual_end_year": null,
+        "political_status": "English_allied_local_lordship_and_garrison",
+        "controller": "English soldiers with allied Hugh Douglas/Scottish kingdom",
+        "source_ids": [
+          "SC-HES-2022-HAILES",
+          "SC-HES-HAILES-MONUMENT"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_or_urban_core_point",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": true,
+        "uncertainty": "Evidence for 1548 castle garrison; 1549 status unknown, DO NOT mark known retreat or silently carry confirmed control"
+      }
+    }
+  ]
+}
