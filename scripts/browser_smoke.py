@@ -228,7 +228,16 @@ try:
            """document.querySelector('#chapterTrack [data-decade="1540"].active')!==null""", driver)
     verify("old Calais historical footprint was reset in 1540",
            "document.querySelectorAll('#map .atlas-territory-solid').length>=1", driver)
+    set_year(1541,2)
+    verify("Irish Crown Act title still has untranslated political status words",
+           """'领主辖区' in document.querySelector('#eventList').textContent && '王国' in document.querySelector('#eventList').textContent && !document.querySelector('#eventList').textContent.includes('Lordship')""", driver)
     set_year(1544,11)
+    verify("duplicate native browser title still overlays styled historical tooltip",
+           """document.querySelectorAll('#map .leaflet-marker-icon[title]').length===0""", driver)
+    verify("year-end occupation is not communicated on the map",
+           """document.querySelector('#controlStatus').textContent.includes('英军局部驻点 3处')""", driver)
+    verify("pixel-sized occupation ring is not visibly larger than an event icon",
+           """document.querySelector('.atlas-local-english-garrison')?.getAttribute('stroke-dasharray')==='6 4'""", driver)
     verify("1544 Boulogne and Lochmaben occupation sites not rendered",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===3", driver)
     set_year(1545,17)
@@ -250,6 +259,10 @@ try:
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
     verify("1549 French defensive Outreau missing",
            "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
+    verify("1549 site count or source uncertainty hidden",
+           """document.querySelector('#controlStatus').textContent.includes('英军局部驻点 7处') && document.querySelector('#controlStatus').textContent.includes('续驻待核')""", driver)
+    verify("French resistance ring missing at year-end",
+           """document.querySelector('.atlas-french-counterfort')?.getAttribute('stroke-dasharray')==='3 5'""", driver)
     verify("Sixth decade slider not restricted to 1540–1549",
            "document.querySelector('#yearRange').min==='1540' && document.querySelector('#yearRange').max==='1549'", driver)
     zoom_1549=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
