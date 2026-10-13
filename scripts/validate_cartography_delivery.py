@@ -297,6 +297,12 @@ def self_test():
                 "period": {"start": 1550, "end": 1559}, "release_stage": "research_candidate",
                 "critical_years": [1550, 1558, 1559], "unresolved_history_questions": []}
         (root / RELEASE_DIR / "1550-1559.json").write_text(json.dumps(card), encoding="utf-8")
+        # Leave a legacy release card so removing chapter seven tests the
+        # missing-per-period guard rather than just the empty-directory guard.
+        baseline = dict(card, chapter_id="chapterSixth",
+                        period={"start": 1540, "end": 1549},
+                        release_stage="legacy_integrated", critical_years=[1540, 1549])
+        (root / RELEASE_DIR / "1540-1549.json").write_text(json.dumps(baseline), encoding="utf-8")
         errs = audit(root)
         assert any("not approved" in i for i in errs), errs
         assert any("not acknowledged" in i for i in errs), errs
