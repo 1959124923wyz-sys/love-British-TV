@@ -56,6 +56,6 @@ assert.ok(list.includes('fullArchive||occurredByYear(e,year)'), 'sidebar fails t
 assert.ok(list.includes('a.year-b.year'), 'sidebar not chronological');
 assert.ok(points.includes('!occurredByYear(e,year)'), 'map markers bypass year gate');
 assert.ok(points.includes("if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;"), 'map routes bypass year gate');
-assert.ok(milestones.includes('y>=1497&&y<=year'), 'timeline shows future milestones');
+assert.ok(milestones.includes('e.year>=chapter.start&&e.year<=year'), 'timeline shows future milestones');
 assert.ok(js.includes("$('showFullChapterArchive').checked=false;"), 'archive unexpectedly defaults to future preview');
 console.log('OK: 1497-1519 chronology, voyage routes, timeline markers and sustained cities');

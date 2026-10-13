@@ -63,8 +63,8 @@ require(".leaflet-tooltip.atlas-hover{" in css,
         "compact historical-tooltip style")
 
 require('id="yearRange"' in html
-        and 'id="chapterOne"' in html
-        and 'id="chapterTwo"' in html,
+        and 'id="centuryNav"' in html
+        and 'id="chapterTrack"' in html,
         "chapter navigation and year timeline")
 require("renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app,
         "chapter-long events plus persistent state updates")
@@ -74,7 +74,7 @@ require("renderPoliticalRelationAreas()" in app and "togglePoliticalRelations" i
 require("renderTerritories()" in app and "territoryPane" in app and "toggleTerritorialFootprints" in html,
         "historically sourced territorial footprints and permanent Calais spatial continuity")
 require("year>=1502?'1502':'—'" in app and "year>=1513?'1513':'—'" in app, "future-year chapter cards stay hidden")
-require("y<=year" in app and "y>=1497&&y<=year" in app,
+require("e.year>=chapter.start&&e.year<=year" in app and "chapterForYear(year)" in app,
         "milestone dots only appear on or after the current year")
 require("!occurredByYear(e,year)" in app and "fullArchive||occurredByYear(e,year)" in app and "showFullChapterArchive" in html, "chronological events with explicitly accessible chapter archive")
 require("data/historical-detail-notes.json" in app

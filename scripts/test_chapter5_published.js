@@ -46,13 +46,13 @@ assert.ok(fifth.events.some(e=>e.id==='1530S-E004'&&e.year===1535));
 assert.ok(fifth.events.some(e=>e.id==='1530S-E023'&&e.lat===null&&e.lng===null),
  'Richard Hore voyage must not receive fictional precise map coordinates');
 assert.ok(fifth.events.some(e=>e.id==='1530S-E024'&&e.year===1537));
-assert.ok(html.includes('id="chapterFifth"')&&html.includes('max="1539"'));
-assert.ok(html.includes('app.js?v=chapter5-v150'));
+assert.ok(JSON.parse(read('data/chapters.json')).chapters.some(c=>c.id==='chapterFifth'&&c.end===1539)&&html.includes('id="yearRange"'));
+assert.ok(html.includes('app.js?v=timeline-v160'));
 assert.ok(app.includes("fetch('data/atlas-1530-1539.json'"));
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1539.geojson'"));
 assert.ok(app.includes("fetch('data/political-relations-1500-1539.geojson'"));
-assert.ok(app.includes("Math.min(1539")&&app.includes("year===1539"));
-assert.ok(app.includes('y>=1497&&y<=year')&&app.includes('((y-1497)/42*100)'));
+assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("year===lastPublishedYear"));
+assert.ok(app.includes('e.year>=chapter.start&&e.year<=year')&&app.includes('((y-chapter.start)/span*100)'));
 assert.ok(app.includes('fullArchive||occurredByYear(e,year)'),'Unoccurred chapter events leaked');
 assert.ok(app.includes('atlasFifth?.sources'),'fifth chapter source citations not available to dossier');
 assert.ok(app.includes("focusedEventId"),'sidebar event location must remain available');
