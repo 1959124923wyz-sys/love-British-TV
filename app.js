@@ -66,6 +66,9 @@ let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let a
 // Browsing the multi-century navigator never changes the verified year on the map.
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1539; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;
+// Resolve continuing political identities even when their first detailed entry is in a later chapter.
+const findPlaceAcrossChapters=id=>[atlas,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
+ .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 // Transient focus target; historical event coordinates remain immutable.
 let focusedEventId=null,focusRequestToken=0;
@@ -398,11 +401,7 @@ function renderTerritories(){
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.history_description)+'</div>',
       {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',()=>{
-    const place=(atlas?.places||[]).find(x=>x.id===p.source_place_id) ||
-      (atlasLater?.places||[]).find(x=>x.id===p.source_place_id) ||
-      (atlasThird?.places||[]).find(x=>x.id===p.source_place_id) ||
-      (atlasFourth?.places||[]).find(x=>x.id===p.source_place_id) ||
-      (atlasFifth?.places||[]).find(x=>x.id===p.source_place_id);
+    const place=findPlaceAcrossChapters(p.source_place_id);
     if(place){openDossier(place,'place');return}
     const citations=(p.source_urls||[]).filter(x=>/^https:\/\//.test(x))
      .map(url=>'<p><a href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看地理与史料来源 ↗</a></p>').join('');
@@ -424,7 +423,8 @@ function renderPoliticalRelationAreas(){
   const radius=p.render_radius_px||19;
   const uid=String(f.id).replace(/[^a-z0-9]/gi,'-');
   // Crosshatch and diagonal hatch encode type of political relationship, not a measured island perimeter.
-  const stripe='<svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">'+
+  // Political relationships use a compact fallback glyph, not a map-sized patterned disk.
+  const stripe='<svg data-polity-id="'+escapeHTML(uid)+'" viewBox="0 0 44 44" width="26" height="26" xmlns="http://www.w3.org/2000/svg">'+
    '<defs><pattern id="pat-'+uid+'" width="8" height="8" patternUnits="userSpaceOnUse">'+
    '<path d="M-2 8 L8 -2 M2 10 L10 2" stroke="'+color+'" stroke-width="2" opacity=".8"/>'+
    (p.render_mode==='crosshatched_bounded_symbol'?'<path d="M-2 0 L8 10 M2 -2 L10 6" stroke="'+color+'" stroke-width="1.4" opacity=".65"/>':'')+
@@ -432,8 +432,8 @@ function renderPoliticalRelationAreas(){
    '<circle cx="22" cy="22" r="'+radius+'" fill="#10283e" fill-opacity=".67" stroke="'+color+'" stroke-width="2.8"/>'+
    '<circle cx="22" cy="22" r="'+(radius-2)+'" fill="'+(p.render_mode==='solid_bounded_symbol'||p.render_mode==='scottish_solid_symbol'?color:'url(#pat-'+uid+')')+'" fill-opacity="'+(p.render_mode==='solid_bounded_symbol'||p.render_mode==='scottish_solid_symbol'?'.52':'.85')+'"/>'+
    '</svg>';
-  const icon=L.divIcon({className:'political-relation-symbol',html:stripe,iconSize:[44,44],iconAnchor:[22,22]});
-  const place=(atlas.places||[]).find(q=>q.id===p.source_place_id);
+  const icon=L.divIcon({className:'political-relation-symbol',html:stripe,iconSize:[26,26],iconAnchor:[13,13]});
+  const place=findPlaceAcrossChapters(p.source_place_id);
   L.marker(center,{icon,pane:'controlAreaPane',zIndexOffset:0,bubblingMouseEvents:false})
    .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.annotation)+'</div>',
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
@@ -463,11 +463,7 @@ function renderControlAreas(){
    .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.description)+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',()=>{
-    const record=(atlas.places||[]).find(q=>q.id===p.source_place_id)
-      ||(atlasThird?.places||[]).find(q=>q.id===p.source_place_id)
-      ||(atlasLater?.places||[]).find(q=>q.id===p.source_place_id)
-      ||(atlasFourth?.places||[]).find(q=>q.id===p.source_place_id)
-      ||(atlasFifth?.places||[]).find(q=>q.id===p.source_place_id);
+    const record=findPlaceAcrossChapters(p.source_place_id);
     if(record)openDossier(record,'place');
    }).addTo(groups.controlAreas);
   // Low-key geo-label shows which urban area changes, with no blocking background.
