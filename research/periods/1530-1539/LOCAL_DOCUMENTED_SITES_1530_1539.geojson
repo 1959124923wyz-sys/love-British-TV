@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "name": "1530-1539 extra documented place anchors — NOT authoritative 16th century estate boundaries",
+  "metadata": {
+    "precise_estate_polygons_verified": 0,
+    "source_register": "SOURCE_REGISTRY.json",
+    "purpose": "Provide localized historical research references without inventing where arbitration courts sat or exact manor extent. Original Irish National Grid heritage reference and modern sourced WGS84 landmark only."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "leixlip-1531-manor-location-reference",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.49068,
+          53.36199
+        ]
+      },
+      "properties": {
+        "name": "莱克斯利普城堡／庄园1531仲裁所涉地产：现址参考",
+        "historical_period": "1531-1539",
+        "source_ids": [
+          "IR-KILDARE-LEIXLIP-1531",
+          "IR-PRONI-LEIXLIP-1531-MS",
+          "IR-LEIXLIP-HERITAGE-BUILDING"
+        ],
+        "certainty": "Documented manor title and location, not place where 12 April 1531 arbitration session actually convened",
+        "position_source": "Leixlip Castle modern heritage coordinate approximately 53.36199 -6.49068, National Inventory of Architectural Heritage grid 300531 235679; modern building incorporates much later 1837 reconstruction",
+        "role": "estate_subject_geographic_reference_only",
+        "event_type": "legal_estate_arbitration_and_later_crown_legal_resumption",
+        "historical_1530s_boundary_verified": false,
+        "measured_area_sqkm": null,
+        "fill_authorized": false,
+        "render_style": "question_point_with_optional_dashed_small_screen_symbol",
+        "actual_manor_locality_names": [
+          "Leixlip",
+          "Simonstown",
+          "Newtown",
+          "Colfich",
+          "Coghlanston",
+          "Stacumny",
+          "Aderrig",
+          "Balmadur"
+        ],
+        "location_role_warning": "1531 arbitration VENUE unknown. This modern castle location is the disputed PROPERTY anchor, not courtroom location nor estate boundary.",
+        "not_whole_kildare_county": true
+      }
+    }
+  ]
+}
