@@ -7,12 +7,13 @@
       "to": 1549
     },
     "inherited_1539_named_polities": 7,
-    "newly_observed_fort_or_city_garrisons": 9,
+    "newly_observed_fort_or_city_garrisons": 11,
     "dating_rule": "Only display confirmed garrisons at year end: Inchcolm 1547 only, Haddington 1548 only, English Boulogne 1544–1549, Broughty/Eyemouth 1547–1549, Lauder 1548–1549, Hailes 1548 confirmed and 1549 uncertain.",
     "inferred_polygon_area_uses": "none",
     "active_timeline_source": "CONTROL_TRANSITION_1539_1549.json",
     "note": "The Scottish kingdom remains independent even during local English garrison occupation.",
-    "dunglass_caution": "Site coordinate is HES designated garden reference, English hill camp is WEST of the house and its true borders are NOT pinpointed."
+    "dunglass_caution": "Site coordinate is HES designated garden reference, English hill camp is WEST of the house and its true borders are NOT pinpointed.",
+    "important_1549_distinction": "Ambleteuse and Boulemberg ended 1549; occupied English Boulogne core continued through 1549. Two separate mapped site layers."
   },
   "features": [
     {
@@ -513,6 +514,76 @@
         "is_English_colonial_conquest": false,
         "is_temporary_Scottish_occupation": true,
         "uncertainty": "Coordinate modern East Lothian Dunglass landscape reference; military encampment on west-of-house hill and unknown accurate walls; not the Dunglass Castle in West Dunbartonshire. Dismantled shortly after 1548-49, exact month unknown."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-ambleteuse-english-fort-1546-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6072222,
+          50.8102778
+        ]
+      },
+      "properties": {
+        "stable_id": "ambleteuse-english-fort-1546-1549",
+        "name": "阿姆布勒特斯／Slack英军炮台：1546—1548年末，1549年8月25日失去",
+        "year_end_start": 1546,
+        "year_end_stop": 1548,
+        "confirmed_control_through_year": 1548,
+        "historical_actual_end_year": 1549,
+        "historical_actual_end_month": 8,
+        "political_status": "English Tudor military outpost inside France, distinct from occupied Boulogne city",
+        "controller": "English Crown garrison / French reconquest 1549",
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-MUNICIPAL-AMBLETEUSE-1549",
+          "FR-AMBLETEUSE-MODERN-GAZETTEER"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_modern_location_reference",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": false,
+        "uncertainty": "Modern Ambleteuse town centre, NOT sixteenth-century citadel or late-Vauban fort.",
+        "continuity_note": "This outpost ends in 1549 even though Boulogne urban core remained English until 1550."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-boulemberg-english-fort-1546-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.65893,
+          50.71777
+        ]
+      },
+      "properties": {
+        "stable_id": "boulemberg-english-fort-1546-1549",
+        "name": "蒙朗贝尔Boulemberg英军外围炮台：1546—1548年末，1549年撤军",
+        "year_end_start": 1546,
+        "year_end_stop": 1548,
+        "confirmed_control_through_year": 1548,
+        "historical_actual_end_year": 1549,
+        "historical_actual_end_month": null,
+        "political_status": "English Tudor military outpost inside France, distinct from occupied Boulogne city",
+        "controller": "English Crown garrison / French reconquest 1549",
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-RCT-BOULOGNE-MAP1549",
+          "FR-MONTLAMBERT-MODERN-LOCATOR"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_fort_modern_location_reference",
+        "actual_1540s_wall_survey_verified": false,
+        "area_sqkm": null,
+        "is_English_colonial_conquest": false,
+        "is_temporary_Scottish_occupation": false,
+        "uncertainty": "Modern Mont Lambert locality reference; exact 1546 Boulemberg fort hilltop footprint unknown.",
+        "continuity_note": "This outpost ends in 1549 even though Boulogne urban core remained English until 1550."
       }
     }
   ]
