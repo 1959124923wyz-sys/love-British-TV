@@ -56,14 +56,17 @@ for(const t of ["function openTerritoryDossier(feature,kind='historic')","openTe
  "renderWartimeVicinities();renderContestedZones();renderWartimeControls();","renderer:sovereigntyRenderer",
  "fetch('data/war-occupied-zones-1540-1549.geojson'","fetch('data/war-contested-zones-1540-1549.geojson'"])
  assert.ok(app.includes(t),t+' missing');
-assert.ok(app.includes("map.getZoom()>9")&&app.includes("map.getZoom()>8"),'High zoom must hide schematic buffers and manual war polygons');
+assert.ok(!app.includes('map.getZoom()>9')&&!app.includes('map.getZoom()>8'),'Uncertain war zones should persist while zooming instead of suddenly vanishing');
 assert.ok(!app.includes("map.flyTo("),'Clicking territorial polygons must not change zoom');
 assert.ok(app.includes('map.getPane(\'warVicinityPane\').style.zIndex=\'463\''),'Occupied site clickable above theater stripes');
 assert.ok(app.includes('map.getPane(\'contestedZonePane\').style.zIndex=\'462\''),'Theater must be clickable above base sovereignty');
 assert.ok(app.includes('activeEnglishGarrisonIds()'),'Occupation surfaces must be gated by historical year-end garrisons');
-assert.ok(html.includes('<div id="controlStatus"')&&html.includes('swatch contested-war'),'Need an actual multiline year control panel and clear two-color legend');
-assert.ok(html.includes('app.js?v=timeline-v173')&&html.includes('css/dark-atlas-v2.css?v=timeline-v173'));
-assert.ok(css.includes('grid-template-columns:max-content minmax(0,1fr)'));
-assert.ok(css.includes('.zone-dossier-facts')&&css.includes('.control-status-value'));
+assert.ok(!html.includes('id="controlStatus"')&&!app.includes('renderAnnualControlSummary'),'Delete the unwanted statistics box in both DOM and JS');
+assert.ok(html.includes('swatch contested-war'),'Keep contested zone legend');
+assert.ok(html.includes('app.js?v=timeline-v174')&&html.includes('css/dark-atlas-v2.css?v=timeline-v174'));
+assert.ok(css.includes('display:inline-flex!important'),'Year title must remain compact after removing statistic rows');
+assert.ok(css.includes('.zone-dossier-facts')&&!css.includes('.control-status-value'));
 assert.ok(css.includes('.atlas-contested-zone')&&css.includes('pointer-events:visiblePainted'));
-console.log('PASS historic clickable polygons, compact annual status, ten sourced garrison references, four clearly-uncertain war theaters and 1540–1549 correct visibility');
+assert.ok(app.includes('function openMapTerritoryAt(latlng)')&&app.includes('function featureContainsCoordinate(feature,lon,lat)'),'Real map click fallback needed for source-based territory intros');
+assert.ok(!app.includes("map.getZoom()>8")&&!app.includes("map.getZoom()>9"),'Avoid sudden disappearance at high zoom');
+console.log('PASS historical territory hit testing, removed badge, continuous war zone zoom and source-qualified chronology');
