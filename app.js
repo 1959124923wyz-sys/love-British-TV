@@ -28,6 +28,12 @@ map.getPane('territoryPane').style.zIndex='455';
 const territoryRenderer=L.svg({pane:'territoryPane'});
 // The base map prefers Canvas; precise year-end garrison markers need an explicit SVG layer.
 const wartimeRenderer=L.svg({pane:'controlAreaPane'});
+// Narrow invisible annulus ABOVE event icons restores access to occupied-zone
+// information where a 30–40px event hub covers the entire small site symbol.
+// Its middle remains transparent/click-through so events still work.
+map.createPane('garrisonHitPane');
+map.getPane('garrisonHitPane').style.zIndex='620';
+const garrisonHitRenderer=L.svg({pane:'garrisonHitPane'});
 // The optional schematic area layer is below true site symbols; high zoom uses points only.
 map.createPane('warVicinityPane');map.getPane('warVicinityPane').style.zIndex='463';
 map.getPane('warVicinityPane').style.pointerEvents='auto';
@@ -39,7 +45,7 @@ const contestedZoneRenderer=L.svg({pane:'contestedZonePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -591,6 +597,7 @@ function renderContestedZones(){
 }
 function renderWartimeControls(){
  groups.wartimeControl.clearLayers();
+ groups.garrisonHit.clearLayers();
  if(year<1540||!militaryControlPoints||!$('toggleControlAreas').checked)return;
  for(const f of militaryControlPoints.features||[]){
   const p=f.properties||{},coords=f.geometry?.coordinates;
@@ -605,6 +612,12 @@ function renderWartimeControls(){
   const linkedOccupiedZone=!french?(occupiedZoneAreas?.features||[]).find(z=>
     z.properties?.zone_type==='occupied'&&z.properties?.stable_id===p.stable_id&&
     yearValidWarZone(z,year)):null;
+  const showGarrisonInfo=e=>{
+    if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+    if(linkedOccupiedZone)openTerritoryDossier(linkedOccupiedZone,'occupied');
+    else if(record)openDossier(record,'place');
+    else openTerritoryDossier(f,french?'historic':'occupied');
+  };
   L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:map.getZoom()>=6?19:17,weight:3,
    color:french?'#58c6b7':'#d1acfd',opacity:.98,
    dashArray:french?'3 5':'6 4',fill:true,fillColor:color,fillOpacity:.09,
@@ -613,13 +626,20 @@ function renderWartimeControls(){
    .bindTooltip('<strong>'+escapeHTML(p.name||record?.name||'驻军据点')+'</strong><div class="atlas-hover-summary">'+
      escapeHTML(french?'法国守军 · 非英王控制':linkedOccupiedZone?'点击查看军控概略范围、年份与相关堡垒':'英军实际驻点 · 非整个地区的疆界')+'</div>',
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
-   .on('click',e=>{
-     if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
-     if(linkedOccupiedZone)openTerritoryDossier(linkedOccupiedZone,'occupied');
-     else if(record)openDossier(record,'place');
-     else openTerritoryDossier(f,french?'historic':'occupied');
-    })
+   .on('click',showGarrisonInfo)
    .addTo(groups.wartimeControl);
+  // The actual map hit target sits just OUTSIDE the event hub. Not a
+  // territorial radius: a screen-pixel interaction only, no SVG fill.
+  L.circleMarker(center,{
+    renderer:garrisonHitRenderer,pane:'garrisonHitPane',
+    radius:map.getZoom()>=6?24:23,weight:9,
+    color:french?'#5bb6a2':'#d1acfd',opacity:.001,fill:false,
+    className:'atlas-garrison-hit',interactive:true,bubblingMouseEvents:false
+  }).on('click',showGarrisonInfo)
+   .bindTooltip('<strong>'+escapeHTML(p.name||record?.name||'军事据点')+
+     '</strong><div class="atlas-hover-summary">点击了解该驻点的控制概况及史料</div>',
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+   .addTo(groups.garrisonHit);
  }
 }
 function renderHypotheses(){
