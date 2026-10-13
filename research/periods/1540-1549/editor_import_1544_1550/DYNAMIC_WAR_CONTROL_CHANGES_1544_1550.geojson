@@ -1,0 +1,420 @@
+{
+  "type": "FeatureCollection",
+  "name": "1547-1550 official place history control changes with honesty on years",
+  "metadata": {
+    "schema": "ch6_to_ch7_map_delta_point_v1",
+    "version": "2026-10-13",
+    "source_ledger": "SOURCE_LEDGER.json",
+    "zero_exact_historical_control_polygons": true,
+    "editor_import": "Only append delta features whose ids not already represented by main; existing Hailes/Haddington records have existing event IDs listed to prevent duplicate",
+    "year1548_sensitive": "Saltoun, Yester English year-end unknown. Fast Castle 1549 chronologically conflicted.",
+    "year1550_sensitive": "Broughty Feb, Boulogne Apr25, Eyemouth summer; other west English garrisons need actual date not automatic 1550 extension."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "delta-castlemilk-english-capture-1547",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.33393,
+          55.08534
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1547,
+        "change_year": 1547,
+        "month": 9,
+        "date_precision": "month",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "卡斯尔米尔克向英军投降",
+        "stable_id": "castlemilk-dumfriesshire-english-1547",
+        "change_type": "English_capture_established_yearend",
+        "controller_before": "Scottish local tower holder",
+        "controller_after": "English garrison",
+        "year_end_English_confirmed": true,
+        "source_ids": [
+          "MAP1547-TROVE-CASTLEMILK",
+          "MAP1547-RCAHMS-DUMFRIES1920"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-lochwood-english-capture-1547",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.44192,
+          55.25667
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1547,
+        "change_year": 1547,
+        "month": null,
+        "date_precision": "year",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "英军夺取洛赫伍德塔堡",
+        "stable_id": "lochwood-tower-english-1547",
+        "change_type": "English_capture_established_yearend",
+        "controller_before": "Scottish local tower holder",
+        "controller_after": "English garrison",
+        "year_end_English_confirmed": true,
+        "source_ids": [
+          "MAP1547-TROVE-LOCHWOOD",
+          "MAP1547-RCAHMS-DUMFRIES1920"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-dumfries-English-garrison-1547",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.61223,
+          55.06988
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1547,
+        "change_year": 1547,
+        "month": null,
+        "date_precision": "year",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "邓弗里斯市镇出现英军驻扎",
+        "stable_id": "dumfries-english-garrison-1547",
+        "change_type": "English_garrison_attested_yearend",
+        "controller_before": "Scottish burgh administration not wholly erased",
+        "controller_after": "English garrison in burgh, not whole shire",
+        "year_end_English_confirmed": true,
+        "source_ids": [
+          "MAP1547-ATLAS1996",
+          "MAP1547-TROVE-DUMFRIES"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-saltoun-English-episode-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.86426,
+          55.90609
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1548,
+        "change_year": 1548,
+        "month": null,
+        "date_precision": "year",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "萨尔顿1548年英军军事占领事件（反复易手）",
+        "stable_id": "saltoun-english-episode-1548",
+        "change_type": "English_temporary_capture_and_contested_recapture",
+        "controller_after": "disputed Scottish-English, English yearend unproven",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1548-TROVE-SALTOUN",
+          "MAP1547-ATLAS1996"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-yester-English-garrison-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.71099,
+          55.8912
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1548,
+        "change_year": 1548,
+        "month": null,
+        "date_precision": "year",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "耶斯特城堡1548年英军驻堡事件",
+        "stable_id": "yester-castle-english-episode-1548",
+        "change_type": "historical_English_garrison_event_not_proven_yearend",
+        "controller_after": "English presence in year; precise last yearend unresolved",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1548-TROVE-YESTER",
+          "MAP1547-ATLAS1996"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-hailes-Scots-recapture-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6832,
+          55.973
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1548,
+        "change_year": 1548,
+        "month": null,
+        "date_precision": "year",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "苏军1548年收复海尔斯，英军当年已退出",
+        "stable_id": "hailes-english-1548-date_unknown",
+        "change_type": "English_occupation_ended_Scottish_retake",
+        "controller_after": "Scotland",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1548-HES-HAILES-SOS"
+        ],
+        "already_published_main_event_id": "1540S-ED-HAILES-1548-SCOTTISH-RETURN",
+        "import_as_duplicate_event": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-haddington-english-exit-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.77198,
+          55.95332
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1549,
+        "change_year": 1549,
+        "month": 9,
+        "date_precision": "month",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "哈丁顿英军1549年9月撤离",
+        "stable_id": "haddington-english-1548-1549",
+        "change_type": "English_garrison_ended_Scottish_restoration",
+        "controller_after": "Scottish state with French allied support",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1548-HES-HADDINGTON"
+        ],
+        "already_published_main_event_id": "1540S-024",
+        "import_as_duplicate_event": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-Broughty-FrancoScottish-return-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87022,
+          56.46293
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1550,
+        "change_year": 1550,
+        "month": 2,
+        "date_precision": "month",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "1550年2月苏法军队夺回布劳蒂城堡",
+        "stable_id": "broughty-english-1547-1550",
+        "change_type": "English_garrison_ended_Scottish_restoration_French_military_alliance",
+        "controller_after": "Scottish kingdom (Franco-Scottish forces)",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1550-HES-BROUGHTY",
+          "MAP1550-HES-BROUGHTY-SOS"
+        ],
+        "balgillo_north_outwork_taken_previous_day": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-Boulogne-French-handover-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6169,
+          50.7256
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1550,
+        "change_year": 1550,
+        "month": 4,
+        "date_precision": "day",
+        "source_file": "SOURCE_LEDGER.json",
+        "day": 25,
+        "name": "1550年4月25日法国正式收回布洛涅",
+        "stable_id": "boulogne-english-1544-1550",
+        "change_type": "English_garrison_and_municipal_rule_ended_French_state_recovery",
+        "controller_after": "French crown",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1550-BOULOGNE-RESEARCH"
+        ],
+        "treaty_signed": "1550-03-24",
+        "handover_date": "1550-04-25"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-Eyemouth-English-exit-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09156,
+          55.87731
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1550,
+        "change_year": 1550,
+        "month": null,
+        "date_precision": "summer",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "1550年夏英军退出埃茅斯炮台",
+        "stable_id": "eyemouth-fort-English-1547-1550",
+        "change_type": "English_fort_garrison_ended",
+        "controller_after": "Scottish sovereign territory, NOT French allied fort until 1557",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1550-EYEMOUTH-ARCH"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-Forthill-English-end-by-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87601,
+          56.47487
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1550,
+        "change_year": 1550,
+        "month": null,
+        "date_precision": "year",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "福特希尔英军外围驻堡在1550年停止；具体撤军日不明",
+        "stable_id": "forthill-english-fort-1548-1550",
+        "change_type": "English_outwork_control_ended_by_1550_yearend",
+        "controller_after": "Scottish territorial authority",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1550-HES-BROUGHTY"
+        ],
+        "exact_day_unknown": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-Fast-Castle-control-dispute-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.22404,
+          55.93228
+        ]
+      },
+      "properties": {
+        "type": "point_control_transition_not_historical_front_boundary",
+        "historic_polygon_approved": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "geometry_precision": "heritage_place_point_only",
+        "map_disclaimer": "地点坐标不等于当时战争控制边界",
+        "year": 1549,
+        "change_year": 1549,
+        "month": null,
+        "date_precision": "year",
+        "source_file": "SOURCE_LEDGER.json",
+        "name": "法斯特城堡1549年英军驻防和修堡年份存在冲突",
+        "stable_id": "fast-castle-english-episode-1547-1549-disputed",
+        "change_type": "archival_conflict_not_an_asserted_capture",
+        "controller_after": "disputed not resolved",
+        "year_end_English_confirmed": false,
+        "source_ids": [
+          "MAP1547-ATLAS1996",
+          "MAP1549-TROVE-FASTCASTLE"
+        ],
+        "map_render": "disputed_history_only",
+        "never_paint_1549_English_area": true
+      }
+    }
+  ]
+}
