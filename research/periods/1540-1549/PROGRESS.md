@@ -80,3 +80,9 @@
 - **仍缺**：获许可且已测绘的1544–50法兰西控制乡村／苏格兰堡墙界；Hailes 1548/49的原档准确退出；1549后Scottish堡完整撤离日；法军Outreau古要塞中心；布洛涅被占房产逐户账册、真实海外净收益。未核仍仅Point/虚线/null，真实确界新增Polygon=0。
 
 **验证范围**：研究JSON结构与新GeoJSON坐标及关联ID将单独执行远端回读断言；不声称1540s手动Actions自动运行或已取得原图重绘许可。
+
+### 重要历史疆域纠错｜Hailes官方1548年同年收复（2026-10-13）
+
+主编P0 Hailes缺口意外获得**苏格兰历史环境局官方**更明确资料：[Hailes Castle Statement of Significance，印刷p.2/7（PDF第4页）](https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/22c5de1a-d6b9-40e0-b131-b02800bb45fb)。官方明确说英军1548年夺取、苏军**同年不久收复**，并据传将铁门运至爱丁堡。故旧研究「1548年末英军仍占、1549年未知」**须撤销**；按地图年末规则，**1548和1549两年末不得涂英占**。确切收复月日未核，原Bain《Hamilton Papers》II卷616页仍待查。
+
+研究分支已同步：`SOURCE_REGISTRY`新增HES来源至82；`CONTROL_TRANSITION_1539_1549`中1548和1549年末转入结束；`ACTIVE_CONTROL_PLACES`不再把Hailes列为持续占领，21个地图长期／年末Point；`ATLAS_REVIEW_CANDIDATE`保留原夺取事件但移除英军持续地点，附HES来源到候审索引66条；`CHRONOLOGY`写入苏格兰当年收复；`MAP_DELTA`增苏军收复变化点且不宣称古界；`TRANSITION_1549_1550`移除Hailes未确定占领、记为1548已终结；`validate_research.py`新增不得在1548或1549年末误画英占自动断言。主编正式第六章数据属于另一发布流程，需选择性移植。
