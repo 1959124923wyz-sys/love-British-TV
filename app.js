@@ -26,6 +26,8 @@ const voyageRenderer=L.svg({pane:'voyagePane'});
 map.createPane('territoryPane');
 map.getPane('territoryPane').style.zIndex='455';
 const territoryRenderer=L.svg({pane:'territoryPane'});
+// The base map prefers Canvas; precise year-end garrison markers need an explicit SVG layer.
+const wartimeRenderer=L.svg({pane:'controlAreaPane'});
 const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
@@ -488,7 +490,7 @@ function renderWartimeControls(){
   const color=french?'#5bb6a2':'#ca9966';
   const center=[coords[1],coords[0]];
   const record=findPlaceAcrossChapters(p.stable_id);
-  L.circleMarker(center,{pane:'controlAreaPane',radius:6,weight:2,
+  L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:6,weight:2,
    color:french?'#c5e5db':'#f5d1a0',fillColor:color,fillOpacity:.88,
    className:french?'atlas-french-counterfort':'atlas-local-english-garrison',
    bubblingMouseEvents:false})
@@ -694,9 +696,9 @@ function openPolity(group){
  const title=group==='wales'?'英王治下的威尔士':p.name;
  const isScotland=group==='scotland';
  const text=isScotland?
-  (year>=1513?'1513年弗洛登战役中詹姆斯四世阵亡，幼王詹姆斯五世继位。苏格兰由摄政机构与王国贵族参与治理，继续保持独立王权。':'詹姆斯四世统治下的苏格兰王国由王室、议会、贵族和地方氏族共同参与治理。'):
-  (year>=1509?'亨利八世统治英格兰，英王在加来驻有官员和军队，并通过地方贵族及都柏林机构管理爱尔兰的部分区域。':'都铎王朝英王统治英格兰本土，王室在加来设有军政机构，爱尔兰的部分区域由王室委任地方官员治理。');
- const sources=(p.source_ids||[]).concat(isScotland&&year>=1513?['NRS-FLODDEN']:[]);
+  (year>=1542?'1542年詹姆斯五世去世，玛丽女王继承苏格兰王位，国内由摄政机构与王国贵族参与治理。1540年代英格兰在若干城堡驻军，苏格兰王国整体仍独立。':year>=1513?'1513年弗洛登战役中詹姆斯四世阵亡，幼王詹姆斯五世继位。苏格兰由摄政机构与王国贵族参与治理，继续保持独立王权。':'詹姆斯四世统治下的苏格兰王国由王室、议会、贵族和地方氏族共同参与治理。'):
+  (year>=1547?'爱德华六世于1547年继承英格兰王位。英军继续驻守加来和布洛涅，并在苏格兰部分城堡驻军；英军局部占领没有使苏格兰王国整体归属英格兰。':year>=1509?'亨利八世统治英格兰，英王在加来驻有官员和军队，并通过地方贵族及都柏林机构管理爱尔兰的部分区域。':'都铎王朝英王统治英格兰本土，王室在加来设有军政机构，爱尔兰的部分区域由王室委任地方官员治理。');
+ const sources=(p.source_ids||[]).concat(isScotland&&year>=1513?['NRS-FLODDEN']:[]).concat(isScotland&&year>=1542?['SC-HES-2022-HADDINGTON']:[]);
  $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · '+year+'年</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(text)+'</p>'+listSources(sources,p);
  openPanel('dossier');
 }
