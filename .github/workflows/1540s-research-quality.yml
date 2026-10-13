@@ -1,0 +1,21 @@
+name: "1540s independent historical map research QA"
+on:
+  push:
+    branches:
+      - "research/territorial-1540-1549-20261013"
+    paths:
+      - "research/periods/1540-1549/**"
+      - ".github/workflows/1540s-research-quality.yml"
+  pull_request:
+    paths:
+      - "research/periods/1540-1549/**"
+      - ".github/workflows/1540s-research-quality.yml"
+permissions:
+  contents: read
+jobs:
+  research-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Research data, chronology and control continuity audit
+        run: python3 research/periods/1540-1549/validate_research.py
