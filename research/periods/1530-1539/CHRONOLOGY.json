@@ -364,19 +364,24 @@
       "icon_code": "ECO",
       "category": "ECO",
       "location_hint": "英格兰萨里",
-      "coordinate": null,
+      "coordinate": {
+        "lat": 51.393451,
+        "lng": -0.500148
+      },
       "date_precision": "year",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-CHERTSEY-HE-SITE"
       ],
-      "summary_zh": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。",
+      "summary_zh": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。 修道院遗址现址可由英国历史环境机构的保护遗址名录定位，遗址界并非1538年王室财产的历史边界。",
       "control_effect": "domestic_resource_transfer_costs_and_material",
       "significance": {
         "level": 2
       },
       "review_status": "research_candidate",
       "map_area_effect": "NO new verified territorial polygons",
-      "fiscal_amount": null
+      "fiscal_amount": null,
+      "geo_precision": "Modern Historic England scheduled Abbey site. The abbey/site is relevant to dismantling, not geographic footprint of stone shipments."
     },
     {
       "id": "1530S-E017",
@@ -385,19 +390,25 @@
       "icon_code": "ECO",
       "category": "ECO",
       "location_hint": "英格兰伯克郡",
-      "coordinate": null,
-      "date_precision": "year",
+      "coordinate": {
+        "lat": 51.5577,
+        "lng": -0.7798
+      },
+      "date_precision": "1538 surrender according TNA E322/39 and Historic England scheduled monument; Grade I listing describes final dissolution 1540; separate dates not reconciled",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-BISHAM-HE-SITE",
+        "ENG-BISHAM-HE-BUILDING"
       ],
-      "summary_zh": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。",
+      "summary_zh": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。 英国Historic England两处官方名录用语存在1538交还与1540解散的纪年差别，资料暂保留1538交还的来源主张，不能据此断言已于1538年完全废除所有机构活动。",
       "control_effect": "domestic_monastic_estate_surrender",
       "significance": {
         "level": 3
       },
       "review_status": "research_candidate",
       "map_area_effect": "NO new verified territorial polygons",
-      "fiscal_amount": null
+      "fiscal_amount": null,
+      "geo_precision": "Modern Bisham Abbey building historical landmark, not surveyed Tudor ecclesiastical estate boundary"
     },
     {
       "id": "1530S-E018",
@@ -636,5 +647,5 @@
   ],
   "count": 27,
   "confirmed_control_polygons": 0,
-  "editorial_notes": "Maynooth site centroid is modern mapped attraction not siege-line. Archcliffe event is NOT located at Moats Bulwark: remove approximate coordinate until official site center verified."
+  "editorial_notes": "Maynooth site centroid is modern mapped attraction not siege-line. Archcliffe event is NOT located at Moats Bulwark: remove approximate coordinate until official site center verified. 1538 Chertsey and Bisham modern monastery site points now added; Bisham 1538 surrender vs 1540 final dissolution wording documented as unresolved."
 }
