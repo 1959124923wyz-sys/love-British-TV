@@ -667,9 +667,86 @@
       "review_status": "research_editor_pending",
       "historical_precise_area_claim": false,
       "amount_value": null
+    },
+    {
+      "year": 1544,
+      "title_zh": "英军攻取苏格兰洛赫马本城堡",
+      "category": "WAR",
+      "icon_code": "WAR",
+      "location_hint": "洛赫马本城堡，苏格兰邓弗里斯-加洛韦",
+      "coordinate": {
+        "lat": 55.11633,
+        "lng": -3.43092
+      },
+      "summary_zh": "苏格兰历史环境局记录英军于1544年攻取洛赫马本城堡，翌年苏格兰军队收复。该地点是独立苏格兰境内的短期英国军事占领，城堡墙线和夺取月份尚未得到当期原图证实。",
+      "source_ids": [
+        "SC-HES-LOCHMABEN-HISTORY",
+        "SC-HES-LOCHMABEN-SITE"
+      ],
+      "control_effect": "locally_attested_English_castle_capture_1544_ended_1545",
+      "date_precision": "year_only",
+      "significance": 2,
+      "id": "1540S-028",
+      "start_year": 1544,
+      "end_year": 1544,
+      "visible_from": 1544,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
+    },
+    {
+      "year": 1545,
+      "title_zh": "苏格兰收复洛赫马本城堡，结束英军短期控制",
+      "category": "IND",
+      "icon_code": "RES",
+      "location_hint": "洛赫马本城堡，苏格兰邓弗里斯-加洛韦",
+      "coordinate": {
+        "lat": 55.11633,
+        "lng": -3.43092
+      },
+      "summary_zh": "苏格兰官方遗产史确认洛赫马本城堡在1545年被苏格兰重新夺回，因此1545年末不得保留1544年的英军占领颜色。该收复的具体日月尚待军报复核。",
+      "source_ids": [
+        "SC-HES-LOCHMABEN-HISTORY",
+        "SC-HES-LOCHMABEN-SITE"
+      ],
+      "control_effect": "Scottish_recapture_ends_English_castle_garrison_1545",
+      "date_precision": "year_only",
+      "significance": 2,
+      "id": "1540S-029",
+      "start_year": 1545,
+      "end_year": 1545,
+      "visible_from": 1545,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
+    },
+    {
+      "year": 1548,
+      "title_zh": "英军在东洛锡安Dunglass设营并筑壕，支持哈丁顿驻防",
+      "category": "WAR",
+      "icon_code": "WAR",
+      "location_hint": "苏格兰东洛锡安Dunglass，英军营垒在庄园宅邸以西山岗",
+      "coordinate": {
+        "lat": 55.93584,
+        "lng": -2.38613
+      },
+      "summary_zh": "苏格兰历史环境局的东洛锡安Dunglass登记记录山岗英军营垒，遗留土垒、深沟与高土台，使用于1548—1549年哈丁顿被英军占领时期。此坐标为现代庄园参考位置，真正历史营垒在宅邸以西，边界仍应虚线示意。不能与西邓巴顿郡同名Dunglass城堡混淆。",
+      "source_ids": [
+        "SC-HES-DUNGLASS-CAMP"
+      ],
+      "control_effect": "English_temporary_military_camp_within_independent_Scotland_1548_to_1549",
+      "date_precision": "historical_range_1548_1549",
+      "significance": 2,
+      "id": "1540S-030",
+      "start_year": 1548,
+      "end_year": 1548,
+      "visible_from": 1548,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
     }
   ],
-  "count": 27,
+  "count": 30,
   "year_end_placement_rule": "only visible from event.year; current English occupation city symbols derive separate time intervals",
   "notes": "Unverified precise site coordinates omitted. University/gov site coordinates identify modern landmarks, not 1540 fort wall. Scottish kingdom does not cease to exist because isolated forts were occupied. Annual 1549 Haddington vacated; Broughty/Boulogne persist."
 }
