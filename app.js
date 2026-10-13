@@ -537,7 +537,7 @@ function renderTimelineNavigation(){
  if(!chapterRegistry)return;
  const cent=$('centuryNav'),start=chapterRegistry.navigation.firstCentury,end=chapterRegistry.navigation.lastCentury;
  cent.innerHTML=Array.from({length:(end-start)/100+1},(_,i)=>{
-  const century=start+i*100,chosen=decadeForYear(browsingDecade/100*10*10)===century;
+  const century=start+i*100,chosen=Math.floor(browsingDecade/100)*100===century;
   // Also retain a subtle cue showing the period the map is actually displaying.
   const actual=Math.floor(year/100)*100===century;
   return '<button type="button" class="timeline-century'+(chosen?' viewing':'')+(actual?' map-current':'')+
