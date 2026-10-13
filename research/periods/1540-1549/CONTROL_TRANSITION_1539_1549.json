@@ -329,17 +329,18 @@
     },
     {
       "id": "hailes-english-1548-date_unknown",
-      "name": "海尔斯城堡：1548年3月被英军占据并交给盟友",
+      "name": "海尔斯城堡：英军1548短期夺取，同年苏格兰收复",
       "start_year": 1548,
       "start_month": 3,
       "observed_through_year": 1548,
-      "end_year": null,
+      "end_year": 1548,
       "end_month": null,
       "controller": "English garrison with Hugh Douglas allied Scottish lord",
       "type": "castle_taken_with_local_alliance",
       "source_ids": [
         "SC-HES-2022-HAILES",
-        "SC-HES-2022-HADDINGTON"
+        "SC-HES-2022-HADDINGTON",
+        "SC-HES-HAILES-SOS-2019"
       ],
       "coords": [
         -2.6832,
@@ -347,7 +348,12 @@
       ],
       "precision": "modern_historic_monument_position_not_castle_title_extent",
       "territorial_change": "castle_change_and_assurance_1548",
-      "polygon_verified": false
+      "polygon_verified": false,
+      "actual_end_precision": "year_only_verified_HES_2019",
+      "controller_after_1548": "Scots under Regent Arran, guardian Lord Borthwick",
+      "end_reason": "Scots retook castle within 1548, removed great iron gates to Edinburgh (HES Statement of Significance p.2/7)",
+      "historical_end_source_id": "SC-HES-HAILES-SOS-2019",
+      "legacy_stable_id_not_rename": "Date-unknown suffix kept for cross-file identity; same-year Scottish recapture now supported by HES official timeline"
     },
     {
       "id": "irish-crown-title-1541",
@@ -792,7 +798,6 @@
         "broughty-english-1547-1550",
         "haddington-english-1548-1549",
         "lauder-english-1548-1550",
-        "hailes-english-1548-date_unknown",
         "irish-crown-title-1541",
         "eyemouth-fort-English-1547-1550",
         "dunglass-camp-english-1548-1549",
@@ -804,9 +809,10 @@
       "confirmed_expired_episode_ids": [
         "inchcolm-english-1547-1548",
         "lochmaben-english-1544-1545",
-        "hume-english-1547-1548"
+        "hume-english-1547-1548",
+        "hailes-english-1548-date_unknown"
       ],
-      "year_end_note": "Inchcolm withdrawn March: do not show English occupied island at year-end. Haddington held, Hailes held at least in 1548. Hume castle retaken by Scots in December 1548; Forthill English fort is separate from Broughty castle.",
+      "year_end_note": "Inchcolm withdrawn March: do not show English occupied island at year-end. Haddington held, Hailes taken and Scots retook within 1548 per official HES Statement; no English garrison at 1548 year end. Hume castle retaken by Scots in December 1548; Forthill English fort is separate from Broughty castle.",
       "false_new_province_area_polygons": 0,
       "uncertain_continuity_episode_ids": [],
       "previously_existing_political_identity_additions_from_PR25": [
@@ -842,13 +848,12 @@
         "lochmaben-english-1544-1545",
         "ambleteuse-english-fort-1546-1549",
         "boulemberg-english-fort-1546-1549",
-        "hume-english-1547-1548"
-      ],
-      "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes tenure after 1548 unverified; no automatic continued solid icon. Hailes castle continuing control is UNSURE and explicitly pending, not an ended or confirmed active garrison. France retook Ambleteuse 25 August; Mont Lambert fort evacuated in 1549. Boulogne urban garrison remains English.",
-      "false_new_province_area_polygons": 0,
-      "uncertain_continuity_episode_ids": [
+        "hume-english-1547-1548",
         "hailes-english-1548-date_unknown"
       ],
+      "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes returned to Scottish control in 1548 according to official HES Statement; ended English episode must remain expired through 1549. Exact 1548 recapture month unknown. France retook Ambleteuse 25 August; Mont Lambert fort evacuated in 1549. Boulogne urban garrison remains English.",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
       "previously_existing_political_identity_additions_from_PR25": [
         "channel-guernsey"
       ]
@@ -914,5 +919,15 @@
       ]
     }
   ],
-  "pr25_1530s_supplemental_inheritance": "channel-guernsey"
+  "pr25_1530s_supplemental_inheritance": "channel-guernsey",
+  "collector3_hailes_official_correction": {
+    "source_id": "SC-HES-HAILES-SOS-2019",
+    "source_page": "Printed p.2/7, PDF p.4 (zero-index screenshot page 3)",
+    "english_capture_year": 1548,
+    "scottish_recapture_year": 1548,
+    "scottish_recapture_month": null,
+    "confirmed_English_control_at_end_1548": false,
+    "confirmed_English_control_at_end_1549": false,
+    "original_letter_verified": false
+  }
 }
