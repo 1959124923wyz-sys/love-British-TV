@@ -76,6 +76,25 @@ function togglePanel(which){
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let year=1497;
+// Two independently combinable public map layers; war TERRITORY and battle EVENTS remain distinct.
+function syncMapLayers(render=true){
+ const territory=$('mapLayerTerritory').checked,events=$('mapLayerEvents').checked;
+ const gates={
+  toggleTerritorialFootprints:territory,
+  toggleControlAreas:territory,
+  togglePoliticalRelations:territory,
+  toggleKingdom:territory,
+  toggleHypotheses:territory,
+  toggleRoutes:events,
+  toggleCandidates:events,
+  toggleClaims:events,
+  toggleEvents:events,
+  toggleMinorEvents:false
+ };
+ for(const [id,checked] of Object.entries(gates))$(id).checked=checked;
+ if(!events){focusedEventId=null;focusRequestToken++;}
+ if(render&&atlas){refreshHistoricalLayers();renderAnnualControlSummary();}
+}
 // Browsing the multi-century navigator never changes the verified year on the map.
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;
@@ -301,7 +320,7 @@ function renderPoints(){
  closeCluster();
  for(const name of ['event','candidate','routes','claim','place','cluster'])groups[name].clearLayers();
  const shown=[];
- const showAll=map.getZoom()>=4||$('toggleMinorEvents').checked;
+ const showAll=map.getZoom()>=7||$('toggleMinorEvents').checked;
  if($('toggleEvents').checked||focusedEventId){
   for(const e of atlas.events){
    if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;
@@ -313,7 +332,7 @@ function renderPoints(){
    shown.push({item:e,type:'event',lat:e.lat,lng:e.lng});
   }
  }
- if($('toggleKingdom').checked&&year>=1500){
+ if($('toggleKingdom').checked&&year>=1500&&map.getZoom()>=6){
   for(const q of atlas.places||[]){
    const activeMilitaryCore=year>=1540&&$('toggleControlAreas').checked&&militaryControlPoints?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.year_end_start&&year<=f.properties.year_end_stop);
    const alreadyDrawnAsArea=Boolean(activeMilitaryCore)||footprintEnabledFor(q.id)||($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year));
@@ -588,7 +607,7 @@ function renderContestedZones(){
 }
 function renderWartimeControls(){
  groups.wartimeControl.clearLayers();
- if(year<1540||!militaryControlPoints||!$('toggleControlAreas').checked)return;
+ if(year<1540||!militaryControlPoints||!$('toggleControlAreas').checked||map.getZoom()<6)return;
  for(const f of militaryControlPoints.features||[]){
   const p=f.properties||{},coords=f.geometry?.coordinates;
   if(f.geometry?.type!=='Point'||!coords||year<p.year_end_start||year>p.year_end_stop)continue;
@@ -774,6 +793,7 @@ function setYear(v){
  // Full-archive preview belongs to one chapter; never carry future events into the next.
  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
  year=next;atlas=chosen;
+ syncMapLayers(false);
  $('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540;
  $('chapterNav').textContent=sixth?'历史地图 · 第六章':fifth?'历史地图 · 第五章':fourth?'历史地图 · 第四章':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
@@ -900,6 +920,9 @@ async function boot(){
   setWarning('历史数据未能加载：'+String(e.message||e));
  }
 }
+document.querySelectorAll('#mapLayerSwitch input[type="checkbox"]').forEach(control=>{
+ control.addEventListener('change',()=>syncMapLayers(true));
+});
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
 function jumpToEnteredYear(){
  if(!atlas)return;
