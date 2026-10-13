@@ -474,3 +474,61 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 @media(prefers-reduced-motion:reduce){
   .leaflet-marker-icon.atlas-target-marker .map-pin{animation:none!important}
 }
+
+
+/* v1.6 three-tier, scale-invariant timeline: century -> 3 visible decades -> local years.
+   Deliberately takes precedence over legacy .chapter-track nth-child rules above.
+   Every future unpublished century remains navigation-only, never a fake history layer. */
+.time-panel{padding:9px 13px 8px;background:#102237f5;border:1px solid #34506a;border-radius:11px;box-shadow:0 7px 24px #000a}
+.timeline-head{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.timeline-head>div:first-child{min-width:0}
+.timeline-head strong{font-size:12px}
+.timeline-head span#timelineContext{font-size:10px}
+.year-buttons{display:flex;align-items:center;gap:5px;flex:none}
+.timeline-direct-year{display:flex;align-items:center;gap:5px;color:#9db0c2;font-size:10px;white-space:nowrap}
+.timeline-direct-year span{color:#b3c5d5!important;font-size:10px!important}
+.timeline-direct-year input{box-sizing:border-box;width:60px;min-height:24px;background:#172c43;border:1px solid #435c75;border-radius:5px;color:#f4c29b;font-size:12px;font-weight:700;padding:2px 4px;text-align:center;font-variant-numeric:tabular-nums}
+.timeline-direct-year input:focus-visible,.time-panel button:focus-visible,.time-panel #yearRange:focus-visible{outline:2px solid #f1be88;outline-offset:2px}
+.timeline-centuries{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin:8px 0 6px}
+.timeline-century{min-width:0;min-height:25px;background:#1b2d42;border:1px solid #30485e;border-radius:5px;cursor:pointer;color:#aebed1;font-size:10px;letter-spacing:.04em;white-space:nowrap}
+.timeline-century:hover{background:#2b4560;color:#f0dfc8}
+.timeline-century.viewing{background:#353047;border-color:#ac8a99;color:#f2d2b2;font-weight:700}
+.timeline-century.map-current:not(.viewing){box-shadow:inset 0 -2px 0 #d3ad82}
+.timeline-decade-arrow{border:1px solid #40556a;border-radius:6px;background:#1a3048;color:#e8c7a3;cursor:pointer;font-size:22px;line-height:1;width:29px;height:37px;display:grid;place-items:center}
+.timeline-decade-arrow:disabled{opacity:.25;cursor:default}
+.timeline-decade-arrow:not(:disabled):hover{background:#34506b}
+.timeline-decades{display:grid;grid-template-columns:29px minmax(0,1fr) 29px;align-items:center;gap:7px}
+.time-panel .timeline-decades .chapter-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;min-width:0;margin:0;width:100%}
+.time-panel .timeline-decades .chapter-segment{flex:none!important;min-width:0;min-height:37px;border:1px solid #3a526b;border-radius:6px;padding:5px 9px;background:#203149;color:#d8e2ea;cursor:pointer;text-align:left}
+.time-panel .timeline-decades .chapter-segment.centered{background:#303d53;border-color:#8595a6}
+.time-panel .timeline-decades .chapter-segment.active{border-color:#dfb489!important;background:#483d4d!important;box-shadow:inset 0 0 0 1px #d5a275}
+.time-panel .timeline-decades .chapter-segment.unpublished{color:#768fa5;background:#172739;border-color:#304458}
+.time-panel .timeline-decades .chapter-segment.unpublished.centered{background:#223247;border-color:#56718d}
+.time-panel .timeline-decades .chapter-segment:hover{filter:brightness(1.17)}
+.time-panel .timeline-decades .chapter-segment span{display:block;font-size:10px;line-height:1.25;color:inherit;font-weight:700}
+.time-panel .timeline-decades .chapter-segment small{display:block!important;font-size:10px;line-height:1.2;margin:2px 0 0;color:#acbdd0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.time-panel .timeline-decades .chapter-segment.unpublished small{color:#8599ac}
+.timeline-year-line{display:flex;justify-content:space-between;align-items:baseline;gap:7px;padding:6px 5px 0}
+.timeline-year-line strong{color:#f1c19d;font-size:16px;font-variant-numeric:tabular-nums}
+.timeline-year-line span{font-size:10px;color:#a6bfd4;text-align:right}
+.time-panel .range-wrap{padding:2px 8px 0;position:relative}
+.time-panel .range-wrap #yearRange{position:relative;z-index:2;width:100%;height:6px;margin:6px 0 0;accent-color:#d3a0cc;cursor:ew-resize}
+.time-panel .milestone-dots{top:0;left:8px;right:8px;height:12px}
+.time-panel .ticks{display:flex!important;position:relative;height:14px;margin:4px 0 0;align-items:start;justify-content:space-between}
+.time-panel .ticks span,.time-panel .ticks span:nth-child(n){position:static!important;left:auto!important;right:auto!important;top:auto!important;transform:none!important;font-size:10px;color:#bfa8d3;display:block}
+.time-panel .timeline-notice{display:block;min-height:0;margin:1px 5px 0;font-size:10px;color:#ddc49b;line-height:1.3}
+.time-panel .timeline-notice:empty{display:none}
+.chapter-placeholder{min-width:0}
+@media(max-width:980px){
+ .time-panel{padding:7px 9px}
+ .time-panel .timeline-decades .chapter-segment{padding:5px 6px}
+ .time-panel .timeline-decades .chapter-segment small{font-size:9px}
+ .timeline-century{font-size:9px}
+ .timeline-direct-year span{display:none}
+}
+@media(max-width:680px){
+ .timeline-head span#timelineContext{display:none}
+ .time-panel .timeline-decades .chapter-segment small{display:none!important}
+ .timeline-decade-arrow{height:31px}
+ .time-panel .timeline-decades .chapter-segment{min-height:31px}
+}
