@@ -42,4 +42,28 @@ assert.ok(setYear.includes('renderEventList();renderTerritories();'),
 const html=read('index.html');
 assert.ok(html.includes('app.js?v=timeline-v162'),'Browser must load current JavaScript, not cached chronology');
 assert.ok(html.includes('css/dark-atlas-v2.css?v=timeline-v161'),'Browser must load fixed click style');
+// Guard against a duplicate Guernsey "pie" marker over its mapped island footprint.
+const political = snippet('function renderPoliticalRelationAreas(){','function renderControlAreas(){');
+const territory = snippet('function renderTerritories(){','function renderPoliticalRelationAreas(){');
+const footprints = JSON.parse(read('data/territorial-footprints-1497-1539.geojson'));
+const relations = JSON.parse(read('data/political-relations-1500-1539.geojson'));
+const guernsey = footprints.features.find(f=>f.id==='guernsey-crown-island-outline');
+assert.equal(guernsey.properties.source_place_id,'channel-guernsey',
+  'Guernsey footprint must suppress its duplicate, oversized political fallback disk');
+assert.equal(guernsey.properties.fill_authorized,false,'Modern coastline cannot become a verified Tudor border');
+assert.ok(relations.features.some(f=>f.properties.source_place_id==='channel-guernsey'));
+assert.ok(political.includes('footprintEnabledFor(p.source_place_id)'),
+  'Relation fallback must disappear when the equivalent historic coastline is visible');
+assert.ok(political.includes('iconSize:[26,26],iconAnchor:[13,13]'),
+  'Fallback symbolic disk must remain a small map location marker');
+assert.ok(political.includes('data-polity-id='),
+  'Browser test needs an explicit identity for the Guernsey fallback');
+assert.ok(political.includes('findPlaceAcrossChapters(p.source_place_id)'),
+  'Earlier chapters must be able to open the Guernsey political history');
+assert.ok(territory.includes('findPlaceAcrossChapters(p.source_place_id)'),
+  'Mapped Guernsey must open the political dossier at any year');
+const firstWithGuernsey=JSON.parse(read('data/atlas-1530-1539.json'));
+assert.ok(firstWithGuernsey.places.some(p=>p.id==='channel-guernsey'));
+assert.ok(!JSON.parse(read('data/atlas-1520-1529.json')).places.some(p=>p.id==='channel-guernsey'),
+  'This regression requires cross-chapter lookup, not accidental duplication of records');
 console.log('OK: vector focus, geographic provenance, urban core, dossier persistence and cache');
