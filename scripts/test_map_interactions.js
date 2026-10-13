@@ -40,8 +40,8 @@ assert.ok(setYear.includes('selectedItemYear>next'),
 assert.ok(setYear.includes('renderEventList();renderTerritories();'),
   'Year change must update event and historic territory layers together');
 const html=read('index.html');
-assert.ok(html.includes('app.js?v=timeline-v173'),'Browser must load current JavaScript, not cached chronology');
-assert.ok(html.includes('css/dark-atlas-v2.css?v=timeline-v173'),'Browser must load fixed click style');
+assert.ok(html.includes('app.js?v=timeline-v174'),'Browser must load current JavaScript, not cached chronology');
+assert.ok(html.includes('css/dark-atlas-v2.css?v=timeline-v174'),'Browser must load fixed click style');
 // Guard against a duplicate Guernsey "pie" marker over its mapped island footprint.
 const political = snippet('function renderPoliticalRelationAreas(){','function renderControlAreas(){');
 const territory = snippet('function renderTerritories(){','function renderPoliticalRelationAreas(){');
