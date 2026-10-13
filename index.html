@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=map-mode-ui1">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=map-layer-ui2">
 
 </head>
 <body>
@@ -37,7 +37,7 @@
     <details class="map-mode-help" id="mapModeHelp">
      <summary><span>地图图例与精度说明</span><span aria-hidden="true">▾</span></summary>
      <div class="map-mode-help-body">
-      <p>直接使用地图右上角的<strong>版图／战况／事件</strong>切换查看内容，无需逐个开关图层。</p>
+      <p>地图右上角只有<strong>版图</strong>和<strong>事件</strong>两个开关，可以单独或同时勾选。战争的控制范围和交战区归入版图，具体战斗与掠夺经过归入事件。</p>
       <div><i class="swatch kingdom"></i><span><strong>国家底色</strong> · 表示政治归属</span></div>
       <div><i class="swatch wartime-vicinity"></i><span><strong>紫色虚线</strong> · 军事控制或影响的概略范围</span></div>
       <div><i class="swatch contested-war"></i><span><strong>蓝紫条纹</strong> · 交战与争夺，非稳定占领</span></div>
@@ -47,7 +47,7 @@
     </details>
    </div>
    <!-- Existing internal layer gates are retained for archival compatibility.
-        Readers use the three map-mode buttons, not nine implementation toggles. -->
+        Readers use two independent map layer checkboxes, not the internal specialist flags. -->
    <div id="internalLayerFlags" hidden aria-hidden="true">
     <input type="checkbox" id="toggleTerritorialFootprints" checked>
     <input type="checkbox" id="toggleControlAreas" checked>
@@ -65,11 +65,10 @@
  </aside>
  <main class="map-stage" aria-label="1497—1549年历史地图">
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
-  <nav class="map-mode-switch" id="mapModeSwitch" aria-label="地图内容模式">
-   <button type="button" data-map-mode="territory" aria-pressed="true" title="查看国家、领地与驻军位置">版图</button>
-   <button type="button" data-map-mode="war" aria-pressed="false" title="查看军队推进、争夺与驻军">战况</button>
-   <button type="button" data-map-mode="events" aria-pressed="false" title="查看事件标记与航海线索">事件</button>
-  </nav>
+  <div class="map-layer-switch" id="mapLayerSwitch" role="group" aria-label="地图显示内容（可以同时勾选）">
+   <label><input type="checkbox" id="mapLayerTerritory" checked><span>版图</span></label>
+   <label><input type="checkbox" id="mapLayerEvents" checked><span>事件</span></label>
+  </div>
 
   <div class="map-top">
    <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span><div id="controlStatus" class="year-control-status" hidden aria-label="本年驻军及交战地理概况"></div></div>
@@ -113,6 +112,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=map-mode-ui1"></script>
+<script src="app.js?v=map-layer-ui2"></script>
 </body>
 </html>
