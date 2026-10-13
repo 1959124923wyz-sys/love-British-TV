@@ -393,6 +393,13 @@ try:
           driver.find_element(By.ID,'map'),round(pos['dx']),round(pos['dy'])).click().perform()
         return pos
 
+    driver.execute_script("""
+      window.__atlasClickAudit=[];
+      document.addEventListener('click',e=>{
+        window.__atlasClickAudit.push({x:e.clientX,y:e.clientY,
+         target:e.target.tagName,cls:(e.target.getAttribute('class')||'').slice(0,100)});
+      },true);
+    """)
     set_year(1548,44)
     driver.execute_script("""
       const item=document.querySelector('#eventList [data-eid="1540S-021"]');
@@ -404,6 +411,8 @@ try:
     ActionChains(driver).scroll_from_origin(origin,0,-1600).perform()
     time.sleep(1)
     print("CLICK_SOVEREIGN",real_map_area_click(".leaflet-sovereignty-pane path.leaflet-interactive"),flush=True)
+    print("POINTER_AUDIT_SOVEREIGN",driver.execute_script("return window.__atlasClickAudit.slice(-3)"),flush=True)
+    print("DOSSIER_AUDIT_SOVEREIGN",driver.execute_script("return document.querySelector('#dossierBody').textContent.slice(0,160)"),flush=True)
     wait.until(lambda d:"历史国家" in d.find_element(By.ID,"dossierBody").text)
     verify("contested zone disappeared after actual wheel zoom",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
