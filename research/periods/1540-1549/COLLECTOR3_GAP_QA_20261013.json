@@ -1,0 +1,51 @@
+{
+  "schema": "collector3_gap_followup_quality_review_v1",
+  "compiled": "2026-10-13",
+  "branch": "research/territorial-1540-1549-20261013",
+  "baseline": "main/editorial/1540-1549/RESEARCH_GAPS_TO_PR27.md",
+  "review_status": "PASS_GitHub_remote_readback_assertions_only",
+  "checks": {
+    "research_source_records": 81,
+    "source_record_unique_IDs": true,
+    "source_record_count_matches": true,
+    "preexisting_candidate_events_unchanged": 45,
+    "preexisting_candidate_places_unchanged": 22,
+    "verified_precise_colonial_polygons_added": 0,
+    "research_geo_candidate_sites": 2,
+    "dundee_st_mary_point": 1,
+    "new_Dundee_event_candidates": 2,
+    "new_Dundee_control_episodes": 2,
+    "preserved_1540s_political_identities": 9,
+    "preserved_1540s_year_end_snapshots": 10,
+    "archival_tasks_preserved": 22,
+    "archival_tasks_with_new_assessment": 22,
+    "archival_tasks_partially_advanced": 13,
+    "archival_tasks_with_original16c_manuscript_completely_verified": 0,
+    "reference_IDs_resolve": true,
+    "geoJson_points_have_valid_lon_lat": true,
+    "geoJson_point_features_fill_authorized_false": true,
+    "atLeast_boulogne_city_1550_handover_date": "1550-04-25",
+    "broughty_1550_outpost_castle_sequence": "Feb 1550, outpost then castle following day",
+    "eyemouth_1550_exit_precision": "summer 1550 historic excavation abstract",
+    "ambleteuse_closed_by_1549": true
+  },
+  "unverified_areas": [
+    "One-source Hailes August 1548 Scottish recapture not corroborated by personally inspected archival page; research note only.",
+    "Authentic Boulogne/Boulonnais Tudor measured GIS boundary",
+    "Exact Dundee second 1548 occupation termination and confirmed 1548 year-end military control",
+    "Exact English withdrawal days Lauder/Eyemouth/Dunglass",
+    "Original 16th-century property schedule/financial receipts",
+    "Any public redrawing permission for manuscript military plans"
+  ],
+  "provenance": [
+    "remote GitHub SOURCE_REGISTRY.json",
+    "remote GitHub ATLAS_REVIEW_CANDIDATE.json",
+    "remote GitHub ARCHIVAL_ACTION_QUEUE.json",
+    "remote GitHub TRANSITION_1549_1550_RESEARCH_SEED.json",
+    "remote GitHub CONTROL_TRANSITION_1539_1549.json",
+    "remote GitHub EVENT_GEOLOCATION_CANDIDATES_PR27_20261013.geojson",
+    "remote GitHub DUNDEE_EVENT_RESEARCH_POINTS_PR27_20261013.geojson",
+    "remote GitHub DUNDEE_CONTROL_EPISODES_ADDENDUM_PR27_20261013.json"
+  ],
+  "limitations": "JavaScript assertions on decoded files returned by GitHub connector (structural QA). No historical manuscript accuracy/rights assurance, no browser screenshot QA and no GitHub Actions 1540s manual workflow run."
+}
