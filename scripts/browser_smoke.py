@@ -225,17 +225,20 @@ try:
     zoom_1539=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
     set_year(1540,1)
     # Regression: map-year status was squeezed to a vertical one-character strip.
-    verify("1540 control status still collapses into a narrow vertical badge", """
-      (() => {
-        const card=document.querySelector('.map-year-card');
-        const status=document.querySelector('#controlStatus');
-        const lines=[...status.querySelectorAll('.control-status-line')];
-        const box=card.getBoundingClientRect();
-        return box.width>=270 && box.width<=360 &&
-          getComputedStyle(status).writingMode==='horizontal-tb' &&
-          lines.length===4 && lines.every(n=>n.getBoundingClientRect().width>=225) &&
-          getComputedStyle(status).display==='grid';
-      })()""",driver)
+    control_layout=driver.execute_script("""
+      const card=document.querySelector('.map-year-card');
+      const status=document.querySelector('#controlStatus');
+      const lines=[...status.querySelectorAll('.control-status-line')];
+      return {cardWidth:card.getBoundingClientRect().width,statusWidth:status.getBoundingClientRect().width,
+         lineWidths:lines.map(n=>n.getBoundingClientRect().width),lines:lines.length,
+         writingMode:getComputedStyle(status).writingMode,
+         display:getComputedStyle(status).display,html:status.innerHTML.slice(0,500)};
+    """)
+    print("MAP_YEAR_LAYOUT_1540:",control_layout,flush=True)
+    assert 270<=control_layout['cardWidth']<=360 and control_layout['lines']==4 and \
+      control_layout['writingMode']=='horizontal-tb' and control_layout['display']=='grid' and \
+      all(w>=225 for w in control_layout['lineWidths']), \
+      "1540 control status still collapses into a narrow badge: "+str(control_layout)
     verify("1540 must not contain projected battle zones",
            "document.querySelectorAll('#map .atlas-contested-zone').length===0",driver)
     verify("chapter six did not become selectable on the half-century page",
