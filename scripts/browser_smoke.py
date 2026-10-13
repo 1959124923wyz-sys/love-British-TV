@@ -118,7 +118,7 @@ try:
     assert "非卡博特实际GPS轨迹" in first_route, "1497 route's uncertainties not visible"
     driver.save_screenshot(str(OUT / "interactive-voyage-1497.png"))
     second_route=route_check(1527,"1527年约翰·拉特远航")
-    assert "并非实际航迹" in second_route, "1527 endpoint connection risks being misinterpreted as an actual track"
+    assert "不表示船只实际航行轨迹" in second_route, "1527 endpoint connection risks being misinterpreted as an actual track"
     driver.save_screenshot(str(OUT / "voyage-endpoints-1527.png"))
 
     toggle_layer("toggleEvents", False)
