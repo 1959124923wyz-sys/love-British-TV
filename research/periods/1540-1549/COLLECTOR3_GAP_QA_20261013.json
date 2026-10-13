@@ -3,13 +3,13 @@
   "compiled": "2026-10-13",
   "branch": "research/territorial-1540-1549-20261013",
   "baseline": "main/editorial/1540-1549/RESEARCH_GAPS_TO_PR27.md",
-  "review_status": "PASS_GitHub_remote_readback_assertions_only",
+  "review_status": "PASS_GitHub_remote_readback_assertions_after_1548_Hailes_official_fix",
   "checks": {
-    "research_source_records": 81,
+    "research_source_records": 82,
     "source_record_unique_IDs": true,
     "source_record_count_matches": true,
     "preexisting_candidate_events_unchanged": 45,
-    "preexisting_candidate_places_unchanged": 22,
+    "preexisting_candidate_places_unchanged": 21,
     "verified_precise_colonial_polygons_added": 0,
     "research_geo_candidate_sites": 2,
     "dundee_st_mary_point": 1,
@@ -27,10 +27,20 @@
     "atLeast_boulogne_city_1550_handover_date": "1550-04-25",
     "broughty_1550_outpost_castle_sequence": "Feb 1550, outpost then castle following day",
     "eyemouth_1550_exit_precision": "summer 1550 historic excavation abstract",
-    "ambleteuse_closed_by_1549": true
+    "ambleteuse_closed_by_1549": true,
+    "preexisting_candidate_sources": 66,
+    "active_control_year_end_points": 21,
+    "map_control_delta_points": 22,
+    "hailes_original_capture_1548": true,
+    "hailes_scottish_recapture_1548_confirmed_official_HES": true,
+    "hailes_year_end_1548_english_active": false,
+    "hailes_year_end_1549_english_active": false,
+    "hailes_old_id_historical_episode_preserved": true,
+    "hailes_scots_recapture_month_day": "unverified",
+    "hails_castle_control_stage": "yearly status fixed, precise original manuscript month/day still pending"
   },
   "unverified_areas": [
-    "One-source Hailes August 1548 Scottish recapture not corroborated by personally inspected archival page; research note only.",
+    "Hailes 1548 Scottish recapture now official HES supported, but exact month/day unverified. Secondary August claim requires direct checking original Hamilton Papers.",
     "Authentic Boulogne/Boulonnais Tudor measured GIS boundary",
     "Exact Dundee second 1548 occupation termination and confirmed 1548 year-end military control",
     "Exact English withdrawal days Lauder/Eyemouth/Dunglass",
@@ -45,7 +55,19 @@
     "remote GitHub CONTROL_TRANSITION_1539_1549.json",
     "remote GitHub EVENT_GEOLOCATION_CANDIDATES_PR27_20261013.geojson",
     "remote GitHub DUNDEE_EVENT_RESEARCH_POINTS_PR27_20261013.geojson",
-    "remote GitHub DUNDEE_CONTROL_EPISODES_ADDENDUM_PR27_20261013.json"
+    "remote GitHub DUNDEE_CONTROL_EPISODES_ADDENDUM_PR27_20261013.json",
+    "remote GitHub MAP_DELTA_1540_1549.geojson",
+    "remote GitHub validate_research.py corrections"
   ],
-  "limitations": "JavaScript assertions on decoded files returned by GitHub connector (structural QA). No historical manuscript accuracy/rights assurance, no browser screenshot QA and no GitHub Actions 1540s manual workflow run."
+  "limitations": "JavaScript assertions on decoded files returned by GitHub connector (structural QA). No historical manuscript accuracy/rights assurance, no browser screenshot QA and no GitHub Actions 1540s manual workflow run.",
+  "correction_history": [
+    {
+      "date": "2026-10-13",
+      "finding": "New official HES Hailes statement establishes England occupied then Scots recaptured within 1548; prior research 1548 English year-end active was incorrect.",
+      "historical_source": "SC-HES-HAILES-SOS-2019",
+      "book_page": "HES printed p.2/7, PDF physical p.4",
+      "recorded_data_change": "Removed Hailes English from 1548 active snapshot and 1549 uncertainty, added to expired and map delta; event of English occupation retained.",
+      "research_approved_map_shape": "Point and no true ancient Polygon"
+    }
+  ]
 }
