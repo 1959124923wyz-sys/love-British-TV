@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "name": "French resistance fortifications opposing English Boulogne 1545–1549",
+  "metadata": {
+    "schema": "counter_control_context_1540s_v1",
+    "draw_as_English_or_British_area": false,
+    "political_layer": "independent_Kingdom_of_France_counter_forts",
+    "state": "historical_event_research_not_exact_cadastral_walls",
+    "map_tooltip": "法国军营垒（围困英占布洛涅）",
+    "color_class": "resistance_or_French_defence_not_English_Crown",
+    "actual_historic_fort_polygons_verified": 0,
+    "site_precision": "modern locality context, site within surrounding hill not validated",
+    "geographic_no_area_statistics": true
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "outreau-french-opposing-fort-from-1545",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.5947222,
+          50.7044444
+        ]
+      },
+      "properties": {
+        "stable_id": "outreau-french-opposing-fort-from-1545",
+        "name": "Outreau法国炮兵要塞／Villeneuve-lez-Boulogne（1545年开建）",
+        "controller": "Kingdom of France, NOT English Crown",
+        "period_from": 1545,
+        "year_end_start": 1545,
+        "year_end_stop": 1549,
+        "source_ids": [
+          "FR-HELIOT-1958-OUTREAU-FRENCH",
+          "FR-HELIOT-1958-PLANS-PAGES",
+          "FR-OUTREAU-MODERN-LOCALITY"
+        ],
+        "historical_distinction": "French troops held heights on left bank of Liane and built the fort at Outreau starting July 1545, opposite English-controlled Boulogne",
+        "geographic_reference_role": "modern Outreau commune center only; fort was on nearby heights, true centroid not checked",
+        "not_an_English_control_feature": true,
+        "no_historic_wall_precision": true,
+        "precise_sixteenth_century_polygon": null,
+        "area_sqkm": null,
+        "display_style": "French opposition point; no orange British territory fill",
+        "warning": "No evidence in cited text that the English controlled this French battery in 1545–49. Do not confuse this French fort with English Tour d'Ordre on the OTHER shore."
+      }
+    }
+  ]
+}
