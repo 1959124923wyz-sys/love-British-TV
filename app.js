@@ -160,7 +160,7 @@ function openHypothesis(feature){
 // All clickable polygon types share a source-aware map territory dossier.
 function openTerritoryDossier(feature,kind='historic'){
  const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach';
- const label=warReach?'英军推进／补给影响示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const label=warReach?'有据军事进军／交通方向（非占地面）':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。';
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
  const precision=p.precision_note||p.historical_boundary_precision||(
@@ -178,7 +178,7 @@ function openTerritoryDossier(feature,kind='historic'){
   '<p class="zone-precision-note"><strong>地图精度：</strong>'+escapeHTML(precision)+'</p>'+
   (occupied?'<p class="zone-editorial-warning">紫色示意面表达有史料的英军驻点附近地区，无法证明所包围的整片土地都由英格兰统治。</p>':'')+
   (contested?'<p class="zone-editorial-warning">蓝紫交错纹理是根据战事地点手工制作的阅读参考，不能当成史料实测的前线。</p>':'')+
-  (warReach?'<p class="zone-editorial-warning">紫色虚线走廊根据英军进军与驻军补给地名手工绘制，只表示军事活动影响；不能证明沿途所有土地被英军稳定占领，也不意味着爱丁堡归英王统治。</p>':'')+
+  (warReach?'<p class="zone-editorial-warning">紫色宽线依据贝里克、邓格拉斯等史料有据地点表示进军／交通的大致方向；宽度按屏幕像素绘制，不能推导沿途英军控制面积。哈丁顿1548年被苏法骑兵封锁，交通联系不等于稳定道路占领；爱丁堡始终未证英军统治。</p>':'')+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
@@ -1055,7 +1055,7 @@ $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistorica
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWarReachCorridors();renderWartimeControls()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
