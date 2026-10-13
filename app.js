@@ -172,7 +172,11 @@ function openTerritoryDossier(feature,kind='historic'){
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
    '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+ev.name)+'</button>').join('')+'</div>':'')+
-  listSources(p.source_ids||[],{id:p.id||feature.id});
+  listSources(p.source_ids||[],{id:p.id||feature.id})+
+  ((p.source_urls||[]).filter(url=>/^https:\/\//.test(url)).length?
+   '<div class="zone-source-links"><h3 class="zone-links-heading">历史地理原始研究</h3>'+
+   p.source_urls.filter(url=>/^https:\/\//.test(url)).map(url=>
+    '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">查看地理与文献依据 ↗</a>').join('')+'</div>':'');
  openPanel('dossier');
  $('dossierBody').querySelectorAll('[data-zone-place]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedPlaces[Number(n.dataset.zonePlace)],'place')));
  $('dossierBody').querySelectorAll('[data-zone-event]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedEvents[Number(n.dataset.zoneEvent)],'event')));
