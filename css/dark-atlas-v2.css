@@ -673,3 +673,8 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .map-layer-switch label{gap:5px;padding:6px 8px;font-size:11px;min-height:30px;}
  .map-layer-switch input{width:15px;height:15px;}
 }
+
+/* PR44: schematic routes are stroke-only: never confuse a halo with occupied polygon. */
+.legend-items .swatch.war-reach,.sidebar-settings-wrap .map-mode-help-body .swatch.war-reach{width:18px;height:0;border:0;border-top:3px dashed #bd9bea;border-radius:0;background:transparent;}
+#map .atlas-war-reach-halo{pointer-events:none!important;}
+#map .atlas-war-reach-schematic,#map .atlas-war-reach-hit{pointer-events:stroke;cursor:pointer;stroke-linecap:round;stroke-linejoin:round;}

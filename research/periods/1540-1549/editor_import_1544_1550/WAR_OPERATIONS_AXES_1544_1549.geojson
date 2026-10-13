@@ -1,0 +1,442 @@
+{
+  "type": "FeatureCollection",
+  "name": "Editor import military operations axes 1544–1549 based on PR41 source-anchored routes",
+  "schema": "military_routes_display_v2_no_synthetic_polygon",
+  "metadata": {
+    "updated_by": "independent source and topography QA 2026-10-13",
+    "source_warning": "HES official Pinkie BTL15 and HES 2025 Dunglass SOS p.6–7 and p.19–20; HES 2022 Haddington communications and French cavalry blockade",
+    "data_years": [
+      1544,
+      1549
+    ],
+    "published": false,
+    "geometry_policy": "ALL 5 features are schematic LINESTRINGS (no filled polygon); visual ribbon width in screen pixels only, never a historic military controlled area measurement",
+    "old_version_replaced": "4 invented broad Polygon/MultiPolygon sketches; intentionally deleted as unsupported and partly detached from England",
+    "road_caveat": "HES Dunglass Statement describes possible 1547 crossing c.1 mile upstream, and later relocation toward modern A1. Do NOT trace present A1 as Tudor survey.",
+    "England_crossing_first_WGS84": [
+      -2.056,
+      55.782
+    ],
+    "England_reference_geo_source": "data/modern-uk-regions.topojson North East coarse political region polygon: route first node is INSIDE England and following segment crosses into Scotland, no visual gap",
+    "fort_continuity": "English garrison nodes are independently attested. No arbitrary polygon union or point buffers.",
+    "French_blockade": "HES Haddington French-Scottish cavalry interdicted supply; no continuous secure English pocket from Dunglass to Haddington under siege",
+    "Hailes": "Scots recovered 1548, not included in English secure occupation band",
+    "end_year_1549": "Haddington English ceased by September 1549; no 1549 year-end link to Haddington",
+    "year_end_military_control_polygon_count": 0,
+    "colonial_surface_calculation_allowed": false,
+    "chief_editor": "Replace main outdated four guess-made Polygon/MultiPolygon war reach with these five source-backed LineString references; integrate with map territory toggle",
+    "editor_import_candidate": true,
+    "derived_from_PR41": "fix/1540s-sourced-coastal-route-no-invented-control-20261013:data/war-front-corridors-1540-1549.geojson",
+    "do_not_publish_as_actual_territory": true,
+    "unapproved_occupation_polygon_count": 0,
+    "route_geometry_accuracy": "indicative_not_historically_surveyed"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "war-reach-scotland-edinburgh-raid-1544",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.176,
+            55.976
+          ],
+          [
+            -3.188,
+            55.954
+          ]
+        ]
+      },
+      "properties": {
+        "id": "war-reach-scotland-edinburgh-raid-1544",
+        "name": "1544年英军自利斯登陆袭击爱丁堡（不与英格兰陆上疆域相连）",
+        "start_year": 1544,
+        "end_year": 1544,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "visual_historical_operational_axis_only",
+        "not_actual_occupied_area": true,
+        "controller": "English military movement or garrison contact, sovereignty Scottish",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "fill_opacity": 0,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "SC-HES-PINKIE-BTL15"
+        ],
+        "source_urls": [
+          "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,BTL15"
+        ],
+        "anchors": [
+          "Leith maritime landing",
+          "Edinburgh attack"
+        ],
+        "route_role": "short_maritime_raid_landfall_to_city",
+        "route_continuity_certainty": "HES confirms assault via Leith; modern intermediate geometry schematic",
+        "route_status": "brief_incursion_not_military_occupation",
+        "scene_notes": "Never connect this 1544 seaborne raid to Berwick or infer Edinburgh was held by England year-end.",
+        "summary_zh": "1544年英国海军从利斯方向协助进攻并焚毁爱丁堡，是短时突袭，不是沿陆路从贝里克打通的占领走廊，也不能涂成1544年末英属爱丁堡。",
+        "precision_note": "示意折线依据史料所述起点、经过的城镇/要塞及行军方向布置，所有中间折点是现代地图上的粗略视觉引导，绝非1540年代实际道路测绘；线宽为屏幕像素，不对应英军控制土地的真实宽度。",
+        "legal_sovereignty": "Independent Kingdom of Scotland",
+        "map_disclaimer": "有文献依据的历史进军／军堡通讯方向示意，线条和宽度均非精确军事控制边界。",
+        "fill_authorized_reason": "No authenticated 16th-century surveyed occupation or uninterrupted road security polygon",
+        "apparent_area_does_not_imply_jurisdiction": true,
+        "stroke_color": "#cfacd8",
+        "halo_color": "#ad87cf",
+        "halo_weight_px": 15,
+        "halo_opacity": 0.15,
+        "stroke_weight_px": 3,
+        "stroke_dashes": "3 9",
+        "uncertainty": "high_geometry_low_if_scholarship_indicates_route",
+        "verified_route_segment_centrelines": false,
+        "temporary_dated_military_event_not_yearend_suzerainty": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "war-reach-berwick-pinkie-1547",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.056,
+            55.782
+          ],
+          [
+            -2.077,
+            55.811
+          ],
+          [
+            -2.125,
+            55.852
+          ],
+          [
+            -2.164,
+            55.893
+          ],
+          [
+            -2.337,
+            55.914
+          ],
+          [
+            -2.386,
+            55.936
+          ],
+          [
+            -2.523,
+            55.978
+          ],
+          [
+            -2.73,
+            55.98
+          ],
+          [
+            -2.969,
+            55.963
+          ],
+          [
+            -3.025416,
+            55.931615
+          ]
+        ]
+      },
+      "properties": {
+        "id": "war-reach-berwick-pinkie-1547",
+        "name": "1547年贝里克至平基战场的沿东海岸英军进军路线（非持续占地）",
+        "start_year": 1547,
+        "end_year": 1547,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "visual_historical_operational_axis_only",
+        "not_actual_occupied_area": true,
+        "controller": "English military movement or garrison contact, sovereignty Scottish",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "fill_opacity": 0,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "SC-HES-PINKIE-BTL15",
+          "SC-HES-DUNGLASS-CAMP"
+        ],
+        "source_urls": [
+          "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,BTL15",
+          "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/8dc74de2-1cec-4449-8cbf-b37e00a873ea"
+        ],
+        "anchors": [
+          "Berwick-under-English-Crown",
+          "Anglo-Scottish-border-crossing-approx",
+          "historic Pease crossing near Dunglass, exact unverified",
+          "Dunbar vicinity",
+          "Prestonpans English camp",
+          "Pinkie battle near Musselburgh"
+        ],
+        "route_role": "campaign_march",
+        "route_continuity_certainty": "HES confirms from Berwick along east coast with fleet and crossing inland near Dunglass; intermediate route NOT modern A1",
+        "route_status": "1547_campaign_advance_not_1547_yearend_occupied_road",
+        "scene_notes": "Battlefield sources support advance axis, not garrison control every village. Some sources have pursuit almost to Edinburgh, city not captured.",
+        "summary_zh": "苏格兰历史环境局记载，萨默塞特于1547年9月自贝里克沿东海岸进军，舰队在海上配合并帮助补给，英军经邓格拉斯一带进至平基战场。邓格拉斯原古道过溪地点仍有争论，绘出的线仅表示由南到北的战役方向，不是具体可通行的1547古道，更不代表全程土地被英国驻军治理。",
+        "precision_note": "示意折线依据史料所述起点、经过的城镇/要塞及行军方向布置，所有中间折点是现代地图上的粗略视觉引导，绝非1540年代实际道路测绘；线宽为屏幕像素，不对应英军控制土地的真实宽度。",
+        "legal_sovereignty": "Independent Kingdom of Scotland",
+        "map_disclaimer": "有文献依据的历史进军／军堡通讯方向示意，线条和宽度均非精确军事控制边界。",
+        "fill_authorized_reason": "No authenticated 16th-century surveyed occupation or uninterrupted road security polygon",
+        "apparent_area_does_not_imply_jurisdiction": true,
+        "stroke_color": "#bc9ce9",
+        "halo_color": "#9a72db",
+        "halo_weight_px": 31,
+        "halo_opacity": 0.17,
+        "stroke_weight_px": 3,
+        "stroke_dashes": "8 8",
+        "uncertainty": "high_geometry_low_if_scholarship_indicates_route",
+        "verified_route_segment_centrelines": false,
+        "temporary_dated_military_event_not_yearend_suzerainty": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "war-reach-berwick-dunglass-1548",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.056,
+            55.782
+          ],
+          [
+            -2.077,
+            55.811
+          ],
+          [
+            -2.125,
+            55.852
+          ],
+          [
+            -2.126,
+            55.873
+          ],
+          [
+            -2.17,
+            55.891
+          ],
+          [
+            -2.337,
+            55.914
+          ],
+          [
+            -2.386,
+            55.936
+          ]
+        ]
+      },
+      "properties": {
+        "id": "war-reach-berwick-dunglass-1548",
+        "name": "1548年贝里克—埃茅斯附近—邓格拉斯英军守备交通轴线（概略）",
+        "start_year": 1548,
+        "end_year": 1548,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "visual_historical_operational_axis_only",
+        "not_actual_occupied_area": true,
+        "controller": "English military movement or garrison contact, sovereignty Scottish",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "fill_opacity": 0,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "SC-HES-DUNGLASS-CAMP",
+          "SC-HES-2022-HADDINGTON",
+          "SC-CALDWELL-EYEMOUTH"
+        ],
+        "source_urls": [
+          "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/8dc74de2-1cec-4449-8cbf-b37e00a873ea",
+          "https://blog.historicenvironment.scot/2022/07/the-story-of-scotlands-longest-siege/"
+        ],
+        "anchors": [
+          "Berwick occupied by England",
+          "Scottish border approx",
+          "Eyemouth English fort near route",
+          "Dunglass fort 1548"
+        ],
+        "route_role": "English_fortification_communication_axis",
+        "route_continuity_certainty": "HES Dunglass PDF p.19-20 says fort guarded Haddington communication; not evidence of continuous protected English villages along length",
+        "route_status": "road_use_and_English_military_presence_not_uninterrupted_control",
+        "scene_notes": "Route begins inside mapped English North East region so the visual violet reach touches purple kingdom; moderate shading does not mean property occupation.",
+        "summary_zh": "英国统治的贝里克从边境延伸的东海岸交通和埃茅斯、邓格拉斯英军据堡为向哈丁顿提供支援的作战体系。HES的邓格拉斯城堡考察特别证实1548年英军工事守护哈丁顿通讯线路，但并不证明路线上所有土地、乡村都长期英占。这条半透明紫色线与英格兰本土相接，只是视觉上呈现交通方向。",
+        "precision_note": "示意折线依据史料所述起点、经过的城镇/要塞及行军方向布置，所有中间折点是现代地图上的粗略视觉引导，绝非1540年代实际道路测绘；线宽为屏幕像素，不对应英军控制土地的真实宽度。",
+        "legal_sovereignty": "Independent Kingdom of Scotland",
+        "map_disclaimer": "有文献依据的历史进军／军堡通讯方向示意，线条和宽度均非精确军事控制边界。",
+        "fill_authorized_reason": "No authenticated 16th-century surveyed occupation or uninterrupted road security polygon",
+        "apparent_area_does_not_imply_jurisdiction": true,
+        "stroke_color": "#bfa2f4",
+        "halo_color": "#966dd9",
+        "halo_weight_px": 35,
+        "halo_opacity": 0.2,
+        "stroke_weight_px": 3,
+        "stroke_dashes": "8 8",
+        "uncertainty": "high_geometry_low_if_scholarship_indicates_route",
+        "verified_route_segment_centrelines": false,
+        "temporary_dated_military_event_not_yearend_suzerainty": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "war-reach-dunglass-haddington-contested-1548",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.386,
+            55.936
+          ],
+          [
+            -2.465,
+            55.954
+          ],
+          [
+            -2.523,
+            55.978
+          ],
+          [
+            -2.648,
+            55.969
+          ],
+          [
+            -2.772,
+            55.953
+          ]
+        ]
+      },
+      "properties": {
+        "id": "war-reach-dunglass-haddington-contested-1548",
+        "name": "1548年邓格拉斯至哈丁顿：遭苏法封锁的军事补给方向",
+        "start_year": 1548,
+        "end_year": 1548,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "visual_historical_operational_axis_only",
+        "not_actual_occupied_area": true,
+        "controller": "English military movement or garrison contact, sovereignty Scottish",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "fill_opacity": 0,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "SC-HES-DUNGLASS-CAMP",
+          "SC-HES-2022-HADDINGTON"
+        ],
+        "source_urls": [
+          "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/8dc74de2-1cec-4449-8cbf-b37e00a873ea",
+          "https://blog.historicenvironment.scot/2022/07/the-story-of-scotlands-longest-siege/"
+        ],
+        "anchors": [
+          "Dunglass English fortified communications guard",
+          "Haddington English-garrisoned fortress under Franco-Scottish siege"
+        ],
+        "route_role": "interdicted_reinforcement_link_not_secure_territory",
+        "route_continuity_certainty": "HES Haddington says French/Scottish cavalry stopped supplies reaching town; inferred geographic line only, not an actually safe road",
+        "route_status": "military_contested_blockaded_area",
+        "scene_notes": "Not an area of uninterrupted English military control. Keep a gap in solid coloration; purple-and-blue dashes denote contested access near Dunbar, Haddington.",
+        "summary_zh": "哈丁顿虽有英军驻守，苏法联军于1548年围城，其骑兵在周围乡野活动并阻止补给。邓格拉斯为通讯堡不代表哈丁顿一路畅通。此处明确以较轻蓝紫虚线表示受威胁的交通/争夺方向，而非连续英占道路。",
+        "precision_note": "示意折线依据史料所述起点、经过的城镇/要塞及行军方向布置，所有中间折点是现代地图上的粗略视觉引导，绝非1540年代实际道路测绘；线宽为屏幕像素，不对应英军控制土地的真实宽度。",
+        "legal_sovereignty": "Independent Kingdom of Scotland",
+        "map_disclaimer": "有文献依据的历史进军／军堡通讯方向示意，线条和宽度均非精确军事控制边界。",
+        "fill_authorized_reason": "No authenticated 16th-century surveyed occupation or uninterrupted road security polygon",
+        "apparent_area_does_not_imply_jurisdiction": true,
+        "stroke_color": "#8ea9ee",
+        "halo_color": "#9981d7",
+        "halo_weight_px": 25,
+        "halo_opacity": 0.14,
+        "stroke_weight_px": 3,
+        "stroke_dashes": "4 9",
+        "uncertainty": "high_geometry_low_if_scholarship_indicates_route",
+        "verified_route_segment_centrelines": false,
+        "temporary_dated_military_event_not_yearend_suzerainty": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "war-reach-retreat-dunglass-lauder-1549",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.056,
+            55.782
+          ],
+          [
+            -2.077,
+            55.811
+          ],
+          [
+            -2.125,
+            55.852
+          ],
+          [
+            -2.126,
+            55.873
+          ],
+          [
+            -2.17,
+            55.891
+          ],
+          [
+            -2.337,
+            55.914
+          ],
+          [
+            -2.386,
+            55.936
+          ]
+        ]
+      },
+      "properties": {
+        "id": "war-reach-retreat-dunglass-lauder-1549",
+        "name": "1549年哈丁顿撤军后：贝里克至邓格拉斯边境英军守备轴线",
+        "start_year": 1549,
+        "end_year": 1549,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "visual_historical_operational_axis_only",
+        "not_actual_occupied_area": true,
+        "controller": "English military movement or garrison contact, sovereignty Scottish",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "fill_opacity": 0,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "SC-HES-DUNGLASS-CAMP",
+          "SC-HES-2022-HADDINGTON"
+        ],
+        "source_urls": [
+          "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/8dc74de2-1cec-4449-8cbf-b37e00a873ea",
+          "https://blog.historicenvironment.scot/2022/07/the-story-of-scotlands-longest-siege/"
+        ],
+        "anchors": [
+          "Berwick English border city",
+          "Eyemouth English fort nearby",
+          "Dunglass English fort still occupied 1549",
+          "Haddington ended before year-end"
+        ],
+        "route_role": "reduced_border_garrison_communication_axis",
+        "route_continuity_certainty": "HES Dunglass 1549 commander Sep 25 and 27 letters prove ongoing English camp; no evidence precise military occupation along road",
+        "route_status": "reduced_to_Dunglass_no_Haddington_after_1549_09",
+        "scene_notes": "Lauder is independent separately sourced fort icon; no fictitious branch from main lane. Haddington 1549 end-year is Scottish.",
+        "summary_zh": "1549年9月英军离开哈丁顿；HES邓格拉斯纪要记录英军将领9月仍在修筑守备工事。地图只保留贝里克—埃茅斯附近—邓格拉斯这一概略军事交通轴，不再假画通向哈丁顿的紫色占领带。劳德尔有独立英军据堡，但缺乏可证持续供给路线，仍保持孤立据点。",
+        "precision_note": "示意折线依据史料所述起点、经过的城镇/要塞及行军方向布置，所有中间折点是现代地图上的粗略视觉引导，绝非1540年代实际道路测绘；线宽为屏幕像素，不对应英军控制土地的真实宽度。",
+        "legal_sovereignty": "Independent Kingdom of Scotland",
+        "map_disclaimer": "有文献依据的历史进军／军堡通讯方向示意，线条和宽度均非精确军事控制边界。",
+        "fill_authorized_reason": "No authenticated 16th-century surveyed occupation or uninterrupted road security polygon",
+        "apparent_area_does_not_imply_jurisdiction": true,
+        "stroke_color": "#b693ef",
+        "halo_color": "#946aca",
+        "halo_weight_px": 26,
+        "halo_opacity": 0.18,
+        "stroke_weight_px": 3,
+        "stroke_dashes": "8 8",
+        "uncertainty": "high_geometry_low_if_scholarship_indicates_route",
+        "verified_route_segment_centrelines": false,
+        "temporary_dated_military_event_not_yearend_suzerainty": true
+      }
+    }
+  ]
+}

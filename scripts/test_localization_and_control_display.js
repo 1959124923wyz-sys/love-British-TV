@@ -28,7 +28,7 @@ assert.ok(data.events.every(e=>/中文/.test(e.date_label) || !/[A-Za-z]/.test(e
 assert.ok(data.events.every(e=>e.research_date_label || /^\d{4}年/.test(e.date_label)),'Research dates must remain recoverable');
 const original=JSON.parse(text('data/atlas-1530-1539.json'));
 assert.equal(original.events.length,27,'Fifth-chapter historic record must remain untouched');
-assert.equal(garrison.features.length,15);
+assert.equal(garrison.features.length,18);
 assert.ok(garrison.features.every(f=>f.geometry.type==='Point'),'Neither an English siege nor French defence implies surveyed polygon');
 const hailes=garrison.features.find(f=>f.properties.stable_id==='hailes-english-1548-date_unknown');
 assert.equal(hailes,undefined,'Hailes must not be mapped as an English year-end stronghold following the 1548 Scottish recapture');

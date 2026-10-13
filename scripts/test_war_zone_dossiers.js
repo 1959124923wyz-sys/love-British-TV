@@ -14,7 +14,7 @@ assert.equal(occupied.features.length,10,'Keep ten research-sourced schematic oc
 assert.equal(contested.features.length,4,'Four evidence-anchored low-precision campaign theaters');
 assert.ok(contested.metadata.archival_evidence_for_actual_polygon_boundaries===false);
 assert.ok(contested.metadata.area_statistics_forbidden);
-assert.equal(military.features.length,15,'No change to dated military-site evidence');
+assert.equal(military.features.length,18,'No change to dated military-site evidence');
 assert.equal(oldFootprints.features.length,7,'Inherited territorial references must remain intact');
 const ids=new Set(military.features.filter(f=>f.properties.not_an_English_control_feature!==true).map(f=>f.properties.stable_id));
 const originals=new Map(source.features.map(x=>[x.id,x]));
@@ -41,8 +41,8 @@ for(const f of contested.features){
  assert.ok(p.precision_note?.includes('示意'),f.id+' must disclose invented illustrative outline');
  assert.deepEqual(f.geometry.coordinates[0][0],f.geometry.coordinates[0].at(-1),'Close GeoJSON polygons');
 }
-assert.equal(militaryReach.features.length,4,'PR38 1544 raid, 1547 advance, 1548 supply network and 1549 retreat');
-assert.equal(militaryReach.metadata.authorised_precise_historical_control_polygons,0);
+assert.equal(militaryReach.features.length,5,'PR38 1544 raid, 1547 advance, 1548 supply network and 1549 retreat');
+assert.equal(militaryReach.metadata.unapproved_occupation_polygon_count,0);
 for(const f of militaryReach.features){
  const p=f.properties;
  assert.equal(p.zone_type,'war_reach_schematic');
@@ -50,12 +50,14 @@ for(const f of militaryReach.features){
  assert.equal(p.fill_authorized,false);
  assert.equal(p.area_sqkm,null);
  assert.equal(p.area_statistics_forbidden,true);
- assert.equal(p.not_proof_whole_enclosed_area_occupied,true);
+ assert.equal(p.not_actual_occupied_area,true);
  assert.ok(p.summary_zh&&p.precision_note&&p.map_disclaimer);
+ assert.equal(f.geometry.type,'LineString','Military axes must not be guessed land surfaces');
+ assert.ok(f.geometry.coordinates.length>=2,'Historical direction needs at least two reference points');
  assert.ok(p.source_ids?.length&&p.source_ids.every(id=>citations.has(id)),f.id+' missing sources');
  assert.ok((p.related_event_ids||[]).every(id=>atlas.events.some(e=>e.id===id)),f.id+' missing historic events');
 }
-const yearlyReach={1543:0,1544:1,1545:0,1546:0,1547:1,1548:1,1549:1};
+const yearlyReach={1543:0,1544:1,1545:0,1546:0,1547:1,1548:2,1549:1};
 for(const [y,expected] of Object.entries(yearlyReach))
  assert.equal(militaryReach.features.filter(f=>f.properties.start_year<=Number(y)&&Number(y)<=f.properties.end_year).length,expected,'Reach chronology '+y);
 assert.ok(!militaryReach.features.find(f=>f.properties.start_year===1549).properties.name.includes('哈丁顿英军占领'),'Haddington must no longer be English occupied at the end of 1549');

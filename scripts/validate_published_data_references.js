@@ -76,6 +76,10 @@ function validCoord(coord,file,id){
 function validateGeometry(geo,file,id){
  assert.ok(geo&&geo.coordinates,file+' no geometry '+id);
  if(geo.type==='Point'){validCoord(geo.coordinates,file,id);return}
+ if(geo.type==='LineString'){
+  assert.ok(Array.isArray(geo.coordinates)&&geo.coordinates.length>=2,file+' short line '+id);
+  geo.coordinates.forEach(c=>validCoord(c,file,id));return;
+ }
  const polys=geo.type==='Polygon'?[geo.coordinates]:geo.type==='MultiPolygon'?geo.coordinates:null;
  assert.ok(polys,file+' unhandled geometry '+id+' '+geo.type);
  for(const poly of polys){
