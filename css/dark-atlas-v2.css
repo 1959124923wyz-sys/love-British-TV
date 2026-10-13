@@ -498,7 +498,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .timeline-decade-arrow:disabled{opacity:.25;cursor:default}
 .timeline-decade-arrow:not(:disabled):hover{background:#34506b}
 .timeline-decades{display:grid;grid-template-columns:29px minmax(0,1fr) 29px;align-items:center;gap:7px}
-.time-panel .timeline-decades .chapter-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;min-width:0;margin:0;width:100%}
+.time-panel .timeline-decades .chapter-track{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;min-width:0;margin:0;width:100%}
 .time-panel .timeline-decades .chapter-segment{flex:none!important;min-width:0;min-height:37px;border:1px solid #3a526b;border-radius:6px;padding:5px 9px;background:#203149;color:#d8e2ea;cursor:pointer;text-align:left}
 .time-panel .timeline-decades .chapter-segment.centered{background:#303d53;border-color:#8595a6}
 .time-panel .timeline-decades .chapter-segment.active{border-color:#dfb489!important;background:#483d4d!important;box-shadow:inset 0 0 0 1px #d5a275}
@@ -532,3 +532,8 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .timeline-decade-arrow{height:31px}
  .time-panel .timeline-decades .chapter-segment{min-height:31px}
 }
+
+/* v1.6.1 five-decade half-century pagination. Unpublished slots remain navigable directory items. */
+.time-panel .timeline-decades .chapter-segment{padding:5px 7px}
+.time-panel .timeline-decades .chapter-segment small{font-size:9px}
+@media(max-width:1380px){.time-panel .timeline-decades .chapter-segment{padding:5px 5px}.time-panel .timeline-decades .chapter-segment small{font-size:8px}}

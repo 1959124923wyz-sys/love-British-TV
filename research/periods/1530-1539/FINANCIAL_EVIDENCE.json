@@ -143,9 +143,61 @@
       "qualification": "Costs to England are not income from Calais; quantify only from dated registers and actual ledger entries.",
       "primary_ledger_read": false,
       "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    },
+    {
+      "id": "FIN-1531-LEIXLIP-ARBITRATION-20",
+      "title": "1531莱克斯利普庄园终身年收益仲裁：20英镑/年",
+      "period": "1530-1539",
+      "recognized_year": 1531,
+      "accounting_class": "private_manorial_income_entitlement",
+      "account_type": "awarded_lifetime_annual_income_not_a_Crown_receipt",
+      "transfer_direction": "FitzGerald manor annual income to Margaret as lifelong beneficiary",
+      "geography": "Leixlip manor not all Kildare",
+      "amount_value": 20,
+      "amount_currency": "historic GBP/year",
+      "source_ids": [
+        "IR-KILDARE-LEIXLIP-1531",
+        "IR-PRONI-LEIXLIP-1531-MS"
+      ],
+      "original_record_lookup": "PRONI D/3078/1/10, MIC 541/6 (local library citation)",
+      "primary_ledger_read": false,
+      "amount_status": "county_library_transcription_not_original_audited_accounts",
+      "qualification": "Private awarded annual income, NOT Crown taxes or realized colonial profit. Venue of arbitration unknown.",
+      "quantify_when": "State 20 GBP/year as court-awarded interest only; do not calculate lifetime total."
+    },
+    {
+      "id": "FIN-1539-DUBLIN-ABBEY-PENSION-42-10",
+      "title": "1539年都柏林圣托马斯修道院前院长养老金条款",
+      "period": "1530-1539",
+      "recognized_year": 1539,
+      "accounting_class": "pension_liabilities_after_monastery_surrender",
+      "account_type": "legal_pension_grant_not_paid_cash_ledger",
+      "geography": "Dublin former Abbey of St Thomas",
+      "transfer_direction": "royal or former monastic revenue sources to former abbots",
+      "amount_value": null,
+      "amount_currency": "historic GBP/year separate pension obligations",
+      "disaggregated_awards": [
+        {
+          "recipient": "Henry Duffe",
+          "annual_gbp": 42
+        },
+        {
+          "recipient": "James Cotterell",
+          "annual_gbp": 10
+        }
+      ],
+      "source_ids": [
+        "IR-KILDARE-LEIXLIP-1531"
+      ],
+      "original_record_lookup": "Kildare County Library citing Monasticum Hibernicum and Tudor Fiants",
+      "primary_ledger_read": false,
+      "amount_status": "reported_secondary_grant_terms_only",
+      "qualification": "42 GBP/year and 10 GBP/year scheduled pensions, not audited payments, tax proceeds or colony profits.",
+      "quantify_when": "Keep two awards separate and never sum as English Crown gain."
     }
   ],
   "verified_monetary_figures_count": 0,
   "colonial_profit_total": null,
-  "policy": "Do not aggregate tax base, property forfeiture, fortress expenses and Crown receipts. Separate England's domestic church assets from Irish local appropriation, and both from transoceanic colonial profits."
+  "policy": "Do not aggregate tax base, property forfeiture, fortress expenses and Crown receipts. Separate England's domestic church assets from Irish local appropriation, and both from transoceanic colonial profits.",
+  "count_of_secondary_reported_legal_award_amounts": 3
 }

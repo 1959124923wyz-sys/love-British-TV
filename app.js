@@ -519,19 +519,23 @@ function updateVisibility(){
 const decadeForYear=y=>Math.floor(y/10)*10;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>decadeForYear(c.start)===d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end);
-const clampBrowseDecade=d=>Math.max(chapterRegistry?.navigation?.firstDecade||1490,
- Math.min(chapterRegistry?.navigation?.lastDecade||2090,d));
+// 1497–1499 is an exceptional prologue; normal pages align to 1500–1549 / 1550–1599.
+const halfCenturyPageForYear=y=>y<1500?1490:Math.floor(y/50)*50;
+const pageForBrowse=d=>d<=1490?1490:Math.floor(d/50)*50;
+const clampBrowseDecade=d=>Math.max(1490,Math.min(2050,pageForBrowse(d)));
+const adjacentHalfCenturyPage=(current,direction)=>current===1490&&direction>0?1500:
+ current===1500&&direction<0?1490:clampBrowseDecade(current+direction*50);
 function timelineStatus(message){$('timelineNotice').textContent=message||''}
 function browseDecade(decade){
  browsingDecade=clampBrowseDecade(decade);
  renderTimelineNavigation();
  // Navigation is deliberately read-only until the reader selects published data.
- if(browsingDecade!==decadeForYear(year))timelineStatus('仅浏览章节目录。地图仍显示'+year+'年；尚未发布的年代不能作为历史地图查看。');
+ if(browsingDecade!==halfCenturyPageForYear(year))timelineStatus('仅浏览章节目录。地图仍显示'+year+'年；尚未发布的年代不能作为历史地图查看。');
  else timelineStatus('');
 }
 function browseCentury(century){
  const first=chapterRegistry.navigation.firstDecade;
- browseDecade(Math.max(first,century));
+ browseDecade(century===1400?1490:Math.max(first,century));
 }
 function renderTimelineNavigation(){
  if(!chapterRegistry)return;
@@ -544,7 +548,7 @@ function renderTimelineNavigation(){
    '" data-century="'+century+'" aria-pressed="'+chosen+'" title="'+(century+1)+'—'+(century+100)+'年 · 浏览世纪（不会改动地图）">'+(i+15)+'世纪</button>';
  }).join('');
  cent.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>browseCentury(Number(btn.dataset.century))));
- const frame=$('chapterTrack'),decades=[browsingDecade-10,browsingDecade,browsingDecade+10];
+ const frame=$('chapterTrack'),decades=Array.from({length:5},(_,i)=>browsingDecade+i*10);
  frame.innerHTML=decades.map((d,i)=>{
   if(d<chapterRegistry.navigation.firstDecade||d>chapterRegistry.navigation.lastDecade)
    return '<span class="chapter-placeholder" aria-hidden="true"></span>';
@@ -552,7 +556,7 @@ function renderTimelineNavigation(){
   const from=chapter?chapter.start:d,to=chapter?chapter.end:d+9;
   const onMap=published&&year>=from&&year<=to;
   return '<button type="button" class="chapter-segment'+(published?' published':' unpublished')+
-    (i===1?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
+    (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
     '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+from+'年：'+chapter.label:'此十年尚无正式历史资料')+'">'+
     '<span>'+(published?'第'+chapter.number+'章':'尚未发布')+'</span>'+
     '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 待研究')+'</small></button>';
@@ -560,14 +564,13 @@ function renderTimelineNavigation(){
  frame.querySelectorAll('button[data-decade]').forEach(btn=>btn.addEventListener('click',()=>{
   const decade=Number(btn.dataset.decade),chapter=chapterForDecade(decade);
   if(!chapter){
-   browseDecade(decade);
    timelineStatus(decade+'—'+(decade+9)+'年暂无已审核地图资料，仍显示'+year+'年。');
    return;
   }
   stopPlay();setYear(chapter.start);
  }));
  $('browseDecadePrev').disabled=browsingDecade<=chapterRegistry.navigation.firstDecade;
- $('browseDecadeNext').disabled=browsingDecade>=chapterRegistry.navigation.lastDecade;
+ $('browseDecadeNext').disabled=browsingDecade>=2050;
  const currentChapter=chapterForYear(year);
  if(currentChapter){
   const slider=$('yearRange');
@@ -578,7 +581,7 @@ function renderTimelineNavigation(){
   $('jumpYear').max=lastPublishedYear;
   $('jumpYear').value=year;
  }
- $('timelineAvailability').textContent=browsingDecade===decadeForYear(year)
+ $('timelineAvailability').textContent=browsingDecade===halfCenturyPageForYear(year)
   ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
   :'浏览目录中 · 地图为'+year+'年';
 }
@@ -631,7 +634,7 @@ function setYear(v){
  $('factC').textContent=fifth?(year>=1535?'1535':'—'):fourth?(year>=1527?'1527':'—'):third?(year>=1519?'1519':'—'):second?(year>=1504?'1504':'—'):(year>=1498?'1498':'—');
  $('factCDesc').innerHTML=fifth?(year>=1535?'梅努斯城堡<br>王室攻取':''):fourth?(year>=1527?'北美远航':''):third?(year>=1519?'英军撤离<br>图尔奈':''):second?(year>=1504?'爱尔兰<br>诺克多战役':''):(year>=1498?'第二次远航<br>后续出航':'');
  $('periodTitle').textContent=fifth?'亨利八世 · 英格兰王国':fourth?'亨利八世 · 英格兰王国':third?'亨利八世 · 英格兰王国':second?(year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国'):(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国');
- browsingDecade=decadeForYear(year);renderTimelineNavigation();timelineStatus('');
+ browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();
@@ -745,9 +748,9 @@ function jumpToEnteredYear(){
 }
 $('jumpYear').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();jumpToEnteredYear()}});
 $('jumpYear').addEventListener('change',jumpToEnteredYear);
-$('chapterTrack').addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&chapterRegistry){e.preventDefault();browseDecade(browsingDecade+(e.deltaX>0?10:-10))}},{passive:false});
-$('browseDecadePrev').addEventListener('click',()=>{if(chapterRegistry)browseDecade(browsingDecade-10)});
-$('browseDecadeNext').addEventListener('click',()=>{if(chapterRegistry)browseDecade(browsingDecade+10)});
+$('chapterTrack').addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&chapterRegistry){e.preventDefault();browseDecade(adjacentHalfCenturyPage(browsingDecade,e.deltaX>0?1:-1))}},{passive:false});
+$('browseDecadePrev').addEventListener('click',()=>{if(chapterRegistry)browseDecade(adjacentHalfCenturyPage(browsingDecade,-1))});
+$('browseDecadeNext').addEventListener('click',()=>{if(chapterRegistry)browseDecade(adjacentHalfCenturyPage(browsingDecade,1))});
 $('prevYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year-1)});
 $('nextYear').addEventListener('click',()=>{stopPlay();if(atlas)setYear(year+1)});
 $('playBtn').addEventListener('click',()=>{if(atlas)togglePlay()});

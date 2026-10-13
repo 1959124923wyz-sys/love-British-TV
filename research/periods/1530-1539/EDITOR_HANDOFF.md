@@ -7,8 +7,8 @@
 1. **继承上一年**：主干已发布`data/atlas-1520-1529.json`的7个地点：加来、都柏林、泽西、马恩、奥克尼、设得兰、吉讷。在`TRANSITION_1529_1530.json`逐条对应，额外有独立苏格兰王国；1530年不可直接清零。图尔奈1519年交还法国，不可再涂英王颜色。
 2. **先加载大致轮廓**：`MAP_REFERENCE_1530_1539.geojson`有8个地理Feature。前7个从主干`data/territorial-footprints-1497-1529.geojson`原样复制；加来与爱尔兰Pale使用明显虚线、弱透明填充，群岛采用独立政治类型纹理；第8个威尔士现代区域仅辅助表现1535/36**内部法律改革**，虚线无历史精确边界资格。任何一项都不能混入`atlas.colonial_polygons`或累加面积。
 3. **单列可确认统治核心**：`CONTROL_CORES_1530_1539.geojson`的加来、吉讷与都柏林为Point的示意像素城市面积符号。它们不证明城墙或周边农业控制界；吉讷是旧英王据点不是新占土地。
-4. **不混淆特殊政治关系**：`POLITICAL_RELATIONS_1530_1539.geojson`显示王室属地、独立苏格兰群岛与马恩领主制度的不同图层；独立苏格兰绝不填英属殖民橙。根西现有参考polygon却尚无独立`atlas.places`地点，应另行复核再新增。
-5. **审核年度史事**：`ATLAS_REVIEW_CANDIDATE.json`包含24事件、7地点、41源；地图同步参考`EVENT_SITES_1530_1539.geojson`中的9个有定位事件。未定位的北美航线、爱尔兰广大境内战事、全国法案不发明事件经纬度。1535年Maynooth城堡局部英王军攻陷与1534都柏林防守成功在地图上应呈现真实方向。
+4. **不混淆特殊政治关系**：`POLITICAL_RELATIONS_1530_1539.geojson`显示王室属地、独立苏格兰群岛与马恩领主制度的不同图层；独立苏格兰绝不填英属殖民橙。根西既有参考岛形，如今已补独立`atlas.places:channel-guernsey`地点与单独政治关系Point，证据是根西驻岛王室机构史、根西议会Royal Court历史和Getty现代St Peter Port位置；此为**前已存在制度**，并非1530年新征服。
+5. **审核年度史事**：`ATLAS_REVIEW_CANDIDATE.json`包含27事件、8地点、55源；地图同步参考`EVENT_SITES_1530_1539.geojson`中的12个有定位事件。未定位的北美航线、爱尔兰广大境内战事、全国法案不发明事件经纬度。1535年Maynooth城堡局部英王军攻陷与1534都柏林防守成功在地图上应呈现真实方向。
 6. **主编保持网站交互**：读取1530年只出现截至1530年的历史事件；滚动滑块直至1539事件依真实年份逐步出现。地图视角/比例不自动变化，保留左栏与图标突出；双击左侧事件时应按已批准的编辑交互规则执行，不要被独立研究页面覆盖。
 7. **核验**：`python3 research/periods/1530-1539/validate_research.py`；随后浏览器检查1529→1530，1533 Calais，1534 Dublin失败围城，1535 Maynooth，1536/37 Wales与爱尔兰法规，1537 Scotland，1539 England Device工程和确属1536纽芬兰航行无殖民面。
 
@@ -22,7 +22,7 @@
 
 优先可复核官方史料入口：
 - 英国国家档案馆SP3（1533—40 Calais）、E101/E364军政钱款；与Julian Munby古测绘讨论配对，不能把1556 Calais测量倒画成1530界。
-- [英格兰1529威尔士法令27 Hen VIII c26](https://www.legislation.gov.uk/aep/Hen8/27/26/contents)：**官方题名及法令年代为1535**，1536常用于描述执行过程；正式事件date_label要保留1535/36会期不确定。
+- [威尔士法律法令（1535年，27 Hen VIII c26）](https://www.legislation.gov.uk/aep/Hen8/27/26/contents)：**官方题名及法令年代为1535**，1536常用于描述执行过程；正式事件date_label要保留1535/36会期不确定。
 - [1534 Dublin围城研究](https://academic.oup.com/histres/article/92/258/705/5698429)、[Office of Public Works Maynooth堡](https://heritageireland.ie/visit/places-to-visit/maynooth-castle/)。
 - [加拿大传记大学联合工程Richard Hore](https://www.biographi.ca/en/bio/hore_richard_1F.html)：远航登陆得到确认，后世叙事路线有矛盾。
 - [1537爱尔兰同化法令学术研究](https://www.cambridge.org/core/journals/irish-historical-studies/article/wilde-shamrock-manners-anglicisation-and-the-politics-of-gesture-in-early-modern-ireland/66D7D32CE0E6172F7398F574D58DF277)：要关注强制同化和执行差别。
@@ -38,8 +38,16 @@
 
 ## 独立交互可直接验收
 
-预览文件 [interactive_research_preview.html](interactive_research_preview.html)：年份滑块依年推进24项事件、加来/爱尔兰Pale参考虚线、独立苏格兰蓝色政治图层；左侧点击读史料，**双击有地理位置的事件平滑转至地点并在原缩放比例高亮**。从仓库根目录执行`python3 -m http.server 8000`后用浏览器打开对应路径。这里是调查组测试平台，不能直接替换主编既有的v0.9／v1.2已批准UI，也不代表用户生产地图已经上线。
+预览文件 [interactive_research_preview.html](interactive_research_preview.html)：年份滑块依年推进27项事件、加来/爱尔兰Pale参考虚线、独立苏格兰蓝色政治图层；左侧点击读史料，**双击有地理位置的事件平滑转至地点并在原缩放比例高亮**。从仓库根目录执行`python3 -m http.server 8000`后用浏览器打开对应路径。这里是调查组测试平台，不能直接替换主编既有的v0.9／v1.2已批准UI，也不代表用户生产地图已经上线。
 
 ## 下一章提前打包
 
 主编在完成1539年后，直接移交 [NEXT_DECADE_1539_1540_RESEARCH_SEED.json](NEXT_DECADE_1539_1540_RESEARCH_SEED.json)：它继承8种政治身份、记载已结束图尔奈和待调查1541/1542的大转变。该文件**未生成任何未经研究的1540年真实地图**；下一位调查员从1539年控制区清单开始核对。
+
+## 主编新增补缺｜必须以主干当前已上线版本为基线
+
+截至本次调查，GitHub `main` 已有 `data/atlas-1530-1539.json`、`data/territorial-footprints-1497-1539.geojson` 和 `editorial/1530-1539/PUBLISH_REVIEW.md`，而 PR #25 仍是独立草稿。**不要整包覆盖原正式数据**；挑选下列增量进入主编审核：27事件（比上线初版24项多1531 Leixlip、1532 Calais、独立苏格兰法庭三条），8地点（比主版7地点多既存根西）、12个事件Point（比主版9多1532 Calais和1538 Chertsey/Bisham两处）、`WELSH_MARCHER_1535_STATUTORY_SHIRES.json`中的13组法律分区、`LOCAL_DOCUMENTED_SITES_1530_1539.geojson`中的Leixlip地产对象参考Point。
+
+此外 `FINANCIAL_EVIDENCE.json` 的£20/年是1531**私人法律收益安排**，1539 £42、£10是修道院养老金授予条件，绝对不要汇总成王室掠夺收益。旧Pale/岛屿几何和主站交互不变，英国根西遗址Point是现代St Peter Port参考而不是16世纪历史王室法院边界。将此Guernsey政治身份传递给第六章/PR #27编辑，但不要冒称为1540年首次占领。
+
+完整每项状态见 [PR25_DEFICIENCY_RESOLUTION_20261013.md](PR25_DEFICIENCY_RESOLUTION_20261013.md)，其中标明哪些史料找不到原界应保持虚线。

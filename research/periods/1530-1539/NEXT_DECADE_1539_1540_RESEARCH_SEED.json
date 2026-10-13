@@ -8,7 +8,7 @@
   },
   "status": "RESEARCH_SEED_ONLY_1540_NOT_VERIFIED",
   "last_candidate_atlas": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json",
-  "previous_1539_candidate_sites": 7,
+  "previous_1539_candidate_sites": 8,
   "incoming_stable_ids": [
     {
       "stable_id": "calais-crown",
@@ -110,7 +110,8 @@
     "1542 Laws in Wales Act: new law inside English realm, distinct from earlier 1535 law",
     "French Calais/Guînes border endures until later; never clear area merely because 1539->1540",
     "Channel Islands and Isle of Man individual polity continuations; seek decade-specific records",
-    "Newfoundland coast voyages and exploration not permanent Crown colonies without clear settlement"
+    "Newfoundland coast voyages and exploration not permanent Crown colonies without clear settlement",
+    "Guernsey existing separate Crown Dependency place is newly documented in PR #25 follow-up. Next 1540 editor must add this eighth named atlas place without treating it as new 1540 conquest."
   ],
   "new_1540_year_end_snapshot": null,
   "verified_new_1540_polygon_count": 0,
@@ -120,5 +121,20 @@
     "CONTROL_EPISODES.json",
     "ARCHIVAL_ACTION_QUEUE.json"
   ],
-  "instructions": "Start 1540s by auditing every stable_id from 1539. Only activate documented changes at factual effective year; mark inferred boundaries dashed, and special polities and Scotland distinct."
+  "instructions": "Start 1540s by auditing every stable_id from 1539. Only activate documented changes at factual effective year; mark inferred boundaries dashed, and special polities and Scotland distinct.",
+  "supplemental_preexisting_political_identities_to_carry_from_1539": [
+    {
+      "stable_id": "channel-guernsey",
+      "name": "Guernsey separate Crown Dependency, already existed pre-1530",
+      "last_confirmed_1539": true,
+      "not_newly_conquered_1530s": true,
+      "geometry": "1530-1539 prior Guernsey modern reference polygon plus St Peter Port symbolic Point",
+      "evidence_ids": [
+        "GUE-GOV-HOUSE-HISTORY",
+        "GUE-PARLIAMENT-ROYAL-COURT",
+        "GUE-UK-MOJ-CROWN"
+      ],
+      "instructions_for_1540_editor": "Carry 1539 Guernsey Point/context into 1540, do not reset; inherited old eight identities plus this newly charted preexisting polity. PR #27 researched before extra named place and needs editor supplementary addition."
+    }
+  ]
 }

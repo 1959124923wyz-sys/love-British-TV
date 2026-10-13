@@ -5,7 +5,7 @@
     "to": 1539
   },
   "generated_on": "2026-10-13",
-  "status": "research_candidates_for_editorial_review",
+  "status": "research_candidates; 3 extra gaps added; Guernsey separate polity not a new event",
   "chronological_display": "year_end: event appears from event.year and later; all future years invisible",
   "records": [
     {
@@ -157,18 +157,19 @@
       "category": "POL",
       "location_hint": "威尔士及英威边区",
       "coordinate": null,
-      "date_precision": "1535-1536_regnal_session",
+      "date_precision": "1535 formal statute citation (27 Hen VIII c26); 1536 conventional implementation / era",
       "source_ids": [
         "WAL-UK-LEG-1535"
       ],
-      "summary_zh": "法律史上的1535年法令（27 Hen. 8 c.26，常以1536年执行及叙述）将威尔士及边区领主制纳入英格兰法院和郡县安排。当地不是1536年突然被英格兰从外国征服的国土。",
+      "summary_zh": "法律史上的1535年法令（27 Hen. 8 c.26，常以1536年执行及叙述）将威尔士及边区领主制纳入英格兰法院和郡县安排。当地不是1536年突然被英格兰从外国征服的国土。 英国立法网站官方纪年为1535年第27亨利八世第26章，1536是常见执行及历史叙述日期；具体县区的可视化应从法令列名、非现代威尔士范围出发。",
       "control_effect": "legal_internal_administrative_reform_not_new_conquest",
       "significance": {
         "level": 1
       },
       "review_status": "research_candidate",
       "map_area_effect": "NO new verified territorial polygons",
-      "fiscal_amount": null
+      "fiscal_amount": null,
+      "statute_year": 1535
     },
     {
       "id": "1530S-E008",
@@ -363,19 +364,24 @@
       "icon_code": "ECO",
       "category": "ECO",
       "location_hint": "英格兰萨里",
-      "coordinate": null,
+      "coordinate": {
+        "lat": 51.393451,
+        "lng": -0.500148
+      },
       "date_precision": "year",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-CHERTSEY-HE-SITE"
       ],
-      "summary_zh": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。",
+      "summary_zh": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。 修道院遗址现址可由英国历史环境机构的保护遗址名录定位，遗址界并非1538年王室财产的历史边界。",
       "control_effect": "domestic_resource_transfer_costs_and_material",
       "significance": {
         "level": 2
       },
       "review_status": "research_candidate",
       "map_area_effect": "NO new verified territorial polygons",
-      "fiscal_amount": null
+      "fiscal_amount": null,
+      "geo_precision": "Modern Historic England scheduled Abbey site. The abbey/site is relevant to dismantling, not geographic footprint of stone shipments."
     },
     {
       "id": "1530S-E017",
@@ -384,19 +390,25 @@
       "icon_code": "ECO",
       "category": "ECO",
       "location_hint": "英格兰伯克郡",
-      "coordinate": null,
-      "date_precision": "year",
+      "coordinate": {
+        "lat": 51.5577,
+        "lng": -0.7798
+      },
+      "date_precision": "1538 surrender according TNA E322/39 and Historic England scheduled monument; Grade I listing describes final dissolution 1540; separate dates not reconciled",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-BISHAM-HE-SITE",
+        "ENG-BISHAM-HE-BUILDING"
       ],
-      "summary_zh": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。",
+      "summary_zh": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。 英国Historic England两处官方名录用语存在1538交还与1540解散的纪年差别，资料暂保留1538交还的来源主张，不能据此断言已于1538年完全废除所有机构活动。",
       "control_effect": "domestic_monastic_estate_surrender",
       "significance": {
         "level": 3
       },
       "review_status": "research_candidate",
       "map_area_effect": "NO new verified territorial polygons",
-      "fiscal_amount": null
+      "fiscal_amount": null,
+      "geo_precision": "Modern Bisham Abbey building historical landmark, not surveyed Tudor ecclesiastical estate boundary"
     },
     {
       "id": "1530S-E018",
@@ -562,9 +574,78 @@
       "id": "1530S-E024",
       "map_area_effect": "no_proven_new_sovereign_polygon",
       "fiscal_amount": null
+    },
+    {
+      "year": 1531,
+      "title_zh": "莱克斯利普庄园继承与收益争议获得仲裁",
+      "category": "POL",
+      "icon_code": "POL",
+      "location_hint": "爱尔兰莱克斯利普庄园（会议地点未核实）",
+      "coordinate": null,
+      "date_precision": "1531-04-12 original legal matter described in county transcript",
+      "source_ids": [
+        "IR-KILDARE-LEIXLIP-1531",
+        "IR-PRONI-LEIXLIP-1531-MS"
+      ],
+      "summary_zh": "基尔代尔郡图书馆转引PRONI D/3078/1/10及MIC 541/6：1531年4月12日玛格丽特与詹姆斯·菲茨杰拉德就Leixlip及周围地产权属争议进行仲裁，判给玛格丽特终身每年20英镑收益。此处是私人产权与地方税租关系，不能当作1531年英王新增占地或王室殖民现金收入；仲裁具体地点未记载，不强设坐标。",
+      "control_effect": "local_estate_tenure_arbitration_no_royal_territorial_conquest",
+      "significance": {
+        "level": 2
+      },
+      "review_status": "source_anchored_candidate",
+      "map_area_effect": "no_polygon",
+      "fiscal_amount": null,
+      "id": "1530S-E025"
+    },
+    {
+      "year": 1532,
+      "title_zh": "亨利八世在加来接待法王弗朗索瓦一世；加来城防持续运作",
+      "category": "POL",
+      "icon_code": "POL",
+      "location_hint": "加来英王城镇防务中心（可定位），城墙及新桥堡具体城防线未实测",
+      "coordinate": {
+        "lat": 50.9513,
+        "lng": 1.8587
+      },
+      "date_precision": "1532-10-25 Francis I enters English Calais as visiting monarch according Hall chronicle; Historic Royal Palaces corroborates 1532 meeting",
+      "source_ids": [
+        "CAL-HRP-1532-MEETING",
+        "CAL-HALL-CHRONICLE-1532"
+      ],
+      "summary_zh": "官方英国皇家宫殿管理机构确认亨利八世与法王1532年在加来再会；都铎史家Edward Hall记载同年10月英王视察加来城墙、塔楼与防御工事，10月25日两王从布洛涅到加来，经过英方新桥堡、Rysbank和城门。法国国王是外交访客，绝不能因此将加来视为1532年法国占领区。",
+      "control_effect": "demonstrated_continuing_English_garrison_in_Calais_not_new_territory",
+      "significance": {
+        "level": 1
+      },
+      "review_status": "source_anchored_candidate",
+      "map_area_effect": "no_new_polygon",
+      "fiscal_amount": null,
+      "id": "1530S-E026"
+    },
+    {
+      "year": 1532,
+      "title_zh": "独立苏格兰王国重组最高民事法庭（Court of Session）",
+      "category": "POL",
+      "icon_code": "POL",
+      "location_hint": "苏格兰王国，爱丁堡（1532法庭真实原址未据本材料确定）",
+      "coordinate": null,
+      "date_precision": "1532 parliamentary reform institution date",
+      "source_ids": [
+        "SC-SCTS-1532",
+        "SC-NRS-CS-1532"
+      ],
+      "summary_zh": "苏格兰法院服务局与国家档案馆明确记载1532年詹姆斯五世时期设立常任受薪法官的司法制度，Court of Session记录由CS5转入CS6系列；苏格兰仍是独立王国，不能把本国法庭绘为英格兰治理。由于现代Parliament House建筑并不能代表1532年开庭实际房间，本事件暂不强加地理坐标。",
+      "control_effect": "independent_Scottish_institutional_reform_no_English_control",
+      "significance": {
+        "level": 2
+      },
+      "review_status": "source_anchored_candidate",
+      "map_area_effect": "not_English_territorial_area",
+      "fiscal_amount": null,
+      "id": "1530S-E027"
     }
   ],
-  "count": 24,
+  "count": 27,
   "confirmed_control_polygons": 0,
-  "editorial_notes": "Maynooth site centroid is modern mapped attraction not siege-line. Archcliffe event is NOT located at Moats Bulwark: remove approximate coordinate until official site center verified."
+  "editorial_notes": "Maynooth site centroid is modern mapped attraction not siege-line. Archcliffe event is NOT located at Moats Bulwark: remove approximate coordinate until official site center verified. 1538 Chertsey and Bisham modern monastery site points now added; Bisham 1538 surrender vs 1540 final dissolution wording documented as unresolved."
 }
