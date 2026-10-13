@@ -110,16 +110,18 @@
       "start_year": 1543,
       "end_year": 1543,
       "visible_from": 1543,
-      "date_precision": "1543-07 archive catalogue",
+      "date_precision": "Thomond Murrough O'Brien earlship created 1543-07-01 (NLI); Clanricarde secondary 1543 date needs separate patent check",
       "title_zh": "爱尔兰托蒙德与克兰里卡德爵位授封",
       "category": "POL",
       "icon_code": "POL",
       "location_hint": "爱尔兰托蒙德、克兰里卡德",
       "coordinate": null,
-      "summary_zh": "国家图书馆保存1543年7月Murrough O'Brien与Ulick Burke等授爵文书目录。地方领主加入王室封建体系的名义关系不等于王室直接收取或驻守整个现代行政郡。",
+      "summary_zh": "国家图书馆保存1543年7月Murrough O'Brien与Ulick Burke等授爵文书目录。地方领主加入王室封建体系的名义关系不等于王室直接收取或驻守整个现代行政郡。 爱尔兰国家图书馆资料确认Murrough O'Brien于1543年7月1日获授托蒙德伯爵；该爵位属于当事酋长以地方政权换取英王封号的形式服属，不能把托蒙德地区误认为英王直接军事驻管的现代克莱尔郡。",
       "source_ids": [
         "IE-NLI-THOMOND-1543",
-        "IE-NLI-THOMOND-1543-MS"
+        "IE-NLI-THOMOND-1543-MS",
+        "IE-NLI-THOMOND-1543-01JUL",
+        "IE-CLARE-LIBRARY-THOMOND-1543"
       ],
       "control_effect": "surrender_regrant_legal_relation_not_full_effective_rule",
       "significance": 1,
@@ -1076,9 +1078,54 @@
       "review_status": "research_editor_pending",
       "historical_precise_area_claim": false,
       "amount_value": null
+    },
+    {
+      "id": "1540S-044",
+      "year": 1542,
+      "start_year": 1542,
+      "end_year": 1542,
+      "visible_from": 1542,
+      "date_precision": "1542-05 political submission; 1542-10 earldom confirmed",
+      "title_zh": "盖尔乌尔斯特领主Conn O'Neill接受英王封号，保留地方统治网络",
+      "category": "POL",
+      "icon_code": "POL",
+      "location_hint": "乌尔斯特Tír Eoghain/O'Neill领地（无已证实的统一16世纪县界）",
+      "coordinate": null,
+      "summary_zh": "爱尔兰传记辞典记载Conn Bacach O'Neill于1542年5月承认亨利八世的宗教统辖权，10月被封为Tyrone伯爵。此为地方领主服属与法权转型，不说明整个当今Tyrone或Ulster由都柏林直接征税、驻军或实际治理。",
+      "source_ids": [
+        "IE-DIB-CONN-ONEILL-1542"
+      ],
+      "control_effect": "nominal_or_negotiated_gaelic_vassal_and_regrant_not_direct_crown_province",
+      "significance": 1,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
+    },
+    {
+      "id": "1540S-045",
+      "year": 1546,
+      "start_year": 1546,
+      "end_year": 1546,
+      "visible_from": 1546,
+      "date_precision": "1546 military incursion year scholarly abstract",
+      "title_zh": "英王政府向爱尔兰中部O'Connor与O'More领主地进兵",
+      "category": "WAR",
+      "icon_code": "WAR",
+      "location_hint": "爱尔兰中部盖尔领主地（现Laois/Offaly地区但非现代郡界）",
+      "coordinate": null,
+      "summary_zh": "经同行评议的Irish Historical Studies研究确认，都铎官员1546年开始对O'Connor、O'More地方领主地实施军事进入。这是中部领主地军事行动，不能从原文摘要推出整个现代Laois/Offaly县被持续占领或拥有确切新殖民边线。",
+      "source_ids": [
+        "IE-HEFFERNAN-1546-MIDLANDS",
+        "IE-ELLIS-2016-LEINSTER"
+      ],
+      "control_effect": "English_1546_campaign_in_Gaelic_midlands_no_verified_occupied_polygons",
+      "significance": 1,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
     }
   ],
-  "count": 43,
+  "count": 45,
   "year_end_placement_rule": "only visible from event.year; current English occupation city symbols derive separate time intervals",
-  "notes": "Unverified precise site coordinates omitted. University/gov site coordinates identify modern landmarks, not 1540 fort wall. Scottish kingdom does not cease to exist because isolated forts were occupied. Annual 1549 Haddington vacated; Broughty/Boulogne persist. New 1546 forts Ambleteuse (Apr) and Boulemberg (May) are real English garrisons distinct from old Boulogne, but French captured both in 1549; exact historical fort polygons unknown. Deeper evidence: 1544 Tour d'Ordre works, 1545 English Lower Town and Young Man, French Outreau opposition, 1546 forced displacement policy, 1547 Hume capture/1548 Scottish recapture, and Forthill 1548 fort; each map mark spatial confidence distinguished."
+  "notes": "Unverified precise site coordinates omitted. University/gov site coordinates identify modern landmarks, not 1540 fort wall. Scottish kingdom does not cease to exist because isolated forts were occupied. Annual 1549 Haddington vacated; Broughty/Boulogne persist. New 1546 forts Ambleteuse (Apr) and Boulemberg (May) are real English garrisons distinct from old Boulogne, but French captured both in 1549; exact historical fort polygons unknown. Deeper evidence: 1544 Tour d'Ordre works, 1545 English Lower Town and Young Man, French Outreau opposition, 1546 forced displacement policy, 1547 Hume capture/1548 Scottish recapture, and Forthill 1548 fort; each map mark spatial confidence distinguished. 1542 O'Neill Tyrone negotiated earldom and 1546 Crown midlands incursion now separately documented; full Ulster/Laois/Offaly direct rule not verified."
 }
