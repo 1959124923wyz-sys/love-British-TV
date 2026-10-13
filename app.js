@@ -188,7 +188,7 @@ function openHypothesis(feature){
 // All clickable polygon types share a source-aware map territory dossier.
 function openTerritoryDossier(feature,kind='historic'){
  const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach';
- const label=warReach?'英军推进／补给影响示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const label=warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。';
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
  const precision=p.precision_note||p.historical_boundary_precision||(
@@ -207,7 +207,7 @@ function openTerritoryDossier(feature,kind='historic'){
   '<p class="zone-precision-note"><strong>地图精度：</strong>'+escapeHTML(precision)+'</p>'+
   (occupied?'<p class="zone-editorial-warning">紫色示意面表达有史料的英军驻点附近地区，无法证明所包围的整片土地都由英格兰统治。</p>':'')+
   (contested?'<p class="zone-editorial-warning">蓝紫交错纹理是根据战事地点手工制作的阅读参考，不能当成史料实测的前线。</p>':'')+
-  (warReach?'<p class="zone-editorial-warning">紫色虚线走廊根据英军进军与驻军补给地名手工绘制，只表示军事活动影响；不能证明沿途所有土地被英军稳定占领，也不意味着爱丁堡归英王统治。</p>':'')+
+  (warReach?'<p class="zone-editorial-warning">紫色虚线仅表示有史料依据的行军或驻堡交通方向，不是1540年代测绘道路、真实战线或连续英占土地；苏法封锁的补给线不能当成安全英国辖地。</p>':'')+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
@@ -598,21 +598,28 @@ function renderWartimeVicinities(){
 function renderWarReachCorridors(){
  groups.warReach.clearLayers();
  if(year<1540||!warReachAreas||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
- const selected=warReachAreas.features.filter(f=>f.properties?.zone_type==='war_reach_schematic'
-  &&f.properties?.historical_boundary_confirmed===false&&f.properties?.fill_authorized===false
-  &&yearValidWarZone(f,year));
- if(!selected.length)return;
- L.geoJSON({type:'FeatureCollection',features:selected},{
-  renderer:warReachRenderer,pane:'warReachPane',interactive:true,bubblingMouseEvents:false,
-  style:f=>({color:f.properties?.border_color||'#c5a4f8',weight:2.2,opacity:.85,
-   dashArray:'9 7',fill:true,fillColor:f.properties?.color||'#9473d8',
-   fillOpacity:Math.min(.22,Number(f.properties?.fill_opacity||.16)),
-   className:'atlas-war-reach-schematic'}),
-  onEachFeature:(feature,layer)=>{
-   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">有据英军战役推进／补给影响示意，非真实疆界；点击查看来源</div>',{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
-   layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'war-reach')});
+ const selected=warReachAreas.features.filter(f=>f.geometry?.type==='LineString'&&f.properties?.zone_type==='war_reach_schematic'
+  &&f.properties?.historical_boundary_confirmed===false&&f.properties?.fill_authorized===false&&yearValidWarZone(f,year));
+ // Only visually represent sourced directions; these lines never imply a continuous English controlled strip.
+ for(const feature of selected){
+  const p=feature.properties||{},points=feature.geometry.coordinates.map(c=>[c[1],c[0]]);
+  if(points.length<2)continue;
+  const stroke=p.stroke_color||'#c5a4f8';
+  L.polyline(points,{renderer:warReachRenderer,pane:'warReachPane',color:p.halo_color||'#9473d8',
+   weight:Math.min(26,Number(p.halo_weight_px)||20),opacity:Math.min(.2,Number(p.halo_opacity)||.12),
+   interactive:false,className:'atlas-war-reach-halo'}).addTo(groups.warReach);
+  const visible=L.polyline(points,{renderer:warReachRenderer,pane:'warReachPane',color:stroke,
+   weight:Math.max(3,Number(p.stroke_weight_px)||3),opacity:.94,dashArray:p.stroke_dashes||'7 7',
+   bubblingMouseEvents:false,className:'atlas-war-reach-schematic'}).addTo(groups.warReach);
+  const hit=L.polyline(points,{renderer:warReachRenderer,pane:'warReachPane',color:stroke,
+   weight:22,opacity:.016,interactive:true,bubblingMouseEvents:false,
+   className:'atlas-war-reach-hit'}).addTo(groups.warReach);
+  for(const layer of [visible,hit]){
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">有据军事行动方向，不是占地边界；点击查看资料</div>',{
+    sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+   layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);openTerritoryDossier(feature,'war-reach')});
   }
- }).addTo(groups.warReach);
+ }
 }
 function ensureContestedHatch(){
  const root=contestedZoneRenderer._container;
