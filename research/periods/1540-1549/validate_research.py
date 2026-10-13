@@ -72,7 +72,7 @@ for y in range(1540,1550):
     require(("haddington-english-1548-1549" in active)==(y==1548), "Haddington 1549 withdrawal failure")
     require(("hume-english-1547-1548" in active)==(y==1547), "English Hume still shown after December 1548 Scottish recapture")
     require(("tour-d-ordre-english-fort-1544-1550" in active)==(y>=1544), "English Tour d'Ordre disappeared before 1550")
-    require(("forthand-fort-english-1548-1550" in active)==(y>=1548), "English Forthill missing in 1548–49")
+    require(("forthill-english-fort-1548-1550" in active)==(y>=1548), "English Forthill missing in 1548–49")
     if y>=1548: require("hume-english-1547-1548" in s["confirmed_expired_episode_ids"], "Hume December 1548 Scots reoccupation absent")
     require("channel-guernsey" in s["carried_1539_stable_ids"], "PR25 late Guernsey documented polity reset in 1540s")
     for fort_id in ("ambleteuse-english-fort-1546-1549","boulemberg-english-fort-1546-1549"):
@@ -159,7 +159,7 @@ require(fin["verified_exact_Boulogne_net_profit"] is None,"Colonial profit false
 require(next(x for x in fin["financial_objects"] if x["id"]=="FIN-1547-HUME-FORT-700-TRUST")["value"]==700,"Hume reported £700 expense silently modified")
 require("unaudited" in next(x for x in fin["financial_objects"] if x["id"]=="FIN-1547-HUME-FORT-700-TRUST")["valuation_status"],"Hume fort £700 unaudited claim falsely certified")
 require("hume-english-1547-1548" in seed_expired,"Scots-recaptured Hume wrongly English in 1550")
-require({"forthand-fort-english-1548-1550","tour-d-ordre-english-fort-1544-1550"} <= {x["stable_id"] for x in seed["new_1549_verified_active_site_ids"]}, "1549 English outwork carryover missing")
+require({"forthill-english-fort-1548-1550","tour-d-ordre-english-fort-1544-1550"} <= {x["stable_id"] for x in seed["new_1549_verified_active_site_ids"]}, "1549 English outwork carryover missing")
 require(all(e["id"] in {x["id"] for x in atlas["events"]} for e in chron["records"]),"atlas event ID dropped")
 require(len({e["id"] for e in atlas["events"]})==len(atlas["events"]),"atlas event ID duplicate")
 
