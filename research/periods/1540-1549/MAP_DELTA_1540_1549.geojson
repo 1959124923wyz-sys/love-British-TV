@@ -10,7 +10,8 @@
     "actual_changes_are_named_forts_and_captured_Boulogne_urban_core": true,
     "historic_area_sqkm": null,
     "annual_slices": "CONTROL_TRANSITION_1539_1549.json",
-    "map_drawing": "Do not fill independent Scotland because some strategic towns were temporarily occupied. Do not draw full Boulonnais exact border; old seven reference polygons persist until control proven to cease."
+    "map_drawing": "Do not fill independent Scotland because some strategic towns were temporarily occupied. Do not draw full Boulonnais exact border; old seven reference polygons persist until control proven to cease.",
+    "deepening_20261013": "Plus 4 occupation/recovery fort point changes: Hume entry 1547 exit 1548; Tour d'Ordre English 1544; Forthill separate fort 1548. French Outreau opponent in independent layer FRENCH_COUNTERFORTS_1540_1549.geojson"
   },
   "features": [
     {
@@ -456,6 +457,109 @@
         "site_is_modern_reference_only": true,
         "not_whole_region_acquisition": true,
         "historic_area_polygon_confirmed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-hume-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.47093,
+          55.66515
+        ]
+      },
+      "properties": {
+        "name": "Hume苏格兰城堡被英军迫使投降",
+        "change_type": "English_named_castle_capture_only",
+        "change_year": 1547,
+        "stable_id": "hume-english-1547-1548",
+        "source_ids": [
+          "SC-HUME-TRUST-1547-1548",
+          "SC-HES-HUME-NRHE-58561"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1547,
+        "uncertainty": "government heritage medieval castle center not Tudor walls"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-hume-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.47093,
+          55.66515
+        ]
+      },
+      "properties": {
+        "name": "1548年12月苏格兰重夺Hume，英军占领终止",
+        "change_type": "Scottish_recapture_English_garrison_ends",
+        "change_year": 1548,
+        "stable_id": "hume-english-1547-1548",
+        "source_ids": [
+          "SC-HUME-TRUST-1547-1548"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1548,
+        "uncertainty": "government heritage medieval castle center not Tudor walls"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-tour-d-ordre-english-fort-1544-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.5972222,
+          50.7316667
+        ]
+      },
+      "properties": {
+        "name": "英军1544年11月加固Odre海崖旧灯塔",
+        "change_type": "English_northern_Boulogne_outwork_begins",
+        "change_year": 1544,
+        "stable_id": "tour-d-ordre-english-fort-1544-1550",
+        "source_ids": [
+          "FR-HELIOT-1958-PLANS-PAGES",
+          "FR-WIKIDATA-TOUR-ODRE"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1544,
+        "uncertainty": "former eroded Roman cliff lighthouse approximate coordinate"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-forthand-fort-english-1548-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87601,
+          56.47487
+        ]
+      },
+      "properties": {
+        "name": "布劳蒂Forthill第二英军山顶堡垒1548建立",
+        "change_type": "separate_English_garrison_near_Broughty_not_whole_Scotland",
+        "change_year": 1548,
+        "stable_id": "forthand-fort-english-1548-1550",
+        "source_ids": [
+          "SC-NLS-FORTHILL-OS-GAZETTEER",
+          "SC-FORTHILL-CURRENT-LOCALITY"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1548,
+        "uncertainty": "Modern Forthill quarter location uncertain relative old vanished fort"
       }
     }
   ]
