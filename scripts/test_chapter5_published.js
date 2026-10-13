@@ -60,7 +60,7 @@ assert.ok(financial.records.some(r=>r.amount_value===20&&r.accounting_class==='p
 assert.ok(financial.records.some(r=>r.disaggregated_awards?.some(x=>x.annual_gbp===42)&&r.disaggregated_awards?.some(x=>x.annual_gbp===10)));
 
 assert.ok(JSON.parse(read('data/chapters.json')).chapters.some(c=>c.id==='chapterFifth'&&c.end===1539)&&html.includes('id="yearRange"'));
-assert.ok(html.includes('app.js?v=timeline-v173'));
+assert.ok(html.includes('app.js?v=timeline-v175'));
 assert.ok(app.includes("fetch('data/atlas-1530-1539.json'"));
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
 assert.ok(app.includes("fetch('data/political-relations-1500-1549.geojson'"));
