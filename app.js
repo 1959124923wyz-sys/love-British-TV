@@ -639,6 +639,56 @@ function renderHypotheses(){
   }
  }).addTo(groups.hypotheses);
 }
+// A geography-first fallback for real pointer taps on Leaflet canvas/SVG roots.
+// Transparent overlay viewports can receive the click without hitting a rendered
+// path; resolve the year-valid historical feature at the map coordinate instead.
+// Do not create geographic claims: this only queries the existing GeoJSON shapes.
+function insideWarPolygon(ring,lon,lat){
+ if(!Array.isArray(ring)||ring.length<3)return false;
+ let inside=false;
+ for(let i=0,j=ring.length-1;i<ring.length;j=i++){
+  const a=ring[i],c=ring[j];
+  if(((a[1]>lat)!==(c[1]>lat)) &&
+   lon<((c[0]-a[0])*(lat-a[1])/(c[1]-a[1])+a[0]))inside=!inside;
+ }
+ return inside;
+}
+function featureContainsCoordinate(feature,lon,lat){
+ const geometry=feature?.geometry;if(!geometry)return false;
+ const polys=geometry.type==='Polygon'?[geometry.coordinates]:
+  geometry.type==='MultiPolygon'?geometry.coordinates:[];
+ return polys.some(rings=>Array.isArray(rings)&&rings.length>0 &&
+  insideWarPolygon(rings[0],lon,lat) &&
+  !rings.slice(1).some(hole=>insideWarPolygon(hole,lon,lat)));
+}
+function openMapTerritoryAt(latlng){
+ const lon=latlng.lng,lat=latlng.lat;
+ if(year>=1540&&$('toggleControlAreas').checked&&$('toggleTerritorialFootprints').checked){
+  const active=activeEnglishGarrisonIds();
+  const occupied=(occupiedZoneAreas?.features||[]).find(f=>
+   f.properties?.zone_type==='occupied'&&active.has(f.properties.stable_id)&&
+   yearValidWarZone(f,year)&&featureContainsCoordinate(f,lon,lat));
+  if(occupied){openTerritoryDossier(occupied,'occupied');return true;}
+  const contested=(contestedZoneAreas?.features||[]).find(f=>
+   f.properties?.zone_type==='contested'&&yearValidWarZone(f,year)&&
+   featureContainsCoordinate(f,lon,lat));
+  if(contested){openTerritoryDossier(contested,'contested');return true;}
+ }
+ if($('toggleTerritorialFootprints').checked){
+  const historic=(territorialFootprints?.features||[]).find(f=>{
+   const p=f.properties||{};
+   if(year<p.start_year||year>p.observed_through_year||!featureContainsCoordinate(f,lon,lat))return false;
+   return p.display_group==='control'?$('toggleControlAreas').checked:
+    p.display_group==='political'?$('togglePoliticalRelations').checked:$('toggleHypotheses').checked;
+  });
+  if(historic){openTerritoryDossier(historic,'historic');return true;}
+ }
+ if($('toggleKingdom').checked){
+  const polity=sovereigntyReferenceAreas.find(x=>featureContainsCoordinate(x.feature,lon,lat));
+  if(polity){openPolity(polity.group);return true;}
+ }
+ return false;
+}
 function updateVisibility(){
  for(const [id,group] of [['toggleKingdom',groups.kingdom],['toggleRoutes',groups.routes],['toggleCandidates',groups.candidate],['toggleClaims',groups.claim]]){
   if($(id).checked){if(!map.hasLayer(group))map.addLayer(group)}
@@ -913,7 +963,15 @@ $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventL
 map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
-map.on('click',()=>{if(activeClusterKey)closeCluster()});
+map.on('click',e=>{
+ if(activeClusterKey)closeCluster();
+ if(!atlas)return;
+ // Let actual clickable paths, routes and event markers keep their own actions.
+ // Otherwise the map location itself becomes a reliable territory hit target.
+ const element=e.originalEvent?.target;
+ if(element?.closest?.('.leaflet-interactive,.leaflet-marker-icon,.leaflet-control-container'))return;
+ openMapTerritoryAt(e.latlng);
+});
 
 syncPanels();
 window.addEventListener('keydown',e=>{if(!atlas||e.target?.closest?.('input,button,select,textarea,[contenteditable="true"]'))return;if(e.key==='ArrowLeft'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'){stopPlay();setYear(year+1)}});
