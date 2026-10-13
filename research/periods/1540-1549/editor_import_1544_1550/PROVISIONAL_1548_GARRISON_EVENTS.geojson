@@ -1,0 +1,177 @@
+{
+  "type": "FeatureCollection",
+  "period": [
+    1544,
+    1550
+  ],
+  "build": "2026-10-13",
+  "source_file": "SOURCE_LEDGER.json",
+  "shape_rule": "Only official modern historic PLACE Points; no inferred control polygons; site location is not year-1548 area extent",
+  "main_import_hint": "Only confirmed.features append to current data/military-control-points-1540-1549.geojson, preserving all existing features unchanged and deduplicating by stable_id. Provisional features are event/review pins and MUST NOT be added to the English year-end control layer.",
+  "historical_confidence_legend": {
+    "A": "official heritage monument coords plus atlas/RCAHMS 1547 English garrison",
+    "B": "1548 occupied once but last yearly state unproven",
+    "C": "conflicting chronology or reference-location ambiguity"
+  },
+  "review_status": "editor_approved_as_disputed_history_event_only_not_English_yearend",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "control-saltoun-english-episode-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.86426,
+          55.90609
+        ]
+      },
+      "properties": {
+        "controller": "English garrison on legally independent Scottish soil",
+        "legal_sovereignty": "Kingdom of Scotland",
+        "military_control_not_annexation": true,
+        "geometry_surveyed_period_wall": false,
+        "authentic_occupation_polygon_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "cartography": "modern_official_site_point_never_translate_to_1547_occupied_miles",
+        "stable_id": "saltoun-english-episode-1548",
+        "name": "萨尔顿：1548年曾受英军占领（年末未定）",
+        "name_en": "Saltoun Hall earlier Tower site",
+        "start_year": 1548,
+        "event_year": 1548,
+        "year_end_start": null,
+        "year_end_stop": null,
+        "English_1548_year_end_authorized": false,
+        "evidence_class": "B_official_site_historic_English_episode_but_recovery_disputed",
+        "source_ids": [
+          "MAP1548-TROVE-SALTOUN",
+          "MAP1547-ATLAS1996"
+        ],
+        "period_site_id": "Trove NRHE 54697",
+        "reference_site_type": "19c_rebuilt_estate_superimposed_on_lost_old_fort",
+        "location_precision": "current hall locality is a reference for predecessor; no accurate 1548 tower walls",
+        "render_style": "contested_historical_event_pin_1548_not_an_English_garrison_yearend_marker",
+        "description_zh": "官方遗址调查确认萨尔顿在1548年曾属英军据守堡垒之一，但该地点先后被英苏双方攻取，无法仅凭年份证明1548年12月31日属英军。当前建筑主要为19世纪改建，不可把其外围当英军控制区。",
+        "description": "官方遗址调查确认萨尔顿在1548年曾属英军据守堡垒之一，但该地点先后被英苏双方攻取，无法仅凭年份证明1548年12月31日属英军。当前建筑主要为19世纪改建，不可把其外围当英军控制区。",
+        "summary_zh": "官方遗址调查确认萨尔顿在1548年曾属英军据守堡垒之一，但该地点先后被英苏双方攻取，无法仅凭年份证明1548年12月31日属英军。当前建筑主要为19世纪改建，不可把其外围当英军控制区。",
+        "precision_note": "current hall locality is a reference for predecessor; no accurate 1548 tower walls；该点不是当年军占土地边界",
+        "historical_boundary_confirmed": false,
+        "source_urls": [
+          "https://www.trove.scot/place/54697",
+          "https://books.socantscot.org/digital-books/catalog/book/25"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_historic_site_point_not_area",
+        "political_status": "disputed_historic_military_episode_not_verified_yearend",
+        "editorial_layer": "historical_event_only",
+        "end_year": 1548
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-yester-castle-english-episode-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.71099,
+          55.8912
+        ]
+      },
+      "properties": {
+        "controller": "English garrison on legally independent Scottish soil",
+        "legal_sovereignty": "Kingdom of Scotland",
+        "military_control_not_annexation": true,
+        "geometry_surveyed_period_wall": false,
+        "authentic_occupation_polygon_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "cartography": "modern_official_site_point_never_translate_to_1547_occupied_miles",
+        "stable_id": "yester-castle-english-episode-1548",
+        "name": "耶斯特城堡：1548年英军驻防事件（年末未核）",
+        "name_en": "Yester Castle / Goblin Ha'",
+        "start_year": 1548,
+        "event_year": 1548,
+        "year_end_start": null,
+        "year_end_stop": null,
+        "English_1548_year_end_authorized": false,
+        "evidence_class": "B_scholarly_garrison_campaign_official_castle_point",
+        "source_ids": [
+          "MAP1548-TROVE-YESTER",
+          "MAP1548-HES-YESTER-SM780",
+          "MAP1547-ATLAS1996"
+        ],
+        "period_site_id": "Trove NRHE 56062, HES SM780",
+        "reference_site_type": "real_medieval_castle_not_Yester_House",
+        "location_precision": "historic Yester Castle site anchored, not Tudor fortified military extent",
+        "render_style": "historical_English_build_or_capture_event_only_pending_endyear",
+        "description_zh": "Yester Castle在1548年英军筑堡驻扎网络的历史论述中出现，官方古迹记录准确标识原中世纪城堡遗址。与Yester House不同；尚无充分的1548年底驻军完备名单及撤军日，暂不纳入年末持续实控点。",
+        "description": "Yester Castle在1548年英军筑堡驻扎网络的历史论述中出现，官方古迹记录准确标识原中世纪城堡遗址。与Yester House不同；尚无充分的1548年底驻军完备名单及撤军日，暂不纳入年末持续实控点。",
+        "summary_zh": "Yester Castle在1548年英军筑堡驻扎网络的历史论述中出现，官方古迹记录准确标识原中世纪城堡遗址。与Yester House不同；尚无充分的1548年底驻军完备名单及撤军日，暂不纳入年末持续实控点。",
+        "precision_note": "historic Yester Castle site anchored, not Tudor fortified military extent；该点不是当年军占土地边界",
+        "historical_boundary_confirmed": false,
+        "source_urls": [
+          "https://www.trove.scot/place/56062",
+          "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM780",
+          "https://books.socantscot.org/digital-books/catalog/book/25"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_historic_site_point_not_area",
+        "political_status": "disputed_historic_military_episode_not_verified_yearend",
+        "editorial_layer": "historical_event_only",
+        "end_year": 1548
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-fast-castle-english-episode-1547-1549-disputed",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.22404,
+          55.93228
+        ]
+      },
+      "properties": {
+        "controller": "English garrison on legally independent Scottish soil",
+        "legal_sovereignty": "Kingdom of Scotland",
+        "military_control_not_annexation": true,
+        "geometry_surveyed_period_wall": false,
+        "authentic_occupation_polygon_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "cartography": "modern_official_site_point_never_translate_to_1547_occupied_miles",
+        "stable_id": "fast-castle-english-episode-1547-1549-disputed",
+        "name": "法斯特城堡：英军控制及1549年筑堡记录存在年代争议",
+        "name_en": "Fast Castle, Berwickshire",
+        "start_year": 1547,
+        "event_year": 1547,
+        "year_end_start": null,
+        "year_end_stop": null,
+        "English_1549_year_end_authorized": false,
+        "evidence_class": "C_secondary_conflicting_1547_capture_1548_retake_1549_fort",
+        "source_ids": [
+          "MAP1549-TROVE-FASTCASTLE",
+          "MAP1547-ATLAS1996"
+        ],
+        "period_site_id": "Trove NRHE 59944",
+        "reference_site_type": "historic_promontory_castle_site",
+        "location_precision": "official castle point, not Tudor war earthworks contour",
+        "render_style": "disputed_control_history_pin_only",
+        "description_zh": "官方考古库定位Fast Castle，1547英军夺堡以及1548苏方收复与1549英方新修堡说法存在史料矛盾；可供编辑点击展示争议，但禁止给1549年末确定英占紫色。需查1549同时代军事工程图与军书。",
+        "description": "官方考古库定位Fast Castle，1547英军夺堡以及1548苏方收复与1549英方新修堡说法存在史料矛盾；可供编辑点击展示争议，但禁止给1549年末确定英占紫色。需查1549同时代军事工程图与军书。",
+        "summary_zh": "官方考古库定位Fast Castle，1547英军夺堡以及1548苏方收复与1549英方新修堡说法存在史料矛盾；可供编辑点击展示争议，但禁止给1549年末确定英占紫色。需查1549同时代军事工程图与军书。",
+        "precision_note": "official castle point, not Tudor war earthworks contour；该点不是当年军占土地边界",
+        "historical_boundary_confirmed": false,
+        "source_urls": [
+          "https://www.trove.scot/place/59944",
+          "https://books.socantscot.org/digital-books/catalog/book/25"
+        ],
+        "city_symbol_only": true,
+        "draw_mode": "named_historic_site_point_not_area",
+        "political_status": "disputed_historic_military_episode_not_verified_yearend",
+        "editorial_layer": "historical_event_only",
+        "end_year": 1547
+      }
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "editor_import_war_dynamic_status_v1",
+  "period": [
+    1544,
+    1550
+  ],
+  "time_resolution": "calendar-year end + selected month/date military control transitions; not a daily polygon raster",
+  "geo_point_delta_file": "CONFIRMED_1547_GARRISON_POINTS.geojson",
+  "event_points_file": "PROVISIONAL_1548_GARRISON_EVENTS.geojson",
+  "changes_file": "DYNAMIC_WAR_CONTROL_CHANGES_1544_1550.geojson",
+  "source_file": "SOURCE_LEDGER.json",
+  "base_referenced": "main:data/military-control-points-1540-1549.geojson (15 published year-end points)",
+  "previous_period_source": "PR27 research/periods/1540-1549/CONTROL_TRANSITION_1539_1549.json",
+  "next_period_source": "PR33 research/periods/1550-1559/CONTROL_TRANSITION_1549_1559.json",
+  "editor_actions": [
+    "Deduplicate stable_id and append only CONFIRMED 1547 points, not the entire 1540s previous 15 inherited features",
+    "Do not apply year1547 to additional English points after 1547 without new dated source",
+    "For 1550 use explicit military exit list rather than carrying main 1549 end dates by fallback",
+    "Provisional Saltoun/Yester/Fast Castle only on events or disputed history markers, never stable English territories",
+    "Do not infer area by buffer/convex hull or connect Dunfries/Cockpool/Castlemilk as a county conquest"
+  ],
+  "new_confirmed_site_ids": [
+    "castlemilk-dumfriesshire-english-1547",
+    "lochwood-tower-english-1547",
+    "dumfries-english-garrison-1547"
+  ],
+  "new_disputed_site_ids": [
+    "saltoun-english-episode-1548",
+    "yester-castle-english-episode-1548",
+    "fast-castle-english-episode-1547-1549-disputed"
+  ],
+  "inherited_points_count": 15,
+  "annual_snapshots": [
+    {
+      "year": 1544,
+      "scottish_kingdom_legal_sovereignty": "Scottish Crown independent; English military occupation of forts did not annex it",
+      "published_main_English_garrison_core_ids": [
+        "boulogne-english-1544-1550",
+        "lochmaben-english-1544-1545"
+      ],
+      "published_main_French_opposing_point_ids": [
+        "tour-d-ordre-english-fort-1544-1550"
+      ],
+      "additional_English_garrison_core_ids": [],
+      "new_southwest_1547_sites_not_auto_carried_forward": [],
+      "historically_mentioned_capture_site_ids_not_yearend_confirmed": [],
+      "no_new_precise_English_control_polygons_authorized": true,
+      "visually_approved_end_year_point_count": 2,
+      "battle_events_do_not_create_occupation": true
+    },
+    {
+      "year": 1545,
+      "scottish_kingdom_legal_sovereignty": "Scottish Crown independent; English military occupation of forts did not annex it",
+      "published_main_English_garrison_core_ids": [
+        "boulogne-english-1544-1550"
+      ],
+      "published_main_French_opposing_point_ids": [
+        "tour-d-ordre-english-fort-1544-1550",
+        "outreau-french-opposing-fort-from-1545"
+      ],
+      "additional_English_garrison_core_ids": [],
+      "new_southwest_1547_sites_not_auto_carried_forward": [],
+      "historically_mentioned_capture_site_ids_not_yearend_confirmed": [],
+      "no_new_precise_English_control_polygons_authorized": true,
+      "visually_approved_end_year_point_count": 1,
+      "battle_events_do_not_create_occupation": true
+    },
+    {
+      "year": 1546,
+      "scottish_kingdom_legal_sovereignty": "Scottish Crown independent; English military occupation of forts did not annex it",
+      "published_main_English_garrison_core_ids": [
+        "boulogne-english-1544-1550"
+      ],
+      "published_main_French_opposing_point_ids": [
+        "tour-d-ordre-english-fort-1544-1550",
+        "outreau-french-opposing-fort-from-1545",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549"
+      ],
+      "additional_English_garrison_core_ids": [],
+      "new_southwest_1547_sites_not_auto_carried_forward": [],
+      "historically_mentioned_capture_site_ids_not_yearend_confirmed": [],
+      "no_new_precise_English_control_polygons_authorized": true,
+      "visually_approved_end_year_point_count": 1,
+      "battle_events_do_not_create_occupation": true
+    },
+    {
+      "year": 1547,
+      "scottish_kingdom_legal_sovereignty": "Scottish Crown independent; English military occupation of forts did not annex it",
+      "published_main_English_garrison_core_ids": [
+        "boulogne-english-1544-1550",
+        "broughty-english-1547-1550",
+        "dundee-english-town-late-1547",
+        "eyemouth-fort-English-1547-1550",
+        "inchcolm-english-1547-1548"
+      ],
+      "published_main_French_opposing_point_ids": [
+        "tour-d-ordre-english-fort-1544-1550",
+        "outreau-french-opposing-fort-from-1545",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549",
+        "hume-english-1547-1548"
+      ],
+      "additional_English_garrison_core_ids": [
+        "castlemilk-dumfriesshire-english-1547",
+        "lochwood-tower-english-1547",
+        "dumfries-english-garrison-1547"
+      ],
+      "new_southwest_1547_sites_not_auto_carried_forward": [],
+      "historically_mentioned_capture_site_ids_not_yearend_confirmed": [],
+      "no_new_precise_English_control_polygons_authorized": true,
+      "visually_approved_end_year_point_count": 8,
+      "battle_events_do_not_create_occupation": true
+    },
+    {
+      "year": 1548,
+      "scottish_kingdom_legal_sovereignty": "Scottish Crown independent; English military occupation of forts did not annex it",
+      "published_main_English_garrison_core_ids": [
+        "boulogne-english-1544-1550",
+        "broughty-english-1547-1550",
+        "eyemouth-fort-English-1547-1550",
+        "dunglass-camp-english-1548-1549",
+        "haddington-english-1548-1549",
+        "lauder-english-1548-1550"
+      ],
+      "published_main_French_opposing_point_ids": [
+        "tour-d-ordre-english-fort-1544-1550",
+        "outreau-french-opposing-fort-from-1545",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549",
+        "forthill-english-fort-1548-1550"
+      ],
+      "additional_English_garrison_core_ids": [],
+      "new_southwest_1547_sites_not_auto_carried_forward": [
+        "castlemilk-dumfriesshire-english-1547",
+        "lochwood-tower-english-1547",
+        "dumfries-english-garrison-1547"
+      ],
+      "historically_mentioned_capture_site_ids_not_yearend_confirmed": [
+        "saltoun-english-episode-1548",
+        "yester-castle-english-episode-1548"
+      ],
+      "no_new_precise_English_control_polygons_authorized": true,
+      "visually_approved_end_year_point_count": 6,
+      "battle_events_do_not_create_occupation": true
+    },
+    {
+      "year": 1549,
+      "scottish_kingdom_legal_sovereignty": "Scottish Crown independent; English military occupation of forts did not annex it",
+      "published_main_English_garrison_core_ids": [
+        "boulogne-english-1544-1550",
+        "broughty-english-1547-1550",
+        "eyemouth-fort-English-1547-1550",
+        "dunglass-camp-english-1548-1549",
+        "lauder-english-1548-1550"
+      ],
+      "published_main_French_opposing_point_ids": [
+        "tour-d-ordre-english-fort-1544-1550",
+        "outreau-french-opposing-fort-from-1545",
+        "forthill-english-fort-1548-1550"
+      ],
+      "additional_English_garrison_core_ids": [],
+      "new_southwest_1547_sites_not_auto_carried_forward": [
+        "castlemilk-dumfriesshire-english-1547",
+        "lochwood-tower-english-1547",
+        "dumfries-english-garrison-1547"
+      ],
+      "historically_mentioned_capture_site_ids_not_yearend_confirmed": [
+        "fast-castle-english-episode-1547-1549-disputed"
+      ],
+      "no_new_precise_English_control_polygons_authorized": true,
+      "visually_approved_end_year_point_count": 5,
+      "battle_events_do_not_create_occupation": true
+    },
+    {
+      "year": 1550,
+      "scottish_kingdom_legal_sovereignty": "Scottish Crown independent; English military occupation of forts did not annex it",
+      "published_main_English_garrison_core_ids": [],
+      "published_main_French_opposing_point_ids": [],
+      "additional_English_garrison_core_ids": [],
+      "new_southwest_1547_sites_not_auto_carried_forward": [],
+      "historically_mentioned_capture_site_ids_not_yearend_confirmed": [],
+      "no_new_precise_English_control_polygons_authorized": true,
+      "visually_approved_end_year_point_count": 0,
+      "battle_events_do_not_create_occupation": true,
+      "English_main_point_layer_frozen_at_1549_should_not_be_carried_unchanged": true,
+      "English_Boulogne_after_1550_04_25": false,
+      "English_Broughty_after_1550_Feb": false,
+      "English_Eyemouth_after_summer_1550": false,
+      "English_Forthill_after_Feb_1550": false,
+      "English_Scottish_main_garrisons_yearend_1550": [],
+      "site_or_treaty_departure_dates_incomplete": [
+        "lauder-english-1548-1550",
+        "dunglass-camp-english-1548-1549",
+        "lochwood-tower-english-1547",
+        "castlemilk-dumfriesshire-english-1547",
+        "dumfries-english-garrison-1547"
+      ],
+      "continuing_English_nonScottish_named_legal_garrisons": [
+        "calais-crown",
+        "guines-crown-1520s",
+        "hammes-castle-english-pale-pre1550-1558"
+      ],
+      "French_restored": [
+        "boulogne-english-1544-1550"
+      ],
+      "Scottish_restored": [
+        "broughty-english-1547-1550",
+        "eyemouth-fort-English-1547-1550",
+        "forthill-english-fort-1548-1550"
+      ],
+      "never_auto_promote_1547_garrison_into_1550": true
+    }
+  ],
+  "unknown_but_historically_attested_unlocated": [
+    {
+      "id": "cockpool-english-garrison-1547",
+      "year": 1547,
+      "name": "Cockpool (southwest Scotland)",
+      "source_ids": [
+        "MAP1547-ATLAS1996"
+      ],
+      "geolocate_status": "NOT_READY",
+      "not_a_usable_site_coordinate_reason": "HES Trove Moss Castle/Cockpool NRHE 66749 location is a possible former family site, archaeological report does not prove same military garrison fort; 1547 actual barracks unresolved",
+      "end_year": "not_verified"
+    }
+  ],
+  "geometry_precision": "Point references only; no surveyed war occupation polygons or military capture country shapes."
+}
