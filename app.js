@@ -38,6 +38,10 @@ const garrisonHitRenderer=L.svg({pane:'garrisonHitPane'});
 map.createPane('warVicinityPane');map.getPane('warVicinityPane').style.zIndex='463';
 map.getPane('warVicinityPane').style.pointerEvents='auto';
 const warVicinityRenderer=L.svg({pane:'warVicinityPane'});
+map.createPane('warReachPane');
+map.getPane('warReachPane').style.zIndex='461';
+map.getPane('warReachPane').style.pointerEvents='auto';
+const warReachRenderer=L.svg({pane:'warReachPane'});
 map.createPane('contestedZonePane');
 map.getPane('contestedZonePane').style.zIndex='462';
 map.getPane('contestedZonePane').style.pointerEvents='auto';
@@ -45,7 +49,7 @@ const contestedZoneRenderer=L.svg({pane:'contestedZonePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -84,7 +88,7 @@ const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -155,8 +159,8 @@ function openHypothesis(feature){
 }
 // All clickable polygon types share a source-aware map territory dossier.
 function openTerritoryDossier(feature,kind='historic'){
- const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested';
- const label=occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach';
+ const label=warReach?'英军推进／补给影响示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。';
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
  const precision=p.precision_note||p.historical_boundary_precision||(
@@ -174,6 +178,7 @@ function openTerritoryDossier(feature,kind='historic'){
   '<p class="zone-precision-note"><strong>地图精度：</strong>'+escapeHTML(precision)+'</p>'+
   (occupied?'<p class="zone-editorial-warning">紫色示意面表达有史料的英军驻点附近地区，无法证明所包围的整片土地都由英格兰统治。</p>':'')+
   (contested?'<p class="zone-editorial-warning">蓝紫交错纹理是根据战事地点手工制作的阅读参考，不能当成史料实测的前线。</p>':'')+
+  (warReach?'<p class="zone-editorial-warning">紫色虚线走廊根据英军进军与驻军补给地名手工绘制，只表示军事活动影响；不证明沿途各地均被英军稳定占领，也不意味着爱丁堡归英王统治。</p>':'')+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
@@ -559,6 +564,27 @@ function renderWartimeVicinities(){
  }).addTo(groups.warVicinity);
 }
 // Real blue/violet SVG crosshatching instead of one ambiguous semi-solid color.
+// Military reach is neither British sovereignty nor year-end area-wide occupation.
+// PR38 gives four evidence-anchored coarse illustrative bands, not surveyed borders.
+function renderWarReachCorridors(){
+ groups.warReach.clearLayers();
+ if(year<1540||!warReachAreas||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
+ const selected=warReachAreas.features.filter(f=>f.properties?.zone_type==='war_reach_schematic'
+  &&f.properties?.historical_boundary_confirmed===false&&f.properties?.fill_authorized===false
+  &&yearValidWarZone(f,year));
+ if(!selected.length)return;
+ L.geoJSON({type:'FeatureCollection',features:selected},{
+  renderer:warReachRenderer,pane:'warReachPane',interactive:true,bubblingMouseEvents:false,
+  style:f=>({color:f.properties?.border_color||'#c5a4f8',weight:2.2,opacity:.85,
+   dashArray:'9 7',fill:true,fillColor:f.properties?.color||'#9473d8',
+   fillOpacity:Math.min(.22,Number(f.properties?.fill_opacity||.16)),
+   className:'atlas-war-reach-schematic'}),
+  onEachFeature:(feature,layer)=>{
+   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">有据英军战役推进／补给影响示意，非真实疆界；点击查看来源</div>',{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+   layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'war-reach')});
+  }
+ }).addTo(groups.warReach);
+}
 function ensureContestedHatch(){
  const root=contestedZoneRenderer._container;
  if(!root||!root.ownerDocument||root.querySelector('#atlas-blue-violet-contested'))return;
@@ -850,7 +876,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderContestedZones();renderWartimeControls();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -930,7 +956,7 @@ async function boot(){
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
   }catch(_e){ /* Existing fallback codes remain available. */ }
   try{
-   const [notesResponse,geoResponse,thirdGeoResponse,controlResponse,politicalResponse,footprintResponse,wartimeResponse,occupiedResponse,contestedResponse]=await Promise.all([
+   const [notesResponse,geoResponse,thirdGeoResponse,controlResponse,politicalResponse,footprintResponse,wartimeResponse,occupiedResponse,contestedResponse,warReachResponse]=await Promise.all([
     fetch('data/historical-detail-notes.json',{cache:'no-store'}),
     fetch('data/geography-hypotheses-1500-1529.geojson',{cache:'no-store'}),
     fetch('data/geography-1510-1519-hypotheses.geojson',{cache:'no-store'}),
@@ -939,7 +965,8 @@ async function boot(){
     fetch('data/territorial-footprints-1497-1549.geojson',{cache:'no-store'}),
      fetch('data/military-control-points-1540-1549.geojson',{cache:'no-store'}),
      fetch('data/war-occupied-zones-1540-1549.geojson',{cache:'no-store'}),
-     fetch('data/war-contested-zones-1540-1549.geojson',{cache:'no-store'})
+     fetch('data/war-contested-zones-1540-1549.geojson',{cache:'no-store'}),
+     fetch('data/war-front-corridors-1540-1549.geojson',{cache:'no-store'})
    ]);
    if(notesResponse.ok)researchNotes=(await notesResponse.json()).records||{};
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
@@ -950,6 +977,7 @@ async function boot(){
     if(wartimeResponse.ok)militaryControlPoints=await wartimeResponse.json();
     if(occupiedResponse.ok)occupiedZoneAreas=await occupiedResponse.json();
     if(contestedResponse.ok)contestedZoneAreas=await contestedResponse.json();
+    if(warReachResponse.ok)warReachAreas=await warReachResponse.json();
   }catch(_e){ /* Text and all vetted history records remain usable. */ }
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
@@ -989,7 +1017,7 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderContestedZones();renderWartimeControls();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
