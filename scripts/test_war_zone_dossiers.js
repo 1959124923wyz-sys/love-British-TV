@@ -85,7 +85,7 @@ assert.ok(app.includes('activeEnglishGarrisonIds()'),'Occupation surfaces must b
 assert.ok(app.includes("if(linkedOccupiedZone)openTerritoryDossier(linkedOccupiedZone,'occupied')"),'Garrison ring must expose linked control-area dossier if tiny polygon is masked by a larger symbol');
 assert.ok(!html.includes('id="controlStatus"')&&!app.includes('renderAnnualControlSummary'),'Delete the unwanted statistics box in both DOM and JS');
 assert.ok(html.includes('swatch contested-war'),'Keep contested zone legend');
-assert.ok(html.includes('app.js?v=timeline-v175')&&html.includes('css/dark-atlas-v2.css?v=timeline-v175'));
+assert.ok(html.includes('app.js?v=timeline-v176')&&html.includes('css/dark-atlas-v2.css?v=timeline-v176'));
 assert.ok(css.includes('display:inline-flex!important'),'Year title must remain compact after removing statistic rows');
 assert.ok(css.includes('.zone-dossier-facts')&&!css.includes('.control-status-value'));
 assert.ok(app.includes("map.createPane('garrisonHitPane')")&&app.includes('className:\'atlas-garrison-hit\''),'Above-event icon stroke-hit ring must expose otherwise occluded territory dossiers');

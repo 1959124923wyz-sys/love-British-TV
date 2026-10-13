@@ -96,5 +96,5 @@ assert.ok(app.includes("function renderWartimeControls()")&&app.includes('p.year
 assert.ok(app.includes('atlasSixth?.sources'),'New chapter dossier must resolve academic source links');
 assert.ok(app.includes("next>=1540?atlasSixth"),'Map must load the correct sixth Atlas slice');
 assert.ok(!app.includes("map.flyTo("),'Historical map focus must not auto-zoom');
-assert.ok(html.includes('max="1549"')&&html.includes('app.js?v=timeline-v175'));
+assert.ok(html.includes('max="1549"')&&html.includes('app.js?v=timeline-v176'));
 console.log('PASS sixth chapter: 49 dated sourced events, 23 recorded places, 7 existing geographic outlines, 15 independent garrison/counterfort point features and exact annual control transitions');

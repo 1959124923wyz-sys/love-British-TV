@@ -87,6 +87,34 @@ const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室
 const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
+// UI contract: two independent user-facing layers, all earlier internal gate IDs
+// retained only for chronology, migration and backwards-compatible renderers.
+// War garrisons, Scottish political background, occupation / contest / reach
+// always belong to the 'territory' checkbox. Combat/voyage/claim pins and
+// schematically routed voyages belong to 'events'. Never reset on year change.
+function syncMapLayers(){
+ const territory=$('mapLayerTerritory').checked,events=$('mapLayerEvents').checked;
+ const gates={
+  toggleTerritorialFootprints:territory,
+  toggleControlAreas:territory,
+  togglePoliticalRelations:territory,
+  toggleKingdom:territory,
+  toggleHypotheses:territory,
+  toggleRoutes:events,
+  toggleCandidates:events,
+  toggleClaims:events,
+  toggleEvents:events,
+  toggleMinorEvents:false
+ };
+ for(const [id,checked] of Object.entries(gates))$(id).checked=checked;
+ for(const id of ['mapLayerTerritory','mapLayerEvents']){
+  const input=$(id);
+  input.parentElement.classList.toggle('selected',input.checked);
+  input.parentElement.setAttribute('aria-label',(id==='mapLayerTerritory'?'版图':'事件')+(input.checked?'已显示':'已隐藏'));
+ }
+ if(!events){focusedEventId=null;focusRequestToken++;}
+ if(atlas)refreshHistoricalLayers();
+}
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -312,7 +340,7 @@ function renderPoints(){
  closeCluster();
  for(const name of ['event','candidate','routes','claim','place','cluster'])groups[name].clearLayers();
  const shown=[];
- const showAll=map.getZoom()>=4||$('toggleMinorEvents').checked;
+ const showAll=map.getZoom()>=6||$('toggleMinorEvents').checked;
  if($('toggleEvents').checked||focusedEventId){
   for(const e of atlas.events){
    if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;
@@ -324,7 +352,7 @@ function renderPoints(){
    shown.push({item:e,type:'event',lat:e.lat,lng:e.lng});
   }
  }
- if($('toggleKingdom').checked&&year>=1500){
+ if($('toggleKingdom').checked&&year>=1500&&map.getZoom()>=6){
   for(const q of atlas.places||[]){
    const activeMilitaryCore=year>=1540&&$('toggleControlAreas').checked&&militaryControlPoints?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.year_end_start&&year<=f.properties.year_end_stop);
    const alreadyDrawnAsArea=Boolean(activeMilitaryCore)||footprintEnabledFor(q.id)||($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year));
@@ -996,6 +1024,8 @@ async function boot(){
   setWarning('历史数据未能加载：'+String(e.message||e));
  }
 }
+$('mapLayerTerritory').addEventListener('change',syncMapLayers);
+$('mapLayerEvents').addEventListener('change',syncMapLayers);
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
 function jumpToEnteredYear(){
  if(!atlas)return;
