@@ -573,22 +573,22 @@ try:
     verify("1556 Irish plantation and African enslavement geographic navigation absent",
            """document.querySelectorAll('#map .atlas-ch7-geo-marker').length===4 &&
               document.querySelectorAll('#chapter7GeographyNav [data-geo-anchor]').length===4""",driver)
-    geo_zoom=driver.execute_script("return map.getZoom()")
+    geo_zoom=driver.execute_script("return window.atlasReadViewport().zoom")
     driver.execute_script("document.querySelector('[data-geo-anchor=ch7-midlands-colonial-dispossession]').click()")
-    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody')?.textContent.includes('土地') && Math.abs(map.getCenter().lat-53.035512)<0.2"))
+    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody')?.textContent.includes('土地') && Math.abs(window.atlasReadViewport().center.lat-53.035512)<0.2"))
     verify("Irish land confiscation source links missing", "document.querySelectorAll('#dossierBody [data-story-event]').length===5",driver)
-    assert driver.execute_script("return map.getZoom()")==geo_zoom,"Geography jump must not alter zoom"
+    assert driver.execute_script("return window.atlasReadViewport().zoom")==geo_zoom,"Geography jump must not alter zoom"
     driver.execute_script("document.querySelector('[data-geo-anchor=ch7-african-guinea-trade-and-enslavement]').click()")
-    wait.until(lambda d: d.execute_script("return Math.abs(map.getCenter().lat-5.08266)<0.25"))
+    wait.until(lambda d: d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.25"))
     verify("African voyage/enslavement must disclose Portuguese Elmina not English conquest",
            """document.querySelector('#dossierBody').textContent.includes('葡萄牙') &&
               document.querySelector('#dossierBody').textContent.includes('1555年')""",driver)
-    assert driver.execute_script("return map.getZoom()")==geo_zoom
+    assert driver.execute_script("return window.atlasReadViewport().zoom")==geo_zoom
     driver.execute_script("document.querySelector('[data-geo-anchor=ch7-white-sea-muscovy-contact]').click()")
-    wait.until(lambda d: d.execute_script("return Math.abs(map.getCenter().lat-64.2)<0.25"))
+    wait.until(lambda d: d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-64.2)<0.25"))
     verify("Muscovy trade anchor must disclose non-English sovereignty",
            "document.querySelector('#dossierBody').textContent.includes('不是英国领土')",driver)
-    assert driver.execute_script("return map.getZoom()")==geo_zoom
+    assert driver.execute_script("return window.atlasReadViewport().zoom")==geo_zoom
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Event toggle off did not hide geography index",
            "document.querySelector('#chapter7GeographyNav').hidden && document.querySelectorAll('#map .atlas-ch7-geo-marker').length===0",driver)

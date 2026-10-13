@@ -7,6 +7,8 @@ const $ = id=>document.getElementById(id);
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const map = L.map('map',{zoomControl:false,worldCopyJump:false,preferCanvas:true,minZoom:2,maxZoom:11,scrollWheelZoom:true}).setView([51,-31],3);
 // Zoom by wheel, touch or double-click; the map surface stays free of floating controls.
+// Read-only viewport status for visual regression; no external command can mutate historical geometry.
+window.atlasReadViewport=()=>({zoom:map.getZoom(),center:{lat:map.getCenter().lat,lng:map.getCenter().lng}});
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
  maxZoom:19,maxNativeZoom:19,
  attribution:'&copy; OpenStreetMap contributors'
