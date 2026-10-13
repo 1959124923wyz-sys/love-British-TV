@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v173">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=map-mode-ui1">
 
 </head>
 <body>
@@ -33,47 +33,43 @@
    <div class="side-section-head"><span>已发生事件</span><span id="eventCount">—</span></div>
    <label class="chapter-archive-toggle"><input type="checkbox" id="showFullChapterArchive">查阅本章完整档案</label>
    <div id="eventList" class="event-list"><div class="loading">正在读取历史资料……</div></div>
-   <div class="sidebar-settings-wrap">   <details class="map-controls sidebar-map-controls" id="mapControls">
-    <summary>☷ 图层与历史地理 <span class="panel-chevron">▾</span></summary>
-    <div class="controls-body">
-     <div class="control-heading">地图图层</div>
-     <div class="layer-options">
-      <label><input type="checkbox" id="toggleTerritorialFootprints" checked><i class="layer-dot territory"></i>历史疆域与军控概略范围 · 虚线</label>
-      <label><input type="checkbox" id="toggleControlAreas" checked><i class="layer-dot area-control"></i>实际控制城市与局部驻军 · 据点</label>
-      <label><input type="checkbox" id="togglePoliticalRelations" checked><i class="layer-dot dependency"></i>附属领地与特殊领主制度 · 纹理</label>
-      <label><input type="checkbox" id="toggleKingdom" checked><i class="layer-dot kingdom"></i>王国范围与政治据点</label>
-      <label><input type="checkbox" id="toggleRoutes" checked><i class="layer-dot route"></i>航海示意</label>
-      <label><input type="checkbox" id="toggleCandidates" checked><i class="layer-dot ring"></i>登陆位置</label>
-      <label><input type="checkbox" id="toggleClaims" checked><i class="layer-dot claim"></i>主权宣称</label>
-      <label><input type="checkbox" id="toggleEvents" checked><i class="layer-dot major"></i>历史事件</label>
-      <label><input type="checkbox" id="toggleMinorEvents"><i class="layer-dot minor"></i>次要事件</label>
+   <div class="sidebar-settings-wrap">
+    <details class="map-mode-help" id="mapModeHelp">
+     <summary><span>地图图例与精度说明</span><span aria-hidden="true">▾</span></summary>
+     <div class="map-mode-help-body">
+      <p>直接使用地图右上角的<strong>版图／战况／事件</strong>切换查看内容，无需逐个开关图层。</p>
+      <div><i class="swatch kingdom"></i><span><strong>国家底色</strong> · 表示政治归属</span></div>
+      <div><i class="swatch wartime-vicinity"></i><span><strong>紫色虚线</strong> · 军事控制或影响的概略范围</span></div>
+      <div><i class="swatch contested-war"></i><span><strong>蓝紫条纹</strong> · 交战与争夺，非稳定占领</span></div>
+      <div><i class="swatch english-garrison"></i><span><strong>驻军标记</strong> · 有史料的城堡／据点</span></div>
+      <p class="map-mode-caution">历史地图不确定的边线采用虚线。点击地图上的区域或据点可查看史料与精度说明。</p>
      </div>
-     <div class="control-divider"></div>
-     <div class="control-heading">标记说明</div>
-     <div class="legend-items">
-      <div><i class="swatch territory"></i>紫色填充＋虚线 · 加来概略范围</div>
-      <div><i class="swatch city-occupation"></i>小圆点 · 有据城市位置（非面积）</div>
-       <div><i class="swatch english-garrison"></i>紫色虚线环 · 英军年末驻点（非占地边界）</div>
-       <div><i class="swatch wartime-vicinity"></i>紫色虚线淡面 · 有据英军驻点附近示意（点击看概况）</div>
-       <div><i class="swatch contested-war"></i>蓝紫交错纹理 · 概略交战／争夺地带（点击看史料）</div>
-       <div><i class="swatch french-defence"></i>青绿虚线环 · 法军抵抗据点（非法属英占区）</div>
-      <div><i class="swatch dependency"></i>斜线或交叉纹 · 特殊领地关系</div>
-      <div><i class="swatch control"></i>现代地理参照 · 英格兰紫色／独立苏格兰蓝灰</div>
-      <div><i class="swatch dash"></i>航海方向示意</div>
-      <div><i class="swatch major"></i>重大事件</div>
-      <div><i class="swatch medium"></i>区域事件</div>
-      <div><i class="swatch minor"></i>细节事件</div>
-      <div><i class="swatch question"></i>地点待考</div>
-     </div>
-      <label class="hypothesis-label"><input type="checkbox" id="toggleHypotheses" checked><i class="layer-dot hypothetical"></i>历史地理推定范围（虚线）</label>
-      <p class="hypothesis-key">虚线表示依据历史地点重建的地理范围</p>
-    </div>
-   </details></div>
+    </details>
+   </div>
+   <!-- Existing internal layer gates are retained for archival compatibility.
+        Readers use the three map-mode buttons, not nine implementation toggles. -->
+   <div id="internalLayerFlags" hidden aria-hidden="true">
+    <input type="checkbox" id="toggleTerritorialFootprints" checked>
+    <input type="checkbox" id="toggleControlAreas" checked>
+    <input type="checkbox" id="togglePoliticalRelations" checked>
+    <input type="checkbox" id="toggleKingdom" checked>
+    <input type="checkbox" id="toggleRoutes" checked>
+    <input type="checkbox" id="toggleCandidates" checked>
+    <input type="checkbox" id="toggleClaims" checked>
+    <input type="checkbox" id="toggleEvents" checked>
+    <input type="checkbox" id="toggleMinorEvents">
+    <input type="checkbox" id="toggleHypotheses" checked>
+   </div>
   </div>
 
  </aside>
  <main class="map-stage" aria-label="1497—1549年历史地图">
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
+  <nav class="map-mode-switch" id="mapModeSwitch" aria-label="地图内容模式">
+   <button type="button" data-map-mode="territory" aria-pressed="true" title="查看国家、领地与驻军位置">版图</button>
+   <button type="button" data-map-mode="war" aria-pressed="false" title="查看军队推进、争夺与驻军">战况</button>
+   <button type="button" data-map-mode="events" aria-pressed="false" title="查看事件标记与航海线索">事件</button>
+  </nav>
 
   <div class="map-top">
    <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span><div id="controlStatus" class="year-control-status" hidden aria-label="本年驻军及交战地理概况"></div></div>
@@ -117,6 +113,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=timeline-v173"></script>
+<script src="app.js?v=map-mode-ui1"></script>
 </body>
 </html>
