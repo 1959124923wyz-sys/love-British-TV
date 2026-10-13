@@ -4,8 +4,8 @@
     1550,
     1559
   ],
-  "count": 16,
-  "P0": 7,
+  "count": 20,
+  "P0": 10,
   "tasks": [
     {
       "id": "1550-Q01",
@@ -18,7 +18,14 @@
       ],
       "must_not_assume": "No default modern Pas-de-Calais map area.",
       "status": "open_original_archival_evidence_not_verified",
-      "blocking_publication": false
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "partial_scholarly_cartography_lead",
+        "source_ids": [
+          "FR-HISTORIC-PALE-TOPO-2016"
+        ],
+        "note": "English Heritage Historical Review published landscape and cadastre reconstruction with Hammes and Guines; full article maps/rights/georeferencing not obtained. No historic British Calais Pale polygon authorized."
+      }
     },
     {
       "id": "1550-Q02",
@@ -31,7 +38,15 @@
       ],
       "must_not_assume": "Do not invent exact day; year and month sufficient.",
       "status": "open_original_archival_evidence_not_verified",
-      "blocking_publication": false
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "partial_royal_collection_and_secondary_dates",
+        "source_ids": [
+          "FR-RCT-GUINES-SIEGE-1558",
+          "FR-HAMMES-HISTOPALE-1558"
+        ],
+        "note": "Royal Collection confirms Guines fell Jan 1558, then Hammes last English castle abandoned; local source dates Hammes overnight Jan22/23. Guines exact 20/21 Jan not confirmed via original letter."
+      }
     },
     {
       "id": "1550-Q03",
@@ -45,7 +60,15 @@
       ],
       "must_not_assume": "Modern walls and present marsh shoreline are anachronistic.",
       "status": "open_original_archival_evidence_not_verified",
-      "blocking_publication": false
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "important_warning_verified_illustrative_map_not_accurate",
+        "source_ids": [
+          "FR-RCT-GUINES-SIEGE-1558",
+          "FR-RCT-CALAIS-SIEGE-1558"
+        ],
+        "note": "Royal Collection RCIN721026 says Guines engraved castle location and walls contradict c1550 BL Cotton Augustus I ii71 plans: exclude direct tracing of engraving polygons. RCIN721024 documents 4 Jan Newnham Bridge and Rysbank captures before town."
+      }
     },
     {
       "id": "1550-Q04",
@@ -84,7 +107,17 @@
       ],
       "must_not_assume": "No solid English 1550 occupation without direct records.",
       "status": "open_original_archival_evidence_not_verified",
-      "blocking_publication": false
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "partial_eyemouth_year_end_and_hailes_resolved",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+          "SC-HES-HAILES-SOS-2019",
+          "GB-EDWARD-VI-DIARY-1550-TREATY"
+        ],
+        "note": "Hailes Scots recaptured 1548 according HES p2; should not be in unknown 1550 list. English Eyemouth held to summer 1550 per peer-reviewed archaeology abstract. 24 March 1550 treaty says Lauder/Dunglass due delivered within 6 months, not actual handover day; keep archival checks."
+      }
     },
     {
       "id": "1550-Q07",
@@ -210,8 +243,88 @@
       ],
       "must_not_assume": "Avoid projecting future 1560 Scottish events and Hawkins slave voyages backwards.",
       "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "next_chapter_1559_Eyemouth_french_phase",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557"
+        ],
+        "note": "French military Eyemouth 1557-58 separately; archaeologists describe negotiated July 1559 exit, museum later demolition 1560, possible mismatch in physical abandonment and flattening. Do not carry as English 1560."
+      }
+    },
+    {
+      "id": "1550-Q17",
+      "priority": "P0",
+      "topic": "1558 Hammes Castle last English Calais Pale fort: historical location and 1549 carryover",
+      "archive_action": "Royal Collection RCIN721026 establishes Jan 1558 retreat, Histopale local night 22/23 Jan. Examine BnF 1558 Hames castle view btv1b72002499, English Heritage Historical Review Pale landscape paper, Napoleonic cadastre and antiquarian plans; differentiate demolished Tudor Hammes from Château de Ham (Somme) and c1800 Château du Baron de Saint-Paul. Verify fortified castle GPS before any Point.",
+      "lead_source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558",
+        "FR-HAMMES-HISTOPALE-1558",
+        "FR-HISTORIC-PALE-TOPO-2016"
+      ],
+      "must_not_assume": "Never place modern Château de Ham coordinates at 49.743,3.073 for Hammes near Calais, or fabricate a Hames-Boucres polygon.",
+      "status": "historically_verified_location_not_georeferenced",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q18",
+      "priority": "P0",
+      "topic": "1557–1559 Eyemouth French occupation is separate phase from 1547-1550 English fort",
+      "archive_action": "Consult Caldwell/Ewart Post-Medieval Archaeology 31 pp61–119 excavation, British Library Cotton Augustus I i60 1557 English spy map, SCAPE Trust archaeologists and National Records Scotland withdrawal correspondence. Extract year/month of French forces leaving in 1559 and separate original Tudor and 1557 French rampart lines; obtain permissions before use.",
+      "lead_source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH",
+        "SC-SCAPE-EYEMOUTH-1557-PLAN",
+        "SC-STANDREWS-EYEMOUTH-VIRTUAL-1557",
+        "SC-HES-EYEMOUTH-CORN-SM4577"
+      ],
+      "must_not_assume": "French garrison does not give France Scottish sovereignty and cannot revive English control; nearby Corn Fort SM4577 is not the Tudor artillery earthwork.",
+      "status": "year_1557_and_1558_controller_evidenced_later_withdrawal_demolition_partial",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q19",
+      "priority": "P0",
+      "topic": "Guînes contemporary castle footprint vs erroneous 1558 engraved siege plan",
+      "archive_action": "Royal Collection RCIN721026 states BL Cotton Augustus I ii71 c1550 survey places the castle NE of the town while engraved Guînes fortress appears south, and wall outlines differ. Read original Cotton map, identify proper historic North and calibratable points, copyright and actual controller footprint; compare with peer-reviewed English Heritage Historical Review Pale reconstruction.",
+      "lead_source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558",
+        "FR-HISTORIC-PALE-TOPO-2016"
+      ],
+      "must_not_assume": "Antiquarian oblique art is not a measured surveyed historic control polygon; ignore false wall loops until georeferenced.",
+      "status": "official_museum_identified_print_vs_plan_mismatch",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q20",
+      "priority": "P1",
+      "topic": "1558 Jan Calais incremental siege changes and 7 vs 8 Jan transfer convention",
+      "archive_action": "Inspect original 4 Jan Grey dispatch cited by Royal Collection, museum calais original public letter and regional French charter exhibits: Newnham/Rysbank conquered by Jan4, city breach/surrender Jan7 and municipal final Jan8; confirm distinction without forcing a single exact date on all forts.",
+      "lead_source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558",
+        "FR-CALAIS-MUNICIPAL-1558"
+      ],
+      "must_not_assume": "Do not make city 7 Jan entry conflict with municipal Jan8 final into mutually exclusive 'inaccurate' claims or claim 4 Jan precise individual outwork fall.",
+      "status": "official_contemporary_secondary_quotes_support_sequence_not_all_days",
       "blocking_publication": false
     }
   ],
-  "fast_release_rule": "Any problem without high-confidence primary evidence can remain unrendered/approximate dotted; do not obstruct entire chapter."
+  "fast_release_rule": "Any problem without high-confidence primary evidence can remain unrendered/approximate dotted; do not obstruct entire chapter.",
+  "collector3_territorial_audit": {
+    "date": "2026-10-13",
+    "new_IDs": [
+      "1550-Q17",
+      "1550-Q18",
+      "1550-Q19",
+      "1550-Q20"
+    ],
+    "critical_map_gaps": [
+      "Hammes final English Calais Pale site (no precise coordinate)",
+      "1557 French Eyemouth reoccupied on Scottish soil",
+      "Hailes 1548 Scots recapture must not reappear in 1550",
+      "Guines 1558 printed map does not match contemporary plans",
+      "Calais 4 Jan outerworks vs 7-8 Jan city"
+    ],
+    "new_original_16c_autographs_read": 0
+  }
 }
