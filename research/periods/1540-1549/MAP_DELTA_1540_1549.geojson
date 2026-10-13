@@ -284,6 +284,75 @@
         "verified_boundary": false,
         "historic_area_polygon_confirmed": false
       }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-lochmaben-english-1544-1545",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.43092,
+          55.11633
+        ]
+      },
+      "properties": {
+        "name": "洛赫马本城堡英军1544年攻占",
+        "change_type": "English_1544_temporary_castle_capture",
+        "change_year": 1544,
+        "stable_id": "lochmaben-english-1544-1545",
+        "source_ids": [
+          "SC-HES-LOCHMABEN-HISTORY",
+          "SC-HES-LOCHMABEN-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-lochmaben-english-1544-1545",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.43092,
+          55.11633
+        ]
+      },
+      "properties": {
+        "name": "洛赫马本城堡苏格兰1545年收复",
+        "change_type": "Scottish_recapture_1545",
+        "change_year": 1545,
+        "stable_id": "lochmaben-english-1544-1545",
+        "source_ids": [
+          "SC-HES-LOCHMABEN-HISTORY",
+          "SC-HES-LOCHMABEN-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-dunglass-camp-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.38613,
+          55.93584
+        ]
+      },
+      "properties": {
+        "name": "Dunglass英军1548—1549临时营地",
+        "change_type": "English_camp_evidenced_1548_1549",
+        "change_year": 1548,
+        "stable_id": "dunglass-camp-english-1548-1549",
+        "source_ids": [
+          "SC-HES-DUNGLASS-CAMP"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true,
+        "approx_position": "Modern East Lothian Dunglass garden designation. English camp west-of-house hill."
+      }
     }
   ]
 }
