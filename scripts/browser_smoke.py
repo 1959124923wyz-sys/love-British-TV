@@ -230,7 +230,7 @@ try:
            "document.querySelectorAll('#map .atlas-territory-solid').length>=1", driver)
     set_year(1541,2)
     verify("Irish Crown Act title still has untranslated political status words",
-           """'领主辖区' in document.querySelector('#eventList').textContent && '王国' in document.querySelector('#eventList').textContent && !document.querySelector('#eventList').textContent.includes('Lordship')""", driver)
+           """document.querySelector('#eventList').textContent.includes('领主辖区') && document.querySelector('#eventList').textContent.includes('王国') && !document.querySelector('#eventList').textContent.includes('Lordship')""", driver)
     set_year(1544,11)
     verify("duplicate native browser title still overlays styled historical tooltip",
            """document.querySelectorAll('#map .leaflet-marker-icon[title]').length===0""", driver)
