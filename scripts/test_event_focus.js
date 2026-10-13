@@ -42,6 +42,6 @@ for(const file of ['app.js','app-continuity-1497-1529-preview.js']){
 assert.match(css,/\.leaflet-marker-icon\.atlas-target-marker \.map-pin\s*\{/);
 assert.match(css,/\.atlas-aggregate\.atlas-target-aggregate\s*\{/);
 assert.match(css,/@media\(prefers-reduced-motion:reduce\)/);
-assert.ok(html.includes('app.js?v=timeline-v173'),'Production browser must get current JS');
+assert.ok(html.includes('app.js?v=timeline-v174'),'Production browser must get current JS');
 assert.ok(previewHtml.includes('app-continuity-1497-1529-preview.js?v=atlas-find-v135'),'Preview browser must get current JS');
 console.log('PASS: sidebar double-click locates valid events, keeps zoom and year, emphasizes singleton and grouped marker');
