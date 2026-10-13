@@ -62,7 +62,7 @@ assert.ok(JSON.parse(read('data/chapters.json')).chapters.some(c=>c.id==='chapte
 assert.match(html,/id="yearRange"/);
 assert.match(html,/app\.js\?v=timeline-v170/);
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
-assert.ok(app.includes("fetch('data/territorial-footprints-1497-1539.geojson'"));
+assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
 assert.ok(app.includes("Math.min(lastPublishedYear"),'Years capped at old third chapter');
 assert.ok(app.includes("year===lastPublishedYear"),'Autoplay must reach 1529 then stop');
 assert.ok(app.includes("e.year>=chapter.start&&e.year<=year"),'Milestones expose future dates');
