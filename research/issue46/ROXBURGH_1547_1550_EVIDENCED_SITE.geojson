@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "name": "ISSUE46_Roxburgh_1547_1550_source_audited_candidate_no_fake_polygon",
+  "metadata": {
+    "purpose": "Candidate year-end fortified English occupation core for chief-editor controlled migration; does not satisfy Issue46 historic Polygon gate.",
+    "geometry_policy": "Point on HES scheduled monument modern site only; 1547 actual artillery fort plan from Belvoir RHP6075 and RCAHMS GIS is not yet provided as georeferenced coordinates.",
+    "verified_occupied_area_polygon_count": 0,
+    "crs": "EPSG:4326",
+    "bbox_caution": "No polygon, buffer or historic area statistic is authorized."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "roxburgh-english-artillery-fort-1547-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.45696819436,
+          55.59618019271
+        ]
+      },
+      "properties": {
+        "stable_id": "roxburgh-english-artillery-fort-1547-1550",
+        "name": "罗克斯堡：1547年英军炮兵堡垒（军管核心研究点）",
+        "name_en": "Roxburgh Castle English artillery fort, 1547",
+        "controller": "English garrison in independent Scottish kingdom",
+        "legal_sovereignty": "Kingdom of Scotland",
+        "year_end_start": 1547,
+        "year_end_stop": 1549,
+        "actual_end_year": 1550,
+        "exact_end_date_confirmed": false,
+        "source_ids": [
+          "SC-HES-ROXBURGH-2006-09-DGPS-GIS",
+          "SC-BELVOIR-RHP6075-ORIGINAL-MAP",
+          "SC-HES-ROXBURGH-SM1718"
+        ],
+        "source_urls": [
+          "https://canmore.org.uk/site/58412/roxburgh-castle",
+          "https://www.trove.scot/place/58412?page=2&tab=related-archives",
+          "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM1718",
+          "https://i.rcahms.gov.uk/canmore-pdf/WP00005062.pdf"
+        ],
+        "map_original": "1547 Lord Grey letter / William Ridgeway fort plan, reproduced RCAHMS 1956 fig517",
+        "archaeology": "RCAHMS 2006-09 3D DGPS and GIS overlays 1547 fort plan with observed earthworks",
+        "fort_dims_approx_m": [
+          110,
+          65
+        ],
+        "fort_polygon_source_exists": true,
+        "fort_polygon_vector_received": false,
+        "actual_historic_polygon_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "geometry_role": "modern_HES_castle_central_reference_Point_NOT_1547_polygon",
+        "geo_precision": "HES designated site anchor; 1547 artillery enclosure only occupies a fraction of earlier castle ridge, actual fort centroid unverified",
+        "review_status": "collector_research_candidate_chief_editor_not_approved",
+        "safe_visualization": "point_unfilled_rounded_uncertainty_symbol",
+        "historical_note": "The earlier medieval castle precinct and scheduling polygon must never be filled as 1547 English fortification. British troops abandoned or razed fort under 1550 peace arrangements."
+      }
+    }
+  ]
+}
