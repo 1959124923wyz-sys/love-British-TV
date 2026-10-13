@@ -36,3 +36,19 @@
 P0未核：加来1558旧Pale实测古界、1558吉讷确切陷落日、爱尔兰1556逐宗没收地契范围与实际驻军区、1550苏格兰Eyemouth/Lauder等短期驻军末日。查不到时保留虚线/年份存疑，无需编造准确平方公里。
 
 **下一位主编**先看`EDITOR_HANDOFF.md`，仅把审定的研究数据增量与第六章PR27衔接；不能用整个研究包覆盖main当前已有地图UI。正式发布由B线维护。
+
+
+## 调查员3｜第七章地图连续性深挖增量（2026-10-13）
+
+此节替代上方原版的计数结论；仍是原研究分支PR #33待主编审核的**新增证据**，不已上架。新批次来源扩展 `45→62`（初次 `718679f8`，HES/BL新批 `82b3d2e3`），事件 `22→29`、地理参考点 `15→18`、变化Point `11→15`、逐页原档行动任务 `16→23`，P0为13项。
+
+地图问题具体突破：
+- **1558 Hammes**：依据Royal Collection RCIN721026，发现漏记的Calais Pale沼泽城堡最后英军撤离；地点不能从现代Hames-Boucres镇中心造Pin，主资料以历史档案事件及全十年持续状态保存，历史地点待配准。
+- **1550/1557 Eyemouth**：考古摘要确定英军到1550夏的旧堡；1557出现法国援苏的新堡（1559年谈判撤出）。苏格兰仍独立。原第六章误传Hailes占领未明亦已按官方HES同年1548收复修订进第七章。
+- **1558 Calais逐次失地**：王室收藏馆引1558年1月4日Grey信表明Newnham桥和Rysbank已失；1月7日军事夺城／1月8日市档收复约定区别；Guînes及Hammes随后的抵抗与撤军不同步。发现RCIN Guînes城墙位置与同期BL Cotton图相矛盾，禁画未经校准Polygon。
+- **三处新增苏格兰防御变化**：1550年Dunbar法军新堡、1556年Inchkeith苏法联合军堡、1559年Leith法军筑垒（仍无精确原墙地图）；与1557法国Eyemouth形成苏法盟军要塞变动链。合法苏格兰主权没有变成法国主权，亦没有英王在苏格兰扩张。
+- **1556爱尔兰殖民**仍按两处从1540年代存在的军事堡垒加法定设郡和抵抗，并不准用现代Laois/Offaly完整县界冒充1556年英军实控。
+
+实际提交：`TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json`（11控制episode、10年度控制对照）、`SOURCE_REGISTRY.json`、`CHRONOLOGY.json`、`ATLAS_REVIEW_CANDIDATE.json`、`MAP_DELTA_1550_1559.geojson`、`POLITICAL_CONTROL_SITES_1550_1559.geojson`、`CONTROL_TRANSITION_1549_1559.json`、`TRANSITION_1559_1560_RESEARCH_SEED.json`、`ARCHIVAL_ACTION_QUEUE.json`、`EDITOR_HANDOFF.md`，以及更新 `validate_research.py` 考证口径。人工原始16世纪手稿没有完成独立全面核查；对于保护区坐标和原时代相差的现代墙线继续 `fill_authorized:false`，可用精确新古代殖民实控Polygon = **0**。
+
+主编具体发布审核以同目录最下方的`EDITOR_HANDOFF.md`追加“调查员3”逐年表为准；旧本文历史原稿与PR33旧文字计数仅属当时基线。编审完毕前**不修改main生产Atlas及JS、不启用自动GitHub校验**。
