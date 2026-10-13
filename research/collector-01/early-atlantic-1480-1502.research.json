@@ -1,0 +1,427 @@
+{
+  "dataset_id": "collector-01-early-atlantic-research-seeds-v0.1",
+  "updated": "2026-10-11",
+  "status": "research-candidates-not-published",
+  "compatible_with_current_atlas": false,
+  "scope": "Bristol-related English Atlantic ventures, prehistory 1480–1481 and main era 1496–1502",
+  "conventions": {
+    "year_precision": "year_start/year_end bound the known period; textual limitations in date_note",
+    "geometry": "No invented precise coordinates. Source-reported Bristol is a place label, not proof of an exact departure pier or course. No routes reconstructed.",
+    "amounts": "Royal rewards and patent fractions are not colonial profits.",
+    "map_publication": "All records require editorial review; historical context is not equivalent to direct colonial possession."
+  },
+  "sources": [
+    {
+      "id": "BRIS-PAT-1496",
+      "title": "First Letters Patent granted by Henry VII to John Cabot, 5 March 1496",
+      "author": "Henry VII; edition held by University of Bristol",
+      "publisher": "University of Bristol",
+      "year": 1496,
+      "accessed": "2026-10-11",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1496cabotpatent.htm",
+      "kind": "edited_primary_source",
+      "locator": "Patent transcript; treaty roll 178 membrane 8",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "DCB-CABOT",
+      "title": "Cabot, John",
+      "author": "Dictionary of Canadian Biography contributors",
+      "publisher": "University of Toronto/Université Laval",
+      "year": null,
+      "accessed": "2026-10-11",
+      "url": "https://www.biographi.ca/en/bio/cabot_jean_1F.html",
+      "kind": "academic_reference",
+      "locator": "1496 aborted voyage; 1498 patent details",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "NFLD-BRISTOL-BEFORE",
+      "title": "Cabot's Arrival in Bristol",
+      "author": "Wendy Churchill; revised by Newfoundland and Labrador Heritage",
+      "publisher": "Memorial University / Newfoundland and Labrador Heritage",
+      "year": 2013,
+      "accessed": "2026-10-11",
+      "url": "https://www.heritage.nf.ca/articles/exploration/cabot-bristol-arrival.php",
+      "kind": "academic_public_history",
+      "locator": "Bristol expeditions in 1480 and 1481",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "NFLD-BRISTOL-1490S",
+      "title": "Bristol's Transatlantic Explorations Prior to 1497",
+      "author": "Newfoundland and Labrador Heritage",
+      "publisher": "Memorial University / Newfoundland and Labrador Heritage",
+      "year": null,
+      "accessed": "2026-10-11",
+      "url": "https://www.heritage.nf.ca/articles/exploration/bristol-voyages.php",
+      "kind": "academic_public_history",
+      "locator": "Pedro de Ayala's report and John Day letter",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "BRIS-WESTON-LETTER",
+      "title": "Henry VII’s letter to John Morton concerning William Weston’s voyage to the new found land",
+      "author": "Margaret Condon and Evan T. Jones",
+      "publisher": "University of Bristol Research Portal",
+      "year": 2011,
+      "accessed": "2026-10-11",
+      "url": "https://research-information.bris.ac.uk/en/publications/henry-viis-letter-to-john-morton-concerning-william-westons-voyag/",
+      "kind": "primary_source_edition",
+      "locator": "Letter probably 12 March 1499; original TNA C82/332",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "BRIS-WESTON-2018",
+      "title": "New evidence discovered regarding first English voyage to America",
+      "author": "University of Bristol (reports research by Condon and Jones)",
+      "publisher": "University of Bristol",
+      "year": 2018,
+      "accessed": "2026-10-11",
+      "url": "https://www.bristol.ac.uk/news/2018/october/first-english-voyage.html",
+      "kind": "university_research_news",
+      "locator": "2018-10-03; £30 paid in 1500 for expedition; 1499 enterprise",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "JONES-CONDON-2018",
+      "title": "William Weston: early voyager to the New World",
+      "author": "Margaret M. Condon and Evan T. Jones",
+      "publisher": "Historical Research",
+      "year": 2018,
+      "accessed": "2026-10-11",
+      "url": "https://doi.org/10.1111/1468-2281.12243",
+      "kind": "peer_reviewed_research",
+      "locator": "Historical Research 91(254): 628+; full text not independently reviewed in this pass",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "JONES-2010",
+      "title": "Henry VII and the Bristol expeditions to North America: the Condon documents",
+      "author": "Evan T. Jones",
+      "publisher": "Historical Research",
+      "year": 2010,
+      "accessed": "2026-10-11",
+      "url": "https://doi.org/10.1111/j.1468-2281.2009.00519.x",
+      "kind": "peer_reviewed_research",
+      "locator": "83(221) 444–455; abstract verified: 1502 accounting entry £100 two ships",
+      "rights": "reuse-unverified"
+    },
+    {
+      "id": "NF-CABOT-1498",
+      "title": "John Cabot's Voyage of 1498",
+      "author": "Newfoundland and Labrador Heritage",
+      "publisher": "Memorial University / Newfoundland and Labrador Heritage",
+      "year": null,
+      "accessed": "2026-10-11",
+      "url": "https://www.heritage.nl.ca/articles/exploration/cabot-1498.php",
+      "kind": "academic_public_history",
+      "locator": "1498 fleet and uncertain conclusion",
+      "rights": "reuse-unverified"
+    }
+  ],
+  "records": [
+    {
+      "id": "SEED-1480-1481-BRISTOL",
+      "title_zh": "布里斯托尔1480—1481年寻找西方岛屿的航行",
+      "year_start": 1480,
+      "year_end": 1481,
+      "date_note": "1490主线之前的背景；1480与1481分次记录尚待查证详细航行日",
+      "period_group": "prehistory",
+      "political_actor_at_time": "Kingdom of England / Bristol merchants",
+      "category": "early_exploration",
+      "territorial_control": "none_established",
+      "geometry": {
+        "geometry_type": "none",
+        "place_label": "Bristol, England (home port)",
+        "certainty": "departure_port_only",
+        "coordinates": null
+      },
+      "quantities": [],
+      "claims": [
+        {
+          "statement": "当时布里斯托尔商人组织了寻找大西洋西部岛屿的航行，1497年不是该港最初向西探索的开始。",
+          "source_ids": [
+            "NFLD-BRISTOL-BEFORE",
+            "NFLD-BRISTOL-1490S"
+          ],
+          "support_type": "historical_synthesis"
+        }
+      ],
+      "significance": {
+        "level": 1,
+        "rationale": "早期商业探险的背景，不应与后来有效殖民统治混淆",
+        "review_status": "provisional"
+      },
+      "editorial_status": "source_checked",
+      "open_questions": [
+        "找原始港口账簿和1480年John Jay航次细节",
+        "航行并不等于抵达北美"
+      ]
+    },
+    {
+      "id": "SEED-1496-CABOT-ABORT",
+      "title_zh": "卡博特1496年首次西航尝试未能完成",
+      "year_start": 1496,
+      "year_end": 1496,
+      "date_note": "年可识别，具体日期未核定",
+      "period_group": "1490s",
+      "political_actor_at_time": "Kingdom of England; John Cabot",
+      "category": "voyage_attempt",
+      "territorial_control": "none_established",
+      "geometry": {
+        "geometry_type": "none",
+        "place_label": "Bristol, England (departure port)",
+        "certainty": "port_only",
+        "coordinates": null
+      },
+      "quantities": [],
+      "claims": [
+        {
+          "statement": "卡博特1496年的一次航海尝试因天气、补给与船员分歧折返。",
+          "source_ids": [
+            "DCB-CABOT"
+          ],
+          "support_type": "scholarly_synthesis_of_John_Day_letter"
+        }
+      ],
+      "significance": {
+        "level": 1,
+        "rationale": "为1497年已知航程提供前史背景",
+        "review_status": "provisional"
+      },
+      "editorial_status": "source_checked",
+      "open_questions": [
+        "查John Day letter原文与该航次开始日",
+        "与1496年3月皇家特许状分开记录"
+      ]
+    },
+    {
+      "id": "SEED-1496-PATENT-FIFTH",
+      "title_zh": "1496年卡博特特许状中的王室收益权条款",
+      "year_start": 1496,
+      "year_end": 1496,
+      "date_note": "1496年3月5日，合同条款而非实际税收",
+      "period_group": "1490s",
+      "political_actor_at_time": "Henry VII of Kingdom of England",
+      "category": "legal_economic_authorization",
+      "territorial_control": "permission_to_claim_not_actual_control",
+      "geometry": {
+        "geometry_type": "none",
+        "place_label": "Westminster, England (document issuance)",
+        "certainty": "document_location_not_route",
+        "coordinates": null
+      },
+      "quantities": [
+        {
+          "value": "1/5",
+          "unit": "fraction",
+          "historical_year": 1496,
+          "account_type": "contractual_royal_share_after_expenses",
+          "beneficiary": "English Crown",
+          "derivation": "1496 letters patent",
+          "confidence": "documented",
+          "realized": false
+        }
+      ],
+      "claims": [
+        {
+          "statement": "国王授权勘探及占有可发现的土地，并规定航行扣除费用后所得应向王室缴纳五分之一；没有由此证明此时确有殖民地或财政利润。",
+          "source_ids": [
+            "BRIS-PAT-1496"
+          ],
+          "support_type": "document_transcription"
+        }
+      ],
+      "significance": {
+        "level": 2,
+        "rationale": "界定未来扩张的王室权利与合同机制，不表示已经获得收益",
+        "review_status": "provisional"
+      },
+      "editorial_status": "source_checked",
+      "open_questions": [
+        "比较拉丁原文与英文翻译中的利润条款",
+        "避免将王室约定份额误解成实际收入"
+      ]
+    },
+    {
+      "id": "SEED-1499-WESTON-LETTER",
+      "title_zh": "亨利七世关于威廉·韦斯顿筹备北美航行的信件",
+      "year_start": 1499,
+      "year_end": 1499,
+      "date_note": "约1499年3月12日（编辑者判断）",
+      "period_group": "1490s",
+      "political_actor_at_time": "Henry VII; William Weston of Bristol",
+      "category": "royal_correspondence",
+      "territorial_control": "none_established",
+      "geometry": {
+        "geometry_type": "none",
+        "place_label": "Bristol / Westminster; precise origin of letter not mapped",
+        "certainty": "none",
+        "coordinates": null
+      },
+      "quantities": [],
+      "claims": [
+        {
+          "statement": "国王要求暂缓对韦斯顿的诉讼，因为他准备前往所谓“新发现的土地”探寻。该信独自不能证明船确实已出海。",
+          "source_ids": [
+            "BRIS-WESTON-LETTER",
+            "JONES-2010"
+          ],
+          "support_type": "annotated_primary_transcription_and_peer_reviewed_analysis"
+        }
+      ],
+      "significance": {
+        "level": 1,
+        "rationale": "1497之后由英格兰支持继续探险的文书证据",
+        "review_status": "provisional"
+      },
+      "editorial_status": "source_checked",
+      "open_questions": [
+        "核对信件转写的日期与档案编号",
+        "与1500年获奖记录交叉证明航行"
+      ]
+    },
+    {
+      "id": "SEED-1499-WESTON-VOYAGE",
+      "title_zh": "威廉·韦斯顿1499年北美航行（学术重建）",
+      "year_start": 1499,
+      "year_end": 1499,
+      "date_note": "学界据1499年信件与1500年奖励推定，具体航期及路线未定",
+      "period_group": "1490s",
+      "political_actor_at_time": "William Weston; English Crown support",
+      "category": "voyage_hypothesis",
+      "territorial_control": "none_established",
+      "geometry": {
+        "geometry_type": "none",
+        "place_label": "North Atlantic (no mapped course or destination)",
+        "certainty": "unknown",
+        "coordinates": null
+      },
+      "quantities": [],
+      "claims": [
+        {
+          "statement": "学者研究把韦斯顿1499年北美探险作为有后续王室奖励佐证的事件；不能从现存材料重建路线、登陆点及永久据点。",
+          "source_ids": [
+            "BRIS-WESTON-2018",
+            "JONES-CONDON-2018"
+          ],
+          "support_type": "scholarly_interpretation"
+        }
+      ],
+      "significance": {
+        "level": 2,
+        "rationale": "提示卡博特之后英方探索并未停止，但尚需补证细节",
+        "review_status": "provisional"
+      },
+      "editorial_status": "source_checked",
+      "open_questions": [
+        "核读2018年研究全文确认推论界限",
+        "区分准备出航、真正航行、抵达北美三种论断"
+      ]
+    },
+    {
+      "id": "SEED-1500-WESTON-REWARD",
+      "title_zh": "国王向威廉·韦斯顿支付30英镑奖励的记载",
+      "year_start": 1500,
+      "year_end": 1500,
+      "date_note": "1500年，具体账目日待取得原始账簿",
+      "period_group": "1500s",
+      "political_actor_at_time": "Henry VII of Kingdom of England",
+      "category": "royal_expenditure",
+      "territorial_control": "none_established",
+      "geometry": {
+        "geometry_type": "none",
+        "place_label": "Royal financial accounts, England (not a geographical voyage point)",
+        "certainty": "none",
+        "coordinates": null
+      },
+      "quantities": [
+        {
+          "value": 30,
+          "unit": "GBP",
+          "historical_year": 1500,
+          "account_type": "royal_reward_or_expenditure",
+          "beneficiary": "William Weston",
+          "derivation": "Payment in royal accounts reported by Condon and Jones",
+          "confidence": "reported_from_archive",
+          "realized": true
+        }
+      ],
+      "claims": [
+        {
+          "statement": "布里斯托尔大学报道研究发现王室账簿1500年给韦斯顿30英镑奖励，为航行花费提供资助；此数是国王的支出，绝非英国取得的殖民利润。",
+          "source_ids": [
+            "BRIS-WESTON-2018",
+            "JONES-CONDON-2018"
+          ],
+          "support_type": "university_report_of_archival_discovery"
+        }
+      ],
+      "significance": {
+        "level": 1,
+        "rationale": "重要的财政史细节，辅助证明后续早期探险",
+        "review_status": "provisional"
+      },
+      "editorial_status": "source_checked",
+      "open_questions": [
+        "提取原始账簿纪年和出处",
+        "不能拿劳工年薪类比来推算殖民收益"
+      ]
+    },
+    {
+      "id": "SEED-1502-ELIOT-REWARD",
+      "title_zh": "1502年英王向休·埃利奥特等人支付100英镑奖励记录",
+      "year_start": 1502,
+      "year_end": 1502,
+      "date_note": "1502年账目条目；两船航行日期尚待考证",
+      "period_group": "1500s",
+      "political_actor_at_time": "Henry VII; Hugh Elliot and associates",
+      "category": "royal_expenditure",
+      "territorial_control": "none_established",
+      "geometry": {
+        "geometry_type": "none",
+        "place_label": "Bristol-linked expeditions, North Atlantic (route unknown)",
+        "certainty": "none",
+        "coordinates": null
+      },
+      "quantities": [
+        {
+          "value": 100,
+          "unit": "GBP",
+          "historical_year": 1502,
+          "account_type": "royal_reward_or_expenditure",
+          "beneficiary": "Hugh Elliot and associates",
+          "derivation": "Declared butlerage account discussed in Jones 2010",
+          "confidence": "academic_abstract_verified",
+          "realized": true
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Jones所述1502年账目包含王室给予休·埃利奥特及同伴100英镑、以支持曾用两船航向“新发现岛屿”的费用。不能据此推定其准确航线或获利。",
+          "source_ids": [
+            "JONES-2010"
+          ],
+          "support_type": "peer_reviewed_article_abstract"
+        }
+      ],
+      "significance": {
+        "level": 1,
+        "rationale": "航行融资的档案证据，尚无较具体地理或殖民统治结论",
+        "review_status": "provisional"
+      },
+      "editorial_status": "source_checked",
+      "open_questions": [
+        "找到原始账目与具体航行时间",
+        "区分1502年支付与先前实际航行日期"
+      ]
+    }
+  ],
+  "research_cautions": [
+    "2018 Bristol news and 2018 paper are same underlying research, not independent corroboration",
+    "No current entry is approved for direct map rendering",
+    "There is no verified British colonial economic extraction in these early records",
+    "Pre-1490 voyages are contextual prehistory"
+  ]
+}
