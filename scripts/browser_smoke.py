@@ -274,6 +274,77 @@ try:
     verify("1547 advance toward Pinkie/Musselburgh failed to extend northward",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
     set_year(1548,44)
+    # PR39: two *independently* checkable public layers. Check four modes,
+    # stay on 1548 throughout, preserve military borders, campaign sources,
+    # and keep the historical event directory available in every mode.
+    verify("PR39 public two-layer switches absent",
+           """document.querySelectorAll('#mapLayerSwitch input[type=checkbox]').length===2 &&
+              document.querySelector('#mapLayerTerritory').checked &&
+              document.querySelector('#mapLayerEvents').checked &&
+              getComputedStyle(document.querySelector('#internalLayerFlags')).display==='none'""",driver)
+    verify("PR38 Haddington reach not present with both modes",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1",driver)
+    toggle_layer('mapLayerEvents',False)
+    verify("turning off events erased historical territory",
+           """document.querySelector('#mapLayerTerritory').checked &&
+              !document.querySelector('#toggleEvents').checked &&
+              !document.querySelector('#toggleRoutes').checked &&
+              document.querySelectorAll('#map .atlas-contested-zone').length===3 &&
+              document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9 &&
+              document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1 &&
+              document.querySelectorAll('#map .atlas-aggregate').length===0""",driver)
+    toggle_layer('mapLayerTerritory',False)
+    verify("turning off both modes left military control geography visible",
+           """!document.querySelector('#toggleKingdom').checked &&
+              !document.querySelector('#toggleControlAreas').checked &&
+              document.querySelectorAll('#map .atlas-contested-zone').length===0 &&
+              document.querySelectorAll('#map .atlas-war-reach-schematic').length===0 &&
+              document.querySelectorAll('#map .atlas-local-english-garrison').length===0 &&
+              document.querySelectorAll('#map .atlas-aggregate').length===0 &&
+              document.querySelector('#eventCount').textContent==='44项'""",driver)
+    toggle_layer('mapLayerEvents',True)
+    verify("events-only mode incorrectly resurrected British occupation polygons",
+           """document.querySelector('#toggleEvents').checked &&
+              !document.querySelector('#toggleKingdom').checked &&
+              !document.querySelector('#toggleControlAreas').checked &&
+              document.querySelectorAll('#map .atlas-contested-zone').length===0 &&
+              document.querySelectorAll('#map .atlas-war-reach-schematic').length===0 &&
+              document.querySelectorAll('#map .atlas-local-english-garrison').length===0 &&
+              document.querySelectorAll('#map .map-pin,#map .atlas-aggregate').length>0""",driver)
+    toggle_layer('mapLayerTerritory',True)
+    verify("both modes cannot be enabled together after four-state cycling",
+           """document.querySelector('#mapLayerTerritory').checked &&
+              document.querySelector('#mapLayerEvents').checked &&
+              document.querySelectorAll('#map .atlas-contested-zone').length===3 &&
+              document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1 &&
+              document.querySelectorAll('#map .map-pin,#map .atlas-aggregate').length>0""",driver)
+    assert driver.execute_script("return document.querySelector('#bigYear').textContent")=='1548',"Mode toggles changed current historical year"
+    # Desktop magnification and width regression: compact switches must
+    # remain separated from the year/title and timeline, sidebar text wraps.
+    driver.execute_script("document.querySelector('#mapModeHelp').open=true")
+    for w in (1920,1440,1280):
+        driver.set_window_size(w,1040)
+        time.sleep(.25)
+        dims=driver.execute_script("""
+          const sw=document.querySelector('#mapLayerSwitch').getBoundingClientRect();
+          const top=document.querySelector('.map-year-card').getBoundingClientRect();
+          const timeline=document.querySelector('.time-panel').getBoundingClientRect();
+          const legend=document.querySelector('#mapModeHelp');
+          return {switchWidth:sw.width,swRight:sw.right,viewport:innerWidth,
+           overlapTitle:!(sw.right<=top.left||sw.left>=top.right||sw.bottom<=top.top||sw.top>=top.bottom),
+           overlapTimeline:sw.bottom>timeline.top&&sw.top<timeline.bottom,
+           sidebarOverflow:legend.scrollWidth-legend.clientWidth,
+           visibleSwitches:document.querySelectorAll('#mapLayerSwitch input:checked').length};
+        """)
+        assert dims['visibleSwitches']==2 and dims['switchWidth']>=125 and dims['swRight']<=dims['viewport']-3 and not dims['overlapTitle'] and not dims['overlapTimeline'] and dims['sidebarOverflow']<=2,f"PR39 compact-layer UI collided at {w}px: {dims}"
+    driver.set_window_size(1620,1040)
+    driver.execute_script("document.querySelector('#mapModeHelp').open=false")
+    # Selecting a historical year must never auto-switch off either layer.
+    set_year(1547,31)
+    verify("year switch reset the independently selected map layers",
+           "document.querySelector('#mapLayerTerritory').checked && document.querySelector('#mapLayerEvents').checked",driver)
+    set_year(1548,44)
+    driver.save_screenshot(str(OUT / "two-layer-modes-1548.png"))
     verify("1548 war-zone layer is missing after removing the card",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     verify("1548 English Haddington garrison and Lauder supply reference missing",
