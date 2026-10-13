@@ -218,20 +218,23 @@
       },
       "properties": {
         "name": "海尔斯城堡：1548年3月被英军占据并交给盟友",
-        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_type": "temporary_English_capture_1548_then_same_year_Scottish_recapture",
         "change_year": 1548,
         "change_month": 3,
         "stable_id": "hailes-english-1548-date_unknown",
         "controller": "English garrison with Hugh Douglas allied Scottish lord",
         "source_ids": [
           "SC-HES-2022-HAILES",
-          "SC-HES-2022-HADDINGTON"
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-HAILES-SOS-2019"
         ],
         "historic_area_polygon_confirmed": false,
-        "valid_year_end_start": 1548,
-        "known_actual_end_year": null,
+        "valid_year_end_start": null,
+        "known_actual_end_year": 1548,
         "verified_boundary": false,
-        "not_whole_region_acquisition": true
+        "not_whole_region_acquisition": true,
+        "year_end_active": false,
+        "capture_then_lost_same_year": true
       }
     },
     {
@@ -560,6 +563,36 @@
         "historic_area_polygon_confirmed": false,
         "display_year_event": 1548,
         "uncertainty": "Modern Forthill quarter location uncertain relative old vanished fort"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hailes-1548-scottish-recapture",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6832,
+          55.973
+        ]
+      },
+      "properties": {
+        "stable_id": "hailes-english-1548-scottish-recapture",
+        "parent_stable_id": "hailes-english-1548-date_unknown",
+        "name": "Hailes Castle苏格兰军队1548年收复英军暂占城堡",
+        "change_type": "English_occupation_ended_Scottish_recapture",
+        "change_year": 1548,
+        "change_month": null,
+        "controller": "Scots (Regent Arran)",
+        "source_ids": [
+          "SC-HES-HAILES-SOS-2019"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "verified_boundary": false,
+        "fill_authorized": false,
+        "not_whole_region_acquisition": true,
+        "source_page": "HES Hailes Castle SoS printed p.2/7",
+        "evidence_precision": "year-only: 1548 Scots recaptured, month unverified; iron gates reportedly moved to Edinburgh",
+        "valid_year_end_start": 1548
       }
     }
   ]
