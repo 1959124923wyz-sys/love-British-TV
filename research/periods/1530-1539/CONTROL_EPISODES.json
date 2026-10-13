@@ -248,14 +248,18 @@
       "authority": "English Crown dependency, distinct legal system",
       "type": "crown_dependency_footprint_only",
       "transition": "uncertain_contemporary_doc_not_end",
-      "source_ids": [],
-      "evidence_location": "main/data/atlas-1520-1529.json",
+      "source_ids": [
+        "GUE-GOV-HOUSE-HISTORY",
+        "GUE-PARLIAMENT-ROYAL-COURT",
+        "GUE-UK-MOJ-CROWN"
+      ],
+      "evidence_location": "SOURCE_REGISTRY.json",
       "actual_historical_polygon": null,
       "verified_boundary": false,
       "occupation_end_if_known": null,
       "spatial_method": "Named place/modern context only; no ground survey",
       "approval": "RESEARCH_ONLY",
-      "notes": "Land footprint in baseline polygon, independently verify historical records before creating new point."
+      "notes": "Official Guernsey Crown representative history (1486 charter/royal appointment) and States parliament historic Royal Court make Guernsey identifiable as already-existing separate Crown Dependency, not a new 1530 conquest. Point added but not exact 1530 Court footprint."
     },
     {
       "id": "ORE-SHE-1530-39",
@@ -295,6 +299,46 @@
       "spatial_method": "Named place/modern context only; no ground survey",
       "approval": "RESEARCH_ONLY",
       "notes": "New forts do not increase English colonial land area."
+    },
+    {
+      "id": "KIL-1531-PRIVATE-ARBITRATION",
+      "name": "莱克斯利普庄园：1531年私人终身年收益仲裁",
+      "period_from": 1531,
+      "period_to": 1531,
+      "authority": "FitzGerald family/private legal arbitration in Crown's Irish Pale, not new territorial conquest",
+      "type": "local_manor_proprietary_dispute_without_sovereign_control_transfer",
+      "transition": "legal_private_income_adjudication_not_crown_annexation",
+      "source_ids": [
+        "IR-KILDARE-LEIXLIP-1531",
+        "IR-PRONI-LEIXLIP-1531-MS"
+      ],
+      "evidence_location": "SOURCE_REGISTRY.json",
+      "actual_historical_polygon": null,
+      "verified_boundary": false,
+      "occupation_end_if_known": null,
+      "spatial_method": "Leixlip linked nearby castle modern Point as subject estate, not venue; no historic manor perimeter",
+      "approval": "RESEARCH_ONLY",
+      "notes": "1531 12 April £20/year award to Margaret FitzGerald; cannot equate to all Kildare County Crown taxation."
+    },
+    {
+      "id": "CAL-1532-ROYAL-COURT-AND-FORTS",
+      "name": "1532年英王城防勘察、加来接待法王：王权军事控制仍在",
+      "period_from": 1532,
+      "period_to": 1532,
+      "authority": "Kingdom of England Calais governor/royal entourage",
+      "type": "direct_English_Crown_garrison_existing_core_confirmed_by_contemporary_narrative",
+      "transition": "existing_English_Calais_not_new_conquest",
+      "source_ids": [
+        "CAL-HALL-CHRONICLE-1532",
+        "CAL-HRP-1532-MEETING"
+      ],
+      "evidence_location": "SOURCE_REGISTRY.json",
+      "actual_historical_polygon": null,
+      "verified_boundary": false,
+      "occupation_end_if_known": null,
+      "spatial_method": "City Point from published data; Newenham Bridge/Rysbank named but precise sixteenth-century historic fort line not surveyed",
+      "approval": "RESEARCH_ONLY",
+      "notes": "Edward Hall chronicle says king inspected Calais walls and military works; visiting Francis I does not change English sovereignty."
     }
   ],
   "public_colonial_polygons": [],
