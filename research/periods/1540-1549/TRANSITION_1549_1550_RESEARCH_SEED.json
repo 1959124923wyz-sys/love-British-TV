@@ -67,6 +67,14 @@
       "historical_end_evidenced": null,
       "carry_class": "independent_state_not_English",
       "next_required_evidence": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory."
+    },
+    {
+      "stable_id": "channel-guernsey",
+      "name": "根西王室属地／独立法权（原有政制）",
+      "previous_status": "Crown_Dependency_separate_Guernsey_Bailiwick",
+      "historical_end_evidenced": null,
+      "carry_class": "political_hatch_and_modern_coastline_reference_not_colonial_territory_claim",
+      "next_required_evidence": "Preserve PR25 followup Government House Guernsey and Royal Court local institutions, not a newly conquered place."
     }
   ],
   "new_1549_verified_active_site_ids": [
@@ -153,6 +161,34 @@
       ],
       "exact_1550_transfer_still_to_verify": true,
       "precision": "Official historic landscape confirms use in 1548-49, but no exact date for destruction and no original Tudor camp wall traced."
+    },
+    {
+      "stable_id": "tour-d-ordre-english-fort-1544-1550",
+      "name": "Tour d'Ordre英占布洛涅北岸堡垒",
+      "actual_1549_garrison_verified": true,
+      "transfer_or_withdrawal_expected_in_1550": true,
+      "recorded_end_year": 1550,
+      "recorded_end_month": null,
+      "source_ids": [
+        "FR-HELIOT-1958-PLANS-PAGES"
+      ],
+      "exact_1550_transfer_still_to_verify": true,
+      "statement": "1550 French restitution linked to Boulogne",
+      "area_survey_verified": false
+    },
+    {
+      "stable_id": "forthand-fort-english-1548-1550",
+      "name": "Forthill英军炮台（布劳蒂城堡近郊）",
+      "actual_1549_garrison_verified": true,
+      "transfer_or_withdrawal_expected_in_1550": true,
+      "recorded_end_year": 1550,
+      "recorded_end_month": null,
+      "source_ids": [
+        "SC-NLS-FORTHILL-OS-GAZETTEER"
+      ],
+      "exact_1550_transfer_still_to_verify": true,
+      "statement": "Fort dismantled 1550 after Scottish/French reconquest",
+      "area_survey_verified": false
     }
   ],
   "uncertain_1549_occupations": [
@@ -200,6 +236,13 @@
         "FR-HELIOT-1958-BOULOGNE",
         "FR-RCT-BOULOGNE-MAP1549"
       ]
+    },
+    {
+      "stable_id": "hume-english-1547-1548",
+      "actual_end": "1548-12 (Scots recaptured 1548 December)",
+      "source_ids": [
+        "SC-HUME-TRUST-1547-1548"
+      ]
     }
   ],
   "expected_1550_primary_questions": [
@@ -210,9 +253,16 @@
     "Hailes after 1548: no proof of continued garrison; do not declare new 1550 control or withdrawal based on silence.",
     "Maintain English-Crown legal dependencies, autonomous Man, and independent Scotland after English fort evacuation.",
     "Dunglass English camp west of current house: confirm exact 1550 or post-1549 evacuation and demolition; HES says destroyed shortly after occupation 1548-49.",
-    "Ambleteuse 1549 French recapture and Boulemberg English withdrawal are CLOSED by 1549, do NOT erroneously carry them as active English forts into 1550; Boulogne CITY remained English until 1550."
+    "Ambleteuse 1549 French recapture and Boulemberg English withdrawal are CLOSED by 1549, do NOT erroneously carry them as active English forts into 1550; Boulogne CITY remained English until 1550.",
+    "Hume Castle is ALREADY Scots again by December 1548; do not continue 1549/1550 English occupation.",
+    "Forthill separate from Broughty Castle: National Library of Scotland gazetteer documents demolition 1550; map as approximate modern Forthill locality, not precise wall.",
+    "BnF authority describes 24 March 1550 treaty of Capécure/Outreau/Boulogne and nominal payment 400,000 gold écus; this is a 1550 treaty consideration, NOT 1549 colonial net gain."
   ],
   "zero_asserted_1550_historic_polygon_surveys": true,
   "draft_1550_atlas": null,
-  "reuse_previous_geojson_without_identity_reset": "MAP_REFERENCE_OUTLINES_1540_1549.geojson; each 1550 status individually time-filtered after archival checks"
+  "reuse_previous_geojson_without_identity_reset": "MAP_REFERENCE_OUTLINES_1540_1549.geojson; each 1550 status individually time-filtered after archival checks",
+  "new_control_research_conclusion_1540s": {
+    "French_Outreau": "French fort since 1545, never English-controlled; independent French political layer, not 1550 English transfer",
+    "Guernsey": "Preexisting Crown dependency introduced as separate named study point in PR25, present in all years 1540-1549"
+  }
 }
