@@ -59,7 +59,7 @@ const yearlyReach={1543:0,1544:1,1545:0,1546:0,1547:1,1548:1,1549:1};
 for(const [y,expected] of Object.entries(yearlyReach))
  assert.equal(militaryReach.features.filter(f=>f.properties.start_year<=Number(y)&&Number(y)<=f.properties.end_year).length,expected,'Reach chronology '+y);
 assert.ok(!militaryReach.features.find(f=>f.properties.start_year===1549).properties.name.includes('哈丁顿英军占领'),'Haddington must no longer be English occupied at the end of 1549');
-assert.ok(app.includes('function renderWarReachCorridors()')&&app.includes('openTerritoryDossier(feature,\\'war-reach\\')'), 'PR38 military reach must render as clickable historical schematic');
+assert.ok(app.includes('function renderWarReachCorridors()')&&app.includes("openTerritoryDossier(feature,'war-reach')"), 'PR38 military reach must render as clickable historical schematic');
 assert.ok(app.includes('function openMapTerritoryAt(latlng)')&&app.includes('featureContainsCoordinate(f,lon,lat)'),'Mouse point-in-polygon fallback must also cover PR38');
 const activeIds=y=>new Set(military.features.filter(f=>f.properties.not_an_English_control_feature!==true&&f.properties.year_end_start<=y&&y<=f.properties.year_end_stop).map(f=>f.properties.stable_id));
 const countOccupied=y=>occupied.features.filter(f=>f.properties.start_year<=y&&f.properties.end_year>=y&&activeIds(y).has(f.properties.stable_id)).length;
