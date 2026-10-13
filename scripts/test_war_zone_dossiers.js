@@ -61,6 +61,7 @@ assert.ok(!app.includes("map.flyTo("),'Clicking territorial polygons must not ch
 assert.ok(app.includes('map.getPane(\'warVicinityPane\').style.zIndex=\'463\''),'Occupied site clickable above theater stripes');
 assert.ok(app.includes('map.getPane(\'contestedZonePane\').style.zIndex=\'462\''),'Theater must be clickable above base sovereignty');
 assert.ok(app.includes('activeEnglishGarrisonIds()'),'Occupation surfaces must be gated by historical year-end garrisons');
+assert.ok(app.includes("if(linkedOccupiedZone)openTerritoryDossier(linkedOccupiedZone,'occupied')"),'Garrison ring must expose linked control-area dossier if tiny polygon is masked by a larger symbol');
 assert.ok(!html.includes('id="controlStatus"')&&!app.includes('renderAnnualControlSummary'),'Delete the unwanted statistics box in both DOM and JS');
 assert.ok(html.includes('swatch contested-war'),'Keep contested zone legend');
 assert.ok(html.includes('app.js?v=timeline-v174')&&html.includes('css/dark-atlas-v2.css?v=timeline-v174'));
