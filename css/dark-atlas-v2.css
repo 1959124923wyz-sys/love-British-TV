@@ -585,8 +585,8 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 }
 /* Work done by the polygons is visible, not just their named garrison icons.
    Both types are interactive and their detail drawers disclose approximation. */
-.leaflet-warVicinityPane-pane svg,.leaflet-contestedZonePane-pane svg,
-.leaflet-sovereigntyPane-pane svg{pointer-events:auto;}
+.leaflet-warVicinity-pane svg,.leaflet-contestedZone-pane svg,
+.leaflet-sovereignty-pane svg{pointer-events:auto;}
 #map .atlas-violet-wartime-vicinity{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
 #map .atlas-contested-zone{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
 #map .atlas-territory-solid,#map .atlas-territory-crown,#map .atlas-territory-manx{
