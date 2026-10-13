@@ -601,3 +601,10 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .leaflet-garrisonHit-pane .atlas-garrison-hit.leaflet-interactive{
  pointer-events:stroke!important;cursor:pointer;stroke-opacity:.001!important;fill:none!important;
 }
+
+/* PR38 hand-drawn military reach sits under contested blue/violet conflict texture,
+   above sovereign Scotland. Only painted SVG paths are interactive. */
+.leaflet-warReach-pane svg{pointer-events:none!important;}
+.leaflet-warReach-pane path.leaflet-interactive{pointer-events:visiblePainted!important;cursor:pointer;}
+#map .atlas-war-reach-schematic{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
+.legend-items .swatch.war-reach{width:18px;height:13px;border:2px dashed #bf9bf0;background:rgba(143,99,221,.17);box-sizing:border-box;border-radius:3px}
