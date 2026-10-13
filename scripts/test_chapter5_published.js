@@ -62,8 +62,8 @@ assert.ok(financial.records.some(r=>r.disaggregated_awards?.some(x=>x.annual_gbp
 assert.ok(JSON.parse(read('data/chapters.json')).chapters.some(c=>c.id==='chapterFifth'&&c.end===1539)&&html.includes('id="yearRange"'));
 assert.ok(html.includes('app.js?v=timeline-v170'));
 assert.ok(app.includes("fetch('data/atlas-1530-1539.json'"));
-assert.ok(app.includes("fetch('data/territorial-footprints-1497-1539.geojson'"));
-assert.ok(app.includes("fetch('data/political-relations-1500-1539.geojson'"));
+assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
+assert.ok(app.includes("fetch('data/political-relations-1500-1549.geojson'"));
 assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("year===lastPublishedYear"));
 assert.ok(app.includes('e.year>=chapter.start&&e.year<=year')&&app.includes('((y-chapter.start)/span*100)'));
 assert.ok(app.includes('fullArchive||occurredByYear(e,year)'),'Unoccurred chapter events leaked');
