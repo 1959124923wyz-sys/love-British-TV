@@ -47,7 +47,7 @@ L.geoJSON({type:'FeatureCollection',features:gf},{style:f=>{let t=f.properties.r
 return {color:col,dashArray:'7 5',weight:2,fillColor:col,fillOpacity:.05};},onEachFeature:(f,layer)=>{layer.bindTooltip(esc(f.properties.name)+'（仅地理参考）');layer.on('click',()=>show(f.properties.name,f.properties.uncertainty||'边界不能视作1540年代历史实测。',f.properties.source_ids))}}).addTo(territory);}
 if($('cores').checked)c.features.filter(f=>(f.properties.year_end_start??1540)<=y&&y<=(f.properties.year_end_stop??1549)).forEach(f=>marker(f,coreLayer,'core'));
 if($('polities').checked)p.features.filter(f=>(f.properties.year_end_start??1540)<=y&&y<=(f.properties.year_end_stop??1549)).forEach(f=>marker(f,otherLayer,['orkney-scotland','shetland-scotland'].includes(f.properties.stable_id)?'scot':'special'));
-const e=a.events.filter(ev=>ev.year<=y);$('head').textContent='已发生事件 '+e.length+' / '+a.events.length;$('events').innerHTML='';
+const e=a.events.filter(ev=>ev.year<=y).sort((a,b)=>a.year-b.year);$('head').textContent='已发生事件 '+e.length+' / '+a.events.length;$('events').innerHTML='';
 const grouped=new Map();
 for(const ev of e){
 const d=document.createElement('div');d.className='event'+(ev.lat===null?' no-pos':'');d.innerHTML='<small>'+esc(ev.date_label||ev.year)+'</small><div>'+esc(ev.name)+'</div>';
