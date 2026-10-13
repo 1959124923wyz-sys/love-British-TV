@@ -462,6 +462,71 @@
       "precision": "modern Mont Lambert hamlet reference; Tudor Boulemberg fort exact hill plot unknown",
       "territorial_change": "English fort from May 1546; evacuated/damaged 1549 after Ambleteuse loss, while core Boulogne held to 1550",
       "polygon_verified": false
+    },
+    {
+      "id": "hume-english-1547-1548",
+      "name": "休姆城堡：英军1547-09-22夺取，1548-12苏格兰收复",
+      "start_year": 1547,
+      "start_month": 9,
+      "start_day": 22,
+      "observed_through_year": 1547,
+      "end_year": 1548,
+      "end_month": 12,
+      "controller": "English local castle garrison only (Kingdom of Scotland independent)",
+      "type": "locally_captured_Scottish_border_castle_with_scottish_retake",
+      "source_ids": [
+        "SC-HUME-TRUST-1547-1548",
+        "SC-HES-HUME-NRHE-58561",
+        "SC-HES-HUME-SM387"
+      ],
+      "coords": [
+        -2.47093,
+        55.66515
+      ],
+      "precision": "Historic Environment Scotland medieval castle modern site; eighteenth century raised walls do not show 1547 perimeter",
+      "territorial_change": "1547-09-22 forced surrender; retaken by Scottish defenders December 1548, in 1548 year-end English marker must be OFF",
+      "polygon_verified": false
+    },
+    {
+      "id": "tour-d-ordre-english-fort-1544-1550",
+      "name": "Odre古灯塔英王防御工事：1544年11月起加固",
+      "start_year": 1544,
+      "start_month": 11,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English Crown garrison at Boulogne north seafront, Roman Tour d'Ordre repurposed",
+      "type": "English_coastal_artillery_outwork_attached_to_occupied_Boulogne",
+      "source_ids": [
+        "FR-HELIOT-1958-PLANS-PAGES",
+        "FR-WIKIDATA-TOUR-ODRE"
+      ],
+      "coords": [
+        1.5972222,
+        50.7316667
+      ],
+      "precision": "Former Roman lighthouse cliff-edge Wikidata approximate marker, historical erosion. NOT authentic 1544 bastion footprint",
+      "territorial_change": "Earthworks began November 1544, finished 1545 or early 1546; remains English held through 1549 before 1550 return",
+      "polygon_verified": false
+    },
+    {
+      "id": "forthand-fort-english-1548-1550",
+      "name": "布劳蒂Forthill英军前进炮台：1548年修建",
+      "start_year": 1548,
+      "start_month": null,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English outlying fortified hill supporting Broughty Castle, inside independent Scotland",
+      "type": "English_support_artillery_fort_separate_from_Broughty_Castle",
+      "source_ids": [
+        "SC-NLS-FORTHILL-OS-GAZETTEER",
+        "SC-HES-2022-HADDINGTON"
+      ],
+      "coords": null,
+      "precision": "NLS historical gazetteer says half a mile NW of Broughty Castle; original earthwork wholly gone and GPS exact fort location not attested",
+      "territorial_change": "1548 fortified English hill position until 1550 dismantling, location not precise enough for source-supported point",
+      "polygon_verified": false
     }
   ],
   "year_end_snapshots": [
@@ -558,7 +623,8 @@
       "new_active_episode_ids": [
         "boulogne-english-1544-1550",
         "irish-crown-title-1541",
-        "lochmaben-english-1544-1545"
+        "lochmaben-english-1544-1545",
+        "tour-d-ordre-english-fort-1544-1550"
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
@@ -579,7 +645,8 @@
       ],
       "new_active_episode_ids": [
         "boulogne-english-1544-1550",
-        "irish-crown-title-1541"
+        "irish-crown-title-1541",
+        "tour-d-ordre-english-fort-1544-1550"
       ],
       "confirmed_expired_episode_ids": [
         "lochmaben-english-1544-1545"
@@ -604,7 +671,8 @@
         "boulogne-english-1544-1550",
         "irish-crown-title-1541",
         "ambleteuse-english-fort-1546-1549",
-        "boulemberg-english-fort-1546-1549"
+        "boulemberg-english-fort-1546-1549",
+        "tour-d-ordre-english-fort-1544-1550"
       ],
       "confirmed_expired_episode_ids": [
         "lochmaben-english-1544-1545"
@@ -632,7 +700,9 @@
         "irish-crown-title-1541",
         "eyemouth-fort-English-1547-1550",
         "ambleteuse-english-fort-1546-1549",
-        "boulemberg-english-fort-1546-1549"
+        "boulemberg-english-fort-1546-1549",
+        "hume-english-1547-1548",
+        "tour-d-ordre-english-fort-1544-1550"
       ],
       "confirmed_expired_episode_ids": [
         "lochmaben-english-1544-1545"
@@ -663,13 +733,16 @@
         "eyemouth-fort-English-1547-1550",
         "dunglass-camp-english-1548-1549",
         "ambleteuse-english-fort-1546-1549",
-        "boulemberg-english-fort-1546-1549"
+        "boulemberg-english-fort-1546-1549",
+        "tour-d-ordre-english-fort-1544-1550",
+        "forthand-fort-english-1548-1550"
       ],
       "confirmed_expired_episode_ids": [
         "inchcolm-english-1547-1548",
-        "lochmaben-english-1544-1545"
+        "lochmaben-english-1544-1545",
+        "hume-english-1547-1548"
       ],
-      "year_end_note": "Inchcolm withdrawn March: do not show English occupied island at year-end. Haddington held, Hailes held at least in 1548.",
+      "year_end_note": "Inchcolm withdrawn March: do not show English occupied island at year-end. Haddington held, Hailes held at least in 1548. Hume castle retaken by Scots in December 1548; Forthill English fort is separate from Broughty castle.",
       "false_new_province_area_polygons": 0,
       "uncertain_continuity_episode_ids": []
     },
@@ -691,14 +764,17 @@
         "lauder-english-1548-1550",
         "irish-crown-title-1541",
         "eyemouth-fort-English-1547-1550",
-        "dunglass-camp-english-1548-1549"
+        "dunglass-camp-english-1548-1549",
+        "tour-d-ordre-english-fort-1544-1550",
+        "forthand-fort-english-1548-1550"
       ],
       "confirmed_expired_episode_ids": [
         "inchcolm-english-1547-1548",
         "haddington-english-1548-1549",
         "lochmaben-english-1544-1545",
         "ambleteuse-english-fort-1546-1549",
-        "boulemberg-english-fort-1546-1549"
+        "boulemberg-english-fort-1546-1549",
+        "hume-english-1547-1548"
       ],
       "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes tenure after 1548 unverified; no automatic continued solid icon. Hailes castle continuing control is UNSURE and explicitly pending, not an ended or confirmed active garrison. France retook Ambleteuse 25 August; Mont Lambert fort evacuated in 1549. Boulogne urban garrison remains English.",
       "false_new_province_area_polygons": 0,
@@ -708,7 +784,7 @@
     }
   ],
   "all_inherited_political_identities_accounted_for": true,
-  "historic_geography_policy": "Always distinguish independent Scotland from English-held isolated forts and legal Irish kingdom claim from actual administration. Zero certified ancient polygons; dashed rough context polygon only. No fabricated km2. 1549 British Boulogne urban core survived even after two English frontier forts fell; city and outpost control must be mapped separately.",
+  "historic_geography_policy": "Always distinguish independent Scotland from English-held isolated forts and legal Irish kingdom claim from actual administration. Zero certified ancient polygons; dashed rough context polygon only. No fabricated km2. 1549 British Boulogne urban core survived even after two English frontier forts fell; city and outpost control must be mapped separately. Newly identified French Outreau fort (built 1545) is a FRENCH defending force opposing English-held Boulogne, not part of English occupation. English Tour d'Ordre and Broughty Forthill were separately fortified. Hume taken 1547 and Scots retook 1548.",
   "cross_decade_seed_1549_1550": {
     "continue_expected": [
       "boulogne-english-1544-1550",
@@ -723,14 +799,17 @@
       "guines-crown-1520s",
       "kingdom-of-scotland",
       "eyemouth-fort-English-1547-1550",
-      "dunglass-camp-english-1548-1549"
+      "dunglass-camp-english-1548-1549",
+      "tour-d-ordre-english-fort-1544-1550",
+      "forthand-fort-english-1548-1550"
     ],
     "end_before_1550": [
       "inchcolm-english-1547-1548",
       "haddington-english-1548-1549",
       "lochmaben-english-1544-1545",
       "ambleteuse-english-fort-1546-1549",
-      "boulemberg-english-fort-1546-1549"
+      "boulemberg-english-fort-1546-1549",
+      "hume-english-1547-1548"
     ],
     "need_new_1550_study": true,
     "do_not_claim_1550_actual_site_control_without_evidence": true,
