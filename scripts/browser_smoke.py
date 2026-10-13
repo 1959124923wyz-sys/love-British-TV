@@ -32,7 +32,7 @@ try:
     wait = WebDriverWait(driver, 30)
     driver.get("http://127.0.0.1:8765/?year=1520")
     wait.until(lambda d: d.execute_script("return document.querySelector('#eventCount')?.textContent==='4项'"))
-    verify("chapter 4 not active at 1520", "document.querySelector('#chapterTrack [data-decade="1520"]').classList.contains('active')", driver)
+    verify("chapter 4 not active at 1520", """document.querySelector('#chapterTrack [data-decade="1520"]').classList.contains('active')""", driver)
     verify("1520 list leaked 1529 historical event", "!document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     verify("modern representative 1520s locations lost dashed uncertainty markers",
            "document.querySelectorAll('#map .map-pin.uncertain').length>=1", driver)
@@ -73,7 +73,7 @@ try:
     set_year(1519, 15)
     verify("complete-archive preview leaked into a new chapter",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
-    verify("switch to third chapter failed", "document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')", driver)
+    verify("switch to third chapter failed", """document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')""", driver)
     set_year(1520, 4)
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
     set_year(1513, 6)
@@ -127,7 +127,7 @@ try:
     toggle_layer("toggleEvents", True)
     # Fifth chapter: every reference event stays in the right decade and never leaks backwards.
     set_year(1530, 0)
-    verify("Fifth chapter not active at 1530", "document.querySelector('#chapterTrack [data-decade="1530"]').classList.contains('active')", driver)
+    verify("Fifth chapter not active at 1530", """document.querySelector('#chapterTrack [data-decade="1530"]').classList.contains('active')""", driver)
     verify("1530 shows later events despite the fixed date gate", "document.querySelector('#eventList').querySelectorAll('.event-item').length===0", driver)
     verify("Crown Calais controls lost at 1529/1530",
            "document.querySelectorAll('#map .control-area-label').length>=0", driver)
@@ -156,8 +156,6 @@ try:
     # atlas into a fictitious 1700s/1900s territorial snapshot.
     current = driver.execute_script("return document.getElementById('bigYear').textContent")
     driver.execute_script("document.querySelector('#centuryNav [data-century=\"1700\"]').click()")
-    verify("century browsing unexpectedly changed the map year",
-           "document.getElementById('bigYear').textContent===arguments[0]", driver) if False else None
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     verify("century browser must retain three decade slots",
            "document.querySelectorAll('#chapterTrack .chapter-segment').length===3", driver)
