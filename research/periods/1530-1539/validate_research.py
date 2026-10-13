@@ -44,7 +44,7 @@ prior=json.loads((ROOT/"data/atlas-1520-1529.json").read_text(encoding="utf-8"))
 old_area=json.loads((ROOT/"data/territorial-footprints-1497-1529.geojson").read_text(encoding="utf-8"))
 src_ids={s["id"] for s in sources["records"]}
 require(len(src_ids)==len(sources["records"]), "source IDs duplicate")
-require(len(src_ids)>=57, "expected at least 40 documentary source/lead IDs")
+require(len(src_ids)>=60, "expected at least 40 documentary source/lead IDs")
 require(all(s.get("primary_original_examined") is False for s in sources["records"]), "originals read flag must not silently change")
 require(1530==events["period"]["from"] and 1539==events["period"]["to"], "research decade mismatch")
 event_ids={e["id"] for e in events["records"]}
@@ -131,7 +131,13 @@ require(any(e["year"]==1532 and "加来" in e["title_zh"] and e["coordinate"] is
 require(any(e["year"]==1532 and "独立苏格兰" in e["title_zh"] and e["coordinate"] is None for e in events["records"]),"independent Scotland 1532 institutions omitted")
 require(all(x["source_ids"] and set(x["source_ids"])<=src_ids for x in welsh["records"]), "Wales statutory grouping unknown source ID")
 require(len(atlas["places"])==8,"missing newly charted Guernsey political name point")
-require(len(sites["features"])==10, "Calais 1532 sourced event site missing")
+require(len(sites["features"])==12, "Calais 1532 sourced event site missing")
+require(len(atlas["sources"])>=55, "Abbey / Guernsey / Tudor chronicle source IDs not in candidate atlas")
+require(len(atlas["events"])==27 and len(atlas["places"])==8, "editor must receive all new 1531/32 and Guernsey additions")
+for missing_before in ("1530S-E016","1530S-E017"):
+    entry=next(e for e in atlas["events"] if e["id"]==missing_before)
+    require(entry["lat"] is not None and entry["lng"] is not None, "Historic England monastery location not resolved: "+missing_before)
+    require("not" in entry["geo_precision"] or "no" in entry["geo_precision"], "Modern site labelled accurate Tudor property footprint")
 require(next_seed["from_snapshot_year"]==1539, "next-decade seed wrong year")
 require({r["stable_id"] for r in next_seed["incoming_stable_ids"]}==lead_ids, "one of the 1539 inherited polities was dropped from 1540 research seed")
 require(next_seed["new_1540_year_end_snapshot"] is None and next_seed["verified_new_1540_polygon_count"]==0, "fabricated 1540 atlas state")
