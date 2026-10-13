@@ -68,7 +68,10 @@
     "Jersey, Guernsey and Isle of Man retain separate political relationships.",
     "Muscovy Russia, West Africa and Elmina are NOT England's sovereign territories.",
     "Hammes Castle near Hames-Boucres was last English Calais Pale bastion abandoned January 1558; lost geographic site must be archived, not resurrected as English in 1560. No verified castle GPS.",
-    "Eyemouth French military work existed in independent Scotland 1557–1558; archaeology describes negotiated July 1559 exit while physical demolition could be later. Reassess 1560 actual site before marking French garrison active or English conquest."
+    "Eyemouth French military work existed in independent Scotland 1557–1558; archaeology describes negotiated July 1559 exit while physical demolition could be later. Reassess 1560 actual site before marking French garrison active or English conquest.",
+    "Dunbar French-built fort existed after 1550 until demolished in 1560; retain Scottish sovereignty and place, not 1550 English occupation.",
+    "Inchkeith Franco-Scottish fortification official period 1556–1564 spans eighth chapter; preserve island relationship and French-allied construction without assuming constant foreign troop payroll.",
+    "Leith French military defenses attested September 1559; never backdate the 1560 English siege to French construction or imply whole Scottish annexation."
   ],
   "place_controller_at_1559": [
     {
@@ -115,6 +118,34 @@
         "SC-EYEMOUTH-MUSEUM-FRENCH-1557"
       ],
       "display_geometry": "modern archaeological reference Point only; cannot fill area; do not carry as definitely active French beyond 1559"
+    },
+    {
+      "stable_id": "dunbar-french-allied-fort-built-1550",
+      "controller": "Scottish sovereign coastal defense site; fort French-built in 1550, HES identifies demolition 1560 (must not disappear before 1560 researched)",
+      "source_ids": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ],
+      "display_geometry": "modern HES archaeological place Point only; 1550 actual walls unsupported",
+      "next_decade_question": "Confirm exact 1560 demolition and who dismantled; English intervention near Leith does not make Dunbar English sovereign land."
+    },
+    {
+      "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+      "controller": "Scottish sovereign island with Franco-Scottish defensive fort built from 1556 continuing architectural phase through 1564",
+      "source_ids": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ],
+      "display_geometry": "modern HES island reference Point, scheduled multi-period polygon not reused as historical walls",
+      "next_decade_question": "Specific annual garrisons/1559–64 fort completion, 1560 Scottish War, demolition or control episodes require independent source."
+    },
+    {
+      "stable_id": "leith-french-allied-fortifications-1559",
+      "controller": "Independent Scotland; Leith fortifications erected by French allied garrison in September 1559, next year English military assault separate",
+      "source_ids": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ],
+      "display_geometry": "no authenticated rampart 1559 Point or Polygon; archival event only",
+      "next_decade_question": "Separate 1559 French-built Leith defenses from 1560 English siege batteries and subsequent peace/exits, verify accurate fort line and rights."
     }
   ],
   "unresolved_early_1550_siege_exits": [
@@ -145,5 +176,32 @@
       "note": "Former English earthwork ended, different French military occupancy 1557 onwards"
     }
   ],
-  "critical_territorial_phase_evidence_addendum": "TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json"
+  "critical_territorial_phase_evidence_addendum": "TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json",
+  "next_decade_fortification_site_handoff": [
+    {
+      "stable_id": "dunbar-french-allied-fort-built-1550",
+      "question": "Confirm exact 1560 demolition and who dismantled; English intervention near Leith does not make Dunbar English sovereign land.",
+      "source_ids": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ],
+      "geo_precision": "modern HES archaeological place Point only; 1550 actual walls unsupported"
+    },
+    {
+      "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+      "question": "Specific annual garrisons/1559–64 fort completion, 1560 Scottish War, demolition or control episodes require independent source.",
+      "source_ids": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ],
+      "geo_precision": "modern HES island reference Point, scheduled multi-period polygon not reused as historical walls"
+    },
+    {
+      "stable_id": "leith-french-allied-fortifications-1559",
+      "question": "Separate 1559 French-built Leith defenses from 1560 English siege batteries and subsequent peace/exits, verify accurate fort line and rights.",
+      "source_ids": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ],
+      "geo_precision": "no authenticated rampart 1559 Point or Polygon; archival event only"
+    }
+  ]
 }
