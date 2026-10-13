@@ -67,6 +67,8 @@ assert.ok(html.includes('swatch contested-war'),'Keep contested zone legend');
 assert.ok(html.includes('app.js?v=timeline-v174')&&html.includes('css/dark-atlas-v2.css?v=timeline-v174'));
 assert.ok(css.includes('display:inline-flex!important'),'Year title must remain compact after removing statistic rows');
 assert.ok(css.includes('.zone-dossier-facts')&&!css.includes('.control-status-value'));
+assert.ok(app.includes("map.createPane('garrisonHitPane')")&&app.includes('className:\'atlas-garrison-hit\''),'Above-event icon stroke-hit ring must expose otherwise occluded territory dossiers');
+assert.ok(css.includes('pointer-events:stroke!important'),'Hit ring should be annular and must not obscure event centers');
 assert.ok(css.includes('.atlas-contested-zone')&&css.includes('pointer-events:visiblePainted'));
 assert.ok(app.includes('function openMapTerritoryAt(latlng)')&&app.includes('function featureContainsCoordinate(feature,lon,lat)'),'Real map click fallback needed for source-based territory intros');
 assert.ok(!app.includes("map.getZoom()>8")&&!app.includes("map.getZoom()>9"),'Avoid sudden disappearance at high zoom');
