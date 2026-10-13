@@ -1,0 +1,260 @@
+{
+  "type": "FeatureCollection",
+  "name": "1540-1549 historical year-specific control entries and exits",
+  "metadata": {
+    "period": [
+      1540,
+      1549
+    ],
+    "verified_new_historical_territorial_polygons": 0,
+    "actual_changes_are_named_forts_and_captured_Boulogne_urban_core": true,
+    "historic_area_sqkm": null,
+    "annual_slices": "CONTROL_TRANSITION_1539_1549.json",
+    "map_drawing": "Do not fill independent Scotland because some strategic towns were temporarily occupied. Do not draw full Boulonnais exact border; old seven reference polygons persist until control proven to cease."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "entry-boulogne-english-1544-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6169,
+          50.7256
+        ]
+      },
+      "properties": {
+        "name": "布洛涅：1544年英军实占城市及周边据地",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1544,
+        "change_month": 9,
+        "stable_id": "boulogne-english-1544-1550",
+        "controller": "English Crown military/colonial administration",
+        "source_ids": [
+          "FR-MURPHY-2019-BOULOGNE",
+          "FR-MURPHY-2019-SETTLE",
+          "FR-MURPHY-2019-MAP"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1544,
+        "known_actual_end_year": 1550,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-broughty-english-1547-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87022,
+          56.46293
+        ]
+      },
+      "properties": {
+        "name": "布劳蒂城堡：1547年英军控制",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1547,
+        "change_month": 9,
+        "stable_id": "broughty-english-1547-1550",
+        "controller": "English Crown garrison in otherwise independent Scottish kingdom",
+        "source_ids": [
+          "SC-HES-BROUGHTY",
+          "SC-HES-INCHCOLM",
+          "SC-HES-BROUGHTY-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1547,
+        "known_actual_end_year": 1550,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-inchcolm-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.30171,
+          56.03001
+        ]
+      },
+      "properties": {
+        "name": "因奇科姆岛：英军短暂驻岛",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1547,
+        "change_month": null,
+        "stable_id": "inchcolm-english-1547-1548",
+        "controller": "English Crown naval garrison inside Scottish waters",
+        "source_ids": [
+          "SC-HES-INCHCOLM",
+          "SC-UVA-INCHCOLM-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1547,
+        "known_actual_end_year": 1548,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-inchcolm-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.30171,
+          56.03001
+        ]
+      },
+      "properties": {
+        "name": "因奇科姆岛：英军短暂驻岛：撤军或失去实际驻守",
+        "change_type": "site_control_ended",
+        "change_year": 1548,
+        "change_month": 3,
+        "stable_id": "inchcolm-english-1547-1548",
+        "controller_after": "Independent Scotland / local holders; check garrison and French assistance individually",
+        "source_ids": [
+          "SC-HES-INCHCOLM",
+          "SC-UVA-INCHCOLM-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-haddington-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.77198,
+          55.95332
+        ]
+      },
+      "properties": {
+        "name": "哈丁顿英军占领与围城",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1548,
+        "change_month": null,
+        "stable_id": "haddington-english-1548-1549",
+        "controller": "English Crown garrison in otherwise independent Scotland",
+        "source_ids": [
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-HADDINGTON-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1548,
+        "known_actual_end_year": 1549,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-haddington-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.77198,
+          55.95332
+        ]
+      },
+      "properties": {
+        "name": "哈丁顿英军占领与围城：撤军或失去实际驻守",
+        "change_type": "site_control_ended",
+        "change_year": 1549,
+        "change_month": 9,
+        "stable_id": "haddington-english-1548-1549",
+        "controller_after": "Independent Scotland / local holders; check garrison and French assistance individually",
+        "source_ids": [
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-HADDINGTON-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-lauder-english-1548-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.74838,
+          55.71936
+        ]
+      },
+      "properties": {
+        "name": "劳德尔：英军占用的补给线要塞",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1548,
+        "change_month": null,
+        "stable_id": "lauder-english-1548-1550",
+        "controller": "English Crown garrison",
+        "source_ids": [
+          "SC-HES-LAUDER",
+          "SC-HES-LAUDER-1548"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1548,
+        "known_actual_end_year": 1550,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-hailes-english-1548-date_unknown",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6832,
+          55.973
+        ]
+      },
+      "properties": {
+        "name": "海尔斯城堡：1548年3月被英军占据并交给盟友",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1548,
+        "change_month": 3,
+        "stable_id": "hailes-english-1548-date_unknown",
+        "controller": "English garrison with Hugh Douglas allied Scottish lord",
+        "source_ids": [
+          "SC-HES-2022-HAILES",
+          "SC-HES-2022-HADDINGTON"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1548,
+        "known_actual_end_year": null,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "law-1541-irish-royal-title",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "name": "1541英王爱尔兰王国称号法律改变",
+        "change_type": "constitutional_legal_title_not_new_actual_territory",
+        "change_year": 1541,
+        "source_ids": [
+          "IE-LEG-CROWN-1542",
+          "IE-ELLIS-2016-LEINSTER"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "no_colonial_map_area_generated": true,
+        "legal_note": "Kingdom legal claim cannot color all Ireland as crown-controlled."
+      }
+    }
+  ]
+}
