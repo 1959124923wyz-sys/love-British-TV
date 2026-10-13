@@ -1,0 +1,69 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const base=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(base,p),'utf8'),json=p=>JSON.parse(read(p));
+const occupied=json('data/war-occupied-zones-1540-1549.geojson'),contested=json('data/war-contested-zones-1540-1549.geojson');
+const source=json('data/war-control-vicinity-1540-1549.geojson');
+const military=json('data/military-control-points-1540-1549.geojson'),atlas=json('data/atlas-1540-1549.json');
+const oldFootprints=json('data/territorial-footprints-1497-1549.geojson');
+const app=read('app.js'),css=read('css/dark-atlas-v2.css'),html=read('index.html');
+new vm.Script(app,{filename:'app.js'});
+const citations=new Set(atlas.sources.map(x=>x.id));
+assert.equal(occupied.features.length,10,'Keep ten research-sourced schematic occupied localities, not ten invented Tudor boundaries');
+assert.equal(contested.features.length,4,'Four evidence-anchored low-precision campaign theaters');
+assert.ok(contested.metadata.archival_evidence_for_actual_polygon_boundaries===false);
+assert.ok(contested.metadata.area_statistics_forbidden);
+assert.equal(military.features.length,15,'No change to dated military-site evidence');
+assert.equal(oldFootprints.features.length,7,'Inherited territorial references must remain intact');
+const ids=new Set(military.features.filter(f=>f.properties.not_an_English_control_feature!==true).map(f=>f.properties.stable_id));
+const originals=new Map(source.features.map(x=>[x.id,x]));
+for(const f of occupied.features){
+ const p=f.properties;assert.equal(f.geometry.type,'Polygon');
+ assert.equal(p.zone_type,'occupied');
+ assert.equal(p.historical_boundary_confirmed,false);
+ assert.equal(p.fill_authorized,false);
+ assert.equal(p.area_sqkm,null);
+ assert.ok(ids.has(p.stable_id),'An unsubstantiated additional military occupation must not appear');
+ assert.deepEqual(f.geometry,originals.get(f.id)?.geometry,'Historic geometry may not be invented during UI repair');
+ assert.ok(p.source_ids.length&&p.source_ids.every(i=>citations.has(i)),f.id+' missing published sources');
+ assert.ok(p.summary_zh&&p.precision_note&&p.related_place_ids.includes(p.stable_id));
+}
+for(const f of contested.features){
+ const p=f.properties;
+ assert.equal(f.geometry.type,'Polygon');
+ assert.equal(p.zone_type,'contested');assert.equal(p.area_sqkm,null);
+ assert.equal(p.historical_boundary_confirmed,false);assert.equal(p.fill_authorized,false);
+ assert.equal(p.area_statistics_forbidden,true);
+ assert.ok(p.construction_method.includes('hand_sketch'),'Never present an illustrative war area as an old surveyed border');
+ assert.ok(p.source_ids.length&&p.source_ids.every(i=>citations.has(i)),f.id+' missing sources');
+ assert.ok(p.related_event_ids.every(i=>atlas.events.some(x=>x.id===i)),f.id+' missing actual events');
+ assert.ok(p.precision_note?.includes('示意'),f.id+' must disclose invented illustrative outline');
+ assert.deepEqual(f.geometry.coordinates[0][0],f.geometry.coordinates[0].at(-1),'Close GeoJSON polygons');
+}
+const activeIds=y=>new Set(military.features.filter(f=>f.properties.not_an_English_control_feature!==true&&f.properties.year_end_start<=y&&y<=f.properties.year_end_stop).map(f=>f.properties.stable_id));
+const countOccupied=y=>occupied.features.filter(f=>f.properties.start_year<=y&&f.properties.end_year>=y&&activeIds(y).has(f.properties.stable_id)).length;
+const countContested=y=>contested.features.filter(f=>f.properties.start_year<=y&&f.properties.end_year>=y).length;
+const countByYear={1540:[0,0],1544:[2,0],1545:[2,1],1546:[4,1],1547:[7,3],1548:[9,3],1549:[6,2]};
+for(const[y,v]of Object.entries(countByYear)){
+ assert.deepEqual([countOccupied(+y),countContested(+y)],v,'Year '+y+' schematic sites/contests inconsistent');
+}
+assert.equal(countOccupied(1539),0);assert.equal(countContested(1539),0);
+assert.ok(!activeIds(1548).has('hailes-english-1548-date_unknown'),'Hailes was recaptured by Scots in 1548');
+assert.ok(!activeIds(1549).has('haddington-english-1548-1549'),'Haddington must disappear after English withdrawal');
+assert.ok(activeIds(1549).has('boulogne-english-1544-1550'),'Boulogne still English-held at end of 1549');
+for(const t of ["function openTerritoryDossier(feature,kind='historic')","openTerritoryDossier(feature,'occupied')","openTerritoryDossier(feature,'contested')","openTerritoryDossier(feature,'historic')",
+ "function renderContestedZones()","function renderWartimeVicinities()","function ensureContestedHatch()",
+ "renderWartimeVicinities();renderContestedZones();renderWartimeControls();","renderer:sovereigntyRenderer",
+ "fetch('data/war-occupied-zones-1540-1549.geojson'","fetch('data/war-contested-zones-1540-1549.geojson'"])
+ assert.ok(app.includes(t),t+' missing');
+assert.ok(app.includes("map.getZoom()>9")&&app.includes("map.getZoom()>8"),'High zoom must hide schematic buffers and manual war polygons');
+assert.ok(!app.includes("map.flyTo("),'Clicking territorial polygons must not change zoom');
+assert.ok(app.includes('map.getPane(\'warVicinityPane\').style.zIndex=\'463\''),'Occupied site clickable above theater stripes');
+assert.ok(app.includes('map.getPane(\'contestedZonePane\').style.zIndex=\'462\''),'Theater must be clickable above base sovereignty');
+assert.ok(app.includes('activeEnglishGarrisonIds()'),'Occupation surfaces must be gated by historical year-end garrisons');
+assert.ok(html.includes('<div id="controlStatus"')&&html.includes('swatch contested-war'),'Need an actual multiline year control panel and clear two-color legend');
+assert.ok(html.includes('app.js?v=timeline-v173')&&html.includes('css/dark-atlas-v2.css?v=timeline-v173'));
+assert.ok(css.includes('grid-template-columns:max-content minmax(0,1fr)'));
+assert.ok(css.includes('.zone-dossier-facts')&&css.includes('.control-status-value'));
+assert.ok(css.includes('.atlas-contested-zone')&&css.includes('pointer-events:visiblePainted'));
+console.log('PASS historic clickable polygons, compact annual status, ten sourced garrison references, four clearly-uncertain war theaters and 1540–1549 correct visibility');
