@@ -24,3 +24,16 @@
 5. 最小验收：能够追溯档案页/地图、地理控制点、配准残差、有效年份及行政/军事属性的 **1个真实历史占据堡垒核心Polygon**，由主编选定展示形态、与十年控制台账相连接、执行浏览器与历史审稿。做不到保持Issue开放。
 
 全部成果只在研究PR，不修改正式前端，拒绝用任意半径/凸包“解决”Issue。
+
+
+## 2026-10-13 21:02起｜第二轮：真正下载官方空间几何并上线研究预览
+
+- 提交 `2ccdc9e10643f3a001622f76046e56e85e1906f6`：`fetch_hes_scheduled.py` 实作直接查询 HES ArcGIS REST，校验编号/地理偏移/GeoJSON闭合性/审计字段；不使用任意 buffer/hull。
+- 提交 `42c7b144731cff9941911a8027fe82beb01f1e40`：**仅本研究分支、仅工作流文件首次变更触发**的一次性 GitHub Actions `.github/workflows/issue46-hes-once.yml`（附手动触发）；不启用任何定时搜索/巡检，不影响1550s独立QA。
+- GitHub Actions **38402612677** 已真实成功执行 `https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/38402612677`。官方三个 Polygon 已由 GitHub Actions bot 实际上传到 `research/issue46/HES_OFFICIAL_MODERN_SCHEDULED_REFERENCE.geojson`，在 GitHub 远端读取并校验：3个ID齐全；SM3190 Eyemouth、SM3191 Dunglass、SM1718 Roxburgh。
+- HES ArcGIS返回形状为Polygon，原始采集精度：**SM3190 10m内、SM3191 1m内、SM1718 10m内**。注意这些都是**现代遗址法律保护多边形的定位精度**，不是1547—1550英军原墙测量精度。地理源 `https://inspire.hes.scot/arcgis/rest/services/HES/Scheduled_Monuments/MapServer/0`；HES空间数据 OGL v3.0；保留正式署名。
+- 提交 `4adb656f79147159bf3675b5db909791a2ed9a8d`：`ARCHAEOLOGY_REFERENCE_PREVIEW.html` 作为研究工具，通过HTTP相对路径加载已入库三处**真实现代考古保护范围**，时间轴仅切换三处英军史实**参考点**，虚线展示现代保护面；无法被误认英国1548实际面积。
+- 工作流运行后已经直接从远端逐项读取 **三处真实Polygon坐标**，并检验全部`fill_authorized=false`、`historical_boundary_confirmed=false`、`area_sqkm=null`、历史Polygon数量仍为0。**Issue #46未达成真实英军历史控制边界上线，严格P0 OPEN**。
+
+### 已明确的关键“剩余一步”
+取到现代官方界并不足以通过历史疆界审查；现在应该请求RCAHMS/HES 2006—2009 Roxburgh DGPS/GIS **其中1547炮堡的具体围界折线**（从古城遗存保护区里拆出~110×65m英军堡），以及NRS RHP6075原图像/许可。取得这些文件后用原图GIS配准/误差审计产生`verified_occupied_area`，再交主编整合。现代遗产保护面不得移入`war-occupied-zones-1540-1549.geojson`作为实控面。
