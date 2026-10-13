@@ -363,7 +363,8 @@ try:
               if(!top||top.closest?.('.leaflet-marker-icon,.atlas-aggregate,.atlas-local-english-garrison,.atlas-french-counterfort,.political-relation-symbol,.leaflet-control-container,.time-panel,.map-year-card,.leaflet-tooltip'))continue;
               // Hovering nearby can expand markers. Leave room around their
               // full hit boxes instead of accepting a pixel at their edges.
-              const blockers=[...document.querySelectorAll('.leaflet-marker-icon,.atlas-local-english-garrison,.atlas-french-counterfort')];
+              const blockers=[...document.querySelectorAll('.leaflet-marker-icon,.atlas-local-english-garrison,.atlas-french-counterfort')]
+                .filter(el=>!selector.includes('atlas-local-english-garrison')||!el.matches(selector));
               if(blockers.some(el=>{const b=el.getBoundingClientRect();
                 return x>b.left-20&&x<b.right+20&&y>b.top-20&&y<b.bottom+20;
               }))continue;
@@ -443,7 +444,10 @@ try:
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     verify("high-zoom blue/violet contested zones must not disappear",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
-    print("CLICK_OCCUPIED",real_map_area_click("#map .atlas-violet-wartime-vicinity"),flush=True)
+    # Tiny unmeasured occupied-site polygons are sometimes smaller than their
+    # visually prominent garrison circles. The purple circle must provide the
+    # same territorial introduction without falsifying the underlying geometry.
+    print("CLICK_OCCUPIED_RING",real_map_area_click("#map .atlas-local-english-garrison"),flush=True)
     wait.until(lambda d:"英军驻地附近概略控制区" in d.find_element(By.ID,"dossierBody").text)
     verify("actually clicked occupied zone did not disclose historical source",
            "document.querySelector('#dossierBody .source-details')!==null",driver)
