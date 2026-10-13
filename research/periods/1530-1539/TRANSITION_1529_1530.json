@@ -1,0 +1,661 @@
+{
+  "schema": "territory-transition-v2",
+  "template_only": false,
+  "stage": "research_review",
+  "period": {
+    "previous_from": 1520,
+    "previous_to": 1529,
+    "next_from": 1530,
+    "next_to": 1539
+  },
+  "previous_snapshot": {
+    "year": 1529,
+    "source_file": "data/atlas-1520-1529.json",
+    "active_stable_ids": [
+      "calais-crown",
+      "dublin-pale",
+      "channel-jersey",
+      "isle-of-man",
+      "orkney-scotland",
+      "shetland-scotland",
+      "guines-crown-1520s"
+    ],
+    "historical_exits_kept_in_archive": [
+      "tournai-occupied-city-1513"
+    ]
+  },
+  "records": [
+    {
+      "stable_id": "calais-crown",
+      "name_zh": "加来：英王在法国的控制据点",
+      "parent_stable_id": null,
+      "control_class": "direct_urban_control",
+      "controller_1529": "Kingdom of England",
+      "controller_1530s": "Kingdom of England",
+      "previous_status": "English_royal_city",
+      "transition": "continued",
+      "fact_statement": "Continued documented polity/administrative core in 1530s; no evidence of total territorial transfer; detailed boundary remains unverified.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": [
+          "TNA-FRENCH-LANDS"
+        ]
+      },
+      "evidence_1530s_source_ids": [
+        "GB-TNA-FRENCH-LANDS",
+        "GB-TNA-LISLE-PAPERS"
+      ],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "high_for_named_government_presence",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "inherit_previous_context_as_dashed_if_inferred_or_patterned_if_modern_island_outline",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Check 1530 onward Guines bastion building and 1529 policy enforcement, update actual control footprint only after evidence.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name_zh": "都柏林：英王在爱尔兰的行政核心之一",
+      "parent_stable_id": null,
+      "control_class": "crown_administration_core_not_entire_island",
+      "controller_1529": "Kingdom of England (through local deputy officials)",
+      "controller_1530s": "Kingdom of England (through local deputy officials)",
+      "previous_status": "limited_English_royal_administration",
+      "transition": "continued",
+      "fact_statement": "Continued documented polity/administrative core in 1530s; no evidence of total territorial transfer; detailed boundary remains unverified.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": [
+          "EGAN-2024-EHR"
+        ]
+      },
+      "evidence_1530s_source_ids": [
+        "IR-ELLIS-DUBLIN-2019",
+        "IR-IHS-LEONARD-GREY-2026",
+        "IR-UK-PARLIAMENT-POYNINGS"
+      ],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "high_for_named_government_presence",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "inherit_previous_context_as_dashed_if_inferred_or_patterned_if_modern_island_outline",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Compare 1529–30 Irish government and tax jurisdiction with existing Pale; preserve Gaelic rulers independently.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name_zh": "泽西岛：英王属地",
+      "parent_stable_id": null,
+      "control_class": "crown_dependency_not_direct_english_county",
+      "controller_1529": "English Crown with local laws",
+      "controller_1530s": "English Crown with local laws",
+      "previous_status": "crown_dependency",
+      "transition": "uncertain_continuity",
+      "fact_statement": "No historical termination known; 1529 state is carried as patterned political context, but no 1530s contemporaneous local-rule source yet examined.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": [
+          "JERSEY-HISTORY-GOV"
+        ]
+      },
+      "evidence_1530s_source_ids": [],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "intermediate_or_research_ongoing",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "inherit_previous_context_as_dashed_if_inferred_or_patterned_if_modern_island_outline",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Verify continuing historic political relation from original source; do not fabricate termination.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name_zh": "马恩岛：特殊领主制度",
+      "parent_stable_id": null,
+      "control_class": "autonomous_lordship_not_english_crown_county",
+      "controller_1529": "Stanley family lordship under distinct legal system",
+      "controller_1530s": "Stanley family lordship under distinct legal system",
+      "previous_status": "autonomous_lordship",
+      "transition": "uncertain_continuity",
+      "fact_statement": "No historical termination known; 1529 state is carried as patterned political context, but no 1530s contemporaneous local-rule source yet examined.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": [
+          "CAMBRIDGE-LORDSHIP-MAN"
+        ]
+      },
+      "evidence_1530s_source_ids": [],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "intermediate_or_research_ongoing",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "inherit_previous_context_as_dashed_if_inferred_or_patterned_if_modern_island_outline",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Verify continuing historic political relation from original source; do not fabricate termination.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name_zh": "奥克尼：苏格兰王权相关群岛",
+      "parent_stable_id": null,
+      "control_class": "scottish_crown_territory_not_english_colony",
+      "controller_1529": "Kingdom of Scotland",
+      "controller_1530s": "Kingdom of Scotland",
+      "previous_status": "independent_Scottish_non_English",
+      "transition": "uncertain_continuity",
+      "fact_statement": "No historical termination known; 1529 state is carried as patterned political context, but no 1530s contemporaneous local-rule source yet examined.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ]
+      },
+      "evidence_1530s_source_ids": [
+        "SC-HES-BLACKNESS-1537"
+      ],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "intermediate_or_research_ongoing",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "inherit_previous_context_as_dashed_if_inferred_or_patterned_if_modern_island_outline",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name_zh": "设得兰：苏格兰王权相关群岛",
+      "parent_stable_id": null,
+      "control_class": "scottish_crown_territory_not_english_colony",
+      "controller_1529": "Kingdom of Scotland",
+      "controller_1530s": "Kingdom of Scotland",
+      "previous_status": "independent_Scottish_non_English",
+      "transition": "uncertain_continuity",
+      "fact_statement": "No historical termination known; 1529 state is carried as patterned political context, but no 1530s contemporaneous local-rule source yet examined.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ]
+      },
+      "evidence_1530s_source_ids": [
+        "SC-HES-BLACKNESS-1537"
+      ],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "intermediate_or_research_ongoing",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "inherit_previous_context_as_dashed_if_inferred_or_patterned_if_modern_island_outline",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "name_zh": "吉讷：加来边区英王军事与定居管理中心",
+      "parent_stable_id": "calais-crown",
+      "control_class": "fortified_frontier_governance_not_new_conquest",
+      "controller_1529": "Kingdom of England",
+      "controller_1530s": "Kingdom of England",
+      "previous_status": "existing_English_Calais_child_site",
+      "transition": "continued",
+      "fact_statement": "Continued documented polity/administrative core in 1530s; no evidence of total territorial transfer; detailed boundary remains unverified.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": [
+          "CAL-ROYAL-HRP-1520",
+          "CAL-MURPHY-2025-GUINES"
+        ]
+      },
+      "evidence_1530s_source_ids": [
+        "GB-TNA-FRENCH-LANDS",
+        "GB-MUNBY-GUINES-2016",
+        "GB-MURPHY-GUINES-2025"
+      ],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "high_for_named_government_presence",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "inherit_previous_context_as_dashed_if_inferred_or_patterned_if_modern_island_outline",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Check 1530 onward Guines bastion building and 1529 policy enforcement, update actual control footprint only after evidence.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "name_zh": "独立苏格兰王国",
+      "parent_stable_id": null,
+      "control_class": "independent_kingdom_external_to_english_control",
+      "controller_1529": "Kingdom of Scotland (James V)",
+      "controller_1530s": "Kingdom of Scotland (James V)",
+      "previous_status": "independent_Scottish_non_English",
+      "transition": "continued",
+      "fact_statement": "Continued documented polity/administrative core in 1530s; no evidence of total territorial transfer; detailed boundary remains unverified.",
+      "evidence_1529": {
+        "ref": "main:data/atlas-1520-1529.json",
+        "source_ids": []
+      },
+      "evidence_1530s_source_ids": [
+        "SC-HES-BLACKNESS-1537",
+        "SC-HES-LINLITHGOW-1538"
+      ],
+      "historic_end_date_known": null,
+      "last_documented_year_by_prior_atlas": 1529,
+      "end_of_decade_confirmed_different_from_no_date": false,
+      "confidence_polity": "high_for_named_government_presence",
+      "boundary_precision": "no 1530s historical administrative polygon verified",
+      "geometry_policy": "independent_state_not_English",
+      "area_sqkm": null,
+      "solid_historical_border_permitted": false,
+      "research_review": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory.",
+      "cartography_gate": "map as inherited core/relation where historically justified; do not fabricate 1530s surveyed boundaries"
+    }
+  ],
+  "new_entities": [
+    {
+      "stable_id": "maynooth-castle-1535",
+      "parent_stable_id": "dublin-pale",
+      "name_zh": "梅努斯城堡：1535年英王军攻取的杰拉德家族城堡",
+      "first_explicitly_mapped_year": 1535,
+      "classification": "documented_local_castle_capture_not_surveyed_province",
+      "historical_acquisition_date": "1535-03 (month only)",
+      "source_ids": [
+        "IR-OPW-MAYNOOTH-1535",
+        "IR-OPW-MAYNOOTH-CASTLE"
+      ],
+      "prior_status": "FitzGerald private lordly seat",
+      "new_status": "Crown army capture 1535",
+      "hold_duration": "unknown, needs garrison documentation",
+      "geometry_status": "Point only; castle historical boundary not measured"
+    },
+    {
+      "stable_id": "welsh-marcher-1535-administrative",
+      "parent_stable_id": null,
+      "name_zh": "威尔士与边区领主制法权重组",
+      "first_explicitly_mapped_year": 1535,
+      "classification": "legal_administrative_reorganization_not_new_external_conquest",
+      "historical_acquisition_date": null,
+      "source_ids": [
+        "WAL-UK-LEG-1535"
+      ],
+      "geometry_status": "reference only; no verified 1535 historic marcher border polygon"
+    },
+    {
+      "stable_id": "kildare-geraldine-forfeiture-1536",
+      "parent_stable_id": "dublin-pale",
+      "name_zh": "基尔代尔杰拉德家族地产没收及莱克斯利普庄园恢复王室权利",
+      "first_explicitly_mapped_year": 1536,
+      "classification": "documented_legal_estate_transfer_not_automatic_county_annexation",
+      "source_ids": [
+        "IR-ULSTER-CHRONOLOGY",
+        "IR-ELLIS-REBELLION-LAW"
+      ],
+      "historical_acquisition_date": null,
+      "geometry_status": "castle/manor point only until contemporary estate rentals and map checked"
+    }
+  ],
+  "annual_snapshots": [
+    {
+      "year": 1530,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1531,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1532,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1533,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1534,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1535,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [
+        "maynooth-castle-crown-captured-1535"
+      ],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1536,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [
+        "maynooth-castle-crown-captured-1535"
+      ],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1537,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [
+        "maynooth-castle-crown-captured-1535"
+      ],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1538,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [
+        "maynooth-castle-crown-captured-1535"
+      ],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    },
+    {
+      "year": 1539,
+      "carryover_named_place_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s"
+      ],
+      "castle_changes_under_review": [
+        "maynooth-castle-crown-captured-1535"
+      ],
+      "documentation_still_required": [
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland"
+      ],
+      "political_independence_ids": [
+        "kingdom-of-scotland"
+      ],
+      "assertions_not_allowed": [
+        "Wales sovereign conquest in 1535/36",
+        "all Ireland in royal possession due to Irish church act",
+        "Scottish fortifications as English colonies"
+      ],
+      "geometry_verified_new_control_polygons": 0,
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+    }
+  ],
+  "cartography": {
+    "verified_new_or_changed_control_polygons": 0,
+    "unverified_reference_geometry_ids": [
+      "calais-pale-sourced-places-approx-1497-1519",
+      "irish-pale-1488-localities-approx-1497-1519"
+    ],
+    "open_spatial_questions": [
+      "Calais Guines fortification extent 1530–1539",
+      "Kildare confiscated manors versus military jurisdiction",
+      "English Pale crown law tax enforcement during Grey 1536–1540",
+      "Wales marcher lordships statutory remapping versus effective lordship sovereignty",
+      "English coastal artillery sites construction dates",
+      "Scottish Highlands and island legal structures 1530s"
+    ],
+    "geojson_files": [
+      "MAP_REFERENCE_1530_1539.geojson",
+      "EVENT_SITES_1530_1539.geojson"
+    ],
+    "map_delta_file": "MAP_DELTA_1530_1539.geojson"
+  },
+  "editorial": {
+    "ready_for_publication": false,
+    "reviewer": null,
+    "open_issues": [
+      "Newly conquered province area not verified; do not use modern four Irish counties for Crown control.",
+      "Statute year 1535 versus common narrative label 1536; editor must retain regnal date.",
+      "Monasteries assets not colonial net profit."
+    ],
+    "source_registry_file": "SOURCE_REGISTRY.json",
+    "control_episode_file": "CONTROL_EPISODES.json",
+    "handoff_file": "EDITOR_HANDOFF.md",
+    "archival_queue_file": "ARCHIVAL_ACTION_QUEUE.json",
+    "last_verified_commit_sha": null
+  },
+  "historical_interpretation": [
+    "Ireland was officially Lordship of Ireland through 1539; Crown claim over island and actual limited enforcement differ. Kingdom title 1541 belongs next decade.",
+    "Scotland independent; Scots castles not English-held.",
+    "Wales Marcher annexations modify English/Welsh internal law, not an English conquest of a new external Wales state in 1535.",
+    "Tournai no longer English after February 1519; never revive colour.",
+    "A 1535 castle capture may be politically consequential without automatically establishing durable control of the whole surrounding shire."
+  ],
+  "sources": [
+    "main/data/atlas-1520-1529.json",
+    "main/research/continuity/TRANSITION_1529_1530_RESEARCH_SEED.json",
+    "SOURCE_REGISTRY.json"
+  ]
+}
