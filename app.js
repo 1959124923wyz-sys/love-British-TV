@@ -29,7 +29,7 @@ const territoryRenderer=L.svg({pane:'territoryPane'});
 // The base map prefers Canvas; precise year-end garrison markers need an explicit SVG layer.
 const wartimeRenderer=L.svg({pane:'controlAreaPane'});
 // The optional schematic area layer is below true site symbols; high zoom uses points only.
-map.createPane('warVicinityPane');map.getPane('warVicinityPane').style.zIndex='460';
+map.createPane('warVicinityPane');map.getPane('warVicinityPane').style.zIndex='463';
 map.getPane('warVicinityPane').style.pointerEvents='auto';
 const warVicinityRenderer=L.svg({pane:'warVicinityPane'});
 map.createPane('contestedZonePane');
