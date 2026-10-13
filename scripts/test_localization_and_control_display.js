@@ -19,7 +19,7 @@ assert.ok(app.includes("radius:map.getZoom()>=6?19:17"),'Occupied areas must be 
 assert.ok(app.includes("p.year_end_start")&&app.includes("p.year_end_stop"),'Status rings must track evidence-supported annual years');
 assert.ok(html.includes('id="controlStatus"')&&html.includes('swatch english-garrison')&&html.includes('swatch french-defence'),'Chinese control legend/status missing');
 assert.ok(css.includes('.year-control-status[hidden]'),'Control status must not distract earlier chapters');
-assert.ok(html.includes('app.js?v=timeline-v171')&&html.includes('css/dark-atlas-v2.css?v=timeline-v171'));
+assert.ok(html.includes('app.js?v=timeline-v172')&&html.includes('css/dark-atlas-v2.css?v=timeline-v172'));
 assert.ok(html.includes('历史档案与文献')&&!html.includes('HISTORICAL DOSSIER'));
 assert.ok(!html.includes('已发布1497—1549五个历史章节'),'Incorrect published chapter count');
 const ireland=data.events.find(e=>e.id==='1540S-002');
@@ -32,6 +32,8 @@ assert.equal(original.events.length,27,'Fifth-chapter historic record must remai
 assert.equal(garrison.features.length,15);
 assert.ok(garrison.features.every(f=>f.geometry.type==='Point'),'Neither an English siege nor French defence implies surveyed polygon');
 const hailes=garrison.features.find(f=>f.properties.stable_id==='hailes-english-1548-date_unknown');
-assert.equal(hailes.properties.historical_actual_end_year,null);
-assert.equal(hailes.properties.year_end_stop,1548);
-console.log('PASS: single map hover, Chinese titles/dates, visibly dated military site rings and uncertain Hailes control');
+assert.equal(hailes,undefined,'Hailes must not be mapped as an English year-end stronghold following the 1548 Scottish recapture');
+const dundee=garrison.features.find(f=>f.properties.stable_id==='dundee-english-town-late-1547');
+assert.equal(dundee.properties.year_end_start,1547);
+assert.equal(dundee.properties.year_end_stop,1547);
+console.log('PASS: single map hover, Chinese titles/dates, documented 1548 Hailes Scots recapture and 1547 Dundee occupation');

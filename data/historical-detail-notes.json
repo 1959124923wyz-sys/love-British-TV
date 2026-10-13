@@ -692,9 +692,63 @@
         1518,
         1519
       ]
+    },
+    "1540S-014": {
+      "context": "1547年平基战役是英苏战争转折，但战场现代登记范围并非实测战斗点或英国取得的领土。地图使用HES战场遗产清单参考点，未推断英军持有该区土地。",
+      "source_ids": [
+        "SC-HES-PINKIE",
+        "SC-HES-PINKIE-BTL15"
+      ]
+    },
+    "1540S-023": {
+      "context": "1548年英军对坦塔隆城堡的围攻没有获得该堡垒。位置采用苏格兰历史环境局登记的现代城堡遗址参考点；对周围农地的破坏与城堡控制须区分。",
+      "source_ids": [
+        "SC-HES-2022-HADDINGTON",
+        "SC-HES-TANTALLON-SM13326"
+      ]
+    },
+    "1540S-018": {
+      "context": "英军于1548年3月攻取海尔斯城堡并由盟友驻守。但Historic Environment Scotland的《Hailes Castle Statement of Significance》证明同年苏军收复城堡，故不能把它视为1548年末英军控制据点；收复月日待原档核验。",
+      "source_ids": [
+        "SC-HES-2022-HAILES",
+        "SC-HES-HAILES-SOS-2019"
+      ]
+    },
+    "1540S-ED-HAILES-1548-SCOTTISH-RETURN": {
+      "context": "苏格兰历史环境局公布的海尔斯城堡重要性说明确认：1548年英军占堡，苏格兰军队同年再占；该资料能证明年末军管状态，未提供可靠的日、月或古城墙界线。",
+      "source_ids": [
+        "SC-HES-HAILES-SOS-2019"
+      ]
+    },
+    "1540S-ED-DUNDEE-1547-CONTROL": {
+      "context": "圣安德鲁斯大学教堂史档案与考古历史研究描述1547年末英军进入邓迪，1548年1月苏格兰阿盖尔军恢复控制。城镇行政地理范围无可核GIS，故只按有据城镇Point展示，不把现代邓迪整市上色。",
+      "source_ids": [
+        "SC-STANDREWS-DUNDEE-STMARY-1548",
+        "SC-DRISCOLL-1995-DUNDEE-LAW-1548"
+      ]
+    },
+    "1540S-C3-NEW-DUNDEE-STMARY-1548": {
+      "context": "圣安德鲁斯大学历史教堂语料与相关战争信件指出英军曾在圣玛丽教堂塔部署军力，并在1548年1月撤离之际掠取钟及铜器、焚毁塔楼。现代教堂位置是定位参考；原物件数量和价值尚未核实，不计入英国净殖民收益。",
+      "source_ids": [
+        "SC-STANDREWS-DUNDEE-STMARY-1548"
+      ]
+    },
+    "1540S-C3-NEW-DUNDEE-AUG-1548": {
+      "context": "1548年8月英军再攻邓迪、城市被焚毁有学术及官方历史综述支持。但这次占领的确切结束日期缺乏本次已核来源，不能把1548年末邓迪自动列作英军持续控制。",
+      "source_ids": [
+        "SC-DRISCOLL-1995-DUNDEE-LAW-1548",
+        "SC-HES-2026-DUNDEE-BURNING"
+      ]
     }
   },
   "chapters": [
-    "1510-1519"
+    "1510-1519",
+    {
+      "id": "chapterSixth",
+      "period": "1540-1549",
+      "editorial_status": "partial_documentary_dossiers",
+      "notes_added": 7,
+      "source_policy": "linked and uncertainty-qualified"
+    }
   ]
 }
