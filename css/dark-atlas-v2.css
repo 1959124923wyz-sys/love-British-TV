@@ -544,6 +544,8 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .map-year-card .year-control-status[hidden]{display:none!important}
 .legend-items .swatch.english-garrison,.legend-items .swatch.french-defence{width:16px;height:16px;border:3px dashed #d1acfd;border-radius:50%;background:rgba(142,98,220,.11);box-sizing:border-box}
 .legend-items .swatch.wartime-vicinity{width:18px;height:13px;border:1.5px dashed #bd92fa;background:rgba(134,82,221,.17);box-sizing:border-box;border-radius:3px}
+.legend-items .swatch.war-reach{width:18px;height:13px;border:2px dashed #cb9afb;background:rgba(153,107,228,.27);box-sizing:border-box;border-radius:3px}
+#map .atlas-war-reach-schematic{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
 .leaflet-war-vicinity-pane .atlas-violet-wartime-vicinity{pointer-events:none;stroke-linejoin:round}
 .legend-items .swatch.french-defence{border-color:#58c6b7;background:rgba(88,198,183,.09)}
 .leaflet-control-area-pane .atlas-local-english-garrison,.leaflet-control-area-pane .atlas-french-counterfort{vector-effect:non-scaling-stroke}
