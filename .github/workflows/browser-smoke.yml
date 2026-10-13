@@ -5,6 +5,10 @@ on:
       - "scripts/browser_smoke.py"
       - "app.js"
       - "index.html"
+      - "data/chapters.json"
+      - "data/atlas-*.json"
+      - "data/war-*.geojson"
+      - "data/military-control-points*.geojson"
       - ".github/workflows/browser-smoke.yml"
   workflow_dispatch:
 jobs:
