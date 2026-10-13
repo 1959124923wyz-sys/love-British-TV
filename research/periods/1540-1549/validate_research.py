@@ -125,7 +125,7 @@ for fort_id in ("ambleteuse-english-fort-1546-1549","boulemberg-english-fort-154
 require(len(delta["features"])>=21 and delta["metadata"]["verified_new_historical_territorial_polygons"]==0,"missing map deltas / invented borders")
 for f in delta["features"]:
     require(f["geometry"]["type"]=="Point" and set(f["properties"]["source_ids"])<=ids,"delta invalid source or point")
-require(len(atlas["events"])==len(chron["records"]) and len(atlas["places"])==22,"candidate event/site counts diverge")
+require(len(atlas["events"])==len(chron["records"]) and len(atlas["places"])==21,"candidate event/site counts diverge")
 candidate_ids={x["id"] for x in atlas["sources"]}
 require(len(candidate_ids)==len(atlas["sources"]),"candidate source duplicates")
 for e in atlas["events"]:
@@ -168,4 +168,4 @@ require(len({e["id"] for e in atlas["events"]})==len(atlas["events"]),"atlas eve
 print("PASS research 1540–1549: 9 historical identities inherited, 15 dated control episodes, "
       "10 year-end snapshots, 45+ historical events, 18 dashed/symbolic area references, "
        "21 year-end control point sites, corrected Hailes Scots 1548 recovery, " 
-      "69+ source/lead records and 8 strictly labelled finance studies; ZERO invented exact ancient borders.")
+      "82+ source/lead records and 8 strictly labelled finance studies; ZERO invented exact ancient borders.")
