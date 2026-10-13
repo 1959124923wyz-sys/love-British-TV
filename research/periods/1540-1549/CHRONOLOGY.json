@@ -744,9 +744,120 @@
       "review_status": "research_editor_pending",
       "historical_precise_area_claim": false,
       "amount_value": null
+    },
+    {
+      "year": 1546,
+      "month": 4,
+      "date_precision": "1546-04 (month attested scholarly)",
+      "title_zh": "英王军在阿姆布勒特斯动工修筑海岸堡垒",
+      "category": "WAR",
+      "icon_code": "WAR",
+      "location_hint": "阿姆布勒特斯／Slack河口，法国布洛涅北方",
+      "coordinate": {
+        "lat": 50.8102778,
+        "lng": 1.6072222
+      },
+      "summary_zh": "Pierre Héliot根据1540年代军事档案综述，英王工程师John Rogers参与的Ambleteuse城堡工程始于1546年4月。1544年当地曾有英军骑兵营地，但不得将营地年份冒充堡垒竣工年份。此点是现代市镇中心，非当年的五角堡壕沟，也不是1680年后Vauban要塞。",
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-MUNICIPAL-AMBLETEUSE-1549",
+        "FR-AMBLETEUSE-MODERN-GAZETTEER"
+      ],
+      "control_effect": "new_English_outlying_Ambleteuse_fort_Boulogne_fortification_1546",
+      "significance": 2,
+      "id": "1540S-031",
+      "start_year": 1546,
+      "end_year": 1546,
+      "visible_from": 1546,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
+    },
+    {
+      "year": 1546,
+      "month": 5,
+      "date_precision": "1546-05 (month attested scholarly)",
+      "title_zh": "英军在蒙朗贝尔山建设Boulemberg外围要塞",
+      "category": "WAR",
+      "icon_code": "WAR",
+      "location_hint": "法国布洛涅东侧Mont Lambert（Boulemberg）高地",
+      "coordinate": {
+        "lat": 50.71777,
+        "lng": 1.65893
+      },
+      "summary_zh": "根据Héliot 1958史学考证和1549年王室地图目录，英王军1546年5月在Mont Lambert开工营建外围炮台Boulemberg。现有定位是现代山地村落，只能示意地理位置，严禁将这个位置或其虚线圈当作古堡精准墙界。",
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549",
+        "FR-MONTLAMBERT-MODERN-LOCATOR"
+      ],
+      "control_effect": "new_English_outlying_Boulemberg_fort_1546",
+      "significance": 2,
+      "id": "1540S-032",
+      "start_year": 1546,
+      "end_year": 1546,
+      "visible_from": 1546,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
+    },
+    {
+      "year": 1549,
+      "month": 8,
+      "day": 25,
+      "date_precision": "1549-08-25 municipal record",
+      "title_zh": "法军攻陷阿姆布勒特斯英军城堡，守军撤往加来",
+      "category": "IND",
+      "icon_code": "RES",
+      "location_hint": "法国阿姆布勒特斯／Slack河口",
+      "coordinate": {
+        "lat": 50.8102778,
+        "lng": 1.6072222
+      },
+      "summary_zh": "阿姆布勒特斯法国市镇官方历史记述：1549年8月24日法王亨利二世部队进攻Slack防御阵地，25日突破Ambleteuse英军城堡，守军撤往加来。此后1549年末不能继续显示英王控制阿姆布勒特斯；布洛涅城市据点仍继续至1550年。",
+      "source_ids": [
+        "FR-MUNICIPAL-AMBLETEUSE-1549",
+        "FR-HELIOT-1958-BOULOGNE"
+      ],
+      "control_effect": "French_recapture_Ambleteuse_1549_08_25_English_garrison_ends",
+      "significance": 1,
+      "id": "1540S-033",
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
+    },
+    {
+      "year": 1549,
+      "month": 8,
+      "date_precision": "1549 (after Ambleteuse French victory; exact date unverified)",
+      "title_zh": "英军放弃蒙朗贝尔Boulemberg外围要塞",
+      "category": "IND",
+      "icon_code": "RES",
+      "location_hint": "法国布洛涅东部Mont Lambert／Boulemberg",
+      "coordinate": {
+        "lat": 50.71777,
+        "lng": 1.65893
+      },
+      "summary_zh": "Héliot《Revue du Nord》1958年专项研究记载：阿姆布勒特斯被法军夺回后，英军放弃布洛涅外围Boulemberg防御要塞，毁坏物资后退却，法军进驻。1549年末其英国占领色必须消失，但布洛涅旧城仍是英军据点。原撤军日尚未证实，不能无依据标为8月26日。",
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549"
+      ],
+      "control_effect": "English_1549_withdrawal_from_Boulemberg_French_controlled_after",
+      "significance": 1,
+      "id": "1540S-034",
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "review_status": "research_editor_pending",
+      "historical_precise_area_claim": false,
+      "amount_value": null
     }
   ],
-  "count": 30,
+  "count": 34,
   "year_end_placement_rule": "only visible from event.year; current English occupation city symbols derive separate time intervals",
-  "notes": "Unverified precise site coordinates omitted. University/gov site coordinates identify modern landmarks, not 1540 fort wall. Scottish kingdom does not cease to exist because isolated forts were occupied. Annual 1549 Haddington vacated; Broughty/Boulogne persist."
+  "notes": "Unverified precise site coordinates omitted. University/gov site coordinates identify modern landmarks, not 1540 fort wall. Scottish kingdom does not cease to exist because isolated forts were occupied. Annual 1549 Haddington vacated; Broughty/Boulogne persist. New 1546 forts Ambleteuse (Apr) and Boulemberg (May) are real English garrisons distinct from old Boulogne, but French captured both in 1549; exact historical fort polygons unknown."
 }
