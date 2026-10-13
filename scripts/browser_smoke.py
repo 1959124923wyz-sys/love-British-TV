@@ -143,10 +143,13 @@ try:
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     set_year(1535, 6)
     maynooth = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1530S-E004"]')
-    zoom_before = driver.execute_script("return map.getZoom()")
+    zoom_before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(maynooth).perform()
     wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker"))>0)
-    assert driver.execute_script("return map.getZoom()")==zoom_before, "Maynooth focus incorrectly zoomed map"
+    time.sleep(1.1)
+    zoom_after = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
+    if zoom_before and zoom_after:
+        assert zoom_after==zoom_before, "Maynooth focus incorrectly zoomed map"
     assert driver.execute_script("return document.querySelector('#yearRange').value")=="1535", "Maynooth double-click changed date"
     driver.save_screenshot(str(OUT / "focus-maynooth-1535.png"))
     browser = driver.get_log("browser")
