@@ -733,20 +733,27 @@ function renderMilestones(){
 // An occupation badge is a pixel-size Point symbol, never a historic territorial polygon.
 function renderAnnualControlSummary(){
  const el=$('controlStatus');if(!el)return;
- if(year<1540||!militaryControlPoints){el.textContent='';el.hidden=true;return}
+ if(year<1540||!militaryControlPoints){el.replaceChildren();el.hidden=true;return;}
  const sites=militaryControlPoints.features||[];
- const activeAt=(f,y)=>f.properties.year_end_start<=y&&y<=f.properties.year_end_stop;
- const now=sites.filter(f=>activeAt(f,year));
- const english=now.filter(f=>!f.properties.not_an_English_control_feature);
- const french=now.filter(f=>f.properties.not_an_English_control_feature);
- const gained=sites.filter(f=>activeAt(f,year)&&!activeAt(f,year-1)).length;
- const gone=sites.filter(f=>!activeAt(f,year)&&activeAt(f,year-1));
- // End of available evidence is not proof of a withdrawal. Hailes 1549 is unresolved.
+ const active=(f,y)=>f.properties.year_end_start<=y&&y<=f.properties.year_end_stop;
+ const now=sites.filter(f=>active(f,year));
+ const english=now.filter(f=>!f.properties.not_an_English_control_feature).length;
+ const french=now.filter(f=>f.properties.not_an_English_control_feature).length;
+ const gained=sites.filter(f=>active(f,year)&&!active(f,year-1)).length;
+ const gone=sites.filter(f=>!active(f,year)&&active(f,year-1));
  const confirmedExited=gone.filter(f=>f.properties.historical_actual_end_year!=null).length;
  const uncertain=gone.length-confirmedExited;
- const changes=[gained?'本年新增'+gained+'处':'',confirmedExited?'确证退出'+confirmedExited+'处':'',
+ const activeIds=activeEnglishGarrisonIds();
+ const occupied=(occupiedZoneAreas?.features||[]).filter(f=>f.properties?.zone_type==='occupied'
+   &&yearValidWarZone(f,year)&&activeIds.has(f.properties.stable_id)).length;
+ const contested=(contestedZoneAreas?.features||[]).filter(f=>f.properties?.zone_type==='contested'
+   &&yearValidWarZone(f,year)).length;
+ const entry=(name,n,unit)=>'<div class="control-status-line"><span class="control-status-label">'+name+' </span><strong class="control-status-value">'+n+unit+'</strong></div>';
+ const changes=[gained?'新增驻点 '+gained+'处':'',confirmedExited?'有据退出 '+confirmedExited+'处':'',
   uncertain?'另'+uncertain+'处续驻待核':''].filter(Boolean).join('、');
- el.textContent='英军局部驻点 '+english.length+'处 · 法军对抗点 '+french.length+'处'+(changes?'｜'+changes:'');
+ el.innerHTML=entry('英军局部驻点',english,'处')+entry('法军对抗点',french,'处')+
+  entry('驻军概略范围',occupied,'片')+entry('交战示意区',contested,'片')+
+  (changes?'<p class="control-status-change">'+escapeHTML(changes)+'</p>':'');
  el.hidden=false;
 }
 function setYear(v){
