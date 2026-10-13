@@ -239,7 +239,7 @@ assert "if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;"
 assert "year>=1502?'1502':'—'" in app
 assert "year>=1513?'1513':'—'" in app
 assert "fullArchive||occurredByYear(e,year)" in app
-assert "if(!occurredByYear(r,year))continue;" in app, "Voyage routes must only show when begun"
+assert "if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;" in app, "Voyage routes must only show when begun"
 assert "a.year-b.year||levelOf(b)-levelOf(a)" in app, "List chronology must sort by year first"
 assert "$('showFullChapterArchive').checked=false;" in app, "Full-archive mode must be opt-in"
 assert 'id="showFullChapterArchive"' in html

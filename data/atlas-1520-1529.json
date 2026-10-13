@@ -1426,7 +1426,36 @@
       "origin": "research/periods/1520-1529/MAP_DETAIL_SOURCES_1520S.json (site-only supplemental record)"
     }
   ],
-  "routes": [],
+  "routes": [
+    {
+      "id": "route1527-rut-endpoints-schematic",
+      "year": 1527,
+      "name": "1527年约翰·拉特远航：有据起讫地连接",
+      "category": "voyage",
+      "route_kind": "documented-endpoints-connection",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-start-and-arrival-no-ocean-waypoints",
+      "note": "1527年6月10日船队从普利茅斯出发；拉特于8月3日从纽芬兰圣约翰港致信英王。虚线仅连接两个可考地点，既非实际航行路线，也不表示风暴后失散船舶的航迹或航行距离。",
+      "coords": [
+        [
+          50.3714,
+          -4.1427
+        ],
+        [
+          47.5655556,
+          -52.6980556
+        ]
+      ],
+      "source_ids": [
+        "NA-RUT-DCB",
+        "NA-RUT-BIGGAR"
+      ],
+      "references": [
+        "https://www.biographi.ca/en/bio/rut_john_1E.html"
+      ],
+      "cartographic_note": "端点连线；无中间航迹，非GPS、历史地图复原或航海测量。现代港口位置仅供标示起讫。"
+    }
+  ],
   "colonial_polygons": [],
   "presentation": {
     "chapter": {

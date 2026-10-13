@@ -87,6 +87,40 @@ try:
     if before and after:
         assert before==after, f"Event locator changed tile zoom {before}->{after}"
     driver.save_screenshot(str(OUT / "focus-flodden-1513.png"))
+
+    # A visible SVG route must win the pointer hit-test over kingdom and territorial polygons.
+    def route_check(target_year, route_name):
+        driver.execute_script("""
+          const slider=document.getElementById('yearRange');
+          slider.value=arguments[0];slider.dispatchEvent(new Event('input',{bubbles:true}));
+        """, target_year)
+        wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent===arguments[0]",str(target_year)))
+        wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".leaflet-voyage-pane .atlas-voyage-hit")) >= 1)
+        payload=driver.execute_script("""
+          const line=document.querySelector('.leaflet-voyage-pane .atlas-voyage-hit');
+          const halfway=line.getPointAtLength(line.getTotalLength()*0.5);
+          const mapped=halfway.matrixTransform(line.getScreenCTM());
+          const front=document.elementFromPoint(mapped.x,mapped.y);
+          return {isFront:front===line||line.contains(front),insideViewport:mapped.x>0&&mapped.y>0&&mapped.x<innerWidth&&mapped.y<innerHeight};
+        """)
+        assert payload['insideViewport'], "Route midpoint outside map viewport: " + str(payload)
+        assert payload['isFront'], "Another map layer intercepts route pointer at viewport center: " + str(payload)
+        driver.execute_script("""
+          const line=document.querySelector('.leaflet-voyage-pane .atlas-voyage-hit');
+          const halfway=line.getPointAtLength(line.getTotalLength()*0.5);
+          const mapped=halfway.matrixTransform(line.getScreenCTM());
+          line.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,clientX:mapped.x,clientY:mapped.y}));
+        """)
+        wait.until(lambda d: route_name in d.find_element(By.ID, "dossierBody").text)
+        return driver.find_element(By.ID, "dossierBody").text
+
+    first_route=route_check(1497,"1497年航行方向示意")
+    assert "非卡博特实际GPS轨迹" in first_route, "1497 route's uncertainties not visible"
+    driver.save_screenshot(str(OUT / "interactive-voyage-1497.png"))
+    second_route=route_check(1527,"1527年约翰·拉特远航")
+    assert "不表示船只实际航行轨迹" in second_route, "1527 endpoint connection risks being misinterpreted as an actual track"
+    driver.save_screenshot(str(OUT / "voyage-endpoints-1527.png"))
+
     toggle_layer("toggleEvents", False)
     verify("a hidden event layer kept a previously focused marker visible",
            "document.querySelectorAll('.atlas-target-marker').length===0", driver)

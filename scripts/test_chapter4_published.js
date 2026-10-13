@@ -19,7 +19,10 @@ const hypotheses=data('data/geography-hypotheses-1500-1529.geojson');
 assert.deepEqual(fourth.period,{from:1520,to:1529,next:1530});
 assert.ok(fourth.events.length>=24&&fourth.places.length>=7&&fourth.sources.length>=49);
 assert.equal(fourth.colonial_polygons.length,0,'Unsourced 1520s land polygons must not be manufactured');
-assert.equal(fourth.routes.length,0,'Voyage references must not be made into precise tracks');
+assert.equal(fourth.routes.length,1,'1527 must display one carefully limited voyage reference connector');
+assert.equal(fourth.routes[0].route_kind,'documented-endpoints-connection');
+assert.equal(fourth.routes[0].coords.length,2,'Do not fabricate ocean waypoint geometry');
+assert.ok(fourth.routes[0].source_ids.every(id=>fourth.sources.some(s=>s.id===id)));
 const ids=new Set(fourth.sources.map(x=>x.id));assert.equal(ids.size,fourth.sources.length);
 const places=new Set(fourth.places.map(q=>q.id)),evtIds=new Set(fourth.events.map(e=>e.id));
 assert.equal(evtIds.size,fourth.events.length,'Duplicated fourth chapter events');
@@ -57,14 +60,14 @@ for(const feature of grounds.features){
 }
 assert.match(html,/id="chapterFour"/);
 assert.match(html,/max="1529"/);
-assert.match(html,/app\.js\?v=chapter4-v143/);
+assert.match(html,/app\.js\?v=voyage-fix-v144/);
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1529.geojson'"));
 assert.ok(app.includes("Math.min(1529"),'Years capped at old third chapter');
 assert.ok(app.includes("year===1529"),'Autoplay must reach 1529 then stop');
 assert.ok(app.includes("y>=1497&&y<=year"),'Milestones expose future dates');
 assert.ok(app.includes("fullArchive||occurredByYear(e,year)"),'Chapter sidebar reveals future events');
-assert.ok(app.includes("if(!occurredByYear(r,year))continue;"),'Routes have no year gate');
+assert.ok(app.includes("if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;"),'Routes have no year gate');
 assert.ok(app.includes("focusEventFromSidebar(item)"),'Double-click navigation missing');
 assert.ok(!app.includes('第四章（研究预览）'),'Public chapter still labelled research preview');
 console.log('PASS: fourth chapter published source provenance, 1520–1529 reveal and uninterrupted historic controls');
