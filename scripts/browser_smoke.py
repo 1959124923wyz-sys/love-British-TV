@@ -353,10 +353,22 @@ try:
               const x=left+(right-left)*xi/24;
               const y=topY+(bottom-topY)*yi/24;
               if(x<mb.left+8||x>mb.right-8||y<mb.top+8||y>mb.bottom-8)continue;
+              const matrix=path.getScreenCTM();
+              if(!matrix)continue;
+              const local=new DOMPoint(x,y).matrixTransform(matrix.inverse());
+              if(!path.isPointInFill(local))continue;
+              // A valid physical map click can hit the Leaflet Canvas beneath
+              // this SVG; the app's geographical fallback must still open it.
               const top=document.elementFromPoint(x,y);
-              if(top===path||top?.closest?.(selector)===path)
-                return {x,y,dx:x-(mb.left+mb.width/2),dy:y-(mb.top+mb.height/2),
-                  target:top.tagName,bbox:rect.width.toFixed(1)+'x'+rect.height.toFixed(1)};
+              if(!top||top.closest?.('.leaflet-marker-icon,.atlas-aggregate,.leaflet-control-container,.time-panel,.map-year-card,.leaflet-tooltip'))continue;
+              const higher=(selector.includes('sovereignty')?
+                '.atlas-violet-wartime-vicinity,.atlas-contested-zone,.atlas-territory-solid':
+                selector.includes('contested')?'.atlas-violet-wartime-vicinity':'');
+              if(higher && [...document.querySelectorAll(higher)].some(other=>{
+                  const inv=other.getScreenCTM()?.inverse();return inv&&other.isPointInFill(new DOMPoint(x,y).matrixTransform(inv));
+                }))continue;
+              return {x,y,dx:x-(mb.left+mb.width/2),dy:y-(mb.top+mb.height/2),
+                target:top.tagName,bbox:rect.width.toFixed(1)+'x'+rect.height.toFixed(1)};
             }
           }
           return null;
