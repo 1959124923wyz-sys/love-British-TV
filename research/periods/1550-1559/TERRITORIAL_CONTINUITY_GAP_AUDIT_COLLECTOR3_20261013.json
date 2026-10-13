@@ -1,7 +1,7 @@
 {
   "schema": "1550s_control_gap_audit_v1",
   "compiled": "2026-10-13",
-  "status": "evidence_graded_PR33_addendum_not_main",
+  "status": "readied_editor_second_wave_official_HES_20261013",
   "purpose": "Audit all 10 year-end changes and avoid automatic extension or disappearance of 1540s forts",
   "inherited_1549_garrison_site_missing": "Hammes (Hames-Boucres), not Chateau de Ham; English historic Pale last defended outpost. Start date of earlier garrison not independently investigated.",
   "episodes": [
@@ -129,6 +129,58 @@
       "date_precision": "Royal Collection confirms Jan 1558 without individual day",
       "cartography_warning": "RCIN721026 fort plan demonstrably inconsistent with BL Cotton Augustus I ii71 contemporary survey, castle drawn wrong side of town; forbidden as control Polygon source",
       "fill_authorized": false
+    },
+    {
+      "stable_id": "dunbar-french-allied-fort-built-1550",
+      "from_year": 1550,
+      "to_year": 1560,
+      "site": "Castle Park at Dunbar",
+      "controller_type": "French-allied fortification on independent Scottish soil",
+      "actual_sov": "Scotland",
+      "evidence": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ],
+      "map_ref": [
+        -2.5173892,
+        56.0045018
+      ],
+      "boundary_authorized": false,
+      "garrison_presence_each_year_verified": false,
+      "fort_demolition_year": 1560
+    },
+    {
+      "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+      "from_year": 1556,
+      "to_year": 1564,
+      "site": "Inchkeith Island",
+      "controller_type": "Franco-Scottish allied defensive fortification",
+      "actual_sov": "Scotland",
+      "evidence": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ],
+      "map_ref": [
+        -3.1351895,
+        56.0323579
+      ],
+      "boundary_authorized": false,
+      "garrison_presence_each_year_verified": false,
+      "warning": "HES scheduled polygon includes later defenses and full island, not 1556 period wall"
+    },
+    {
+      "stable_id": "leith-french-allied-fortifications-1559",
+      "from_year": 1559,
+      "to_year": null,
+      "site": "Leith",
+      "controller_type": "French garrison fortifying port during Scottish political conflict",
+      "actual_sov": "Scotland",
+      "evidence": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ],
+      "map_ref": null,
+      "boundary_authorized": false,
+      "garrison_presence_each_year_verified": false,
+      "original_folios": "Cotton MS Caligula B X/1 f28v–32r catalogue, not original examined"
     }
   ],
   "year_end_matrix": [
@@ -144,7 +196,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1551,
@@ -158,7 +215,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1552,
@@ -172,7 +234,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1553,
@@ -186,7 +253,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1554,
@@ -200,7 +272,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1555,
@@ -214,7 +291,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1556,
@@ -228,7 +310,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1557,
@@ -242,7 +329,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1558,
@@ -256,7 +348,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     },
     {
       "year": 1559,
@@ -270,7 +367,12 @@
       "Broughty_controller": "Scottish since 1550-Feb",
       "Irish_Midlands_full_county_English_effective_control_approved": false,
       "calais_Pale_precise_boundary_approved": false,
-      "English_Russian_or_West_Africa_sovereignty": false
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": true,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
     }
   ],
   "retroactive_PR27_Hailes_correction": {
@@ -299,7 +401,10 @@
     "Museum retrospective 1560 demolition and archaeology July 1559 French negotiated withdrawal are different historical actions. Archive exact end.",
     "Hammes Chateau de Ham 49.743,3.073 and local Baron Saint-Paul 1800 house are entirely different sites; no fabricated precise Tudor fort pin.",
     "The Crown's 1556 Leix/Offaly legal shires are not measured field-controlled county polygons.",
-    "No historical precise British-controlled polygon was authorized in this research iteration."
+    "No historical precise British-controlled polygon was authorized in this research iteration.",
+    "Dunbar Castle Park HES SM5960 modern 180x170m listed archaeological area includes many periods, not surveyed French fort contour of 1550.",
+    "Inchkeith SM3838 scheduled designation nearly full island includes later military works; not 1556 French wall or sovereign French jurisdiction.",
+    "Leith 1559 BL catalogue demonstrates French defense activity, but the French period ramparts have no authenticated GIS polygon or precise pin."
   ],
   "outstanding": [
     "Locate actual Hammes castle with scholarly pale cadastre crosswalk and historical plan, not town centroid.",
@@ -307,6 +412,9 @@
     "Read British Library Cotton Augustus I i60 Eyemouth 1557 spy plan, assess licensing/georeferencing, compare excavation phases.",
     "Verify the month/day when Eyemouth French fort was vacated in 1559 and separately later demolition.",
     "Verify actual handover dates at 1550 Lauder/Dunglass/Roxburgh via State Papers beyond treaty.",
-    "Measure 1556-1559 individual grant lands only when actual surveyed dated title documents available."
+    "Measure 1556-1559 individual grant lands only when actual surveyed dated title documents available.",
+    "Read Dunbar excavations including Perry 2000 and 1550 military notes to separate French ditch from 1560 demolition.",
+    "Find period Inchkeith 1556–64 fort construction records; avoid resampling current scheduled-island polygon.",
+    "Read Leith 1559 British Library Cotton Caligula B X/1 and original period fortress plan distinct from English 1560 siegeworks."
   ]
 }
