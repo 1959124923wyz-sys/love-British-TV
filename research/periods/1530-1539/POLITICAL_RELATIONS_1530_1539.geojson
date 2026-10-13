@@ -4,7 +4,8 @@
   "metadata": {
     "source": "main/data/political-relations-1500-1529.geojson",
     "uncertain_contemporary_status_flagged": true,
-    "no_English_colonial_area_calculations": true
+    "no_English_colonial_area_calculations": true,
+    "after_editor_deficiency_fixes": "5 political relationship named points incl historical Guernsey. Guernsey already had prior offshore island geometry, not a new 1530 territorial conquest."
   },
   "features": [
     {
@@ -185,6 +186,46 @@
         "area_sqkm": null,
         "geometry_treated_as_English_colonial_area": false,
         "source_file": "main/data/political-relations-1500-1529.geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-area-symbol-channel-guernsey-1530s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5333,
+          49.45
+        ]
+      },
+      "properties": {
+        "name": "根西岛：王室属地／独立海岛地方法庭",
+        "political_relation": "crown_dependency_separate_bailiwick",
+        "render_mode": "hatch_bounded_symbol",
+        "stroke_color": "#b08cdd",
+        "description": "根西岛受英王王室关联与军政任命，但自中世纪保留独立皇家法院和岛内制度。1530年代并非英格兰本土郡县，也不属于苏格兰王国。",
+        "annotation": "王室属地 · 独立海岛司法系统",
+        "source_place_id": "channel-guernsey",
+        "source_ids": [
+          "GUE-GOV-HOUSE-HISTORY",
+          "GUE-PARLIAMENT-ROYAL-COURT",
+          "GUE-UK-MOJ-CROWN",
+          "GUE-GETTY-ST-PETER"
+        ],
+        "start_year": 1500,
+        "observed_through_year": 1539,
+        "render_radius_px": 19,
+        "boundary_precision": "Guernsey modern town St Peter Port point, NOT historical island administration boundary",
+        "historical_boundary_confirmed": false,
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "valid_year_end_from": 1530,
+        "valid_year_end_to": 1539,
+        "year_start_this_research": 1530,
+        "year_end_this_research": 1539,
+        "role_for_continuity": "already_existing_Crown_Dependency_not_new_1530_conquest",
+        "source_file": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+        "not_claimed_new_territorial_acquisition": true
       }
     }
   ]
