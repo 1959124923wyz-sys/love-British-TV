@@ -1,0 +1,98 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "period": [
+      1550,
+      1559
+    ],
+    "source": "data/french-urban-control-1497-1549.geojson",
+    "control_year_french_from": 1558
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "calais-urban-core-1497-1519",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8587,
+          50.9513
+        ]
+      },
+      "properties": {
+        "name": "加来 · 英王实际控制的城市核心",
+        "polity": "Kingdom of England",
+        "historical_state": "documented-english-royal-governance",
+        "visual_role": "schematic_controlled_city_area",
+        "control_class": "direct_urban_control",
+        "historical_boundary_confirmed": false,
+        "render_radius_px": 17,
+        "min_radius_px": 14,
+        "source_place_id": "calais-crown",
+        "start_year": 1550,
+        "observed_through_year": 1559,
+        "end_year": null,
+        "draw_label": "加来",
+        "description": "1550—1557年为英王驻军与行政核心，1558年起由法国实际控制；地图点与外缘均不代表可测的16世纪城墙。",
+        "source_ids": [
+          "TNA-FRENCH-LANDS"
+        ],
+        "reference_geometry_id": "calais-1500-attested-sites-hull-only",
+        "ui_precision": "urban-city-symbol-not-Pale-boundary",
+        "historic_rule_started": 1347,
+        "valid_year_end_from": 1497,
+        "valid_year_end_to": 1529,
+        "historic_end_date": null,
+        "original_provenance": "main:data/french-urban-control-1500-1519.geojson",
+        "editorial_status": "review_ready_not_live",
+        "role_for_continuity": "English_royal_city",
+        "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
+        "actual_area_sqkm": null,
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
+        "French_controller_year_start": 1558
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "guines-fortified-core-1520-1529",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "name": "吉讷：英王驻军边防中心（1520年代独立显示）",
+        "source_place_id": "guines-crown-1520s",
+        "polity": "Kingdom of England",
+        "visual_role": "schematic_controlled_city_area",
+        "historical_state": "existing_Calais_border_city_not_1520_new_conquest",
+        "control_class": "English_Crown_military_frontier_existing_since_prior_decade",
+        "render_radius_px": 12,
+        "min_radius_px": 9,
+        "start_year": 1550,
+        "observed_through_year": 1559,
+        "end_year": null,
+        "valid_year_end_from": 1520,
+        "valid_year_end_to": 1529,
+        "draw_label": "吉讷",
+        "description": "1550—1557年为英王驻军与行政核心，1558年起由法国实际控制；地图点与外缘均不代表可测的16世纪城墙。",
+        "source_ids": [
+          "CAL-ROYAL-HRP-1520",
+          "CAL-MURPHY-2025-GUINES"
+        ],
+        "reference_geometry_id": "calais-1500-attested-sites-hull-only",
+        "ui_precision": "modern_city_centroid_no_Tudor_wall_outline",
+        "historical_boundary_confirmed": false,
+        "actual_area_sqkm": null,
+        "group_id": "calais-crown",
+        "is_new_territory": false,
+        "original_provenance": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
+        "editorial_status": "review_ready_not_live",
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
+        "French_controller_year_start": 1558
+      }
+    }
+  ]
+}

@@ -130,7 +130,7 @@ assert "expanded-event" in app
 assert "leaflet-marker-icon.atlas-flyout-icon" in css
 assert "background:transparent!important" in css
 assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
-assert "PILOT v1.7" in html
+assert "PILOT v1.8" in html
 
 # Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))

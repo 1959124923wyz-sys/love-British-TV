@@ -560,6 +560,34 @@ try:
     browser = driver.get_log("browser")
     critical = [x["message"] for x in browser if re.search(r"Uncaught (TypeError|ReferenceError|SyntaxError)|Uncaught \w+Error", x["message"])]
     assert not critical, "Browser JavaScript errors: " + str(critical[:8])
+    # Seventh chapter: site control ownership and historical period continuity.
+    set_year(1550,6)
+    verify("1550 new chapter missing or Boulogne still English",
+           """document.querySelector('#chapterNav').textContent.includes('第七章') &&
+              document.querySelectorAll('#map .atlas-seventh-site').length===7 &&
+              document.querySelectorAll('#map .atlas-seventh-french').length===1 &&
+              document.querySelectorAll('#map .atlas-seventh-scottish').length===1 &&
+              document.querySelectorAll('#map .atlas-local-english-garrison').length===0""",driver)
+    driver.save_screenshot(str(OUT / "chapter7-1550-french-boulogne-scottish-broughty.png"))
+    set_year(1556,19)
+    verify("1556 Midland forts absent / invented county occupation",
+           """document.querySelectorAll('#map .atlas-seventh-english').length===4 &&
+              document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
+              document.querySelectorAll('#map .atlas-territory-solid[fill="#357f76"]').length===0""",driver)
+    driver.save_screenshot(str(OUT / "chapter7-1556-irish-colonisation.png"))
+    set_year(1558,26)
+    verify("1558 Calais French recovery and Guines/Risban switch missing",
+           """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
+              document.querySelectorAll('#map .atlas-seventh-english').length===2 &&
+              document.querySelectorAll('#map .atlas-territory-solid[stroke="#65c9bc"]').length>=1""",driver)
+    driver.save_screenshot(str(OUT / "chapter7-1558-calais-french-recovery.png"))
+    set_year(1559,29)
+    verify("1559 Calais must stay French and Eyemouth unverified position must expire",
+           """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
+              document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
+              document.querySelector('#yearRange').max==='1559' &&
+              document.querySelector('#jumpYear').max==='1559'""",driver)
+    driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()

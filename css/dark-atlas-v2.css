@@ -678,3 +678,11 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .legend-items .swatch.war-reach,.sidebar-settings-wrap .map-mode-help-body .swatch.war-reach{width:18px;height:0;border:0;border-top:3px dashed #bd9bea;border-radius:0;background:transparent;}
 #map .atlas-war-reach-halo{pointer-events:none!important;}
 #map .atlas-war-reach-schematic,#map .atlas-war-reach-hit{pointer-events:stroke;cursor:pointer;stroke-linecap:round;stroke-linejoin:round;}
+
+/* 1550–1559 editor-approved historic site STATUS circles (pixel symbols only). */
+#map .atlas-seventh-site{cursor:pointer;stroke-linejoin:round;pointer-events:visiblePainted;}
+#map .atlas-seventh-site-hit{cursor:pointer;pointer-events:stroke!important;fill:none!important;}
+#map .atlas-seventh-french{stroke:#57c9b8}
+#map .atlas-seventh-scottish{stroke:#70afcf}
+#map .atlas-seventh-french_allied_scotland{stroke:#7dbdc4}
+#map .atlas-seventh-english{stroke:#ae83ef}
