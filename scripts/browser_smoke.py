@@ -32,7 +32,7 @@ try:
     wait = WebDriverWait(driver, 30)
     driver.get("http://127.0.0.1:8765/?year=1520")
     wait.until(lambda d: d.execute_script("return document.querySelector('#eventCount')?.textContent==='4项'"))
-    verify("chapter 4 not active at 1520", "document.querySelector('#chapterFour').classList.contains('active')", driver)
+    verify("chapter 4 not active at 1520", "document.querySelector('#chapterTrack [data-decade="1520"]').classList.contains('active')", driver)
     verify("1520 list leaked 1529 historical event", "!document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     verify("modern representative 1520s locations lost dashed uncertainty markers",
            "document.querySelectorAll('#map .map-pin.uncertain').length>=1", driver)
@@ -58,8 +58,8 @@ try:
 
     def set_year(year, expected):
         driver.execute_script("""
-          const slider=document.querySelector('#yearRange');
-          slider.value=arguments[0];slider.dispatchEvent(new Event('input',{bubbles:true}));
+          const input=document.querySelector('#jumpYear');
+          input.value=arguments[0];input.dispatchEvent(new Event('change',{bubbles:true}));
         """, year)
         wait.until(lambda d: d.execute_script("return document.querySelector('#yearRange').value===arguments[0] && document.querySelector('#eventCount').textContent===arguments[1]", str(year), f"{expected}项"))
         time.sleep(0.25)
@@ -73,7 +73,7 @@ try:
     set_year(1519, 15)
     verify("complete-archive preview leaked into a new chapter",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
-    verify("switch to third chapter failed", "document.querySelector('#chapterThree').classList.contains('active')", driver)
+    verify("switch to third chapter failed", "document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')", driver)
     set_year(1520, 4)
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
     set_year(1513, 6)
@@ -91,8 +91,8 @@ try:
     # A visible SVG route must win the pointer hit-test over kingdom and territorial polygons.
     def route_check(target_year, route_name):
         driver.execute_script("""
-          const slider=document.getElementById('yearRange');
-          slider.value=arguments[0];slider.dispatchEvent(new Event('input',{bubbles:true}));
+          const input=document.getElementById('jumpYear');
+          input.value=arguments[0];input.dispatchEvent(new Event('change',{bubbles:true}));
         """, target_year)
         wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent===arguments[0]",str(target_year)))
         wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".leaflet-voyage-pane .atlas-voyage-hit")) >= 1)
@@ -127,7 +127,7 @@ try:
     toggle_layer("toggleEvents", True)
     # Fifth chapter: every reference event stays in the right decade and never leaks backwards.
     set_year(1530, 0)
-    verify("Fifth chapter not active at 1530", "document.querySelector('#chapterFifth').classList.contains('active')", driver)
+    verify("Fifth chapter not active at 1530", "document.querySelector('#chapterTrack [data-decade="1530"]').classList.contains('active')", driver)
     verify("1530 shows later events despite the fixed date gate", "document.querySelector('#eventList').querySelectorAll('.event-item').length===0", driver)
     verify("Crown Calais controls lost at 1529/1530",
            "document.querySelectorAll('#map .control-area-label').length>=0", driver)
@@ -152,6 +152,49 @@ try:
         assert zoom_after==zoom_before, "Maynooth focus incorrectly zoomed map"
     assert driver.execute_script("return document.querySelector('#yearRange').value")=="1535", "Maynooth double-click changed date"
     driver.save_screenshot(str(OUT / "focus-maynooth-1535.png"))
+    # The century strip is informational navigation: it cannot turn a researched 1535
+    # atlas into a fictitious 1700s/1900s territorial snapshot.
+    current = driver.execute_script("return document.getElementById('bigYear').textContent")
+    driver.execute_script("document.querySelector('#centuryNav [data-century=\"1700\"]').click()")
+    verify("century browsing unexpectedly changed the map year",
+           "document.getElementById('bigYear').textContent===arguments[0]", driver) if False else None
+    assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
+    verify("century browser must retain three decade slots",
+           "document.querySelectorAll('#chapterTrack .chapter-segment').length===3", driver)
+    verify("1700s century is not a published map",
+           "document.querySelector('#chapterTrack [data-decade=\"1700\"]').classList.contains('unpublished')", driver)
+    driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1700\"]').click()")
+    assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
+    # Stress a 500-year navigation span: card count and slot widths must remain bounded.
+    driver.execute_script("""
+      document.querySelector('#centuryNav [data-century="1400"]').click();
+      for(let i=0;i<50;i++)document.getElementById('browseDecadeNext').click();
+    """)
+    verify("500-year navigation rendered more than three chapter cards",
+           "document.querySelectorAll('#chapterTrack .chapter-segment').length<=3", driver)
+    assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
+    # A return to a published chapter works even after browsing centuries ahead.
+    driver.execute_script("document.querySelector('#centuryNav [data-century=\"1500\"]').click()")
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '#chapterTrack [data-decade="1500"].published'))
+    driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1500\"]').click()")
+    wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent==='1500'"))
+    verify("decade-local year slider must cover 1500–1509, not all 500 years",
+           "document.getElementById('yearRange').min==='1500'&&document.getElementById('yearRange').max==='1509'", driver)
+    # Change one year with the third-tier slider and check chronology.
+    driver.execute_script("""
+      const el=document.getElementById('yearRange');
+      el.value=1501;el.dispatchEvent(new Event('input',{bubbles:true}));
+    """)
+    wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent==='1501'"))
+    for width in (1920,1440,1280):
+        driver.set_window_size(width,1040)
+        time.sleep(.25)
+        dims=driver.execute_script("""
+          const cards=[...document.querySelectorAll('#chapterTrack .chapter-segment')];
+          return {count:cards.length,smallest:Math.min(...cards.map(x=>x.getBoundingClientRect().width)),overflow:document.querySelector('#chapterTrack').scrollWidth-document.querySelector('#chapterTrack').clientWidth};
+        """)
+        assert dims['count']<=3 and dims['smallest']>=70 and dims['overflow']<=2, f"Timeline clipped at {width}px: {dims}"
+    driver.save_screenshot(str(OUT / "three-tier-century-decade-year.png"))
     browser = driver.get_log("browser")
     critical = [x["message"] for x in browser if re.search(r"Uncaught (TypeError|ReferenceError|SyntaxError)|Uncaught \w+Error", x["message"])]
     assert not critical, "Browser JavaScript errors: " + str(critical[:8])
