@@ -18,7 +18,13 @@
     "new_reference_point_count": 22,
     "added_historical_English_sites": 3,
     "new_named_preexisting_bailiwick": "channel-guernsey",
-    "note_20261013": "Old independent Scotland remains Scottish despite Hume/Broughty fort garrisons; Isle of Man, Jersey, Guernsey separately represented."
+    "note_20261013": "Old independent Scotland remains Scottish despite Hume/Broughty fort garrisons; Isle of Man, Jersey, Guernsey separately represented.",
+    "collector3_same_year_hailes_reconquest": "Hailes omitted from English year-end active Point layer because HES confirms Scottish recapture within 1548; historical takeover and recapture retained in chronology/control episodes/delta.",
+    "hailes_historic_point_reference_coordinates": [
+      -2.6832,
+      55.973
+    ],
+    "year_end_not_a_true_English_control_1548": true
   },
   "features": [
     {
@@ -424,38 +430,6 @@
         "is_English_colonial_conquest": false,
         "is_temporary_Scottish_occupation": true,
         "uncertainty": "Eyemouth archaeologically attested original fort 1547 until 1550; modern fort location approximate"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "control-hailes-english-1548-date_unknown",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6832,
-          55.973
-        ]
-      },
-      "properties": {
-        "stable_id": "hailes-english-1548-date_unknown",
-        "name": "海尔斯城堡英军占领（1549存续待核）",
-        "year_end_start": 1548,
-        "year_end_stop": 1548,
-        "confirmed_control_through_year": 1548,
-        "historical_actual_end_year": null,
-        "political_status": "English_allied_local_lordship_and_garrison",
-        "controller": "English soldiers with allied Hugh Douglas/Scottish kingdom",
-        "source_ids": [
-          "SC-HES-2022-HAILES",
-          "SC-HES-HAILES-MONUMENT"
-        ],
-        "city_symbol_only": true,
-        "draw_mode": "named_fort_or_urban_core_point",
-        "actual_1540s_wall_survey_verified": false,
-        "area_sqkm": null,
-        "is_English_colonial_conquest": false,
-        "is_temporary_Scottish_occupation": true,
-        "uncertainty": "Evidence for 1548 castle garrison; 1549 status unknown, DO NOT mark known retreat or silently carry confirmed control"
       }
     },
     {
