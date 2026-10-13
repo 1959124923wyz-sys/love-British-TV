@@ -4,8 +4,8 @@
     1550,
     1559
   ],
-  "count": 20,
-  "P0": 10,
+  "count": 23,
+  "P0": 13,
   "tasks": [
     {
       "id": "1550-Q01",
@@ -307,6 +307,43 @@
       "must_not_assume": "Do not make city 7 Jan entry conflict with municipal Jan8 final into mutually exclusive 'inaccurate' claims or claim 4 Jan precise individual outwork fall.",
       "status": "official_contemporary_secondary_quotes_support_sequence_not_all_days",
       "blocking_publication": false
+    },
+    {
+      "id": "1550-Q21",
+      "priority": "P0",
+      "topic": "Dunbar 1550 French fort built in independent Scotland, 1560 demolition",
+      "archive_action": "HES SM5960 historic NGR NT67833 79183 and Trove NRHE68375 trench show French-built defence ditch of 1550. Read Perry 2000 Castle Park Dunbar excavation monograph and original state papers; reconstruct military section only after source and rights confirm, do not copy modern 180x170m scheduling rectangle.",
+      "lead_source_ids": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ],
+      "must_not_assume": "French-built allied fort != Scotland annexed by France; site scheduled area is not 1550 controlled footprint.",
+      "status": "official_monument_1550_date_geo_reference_checked_original_wall_outline_not_mapped",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q22",
+      "priority": "P0",
+      "topic": "Inchkeith island Franco-Scottish artillery fort from 1556–64",
+      "archive_action": "HES SM3838 NGR NT29358 82744 documents surviving 1556–64 curtain and flanker. Source original Saunders 1984, late Tudor accounts and fort wall plan; identify accurate 1556-phase wall positions versus almost-whole-island modern schedule with later 1880 and 1900 batteries.",
+      "lead_source_ids": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ],
+      "must_not_assume": "Entire modern island scheduling polygon or naval 19th-century batteries are not 'French empire soil'; Scottish island retains sovereignty.",
+      "status": "official_monument_1556_64_phase_checked_no_period_GIS",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q23",
+      "priority": "P0",
+      "topic": "1559 French fortifying Leith and 1560 English/Scottish Protestant siege separate decades",
+      "archive_action": "Read British Library Cotton MS Caligula B X/1 f28v–32r containing Scottish Protestant lords declaration, 1559 Sept defense, compare original 1560 Petworth siege plan and 1560 English artillery points; confirm 1559 French garrison bastions vs next-year English besiegers; no fabricated precise 1559 Leith rampart.",
+      "lead_source_ids": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ],
+      "must_not_assume": "1560 English siegeworks on Leith Links are NOT 1559 French fortified town or proof England annexed Scotland.",
+      "status": "official_British_Library_1559_document_catalogue_Leith_fortification_month_verified",
+      "blocking_publication": false
     }
   ],
   "fast_release_rule": "Any problem without high-confidence primary evidence can remain unrendered/approximate dotted; do not obstruct entire chapter.",
@@ -325,6 +362,20 @@
       "Guines 1558 printed map does not match contemporary plans",
       "Calais 4 Jan outerworks vs 7-8 Jan city"
     ],
-    "new_original_16c_autographs_read": 0
+    "new_original_16c_autographs_read": 0,
+    "second_wave": {
+      "date": "2026-10-13",
+      "added": [
+        "1550-Q21",
+        "1550-Q22",
+        "1550-Q23"
+      ],
+      "grounded_HES_original_phases": [
+        "Dunbar France built 1550 dismantled 1560",
+        "Inchkeith Franco-Scottish 1556–64"
+      ],
+      "British_Library_archival_catalogue": "Leith French fortifying September 1559, precise historic wall unlocated",
+      "caution": "No French sovereign expansion across Scottish islands; no historic precise old borders."
+    }
   }
 }
