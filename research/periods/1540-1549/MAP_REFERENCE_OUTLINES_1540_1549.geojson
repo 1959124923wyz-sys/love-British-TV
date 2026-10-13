@@ -9,12 +9,14 @@
       1549
     ],
     "carried_over_features": 8,
-    "added_schematic_control_vicinity_features": 5,
+    "added_schematic_control_vicinity_features": 7,
     "verified_historical_period_control_polygons": 0,
     "known_garrison_core_points_separate_file": "ACTIVE_CONTROL_PLACES_1540_1549.geojson",
     "source_manifest": "SOURCE_REGISTRY.json",
     "render_safety": "Draw uncertain outlines DASHED; narrative says symbolic vicinity not historical borders. Never sum any polygon area as military control. English Scottish occupations are local bases within independent Kingdom of Scotland, not country annexation.",
-    "new_historic_area_sqm": null
+    "new_historic_area_sqm": null,
+    "feature_count": 15,
+    "reminder": "All five older approximate garrison circles and two new Ambleteuse/Boulemberg circles are schematic radius-only, not 1540s authenticated border polygons."
   },
   "features": [
     {
@@ -5656,6 +5658,376 @@
         "dash_array": "5 6",
         "fill_opacity": 0.045,
         "uncertainty": "300m illustration around modern Lauder town; exact fort NGR NT53 47 only approximate, not audited walls.",
+        "original_archive_polygon_directly_examined": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ambleteuse-English-fort-schematic-envelope",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.611771,
+              50.810278
+            ],
+            [
+              1.611702,
+              50.810777
+            ],
+            [
+              1.611497,
+              50.811261
+            ],
+            [
+              1.611162,
+              50.811715
+            ],
+            [
+              1.610707,
+              50.812126
+            ],
+            [
+              1.610146,
+              50.81248
+            ],
+            [
+              1.609497,
+              50.812767
+            ],
+            [
+              1.608778,
+              50.812979
+            ],
+            [
+              1.608012,
+              50.813109
+            ],
+            [
+              1.607222,
+              50.813152
+            ],
+            [
+              1.606432,
+              50.813109
+            ],
+            [
+              1.605666,
+              50.812979
+            ],
+            [
+              1.604948,
+              50.812767
+            ],
+            [
+              1.604298,
+              50.81248
+            ],
+            [
+              1.603737,
+              50.812126
+            ],
+            [
+              1.603282,
+              50.811715
+            ],
+            [
+              1.602947,
+              50.811261
+            ],
+            [
+              1.602742,
+              50.810777
+            ],
+            [
+              1.602673,
+              50.810278
+            ],
+            [
+              1.602742,
+              50.809779
+            ],
+            [
+              1.602947,
+              50.809295
+            ],
+            [
+              1.603282,
+              50.808841
+            ],
+            [
+              1.603737,
+              50.80843
+            ],
+            [
+              1.604298,
+              50.808076
+            ],
+            [
+              1.604948,
+              50.807788
+            ],
+            [
+              1.605666,
+              50.807577
+            ],
+            [
+              1.606432,
+              50.807447
+            ],
+            [
+              1.607222,
+              50.807403
+            ],
+            [
+              1.608012,
+              50.807447
+            ],
+            [
+              1.608778,
+              50.807577
+            ],
+            [
+              1.609497,
+              50.807788
+            ],
+            [
+              1.610146,
+              50.808076
+            ],
+            [
+              1.610707,
+              50.80843
+            ],
+            [
+              1.611162,
+              50.808841
+            ],
+            [
+              1.611497,
+              50.809295
+            ],
+            [
+              1.611702,
+              50.809779
+            ],
+            [
+              1.611771,
+              50.810278
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "阿姆布勒特斯1546—1548英军炮台现代市镇位置示意（虚线非古界）",
+        "period_from": 1540,
+        "period_to": 1549,
+        "render_start_year": 1546,
+        "render_end_year": 1548,
+        "observed_through_year": 1548,
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-MUNICIPAL-AMBLETEUSE-1549"
+        ],
+        "control_class": "English_transient_1546_to_1549_French_fort_location_reference",
+        "geometry_role": "SCHEMATIC_CITY_FORT_VICINITY_NEVER_HISTORIC_ADMIN_BORDER",
+        "schematic_radius_m_for_visibility_only": 320,
+        "not_a_historic_distance_claim": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "prohibited_area_statistics": true,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "draw_mode": "dashed_context_only",
+        "dash_array": "5 6",
+        "fill_opacity": 0.045,
+        "uncertainty": "French retook 25 August 1549; do not continue the English fort polygon into 1549. 320m arbitrary map viewing buffer not historical occupied area.",
+        "original_archive_polygon_directly_examined": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "boulemberg-English-fort-schematic-envelope",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.66347,
+              50.71777
+            ],
+            [
+              1.663401,
+              50.718269
+            ],
+            [
+              1.663196,
+              50.718753
+            ],
+            [
+              1.662862,
+              50.719207
+            ],
+            [
+              1.662408,
+              50.719618
+            ],
+            [
+              1.661848,
+              50.719972
+            ],
+            [
+              1.6612,
+              50.720259
+            ],
+            [
+              1.660483,
+              50.720471
+            ],
+            [
+              1.659718,
+              50.720601
+            ],
+            [
+              1.65893,
+              50.720645
+            ],
+            [
+              1.658142,
+              50.720601
+            ],
+            [
+              1.657377,
+              50.720471
+            ],
+            [
+              1.65666,
+              50.720259
+            ],
+            [
+              1.656012,
+              50.719972
+            ],
+            [
+              1.655452,
+              50.719618
+            ],
+            [
+              1.654998,
+              50.719207
+            ],
+            [
+              1.654664,
+              50.718753
+            ],
+            [
+              1.654459,
+              50.718269
+            ],
+            [
+              1.65439,
+              50.71777
+            ],
+            [
+              1.654459,
+              50.717271
+            ],
+            [
+              1.654664,
+              50.716787
+            ],
+            [
+              1.654998,
+              50.716333
+            ],
+            [
+              1.655452,
+              50.715922
+            ],
+            [
+              1.656012,
+              50.715568
+            ],
+            [
+              1.65666,
+              50.715281
+            ],
+            [
+              1.657377,
+              50.715069
+            ],
+            [
+              1.658142,
+              50.714939
+            ],
+            [
+              1.65893,
+              50.714895
+            ],
+            [
+              1.659718,
+              50.714939
+            ],
+            [
+              1.660483,
+              50.715069
+            ],
+            [
+              1.6612,
+              50.715281
+            ],
+            [
+              1.661848,
+              50.715568
+            ],
+            [
+              1.662408,
+              50.715922
+            ],
+            [
+              1.662862,
+              50.716333
+            ],
+            [
+              1.663196,
+              50.716787
+            ],
+            [
+              1.663401,
+              50.717271
+            ],
+            [
+              1.66347,
+              50.71777
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "蒙朗贝尔Boulemberg1546—1548英军炮台位置示意（虚线非古界）",
+        "period_from": 1540,
+        "period_to": 1549,
+        "render_start_year": 1546,
+        "render_end_year": 1548,
+        "observed_through_year": 1548,
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-RCT-BOULOGNE-MAP1549"
+        ],
+        "control_class": "English_transient_1546_to_1549_French_fort_location_reference",
+        "geometry_role": "SCHEMATIC_CITY_FORT_VICINITY_NEVER_HISTORIC_ADMIN_BORDER",
+        "schematic_radius_m_for_visibility_only": 320,
+        "not_a_historic_distance_claim": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "prohibited_area_statistics": true,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "draw_mode": "dashed_context_only",
+        "dash_array": "5 6",
+        "fill_opacity": 0.045,
+        "uncertainty": "English fort abandoned in 1549; Mont Lambert modern locality centre need not equal sixteenth-century fort. 320m is an arbitrary map reading marker only.",
         "original_archive_polygon_directly_examined": false
       }
     }
