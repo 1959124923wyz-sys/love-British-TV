@@ -250,6 +250,8 @@ try:
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===3", driver)
     verify("purple approximate fort localities are not rendered",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===2", driver)
+    verify("1544 raid around Leith is not presented as 1544 occupation of Edinburgh",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
     set_year(1545,17)
     verify("1545 French theater is not shown with blue/violet texture",
            "document.querySelectorAll('#map .atlas-contested-zone').length===1",driver)
@@ -257,17 +259,25 @@ try:
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===2", driver)
     verify("French defence Outreau missing or wrongly classified",
            "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
+    verify("1545 must not inherit previous 1544 raid as English territorial control",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===0",driver)
     set_year(1546,24)
     verify("1546 Ambleteuse and Boulemberg must join English occupation",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===4", driver)
+    verify("1546 must not show 1547 Pinkie advance before the campaign",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===0",driver)
     set_year(1547,31)
     verify("1547 frontier advances are not shown as blue/violet disputed theaters",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
     verify("1547 Scottish garrison map incomplete",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===9", driver)
+    verify("1547 advance toward Pinkie/Musselburgh failed to extend northward",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
     set_year(1548,44)
     verify("1548 war-zone layer is missing after removing the card",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
+    verify("1548 English Haddington garrison and Lauder supply reference missing",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===2",driver)
     # Each type of territory must open the same source-aware detail drawer.
     def click_map_path(selector):
         driver.execute_script("""
@@ -282,6 +292,11 @@ try:
               document.querySelector('#dossierBody').textContent.includes('地图精度') &&
               document.querySelector('#dossierBody .source-details')!==null &&
               document.querySelectorAll('#dossierBody .zone-record-link').length>0""",driver)
+    click_map_path("#map .atlas-war-reach-schematic")
+    verify("PR38 military reach must disclose non-annexation and sources",
+           """document.querySelector('#dossierBody').textContent.includes('英军推进／补给影响示意') &&
+              document.querySelector('#dossierBody').textContent.includes('不能证明沿途') &&
+              document.querySelector('#dossierBody .source-details')!==null""",driver)
     click_map_path("#map .atlas-contested-zone")
     wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
     verify("contested zone has no related evidence/campaign records",
@@ -308,6 +323,8 @@ try:
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
     set_year(1549,49)
+    verify("1549 border influence must contract away from withdrawn Haddington",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===2",driver)
     verify("1549 withdrew Ambleteuse/Boulemberg/Haddington, kept Boulogne",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
     verify("1549 French defensive Outreau missing",
@@ -446,6 +463,8 @@ try:
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     verify("high-zoom blue/violet contested zones must not disappear",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
+    verify("high-zoom PR38 Haddington reach must not disappear",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===2",driver)
     # Tiny unmeasured occupied-site polygons are sometimes smaller than their
     # visually prominent garrison circles. The purple circle must provide the
     # same territorial introduction without falsifying the underlying geometry.
