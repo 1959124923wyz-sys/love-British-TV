@@ -67,7 +67,7 @@ assert.ok(app.includes("Math.min(1529"),'Years capped at old third chapter');
 assert.ok(app.includes("year===1529"),'Autoplay must reach 1529 then stop');
 assert.ok(app.includes("y>=1497&&y<=year"),'Milestones expose future dates');
 assert.ok(app.includes("fullArchive||occurredByYear(e,year)"),'Chapter sidebar reveals future events');
-assert.ok(app.includes("if(!occurredByYear(r,year))continue;"),'Routes have no year gate');
+assert.ok(app.includes("if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;"),'Routes have no year gate');
 assert.ok(app.includes("focusEventFromSidebar(item)"),'Double-click navigation missing');
 assert.ok(!app.includes('第四章（研究预览）'),'Public chapter still labelled research preview');
 console.log('PASS: fourth chapter published source provenance, 1520–1529 reveal and uninterrupted historic controls');
