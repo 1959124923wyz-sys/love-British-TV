@@ -252,7 +252,8 @@ assert "data/historical-detail-notes.json" in app and "renderHypotheses()" in ap
 assert 'id="toggleHypotheses"' in html and 'id="internalLayerFlags"' in html
 assert 'id="mapLayerTerritory"' in html and 'id="mapLayerEvents"' in html
 assert 'id="mapControls"' not in html  # Public specialist menu retired in PR39
-assert html.index('id="mapControls"') < html.index('<main class="map-stage"')
+assert html.index('id="mapModeHelp"') < html.index('<main class="map-stage"')
+assert html.index('id="mapLayerSwitch"') > html.index('<main class="map-stage"')
 assert "leaflet-control-attribution{display:block!important" in css
 
 
