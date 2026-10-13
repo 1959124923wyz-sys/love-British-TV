@@ -224,21 +224,12 @@ try:
     set_year(1539,27)
     zoom_1539=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
     set_year(1540,1)
-    # Regression: map-year status was squeezed to a vertical one-character strip.
-    control_layout=driver.execute_script("""
-      const card=document.querySelector('.map-year-card');
-      const status=document.querySelector('#controlStatus');
-      const lines=[...status.querySelectorAll('.control-status-line')];
-      return {cardWidth:card.getBoundingClientRect().width,statusWidth:status.getBoundingClientRect().width,
-         lineWidths:lines.map(n=>n.getBoundingClientRect().width),lines:lines.length,
-         writingMode:getComputedStyle(status).writingMode,
-         display:getComputedStyle(status).display,html:status.innerHTML.slice(0,500)};
-    """)
-    print("MAP_YEAR_LAYOUT_1540:",control_layout,flush=True)
-    assert 270<=control_layout['cardWidth']<=360 and control_layout['lines']==4 and \
-      control_layout['writingMode']=='horizontal-tb' and control_layout['display']=='grid' and \
-      all(w>=225 for w in control_layout['lineWidths']), \
-      "1540 control status still collapses into a narrow badge: "+str(control_layout)
+    # The user explicitly removed the military-statistics badge; the compact
+    # year/title card must remain without a hidden leftover statistics panel.
+    verify("removed yearly military-status card is still present",
+           """document.querySelector('#controlStatus')===null &&
+              document.querySelector('.map-year-card #bigYear')!==null &&
+              document.querySelector('.map-year-card').getBoundingClientRect().height<90""",driver)
     verify("1540 must not contain projected battle zones",
            "document.querySelectorAll('#map .atlas-contested-zone').length===0",driver)
     verify("chapter six did not become selectable on the half-century page",
@@ -251,8 +242,8 @@ try:
     set_year(1544,11)
     verify("duplicate native browser title still overlays styled historical tooltip",
            """document.querySelectorAll('#map .leaflet-marker-icon[title]').length===0""", driver)
-    verify("year-end occupation is not communicated on the map",
-           """document.querySelector('#controlStatus').textContent.includes('英军局部驻点 3处')""", driver)
+    verify("English garrison layer was accidentally removed with statistics card",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===3",driver)
     verify("pixel-sized occupation ring is not visibly larger than an event icon",
            """document.querySelector('.atlas-local-english-garrison')?.getAttribute('stroke-dasharray')==='6 4'""", driver)
     verify("1544 Boulogne and Lochmaben occupation sites not rendered",
@@ -275,8 +266,8 @@ try:
     verify("1547 Scottish garrison map incomplete",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===9", driver)
     set_year(1548,44)
-    verify("1548 control/contest distinction was lost",
-           "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelector('#controlStatus').textContent.includes('驻军概略范围 9片')",driver)
+    verify("1548 war-zone layer is missing after removing the card",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     # Each type of territory must open the same source-aware detail drawer.
     def click_map_path(selector):
         driver.execute_script("""
@@ -322,7 +313,7 @@ try:
     verify("1549 French defensive Outreau missing",
            "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
     verify("1549 must retract Haddington combat occupation and retain Boulogne theater",
-           "document.querySelectorAll('#map .atlas-contested-zone').length===2 && document.querySelector('#controlStatus').textContent.includes('驻军概略范围 6片')",driver)
+           "document.querySelectorAll('#map .atlas-contested-zone').length===2 && document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===6",driver)
     verify("Purple Boulogne and Scottish garrison references did not update for 1549",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===6", driver)
     toggle_layer("toggleTerritorialFootprints",False)
@@ -333,8 +324,8 @@ try:
     verify("Hiding boundary context cannot erase historically documented military sites",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
     toggle_layer("toggleTerritorialFootprints",True)
-    verify("1549 site count or source uncertainty hidden",
-           """document.querySelector('#controlStatus').textContent.includes('英军局部驻点 7处') && !document.querySelector('#controlStatus').textContent.includes('续驻待核')""", driver)
+    verify("military-statistics card should not reappear after year navigation",
+           "document.querySelector('#controlStatus')===null",driver)
     verify("French resistance ring missing at year-end",
            """document.querySelector('.atlas-french-counterfort')?.getAttribute('stroke-dasharray')==='3 5'""", driver)
     verify("Sixth decade slider not restricted to 1540–1549",
@@ -343,6 +334,73 @@ try:
     if zoom_1539 and zoom_1549:
         assert zoom_1539==zoom_1549, "Scrubbing to chapter six automatically zoomed the map"
     driver.save_screenshot(str(OUT / "chapter6-garrisons-1549.png"))
+    # Regression: previously the battle/occupation SVGs were silently removed
+    # above zoom 8/9. This is tested with *real mouse clicks*, not synthetic
+    # dispatchEvent on a path that bypasses the browser's topmost hit target.
+    from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
+    def real_map_area_click(selector):
+        pos=driver.execute_script("""
+          const selector=arguments[0], map=document.querySelector('#map');
+          const mb=map.getBoundingClientRect();
+          const candidates=[...document.querySelectorAll(selector)];
+          for(const path of candidates){
+            const rect=path.getBoundingClientRect();
+            if(rect.width<4||rect.height<4)continue;
+            for(let yi=1;yi<=15;yi++)for(let xi=1;xi<=15;xi++){
+              const x=rect.left+rect.width*xi/16;
+              const y=rect.top+rect.height*yi/16;
+              if(x<mb.left+8||x>mb.right-8||y<mb.top+8||y>mb.bottom-8)continue;
+              const top=document.elementFromPoint(x,y);
+              if(top===path||top?.closest?.(selector)===path)
+                return {x,y,dx:x-(mb.left+mb.width/2),dy:y-(mb.top+mb.height/2),
+                  target:top.tagName,bbox:rect.width.toFixed(1)+'x'+rect.height.toFixed(1)};
+            }
+          }
+          return null;
+        """,selector)
+        assert pos, "No physically reachable painted area: "+selector
+        ActionChains(driver).move_to_element_with_offset(
+          driver.find_element(By.ID,'map'),round(pos['dx']),round(pos['dy'])).click().perform()
+        return pos
+
+    set_year(1548,44)
+    driver.execute_script("""
+      const item=document.querySelector('#eventList [data-eid="1540S-021"]');
+      if(!item)throw Error('Missing Haddington map-focus event');
+      item.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));
+    """)
+    time.sleep(1.25)
+    origin=ScrollOrigin.from_element(driver.find_element(By.ID,'map'))
+    ActionChains(driver).scroll_from_origin(origin,0,-620).perform()
+    time.sleep(1)
+    verify("contested zone disappeared after actual wheel zoom",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
+    verify("occupied zone disappeared after actual wheel zoom",
+           "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
+    print("CLICK_CONTESTED",real_map_area_click("#map .atlas-contested-zone"),flush=True)
+    wait.until(lambda d:"交战与争夺区" in d.find_element(By.ID,"dossierBody").text)
+    print("CLICK_SOVEREIGN",real_map_area_click(".leaflet-sovereignty-pane path.leaflet-interactive"),flush=True)
+    wait.until(lambda d:"历史国家" in d.find_element(By.ID,"dossierBody").text)
+    # Zoom toward the documented Broughty stronghold for a meaningful area
+    # target (at low zoom these tiny locality references are subpixel).
+    driver.execute_script("""
+      const item=document.querySelector('#eventList [data-eid="1540S-015"]');
+      item.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));
+    """)
+    time.sleep(1.25)
+    ActionChains(driver).scroll_from_origin(origin,0,-1850).perform()
+    time.sleep(1)
+    verify("high-zoom purple garrison zones must not disappear",
+           "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
+    verify("high-zoom blue/violet contested zones must not disappear",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
+    print("CLICK_OCCUPIED",real_map_area_click("#map .atlas-violet-wartime-vicinity"),flush=True)
+    wait.until(lambda d:"英军驻地附近概略控制区" in d.find_element(By.ID,"dossierBody").text)
+    verify("actually clicked occupied zone did not disclose historical source",
+           "document.querySelector('#dossierBody .source-details')!==null",driver)
+    verify("year card was recreated after zoom",
+           "document.querySelector('#controlStatus')===null",driver)
+    driver.save_screenshot(str(OUT / "chapter6-real-mouse-areas-high-zoom.png"))
     browser = driver.get_log("browser")
     critical = [x["message"] for x in browser if re.search(r"Uncaught (TypeError|ReferenceError|SyntaxError)|Uncaught \w+Error", x["message"])]
     assert not critical, "Browser JavaScript errors: " + str(critical[:8])
