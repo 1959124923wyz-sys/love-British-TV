@@ -1,0 +1,40 @@
+{
+  "schema": "editor_map_cross_source_qa_v1",
+  "date": "2026-10-13",
+  "research_branch": "research/editor-ready-1544-1550-control-deltas-20261013",
+  "status": "PASS",
+  "files_verified": [
+    "SOURCE_LEDGER.json",
+    "CONFIRMED_1547_GARRISON_POINTS.geojson",
+    "PROVISIONAL_1548_GARRISON_EVENTS.geojson",
+    "YEAR_END_CONTROL_STATES_1544_1550.json",
+    "DYNAMIC_WAR_CONTROL_CHANGES_1544_1550.geojson",
+    "ATLAS_EVENT_IMPORT_DELTA_1547_1548.json",
+    "WAR_OPERATIONS_AXES_1544_1549.geojson",
+    "PENDING_PLACES_AND_UNRESOLVED_TRANSITIONS.json",
+    "EDITOR_IMPORT_README.md"
+  ],
+  "existing_main": {
+    "atlas_events": 49,
+    "garrison_points": 15
+  },
+  "new_package": {
+    "sources": 18,
+    "confirmed_1547_garrison_points": 3,
+    "provisional_event_points": 3,
+    "new_Atlas_events": 5,
+    "linked_Atlas_source_entries": 9,
+    "dated_war_changes": 12,
+    "year_end_snapshots": 7,
+    "military_reach_lines": 5,
+    "archival_pending": 15,
+    "exact_new_English_area_polygons": 0
+  },
+  "limitations": [
+    "GitHub remote structural QA only, original 16th-century military letters not exhaustively verified",
+    "1996 Scottish Atlas graphics not copied/digitised",
+    "1548-49 SW garrison continuity uncertain",
+    "Browser map rendering and visual QA pending editor merge"
+  ],
+  "errors": []
+}
