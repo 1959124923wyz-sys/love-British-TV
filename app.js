@@ -78,7 +78,7 @@ const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -529,12 +529,13 @@ function activeEnglishGarrisonIds(){
   return p.not_an_English_control_feature!==true&&year>=p.year_end_start&&year<=p.year_end_stop;
  }).map(f=>f.properties.stable_id));
 }
-// Site localities are drawn using previously researched, uncertain geometries.
-// Hiding at zoom 10+ prevents a buffer looking like an accurate Tudor fort wall.
+// Site localities are copied from existing uncertain research. Their borders are not
+// Tudor surveyed limits. Keep the layers stable at all zooms so click/visibility never
+// flickers during zoom: dashed boundaries and the dossier communicate uncertainty.
 function renderWartimeVicinities(){
  groups.warVicinity.clearLayers();
  if(year<1540||!occupiedZoneAreas||!militaryControlPoints
-   ||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked||map.getZoom()>9)return;
+   ||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
  const active=activeEnglishGarrisonIds();
  const selected=occupiedZoneAreas.features.filter(f=>
   f.properties?.zone_type==='occupied'&&f.properties?.historical_boundary_confirmed===false
@@ -567,10 +568,12 @@ function ensureContestedHatch(){
  }
  defs.appendChild(pat);
 }
+// Campaign reference polygons remain visible at every zoom. Do not reconstruct
+// or discard their SVG renderer after zoomend: Leaflet transforms the paths itself.
 function renderContestedZones(){
  groups.contestedZones.clearLayers();
  if(year<1540||!contestedZoneAreas||!$('toggleTerritorialFootprints').checked
-    ||!$('toggleControlAreas').checked||map.getZoom()>8)return;
+    ||!$('toggleControlAreas').checked)return;
  const selected=contestedZoneAreas.features.filter(f=>f.properties?.zone_type==='contested'
   &&f.properties?.historical_boundary_confirmed===false&&f.properties?.fill_authorized===false&&yearValidWarZone(f,year));
  if(!selected.length)return;
@@ -734,32 +737,6 @@ function renderMilestones(){
   else if(matches.length>1)openCollection(matches.map(item=>({item,type:'event'})),y+'年的历史事件');
  }));
 }
-// An occupation badge is a pixel-size Point symbol, never a historic territorial polygon.
-function renderAnnualControlSummary(){
- const el=$('controlStatus');if(!el)return;
- if(year<1540||!militaryControlPoints){el.replaceChildren();el.hidden=true;return;}
- const sites=militaryControlPoints.features||[];
- const active=(f,y)=>f.properties.year_end_start<=y&&y<=f.properties.year_end_stop;
- const now=sites.filter(f=>active(f,year));
- const english=now.filter(f=>!f.properties.not_an_English_control_feature).length;
- const french=now.filter(f=>f.properties.not_an_English_control_feature).length;
- const gained=sites.filter(f=>active(f,year)&&!active(f,year-1)).length;
- const gone=sites.filter(f=>!active(f,year)&&active(f,year-1));
- const confirmedExited=gone.filter(f=>f.properties.historical_actual_end_year!=null).length;
- const uncertain=gone.length-confirmedExited;
- const activeIds=activeEnglishGarrisonIds();
- const occupied=(occupiedZoneAreas?.features||[]).filter(f=>f.properties?.zone_type==='occupied'
-   &&yearValidWarZone(f,year)&&activeIds.has(f.properties.stable_id)).length;
- const contested=(contestedZoneAreas?.features||[]).filter(f=>f.properties?.zone_type==='contested'
-   &&yearValidWarZone(f,year)).length;
- const entry=(name,n,unit)=>'<div class="control-status-line"><span class="control-status-label">'+name+' </span><strong class="control-status-value">'+n+unit+'</strong></div>';
- const changes=[gained?'新增驻点 '+gained+'处':'',confirmedExited?'有据退出 '+confirmedExited+'处':'',
-  uncertain?'另'+uncertain+'处续驻待核':''].filter(Boolean).join('、');
- el.innerHTML=entry('英军局部驻点',english,'处')+entry('法军对抗点',french,'处')+
-  entry('驻军概略范围',occupied,'片')+entry('交战示意区',contested,'片')+
-  (changes?'<p class="control-status-change">'+escapeHTML(changes)+'</p>':'');
- el.hidden=false;
-}
 function setYear(v){
  const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
  const chosen=next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
@@ -792,7 +769,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderContestedZones();renderWartimeControls();renderAnnualControlSummary();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderContestedZones();renderWartimeControls();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -807,6 +784,7 @@ async function loadKingdomBoundaries(){
   const first=objects[Object.keys(objects)[0]];if(!first)throw new Error('No TopoJSON geometry');
   let geo=topojson.feature(topology,first);
   const features=geo.type==='FeatureCollection'?geo.features:[geo];
+  sovereigntyReferenceAreas=[];
   let count=0;
   for(const f of features){
    const p=Object.values(f.properties||{}).filter(v=>typeof v==='string').join(' ').toLowerCase();
@@ -815,6 +793,7 @@ async function loadKingdomBoundaries(){
    else if(p.includes('wales'))group='wales';
    else if(/north east|north west|yorkshire|east midlands|west midlands|east of england|london|south east|south west/.test(p))group='england';
    if(!group)continue;
+   sovereigntyReferenceAreas.push({feature:f,group});
    count++;
    const c=group==='scotland'?'#588ba8':group==='wales'?'#a78acb':'#815fd5';
    const layer=L.geoJSON(f,{renderer:sovereigntyRenderer,pane:'sovereigntyPane',interactive:true,bubblingMouseEvents:false,style:{color:c,weight:group==='wales'?1.8:1.4,dashArray:group==='wales'?'6 5':null,fillColor:c,fillOpacity:group==='scotland'?.25:group==='wales'?.18:.35,opacity:.95},interactive:true})
@@ -931,7 +910,7 @@ $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistorica
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderWartimeVicinities();renderContestedZones();renderWartimeControls()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
