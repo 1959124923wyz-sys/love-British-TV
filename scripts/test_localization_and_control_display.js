@@ -32,6 +32,8 @@ assert.equal(original.events.length,27,'Fifth-chapter historic record must remai
 assert.equal(garrison.features.length,15);
 assert.ok(garrison.features.every(f=>f.geometry.type==='Point'),'Neither an English siege nor French defence implies surveyed polygon');
 const hailes=garrison.features.find(f=>f.properties.stable_id==='hailes-english-1548-date_unknown');
-assert.equal(hailes.properties.historical_actual_end_year,null);
-assert.equal(hailes.properties.year_end_stop,1548);
-console.log('PASS: single map hover, Chinese titles/dates, visibly dated military site rings and uncertain Hailes control');
+assert.equal(hailes,undefined,'Hailes must not be mapped as an English year-end stronghold following the 1548 Scottish recapture');
+const dundee=garrison.features.find(f=>f.properties.stable_id==='dundee-english-town-late-1547');
+assert.equal(dundee.properties.year_end_start,1547);
+assert.equal(dundee.properties.year_end_stop,1547);
+console.log('PASS: single map hover, Chinese titles/dates, documented 1548 Hailes Scots recapture and 1547 Dundee occupation');
