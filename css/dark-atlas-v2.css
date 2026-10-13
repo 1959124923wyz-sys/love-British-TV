@@ -426,16 +426,17 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  background:rgba(163,107,220,.42);box-sizing:border-box
 }
 .legend-items .swatch.territory{width:17px;height:13px;border:2px dashed #ba8deb;background:rgba(168,109,220,.30)}
-.leaflet-territoryPane-pane svg{pointer-events:auto}
-.leaflet-territoryPane-pane .atlas-territory-crown{
+.leaflet-territory-pane svg{pointer-events:none}
+.leaflet-territory-pane path.leaflet-interactive{pointer-events:visiblePainted}
+.leaflet-territory-pane .atlas-territory-crown{
  fill:url(#atlas-hatch-crown)!important;
  fill-opacity:1!important;
 }
-.leaflet-territoryPane-pane .atlas-territory-manx{
+.leaflet-territory-pane .atlas-territory-manx{
  fill:url(#atlas-hatch-manx)!important;
  fill-opacity:1!important;
 }
-.leaflet-territoryPane-pane .atlas-territory-solid{stroke-linejoin:round}
+.leaflet-territory-pane .atlas-territory-solid{stroke-linejoin:round}
 
 /* Historic SVG paths use unobtrusive focus. Leaflet/browser default SVG outlines
    follow the feature's rectangular bounding box and obscure the map after a click.
@@ -539,54 +540,37 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 @media(max-width:1380px){.time-panel .timeline-decades .chapter-segment{padding:5px 5px}.time-panel .timeline-decades .chapter-segment small{font-size:8px}}
 
 /* v1.7.1: clear pixel-sized temporal occupation symbols; rings are NOT historical borders. */
-.map-year-card{flex-wrap:wrap;max-width:min(500px,calc(100% - 22px))}
-.map-year-card .year-control-status{display:block;flex-basis:100%;margin-top:1px;padding-left:1px;color:#f4c997;font-size:10px;line-height:1.5;white-space:normal}
-.map-year-card .year-control-status[hidden]{display:none!important}
 .legend-items .swatch.english-garrison,.legend-items .swatch.french-defence{width:16px;height:16px;border:3px dashed #d1acfd;border-radius:50%;background:rgba(142,98,220,.11);box-sizing:border-box}
 .legend-items .swatch.wartime-vicinity{width:18px;height:13px;border:1.5px dashed #bd92fa;background:rgba(134,82,221,.17);box-sizing:border-box;border-radius:3px}
-.leaflet-war-vicinity-pane .atlas-violet-wartime-vicinity{pointer-events:none;stroke-linejoin:round}
 .legend-items .swatch.french-defence{border-color:#58c6b7;background:rgba(88,198,183,.09)}
 .leaflet-control-area-pane .atlas-local-english-garrison,.leaflet-control-area-pane .atlas-french-counterfort{vector-effect:non-scaling-stroke}
 
-/* v1.7.3 — year overview must never collapse into a one-character-wide vertical strip.
-   Explicit grid width/layout keeps the historical year separate from four control lines. */
+/* v1.7.4: the entire four-row occupation statistics badge was removed.
+   Keep only a compact year and political-period heading. */
 .map-year-card{
- display:grid!important;grid-template-columns:max-content minmax(0,1fr);
- align-items:start;gap:7px 14px;
- width:344px!important;min-width:0;max-width:min(344px,calc(100vw - 36px))!important;
- box-sizing:border-box;padding:12px 14px;
- flex-wrap:nowrap;overflow-wrap:normal;word-break:normal;
+ display:inline-flex!important;align-items:baseline;flex-wrap:nowrap!important;
+ gap:9px;min-width:0;width:max-content!important;
+ max-width:min(365px,calc(100vw - 34px))!important;
+ padding:9px 12px;box-sizing:border-box;
 }
-.map-year-card #bigYear{grid-column:1;grid-row:1;align-self:center;white-space:nowrap;margin:0;}
-.map-year-card #periodTitle{grid-column:2;grid-row:1;align-self:center;min-width:0;
- font-size:11px;line-height:1.6;white-space:normal;word-break:keep-all;overflow-wrap:normal;}
-.map-year-card #controlStatus.year-control-status{
- grid-column:1 / -1;display:grid;grid-template-columns:1fr;gap:3px;
- width:100%;min-width:0;max-width:none;box-sizing:border-box;
- padding:9px 10px;border:1px solid #36506b;border-radius:7px;
- background:#122c47cc;color:#eed1b2;font-size:11px;
- white-space:normal;writing-mode:horizontal-tb;word-break:keep-all;
-}
-.map-year-card #controlStatus[hidden]{display:none!important;}
-#controlStatus .control-status-line{
- display:flex;flex-direction:row;justify-content:space-between;align-items:center;
- gap:12px;min-width:0;white-space:nowrap;writing-mode:horizontal-tb;
-}
-#controlStatus .control-status-label{display:inline;flex:1 1 auto;min-width:0;
- font-size:11px;line-height:1.5;color:#d1e0f2;white-space:nowrap;writing-mode:horizontal-tb;}
-#controlStatus .control-status-value{display:inline;flex:0 0 auto;
- font:700 12px/1.5 "Noto Sans SC",sans-serif;color:#f1c6a0;white-space:nowrap;}
-#controlStatus .control-status-change{margin:5px 0 0;border-top:1px solid #36506b;
- padding-top:6px;font-size:10px;line-height:1.5;color:#d0c0e6;word-break:keep-all;}
+.map-year-card #bigYear{white-space:nowrap;flex:0 0 auto;margin:0;}
+.map-year-card #periodTitle{white-space:normal;min-width:0;word-break:keep-all;}
 @media(max-width:680px){
- .map-year-card{width:min(315px,calc(100vw - 30px))!important;max-width:calc(100vw - 30px)!important;min-width:0;gap:5px 9px;padding:9px 10px;}
- .map-year-card #bigYear{font-size:24px;}
- #controlStatus .control-status-line{gap:8px;}
+ .map-year-card{max-width:calc(100vw - 24px)!important;padding:7px 9px;}
+ .map-year-card #bigYear{font-size:23px;}
 }
 /* Work done by the polygons is visible, not just their named garrison icons.
    Both types are interactive and their detail drawers disclose approximation. */
+/* SVG viewport rectangles must never block lower countries or clickable shapes.
+   Only the painted SVG feature paths accept pointer hits. */
 .leaflet-warVicinity-pane svg,.leaflet-contestedZone-pane svg,
-.leaflet-sovereignty-pane svg{pointer-events:auto;}
+.leaflet-sovereignty-pane svg,.leaflet-control-area-pane svg,
+.leaflet-territory-pane svg{pointer-events:none!important;}
+.leaflet-warVicinity-pane path.leaflet-interactive,
+.leaflet-contestedZone-pane path.leaflet-interactive,
+.leaflet-sovereignty-pane path.leaflet-interactive,
+.leaflet-control-area-pane path.leaflet-interactive,
+.leaflet-territory-pane path.leaflet-interactive{pointer-events:visiblePainted!important;cursor:pointer;}
 #map .atlas-violet-wartime-vicinity{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
 #map .atlas-contested-zone{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
 #map .atlas-territory-solid,#map .atlas-territory-crown,#map .atlas-territory-manx{
