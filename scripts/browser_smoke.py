@@ -240,6 +240,8 @@ try:
            """document.querySelector('.atlas-local-english-garrison')?.getAttribute('stroke-dasharray')==='6 4'""", driver)
     verify("1544 Boulogne and Lochmaben occupation sites not rendered",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===3", driver)
+    verify("purple approximate fort localities are not rendered",
+           "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===2", driver)
     set_year(1545,17)
     verify("1545 Lochmaben still wrongly occupied",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===2", driver)
@@ -248,19 +250,31 @@ try:
     set_year(1546,24)
     verify("1546 Ambleteuse and Boulemberg must join English occupation",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===4", driver)
-    set_year(1547,30)
+    set_year(1547,31)
     verify("1547 Scottish garrison map incomplete",
-           "document.querySelectorAll('#map .atlas-local-english-garrison').length===8", driver)
-    set_year(1548,40)
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===9", driver)
+    set_year(1548,44)
     verify("1548 Inchcolm and Hume must exit as English-held sites",
-           "document.querySelectorAll('#map .atlas-local-english-garrison').length===11", driver)
-    set_year(1549,45)
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===10", driver)
+    verify("Hailes must not remain English at 1548 year end",
+           """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
+    verify("1548 local English occupations must show violet uncertain overlays",
+           "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
+    set_year(1549,49)
     verify("1549 withdrew Ambleteuse/Boulemberg/Haddington, kept Boulogne",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
     verify("1549 French defensive Outreau missing",
            "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
+    verify("Purple Boulogne and Scottish garrison references did not update for 1549",
+           "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===6", driver)
+    toggle_layer("toggleTerritorialFootprints",False)
+    verify("Hiding boundary context must hide the schematic control vicinity",
+           "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===0", driver)
+    verify("Hiding boundary context cannot erase historically documented military sites",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
+    toggle_layer("toggleTerritorialFootprints",True)
     verify("1549 site count or source uncertainty hidden",
-           """document.querySelector('#controlStatus').textContent.includes('英军局部驻点 7处') && document.querySelector('#controlStatus').textContent.includes('续驻待核')""", driver)
+           """document.querySelector('#controlStatus').textContent.includes('英军局部驻点 7处') && !document.querySelector('#controlStatus').textContent.includes('续驻待核')""", driver)
     verify("French resistance ring missing at year-end",
            """document.querySelector('.atlas-french-counterfort')?.getAttribute('stroke-dasharray')==='3 5'""", driver)
     verify("Sixth decade slider not restricted to 1540–1549",
