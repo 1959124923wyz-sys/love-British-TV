@@ -18,7 +18,7 @@ assert.ok(chapter.chapters.some(c=>c.number===7&&c.start===1550&&c.end===1559&&c
 const sources=new Set(atlas.sources.map(s=>s.id)),events=new Set();
 for(const e of atlas.events){
  assert.ok(e.year>=1550&&e.year<=1559&&e.source_ids.every(id=>sources.has(id)),e.id+' missing dated citation');
- assert.ok(/^155\\d年/.test(e.date_label),e.id+' must use Chinese historical date');
+ assert.ok(e.date_label.startsWith(String(e.year)+'年'),e.id+' must use Chinese historical date');
  assert.ok(!events.has(e.id));events.add(e.id);
  assert.equal(e.colonial_profit,null,'Unquantified slave trade / treaty amount is not proven colonial profit');
  assert.equal(Number.isFinite(e.lat),Number.isFinite(e.lng),'Point pair is incomplete: '+e.id);
