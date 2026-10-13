@@ -358,6 +358,21 @@ try:
           }
           return null;
         """,selector)
+        if not pos:
+            diagnose=driver.execute_script("""
+              const mb=document.querySelector('#map').getBoundingClientRect();
+              return {map:[mb.left,mb.top,mb.width,mb.height],
+                pathData:[...document.querySelectorAll(arguments[0])].slice(0,9).map(p=>{
+                  const r=p.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+                  const el=document.elementFromPoint(cx,cy);
+                  return {bounds:[r.left,r.top,r.width,r.height].map(n=>Math.round(n)),
+                    fill:p.getAttribute('fill'),svgClass:p.closest('svg')?.getAttribute('class'),
+                    pointer:getComputedStyle(p).pointerEvents,svgPointer:getComputedStyle(p.closest('svg')).pointerEvents,
+                    inMap:cx>mb.left&&cx<mb.right&&cy>mb.top&&cy<mb.bottom,
+                    top:el?.tagName,topClass:el?.getAttribute('class')?.slice(0,90)};
+                })};
+            """,selector)
+            print("REAL_CLICK_DIAG",selector,diagnose,flush=True)
         assert pos, "No physically reachable painted area: "+selector
         ActionChains(driver).move_to_element_with_offset(
           driver.find_element(By.ID,'map'),round(pos['dx']),round(pos['dy'])).click().perform()
