@@ -76,20 +76,23 @@ function togglePanel(which){
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let year=1497;
-// Reader-friendly map presets. Historic source/precision rules remain in individual layers.
-let mapMode='events',mapModeManuallyChosen=false;
-const mapModePresets={
- territory:{toggleTerritorialFootprints:true,toggleControlAreas:true,togglePoliticalRelations:true,toggleKingdom:true,toggleRoutes:false,toggleCandidates:false,toggleClaims:false,toggleEvents:false,toggleMinorEvents:false,toggleHypotheses:false},
- war:{toggleTerritorialFootprints:true,toggleControlAreas:true,togglePoliticalRelations:false,toggleKingdom:true,toggleRoutes:false,toggleCandidates:false,toggleClaims:false,toggleEvents:false,toggleMinorEvents:false,toggleHypotheses:false},
- events:{toggleTerritorialFootprints:false,toggleControlAreas:false,togglePoliticalRelations:false,toggleKingdom:true,toggleRoutes:true,toggleCandidates:true,toggleClaims:true,toggleEvents:true,toggleMinorEvents:false,toggleHypotheses:false}
-};
-function syncMapMode(render=true){
- const preset=mapModePresets[mapMode];if(!preset)return;
- for(const [id,checked] of Object.entries(preset))$(id).checked=checked;
- document.querySelectorAll('#mapModeSwitch [data-map-mode]').forEach(btn=>{
-  const active=btn.dataset.mapMode===mapMode;
-  btn.setAttribute('aria-pressed',String(active));btn.classList.toggle('active',active);
- });
+// Two independently combinable public map layers; war TERRITORY and battle EVENTS remain distinct.
+function syncMapLayers(render=true){
+ const territory=$('mapLayerTerritory').checked,events=$('mapLayerEvents').checked;
+ const gates={
+  toggleTerritorialFootprints:territory,
+  toggleControlAreas:territory,
+  togglePoliticalRelations:territory,
+  toggleKingdom:territory,
+  toggleHypotheses:territory,
+  toggleRoutes:events,
+  toggleCandidates:events,
+  toggleClaims:events,
+  toggleEvents:events,
+  toggleMinorEvents:false
+ };
+ for(const [id,checked] of Object.entries(gates))$(id).checked=checked;
+ if(!events){focusedEventId=null;focusRequestToken++;}
  if(render&&atlas){refreshHistoricalLayers();renderAnnualControlSummary();}
 }
 // Browsing the multi-century navigator never changes the verified year on the map.
@@ -317,7 +320,7 @@ function renderPoints(){
  closeCluster();
  for(const name of ['event','candidate','routes','claim','place','cluster'])groups[name].clearLayers();
  const shown=[];
- const showAll=map.getZoom()>=4||$('toggleMinorEvents').checked;
+ const showAll=map.getZoom()>=7||$('toggleMinorEvents').checked;
  if($('toggleEvents').checked||focusedEventId){
   for(const e of atlas.events){
    if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;
@@ -329,7 +332,7 @@ function renderPoints(){
    shown.push({item:e,type:'event',lat:e.lat,lng:e.lng});
   }
  }
- if($('toggleKingdom').checked&&year>=1500&&(mapMode==='events'||map.getZoom()>=6)){
+ if($('toggleKingdom').checked&&year>=1500&&map.getZoom()>=6){
   for(const q of atlas.places||[]){
    const activeMilitaryCore=year>=1540&&$('toggleControlAreas').checked&&militaryControlPoints?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.year_end_start&&year<=f.properties.year_end_stop);
    const alreadyDrawnAsArea=Boolean(activeMilitaryCore)||footprintEnabledFor(q.id)||($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year));
@@ -549,7 +552,7 @@ function activeEnglishGarrisonIds(){
 // Hiding at zoom 10+ prevents a buffer looking like an accurate Tudor fort wall.
 function renderWartimeVicinities(){
  groups.warVicinity.clearLayers();
- if(mapMode!=='war'||year<1540||!occupiedZoneAreas||!militaryControlPoints
+ if(year<1540||!occupiedZoneAreas||!militaryControlPoints
    ||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked||map.getZoom()>9)return;
  const active=activeEnglishGarrisonIds();
  const selected=occupiedZoneAreas.features.filter(f=>
@@ -585,7 +588,7 @@ function ensureContestedHatch(){
 }
 function renderContestedZones(){
  groups.contestedZones.clearLayers();
- if(mapMode!=='war'||year<1540||!contestedZoneAreas||!$('toggleTerritorialFootprints').checked
+ if(year<1540||!contestedZoneAreas||!$('toggleTerritorialFootprints').checked
     ||!$('toggleControlAreas').checked||map.getZoom()>8)return;
  const selected=contestedZoneAreas.features.filter(f=>f.properties?.zone_type==='contested'
   &&f.properties?.historical_boundary_confirmed===false&&f.properties?.fill_authorized===false&&yearValidWarZone(f,year));
@@ -753,7 +756,7 @@ function renderMilestones(){
 // An occupation badge is a pixel-size Point symbol, never a historic territorial polygon.
 function renderAnnualControlSummary(){
  const el=$('controlStatus');if(!el)return;
- if(mapMode!=='war'||year<1540||!militaryControlPoints){el.replaceChildren();el.hidden=true;return;}
+ if(year<1540||!militaryControlPoints){el.replaceChildren();el.hidden=true;return;}
  const sites=militaryControlPoints.features||[];
  const active=(f,y)=>f.properties.year_end_start<=y&&y<=f.properties.year_end_stop;
  const now=sites.filter(f=>active(f,year));
@@ -771,7 +774,9 @@ function renderAnnualControlSummary(){
  const entry=(name,n,unit)=>'<div class="control-status-line"><span class="control-status-label">'+name+' </span><strong class="control-status-value">'+n+unit+'</strong></div>';
  const changes=[gained?'新增驻点 '+gained+'处':'',confirmedExited?'有据退出 '+confirmedExited+'处':'',
   uncertain?'另'+uncertain+'处续驻待核':''].filter(Boolean).join('、');
- el.innerHTML='<span class="control-status-compact">英军驻点 <strong>'+english+'</strong> · 交战示意区 <strong>'+contested+'</strong>'+(french?' · 法军据点 <strong>'+french+'</strong>':'')+'</span>';
+ el.innerHTML=entry('英军局部驻点',english,'处')+entry('法军对抗点',french,'处')+
+  entry('驻军概略范围',occupied,'片')+entry('交战示意区',contested,'片')+
+  (changes?'<p class="control-status-change">'+escapeHTML(changes)+'</p>':'');
  el.hidden=false;
 }
 function setYear(v){
@@ -788,8 +793,7 @@ function setYear(v){
  // Full-archive preview belongs to one chapter; never carry future events into the next.
  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
  year=next;atlas=chosen;
- if(!mapModeManuallyChosen)mapMode=next>=1540?'war':'events';
- syncMapMode(false);
+ syncMapLayers(false);
  $('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540;
  $('chapterNav').textContent=sixth?'历史地图 · 第六章':fifth?'历史地图 · 第五章':fourth?'历史地图 · 第四章':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
@@ -916,12 +920,9 @@ async function boot(){
   setWarning('历史数据未能加载：'+String(e.message||e));
  }
 }
-document.querySelectorAll('#mapModeSwitch [data-map-mode]').forEach(btn=>btn.addEventListener('click',()=>{
- const next=btn.dataset.mapMode;
- if(!Object.prototype.hasOwnProperty.call(mapModePresets,next))return;
- mapMode=next;mapModeManuallyChosen=true;focusedEventId=null;focusRequestToken++;
- syncMapMode(true);
-}));
+document.querySelectorAll('#mapLayerSwitch input[type="checkbox"]').forEach(control=>{
+ control.addEventListener('change',()=>syncMapLayers(true));
+});
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
 function jumpToEnteredYear(){
  if(!atlas)return;
