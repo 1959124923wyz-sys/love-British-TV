@@ -382,7 +382,8 @@
       "new_active_episode_ids": [],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1541,
@@ -401,7 +402,8 @@
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1542,
@@ -420,7 +422,8 @@
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1543,
@@ -439,7 +442,8 @@
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1544,
@@ -459,7 +463,8 @@
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1545,
@@ -479,7 +484,8 @@
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1546,
@@ -499,7 +505,8 @@
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1547,
@@ -522,7 +529,8 @@
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1548,
@@ -549,7 +557,8 @@
         "inchcolm-english-1547-1548"
       ],
       "year_end_note": "Inchcolm withdrawn March: do not show English occupied island at year-end. Haddington held, Hailes held at least in 1548.",
-      "false_new_province_area_polygons": 0
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": []
     },
     {
       "year": 1549,
@@ -567,7 +576,6 @@
         "boulogne-english-1544-1550",
         "broughty-english-1547-1550",
         "lauder-english-1548-1550",
-        "hailes-english-1548-date_unknown",
         "irish-crown-title-1541",
         "eyemouth-fort-English-1547-1550"
       ],
@@ -575,8 +583,11 @@
         "inchcolm-english-1547-1548",
         "haddington-english-1548-1549"
       ],
-      "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes tenure after 1548 unverified; no automatic continued solid icon.",
-      "false_new_province_area_polygons": 0
+      "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes tenure after 1548 unverified; no automatic continued solid icon. Hailes castle continuing control is UNSURE and explicitly pending, not an ended or confirmed active garrison.",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [
+        "hailes-english-1548-date_unknown"
+      ]
     }
   ],
   "all_inherited_political_identities_accounted_for": true,
@@ -603,5 +614,6 @@
     "need_new_1550_study": true,
     "do_not_claim_1550_actual_site_control_without_evidence": true
   },
-  "sources_registry": "SOURCE_REGISTRY.json"
+  "sources_registry": "SOURCE_REGISTRY.json",
+  "precision_quality_note": "Hailes documented English castle garrison in 1548 only; neither documentary silence nor the year 1549 certifies its abandonment. When 1549 unverified, show dashed question point instead of verified solid English control."
 }
