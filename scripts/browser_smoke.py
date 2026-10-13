@@ -346,9 +346,12 @@ try:
           for(const path of candidates){
             const rect=path.getBoundingClientRect();
             if(rect.width<4||rect.height<4)continue;
-            for(let yi=1;yi<=15;yi++)for(let xi=1;xi<=15;xi++){
-              const x=rect.left+rect.width*xi/16;
-              const y=rect.top+rect.height*yi/16;
+            const left=Math.max(rect.left,mb.left+8),right=Math.min(rect.right,mb.right-8);
+            const topY=Math.max(rect.top,mb.top+8),bottom=Math.min(rect.bottom,mb.bottom-8);
+            if(right<=left||bottom<=topY)continue;
+            for(let yi=1;yi<=23;yi++)for(let xi=1;xi<=23;xi++){
+              const x=left+(right-left)*xi/24;
+              const y=topY+(bottom-topY)*yi/24;
               if(x<mb.left+8||x>mb.right-8||y<mb.top+8||y>mb.bottom-8)continue;
               const top=document.elementFromPoint(x,y);
               if(top===path||top?.closest?.(selector)===path)
@@ -378,6 +381,8 @@ try:
           driver.find_element(By.ID,'map'),round(pos['dx']),round(pos['dy'])).click().perform()
         return pos
 
+    print("CLICK_SOVEREIGN",real_map_area_click(".leaflet-sovereignty-pane path.leaflet-interactive"),flush=True)
+    wait.until(lambda d:"历史国家" in d.find_element(By.ID,"dossierBody").text)
     set_year(1548,44)
     driver.execute_script("""
       const item=document.querySelector('#eventList [data-eid="1540S-021"]');
@@ -386,7 +391,7 @@ try:
     """)
     time.sleep(1.25)
     origin=ScrollOrigin.from_element(driver.find_element(By.ID,'map'))
-    ActionChains(driver).scroll_from_origin(origin,0,-620).perform()
+    ActionChains(driver).scroll_from_origin(origin,0,-1600).perform()
     time.sleep(1)
     verify("contested zone disappeared after actual wheel zoom",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
@@ -394,8 +399,6 @@ try:
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     print("CLICK_CONTESTED",real_map_area_click("#map .atlas-contested-zone"),flush=True)
     wait.until(lambda d:"交战与争夺区" in d.find_element(By.ID,"dossierBody").text)
-    print("CLICK_SOVEREIGN",real_map_area_click(".leaflet-sovereignty-pane path.leaflet-interactive"),flush=True)
-    wait.until(lambda d:"历史国家" in d.find_element(By.ID,"dossierBody").text)
     # Zoom toward the documented Broughty stronghold for a meaningful area
     # target (at low zoom these tiny locality references are subpixel).
     driver.execute_script("""
@@ -403,7 +406,7 @@ try:
       item.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));
     """)
     time.sleep(1.25)
-    ActionChains(driver).scroll_from_origin(origin,0,-1850).perform()
+    ActionChains(driver).scroll_from_origin(origin,0,-650).perform()
     time.sleep(1)
     verify("high-zoom purple garrison zones must not disappear",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
