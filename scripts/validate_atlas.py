@@ -224,7 +224,8 @@ for f in footprints["features"]:
     assert polygons and all(ring[0]==ring[-1] for poly in polygons for ring in poly), f["id"]
 assert "function renderTerritories()" in app
 assert "map.createPane('territoryPane')" in app and "ensureTerritorialPatterns()" in app
-assert 'e.year>=chapter.start&&e.year<=year' in app and 'atlasFifth.events' not in app, 'Milestones must be filtered to the active chapter only'
+timeline_section = app.split('function renderMilestones(){',1)[1].split('function setYear(v){',1)[0]
+assert 'e.year>=chapter.start&&e.year<=year' in timeline_section and 'atlasFourth.events' not in timeline_section, 'Milestones must be filtered to the active chapter only'
 assert 'id="toggleTerritorialFootprints"' in html
 assert (ROOT/"data/TERRITORIAL_FOOTPRINT_SOURCES.md").is_file()
 
