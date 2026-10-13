@@ -52,3 +52,12 @@ P0未核：加来1558旧Pale实测古界、1558吉讷确切陷落日、爱尔兰
 实际提交：`TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json`（11控制episode、10年度控制对照）、`SOURCE_REGISTRY.json`、`CHRONOLOGY.json`、`ATLAS_REVIEW_CANDIDATE.json`、`MAP_DELTA_1550_1559.geojson`、`POLITICAL_CONTROL_SITES_1550_1559.geojson`、`CONTROL_TRANSITION_1549_1559.json`、`TRANSITION_1559_1560_RESEARCH_SEED.json`、`ARCHIVAL_ACTION_QUEUE.json`、`EDITOR_HANDOFF.md`，以及更新 `validate_research.py` 考证口径。人工原始16世纪手稿没有完成独立全面核查；对于保护区坐标和原时代相差的现代墙线继续 `fill_authorized:false`，可用精确新古代殖民实控Polygon = **0**。
 
 主编具体发布审核以同目录最下方的`EDITOR_HANDOFF.md`追加“调查员3”逐年表为准；旧本文历史原稿与PR33旧文字计数仅属当时基线。编审完毕前**不修改main生产Atlas及JS、不启用自动GitHub校验**。
+
+
+## 2026-10-13｜战争动态分层地图模型新增保存点
+
+主编请求将“主权底色／英法实控区／蓝紫等两军条纹战区／孤立要塞”方案实际写入第七章支线，而非仅口头提案。现已创建`WAR_MAP_SPEC_1550s.md`、`WAR_CONTROL_ZONES_CANDIDATE_1550_1559.geojson`、`WAR_CONTESTED_ZONES_CANDIDATE_1550_1559.geojson`、`WAR_FRONT_NOTES_1550_1559.json`及`WAR_ISOLATED_OUTPOSTS_CANDIDATE_1550_1559.json`。共6控制候选、4争夺候选、15阶段变化、10年末状态、8个孤立军堡。
+
+史料状态与界线坐标分离：仅复用旧加来Pale虚线Polygon作为候审**示意参照**，没有凭想象生成苏格兰控制走廊、爱尔兰大半个郡或哈姆堡未知古址。禁止据此计算任何实控面积；首版自带`fill_authorized:false`。第七章准确的趋势为英军1550苏格兰撤退、1558法国收复加来；爱尔兰1556殖民设郡法权不等于完整军事占领。编辑可在PR #33直接点击JSON/GeoJSON审核使用，不需用户编程。
+
+旧文件中62来源、29事件、18地点等计数不因新**衍生候审战区**而自动增加；候审区是相同史料的战争制图表达方案，绝非7+新的历史发现。等待主编再审核，未触发GitHub Action，未修改main或前端。
