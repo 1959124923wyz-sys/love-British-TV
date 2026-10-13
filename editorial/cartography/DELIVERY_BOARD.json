@@ -1,0 +1,116 @@
+{
+  "schema": "aytv-cartography-delivery-board-v1",
+  "updated": "2026-10-13",
+  "mode": "tracked_issues_not_equivalent_to_online_release",
+  "definitions": {
+    "research_candidate": "研究PR或来源可用，未经主编正式选用",
+    "editor_integrated": "已经进入GitHub main，经代码核对（不自动等于浏览器截图通过）",
+    "visual_verified": "主编已据真实浏览器画面按关键年份审查并保存证据",
+    "released_verified": "线上部署成功，查过实际网址；必须拥有CI和画面证明",
+    "planned": "仍待研究和交接"
+  },
+  "published_history_baseline": {
+    "from": 1497,
+    "to": 1539,
+    "repository_status": "published",
+    "release_guarantee": "legacy chapters pre-date this gate, do not claim screenshots or every original border historically surveyed",
+    "status": "editor_integrated",
+    "main_index": "data/chapters.json",
+    "next_action": "keep regression checks and progressively backfill visual snapshots without blocking historic site"
+  },
+  "tracked_chapters": [
+    {
+      "id": "chapterSixth",
+      "period": [
+        1540,
+        1549
+      ],
+      "status": "editor_integrated",
+      "published_in_repo": true,
+      "release_record": "editorial/cartography/releases/1540-1549.json",
+      "research_prs": [
+        27,
+        41,
+        43,
+        44
+      ],
+      "actual_main_files": [
+        "data/atlas-1540-1549.json",
+        "data/military-control-points-1540-1549.geojson",
+        "data/war-front-corridors-1540-1549.geojson"
+      ],
+      "known_research_limits": [
+        "Original measured 1540s front lines not available",
+        "Scottish English garrison points indicate sites, not all land enclosed",
+        "1548 yearend Saltoun Yester unsettled",
+        "Original historic map reproduction permission awaits confirmation"
+      ],
+      "next_action": "Retrospective browser acceptance for 1547/1548/1549 on real deployed site, do not redraw conjectural purple regions"
+    },
+    {
+      "id": "chapterSeventh",
+      "period": [
+        1550,
+        1559
+      ],
+      "status": "research_candidate",
+      "published_in_repo": false,
+      "research_prs": [
+        33
+      ],
+      "source_branch": "research/territorial-1550-1559-20261013",
+      "handoff": "research/periods/1550-1559/EDITOR_HANDOFF.md",
+      "handoff_access": "PR #33 source branch",
+      "release_record": "editorial/cartography/releases/1550-1559.json",
+      "critical_years": [
+        1550,
+        1556,
+        1558,
+        1559
+      ],
+      "release_blockers": [
+        "1550 evacuation endpoints and English garrison endings require explicit annual handoff",
+        "1558 Calais / Guisnes / Hammes transfer needs monthly source constraints",
+        "Irish 1556 plantation legal claim vs actual occupied land separate",
+        "War geometry candidates with null geometry must not be auto-filled",
+        "Mandatory 2-layer map visual check of 1550→1551 and 1557→1558"
+      ],
+      "next_action": "Chief editor integrates reviewed research files to main and completes release card before publishing"
+    },
+    {
+      "id": "chapterEighth",
+      "period": [
+        1560,
+        1569
+      ],
+      "status": "planned",
+      "published_in_repo": false,
+      "research_prs": [],
+      "inherited_from": "chapterSeventh",
+      "release_record": "editorial/cartography/releases/1560-1569.json",
+      "critical_years": [
+        1560,
+        1569
+      ],
+      "release_blockers": [
+        "1559→1560 polity identities/Scotland-France military presence cannot be arbitrarily reset",
+        "Actual English-controlled Ireland and overseas points need new primary sources"
+      ],
+      "next_action": "New research worker should start from 1559 confirmed/uncertain stable IDs, not from blank map"
+    }
+  ],
+  "next_chapters_rule": "Every new published chapter >= 1550 must have a checked editorial/cartography/releases/YYYY-YYYY.json record, valid annual snapshot file, source and map-delta file, explicit open-issue dispositions and screenshot-based visual acceptance; validator enforces on all chapters published in data/chapters.json, not just board rows",
+  "roles": {
+    "researcher": "document with citations and unresolved dates; submit draft research PR",
+    "editor": "merge selected map delta and source data, not candidate docs blindly",
+    "reviewer": "verify visual historical state for requested years in real browser and record evidence",
+    "publisher": "main merging + Pages success + live URL confirmation"
+  },
+  "never_guess": [
+    "actual border from modern administrative boundary",
+    "occupation polygon from castle ring, route or battle",
+    "unstated day/month on 1550 exits",
+    "reassign independent Scotland under England/France due to allies"
+  ],
+  "issues_not_disappeared_automatically": true
+}
