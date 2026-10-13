@@ -369,6 +369,49 @@
       "territorial_change": "new_small_strategic_English_fort_site_1547",
       "polygon_verified": false,
       "wall_boundary_reference": "Modern scholarly excavation published but original lines not digitized or licensed"
+    },
+    {
+      "id": "lochmaben-english-1544-1545",
+      "name": "洛赫马本城堡：英军1544年占领，1545年苏军收复",
+      "start_year": 1544,
+      "start_month": null,
+      "observed_through_year": 1544,
+      "end_year": 1545,
+      "end_month": null,
+      "controller": "English military garrison at individual Lochmaben Castle; Scottish kingdom independent",
+      "type": "temporary_castle_capture_in_independent_Scotland",
+      "source_ids": [
+        "SC-HES-LOCHMABEN-HISTORY",
+        "SC-HES-LOCHMABEN-SITE"
+      ],
+      "coords": [
+        -3.43092,
+        55.11633
+      ],
+      "precision": "official modern stone castle center, not original 1544 walls",
+      "territorial_change": "English temporary named castle occupation 1544, ended 1545",
+      "polygon_verified": false
+    },
+    {
+      "id": "dunglass-camp-english-1548-1549",
+      "name": "东洛锡安Dunglass：1548—1549英军山岗营垒",
+      "start_year": 1548,
+      "start_month": null,
+      "observed_through_year": 1549,
+      "end_year": null,
+      "end_month": null,
+      "controller": "English encampment within sovereign Kingdom of Scotland",
+      "type": "military_camp_with_visible_ramparts_but_1540s_actual_boundary_not_traced",
+      "source_ids": [
+        "SC-HES-DUNGLASS-CAMP"
+      ],
+      "coords": [
+        -2.38613,
+        55.93584
+      ],
+      "precision": "modern Dunglass designed-landscape point; real camp on hill WEST of house; this is approximate context location",
+      "territorial_change": "English supported Haddington occupation 1548–49; Scots destroyed fort shortly later (no dated termination certified)",
+      "polygon_verified": false
     }
   ],
   "year_end_snapshots": [
@@ -464,7 +507,8 @@
       ],
       "new_active_episode_ids": [
         "boulogne-english-1544-1550",
-        "irish-crown-title-1541"
+        "irish-crown-title-1541",
+        "lochmaben-english-1544-1545"
       ],
       "confirmed_expired_episode_ids": [],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
@@ -487,7 +531,9 @@
         "boulogne-english-1544-1550",
         "irish-crown-title-1541"
       ],
-      "confirmed_expired_episode_ids": [],
+      "confirmed_expired_episode_ids": [
+        "lochmaben-english-1544-1545"
+      ],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
       "false_new_province_area_polygons": 0,
       "uncertain_continuity_episode_ids": []
@@ -508,7 +554,9 @@
         "boulogne-english-1544-1550",
         "irish-crown-title-1541"
       ],
-      "confirmed_expired_episode_ids": [],
+      "confirmed_expired_episode_ids": [
+        "lochmaben-english-1544-1545"
+      ],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
       "false_new_province_area_polygons": 0,
       "uncertain_continuity_episode_ids": []
@@ -532,7 +580,9 @@
         "irish-crown-title-1541",
         "eyemouth-fort-English-1547-1550"
       ],
-      "confirmed_expired_episode_ids": [],
+      "confirmed_expired_episode_ids": [
+        "lochmaben-english-1544-1545"
+      ],
       "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
       "false_new_province_area_polygons": 0,
       "uncertain_continuity_episode_ids": []
@@ -556,10 +606,12 @@
         "lauder-english-1548-1550",
         "hailes-english-1548-date_unknown",
         "irish-crown-title-1541",
-        "eyemouth-fort-English-1547-1550"
+        "eyemouth-fort-English-1547-1550",
+        "dunglass-camp-english-1548-1549"
       ],
       "confirmed_expired_episode_ids": [
-        "inchcolm-english-1547-1548"
+        "inchcolm-english-1547-1548",
+        "lochmaben-english-1544-1545"
       ],
       "year_end_note": "Inchcolm withdrawn March: do not show English occupied island at year-end. Haddington held, Hailes held at least in 1548.",
       "false_new_province_area_polygons": 0,
@@ -582,11 +634,13 @@
         "broughty-english-1547-1550",
         "lauder-english-1548-1550",
         "irish-crown-title-1541",
-        "eyemouth-fort-English-1547-1550"
+        "eyemouth-fort-English-1547-1550",
+        "dunglass-camp-english-1548-1549"
       ],
       "confirmed_expired_episode_ids": [
         "inchcolm-english-1547-1548",
-        "haddington-english-1548-1549"
+        "haddington-english-1548-1549",
+        "lochmaben-english-1544-1545"
       ],
       "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes tenure after 1548 unverified; no automatic continued solid icon. Hailes castle continuing control is UNSURE and explicitly pending, not an ended or confirmed active garrison.",
       "false_new_province_area_polygons": 0,
@@ -610,14 +664,17 @@
       "shetland-scotland",
       "guines-crown-1520s",
       "kingdom-of-scotland",
-      "eyemouth-fort-English-1547-1550"
+      "eyemouth-fort-English-1547-1550",
+      "dunglass-camp-english-1548-1549"
     ],
     "end_before_1550": [
       "inchcolm-english-1547-1548",
-      "haddington-english-1548-1549"
+      "haddington-english-1548-1549",
+      "lochmaben-english-1544-1545"
     ],
     "need_new_1550_study": true,
-    "do_not_claim_1550_actual_site_control_without_evidence": true
+    "do_not_claim_1550_actual_site_control_without_evidence": true,
+    "dunglass_note": "Official heritage source confirms camp during 1548–49 but does not identify exact 1550 withdrawal or destruction year. Carry as 1549 observed site and reassess in 1550. Modern estate point not camp walls."
   },
   "sources_registry": "SOURCE_REGISTRY.json",
   "precision_quality_note": "Hailes documented English castle garrison in 1548 only; neither documentary silence nor the year 1549 certifies its abandonment. When 1549 unverified, show dashed question point instead of verified solid English control."
