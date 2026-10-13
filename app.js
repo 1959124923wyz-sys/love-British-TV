@@ -30,9 +30,16 @@ const territoryRenderer=L.svg({pane:'territoryPane'});
 const wartimeRenderer=L.svg({pane:'controlAreaPane'});
 // The optional schematic area layer is below true site symbols; high zoom uses points only.
 map.createPane('warVicinityPane');map.getPane('warVicinityPane').style.zIndex='460';
-map.getPane('warVicinityPane').style.pointerEvents='none';
+map.getPane('warVicinityPane').style.pointerEvents='auto';
 const warVicinityRenderer=L.svg({pane:'warVicinityPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+map.createPane('contestedZonePane');
+map.getPane('contestedZonePane').style.zIndex='462';
+map.getPane('contestedZonePane').style.pointerEvents='auto';
+const contestedZoneRenderer=L.svg({pane:'contestedZonePane'});
+map.createPane('sovereigntyPane');
+map.getPane('sovereigntyPane').style.zIndex='410';
+const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -71,7 +78,7 @@ const categorySymbol=fallbackCodes;
 let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -139,6 +146,36 @@ function openHypothesis(feature){
  '<div class="research-body"><h3>构建方法</h3><p>'+escapeHTML(p.method||'按有史料的地名构建地理形状。')+'</p><h3>资料类型</h3><p>当地城镇及历史记载地点的现代地理参考，用于分析可能范围。正式边界研究持续进行。</p></div>'+
  '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看原始地理研究 ↗</a></details>';
  openPanel('dossier');
+}
+// All clickable polygon types share a source-aware map territory dossier.
+function openTerritoryDossier(feature,kind='historic'){
+ const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested';
+ const label=occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const description=p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。';
+ const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
+ const precision=p.precision_note||p.historical_boundary_precision||(
+  p.historical_boundary_confirmed===false?'没有经过史料审核的当代实测疆界，地图几何为概略参考。':'历史地理资料仍需核对');
+ const parties=p.controller_zh||(contested?(p.contenders_zh||[]).join('、'):'');
+ const relatedPlaces=(p.related_place_ids||[]).map(id=>findPlaceAcrossChapters(id)).filter(Boolean);
+ const relatedEvents=(p.related_event_ids||[]).map(id=>
+  [atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly].map(x=>x?.events?.find(e=>e.id===id)).find(Boolean)).filter(Boolean);
+ selected='';selectedItemYear=null;
+ const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
+  '<h2>'+escapeHTML(p.name||feature.id||'历史领土概况')+'</h2><p>'+escapeHTML(description)+'</p>'+
+  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('相关军事方',parties)+
+  row('疆界证据',p.historical_boundary_confirmed===true?'有史料支持的历史边线':'低精度示意，并非实测')+'</div>'+
+  '<p class="zone-precision-note"><strong>地图精度：</strong>'+escapeHTML(precision)+'</p>'+
+  (occupied?'<p class="zone-editorial-warning">紫色示意面表达有史料的英军驻点附近地区，无法证明所包围的整片土地都由英格兰统治。</p>':'')+
+  (contested?'<p class="zone-editorial-warning">蓝紫交错纹理是根据战事地点手工制作的阅读参考，不能当成史料实测的前线。</p>':'')+
+  (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
+   '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
+  (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
+   '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+ev.name)+'</button>').join('')+'</div>':'')+
+  listSources(p.source_ids||[],{id:p.id||feature.id});
+ openPanel('dossier');
+ $('dossierBody').querySelectorAll('[data-zone-place]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedPlaces[Number(n.dataset.zonePlace)],'place')));
+ $('dossierBody').querySelectorAll('[data-zone-event]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedEvents[Number(n.dataset.zoneEvent)],'event')));
 }
 function openCollection(items,title){
  if(!items.length)return;
@@ -407,15 +444,7 @@ function renderTerritories(){
    layer.options.className=klass;
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.history_description)+'</div>',
       {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
-   layer.on('click',()=>{
-    const place=findPlaceAcrossChapters(p.source_place_id);
-    if(place){openDossier(place,'place');return}
-    const citations=(p.source_urls||[]).filter(x=>/^https:\/\//.test(x))
-     .map(url=>'<p><a href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看地理与史料来源 ↗</a></p>').join('');
-    $('dossierBody').innerHTML='<div class="dossier-kicker">历史政治地理 · '+year+'年</div><h2>'+escapeHTML(p.name)+
-      '</h2><p>'+escapeHTML(p.history_description)+'</p>'+citations;
-    openPanel('dossier');
-   });
+   layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'historic')});
   }
  }).addTo(groups.territory);
  ensureTerritorialPatterns();
@@ -444,7 +473,7 @@ function renderPoliticalRelationAreas(){
   L.marker(center,{icon,pane:'controlAreaPane',zIndexOffset:0,bubblingMouseEvents:false})
    .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.annotation)+'</div>',
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
-   .on('click',()=>{if(place)openDossier(place,'place')})
+   .on('click',()=>{if(place)openDossier(place,'place');else openTerritoryDossier(f,'historic')})
    .addTo(groups.politicalRelations);
  }
 }
@@ -471,7 +500,7 @@ function renderControlAreas(){
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',()=>{
     const record=findPlaceAcrossChapters(p.source_place_id);
-    if(record)openDossier(record,'place');
+    if(record)openDossier(record,'place');else openTerritoryDossier(f,'historic');
    }).addTo(groups.controlAreas);
   // Low-key geo-label shows which urban area changes, with no blocking background.
   if(zoom>=6){
@@ -526,7 +555,7 @@ function renderWartimeControls(){
    .bindTooltip('<strong>'+escapeHTML(p.name||record?.name||'驻军据点')+'</strong><div class="atlas-hover-summary">'+
      escapeHTML(french?'法国守军 · 非英王控制':'英军实际驻点 · 非整个地区的疆界')+'</div>',
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
-   .on('click',()=>{if(record)openDossier(record,'place')})
+   .on('click',()=>{if(record)openDossier(record,'place');else openTerritoryDossier(f,'occupied')})
    .addTo(groups.wartimeControl);
  }
 }
@@ -732,7 +761,7 @@ async function loadKingdomBoundaries(){
    if(!group)continue;
    count++;
    const c=group==='scotland'?'#588ba8':group==='wales'?'#a78acb':'#815fd5';
-   const layer=L.geoJSON(f,{style:{color:c,weight:group==='wales'?1.8:1.4,dashArray:group==='wales'?'6 5':null,fillColor:c,fillOpacity:group==='scotland'?.25:group==='wales'?.18:.35,opacity:.95},interactive:true})
+   const layer=L.geoJSON(f,{renderer:sovereigntyRenderer,pane:'sovereigntyPane',interactive:true,bubblingMouseEvents:false,style:{color:c,weight:group==='wales'?1.8:1.4,dashArray:group==='wales'?'6 5':null,fillColor:c,fillOpacity:group==='scotland'?.25:group==='wales'?.18:.35,opacity:.95},interactive:true})
      .on('click',()=>openPolity(group)).addTo(groups.kingdom);
   }
   if(!count)throw new Error('Region names could not be decoded');
