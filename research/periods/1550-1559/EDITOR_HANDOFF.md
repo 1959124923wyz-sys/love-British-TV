@@ -54,3 +54,37 @@
 - [Cambridge加来1558落城](https://www.cambridge.org/core/books/abs/calais-garrison/fall-of-calais-in-1558/2330D21ED5D389BAFAE058D6C184ED25)、[History of Parliament 1558吉讷](https://historyofparliament.com/2024/04/30/prisoner-in-the-lords-william-grey/)。
 - [Historic England 1555 John Lok奴役](https://historicengland.org.uk/research/inclusive-heritage/the-slave-trade-and-abolition/sites-of-memory/slave-traders-and-plantation-wealth/britain-and-the-slave-trade/)、[British Museum莫斯科公司1555](https://www.britishmuseum.org/collection/object/H_1928-0315-1)。
 - [Larousse英法1559和约](https://www.larousse.fr/encyclopedie/divers/paix_du_Cateau-Cambr%C3%A9sis/112114)及[1559条约英译](https://en.wikisource.org/wiki/Treaty_of_Cateau-Cambr%C3%A9sis_(England_and_France))。
+
+
+## 调查员3｜逐年疆域补缺与主编入图说明（2026-10-13）
+
+本节覆盖先前首版研究后的**追加审计**；上方旧基线的“22事/15点/11变化/45来源/16待查”是当时计数。最新研究 **62来源、29史事、18地点Point、15地图变化Point、23原档任务**，10份逐年快照、9持续政治身份、8旧虚线参考区域不变，**真实考古/16世纪经过配准和授权可当领土的Polygon仍为0**。全部保留在 [PR #33](https://github.com/1959124923wyz-sys/love-British-TV/pull/33)，不直接更新正式 `main/data`。
+
+### 最影响地图动态的年度控制时间表
+
+| 时间 | 必须更新的控制关系 | 正确的地图形式 |
+| --- | --- | --- |
+| **1550** | 4月25日法国正式接布洛涅；2月苏法军夺回独立苏格兰布劳蒂及外围堡；**英军埃茅斯占领至1550年夏**，此后英军控制应消失；**邓巴Dunbar法国盟军1550年新修军堡**。此前Hailes已被苏军1548收复，绝不能沿用“1550英军未定”。 | Boulogne、Broughty、Eyemouth各自记录退出，不断层；邓巴仅HES古迹现代参考Point，无1550军堡真实墙界；苏格兰没有被法英兼并。 |
+| **1551—1555** | 加来Calais、吉讷Guînes、此前**被遗漏的沼泽堡Hammes**英军持续据守；爱尔兰中部Fort Governor与Fort Protector从1540年代就存在，不能突然从1556“生成新占地”。 | Calais和Guînes用旧点及不确定旧Pale虚线；Hammes仅历史事实，无可靠古堡GPS，**暂不Pin**；爱尔兰现存堡址Point与盖尔地方统治区同时表达。 |
+| **1556** | Queen’s County / King’s County殖民设郡法权、土地没收和英裔定居，与实际堡垒驻防分开；**因奇基斯岛Inchkeith苏法联合军堡1556—1564官方考古建设期**。 | 两旧英军据堡有证Point，现代Laois/Offaly县界不做实心英王占领；因奇基斯用HES考古位置Point，**苏格兰主权不变**。 |
+| **1557** | **埃茅斯同一海岬转入新的法国盟军驻堡时期**，与1547—1550年英军旧炮堡截然不同；法国另筑线。 | 1557—1558英军橙色绝不可复活；法国驻军身份与苏格兰法定主权分开，不整片涂法国。 |
+| **1558** | 英军加来防御网按次序失去：到**1月4日**Newnham Bridge、Risbank已由法军夺取（王室收藏馆引当日军报）；加来城中**1月7日城堡战事与1月8日完整收复**分别见王室收藏馆和加来市档案；1月吉讷失守，其后**Hammes城堡最后英军沿沼泽撤入佛兰德尔**。 | 依次记录外堡→城→吉讷→Hammes，不是1558年整块现代Pas-de-Calais突然画成历史精确Polygon。王室收藏馆称1558吉讷围城版画与BL Cotton Augustus I ii71同时代地图的城堡方位相互矛盾，**不拿版画描墙**。 |
+| **1559** | 卡托和约不恢复加来英国实际控制；法国退出埃茅斯的谈判记于1559年7月（实体拆堡可能后来）；**利斯Leith法军9月筑防御工事**，进入1560研究持续。 | 保持Calais、Guînes及旧Hammes区域法国控制；Leith无1559可证真实墙址Pin，事件入左栏；Eyemouth法国驻军退出和工程拆除两件事分开。 |
+
+### 值得立即审核的新史料（高价值古址）
+
+- [HES 邓巴 Castle Park SM5960](https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM5960)：1550法国盟军修筑防御堡；遗址可见壕沟，官方记1560拆除。考古参考NGR `NT 67833 79183`；现代180×170米保护地并非1550古堡实际堡墙。
+- [HES 因奇基斯岛 SM3838](https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM3838)：1556—1564苏法联合堡，原古工事遗迹尚存；现代保护区接近全岛，包含19／20世纪建筑，不能当1556法军“占领面积”。
+- [英国图书馆 Cotton MS Caligula B X/1](https://searcharchives.bl.uk/catalog/041-003481449)：1559年9月利斯法军筑垒记于原稿目录，实际原页尚未亲阅，故不上伪坐标。
+- [Royal Collection Calais 1558围城说明](https://militarymaps.rct.uk/other-16th-century-conflicts/view-of-the-siege-of-calais-1558-calais-nord-pas-de-calais-france-50deg5707n-01deg5122e-0)：引1558-01-04军报，支持Newnham/Rysbank前于城市的变色；[Guînes 1558围城说明](https://militarymaps.rct.uk/other-16th-century-conflicts/view-of-the-siege-of-guines-1558-guines-nord-pas-de-calais-france-50deg5201n-01deg5212e)说明Hammes最后英军离开，且当年版画的城堡方位不宜直接测绘。
+- [苏格兰埃茅斯考古论文](https://doi.org/10.1179/pma.1997.002)、[Eyemouth Museum](https://eyemouthmuseum.co.uk/the-museum/eyemouth-fort/)：英军至1550夏、法军1557新筑、1559谈判撤离与更晚拆堡必须分开。
+- [HES Hailes Castle官方文件](https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/22c5de1a-d6b9-40e0-b131-b02800bb45fb)：1548英军夺取**同年苏军收复**，已在第六章PR27研究分支更正；第七章不得把它写成1550英军驻防未知。
+
+### 对接主编的数据和不可逾越的地图准入线
+
+- `TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json`：**11个**跨年取得、易手、退出或筑垒episode和10年末状态矩阵，是主编先看的跨章节地图控制权依据。除经考古确定所在地的三处苏格兰建筑参考Point外，**Hammes旧堡和1559 Leith新垒仍保持无坐标**。
+- `CONTROL_TRANSITION_1549_1559.json`、`MAP_DELTA_1550_1559.geojson`、`POLITICAL_CONTROL_SITES_1550_1559.geojson`和`ATLAS_REVIEW_CANDIDATE.json` 已同步更新。用 `stable_id` 合并并按年份单独着色，1560必须沿用1559实际政权；不能因无数据清空或沿用英国橙色。
+- **点≠面**：HES古迹法定保护边界、殖民法令县界、古城堡旧画中的城墙、现代堡垒的GPS点都不等于1550年代英国或法国直接实控面；边界没获得证实保持虚线与`fill_authorized:false`，不给精准面积。
+- 原档待查清单扩大到**23项（P0共13项）**，最主要为Hammes古址、Guînes伪方位版画、1559 Eyemouth实际撤军日、Dunbar／Inchkeith／Leith军堡原档和1556定居者逐宗地契。地图按证据粒度逐步发布，不得捏造补齐。
+
+研究源、候审事件、阶段报告及质量说明由调查员提交本PR，主编择要移植，不得整包覆盖与PR27已不一致的生产前端与历史数据。
