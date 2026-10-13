@@ -24,8 +24,10 @@ require("atlas-aggregate" in app and "groups.clusterExpanded.clearLayers()" in a
 require(".on('mouseover',()=>{if(!expandedPinned" in app
         and ".on('click',()=>expandCluster(g,true))" in app,
         "hover/click expansion from group hub")
-require("map.on('click',()=>{if(activeClusterKey)closeCluster()})" in app,
-        "click outside closes flyout")
+require("map.on('click',e=>{" in app
+        and "if(activeClusterKey)closeCluster()" in app
+        and "openMapTerritoryAt(e.latlng)" in app,
+        "click outside closes flyout while allowing reliable source-aware territory click")
 require("otherPoints=clusterObstacles" in app
         and "overflow*250+occlusion*5" in app,
         "avoid nearby markers and viewport bounds")
