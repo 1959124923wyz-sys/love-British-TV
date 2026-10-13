@@ -521,12 +521,17 @@
       "type": "English_support_artillery_fort_separate_from_Broughty_Castle",
       "source_ids": [
         "SC-NLS-FORTHILL-OS-GAZETTEER",
-        "SC-HES-2022-HADDINGTON"
+        "SC-HES-2022-HADDINGTON",
+        "SC-FORTHILL-CURRENT-LOCALITY"
       ],
-      "coords": null,
-      "precision": "NLS historical gazetteer says half a mile NW of Broughty Castle; original earthwork wholly gone and GPS exact fort location not attested",
+      "coords": [
+        -2.87601,
+        56.47487
+      ],
+      "precision": "Modern quarter Forthill centroid, NOT vanished 1548 fort archaeological footprint; 500+m location uncertainty",
       "territorial_change": "1548 fortified English hill position until 1550 dismantling, location not precise enough for source-supported point",
-      "polygon_verified": false
+      "polygon_verified": false,
+      "draw_mode": "approximate_dashed_locator"
     }
   ],
   "year_end_snapshots": [
