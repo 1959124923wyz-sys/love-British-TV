@@ -730,6 +730,9 @@ function openMapTerritoryAt(latlng){
    f.properties?.zone_type==='contested'&&yearValidWarZone(f,year)&&
    featureContainsCoordinate(f,lon,lat));
   if(contested){openTerritoryDossier(contested,'contested');return true;}
+  const reach=(warReachAreas?.features||[]).find(f=>
+   f.properties?.zone_type==='war_reach_schematic'&&yearValidWarZone(f,year)&&featureContainsCoordinate(f,lon,lat));
+  if(reach){openTerritoryDossier(reach,'war-reach');return true;}
  }
  if($('toggleTerritorialFootprints').checked){
   const historic=(territorialFootprints?.features||[]).find(f=>{
@@ -1027,15 +1030,15 @@ $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventL
 map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
-map.on('click',e=>{
- if(activeClusterKey)closeCluster();
+// Native capture handles clicks even where Leaflet Canvas or SVG layers consume
+// the bubbling event. Historical chronology remains the authority for hit tests.
+map.getContainer().addEventListener('click',event=>{
  if(!atlas)return;
- // Let actual clickable paths, routes and event markers keep their own actions.
- // Otherwise the map location itself becomes a reliable territory hit target.
- const element=e.originalEvent?.target;
- if(element?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit'))return;
- openMapTerritoryAt(e.latlng);
-});
+ const t=event.target;
+ if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit'))return;
+ openMapTerritoryAt(map.mouseEventToLatLng(event));
+},true);
+map.on('click',()=>{if(activeClusterKey)closeCluster()});
 
 syncPanels();
 window.addEventListener('keydown',e=>{if(!atlas||e.target?.closest?.('input,button,select,textarea,[contenteditable="true"]'))return;if(e.key==='ArrowLeft'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'){stopPlay();setYear(year+1)}});
