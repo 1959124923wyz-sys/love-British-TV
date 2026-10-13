@@ -662,25 +662,26 @@
       "start_year": 1538,
       "end_year": 1538,
       "visible_from": 1538,
-      "date_label": "1538",
+      "date_label": "year",
       "name": "切特西修道院建筑被拆，石材供应王室宫殿",
       "category": "ECO",
       "icon_code": "ECO",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not_verified_for_map",
+      "lat": 51.393451,
+      "lng": -0.500148,
+      "geo_precision": "Modern Historic England scheduled Abbey site. The abbey/site is relevant to dismantling, not geographic footprint of stone shipments.",
       "geography_label": "英格兰萨里",
-      "description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。",
-      "short_description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。",
+      "description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。 修道院遗址现址可由英国历史环境机构的保护遗址名录定位，遗址界并非1538年王室财产的历史边界。",
+      "short_description": "1538年6月22日的英王财政付款记录记述拆毁工程与物资转运，应区分拆除成本、王室取得的资产与贸易收益。 修道院遗址现址可由英国历史环境机构的保护遗址名录定位，遗址界并非1538年王室财产的历史边界。",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-CHERTSEY-HE-SITE"
       ],
       "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
       "significance": {
         "level": 2
       },
       "colonial_profit": null,
-      "position_type": "chronology_only",
+      "position_type": "modern_archaeological_monastery_site_only_no_extent",
       "editorial_status": "research_draft_awaits_editor",
       "research_event_id": "1530S-E016",
       "economic_fields": null,
@@ -693,25 +694,27 @@
       "start_year": 1538,
       "end_year": 1538,
       "visible_from": 1538,
-      "date_label": "1538",
+      "date_label": "1538 surrender according TNA E322/39 and Historic England scheduled monument; Grade I listing describes final dissolution 1540; separate dates not reconciled",
       "name": "比沙姆修道院向英王政府交出地产",
       "category": "ECO",
       "icon_code": "ECO",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not_verified_for_map",
+      "lat": 51.5577,
+      "lng": -0.7798,
+      "geo_precision": "Modern Bisham Abbey building historical landmark, not surveyed Tudor ecclesiastical estate boundary",
       "geography_label": "英格兰伯克郡",
-      "description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。",
-      "short_description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。",
+      "description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。 英国Historic England两处官方名录用语存在1538交还与1540解散的纪年差别，资料暂保留1538交还的来源主张，不能据此断言已于1538年完全废除所有机构活动。",
+      "short_description": "官方原始文书目录记录1538年宗教机构交出地产；具体本地资产金额、转让范围与收益均待原契据核对。 英国Historic England两处官方名录用语存在1538交还与1540解散的纪年差别，资料暂保留1538交还的来源主张，不能据此断言已于1538年完全废除所有机构活动。",
       "source_ids": [
-        "ENG-TNA-DISSOLUTION-COLLECTION"
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-BISHAM-HE-SITE",
+        "ENG-BISHAM-HE-BUILDING"
       ],
       "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
       "significance": {
         "level": 3
       },
       "colonial_profit": null,
-      "position_type": "chronology_only",
+      "position_type": "modern_archaeological_monastery_site_only_no_extent",
       "editorial_status": "research_draft_awaits_editor",
       "research_event_id": "1530S-E017",
       "economic_fields": null,
@@ -1574,6 +1577,36 @@
       "evidence_read_level": "institutional gazetteer verified",
       "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
       "precision_warning": "Town center only, not 1530 royal court building or colonial shorelines."
+    },
+    {
+      "id": "ENG-CHERTSEY-HE-SITE",
+      "title": "Chertsey Abbey Scheduled Monument 1008524",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1008524",
+      "kind": "official_historic_site",
+      "evidence_read_level": "published monument register",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Do not interpret modern protected area as Tudor actual manor perimeter."
+    },
+    {
+      "id": "ENG-BISHAM-HE-SITE",
+      "title": "Bisham Abbey archaeological site (NHLE 1007934)",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1007934",
+      "kind": "official_heritage_monastery_archaeology",
+      "evidence_read_level": "official scheduled monument listing",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Historic England's Grade I Listed Building record NHLE 1303584 instead describes dissolution in 1540; exact surrender/cessation status needs dating of original E322/39. Modern site is not 1538 land boundary."
+    },
+    {
+      "id": "ENG-BISHAM-HE-BUILDING",
+      "title": "Bisham Abbey Grade I Listed Building NHLE 1303584",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1303584",
+      "kind": "official_heritage_building_history",
+      "evidence_read_level": "official Grade I heritage listing",
+      "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+      "precision_warning": "Disputed dates must be separated by legal surrender/refoundation/final dissolution; present structure partially later."
     }
   ],
   "routes": [],
