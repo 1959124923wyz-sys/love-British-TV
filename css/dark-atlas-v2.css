@@ -553,7 +553,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .map-year-card{
  display:grid!important;grid-template-columns:max-content minmax(0,1fr);
  align-items:start;gap:7px 14px;
- width:344px;min-width:270px;max-width:min(344px,calc(100% - 20px));
+ width:344px!important;min-width:0;max-width:min(344px,calc(100vw - 36px))!important;
  box-sizing:border-box;padding:12px 14px;
  flex-wrap:nowrap;overflow-wrap:normal;word-break:normal;
 }
@@ -579,7 +579,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 #controlStatus .control-status-change{margin:5px 0 0;border-top:1px solid #36506b;
  padding-top:6px;font-size:10px;line-height:1.5;color:#d0c0e6;word-break:keep-all;}
 @media(max-width:680px){
- .map-year-card{width:min(315px,calc(100vw - 30px));min-width:0;gap:5px 9px;padding:9px 10px;}
+ .map-year-card{width:min(315px,calc(100vw - 30px))!important;max-width:calc(100vw - 30px)!important;min-width:0;gap:5px 9px;padding:9px 10px;}
  .map-year-card #bigYear{font-size:24px;}
  #controlStatus .control-status-line{gap:8px;}
 }
