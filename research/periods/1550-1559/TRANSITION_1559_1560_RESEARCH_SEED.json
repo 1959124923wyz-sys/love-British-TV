@@ -1,0 +1,113 @@
+{
+  "schema": "1559_to_1560_continuity_seed_v1",
+  "from_year_end": 1559,
+  "to_decade": "1560-1569",
+  "status": "research_seed_not_completed_1560_atlas",
+  "political_place_identities": [
+    {
+      "stable_id": "calais-crown",
+      "name": "加来英王军政据点",
+      "controller_at_1559": "Kingdom of France, formerly England until January 1558",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name": "都柏林英王爱尔兰行政核心",
+      "controller_at_1559": "Historical relationship preserved; local jurisdictions may differ",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name": "泽西王室属地",
+      "controller_at_1559": "Historical relationship preserved; local jurisdictions may differ",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name": "马恩地方领主",
+      "controller_at_1559": "Historical relationship preserved; local jurisdictions may differ",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name": "奥克尼苏格兰王权",
+      "controller_at_1559": "Historical relationship preserved; local jurisdictions may differ",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name": "设得兰苏格兰王权",
+      "controller_at_1559": "Historical relationship preserved; local jurisdictions may differ",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "name": "吉讷英王边防据点",
+      "controller_at_1559": "Kingdom of France, formerly England until January 1558",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "name": "独立苏格兰王国",
+      "controller_at_1559": "Sovereign independent Scottish kingdom",
+      "identity_must_persist_after_sovereignty_transfer": true
+    },
+    {
+      "stable_id": "channel-guernsey",
+      "name": "根西王室属地／独立法权（原有政制）",
+      "controller_at_1559": "Historical relationship preserved; local jurisdictions may differ",
+      "identity_must_persist_after_sovereignty_transfer": true
+    }
+  ],
+  "critical_yearend_rules": [
+    "Calais remains under French actual control in 1559 and 1560 despite a future treaty return clause; do NOT restore English color without reconquest.",
+    "Guînes French since 1558; do not show English in 1560.",
+    "Scotland independent; English 1560 intervention near Leith would not mean whole Scotland annexation.",
+    "Boulogne and Broughty English garrisons terminated 1550; never reappear as British colonies.",
+    "Queen's/King's County 1556 statutory law persists; legal shire naming not proof of full actual military control modern Laois/Offaly.",
+    "Jersey, Guernsey and Isle of Man retain separate political relationships.",
+    "Muscovy Russia, West Africa and Elmina are NOT England's sovereign territories."
+  ],
+  "place_controller_at_1559": [
+    {
+      "stable_id": "french-boulogne-from-1550",
+      "controller": "France",
+      "source_ids": [
+        "FR-HELIOT-BOULOGNE-1958"
+      ]
+    },
+    {
+      "stable_id": "scottish-broughty-from-1550",
+      "controller": "Scotland",
+      "source_ids": [
+        "SC-HES-BROUGHTY-1550"
+      ]
+    },
+    {
+      "stable_id": "irish-fort-protector-1550s",
+      "controller": "English Crown limited actual fortified core with Gaelic resistance",
+      "source_ids": [
+        "IE-LAOIS-COUNTY-DEVELOPMENT-FORT"
+      ]
+    },
+    {
+      "stable_id": "irish-fort-governor-1550s",
+      "controller": "English Crown limited actual fortified core with Gaelic resistance",
+      "source_ids": [
+        "IE-OFFALY-NMS-URBAN-ARCHAEOLOGY"
+      ]
+    }
+  ],
+  "unresolved_early_1550_siege_exits": [
+    "eyemouth-fort-English-1547-1550",
+    "lauder-english-1548-1550",
+    "dunglass-camp-english-1548-1549",
+    "hailes-english-1548-date_unknown"
+  ],
+  "business_and_forced_labor_history": [
+    "1555 Muscovy Company charter: Russian land independent, only source-known trading sites permitted",
+    "Guinea English slaving episodes 1555–57, Hawkins 1562 belongs to next chapter"
+  ],
+  "verified_exact_1559_old_territorial_polygons": 0,
+  "editor_note": "Copy historical identities and year-end actual controller, not inherited orange land map by default."
+}
