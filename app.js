@@ -638,9 +638,13 @@ function renderAnnualControlSummary(){
  const english=now.filter(f=>!f.properties.not_an_English_control_feature);
  const french=now.filter(f=>f.properties.not_an_English_control_feature);
  const gained=sites.filter(f=>activeAt(f,year)&&!activeAt(f,year-1)).length;
- const lost=sites.filter(f=>!activeAt(f,year)&&activeAt(f,year-1)).length;
- el.textContent='英军局部驻点 '+english.length+'处 · 法军对抗点 '+french.length+'处'+
-  (gained||lost?'｜本年新增 '+gained+'处、退出 '+lost+'处':'');
+ const gone=sites.filter(f=>!activeAt(f,year)&&activeAt(f,year-1));
+ // End of available evidence is not proof of a withdrawal. Hailes 1549 is unresolved.
+ const confirmedExited=gone.filter(f=>f.properties.historical_actual_end_year!=null).length;
+ const uncertain=gone.length-confirmedExited;
+ const changes=[gained?'本年新增'+gained+'处':'',confirmedExited?'确证退出'+confirmedExited+'处':'',
+  uncertain?'另'+uncertain+'处续驻待核':''].filter(Boolean).join('、');
+ el.textContent='英军局部驻点 '+english.length+'处 · 法军对抗点 '+french.length+'处'+(changes?'｜'+changes:'');
  el.hidden=false;
 }
 function setYear(v){
