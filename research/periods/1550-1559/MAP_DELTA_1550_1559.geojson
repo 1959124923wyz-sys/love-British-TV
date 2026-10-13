@@ -2,12 +2,17 @@
   "type": "FeatureCollection",
   "name": "1550s territorial military control and forced settlement legal changes",
   "metadata": {
-    "features": 13,
+    "features": 15,
     "precision": "historical urban site points and political events, not cadastral polygons",
     "actual_new_English_contiguous_colonial_province_shapes": 0,
     "actual_former_English_French_city_sites_recaptured_1550_1558": true,
     "hammes_archive_only": "Hammes English Pale garrison exit in January 1558 was a further territorial control delta but is deliberately NOT added to point GeoJSON pending historic castle GIS.",
-    "authentic_new_military_area_polygon_count": 0
+    "authentic_new_military_area_polygon_count": 0,
+    "new_architecturally_dated_defence_sites": [
+      "Dunbar 1550",
+      "Inchkeith 1556"
+    ],
+    "no_French_crown_sovereignty_of_Scottish_land": true
   },
   "features": [
     {
@@ -401,6 +406,71 @@
         ],
         "notes": "Different military occupation from English 1547 fort; archaeology negotiated July 1559 departure, 1559 exact end and physical demolitions unsettled.",
         "English_controller_1559": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-dunbar-french-allied-fort-built-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5173892,
+          56.0045018
+        ]
+      },
+      "properties": {
+        "stable_id": "dunbar-french-allied-fort-built-1550",
+        "parent_stable_id": "dunbar-french-allied-fort-built-1550",
+        "name": "1550年苏格兰邓巴法军新筑防御堡历史考古点",
+        "year": 1550,
+        "month": null,
+        "day": null,
+        "change_type": "Franco_Scottish_allied_fortification_built_in_independent_Scotland_not_British_expansion",
+        "source_ids": [
+          "SC-HES-DUNBAR-FRENCH-FORT-1550",
+          "SC-TROVE-DUNBAR-1550-EXCAV"
+        ],
+        "original_fort_site_coordinates_not_all_verified": true,
+        "exact_Tudor_military_boundary_not_known": true,
+        "approximate_urban_or_archaeology_point": true,
+        "no_county_area_claim": true,
+        "Scottish_sovereignty_continues": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "old_fort_true_wall_georeferenced": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-inchkeith-franco-scottish-fort-1556-1564",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1351895,
+          56.0323579
+        ]
+      },
+      "properties": {
+        "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+        "parent_stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+        "name": "1556年起苏法联合筑防的苏格兰因奇基斯岛",
+        "year": 1556,
+        "month": null,
+        "day": null,
+        "change_type": "Franco_Scottish_allied_fortification_built_in_independent_Scotland_not_British_expansion",
+        "source_ids": [
+          "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+        ],
+        "original_fort_site_coordinates_not_all_verified": true,
+        "exact_Tudor_military_boundary_not_known": true,
+        "approximate_urban_or_archaeology_point": true,
+        "no_county_area_claim": true,
+        "Scottish_sovereignty_continues": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "old_fort_true_wall_georeferenced": false
       }
     }
   ]
