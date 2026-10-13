@@ -367,8 +367,85 @@
       "read_scope": "official_location_record",
       "precision_warning": "Church marker represents occupied Haddington town center not exact bastion trace.",
       "original_sixteenth_century_manuscript_read": false
+    },
+    {
+      "id": "SC-NLS-1540S-MAPS",
+      "title": "Scotland: Defending the Nation – Mapping the Military Landscape",
+      "institution": "National Library of Scotland",
+      "url": "https://blog.nls.uk/scotland-defending-the-nation/",
+      "kind": "national_library_cartographic_history",
+      "finding": "1547 English Tudor military produced measured fort plans incl Eyemouth and regional castles; primary map collection reference.",
+      "read_scope": "library_article_read",
+      "precision_warning": "Historical maps protected/copyrighted, not automatically traced; date/site matches must be independently checked.",
+      "original_sixteenth_century_manuscript_read": false
+    },
+    {
+      "id": "SC-EYEMOUTH-MUSEUM",
+      "title": "Eyemouth Fort history",
+      "institution": "Eyemouth Museum",
+      "url": "https://eyemouthmuseum.co.uk/the-museum/eyemouth-fort/",
+      "kind": "regional_museum_specialist_history",
+      "finding": "English built Eyemouth fort 1547 and maintained to peace in 1550; later 1557–60 French rebuilding distinct.",
+      "read_scope": "museum_history_read",
+      "precision_warning": "Museum states demolished in 1550 while some others cite 1551; 1550 date exact pending treaty/archaeology.",
+      "original_sixteenth_century_manuscript_read": false
+    },
+    {
+      "id": "SC-CALDWELL-EYEMOUTH",
+      "title": "David Caldwell & Gordon Ewart, Excavations at Eyemouth, Berwickshire in a mid 16th century trace italienne fort",
+      "institution": "Post-Medieval Archaeology",
+      "url": "https://doi.org/10.1179/pma.1997.002",
+      "kind": "peer_reviewed_archaeological_article_abstract",
+      "finding": "English Eyemouth fortified September 1547, held until summer 1550; 1980–88 excavation distinguished later 1557 French fort line.",
+      "read_scope": "published_abstract_search_excerpt",
+      "precision_warning": "No article's detailed Fig/site digitized; no 1547 wall GeoJSON polygon claimed.",
+      "original_sixteenth_century_manuscript_read": false
+    },
+    {
+      "id": "SC-HES-HAILES-MONUMENT",
+      "title": "Hailes Castle SM13330 scheduled monument",
+      "institution": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM13330",
+      "kind": "official_national_monument_record",
+      "finding": "NT 57481 75769 historical location; current monument protected polygon NOT 1548 English garrison geometry.",
+      "read_scope": "official_text_read",
+      "precision_warning": "Coordinates anchored from independent approximate 55.973,-2.6832. Do not reuse modern designation boundary as Tudor footprint.",
+      "original_sixteenth_century_manuscript_read": false
+    },
+    {
+      "id": "SC-LAUDER-MODERN-LOC",
+      "title": "Lauder Scottish Borders modern town centroid",
+      "institution": "OpenStreetMap via Mapcarta",
+      "url": "https://mapcarta.com/17635314",
+      "kind": "modern_gazetteer",
+      "finding": "55.71936 -2.74838 modern settlement center; archaeology locates old English fort only approximately NT53 47.",
+      "read_scope": "modern_coordinates_read",
+      "precision_warning": "Town marker not English fort actual position.",
+      "original_sixteenth_century_manuscript_read": false
+    },
+    {
+      "id": "SC-EYEMOUTH-SITE-NGR",
+      "title": "Eyemouth Fort archaeological National Grid",
+      "institution": "Post-Medieval Archaeology Caldwell/Ewart",
+      "url": "https://doi.org/10.1179/pma.1997.002",
+      "kind": "peer_reviewed_geographic_grid",
+      "finding": "Fort site NGR NT 943649 (no submeter GPS given).",
+      "read_scope": "indexed_abstract",
+      "precision_warning": "Use approximate marker center after audited conversion or geocoding; avoid fabricating precise WGS84.",
+      "original_sixteenth_century_manuscript_read": false
+    },
+    {
+      "id": "SC-HAILES-MODERN-LOC",
+      "title": "Hailes Castle general modern coordinate",
+      "institution": "Scottish public heritage listings",
+      "url": "https://www.parksandgardens.org/places/hailes-castle",
+      "kind": "secondary_gazetteer",
+      "finding": "Modern ruin lat 55.9732 lon -2.683214, consistent HES NT 574 757.",
+      "read_scope": "public_geo_record",
+      "precision_warning": "Not a surveyed 1548 military footprint.",
+      "original_sixteenth_century_manuscript_read": false
     }
   ],
-  "count": 31,
+  "count": 38,
   "presumed_exact_historic_survey_boundaries_from_sources": 0
 }
