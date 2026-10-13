@@ -360,7 +360,8 @@ try:
               // A valid physical map click can hit the Leaflet Canvas beneath
               // this SVG; the app's geographical fallback must still open it.
               const top=document.elementFromPoint(x,y);
-              if(!top||top.closest?.('.leaflet-marker-icon,.atlas-aggregate,.atlas-local-english-garrison,.atlas-french-counterfort,.political-relation-symbol,.leaflet-control-container,.time-panel,.map-year-card,.leaflet-tooltip'))continue;
+              if(!top||top.closest?.('.leaflet-marker-icon,.atlas-aggregate,.political-relation-symbol,.leaflet-control-container,.time-panel,.map-year-card,.leaflet-tooltip'))continue;
+              if(!selector.includes('atlas-local-english-garrison')&&top.closest?.('.atlas-local-english-garrison,.atlas-french-counterfort'))continue;
               // Hovering nearby can expand markers. Leave room around their
               // full hit boxes instead of accepting a pixel at their edges.
               const blockers=[...document.querySelectorAll('.leaflet-marker-icon,.atlas-local-english-garrison,.atlas-french-counterfort')]
