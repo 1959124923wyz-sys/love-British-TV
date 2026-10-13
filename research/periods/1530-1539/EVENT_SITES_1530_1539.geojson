@@ -3,7 +3,7 @@
   "name": "1530s sourced event sites in calendar years",
   "metadata": {
     "no_automatically_assumed_colonial_claims": true,
-    "feature_count": 9,
+    "feature_count": 10,
     "modern_site_centroids_not_historic_area": true
   },
   "features": [
@@ -255,6 +255,34 @@
         "site_accuracy": "Modern coordinate for documentary anchor, NOT historical footprint or claimed sovereignty",
         "area_sqkm": null,
         "kind": "event_or_modern_site_point",
+        "no_land_acquisition_inferred": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-1530S-E026",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8587,
+          50.9513
+        ]
+      },
+      "properties": {
+        "name": "亨利八世在加来接待法王弗朗索瓦一世；加来城防持续运作",
+        "year": 1532,
+        "source_ids": [
+          "CAL-HRP-1532-MEETING",
+          "CAL-HALL-CHRONICLE-1532"
+        ],
+        "source_event_id": "1530S-E026",
+        "political_control_effect": "demonstrated_continuing_English_garrison_in_Calais_not_new_territory",
+        "geographic_source": "Hall contemporary Tudor history and British Historic Royal Palaces confirm English-held Calais in 1532; only modern city geographic anchor",
+        "site_accuracy": "city_location_NOT sixteenth-century walls or meeting room",
+        "historical_border_confirmed": false,
+        "area_sqkm": null,
+        "kind": "event_or_modern_ruin_point",
+        "period": "1530-1539",
         "no_land_acquisition_inferred": true
       }
     }
