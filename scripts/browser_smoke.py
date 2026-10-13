@@ -372,8 +372,8 @@ try:
               document.querySelectorAll('#dossierBody .zone-record-link').length>0""",driver)
     click_map_path("#map .atlas-war-reach-schematic")
     verify("PR38 military reach must disclose non-annexation and sources",
-           """document.querySelector('#dossierBody').textContent.includes('英军推进／补给影响示意') &&
-              document.querySelector('#dossierBody').textContent.includes('不能证明沿途') &&
+           """document.querySelector('#dossierBody').textContent.includes('有据军事行动方向示意') &&
+              document.querySelector('#dossierBody').textContent.includes('不是1540年代测绘道路') &&
               document.querySelector('#dossierBody .source-details')!==null""",driver)
     click_map_path("#map .atlas-contested-zone")
     wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
