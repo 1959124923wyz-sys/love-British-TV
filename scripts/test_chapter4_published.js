@@ -58,14 +58,14 @@ for(const feature of hypotheses.features){
 for(const feature of grounds.features){
  assert.equal(feature.properties.verified_1520s_historical_border,false,'Modern coastlines must not be interpreted as exact Tudor boundaries');
 }
-assert.match(html,/id="chapterFour"/);
-assert.match(html,/max="1539"/);
-assert.match(html,/app\.js\?v=chapter5-v150/);
+assert.ok(JSON.parse(read('data/chapters.json')).chapters.some(c=>c.id==='chapterFour'));
+assert.match(html,/id="yearRange"/);
+assert.match(html,/app\.js\?v=timeline-v160/);
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1539.geojson'"));
-assert.ok(app.includes("Math.min(1539"),'Years capped at old third chapter');
-assert.ok(app.includes("year===1539"),'Autoplay must reach 1529 then stop');
-assert.ok(app.includes("y>=1497&&y<=year"),'Milestones expose future dates');
+assert.ok(app.includes("Math.min(lastPublishedYear"),'Years capped at old third chapter');
+assert.ok(app.includes("year===lastPublishedYear"),'Autoplay must reach 1529 then stop');
+assert.ok(app.includes("e.year>=chapter.start&&e.year<=year"),'Milestones expose future dates');
 assert.ok(app.includes("fullArchive||occurredByYear(e,year)"),'Chapter sidebar reveals future events');
 assert.ok(app.includes("if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;"),'Routes have no year gate');
 assert.ok(app.includes("focusEventFromSidebar(item)"),'Double-click navigation missing');
