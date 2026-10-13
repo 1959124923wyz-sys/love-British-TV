@@ -4,27 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#081422">
-<meta name="description" content="英国殖民扩张与政治控制历史地图：已发布1497—1549五个历史章节，三级时间轴支持逐年查阅与长期历史导航。">
+<meta name="description" content="英国殖民扩张与政治控制历史地图：已发布1497—1549六个历史章节，三级时间轴支持逐年查阅与长期历史导航。">
 <title>帝国的代价 | 英国殖民历史动态地图 · 1497—1549</title>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v170">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v171">
 
 </head>
 <body>
 <div class="site">
 <header class="masthead">
- <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>THE COST OF EMPIRE · HISTORICAL ATLAS</small></div></div>
+ <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>英国殖民扩张与掠夺历史地图</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
- <div class="head-actions"><span class="version">1497—1549 · PILOT v1.7.0</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1549 · PILOT v1.7.1</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
   <div class="sidebar-main">
    <details class="chapter-card" id="chapterCard" open>
     <summary aria-label="展开或折叠本章导语">
-     <span class="chapter-headline"><span class="eyebrow"><span id="chapterLabel">CHAPTER 001 / 1497—1499</span></span><span class="chapter-title"><span id="chapterTitlePrimary">大西洋彼岸</span><em id="chapterTitleSecondary">的第一道声索</em></span></span>
+     <span class="chapter-headline"><span class="eyebrow"><span id="chapterLabel">第一章 · 1497—1499</span></span><span class="chapter-title"><span id="chapterTitlePrimary">大西洋彼岸</span><em id="chapterTitleSecondary">的第一道声索</em></span></span>
      <span class="chapter-chevron" aria-hidden="true">⌃</span>
     </summary>
     <div class="chapter-body"><p class="intro" id="chapterIntro">1497年5月，“马修号”从布里斯托尔驶向大西洋。卡博特持有英王亨利七世的特许状，希望找到通往亚洲的西方航路和新的贸易机会。数周后，船员们望见北美海岸；那里早已有人居住，而他们尚不知眼前的土地究竟位于何处。</p></div>
@@ -53,8 +53,10 @@
      <div class="legend-items">
       <div><i class="swatch territory"></i>紫色填充＋虚线 · 加来概略范围</div>
       <div><i class="swatch city-occupation"></i>小圆点 · 有据城市位置（非面积）</div>
+       <div><i class="swatch english-garrison"></i>橙色虚线环 · 英军实际驻点（非占地边界）</div>
+       <div><i class="swatch french-defence"></i>青绿虚线环 · 法军抵抗据点（非法属英占区）</div>
       <div><i class="swatch dependency"></i>斜线或交叉纹 · 特殊领地关系</div>
-      <div><i class="swatch control"></i>英格兰 · 紫色 / 苏格兰 · 蓝灰</div>
+      <div><i class="swatch control"></i>现代地理参照 · 英格兰紫色／独立苏格兰蓝灰</div>
       <div><i class="swatch dash"></i>航海方向示意</div>
       <div><i class="swatch major"></i>重大事件</div>
       <div><i class="swatch medium"></i>区域事件</div>
@@ -72,7 +74,7 @@
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
 
   <div class="map-top">
-   <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
+   <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span><span id="controlStatus" class="year-control-status" hidden aria-label="本年驻军控制状态"></span></div>
 
   </div>
   <div class="time-panel" aria-label="世纪、十年和逐年历史时间轴">
@@ -101,7 +103,7 @@
   
  </main>
  <aside class="dossier" id="dossier" aria-live="polite">
-   <div class="dossier-top"><span>HISTORICAL DOSSIER</span><button id="resetDossier" type="button" title="返回概览">↶</button></div>
+   <div class="dossier-top"><span>历史档案与文献</span><button id="resetDossier" type="button" title="返回概览">↶</button></div>
    <div id="dossierBody">
     <div class="dossier-kicker">1497—1500 · 本章</div><h2>向西驶去</h2>
     <p>从布里斯托尔起航的“马修号”，将英格兰王室支持的远航带到了北美海岸。</p>
@@ -113,6 +115,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=timeline-v170"></script>
+<script src="app.js?v=timeline-v171"></script>
 </body>
 </html>

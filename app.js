@@ -50,7 +50,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  const meta=iconMeta(item);
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
-const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，历史定位为参考位置':'')+'">'+svgIcon(item)+'</div>';
+const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，历史定位为参考位置':'')+'">'+svgIcon(item)+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
 function syncPanels(){
@@ -242,7 +242,7 @@ function expandCluster(group,pin=false){
  coords.forEach((pos,i)=>{
   const record=items[i],item=record.item,d=27;
   const icon=L.divIcon({className:'atlas-flyout-icon'+(item.id===focusedEventId?' atlas-target-marker':''),html:'<div class="expanded-event">'+iconHTML(item)+'</div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
-  const marker=L.marker(map.containerPointToLatLng(L.point(pos.x,pos.y)),{icon,title:item.name,zIndexOffset:1800+i,bubblingMouseEvents:false})
+  const marker=L.marker(map.containerPointToLatLng(L.point(pos.x,pos.y)),{icon,zIndexOffset:1800+i,bubblingMouseEvents:false})
    .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[14,0]})
    .on('mouseover',cancelClusterClose)
@@ -296,14 +296,14 @@ function renderPoints(){
    const record=g.items[0],item=record.item;
    const d=levelOf(item)===3?30:levelOf(item)===2?27:23;
    const ico=L.divIcon({className:item.id===focusedEventId?'atlas-target-marker':'',html:iconHTML(item),iconSize:[d,d],iconAnchor:[d/2,d/2]});
-   L.marker([record.lat,record.lng],{icon:ico,title:item.name,zIndexOffset:500+levelOf(item)*60})
+   L.marker([record.lat,record.lng],{icon:ico,zIndexOffset:500+levelOf(item)*60})
     .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
     .on('click',()=>openDossier(item,record.type)).addTo(groups.cluster);
    continue;
   }
   const important=g.items.some(x=>levelOf(x.item)===3);
   const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+(g.items.some(x=>x.item.id===focusedEventId)?' atlas-target-aggregate':'')+'"><strong>'+g.items.length+'</strong></div>',iconSize:[36,36],iconAnchor:[18,18]});
-  L.marker(g.latlng,{icon:ico,title:g.items.length+'项历史记录',zIndexOffset:950})
+  L.marker(g.latlng,{icon:ico,zIndexOffset:950})
    .on('mouseover',()=>{if(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|'))expandCluster(g)})
    .on('mouseout',scheduleClusterClose)
    .on('click',()=>expandCluster(g,true))
@@ -312,7 +312,7 @@ function renderPoints(){
  if(atlas.candidates&&year<=1499){
   for(const c of atlas.candidates){
    const ico=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
-   L.marker([c.lat,c.lng],{icon:ico,title:c.name})
+   L.marker([c.lat,c.lng],{icon:ico})
     .bindTooltip(hoverCard(c.name,c.note),{direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
     .on('click',()=>openDossier(c,'candidate')).addTo(groups.candidate);
   }
@@ -490,8 +490,9 @@ function renderWartimeControls(){
   const color=french?'#5bb6a2':'#ca9966';
   const center=[coords[1],coords[0]];
   const record=findPlaceAcrossChapters(p.stable_id);
-  L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:6,weight:2,
-   color:french?'#c5e5db':'#f5d1a0',fillColor:color,fillOpacity:.88,
+  L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:map.getZoom()>=6?19:17,weight:3,
+   color:french?'#58c6b7':'#edb36c',opacity:.98,
+   dashArray:french?'3 5':'6 4',fill:true,fillColor:color,fillOpacity:.09,
    className:french?'atlas-french-counterfort':'atlas-local-english-garrison',
    bubblingMouseEvents:false})
    .bindTooltip('<strong>'+escapeHTML(p.name||record?.name||'驻军据点')+'</strong><div class="atlas-hover-summary">'+
@@ -627,6 +628,25 @@ function renderMilestones(){
   else if(matches.length>1)openCollection(matches.map(item=>({item,type:'event'})),y+'年的历史事件');
  }));
 }
+// An occupation badge is a pixel-size Point symbol, never a historic territorial polygon.
+function renderAnnualControlSummary(){
+ const el=$('controlStatus');if(!el)return;
+ if(year<1540||!militaryControlPoints){el.textContent='';el.hidden=true;return}
+ const sites=militaryControlPoints.features||[];
+ const activeAt=(f,y)=>f.properties.year_end_start<=y&&y<=f.properties.year_end_stop;
+ const now=sites.filter(f=>activeAt(f,year));
+ const english=now.filter(f=>!f.properties.not_an_English_control_feature);
+ const french=now.filter(f=>f.properties.not_an_English_control_feature);
+ const gained=sites.filter(f=>activeAt(f,year)&&!activeAt(f,year-1)).length;
+ const gone=sites.filter(f=>!activeAt(f,year)&&activeAt(f,year-1));
+ // End of available evidence is not proof of a withdrawal. Hailes 1549 is unresolved.
+ const confirmedExited=gone.filter(f=>f.properties.historical_actual_end_year!=null).length;
+ const uncertain=gone.length-confirmedExited;
+ const changes=[gained?'本年新增'+gained+'处':'',confirmedExited?'确证退出'+confirmedExited+'处':'',
+  uncertain?'另'+uncertain+'处续驻待核':''].filter(Boolean).join('、');
+ el.textContent='英军局部驻点 '+english.length+'处 · 法军对抗点 '+french.length+'处'+(changes?'｜'+changes:'');
+ el.hidden=false;
+}
 function setYear(v){
  const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
  const chosen=next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
@@ -645,7 +665,7 @@ function setYear(v){
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540;
  $('chapterNav').textContent=sixth?'历史地图 · 第六章':fifth?'历史地图 · 第五章':fourth?'历史地图 · 第四章':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
  $('chapterNavName').textContent=sixth?'布洛涅与战争边区':fifth?'法权与边区':fourth?'边区与远航':third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
- $('chapterLabel').textContent=sixth?'CHAPTER 006 / 1540—1549':fifth?'CHAPTER 005 / 1530—1539':fourth?'CHAPTER 004 / 1520—1529':third?'CHAPTER 003 / 1510—1519':second?'CHAPTER 002 / 1500—1509':'CHAPTER 001 / 1497—1499';
+ $('chapterLabel').textContent=sixth?'第六章 · 1540—1549':fifth?'第五章 · 1530—1539':fourth?'第四章 · 1520—1529':third?'第三章 · 1510—1519':second?'第二章 · 1500—1509':'第一章 · 1497—1499';
  $('chapterTitlePrimary').textContent=sixth?'布洛涅与':fifth?'王权与':fourth?'边区与':third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
  $('chapterTitleSecondary').textContent=sixth?'英苏边境':fifth?'边区变动':fourth?'远航':third?'海峡':second?'的第二程':'的第一道声索';
  $('chapterIntro').textContent=sixth?(typeof atlasSixth.intro==='string'?atlasSixth.intro:atlasSixth.intro?.description||''):fifth?(typeof atlasFifth.intro==='string'?atlasFifth.intro:atlasFifth.intro?.description||''):fourth?(typeof atlasFourth.intro==='string'?atlasFourth.intro:atlasFourth.intro?.description||''):third?atlasThird.intro.description:second?atlasLater.intro.description:earlyIntro;
@@ -659,7 +679,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeControls();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeControls();renderAnnualControlSummary();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
