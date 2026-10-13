@@ -599,15 +599,26 @@ function renderWartimeControls(){
   const color=french?'#5bb6a2':'#8e62dc';
   const center=[coords[1],coords[0]];
   const record=findPlaceAcrossChapters(p.stable_id);
+  // At low/medium zoom the point symbol can fully cover its historically
+  // unmeasured schematic locality polygon. Make the visible garrison ring
+  // a second accessible entrance to that same area overview.
+  const linkedOccupiedZone=!french?(occupiedZoneAreas?.features||[]).find(z=>
+    z.properties?.zone_type==='occupied'&&z.properties?.stable_id===p.stable_id&&
+    yearValidWarZone(z,year)):null;
   L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:map.getZoom()>=6?19:17,weight:3,
    color:french?'#58c6b7':'#d1acfd',opacity:.98,
    dashArray:french?'3 5':'6 4',fill:true,fillColor:color,fillOpacity:.09,
    className:french?'atlas-french-counterfort':'atlas-local-english-garrison',
    bubblingMouseEvents:false})
    .bindTooltip('<strong>'+escapeHTML(p.name||record?.name||'驻军据点')+'</strong><div class="atlas-hover-summary">'+
-     escapeHTML(french?'法国守军 · 非英王控制':'英军实际驻点 · 非整个地区的疆界')+'</div>',
+     escapeHTML(french?'法国守军 · 非英王控制':linkedOccupiedZone?'点击查看军控概略范围、年份与相关堡垒':'英军实际驻点 · 非整个地区的疆界')+'</div>',
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
-   .on('click',()=>{if(record)openDossier(record,'place');else openTerritoryDossier(f,'occupied')})
+   .on('click',e=>{
+     if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+     if(linkedOccupiedZone)openTerritoryDossier(linkedOccupiedZone,'occupied');
+     else if(record)openDossier(record,'place');
+     else openTerritoryDossier(f,french?'historic':'occupied');
+    })
    .addTo(groups.wartimeControl);
  }
 }
