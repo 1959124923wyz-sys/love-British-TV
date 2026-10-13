@@ -9,14 +9,15 @@
       1549
     ],
     "carried_over_features": 8,
-    "added_schematic_control_vicinity_features": 7,
+    "added_schematic_control_vicinity_features": 10,
     "verified_historical_period_control_polygons": 0,
     "known_garrison_core_points_separate_file": "ACTIVE_CONTROL_PLACES_1540_1549.geojson",
     "source_manifest": "SOURCE_REGISTRY.json",
     "render_safety": "Draw uncertain outlines DASHED; narrative says symbolic vicinity not historical borders. Never sum any polygon area as military control. English Scottish occupations are local bases within independent Kingdom of Scotland, not country annexation.",
     "new_historic_area_sqm": null,
-    "feature_count": 15,
-    "reminder": "All five older approximate garrison circles and two new Ambleteuse/Boulemberg circles are schematic radius-only, not 1540s authenticated border polygons."
+    "feature_count": 18,
+    "reminder": "All five older approximate garrison circles and two new Ambleteuse/Boulemberg circles are schematic radius-only, not 1540s authenticated border polygons.",
+    "last_deepening": "9? scholar sourced Hume, Fort Odre and Forthill extra neighborhood references, always dashed"
   },
   "features": [
     {
@@ -6029,6 +6030,567 @@
         "fill_opacity": 0.045,
         "uncertainty": "English fort abandoned in 1549; Mont Lambert modern locality centre need not equal sixteenth-century fort. 320m is an arbitrary map reading marker only.",
         "original_archive_polygon_directly_examined": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hume-english-1547-1548-dashed-location-only",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.467108,
+              55.66515
+            ],
+            [
+              -2.467166,
+              55.665524
+            ],
+            [
+              -2.467338,
+              55.665887
+            ],
+            [
+              -2.46762,
+              55.666228
+            ],
+            [
+              -2.468002,
+              55.666536
+            ],
+            [
+              -2.468473,
+              55.666802
+            ],
+            [
+              -2.469019,
+              55.667017
+            ],
+            [
+              -2.469623,
+              55.667176
+            ],
+            [
+              -2.470266,
+              55.667273
+            ],
+            [
+              -2.47093,
+              55.667306
+            ],
+            [
+              -2.471594,
+              55.667273
+            ],
+            [
+              -2.472237,
+              55.667176
+            ],
+            [
+              -2.472841,
+              55.667017
+            ],
+            [
+              -2.473387,
+              55.666802
+            ],
+            [
+              -2.473858,
+              55.666536
+            ],
+            [
+              -2.47424,
+              55.666228
+            ],
+            [
+              -2.474522,
+              55.665887
+            ],
+            [
+              -2.474694,
+              55.665524
+            ],
+            [
+              -2.474752,
+              55.66515
+            ],
+            [
+              -2.474694,
+              55.664776
+            ],
+            [
+              -2.474522,
+              55.664413
+            ],
+            [
+              -2.47424,
+              55.664072
+            ],
+            [
+              -2.473858,
+              55.663764
+            ],
+            [
+              -2.473387,
+              55.663498
+            ],
+            [
+              -2.472841,
+              55.663283
+            ],
+            [
+              -2.472237,
+              55.663124
+            ],
+            [
+              -2.471594,
+              55.663027
+            ],
+            [
+              -2.47093,
+              55.662994
+            ],
+            [
+              -2.470266,
+              55.663027
+            ],
+            [
+              -2.469623,
+              55.663124
+            ],
+            [
+              -2.469019,
+              55.663283
+            ],
+            [
+              -2.468473,
+              55.663498
+            ],
+            [
+              -2.468002,
+              55.663764
+            ],
+            [
+              -2.46762,
+              55.664072
+            ],
+            [
+              -2.467338,
+              55.664413
+            ],
+            [
+              -2.467166,
+              55.664776
+            ],
+            [
+              -2.467108,
+              55.66515
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "休姆城堡：1547英军占堡；1548苏军收复（堡址范围为示意）",
+        "period_from": 1540,
+        "period_to": 1549,
+        "render_start_year": 1547,
+        "render_end_year": 1547,
+        "observed_through_year": 1547,
+        "source_ids": [
+          "SC-HUME-TRUST-1547-1548",
+          "SC-HES-HUME-NRHE-58561"
+        ],
+        "control_class": "English_local_garrison_in_independent_Scotland",
+        "geometry_role": "SCHEMATIC_CITY_FORT_VICINITY_NEVER_HISTORIC_ADMIN_BORDER",
+        "schematic_radius_m_for_visibility_only": 240,
+        "not_a_historic_distance_claim": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "prohibited_area_statistics": true,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "draw_mode": "dashed_context_only",
+        "dash_array": "4 7",
+        "fill_opacity": 0.035,
+        "uncertainty": "Historic Environment Scotland castle point confirmed; modern 18th-century castle wall not a 1547 enclosure.",
+        "original_archive_polygon_directly_examined": false,
+        "underlying_modern_site_is_a_period_border": false,
+        "never_assume_Scottish_sovereignty_transferred": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tour-d-ordre-english-fort-1544-1550-dashed-location-only",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.600912,
+              50.731667
+            ],
+            [
+              1.600856,
+              50.732072
+            ],
+            [
+              1.60069,
+              50.732466
+            ],
+            [
+              1.600418,
+              50.732835
+            ],
+            [
+              1.600049,
+              50.733168
+            ],
+            [
+              1.599594,
+              50.733456
+            ],
+            [
+              1.599067,
+              50.733689
+            ],
+            [
+              1.598484,
+              50.733861
+            ],
+            [
+              1.597863,
+              50.733967
+            ],
+            [
+              1.597222,
+              50.734002
+            ],
+            [
+              1.596581,
+              50.733967
+            ],
+            [
+              1.59596,
+              50.733861
+            ],
+            [
+              1.595377,
+              50.733689
+            ],
+            [
+              1.59485,
+              50.733456
+            ],
+            [
+              1.594395,
+              50.733168
+            ],
+            [
+              1.594027,
+              50.732835
+            ],
+            [
+              1.593755,
+              50.732466
+            ],
+            [
+              1.593588,
+              50.732072
+            ],
+            [
+              1.593532,
+              50.731667
+            ],
+            [
+              1.593588,
+              50.731261
+            ],
+            [
+              1.593755,
+              50.730868
+            ],
+            [
+              1.594027,
+              50.730499
+            ],
+            [
+              1.594395,
+              50.730165
+            ],
+            [
+              1.59485,
+              50.729878
+            ],
+            [
+              1.595377,
+              50.729644
+            ],
+            [
+              1.59596,
+              50.729472
+            ],
+            [
+              1.596581,
+              50.729367
+            ],
+            [
+              1.597222,
+              50.729331
+            ],
+            [
+              1.597863,
+              50.729367
+            ],
+            [
+              1.598484,
+              50.729472
+            ],
+            [
+              1.599067,
+              50.729644
+            ],
+            [
+              1.599594,
+              50.729878
+            ],
+            [
+              1.600049,
+              50.730165
+            ],
+            [
+              1.600418,
+              50.730499
+            ],
+            [
+              1.60069,
+              50.730868
+            ],
+            [
+              1.600856,
+              50.731261
+            ],
+            [
+              1.600912,
+              50.731667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "布洛涅Odre旧灯塔英占炮台：1544—1549概略位置",
+        "period_from": 1540,
+        "period_to": 1549,
+        "render_start_year": 1544,
+        "render_end_year": 1549,
+        "observed_through_year": 1549,
+        "source_ids": [
+          "FR-HELIOT-1958-PLANS-PAGES",
+          "FR-WIKIDATA-TOUR-ODRE"
+        ],
+        "control_class": "English_local_garrison_France",
+        "geometry_role": "SCHEMATIC_CITY_FORT_VICINITY_NEVER_HISTORIC_ADMIN_BORDER",
+        "schematic_radius_m_for_visibility_only": 260,
+        "not_a_historic_distance_claim": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "prohibited_area_statistics": true,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "draw_mode": "dashed_context_only",
+        "dash_array": "4 7",
+        "fill_opacity": 0.035,
+        "uncertainty": "Former lighthouse approximate point on eroded coast, not fort footprint; 260m arbitrary research visibility radius.",
+        "original_archive_polygon_directly_examined": false,
+        "underlying_modern_site_is_a_period_border": false,
+        "never_assume_Scottish_sovereignty_transferred": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "forthand-fort-english-1548-1550-dashed-location-only",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.867878,
+              56.47487
+            ],
+            [
+              -2.868001,
+              56.47565
+            ],
+            [
+              -2.868368,
+              56.476406
+            ],
+            [
+              -2.868967,
+              56.477116
+            ],
+            [
+              -2.86978,
+              56.477757
+            ],
+            [
+              -2.870783,
+              56.478311
+            ],
+            [
+              -2.871944,
+              56.47876
+            ],
+            [
+              -2.873229,
+              56.479091
+            ],
+            [
+              -2.874598,
+              56.479293
+            ],
+            [
+              -2.87601,
+              56.479362
+            ],
+            [
+              -2.877422,
+              56.479293
+            ],
+            [
+              -2.878791,
+              56.479091
+            ],
+            [
+              -2.880076,
+              56.47876
+            ],
+            [
+              -2.881237,
+              56.478311
+            ],
+            [
+              -2.88224,
+              56.477757
+            ],
+            [
+              -2.883053,
+              56.477116
+            ],
+            [
+              -2.883652,
+              56.476406
+            ],
+            [
+              -2.884019,
+              56.47565
+            ],
+            [
+              -2.884142,
+              56.47487
+            ],
+            [
+              -2.884019,
+              56.47409
+            ],
+            [
+              -2.883652,
+              56.473334
+            ],
+            [
+              -2.883053,
+              56.472624
+            ],
+            [
+              -2.88224,
+              56.471983
+            ],
+            [
+              -2.881237,
+              56.471429
+            ],
+            [
+              -2.880076,
+              56.47098
+            ],
+            [
+              -2.878791,
+              56.470649
+            ],
+            [
+              -2.877422,
+              56.470447
+            ],
+            [
+              -2.87601,
+              56.470378
+            ],
+            [
+              -2.874598,
+              56.470447
+            ],
+            [
+              -2.873229,
+              56.470649
+            ],
+            [
+              -2.871944,
+              56.47098
+            ],
+            [
+              -2.870783,
+              56.471429
+            ],
+            [
+              -2.86978,
+              56.471983
+            ],
+            [
+              -2.868967,
+              56.472624
+            ],
+            [
+              -2.868368,
+              56.473334
+            ],
+            [
+              -2.868001,
+              56.47409
+            ],
+            [
+              -2.867878,
+              56.47487
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Forthill炮台：1548—1549英军山岗要塞现代街区参考",
+        "period_from": 1540,
+        "period_to": 1549,
+        "render_start_year": 1548,
+        "render_end_year": 1549,
+        "observed_through_year": 1549,
+        "source_ids": [
+          "SC-NLS-FORTHILL-OS-GAZETTEER",
+          "SC-FORTHILL-CURRENT-LOCALITY"
+        ],
+        "control_class": "English_local_garrison_in_independent_Scotland",
+        "geometry_role": "SCHEMATIC_CITY_FORT_VICINITY_NEVER_HISTORIC_ADMIN_BORDER",
+        "schematic_radius_m_for_visibility_only": 500,
+        "not_a_historic_distance_claim": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "prohibited_area_statistics": true,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "draw_mode": "dashed_context_only",
+        "dash_array": "4 7",
+        "fill_opacity": 0.035,
+        "uncertainty": "Lost English earthwork position uncertain ~0.5km based on modern named neighbourhood; never claim old fort surveyed outline.",
+        "original_archive_polygon_directly_examined": false,
+        "underlying_modern_site_is_a_period_border": false,
+        "never_assume_Scottish_sovereignty_transferred": true
       }
     }
   ]
