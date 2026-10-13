@@ -83,8 +83,9 @@ for y in range(1540,1550):
     require(("dunglass-camp-english-1548-1549" in active)==(y in (1548,1549)), "Dunglass camp must appear in HES confirmed 1548-49 period")
     if y>=1545:
         require("lochmaben-english-1544-1545" in s["confirmed_expired_episode_ids"],"Lochmaben missing 1545 Scottish recovery")
-    require(("hailes-english-1548-date_unknown" in active)==(y==1548), "Hailes unproved 1549 incorrectly confirmed/ended")
-require("hailes-english-1548-date_unknown" in snap(1549)["uncertain_continuity_episode_ids"], "Hailes 1549 unresolved status hidden")
+    require("hailes-english-1548-date_unknown" not in active, "HES officially confirms Scottish recapture of Hailes within 1548; English year-end icon forbidden")
+require(all("hailes-english-1548-date_unknown" in snap(y)["confirmed_expired_episode_ids"] for y in (1548,1549)), "Hailes must be expired from 1548 after official Scots recapture")
+require("hailes-english-1548-date_unknown" not in snap(1549)["uncertain_continuity_episode_ids"], "Hailes 1549 uncertainty superseded by HES 1548 Scots recapture")
 require("tournai-occupied-city-1513" not in episode_ids, "Tournai 1519 ghost control")
 require(all(e["polygon_verified"] is False for e in episodes.values()),"historical polygon forged")
 
@@ -106,7 +107,8 @@ for f in areas["features"]:
         require(math.isfinite(pt[0]) and math.isfinite(pt[1]) and abs(pt[0])<=180 and abs(pt[1])<=90,"invalid GIS coords")
 require(areas["metadata"]["verified_historical_period_control_polygons"]==0, "historical area certified without contemporary surveyed plan")
 
-require(len(points["features"])==22 and len({f["properties"]["stable_id"] for f in points["features"]})==22, "lost old polity or new garrison point")
+require(len(points["features"])==21 and len({f["properties"]["stable_id"] for f in points["features"]})==21, "Incorrect year-end active Point count; Hailes must not be active after 1548 Scots recapture")
+require("hailes-english-1548-date_unknown" not in {f["properties"]["stable_id"] for f in points["features"]}, "Hailes historical takeover belongs in event/delta, not English year-end active places")
 for f in points["features"]:
     p=f["properties"]
     require(f["geometry"]["type"]=="Point" and p["area_polygon_verified"] is not True if "area_polygon_verified" in p else f["geometry"]["type"]=="Point","invalid place symbol")
@@ -165,5 +167,5 @@ require(len({e["id"] for e in atlas["events"]})==len(atlas["events"]),"atlas eve
 
 print("PASS research 1540–1549: 9 historical identities inherited, 15 dated control episodes, "
       "10 year-end snapshots, 45+ historical events, 18 dashed/symbolic area references, "
-      "22 control point sites, corrected Inchcolm/Haddington/Hailes endings and uncertain continuation, "
+       "21 year-end control point sites, corrected Hailes Scots 1548 recovery, " 
       "69+ source/lead records and 8 strictly labelled finance studies; ZERO invented exact ancient borders.")
