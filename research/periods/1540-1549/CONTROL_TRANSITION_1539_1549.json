@@ -412,6 +412,53 @@
       "precision": "modern Dunglass designed-landscape point; real camp on hill WEST of house; this is approximate context location",
       "territorial_change": "English supported Haddington occupation 1548–49; Scots destroyed fort shortly later (no dated termination certified)",
       "polygon_verified": false
+    },
+    {
+      "id": "ambleteuse-english-fort-1546-1549",
+      "name": "阿姆布勒特斯英军要塞：1546年动工、1549年8月25日被法军收复",
+      "start_year": 1546,
+      "start_month": 4,
+      "observed_through_year": 1548,
+      "end_year": 1549,
+      "end_month": 8,
+      "end_day": 25,
+      "controller": "English garrison at Ambleteuse/Slack, France; French Crown after 25 August 1549",
+      "type": "fortified_English_northern_Boulonnais_outpost",
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-MUNICIPAL-AMBLETEUSE-1549",
+        "FR-AMBLETEUSE-MODERN-GAZETTEER"
+      ],
+      "coords": [
+        1.6072222,
+        50.8102778
+      ],
+      "precision": "modern Ambleteuse town center, not contemporary 1546 English citadel or later Vauban fort",
+      "territorial_change": "English fort documented from 1546, French storm and recapture 1549",
+      "polygon_verified": false
+    },
+    {
+      "id": "boulemberg-english-fort-1546-1549",
+      "name": "蒙朗贝尔／Boulemberg英军外围炮台：1546年动工、1549年撤离",
+      "start_year": 1546,
+      "start_month": 5,
+      "observed_through_year": 1548,
+      "end_year": 1549,
+      "end_month": null,
+      "controller": "English garrison on Mont Lambert height east of Boulogne; French forces occupied after English withdrawal in 1549",
+      "type": "English_outlying_artillery_fort_dated_1546_to_1549",
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549",
+        "FR-MONTLAMBERT-MODERN-LOCATOR"
+      ],
+      "coords": [
+        1.65893,
+        50.71777
+      ],
+      "precision": "modern Mont Lambert hamlet reference; Tudor Boulemberg fort exact hill plot unknown",
+      "territorial_change": "English fort from May 1546; evacuated/damaged 1549 after Ambleteuse loss, while core Boulogne held to 1550",
+      "polygon_verified": false
     }
   ],
   "year_end_snapshots": [
@@ -552,7 +599,9 @@
       ],
       "new_active_episode_ids": [
         "boulogne-english-1544-1550",
-        "irish-crown-title-1541"
+        "irish-crown-title-1541",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549"
       ],
       "confirmed_expired_episode_ids": [
         "lochmaben-english-1544-1545"
@@ -578,7 +627,9 @@
         "broughty-english-1547-1550",
         "inchcolm-english-1547-1548",
         "irish-crown-title-1541",
-        "eyemouth-fort-English-1547-1550"
+        "eyemouth-fort-English-1547-1550",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549"
       ],
       "confirmed_expired_episode_ids": [
         "lochmaben-english-1544-1545"
@@ -607,7 +658,9 @@
         "hailes-english-1548-date_unknown",
         "irish-crown-title-1541",
         "eyemouth-fort-English-1547-1550",
-        "dunglass-camp-english-1548-1549"
+        "dunglass-camp-english-1548-1549",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549"
       ],
       "confirmed_expired_episode_ids": [
         "inchcolm-english-1547-1548",
@@ -640,9 +693,11 @@
       "confirmed_expired_episode_ids": [
         "inchcolm-english-1547-1548",
         "haddington-english-1548-1549",
-        "lochmaben-english-1544-1545"
+        "lochmaben-english-1544-1545",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549"
       ],
-      "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes tenure after 1548 unverified; no automatic continued solid icon. Hailes castle continuing control is UNSURE and explicitly pending, not an ended or confirmed active garrison.",
+      "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes tenure after 1548 unverified; no automatic continued solid icon. Hailes castle continuing control is UNSURE and explicitly pending, not an ended or confirmed active garrison. France retook Ambleteuse 25 August; Mont Lambert fort evacuated in 1549. Boulogne urban garrison remains English.",
       "false_new_province_area_polygons": 0,
       "uncertain_continuity_episode_ids": [
         "hailes-english-1548-date_unknown"
@@ -650,7 +705,7 @@
     }
   ],
   "all_inherited_political_identities_accounted_for": true,
-  "historic_geography_policy": "Always distinguish independent Scotland from English-held isolated forts and legal Irish kingdom claim from actual administration. Zero certified ancient polygons; dashed rough context polygon only. No fabricated km2.",
+  "historic_geography_policy": "Always distinguish independent Scotland from English-held isolated forts and legal Irish kingdom claim from actual administration. Zero certified ancient polygons; dashed rough context polygon only. No fabricated km2. 1549 British Boulogne urban core survived even after two English frontier forts fell; city and outpost control must be mapped separately.",
   "cross_decade_seed_1549_1550": {
     "continue_expected": [
       "boulogne-english-1544-1550",
@@ -670,12 +725,40 @@
     "end_before_1550": [
       "inchcolm-english-1547-1548",
       "haddington-english-1548-1549",
-      "lochmaben-english-1544-1545"
+      "lochmaben-english-1544-1545",
+      "ambleteuse-english-fort-1546-1549",
+      "boulemberg-english-fort-1546-1549"
     ],
     "need_new_1550_study": true,
     "do_not_claim_1550_actual_site_control_without_evidence": true,
     "dunglass_note": "Official heritage source confirms camp during 1548–49 but does not identify exact 1550 withdrawal or destruction year. Carry as 1549 observed site and reassess in 1550. Modern estate point not camp walls."
   },
   "sources_registry": "SOURCE_REGISTRY.json",
-  "precision_quality_note": "Hailes documented English castle garrison in 1548 only; neither documentary silence nor the year 1549 certifies its abandonment. When 1549 unverified, show dashed question point instead of verified solid English control."
+  "precision_quality_note": "Hailes documented English castle garrison in 1548 only; neither documentary silence nor the year 1549 certifies its abandonment. When 1549 unverified, show dashed question point instead of verified solid English control.",
+  "important_archived_1549_outpost_losses": [
+    {
+      "stable_id": "ambleteuse-english-fort-1546-1549",
+      "former_English_controller": true,
+      "loss_year": 1549,
+      "loss_month": 8,
+      "loss_day": 25,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-MUNICIPAL-AMBLETEUSE-1549",
+        "FR-AMBLETEUSE-MODERN-GAZETTEER"
+      ]
+    },
+    {
+      "stable_id": "boulemberg-english-fort-1546-1549",
+      "former_English_controller": true,
+      "loss_year": 1549,
+      "loss_month": null,
+      "loss_day": null,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549",
+        "FR-MONTLAMBERT-MODERN-LOCATOR"
+      ]
+    }
+  ]
 }
