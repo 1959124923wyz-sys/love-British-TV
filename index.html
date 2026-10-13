@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#081422">
-<meta name="description" content="英国殖民扩张与政治控制历史地图：已发布1497—1539五个历史章节，三级时间轴支持逐年查阅与长期历史导航。">
-<title>帝国的代价 | 英国殖民历史动态地图 · 1497—1539</title>
+<meta name="description" content="英国殖民扩张与政治控制历史地图：已发布1497—1549五个历史章节，三级时间轴支持逐年查阅与长期历史导航。">
+<title>帝国的代价 | 英国殖民历史动态地图 · 1497—1549</title>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
@@ -17,7 +17,7 @@
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>THE COST OF EMPIRE · HISTORICAL ATLAS</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
- <div class="head-actions"><span class="version">1497—1539 · PILOT v1.6.1</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1549 · PILOT v1.7.0</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
@@ -39,7 +39,7 @@
      <div class="control-heading">地图图层</div>
      <div class="layer-options">
       <label><input type="checkbox" id="toggleTerritorialFootprints" checked><i class="layer-dot territory"></i>历史疆域与岛屿轮廓 · 概略地图</label>
-      <label><input type="checkbox" id="toggleControlAreas" checked><i class="layer-dot area-control"></i>实际控制城市 · 实色区域</label>
+      <label><input type="checkbox" id="toggleControlAreas" checked><i class="layer-dot area-control"></i>实际控制城市与局部驻军 · 据点</label>
       <label><input type="checkbox" id="togglePoliticalRelations" checked><i class="layer-dot dependency"></i>附属领地与特殊领主制度 · 纹理</label>
       <label><input type="checkbox" id="toggleKingdom" checked><i class="layer-dot kingdom"></i>王国范围与政治据点</label>
       <label><input type="checkbox" id="toggleRoutes" checked><i class="layer-dot route"></i>航海示意</label>
@@ -68,7 +68,7 @@
   </div>
 
  </aside>
- <main class="map-stage" aria-label="1497—1539年历史地图">
+ <main class="map-stage" aria-label="1497—1549年历史地图">
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
 
   <div class="map-top">
@@ -79,7 +79,7 @@
    <div class="timeline-head">
     <div><strong>历史时间轴</strong><span id="timelineContext">第一章 · 1497—1499年事件</span></div>
     <div class="year-buttons">
-     <label class="timeline-direct-year"><span>直达</span><input id="jumpYear" type="number" inputmode="numeric" min="1497" max="1539" value="1497" step="1" aria-label="输入已发布的历史年份，回车跳转" title="输入已发布年份，按回车跳转"></label>
+     <label class="timeline-direct-year"><span>直达</span><input id="jumpYear" type="number" inputmode="numeric" min="1497" max="1549" value="1497" step="1" aria-label="输入已发布的历史年份，回车跳转" title="输入已发布年份，按回车跳转"></label>
      <button type="button" id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button type="button" id="nextYear" aria-label="下一年">›</button>
      <button type="button" id="playBtn" aria-label="播放时间轴">▶</button>
     </div>
@@ -90,7 +90,7 @@
     <div class="chapter-track" id="chapterTrack" role="group" aria-label="第二层：邻近十年章节"></div>
     <button type="button" class="timeline-decade-arrow" id="browseDecadeNext" aria-label="向后浏览十年章节">›</button>
    </div>
-   <div class="timeline-year-line"><strong id="localYearTitle">1497年</strong><span id="timelineAvailability">已发布至1539年</span></div>
+   <div class="timeline-year-line"><strong id="localYearTitle">1497年</strong><span id="timelineAvailability">已发布至1549年</span></div>
    <div class="range-wrap">
     <div id="milestoneDots" class="milestone-dots" aria-label="当前十年已发生的事件年份"></div>
     <input id="yearRange" type="range" min="1497" max="1499" value="1497" step="1" aria-label="第三层：当前章节逐年选择">
@@ -107,12 +107,12 @@
     <p>从布里斯托尔起航的“马修号”，将英格兰王室支持的远航带到了北美海岸。</p>
     <p>把鼠标移到航线和标记上，可看到事件简介。点击后可以继续阅读经过与历史资料。</p>
    </div>
-   <div class="dossier-bottom"><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/data/atlas-1530-1539.json" target="_blank" rel="noopener">查看第五章历史数据 ↗</a><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/RESEARCH_HANDOFF.md" target="_blank" rel="noopener">研究交接记录 ↗</a></div>
+   <div class="dossier-bottom"><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/data/atlas-1540-1549.json" target="_blank" rel="noopener">查看第六章历史数据 ↗</a><a href="https://github.com/1959124923wyz-sys/love-British-TV/blob/main/RESEARCH_HANDOFF.md" target="_blank" rel="noopener">研究交接记录 ↗</a></div>
  </aside>
 </div>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=timeline-v162"></script>
+<script src="app.js?v=timeline-v170"></script>
 </body>
 </html>
