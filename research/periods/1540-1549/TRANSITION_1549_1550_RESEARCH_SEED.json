@@ -84,13 +84,20 @@
       "actual_1549_garrison_verified": true,
       "transfer_or_withdrawal_expected_in_1550": true,
       "recorded_end_year": 1550,
-      "recorded_end_month": null,
+      "recorded_end_month": 4,
       "source_ids": [
         "FR-MURPHY-2019-BOULOGNE",
         "FR-MURPHY-2019-SETTLE",
         "FR-MURPHY-2019-MAP"
       ],
-      "exact_1550_transfer_still_to_verify": true
+      "exact_1550_transfer_still_to_verify": false,
+      "recorded_end_day": 25,
+      "actual_transfer_date": "1550-04-25",
+      "transfer_documentation_source_ids": [
+        "FR-MURPHY-2019-PREFACE-1550-HANDOVER",
+        "FR-POTTER-1984-1550-TREATY-DOCS"
+      ],
+      "transfer_qualified": "Actual ceremonial city key transfer, not necessarily measured wall-by-wall exit of all disconnected rural forts."
     },
     {
       "stable_id": "broughty-english-1547-1550",
@@ -98,13 +105,17 @@
       "actual_1549_garrison_verified": true,
       "transfer_or_withdrawal_expected_in_1550": true,
       "recorded_end_year": 1550,
-      "recorded_end_month": null,
+      "recorded_end_month": 2,
       "source_ids": [
         "SC-HES-BROUGHTY",
         "SC-HES-INCHCOLM",
         "SC-HES-BROUGHTY-SITE"
       ],
-      "exact_1550_transfer_still_to_verify": true
+      "exact_1550_transfer_still_to_verify": true,
+      "transfer_documentation_source_ids": [
+        "SC-HES-BROUGHTY-SOS-2020"
+      ],
+      "reconquest_sequence": "Franco-Scottish force took Balgillo Hill English outwork, Broughty castle garrison surrendered following day (February 1550); day in official HES report not stated."
     },
     {
       "stable_id": "lauder-english-1548-1550",
@@ -147,7 +158,13 @@
         "SC-HES-EYEMOUTH-FORT-SM4577",
         "SC-EYEMOUTH-GEOGRAPH-PIN"
       ],
-      "exact_1550_transfer_still_to_verify": true
+      "exact_1550_transfer_still_to_verify": true,
+      "recorded_end_season": "summer",
+      "transfer_documentation_source_ids": [
+        "SC-CALDWELL-EWART-1997-EYEMOUTH-SUMMARY",
+        "SC-EYEMOUTH-MUSEUM-1550-DEMO"
+      ],
+      "date_note": "1997 archaeological abstract says held until summer 1550; museum says fort demolished in 1550. Do not invent exact demolition date or assume French rebuilt 1557 line is Tudor English geometry."
     },
     {
       "stable_id": "dunglass-camp-english-1548-1549",
@@ -264,5 +281,17 @@
   "new_control_research_conclusion_1540s": {
     "French_Outreau": "French fort since 1545, never English-controlled; independent French political layer, not 1550 English transfer",
     "Guernsey": "Preexisting Crown dependency introduced as separate named study point in PR25, present in all years 1540-1549"
+  },
+  "research_supplement_collector3_20261013": {
+    "status": "research_evidence_added_not_1550_official_atlas",
+    "verified_boulogne_treaty_date": "1550-03-24",
+    "verified_boulogne_handover_date": "1550-04-25",
+    "treaty_finance_note": "400000 gold ecus defined as treaty consideration paid in scheduled installments; recorded promised amount, not proof full money received, not 1549 colony profit",
+    "scottish_treaty_relation": "Potter 1984 published notes and Edward VI diary transcription discuss Lauder and Dunglass release conditioned on treaty and negotiations involving Eyemouth and Roxburgh; do not invent each garrison evacuation day. Scottish fort clauses are not all Boulogne handover day.",
+    "broughty": "February 1550 documented HES; Balgillo English outwork falls one day before Broughty castle. A proposed 12 February exact date appears in other secondary accounts but remains unconfirmed by inspected HES report.",
+    "eyemouth": "English fort demolished 1550 per museum; archaeological abstract describes English holding through summer 1550; separate 1557 French fort is not Tudor English geometry.",
+    "hailes": "OPEN CONTRADICTION: derivative history claims Arran removed Hailes iron gates in August 1548, suggesting return to Scottish control before 1549. HES materials seen do not confirm this termination. Seek Joseph Bain, Hamilton Papers II (1892) p.616 and original Scottish source before correcting active control episode.",
+    "dundee": "Newly identified town English late 1547 to Jan 1548 and second Aug 1548 occupation; separate short local control from Britain/scotland sovereignty; see DUNDEE_CONTROL_EPISODES_ADDENDUM_PR27_20261013.json.",
+    "not_an_earlier_map_change": "Any 1550 finding must not erase verified British Boulogne / Scottish temporary outposts during 1549."
   }
 }
