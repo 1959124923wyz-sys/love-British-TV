@@ -7,12 +7,13 @@
       1559
     ],
     "political_inherited_identifiers": 9,
-    "feature_count": 16,
+    "feature_count": 18,
     "actual_authentic_old_border_polygons": 0,
     "all_geometry_type": "Point",
     "country_county_1556_proved_English_occupied_area_polygons": 0,
     "important": "Calais and Guînes switch to French state in 1558; older Irish fort cores existed before legal 1556 plantations, Scottish sovereignty independent; British trade beyond home island not conquest.",
-    "collector3_note": "New French allied military garrison at Eyemouth 1557–1558 with Scottish sovereignty; no resurrected English fort; Hammes castle remains archival-only pending reliable Tudor site."
+    "collector3_note": "New French allied military garrison at Eyemouth 1557–1558 with Scottish sovereignty; no resurrected English fort; Hammes castle remains archival-only pending reliable Tudor site.",
+    "franco_scottish_sites": "Three French-allied/Suzerain-unrelated Scottish modern archaeological Point locations: Dunbar 1550, Inchkeith 1556, Eyemouth 1557; Leith 1559 research archival only (precise ramparts unlocated)."
   },
   "features": [
     {
@@ -509,6 +510,69 @@
         "point_precision": "modern archaeological promontory anchor; BL 1557 espionage plan not georeferenced",
         "must_not_use": "Corn Fort SM4577 lies c250m WNW of Tudor trace italienne fort; modern boundary cannot serve as French garrison polygons",
         "origin": "Collector3 PR33 research addendum"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-dunbar-French-fort-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5173892,
+          56.0045018
+        ]
+      },
+      "properties": {
+        "stable_id": "dunbar-french-allied-fort-built-1550",
+        "name": "1550年苏格兰邓巴法军新筑防御堡历史考古点",
+        "first_year_in_chapter": 1550,
+        "year_end_start": 1550,
+        "year_end_stop": 1559,
+        "controller": "French-built allied military fortification on independently sovereign Scottish soil",
+        "Scottish_sovereignty_remains": true,
+        "garrison_each_year_confirmed": false,
+        "source_ids": [
+          "SC-HES-DUNBAR-FRENCH-FORT-1550",
+          "SC-TROVE-DUNBAR-1550-EXCAV"
+        ],
+        "render_kind": "dated_1550_French_fortification_heritage_location_not_French_sovereignty",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "point_precision": "HES NGR NT67833 79183 (367833 679183) modern archaeological site reference only, not French fort polygon",
+        "historical_demolition_year": 1560
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-inchkeith-Franco-Scottish-fort-1556",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1351895,
+          56.0323579
+        ]
+      },
+      "properties": {
+        "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+        "name": "1556年起苏法联合筑防的苏格兰因奇基斯岛",
+        "first_year_in_chapter": 1556,
+        "year_end_start": 1556,
+        "year_end_stop": 1559,
+        "controller": "Franco-Scottish fortification phase on independent Scottish island",
+        "Scottish_sovereignty_remains": true,
+        "garrison_each_year_confirmed": false,
+        "source_ids": [
+          "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+        ],
+        "render_kind": "Franco_Scottish_fortification_historic_site_not_british_conquest",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "point_precision": "HES NGR NT29358 82744 modern island heritage point; scheduled zone includes nearly all island and later 19th/20th century works, NOT 1556 walls",
+        "historical_fortification_period": "1556–1564; actual troops year-specific pending"
       }
     }
   ]
