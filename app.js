@@ -846,8 +846,13 @@ async function loadKingdomBoundaries(){
    sovereigntyReferenceAreas.push({feature:f,group});
    count++;
    const c=group==='scotland'?'#588ba8':group==='wales'?'#a78acb':'#815fd5';
-   const layer=L.geoJSON(f,{renderer:sovereigntyRenderer,pane:'sovereigntyPane',interactive:true,bubblingMouseEvents:false,style:{color:c,weight:group==='wales'?1.8:1.4,dashArray:group==='wales'?'6 5':null,fillColor:c,fillOpacity:group==='scotland'?.25:group==='wales'?.18:.35,opacity:.95},interactive:true})
-     .on('click',()=>openPolity(group)).addTo(groups.kingdom);
+   const layer=L.geoJSON(f,{renderer:sovereigntyRenderer,pane:'sovereigntyPane',interactive:true,bubblingMouseEvents:false,
+     style:{color:c,weight:group==='wales'?1.8:1.4,dashArray:group==='wales'?'6 5':null,fillColor:c,fillOpacity:group==='scotland'?.25:group==='wales'?.18:.35,opacity:.95},
+     onEachFeature:(_feature,shape)=>shape.on('click',e=>{
+       if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+       openPolity(group);
+     })
+    }).addTo(groups.kingdom);
   }
   if(!count)throw new Error('Region names could not be decoded');
   hideWarning();
@@ -969,7 +974,7 @@ map.on('click',e=>{
  // Let actual clickable paths, routes and event markers keep their own actions.
  // Otherwise the map location itself becomes a reliable territory hit target.
  const element=e.originalEvent?.target;
- if(element?.closest?.('.leaflet-interactive,.leaflet-marker-icon,.leaflet-control-container'))return;
+ if(element?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit'))return;
  openMapTerritoryAt(e.latlng);
 });
 
