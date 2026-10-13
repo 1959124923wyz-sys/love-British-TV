@@ -15,17 +15,17 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [SOURCE_REGISTRY.json](SOURCE_REGISTRY.json) | 42条来源与研究线索，区分现代官方史址、法规原文、学术论文、未读原档 |
-| [CHRONOLOGY.json](CHRONOLOGY.json) | 24条候审事件；年份可逐年揭示；尚未确认地图坐标的事件保留于历史档案 |
-| [ATLAS_REVIEW_CANDIDATE.json](ATLAS_REVIEW_CANDIDATE.json) | 直接供主编选择的第四章后续 **第五章候审事件/地点/来源**，24事件、7持续政治地点、41直接引用；无批准控制区polygon |
+| [SOURCE_REGISTRY.json](SOURCE_REGISTRY.json) | 60条来源与研究线索，区分现代官方史址、法规原文、学术论文、未读原档 |
+| [CHRONOLOGY.json](CHRONOLOGY.json) | 27条候审事件；年份可逐年揭示；尚未确认地图坐标的事件保留于历史档案 |
+| [ATLAS_REVIEW_CANDIDATE.json](ATLAS_REVIEW_CANDIDATE.json) | 直接供主编选择的第四章后续 **第五章候审事件/地点/来源**，27事件、8持续政治地点、55直接引用；无批准控制区polygon |
 | [TRANSITION_1529_1530.json](TRANSITION_1529_1530.json) | 1529→1530所有7个正式地点继承 + 独立苏格兰；10个逐年快照；1535梅努斯、威尔士和土地法权转移另列 |
 | [MAP_REFERENCE_1530_1539.geojson](MAP_REFERENCE_1530_1539.geojson) | 7块旧图轮廓原样沿用 + 1块现代威尔士虚线法律地理示意（**不是实测16世纪边界**） |
 | [CONTROL_CORES_1530_1539.geojson](CONTROL_CORES_1530_1539.geojson) | 加来、吉讷、都柏林3处可显示的小型城市核心Point |
-| [POLITICAL_RELATIONS_1530_1539.geojson](POLITICAL_RELATIONS_1530_1539.geojson) | 泽西、马恩、奥克尼、设得兰4处不同法权/独立苏格兰Point |
-| [EVENT_SITES_1530_1539.geojson](EVENT_SITES_1530_1539.geojson) | 9个已取得现代官方/研究地图定位的事件点 |
+| [POLITICAL_RELATIONS_1530_1539.geojson](POLITICAL_RELATIONS_1530_1539.geojson) | 泽西、根西、马恩、奥克尼、设得兰5处不同法权/独立苏格兰Point |
+| [EVENT_SITES_1530_1539.geojson](EVENT_SITES_1530_1539.geojson) | 12个已取得现代官方/研究地图定位的事件点 |
 | [MAP_DELTA_1530_1539.geojson](MAP_DELTA_1530_1539.geojson) | 已证局部梅努斯堡易手事件 + 威尔士法权变更现代范围，仅2项，**没有经核的新增殖民领土面** |
-| [CONTROL_EPISODES.json](CONTROL_EPISODES.json) | 15类军政/地方领主/自治/独立政体状态 |
-| [FINANCIAL_EVIDENCE.json](FINANCIAL_EVIDENCE.json) | 7种财政资产方向：现金、债务、地租、罚没和王室军费不得相加成“掠夺总利润” |
+| [CONTROL_EPISODES.json](CONTROL_EPISODES.json) | 17类军政/地方领主/自治/独立政体状态 |
+| [FINANCIAL_EVIDENCE.json](FINANCIAL_EVIDENCE.json) | 9种财政资产方向（另含私人裁决年收益及寺院养老金）：现金、债务、地租、罚没和王室军费不得相加成“掠夺总利润” |
 | [ARCHIVAL_ACTION_QUEUE.json](ARCHIVAL_ACTION_QUEUE.json) | 17个后续查档任务，P0 9个，围绕实际疆界 |
 | [validate_research.py](validate_research.py) | 自动数据审查脚本，主编可复核 |
 
@@ -41,8 +41,12 @@
 
 ## 独立网页研究预览（新增）
 
-[interactive_research_preview.html](interactive_research_preview.html) 支持1530—1539年的逐年事件揭示、七处延续政治位置、八块概略地理参考，并实现**双击左侧事件平滑定位＋高亮、不改缩放**。预览与主站完全分离，须在克隆文件后通过本地HTTP服务启动（如在仓库根目录运行 `python3 -m http.server 8000`，打开 `http://localhost:8000/research/periods/1530-1539/interactive_research_preview.html`）。其GIS文件是研究示意，尚未经过真实浏览器人工验收。CI增加Node.js语法检查。
+[interactive_research_preview.html](interactive_research_preview.html) 支持1530—1539年的逐年事件揭示、八处具名政治位置（新增根西的既存制度点）、八块概略地理参考，并实现**双击左侧事件平滑定位＋高亮、不改缩放**。预览与主站完全分离，须在克隆文件后通过本地HTTP服务启动（如在仓库根目录运行 `python3 -m http.server 8000`，打开 `http://localhost:8000/research/periods/1530-1539/interactive_research_preview.html`）。其GIS文件是研究示意，尚未经过真实浏览器人工验收。CI增加Node.js语法检查。
 
 ## 已制作1539→1540研究继承种子
 
 [NEXT_DECADE_1539_1540_RESEARCH_SEED.json](NEXT_DECADE_1539_1540_RESEARCH_SEED.json)记录截至1539研究的**8条稳定政治身份**及需向1540年代交接的状态，保留图尔奈1519退出，并把**1541爱尔兰国王称号、1542威尔士第二法令及苏格兰王位继承**列为下一时期需证实的事项。**不得把种子当成1540已通过的历史控制地图**。自动检查程序已经核验这8条记录没有被新年代遗漏。
+
+## PR #25主编清单补缺（2026-10-13）
+
+新增的12个事件地图地点、根西作为第八处既存具名政治关系、1531Leixlip私人庄园史料及1535威尔士法令13组接受郡县，请先阅读 [PR25_DEFICIENCY_RESOLUTION_20261013.md](PR25_DEFICIENCY_RESOLUTION_20261013.md) 和 [WELSH_MARCHER_1535_STATUTORY_SHIRES.json](WELSH_MARCHER_1535_STATUTORY_SHIRES.json)，以及 [LOCAL_DOCUMENTED_SITES_1530_1539.geojson](LOCAL_DOCUMENTED_SITES_1530_1539.geojson)。目前主干已经另行发布初版1530—1539，**这份新研究增量不能直接用旧文件覆盖现有主站内容**。
