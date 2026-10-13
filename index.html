@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v171">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v172">
 
 </head>
 <body>
@@ -38,7 +38,7 @@
     <div class="controls-body">
      <div class="control-heading">地图图层</div>
      <div class="layer-options">
-      <label><input type="checkbox" id="toggleTerritorialFootprints" checked><i class="layer-dot territory"></i>历史疆域与岛屿轮廓 · 概略地图</label>
+      <label><input type="checkbox" id="toggleTerritorialFootprints" checked><i class="layer-dot territory"></i>历史疆域与军控概略范围 · 虚线</label>
       <label><input type="checkbox" id="toggleControlAreas" checked><i class="layer-dot area-control"></i>实际控制城市与局部驻军 · 据点</label>
       <label><input type="checkbox" id="togglePoliticalRelations" checked><i class="layer-dot dependency"></i>附属领地与特殊领主制度 · 纹理</label>
       <label><input type="checkbox" id="toggleKingdom" checked><i class="layer-dot kingdom"></i>王国范围与政治据点</label>
@@ -53,7 +53,8 @@
      <div class="legend-items">
       <div><i class="swatch territory"></i>紫色填充＋虚线 · 加来概略范围</div>
       <div><i class="swatch city-occupation"></i>小圆点 · 有据城市位置（非面积）</div>
-       <div><i class="swatch english-garrison"></i>橙色虚线环 · 英军实际驻点（非占地边界）</div>
+       <div><i class="swatch english-garrison"></i>紫色虚线环 · 英军年末驻点（非占地边界）</div>
+       <div><i class="swatch wartime-vicinity"></i>紫色淡面、虚线 · 军控概略位置（非古界）</div>
        <div><i class="swatch french-defence"></i>青绿虚线环 · 法军抵抗据点（非法属英占区）</div>
       <div><i class="swatch dependency"></i>斜线或交叉纹 · 特殊领地关系</div>
       <div><i class="swatch control"></i>现代地理参照 · 英格兰紫色／独立苏格兰蓝灰</div>
@@ -115,6 +116,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=timeline-v171"></script>
+<script src="app.js?v=timeline-v172"></script>
 </body>
 </html>
