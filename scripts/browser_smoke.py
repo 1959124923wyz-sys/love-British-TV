@@ -305,8 +305,8 @@ try:
            """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史政治地理') &&
               document.querySelector('#dossierBody .zone-dossier-facts')!==null""",driver)
     verify("terrains rendered atop Scotland are preventing sovereignty click",
-           "document.querySelectorAll('.leaflet-sovereigntyPane-pane path.leaflet-interactive').length>0",driver)
-    click_map_path(".leaflet-sovereigntyPane-pane path.leaflet-interactive")
+           "document.querySelectorAll('.leaflet-sovereignty-pane path.leaflet-interactive').length>0",driver)
+    click_map_path(".leaflet-sovereignty-pane path.leaflet-interactive")
     verify("clicking sovereign background no longer opens nation overview",
            """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史国家')""",driver)
     set_year(1548,44)
