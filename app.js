@@ -738,7 +738,7 @@ $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target
 function jumpToEnteredYear(){
  if(!atlas)return;
  const raw=$('jumpYear').value.trim(),v=Number(raw);
- if(!/^\\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>lastPublishedYear){
+ if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>lastPublishedYear){
   timelineStatus('仅支持1497—'+lastPublishedYear+'年已发布的历史资料；地图仍停留'+year+'年。');return;
  }
  stopPlay();setYear(v);
