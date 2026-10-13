@@ -338,7 +338,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1531,
@@ -367,7 +370,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1532,
@@ -396,7 +402,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1533,
@@ -425,7 +434,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1534,
@@ -454,7 +466,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1535,
@@ -485,7 +500,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1536,
@@ -516,7 +534,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1537,
@@ -547,7 +568,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1538,
@@ -578,7 +602,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     },
     {
       "year": 1539,
@@ -609,7 +636,10 @@
         "Scottish fortifications as English colonies"
       ],
       "geometry_verified_new_control_polygons": 0,
-      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade"
+      "year_end_event_visibility_rule": "show events with year <= selected year; never all at start of decade",
+      "additional_previously_existing_political_identity_ids": [
+        "channel-guernsey"
+      ]
     }
   ],
   "cartography": {
@@ -630,7 +660,8 @@
       "MAP_REFERENCE_1530_1539.geojson",
       "EVENT_SITES_1530_1539.geojson"
     ],
-    "map_delta_file": "MAP_DELTA_1530_1539.geojson"
+    "map_delta_file": "MAP_DELTA_1530_1539.geojson",
+    "additional_site_reference_file": "LOCAL_DOCUMENTED_SITES_1530_1539.geojson"
   },
   "editorial": {
     "ready_for_publication": false,
@@ -644,7 +675,11 @@
     "control_episode_file": "CONTROL_EPISODES.json",
     "handoff_file": "EDITOR_HANDOFF.md",
     "archival_queue_file": "ARCHIVAL_ACTION_QUEUE.json",
-    "last_verified_commit_sha": null
+    "last_verified_commit_sha": null,
+    "new_existing_identity_points_from_gap_fix": [
+      "channel-guernsey"
+    ],
+    "source_registry_count_after_gap_fix": 57
   },
   "historical_interpretation": [
     "Ireland was officially Lordship of Ireland through 1539; Crown claim over island and actual limited enforcement differ. Kingdom title 1541 belongs next decade.",
@@ -657,5 +692,22 @@
     "main/data/atlas-1520-1529.json",
     "main/research/continuity/TRANSITION_1529_1530_RESEARCH_SEED.json",
     "SOURCE_REGISTRY.json"
+  ],
+  "supplemental_contextual_polities": [
+    {
+      "stable_id": "channel-guernsey",
+      "name": "Guernsey separate Crown Dependency with pre-1530 local institutions",
+      "evidence": [
+        "GUE-GOV-HOUSE-HISTORY",
+        "GUE-PARLIAMENT-ROYAL-COURT",
+        "GUE-UK-MOJ-CROWN"
+      ],
+      "map_place": "ATLAS_REVIEW_CANDIDATE.json:places:channel-guernsey",
+      "source_geography": "MAP_REFERENCE_1530_1539.geojson:guernsey-crown-island-outline",
+      "year_started": "Before 1530, existing before 1497 mapping timeframe",
+      "year_end_1539_research_status": "historic institutional continuity high, original Tudor borders unverified",
+      "representation": "Crown Dependency separate from Jersey and English Crown direct province",
+      "newly_annexed_this_decade": false
+    }
   ]
 }
