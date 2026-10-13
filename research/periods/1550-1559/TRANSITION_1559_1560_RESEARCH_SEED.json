@@ -66,7 +66,9 @@
     "Boulogne and Broughty English garrisons terminated 1550; never reappear as British colonies.",
     "Queen's/King's County 1556 statutory law persists; legal shire naming not proof of full actual military control modern Laois/Offaly.",
     "Jersey, Guernsey and Isle of Man retain separate political relationships.",
-    "Muscovy Russia, West Africa and Elmina are NOT England's sovereign territories."
+    "Muscovy Russia, West Africa and Elmina are NOT England's sovereign territories.",
+    "Hammes Castle near Hames-Boucres was last English Calais Pale bastion abandoned January 1558; lost geographic site must be archived, not resurrected as English in 1560. No verified castle GPS.",
+    "Eyemouth French military work existed in independent Scotland 1557–1558; archaeology describes negotiated July 1559 exit while physical demolition could be later. Reassess 1560 actual site before marking French garrison active or English conquest."
   ],
   "place_controller_at_1559": [
     {
@@ -96,18 +98,52 @@
       "source_ids": [
         "IE-OFFALY-NMS-URBAN-ARCHAEOLOGY"
       ]
+    },
+    {
+      "stable_id": "hammes-castle-english-pale-pre1550-1558",
+      "controller": "English garrison gone 1558; French Calais Pale actual control (specific former castle site unlocated)",
+      "source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558"
+      ],
+      "display_geometry": "none_until_verified"
+    },
+    {
+      "stable_id": "eyemouth-french-allied-1557-1559",
+      "controller": "Independent Scotland; French allied garrison evacuation negotiated by July 1559, year-end military presence unverified",
+      "source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH",
+        "SC-EYEMOUTH-MUSEUM-FRENCH-1557"
+      ],
+      "display_geometry": "modern archaeological reference Point only; cannot fill area; do not carry as definitely active French beyond 1559"
     }
   ],
   "unresolved_early_1550_siege_exits": [
-    "eyemouth-fort-English-1547-1550",
     "lauder-english-1548-1550",
-    "dunglass-camp-english-1548-1549",
-    "hailes-english-1548-date_unknown"
+    "dunglass-camp-english-1548-1549"
   ],
   "business_and_forced_labor_history": [
     "1555 Muscovy Company charter: Russian land independent, only source-known trading sites permitted",
     "Guinea English slaving episodes 1555–57, Hawkins 1562 belongs to next chapter"
   ],
   "verified_exact_1559_old_territorial_polygons": 0,
-  "editor_note": "Copy historical identities and year-end actual controller, not inherited orange land map by default."
+  "editor_note": "Copy historical identities and year-end actual controller, not inherited orange land map by default.",
+  "verified_archived_earlier_English_occupations": [
+    {
+      "stable_id": "hailes-english-1548-date_unknown",
+      "actual_end_year": 1548,
+      "source_ids": [
+        "SC-HES-HAILES-SOS-2019"
+      ],
+      "note": "HES official Scots 1548 same-year recapture, no English 1548 year-end or 1550 renewal"
+    },
+    {
+      "stable_id": "eyemouth-fort-English-1547-1550",
+      "actual_end": "summer 1550",
+      "source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH"
+      ],
+      "note": "Former English earthwork ended, different French military occupancy 1557 onwards"
+    }
+  ],
+  "critical_territorial_phase_evidence_addendum": "TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json"
 }
