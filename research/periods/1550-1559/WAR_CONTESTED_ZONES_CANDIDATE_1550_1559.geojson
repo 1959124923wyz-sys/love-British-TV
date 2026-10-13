@@ -1,0 +1,206 @@
+{
+  "type": "FeatureCollection",
+  "name": "Chapter7 proposed contested theatres and siege front bands",
+  "schema": "war_contested_zone_candidates_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "metadata": {
+    "published": false,
+    "coordinate_policy": "Only archived Calais approximate outline may be reused for drawable theatre band; all other contested zones have null geometry until manually substantiated sketch. Null geometry is intentional to avoid false precise or county-wide territory.",
+    "contested_not_actual_control": true,
+    "authoritative_battlefront_lines_verified": 0,
+    "area_statistics_allowed": false,
+    "all_borders_dashed": true,
+    "render_style_order": "historical sovereignty base > dated actual-control candidate > hatched contested theatre > sourced forts/points",
+    "legend_label": "交战／争夺（示意范围）"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "c7-southeast-scotland-withdrawal-front-1550",
+      "geometry": null,
+      "properties": {
+        "id": "c7-southeast-scotland-withdrawal-front-1550",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "1550苏格兰东南英军撤离期间的概略战区（非年末英占）",
+        "zone_type": "withdrawal_frontier",
+        "side_a": "english",
+        "side_b": "scottish",
+        "start_year": 1550,
+        "end_year": 1550,
+        "active_at_year_end": false,
+        "render_during": "historical_1550_withdrawal_story_only",
+        "draw_hatch": "blue_purple_stripes",
+        "fill_authorized": false,
+        "reference_sites": [
+          "eyemouth-fort-English-1547-1550",
+          "lauder-english-1548-1550",
+          "dunglass-camp-english-1548-1549"
+        ],
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "GB-EDWARD-VI-DIARY-1550-TREATY"
+        ],
+        "assessment": "Cannot evidence a continuous Scotland-wide front line or exact retreat corridor; no arbitrary line joining sites. Proposed only as editor-designed schematic regional conflict narrative."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-calais-siege-contested-pale-1558",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.753207,
+              50.945644
+            ],
+            [
+              1.843379,
+              50.881781
+            ],
+            [
+              1.870254,
+              50.867081
+            ],
+            [
+              1.943655,
+              50.860735
+            ],
+            [
+              1.997517,
+              50.915701
+            ],
+            [
+              2.042758,
+              50.977126
+            ],
+            [
+              1.753207,
+              50.945644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "c7-calais-siege-contested-pale-1558",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "1558年1月法国攻取加来边区的阶段性交战带示意",
+        "zone_type": "siege_corridor",
+        "side_a": "english",
+        "side_b": "french",
+        "start_year": 1558,
+        "end_year": 1558,
+        "active_at_year_end": false,
+        "render_during": "1558_January_siege_sequence_only",
+        "draw_hatch": "purple_french_alternating_stripes",
+        "fill_authorized": false,
+        "preview_schematic_fill_allowed": true,
+        "fill_opacity_max": 0.1,
+        "reference_geometry_reused_feature_id": "calais-pale-sourced-places-approx-1497-1519",
+        "reference_geometry_was_originally": "historically_unverified_early_1500s_named_place_convex_hull",
+        "stage_refs": [
+          "fort-nieulay-calais-1558",
+          "fort-risban-calais-1558",
+          "calais-crown",
+          "guines-crown-1520s",
+          "hammes-castle-english-pale-pre1550-1558"
+        ],
+        "source_ids": [
+          "FR-RCT-CALAIS-SIEGE-1558",
+          "FR-CALAIS-MUNICIPAL-1558",
+          "FR-RCT-GUINES-SIEGE-1558"
+        ],
+        "assessment": "Hatched Pale is a NOTIONAL THEATRE not a continuous simultaneous battlefront, route or actual occupied area. Show only during Jan battle animation; the end-of-1558 snapshot shows French control."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-irish-midlands-plantation-contested-belt-1556-1559",
+      "geometry": null,
+      "properties": {
+        "id": "c7-irish-midlands-plantation-contested-belt-1556-1559",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "1556—1559爱尔兰中部殖民征地、地方抵抗及堡垒外围争夺",
+        "zone_type": "contested_plantation_area",
+        "side_a": "english",
+        "side_b": "Gaelic local O'More and O'Connor powers",
+        "start_year": 1556,
+        "end_year": 1559,
+        "active_at_year_end": true,
+        "draw_hatch": "purple_local_gaelic_alternating_stripes",
+        "fill_authorized": false,
+        "preview_schematic_fill_allowed": false,
+        "reference_site_ids": [
+          "irish-fort-protector-1550s",
+          "irish-fort-governor-1550s"
+        ],
+        "source_ids": [
+          "IE-ASKABOUTIRELAND-MIDLANDS-1556",
+          "IE-LANCASTER-1556-COLONIAL",
+          "IE-LAOIS-COUNTY-DEVELOPMENT-FORT",
+          "IE-OFFALY-NMS-URBAN-ARCHAEOLOGY"
+        ],
+        "assessment": "Historical conflict supported, real geography of fought-over estates and villages NOT sourced. Do not fill full modern Laois+Offaly or construct halos from arbitrary site radii."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-leith-scottish-political-front-1559",
+      "geometry": null,
+      "properties": {
+        "id": "c7-leith-scottish-political-front-1559",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "1559利斯法军筑垒及苏格兰政治军事争执",
+        "zone_type": "fortified_political_conflict",
+        "side_a": "french_allied_Scottish_regency",
+        "side_b": "Scottish_protestant_opposition",
+        "start_year": 1559,
+        "end_year": 1559,
+        "active_at_year_end": true,
+        "draw_hatch": "scottish_blue_french_allied_hatch",
+        "fill_authorized": false,
+        "preview_schematic_fill_allowed": false,
+        "reference_place": "Leith Edinburgh harbour named in British Library 1559 catalogue, unlocated dated original rampart",
+        "source_ids": [
+          "GB-BL-CALIGULA-BX-1559-LEITH"
+        ],
+        "assessment": "French fortification on Scottish land does not transfer Scottish sovereignty. No exact 1559 wall coordinates, not identical to 1560 English siege works."
+      }
+    }
+  ]
+}
