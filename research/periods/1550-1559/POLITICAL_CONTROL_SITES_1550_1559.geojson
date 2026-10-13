@@ -7,11 +7,12 @@
       1559
     ],
     "political_inherited_identifiers": 9,
-    "feature_count": 15,
+    "feature_count": 16,
     "actual_authentic_old_border_polygons": 0,
     "all_geometry_type": "Point",
     "country_county_1556_proved_English_occupied_area_polygons": 0,
-    "important": "Calais and Guînes switch to French state in 1558; older Irish fort cores existed before legal 1556 plantations, Scottish sovereignty independent; British trade beyond home island not conquest."
+    "important": "Calais and Guînes switch to French state in 1558; older Irish fort cores existed before legal 1556 plantations, Scottish sovereignty independent; British trade beyond home island not conquest.",
+    "collector3_note": "New French allied military garrison at Eyemouth 1557–1558 with Scottish sovereignty; no resurrected English fort; Hammes castle remains archival-only pending reliable Tudor site."
   },
   "features": [
     {
@@ -468,6 +469,46 @@
         "French_controller_year_start": 1558,
         "not_new_English_colony_in_Russia_or_Africa": true,
         "historical_transfer_note": "French conquest of English Calais urban defence in Jan 1558; present-day Nieulay masonry later, plot center not 1558 precise fortification."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-eyemouth-french-1557-1559",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09156,
+          55.87731
+        ]
+      },
+      "properties": {
+        "stable_id": "eyemouth-french-allied-1557-1559",
+        "name": "埃茅斯1557年法国驻军与苏格兰盟军海岬炮台",
+        "first_year_in_chapter": 1557,
+        "year_end_start": 1557,
+        "year_end_stop": 1558,
+        "controller": "French troops, independent Scotland territory 1557–1558; 1559 negotiated withdrawal, no English occupancy",
+        "French_garrison_start_year": 1557,
+        "French_garrison_confirmed_years": [
+          1557,
+          1558
+        ],
+        "Scottish_sovereignty_remains": true,
+        "former_English_garrison_end": "summer 1550",
+        "former_English_stable_id": "eyemouth-fort-English-1547-1550",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+          "SC-SCAPE-EYEMOUTH-1557-PLAN"
+        ],
+        "render_kind": "French_military_presence_in_Scottish_sovereign_territory_not_English_colony",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "point_precision": "modern archaeological promontory anchor; BL 1557 espionage plan not georeferenced",
+        "must_not_use": "Corn Fort SM4577 lies c250m WNW of Tudor trace italienne fort; modern boundary cannot serve as French garrison polygons",
+        "origin": "Collector3 PR33 research addendum"
       }
     }
   ]
