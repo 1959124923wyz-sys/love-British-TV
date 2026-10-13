@@ -2,10 +2,12 @@
   "type": "FeatureCollection",
   "name": "1550s territorial military control and forced settlement legal changes",
   "metadata": {
-    "features": 11,
+    "features": 13,
     "precision": "historical urban site points and political events, not cadastral polygons",
     "actual_new_English_contiguous_colonial_province_shapes": 0,
-    "actual_former_English_French_city_sites_recaptured_1550_1558": true
+    "actual_former_English_French_city_sites_recaptured_1550_1558": true,
+    "hammes_archive_only": "Hammes English Pale garrison exit in January 1558 was a further territorial control delta but is deliberately NOT added to point GeoJSON pending historic castle GIS.",
+    "authentic_new_military_area_polygon_count": 0
   },
   "features": [
     {
@@ -197,14 +199,17 @@
         "day": 7,
         "change_type": "French_Calais_reconquest_English_state_marker_off_1558",
         "source_ids": [
-          "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558"
+          "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558",
+          "FR-RCT-CALAIS-SIEGE-1558",
+          "FR-CALAIS-MUNICIPAL-1558"
         ],
         "original_fort_site_coordinates_not_all_verified": true,
         "exact_Tudor_military_boundary_not_known": true,
         "approximate_urban_or_archaeology_point": true,
         "no_county_area_claim": true,
         "no_new_English_Russian_or_Guinea_colony": true,
-        "English_controller_1559": false
+        "English_controller_1559": false,
+        "event_7_8_Jan_distinction": "Royal Collection: Jan 7 castle entry/town capitulation; municipal Calais archives: completed reconquest Jan 8. Existing day=7 means tactical surrender source, not city's sole undisputed formal date."
       }
     },
     {
@@ -226,14 +231,16 @@
         "change_type": "French_Guines_reconquest_English_garrison_off_1558",
         "source_ids": [
           "FR-HISTORY-PARLIAMENT-GREY-1558",
-          "FR-OXFORD-GUINES-1558"
+          "FR-OXFORD-GUINES-1558",
+          "FR-RCT-GUINES-SIEGE-1558"
         ],
         "original_fort_site_coordinates_not_all_verified": true,
         "exact_Tudor_military_boundary_not_known": true,
         "approximate_urban_or_archaeology_point": true,
         "no_county_area_claim": true,
         "no_new_English_Russian_or_Guinea_colony": true,
-        "English_controller_1559": false
+        "English_controller_1559": false,
+        "dated_1558_engraving_not_a_survey": "Royal Collection RCIN 721026 explicitly says engraved castle walls and northeast/south orientation inconsistent with historical BL Cotton Augustus I ii 71 survey. DO NOT trace engraved walls to historic polygon."
       }
     },
     {
@@ -255,14 +262,17 @@
         "change_type": "French_recovered_Calais_outwork_modern_site_reference",
         "source_ids": [
           "FR-FRENCH-MONUMENTS-CALAIS-RISBAN",
-          "FR-CATEAU-1559-ARTICLES"
+          "FR-CATEAU-1559-ARTICLES",
+          "FR-RCT-CALAIS-SIEGE-1558"
         ],
         "original_fort_site_coordinates_not_all_verified": true,
         "exact_Tudor_military_boundary_not_known": true,
         "approximate_urban_or_archaeology_point": true,
         "no_county_area_claim": true,
         "no_new_English_Russian_or_Guinea_colony": true,
-        "English_controller_1559": false
+        "English_controller_1559": false,
+        "capture_by_date": "1558-01-04 per Royal Collection quotation of Lord Grey contemporary letter",
+        "date_precision": "by_4_Jan_not_specific_assault_day"
       }
     },
     {
@@ -284,14 +294,17 @@
         "change_type": "French_recovered_Calais_fort_later_structure_location_reference",
         "source_ids": [
           "FR-FRENCH-MONUMENTS-CALAIS-NIEULAY",
-          "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558"
+          "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558",
+          "FR-RCT-CALAIS-SIEGE-1558"
         ],
         "original_fort_site_coordinates_not_all_verified": true,
         "exact_Tudor_military_boundary_not_known": true,
         "approximate_urban_or_archaeology_point": true,
         "no_county_area_claim": true,
         "no_new_English_Russian_or_Guinea_colony": true,
-        "English_controller_1559": false
+        "English_controller_1559": false,
+        "capture_by_date": "1558-01-04 per Royal Collection quotation of Lord Grey contemporary letter",
+        "date_precision": "by_4_Jan_not_specific_assault_day"
       }
     },
     {
@@ -320,6 +333,73 @@
         "approximate_urban_or_archaeology_point": true,
         "no_county_area_claim": true,
         "no_new_English_Russian_or_Guinea_colony": true,
+        "English_controller_1559": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-eyemouth-English-fort-ended-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09156,
+          55.87731
+        ]
+      },
+      "properties": {
+        "original_fort_site_coordinates_not_all_verified": true,
+        "exact_Tudor_military_boundary_not_known": true,
+        "approximate_urban_or_archaeology_point": true,
+        "no_county_area_claim": true,
+        "no_new_English_Russian_or_Guinea_colony": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "stable_id": "eyemouth-English-fort-ended-1550",
+        "parent_stable_id": "eyemouth-fort-English-1547-1550",
+        "name": "英军1550年夏撤出苏格兰埃茅斯炮台",
+        "year": 1550,
+        "month": null,
+        "day": null,
+        "season": "summer",
+        "change_type": "English_garrison_in_Scottish_fort_ended_1550",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557"
+        ],
+        "notes": "Archaeology dates English control to summer 1550; museum dates demolition 1550. Treaty date is not actual departure date; modern promontory Point is not fort measured walls."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delta-eyemouth-French-allied-rebuilding-1557",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09156,
+          55.87731
+        ]
+      },
+      "properties": {
+        "original_fort_site_coordinates_not_all_verified": true,
+        "exact_Tudor_military_boundary_not_known": true,
+        "approximate_urban_or_archaeology_point": true,
+        "no_county_area_claim": true,
+        "no_new_English_Russian_or_Guinea_colony": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "stable_id": "eyemouth-French-allied-rebuilding-1557",
+        "parent_stable_id": "eyemouth-french-allied-1557-1559",
+        "name": "1557年法国驻军在独立苏格兰埃茅斯修筑新的棱堡防线",
+        "year": 1557,
+        "month": null,
+        "day": null,
+        "change_type": "French_allied_military_garrison_on_independent_Scotland_not_English_colony",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+          "SC-SCAPE-EYEMOUTH-1557-PLAN"
+        ],
+        "notes": "Different military occupation from English 1547 fort; archaeology negotiated July 1559 departure, 1559 exact end and physical demolitions unsettled.",
         "English_controller_1559": false
       }
     }
