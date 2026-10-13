@@ -607,4 +607,6 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .leaflet-warReach-pane svg{pointer-events:none!important;}
 .leaflet-warReach-pane path.leaflet-interactive{pointer-events:visiblePainted!important;cursor:pointer;}
 #map .atlas-war-reach-schematic{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
-.legend-items .swatch.war-reach{width:18px;height:13px;border:2px dashed #bf9bf0;background:rgba(143,99,221,.17);box-sizing:border-box;border-radius:3px}
+.legend-items .swatch.war-reach{width:18px;height:13px;border:0;background:linear-gradient(to bottom,transparent 32%,rgba(173,137,224,.42) 32%,rgba(173,137,224,.42) 68%,transparent 68%);box-sizing:border-box;border-radius:3px}
+#map .atlas-war-reach-halo,#map .atlas-war-reach-schematic{pointer-events:none!important;stroke-linecap:round;stroke-linejoin:round}
+#map .atlas-war-reach-hit{pointer-events:stroke;cursor:pointer;stroke-linecap:round;stroke-linejoin:round}
