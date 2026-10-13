@@ -13,10 +13,10 @@ const relations=json('data/political-relations-1500-1549.geojson');
 const garrisons=json('data/military-control-points-1540-1549.geojson');
 const app=read('app.js'),html=read('index.html');
 assert.deepEqual(sixth.period,{from:1540,to:1549,next:1550});
-assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[45,23,65]);
+assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[49,23,73]);
 assert.equal(sixth.routes.length,0,'Unknown ships routes must not be guessed');
 assert.equal(sixth.colonial_polygons.length,0,'No invented historic sixteenth-century occupied border');
-assert.equal(sixth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,26);
+assert.equal(sixth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,30);
 assert.equal(sixth.events.filter(e=>e.lat===null&&e.lng===null).length,19);
 assert.ok(last.some(x=>x.id==='chapterSixth'&&x.start===1540&&x.end===1549&&x.status==='published'));
 assert.equal(last[5].start,last[4].end+1,'Chapter six must follow 1539 without a gap');
@@ -69,14 +69,25 @@ for(const id of ['ambleteuse-english-fort-1546-1549','boulemberg-english-fort-15
 assert.ok(active('lochmaben-english-1544-1545',1544)&&!active('lochmaben-english-1544-1545',1545));
 assert.ok(active('inchcolm-english-1547-1548',1547)&&!active('inchcolm-english-1547-1548',1548));
 assert.ok(active('hume-english-1547-1548',1547)&&!active('hume-english-1547-1548',1548));
-assert.ok(active('hailes-english-1548-date_unknown',1548)&&!active('hailes-english-1548-date_unknown',1549),'Hailes 1549 uncertain; do not assert continued occupation');
+assert.ok(!active('hailes-english-1548-date_unknown',1548)&&!active('hailes-english-1548-date_unknown',1549),'HES confirms Hailes Scottish recapture during 1548');
+assert.ok(active('dundee-english-town-late-1547',1547)&&!active('dundee-english-town-late-1547',1548),'Dundee town was briefly occupied in 1547, not demonstrably English-held in 1548 year-end');
+assert.ok(sixth.events.some(e=>e.id==='1540S-ED-HAILES-1548-SCOTTISH-RETURN'),'Hailes recapture event missing');
+assert.ok(sixth.events.some(e=>e.id==='1540S-C3-NEW-DUNDEE-STMARY-1548'),'Dundee church plunder event missing');
+const vicinity=json('data/war-control-vicinity-1540-1549.geojson');
+assert.equal(vicinity.features.length,10);
+assert.ok(vicinity.features.every(f=>f.properties.fill_authorized===false&&f.properties.historical_boundary_confirmed===false&&f.properties.area_sqkm===null));
+const activeVicinity=(id,y)=>vicinity.features.some(f=>f.properties.stable_id===id&&f.properties.start_year<=y&&y<=f.properties.end_year&&active(id,y));
+assert.ok(!activeVicinity('haddington-english-1548-1549',1549));
+assert.ok(activeVicinity('boulogne-english-1544-1550',1549));
+assert.ok(!activeVicinity('ambleteuse-english-fort-1546-1549',1549));
+assert.ok(app.includes('function renderWartimeVicinities()')&&app.includes('map.getZoom()>9'),'Unverified schematic outlines must not be visible as exact buildings at high zoom');
 const frenchId='outreau-french-opposing-fort-from-1545';
 assert.ok(active(frenchId,1545)&&active(frenchId,1549),'French counterfort missing');
 assert.equal(placeMap.get(frenchId).status,'French_sovereign_counter_fort_not_English_control');
 assert.ok(garrisons.features.find(f=>f.properties.stable_id===frenchId).properties.not_an_English_control_feature);
 for(let y=1540;y<=1549;y++){
  let expected=sixth.events.filter(e=>e.year<=y);
- assert.deepEqual(expected.map(x=>x.id).length,[1,2,4,6,11,17,24,30,40,45][y-1540],y+' event count mismatch');
+ assert.deepEqual(expected.map(x=>x.id).length,[1,2,4,6,11,17,24,31,44,49][y-1540],y+' event count mismatch');
  assert.ok(expected.every(e=>e.year<=y));
 }
 assert.ok(app.includes("fetch('data/atlas-1540-1549.json'"));
@@ -85,5 +96,5 @@ assert.ok(app.includes("function renderWartimeControls()")&&app.includes('p.year
 assert.ok(app.includes('atlasSixth?.sources'),'New chapter dossier must resolve academic source links');
 assert.ok(app.includes("next>=1540?atlasSixth"),'Map must load the correct sixth Atlas slice');
 assert.ok(!app.includes("map.flyTo("),'Historical map focus must not auto-zoom');
-assert.ok(html.includes('max="1549"')&&html.includes('app.js?v=timeline-v171'));
-console.log('PASS sixth chapter: 45 dated sourced events, 23 recorded places, 7 existing geographic outlines, 15 independent garrison/counterfort point features and exact annual control transitions');
+assert.ok(html.includes('max="1549"')&&html.includes('app.js?v=timeline-v172'));
+console.log('PASS sixth chapter: 49 dated sourced events, 23 recorded places, 7 existing geographic outlines, 15 independent garrison/counterfort point features and exact annual control transitions');
