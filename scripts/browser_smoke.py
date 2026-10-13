@@ -95,9 +95,9 @@ try:
           slider.value=arguments[0];slider.dispatchEvent(new Event('input',{bubbles:true}));
         """, target_year)
         wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent===arguments[0]",str(target_year)))
-        wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".leaflet-voyagePane-pane .atlas-voyage-hit")) >= 1)
+        wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".leaflet-voyage-pane .atlas-voyage-hit")) >= 1)
         payload=driver.execute_script("""
-          const line=document.querySelector('.leaflet-voyagePane-pane .atlas-voyage-hit');
+          const line=document.querySelector('.leaflet-voyage-pane .atlas-voyage-hit');
           const halfway=line.getPointAtLength(line.getTotalLength()*0.5);
           const mapped=halfway.matrixTransform(line.getScreenCTM());
           const front=document.elementFromPoint(mapped.x,mapped.y);
@@ -106,7 +106,7 @@ try:
         assert payload['insideViewport'], "Route midpoint outside map viewport: " + str(payload)
         assert payload['isFront'], "Another map layer intercepts route pointer at viewport center: " + str(payload)
         driver.execute_script("""
-          const line=document.querySelector('.leaflet-voyagePane-pane .atlas-voyage-hit');
+          const line=document.querySelector('.leaflet-voyage-pane .atlas-voyage-hit');
           const halfway=line.getPointAtLength(line.getTotalLength()*0.5);
           const mapped=halfway.matrixTransform(line.getScreenCTM());
           line.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,clientX:mapped.x,clientY:mapped.y}));
