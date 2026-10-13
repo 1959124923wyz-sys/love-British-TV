@@ -547,3 +547,67 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .leaflet-war-vicinity-pane .atlas-violet-wartime-vicinity{pointer-events:none;stroke-linejoin:round}
 .legend-items .swatch.french-defence{border-color:#58c6b7;background:rgba(88,198,183,.09)}
 .leaflet-control-area-pane .atlas-local-english-garrison,.leaflet-control-area-pane .atlas-french-counterfort{vector-effect:non-scaling-stroke}
+
+/* v1.7.3 — year overview must never collapse into a one-character-wide vertical strip.
+   Explicit grid width/layout keeps the historical year separate from four control lines. */
+.map-year-card{
+ display:grid!important;grid-template-columns:max-content minmax(0,1fr);
+ align-items:start;gap:7px 14px;
+ width:344px;min-width:270px;max-width:min(344px,calc(100% - 20px));
+ box-sizing:border-box;padding:12px 14px;
+ flex-wrap:nowrap;overflow-wrap:normal;word-break:normal;
+}
+.map-year-card #bigYear{grid-column:1;grid-row:1;align-self:center;white-space:nowrap;margin:0;}
+.map-year-card #periodTitle{grid-column:2;grid-row:1;align-self:center;min-width:0;
+ font-size:11px;line-height:1.6;white-space:normal;word-break:keep-all;overflow-wrap:normal;}
+.map-year-card #controlStatus.year-control-status{
+ grid-column:1 / -1;display:grid;grid-template-columns:1fr;gap:3px;
+ width:100%;min-width:0;max-width:none;box-sizing:border-box;
+ padding:9px 10px;border:1px solid #36506b;border-radius:7px;
+ background:#122c47cc;color:#eed1b2;font-size:11px;
+ white-space:normal;writing-mode:horizontal-tb;word-break:keep-all;
+}
+.map-year-card #controlStatus[hidden]{display:none!important;}
+#controlStatus .control-status-line{
+ display:flex;flex-direction:row;justify-content:space-between;align-items:center;
+ gap:12px;min-width:0;white-space:nowrap;writing-mode:horizontal-tb;
+}
+#controlStatus .control-status-label{display:inline;flex:1 1 auto;min-width:0;
+ font-size:11px;line-height:1.5;color:#d1e0f2;white-space:nowrap;writing-mode:horizontal-tb;}
+#controlStatus .control-status-value{display:inline;flex:0 0 auto;
+ font:700 12px/1.5 "Noto Sans SC",sans-serif;color:#f1c6a0;white-space:nowrap;}
+#controlStatus .control-status-change{margin:5px 0 0;border-top:1px solid #36506b;
+ padding-top:6px;font-size:10px;line-height:1.5;color:#d0c0e6;word-break:keep-all;}
+@media(max-width:680px){
+ .map-year-card{width:min(315px,calc(100vw - 30px));min-width:0;gap:5px 9px;padding:9px 10px;}
+ .map-year-card #bigYear{font-size:24px;}
+ #controlStatus .control-status-line{gap:8px;}
+}
+/* Work done by the polygons is visible, not just their named garrison icons.
+   Both types are interactive and their detail drawers disclose approximation. */
+.leaflet-warVicinityPane-pane svg,.leaflet-contestedZonePane-pane svg,
+.leaflet-sovereigntyPane-pane svg{pointer-events:auto;}
+#map .atlas-violet-wartime-vicinity{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
+#map .atlas-contested-zone{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
+#map .atlas-territory-solid,#map .atlas-territory-crown,#map .atlas-territory-manx{
+ cursor:pointer;
+}
+.legend-items .swatch.contested-war{
+ width:18px;height:13px;box-sizing:border-box;border:1.5px dashed #a5cdec;
+ background:repeating-linear-gradient(45deg,#729ecb88 0 3px,#9874d188 3px 6px,#243a5c88 6px 8px);
+ border-radius:2px;
+}
+.zone-dossier-facts{display:grid;gap:7px;padding:12px;margin:12px 0 14px;
+ border:1px solid #37506b;background:#102439;border-radius:8px;}
+.zone-dossier-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+ font-size:12px;line-height:1.6;}
+.zone-dossier-row span{color:#94b1c9;flex:0 0 72px;}
+.zone-dossier-row strong{color:#e6d1f4;flex:1;text-align:right;font-weight:600;}
+.dossier .zone-precision-note,.dossier .zone-editorial-warning{padding:10px 12px;
+ background:#1c3145;border-left:3px dashed #a98be9;border-radius:4px;line-height:1.75;}
+.zone-links-heading{font-size:12px;color:#f1d4b7;margin:18px 0 9px;}
+.zone-related{display:grid;gap:7px;}
+.zone-record-link{cursor:pointer;color:#dce8f8;background:#172f47;
+ border:1px solid #46617c;border-radius:7px;text-align:left;padding:9px 12px;
+ font:500 11px/1.5 "Noto Sans SC",sans-serif;}
+.zone-record-link:hover,.zone-record-link:focus-visible{border-color:#bea1ed;background:#25415e;}
