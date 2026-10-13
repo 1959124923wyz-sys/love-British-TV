@@ -86,6 +86,8 @@ for f in points["features"]+delta["features"]:
 site={f["properties"]["stable_id"]:f["properties"] for f in points["features"]}
 check(site["calais-crown"]["French_controller_year_start"]==1558,"Calais controller not switched in 1558")
 check(site["guines-crown-1520s"]["French_controller_year_start"]==1558,"Guines controller not switched in 1558")
+check(site["fort-risban-calais-1558"]["French_controller_year_start"]==1558,"Risban not French after 1558")
+check(site["fort-nieulay-calais-1558"]["French_controller_year_start"]==1558,"Nieulay not French after 1558")
 check(site["irish-fort-governor-1550s"]["previously_existing_fort_before_1550"],"Fort Governor invented in 1556")
 check(site["irish-fort-protector-1550s"]["previously_existing_fort_before_1550"],"Fort Protector invented in 1556")
 check(len(irish["new_1556_legislative_shires"])==2,"Irish 1556 law towns missing")
@@ -97,5 +99,8 @@ check(len(money["objects"])==8 and money["colonial_realized_net_profit_GBP"] is 
 check(all(not x["reportable_as_English_colonial_net_profit"] for x in money["objects"]),"mixed unlike financial classes into profits")
 check("NOT_cash" in next(x for x in money["objects"] if x["id"]=="FIN-1559-CALAIS-FUTURE-500K-SURETY")["amount_status"],"Calais 1559 treaty surety mistakenly considered cash")
 check(queue["count"]>=16 and seed["from_year_end"]==1559,"archive queue or next decade handoff missing")
+preview=(HERE/"interactive_research_preview.html").read_text(encoding="utf8")
+check("French_control_change_year" in preview and "French_controller_year_start" in preview,"map preview does not switch French actual control in 1558")
+check("POLITICAL_CONTROL_SITES_1550_1559.geojson" in preview,"map loads wrong source file")
 check({"calais-crown","guines-crown-1520s"}<={x["stable_id"] for x in seed["political_place_identities"]},"France-held former English forts vanish in next decade")
 print("PASS 1550s research: %s sources, %s events, 15 named sites, 11 dated map deltas, 8 dashed existing geographic outlines, 10 yearly snapshots, 9 inherited political identities, 2 legally contested Irish colony shires, 6 voyage references, zero fabricated period territorial polygons." % (len(sources),len(events["records"])))
