@@ -11,7 +11,9 @@ on:
       - 'scripts/test_continuity_preview.js'
       - 'app-continuity-1497-1529-preview.js'
       - 'data/atlas-1520-1529.json'
+      - 'data/atlas-1530-1539.json'
       - 'data/territorial-footprints-1497-1529.geojson'
+      - 'data/territorial-footprints-1497-1539.geojson'
       - 'preview-continuity-1497-1529.html'
   pull_request:
     paths:
@@ -81,5 +83,6 @@ jobs:
           node scripts/test_continuity_preview.js
           node scripts/test_event_focus.js
           node scripts/test_chapter4_published.js
+          node scripts/test_chapter5_published.js
           node scripts/test_geographic_precision.js
           node scripts/test_voyage_routes.js

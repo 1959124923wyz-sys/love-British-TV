@@ -125,6 +125,33 @@ try:
     verify("a hidden event layer kept a previously focused marker visible",
            "document.querySelectorAll('.atlas-target-marker').length===0", driver)
     toggle_layer("toggleEvents", True)
+    # Fifth chapter: every reference event stays in the right decade and never leaks backwards.
+    set_year(1530, 0)
+    verify("Fifth chapter not active at 1530", "document.querySelector('#chapterFifth').classList.contains('active')", driver)
+    verify("1530 shows later events despite the fixed date gate", "document.querySelector('#eventList').querySelectorAll('.event-item').length===0", driver)
+    verify("Crown Calais controls lost at 1529/1530",
+           "document.querySelectorAll('#map .control-area-label').length>=0", driver)
+    driver.save_screenshot(str(OUT / "chapter5-1530.png"))
+    for annual, expected in [(1533,1),(1534,3),(1535,6),(1536,12),(1537,15),(1538,19),(1539,24)]:
+        set_year(annual, expected)
+    verify("1539 lost 1535 Maynooth event",
+           "document.querySelector('#eventList').textContent.includes('梅努斯城堡')", driver)
+    driver.save_screenshot(str(OUT / "chapter5-1539.png"))
+    toggle_layer("showFullChapterArchive", True)
+    set_year(1529, 24)
+    verify("Fifth chapter archive leaked into fourth",
+           "!document.querySelector('#showFullChapterArchive').checked", driver)
+    set_year(1535, 6)
+    maynooth = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1530S-E004"]')
+    zoom_before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
+    ActionChains(driver).double_click(maynooth).perform()
+    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker"))>0)
+    time.sleep(1.1)
+    zoom_after = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
+    if zoom_before and zoom_after:
+        assert zoom_after==zoom_before, "Maynooth focus incorrectly zoomed map"
+    assert driver.execute_script("return document.querySelector('#yearRange').value")=="1535", "Maynooth double-click changed date"
+    driver.save_screenshot(str(OUT / "focus-maynooth-1535.png"))
     browser = driver.get_log("browser")
     critical = [x["message"] for x in browser if re.search(r"Uncaught (TypeError|ReferenceError|SyntaxError)|Uncaught \w+Error", x["message"])]
     assert not critical, "Browser JavaScript errors: " + str(critical[:8])

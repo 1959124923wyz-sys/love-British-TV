@@ -1,0 +1,29 @@
+name: "1530s territorial research quality"
+on:
+  push:
+    branches:
+      - "research/territorial-1530-1539-20261013"
+  pull_request:
+    paths:
+      - "research/periods/1530-1539/**"
+      - ".github/workflows/1530s-research-quality.yml"
+permissions:
+  contents: read
+jobs:
+  evaluate-historical-research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate control continuity and evidence
+        run: python3 research/periods/1530-1539/validate_research.py
+      - name: Check independent research preview JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          html=Path("research/periods/1530-1539/interactive_research_preview.html").read_text()
+          blocks=re.findall(r'<script[^>]*>(.*?)</script>', html, flags=re.S|re.I)
+          assert blocks and blocks[-1].strip(), "inline map logic missing"
+          Path("/tmp/1530s-preview.js").write_text(blocks[-1])
+          PY
+          node --check /tmp/1530s-preview.js

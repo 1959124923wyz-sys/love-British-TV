@@ -1,0 +1,151 @@
+{
+  "schema": "financial-evidence-1530s-v1",
+  "period": {
+    "from": 1530,
+    "to": 1539
+  },
+  "records": [
+    {
+      "id": "FIN-1534-1535-VALOR",
+      "title": "1534—1535英国宗教资产与税赋核价",
+      "period": "1530-1539",
+      "accounting_class": "ecclesiastical_valuation_of_crown_revenue_base",
+      "geography": "Kingdom of England and Wales",
+      "transfer_direction": "Crown prospective income base",
+      "account_type": "taxable_income_assessment",
+      "amount_value": null,
+      "amount_currency": null,
+      "recognized_year": null,
+      "source_ids": [
+        "ENG-TNA-DISSOLUTION-COLLECTION",
+        "ENG-TNA-DISSOLUTION-RESEARCH"
+      ],
+      "original_record_lookup": "E 344, E 346, E 344/22",
+      "qualification": "Not same as Crown realized cash received, do not sum assessed incomes as annual realized profits.",
+      "primary_ledger_read": false,
+      "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    },
+    {
+      "id": "FIN-1536-ENG-MINOR-HOUSES",
+      "title": "1536小型修道院资产被收归王室",
+      "period": "1530-1539",
+      "accounting_class": "domestic_asset_transfer",
+      "geography": "England and Wales",
+      "transfer_direction": "Church estates -> English Crown",
+      "account_type": "property_or_capital_transfer",
+      "amount_value": null,
+      "amount_currency": null,
+      "recognized_year": null,
+      "source_ids": [
+        "ENG-TNA-DISSOLUTION-RESEARCH",
+        "ENG-TNA-DISSOLUTION-CHRONOLOGY"
+      ],
+      "original_record_lookup": "E 322, E 315/2; LR 1/LR 2",
+      "qualification": "Domestic religious land transfer is not overseas colonial extraction; sums require abbey deed, account and valuation.",
+      "primary_ledger_read": false,
+      "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    },
+    {
+      "id": "FIN-1538-CHERTSEY",
+      "title": "1538切特西修道院拆除及石料转运",
+      "period": "1530-1539",
+      "accounting_class": "building_dismantling_cost_and_material_transfer",
+      "geography": "Chertsey and royal palaces",
+      "transfer_direction": "Ex-monastic property/material -> English Crown palace building",
+      "account_type": "cost_and_asset_separate",
+      "amount_value": null,
+      "amount_currency": null,
+      "recognized_year": null,
+      "source_ids": [
+        "ENG-TNA-DISSOLUTION-COLLECTION"
+      ],
+      "original_record_lookup": "E 101/459/22 (22 Jun 1538)",
+      "qualification": "Wages, transport and material benefits are distinct accounting flows, not all Crown cash profit.",
+      "primary_ledger_read": false,
+      "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    },
+    {
+      "id": "FIN-1538-BISHAM",
+      "title": "1538比沙姆修道院宗教财产移交",
+      "period": "1530-1539",
+      "accounting_class": "domestic_church_property_surrender",
+      "geography": "Bisham Abbey Berkshire",
+      "transfer_direction": "Church property -> English Crown",
+      "account_type": "legal_surrender",
+      "amount_value": null,
+      "amount_currency": null,
+      "recognized_year": null,
+      "source_ids": [
+        "ENG-TNA-DISSOLUTION-COLLECTION"
+      ],
+      "original_record_lookup": "E 322/39",
+      "qualification": "Deed states surrender, not realized sale price or value.",
+      "primary_ledger_read": false,
+      "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    },
+    {
+      "id": "FIN-1539-GREATER-HOUSES",
+      "title": "1539较大型修道院资产移交",
+      "period": "1530-1539",
+      "accounting_class": "domestic_crown_asset_acquisition",
+      "geography": "England Wales and selected Irish institutions",
+      "transfer_direction": "Religious institutions -> royal title",
+      "account_type": "capital_or_rent_claim",
+      "amount_value": null,
+      "amount_currency": null,
+      "recognized_year": null,
+      "source_ids": [
+        "ENG-TNA-DISSOLUTION-RESEARCH",
+        "ENG-TNA-DISSOLUTION-CHRONOLOGY"
+      ],
+      "original_record_lookup": "E 322; LR 1/LR 2; E 318",
+      "qualification": "Different date of transfer, deed, annual rent, paid sale and tax receipts must remain separate.",
+      "primary_ledger_read": false,
+      "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    },
+    {
+      "id": "FIN-1535-1537-KILDARE",
+      "title": "基尔代尔叛乱后杰拉德家族封地被没收",
+      "period": "1530-1539",
+      "accounting_class": "forfeiture_legal_title_and_possession_uncertain",
+      "geography": "Irish Crown lordship / Kildare",
+      "transfer_direction": "FitzGerald lordly estate -> asserted English Crown legal title",
+      "account_type": "legal_right_not_net_cashflow",
+      "amount_value": null,
+      "amount_currency": null,
+      "recognized_year": null,
+      "source_ids": [
+        "IR-ULSTER-CHRONOLOGY",
+        "IR-ELLIS-REBELLION-LAW",
+        "IR-KILDARE-LIB-LEIXLIP"
+      ],
+      "original_record_lookup": "Irish 1536–1537 parliament statute rolls and 1861 patent/close roll published abstract",
+      "qualification": "Specific Leixlip act dated 1536 by an Ellis scholarly discussion but 1537 by Kildare county library; do not assert one year without reconciliation. Whether occupied, leased, paid for, and net proceeds unknown.",
+      "primary_ledger_read": false,
+      "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    },
+    {
+      "id": "FIN-1530-1539-CALAIS-GARRISON",
+      "title": "加来与吉讷财政及军事驻防的持续费用",
+      "period": "1530-1539",
+      "accounting_class": "royal_garrison_wages_and_frontier_maintenance",
+      "geography": "Calais and Guînes",
+      "transfer_direction": "English Exchequer -> garrison/fortification",
+      "account_type": "expense",
+      "amount_value": null,
+      "amount_currency": null,
+      "recognized_year": null,
+      "source_ids": [
+        "GB-TNA-FRENCH-LANDS",
+        "GB-TNA-LISLE-PAPERS"
+      ],
+      "original_record_lookup": "SP 3, E 101, E 364",
+      "qualification": "Costs to England are not income from Calais; quantify only from dated registers and actual ledger entries.",
+      "primary_ledger_read": false,
+      "quantify_when": "actual receipt/payment in manuscript has been transcribed with year, unit and direction"
+    }
+  ],
+  "verified_monetary_figures_count": 0,
+  "colonial_profit_total": null,
+  "policy": "Do not aggregate tax base, property forfeiture, fortress expenses and Crown receipts. Separate England's domestic church assets from Irish local appropriation, and both from transoceanic colonial profits."
+}
