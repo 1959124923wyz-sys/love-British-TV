@@ -360,7 +360,13 @@ try:
               // A valid physical map click can hit the Leaflet Canvas beneath
               // this SVG; the app's geographical fallback must still open it.
               const top=document.elementFromPoint(x,y);
-              if(!top||top.closest?.('.leaflet-marker-icon,.atlas-aggregate,.leaflet-control-container,.time-panel,.map-year-card,.leaflet-tooltip'))continue;
+              if(!top||top.closest?.('.leaflet-marker-icon,.atlas-aggregate,.atlas-local-english-garrison,.atlas-french-counterfort,.political-relation-symbol,.leaflet-control-container,.time-panel,.map-year-card,.leaflet-tooltip'))continue;
+              // Hovering nearby can expand markers. Leave room around their
+              // full hit boxes instead of accepting a pixel at their edges.
+              const blockers=[...document.querySelectorAll('.leaflet-marker-icon,.atlas-local-english-garrison,.atlas-french-counterfort')];
+              if(blockers.some(el=>{const b=el.getBoundingClientRect();
+                return x>b.left-20&&x<b.right+20&&y>b.top-20&&y<b.bottom+20;
+              }))continue;
               const higher=(selector.includes('sovereignty')?
                 '.atlas-violet-wartime-vicinity,.atlas-contested-zone,.atlas-territory-solid':
                 selector.includes('contested')?'.atlas-violet-wartime-vicinity':'');
@@ -408,8 +414,10 @@ try:
     """)
     time.sleep(1.25)
     origin=ScrollOrigin.from_element(driver.find_element(By.ID,'map'))
-    ActionChains(driver).scroll_from_origin(origin,0,-1600).perform()
-    time.sleep(1)
+    for _ in range(4):
+        ActionChains(driver).scroll_from_origin(origin,0,-620).perform()
+        time.sleep(.35)
+    time.sleep(.6)
     print("CLICK_SOVEREIGN",real_map_area_click(".leaflet-sovereignty-pane path.leaflet-interactive"),flush=True)
     print("POINTER_AUDIT_SOVEREIGN",driver.execute_script("return window.__atlasClickAudit.slice(-3)"),flush=True)
     print("DOSSIER_AUDIT_SOVEREIGN",driver.execute_script("return document.querySelector('#dossierBody').textContent.slice(0,160)"),flush=True)
@@ -427,8 +435,10 @@ try:
       item.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));
     """)
     time.sleep(1.25)
-    ActionChains(driver).scroll_from_origin(origin,0,-650).perform()
-    time.sleep(1)
+    for _ in range(3):
+        ActionChains(driver).scroll_from_origin(origin,0,-620).perform()
+        time.sleep(.35)
+    time.sleep(.6)
     verify("high-zoom purple garrison zones must not disappear",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     verify("high-zoom blue/violet contested zones must not disappear",
