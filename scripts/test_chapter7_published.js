@@ -42,6 +42,24 @@ assert.equal(relations.features.length,6);
 assert.equal(urban.features.length,2);
 assert.ok(urban.features.every(f=>f.properties.French_controller_year_start===1558));
 assert.equal(military.features.length,9);
+const geography=read('data/seventh-event-geographic-anchors.geojson');
+assert.equal(geography.features.length,4,'Four sourced modern reading anchors required');
+assert.ok(geography.features.every(f=>f.geometry.type==='Point'&&!f.properties.territorial_claim &&f.properties.fill_authorized===false&&f.properties.area_sqkm===null&&f.properties.not_event_location===true),'Modern sites cannot masquerade as control areas or actual voyages');
+for(const f of geography.features){
+ assert.ok(f.properties.related_event_ids.length&&f.properties.source_ids.length,f.id);
+ assert.ok(f.properties.related_event_ids.every(id=>events.has(id)),f.id+' links unknown event');
+ assert.ok(f.properties.source_ids.every(id=>sources.has(id)),f.id+' lacks source');
+ assert.ok(f.properties.locator_source_urls.every(url=>url.startsWith('https://')),f.id);
+}
+for(const id of ['1550S-E005','1550S-E008','1550S-E011','1550S-E012','1550S-E015']){
+ const e=atlas.events.find(e=>e.id===id);
+ assert.equal(e.lat,null,'Never invent an event coordinate: '+id);
+ assert.equal(e.lng,null,'Never invent an event coordinate: '+id);
+ assert.ok(geography.features.some(f=>f.properties.related_event_ids.includes(id)),id+' must have visual reading reference');
+}
+assert.ok(app.includes('function renderSeventhGeographies()'));
+assert.ok(app.includes('function navigateSeventhGeography(feature)'));
+assert.ok(html.includes('id="chapter7GeographyNav"'));
 assert.ok(military.features.every(f=>f.geometry.type==='Point'&&f.properties.fill_authorized===false&&f.properties.area_sqkm===null));
 const active=(id,y)=>military.features.some(f=>f.properties.stable_id===id&&f.properties.start_year<=y&&y<=f.properties.end_year);
 for(const y of [1550,1555,1559]){
