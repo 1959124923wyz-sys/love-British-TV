@@ -178,7 +178,7 @@ function openTerritoryDossier(feature,kind='historic'){
   '<p class="zone-precision-note"><strong>地图精度：</strong>'+escapeHTML(precision)+'</p>'+
   (occupied?'<p class="zone-editorial-warning">紫色示意面表达有史料的英军驻点附近地区，无法证明所包围的整片土地都由英格兰统治。</p>':'')+
   (contested?'<p class="zone-editorial-warning">蓝紫交错纹理是根据战事地点手工制作的阅读参考，不能当成史料实测的前线。</p>':'')+
-  (warReach?'<p class="zone-editorial-warning">紫色虚线走廊根据英军进军与驻军补给地名手工绘制，只表示军事活动影响；不证明沿途各地均被英军稳定占领，也不意味着爱丁堡归英王统治。</p>':'')+
+  (warReach?'<p class="zone-editorial-warning">紫色虚线走廊根据英军进军与驻军补给地名手工绘制，只表示军事活动影响；不能证明沿途所有土地被英军稳定占领，也不意味着爱丁堡归英王统治。</p>':'')+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
