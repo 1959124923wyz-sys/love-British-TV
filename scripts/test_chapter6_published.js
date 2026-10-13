@@ -80,7 +80,7 @@ const activeVicinity=(id,y)=>vicinity.features.some(f=>f.properties.stable_id===
 assert.ok(!activeVicinity('haddington-english-1548-1549',1549));
 assert.ok(activeVicinity('boulogne-english-1544-1550',1549));
 assert.ok(!activeVicinity('ambleteuse-english-fort-1546-1549',1549));
-assert.ok(app.includes('function renderWartimeVicinities()')&&app.includes('map.getZoom()>9'),'Unverified schematic outlines must not be visible as exact buildings at high zoom');
+assert.ok(app.includes('function renderWartimeVicinities()')&&!app.includes('map.getZoom()>9'),'Documented garrison locality overlays must no longer disappear suddenly at high zoom');
 const frenchId='outreau-french-opposing-fort-from-1545';
 assert.ok(active(frenchId,1545)&&active(frenchId,1549),'French counterfort missing');
 assert.equal(placeMap.get(frenchId).status,'French_sovereign_counter_fort_not_English_control');
@@ -96,5 +96,5 @@ assert.ok(app.includes("function renderWartimeControls()")&&app.includes('p.year
 assert.ok(app.includes('atlasSixth?.sources'),'New chapter dossier must resolve academic source links');
 assert.ok(app.includes("next>=1540?atlasSixth"),'Map must load the correct sixth Atlas slice');
 assert.ok(!app.includes("map.flyTo("),'Historical map focus must not auto-zoom');
-assert.ok(html.includes('max="1549"')&&html.includes('app.js?v=timeline-v173'));
+assert.ok(html.includes('max="1549"')&&html.includes('app.js?v=timeline-v174'));
 console.log('PASS sixth chapter: 49 dated sourced events, 23 recorded places, 7 existing geographic outlines, 15 independent garrison/counterfort point features and exact annual control transitions');
