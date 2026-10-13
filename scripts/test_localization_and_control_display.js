@@ -19,7 +19,7 @@ assert.ok(app.includes("radius:map.getZoom()>=6?19:17"),'Occupied areas must be 
 assert.ok(app.includes("p.year_end_start")&&app.includes("p.year_end_stop"),'Status rings must track evidence-supported annual years');
 assert.ok(html.includes('id="controlStatus"')&&html.includes('swatch english-garrison')&&html.includes('swatch french-defence'),'Chinese control legend/status missing');
 assert.ok(css.includes('.year-control-status[hidden]'),'Control status must not distract earlier chapters');
-assert.ok(html.includes('app.js?v=timeline-v172')&&html.includes('css/dark-atlas-v2.css?v=timeline-v172'));
+assert.ok(html.includes('app.js?v=timeline-v173')&&html.includes('css/dark-atlas-v2.css?v=timeline-v173'));
 assert.ok(html.includes('历史档案与文献')&&!html.includes('HISTORICAL DOSSIER'));
 assert.ok(!html.includes('已发布1497—1549五个历史章节'),'Incorrect published chapter count');
 const ireland=data.events.find(e=>e.id==='1540S-002');
