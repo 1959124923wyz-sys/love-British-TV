@@ -565,7 +565,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
    Only the painted SVG feature paths accept pointer hits. */
 .leaflet-warVicinity-pane svg,.leaflet-contestedZone-pane svg,
 .leaflet-sovereignty-pane svg,.leaflet-control-area-pane svg,
-.leaflet-territory-pane svg{pointer-events:none!important;}
+.leaflet-territory-pane svg,.leaflet-garrisonHit-pane svg{pointer-events:none!important;}
 .leaflet-warVicinity-pane path.leaflet-interactive,
 .leaflet-contestedZone-pane path.leaflet-interactive,
 .leaflet-sovereignty-pane path.leaflet-interactive,
@@ -595,3 +595,9 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  border:1px solid #46617c;border-radius:7px;text-align:left;padding:9px 12px;
  font:500 11px/1.5 "Noto Sans SC",sans-serif;}
 .zone-record-link:hover,.zone-record-link:focus-visible{border-color:#bea1ed;background:#25415e;}
+
+/* Only the off-center invisible stroked annulus responds to area-intro clicks.
+   It is a pixel-level hit target, not a historically drawn circle. */
+.leaflet-garrisonHit-pane .atlas-garrison-hit.leaflet-interactive{
+ pointer-events:stroke!important;cursor:pointer;stroke-opacity:.001!important;fill:none!important;
+}
