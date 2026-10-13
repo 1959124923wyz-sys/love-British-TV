@@ -116,9 +116,43 @@ for(const file of overlayPaths){
  }
  results[file]=geo.features.length;
 }
+// Research-backlog references are intentionally NOT inserted into the six
+// public atlas source tables until investigators supply the corresponding
+// verifiable full bibliographic entries. Treat any *new* gap as a CI error.
+const permittedUnregistered={
+ 'data/territorial-footprints-1497-1549.geojson':new Set([
+  'FR-MINISTRY-2026','FR-TNA-CALAIS','FR-ROSE-GRUMMITT',
+  'GEONAMES-FR','IR-STATUTE-1488-JOYCE-1921','IR-OKEEFFE-1992',
+  'IR-ELLIS-2021'
+ ]),
+ 'data/financial-evidence-1530-1539.json':new Set(['GB-TNA-FRENCH-LANDS']),
+ 'data/welsh-legal-shires-1535.json':new Set(['WLS-1535-ACT-TRANSCRIPT'])
+};
+const missingSourceIds={};
+for(const [file,permitted] of Object.entries(permittedUnregistered)){
+ const data=read(file),features=data.features||data.records||[];
+ const gaps=new Set();
+ for(const item of features){
+  const obj=item.properties||item;
+  for(const id of obj.source_ids||[])if(!sourceMap.has(id))gaps.add(id);
+ }
+ for(const id of gaps)assert.ok(permitted.has(id),file+' new unregistered source ID: '+id);
+ // When researchers register old sources, remove them from this reviewed
+ // exception list in the same PR to record the exact database migration.
+ assert.deepEqual([...gaps].sort(),[...permitted].sort(),file+' known bibliography debt changed; review it explicitly');
+ missingSourceIds[file]=[...gaps].sort();
+}
+const finance=read('data/financial-evidence-1530-1539.json');
+assert.equal(finance.colonial_profit_total,null,
+ 'Domestic tax/forfeiture/pension evidence must never be summed as a colonial-profit total');
+const wales=read('data/welsh-legal-shires-1535.json');
+assert.equal(wales.verified_new_historic_border_polygons,0,'Unsurveyed old Welsh shire polygons must remain undisclosed');
+for(const c of wales.records)
+ assert.equal(c.verified_polygon,false,'Welsh legal status cannot silently become surveyed ancient borders');
 const notes=read('data/historical-detail-notes.json').records;
 for(const id of Object.keys(notes))
  assert.ok(eventIds.has(id)||placeIds.has(id),'Deep-archive note orphaned from published history: '+id);
 console.log('PASS published data: '+eventIds.size+' unique historical events, '+placeIds.size+
- ' stable political sites, '+sourceMap.size+' source IDs, '+Object.keys(notes).length+
- ' attached deep notes; geographic layers='+JSON.stringify(results));
+ ' stable political sites, '+sourceMap.size+' registered source IDs, '+Object.keys(notes).length+
+ ' attached deep notes; geographic layers='+JSON.stringify(results)+
+ '; explicitly unregistered legacy source IDs='+JSON.stringify(missingSourceIds));
