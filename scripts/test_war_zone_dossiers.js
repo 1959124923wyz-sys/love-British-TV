@@ -53,7 +53,7 @@ assert.ok(!activeIds(1549).has('haddington-english-1548-1549'),'Haddington must 
 assert.ok(activeIds(1549).has('boulogne-english-1544-1550'),'Boulogne still English-held at end of 1549');
 for(const t of ["function openTerritoryDossier(feature,kind='historic')","openTerritoryDossier(feature,'occupied')","openTerritoryDossier(feature,'contested')","openTerritoryDossier(feature,'historic')",
  "function renderContestedZones()","function renderWartimeVicinities()","function ensureContestedHatch()",
- "renderWartimeVicinities();renderContestedZones();renderWartimeControls();","renderer:sovereigntyRenderer",
+ "renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();","renderer:sovereigntyRenderer",
  "fetch('data/war-occupied-zones-1540-1549.geojson'","fetch('data/war-contested-zones-1540-1549.geojson'"])
  assert.ok(app.includes(t),t+' missing');
 assert.ok(!app.includes('map.getZoom()>9')&&!app.includes('map.getZoom()>8'),'Uncertain war zones should persist while zooming instead of suddenly vanishing');
