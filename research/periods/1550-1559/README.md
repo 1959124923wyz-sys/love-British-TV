@@ -38,3 +38,16 @@
 可在仓库根目录运行`python3 research/periods/1550-1559/validate_research.py`。专项GitHub Actions为**手动触发**，避免此前维护人员关闭的自动研究失败通知再启动。已执行过从GitHub远端读取后的数据一致性审查，尚不称手动Python CI或浏览器人工审查已经通过。
 
 **最高历史准确性约束：声称的行政疆域、现代海岸／郡界和实际1540年代或1550年代军队能收税控地的范围属于不同概念。不确定疆域只能虚线、Point或留空。原始16世纪可核精确军政Polygon数为0。**
+
+
+## 战争动态控制层｜主编候审入口（2026-10-13）
+
+依照“主权底色、英/法实际控制、蓝紫等双方交战带、孤立据点”的项目战争地图四层方案，本章新增以下**未发布、具有确定来源ID和精度标记**的数据：
+
+- [WAR_MAP_SPEC_1550s.md](WAR_MAP_SPEC_1550s.md) — 主编按规则调用，区分示意、实控、交战、外军盟驻。
+- [WAR_CONTROL_ZONES_CANDIDATE_1550_1559.geojson](WAR_CONTROL_ZONES_CANDIDATE_1550_1559.geojson) — 6个控制候选，含旧Pale英法分期复用虚线参考。
+- [WAR_CONTESTED_ZONES_CANDIDATE_1550_1559.geojson](WAR_CONTESTED_ZONES_CANDIDATE_1550_1559.geojson) — 4个交战／撤退／殖民争夺候选。
+- [WAR_FRONT_NOTES_1550_1559.json](WAR_FRONT_NOTES_1550_1559.json) — 10个年末快照与15个阶段变化。
+- [WAR_ISOLATED_OUTPOSTS_CANDIDATE_1550_1559.json](WAR_ISOLATED_OUTPOSTS_CANDIDATE_1550_1559.json) — 8个独立军堡阶段。
+
+**所有估算外缘均非史实实测边界。** 除仓库已有加来Pale旧参考Polygon可用于编辑审核后的低透明虚线**示意**外，无法可靠定界的苏格兰、爱尔兰战争带均以`geometry:null`留待新史料核定，严禁自动圆圈缓冲、现代县界套色、根据英军点位拼接伪占领区。第七章不能画成持续向北扩张：1550英军据堡退潮，1558英王加来区失去，1556爱尔兰出现局部殖民争夺。详细见 [EDITOR_HANDOFF.md](EDITOR_HANDOFF.md) 末节。
