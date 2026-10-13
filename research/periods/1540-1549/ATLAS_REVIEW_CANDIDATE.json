@@ -1053,11 +1053,12 @@
       "lng": -2.6832,
       "geo_precision": "modern_site_reference_do_not_trace_16c_walls",
       "geography_label": "海尔斯城堡",
-      "description": "1548年3月英军夺取海尔斯城堡，委任亲英的苏格兰贵族Hugh Douglas指挥，附近有英军驻守。1549年是否继续驻防仍需单独史料确认。",
-      "short_description": "1548年3月英军夺取海尔斯城堡，委任亲英的苏格兰贵族Hugh Douglas指挥，附近有英军驻守。1549年是否继续驻防仍需单独史料确认。",
+      "description": "英军1548年3月夺取苏格兰海尔斯城堡并由亲英领主驻守；苏格兰历史环境局正式《Hailes Castle重要性说明》记同年苏格兰军队重新收复并据传移走铁门，精确月份未证。按年末切片，1548年及之后不可继续显示英军拥有城堡。",
+      "short_description": "1548年英军攻取海尔斯，苏格兰军队同年收复；不能画作1548年末英军据点。",
       "source_ids": [
         "SC-HES-2022-HAILES",
-        "SC-HES-2022-HADDINGTON"
+        "SC-HES-2022-HADDINGTON",
+        "SC-HES-HAILES-SOS-2019"
       ],
       "certainty": "research_source_linked_historic_event",
       "significance": {
@@ -1069,7 +1070,7 @@
       "editorial_status": "staged_unpublished",
       "research_event_id": "1540S-018",
       "economic_fields": [],
-      "geographic_rule": "local_castle_with_English_garrison_and_allied_lord",
+      "geographic_rule": "English_castle_taken_then_Scots_recaptured_same_1548_no_English_year_end_active",
       "review_note": "1548-03"
     },
     {
@@ -1804,30 +1805,6 @@
       "area_polygon_verified": false,
       "year_end_valid_through": 1549,
       "known_historical_end_may_be_after_decade": true,
-      "carryover_from": null,
-      "data_purpose": "state_1540s_year_end_map_point_not_a_cadastral_polygon"
-    },
-    {
-      "id": "hailes-english-1548-date_unknown",
-      "name": "海尔斯城堡英军占领（1549存续待核）",
-      "lat": 55.973,
-      "lng": -2.6832,
-      "status": "English_allied_local_lordship_and_garrison",
-      "description": "Evidence for 1548 castle garrison; 1549 status unknown, DO NOT mark known retreat or silently carry confirmed control",
-      "source_ids": [
-        "SC-HES-2022-HAILES",
-        "SC-HES-HAILES-MONUMENT"
-      ],
-      "icon_code": "TER",
-      "geo_precision": "modern_place_or_heritage_landmark_not_Tudor_wall",
-      "certainty": "evidence_at_site_historic_perimeter_not_verified",
-      "state_type": "occupied_castle_in_independent_Scotland",
-      "start_year": 1548,
-      "observed_through_year": 1548,
-      "end_year": null,
-      "area_polygon_verified": false,
-      "year_end_valid_through": 1548,
-      "known_historical_end_may_be_after_decade": false,
       "carryover_from": null,
       "data_purpose": "state_1540s_year_end_map_point_not_a_cadastral_polygon"
     },
@@ -2692,7 +2669,8 @@
     "all_source_ids_present": true,
     "verified_historic_conquered_control_area_polygons": 0,
     "non_exact_poly_dashed": true,
-    "needs_editor_cartography_review": true
+    "needs_editor_cartography_review": true,
+    "collector3_hailes_override": "Official HES p.2/7 contradicts prior English year-end active. Event retained, place removed from active snapshot/places; Scottish reconquest candidate in separate addendum."
   },
   "publication": {
     "status": "research_only_not_published",
