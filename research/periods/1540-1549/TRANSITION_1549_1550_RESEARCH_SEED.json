@@ -208,13 +208,7 @@
       "area_survey_verified": false
     }
   ],
-  "uncertain_1549_occupations": [
-    {
-      "stable_id": "hailes-english-1548-date_unknown",
-      "certainty": "last confirmed 1548; no verified 1549 departure or continuance",
-      "status_in_1550": "unknown"
-    }
-  ],
+  "uncertain_1549_occupations": [],
   "closed_by_1549": [
     {
       "stable_id": "inchcolm-english-1547-1548",
@@ -260,6 +254,14 @@
       "source_ids": [
         "SC-HUME-TRUST-1547-1548"
       ]
+    },
+    {
+      "stable_id": "hailes-english-1548-date_unknown",
+      "actual_end": "1548 (month unknown; Scottish recapture in the same year)",
+      "source_ids": [
+        "SC-HES-HAILES-SOS-2019"
+      ],
+      "evidence": "HES Hailes Castle Statement of Significance 2019, p.2/7: Scots soon recaptured the castle and removed iron gates. No English garrison at year-end 1548 or any point in 1549 based on known control succession."
     }
   ],
   "expected_1550_primary_questions": [
@@ -290,7 +292,7 @@
     "scottish_treaty_relation": "Potter 1984 published notes and Edward VI diary transcription discuss Lauder and Dunglass release conditioned on treaty and negotiations involving Eyemouth and Roxburgh; do not invent each garrison evacuation day. Scottish fort clauses are not all Boulogne handover day.",
     "broughty": "February 1550 documented HES; Balgillo English outwork falls one day before Broughty castle. A proposed 12 February exact date appears in other secondary accounts but remains unconfirmed by inspected HES report.",
     "eyemouth": "English fort demolished 1550 per museum; archaeological abstract describes English holding through summer 1550; separate 1557 French fort is not Tudor English geometry.",
-    "hailes": "OPEN CONTRADICTION: derivative history claims Arran removed Hailes iron gates in August 1548, suggesting return to Scottish control before 1549. HES materials seen do not confirm this termination. Seek Joseph Bain, Hamilton Papers II (1892) p.616 and original Scottish source before correcting active control episode.",
+    "hailes": "RESOLVED AT YEAR LEVEL by Historic Environment Scotland 2019 official Statement of Significance p.2/7: Scots retook Hailes after English capture within 1548 and removed iron gates; 1548 and 1549 year ends are NOT English. Exact recapture month/day still unverified. No longer uncertain 1549 English garrison.",
     "dundee": "Newly identified town English late 1547 to Jan 1548 and second Aug 1548 occupation; separate short local control from Britain/scotland sovereignty; see DUNDEE_CONTROL_EPISODES_ADDENDUM_PR27_20261013.json.",
     "not_an_earlier_map_change": "Any 1550 finding must not erase verified British Boulogne / Scottish temporary outposts during 1549."
   }
