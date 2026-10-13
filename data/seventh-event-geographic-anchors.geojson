@@ -1,0 +1,182 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "schema": "seventh-chapter-geographic-reading-anchors-v1",
+    "period": [
+      1553,
+      1559
+    ],
+    "editorial_review": "map reading nodes, NOT event coordinates, travel routes or British overseas colonies",
+    "not_exact_events": 4,
+    "land_claims": 0,
+    "fill_authorized": false,
+    "source_chapter": "data/atlas-1550-1559.json",
+    "geocoding_note": "Laois modern site from PR33 official heritage; Elmina GMMB UNESCO/OSM; Kholmogory Getty TGN; London modern city-center reference. Distinct modern locations remain separate from original event lat/lng.",
+    "continent_navigation_only": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ch7-midlands-colonial-dispossession",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.297781,
+          53.035512
+        ]
+      },
+      "properties": {
+        "name": "爱尔兰中部：1556年殖民设郡、没收土地及抵抗",
+        "short_label": "爱尔兰中部",
+        "year_start": 1556,
+        "year_end": 1559,
+        "control_class": "dispossession_and_contested_plantation",
+        "related_event_ids": [
+          "1550S-E011",
+          "1550S-E012",
+          "1550S-E013",
+          "1550S-E014",
+          "1550S-E015"
+        ],
+        "geographic_anchor_role": "Portlaoise modern documented Fort Protector town reference; one of two older royal forts, NOT the statutory legislative site or the full plantation land",
+        "certainty": "referenced_modern_town_not_tudor_grant_perimeter",
+        "precision_note": "定位在有证据的旧Fort Protector／Maryborough（今Portlaoise）所在城镇；殖民法令在爱尔兰议会制定，各宗土地没收边界及冲突地点未核，另一英军堡Fort Governor位于Daingean。",
+        "source_ids": [
+          "IE-ASKABOUTIRELAND-MIDLANDS-1556",
+          "IE-LAOIS-COUNTY-DEVELOPMENT-FORT",
+          "IE-LANCASTER-1556-COLONIAL"
+        ],
+        "locator_source_urls": [
+          "https://laois.ie/rock-of-dunamase-visitor-information",
+          "https://askaboutireland.ie/learning-zone/secondary-students/history/tudor-ireland/tudor-plantations/"
+        ],
+        "not_event_location": true,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "historic_polygon_verified": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch7-african-guinea-trade-and-enslavement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.34813,
+          5.08266
+        ]
+      },
+      "properties": {
+        "name": "西非几内亚沿岸：英商航海、贸易与1555年人口奴役",
+        "short_label": "西非沿岸",
+        "year_start": 1553,
+        "year_end": 1559,
+        "control_class": "commerce_and_enslavement_without_british_territorial_control",
+        "related_event_ids": [
+          "1550S-E006",
+          "1550S-E007",
+          "1550S-E008",
+          "1550S-E010",
+          "1550S-E016",
+          "1550S-E017"
+        ],
+        "geographic_anchor_role": "The Portuguese-held Elmina Castle is a documented coastal landmark and the ONLY geocoded modern historic site; it is NOT the recorded landing point of all voyages and not an English fort",
+        "certainty": "modern_portuguese_coastal_landmark_not_voyage_waypoint",
+        "precision_note": "定位仅为葡萄牙控制的埃尔米纳堡现代遗址，用来识别几内亚贸易海岸；1553—1557各英船实际航路、停泊和被奴役者被掳地点未核实。1555年5名被奴役者由John Lok带回英格兰，不是英国在非洲建立领地。",
+        "source_ids": [
+          "AF-HISTORIC-ENGLAND-JOHN-LOK",
+          "AF-CAMBRIDGE-HAKLUYT-TOURSON"
+        ],
+        "locator_source_urls": [
+          "https://gmmb.gov.gh/st-georges-castle-elmina-castle-elmina-1482/",
+          "https://whc.unesco.org/en/list/34/",
+          "https://mapcarta.com/30028418"
+        ],
+        "not_event_location": true,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "historic_polygon_verified": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch7-white-sea-muscovy-contact",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.7,
+          64.2
+        ]
+      },
+      "properties": {
+        "name": "俄罗斯北德维纳／霍尔莫戈雷：白海贸易接触",
+        "short_label": "白海·俄罗斯",
+        "year_start": 1553,
+        "year_end": 1559,
+        "control_class": "trade_contact_foreign_sovereignty",
+        "related_event_ids": [
+          "1550S-E005",
+          "1550S-E009"
+        ],
+        "geographic_anchor_role": "Getty modern inhabited-place reference for Kholmogory; documented historic river settlement connected to Chancellor expedition; not White Sea landfall, exact ship track or English territory",
+        "certainty": "modern_city_reference_not_exact_1553_landfall",
+        "precision_note": "定位在Getty地名权威资料所记霍尔莫戈雷现代城镇，因文献说明钱塞勒经北德维纳河到达当地并前往莫斯科；不是1553年确证登陆经纬度，也不是英国领土。1555年莫斯科公司由英王在英格兰特许。",
+        "source_ids": [
+          "RU-BRITISH-MUSEUM-MUSCOVY-CHARTER",
+          "RU-CAMBRIDGE-MUSCOVY-NETWORK"
+        ],
+        "locator_source_urls": [
+          "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=&place=&subjectid=1053364",
+          "https://www.lancaster.ac.uk/quakers/notes/muscovy.html"
+        ],
+        "not_event_location": true,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "historic_polygon_verified": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch7-london-merchant-charters",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1278,
+          51.5074
+        ]
+      },
+      "properties": {
+        "name": "伦敦商人网络：几内亚船队与1555年莫斯科公司",
+        "short_label": "伦敦商人",
+        "year_start": 1554,
+        "year_end": 1559,
+        "control_class": "england_merchant_activity_not_overseas_sovereignty",
+        "related_event_ids": [
+          "1550S-E007",
+          "1550S-E008",
+          "1550S-E009"
+        ],
+        "geographic_anchor_role": "modern London city centre used for capital and merchant-company administrative reference; not John Lok return port, not port wharf/royal charter signature site",
+        "certainty": "modern_city_centre_representative_not_exact_historical_site",
+        "precision_note": "定位是现代伦敦城市中心，仅说明伦敦商人网络和1555年王室特许；Lok的实际返回港口、被奴役者到岸地点及公司签署建筑未核，均不能从此点倒推。",
+        "source_ids": [
+          "AF-HISTORIC-ENGLAND-JOHN-LOK",
+          "RU-BRITISH-MUSEUM-MUSCOVY-CHARTER",
+          "AF-HAKLUYT-JOHN-LOK-1554"
+        ],
+        "locator_source_urls": [
+          "https://historicengland.org.uk/research/inclusive-heritage/the-slave-trade-and-abolition/sites-of-memory/slave-traders-and-plantation-wealth/britain-and-the-slave-trade/",
+          "https://www.britishmuseum.org/collection/object/H_1928-0315-1"
+        ],
+        "not_event_location": true,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "historic_polygon_verified": false,
+        "area_sqkm": null
+      }
+    }
+  ]
+}

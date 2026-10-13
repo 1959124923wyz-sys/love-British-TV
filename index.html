@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v176-ch7">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v176-ch7-geography">
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>英国殖民扩张与掠夺历史地图</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
- <div class="head-actions"><span class="version">1497—1559 · PILOT v1.8.0</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1559 · PILOT v1.8.1</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
@@ -44,6 +44,7 @@
       <div><i class="swatch contested-war"></i><span><strong>蓝紫条纹</strong> · 交战与争夺，非稳定占领</span></div>
       <div><i class="swatch english-garrison"></i><span><strong>驻军标记</strong> · 经史料考证的城堡与据点</span></div>
       <div><i class="swatch french-defence"></i><span><strong>法国控制／苏法盟军据点</strong> · 不等于英国占领</span></div><div><i class="swatch major"></i><span><strong>事件标记</strong> · 战斗、焚掠、远航等按年发生的史事</span></div>
+      <div><i class="swatch geo-anchor"></i><span><strong>第七章地区阅读点</strong> · 仅为现代参照地标，不代表精确航迹、殖民土地或新领土</span></div>
       <p class="map-mode-caution">轮廓以现代地点概略绘制，不能作为16世纪实测边界或占领面积。点击地图上的区域或据点可查看史料与精度说明。</p>
      </div>
     </details>
@@ -72,6 +73,7 @@
    <label for="mapLayerEvents"><input type="checkbox" id="mapLayerEvents" checked><span>事件</span></label>
   </div>
 
+  <section id="chapter7GeographyNav" class="atlas-ch7-geography-nav" aria-label="第七章史事地理导航" hidden></section>
   <div class="map-top">
    <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
 
@@ -114,6 +116,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=timeline-v176-ch7"></script>
+<script src="app.js?v=timeline-v176-ch7-geography"></script>
 </body>
 </html>
