@@ -1,0 +1,258 @@
+{
+  "type": "FeatureCollection",
+  "name": "CONTINUITY STAGED political relations 1500-1529 — not English colony area. Continued through 1549 with no new proven historic border polygons",
+  "source": "Existing reviewed historical atlas place records",
+  "warning": "Symbols anchored at established named places, independent of island or administration boundaries; never use these circles for territorial acreage",
+  "cartographic_principle": "Direct rule = solid; autonomous lordship = crosshatch; crown dependency = diagonal hatch; Scottish crown = blue solid; uncertain historic boundaries await archival mapping",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "polity-area-symbol-dublin-pale",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "name": "都柏林：英王在爱尔兰的行政核心之一",
+        "political_relation": "crown_administration_core",
+        "render_mode": "solid_bounded_symbol",
+        "stroke_color": "#9264d4",
+        "description": "都柏林是英王在爱尔兰的主要行政中心之一，周边的贵族与地方领主共同参与政治和军事事务。",
+        "annotation": "英王在爱尔兰的行政中心",
+        "source_place_id": "dublin-pale",
+        "source_ids": [
+          "EGAN-2024-EHR"
+        ],
+        "start_year": 1500,
+        "observed_through_year": 1549,
+        "render_radius_px": 19,
+        "boundary_precision": "representative-place-area-symbol",
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "valid_year_end_from": 1500,
+        "valid_year_end_to": 1529,
+        "historic_end_date": null,
+        "original_provenance": "main:data/political-relations-1500-1519.geojson",
+        "editorial_status": "review_ready_not_live",
+        "role_for_continuity": "limited_English_royal_administration",
+        "historical_boundary_confirmed": false,
+        "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
+        "actual_area_sqkm": null,
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-area-symbol-channel-jersey",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1313,
+          49.2144
+        ]
+      },
+      "properties": {
+        "name": "泽西岛：英王属地",
+        "political_relation": "crown_dependency",
+        "render_mode": "hatch_bounded_symbol",
+        "stroke_color": "#b08cdd",
+        "description": "泽西岛受英王统辖，沿用当地的法律和行政制度。",
+        "annotation": "英王属地 · 地方法律",
+        "source_place_id": "channel-jersey",
+        "source_ids": [
+          "JERSEY-HISTORY-GOV"
+        ],
+        "start_year": 1500,
+        "observed_through_year": 1549,
+        "render_radius_px": 19,
+        "boundary_precision": "representative-place-area-symbol",
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "valid_year_end_from": 1500,
+        "valid_year_end_to": 1529,
+        "historic_end_date": null,
+        "original_provenance": "main:data/political-relations-1500-1519.geojson",
+        "editorial_status": "review_ready_not_live",
+        "role_for_continuity": "crown_dependency",
+        "historical_boundary_confirmed": false,
+        "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
+        "actual_area_sqkm": null,
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-area-symbol-isle-of-man",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.56,
+          54.235
+        ]
+      },
+      "properties": {
+        "name": "马恩岛：特殊领主制度",
+        "political_relation": "autonomous_lordship",
+        "render_mode": "crosshatched_bounded_symbol",
+        "stroke_color": "#b9a075",
+        "description": "马恩岛由斯坦利家族等当地领主治理，保留独特的岛屿政制。",
+        "annotation": "斯坦利家族领主制度 · 马恩岛",
+        "source_place_id": "isle-of-man",
+        "source_ids": [
+          "CAMBRIDGE-LORDSHIP-MAN"
+        ],
+        "start_year": 1500,
+        "observed_through_year": 1549,
+        "render_radius_px": 19,
+        "boundary_precision": "representative-place-area-symbol",
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "valid_year_end_from": 1500,
+        "valid_year_end_to": 1529,
+        "historic_end_date": null,
+        "original_provenance": "main:data/political-relations-1500-1519.geojson",
+        "editorial_status": "review_ready_not_live",
+        "role_for_continuity": "autonomous_lordship",
+        "historical_boundary_confirmed": false,
+        "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
+        "actual_area_sqkm": null,
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-area-symbol-orkney-scotland",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1,
+          59
+        ]
+      },
+      "properties": {
+        "name": "奥克尼：苏格兰王权相关群岛",
+        "political_relation": "scottish_crown_territory",
+        "render_mode": "scottish_solid_symbol",
+        "stroke_color": "#5e9ab8",
+        "description": "奥克尼群岛处于苏格兰王权之下，拥有自己的地方治理传统。",
+        "annotation": "苏格兰王权 · 奥克尼",
+        "source_place_id": "orkney-scotland",
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ],
+        "start_year": 1500,
+        "observed_through_year": 1549,
+        "render_radius_px": 19,
+        "boundary_precision": "representative-place-area-symbol",
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "valid_year_end_from": 1500,
+        "valid_year_end_to": 1529,
+        "historic_end_date": null,
+        "original_provenance": "main:data/political-relations-1500-1519.geojson",
+        "editorial_status": "review_ready_not_live",
+        "role_for_continuity": "independent_Scottish_non_English",
+        "historical_boundary_confirmed": false,
+        "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
+        "actual_area_sqkm": null,
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-area-symbol-shetland-scotland",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.15,
+          60.15
+        ]
+      },
+      "properties": {
+        "name": "设得兰：苏格兰王权相关群岛",
+        "political_relation": "scottish_crown_territory",
+        "render_mode": "scottish_solid_symbol",
+        "stroke_color": "#5e9ab8",
+        "description": "设得兰群岛处于苏格兰王权关系之内，延续北方群岛的地方制度。",
+        "annotation": "苏格兰王权 · 设得兰",
+        "source_place_id": "shetland-scotland",
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ],
+        "start_year": 1500,
+        "observed_through_year": 1549,
+        "render_radius_px": 19,
+        "boundary_precision": "representative-place-area-symbol",
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "valid_year_end_from": 1500,
+        "valid_year_end_to": 1529,
+        "historic_end_date": null,
+        "original_provenance": "main:data/political-relations-1500-1519.geojson",
+        "editorial_status": "review_ready_not_live",
+        "role_for_continuity": "independent_Scottish_non_English",
+        "historical_boundary_confirmed": false,
+        "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
+        "actual_area_sqkm": null,
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-area-symbol-channel-guernsey-1530s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5333,
+          49.45
+        ]
+      },
+      "properties": {
+        "name": "根西岛：王室属地／独立海岛地方法庭",
+        "political_relation": "crown_dependency_separate_bailiwick",
+        "render_mode": "hatch_bounded_symbol",
+        "stroke_color": "#b08cdd",
+        "description": "根西岛受英王王室关联与军政任命，但自中世纪保留独立皇家法院和岛内制度。1530年代并非英格兰本土郡县，也不属于苏格兰王国。",
+        "annotation": "王室属地 · 独立海岛司法系统",
+        "source_place_id": "channel-guernsey",
+        "source_ids": [
+          "GUE-GOV-HOUSE-HISTORY",
+          "GUE-PARLIAMENT-ROYAL-COURT",
+          "GUE-UK-MOJ-CROWN",
+          "GUE-GETTY-ST-PETER"
+        ],
+        "start_year": 1500,
+        "observed_through_year": 1549,
+        "render_radius_px": 19,
+        "boundary_precision": "Guernsey modern town St Peter Port point, NOT historical island administration boundary",
+        "historical_boundary_confirmed": false,
+        "historic_polygon_verified": false,
+        "measured_area_sqkm": null,
+        "valid_year_end_from": 1530,
+        "valid_year_end_to": 1539,
+        "year_start_this_research": 1530,
+        "year_end_this_research": 1539,
+        "role_for_continuity": "already_existing_Crown_Dependency_not_new_1530_conquest",
+        "source_file": "research/periods/1530-1539/SOURCE_REGISTRY.json",
+        "not_claimed_new_territorial_acquisition": true,
+        "id": "polity-area-symbol-channel-guernsey-1530s",
+        "editorial_status": "published_reviewed_preexisting_institution_2026-10-13",
+        "review_warning": "Modern representative St Peter Port area point; Crown Dependency was not established by England in 1530; not a colonial expansion polygon",
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+      }
+    }
+  ],
+  "metadata": {
+    "schema": "continuity-staged-relations-v2",
+    "original": "main:data/political-relations-1500-1519.geojson",
+    "statuses": "never convert independent Scottish or autonomous Man to direct England polygon",
+    "coverage_through": 1539,
+    "review_note": "PR25 old controls retained; no new historic area inferred; Scottish island governance distinct from English Crown",
+    "editorial_continuity_1549": "Unmodified inherited geometry; period-end continuation of political relationship only",
+    "precision_not_surveyed": true,
+    "production_provenance": "data/political-relations-1500-1539.geojson"
+  }
+}

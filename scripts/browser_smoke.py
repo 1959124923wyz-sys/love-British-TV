@@ -218,6 +218,44 @@ try:
         """)
         assert dims['count']==5 and dims['smallest']>=60 and dims['overflow']<=2, f"Timeline clipped at {width}px: {dims}"
     driver.save_screenshot(str(OUT / "three-tier-century-decade-year.png"))
+    # Chapter six: year-end controls are distinct from archival events.
+    # Temporary English garrison sites must disappear at the researched end year,
+    # without erasing existing sovereign Scotland or the English Boulogne core.
+    set_year(1539,27)
+    zoom_1539=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
+    set_year(1540,1)
+    verify("chapter six did not become selectable on the half-century page",
+           """document.querySelector('#chapterTrack [data-decade="1540"].active')!==null""", driver)
+    verify("old Calais historical footprint was reset in 1540",
+           "document.querySelectorAll('#map .atlas-territory-solid').length>=1", driver)
+    set_year(1544,11)
+    verify("1544 Boulogne and Lochmaben occupation sites not rendered",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===3", driver)
+    set_year(1545,17)
+    verify("1545 Lochmaben still wrongly occupied",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===2", driver)
+    verify("French defence Outreau missing or wrongly classified",
+           "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
+    set_year(1546,24)
+    verify("1546 Ambleteuse and Boulemberg must join English occupation",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===4", driver)
+    set_year(1547,30)
+    verify("1547 Scottish garrison map incomplete",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===8", driver)
+    set_year(1548,40)
+    verify("1548 Inchcolm and Hume must exit as English-held sites",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===11", driver)
+    set_year(1549,45)
+    verify("1549 withdrew Ambleteuse/Boulemberg/Haddington, kept Boulogne",
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
+    verify("1549 French defensive Outreau missing",
+           "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
+    verify("Sixth decade slider not restricted to 1540–1549",
+           "document.querySelector('#yearRange').min==='1540' && document.querySelector('#yearRange').max==='1549'", driver)
+    zoom_1549=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
+    if zoom_1539 and zoom_1549:
+        assert zoom_1539==zoom_1549, "Scrubbing to chapter six automatically zoomed the map"
+    driver.save_screenshot(str(OUT / "chapter6-garrisons-1549.png"))
     browser = driver.get_log("browser")
     critical = [x["message"] for x in browser if re.search(r"Uncaught (TypeError|ReferenceError|SyntaxError)|Uncaught \w+Error", x["message"])]
     assert not critical, "Browser JavaScript errors: " + str(critical[:8])
