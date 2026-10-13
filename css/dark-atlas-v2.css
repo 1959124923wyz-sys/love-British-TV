@@ -608,3 +608,68 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .leaflet-warReach-pane path.leaflet-interactive{pointer-events:visiblePainted!important;cursor:pointer;}
 #map .atlas-war-reach-schematic{pointer-events:visiblePainted;cursor:pointer;stroke-linejoin:round;}
 .legend-items .swatch.war-reach{width:18px;height:13px;border:2px dashed #bf9bf0;background:rgba(143,99,221,.17);box-sizing:border-box;border-radius:3px}
+
+/* v1.7.6 / PR39 editor integration: only the two user-facing layer switches.
+   Intentionally appended to the current stable CSS; do not revive old year badges. */
+#internalLayerFlags,[id="internalLayerFlags"][hidden]{display:none!important;}
+.map-stage{position:relative;}
+.map-layer-switch{
+ position:absolute;z-index:730;right:clamp(8px,1.2vw,18px);top:clamp(8px,1.2vw,18px);
+ display:flex;flex-wrap:nowrap;align-items:center;gap:4px;padding:5px;
+ max-width:calc(100% - 24px);box-sizing:border-box;
+ border:1px solid #465d78;border-radius:10px;
+ background:#10263cf2;box-shadow:0 6px 22px #0006;
+}
+.map-layer-switch label{
+ display:inline-flex;flex:0 0 auto;align-items:center;justify-content:center;
+ gap:8px;min-height:33px;padding:6px 12px;box-sizing:border-box;
+ border:1px solid transparent;border-radius:7px;
+ font-size:12px;line-height:1.2;font-weight:700;
+ color:#dbe4ec;white-space:nowrap;cursor:pointer;
+}
+.map-layer-switch label.selected,.map-layer-switch label:has(input:checked){
+ background:#30435f;border-color:#4a6583;color:#fbecff;
+}
+.map-layer-switch label:hover{background:#293d57;}
+.map-layer-switch input{width:16px;height:16px;flex:none;margin:0;
+ accent-color:#aa8edc;cursor:pointer;}
+.map-layer-switch input:focus-visible{outline:2px solid #f1c69b;outline-offset:3px;}
+.sidebar-settings-wrap .map-mode-help{
+ margin:0;width:100%;max-width:100%;box-sizing:border-box;overflow:hidden;
+ border:1px solid #314963;border-radius:9px;background:#172d43;
+}
+.sidebar-settings-wrap .map-mode-help>summary{
+ display:flex;align-items:center;justify-content:space-between;gap:8px;
+ padding:11px 12px;list-style:none;cursor:pointer;
+ color:#dce6ee;font-size:11px;font-weight:700;line-height:1.4;
+}
+.sidebar-settings-wrap .map-mode-help>summary::-webkit-details-marker{display:none;}
+.sidebar-settings-wrap .map-mode-help[open]>summary{border-bottom:1px solid #354e64;}
+.sidebar-settings-wrap .map-mode-help-body{
+ display:grid;gap:9px;min-width:0;padding:10px 12px 13px;
+}
+.sidebar-settings-wrap .map-mode-help-body>div{
+ display:flex;gap:10px;align-items:flex-start;min-width:0;
+ font-size:11px;line-height:1.6;color:#dce5ec;
+}
+.sidebar-settings-wrap .map-mode-help-body>div>span{flex:1;min-width:0;overflow-wrap:anywhere;}
+.sidebar-settings-wrap .map-mode-help-body p{font-size:11px;line-height:1.65;margin:3px 0 5px;color:#b1c4d5;}
+.sidebar-settings-wrap .map-mode-help-body .map-mode-caution{padding-top:7px;border-top:1px solid #314964;}
+.sidebar-settings-wrap .map-mode-help-body .swatch{flex:0 0 18px;
+ width:18px;height:13px;box-sizing:border-box;margin-top:2px;border-radius:3px;}
+.sidebar-settings-wrap .map-mode-help-body .swatch.kingdom{background:#50809e66;border:1px solid #7bb2d7;}
+.sidebar-settings-wrap .map-mode-help-body .swatch.wartime-vicinity{background:#9567da45;border:2px dashed #bf98f2;}
+.sidebar-settings-wrap .map-mode-help-body .swatch.war-reach{background:#9167d34a;border:2px dashed #bc9ae7;}
+.sidebar-settings-wrap .map-mode-help-body .swatch.contested-war{
+ background:repeating-linear-gradient(45deg,#8c68cb88 0 3px,#76a9d588 3px 6px);
+ border:1.5px dashed #b1ccef;}
+.sidebar-settings-wrap .map-mode-help-body .swatch.english-garrison{
+ flex-basis:16px;width:16px;height:16px;border:2px dashed #bf98f2;border-radius:50%;background:#875fc02e;}
+.sidebar-settings-wrap .map-mode-help-body .swatch.major{width:13px;height:13px;border-radius:50%;background:#dba878;}
+/* Narrow desktop viewport and browser magnification: never let controls cover
+   the year card. Main user experience is desktop-first. */
+@media(max-width:900px){
+ .map-layer-switch{right:9px;top:11px;gap:1px;padding:3px;}
+ .map-layer-switch label{gap:5px;padding:6px 8px;font-size:11px;min-height:30px;}
+ .map-layer-switch input{width:15px;height:15px;}
+}
