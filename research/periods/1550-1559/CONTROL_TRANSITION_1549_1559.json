@@ -1,0 +1,584 @@
+{
+  "schema": "1550s_control_transition_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "compiled": "2026-10-13",
+  "origin_PR27_seed": "research/periods/1540-1549/TRANSITION_1549_1550_RESEARCH_SEED.json",
+  "inherited_political_identities": [
+    {
+      "stable_id": "calais-crown",
+      "name": "加来英王军政据点",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name": "都柏林英王爱尔兰行政核心",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name": "泽西王室属地",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name": "马恩地方领主",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name": "奥克尼苏格兰王权",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name": "设得兰苏格兰王权",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "name": "吉讷英王边防据点",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "name": "独立苏格兰王国",
+      "prior_status": "independent_not_English",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "channel-guernsey",
+      "name": "根西王室属地／独立法权（原有政制）",
+      "prior_status": "Crown_Dependency_separate_Guernsey_Bailiwick",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    }
+  ],
+  "closed_before_1550": [
+    {
+      "stable_id": "inchcolm-english-1547-1548",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HES-INCHCOLM"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "haddington-english-1548-1549",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HES-2022-HADDINGTON"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "lochmaben-english-1544-1545",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HES-LOCHMABEN-HISTORY",
+        "SC-HES-LOCHMABEN-SITE"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "ambleteuse-english-fort-1546-1549",
+      "end_by_1549": true,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-MUNICIPAL-AMBLETEUSE-1549"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "boulemberg-english-fort-1546-1549",
+      "end_by_1549": true,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "hume-english-1547-1548",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HUME-TRUST-1547-1548"
+      ],
+      "notes": "Do not restore as English at 1550"
+    }
+  ],
+  "confirmed_1550_end_of_English_occupation": [
+    {
+      "stable_id": "boulogne-english-1544-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "French Crown",
+      "reported_change_date": "1550-04-25",
+      "source_ids": [
+        "FR-HELIOT-BOULOGNE-1958"
+      ],
+      "reference_point": [
+        1.6169,
+        50.7256
+      ],
+      "precision": "French city restitution per scholarly day",
+      "authentic_1540s_walls_verified": false
+    },
+    {
+      "stable_id": "tour-d-ordre-english-fort-1544-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "French Crown",
+      "reported_change_date": "1550-04 (associated)",
+      "source_ids": [
+        "FR-HELIOT-BOULOGNE-1958"
+      ],
+      "reference_point": [
+        1.5972222,
+        50.7316667
+      ],
+      "precision": "English north coast outwork tied to Boulogne; individual transfer day unknown",
+      "authentic_1540s_walls_verified": false
+    },
+    {
+      "stable_id": "broughty-english-1547-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "Franco-Scottish reconquest / Scottish sovereignty",
+      "reported_change_date": "1550-02 (exact day not HES verified)",
+      "source_ids": [
+        "SC-HES-BROUGHTY-1550"
+      ],
+      "reference_point": [
+        -2.87022,
+        56.46293
+      ],
+      "precision": "Scottish national heritage official",
+      "authentic_1540s_walls_verified": false
+    },
+    {
+      "stable_id": "forthill-english-fort-1548-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "Scottish sovereignty, English fort demolished",
+      "reported_change_date": "1550 (month unknown)",
+      "source_ids": [
+        "SC-NLS-FORTHILL-1550"
+      ],
+      "reference_point": [
+        -2.87601,
+        56.47487
+      ],
+      "precision": "Digitized historic gazetteer",
+      "authentic_1540s_walls_verified": false
+    }
+  ],
+  "unresolved_1550_departure_and_local_continuity": [
+    {
+      "stable_id": "eyemouth-fort-English-1547-1550",
+      "last_English_yearend_verified": 1549,
+      "status_1550": "uncertain_no_English_solid_fill_without_verified_evidence",
+      "map_ref": [
+        -2.09156,
+        55.87731
+      ],
+      "note": "Possible 1550 exit; site archival lead not independent current confirmation"
+    },
+    {
+      "stable_id": "lauder-english-1548-1550",
+      "last_English_yearend_verified": 1549,
+      "status_1550": "uncertain_no_English_solid_fill_without_verified_evidence",
+      "map_ref": [
+        -2.74838,
+        55.71936
+      ],
+      "note": "Withdrawal date not independently established"
+    },
+    {
+      "stable_id": "dunglass-camp-english-1548-1549",
+      "last_English_yearend_verified": 1549,
+      "status_1550": "uncertain_no_English_solid_fill_without_verified_evidence",
+      "map_ref": [
+        -2.38613,
+        55.93584
+      ],
+      "note": "English camp last attested 1549; date of its destruction unknown"
+    },
+    {
+      "stable_id": "hailes-english-1548-date_unknown",
+      "last_English_yearend_verified": 1548,
+      "status_1550": "uncertain_no_English_solid_fill_without_verified_evidence",
+      "map_ref": [
+        -2.6832,
+        55.973
+      ],
+      "note": "English local occupation last attested 1548, unknown since 1549"
+    }
+  ],
+  "French_1558_recoveries": [
+    {
+      "stable_id": "calais-crown",
+      "event_year": 1558,
+      "month": 1,
+      "day": 7,
+      "new_controller": "French Crown",
+      "source_ids": [
+        "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558"
+      ],
+      "precise_Pale_polygon": null
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "event_year": 1558,
+      "month": 1,
+      "day": null,
+      "new_controller": "French Crown",
+      "source_ids": [
+        "FR-HISTORY-PARLIAMENT-GREY-1558",
+        "FR-OXFORD-GUINES-1558"
+      ],
+      "precise_Pale_polygon": null
+    }
+  ],
+  "year_end_snapshots": [
+    {
+      "year": 1550,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [
+        "eyemouth-fort-English-1547-1550",
+        "lauder-english-1548-1550",
+        "dunglass-camp-english-1548-1549",
+        "hailes-english-1548-date_unknown"
+      ],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1551,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1552,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1553,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1554,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1555,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1556,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1557,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1558,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [],
+      "French_control_former_English_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    },
+    {
+      "year": 1559,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [],
+      "French_control_former_English_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false
+    }
+  ],
+  "precision_warning": "Do not reset previous political identities; Calais French after 1558. Historical areas unsurveyed; Irish law ≠ whole shire actual Crown control.",
+  "authentic_historic_control_polygons_verified": 0
+}
