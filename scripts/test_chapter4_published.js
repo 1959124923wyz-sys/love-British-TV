@@ -60,7 +60,7 @@ for(const feature of grounds.features){
 }
 assert.ok(JSON.parse(read('data/chapters.json')).chapters.some(c=>c.id==='chapterFour'));
 assert.match(html,/id="yearRange"/);
-assert.match(html,/app\.js\?v=timeline-v174/);
+assert.match(html,/app\.js\?v=timeline-v175/);
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
 assert.ok(app.includes("Math.min(lastPublishedYear"),'Years capped at old third chapter');
