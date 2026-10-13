@@ -356,17 +356,18 @@ try:
               const matrix=path.getScreenCTM();
               if(!matrix)continue;
               const local=new DOMPoint(x,y).matrixTransform(matrix.inverse());
-              if(!path.isPointInFill(local))continue;
+              if(selector.includes('atlas-garrison-hit')?!path.isPointInStroke(local):!path.isPointInFill(local))continue;
               // A valid physical map click can hit the Leaflet Canvas beneath
               // this SVG; the app's geographical fallback must still open it.
               const top=document.elementFromPoint(x,y);
               if(!top||top.closest?.('.leaflet-marker-icon,.atlas-aggregate,.political-relation-symbol,.leaflet-control-container,.time-panel,.map-year-card,.leaflet-tooltip'))continue;
-              if(!selector.includes('atlas-local-english-garrison')&&top.closest?.('.atlas-local-english-garrison,.atlas-french-counterfort'))continue;
+              if(!selector.includes('atlas-garrison-hit')&&top.closest?.('.atlas-local-english-garrison,.atlas-french-counterfort'))continue;
+              if(selector.includes('atlas-garrison-hit')&&top!==path)continue;
               // Hovering nearby can expand markers. Leave room around their
               // full hit boxes instead of accepting a pixel at their edges.
               const blockers=[...document.querySelectorAll('.leaflet-marker-icon,.atlas-local-english-garrison,.atlas-french-counterfort')]
                 .filter(el=>!selector.includes('atlas-local-english-garrison')||!el.matches(selector));
-              if(blockers.some(el=>{const b=el.getBoundingClientRect();
+              if(!selector.includes('atlas-garrison-hit')&&blockers.some(el=>{const b=el.getBoundingClientRect();
                 return x>b.left-20&&x<b.right+20&&y>b.top-20&&y<b.bottom+20;
               }))continue;
               const higher=(selector.includes('sovereignty')?
@@ -448,7 +449,7 @@ try:
     # Tiny unmeasured occupied-site polygons are sometimes smaller than their
     # visually prominent garrison circles. The purple circle must provide the
     # same territorial introduction without falsifying the underlying geometry.
-    print("CLICK_OCCUPIED_RING",real_map_area_click("#map .atlas-local-english-garrison"),flush=True)
+    print("CLICK_OCCUPIED_RING",real_map_area_click("#map .atlas-garrison-hit"),flush=True)
     wait.until(lambda d:"英军驻地附近概略控制区" in d.find_element(By.ID,"dossierBody").text)
     verify("actually clicked occupied zone did not disclose historical source",
            "document.querySelector('#dossierBody .source-details')!==null",driver)
