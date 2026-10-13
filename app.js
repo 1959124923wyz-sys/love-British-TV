@@ -19,6 +19,10 @@ map.getPane('eventTooltipPane').style.pointerEvents='none';
 // not from invented town-wall polygons. Keep beneath Leaflet event markers.
 map.createPane('controlAreaPane');
 map.getPane('controlAreaPane').style.zIndex='465';
+// Route hit targets above geographic polygons and below event glyphs.
+map.createPane('voyagePane');
+map.getPane('voyagePane').style.zIndex='480';
+const voyageRenderer=L.svg({pane:'voyagePane'});
 map.createPane('territoryPane');
 map.getPane('territoryPane').style.zIndex='455';
 const territoryRenderer=L.svg({pane:'territoryPane'});
@@ -108,7 +112,9 @@ function openDossier(item,typ){
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+listSources(item.source_ids,item);
+ const routeWarning=route&&item.route_kind==='documented-endpoints-connection'?
+  '<p class="atlas-route-disclaimer">这条虚线只连接有史料支持的起讫地点，不表示船只实际航行轨迹。</p>':'';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+routeWarning+listSources(item.source_ids,item);
  openPanel('dossier');
  document.querySelectorAll('.event-item').forEach(el=>el.classList.toggle('selected',el.dataset.eid===selected));
 }
@@ -309,12 +315,22 @@ function renderPoints(){
   }
  }
  for(const r of atlas.routes||[]){
-  if(!occurredByYear(r,year))continue;
-  const line=L.polyline(r.coords,{color:r.year===1497?'#d4a47d':'#97a9bc',weight:2.7,dashArray:'8 9',opacity:.88,interactive:false}).addTo(groups.routes);
-  L.polyline(r.coords,{color:'#fff',weight:18,opacity:.015,interactive:true})
+  if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;
+  if(!Array.isArray(r.coords)||r.coords.length<2)continue;
+  const schematic=r.route_kind==='documented-endpoints-connection';
+  const baseColor=schematic?'#dfbb87':r.year===1497?'#d4a47d':'#97a9bc';
+  const style={renderer:voyageRenderer,pane:'voyagePane',
+   color:baseColor,weight:schematic?2.2:2.7,dashArray:schematic?'3 10':'8 9',opacity:.92};
+  const line=L.polyline(r.coords,{...style,interactive:false}).addTo(groups.routes);
+  // Historical territory polygons cannot intercept this upper SVG hit stroke.
+  L.polyline(r.coords,{renderer:voyageRenderer,pane:'voyagePane',
+   color:baseColor,weight:22,opacity:.025,interactive:true,
+   className:'atlas-voyage-hit'})
    .bindTooltip(hoverCard(r.name,r.note),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
-   .on('mouseover',()=>line.setStyle({weight:4})).on('mouseout',()=>line.setStyle({weight:2.7}))
-   .on('click',()=>openDossier(r,'route')).addTo(groups.routes);
+   .on('mouseover',()=>line.setStyle({weight:schematic?3.2:4}))
+   .on('mouseout',()=>line.setStyle({weight:style.weight}))
+   .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openDossier(r,'route')})
+   .addTo(groups.routes);
  }
  updateVisibility();
  // Expand a dense group so the exact target glyph, not only the hub, is highlighted.
@@ -436,12 +452,10 @@ function renderControlAreas(){
   const isTournai=String(f.id).includes('tournai');
   const mainColor=isTournai?'#c5a0f1':'#9867dd';
   const glowColor=isTournai?'#e0bfff':'#a57de3';
-  const radius=Math.max(p.min_radius_px||14,Math.min(23,(p.render_radius_px||17)+Math.max(0,zoom-5)*1.3));
-  const halo=L.circleMarker(center,{pane:'controlAreaPane',radius:radius+10,
-   color:glowColor,weight:0,opacity:0,fillColor:glowColor,fillOpacity:.18,interactive:false})
-   .addTo(groups.controlAreas);
+  // City control is a sourced position, not a circular polygon of measured territory.
+  const radius=Math.max(5.2,Math.min(8,5.6+Math.max(0,zoom-5)*.6));
   const core=L.circleMarker(center,{pane:'controlAreaPane',radius,
-   color:mainColor,weight:3,opacity:1,fill:true,fillColor:mainColor,fillOpacity:.52,
+   color:glowColor,weight:2,opacity:1,fill:true,fillColor:mainColor,fillOpacity:.85,
    bubblingMouseEvents:false})
    .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.description)+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
