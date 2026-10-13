@@ -308,7 +308,7 @@ try:
               document.querySelectorAll('#map .atlas-war-reach-schematic').length===0 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-aggregate').length===0 &&
-              document.querySelector('#eventCount').textContent==='44项'""",driver)
+              document.querySelector('#eventCount').textContent==='49项'""",driver)
     toggle_layer('mapLayerEvents',True)
     verify("events-only mode incorrectly resurrected British occupation polygons",
            """document.querySelector('#toggleEvents').checked &&
