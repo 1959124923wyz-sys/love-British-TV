@@ -255,6 +255,13 @@ try:
     set_year(1545,17)
     verify("1545 French theater is not shown with blue/violet texture",
            "document.querySelectorAll('#map .atlas-contested-zone').length===1",driver)
+    # Data-integrity regression: the Boulogne battlefield is active in 1545,
+    # but the dossier must NOT link to its associated 1549 French counterattack.
+    driver.execute_script("document.querySelector('#map .atlas-contested-zone').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}))")
+    verify("future 1549 event leaked into 1545 war territory dossier",
+           """[...document.querySelectorAll('#dossierBody [data-zone-event]')]
+               .every(n=>!n.textContent.includes('1549年')) &&
+              document.querySelector('#dossierBody').textContent.includes('布洛涅外围')""",driver)
     verify("1545 Lochmaben still wrongly occupied",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===2", driver)
     verify("French defence Outreau missing or wrongly classified",
@@ -396,6 +403,10 @@ try:
     set_year(1549,49)
     verify("1549 border influence must contract away from withdrawn Haddington",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1",driver)
+    driver.execute_script("document.querySelector('#map .atlas-contested-zone').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}))")
+    verify("1549 documented Boulogne theater linked event disappeared after its correct date",
+           """[...document.querySelectorAll('#dossierBody [data-zone-event]')]
+               .some(n=>n.textContent.includes('1549年'))""",driver)
     verify("1549 withdrew Ambleteuse/Boulemberg/Haddington, kept Boulogne",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
     verify("1549 French defensive Outreau missing",
