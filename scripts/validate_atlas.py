@@ -130,7 +130,7 @@ assert "expanded-event" in app
 assert "leaflet-marker-icon.atlas-flyout-icon" in css
 assert "background:transparent!important" in css
 assert ".leaflet-tooltip-pane{" in css and "z-index:820!important" in css
-assert "PILOT v1.4" in html
+assert "PILOT v1.5" in html
 
 # Third chapter 1510–1519 uses reviewed provenance and year-end governance statuses.
 third = json.loads((ROOT/"data/atlas-1510-1519.json").read_text(encoding="utf-8"))
@@ -176,7 +176,7 @@ assert geo_layer["properties"]["active_years"] == [1513,1514,1515,1516,1517,1518
 assert "data/atlas-1510-1519.json" in app
 assert "data/geography-1510-1519-hypotheses.geojson" in app
 assert "p.valid_years?.includes(year)" in app, "Tournaisis appears only during supported 1513–1518 years"
-assert 'id="chapterThree"' in html and 'id="chapterFour"' in html and 'max="1529"' in html
+assert 'id="chapterThree"' in html and 'id="chapterFour"' in html and 'max="1539"' in html
 assert "renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app
 assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
 assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
