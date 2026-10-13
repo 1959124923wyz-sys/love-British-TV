@@ -49,11 +49,27 @@ try:
     verify("Dublin's historical relation vanished when Pale hypothesis was hidden",
            "document.querySelectorAll('.political-relation-symbol').length>=1", driver)
     toggle_layer("toggleHypotheses", True)
+    # When the island footprint is visible, its Guernsey polity must not
+    # produce a second large hatched circle on top of the Channel Islands.
+    verify("Guernsey duplicate disk covers its island footprint",
+           """!document.querySelector('.political-relation-symbol [data-polity-id="polity-area-symbol-channel-guernsey-1530s"]')""", driver)
     toggle_layer("toggleTerritorialFootprints", False)
     verify("historical relationship markers missing when reference polygons are off",
-           "document.querySelectorAll('.political-relation-symbol').length>=5", driver)
+           "document.querySelectorAll('.political-relation-symbol').length>=6", driver)
+    verify("fallback Guernsey symbol is still oversized",
+           """document.querySelector('.political-relation-symbol [data-polity-id="polity-area-symbol-channel-guernsey-1530s"]')?.getAttribute('width')==='26'""", driver)
+    driver.execute_script("""
+      document.querySelector('.political-relation-symbol [data-polity-id="polity-area-symbol-channel-guernsey-1530s"]')
+        .closest('.political-relation-symbol').click();
+    """)
+    wait.until(lambda d: "根西岛" in d.find_element(By.ID, "dossierBody").text)
+    verify("1520 Guernsey click lacks published historical sources",
+           "document.querySelector('#dossierBody .source-details')!==null", driver)
+    assert driver.execute_script("return document.getElementById('bigYear').textContent")=="1520", "Polity click changed the historical year"
     driver.save_screenshot(str(OUT / "chapter4-political-markers-no-polygons.png"))
     toggle_layer("toggleTerritorialFootprints", True)
+    verify("Guernsey disk returned over its mapped island",
+           """!document.querySelector('.political-relation-symbol [data-polity-id="polity-area-symbol-channel-guernsey-1530s"]')""", driver)
 
 
     def set_year(year, expected):
