@@ -1,0 +1,353 @@
+{
+  "type": "FeatureCollection",
+  "name": "1540s war theater context: schematic blue/violet contested strips, not historical mapped frontiers",
+  "metadata": {
+    "source": "Curated 2026-10-13 from already-published scholarly event/source IDs in data/atlas-1540-1549.json",
+    "archival_evidence_for_actual_polygon_boundaries": false,
+    "geometries": "Hand-sketched coarse bands around named event sites; deliberately NOT surveyed original Tudor/front lines",
+    "render": "Blue and violet crosshatching, dotted external bounds, zoom-limit ≤ 8",
+    "area_statistics_forbidden": true,
+    "historically_occupied_borders_count": 0,
+    "editorial_warning": "Do not report the displayed striped polygon surface as a factual war front or actual continuously contested control region. Only the cited specific historic events and named sites are evidenced."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "front-boulonnais-1545-1549",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.51,
+              50.72
+            ],
+            [
+              1.54,
+              50.77
+            ],
+            [
+              1.59,
+              50.84
+            ],
+            [
+              1.68,
+              50.82
+            ],
+            [
+              1.73,
+              50.76
+            ],
+            [
+              1.73,
+              50.69
+            ],
+            [
+              1.66,
+              50.67
+            ],
+            [
+              1.59,
+              50.67
+            ],
+            [
+              1.51,
+              50.72
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "front-boulonnais-1545-1549",
+        "name": "布洛涅外围英法争夺地带（概略）",
+        "zone_type": "contested",
+        "start_year": 1545,
+        "end_year": 1549,
+        "side_a": "英军",
+        "side_b": "法军",
+        "contenders_zh": [
+          "英军",
+          "法军"
+        ],
+        "anchors": [
+          "布洛涅城区",
+          "阿姆布勒特斯",
+          "Outreau法军炮垒"
+        ],
+        "summary_zh": "英军守布洛涅城区及外围工事，法国军队在Outreau高地建立对抗堡垒；战线持续变化。",
+        "precision_note": "依据有史料的战斗、围攻及具名驻点位置，编辑手工制作的低精度战场阅读带。顶点是示意点，不表示有测绘支持的战线、攻占边线、实际连续作战或任何一方独占这块土地。",
+        "construction_method": "coarse_editorial_hand_sketch_around_sourced_named_sites_not_geo_reconstruction",
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-MURPHY-2019-GARRISON",
+          "FR-HELIOT-1958-OUTREAU-FRENCH"
+        ],
+        "related_event_ids": [
+          "1540S-036",
+          "1540S-033"
+        ],
+        "related_place_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "illustrative_locality_only": true,
+        "contested_status": "war_theatre_context_not_year_end_area_control",
+        "not_evidence_of_continuous_battle": true,
+        "not_evidence_of_annexation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "front-scottish-border-1547",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.6,
+              55.64
+            ],
+            [
+              -2.52,
+              55.73
+            ],
+            [
+              -2.29,
+              55.91
+            ],
+            [
+              -2.06,
+              55.94
+            ],
+            [
+              -1.98,
+              55.85
+            ],
+            [
+              -2.12,
+              55.8
+            ],
+            [
+              -2.38,
+              55.6
+            ],
+            [
+              -2.51,
+              55.58
+            ],
+            [
+              -2.6,
+              55.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "front-scottish-border-1547",
+        "name": "苏格兰东南边区进军及反击带（1547年概略）",
+        "zone_type": "contested",
+        "start_year": 1547,
+        "end_year": 1547,
+        "side_a": "英军",
+        "side_b": "苏格兰军队",
+        "contenders_zh": [
+          "英军",
+          "苏格兰军队"
+        ],
+        "anchors": [
+          "Eyemouth",
+          "Hume"
+        ],
+        "summary_zh": "英军在埃茅斯和休姆等具名要塞推进；苏格兰王国独立，此形状只概括发生战事的地点串联，不能证明整个带状区域都由英军驻管。",
+        "precision_note": "依据有史料的战斗、围攻及具名驻点位置，编辑手工制作的低精度战场阅读带。顶点是示意点，不表示有测绘支持的战线、攻占边线、实际连续作战或任何一方独占这块土地。",
+        "construction_method": "coarse_editorial_hand_sketch_around_sourced_named_sites_not_geo_reconstruction",
+        "source_ids": [
+          "SC-HUME-TRUST-1547-1548",
+          "SC-CALDWELL-EYEMOUTH",
+          "SC-HES-2022-HADDINGTON"
+        ],
+        "related_event_ids": [
+          "1540S-041",
+          "1540S-027"
+        ],
+        "related_place_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "illustrative_locality_only": true,
+        "contested_status": "war_theatre_context_not_year_end_area_control",
+        "not_evidence_of_continuous_battle": true,
+        "not_evidence_of_annexation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "front-east-lothian-haddington-1548-1549",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.95,
+              55.92
+            ],
+            [
+              -2.89,
+              56.02
+            ],
+            [
+              -2.72,
+              56.1
+            ],
+            [
+              -2.53,
+              56.1
+            ],
+            [
+              -2.4,
+              56.03
+            ],
+            [
+              -2.39,
+              55.94
+            ],
+            [
+              -2.6,
+              55.86
+            ],
+            [
+              -2.77,
+              55.85
+            ],
+            [
+              -2.95,
+              55.92
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "front-east-lothian-haddington-1548-1549",
+        "name": "哈丁顿—东洛锡安围攻与争夺区（概略）",
+        "zone_type": "contested",
+        "start_year": 1548,
+        "end_year": 1549,
+        "side_a": "英军",
+        "side_b": "法国与苏格兰盟军",
+        "contenders_zh": [
+          "英军",
+          "法国与苏格兰盟军"
+        ],
+        "anchors": [
+          "Haddington",
+          "Dunglass",
+          "Tantallon（未被英军攻取）"
+        ],
+        "summary_zh": "英军据守哈丁顿、Dunglass等据点并受法苏军队围攻，1549年英军从哈丁顿撤退。该概略区域展示战争发生的地理背景，不能推定周围全境属于英国或苏格兰的稳定军管区域。",
+        "precision_note": "依据有史料的战斗、围攻及具名驻点位置，编辑手工制作的低精度战场阅读带。顶点是示意点，不表示有测绘支持的战线、攻占边线、实际连续作战或任何一方独占这块土地。",
+        "construction_method": "coarse_editorial_hand_sketch_around_sourced_named_sites_not_geo_reconstruction",
+        "source_ids": [
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-TANTALLON-SM13326"
+        ],
+        "related_event_ids": [
+          "1540S-021",
+          "1540S-023"
+        ],
+        "related_place_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "illustrative_locality_only": true,
+        "contested_status": "war_theatre_context_not_year_end_area_control",
+        "not_evidence_of_continuous_battle": true,
+        "not_evidence_of_annexation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "front-dundee-tay-1547-1548",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.11,
+              56.45
+            ],
+            [
+              -3.04,
+              56.52
+            ],
+            [
+              -2.89,
+              56.54
+            ],
+            [
+              -2.78,
+              56.51
+            ],
+            [
+              -2.75,
+              56.46
+            ],
+            [
+              -2.82,
+              56.4
+            ],
+            [
+              -2.99,
+              56.39
+            ],
+            [
+              -3.11,
+              56.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "front-dundee-tay-1547-1548",
+        "name": "邓迪—塔伊河口战事影响区（概略）",
+        "zone_type": "contested",
+        "start_year": 1547,
+        "end_year": 1548,
+        "side_a": "英军",
+        "side_b": "苏格兰军队",
+        "contenders_zh": [
+          "英军",
+          "苏格兰军队"
+        ],
+        "anchors": [
+          "Dundee St Mary's",
+          "Broughty",
+          "Forthill"
+        ],
+        "summary_zh": "英军1547年末短占邓迪，1548年初撤出、同年又曾攻入；布劳蒂持续受英军占据。区内存在多次战事，但1548年末整座邓迪是否受英军控制不能确认。",
+        "precision_note": "依据有史料的战斗、围攻及具名驻点位置，编辑手工制作的低精度战场阅读带。顶点是示意点，不表示有测绘支持的战线、攻占边线、实际连续作战或任何一方独占这块土地。",
+        "construction_method": "coarse_editorial_hand_sketch_around_sourced_named_sites_not_geo_reconstruction",
+        "source_ids": [
+          "SC-STANDREWS-DUNDEE-STMARY-1548",
+          "SC-HES-BROUGHTY",
+          "SC-DRISCOLL-1995-DUNDEE-LAW-1548"
+        ],
+        "related_event_ids": [
+          "1540S-C3-NEW-DUNDEE-AUG-1548",
+          "1540S-C3-NEW-DUNDEE-STMARY-1548"
+        ],
+        "related_place_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "illustrative_locality_only": true,
+        "contested_status": "war_theatre_context_not_year_end_area_control",
+        "not_evidence_of_continuous_battle": true,
+        "not_evidence_of_annexation": true
+      }
+    }
+  ]
+}

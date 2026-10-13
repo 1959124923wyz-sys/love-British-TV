@@ -224,6 +224,23 @@ try:
     set_year(1539,27)
     zoom_1539=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.png/)?.[1]).find(Boolean)")
     set_year(1540,1)
+    # Regression: map-year status was squeezed to a vertical one-character strip.
+    control_layout=driver.execute_script("""
+      const card=document.querySelector('.map-year-card');
+      const status=document.querySelector('#controlStatus');
+      const lines=[...status.querySelectorAll('.control-status-line')];
+      return {cardWidth:card.getBoundingClientRect().width,statusWidth:status.getBoundingClientRect().width,
+         lineWidths:lines.map(n=>n.getBoundingClientRect().width),lines:lines.length,
+         writingMode:getComputedStyle(status).writingMode,
+         display:getComputedStyle(status).display,html:status.innerHTML.slice(0,500)};
+    """)
+    print("MAP_YEAR_LAYOUT_1540:",control_layout,flush=True)
+    assert 270<=control_layout['cardWidth']<=360 and control_layout['lines']==4 and \
+      control_layout['writingMode']=='horizontal-tb' and control_layout['display']=='grid' and \
+      all(w>=225 for w in control_layout['lineWidths']), \
+      "1540 control status still collapses into a narrow badge: "+str(control_layout)
+    verify("1540 must not contain projected battle zones",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===0",driver)
     verify("chapter six did not become selectable on the half-century page",
            """document.querySelector('#chapterTrack [data-decade="1540"].active')!==null""", driver)
     verify("old Calais historical footprint was reset in 1540",
@@ -243,6 +260,8 @@ try:
     verify("purple approximate fort localities are not rendered",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===2", driver)
     set_year(1545,17)
+    verify("1545 French theater is not shown with blue/violet texture",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===1",driver)
     verify("1545 Lochmaben still wrongly occupied",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===2", driver)
     verify("French defence Outreau missing or wrongly classified",
@@ -251,8 +270,45 @@ try:
     verify("1546 Ambleteuse and Boulemberg must join English occupation",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===4", driver)
     set_year(1547,31)
+    verify("1547 frontier advances are not shown as blue/violet disputed theaters",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
     verify("1547 Scottish garrison map incomplete",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===9", driver)
+    set_year(1548,44)
+    verify("1548 control/contest distinction was lost",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelector('#controlStatus').textContent.includes('驻军概略范围 9片')",driver)
+    # Each type of territory must open the same source-aware detail drawer.
+    def click_map_path(selector):
+        driver.execute_script("""
+          const el=document.querySelector(arguments[0]);
+          if(!el)throw new Error('Missing map layer: '+arguments[0]);
+          el.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));
+        """,selector)
+    click_map_path("#map .atlas-violet-wartime-vicinity")
+    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody .zone-dossier-facts')!==null"))
+    verify("occupied zone dossier has no precision warning or dated source",
+           """document.querySelector('#dossierBody').textContent.includes('英军驻地附近概略控制区') &&
+              document.querySelector('#dossierBody').textContent.includes('地图精度') &&
+              document.querySelector('#dossierBody .source-details')!==null &&
+              document.querySelectorAll('#dossierBody .zone-record-link').length>0""",driver)
+    click_map_path("#map .atlas-contested-zone")
+    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
+    verify("contested zone has no related evidence/campaign records",
+           """document.querySelector('#dossierBody .zone-precision-note')!==null &&
+              document.querySelectorAll('#dossierBody [data-zone-event]').length>0 &&
+              document.querySelector('#dossierBody .source-details')!==null""",driver)
+    driver.execute_script("document.querySelector('#dossierBody [data-zone-event]').click()")
+    verify("selecting a zone's related event did not open the event dossier",
+           "document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史事件') || document.querySelector('#dossierBody .dossier-kicker').textContent.includes('地理与政治') || document.querySelector('#dossierBody .dossier-kicker').textContent.includes('王室授权') || document.querySelector('#dossierBody .dossier-kicker').textContent.includes('战事')",driver)
+    click_map_path("#map .atlas-territory-solid")
+    verify("old clickable territory intro and source URLs disappeared",
+           """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史政治地理') &&
+              document.querySelector('#dossierBody .zone-dossier-facts')!==null""",driver)
+    verify("terrains rendered atop Scotland are preventing sovereignty click",
+           "document.querySelectorAll('.leaflet-sovereignty-pane path.leaflet-interactive').length>0",driver)
+    click_map_path(".leaflet-sovereignty-pane path.leaflet-interactive")
+    verify("clicking sovereign background no longer opens nation overview",
+           """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史国家')""",driver)
     set_year(1548,44)
     verify("1548 Inchcolm and Hume must exit as English-held sites",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===10", driver)
@@ -265,11 +321,15 @@ try:
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
     verify("1549 French defensive Outreau missing",
            "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
+    verify("1549 must retract Haddington combat occupation and retain Boulogne theater",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===2 && document.querySelector('#controlStatus').textContent.includes('驻军概略范围 6片')",driver)
     verify("Purple Boulogne and Scottish garrison references did not update for 1549",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===6", driver)
     toggle_layer("toggleTerritorialFootprints",False)
     verify("Hiding boundary context must hide the schematic control vicinity",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===0", driver)
+    verify("Hiding a border must also hide the invented theater outline",
+           "document.querySelectorAll('#map .atlas-contested-zone').length===0",driver)
     verify("Hiding boundary context cannot erase historically documented military sites",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
     toggle_layer("toggleTerritorialFootprints",True)

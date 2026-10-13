@@ -40,8 +40,8 @@ assert.ok(setYear.includes('selectedItemYear>next'),
 assert.ok(setYear.includes('renderEventList();renderTerritories();'),
   'Year change must update event and historic territory layers together');
 const html=read('index.html');
-assert.ok(html.includes('app.js?v=timeline-v172'),'Browser must load current JavaScript, not cached chronology');
-assert.ok(html.includes('css/dark-atlas-v2.css?v=timeline-v172'),'Browser must load fixed click style');
+assert.ok(html.includes('app.js?v=timeline-v173'),'Browser must load current JavaScript, not cached chronology');
+assert.ok(html.includes('css/dark-atlas-v2.css?v=timeline-v173'),'Browser must load fixed click style');
 // Guard against a duplicate Guernsey "pie" marker over its mapped island footprint.
 const political = snippet('function renderPoliticalRelationAreas(){','function renderControlAreas(){');
 const territory = snippet('function renderTerritories(){','function renderPoliticalRelationAreas(){');
@@ -60,7 +60,7 @@ assert.ok(political.includes('data-polity-id='),
   'Browser test needs an explicit identity for the Guernsey fallback');
 assert.ok(political.includes('findPlaceAcrossChapters(p.source_place_id)'),
   'Earlier chapters must be able to open the Guernsey political history');
-assert.ok(territory.includes('findPlaceAcrossChapters(p.source_place_id)'),
+assert.ok(territory.includes("openTerritoryDossier(feature,'historic')"),
   'Mapped Guernsey must open the political dossier at any year');
 const firstWithGuernsey=JSON.parse(read('data/atlas-1530-1539.json'));
 assert.ok(firstWithGuernsey.places.some(p=>p.id==='channel-guernsey'));
