@@ -674,13 +674,14 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .map-year-card #controlStatus.year-control-status[hidden]{display:none!important}
 #controlStatus .control-status-compact{color:#bed1e5;white-space:normal;line-height:1.4;}
 #controlStatus .control-status-compact strong{color:#eec6a4;font-size:11px;font-weight:750}
+@media(max-width:1250px){.map-mode-switch{top:87px;right:10px}}
 @media(max-width:850px){
- .map-mode-switch{top:61px;right:9px;padding:3px;gap:1px}
+ .map-mode-switch{top:83px;right:9px;padding:3px;gap:1px}
  .map-mode-switch button{min-width:48px;padding:8px 9px;font-size:11px}
  .map-year-card{max-width:calc(100vw - 26px)!important}
 }
 @media(max-width:680px){
- .map-mode-switch{top:57px;right:8px}
+ .map-mode-switch{top:90px;right:8px}
  .map-mode-switch button{padding:7px 8px}
  .map-year-card{width:fit-content!important;max-width:calc(100% - 20px)!important}
  .map-year-card #bigYear{font-size:24px!important}
