@@ -1,15 +1,9 @@
 name: "1540s independent historical map research QA"
+# Manual only. Research commits and PR edits must not repeatedly send
+# failed-run emails or launch unrelated historical source investigations.
+# The validation script and preview syntax check remain fully available.
 on:
-  push:
-    branches:
-      - "research/territorial-1540-1549-20261013"
-    paths:
-      - "research/periods/1540-1549/**"
-      - ".github/workflows/1540s-research-quality.yml"
-  pull_request:
-    paths:
-      - "research/periods/1540-1549/**"
-      - ".github/workflows/1540s-research-quality.yml"
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
