@@ -11,7 +11,8 @@ const periods=[
  ['data/atlas-1510-1519.json',1510,1519],
  ['data/atlas-1520-1529.json',1520,1529],
  ['data/atlas-1530-1539.json',1530,1539],
- ['data/atlas-1540-1549.json',1540,1549]
+ ['data/atlas-1540-1549.json',1540,1549],
+ ['data/atlas-1550-1559.json',1550,1559]
 ];
 const records=periods.map(([file,start,end])=>({file,start,end,data:read(file)}));
 const catalog=read('data/chapters.json');
@@ -67,7 +68,11 @@ const overlayPaths=[
  'data/war-front-corridors-1540-1549.geojson',
  'data/french-urban-control-1497-1549.geojson',
  'data/political-relations-1500-1549.geojson',
- 'data/territorial-footprints-1497-1549.geojson'
+ 'data/territorial-footprints-1497-1549.geojson',
+ 'data/french-urban-control-1550-1559.geojson',
+ 'data/political-relations-1550-1559.geojson',
+ 'data/territorial-footprints-1550-1559.geojson',
+ 'data/seventh-control-sites-1550-1559.geojson'
 ];
 function validCoord(coord,file,id){
  assert.ok(Array.isArray(coord)&&coord.length>=2&&Number.isFinite(coord[0])&&Number.isFinite(coord[1])
