@@ -34,9 +34,9 @@ prior=json.loads((ROOT/"data/atlas-1520-1529.json").read_text(encoding="utf8"))
 prior_geos=json.loads((ROOT/"data/territorial-footprints-1497-1529.geojson").read_text(encoding="utf8"))
 
 ids={s["id"] for s in src["records"]}
-require(len(ids)==len(src["records"])>=43,"sources duplicate/missing")
+require(len(ids)==len(src["records"])>=48,"sources duplicate/missing")
 require(all(not s["original_sixteenth_century_manuscript_read"] for s in src["records"]), "direct original-source examination unexpectedly claimed")
-require(len(chron["records"])>=30 and chron["count"]==len(chron["records"]),"chronology incomplete")
+require(len(chron["records"])>=34 and chron["count"]==len(chron["records"]),"chronology incomplete")
 assert len({e["id"] for e in chron["records"]})==len(chron["records"])
 for e in chron["records"]:
     require(1540<=e["year"]<=1549,"bad historic event year "+e["id"])
@@ -54,7 +54,7 @@ require(len(ctl["year_end_snapshots"])==10,"year slices missing")
 require([r["year"] for r in ctl["year_end_snapshots"]]==list(range(1540,1550)),"year gap")
 require(all(set(s["carried_1539_stable_ids"])==research_previous for s in ctl["year_end_snapshots"]),"old territory inexplicably disappears")
 episode_ids=[p["id"] for p in ctl["real_new_or_changed_place_episodes"]]
-require(len(episode_ids)==len(set(episode_ids))>=10,"garrison episodes duplicated/missing")
+require(len(episode_ids)==len(set(episode_ids))>=12,"garrison episodes duplicated/missing")
 require(any(x["id"]=="lochmaben-english-1544-1545" for x in ctl["real_new_or_changed_place_episodes"]),"missing source-backed 1544 border fort")
 episodes={p["id"]:p for p in ctl["real_new_or_changed_place_episodes"]}
 def snap(y): return ctl["year_end_snapshots"][y-1540]
@@ -67,6 +67,10 @@ for y in range(1540,1550):
     require(("lauder-english-1548-1550" in active)==(y>=1548), "Lauder wrong")
     require(("inchcolm-english-1547-1548" in active)==(y==1547), "Inchcolm 1548 withdrawal failure")
     require(("haddington-english-1548-1549" in active)==(y==1548), "Haddington 1549 withdrawal failure")
+    for fort_id in ("ambleteuse-english-fort-1546-1549","boulemberg-english-fort-1546-1549"):
+        require((fort_id in active)==(1546<=y<=1548), "French-recaptured 1549 fort remains English: "+fort_id)
+    if y==1549:
+        require({"ambleteuse-english-fort-1546-1549","boulemberg-english-fort-1546-1549"} <= set(s["confirmed_expired_episode_ids"]), "1549 lost French forts not recorded as closed")
     require(("lochmaben-english-1544-1545" in active)==(y==1544), "Lochmaben 1544 capture / 1545 Scottish recapture lost")
     require(("dunglass-camp-english-1548-1549" in active)==(y in (1548,1549)), "Dunglass camp must appear in HES confirmed 1548-49 period")
     if y>=1545:
@@ -78,7 +82,7 @@ require(all(e["polygon_verified"] is False for e in episodes.values()),"historic
 
 base_geometry={f["id"]:f["geometry"] for f in prior_geos["features"]}
 require(len(base_geometry)==7, "prior old map baseline changed")
-require(len(areas["features"])==13,"expected 8 inherited context incl Wales and 5 rough circles")
+require(len(areas["features"])==15,"expected 8 inherited context incl Wales and 5 rough circles")
 for f in areas["features"]:
     p=f["properties"]
     require(p.get("historical_boundary_confirmed") is False and p.get("fill_authorized") is False, "schematic reference misapproved")
@@ -94,7 +98,7 @@ for f in areas["features"]:
         require(math.isfinite(pt[0]) and math.isfinite(pt[1]) and abs(pt[0])<=180 and abs(pt[1])<=90,"invalid GIS coords")
 require(areas["metadata"]["verified_historical_period_control_polygons"]==0, "historical area certified without contemporary surveyed plan")
 
-require(len(points["features"])==16 and len({f["properties"]["stable_id"] for f in points["features"]})==16, "lost old polity or new garrison point")
+require(len(points["features"])==18 and len({f["properties"]["stable_id"] for f in points["features"]})==18, "lost old polity or new garrison point")
 for f in points["features"]:
     p=f["properties"]
     require(f["geometry"]["type"]=="Point" and p["area_polygon_verified"] is not True if "area_polygon_verified" in p else f["geometry"]["type"]=="Point","invalid place symbol")
@@ -102,11 +106,14 @@ for f in points["features"]:
     require(-180<=f["geometry"]["coordinates"][0]<=180 and -90<=f["geometry"]["coordinates"][1]<=90,"bad site")
 require(next(x for x in points["features"] if x["properties"]["stable_id"]=="inchcolm-english-1547-1548")["properties"]["year_end_stop"]==1547, "Inchcolm still appears in 1548")
 require(next(x for x in points["features"] if x["properties"]["stable_id"]=="haddington-english-1548-1549")["properties"]["year_end_stop"]==1548, "Haddington still appears in 1549")
+for fort_id in ("ambleteuse-english-fort-1546-1549","boulemberg-english-fort-1546-1549"):
+    obj=next(x for x in points["features"] if x["properties"]["stable_id"]==fort_id)
+    require(obj["properties"]["year_end_start"]==1546 and obj["properties"]["year_end_stop"]==1548, "French fort wrong live years: "+fort_id)
 
-require(len(delta["features"])>=13 and delta["metadata"]["verified_new_historical_territorial_polygons"]==0,"missing map deltas / invented borders")
+require(len(delta["features"])>=17 and delta["metadata"]["verified_new_historical_territorial_polygons"]==0,"missing map deltas / invented borders")
 for f in delta["features"]:
     require(f["geometry"]["type"]=="Point" and set(f["properties"]["source_ids"])<=ids,"delta invalid source or point")
-require(len(atlas["events"])==len(chron["records"]) and len(atlas["places"])==16,"candidate event/site counts diverge")
+require(len(atlas["events"])==len(chron["records"]) and len(atlas["places"])==18,"candidate event/site counts diverge")
 candidate_ids={x["id"] for x in atlas["sources"]}
 require(len(candidate_ids)==len(atlas["sources"]),"candidate source duplicates")
 for e in atlas["events"]:
@@ -124,8 +131,13 @@ debt=next(f for f in fin["financial_objects"] if f["id"]=="FIN-1549-ROYAL-DEBT-C
 require(debt["value_operator"]==">" and "claim" in debt["valuation_status"],"1549 rhetorical debt converted to audited profit")
 require(fin["verified_exact_Boulogne_net_profit"] is None,"fake Boulogne profit")
 require(todo["task_count"]>=20,"unfinished archive queue lost")
+seed=read("TRANSITION_1549_1550_RESEARCH_SEED.json")
+seed_expired={x["stable_id"] for x in seed["closed_by_1549"]}
+require({"ambleteuse-english-fort-1546-1549","boulemberg-english-fort-1546-1549"}<=seed_expired, "French-recaptured 1549 outposts wrongly survive into 1550 research seed")
+require("lochmaben-english-1544-1545" in seed_expired, "1545 Scottish castle recapture omitted in next decade")
+require(len({p["stable_id"] for p in seed["longstanding_polity_ids"]})==8, "1550 year-start lost a previous political identity")
 
-print("PASS research 1540–1549: 8 historical identities inherited, 10 dated control episodes, "
-      "10 year-end snapshots, 30+ historical events, 13 dashed/symbolic area references, "
-      "16 control point sites, corrected Inchcolm/Haddington/Hailes endings and uncertain continuation, "
-      "43+ source/lead records and 6 strictly labelled finance studies; ZERO invented exact ancient borders.")
+print("PASS research 1540–1549: 8 historical identities inherited, 12 dated control episodes, "
+      "10 year-end snapshots, 34+ historical events, 15 dashed/symbolic area references, "
+      "18 control point sites, corrected Inchcolm/Haddington/Hailes endings and uncertain continuation, "
+      "48+ source/lead records and 6 strictly labelled finance studies; ZERO invented exact ancient borders.")
