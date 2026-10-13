@@ -273,14 +273,14 @@ try:
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===4", driver)
     verify("1546 must not show 1547 Pinkie advance before the campaign",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===0",driver)
-    set_year(1547,31)
+    set_year(1547,34)
     verify("1547 frontier advances are not shown as blue/violet disputed theaters",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
     verify("1547 Scottish garrison map incomplete",
-           "document.querySelectorAll('#map .atlas-local-english-garrison').length===9", driver)
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===12", driver)
     verify("1547 advance toward Pinkie/Musselburgh failed to extend northward",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
-    set_year(1548,44)
+    set_year(1548,49)
     # PR39: two *independently* checkable public layers. Check four modes,
     # stay on 1548 throughout, preserve military borders, campaign sources,
     # and keep the historical event directory available in every mode.
@@ -347,10 +347,10 @@ try:
     driver.set_window_size(1620,1040)
     driver.execute_script("document.querySelector('#mapModeHelp').open=false")
     # Selecting a historical year must never auto-switch off either layer.
-    set_year(1547,31)
+    set_year(1547,34)
     verify("year switch reset the independently selected map layers",
            "document.querySelector('#mapLayerTerritory').checked && document.querySelector('#mapLayerEvents').checked",driver)
-    set_year(1548,44)
+    set_year(1548,49)
     driver.save_screenshot(str(OUT / "two-layer-modes-1548.png"))
     verify("1548 war-zone layer is missing after removing the card",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
@@ -393,14 +393,14 @@ try:
     click_map_path(".leaflet-sovereignty-pane path.leaflet-interactive")
     verify("clicking sovereign background no longer opens nation overview",
            """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史国家')""",driver)
-    set_year(1548,44)
+    set_year(1548,49)
     verify("1548 Inchcolm and Hume must exit as English-held sites",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===10", driver)
     verify("Hailes must not remain English at 1548 year end",
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
-    set_year(1549,49)
+    set_year(1549,54)
     verify("1549 border influence must contract away from withdrawn Haddington",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1",driver)
     driver.execute_script("document.querySelector('#map .atlas-contested-zone').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}))")
@@ -508,7 +508,7 @@ try:
          target:e.target.tagName,cls:(e.target.getAttribute('class')||'').slice(0,100)});
       },true);
     """)
-    set_year(1548,44)
+    set_year(1548,49)
     driver.execute_script("""
       const item=document.querySelector('#eventList [data-eid="1540S-021"]');
       if(!item)throw Error('Missing Haddington map-focus event');

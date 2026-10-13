@@ -13,10 +13,10 @@ const relations=json('data/political-relations-1500-1549.geojson');
 const garrisons=json('data/military-control-points-1540-1549.geojson');
 const app=read('app.js'),html=read('index.html');
 assert.deepEqual(sixth.period,{from:1540,to:1549,next:1550});
-assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[49,23,73]);
+assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[54,26,82]);
 assert.equal(sixth.routes.length,0,'Unknown ships routes must not be guessed');
 assert.equal(sixth.colonial_polygons.length,0,'No invented historic sixteenth-century occupied border');
-assert.equal(sixth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,30);
+assert.equal(sixth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,35);
 assert.equal(sixth.events.filter(e=>e.lat===null&&e.lng===null).length,19);
 assert.ok(last.some(x=>x.id==='chapterSixth'&&x.start===1540&&x.end===1549&&x.status==='published'));
 assert.equal(last[5].start,last[4].end+1,'Chapter six must follow 1539 without a gap');
@@ -58,7 +58,11 @@ assert.ok(urban.features.some(f=>f.properties.source_place_id==='guines-crown-15
 assert.equal(relations.features.length,6);
 assert.ok(relations.features.every(f=>f.properties.observed_through_year===1549));
 assert.ok(relations.features.some(f=>f.properties.source_place_id==='channel-guernsey'));
-assert.equal(garrisons.features.length,15);
+assert.equal(garrisons.features.length,18);
+for(const id of ['castlemilk-dumfriesshire-english-1547','lochwood-tower-english-1547','dumfries-english-garrison-1547']){
+ assert.ok(garrisons.features.some(f=>f.properties.stable_id===id&&f.properties.year_end_start===1547&&f.properties.year_end_stop===1547),id+' must remain 1547-only');
+ assert.ok(placeMap.has(id),id+' must open a source-backed atlas place dossier');
+}
 assert.ok(garrisons.features.every(f=>f.geometry.type==='Point'),'Do not promote a modern fort vicinity to conquest polygon');
 const active=(id,y)=>garrisons.features.some(f=>f.properties.stable_id===id&&f.properties.year_end_start<=y&&f.properties.year_end_stop>=y);
 for(const y of [1544,1545,1546,1547,1548,1549]){
@@ -87,7 +91,7 @@ assert.equal(placeMap.get(frenchId).status,'French_sovereign_counter_fort_not_En
 assert.ok(garrisons.features.find(f=>f.properties.stable_id===frenchId).properties.not_an_English_control_feature);
 for(let y=1540;y<=1549;y++){
  let expected=sixth.events.filter(e=>e.year<=y);
- assert.deepEqual(expected.map(x=>x.id).length,[1,2,4,6,11,17,24,31,44,49][y-1540],y+' event count mismatch');
+ assert.deepEqual(expected.map(x=>x.id).length,[1,2,4,6,11,17,24,34,49,54][y-1540],y+' event count mismatch');
  assert.ok(expected.every(e=>e.year<=y));
 }
 assert.ok(app.includes("fetch('data/atlas-1540-1549.json'"));
@@ -97,4 +101,4 @@ assert.ok(app.includes('atlasSixth?.sources'),'New chapter dossier must resolve 
 assert.ok(app.includes("next>=1540?atlasSixth"),'Map must load the correct sixth Atlas slice');
 assert.ok(!app.includes("map.flyTo("),'Historical map focus must not auto-zoom');
 assert.ok(html.includes('max="1549"')&&html.includes('app.js?v=timeline-v176'));
-console.log('PASS sixth chapter: 49 dated sourced events, 23 recorded places, 7 existing geographic outlines, 15 independent garrison/counterfort point features and exact annual control transitions');
+console.log('PASS sixth chapter: 54 dated sourced events, 26 recorded places, 7 existing geographic outlines, 18 independent garrison/counterfort point features and exact annual control transitions');
