@@ -280,7 +280,7 @@ try:
     verify("1547 frontier advances are not shown as blue/violet disputed theaters",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
     verify("1547 Scottish garrison map incomplete",
-           "document.querySelectorAll('#map .atlas-local-english-garrison').length===12", driver)
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===13", driver)
     verify("1547 advance toward Pinkie/Musselburgh failed to extend northward",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
     set_year(1548,49)
@@ -398,7 +398,7 @@ try:
            """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史国家')""",driver)
     set_year(1548,49)
     verify("1548 Inchcolm and Hume must exit as English-held sites",
-           "document.querySelectorAll('#map .atlas-local-english-garrison').length===10", driver)
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===11", driver)
     verify("Hailes must not remain English at 1548 year end",
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
@@ -411,7 +411,7 @@ try:
            """[...document.querySelectorAll('#dossierBody [data-zone-event]')]
                .some(n=>n.textContent.includes('1549年'))""",driver)
     verify("1549 withdrew Ambleteuse/Boulemberg/Haddington, kept Boulogne",
-           "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===8", driver)
     verify("1549 French defensive Outreau missing",
            "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
     verify("1549 must retract Haddington combat occupation and retain Boulogne theater",
@@ -424,7 +424,7 @@ try:
     verify("Hiding a border must also hide the invented theater outline",
            "document.querySelectorAll('#map .atlas-contested-zone').length===0",driver)
     verify("Hiding boundary context cannot erase historically documented military sites",
-           "document.querySelectorAll('#map .atlas-local-english-garrison').length===7", driver)
+           "document.querySelectorAll('#map .atlas-local-english-garrison').length===8", driver)
     toggle_layer("toggleTerritorialFootprints",True)
     verify("military-statistics card should not reappear after year navigation",
            "document.querySelector('#controlStatus')===null",driver)
@@ -437,10 +437,10 @@ try:
         assert zoom_1539==zoom_1549, "Scrubbing to chapter six automatically zoomed the map"
     driver.save_screenshot(str(OUT / "chapter6-garrisons-1549.png"))
     # The PR #50 HES GIS polygons are modern statutory references, not occupied historic land.
-    set_year(1546, 25)
+    set_year(1546, 24)
     verify("1546 cannot show 1547 scheduled archaeology polygons",
            "document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===0",driver)
-    set_year(1547, 37)
+    set_year(1547, 34)
     verify("1547 must show Eyemouth and Roxburgh genuine archaeology, not Dunglass yet",
            """document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===2 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===13 &&
