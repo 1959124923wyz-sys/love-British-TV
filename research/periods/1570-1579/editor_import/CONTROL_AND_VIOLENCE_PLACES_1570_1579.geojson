@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "schema": "ch09_1570s_editor_cartographic_sites_v1",
-  "count": 31,
+  "count": 35,
   "features": [
     {
       "type": "Feature",
@@ -1019,6 +1019,145 @@
         "England_actual_territory_polygon_from_this_feature": false,
         "auto_buffer_as_historic_area": false,
         "historical_period_original_geo_survey_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "winter-guinea-1570-regional",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.7,
+          10.6
+        ]
+      },
+      "properties": {
+        "stable_id": "winter-guinea-1570-regional",
+        "name": "1570温特船队航往几内亚海岸（可能贩奴贸易，登陆点未知）",
+        "start_year": 1570,
+        "end_year": 1570,
+        "source_ids": [
+          "C9-S54",
+          "C9-S55",
+          "C9-S56"
+        ],
+        "kind": "reported_voyage_west_africa_human_trafficking_intent_unverified_landfall",
+        "map_layer": "events",
+        "year_end_English_garrison_confirmed": false,
+        "year_end_English_confirmed_years": [],
+        "geography_precision": "Illustrative broad West Africa GUINEA coast offshore reference: NOT actual coastal landing/captive-village GPS.",
+        "historical_boundary_confirmed": false,
+        "historical_control_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "England_actual_territory_polygon_from_this_feature": false,
+        "auto_buffer_as_historic_area": false,
+        "actual_enslaved_captured_count": null,
+        "yearend_English_occupation": false,
+        "original_maritime_route_surveyed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "winter-jamaica-piracy-1571-regional",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.3,
+          18.12
+        ]
+      },
+      "properties": {
+        "stable_id": "winter-jamaica-piracy-1571-regional",
+        "name": "1571温特出资船队劫掠西属牙买加附近商船（确切船址未知）",
+        "start_year": 1571,
+        "end_year": 1571,
+        "source_ids": [
+          "C9-S57"
+        ],
+        "kind": "Spanish_primary_reports_naval_raid_on_ship_jamaica_island_reference",
+        "map_layer": "events",
+        "year_end_English_garrison_confirmed": false,
+        "year_end_English_confirmed_years": [],
+        "geography_precision": "Present-day Jamaica island interior label only, original intercepted ship coordinates unknown",
+        "historical_boundary_confirmed": false,
+        "historical_control_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "England_actual_territory_polygon_from_this_feature": false,
+        "auto_buffer_as_historic_area": false,
+        "actual_enslaved_captured_count": null,
+        "yearend_English_occupation": false,
+        "original_maritime_route_surveyed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "winter-st-augustine-failed-1572",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.312,
+          29.894
+        ]
+      },
+      "properties": {
+        "stable_id": "winter-st-augustine-failed-1572",
+        "name": "1572温特相关船队试图进攻西属圣奥古斯丁未遂",
+        "start_year": 1572,
+        "end_year": 1572,
+        "source_ids": [
+          "C9-S57"
+        ],
+        "kind": "failed_raid_not_occupied_Spanish_Florida_city",
+        "map_layer": "events",
+        "year_end_English_garrison_confirmed": false,
+        "year_end_English_confirmed_years": [],
+        "geography_precision": "Modern Spanish colonial town named-place anchor, fortifications not surveyed.",
+        "historical_boundary_confirmed": false,
+        "historical_control_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "England_actual_territory_polygon_from_this_feature": false,
+        "auto_buffer_as_historic_area": false,
+        "actual_enslaved_captured_count": null,
+        "yearend_English_occupation": false,
+        "original_maritime_route_surveyed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hawkins-1572-possible-guinea-voyage-region",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.7,
+          10.6
+        ]
+      },
+      "properties": {
+        "stable_id": "hawkins-1572-possible-guinea-voyage-region",
+        "name": "霍金斯名下1572秋三船往西非的疑似贩奴航行（港口未知）",
+        "start_year": 1572,
+        "end_year": 1572,
+        "source_ids": [
+          "C9-S54",
+          "C9-S55"
+        ],
+        "kind": "scholarly_probable_slaving_intent_no_confirmed_person_carried",
+        "map_layer": "events",
+        "year_end_English_garrison_confirmed": false,
+        "year_end_English_confirmed_years": [],
+        "geography_precision": "Illustrative broad West Africa GUINEA coast offshore reference: NOT actual coastal landing/captive-village GPS.",
+        "historical_boundary_confirmed": false,
+        "historical_control_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "England_actual_territory_polygon_from_this_feature": false,
+        "auto_buffer_as_historic_area": false,
+        "actual_enslaved_captured_count": null,
+        "yearend_English_occupation": false,
+        "original_maritime_route_surveyed": false
       }
     }
   ],
