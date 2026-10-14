@@ -80,7 +80,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  const meta=iconMeta(item);
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
-const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+(isUncertain(item)?'，历史定位为参考位置':'')+'">'+svgIcon(item)+'</div>';
+const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+'">'+svgIcon(item)+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
 function syncPanels(){
@@ -149,14 +149,8 @@ function listSources(ids,item){
   ['史料背景',note?.context],
   ['历史影响',note?.impact],
   ['地理与权力关系',note?.geography],
-  ['财政核算',note?.accounting],
-  ['地图位置与精度',item?.geographic_disclaimer_zh],
-  ['航线或区域几何的史料精度',item?.route_kind==='documented-endpoints-connection'?
-   '这条虚线只连接有史料支持的起讫地点，不表示船只实际航行轨迹。':
-   item?.route_kind==='coastal-commercial-reference-schematic'?
-   '海岸虚线仅标识有史料的宽泛商业接触地带，不代表连续贸易或英国占领区。':
-   item?.route_kind&&/schematic/.test(item.route_kind)?
-   '路线的中间折点仅为制图示意，不是船舶实测航迹；各端点精度以当时可核地名为限。':null]
+  ['财政核算',note?.accounting]
+
  ].filter(x=>x[1]);
  const questions=(note?.archive_questions||[]).map(text=>'<li>'+escapeHTML(text)+'</li>').join('');
  const accountingNames={crown_reward_expenditure:'王室远航奖励',royal_ship_acquisition_bounty:'购船补助',royal_grant_expenditure:'王室拨款',royal_pension:'王室年金'};
@@ -194,15 +188,15 @@ function openDossier(item,typ){
 function openArchaeologyReference(feature){
  const p=feature.properties||{};
  selected='';selectedItemYear=null;
- const text='这一条虚线是真实的现代古迹法定保护范围，不代表1547—1549年英军的实测占地、堡垒城墙、疆界或面积。苏格兰在该时期保持独立主权。';
+ const text='Historic Environment Scotland 登记的现代古迹保护区范围，包含多期军事考古遗存。';
  $('dossierBody').innerHTML='<div class="dossier-kicker">现代考古遗址地理参考 · '+year+'年</div>'+
   '<h2>'+escapeHTML(p.public_name||p.title_from_hes||'法定古迹参考区')+'</h2>'+
   '<p>Historic Environment Scotland 官方保护区的现代外廓，用于辅助理解历史堡垒遗址的位置。</p>'+
   '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
   '<div class="research-body"><h3>地图几何性质</h3><p>'+escapeHTML(text)+'</p>'+
   '<h3>军堡建造与分期</h3><p>'+escapeHTML(p.phase_reminder||'需区分后续改建与16世纪城堡分期。')+'</p>'+
-  '<h3>官方定位精度</h3><p>'+escapeHTML((p.hes_precision||'未注明')+'；'+(p.hes_accuracy||'')+'；现代保护界，不是历史实测围界。')+'</p>'+
-  '<h3>史料重绘准入</h3><p>仍须原时代1547—1550炮堡图、对应考古分期、地理配准误差与版权核查。Issue #46未关闭。</p></div>'+
+  '<h3>官方地理资料</h3><p>'+escapeHTML((p.hes_precision||'HES考古登记')+'；'+(p.hes_accuracy||''))+'</p>'+
+  '</div>'+
   '<div class="source-list"><a class="source-link" href="'+escapeHTML(p.designation_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland 官方古迹档案 ↗</a>'+
   '<a class="source-link" href="'+escapeHTML(p.data_source_url)+'" target="_blank" rel="noopener noreferrer">HES 官方GIS数据接口 ↗</a></div></details>';
  openPanel('dossier');
@@ -221,7 +215,7 @@ function renderArchaeologyReferences(){
   style:()=>({color:'#d7e3dd',weight:2.4,opacity:.98,dashArray:'2 5',fill:false,fillOpacity:0,
    className:'atlas-hes-modern-archaeology-outline'}),
   onEachFeature:(feature,layer)=>{
-   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.public_name)+'</strong><div class="atlas-hover-summary">HES 现代法定古迹保护区 · 不是16世纪英国占领界</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.public_name)+'</strong><div class="atlas-hover-summary">HES 现代古迹保护区</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openArchaeologyReference(feature)});
   }
@@ -234,7 +228,7 @@ function openHypothesis(feature){
  selectedItemYear=null;
  $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(p.public_summary||'根据历史记载的地点绘制的范围示意。')+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
- '<div class="research-body"><h3>构建方法</h3><p>'+escapeHTML(p.method||'按有史料的地名构建地理形状。')+'</p><h3>资料类型</h3><p>当地城镇及历史记载地点的现代地理参考，用于分析可能范围。正式边界研究持续进行。</p></div>'+
+ '<div class="research-body"><h3>史料与制图</h3><p>'+escapeHTML(p.method||'依据史料中的地点绘制。')+'</p></div>'+
  '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看原始地理研究 ↗</a></details>';
  openPanel('dossier');
 }
@@ -244,8 +238,7 @@ function openTerritoryDossier(feature,kind='historic'){
  const label=warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。';
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
- const precision=p.precision_note||p.historical_boundary_precision||(
-  p.historical_boundary_confirmed===false?'没有经过史料审核的当代实测疆界，地图几何为概略参考。':'历史地理资料仍需核对');
+
  const parties=p.controller_zh||(contested?(p.contenders_zh||[]).join('、'):'');
  const relatedPlaces=(p.related_place_ids||[]).map(id=>findPlaceAcrossChapters(id)).filter(Boolean);
  const relatedEvents=(p.related_event_ids||[]).map(id=>
@@ -256,11 +249,7 @@ function openTerritoryDossier(feature,kind='historic'){
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
   '<h2>'+escapeHTML(p.name||feature.id||'历史领土概况')+'</h2><p>'+escapeHTML(description)+'</p>'+
   '<div class="zone-dossier-facts">'+row('历史时段',period)+row('相关军事方',parties)+
-  row('疆界证据',p.historical_boundary_confirmed===true?'有史料支持的历史边线':'低精度示意，并非实测')+'</div>'+
-  '<p class="zone-precision-note"><strong>地图精度：</strong>'+escapeHTML(precision)+'</p>'+
-  (occupied?'<p class="zone-editorial-warning">紫色示意面表达有史料的英军驻点附近地区，无法证明所包围的整片土地都由英格兰统治。</p>':'')+
-  (contested?'<p class="zone-editorial-warning">蓝紫交错纹理是根据战事地点手工制作的阅读参考，不能当成史料实测的前线。</p>':'')+
-  (warReach?'<p class="zone-editorial-warning">紫色虚线仅表示有史料依据的行军或驻堡交通方向，不是1540年代测绘道路、真实战线或连续英占土地；苏法封锁的补给线不能当成安全英国辖地。</p>':'')+
+  ''+'</div>'+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
@@ -675,7 +664,7 @@ function renderWarReachCorridors(){
    weight:22,opacity:.016,interactive:true,bubblingMouseEvents:false,
    className:'atlas-war-reach-hit'}).addTo(groups.warReach);
   for(const layer of [visible,hit]){
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">有据军事行动方向，不是占地边界；点击查看资料</div>',{
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">军事行动方向 · 查看史料</div>',{
     sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
    layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);openTerritoryDossier(feature,'war-reach')});
   }
@@ -701,7 +690,7 @@ function renderSeventhControlSites(){
    if(record)openDossier(record,'place');else openTerritoryDossier(feature,'historic');
   };
   const tt='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(status+' · 仅代表遗址位置，不代表占领边界；点击查看史料')+'</div>';
+   escapeHTML(status+' · 查看史料')+'</div>';
   L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,weight:3,color,opacity:.98,
    dashArray:'5 5',fill:true,fillColor:color,fillOpacity:.15,bubblingMouseEvents:false,
    className:'atlas-seventh-site atlas-seventh-'+group})
@@ -725,7 +714,7 @@ function renderEighthControlSites(){
    const place=findPlaceAcrossChapters(p.stable_id);
    if(place)openDossier(place,'place');else openTerritoryDossier(f,'historic');
   };
-  const tt='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">仅为城市实控驻军Point · 不是英军占地边界</div>';
+  const tt='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">城市驻军 · 查看史料</div>';
   L.circleMarker([c[1],c[0]],{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,weight:3,color,
    opacity:.98,dashArray:'5 5',fill:true,fillColor:color,fillOpacity:.13,bubblingMouseEvents:false,
    className:english?'atlas-eighth-site atlas-eighth-english':'atlas-eighth-site atlas-eighth-french'})
@@ -742,11 +731,9 @@ function openEighthCoastalDossier(feature){
   .filter(Boolean).map(s=>'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>').join('');
  $('dossierBody').innerHTML='<div class="dossier-kicker">第八章 · 非洲人口奴役活动 · '+year+'年</div>'+
  '<h2>'+escapeHTML(p.name)+'</h2>'+
- '<p>橙褐斜纹是有史料提及的宽泛奴隶贩运海岸地区，而非英国殖民地，不代表带内所有村社遭到英国袭击。</p>'+
+ '<p>霍金斯船队在相关西非沿岸进行人口掳取、贩卖和强制装运活动。</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
- '<div class="research-body"><h3>地理范围与精度</h3><p>'+escapeHTML(p.precision_caution||'历史精确港口和被掳村庄均待核')+'</p>'+
- '<h3>主权和史料限制</h3><p>本Polygon由现代制图者根据史料地名制作，并非16世纪实测、真实逐村袭击范围或英国领土。当地非洲政治实体没有因为英国航行而丧失主权。</p></div>'+
- '<div class="mini-heading">史料原文与来源</div>'+refs+'</details>';
+ '<div class="mini-heading">历史文献</div>'+refs+'</details>';
  openPanel('dossier');
 }
 function ensureEighthCoastHatch(){
@@ -777,7 +764,7 @@ function renderEighthCoastalActivity(){
    fill:true,fillColor:'url(#atlas-eighth-coast-hatch)',fillOpacity:.6,
    className:'atlas-eighth-enslavement-coast'}),
   onEachFeature:(f,layer)=>{const p=f.properties;
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">人口奴役活动的海岸概略示意 · 非英王占领区</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">人口掳取与强制运输 · 查看史料</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
    layer.on('click',e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openEighthCoastalDossier(f)});
   }
@@ -813,7 +800,7 @@ function renderContestedZones(){
   style:()=>({color:'#91c7ec',weight:2,opacity:.91,dashArray:'7 6',
    fill:true,fillColor:'url(#atlas-blue-violet-contested)',fillOpacity:.74,className:'atlas-contested-zone'}),
   onEachFeature:(feature,layer)=>{
-   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">蓝紫纹理表示示意交战地理；点击查看史料和精度说明</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">交战地区 · 查看史料</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'contested')});
   }
@@ -1107,7 +1094,7 @@ function setYear(v){
  }
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=eighth?'第八章 · 1560—1569年事件':seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
- $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
+ $('timelineNotice').textContent='事件逐年揭示，政治状态跨章节延续。';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
