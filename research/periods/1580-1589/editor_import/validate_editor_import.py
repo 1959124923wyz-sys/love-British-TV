@@ -28,6 +28,7 @@ def verify():
     srcreg=read("SOURCE_REGISTRY.json",False)
     old=read("EVENT_CANDIDATES_1580_1589.json",False)
     maps=read("PRIMARY_MAP_SOURCE_CATALOG.json",False)
+    estate=read("MUNSTER_1586_1589_UNDERTAKERS_SEIGNORIES.json")
     events=atlas["events"]
     all_sources={s["id"] for s in atlas["sources"]}
     require(len(all_sources)==len(atlas["sources"])>=70,"Source ID uniqueness / count")
@@ -91,6 +92,11 @@ def verify():
     require(len(trans["year_end_states"])==10 and [s["year_end"] for s in trans["year_end_states"]]==list(range(1580,1590)),"Missing annual political continuity")
     require(all(s["valid_historic_english_occupation_polygons"]==0 for s in trans["year_end_states"]),"Invalid inferred colonial polygons")
     require(all(any(t["stable_id"]=="loughrea-english-warders-1576-1580" and t["year"]==1580 for t in trans["transitions"]) for _ in [0]),"Missing 1580 Loughrea English exit")
+    require(len(estate["owners_and_native_lordships"])==8,"Expected 4 original proposed undertaker groups, Raleigh/Spenser and two named Gaelic lordships")
+    require(estate["geography_policy"]["polygon_geometry"] is None,"Unreviewed seignory polygons")
+    require(estate["land_redistribution_mechanism"]["actual_royal_1580s_income_gbp"] is None,"Future 1590 rents falsely posted to 1586")
+    require(all(q["starts"]==1590 for q in estate["land_redistribution_mechanism"]["crown_rent_contract_annual_future_not_1580s_receipt"]),"Misdated royal rents")
+    require(all(set(q["source_ids"]).issubset(all_sources) and q["has_verified_historical_parcel"] is False for q in estate["owners_and_native_lordships"]),"Unverified GIS parcel or orphan estate")
     require(archival["total"]==len(archival["actions"])==18,"Archival queue count")
     require(all(m.get("polygon_fill_authorized") is False for m in maps["maps"]),"Historical map outlines not verified")
     return {
@@ -98,8 +104,8 @@ def verify():
       "run_date":"2026-10-14",
       "status":"PASS",
       "review_stage":"data_integrity_only_not_manuscript_authentication_or_online_browser_visual_validation",
-      "counts":{"historical_events":len(events),"sources":len(all_sources),"atlas_places":len(geo["features"]),"delta_features":len(delta["features"]),"georeferenced_modern_point_events":mapped,"unlocated_event_geometries":len(events)-mapped,"schematic_route_segments":len(paths["features"]),"money_and_human_violence_records":len(ledger["records"]),"year_end_states":len(trans["year_end_states"]),"historical_detail_notes":len(notes["records"]),"original_cartographic_sources":len(maps["maps"]),"archival_queue":archival["total"],"certified_true_colonial_polygon_count":0},
-      "checks":["All source IDs resolved","Chronological year gates","Unlocated events retain null GPS","Aquascogoc 18 July NCDNCR source","Smerwick and Carrigafoyle are independent casualties","St Leger mortality = reported scholarly upper bound","Human transport evidence ≠ legal sale or slave-trade profit","No route claimed measured navigation","No current borders promoted to historical sovereignty","1580 Loughrea controller changes","All foldout detail note IDs valid"],
+      "counts":{"historical_events":len(events),"sources":len(all_sources),"atlas_places":len(geo["features"]),"delta_features":len(delta["features"]),"georeferenced_modern_point_events":mapped,"unlocated_event_geometries":len(events)-mapped,"schematic_route_segments":len(paths["features"]),"money_and_human_violence_records":len(ledger["records"]),"year_end_states":len(trans["year_end_states"]),"historical_detail_notes":len(notes["records"]),"original_cartographic_sources":len(maps["maps"]),"archival_queue":archival["total"],"named_undertaker_and_gaelic_lordship_groups":len(estate["owners_and_native_lordships"]),"certified_true_colonial_polygon_count":0},
+      "checks":["All source IDs resolved","Chronological year gates","Unlocated events retain null GPS","Aquascogoc 18 July NCDNCR source","Smerwick and Carrigafoyle are independent casualties","St Leger mortality = reported scholarly upper bound","Human transport evidence ≠ legal sale or slave-trade profit","No route claimed measured navigation","No current borders promoted to historical sovereignty","1580 Loughrea controller changes","1586 future rents not realized English profit","Named native lordships remain outside plantation grants","All foldout detail note IDs valid"],
       "unresolved":["Historically measured Munster seignory grant boundaries","1580s true colonial military territorial polygons","Spanish original captive depositions and English sale accounts","1586 booty share audited royal net","1582 all-death census"],
       "ready_for_chief_editor_review":True,
       "released_to_main":False
