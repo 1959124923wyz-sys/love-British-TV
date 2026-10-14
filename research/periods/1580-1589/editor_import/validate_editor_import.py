@@ -30,14 +30,14 @@ def verify():
     maps=read("PRIMARY_MAP_SOURCE_CATALOG.json",False)
     events=atlas["events"]
     all_sources={s["id"] for s in atlas["sources"]}
-    require(len(all_sources)==len(atlas["sources"])>=68,"Source ID uniqueness / count")
+    require(len(all_sources)==len(atlas["sources"])>=70,"Source ID uniqueness / count")
     require(all(s.get("url","").startswith("https://") for s in atlas["sources"]),"Source URL")
     require(all_sources=={s["id"] for s in srcreg["sources"]},"Atlas missing new research sources")
-    require(len(events)==len(old["events"])==28,"Atlas event count mismatch")
-    require(len({e["id"] for e in events})==28,"Duplicate event IDs")
+    require(len(events)==len(old["events"])==30,"Atlas event count mismatch")
+    require(len({e["id"] for e in events})==30,"Duplicate event IDs")
     originalids={e["id"] for e in old["events"]}
     require({e["research_event_id"] for e in events}==originalids,"Lost research historical event")
-    require(len(notes["records"])==28 and set(notes["records"])=={e["id"] for e in events},"Missing historical-document foldout records")
+    require(len(notes["records"])==30 and set(notes["records"])=={e["id"] for e in events},"Missing historical-document foldout records")
     require(atlas["period"]["from"]==1580 and atlas["period"]["to"]==1589,"Wrong decade")
     require(atlas.get("colonial_polygons")==[],"No audited historic occupation polygon available")
     require(atlas.get("routes")==[],"Route overlays belong in separately-labelled schematic layer")
@@ -81,7 +81,7 @@ def verify():
         require(p["render_style"].startswith("dashed") and p["original_16c_route_points_measured"] is False,"Inferred line displayed as real route")
         require(p["source_ids"] and all(x in all_sources for x in p["source_ids"]),"Route unsupported")
         require(p["route_corridor_controlled_by_England"] is False and p["carried_captives_on_this_entire_segment_proven"] is False,"Implausible territorial/slave route claim")
-    require(len(ledger["records"])==18,"Expected separate 18 audited-but-unconfirmed economic evidence lines")
+    require(len(ledger["records"])==25,"Expected separate 18 audited-but-unconfirmed economic evidence lines")
     by_kind={f["kind"]:f for f in ledger["records"]}
     require(ledger["summary"]["royal_net_gbp"] is None and ledger["summary"]["slave_sales_profit_gbp"] is None,"Imaginary royal or slavery profits")
     require("sale_of_enslaved_people" in by_kind and by_kind["sale_of_enslaved_people"]["quantity"] is None,"No primary sale ledger exists")
