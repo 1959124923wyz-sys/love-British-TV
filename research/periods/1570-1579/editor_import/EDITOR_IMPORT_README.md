@@ -14,6 +14,22 @@
 
 审查不能仅凭`places.end_year:null`自动视为年年有效——有些过去发生的一次性奴役、战役或政治事件在主站故意保留地址供回看，**并非能无期限填色的统治事实**。该对账直接预防曾发生过的年界「据点复活」错误。
 
+## 第三轮原档突破：1579爱尔兰实际驻军名册与英国境内被掳因纽特人（2026-10-14）
+
+**本轮已经找到英国国家级馆藏目录记录的**1579年6月5日英王驻爱尔兰军队原始“驻军声明”（**British Library, Cotton MS Titus B XIII/1, ff.276r–289v**），以及同卷**1577年归女王的教会特许事项相关收益清单（ff.270r–270v）**。另外，**Cotton MS Titus B X/1, ff.157v–161r**列出**1578年6月14日锡德尼发给枢密院书信附属的军队粮秣估计**。上述都是**确切馆藏+卷页**，**手稿原文和钱银数字尚未读到**，暂不将“驻军名册”“利润清单”误写成全部军堡已定位或英国殖民实际净收入。三项档案非常适合后续争取逐年真实紫色驻军点与财政数据。
+
+新增文件[《1570年代原始手稿14项卷页级索引》](PRIMARY_ORIGINAL_MANUSCRIPT_CATALOGUE_20261014.json)将这三类与锡德尼在德罗赫达、阿斯隆、戈尔韦的1575—1578年通信和爱尔兰国家图书馆馆藏胶片一并精确定位。BL在线目录标记影像当前不可用，**不宣称已读原件**。1579年6月驻军名册不必等同**1579年12月31日**的全年稳定控制：还需找变动、撤军与围城原账。
+
+**因纽特掳掠与在英国境内的物化展示，新史料可以直接上图：**
+
+- **1576年伦敦**：Alden T. Vaughan《Transatlantic Encounters》（剑桥大学出版社公开章节）引述Cathay Company财务账簿及George Best当代文字，说明弗罗比舍用诱骗手段把因纽特男子从皮划艇拉上船并带回英国。公司为护理、医生和画像支出，向画家Cornelius Ketel订了**两幅，每幅£5，共计£10**肖像；**这是商业剥削过程的支出，并非掠夺净利润或该人的“价格”**。男子在英格兰伦敦1576年10月死亡，公司支付在**St Olave Hart Street**安葬的费用，但堂区簿**无相应记载**，不可声称已找到墓穴。
+- **1577年布里斯托尔**：同一学术来源和英国国家教堂遗产资料确认Kalicho于**11月7日死亡、11月8日安葬**，Arnaq于**11月12日安葬**，地点为仍在的**St Stephen's Church**（Historic England Grade I listing1202558；NGR **ST58684 72983**，约`[-2.596003,51.454311]`）。这是**历史教堂地理点**，不是受害者墓穴GPS。
+- **1577年伦敦**：被掳婴儿**Nutaaq**随护士从布里斯托尔到伦敦，抵达后约八日死亡。公司账目记**St Olave Hart Street**安葬支出，然而其堂区埋葬簿亦**无对应条目**。英国官方遗产名录Listing1064676（NGR **TQ33372 80859**，约`[-0.07947,51.51090]`）仅授权绘制古教堂事件参考点。
+- **1578年巴芬岛**：同一历史研究说明弗罗比舍原计划约100人越冬殖民，据点因造屋船材损毁等原因**未建立**；1578年英军**曾试图再绑架因纽特人但没有成功**。地图只保留暂时矿场和企图捕掳事件，**没有驻守到1579年的英国殖民地**。
+- **1579年芒斯特新线索**：1878年《A Compendium of Irish Biography》回顾Malby在Kilmallock留守步兵、骑兵并与Desmond军战于Monasteranenagh，引用约260名叛军死亡和烧毁Askeaton/Rathkeale/Adare的叙事。这些数字**还没有1579原始军报/伤亡名册核证**；已列高优先级档案候查，**暂不升为确认伤亡统计和确切战线**。
+
+数据交付本轮累积：**53条来源、37项Atlas事件、30处可显示Atlas地点、31个GeoJSON地点记录（1个真实海上夺船位置不明）、10份年末状态、16条控制变动、32条地图Delta、15条纯示意线路、28类经济与人身暴力证据、31项后续档案任务（P0 24项）、14条原始手稿卷页级索引**。古历史实控多边形认证数量**0**；主编可直接接入事件层，版图层只据已经确认的本地驻堡控制年份。
+
 ## 最新第二轮深挖：独立盖尔史源、穆拉马斯特屠杀与1576—1580洛赫雷战线（2026-10-14）
 
 这一批是**新发现，不是重复既有调查**。新增[《四大师编年史》研究增补](GAELIC_ANNALS_GARRISONS_AND_MASSACRES_ADDENDUM_20261014.json)和[1579→1580年军控交接种子](TRANSITION_1579_1580_RESEARCH_SEED.json)，并已同步更新Atlas、点数据、年度控制和财务表。
@@ -40,15 +56,16 @@
 
 | 文件 | 作用、已整理事实 | 允许画法 |
 | --- | --- | --- |
-| [SOURCE_REGISTRY.json](SOURCE_REGISTRY.json) | **44条来源**，包括爱尔兰学术传记、1572殖民招商原文、Oxford/MUP研究、美国国会图书馆德雷克资料和1579西班牙手稿、加拿大官方遗址和地名库、英国博物馆因纽特受害人专题 | 读取`source_ids`弹窗/旁证，区分原始材料目录与已亲读手稿 |
-| [ATLAS_EVENT_REVIEW_CANDIDATE.json](ATLAS_EVENT_REVIEW_CANDIDATE.json) | **33个按年事件、28处有可显示坐标参考地点、44个来源条目**，结构与现有`data/atlas-15xx.json`兼容 | 加入第九章Atlas前由主编审阅；不得覆盖第八章 |
+| [SOURCE_REGISTRY.json](SOURCE_REGISTRY.json) | **53条来源**，包括爱尔兰学术传记、1572殖民招商原文、Oxford/MUP研究、美国国会图书馆德雷克资料和1579西班牙手稿、加拿大官方遗址和地名库、英国博物馆因纽特受害人专题 | 读取`source_ids`弹窗/旁证，区分原始材料目录与已亲读手稿 |
+| [ATLAS_EVENT_REVIEW_CANDIDATE.json](ATLAS_EVENT_REVIEW_CANDIDATE.json) | **37个按年事件、30处有可显示坐标参考地点、53个来源条目**，结构与现有`data/atlas-15xx.json`兼容 | 加入第九章Atlas前由主编审阅；不得覆盖第八章 |
 | [CONTROL_TRANSITION_1569_1579.json](CONTROL_TRANSITION_1569_1579.json) | **10份连续年度政治控制状态、16条重要控制／声索/掠夺变化台账**；1558后法国加来/吉讷，苏格兰独立，阿尔斯特地方领主继续存在，1579 California原住民实控 | 年份滑块按年份切换；要区分抢劫、暂驻、殖民授地与真实长久控制 |
-| [CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson](CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson) | **29处地点候选，28个有经纬度、1个未证实Cacafuego准确海上夺船点`null`**。加拿大自然资源部**Kodlunarn官方岛址62.816667,-65.416667** | `Point`现代地名定位；从不画堡周圆圈当已占领地。未定位船只不造假GPS |
-| [VIOLENCE_AND_CONTROL_DELTA_1570_1579.geojson](VIOLENCE_AND_CONTROL_DELTA_1570_1579.geojson) | **28项**殖民授地、有限驻点、1574焚粮抢牛/宴后杀戮、1575拉斯林大屠杀、1576/77绑架因纽特人、1578采矿、1579海盗船劫持、新阿尔比恩象征声索、丁格尔开战 | 事件层点＋年份变化；`geometry:null`为暂不能落准确点，不得随机点 |
+| [CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson](CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson) | **31处地点候选，30个有经纬度、1个未证实Cacafuego准确海上夺船点`null`**。加拿大自然资源部**Kodlunarn官方岛址62.816667,-65.416667** | `Point`现代地名定位；从不画堡周圆圈当已占领地。未定位船只不造假GPS |
+| [VIOLENCE_AND_CONTROL_DELTA_1570_1579.geojson](VIOLENCE_AND_CONTROL_DELTA_1570_1579.geojson) | **32项**殖民授地、有限驻点、1574焚粮抢牛/宴后杀戮、1575拉斯林大屠杀、1576/77绑架因纽特人、1578采矿、1579海盗船劫持、新阿尔比恩象征声索、丁格尔开战 | 事件层点＋年份变化；`geometry:null`为暂不能落准确点，不得随机点 |
 | [VIOLENT_EXTRACTION_ROUTE_REFERENCES.geojson](VIOLENT_EXTRACTION_ROUTE_REFERENCES.geojson) | **15条**1572–73巴拿马金银线路、1574泰隆军事扫荡方向、1575卡里克弗格斯→拉斯林运输、1576–78英国→因纽特采矿、1579太平洋私掠方向 | 虚线**示意**，不是实测航海/部队GPS轨迹。1579加利福尼亚→特尔纳特跨180°经线应由前端拆线 |
 | [IRISH_COERCION_EVENT_ZONES.geojson](IRISH_COERCION_EVENT_ZONES.geojson) | **3项`geometry:null`地理范围候审**：阿兹／克兰德博伊殖民授地、1574泰隆焚掠、1579芒斯特战争初发 | **不得自动填现代全郡Polygon**；可以显示地区文字/点/军队方向，等待1572当期古地图及原军报配准 |
-| [PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json](PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json) | **24类经济／人身暴力证据**：涉嫌夺走牲畜、意向土地收益、王室军费、德雷克抢金银、因纽特受害人与失败矿业，逐条`source_ids`；英国王室实际净掠夺利润`null` | 适合用户可点击信息面板，**各口径不得相加**，不得渲染成已审计英王收益 |
-| [ARCHIVAL_ACTION_QUEUE.json](ARCHIVAL_ACTION_QUEUE.json) | **25项精确待查档案任务（P0 20项）**：1572授地原图、1574贝尔法斯特宴后屠杀原档、1575拉斯林死亡人数、1579西班牙战利品原清单等 | 次批研究任务与地图边界升级入口 |
+| [PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json](PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json) | **28类经济／人身暴力证据**：涉嫌夺走牲畜、意向土地收益、王室军费、德雷克抢金银、因纽特受害人与失败矿业，逐条`source_ids`；英国王室实际净掠夺利润`null` | 适合用户可点击信息面板，**各口径不得相加**，不得渲染成已审计英王收益 |
+| [PRIMARY_ORIGINAL_MANUSCRIPT_CATALOGUE_20261014.json](PRIMARY_ORIGINAL_MANUSCRIPT_CATALOGUE_20261014.json) | **14项原始书信/驻军表/财政文书精确藏号+页码**；含1579年6月5日英王爱尔兰驻军原始声明，两册锡德尼书信簿 | 后续直接申请档案影像并转出具体驻军及财务数据，暂不能虚构未读取的明细 |
+| [ARCHIVAL_ACTION_QUEUE.json](ARCHIVAL_ACTION_QUEUE.json) | **31项精确待查档案任务（P0 24项）**：1572授地原图、1574贝尔法斯特宴后屠杀原档、1575拉斯林死亡人数、1579西班牙战利品原清单等 | 次批研究任务与地图边界升级入口 |
 | [EDITOR_QA.json](EDITOR_QA.json) | GitHub远端读取结构/地理/年代/来源交叉检查 | **不能**充当主站浏览器视觉验收或原手稿认证 |
 
 ## 三、重大发现：必须直观表现但不要把损失算错
@@ -84,7 +101,7 @@
 
 ## 四、主编导入次序与地图显示
 
-1. 将`SOURCE_REGISTRY.json`并入第九章独立的`sources`，与前章来源ID去重；然后使用`ATLAS_EVENT_REVIEW_CANDIDATE.json`复核22件史事＋17定位地点。
+1. 将`SOURCE_REGISTRY.json`并入第九章独立的`sources`，与前章来源ID去重；然后使用`ATLAS_EVENT_REVIEW_CANDIDATE.json`复核37件史事＋30处有图定位地点。
 2. 把`CONTROL_TRANSITION_1569_1579.json`作为**年末控制真相**：1558后加来/吉讷一直法国，苏格兰始终独立，爱尔兰没有全岛稳定英军驻防。1572阿兹仅为小据点，1575拉斯林7月短暂驻军何时退出仍属未核。
 3. 版图层仅显示**有史料可用的局部英王旧军堡点**；不能自动按授地文件或屠杀地点涂紫色。事件层显示1574焚粮、1574与1575屠杀、1576/77人口绑架、1578矿石开采、1572/73与1579金银掠夺及1579 Desmond抗争。
 4. `VIOLENT_EXTRACTION_ROUTE_REFERENCES.geojson`是纯辅助虚线，不能通过线路宽度推定英军占地。全数据不新增实测16世纪`Polygon`。
