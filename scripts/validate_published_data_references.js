@@ -56,7 +56,7 @@ for(const {file,start,end,data} of records){
 const allReferences=(item,where)=>{
  for(const id of item.source_ids||[])assert.ok(sourceMap.has(id),where+' has unregistered citation '+id);
 };
-for(const {file,data}of records){
+for(const {file,data,start,end}of records){
  for(const e of data.events)allReferences(e,file+' / '+e.id);
  for(const pl of data.places||[])allReferences(pl,file+' / '+pl.id);
  for(const v of data.routes||[]){
