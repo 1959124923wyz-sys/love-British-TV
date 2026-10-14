@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source": "PR52 Le Havre transition",
+    "period": [
+      1560,
+      1569
+    ],
+    "verified_historic_control_polygons": 0
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "le-havre-english-garrison-1562",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1077,
+          49.4938
+        ]
+      },
+      "properties": {
+        "stable_id": "le-havre-english-garrison-1562",
+        "name": "勒阿弗尔1562年末英军实际驻城",
+        "start_year": 1562,
+        "end_year": 1562,
+        "controller_group": "english",
+        "source_ids": [
+          "C8-S07",
+          "C8-S08",
+          "C8-S10"
+        ],
+        "fill_authorized": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "geographic_precision": "modern_city_reference_not_1562-63_wall",
+        "description": "仅表示已证城市驻军控制变动，非勒阿弗尔古城墙的经测围界，也不是整个诺曼底英王领地。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "le-havre-french-restored-1563",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1077,
+          49.4938
+        ]
+      },
+      "properties": {
+        "stable_id": "le-havre-french-restored-1563",
+        "name": "勒阿弗尔1563年7月法军收复后持续法国控制",
+        "start_year": 1563,
+        "end_year": 1569,
+        "controller_group": "french",
+        "source_ids": [
+          "C8-S07",
+          "C8-S08",
+          "C8-S09"
+        ],
+        "fill_authorized": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "geographic_precision": "modern_city_reference_not_1562-63_wall",
+        "description": "仅表示已证城市驻军控制变动，非勒阿弗尔古城墙的经测围界，也不是整个诺曼底英王领地。"
+      }
+    }
+  ]
+}
