@@ -694,3 +694,9 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 }
 #map .atlas-merchant-coastline{pointer-events:none;stroke-linecap:round;opacity:.7}
 #map .atlas-voyage-schematic{pointer-events:none;stroke-linecap:round}
+
+/* Official HES 2026 Scheduled Monument boundaries: NOT Tudor occupied area. */
+#map .atlas-hes-modern-archaeology-outline{fill:none!important;fill-opacity:0!important;stroke:#d7e3dd;stroke-dasharray:2 5}
+.sidebar-settings-wrap .map-mode-help-body .swatch.archaeology-modern{
+ flex-basis:17px;width:17px;height:0;border-top:2px dashed #d7e3dd;border-radius:0;margin-top:8px
+}

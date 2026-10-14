@@ -48,10 +48,14 @@ map.createPane('contestedZonePane');
 map.getPane('contestedZonePane').style.zIndex='462';
 map.getPane('contestedZonePane').style.pointerEvents='auto';
 const contestedZoneRenderer=L.svg({pane:'contestedZonePane'});
+// Modern statutory monument polygons (HES) are archaeological references, not Tudor lands.
+map.createPane('archaeologyReferencePane');
+map.getPane('archaeologyReferencePane').style.zIndex='465';
+const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -118,7 +122,7 @@ function syncMapLayers(){
  if(atlas)refreshHistoricalLayers();
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -142,7 +146,14 @@ function listSources(ids,item){
   ['史料背景',note?.context],
   ['历史影响',note?.impact],
   ['地理与权力关系',note?.geography],
-  ['财政核算',note?.accounting]
+  ['财政核算',note?.accounting],
+  ['地图位置与精度',item?.geographic_disclaimer_zh],
+  ['航线或区域几何的史料精度',item?.route_kind==='documented-endpoints-connection'?
+   '这条虚线只连接有史料支持的起讫地点，不表示船只实际航行轨迹。':
+   item?.route_kind==='coastal-commercial-reference-schematic'?
+   '海岸虚线仅标识有史料的宽泛商业接触地带，不代表连续贸易或英国占领区。':
+   item?.route_kind&&/schematic/.test(item.route_kind)?
+   '路线的中间折点仅为制图示意，不是船舶实测航迹；各端点精度以当时可核地名为限。':null]
  ].filter(x=>x[1]);
  const questions=(note?.archive_questions||[]).map(text=>'<li>'+escapeHTML(text)+'</li>').join('');
  const accountingNames={crown_reward_expenditure:'王室远航奖励',royal_ship_acquisition_bounty:'购船补助',royal_grant_expenditure:'王室拨款',royal_pension:'王室年金'};
@@ -170,19 +181,48 @@ function openDossier(item,typ){
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
- const schematicRoute=route&&(item.route_kind==='documented-endpoints-connection'||/schematic/.test(String(item.route_kind||'')));
- const coastalBand=route&&item.route_kind==='coastal-commercial-reference-schematic';
- const routeWarning=schematicRoute?'<p class="atlas-route-disclaimer">'+
-  (item.route_kind==='documented-endpoints-connection'?
-   '这条虚线只连接有史料支持的起讫地点，不表示船只实际航行轨迹。':
-   coastalBand?'海岸虚线仅标识史料涉及的宽泛贸易海岸，不表示持续贸易发生线或英国殖民占领区。':
-   '本航线只依据史料地理端点和概略方向绘制，中间折点不是当时船只的实际航迹。')+'</p>':'';
- const pointReference=typ==='event'&&item.geographic_disclaimer_zh?
-  '<p class="atlas-location-note"><strong>地图定位：</strong>'+escapeHTML(item.geographic_disclaimer_zh)+'</p>':'';
 
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+routeWarning+pointReference+listSources(item.source_ids,item);
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+listSources(item.source_ids,item);
  openPanel('dossier');
  document.querySelectorAll('.event-item').forEach(el=>el.classList.toggle('selected',el.dataset.eid===selected));
+}
+// Modern heritage scheduled boundaries were fetched from the official HES ArcGIS service.
+// NEVER treat these protected legal extents as 1547 English fort walls or occupied territory.
+function openArchaeologyReference(feature){
+ const p=feature.properties||{};
+ selected='';selectedItemYear=null;
+ const text='这一条虚线是真实的现代古迹法定保护范围，不代表1547—1549年英军的实测占地、堡垒城墙、疆界或面积。苏格兰在该时期保持独立主权。';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">现代考古遗址地理参考 · '+year+'年</div>'+
+  '<h2>'+escapeHTML(p.public_name||p.title_from_hes||'法定古迹参考区')+'</h2>'+
+  '<p>Historic Environment Scotland 官方保护区的现代外廓，用于辅助理解历史堡垒遗址的位置。</p>'+
+  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
+  '<div class="research-body"><h3>地图几何性质</h3><p>'+escapeHTML(text)+'</p>'+
+  '<h3>军堡建造与分期</h3><p>'+escapeHTML(p.phase_reminder||'需区分后续改建与16世纪城堡分期。')+'</p>'+
+  '<h3>官方定位精度</h3><p>'+escapeHTML((p.hes_precision||'未注明')+'；'+(p.hes_accuracy||'')+'；现代保护界，不是历史实测围界。')+'</p>'+
+  '<h3>史料重绘准入</h3><p>仍须原时代1547—1550炮堡图、对应考古分期、地理配准误差与版权核查。Issue #46未关闭。</p></div>'+
+  '<div class="source-list"><a class="source-link" href="'+escapeHTML(p.designation_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland 官方古迹档案 ↗</a>'+
+  '<a class="source-link" href="'+escapeHTML(p.data_source_url)+'" target="_blank" rel="noopener noreferrer">HES 官方GIS数据接口 ↗</a></div></details>';
+ openPanel('dossier');
+}
+function renderArchaeologyReferences(){
+ groups.archaeologyReference.clearLayers();
+ if(year<1547||year>1549||!archaeologicalReferenceAreas||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
+ const display=archaeologicalReferenceAreas.features.filter(f=>{
+  const p=f.properties||{};
+  return f.geometry?.type==='Polygon'&&p.start_year<=year&&p.end_year>=year&&
+   p.visual_role==='modern_archaeology_legal_extent_reference_dashed'&&
+   p.historical_boundary_confirmed===false&&p.fill_authorized===false&&p.area_sqkm===null;
+ });
+ L.geoJSON({type:'FeatureCollection',features:display},{
+  renderer:archaeologyReferenceRenderer,pane:'archaeologyReferencePane',interactive:true,bubblingMouseEvents:false,
+  style:()=>({color:'#d7e3dd',weight:2.4,opacity:.98,dashArray:'2 5',fill:false,fillOpacity:0,
+   className:'atlas-hes-modern-archaeology-outline'}),
+  onEachFeature:(feature,layer)=>{
+   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.public_name)+'</strong><div class="atlas-hover-summary">HES 现代法定古迹保护区 · 不是16世纪英国占领界</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openArchaeologyReference(feature)});
+  }
+ }).addTo(groups.archaeologyReference);
 }
 function openHypothesis(feature){
  const p=feature.properties||{};
@@ -979,7 +1019,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderArchaeologyReferences();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -1084,6 +1124,14 @@ async function boot(){
     if(contestedResponse.ok)contestedZoneAreas=await contestedResponse.json();
     if(warReachResponse.ok)warReachAreas=await warReachResponse.json();
   }catch(_e){ /* Text and all vetted history records remain usable. */ }
+  // Official HES modern monument geometry is optional visual context, never occupation.
+  const hesReferenceResponse=await fetch('data/issue46-hes-archaeology-reference-1547-1549.geojson',{cache:'no-store'});
+  if(!hesReferenceResponse.ok)throw new Error('第六章HES考古参考范围未加载');
+  archaeologicalReferenceAreas=await hesReferenceResponse.json();
+  if(archaeologicalReferenceAreas?.features?.length!==3||
+     archaeologicalReferenceAreas.features.some(f=>f.properties?.fill_authorized!==false||f.properties?.historical_boundary_confirmed!==false))
+   throw new Error('拒绝把现代古迹保护区当作英国1547实测占地');
+  map.attributionControl.addAttribution('Contains HES and OS data © HES and Crown Copyright/database right 2026 · OGL v3.0');
   // New chapter keeps original 1497–1549 layer references intact. Older layers
   // have closed year intervals; append dated seventh-chapter continuations.
   const [geo7,relation7,urban7,sites7]=await Promise.all([
@@ -1143,7 +1191,7 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderArchaeologyReferences();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
