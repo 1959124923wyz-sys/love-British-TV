@@ -1,0 +1,116 @@
+{
+  "schema": "ch09_1579_1580_live_garrison_transition_v1",
+  "source_chapter9_yearend": "CONTROL_TRANSITION_1569_1579.json",
+  "prior_chapter8_research_pr": 52,
+  "next_chapter10_period": [
+    1580,
+    1589
+  ],
+  "verified_1579_statuses": [
+    {
+      "stable_id": "loughrea-english-warders-1576-1580",
+      "controller_end_1579": "English Crown local garrison",
+      "source_ids": [
+        "C9-S26"
+      ],
+      "confidence": "strong via 1576 and 1580 Gaelic annal cross-year retrospective reference",
+      "true_period_control_polygon": null,
+      "scope": "Loughrea town/castle only, NOT whole Connacht"
+    },
+    {
+      "stable_id": "carrickfergus-English-castle-pre1570",
+      "controller_end_1579": "English pre-existing garrison castle",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "confidence": "strong old seventies base",
+      "true_period_control_polygon": null
+    },
+    {
+      "stable_id": "smith-newcastle-comber-1572-1575",
+      "controller_end_1579": "unknown specific remnant / no verified major English Ards colony",
+      "source_ids": [
+        "C9-S01"
+      ],
+      "confidence": "no full Ards stability",
+      "true_period_control_polygon": null
+    },
+    {
+      "stable_id": "askeaton-franciscan-friary-sacked-1579",
+      "controller_end_1579": "Desmond/Franciscans historical location attacked; English did NOT capture Askeaton castle",
+      "source_ids": [
+        "C9-S41",
+        "C9-S42"
+      ],
+      "confidence": "official OPW",
+      "true_period_control_polygon": null
+    },
+    {
+      "stable_id": "Munster-1579-five-wards-proposed",
+      "controller_end_1579": "UNKNOWN each castle actual warded despite planning to place troops",
+      "source_ids": [
+        "C9-S26"
+      ],
+      "confidence": "proposed only"
+    },
+    {
+      "stable_id": "second-desmond-war-1579-1583",
+      "controller_end_1579": "ongoing contested war no single controller",
+      "source_ids": [
+        "C9-S18",
+        "C9-S19",
+        "C9-S26"
+      ],
+      "confidence": "verified multi-year combat"
+    }
+  ],
+  "changes_1580_preserve_for_next_decade": [
+    {
+      "stable_id": "loughrea-english-warders-1576-1580",
+      "year": 1580,
+      "change": "lost",
+      "from": "English local captain/constable Master Jones warders since 1576",
+      "to": "Burke clans retook Loughrea during night assault then demolished castle",
+      "source_ids": [
+        "C9-S26"
+      ],
+      "precision": "year, exact day unknown",
+      "future_renderer_remove_English_loughrea_from_1580_yearend": true
+    },
+    {
+      "stable_id": "second-desmond-war-1579-1583",
+      "year": 1580,
+      "change": "continued_contested",
+      "source_ids": [
+        "C9-S19",
+        "C9-S26"
+      ],
+      "warning": "Do NOT prefill all 1580 atrocities into 1579 data"
+    },
+    {
+      "stable_id": "Drake-1577-1580-circumnavigation",
+      "year": 1580,
+      "change": "return_English_port_and_possible_prize_distribution",
+      "source_ids": [
+        "C9-S09",
+        "C9-S10",
+        "C9-S31"
+      ],
+      "money_value_gbp_verified": null,
+      "warning": "No 1579 UK Treasury receipts without original account"
+    }
+  ],
+  "dont_resurrect": [
+    "Spanish Panama into British colony",
+    "Coast Miwok Northern California into British colony",
+    "Canadian Kodlunarn/Baffin Inuit land into British province",
+    "entire Ards/Clandeboye under English domestic police"
+  ],
+  "remaining_unknown": [
+    "1579 proposed five Munster garrisons status by 1580",
+    "1580 Loughrea castle demolition timing",
+    "1579 last hold English Rathlin site after July1575",
+    "Essex precise costs audited"
+  ],
+  "historical_polygon_authorized_count": 0
+}
