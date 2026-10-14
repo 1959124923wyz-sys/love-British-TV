@@ -1,5 +1,5 @@
 name: Chapter 10 one-time chief editor import QA
-# Rerun after 1586 English Crown exclusionary seignory rent articles and 1588 land grant reconstruction.
+# Final review: check 30 source-linked events, 70 citations, 25 accounting entries and 8 parcel-owner or Gaelic lordship groups.
 on:
   workflow_dispatch:
   push:
@@ -38,6 +38,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Editor QA report unchanged"
           else
-            git commit -m "test(ch10): archive successful 28-event direct import verification"
+            git commit -m "test(ch10): archive successful 30-event direct import and Munster contract verification"
             git push origin HEAD:research/ch10-1580-1589-violence-enslavement-plunder-20261014
           fi
