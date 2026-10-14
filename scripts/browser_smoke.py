@@ -653,7 +653,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1559'""",driver)
+              document.querySelector('#jumpYear').max==='1569'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560,3)
