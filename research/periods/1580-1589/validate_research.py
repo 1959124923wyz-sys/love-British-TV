@@ -21,6 +21,7 @@ def audit():
     maps=read("PRIMARY_MAP_SOURCE_CATALOG.json")
     control=read("CONTROL_TRANSITION_1579_1589.json")
     actions=read("ARCHIVAL_ACTION_QUEUE.json")
+    geometry=read("GEOGRAPHIC_EVENT_ANCHORS_1580_1589.geojson")
 
     ids=[s["id"] for s in sources]; idset=set(ids)
     require(len(ids)>=45 and len(ids)==len(idset),"Duplicate or missing chapter10 sources")
@@ -61,9 +62,15 @@ def audit():
     require(all(z["valid_historic_english_occupation_polygons"]==0 for z in control["year_end_states"]),"Fake history polygon count")
     require(len(control["static_polities"])==9,"Inherited political IDs changed without editor review")
     require("loughrea-english-warders-1576-1580" in [t["stable_id"] for t in control["transitions"] if t["year"]==1580],"Loughrea recapture missing")
+    require(geometry["type"]=="FeatureCollection" and len(geometry["features"])>=2,"Missing sourced research map references")
+    for f in geometry["features"]:
+        p=f["properties"]; xy=f["geometry"]["coordinates"]
+        require(f["geometry"]["type"]=="Point" and len(xy)==2 and -180<xy[0]<180 and -90<xy[1]<90,"Bad historical reference point")
+        require(p["event_id"] in lookup and all(q in idset for q in p["source_ids"]),"Orphan modern event location")
+        require(p["historical_boundary_confirmed"] is False and p["fill_authorized"] is False and p["area_sqkm"] is None, "Site point falsely treated as a historical control area")
     require(actions["total"]==len(actions["actions"]),"Archive queue invalid")
     require(all(x["status"]=="pending" for x in actions["actions"]),"Unverified external archiving claims")
-    print("PASS ch10 research integrity:",len(sources),"sources,",len(events["events"]),"events,",len(records),"ledger lines,",len(maps["maps"]),"map leads,",len(control["year_end_states"]),"annual states,",len(actions["actions"]),"pending archives; historical polygons 0")
+    print("PASS ch10 research integrity:",len(sources),"sources,",len(events["events"]),"events,",len(records),"ledger lines,",len(maps["maps"]),"map leads,",len(control["year_end_states"]),"annual states,",len(actions["actions"]),"pending archives,",len(geometry["features"]),"modern event anchors; historical polygons 0")
 
 if __name__=="__main__":
     try:audit()
