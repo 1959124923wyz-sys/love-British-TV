@@ -1,0 +1,236 @@
+{
+  "schema": "ch10_violence_enslavement_ledger_v1",
+  "as_of": "2026-10-14",
+  "chapter": [
+    1580,
+    1589
+  ],
+  "accounting_policy": {
+    "primary": "Recorded injuries, forced movements, seizure, grants, ransom and commercial profit are distinct variables. No automatic monetary conversion across currencies/centuries. No net royal profit computed.",
+    "british_crown_net_profit_gbp": null,
+    "transatlantic_slave_sales_net_profit_1580s": null,
+    "no_duplicate_person_counts": true,
+    "no_official_territorial_areas_from_land_grants": true
+  },
+  "records": [
+    {
+      "evidence_id": "C10-M01",
+      "event_id": "ch10-1580-smerwick",
+      "evidence_kind": "killings",
+      "value_reported": 600,
+      "unit": "persons",
+      "quantifier": "approximately",
+      "source_ids": [
+        "C10-S01",
+        "C10-S02",
+        "C10-S38"
+      ],
+      "source_record": "Heritage Ireland says approx 600 including women and children; Grey's original account reports 600 slain",
+      "count_method": "one massacre; ~600 is approximate testimony not independent census",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M02",
+      "event_id": "ch10-1586-drake-santo-domingo",
+      "evidence_kind": "extorted_city_ransom",
+      "value_reported": 25000,
+      "unit": "historical Spanish ducats",
+      "quantifier": "secondary scholarly estimate",
+      "source_ids": [
+        "C10-S09",
+        "C10-S41"
+      ],
+      "source_record": "Cambridge peer-reviewed Hispaniola maroons study reports 25,000 ducats ransom. Spanish king's dated official letter confirms city robbed and ransomed without amount.",
+      "count_method": "do not add to treasure seized or recognize amount as audited English state profit",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M03",
+      "event_id": "ch10-1586-drake-cartagena",
+      "evidence_kind": "extorted_city_ransom",
+      "value_reported": 110000,
+      "unit": "historical ducats",
+      "quantifier": "reported collected ransom in museum and English narrative",
+      "source_ids": [
+        "C10-S11",
+        "C10-S12"
+      ],
+      "source_record": "Cartagena historical museum and English narrative, accounting ledger or individual distribution not independently obtained",
+      "count_method": "demand vs actual instalment and local treasury reimbursement require source audit; gross ransom not state net",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M04",
+      "event_id": "ch10-1586-drake-displaced-captives",
+      "evidence_kind": "people_removed_report_A",
+      "value_reported": 300,
+      "unit": "Indigenous Americans, mostly women",
+      "quantifier": "Spanish released captive account quoted by Quinn via Smithsonian",
+      "source_ids": [
+        "C10-S25",
+        "C10-S26"
+      ],
+      "source_record": "Spanish witness reported Drake took 300 Indians from Cartagena, mostly women",
+      "count_method": "contemporaneous report, NOT identified persons list, NOT confirmed sold; witness-specific and alternative to others",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M05",
+      "event_id": "ch10-1586-drake-displaced-captives",
+      "evidence_kind": "people_removed_report_A",
+      "value_reported": 200,
+      "unit": "people described as Africans, Turks and Moors",
+      "quantifier": "Spanish eyewitness claim quoted by Quinn",
+      "source_ids": [
+        "C10-S25",
+        "C10-S26"
+      ],
+      "source_record": "Same quoted report said some 200 Negroes, Turks and Moors",
+      "count_method": "alternative descriptions overlap later records, NO addition with C10-M06/M07/M08",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M06",
+      "event_id": "ch10-1586-drake-displaced-captives",
+      "evidence_kind": "people_removed_report_B",
+      "value_reported": 150,
+      "unit": "Africans labeled negroes/negresses",
+      "quantifier": "Pedro Sanchez June 26 1586 deposition as quoted in academic publication",
+      "source_ids": [
+        "C10-S26"
+      ],
+      "source_record": "Reported 150 from Santo Domingo and Cape Verde, more from Santo Domingo",
+      "count_method": "different witness, overlaps persons in M05; not an extra batch",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M07",
+      "event_id": "ch10-1586-drake-displaced-captives",
+      "evidence_kind": "people_removed_report_B",
+      "value_reported": 200,
+      "unit": "Moors among galley captives",
+      "quantifier": "approximate Spanish deposition quoted by Young/Quinn",
+      "source_ids": [
+        "C10-S26"
+      ],
+      "source_record": "Reported around 200 Moorish galley captives from Cartagena and Santo Domingo allegedly promised repatriation",
+      "count_method": "overlaps M05 and possible inconsistent fate; not proof of slave sale or emancipation",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M08",
+      "event_id": "ch10-1586-drake-displaced-captives",
+      "evidence_kind": "people_intended_to_leave_at_roanoke",
+      "value_reported": 250,
+      "unit": "Black people reportedly planned for Roanoke",
+      "quantifier": "Spanish Havana dispatch reported conditional plan",
+      "source_ids": [
+        "C10-S25"
+      ],
+      "source_record": "Havana reported Drake intended to leave 250 at English Virginia colony",
+      "count_method": "an INTENTION, NOT confirmed people settled or sold; alternative outcomes unknown",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M09",
+      "event_id": "ch10-1589-jobson-munster-map",
+      "evidence_kind": "colonial_seignory_legal_grant",
+      "value_reported": 40000,
+      "unit": "historical acres",
+      "quantifier": "map describes Raleigh grant",
+      "source_ids": [
+        "C10-S08",
+        "C10-S06"
+      ],
+      "source_record": "Jobson 1589 labels Rallegh seignory extending Youghal–Lismore at 40,000 acres",
+      "count_method": "grant ≠ assessed cultivable acres, actual exclusive Crown occupation, or profit",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M10",
+      "event_id": "ch10-1589-jobson-munster-map",
+      "evidence_kind": "colonial_seignory_legal_grant",
+      "value_reported": 4000,
+      "unit": "historical acres",
+      "quantifier": "map describes Edmund Spenser Kilcolman grant",
+      "source_ids": [
+        "C10-S08"
+      ],
+      "source_record": "Cambridge map analysis gives 4,000-acre Kilcolman",
+      "count_method": "grant claim; figure differs from other summaries of Spenser's holdings, verify acreage type",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M11",
+      "event_id": "ch10-1584-desmond-survey-start",
+      "evidence_kind": "escheated_land_later_editor_estimate",
+      "value_reported": 574628,
+      "unit": "historical acres",
+      "quantifier": "nineteenth-century editor, not independent original account",
+      "source_ids": [
+        "C10-S18"
+      ],
+      "source_record": "Intro to Robert Payne edition recounts 574628 claimed escheated post 1586 act",
+      "count_method": "do not add to Raleigh and Spenser subsets; historical acres definitions/actual survey need checking",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M12",
+      "event_id": "ch10-1587-cavendish-santa-ana",
+      "evidence_kind": "taken_trade_goods",
+      "value_reported": null,
+      "unit": null,
+      "quantifier": "archivally attested prize but no audited cost or market value",
+      "source_ids": [
+        "C10-S19"
+      ],
+      "source_record": "Mathes 1969 prints Pretty and Spanish testimony; data for specific cargo unexamined",
+      "count_method": "no imputed 2.1million pesos from tertiary internet summaries; no GBP net",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M13",
+      "event_id": "ch10-1582-barkley-crops-hostages",
+      "evidence_kind": "coercion_proposal_not_confirmed_measure",
+      "value_reported": null,
+      "unit": "cattle, grain, persons",
+      "quantifier": "written proposal not measured seizure",
+      "source_ids": [
+        "C10-S34"
+      ],
+      "source_record": "25 September 1582 Edward Barkley military counsel, SP63/95/69",
+      "count_method": "actual number of seized cattle/hostages unverified; no quantified policy benefit",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    },
+    {
+      "evidence_id": "C10-M14",
+      "event_id": "ch10-1586-drake-displaced-captives",
+      "evidence_kind": "sale_of_enslaved_people",
+      "value_reported": null,
+      "unit": "persons sold",
+      "quantifier": "sale records not found",
+      "source_ids": [
+        "C10-S25",
+        "C10-S26",
+        "C10-S16"
+      ],
+      "source_record": "Spanish reports say taken, some called rescued; no verified market sales accounts for this fleet",
+      "count_method": "do not present transport as documented commercial sale, even if people enslaved in Spanish hands",
+      "may_sum_with_other_rows": false,
+      "royal_profit_gbp": null
+    }
+  ]
+}
