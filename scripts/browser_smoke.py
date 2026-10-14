@@ -653,7 +653,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1569'""",driver)
+              document.querySelector('#jumpYear').max==='1579'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560,3)
@@ -661,7 +661,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1569'""",driver)
+              document.querySelector('#jumpYear').max==='1579'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562,7)
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
