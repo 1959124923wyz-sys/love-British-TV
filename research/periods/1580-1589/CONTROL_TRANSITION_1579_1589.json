@@ -1,0 +1,792 @@
+{
+  "schema": "ch10_control_transition_1579_1589_v1",
+  "based_on": [
+    "main/data/atlas-1560-1569.json (published Eighth)",
+    "PR #56 Chapter9 research CONTROL_TRANSITION_1569_1579.json",
+    "PR #56 TRANSITION_1579_1580_RESEARCH_SEED.json"
+  ],
+  "chapter9_main_publish_status_as_checked": "main/data/chapters.json lists only chapters 1-8 as published as of 2026-10-14; Chapter9 independent candidate not main",
+  "assumptions_do_not_override_ch9_editor": "Use latest main chapter9 data if later editor publishes it; current research crosses with PR56 pending.",
+  "static_polities": [
+    {
+      "stable_id": "kingdom-of-scotland",
+      "controller": "Independent Kingdom of Scotland (pre-1603 personal union)",
+      "control_type": "sovereign_native"
+    },
+    {
+      "stable_id": "calais-crown",
+      "controller": "France since 1558; never revive English garrison in 1580s",
+      "control_type": "French sovereign city"
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "controller": "France since 1558",
+      "control_type": "French sovereign city"
+    },
+    {
+      "stable_id": "channel-jersey",
+      "controller": "English Crown Channel Islands separate customary privileges",
+      "control_type": "crown_dependency"
+    },
+    {
+      "stable_id": "channel-guernsey",
+      "controller": "English Crown Channel Islands separate customary privileges",
+      "control_type": "crown_dependency"
+    },
+    {
+      "stable_id": "isle-of-man",
+      "controller": "historical lordship and Crown relationship, not uniformly English domestic shire",
+      "control_type": "special_lordship"
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "controller": "Scottish Kingdom",
+      "control_type": "sovereign_native"
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "controller": "Scottish Kingdom",
+      "control_type": "sovereign_native"
+    },
+    {
+      "stable_id": "dublin-pale",
+      "controller": "English monarch Irish administrative stronghold with local limits",
+      "control_type": "regional_crown_core"
+    }
+  ],
+  "year_end_states": [
+    {
+      "year_end": 1580,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "not_started",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "second_desmond_rebellion_ongoing_or_ending_1580",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "none",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": null,
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1581,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "not_started",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "second_desmond_rebellion_ongoing_or_ending_1581",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "none",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": null,
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1582,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "not_started",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "second_desmond_rebellion_ongoing_or_ending_1582",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "none",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": null,
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1583,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "not_started",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "second_desmond_rebellion_ongoing_or_ending_1583",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "none",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": null,
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1584,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "not_started",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "post_war_escheat_survey_and_seignory_grants_not_full_native_displacement",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "none",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": null,
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1585,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "English_local_fort_present",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "point_candidate_only"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "not_started",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "post_war_escheat_survey_and_seignory_grants_not_full_native_displacement",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "none",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": "dated_event_only_short_raid_no_foreign_sovereignty",
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1586,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "not_started",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "post_war_escheat_survey_and_seignory_grants_not_full_native_displacement",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "planned_allotments_no_occupied_polygons",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": "dated_event_only_short_raid_no_foreign_sovereignty",
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1587,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "English_colonists_resident_at_departure_of_White",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "post_war_escheat_survey_and_seignory_grants_not_full_native_displacement",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "planned_allotments_no_occupied_polygons",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": "dated_event_only_short_raid_no_foreign_sovereignty",
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1588,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "unknown_from_1588_1589_no_contemporaneous_confirmed_occupancy",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "post_war_escheat_survey_and_seignory_grants_not_full_native_displacement",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "planned_allotments_no_occupied_polygons",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": null,
+      "valid_historic_english_occupation_polygons": 0
+    },
+    {
+      "year_end": 1589,
+      "inherited_polities": [
+        "kingdom-of-scotland",
+        "calais-crown",
+        "guines-crown-1520s",
+        "channel-jersey",
+        "channel-guernsey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "dublin-pale"
+      ],
+      "military_sites": [
+        {
+          "stable_id": "loughrea-english-warders-1576-1580",
+          "yearend_status": "local_Burke_retaken_not_English",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "none_historical_boundary_unknown"
+        },
+        {
+          "stable_id": "carrickfergus-English-castle-pre1570",
+          "yearend_status": "English_castle_ongoing_but_1580s_year_specific_payroll_unaudited",
+          "source_ids": [
+            "C10-S04"
+          ],
+          "geometry": "castle reference only"
+        },
+        {
+          "stable_id": "roanoke-english-military-colony-1585-1586",
+          "yearend_status": "ended_by_June_1586",
+          "source_ids": [
+            "C10-S13",
+            "C10-S15"
+          ],
+          "geometry": "none"
+        },
+        {
+          "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+          "yearend_status": "unknown_from_1588_1589_no_contemporaneous_confirmed_occupancy",
+          "source_ids": [
+            "C10-S14"
+          ],
+          "geometry": "historic_place only; no actual fort polygon"
+        }
+      ],
+      "munster": {
+        "war_phase": "post_war_escheat_survey_and_seignory_grants_not_full_native_displacement",
+        "land_survey_source_ids": [
+          "C10-S05",
+          "C10-S06",
+          "C10-S08"
+        ],
+        "legal_seignory_visualization": "Jobson_1589_map_source_available_no_georeferenced_verified_control_polygon",
+        "english_effective_area_polygon": null
+      },
+      "foreign_raids": "dated_event_only_short_raid_no_foreign_sovereignty",
+      "valid_historic_english_occupation_polygons": 0
+    }
+  ],
+  "transitions": [
+    {
+      "year": 1580,
+      "stable_id": "loughrea-english-warders-1576-1580",
+      "change": "burke_recapture",
+      "controller_before": "English garrison from c.1576",
+      "controller_after": "Burke local force / Gaelic lordship",
+      "source_ids": [
+        "C10-S04"
+      ],
+      "remark": "Carries Chapter9 end1579 local English garrison forward then ends before end1580; John Burke kills armed defenders and releases detained locals"
+    },
+    {
+      "year": 1580,
+      "stable_id": "second-desmond-war-1579-1583",
+      "change": "ongoing_contested",
+      "controller_before": "contested",
+      "controller_after": "contested",
+      "source_ids": [
+        "C10-S01"
+      ]
+    },
+    {
+      "year": 1580,
+      "stable_id": "smerwick-duin-an-oir",
+      "change": "surrender_massacre_no_English_territorial_annexation",
+      "controller_before": "Irish rebel and papal overseas force",
+      "controller_after": "temporary English siege victory; local civil sovereignty unresolved",
+      "source_ids": [
+        "C10-S01"
+      ],
+      "remark": "massacre site and surviving works belong to defenders, not British fortress polygon"
+    },
+    {
+      "year": 1583,
+      "stable_id": "second-desmond-war-1579-1583",
+      "change": "rebellion_end_after_earl_death",
+      "controller_before": "contested",
+      "controller_after": "Crown confiscation process and Irish surviving lords; regional control varies",
+      "source_ids": [
+        "C10-S42",
+        "C10-S05"
+      ]
+    },
+    {
+      "year": 1584,
+      "stable_id": "munster-desmond-land-survey",
+      "change": "royal_forfeiture_enumeration",
+      "controller_before": "former noble lands locally variable",
+      "controller_after": "Crown claims and inquest surveys",
+      "source_ids": [
+        "C10-S05"
+      ]
+    },
+    {
+      "year": 1585,
+      "stable_id": "roanoke-english-military-colony-1585-1586",
+      "change": "new_local_fort",
+      "controller_before": "Carolina Algonquian communities",
+      "controller_after": "English local garrison at fort; Algonquian communities remain their own peoples",
+      "source_ids": [
+        "C10-S13"
+      ],
+      "yearend_valid": true
+    },
+    {
+      "year": 1586,
+      "stable_id": "roanoke-english-military-colony-1585-1586",
+      "change": "military_colony_abandoned",
+      "controller_before": "English local fort",
+      "controller_after": "no verified English detachment continuing from Lane after June; separate 15 left by Grenville later",
+      "source_ids": [
+        "C10-S13",
+        "C10-S15"
+      ],
+      "yearend_valid": false
+    },
+    {
+      "year": 1586,
+      "stable_id": "munster-legal-land-allotment-1586",
+      "change": "English_legal_land_grants_and_seignory_plot",
+      "controller_before": "land forfeiture inquiries",
+      "controller_after": "English claim allocations, survey disputed, Gaelic tenures continue",
+      "source_ids": [
+        "C10-S31",
+        "C10-S05"
+      ],
+      "verified_historical_control_area": null
+    },
+    {
+      "year": 1587,
+      "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+      "change": "new_colonists_arrive",
+      "controller_before": "Algonquian own territories",
+      "controller_after": "English settlers remain near Roanoke in 1587; subsequent population fate unknown",
+      "source_ids": [
+        "C10-S14"
+      ]
+    },
+    {
+      "year": 1589,
+      "stable_id": "munster-legal-land-allotment-1589",
+      "change": "Jobson actual grant holdings recorded on contemporary map",
+      "controller_before": "varied",
+      "controller_after": "English grantee estates and enduring native lordship coexisting",
+      "source_ids": [
+        "C10-S06",
+        "C10-S08"
+      ],
+      "verified_historical_control_area": null
+    }
+  ],
+  "core_migration_guard": [
+    "Loughrea lost in 1580; never add 1580 English yearend area",
+    "1585 Roanoke military post left in 1586, 1587 civil expedition distinct",
+    "1588/1589 Roanoke occupancy unknown, not extrapolate 1587 arrival",
+    "1586 Cartagena/Santo Domingo/St Augustine raids did not cede Spanish sovereign territory to England",
+    "Munster grant boundaries legally distinct from all settlers actually controlling land and all locally Gaelic villages",
+    "Do not join 1586 captive route between Cape Verde/Cartagena/Roanoke with fake shipline",
+    "Pre-1707 entities are England and Scotland; term British empire may describe later historical arc only"
+  ],
+  "historic_control_polygon_count": 0,
+  "uncertain_edges_as_dashed": true
+}
