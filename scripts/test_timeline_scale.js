@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const manifest=JSON.parse(read('data/chapters.json')),app=read('app.js'),html=read('index.html'),css=read('css/dark-atlas-v2.css');
 new vm.Script(app,{filename:'app.js'});
-assert.deepEqual(manifest.chapters.map(c=>[c.start,c.end]),[[1497,1499],[1500,1509],[1510,1519],[1520,1529],[1530,1539],[1540,1549],[1550,1559],[1560,1569]]);
+assert.deepEqual(manifest.chapters.map(c=>[c.start,c.end]),[[1497,1499],[1500,1509],[1510,1519],[1520,1529],[1530,1539],[1540,1549],[1550,1559],[1560,1569],[1570,1579]]);
 assert.ok(manifest.chapters.every(c=>c.status==='published'&&fs.existsSync(path.join(root,c.source))));
 for(const ch of manifest.chapters){
  const data=JSON.parse(read(ch.source));
