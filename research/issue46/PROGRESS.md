@@ -37,3 +37,20 @@
 
 ### 已明确的关键“剩余一步”
 取到现代官方界并不足以通过历史疆界审查；现在应该请求RCAHMS/HES 2006—2009 Roxburgh DGPS/GIS **其中1547炮堡的具体围界折线**（从古城遗存保护区里拆出~110×65m英军堡），以及NRS RHP6075原图像/许可。取得这些文件后用原图GIS配准/误差审计产生`verified_occupied_area`，再交主编整合。现代遗产保护面不得移入`war-occupied-zones-1540-1549.geojson`作为实控面。
+
+
+## 2026-10-14｜第三轮继续深挖：同期军粮档案、1547比例尺、NRHE替代面和强制审校
+
+阶段提交（以下已推送 GitHub，本页最新内容需以后续保存的commit SHA为准）：
+- `bebb3551828b1e47186234286d438466fe597d88`：`ROXBURGH_1547_GIS_PRIMARY_PHASE_AUDIT.json` 复核2006—2009 HES/RCAHMS 4套实测数据、1545仅旧址勘察/1547新炮堡。
+- `736645e71b332b1e52c7d46f53b522a3f4443585`：`SCOTTISH_FORT_PHASE_AUDIT_20261014.json` 比较Roxburgh、Eyemouth和Dunglass英法不同时段与后世地图误用。
+- `16483ea727a3a0e4336648e621316a0da907c1a4`：`BL_1548_1549_SUPPLY_AND_FORT_CORRESPONDENCE.json` 索引 BL Add MS32657 **1548-07-20军粮清单ff.28r–32v**及1548/49 Roxburgh时地军官来信的准确叶码；本人仅查阅官方目录，原手稿正文未获得，**不是船车真航路**。
+- `e670989297f9ef4d3c46e50f639ccc18aec5b6f7`：`ROXBURGH_1547_ORIGINAL_PLAN_GCP_REGISTRATION_SPEC.json` 当时平面图 40 feet/inch 原标注及河、门、壕、旧城井等配准锚点建议，GCP实测数据未获得。
+- `596f43f33b76797324327c6884a11f8b5880f4d1`/ `f6b24585412bf312a12b15217032fbb3454c6f2d`：`probe_nrhe_site_extent_source.py` 官方 NRHE Known Site Extents 网站入口侦测脚本及修订。
+- `ae60b594fae5cbe6719dc4fce8167fa0b76fd09e`：单次 `.github/workflows/issue46-nrhe-link-probe-once.yml` 研究工作流。
+- GitHub Actions **38497728468 SUCCESS**，但发现馆方网页真实返回 **HTTP 403**，结果提交 `NRHE_KNOWN_SITE_EXTENTS_DISCOVERY.json` 标明 `source_page_not_readable_in_runner`，`known_site_extent_geometry_obtained:false`，坚决不冒称有新Polygon。
+- `011c73b6e19b612eb8d093feefa7054b7fedb867`：`validate_historic_occupied_polygon_gate.py` 强制史图来源、GPS控制点、图件配准误差、期别、版权、历史控制年份，禁止变更3片现代保护区为1547战争真实面。
+- `e1010fc619776527fe0d1dd0d0f5124a6fef6cd7`：单次研究QA `.github/workflows/issue46-boundary-gate-once.yml`。GitHub Actions **38497938339 SUCCESS**，3/3 HES现行法定Polygon拒绝冒充古代英军实控；真实古界Polygon仍0。
+- `d2cd69e10245c5abc12d82096dfb5fa8fe5d0d62` + `42b69c583cb1e8b04f2d56bb79936aed3f4f82fc`：新一轮简明主编交接 `DEEP_DIVE_SECOND_ROUND_20261014.md`。
+
+本轮新增“地图已可证”是**有准确叶码的当时英军补给与1547堡垒旧图比例尺**，以及**一次新官方考古面积下载遭403的明确可复核失败证据**；并无新的历史已测英国战区面积。没有修改`main`，Issue #46继续P0 OPEN。后续优先向HES HeritageData@hes.scot或研究部门取得NRHE KSE原面（区别于保护区），及NRS RHP6075/2006–09 Roxburgh 1547英国炮堡阶段矢量；不得凭任意邻域造圈。
