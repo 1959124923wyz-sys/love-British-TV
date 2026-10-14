@@ -705,6 +705,31 @@ function renderSeventhControlSites(){
 }
 
 // Only Le Havre 1562 has a new verified English year-end urban occupation point.
+// Chapter 9: only source-confirmed English castle garrisons in old Irish lordships.
+function renderNinthControlSites(){
+ if(!ninthControlSites||year<1570||year>1579||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
+ for(const feature of ninthControlSites.features||[]){
+  const p=feature.properties||{},ll=feature.geometry?.coordinates;
+  if(feature.geometry?.type!=='Point'||!ll||year<p.start_year||year>p.end_year||p.fill_authorized!==false)continue;
+  const coordinate=[ll[1],ll[0]],name=p.name;
+  const open=e=>{
+   if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   const pl=findPlaceAcrossChapters(p.stable_id);
+   if(pl)openDossier(pl,'place');else openTerritoryDossier(feature,'historic');
+  };
+  const tt='<strong>'+escapeHTML(name)+'</strong><div class="atlas-hover-summary">英军局部据点 · 查看史料</div>';
+  L.circleMarker(coordinate,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,
+    color:'#ae83ef',weight:3,dashArray:'5 5',fill:true,fillColor:'#ae83ef',
+    fillOpacity:.14,opacity:.98,bubblingMouseEvents:false,
+    className:'atlas-ninth-english-garrison'})
+   .bindTooltip(tt,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+   .on('click',open).addTo(groups.wartimeControl);
+  L.circleMarker(coordinate,{renderer:garrisonHitRenderer,pane:'garrisonHitPane',
+    radius:24,color:'#ae83ef',weight:7,opacity:.018,fill:false,
+    bubblingMouseEvents:false,className:'atlas-ninth-english-garrison-hit'})
+   .on('click',open).addTo(groups.garrisonHit);
+ }
+}
 function renderEighthControlSites(){
  if(!eighthControlSites||year<1560||year>1569||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
  for(const f of eighthControlSites.features){
@@ -1265,6 +1290,20 @@ async function boot(){
   politicalRelationAreas.features.push(...newRelations8.features);
   frenchCityAreas.features.push(...newUrban8.features);
   eighthControlSites=newMilitary8;eighthSlaveCoastalAreas=newCoast8;
+  const [geo9,relation9,urban9,site9]=await Promise.all([
+   fetch('data/territorial-footprints-1570-1579.geojson',{cache:'no-store'}),
+   fetch('data/political-relations-1570-1579.geojson',{cache:'no-store'}),
+   fetch('data/french-urban-control-1570-1579.geojson',{cache:'no-store'}),
+   fetch('data/ninth-control-sites-1570-1579.geojson',{cache:'no-store'})
+  ]);
+  if([geo9,relation9,urban9,site9].some(r=>!r.ok))throw new Error('第九章历史政治地理图层缺失');
+  const [g9,p9,u9,s9]=await Promise.all([geo9.json(),relation9.json(),urban9.json(),site9.json()]);
+  if(s9.features?.length!==3||s9.features.some(f=>f.geometry?.type!=='Point'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null))
+   throw new Error('第九章军控研究图层未通过据点及面积校验');
+  territorialFootprints.features.push(...g9.features);
+  politicalRelationAreas.features.push(...p9.features);
+  frenchCityAreas.features.push(...u9.features);
+  ninthControlSites=s9;
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
   try{
