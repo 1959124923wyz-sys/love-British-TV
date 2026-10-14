@@ -1,0 +1,26 @@
+name: Chapter 10 independent violence and slavery research QA
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/ch10-1580-1589-violence-enslavement-plunder-20261014
+    paths:
+      - .github/workflows/ch10-research-qa-once.yml
+permissions:
+  contents: read
+jobs:
+  historical-data-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate chapter10 source and coercion-economics research
+        run: python3 research/periods/1580-1589/validate_research.py
+      - name: Verify all archived JSON parses
+        run: |
+          python3 - <<'PY'
+          import glob,json
+          for p in glob.glob('research/periods/1580-1589/*.json'):
+            with open(p,encoding='utf8') as f: json.load(f)
+            print('parsed:',p)
+          PY
