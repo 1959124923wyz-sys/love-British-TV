@@ -53,7 +53,7 @@ for(const id of located){
  assert.equal(e.coordinate_role,'historical_geography_reading_reference');
  assert.equal(e.historical_point_verified,false);
  assert.equal(e.map_priority,true);
- assert.ok(e.geographic_disclaimer_zh&&/modern|regional/.test(e.geo_precision),id+' precise event ambiguity');
+ assert.ok(/modern|regional/.test(e.geo_precision)&&e.historical_point_verified===false,id+' source geocoding safeguards must remain in data');
 }
 assert.equal(atlas.events.find(e=>e.id==='1550S-E008').icon_code,'SLV','Approved slave transport glyph');
 assert.equal(atlas.events.find(e=>e.id==='1550S-E012').icon_code,'REP','Approved land seizure glyph');
@@ -61,8 +61,8 @@ assert.equal(atlas.events.find(e=>e.id==='1550S-E015').icon_code,'RES','Approved
 assert.ok(!app.includes('function renderSeventhGeographies()'),'Retired custom navigation not removed');
 assert.ok(!html.includes('chapter7GeographyNav'),'Bespoke map cards still enabled');
 assert.ok(app.includes("className:'atlas-voyage-hit'"));
-assert.ok(app.includes("['航线或区域几何的史料精度'"),'Schematic route precision belongs only in detailed research');
-assert.ok(app.includes("['地图位置与精度',item?.geographic_disclaimer_zh]"),'Each approximate event requires a deep-archive-only precision note');
+assert.ok(!app.includes("['航线或区域几何的史料精度'"),'Repetitive route warnings should be absent from public dossiers');
+assert.ok(!app.includes("['地图位置与精度',item?.geographic_disclaimer_zh]"),'Repetitive map-location warnings should be absent');
 assert.ok(!app.includes('pointReference'),'Location notes must not clutter primary event summaries');
 const routeCounts=[0,0,0,3,5,7,8,9,9,9];
 for(let y=1550;y<=1559;y++)assert.equal(atlas.routes.filter(r=>r.year<=y).length,routeCounts[y-1550],'Dated route mismatch '+y);
@@ -71,7 +71,7 @@ for(const r of atlas.routes){
  assert.ok(r.related_event_ids?.every(id=>events.has(id)),r.id+' orphan route');
  assert.equal(r.certainty,'schematic-only-not-historical-track');
  assert.ok(r.coords.length>=2&&r.coords.every(p=>p.length===2&&Math.abs(p[0])<=90&&Math.abs(p[1])<=180));
- assert.ok(/非|不表示|不是/.test(r.note),r.id+' route precision missing');
+ assert.ok(r.note.length>=12&&r.geometry_precision&&r.certainty==='schematic-only-not-historical-track',r.id+' historical route and internal provenance required');
 }
 assert.equal(atlas.routes.filter(r=>r.route_kind==='coastal-commercial-reference-schematic').length,2);
 assert.equal(atlas.routes.filter(r=>r.route_kind==='schematic-human-transport-sea-corridor').length,1);
