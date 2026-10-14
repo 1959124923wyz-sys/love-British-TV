@@ -1150,7 +1150,7 @@
       "category": "indigenous_abduction_and_objectification",
       "icon_code": "DIS",
       "lat": 51.5109,
-      "lng": -0.07945,
+      "lng": -0.07947,
       "geo_precision": "official church heritage monument modern footprint reference or documented Kodlunarn island named location; no graves or forced capture bay surveyed",
       "geography_label": "被掳因纽特男子在伦敦患病死亡：公司付护理、画像及安葬费用",
       "description": "1576年一名被弗罗比舍绑架的因纽特男子在伦敦患病死亡。Cathay Company账目记有护理、肖像绘制及St Olave Hart Street教堂安葬相关支出。",
@@ -1173,7 +1173,8 @@
       "actual_portrait_expense_2paintings_gbp": 10,
       "burial_registered": false,
       "yearend_English_sovereignty_change": false,
-      "map_priority": true
+      "map_priority": true,
+      "location_reference_place_id": "london-st-olave-captive-Inuit-burial-payments-1576-1577"
     },
     {
       "id": "1570S-E035",
@@ -1212,7 +1213,8 @@
       ],
       "burial_individual_grave_positions_verified": false,
       "yearend_English_sovereignty_change": false,
-      "map_priority": true
+      "map_priority": true,
+      "location_reference_place_id": "bristol-st-stephen-Inuit-Kalicho-Arnaq-burials-1577"
     },
     {
       "id": "1570S-E036",
@@ -1225,7 +1227,7 @@
       "category": "indigenous_captive_child_death",
       "icon_code": "DIS",
       "lat": 51.5109,
-      "lng": -0.07945,
+      "lng": -0.07947,
       "geo_precision": "official church heritage monument modern footprint reference or documented Kodlunarn island named location; no graves or forced capture bay surveyed",
       "geography_label": "因纽特儿童Nutaaq被送往伦敦并死亡，公司记录拟支付安葬费",
       "description": "1577年Arnaq去世后，其子Nutaaq被送往伦敦，由John Gymblet照顾，抵伦敦约八日后死亡。Cathay Company记有安葬支出。",
@@ -1248,7 +1250,8 @@
       "actual_burial_grave_location_verified": false,
       "royal_audience_happened": false,
       "yearend_English_sovereignty_change": false,
-      "map_priority": true
+      "map_priority": true,
+      "location_reference_place_id": "london-st-olave-captive-Inuit-burial-payments-1576-1577"
     },
     {
       "id": "1570S-E037",
@@ -2078,6 +2081,49 @@
       "editorial_status": "published-reviewed-PR56",
       "map_layer": "events",
       "render_as_event_only": true
+    },
+    {
+      "id": "bristol-st-stephen-Inuit-Kalicho-Arnaq-burials-1577",
+      "name": "布里斯托尔圣斯蒂芬教堂：1577 Kalicho与Arnaq两名因纽特被掳者安葬地",
+      "lat": 51.454311,
+      "lng": -2.596003,
+      "status": "actual_historical_parish_burials_of_captured_Inuit_Kalicho_Arnaq",
+      "description": "1577年Kalicho在11月8日安葬于此；Arnaq在11月12日安葬于此。",
+      "source_ids": [
+        "C9-S47",
+        "C9-S48",
+        "C9-S52"
+      ],
+      "icon_code": "DIS",
+      "geo_precision": "Historic England listing 1202558 official medieval church at ST 58684 72983. Scholarly record Kalicho died Nov7/buried Nov8 1577, Arnaq buried Nov12. Modern church locates institution, not known graves.",
+      "start_year": 1577,
+      "end_year": 1577,
+      "area_polygon_verified": false,
+      "editorial_status": "published_evidence_reference",
+      "map_layer": "events",
+      "render_as_event_only": true,
+      "historical_boundary_confirmed": false
+    },
+    {
+      "id": "london-st-olave-captive-Inuit-burial-payments-1576-1577",
+      "name": "伦敦圣奥拉夫教堂：1576成年及1577婴儿因纽特人公司安葬费记录（无堂区葬礼登记）",
+      "lat": 51.5109,
+      "lng": -0.07947,
+      "status": "Cathay_Company_documented_burial_expenses_parish_register_unverified",
+      "description": "1576年被掳因纽特男子与1577年Nutaaq的安葬费用记录关联此堂，尚缺相应堂区安葬登记。",
+      "source_ids": [
+        "C9-S47",
+        "C9-S53"
+      ],
+      "icon_code": "DIS",
+      "geo_precision": "Historic England St Olave Hart Street listed monument TQ33372 80859; 1576 captive and 1577 Nutaaq burial expenditure paid, but Vaughan says parish register NO entries, so neither exact remains nor burial success confirmed.",
+      "start_year": 1576,
+      "end_year": 1577,
+      "area_polygon_verified": false,
+      "editorial_status": "published_evidence_reference",
+      "map_layer": "events",
+      "render_as_event_only": true,
+      "historical_boundary_confirmed": false
     }
   ],
   "sources": [
@@ -3058,12 +3104,113 @@
         "1570S-E020"
       ],
       "note": "1579年Askeaton至Adare的军事行动。"
+    },
+    {
+      "id": "ch9-Inuit-captive-1576-Baffin-to-London",
+      "year": 1576,
+      "name": "1576年 · 巴芬岛 → 伦敦 · 被掳因纽特男子",
+      "category": "voyage",
+      "route_kind": "schematic-forced-person-transport",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "named_historic_origin_destination_no_daily_track",
+      "coords": [
+        [
+          62.816667,
+          -65.416667
+        ],
+        [
+          51.5109,
+          -0.07947
+        ]
+      ],
+      "source_ids": [
+        "C9-S47",
+        "C9-S53"
+      ],
+      "related_event_ids": [
+        "1570S-E012",
+        "1570S-E034"
+      ],
+      "note": "1576年弗罗比舍船队将一名被掳因纽特男子带往伦敦。",
+      "historic_abducted_aboard_count": 1,
+      "victims_overlap_other_legs": true,
+      "origin_research_feature_id": "Inuit-captive-1576-Baffin-to-London",
+      "verified_English_territorial_control": false
+    },
+    {
+      "id": "ch9-Inuit-captive-1577-Baffin-to-Bristol",
+      "year": 1577,
+      "name": "1577年 · 巴芬岛 → 布里斯托尔 · 三人遭掳",
+      "category": "voyage",
+      "route_kind": "schematic-forced-person-transport",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "named_historic_origin_destination_no_daily_track",
+      "coords": [
+        [
+          62.816667,
+          -65.416667
+        ],
+        [
+          51.454311,
+          -2.596003
+        ]
+      ],
+      "source_ids": [
+        "C9-S47",
+        "C9-S48",
+        "C9-S52"
+      ],
+      "related_event_ids": [
+        "1570S-E013",
+        "1570S-E027",
+        "1570S-E035"
+      ],
+      "note": "1577年英国船队将Kalicho、Arnaq与其子Nutaaq从巴芬岛带至布里斯托尔。",
+      "historic_abducted_aboard_count": 3,
+      "victims_overlap_other_legs": true,
+      "origin_research_feature_id": "Inuit-captive-1577-Baffin-to-Bristol",
+      "verified_English_territorial_control": false
+    },
+    {
+      "id": "ch9-Nutaaq-1577-Bristol-to-London",
+      "year": 1577,
+      "name": "1577年 · 布里斯托尔 → 伦敦 · Nutaaq被迫转移",
+      "category": "voyage",
+      "route_kind": "schematic-forced-person-transport",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "named_historic_origin_destination_no_daily_track",
+      "coords": [
+        [
+          51.454311,
+          -2.596003
+        ],
+        [
+          51.5109,
+          -0.07947
+        ]
+      ],
+      "source_ids": [
+        "C9-S47",
+        "C9-S53"
+      ],
+      "related_event_ids": [
+        "1570S-E036"
+      ],
+      "note": "1577年母亲Arnaq去世后，因纽特儿童Nutaaq被从布里斯托尔转送伦敦，抵达后死亡。",
+      "historic_abducted_aboard_count": 1,
+      "victims_overlap_other_legs": true,
+      "origin_research_feature_id": "Nutaaq-1577-Bristol-to-London",
+      "verified_English_territorial_control": false
     }
   ],
   "colonial_polygons": [],
   "publication": {
     "research_pr": 56,
     "crown_net_profit": null,
-    "verified_historical_control_polygons": 0
+    "verified_historical_control_polygons": 0,
+    "research_pr56_incremental_import": "2026-10-14",
+    "new_localized_church_records": 2,
+    "schematic_inuit_transfer_legs": 3,
+    "original_folio_inventory": 14
   }
 }

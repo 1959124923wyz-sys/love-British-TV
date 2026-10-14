@@ -19,8 +19,8 @@ assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dos
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
 assert.equal(manifest.chapters.length,9);
 assert.ok(manifest.chapters.some(c=>c.number===9&&c.start===1570&&c.end===1579&&c.status==='published'));
-assert.equal(now.events.length,37);assert.equal(now.places.length,37);assert.equal(now.sources.length,53);
-assert.equal(now.routes.length,15);assert.equal(now.colonial_polygons.length,0);
+assert.equal(now.events.length,37);assert.equal(now.places.length,39);assert.equal(now.sources.length,53);
+assert.equal(now.routes.length,18);assert.equal(now.colonial_polygons.length,0);
 assert.equal(old.events.length,26);
 const ids=new Set(),src=new Set(now.sources.map(s=>s.id));
 assert.equal(icons.size,16);assert.equal(src.size,53);
@@ -36,6 +36,37 @@ for(const e of now.events){
 assert.equal(now.events.find(e=>e.id==='1570S-E010').icon_code,'REP');
 assert.equal(now.events.find(e=>e.id==='1570S-E028').year,1578);
 assert.equal(now.events.find(e=>e.id==='1570S-E035').year,1577);
+const churches=[
+ ['bristol-st-stephen-Inuit-Kalicho-Arnaq-burials-1577',1577,1577,51.454311,-2.596003],
+ ['london-st-olave-captive-Inuit-burial-payments-1576-1577',1576,1577,51.5109,-0.07947]
+];
+for(const [id,start,end,lat,lng] of churches){
+ const p=now.places.find(s=>s.id===id);
+ assert.ok(p,'Missing PR56 heritage site '+id);
+ assert.equal(p.start_year,start);assert.equal(p.end_year,end);
+ assert.equal(p.lat,lat);assert.equal(p.lng,lng);
+ assert.equal(p.render_as_event_only,true,'Church must not enter the territory control layer');
+ assert.equal(p.icon_code,'DIS');
+ assert.ok(p.source_ids.length&&p.source_ids.every(id=>src.has(id)));
+}
+for(const [id,y,expected] of [
+ ['Inuit-captive-1576-Baffin-to-London',1576,1],
+ ['Inuit-captive-1577-Baffin-to-Bristol',1577,3],
+ ['Nutaaq-1577-Bristol-to-London',1577,1]
+]){
+ const r=now.routes.find(z=>z.id==='ch9-'+id);
+ assert.ok(r,'Forced Inuit transportation map leg missing '+id);
+ assert.equal(r.year,y);assert.equal(r.route_kind,'schematic-forced-person-transport');
+ assert.equal(r.historic_abducted_aboard_count,expected);
+ assert.ok(r.victims_overlap_other_legs,'No counting transfers as additional abductees');
+ assert.equal(r.verified_English_territorial_control,false);
+}
+assert.equal(now.events.find(e=>e.id==='1570S-E035').location_reference_place_id,churches[0][0]);
+assert.equal(now.events.find(e=>e.id==='1570S-E036').location_reference_place_id,churches[1][0]);
+assert.ok(app.includes("r.route_kind==='schematic-forced-person-transport'"),'Forced transportation map line must use existing red slavery/trafficking track');
+assert.equal(read('data/chapter9-primary-folio-index.json').inventory.length,14);
+assert.equal(read('data/chapter9-primary-folio-index.json').primary_manuscript_full_texts_read,false);
+
 const polity=['calais-crown','guines-crown-1520s','dublin-pale','channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'];
 for(const id of polity){
  const p=now.places.find(x=>x.id===id),o=old.places.find(x=>x.id===id);
@@ -55,7 +86,7 @@ for(const g of geo.features){
  assert.ok(old&&JSON.stringify(old.geometry)===JSON.stringify(g.geometry),g.id+' invented historic border');
  assert.equal(g.properties.observed_through_year,1579);
 }
-const yearEvents=[1,2,4,7,9,12,17,24,29,37],yearRoutes=[0,0,1,2,4,5,11,11,11,15];
+const yearEvents=[1,2,4,7,9,12,17,24,29,37],yearRoutes=[0,0,1,2,4,5,12,14,14,18];
 for(let y=1570;y<=1579;y++){
  assert.equal(now.events.filter(x=>x.year<=y).length,yearEvents[y-1570],'events at '+y);
  assert.equal(now.routes.filter(x=>x.year<=y).length,yearRoutes[y-1570],'route count '+y);
@@ -73,4 +104,4 @@ assert.ok(app.includes('next>=1570?atlasNinth:next>=1560?atlasEighth'));
 assert.ok(app.includes('function renderNinthControlSites()'));
 assert.ok(app.includes('const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords'));
 assert.ok(html.includes('max="1579"')&&html.includes('1497—1579'));
-console.log('PASS ch9: 37 events, 53 sources, 37 places, 15 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');
+console.log('PASS ch9: 37 events, 53 sources, 39 places, 18 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');

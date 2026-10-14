@@ -455,7 +455,7 @@ function renderPoints(){
   if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;
   if(!Array.isArray(r.coords)||r.coords.length<2)continue;
   const coastal=r.route_kind==='coastal-commercial-reference-schematic';
-  const humanTransport=r.route_kind==='schematic-human-transport-sea-corridor';
+  const humanTransport=r.route_kind==='schematic-human-transport-sea-corridor'||r.route_kind==='schematic-forced-person-transport';
   const schematic=r.route_kind==='documented-endpoints-connection'||/schematic/.test(String(r.route_kind||''));
   const baseColor=humanTransport?'#c96369':coastal?'#ecc389':schematic?'#dfbb87':r.year===1497?'#d4a47d':'#97a9bc';
   const style={renderer:voyageRenderer,pane:'voyagePane',
