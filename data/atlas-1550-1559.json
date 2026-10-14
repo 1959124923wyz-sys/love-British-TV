@@ -219,10 +219,10 @@
       "date_label": "1553年",
       "name": "英国商人理查德·钱塞勒航抵白海，建立通向莫斯科的贸易接触",
       "category": "commerce_and_navigation",
-      "icon_code": "TRA",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "EXP",
+      "lat": 64.2,
+      "lng": 41.7,
+      "geo_precision": "modern_associated_kholmogory_reference_not_landfall",
       "geography_label": "俄罗斯白海沿岸；不能误标1584年后才形成的阿尔汉格尔斯克市区",
       "description": "英国博物馆的公司印章资料记载1553年Chancellor经白海抵达俄罗斯，开启后来的公司贸易。现有资料不足以重绘航线或给当年海岸登陆点精确坐标。",
       "short_description": "英国博物馆的公司印章资料记载1553年Chancellor经白海抵达俄罗斯，开启后来的公司贸易。现有资料不足以重绘航线或给当年海岸登陆点精确坐标。",
@@ -241,7 +241,11 @@
       "geographic_rule": "English_commercial_voyage_not_territorial_acquisition",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1553 White Sea arrival"
+      "research_date_label": "1553 White Sea arrival",
+      "geographic_disclaimer_zh": "现代霍尔莫戈雷城镇参考，关联1553年钱塞勒经白海进入俄罗斯的历史；不是经证实的船舶锚泊点、历史航迹或英王领土。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E006",
@@ -252,10 +256,10 @@
       "date_label": "1553年",
       "name": "英国温德姆船队赴几内亚和贝宁海岸开展早期贸易接触",
       "category": "commerce_and_navigation",
-      "icon_code": "TRA",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "EXP",
+      "lat": 5.7,
+      "lng": 5.2,
+      "geo_precision": "regional_benin_bight_coast_reference_not_surveyed",
       "geography_label": "西非几内亚／贝宁海岸，未定位每个16世纪停泊点",
       "description": "剑桥出版的Hakluyt旅行记列有1553年Thomas Wyndham赴几内亚及贝宁航次。贸易航次不等于英国已控制海岸或设立殖民地。",
       "short_description": "剑桥出版的Hakluyt旅行记列有1553年Thomas Wyndham赴几内亚及贝宁航次。贸易航次不等于英国已控制海岸或设立殖民地。",
@@ -274,7 +278,11 @@
       "geographic_rule": "West_African_voyage_not_colony",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1553 source chronology"
+      "research_date_label": "1553 source chronology",
+      "geographic_disclaimer_zh": "此点仅指贝宁湾一带的现代区域参照，不是1553年温德姆准确停泊点；其航次涉及几内亚及贝宁海岸，不代表英国殖民占有。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E007",
@@ -285,15 +293,17 @@
       "date_label": "1554年10—11月",
       "name": "约翰·洛克伦敦商船驶往西非几内亚",
       "category": "commerce_and_navigation",
-      "icon_code": "TRA",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "EXP",
+      "lat": 5.4533,
+      "lng": -9.5744,
+      "geo_precision": "modern_named_cestos_river_reference_not_ship_anchor",
       "geography_label": "英国泰晤士河出海，海途经大西洋沿岸",
       "description": "Hakluyt印行的航海叙述记三艘商船1554年10月11日离开泰晤士河，后抵西非海岸贸易；这是后来1555年押运被奴役者返英的同一航次，不另造1554已返英记录。",
       "short_description": "Hakluyt印行的航海叙述记三艘商船1554年10月11日离开泰晤士河，后抵西非海岸贸易；这是后来1555年押运被奴役者返英的同一航次，不另造1554已返英记录。",
       "source_ids": [
-        "AF-HAKLUYT-JOHN-LOK-1554"
+        "AF-HAKLUYT-JOHN-LOK-1554",
+        "AF-GETTY-CESTOS-RIVER",
+        "AF-PERSEUS-HAKLUYT-LOK-1554"
       ],
       "certainty": "source_linked_year_yearend_current_map_status_warrants_individual_review",
       "significance": {
@@ -307,7 +317,11 @@
       "geographic_rule": "English_African_marine_trade_expansion_no_crown_sovereignty",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1554-10-11 Thames departure; 1554-11-01 left English coast"
+      "research_date_label": "1554-10-11 Thames departure; 1554-11-01 left English coast",
+      "geographic_disclaimer_zh": "John Lok航海记载停靠Sesto河，现代塞斯托斯河位置据Getty地名库；不表示所有交易都在此发生，具体船舶锚泊点未实测。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E008",
@@ -318,17 +332,18 @@
       "date_label": "1555年",
       "name": "洛克船队自几内亚押运五名被奴役非洲人抵达英格兰",
       "category": "enslavement_forced_human_transport",
-      "icon_code": "REP",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "SLV",
+      "lat": 4.72,
+      "lng": -2.62,
+      "geo_precision": "regional_guinea_trade_coast_not_captive_origin",
       "geography_label": "西非几内亚至英格兰（具体捕获地点未查实）",
       "description": "Historic England明确记载John Lok1555年从几内亚带回5名被奴役者；近代学术研究印证1550年代航次已有奴役行为。不能与1562以后Hawkins跨大西洋奴隶贸易混同。",
       "short_description": "Historic England明确记载John Lok1555年从几内亚带回5名被奴役者；近代学术研究印证1550年代航次已有奴役行为。不能与1562以后Hawkins跨大西洋奴隶贸易混同。",
       "source_ids": [
         "AF-HISTORIC-ENGLAND-JOHN-LOK",
         "AF-OXFORD-EHR-2024",
-        "AF-HAKLUYT-JOHN-LOK-1554"
+        "AF-HAKLUYT-JOHN-LOK-1554",
+        "AF-PERSEUS-HAKLUYT-LOK-1554"
       ],
       "certainty": "source_linked_year_yearend_current_map_status_warrants_individual_review",
       "significance": {
@@ -342,7 +357,11 @@
       "geographic_rule": "forced_human_transport_no_territorial_annexation",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1555 historical account of return"
+      "research_date_label": "1555 historical account of return",
+      "geographic_disclaimer_zh": "三岬角附近现代海岸参照仅表示Lok 1554—1555年几内亚贸易活动地带；五名被奴役非洲人实际被掳地点尚未查实，严禁把此点当作奴役发生地。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E009",
@@ -353,10 +372,10 @@
       "date_label": "1555年",
       "name": "英王特许莫斯科公司成立，经营俄罗斯贸易",
       "category": "trading_corporation",
-      "icon_code": "TRA",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "POL",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "geo_precision": "modern_london_commercial_reference_not_charter_building",
       "geography_label": "伦敦（公司特许），俄国贸易范围不属英王主权",
       "description": "大英博物馆记录Philip与Mary1555年为莫斯科贸易公司颁特许状，涉及俄罗斯商业权益与Sebastian Cabot，不形成英国对俄罗斯领地的殖民占领。",
       "short_description": "大英博物馆记录Philip与Mary1555年为莫斯科贸易公司颁特许状，涉及俄罗斯商业权益与Sebastian Cabot，不形成英国对俄罗斯领地的殖民占领。",
@@ -376,7 +395,11 @@
       "geographic_rule": "company_chartered_trade_privileges_not_territorial_control",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1555 charter"
+      "research_date_label": "1555 charter",
+      "geographic_disclaimer_zh": "伦敦现代市中心代表1555年由英王颁特许的商人组织环境，并非原始特许状确切签署建筑；俄国主权不因此改变。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E010",
@@ -387,10 +410,10 @@
       "date_label": "1555年",
       "name": "托沃森赴几内亚开展英商航海贸易",
       "category": "commerce_and_navigation",
-      "icon_code": "TRA",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "EXP",
+      "lat": 4.72,
+      "lng": -2.62,
+      "geo_precision": "regional_cape_three_points_reference_not_ship_anchor",
       "geography_label": "几内亚海岸（缺原航海GPS）",
       "description": "剑桥Hakluyt目录记William Towerson1555年第一次赴几内亚贸易航次，港湾停靠点具体坐标未获得可核的16世纪海图。",
       "short_description": "剑桥Hakluyt目录记William Towerson1555年第一次赴几内亚贸易航次，港湾停靠点具体坐标未获得可核的16世纪海图。",
@@ -409,7 +432,11 @@
       "geographic_rule": "early_African_company_trade_no_annexation",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1555 Hakluyt voyage catalogue"
+      "research_date_label": "1555 Hakluyt voyage catalogue",
+      "geographic_disclaimer_zh": "现代三岬角／几内亚黄金海岸的地区参照，表示Towerson 1555年始航的沿岸贸易活动；此点非确证当日登陆位置。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E011",
@@ -421,9 +448,9 @@
       "name": "爱尔兰议会宣布莱伊什、奥法利等领主地为英王辖下郡县",
       "category": "colonial_annexation_claim",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "lat": 53.035512,
+      "lng": -7.297781,
+      "geo_precision": "modern_associated_portlaoise_reference_not_statute_venue",
       "geography_label": "莱伊什／奥法利（现代县范围不能冒充1556实控古界）",
       "description": "1556年殖民立法将Leix、Slewmarge、Irry、Glinmaliry、Offaly等设为所谓Queen's与King's County，要求没收O'More与O'Connor土地并供忠于王室的定居者。法定宣称不等于整片旧盖尔领主地已实际驻军管辖。",
       "short_description": "1556年殖民立法将Leix、Slewmarge、Irry、Glinmaliry、Offaly等设为所谓Queen's与King's County，要求没收O'More与O'Connor土地并供忠于王室的定居者。法定宣称不等于整片旧盖尔领主地已实际驻军管辖。",
@@ -444,7 +471,11 @@
       "geographic_rule": "legal_Crown_claim_new_English_settler_colonization_not_entire_modern_counties",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1556 Irish Parliament 3&4 Philip and Mary c2"
+      "research_date_label": "1556 Irish Parliament 3&4 Philip and Mary c2",
+      "geographic_disclaimer_zh": "1556年爱尔兰中部殖民设郡的地图阅读点选在旧Fort Protector所在Portlaoise；并非法令签署地点、当年全郡主权实控边界。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E012",
@@ -456,9 +487,9 @@
       "name": "玛丽一世在爱尔兰中部推行土地没收及英裔移民殖民安置",
       "category": "property_seizure_and_settlement",
       "icon_code": "REP",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "lat": 53.296081,
+      "lng": -7.302267,
+      "geo_precision": "modern_associated_daingean_reference_not_confiscated_parcel",
       "geography_label": "莱伊什、奥法利地方领主地，实际授地宗地界未查",
       "description": "爱尔兰公共教育史料指出1556—57年将O'More、O'Connor家族土地划拨新英裔定居者，附建屋、武装、不得与盖尔人通婚等限制。土地篡夺为实证，但未有完整可核当年定居宗地GIS。",
       "short_description": "爱尔兰公共教育史料指出1556—57年将O'More、O'Connor家族土地划拨新英裔定居者，附建屋、武装、不得与盖尔人通婚等限制。土地篡夺为实证，但未有完整可核当年定居宗地GIS。",
@@ -478,7 +509,11 @@
       "geographic_rule": "crown_land_claim_and_indigenous_dispossession_not_uniform_occupation",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1556 plantation policy implemented"
+      "research_date_label": "1556 plantation policy implemented",
+      "geographic_disclaimer_zh": "旧Fort Governor所在地Daingean仅代表英王在当地殖民安置的军事背景；实际被没收土地的宗地坐标仍未知。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E013",
@@ -559,10 +594,10 @@
       "date_label": "1556年",
       "name": "O’More与O’Connor领主及其支持者抵抗王室驻军和移民定居",
       "category": "indigenous_resistance",
-      "icon_code": "POL",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "RES",
+      "lat": 53.035512,
+      "lng": -7.297781,
+      "geo_precision": "modern_associated_portlaoise_reference_not_battle_location",
       "geography_label": "莱伊什、奥法利殖民前线（反抗具体村镇逐项待核）",
       "description": "爱尔兰史地研究及官方遗产说明殖民安置仍是屡遭当地领主攻击的军事据点网络，不能把法律设县解释为已消灭盖尔抵抗。",
       "short_description": "爱尔兰史地研究及官方遗产说明殖民安置仍是屡遭当地领主攻击的军事据点网络，不能把法律设县解释为已消灭盖尔抵抗。",
@@ -582,7 +617,11 @@
       "geographic_rule": "Gaelic_military_and_land_resistance_colonial_zone_contested",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1556 early plantation resistance"
+      "research_date_label": "1556 early plantation resistance",
+      "geographic_disclaimer_zh": "旧Fort Protector城镇仅供定位爱尔兰中部抵抗区域，并非O’More/O’Connor任何一次战斗的确切发生地点。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E016",
@@ -593,15 +632,16 @@
       "date_label": "1556年",
       "name": "威廉·托沃森再次赴西非几内亚及Elmina周边开展贸易",
       "category": "commerce_and_navigation",
-      "icon_code": "TRA",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "EXP",
+      "lat": 5.08266,
+      "lng": -1.34813,
+      "geo_precision": "modern_portuguese_elmina_landmark_not_english_possession",
       "geography_label": "西非几内亚海岸、Elmina葡萄牙堡附近",
       "description": "剑桥出版Hakluyt目录明确列1556年William Towerson第二次航次至几内亚及葡萄牙Elmina要塞；**Elmina堡此时属于葡萄牙，绝不是英国据点**。",
       "short_description": "剑桥出版Hakluyt目录明确列1556年William Towerson第二次航次至几内亚及葡萄牙Elmina要塞；**Elmina堡此时属于葡萄牙，绝不是英国据点**。",
       "source_ids": [
-        "AF-CAMBRIDGE-HAKLUYT-TOURSON"
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON",
+        "AF-UNESCO-ELMINA-PORTUGUESE"
       ],
       "certainty": "source_linked_year_yearend_current_map_status_warrants_individual_review",
       "significance": {
@@ -615,7 +655,11 @@
       "geographic_rule": "English_trade_near_portuguese_Elmina_not_English_military_occupation",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1556 Hakluyt list"
+      "research_date_label": "1556 Hakluyt list",
+      "geographic_disclaimer_zh": "现代埃尔米纳堡为当时葡萄牙控制的海岸地标，Towerson 1556年航次记载该堡附近活动；绝非英国控制据点或船只精确航线坐标。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E028",
@@ -659,16 +703,17 @@
       "date_label": "1557年",
       "name": "托沃森1557年第三次航海赴几内亚及Sestos河贸易",
       "category": "commerce_and_navigation",
-      "icon_code": "TRA",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "unlocated_event_no_fabricated_point",
+      "icon_code": "EXP",
+      "lat": 5.4533,
+      "lng": -9.5744,
+      "geo_precision": "modern_cestos_river_reference_not_1557_anchorage",
       "geography_label": "西非几内亚海岸及Sestos河（对应现代河流尚未定位确界）",
       "description": "剑桥Hakluyt目录记1557年第三次赴几内亚海岸和Sestos河贸易。没有证据显示船队建立领土据地、精确登陆点和船舶轨迹。",
       "short_description": "剑桥Hakluyt目录记1557年第三次赴几内亚海岸和Sestos河贸易。没有证据显示船队建立领土据地、精确登陆点和船舶轨迹。",
       "source_ids": [
         "AF-CAMBRIDGE-HAKLUYT-TOURSON",
-        "AF-HISTORIC-ENGLAND-JOHN-LOK"
+        "AF-HISTORIC-ENGLAND-JOHN-LOK",
+        "AF-GETTY-CESTOS-RIVER"
       ],
       "certainty": "source_linked_year_yearend_current_map_status_warrants_individual_review",
       "significance": {
@@ -682,7 +727,11 @@
       "geographic_rule": "English_African_trade_involving_slavery_not_territory",
       "economic_fields": [],
       "map_caution": "Historic occupied/plantation region boundary not certified",
-      "research_date_label": "1557 Hackluyt Guinea voyage"
+      "research_date_label": "1557 Hackluyt Guinea voyage",
+      "geographic_disclaimer_zh": "现代塞斯托斯河（River Cess，利比里亚）参考位置；相关16世纪航海文本以Sestos称呼，具体河口停泊或贸易点未可靠配准。",
+      "coordinate_role": "historical_geography_reading_reference",
+      "historical_point_verified": false,
+      "map_priority": true
     },
     {
       "id": "1550S-E024",
@@ -1997,9 +2046,459 @@
       "sixteenth_century_original_manuscript_read": false,
       "confirmed_historic_control_polygon": false,
       "added_by": "collector3-1550s-territory-20261013"
+    },
+    {
+      "id": "AF-GETTY-CESTOS-RIVER",
+      "publisher": "Getty Research Institute",
+      "title": "Thesaurus of Geographic Names: Cestos River (river), TGN 1122639",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=N&find=1047875&nation=&place=&subjectid=1122639"
+    },
+    {
+      "id": "AF-UNESCO-ELMINA-PORTUGUESE",
+      "publisher": "UNESCO World Heritage Centre",
+      "title": "Forts and Castles, Volta, Greater Accra, Central and Western Regions (Elmina / São Jorge da Mina)",
+      "url": "https://whc.unesco.org/en/list/34/"
+    },
+    {
+      "id": "AF-PERSEUS-HAKLUYT-LOK-1554",
+      "publisher": "Tufts University Perseus Digital Library",
+      "title": "Hakluyt, The second voyage to Guinea, John Lok 1554: River Sesto, Cape Three Points and Mina",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.03.0070%3Anarrative%3D522"
     }
   ],
-  "routes": [],
+  "routes": [
+    {
+      "id": "ch7-sea-1553-chancellor-white-sea",
+      "year": 1553,
+      "name": "1553 钱塞勒：英国经挪威海—白海贸易接触（示意）",
+      "category": "voyage",
+      "route_kind": "regional-sea-corridor-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "英方远航抵达白海、北德维纳与俄国贸易网络，不表示英国统治该地区。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          51.5,
+          -0.1
+        ],
+        [
+          55,
+          2
+        ],
+        [
+          62,
+          3
+        ],
+        [
+          68.5,
+          13
+        ],
+        [
+          71,
+          27
+        ],
+        [
+          70,
+          38
+        ],
+        [
+          66,
+          40.5
+        ],
+        [
+          64.2,
+          41.7
+        ]
+      ],
+      "source_ids": [
+        "RU-BRITISH-MUSEUM-MUSCOVY-CHARTER"
+      ],
+      "related_event_ids": [
+        "1550S-E005"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-sea-1553-wyndham-guinea-benin",
+      "year": 1553,
+      "name": "1553 温德姆赴几内亚及贝宁海岸（概略航向）",
+      "category": "voyage",
+      "route_kind": "regional-sea-corridor-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "从英格兰商人航海区域向西非几内亚、贝宁一带连线；具体出发港、每处海岸登陆点仍未核实。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          50.7,
+          -2.2
+        ],
+        [
+          42.5,
+          -13
+        ],
+        [
+          31,
+          -19
+        ],
+        [
+          19,
+          -21
+        ],
+        [
+          11,
+          -18
+        ],
+        [
+          5,
+          -3
+        ],
+        [
+          5.3,
+          2.2
+        ],
+        [
+          5.7,
+          5.2
+        ]
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON"
+      ],
+      "related_event_ids": [
+        "1550S-E006"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-sea-1554-lok-guinea-sestos-elmina",
+      "year": 1554,
+      "name": "1554—1555 John Lok：泰晤士—Sestos—黄金海岸（示意）",
+      "category": "voyage",
+      "route_kind": "regional-sea-corridor-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "Hakluyt记载洛克离开泰晤士并途经Sestos、三岬角附近、Mina；现代地名参照点间的连线不是精确停靠轨迹。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          51.5,
+          0.12
+        ],
+        [
+          50.36,
+          -3.58
+        ],
+        [
+          33.1,
+          -17.1
+        ],
+        [
+          17,
+          -18.8
+        ],
+        [
+          8,
+          -14
+        ],
+        [
+          5.4533,
+          -9.5744
+        ],
+        [
+          4.72,
+          -2.62
+        ],
+        [
+          5.08266,
+          -1.34813
+        ]
+      ],
+      "source_ids": [
+        "AF-HAKLUYT-JOHN-LOK-1554",
+        "AF-PERSEUS-HAKLUYT-LOK-1554",
+        "AF-GETTY-CESTOS-RIVER"
+      ],
+      "related_event_ids": [
+        "1550S-E007"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-sea-1555-lok-enslaved-return",
+      "year": 1555,
+      "name": "1555 Lok：几内亚被奴役者被带往英格兰（非跨大西洋三角贸易）",
+      "category": "voyage",
+      "route_kind": "schematic-human-transport-sea-corridor",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "史料确认洛克将五位被奴役非洲人从几内亚带到英格兰，几内亚具体掳获地点与英方抵港未核。图中两端只是宽泛海岸区域参照，不代表已知真实起终港。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          4.72,
+          -2.62
+        ],
+        [
+          7,
+          -12
+        ],
+        [
+          17,
+          -22
+        ],
+        [
+          32,
+          -22
+        ],
+        [
+          43,
+          -14
+        ],
+        [
+          49.7,
+          -5.2
+        ]
+      ],
+      "source_ids": [
+        "AF-HISTORIC-ENGLAND-JOHN-LOK",
+        "AF-PERSEUS-HAKLUYT-LOK-1554"
+      ],
+      "related_event_ids": [
+        "1550S-E008"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-sea-1555-towerson-guinea",
+      "year": 1555,
+      "name": "1555 Towerson：怀特岛出航前往几内亚黄金海岸（示意）",
+      "category": "voyage",
+      "route_kind": "regional-sea-corridor-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "据DNB及Hakluyt，Towerson约1555年9月从怀特岛地区出发，航赴几内亚海岸；各阶段航迹未测绘。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          50.71,
+          -1.29
+        ],
+        [
+          42.5,
+          -13
+        ],
+        [
+          31,
+          -19
+        ],
+        [
+          19,
+          -21
+        ],
+        [
+          11,
+          -18
+        ],
+        [
+          6.2,
+          -9.6
+        ],
+        [
+          4.72,
+          -2.62
+        ]
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON",
+        "AF-HISTORIC-ENGLAND-JOHN-LOK"
+      ],
+      "related_event_ids": [
+        "1550S-E010"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-sea-1556-towerson-elmina",
+      "year": 1556,
+      "name": "1556 Towerson：英格兰西南—葡属Mina邻近航海（示意）",
+      "category": "voyage",
+      "route_kind": "regional-sea-corridor-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "文献记英国船只与葡萄牙Elmina附近贸易、冲突；埃尔米纳仍属葡萄牙，不能因英船到此被涂成英国领地。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          50.37,
+          -4.14
+        ],
+        [
+          42.5,
+          -13
+        ],
+        [
+          31,
+          -19
+        ],
+        [
+          19,
+          -21
+        ],
+        [
+          11,
+          -18
+        ],
+        [
+          6.2,
+          -9.6
+        ],
+        [
+          4.72,
+          -2.62
+        ],
+        [
+          5.08266,
+          -1.34813
+        ]
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON",
+        "AF-UNESCO-ELMINA-PORTUGUESE"
+      ],
+      "related_event_ids": [
+        "1550S-E016"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-sea-1557-towerson-sestos",
+      "year": 1557,
+      "name": "1557 Towerson：英格兰—Sestos河沿岸接触（示意）",
+      "category": "voyage",
+      "route_kind": "regional-sea-corridor-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "英国航次与利比里亚Cestos/Sestos地区有关，1557年具体出港、停泊以及是否延续前一年航次仍应核对原航海日志。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          50.4,
+          -4.3
+        ],
+        [
+          42.5,
+          -13
+        ],
+        [
+          31,
+          -19
+        ],
+        [
+          19,
+          -21
+        ],
+        [
+          11,
+          -18
+        ],
+        [
+          8,
+          -14
+        ],
+        [
+          5.4533,
+          -9.5744
+        ]
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON",
+        "AF-GETTY-CESTOS-RIVER"
+      ],
+      "related_event_ids": [
+        "1550S-E017"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-coastal-guinea-benin-1553",
+      "year": 1553,
+      "name": "1553起史料涉及的几内亚—贝宁沿岸贸易地带（非占领区）",
+      "category": "voyage",
+      "route_kind": "coastal-commercial-reference-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "沿海虚线仅标识文献提到的宽泛几内亚／黄金海岸／贝宁接触地带；不是逐段发生交易的确证线、海岸国界或英国殖民据地。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          4.56,
+          -2.65
+        ],
+        [
+          4.88,
+          -1.35
+        ],
+        [
+          5.3,
+          -0.15
+        ],
+        [
+          5.84,
+          1.17
+        ],
+        [
+          5.43,
+          3.1
+        ],
+        [
+          5.47,
+          5.15
+        ]
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON",
+        "AF-UNESCO-ELMINA-PORTUGUESE"
+      ],
+      "related_event_ids": [
+        "1550S-E006"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    },
+    {
+      "id": "ch7-coastal-sestos-gold-coast-1554",
+      "year": 1554,
+      "name": "1554起Sestos—三岬角—黄金海岸商贸活动参考带",
+      "category": "voyage",
+      "route_kind": "coastal-commercial-reference-schematic",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
+      "note": "洛克航海记载Sestos、三岬角与Mina沿岸商业接触，折线只表示大致涉及海岸方向，不是每个海段都有英军或商人驻扎的证明。 图上线条的海上折点为画图方便设置的概略方向，不是16世纪船只实测航迹；线段不代表英国控制的领海或陆地。",
+      "coords": [
+        [
+          5.36,
+          -9.6
+        ],
+        [
+          4.2,
+          -7.73
+        ],
+        [
+          4.55,
+          -5
+        ],
+        [
+          4.56,
+          -2.65
+        ],
+        [
+          4.88,
+          -1.35
+        ]
+      ],
+      "source_ids": [
+        "AF-PERSEUS-HAKLUYT-LOK-1554",
+        "AF-GETTY-CESTOS-RIVER"
+      ],
+      "related_event_ids": [
+        "1550S-E007"
+      ],
+      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+    }
+  ],
   "colonial_polygons": [],
   "presentation": {
     "first_year": 1550,
