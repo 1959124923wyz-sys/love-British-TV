@@ -33,5 +33,5 @@ for(const file of ['data/war-front-corridors-1540-1549.geojson','data/war-occupi
  assert.ok(geo.features.length>0);
  assert.ok(geo.features.every(f=>f.properties.historical_boundary_confirmed===false&&f.properties.fill_authorized===false));
 }
-assert.ok(html.includes('app.js?v=timeline-v1770-ch9')&&html.includes('css/dark-atlas-v2.css?v=timeline-v1770-ch9'));
+assert.ok(html.includes('app.js?v=timeline-v1770-ch9-pr56')&&html.includes('css/dark-atlas-v2.css?v=timeline-v1770-ch9-pr56'));
 console.log('PASS PR39 modes: two independent public checkboxes, ten compatible hidden gates, PR37/38 retained, no resurrected stats, no fabricated borders');

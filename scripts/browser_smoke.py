@@ -745,13 +745,22 @@ try:
     set_year(1576,17)
     verify("1576 Loughrea garrison and abducted Inuit symbol missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===11 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===12 &&
               document.querySelector('#eventList [data-eid="1570S-E012"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1576-Loughrea-Irish-garrison-Inuit-abduction.png"))
     set_year(1577,24)
     verify("1577 kidnapped Inuit burials and source evidence disappeared",
            """document.querySelector('#eventList [data-eid="1570S-E035"]').textContent.includes('布里斯托尔') &&
               document.querySelector('#eventList [data-eid="1570S-E036"]').textContent.includes('伦敦')""",driver)
+    verify("1577 forced transport must expose two Inuit relocation passages plus 1576 leg",
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===14 &&
+              document.querySelector('#eventList [data-eid="1570S-E035"] use').getAttribute('href').endsWith('#DIS') &&
+              document.querySelector('#eventList [data-eid="1570S-E036"] use').getAttribute('href').endsWith('#DIS')""",driver)
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E035"]').click()""")
+    verify("1577 Bristol documented historic cemetery source should remain clickable",
+           """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
+              document.querySelector('#dossierBody .source-details')!==null""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
     set_year(1578,29)
     verify("1578 Mullaghmast massacre wrongly dated 1577",
            """document.querySelector('#eventList [data-eid="1570S-E028"] use').getAttribute('href').endsWith('#REP') &&
@@ -765,13 +774,13 @@ try:
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===15 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===18 &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Pacific-privateering-Munster.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("Disabling territory cannot hide 1579 events or voyages",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===15""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===18""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Disabling events left piracy lines or 1579 markers",
