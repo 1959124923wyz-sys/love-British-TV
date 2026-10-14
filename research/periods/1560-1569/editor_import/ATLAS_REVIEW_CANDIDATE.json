@@ -762,6 +762,63 @@
       "area_polygon_verified": false,
       "actual_English_territory_created": false,
       "source_context_warning": null
+    },
+    {
+      "year": 1567,
+      "name": "玛丽在洛赫利文城堡被拘押、被迫退位，苏格兰内部权力易手",
+      "lng": -3.391999437,
+      "lat": 56.200828996,
+      "geography_label": "洛赫利文城堡（官方HES遗址点）",
+      "description": "1567年玛丽女王被囚于Lochleven Castle并被迫让位，其子詹姆斯六世继位。此为苏格兰独立国家内部的政权变动，并非英格兰占领该城堡。",
+      "source_ids": [
+        "C8-S21",
+        "C8-S22"
+      ],
+      "category": "political",
+      "icon_code": "POL",
+      "id": "1560S-E024",
+      "start_year": 1567,
+      "end_year": 1567,
+      "visible_from": 1567,
+      "date_label": "1567年",
+      "geo_precision": "official HES historic site / archaeological battlefield locator, NOT Tudor legal boundary",
+      "short_description": "1567年玛丽女王被囚于Lochleven Castle并被迫让位，其子詹姆斯六世继位。此为苏格兰独立国家内部的政权变动，并非英格兰占领该城堡。",
+      "certainty": "official_monument_history",
+      "significance": {
+        "level": 2,
+        "review_status": "editor_candidate"
+      },
+      "colonial_profit": null,
+      "editorial_status": "research_candidate",
+      "historical_boundary_verified": false
+    },
+    {
+      "year": 1568,
+      "name": "朗赛德战役：苏格兰两派内战后玛丽逃往英格兰",
+      "lng": -4.263733039,
+      "lat": 55.830109674,
+      "geography_label": "Langside战场（HES BTL35 NGR代表点）",
+      "description": "1568年5月13日玛丽的军队在朗赛德败于摄政莫里伯爵势力，玛丽随后逃入英格兰。苏格兰依旧是独立王国；HES现代战场指定边界不能当作英格兰殖民控制范围。",
+      "source_ids": [
+        "C8-S21"
+      ],
+      "category": "war",
+      "icon_code": "WAR",
+      "id": "1560S-E025",
+      "start_year": 1568,
+      "end_year": 1568,
+      "visible_from": 1568,
+      "date_label": "1568年",
+      "geo_precision": "official HES historic site / archaeological battlefield locator, NOT Tudor legal boundary",
+      "short_description": "1568年5月13日玛丽的军队在朗赛德败于摄政莫里伯爵势力，玛丽随后逃入英格兰。苏格兰依旧是独立王国；HES现代战场指定边界不能当作英格兰殖民控制范围。",
+      "certainty": "official_monument_history",
+      "significance": {
+        "level": 2,
+        "review_status": "editor_candidate"
+      },
+      "colonial_profit": null,
+      "editorial_status": "research_candidate",
+      "historical_boundary_verified": false
     }
   ],
   "places": [
@@ -1254,6 +1311,26 @@
       "evidence_read_level": "publisher_site_catalogue_or_digitized_historical_account; not full archival autographs",
       "precision_warning": "1559 fortified French-held Leith carries 1560 siege; manuscript catalogue is NOT digitized rampart plan, no permission to invent walls",
       "origin": "1560-1569-editor-import"
+    },
+    {
+      "id": "C8-S21",
+      "title": "Battle of Langside BTL35",
+      "publisher": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,BTL35",
+      "kind": "official_battlefield_documentary_analysis",
+      "evidence_read_level": "official site text and monument coordinates directly checked",
+      "precision_warning": "Scottish Mary abdicated 1567, 13 May1568 Langside Scottish internal battle, fled into England; no English conquest; BNG NS 58305 61971 / modern battlefield reference",
+      "origin": "1560-1569-editor-import"
+    },
+    {
+      "id": "C8-S22",
+      "title": "Lochleven Castle SM90204",
+      "publisher": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90204",
+      "kind": "official_scheduled_monument",
+      "evidence_read_level": "official site text and monument coordinates directly checked",
+      "precision_warning": "Mary Queen of Scots imprisoned 1567–68 and forced abdication; BNG NO 13734 01786 / WGS84 -3.3919994,56.200829",
+      "origin": "1560-1569-editor-import"
     }
   ],
   "routes": [],
@@ -1277,6 +1354,10 @@
     ],
     "year_scope_not_before_1560": true,
     "original_1550s_suzerainty_retained": true,
-    "no_exact_ship_tracks": true
+    "no_exact_ship_tracks": true,
+    "Scottish_regime_transition_not_English_annexation": [
+      1567,
+      1568
+    ]
   }
 }
