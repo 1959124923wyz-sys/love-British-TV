@@ -82,7 +82,7 @@ def verify():
         require(p["render_style"].startswith("dashed") and p["original_16c_route_points_measured"] is False,"Inferred line displayed as real route")
         require(p["source_ids"] and all(x in all_sources for x in p["source_ids"]),"Route unsupported")
         require(p["route_corridor_controlled_by_England"] is False and p["carried_captives_on_this_entire_segment_proven"] is False,"Implausible territorial/slave route claim")
-    require(len(ledger["records"])==25,"Expected separate 18 audited-but-unconfirmed economic evidence lines")
+    require(len(ledger["records"])==31,"Expected separate 18 audited-but-unconfirmed economic evidence lines")
     by_kind={f["kind"]:f for f in ledger["records"]}
     require(ledger["summary"]["royal_net_gbp"] is None and ledger["summary"]["slave_sales_profit_gbp"] is None,"Imaginary royal or slavery profits")
     require("sale_of_enslaved_people" in by_kind and by_kind["sale_of_enslaved_people"]["quantity"] is None,"No primary sale ledger exists")
@@ -96,6 +96,11 @@ def verify():
     require(estate["geography_policy"]["polygon_geometry"] is None,"Unreviewed seignory polygons")
     require(estate["land_redistribution_mechanism"]["actual_royal_1580s_income_gbp"] is None,"Future 1590 rents falsely posted to 1586")
     require(all(q["starts"]==1590 for q in estate["land_redistribution_mechanism"]["crown_rent_contract_annual_future_not_1580s_receipt"]),"Misdated royal rents")
+    quot=estate["land_redistribution_mechanism"]["planned_settler_family_configuration_from_original_1586_articles"]
+    require([(q["seignory_acres"],q["required_at_least_additional_small_lot_families"]) for q in quot]==[(12000,36),(8000,24),(6000,18),(4000,12)],"Original 1586 inferior tenure minimum family quotas inaccurate")
+    require(all(q["actual_1586_settled_household_count"] is None for q in quot),"Proposed family quota falsely treated as arriving settlers")
+    require(estate["land_redistribution_mechanism"]["additional_primary_articles"]["actual_garrison_cost_gbp"] is None and estate["land_redistribution_mechanism"]["additional_primary_articles"]["actual_customs_revenue_lost_gbp"] is None,"Future garrison costs and customs waiver cannot become immediate UK profit")
+
     require(all(set(q["source_ids"]).issubset(all_sources) and q["has_verified_historical_parcel"] is False for q in estate["owners_and_native_lordships"]),"Unverified GIS parcel or orphan estate")
     require(archival["total"]==len(archival["actions"])==18,"Archival queue count")
     require(all(m.get("polygon_fill_authorized") is False for m in maps["maps"]),"Historical map outlines not verified")
@@ -105,7 +110,7 @@ def verify():
       "status":"PASS",
       "review_stage":"data_integrity_only_not_manuscript_authentication_or_online_browser_visual_validation",
       "counts":{"historical_events":len(events),"sources":len(all_sources),"atlas_places":len(geo["features"]),"delta_features":len(delta["features"]),"georeferenced_modern_point_events":mapped,"unlocated_event_geometries":len(events)-mapped,"schematic_route_segments":len(paths["features"]),"money_and_human_violence_records":len(ledger["records"]),"year_end_states":len(trans["year_end_states"]),"historical_detail_notes":len(notes["records"]),"original_cartographic_sources":len(maps["maps"]),"archival_queue":archival["total"],"named_undertaker_and_gaelic_lordship_groups":len(estate["owners_and_native_lordships"]),"certified_true_colonial_polygon_count":0},
-      "checks":["All source IDs resolved","Chronological year gates","Unlocated events retain null GPS","Aquascogoc 18 July NCDNCR source","Smerwick and Carrigafoyle are independent casualties","St Leger mortality = reported scholarly upper bound","Human transport evidence ≠ legal sale or slave-trade profit","No route claimed measured navigation","No current borders promoted to historical sovereignty","1580 Loughrea controller changes","1586 future rents not realized English profit","Named native lordships remain outside plantation grants","All foldout detail note IDs valid"],
+      "checks":["All source IDs resolved","Chronological year gates","Unlocated events retain null GPS","Aquascogoc 18 July NCDNCR source","Smerwick and Carrigafoyle are independent casualties","St Leger mortality = reported scholarly upper bound","Human transport evidence ≠ legal sale or slave-trade profit","No route claimed measured navigation","No current borders promoted to historical sovereignty","1580 Loughrea controller changes","1586 future rents not realized English profit","Named native lordships remain outside plantation grants","1586 planned settler family quotas are not counts of actual arrivals","Future customs and garrison payments remain unknown","All foldout detail note IDs valid"],
       "unresolved":["Historically measured Munster seignory grant boundaries","1580s true colonial military territorial polygons","Spanish original captive depositions and English sale accounts","1586 booty share audited royal net","1582 all-death census"],
       "ready_for_chief_editor_review":True,
       "released_to_main":False
