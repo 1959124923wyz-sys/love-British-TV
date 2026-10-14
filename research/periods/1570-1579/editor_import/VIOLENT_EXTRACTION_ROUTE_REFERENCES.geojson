@@ -1,0 +1,306 @@
+{
+  "type": "FeatureCollection",
+  "schema": "ch09_named_place_violence_and_extraction_schematic_links_v1",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "drake-1572-England-to-Panama",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.143,
+            50.376
+          ],
+          [
+            -79.472,
+            9.565
+          ]
+        ]
+      },
+      "properties": {
+        "id": "drake-1572-England-to-Panama",
+        "from": "Plymouth",
+        "to": "NombreDeDios",
+        "start_year": 1572,
+        "end_year": 1573,
+        "source_ids": [
+          "C9-S08"
+        ],
+        "route_kind": "armed_raiding_voyage",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "No exact voyage bearings; coastal anchor to Atlantic Spanish port.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-1573-Panama-bullion-mule-train",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.472,
+            9.565
+          ],
+          [
+            -79.53,
+            9.1
+          ]
+        ]
+      },
+      "properties": {
+        "id": "drake-1573-Panama-bullion-mule-train",
+        "from": "NombreDeDios",
+        "to": "PanamaIsthmus",
+        "start_year": 1573,
+        "end_year": 1573,
+        "source_ids": [
+          "C9-S08"
+        ],
+        "route_kind": "Spanish_land_bullion_transport_raided",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Represents Panama isthmus bullion logistics, NOT a straight precise mule path or Drake's march.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Essex-1574-Tyrone-crop-burning",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.805,
+            54.713
+          ],
+          [
+            -6.74,
+            54.6
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Essex-1574-Tyrone-crop-burning",
+        "from": "Carrickfergus",
+        "to": "Tyrone",
+        "start_year": 1574,
+        "end_year": 1574,
+        "source_ids": [
+          "C9-S03"
+        ],
+        "route_kind": "military_scorched_earth_operations",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Essex raiding into Tyrone; modern line is ONLY general direction, not actual march nor English-held corridor.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Essex-1574-Tyrone-Lifford",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.74,
+            54.6
+          ],
+          [
+            -7.489,
+            54.834
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Essex-1574-Tyrone-Lifford",
+        "from": "Tyrone",
+        "to": "Lifford",
+        "start_year": 1574,
+        "end_year": 1574,
+        "source_ids": [
+          "C9-S03"
+        ],
+        "route_kind": "military_scorched_earth_operations",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "DIB says troops burned crops and raided cattle until Lifford, not that whole corridor belonged to Crown.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Essex-1575-Carrick-Rathlin",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.805,
+            54.713
+          ],
+          [
+            -6.192,
+            55.298
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Essex-1575-Carrick-Rathlin",
+        "from": "Carrickfergus",
+        "to": "Rathlin",
+        "start_year": 1575,
+        "end_year": 1575,
+        "source_ids": [
+          "C9-S03",
+          "C9-S04"
+        ],
+        "route_kind": "naval_transport_for_massacre",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "English ships carrying Norreys soldiers to Rathlin, Drake naval role; route is a point-to-point schematic.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Frobisher-1576-1578-Harwich-Nunavut",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.284,
+            51.944
+          ],
+          [
+            -65.416667,
+            62.816667
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Frobisher-1576-1578-Harwich-Nunavut",
+        "from": "Harwich",
+        "to": "Kodlunarn",
+        "start_year": 1576,
+        "end_year": 1578,
+        "source_ids": [
+          "C9-S15",
+          "C9-S16"
+        ],
+        "route_kind": "seasonal_extraction_and_forced_human_transport",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Illustrates links between English capital fleet and Inuit island mining, NOT 1576/77/78 identical real ship tracks.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Drake-1579-Callao-California",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.149,
+            -12.055
+          ],
+          [
+            -122.954,
+            38.054
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Drake-1579-Callao-California",
+        "from": "Callao",
+        "to": "PointReyes",
+        "start_year": 1579,
+        "end_year": 1579,
+        "source_ids": [
+          "C9-S09",
+          "C9-S10",
+          "C9-S13"
+        ],
+        "route_kind": "Pacific_privateering_direction_not_ship_track",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Major endpoints, does NOT imply direct voyage route or full Peruvian coast in English control.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Drake-1579-California-Ternate",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.954,
+            38.054
+          ],
+          [
+            127.38,
+            0.79
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Drake-1579-California-Ternate",
+        "from": "PointReyes",
+        "to": "Ternate",
+        "start_year": 1579,
+        "end_year": 1579,
+        "source_ids": [
+          "C9-S09",
+          "C9-S10"
+        ],
+        "route_kind": "Pacific_ocean_crossing_trade",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Dateline/high longitude line must be handled carefully by editor so map does not draw through Eurasia; should split at longitude 180 for anti-meridian, no fake realistic sailing path.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    }
+  ],
+  "metadata": {
+    "routes": 8,
+    "seasonal_ore_route_not_conquest": true,
+    "no_dayprecision_ship_charts": true,
+    "dateline_1579_route_requires_client_split": true,
+    "slavery_status": "No independently confirmed new 1570s English Guinea slave-raiding voyage; do not copy chapter8 Hawkins coastal activity into this decade by inertia."
+  }
+}
