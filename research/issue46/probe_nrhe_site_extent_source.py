@@ -63,7 +63,7 @@ def main():
         if any(x in info for x in ("site extent", "nrhe areas", "nrhe_areas", "polygon", ".zip", "area")):
           if url.startswith("https://") and not url.startswith("javascript:"):
             candidates.append({"label":label[:200],"url":url})
-      urls = re.findall(r'https?:[^\\s"<>]+(?:NRHE[^\\s"<>]*?\\.zip|site[^\\s"<>]*?\\.zip)',body,re.I)
+      urls = re.findall(r'https?:[^\s"<>]+(?:NRHE[^\s"<>]*?\.zip|site[^\s"<>]*?\.zip)',body,re.I)
       for u in urls:
         u = html.unescape(u.replace("\\u002F","/").replace("\\/","/"))
         if u.startswith("https://"): candidates.append({"label":"regex_zip_candidate", "url":u[:1500]})
@@ -78,7 +78,7 @@ def main():
       data["error_type"]=type(e).__name__
       data["error_text"]=str(e)[:250]
     OUT.parent.mkdir(parents=True,exist_ok=True)
-    OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(data["retrieval_status"], "links:", len(data["downloads"]))
 
 if __name__ == "__main__": main()
