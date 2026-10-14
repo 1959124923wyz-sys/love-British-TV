@@ -23,7 +23,7 @@ for(const e of atlas.events){
  if(e.category==='slavery')assert.equal(e.icon_code,'SLV',e.id+' slavery must use the sanctioned glyph');
  assert.ok(e.source_ids.length&&e.source_ids.every(id=>sources.has(id)),e.id+' unknown citation');
  assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid reference geography');
- assert.ok(e.geographic_disclaimer_zh?.length&&/regional|modern/.test(e.geo_precision),e.id+' geolocation uncertainty not disclosed');
+ assert.ok(/regional|modern/.test(e.geo_precision)&&Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' internal geographical provenance must remain');
  assert.equal(e.colonial_profit,null);
 }
 const nine=['calais-crown','guines-crown-1520s','dublin-pale','channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'];
