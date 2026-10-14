@@ -1242,6 +1242,24 @@ async function boot(){
   politicalRelationAreas.features.push(...newRelations.features);
   frenchCityAreas.features.push(...newUrban.features);
   seventhControlSites=newMilitary;
+  const [geo8,political8,city8,military8,coast8]=await Promise.all([
+   fetch('data/territorial-footprints-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/political-relations-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/french-urban-control-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/eighth-control-sites-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/eighth-enslavement-coastal-activity-1560-1569.geojson',{cache:'no-store'})
+  ]);
+  if([geo8,political8,city8,military8,coast8].some(r=>!r.ok))throw new Error('第八章地图图层文件缺失');
+  const [newGeo8,newRelations8,newUrban8,newMilitary8,newCoast8]=await Promise.all([
+   geo8.json(),political8.json(),city8.json(),military8.json(),coast8.json()
+  ]);
+  if(newMilitary8.features?.length!==2||newCoast8.features?.length!==3||
+   newCoast8.features.some(f=>f.properties?.fill_authorized!==false||f.properties?.map_layer!=='events'))
+   throw new Error('奴隶掠卖活动不能误转为英国领土');
+  territorialFootprints.features.push(...newGeo8.features);
+  politicalRelationAreas.features.push(...newRelations8.features);
+  frenchCityAreas.features.push(...newUrban8.features);
+  eighthControlSites=newMilitary8;eighthSlaveCoastalAreas=newCoast8;
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
   try{
