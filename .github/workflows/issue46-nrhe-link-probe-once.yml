@@ -1,0 +1,46 @@
+name: Issue 46 - one-time NRHE site extent archive link research
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/issue46-rough-wooing-cartography-20261013
+    paths:
+      - .github/workflows/issue46-nrhe-link-probe-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  discover-nrhe-site-extent:
+    name: Locate NRHE known archaeological extent data source (not historical control)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/issue46-rough-wooing-cartography-20261013
+          persist-credentials: true
+      - name: Probe official Trove NRHE download links
+        run: python3 research/issue46/probe_nrhe_site_extent_source.py
+      - name: Validate source discovery metadata and no false historic polygon
+        run: |
+          python3 - <<'PY'
+          import json
+          p='research/issue46/NRHE_KNOWN_SITE_EXTENTS_DISCOVERY.json'
+          d=json.load(open(p,encoding='utf-8'))
+          assert d['verified_1547_1550_occupied_area_count']==0
+          assert d['known_site_extent_geometry_obtained'] is False
+          assert d['historic_footprint_certified'] is False
+          print(d['retrieval_status'],len(d['downloads']))
+          PY
+      - name: Commit metadata-only NRHE source lookup to the dedicated research branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/issue46/NRHE_KNOWN_SITE_EXTENTS_DISCOVERY.json
+          if git diff --cached --quiet; then
+            echo "No changes in research source index"
+          else
+            git commit -m "research(issue46): record live NRHE archaeological extent download discovery"
+            git push origin HEAD:research/issue46-rough-wooing-cartography-20261013
+          fi
