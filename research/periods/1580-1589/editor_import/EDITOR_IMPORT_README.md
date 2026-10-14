@@ -6,13 +6,13 @@
 ## 一、导入入口一览（已在GitHub真实提交）
 | 模块 | 文件 | 内容及接入用途 |
 |---|---|---|
-| Atlas候选 | [ATLAS_EVENT_REVIEW_CANDIDATE.json](ATLAS_EVENT_REVIEW_CANDIDATE.json) | 与`data/atlas-1560-1569.json` / PR#56模式兼容的 `events, places, sources, routes, colonial_polygons, presentation`。**28事件、16地点、68来源**。字段包含 `year,start_year,end_year,visible_from,date_label,name,icon_code,lat,lng,source_ids,description,significance`。 |
-| 事件地理变化 | [VIOLENCE_AND_CONTROL_DELTA_1580_1589.geojson](VIOLENCE_AND_CONTROL_DELTA_1580_1589.geojson) | 28条年份变化；有可考现代地点的16条Point，12条地理尚不明确的 `geometry:null`。单次抢劫、镇压及战地不自动触发英王实占面积。 |
+| Atlas候选 | [ATLAS_EVENT_REVIEW_CANDIDATE.json](ATLAS_EVENT_REVIEW_CANDIDATE.json) | 与`data/atlas-1560-1569.json` / PR#56模式兼容的 `events, places, sources, routes, colonial_polygons, presentation`。**30事件、16地点、70来源**。字段包含 `year,start_year,end_year,visible_from,date_label,name,icon_code,lat,lng,source_ids,description,significance`。 |
+| 事件地理变化 | [VIOLENCE_AND_CONTROL_DELTA_1580_1589.geojson](VIOLENCE_AND_CONTROL_DELTA_1580_1589.geojson) | 30条年份变化；有可考现代地点的16条Point，12条地理尚不明确的 `geometry:null`。单次抢劫、镇压及战地不自动触发英王实占面积。 |
 | 现代地理点 | [CONTROL_AND_VIOLENCE_PLACES_1580_1589.geojson](CONTROL_AND_VIOLENCE_PLACES_1580_1589.geojson) | 16处正式史迹或现代城市、历史州标牌坐标，每处 `source_geography_url`、事件关联与 `geo_precision`。 |
-| 经济账本 | [PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json](PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json) | **18类**真实史料引述及待核数据：1580 Carrigafoyle守军50+16非死者总数、Smerwick约600、1582饥荒死亡3万上限、1586 25k/110k杜卡特城镇赎金报告、1586船载人员证词不能加总。 |
+| 经济账本 | [PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json](PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json) | **25类**真实史料引述及待核数据：1580 Carrigafoyle守军50+16非死者总数、Smerwick约600、1582饥荒死亡3万上限、1586 25k/110k杜卡特城镇赎金报告、1586船载人员证词不能加总。 |
 | 示意方向 | [VIOLENT_EXTRACTION_ROUTE_REFERENCES_1580_1589.geojson](VIOLENT_EXTRACTION_ROUTE_REFERENCES_1580_1589.geojson) | 6条已知航次／军行动港顺序，以**虚线**展示。中间历史GPS未知，不计英军控制区或真实船迹。不得用线所穿过海岸推断奴隶贩运装卸站。 |
-| 可展开史料 | [HISTORICAL_DETAIL_NOTES_1580_1589.json](HISTORICAL_DETAIL_NOTES_1580_1589.json) | 28个与Atlas事件ID一致的 `records`，每条有`context,impact,geography,accounting,source_ids,source_links`，可选复制至 `data/historical-detail-notes.json`相应records。 |
-| 逐年控制 | [../CONTROL_TRANSITION_1579_1589.json](../CONTROL_TRANSITION_1579_1589.json) | **10个年末控制快照、10条土地/驻军变化**。尤其1576—79洛赫雷英军驻堡在1580年结束；罗阿诺克1585/1586/1587为不同驻留阶段，1588/89是否有人存活未知。 |
+| 可展开史料 | [HISTORICAL_DETAIL_NOTES_1580_1589.json](HISTORICAL_DETAIL_NOTES_1580_1589.json) | 30个与Atlas事件ID一致的 `records`，每条有`context,impact,geography,accounting,source_ids,source_links`，可选复制至 `data/historical-detail-notes.json`相应records。 |
+| 逐年控制 | [../CONTROL_TRANSITION_1579_1589.json](../CONTROL_TRANSITION_1579_1589.json) | **10个年末控制快照、12条土地/驻军变化**。尤其1576—79洛赫雷英军驻堡在1580年结束；罗阿诺克1585/1586/1587为不同驻留阶段，1588/89是否有人存活未知。 |
 | 旧图及待核 | [../PRIMARY_MAP_SOURCE_CATALOG.json](../PRIMARY_MAP_SOURCE_CATALOG.json) | 1586 TNA `MPF 1/273` 芒斯特规划图、1589 TCD `MS 1209 (36)` Jobson殖民庄园图、1588–89 Boazio加勒比军事图；原始高精度图下载/版权、地理配准尚未完成，候审16世纪Polygon=0。 |
 | 原档任务 | [../ARCHIVAL_ACTION_QUEUE.json](../ARCHIVAL_ACTION_QUEUE.json) | 18条具体史料追查任务，优先殖民授地实占界和1586舰队人口交易去向。 |
 
