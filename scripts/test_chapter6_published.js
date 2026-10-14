@@ -13,7 +13,7 @@ const relations=json('data/political-relations-1500-1549.geojson');
 const garrisons=json('data/military-control-points-1540-1549.geojson');
 const app=read('app.js'),html=read('index.html');
 assert.deepEqual(sixth.period,{from:1540,to:1549,next:1550});
-assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[54,26,82]);
+assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[54,27,87]);
 assert.equal(sixth.routes.length,0,'Unknown ships routes must not be guessed');
 assert.equal(sixth.colonial_polygons.length,0,'No invented historic sixteenth-century occupied border');
 assert.equal(sixth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,35);
@@ -58,12 +58,33 @@ assert.ok(urban.features.some(f=>f.properties.source_place_id==='guines-crown-15
 assert.equal(relations.features.length,6);
 assert.ok(relations.features.every(f=>f.properties.observed_through_year===1549));
 assert.ok(relations.features.some(f=>f.properties.source_place_id==='channel-guernsey'));
-assert.equal(garrisons.features.length,18);
+assert.equal(garrisons.features.length,19);
 for(const id of ['castlemilk-dumfriesshire-english-1547','lochwood-tower-english-1547','dumfries-english-garrison-1547']){
  assert.ok(garrisons.features.some(f=>f.properties.stable_id===id&&f.properties.year_end_start===1547&&f.properties.year_end_stop===1547),id+' must remain 1547-only');
  assert.ok(placeMap.has(id),id+' must open a source-backed atlas place dossier');
 }
 assert.ok(garrisons.features.every(f=>f.geometry.type==='Point'),'Do not promote a modern fort vicinity to conquest polygon');
+
+const archaeological=json('data/issue46-hes-archaeology-reference-1547-1549.geojson');
+assert.equal(archaeological.features.length,3,'Three genuine HES statutory monument boundaries required');
+assert.equal(archaeological.metadata.verified_historic_English_control_polygons,0);
+assert.ok(archaeological.features.every(f=>f.geometry.type==='Polygon'&&f.properties.designation_ref.startsWith('SM')
+ &&f.properties.fill_authorized===false&&f.properties.historical_boundary_confirmed===false
+ &&f.properties.area_sqkm===null&&f.properties.controller_for_polygon===null));
+assert.deepEqual(archaeological.features.map(f=>f.properties.designation_ref).sort(),['SM1718','SM3190','SM3191']);
+assert.deepEqual(archaeological.features.map(f=>f.properties.start_year),[1547,1548,1547]);
+const rox=sixth.places.find(p=>p.id==='roxburgh-english-artillery-fort-1547-1550');
+assert.ok(rox&&rox.observed_through_year===1549&&rox.end_year===1550&&rox.fill_authorized===false&&rox.area_polygon_verified===false);
+assert.ok(garrisons.features.some(f=>f.properties.stable_id===rox.id
+ &&f.properties.year_end_start===1547&&f.properties.year_end_stop===1549));
+const badSM='SC-HES-EYEMOUTH-FORT-SM4577';
+assert.ok(!sixth.places.find(p=>p.id==='eyemouth-fort-English-1547-1550').source_ids.includes(badSM),
+ 'Wrong SM4577 Corn Fort must not be primary Eyemouth 1547 proof');
+assert.ok(sixth.places.find(p=>p.id==='eyemouth-fort-English-1547-1550').source_ids.includes('SC-HES-EYEMOUTH-SM3190'));
+assert.ok(app.includes('function renderArchaeologyReferences()'));
+assert.ok(app.includes("fill:false,fillOpacity:0"),'Modern legal heritage outlines must stay empty');
+assert.ok(app.includes('function openArchaeologyReference(feature)'),'Official HES polygon click dossier missing');
+
 const active=(id,y)=>garrisons.features.some(f=>f.properties.stable_id===id&&f.properties.year_end_start<=y&&f.properties.year_end_stop>=y);
 for(const y of [1544,1545,1546,1547,1548,1549]){
  assert.equal(active('boulogne-english-1544-1550',y),true,'Boulogne center lost English occupation '+y);

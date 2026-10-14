@@ -134,7 +134,10 @@ try:
     assert "非卡博特实际GPS轨迹" in first_route, "1497 route's uncertainties not visible"
     driver.save_screenshot(str(OUT / "interactive-voyage-1497.png"))
     second_route=route_check(1527,"1527年约翰·拉特远航")
-    assert "不表示船只实际航行轨迹" in second_route, "1527 endpoint connection risks being misinterpreted as an actual track"
+    verify("1527 source dossier missing scoped endpoint precision",
+           """document.querySelector('#dossierBody .source-details')?.textContent.includes('不表示船只实际航行轨迹')""",driver)
+    verify("1527 front-facing story should not be overloaded with cartographic caveats",
+           """!document.querySelector('#dossierBody > .atlas-route-disclaimer')""",driver)
     driver.save_screenshot(str(OUT / "voyage-endpoints-1527.png"))
 
     toggle_layer("toggleEvents", False)
@@ -433,6 +436,31 @@ try:
     if zoom_1539 and zoom_1549:
         assert zoom_1539==zoom_1549, "Scrubbing to chapter six automatically zoomed the map"
     driver.save_screenshot(str(OUT / "chapter6-garrisons-1549.png"))
+    # The PR #50 HES GIS polygons are modern statutory references, not occupied historic land.
+    set_year(1546, 25)
+    verify("1546 cannot show 1547 scheduled archaeology polygons",
+           "document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===0",driver)
+    set_year(1547, 37)
+    verify("1547 must show Eyemouth and Roxburgh genuine archaeology, not Dunglass yet",
+           """document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===2 &&
+              document.querySelectorAll('#map .atlas-local-english-garrison').length===13 &&
+              document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline[fill="none"]').length===2""",driver)
+    driver.save_screenshot(str(OUT / "chapter6-1547-hes-heritage-not-occupation.png"))
+    set_year(1548, 49)
+    verify("1548 HES modern heritage dashed outlines missing",
+           """document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===3 &&
+              [...document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline')].every(p=>
+                 p.getAttribute('fill')==='none'||p.getAttribute('fill-opacity')==='0')""",driver)
+    driver.execute_script("document.querySelector('#map .atlas-hes-modern-archaeology-outline').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}))")
+    wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody').textContent.includes('现代考古遗址地理参考')"))
+    verify("Modern HES evidence misrepresented as ancient English occupied polygons",
+           """document.querySelector('#dossierBody .source-details').textContent.includes('不是1547—1549年英军的实测占地') &&
+              !!document.querySelector('#dossierBody a[href*='portal.historicenvironment.scot']')""",driver)
+    driver.save_screenshot(str(OUT / "chapter6-1548-hes-modern-legal-archaeology.png"))
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    verify("HES archaeology did not disappear with territorial toggle",
+           "document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===0",driver)
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     # Regression: previously the battle/occupation SVGs were silently removed
     # above zoom 8/9. This is tested with *real mouse clicks*, not synthetic
     # dispatchEvent on a path that bypasses the browser's topmost hit target.
@@ -582,7 +610,7 @@ try:
               document.querySelector('#eventList [data-eid="1550S-E015"] use').getAttribute('href').endsWith('#RES')""",driver)
     zoom_1556=driver.execute_script("return window.atlasReadViewport().zoom")
     driver.execute_script("""document.querySelector('#eventList [data-eid="1550S-E016"]').dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))""")
-    wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.35 && !!document.querySelector('#dossierBody .atlas-location-note')"))
+    wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.35 && !!document.querySelector('#dossierBody .source-details')"))
     verify("Portuguese Elmina caveat missing from the event dossier",
            "document.querySelector('#dossierBody').textContent.includes('葡萄牙')",driver)
     assert driver.execute_script("return window.atlasReadViewport().zoom")==zoom_1556
@@ -590,7 +618,7 @@ try:
     driver.execute_script("""document.querySelector('#eventList [data-eid="1550S-E011"]').dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))""")
     wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-53.035512)<0.4"))
     verify("Irish legal plantation reference incorrectly implies accurate land parcels",
-           "document.querySelector('#dossierBody .atlas-location-note').textContent.includes('并非法令签署地点')",driver)
+           "document.querySelector('#dossierBody .source-details').textContent.includes('并非法令签署地点')",driver)
     driver.save_screenshot(str(OUT / "chapter7-1556-irish-midlands-standard-icons.png"))
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Routes persist when events unchecked","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
