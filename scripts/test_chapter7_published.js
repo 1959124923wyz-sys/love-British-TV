@@ -11,8 +11,8 @@ const relations=read('data/political-relations-1550-1559.geojson'),urban=read('d
 const app=raw('app.js'),html=raw('index.html');
 new vm.Script(app);
 assert.deepEqual(atlas.period,{from:1550,to:1559,next:1560});
-assert.equal(atlas.events.length,29);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,49);
-assert.equal(atlas.routes.length,0);assert.equal(atlas.colonial_polygons.length,0);
+assert.equal(atlas.events.length,29);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,52);
+assert.equal(atlas.routes.length,9);assert.equal(atlas.colonial_polygons.length,0);
 assert.equal(previous.events.length,54,'Do not modify 1540s published events');
 assert.ok(chapter.chapters.some(c=>c.number===7&&c.start===1550&&c.end===1559&&c.status==='published'));
 const sources=new Set(atlas.sources.map(s=>s.id)),events=new Set();
@@ -42,24 +42,37 @@ assert.equal(relations.features.length,6);
 assert.equal(urban.features.length,2);
 assert.ok(urban.features.every(f=>f.properties.French_controller_year_start===1558));
 assert.equal(military.features.length,9);
-const geography=read('data/seventh-event-geographic-anchors.geojson');
-assert.equal(geography.features.length,4,'Four sourced modern reading anchors required');
-assert.ok(geography.features.every(f=>f.geometry.type==='Point'&&!f.properties.territorial_claim &&f.properties.fill_authorized===false&&f.properties.area_sqkm===null&&f.properties.not_event_location===true),'Modern sites cannot masquerade as control areas or actual voyages');
-for(const f of geography.features){
- assert.ok(f.properties.related_event_ids.length&&f.properties.source_ids.length,f.id);
- assert.ok(f.properties.related_event_ids.every(id=>events.has(id)),f.id+' links unknown event');
- assert.ok(f.properties.source_ids.every(id=>sources.has(id)),f.id+' lacks source');
- assert.ok(f.properties.locator_source_urls.every(url=>url.startsWith('https://')),f.id);
-}
-for(const id of ['1550S-E005','1550S-E008','1550S-E011','1550S-E012','1550S-E015']){
+const approved=new Set(read('data/icon-categories.json').categories.map(c=>c.code));
+assert.equal(approved.size,16);
+assert.ok(atlas.events.every(e=>approved.has(e.icon_code)),'Event icon not in user-approved sprite');
+const located=['1550S-E005','1550S-E006','1550S-E007','1550S-E008','1550S-E009','1550S-E010',
+ '1550S-E011','1550S-E012','1550S-E015','1550S-E016','1550S-E017'];
+for(const id of located){
  const e=atlas.events.find(e=>e.id===id);
- assert.equal(e.lat,null,'Never invent an event coordinate: '+id);
- assert.equal(e.lng,null,'Never invent an event coordinate: '+id);
- assert.ok(geography.features.some(f=>f.properties.related_event_ids.includes(id)),id+' must have visual reading reference');
+ assert.ok(e&&Number.isFinite(e.lat)&&Number.isFinite(e.lng),id+' map marker must have location');
+ assert.equal(e.coordinate_role,'historical_geography_reading_reference');
+ assert.equal(e.historical_point_verified,false);
+ assert.equal(e.map_priority,true);
+ assert.ok(e.geographic_disclaimer_zh&&/modern|regional/.test(e.geo_precision),id+' precise event ambiguity');
 }
-assert.ok(app.includes('function renderSeventhGeographies()'));
-assert.ok(app.includes('function navigateSeventhGeography(feature)'));
-assert.ok(html.includes('id="chapter7GeographyNav"'));
+assert.equal(atlas.events.find(e=>e.id==='1550S-E008').icon_code,'SLV','Approved slave transport glyph');
+assert.equal(atlas.events.find(e=>e.id==='1550S-E012').icon_code,'REP','Approved land seizure glyph');
+assert.equal(atlas.events.find(e=>e.id==='1550S-E015').icon_code,'RES','Approved Irish resistance glyph');
+assert.ok(!app.includes('function renderSeventhGeographies()'),'Retired custom navigation not removed');
+assert.ok(!html.includes('chapter7GeographyNav'),'Bespoke map cards still enabled');
+assert.ok(app.includes("className:'atlas-voyage-hit'"));
+assert.ok(app.includes('pointReference'),'Each approximate event needs visible precision note');
+const routeCounts=[0,0,0,3,5,7,8,9,9,9];
+for(let y=1550;y<=1559;y++)assert.equal(atlas.routes.filter(r=>r.year<=y).length,routeCounts[y-1550],'Dated route mismatch '+y);
+for(const r of atlas.routes){
+ assert.ok(r.source_ids.length&&r.source_ids.every(id=>sources.has(id)),r.id);
+ assert.ok(r.related_event_ids?.every(id=>events.has(id)),r.id+' orphan route');
+ assert.equal(r.certainty,'schematic-only-not-historical-track');
+ assert.ok(r.coords.length>=2&&r.coords.every(p=>p.length===2&&Math.abs(p[0])<=90&&Math.abs(p[1])<=180));
+ assert.ok(/非|不表示|不是/.test(r.note),r.id+' route precision missing');
+}
+assert.equal(atlas.routes.filter(r=>r.route_kind==='coastal-commercial-reference-schematic').length,2);
+assert.equal(atlas.routes.filter(r=>r.route_kind==='schematic-human-transport-sea-corridor').length,1);
 assert.ok(military.features.every(f=>f.geometry.type==='Point'&&f.properties.fill_authorized===false&&f.properties.area_sqkm===null));
 const active=(id,y)=>military.features.some(f=>f.properties.stable_id===id&&f.properties.start_year<=y&&y<=f.properties.end_year);
 for(const y of [1550,1555,1559]){
@@ -78,4 +91,4 @@ assert.ok(app.includes('atlasSeventh?.sources'),'Seventh chapter bibliographies 
 assert.ok(html.includes('max="1559"')&&html.includes('1497—1559'));
 const expected=[6,6,6,8,9,12,19,21,26,29];
 for(let y=1550;y<=1559;y++)assert.equal(atlas.events.filter(e=>e.year<=y).length,expected[y-1550],'year reveals future events: '+y);
-console.log('PASS seventh chapter: 29 events, 18 sites, 49 sources, 7 intact reference geometries, 9 military nodes; year-end 1558 French Calais transition and 1556 Irish plantation semantics.');
+console.log('PASS seventh chapter: 29 events, 18 sites, 52 sources, 7 intact reference geometries, 9 military nodes; year-end 1558 French Calais transition and 1556 Irish plantation semantics.');
