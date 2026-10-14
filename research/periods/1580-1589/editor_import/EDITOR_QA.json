@@ -1,0 +1,43 @@
+{
+  "schema": "ch10_editor_import_qa_v1",
+  "run_date": "2026-10-14",
+  "status": "PASS",
+  "review_stage": "data_integrity_only_not_manuscript_authentication_or_online_browser_visual_validation",
+  "counts": {
+    "historical_events": 28,
+    "sources": 68,
+    "atlas_places": 16,
+    "delta_features": 28,
+    "georeferenced_modern_point_events": 16,
+    "unlocated_event_geometries": 12,
+    "schematic_route_segments": 6,
+    "money_and_human_violence_records": 18,
+    "year_end_states": 10,
+    "historical_detail_notes": 28,
+    "original_cartographic_sources": 7,
+    "archival_queue": 18,
+    "certified_true_colonial_polygon_count": 0
+  },
+  "checks": [
+    "All source IDs resolved",
+    "Chronological year gates",
+    "Unlocated events retain null GPS",
+    "Aquascogoc 18 July NCDNCR source",
+    "Smerwick and Carrigafoyle are independent casualties",
+    "St Leger mortality = reported scholarly upper bound",
+    "Human transport evidence ≠ legal sale or slave-trade profit",
+    "No route claimed measured navigation",
+    "No current borders promoted to historical sovereignty",
+    "1580 Loughrea controller changes",
+    "All foldout detail note IDs valid"
+  ],
+  "unresolved": [
+    "Historically measured Munster seignory grant boundaries",
+    "1580s true colonial military territorial polygons",
+    "Spanish original captive depositions and English sale accounts",
+    "1586 booty share audited royal net",
+    "1582 all-death census"
+  ],
+  "ready_for_chief_editor_review": true,
+  "released_to_main": false
+}
