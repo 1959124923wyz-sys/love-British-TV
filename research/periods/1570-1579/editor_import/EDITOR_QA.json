@@ -1,5 +1,5 @@
 {
-  "schema": "ch09_deep_research_QA_20261014_v2",
+  "schema": "ch09_third_archival_review_QA_v1",
   "date": "2026-10-14",
   "branch": "research/ch09-1570-1579-coercion-plunder-map-20261014",
   "status": "PASS",
@@ -10,50 +10,45 @@
     "CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson",
     "VIOLENCE_AND_CONTROL_DELTA_1570_1579.geojson",
     "VIOLENT_EXTRACTION_ROUTE_REFERENCES.geojson",
-    "IRISH_COERCION_EVENT_ZONES.geojson",
     "PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json",
     "ARCHIVAL_ACTION_QUEUE.json",
-    "GAELIC_ANNALS_GARRISONS_AND_MASSACRES_ADDENDUM_20261014.json",
+    "PRIMARY_ORIGINAL_MANUSCRIPT_CATALOGUE_20261014.json",
     "TRANSITION_1579_1580_RESEARCH_SEED.json",
     "EDITOR_IMPORT_README.md"
   ],
-  "new_research_integration": {
-    "sources": 44,
-    "atlas_events": 33,
-    "atlas_places": 28,
-    "geo_reference_features": 29,
-    "decade_snapshots": 10,
-    "control_change_records": 16,
-    "geo_delta_features": 28,
-    "deltas_unlocated": 8,
-    "dashed_illustrative_routes": 15,
-    "financial_loss_violence_records": 24,
-    "archive_actions": 25,
-    "source_claim_addendum": 12,
-    "period_surveyed_control_polygons": 0
+  "counts": {
+    "sources": 53,
+    "events": 37,
+    "atlas_places": 30,
+    "geo_sites": 31,
+    "annual_yearends": 10,
+    "control_ledger": 16,
+    "delta_features": 32,
+    "route_segments": 18,
+    "finance_and_victim_rows": 28,
+    "archive_issues": 31,
+    "original_folio_page_inventory": 14,
+    "verified_historic_Tudor_colonial_polygons": 0
   },
-  "limits": [
-    "GitHub linked source/syntax and historic assertions QA only, not original archival manuscripts fully transcribed",
-    "No real Tudor territorial polygons or surveyed shipping waypoints",
-    "Mullaghmast March1578 academic dating with 1577 annalist conflict retained",
-    "Loughrea 1576–1579 retrospective 1580 garrison evidence requires local site core not all Connacht",
-    "Original Spanish Cacafuego customs manifest not seen; English historical silver/gold amounts are alleged only",
-    "No live website browser screenshot check, main publication not attempted"
+  "scoped_signoffs": [
+    "1579 June5 royal Irish garrison articles accessible by British Library archive locator but NOT transcribed or adopted as a map of annual occupation",
+    "1577 royal faculties profit and 1578 army victualling original fiscal contents unread, no fabricated Crown cash",
+    "1576 £10 portrait commission Cathay COMPANY COST, no royal receipts",
+    "1577 Kalicho and Arnaq Bristol verified church, graves not exact; London St Olave company payment not actual parish burial entry",
+    "1577 Nutaaq-only Bristol→London segment not an extra kidnapping",
+    "1578 planned winter fort actually failed, no new successful Inuit abductions",
+    "Chapter8 main published 27 sites inherited semantically, past Le Havre/Hawkins not resurrected",
+    "Loughrea British garrison 1576–79, Gaelic recapture 1580; all territory uncertainties continue"
+  ],
+  "limitations": [
+    "Full sixteenth-century troop ledgers not inspected",
+    "GIS lines are schematic; no surveyed Tudor polygons",
+    "not website screenshot or Pages deployment QA"
   ],
   "errors": [],
-  "source_legacy_QA_previous_schema": "chapter9_research_data_qa_v1",
-  "previous_QA_preserved_in_commit": "6f7d9cbc37a33d5175acc8b1bb5e476c4d544ccd",
-  "verification_scope": "deep historical data structure QA only; exact period surveyed boundaries remain unavailable",
-  "final_published_ch08_reconciliation": {
-    "verified": true,
-    "main_previous_chapter_at_20261014": "data/atlas-1560-1569.json",
-    "published_events": 26,
-    "published_places": 27,
-    "published_sources": 24,
-    "all_published_ch08_places_semantically_reconciled": true,
-    "no_1570_hawkins_english_slaving_coast_auto_extension": true,
-    "no_1570_English_le_havre_garrison_restoration": true,
-    "all_9_political_entities_inherited": true
-  },
-  "postpublication_QA_status": "PASS"
+  "primary_QA_current": "FOLIO_EVIDENCE_QA_20261014.json",
+  "previous_second_round_QA": "DEEP_DIVE_QA_20261014.json",
+  "production_main_status": "Chapter 8 1560–1569 published; Chapter 9 PR56 research draft NOT published",
+  "historical_continuity_1579_to_1580": "TRANSITION_1579_1580_RESEARCH_SEED.json",
+  "reviewer_input": "PRIMARY_ORIGINAL_MANUSCRIPT_CATALOGUE_20261014.json for 14 folios; source registry 53, atlas 37, geoloc 31"
 }
