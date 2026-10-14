@@ -455,7 +455,7 @@ try:
     wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody').textContent.includes('现代考古遗址地理参考')"))
     verify("Modern HES evidence misrepresented as ancient English occupied polygons",
            """document.querySelector('#dossierBody .source-details').textContent.includes('不是1547—1549年英军的实测占地') &&
-              !!document.querySelector('#dossierBody a[href*='portal.historicenvironment.scot']')""",driver)
+              [...document.querySelectorAll('#dossierBody a')].some(a=>a.href.includes('portal.historicenvironment.scot'))""",driver)
     driver.save_screenshot(str(OUT / "chapter6-1548-hes-modern-legal-archaeology.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("HES archaeology did not disappear with territorial toggle",
