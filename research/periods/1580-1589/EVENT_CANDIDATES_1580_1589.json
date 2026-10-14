@@ -5,7 +5,7 @@
     1589
   ],
   "model": "year_of_act_not_year_of_printed_map",
-  "total": 28,
+  "total": 30,
   "events": [
     {
       "id": "ch10-1580-loughrea-recapture",
@@ -673,6 +673,36 @@
       "foreign_sovereignty_does_not_flip": true
     },
     {
+      "id": "ch10-1586-june27-munster-plantation-articles",
+      "year": 1586,
+      "month_or_day": "06-27",
+      "date_precision": "day",
+      "title": "英王批准芒斯特殖民地契：分配庄园、设租并排除本地爱尔兰人的承领权",
+      "description": "1586年6月27日，英王在威斯敏斯特批准芒斯特土地殖民安排，将没收土地划成数千英亩的庄园，规定英格兰承领人地租与定居义务，并限制向非英裔爱尔兰人转授土地。",
+      "icon_code": "TER",
+      "kind": "land_forfeiture_plantation_discriminatory_contract",
+      "place": "Munster, Crown instruments signed Westminster",
+      "region": "Ireland / England",
+      "source_ids": [
+        "C10-S69",
+        "C10-S66"
+      ],
+      "significance": {
+        "level": 3,
+        "rationale": "同时代英国王室明确地租与本地土地排斥制度，殖民法律与财政剥削机制的基本依据",
+        "review_status": "research_editorial_candidate"
+      },
+      "geography": {
+        "feature_type": "no_valid_georeferenced_historic_grant_polygon",
+        "geometry": null,
+        "geo_precision": "archival_region_no_surveyed_grant_outline",
+        "site_label": "Munster",
+        "reason": "1586订于威斯敏斯特而政策对象在芒斯特，没有经GIS配准的16世纪指定庄园界"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
       "id": "ch10-1587-croatoan-friendly-attack",
       "year": 1587,
       "month_or_day": null,
@@ -756,6 +786,36 @@
         "level": 3,
         "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
         "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1588-munster-only35-undertakers",
+      "year": 1588,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "芒斯特殖民授地实际进度远少于最初计划",
+      "description": "芒斯特殖民计划1586年曾预计86名英格兰承领人，大学研究汇总称至1588年首批实际获得土地的承领人约35名。法律授地与真正到地定居之间仍有落差。",
+      "icon_code": "TER",
+      "kind": "underfilled_colonial_grant_programme",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S70",
+        "C10-S69"
+      ],
+      "significance": {
+        "level": 2,
+        "rationale": "有数字可考的实际殖民实施不足，防止把计划中的每宗土地直接画为1588实际英军控制",
+        "review_status": "research_editorial_candidate"
+      },
+      "geography": {
+        "feature_type": "no_valid_georeferenced_historic_grant_polygon",
+        "geometry": null,
+        "geo_precision": "archival_region_no_surveyed_grant_outline",
+        "site_label": "Munster",
+        "reason": "1586订于威斯敏斯特而政策对象在芒斯特，没有经GIS配准的16世纪指定庄园界"
       },
       "inclusion": "candidate_not_in_main",
       "foreign_sovereignty_does_not_flip": true
