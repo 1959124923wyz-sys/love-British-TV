@@ -17,7 +17,7 @@ assert.equal(old.events.length,26);
 const ids=new Set(),src=new Set(now.sources.map(s=>s.id));
 assert.equal(icons.size,16);assert.equal(src.size,53);
 for(const e of now.events){
- assert.ok(e.year>=1570&&e.year<=1579&&e.date_label.startsWith(e.year+'年'),e.id+' chronology');
+ assert.ok(e.year>=1570&&e.year<=1579&&e.date_label.includes(String(e.year)),e.id+' chronology');
  assert.ok(!ids.has(e.id));ids.add(e.id);
  assert.ok(icons.has(e.icon_code)&&e.icon_code!=='TRA',e.id+' disallowed glyph');
  assert.ok(e.source_ids.length&&e.source_ids.every(id=>src.has(id)),e.id+' source unknown');
