@@ -653,7 +653,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1569'""",driver)
+              document.querySelector('#jumpYear').max==='1579'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560,3)
@@ -661,7 +661,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1569'""",driver)
+              document.querySelector('#jumpYear').max==='1579'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562,7)
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
@@ -717,6 +717,71 @@ try:
     set_year(1559,29)
     verify("Backward navigation must restore old seventh chapter no new trading regions",
            "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 && document.querySelectorAll('#map .atlas-eighth-site').length===0",driver)
+    # New ninth chapter: west-to-east privateering, Ulster massacres, Inuit kidnapping,
+    # year-end English garrisons distinct from paper grants.
+    set_year(1570,1)
+    verify("Chapter 9 political continuity or new historic content absent",
+           """document.querySelector('#chapterNav').textContent.includes('第九章') &&
+              document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
+              document.querySelector('#jumpYear').max==='1579'""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
+    set_year(1572,4)
+    verify("1572 local Ards outpost and first Drake voyage absent",
+           """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===1 &&
+              document.querySelector('#eventList [data-eid="1570S-E003"] use').getAttribute('href').endsWith('#TER')""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1572-Comber-newcastle-small-outpost.png"))
+    set_year(1574,9)
+    verify("1574 Essex murder or scorched-earth route missing",
+           """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===4 &&
+              document.querySelector('#eventList [data-eid="1570S-E009"] use').getAttribute('href').endsWith('#REP')""",driver)
+    set_year(1575,12)
+    verify("1575 Rathlin island massacre wrongly redrawn as English entire island",
+           """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
+              document.querySelector('#eventList [data-eid="1570S-E010"] use').getAttribute('href').endsWith('#REP')""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1575-Rathlin-massacre-event.png"))
+    set_year(1576,17)
+    verify("1576 Loughrea garrison and abducted Inuit symbol missing",
+           """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===11 &&
+              document.querySelector('#eventList [data-eid="1570S-E012"] use').getAttribute('href').endsWith('#DIS')""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1576-Loughrea-Irish-garrison-Inuit-abduction.png"))
+    set_year(1577,24)
+    verify("1577 kidnapped Inuit burials and source evidence disappeared",
+           """document.querySelector('#eventList [data-eid="1570S-E035"]').textContent.includes('布里斯托尔') &&
+              document.querySelector('#eventList [data-eid="1570S-E036"]').textContent.includes('伦敦')""",driver)
+    set_year(1578,29)
+    verify("1578 Mullaghmast massacre wrongly dated 1577",
+           """document.querySelector('#eventList [data-eid="1570S-E028"] use').getAttribute('href').endsWith('#REP') &&
+              document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E028"]').click()""")
+    verify("1578 scholarly source attribution lost",
+           """document.querySelector('#dossierBody').textContent.includes('1578') &&
+              !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1578-Mullaghmast-Inuit-Kodlunarn.png"))
+    set_year(1579,37)
+    verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
+           """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
+              document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===15 &&
+              document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1579-Pacific-privateering-Munster.png"))
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    verify("Disabling territory cannot hide 1579 events or voyages",
+           """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===15""",driver)
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
+    verify("Disabling events left piracy lines or 1579 markers",
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
+              document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
+    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
+    set_year(1569,26)
+    verify("Rewind must remove all ninth chapter garrisons and privateering routes",
+           """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===16""",driver)
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()

@@ -13,7 +13,8 @@ const periods=[
  ['data/atlas-1530-1539.json',1530,1539],
  ['data/atlas-1540-1549.json',1540,1549],
  ['data/atlas-1550-1559.json',1550,1559],
- ['data/atlas-1560-1569.json',1560,1569]
+ ['data/atlas-1560-1569.json',1560,1569],
+ ['data/atlas-1570-1579.json',1570,1579]
 ];
 const records=periods.map(([file,start,end])=>({file,start,end,data:read(file)}));
 const catalog=read('data/chapters.json');
@@ -91,6 +92,10 @@ const overlayPaths=[
  'data/french-urban-control-1560-1569.geojson',
  'data/eighth-control-sites-1560-1569.geojson',
  'data/eighth-enslavement-coastal-activity-1560-1569.geojson',
+ 'data/territorial-footprints-1570-1579.geojson',
+ 'data/political-relations-1570-1579.geojson',
+ 'data/french-urban-control-1570-1579.geojson',
+ 'data/ninth-control-sites-1570-1579.geojson',
  'data/issue46-hes-archaeology-reference-1547-1549.geojson'
 ];
 function validCoord(coord,file,id){
