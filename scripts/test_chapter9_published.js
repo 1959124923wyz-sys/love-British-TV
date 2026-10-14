@@ -8,6 +8,14 @@ const manifest=read('data/chapters.json'),mil=read('data/ninth-control-sites-157
 const geo=read('data/territorial-footprints-1570-1579.geojson'),prevGeo=read('data/territorial-footprints-1560-1569.geojson');
 const icons=new Set(read('data/icon-categories.json').categories.map(x=>x.code));
 const html=txt('index.html'),app=txt('app.js');new vm.Script(app);
+const ledger=read('data/chapter9-economic-violence-ledger.json');
+const detail=read('data/chapter9-detail-notes.json');
+assert.equal(ledger.records.length,28,'Main database must include 28 independent gross/cost/victim evidence records');
+assert.equal(Object.keys(detail.records).length,12,'Detailed historical document entries missing');
+assert.ok(ledger.records.every(r=>r.source_ids?.length&&r.source_ids.every(id=>now.sources.some(s=>s.id===id))),'Economic records must cite chapter sources');
+assert.ok(Object.keys(detail.records).every(id=>now.events.some(e=>e.id===id)),'Research notes must attach to an event');
+assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dossier does not load editorial research notes');
+
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
 assert.equal(manifest.chapters.length,9);
 assert.ok(manifest.chapters.some(c=>c.number===9&&c.start===1570&&c.end===1579&&c.status==='published'));
