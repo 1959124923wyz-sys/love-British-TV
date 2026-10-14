@@ -1,9 +1,9 @@
 {
-  "schema": "chapter9_research_data_qa_v1",
-  "status": "PASS",
+  "schema": "ch09_deep_research_QA_20261014_v2",
   "date": "2026-10-14",
   "branch": "research/ch09-1570-1579-coercion-plunder-map-20261014",
-  "files": [
+  "status": "PASS",
+  "files_verified": [
     "SOURCE_REGISTRY.json",
     "ATLAS_EVENT_REVIEW_CANDIDATE.json",
     "CONTROL_TRANSITION_1569_1579.json",
@@ -13,38 +13,35 @@
     "IRISH_COERCION_EVENT_ZONES.geojson",
     "PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json",
     "ARCHIVAL_ACTION_QUEUE.json",
+    "GAELIC_ANNALS_GARRISONS_AND_MASSACRES_ADDENDUM_20261014.json",
+    "TRANSITION_1579_1580_RESEARCH_SEED.json",
     "EDITOR_IMPORT_README.md"
   ],
-  "counts": {
-    "sources": 25,
-    "events": 22,
-    "places": 17,
-    "geoFeatures": 18,
-    "annual": 10,
-    "annualTransitions": 10,
-    "changes": 15,
-    "schematicRoutes": 8,
-    "unlocatedWarZones": 3,
-    "economicRows": 17,
-    "archiveTasks": 18
+  "new_research_integration": {
+    "sources": 44,
+    "atlas_events": 33,
+    "atlas_places": 28,
+    "geo_reference_features": 29,
+    "decade_snapshots": 10,
+    "control_change_records": 16,
+    "geo_delta_features": 28,
+    "deltas_unlocated": 8,
+    "dashed_illustrative_routes": 15,
+    "financial_loss_violence_records": 24,
+    "archive_actions": 25,
+    "source_claim_addendum": 12,
+    "period_surveyed_control_polygons": 0
   },
-  "historical_polygon_authentic_and_licenced_count": 0,
-  "original_accounting_audited_profits": false,
-  "draft_chapter8_dependency": "https://github.com/1959124923wyz-sys/love-British-TV/pull/52",
-  "validations": [
-    "25 source IDs linked with events, places, changes, economic ledger and archive tasks",
-    "1570–1579 all yearends present; nine inherited polities retained",
-    "1575 Rathlin death subsets not counted as alternative total",
-    "no British all-Ards/Tyrone/Rathlin/Canadian/California false sovereignty",
-    "Scottish identity and French Calais/Guines preserved",
-    "unknown atrocity and treasure ship actual sites geometry null",
-    "all shipping lines schematic, no registered historic GIS border",
-    "financial estimated plunder/loans/budgets/costs not conflated"
-  ],
   "limits": [
-    "GitHub structural QA only; no 16th-century manuscript diplomatic transcription",
-    "not browser/Pages tested",
-    "statements based on institutional pages and academic summaries; some primary work pending"
+    "GitHub linked source/syntax and historic assertions QA only, not original archival manuscripts fully transcribed",
+    "No real Tudor territorial polygons or surveyed shipping waypoints",
+    "Mullaghmast March1578 academic dating with 1577 annalist conflict retained",
+    "Loughrea 1576–1579 retrospective 1580 garrison evidence requires local site core not all Connacht",
+    "Original Spanish Cacafuego customs manifest not seen; English historical silver/gold amounts are alleged only",
+    "No live website browser screenshot check, main publication not attempted"
   ],
-  "errors": []
+  "errors": [],
+  "source_legacy_QA_previous_schema": "chapter9_research_data_qa_v1",
+  "previous_QA_preserved_in_commit": "6f7d9cbc37a33d5175acc8b1bb5e476c4d544ccd",
+  "verification_scope": "deep historical data structure QA only; exact period surveyed boundaries remain unavailable"
 }
