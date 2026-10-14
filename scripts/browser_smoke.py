@@ -562,41 +562,44 @@ try:
     assert not critical, "Browser JavaScript errors: " + str(critical[:8])
     # Seventh chapter: site control ownership and historical period continuity.
 
-    # Main map reading reference gates for previously unmapped 1550s global/colonial records.
-    verify("1550 regional nav must not leak upcoming research",
-           "document.querySelector('#chapter7GeographyNav').hidden && document.querySelectorAll('#map .atlas-ch7-geo-marker').length===0",driver)
-    set_year(1553,8)
-    verify("1553 West Africa and White Sea geography absent",
-           """document.querySelectorAll('#map .atlas-ch7-geo-marker').length===2 &&
-              document.querySelectorAll('#chapter7GeographyNav [data-geo-anchor]').length===2""",driver)
-    set_year(1556,19)
-    verify("1556 Irish plantation and African enslavement geographic navigation absent",
-           """document.querySelectorAll('#map .atlas-ch7-geo-marker').length===4 &&
-              document.querySelectorAll('#chapter7GeographyNav [data-geo-anchor]').length===4""",driver)
-    geo_zoom=driver.execute_script("return window.atlasReadViewport().zoom")
-    driver.execute_script("document.querySelector('[data-geo-anchor=ch7-midlands-colonial-dispossession]').click()")
-    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody')?.textContent.includes('土地') && Math.abs(window.atlasReadViewport().center.lat-53.035512)<0.2"))
-    verify("Irish land confiscation source links missing", "document.querySelectorAll('#dossierBody [data-story-event]').length===5",driver)
-    assert driver.execute_script("return window.atlasReadViewport().zoom")==geo_zoom,"Geography jump must not alter zoom"
-    driver.execute_script("document.querySelector('[data-geo-anchor=ch7-african-guinea-trade-and-enslavement]').click()")
-    wait.until(lambda d: d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.25"))
-    verify("African voyage/enslavement must disclose Portuguese Elmina not English conquest",
-           """document.querySelector('#dossierBody').textContent.includes('葡萄牙') &&
-              document.querySelector('#dossierBody').textContent.includes('1555年')""",driver)
-    assert driver.execute_script("return window.atlasReadViewport().zoom")==geo_zoom
-    driver.execute_script("document.querySelector('[data-geo-anchor=ch7-white-sea-muscovy-contact]').click()")
-    wait.until(lambda d: d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-64.2)<0.25"))
-    verify("Muscovy trade anchor must disclose non-English sovereignty",
-           "document.querySelector('#dossierBody').textContent.includes('不是英国领土')",driver)
-    assert driver.execute_script("return window.atlasReadViewport().zoom")==geo_zoom
-    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    verify("Event toggle off did not hide geography index",
-           "document.querySelector('#chapter7GeographyNav').hidden && document.querySelectorAll('#map .atlas-ch7-geo-marker').length===0",driver)
-    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    driver.save_screenshot(str(OUT / "chapter7-1556-global-history-geography.png"))
+    # Chapter 7: standard 16-class icons and existing clickable schematic voyage layer.
     set_year(1550,6)
-    verify("History 1550 leaked future trade and plantation geography",
-           "document.querySelector('#chapter7GeographyNav').hidden && document.querySelectorAll('#map .atlas-ch7-geo-marker').length===0",driver)
+    verify("Future merchant routes or retired navigation cards already visible",
+           "document.querySelectorAll('#map .atlas-voyage-hit').length===0 && !document.querySelector('#chapter7GeographyNav')",driver)
+    set_year(1553,8)
+    verify("White Sea and Guinea route directions absent",
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===3 &&
+              document.querySelector('#eventList [data-eid="1550S-E005"] use').getAttribute('href').endsWith('#EXP') &&
+              document.querySelector('#eventList [data-eid="1550S-E006"]').title.includes('双击定位')""",driver)
+    set_year(1555,12)
+    verify("1555 enslaved human transport red icon and dashed passage absent",
+           """document.querySelector('#eventList [data-eid="1550S-E008"] use').getAttribute('href').endsWith('#SLV') &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===7""",driver)
+    set_year(1556,19)
+    verify("1556 Irish seizure and West African voyage routes absent",
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===8 &&
+              document.querySelector('#eventList [data-eid="1550S-E012"] use').getAttribute('href').endsWith('#REP') &&
+              document.querySelector('#eventList [data-eid="1550S-E015"] use').getAttribute('href').endsWith('#RES')""",driver)
+    zoom_1556=driver.execute_script("return window.atlasReadViewport().zoom")
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1550S-E016"]').dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))""")
+    wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.35 && !!document.querySelector('#dossierBody .atlas-location-note')"))
+    verify("Portuguese Elmina caveat missing from the event dossier",
+           "document.querySelector('#dossierBody').textContent.includes('葡萄牙')",driver)
+    assert driver.execute_script("return window.atlasReadViewport().zoom")==zoom_1556
+    driver.save_screenshot(str(OUT / "chapter7-1556-west-africa-standard-icons-voyages.png"))
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1550S-E011"]').dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))""")
+    wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-53.035512)<0.4"))
+    verify("Irish legal plantation reference incorrectly implies accurate land parcels",
+           "document.querySelector('#dossierBody .atlas-location-note').textContent.includes('并非法令签署地点')",driver)
+    driver.save_screenshot(str(OUT / "chapter7-1556-irish-midlands-standard-icons.png"))
+    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
+    verify("Routes persist when events unchecked","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
+    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
+    verify("Year-qualified routes did not return","document.querySelectorAll('#map .atlas-voyage-hit').length===8",driver)
+    set_year(1557,21)
+    verify("1557 Sestos map route absent","document.querySelectorAll('#map .atlas-voyage-hit').length===9",driver)
+    set_year(1550,6)
+    verify("Rewind leaves future voyage links","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
     set_year(1550,6)
     verify("1550 new chapter missing or Boulogne still English",
            """document.querySelector('#chapterNav').textContent.includes('第七章') &&

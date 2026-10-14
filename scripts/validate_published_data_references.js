@@ -59,7 +59,19 @@ const allReferences=(item,where)=>{
 for(const {file,data}of records){
  for(const e of data.events)allReferences(e,file+' / '+e.id);
  for(const pl of data.places||[])allReferences(pl,file+' / '+pl.id);
- for(const v of data.routes||[])allReferences(v,file+' / '+v.id);
+ for(const v of data.routes||[]){
+  allReferences(v,file+' / '+v.id);
+  assert.ok(Number.isInteger(v.year)&&v.year>=start&&v.year<=end,file+' route year '+v.id);
+  assert.ok(Array.isArray(v.coords)&&v.coords.length>=2,file+' missing route '+v.id);
+  for(const c of v.coords){
+   assert.ok(Array.isArray(c)&&c.length===2&&Number.isFinite(c[0])&&Number.isFinite(c[1])
+    &&Math.abs(c[0])<=90&&Math.abs(c[1])<=180,file+' bad route lat/lng '+v.id);
+  }
+  if(v.route_kind?.includes('schematic')){
+   assert.ok(v.certainty?.includes('not-historical-track'),file+' incorrectly exact voyage '+v.id);
+   assert.ok(v.note?.length>70,file+' undocumented approximate passage '+v.id);
+  }
+ }
 }
 const overlayPaths=[
  'data/military-control-points-1540-1549.geojson',

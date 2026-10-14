@@ -28,4 +28,10 @@ assert.ok(app.includes(".on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropag
 assert.ok(app.includes("const radius=Math.max(5.2,Math.min(8"),'historical city symbol still appears as an oversized halo');
 assert.ok(!app.includes('radius:radius+10'), 'oversized inner city halo remained');
 assert.ok(!app.includes('fillOpacity:.18,interactive:false'), 'ghost city circle persisted');
+const ch7=JSON.parse(read('data/atlas-1550-1559.json'));
+assert.equal(ch7.routes.length,9);
+assert.equal(ch7.routes.filter(r=>r.route_kind==='coastal-commercial-reference-schematic').length,2);
+assert.ok(ch7.routes.some(r=>r.route_kind==='schematic-human-transport-sea-corridor'&&r.year===1555));
+assert.ok(app.includes("const coastal=r.route_kind==='coastal-commercial-reference-schematic'"));
+assert.ok(ch7.routes.every(r=>r.source_ids.every(id=>ch7.sources.some(src=>src.id===id))));
 console.log('PASS: route interaction pane, historical endpoint provenance, modest city symbols and yearly 1527 reveal');
