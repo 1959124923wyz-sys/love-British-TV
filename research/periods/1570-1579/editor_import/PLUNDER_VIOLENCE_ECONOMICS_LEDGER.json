@@ -370,6 +370,74 @@
       "day_Crown_governor_arrived": "1575-09-08",
       "place": "Drogheda modern town regional reference",
       "explanation": "DIB scholarly account: Sidney sought to commute military cess exactions into cash composition; local gentry resisted and governors' actions were challenged. No historical estate list, levy figure, realized Crown revenue or complete land territorial acquisition can be inferred."
+    },
+    {
+      "id": "C9-F25",
+      "year": 1576,
+      "theme": "Cathay Company commissioned Cornelius Ketel to paint two portraits of first captured Inuit man",
+      "kind": "company_spend_on_commodification_portraits_not_revenue",
+      "quantity": 10,
+      "currency": "GBP_reported_company_expenditure",
+      "unit_cost_gbp": 5,
+      "portrait_commissions": 2,
+      "source_ids": [
+        "C9-S47"
+      ],
+      "Royal_Treasury_revenue": null,
+      "victim_income": false,
+      "underlying_primary_company_account_not_independently_viewed": true,
+      "explanation": "Cambridge University Press Alden Vaughan paraphrases Cathay Company ledgers, 2 paintings at £5 each. Financial spending associated with display of captive person; not sale price, not Crown receipts or profit."
+    },
+    {
+      "id": "C9-F26",
+      "year": 1577,
+      "theme": "Kalicho and Arnaq captured in Baffin Island and buried in Bristol 1577 parish St Stephen",
+      "kind": "nonfinancial_human_violence_and_captive_death_history",
+      "quantity": 2,
+      "unit": "named_adult_victims_buried",
+      "source_ids": [
+        "C9-S47",
+        "C9-S48",
+        "C9-S52"
+      ],
+      "subset_of_existing_record": "C9-F15",
+      "new_people_to_aggregate": 0,
+      "burial_dates": [
+        "1577-11-08",
+        "1577-11-12"
+      ],
+      "exact_grave_coordinates": null,
+      "royal_income": null,
+      "explanation": "Same two adults already counted in C9-F15 captive trio. Captivity and death documented; this adds exact parish placement and dates, not two additional victims."
+    },
+    {
+      "id": "C9-F27",
+      "year": 1577,
+      "theme": "Queen Elizabeth received profits from 1577 faculties commission, manuscript amount not transcribed",
+      "kind": "crown_faculties_commission_revenue_original_accounts_unread",
+      "quantity": null,
+      "currency": "GBP_unread",
+      "source_ids": [
+        "C9-S45"
+      ],
+      "historical_document": "Cotton MS Titus B XIII/1 ff 270r–270v",
+      "faculties_profit_original_sum": null,
+      "profit_explicitly_from_colonial_plunder": false,
+      "explanation": "British Library manuscript catalogue names profit accruing to Queen via English/Irish church faculties commission in 1577. The accounts are not read; not possible to assign any exact Crown receipt nor classify as violence profit without identifying payers/collection."
+    },
+    {
+      "id": "C9-F28",
+      "year": 1578,
+      "theme": "Royal Irish field army supply cost estimates 14 June1578 per Sidney MS document",
+      "kind": "army_victualling_budget_document_unread",
+      "quantity": null,
+      "currency": "GBP_unread",
+      "source_ids": [
+        "C9-S46"
+      ],
+      "original_manuscript": "Cotton MS Titus B X/1 ff157v–161r",
+      "audited_actual_Crown_military_cost": null,
+      "explanation": "BL original catalogue proves estimate of victuals attached to 14 June1578 letter. Without figures and paid vouchers, no cash total or assumed quantities of seized peasant crops."
     }
   ],
   "summary": {
@@ -399,6 +467,9 @@
     "Frobisher £1000 royal investment not profitable ore gain; 1400t worthless ore not realized gold",
     "1579 prize would be distributed after return 1580 not recognized in 1579 English Exchequer",
     "Francis Pretty's 26 tons silver, 80 lb gold, 13 chests reales are not independent events or certified customs ledger; treat as a single narrator's Cacafuego prize narrative, no automatic gold equivalent or sterling conversion",
-    "Mullaghmast 40 followers named in one source are NOT another 40 to add to every other modern victim estimate; incident date contested 1577 vs reconstructed March1578"
+    "Mullaghmast 40 followers named in one source are NOT another 40 to add to every other modern victim estimate; incident date contested 1577 vs reconstructed March1578",
+    "C9-F26 named Kalicho and Arnaq Bristol burial records are the SAME adult victims in C9-F15, not additional 2 Inuit taken.",
+    "Cathay Company £5 each portrait costs are expenditures for exploitation/displays of captive Inuit, not received income nor human monetary valuation.",
+    "1577 Crown commission for faculties archive ledger and 1578 army victualling estimate identified only by shelfmarks, amounts unread. Do not invent or classify automatically as income from massacres."
   ]
 }
