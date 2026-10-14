@@ -1054,7 +1054,7 @@
       "source_ids": [
         "SC-NLS-1540S-MAPS",
         "SC-CALDWELL-EYEMOUTH",
-        "SC-HES-EYEMOUTH-FORT-SM4577",
+        "SC-HES-EYEMOUTH-SM3190",
         "SC-EYEMOUTH-GEOGRAPH-PIN"
       ],
       "certainty": "research_source_linked_historic_event",
@@ -2320,7 +2320,7 @@
       "description": "1547年英军在苏格兰埃茅斯建立堡垒，延续至1549年末。现存参考位置不等于1547年确切城墙。",
       "source_ids": [
         "SC-CALDWELL-EYEMOUTH",
-        "SC-HES-EYEMOUTH-FORT-SM4577",
+        "SC-HES-EYEMOUTH-SM3190",
         "SC-EYEMOUTH-GEOGRAPH-PIN"
       ],
       "icon_code": "TER",
@@ -2377,7 +2377,8 @@
       "status": "English_earthwork_camp_inside_independent_Scotland",
       "description": "1548—1549年英军在东洛锡安Dunglass附近驻扎军营。位置为现代遗产区参考点，原营垒山岗边界未测得。",
       "source_ids": [
-        "SC-HES-DUNGLASS-CAMP"
+        "SC-HES-DUNGLASS-CAMP",
+        "SC-HES-DUNGLASS-SM3191"
       ],
       "icon_code": "TER",
       "geo_precision": "current_government_historic_monument_or_larger_landscape_reference",
@@ -2701,6 +2702,35 @@
       "year_end_stop": 1547,
       "area_polygon_verified": false,
       "geometry_status": "Historic site point, not occupied Tudor district"
+    },
+    {
+      "id": "roxburgh-english-artillery-fort-1547-1550",
+      "name": "罗克斯堡1547英军炮堡（遗址参考点）",
+      "lat": 55.59618019271,
+      "lng": -2.45696819436,
+      "status": "documented_English_1547_artillery_fort_inside_independent_Scotland",
+      "description": "1547年英军在苏格兰罗克斯堡旧城堡附近建立炮兵要塞。考古与1547年军事图研究支持英军驻点，但现有现代城堡中心并非1547年炮堡的精确位置或围界；1550年撤军。",
+      "source_ids": [
+        "SC-HES-ROXBURGH-2006-09-DGPS-GIS",
+        "SC-BELVOIR-RHP6075-ORIGINAL-MAP",
+        "SC-HES-ROXBURGH-SM1718"
+      ],
+      "icon_code": "TER",
+      "geo_precision": "HES_modern_monument_reference_not_Tudor_fort_or_boundary",
+      "certainty": "documented_site_modern_centroid_not_historic_fort_enclosure",
+      "state_type": "occupied_fort_inside_independent_Scotland",
+      "start_year": 1547,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "area_polygon_verified": false,
+      "year_end_start": 1547,
+      "year_end_stop": 1549,
+      "geometry_status": "source_qualified_modern_legal_site_reference_point_only",
+      "category": "colonial_control",
+      "editorial_status": "approved_point_not_historic_area",
+      "historical_boundary_confirmed": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "sources": [
@@ -2966,7 +2996,7 @@
       "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM4577",
       "kind": "government_monument_original_site_grid",
       "evidence_read_level": "official_monument_record_full",
-      "precision_warning": "Coordinates of scheduled area refer to present monument, NOT exact 1547 fort walls.",
+      "precision_warning": "SM4577是Eyemouth另一处Corn Fort，绝非1547英军主炮堡；英军炮堡当为SM3190，此来源不再用于发布中的英军炮堡记录。",
       "origin": "research/periods/1540-1549/SOURCE_REGISTRY.json"
     },
     {
@@ -3573,6 +3603,46 @@
       "precision_warning": "period castle site, not 1548 occupation wall/land",
       "licence_note": "cite link and factual evidence, do not reuse scanned figure",
       "reviewed_for_publication": true
+    },
+    {
+      "id": "SC-HES-ROXBURGH-SM1718",
+      "title": "Roxburgh Castle — Scheduled Monument SM1718（现代法定遗址，不是1547年英军炮堡界）",
+      "publisher": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/designation/SM1718",
+      "kind": "official_modern_heritage_extent",
+      "precision_warning": "SM1718保护区域不等于1547年英国军事工事边界，古城堡整体尺度不等于1547年炮堡。"
+    },
+    {
+      "id": "SC-HES-ROXBURGH-2006-09-DGPS-GIS",
+      "title": "Roxburgh Castle：RCAHMS 2006—2009年DGPS实测与1547城堡图GIS叠合的研究记录",
+      "publisher": "Historic Environment Scotland / RCAHMS",
+      "url": "https://canmore.org.uk/site/58412/roxburgh-castle",
+      "kind": "archaeological_survey_metadata_not_original_vector",
+      "precision_warning": "已经确认测绘和叠图工作的存在，尚未取得可核实1547炮堡围界的矢量顶点。"
+    },
+    {
+      "id": "SC-BELVOIR-RHP6075-ORIGINAL-MAP",
+      "title": "NRS RHP6075：Belvoir Castle军事要塞图副本档号（1547—1550，未读取原扫描）",
+      "publisher": "National Records of Scotland / University of Edinburgh archive cross-reference",
+      "url": "https://era.ed.ac.uk/bitstream/1842/6848/2/253253_vol2.pdf",
+      "kind": "archive_reference_original_scan_not_received",
+      "precision_warning": "依据博士论文指向档号；原高清图、地理配准及授权未取得。"
+    },
+    {
+      "id": "SC-HES-EYEMOUTH-SM3190",
+      "title": "Eyemouth Fort — Scheduled Monument SM3190（1547英军、1557法军分期古迹）",
+      "publisher": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/designation/SM3190",
+      "kind": "official_heritage_designation",
+      "precision_warning": "现代法定保护区并非1547英国炮堡实测墙线。不可与SM4577 Corn Fort混同。"
+    },
+    {
+      "id": "SC-HES-DUNGLASS-SM3191",
+      "title": "French Camp, fort, Dunglass — Scheduled Monument SM3191（1548英军营垒）",
+      "publisher": "Historic Environment Scotland",
+      "url": "https://portal.historicenvironment.scot/designation/SM3191",
+      "kind": "official_heritage_designation",
+      "precision_warning": "French Camp地名不能推断1548年由法军占领，现代保护界非1548年原工事围墙。"
     }
   ],
   "routes": [],
