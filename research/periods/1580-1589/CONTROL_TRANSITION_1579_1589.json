@@ -477,7 +477,13 @@
           "C10-S08"
         ],
         "legal_seignory_visualization": "planned_allotments_no_occupied_polygons",
-        "english_effective_area_polygon": null
+        "english_effective_area_polygon": null,
+        "crown_plantation_policy_date": "1586-06-27",
+        "royal_rent_receipts_in_1586": null,
+        "future_contractual_rents_1590": true,
+        "source_ids": [
+          "C10-S69"
+        ]
       },
       "foreign_raids": "dated_event_only_short_raid_no_foreign_sovereignty",
       "valid_historic_english_occupation_polygons": 0
@@ -599,7 +605,13 @@
           "C10-S08"
         ],
         "legal_seignory_visualization": "planned_allotments_no_occupied_polygons",
-        "english_effective_area_polygon": null
+        "english_effective_area_polygon": null,
+        "first_undertakers_grant_count_reported_1588": 35,
+        "earlier_projected_undertakers_1586": 86,
+        "actual_settlers_count_verified": null,
+        "source_ids": [
+          "C10-S70"
+        ]
       },
       "foreign_raids": null,
       "valid_historic_english_occupation_polygons": 0
@@ -777,6 +789,32 @@
         "C10-S08"
       ],
       "verified_historical_control_area": null
+    },
+    {
+      "year": 1586,
+      "stable_id": "munster-1586-06-27-royal-plantation-articles",
+      "change": "prospective_land_seignories_with_rent_rates_and_exclusion_rules",
+      "controller_before": "Forfeiture surveys and unresolved Gaelic family tenure",
+      "controller_after": "Crown distribution plans to English undertakers with legal 1586 restrictions; physical occupation remains parcel dependent",
+      "source_ids": [
+        "C10-S69"
+      ],
+      "year_end_valid": "legal act, not population census or military occupation",
+      "true_period_control_polygon": null,
+      "first_royal_rent_due_year": 1590
+    },
+    {
+      "year": 1588,
+      "stable_id": "munster-1588-35-initial-undertaker-grants",
+      "change": "reported_35_original_grantees_vs_86_projected",
+      "controller_before": "86 prospective undertakers in 1586 scheme",
+      "controller_after": "35 original undertaker land grants reported for 1588 by ECU secondary scholarship",
+      "source_ids": [
+        "C10-S70"
+      ],
+      "year_end_valid": "historical grant progress reported; no geographic areas authenticated",
+      "true_period_control_polygon": null,
+      "actual_English_area_sqkm": null
     }
   ],
   "core_migration_guard": [
