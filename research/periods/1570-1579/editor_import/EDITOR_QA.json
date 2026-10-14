@@ -1,0 +1,50 @@
+{
+  "schema": "chapter9_research_data_qa_v1",
+  "status": "PASS",
+  "date": "2026-10-14",
+  "branch": "research/ch09-1570-1579-coercion-plunder-map-20261014",
+  "files": [
+    "SOURCE_REGISTRY.json",
+    "ATLAS_EVENT_REVIEW_CANDIDATE.json",
+    "CONTROL_TRANSITION_1569_1579.json",
+    "CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson",
+    "VIOLENCE_AND_CONTROL_DELTA_1570_1579.geojson",
+    "VIOLENT_EXTRACTION_ROUTE_REFERENCES.geojson",
+    "IRISH_COERCION_EVENT_ZONES.geojson",
+    "PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json",
+    "ARCHIVAL_ACTION_QUEUE.json",
+    "EDITOR_IMPORT_README.md"
+  ],
+  "counts": {
+    "sources": 25,
+    "events": 22,
+    "places": 17,
+    "geoFeatures": 18,
+    "annual": 10,
+    "annualTransitions": 10,
+    "changes": 15,
+    "schematicRoutes": 8,
+    "unlocatedWarZones": 3,
+    "economicRows": 17,
+    "archiveTasks": 18
+  },
+  "historical_polygon_authentic_and_licenced_count": 0,
+  "original_accounting_audited_profits": false,
+  "draft_chapter8_dependency": "https://github.com/1959124923wyz-sys/love-British-TV/pull/52",
+  "validations": [
+    "25 source IDs linked with events, places, changes, economic ledger and archive tasks",
+    "1570–1579 all yearends present; nine inherited polities retained",
+    "1575 Rathlin death subsets not counted as alternative total",
+    "no British all-Ards/Tyrone/Rathlin/Canadian/California false sovereignty",
+    "Scottish identity and French Calais/Guines preserved",
+    "unknown atrocity and treasure ship actual sites geometry null",
+    "all shipping lines schematic, no registered historic GIS border",
+    "financial estimated plunder/loans/budgets/costs not conflated"
+  ],
+  "limits": [
+    "GitHub structural QA only; no 16th-century manuscript diplomatic transcription",
+    "not browser/Pages tested",
+    "statements based on institutional pages and academic summaries; some primary work pending"
+  ],
+  "errors": []
+}
