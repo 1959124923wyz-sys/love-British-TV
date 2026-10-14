@@ -22,6 +22,9 @@ map.getPane('eventTooltipPane').style.pointerEvents='none';
 map.createPane('controlAreaPane');
 map.getPane('controlAreaPane').style.zIndex='465';
 // Route hit targets above geographic polygons and below event glyphs.
+map.createPane('enslavementBandPane');
+map.getPane('enslavementBandPane').style.zIndex='478';
+const enslavementBandRenderer=L.svg({pane:'enslavementBandPane'});
 map.createPane('voyagePane');
 map.getPane('voyagePane').style.zIndex='480';
 const voyageRenderer=L.svg({pane:'voyagePane'});
@@ -55,7 +58,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -91,7 +94,7 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let year=1497;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 // UI contract: two independent user-facing layers, all earlier internal gate IDs
 // retained only for chronology, migration and backwards-compatible renderers.
@@ -122,9 +125,9 @@ function syncMapLayers(){
  if(atlas)refreshHistoricalLayers();
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
-const findPlaceAcrossChapters=id=>[atlas,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
+const findPlaceAcrossChapters=id=>[atlas,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 // Transient focus target; historical event coordinates remain immutable.
@@ -139,7 +142,7 @@ const earlyIntro=$('chapterIntro').textContent;
 function setWarning(msg){let e=$('boundaryWarning');if(!e){e=document.createElement('div');e.id='boundaryWarning';e.className='map-warning';$('map').parentElement.appendChild(e)}e.textContent=msg;}
 function hideWarning(){let e=$('boundaryWarning');if(e)e.remove();}
 function listSources(ids,item){
- const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[]),...(atlasThird?.sources||[]),...(atlasFourth?.sources||[]),...(atlasFifth?.sources||[]),...(atlasSixth?.sources||[]),...(atlasSeventh?.sources||[])].find(src=>src.id===id)).filter(Boolean);
+ const refs=(ids||[]).map(id=>[...(atlas?.sources||[]),...(atlasEarly?.sources||[]),...(atlasLater?.sources||[]),...(atlasThird?.sources||[]),...(atlasFourth?.sources||[]),...(atlasFifth?.sources||[]),...(atlasSixth?.sources||[]),...(atlasSeventh?.sources||[]),...(atlasEighth?.sources||[])].find(src=>src.id===id)).filter(Boolean);
  const note=researchNotes[item?.id];
  if(!refs.length&&!note)return '';
  const fields=[
@@ -406,6 +409,7 @@ function renderPoints(){
  }
  if($('toggleKingdom').checked&&year>=1500&&map.getZoom()>=6){
   for(const q of atlas.places||[]){
+   if(q.render_as_event_only)continue;
    const activeMilitaryCore=$('toggleControlAreas').checked&&((year>=1540&&militaryControlPoints?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.year_end_start&&year<=f.properties.year_end_stop))||(year>=1550&&seventhControlSites?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.start_year&&year<=f.properties.end_year)));
    const alreadyDrawnAsArea=Boolean(activeMilitaryCore)||footprintEnabledFor(q.id)||($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year));
    if(alreadyDrawnAsArea)continue;
@@ -710,6 +714,76 @@ function renderSeventhControlSites(){
  }
 }
 
+// Only Le Havre 1562 has a new verified English year-end urban occupation point.
+function renderEighthControlSites(){
+ if(!eighthControlSites||year<1560||year>1569||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
+ for(const f of eighthControlSites.features){
+  const p=f.properties,c=f.geometry?.coordinates;
+  if(f.geometry?.type!=='Point'||!c||year<p.start_year||year>p.end_year||p.fill_authorized!==false)continue;
+  const english=p.controller_group==='english',color=english?'#ae83ef':'#57c9b8';
+  const open=e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   const place=findPlaceAcrossChapters(p.stable_id);
+   if(place)openDossier(place,'place');else openTerritoryDossier(f,'historic');
+  };
+  const tt='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">仅为城市实控驻军Point · 不是英军占地边界</div>';
+  L.circleMarker([c[1],c[0]],{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,weight:3,color,
+   opacity:.98,dashArray:'5 5',fill:true,fillColor:color,fillOpacity:.13,bubblingMouseEvents:false,
+   className:english?'atlas-eighth-site atlas-eighth-english':'atlas-eighth-site atlas-eighth-french'})
+   .bindTooltip(tt,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+   .on('click',open).addTo(groups.wartimeControl);
+  L.circleMarker([c[1],c[0]],{renderer:garrisonHitRenderer,pane:'garrisonHitPane',radius:24,
+   weight:7,color,opacity:.018,fill:false,bubblingMouseEvents:false,className:'atlas-eighth-site-hit'})
+   .on('click',open).addTo(groups.garrisonHit);
+ }
+}
+function openEighthCoastalDossier(feature){
+ const p=feature.properties||{};selected='';selectedItemYear=null;
+ const refs=(p.source_ids||[]).map(id=>atlasEighth?.sources?.find(s=>s.id===id))
+  .filter(Boolean).map(s=>'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>').join('');
+ $('dossierBody').innerHTML='<div class="dossier-kicker">第八章 · 非洲人口奴役活动 · '+year+'年</div>'+
+ '<h2>'+escapeHTML(p.name)+'</h2>'+
+ '<p>橙褐斜纹是有史料提及的宽泛奴隶贩运海岸地区，而非英国殖民地，不代表带内所有村社遭到英国袭击。</p>'+
+ '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
+ '<div class="research-body"><h3>地理范围与精度</h3><p>'+escapeHTML(p.precision_caution||'历史精确港口和被掳村庄均待核')+'</p>'+
+ '<h3>主权和史料限制</h3><p>本Polygon由现代制图者根据史料地名制作，并非16世纪实测、真实逐村袭击范围或英国领土。当地非洲政治实体没有因为英国航行而丧失主权。</p></div>'+
+ '<div class="mini-heading">史料原文与来源</div>'+refs+'</details>';
+ openPanel('dossier');
+}
+function ensureEighthCoastHatch(){
+ const root=enslavementBandRenderer._container;
+ if(!root||root.querySelector('#atlas-eighth-coast-hatch'))return;
+ const ns='http://www.w3.org/2000/svg',doc=root.ownerDocument;
+ let defs=root.querySelector('defs');if(!defs){defs=doc.createElementNS(ns,'defs');root.insertBefore(defs,root.firstChild)}
+ const pat=doc.createElementNS(ns,'pattern');
+ for(const [k,v] of Object.entries({id:'atlas-eighth-coast-hatch',width:'12',height:'12',patternUnits:'userSpaceOnUse'}))pat.setAttribute(k,v);
+ const bg=doc.createElementNS(ns,'rect');bg.setAttribute('width','12');bg.setAttribute('height','12');
+ bg.setAttribute('fill','#8d5735');bg.setAttribute('fill-opacity','.19');pat.appendChild(bg);
+ for(const d of ['M-3 12 L12 -3','M3 15 L15 3']){const line=doc.createElementNS(ns,'path');
+  line.setAttribute('d',d);line.setAttribute('stroke','#dfac78');line.setAttribute('stroke-width','2');pat.appendChild(line)}
+ defs.appendChild(pat);
+}
+function renderEighthCoastalActivity(){
+ groups.enslavementBands.clearLayers();
+ if(!eighthSlaveCoastalAreas||year<1560||year>1569||!$('toggleEvents').checked)return;
+ const list=eighthSlaveCoastalAreas.features.filter(f=>{
+  const p=f.properties||{};
+  return f.geometry?.type==='Polygon'&&p.map_layer==='events'&&p.render_as_hatched_event_activity_band===true&&
+   p.fill_authorized===false&&p.historical_boundary_confirmed===false&&p.area_sqkm===null&&year>=p.start_year&&year<=p.end_year;
+ });
+ if(!list.length)return;
+ L.geoJSON({type:'FeatureCollection',features:list},{
+  renderer:enslavementBandRenderer,pane:'enslavementBandPane',interactive:true,bubblingMouseEvents:false,
+  style:()=>({color:'#dca16d',weight:2.2,opacity:.94,dashArray:'6 8',
+   fill:true,fillColor:'url(#atlas-eighth-coast-hatch)',fillOpacity:.6,
+   className:'atlas-eighth-enslavement-coast'}),
+  onEachFeature:(f,layer)=>{const p=f.properties;
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">人口奴役活动的海岸概略示意 · 非英王占领区</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+   layer.on('click',e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openEighthCoastalDossier(f)});
+  }
+ }).addTo(groups.enslavementBands);
+ ensureEighthCoastHatch();
+}
 function ensureContestedHatch(){
  const root=contestedZoneRenderer._container;
  if(!root||!root.ownerDocument||root.querySelector('#atlas-blue-violet-contested'))return;
@@ -974,7 +1048,7 @@ function renderMilestones(){
 }
 function setYear(v){
  const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
- const chosen=next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
+ const chosen=next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
  if(!chosen)return;
  // Keep map viewport and open dossier; avoid displaying a selected event from the future.
  if(selectedItemYear!==null&&selectedItemYear>next){
@@ -987,7 +1061,7 @@ function setYear(v){
  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
  year=next;atlas=chosen;
  $('bigYear').textContent=year;$('timeYear').textContent=year;
- const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540&&year<1550,seventh=year>=1550;
+ const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540&&year<1550,seventh=year>=1550&&year<1560,eighth=year>=1560;
  $('chapterNav').textContent=sixth?'历史地图 · 第六章':fifth?'历史地图 · 第五章':fourth?'历史地图 · 第四章':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
  $('chapterNavName').textContent=sixth?'布洛涅与战争边区':fifth?'法权与边区':fourth?'边区与远航':third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
  $('chapterLabel').textContent=sixth?'第六章 · 1540—1549':fifth?'第五章 · 1530—1539':fourth?'第四章 · 1520—1529':third?'第三章 · 1510—1519':second?'第二章 · 1500—1509':'第一章 · 1497—1499';
@@ -1016,10 +1090,25 @@ function setYear(v){
   $('factCDesc').innerHTML=year>=1558?'法国攻取加来<br>及吉讷':year>=1555?'西非人口奴役<br>与莫斯科贸易':'';
   $('periodTitle').textContent=year<=1552?'爱德华六世 · 英格兰王国':year<=1557?'玛丽一世 · 英格兰王国':'伊丽莎白一世 · 英格兰王国';
  }
+ if(eighth){
+  $('chapterNav').textContent='历史地图 · 第八章';
+  $('chapterNavName').textContent='三角贸易与海上掠夺';
+  $('chapterLabel').textContent='第八章 · 1560—1569';
+  $('chapterTitlePrimary').textContent='奴隶贸易与';
+  $('chapterTitleSecondary').textContent='大西洋掠夺';
+  $('chapterIntro').textContent=atlasEighth.intro;
+  $('factA').textContent=year>=1563?'法国收复':year>=1562?'英军驻城':'—';
+  $('factADesc').innerHTML=year>=1563?'1563勒阿弗尔<br>法军收复':year>=1562?'1562勒阿弗尔<br>英军短期驻城':'苏格兰主权<br>持续独立';
+  $('factB').textContent=year>=1567?'1567':year>=1564?'1564':year>=1562?'1562':'—';
+  $('factBDesc').innerHTML='西非人口奴役<br>与跨大西洋贩运';
+  $('factC').textContent=year>=1569?'1569':year>=1568?'1568':'—';
+  $('factCDesc').innerHTML=year>=1569?'爱尔兰地方反抗<br>与王室镇压':year>=1568?'英西海战<br>第三次奴役航次':'';
+  $('periodTitle').textContent='伊丽莎白一世 · 英格兰王国';
+ }
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
- $('timelineContext').textContent=seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
+ $('timelineContext').textContent=eighth?'第八章 · 1560—1569年事件':seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -1063,7 +1152,7 @@ function openPolity(group){
  const title=group==='wales'?'英王治下的威尔士':p.name;
  const isScotland=group==='scotland';
  const text=isScotland?
-  (year>=1542?'1542年詹姆斯五世去世，玛丽女王继承苏格兰王位，国内由摄政机构与王国贵族参与治理。1540年代英格兰在若干城堡驻军，苏格兰王国整体仍独立。':year>=1513?'1513年弗洛登战役中詹姆斯四世阵亡，幼王詹姆斯五世继位。苏格兰由摄政机构与王国贵族参与治理，继续保持独立王权。':'詹姆斯四世统治下的苏格兰王国由王室、议会、贵族和地方氏族共同参与治理。'):
+  (year>=1567?'1567年玛丽女王被迫退位，幼王詹姆斯六世继位；1568年朗赛德等内战仍属于苏格兰王国内部的权力斗争，国家并未被英格兰兼并。':year>=1561?'1561年玛丽女王返回苏格兰执政，王国主权始终独立；法军此前驻守的军堡不能等同法国或英国吞并苏格兰。':year>=1560?'1560年利斯围城与条约使法国驻军撤离，英军亦撤出，苏格兰继续保持独立。':year>=1542?'1542年詹姆斯五世去世，玛丽女王继承苏格兰王位，国内由摄政机构与王国贵族参与治理。1540年代英格兰在若干城堡驻军，苏格兰王国整体仍独立。':year>=1513?'1513年弗洛登战役中詹姆斯四世阵亡，幼王詹姆斯五世继位。苏格兰由摄政机构与王国贵族参与治理，继续保持独立王权。':'詹姆斯四世统治下的苏格兰王国由王室、议会、贵族和地方氏族共同参与治理。'):
   (year>=1558?'1558年加来、吉讷已被法国夺取，英王在法国大陆的旧驻军控制告终。苏格兰仍是独立王国，英王在爱尔兰的殖民军堡只涉及有限据点。':year>=1550?'1550年布洛涅归还法国，苏格兰布劳蒂等英占军堡被夺回；英王继续在加来、吉讷驻军直至1558年，苏格兰国家主权并未中断。':year>=1547?'爱德华六世于1547年继承英格兰王位。英军继续驻守加来和布洛涅，并在苏格兰部分城堡驻军；英军局部占领没有使苏格兰王国整体归属英格兰。':year>=1509?'亨利八世统治英格兰，英王在加来驻有官员和军队，并通过地方贵族及都柏林机构管理爱尔兰的部分区域。':'都铎王朝英王统治英格兰本土，王室在加来设有军政机构，爱尔兰的部分区域由王室委任地方官员治理。');
  const sources=(p.source_ids||[]).concat(isScotland&&year>=1513?['NRS-FLODDEN']:[]).concat(isScotland&&year>=1542?['SC-HES-2022-HADDINGTON']:[]);
  $('dossierBody').innerHTML='<div class="dossier-kicker">历史国家 · '+year+'年</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(text)+'</p>'+listSources(sources,p);
@@ -1071,16 +1160,17 @@ function openPolity(group){
 }
 async function boot(){
  try{
-  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes]=await Promise.all([
+  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes,eighthRes]=await Promise.all([
     fetch('data/atlas-1497-1500.json',{cache:'no-store'}),
     fetch('data/atlas-1500-1509.json',{cache:'no-store'}),
     fetch('data/atlas-1510-1519.json',{cache:'no-store'}),
     fetch('data/atlas-1520-1529.json',{cache:'no-store'}),
     fetch('data/atlas-1530-1539.json',{cache:'no-store'}),
     fetch('data/atlas-1540-1549.json',{cache:'no-store'}),
-    fetch('data/atlas-1550-1559.json',{cache:'no-store'})
+    fetch('data/atlas-1550-1559.json',{cache:'no-store'}),
+    fetch('data/atlas-1560-1569.json',{cache:'no-store'})
   ]);
-  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok)throw new Error('历史切片未正确加载');
+  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok||!eighthRes.ok)throw new Error('历史切片未正确加载');
   atlasEarly=await res.json();
   atlasLater=await laterRes.json();
   atlasThird=await thirdRes.json();
@@ -1088,6 +1178,7 @@ async function boot(){
   atlasFifth=await fifthRes.json();
    atlasSixth=await sixthRes.json();
   atlasSeventh=await seventhRes.json();
+  atlasEighth=await eighthRes.json();
   const chapterRes=await fetch('data/chapters.json',{cache:'no-store'});
   if(!chapterRes.ok)throw new Error('章节目录未正确加载');
   chapterRegistry=await chapterRes.json();
@@ -1095,7 +1186,7 @@ async function boot(){
   const ordered=chapterRegistry.chapters;
   if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
   lastPublishedYear=ordered[ordered.length-1].end;
-  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places))throw new Error('历史数据结构错误');
+  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places))throw new Error('历史数据结构错误');
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
@@ -1151,6 +1242,24 @@ async function boot(){
   politicalRelationAreas.features.push(...newRelations.features);
   frenchCityAreas.features.push(...newUrban.features);
   seventhControlSites=newMilitary;
+  const [geo8,political8,city8,military8,coast8]=await Promise.all([
+   fetch('data/territorial-footprints-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/political-relations-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/french-urban-control-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/eighth-control-sites-1560-1569.geojson',{cache:'no-store'}),
+   fetch('data/eighth-enslavement-coastal-activity-1560-1569.geojson',{cache:'no-store'})
+  ]);
+  if([geo8,political8,city8,military8,coast8].some(r=>!r.ok))throw new Error('第八章地图图层文件缺失');
+  const [newGeo8,newRelations8,newUrban8,newMilitary8,newCoast8]=await Promise.all([
+   geo8.json(),political8.json(),city8.json(),military8.json(),coast8.json()
+  ]);
+  if(newMilitary8.features?.length!==2||newCoast8.features?.length!==3||
+   newCoast8.features.some(f=>f.properties?.fill_authorized!==false||f.properties?.map_layer!=='events'))
+   throw new Error('奴隶掠卖活动不能误转为英国领土');
+  territorialFootprints.features.push(...newGeo8.features);
+  politicalRelationAreas.features.push(...newRelations8.features);
+  frenchCityAreas.features.push(...newUrban8.features);
+  eighthControlSites=newMilitary8;eighthSlaveCoastalAreas=newCoast8;
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
   try{
@@ -1191,14 +1300,14 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume

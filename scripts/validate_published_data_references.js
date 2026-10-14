@@ -12,7 +12,8 @@ const periods=[
  ['data/atlas-1520-1529.json',1520,1529],
  ['data/atlas-1530-1539.json',1530,1539],
  ['data/atlas-1540-1549.json',1540,1549],
- ['data/atlas-1550-1559.json',1550,1559]
+ ['data/atlas-1550-1559.json',1550,1559],
+ ['data/atlas-1560-1569.json',1560,1569]
 ];
 const records=periods.map(([file,start,end])=>({file,start,end,data:read(file)}));
 const catalog=read('data/chapters.json');
@@ -85,6 +86,11 @@ const overlayPaths=[
  'data/political-relations-1550-1559.geojson',
  'data/territorial-footprints-1550-1559.geojson',
  'data/seventh-control-sites-1550-1559.geojson',
+ 'data/territorial-footprints-1560-1569.geojson',
+ 'data/political-relations-1560-1569.geojson',
+ 'data/french-urban-control-1560-1569.geojson',
+ 'data/eighth-control-sites-1560-1569.geojson',
+ 'data/eighth-enslavement-coastal-activity-1560-1569.geojson',
  'data/issue46-hes-archaeology-reference-1547-1549.geojson'
 ];
 function validCoord(coord,file,id){
@@ -126,10 +132,17 @@ for(const file of overlayPaths){
    assert.ok(eventIds.has(rid),file+' / '+id+' unknown event link '+rid);
   if(p.related_place_ids)for(const pid of p.related_place_ids)
    assert.ok(placeIds.has(pid),file+' / '+id+' unknown place link '+pid);
-  if(p.stable_id)assert.ok(placeIds.has(p.stable_id),file+' / '+id+' missing stable linked site '+p.stable_id);
+  if(p.stable_id&&p.zone_type!=='enslavement_event_activity_schematic')assert.ok(placeIds.has(p.stable_id),file+' / '+id+' missing stable linked site '+p.stable_id);
   if(p.start_year!=null&&p.end_year!=null)
    assert.ok(p.start_year<=p.end_year,file+' impossible effective years '+id);
-  if(p.zone_type==='archaeological-reference-not-occupation'){
+  if(p.zone_type==='enslavement_event_activity_schematic'){
+    assert.equal(p.map_layer,'events',file+' slavery trade bands must not be territory');
+    assert.equal(p.fill_authorized,false,file+' nonhistoric colonial fill '+id);
+    assert.equal(p.historical_boundary_confirmed,false,file+' inaccurate historic region '+id);
+    assert.equal(p.area_sqkm,null,file+' do not invent a conquest area '+id);
+    assert.equal(p.territorial_claim,false,file+' African independent political status '+id);
+   }
+   if(p.zone_type==='archaeological-reference-not-occupation'){
    assert.equal(p.fill_authorized,false,file+' modern legal polygon must never be painted as English occupation');
    assert.equal(p.historical_boundary_confirmed,false,file+' modern legal outline is not 1547 rampart');
    assert.equal(p.area_sqkm,null,file+' legal scheduled area may not enter Tudor conquest statistics');

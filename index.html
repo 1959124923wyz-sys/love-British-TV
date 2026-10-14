@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#081422">
-<meta name="description" content="英国殖民扩张与政治控制历史地图：已发布1497—1559七个历史章节，三级时间轴支持逐年查阅与长期历史导航。">
-<title>帝国的代价 | 英国殖民历史动态地图 · 1497—1559</title>
+<meta name="description" content="英国殖民扩张与政治控制历史地图：已发布1497—1569七个历史章节，三级时间轴支持逐年查阅与长期历史导航。">
+<title>帝国的代价 | 英国殖民历史动态地图 · 1497—1569</title>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v176-hes-detail">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v176-ch8">
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>英国殖民扩张与掠夺历史地图</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">远航与主权宣称</span></span></div>
- <div class="head-actions"><span class="version">1497—1559 · PILOT v1.8.3</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1569 · PILOT v1.9.0</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
@@ -45,6 +45,7 @@
       <div><i class="swatch archaeology-modern"></i><span><strong>浅色短虚线</strong> · HES现代古迹法定保护界，非1547英军占领界</span></div>
       <div><i class="swatch english-garrison"></i><span><strong>驻军标记</strong> · 经史料考证的城堡与据点</span></div>
       <div><i class="swatch french-defence"></i><span><strong>法国控制／苏法盟军据点</strong> · 不等于英国占领</span></div><div><i class="swatch major"></i><span><strong>事件标记</strong> · 战斗、焚掠、远航等按年发生的史事</span></div>
+      <div><i class="swatch enslavement-area"></i><span><strong>奴隶掠卖海岸参考带</strong> · 橙褐斜纹是西非奴役航次涉及的活动范围，不代表英国殖民领土</span></div>
       <div><i class="swatch merchant-route"></i><span><strong>海上贸易及沿岸虚线</strong> · 航行方向与商贸海岸概略表达，不是航海实测或英国殖民占地</span></div>
       <p class="map-mode-caution">轮廓以现代地点概略绘制，不能作为16世纪实测边界或占领面积。点击地图上的区域或据点可查看史料与精度说明。</p>
      </div>
@@ -67,7 +68,7 @@
   </div>
 
  </aside>
- <main class="map-stage" aria-label="1497—1559年历史地图">
+ <main class="map-stage" aria-label="1497—1569年历史地图">
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
   <div class="map-layer-switch" id="mapLayerSwitch" role="group" aria-label="地图显示层，可同时勾选">
    <label for="mapLayerTerritory"><input type="checkbox" id="mapLayerTerritory" checked><span>版图</span></label>
@@ -82,7 +83,7 @@
    <div class="timeline-head">
     <div><strong>历史时间轴</strong><span id="timelineContext">第一章 · 1497—1499年事件</span></div>
     <div class="year-buttons">
-     <label class="timeline-direct-year"><span>直达</span><input id="jumpYear" type="number" inputmode="numeric" min="1497" max="1559" value="1497" step="1" aria-label="输入已发布的历史年份，回车跳转" title="输入已发布年份，按回车跳转"></label>
+     <label class="timeline-direct-year"><span>直达</span><input id="jumpYear" type="number" inputmode="numeric" min="1497" max="1569" value="1497" step="1" aria-label="输入已发布的历史年份，回车跳转" title="输入已发布年份，按回车跳转"></label>
      <button type="button" id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button type="button" id="nextYear" aria-label="下一年">›</button>
      <button type="button" id="playBtn" aria-label="播放时间轴">▶</button>
     </div>
@@ -116,6 +117,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=timeline-v176-hes-detail"></script>
+<script src="app.js?v=timeline-v176-ch8"></script>
 </body>
 </html>

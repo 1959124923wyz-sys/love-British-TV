@@ -700,3 +700,11 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .sidebar-settings-wrap .map-mode-help-body .swatch.archaeology-modern{
  flex-basis:17px;width:17px;height:0;border-top:2px dashed #d7e3dd;border-radius:0;margin-top:8px
 }
+
+/* Eighth chapter: independent sovereign West African societies, schematic human trafficking in EVENT layer. */
+#map .atlas-eighth-enslavement-coast{stroke:#dca16d;stroke-dasharray:6 8;pointer-events:visiblePainted}
+#map .atlas-eighth-site{stroke-linejoin:round}
+.sidebar-settings-wrap .map-mode-help-body .swatch.enslavement-area{
+ background:repeating-linear-gradient(135deg,#8d573545 0px,#8d573545 5px,#daa570 5px,#daa570 7px);
+ border:1px dashed #dca16d
+}

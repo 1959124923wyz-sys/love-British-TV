@@ -653,8 +653,70 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1559'""",driver)
+              document.querySelector('#jumpYear').max==='1569'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
+    # CH8 published historic and source-specific GIS year-end regression.
+    set_year(1560,3)
+    verify("1560 new chapter or future overseas trade leaks into early history",
+           """document.querySelector('#chapterNav').textContent.includes('第八章') &&
+              document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
+              document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
+              document.querySelector('#jumpYear').max==='1569'""",driver)
+    driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
+    set_year(1562,7)
+    verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
+           """document.querySelectorAll('#map .atlas-eighth-english').length===1 &&
+              document.querySelectorAll('#map .atlas-eighth-french').length===0 &&
+              document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===1 &&
+              document.querySelector('#eventList [data-eid="1560S-E006"] use').getAttribute('href').endsWith('#SLV')""",driver)
+    driver.save_screenshot(str(OUT / "chapter8-1562-hawkins-le-havre.png"))
+    set_year(1563,9)
+    verify("1563 Le Havre remained English or first African forced transport absent",
+           """document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
+              document.querySelectorAll('#map .atlas-eighth-french').length===1 &&
+              document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===3""",driver)
+    driver.save_screenshot(str(OUT / "chapter8-1563-french-restoration.png"))
+    set_year(1564,11)
+    verify("1564 second Guinea voyage must keep activity event not new colonial territory",
+           "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1",driver)
+    set_year(1566,14)
+    verify("1566 had no independently mapped new Hawkins raiding coast",
+           "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0",driver)
+    set_year(1567,18)
+    verify("1567 third voyage Guinea scope missing",
+           """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===11""",driver)
+    set_year(1568,23)
+    verify("1568 captive shipment route, unknown coastal raided settlement caveat missing",
+           """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===16 &&
+              document.querySelector('#eventList [data-eid="1560S-E018"] use').getAttribute('href').endsWith('#SLV')""",driver)
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1560S-E018"]').click()""")
+    verify("Unlocated 1568 African captive village wrongly presented with precise GPS",
+           """document.querySelector('#dossierBody .source-details').textContent.includes('实际被袭村社位置未知')""",driver)
+    driver.save_screenshot(str(OUT / "chapter8-1568-west-africa-slaving-atlantic.png"))
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    verify("West African slavery activity must be EVENT layer independent of territory",
+           """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
+              document.querySelectorAll('#map .atlas-eighth-french').length===0""",driver)
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
+    verify("Hiding events left trafficking coastal slaving region or sea tracks visible",
+           """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
+              document.querySelectorAll('#map .atlas-eighth-french').length===1""",driver)
+    driver.execute_script("document.querySelector('#mapLayerEvents').click()")
+    set_year(1569,26)
+    verify("1569 documentary evidence wrongly continued a slave ship coastal raid",
+           """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
+              document.querySelectorAll('#map .atlas-eighth-french').length===1 &&
+              document.querySelector('#yearRange').max==='1569'""",driver)
+    driver.save_screenshot(str(OUT / "chapter8-1569-irish-rebellion-no-african-occupation.png"))
+    set_year(1559,29)
+    verify("Backward navigation must restore old seventh chapter no new trading regions",
+           "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 && document.querySelectorAll('#map .atlas-eighth-site').length===0",driver)
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()
