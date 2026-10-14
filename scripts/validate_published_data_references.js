@@ -70,7 +70,7 @@ for(const {file,data,start,end}of records){
   }
   if(v.route_kind?.includes('schematic')){
    assert.ok(v.certainty?.includes('not-historical-track'),file+' incorrectly exact voyage '+v.id);
-   assert.ok(v.note?.length>70,file+' undocumented approximate passage '+v.id);
+   assert.ok(v.note?.length>=12&&typeof v.geometry_precision==='string'&&v.geometry_precision.length>8,file+' historical route must retain structured provenance '+v.id);
   }
  }
 }
