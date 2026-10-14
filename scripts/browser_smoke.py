@@ -381,7 +381,7 @@ try:
     click_map_path("#map .atlas-contested-zone")
     wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
     verify("contested zone has no related evidence/campaign records",
-           """document.querySelector('#dossierBody .zone-precision-note')!==null &&
+           """!document.querySelector('#dossierBody .zone-precision-note') &&
               document.querySelectorAll('#dossierBody [data-zone-event]').length>0 &&
               document.querySelector('#dossierBody .source-details')!==null""",driver)
     driver.execute_script("document.querySelector('#dossierBody [data-zone-event]').click()")
