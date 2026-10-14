@@ -1,0 +1,276 @@
+{
+  "schema": "ch09_colonial_violence_and_extraction_accounting_v1",
+  "period": [
+    1570,
+    1579
+  ],
+  "records": [
+    {
+      "id": "C9-F01",
+      "year": 1573,
+      "theme": "planned Crown rent from Essex Clandeboye colony",
+      "kind": "unrealised_expected_revenue",
+      "quantity": 5000,
+      "currency": "GBP_per_year",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "explanation": "£5k annual rent was projected by Essex, not realised colonial profit. Do not add to actual cash."
+    },
+    {
+      "id": "C9-F02",
+      "year": 1573,
+      "theme": "Queen loan to Essex Ulster scheme",
+      "kind": "loan_principal_not_income",
+      "quantity": 10000,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "explanation": "Loan guaranteed by Essex estate, cannot count as Crown income or plunder."
+    },
+    {
+      "id": "C9-F03",
+      "year": 1574,
+      "theme": "royal outlay proposed for six Ulster garrisons next two years",
+      "kind": "unfunded_budget_proposal",
+      "quantity": 40000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "explanation": "Projected expense c40k, do not add to actual royal spending."
+    },
+    {
+      "id": "C9-F04",
+      "year": 1575,
+      "theme": "Essex colonisation Crown expenditure retrospectively estimated",
+      "kind": "royal_colonial_expenditure",
+      "quantity": 80000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "original_accounts_checked": false,
+      "explanation": "DIB c80k Crown spent, uncertain exact period/overlap with other campaign accounts."
+    },
+    {
+      "id": "C9-F05",
+      "year": 1575,
+      "theme": "Essex colonial venture personal losses",
+      "kind": "private_colonial_expenditure",
+      "quantity": 35000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "original_accounts_checked": false,
+      "explanation": "DIB c35k spent, venture failed and Essex sold lands; is COST not profit."
+    },
+    {
+      "id": "C9-F06",
+      "year": 1573,
+      "theme": "Drake Anglo-French private raid Panama mule-train bullion seized",
+      "kind": "private_prize_reported_gross_plunder",
+      "quantity": 20000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S08"
+      ],
+      "audited_actual_income": false,
+      "English_Exchequer_net_profit": null,
+      "explanation": "Library of Congress historical essay says ~£20k gold/silver, a retrospective gross prize estimate; no verified survivor shares, ship expenses, King/Queen remittance."
+    },
+    {
+      "id": "C9-F07",
+      "year": 1574,
+      "theme": "Essex seized Brian O'Neill cattle then Piers aided recovering",
+      "kind": "livestock_lost_then_partly_restored",
+      "quantity": 10000,
+      "unit": "head_cattle",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_remaining_possession_count": null,
+      "amount_in_gbp": null,
+      "explanation": "DIB reports 10,000 head seized and then recovered with Piers help; do NOT count as English net extracted cattle."
+    },
+    {
+      "id": "C9-F08",
+      "year": 1574,
+      "theme": "Essex massacre near Belfast following banquet",
+      "kind": "historical_victims_reported",
+      "quantity": 200,
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "original_roll_of_deaths_available": false,
+      "explanation": "About 200 women, children and followers, not a financial profit metric."
+    },
+    {
+      "id": "C9-F09",
+      "year": 1575,
+      "theme": "Rathlin castle defenders killed",
+      "kind": "historical_victims_reported_subset",
+      "quantity": 200,
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "explanation": "Part of one massacre 1575, never add to later alternative total c600."
+    },
+    {
+      "id": "C9-F10",
+      "year": 1575,
+      "theme": "Rathlin noncombatant refugees killed",
+      "kind": "historical_victims_reported_subset",
+      "quantity_range": [
+        300,
+        400
+      ],
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "explanation": "300–400 noncombatants in caves, largely women children; 200 defenders + 300–400 equals approximate 500–600 with uncertainties."
+    },
+    {
+      "id": "C9-F11",
+      "year": 1575,
+      "theme": "Rathlin alternative academic biography rounded total",
+      "kind": "alternative_victims_total_DO_NOT_ADD",
+      "quantity": 600,
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S04"
+      ],
+      "explanation": "Same Rathlin killing as F09/F10; DIB Norreys c600 not additional 600. No audited named-person registry."
+    },
+    {
+      "id": "C9-F12",
+      "year": 1577,
+      "theme": "Elizabeth I investment in Cathay Company Frobisher ore voyage",
+      "kind": "royal_investment_not_gold_revenue",
+      "quantity": 1000,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S16"
+      ],
+      "audited_actual_income": false,
+      "explanation": "Queen contributed 1000 pounds; no proof of positive realized mining profits."
+    },
+    {
+      "id": "C9-F13",
+      "year": 1578,
+      "theme": "Frobisher 1576–78 ore removed across voyages",
+      "kind": "extracted_worthless_ore",
+      "quantity": 1400,
+      "unit": "tonnes_approx",
+      "approximate": true,
+      "source_ids": [
+        "C9-S15",
+        "C9-S17"
+      ],
+      "year_span": [
+        1576,
+        1578
+      ],
+      "estimated_gold_yield_kg": 0,
+      "explanation": "Parks Canada says about 1400 tons of worthless ore overall, not exclusively 1578; zero profitable gold from this extraction does not measure all financial loss."
+    },
+    {
+      "id": "C9-F14",
+      "year": 1576,
+      "theme": "Frobisher kidnapped Inuit man",
+      "kind": "forcibly_transport_human_being",
+      "quantity": 1,
+      "unit": "person",
+      "source_ids": [
+        "C9-S16"
+      ],
+      "economic_valuation": null,
+      "person_died_after_capture": true,
+      "explanation": "Person cannot be priced as chattel; voyage 1576 from Canadian Bay; source biog."
+    },
+    {
+      "id": "C9-F15",
+      "year": 1577,
+      "theme": "Frobisher kidnapped Inuit Arnaq, Nutaaq, Kalicho",
+      "kind": "forcibly_transport_human_beings",
+      "quantity": 3,
+      "unit": "persons",
+      "source_ids": [
+        "C9-S16",
+        "C9-S23"
+      ],
+      "economic_valuation": null,
+      "all_died_after_abduction": true,
+      "explanation": "British Museum and Canada DCB; not a documented slave sale or sold human beings."
+    },
+    {
+      "id": "C9-F16",
+      "year": 1579,
+      "theme": "Cacafuego captured 1 March 1579",
+      "kind": "Spanish_ship_bullion_spoils_not_yet_accounted",
+      "quantity": null,
+      "currency": null,
+      "source_ids": [
+        "C9-S09",
+        "C9-S11"
+      ],
+      "UK_royal_income_1579_verified": null,
+      "final_cash_Distribution_1580_or_later": true,
+      "explanation": "Rich prize clearly captured but original manifest, metal weights, English cash distribution require documentary review; 1580 homecoming cannot be brought back to 1579."
+    },
+    {
+      "id": "C9-F17",
+      "year": 1579,
+      "theme": "Desmond Rebellion Munster 1579–83 later war death/depopulation",
+      "kind": "cross_decade_loss_not_backdated",
+      "quantity": null,
+      "source_ids": [
+        "C9-S19"
+      ],
+      "measured_1579_dead": null,
+      "measured_1579_English_seized_land_hectares": null,
+      "explanation": "Severe depopulation evidenced across 1579–83, not attributed wholly to first six months of uprising."
+    }
+  ],
+  "summary": {
+    "royal_total_realized_profit_gbp": null,
+    "private_net_1570s_colonial_profit_gbp": null,
+    "known_reported_private_gross_bullion_prize_gbp_1573": 20000,
+    "reported_1579_Cacafuego_haul_gbp": null,
+    "Essex_plan_queen_rent_gbp_yearly_not_earned": 5000,
+    "Essex_campaign_Crown_outlay_gbp_approx": 80000,
+    "Essex_personal_cost_gbp_approx": 35000,
+    "Inuit_kidnappings_1576_77_reported_total": 4,
+    "Rathlin_victims_total_range_historiography": [
+      500,
+      600
+    ],
+    "historically_measured_English_conquered_African_or_Canadian_sqkm": 0
+  },
+  "do_not_sum": [
+    "1575 Rathlin 200 defenders and 300–400 civilians and alternative total 600 overlap",
+    "£5k proposed yearly rent not income, £10k royal loan not revenue and £40k fort budget proposal not spend",
+    "£80k actual royal cost and £35k Essex cost not colony fiscal return",
+    "£20k privately seized Spain bullion cannot equal Crown net",
+    "Frobisher £1000 royal investment not profitable ore gain; 1400t worthless ore not realized gold",
+    "1579 prize would be distributed after return 1580 not recognized in 1579 English Exchequer"
+  ]
+}
