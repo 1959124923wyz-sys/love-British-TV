@@ -173,8 +173,10 @@ function openDossier(item,typ){
  const schematicRoute=route&&(item.route_kind==='documented-endpoints-connection'||/schematic/.test(String(item.route_kind||'')));
  const coastalBand=route&&item.route_kind==='coastal-commercial-reference-schematic';
  const routeWarning=schematicRoute?'<p class="atlas-route-disclaimer">'+
-  (coastalBand?'海岸虚线仅标识史料涉及的宽泛贸易海岸，不表示持续贸易发生线或英国殖民占领区。':
-  '本航线只依据史料地理端点和概略方向绘制，中间折点不是当时船只的实际航迹。')+'</p>':'';
+  (item.route_kind==='documented-endpoints-connection'?
+   '这条虚线只连接有史料支持的起讫地点，不表示船只实际航行轨迹。':
+   coastalBand?'海岸虚线仅标识史料涉及的宽泛贸易海岸，不表示持续贸易发生线或英国殖民占领区。':
+   '本航线只依据史料地理端点和概略方向绘制，中间折点不是当时船只的实际航迹。')+'</p>':'';
  const pointReference=typ==='event'&&item.geographic_disclaimer_zh?
   '<p class="atlas-location-note"><strong>地图定位：</strong>'+escapeHTML(item.geographic_disclaimer_zh)+'</p>':'';
 
