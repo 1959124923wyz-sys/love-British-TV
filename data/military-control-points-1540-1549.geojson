@@ -320,7 +320,7 @@
         "controller": "English garrison/Scottish independent kingdom",
         "source_ids": [
           "SC-CALDWELL-EYEMOUTH",
-          "SC-HES-EYEMOUTH-FORT-SM4577",
+          "SC-HES-EYEMOUTH-SM3190",
           "SC-EYEMOUTH-GEOGRAPH-PIN"
         ],
         "city_symbol_only": true,
@@ -736,6 +736,36 @@
         "end_year": 1547,
         "editorial_status": "published_point_only_1547",
         "not_an_English_control_feature": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "control-roxburgh-english-artillery-fort-1547-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.45696819436,
+          55.59618019271
+        ]
+      },
+      "properties": {
+        "stable_id": "roxburgh-english-artillery-fort-1547-1550",
+        "name": "罗克斯堡1547英军炮堡（遗址参考点）",
+        "year_end_start": 1547,
+        "year_end_stop": 1549,
+        "actual_end_year": 1550,
+        "controller": "English garrison under temporary occupation; Scottish legal sovereignty",
+        "not_an_English_control_feature": false,
+        "source_ids": [
+          "SC-HES-ROXBURGH-2006-09-DGPS-GIS",
+          "SC-BELVOIR-RHP6075-ORIGINAL-MAP",
+          "SC-HES-ROXBURGH-SM1718"
+        ],
+        "historic_polygon_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "geometry_role": "modern_HES_Scheduled_Monument_Point_not_1547_fort_boundary",
+        "precision_note": "Roxburgh现代SM1718中心只是史事地理参考点，1547炮堡可能仅占旧中世纪城堡约110×65米的局部；尚无矢量围界。"
       }
     }
   ]

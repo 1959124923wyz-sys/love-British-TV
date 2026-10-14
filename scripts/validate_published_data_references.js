@@ -84,7 +84,8 @@ const overlayPaths=[
  'data/french-urban-control-1550-1559.geojson',
  'data/political-relations-1550-1559.geojson',
  'data/territorial-footprints-1550-1559.geojson',
- 'data/seventh-control-sites-1550-1559.geojson'
+ 'data/seventh-control-sites-1550-1559.geojson',
+ 'data/issue46-hes-archaeology-reference-1547-1549.geojson'
 ];
 function validCoord(coord,file,id){
  assert.ok(Array.isArray(coord)&&coord.length>=2&&Number.isFinite(coord[0])&&Number.isFinite(coord[1])
@@ -128,6 +129,12 @@ for(const file of overlayPaths){
   if(p.stable_id)assert.ok(placeIds.has(p.stable_id),file+' / '+id+' missing stable linked site '+p.stable_id);
   if(p.start_year!=null&&p.end_year!=null)
    assert.ok(p.start_year<=p.end_year,file+' impossible effective years '+id);
+  if(p.zone_type==='archaeological-reference-not-occupation'){
+   assert.equal(p.fill_authorized,false,file+' modern legal polygon must never be painted as English occupation');
+   assert.equal(p.historical_boundary_confirmed,false,file+' modern legal outline is not 1547 rampart');
+   assert.equal(p.area_sqkm,null,file+' legal scheduled area may not enter Tudor conquest statistics');
+   assert.equal(p.controller_for_polygon,null,file+' ancient controller cannot be attributed to a modern legal perimeter');
+  }
   if(['occupied','contested','war_reach_schematic'].includes(p.zone_type)){
    assert.equal(p.historical_boundary_confirmed,false,file+' needs actual surveyed historical border');
    assert.equal(p.fill_authorized,false,file+' must not present schematic extent as actual verified area');

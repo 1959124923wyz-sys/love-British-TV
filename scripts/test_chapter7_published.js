@@ -61,7 +61,9 @@ assert.equal(atlas.events.find(e=>e.id==='1550S-E015').icon_code,'RES','Approved
 assert.ok(!app.includes('function renderSeventhGeographies()'),'Retired custom navigation not removed');
 assert.ok(!html.includes('chapter7GeographyNav'),'Bespoke map cards still enabled');
 assert.ok(app.includes("className:'atlas-voyage-hit'"));
-assert.ok(app.includes('pointReference'),'Each approximate event needs visible precision note');
+assert.ok(app.includes("['航线或区域几何的史料精度'"),'Schematic route precision belongs only in detailed research');
+assert.ok(app.includes("['地图位置与精度',item?.geographic_disclaimer_zh]"),'Each approximate event requires a deep-archive-only precision note');
+assert.ok(!app.includes('pointReference'),'Location notes must not clutter primary event summaries');
 const routeCounts=[0,0,0,3,5,7,8,9,9,9];
 for(let y=1550;y<=1559;y++)assert.equal(atlas.routes.filter(r=>r.year<=y).length,routeCounts[y-1550],'Dated route mismatch '+y);
 for(const r of atlas.routes){

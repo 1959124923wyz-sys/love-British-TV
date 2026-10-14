@@ -14,7 +14,8 @@ assert.equal(occupied.features.length,10,'Keep ten research-sourced schematic oc
 assert.equal(contested.features.length,4,'Four evidence-anchored low-precision campaign theaters');
 assert.ok(contested.metadata.archival_evidence_for_actual_polygon_boundaries===false);
 assert.ok(contested.metadata.area_statistics_forbidden);
-assert.equal(military.features.length,18,'No change to dated military-site evidence');
+assert.equal(military.features.length,19,'18 previously reviewed garrisons plus one separately cited Roxburgh 1547 site');
+assert.ok(military.features.some(f=>f.properties.stable_id==='roxburgh-english-artillery-fort-1547-1550'&&f.properties.fill_authorized===false),'PR50 Roxburgh point is not a certified occupied territory');
 assert.equal(oldFootprints.features.length,7,'Inherited territorial references must remain intact');
 const ids=new Set(military.features.filter(f=>f.properties.not_an_English_control_feature!==true).map(f=>f.properties.stable_id));
 const originals=new Map(source.features.map(x=>[x.id,x]));
