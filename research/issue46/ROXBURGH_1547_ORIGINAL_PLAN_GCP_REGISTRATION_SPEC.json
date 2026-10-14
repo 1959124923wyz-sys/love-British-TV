@@ -1,0 +1,101 @@
+{
+  "schema": "roxburgh_1547_contemporary_plan_registration_evidence_v1",
+  "date": "2026-10-14",
+  "source": "RCAHMS 1956 Inventory as reproduced by HES Trove NRHE 58412",
+  "source_url": "https://www.trove.scot/place/58412?page=2&tab=related-archives",
+  "original_archive": "Belvoir Castle paper; NRS RHP6075 photostat",
+  "original_plan_reproduction": "RCAHMS 1956 Fig.517",
+  "primary_letter": "Lord Grey of Wilton 15 October 1547 plan survey by Ridgeway",
+  "primary_plan_image_downloaded": false,
+  "plan_license_verified": false,
+  "original_scale_text": "This Platte Contaynyth xl fotte to the inch",
+  "scale_interpretation": "forty feet per inch as historical text; not yet calibrated against pixels or contemporaneous surveying errors; exact feet standard and sheet reproduction dimensions unverified",
+  "source_described_geometry": [
+    {
+      "feature": "English artillery fort enclosure",
+      "described_location": "higher/western part of earlier medieval site",
+      "map_role": "candidate historical extant fort footprint",
+      "provenance_phase": "1547"
+    },
+    {
+      "feature": "Medieval original castle area",
+      "described_location": "some of older enclosure outside new English fort; one-third unoccupied per HES inventory",
+      "map_role": "strictly excluded from 1547 new military fort polygon unless other occupied evidence"
+    },
+    {
+      "feature": "Bell Mount",
+      "described_location": "north-west of 1547 artillery enclosure according to later HES survey; exact positioning depends on spatial orientation of full survey",
+      "map_role": "potential historic-plan-to-terrain control point; medieval inheritance possible"
+    },
+    {
+      "feature": "gate ('Ye gaatte')",
+      "described_location": "south-west corner of 1547 artillery enclosure",
+      "map_role": "candidate plan and present archaeological remains anchor"
+    },
+    {
+      "feature": "Eastern ditch ('A Dyche')",
+      "described_location": "outer ditch running from northern old mound edge to entry bastion",
+      "map_role": "outer engineering line; not safe to treat as all filled sovereign land"
+    },
+    {
+      "feature": "old well enclosure",
+      "described_location": "outside new English fort near south-east of external enclosure",
+      "map_role": "explicit separate older structure, do not include as English new fort construction"
+    },
+    {
+      "feature": "River Tweed",
+      "described_location": "marked across upper side of original plan",
+      "map_role": "geographic orientation/control only, 16th-century channel location potentially changed"
+    },
+    {
+      "feature": "River Teviot",
+      "described_location": "marked across lower side of original plan",
+      "map_role": "geographic orientation/control only, no unverified shoreline georegistration"
+    },
+    {
+      "feature": "surviving masonry/reused curtain",
+      "described_location": "on southeast side some earlier castle wall reused by new artillery fort",
+      "map_role": "phase overlay required"
+    }
+  ],
+  "geometry_quality_constraints": {
+    "official_hes_site_1547_fort_long_m_approx": 110,
+    "official_hes_site_1547_fort_cross_m_approx": 65,
+    "fort_historical_orientation_desc": "E-W major axis in historic plan; modern HES earthwork description NE-SW alignment; reconcile with plan before digitization",
+    "raw_scan_usable": false,
+    "five_or_more_historical_control_anchor_sites_available_in_text": true,
+    "their_actual_easting_northing_or_pixel_coordinates_unverified": true,
+    "modern_hes_protection_area_is_not_the_1547_polygon": true,
+    "documentary_reproduction_copyright_unresolved": true,
+    "do_not_draw_imaginary_outline": true
+  },
+  "phases": [
+    {
+      "year": 1545,
+      "statement": "Hertford examined a then-ruined older castle",
+      "confirmed_eng_artillery_fort_exist": false
+    },
+    {
+      "year": 1547,
+      "statement": "15 October contemporary work-in-progress plan and fort building confirmed",
+      "confirmed_eng_artillery_fort_exist": true
+    },
+    {
+      "year": 1550,
+      "statement": "English withdrawal and forts demolition in the Boulogne peace aftermath",
+      "confirmed_eng_artillery_fort_exist_at_yearend": false
+    }
+  ],
+  "direct_source_quote_length_guard": "Only brief labels and scale text recorded, not copying source explanatory paragraphs",
+  "mandatory_registration_recipe": [
+    "Read RHP6075 scan at original unresized resolution or obtain RCAHMS Fig517 archival scan with usage rights.",
+    "Identify 1547 line classifications before marking GCP: new English fort wall, reused medieval curtain, exterior ditch, older castle/garden/multi-phase terrain.",
+    "Acquire RCAHMS 2006–09 DGPS digital terrain and interpreted earthwork line layer in EPSG:27700.",
+    "Select at least four geometrically distinct historic-terrace/stonework/ditch tie points visible in both source plan and DGPS survey, retain per-point source confidence.",
+    "Compute registration residuals; report RMSE and maximum error, compare with scale/period alignment uncertainties, and manually review.",
+    "Digitize only original English artillery enclosure as separate derived geojson with source file hash, GCPs, analyst/reviewer, usage license and YearEnd policy.",
+    "Where footprint depends on invisible/reused structures, mark inferred segments as dashed/uncertain rather than all-solid verified.",
+    "Reject modern scheduling polygon, any 110×65 invented rectangle, convex hull of towns, and coastlines as ancient 1547 political land boundary."
+  ],
+  "impact_to_issue46": "This plan provides contemporaneous measurement and recognizable identifiable anchors; open polygon gate is unresolved until image/GPS control vertices are obtained."
+}
