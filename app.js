@@ -1235,6 +1235,8 @@ async function boot(){
      fetch('data/war-front-corridors-1540-1549.geojson',{cache:'no-store'})
    ]);
    if(notesResponse.ok)researchNotes=(await notesResponse.json()).records||{};
+   const ninthNotesResponse=await fetch('data/chapter9-detail-notes.json',{cache:'no-store'});
+   if(ninthNotesResponse.ok)Object.assign(researchNotes,(await ninthNotesResponse.json()).records||{});
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
    if(thirdGeoResponse.ok)geographicHypothesesThird=await thirdGeoResponse.json();
    if(controlResponse.ok)frenchCityAreas=await controlResponse.json();
