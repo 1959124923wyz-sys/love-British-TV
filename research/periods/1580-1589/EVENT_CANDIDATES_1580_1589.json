@@ -5,13 +5,13 @@
     1589
   ],
   "model": "year_of_act_not_year_of_printed_map",
-  "total": 19,
+  "total": 21,
   "events": [
     {
       "id": "ch10-1580-loughrea-recapture",
       "year": 1580,
-      "month_or_day": "10-01",
-      "date_precision": "year_only",
+      "month_or_day": null,
+      "date_precision": "year",
       "title": "洛赫雷夜袭，地方军队夺回英军驻镇",
       "description": "爱尔兰的伯克家族军队夜袭洛赫雷，击败当地英军驻守，并释放遭扣押人员。",
       "icon_code": "RES",
@@ -26,7 +26,7 @@
         "geometry": null,
         "geo_precision": "unlocated_exact_site",
         "site_label": "Loughrea",
-        "reason": "年内日期未核；源编年M1580.26"
+        "reason": "《四大师编年史》M1580.26只核至1580年，具体月日未考证"
       },
       "significance": {
         "level": 2,
@@ -138,8 +138,8 @@
       "place": "Glanageenty",
       "region": "Ireland",
       "source_ids": [
-        "C10-S05",
-        "C10-S04"
+        "C10-S42",
+        "C10-S05"
       ],
       "geography": {
         "feature_type": "none_until_site_provenance",
@@ -187,35 +187,6 @@
       "foreign_sovereignty_does_not_flip": true
     },
     {
-      "id": "ch10-1585-aquascogoc-arson",
-      "year": 1585,
-      "month_or_day": "07-16",
-      "date_precision": "day",
-      "title": "英军焚毁阿奎斯科科克村庄及庄稼",
-      "description": "格伦维尔率领英军因丢失一只银杯而攻击阿尔冈昆人的阿奎斯科科克村庄，焚烧住宅、毁坏农作物。",
-      "icon_code": "REP",
-      "kind": "burning_indigenous_village",
-      "place": "Aquascogoc",
-      "region": "North America",
-      "source_ids": [
-        "C10-S23"
-      ],
-      "geography": {
-        "feature_type": "none_until_site_provenance",
-        "geometry": null,
-        "geo_precision": "unlocated_exact_site",
-        "site_label": "Aquascogoc",
-        "reason": "村址具体GPS未经考古确认"
-      },
-      "significance": {
-        "level": 3,
-        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
-        "review_status": "research_editorial_candidate"
-      },
-      "inclusion": "candidate_not_in_main",
-      "foreign_sovereignty_does_not_flip": true
-    },
-    {
       "id": "ch10-1585-roanoke-military-post",
       "year": 1585,
       "month_or_day": null,
@@ -240,6 +211,35 @@
       "significance": {
         "level": 2,
         "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1585-aquascogoc-arson",
+      "year": 1585,
+      "month_or_day": "07-16",
+      "date_precision": "day",
+      "title": "英军焚毁阿奎斯科科克村庄及庄稼",
+      "description": "格伦维尔率领英军因丢失一只银杯而攻击阿尔冈昆人的阿奎斯科科克村庄，焚烧住宅、毁坏农作物。",
+      "icon_code": "REP",
+      "kind": "burning_indigenous_village",
+      "place": "Aquascogoc",
+      "region": "North America",
+      "source_ids": [
+        "C10-S23"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Aquascogoc",
+        "reason": "村址具体GPS未经考古确认"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
         "review_status": "research_editorial_candidate"
       },
       "inclusion": "candidate_not_in_main",
@@ -277,12 +277,73 @@
       "foreign_sovereignty_does_not_flip": true
     },
     {
+      "id": "ch10-1586-drake-displaced-captives",
+      "year": 1586,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "德雷克舰队掳带被奴役者及原住民",
+      "description": "多份1586年西班牙人证词记载，英军在加勒比袭击后把非洲人、穆斯林桨手及美洲原住民带上舰队。其身份、人数及最终去向存在分歧。",
+      "icon_code": "SLV",
+      "kind": "captives_forced_transport",
+      "place": "Caribbean",
+      "region": "Atlantic",
+      "source_ids": [
+        "C10-S25",
+        "C10-S26"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Caribbean",
+        "reason": "报告所称150/200/250/300并非独立可相加的数字; 北卡是否有人被留下仍未证"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-munster-allotment-map",
+      "year": 1586,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "芒斯特没收土地分配图绘制",
+      "description": "英国政府测绘并准备分配没收的芒斯特土地。1586年6月地图以红线标示向英格兰申请者分配的庄园位置。",
+      "icon_code": "TER",
+      "kind": "land_allotment_plan",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S05",
+        "C10-S08",
+        "C10-S31"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Munster",
+        "reason": "1586申请边界不是全年实际控制区; 原地图TNA MPF1/273"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
       "id": "ch10-1586-drake-santo-domingo",
       "year": 1586,
       "month_or_day": "01",
       "date_precision": "month",
       "title": "德雷克占领并勒索圣多明各",
-      "description": "英军夺取西属圣多明各，掠夺城内财物并索取赎金后撤离。学术研究记载该城赎金约二万五千杜卡特。",
+      "description": "德雷克英军攻取西属圣多明各，劫取财物并索取赎金后撤退。学术研究记载赎金约二万五千杜卡特。",
       "icon_code": "ECO",
       "kind": "ransom_privateering",
       "place": "Santo Domingo",
@@ -290,7 +351,7 @@
       "source_ids": [
         "C10-S09",
         "C10-S10",
-        "C10-S25"
+        "C10-S41"
       ],
       "geography": {
         "feature_type": "none_until_site_provenance",
@@ -329,36 +390,6 @@
         "geo_precision": "unlocated_exact_site",
         "site_label": "Cartagena de Indias",
         "reason": "城区约6周,具体开始结束日期可持续考证; 不当成英国长期殖民地"
-      },
-      "significance": {
-        "level": 3,
-        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
-        "review_status": "research_editorial_candidate"
-      },
-      "inclusion": "candidate_not_in_main",
-      "foreign_sovereignty_does_not_flip": true
-    },
-    {
-      "id": "ch10-1586-drake-displaced-captives",
-      "year": 1586,
-      "month_or_day": "03",
-      "date_precision": "year",
-      "title": "德雷克舰队掳带被奴役者及原住民",
-      "description": "多份1586年西班牙人证词记载，英军在加勒比袭击后把非洲人、穆斯林桨手及美洲原住民带上舰队。其身份、人数及最终去向存在分歧。",
-      "icon_code": "SLV",
-      "kind": "captives_forced_transport",
-      "place": "Caribbean",
-      "region": "Atlantic",
-      "source_ids": [
-        "C10-S25",
-        "C10-S26"
-      ],
-      "geography": {
-        "feature_type": "none_until_site_provenance",
-        "geometry": null,
-        "geo_precision": "unlocated_exact_site",
-        "site_label": "Caribbean",
-        "reason": "报告所称150/200/250/300并非独立可相加的数字; 北卡是否有人被留下仍未证"
       },
       "significance": {
         "level": 3,
@@ -430,27 +461,25 @@
       "foreign_sovereignty_does_not_flip": true
     },
     {
-      "id": "ch10-1586-munster-allotment-map",
-      "year": 1586,
+      "id": "ch10-1587-croatoan-friendly-attack",
+      "year": 1587,
       "month_or_day": null,
       "date_precision": "year",
-      "title": "芒斯特没收土地分配图绘制",
-      "description": "英国政府测绘并准备分配没收的芒斯特土地。1586年6月地图以红线标示向英格兰申请者分配的庄园位置。",
-      "icon_code": "TER",
-      "kind": "land_allotment_plan",
-      "place": "Munster",
-      "region": "Ireland",
+      "title": "罗阿诺克殖民者误袭友好克罗阿坦人",
+      "description": "约翰·怀特率领的殖民者为报复一次袭击，错误地袭击了原本友好的克罗阿坦社区。",
+      "icon_code": "REP",
+      "kind": "indigenous_allied_community_attacked",
+      "place": "Roanoke mainland",
+      "region": "North America",
       "source_ids": [
-        "C10-S05",
-        "C10-S08",
-        "C10-S31"
+        "C10-S14"
       ],
       "geography": {
         "feature_type": "none_until_site_provenance",
         "geometry": null,
         "geo_precision": "unlocated_exact_site",
-        "site_label": "Munster",
-        "reason": "1586申请边界不是全年实际控制区; 原地图TNA MPF1/273"
+        "site_label": "Roanoke mainland",
+        "reason": "现代部落地名与具体战斗点不能混同"
       },
       "significance": {
         "level": 2,
@@ -491,35 +520,6 @@
       "foreign_sovereignty_does_not_flip": true
     },
     {
-      "id": "ch10-1587-croatoan-friendly-attack",
-      "year": 1587,
-      "month_or_day": null,
-      "date_precision": "year",
-      "title": "罗阿诺克殖民者误袭友好克罗阿坦人",
-      "description": "约翰·怀特率领的殖民者为报复一次袭击，错误地袭击了原本友好的克罗阿坦社区。",
-      "icon_code": "REP",
-      "kind": "indigenous_allied_community_attacked",
-      "place": "Roanoke mainland",
-      "region": "North America",
-      "source_ids": [
-        "C10-S14"
-      ],
-      "geography": {
-        "feature_type": "none_until_site_provenance",
-        "geometry": null,
-        "geo_precision": "unlocated_exact_site",
-        "site_label": "Roanoke mainland",
-        "reason": "现代部落地名与具体战斗点不能混同"
-      },
-      "significance": {
-        "level": 2,
-        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
-        "review_status": "research_editorial_candidate"
-      },
-      "inclusion": "candidate_not_in_main",
-      "foreign_sovereignty_does_not_flip": true
-    },
-    {
       "id": "ch10-1587-cavendish-santa-ana",
       "year": 1587,
       "month_or_day": "11",
@@ -543,6 +543,38 @@
       "significance": {
         "level": 3,
         "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "year": 1589,
+      "month_or_day": "05",
+      "date_precision": "month",
+      "id": "ch10-1589-coruna-eng-siege",
+      "title": "英军进攻拉科鲁尼亚，劫掠并焚烧渔民区",
+      "description": "德雷克与诺里斯率领英军围攻拉科鲁尼亚，焚毁、劫掠城外渔民区。守城军民击退了英军对主城的进攻，舰队随后撤退。",
+      "icon_code": "WAR",
+      "kind": "sacking_and_failed_siege",
+      "place": "A Coruña Pescadería",
+      "region": "Galicia Spain",
+      "source_ids": [
+        "C10-S44",
+        "C10-S45",
+        "C10-S46",
+        "C10-S50"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_city_region_only",
+        "site_label": "A Coruña Pescadería",
+        "reason": "已核现代城市，但1589遭毁的具体每栋建筑不具古GPS"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有同时代城市教区文字与官方研究支持的英军攻掠及平民财产损毁",
         "review_status": "research_editorial_candidate"
       },
       "inclusion": "candidate_not_in_main",
@@ -574,6 +606,37 @@
       "significance": {
         "level": 3,
         "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "year": 1589,
+      "month_or_day": "06",
+      "date_precision": "month",
+      "id": "ch10-1589-vigo-eng-sacking",
+      "title": "德雷克英军袭击维戈，纵火焚烧民居和教堂",
+      "description": "德雷克率领的英军进入维戈，掠夺并烧毁民居、仓库、船只和教堂。当地堂区神父留下了损毁情况的记述。",
+      "icon_code": "REP",
+      "kind": "town_sacking_burning",
+      "place": "Vigo",
+      "region": "Galicia Spain",
+      "source_ids": [
+        "C10-S50",
+        "C10-S51",
+        "C10-S47"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_city_region_only",
+        "site_label": "Vigo",
+        "reason": "已核现代城市，但1589遭毁的具体每栋建筑不具古GPS"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有同时代城市教区文字与官方研究支持的英军攻掠及平民财产损毁",
         "review_status": "research_editorial_candidate"
       },
       "inclusion": "candidate_not_in_main",
