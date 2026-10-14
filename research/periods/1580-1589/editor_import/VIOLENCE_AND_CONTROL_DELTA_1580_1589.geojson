@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "schema": "ch10_violence_and_control_delta_editor_v1",
-  "count": 28,
+  "count": 30,
   "metadata": {
     "period": [
       1580,
@@ -9,11 +9,122 @@
     ],
     "historical_polygon_count": 0,
     "point_features": 16,
-    "null_geometry_features": 12,
+    "null_geometry_features": 14,
     "source": "Research PR59, independent event ledger and modern geography sources",
     "future_state_no_auto_ownership": true
   },
   "features": [
+    {
+      "type": "Feature",
+      "id": "ch10-delta-ch10-1580-askeaton-abandonment",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.973985,
+          52.600449
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-1580-askeaton-abandonment",
+        "editor_atlas_event_id": "1580S-E004",
+        "name": "卡里加福伊尔失守后，阿斯基顿等德斯蒙德堡垒被弃",
+        "year": 1580,
+        "start_year": 1580,
+        "end_year": 1580,
+        "icon_code": "RES",
+        "action_category": "resistance",
+        "source_ids": [
+          "C10-S52",
+          "C10-S53",
+          "C10-S64"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": null,
+        "source_geography_url": "https://excavations.ie/report/2022/Limerick/0032387/",
+        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "approx_month",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-delta-ch10-1580-carrigafoyle-massacre",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.49403,
+          52.5699
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-1580-carrigafoyle-massacre",
+        "editor_atlas_event_id": "1580S-E003",
+        "name": "英军攻破卡里加福伊尔城堡，处死残存守军",
+        "year": 1580,
+        "start_year": 1580,
+        "end_year": 1580,
+        "icon_code": "REP",
+        "action_category": "massacre_or_violent_repression",
+        "source_ids": [
+          "C10-S52",
+          "C10-S53"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": null,
+        "source_geography_url": "https://mapcarta.com/W772414232",
+        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "March 1580, exact dates require Old Style calendar audit",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-delta-ch10-1580-drake-plymouth",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.1424,
+          50.3714
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-1580-drake-plymouth",
+        "editor_atlas_event_id": "1580S-E006",
+        "name": "德雷克环球航行返英，1579年劫获财物进入本土",
+        "year": 1580,
+        "start_year": 1580,
+        "end_year": 1580,
+        "icon_code": "ECO",
+        "action_category": "violent_economic_extraction",
+        "source_ids": [
+          "C10-S30"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": null,
+        "source_geography_url": "https://mapcarta.com/Plymouth_%28England%29",
+        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "month",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
     {
       "type": "Feature",
       "id": "ch10-delta-ch10-1580-loughrea-recapture",
@@ -89,81 +200,6 @@
     },
     {
       "type": "Feature",
-      "id": "ch10-delta-ch10-1580-carrigafoyle-massacre",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.49403,
-          52.5699
-        ]
-      },
-      "properties": {
-        "stable_id": "ch10-1580-carrigafoyle-massacre",
-        "editor_atlas_event_id": "1580S-E003",
-        "name": "英军攻破卡里加福伊尔城堡，处死残存守军",
-        "year": 1580,
-        "start_year": 1580,
-        "end_year": 1580,
-        "icon_code": "REP",
-        "action_category": "massacre_or_violent_repression",
-        "source_ids": [
-          "C10-S52",
-          "C10-S53"
-        ],
-        "historical_event_occurred": true,
-        "controller_transition": null,
-        "historical_control_change": null,
-        "source_geography_url": "https://mapcarta.com/W772414232",
-        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
-        "map_layer": "events",
-        "historical_boundary_confirmed": false,
-        "actual_English_territory_polygon": false,
-        "area_sqkm": null,
-        "fill_authorized": false,
-        "start_precision": "March 1580, exact dates require Old Style calendar audit",
-        "uncertain_area_boundary_dashed_if_ever_traced": true
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "ch10-delta-ch10-1580-askeaton-abandonment",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.973985,
-          52.600449
-        ]
-      },
-      "properties": {
-        "stable_id": "ch10-1580-askeaton-abandonment",
-        "editor_atlas_event_id": "1580S-E004",
-        "name": "卡里加福伊尔失守后，阿斯基顿等德斯蒙德堡垒被弃",
-        "year": 1580,
-        "start_year": 1580,
-        "end_year": 1580,
-        "icon_code": "RES",
-        "action_category": "resistance",
-        "source_ids": [
-          "C10-S52",
-          "C10-S53",
-          "C10-S64"
-        ],
-        "historical_event_occurred": true,
-        "controller_transition": null,
-        "historical_control_change": null,
-        "source_geography_url": "https://excavations.ie/report/2022/Limerick/0032387/",
-        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
-        "map_layer": "events",
-        "historical_boundary_confirmed": false,
-        "actual_English_territory_polygon": false,
-        "area_sqkm": null,
-        "fill_authorized": false,
-        "start_precision": "approx_month",
-        "uncertain_area_boundary_dashed_if_ever_traced": true
-      }
-    },
-    {
-      "type": "Feature",
       "id": "ch10-delta-ch10-1580-pelham-second-kerry",
       "geometry": null,
       "properties": {
@@ -184,42 +220,6 @@
         "historical_control_change": null,
         "source_geography_url": null,
         "geospatial_role": "unlocated_regional_historical_event",
-        "map_layer": "events",
-        "historical_boundary_confirmed": false,
-        "actual_English_territory_polygon": false,
-        "area_sqkm": null,
-        "fill_authorized": false,
-        "start_precision": "month",
-        "uncertain_area_boundary_dashed_if_ever_traced": true
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "ch10-delta-ch10-1580-drake-plymouth",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.1424,
-          50.3714
-        ]
-      },
-      "properties": {
-        "stable_id": "ch10-1580-drake-plymouth",
-        "editor_atlas_event_id": "1580S-E006",
-        "name": "德雷克环球航行返英，1579年劫获财物进入本土",
-        "year": 1580,
-        "start_year": 1580,
-        "end_year": 1580,
-        "icon_code": "ECO",
-        "action_category": "violent_economic_extraction",
-        "source_ids": [
-          "C10-S30"
-        ],
-        "historical_event_occurred": true,
-        "controller_transition": null,
-        "historical_control_change": null,
-        "source_geography_url": "https://mapcarta.com/Plymouth_%28England%29",
-        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
         "map_layer": "events",
         "historical_boundary_confirmed": false,
         "actual_English_territory_polygon": false,
@@ -259,6 +259,37 @@
         "historical_control_change": null,
         "source_geography_url": "https://mapcarta.com/N12125205900",
         "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "day",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-delta-ch10-1582-barkley-crops-hostages",
+      "geometry": null,
+      "properties": {
+        "stable_id": "ch10-1582-barkley-crops-hostages",
+        "editor_atlas_event_id": "1580S-E010",
+        "name": "芒斯特英军献策毁粮夺畜并抓捕家眷",
+        "year": 1582,
+        "start_year": 1582,
+        "end_year": 1582,
+        "icon_code": "LAB",
+        "action_category": "coercive_policy",
+        "source_ids": [
+          "C10-S34",
+          "C10-S33"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": null,
+        "source_geography_url": null,
+        "geospatial_role": "unlocated_regional_historical_event",
         "map_layer": "events",
         "historical_boundary_confirmed": false,
         "actual_English_territory_polygon": false,
@@ -332,20 +363,20 @@
     },
     {
       "type": "Feature",
-      "id": "ch10-delta-ch10-1582-barkley-crops-hostages",
+      "id": "ch10-delta-ch10-1583-desmond-death",
       "geometry": null,
       "properties": {
-        "stable_id": "ch10-1582-barkley-crops-hostages",
-        "editor_atlas_event_id": "1580S-E010",
-        "name": "芒斯特英军献策毁粮夺畜并抓捕家眷",
-        "year": 1582,
-        "start_year": 1582,
-        "end_year": 1582,
-        "icon_code": "LAB",
-        "action_category": "coercive_policy",
+        "stable_id": "ch10-1583-desmond-death",
+        "editor_atlas_event_id": "1580S-E012",
+        "name": "德斯蒙德伯爵被俘后斩首，起义阶段结束",
+        "year": 1583,
+        "start_year": 1583,
+        "end_year": 1583,
+        "icon_code": "WAR",
+        "action_category": "military_attack",
         "source_ids": [
-          "C10-S34",
-          "C10-S33"
+          "C10-S42",
+          "C10-S05"
         ],
         "historical_event_occurred": true,
         "controller_transition": null,
@@ -393,37 +424,6 @@
     },
     {
       "type": "Feature",
-      "id": "ch10-delta-ch10-1583-desmond-death",
-      "geometry": null,
-      "properties": {
-        "stable_id": "ch10-1583-desmond-death",
-        "editor_atlas_event_id": "1580S-E012",
-        "name": "德斯蒙德伯爵被俘后斩首，起义阶段结束",
-        "year": 1583,
-        "start_year": 1583,
-        "end_year": 1583,
-        "icon_code": "WAR",
-        "action_category": "military_attack",
-        "source_ids": [
-          "C10-S42",
-          "C10-S05"
-        ],
-        "historical_event_occurred": true,
-        "controller_transition": null,
-        "historical_control_change": null,
-        "source_geography_url": null,
-        "geospatial_role": "unlocated_regional_historical_event",
-        "map_layer": "events",
-        "historical_boundary_confirmed": false,
-        "actual_English_territory_polygon": false,
-        "area_sqkm": null,
-        "fill_authorized": false,
-        "start_precision": "day",
-        "uncertain_area_boundary_dashed_if_ever_traced": true
-      }
-    },
-    {
-      "type": "Feature",
       "id": "ch10-delta-ch10-1584-desmond-survey-start",
       "geometry": null,
       "properties": {
@@ -444,43 +444,6 @@
         "historical_control_change": null,
         "source_geography_url": null,
         "geospatial_role": "unlocated_regional_historical_event",
-        "map_layer": "events",
-        "historical_boundary_confirmed": false,
-        "actual_English_territory_polygon": false,
-        "area_sqkm": null,
-        "fill_authorized": false,
-        "start_precision": "year",
-        "uncertain_area_boundary_dashed_if_ever_traced": true
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "ch10-delta-ch10-1585-roanoke-military-post",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.70896,
-          35.936944
-        ]
-      },
-      "properties": {
-        "stable_id": "ch10-1585-roanoke-military-post",
-        "editor_atlas_event_id": "1580S-E014",
-        "name": "英军在罗阿诺克建立军事据点",
-        "year": 1585,
-        "start_year": 1585,
-        "end_year": 1585,
-        "icon_code": "TER",
-        "action_category": "land_dispossession",
-        "source_ids": [
-          "C10-S13",
-          "C10-S15"
-        ],
-        "historical_event_occurred": true,
-        "controller_transition": null,
-        "historical_control_change": "local_English_occupation_point_created_1585",
-        "source_geography_url": "https://www.nps.gov/fora/planyourvisit/directions.htm",
-        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
         "map_layer": "events",
         "historical_boundary_confirmed": false,
         "actual_English_territory_polygon": false,
@@ -567,6 +530,81 @@
     },
     {
       "type": "Feature",
+      "id": "ch10-delta-ch10-1585-roanoke-military-post",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.70896,
+          35.936944
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-1585-roanoke-military-post",
+        "editor_atlas_event_id": "1580S-E014",
+        "name": "英军在罗阿诺克建立军事据点",
+        "year": 1585,
+        "start_year": 1585,
+        "end_year": 1585,
+        "icon_code": "TER",
+        "action_category": "land_dispossession",
+        "source_ids": [
+          "C10-S13",
+          "C10-S15"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": "local_English_occupation_point_created_1585",
+        "source_geography_url": "https://www.nps.gov/fora/planyourvisit/directions.htm",
+        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "year",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-delta-ch10-1586-drake-cartagena",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5383,
+          10.419
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-1586-drake-cartagena",
+        "editor_atlas_event_id": "1580S-E020",
+        "name": "德雷克攻占卡塔赫纳，索取巨额赎金",
+        "year": 1586,
+        "start_year": 1586,
+        "end_year": 1586,
+        "icon_code": "ECO",
+        "action_category": "violent_economic_extraction",
+        "source_ids": [
+          "C10-S11",
+          "C10-S12",
+          "C10-S27"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": null,
+        "source_geography_url": "https://wiki.openstreetmap.org/wiki/Cartagena",
+        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "month",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
       "id": "ch10-delta-ch10-1586-drake-displaced-captives",
       "geometry": null,
       "properties": {
@@ -581,38 +619,6 @@
         "source_ids": [
           "C10-S25",
           "C10-S26"
-        ],
-        "historical_event_occurred": true,
-        "controller_transition": null,
-        "historical_control_change": null,
-        "source_geography_url": null,
-        "geospatial_role": "unlocated_regional_historical_event",
-        "map_layer": "events",
-        "historical_boundary_confirmed": false,
-        "actual_English_territory_polygon": false,
-        "area_sqkm": null,
-        "fill_authorized": false,
-        "start_precision": "year",
-        "uncertain_area_boundary_dashed_if_ever_traced": true
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "ch10-delta-ch10-1586-munster-allotment-map",
-      "geometry": null,
-      "properties": {
-        "stable_id": "ch10-1586-munster-allotment-map",
-        "editor_atlas_event_id": "1580S-E018",
-        "name": "芒斯特没收土地分配图绘制",
-        "year": 1586,
-        "start_year": 1586,
-        "end_year": 1586,
-        "icon_code": "TER",
-        "action_category": "land_dispossession",
-        "source_ids": [
-          "C10-S05",
-          "C10-S08",
-          "C10-S31"
         ],
         "historical_event_occurred": true,
         "controller_transition": null,
@@ -668,44 +674,6 @@
     },
     {
       "type": "Feature",
-      "id": "ch10-delta-ch10-1586-drake-cartagena",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.5383,
-          10.419
-        ]
-      },
-      "properties": {
-        "stable_id": "ch10-1586-drake-cartagena",
-        "editor_atlas_event_id": "1580S-E020",
-        "name": "德雷克攻占卡塔赫纳，索取巨额赎金",
-        "year": 1586,
-        "start_year": 1586,
-        "end_year": 1586,
-        "icon_code": "ECO",
-        "action_category": "violent_economic_extraction",
-        "source_ids": [
-          "C10-S11",
-          "C10-S12",
-          "C10-S27"
-        ],
-        "historical_event_occurred": true,
-        "controller_transition": null,
-        "historical_control_change": null,
-        "source_geography_url": "https://wiki.openstreetmap.org/wiki/Cartagena",
-        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
-        "map_layer": "events",
-        "historical_boundary_confirmed": false,
-        "actual_English_territory_polygon": false,
-        "area_sqkm": null,
-        "fill_authorized": false,
-        "start_precision": "month",
-        "uncertain_area_boundary_dashed_if_ever_traced": true
-      }
-    },
-    {
-      "type": "Feature",
       "id": "ch10-delta-ch10-1586-drake-st-augustine",
       "geometry": {
         "type": "Point",
@@ -744,6 +712,69 @@
     },
     {
       "type": "Feature",
+      "id": "ch10-delta-ch10-1586-june27-munster-plantation-articles",
+      "geometry": null,
+      "properties": {
+        "stable_id": "ch10-1586-june27-munster-plantation-articles",
+        "editor_atlas_event_id": "1580S-E029",
+        "name": "英王批准芒斯特殖民地契：分配庄园、设租并排除本地爱尔兰人的承领权",
+        "year": 1586,
+        "start_year": 1586,
+        "end_year": 1586,
+        "icon_code": "TER",
+        "action_category": "plantation_legal_dispossession",
+        "source_ids": [
+          "C10-S69",
+          "C10-S66"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": "Crown_estate_rules_or_disbursed_grantee_number",
+        "source_geography_url": null,
+        "geospatial_role": "historical_legal_claim_over_Munster_without_rectified_seignory_polygon",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "day",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-delta-ch10-1586-munster-allotment-map",
+      "geometry": null,
+      "properties": {
+        "stable_id": "ch10-1586-munster-allotment-map",
+        "editor_atlas_event_id": "1580S-E018",
+        "name": "芒斯特没收土地分配图绘制",
+        "year": 1586,
+        "start_year": 1586,
+        "end_year": 1586,
+        "icon_code": "TER",
+        "action_category": "land_dispossession",
+        "source_ids": [
+          "C10-S05",
+          "C10-S08",
+          "C10-S31"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": null,
+        "source_geography_url": null,
+        "geospatial_role": "unlocated_regional_historical_event",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "year",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
       "id": "ch10-delta-ch10-1586-wingina-killed",
       "geometry": null,
       "properties": {
@@ -764,6 +795,42 @@
         "historical_control_change": null,
         "source_geography_url": null,
         "geospatial_role": "unlocated_regional_historical_event",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "actual_English_territory_polygon": false,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "start_precision": "month",
+        "uncertain_area_boundary_dashed_if_ever_traced": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-delta-ch10-1587-cavendish-santa-ana",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.89436,
+          22.87656
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-1587-cavendish-santa-ana",
+        "editor_atlas_event_id": "1580S-E025",
+        "name": "卡文迪什在下加利福尼亚劫获马尼拉大帆船",
+        "year": 1587,
+        "start_year": 1587,
+        "end_year": 1587,
+        "icon_code": "ECO",
+        "action_category": "violent_economic_extraction",
+        "source_ids": [
+          "C10-S19"
+        ],
+        "historical_event_occurred": true,
+        "controller_transition": null,
+        "historical_control_change": null,
+        "source_geography_url": "https://mapcarta.com/20317066",
+        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
         "map_layer": "events",
         "historical_boundary_confirmed": false,
         "actual_English_territory_polygon": false,
@@ -842,37 +909,32 @@
     },
     {
       "type": "Feature",
-      "id": "ch10-delta-ch10-1587-cavendish-santa-ana",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -109.89436,
-          22.87656
-        ]
-      },
+      "id": "ch10-delta-ch10-1588-munster-only35-undertakers",
+      "geometry": null,
       "properties": {
-        "stable_id": "ch10-1587-cavendish-santa-ana",
-        "editor_atlas_event_id": "1580S-E025",
-        "name": "卡文迪什在下加利福尼亚劫获马尼拉大帆船",
-        "year": 1587,
-        "start_year": 1587,
-        "end_year": 1587,
-        "icon_code": "ECO",
-        "action_category": "violent_economic_extraction",
+        "stable_id": "ch10-1588-munster-only35-undertakers",
+        "editor_atlas_event_id": "1580S-E030",
+        "name": "芒斯特殖民授地实际进度远少于最初计划",
+        "year": 1588,
+        "start_year": 1588,
+        "end_year": 1588,
+        "icon_code": "TER",
+        "action_category": "plantation_legal_dispossession",
         "source_ids": [
-          "C10-S19"
+          "C10-S70",
+          "C10-S69"
         ],
         "historical_event_occurred": true,
         "controller_transition": null,
-        "historical_control_change": null,
-        "source_geography_url": "https://mapcarta.com/20317066",
-        "geospatial_role": "modern_named_heritage_or_town_anchoring_not_historical_action_geometry",
+        "historical_control_change": "Crown_estate_rules_or_disbursed_grantee_number",
+        "source_geography_url": null,
+        "geospatial_role": "historical_legal_claim_over_Munster_without_rectified_seignory_polygon",
         "map_layer": "events",
         "historical_boundary_confirmed": false,
         "actual_English_territory_polygon": false,
         "area_sqkm": null,
         "fill_authorized": false,
-        "start_precision": "month",
+        "start_precision": "year",
         "uncertain_area_boundary_dashed_if_ever_traced": true
       }
     },
