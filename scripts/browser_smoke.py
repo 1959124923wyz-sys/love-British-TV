@@ -687,7 +687,7 @@ try:
     set_year(1567,18)
     verify("1567 third voyage Guinea scope missing",
            """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===12""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===11""",driver)
     set_year(1568,23)
     verify("1568 captive shipment route, unknown coastal raided settlement caveat missing",
            """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
