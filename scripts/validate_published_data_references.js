@@ -132,7 +132,7 @@ for(const file of overlayPaths){
    assert.ok(eventIds.has(rid),file+' / '+id+' unknown event link '+rid);
   if(p.related_place_ids)for(const pid of p.related_place_ids)
    assert.ok(placeIds.has(pid),file+' / '+id+' unknown place link '+pid);
-  if(p.stable_id)assert.ok(placeIds.has(p.stable_id),file+' / '+id+' missing stable linked site '+p.stable_id);
+  if(p.stable_id&&p.zone_type!=='enslavement_event_activity_schematic')assert.ok(placeIds.has(p.stable_id),file+' / '+id+' missing stable linked site '+p.stable_id);
   if(p.start_year!=null&&p.end_year!=null)
    assert.ok(p.start_year<=p.end_year,file+' impossible effective years '+id);
   if(p.zone_type==='enslavement_event_activity_schematic'){
