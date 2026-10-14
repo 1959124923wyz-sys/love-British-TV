@@ -759,7 +759,7 @@ try:
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E028"]').click()""")
     verify("1578 scholarly source attribution lost",
            """document.querySelector('#dossierBody').textContent.includes('1578') &&
-              !!document.querySelector('#dossierBody .source-details a[href*="dib.ie"]')""",driver)
+              !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1578-Mullaghmast-Inuit-Kodlunarn.png"))
     set_year(1579,37)
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
