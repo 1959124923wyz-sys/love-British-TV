@@ -743,8 +743,578 @@
       "perpetrator": "rebels not English Crown forces"
     }
   ],
-  "places": [],
-  "sources": [],
+  "places": [
+    {
+      "id": "smith-ards-grant-1571",
+      "name": "阿兹半岛殖民掠地的法律目标（原盖尔领地）",
+      "lat": 54.58,
+      "lng": -5.74,
+      "status": "legal_claim_area_reference_only",
+      "description": "modern Ards coastal peninsula region center, NOT 1571 mapped grant borders",
+      "source_ids": [
+        "C9-S01",
+        "C9-S02"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "modern Ards coastal peninsula region center, NOT 1571 mapped grant borders",
+      "start_year": 1571,
+      "end_year": 1579,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "smith-newcastle-comber-1572-1575",
+      "name": "纽卡斯尔·康伯：1572年殖民前哨位置参考",
+      "lat": 54.548,
+      "lng": -5.745,
+      "status": "small_local_colonist_enclave_disrupted",
+      "description": "Comber modern settlement center, exact 1572 palisade not georeferenced; English stable yearend confirmed 1572 only",
+      "source_ids": [
+        "C9-S01"
+      ],
+      "icon_code": "TER",
+      "geo_precision": "Comber modern settlement center, exact 1572 palisade not georeferenced; English stable yearend confirmed 1572 only",
+      "start_year": 1572,
+      "end_year": 1575,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "territory"
+    },
+    {
+      "id": "carrickfergus-English-castle-pre1570",
+      "name": "卡里克弗格斯城堡：埃塞克斯军队的实际王室驻堡基地",
+      "lat": 54.713,
+      "lng": -5.808,
+      "status": "inherited_royal_castle_garrison_not_Antrim_county",
+      "description": "modern existing castle locality, no historical area measurement",
+      "source_ids": [
+        "C9-S03",
+        "C9-S05"
+      ],
+      "icon_code": "TER",
+      "geo_precision": "modern existing castle locality, no historical area measurement",
+      "start_year": 1570,
+      "end_year": 1579,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "territory"
+    },
+    {
+      "id": "belfast-1574-ONeill-massacre",
+      "name": "贝尔法斯特：1574年埃塞克斯屠杀与拘捕地区",
+      "lat": 54.5973,
+      "lng": -5.9301,
+      "status": "massacre_event_not_occupation",
+      "description": "present Belfast town centre; actual 1574 banquet house and deaths' burial not archaeologically located",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "present Belfast town centre; actual 1574 banquet house and deaths' burial not archaeologically located",
+      "start_year": 1574,
+      "end_year": 1574,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "rathlin-island-1575-massacre",
+      "name": "拉斯林岛：1575年英军夺堡并杀害平民",
+      "lat": 55.298,
+      "lng": -6.192,
+      "status": "siege_and_massacre_not_confirmed_yearend_English_island",
+      "description": "island reference NOT exact castle/cave massacre locations",
+      "source_ids": [
+        "C9-S03",
+        "C9-S04",
+        "C9-S05"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "island reference NOT exact castle/cave massacre locations",
+      "start_year": 1575,
+      "end_year": 1575,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "tyrone-1574-burned-crops",
+      "name": "泰隆地区：1574年埃塞克斯抢牛、焚粮军事行动地带",
+      "lat": 54.6,
+      "lng": -6.74,
+      "status": "region_level_scorched_earth_event",
+      "description": "mid Tyrone modern regional anchor not every burning farm",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "mid Tyrone modern regional anchor not every burning farm",
+      "start_year": 1574,
+      "end_year": 1574,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "nombre-de-dios-panama-1572",
+      "name": "Nombre de Dios旧巴拿马港：1572德雷克掠袭",
+      "lat": 9.565,
+      "lng": -79.472,
+      "status": "failed_raid_no_English_colony",
+      "description": "historic Panama Atlantic port general modern position",
+      "source_ids": [
+        "C9-S08"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "historic Panama Atlantic port general modern position",
+      "start_year": 1572,
+      "end_year": 1572,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "panama-isthmus-1573-bullion",
+      "name": "巴拿马地峡：1573金银驮骡运输队遭掠地区",
+      "lat": 9.15,
+      "lng": -79.54,
+      "status": "treasure_mule_train_route_region_only",
+      "description": "unknown exact mule train interception point; not a site of legal British control",
+      "source_ids": [
+        "C9-S08"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "unknown exact mule train interception point; not a site of legal British control",
+      "start_year": 1573,
+      "end_year": 1573,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "frobisher-kodlunarn-1576-78",
+      "name": "Kodlunarn岛：因纽特祖居地上的1576—78英国采矿场",
+      "lat": 62.816667,
+      "lng": -65.416667,
+      "status": "temporary_summer_mining_and_inuit_abductions_not_sovereignty",
+      "description": "OFFICIAL Natural Resources Canada CGNDB OAJFN island location; not abduction shore or prehistoric control polygon",
+      "source_ids": [
+        "C9-S15",
+        "C9-S16",
+        "C9-S24"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "OFFICIAL Natural Resources Canada CGNDB OAJFN island location; not abduction shore or prehistoric control polygon",
+      "start_year": 1576,
+      "end_year": 1578,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "frobisher-harwich-departure",
+      "name": "Harwich：1577、1578弗罗比舍探矿出发港",
+      "lat": 51.944,
+      "lng": 1.284,
+      "status": "mining_voyage_port",
+      "description": "modern harbor general centre, not 1577 ship mooring location",
+      "source_ids": [
+        "C9-S16"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "modern harbor general centre, not 1577 ship mooring location",
+      "start_year": 1577,
+      "end_year": 1578,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "drake-callao-1579",
+      "name": "卡亚俄：1579年德雷克在秘鲁沿岸劫掠航次",
+      "lat": -12.055,
+      "lng": -77.149,
+      "status": "Spanish_Peru_port_contact_not_Cacafuego_exact_seizure",
+      "description": "Cacafuego ship was captured elsewhere at sea on March 1; do not place capture directly in Callao",
+      "source_ids": [
+        "C9-S09",
+        "C9-S10"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "Cacafuego ship was captured elsewhere at sea on March 1; do not place capture directly in Callao",
+      "start_year": 1579,
+      "end_year": 1579,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "drake-nova-albion-1579-claim",
+      "name": "北加利福尼亚Coast Miwok原住民地区：德雷克1579年短暂停靠及声索",
+      "lat": 38.054,
+      "lng": -122.954,
+      "status": "symbolic_colonial_claim_NOT_real_English_territory",
+      "description": "NPS Point Reyes overall coastal park reference; exact mooring shoreline debated",
+      "source_ids": [
+        "C9-S13",
+        "C9-S14",
+        "C9-S21"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "NPS Point Reyes overall coastal park reference; exact mooring shoreline debated",
+      "start_year": 1579,
+      "end_year": 1579,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "ternate-sultanate-drake-1579",
+      "name": "特尔纳特苏丹国：1579年德雷克丁香交易",
+      "lat": 0.79,
+      "lng": 127.38,
+      "status": "trade_with_independent_Maluku_ruler",
+      "description": "modern island locality; local sovereignty Sultanate, no English acquisition",
+      "source_ids": [
+        "C9-S09",
+        "C9-S10"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "modern island locality; local sovereignty Sultanate, no English acquisition",
+      "start_year": 1579,
+      "end_year": 1579,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "dingle-1579-desmond",
+      "name": "丁格尔：1579年第二次德斯蒙德战争登陆与抵抗",
+      "lat": 52.141,
+      "lng": -10.274,
+      "status": "Munster_rebellion_start_regional_point",
+      "description": "Dingle modern town reference, exact July landing beach unverified",
+      "source_ids": [
+        "C9-S18",
+        "C9-S19"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "Dingle modern town reference, exact July landing beach unverified",
+      "start_year": 1579,
+      "end_year": 1579,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "tralee-1579-officials-killed",
+      "name": "特拉利：1579年起义军杀死两名王室官员",
+      "lat": 52.27,
+      "lng": -9.703,
+      "status": "Irish_rebel_violent_act_not_English_massacre",
+      "description": "modern Tralee town reference, actual building unknown",
+      "source_ids": [
+        "C9-S18"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "modern Tralee town reference, actual building unknown",
+      "start_year": 1579,
+      "end_year": 1579,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "lifford-1574-Essex-raid",
+      "name": "Lifford：1574年埃塞克斯北进途中到达的地理参照",
+      "lat": 54.834,
+      "lng": -7.489,
+      "status": "military_raid_route_endpoint",
+      "description": "town general position only, no evidence the entire corridor was permanently garrisoned",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "town general position only, no evidence the entire corridor was permanently garrisoned",
+      "start_year": 1574,
+      "end_year": 1574,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    },
+    {
+      "id": "drake-plymouth-1572-77",
+      "name": "普利茅斯：1572及1577德雷克武装掠夺航行起点",
+      "lat": 50.376,
+      "lng": -4.143,
+      "status": "private_armed_shipping_home_port",
+      "description": "harbor locality only",
+      "source_ids": [
+        "C9-S08",
+        "C9-S09"
+      ],
+      "icon_code": "TRA",
+      "geo_precision": "harbor locality only",
+      "start_year": 1572,
+      "end_year": 1577,
+      "area_polygon_verified": false,
+      "editorial_status": "research_candidate",
+      "map_layer": "events"
+    }
+  ],
+  "sources": [
+    {
+      "id": "C9-S01",
+      "title": "Sir Thomas Smith Ards colonisation 1571–1579",
+      "publisher": "Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/smith-sir-thomas-a8152",
+      "kind": "scholarly_reference_full",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1571 royal land grant to Smith but indigenous ownership and opposition; 1572-08-31 100 English settlers Newcastle Comber; 1573-10-20 Smith son killed; 1574 reoccupation/1575 collapse; 1579 nephew failed resettlement; economic private joint-stock objectives.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S02",
+      "title": "A Letter sent by I.B. / Thomas Smith colonization prospectus 1572",
+      "publisher": "University College Cork CELT",
+      "url": "https://celt.ucc.ie/published/E570001-001/text001.html",
+      "kind": "edited_1572_colonial_prospectus",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Period printed propaganda for Ards plantation and investors' prospectus, with a map noted; claimed waste land is colonizer rationale NOT proof land empty.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S03",
+      "title": "Walter Devereux first Earl Essex colonization, fiscal accounts, massacres 1573–76",
+      "publisher": "Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/devereux-walter-a2554",
+      "kind": "scholarly_reference_full",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1573 Clandeboye plan and commercial monopolies; 1574 Tyrone crop burning and cattle raids, Belfast O'Neill massacre November about 200; 1575 Rathlin about 200 castle defenders and 300-400 refuge women/children killed, English garrisons swiftly abandoned; 1575 expenses royal approx £80k, Essex approx £35k; 1573-76 venture unsuccessful.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S04",
+      "title": "Sir John Norreys Irish career and 1575 Rathlin",
+      "publisher": "Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/norris-norreys-sir-john-a6234",
+      "kind": "scholarly_reference_full",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Norreys commanded troops massacring c.600 Rathlin, Francis Drake transported by sea; Elizabeth had countermanded project May but Essex sent mission covertly; distinguish individual command responsibilities.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S05",
+      "title": "Sorley Boy MacDonnell Ulster lordship and Rathlin massacre",
+      "publisher": "Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/macdonnell-sorley-boy-a5192",
+      "kind": "scholarly_reference_full",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Gaelic-Scottish MacDonnells and local lordship native refuge Rathlin, Essex 1573 grant proposed not true secure Ulster occupation.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S06",
+      "title": "Walter Devereux, first earl of Essex, and the colonization of north-east Ulster c1573–6",
+      "publisher": "David Heffernan, Four Courts Press 2018",
+      "url": "https://www.fourcourtspress.ie/books/2018/walter-devereux-first-earl-of-essex",
+      "kind": "academic_monograph_publisher_abstract",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Essex expedition unsuccessful, notorious Belfast 1574 and Rathlin 1575 atrocities; estate and financial ruin; no stable whole Ulster English annexation.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S07",
+      "title": "Magnificence and massacre: Essex and the Enterprise of Ulster 1573–76",
+      "publisher": "Hiram Morgan, Manchester University Press 2024",
+      "url": "https://research.ucc.ie/en/publications/magnificence-and-massacre-essex-and-the-enterprise-of-ulster-1573/",
+      "kind": "peer_reviewed_chapter_abstract",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Scholarly confirmation Essex proposed plantation failed, paper grants versus Gaelic continuing jurisdiction.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S08",
+      "title": "Drake's First Success Panama 1572 to 1573",
+      "publisher": "United States Library of Congress Kraus Drake collection",
+      "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/drakes-first-success/",
+      "kind": "national_library_curated_collection_essay",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1572-05-24 Plymouth to Nombre de Dios; failed town capture; English/French buccaneer alliance and Afro-Panamanian Cimarrons in Panama; 1573 stolen mule-train gold/silver LOC approximate £20,000, NOT audited UK Exchequer receipts.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S09",
+      "title": "Sir Francis Drake 1572-79 chronology",
+      "publisher": "United States Library of Congress",
+      "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/timeline/",
+      "kind": "national_library_timeline",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1579-02-15 Callao, 1579-03-01 Cacafuego prize, summer 1579 California anchorage and unilateral New Albion claim, 1579-11 Ternate cloves; 1580 actual circumnavigation return not in 1570s.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S10",
+      "title": "The Famous Voyage – circumnavigation 1577–80",
+      "publisher": "United States Library of Congress",
+      "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-famous-voyage/",
+      "kind": "national_library_collection_historical_essay",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1577–80 multiyear voyage including 1579 Peru silver plunder and California New Albion claimed then abandoned, Maluku cloves trade; no shore sovereignty caused by ship's presence.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S11",
+      "title": "Relación de la entrada que hizo por el estrecho el navío inglés ... 1579",
+      "publisher": "Library of Congress manuscripts",
+      "url": "https://www.loc.gov/item/2021699423/",
+      "kind": "Spanish_1579_original_manuscript_catalogue_and_images",
+      "evidence_read_level": "museum catalogue and original scans listed, not full diplomatic transcription",
+      "precision_warning": "Spanish contemporary document on 1578–79 Drake raids; inventory access/primary document metadata available; exact extracted incident totals NOT yet transcribed.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S12",
+      "title": "Medina Sidonia memorandum on Pacific depredations",
+      "publisher": "Library of Congress manuscripts",
+      "url": "https://www.loc.gov/item/2021699425/",
+      "kind": "Spanish_period_defence_memorandum_archive",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Spanish discussion of Drake Pacific depredations and defense; dating/work includes later 1580s too; not claim 1579-only data without page read.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S13",
+      "title": "The Archaeology of 16th-century cross-cultural encounters at Point Reyes",
+      "publisher": "National Park Service USA",
+      "url": "https://www.nps.gov/articles/cross-cultural-encounters-in-point-reyes-national-seashore.htm",
+      "kind": "US_national_park_official_archaeology",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1579 California coast Miwok territory landfall for about five weeks, actual landing placement debated, no effective UK settler colony.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S14",
+      "title": "Francis Drake: New Albion claim and forged brass plate",
+      "publisher": "National Park Service USA",
+      "url": "https://home.nps.gov/pore/learn/historyculture/people_europeanexplorers_francisdrake.htm",
+      "kind": "US_national_park_official_history",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Drake raised claim marker, 1936 brass plate fake; prior indigenous Coast Miwok sovereign/social occupation, no continuing English authority.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S15",
+      "title": "Kodlunarn Island National Historic Site of Canada",
+      "publisher": "Parks Canada",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=332",
+      "kind": "Canada_national_park_official_archaeology",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1576–78 Frobisher summer mining, roughly 1400t worthless ore removed, 4–5 weeks each visit, proposed 1578–79 winter colony failed, small stone house on island exists; Inuit site and traditions, not British sovereign holdings.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S16",
+      "title": "Frobisher, Sir Martin 1576–78",
+      "publisher": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio/frobisher_martin_1F.html",
+      "kind": "scholarly_historical_biography",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1577 captured Inuit man, woman and child, deaths after being carried to England; first voyage 1576 seized Inuit man; Cathay Company Queen invested £1000 1577, 1578 ships and planned colony unsuccessful; title-taking in Greenland not sustained actual control.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S17",
+      "title": "Martin Frobisher's Northwest Venture 1576–1581 Mines Minerals Metallurgy",
+      "publisher": "Government of Canada / Canadian Museum of Civilization",
+      "url": "https://www.publications.gc.ca/site/eng/9.611128/publication.html",
+      "kind": "government_museum_historical_monograph_catalogue",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1994 archaeology/mining historic critical analysis, not all monograph read. Distinguish marketed golden ore from actual worthless mineral and realised English profit.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S18",
+      "title": "Fitzgerald Sir John Fitz James and Fitzmaurice July 1579 landing",
+      "publisher": "Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/index.php/biography/fitzgerald-sir-john-fitz-james-a3170",
+      "kind": "scholarly_reference_full",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1579 July Fitzmaurice Dingle landed, Desmond rebellion Irish lordship war; 1579-08-01 John Fitz James killed two government officials in Tralee; not English conquest of all Munster.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S19",
+      "title": "The social and economic consequences of the Desmond rebellion 1579–83",
+      "publisher": "Anthony M. McCormack, Irish Historical Studies",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/social-and-economic-consequences-of-the-desmond-rebellion-of-157983/9AFBD9AF0208797251714B079702C485",
+      "kind": "peer_reviewed_academic_article_abstract",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1579 start conflict lasting until 1583, economic destruction and population collapse in Munster over 1579–83; cannot backdate 1580-83 deaths/famine or whole area losses to 1579.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S20",
+      "title": "Campaign Journals of Elizabethan Irish Wars",
+      "publisher": "Irish Manuscripts Commission",
+      "url": "https://www.irishmanuscripts.ie/campaign-journals-of-the-elizabethan-irish-wars/",
+      "kind": "firsthand_edited_campaign_reports_publisher_presentation",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Includes soldiers' diaries c1557–99, to cross-check dated 1570s actual burn cattle seize violent deaths, avoid extrapolated counts.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S21",
+      "title": "Sir Francis Drake and Elizabethan World 2025 feature about 1579 and 1580",
+      "publisher": "United States Library of Congress",
+      "url": "https://blogs.loc.gov/loc/2025/06/sir-francis-drake-the-elizabethan-world/",
+      "kind": "national_library_curatorial",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "1579 Drake landfall at Coast Miwok Point Reyes; 1580 actual voyage completion; sponsor profit only after 1580, DO NOT score 1579 UK royal net revenue.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S22",
+      "title": "Henry VIII/Elizabeth I early slave trafficking background from Historic England (cross-decadal)",
+      "publisher": "Royal Museums Greenwich",
+      "url": "https://historicengland.org.uk/research/inclusive-heritage/the-slave-trade-and-abolition/sites-of-memory/slave-traders-and-plantation-wealth/britain-and-the-slave-trade/",
+      "kind": "English_heritage_background",
+      "evidence_read_level": "public detailed biography/official research/publisher excerpt; original 16th-century ledgers not exhaustively read",
+      "precision_warning": "Confirmed Hawkins three enslaving voyages 1562–68 previous chapter, no assumption same actor annually committed Guinea landing 1570s; research must find dated voyages.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S23",
+      "title": "Arctic: Culture and Climate 2020 exhibition full text",
+      "publisher": "British Museum",
+      "url": "https://www.britishmuseum.org/sites/default/files/2020-10/Arctic_culture_and_climate_large_print_exhibition_text.pdf",
+      "kind": "official_museum_geonames_or_scholarly_irish_biography",
+      "evidence_read_level": "source page explicitly read or indexed exhibition PDF extract",
+      "precision_warning": "1577 Frobisher crew shot Inuit, some wounded Inuit jumped from cliffs; three captives known Arnaq Nutaaq Kalicho, died England; official museum documentation.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S24",
+      "title": "Kodlunarn Island official geographical names OAJFN",
+      "publisher": "Natural Resources Canada GeoNames",
+      "url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=OAJFN",
+      "kind": "official_museum_geonames_or_scholarly_irish_biography",
+      "evidence_read_level": "source page explicitly read or indexed exhibition PDF extract",
+      "precision_warning": "Official island reference at lat 62.816667 lon -65.416667; reference coordinate does NOT delineate Frobisher 1577–78 excavations or English claimed land.",
+      "origin": "1570-1579"
+    },
+    {
+      "id": "C9-S25",
+      "title": "Fitzmaurice Fitzgerald and John Fitz James Desmond 1579, academic",
+      "publisher": "Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/index.php/biography/fitzgerald-sir-john-fitz-james-a3170",
+      "kind": "official_museum_geonames_or_scholarly_irish_biography",
+      "evidence_read_level": "source page explicitly read or indexed exhibition PDF extract",
+      "precision_warning": "July 1579 Dingle FitzMaurice landing; Tralee 1579-08-01 killing two officials; separate rebels violence from subsequent Tudor counterinsurgency.",
+      "origin": "1570-1579"
+    }
+  ],
   "routes": [],
   "colonial_polygons": [],
   "presentation": {
@@ -761,6 +1331,10 @@
     ],
     "African_slave_trade_period_no_new_confirmed_period_voyages": true,
     "Irish_Ulster_claim_not_actual_whole_county": true,
-    "Nova_Albion_political_claim_only": true
+    "Nova_Albion_political_claim_only": true,
+    "official_sources_count": 25,
+    "yearend_capture_is_not_colonial_vast_area": true,
+    "all_profitable_gold_or_royal_revenue_unknown": true,
+    "slavery_trade_no_invented_African_1570s_event": true
   }
 }
