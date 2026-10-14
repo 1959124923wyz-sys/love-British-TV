@@ -16,6 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate chapter10 source and coercion-economics research
         run: python3 research/periods/1580-1589/validate_research.py
+      - name: Verify modern map points are not 1580 historical violence polygons
+        run: |
+          python3 - <<'PY'
+          import json
+          g=json.load(open('research/periods/1580-1589/GEOGRAPHIC_EVENT_ANCHORS_1580_1589.geojson',encoding='utf-8'))
+          assert len(g['features'])==2
+          assert all(f['geometry']['type']=='Point' and f['properties']['fill_authorized'] is False for f in g['features'])
+          print('PASS: two modern site reference points, zero invented historic polygons')
+          PY
       - name: Verify all archived JSON parses
         run: |
           python3 - <<'PY'
