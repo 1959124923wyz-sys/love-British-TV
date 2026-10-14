@@ -14,7 +14,7 @@
 | Atlas候选 | [ATLAS_EVENT_REVIEW_CANDIDATE.json](ATLAS_EVENT_REVIEW_CANDIDATE.json) | 与`data/atlas-1560-1569.json` / PR#56模式兼容的 `events, places, sources, routes, colonial_polygons, presentation`。**30事件、16地点、70来源**。字段包含 `year,start_year,end_year,visible_from,date_label,name,icon_code,lat,lng,source_ids,description,significance`。 |
 | 事件地理变化 | [VIOLENCE_AND_CONTROL_DELTA_1580_1589.geojson](VIOLENCE_AND_CONTROL_DELTA_1580_1589.geojson) | 30条年份变化；有可考现代地点的16条Point，12条地理尚不明确的 `geometry:null`。单次抢劫、镇压及战地不自动触发英王实占面积。 |
 | 现代地理点 | [CONTROL_AND_VIOLENCE_PLACES_1580_1589.geojson](CONTROL_AND_VIOLENCE_PLACES_1580_1589.geojson) | 16处正式史迹或现代城市、历史州标牌坐标，每处 `source_geography_url`、事件关联与 `geo_precision`。 |
-| 经济账本 | [PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json](PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json) | **25类**真实史料引述及待核数据：1580 Carrigafoyle守军50+16非死者总数、Smerwick约600、1582饥荒死亡3万上限、1586 25k/110k杜卡特城镇赎金报告、1586船载人员证词不能加总。 |
+| 经济账本 | [PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json](PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json) | **31类**真实史料引述及待核数据：1580 Carrigafoyle守军50+16非死者总数、Smerwick约600、1582饥荒死亡3万上限、1586 25k/110k杜卡特城镇赎金报告、1586船载人员证词不能加总。 |
 | 示意方向 | [VIOLENT_EXTRACTION_ROUTE_REFERENCES_1580_1589.geojson](VIOLENT_EXTRACTION_ROUTE_REFERENCES_1580_1589.geojson) | 6条已知航次／军行动港顺序，以**虚线**展示。中间历史GPS未知，不计英军控制区或真实船迹。不得用线所穿过海岸推断奴隶贩运装卸站。 |
 | 可展开史料 | [HISTORICAL_DETAIL_NOTES_1580_1589.json](HISTORICAL_DETAIL_NOTES_1580_1589.json) | 30个与Atlas事件ID一致的 `records`，每条有`context,impact,geography,accounting,source_ids,source_links`，可选复制至 `data/historical-detail-notes.json`相应records。 |
 | 逐年控制 | [../CONTROL_TRANSITION_1579_1589.json](../CONTROL_TRANSITION_1579_1589.json) | **10个年末控制快照、12条土地/驻军变化**。尤其1576—79洛赫雷英军驻堡在1580年结束；罗阿诺克1585/1586/1587为不同驻留阶段，1588/89是否有人存活未知。 |
@@ -48,3 +48,7 @@
 - **1589 Vigo：**西班牙地方公共档案确证4天劫掠与损房、教堂焚毁，但各自统计版本有分歧，不捏造确定遭毁建筑数或死亡数。
 
 本包所有文件均为研究候审。**自动QA只验证结构、时间、ID与错误防护**；真正文学史、原稿可读性和地图发布由主编审定。详细逐档来源在`../SOURCE_REGISTRY.json`，进度在`../PROGRESS.md`。
+
+
+### 2026-10-14 最新原始政策增补：强制殖民安置与资助机制
+在大学公开的1586年6月27日王室条款原文（UCC CELT《Desmond Survey》§§366—374）中，已经核实每宗12,000／8,000／6,000／4,000英亩拟设庄园，**另外小规模租地上至少36／24／18／12户移民家庭**的法定安排；并有单独的承租农户、自由持有人和继承租户配额。条款要求至1593年完成移民，承诺自1590年起有限期海关税收豁免、王室出资的驻军保护。相关已写入 `editor_import/MUNSTER_1586_1589_UNDERTAKERS_SEIGNORIES.json` 和经济账本 C10-M26—31。**这些是1586年法律规划的人数与未来激励，不是已实现的1586年移民人数、当年国库收款或军费支出**。现代地图仍无认证1586边界。原始资料：https://celt.ucc.ie/published/E580000-001/text005.html §366—374。
