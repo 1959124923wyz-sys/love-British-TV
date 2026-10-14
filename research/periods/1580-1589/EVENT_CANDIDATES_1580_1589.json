@@ -5,7 +5,7 @@
     1589
   ],
   "model": "year_of_act_not_year_of_printed_map",
-  "total": 21,
+  "total": 28,
   "events": [
     {
       "id": "ch10-1580-loughrea-recapture",
@@ -31,6 +31,126 @@
       "significance": {
         "level": 2,
         "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-pelham-ormond-rathkeale",
+      "year": 1580,
+      "month_or_day": "03",
+      "date_precision": "month",
+      "title": "佩勒姆与奥蒙德会师，进军焚毁芒斯特聚落",
+      "description": "1580年3月，英王军政官佩勒姆与奥蒙德伯爵在拉斯基尔会师，随后进攻利默里克及凯里地区，摧毁聚落和粮食供应。",
+      "icon_code": "WAR",
+      "kind": "scorched_earth_march",
+      "place": "Rathkeale",
+      "region": "County Limerick, Ireland",
+      "source_ids": [
+        "C10-S53",
+        "C10-S54"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Rathkeale",
+        "reason": "行军方向确知但各村遭焚GPS及全年毁粮范围未审核"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-carrigafoyle-massacre",
+      "year": 1580,
+      "month_or_day": "03",
+      "date_precision": "month",
+      "title": "英军攻破卡里加福伊尔城堡，处死残存守军",
+      "description": "佩勒姆率英军炮击卡里加福伊尔，城墙倒塌后守军遭杀戮；幸存者被处死。爱尔兰国家遗产局记载守军中有约50名爱尔兰人及16名西班牙盟友。",
+      "icon_code": "REP",
+      "kind": "siege_and_killing_after_capture",
+      "place": "Carrigafoyle Castle",
+      "region": "County Kerry, Ireland",
+      "source_ids": [
+        "C10-S52",
+        "C10-S53"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Carrigafoyle Castle",
+        "reason": "16世纪围城发生于现存城堡，现代建筑坐标可作遗址锚点，伤亡总数未知"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-askeaton-abandonment",
+      "year": 1580,
+      "month_or_day": "04",
+      "date_precision": "approx_month",
+      "title": "卡里加福伊尔失守后，阿斯基顿等德斯蒙德堡垒被弃",
+      "description": "卡里加福伊尔被英军攻破后，附近的德斯蒙德守军放弃阿斯基顿及其他若干要塞，转入流动作战。",
+      "icon_code": "RES",
+      "kind": "garrison_withdrawal",
+      "place": "Askeaton Castle",
+      "region": "County Limerick, Ireland",
+      "source_ids": [
+        "C10-S52",
+        "C10-S53"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Askeaton Castle",
+        "reason": "旧时撤堡与新军驻堡的分期需逐堡再考证"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-pelham-second-kerry",
+      "year": 1580,
+      "month_or_day": "06",
+      "date_precision": "month",
+      "title": "佩勒姆组织第二轮凯里沿岸军事破坏",
+      "description": "1580年6月英军在凯里沿岸发动第二轮攻势，同时封锁海上补给，毁坏当地聚落和农业生产设施。",
+      "icon_code": "WAR",
+      "kind": "coastal_campaign_and_devastation",
+      "place": "Kerry Coast",
+      "region": "County Kerry, Ireland",
+      "source_ids": [
+        "C10-S53",
+        "C10-S54"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Kerry Coast",
+        "reason": "仅凯里沿岸地区已证；全部行军路线与被毁地点不应凭空连成面"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
         "review_status": "research_editorial_candidate"
       },
       "inclusion": "candidate_not_in_main",
@@ -97,6 +217,66 @@
       "foreign_sovereignty_does_not_flip": true
     },
     {
+      "id": "ch10-1582-munster-starvation-campaign",
+      "year": 1582,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "英军毁粮夺畜与长期战争促成芒斯特饥荒",
+      "description": "持续数年的军事扫荡毁坏村舍、农田与牲畜，芒斯特出现严重粮荒和人口流离。双方战事与强制征粮共同加剧灾难。",
+      "icon_code": "FAM",
+      "kind": "starvation_and_crop_destruction",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S54",
+        "C10-S55"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Munster",
+        "reason": "独立学术论文明确确认广泛毁坏与人口下降，不能拿当今省界涂死者分布"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1582-warham-stleger-famine-report",
+      "year": 1582,
+      "month_or_day": "04",
+      "date_precision": "month",
+      "title": "英军官员报告芒斯特严重饥荒与人口死亡",
+      "description": "1582年英方官员沃勒姆·圣莱杰向政府报告芒斯特的严重饥荒及疫病死亡。研究者将其所述六个月约三万人死亡视为缺乏独立印证的上限估计。",
+      "icon_code": "FAM",
+      "kind": "contemporaneous_famine_mortality_report",
+      "place": "Munster Province",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S54",
+        "C10-S55"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Munster Province",
+        "reason": "报告覆盖多个地点和六个月时间，不以现代芒斯特省中心当死难者确切位置"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
       "id": "ch10-1582-barkley-crops-hostages",
       "year": 1582,
       "month_or_day": "09-25",
@@ -121,6 +301,35 @@
       "significance": {
         "level": 2,
         "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1583-ormond-starving-army",
+      "year": 1583,
+      "month_or_day": "04",
+      "date_precision": "month",
+      "title": "奥蒙德向英王报告芒斯特军队补给匮乏",
+      "description": "战争后期奥蒙德向伊丽莎白一世报告饥荒与军队补给短缺，驻军甚至面临无法获取常规食物的局面。",
+      "icon_code": "FAM",
+      "kind": "military_famine_report",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S54"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Munster",
+        "reason": "仅根据McCormack已列英军SP63/101/40原档号及分析，不编造精确受灾地点"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
         "review_status": "research_editorial_candidate"
       },
       "inclusion": "candidate_not_in_main",
