@@ -4,8 +4,8 @@
     1570,
     1579
   ],
-  "count": 25,
-  "P0_count": 20,
+  "count": 31,
+  "P0_count": 24,
   "entries": [
     {
       "id": "C9-Q01",
@@ -312,6 +312,76 @@
       "status": "unresolved_original_sources",
       "required_research_product": "exact archival quotation/inventory/GIS if historically valid; otherwise explicitly null",
       "do_not_invent": "no death total, place, annual area or audited profit without evidence"
+    },
+    {
+      "id": "C9-Q26",
+      "priority": "P0",
+      "task": "Obtain/photograph/transcribe 1579-06-05 two ORIGINAL English military garrison rolls BL Cotton MS Titus B XIII/1 ff276r–289v; map exact sites by place name and unit count; reject later county outlines and distinguish 5 June from December yearend",
+      "source_ids": [
+        "C9-S45"
+      ],
+      "status": "specific_original_identified_not_read",
+      "required_research_product": "archival page-level transcription, checked dating/original language, historical place and true garrison exact site by year",
+      "do_not_invent": "catalogue folio description is not troop list text; no money/casualty amount or precise casualty location without original documentary proof"
+    },
+    {
+      "id": "C9-Q27",
+      "priority": "P0",
+      "task": "Read 1577 original record BL Cotton MS Titus B XIII/1 ff270r–270v 'profits which came to Queen by commission for faculties'; extract actual audited money, accounting categories, locations and payers BEFORE labelling colonial profit",
+      "source_ids": [
+        "C9-S45"
+      ],
+      "status": "specific_original_identified_not_read",
+      "required_research_product": "archival page-level transcription, checked dating/original language, historical place and true garrison exact site by year",
+      "do_not_invent": "catalogue folio description is not troop list text; no money/casualty amount or precise casualty location without original documentary proof"
+    },
+    {
+      "id": "C9-Q28",
+      "priority": "P0",
+      "task": "Read Sidney 1578-06-14 original army victuals estimate BL Cotton MS Titus B X/1 ff157v–161r and compare vouchers for actual payments vs coerced provisions; build separate local peasant loss/tax charges",
+      "source_ids": [
+        "C9-S46"
+      ],
+      "status": "specific_original_identified_not_read",
+      "required_research_product": "archival page-level transcription, checked dating/original language, historical place and true garrison exact site by year",
+      "do_not_invent": "catalogue folio description is not troop list text; no money/casualty amount or precise casualty location without original documentary proof"
+    },
+    {
+      "id": "C9-Q29",
+      "priority": "P0",
+      "task": "Obtain actual 1577 parish register Bristol St Stephen's Nov 8 Kalicho, Nov 12 Arnaq and correspondence with Bristol Archives; locate church official Historic England ST58684 72983 while NOT claiming individual burial pits discovered",
+      "source_ids": [
+        "C9-S47",
+        "C9-S48",
+        "C9-S52"
+      ],
+      "status": "specific_original_identified_not_read",
+      "required_research_product": "archival page-level transcription, checked dating/original language, historical place and true garrison exact site by year",
+      "do_not_invent": "catalogue folio description is not troop list text; no money/casualty amount or precise casualty location without original documentary proof"
+    },
+    {
+      "id": "C9-Q30",
+      "priority": "P1",
+      "task": "Find Cathay Company 1576 original account entries for captive Inuit medicine, 2 Cornelius Ketel portraits at £5 each, paid St Olave burial and 1577 Nutaaq nursing/grave payment; compare St Olave parish entries that are absent according to scholarship",
+      "source_ids": [
+        "C9-S47",
+        "C9-S53"
+      ],
+      "status": "specific_original_identified_not_read",
+      "required_research_product": "archival page-level transcription, checked dating/original language, historical place and true garrison exact site by year",
+      "do_not_invent": "catalogue folio description is not troop list text; no money/casualty amount or precise casualty location without original documentary proof"
+    },
+    {
+      "id": "C9-Q31",
+      "priority": "P1",
+      "task": "Investigate Oct1579 battle near Monasteranenagh reported by 19c Irish biography: reported 260 Desmond dead, c300 foot and c50 horse Malby Kilmallock, and burning Askeaton/Adare/Rathkeale; seek ORIGINAL SP63 military casualty returns and location before map casualties",
+      "source_ids": [
+        "C9-S51",
+        "C9-S26"
+      ],
+      "status": "specific_original_identified_not_read",
+      "required_research_product": "archival page-level transcription, checked dating/original language, historical place and true garrison exact site by year",
+      "do_not_invent": "catalogue folio description is not troop list text; no money/casualty amount or precise casualty location without original documentary proof"
     }
   ],
   "continuity_to_1580": [
@@ -320,5 +390,7 @@
     "1579 Smith nephew Ards abortive replant not permanent English conquest",
     "Nova Albion 1579 symbolic English claim doesn't create 1580 crown colony"
   ],
-  "future_protocol": "Open research tasks are not itself a publication blocker for accurate event points; do not promote missing geometries to solid English territorial Polygons."
+  "future_protocol": "Open research tasks are not itself a publication blocker for accurate event points; do not promote missing geometries to solid English territorial Polygons.",
+  "highest_value_new_military_folio": "British Library Cotton MS Titus B XIII/1 ff276r–289v 1579-06-05 original garrison articles; only metadata so far",
+  "new_financial_archive": "Cotton MS Titus B XIII/1 ff270r–270v original 1577 profits commission, amount unverified"
 }
