@@ -22,6 +22,9 @@ map.getPane('eventTooltipPane').style.pointerEvents='none';
 map.createPane('controlAreaPane');
 map.getPane('controlAreaPane').style.zIndex='465';
 // Route hit targets above geographic polygons and below event glyphs.
+map.createPane('enslavementBandPane');
+map.getPane('enslavementBandPane').style.zIndex='478';
+const enslavementBandRenderer=L.svg({pane:'enslavementBandPane'});
 map.createPane('voyagePane');
 map.getPane('voyagePane').style.zIndex='480';
 const voyageRenderer=L.svg({pane:'voyagePane'});
@@ -55,7 +58,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -711,6 +714,76 @@ function renderSeventhControlSites(){
  }
 }
 
+// Only Le Havre 1562 has a new verified English year-end urban occupation point.
+function renderEighthControlSites(){
+ if(!eighthControlSites||year<1560||year>1569||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
+ for(const f of eighthControlSites.features){
+  const p=f.properties,c=f.geometry?.coordinates;
+  if(f.geometry?.type!=='Point'||!c||year<p.start_year||year>p.end_year||p.fill_authorized!==false)continue;
+  const english=p.controller_group==='english',color=english?'#ae83ef':'#57c9b8';
+  const open=e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   const place=findPlaceAcrossChapters(p.stable_id);
+   if(place)openDossier(place,'place');else openTerritoryDossier(f,'historic');
+  };
+  const tt='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">仅为城市实控驻军Point · 不是英军占地边界</div>';
+  L.circleMarker([c[1],c[0]],{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,weight:3,color,
+   opacity:.98,dashArray:'5 5',fill:true,fillColor:color,fillOpacity:.13,bubblingMouseEvents:false,
+   className:english?'atlas-eighth-site atlas-eighth-english':'atlas-eighth-site atlas-eighth-french'})
+   .bindTooltip(tt,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+   .on('click',open).addTo(groups.wartimeControl);
+  L.circleMarker([c[1],c[0]],{renderer:garrisonHitRenderer,pane:'garrisonHitPane',radius:24,
+   weight:7,color,opacity:.018,fill:false,bubblingMouseEvents:false,className:'atlas-eighth-site-hit'})
+   .on('click',open).addTo(groups.garrisonHit);
+ }
+}
+function openEighthCoastalDossier(feature){
+ const p=feature.properties||{};selected='';selectedItemYear=null;
+ const refs=(p.source_ids||[]).map(id=>atlasEighth?.sources?.find(s=>s.id===id))
+  .filter(Boolean).map(s=>'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>').join('');
+ $('dossierBody').innerHTML='<div class="dossier-kicker">第八章 · 非洲人口奴役活动 · '+year+'年</div>'+
+ '<h2>'+escapeHTML(p.name)+'</h2>'+
+ '<p>橙褐斜纹是有史料提及的宽泛奴隶贩运海岸地区，而非英国殖民地，不代表带内所有村社遭到英国袭击。</p>'+
+ '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
+ '<div class="research-body"><h3>地理范围与精度</h3><p>'+escapeHTML(p.precision_caution||'历史精确港口和被掳村庄均待核')+'</p>'+
+ '<h3>主权和史料限制</h3><p>本Polygon由现代制图者根据史料地名制作，并非16世纪实测、真实逐村袭击范围或英国领土。当地非洲政治实体没有因为英国航行而丧失主权。</p></div>'+
+ '<div class="mini-heading">史料原文与来源</div>'+refs+'</details>';
+ openPanel('dossier');
+}
+function ensureEighthCoastHatch(){
+ const root=enslavementBandRenderer._container;
+ if(!root||root.querySelector('#atlas-eighth-coast-hatch'))return;
+ const ns='http://www.w3.org/2000/svg',doc=root.ownerDocument;
+ let defs=root.querySelector('defs');if(!defs){defs=doc.createElementNS(ns,'defs');root.insertBefore(defs,root.firstChild)}
+ const pat=doc.createElementNS(ns,'pattern');
+ for(const [k,v] of Object.entries({id:'atlas-eighth-coast-hatch',width:'12',height:'12',patternUnits:'userSpaceOnUse'}))pat.setAttribute(k,v);
+ const bg=doc.createElementNS(ns,'rect');bg.setAttribute('width','12');bg.setAttribute('height','12');
+ bg.setAttribute('fill','#8d5735');bg.setAttribute('fill-opacity','.19');pat.appendChild(bg);
+ for(const d of ['M-3 12 L12 -3','M3 15 L15 3']){const line=doc.createElementNS(ns,'path');
+  line.setAttribute('d',d);line.setAttribute('stroke','#dfac78');line.setAttribute('stroke-width','2');pat.appendChild(line)}
+ defs.appendChild(pat);
+}
+function renderEighthCoastalActivity(){
+ groups.enslavementBands.clearLayers();
+ if(!eighthSlaveCoastalAreas||year<1560||year>1569||!$('toggleEvents').checked)return;
+ const list=eighthSlaveCoastalAreas.features.filter(f=>{
+  const p=f.properties||{};
+  return f.geometry?.type==='Polygon'&&p.map_layer==='events'&&p.render_as_hatched_event_activity_band===true&&
+   p.fill_authorized===false&&p.historical_boundary_confirmed===false&&p.area_sqkm===null&&year>=p.start_year&&year<=p.end_year;
+ });
+ if(!list.length)return;
+ L.geoJSON({type:'FeatureCollection',features:list},{
+  renderer:enslavementBandRenderer,pane:'enslavementBandPane',interactive:true,bubblingMouseEvents:false,
+  style:()=>({color:'#dca16d',weight:2.2,opacity:.94,dashArray:'6 8',
+   fill:true,fillColor:'url(#atlas-eighth-coast-hatch)',fillOpacity:.6,
+   className:'atlas-eighth-enslavement-coast'}),
+  onEachFeature:(f,layer)=>{const p=f.properties;
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">人口奴役活动的海岸概略示意 · 非英王占领区</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+   layer.on('click',e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openEighthCoastalDossier(f)});
+  }
+ }).addTo(groups.enslavementBands);
+ ensureEighthCoastHatch();
+}
 function ensureContestedHatch(){
  const root=contestedZoneRenderer._container;
  if(!root||!root.ownerDocument||root.querySelector('#atlas-blue-violet-contested'))return;
@@ -1035,7 +1108,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=eighth?'第八章 · 1560—1569年事件':seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示；政治状态跨章节延续，未核实边界保持虚线。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -1209,14 +1282,14 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
