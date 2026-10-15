@@ -18,7 +18,7 @@ assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dos
 
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
 assert.ok(manifest.chapters.length>=9);
-assert.ok(manifest.chapters.some(c=>c.number===9&&c.start===1570&&c.end===1579&&c.status==='published'));
+assert.ok(manifest.chapters.some(c=>c.number===8&&c.start===1570&&c.end===1579&&c.status==='published'));
 assert.equal(now.events.length,41);assert.equal(now.places.length,43);assert.equal(now.sources.length,60);
 assert.equal(now.routes.length,18);assert.equal(now.colonial_polygons.length,0);
 assert.equal(old.events.length,26);

@@ -94,7 +94,7 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let atlasEleventh=null;let year=1497;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasFirstMerged=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let atlasEleventh=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 // UI contract: two independent user-facing layers, all earlier internal gate IDs
 // retained only for chronology, migration and backwards-compatible renderers.
@@ -127,7 +127,7 @@ function syncMapLayers(){
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
-const findPlaceAcrossChapters=id=>[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
+const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 // Transient focus target; historical event coordinates remain immutable.
@@ -276,9 +276,9 @@ function renderEventList(){
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
  const fullArchive=$('showFullChapterArchive').checked;
- const events=atlas.events.filter(e=>(atlas!==atlasEarly||e.year<=1499)&&(fullArchive||occurredByYear(e,year)))
+ const events=atlas.events.filter(e=>(fullArchive||occurredByYear(e,year)))
   .sort((a,b)=>a.year-b.year||levelOf(b)-levelOf(a)||a.name.localeCompare(b.name,'zh'));
- const chapterTotal=atlas.events.filter(e=>atlas!==atlasEarly||e.year<=1499).length;
+ const chapterTotal=atlas.events.length;
  $('eventCount').textContent=events.length+'项';
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>{
@@ -387,7 +387,7 @@ function renderPoints(){
  const showAll=map.getZoom()>=6||$('toggleMinorEvents').checked;
  if($('toggleEvents').checked||focusedEventId){
   for(const e of atlas.events){
-   if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;
+   if(!occurredByYear(e,year))continue;
    if(!Number.isFinite(e.lat)||!Number.isFinite(e.lng))continue;
    if(!$('toggleEvents').checked&&e.id!==focusedEventId)continue;
    if(e.category==='status'&&e.id!==focusedEventId)continue;
@@ -1051,7 +1051,7 @@ function updateVisibility(){
 // The chapter registry is the only authority for published decade cards.
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
-const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>decadeForYear(c.start)===d);
+const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end);
 // 1497–1499 is an exceptional prologue; normal pages align to 1500–1549 / 1550–1599.
 const halfCenturyPageForYear=y=>y<1500?1490:Math.floor(y/50)*50;
@@ -1091,7 +1091,7 @@ function renderTimelineNavigation(){
   const onMap=published&&year>=from&&year<=to;
   return '<button type="button" class="chapter-segment'+(published?' published':' unpublished')+
     (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
-    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+from+'年：'+chapter.label:'此十年尚无正式历史资料')+'">'+
+    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:'此十年尚无正式历史资料')+'">'+
     '<span>'+(published?'第'+chapter.number+'章':'尚未发布')+'</span>'+
     '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 待研究')+'</small></button>';
  }).join('');
@@ -1101,7 +1101,7 @@ function renderTimelineNavigation(){
    timelineStatus(decade+'—'+(decade+9)+'年暂无已审核地图资料，仍显示'+year+'年。');
    return;
   }
-  stopPlay();setYear(chapter.start);
+  stopPlay();setYear(Math.max(decade,chapter.start));
  }));
  $('browseDecadePrev').disabled=browsingDecade<=chapterRegistry.navigation.firstDecade;
  $('browseDecadeNext').disabled=browsingDecade>=2050;
@@ -1141,7 +1141,7 @@ function renderMilestones(){
 }
 function setYear(v){
  const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
- const chosen=next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
+ const chosen=next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
  // Keep map viewport and open dossier; avoid displaying a selected event from the future.
  if(selectedItemYear!==null&&selectedItemYear>next){
@@ -1243,8 +1243,22 @@ function setYear(v){
   $('factCDesc').innerHTML=year>=1599?'卡希尔夺堡<br>埃塞克斯爱尔兰战事':year>=1598?'圣胡安短暂占领<br>撤军后归西班牙':'';
   $('periodTitle').textContent='伊丽莎白一世 · 英格兰王国';
  }
+ // Use publication manifest chapter numbering; historical archive files retain legacy IDs.
+ const displayChapter=chapterForYear(year);
+ if(displayChapter){
+  const numerals=['','一','二','三','四','五','六','七','八','九','十'];
+  const heading='第'+(numerals[displayChapter.number]||displayChapter.number)+'章';
+  $('chapterNav').textContent='历史地图 · '+heading;
+  $('chapterNavName').textContent=displayChapter.label;
+  $('chapterLabel').textContent=heading+' · '+displayChapter.start+'—'+displayChapter.end;
+  if(year<1510){
+   $('chapterTitlePrimary').textContent='大西洋远航与';
+   $('chapterTitleSecondary').textContent='王室扩张';
+   $('chapterIntro').textContent=atlasFirstMerged.intro;
+  }
+ }
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
- $('timelineContext').textContent=eleventh?'第十一章 · 1590—1599年事件':tenth?'第十章 · 1580—1589年事件':ninth?'第九章 · 1570—1579年事件':eighth?'第八章 · 1560—1569年事件':seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
+ $('timelineContext').textContent=displayChapter?$('chapterLabel').textContent+'年事件':'';
  $('timelineNotice').textContent='事件逐年揭示，政治状态跨章节延续。';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();
 }
@@ -1298,7 +1312,7 @@ function openPolity(group){
 }
 async function boot(){
  try{
-  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes,eighthRes,ninthRes,tenthRes,eleventhRes]=await Promise.all([
+  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes,eighthRes,ninthRes,tenthRes,eleventhRes,combinedRes]=await Promise.all([
     fetch('data/atlas-1497-1500.json',{cache:'no-store'}),
     fetch('data/atlas-1500-1509.json',{cache:'no-store'}),
     fetch('data/atlas-1510-1519.json',{cache:'no-store'}),
@@ -1309,9 +1323,10 @@ async function boot(){
     fetch('data/atlas-1560-1569.json',{cache:'no-store'}),
     fetch('data/atlas-1570-1579.json',{cache:'no-store'}),
     fetch('data/atlas-1580-1589.json',{cache:'no-store'}),
-    fetch('data/atlas-1590-1599.json',{cache:'no-store'})
+    fetch('data/atlas-1590-1599.json',{cache:'no-store'}),
+    fetch('data/atlas-1497-1509.json',{cache:'no-store'})
   ]);
-  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok||!eighthRes.ok||!ninthRes.ok||!tenthRes.ok||!eleventhRes.ok)throw new Error('历史切片未正确加载');
+  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok||!eighthRes.ok||!ninthRes.ok||!tenthRes.ok||!eleventhRes.ok||!combinedRes.ok)throw new Error('历史切片未正确加载');
   atlasEarly=await res.json();
   atlasLater=await laterRes.json();
   atlasThird=await thirdRes.json();
@@ -1323,6 +1338,7 @@ async function boot(){
   atlasNinth=await ninthRes.json();
   atlasTenth=await tenthRes.json();
   atlasEleventh=await eleventhRes.json();
+  atlasFirstMerged=await combinedRes.json();
   const chapterRes=await fetch('data/chapters.json',{cache:'no-store'});
   if(!chapterRes.ok)throw new Error('章节目录未正确加载');
   chapterRegistry=await chapterRes.json();
@@ -1330,9 +1346,9 @@ async function boot(){
   const ordered=chapterRegistry.chapters;
   if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
   lastPublishedYear=ordered[ordered.length-1].end;
-  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places))throw new Error('历史数据结构错误');
+  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
   // Constant-time citation lookup across all published years.
-  for(const dataset of [atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])
+  for(const dataset of [atlasFirstMerged,atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])
    for(const source of dataset.sources||[])sourcesById.set(source.id,source);
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});

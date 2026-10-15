@@ -4,12 +4,12 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const manifest=JSON.parse(read('data/chapters.json')),app=read('app.js'),html=read('index.html'),css=read('css/dark-atlas-v2.css');
 new vm.Script(app,{filename:'app.js'});
-assert.deepEqual(manifest.chapters.map(c=>[c.start,c.end]),[[1497,1499],[1500,1509],[1510,1519],[1520,1529],[1530,1539],[1540,1549],[1550,1559],[1560,1569],[1570,1579],[1580,1589],[1590,1599]]);
+assert.deepEqual(manifest.chapters.map(c=>[c.start,c.end]),[[1497,1509],[1510,1519],[1520,1529],[1530,1539],[1540,1549],[1550,1559],[1560,1569],[1570,1579],[1580,1589],[1590,1599]]);
 assert.ok(manifest.chapters.every(c=>c.status==='published'&&fs.existsSync(path.join(root,c.source))));
 for(const ch of manifest.chapters){
  const data=JSON.parse(read(ch.source));
  assert.equal(data.period.from,ch.start);
- assert.ok(data.period.to>=ch.end && (ch.number===1?data.period.to===1500:data.period.to===ch.end),'Original early archive includes 1500 baseline; UI first chapter ends 1499');
+ assert.equal(data.period.to,ch.end,'Published archive must match chapter terminal year');
 }
 for(let i=1;i<manifest.chapters.length;i++)
  assert.equal(manifest.chapters[i].start,manifest.chapters[i-1].end+1,'Historical chapter intervals must be contiguous');
@@ -24,8 +24,8 @@ assert.match(html,/id="browseDecadeNext"/);
 assert.match(html,/id="jumpYear"/);
 assert.match(html,/id="yearStartLabel"/);
 assert.match(html,/id="yearEndLabel"/);
-assert.match(html,/app\.js\?v=timeline-v1790-ch11-routefix/);
-assert.match(html,/css\/dark-atlas-v2\.css\?v=timeline-v1790-ch11-routefix/);
+assert.match(html,/app\.js\?v=timeline-v1800-merged-ch1ch2/);
+assert.match(html,/css\/dark-atlas-v2\.css\?v=timeline-v1800-merged-ch1ch2/);
 assert.doesNotMatch(html,/nth-child\(/,'Inline year tick positioning must not depend on number of chapters');
 assert.doesNotMatch(html,/id="chapterOne"/,'Rendered navigation must use registry, not all hardcoded chapter buttons');
 assert.match(app,/function browseDecade\(decade\)/);
@@ -64,4 +64,4 @@ assert.ok(app.includes("if(!chapter){")&&app.includes("timelineStatus(decade+"),
 assert.ok(app.includes('lastPublishedYear'),'Actual atlas must remain bounded by published history');
 assert.match(css,/\.timeline-centuries\{display:grid;grid-template-columns:repeat\(7,minmax\(0,1fr\)\)/);
 assert.match(css,/\.chapter-track\{display:grid;grid-template-columns:repeat\(5,minmax\(0,1fr\)\)/);
-console.log('PASS timeline: eight reviewed chapters, seven centuries, decade-local years, exactly five virtual half-century navigation slots for 50 and 500 years');
+console.log('PASS timeline: ten published chapters, consolidated 1497–1509, seven centuries and five navigation slots per page');

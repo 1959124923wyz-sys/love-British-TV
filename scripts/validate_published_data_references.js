@@ -6,8 +6,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const ROOT=path.resolve(__dirname,'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(ROOT,p),'utf8'));
 const periods=[
- ['data/atlas-1497-1500.json',1497,1499],
- ['data/atlas-1500-1509.json',1500,1509],
+ ['data/atlas-1497-1509.json',1497,1509],
  ['data/atlas-1510-1519.json',1510,1519],
  ['data/atlas-1520-1529.json',1520,1529],
  ['data/atlas-1530-1539.json',1530,1539],
@@ -43,9 +42,7 @@ for(const {file,start,end,data} of records){
   eventIds.add(e.id);local.add(e.id);
   // The prologue deliberately contains a background 1496 patent and
   // unpublished 1500 status: no unreviewed extra exceptions are allowed.
-  const knownBackground=file==='data/atlas-1497-1500.json' &&
-   (e.id==='patent-1496'&&e.year===1496 ||
-    e.id==='status-1500'&&e.year===1500);
+  const knownBackground=file==='data/atlas-1497-1509.json' && e.id==='patent-1496' && e.year===1496;
   assert.ok(knownBackground||e.year>=start&&e.year<=end,file+' out-of-period event '+e.id);
   if(e.lat!=null||e.lng!=null){
    assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng)&&Math.abs(e.lat)<=90&&Math.abs(e.lng)<=180,

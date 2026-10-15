@@ -12,26 +12,25 @@
     {
       "id": "chapterOne",
       "start": 1497,
-      "end": 1499,
-      "number": 1,
-      "label": "大西洋彼岸",
-      "source": "data/atlas-1497-1500.json",
-      "status": "published"
-    },
-    {
-      "id": "chapterTwo",
-      "start": 1500,
       "end": 1509,
-      "number": 2,
-      "label": "通往未知海岸",
-      "source": "data/atlas-1500-1509.json",
-      "status": "published"
+      "number": 1,
+      "label": "大西洋远航与王室扩张",
+      "source": "data/atlas-1497-1509.json",
+      "status": "published",
+      "merged_legacy_chapters": [
+        "chapterOne",
+        "chapterTwo"
+      ],
+      "original_source_files": [
+        "data/atlas-1497-1500.json",
+        "data/atlas-1500-1509.json"
+      ]
     },
     {
       "id": "chapterThree",
       "start": 1510,
       "end": 1519,
-      "number": 3,
+      "number": 2,
       "label": "王冠越过海峡",
       "source": "data/atlas-1510-1519.json",
       "status": "published"
@@ -40,7 +39,7 @@
       "id": "chapterFour",
       "start": 1520,
       "end": 1529,
-      "number": 4,
+      "number": 3,
       "label": "边区与远航",
       "source": "data/atlas-1520-1529.json",
       "status": "published"
@@ -49,7 +48,7 @@
       "id": "chapterFifth",
       "start": 1530,
       "end": 1539,
-      "number": 5,
+      "number": 4,
       "label": "法权与边区",
       "source": "data/atlas-1530-1539.json",
       "status": "published"
@@ -58,7 +57,7 @@
       "id": "chapterSixth",
       "start": 1540,
       "end": 1549,
-      "number": 6,
+      "number": 5,
       "label": "布洛涅与英苏战争",
       "source": "data/atlas-1540-1549.json",
       "status": "published"
@@ -67,7 +66,7 @@
       "id": "chapterSeventh",
       "start": 1550,
       "end": 1559,
-      "number": 7,
+      "number": 6,
       "label": "撤军、殖民与加来失守",
       "source": "data/atlas-1550-1559.json",
       "status": "published"
@@ -76,7 +75,7 @@
       "id": "chapterEighth",
       "start": 1560,
       "end": 1569,
-      "number": 8,
+      "number": 7,
       "label": "奴隶贸易与海上掠夺",
       "source": "data/atlas-1560-1569.json",
       "status": "published"
@@ -85,7 +84,7 @@
       "id": "chapterNinth",
       "start": 1570,
       "end": 1579,
-      "number": 9,
+      "number": 8,
       "label": "殖民暴力与海外掠夺",
       "source": "data/atlas-1570-1579.json",
       "status": "published"
@@ -94,7 +93,7 @@
       "id": "chapterTenth",
       "start": 1580,
       "end": 1589,
-      "number": 10,
+      "number": 9,
       "label": "焦土、奴役与殖民地契",
       "source": "data/atlas-1580-1589.json",
       "status": "published"
@@ -103,7 +102,7 @@
       "id": "chapterEleventh",
       "start": 1590,
       "end": 1599,
-      "number": 11,
+      "number": 10,
       "label": "镇压、反抗与跨洋劫掠",
       "source": "data/atlas-1590-1599.json",
       "status": "published"

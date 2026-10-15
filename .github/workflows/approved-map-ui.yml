@@ -38,5 +38,6 @@ jobs:
           node scripts/validate_published_data_references.js
           node scripts/test_localization_and_control_display.js
           node scripts/test_timeline_scale.js
+          node scripts/test_merged_first_chapter.js
           node scripts/test_geographic_precision.js
           node scripts/test_voyage_routes.js

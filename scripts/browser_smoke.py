@@ -196,7 +196,29 @@ try:
     driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1500\"]').click()")
     wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent==='1500'"))
     verify("decade-local year slider must cover 1500–1509, not all 500 years",
-           "document.getElementById('yearRange').min==='1500'&&document.getElementById('yearRange').max==='1509'", driver)
+           "document.getElementById('yearRange').min==='1497'&&document.getElementById('yearRange').max==='1509'", driver)
+    # Consolidated 1497–1509 first chapter: one event archive and one chapter total.
+    set_year(1497, 4)
+    verify("1497 merged first chapter title or slider failed",
+           """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
+              document.querySelector('#yearRange').min==='1497' &&
+              document.querySelector('#yearRange').max==='1509'""", driver)
+    set_year(1499, 6)
+    set_year(1500, 10)
+    verify("1500 erroneously resets chapter or forgets 1497 history",
+           """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
+              document.querySelector('#eventList [data-eid="landfall-1497"]') &&
+              document.querySelector('#eventList [data-eid="1500-WESTON-ROYAL-REWARD"]')""", driver)
+    driver.save_screenshot(str(OUT / "merged-chapter1-1500.png"))
+    toggle_layer("showFullChapterArchive", True)
+    verify("First chapter full archive must have 28 combined items",
+           "document.querySelector('#eventCount').textContent==='28项'",driver)
+    set_year(1509, 28)
+    set_year(1510, 1)
+    verify("1510 must be the second chapter and clear previous archive preview",
+           """document.querySelector('#chapterLabel').textContent==='第二章 · 1510—1519' &&
+              !document.querySelector('#showFullChapterArchive').checked""",driver)
+    set_year(1500, 10)
     # Arrow advances an entire half-century, not a single decade.
     driver.execute_script("document.getElementById('browseDecadeNext').click()")
     verify("first half-century arrow did not show 1550–1599",
@@ -630,7 +652,7 @@ try:
     verify("Rewind leaves future voyage links","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
     set_year(1550,6)
     verify("1550 new chapter missing or Boulogne still English",
-           """document.querySelector('#chapterNav').textContent.includes('第七章') &&
+           """document.querySelector('#chapterNav').textContent.includes('第六章') &&
               document.querySelectorAll('#map .atlas-seventh-site').length===7 &&
               document.querySelectorAll('#map .atlas-seventh-french').length===1 &&
               document.querySelectorAll('#map .atlas-seventh-scottish').length===1 &&
@@ -658,7 +680,7 @@ try:
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560,3)
     verify("1560 new chapter or future overseas trade leaks into early history",
-           """document.querySelector('#chapterNav').textContent.includes('第八章') &&
+           """document.querySelector('#chapterNav').textContent.includes('第七章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
@@ -721,7 +743,7 @@ try:
     # year-end English garrisons distinct from paper grants.
     set_year(1570,2)
     verify("Chapter 9 political continuity or new historic content absent",
-           """document.querySelector('#chapterNav').textContent.includes('第九章') &&
+           """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
@@ -813,7 +835,7 @@ try:
            """document.querySelector('#eventList [data-eid="1580S-E001"]') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
-              document.querySelector('#chapterLabel').textContent.includes('第十章')""",driver)
+              document.querySelector('#chapterLabel').textContent.includes('第九章')""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1580-Loughrea-recapture.png"))
     set_year(1582,10)
     verify("1582 famine testimony hidden", "!!document.querySelector('#eventList [data-eid=\"1580S-E009\"]')",driver)
@@ -843,7 +865,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
     set_year(1590,3)
     verify("1590 chapter label, 3 Crown/settler cores, or 2 dashed studies missing",
-           """document.querySelector('#chapterLabel').textContent.includes('第十一章') &&
+           """document.querySelector('#chapterLabel').textContent.includes('第十章') &&
               document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&

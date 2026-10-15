@@ -11,8 +11,8 @@ const rel=read('data/political-relations-1590-1599.geojson'),city=read('data/fre
 const notes=read('data/chapter11-detail-notes.json'),ledger=read('data/chapter11-economic-violence-ledger.json');
 const app=txt('app.js'),html=txt('index.html');new vm.Script(app);
 assert.deepEqual(now.period,{from:1590,to:1599,next:1600});
-assert.equal(catalog.chapters.length,11);
-assert.ok(catalog.chapters.some(c=>c.number===11&&c.status==='published'&&c.start===1590&&c.end===1599));
+assert.equal(catalog.chapters.length,10);
+assert.ok(catalog.chapters.some(c=>c.number===10&&c.status==='published'&&c.start===1590&&c.end===1599));
 assert.equal(now.events.length,36);assert.equal(now.sources.length,70);assert.equal(now.places.length,31);
 assert.equal(now.routes.length,0);assert.equal(now.colonial_polygons.length,0);
 assert.equal(last.events.length,30);
