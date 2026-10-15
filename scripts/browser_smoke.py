@@ -653,7 +653,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1589'""",driver)
+              document.querySelector('#jumpYear').max==='1599'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560,3)
@@ -661,7 +661,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1589'""",driver)
+              document.querySelector('#jumpYear').max==='1599'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562,7)
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
@@ -724,7 +724,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第九章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
-              document.querySelector('#jumpYear').max==='1589'""",driver)
+              document.querySelector('#jumpYear').max==='1599'""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
     verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
            """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
@@ -831,11 +831,58 @@ try:
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
-              document.querySelector('#jumpYear').max==='1589'""",driver)
+              document.querySelector('#jumpYear').max==='1599'""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
     set_year(1579,41)
     verify("rewinding to ninth chapter left tenth control sites",
            "document.querySelectorAll('#map .atlas-tenth-english-site').length===0",driver)
+    # 1590s annual/year-end control differences, uncertain study areas, and Drake 1579 underlay.
+    set_year(1579,41)
+    verify("Drake 1579 voyage schematic continuity backdrop missing",
+           "document.querySelectorAll('#map .atlas-voyage-continuity').length>=2",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
+    set_year(1590,3)
+    verify("1590 chapter label, 3 Crown/settler cores, or 2 dashed studies missing",
+           """document.querySelector('#chapterLabel').textContent.includes('第十一章') &&
+              document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
+              document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
+              document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
+              document.querySelector('#jumpYear').max==='1599'""",driver)
+    set_year(1591,5)
+    verify("1591 Santos year-end English occupation not displayed",
+           "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1591-Santos-captured.png"))
+    set_year(1592,9)
+    verify("1592 Santos should no longer be English at year-end",
+           "document.querySelectorAll('#map .atlas-eleventh-core').length===3",driver)
+    set_year(1594,13)
+    verify("1594 documented Enniskillen/Blackwater English forts absent",
+           "document.querySelectorAll('#map .atlas-eleventh-core').length===5",driver)
+    set_year(1595,19)
+    verify("1595 lost English forts or temporary Recife shown as year-end possession",
+           """document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
+              !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
+    set_year(1598,30)
+    verify("1598 Kilcolman/San Juan falsely mapped as annual English control",
+           """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
+              document.querySelectorAll('#map .atlas-eleventh-research-area').length===1 &&
+              !!document.querySelector('#eventList [data-eid="1590S-E027"]')""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-raid.png"))
+    set_year(1599,36)
+    verify("1599 chapter terminal count wrong",
+           """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
+              document.querySelector('#jumpYear').max==='1599'""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1599-Ireland.png"))
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    verify("Territory toggle does not hide chapter11 uncertain areas and cores",
+           """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
+              document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
+    driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    set_year(1589,30)
+    verify("Back to 1589 leaked year 1590 military area",
+           """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
+              document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()

@@ -52,6 +52,6 @@ for(const r of main.routes){
 assert.ok(app.includes('renderTenthControlSites()')&&app.includes('atlasTenth=await tenthRes.json()'));
 assert.ok(app.includes('sourcesById.get(id)'),'Source index performance regression');
 assert.ok(app.includes('ninth=year>=1570&&year<1580,tenth=year>=1580'),'Ninth chapter leaks into tenth');
-assert.ok(html.includes('max="1589"')&&html.includes('1497—1589'));
+assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
 assert.ok(app.includes("fetch('data/chapter10-detail-notes.json'"));
 console.log('PASS ch10: 30 events, 70 sources, 25 places, 6 schematic routes, 31 ledgers, 14 null GIS, 3 dated point episodes, zero measured land polygons');

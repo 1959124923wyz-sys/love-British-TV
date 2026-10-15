@@ -127,5 +127,5 @@ assert.ok(ocean.segments.every(segment=>Math.abs(segment.at(-1)[1]-segment[0][1]
 assert.ok(app.includes('next>=1570?atlasNinth:next>=1560?atlasEighth'));
 assert.ok(app.includes('function renderNinthControlSites()'));
 assert.ok(app.includes('const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords'));
-assert.ok(html.includes('max="1589"')&&html.includes('1497—1589'));
+assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
 console.log('PASS ch9: 41 events, 60 sources, 43 places, 18 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');

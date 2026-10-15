@@ -58,7 +58,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -94,7 +94,7 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let year=1497;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let atlasEleventh=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 // UI contract: two independent user-facing layers, all earlier internal gate IDs
 // retained only for chronology, migration and backwards-compatible renderers.
@@ -125,9 +125,9 @@ function syncMapLayers(){
  if(atlas)refreshHistoricalLayers();
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
-const findPlaceAcrossChapters=id=>[atlas,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
+const findPlaceAcrossChapters=id=>[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 // Transient focus target; historical event coordinates remain immutable.
@@ -398,7 +398,7 @@ function renderPoints(){
  }
  if($('toggleKingdom').checked&&year>=1500&&map.getZoom()>=6){
   for(const q of atlas.places||[]){
-   if(q.render_as_event_only)continue;
+   if(q.render_as_event_only||q.render_as_control_core_only)continue;
    const activeMilitaryCore=$('toggleControlAreas').checked&&((year>=1540&&militaryControlPoints?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.year_end_start&&year<=f.properties.year_end_stop))||(year>=1550&&seventhControlSites?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.start_year&&year<=f.properties.end_year)));
    const alreadyDrawnAsArea=Boolean(activeMilitaryCore)||footprintEnabledFor(q.id)||($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year));
    if(alreadyDrawnAsArea)continue;
@@ -408,12 +408,22 @@ function renderPoints(){
   }
  }
  // Aggregate by screen distance, without changing the historically stored coordinates.
- const nearby=[];
+ const nearby=[],cells=new Map(),cellSize=32;
+ // Spatial hashing limits grouping checks to neighboring 32-pixel cells.
  for(const record of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item)||a.item.id.localeCompare(b.item.id))){
   const point=map.latLngToLayerPoint([record.lat,record.lng]);
-  let g=nearby.find(x=>Math.hypot(x.pt.x-point.x,x.pt.y-point.y)<32);
-  if(!g){g={pt:point,latlng:map.layerPointToLatLng(point),items:[]};nearby.push(g)}
-  g.items.push(record);
+  const gx=Math.floor(point.x/cellSize),gy=Math.floor(point.y/cellSize);
+  let group=null,earliest=Infinity;
+  for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)
+   for(const g of cells.get((gx+dx)+','+(gy+dy))||[]){
+    if(g.order<earliest&&Math.hypot(g.pt.x-point.x,g.pt.y-point.y)<32){group=g;earliest=g.order}
+   }
+  if(!group){
+   group={pt:point,latlng:map.layerPointToLatLng(point),items:[],order:nearby.length};
+   nearby.push(group);
+   const key=gx+','+gy;if(!cells.has(key))cells.set(key,[]);cells.get(key).push(group);
+  }
+  group.items.push(record);
  }
  // Obstacles contain all visible group hubs and singleton icons in container pixels.
  clusterObstacles=nearby.map(g=>{
@@ -463,6 +473,10 @@ function renderPoints(){
    dashArray:coastal?'2 11':schematic?'3 10':'8 9',opacity:coastal?.7:.92,
    className:coastal?'atlas-merchant-coastline':'atlas-voyage-schematic'};
   const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords;
+   // A faint unbroken foundation joins historical endpoints without implying GPS.
+   if(schematic)L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
+    color:baseColor,weight:2.4,opacity:.48,interactive:false,
+    className:'atlas-voyage-continuity'}).addTo(groups.routes);
   const line=L.polyline(routeGeometry,{...style,interactive:false}).addTo(groups.routes);
   // Historical territory polygons cannot intercept this upper SVG hit stroke.
   L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
@@ -731,6 +745,49 @@ function renderNinthControlSites(){
  }
 }
 // Date-gated control symbols for documented 1580s Crown and colonial localities.
+// Chapter 11: precomputed historical YEAR-END local control points.
+function renderEleventhControlCores(){
+ groups.eleventhCores.clearLayers();groups.eleventhHits.clearLayers();
+ if(!eleventhControlCores||year<1590||year>1599||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
+ for(const f of eleventhControlCores.features||[]){
+  const p=f.properties||{},c=f.geometry?.coordinates;
+  if(f.geometry?.type!=='Point'||!c||p.fill_authorized!==false||!p.year_end_visible?.includes(year))continue;
+  const center=[c[1],c[0]],radius=Math.max(7,Math.min(12,Number(p.screen_radius_px)||8));
+  const open=e=>{
+   if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   const pl=findPlaceAcrossChapters(p.stable_id);
+   if(pl)openDossier(pl,'place');else openTerritoryDossier(f,'historic');
+  };
+  L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius,
+   color:'#ac84e3',weight:3,dashArray:'5 5',fill:true,fillColor:'#a57adc',fillOpacity:.17,
+   bubblingMouseEvents:false,className:'atlas-eleventh-core'})
+  .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">当年年末据点 · 查看来源</div>',
+   {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+  .on('click',open).addTo(groups.eleventhCores);
+  L.circleMarker(center,{renderer:garrisonHitRenderer,pane:'garrisonHitPane',radius:radius+8,
+   color:'#a57adc',weight:7,opacity:.018,fill:false,bubblingMouseEvents:false,
+   className:'atlas-eleventh-core-hit'}).on('click',open).addTo(groups.eleventhHits);
+ }
+}
+// Two studied geographic envelopes: very light fill and visibly uncertain dashed edge.
+function renderEleventhInfluenceAreas(){
+ groups.eleventhAreas.clearLayers();
+ if(!eleventhInfluenceAreas||year<1590||year>1599||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
+ L.geoJSON(eleventhInfluenceAreas,{renderer:warVicinityRenderer,pane:'warVicinityPane',
+  filter:f=>f.properties?.fill_authorized===false&&f.properties?.valid_years?.includes(year),
+  style:f=>({color:f.properties.stroke_hex||'#9778b5',weight:Number(f.properties.stroke_weight)||2,
+   dashArray:f.properties.stroke_dash_array||'7 6',opacity:.9,fill:true,
+   fillColor:f.properties.fill_hex||'#a185b1',
+   fillOpacity:Math.min(.085,Number(f.properties.fill_opacity)||.055),
+   className:'atlas-eleventh-research-area',bubblingMouseEvents:false}),
+  onEachFeature:(f,layer)=>{
+   const p=f.properties;
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">法律地名及殖民活动参考 · 非实测边界</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+   layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(f,'historic')});
+  }
+ }).addTo(groups.eleventhAreas);
+}
 function renderTenthControlSites(){
  if(!tenthControlSites||year<1580||year>1589||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
  for(const feature of tenthControlSites.features||[]){
@@ -1084,7 +1141,7 @@ function renderMilestones(){
 }
 function setYear(v){
  const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
- const chosen=next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
+ const chosen=next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:next>=1500?atlasLater:atlasEarly;
  if(!chosen)return;
  // Keep map viewport and open dossier; avoid displaying a selected event from the future.
  if(selectedItemYear!==null&&selectedItemYear>next){
@@ -1097,7 +1154,7 @@ function setYear(v){
  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
  year=next;atlas=chosen;
  $('bigYear').textContent=year;$('timeYear').textContent=year;
- const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540&&year<1550,seventh=year>=1550&&year<1560,eighth=year>=1560&&year<1570,ninth=year>=1570&&year<1580,tenth=year>=1580;
+ const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540&&year<1550,seventh=year>=1550&&year<1560,eighth=year>=1560&&year<1570,ninth=year>=1570&&year<1580,tenth=year>=1580&&year<1590,eleventh=year>=1590;
  $('chapterNav').textContent=sixth?'历史地图 · 第六章':fifth?'历史地图 · 第五章':fourth?'历史地图 · 第四章':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
  $('chapterNavName').textContent=sixth?'布洛涅与战争边区':fifth?'法权与边区':fourth?'边区与远航':third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
  $('chapterLabel').textContent=sixth?'第六章 · 1540—1549':fifth?'第五章 · 1530—1539':fourth?'第四章 · 1520—1529':third?'第三章 · 1510—1519':second?'第二章 · 1500—1509':'第一章 · 1497—1499';
@@ -1171,10 +1228,25 @@ function setYear(v){
   $('factCDesc').innerHTML=year>=1589?'英军袭掠<br>拉科鲁尼亚与维戈':year>=1586?'德雷克舰队掠夺<br>加勒比港口':'';
   $('periodTitle').textContent='伊丽莎白一世 · 英格兰王国';
  }
+ if(eleventh){
+  $('chapterNav').textContent='历史地图 · 第十一章';
+  $('chapterNavName').textContent='镇压、反抗与跨洋劫掠';
+  $('chapterLabel').textContent='第十一章 · 1590—1599';
+  $('chapterTitlePrimary').textContent='镇压、反抗与';
+  $('chapterTitleSecondary').textContent='跨洋劫掠';
+  $('chapterIntro').textContent=atlasEleventh.intro;
+  $('factA').textContent=year>=1598?'1598':year>=1594?'1594':'1590';
+  $('factADesc').innerHTML=year>=1598?'黄福特战役<br>英军丧失驻堡':year>=1594?'九年战争<br>英军夺堡与抵抗':'爱尔兰军政扫荡<br>镇压地方领主';
+  $('factB').textContent=year>=1596?'1596':year>=1595?'1595':'—';
+  $('factBDesc').innerHTML=year>=1596?'英荷军队攻掠加的斯':year>=1595?'累西腓短期被掠<br>贸易货物遭夺':'';
+  $('factC').textContent=year>=1599?'1599':year>=1598?'1598':'—';
+  $('factCDesc').innerHTML=year>=1599?'卡希尔夺堡<br>埃塞克斯爱尔兰战事':year>=1598?'圣胡安短暂占领<br>撤军后归西班牙':'';
+  $('periodTitle').textContent='伊丽莎白一世 · 英格兰王国';
+ }
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
- $('timelineContext').textContent=tenth?'第十章 · 1580—1589年事件':ninth?'第九章 · 1570—1579年事件':eighth?'第八章 · 1560—1569年事件':seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
+ $('timelineContext').textContent=eleventh?'第十一章 · 1590—1599年事件':tenth?'第十章 · 1580—1589年事件':ninth?'第九章 · 1570—1579年事件':eighth?'第八章 · 1560—1569年事件':seventh?'第七章 · 1550—1559年事件':sixth?'第六章 · 1540—1549年事件':fifth?'第五章 · 1530—1539年事件':fourth?'第四章 · 1520—1529年事件':third?'第三章 · 1510—1519年事件':second?'第二章 · 1500—1509年事件':'第一章 · 1497—1499年事件';
  $('timelineNotice').textContent='事件逐年揭示，政治状态跨章节延续。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -1226,7 +1298,7 @@ function openPolity(group){
 }
 async function boot(){
  try{
-  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes,eighthRes,ninthRes,tenthRes]=await Promise.all([
+  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes,eighthRes,ninthRes,tenthRes,eleventhRes]=await Promise.all([
     fetch('data/atlas-1497-1500.json',{cache:'no-store'}),
     fetch('data/atlas-1500-1509.json',{cache:'no-store'}),
     fetch('data/atlas-1510-1519.json',{cache:'no-store'}),
@@ -1236,9 +1308,10 @@ async function boot(){
     fetch('data/atlas-1550-1559.json',{cache:'no-store'}),
     fetch('data/atlas-1560-1569.json',{cache:'no-store'}),
     fetch('data/atlas-1570-1579.json',{cache:'no-store'}),
-    fetch('data/atlas-1580-1589.json',{cache:'no-store'})
+    fetch('data/atlas-1580-1589.json',{cache:'no-store'}),
+    fetch('data/atlas-1590-1599.json',{cache:'no-store'})
   ]);
-  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok||!eighthRes.ok||!ninthRes.ok||!tenthRes.ok)throw new Error('历史切片未正确加载');
+  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok||!eighthRes.ok||!ninthRes.ok||!tenthRes.ok||!eleventhRes.ok)throw new Error('历史切片未正确加载');
   atlasEarly=await res.json();
   atlasLater=await laterRes.json();
   atlasThird=await thirdRes.json();
@@ -1249,6 +1322,7 @@ async function boot(){
   atlasEighth=await eighthRes.json();
   atlasNinth=await ninthRes.json();
   atlasTenth=await tenthRes.json();
+  atlasEleventh=await eleventhRes.json();
   const chapterRes=await fetch('data/chapters.json',{cache:'no-store'});
   if(!chapterRes.ok)throw new Error('章节目录未正确加载');
   chapterRegistry=await chapterRes.json();
@@ -1256,9 +1330,9 @@ async function boot(){
   const ordered=chapterRegistry.chapters;
   if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
   lastPublishedYear=ordered[ordered.length-1].end;
-  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places))throw new Error('历史数据结构错误');
+  if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places))throw new Error('历史数据结构错误');
   // Constant-time citation lookup across all published years.
-  for(const dataset of [atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth])
+  for(const dataset of [atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])
    for(const source of dataset.sources||[])sourcesById.set(source.id,source);
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
@@ -1283,6 +1357,9 @@ async function boot(){
    const tenthNotesResponse=await fetch('data/chapter10-detail-notes.json',{cache:'no-store'});
    if(!tenthNotesResponse.ok)throw new Error('第十章历史文献加载失败');
    Object.assign(researchNotes,(await tenthNotesResponse.json()).records||{});
+   const eleventhNotesResponse=await fetch('data/chapter11-detail-notes.json',{cache:'no-store'});
+   if(!eleventhNotesResponse.ok)throw new Error('第十一章史料文件缺失');
+   Object.assign(researchNotes,(await eleventhNotesResponse.json()).records||{});
    if(geoResponse.ok)geographicHypotheses=await geoResponse.json();
    if(thirdGeoResponse.ok)geographicHypothesesThird=await thirdGeoResponse.json();
    if(controlResponse.ok)frenchCityAreas=await controlResponse.json();
@@ -1366,6 +1443,24 @@ async function boot(){
   politicalRelationAreas.features.push(...p10.features);
   frenchCityAreas.features.push(...u10.features);
   tenthControlSites=s10;
+  const [geo11,relation11,urban11,core11,area11]=await Promise.all([
+   fetch('data/territorial-footprints-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/political-relations-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/french-urban-control-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/eleventh-control-cores-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/eleventh-influence-areas-1590-1599.geojson',{cache:'no-store'})
+  ]);
+  if([geo11,relation11,urban11,core11,area11].some(r=>!r.ok))throw new Error('第十一章地图文件加载失败');
+  const [g11,p11,u11,c11,a11]=await Promise.all([geo11.json(),relation11.json(),urban11.json(),core11.json(),area11.json()]);
+  if(c11.features?.length!==10||a11.features?.length!==2||
+   c11.features.some(f=>f.geometry?.type!=='Point'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null)||
+   a11.features.some(f=>f.geometry?.type!=='Polygon'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null))
+   throw new Error('第十一章未证实的控制地理面不可冒充实测边界');
+  territorialFootprints.features.push(...g11.features);
+  politicalRelationAreas.features.push(...p11.features);
+  frenchCityAreas.features.push(...u11.features);
+  eleventhControlCores=c11;eleventhInfluenceAreas=a11;
+
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
   try{
@@ -1406,14 +1501,14 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume

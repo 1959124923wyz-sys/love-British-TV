@@ -1,0 +1,273 @@
+{
+  "type": "FeatureCollection",
+  "schema": "ch11_reconstructed_influence_areas_separate_from_verified_historic_control_v1",
+  "metadata": {
+    "period": [
+      1590,
+      1599
+    ],
+    "geometry_type": "dashed_very_low_opacity_study_envelopes",
+    "number_of_historically_verified_English_territory_polygons": 0,
+    "estimated_research_envelopes": 2,
+    "true_yearly_control_area_sqkm": null,
+    "each_area_is_not_an_actual_Early_Modern_administrative_or_occupied_map": true,
+    "visual_rule": "Never render under certified control polygons; always dashed/light study layer with toggle, tooltips for legal provenance and source IDs; no area figures.",
+    "copyright": "First Polygon geometrically inherited exactly from repository 1570–79 Pale legal outline; second drawn schematic from published historical relationship of Blackwater settlements, no copying source images."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ch11-pale-statutory-1488-comparison",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.645119,
+              53.808527
+            ],
+            [
+              -6.8791667,
+              53.7263889
+            ],
+            [
+              -6.91434,
+              53.623266
+            ],
+            [
+              -6.791667,
+              53.555
+            ],
+            [
+              -6.670833,
+              53.402222
+            ],
+            [
+              -6.689167,
+              53.291389
+            ],
+            [
+              -6.666944,
+              53.215833
+            ],
+            [
+              -6.6152,
+              53.13348
+            ],
+            [
+              -6.554626,
+              53.2174
+            ],
+            [
+              -6.5247222,
+              53.235
+            ],
+            [
+              -6.4444444,
+              53.2802778
+            ],
+            [
+              -6.3734436,
+              53.285896
+            ],
+            [
+              -6.1002778,
+              53.2783333
+            ],
+            [
+              -6.1358643,
+              53.2939516
+            ],
+            [
+              -6.248889,
+              53.333056
+            ],
+            [
+              -6.218056,
+              53.459722
+            ],
+            [
+              -6.3477778,
+              53.7188889
+            ],
+            [
+              -6.416667,
+              54
+            ],
+            [
+              -6.540556,
+              53.859722
+            ],
+            [
+              -6.540556,
+              53.859722
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "都柏林—德罗赫达帕莱核心 · 历史地名参考",
+        "control_type": "English_Crown_legal_and_administrative_core_study_area",
+        "controller": "English Crown in Ireland",
+        "scope": "1590s_Crown_core_administrative_reference_not_verified_frontier",
+        "valid_years": [
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1595,
+          1596,
+          1597,
+          1598,
+          1599
+        ],
+        "start_year": 1590,
+        "end_year": 1599,
+        "original_geography_source_period": 1488,
+        "digitized_source": "main/data/territorial-footprints-1570-1579.geojson / 1488 statute topology inherited unchanged",
+        "historical_source_ids": [
+          "C11-S52",
+          "C11-S53",
+          "C11-S54"
+        ],
+        "original_modern_place_geography_anchors": 17,
+        "method": "exact literal 17-site legal-geographical reference outline inherited from previous 1570–79 atlas; geometry NOT re-surveyed at 1590s, provisional persistence of eastern Dublin royal administrative core only",
+        "historical_frontier_surveyed_for_1590s": false,
+        "provenance": "already approved early-Pale legal-place envelope, now treated as estimated region for decade 1590–1599 without claiming revalidation",
+        "uncertainty": "1488 statute ≠ an exact 1590 border; parts of the Pale heavily contested or locally Gaelic",
+        "boundary_style": "dashed",
+        "stroke_dash_array": "7 6",
+        "stroke_weight": 2.1,
+        "stroke_hex": "#9363ba",
+        "fill_hex": "#8561a2",
+        "fill_opacity": 0.085,
+        "available_for_approximate_layer": true,
+        "historical_boundary_confirmed": false,
+        "verified_English_occupation_polygon": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "label_type": "虚线法律与军政影响参考范围",
+        "map_layer": "territory",
+        "source_ids": [
+          "C11-S52",
+          "C11-S53",
+          "C11-S54"
+        ],
+        "research_stable_id": "dublin-pale-statutory-1488-presentation-envelope",
+        "description": "1488 statute ≠ an exact 1590 border; parts of the Pale heavily contested or locally Gaelic。仅表示历史地名与殖民活动研究参考范围，虚线并非当年实测控制边界。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch11-munster-raleigh-blackwater-reference",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.988,
+              52.158
+            ],
+            [
+              -7.867,
+              52.17
+            ],
+            [
+              -7.81,
+              52.095
+            ],
+            [
+              -7.8,
+              51.985
+            ],
+            [
+              -7.833,
+              51.93
+            ],
+            [
+              -7.889,
+              51.95
+            ],
+            [
+              -7.943,
+              52.07
+            ],
+            [
+              -7.988,
+              52.158
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "芒斯特黑水河下游：罗利殖民庄园分布示意",
+        "control_type": "English_undertaker_plantation_estate_legal_grants_study_area",
+        "controller": "English Crown grantees alongside existing Irish landholders",
+        "scope": "geographical_reference_envelope_not_a_Raleigh_legal_parcel_or_British_garrison",
+        "valid_years": [
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1595,
+          1596,
+          1597
+        ],
+        "start_year": 1590,
+        "end_year": 1597,
+        "post_1598_status": "English settler plantation strongly disrupted Oct1598; some rights claimed, legal grant area persists but this resident planter reference removed from active study display",
+        "historical_source_ids": [
+          "C11-S59",
+          "C11-S60",
+          "C11-S61",
+          "C11-S66",
+          "C11-S67"
+        ],
+        "named_research_anchors": [
+          {
+            "name": "Lismore",
+            "lon_approx": -7.93,
+            "lat_approx": 52.14
+          },
+          {
+            "name": "Youghal",
+            "lon_approx": -7.85,
+            "lat_approx": 51.95
+          }
+        ],
+        "method": "hand-sketched visual study envelope enclosing documented lower River Blackwater locality between Youghal and Lismore. Width and turns are cartographic choices with NO historic boundary claim, NO measured acreage, not actual parcel boundary. Partial Youghal rights only.",
+        "uncertainty": "Raleigh did not own all Youghal, parcels were fragmented and often disputed with old English/Gaelic landholders; many grants not occupied",
+        "boundary_style": "dashed",
+        "stroke_dash_array": "5 7",
+        "stroke_weight": 2,
+        "stroke_hex": "#b6784f",
+        "fill_hex": "#dcb18e",
+        "fill_opacity": 0.055,
+        "available_for_approximate_layer": true,
+        "historical_boundary_confirmed": false,
+        "verified_English_occupation_polygon": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "label_type": "虚线殖民地产活动大致区间",
+        "map_layer": "territory",
+        "source_ids": [
+          "C11-S59",
+          "C11-S60",
+          "C11-S61",
+          "C11-S66",
+          "C11-S67"
+        ],
+        "research_stable_id": "raleigh-munster-blackwater-legal-grant-reference",
+        "description": "Raleigh did not own all Youghal, parcels were fragmented and often disputed with old English/Gaelic landholders; many grants not occupied。仅表示历史地名与殖民活动研究参考范围，虚线并非当年实测控制边界。"
+      }
+    }
+  ]
+}
