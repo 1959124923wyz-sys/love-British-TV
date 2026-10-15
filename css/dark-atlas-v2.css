@@ -759,3 +759,15 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
   .masthead .identity b{font-size:16px}
   .mobile-events-toggle{font-size:11px;white-space:nowrap;padding:6px 9px}
 }
+
+/* Fix the 2026 legacy base stylesheet's max-width:680px rule that set
+   .sidebar .event-list {display:none}. The menu must expose real history. */
+@media(max-width:680px){
+ .sidebar .event-list{display:flex;flex-direction:column}
+ .sidebar .side-section-head{display:flex}
+ .sidebar .chapter-facts{display:grid}
+ .sidebar .intro{display:block}
+ .sidebar .sidebar-main{overflow-y:auto;overscroll-behavior:contain}
+ .sidebar .event-item{min-height:48px;padding:10px 7px}
+ .sidebar .chapter-card:not([open]) .chapter-body{display:none}
+}
