@@ -3,11 +3,12 @@
   "name": "Historical source-backed regional story follow-ups 1562-1596",
   "metadata": {
     "geometry_semantics": "non-surveyed diagrammatic local/region viewing aid; no actual territory area",
-    "feature_count": 4,
+    "feature_count": 6,
     "verified_english_occupation_polygon_count": 0,
     "verified_english_garrison_location": 1,
     "short_occupation_year_end_split": "Le Havre 1562 English garrison / 1563 French recovery",
-    "source_policy": "Municipal archives, museum collection catalogues, research library and Library of Congress"
+    "source_policy": "Municipal archives, museum collection catalogues, research library and Library of Congress",
+    "scope_addendum": "1587 Cádiz naval event explicitly distinct from 1596 Anglo-Dutch town sack; 1589 Vigo town raid distinct from permanent conquest"
   },
   "features": [
     {
@@ -272,6 +273,138 @@
           "Bay of Cádiz"
         ],
         "actor_context": "joint Anglo-Dutch forces, not exclusively England"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-cadiz-bay-1587-naval-attack-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.48,
+              36.46
+            ],
+            [
+              -6.17,
+              36.46
+            ],
+            [
+              -6.17,
+              36.63
+            ],
+            [
+              -6.48,
+              36.63
+            ],
+            [
+              -6.48,
+              36.46
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "City/bay hand-drawn broad reference box from modern name and event evidence; NOT damage, battle, archaeological wreck or surveyed military occupation boundary.",
+        "source_precision": "Only place/city scale is supported by official regional sources.",
+        "name": "1587年加的斯港湾：德雷克攻击西班牙舰船（非攻占全城）",
+        "label_type": "港湾战事与船只损失位置示意",
+        "zone_type": "english_naval_raid_harbour_schematic",
+        "color_role": "raid_red",
+        "start_year": 1587,
+        "end_year": 1587,
+        "controller_zh": "德雷克指挥的英格兰舰队与西班牙、热那亚商船防卫力量",
+        "summary_zh": "1587年4月29日德雷克袭击西班牙加的斯港湾。西班牙安达卢西亚官方公布的多学科水下考古研究，确认当年受袭沉没的热那亚商船San Giorgio e Sant’Elmo Buonaventura（考古编号Delta II）。其船货和船上人骨说明此役伤害了贸易人员，并非抽象的舰队数字。此处红色淡虚线只指示加的斯港湾战事，不是那艘船的实测海底坐标，也不代表德雷克攻占、焚毁整座加的斯城市。1596年英荷军队入城洗劫是另一场战争行动，地图不得把两次事件串作九年持续英占。",
+        "source_ids": [
+          "C10-S20",
+          "C10-S36"
+        ],
+        "source_urls": [
+          "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/actualidad/noticias/detalle/657958.html",
+          "https://www.juntadeandalucia.es/institutodepatrimoniohistorico/"
+        ],
+        "related_event_ids": [
+          "1580S-E024"
+        ],
+        "named_anchors": [
+          "Cádiz Bay"
+        ],
+        "damage_area_known": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-norreys-vigo-sack-1589-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.85,
+              42.16
+            ],
+            [
+              -8.59,
+              42.16
+            ],
+            [
+              -8.59,
+              42.32
+            ],
+            [
+              -8.85,
+              42.32
+            ],
+            [
+              -8.85,
+              42.16
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "City/bay hand-drawn broad reference box from modern name and event evidence; NOT damage, battle, archaeological wreck or surveyed military occupation boundary.",
+        "source_precision": "Only place/city scale is supported by official regional sources.",
+        "name": "1589年维戈：德雷克、诺里斯远征军劫掠并纵火（城市示意）",
+        "label_type": "英国远征军袭城焚掠影响区",
+        "zone_type": "english_armed_city_sack_schematic",
+        "color_role": "raid_red",
+        "start_year": 1589,
+        "end_year": 1589,
+        "controller_zh": "英格兰德雷克与诺里斯的远征部队；加利西亚当地城镇及居民受袭",
+        "summary_zh": "1589年英格兰德雷克、诺里斯远征军在进攻拉科鲁尼亚未达主要战略目标后转向维戈，袭击并劫掠城镇。西班牙维戈市政府的历史资料援引当地教区神职人员记录，记载民居、库房、船只及宗教建筑遭焚毁；西班牙海军的军事历史研究亦讨论这一事件。地方史料所载精确房屋数不能未经独立审计当作覆盖整城的现代毁损统计。淡红虚线只是城市遭袭的地理提示，不是1589年逐栋建筑毁坏复原，更不是英格兰永久占领的港口领土。",
+        "source_ids": [
+          "C10-S50",
+          "C10-S51",
+          "C10-S47"
+        ],
+        "source_urls": [
+          "https://hoxe.vigo.org/movemonos/phistorico_sen_defensas.php?lang=en",
+          "https://fortalezadeocastro.vigo.org/panel-10/",
+          "https://armada.defensa.gob.es/archivo/rgm/2020/10/rgmoct2020.pdf"
+        ],
+        "related_event_ids": [
+          "1580S-E028"
+        ],
+        "named_anchors": [
+          "Vigo city"
+        ],
+        "damage_area_known": false
       }
     }
   ]
