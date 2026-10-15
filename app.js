@@ -900,23 +900,33 @@ function renderTenthInvasionImpactAreas(){
    p.area_sqkm===null&&year>=p.start_year&&year<=p.end_year;
  });
  if(!features.length)return;
- L.geoJSON({type:'FeatureCollection',features},{
-  renderer:invasionImpactRenderer,pane:'invasionImpactPane',
-  interactive:true,bubblingMouseEvents:false,
-  style:()=>({color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
-   fill:true,fillColor:'#b34e5c',fillOpacity:.14,
-   className:'atlas-tenth-invasion-impact'}),
-  onEachFeature:(f,layer)=>{
-   const p=f.properties;
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(p.label_type||'英军入侵影响区')+' · 点击查看史料</div>',
-    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
-   layer.on('click',e=>{
-    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
-    openTerritoryDossier(f,'invasion-impact');
-   });
+ for(const f of features){
+  const p=f.properties,small=map.getZoom()<5;
+  const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML(p.label_type||'英军入侵影响区')+
+   (small?' · 位置提示，放大查看地区示意面':' · 点击查看史料')+'</div>';
+  const open=e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   openTerritoryDossier(f,'invasion-impact');};
+  if(small){
+   const ring=f.geometry.coordinates[0].slice(0,-1);
+   const center=ring.reduce((acc,[lon,lat])=>[acc[0]+lat/ring.length,acc[1]+lon/ring.length],[0,0]);
+   L.circleMarker(center,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    radius:27,color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
+    fill:true,fillColor:'#b34e5c',fillOpacity:.12,
+    className:'atlas-tenth-invasion-impact atlas-schematic-screen-cue',
+    bubblingMouseEvents:false})
+    .bindTooltip(tooltip,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+    .on('click',open).addTo(groups.invasionImpact);
+  }else{
+   L.geoJSON(f,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    interactive:true,bubblingMouseEvents:false,
+    style:()=>({color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
+     fill:true,fillColor:'#b34e5c',fillOpacity:.14,className:'atlas-tenth-invasion-impact'}),
+    onEachFeature:(_f,layer)=>layer.bindTooltip(tooltip,
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'}).on('click',open)
+   }).addTo(groups.invasionImpact);
   }
- }).addTo(groups.invasionImpact);
+ }
 }
 // Separate land expropriation POLICY from armed raid OCCURRENCES.
 // The warm Munster surface locates crown forfeiture/plantation administration,
@@ -933,32 +943,49 @@ function renderTenthLandRaidImpactAreas(){
    p.territorial_claim===false&&p.area_sqkm===null&&
    year>=p.start_year&&year<=p.end_year;
  });
- if(!current.length)return;
- L.geoJSON({type:'FeatureCollection',features:current},{
-  renderer:invasionImpactRenderer,pane:'invasionImpactPane',
-  interactive:true,bubblingMouseEvents:false,
-  style:f=>{
-   const land=f.properties.zone_type==='crown_land_dispossession_policy_study';
-   return {color:land?'#b99a62':'#c65c68',weight:land?2.1:2.6,opacity:.9,
-    dashArray:land?'6 6':'8 5',fill:true,
-    fillColor:land?'#b78b4b':'#bf4656',
-    fillOpacity:land?.13:.2,
-    className:land?'atlas-tenth-land-policy-impact':'atlas-tenth-port-raid-impact'};
-  },
-  onEachFeature:(feature,layer)=>{
-   const p=feature.properties,stage=p.year_stages?.find(item=>year>=item.start_year&&year<=item.end_year);
-   const title=stage?.title||p.name;
-   layer.bindTooltip('<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(p.label_type||'区域性历史影响')+' · 查看史料</div>',
-    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
-   layer.on('click',e=>{
-    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
-    const currentFeature=stage?{...feature,properties:{...p,name:stage.title,
-     summary_zh:stage.summary_zh,source_ids:stage.source_ids}}:feature;
-    openTerritoryDossier(currentFeature,stage?'land-dispossession':'invasion-impact');
-   });
+ for(const feature of current){
+  const p=feature.properties,land=p.zone_type==='crown_land_dispossession_policy_study',
+   stage=p.year_stages?.find(item=>year>=item.start_year&&year<=item.end_year);
+  const title=stage?.title||p.name,zoom=map.getZoom();
+  const style={color:land?'#b99a62':'#c65c68',weight:land?2.1:2.6,opacity:.9,
+   dashArray:land?'6 6':'8 5',fill:true,
+   fillColor:land?'#b78b4b':'#bf4656',fillOpacity:land?.13:.2,
+   className:land?'atlas-tenth-land-policy-impact':'atlas-tenth-port-raid-impact'};
+  // At the default world-scale zoom an urban 0.1-degree envelope is below 2px.
+  // The fixed-pixel symbol is ONLY an on-screen cue, never a larger GIS area.
+  const lowZoom=land?zoom<5:zoom<8;
+  const tooltip='<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML(p.label_type||'区域性历史影响')+
+   (lowZoom?' · 位置提示，放大查看地区示意面':' · 查看史料')+'</div>';
+  const open=e=>{
+   if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   const currentFeature=stage?{...feature,properties:{...p,name:stage.title,
+    summary_zh:stage.summary_zh,source_ids:stage.source_ids}}:feature;
+   openTerritoryDossier(currentFeature,stage?'land-dispossession':'invasion-impact');
+  };
+  if(lowZoom){
+   const ring=feature.geometry.coordinates[0].slice(0,-1);
+   const location=land?
+    ring.reduce((acc,[lon,lat])=>[acc[0]+lat/ring.length,acc[1]+lon/ring.length],[0,0]):
+    p.original_event_coordinates;
+   if(!Array.isArray(location)||location.length!==2||!location.every(Number.isFinite))continue;
+   L.circleMarker(location,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    radius:land?27:zoom<=3?23:zoom<=5?27:31,
+    ...style,fillOpacity:land?.11:.14,
+    className:style.className+' atlas-schematic-screen-cue',
+    bubblingMouseEvents:false})
+    .bindTooltip(tooltip,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+    .on('click',open).addTo(groups.tenthExtraction);
+  }else{
+   L.geoJSON(feature,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    interactive:true,bubblingMouseEvents:false,
+    style:()=>style,
+    onEachFeature:(_f,layer)=>layer.bindTooltip(tooltip,
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+     .on('click',open)
+   }).addTo(groups.tenthExtraction);
   }
- }).addTo(groups.tenthExtraction);
+ }
 }
 // Nine Years War: Gaelic defeats of Crown forces must NOT be painted as
 // English colonial conquest. Fermanagh and Armagh are regional reading
@@ -1756,7 +1783,7 @@ async function boot(){
   const extractionResponse=await fetch('data/tenth-land-dispossession-and-raids-1584-1589.geojson',{cache:'no-store'});
   if(!extractionResponse.ok)throw new Error('1584—1589土地没收与德雷克劫掠影响区文件未加载');
   tenthLandRaidAreas=await extractionResponse.json();
-  if(tenthLandRaidAreas?.features?.length!==3||tenthLandRaidAreas.features.some(f=>
+  if(tenthLandRaidAreas?.features?.length!==5||tenthLandRaidAreas.features.some(f=>
     f.geometry?.type!=='Polygon'||f.properties?.fill_authorized!==false||
     f.properties?.historical_boundary_confirmed!==false||
     f.properties?.territorial_claim!==false||f.properties?.area_sqkm!==null||
@@ -1859,7 +1886,7 @@ $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistorica
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
