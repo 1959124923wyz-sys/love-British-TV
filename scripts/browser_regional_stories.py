@@ -52,15 +52,26 @@ try:
             assert "并不" in dossier_text or "不" in dossier_text, "Coastal violence needs evidence-bound geographic caveat"
         browser.save_screenshot(str(OUT/f"region-{browser.find_element(By.ID,'bigYear').text}.png"))
         print("PASS region", label, "clickable sourced story", flush=True)
-    for year,needle in [(1544,"利斯—爱丁堡"),(1556,"莱伊什—奥法利"),(1562,"塞拉利昂沿海"),(1564,"塞内加尔佛得角海角"),(1567,"塞内加尔佛得角海角"),(1572,"阿兹半岛"),(1572,"诺姆布雷德迪奥斯"),(1573,"克兰德博伊"),(1575,"拉斯林岛"),(1580,"利默里克—凯里"),(1582,"芒斯特"),(1586,"圣多明各"),(1598,"黄渡口")]:
+    for year,needle in [(1544,"利斯—爱丁堡"),(1556,"莱伊什—奥法利"),(1562,"塞拉利昂沿海"),(1562,"勒阿弗尔"),(1563,"勒阿弗尔"),(1564,"塞内加尔佛得角海角"),(1567,"塞内加尔佛得角海角"),(1572,"阿兹半岛"),(1572,"诺姆布雷德迪奥斯"),(1573,"克兰德博伊"),(1573,"巴拿马地峡"),(1575,"拉斯林岛"),(1580,"利默里克—凯里"),(1582,"芒斯特"),(1586,"圣多明各"),(1596,"加的斯"),(1598,"黄渡口")]:
         jump(year)
         current=titles()
         assert any(needle in n for n in current), f"{year}: missing {needle}; {current}"
-        if year in [1544,1556,1562,1564,1567,1572,1573,1575,1580,1582]:
+        if year in [1544,1556,1562,1563,1564,1567,1572,1573,1575,1580,1582,1596]:
             press(needle)
         if year in [1544,1556,1575,1580,1598]:
             browser.save_screenshot(str(OUT/f"area-list-{year}.png"))
         print("PASS region discovery year",year,"count",len(current),flush=True)
+    jump(1570)
+    assert any("莱伊什—奥法利" in x for x in titles()),"1556 plantation disappeared in 1570"
+    jump(1599)
+    assert any("莱伊什—奥法利" in x for x in titles()),"Ongoing research reference disappeared at arbitrary atlas boundary"
+    jump(1562)
+    assert any("英军进入" in x for x in titles()),"1562 occupied town missing"
+    jump(1563)
+    assert any("法军围城收复" in x for x in titles()),"1563 French recovery missing"
+    assert not any("英军进入并驻守" in x for x in titles()),"1562 occupation persisted into 1563 year-end"
+    jump(1597)
+    assert not any("1596年加的斯" in x for x in titles()),"1596 attack persisted past withdrawal"
     jump(1576)
     assert not any("拉斯林岛" in x or "克兰德博伊" in x for x in titles()),"Expired attack persists"
     jump(1580)
