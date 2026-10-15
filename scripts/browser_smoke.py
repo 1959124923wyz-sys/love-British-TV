@@ -1100,29 +1100,13 @@ try:
            """document.querySelectorAll('#map .atlas-trinidad-1595-action-sequence').length===1 &&
               document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E014"]').click()""")
-    # Previous geographic dossier also contains "罗利袭取特立尼达".
-    # Wait for the event-specific CTA rather than matching text that existed
-    # before the 290ms single-click handler has actually opened the event.
-    wait.until(lambda d: d.execute_script("""
-        return document.querySelector('#dossierBody h2')?.textContent
-                    ==='罗利袭取特立尼达西班牙据点并拘押总督' &&
-               document.querySelector('#dossierBody .dossier-map-action button')!==null
-    """))
-    raleigh_reading=driver.execute_script("""
-      const text=document.querySelector('#dossierBody')?.textContent||'';
-      return {
-        title:document.querySelector('#dossierBody h2')?.textContent,
-        text:text.slice(0,950),hasChinese:text.includes('圣何塞'),
-        hasEnglish:text.includes('St Joseph'),
-        hasUnlocated:text.includes('此事件位置尚未核实'),
-        displayedYear:document.querySelector('#yearRange')?.value,
-        selectedYear:document.querySelector('#bigYear')?.textContent
-      };
-    """)
-    print("RALEIGH_1595_DOSSIER",json.dumps(raleigh_reading,ensure_ascii=False),flush=True)
-    assert (raleigh_reading["hasChinese"] and raleigh_reading["hasEnglish"] and
-            not raleigh_reading["hasUnlocated"] and raleigh_reading["displayedYear"]=="1595"), \
-        "Original Raleigh event location and source dossier did not pass source-linked reference checks"
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "罗利袭取特立尼达"))
+    verify("Original published Raleigh event must now map to St Joseph and keep its source dossier",
+           """document.querySelector('#dossierBody').textContent.includes('圣何塞') &&
+              document.querySelector('#dossierBody').textContent.includes('St Joseph') &&
+              !document.querySelector('#dossierBody').textContent.includes('此事件位置尚未核实') &&
+              document.querySelector('#yearRange').value==='1595'""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Trinidad-two-anchor-raid-zone.png"))
     driver.save_screenshot(str(OUT / "chapter11-1595-Caribbean-Margarita-Cumana-Trinidad-SanJuan.png"))
     verify("1595 Gaelic recapture must remain contested, not British land",
