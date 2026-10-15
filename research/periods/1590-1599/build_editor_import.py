@@ -23,12 +23,39 @@ def build():
     geo=load("editor_import/CONTROL_AND_VIOLENCE_PLACES_1590_1599.geojson")
     account=load("editor_import/PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json")
     control=load("CONTROL_TRANSITION_1589_1599.json")
+    approx=load("editor_import/APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson")
+    cores=load("editor_import/TEMPORARY_CONTROL_CORES_1590_1599.geojson")
+    episodes=load("editor_import/CONTROL_EPISODES_1590_1599.json")
     ids={s["id"] for s in register["sources"]}
     researchids={e["id"] for e in old["events"]}
     check(len(ids)==register["source_count"]==len(register["sources"]),"source uniqueness")
     check(old["total"]==len(old["events"])>=30,"event count")
     check(len(researchids)==len(old["events"]),"duplicate event IDs")
-    check(len(geo["features"])>=7,"site count")
+    check(len(geo["features"])>=10,"site count")
+    check(approx["type"]=="FeatureCollection" and len(approx["features"])==2,"expect two discrete dashed historic reference study envelopes")
+    check(cores["type"]=="FeatureCollection" and len(cores["features"])==10,"missing evidence-grounded city core area symbols")
+    check(episodes["episode_count"]==len(cores["features"]),"temporary episode count and city symbols differ")
+    for area in approx["features"]:
+        p=area["properties"];ring=area["geometry"]["coordinates"][0]
+        check(area["geometry"]["type"]=="Polygon" and len(ring)>=4 and ring[0]==ring[-1],"rough Polygon must be closed")
+        check(p["boundary_style"]=="dashed" and p["fill_opacity"]<=0.1,"rough research area must appear dashed/very light")
+        check(p["verified_English_occupation_polygon"] is False and p["historical_boundary_confirmed"] is False and p["fill_authorized"] is False and p["area_sqkm"] is None,"research envelope is NOT historical occupied land")
+        check(set(p["historical_source_ids"]).issubset(ids),"unlinked historical study-area source")
+        check(set(p["valid_years"]).issubset(set(range(1590,1600))),"wrong research envelope year range")
+    core_by_id={f["properties"]["stable_id"]:f for f in cores["features"]}
+    check(len(core_by_id)==10,"Duplicate control area symbol")
+    for f in cores["features"]:
+        p=f["properties"]
+        check(f["geometry"]["type"]=="Point" and p["area_sqkm"] is None and not p["historical_boundary_confirmed"],"screen-circle cannot become land polygon")
+        check(set(p["source_ids"]).issubset(ids),"unresolved modern castle/port control source")
+        check(all(p["start_year"]<=y<=p["end_year"] for y in p["year_end_visible"]),"control circle outside dated years")
+        check(5<=p["screen_radius_px"]<=12,"urban circle must use screen pixels not geodesic radius")
+    check("santos-1591-1592" in core_by_id and core_by_id["santos-1591-1592"]["properties"]["year_end_visible"]==[1591],"Santos must still be occupied at end1591 but not end1592")
+    check(not core_by_id["san-juan-1598"]["properties"]["year_end_visible"],"1598 San Juan returned to Spain BEFORE year end")
+    check(not core_by_id["recife-1595"]["properties"]["year_end_visible"],"1595 Recife was short-lived")
+    check(1598 not in core_by_id["kilcolman-1590-1598"]["properties"]["year_end_visible"],"Kilcolman burned Oct1598")
+    check(1594 in core_by_id["enniskillen-castle-1594-1595"]["properties"]["year_end_visible"] and 1595 not in core_by_id["enniskillen-castle-1594-1595"]["properties"]["year_end_visible"],"Enniskillen garrison fall must change map")
+
     byevent={}
     for f in geo["features"]:
         check(f["geometry"]["type"]=="Point" and not f["properties"]["polygon_fill_authorized"],"invalid site")
@@ -84,7 +111,15 @@ def build():
           "Britain_did_not_exist_as_a_single_united_sovereign_state_in_1590s":True,
           "verified_historic_occupation_polygon_count":0,"slave_market_sale_evidence_1590s":None,"captured_Portuguese_ship_carrying_enslaved_Africans_in_1592_attested":True,
           "San_Juan_1598_English_present_temporarily_not_year_end":True,"Rathlin_1575_not_chapter11":True,
-          "Bingham_1600s_scorched_earth_not_automatically_1590s":True,"ready_for_main":False}}
+          "Bingham_1600s_scorched_earth_not_automatically_1590s":True,
+          "schematic_dashed_study_areas":"APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson",
+          "historical_city_core_screen_symbols":"TEMPORARY_CONTROL_CORES_1590_1599.geojson",
+          "temporary_occupation_episodes":"CONTROL_EPISODES_1590_1599.json",
+          "precomputed_yearend_appearance":"YEAR_END_CONTROL_RENDER_PLAN_1590_1599.json",
+          "show_uncertain_polygon_reference_studies":True,
+          "study_area_fill_requires_historic_boundary_approval":True,
+          "actual_English_land_polygon_area_sqkm":None,
+          "ready_for_main":False}}
     delta=[]
     notes={}
     for e in events:
@@ -112,15 +147,34 @@ def build():
     route={"type":"FeatureCollection","schema":"ch11_route_evidence_v1","features":[],"metadata":{
        "purpose":"No accurately measured 1592 Azores, 1595 Guiana, 1596 Caribbean or 1599 Essex march path found; nonzero synthetic lines deliberately withheld",
        "route_segments_confirmed_by_archival_waypoints":0,"route_as_English_territorial_corridor_forbidden":True}}
+    yearly=[]
+    for yr in range(1590,1600):
+        active_areas=[f["id"] for f in approx["features"] if yr in f["properties"]["valid_years"]]
+        active_cores=[f["properties"]["stable_id"] for f in cores["features"] if yr in f["properties"]["year_end_visible"]]
+        yearly.append({"year_end":yr,"active_dashed_reference_areas":active_areas,"active_historical_city_core_symbols":active_cores,
+                       "authenticated_occupied_land_polygons":[],"historic_land_area_sqkm":None,
+                       "note":"Year-end political condition, does not automatically show short summer sea raids which are visible in annual events and optional date-specific episode views"})
+    yearplan={"schema":"ch11_precomputed_year_end_cartographic_recipe_v1","period":[1590,1599],
+              "geometries":{"approximate_dashed_polygons":"APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson",
+                             "proven_occupied_city_circles":"TEMPORARY_CONTROL_CORES_1590_1599.geojson",
+                             "date_specific_episodes":"CONTROL_EPISODES_1590_1599.json"},
+              "important_expected_changes":{"1591":"Santos visible after 1591 Christmas assault","1592":"Santos no longer controlled",
+                  "1594":"Enniskillen English garrison","1595":"Enniskillen abandoned to Maguire; Recife port English temporarily but NOT year-end",
+                  "1598":"Kilcolman planter residence gone, Blackwater/Portmore English garrison removed, San Juan Spanish again",
+                  "1599":"Scotland remains independent; no English return of overseas seized towns"},
+              "year_end_slices":yearly,"actual_occupied_land_polygons":0}
     qa={"schema":"ch11_editor_data_QA_v1","status":"PASS","as_of":"2026-10-15",
        "method":"GitHub runner static source-ID/dates/geometry/financial audit, not historic map visual or primary manuscript verification",
        "counts":{"sources":len(sources),"events":len(events),"distinct_modern_places":len(places),"mapped_event_points":sum(e["lat"] is not None for e in events),
              "unlocated_events":sum(e["lat"] is None for e in events),"annual_yearend_snapshots":len(control["year_end_states"]),
              "political_and_fort_transitions":len(control["transitions"]),"accounting_lines":len(account["records"]),"document_details":len(notes),
-             "historically_audited_occupation_polygons":0},
+             "historically_audited_occupation_polygons":0,"dashed_research_envelopes":len(approx["features"]),
+             "source_backed_city_core_symbols":len(cores["features"]),"date_limited_episodes":len(episodes["episodes"]),
+             "precomputed_year_end_slices":len(yearly)},
        "blocked":["No colonised County Tyrone colored as English","No century-old Roanoke British control","No permanent 1598 San Juan colony","No indiscriminate blame for Gaelic-on-English military killing","1592 interception of an enslaved-African carrying Portuguese ship is supported; English slave resale and profit not proven","No automatic sea routes or eighteenth century forts as 1590s shapes"],
        "source_coverage_status":"scholarly/official/edited primary; originals not all directly read",
        "browser_publication_tested":False,"main_merge_authorized":False}
+    dump("editor_import/YEAR_END_CONTROL_RENDER_PLAN_1590_1599.json",yearplan)
     dump("editor_import/ATLAS_EVENT_REVIEW_CANDIDATE.json",atlas)
     dump("editor_import/VIOLENCE_AND_CONTROL_DELTA_1590_1599.geojson",out)
     dump("editor_import/HISTORICAL_DETAIL_NOTES_1590_1599.json",{"schema":"atlas-event-notes-v1","period":[1590,1599],"status":"chief_editor_candidate", "records":notes})
