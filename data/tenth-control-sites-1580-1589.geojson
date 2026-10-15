@@ -1,0 +1,94 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "period": [
+      1580,
+      1589
+    ],
+    "verified_actual_Tudor_occupied_polygons": 0,
+    "source": "PR59 and main chapter9; point-only control references",
+    "historical_area_measurement_allowed": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "carrickfergus-crown-castle-1580s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.808,
+          54.713
+        ]
+      },
+      "properties": {
+        "stable_id": "carrickfergus-English-castle-pre1570",
+        "name": "卡里克弗格斯：英王城堡军政据点",
+        "start_year": 1580,
+        "end_year": 1589,
+        "controller_group": "english",
+        "source_ids": [
+          "C9-S03",
+          "C9-S05"
+        ],
+        "site_role": "established_crown_fortress_annual_troop_rosters_not_verified",
+        "map_layer": "territory",
+        "fill_authorized": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roanoke-English-settlement-1585",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.70896,
+          35.936944
+        ]
+      },
+      "properties": {
+        "stable_id": "roanoke-english-military-colony-1585-1586",
+        "name": "罗阿诺克：1585年英国殖民驻留点",
+        "start_year": 1585,
+        "end_year": 1585,
+        "controller_group": "english",
+        "source_ids": [
+          "C10-S13",
+          "C10-S15"
+        ],
+        "site_role": "temporary_colonial_settlement_point_not_island_control",
+        "map_layer": "territory",
+        "fill_authorized": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roanoke-English-settlement-1587",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.70896,
+          35.936944
+        ]
+      },
+      "properties": {
+        "stable_id": "roanoke-new-colonists-1587-1590-uncertain",
+        "name": "罗阿诺克：1587年英国殖民者驻留点",
+        "start_year": 1587,
+        "end_year": 1587,
+        "controller_group": "english",
+        "source_ids": [
+          "C10-S14"
+        ],
+        "site_role": "attested_1587_settlement_later_survival_unverified",
+        "map_layer": "territory",
+        "fill_authorized": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null
+      }
+    }
+  ]
+}
