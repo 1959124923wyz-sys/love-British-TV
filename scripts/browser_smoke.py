@@ -651,7 +651,24 @@ try:
     set_year(1550,6)
     verify("Future merchant routes or retired navigation cards already visible",
            "document.querySelectorAll('#map .atlas-voyage-hit').length===0 && !document.querySelector('#chapter7GeographyNav')",driver)
+    set_year(1551,6)
+    verify("1551 Moroccan Santa Cruz trading site missing",
+           """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===1 &&
+              document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
+    set_year(1552,6)
+    verify("1552 Safi and Santa Cruz have trade points and a non-navigational sequence",
+           """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===2 &&
+              document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===1""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-maghreb-commerce-site')
+       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1552 Moroccan merchant site must show documentary source",
+           """document.querySelector('#dossierBody').textContent.includes('贸易') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
+    driver.save_screenshot(str(OUT / "chapter7-1552-Morocco-trade-sites.png"))
     set_year(1553,8)
+    verify("1553 should have no lingering 1552 Moroccan voyage graphics",
+           """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===0 &&
+              document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
     verify("White Sea and Guinea route directions absent",
            """document.querySelectorAll('#map .atlas-voyage-hit').length===3 &&
               document.querySelector('#eventList [data-eid="1550S-E005"] use').getAttribute('href').endsWith('#EXP') &&
@@ -938,6 +955,15 @@ try:
               document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1""",driver)
     verify("1587 Roanoke resettlement missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
     set_year(1588,27)
+    verify("1588 Marrakesh company representative must be commercial, not territorial",
+           """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===1 &&
+              document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-maghreb-commerce-site')
+       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1588 British Library Barbary merchant record must open original archive link",
+           """document.querySelector('#dossierBody').textContent.includes('巴巴里') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1588-Marrakesh-merchant-contact.png"))
     verify("1588 colonial estate implementation should remain regional study, not giant Crown land",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
               document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0""",driver)
@@ -997,6 +1023,10 @@ try:
     verify("1594 documented Enniskillen/Blackwater English forts absent",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===5",driver)
     set_year(1595,19)
+    verify("1595 Caribbean military actions are four RAID markers, not occupied San Juan",
+           """document.querySelectorAll('#map .atlas-caribbean-raid-site').length===4 &&
+              document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===0""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1595-Caribbean-Margarita-Cumana-Trinidad-SanJuan.png"))
     verify("1595 Gaelic recapture must remain contested, not British land",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===1",driver)
     driver.execute_script("""document.querySelector('#map .atlas-nine-years-war-study')
@@ -1012,6 +1042,16 @@ try:
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
     set_year(1598,30)
+    verify("1598 San Juan should show a brief urban occupation, not 1595 failed raid",
+           """document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===1 &&
+              document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-caribbean-urban-occupation')
+       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1598 NPS dossier should explain temporary occupation and Spanish year-end recovery",
+           """document.querySelector('#dossierBody').textContent.includes('短期占领') &&
+              document.querySelector('#dossierBody').textContent.includes('西班牙控制') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-short-occupation.png"))
     verify("1598 must show Yellow Ford Gaelic victory AND Munster anti-plantation resistance",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===2 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
