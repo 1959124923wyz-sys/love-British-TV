@@ -653,7 +653,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1579'""",driver)
+              document.querySelector('#jumpYear').max==='1589'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560,3)
@@ -661,7 +661,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1579'""",driver)
+              document.querySelector('#jumpYear').max==='1589'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562,7)
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
@@ -724,7 +724,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第九章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
-              document.querySelector('#jumpYear').max==='1579'""",driver)
+              document.querySelector('#jumpYear').max==='1589'""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
     verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
            """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
@@ -803,6 +803,39 @@ try:
     verify("Rewind must remove all ninth chapter garrisons and privateering routes",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===16""",driver)
+    # Chapter 10 1580—1589: the Loughrea recapture must remove the English warders,
+    # preserve older political identities, and switch colonial places by year.
+    set_year(1579,41)
+    verify("1580 previous-year Loughrea English warders absent", 
+           "document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2",driver)
+    set_year(1580,7)
+    verify("1580 recapture not mapped or ninth controls leaked",
+           """document.querySelector('#eventList [data-eid="1580S-E001"]') &&
+              document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
+              document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
+              document.querySelector('#chapterLabel').textContent.includes('第十章')""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1580-Loughrea-recapture.png"))
+    set_year(1582,10)
+    verify("1582 famine testimony hidden", "!!document.querySelector('#eventList [data-eid=\"1580S-E009\"]')",driver)
+    set_year(1585,16)
+    verify("1585 Roanoke site missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1585-Roanoke.png"))
+    set_year(1586,23)
+    verify("1586 evacuated Roanoke site persisted into year-end",
+           """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===5""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids.png"))
+    set_year(1587,26)
+    verify("1587 Roanoke resettlement missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
+    set_year(1589,30)
+    verify("1589 event source routes or chronology lost",
+           """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
+              document.querySelector('#jumpYear').max==='1589'""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
+    set_year(1579,41)
+    verify("rewinding to ninth chapter left tenth control sites",
+           "document.querySelectorAll('#map .atlas-tenth-english-site').length===0",driver)
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()

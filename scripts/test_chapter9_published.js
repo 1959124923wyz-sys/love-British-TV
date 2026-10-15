@@ -17,7 +17,7 @@ assert.ok(Object.keys(detail.records).every(id=>now.events.some(e=>e.id===id)),'
 assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dossier does not load editorial research notes');
 
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
-assert.equal(manifest.chapters.length,9);
+assert.ok(manifest.chapters.length>=9);
 assert.ok(manifest.chapters.some(c=>c.number===9&&c.start===1570&&c.end===1579&&c.status==='published'));
 assert.equal(now.events.length,41);assert.equal(now.places.length,43);assert.equal(now.sources.length,60);
 assert.equal(now.routes.length,18);assert.equal(now.colonial_polygons.length,0);
@@ -127,5 +127,5 @@ assert.ok(ocean.segments.every(segment=>Math.abs(segment.at(-1)[1]-segment[0][1]
 assert.ok(app.includes('next>=1570?atlasNinth:next>=1560?atlasEighth'));
 assert.ok(app.includes('function renderNinthControlSites()'));
 assert.ok(app.includes('const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords'));
-assert.ok(html.includes('max="1579"')&&html.includes('1497—1579'));
+assert.ok(html.includes('max="1589"')&&html.includes('1497—1589'));
 console.log('PASS ch9: 41 events, 60 sources, 43 places, 18 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');
