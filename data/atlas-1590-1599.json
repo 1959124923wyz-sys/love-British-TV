@@ -1362,6 +1362,39 @@
       "geolocation_limit_zh": "编年史记载洛赫格尔附近英军驻堡被夺；该湖参考点不是已经勘测的历史堡垒位置，且更不能把整座湖当被占领区。",
       "position_is_historical_survey": false,
       "exclude_point_buffer_from_area_statistics": true
+    },
+    {
+      "id": "GAP1597-FAIAL",
+      "year": 1597,
+      "start_year": 1597,
+      "end_year": 1597,
+      "visible_from": 1597,
+      "date_label": "1597年",
+      "name": "罗利部队袭取亚速尔法亚尔港市，部分地区遭劫掠",
+      "category": "privateering_plunder",
+      "icon_code": "REP",
+      "lat": 38.534,
+      "lng": -28.63,
+      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geography_label": "现代具名地点位置，仅供历史定位",
+      "description": "1597年埃塞克斯远征亚速尔期间，罗利率英军登陆法亚尔，在守军离开城镇后短暂占据港市并对岛上部分地区掠夺。港口现代坐标只指向行动地点，未证实持有整座法亚尔岛，更不能延续成1597年末英王领土。",
+      "short_description": "1597年埃塞克斯远征亚速尔期间，罗利率英军登陆法亚尔，在守军离开城镇后短暂占据港市并对岛上部分地区掠夺。港口现代坐标只指向行动地点，未证实持有整座法亚尔岛，更不能延续成1597年末英王领土。",
+      "source_ids": [
+        "AZ-CAMDEN-1597-FAYAL"
+      ],
+      "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
+      "significance": {
+        "level": 2,
+        "rationale": "有来源的军事行动、镇压、掠夺或抵抗；补全既有地图地理叙事",
+        "review_status": "source_checked_provisional_geocoding"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2783,6 +2816,14 @@
       "evidence_read_level": "public translated text read",
       "precision_warning": "Blackwater English fort river station roughly three miles from Armagh, Irish besieged Monaghan garrison; year indexing exact chapter campaign context requires independent cross-date.",
       "origin": "1590-1599"
+    },
+    {
+      "id": "AZ-CAMDEN-1597-FAYAL",
+      "title": "William Camden, Annales (1597), 17th-century translated chronicle",
+      "publisher": "University of Birmingham, Philological Museum transcription",
+      "url": "https://philological.cal.bham.ac.uk/camden/1597e.html",
+      "kind": "edited_early_modern_historical_account",
+      "precision_warning": "Narrative identifies Faial town capture, Spanish withdrawal, plunder in parts of island; no exact shoreline occupation polygon or yearly control claim."
     }
   ],
   "routes": [],
