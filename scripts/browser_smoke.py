@@ -1100,8 +1100,14 @@ try:
            """document.querySelectorAll('#map .atlas-trinidad-1595-action-sequence').length===1 &&
               document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E014"]').click()""")
-    wait.until(lambda d: d.execute_script(
-        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "罗利袭取特立尼达"))
+    # Previous geographic dossier also contains "罗利袭取特立尼达".
+    # Wait for the event-specific CTA rather than matching text that existed
+    # before the 290ms single-click handler has actually opened the event.
+    wait.until(lambda d: d.execute_script("""
+        return document.querySelector('#dossierBody h2')?.textContent
+                    ==='罗利袭取特立尼达西班牙据点并拘押总督' &&
+               document.querySelector('#dossierBody .dossier-map-action button')!==null
+    """))
     raleigh_reading=driver.execute_script("""
       const text=document.querySelector('#dossierBody')?.textContent||'';
       return {
