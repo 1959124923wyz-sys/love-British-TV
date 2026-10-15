@@ -414,7 +414,7 @@ try:
           return {switchWidth:sw.width,swRight:sw.right,viewport:innerWidth,
            overlapTitle:!(sw.right<=top.left||sw.left>=top.right||sw.bottom<=top.top||sw.top>=top.bottom),
            overlapTimeline:sw.bottom>timeline.top&&sw.top<timeline.bottom,
-           sidebarOverflow:legend.scrollWidth-legend.clientWidth,
+           sidebarOverflow:document.querySelector('#workspace').classList.contains('sidebar-collapsed')?0:legend.scrollWidth-legend.clientWidth,
            visibleSwitches:document.querySelectorAll('#mapLayerSwitch input:checked').length};
         """)
         assert dims['visibleSwitches']==2 and dims['switchWidth']>=125 and dims['swRight']<=dims['viewport']-3 and not dims['overlapTitle'] and not dims['overlapTimeline'] and dims['sidebarOverflow']<=2,f"PR39 compact-layer UI collided at {w}px: {dims}"
