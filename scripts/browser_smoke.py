@@ -795,7 +795,8 @@ try:
               document.querySelectorAll('#map .atlas-voyage-hit').length===16 &&
               document.querySelector('#eventList [data-eid="1560S-E018"] use').getAttribute('href').endsWith('#SLV')""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1560S-E018"]').click()""")
-    wait.until(lambda d: "霍金斯自述" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "霍金斯在西非袭击村社"))
     verify("Unlocated 1568 African captive village wrongly presented with precise GPS",
            """document.querySelector('#dossierBody').textContent.includes('霍金斯自述')""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1568-west-africa-slaving-atlantic.png"))
@@ -871,7 +872,8 @@ try:
               document.querySelector('#eventList [data-eid="1570S-E035"] use').getAttribute('href').endsWith('#DIS') &&
               document.querySelector('#eventList [data-eid="1570S-E036"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E035"]').click()""")
-    wait.until(lambda d: "圣斯蒂芬" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "布里斯托尔圣斯蒂芬堂安葬"))
     verify("1577 Bristol documented historic cemetery source should remain clickable",
            """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
               document.querySelector('#dossierBody .source-details')!==null""",driver)
@@ -881,7 +883,8 @@ try:
            """document.querySelector('#eventList [data-eid="1570S-E028"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E028"]').click()""")
-    wait.until(lambda d: "1578" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "穆拉马斯特屠杀"))
     verify("1578 scholarly source attribution lost",
            """document.querySelector('#dossierBody').textContent.includes('1578') &&
               !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
@@ -1028,7 +1031,8 @@ try:
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
     set_year(1590,3)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E002"]').click()""")
-    wait.until(lambda d: "布雷夫尼" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "宾厄姆英王军在布雷夫尼"))
     verify("1590 Breifne territorial devastation is now region-locatable without invented burned villages",
            """document.querySelector('#dossierBody').textContent.includes('布雷夫尼') &&
               document.querySelector('#dossierBody').textContent.includes('地区') &&
@@ -1051,7 +1055,8 @@ try:
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1592'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E009"]').click()""")
-    wait.until(lambda d: "圣维森特" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "英军卡文迪什舰队撤离桑托斯"))
     verify("1592 Sao Vicente main published event must have modern name/location source",
            """document.querySelector('#dossierBody').textContent.includes('圣维森特') &&
               !document.querySelector('#dossierBody').textContent.includes('保持地图坐标空值') &&
@@ -1095,7 +1100,8 @@ try:
            """document.querySelectorAll('#map .atlas-trinidad-1595-action-sequence').length===1 &&
               document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E014"]').click()""")
-    wait.until(lambda d: "圣何塞" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "罗利袭取特立尼达"))
     verify("Original published Raleigh event must now map to St Joseph and keep its source dossier",
            """document.querySelector('#dossierBody').textContent.includes('圣何塞') &&
               document.querySelector('#dossierBody').textContent.includes('St Joseph') &&
@@ -1124,7 +1130,8 @@ try:
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E029"]').click()""")
-    wait.until(lambda d: "黄渡口" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "黄渡口战役"))
     verify("1598 Yellow Ford main record now localizable with uncertain battlefield noted",
            """document.querySelector('#dossierBody').textContent.includes('黄渡口') &&
               document.querySelector('#dossierBody').textContent.includes('实测') &&
