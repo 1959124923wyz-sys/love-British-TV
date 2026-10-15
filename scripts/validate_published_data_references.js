@@ -108,6 +108,7 @@ const overlayPaths=[
  'data/french-urban-control-1590-1599.geojson',
  'data/eleventh-control-cores-1590-1599.geojson',
  'data/eleventh-influence-areas-1590-1599.geojson',
+ 'data/nine-years-war-operational-impact-1594-1599.geojson',
  'data/issue46-hes-archaeology-reference-1547-1549.geojson'
 ];
 function validCoord(coord,file,id){
