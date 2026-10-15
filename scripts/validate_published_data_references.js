@@ -109,6 +109,7 @@ const overlayPaths=[
  'data/eleventh-control-cores-1590-1599.geojson',
  'data/eleventh-influence-areas-1590-1599.geojson',
  'data/nine-years-war-operational-impact-1594-1599.geojson',
+ 'data/ch11-action-links-1590-1599.geojson',
  'data/caribbean-maghreb-contact-raids-1551-1598.geojson',
  'data/issue46-hes-archaeology-reference-1547-1549.geojson'
 ];
