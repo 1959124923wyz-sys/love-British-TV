@@ -29,7 +29,7 @@ for(const f of norfolk){
  assert(p.territorial_claim===false&&p.area_sqkm===null&&p.exclude_from_area_aggregation===true);
  assert(p.source_ids.every(id=>sources.has(id)));
  assert(p.related_event_ids.every(id=>db.events.some(e=>e.id===id)));
- assert(p.geometry_provenance.includes('NOT')||p.geometry_provenance.includes('not'));
+ assert(/not|no\\s/i.test(p.geometry_provenance),'geometry must disclaim survey or historical-perimeter status');
  const lon=ring.map(c=>c[0]),lat=ring.map(c=>c[1]);
  const width=Math.max(...lon)-Math.min(...lon),height=Math.max(...lat)-Math.min(...lat);
  assert(width<.09&&height<.06,'historic military study area broadens beyond local-scale vicinity');
