@@ -35,8 +35,11 @@ for(const id of carried){
  assert.equal(now.observed_through_year,1589,id+' not continued');
  assert.equal(now.start_year,last.start_year,id+' invented conquest');
 }
-const prevFoot=read('data/territorial-footprints-1570-1579.geojson');
-assert.deepEqual(foot.features.map(f=>f.geometry),prevFoot.features.map(f=>f.geometry),'old research references reshaped');
+const {hydrateFootprints}=require('../js/territory-geometry.js');
+const original=read('data/territorial-footprints-1497-1549.geojson');
+const prevFoot=hydrateFootprints(original,read('data/territorial-footprints-1570-1579.geojson'));
+const hydratedFoot=hydrateFootprints(original,foot);
+assert.deepEqual(hydratedFoot.features.map(f=>f.geometry),prevFoot.features.map(f=>f.geometry),'old research references reshaped');
 assert.equal(rel.features.length,6);assert.equal(city.features.length,2);assert.equal(foot.features.length,7);
 assert.ok(city.features.every(f=>f.properties.controller_periods?.length===1
  &&f.properties.controller_periods[0].controller_group==='french_crown'
