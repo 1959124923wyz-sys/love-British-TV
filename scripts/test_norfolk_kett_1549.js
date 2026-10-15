@@ -36,7 +36,7 @@ for(const f of norfolk){
 }
 assert(!norfolk.some(f=>f.geometry.coordinates[0][0][0]===1.03),'prior county-size arbitrary rectangle must be gone');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
-const regionGuard=app.match(/centuryData\\?\\.features\\?\\.length!==(\\d+)/);
+const regionGuard=app.match(/centuryData\?\.features\?\.length!==([0-9]+)/);
 assert(regionGuard&&Number(regionGuard[1])===areas.features.length,
  'App must validate the real total number of sourced geographic studies, including subsequent approved additions');
 assert(app.includes('renderEarlyRegionalImpactAreas()'));
