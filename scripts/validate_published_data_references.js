@@ -102,6 +102,7 @@ const overlayPaths=[
  'data/french-urban-control-1580-1589.geojson',
  'data/tenth-control-sites-1580-1589.geojson',
  'data/tenth-invasion-impact-areas-1580-1583.geojson',
+ 'data/tenth-land-dispossession-and-raids-1584-1589.geojson',
  'data/territorial-footprints-1590-1599.geojson',
  'data/political-relations-1590-1599.geojson',
  'data/french-urban-control-1590-1599.geojson',
