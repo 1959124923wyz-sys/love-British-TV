@@ -10,11 +10,11 @@ const prev=JSON.parse(read('data/tenth-invasion-impact-areas-1580-1583.geojson')
 const app=read('app.js');
 new vm.Script(app,{filename:'app.js'});
 assert.equal(geo.type,'FeatureCollection');
-assert.equal(geo.features.length,3);
+assert.equal(geo.features.length,5);
 assert.equal(geo.metadata.actual_colonial_control_sqkm,null);
 assert.equal(geo.metadata.actual_occupation_sqkm,null);
 const byId=new Map(geo.features.map(f=>[f.id,f]));
-assert.equal(byId.size,3);
+assert.equal(byId.size,5);
 const land=byId.get('munster-crown-forfeiture-plantation-study-1584-1589');
 assert.ok(land);
 const prevMunster=prev.features.find(f=>f.id==='munster-war-devastation-1581-1583-schematic');
@@ -52,8 +52,8 @@ for(let year=1584;year<=1589;year++){
 }
 assert.ok(!stages[0].title.includes('1586')&&!stages[0].summary_zh.includes('1586'),'Do not announce future legal grants in 1584');
 const raided=geo.features.filter(f=>f.properties.zone_type==='english_crown_privateering_port_raid_schematic');
-assert.equal(raided.length,2);
-const targets=new Set(['1580S-E019','1580S-E020']);
+assert.equal(raided.length,4);
+const targets=new Set(['1580S-E016','1580S-E019','1580S-E020','1580S-E021']);
 function inPoly(point,ring){
  let yes=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){
   const [x,y]=ring[i],[xj,yj]=ring[j];
@@ -62,18 +62,20 @@ function inPoly(point,ring){
 }
 for(const f of raided){
  const p=f.properties;
- assert.equal(p.start_year,1586);assert.equal(p.end_year,1586);
+ assert.ok([1585,1586].includes(p.start_year));assert.equal(p.end_year,p.start_year);
  assert.equal(p.related_event_ids.length,1);
  const id=p.related_event_ids[0],ev=events.get(id);
  assert.ok(targets.has(id));
  targets.delete(id);
- assert.equal(ev.year,1586);
+ assert.equal(ev.year,p.start_year);
  assert.ok(inPoly([ev.lng,ev.lat],f.geometry.coordinates[0]),id+' existing source city coordinates not inside symbolic region');
- assert.ok(p.research_geo_method.includes('illustrative ellipse'),'Must not claim historical walls/areas');
+ assert.ok(/illustrative|editorial/i.test(p.research_geo_method)&&p.research_geo_method.includes('ellipse'),'Must not claim historical walls/areas');
+ assert.equal(p.historical_map_catalogue_url,'https://www.loc.gov/item/2007626708/');
+ assert.equal(p.approximate_symbol_display,true);
 }
 assert.equal(targets.size,0);
 const active=y=>geo.features.filter(f=>f.properties.start_year<=y&&y<=f.properties.end_year);
-for(const [y,n] of [[1583,0],[1584,1],[1585,1],[1586,3],[1587,1],[1588,1],[1589,1],[1590,0]])
+for(const [y,n] of [[1583,0],[1584,1],[1585,2],[1586,4],[1587,1],[1588,1],[1589,1],[1590,0]])
  assert.equal(active(y).length,n,'Wrong year-gated extraction/raid surface '+y);
 const r=app.split('function renderTenthLandRaidImpactAreas(){')[1]?.split('function renderTenthControlSites(){')[0]||'';
 assert.ok(r.includes('groups.tenthExtraction.clearLayers()'),'Must clear the old year');
@@ -87,4 +89,6 @@ assert.ok(r.includes("openTerritoryDossier(currentFeature,stage?'land-dispossess
 assert.ok(app.includes("renderTenthLandRaidImpactAreas();"));
 assert.ok(app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener")).includes('renderTenthLandRaidImpactAreas();'));
 assert.ok(app.includes("tenthLandRaidAreas=await extractionResponse.json()"));
-console.log('PASS: 1584–89 dated Munster policy / 1586 Drake raid reference geography, 3 non-sovereign faces, no future leaks');
+assert.ok(r.includes('atlas-schematic-screen-cue')&&r.includes('const lowZoom=land?zoom<5:zoom<8'), 'Urban assaults must remain visible at default world zoom');
+assert.ok(app.includes('renderTenthLandRaidImpactAreas()}});'), 'Zoom changes must update cue into local polygon');
+console.log('PASS: 1584–89 Munster policy, 1585 Santiago and three 1586 raid towns, zoom cues and source links; no territorial claims');
