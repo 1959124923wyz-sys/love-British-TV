@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "schema": "ch11_modern_site_anchors_v1",
-  "count": 9,
+  "count": 12,
   "metadata": {
     "historical_english_occupied_polygons": 0,
     "modern_only": true,
@@ -224,6 +224,81 @@
         "polygon_fill_authorized": false,
         "colonial_area_sqkm": null,
         "spatial_identity": "modern geocoded city centroid only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch11-site-enniskillen-castle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.644771,
+          54.346171
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-site-enniskillen-castle",
+        "name": "enniskillen-castle",
+        "source_geography_url": "https://excavations.ie/report/2006/Fermanagh/0015468/",
+        "geo_precision": "Maguire castle 2006 Irish archaeology exact modern site, not 1594 English wall",
+        "associated_events": [
+          "ch11-enniskillen-english-assault",
+          "ch11-enniskillen-blockade",
+          "ch11-enniskillen-english-garrison-killed"
+        ],
+        "historical_footprint_verified": false,
+        "polygon_fill_authorized": false,
+        "colonial_area_sqkm": null,
+        "spatial_identity": "modern archival place reference only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch11-site-blackwatertown-vicinity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.70544,
+          54.41288
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-site-blackwatertown-vicinity",
+        "name": "blackwatertown-vicinity",
+        "source_geography_url": "https://excavations.ie/report/2013/Armagh/0023672/",
+        "geo_precision": "modern Blackwatertown pump site with NO archaeology observed, fort exact site unverified",
+        "associated_events": [
+          "ch11-blackwater-fort-irish-recapture",
+          "ch11-portmore-english-fort-abandoned"
+        ],
+        "historical_footprint_verified": false,
+        "polygon_fill_authorized": false,
+        "colonial_area_sqkm": null,
+        "spatial_identity": "modern archival place reference only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch11-site-kilcolman-archaeology",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.614258,
+          52.252298
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-site-kilcolman-archaeology",
+        "name": "kilcolman-archaeology",
+        "source_geography_url": "https://excavations.ie/report/1994/Cork/0001638/",
+        "geo_precision": "Kilcolman castle archaeological Tudor building coordinates not entire Spenser estate",
+        "associated_events": [
+          "ch11-kilcolman-English-planter-castle-burned"
+        ],
+        "historical_footprint_verified": false,
+        "polygon_fill_authorized": false,
+        "colonial_area_sqkm": null,
+        "spatial_identity": "modern archival place reference only"
       }
     }
   ]
