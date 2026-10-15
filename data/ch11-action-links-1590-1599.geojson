@@ -1,0 +1,119 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "period": [
+      1591,
+      1599
+    ],
+    "mapping_standard": "docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md",
+    "semantics": "two independently sourced military sequences joining existing chapter11 events, not actual GPS routes, borders, provincial control, death zones or areas",
+    "features_count": 2,
+    "actual_territorial_geometries": 0,
+    "area_statistics_prohibited": true,
+    "year_1592_santos_sao_vicente": "attested two-town assault relation only",
+    "year_1598_armagh_blackwater": "attested forward relief expedition and subsequent Gaelic victory relation only"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "1592-cavendish-santos-sao-vicente-documented-attack-sequence",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -46.33361,
+            -23.96083
+          ],
+          [
+            -46.3861,
+            -23.9664
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1591—1592年桑托斯→圣维森特：英军劫掠与焚城事件关系",
+        "label_type": "英方袭城地点顺序示意（非实测航迹）",
+        "zone_type": "documented_overseas_raid_town_sequence",
+        "map_layer": "territory",
+        "start_year": 1592,
+        "end_year": 1592,
+        "actor": "托马斯·卡文迪什所率英格兰远征舰队",
+        "summary_zh": "巴西国家图书馆整理的航海文献记载：卡文迪什舰队1591年圣诞节占据桑托斯，之后撤离并焚掠邻近圣维森特。两个现代市中心间的虚线只表示两座有据被袭城镇之间的历史顺序，不是精确航行路径、受灾走廊，更不意味着英国长期占领两城之间的土地。",
+        "source_ids": [
+          "C11-S43"
+        ],
+        "source_urls": [
+          "https://bndigital.bn.gov.br/artigos/ingleses-no-brasil-relatos-de-viagem-1526-1608/"
+        ],
+        "related_event_ids": [
+          "1590S-E005",
+          "1590S-E009"
+        ],
+        "sequence_only": true,
+        "material_impacts_not_assumed_between_waypoints": true,
+        "mapping_method": "Modern Santos and São Vicente city reference coordinates linked by a simple straight editorial order line; no original Tudor GPS or actual battle-boundary source",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geo_precision": "two_modern_city_reference_points_action_order_only",
+        "historical_event_actor_type": "English_raid"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1598-armagh-yellow-ford-blackwater-relief-defeat-order",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.654,
+            54.3482
+          ],
+          [
+            -6.686,
+            54.401
+          ],
+          [
+            -6.70544,
+            54.41288
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1598年阿马→黄渡口→布莱克沃特：英王援军进击与被击溃",
+        "label_type": "英军援救进军方向示意（非实测行军路线）",
+        "zone_type": "documented_english_relief_defeat_sequence",
+        "map_layer": "territory",
+        "start_year": 1598,
+        "end_year": 1598,
+        "actor": "英王远征军与奥尼尔率领的爱尔兰联军",
+        "summary_zh": "1598年英军自阿马向布莱克沃特要塞进发，途中于黄渡口遭奥尼尔等爱尔兰联军击败，此后英军退出布莱克沃特据点。三处具名历史地方的直线仅显示前进、战败和撤退的关系；黄渡口只使用考古尚有争议的地区参考坐标，连线绝非当年的确切公路、阵地或被征服土地。",
+        "source_ids": [
+          "C11-S01",
+          "C11-S04",
+          "C11-S08"
+        ],
+        "source_urls": [
+          "https://oneillcountryhistoricalsociety.com/history/battle-of-the-yellow-ford/",
+          "https://historyireland.com/august-14/"
+        ],
+        "related_event_ids": [
+          "1590S-E029",
+          "1590S-E028"
+        ],
+        "sequence_only": true,
+        "material_impacts_not_assumed_between_waypoints": true,
+        "mapping_method": "Modern Armagh city, approximate Yellow Ford battlefield vicinity and already published Blackwater fort reference connected solely as a document-supported sequence; the true military route and occupied footprint are unknown",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geo_precision": "named_town_battle_vicinity_and_fort_order_not_actual_campaign_trail",
+        "historical_event_actor_type": "English_relief_opposed_by_Gaelic_resistance"
+      }
+    }
+  ]
+}
