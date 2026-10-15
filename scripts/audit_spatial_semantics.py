@@ -210,6 +210,14 @@ def inspect():
             if (isinstance(p.get("start_year"), int) and isinstance(p.get("end_year"), int)
                     and p["start_year"] > p["end_year"]):
                 report("ERROR", "reversed_gis_years", key, "GIS start year after end year")
+            if active and kind in ("Polygon", "MultiPolygon", "LineString") and p.get("source_ids"):
+                linked = any(src in valid_sources for src in p.get("source_ids", []))
+                external = any(isinstance(url, str) and url.startswith("https://")
+                               for url in p.get("source_urls", []))
+                if not linked and not external:
+                    report("REVIEW", "unclickable_public_area_citations", key,
+                           "Feature has source IDs but no published source mapping or source_urls; "
+                           "the openTerritoryDossier link builder may display no clickable history citations")
             if active:
                 for src in p.get("source_ids", []):
                     if src not in valid_sources:
@@ -230,8 +238,10 @@ def inspect():
         per_geo.append({"file": path.name, "loaded_directly_by_app": active,
                         "features": len(features), "geometry_counts": dict(counts)})
     outcome = dict(collections.Counter(x["level"] for x in defects))
+    by_code = dict(collections.Counter(x["code"] for x in defects))
     return {"schema": VERSION, "published_span": [1497, 1599],
             "counts": dict(stats), "findings_by_level": outcome,
+            "findings_by_code": by_code,
             "chapters": per_chapter, "geojson": per_geo,
             "findings": defects, "interpretation": {
                 "ERROR": "Objective data or geometry contract violation",
@@ -251,7 +261,8 @@ def main():
         args.out.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Spatial red-team audit: " + json.dumps({
         "counts": audit["counts"], "findings_by_level": audit["findings_by_level"],
-        "sample": audit["findings"][:15]
+        "findings_by_code": audit["findings_by_code"],
+        "priority_samples": [x for x in audit["findings"] if x["code"] != "geo_source_outside_published_index"][:20]
     }, ensure_ascii=False, indent=2))
     if args.strict and audit["findings_by_level"].get("ERROR", 0):
         raise SystemExit(1)
