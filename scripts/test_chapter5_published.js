@@ -67,6 +67,6 @@ assert.ok(app.includes("fetch('data/political-relations-1500-1549.geojson'"));
 assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("year===lastPublishedYear"));
 assert.ok(app.includes('e.year>=chapter.start&&e.year<=year')&&app.includes('((y-chapter.start)/span*100)'));
 assert.ok(app.includes('fullArchive||occurredByYear(e,year)'),'Unoccurred chapter events leaked');
-assert.ok(app.includes('atlasFifth?.sources'),'fifth chapter source citations not available to dossier');
+assert.ok(app.includes('sourcesById.get(id)')&&app.includes('atlasFifth,atlasSixth'),'fifth chapter source citations not available to dossier');
 assert.ok(app.includes("focusedEventId"),'sidebar event location must remain available');
 console.log('PASS 1530s: 27 chronological records, 8 continued polities, 12 reference sites, 13 no-border statutory shires, 0 fake area/colonial profit');
