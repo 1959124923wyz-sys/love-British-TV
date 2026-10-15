@@ -2103,7 +2103,7 @@ async function boot(){
   const centuryRes=await fetch('data/century-violence-regions-1544-1589.geojson',{cache:'no-store'});
   if(!centuryRes.ok)throw new Error('1544—1589地区暴力空间补档未加载');
   const centuryData=await centuryRes.json();
-  if(centuryData?.features?.length!==8||centuryData.features.some(f=>{
+  if(centuryData?.features?.length!==15||centuryData.features.some(f=>{
    const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
    return f.geometry?.type!=='Polygon'||!ring||ring.length<4||
     p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
