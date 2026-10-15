@@ -208,7 +208,7 @@ function syncMapLayers(){
   input.parentElement.setAttribute('aria-label',(id==='mapLayerTerritory'?'版图':'事件')+(input.checked?'已显示':'已隐藏'));
  }
  if(!events){focusedEventId=null;focusRequestToken++;}
- if(atlas)refreshHistoricalLayers();
+ if(atlas){renderEventList();refreshHistoricalLayers();}
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
@@ -409,7 +409,7 @@ function renderEventList(){
   hint.classList.toggle('none',!currentEvents.length);
  }
  const mapHint=$('yearArrivalMapCount');
- if(mapHint)mapHint.textContent=currentEvents.length?'本年新事件 '+currentEvents.length+(locatable?' · 金色「新」标记':' · 无可靠地图位置'):'本年无新增事件记录';
+ if(mapHint)mapHint.textContent=currentEvents.length?'本年新事件 '+currentEvents.length+(!$('mapLayerEvents').checked?' · 事件图层已关闭':locatable?' · 金色「新」标记':' · 无可靠地图位置'):'本年无新增事件记录';
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>{
   node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event'));
