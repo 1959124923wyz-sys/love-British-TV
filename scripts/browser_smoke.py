@@ -113,6 +113,13 @@ try:
     set_year(1520, 4)
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
     set_year(1513, 6)
+    # Desktop dossier now replaces the event sidebar instead of squeezing the
+    # map into three columns. Return to the archive before WebDriver clicks it.
+    if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
+        driver.find_element(By.ID,"mobileEventsToggle").click()
+        wait.until(lambda d: d.execute_script("""
+            return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
+        """))
     flodden = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1513-FLODDEN"]')
     before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(flodden).perform()
@@ -181,6 +188,11 @@ try:
     verify("Fifth chapter archive leaked into fourth",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     set_year(1535, 9)
+    if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
+        driver.find_element(By.ID,"mobileEventsToggle").click()
+        wait.until(lambda d: d.execute_script("""
+            return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
+        """))
     maynooth = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1530S-E004"]')
     zoom_before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(maynooth).perform()
