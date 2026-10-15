@@ -210,7 +210,11 @@ def inspect():
             if (isinstance(p.get("start_year"), int) and isinstance(p.get("end_year"), int)
                     and p["start_year"] > p["end_year"]):
                 report("ERROR", "reversed_gis_years", key, "GIS start year after end year")
-            if active and kind in ("Polygon", "MultiPolygon", "LineString") and p.get("source_ids"):
+            # Research hypotheses use openHypothesis(source_path), not the
+            # published Atlas listSources() lookup; do not misreport these
+            # independent archive IDs as broken public links.
+            if (active and not path.name.startswith("geography-") and
+                    kind in ("Polygon", "MultiPolygon", "LineString") and p.get("source_ids")):
                 linked = any(src in valid_sources for src in p.get("source_ids", []))
                 external = any(isinstance(url, str) and url.startswith("https://")
                                for url in p.get("source_urls", []))
