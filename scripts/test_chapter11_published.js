@@ -30,7 +30,20 @@ for(const e of now.events){
  if(e.lat==null){unlocated++;assert.equal(e.lng,null,e.id+' geographic invention')}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng)&&Math.abs(e.lat)<=90&&Math.abs(e.lng)<=180,e.id+' invalid GIS');
 }
-assert.equal(unlocated,20);
+assert.equal(unlocated,19);
+const raleigh=now.events.find(e=>e.id==='1590S-E014');
+assert.equal(raleigh.lat,10.6394,'Raleigh San Jose modern city is a known referent');
+assert.equal(raleigh.lng,-61.4242);
+assert.ok(raleigh.position_type.includes('modern_named_city_reference'));
+assert.equal(raleigh.actual_English_territory_created,false);
+assert.ok(raleigh.geo_precision.includes('not_verified'));
+assert.deepEqual(raleigh.linked_geography_ids,[
+ 'trinidad-puerto-de-los-espanoles-1595-raleigh-arrival',
+ 'caribbean-trinidad-raiders-1595',
+ 'trinidad-1595-puerto-espana-san-jose-operation-sequence',
+ 'trinidad-1595-puerto-espana-san-jose-operation-schematic']);
+assert.ok(notes.records['1590S-E014'].geography.includes('现代城市级参考坐标'));
+assert.ok(!notes.records['1590S-E014'].geography.includes('坐标空值'));
 for(const id of ['calais-crown','guines-crown-1520s','dublin-pale','channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland']){
  const old=last.places.find(p=>p.id===id),x=now.places.find(p=>p.id===id);
  assert.ok(old&&x,id+' polity lost');assert.equal(x.start_year,old.start_year);
@@ -67,4 +80,4 @@ assert.ok(app.includes('p.year_end_visible?.includes(year)'),'published annual p
 assert.ok(app.includes('const nearby=[],cells=new Map(),cellSize=32'),'map point spatial index regressed');
 assert.ok(app.includes("className:'atlas-voyage-continuity'"),'route continuity underlay absent');
 assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
-console.log('PASS ch11: 36 events, 70 sources, 31 places, 20 unmapped, 10 sites, 2 dashed areas, zero fabricated boundaries');
+console.log('PASS ch11: 36 events, 70 sources, 31 places, 19 unmapped, 10 sites, 2 dashed areas, zero fabricated boundaries');

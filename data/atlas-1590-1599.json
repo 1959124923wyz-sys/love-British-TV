@@ -480,12 +480,12 @@
       "name": "罗利袭取特立尼达西班牙据点并拘押总督",
       "category": "privateering_plunder",
       "icon_code": "ECO",
-      "lat": null,
-      "lng": null,
-      "geography_label": "Trinidad / San José de Oruña",
-      "geo_precision": "original_action_site_geometry_not_obtained",
-      "description": "罗利在1595年南美航行中夺取西属特立尼达岛圣何塞据点，俘获西班牙官员安东尼奥·德贝里奥，并探入奥里诺科河寻找黄金。",
-      "short_description": "罗利在1595年南美航行中夺取西属特立尼达岛圣何塞据点，俘获西班牙官员安东尼奥·德贝里奥，并探入奥里诺科河寻找黄金。",
+      "lat": 10.6394,
+      "lng": -61.4242,
+      "geography_label": "San José de Oruña（今St Joseph／圣约瑟夫，特立尼达）",
+      "geo_precision": "modern_St_Joseph_named_city_reference_not_verified_1595_fort_or_capture_location",
+      "description": "1595年罗利远征队先抵西班牙人港，随后向圣何塞·德奥鲁尼亚（今St Joseph）进军，夺取西班牙据点、拘押总督安东尼奥·德·贝里奥并焚毁城镇，之后继续奥里诺科探险。这是英军一次性军事行动，不能据此认为特立尼达全岛被英国统治。",
+      "short_description": "罗利1595年攻入特立尼达圣何塞·德奥鲁尼亚，拘押总督贝里奥并焚城；现代St Joseph仅作城市定位，不表示英国统治全岛。",
       "source_ids": [
         "C11-S23",
         "C11-S24"
@@ -499,11 +499,18 @@
       "actual_English_land_area_sqkm": null,
       "actual_English_territory_created": false,
       "historical_control_boundary_verified": false,
-      "position_type": "no_verified_historical_location_point",
+      "position_type": "modern_named_city_reference_not_exact_historical_assault_site",
       "editorial_status": "published_ch11_source_reviewed",
       "source_context_warning": "not_entire_Trinidad_or_Guiana_English_possession",
       "date_precision": "year",
-      "map_priority": true
+      "map_priority": true,
+      "location_basis": "Trinidad and Tobago National Library NALIS historical San José de Oruña identified with modern St Joseph; existing source-anchored study point caribbean-trinidad-raiders-1595",
+      "linked_geography_ids": [
+        "trinidad-puerto-de-los-espanoles-1595-raleigh-arrival",
+        "caribbean-trinidad-raiders-1595",
+        "trinidad-1595-puerto-espana-san-jose-operation-sequence",
+        "trinidad-1595-puerto-espana-san-jose-operation-schematic"
+      ]
     },
     {
       "id": "1590S-E015",

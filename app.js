@@ -1037,15 +1037,20 @@ function renderAtlanticContactSites(){
    }).addTo(groups.atlanticContact);
   }
  }
- // Draw the schematic stop sequence first, beneath the individual sites.
+ // Route links mean DOCUMENTED sequence, not measured military tracks.
+ // North African trade stays teal; the Trinidad assault sequence is red.
+ // Both sit beneath historical event markers and share the 版图 switch.
  for(const f of selected.filter(x=>x.geometry.type==='LineString')){
+  const isMilitary=f.properties.zone_type==='caribbean_english_military_action_sequence';
   L.geoJSON(f,{pane:'warReachPane',renderer:warReachRenderer,
    interactive:true,bubblingMouseEvents:false,style:()=>({
-    color:'#65bda7',weight:2.2,opacity:.75,dashArray:'5 7',
-    className:'atlas-maghreb-trade-sequence'}),
+    color:isMilitary?'#d57c80':'#65bda7',weight:isMilitary?3.3:2.2,
+    opacity:isMilitary?.93:.75,dashArray:isMilitary?'7 5':'5 7',
+    className:isMilitary?'atlas-trinidad-1595-action-sequence':'atlas-maghreb-trade-sequence'}),
    onEachFeature:(item,layer)=>{
-    layer.bindTooltip(escapeHTML(item.properties.name),{sticky:true,
-     pane:'eventTooltipPane',className:'atlas-hover'});
+    layer.bindTooltip('<strong>'+escapeHTML(item.properties.name)+'</strong><div class="atlas-hover-summary">'+
+      escapeHTML(isMilitary?'先后顺序示意，非实际行军路线':'贸易港口次序示意，非实际航线')+'</div>',
+      {sticky:true,pane:'eventTooltipPane',className:'atlas-hover'});
     layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
      openTerritoryDossier(item,'atlantic-contact');});
    }
@@ -1856,7 +1861,7 @@ async function boot(){
   const atlanticRes=await fetch('data/caribbean-maghreb-contact-raids-1551-1598.geojson',{cache:'no-store'});
   if(!atlanticRes.ok)throw new Error('加勒比与北非史料地理点未加载');
   const atlanticData=await atlanticRes.json();
-  if(atlanticData?.features?.length!==12||atlanticData.features.some(f=>{
+  if(atlanticData?.features?.length!==13||atlanticData.features.some(f=>{
     const p=f.properties||{},geom=f.geometry||{};
     return !['Point','LineString','Polygon'].includes(geom.type)||
      p.map_layer!=='territory_reference_not_political_control'||

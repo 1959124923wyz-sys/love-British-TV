@@ -1044,6 +1044,15 @@ try:
               document.querySelector('#dossierBody').textContent.includes('西班牙人港') &&
               document.querySelector('#dossierBody .source-link')!==null &&
               !document.querySelector('#dossierBody').textContent.includes('占领全岛')""",driver)
+    verify("Raleigh 1595 should include a separately coloured two-city assault order line",
+           """document.querySelectorAll('#map .atlas-trinidad-1595-action-sequence').length===1 &&
+              document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E014"]').click()""")
+    verify("Original published Raleigh event must now map to St Joseph and keep its source dossier",
+           """document.querySelector('#dossierBody').textContent.includes('圣何塞') &&
+              document.querySelector('#dossierBody').textContent.includes('St Joseph') &&
+              !document.querySelector('#dossierBody').textContent.includes('此事件位置尚未核实') &&
+              document.querySelector('#yearRange').value==='1595'""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Trinidad-two-anchor-raid-zone.png"))
     driver.save_screenshot(str(OUT / "chapter11-1595-Caribbean-Margarita-Cumana-Trinidad-SanJuan.png"))
     verify("1595 Gaelic recapture must remain contested, not British land",

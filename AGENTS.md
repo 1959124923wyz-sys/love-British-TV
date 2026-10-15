@@ -10,6 +10,8 @@
 
 **历史地理绘画规范：** [docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md](docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md)
 
+**点—线—区、军事影响区与具名地落图强制规范（2026-10-15）：** [docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md](docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md) · [逐项审查清单](docs/HISTORICAL_SPATIAL_REVIEW_CHECKLIST.md)。史料已确认的历史地名可落现代参考城市坐标，不能因缺16世纪城墙GPS长期留空；有据顺序才画线，区域行动证据才画淡色虚线影响区，均不当实测领土。**本仓库后续所有调查与制图PR必须遵照执行。**
+
 **跨十年控制关系的底层规则：** [docs/TERRITORY_CONTINUITY_RULE.md](docs/TERRITORY_CONTINUITY_RULE.md)
 
 **已批准的网站交互规则：** [docs/APPROVED_MAP_INTERACTION_STANDARD.md](docs/APPROVED_MAP_INTERACTION_STANDARD.md)
