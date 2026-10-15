@@ -489,6 +489,20 @@ try:
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
     set_year(1549, 80)
+    verify("Western Rising 1549 must separately record attacks, executions, siege and rebel resistance",
+           """['GAP1549-WEST-BODMIN-ASSEMBLY','GAP1549-WEST-EXETER-SIEGE',
+               'GAP1549-WEST-FENNY-BRIDGES','GAP1549-WEST-WOODBURY-COMMON',
+               'GAP1549-WEST-CLYST-PRISONERS','GAP1549-WEST-EXETER-RELIEF',
+               'GAP1549-WEST-ST-IVES-REPRISALS','GAP1549-WEST-STRATTON-GALLOWS']
+              .every(id=>!!document.querySelector('#eventList .event-item[data-eid="'+id+'"]'))""",driver)
+    verify("Western Rising region appendix must expose Exeter, Cornwall and battle localities",
+           """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+               .map(n=>n.textContent).some(t=>t.includes('埃克塞特')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+               .map(n=>n.textContent).some(t=>t.includes('费尼桥')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+               .map(n=>n.textContent).some(t=>t.includes('博德明'))""",driver)
+    driver.save_screenshot(str(OUT / "western-rising-1549-devon-cornwall-studies.png"))
     verify("Norfolk 1549 must expose seven additional individually sourced locality events",
            """['GAP1549-KETT','GAP1549-NORFOLK-WYMONDHAM',
                'GAP1549-NORFOLK-MOUSEHOLD','GAP1549-NORFOLK-NORWICH-REBELS',
