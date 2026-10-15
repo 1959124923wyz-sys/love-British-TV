@@ -3,13 +3,14 @@
   "name": "Historical source-backed regional story follow-ups 1562-1596",
   "metadata": {
     "geometry_semantics": "non-surveyed diagrammatic local/region viewing aid; no actual territory area",
-    "feature_count": 11,
+    "feature_count": 12,
     "verified_english_occupation_polygon_count": 0,
     "verified_english_garrison_location": 1,
     "short_occupation_year_end_split": "Le Havre 1562 English garrison / 1563 French recovery",
     "source_policy": "Municipal archives, museum collection catalogues, research library and Library of Congress",
     "scope_addendum": "1587 Cádiz naval event explicitly distinct from 1596 Anglo-Dutch town sack; 1589 Vigo town raid distinct from permanent conquest",
-    "source_20261015_addition": "5 documented violence-oriented regional contexts: Roanoke 1585/86/87, A Coruña 1589, Breifne 1590"
+    "source_20261015_addition": "5 documented violence-oriented regional contexts: Roanoke 1585/86/87, A Coruña 1589, Breifne 1590",
+    "extended_for_independent_research": "1588 Connacht Armada survivors killed: Irish DIB primary scholarly synthesis, no invented death polygon"
   },
   "features": [
     {
@@ -734,6 +735,74 @@
           "West Breifne",
           "County Leitrim region"
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "connacht-armada-survivors-killings-1588-research-region",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -10.24,
+              53.7
+            ],
+            [
+              -8.76,
+              53.7
+            ],
+            [
+              -8.35,
+              54.43
+            ],
+            [
+              -9.55,
+              54.49
+            ],
+            [
+              -10.24,
+              54.08
+            ],
+            [
+              -10.24,
+              53.7
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Deliberately coarse County Mayo–Sligo coastal orientation for reader; NOT verified beaching locations, treatment of every shipwreck survivor, mass killing boundary or English occupation polygon.",
+        "name": "1588年爱尔兰斯莱戈—梅奥沿岸：英国官员处决西班牙沉船幸存者（地区参考）",
+        "label_type": "沉船幸存者被处决及当地庇护记录",
+        "zone_type": "english_execution_of_shipwreck_survivors_schematic",
+        "color_role": "raid_red",
+        "start_year": 1588,
+        "end_year": 1588,
+        "controller_zh": "英王爱尔兰驻康诺特行政军官宾厄姆兄弟及其执行人员；受害者为西班牙无敌舰队沉船幸存水兵；部分爱尔兰领主曾救助其他幸存者",
+        "summary_zh": "1588年西班牙无敌舰队撤退途中，多艘舰船在爱尔兰斯莱戈与梅奥沿岸遇难。爱尔兰《人物传记辞典》乔治·宾厄姆条记载，他在9—10月间监督处决至少700名沉船幸存者；理查德·宾厄姆条也记述其管理沉船及参与幸存者屠杀。并非所有西班牙幸存者都被杀害：当地部分爱尔兰领主曾为他们提供食宿和逃离渠道，奥罗克条目对此有所记载。地图红色虚线只是向观众提示受牵连的现代郡级沿岸区域，绝非每一处处决地点、发现遗骸的地图，也不是所有海滩和村庄发生杀戮的宣称。不能把军舰自然沉没造成的死亡自动算成英军处决人数。",
+        "source_ids": [],
+        "source_urls": [
+          "https://www.dib.ie/biography/bingham-byngham-sir-george-a0664",
+          "https://www.dib.ie/biography/bingham-byngham-sir-richard-a0665",
+          "https://www.dib.ie/biography/orourke-o-ruairc-brian-ballach-a7029",
+          "https://heritageireland.ie/visit/places-to-visit/doe-castle/"
+        ],
+        "related_event_ids": [],
+        "named_anchors": [
+          "Sligo coast",
+          "Mayo coast"
+        ],
+        "independent_spatial_research": true,
+        "research_event_not_yet_chapter_atlas": true,
+        "figure_precision": "at_least_700_executed_per_dib_george_bingham_study_not_all_shipwreck_deaths"
       }
     }
   ]
