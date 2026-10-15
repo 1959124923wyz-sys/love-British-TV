@@ -39,3 +39,8 @@
 - 源状态：`data/military-control-points-1540-1549.geojson`。
 - 程序：`app.js` 内 `openTerritoryDossier`、`renderWartimeVicinities`、`renderContestedZones`。
 - 自动回归：`scripts/test_war_zone_dossiers.js` + `scripts/browser_smoke.py`。
+
+
+## 2026-10-15｜地方军事影响区新增通用判据
+
+本1540年代研究的战争占领、交战与推定范围规则保持不变。若文献仅给出可核的历史城市或地点，可使用明示精度的现代对应位置落**事件点**，不再要求精确古代城墙GPS；若同一行动的多个具名地点与先后次序可证，可补独立**顺序示意线**。只有史料确认存在局部连续/多地点/区域性的军事活动，才可画淡红虚线的**B类研究影响区**。两个相隔甚远的地点不能仅凭同一远征队自动连成大面积灾区，紫色驻点也不是整片土地的主权证明。详情见 [统一历史空间叙事标准](HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md)。
