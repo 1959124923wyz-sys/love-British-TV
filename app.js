@@ -1495,6 +1495,12 @@ async function boot(){
      archaeologicalReferenceAreas.features.some(f=>f.properties?.fill_authorized!==false||f.properties?.historical_boundary_confirmed!==false))
    throw new Error('拒绝把现代古迹保护区当作英国1547实测占地');
   map.attributionControl.addAttribution('Contains HES and OS data © HES and Crown Copyright/database right 2026 · OGL v3.0');
+  // Reconstruct the dated GeoJSON views from one immutable 1497–1549
+  // geographic reference. No new border is inferred and no cloned coordinate
+  // arrays are stored for following decades.
+  if(!territorialFootprints?.features?.length||typeof AtlasTerritoryGeometry==='undefined')
+   throw new Error('共享领土地理基准未正确加载');
+  const hydrateTerritoryPeriod=period=>AtlasTerritoryGeometry.hydrateFootprints(territorialFootprints,period);
   // New chapter keeps original 1497–1549 layer references intact. Older layers
   // have closed year intervals; append dated seventh-chapter continuations.
   const [geo7,relation7,urban7,sites7]=await Promise.all([
@@ -1510,7 +1516,7 @@ async function boot(){
   ]);
   if(!territorialFootprints||!politicalRelationAreas||!frenchCityAreas)
    throw new Error('无法延续上一章政治控制资料');
-  territorialFootprints.features.push(...newFootprints.features);
+  territorialFootprints.features.push(...hydrateTerritoryPeriod(newFootprints).features);
   politicalRelationAreas.features.push(...newRelations.features);
   frenchCityAreas.features.push(...newUrban.features);
   seventhControlSites=newMilitary;
@@ -1528,7 +1534,7 @@ async function boot(){
   if(newMilitary8.features?.length!==2||newCoast8.features?.length!==3||
    newCoast8.features.some(f=>f.properties?.fill_authorized!==false||f.properties?.map_layer!=='events'))
    throw new Error('奴隶掠卖活动不能误转为英国领土');
-  territorialFootprints.features.push(...newGeo8.features);
+  territorialFootprints.features.push(...hydrateTerritoryPeriod(newGeo8).features);
   politicalRelationAreas.features.push(...newRelations8.features);
   frenchCityAreas.features.push(...newUrban8.features);
   eighthControlSites=newMilitary8;eighthSlaveCoastalAreas=newCoast8;
@@ -1542,7 +1548,7 @@ async function boot(){
   const [g9,p9,u9,s9]=await Promise.all([geo9.json(),relation9.json(),urban9.json(),site9.json()]);
   if(s9.features?.length!==3||s9.features.some(f=>f.geometry?.type!=='Point'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null))
    throw new Error('第九章军控研究图层未通过据点及面积校验');
-  territorialFootprints.features.push(...g9.features);
+  territorialFootprints.features.push(...hydrateTerritoryPeriod(g9).features);
   politicalRelationAreas.features.push(...p9.features);
   frenchCityAreas.features.push(...u9.features);
   ninthControlSites=s9;
@@ -1556,7 +1562,7 @@ async function boot(){
   const [g10,p10,u10,s10]=await Promise.all([geo10.json(),relation10.json(),urban10.json(),site10.json()]);
   if(s10.features?.length!==3||s10.features.some(f=>f.geometry?.type!=='Point'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null))
    throw new Error('第十章军事据点数据不能充当实测占领面积');
-  territorialFootprints.features.push(...g10.features);
+  territorialFootprints.features.push(...hydrateTerritoryPeriod(g10).features);
   politicalRelationAreas.features.push(...p10.features);
   frenchCityAreas.features.push(...u10.features);
   tenthControlSites=s10;
@@ -1573,7 +1579,7 @@ async function boot(){
    c11.features.some(f=>f.geometry?.type!=='Point'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null)||
    a11.features.some(f=>f.geometry?.type!=='Polygon'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null))
    throw new Error('第十一章未证实的控制地理面不可冒充实测边界');
-  territorialFootprints.features.push(...g11.features);
+  territorialFootprints.features.push(...hydrateTerritoryPeriod(g11).features);
   politicalRelationAreas.features.push(...p11.features);
   frenchCityAreas.features.push(...u11.features);
   eleventhControlCores=c11;eleventhInfluenceAreas=a11;
