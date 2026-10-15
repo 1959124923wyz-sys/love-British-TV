@@ -6,6 +6,7 @@ and their transient failures are excluded from assertions.
 """
 from pathlib import Path
 import re
+import json
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -113,10 +114,18 @@ try:
     set_year(1520, 4)
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
     set_year(1513, 6)
+    # Desktop dossier now replaces the event sidebar instead of squeezing the
+    # map into three columns. Return to the archive before WebDriver clicks it.
+    if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
+        driver.find_element(By.ID,"mobileEventsToggle").click()
+        wait.until(lambda d: d.execute_script("""
+            return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
+        """))
+    time.sleep(0.45)  # Wait for the desktop sidebar column to stop transitioning.
     flodden = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1513-FLODDEN"]')
     before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(flodden).perform()
-    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker"))>0)
+    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker, .atlas-target-aggregate"))>0)
     assert driver.execute_script("return document.querySelector('#yearRange').value")=="1513", "Event double-click changed selected history year"
     time.sleep(1.1)
     after = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
@@ -181,10 +190,16 @@ try:
     verify("Fifth chapter archive leaked into fourth",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     set_year(1535, 9)
+    if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
+        driver.find_element(By.ID,"mobileEventsToggle").click()
+        wait.until(lambda d: d.execute_script("""
+            return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
+        """))
+    time.sleep(0.45)
     maynooth = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1530S-E004"]')
     zoom_before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(maynooth).perform()
-    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker"))>0)
+    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker, .atlas-target-aggregate"))>0)
     time.sleep(1.1)
     zoom_after = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     if zoom_before and zoom_after:
@@ -400,9 +415,22 @@ try:
           return {switchWidth:sw.width,swRight:sw.right,viewport:innerWidth,
            overlapTitle:!(sw.right<=top.left||sw.left>=top.right||sw.bottom<=top.top||sw.top>=top.bottom),
            overlapTimeline:sw.bottom>timeline.top&&sw.top<timeline.bottom,
-           sidebarOverflow:legend.scrollWidth-legend.clientWidth,
+           sidebarOverflow:document.querySelector('#workspace').classList.contains('sidebar-collapsed')?0:legend.scrollWidth-legend.clientWidth,
            visibleSwitches:document.querySelectorAll('#mapLayerSwitch input:checked').length};
         """)
+        if dims['sidebarOverflow']>2:
+            debug=driver.execute_script("""
+              const legend=document.getElementById('mapModeHelp'),
+                    rect=legend.getBoundingClientRect();
+              return {width:rect.width,scrollWidth:legend.scrollWidth,
+                offenders:[...legend.querySelectorAll('*')].map(el=>{
+                  const r=el.getBoundingClientRect(),style=getComputedStyle(el);
+                  return {tag:el.tagName,cls:el.className?.baseVal||el.className,
+                    name:(el.textContent||'').trim().slice(0,42),width:r.width,
+                    right:r.right,whiteSpace:style.whiteSpace,scroll:el.scrollWidth};
+                }).filter(r=>r.right>rect.right+2||r.width>rect.width+2).slice(0,15)};
+            """)
+            print('SIDEBAR_OVERFLOW',w,json.dumps(debug,ensure_ascii=False),flush=True)
         assert dims['visibleSwitches']==2 and dims['switchWidth']>=125 and dims['swRight']<=dims['viewport']-3 and not dims['overlapTitle'] and not dims['overlapTimeline'] and dims['sidebarOverflow']<=2,f"PR39 compact-layer UI collided at {w}px: {dims}"
     driver.set_window_size(1620,1040)
     driver.execute_script("document.querySelector('#mapModeHelp').open=false")
@@ -768,6 +796,8 @@ try:
               document.querySelectorAll('#map .atlas-voyage-hit').length===16 &&
               document.querySelector('#eventList [data-eid="1560S-E018"] use').getAttribute('href').endsWith('#SLV')""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1560S-E018"]').click()""")
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "霍金斯在西非袭击村社"))
     verify("Unlocated 1568 African captive village wrongly presented with precise GPS",
            """document.querySelector('#dossierBody').textContent.includes('霍金斯自述')""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1568-west-africa-slaving-atlantic.png"))
@@ -843,6 +873,8 @@ try:
               document.querySelector('#eventList [data-eid="1570S-E035"] use').getAttribute('href').endsWith('#DIS') &&
               document.querySelector('#eventList [data-eid="1570S-E036"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E035"]').click()""")
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "布里斯托尔圣斯蒂芬堂安葬"))
     verify("1577 Bristol documented historic cemetery source should remain clickable",
            """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
               document.querySelector('#dossierBody .source-details')!==null""",driver)
@@ -852,6 +884,8 @@ try:
            """document.querySelector('#eventList [data-eid="1570S-E028"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E028"]').click()""")
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "穆拉马斯特屠杀"))
     verify("1578 scholarly source attribution lost",
            """document.querySelector('#dossierBody').textContent.includes('1578') &&
               !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
@@ -998,6 +1032,8 @@ try:
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
     set_year(1590,3)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E002"]').click()""")
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "宾厄姆英王军在布雷夫尼"))
     verify("1590 Breifne territorial devastation is now region-locatable without invented burned villages",
            """document.querySelector('#dossierBody').textContent.includes('布雷夫尼') &&
               document.querySelector('#dossierBody').textContent.includes('地区') &&
@@ -1020,6 +1056,8 @@ try:
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1592'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E009"]').click()""")
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "英军卡文迪什舰队撤离桑托斯"))
     verify("1592 Sao Vicente main published event must have modern name/location source",
            """document.querySelector('#dossierBody').textContent.includes('圣维森特') &&
               !document.querySelector('#dossierBody').textContent.includes('保持地图坐标空值') &&
@@ -1063,6 +1101,8 @@ try:
            """document.querySelectorAll('#map .atlas-trinidad-1595-action-sequence').length===1 &&
               document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E014"]').click()""")
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "罗利袭取特立尼达"))
     verify("Original published Raleigh event must now map to St Joseph and keep its source dossier",
            """document.querySelector('#dossierBody').textContent.includes('圣何塞') &&
               document.querySelector('#dossierBody').textContent.includes('St Joseph') &&
@@ -1091,6 +1131,8 @@ try:
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E029"]').click()""")
+    wait.until(lambda d: d.execute_script(
+        "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "黄渡口战役"))
     verify("1598 Yellow Ford main record now localizable with uncertain battlefield noted",
            """document.querySelector('#dossierBody').textContent.includes('黄渡口') &&
               document.querySelector('#dossierBody').textContent.includes('实测') &&

@@ -851,3 +851,24 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
   outline:2px solid #e9bb91;outline-offset:2px;
  }
 }
+
+
+/* Fixed-width archive column: wrapped legend choices must not enlarge their
+   hidden scrollWidth when readers expand the cartographic legend. */
+@media(min-width:981px){
+ .sidebar-settings-wrap,.sidebar-settings-wrap .map-mode-help,
+ .sidebar-settings-wrap .map-mode-help-body,
+ .sidebar-settings-wrap .basemap-option{
+  min-width:0;max-width:100%;box-sizing:border-box;
+ }
+ .sidebar-settings-wrap .map-mode-help-body>div{min-width:0;max-width:100%}
+ .sidebar-settings-wrap .map-mode-help-body .basemap-option label{
+  min-width:0;max-width:100%;width:100%;box-sizing:border-box;
+ }
+ .sidebar-settings-wrap .basemap-option label>span{
+  flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:anywhere;
+ }
+ .sidebar-settings-wrap .map-mode-help-body p{
+  min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;
+ }
+}
