@@ -148,52 +148,68 @@
         "coordinates": [
           [
             [
-              1.03,
-              52.53
+              1.278,
+              52.618
             ],
             [
-              1.49,
-              52.53
+              1.313,
+              52.617
             ],
             [
-              1.49,
-              52.73
+              1.335,
+              52.627
             ],
             [
-              1.03,
-              52.73
+              1.34,
+              52.647
             ],
             [
-              1.03,
-              52.53
+              1.309,
+              52.655
+            ],
+            [
+              1.284,
+              52.643
+            ],
+            [
+              1.278,
+              52.618
             ]
           ]
         ]
       },
       "properties": {
         "map_layer": "territory",
-        "name": "1549年诺福克：凯特起义与王室军事镇压",
-        "label_type": "军事或强制政策所涉地区 · 示意",
+        "name": "1549年诺里奇—Mousehold：起义、城区交战与王室镇压（示意）",
+        "label_type": "国内军事冲突涉及区 · 城区与营地示意",
         "zone_type": "crown_internal_repression",
         "color_role": "raid_red",
         "start_year": 1549,
         "end_year": 1549,
-        "controller_zh": "英格兰爱德华六世王室军队",
-        "summary_zh": "凯特起义从怀蒙德姆扩展到诺里奇附近，起义者据守Mousehold Heath，最终在杜辛代尔遭王室军队击败。图形仅是这些具名节点的阅读包络，王室镇压与殖民征服分开归类；不表示区域内所有居民或土地都受损。",
+        "controller_zh": "凯特起义者与爱德华六世王室军队（控制阶段不同）",
+        "summary_zh": "怀蒙德姆反圈地运动于7月抵达Mousehold Heath，在诺里奇建营议事、与王室部队争夺城区；8月24—26日沃里克王室军重新夺回城区。图形只围绕诺里奇、凯特高地和Mousehold具名地点作阅读示意，非1549年城墙、营地、被烧街区或持续统治界。城门受焚事件应按具体行动主体区分，不能一概归为王室军。",
         "source_ids": [
-          "EN-NORFOLK-HER-DUSSINDALE"
+          "EN-NCL-KETT-COMMONS-1549",
+          "EN-HODGKINS-DUSSINDALE-2015",
+          "EN-CARTER-DUSSINDALE-1983"
         ],
         "source_urls": [
-          "https://www.heritage.norfolk.gov.uk/record-details?uid=%27TNF107%27"
+          "https://research.ncl.ac.uk/wastesandstrays/wastesandstraysblog/ketts-rebellion/",
+          "https://intarch.ac.uk/journal/issue38/hodgkins_index.html",
+          "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-3749-1/dissemination/pdf/vol_39/NorfolkArchaeology39_P54_P62.pdf"
         ],
         "related_event_ids": [
-          "GAP1549-KETT"
+          "GAP1549-NORFOLK-MOUSEHOLD",
+          "GAP1549-NORFOLK-NORWICH-REBELS",
+          "GAP1549-NORFOLK-WARWICK-NORWICH",
+          "GAP1549-NORFOLK-EXECUTIONS",
+          "GAP1549-NORFOLK-ROBERT-KETT-EXEC"
         ],
         "named_anchors": [
-          "Wymondham",
+          "Mousehold Heath / Kett's Heights",
           "Norwich",
-          "Mousehold Heath",
-          "Dussindale"
+          "Bishop's Gate (historic; position not surveyed)",
+          "Magdalen Gate (historic; position not surveyed)"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -201,10 +217,10 @@
         "area_sqkm": null,
         "occupation_area_sqkm": null,
         "exclude_from_area_aggregation": true,
-        "geometry_provenance": "Research illustration: manually enclosed documented named locality anchors; not historical measured devastation, troop-control, fiscal reach or battle boundary.",
-        "source_precision": "Named places and regional operations verified; line is schematic and is not a georeferenced period map.",
-        "mapping_method": "locality_network_reader_envelope_non_measured",
-        "spatial_semantics": "non_sovereign_historical_effect_region_schematic"
+        "geometry_provenance": "Historical named-place locality reading envelope manually drawn at low geographic precision; NOT extracted from source images, and NOT a fortification, zone of destruction, archive-verified perimeter, or Crown territory.",
+        "source_precision": "Wymondham town, Norwich city, and the historic Heath are documented; all local city attack perimeters are unknown and the ring is illustrative.",
+        "mapping_method": "multi_site_norwich_rebellion_locality_envelope_non_measured",
+        "spatial_semantics": "internal_rebellion_and_royal_counterinsurgency_schematic_not_territorial"
       }
     },
     {
@@ -468,6 +484,85 @@
         "source_precision": "Named places and regional operations verified; line is schematic and is not a georeferenced period map.",
         "mapping_method": "locality_network_reader_envelope_non_measured",
         "spatial_semantics": "non_sovereign_historical_effect_region_schematic"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "en-kett-1549-dussindale-valley-research",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.343,
+              52.623
+            ],
+            [
+              1.37,
+              52.62
+            ],
+            [
+              1.391,
+              52.63
+            ],
+            [
+              1.39,
+              52.647
+            ],
+            [
+              1.373,
+              52.655
+            ],
+            [
+              1.35,
+              52.648
+            ],
+            [
+              1.343,
+              52.623
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "name": "1549年杜辛代尔：推定谷地与战场所在区域",
+        "label_type": "候选战场谷地 · 非实测虚线",
+        "zone_type": "crown_internal_repression",
+        "color_role": "raid_red",
+        "start_year": 1549,
+        "end_year": 1549,
+        "controller_zh": "爱德华六世王室军队与凯特起义军",
+        "summary_zh": "1549年8月27日，沃里克率王室军在杜辛代尔谷地击败起义者，史籍估计约2,000—3,000名起义者阵亡。Anne Carter（1983）对Postwick、Thorpe St Andrew、Great Plumstead相交地带的古地名、古地图和地籍作了定位研究，Alexander Hodgkins（2015）进一步开展GIS地图回溯。现有资料只能支持谷地大致方位，不能证实该虚线多边形即真实战场、阵亡分布、英王新领地或所有农民受害位置。",
+        "source_ids": [
+          "EN-CARTER-DUSSINDALE-1983",
+          "EN-HODGKINS-DUSSINDALE-2015",
+          "EN-NORFOLK-HER-DUSSINDALE"
+        ],
+        "source_urls": [
+          "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-3749-1/dissemination/pdf/vol_39/NorfolkArchaeology39_P54_P62.pdf",
+          "https://intarch.ac.uk/journal/issue38/3/4-1.html",
+          "https://www.heritage.norfolk.gov.uk/record-details?uid=%27TNF107%27"
+        ],
+        "related_event_ids": [
+          "GAP1549-KETT"
+        ],
+        "named_anchors": [
+          "Postwick",
+          "Thorpe St Andrew",
+          "Great Plumstead",
+          "Dussindale valley (research hypothesis)"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Schematic locality reading ring drawn around the valley candidate documented by Carter (1983) and Hodgkins (2015); no map georeferencing performed here and no claim that polygon traces historic battle edges.",
+        "source_precision": "Historic terrain and 1589/1718 cartographic correlation support approximate location only; 1549 exact battlefield and troops/dead boundaries unconfirmed.",
+        "mapping_method": "dussindale_historic_valley_conjectural_locality_envelope_not_surveyed",
+        "spatial_semantics": "probable_battlefield_valley_for_reading_not_control_or_kill_zone"
       }
     }
   ]

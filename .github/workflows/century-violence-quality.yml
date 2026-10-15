@@ -8,6 +8,7 @@ on:
       - 'data/atlas-*.json'
       - 'data/century-violence-regions-1544-1589.geojson'
       - 'scripts/test_century_violence_regions.js'
+      - 'scripts/test_norfolk_kett_1549.js'
       - '.github/workflows/century-violence-quality.yml'
   push:
     branches: [main]
@@ -32,4 +33,6 @@ jobs:
       - name: Check JavaScript syntax
         run: node --check app.js
       - name: Verify historical area and event citations
-        run: node scripts/test_century_violence_regions.js
+        run: |
+          node scripts/test_century_violence_regions.js
+          node scripts/test_norfolk_kett_1549.js

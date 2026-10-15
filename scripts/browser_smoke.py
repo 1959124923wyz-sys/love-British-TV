@@ -488,7 +488,20 @@ try:
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
-    set_year(1549, 61)
+    set_year(1549, 68)
+    verify("Norfolk 1549 must expose seven additional individually sourced locality events",
+           """['GAP1549-KETT','GAP1549-NORFOLK-WYMONDHAM',
+               'GAP1549-NORFOLK-MOUSEHOLD','GAP1549-NORFOLK-NORWICH-REBELS',
+               'GAP1549-NORFOLK-WARWICK-NORWICH','GAP1549-NORFOLK-EXECUTIONS',
+               'GAP1549-NORFOLK-ROBERT-KETT-EXEC','GAP1549-NORFOLK-WILLIAM-KETT-EXEC']
+              .every(id=>!!document.querySelector('#eventList .event-item[data-eid="'+id+'"]'))""",driver)
+    verify("Norwich/Mousehold and Dussindale must appear as separate 1549 non-territorial regional studies",
+           """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+             .map(n=>n.textContent).some(n=>n.includes('诺里奇')&&n.includes('Mousehold')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+             .map(n=>n.textContent).some(n=>n.includes('杜辛代尔')) &&
+              document.querySelectorAll('#map .atlas-early-regional-impact').length>=2""",driver)
+    driver.save_screenshot(str(OUT / "norfolk-1549-two-localized-schematic-studies.png"))
     verify("1549 border influence must contract away from withdrawn Haddington",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1",driver)
     driver.execute_script("document.querySelector('#map .atlas-contested-zone').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}))")
