@@ -30,7 +30,20 @@ for(const e of now.events){
  if(e.lat==null){unlocated++;assert.equal(e.lng,null,e.id+' geographic invention')}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng)&&Math.abs(e.lat)<=90&&Math.abs(e.lng)<=180,e.id+' invalid GIS');
 }
-assert.equal(unlocated,19);
+assert.equal(unlocated,3);
+const newGeolocatedIds=['E001','E002','E004','E008','E009','E010','E013','E018',
+ 'E020','E023','E024','E026','E029','E033','E035','E036'].map(s=>'1590S-'+s);
+for(const id of newGeolocatedIds){
+ const event=now.events.find(e=>e.id===id);
+ assert.ok(event&&Number.isFinite(event.lat)&&Number.isFinite(event.lng),id+' named location failed to map');
+ assert.equal(event.position_is_historical_survey,false,id+' must not claim precise 16th-century mapping');
+ assert.ok(event.geo_precision.length>=24,id+' missing location fidelity');
+ assert.ok(event.geolocation_reference_url.startsWith('https://'));
+ assert.ok(notes.records[id].geography.includes('现代地理参考坐标'),id+' dossier still misstates unmappable');
+ assert.ok(!notes.records[id].geography.includes('保持地图坐标空值'),id+' outdated note');
+}
+assert.deepEqual(now.events.filter(e=>e.lat===null).map(e=>e.id),
+ ['1590S-E006','1590S-E007','1590S-E034'],'Only maritime intercepts and multi-site Essex return stay unlocated');
 const raleigh=now.events.find(e=>e.id==='1590S-E014');
 assert.equal(raleigh.lat,10.6394,'Raleigh San Jose modern city is a known referent');
 assert.equal(raleigh.lng,-61.4242);
@@ -80,4 +93,4 @@ assert.ok(app.includes('p.year_end_visible?.includes(year)'),'published annual p
 assert.ok(app.includes('const nearby=[],cells=new Map(),cellSize=32'),'map point spatial index regressed');
 assert.ok(app.includes("className:'atlas-voyage-continuity'"),'route continuity underlay absent');
 assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
-console.log('PASS ch11: 36 events, 70 sources, 31 places, 19 unmapped, 10 sites, 2 dashed areas, zero fabricated boundaries');
+console.log('PASS ch11: 36 events, 70 sources, 31 places, 3 unresolved maritime/multi-site records, 10 sites, 2 dashed areas, zero fabricated boundaries');
