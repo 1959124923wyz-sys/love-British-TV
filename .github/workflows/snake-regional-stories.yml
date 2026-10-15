@@ -7,7 +7,10 @@ on:
       - 'index.html'
       - 'css/dark-atlas-v2.css'
       - 'data/early-war-colonial-impact-1544-1575.geojson'
+      - 'data/followup-regional-stories-1562-1596.geojson'
       - 'scripts/test_historical_region_guide.js'
+      - 'scripts/test_followup_regions.js'
+      - 'data/atlas-1540-1549.json'
       - 'scripts/browser_regional_stories.py'
       - '.github/workflows/snake-regional-stories.yml'
   push:
@@ -28,6 +31,7 @@ jobs:
         run: |
           node --check app.js
           node scripts/test_historical_region_guide.js
+          node scripts/test_followup_regions.js
           node scripts/test_tenth_land_and_drake_areas.js
           node scripts/test_munster_invasion_impact.js
           node scripts/test_two_public_layers.js
