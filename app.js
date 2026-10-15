@@ -1081,6 +1081,8 @@ function renderAtlanticContactSites(){
 }
 // Published decade-11 links are two documented sequences, not real tracks.
 // Reuse the accepted Leaflet route pane; historical events are clickable above.
+// Read-only browser diagnostics for CI without exposing mutable internal layers.
+window.atlasReadActionLinks=()=>Object.freeze({year,count:groups.chapter11ActionLinks.getLayers().length});
 function renderChapter11ActionLinks(){
  groups.chapter11ActionLinks.clearLayers();
  if(!chapter11ActionLinks||year<1592||year>1598||
