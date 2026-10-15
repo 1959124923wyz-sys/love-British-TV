@@ -158,7 +158,7 @@ function syncMobileEventsButton(){
  const button=$('mobileEventsToggle');
  if(!button)return;
  const open=!workspace.classList.contains('sidebar-collapsed');
- button.setAttribute('aria-expanded',String(isCompactMap()&&open));
+ button.setAttribute('aria-expanded',String(open));
  button.setAttribute('aria-label',open?'关闭事件列表':'打开事件列表');
  button.textContent=open?'✕ 关闭事件':'☰ 事件';
 }
@@ -167,11 +167,15 @@ function syncPanels(){
 setTimeout(()=>map.invalidateSize({pan:false}),250);
 }
 function openPanel(which){
- if(isCompactMap()){
-  if(which==='dossier')workspace.classList.add('sidebar-collapsed');
-  else workspace.classList.add('dossier-collapsed');
+ // One readable sidebar at a time, including the desktop layout.
+ // This prevents the historical dossier from obscuring the map or timeline.
+ if(which==='dossier'){
+  workspace.classList.add('sidebar-collapsed');
+  workspace.classList.remove('dossier-collapsed');
+ }else{
+  workspace.classList.add('dossier-collapsed');
+  workspace.classList.remove('sidebar-collapsed');
  }
- workspace.classList.remove(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');
  syncMobileEventsButton();syncPanels();
 }
 function togglePanel(which){
@@ -388,7 +392,7 @@ function openCollection(items,title){
  openPanel('dossier');
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
-function resetDossier(){selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');syncPanels();if(atlas)renderPoints()}
+function resetDossier(){selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
 
 function isNewEventThisYear(item){return item&&item.category!=='status'&&Number(item.year)===year;}
 function renderEventList(){
@@ -2131,13 +2135,16 @@ async function boot(){
  }
 }
 $('mobileEventsToggle').addEventListener('click',()=>{
- if(!isCompactMap())return;
  if(workspace.classList.contains('sidebar-collapsed'))openPanel('sidebar');
- else{workspace.classList.add('sidebar-collapsed');syncMobileEventsButton();syncPanels();}
+ else{
+  workspace.classList.add('sidebar-collapsed');
+  syncMobileEventsButton();syncPanels();
+ }
 });
 compactMapMedia.addEventListener('change',e=>{
  if(e.matches)workspace.classList.add('sidebar-collapsed');
- else workspace.classList.remove('sidebar-collapsed');
+ else if(workspace.classList.contains('dossier-collapsed'))workspace.classList.remove('sidebar-collapsed');
+ else workspace.classList.add('sidebar-collapsed');
  syncMobileEventsButton();syncPanels();
 });
 $('mapLayerTerritory').addEventListener('change',syncMapLayers);
