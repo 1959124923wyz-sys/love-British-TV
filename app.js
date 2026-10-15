@@ -1057,8 +1057,8 @@ const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)
 const halfCenturyPageForYear=y=>y<1500?1490:Math.floor(y/50)*50;
 const pageForBrowse=d=>d<=1490?1490:Math.floor(d/50)*50;
 const clampBrowseDecade=d=>Math.max(1490,Math.min(2050,pageForBrowse(d)));
-const adjacentHalfCenturyPage=(current,direction)=>current===1490&&direction>0?1500:
- current===1500&&direction<0?1490:clampBrowseDecade(current+direction*50);
+const adjacentHalfCenturyPage=(current,direction)=>current===1490&&direction>0?1550:
+ current===1550&&direction<0?1500:clampBrowseDecade(current+direction*50);
 function timelineStatus(message){$('timelineNotice').textContent=message||''}
 function browseDecade(decade){
  browsingDecade=clampBrowseDecade(decade);
@@ -1082,7 +1082,10 @@ function renderTimelineNavigation(){
    '" data-century="'+century+'" aria-pressed="'+chosen+'" title="'+(century+1)+'—'+(century+100)+'年 · 浏览世纪（不会改动地图）">'+(i+15)+'世纪</button>';
  }).join('');
  cent.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>browseCentury(Number(btn.dataset.century))));
- const frame=$('chapterTrack'),decades=Array.from({length:5},(_,i)=>browsingDecade+i*10);
+ // The first chapter (1497–1509) occupies one fixed-width card on either
+ // 15th/16th-century browser entry. Avoid the two-slot/one-slot size jump.
+ const firstVisibleDecade=browsingDecade===1490?1500:browsingDecade;
+ const frame=$('chapterTrack'),decades=Array.from({length:5},(_,i)=>firstVisibleDecade+i*10);
  // A chapter may span several decade slots (1497–1509). Display its card once.
  const renderedChapters=new Set();
  frame.innerHTML=decades.map((d,i)=>{
@@ -1091,11 +1094,10 @@ function renderTimelineNavigation(){
   const chapter=chapterForDecade(d),published=!!chapter;
   if(chapter&&renderedChapters.has(chapter.id))return '';
   if(chapter)renderedChapters.add(chapter.id);
-  const occupiedSlots=chapter?decades.filter(k=>chapter.start<=k+9&&chapter.end>=k).length:1;
   const from=chapter?chapter.start:d,to=chapter?chapter.end:d+9;
   const onMap=published&&year>=from&&year<=to;
   return '<button type="button" class="chapter-segment'+(published?' published':' unpublished')+
-    (i===2?' centered':'')+(occupiedSlots>1?' spans-decades':'')+(onMap?' active':'')+'" data-decade="'+d+
+    (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
     '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:'此十年尚无正式历史资料')+'">'+
     '<span>'+(published?'第'+chapter.number+'章':'尚未发布')+'</span>'+
     '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 待研究')+'</small></button>';

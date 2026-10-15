@@ -199,13 +199,14 @@ try:
            "document.getElementById('yearRange').min==='1497'&&document.getElementById('yearRange').max==='1509'", driver)
     # Consolidated 1497–1509 first chapter: one event archive and one chapter total.
     set_year(1497, 4)
-    verify("1497–1509 still appears as two chapter cards",
-           """document.querySelectorAll('#chapterTrack .chapter-segment').length===4 &&
-              document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1490"]').length===1 &&
-              document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1500"]').length===0 &&
-              document.querySelector('#chapterTrack [data-decade="1490"]').classList.contains('spans-decades') &&
-              getComputedStyle(document.querySelector('#chapterTrack [data-decade="1490"]')).gridColumnStart==='span 2' &&
-              document.querySelector('#chapterTrack [data-decade="1490"] small').textContent.includes('1497—1509')""",driver)
+    verify("1497 chapter cards must have equal width and no double-span",
+           """document.querySelectorAll('#chapterTrack .chapter-segment').length===5 &&
+              document.querySelectorAll('#chapterTrack [data-decade="1500"]').length===1 &&
+              document.querySelectorAll('#chapterTrack [data-decade="1490"]').length===0 &&
+              !document.querySelector('#chapterTrack .spans-decades') &&
+              document.querySelector('#chapterTrack [data-decade="1500"] small').textContent.includes('1497—1509')""",driver)
+    card_width_1497=driver.execute_script("return document.querySelector('#chapterTrack [data-decade=\\\"1500\\\"]').getBoundingClientRect().width")
+    assert card_width_1497>=60, "1497 first chapter card unexpectedly narrow"
     driver.save_screenshot(str(OUT / "single-merged-chapter-1497-1509-card.png"))
     verify("1497 merged first chapter title or slider failed",
            """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
@@ -217,6 +218,8 @@ try:
            """document.querySelectorAll('#chapterTrack .chapter-segment').length===5 &&
               document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1500"]').length===1 &&
               document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1490"]').length===0""",driver)
+    card_width_1500=driver.execute_script("return document.querySelector('#chapterTrack [data-decade=\\\"1500\\\"]').getBoundingClientRect().width")
+    assert abs(card_width_1500-card_width_1497)<=1.5, f"1497/1500 chapter card jumps in width: {card_width_1497} to {card_width_1500}"
     verify("1500 erroneously resets chapter or forgets 1497 history",
            """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
               document.querySelector('#eventList [data-eid="landfall-1497"]') &&
