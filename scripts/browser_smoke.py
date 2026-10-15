@@ -1008,7 +1008,7 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
-    set_year(1597,24)
+    set_year(1597,25)
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
     set_year(1598,30)
