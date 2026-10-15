@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "created_on": "2026-10-11",
+  "dataset_id": "lbtv-spatial-rights-sources-v1",
+  "purpose": "Prevent wrong-century geometries and licensing violations",
+  "records": [
+    {
+      "id": "NATURAL-EARTH-DATA",
+      "label": "Natural Earth",
+      "source": "Natural Earth / NACIS",
+      "url": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "coverage": "modern physical geography and contemporary political boundaries",
+      "use": "global contextual basemap ONLY; never reconstructs past British control",
+      "license_class": "public-domain",
+      "license_evidence_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "reuse_status": "allowed_as_stated_by_source",
+      "technical": "Vector and raster in three scales 1:10m/50m/110m; shape != historical state",
+      "quality": "spatial_reference_only"
+    },
+    {
+      "id": "CSHAPES-2-LOC",
+      "label": "CShapes 2.0 (LoC hosted)",
+      "source": "ETH Zurich / Library of Congress",
+      "url": "https://www.loc.gov/item/2023592015/",
+      "coverage": "independent states and dependent territories 1886–2019",
+      "use": "candidate historical state-level polygons from late 19th c.; NOT early-modern/inner effective control",
+      "license_class": "CC-BY-NC-SA-4.0 per LoC rights advisory",
+      "license_evidence_url": "https://www.loc.gov/item/2023592015/",
+      "reuse_status": "conditional_review_needed",
+      "technical": "GeoJSON, SHP, CSV available; verify specific distribution rights and field date semantics before reuse",
+      "quality": "secondary_historical_boundaries"
+    },
+    {
+      "id": "WHG-GAZETTEER",
+      "label": "World Historical Gazetteer",
+      "source": "WHG",
+      "url": "https://docs.whgazetteer.org/content/technical/apis.html",
+      "coverage": "global historical place records contributed across eras",
+      "use": "time-aware name matching and toponyms; geographic point only helps identification",
+      "license_class": "mixed; WHG curation CC-BY-NC-4.0 PLUS individual source licenses",
+      "license_evidence_url": "https://whgazetteer.org/licenses/",
+      "reuse_status": "per-record-check-required",
+      "technical": "API tokens for most endpoints; source attribution redistributable flag; no blind bulk crawling; 451 responses for restricted sources",
+      "quality": "toponym_resolution_not_control_polygon"
+    },
+    {
+      "id": "NLS-HISTORICAL-LAYERS",
+      "label": "National Library of Scotland historical maps API",
+      "source": "National Library of Scotland",
+      "url": "https://data.nls.uk/tools/maps-and-tools/",
+      "coverage": "GB/Ireland 19th–20th century",
+      "use": "landmarks and modern-historical change references, not 16th c. political lines",
+      "license_class": "free layer under defined conditions; subscriptions for others; sheet-specific rights may vary",
+      "license_evidence_url": "https://www.nls.uk/tools-for-research/copyright/licensing-fees/",
+      "reuse_status": "conditional_review_needed",
+      "technical": "APIs may be hosted by paid providers; TOS, tile traffic, attribution to be verified",
+      "quality": "historic_topographic_basemap"
+    },
+    {
+      "id": "NLS-SURVEY-INDIA-SHEET",
+      "label": "Survey of India sheet 58 J/16 (1928–29 surveyed, 1930 published)",
+      "source": "National Library of Scotland / Survey of India",
+      "url": "https://maps.nls.uk/view/221163461",
+      "coverage": "local northern Indian sheet example 1928–1930",
+      "use": "proof of per-sheet archived India map availability and reuse statements",
+      "license_class": "CC-BY NLS for this exact sheet as labelled",
+      "license_evidence_url": "https://maps.nls.uk/view/221163461",
+      "reuse_status": "exact_sheet_has_reuse_label_review_attribution_before_embedding",
+      "technical": "individual sheets may have download PDF, IIIF or georef; do not extrapolate rights to all NLS holdings",
+      "quality": "historic_map_single_sheet"
+    },
+    {
+      "id": "GEONAMES-GAZETTEER",
+      "label": "GeoNames",
+      "source": "GeoNames",
+      "url": "https://www.geonames.org/export/",
+      "coverage": "global modern geonames and some historical variants; temporal control not specified",
+      "use": "optional place-name disambiguation only, never as period-accurate jurisdiction",
+      "license_class": "CC-BY",
+      "license_evidence_url": "https://www.geonames.org/export/",
+      "reuse_status": "allowed_with_attribution_as_stated",
+      "technical": "web service credit/usage limits; downloads available",
+      "quality": "modern_places"
+    },
+    {
+      "id": "TCD-DOWNSURVEY-MAP",
+      "label": "Down Survey historic GIS",
+      "source": "Trinity College Dublin",
+      "url": "https://www.downsurvey.ie/about/",
+      "coverage": "Irish cadastral surveys 1656–58, land ownership associated 1641/1670",
+      "use": "land parcel evidence and ownership transfer; NOT political boundary default",
+      "license_class": "site © All rights reserved; specific data reuse not established",
+      "license_evidence_url": "https://www.downsurvey.ie/historical-gis/",
+      "reuse_status": "permission_check_needed_for_copying",
+      "technical": "Surviving scans + GIS assembled from originals and copies; provenance should be tracked by parish/barony",
+      "quality": "historic_cadastre"
+    }
+  ],
+  "global_rules": [
+    "Historical map evidence is not automatically an effective territorial control polygon.",
+    "Document publication or archive map date must be stored separately from dated geographic situation.",
+    "A data source's landing-page right to view is not permission to scrape or redistribute imagery.",
+    "GeoJSON lon-lat order, Leaflet layer lat-lng order: store CRS and order per file.",
+    "Document uncertainty polygons and conflicting alternative maps rather than fabricating a single hard boundary."
+  ]
+}
