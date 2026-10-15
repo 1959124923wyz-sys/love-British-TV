@@ -1,0 +1,48 @@
+name: Chapter 11 independent historical Atlas research QA and editor import
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/ch11-1590-1599-violence-colonial-control-20261015
+    paths:
+      - .github/workflows/ch11-editor-import-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build-reviewed-1590s:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/ch11-1590-1599-violence-colonial-control-20261015
+          persist-credentials: true
+      - name: Compile source-linked Atlas and fail closed on no evidence
+        run: python3 research/periods/1590-1599/build_editor_import.py
+      - name: Validate generated research JSON and GeoJSON
+        run: |
+          python3 - <<'PY'
+          import glob,json
+          p='research/periods/1590-1599/editor_import/'
+          for file in glob.glob(p+'*.json') + glob.glob(p+'*.geojson'):
+            with open(file, encoding='utf8') as f: json.load(f)
+            print('VALID',file)
+          audit=json.load(open(p+'EDITOR_QA.json',encoding='utf8'))
+          assert audit['status']=='PASS'
+          assert audit['counts']['historically_audited_occupation_polygons']==0
+          assert audit['counts']['events']>=30
+          assert audit['counts']['sources']>=40
+          PY
+      - name: Preserve all generated deliverables on dedicated research branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/periods/1590-1599/editor_import/
+          if git diff --cached --quiet; then
+            echo "Research source outputs already current"
+          else
+            git commit -m "data(ch11): deliver evidence-gated 1590-1599 chief editor Atlas, year delta, detail notes and QA"
+            git push origin HEAD:research/ch11-1590-1599-violence-colonial-control-20261015
+          fi
