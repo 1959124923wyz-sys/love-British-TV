@@ -101,6 +101,14 @@ def run_case(label, width, height, mobile):
         assert before["zoom"] == after["zoom"], "Single-click event unexpectedly zoomed"
         locate = driver.find_element(By.CSS_SELECTOR, "#dossierBody [data-locate-event]")
         assert locate.is_enabled(), "First event in 1579 should have geographic reference"
+        if mobile:
+            # A 220ms slide-in can accept a too-early WebDriver tap at its
+            # previous screen coordinates. Wait for the actual visible drawer.
+            wait.until(lambda d: d.execute_script("""
+                const r=document.getElementById('dossier').getBoundingClientRect();
+                return r.right<=innerWidth+1 && r.left>=-1;
+            """))
+        locate.location_once_scrolled_into_view
         driver.save_screenshot(str(OUT / f"{label}-dossier.png"))
         locate.click()
         time.sleep(1.3)
