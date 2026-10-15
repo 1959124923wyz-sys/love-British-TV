@@ -4,7 +4,7 @@
     1590,
     1599
   ],
-  "total": 31,
+  "total": 34,
   "events": [
     {
       "id": "ch11-macmahon-execution-monaghan",
@@ -112,6 +112,32 @@
       "editorial_status": "research_only"
     },
     {
+      "id": "ch11-cavendish-santos-christmas-sack",
+      "year": 1591,
+      "month_or_day": "12-25",
+      "date_precision": "1591-12-25 (year corrected from vague 1592 voyage)",
+      "title": "英军圣诞节趁礼拜袭占巴西桑托斯并掠夺",
+      "description": "1591年12月25日，卡文迪什舰队趁桑托斯居民参加圣诞弥撒袭击港镇，洗劫并短期占据。巴西国家图书馆核对同时代英军乘员记述和卡文迪什书信。",
+      "icon_code": "ECO",
+      "kind": "English_privateer_assault_sack",
+      "place": "Santos, Brazil",
+      "source_ids": [
+        "C11-S43"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "requires_sourced_geospatial_event_footprint",
+        "rule": "Santos / Recife named city only, Portuguese regional sovereignty remained after English raid; exact 1590s walled town shape and ship seizure GPS unknown"
+      },
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
       "id": "ch11-madre-de-deus-captured",
       "year": 1592,
       "month_or_day": null,
@@ -130,6 +156,33 @@
         "geometry": null,
         "coordinate_status": "requires_provenance",
         "rule": "seizure_at_sea_not_Azores_English_territory"
+      },
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
+      "id": "ch11-cavendish-slave-ship-interception",
+      "year": 1592,
+      "month_or_day": null,
+      "date_precision": "year only; no verified ship interception GPS",
+      "title": "英格兰私掠者截获载有被奴役非洲人的葡萄牙船",
+      "description": "与卡文迪什远征有关的英格兰私掠者1592年截获一艘从巴西伯南布哥驶往西属布宜诺斯艾利斯、载有被奴役非洲人与货物的葡萄牙船。学术研究确认截获行为，但这些非洲人此后的命运和是否遭英国人出售尚不清楚。",
+      "icon_code": "SLV",
+      "kind": "English_privateering_capture_of_people_already_enslaved",
+      "place": "Brazilian South Atlantic; exact capture site unknown",
+      "source_ids": [
+        "C11-S41",
+        "C11-S42"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "requires_sourced_geospatial_event_footprint",
+        "rule": "Santos / Recife named city only, Portuguese regional sovereignty remained after English raid; exact 1590s walled town shape and ship seizure GPS unknown"
       },
       "significance": {
         "level": 3,
@@ -318,6 +371,32 @@
       },
       "significance": {
         "level": 2,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
+      "id": "ch11-lancaster-recife-plantation-loot",
+      "year": 1595,
+      "month_or_day": "03-24",
+      "date_precision": "1595-03-24 landing, 30-day occupation approximate",
+      "title": "兰开斯特攻占累西腓，掠取糖、巴西木及商船货物",
+      "description": "1595年3月24日，英军在累西腓登陆夺取港镇，并驻留约三十日，将葡萄牙从亚洲运来的船货、糖、棉花与巴西木装船运走。此案有哈克卢特1600年收录的英方航海记述。",
+      "icon_code": "ECO",
+      "kind": "English_privateer_30day_sack_and_extract",
+      "place": "Recife Pernambuco, Brazil",
+      "source_ids": [
+        "C11-S43"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "requires_sourced_geospatial_event_footprint",
+        "rule": "Santos / Recife named city only, Portuguese regional sovereignty remained after English raid; exact 1590s walled town shape and ship seizure GPS unknown"
+      },
+      "significance": {
+        "level": 3,
         "review_status": "chief_editor_candidate"
       },
       "victims_and_profit_in_ledger_only": true,
