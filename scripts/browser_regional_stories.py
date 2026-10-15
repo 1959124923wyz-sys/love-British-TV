@@ -35,6 +35,8 @@ try:
         assert btn is not None, f"{label} missing. Seen: {titles()}"
         browser.execute_script("arguments[0].scrollIntoView({block:'nearest'});",btn)
         btn.click()
+        actual=browser.execute_script("return document.querySelector('#dossierBody h2')?.textContent||''")
+        print("REGION CLICK TARGET",repr(label),"ACTUAL DOSSIER",repr(actual),flush=True)
         wait.until(lambda d: d.execute_script("""
           return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])
         """,label))
