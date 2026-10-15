@@ -1,29 +1,29 @@
 # 🐍 爱英TV｜1497—1599地图点—线—面独立审查（首批）
 
-**审查日期：** 2026-10-15。**身份：** 独立史学与制图红队「蛇B」。**基线：** main \`7e3bf2e52f787521ed2404197881ec4de21e41d4\`。**性质：** 已实施的结构审计 + 有出处的少量历史交叉复核 + 未完成问题清单。**本次不重新审核第一级总体出版门禁，也不覆盖主编决定。**
+**审查日期：** 2026-10-15。**身份：** 独立史学与制图红队「蛇B」。**基线：** main `7e3bf2e52f787521ed2404197881ec4de21e41d4`。**性质：** 已实施的结构审计 + 有出处的少量历史交叉复核 + 未完成问题清单。**本次不重新审核第一级总体出版门禁，也不覆盖主编决定。**
 
 ## 1. 覆盖范围与审查方法
 
-- 正式 \`data/chapters.json\` 的**10个已发布章节**，从1497—1509（合并第一章）到1590—1599。
-- 正式 \`atlas-*.json\` 的 **310条事件**、**52条航线及行动路线**，检查地理坐标格式、章节时间、路线节点、引文ID与全球日期变更线。
+- 正式 `data/chapters.json` 的**10个已发布章节**，从1497—1509（合并第一章）到1590—1599。
+- 正式 `atlas-*.json` 的 **310条事件**、**52条航线及行动路线**，检查地理坐标格式、章节时间、路线节点、引文ID与全球日期变更线。
 - **16份当前渲染关联的军控/历史活动GeoJSON**（含1540—1599英军驻点、英苏交战区、霍金斯西非沿岸奴役活动、1580s芒斯特英军行动、德雷克袭城示意、1590s爱尔兰抵抗、特立尼达与加勒比）。
   - 数据要素：**56点、10线、30面**；这是专题GIS要素数，**不含**公开事件点、航线的重复表示，也不含基础主权轮廓、法权参考面、现代HES遗迹保护面；**不得相加作为历史事件数量**。
   - 对这些专题GIS的Polygon核查坐标闭合、范围、显式禁止领土统计、相关史实ID、来源ID、起止年；对具名锚点抽查是否落在其示意区域内。
   - 对可匹配正式地点ID的**46个**军事据点/短期驻点GeoJSON Point，与正式章节地点做2km位置差异检查；未发现大于2km的差异。这只是**同源数据一致性检查**，不是46个地点都获16世纪测绘验证。
 - 已对受检军事实例Polygon做闭合和线段交叉的第一轮自动/独立检查，未发现自相交；**结构合法不等于历史边线真实**。
 
-机器复查：\`node scripts/audit_historical_spatial_layers.js\`。审查工具会跟随既有 \`Approved map UI contract\` 的PR检查自动运行，避免另建定时工作流。机器检查不能判定某个历史主张是否真实，更不应代替原始资料读解和浏览器视觉验证。
+机器复查：`node scripts/audit_historical_spatial_layers.js`。审查工具会跟随既有 `Approved map UI contract` 的PR检查自动运行，避免另建定时工作流。机器检查不能判定某个历史主张是否真实，更不应代替原始资料读解和浏览器视觉验证。
 
 ## 2. 确定性发现：17片旧概略面缺新版明确面积排除标志（已修）
 
 | 来源 | 数量 | 旧语义状态 | 本次更改 |
 | --- | ---: | --- | --- |
-| \`data/war-occupied-zones-1540-1549.geojson\` | 10 | 已写 \`area_statistics_forbidden:true\`、\`area_sqkm:null\`，但未统一新字段 | 增加 \`territorial_claim:false\` 和 \`exclude_from_area_aggregation:true\` |
-| \`data/war-contested-zones-1540-1549.geojson\` | 4 | 同上 | 同上 |
-| \`data/eighth-enslavement-coastal-activity-1560-1569.geojson\` | 3 | 已写 \`area_statistics_allowed:false\`、\`territorial_claim:false\` | 增加 \`exclude_from_area_aggregation:true\` |
+| `data/war-occupied-zones-1540-1549.geojson` | 10 | 已写 `area_statistics_forbidden:true`、`area_sqkm:null`，但未统一新字段 | 增加 `territorial_claim:false` 和 `exclude_from_area_aggregation:true` |
+| `data/war-contested-zones-1540-1549.geojson` | 4 | 同上 | 同上 |
+| `data/eighth-enslavement-coastal-activity-1560-1569.geojson` | 3 | 已写 `area_statistics_allowed:false`、`territorial_claim:false` | 增加 `exclude_from_area_aggregation:true` |
 | **合计** | **17** | 不同年代数据契约不统一 | **仅修语义保护字段，不移动任何顶点、不改时间、不改源ID、不改显示颜色** |
 
-**分级：P2，结构和防误用风险，非已证实面积造假。** 旧文件已经用其他标志禁止算面积；缺少统一字段本身不能说明当前网页已做了错误面积汇总。新的强制规范见 \`docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md\`。
+**分级：P2，结构和防误用风险，非已证实面积造假。** 旧文件已经用其他标志禁止算面积；缺少统一字段本身不能说明当前网页已做了错误面积汇总。新的强制规范见 `docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md`。
 
 ## 3. 已独立复核的历史制图范例
 
@@ -34,7 +34,7 @@
 美国国家公园管理局 San Juan NHS 官方年表证实：**1595-11-22至23日**德雷克进攻受挫；**1598-06-16至08-27**乔治·克利福德部队短期占领。当前示意点把“失败袭击”与“短期城市占据”分开；年末1598没有英方据点。必须保留该区分，不能将1585/1595攻城扩成英王稳定占有波多黎各全岛。直接来源：<https://www.nps.gov/saju/learn/historyculture/timeline.htm>，扩展史料：<https://www.nps.gov/saju/learn/historyculture/history.htm>。
 
 ### 1579年德雷克远航跨日界线
-正式航次 \`ch9-Drake-1579-California-Ternate\` 的连续地理叙事在 ±180°经线上分成两个绘图段，其 \`segments\` 对接于相同纬度的-180°/180°边缘。这是避免横穿整幅世界地图的**合法日期变更线切片**，不能作为“断线Bug”未经验证就删除切分或直接从北美画线横穿欧洲。**但**航线只是端点连接，不是准确的16世纪船舶每日航迹，用户缩放和底图换档的视觉是否存在接缝仍需真实浏览器截图进一步复核。
+正式航次 `ch9-Drake-1579-California-Ternate` 的连续地理叙事在 ±180°经线上分成两个绘图段，其 `segments` 对接于相同纬度的-180°/180°边缘。这是避免横穿整幅世界地图的**合法日期变更线切片**，不能作为“断线Bug”未经验证就删除切分或直接从北美画线横穿欧洲。**但**航线只是端点连接，不是准确的16世纪船舶每日航迹，用户缩放和底图换档的视觉是否存在接缝仍需真实浏览器截图进一步复核。
 
 ## 4. 风险与持续审查队列（尚未认定为错误）
 
@@ -51,6 +51,6 @@
 
 ## 5. 交接与验收
 
-- 审查修订只存在独立 \`audit/snakeb-spatial-points-lines-polygons-1497-1599-20261015\` 分支，**未经主编合并不代表网站已变更**。
+- 审查修订只存在独立 `audit/snakeb-spatial-points-lines-polygons-1497-1599-20261015` 分支，**未经主编合并不代表网站已变更**。
 - 此次测试故意优先覆盖**真正可能混淆历史领土的军事活动专题图层**；基础英国/爱尔兰/法国政体参考、早期港市参考面、所有互动点击的真实浏览器验证仍应独立扩展。
 - 后续在同一审查方向持续检验各章**事件Point → 行动Line → 地区影响Polygon → 年份启停 → 真实受害后果 → 来源**的完整证据链。第一阶段评级元数据/PR#47发布门禁另案处理，本次不越界处理。
