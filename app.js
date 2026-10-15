@@ -1656,26 +1656,6 @@ function renderTimelineNavigation(){
   ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
   :'浏览目录中 · 地图为'+year+'年';
 }
-function renderMilestones(){
- const rail=$('milestoneDots'),chapter=chapterForYear(year);
- if(!chapter||!atlas){rail.innerHTML='';return;}
- const all=atlas.events.filter(e=>e.id!=='status-1500'&&e.year>=chapter.start&&e.year<=year);
- const years=[...new Set(all.map(e=>e.year))].sort((a,b)=>a-b);
- const span=Math.max(1,chapter.end-chapter.start);
- rail.innerHTML=years.map(y=>{
-  const events=all.filter(e=>e.year===y),peak=Math.max(...events.map(e=>levelOf(e)));
-  return '<button type="button" class="milestone-dot tier-'+peak+(y===year?' current':'')+
-    '" style="left:'+((y-chapter.start)/span*100)+'%" data-year="'+y+
-    '" title="'+escapeHTML(y+'年 · '+events.map(e=>e.name).slice(0,3).join(' / '))+
-    '" aria-label="'+y+'年：'+events.length+'个事件"><span>'+y+'</span></button>';
- }).join('');
- rail.querySelectorAll('.milestone-dot').forEach(node=>node.addEventListener('click',()=>{
-  const y=Number(node.dataset.year);stopPlay();setYear(y);
-  const matches=atlas.events.filter(e=>e.year===y);
-  if(matches.length===1)openDossier(matches[0],'event');
-  else if(matches.length>1)openCollection(matches.map(item=>({item,type:'event'})),y+'年的历史事件');
- }));
-}
 function setYear(v){
  const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
  const chosen=next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
@@ -1798,7 +1778,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=displayChapter?$('chapterLabel').textContent+'年事件':'';
  $('timelineNotice').textContent='';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
  if(changedYear)$('eventList').scrollTop=0;
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
