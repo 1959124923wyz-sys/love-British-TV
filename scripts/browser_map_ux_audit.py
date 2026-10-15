@@ -67,6 +67,8 @@ def run_case(label, width, height, mobile):
             menu.click()
             assert driver.find_element(By.ID, "mobileEventsToggle").get_attribute("aria-expanded") == "true"
             assert not js("document.querySelector('#workspace').classList.contains('sidebar-collapsed')")
+            assert js("getComputedStyle(document.querySelector('#eventList')).display") == "flex", \
+                "Legacy mobile CSS must not hide the actual historical event list"
             # Wait for the drawer's real CSS transform, not just its instant ARIA flag.
             wait.until(lambda d: d.execute_script("""
                 return document.querySelector('#sidebar').getBoundingClientRect().left >= -1
@@ -132,6 +134,7 @@ def run_case(label, width, height, mobile):
 
 
 run_case("desktop-1440", 1440, 950, False)
+run_case("tablet-820", 820, 1024, True)
 run_case("mobile-390", 390, 844, True)
 run_case("mobile-375", 375, 667, True)
 print("PASS all visitor-focused browser UX checks", flush=True)
