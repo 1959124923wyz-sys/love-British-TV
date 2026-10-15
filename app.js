@@ -151,7 +151,12 @@ const workspace=$('workspace');
 const compactMapMedia=window.matchMedia('(max-width:980px)');
 const isCompactMap=()=>compactMapMedia.matches;
 // Mobile users should see the actual map on arrival, not a blocking sidebar.
-if(isCompactMap())workspace.classList.add('sidebar-collapsed');
+if(isCompactMap()){
+ workspace.classList.add('sidebar-collapsed');
+ // On a phone show historical event actions first; chapter background is
+ // still accessible by expanding the existing chapter-card summary.
+ $('chapterCard').open=false;
+}
 function syncMobileEventsButton(){
  const button=$('mobileEventsToggle');
  if(!button)return;
