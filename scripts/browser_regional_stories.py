@@ -34,8 +34,15 @@ try:
         btn=next((x for x in buttons if label in x.text),None)
         assert btn is not None, f"{label} missing. Seen: {titles()}"
         browser.execute_script("arguments[0].scrollIntoView({block:'nearest'});",btn)
+        print("REGION BUTTON",repr(btn.text),"index",btn.get_attribute('data-region-index'),flush=True)
+        before=browser.execute_script("return document.querySelector('#dossierBody h2')?.textContent||''")
         btn.click()
         actual=browser.execute_script("return document.querySelector('#dossierBody h2')?.textContent||''")
+        if label not in actual:
+            print("REGION BAD CLICK",repr(label),"prev",repr(before),"new",repr(actual),flush=True)
+            browser.execute_script("arguments[0].click()",btn)
+            actual=browser.execute_script("return document.querySelector('#dossierBody h2')?.textContent||''")
+            print("JS CLICK RESULT",repr(actual),flush=True)
         print("REGION CLICK TARGET",repr(label),"ACTUAL DOSSIER",repr(actual),flush=True)
         wait.until(lambda d: d.execute_script("""
           return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])
