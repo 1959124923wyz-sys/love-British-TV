@@ -35,8 +35,10 @@ for(const [year,expected] of [[1561,[]],[1562,[checks[0][0]]],[1563,[checks[1][0
                   'Time gate error in '+year);
 }
 const ch1544=read('atlas-1540-1549.json').events.find(e=>e.id==='1540S-008');
-assert.equal(ch1544.geo_precision,'city_center_modern_reference_only_not_full_scottish_campaign');
-assert.ok(Number.isFinite(ch1544.lat)&&Number.isFinite(ch1544.lng));
+assert.equal(ch1544.geo_precision,'unlocated_event_list_only');
+assert.equal(ch1544.lat,null);
+assert.equal(ch1544.lng,null);
+assert.ok(read('early-war-colonial-impact-1544-1575.geojson').features.some(f=>f.id==='rough-wooing-leith-edinburgh-raid-1544'&&f.properties.related_event_ids.includes('1540S-008')));
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 for(const token of ['followupRegionalAreas','activeRegionalFeatures()','renderHistoricalRegionGuide()',
                     "data/followup-regional-stories-1562-1596.geojson"])assert.ok(app.includes(token),token);
