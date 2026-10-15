@@ -63,6 +63,23 @@ try:
     check(1599, present=(".atlas-essex-1599-schematic",),
           absent=(".atlas-caribbean-urban-occupation",
                   ".atlas-trinidad-1595-impact"))
+    # Pale historical research has independent archive IDs. A real Leaflet
+    # SVG click must now expose Ellis's publication in the public dossier,
+    # without claiming the Pale shape is a verified outer boundary.
+    seek(1595)
+    clicked = driver.execute_script("""
+      const paths=[...document.querySelectorAll('.leaflet-territory-pane path')];
+      const target=paths.find(el =>
+        (el.getAttribute('stroke')||'').toLowerCase()==='#c7a16e');
+      if(!target)return false;
+      target.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));
+      return true;
+    """)
+    assert clicked, "Uncertain Irish Pale research polygon missing on map"
+    wait.until(lambda d: d.execute_script("""
+      return document.querySelector('#dossierBody a[href*="cambridge.org/core/books/irelands-english-pale"]')!==null
+    """))
+    print("PASS browser Pale research map click opens independent Ellis book citation")
     # Two approved public switches. Military influence geography obeys "版图"
     # without taking down the event list or rewinding the year.
     seek(1595)
