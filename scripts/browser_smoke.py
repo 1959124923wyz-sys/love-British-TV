@@ -31,6 +31,23 @@ driver = webdriver.Chrome(options=opts)
 try:
     wait = WebDriverWait(driver, 30)
     driver.get("http://127.0.0.1:8765/?year=1520")
+    # Default must provide familiar contemporary place names for comparison.
+    # Switching only changes the basemap, never the selected Tudor year or zoom.
+    verify("modern OSM reference must be default",
+           "document.querySelector('#showModernBasemap').checked", driver)
+    verify("OSM reference tiles must exist on first load",
+           "!!document.querySelector('.leaflet-tile[src*=\"tile.openstreetmap.org\"]')", driver)
+    browser_year_before=driver.execute_script("return document.querySelector('#yearRange').value")
+    driver.execute_script("""const control=document.getElementById('showModernBasemap');
+       control.checked=false;control.dispatchEvent(new Event('change',{bubbles:true}));""")
+    verify("NASA physical tiles should be selectable",
+           "!!document.querySelector('.leaflet-tile[src*=\"gibs.earthdata.nasa.gov\"]')",driver)
+    driver.execute_script("""const control=document.getElementById('showModernBasemap');
+       control.checked=true;control.dispatchEvent(new Event('change',{bubbles:true}));""")
+    verify("OSM must return without page refresh",
+           "!!document.querySelector('.leaflet-tile[src*=\"tile.openstreetmap.org\"]')",driver)
+    assert driver.execute_script("return document.querySelector('#yearRange').value")==browser_year_before, "Basemap switch changed historical year"
+
     wait.until(lambda d: d.execute_script("return document.querySelector('#eventCount')?.textContent==='4项'"))
     verify("chapter 4 not active at 1520", """document.querySelector('#chapterTrack [data-decade="1520"]').classList.contains('active')""", driver)
     verify("1520 list leaked 1529 historical event", "!document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)

@@ -9,42 +9,72 @@ const map = L.map('map',{zoomControl:false,worldCopyJump:false,preferCanvas:true
 // Zoom by wheel, touch or double-click; the map surface stays free of floating controls.
 // Read-only viewport status for visual regression; no external command can mutate historical geometry.
 window.atlasReadViewport=()=>({zoom:map.getZoom(),center:{lat:map.getCenter().lat,lng:map.getCenter().lng}});
-// Historical years must not inherit modern countries, borders, or city labels
-// from a contemporary street-map tile layer. NASA's Blue Marble is a modern
-// PHYSICAL reference (terrain/bathymetry), never evidence of Tudor geography.
-// GIBS serves this static image without an API key or modern political labels.
+// The familiar modern OSM street map is the DEFAULT geographic reference:
+// present-day names and roads let readers locate Tudor events in today's world.
+// Those labels are contemporary orientation aids, not Tudor political geography.
+// Readers may optionally switch to NASA's unlabeled modern physical relief.
+const modernTiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+ maxZoom:19,maxNativeZoom:19,
+ attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'
+}).addTo(map);
 const physicalTiles=L.tileLayer(
  'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpg',{
  maxZoom:11,maxNativeZoom:8,noWrap:true,
  bounds:[[-85.05112878,-180],[85.05112878,180]],
  attribution:'Physical imagery: <a href="https://www.earthdata.nasa.gov/data/tools/gibs" target="_blank" rel="noopener">NASA GIBS</a>'
-}).addTo(map);
-// If NASA's service is unavailable, draw a bundled public-domain land-only
-// Natural Earth fallback. It includes no modern country boundary or name.
+});
+// Local Natural Earth land-only fallback is used ONLY for NASA tile failures.
+// Its rendering lives below the tiles and cannot intercept historical clicks.
 map.createPane('physicalFallbackPane');
-map.getPane('physicalFallbackPane').style.zIndex='190'; // underneath the tile pane (200)
+map.getPane('physicalFallbackPane').style.zIndex='190';
 map.getPane('physicalFallbackPane').style.pointerEvents='none';
-let physicalFallbackStarted=false,physicalTileErrors=0;
+let selectedBasemap='modern',physicalTileErrors=0;
+let physicalFallbackLayer=null,physicalFallbackLoading=null;
 async function activatePhysicalFallback(){
- if(physicalFallbackStarted)return;
- physicalFallbackStarted=true;
- try{
-  const response=await fetch('data/natural-earth-land-110m.topojson');
-  if(!response.ok||typeof topojson==='undefined')throw new Error('Physical geography unavailable');
-  const topology=await response.json();
-  if(topology.type!=='Topology'||!topology.objects?.land||topology.objects?.countries)
-   throw new Error('Unverified physical geography fallback');
-  const land=topojson.feature(topology,topology.objects.land);
-  L.geoJSON(land,{pane:'physicalFallbackPane',renderer:L.canvas({pane:'physicalFallbackPane'}),
-   interactive:false,style:()=>({color:'#78988d',weight:.6,opacity:.7,
-     fillColor:'#405950',fillOpacity:1})}).addTo(map);
- }catch(error){console.warn('Physical map fallback unavailable:',error);}
+ if(selectedBasemap!=='physical')return;
+ if(physicalFallbackLayer){physicalFallbackLayer.addTo(map);return;}
+ if(physicalFallbackLoading)return;
+ physicalFallbackLoading=(async()=>{
+  try{
+   const response=await fetch('data/natural-earth-land-110m.topojson');
+   if(!response.ok||typeof topojson==='undefined')throw new Error('Physical geography unavailable');
+   const topology=await response.json();
+   if(topology.type!=='Topology'||!topology.objects?.land||topology.objects?.countries)
+    throw new Error('Unverified physical geography fallback');
+   const land=topojson.feature(topology,topology.objects.land);
+   return L.geoJSON(land,{pane:'physicalFallbackPane',renderer:L.canvas({pane:'physicalFallbackPane'}),
+    interactive:false,style:()=>({color:'#78988d',weight:.6,opacity:.7,
+      fillColor:'#405950',fillOpacity:1})});
+  }catch(error){console.warn('Physical map fallback unavailable:',error);return null;}
+ })();
+ const fallback=await physicalFallbackLoading;
+ physicalFallbackLoading=null;
+ if(fallback){
+  physicalFallbackLayer=fallback;
+  if(selectedBasemap==='physical')physicalFallbackLayer.addTo(map);
+ }
 }
 physicalTiles.on('tileerror',()=>{
- if(++physicalTileErrors<3||physicalFallbackStarted)return;
+ if(selectedBasemap!=='physical'||++physicalTileErrors<3)return;
  map.removeLayer(physicalTiles);
- activatePhysicalFallback();
+ void activatePhysicalFallback();
 });
+function setBasemap(mode){
+ const next=mode==='physical'?'physical':'modern';
+ if(next===selectedBasemap)return;
+ selectedBasemap=next;
+ if(next==='modern'){
+  map.removeLayer(physicalTiles);
+  if(physicalFallbackLayer)map.removeLayer(physicalFallbackLayer);
+  modernTiles.addTo(map);
+ }else{
+  map.removeLayer(modernTiles);
+  if(physicalFallbackLayer)map.removeLayer(physicalFallbackLayer);
+  physicalTileErrors=0;
+  physicalTiles.addTo(map);
+ }
+ // Map center, zoom, selected historical year and all historic overlays stay unchanged.
+}
 // Tooltip descriptions use their own pane, always above Leaflet markers and historical outlines.
 map.createPane('eventTooltipPane');
 map.getPane('eventTooltipPane').style.zIndex='820';
@@ -1532,6 +1562,7 @@ async function boot(){
 }
 $('mapLayerTerritory').addEventListener('change',syncMapLayers);
 $('mapLayerEvents').addEventListener('change',syncMapLayers);
+$('showModernBasemap').addEventListener('change',e=>setBasemap(e.target.checked?'modern':'physical'));
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
 function jumpToEnteredYear(){
  if(!atlas)return;

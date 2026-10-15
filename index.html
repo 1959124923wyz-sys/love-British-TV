@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015">
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>英国殖民扩张与掠夺历史地图</small></div></div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">大西洋远航与王室扩张</span></span></div>
- <div class="head-actions"><span class="version">1497—1599 · PILOT v1.12.4</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><span class="version">1497—1599 · PILOT v1.12.5</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar">
@@ -38,7 +38,8 @@
      <summary><span>地图图例</span><span aria-hidden="true">▾</span></summary>
      <div class="map-mode-help-body">
       <p>地图右上角的<strong>版图</strong>和<strong>事件</strong>可独立勾选，也可同时勾选。战争的控制范围和交战区归入版图，具体战斗与掠夺经过归入事件。</p>
-      <p>无国名地形底图仅供自然地理定位（采用现代观测资料），不代表历史疆界或当时地貌。历史政治归属请以可点击的年份图层及史料说明为准。</p>
+      <div class="basemap-option"><label for="showModernBasemap"><input type="checkbox" id="showModernBasemap" checked><span><strong>显示现代地名与道路</strong> · 方便古今地点对照</span></label></div>
+       <p>默认显示现代 OpenStreetMap 地名与道路；取消勾选可切换无国名地形图。两种底图均仅供现代地理定位，不代表所选年份的国名、疆界或古代地貌。</p>
       <div><i class="swatch kingdom"></i><span><strong>国家底色</strong> · 表示政治归属</span></div>
       <div><i class="swatch wartime-vicinity"></i><span><strong>紫色虚线</strong> · 有据驻军位置附近的概略范围</span></div>
       <div><i class="swatch war-reach"></i><span><strong>紫色方向虚线</strong> · 军事行进／补给</span></div>
@@ -117,6 +118,6 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-<script src="app.js?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-unlabeled-physical-20261015"></script>
+<script src="app.js?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015"></script>
 </body>
 </html>

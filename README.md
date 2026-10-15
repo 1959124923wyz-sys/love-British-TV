@@ -1,8 +1,8 @@
-## 无现代国名的自然地理底图（2026-10-15）
+## 可切换现代地名与无标签地形底图（2026-10-15）
 
-1497—1599历史地图已移除含当代国家、道路和城市名称的OpenStreetMap标准街道瓦片，替换为 **NASA GIBS BlueMarble Shaded Relief and Bathymetry** 无现代政治标签的自然地形影像。全球陆地/海洋及地形仅作为定位参考：影像来自现代地理观测，**不是任何16世纪的地貌复原、政治疆界或殖民统治证据**。地图的王室属地、苏格兰政治状态、军事影响区与历史事件继续分别取自本仓库可审计数据。NASA静态图层原生最高8级；继续放大时影像会插值，不能推断古时精确海岸。NASA瓦片异常时采用仓库内Natural Earth 1:110m **仅陆地**TopoJSON兜底，完全不携带现代国家边界或国名。
+**默认恢复原来的 OpenStreetMap 现代地图**：观众需要今天的道路、地名、城市与海岸线，才能对照1497—1599年的历史地点。点击左侧 **「地图图例」→「显示现代地名与道路」** 可取消勾选，临时切换为 NASA GIBS BlueMarble ShadedRelief Bathymetry 的无现代政治标签自然地形底图。地图年份、中心、缩放、历史事件与疆域图层均不随底图切换而改变。
 
-数据和服务来源：[NASA GIBS](https://nasa-gibs.github.io/gibs-api-docs/)（服务图像，地图角落展示署名），[Natural Earth](https://www.naturalearthdata.com/)（公共领域物理地理），[world-atlas](https://github.com/cublya/world-atlas)（Natural Earth 的TopoJSON再分发）。详细限制与回归见 [历史底图来源与标准](docs/UNLABELED_PHYSICAL_BASEMAP.md)。无需CARTO/Esri密钥。地形服务短暂不可用不会重新显示现代国家名称。
+这两种底图**都是现代地理参考**，OpenStreetMap 的 United Kingdom、United States 等国名绝不是当时的历史国名或历史疆界，务必以另行核证的年份图层和史料为准。NASA瓦片故障时可退回仓库内Natural Earth公共领域land-only地理图层。无需用户提供API Key。地图分别提供 OpenStreetMap contributors 与 NASA GIBS 来源署名。详见 [底图对照及史料限制](docs/UNLABELED_PHYSICAL_BASEMAP.md)。
 
 ## v1.7.4：修复地图真实点击与交战图层缩放稳定性（2026-10-13）
 
@@ -72,7 +72,7 @@
 
 开发：静态 HTML + CSS + JavaScript / Leaflet；部署通过 GitHub Pages；本地英国区域轮廓基于 ONS 开放数据，**现代轮廓只用于定位，不代表1497年政治边界**。
 
-网页改用 NASA GIBS 无国名自然地形底图与 Natural Earth 本地地理兜底；地域边界来源为 ONSvisual/topojson_boundaries，含 ONS/OS 开放地理数据，详见来源清单。
+网页默认使用 © OpenStreetMap contributors 现代地点参考图，并提供 NASA GIBS 无标签自然地形底图与 Natural Earth 本地地理兜底；地域边界来源为 ONSvisual/topojson_boundaries，含 ONS/OS 开放地理数据，详见来源清单。
 
 - [查看16种正式SVG图标（网页预览）](icon-gallery.html) — GitHub Pages 地址：https://1959124923wyz-sys.github.io/love-British-TV/icon-gallery.html
 
