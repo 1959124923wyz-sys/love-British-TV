@@ -395,7 +395,9 @@ function openCollection(items,title){
 function resetDossier(){selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
 
 function isNewEventThisYear(item){return item&&item.category!=='status'&&Number(item.year)===year;}
+let eventListClickTimer=null;
 function renderEventList(){
+ if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
  const fullArchive=$('showFullChapterArchive').checked;
@@ -416,9 +418,19 @@ function renderEventList(){
  if(mapHint)mapHint.textContent=currentEvents.length?'本年新事件 '+currentEvents.length+(!$('mapLayerEvents').checked?' · 事件图层已关闭':locatable?' · 金色「新」标记':' · 无可靠地图位置'):'本年无新增事件记录';
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>{
-  node.addEventListener('click',()=>openDossier(atlas.events.find(e=>e.id===node.dataset.eid),'event'));
+  node.addEventListener('click',ev=>{
+   // A double-click must complete before the first click hides its target.
+   if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
+   if(ev.detail>1)return;
+   const item=atlas.events.find(e=>e.id===node.dataset.eid);
+   eventListClickTimer=setTimeout(()=>{
+    eventListClickTimer=null;
+    if(item&&atlas.events.some(e=>e.id===item.id))openDossier(item,'event');
+   },290);
+  });
   node.addEventListener('dblclick',ev=>{
    ev.preventDefault();
+   if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
    focusEventFromSidebar(atlas.events.find(e=>e.id===node.dataset.eid));
   });
  });
