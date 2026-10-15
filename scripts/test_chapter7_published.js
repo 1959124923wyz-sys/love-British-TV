@@ -40,7 +40,12 @@ for(const f of geo.features){
 }
 assert.equal(relations.features.length,6);
 assert.equal(urban.features.length,2);
-assert.ok(urban.features.every(f=>f.properties.French_controller_year_start===1558));
+assert.ok(urban.features.every(f=>{
+ const periods=f.properties.controller_periods||[];
+ return periods.length===2
+  &&periods[0].start_year===1550&&periods[0].end_year===1557&&periods[0].controller_group==='english_crown'
+  &&periods[1].start_year===1558&&periods[1].end_year===1559&&periods[1].controller_group==='french_crown';
+}),'Calais and Guines city control must transition at 1558, not by UI special case');
 assert.equal(military.features.length,9);
 const approved=new Set(read('data/icon-categories.json').categories.map(c=>c.code));
 assert.equal(approved.size,16);
@@ -87,7 +92,8 @@ assert.ok(!active('eyemouth-french-allied-1557-1559',1559),'Unproven 1559 Eyemou
 for(const id of ['boulogne-english-1544-1550','broughty-english-1547-1550','eyemouth-fort-English-1547-1550'])
  assert.ok(!active(id,1550),'Old English site must never be carried unchanged');
 assert.ok(app.includes('next>=1550?atlasSeventh'),'Chapter selection must permit new decade');
-assert.ok(app.includes("year>=1558&&p.source_place_id==='calais-crown'"),'Calais needs French annual area recolor');
+assert.ok(app.includes("function controllerAtYear(properties,selectedYear)")&&!app.includes("year>=1558&&p.source_place_id==='calais-crown'"),
+ 'Calais governance must derive from dated polygon and city records, not a hardcoded year/name recolor');
 assert.ok(app.includes('function renderSeventhControlSites()'));
 assert.ok(app.includes('sourcesById.get(id)'),'Seventh chapter bibliographies must be clickable');
 assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
