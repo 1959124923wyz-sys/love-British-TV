@@ -199,12 +199,24 @@ try:
            "document.getElementById('yearRange').min==='1497'&&document.getElementById('yearRange').max==='1509'", driver)
     # Consolidated 1497–1509 first chapter: one event archive and one chapter total.
     set_year(1497, 4)
+    verify("1497–1509 still appears as two chapter cards",
+           """document.querySelectorAll('#chapterTrack .chapter-segment').length===4 &&
+              document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1490"]').length===1 &&
+              document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1500"]').length===0 &&
+              document.querySelector('#chapterTrack [data-decade="1490"]').classList.contains('spans-decades') &&
+              getComputedStyle(document.querySelector('#chapterTrack [data-decade="1490"]')).gridColumnStart==='span 2' &&
+              document.querySelector('#chapterTrack [data-decade="1490"] small').textContent.includes('1497—1509')""",driver)
+    driver.save_screenshot(str(OUT / "single-merged-chapter-1497-1509-card.png"))
     verify("1497 merged first chapter title or slider failed",
            """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
               document.querySelector('#yearRange').min==='1497' &&
               document.querySelector('#yearRange').max==='1509'""", driver)
     set_year(1499, 6)
     set_year(1500, 10)
+    verify("1500s page must show first chapter exactly once",
+           """document.querySelectorAll('#chapterTrack .chapter-segment').length===5 &&
+              document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1500"]').length===1 &&
+              document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1490"]').length===0""",driver)
     verify("1500 erroneously resets chapter or forgets 1497 history",
            """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
               document.querySelector('#eventList [data-eid="landfall-1497"]') &&

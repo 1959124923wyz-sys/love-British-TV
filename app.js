@@ -1083,14 +1083,19 @@ function renderTimelineNavigation(){
  }).join('');
  cent.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>browseCentury(Number(btn.dataset.century))));
  const frame=$('chapterTrack'),decades=Array.from({length:5},(_,i)=>browsingDecade+i*10);
+ // A chapter may span several decade slots (1497–1509). Display its card once.
+ const renderedChapters=new Set();
  frame.innerHTML=decades.map((d,i)=>{
   if(d<chapterRegistry.navigation.firstDecade||d>chapterRegistry.navigation.lastDecade)
    return '<span class="chapter-placeholder" aria-hidden="true"></span>';
   const chapter=chapterForDecade(d),published=!!chapter;
+  if(chapter&&renderedChapters.has(chapter.id))return '';
+  if(chapter)renderedChapters.add(chapter.id);
+  const occupiedSlots=chapter?decades.filter(k=>chapter.start<=k+9&&chapter.end>=k).length:1;
   const from=chapter?chapter.start:d,to=chapter?chapter.end:d+9;
   const onMap=published&&year>=from&&year<=to;
   return '<button type="button" class="chapter-segment'+(published?' published':' unpublished')+
-    (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
+    (i===2?' centered':'')+(occupiedSlots>1?' spans-decades':'')+(onMap?' active':'')+'" data-decade="'+d+
     '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:'此十年尚无正式历史资料')+'">'+
     '<span>'+(published?'第'+chapter.number+'章':'尚未发布')+'</span>'+
     '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 待研究')+'</small></button>';
