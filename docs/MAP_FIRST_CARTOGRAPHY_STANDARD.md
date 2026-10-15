@@ -1,6 +1,8 @@
 # 爱英TV · 地图绘画优先规范（Map-first Cartography Standard）
 
-**批准：2026-10-12；长期有效。** 本规范是新增或修改每个历史时期时的**第一工作原则**。原已批准的 [v0.9事件交互规范](APPROVED_MAP_INTERACTION_STANDARD.md) 继续有效，但它服务于领土变化的呈现。
+**批准：2026-10-12；长期有效。**
+
+**2026-10-15补充执行规则：** 军事影响区、具名历史地名的现代参考定位与“点—线—区—后果”叙事，统一按 [历史空间叙事与军事影响区正式标准](HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md) 与 [审核清单](HISTORICAL_SPATIAL_REVIEW_CHECKLIST.md) 执行。本文件的真实政治控制优先原则继续有效；**缺精确古代边界不妨碍按城市级现代参考点落事件，但也不能用参考点证明主权面**。 本规范是新增或修改每个历史时期时的**第一工作原则**。原已批准的 [v0.9事件交互规范](APPROVED_MAP_INTERACTION_STANDARD.md) 继续有效，但它服务于领土变化的呈现。
 
 ## 1. 绘图是主线
 
