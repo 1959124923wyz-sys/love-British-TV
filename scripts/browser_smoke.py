@@ -6,6 +6,7 @@ and their transient failures are excluded from assertions.
 """
 from pathlib import Path
 import re
+import json
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
