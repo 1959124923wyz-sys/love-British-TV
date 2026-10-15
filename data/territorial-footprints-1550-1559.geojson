@@ -8,23 +8,23 @@
     ],
     "historical_area_measurement_allowed": false,
     "actual_1550s_boundaries_verified": 0,
-    "geometry_inherited_unchanged": true
+    "geometry_inherited_unchanged": true,
+    "controller_periods_are_authoritative": true
   },
   "features": [
     {
       "type": "Feature",
       "id": "calais-pale-sourced-places-approx-1497-1519",
       "properties": {
-        "name": "加来英王据地 · 史料地名概略范围",
+        "name": "加来Pale · 历史地名参考范围",
         "source_place_id": "calais-crown",
-        "relation_type": "direct_crown_control",
-        "political_control_proof": "documented_English_governance",
+        "relation_type": "crown_governance_transition",
+        "political_control_proof": "documented_English_to_French_control_1558",
         "historical_boundary_precision": "high_uncertainty_ten_place_hull",
         "geometry_role": "attested_settlement_envelope_not_surveyed_border",
         "start_year": 1550,
         "observed_through_year": 1559,
         "display_group": "control",
-        "color": "#9e6cde",
         "source_ids": [
           "FR-MINISTRY-2026",
           "FR-TNA-CALAIS",
@@ -34,7 +34,7 @@
         "source_urls": [
           "https://www.cambridge.org/core/journals/archaeologia/article/abs/xvcalais-and-the-pale/E7FD917F82CBB317B98CC3C7EEE400BA"
         ],
-        "history_description": "旧加来Pale地名参考范围（非实测疆界）：1550—1557年英王驻军控制城镇网络，1558年法军收复加来和吉讷后改为法国控制示意。",
+        "history_description": "1550—1557年英格兰王室治理加来；1558年1月法军收复加来及周边据点，1558年末起为法国王室治理。多边形沿用有据地名的概略范围，不是实测边界。",
         "geometry_carried_forward_from": "data/territorial-footprints-1497-1549.geojson",
         "verified_1520s_historical_border": false,
         "verified_area_sqkm": null,
@@ -46,7 +46,22 @@
         "period_from": 1550,
         "period_to": 1559,
         "area_sqkm": null,
-        "French_control_change_year": 1558
+        "controller_periods": [
+          {
+            "start_year": 1550,
+            "end_year": 1557,
+            "controller_group": "english_crown",
+            "controller_zh": "英格兰王室",
+            "relation_type": "direct_crown_control"
+          },
+          {
+            "start_year": 1558,
+            "end_year": 1559,
+            "controller_group": "french_crown",
+            "controller_zh": "法兰西王室",
+            "relation_type": "direct_french_crown_control"
+          }
+        ]
       },
       "geometry": {
         "type": "Polygon",

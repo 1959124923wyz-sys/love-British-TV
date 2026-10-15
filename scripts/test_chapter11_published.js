@@ -45,7 +45,11 @@ assert.ok(area.features.every(f=>f.geometry.type==='Polygon'&&f.properties.fill_
 assert.ok(area.features.every(f=>f.properties.source_ids.every(id=>sources.has(id))));
 assert.deepEqual(geo.features.map(f=>f.geometry),read('data/territorial-footprints-1580-1589.geojson').features.map(f=>f.geometry));
 assert.equal(rel.features.length,6);assert.equal(city.features.length,2);assert.equal(geo.features.length,7);
-assert.ok(city.features.every(f=>f.properties.French_controller_year_start===1558));
+assert.ok(city.features.every(f=>f.properties.controller_periods?.length===1
+ &&f.properties.controller_periods[0].controller_group==='french_crown'
+ &&f.properties.controller_periods[0].start_year<=1590
+ &&f.properties.controller_periods[0].end_year>=1599
+ &&f.properties.polity==='Kingdom of France'),'Calais and Guines must remain French throughout this chapter');
 for(const [y,n] of Object.entries({1590:3,1591:4,1592:3,1594:5,1595:3,1598:2,1599:2})){
  const listed=plan.year_end_slices.find(s=>s.year_end===Number(y));
  const active=core.features.filter(f=>f.properties.year_end_visible.includes(Number(y))).map(f=>f.id).sort();

@@ -12,7 +12,8 @@
     "new_actual_tudor_occupation_polygons": 0,
     "geometry_inherited_unchanged": true,
     "new_actual_Tudor_occupation_polygons": 0,
-    "new_certified_occupation_polygons": 0
+    "new_certified_occupation_polygons": 0,
+    "controller_periods_are_authoritative": true
   },
   "features": [
     {
@@ -26,7 +27,7 @@
         ]
       },
       "properties": {
-        "name": "加来：法国王室实际控制的城市核心",
+        "name": "加来 · 法国王室治理城市核心",
         "polity": "Kingdom of France",
         "historical_state": "documented_french_royal_governance",
         "visual_role": "schematic_controlled_city_area",
@@ -39,7 +40,7 @@
         "observed_through_year": 1599,
         "end_year": null,
         "draw_label": "加来",
-        "description": "1550—1557年为英王驻军与行政核心，1558年起由法国实际控制；地图点与外缘均不代表可测的16世纪城墙。",
+        "description": "1550—1557年英格兰王室治理此城；1558年1月法国军队收复加来和吉讷，此后由法国王室治理。圆形图标仅表示城址，不是当时城墙或控制区面积。",
         "source_ids": [
           "TNA-FRENCH-LANDS"
         ],
@@ -51,15 +52,23 @@
         "historic_end_date": null,
         "original_provenance": "main:data/french-urban-control-1500-1519.geojson",
         "editorial_status": "review_ready_not_live",
-        "role_for_continuity": "English_royal_city",
+        "role_for_continuity": "French_royal_urban_site_after_1558",
         "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
         "actual_area_sqkm": null,
         "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
-        "French_controller_year_start": 1558,
         "period_from": 1590,
         "period_to": 1599,
         "fill_authorized": false,
-        "area_sqkm": null
+        "area_sqkm": null,
+        "controller_periods": [
+          {
+            "start_year": 1590,
+            "end_year": 1599,
+            "controller_group": "french_crown",
+            "controller_zh": "法兰西王室",
+            "relation_type": "direct_french_crown_control"
+          }
+        ]
       }
     },
     {
@@ -73,7 +82,7 @@
         ]
       },
       "properties": {
-        "name": "吉讷：法国王室实际控制的要塞城市",
+        "name": "吉讷 · 法国王室治理要塞城市",
         "source_place_id": "guines-crown-1520s",
         "polity": "Kingdom of France",
         "visual_role": "schematic_controlled_city_area",
@@ -87,7 +96,7 @@
         "valid_year_end_from": 1520,
         "valid_year_end_to": 1529,
         "draw_label": "吉讷",
-        "description": "1550—1557年为英王驻军与行政核心，1558年起由法国实际控制；地图点与外缘均不代表可测的16世纪城墙。",
+        "description": "1550—1557年英格兰王室治理此城；1558年1月法国军队收复加来和吉讷，此后由法国王室治理。圆形图标仅表示城址，不是当时城墙或控制区面积。",
         "source_ids": [
           "CAL-ROYAL-HRP-1520",
           "CAL-MURPHY-2025-GUINES"
@@ -101,11 +110,20 @@
         "original_provenance": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
         "editorial_status": "review_ready_not_live",
         "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
-        "French_controller_year_start": 1558,
         "period_from": 1590,
         "period_to": 1599,
         "fill_authorized": false,
-        "area_sqkm": null
+        "area_sqkm": null,
+        "controller_periods": [
+          {
+            "start_year": 1590,
+            "end_year": 1599,
+            "controller_group": "french_crown",
+            "controller_zh": "法兰西王室",
+            "relation_type": "direct_french_crown_control"
+          }
+        ],
+        "role_for_continuity": "French_royal_urban_site_after_1558"
       }
     }
   ]

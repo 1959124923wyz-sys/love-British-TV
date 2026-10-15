@@ -38,7 +38,11 @@ for(const id of carried){
 const prevFoot=read('data/territorial-footprints-1570-1579.geojson');
 assert.deepEqual(foot.features.map(f=>f.geometry),prevFoot.features.map(f=>f.geometry),'old research references reshaped');
 assert.equal(rel.features.length,6);assert.equal(city.features.length,2);assert.equal(foot.features.length,7);
-assert.ok(city.features.every(f=>f.properties.French_controller_year_start===1558),'Calais and Guines must remain French');
+assert.ok(city.features.every(f=>f.properties.controller_periods?.length===1
+ &&f.properties.controller_periods[0].controller_group==='french_crown'
+ &&f.properties.controller_periods[0].start_year<=1580
+ &&f.properties.controller_periods[0].end_year>=1589
+ &&f.properties.polity==='Kingdom of France'),'Calais and Guines must remain French throughout this chapter');
 assert.ok(sites.features.every(f=>f.geometry.type==='Point'&&f.properties.fill_authorized===false&&f.properties.area_sqkm===null));
 assert.equal(sites.features.length,3);
 assert.ok(!sites.features.some(f=>f.properties.stable_id==='loughrea-english-warders-1576-1580'),'1580 Burke recapture ignored');

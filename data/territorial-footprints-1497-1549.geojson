@@ -16,7 +16,8 @@
     "review_file": "research/periods/1530-1539/EDITOR_HANDOFF.md",
     "editorial_continuity_1549": "Unmodified inherited geometry; period-end continuation of political relationship only",
     "precision_not_surveyed": true,
-    "production_provenance": "data/territorial-footprints-1497-1539.geojson"
+    "production_provenance": "data/territorial-footprints-1497-1539.geojson",
+    "controller_periods_are_authoritative": true
   },
   "features": [
     {
@@ -32,7 +33,6 @@
         "start_year": 1497,
         "observed_through_year": 1549,
         "display_group": "control",
-        "color": "#9e6cde",
         "source_ids": [
           "FR-MINISTRY-2026",
           "FR-TNA-CALAIS",
@@ -50,7 +50,17 @@
         "historic_end_date": null,
         "fill_authorized": false,
         "historical_boundary_confirmed": false,
-        "actual_area_sqkm": null
+        "actual_area_sqkm": null,
+        "controller_periods": [
+          {
+            "start_year": 1497,
+            "end_year": 1549,
+            "controller_group": "english_crown",
+            "controller_zh": "英格兰王室",
+            "relation_type": "direct_crown_control"
+          }
+        ],
+        "area_sqkm": null
       },
       "geometry": {
         "type": "Polygon",

@@ -295,10 +295,34 @@ function openHypothesis(feature){
  openPanel('dossier');
 }
 // All clickable polygon types share a source-aware map territory dossier.
+// Government identity is a dated property of historic evidence, not a map style.
+const historicControllerPalette={
+ english_crown:{stroke:'#9e6cde',areaFill:'#9e6cde',cityFill:'#9867dd',cityHalo:'#a57de3'},
+ french_crown:{stroke:'#65c9bc',areaFill:'#357f76',cityFill:'#49b6ad',cityHalo:'#93e5d7'}
+};
+function controllerAtYear(properties,selectedYear){
+ const intervals=properties?.controller_periods;
+ if(!Array.isArray(intervals))return null;
+ return intervals.find(period=>Number.isInteger(period.start_year)&&Number.isInteger(period.end_year)
+  &&period.start_year<=selectedYear&&selectedYear<=period.end_year)||null;
+}
+// Transition records contain later history for scholarly provenance, but the
+// public year-end map must not reveal a future conquest in early-year tooltips.
+function historicAreaDescription(properties,selectedYear){
+ const periods=properties?.controller_periods||[];
+ const controller=controllerAtYear(properties,selectedYear);
+ if(!controller||periods.length<2)
+  return properties?.summary_zh||properties?.history_description||properties?.description||'该地区的历史状态按所选年份显示。';
+ const siteEnvelope=properties?.geometry_role==='attested_settlement_envelope_not_surveyed_border';
+ return '所选年份由'+controller.controller_zh+'治理。'+(siteEnvelope?
+  '外缘依据史料地名概略描绘，并非当年的实测行政或军事疆界。':
+  '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
+}
 function openTerritoryDossier(feature,kind='historic'){
  const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach';
+ const controller=kind==='historic'?controllerAtYear(p,year):null;
  const label=warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
- const description=p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。';
+ const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
  const parties=p.controller_zh||(contested?(p.contenders_zh||[]).join('、'):'');
@@ -310,7 +334,7 @@ function openTerritoryDossier(feature,kind='historic'){
  const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
   '<h2>'+escapeHTML(p.name||feature.id||'历史领土概况')+'</h2><p>'+escapeHTML(description)+'</p>'+
-  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('相关军事方',parties)+
+  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('当年治理主体',controller?.controller_zh)+row('相关军事方',parties)+
   ''+'</div>'+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
@@ -599,19 +623,24 @@ function renderTerritories(){
   renderer:territoryRenderer,pane:'territoryPane',
   style:f=>{
    const p=f.properties,rel=p.relation_type;
-   const research=p.display_group==='research',calais=rel==='direct_crown_control',frenchCalais=year>=1558&&p.source_place_id==='calais-crown';
+   const research=p.display_group==='research';
+   const siteEnvelope=p.geometry_role==='attested_settlement_envelope_not_surveyed_border';
+   const controller=controllerAtYear(p,year);
+   const palette=controller?historicControllerPalette[controller.controller_group]:null;
    const hatch=rel==='autonomous_lordship'?'atlas-hatch-manx':
      rel==='crown_dependency'?'atlas-hatch-crown':'';
-   return {pane:'territoryPane',color:frenchCalais?'#65c9bc':p.color||'#a78cdb',weight:calais?3.8:research?2.7:2.3,
-    opacity:1,dashArray:research?'7 6':calais?'7 5':null,
-    fillColor:frenchCalais?'#357f76':p.color||'#9871cc',fillOpacity:research?.12:calais?.3:rel==='scottish_crown_territory'?.22:.26,
+   return {pane:'territoryPane',color:palette?.stroke||p.color||'#a78cdb',weight:siteEnvelope?3.8:research?2.7:2.3,
+    opacity:1,dashArray:research?'7 6':siteEnvelope?'7 5':null,
+    fillColor:palette?.areaFill||p.color||'#9871cc',fillOpacity:research?.12:siteEnvelope?.3:rel==='scottish_crown_territory'?.22:.26,
     className:hatch?'atlas-territory-'+(rel==='autonomous_lordship'?'manx':'crown'):'atlas-territory-solid'};
   },
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
    const rel=p.relation_type,klass=rel==='autonomous_lordship'?'atlas-territory-manx':rel==='crown_dependency'?'atlas-territory-crown':'atlas-territory-solid';
    layer.options.className=klass;
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.history_description)+'</div>',
+   const controller=controllerAtYear(p,year);
+   const controllerLine=controller?'当年治理主体：'+controller.controller_zh+'。':'';
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(controllerLine+' '+historicAreaDescription(p,year))+'</div>',
       {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'historic')});
   }
@@ -658,19 +687,22 @@ function renderControlAreas(){
   if(f.geometry?.type!=='Point'||!coords||coords.length!==2)continue;
   const center=[coords[1],coords[0]],zoom=map.getZoom();
   const isTournai=String(f.id).includes('tournai');
-  const recoveredFrench=year>=1558&&['calais-crown','guines-crown-1520s'].includes(p.source_place_id);
-  const mainColor=recoveredFrench?'#49b6ad':isTournai?'#c5a0f1':'#9867dd';
-  const glowColor=recoveredFrench?'#93e5d7':isTournai?'#e0bfff':'#a57de3';
+  const controller=controllerAtYear(p,year);
+  const palette=controller?historicControllerPalette[controller.controller_group]:null;
+  const mainColor=palette?.cityFill||(isTournai?'#c5a0f1':'#9867dd');
+  const glowColor=palette?.cityHalo||(isTournai?'#e0bfff':'#a57de3');
   // City control is a sourced position, not a circular polygon of measured territory.
   const radius=Math.max(5.2,Math.min(8,5.6+Math.max(0,zoom-5)*.6));
   const core=L.circleMarker(center,{pane:'controlAreaPane',radius,
    color:glowColor,weight:2,opacity:1,fill:true,fillColor:mainColor,fillOpacity:.85,
    bubblingMouseEvents:false})
-   .bindTooltip('<strong>'+escapeHTML(recoveredFrench?p.draw_label+' · 1558年后法国控制':p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.description)+'</div>',
+   .bindTooltip('<strong>'+escapeHTML(controller?p.draw_label+' · '+controller.controller_zh+'治理':p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(historicAreaDescription(p,year))+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',()=>{
     const record=findPlaceAcrossChapters(p.source_place_id);
-    if(record)openDossier(record,'place');else openTerritoryDossier(f,'historic');
+    // Source places may retain their Tudor-era text; show selected-year government.
+    if(controller)openTerritoryDossier(f,'historic');
+    else if(record)openDossier(record,'place');else openTerritoryDossier(f,'historic');
    }).addTo(groups.controlAreas);
   // Low-key geo-label shows which urban area changes, with no blocking background.
   if(zoom>=6){

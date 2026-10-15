@@ -6,7 +6,8 @@
       1559
     ],
     "source": "data/french-urban-control-1497-1549.geojson",
-    "control_year_french_from": 1558
+    "control_year_french_from": 1558,
+    "controller_periods_are_authoritative": true
   },
   "features": [
     {
@@ -20,11 +21,10 @@
         ]
       },
       "properties": {
-        "name": "加来 · 英王实际控制的城市核心",
-        "polity": "Kingdom of England",
-        "historical_state": "documented-english-royal-governance",
+        "name": "加来 · 历史治理城市核心",
+        "historical_state": "documented_crown_control_transition_1558",
         "visual_role": "schematic_controlled_city_area",
-        "control_class": "direct_urban_control",
+        "control_class": "royal_urban_governance_transition",
         "historical_boundary_confirmed": false,
         "render_radius_px": 17,
         "min_radius_px": 14,
@@ -33,7 +33,7 @@
         "observed_through_year": 1559,
         "end_year": null,
         "draw_label": "加来",
-        "description": "1550—1557年为英王驻军与行政核心，1558年起由法国实际控制；地图点与外缘均不代表可测的16世纪城墙。",
+        "description": "1550—1557年英格兰王室治理此城；1558年1月法国军队收复加来和吉讷，此后由法国王室治理。圆形图标仅表示城址，不是当时城墙或控制区面积。",
         "source_ids": [
           "TNA-FRENCH-LANDS"
         ],
@@ -45,11 +45,26 @@
         "historic_end_date": null,
         "original_provenance": "main:data/french-urban-control-1500-1519.geojson",
         "editorial_status": "review_ready_not_live",
-        "role_for_continuity": "English_royal_city",
+        "role_for_continuity": "crown_control_transition_1558",
         "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
         "actual_area_sqkm": null,
         "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
-        "French_controller_year_start": 1558
+        "controller_periods": [
+          {
+            "start_year": 1550,
+            "end_year": 1557,
+            "controller_group": "english_crown",
+            "controller_zh": "英格兰王室",
+            "relation_type": "direct_crown_control"
+          },
+          {
+            "start_year": 1558,
+            "end_year": 1559,
+            "controller_group": "french_crown",
+            "controller_zh": "法兰西王室",
+            "relation_type": "direct_french_crown_control"
+          }
+        ]
       }
     },
     {
@@ -63,12 +78,11 @@
         ]
       },
       "properties": {
-        "name": "吉讷：英王驻军边防中心（1520年代独立显示）",
+        "name": "吉讷 · 历史治理城市核心",
         "source_place_id": "guines-crown-1520s",
-        "polity": "Kingdom of England",
         "visual_role": "schematic_controlled_city_area",
-        "historical_state": "existing_Calais_border_city_not_1520_new_conquest",
-        "control_class": "English_Crown_military_frontier_existing_since_prior_decade",
+        "historical_state": "documented_crown_control_transition_1558",
+        "control_class": "royal_urban_governance_transition",
         "render_radius_px": 12,
         "min_radius_px": 9,
         "start_year": 1550,
@@ -77,7 +91,7 @@
         "valid_year_end_from": 1520,
         "valid_year_end_to": 1529,
         "draw_label": "吉讷",
-        "description": "1550—1557年为英王驻军与行政核心，1558年起由法国实际控制；地图点与外缘均不代表可测的16世纪城墙。",
+        "description": "1550—1557年英格兰王室治理此城；1558年1月法国军队收复加来和吉讷，此后由法国王室治理。圆形图标仅表示城址，不是当时城墙或控制区面积。",
         "source_ids": [
           "CAL-ROYAL-HRP-1520",
           "CAL-MURPHY-2025-GUINES"
@@ -91,7 +105,23 @@
         "original_provenance": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
         "editorial_status": "review_ready_not_live",
         "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
-        "French_controller_year_start": 1558
+        "controller_periods": [
+          {
+            "start_year": 1550,
+            "end_year": 1557,
+            "controller_group": "english_crown",
+            "controller_zh": "英格兰王室",
+            "relation_type": "direct_crown_control"
+          },
+          {
+            "start_year": 1558,
+            "end_year": 1559,
+            "controller_group": "french_crown",
+            "controller_zh": "法兰西王室",
+            "relation_type": "direct_french_crown_control"
+          }
+        ],
+        "role_for_continuity": "crown_control_transition_1558"
       }
     }
   ]
