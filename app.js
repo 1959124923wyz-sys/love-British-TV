@@ -265,16 +265,8 @@ function openDossier(item,typ){
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
 
- const canMapFocus=typ==='event'&&canLocateEvent(item,year);
- const locateAction=typ==='event'?'<div class="dossier-map-action"><button type="button" data-locate-event'+
-  (canMapFocus?'':' disabled')+'>◎ 在地图上定位</button><small>'+
-  (canMapFocus?'保留当前年份与缩放；手机上返回地图查看':'该事件暂无可定位地点，或尚未发生')+
-  '</small></div>':'';
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+locateAction+listSources(item.source_ids,item);
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+listSources(item.source_ids,item);
  openPanel('dossier');
- const locateButton=$('dossierBody').querySelector('[data-locate-event]');
- if(locateButton&&!locateButton.disabled)
-  locateButton.addEventListener('click',()=>focusEventFromSidebar(item,{revealMap:true}));
  document.querySelectorAll('.event-item').forEach(el=>el.classList.toggle('selected',el.dataset.eid===selected));
 }
 // Modern heritage scheduled boundaries were fetched from the official HES ArcGIS service.
