@@ -13,23 +13,23 @@
     "inherits": "main 1580–1589",
     "new_actual_tudor_occupation_polygons": 0,
     "new_actual_Tudor_occupation_polygons": 0,
-    "new_certified_occupation_polygons": 0
+    "new_certified_occupation_polygons": 0,
+    "controller_periods_are_authoritative": true
   },
   "features": [
     {
       "type": "Feature",
       "id": "calais-pale-sourced-places-approx-1497-1519",
       "properties": {
-        "name": "旧加来Pale · 1580年代法国管治范围参考",
+        "name": "旧加来Pale · 法兰西王室治理地名参考",
         "source_place_id": "calais-crown",
-        "relation_type": "direct_crown_control",
-        "political_control_proof": "documented_English_governance",
+        "relation_type": "direct_french_crown_control",
+        "political_control_proof": "documented_French_governance_after_1558",
         "historical_boundary_precision": "high_uncertainty_ten_place_hull",
         "geometry_role": "attested_settlement_envelope_not_surveyed_border",
         "start_year": 1590,
         "observed_through_year": 1599,
         "display_group": "control",
-        "color": "#9e6cde",
         "source_ids": [
           "FR-MINISTRY-2026",
           "FR-TNA-CALAIS",
@@ -39,7 +39,7 @@
         "source_urls": [
           "https://www.cambridge.org/core/journals/archaeologia/article/abs/xvcalais-and-the-pale/E7FD917F82CBB317B98CC3C7EEE400BA"
         ],
-        "history_description": "1558年法军夺取加来后持续归法国治理；地图沿用文献地名概略参考范围。",
+        "history_description": "1558年法国收复加来后继续治理此地。所绘外缘是继承的英国时期历史地名研究包络，不是法国行政实测边界，也不代表英国仍统治此地。",
         "geometry_carried_forward_from": "data/territorial-footprints-1497-1549.geojson",
         "verified_1520s_historical_border": false,
         "verified_area_sqkm": null,
@@ -51,7 +51,15 @@
         "period_from": 1590,
         "period_to": 1599,
         "area_sqkm": null,
-        "French_control_change_year": 1558
+        "controller_periods": [
+          {
+            "start_year": 1590,
+            "end_year": 1599,
+            "controller_group": "french_crown",
+            "controller_zh": "法兰西王室",
+            "relation_type": "direct_french_crown_control"
+          }
+        ]
       },
       "geometry": {
         "type": "Polygon",
