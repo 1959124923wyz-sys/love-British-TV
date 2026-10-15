@@ -17,7 +17,7 @@ const resistance=cohort.filter(e=>e.category==='resistance');
 const repression=cohort.filter(e=>e.category==='domestic_repression');
 assert.equal(resistance.length,3);
 assert.equal(repression.length,5,'Royal actions or aftermath must not be conflated with rebel organization');
-assert(cohort.some(e=>e.id==='GAP1549-NORFOLK-EXECUTIONS'&&e.description.includes('不能')));
+assert(cohort.some(e=>e.id==='GAP1549-NORFOLK-EXECUTIONS'&&e.description.includes('不把战场阵亡一概算作处决')));
 const norfolk=areas.features.filter(f=>f.id.startsWith('en-kett-1549-'));
 assert.equal(norfolk.length,2,'Norwich urban effects and Dussindale valley must be separate study areas');
 for(const f of norfolk){
