@@ -800,3 +800,29 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .sidebar .event-item{min-height:48px;padding:10px 7px}
  .sidebar .chapter-card:not([open]) .chapter-body{display:none}
 }
+
+/* New-in-the-selected-year = event first occurred in that year.
+   Never apply this to persistent territories, historical routes or place anchors.
+   A compact fixed emblem stays readable after map zoom/cluster regrouping. */
+.map-year-card .map-year-copy{min-width:0;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+.map-year-card .map-year-copy #periodTitle{display:block}
+.map-year-card #yearArrivalMapCount{display:block;color:#f1cf9e;font-size:10px;line-height:1.25;font-weight:700;white-space:normal}
+.year-arrival-summary{font-size:10px;line-height:1.45;color:#f6d9aa;background:#3d3340;border-left:3px solid #e5bc79;padding:6px 9px;margin:4px 5px 7px;border-radius:0 6px 6px 0}
+.year-arrival-summary.none{background:#1a2b3b;border-left-color:#526779;color:#adbfce}
+.event-item.event-new-this-year{background:linear-gradient(90deg,rgba(137,91,48,.28),rgba(33,50,69,.20));border-left:3px solid #f3c47c}
+.event-item.event-new-this-year:hover{background:#3b3645}
+.year-arrival-tag{display:inline-flex;vertical-align:1px;margin-left:3px;padding:1px 5px;border-radius:4px;border:1px solid #d6a765;color:#ffdfa6;background:#4b382c;font-size:9px;font-weight:800;white-space:nowrap;letter-spacing:.01em}
+.map-pin.atlas-new-this-year::before{content:"";position:absolute;inset:-7px;border:2px solid #ffe1a0;border-radius:50%;pointer-events:none;box-shadow:0 0 13px 3px rgba(241,175,80,.64);animation:atlas-annual-arrival .9s ease-out 2;z-index:0}
+.map-pin.atlas-new-this-year .atlas-new-mark{position:absolute;top:-15px;right:-16px;min-width:17px;height:17px;box-sizing:border-box;display:grid;place-items:center;padding:0 2px;border-radius:5px;background:#f3c679;color:#17283b;border:1px solid #f9e4ae;font:bold 10px/1 system-ui,sans-serif;box-shadow:0 2px 5px #000c;pointer-events:none;z-index:3}
+.atlas-aggregate.atlas-cluster-new-this-year{border-color:#ffe0a2;box-shadow:0 0 0 3px rgba(248,193,109,.50),0 0 19px rgba(229,173,86,.45)}
+.atlas-aggregate.atlas-cluster-uncertain{border-style:dashed!important}
+.atlas-cluster-new-count{position:absolute;top:-11px;right:-17px;min-width:25px;height:17px;padding:1px 4px;box-sizing:border-box;display:grid;place-items:center;border:1px solid #ffebbd;border-radius:7px;background:#f1c47f;color:#13273b;font:800 10px/1.1 system-ui,sans-serif;white-space:nowrap;box-shadow:0 2px 5px #000b;pointer-events:none}
+@keyframes atlas-annual-arrival{0%{box-shadow:0 0 0 0 rgba(253,212,128,.9)}50%{box-shadow:0 0 0 9px rgba(253,212,128,.16)}100%{box-shadow:0 0 13px 3px rgba(241,175,80,.64)}}
+@media(max-width:680px){
+ .map-year-card .map-year-copy #periodTitle{font-size:9px}
+ .map-year-card #yearArrivalMapCount{font-size:9px}
+ .map-pin.atlas-new-this-year .atlas-new-mark{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+ .map-pin.atlas-new-this-year::before{animation:none!important}
+}
