@@ -1,11 +1,11 @@
 {
   "type": "FeatureCollection",
   "schema": "ch11_control_and_violence_delta_v1",
-  "count": 35,
+  "count": 36,
   "metadata": {
     "historical_occupation_polygons": 0,
-    "modern_point_features": 10,
-    "unlocated_events": 25,
+    "modern_point_features": 16,
+    "unlocated_events": 20,
     "not_for_automatic_colonial_fill": true
   },
   "features": [
@@ -249,7 +249,13 @@
     {
       "type": "Feature",
       "id": "ch11-change-ch11-enniskillen-english-assault",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.644771,
+          54.346171
+        ]
+      },
       "properties": {
         "stable_id": "ch11-enniskillen-english-assault",
         "atlas_event_id": "1590S-E011",
@@ -264,14 +270,20 @@
         "historical_boundary_verified": false,
         "fill_authorized": false,
         "area_sqkm": null,
-        "spatial_qualification": "unlocated_historic_action",
+        "spatial_qualification": "modern_named_place",
         "foreign_sovereignty_transferred_by_raid": false
       }
     },
     {
       "type": "Feature",
       "id": "ch11-change-ch11-enniskillen-blockade",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.644771,
+          54.346171
+        ]
+      },
       "properties": {
         "stable_id": "ch11-enniskillen-blockade",
         "atlas_event_id": "1590S-E012",
@@ -286,7 +298,7 @@
         "historical_boundary_verified": false,
         "fill_authorized": false,
         "area_sqkm": null,
-        "spatial_qualification": "unlocated_historic_action",
+        "spatial_qualification": "modern_named_place",
         "foreign_sovereignty_transferred_by_raid": false
       }
     },
@@ -338,7 +350,13 @@
     {
       "type": "Feature",
       "id": "ch11-change-ch11-blackwater-fort-irish-recapture",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.70544,
+          54.41288
+        ]
+      },
       "properties": {
         "stable_id": "ch11-blackwater-fort-irish-recapture",
         "atlas_event_id": "1590S-E015",
@@ -354,7 +372,7 @@
         "historical_boundary_verified": false,
         "fill_authorized": false,
         "area_sqkm": null,
-        "spatial_qualification": "unlocated_historic_action",
+        "spatial_qualification": "modern_named_place",
         "foreign_sovereignty_transferred_by_raid": false
       }
     },
@@ -389,7 +407,13 @@
     {
       "type": "Feature",
       "id": "ch11-change-ch11-enniskillen-english-garrison-killed",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.644771,
+          54.346171
+        ]
+      },
       "properties": {
         "stable_id": "ch11-enniskillen-english-garrison-killed",
         "atlas_event_id": "1590S-E017",
@@ -404,7 +428,7 @@
         "historical_boundary_verified": false,
         "fill_authorized": false,
         "area_sqkm": null,
-        "spatial_qualification": "unlocated_historic_action",
+        "spatial_qualification": "modern_named_place",
         "foreign_sovereignty_transferred_by_raid": false
       }
     },
@@ -669,7 +693,13 @@
     {
       "type": "Feature",
       "id": "ch11-change-ch11-portmore-english-fort-abandoned",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.70544,
+          54.41288
+        ]
+      },
       "properties": {
         "stable_id": "ch11-portmore-english-fort-abandoned",
         "atlas_event_id": "1590S-E028",
@@ -684,7 +714,7 @@
         "historical_boundary_verified": false,
         "fill_authorized": false,
         "area_sqkm": null,
-        "spatial_qualification": "unlocated_historic_action",
+        "spatial_qualification": "modern_named_place",
         "foreign_sovereignty_transferred_by_raid": false
       }
     },
@@ -714,6 +744,37 @@
     },
     {
       "type": "Feature",
+      "id": "ch11-change-ch11-kilcolman-English-planter-castle-burned",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.614258,
+          52.252298
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-kilcolman-English-planter-castle-burned",
+        "atlas_event_id": "1590S-E030",
+        "name": "反殖民起义攻毁英国承领人斯宾塞的基尔科尔曼城堡",
+        "year": 1598,
+        "map_layer": "events",
+        "source_ids": [
+          "C11-S65",
+          "C11-S66",
+          "C11-S67",
+          "C11-S68"
+        ],
+        "kind": "resistance",
+        "controller_area_polygon": null,
+        "historical_boundary_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "spatial_qualification": "modern_named_place",
+        "foreign_sovereignty_transferred_by_raid": false
+      }
+    },
+    {
+      "type": "Feature",
       "id": "ch11-change-ch11-cahir-castle-surrender",
       "geometry": {
         "type": "Point",
@@ -724,7 +785,7 @@
       },
       "properties": {
         "stable_id": "ch11-cahir-castle-surrender",
-        "atlas_event_id": "1590S-E030",
+        "atlas_event_id": "1590S-E031",
         "name": "埃塞克斯动用火炮迫使卡希尔城堡投降",
         "year": 1599,
         "map_layer": "events",
@@ -752,7 +813,7 @@
       },
       "properties": {
         "stable_id": "ch11-essex-ireland-army-garrisons",
-        "atlas_event_id": "1590S-E031",
+        "atlas_event_id": "1590S-E032",
         "name": "埃塞克斯率大军到爱尔兰，沿线扩张驻军网络",
         "year": 1599,
         "map_layer": "events",
@@ -775,7 +836,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-curlew-english-army-ambush",
-        "atlas_event_id": "1590S-E032",
+        "atlas_event_id": "1590S-E033",
         "name": "柯鲁山隘战役：英军克利福德部遭伏击",
         "year": 1599,
         "map_layer": "events",
@@ -798,7 +859,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-essex-oneill-truce-exit",
-        "atlas_event_id": "1590S-E033",
+        "atlas_event_id": "1590S-E034",
         "name": "埃塞克斯与奥尼尔停战后擅自离开爱尔兰",
         "year": 1599,
         "map_layer": "events",
@@ -821,7 +882,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-castlemaine-english-ward-lost",
-        "atlas_event_id": "1590S-E034",
+        "atlas_event_id": "1590S-E035",
         "name": "卡斯尔梅因英军驻堡粮尽，遭地方军收复",
         "year": 1599,
         "map_layer": "events",
@@ -843,7 +904,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-lough-gur-ward-lost",
-        "atlas_event_id": "1590S-E035",
+        "atlas_event_id": "1590S-E036",
         "name": "洛赫格尔英军驻堡亦被当地军队夺取",
         "year": 1599,
         "map_layer": "events",
