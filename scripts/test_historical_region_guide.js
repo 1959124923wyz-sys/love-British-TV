@@ -14,7 +14,7 @@ assert.equal(data.type,'FeatureCollection');
 assert.equal(data.features.length,6);
 const pairs=[
  ['rough-wooing-leith-edinburgh-raid-1544',1544,1544],
- ['leix-offaly-crown-plantation-1556-1569',1556,1569],
+ ['leix-offaly-crown-plantation-1556-1569',1556,null],
  ['essex-clandeboye-ulster-1573-1575',1573,1575],
  ['rathlin-island-crown-massacre-1575',1575,1575],
  ['smith-ards-colonial-military-1572-1575',1572,1575],
@@ -37,14 +37,16 @@ const periods=new Map([
  [1544,['rough-wooing-leith-edinburgh-raid-1544']],
  [1556,['leix-offaly-crown-plantation-1556-1569']],
  [1568,['leix-offaly-crown-plantation-1556-1569']],
- [1572,['smith-ards-colonial-military-1572-1575','drake-nombre-de-dios-attack-1572']],
- [1573,['essex-clandeboye-ulster-1573-1575','smith-ards-colonial-military-1572-1575']],
- [1574,['essex-clandeboye-ulster-1573-1575','smith-ards-colonial-military-1572-1575']],
- [1575,['essex-clandeboye-ulster-1573-1575','rathlin-island-crown-massacre-1575','smith-ards-colonial-military-1572-1575']],
- [1576,[]],[1580,[]]
+ [1570,['leix-offaly-crown-plantation-1556-1569']],
+ [1599,['leix-offaly-crown-plantation-1556-1569']],
+ [1572,['smith-ards-colonial-military-1572-1575','drake-nombre-de-dios-attack-1572','leix-offaly-crown-plantation-1556-1569']],
+ [1573,['essex-clandeboye-ulster-1573-1575','smith-ards-colonial-military-1572-1575','leix-offaly-crown-plantation-1556-1569']],
+ [1574,['essex-clandeboye-ulster-1573-1575','smith-ards-colonial-military-1572-1575','leix-offaly-crown-plantation-1556-1569']],
+ [1575,['essex-clandeboye-ulster-1573-1575','rathlin-island-crown-massacre-1575','smith-ards-colonial-military-1572-1575','leix-offaly-crown-plantation-1556-1569']],
+ [1576,['leix-offaly-crown-plantation-1556-1569']],[1580,['leix-offaly-crown-plantation-1556-1569']]
 ]);
 for(const [year,expected] of periods){
- const actual=data.features.filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year).map(f=>f.id);
+ const actual=data.features.filter(f=>year>=f.properties.start_year&&year<=(f.properties.display_through_year??f.properties.end_year??year)).map(f=>f.id);
  assert.deepEqual(actual.sort(),expected.sort(),'Incorrect year '+year);
 }
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
@@ -52,4 +54,11 @@ assert.ok(app.includes('renderHistoricalRegionGuide()'));
 assert.ok(app.includes('renderEarlyRegionalImpactAreas()'));
 assert.ok(app.includes("openMapTerritoryAt(latlng)"));
 assert.ok(app.includes("data/early-war-colonial-impact-1544-1575.geojson"));
-console.log('PASS 6 source-backed illustrative early war/plantation areas + year gating + visible region dossiers');
+const colonial=data.features.find(f=>f.id==='leix-offaly-crown-plantation-1556-1569').properties;
+assert.equal(colonial.ongoing_at_atlas_end,true);
+assert.equal(colonial.display_through_year,1599);
+const edin=data.features.find(f=>f.id==='rough-wooing-leith-edinburgh-raid-1544');
+assert.ok(edin.properties.related_event_ids.includes('1540S-008'));
+assert.match(app,/function regionalFeatureKind\(/);
+assert.ok(app.includes("if(p.color_role==='plantation_ochre')return 'land-dispossession'"));
+console.log('PASS 6 early study areas, ongoing colonial legacy, proper classification and Leith city link');
