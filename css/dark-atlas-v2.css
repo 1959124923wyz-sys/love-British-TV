@@ -709,3 +709,19 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  background:repeating-linear-gradient(135deg,#8d573545 0px,#8d573545 5px,#daa570 5px,#daa570 7px);
  border:1px dashed #dca16d
 }
+
+/* A small optional base-map switch inside the existing legend, not a third
+   historical layer switch: modern labels are geographic reference only. */
+.sidebar-settings-wrap .map-mode-help-body .basemap-option{
+ padding:8px 7px;border:1px solid #46617a;border-radius:7px;background:#223c54;
+}
+.sidebar-settings-wrap .map-mode-help-body .basemap-option label{
+ display:flex;align-items:center;gap:9px;width:100%;cursor:pointer;
+ font-size:11px;line-height:1.5;color:#e2ebf4;
+}
+.sidebar-settings-wrap .map-mode-help-body .basemap-option input{
+ flex:none;width:16px;height:16px;margin:0;accent-color:#ab8bda;cursor:pointer;
+}
+.sidebar-settings-wrap .map-mode-help-body .basemap-option input:focus-visible{
+ outline:2px solid #f1c69b;outline-offset:3px;
+}
