@@ -51,11 +51,10 @@ for (let year=1497; year<=1519; year++) {
 const segment = (start,end) => js.split(start)[1]?.split(end)[0] || '';
 const list = segment('function renderEventList(){','function expandCluster(');
 const points = segment('function renderPoints(){','function ensureTerritorialPatterns(){');
-const milestones = segment('function renderMilestones(){','function setYear(');
 assert.ok(list.includes('fullArchive||occurredByYear(e,year)'), 'sidebar fails to gate future events');
 assert.ok(list.includes('a.year-b.year'), 'sidebar not chronological');
 assert.ok(points.includes('!occurredByYear(e,year)'), 'map markers bypass year gate');
 assert.ok(points.includes("if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;"), 'map routes bypass year gate');
-assert.ok(milestones.includes('e.year>=chapter.start&&e.year<=year'), 'timeline shows future milestones');
+assert.ok(!js.includes('function renderMilestones()'), 'Removed yellow year markers must stay absent');
 assert.ok(js.includes("$('showFullChapterArchive').checked=false;"), 'archive unexpectedly defaults to future preview');
-console.log('OK: 1497-1519 chronology, voyage routes, timeline markers and sustained cities');
+console.log('OK: 1497-1519 chronology, voyage routes, clean timeline and sustained cities');
