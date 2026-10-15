@@ -652,7 +652,7 @@ try:
     verify("Rewind leaves future voyage links","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
     set_year(1550,6)
     verify("1550 new chapter missing or Boulogne still English",
-           """document.querySelector('#chapterNav').textContent.includes('第七章') &&
+           """document.querySelector('#chapterNav').textContent.includes('第六章') &&
               document.querySelectorAll('#map .atlas-seventh-site').length===7 &&
               document.querySelectorAll('#map .atlas-seventh-french').length===1 &&
               document.querySelectorAll('#map .atlas-seventh-scottish').length===1 &&
@@ -680,7 +680,7 @@ try:
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560,3)
     verify("1560 new chapter or future overseas trade leaks into early history",
-           """document.querySelector('#chapterNav').textContent.includes('第八章') &&
+           """document.querySelector('#chapterNav').textContent.includes('第七章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
@@ -743,7 +743,7 @@ try:
     # year-end English garrisons distinct from paper grants.
     set_year(1570,2)
     verify("Chapter 9 political continuity or new historic content absent",
-           """document.querySelector('#chapterNav').textContent.includes('第九章') &&
+           """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
@@ -835,7 +835,7 @@ try:
            """document.querySelector('#eventList [data-eid="1580S-E001"]') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
-              document.querySelector('#chapterLabel').textContent.includes('第十章')""",driver)
+              document.querySelector('#chapterLabel').textContent.includes('第九章')""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1580-Loughrea-recapture.png"))
     set_year(1582,10)
     verify("1582 famine testimony hidden", "!!document.querySelector('#eventList [data-eid=\"1580S-E009\"]')",driver)
@@ -865,7 +865,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
     set_year(1590,3)
     verify("1590 chapter label, 3 Crown/settler cores, or 2 dashed studies missing",
-           """document.querySelector('#chapterLabel').textContent.includes('第十一章') &&
+           """document.querySelector('#chapterLabel').textContent.includes('第十章') &&
               document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
