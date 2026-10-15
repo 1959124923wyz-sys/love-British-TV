@@ -12,7 +12,7 @@
   "editorial_status": "chief_editor_review_required_not_published",
   "intro": {
     "title": "暴力兼并、私掠财富与爱尔兰反抗（1590—1599）",
-    "description": "英王以焚毁村落、强制法权变更和处决地方领主扩大在爱尔兰的控制，却在阿尔斯特遭连番抵抗；英格兰私掠者夺取葡萄牙商船、洗劫加的斯，1598年暂占波多黎各圣胡安后撤退。1590年代跨大西洋贩奴的英船及交易数量未取得可证的新账册。"
+    "description": "英王以焚毁村落、强制法权变更和处决地方领主扩大在爱尔兰的控制，却在阿尔斯特遭连番抵抗；英格兰私掠者夺取葡萄牙商船、洗劫加的斯，1598年暂占波多黎各圣胡安后撤退。1592年一艘运送被奴役非洲人的葡萄牙船遭英格兰私掠者截获；其后续去向与英方出售获利未证。1591年桑托斯和1595年累西腓遭英军洗劫，糖、巴西木与东印度航线货物被夺走。"
   },
   "events": [
     {
@@ -158,6 +158,41 @@
     },
     {
       "id": "1590S-E005",
+      "research_event_id": "ch11-cavendish-santos-christmas-sack",
+      "year": 1591,
+      "start_year": 1591,
+      "end_year": 1591,
+      "visible_from": 1591,
+      "date_label": "1591年12月25日",
+      "name": "英军圣诞节趁礼拜袭占巴西桑托斯并掠夺",
+      "category": "privateering_plunder",
+      "icon_code": "ECO",
+      "lat": -23.96083,
+      "lng": -46.33361,
+      "geography_label": "Santos, Brazil",
+      "geo_precision": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
+      "description": "1591年12月25日，卡文迪什舰队趁桑托斯居民参加圣诞弥撒袭击港镇，洗劫并短期占据。巴西国家图书馆核对同时代英军乘员记述和卡文迪什书信。",
+      "short_description": "1591年12月25日，卡文迪什舰队趁桑托斯居民参加圣诞弥撒袭击港镇，洗劫并短期占据。巴西国家图书馆核对同时代英军乘员记述和卡文迪什书信。",
+      "source_ids": [
+        "C11-S43"
+      ],
+      "certainty": "evidence_led_not_an_exact_survey_of_siege_or_killing_site",
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_named_site_not_verified_Tudor_footprint",
+      "editorial_status": "chief_editor_candidate_not_main",
+      "source_context_warning": "Santos / Recife named city only, Portuguese regional sovereignty remained after English raid; exact 1590s walled town shape and ship seizure GPS unknown",
+      "date_precision": "1591-12-25 (year corrected from vague 1592 voyage)",
+      "map_priority": true
+    },
+    {
+      "id": "1590S-E006",
       "research_event_id": "ch11-madre-de-deus-captured",
       "year": 1592,
       "start_year": 1592,
@@ -194,7 +229,43 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E006",
+      "id": "1590S-E007",
+      "research_event_id": "ch11-cavendish-slave-ship-interception",
+      "year": 1592,
+      "start_year": 1592,
+      "end_year": 1592,
+      "visible_from": 1592,
+      "date_label": "1592年",
+      "name": "英格兰私掠者截获载有被奴役非洲人的葡萄牙船",
+      "category": "forcible_capture_of_already_enslaved_Africans_not_proven_sale",
+      "icon_code": "SLV",
+      "lat": null,
+      "lng": null,
+      "geography_label": "Brazilian South Atlantic; exact capture site unknown",
+      "geo_precision": "original_action_site_geometry_not_obtained",
+      "description": "与卡文迪什远征有关的英格兰私掠者1592年截获一艘从巴西伯南布哥驶往西属布宜诺斯艾利斯、载有被奴役非洲人与货物的葡萄牙船。学术研究确认截获行为，但这些非洲人此后的命运和是否遭英国人出售尚不清楚。",
+      "short_description": "与卡文迪什远征有关的英格兰私掠者1592年截获一艘从巴西伯南布哥驶往西属布宜诺斯艾利斯、载有被奴役非洲人与货物的葡萄牙船。学术研究确认截获行为，但这些非洲人此后的命运和是否遭英国人出售尚不清楚。",
+      "source_ids": [
+        "C11-S41",
+        "C11-S42"
+      ],
+      "certainty": "evidence_led_not_an_exact_survey_of_siege_or_killing_site",
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "no_verified_historical_location_point",
+      "editorial_status": "chief_editor_candidate_not_main",
+      "source_context_warning": "Santos / Recife named city only, Portuguese regional sovereignty remained after English raid; exact 1590s walled town shape and ship seizure GPS unknown",
+      "date_precision": "year only; no verified ship interception GPS",
+      "map_priority": true
+    },
+    {
+      "id": "1590S-E008",
       "research_event_id": "ch11-blind-oconor-roe-executed",
       "year": 1592,
       "start_year": 1592,
@@ -229,7 +300,42 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E007",
+      "id": "1590S-E009",
+      "research_event_id": "ch11-cavendish-sao-vicente-burned",
+      "year": 1592,
+      "start_year": 1592,
+      "end_year": 1592,
+      "visible_from": 1592,
+      "date_label": "1592年2月",
+      "name": "英军卡文迪什舰队撤离桑托斯后焚掠圣维森特",
+      "category": "military_attack",
+      "icon_code": "WAR",
+      "lat": null,
+      "lng": null,
+      "geography_label": "São Vicente (São Paulo), Brazil",
+      "geo_precision": "original_action_site_geometry_not_obtained",
+      "description": "巴西国家图书馆整理航海者记载：卡文迪什舰队1591年圣诞节攻占桑托斯后驻留约两个月，撤离前又掠夺并焚烧邻近圣维森特，英军未能因此取得长期殖民主权。",
+      "short_description": "巴西国家图书馆整理航海者记载：卡文迪什舰队1591年圣诞节攻占桑托斯后驻留约两个月，撤离前又掠夺并焚烧邻近圣维森特，英军未能因此取得长期殖民主权。",
+      "source_ids": [
+        "C11-S43"
+      ],
+      "certainty": "evidence_led_not_an_exact_survey_of_siege_or_killing_site",
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "no_verified_historical_location_point",
+      "editorial_status": "chief_editor_candidate_not_main",
+      "source_context_warning": "City coordinate not exact sixteenth century razed homes or coast; uncertain time early 1592",
+      "date_precision": "early 1592 following 1591-12-25 Santos raid; original sailor chronology",
+      "map_priority": true
+    },
+    {
+      "id": "1590S-E010",
       "research_event_id": "ch11-fermanagh-sheriff-imposition",
       "year": 1593,
       "start_year": 1593,
@@ -265,7 +371,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E008",
+      "id": "1590S-E011",
       "research_event_id": "ch11-enniskillen-english-assault",
       "year": 1594,
       "start_year": 1594,
@@ -300,7 +406,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E009",
+      "id": "1590S-E012",
       "research_event_id": "ch11-enniskillen-blockade",
       "year": 1594,
       "start_year": 1594,
@@ -335,7 +441,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E010",
+      "id": "1590S-E013",
       "research_event_id": "ch11-ford-of-biscuits",
       "year": 1594,
       "start_year": 1594,
@@ -370,7 +476,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E011",
+      "id": "1590S-E014",
       "research_event_id": "ch11-raleigh-trinidad-berrio-captive",
       "year": 1595,
       "start_year": 1595,
@@ -406,7 +512,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E012",
+      "id": "1590S-E015",
       "research_event_id": "ch11-blackwater-fort-irish-recapture",
       "year": 1595,
       "start_year": 1595,
@@ -442,7 +548,42 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E013",
+      "id": "1590S-E016",
+      "research_event_id": "ch11-lancaster-recife-plantation-loot",
+      "year": 1595,
+      "start_year": 1595,
+      "end_year": 1595,
+      "visible_from": 1595,
+      "date_label": "1595年3月24日",
+      "name": "兰开斯特攻占累西腓，掠取糖、巴西木及商船货物",
+      "category": "privateering_plunder",
+      "icon_code": "ECO",
+      "lat": -8.05389,
+      "lng": -34.88111,
+      "geography_label": "Recife Pernambuco, Brazil",
+      "geo_precision": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
+      "description": "1595年3月24日，英军在累西腓登陆夺取港镇，并驻留约三十日，将葡萄牙从亚洲运来的船货、糖、棉花与巴西木装船运走。此案有哈克卢特1600年收录的英方航海记述。",
+      "short_description": "1595年3月24日，英军在累西腓登陆夺取港镇，并驻留约三十日，将葡萄牙从亚洲运来的船货、糖、棉花与巴西木装船运走。此案有哈克卢特1600年收录的英方航海记述。",
+      "source_ids": [
+        "C11-S43"
+      ],
+      "certainty": "evidence_led_not_an_exact_survey_of_siege_or_killing_site",
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_named_site_not_verified_Tudor_footprint",
+      "editorial_status": "chief_editor_candidate_not_main",
+      "source_context_warning": "Santos / Recife named city only, Portuguese regional sovereignty remained after English raid; exact 1590s walled town shape and ship seizure GPS unknown",
+      "date_precision": "1595-03-24 landing, 30-day occupation approximate",
+      "map_priority": true
+    },
+    {
+      "id": "1590S-E017",
       "research_event_id": "ch11-enniskillen-english-garrison-killed",
       "year": 1595,
       "start_year": 1595,
@@ -477,7 +618,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E014",
+      "id": "1590S-E018",
       "research_event_id": "ch11-clontibret-english-defeat",
       "year": 1595,
       "start_year": 1595,
@@ -513,7 +654,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E015",
+      "id": "1590S-E019",
       "research_event_id": "ch11-drake-san-juan-attack-failed",
       "year": 1595,
       "start_year": 1595,
@@ -550,7 +691,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E016",
+      "id": "1590S-E020",
       "research_event_id": "ch11-faro-bishops-books-seized",
       "year": 1596,
       "start_year": 1596,
@@ -585,7 +726,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E017",
+      "id": "1590S-E021",
       "research_event_id": "ch11-drake-panama-expedition-failed",
       "year": 1596,
       "start_year": 1596,
@@ -621,7 +762,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E018",
+      "id": "1590S-E022",
       "research_event_id": "ch11-cadiz-anglo-dutch-sack",
       "year": 1596,
       "start_year": 1596,
@@ -658,7 +799,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E019",
+      "id": "1590S-E023",
       "research_event_id": "ch11-odonnell-raids-athenry",
       "year": 1597,
       "start_year": 1597,
@@ -693,7 +834,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E020",
+      "id": "1590S-E024",
       "research_event_id": "ch11-blackwater-armagh-english-blockade",
       "year": 1597,
       "start_year": 1597,
@@ -728,7 +869,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E021",
+      "id": "1590S-E025",
       "research_event_id": "ch11-dublin-powder-explosion",
       "year": 1597,
       "start_year": 1597,
@@ -763,7 +904,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E022",
+      "id": "1590S-E026",
       "research_event_id": "ch11-munster-plantation-revolt",
       "year": 1598,
       "start_year": 1598,
@@ -799,7 +940,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E023",
+      "id": "1590S-E027",
       "research_event_id": "ch11-cumberland-san-juan-occupied",
       "year": 1598,
       "start_year": 1598,
@@ -835,7 +976,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E024",
+      "id": "1590S-E028",
       "research_event_id": "ch11-portmore-english-fort-abandoned",
       "year": 1598,
       "start_year": 1598,
@@ -870,7 +1011,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E025",
+      "id": "1590S-E029",
       "research_event_id": "ch11-yellow-ford-english-defeat",
       "year": 1598,
       "start_year": 1598,
@@ -907,7 +1048,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E026",
+      "id": "1590S-E030",
       "research_event_id": "ch11-cahir-castle-surrender",
       "year": 1599,
       "start_year": 1599,
@@ -942,7 +1083,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E027",
+      "id": "1590S-E031",
       "research_event_id": "ch11-essex-ireland-army-garrisons",
       "year": 1599,
       "start_year": 1599,
@@ -978,7 +1119,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E028",
+      "id": "1590S-E032",
       "research_event_id": "ch11-curlew-english-army-ambush",
       "year": 1599,
       "start_year": 1599,
@@ -1014,7 +1155,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E029",
+      "id": "1590S-E033",
       "research_event_id": "ch11-essex-oneill-truce-exit",
       "year": 1599,
       "start_year": 1599,
@@ -1050,7 +1191,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E030",
+      "id": "1590S-E034",
       "research_event_id": "ch11-castlemaine-english-ward-lost",
       "year": 1599,
       "start_year": 1599,
@@ -1085,7 +1226,7 @@
       "map_priority": true
     },
     {
-      "id": "1590S-E031",
+      "id": "1590S-E035",
       "research_event_id": "ch11-lough-gur-ward-lost",
       "year": 1599,
       "start_year": 1599,
@@ -1260,6 +1401,44 @@
       "end_year": 1599,
       "icon_code": "WAR",
       "geo_precision": "National Museum archaeological excavation coordinates modern Cahir castle, not 1599 siege perimeter",
+      "area_polygon_verified": false,
+      "map_layer": "events",
+      "editorial_status": "chief_editor_candidate"
+    },
+    {
+      "id": "ch11-site-santos",
+      "name": "santos modern city gazetteer",
+      "lat": -23.96083,
+      "lng": -46.33361,
+      "status": "modern_place_reference_only",
+      "description": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
+      "source_geography_url": "https://texashistory.unt.edu/explore/locations/p18821/",
+      "source_ids": [
+        "C11-S43"
+      ],
+      "start_year": 1591,
+      "end_year": 1591,
+      "icon_code": "ECO",
+      "geo_precision": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
+      "area_polygon_verified": false,
+      "map_layer": "events",
+      "editorial_status": "chief_editor_candidate"
+    },
+    {
+      "id": "ch11-site-recife",
+      "name": "recife modern city gazetteer",
+      "lat": -8.05389,
+      "lng": -34.88111,
+      "status": "modern_place_reference_only",
+      "description": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
+      "source_geography_url": "https://digital.library.unt.edu/explore/locations/p10764/",
+      "source_ids": [
+        "C11-S43"
+      ],
+      "start_year": 1595,
+      "end_year": 1595,
+      "icon_code": "ECO",
+      "geo_precision": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
       "area_polygon_verified": false,
       "map_layer": "events",
       "editorial_status": "chief_editor_candidate"
@@ -1665,6 +1844,116 @@
       "evidence_read_level": "read relevant chronicle account in CELT full text",
       "precision_warning": "Aged blind O'Conor Roe executed in January at Roscommon session allegedly on account of sons' plunder/rebellion; avoid unsupported use as exact legally documented charge without trial transcript.",
       "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S41",
+      "title": "Transimperial Networks of Slave Trading, Piracy and Empire Building in Iberian Atlantic",
+      "publisher": "Cambridge University Press, Latin American Research Review",
+      "url": "https://www.cambridge.org/core/journals/latin-american-research-review/article/transimperial-networks-of-slave-trading-piracy-and-empire-building-in-the-iberian-atlantic/A756926D201B16128CE84C7001B9FBD1",
+      "kind": "peer_reviewed_historical_slavery_article",
+      "evidence_read_level": "full_public_article_paragraph_read",
+      "precision_warning": "1592 Cavendish-associated English privateer took Portuguese slave ship Pernambuco->Buenos Aires with enslaved Africans, captives fate unknown; this IS relevant new period slave-related violent commerce but not confirmed English slave sale.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S42",
+      "title": "The Admirable Adventures and Strange Fortunes of Master Anthony Knivet, ed. Vivien Lessa de Sá",
+      "publisher": "Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/admirable-adventures-and-strange-fortunes-of-master-anthony-knivet/B3705156741FD34F5E43A0410732CDF9/listing",
+      "kind": "critically_edited_early_first_person_testimony",
+      "evidence_read_level": "introduction_read_original_1625_text_not_read",
+      "precision_warning": "Original first published 1625; witnessed Cavendish voyage and Knivet left in São Sebastião Brazil Oct1592, detailed slave ship capture reported by Borucki citing ed p33.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S43",
+      "title": "Ingleses no Brasil: relatos de viagem 1526–1608",
+      "publisher": "Brazilian National Library Biblioteca Nacional Digital",
+      "url": "https://bndigital.bn.gov.br/artigos/ingleses-no-brasil-relatos-de-viagem-1526-1608/",
+      "kind": "national_library_historical_analysis",
+      "evidence_read_level": "read_public_portuguese_article",
+      "precision_warning": "Identifies Thomas Cavendish attack Santos/São Vicente 1592 and James Lancaster sack Recife 1595, neither implies British permanent colony or English slavery sales.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S44",
+      "title": "Historia del saqueo de Cádiz por los ingleses en 1596, Pedro de Abreu critically edited",
+      "publisher": "Universidad de Cádiz",
+      "url": "https://publicaciones.uca.es/historia-del-saqueo-de-cadiz-por-los-ingleses-en-1596/",
+      "kind": "university_critical_primary_1596_narrative_edition",
+      "evidence_read_level": "official_catalogue_only_book_not_read",
+      "precision_warning": "Detailed Spanish perspective of 1596 English-Dutch sack 304 page critical edition; original text must be read for exact damage and captive totals.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S45",
+      "title": "Artillería pertrechos bastimentos perdidos en la bahía de Cádiz en el saqueo anglo-holandés de 1596",
+      "publisher": "Consejo Superior de Investigaciones Científicas / Gladius",
+      "url": "https://gladius.revistas.csic.es/index.php/gladius/article/view/403",
+      "kind": "peer_reviewed_Simancas_original_inventory_analysis",
+      "evidence_read_level": "publisher_abstract_read",
+      "precision_warning": "Historic General Archive of Simancas fresh manuscript inventory of galley, frigate, stores, artillery losses, important for economic cost without multiplying their value into English receipts.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S46",
+      "title": "Report of Commissioners Appointed to Inquire into Amount of Booty Taken at Cadiz in 1596",
+      "publisher": "Cambridge University Press / Society of Antiquaries",
+      "url": "https://www.cambridge.org/core/journals/archaeologia/article/abs/xiii-report-of-the-commissioners-appointed-to-inquire-into-the-amount-of-booty-taken-at-cadiz-in-1596-with-the-charges-preferred-in-consequence-by-sir-gelly-meyricke-against-sir-anthony-ashley-and-the-answers-of-the-former-to-the-recrimination-of-the-latter-in-a-letter-from-samuel-rush-meyrick-esq-lld-and-fsa-to-henry-ellis-esq-frs-secretary/5ADBE73A91983B9726971C77D56E0709",
+      "kind": "nineteenth_century_publication_of_1596_commission_report",
+      "evidence_read_level": "publisher_extract_read_full_paywall",
+      "precision_warning": "1596 English Crown inquiry into booty already copied in Archaeologia; potentially real economic ledger, NOT yet quantified net from full original.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S47",
+      "title": "Paul E J Hammer, New Light on the Cadiz Expedition 1596",
+      "publisher": "Wiley Historical Research",
+      "url": "https://doi.org/10.1111/1468-2281.00039",
+      "kind": "peer_reviewed_study_of_Elizabethan_voyage_journal",
+      "evidence_read_level": "abstract_read",
+      "precision_warning": "New Essex flagship Due Repulse contemporary journal and 1596 recon map, British Library Yelverton MSS; original pages not viewed.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S48",
+      "title": "San Juan NHS resource records list: 1595 Antonelli fort plan and 1598 Cecil letter about Cumberland",
+      "publisher": "US National Park Service Research Archives",
+      "url": "https://www.nps.gov/saju/learn/historyculture/upload/SAJU_NHS_Resource_Records_508.pdf",
+      "kind": "official_archive_inventory_primary_originals_locator",
+      "evidence_read_level": "catalogue_read_not_images",
+      "precision_warning": "Box139 Folder3 1595 Spanish engineer Antonelli drawing; Box139 Folder4 1598 Cecil to Edmondes letter; study archive may yield actual 1598 siege phase forts and loot records.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S49",
+      "title": "Elsje van Kessel, Inventories of Madre de Deus",
+      "publisher": "University of St Andrews",
+      "url": "https://research-portal.st-andrews.ac.uk/en/publications/the-inventories-of-the-imadre-de-deusi-tracing-asian-material-cul/",
+      "kind": "peer_reviewed_inventory_study",
+      "evidence_read_level": "abstract_read",
+      "precision_warning": "Actual early English inventories monitored Portuguese Goa cargo; valuable route to verified distribution not simple value mythology.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S50",
+      "title": "Verified contemporary Santos city gazetteer latitude -23.960830 longitude -46.333610",
+      "publisher": "University of North Texas Digital Library",
+      "url": "https://texashistory.unt.edu/explore/locations/p18821/",
+      "kind": "modern_verified_geographical_reference",
+      "evidence_read_level": "read",
+      "precision_warning": "Used only to anchor 1591 sack to modern Santos area, NOT mapped 1591 coastal buildings.",
+      "origin": "1590-1599"
+    },
+    {
+      "id": "C11-S51",
+      "title": "Verified modern Recife city gazetteer latitude -8.053890 longitude -34.881110",
+      "publisher": "University of North Texas Digital Library",
+      "url": "https://digital.library.unt.edu/explore/locations/p10764/",
+      "kind": "modern_verified_geographical_reference",
+      "evidence_read_level": "read",
+      "precision_warning": "Used only to anchor 1595 30-day English raid to Recife modern city, NOT survey of 1595 Portuguese warehouses or English occupied town limits.",
+      "origin": "1590-1599"
     }
   ],
   "routes": [],
@@ -1679,6 +1968,7 @@
     "Britain_did_not_exist_as_a_single_united_sovereign_state_in_1590s": true,
     "verified_historic_occupation_polygon_count": 0,
     "slave_market_sale_evidence_1590s": null,
+    "captured_Portuguese_ship_carrying_enslaved_Africans_in_1592_attested": true,
     "San_Juan_1598_English_present_temporarily_not_year_end": true,
     "Rathlin_1575_not_chapter11": true,
     "Bingham_1600s_scorched_earth_not_automatically_1590s": true,

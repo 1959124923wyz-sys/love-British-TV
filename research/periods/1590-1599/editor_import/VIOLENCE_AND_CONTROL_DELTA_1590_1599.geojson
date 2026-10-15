@@ -1,11 +1,11 @@
 {
   "type": "FeatureCollection",
   "schema": "ch11_control_and_violence_delta_v1",
-  "count": 31,
+  "count": 35,
   "metadata": {
     "historical_occupation_polygons": 0,
-    "modern_point_features": 8,
-    "unlocated_events": 23,
+    "modern_point_features": 10,
+    "unlocated_events": 25,
     "not_for_automatic_colonial_fill": true
   },
   "features": [
@@ -106,11 +106,39 @@
     },
     {
       "type": "Feature",
+      "id": "ch11-change-ch11-cavendish-santos-christmas-sack",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.33361,
+          -23.96083
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-cavendish-santos-christmas-sack",
+        "atlas_event_id": "1590S-E005",
+        "name": "英军圣诞节趁礼拜袭占巴西桑托斯并掠夺",
+        "year": 1591,
+        "map_layer": "events",
+        "source_ids": [
+          "C11-S43"
+        ],
+        "kind": "privateering_plunder",
+        "controller_area_polygon": null,
+        "historical_boundary_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "spatial_qualification": "modern_named_place",
+        "foreign_sovereignty_transferred_by_raid": false
+      }
+    },
+    {
+      "type": "Feature",
       "id": "ch11-change-ch11-madre-de-deus-captured",
       "geometry": null,
       "properties": {
         "stable_id": "ch11-madre-de-deus-captured",
-        "atlas_event_id": "1590S-E005",
+        "atlas_event_id": "1590S-E006",
         "name": "英格兰私掠船劫获葡萄牙商船圣母号",
         "year": 1592,
         "map_layer": "events",
@@ -130,11 +158,34 @@
     },
     {
       "type": "Feature",
+      "id": "ch11-change-ch11-cavendish-slave-ship-interception",
+      "geometry": null,
+      "properties": {
+        "stable_id": "ch11-cavendish-slave-ship-interception",
+        "atlas_event_id": "1590S-E007",
+        "name": "英格兰私掠者截获载有被奴役非洲人的葡萄牙船",
+        "year": 1592,
+        "map_layer": "events",
+        "source_ids": [
+          "C11-S41",
+          "C11-S42"
+        ],
+        "kind": "forcible_capture_of_already_enslaved_Africans_not_proven_sale",
+        "controller_area_polygon": null,
+        "historical_boundary_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "spatial_qualification": "unlocated_historic_action",
+        "foreign_sovereignty_transferred_by_raid": false
+      }
+    },
+    {
+      "type": "Feature",
       "id": "ch11-change-ch11-blind-oconor-roe-executed",
       "geometry": null,
       "properties": {
         "stable_id": "ch11-blind-oconor-roe-executed",
-        "atlas_event_id": "1590S-E006",
+        "atlas_event_id": "1590S-E008",
         "name": "英王当局处决年迈失明的奥康纳·罗伊",
         "year": 1592,
         "map_layer": "events",
@@ -152,11 +203,33 @@
     },
     {
       "type": "Feature",
+      "id": "ch11-change-ch11-cavendish-sao-vicente-burned",
+      "geometry": null,
+      "properties": {
+        "stable_id": "ch11-cavendish-sao-vicente-burned",
+        "atlas_event_id": "1590S-E009",
+        "name": "英军卡文迪什舰队撤离桑托斯后焚掠圣维森特",
+        "year": 1592,
+        "map_layer": "events",
+        "source_ids": [
+          "C11-S43"
+        ],
+        "kind": "military_attack",
+        "controller_area_polygon": null,
+        "historical_boundary_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "spatial_qualification": "unlocated_historic_action",
+        "foreign_sovereignty_transferred_by_raid": false
+      }
+    },
+    {
+      "type": "Feature",
       "id": "ch11-change-ch11-fermanagh-sheriff-imposition",
       "geometry": null,
       "properties": {
         "stable_id": "ch11-fermanagh-sheriff-imposition",
-        "atlas_event_id": "1590S-E007",
+        "atlas_event_id": "1590S-E010",
         "name": "英王向弗马纳派驻司法官，威胁马圭尔领地",
         "year": 1593,
         "map_layer": "events",
@@ -179,7 +252,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-enniskillen-english-assault",
-        "atlas_event_id": "1590S-E008",
+        "atlas_event_id": "1590S-E011",
         "name": "英军夺取恩尼斯基林城堡并设置驻军",
         "year": 1594,
         "map_layer": "events",
@@ -201,7 +274,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-enniskillen-blockade",
-        "atlas_event_id": "1590S-E009",
+        "atlas_event_id": "1590S-E012",
         "name": "当地爱尔兰部队围困英军恩尼斯基林据点",
         "year": 1594,
         "map_layer": "events",
@@ -223,7 +296,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-ford-of-biscuits",
-        "atlas_event_id": "1590S-E010",
+        "atlas_event_id": "1590S-E013",
         "name": "饼干渡口战役：爱尔兰军队击溃英军援军",
         "year": 1594,
         "map_layer": "events",
@@ -245,7 +318,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-raleigh-trinidad-berrio-captive",
-        "atlas_event_id": "1590S-E011",
+        "atlas_event_id": "1590S-E014",
         "name": "罗利袭取特立尼达西班牙据点并拘押总督",
         "year": 1595,
         "map_layer": "events",
@@ -268,7 +341,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-blackwater-fort-irish-recapture",
-        "atlas_event_id": "1590S-E012",
+        "atlas_event_id": "1590S-E015",
         "name": "奥尼尔盟军攻取布莱克沃特英军堡垒",
         "year": 1595,
         "map_layer": "events",
@@ -287,11 +360,39 @@
     },
     {
       "type": "Feature",
+      "id": "ch11-change-ch11-lancaster-recife-plantation-loot",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -34.88111,
+          -8.05389
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-lancaster-recife-plantation-loot",
+        "atlas_event_id": "1590S-E016",
+        "name": "兰开斯特攻占累西腓，掠取糖、巴西木及商船货物",
+        "year": 1595,
+        "map_layer": "events",
+        "source_ids": [
+          "C11-S43"
+        ],
+        "kind": "privateering_plunder",
+        "controller_area_polygon": null,
+        "historical_boundary_verified": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "spatial_qualification": "modern_named_place",
+        "foreign_sovereignty_transferred_by_raid": false
+      }
+    },
+    {
+      "type": "Feature",
       "id": "ch11-change-ch11-enniskillen-english-garrison-killed",
       "geometry": null,
       "properties": {
         "stable_id": "ch11-enniskillen-english-garrison-killed",
-        "atlas_event_id": "1590S-E013",
+        "atlas_event_id": "1590S-E017",
         "name": "马圭尔重新夺取恩尼斯基林，驻守英军遭杀害",
         "year": 1595,
         "map_layer": "events",
@@ -313,7 +414,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-clontibret-english-defeat",
-        "atlas_event_id": "1590S-E014",
+        "atlas_event_id": "1590S-E018",
         "name": "克朗蒂布雷特战役：奥尼尔部重创英军",
         "year": 1595,
         "map_layer": "events",
@@ -342,7 +443,7 @@
       },
       "properties": {
         "stable_id": "ch11-drake-san-juan-attack-failed",
-        "atlas_event_id": "1590S-E015",
+        "atlas_event_id": "1590S-E019",
         "name": "德雷克舰队进攻圣胡安受挫",
         "year": 1595,
         "map_layer": "events",
@@ -366,7 +467,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-faro-bishops-books-seized",
-        "atlas_event_id": "1590S-E016",
+        "atlas_event_id": "1590S-E020",
         "name": "加的斯远征英军掠夺法鲁主教藏书",
         "year": 1596,
         "map_layer": "events",
@@ -394,7 +495,7 @@
       },
       "properties": {
         "stable_id": "ch11-drake-panama-expedition-failed",
-        "atlas_event_id": "1590S-E017",
+        "atlas_event_id": "1590S-E021",
         "name": "德雷克沿巴拿马沿岸进攻受挫并撤退",
         "year": 1596,
         "map_layer": "events",
@@ -423,7 +524,7 @@
       },
       "properties": {
         "stable_id": "ch11-cadiz-anglo-dutch-sack",
-        "atlas_event_id": "1590S-E018",
+        "atlas_event_id": "1590S-E022",
         "name": "英荷联合舰队攻取加的斯，洗劫港市",
         "year": 1596,
         "map_layer": "events",
@@ -447,7 +548,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-odonnell-raids-athenry",
-        "atlas_event_id": "1590S-E019",
+        "atlas_event_id": "1590S-E023",
         "name": "奥唐奈部掠夺阿森赖及英方盟友财物",
         "year": 1597,
         "map_layer": "events",
@@ -469,7 +570,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-blackwater-armagh-english-blockade",
-        "atlas_event_id": "1590S-E020",
+        "atlas_event_id": "1590S-E024",
         "name": "奥尼尔部围困阿马英军，牵制王室在西部的驻军",
         "year": 1597,
         "map_layer": "events",
@@ -497,7 +598,7 @@
       },
       "properties": {
         "stable_id": "ch11-dublin-powder-explosion",
-        "atlas_event_id": "1590S-E021",
+        "atlas_event_id": "1590S-E025",
         "name": "都柏林英王军火火药意外爆炸并波及民宅",
         "year": 1597,
         "map_layer": "events",
@@ -519,7 +620,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-munster-plantation-revolt",
-        "atlas_event_id": "1590S-E022",
+        "atlas_event_id": "1590S-E026",
         "name": "战事扩展至芒斯特，英国殖民庄园遭当地反抗",
         "year": 1598,
         "map_layer": "events",
@@ -548,7 +649,7 @@
       },
       "properties": {
         "stable_id": "ch11-cumberland-san-juan-occupied",
-        "atlas_event_id": "1590S-E023",
+        "atlas_event_id": "1590S-E027",
         "name": "坎伯兰伯爵攻占圣胡安，英军短暂驻城",
         "year": 1598,
         "map_layer": "events",
@@ -571,7 +672,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-portmore-english-fort-abandoned",
-        "atlas_event_id": "1590S-E024",
+        "atlas_event_id": "1590S-E028",
         "name": "黄渡口战后英军撤离波特莫尔要塞",
         "year": 1598,
         "map_layer": "events",
@@ -593,7 +694,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-yellow-ford-english-defeat",
-        "atlas_event_id": "1590S-E025",
+        "atlas_event_id": "1590S-E029",
         "name": "黄渡口战役：爱尔兰联军击溃英王远征军",
         "year": 1598,
         "map_layer": "events",
@@ -623,7 +724,7 @@
       },
       "properties": {
         "stable_id": "ch11-cahir-castle-surrender",
-        "atlas_event_id": "1590S-E026",
+        "atlas_event_id": "1590S-E030",
         "name": "埃塞克斯动用火炮迫使卡希尔城堡投降",
         "year": 1599,
         "map_layer": "events",
@@ -651,7 +752,7 @@
       },
       "properties": {
         "stable_id": "ch11-essex-ireland-army-garrisons",
-        "atlas_event_id": "1590S-E027",
+        "atlas_event_id": "1590S-E031",
         "name": "埃塞克斯率大军到爱尔兰，沿线扩张驻军网络",
         "year": 1599,
         "map_layer": "events",
@@ -674,7 +775,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-curlew-english-army-ambush",
-        "atlas_event_id": "1590S-E028",
+        "atlas_event_id": "1590S-E032",
         "name": "柯鲁山隘战役：英军克利福德部遭伏击",
         "year": 1599,
         "map_layer": "events",
@@ -697,7 +798,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-essex-oneill-truce-exit",
-        "atlas_event_id": "1590S-E029",
+        "atlas_event_id": "1590S-E033",
         "name": "埃塞克斯与奥尼尔停战后擅自离开爱尔兰",
         "year": 1599,
         "map_layer": "events",
@@ -720,7 +821,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-castlemaine-english-ward-lost",
-        "atlas_event_id": "1590S-E030",
+        "atlas_event_id": "1590S-E034",
         "name": "卡斯尔梅因英军驻堡粮尽，遭地方军收复",
         "year": 1599,
         "map_layer": "events",
@@ -742,7 +843,7 @@
       "geometry": null,
       "properties": {
         "stable_id": "ch11-lough-gur-ward-lost",
-        "atlas_event_id": "1590S-E031",
+        "atlas_event_id": "1590S-E035",
         "name": "洛赫格尔英军驻堡亦被当地军队夺取",
         "year": 1599,
         "map_layer": "events",
