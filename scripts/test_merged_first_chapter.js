@@ -34,8 +34,8 @@ assert.ok(js.includes('next>=1510?atlasThird:atlasFirstMerged'),'Browser still d
 assert.ok(js.includes('c.start<=d+9&&c.end>=d'),'1490/1500 navigation must point at first merged chapter');
 assert.ok(js.includes('setYear(Math.max(decade,chapter.start))'),'1500 decade must not jump back to 1497');
 assert.ok(js.includes('renderedChapters.has(chapter.id)'),'Duplicate first chapter not suppressed');
-assert.ok(js.includes("occupiedSlots>1?' spans-decades'"),'Spanning card lost grid width');
+assert.ok(js.includes('firstVisibleDecade=browsingDecade===1490?1500:browsingDecade'),'Early-year cards must keep a fixed five-slot layout');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),css=fs.readFileSync(path.join(root,'css/dark-atlas-v2.css'),'utf8');
 assert.ok(html.includes('timeline-v1800-merged-ch1ch2-singlecard'),'Fresh browsers need revised JS/CSS URL');
-assert.ok(css.includes('.chapter-segment.spans-decades{grid-column:span 2}'),'First chapter must occupy two decade columns');
+assert.ok(!css.includes('.chapter-segment.spans-decades{grid-column:span 2}'),'Variable first-chapter width must remain disabled');
 console.log('PASS merge: 10 chapters, preserved all 28 early events/63 sources, year-local first chapter chronology');

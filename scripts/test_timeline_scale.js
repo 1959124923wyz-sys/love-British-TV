@@ -32,6 +32,7 @@ assert.match(app,/function browseDecade\(decade\)/);
 assert.match(app,/function browseCentury\(century\)/);
 assert.match(app,/function renderTimelineNavigation\(\)/);
 assert.match(app,/decades=Array\.from\(\{length:5\}/);
+assert.ok(app.includes('firstVisibleDecade=browsingDecade===1490?1500:browsingDecade'),'Merged chapter must have stable five-slot width');
 assert.match(app,/const halfCenturyPageForYear=y=>y<1500\?1490:Math\.floor\(y\/50\)\*50/);
 assert.match(app,/current===1500&&direction<0\?1490/);
 const decadeFn=app.match(/const decadeForYear=y=>[^;]+;/)?.[0];
