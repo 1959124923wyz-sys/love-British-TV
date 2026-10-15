@@ -2105,23 +2105,25 @@
       "start_year": 1549,
       "end_year": 1549,
       "visible_from": 1549,
-      "date_label": "1549年",
-      "name": "诺福克凯特起义遭王室军队镇压",
+      "date_label": "1549年8月27日",
+      "name": "杜辛代尔决战：王室军击败凯特起义者，造成大量阵亡",
       "category": "domestic_repression",
       "icon_code": "REP",
       "lat": 52.631,
       "lng": 1.366,
-      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geo_precision": "modern_candidate_dussindale_valley_reference_not_verified_battlefield_boundary",
       "geography_label": "现代具名地点位置，仅供历史定位",
-      "description": "1549年8月，王室军队在诺里奇东侧的杜辛代尔击败凯特起义者，起义造成大量人员伤亡。这是英格兰王室在国内的军事镇压，不计殖民征服面积。",
-      "short_description": "1549年8月，王室军队在诺里奇东侧的杜辛代尔击败凯特起义者，起义造成大量人员伤亡。这是英格兰王室在国内的军事镇压，不计殖民征服面积。",
+      "description": "1549年8月27日沃里克伯爵王室军在杜辛代尔战胜凯特的起义军，研究文献记载约2,000—3,000名起义者阵亡；该数字为历史叙述估计，不能全部归类为被处决平民。杜辛代尔谷地位置已有考古地理研究，但战斗确切范围和逐人死亡位置未确认。",
+      "short_description": "1549年8月27日杜辛代尔决战，王室军击溃起义者；约两三千人阵亡属史籍估数，战场外廓未证实。",
       "source_ids": [
-        "EN-NORFOLK-HER-DUSSINDALE"
+        "EN-NORFOLK-HER-DUSSINDALE",
+        "EN-HODGKINS-DUSSINDALE-2015",
+        "EN-CARTER-DUSSINDALE-1983"
       ],
       "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
       "significance": {
         "level": 3,
-        "rationale": "有来源的军事行动、镇压、掠夺或抵抗；补全既有地图地理叙事",
+        "rationale": "诺福克反圈地起义被王室军队镇压的决定性战役，战场候选谷地有地形回溯研究，但伤亡范围和实控疆界均未实测",
         "review_status": "source_checked_provisional_geocoding"
       },
       "colonial_profit": null,
@@ -2195,6 +2197,243 @@
       "actual_English_territory_created": false,
       "historical_control_boundary_verified": false,
       "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1549-NORFOLK-WYMONDHAM",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年7月8日前后",
+      "name": "怀蒙德姆：圈地争议引发农民抗议",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 52.5765,
+      "lng": 1.1179,
+      "geo_precision": "modern_town_reference_non_cadastral",
+      "geography_label": "现代地名／遗址参考坐标，不代表1549年军阵、死伤范围或土地所有权外界",
+      "description": "怀蒙德姆附近居民因圈占公共地及经济不满拆除围栏。罗伯特·凯特加入并领导抗议，随后队伍前往诺里奇。此点是现代怀蒙德姆城镇中心，无法复原1549年被拆围栏的田块，更不能写成英王军焚村。",
+      "short_description": "怀蒙德姆附近居民因圈占公共地及经济不满拆除围栏。罗伯特·凯特加入并领导抗议，随后队伍前往诺里奇。此点是现代怀蒙德姆城镇中心，无法复原1549年被拆围栏的田块，更不能写成英王军焚村。",
+      "source_ids": [
+        "EN-NCL-KETT-COMMONS-1549"
+      ],
+      "certainty": "historical_event_sourced_geographical_anchor_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "对诺福克反圈地起义、王室镇压和反抗后果作不同地点的具名叙事；坐标只作现代参考",
+        "review_status": "source_checked_needs_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_modern_site_reference_not_1549_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1549-NORFOLK-MOUSEHOLD",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年7月12日起",
+      "name": "Mousehold Heath：凯特义军营地与反圈地诉求",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 52.63286,
+      "lng": 1.31169,
+      "geo_precision": "modern_chapel_area_reference_historic_camp_spatial_extent_unknown",
+      "geography_label": "现代地名／遗址参考坐标，不代表1549年军阵、死伤范围或土地所有权外界",
+      "description": "1549年7月起，凯特支持者在诺里奇东北侧的Mousehold Heath建立营地与代表会议，提出包括反圈地在内的诉求。标注凯特高地圣米迦勒礼拜堂遗址附近，不能将今天的公园边界当作1549年大营实测边界。",
+      "short_description": "1549年7月起，凯特支持者在诺里奇东北侧的Mousehold Heath建立营地与代表会议，提出包括反圈地在内的诉求。标注凯特高地圣米迦勒礼拜堂遗址附近，不能将今天的公园边界当作1549年大营实测边界。",
+      "source_ids": [
+        "EN-NCL-KETT-COMMONS-1549",
+        "EN-HODGKINS-DUSSINDALE-2015"
+      ],
+      "certainty": "historical_event_sourced_geographical_anchor_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "对诺福克反圈地起义、王室镇压和反抗后果作不同地点的具名叙事；坐标只作现代参考",
+        "review_status": "source_checked_needs_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_modern_site_reference_not_1549_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1549-NORFOLK-NORWICH-REBELS",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年7月下旬",
+      "name": "诺里奇：起义者攻入并控制城市，击退首支王室军队",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 52.629,
+      "lng": 1.3,
+      "geo_precision": "modern_norwich_urban_reference_not_city_control_polygon",
+      "geography_label": "现代地名／遗址参考坐标，不代表1549年军阵、死伤范围或土地所有权外界",
+      "description": "7月下旬起义者攻入诺里奇，并击退北安普顿侯爵率领的初期王室镇压军。不同史学叙述对攻城精确日期存在差别，因此按7月下旬记录。现代城内参考点不表示城内每座建筑一直由同一方控制。",
+      "short_description": "7月下旬起义者攻入诺里奇，并击退北安普顿侯爵率领的初期王室镇压军。不同史学叙述对攻城精确日期存在差别，因此按7月下旬记录。现代城内参考点不表示城内每座建筑一直由同一方控制。",
+      "source_ids": [
+        "EN-NCL-KETT-COMMONS-1549",
+        "EN-HODGKINS-DUSSINDALE-2015"
+      ],
+      "certainty": "historical_event_sourced_geographical_anchor_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "对诺福克反圈地起义、王室镇压和反抗后果作不同地点的具名叙事；坐标只作现代参考",
+        "review_status": "source_checked_needs_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_modern_site_reference_not_1549_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1549-NORFOLK-WARWICK-NORWICH",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年8月24—26日",
+      "name": "诺里奇巷战：沃里克王室军夺回城区",
+      "category": "domestic_repression",
+      "icon_code": "REP",
+      "lat": 52.6329,
+      "lng": 1.3098,
+      "geo_precision": "modern_east_norwich_reference_gate_exact_coordinates_unverified",
+      "geography_label": "现代地名／遗址参考坐标，不代表1549年军阵、死伤范围或土地所有权外界",
+      "description": "沃里克伯爵率王室军抵达诺里奇后，围绕城门、桥梁与街道同凯特支持者连续交战，迫使其撤出城区；遭焚城门和谷仓的部分破坏则由当时起义者造成，不能全归王室军。地图标点只代表诺里奇东部门户附近城市战场，非街区实测战斗界线。",
+      "short_description": "沃里克伯爵率王室军抵达诺里奇后，围绕城门、桥梁与街道同凯特支持者连续交战，迫使其撤出城区；遭焚城门和谷仓的部分破坏则由当时起义者造成，不能全归王室军。地图标点只代表诺里奇东部门户附近城市战场，非街区实测战斗界线。",
+      "source_ids": [
+        "EN-HODGKINS-DUSSINDALE-2015",
+        "EN-CARTER-DUSSINDALE-1983"
+      ],
+      "certainty": "historical_event_sourced_geographical_anchor_modern_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "对诺福克反圈地起义、王室镇压和反抗后果作不同地点的具名叙事；坐标只作现代参考",
+        "review_status": "source_checked_needs_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_modern_site_reference_not_1549_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1549-NORFOLK-EXECUTIONS",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年8月28日前后",
+      "name": "诺里奇：杜辛代尔战后俘虏遭处决",
+      "category": "domestic_repression",
+      "icon_code": "REP",
+      "lat": 52.6355,
+      "lng": 1.2974,
+      "geo_precision": "modern_norwich_northern_district_reference_no_documented_execution_coordinate",
+      "geography_label": "现代地名／遗址参考坐标，不代表1549年军阵、死伤范围或土地所有权外界",
+      "description": "王室军在杜辛代尔战胜起义者后，于诺里奇北门附近及营地相关地点处决部分被俘人员。受害人数缺乏一致可靠清点；此现代城市定位点不主张为确切绞刑架或所有死亡地点，更不把战场阵亡一概算作处决。",
+      "short_description": "王室军在杜辛代尔战胜起义者后，于诺里奇北门附近及营地相关地点处决部分被俘人员。受害人数缺乏一致可靠清点；此现代城市定位点不主张为确切绞刑架或所有死亡地点，更不把战场阵亡一概算作处决。",
+      "source_ids": [
+        "EN-NRO-KETT-1549",
+        "EN-HODGKINS-DUSSINDALE-2015"
+      ],
+      "certainty": "historical_event_sourced_geographical_anchor_modern_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "对诺福克反圈地起义、王室镇压和反抗后果作不同地点的具名叙事；坐标只作现代参考",
+        "review_status": "source_checked_needs_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_modern_site_reference_not_1549_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1549-NORFOLK-ROBERT-KETT-EXEC",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年12月7日",
+      "name": "诺里奇城堡：罗伯特·凯特被王室处决",
+      "category": "domestic_repression",
+      "icon_code": "REP",
+      "lat": 52.62862,
+      "lng": 1.29641,
+      "geo_precision": "modern_confirmed_norwich_castle_site_not_exact_1549_execution_gallows",
+      "geography_label": "现代地名／遗址参考坐标，不代表1549年军阵、死伤范围或土地所有权外界",
+      "description": "起义领袖罗伯特·凯特被逮捕、审判并于1549年12月7日在诺里奇城堡处决。此点采用现存城堡现代位置，确切1549年悬挂位置未作历史测绘。",
+      "short_description": "起义领袖罗伯特·凯特被逮捕、审判并于1549年12月7日在诺里奇城堡处决。此点采用现存城堡现代位置，确切1549年悬挂位置未作历史测绘。",
+      "source_ids": [
+        "EN-NORWICH-CASTLE-1549",
+        "EN-NRO-KETT-1549"
+      ],
+      "certainty": "historical_event_sourced_geographical_anchor_modern_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "对诺福克反圈地起义、王室镇压和反抗后果作不同地点的具名叙事；坐标只作现代参考",
+        "review_status": "source_checked_needs_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_modern_site_reference_not_1549_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1549-NORFOLK-WILLIAM-KETT-EXEC",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年12月7日",
+      "name": "怀蒙德姆修道院：威廉·凯特遭处决",
+      "category": "domestic_repression",
+      "icon_code": "REP",
+      "lat": 52.56967,
+      "lng": 1.10831,
+      "geo_precision": "modern_abbey_location_execution_tower_unverified",
+      "geography_label": "现代地名／遗址参考坐标，不代表1549年军阵、死伤范围或土地所有权外界",
+      "description": "威廉·凯特在诺福克起义失败后遭王室处决，历史叙述将其绞刑地点归于怀蒙德姆修道院钟楼。现代建筑坐标来自修道院官方位置，不是经考古确认的1549年绞刑架原位。",
+      "short_description": "威廉·凯特在诺福克起义失败后遭王室处决，历史叙述将其绞刑地点归于怀蒙德姆修道院钟楼。现代建筑坐标来自修道院官方位置，不是经考古确认的1549年绞刑架原位。",
+      "source_ids": [
+        "EN-NCL-KETT-COMMONS-1549",
+        "EN-WYMONDHAM-ABBEY-COORDS"
+      ],
+      "certainty": "historical_event_sourced_geographical_anchor_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "对诺福克反圈地起义、王室镇压和反抗后果作不同地点的具名叙事；坐标只作现代参考",
+        "review_status": "source_checked_needs_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_modern_site_reference_not_1549_survey",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
     }
@@ -3923,6 +4162,54 @@
       "url": "https://historicengland.org.uk/listing/heritage-gateway/results/record/c39bc47e-3b72-4a06-9863-681629e456a2/MDV12578",
       "kind": "official_local_historic_environment_record",
       "precision_warning": "Modern HER register details battlefield setting; reuse of mapped boundary not licensed or attempted."
+    },
+    {
+      "id": "EN-NCL-KETT-COMMONS-1549",
+      "title": "Kett's Rebellion 1549: common land, Mousehold, Wymondham and Norwich",
+      "publisher": "Newcastle University — Wastes and Strays research",
+      "url": "https://research.ncl.ac.uk/wastesandstrays/wastesandstraysblog/ketts-rebellion/",
+      "kind": "university_research_history",
+      "precision_warning": "Wymondham and Mousehold named localities; July 1549 camp and enclosure plots not surveyed."
+    },
+    {
+      "id": "EN-HODGKINS-DUSSINDALE-2015",
+      "title": "Reconstructing Rebellion: Digital Terrain Analysis of the Battle of Dussindale (1549)",
+      "publisher": "Alexander Hodgkins, Internet Archaeology 38 (2015), DOI 10.11141/ia.38.3",
+      "url": "https://intarch.ac.uk/journal/issue38/hodgkins_index.html",
+      "kind": "peer_reviewed_geospatial_battlefield_study",
+      "precision_warning": "The battle valley is hypothesized from map regression; even archaeological reconstruction cannot establish a historically surveyed killed/occupied polygon."
+    },
+    {
+      "id": "EN-CARTER-DUSSINDALE-1983",
+      "title": "The Site of Dussindale, Norfolk Archaeology 39 (1983), pp. 54–62",
+      "publisher": "Anne Carter, Norfolk Archaeology — Archaeology Data Service",
+      "url": "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-3749-1/dissemination/pdf/vol_39/NorfolkArchaeology39_P54_P62.pdf",
+      "kind": "archaeological_topographic_study",
+      "precision_warning": "Historic valley to Great Plumstead/Postwick/Thorpe is located but precise 1549 fighting perimeter cannot be established."
+    },
+    {
+      "id": "EN-NRO-KETT-1549",
+      "title": "Lord Willoughby and ‘the time of rebellion’",
+      "publisher": "Norfolk Record Office (2018)",
+      "url": "https://norfolkrecordofficeblog.org/2018/09/17/lord-willoughby-and-the-time-of-rebellion/",
+      "kind": "regional_archival_essay",
+      "precision_warning": "After-battle executions are reported; avoid attributing every field casualty to intentional civilian killing."
+    },
+    {
+      "id": "EN-NORWICH-CASTLE-1549",
+      "title": "Norwich Castle, Kett's Rebellion and the 7 December 1549 execution",
+      "publisher": "Norfolk County Council / Visit Norwich public history",
+      "url": "https://www.visitnorwich.co.uk/service/robert-kett/",
+      "kind": "local_heritage_interpretation",
+      "precision_warning": "Modern Norwich Castle coordinate is confirmed monument reference, not exact 1549 gallows location."
+    },
+    {
+      "id": "EN-WYMONDHAM-ABBEY-COORDS",
+      "title": "Visiting Wymondham Abbey: site coordinates (52.56967, 1.10831)",
+      "publisher": "Wymondham Abbey",
+      "url": "https://www.wymondhamabbey.org.uk/visiting/",
+      "kind": "official_monument_location",
+      "precision_warning": "Modern abbey coordinate is site center; hanging position on abbey tower is not surveyed in this record."
     }
   ],
   "routes": [],
