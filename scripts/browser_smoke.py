@@ -417,6 +417,19 @@ try:
            sidebarOverflow:document.querySelector('#workspace').classList.contains('sidebar-collapsed')?0:legend.scrollWidth-legend.clientWidth,
            visibleSwitches:document.querySelectorAll('#mapLayerSwitch input:checked').length};
         """)
+        if dims['sidebarOverflow']>2:
+            debug=driver.execute_script("""
+              const legend=document.getElementById('mapModeHelp'),
+                    rect=legend.getBoundingClientRect();
+              return {width:rect.width,scrollWidth:legend.scrollWidth,
+                offenders:[...legend.querySelectorAll('*')].map(el=>{
+                  const r=el.getBoundingClientRect(),style=getComputedStyle(el);
+                  return {tag:el.tagName,cls:el.className?.baseVal||el.className,
+                    name:(el.textContent||'').trim().slice(0,42),width:r.width,
+                    right:r.right,whiteSpace:style.whiteSpace,scroll:el.scrollWidth};
+                }).filter(r=>r.right>rect.right+2||r.width>rect.width+2).slice(0,15)};
+            """)
+            print('SIDEBAR_OVERFLOW',w,json.dumps(debug,ensure_ascii=False),flush=True)
         assert dims['visibleSwitches']==2 and dims['switchWidth']>=125 and dims['swRight']<=dims['viewport']-3 and not dims['overlapTitle'] and not dims['overlapTimeline'] and dims['sidebarOverflow']<=2,f"PR39 compact-layer UI collided at {w}px: {dims}"
     driver.set_window_size(1620,1040)
     driver.execute_script("document.querySelector('#mapModeHelp').open=false")
