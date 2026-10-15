@@ -12,7 +12,7 @@ const app=read('app.js');
 new vm.Script(app,{filename:'app.js'});
 const source=app.slice(app.indexOf('const historicControllerPalette='),app.indexOf('function openTerritoryDossier('));
 assert.ok(source.startsWith('const historicControllerPalette='));
-const {controllerAtYear,historicControllerPalette}=vm.runInNewContext('(()=>{'+source+'return {controllerAtYear,historicControllerPalette};})()');
+const {controllerAtYear,historicControllerPalette,historicAreaDescription}=vm.runInNewContext('(()=>{'+source+'return {controllerAtYear,historicControllerPalette,historicAreaDescription};})()');
 assert.equal(Object.keys(historicControllerPalette).length,2);
 assert.equal(historicControllerPalette.english_crown.stroke,'#9e6cde');
 assert.equal(historicControllerPalette.french_crown.stroke,'#65c9bc');
@@ -58,6 +58,12 @@ for(const [a,b] of decades){
   if(a>=1560)assert.ok(!/english/i.test(p.historical_state||''),'French years must not carry English active-state metadata');
  }
  if(a===1550){
+  for(const p of [area[0].properties,...city.map(f=>f.properties)]){
+   assert.ok(!p.name.includes('1558'),'Early-year labels must not leak future 1558 reconquest');
+   assert.ok(!historicAreaDescription(p,1557).includes('1558'),'1557 public description must not announce a future event');
+   assert.ok(historicAreaDescription(p,1557).includes('英格兰王室'));
+   assert.ok(historicAreaDescription(p,1558).includes('法兰西王室'));
+  }
   assert.equal(area[0].properties.relation_type,'crown_governance_transition');
   for(const p of [area[0].properties,...city.map(f=>f.properties)]){
    assert.equal(controllerAtYear(p,1557).controller_group,'english_crown');
