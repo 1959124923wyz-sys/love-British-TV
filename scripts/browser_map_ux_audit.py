@@ -95,8 +95,24 @@ def run_case(label, width, height, mobile):
         selected.click()
         wait.until(lambda d: d.execute_script(
             "return document.querySelector('#dossierBody .dossier-map-action button')!==null"))
-        assert js("document.querySelector('#workspace').classList.contains('sidebar-collapsed')") == mobile, \
-            "Mobile sidebar and dossier overlapped"
+        assert js("document.querySelector('#workspace').classList.contains('sidebar-collapsed')"), \
+            "Dossier must replace the event sidebar on both desktop and mobile"
+        if not mobile:
+            # Match the approved reference screenshot: wide map on the left, a
+            # separate source drawer on the right, no hidden 260px archive gutter.
+            wait.until(lambda d: d.execute_script("""
+                const m=document.getElementById('map').getBoundingClientRect(),
+                      d=document.getElementById('dossier').getBoundingClientRect();
+                return m.left<=3 && d.width>=320 && m.right<=d.left+3;
+            """))
+            pane = state()
+            assert pane["timePanel"]["right"] <= pane["dossier"]["x"]+4, \
+                "Bottom year scrubber overlaps the source drawer"
+            assert driver.find_element(By.ID, "mobileEventsToggle").is_displayed(), \
+                "Archive reopening control missing in two-pane desktop view"
+            assert not js("document.getElementById('milestoneDots')"), \
+                "Removed yellow milestone row unexpectedly returned"
+
         after = js("window.atlasReadViewport()")
         assert before["zoom"] == after["zoom"], "Single-click event unexpectedly zoomed"
         locate = driver.find_element(By.CSS_SELECTOR, "#dossierBody [data-locate-event]")
@@ -133,6 +149,15 @@ def run_case(label, width, height, mobile):
             assert not js("document.querySelector('#workspace').classList.contains('dossier-collapsed')"), \
                 "Desktop locate must not hide the dossier"
         driver.save_screenshot(str(OUT / f"{label}-located-{event_id}.png"))
+        if not mobile:
+            driver.find_element(By.ID, "mobileEventsToggle").click()
+            wait.until(lambda d: d.execute_script("""
+                const w=document.getElementById('workspace');
+                return w.classList.contains('dossier-collapsed') && !w.classList.contains('sidebar-collapsed');
+            """))
+            assert js("document.querySelector('#bigYear').textContent") == "1579", \
+                "Returning to event sidebar changed the selected year"
+            driver.save_screenshot(str(OUT / f"{label}-archive-restored.png"))
         # App's top-right historical category switches must remain available.
         assert driver.find_element(By.ID, "mapLayerTerritory").is_selected()
         assert driver.find_element(By.ID, "mapLayerEvents").is_selected()
