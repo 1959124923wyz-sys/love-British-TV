@@ -745,6 +745,49 @@ function renderNinthControlSites(){
  }
 }
 // Date-gated control symbols for documented 1580s Crown and colonial localities.
+// Chapter 11: precomputed historical YEAR-END local control points.
+function renderEleventhControlCores(){
+ groups.eleventhCores.clearLayers();groups.eleventhHits.clearLayers();
+ if(!eleventhControlCores||year<1590||year>1599||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
+ for(const f of eleventhControlCores.features||[]){
+  const p=f.properties||{},c=f.geometry?.coordinates;
+  if(f.geometry?.type!=='Point'||!c||p.fill_authorized!==false||!p.year_end_visible?.includes(year))continue;
+  const center=[c[1],c[0]],radius=Math.max(7,Math.min(12,Number(p.screen_radius_px)||8));
+  const open=e=>{
+   if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   const pl=findPlaceAcrossChapters(p.stable_id);
+   if(pl)openDossier(pl,'place');else openTerritoryDossier(f,'historic');
+  };
+  L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius,
+   color:'#ac84e3',weight:3,dashArray:'5 5',fill:true,fillColor:'#a57adc',fillOpacity:.17,
+   bubblingMouseEvents:false,className:'atlas-eleventh-core'})
+  .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">当年年末据点 · 查看来源</div>',
+   {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+  .on('click',open).addTo(groups.eleventhCores);
+  L.circleMarker(center,{renderer:garrisonHitRenderer,pane:'garrisonHitPane',radius:radius+8,
+   color:'#a57adc',weight:7,opacity:.018,fill:false,bubblingMouseEvents:false,
+   className:'atlas-eleventh-core-hit'}).on('click',open).addTo(groups.eleventhHits);
+ }
+}
+// Two studied geographic envelopes: very light fill and visibly uncertain dashed edge.
+function renderEleventhInfluenceAreas(){
+ groups.eleventhAreas.clearLayers();
+ if(!eleventhInfluenceAreas||year<1590||year>1599||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
+ L.geoJSON(eleventhInfluenceAreas,{renderer:warVicinityRenderer,pane:'warVicinityPane',
+  filter:f=>f.properties?.fill_authorized===false&&f.properties?.valid_years?.includes(year),
+  style:f=>({color:f.properties.stroke_hex||'#9778b5',weight:Number(f.properties.stroke_weight)||2,
+   dashArray:f.properties.stroke_dash_array||'7 6',opacity:.9,fill:true,
+   fillColor:f.properties.fill_hex||'#a185b1',
+   fillOpacity:Math.min(.085,Number(f.properties.fill_opacity)||.055),
+   className:'atlas-eleventh-research-area',bubblingMouseEvents:false}),
+  onEachFeature:(f,layer)=>{
+   const p=f.properties;
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">法律地名及殖民活动参考 · 非实测边界</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+   layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(f,'historic')});
+  }
+ }).addTo(groups.eleventhAreas);
+}
 function renderTenthControlSites(){
  if(!tenthControlSites||year<1580||year>1589||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
  for(const feature of tenthControlSites.features||[]){
@@ -1400,6 +1443,24 @@ async function boot(){
   politicalRelationAreas.features.push(...p10.features);
   frenchCityAreas.features.push(...u10.features);
   tenthControlSites=s10;
+  const [geo11,relation11,urban11,core11,area11]=await Promise.all([
+   fetch('data/territorial-footprints-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/political-relations-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/french-urban-control-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/eleventh-control-cores-1590-1599.geojson',{cache:'no-store'}),
+   fetch('data/eleventh-influence-areas-1590-1599.geojson',{cache:'no-store'})
+  ]);
+  if([geo11,relation11,urban11,core11,area11].some(r=>!r.ok))throw new Error('第十一章地图文件加载失败');
+  const [g11,p11,u11,c11,a11]=await Promise.all([geo11.json(),relation11.json(),urban11.json(),core11.json(),area11.json()]);
+  if(c11.features?.length!==10||a11.features?.length!==2||
+   c11.features.some(f=>f.geometry?.type!=='Point'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null)||
+   a11.features.some(f=>f.geometry?.type!=='Polygon'||f.properties?.fill_authorized!==false||f.properties?.area_sqkm!==null))
+   throw new Error('第十一章未证实的控制地理面不可冒充实测边界');
+  territorialFootprints.features.push(...g11.features);
+  politicalRelationAreas.features.push(...p11.features);
+  frenchCityAreas.features.push(...u11.features);
+  eleventhControlCores=c11;eleventhInfluenceAreas=a11;
+
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
   try{
