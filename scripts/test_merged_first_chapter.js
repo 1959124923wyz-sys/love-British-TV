@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..');
+const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
+const chapter=read('data/atlas-1497-1509.json'),a=read('data/atlas-1497-1500.json'),b=read('data/atlas-1500-1509.json');
+const chapters=read('data/chapters.json').chapters;
+assert.equal(chapters.length,10,'Published table of contents must have exactly 10 chapters');
+assert.deepEqual(chapters.map(c=>[c.start,c.end]),[[1497,1509],[1510,1519],[1520,1529],[1530,1539],[1540,1549],[1550,1559],[1560,1569],[1570,1579],[1580,1589],[1590,1599]]);
+assert.deepEqual(chapters.map(c=>c.number),[1,2,3,4,5,6,7,8,9,10]);
+assert.equal(chapters[0].source,'data/atlas-1497-1509.json');
+assert.deepEqual(chapter.period,{from:1497,to:1509,next:1510});
+assert.equal(chapter.events.length,28);
+assert.equal(chapter.sources.length,63);
+assert.equal(chapter.places.length,6);
+assert.equal(chapter.routes.length,2);
+assert.equal(chapter.colonial_polygons.length,0);
+for(const field of ['events','sources','routes']){
+ const ids=x=>x.map(z=>z.id).sort();
+ assert.deepEqual(ids(chapter[field]),ids([...a[field],...b[field]]),field+' IDs changed during merger');
+ assert.equal(new Set(chapter[field].map(x=>x.id)).size,chapter[field].length,'duplicated '+field);
+}
+const sourceIds=new Set(chapter.sources.map(s=>s.id));
+for(const ev of chapter.events)assert.ok(ev.source_ids?.every(id=>sourceIds.has(id)),ev.id+' lost bibliography');
+for(const place of chapter.places)assert.ok(place.source_ids?.every(id=>sourceIds.has(id)),place.id+' lost source');
+const counts=year=>chapter.events.filter(e=>e.year<=year).length;
+assert.deepEqual([1497,1498,1499,1500,1509].map(counts),[4,6,6,10,28]);
+assert.ok(chapter.events.some(e=>e.id==='patent-1496'&&e.visible_from===1497),'1496 context not preserved');
+assert.ok(chapter.events.some(e=>e.id==='status-1500'),'1500 caveat dropped');
+assert.ok(chapter.origin.original_files_retained);
+const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
+assert.ok(js.includes('atlasFirstMerged=await combinedRes.json()'),'Browser does not load authoritative merged first chapter');
+assert.ok(js.includes('next>=1510?atlasThird:atlasFirstMerged'),'Browser still divides 1497–1509 into separate atlases');
+assert.ok(js.includes('c.start<=d+9&&c.end>=d'),'1490/1500 navigation must point at first merged chapter');
+assert.ok(js.includes('setYear(Math.max(decade,chapter.start))'),'1500 decade must not jump back to 1497');
+console.log('PASS merge: 10 chapters, preserved all 28 early events/63 sources, year-local first chapter chronology');
