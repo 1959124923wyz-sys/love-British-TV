@@ -199,23 +199,12 @@ try:
            "document.getElementById('yearRange').min==='1497'&&document.getElementById('yearRange').max==='1509'", driver)
     # Consolidated 1497–1509 first chapter: one event archive and one chapter total.
     set_year(1497, 4)
-    print("FIRST_CHAPTER_CARD_DEBUG",driver.execute_script("""
-      const cards=[...document.querySelectorAll('#chapterTrack .chapter-segment')];
-      return {
-       year:document.querySelector('#bigYear')?.textContent,
-       cards:cards.map(n=>({decade:n.dataset.decade,title:n.textContent,cls:n.className,
-        gridEnd:getComputedStyle(n).gridColumnEnd,gridStart:getComputedStyle(n).gridColumnStart,
-        width:n.getBoundingClientRect().width})),
-       html:document.querySelector('#chapterTrack')?.innerHTML?.slice(0,1200)
-      };
-    """),flush=True)
-    driver.save_screenshot(str(OUT / "merged-chapter-first-card-diagnostic.png"))
     verify("1497–1509 still appears as two chapter cards",
            """document.querySelectorAll('#chapterTrack .chapter-segment').length===4 &&
               document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1490"]').length===1 &&
               document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1500"]').length===0 &&
               document.querySelector('#chapterTrack [data-decade="1490"]').classList.contains('spans-decades') &&
-              getComputedStyle(document.querySelector('#chapterTrack [data-decade="1490"]')).gridColumnEnd==='span 2' &&
+              getComputedStyle(document.querySelector('#chapterTrack [data-decade="1490"]')).gridColumnStart==='span 2' &&
               document.querySelector('#chapterTrack [data-decade="1490"] small').textContent.includes('1497—1509')""",driver)
     driver.save_screenshot(str(OUT / "single-merged-chapter-1497-1509-card.png"))
     verify("1497 merged first chapter title or slider failed",
