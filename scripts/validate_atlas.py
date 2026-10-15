@@ -236,7 +236,7 @@ relation_types={f["properties"]["political_relation"] for f in relations["featur
 assert {"crown_dependency","autonomous_lordship","scottish_crown_territory","crown_administration_core"} <= relation_types
 assert all(f["geometry"]["type"]=="Point" and f["properties"]["historic_polygon_verified"] is False for f in relations["features"])
 assert "function renderPoliticalRelationAreas()" in app
-assert "if((atlas===atlasEarly&&e.year>1499)||!occurredByYear(e,year))continue;" in app
+assert "if(!occurredByYear(e,year))continue;" in app, "Merged first chapter must use uniform historical year gate"
 assert "year>=1502?'1502':'—'" in app
 assert "year>=1513?'1513':'—'" in app
 assert "fullArchive||occurredByYear(e,year)" in app
