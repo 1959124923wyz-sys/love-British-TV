@@ -1,0 +1,431 @@
+{
+  "type": "FeatureCollection",
+  "name": "Source-qualified Early Tudor war and colonial impact regional guide additions 1544-1575",
+  "metadata": {
+    "status": "researched_schematic_only",
+    "geometry_policy": "Shape is illustrative and cannot measure occupation, damage, hectares, death toll or stable Crown rule; direct source linked in each feature",
+    "subject": "Evidence-backed regional narratives that were missing from existing plotted areas",
+    "feature_count": 6
+  },
+  "features": [
+    {
+      "id": "rough-wooing-leith-edinburgh-raid-1544",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.34,
+              55.9
+            ],
+            [
+              -3.06,
+              55.9
+            ],
+            [
+              -3.04,
+              56.01
+            ],
+            [
+              -3.33,
+              56.01
+            ],
+            [
+              -3.34,
+              55.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "spatial_semantics": "sourced_named_region_reader_orientation_not_measured_affected_or_occupied_boundary",
+        "geometry_provenance": "Hand-drawn illustration around documented named towns/regions; not historical surveyed boundary, military line or destruction perimeter",
+        "name": "1544年利斯—爱丁堡：英军登陆、劫掠与焚城影响区（示意）",
+        "label_type": "英军袭击城市区域（示意）",
+        "zone_type": "english_raid_impact_schematic",
+        "start_year": 1544,
+        "end_year": 1544,
+        "controller_zh": "亨利八世派出的赫特福德伯爵英军",
+        "summary_zh": "1544年5月，英军经福斯湾抵达利斯，进攻爱丁堡并实施焚毁和劫掠。图中仅突出已知两处城市及周边的空间关联，绝不等同于实测被烧毁街区、所有居民受灾范围或英王长期占城；爱丁堡城堡并未因此成为英军稳固驻地。",
+        "related_event_ids": [
+          "1540S-008"
+        ],
+        "source_ids": [
+          "SC-HES-2026-WOOIN"
+        ],
+        "source_urls": [
+          "https://www.scottishhistory.org/on-this-day/the-burning-of-edinburgh-1544/",
+          "https://blog.historicenvironment.scot/2022/07/the-story-of-scotlands-longest-siege/"
+        ],
+        "named_anchors": [
+          "Leith",
+          "Edinburgh"
+        ],
+        "color_role": "raid_red"
+      },
+      "type": "Feature"
+    },
+    {
+      "id": "leix-offaly-crown-plantation-1556-1569",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.08,
+              53.44
+            ],
+            [
+              -7.12,
+              53.52
+            ],
+            [
+              -6.82,
+              53.3
+            ],
+            [
+              -6.79,
+              52.89
+            ],
+            [
+              -7.26,
+              52.77
+            ],
+            [
+              -8.08,
+              52.98
+            ],
+            [
+              -8.08,
+              53.44
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "spatial_semantics": "sourced_named_region_reader_orientation_not_measured_affected_or_occupied_boundary",
+        "geometry_provenance": "Hand-drawn illustration around documented named towns/regions; not historical surveyed boundary, military line or destruction perimeter",
+        "name": "1556年起莱伊什—奥法利：长期殖民安置与抵抗（1599年仍作研究参考）",
+        "label_type": "王室殖民安置与抵抗涉及区",
+        "zone_type": "crown_plantation_policy_region_schematic",
+        "start_year": 1556,
+        "end_year": null,
+        "controller_zh": "英格兰王室殖民官员、驻堡军队；当地O’More和O’Connor领主及居民持续抵抗",
+        "summary_zh": "1556年英王政府在莱伊什与奥法利设郡并推动没收土地和殖民安置，以波特利什、菲利普斯敦等驻军点为支撑。县议会的历史研究记载O’More领主与当地居民在1560—1570年代持续反抗，殖民政策和争夺并未在1569年结束。该浅赭色研究面在地图截至1599年持续显示已建立的殖民制度与其影响的地区参考，并不表示1580—1599年每个村镇都仍在交战，更不表示两郡所有地块被征收、每年均处于英王有效统治之下；1599年是本地图阶段终点，不是殖民史的结束年份。",
+        "related_event_ids": [
+          "1550S-E011",
+          "1550S-E012",
+          "1550S-E013",
+          "1550S-E014",
+          "1550S-E015"
+        ],
+        "source_ids": [
+          "IE-ASKABOUTIRELAND-MIDLANDS-1556",
+          "IE-LAOIS-CONSERVATION-PDF",
+          "C8-S17"
+        ],
+        "source_urls": [
+          "https://laois.ie/sites/default/files/2024-10/Fort-Protector-Conservation-Plan-FINAL-ONLINE-1_2.pdf",
+          "https://www.dib.ie/biography/omore-o-mordha-rory-ruaidhri-og-a6909",
+          "https://www.dib.ie/biography/sidney-sir-henry-a8069"
+        ],
+        "named_anchors": [
+          "Portlaoise (Maryborough)",
+          "Daingean (Philipstown)"
+        ],
+        "color_role": "plantation_ochre",
+        "display_through_year": 1599,
+        "ongoing_at_atlas_end": true,
+        "observed_till_year": 1599,
+        "study_period_note": "1556开始，1569并非结束；1570s continued conflict, 1599 atlas cutoff is not history endpoint"
+      },
+      "type": "Feature"
+    },
+    {
+      "id": "essex-clandeboye-ulster-1573-1575",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.37,
+              54.49
+            ],
+            [
+              -5.74,
+              54.48
+            ],
+            [
+              -5.61,
+              54.71
+            ],
+            [
+              -5.76,
+              54.94
+            ],
+            [
+              -6.3,
+              54.92
+            ],
+            [
+              -6.37,
+              54.49
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "spatial_semantics": "sourced_named_region_reader_orientation_not_measured_affected_or_occupied_boundary",
+        "geometry_provenance": "Hand-drawn illustration around documented named towns/regions; not historical surveyed boundary, military line or destruction perimeter",
+        "name": "1573—1575年克兰德博伊—卡里克弗格斯：埃塞克斯殖民军事行动区（示意）",
+        "label_type": "殖民武装入侵与地方反抗区",
+        "zone_type": "english_invasion_impact_schematic",
+        "start_year": 1573,
+        "end_year": 1575,
+        "controller_zh": "英格兰埃塞克斯伯爵殖民武装及王室军队；奥尼尔与麦克唐纳等地方力量抵抗",
+        "summary_zh": "1573年埃塞克斯在卡里克弗格斯登陆，试图在阿尔斯特东北部建立武装殖民据点。1573—1575年英军与克兰德博伊奥尼尔及麦克唐纳势力长期交战；1574年英方拘捕地方领主布赖恩·奥尼尔并杀害其随从，1575年又对当地发动军事行动。殖民计划最终失败，区域内没有形成稳定、完整的英格兰殖民管治；红色虚线仅指已知活动地理背景，不表示全部城镇同样遭袭。",
+        "related_event_ids": [
+          "1570S-E007",
+          "1570S-E008",
+          "1570S-E009",
+          "1570S-E011"
+        ],
+        "source_ids": [
+          "C9-S03",
+          "C9-S06",
+          "C9-S07"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/devereux-walter-a2554",
+          "https://www.dib.ie/biography/norris-norreys-sir-john-a6234"
+        ],
+        "named_anchors": [
+          "Carrickfergus",
+          "Belfast",
+          "Clandeboye"
+        ],
+        "color_role": "raid_red"
+      },
+      "type": "Feature"
+    },
+    {
+      "id": "rathlin-island-crown-massacre-1575",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.35,
+              55.25
+            ],
+            [
+              -6.12,
+              55.25
+            ],
+            [
+              -6.07,
+              55.33
+            ],
+            [
+              -6.31,
+              55.36
+            ],
+            [
+              -6.35,
+              55.25
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "spatial_semantics": "sourced_named_region_reader_orientation_not_measured_affected_or_occupied_boundary",
+        "geometry_provenance": "Hand-drawn illustration around documented named towns/regions; not historical surveyed boundary, military line or destruction perimeter",
+        "name": "1575年拉斯林岛：英军屠杀守军与避难平民（岛屿位置示意）",
+        "label_type": "屠杀与短期军事攻击影响区",
+        "zone_type": "english_massacre_island_schematic",
+        "start_year": 1575,
+        "end_year": 1575,
+        "controller_zh": "奉埃塞克斯命令出动的英军，约翰·诺里斯率地面部队，德雷克所率舰队协同",
+        "summary_zh": "1575年7月，英军由卡里克弗格斯出航攻击拉斯林岛。岛上城堡投降后，英军杀害守军，并杀害躲避在洞穴内的妇女、儿童及其他未武装居民。爱尔兰人物传记辞典明确记述暴行及埃塞克斯殖民行动的失败。图中淡红虚线仅作为岛屿所在位置的醒目标记，不能把该轮廓当成逐洞穴、逐村落的死亡分布或英国长期实际占岛区域。",
+        "related_event_ids": [
+          "1570S-E010",
+          "1570S-E011"
+        ],
+        "source_ids": [
+          "C9-S03",
+          "C9-S04",
+          "C9-S05"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/devereux-walter-a2554",
+          "https://www.dib.ie/biography/norris-norreys-sir-john-a6234"
+        ],
+        "named_anchors": [
+          "Rathlin Island"
+        ],
+        "color_role": "raid_red"
+      },
+      "type": "Feature"
+    },
+    {
+      "id": "smith-ards-colonial-military-1572-1575",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.95,
+              54.32
+            ],
+            [
+              -5.6,
+              54.31
+            ],
+            [
+              -5.45,
+              54.53
+            ],
+            [
+              -5.56,
+              54.74
+            ],
+            [
+              -5.89,
+              54.74
+            ],
+            [
+              -5.95,
+              54.32
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "spatial_semantics": "sourced_named_region_reader_orientation_not_measured_affected_or_occupied_boundary",
+        "geometry_provenance": "Hand-drawn illustration around documented named towns/regions; not historical surveyed boundary, military line or destruction perimeter",
+        "name": "1572—1575年阿兹半岛：托马斯·史密斯殖民武装进入与地方反抗（示意）",
+        "label_type": "殖民安置企图与武装冲突地区",
+        "zone_type": "crown_private_colonization_military_incursion_schematic",
+        "start_year": 1572,
+        "end_year": 1575,
+        "controller_zh": "托马斯·史密斯殖民定居者及其武装；奥尼尔领主及地方居民长期抵抗",
+        "summary_zh": "英王伊丽莎白一世于1571年将阿兹半岛及克兰德博伊的广泛权利授予托马斯·史密斯父子，1572年殖民队伍登陆阿兹、在纽卡斯尔·康伯附近建立定居点，随后与布赖恩·奥尼尔及其他地方力量发生武装冲突。英方殖民企图在1573—1575年严重受挫，远未取得对阿兹全境的稳定实际控制。本图以阿兹半岛作地区定位，不是英王合法有效土地权属边界，也不代表每处居民点均遭驱逐。",
+        "source_ids": [
+          "C9-S01",
+          "C9-S02"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/smith-sir-thomas-a8152",
+          "https://celt.ucc.ie/published/E570001-001/text001.html"
+        ],
+        "related_event_ids": [
+          "1570S-E002"
+        ],
+        "named_anchors": [
+          "Newcastle Comber (Comber)",
+          "Ards Peninsula"
+        ],
+        "color_role": "plantation_ochre"
+      },
+      "type": "Feature"
+    },
+    {
+      "id": "drake-nombre-de-dios-attack-1572",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.55,
+              9.48
+            ],
+            [
+              -79.4,
+              9.48
+            ],
+            [
+              -79.39,
+              9.63
+            ],
+            [
+              -79.55,
+              9.63
+            ],
+            [
+              -79.55,
+              9.48
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "spatial_semantics": "sourced_named_region_reader_orientation_not_measured_affected_or_occupied_boundary",
+        "geometry_provenance": "Hand-drawn illustration around documented named towns/regions; not historical surveyed boundary, military line or destruction perimeter",
+        "name": "1572年巴拿马诺姆布雷德迪奥斯：德雷克袭击西班牙港市（示意）",
+        "label_type": "港市袭击位置示意（未占领）",
+        "zone_type": "english_privateering_failed_raid_city_schematic",
+        "start_year": 1572,
+        "end_year": 1572,
+        "controller_zh": "德雷克率领的英格兰私掠船队；西班牙殖民港防军抵抗",
+        "summary_zh": "1572年德雷克率英格兰私掠船队袭击巴拿马地峡加勒比海岸的诺姆布雷德迪奥斯，希望夺取运往欧洲的白银与黄金，但德雷克在交战中负伤，当次攻取财政仓库的计划没有成功。随后1573年他另在巴拿马地峡袭取西班牙殖民运输线上的贵金属，这两次事件不能混为一谈。图中的小型红色虚线仅定位港市袭击，不是城墙、焚毁面积或英国占领疆域。",
+        "source_ids": [
+          "C9-S08"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/drakes-first-success/",
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/timeline/"
+        ],
+        "related_event_ids": [
+          "1570S-E004"
+        ],
+        "named_anchors": [
+          "Nombre de Dios"
+        ],
+        "color_role": "raid_red"
+      },
+      "type": "Feature"
+    }
+  ]
+}

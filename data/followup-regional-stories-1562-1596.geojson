@@ -1,0 +1,411 @@
+{
+  "type": "FeatureCollection",
+  "name": "Historical source-backed regional story follow-ups 1562-1596",
+  "metadata": {
+    "geometry_semantics": "non-surveyed diagrammatic local/region viewing aid; no actual territory area",
+    "feature_count": 6,
+    "verified_english_occupation_polygon_count": 0,
+    "verified_english_garrison_location": 1,
+    "short_occupation_year_end_split": "Le Havre 1562 English garrison / 1563 French recovery",
+    "source_policy": "Municipal archives, museum collection catalogues, research library and Library of Congress",
+    "scope_addendum": "1587 Cádiz naval event explicitly distinct from 1596 Anglo-Dutch town sack; 1589 Vigo town raid distinct from permanent conquest"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "english-hold-le-havre-1562-city-reference",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.01,
+              49.43
+            ],
+            [
+              0.21,
+              49.43
+            ],
+            [
+              0.21,
+              49.56
+            ],
+            [
+              0.01,
+              49.56
+            ],
+            [
+              0.01,
+              49.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Schematic region envelope around modern city/isthmus reference anchors; not historical GIS survey of walls, supply routes, burning or governing extent.",
+        "source_precision": "Institutional publications identify historical acts and city/region, not exact perimeters.",
+        "name": "1562年勒阿弗尔：英军进入并驻守法国港市（概略城区）",
+        "label_type": "英军短期驻城参考区",
+        "zone_type": "documented_english_urban_garrison_schematic",
+        "color_role": "occupation_violet",
+        "start_year": 1562,
+        "end_year": 1562,
+        "controller_zh": "英格兰伊丽莎白一世王室远征军；法国内战中的胡格诺派交出港市",
+        "summary_zh": "1562年，法国新教一派根据《汉普顿宫条约》将勒阿弗尔交给英格兰王室驻军。勒阿弗尔市政档案记载10月8日沃里克伯爵率英军进入并治理该城。英军在1562年末实际驻守港市，不能因此称整个诺曼底为英国领土；紫色虚线只是现代勒阿弗尔核心地理参考，不是当年的城墙、军管极限或英军实测辖区。1563年英军继续据守到7月，但本图年末层单列收复过程，不能把1563年末继续显示为英占。",
+        "related_event_ids": [
+          "1560S-E007",
+          "1560S-E009"
+        ],
+        "source_ids": [
+          "C8-S07",
+          "C8-S08",
+          "C8-S10"
+        ],
+        "source_urls": [
+          "https://archives.lehavre.fr/vie-militaire-et-conflits-depuis-1548",
+          "https://www.cambridge.org/core/journals/historical-journal/article/newhaven-expedition-15621563/99CED2F2C00F582DAEE61B7099AE903E"
+        ],
+        "historic_year_note": "English garrison present in 1562 year-end; exited July 1563; 1563 year-end is French.",
+        "named_anchors": [
+          "Le Havre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "french-recovery-le-havre-1563-city-reference",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.01,
+              49.43
+            ],
+            [
+              0.21,
+              49.43
+            ],
+            [
+              0.21,
+              49.56
+            ],
+            [
+              0.01,
+              49.56
+            ],
+            [
+              0.01,
+              49.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Schematic region envelope around modern city/isthmus reference anchors; not historical GIS survey of walls, supply routes, burning or governing extent.",
+        "source_precision": "Institutional publications identify historical acts and city/region, not exact perimeters.",
+        "name": "1563年勒阿弗尔：法军围城收复，英军短占终结（城区参考）",
+        "label_type": "法军围城及英军撤离（非英占年末）",
+        "zone_type": "french_recapture_after_english_occupation_schematic",
+        "color_role": "restoration_blue",
+        "start_year": 1563,
+        "end_year": 1563,
+        "controller_zh": "法国王室军队收复勒阿弗尔；此前英格兰沃里克伯爵部队据守，后撤离",
+        "summary_zh": "1563年勒阿弗尔遭法军围城，当时英格兰驻军仍控制城内若干据点。勒阿弗尔市政档案记载，英军曾破坏Saint-Nicolas de Leure教堂与Graville城堡礼拜堂，并指出疫病与围城发生后法国国王于7月29日收复港市。此蓝色虚线强调英军失去短占据点、城市恢复法国王室管辖：到1563年末不应继续标注为英国驻军控制区。轮廓不是围城兵力部署图。",
+        "related_event_ids": [
+          "1560S-E007",
+          "1560S-E009"
+        ],
+        "source_ids": [
+          "C8-S07",
+          "C8-S08",
+          "C8-S09"
+        ],
+        "source_urls": [
+          "https://archives.lehavre.fr/vie-militaire-et-conflits-depuis-1548",
+          "https://archives.lehavre.fr/document-archives/plans/plan-dit-warwick-pendant-le-siege-du-havre-15-juillet-1563"
+        ],
+        "named_anchors": [
+          "Le Havre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-panama-mule-train-1573-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.76,
+              9.03
+            ],
+            [
+              -79.35,
+              9.03
+            ],
+            [
+              -79.29,
+              9.6
+            ],
+            [
+              -79.73,
+              9.61
+            ],
+            [
+              -79.76,
+              9.03
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Schematic region envelope around modern city/isthmus reference anchors; not historical GIS survey of walls, supply routes, burning or governing extent.",
+        "source_precision": "Institutional publications identify historical acts and city/region, not exact perimeters.",
+        "name": "1573年巴拿马地峡：德雷克等人劫掠西班牙金银运输队（地区示意）",
+        "label_type": "武装截夺殖民金银运输线（非英国占领）",
+        "zone_type": "privateering_precious_metal_interception_schematic",
+        "color_role": "raid_red",
+        "start_year": 1573,
+        "end_year": 1573,
+        "controller_zh": "德雷克的英格兰私掠船队与法方Guillaume Le Testu人员，并有当地Cimarron逃奴社群参与；西属巴拿马殖民体系未改归英王",
+        "summary_zh": "美国国会图书馆的德雷克藏品研究记载，1572年他袭击诺姆布雷德迪奥斯未能得手；1573年与法国私掠者Guillaume Le Testu及当地盟友合作，截获通过巴拿马地峡运输的西班牙殖民贵金属骡队。参与者并非全是英军；有关Cimarron群体有自身反奴役目的，不能抹去其行动主体。地峡的大面仅帮助理解殖民财富由太平洋岸跨陆转往加勒比港口的脆弱通道，不表示线路全段受英国占领或每一村落都遭劫掠，也不是精确袭击位置。",
+        "related_event_ids": [
+          "1570S-E006"
+        ],
+        "source_ids": [
+          "C9-S08"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/drakes-first-success/",
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/timeline/"
+        ],
+        "named_anchors": [
+          "Nombre de Dios",
+          "Panama isthmus"
+        ],
+        "historical_intent": "interception of Spanish-colonial bullion; not all local commerce stolen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cadiz-anglo-dutch-sack-1596-city-reference",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.42,
+              36.47
+            ],
+            [
+              -6.21,
+              36.47
+            ],
+            [
+              -6.21,
+              36.6
+            ],
+            [
+              -6.42,
+              36.6
+            ],
+            [
+              -6.42,
+              36.47
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Schematic region envelope around modern city/isthmus reference anchors; not historical GIS survey of walls, supply routes, burning or governing extent.",
+        "source_precision": "Institutional publications identify historical acts and city/region, not exact perimeters.",
+        "name": "1596年加的斯：英荷远征军占城、洗劫与港湾战事（城市示意）",
+        "label_type": "英荷联合短时占城与劫掠影响区",
+        "zone_type": "english_dutch_short_urban_occupation_raid_schematic",
+        "color_role": "raid_red",
+        "start_year": 1596,
+        "end_year": 1596,
+        "controller_zh": "埃塞克斯伯爵、霍华德指挥的英格兰和荷兰联合舰队及登陆部队；西班牙于袭击后继续主权治理",
+        "summary_zh": "1596年英格兰与荷兰联合远征军攻入并洗劫西班牙加的斯，城市及港内舰船遭受重大损失；牛津大学博德利图书馆梳理了此役抢掠分赃及出版记载争议，荷兰国家博物馆保存1596—1598年刻印的加的斯海战示意图。这里既有短期军队进入城市，也发生劫掠，但并未建立持续的英王殖民行政体系。红色虚线只突出城市和港湾附近的受袭地理位置，不表示整个加的斯湾皆被焚毁、沿海每个居民区受损，亦不用于计算英军占领面积；1597年应退出。",
+        "related_event_ids": [
+          "1590S-E022"
+        ],
+        "source_ids": [
+          "C11-S21"
+        ],
+        "source_urls": [
+          "https://blogs.bodleian.ox.ac.uk/theconveyor/the-cadiz-pirates/",
+          "https://www.rijksmuseum.nl/en/collection/object/Zeeslag-voor-Cadiz-1596--41712acecec44b19094c6a2d35f142b9",
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-504863"
+        ],
+        "named_anchors": [
+          "Cádiz city",
+          "Bay of Cádiz"
+        ],
+        "actor_context": "joint Anglo-Dutch forces, not exclusively England"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-cadiz-bay-1587-naval-attack-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.48,
+              36.46
+            ],
+            [
+              -6.17,
+              36.46
+            ],
+            [
+              -6.17,
+              36.63
+            ],
+            [
+              -6.48,
+              36.63
+            ],
+            [
+              -6.48,
+              36.46
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "City/bay hand-drawn broad reference box from modern name and event evidence; NOT damage, battle, archaeological wreck or surveyed military occupation boundary.",
+        "source_precision": "Only place/city scale is supported by official regional sources.",
+        "name": "1587年加的斯港湾：德雷克攻击西班牙舰船（非攻占全城）",
+        "label_type": "港湾战事与船只损失位置示意",
+        "zone_type": "english_naval_raid_harbour_schematic",
+        "color_role": "raid_red",
+        "start_year": 1587,
+        "end_year": 1587,
+        "controller_zh": "德雷克指挥的英格兰舰队与西班牙、热那亚商船防卫力量",
+        "summary_zh": "1587年4月29日德雷克袭击西班牙加的斯港湾。西班牙安达卢西亚官方公布的多学科水下考古研究，确认当年受袭沉没的热那亚商船San Giorgio e Sant’Elmo Buonaventura（考古编号Delta II）。其船货和船上人骨说明此役伤害了贸易人员，并非抽象的舰队数字。此处红色淡虚线只指示加的斯港湾战事，不是那艘船的实测海底坐标，也不代表德雷克攻占、焚毁整座加的斯城市。1596年英荷军队入城洗劫是另一场战争行动，地图不得把两次事件串作九年持续英占。",
+        "source_ids": [
+          "C10-S20",
+          "C10-S36"
+        ],
+        "source_urls": [
+          "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/actualidad/noticias/detalle/657958.html",
+          "https://www.juntadeandalucia.es/institutodepatrimoniohistorico/"
+        ],
+        "related_event_ids": [
+          "1580S-E024"
+        ],
+        "named_anchors": [
+          "Cádiz Bay"
+        ],
+        "damage_area_known": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-norreys-vigo-sack-1589-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.85,
+              42.16
+            ],
+            [
+              -8.59,
+              42.16
+            ],
+            [
+              -8.59,
+              42.32
+            ],
+            [
+              -8.85,
+              42.32
+            ],
+            [
+              -8.85,
+              42.16
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "City/bay hand-drawn broad reference box from modern name and event evidence; NOT damage, battle, archaeological wreck or surveyed military occupation boundary.",
+        "source_precision": "Only place/city scale is supported by official regional sources.",
+        "name": "1589年维戈：德雷克、诺里斯远征军劫掠并纵火（城市示意）",
+        "label_type": "英国远征军袭城焚掠影响区",
+        "zone_type": "english_armed_city_sack_schematic",
+        "color_role": "raid_red",
+        "start_year": 1589,
+        "end_year": 1589,
+        "controller_zh": "英格兰德雷克与诺里斯的远征部队；加利西亚当地城镇及居民受袭",
+        "summary_zh": "1589年英格兰德雷克、诺里斯远征军在进攻拉科鲁尼亚未达主要战略目标后转向维戈，袭击并劫掠城镇。西班牙维戈市政府的历史资料援引当地教区神职人员记录，记载民居、库房、船只及宗教建筑遭焚毁；西班牙海军的军事历史研究亦讨论这一事件。地方史料所载精确房屋数不能未经独立审计当作覆盖整城的现代毁损统计。淡红虚线只是城市遭袭的地理提示，不是1589年逐栋建筑毁坏复原，更不是英格兰永久占领的港口领土。",
+        "source_ids": [
+          "C10-S50",
+          "C10-S51",
+          "C10-S47"
+        ],
+        "source_urls": [
+          "https://hoxe.vigo.org/movemonos/phistorico_sen_defensas.php?lang=en",
+          "https://fortalezadeocastro.vigo.org/panel-10/",
+          "https://armada.defensa.gob.es/archivo/rgm/2020/10/rgmoct2020.pdf"
+        ],
+        "related_event_ids": [
+          "1580S-E028"
+        ],
+        "named_anchors": [
+          "Vigo city"
+        ],
+        "damage_area_known": false
+      }
+    }
+  ]
+}
