@@ -60,13 +60,13 @@ assert.ok(financial.records.some(r=>r.amount_value===20&&r.accounting_class==='p
 assert.ok(financial.records.some(r=>r.disaggregated_awards?.some(x=>x.annual_gbp===42)&&r.disaggregated_awards?.some(x=>x.annual_gbp===10)));
 
 assert.ok(JSON.parse(read('data/chapters.json')).chapters.some(c=>c.id==='chapterFifth'&&c.end===1539)&&html.includes('id="yearRange"'));
-assert.ok(html.includes('app.js?v=timeline-v1770-ch9-pr56'));
+assert.ok(html.includes('app.js?v=timeline-v1780-ch10-pr59'));
 assert.ok(app.includes("fetch('data/atlas-1530-1539.json'"));
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
 assert.ok(app.includes("fetch('data/political-relations-1500-1549.geojson'"));
 assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("year===lastPublishedYear"));
 assert.ok(app.includes('e.year>=chapter.start&&e.year<=year')&&app.includes('((y-chapter.start)/span*100)'));
 assert.ok(app.includes('fullArchive||occurredByYear(e,year)'),'Unoccurred chapter events leaked');
-assert.ok(app.includes('atlasFifth?.sources'),'fifth chapter source citations not available to dossier');
+assert.ok(app.includes('sourcesById.get(id)')&&app.includes('atlasFifth,atlasSixth'),'fifth chapter source citations not available to dossier');
 assert.ok(app.includes("focusedEventId"),'sidebar event location must remain available');
 console.log('PASS 1530s: 27 chronological records, 8 continued polities, 12 reference sites, 13 no-border statutory shires, 0 fake area/colonial profit');

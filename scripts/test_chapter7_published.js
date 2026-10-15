@@ -89,8 +89,8 @@ for(const id of ['boulogne-english-1544-1550','broughty-english-1547-1550','eyem
 assert.ok(app.includes('next>=1550?atlasSeventh'),'Chapter selection must permit new decade');
 assert.ok(app.includes("year>=1558&&p.source_place_id==='calais-crown'"),'Calais needs French annual area recolor');
 assert.ok(app.includes('function renderSeventhControlSites()'));
-assert.ok(app.includes('atlasSeventh?.sources'),'Seventh chapter bibliographies must be clickable');
-assert.ok(html.includes('max="1579"')&&html.includes('1497—1579'));
+assert.ok(app.includes('sourcesById.get(id)'),'Seventh chapter bibliographies must be clickable');
+assert.ok(html.includes('max="1589"')&&html.includes('1497—1589'));
 const expected=[6,6,6,8,9,12,19,21,26,29];
 for(let y=1550;y<=1559;y++)assert.equal(atlas.events.filter(e=>e.year<=y).length,expected[y-1550],'year reveals future events: '+y);
 console.log('PASS seventh chapter: 29 events, 18 sites, 52 sources, 7 intact reference geometries, 9 military nodes; year-end 1558 French Calais transition and 1556 Irish plantation semantics.');
