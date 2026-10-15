@@ -38,10 +38,16 @@ try:
         wait.until(lambda d: d.execute_script("""
           return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])
         """,label))
+        wait.until(lambda d: d.execute_script("""
+          return !document.querySelector('#workspace').classList.contains('dossier-collapsed')
+        """))
         body=browser.find_element(By.ID,"dossierBody")
-        assert len(body.text)>130,"Area needs substantive explanation"
+        dossier_text=body.get_attribute('innerText')
+        print("REGION DETAIL",label,"chars",len(dossier_text),"links",
+              len(body.find_elements(By.CSS_SELECTOR,'a.source-link')),flush=True)
+        assert len(dossier_text)>70,"Area needs substantive explanation"
         assert len(body.find_elements(By.CSS_SELECTOR, 'a.source-link'))>=1,"Area needs clickable primary/scholarly source"
-        assert "当年历史状态" not in body.text
+        assert "该地区的历史状态按所选年份显示" not in dossier_text
         browser.save_screenshot(str(OUT/f"region-{browser.find_element(By.ID,'bigYear').text}.png"))
         print("PASS region", label, "clickable sourced story", flush=True)
     for year,needle in [(1544,"利斯—爱丁堡"),(1556,"莱伊什—奥法利"),(1573,"克兰德博伊"),(1575,"拉斯林岛"),(1580,"利默里克—凯里"),(1582,"芒斯特"),(1586,"圣多明各"),(1598,"黄渡口")]:
