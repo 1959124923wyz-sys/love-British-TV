@@ -979,26 +979,67 @@ try:
     set_year(1592,9)
     verify("1592 Santos should no longer be English at year-end",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===3",driver)
+
+    set_year(1593,10)
+    verify("1593 cannot show future Fermanagh and Ulster 1594 battles",
+           """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
+              document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
     set_year(1594,13)
+    verify("1594 Fermanagh battle zone absent",
+           "document.querySelectorAll('#map .atlas-nine-years-war-study').length===1",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-nine-years-war-study')
+       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1594 geographic dossier must not anticipate 1595 Gaelic recapture",
+           """document.querySelector('#dossierBody').textContent.includes('英军夺取恩尼斯基林') &&
+              !document.querySelector('#dossierBody').textContent.includes('1595年') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1594-Fermanagh-contested.png"))
     verify("1594 documented Enniskillen/Blackwater English forts absent",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===5",driver)
     set_year(1595,19)
+    verify("1595 Gaelic recapture must remain contested, not British land",
+           "document.querySelectorAll('#map .atlas-nine-years-war-study').length===1",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-nine-years-war-study')
+       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1595 Fermanagh dossier must recognize Gaelic recapture",
+           """document.querySelector('#dossierBody').textContent.includes('重新夺回') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
     verify("1595 lost English forts or temporary Recife shown as year-end possession",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
+    set_year(1597,24)
+    verify("1597 Fermanagh local campaign should no longer persist",
+           "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
     set_year(1598,30)
+    verify("1598 must show Yellow Ford Gaelic victory AND Munster anti-plantation resistance",
+           """document.querySelectorAll('#map .atlas-nine-years-war-study').length===2 &&
+              document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1598-Gaelic-resistance-regions.png"))
     verify("1598 Kilcolman/San Juan falsely mapped as annual English control",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===1 &&
               !!document.querySelector('#eventList [data-eid="1590S-E027"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-raid.png"))
     set_year(1599,36)
+    verify("1599 Essex south-Ireland march should be a CITY-ORDER LINE, not occupation land",
+           """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
+              document.querySelectorAll('#map .atlas-essex-1599-schematic').length===1""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-essex-1599-schematic')
+       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1599 Essex route dossier must explicitly deny GPS route or colonization inference",
+           """document.querySelector('#dossierBody').textContent.includes('城镇顺序') &&
+              document.querySelector('#dossierBody').textContent.includes('实际路线') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1599-Essex-town-order-route.png"))
     verify("1599 chapter terminal count wrong",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1599-Ireland.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
+    verify("1599 historical territory toggle must hide Essex route without hiding events",
+           """document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0 &&
+              document.querySelector('#eventList [data-eid="1590S-E032"]')!==null""",driver)
     verify("Territory toggle does not hide chapter11 uncertain areas and cores",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
