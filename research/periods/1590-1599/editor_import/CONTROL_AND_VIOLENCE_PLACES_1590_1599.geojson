@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "schema": "ch11_modern_site_anchors_v1",
-  "count": 7,
+  "count": 9,
   "metadata": {
     "historical_english_occupied_polygons": 0,
     "modern_only": true,
@@ -176,6 +176,54 @@
         "polygon_fill_authorized": false,
         "colonial_area_sqkm": null,
         "spatial_identity": "modern reference point; 1599 English castle garrison area not certified"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch11-site-santos",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.33361,
+          -23.96083
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-site-santos",
+        "name": "santos modern city gazetteer",
+        "source_geography_url": "https://texashistory.unt.edu/explore/locations/p18821/",
+        "geo_precision": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
+        "associated_events": [
+          "ch11-cavendish-santos-christmas-sack"
+        ],
+        "historical_footprint_verified": false,
+        "polygon_fill_authorized": false,
+        "colonial_area_sqkm": null,
+        "spatial_identity": "modern geocoded city centroid only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch11-site-recife",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -34.88111,
+          -8.05389
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-site-recife",
+        "name": "recife modern city gazetteer",
+        "source_geography_url": "https://digital.library.unt.edu/explore/locations/p10764/",
+        "geo_precision": "UNT Digital Library independently verified modern city centroid, NOT 1590s village buildings or English temporarily-held historic map area",
+        "associated_events": [
+          "ch11-lancaster-recife-plantation-loot"
+        ],
+        "historical_footprint_verified": false,
+        "polygon_fill_authorized": false,
+        "colonial_area_sqkm": null,
+        "spatial_identity": "modern geocoded city centroid only"
       }
     }
   ]
