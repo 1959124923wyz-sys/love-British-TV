@@ -66,6 +66,10 @@ def run_case(label, width, height, mobile):
             menu.click()
             assert driver.find_element(By.ID, "mobileEventsToggle").get_attribute("aria-expanded") == "true"
             assert not js("document.querySelector('#workspace').classList.contains('sidebar-collapsed')")
+            # Wait for the drawer's real CSS transform, not just its instant ARIA flag.
+            wait.until(lambda d: d.execute_script("""
+                return document.querySelector('#sidebar').getBoundingClientRect().left >= -1
+            """))
             driver.save_screenshot(str(OUT / f"{label}-event-drawer.png"))
         else:
             assert not driver.find_element(By.ID, "mobileEventsToggle").is_displayed()
@@ -75,6 +79,7 @@ def run_case(label, width, height, mobile):
         selected = driver.find_element(By.CSS_SELECTOR, "#eventList .event-item")
         event_id = selected.get_attribute("data-eid")
         before = js("window.atlasReadViewport()")
+        selected.location_once_scrolled_into_view
         selected.click()
         wait.until(lambda d: d.execute_script(
             "return document.querySelector('#dossierBody .dossier-map-action button')!==null"))
