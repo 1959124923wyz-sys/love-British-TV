@@ -54,8 +54,12 @@
         "end_year": 1544,
         "controller_zh": "亨利八世派出的赫特福德伯爵英军",
         "summary_zh": "1544年5月，英军经福斯湾抵达利斯，进攻爱丁堡并实施焚毁和劫掠。图中仅突出已知两处城市及周边的空间关联，绝不等同于实测被烧毁街区、所有居民受灾范围或英王长期占城；爱丁堡城堡并未因此成为英军稳固驻地。",
-        "related_event_ids": [],
-        "source_ids": [],
+        "related_event_ids": [
+          "1540S-008"
+        ],
+        "source_ids": [
+          "SC-HES-2026-WOOIN"
+        ],
         "source_urls": [
           "https://www.scottishhistory.org/on-this-day/the-burning-of-edinburgh-1544/",
           "https://blog.historicenvironment.scot/2022/07/the-story-of-scotlands-longest-siege/"
@@ -115,13 +119,13 @@
         "exclude_from_area_aggregation": true,
         "spatial_semantics": "sourced_named_region_reader_orientation_not_measured_affected_or_occupied_boundary",
         "geometry_provenance": "Hand-drawn illustration around documented named towns/regions; not historical surveyed boundary, military line or destruction perimeter",
-        "name": "1556—1569年莱伊什—奥法利：英王土地剥夺与殖民安置政策涉及区（概略）",
+        "name": "1556年起莱伊什—奥法利：长期殖民安置与抵抗（1599年仍作研究参考）",
         "label_type": "王室殖民安置与抵抗涉及区",
         "zone_type": "crown_plantation_policy_region_schematic",
         "start_year": 1556,
-        "end_year": 1569,
+        "end_year": null,
         "controller_zh": "英格兰王室殖民官员、驻堡军队；当地O’More和O’Connor领主及居民持续抵抗",
-        "summary_zh": "英王政府1550年代在莱伊什与奥法利推进设郡、土地没收与殖民安置，并以波特利什及菲利普斯敦等军堡为据点。爱尔兰地方势力持续反抗，英方在该时期也没有实现对图示整片区域每一处土地的稳定占领。本淡赭色虚线是两地政策地理位置提示，不是实际没收地块边界；本图只追踪1556—1569年的这一段叙事，并不表示1570年政策或殖民定居自动终止。",
+        "summary_zh": "1556年英王政府在莱伊什与奥法利设郡并推动没收土地和殖民安置，以波特利什、菲利普斯敦等驻军点为支撑。县议会的历史研究记载O’More领主与当地居民在1560—1570年代持续反抗，殖民政策和争夺并未在1569年结束。该浅赭色研究面在地图截至1599年持续显示已建立的殖民制度与其影响的地区参考，并不表示1580—1599年每个村镇都仍在交战，更不表示两郡所有地块被征收、每年均处于英王有效统治之下；1599年是本地图阶段终点，不是殖民史的结束年份。",
         "related_event_ids": [
           "1550S-E011",
           "1550S-E012",
@@ -143,7 +147,11 @@
           "Portlaoise (Maryborough)",
           "Daingean (Philipstown)"
         ],
-        "color_role": "plantation_ochre"
+        "color_role": "plantation_ochre",
+        "display_through_year": 1599,
+        "ongoing_at_atlas_end": true,
+        "observed_till_year": 1599,
+        "study_period_note": "1556开始，1569并非结束；1570s continued conflict, 1599 atlas cutoff is not history endpoint"
       },
       "type": "Feature"
     },
