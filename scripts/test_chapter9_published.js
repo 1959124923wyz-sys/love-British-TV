@@ -10,8 +10,8 @@ const icons=new Set(read('data/icon-categories.json').categories.map(x=>x.code))
 const html=txt('index.html'),app=txt('app.js');new vm.Script(app);
 const ledger=read('data/chapter9-economic-violence-ledger.json');
 const detail=read('data/chapter9-detail-notes.json');
-assert.equal(ledger.records.length,28,'Main database must include 28 independent gross/cost/victim evidence records');
-assert.equal(Object.keys(detail.records).length,12,'Detailed historical document entries missing');
+assert.equal(ledger.records.length,31,'Main database must include 28 independent gross/cost/victim evidence records');
+assert.equal(Object.keys(detail.records).length,16,'Detailed historical document entries missing');
 assert.ok(ledger.records.every(r=>r.source_ids?.length&&r.source_ids.every(id=>now.sources.some(s=>s.id===id))),'Economic records must cite chapter sources');
 assert.ok(Object.keys(detail.records).every(id=>now.events.some(e=>e.id===id)),'Research notes must attach to an event');
 assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dossier does not load editorial research notes');
@@ -19,11 +19,11 @@ assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dos
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
 assert.equal(manifest.chapters.length,9);
 assert.ok(manifest.chapters.some(c=>c.number===9&&c.start===1570&&c.end===1579&&c.status==='published'));
-assert.equal(now.events.length,37);assert.equal(now.places.length,39);assert.equal(now.sources.length,53);
+assert.equal(now.events.length,41);assert.equal(now.places.length,43);assert.equal(now.sources.length,60);
 assert.equal(now.routes.length,18);assert.equal(now.colonial_polygons.length,0);
 assert.equal(old.events.length,26);
 const ids=new Set(),src=new Set(now.sources.map(s=>s.id));
-assert.equal(icons.size,16);assert.equal(src.size,53);
+assert.equal(icons.size,16);assert.equal(src.size,60);
 for(const e of now.events){
  assert.ok(e.year>=1570&&e.year<=1579&&e.date_label.includes(String(e.year)),e.id+' chronology');
  assert.ok(!ids.has(e.id));ids.add(e.id);
@@ -36,6 +36,30 @@ for(const e of now.events){
 assert.equal(now.events.find(e=>e.id==='1570S-E010').icon_code,'REP');
 assert.equal(now.events.find(e=>e.id==='1570S-E028').year,1578);
 assert.equal(now.events.find(e=>e.id==='1570S-E035').year,1577);
+for(const [id,year,icon,placeId] of [
+ ['1570S-E038',1570,'EXP','winter-guinea-1570-regional'],
+ ['1570S-E039',1571,'WAR','winter-jamaica-piracy-1571-regional'],
+ ['1570S-E040',1572,'WAR','winter-st-augustine-failed-1572'],
+ ['1570S-E041',1572,'EXP','hawkins-1572-possible-guinea-voyage-region']
+]){
+ const e=now.events.find(x=>x.id===id),p=now.places.find(x=>x.id===placeId);
+ assert.ok(e&&p,id+' missing new expedition/raid');
+ assert.equal(e.year,year);assert.equal(e.icon_code,icon);
+ assert.ok(e.source_ids.length&&e.source_ids.every(s=>src.has(s)));
+ assert.equal(p.render_as_event_only,true,'Commercial encounter must remain in EVENT layer');
+ assert.equal(p.area_polygon_verified,false,'Unconfirmed voyage must not create British territory');
+ assert.equal(p.fill_authorized,false);assert.equal(p.area_sqkm,null);
+ assert.ok(Number.isFinite(p.lat)&&Number.isFinite(p.lng));
+ assert.equal(e.colonial_profit,null);
+}
+for(const sid of ['C9-S54','C9-S55','C9-S56','C9-S57','C9-S58','C9-S59','C9-S60'])assert.ok(src.has(sid),'New documented source missing '+sid);
+for(const lid of ['C9-F29','C9-F30','C9-F31']){
+ const r=ledger.records.find(x=>x.id===lid);
+ assert.ok(r&&r.source_ids.length&&r.source_ids.every(id=>src.has(id)));
+ assert.equal(r.quantity,null,'Do not infer abductee or loot totals');
+}
+assert.equal(now.routes.length,18,'Do not fabricate undated voyages for newly discovered 1570s fleets');
+
 const churches=[
  ['bristol-st-stephen-Inuit-Kalicho-Arnaq-burials-1577',1577,1577,51.454311,-2.596003],
  ['london-st-olave-captive-Inuit-burial-payments-1576-1577',1576,1577,51.5109,-0.07947]
@@ -86,7 +110,7 @@ for(const g of geo.features){
  assert.ok(old&&JSON.stringify(old.geometry)===JSON.stringify(g.geometry),g.id+' invented historic border');
  assert.equal(g.properties.observed_through_year,1579);
 }
-const yearEvents=[1,2,4,7,9,12,17,24,29,37],yearRoutes=[0,0,1,2,4,5,12,14,14,18];
+const yearEvents=[2,4,8,11,13,16,21,28,33,41],yearRoutes=[0,0,1,2,4,5,12,14,14,18];
 for(let y=1570;y<=1579;y++){
  assert.equal(now.events.filter(x=>x.year<=y).length,yearEvents[y-1570],'events at '+y);
  assert.equal(now.routes.filter(x=>x.year<=y).length,yearRoutes[y-1570],'route count '+y);
@@ -104,4 +128,4 @@ assert.ok(app.includes('next>=1570?atlasNinth:next>=1560?atlasEighth'));
 assert.ok(app.includes('function renderNinthControlSites()'));
 assert.ok(app.includes('const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords'));
 assert.ok(html.includes('max="1579"')&&html.includes('1497—1579'));
-console.log('PASS ch9: 37 events, 53 sources, 39 places, 18 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');
+console.log('PASS ch9: 41 events, 60 sources, 43 places, 18 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');
