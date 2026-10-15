@@ -26,3 +26,17 @@
 P0原始Knivet 1592载奴船全文（书稿p33及原文）以追查英国掳带的人数及命运；P0原始Hakluyt 1600 Recife库存与葡方损失记录；P0 1596 Cádiz英国掠夺王室审计和西班牙Simancas库存；P0 1590爱尔兰英军焚村SP63军令和现场残存据点；P0 1598 San Juan 1595原工事图与1598英国占据围界。所有缺失法定地界用空值／虚线，坚决不用现代县界或海岸任意缓冲区。
 
 **研究CSV尚未生成，直接数据交付的是JSON/GeoJSON。** 所有文件均保存于PR独立分支，可由另一名主编从本目录继续，不需要用户写任何程序。
+
+
+## 2026-10-15｜控制疆域概略面补绘：已真实提交（研究地图可直接导入）
+
+本轮解决“研究已有大量史事但地图看不见占驻区”的问题。严格按主站`docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md`准则，新增以下**实际可绘制**地理成果：
+
+1. [`editor_import/APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson`](editor_import/APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson)：**2块虚线Polygon**，其一把`main/data/territorial-footprints-1570-1579.geojson`里1488年帕莱地名21顶点边界**原样继承**作为1590年代地理参考，其二以罗利赠地分布于Youghal–Lismore河谷的剑桥/ECU研究为依据，自行绘出**明显声明为手绘研究包络**的Blackwater一带殖民地理带，1598年反殖民战争后从“仍有英国居民控制”的研究参考层撤下。后者不是已测产权边线、前者不是1590年实测军政边境；全用虚线+低透明度，填色不得视作真实控制的主权面积。
+2. [`editor_import/TEMPORARY_CONTROL_CORES_1590_1599.geojson`](editor_import/TEMPORARY_CONTROL_CORES_1590_1599.geojson)：**10处真正可视的城市/堡垒面积符号Point**，附官署/考古地点来源、`screen_radius_px`、逐年`year_end_visible`清单。**已证位置≠已证城墙面积**。含1594英军Enniskillen、1590-97 Kilcolman英国殖民庄园主人驻地、1591圣诞Santos临时英军占据、1595短期Recife、1598夏季圣胡安、1599 Cahir事件候选。
+3. [`editor_import/CONTROL_EPISODES_1590_1599.json`](editor_import/CONTROL_EPISODES_1590_1599.json) 和 [`editor_import/YEAR_END_CONTROL_RENDER_PLAN_1590_1599.json`](editor_import/YEAR_END_CONTROL_RENDER_PLAN_1590_1599.json)：**10处占驻/庄园控制时间记录和10个已算好的年末地图显示切片**。国家公园管理局明确1598英国San Juan占领行动期**1598-06-16至1598-08-27**；1591 Santos年末有英国短驻，1592撤军；1594 Ennis英国堡，1595归Maguire；1598 Kilcolman和Portmore不再显示英国驻守。
+4. [`editor_import/OCCUPATION_RESEARCH_PREVIEW_1590_1599.html`](editor_import/OCCUPATION_RESEARCH_PREVIEW_1590_1599.html)：**独立HTML可交互研究地图**，包含年份滑块、研究虚线面、城镇面积符号、短期占据选单、史料弹窗和爱尔兰/大西洋/全球视角（无主站更改）。下载后在浏览器打开；网络用于载入地图JS/CDN与底图。
+5. 考古支持进一步加强：NMI / `excavations.ie`确定1594 Enniskillen现代古堡坐标 **54.346171,-7.644771**；Spencer Kilcolman现代遗址 **52.252298,-8.614258** 且1598年被焚；Blackwatertown现代考古地点是**未发现历史原堡遗迹**的近旁点，不假称Fort精确GPS。
+6. 来源总量 **70**、事件**36**（增加1598 Kilcolman古堡焚毁事件）、新增17处年变记录、编绘2块参考Polygon和10个城市点；**符合史料认证的真实英国陆地占领Polygon仍为0，研究Polygon不计面积**。每一条参考面均有原出处、年份、不确定性、来源ID和权属类型。
+
+实际机器QA记录见`editor_import/EDITOR_QA.json`与最新单次Actions。**无精确测绘时拒绝假装得到真实占领区，但已实际画出项目批准的虚线研究面和城市面积符号**。
