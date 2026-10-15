@@ -211,7 +211,7 @@ function syncMapLayers(){
  if(atlas){renderEventList();refreshHistoricalLayers();}
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -373,10 +373,10 @@ function openTerritoryDossier(feature,kind='historic'){
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
    '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+ev.name)+'</button>').join('')+'</div>':'')+
   listSources(p.source_ids||[],{id:p.id||feature.id})+
-  ((p.source_urls||[]).filter(url=>/^https:\/\//.test(url)).length?
-   '<div class="zone-source-links"><h3 class="zone-links-heading">历史地理原始研究</h3>'+
-   p.source_urls.filter(url=>/^https:\/\//.test(url)).map(url=>
-    '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">查看地理与文献依据 ↗</a>').join('')+'</div>':'');
+  ((p.source_urls||[]).filter(u=>/^https:\/\//.test(u)&&!(p.source_ids||[]).some(id=>sourcesById.get(id)?.url===u)).length?
+   '<div class="zone-source-links"><h3 class="zone-links-heading">补充资料</h3>'+
+   [...new Set(p.source_urls.filter(u=>/^https:\/\//.test(u)&&!(p.source_ids||[]).some(id=>sourcesById.get(id)?.url===u)))].map(url=>
+    '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">阅读 ↗</a>').join('')+'</div>':'');
  openPanel('dossier');
  $('dossierBody').querySelectorAll('[data-zone-place]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedPlaces[Number(n.dataset.zonePlace)],'place')));
  $('dossierBody').querySelectorAll('[data-zone-event]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedEvents[Number(n.dataset.zoneEvent)],'event')));
@@ -949,7 +949,7 @@ function regionalFeatureKind(p){
  return 'invasion-impact';
 }
 function activeRegionalFeatures(){
- return [...(earlyRegionalAreas?.features||[]),...(followupRegionalAreas?.features||[])].filter(f=>{
+ return [...(earlyRegionalAreas?.features||[]),...(followupRegionalAreas?.features||[]),...(centuryViolenceAreas?.features||[])].filter(f=>{
   const p=f.properties||{};
   return p.start_year<=year&&year<=(p.display_through_year??p.end_year??year);
  });
@@ -1018,11 +1018,10 @@ function renderHistoricalRegionGuide(){
  if(!zones.length){wrap.hidden=true;list.innerHTML='';$('historicalRegionCount').textContent='0';return;}
  const unique=[...new Map(zones.map(z=>[z.feature.id,z])).values()];
  wrap.hidden=false;$('historicalRegionCount').textContent=String(unique.length);
- list.innerHTML=unique.map((z,i)=>{
-  const p=z.feature.properties||{};
-  return '<button type="button" class="historical-region-entry" data-region-index="'+i+'">'+
-    '<strong>'+escapeHTML(z.name)+'</strong><span>'+escapeHTML(String(z.summary).replace(/\s+/g,' ').slice(0,70)||'点击查看地区背景、军事行为及来源')+'</span></button>';
- }).join('');
+ list.innerHTML=unique.map((z,i)=>
+  '<button type="button" class="historical-region-entry" data-region-index="'+i+'">'+
+  '<strong>'+escapeHTML(z.name)+'</strong></button>'
+ ).join('');
  list.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
   const z=unique[Number(b.dataset.regionIndex)];
   if(z.kind==='enslavement')openEighthCoastalDossier(z.feature);
@@ -1538,7 +1537,7 @@ function openMapTerritoryAt(latlng){
   // Screen-space circle cues and layered SVGs may intercept precise clicks.
   // Try sourced active impact features BEFORE modern sovereignty background.
   const lookups=[
-   [earlyRegionalAreas,'invasion-impact'],[followupRegionalAreas,'invasion-impact'],
+   [earlyRegionalAreas,'invasion-impact'],[followupRegionalAreas,'invasion-impact'],[centuryViolenceAreas,'invasion-impact'],
    [tenthInvasionImpactAreas,'invasion-impact'],
    [tenthLandRaidAreas,'invasion-impact'],
    [nineYearsWarImpact,'nine-years-war'],
@@ -1553,7 +1552,7 @@ function openMapTerritoryAt(latlng){
      return visible&&f.geometry?.type==='Polygon'&&featureContainsCoordinate(f,lon,lat);
     });
     if(target){openTerritoryDossier(target,target.properties?.zone_type==='crown_land_dispossession_policy_study'?'land-dispossession':
-      (dataset===earlyRegionalAreas||dataset===followupRegionalAreas?regionalFeatureKind(target.properties):kind));return true;}
+      (dataset===earlyRegionalAreas||dataset===followupRegionalAreas||dataset===centuryViolenceAreas?regionalFeatureKind(target.properties):kind));return true;}
    }
   }
   const historic=(territorialFootprints?.features||[]).find(f=>{
@@ -1796,7 +1795,7 @@ function setYear(v){
  }
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=displayChapter?$('chapterLabel').textContent+'年事件':'';
- $('timelineNotice').textContent='事件逐年揭示，政治状态跨章节延续。';
+ $('timelineNotice').textContent='';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
  if(changedYear)$('eventList').scrollTop=0;
 }
@@ -2103,6 +2102,21 @@ async function boot(){
     !p.source_ids?.every(id=>sourcesById.has(id));
   }))throw new Error('新增英军短占与劫掠地区资料不合规');
   followupRegionalAreas=laterRegions;
+  const centuryRes=await fetch('data/century-violence-regions-1544-1589.geojson',{cache:'no-store'});
+  if(!centuryRes.ok)throw new Error('1544—1589地区暴力空间补档未加载');
+  const centuryData=await centuryRes.json();
+  if(centuryData?.features?.length!==7||centuryData.features.some(f=>{
+   const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
+   return f.geometry?.type!=='Polygon'||!ring||ring.length<4||
+    p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+    p.territorial_claim!==false||p.area_sqkm!==null||
+    p.exclude_from_area_aggregation!==true||
+    !p.summary_zh||!p.mapping_method||!p.named_anchors?.length||
+    !p.source_urls?.length||!p.source_urls.every(u=>/^https:\/\//.test(u))||
+    !p.source_ids?.length||!p.source_ids.every(id=>sourcesById.has(id))||
+    !p.related_event_ids?.every(id=>[atlasSixth,atlasEighth,atlasTenth].some(a=>a?.events?.some(e=>e.id===id)));
+  }))throw new Error('地区暴力史事GIS非疆界准入或来源检查失败');
+  centuryViolenceAreas=centuryData;
   const atlanticRes=await fetch('data/caribbean-maghreb-contact-raids-1551-1598.geojson',{cache:'no-store'});
   if(!atlanticRes.ok)throw new Error('加勒比与北非史料地理点未加载');
   const atlanticData=await atlanticRes.json();
