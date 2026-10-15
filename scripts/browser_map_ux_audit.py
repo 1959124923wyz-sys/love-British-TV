@@ -6,6 +6,7 @@ drawer, one-tap event-to-map location, timeline and layer controls, responsive
 dossier behavior and no zoom/year changes from explicit event positioning.
 """
 import json
+import time
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -100,6 +101,16 @@ def run_case(label, width, height, mobile):
         assert locate.is_enabled(), "First event in 1579 should have geographic reference"
         driver.save_screenshot(str(OUT / f"{label}-dossier.png"))
         locate.click()
+        time.sleep(1.3)
+        print(label, "POSTFOCUS", json.dumps(js("""(() => ({
+          center:window.atlasReadViewport(),year:document.querySelector('#bigYear').textContent,
+          focused:document.querySelectorAll('.atlas-target-marker, .atlas-target-aggregate').length,
+          clusters:document.querySelectorAll('.atlas-aggregate').length,
+          singlePins:document.querySelectorAll('.leaflet-marker-icon .map-pin').length,
+          dossierClosed:document.querySelector('#workspace').classList.contains('dossier-collapsed'),
+          sidebarClosed:document.querySelector('#workspace').classList.contains('sidebar-collapsed'),
+          eventsChecked:document.querySelector('#mapLayerEvents').checked
+        }))()"""), ensure_ascii=False), flush=True)
         wait.until(lambda d: d.execute_script("""
             return document.querySelector('.atlas-target-marker, .atlas-target-aggregate')!==null
         """))
