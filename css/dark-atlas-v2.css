@@ -817,3 +817,37 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 @media(prefers-reduced-motion:reduce){
  .map-pin.atlas-new-this-year::before{animation:none!important}
 }
+
+
+/* Approved screenshot layout: two visible panes on desktop, never a squeezed
+   three-column map behind the dossier. Mobile retains the existing drawers. */
+@media(min-width:981px){
+ .workspace,.workspace.dossier-collapsed{
+  grid-template-columns:260px minmax(0,1fr) 0;
+ }
+ .workspace.sidebar-collapsed:not(.dossier-collapsed){
+  grid-template-columns:0 minmax(0,1fr) clamp(340px,32vw,490px);
+ }
+ .workspace.sidebar-collapsed.dossier-collapsed{
+  grid-template-columns:0 minmax(0,1fr) 0;
+ }
+ .workspace .sidebar{overflow:hidden}
+ .workspace .dossier{
+  position:relative;grid-column:3;grid-row:1;
+  top:auto;bottom:auto;right:auto;left:auto;
+  width:100%;max-width:none;min-width:0;
+  box-shadow:-9px 0 28px #0008;transform:none;
+  transition:none;
+ }
+ .workspace.dossier-collapsed .dossier{transform:none;pointer-events:none}
+ /* Only show a way back to the archive when that archive is out of view. */
+ .site:has(.workspace.sidebar-collapsed:not(.dossier-collapsed)) .mobile-events-toggle{
+  display:inline-flex;align-items:center;justify-content:center;gap:5px;
+  min-height:32px;padding:5px 10px;
+  background:#1c3248;border:1px solid #3c556f;border-radius:6px;
+  color:#e8dccb;font-size:11px;cursor:pointer;
+ }
+ .site:has(.workspace.sidebar-collapsed:not(.dossier-collapsed)) .mobile-events-toggle:focus-visible{
+  outline:2px solid #e9bb91;outline-offset:2px;
+ }
+}
