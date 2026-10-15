@@ -1,0 +1,331 @@
+{
+  "schema": "ch11_control_core_episodes_v1",
+  "period": [
+    1590,
+    1599
+  ],
+  "display_policy": {
+    "default": "each year-end shows only year_end_control_visible_years",
+    "optional": "click dated event to show temporary urban-area circle, never historic Polygon",
+    "uncertainty": "dashed if any claim area shape beyond city-screen symbol",
+    "never_sum_city_core_pixels_as_area": true
+  },
+  "episodes": [
+    {
+      "stable_id": "dublin-crown-core",
+      "place": "都柏林英王核心",
+      "controller": "Crown of England army",
+      "historic_status": "Crown_administrative_city",
+      "first_attested": "historic site inherited earlier",
+      "last_attested": "1599 or later unproven",
+      "date_precision_comment": "historic stable core; no exact 1590s survey",
+      "year_end_control_visible_years": [
+        1590,
+        1591,
+        1592,
+        1593,
+        1594,
+        1595,
+        1596,
+        1597,
+        1598,
+        1599
+      ],
+      "event_focus_possible_years": [
+        1590,
+        1599
+      ],
+      "site_reference_point_wgs84": [
+        -6.2603,
+        53.3498
+      ],
+      "source_ids": [
+        "C11-S52",
+        "C11-S54"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "carrickfergus-crown-castle",
+      "place": "卡里克弗格斯海岸英军堡",
+      "controller": "Crown of England army",
+      "historic_status": "temporary_or_inherited_English_fort",
+      "first_attested": "historic site inherited earlier",
+      "last_attested": "1599 or later unproven",
+      "date_precision_comment": "historic stable core; no exact 1590s survey",
+      "year_end_control_visible_years": [
+        1590,
+        1591,
+        1592,
+        1593,
+        1594,
+        1595,
+        1596,
+        1597,
+        1598,
+        1599
+      ],
+      "event_focus_possible_years": [
+        1590,
+        1599
+      ],
+      "site_reference_point_wgs84": [
+        -5.808,
+        54.713
+      ],
+      "source_ids": [
+        "C11-S01",
+        "C11-S55"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "enniskillen-castle-1594-1595",
+      "place": "恩尼斯基林英军驻堡",
+      "controller": "Crown of England army",
+      "historic_status": "temporary_or_inherited_English_fort",
+      "first_attested": "1594-02-02",
+      "last_attested": "1595-05",
+      "date_precision_comment": "specific_month_lost_exact_day_unknown",
+      "year_end_control_visible_years": [
+        1594
+      ],
+      "event_focus_possible_years": [
+        1594,
+        1595
+      ],
+      "site_reference_point_wgs84": [
+        -7.644771,
+        54.346171
+      ],
+      "source_ids": [
+        "C11-S02",
+        "C11-S03",
+        "C11-S57"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "blackwater-fort-before-1595",
+      "place": "布莱克沃特：英军1595年初失堡",
+      "controller": "Crown of England army",
+      "historic_status": "temporary_or_inherited_English_fort",
+      "first_attested": "before 1595-02-16",
+      "last_attested": "1595-02-16",
+      "date_precision_comment": "source_confirms_attacked_on_date; earlier date only as inherited research",
+      "year_end_control_visible_years": [
+        1594
+      ],
+      "event_focus_possible_years": [
+        1594,
+        1595
+      ],
+      "site_reference_point_wgs84": [
+        -6.70544,
+        54.41288
+      ],
+      "source_ids": [
+        "C11-S01",
+        "C11-S02",
+        "C11-S69"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "blackwater-fort-1598",
+      "place": "布莱克沃特：1598年围堡撤军",
+      "controller": "Crown of England army",
+      "historic_status": "temporary_or_inherited_English_fort",
+      "first_attested": "some time before Yellow Ford 1598",
+      "last_attested": "after 1598-08-14",
+      "date_precision_comment": "exact 1597 retaking/1598 evacuation still unverified",
+      "year_end_control_visible_years": [],
+      "event_focus_possible_years": [
+        1598
+      ],
+      "site_reference_point_wgs84": [
+        -6.70544,
+        54.41288
+      ],
+      "source_ids": [
+        "C11-S04",
+        "C11-S69",
+        "C11-S70"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "kilcolman-1590-1598",
+      "place": "基尔科尔曼：殖民承领人城堡",
+      "controller": "English plantation undertaker (not proven royal garrison)",
+      "historic_status": "English_undertaker_residence",
+      "first_attested": "Spenser resident circa 1588",
+      "last_attested": "1598-10",
+      "date_precision_comment": "castle destroyed October 1598 exact day uncertain",
+      "year_end_control_visible_years": [
+        1590,
+        1591,
+        1592,
+        1593,
+        1594,
+        1595,
+        1596,
+        1597
+      ],
+      "event_focus_possible_years": [
+        1590,
+        1598
+      ],
+      "site_reference_point_wgs84": [
+        -8.614258,
+        52.252298
+      ],
+      "source_ids": [
+        "C11-S65",
+        "C11-S66",
+        "C11-S67",
+        "C11-S68"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "santos-1591-1592",
+      "place": "桑托斯：卡文迪什短期占据",
+      "controller": "English privateering expedition (temporary)",
+      "historic_status": "temporary_English_occupied_city",
+      "first_attested": "1591-12-25",
+      "last_attested": "approximately February 1592",
+      "date_precision_comment": "first day Christmas according Brazilian NLI / historians, end estimates vary",
+      "year_end_control_visible_years": [
+        1591
+      ],
+      "event_focus_possible_years": [
+        1591,
+        1592
+      ],
+      "site_reference_point_wgs84": [
+        -46.33361,
+        -23.96083
+      ],
+      "source_ids": [
+        "C11-S43",
+        "C11-S50"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "recife-1595",
+      "place": "累西腓：兰开斯特短期占据",
+      "controller": "English privateering expedition (temporary)",
+      "historic_status": "temporary_English_occupied_city",
+      "first_attested": "1595-03-24",
+      "last_attested": "April 1595, approximately thirty to thirty-four days later",
+      "date_precision_comment": "original Hakluyt/modern FUNDAJ disagree on exact length",
+      "year_end_control_visible_years": [],
+      "event_focus_possible_years": [
+        1595
+      ],
+      "site_reference_point_wgs84": [
+        -34.88111,
+        -8.05389
+      ],
+      "source_ids": [
+        "C11-S43",
+        "C11-S51",
+        "C11-S62",
+        "C11-S63"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "san-juan-1598",
+      "place": "圣胡安：英军1598年6至8月驻占",
+      "controller": "English commander Earl of Cumberland (temporary)",
+      "historic_status": "temporary_English_occupied_city",
+      "first_attested": "1598-06-16",
+      "last_attested": "1598-08-27",
+      "date_precision_comment": "NPS span is from beginning of battle including occupation; El Morro actual surrender was later",
+      "year_end_control_visible_years": [],
+      "event_focus_possible_years": [
+        1598
+      ],
+      "site_reference_point_wgs84": [
+        -66.1236294,
+        18.4703808
+      ],
+      "source_ids": [
+        "C11-S16",
+        "C11-S17",
+        "C11-S30",
+        "C11-S56"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    },
+    {
+      "stable_id": "cahir-1599",
+      "place": "卡希尔：1599年英军夺堡",
+      "controller": "Crown of England army",
+      "historic_status": "temporary_or_inherited_English_fort",
+      "first_attested": "1599",
+      "last_attested": "no verified yearend hold",
+      "date_precision_comment": "actual continuous English presence after assault unknown",
+      "year_end_control_visible_years": [],
+      "event_focus_possible_years": [
+        1599
+      ],
+      "site_reference_point_wgs84": [
+        -7.927156,
+        52.374557
+      ],
+      "source_ids": [
+        "C11-S09",
+        "C11-S31",
+        "C11-S32"
+      ],
+      "display_as": "screen_circle_symbol",
+      "show_when_selected_event_in_year": true,
+      "show_full_historic_geo_polygon": false,
+      "exact_area_sqkm": null,
+      "core_not_whole_county_or_island": true
+    }
+  ],
+  "episode_count": 10,
+  "non_certified_envelopes": "editor_import/APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson",
+  "actual_historical_area_sqkm": null
+}
