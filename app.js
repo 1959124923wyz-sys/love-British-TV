@@ -58,7 +58,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -94,7 +94,7 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let year=1497;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let atlasEleventh=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 // UI contract: two independent user-facing layers, all earlier internal gate IDs
 // retained only for chronology, migration and backwards-compatible renderers.
@@ -125,9 +125,9 @@ function syncMapLayers(){
  if(atlas)refreshHistoricalLayers();
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
-const findPlaceAcrossChapters=id=>[atlas,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
+const findPlaceAcrossChapters=id=>[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
 let activeClusterKey=null,expandedPinned=false,clusterCloseTimer=null;
 // Transient focus target; historical event coordinates remain immutable.
@@ -398,7 +398,7 @@ function renderPoints(){
  }
  if($('toggleKingdom').checked&&year>=1500&&map.getZoom()>=6){
   for(const q of atlas.places||[]){
-   if(q.render_as_event_only)continue;
+   if(q.render_as_event_only||q.render_as_control_core_only)continue;
    const activeMilitaryCore=$('toggleControlAreas').checked&&((year>=1540&&militaryControlPoints?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.year_end_start&&year<=f.properties.year_end_stop))||(year>=1550&&seventhControlSites?.features?.some(f=>f.properties?.stable_id===q.id&&year>=f.properties.start_year&&year<=f.properties.end_year)));
    const alreadyDrawnAsArea=Boolean(activeMilitaryCore)||footprintEnabledFor(q.id)||($('togglePoliticalRelations').checked&&politicalRelationAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year))||($('toggleControlAreas').checked&&frenchCityAreas?.features?.some(f=>f.properties?.source_place_id===q.id&&year>=f.properties.start_year&&year<=f.properties.observed_through_year));
    if(alreadyDrawnAsArea)continue;
@@ -408,12 +408,22 @@ function renderPoints(){
   }
  }
  // Aggregate by screen distance, without changing the historically stored coordinates.
- const nearby=[];
+ const nearby=[],cells=new Map(),cellSize=32;
+ // Spatial hashing limits grouping checks to neighboring 32-pixel cells.
  for(const record of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item)||a.item.id.localeCompare(b.item.id))){
   const point=map.latLngToLayerPoint([record.lat,record.lng]);
-  let g=nearby.find(x=>Math.hypot(x.pt.x-point.x,x.pt.y-point.y)<32);
-  if(!g){g={pt:point,latlng:map.layerPointToLatLng(point),items:[]};nearby.push(g)}
-  g.items.push(record);
+  const gx=Math.floor(point.x/cellSize),gy=Math.floor(point.y/cellSize);
+  let group=null,earliest=Infinity;
+  for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)
+   for(const g of cells.get((gx+dx)+','+(gy+dy))||[]){
+    if(g.order<earliest&&Math.hypot(g.pt.x-point.x,g.pt.y-point.y)<32){group=g;earliest=g.order}
+   }
+  if(!group){
+   group={pt:point,latlng:map.layerPointToLatLng(point),items:[],order:nearby.length};
+   nearby.push(group);
+   const key=gx+','+gy;if(!cells.has(key))cells.set(key,[]);cells.get(key).push(group);
+  }
+  group.items.push(record);
  }
  // Obstacles contain all visible group hubs and singleton icons in container pixels.
  clusterObstacles=nearby.map(g=>{
@@ -463,6 +473,10 @@ function renderPoints(){
    dashArray:coastal?'2 11':schematic?'3 10':'8 9',opacity:coastal?.7:.92,
    className:coastal?'atlas-merchant-coastline':'atlas-voyage-schematic'};
   const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords;
+   // A faint unbroken foundation joins historical endpoints without implying GPS.
+   if(schematic)L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
+    color:baseColor,weight:2.4,opacity:.48,interactive:false,
+    className:'atlas-voyage-continuity'}).addTo(groups.routes);
   const line=L.polyline(routeGeometry,{...style,interactive:false}).addTo(groups.routes);
   // Historical territory polygons cannot intercept this upper SVG hit stroke.
   L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
