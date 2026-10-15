@@ -5,6 +5,8 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const ROOT=path.resolve(__dirname,'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(ROOT,p),'utf8'));
+const {hydrateFootprints,CANONICAL}=require('../js/territory-geometry.js');
+const canonicalFootprints=read(CANONICAL);
 const periods=[
  ['data/atlas-1497-1509.json',1497,1509],
  ['data/atlas-1510-1519.json',1510,1519],
@@ -130,7 +132,13 @@ function validateGeometry(geo,file,id){
 }
 const results={};
 for(const file of overlayPaths){
- const geo=read(file),ids=new Set();
+ const raw=read(file);
+ const referenced=file.startsWith('data/territorial-footprints-')&&file!==CANONICAL;
+ if(referenced)for(const f of raw.features){
+  assert.equal(f.geometry,null,file+' must not copy inherited coordinates');
+  assert.equal(f.properties?.geometry_ref,f.id,file+' missing/invalid shared geometric identity');
+ }
+ const geo=referenced?hydrateFootprints(canonicalFootprints,raw):raw,ids=new Set();
  assert.equal(geo.type,'FeatureCollection',file);
  for(const f of geo.features){
   const p=f.properties||{},id=f.id||p.id||p.stable_id;
