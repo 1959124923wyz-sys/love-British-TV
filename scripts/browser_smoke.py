@@ -997,6 +997,11 @@ try:
            "document.querySelectorAll('#map .atlas-voyage-continuity').length>=2",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
     set_year(1590,3)
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E002"]').click()""")
+    verify("1590 Breifne territorial devastation is now region-locatable without invented burned villages",
+           """document.querySelector('#dossierBody').textContent.includes('布雷夫尼') &&
+              document.querySelector('#dossierBody').textContent.includes('地区') &&
+              !document.querySelector('#dossierBody').textContent.includes('暂无足以绘制精确史实地点')""",driver)
     verify("1590 must not inherit earlier Drake sack or Munster 1584–89 policy overlay",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0""",driver)
@@ -1011,10 +1016,20 @@ try:
            "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
     driver.save_screenshot(str(OUT / "chapter11-1591-Santos-captured.png"))
     set_year(1592,9)
+    verify("1592 Santos to Sao Vicente sourced link not visible in linked group",
+           """groups.chapter11ActionLinks.getLayers().length===1 &&
+              document.querySelector('#yearRange').value==='1592'""",driver)
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E009"]').click()""")
+    verify("1592 Sao Vicente main published event must have modern name/location source",
+           """document.querySelector('#dossierBody').textContent.includes('圣维森特') &&
+              !document.querySelector('#dossierBody').textContent.includes('保持地图坐标空值') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
     verify("1592 Santos should no longer be English at year-end",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===3",driver)
 
     set_year(1593,10)
+    verify("1593 must not retain only-1592 Santos/Sao Vicente raid link",
+           "groups.chapter11ActionLinks.getLayers().length===0",driver)
     verify("1593 cannot show future Fermanagh and Ulster 1594 battles",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
@@ -1072,6 +1087,14 @@ try:
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
     set_year(1598,30)
+    verify("1598 Armagh Yellow Ford Blackwater defeat is a source-backed link not occupation",
+           """groups.chapter11ActionLinks.getLayers().length===1 &&
+              document.querySelector('#yearRange').value==='1598'""",driver)
+    driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E029"]').click()""")
+    verify("1598 Yellow Ford main record now localizable with uncertain battlefield noted",
+           """document.querySelector('#dossierBody').textContent.includes('黄渡口') &&
+              document.querySelector('#dossierBody').textContent.includes('实测') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
     verify("1598 San Juan should show a brief urban occupation, not 1595 failed raid",
            """document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===1 &&
               document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
@@ -1092,6 +1115,8 @@ try:
               !!document.querySelector('#eventList [data-eid="1590S-E027"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-raid.png"))
     set_year(1599,36)
+    verify("1599 previous Yellow Ford connection expired",
+           "groups.chapter11ActionLinks.getLayers().length===0",driver)
     verify("1599 Essex south-Ireland march should be a CITY-ORDER LINE, not occupation land",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===1""",driver)
