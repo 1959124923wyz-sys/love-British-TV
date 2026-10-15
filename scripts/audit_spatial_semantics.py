@@ -207,6 +207,15 @@ def inspect():
                         report("REVIEW", "weak_impact_anchors", key,
                                "Local invasion-impact surface lacks two named anchors or an explicit historical region")
                     for anchor in p.get("named_anchors", []):
+                        # Verified place names are valid historical anchors even
+                        # without fabricated GPS positions. Only inspect spatial
+                        # containment when an actual coordinate dict is supplied.
+                        if isinstance(anchor, str):
+                            continue
+                        if not isinstance(anchor, dict):
+                            report("REVIEW", "unexpected_anchor_schema", key,
+                                   "Anchor must be a named place string or location object")
+                            continue
                         lon = anchor.get("lon", anchor.get("lng"))
                         lat = anchor.get("lat")
                         if kind == "Polygon" and isinstance(lat, (int, float)) and isinstance(lon, (int, float)):
