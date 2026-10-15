@@ -81,6 +81,8 @@ for(const {chapter, data} of atlas) {
     if(!Array.isArray(r.coords) || r.coords.length < 2) {bad(where,'route has fewer than two points');continue;}
     for(const [lat,lon] of r.coords) if(!validLatLon(lat,lon)) bad(where,'invalid [latitude,longitude] waypoint');
     if(r.year > chapter.end || r.year < chapter.start) bad(where,'route year outside public chapter');
+    if(!Array.isArray(r.related_event_ids) || !r.related_event_ids.length)
+      bad(where,'voyage/action line is not linked to a published historic event');
     assertPublishedRefs(r, where);
     if(r.segments && r.segments.length) {
       for(const seg of r.segments) {
