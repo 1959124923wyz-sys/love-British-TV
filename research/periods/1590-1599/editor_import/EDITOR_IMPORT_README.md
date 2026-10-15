@@ -36,3 +36,31 @@
 4. 利用`CONTROL_TRANSITION`按年末转移，**1595 Blackwater英堡遭当地军夺回、1598 Portmore英军撤堡、1590 Roanoke无人、1598 San Juan攻陷但撤离**；尚不确定的旧堡驻军不能猜测常年有效。
 5. 科学配准后如取得真实旧城墙/庄园，才可生成带来源、年代、误差、版权的Polygon；未知边界必须用**虚线**。
 6. GitHub Actions只表明机器质量审计通过，不能代替历史原稿逐页阅读或主站浏览器渲染验收。真实历史占领Polygon当前=0。需由主编审核后选择合并，不触发自动发布。
+
+
+
+## 本轮重点新增｜可立即预览的1590年代概略控制地图
+
+**已经实际绘出两块多边形（均为虚线研究参考，不是实测疆界）及十处屏幕面积符号；所有源数据已保存本PR，主编不必自己画图。**
+
+| 文件 | 可见功能 | 准确性与启用规则 |
+| --- | --- | --- |
+| [APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson](APPROXIMATE_INFLUENCE_AREAS_1590_1599.geojson) | 两块可直接在Leaflet填色、虚线描边的研究面 | ①帕莱Pale沿用主站1570s已批准的**1488年历史地名包络21个顶点**，1590-99年份参考，不代表1590年代测得精确边界；②罗利Blackwater / Youghal–Lismore**手绘地理研究带**，仅依时期地产分布及河流地名，非真实庄园产权、英军主权，1598起隐去已证连续殖民居住的推定面。所有feature `fill_authorized=false`，`area_sqkm=null`。 |
+| [TEMPORARY_CONTROL_CORES_1590_1599.geojson](TEMPORARY_CONTROL_CORES_1590_1599.geojson) | 10个具年份、来源的城市/堡垒控制**屏幕圆形面积符号** | 包括Dublin、Carrickfergus、Enniskillen、Blackwater、Kilcolman、Santos、Recife、San Juan和Cahir；显示半径5-12像素，不是古城墙实际面积。坐标优先来源于州级考古或此前主站地理点。 |
+| [CONTROL_EPISODES_1590_1599.json](CONTROL_EPISODES_1590_1599.json) | 点击事件显示特定时期的短暂占领 | 桑托斯1591圣诞占据至1592早期，1595 Recife约30-34天，1598 San Juan **NPS 6月16日至8月27日**。这些城市不应在1592、1595和1598年末继续显示英军据地。 |
+| [YEAR_END_CONTROL_RENDER_PLAN_1590_1599.json](YEAR_END_CONTROL_RENDER_PLAN_1590_1599.json) | **十份可直接按键取用的年末渲染ID清单** | 主编选择1590—99任一年，无需自行推导某城堡当年是否仍在英军手中。 |
+| [OCCUPATION_RESEARCH_PREVIEW_1590_1599.html](OCCUPATION_RESEARCH_PREVIEW_1590_1599.html) | 内置史地数据的**独立Leaflet地图预览** | 年份滑块、地图缩放、城市核心面积标记、单次占据状态、史料弹窗。下载HTML并在浏览器打开即可运行，底图及Leaflet依赖网络。没有修改主站。 |
+
+### 主要年度验收情景
+- 1590：都柏林与卡里克弗格斯的英王核心，殖民承领人Kilcolman，帕莱虚线。
+- 1591：圣诞攻下**Santos**，因此在1591年12月31日占驻符号出现；1592年末必须消失。
+- 1594：**Enniskillen**有英军驻守，1595年被Maguire部收复后移除。Blackwater亦需显示1595年前与1598战争期的分段状态，不能跨年简单连续。
+- 1595：Recife的英军短期占领仅在详情状态出现，年末不出现；不能用全年紫色面积表示。
+- 1598：**Kilcolman**英格兰承领人住所十月遭反殖民战争焚毁，12月31日不再显示此前连续殖民居住核心；**San Juan**夏季短占但8月27日英军已退出，年末不出现。
+- 1599：Cahir城堡虽遭英军攻取，但未找到精确年末守军记录，地图仅显示当年夺堡事件，不臆造已经持续驻守。
+
+### 可直接读取的Leaflet显示约定
+- `L.geoJSON(APPROXIMATE_INFLUENCE_AREAS...)`：按每个Polygon `valid_years` 挑选，配置 `stroke_dash_array`、`fill_opacity`，始终在真正已验证历史面积的另一图层展示，并单独可开关；**不得合入Atlas`colonial_polygons`真疆界列表**。
+- `L.circleMarker([lat,lng],{radius:screen_radius_px})`：根据 `year_end_visible` 控制哪一年的英军城市核心圆圈显示，半径单位是像素。
+- 年内短占事件使用`CONTROL_EPISODES...`弹窗/事件图层，不让它冒充该年年末持续统治。
+- 实际有史料审核的历史实控陆地Polygon仍为**0**；本轮新增的是**2块诚实标注的概略参考面与10个能随年份切换的核心控制面积符号**，切勿统计二者的平方公里。
