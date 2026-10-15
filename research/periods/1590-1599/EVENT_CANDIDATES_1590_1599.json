@@ -4,7 +4,7 @@
     1590,
     1599
   ],
-  "total": 28,
+  "total": 31,
   "events": [
     {
       "id": "ch11-macmahon-execution-monaghan",
@@ -23,6 +23,32 @@
         "geometry": null,
         "coordinate_status": "requires_provenance",
         "rule": "Crown_legal_encroachment_not_full_troop_control"
+      },
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
+      "id": "ch11-bingham-breifne-scorched-earth",
+      "year": 1590,
+      "month_or_day": "03",
+      "date_precision": "month",
+      "title": "宾厄姆英王军在布雷夫尼焚毁、杀戮并驱逐当地领主",
+      "description": "1590年3月英王驻康诺特总督理查德·宾厄姆分兵侵入布雷夫尼，爱尔兰编年史记载英军沿途焚毁和杀戮，迫使布赖恩·奥罗克逃离领地。至当年秋季，当地仍持续反抗英王统治。",
+      "icon_code": "WAR",
+      "kind": "English_Crown_coercion_and_execution",
+      "place": "West Breifne",
+      "source_ids": [
+        "C11-S38"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "unmapped_specific_scene",
+        "rule": "burned villages and dead names not individually geocoded"
       },
       "significance": {
         "level": 3,
@@ -60,6 +86,32 @@
       "editorial_status": "research_only"
     },
     {
+      "id": "ch11-orourke-hanged-london",
+      "year": 1591,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "英王政府将流亡爱尔兰领主奥罗克押往伦敦处决",
+      "description": "曾被英军驱逐的布赖恩·奥罗克赴苏格兰寻求庇护，随后被王室人员拘押并转交英格兰，在伦敦受审后被处以绞刑、斩首和分尸。",
+      "icon_code": "REP",
+      "kind": "English_Crown_coercion_and_execution",
+      "place": "London",
+      "source_ids": [
+        "C11-S39"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "unmapped_specific_scene",
+        "rule": "specific Tyburn site probable by other accounts but original chronicle says London only"
+      },
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
       "id": "ch11-madre-de-deus-captured",
       "year": 1592,
       "month_or_day": null,
@@ -78,6 +130,32 @@
         "geometry": null,
         "coordinate_status": "requires_provenance",
         "rule": "seizure_at_sea_not_Azores_English_territory"
+      },
+      "significance": {
+        "level": 3,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
+      "id": "ch11-blind-oconor-roe-executed",
+      "year": 1592,
+      "month_or_day": "01",
+      "date_precision": "month",
+      "title": "英王当局处决年迈失明的奥康纳·罗伊",
+      "description": "爱尔兰编年史记载，年老失明的奥康纳·罗伊1592年1月在罗斯康芒法庭被绞死，原因被归于其儿子参与反抗英王的行动。",
+      "icon_code": "REP",
+      "kind": "English_Crown_coercion_and_execution",
+      "place": "Roscommon",
+      "source_ids": [
+        "C11-S40"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "unmapped_specific_scene",
+        "rule": "Roscommon site not verified actual gallows coordinate"
       },
       "significance": {
         "level": 3,
@@ -193,6 +271,33 @@
       "editorial_status": "research_only"
     },
     {
+      "id": "ch11-raleigh-trinidad-berrio-captive",
+      "year": 1595,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "罗利袭取特立尼达西班牙据点并拘押总督",
+      "description": "罗利在1595年南美航行中夺取西属特立尼达岛圣何塞据点，俘获西班牙官员安东尼奥·德贝里奥，并探入奥里诺科河寻找黄金。",
+      "icon_code": "ECO",
+      "kind": "fort_capture_and_prisoner",
+      "place": "Trinidad / San José de Oruña",
+      "source_ids": [
+        "C11-S23",
+        "C11-S24"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "requires_provenance",
+        "rule": "not_entire_Trinidad_or_Guiana_English_possession"
+      },
+      "significance": {
+        "level": 2,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
       "id": "ch11-blackwater-fort-irish-recapture",
       "year": 1595,
       "month_or_day": "02-16",
@@ -273,33 +378,6 @@
       "editorial_status": "research_only"
     },
     {
-      "id": "ch11-raleigh-trinidad-berrio-captive",
-      "year": 1595,
-      "month_or_day": null,
-      "date_precision": "year",
-      "title": "罗利袭取特立尼达西班牙据点并拘押总督",
-      "description": "罗利在1595年南美航行中夺取西属特立尼达岛圣何塞据点，俘获西班牙官员安东尼奥·德贝里奥，并探入奥里诺科河寻找黄金。",
-      "icon_code": "ECO",
-      "kind": "fort_capture_and_prisoner",
-      "place": "Trinidad / San José de Oruña",
-      "source_ids": [
-        "C11-S23",
-        "C11-S24"
-      ],
-      "geography": {
-        "geometry": null,
-        "coordinate_status": "requires_provenance",
-        "rule": "not_entire_Trinidad_or_Guiana_English_possession"
-      },
-      "significance": {
-        "level": 2,
-        "review_status": "chief_editor_candidate"
-      },
-      "victims_and_profit_in_ledger_only": true,
-      "permanent_English_annexation": false,
-      "editorial_status": "research_only"
-    },
-    {
       "id": "ch11-drake-san-juan-attack-failed",
       "year": 1595,
       "month_or_day": "11-22",
@@ -318,6 +396,32 @@
         "geometry": null,
         "coordinate_status": "requires_provenance",
         "rule": "Spanish_held_at_year_end"
+      },
+      "significance": {
+        "level": 2,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
+      "id": "ch11-faro-bishops-books-seized",
+      "year": 1596,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "加的斯远征英军掠夺法鲁主教藏书",
+      "description": "加的斯行动期间，英军在葡萄牙法鲁劫取主教藏书，相关书籍后来流入英国牛津藏书体系。",
+      "icon_code": "ECO",
+      "kind": "cultural_heritage_plunder",
+      "place": "Faro",
+      "source_ids": [
+        "C11-S21"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "requires_provenance",
+        "rule": "Oxford_Bodleian_bibliographic_lead_needs_catalogue_per_book"
       },
       "significance": {
         "level": 2,
@@ -383,32 +487,6 @@
       "editorial_status": "research_only"
     },
     {
-      "id": "ch11-faro-bishops-books-seized",
-      "year": 1596,
-      "month_or_day": null,
-      "date_precision": "year",
-      "title": "加的斯远征英军掠夺法鲁主教藏书",
-      "description": "加的斯行动期间，英军在葡萄牙法鲁劫取主教藏书，相关书籍后来流入英国牛津藏书体系。",
-      "icon_code": "ECO",
-      "kind": "cultural_heritage_plunder",
-      "place": "Faro",
-      "source_ids": [
-        "C11-S21"
-      ],
-      "geography": {
-        "geometry": null,
-        "coordinate_status": "requires_provenance",
-        "rule": "Oxford_Bodleian_bibliographic_lead_needs_catalogue_per_book"
-      },
-      "significance": {
-        "level": 2,
-        "review_status": "chief_editor_candidate"
-      },
-      "victims_and_profit_in_ledger_only": true,
-      "permanent_English_annexation": false,
-      "editorial_status": "research_only"
-    },
-    {
       "id": "ch11-odonnell-raids-athenry",
       "year": 1597,
       "month_or_day": null,
@@ -425,32 +503,6 @@
         "geometry": null,
         "coordinate_status": "requires_provenance",
         "rule": "Irish_forces_not_England"
-      },
-      "significance": {
-        "level": 2,
-        "review_status": "chief_editor_candidate"
-      },
-      "victims_and_profit_in_ledger_only": true,
-      "permanent_English_annexation": false,
-      "editorial_status": "research_only"
-    },
-    {
-      "id": "ch11-dublin-powder-explosion",
-      "year": 1597,
-      "month_or_day": "03-13",
-      "date_precision": "day",
-      "title": "都柏林英王军火火药意外爆炸并波及民宅",
-      "description": "1597年3月13日，从英格兰运来的火药在都柏林酒街起火爆炸，波及民房并造成大量人员伤亡；现有编年史未确认是英军故意屠杀。",
-      "icon_code": "DIS",
-      "kind": "accidental_ordnance_blast",
-      "place": "Dublin Wine Street",
-      "source_ids": [
-        "C11-S07"
-      ],
-      "geography": {
-        "geometry": null,
-        "coordinate_status": "requires_provenance",
-        "rule": "not_intentional_massacre_nonprofit"
       },
       "significance": {
         "level": 2,
@@ -487,50 +539,22 @@
       "editorial_status": "research_only"
     },
     {
-      "id": "ch11-yellow-ford-english-defeat",
-      "year": 1598,
-      "month_or_day": "08-14",
+      "id": "ch11-dublin-powder-explosion",
+      "year": 1597,
+      "month_or_day": "03-13",
       "date_precision": "day",
-      "title": "黄渡口战役：爱尔兰联军击溃英王远征军",
-      "description": "1598年8月14日，休·奥尼尔指挥的爱尔兰军击败英军救援部队；英军主帅巴格纳尔阵亡。史学记述英军损失上限约2500，不是完整死亡名册。",
-      "icon_code": "RES",
-      "kind": "major_Irish_victory",
-      "place": "Yellow Ford / Armagh",
+      "title": "都柏林英王军火火药意外爆炸并波及民宅",
+      "description": "1597年3月13日，从英格兰运来的火药在都柏林酒街起火爆炸，波及民房并造成大量人员伤亡；现有编年史未确认是英军故意屠杀。",
+      "icon_code": "DIS",
+      "kind": "accidental_ordnance_blast",
+      "place": "Dublin Wine Street",
       "source_ids": [
-        "C11-S04",
-        "C11-S01",
-        "C11-S08"
+        "C11-S07"
       ],
       "geography": {
         "geometry": null,
         "coordinate_status": "requires_provenance",
-        "rule": "disputed_exact_battlefield_not_mapped_polygon"
-      },
-      "significance": {
-        "level": 3,
-        "review_status": "chief_editor_candidate"
-      },
-      "victims_and_profit_in_ledger_only": true,
-      "permanent_English_annexation": false,
-      "editorial_status": "research_only"
-    },
-    {
-      "id": "ch11-portmore-english-fort-abandoned",
-      "year": 1598,
-      "month_or_day": "08",
-      "date_precision": "month",
-      "title": "黄渡口战后英军撤离波特莫尔要塞",
-      "description": "黄渡口惨败后阿尔斯特英军驻城要求安全撤退，受围困的波特莫尔堡被放弃。不能继续显示1598年末英军驻守。",
-      "icon_code": "RES",
-      "kind": "English_garrison_withdrawal",
-      "place": "Portmore Blackwater Fort",
-      "source_ids": [
-        "C11-S04"
-      ],
-      "geography": {
-        "geometry": null,
-        "coordinate_status": "requires_provenance",
-        "rule": "confirmed_English_garrison_ends_1598"
+        "rule": "not_intentional_massacre_nonprofit"
       },
       "significance": {
         "level": 2,
@@ -595,26 +619,53 @@
       "editorial_status": "research_only"
     },
     {
-      "id": "ch11-essex-ireland-army-garrisons",
-      "year": 1599,
-      "month_or_day": "05",
+      "id": "ch11-portmore-english-fort-abandoned",
+      "year": 1598,
+      "month_or_day": "08",
       "date_precision": "month",
-      "title": "埃塞克斯率大军到爱尔兰，沿线扩张驻军网络",
-      "description": "1599年英军统帅埃塞克斯率大规模军队抵达爱尔兰，在卡里克弗格斯、纽里、邓多克和南部多地部署据点，试图镇压九年战争中的爱尔兰联盟。",
-      "icon_code": "WAR",
-      "kind": "English_army_garrison_network",
-      "place": "Dublin / Munster / Ulster",
+      "title": "黄渡口战后英军撤离波特莫尔要塞",
+      "description": "黄渡口惨败后阿尔斯特英军驻城要求安全撤退，受围困的波特莫尔堡被放弃。不能继续显示1598年末英军驻守。",
+      "icon_code": "RES",
+      "kind": "English_garrison_withdrawal",
+      "place": "Portmore Blackwater Fort",
       "source_ids": [
-        "C11-S09",
-        "C11-S01"
+        "C11-S04"
       ],
       "geography": {
         "geometry": null,
         "coordinate_status": "requires_provenance",
-        "rule": "separate_multiple_town_points_no_continuous_rule_polygon"
+        "rule": "confirmed_English_garrison_ends_1598"
       },
       "significance": {
         "level": 2,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
+      "id": "ch11-yellow-ford-english-defeat",
+      "year": 1598,
+      "month_or_day": "08-14",
+      "date_precision": "day",
+      "title": "黄渡口战役：爱尔兰联军击溃英王远征军",
+      "description": "1598年8月14日，休·奥尼尔指挥的爱尔兰军击败英军救援部队；英军主帅巴格纳尔阵亡。史学记述英军损失上限约2500，不是完整死亡名册。",
+      "icon_code": "RES",
+      "kind": "major_Irish_victory",
+      "place": "Yellow Ford / Armagh",
+      "source_ids": [
+        "C11-S04",
+        "C11-S01",
+        "C11-S08"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "requires_provenance",
+        "rule": "disputed_exact_battlefield_not_mapped_polygon"
+      },
+      "significance": {
+        "level": 3,
         "review_status": "chief_editor_candidate"
       },
       "victims_and_profit_in_ledger_only": true,
@@ -638,6 +689,33 @@
         "geometry": null,
         "coordinate_status": "requires_provenance",
         "rule": "local_fort_capture_only"
+      },
+      "significance": {
+        "level": 2,
+        "review_status": "chief_editor_candidate"
+      },
+      "victims_and_profit_in_ledger_only": true,
+      "permanent_English_annexation": false,
+      "editorial_status": "research_only"
+    },
+    {
+      "id": "ch11-essex-ireland-army-garrisons",
+      "year": 1599,
+      "month_or_day": "05",
+      "date_precision": "month",
+      "title": "埃塞克斯率大军到爱尔兰，沿线扩张驻军网络",
+      "description": "1599年英军统帅埃塞克斯率大规模军队抵达爱尔兰，在卡里克弗格斯、纽里、邓多克和南部多地部署据点，试图镇压九年战争中的爱尔兰联盟。",
+      "icon_code": "WAR",
+      "kind": "English_army_garrison_network",
+      "place": "Dublin / Munster / Ulster",
+      "source_ids": [
+        "C11-S09",
+        "C11-S01"
+      ],
+      "geography": {
+        "geometry": null,
+        "coordinate_status": "requires_provenance",
+        "rule": "separate_multiple_town_points_no_continuous_rule_polygon"
       },
       "significance": {
         "level": 2,
