@@ -3,12 +3,13 @@
   "name": "Historical source-backed regional story follow-ups 1562-1596",
   "metadata": {
     "geometry_semantics": "non-surveyed diagrammatic local/region viewing aid; no actual territory area",
-    "feature_count": 6,
+    "feature_count": 11,
     "verified_english_occupation_polygon_count": 0,
     "verified_english_garrison_location": 1,
     "short_occupation_year_end_split": "Le Havre 1562 English garrison / 1563 French recovery",
     "source_policy": "Municipal archives, museum collection catalogues, research library and Library of Congress",
-    "scope_addendum": "1587 Cádiz naval event explicitly distinct from 1596 Anglo-Dutch town sack; 1589 Vigo town raid distinct from permanent conquest"
+    "scope_addendum": "1587 Cádiz naval event explicitly distinct from 1596 Anglo-Dutch town sack; 1589 Vigo town raid distinct from permanent conquest",
+    "source_20261015_addition": "5 documented violence-oriented regional contexts: Roanoke 1585/86/87, A Coruña 1589, Breifne 1590"
   },
   "features": [
     {
@@ -405,6 +406,334 @@
           "Vigo city"
         ],
         "damage_area_known": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roanoke-aquascogoc-1585-burning-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.89,
+              35.4
+            ],
+            [
+              -76.43,
+              35.4
+            ],
+            [
+              -76.43,
+              35.8
+            ],
+            [
+              -76.89,
+              35.8
+            ],
+            [
+              -76.89,
+              35.4
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Named-town/bay/region-scale deliberately broad contemporary reference window; not a village archaeological survey, death footprint, troop control perimeter or territory ownership.",
+        "source_precision": "Exact historical attack spots, damage extent and persons affected not geocoded.",
+        "name": "1585年阿奎斯科科克：英格兰殖民武装焚毁原住民村庄与庄稼（地区参考）",
+        "label_type": "原住民村社纵火与粮食破坏",
+        "zone_type": "english_indigenous_village_burning_schematic",
+        "color_role": "raid_red",
+        "start_year": 1585,
+        "end_year": 1585,
+        "controller_zh": "理查德·格伦维尔的英格兰殖民队伍；遭袭的卡罗来纳阿尔冈昆原住民社区",
+        "summary_zh": "1585年7月，格伦维尔率领的英格兰殖民者因失踪的银杯而报复阿奎斯科科克（Aquascogoc）村庄，焚毁住屋与农作物。美国国家公园管理局历史手册记载了英方焚村；北卡罗来纳州官方历史标识将事件与今Belhaven附近的地理范围关联。银杯的具体去向及焚村的全部人员伤亡不能凭此推断。浅红虚线只表示现代Belhaven及周边可供读图的地区背景，不是1585年村庄古址、烧毁的农田面积或整个阿尔冈昆领地遭焚的断言。",
+        "source_ids": [
+          "C10-S23",
+          "C10-S61"
+        ],
+        "source_urls": [
+          "https://home.nps.gov/people/richardgrenville.htm",
+          "https://www.dncr.nc.gov/blog/2023/12/06/aquascogoc-b-72",
+          "https://npshistory.com/handbooks/historical/16/hh16d3.htm"
+        ],
+        "related_event_ids": [
+          "1580S-E015"
+        ],
+        "named_anchors": [
+          "Aquascogoc (uncertain archaeological site)",
+          "Belhaven region, North Carolina"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roanoke-wingina-killed-1586-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.29,
+              35.67
+            ],
+            [
+              -75.51,
+              35.67
+            ],
+            [
+              -75.51,
+              36.14
+            ],
+            [
+              -76.29,
+              36.14
+            ],
+            [
+              -76.29,
+              35.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Named-town/bay/region-scale deliberately broad contemporary reference window; not a village archaeological survey, death footprint, troop control perimeter or territory ownership.",
+        "source_precision": "Exact historical attack spots, damage extent and persons affected not geocoded.",
+        "name": "1586年罗阿诺克：英殖民当局杀害原住民领袖温吉纳（岛与大陆关系示意）",
+        "label_type": "殖民军事胁迫与杀害原住民领导人",
+        "zone_type": "english_indigenous_leader_killing_schematic",
+        "color_role": "raid_red",
+        "start_year": 1586,
+        "end_year": 1586,
+        "controller_zh": "拉尔夫·莱恩指挥的英格兰殖民据点武装；遭害的温吉纳／佩米萨潘及其部属",
+        "summary_zh": "美国国家公园管理局记载，英格兰罗阿诺克军事殖民地依靠阿尔冈昆人提供食物，疾病和粮食冲突恶化了关系。当地领袖温吉纳（后改名佩米萨潘）试图切断英方补给，莱恩获悉后先发制人，1586年6月将其杀害。此事改变了英格兰殖民者与周边阿尔冈昆社群的权力关系。地图仅示意罗阿诺克岛与相邻大陆的历史关联，不能视作全片原住民领地落入英国统治，也不声称准确杀害现场坐标。",
+        "source_ids": [
+          "C10-S13",
+          "C10-S15"
+        ],
+        "source_urls": [
+          "https://home.nps.gov/fora/learn/historyculture/1585-the-military-colony.htm",
+          "https://npshistory.com/handbooks/historical/16/hh16d3.htm"
+        ],
+        "related_event_ids": [
+          "1580S-E022"
+        ],
+        "named_anchors": [
+          "Roanoke Island",
+          "Dasamonquepeuc area uncertain"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "roanoke-croatoan-friendly-fire-1587-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.34,
+              35.56
+            ],
+            [
+              -75.56,
+              35.56
+            ],
+            [
+              -75.56,
+              36.13
+            ],
+            [
+              -76.34,
+              36.13
+            ],
+            [
+              -76.34,
+              35.56
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Named-town/bay/region-scale deliberately broad contemporary reference window; not a village archaeological survey, death footprint, troop control perimeter or territory ownership.",
+        "source_precision": "Exact historical attack spots, damage extent and persons affected not geocoded.",
+        "name": "1587年罗阿诺克：英殖民者误袭友好克罗阿坦人（地区示意）",
+        "label_type": "殖民者误伤／杀害盟友原住民",
+        "zone_type": "english_croatoan_mistaken_attack_schematic",
+        "color_role": "raid_red",
+        "start_year": 1587,
+        "end_year": 1587,
+        "controller_zh": "约翰·怀特领导的英格兰殖民队伍；遭袭的克罗阿坦原住民盟友",
+        "summary_zh": "1587年英格兰殖民者认为附近罗阿诺克人杀死了殖民者George Howe，遂发起报复行动，结果攻击了友好的克罗阿坦社群。美国国家公园管理局记载，Manteo辨认出遭袭者后，英方才停止攻击；公园官方介绍同时明确记载至少一名原住民被杀。克罗阿坦人并非本次被错误袭击的所谓敌军；应讲清谁采取了行动、错误识别如何发生、当地盟友受到什么伤害。地区虚线仅定位罗阿诺克附近海岸和原住民交往空间，不是已定位的村落或所有受害者地理范围。",
+        "source_ids": [
+          "C10-S14"
+        ],
+        "source_urls": [
+          "https://www.nps.gov/fora/learn/historyculture/1587-the-lost-colony.htm",
+          "https://www.nps.gov/fora/planyourvisit/brochure.htm",
+          "https://home.nps.gov/people/manteo.htm"
+        ],
+        "related_event_ids": [
+          "1580S-E023"
+        ],
+        "named_anchors": [
+          "Roanoke mainland shore",
+          "Croatoan people, not necessarily Croatoan island raid"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "coruna-pescaderia-english-attack-1589-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.51,
+              43.31
+            ],
+            [
+              -8.31,
+              43.31
+            ],
+            [
+              -8.31,
+              43.43
+            ],
+            [
+              -8.51,
+              43.43
+            ],
+            [
+              -8.51,
+              43.31
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Named-town/bay/region-scale deliberately broad contemporary reference window; not a village archaeological survey, death footprint, troop control perimeter or territory ownership.",
+        "source_precision": "Exact historical attack spots, damage extent and persons affected not geocoded.",
+        "name": "1589年拉科鲁尼亚：英军攻击渔民区，城市抵抗后迫其撤退（示意）",
+        "label_type": "港城民居劫掠与围城战（未全城占领）",
+        "zone_type": "english_failed_urban_siege_and_looting_schematic",
+        "color_role": "raid_red",
+        "start_year": 1589,
+        "end_year": 1589,
+        "controller_zh": "德雷克与诺里斯率英格兰远征军，拉科鲁尼亚居民、妇女与西班牙守军参与抵抗",
+        "summary_zh": "1589年德雷克—诺里斯英格兰远征军在西班牙加利西亚海岸登陆，攻占或掠夺拉科鲁尼亚港外的Pescadería渔民区，并试图攻破城市内城防线。当地民众与守军长期抵抗，英军未能攻克设防城市并最终撤退。西班牙陆军博物馆与拉科鲁尼亚市政府均有战事叙述，美国国会图书馆保存当时城市防御图的研究说明。红色虚线只为读者标示港城袭扰的大致区域，不意味着英军占领整个拉科鲁尼亚或全区居民住房尽遭焚毁。",
+        "source_ids": [
+          "C10-S44",
+          "C10-S45",
+          "C10-S46"
+        ],
+        "source_urls": [
+          "https://ejercito.defensa.gob.es/museo/HECHOS_HISTORICOS/HECHOS_HISTORICOS/05.14_mayo_MARIA_PITA_Y_LA_DEFENSA_DE_LA_CORUNA.html",
+          "https://www.coruna.gal/castroelvina/es/castro-habitado/personas/detalle/sir-francis-drake/contenido/1453606084169?argIdioma=es",
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/drake-norris-expedition/"
+        ],
+        "related_event_ids": [
+          "1580S-E026"
+        ],
+        "named_anchors": [
+          "A Coruña",
+          "Pescadería quarter"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "breifne-bingham-1590-war-and-displacement-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.44,
+              53.94
+            ],
+            [
+              -7.44,
+              53.94
+            ],
+            [
+              -7.44,
+              54.42
+            ],
+            [
+              -8.44,
+              54.42
+            ],
+            [
+              -8.44,
+              53.94
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Named-town/bay/region-scale deliberately broad contemporary reference window; not a village archaeological survey, death footprint, troop control perimeter or territory ownership.",
+        "source_precision": "Exact historical attack spots, damage extent and persons affected not geocoded.",
+        "name": "1590年西布雷夫尼：宾厄姆英王军进攻、焚毁及奥罗克流亡（地区示意）",
+        "label_type": "英王军队扫荡与盖尔领主被逐",
+        "zone_type": "english_breifne_invasion_and_displacement_schematic",
+        "color_role": "raid_red",
+        "start_year": 1590,
+        "end_year": 1590,
+        "controller_zh": "英格兰王室驻康诺特部队和宾厄姆家族指挥的军队；当地布赖恩·奥罗克及盖尔抵抗力量",
+        "summary_zh": "1590年，宾厄姆家族参与的王室军事行动进入爱尔兰西布雷夫尼（今利特里姆附近），迫使盖尔领主布赖恩·奥罗克逃离。科克大学CELT所刊《四大师编年史》记述这一时期英王军事打击与当地焚毁、杀戮；爱尔兰《人物传记辞典》分别记录乔治·宾厄姆的进军和奥罗克流亡。部队推进并不代表图示现代郡界内每个村庄都被焚，军事控制一度变化也不得当作英国永久占有，死伤数字不按地图多边形推算。",
+        "source_ids": [
+          "C11-S38"
+        ],
+        "source_urls": [
+          "https://celt.ucc.ie/published/T100005F/text002.html",
+          "https://www.dib.ie/biography/bingham-byngham-sir-george-a0664",
+          "https://www.dib.ie/biography/orourke-o-ruairc-brian-ballach-a7029"
+        ],
+        "related_event_ids": [
+          "1590S-E002"
+        ],
+        "named_anchors": [
+          "West Breifne",
+          "County Leitrim region"
+        ]
       }
     }
   ]
