@@ -229,7 +229,8 @@ def inspect():
                                "Related event ID not found in published events: " + ev_id)
             if (active and kind in ("Polygon", "MultiPolygon") and
                     not p.get("source_ids") and not p.get("source_urls")
-                    and not p.get("historic_source_urls")):
+                    and not p.get("historic_source_urls") and
+                    not p.get("designation_source_url") and not p.get("data_source_url")):
                 report("REVIEW", "gis_without_source_link", key,
                        "Map area lacks source links in the feature; could be elsewhere in research")
         stats["all_geojson_features"] += len(features)
