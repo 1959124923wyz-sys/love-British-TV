@@ -47,7 +47,7 @@ def build():
         if when:
             fields=when.split("-")
             label+=str(int(fields[0]))+"月"+(str(int(fields[1]))+"日" if len(fields)==2 else "")
-        category=({"RES":"resistance","REP":"English_Crown_political_repression","WAR":"military_attack","ECO":"privateering_plunder","TER":"colonial_land_dispossession","DIS":"accidental_ordnance_disaster","POL":"political_negotiation"}).get(e["icon_code"],"historical_violence")
+        category=({"RES":"resistance","REP":"English_Crown_political_repression","WAR":"military_attack","ECO":"privateering_plunder","TER":"colonial_land_dispossession","DIS":"accidental_ordnance_disaster","POL":"political_negotiation","SLV":"forcible_capture_of_already_enslaved_Africans_not_proven_sale"}).get(e["icon_code"],"historical_violence")
         events.append({
             "id":"1590S-E"+str(index).zfill(3),
             "research_event_id":e["id"],"year":e["year"],"start_year":e["year"],"end_year":e["year"],"visible_from":e["year"],"date_label":label,
@@ -76,13 +76,13 @@ def build():
        "period":{"from":1590,"to":1599,"next":1600,"start":1590,"end":1599},
        "origin":"research/ch11-1590-1599-violence-colonial-control-20261015","editorial_status":"chief_editor_review_required_not_published",
        "intro":{"title":"暴力兼并、私掠财富与爱尔兰反抗（1590—1599）",
-                "description":"英王以焚毁村落、强制法权变更和处决地方领主扩大在爱尔兰的控制，却在阿尔斯特遭连番抵抗；英格兰私掠者夺取葡萄牙商船、洗劫加的斯，1598年暂占波多黎各圣胡安后撤退。1590年代跨大西洋贩奴的英船及交易数量未取得可证的新账册。"},
+                "description":"英王以焚毁村落、强制法权变更和处决地方领主扩大在爱尔兰的控制，却在阿尔斯特遭连番抵抗；英格兰私掠者夺取葡萄牙商船、洗劫加的斯，1598年暂占波多黎各圣胡安后撤退。1592年一艘运送被奴役非洲人的葡萄牙船遭英格兰私掠者截获；其后续去向与英方出售获利未证。1591年桑托斯和1595年累西腓遭英军洗劫，糖、巴西木与东印度航线货物被夺走。"},
        "events":events,"places":places,"sources":sources,"routes":[],"colonial_polygons":[],
        "presentation":{"year_end_control_file":"CONTROL_TRANSITION_1589_1599.json","control_reference_points":"CONTROL_AND_VIOLENCE_PLACES_1590_1599.geojson",
           "control_delta":"VIOLENCE_AND_CONTROL_DELTA_1590_1599.geojson","financial_archive":"PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json",
           "historic_notes":"HISTORICAL_DETAIL_NOTES_1590_1599.json","chapter10_pending_PR59_not_necessarily_published":True,
           "Britain_did_not_exist_as_a_single_united_sovereign_state_in_1590s":True,
-          "verified_historic_occupation_polygon_count":0,"slave_market_sale_evidence_1590s":None,
+          "verified_historic_occupation_polygon_count":0,"slave_market_sale_evidence_1590s":None,"captured_Portuguese_ship_carrying_enslaved_Africans_in_1592_attested":True,
           "San_Juan_1598_English_present_temporarily_not_year_end":True,"Rathlin_1575_not_chapter11":True,
           "Bingham_1600s_scorched_earth_not_automatically_1590s":True,"ready_for_main":False}}
     delta=[]
@@ -118,7 +118,7 @@ def build():
              "unlocated_events":sum(e["lat"] is None for e in events),"annual_yearend_snapshots":len(control["year_end_states"]),
              "political_and_fort_transitions":len(control["transitions"]),"accounting_lines":len(account["records"]),"document_details":len(notes),
              "historically_audited_occupation_polygons":0},
-       "blocked":["No colonised County Tyrone colored as English","No century-old Roanoke British control","No permanent 1598 San Juan colony","No indiscriminate blame for Gaelic-on-English military killing","No made-up 1590s slave ship records","No automatic sea routes or eighteenth century forts as 1590s shapes"],
+       "blocked":["No colonised County Tyrone colored as English","No century-old Roanoke British control","No permanent 1598 San Juan colony","No indiscriminate blame for Gaelic-on-English military killing","1592 interception of an enslaved-African carrying Portuguese ship is supported; English slave resale and profit not proven","No automatic sea routes or eighteenth century forts as 1590s shapes"],
        "source_coverage_status":"scholarly/official/edited primary; originals not all directly read",
        "browser_publication_tested":False,"main_merge_authorized":False}
     dump("editor_import/ATLAS_EVENT_REVIEW_CANDIDATE.json",atlas)
