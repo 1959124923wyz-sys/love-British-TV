@@ -20,6 +20,10 @@ wait=WebDriverWait(browser,40)
 try:
     browser.get("http://127.0.0.1:8765/?year=1544")
     wait.until(lambda d:d.execute_script("return document.getElementById('bigYear')?.textContent==='1544' && document.querySelector('#eventCount')?.textContent.endsWith('项')"))
+    assert browser.execute_script("return !document.getElementById('milestoneDots') && !document.querySelector('.milestone-dot')"), "Yellow timeline markers returned"
+    assert browser.execute_script("return !document.getElementById('historicalRegionGuideDetails').open"), "Regional notes must be collapsed by default"
+    assert browser.execute_script("return document.getElementById('mapLayerTerritory').checked && document.getElementById('mapLayerEvents').checked"), "Approved two-map-layer format regressed"
+    browser.save_screenshot(str(OUT/"compact-no-yellow-dots-1544-desktop.png"))
     def jump(y):
         browser.execute_script("""
            const input=document.getElementById('jumpYear');
@@ -28,12 +32,12 @@ try:
         """,y)
         wait.until(lambda d:d.execute_script("return document.getElementById('bigYear').textContent===arguments[0]",str(y)))
     def titles():
-        return [x.text for x in browser.find_elements(By.CSS_SELECTOR, "#historicalRegionList .historical-region-entry strong")]
+        return browser.execute_script("return [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')].map(n=>n.textContent)")
     def press(label):
         buttons=browser.find_elements(By.CSS_SELECTOR,"#historicalRegionList .historical-region-entry")
-        btn=next((x for x in buttons if label in x.find_element(By.CSS_SELECTOR,"strong").text),None)
+        btn=next((x for x in buttons if label in x.find_element(By.CSS_SELECTOR,"strong").get_attribute('textContent')),None)
         assert btn is not None, f"{label} missing. Seen: {titles()}"
-        browser.execute_script("arguments[0].scrollIntoView({block:'nearest'});",btn)
+        browser.execute_script("document.getElementById('historicalRegionGuideDetails').open=true;arguments[0].scrollIntoView({block:'nearest'});",btn)
         btn.click()
         wait.until(lambda d: d.execute_script("""
           return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])

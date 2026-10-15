@@ -177,7 +177,7 @@ assert "data/atlas-1510-1519.json" in app
 assert "data/geography-1510-1519-hypotheses.geojson" in app
 assert "p.valid_years?.includes(year)" in app, "Tournaisis appears only during supported 1513–1518 years"
 assert 'id="centuryNav"' in html and 'id="chapterTrack"' in html and 'id="yearRange"' in html
-assert "renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app
+assert "renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()" in app
 assert (ROOT/"research/periods/1510-1519/PROGRESS.md").is_file()
 assert (ROOT/"editorial/1510-1519/DECISION_MATRIX.json").is_file()
 # MAP-FIRST French urban control polygons are explicitly symbols, not surveyed historic city walls.
@@ -224,8 +224,8 @@ for f in footprints["features"]:
     assert polygons and all(ring[0]==ring[-1] for poly in polygons for ring in poly), f["id"]
 assert "function renderTerritories()" in app
 assert "map.createPane('territoryPane')" in app and "ensureTerritorialPatterns()" in app
-timeline_section = app.split('function renderMilestones(){',1)[1].split('function setYear(v){',1)[0]
-assert 'e.year>=chapter.start&&e.year<=year' in timeline_section and 'atlasFourth.events' not in timeline_section, 'Milestones must be filtered to the active chapter only'
+assert 'function renderMilestones()' not in app and 'id="milestoneDots"' not in html, 'Yellow year dots should be removed while chronology controls remain'
+assert 'id="yearRange"' in html and 'function setYear(v)' in app, 'Year slider and its state must remain functional'
 assert 'id="toggleTerritorialFootprints"' in html
 assert (ROOT/"data/TERRITORIAL_FOOTPRINT_SOURCES.md").is_file()
 

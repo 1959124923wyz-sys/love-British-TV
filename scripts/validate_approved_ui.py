@@ -70,7 +70,7 @@ require('id="yearRange"' in html
         and 'id="centuryNav"' in html
         and 'id="chapterTrack"' in html,
         "chapter navigation and year timeline")
-require("renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones()" in app,
+require("renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses()" in app,
         "chapter-long events plus persistent state updates")
 require("observed_through_year" in app, "evidence-limited state persistence")
 require("controlAreaPane" in app and "toggleControlAreas" in html, "map-first urban territorial layer with separate control")
@@ -78,8 +78,8 @@ require("renderPoliticalRelationAreas()" in app and "togglePoliticalRelations" i
 require("renderTerritories()" in app and "territoryPane" in app and "toggleTerritorialFootprints" in html,
         "historically sourced territorial footprints and permanent Calais spatial continuity")
 require("year>=1502?'1502':'—'" in app and "year>=1513?'1513':'—'" in app, "future-year chapter cards stay hidden")
-require("e.year>=chapter.start&&e.year<=year" in app and "chapterForYear(year)" in app,
-        "milestone dots only appear on or after the current year")
+require('id="milestoneDots"' not in html and 'function renderMilestones()' not in app,
+        "removed year milestone dots must stay absent")
 require("!occurredByYear(e,year)" in app and "fullArchive||occurredByYear(e,year)" in app and "showFullChapterArchive" in html, "chronological events with explicitly accessible chapter archive")
 require("data/historical-detail-notes.json" in app
         and "历史文献与详细考证" in app,

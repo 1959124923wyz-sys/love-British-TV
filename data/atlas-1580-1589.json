@@ -1155,6 +1155,72 @@
       "date_precision": "month",
       "map_priority": true,
       "person_sale_verified": null
+    },
+    {
+      "id": "GAP1586-SLIGO-EXACTIONS",
+      "year": 1586,
+      "start_year": 1586,
+      "end_year": 1586,
+      "visible_from": 1586,
+      "date_label": "1586年",
+      "name": "斯莱戈宾厄姆英王驻军强制征租、取粮与驻扎摊派",
+      "category": "fiscal_coercion",
+      "icon_code": "ECO",
+      "lat": 54.09,
+      "lng": -8.518,
+      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geography_label": "现代具名地点位置，仅供历史定位",
+      "description": "1585—1589年前后，乔治·宾厄姆在斯莱戈征收王室税款和土地租金，并经常扣押未及时缴纳者的牲畜财物，要求居民为士兵提供食宿。他在巴利莫特设指挥据点，地点标记不是所有征收地点。",
+      "short_description": "1585—1589年前后，乔治·宾厄姆在斯莱戈征收王室税款和土地租金，并经常扣押未及时缴纳者的牲畜财物，要求居民为士兵提供食宿。他在巴利莫特设指挥据点，地点标记不是所有征收地点。",
+      "source_ids": [
+        "IR-DIB-GEORGE-BINGHAM"
+      ],
+      "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
+      "significance": {
+        "level": 3,
+        "rationale": "有来源的军事行动、镇压、掠夺或抵抗；补全既有地图地理叙事",
+        "review_status": "source_checked_provisional_geocoding"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1588-SLIGO-ARMADA-EXECUTIONS",
+      "year": 1588,
+      "start_year": 1588,
+      "end_year": 1588,
+      "visible_from": 1588,
+      "date_label": "1588年",
+      "name": "斯莱戈与梅奥沿岸沉船幸存者遭英王官员处决",
+      "category": "massacre_or_violent_repression",
+      "icon_code": "REP",
+      "lat": 54.272,
+      "lng": -8.477,
+      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geography_label": "现代具名地点位置，仅供历史定位",
+      "description": "1588年9—10月，无敌舰队在爱尔兰沿岸遇险后，乔治·宾厄姆监督处决至少700名沉船幸存者，史料还记载部分爱尔兰人帮助其他幸存者。现代斯莱戈参考点不表示处决集中发生于城区，海难死亡不可计入处决人数。",
+      "short_description": "1588年9—10月，无敌舰队在爱尔兰沿岸遇险后，乔治·宾厄姆监督处决至少700名沉船幸存者，史料还记载部分爱尔兰人帮助其他幸存者。现代斯莱戈参考点不表示处决集中发生于城区，海难死亡不可计入处决人数。",
+      "source_ids": [
+        "IR-DIB-GEORGE-BINGHAM"
+      ],
+      "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
+      "significance": {
+        "level": 3,
+        "rationale": "有来源的军事行动、镇压、掠夺或抵抗；补全既有地图地理叙事",
+        "review_status": "source_checked_provisional_geocoding"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2473,6 +2539,14 @@
       "evidence_read_level": "Public university research page read; original grantee accounts await manuscript check",
       "precision_warning": "University digital Munster project says 86 prospective original grantees projected in 1586, 35 first undertakers received land parcels by 1588; acre sizes vary 4000–12000, Spenser ended about 3000 acres not original planned 4000. Raleigh reported 40000 exceptional total. Distinguish grants from settlers permanently inhabiting land.",
       "origin": "1580-1589"
+    },
+    {
+      "id": "IR-DIB-GEORGE-BINGHAM",
+      "title": "Bingham (Byngham), Sir George",
+      "publisher": "Dictionary of Irish Biography, Royal Irish Academy",
+      "url": "https://www.dib.ie/biography/bingham-byngham-sir-george-a0664",
+      "kind": "scholarly_biographical_reference",
+      "precision_warning": "At least 700 executions per biographical synthesis; no single site identified for all; distinguish maritime deaths."
     }
   ],
   "routes": [
@@ -2638,9 +2712,10 @@
   "publication": {
     "research_pr": 59,
     "verified_historical_control_polygons": 0,
-    "geographic_reference_events": 16,
+    "geographic_reference_events": 18,
     "unlocated_events": 14,
     "source_review_stage": "editorial_selection_from_research_QA_not_all_primary_manuscripts_read",
-    "crown_net_profit": null
+    "crown_net_profit": null,
+    "spatial_addendum": "2026-10-15: George Bingham fiscal coercion and Armada survivor executions geolocated to explicitly approximate modern regional anchors."
   }
 }

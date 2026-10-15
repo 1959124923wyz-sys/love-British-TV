@@ -1,0 +1,35 @@
+name: Century Violence Geography Quality
+
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/atlas-*.json'
+      - 'data/century-violence-regions-1544-1589.geojson'
+      - 'scripts/test_century_violence_regions.js'
+      - '.github/workflows/century-violence-quality.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/century-violence-regions-1544-1589.geojson'
+      - 'scripts/test_century_violence_regions.js'
+
+permissions:
+  contents: read
+
+jobs:
+  source-and-area-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check JavaScript syntax
+        run: node --check app.js
+      - name: Verify historical area and event citations
+        run: node scripts/test_century_violence_regions.js

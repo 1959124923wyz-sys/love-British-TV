@@ -61,7 +61,7 @@ assert.ok(!timelineBlock.includes('setYear('),'Browsing is NOT authorized to cha
 const centuryBlock=app.split('function browseCentury(century){')[1]?.split('function renderTimelineNavigation(')[0]||'';
 assert.ok(!centuryBlock.includes('setYear('));
 assert.ok(app.includes('slider.min=currentChapter.start;slider.max=currentChapter.end;slider.value=year;'),'Year range must be local');
-assert.ok(app.includes('e.year>=chapter.start&&e.year<=year'),'Only past current-decade events may be shown as milestones');
+assert.ok(!app.includes('function renderMilestones()')&&!html.includes('id="milestoneDots"'),'Removed yellow milestone buttons must not return');
 assert.ok(app.includes("if(!chapter){")&&app.includes("timelineStatus(decade+"),'Unpublished chapters must not fake data');
 assert.ok(app.includes('lastPublishedYear'),'Actual atlas must remain bounded by published history');
 assert.match(css,/\.timeline-centuries\{display:grid;grid-template-columns:repeat\(7,minmax\(0,1fr\)\)/);
