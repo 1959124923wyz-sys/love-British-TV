@@ -954,7 +954,7 @@ function renderHistoricalRegionGuide(){
  list.innerHTML=unique.map((z,i)=>{
   const p=z.feature.properties||{};
   return '<button type="button" class="historical-region-entry" data-region-index="'+i+'">'+
-    '<strong>'+escapeHTML(z.name)+'</strong><span>'+escapeHTML(String(z.summary).replace(/\\s+/g,' ').slice(0,70)||'点击查看地区背景、军事行为及来源')+'</span></button>';
+    '<strong>'+escapeHTML(z.name)+'</strong><span>'+escapeHTML(String(z.summary).replace(/\s+/g,' ').slice(0,70)||'点击查看地区背景、军事行为及来源')+'</span></button>';
  }).join('');
  list.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
   const z=unique[Number(b.dataset.regionIndex)];
@@ -1278,7 +1278,7 @@ function openEighthCoastalDossier(feature){
   .filter(Boolean).map(s=>'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>').join('');
  $('dossierBody').innerHTML='<div class="dossier-kicker">第八章 · 非洲人口奴役活动 · '+year+'年</div>'+
  '<h2>'+escapeHTML(p.name)+'</h2>'+
- '<p>霍金斯船队在相关西非沿岸进行人口掳取、贩卖和强制装运活动。</p>'+
+ '<p>'+escapeHTML(p.summary_zh||'霍金斯船队在相关西非沿岸进行人口掳取、贩卖和强制装运活动。')+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
  '<div class="mini-heading">历史文献</div>'+refs+'</details>';
  openPanel('dossier');
