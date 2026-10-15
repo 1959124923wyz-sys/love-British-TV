@@ -899,6 +899,19 @@ try:
               [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1583年'))""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1582-Munster-war-impact.png"))
 
+    set_year(1584,13)
+    verify("1584 Munster royal forfeiture survey region should appear by itself",
+           """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
+              document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0 &&
+              document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-tenth-land-policy-impact')
+      .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1584 land policy must not disclose 1586 grants or later events",
+           """document.querySelector('#dossierBody').textContent.includes('被没收土地清查') &&
+              !document.querySelector('#dossierBody').textContent.includes('1586年') &&
+              document.querySelector('#dossierBody .source-link')!==null &&
+              [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1586年'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1584-Munster-forfeiture-survey.png"))
     set_year(1585,16)
     verify("1585 must not retain ended 1580–1583 war area",
            "document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0",driver)
@@ -908,14 +921,38 @@ try:
     verify("1586 evacuated Roanoke site persisted into year-end",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===5""",driver)
+    verify("1586 must show one plantation policy region and two separate raided port city surfaces",
+           """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
+              document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===2 &&
+              document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-tenth-port-raid-impact')
+      .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1586 raided port city must open source-linked dossier without falsely naming it a Crown colony",
+           """document.querySelector('#dossierBody').textContent.includes('英军入侵影响区') &&
+              document.querySelector('#dossierBody .source-link')!==null &&
+              document.querySelector('#dossierBody').textContent.includes('1586')""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids.png"))
     set_year(1587,26)
+    verify("1587 Drake port-city raid surfaces persisted after fleet withdrew",
+           """document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0 &&
+              document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1""",driver)
     verify("1587 Roanoke resettlement missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
+    set_year(1588,27)
+    verify("1588 colonial estate implementation should remain regional study, not giant Crown land",
+           """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
+              document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-tenth-land-policy-impact')
+      .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1588 land stages must show implementation lag",
+           """document.querySelector('#dossierBody').textContent.includes('实际落实') &&
+              document.querySelector('#dossierBody .source-link')!==null""",driver)
     set_year(1589,30)
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
+    verify("1589 Jobson map should still retain policy reference region",
+           "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
     set_year(1579,41)
     verify("rewinding to ninth chapter left tenth control sites",
@@ -926,6 +963,9 @@ try:
            "document.querySelectorAll('#map .atlas-voyage-continuity').length>=2",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
     set_year(1590,3)
+    verify("1590 must not inherit earlier Drake sack or Munster 1584–89 policy overlay",
+           """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===0 &&
+              document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0""",driver)
     verify("1590 chapter label, 3 Crown/settler cores, or 2 dashed studies missing",
            """document.querySelector('#chapterLabel').textContent.includes('第十章') &&
               document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
