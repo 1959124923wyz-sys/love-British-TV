@@ -123,7 +123,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map),nineYearsWar:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -190,7 +190,7 @@ function syncMapLayers(){
  if(atlas)refreshHistoricalLayers();
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -322,9 +322,9 @@ function historicAreaDescription(properties,selectedYear){
   '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
 }
 function openTerritoryDossier(feature,kind='historic'){
- const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession';
+ const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
- const label=landDispossession?'殖民土地没收与庄园政策涉及区':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const label=nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
@@ -960,6 +960,52 @@ function renderTenthLandRaidImpactAreas(){
   }
  }).addTo(groups.tenthExtraction);
 }
+// Nine Years War: Gaelic defeats of Crown forces must NOT be painted as
+// English colonial conquest. Fermanagh and Armagh are regional reading
+// envelopes; Munster is a REUSED broad province study, 1599 Essex is only
+// an attested order of towns (never an invented GPS march or occupation).
+function renderNineYearsWarImpact(){
+ groups.nineYearsWar.clearLayers();
+ if(!nineYearsWarImpact||year<1594||year>1599||
+    !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
+ const available=nineYearsWarImpact.features.filter(f=>{
+  const p=f.properties||{};
+  return p.map_layer==='territory'&&p.historical_boundary_confirmed===false&&
+   p.fill_authorized===false&&p.territorial_claim===false&&p.area_sqkm===null&&
+   year>=p.start_year&&year<=p.end_year;
+ });
+ for(const f of available){
+  const p=f.properties,stage=p.year_stages?.find(q=>year>=q.start_year&&year<=q.end_year);
+  const current=stage?{...f,properties:{...p,name:stage.title,
+   summary_zh:stage.summary_zh,source_ids:stage.source_ids,
+   related_event_ids:stage.related_event_ids,
+   start_year:stage.start_year,
+   end_year:stage.start_year===stage.end_year?null:stage.end_year}}:f;
+  const isRoute=f.geometry.type==='LineString',isResistance=p.zone_type==='gaelic_resistance_plantation_collapse_schematic',
+   isBattle=p.zone_type==='gaelic_resistance_to_crown_campaign_schematic';
+  const style=isRoute?
+   {color:'#e4a86a',weight:3.1,opacity:.94,dashArray:'10 7',
+    lineJoin:'round',className:'atlas-essex-1599-schematic'}:
+   {color:isResistance?'#66bc9e':isBattle?'#68b5bb':'#79aaa9',
+    weight:2.2,opacity:.9,dashArray:'8 6',
+    fill:true,fillColor:isResistance?'#3d9275':'#4e8f9f',
+    fillOpacity:.12,className:'atlas-nine-years-war-study'};
+  const pane=isRoute?'warReachPane':'invasionImpactPane';
+  const renderer=isRoute?warReachRenderer:invasionImpactRenderer;
+  L.geoJSON(current,{pane,renderer,interactive:true,bubblingMouseEvents:false,
+   style:()=>style,
+   onEachFeature:(_feature,layer)=>{
+    layer.bindTooltip('<strong>'+escapeHTML(current.properties.name)+'</strong><div class="atlas-hover-summary">'+
+     escapeHTML(p.label_type||'战争研究区')+' · 查看史料</div>',
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+    layer.on('click',e=>{
+     if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+     openTerritoryDossier(current,'nine-years-war');
+    });
+   }
+  }).addTo(groups.nineYearsWar);
+ }
+}
 function renderTenthControlSites(){
  if(!tenthControlSites||year<1580||year>1589||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
  for(const feature of tenthControlSites.features||[]){
@@ -1439,7 +1485,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=displayChapter?$('chapterLabel').textContent+'年事件':'';
  $('timelineNotice').textContent='事件逐年揭示，政治状态跨章节延续。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -1684,6 +1730,19 @@ async function boot(){
   politicalRelationAreas.features.push(...p11.features);
   frenchCityAreas.features.push(...u11.features);
   eleventhControlCores=c11;eleventhInfluenceAreas=a11;
+  const nineYearsRes=await fetch('data/nine-years-war-operational-impact-1594-1599.geojson',{cache:'no-store'});
+  if(!nineYearsRes.ok)throw new Error('1594—1599九年战争地理资料未能读取');
+  const nineYearsData=await nineYearsRes.json();
+  if(nineYearsData?.features?.length!==4||nineYearsData.features.some(f=>{
+   const p=f.properties||{};
+   return !['Polygon','LineString'].includes(f.geometry?.type)||
+    p.map_layer!=='territory'||p.historical_boundary_confirmed!==false||
+    p.fill_authorized!==false||p.territorial_claim!==false||p.area_sqkm!==null||
+    p.exclude_from_area_aggregation!==true||
+    !p.source_ids?.every(id=>sourcesById.has(id))||
+    !p.related_event_ids?.every(id=>atlasEleventh.events.some(e=>e.id===id));
+  }))throw new Error('九年战争交战及远征地理资料存在无效史料或疆界声明');
+  nineYearsWarImpact=nineYearsData;
 
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
@@ -1726,7 +1785,7 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
