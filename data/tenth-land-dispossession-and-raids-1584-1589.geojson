@@ -21,7 +21,10 @@
       "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/nhn/destacados/documentos-destacados/drake",
       "https://www.muhca.gov.co/cartapedia_plano-del-asalto-de-drake-a-cartagena-de-indias-1586-8"
     ],
-    "topology_source": "1584-89 Munster polygon inherits prior project's 1581-83 schematic regional study envelope; port ellipses are pure cartographic symbols centered on existing chapter10 event city coordinates"
+    "topology_source": "1584-89 Munster polygon inherits prior project's 1581-83 schematic regional study envelope; port ellipses are pure cartographic symbols centered on existing chapter10 event city coordinates",
+    "original_battle_view_catalogue": "https://www.loc.gov/item/2007626708/",
+    "schematic_raided_port_count": 4,
+    "port_event_map_interpretation": "Four separate assaulted towns across 1585–86, depicted individually at modern town anchors; a shared expedition does not create one continuous impacted ocean territory."
   },
   "features": [
     {
@@ -199,7 +202,8 @@
         "source_urls": [
           "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/nhn/destacados/documentos-destacados/drake",
           "https://colecciones.agn.gob.do/opac/ficha.php?codopac=OP003&idpag=2144141705&informatico=00071107PI",
-          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-caribbean-raid/"
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-caribbean-raid/",
+          "https://www.loc.gov/item/2007626708/"
         ],
         "related_event_ids": [
           "1580S-E019"
@@ -212,7 +216,9 @@
         "historical_map_warning": "Port-city activity only. This ellipse contains sea and land; neither is a controlled polygon.",
         "geocoded_city_only": true,
         "geography_level": "city_marker_with_schematic_painted_surface",
-        "visual_styling": "red_dashed_urban_symbol"
+        "visual_styling": "red_dashed_urban_symbol",
+        "historical_map_catalogue_url": "https://www.loc.gov/item/2007626708/",
+        "approximate_symbol_display": true
       },
       "geometry": {
         "type": "Polygon",
@@ -303,7 +309,8 @@
         "source_urls": [
           "https://www.muhca.gov.co/cartapedia_plano-del-asalto-de-drake-a-cartagena-de-indias-1586-8",
           "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-caribbean-raid/",
-          "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/127430"
+          "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/127430",
+          "https://www.loc.gov/item/2007626708/"
         ],
         "related_event_ids": [
           "1580S-E020"
@@ -316,7 +323,9 @@
         "historical_map_warning": "Port-city activity only. This ellipse contains sea and land; neither is a controlled polygon.",
         "geocoded_city_only": true,
         "geography_level": "city_marker_with_schematic_painted_surface",
-        "visual_styling": "red_dashed_urban_symbol"
+        "visual_styling": "red_dashed_urban_symbol",
+        "historical_map_catalogue_url": "https://www.loc.gov/item/2007626708/",
+        "approximate_symbol_display": true
       },
       "geometry": {
         "type": "Polygon",
@@ -373,6 +382,214 @@
             [
               -75.4233,
               10.419
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-santiago-cape-verde-1585-port-symbolic-area",
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_certainty": "schematic_non_surveyed",
+        "intended_use": "geographical_storytelling_only_not_a_quantified_extent",
+        "label_type": "英军港市袭击位置（非实测波及边界）",
+        "zone_type": "english_crown_privateering_port_raid_schematic",
+        "impact_kind": "short_lived_raiding_and_burning_no_territorial_sovreignty",
+        "geocoded_city_only": true,
+        "geography_level": "city_marker_with_schematic_painted_surface",
+        "visual_styling": "red_dashed_urban_symbol",
+        "research_geo_method": "Modern historical town anchor plus editorial 0.11-degree ellipse; the 1589 Boazio engraved view shows assault context but is NOT a measured GIS fort or burn perimeter",
+        "historical_map_catalogue_url": "https://www.loc.gov/item/2007626708/",
+        "approximate_symbol_display": true,
+        "start_year": 1585,
+        "end_year": 1585,
+        "name": "1585年佛得角圣地亚哥：德雷克舰队袭取葡萄牙殖民港市（示意）",
+        "summary_zh": "德雷克远征在1585年袭击佛得角圣地亚哥的葡萄牙港市。美国国会图书馆收藏1589年刊印的原始袭城鸟瞰图与航次图。淡红虚线为现代城址定位用的可见符号，不代表历史实际攻防地界，更不能把整座圣地亚哥岛涂成英国领地。佛得角属于西非大西洋群岛，不应误列为北非摩洛哥。",
+        "source_ids": [
+          "C10-S26",
+          "C10-S27",
+          "C10-S35"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/2007626708/",
+          "https://www.loc.gov/static/classroom-materials/drakes-west-indian-voyage-1588-1589/documents/voy-age-in-early-maps.pdf"
+        ],
+        "related_event_ids": [
+          "1580S-E016"
+        ],
+        "original_event_coordinates": [
+          14.9159,
+          -23.6048
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -23.4998,
+              14.9159
+            ],
+            [
+              -23.513867,
+              14.9634
+            ],
+            [
+              -23.5523,
+              14.998172
+            ],
+            [
+              -23.6048,
+              15.0109
+            ],
+            [
+              -23.6573,
+              14.998172
+            ],
+            [
+              -23.695733,
+              14.9634
+            ],
+            [
+              -23.7098,
+              14.9159
+            ],
+            [
+              -23.695733,
+              14.8684
+            ],
+            [
+              -23.6573,
+              14.833628
+            ],
+            [
+              -23.6048,
+              14.8209
+            ],
+            [
+              -23.5523,
+              14.833628
+            ],
+            [
+              -23.513867,
+              14.8684
+            ],
+            [
+              -23.4998,
+              14.9159
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-st-augustine-1586-port-symbolic-area",
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_certainty": "schematic_non_surveyed",
+        "intended_use": "geographical_storytelling_only_not_a_quantified_extent",
+        "label_type": "英军港市袭击位置（非实测波及边界）",
+        "zone_type": "english_crown_privateering_port_raid_schematic",
+        "impact_kind": "short_lived_raiding_and_burning_no_territorial_sovreignty",
+        "geocoded_city_only": true,
+        "geography_level": "city_marker_with_schematic_painted_surface",
+        "visual_styling": "red_dashed_urban_symbol",
+        "research_geo_method": "Modern historical town anchor plus editorial 0.11-degree ellipse; the 1589 Boazio engraved view shows assault context but is NOT a measured GIS fort or burn perimeter",
+        "historical_map_catalogue_url": "https://www.loc.gov/item/2007626708/",
+        "approximate_symbol_display": true,
+        "start_year": 1586,
+        "end_year": 1586,
+        "name": "1586年圣奥古斯丁：德雷克舰队焚毁西班牙定居点（示意）",
+        "summary_zh": "美国国家公园管理局记载德雷克舰队于1586年袭取、焚毁圣奥古斯丁西班牙木制城防与定居点；国会图书馆存有1589年刊印的袭城鸟瞰图。虚线只是围绕今天圣奥古斯丁城址的屏幕定位和概略包络，不是当时城墙或被烧毁街区的GIS复原，也不是永久英国殖民地。",
+        "source_ids": [
+          "C10-S24",
+          "C10-S27",
+          "C10-S29",
+          "C10-S35"
+        ],
+        "source_urls": [
+          "https://www.nps.gov/people/sirfrancisdrake.htm",
+          "https://www.loc.gov/item/2007626708/",
+          "https://www.nps.gov/articles/sanmarcos.htm"
+        ],
+        "related_event_ids": [
+          "1580S-E021"
+        ],
+        "original_event_coordinates": [
+          29.8947,
+          -81.3145
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.1945,
+              29.8947
+            ],
+            [
+              -81.210577,
+              29.9447
+            ],
+            [
+              -81.2545,
+              29.981303
+            ],
+            [
+              -81.3145,
+              29.9947
+            ],
+            [
+              -81.3745,
+              29.981303
+            ],
+            [
+              -81.418423,
+              29.9447
+            ],
+            [
+              -81.4345,
+              29.8947
+            ],
+            [
+              -81.418423,
+              29.8447
+            ],
+            [
+              -81.3745,
+              29.808097
+            ],
+            [
+              -81.3145,
+              29.7947
+            ],
+            [
+              -81.2545,
+              29.808097
+            ],
+            [
+              -81.210577,
+              29.8447
+            ],
+            [
+              -81.1945,
+              29.8947
             ]
           ]
         ]
