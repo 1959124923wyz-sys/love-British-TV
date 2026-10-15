@@ -59,3 +59,35 @@
 **“真正占领区”要有实际驻军/行政证据；“入侵影响区”可以是概略的有据区域，但不可用一条虚线暗示圈内每一个村落都受灾。**
 
 不因内容批判殖民而推高伤亡或扩大领土。要先让已有历史资料在地图上读得见，再扩充新的示意面。与主编/维护智能体协调后才正式合并。
+
+
+---
+
+## 第二批扩展：1562—1596（2026-10-15续查）
+
+对上一批发现的地区介绍失联问题做了新的史实扩展。本批新增六个**现有事件有明确文献而地图尚缺地区化说明**的视觉参考面，存放在 \`data/followup-regional-stories-1562-1596.geojson\`。不重复修改原Atlas已发布的事实与历史统计，不宣称这些多边形是英军真实控制边界。
+
+| 时间 | 位置 | 类型与必须保留的警示 | 已有史料 |
+| --- | --- | --- | --- |
+| 1562年末 | 法国勒阿弗尔 | 英军进入并治理港市的短期**真实驻城记录**。概略紫面不是英军所控制的具体地块、城墙或诺曼底全部疆域。 | 勒阿弗尔市政档案官方年表1562条、MacCaffrey 1997期刊研究 |
+| 1563年末 | 勒阿弗尔 | 法军经过围城，于7月29日收复港市；用**蓝色收复状态**避免英军短占延续到1563年末。市档同时记载英军破坏当地教堂。 | [Archives du Havre](https://archives.lehavre.fr/vie-militaire-et-conflits-depuis-1548), [当年围城图档案](https://archives.lehavre.fr/document-archives/plans/plan-dit-warwick-pendant-le-siege-du-havre-15-juillet-1563) |
+| 1573 | 巴拿马地峡 | 德雷克与法国Le Testu、当地反奴役Cimarron相关行动参与者截获西属殖民地金银骡队；地区示意**不是连续英国占领走廊**。 | [美国国会图书馆1572—1573研究](https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/drakes-first-success/) |
+| 1587 | 加的斯港湾 | 德雷克对舰船的袭击，考古确认热那亚商船Delta II当年沉没。**不是夺取整个加的斯城市；不能和1596行动合并**。 | [安达卢西亚政府2026年水下考古公告](https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/actualidad/noticias/detalle/657958.html) |
+| 1589 | 西班牙维戈 | 英军对城镇民居、仓储、船舶及宗教建筑发动袭击与纵火；存世当地神职人员记录涉及的毁坏数量应以原作者自述为限，不是独立核准的所有居民伤亡统计。 | [维戈市政府历史栏目](https://hoxe.vigo.org/movemonos/phistorico_sen_defensas.php?lang=en), [市政古堡历史展示](https://fortalezadeocastro.vigo.org/panel-10/) |
+| 1596 | 加的斯 | 英荷联合军队短暂攻城与洗劫，英格兰不是唯一主体；英军撤离后无持续殖民治理，不应让1596面延续至1597。 | [牛津博德利图书馆研究](https://blogs.bodleian.ox.ac.uk/theconveyor/the-cadiz-pirates/), [荷兰国立博物馆当年海战图](https://www.rijksmuseum.nl/en/collection/object/Zeeslag-voor-Cadiz-1596--41712acecec44b19094c6a2d35f142b9), [Royal Museums Greenwich 1596手稿登记](https://www.rmg.co.uk/collections/objects/rmgc-object-504863) |
+
+### 完成对Codex P1/P2同行审查意见的针对修复
+
+- **P1**：莱伊什—奥法利的1556年殖民制度与地方抵抗不会因切换到1570年无故失去空间参照。修改\`end_year:null\`＋\`display_through_year:1599\`＋\`ongoing_at_atlas_end:true\`：仅表示在本项目末年保留已发生制度后果的读图参考，**不代表1556—1599间每个年份均持续在同一地区发生军事事件，也不代表政策恰好于1599年结束**。依据为Laois县议会《Fort Protector Conservation Plan》记载1570年代仍抵抗与殖民压力。
+- **P2**：地图及侧栏对殖民政策范围统一使用\`land-dispossession\`类型，不再把阿兹与莱伊什误标为“英军入侵影响区”；1563年勒阿弗尔复归法国另外使用\`restoration\`类型。
+- **P2**：1544年利斯—爱丁堡城市袭击示意与原正式事件\`1540S-008\`建立\`related_event_ids\`联系。该正式事件原本概括整个苏格兰多处战争与焚掠，刻意保留\`lat:null/lng:null\`和既有35处定位总数，避免把一场广域战争不当地强塞到爱丁堡现代市中心；用户可通过地区导览进入城市史料。
+
+### 新一轮红队检查
+
+- 新增\`scripts/test_followup_regions.js\`，对六个资料卡逐条验证年份、独立来源号、关联正式历史事件、可点击机构文献URL、虚线闭环、拒绝把示意面计算为真实占地。特别断言：1562英军勒阿弗尔驻城→1563法军收复；1587加的斯港湾舰船袭击≠1596加的斯城市攻掠；1589维戈当年显示而1590退出。
+- \`scripts/browser_regional_stories.py\`的Chrome真实交互验收扩展为1544、1556、1562、1563、1564、1567、1572、1573、1575、1580、1582、1586、1587、1589、1596、1598等年份的地区入口和中文资料卡核查，并验证1570/1599殖民参考持续、1597加的斯袭击退场。
+- 每次PR运行须同时满足原有\`Approved map UI contract\`和\`Desktop atlas browser smoke\`；CI证据留存在Actions，尚未合并到主站不构成用户网站已更新。
+
+### 第三批后续优先候选
+
+暂不绘制：1573巴拿马金银运输与中立第三方的全部地峡行动精确道路；1589维戈每一间被毁房屋；1596加的斯每一栋建筑损失。这些与直接城市/区域级叙事的观众收益不成比例，又缺可靠可复核的实测数据。未来优先寻找具备独立地点、年份、后果、权威来源的1650年代以后的地区性殖民 violence（当前1497—1599段后续计划）及已有早期遗漏事件；不靠“数字较少就多涂红色”推动。
