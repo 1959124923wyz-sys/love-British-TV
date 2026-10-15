@@ -5,7 +5,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const read=p=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'..',p),'utf8'));
 const raw=p=>fs.readFileSync(path.resolve(__dirname,'..',p),'utf8');
 const atlas=read('data/atlas-1550-1559.json'),previous=read('data/atlas-1540-1549.json'),chapter=read('data/chapters.json');
-const old=read('data/territorial-footprints-1497-1549.geojson'),geo=read('data/territorial-footprints-1550-1559.geojson');
+const {hydrateFootprints}=require('../js/territory-geometry.js');
+const old=read('data/territorial-footprints-1497-1549.geojson'),geo=hydrateFootprints(old,read('data/territorial-footprints-1550-1559.geojson'));
 const military=read('data/seventh-control-sites-1550-1559.geojson');
 const relations=read('data/political-relations-1550-1559.geojson'),urban=read('data/french-urban-control-1550-1559.geojson');
 const app=raw('app.js'),html=raw('index.html');

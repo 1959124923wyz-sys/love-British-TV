@@ -43,7 +43,10 @@ assert.equal(plan.year_end_slices.length,10);
 assert.ok(core.features.every(f=>f.geometry.type==='Point'&&f.properties.fill_authorized===false&&f.properties.area_sqkm===null));
 assert.ok(area.features.every(f=>f.geometry.type==='Polygon'&&f.properties.fill_authorized===false&&f.properties.area_sqkm===null&&f.properties.historical_boundary_confirmed===false));
 assert.ok(area.features.every(f=>f.properties.source_ids.every(id=>sources.has(id))));
-assert.deepEqual(geo.features.map(f=>f.geometry),read('data/territorial-footprints-1580-1589.geojson').features.map(f=>f.geometry));
+const {hydrateFootprints}=require('../js/territory-geometry.js');
+const original=read('data/territorial-footprints-1497-1549.geojson');
+assert.deepEqual(hydrateFootprints(original,geo).features.map(f=>f.geometry),
+ hydrateFootprints(original,read('data/territorial-footprints-1580-1589.geojson')).features.map(f=>f.geometry));
 assert.equal(rel.features.length,6);assert.equal(city.features.length,2);assert.equal(geo.features.length,7);
 assert.ok(city.features.every(f=>f.properties.controller_periods?.length===1
  &&f.properties.controller_periods[0].controller_group==='french_crown'

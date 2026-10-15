@@ -26,9 +26,12 @@ assert.ok(areaRenderer.includes("p.geometry_role==='attested_settlement_envelope
 assert.ok(app.includes("row('当年治理主体',controller?.controller_zh)"));
 const decades=[[1497,1549],[1550,1559],[1560,1569],[1570,1579],[1580,1589],[1590,1599]];
 const file=(kind,a,b)=>'data/'+kind+'-'+a+'-'+b+'.geojson';
+const {hydrateFootprints}=require('../js/territory-geometry.js');
+const original=JSON.parse(read('data/territorial-footprints-1497-1549.geojson'));
 let baseGeo=null;
 for(const [a,b] of decades){
- const areas=JSON.parse(read(file('territorial-footprints',a,b)));
+ const raw=JSON.parse(read(file('territorial-footprints',a,b)));
+ const areas=a===1497?raw:hydrateFootprints(original,raw);
  const points=JSON.parse(read(file('french-urban-control',a,b)));
  const area=areas.features.filter(f=>f.properties?.source_place_id==='calais-crown');
  assert.equal(area.length,1,file('territorial-footprints',a,b));
