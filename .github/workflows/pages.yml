@@ -43,9 +43,11 @@ jobs:
           node scripts/test_merged_first_chapter.js
           node scripts/test_geographic_precision.js
           node scripts/test_voyage_routes.js
+          node scripts/test_historical_basemap.js
           grep -q 'id="toggleEvents"' index.html
           grep -q 'css/dark-atlas-v2.css' index.html
-          grep -q 'tile.openstreetmap.org' app.js
+          grep -q 'BlueMarble_ShadedRelief_Bathymetry' app.js
+          test -s data/natural-earth-land-110m.topojson
           test -s index.html
           test -s app.js
           test -s style.css
