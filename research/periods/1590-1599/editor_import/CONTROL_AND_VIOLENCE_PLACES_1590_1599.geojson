@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "schema": "ch11_modern_site_anchors_v1",
-  "count": 6,
+  "count": 7,
   "metadata": {
     "historical_english_occupied_polygons": 0,
     "modern_only": true,
@@ -152,6 +152,30 @@
         "polygon_fill_authorized": false,
         "colonial_area_sqkm": null,
         "spatial_identity": "modern reference point not actual Tudor destruction, siege extent or territorial control"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch11-site-cahir-castle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.927156,
+          52.374557
+        ]
+      },
+      "properties": {
+        "stable_id": "ch11-site-cahir-castle",
+        "name": "Cahir Castle modern archaeological anchor",
+        "source_geography_url": "https://excavations.ie/report/2014/Tipperary/0024115/",
+        "geo_precision": "National Museum archaeological excavation coordinates modern Cahir castle, not 1599 siege perimeter",
+        "associated_events": [
+          "ch11-cahir-castle-surrender"
+        ],
+        "historical_footprint_verified": false,
+        "polygon_fill_authorized": false,
+        "colonial_area_sqkm": null,
+        "spatial_identity": "modern reference point; 1599 English castle garrison area not certified"
       }
     }
   ]
