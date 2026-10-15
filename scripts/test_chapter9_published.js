@@ -22,11 +22,11 @@ assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dos
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
 assert.ok(manifest.chapters.length>=9);
 assert.ok(manifest.chapters.some(c=>c.number===8&&c.start===1570&&c.end===1579&&c.status==='published'));
-assert.equal(now.events.length,41);assert.equal(now.places.length,43);assert.equal(now.sources.length,60);
+assert.equal(now.events.length,42);assert.equal(now.places.length,43);assert.equal(now.sources.length,61);
 assert.equal(now.routes.length,18);assert.equal(now.colonial_polygons.length,0);
-assert.equal(old.events.length,26);
+assert.equal(old.events.length,29);
 const ids=new Set(),src=new Set(now.sources.map(s=>s.id));
-assert.equal(icons.size,16);assert.equal(src.size,60);
+assert.equal(icons.size,16);assert.equal(src.size,61);
 for(const e of now.events){
  assert.ok(e.year>=1570&&e.year<=1579&&e.date_label.includes(String(e.year)),e.id+' chronology');
  assert.ok(!ids.has(e.id));ids.add(e.id);
