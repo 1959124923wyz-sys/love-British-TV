@@ -488,7 +488,7 @@ try:
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
-    set_year(1549, 61)
+    set_year(1549, 68)
     verify("1549 border influence must contract away from withdrawn Haddington",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1",driver)
     driver.execute_script("document.querySelector('#map .atlas-contested-zone').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}))")
