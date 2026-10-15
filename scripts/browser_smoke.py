@@ -719,36 +719,48 @@ try:
            "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 && document.querySelectorAll('#map .atlas-eighth-site').length===0",driver)
     # New ninth chapter: west-to-east privateering, Ulster massacres, Inuit kidnapping,
     # year-end English garrisons distinct from paper grants.
-    set_year(1570,1)
+    set_year(1570,2)
     verify("Chapter 9 political continuity or new historic content absent",
            """document.querySelector('#chapterNav').textContent.includes('第九章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelector('#jumpYear').max==='1579'""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
-    set_year(1572,4)
+    verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
+           """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
+              document.querySelector('#eventList [data-eid="1570S-E038"]').textContent.includes('温特')""",driver)
+    set_year(1571,4)
+    verify("1571 Jamaican ship robbery evidence missing or confused with slavery",
+           """document.querySelector('#eventList [data-eid="1570S-E039"] use').getAttribute('href').endsWith('#WAR') &&
+              document.querySelector('#eventList [data-eid="1570S-E039"]').textContent.includes('牙买加')""",driver)
+
+    set_year(1572,8)
     verify("1572 local Ards outpost and first Drake voyage absent",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===1 &&
               document.querySelector('#eventList [data-eid="1570S-E003"] use').getAttribute('href').endsWith('#TER')""",driver)
+    verify("1572 Spanish St Augustine failed attack or Hawkins proposed Guinea venture not mapped",
+           """document.querySelector('#eventList [data-eid="1570S-E040"] use').getAttribute('href').endsWith('#WAR') &&
+              document.querySelector('#eventList [data-eid="1570S-E041"] use').getAttribute('href').endsWith('#EXP') &&
+              document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1572-Comber-newcastle-small-outpost.png"))
-    set_year(1574,9)
+    set_year(1574,13)
     verify("1574 Essex murder or scorched-earth route missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===4 &&
               document.querySelector('#eventList [data-eid="1570S-E009"] use').getAttribute('href').endsWith('#REP')""",driver)
-    set_year(1575,12)
+    set_year(1575,16)
     verify("1575 Rathlin island massacre wrongly redrawn as English entire island",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelector('#eventList [data-eid="1570S-E010"] use').getAttribute('href').endsWith('#REP')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1575-Rathlin-massacre-event.png"))
-    set_year(1576,17)
+    set_year(1576,21)
     verify("1576 Loughrea garrison and abducted Inuit symbol missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===12 &&
               document.querySelector('#eventList [data-eid="1570S-E012"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1576-Loughrea-Irish-garrison-Inuit-abduction.png"))
-    set_year(1577,24)
+    set_year(1577,28)
     verify("1577 kidnapped Inuit burials and source evidence disappeared",
            """document.querySelector('#eventList [data-eid="1570S-E035"]').textContent.includes('布里斯托尔') &&
               document.querySelector('#eventList [data-eid="1570S-E036"]').textContent.includes('伦敦')""",driver)
@@ -761,7 +773,7 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
               document.querySelector('#dossierBody .source-details')!==null""",driver)
     driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
-    set_year(1578,29)
+    set_year(1578,33)
     verify("1578 Mullaghmast massacre wrongly dated 1577",
            """document.querySelector('#eventList [data-eid="1570S-E028"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
@@ -770,7 +782,7 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('1578') &&
               !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1578-Mullaghmast-Inuit-Kodlunarn.png"))
-    set_year(1579,37)
+    set_year(1579,41)
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
