@@ -14,7 +14,7 @@ new vm.Script(app);
 assert.deepEqual(atlas.period,{from:1550,to:1559,next:1560});
 assert.equal(atlas.events.length,29);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,52);
 assert.equal(atlas.routes.length,9);assert.equal(atlas.colonial_polygons.length,0);
-assert.equal(previous.events.length,61,'The existing 1540s records and seven sourced supplements must persist');
+assert.equal(previous.events.length,68,'The existing 1540s records and seven sourced supplements must persist');
 assert.ok(chapter.chapters.some(c=>c.number===6&&c.start===1550&&c.end===1559&&c.status==='published'));
 const sources=new Set(atlas.sources.map(s=>s.id)),events=new Set();
 for(const e of atlas.events){
