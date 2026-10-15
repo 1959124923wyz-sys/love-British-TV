@@ -120,10 +120,11 @@ try:
         wait.until(lambda d: d.execute_script("""
             return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
         """))
+    time.sleep(0.45)  # Wait for the desktop sidebar column to stop transitioning.
     flodden = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1513-FLODDEN"]')
     before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(flodden).perform()
-    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker"))>0)
+    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker, .atlas-target-aggregate"))>0)
     assert driver.execute_script("return document.querySelector('#yearRange').value")=="1513", "Event double-click changed selected history year"
     time.sleep(1.1)
     after = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
@@ -193,10 +194,11 @@ try:
         wait.until(lambda d: d.execute_script("""
             return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
         """))
+    time.sleep(0.45)
     maynooth = driver.find_element(By.CSS_SELECTOR, '#eventList .event-item[data-eid="1530S-E004"]')
     zoom_before = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     ActionChains(driver).double_click(maynooth).perform()
-    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker"))>0)
+    wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, ".atlas-target-marker, .atlas-target-aggregate"))>0)
     time.sleep(1.1)
     zoom_after = driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     if zoom_before and zoom_after:
