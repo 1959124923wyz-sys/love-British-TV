@@ -5,7 +5,10 @@ const read=p=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'..',p),'utf8'))
 const txt=p=>fs.readFileSync(path.resolve(__dirname,'..',p),'utf8');
 const now=read('data/atlas-1570-1579.json'),old=read('data/atlas-1560-1569.json');
 const manifest=read('data/chapters.json'),mil=read('data/ninth-control-sites-1570-1579.geojson');
-const geo=read('data/territorial-footprints-1570-1579.geojson'),prevGeo=read('data/territorial-footprints-1560-1569.geojson');
+const {hydrateFootprints}=require('../js/territory-geometry.js');
+const original=read('data/territorial-footprints-1497-1549.geojson');
+const geo=hydrateFootprints(original,read('data/territorial-footprints-1570-1579.geojson')),
+ prevGeo=hydrateFootprints(original,read('data/territorial-footprints-1560-1569.geojson'));
 const icons=new Set(read('data/icon-categories.json').categories.map(x=>x.code));
 const html=txt('index.html'),app=txt('app.js');new vm.Script(app);
 const ledger=read('data/chapter9-economic-violence-ledger.json');
