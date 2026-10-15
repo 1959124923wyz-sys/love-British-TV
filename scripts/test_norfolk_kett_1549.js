@@ -36,7 +36,9 @@ for(const f of norfolk){
 }
 assert(!norfolk.some(f=>f.geometry.coordinates[0][0][0]===1.03),'prior county-size arbitrary rectangle must be gone');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
-assert(app.includes('centuryData?.features?.length!==8'));
+const regionGuard=app.match(/centuryData\\?\\.features\\?\\.length!==(\\d+)/);
+assert(regionGuard&&Number(regionGuard[1])===areas.features.length,
+ 'App must validate the real total number of sourced geographic studies, including subsequent approved additions');
 assert(app.includes('renderEarlyRegionalImpactAreas()'));
 assert(db.events.filter(e=>e.year<=1548).length===53,'previously published 1540-1548 history must remain');
 console.log('PASS: source-backed Norfolk 1549, eight year-gated events, two small non-territorial study polygons and actor distinction');
