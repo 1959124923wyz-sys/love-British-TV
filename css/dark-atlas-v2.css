@@ -815,6 +815,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .map-pin.atlas-new-this-year::before{content:"";position:absolute;inset:-7px;border:2px solid #ffe1a0;border-radius:50%;pointer-events:none;box-shadow:0 0 13px 3px rgba(241,175,80,.64);animation:atlas-annual-arrival .9s ease-out 2;z-index:0}
 .map-pin.atlas-new-this-year .atlas-new-mark{position:absolute;top:-15px;right:-16px;min-width:17px;height:17px;box-sizing:border-box;display:grid;place-items:center;padding:0 2px;border-radius:5px;background:#f3c679;color:#17283b;border:1px solid #f9e4ae;font:bold 10px/1 system-ui,sans-serif;box-shadow:0 2px 5px #000c;pointer-events:none;z-index:3}
 .atlas-aggregate.atlas-cluster-new-this-year{border-color:#ffe0a2;box-shadow:0 0 0 3px rgba(248,193,109,.50),0 0 19px rgba(229,173,86,.45)}
+.atlas-aggregate.atlas-cluster-uncertain{border-style:dashed!important}
 .atlas-cluster-new-count{position:absolute;top:-11px;right:-17px;min-width:25px;height:17px;padding:1px 4px;box-sizing:border-box;display:grid;place-items:center;border:1px solid #ffebbd;border-radius:7px;background:#f1c47f;color:#13273b;font:800 10px/1.1 system-ui,sans-serif;white-space:nowrap;box-shadow:0 2px 5px #000b;pointer-events:none}
 @keyframes atlas-annual-arrival{0%{box-shadow:0 0 0 0 rgba(253,212,128,.9)}50%{box-shadow:0 0 0 9px rgba(253,212,128,.16)}100%{box-shadow:0 0 13px 3px rgba(241,175,80,.64)}}
 @media(max-width:680px){
