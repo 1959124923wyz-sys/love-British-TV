@@ -1015,6 +1015,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
     set_year(1590,3)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E002"]').click()""")
+    wait.until(lambda d: "布雷夫尼" in d.find_element(By.ID,"dossierBody").text)
     verify("1590 Breifne territorial devastation is now region-locatable without invented burned villages",
            """document.querySelector('#dossierBody').textContent.includes('布雷夫尼') &&
               document.querySelector('#dossierBody').textContent.includes('地区') &&
@@ -1037,6 +1038,7 @@ try:
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1592'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E009"]').click()""")
+    wait.until(lambda d: "圣维森特" in d.find_element(By.ID,"dossierBody").text)
     verify("1592 Sao Vicente main published event must have modern name/location source",
            """document.querySelector('#dossierBody').textContent.includes('圣维森特') &&
               !document.querySelector('#dossierBody').textContent.includes('保持地图坐标空值') &&
@@ -1080,6 +1082,7 @@ try:
            """document.querySelectorAll('#map .atlas-trinidad-1595-action-sequence').length===1 &&
               document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E014"]').click()""")
+    wait.until(lambda d: "圣何塞" in d.find_element(By.ID,"dossierBody").text)
     verify("Original published Raleigh event must now map to St Joseph and keep its source dossier",
            """document.querySelector('#dossierBody').textContent.includes('圣何塞') &&
               document.querySelector('#dossierBody').textContent.includes('St Joseph') &&
@@ -1108,6 +1111,7 @@ try:
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E029"]').click()""")
+    wait.until(lambda d: "黄渡口" in d.find_element(By.ID,"dossierBody").text)
     verify("1598 Yellow Ford main record now localizable with uncertain battlefield noted",
            """document.querySelector('#dossierBody').textContent.includes('黄渡口') &&
               document.querySelector('#dossierBody').textContent.includes('实测') &&
