@@ -9,10 +9,42 @@ const map = L.map('map',{zoomControl:false,worldCopyJump:false,preferCanvas:true
 // Zoom by wheel, touch or double-click; the map surface stays free of floating controls.
 // Read-only viewport status for visual regression; no external command can mutate historical geometry.
 window.atlasReadViewport=()=>({zoom:map.getZoom(),center:{lat:map.getCenter().lat,lng:map.getCenter().lng}});
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
- maxZoom:19,maxNativeZoom:19,
- attribution:'&copy; OpenStreetMap contributors'
+// Historical years must not inherit modern countries, borders, or city labels
+// from a contemporary street-map tile layer. NASA's Blue Marble is a modern
+// PHYSICAL reference (terrain/bathymetry), never evidence of Tudor geography.
+// GIBS serves this static image without an API key or modern political labels.
+const physicalTiles=L.tileLayer(
+ 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpg',{
+ maxZoom:11,maxNativeZoom:8,noWrap:true,
+ bounds:[[-85.05112878,-180],[85.05112878,180]],
+ attribution:'Physical imagery: <a href="https://www.earthdata.nasa.gov/data/tools/gibs" target="_blank" rel="noopener">NASA GIBS</a>'
 }).addTo(map);
+// If NASA's service is unavailable, draw a bundled public-domain land-only
+// Natural Earth fallback. It includes no modern country boundary or name.
+map.createPane('physicalFallbackPane');
+map.getPane('physicalFallbackPane').style.zIndex='190'; // underneath the tile pane (200)
+map.getPane('physicalFallbackPane').style.pointerEvents='none';
+let physicalFallbackStarted=false,physicalTileErrors=0;
+async function activatePhysicalFallback(){
+ if(physicalFallbackStarted)return;
+ physicalFallbackStarted=true;
+ try{
+  const response=await fetch('data/natural-earth-land-110m.topojson');
+  if(!response.ok||typeof topojson==='undefined')throw new Error('Physical geography unavailable');
+  const topology=await response.json();
+  if(topology.type!=='Topology'||!topology.objects?.land||topology.objects?.countries)
+   throw new Error('Unverified physical geography fallback');
+  const land=topojson.feature(topology,topology.objects.land);
+  L.geoJSON(land,{pane:'physicalFallbackPane',renderer:L.canvas({pane:'physicalFallbackPane'}),
+   interactive:false,style:()=>({color:'#78988d',weight:.6,opacity:.7,
+     fillColor:'#405950',fillOpacity:1})}).addTo(map);
+ }catch(error){console.warn('Physical map fallback unavailable:',error);}
+}
+physicalTiles.on('tileerror',()=>{
+ if(++physicalTileErrors<3||physicalFallbackStarted)return;
+ map.removeLayer(physicalTiles);
+ activatePhysicalFallback();
+});
 // Tooltip descriptions use their own pane, always above Leaflet markers and historical outlines.
 map.createPane('eventTooltipPane');
 map.getPane('eventTooltipPane').style.zIndex='820';
