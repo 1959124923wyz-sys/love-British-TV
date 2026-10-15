@@ -900,23 +900,33 @@ function renderTenthInvasionImpactAreas(){
    p.area_sqkm===null&&year>=p.start_year&&year<=p.end_year;
  });
  if(!features.length)return;
- L.geoJSON({type:'FeatureCollection',features},{
-  renderer:invasionImpactRenderer,pane:'invasionImpactPane',
-  interactive:true,bubblingMouseEvents:false,
-  style:()=>({color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
-   fill:true,fillColor:'#b34e5c',fillOpacity:.14,
-   className:'atlas-tenth-invasion-impact'}),
-  onEachFeature:(f,layer)=>{
-   const p=f.properties;
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(p.label_type||'英军入侵影响区')+' · 点击查看史料</div>',
-    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
-   layer.on('click',e=>{
-    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
-    openTerritoryDossier(f,'invasion-impact');
-   });
+ for(const f of features){
+  const p=f.properties,small=map.getZoom()<5;
+  const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML(p.label_type||'英军入侵影响区')+
+   (small?' · 位置提示，放大查看地区示意面':' · 点击查看史料')+'</div>';
+  const open=e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   openTerritoryDossier(f,'invasion-impact');};
+  if(small){
+   const ring=f.geometry.coordinates[0].slice(0,-1);
+   const center=ring.reduce((acc,[lon,lat])=>[acc[0]+lat/ring.length,acc[1]+lon/ring.length],[0,0]);
+   L.circleMarker(center,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    radius:27,color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
+    fill:true,fillColor:'#b34e5c',fillOpacity:.12,
+    className:'atlas-tenth-invasion-impact atlas-schematic-screen-cue',
+    bubblingMouseEvents:false})
+    .bindTooltip(tooltip,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
+    .on('click',open).addTo(groups.invasionImpact);
+  }else{
+   L.geoJSON(f,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    interactive:true,bubblingMouseEvents:false,
+    style:()=>({color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
+     fill:true,fillColor:'#b34e5c',fillOpacity:.14,className:'atlas-tenth-invasion-impact'}),
+    onEachFeature:(_f,layer)=>layer.bindTooltip(tooltip,
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'}).on('click',open)
+   }).addTo(groups.invasionImpact);
   }
- }).addTo(groups.invasionImpact);
+ }
 }
 // Separate land expropriation POLICY from armed raid OCCURRENCES.
 // The warm Munster surface locates crown forfeiture/plantation administration,
