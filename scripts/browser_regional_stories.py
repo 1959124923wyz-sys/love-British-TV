@@ -34,6 +34,11 @@ try:
     def titles():
         return browser.execute_script("return [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')].map(n=>n.textContent)")
     def press(label):
+        if browser.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
+            browser.find_element(By.ID,"mobileEventsToggle").click()
+            wait.until(lambda d: d.execute_script("""
+                return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
+            """))
         buttons=browser.find_elements(By.CSS_SELECTOR,"#historicalRegionList .historical-region-entry")
         btn=next((x for x in buttons if label in x.find_element(By.CSS_SELECTOR,"strong").get_attribute('textContent')),None)
         assert btn is not None, f"{label} missing. Seen: {titles()}"
