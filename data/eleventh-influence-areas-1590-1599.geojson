@@ -110,7 +110,6 @@
         ]
       },
       "properties": {
-        "stable_id": "dublin-pale-statutory-1488-presentation-envelope",
         "name": "都柏林—德罗赫达帕莱核心 · 历史地名参考",
         "control_type": "English_Crown_legal_and_administrative_core_study_area",
         "controller": "English Crown in Ireland",
@@ -154,7 +153,14 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "label_type": "虚线法律与军政影响参考范围",
-        "map_layer": "territory"
+        "map_layer": "territory",
+        "source_ids": [
+          "C11-S52",
+          "C11-S53",
+          "C11-S54"
+        ],
+        "research_stable_id": "dublin-pale-statutory-1488-presentation-envelope",
+        "description": "1488 statute ≠ an exact 1590 border; parts of the Pale heavily contested or locally Gaelic。仅表示历史地名与殖民活动研究参考范围，虚线并非当年实测控制边界。"
       }
     },
     {
@@ -200,7 +206,6 @@
         ]
       },
       "properties": {
-        "stable_id": "raleigh-munster-blackwater-legal-grant-reference",
         "name": "芒斯特黑水河下游：罗利殖民庄园分布示意",
         "control_type": "English_undertaker_plantation_estate_legal_grants_study_area",
         "controller": "English Crown grantees alongside existing Irish landholders",
@@ -252,7 +257,16 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "label_type": "虚线殖民地产活动大致区间",
-        "map_layer": "territory"
+        "map_layer": "territory",
+        "source_ids": [
+          "C11-S59",
+          "C11-S60",
+          "C11-S61",
+          "C11-S66",
+          "C11-S67"
+        ],
+        "research_stable_id": "raleigh-munster-blackwater-legal-grant-reference",
+        "description": "Raleigh did not own all Youghal, parcels were fragmented and often disputed with old English/Gaelic landholders; many grants not occupied。仅表示历史地名与殖民活动研究参考范围，虚线并非当年实测控制边界。"
       }
     }
   ]

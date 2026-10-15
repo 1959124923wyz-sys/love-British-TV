@@ -12,8 +12,8 @@
 
 ## 当前已出版范围（2026-10-15，正式上线以Pages为准）
 
-- **1497—1589年十个历史章节**，半世纪每页五张十年目录；逐年筛选真实史事与控制点。正式章节清单以 [`data/chapters.json`](data/chapters.json) 为准。
-- 第七章（1550—1559）、[第八章（1560—1569）](editorial/1560-1569/CHAPTER8_PUBLICATION.md)及[第九章（1570—1579）](editorial/1570-1579/CHAPTER9_PUBLICATION.md)已发布；2026-10-15第九章为41项事件、60项史料、18条路线。第十章（1580—1589）已发布，正式编审说明见[第十章出版记录](editorial/1580-1589/CHAPTER10_PUBLICATION.md)。
+- **1497—1599年十一个历史章节**，半世纪每页五张十年目录；逐年筛选真实史事与控制点。正式章节清单以 [`data/chapters.json`](data/chapters.json) 为准。
+- 第七章（1550—1559）、[第八章（1560—1569）](editorial/1560-1569/CHAPTER8_PUBLICATION.md)及[第九章（1570—1579）](editorial/1570-1579/CHAPTER9_PUBLICATION.md)已发布；2026-10-15第九章为41项事件、60项史料、18条路线。第十章（1580—1589）及第十一章（1590—1599）已出版；详见[第十一章研究与出版记录](editorial/1590-1599/CHAPTER11_PUBLICATION.md)。
 - [第六章正式史料](data/atlas-1540-1549.json) / [地图点源数据](data/military-control-points-1540-1549.geojson) / [历史准入审核](editorial/1540-1549/PUBLISH_REVIEW.md) / [调查补缺清单](editorial/1540-1549/RESEARCH_GAPS_TO_PR27.md)。
 - 1540年代英军局部堡垒和法国对抗据点采用具名地点Point，仍没有可靠的精准历史疆域Polygon；原地图参考轮廓只连续延伸不改变古界。
 
