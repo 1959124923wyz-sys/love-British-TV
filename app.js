@@ -417,7 +417,8 @@ function canLocateEvent(item,atYear){
   Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&
   Math.abs(item.lat)<=90&&Math.abs(item.lng)<=180);
 }
-function focusEventFromSidebar(item,options={}){
+function focusEventFromSidebar(item){
+ const options=arguments[1]||{};
  if(!item)return;
  openDossier(item,'event');
  focusRequestToken++;
