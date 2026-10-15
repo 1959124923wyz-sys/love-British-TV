@@ -1,0 +1,46 @@
+name: Annual event arrival visual regression
+
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'css/dark-atlas-v2.css'
+      - 'scripts/test_annual_event_arrivals.js'
+      - 'scripts/browser_annual_event_arrivals.py'
+      - '.github/workflows/annual-event-arrivals.yml'
+  push:
+    branches:
+      - ux/snake-annual-new-events-20261015
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-arrival:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check annual event logic and existing interaction invariants
+        run: |
+          node --check app.js
+          node scripts/test_annual_event_arrivals.js
+          node scripts/test_event_focus.js
+          node scripts/test_map_interactions.js
+          node scripts/test_two_public_layers.js
+          node scripts/test_timeline_scale.js
+      - name: Install browser client
+        run: python3 -m pip install selenium
+      - name: Scrub real Chromium from 1511 to 1512
+        run: |
+          python3 -m http.server 8765 >/tmp/annual-map-http.log 2>&1 &
+          python3 scripts/browser_annual_event_arrivals.py
+      - name: Keep yearly screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake-annual-event-arrivals-1511-1513
+          path: annual-arrival-browser-evidence/
+          retention-days: 30
