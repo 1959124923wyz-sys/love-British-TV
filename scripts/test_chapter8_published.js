@@ -6,7 +6,10 @@ const txt=p=>fs.readFileSync(path.resolve(__dirname,'..',p),'utf8');
 const atlas=read('data/atlas-1560-1569.json'),prev=read('data/atlas-1550-1559.json');
 const chapters=read('data/chapters.json'),band=read('data/eighth-enslavement-coastal-activity-1560-1569.geojson');
 const forts=read('data/eighth-control-sites-1560-1569.geojson');
-const geo=read('data/territorial-footprints-1560-1569.geojson'),oldGeo=read('data/territorial-footprints-1550-1559.geojson');
+const {hydrateFootprints}=require('../js/territory-geometry.js');
+const original=read('data/territorial-footprints-1497-1549.geojson');
+const geo=hydrateFootprints(original,read('data/territorial-footprints-1560-1569.geojson')),
+ oldGeo=hydrateFootprints(original,read('data/territorial-footprints-1550-1559.geojson'));
 const political=read('data/political-relations-1560-1569.geojson'),cities=read('data/french-urban-control-1560-1569.geojson');
 const app=txt('app.js'),html=txt('index.html');new vm.Script(app);
 assert.deepEqual(atlas.period,{from:1560,to:1569,next:1570});
