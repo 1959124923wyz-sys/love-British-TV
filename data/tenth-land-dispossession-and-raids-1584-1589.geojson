@@ -1,0 +1,382 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "period": [
+      1584,
+      1589
+    ],
+    "intended_layer": "territory_toggle_non_sovereign_study_areas",
+    "categories": [
+      "crown_land_dispossession_policy_study",
+      "english_crown_privateering_port_raid_schematic"
+    ],
+    "geometry_claim": "ALL features are explicitly schematic, not surveyed historical land grant parcels or raided-city destruction polygons",
+    "actual_colonial_control_sqkm": null,
+    "actual_occupation_sqkm": null,
+    "area_statistics_prohibited": true,
+    "historical_document_sources": [
+      "https://celt.ucc.ie/published/E580000-001/text004.html",
+      "https://celt.ucc.ie/published/E580000-001/text005.html",
+      "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-caribbean-raid/",
+      "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/nhn/destacados/documentos-destacados/drake",
+      "https://www.muhca.gov.co/cartapedia_plano-del-asalto-de-drake-a-cartagena-de-indias-1586-8"
+    ],
+    "topology_source": "1584-89 Munster polygon inherits prior project's 1581-83 schematic regional study envelope; port ellipses are pure cartographic symbols centered on existing chapter10 event city coordinates"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "munster-crown-forfeiture-plantation-study-1584-1589",
+      "properties": {
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "map_layer": "territory",
+        "geometry_certainty": "schematic_non_surveyed",
+        "intended_use": "geographical_storytelling_only_not_a_quantified_extent",
+        "name": "芒斯特：战后失地调查与殖民庄园政策涉及区（概略）",
+        "label_type": "土地剥夺与殖民政策涉及区",
+        "zone_type": "crown_land_dispossession_policy_study",
+        "start_year": 1584,
+        "end_year": 1589,
+        "geography_semantics": "Munster province-scale location reference; not actual forfeited parcels, undertakers' grants, tenant displacement limits, or royal effective control boundary",
+        "controller_zh": "英格兰王室土地清查与殖民筹划机构（并非该区域全域实际管治）",
+        "summary_zh": "王室在德斯蒙德战争后开展查没土地调查、分配殖民庄园计划，部分调查、确权及安置存在争议和落实不足。浅赭色虚线仅帮助定位芒斯特这一政策活动地区，不是被没收土地的地块边界，更不表示当地所有土地已经由英王实际占有。",
+        "source_ids": [
+          "C10-S05",
+          "C10-S08",
+          "C10-S69",
+          "C10-S70",
+          "C10-S06"
+        ],
+        "source_urls": [
+          "https://celt.ucc.ie/published/E580000-001/text004.html",
+          "https://celt.ucc.ie/published/E580000-001/text005.html",
+          "https://doi.org/10.7486/DRI.rb69b272p"
+        ],
+        "related_event_ids": [
+          "1580S-E013",
+          "1580S-E018",
+          "1580S-E029",
+          "1580S-E030",
+          "1580S-E027"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1584,
+            "end_year": 1585,
+            "title": "芒斯特：被没收土地清查与殖民筹备",
+            "summary_zh": "1584年委任调查人员清查德斯蒙德战争后被宣布没收的土地。存世文献显示土地权利、地名与调查精度均存在问题；此面仅定位调查涉及的芒斯特地区，不能当作具体被没收地块。",
+            "source_ids": [
+              "C10-S05"
+            ]
+          },
+          {
+            "start_year": 1586,
+            "end_year": 1587,
+            "title": "芒斯特：王室殖民庄园规划与分封",
+            "summary_zh": "1586年王室批准没收土地的庄园分配和租金等安排，并限制部分本地爱尔兰人的承领资格；法律分配和实际入住不能混同，本图不显示未证实的完整庄园边界。",
+            "source_ids": [
+              "C10-S05",
+              "C10-S08",
+              "C10-S69"
+            ]
+          },
+          {
+            "start_year": 1588,
+            "end_year": 1588,
+            "title": "芒斯特：庄园殖民的实际落实与差距",
+            "summary_zh": "研究资料显示早期实际获得地块的英方承领者少于原计划，此区域仅反映殖民政策所涉及的芒斯特，不表示1588年全域完成土地转移。",
+            "source_ids": [
+              "C10-S05",
+              "C10-S70"
+            ]
+          },
+          {
+            "start_year": 1589,
+            "end_year": 1589,
+            "title": "芒斯特：乔布森殖民庄园地图所涉地区",
+            "summary_zh": "1589年绘制的芒斯特庄园图可用于研究申请者与规划的空间分布，但尚未据原图核实、数字化每一块地契；不能由此概略范围推断实际承领面积。",
+            "source_ids": [
+              "C10-S05",
+              "C10-S06",
+              "C10-S08"
+            ]
+          }
+        ],
+        "research_geo_method": "Literal reuse of a previous schematic Munster province reading polygon; not copied from Jobson's 1589 map or 1586 original estate survey, and cannot represent parcel boundaries",
+        "visual_styling": "muted_ochre_dashed"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -10.58,
+              52.03
+            ],
+            [
+              -10.3,
+              52.57
+            ],
+            [
+              -9.66,
+              52.81
+            ],
+            [
+              -8.82,
+              53
+            ],
+            [
+              -7.85,
+              52.96
+            ],
+            [
+              -7.24,
+              52.54
+            ],
+            [
+              -6.97,
+              52.1
+            ],
+            [
+              -7.15,
+              51.85
+            ],
+            [
+              -7.72,
+              51.66
+            ],
+            [
+              -8.38,
+              51.56
+            ],
+            [
+              -9.25,
+              51.45
+            ],
+            [
+              -10,
+              51.74
+            ],
+            [
+              -10.58,
+              52.03
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-santo-domingo-1586-port-symbolic-area",
+      "properties": {
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "map_layer": "territory",
+        "geometry_certainty": "schematic_non_surveyed",
+        "intended_use": "geographical_storytelling_only_not_a_quantified_extent",
+        "name": "1586年圣多明各：德雷克舰队攻占、劫掠与勒索影响区",
+        "label_type": "英军入侵影响区",
+        "zone_type": "english_crown_privateering_port_raid_schematic",
+        "start_year": 1586,
+        "end_year": 1586,
+        "impact_kind": "temporary_urban_military_occupation_ransom_and_plunder",
+        "controller_zh": "德雷克所率英格兰远征舰队（临时攻占港市，不是永久殖民治理）",
+        "summary_zh": "1586年德雷克率英军攻占圣多明各，劫掠并迫使当地支付赎金；美国国会图书馆的历史研究列出25,000杜卡特。所绘红色虚线仅标记港市周边的视觉定位，不表示这片海岸均遭焚毁或已成为英格兰领土。",
+        "source_ids": [
+          "C10-S09",
+          "C10-S10",
+          "C10-S27"
+        ],
+        "source_urls": [
+          "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/nhn/destacados/documentos-destacados/drake",
+          "https://colecciones.agn.gob.do/opac/ficha.php?codopac=OP003&idpag=2144141705&informatico=00071107PI",
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-caribbean-raid/"
+        ],
+        "related_event_ids": [
+          "1580S-E019"
+        ],
+        "original_event_coordinates": [
+          18.47,
+          -69.95
+        ],
+        "research_geo_method": "Modern city point + fixed illustrative ellipse of ~0.11 degrees; cartographic symbol only, not surveyed extent of sack, ransom, siege, occupation or damaged city blocks",
+        "historical_map_warning": "Port-city activity only. This ellipse contains sea and land; neither is a controlled polygon.",
+        "geocoded_city_only": true,
+        "geography_level": "city_marker_with_schematic_painted_surface",
+        "visual_styling": "red_dashed_urban_symbol"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.835,
+              18.47
+            ],
+            [
+              -69.850407,
+              18.5175
+            ],
+            [
+              -69.8925,
+              18.552272
+            ],
+            [
+              -69.95,
+              18.565
+            ],
+            [
+              -70.0075,
+              18.552272
+            ],
+            [
+              -70.049593,
+              18.5175
+            ],
+            [
+              -70.065,
+              18.47
+            ],
+            [
+              -70.049593,
+              18.4225
+            ],
+            [
+              -70.0075,
+              18.387728
+            ],
+            [
+              -69.95,
+              18.375
+            ],
+            [
+              -69.8925,
+              18.387728
+            ],
+            [
+              -69.850407,
+              18.4225
+            ],
+            [
+              -69.835,
+              18.47
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-cartagena-1586-port-symbolic-area",
+      "properties": {
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "map_layer": "territory",
+        "geometry_certainty": "schematic_non_surveyed",
+        "intended_use": "geographical_storytelling_only_not_a_quantified_extent",
+        "name": "1586年卡塔赫纳：德雷克舰队攻城、劫掠与勒索影响区",
+        "label_type": "英军入侵影响区",
+        "zone_type": "english_crown_privateering_port_raid_schematic",
+        "start_year": 1586,
+        "end_year": 1586,
+        "impact_kind": "temporary_urban_military_occupation_ransom_and_plunder",
+        "controller_zh": "德雷克所率英格兰远征舰队（临时攻占港市，不是永久殖民治理）",
+        "summary_zh": "1586年英军攻取卡塔赫纳并劫掠港市，历史博物馆与美国国会图书馆均记录110,000杜卡特赎金。虚线包络是围绕城市的现代坐标绘制的示意符号，不是当年的城墙、焚毁范围或六周短期占领边界。",
+        "source_ids": [
+          "C10-S11",
+          "C10-S12",
+          "C10-S27"
+        ],
+        "source_urls": [
+          "https://www.muhca.gov.co/cartapedia_plano-del-asalto-de-drake-a-cartagena-de-indias-1586-8",
+          "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-caribbean-raid/",
+          "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/127430"
+        ],
+        "related_event_ids": [
+          "1580S-E020"
+        ],
+        "original_event_coordinates": [
+          10.419,
+          -75.5383
+        ],
+        "research_geo_method": "Modern city point + fixed illustrative ellipse of ~0.11 degrees; cartographic symbol only, not surveyed extent of sack, ransom, siege, occupation or damaged city blocks",
+        "historical_map_warning": "Port-city activity only. This ellipse contains sea and land; neither is a controlled polygon.",
+        "geocoded_city_only": true,
+        "geography_level": "city_marker_with_schematic_painted_surface",
+        "visual_styling": "red_dashed_urban_symbol"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.4233,
+              10.419
+            ],
+            [
+              -75.438707,
+              10.474
+            ],
+            [
+              -75.4808,
+              10.514263
+            ],
+            [
+              -75.5383,
+              10.529
+            ],
+            [
+              -75.5958,
+              10.514263
+            ],
+            [
+              -75.637893,
+              10.474
+            ],
+            [
+              -75.6533,
+              10.419
+            ],
+            [
+              -75.637893,
+              10.364
+            ],
+            [
+              -75.5958,
+              10.323737
+            ],
+            [
+              -75.5383,
+              10.309
+            ],
+            [
+              -75.4808,
+              10.323737
+            ],
+            [
+              -75.438707,
+              10.364
+            ],
+            [
+              -75.4233,
+              10.419
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
