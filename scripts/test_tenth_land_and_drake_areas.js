@@ -90,5 +90,6 @@ assert.ok(app.includes("renderTenthLandRaidImpactAreas();"));
 assert.ok(app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener")).includes('renderTenthLandRaidImpactAreas();'));
 assert.ok(app.includes("tenthLandRaidAreas=await extractionResponse.json()"));
 assert.ok(r.includes('atlas-schematic-screen-cue')&&r.includes('const lowZoom=land?zoom<5:zoom<8'), 'Urban assaults must remain visible at default world zoom');
-assert.ok(app.includes('renderTenthLandRaidImpactAreas()}});'), 'Zoom changes must update cue into local polygon');
+const zoomListener=app.slice(app.indexOf("map.on('zoomend',"),app.indexOf("});",app.indexOf("map.on('zoomend',"))+3);
+assert.ok(zoomListener.includes('renderTenthLandRaidImpactAreas();'), 'Zoom changes must update cue into local polygon');
 console.log('PASS: 1584–89 Munster policy, 1585 Santiago and three 1586 raid towns, zoom cues and source links; no territorial claims');

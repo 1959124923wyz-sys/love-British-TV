@@ -9,9 +9,11 @@
     "physical_geography": "modern_centroids_are_reference_only",
     "north_africa_colonial_polygons": 0,
     "caribbean_historical_measured_occupation_polygons": 0,
-    "features_by_kind": "trade and chartered-company commerce are NOT military territorial control; raids and failed assaults distinct from 1598 temporary San Juan occupation",
+    "features_by_kind": "trade and chartered-company commerce are NOT military territorial control; raids and failed assaults distinct from 1598 temporary San Juan occupation; one Trinidad schematic northwestern regional military action polygon connects TWO historically attested towns without claiming actual territorial reach",
     "source_review": "British Library, Hakluyt primary 16th c edited, scholarly Hesperis-Tamuda Morocco port identification, U.S. National Park Service",
-    "area_statistics_prohibited": true
+    "area_statistics_prohibited": true,
+    "northwest_trinidad_schematic_impact_polygons": 1,
+    "all_area_statistics_prohibited": true
   },
   "features": [
     {
@@ -220,8 +222,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.23,
-          10.47
+          -61.4242,
+          10.6394
         ]
       },
       "properties": {
@@ -233,18 +235,24 @@
         "source_ids": [],
         "validity": "occurrence_year_only",
         "map_layer": "territory_reference_not_political_control",
-        "name": "1595年特立尼达：英方拘押西班牙总督的档案记录",
+        "name": "1595年圣何塞·德奥鲁尼亚：罗利部队攻取并焚毁西班牙殖民城镇",
         "start_year": 1595,
         "end_year": 1595,
         "zone_type": "caribbean_english_military_raid",
-        "summary_zh": "西班牙王室收到的1595年委内瑞拉报告记述罗利率舰船进入特立尼达、拘押总督安东尼奥·德·贝里奥，并记载当地有地点遭火烧。由于现有证据仅核实到档案目录，不将整座岛屿或具体城镇标为已被英方占领，也不将代表点当作拘押地点坐标。",
+        "summary_zh": "1595年罗利舰队抵达西班牙人港后向圣何塞·德奥鲁尼亚（今特立尼达圣约瑟夫一带）进军，击败守军、拘押西属地方总督安东尼奥·德·贝里奥，随后焚毁该城。当地国家图书馆保存了罗利的相关自述；大英图书馆保存西班牙方面关于该城遭英军焚毁的同期报告目录。这是有据的袭城事件，不等于整座特立尼达岛被英国占领。此点为今日圣约瑟夫约略市中心，不是1595年战场精确坐标。",
         "source_urls": [
-          "https://searcharchives.bl.uk/catalog/040-002054718"
+          "https://searcharchives.bl.uk/catalog/040-002054718",
+          "https://www.nalis.gov.tt/resources/tt-content-guide/significant-sites/significant-sites-a-i/",
+          "https://www.nalis.gov.tt/resources/tt-content-guide/governors/governors-of-trinidad-and-tobago-1593-1701/",
+          "https://searcharchives.bl.uk/catalog/040-002054717"
         ],
         "coordinate_semantics": "modern_site_or_region_reference_not_original_16c_map_coordinate",
-        "geo_precision": "Trinidad_island_region_center_only",
-        "actor": "沃尔特·罗利远征船队；西班牙地方当局",
-        "archive_folio": "British Library Add MS 36316 ff.150, 161, 168b"
+        "geo_precision": "historical_San_Jose_de_Oruna_identified_as_modern_St_Joseph_city_center_not_wall_or_raiding_perimeter",
+        "actor": "英格兰沃尔特·罗利远征队；西班牙殖民当局及当地原住民行动主体各不相同",
+        "archive_folio": "British Library Add MS 36316 ff.150, 161, 168b",
+        "updated_geographic_basis": "Replaces unhelpful Trinidad-island centroid with documented burnt city St Joseph; the city itself is a modern geographic reference",
+        "evidence_crosscheck": "Raleigh self-account quoted by NALIS; independent Spanish official material described by British Library Add MS 36315 f264b; original manuscript not read",
+        "explicit_limits": "Raleigh's own account of indigenous involvement cannot safely be generalized as all indigenous people supporting his action."
       }
     },
     {
@@ -365,6 +373,130 @@
         ],
         "actor": "英格兰私人商队；摩洛哥贸易往来",
         "sequence_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trinidad-puerto-de-los-espanoles-1595-raleigh-arrival",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.5166,
+          10.6619
+        ]
+      },
+      "properties": {
+        "map_layer": "territory_reference_not_political_control",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "name": "1595年西班牙人港：罗利远征队登陆、召见总督的具名地点",
+        "start_year": 1595,
+        "end_year": 1595,
+        "zone_type": "caribbean_english_military_raid",
+        "summary_zh": "特立尼达国家图书馆的历史研究记载，罗利船队1595年到达Puerto de los Españoles（今西班牙港），传讯要求西班牙总督贝里奥前来，遭拒后英方转向内陆圣何塞·德奥鲁尼亚。现代城市位置仅用于定位，不代表16世纪码头或具体登陆点，也没有充分证据把整个港口和邻近聚落标为被焚毁。",
+        "source_ids": [],
+        "source_urls": [
+          "https://www.nalis.gov.tt/resources/tt-content-guide/governors/governors-of-trinidad-and-tobago-1593-1701/",
+          "https://www.nalis.gov.tt/resources/tt-content-guide/significant-sites/significant-sites-a-i/",
+          "https://searcharchives.bl.uk/catalog/040-002054717"
+        ],
+        "actor": "英格兰罗利远征队与西班牙地方总督",
+        "geo_precision": "modern_Port_of_Spain_city_center_only_not_16th_century_port_site",
+        "chronology": "Arrival and military expedition 1595 only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trinidad-1595-puerto-espana-san-jose-operation-schematic",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.576,
+              10.606
+            ],
+            [
+              -61.583,
+              10.699
+            ],
+            [
+              -61.511,
+              10.73
+            ],
+            [
+              -61.395,
+              10.713
+            ],
+            [
+              -61.367,
+              10.631
+            ],
+            [
+              -61.424,
+              10.591
+            ],
+            [
+              -61.509,
+              10.586
+            ],
+            [
+              -61.576,
+              10.606
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory_reference_not_political_control",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "name": "1595年特立尼达西北部：罗利军事袭击与城镇焚毁行动影响区（示意）",
+        "start_year": 1595,
+        "end_year": 1595,
+        "zone_type": "caribbean_english_raid_impact_region_schematic",
+        "label_type": "英军入侵影响区（有据城镇；虚线示意边界）",
+        "summary_zh": "1595年罗利率英格兰远征队到达西班牙人港，向内陆圣何塞·德奥鲁尼亚进军，击败西班牙守军、俘虏总督贝里奥，随后焚毁城镇。特立尼达国家图书馆所引英方自述和大英图书馆所编西班牙官员文件目录相互印证主要史实。淡红虚线仅概括两处有据地名附近的军事活动位置：不表示途经所有乡村被袭、不复原具体行军道路，也不认为英军占据整座特立尼达岛。",
+        "named_anchors": [
+          {
+            "id": "trinidad-puerto-de-los-espanoles-1595-raleigh-arrival",
+            "name": "Puerto de los Españoles（今西班牙港）",
+            "lat": 10.6619,
+            "lon": -61.5166,
+            "kind": "arrival_location_modern_reference"
+          },
+          {
+            "id": "caribbean-trinidad-raiders-1595",
+            "name": "San José de Oruña（今St Joseph）",
+            "lat": 10.6394,
+            "lon": -61.4242,
+            "kind": "documented_burned_city_modern_reference"
+          }
+        ],
+        "center_lat_lon": [
+          10.65065,
+          -61.4704
+        ],
+        "source_ids": [],
+        "source_urls": [
+          "https://www.nalis.gov.tt/resources/tt-content-guide/significant-sites/significant-sites-a-i/",
+          "https://www.nalis.gov.tt/resources/tt-content-guide/governors/governors-of-trinidad-and-tobago-1593-1701/",
+          "https://searcharchives.bl.uk/catalog/040-002054717",
+          "https://searcharchives.bl.uk/catalog/040-002054718"
+        ],
+        "actor": "英格兰沃尔特·罗利远征队；西班牙守军及地方原住民",
+        "surface_semantics": "Manually bounded named-place editorial envelope ONLY; evidence does NOT establish an exact raid perimeter or actual sovereignty",
+        "approximate_symbol_display": true,
+        "mapped_raid_sites_count": 2,
+        "area_measurement_prohibited": true,
+        "precise_route_unknown": true,
+        "occupation_claim": false
       }
     }
   ]

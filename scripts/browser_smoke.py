@@ -1031,9 +1031,20 @@ try:
     verify("1594 documented Enniskillen/Blackwater English forts absent",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===5",driver)
     set_year(1595,19)
-    verify("1595 Caribbean military actions are four RAID markers, not occupied San Juan",
-           """document.querySelectorAll('#map .atlas-caribbean-raid-site').length===4 &&
+    verify("1595 Caribbean actions have FIVE town/region RAID site markers, not occupied San Juan",
+           """document.querySelectorAll('#map .atlas-caribbean-raid-site').length===5 &&
               document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===0""",driver)
+    verify("1595 Trinidad must show one sourced two-city impact area, not a British colonial polygon",
+           """document.querySelectorAll('#map .atlas-trinidad-1595-impact').length===1 &&
+              document.querySelector('#yearRange').value==='1595'""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-trinidad-1595-impact')
+        .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("1595 local region dossier must distinguish two towns and historical limits",
+           """document.querySelector('#dossierBody').textContent.includes('圣何塞') &&
+              document.querySelector('#dossierBody').textContent.includes('西班牙人港') &&
+              document.querySelector('#dossierBody .source-link')!==null &&
+              !document.querySelector('#dossierBody').textContent.includes('占领全岛')""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1595-Trinidad-two-anchor-raid-zone.png"))
     driver.save_screenshot(str(OUT / "chapter11-1595-Caribbean-Margarita-Cumana-Trinidad-SanJuan.png"))
     verify("1595 Gaelic recapture must remain contested, not British land",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===1",driver)
@@ -1047,6 +1058,8 @@ try:
               !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
     set_year(1597,25)
+    verify("1597 must not retain 1595 Trinidad warfare research area",
+           "document.querySelectorAll('#map .atlas-trinidad-1595-impact').length===0",driver)
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
     set_year(1598,30)

@@ -8,13 +8,14 @@ const o=JSON.parse(read('data/caribbean-maghreb-contact-raids-1551-1598.geojson'
 const app=read('app.js'),html=read('index.html');
 new vm.Script(app,{filename:'app.js'});
 assert.equal(o.type,'FeatureCollection');
-assert.equal(o.features.length,10);
+assert.equal(o.features.length,12);
 assert.equal(o.metadata.north_africa_colonial_polygons,0);
 assert.equal(o.metadata.caribbean_historical_measured_occupation_polygons,0);
 assert.equal(o.metadata.area_statistics_prohibited,true);
-assert.ok(o.features.every(f=>['Point','LineString'].includes(f.geometry.type)));
-assert.equal(o.features.filter(f=>f.geometry.type==='Point').length,9);
+assert.ok(o.features.every(f=>['Point','LineString','Polygon'].includes(f.geometry.type)));
+assert.equal(o.features.filter(f=>f.geometry.type==='Point').length,10);
 assert.equal(o.features.filter(f=>f.geometry.type==='LineString').length,1);
+assert.equal(o.features.filter(f=>f.geometry.type==='Polygon').length,1);
 const a10=JSON.parse(read('data/atlas-1580-1589.json'));
 const a11=JSON.parse(read('data/atlas-1590-1599.json'));
 const knownSources=new Set([...a10.sources,...a11.sources].map(s=>s.id));
@@ -34,12 +35,12 @@ for(const f of o.features){
   assert.ok(knownEvents.has(id),'Missing cited event '+id);
   assert.equal(knownEvents.get(id).year,p.start_year,'Related event historical-year mismatch');
  }
- let coords=f.geometry.type==='Point'?[f.geometry.coordinates]:f.geometry.coordinates;
+ let coords=f.geometry.type==='Point'?[f.geometry.coordinates]:f.geometry.type==='Polygon'?f.geometry.coordinates[0]:f.geometry.coordinates;
  for(const c of coords)assert.ok(Array.isArray(c)&&c.length===2&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90);
  assert.ok(!f.geometry.coordinates[0]?.type,'Do not embed territory polygons');
 }
 const count=y=>o.features.filter(f=>f.properties.start_year===y).length;
-for(const [y,n] of [[1550,0],[1551,1],[1552,3],[1553,0],[1585,0],[1588,1],[1594,0],[1595,4],[1596,0],[1598,1],[1599,0]])
+for(const [y,n] of [[1550,0],[1551,1],[1552,3],[1553,0],[1585,0],[1588,1],[1594,0],[1595,6],[1596,0],[1598,1],[1599,0]])
  assert.equal(count(y),n,'Incorrect year gating '+y);
 const sanjuans=o.features.filter(f=>f.id.startsWith('caribbean-san-juan-'));
 assert.equal(sanjuans.length,2);
@@ -67,6 +68,31 @@ assert.ok(renderer.includes("p.start_year===year&&p.end_year===year"));
 assert.ok(renderer.includes("!$('toggleTerritorialFootprints').checked")&&renderer.includes("!$('toggleControlAreas').checked"));
 for(const name of ['atlas-maghreb-commerce-site','atlas-maghreb-trade-sequence','atlas-caribbean-raid-site','atlas-caribbean-urban-occupation'])
  assert.ok(renderer.includes(name),'Missing distinct marker style '+name);
+const trinidad=o.features.find(f=>f.id==='trinidad-1595-puerto-espana-san-jose-operation-schematic');
+assert.ok(trinidad&&trinidad.geometry.type==='Polygon');
+assert.equal(trinidad.properties.mapped_raid_sites_count,2);
+assert.equal(trinidad.properties.area_measurement_prohibited,true);
+assert.ok(trinidad.properties.summary_zh.includes('不表示途经所有乡村被袭'));
+assert.equal(o.metadata.northwest_trinidad_schematic_impact_polygons,1);
+assert.equal(o.metadata.caribbean_historical_measured_occupation_polygons,0);
+const ring=trinidad.geometry.coordinates[0];assert.deepEqual(ring[0],ring.at(-1));
+function within(lon,lat,ring){let inArea=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){
+ const [xi,yi]=ring[i],[xj,yj]=ring[j];
+ if((yi>lat)!==(yj>lat)&&lon<(xj-xi)*(lat-yi)/(yj-yi)+xi)inArea=!inArea;
+}return inArea;}
+for(const place of trinidad.properties.named_anchors){
+ assert.ok(within(place.lon,place.lat,ring),'Trinidad evidence anchor outside study envelope '+place.name);
+ const attested=o.features.find(f=>f.id===place.id);
+ assert.ok(attested&&attested.geometry.type==='Point');
+ assert.deepEqual(attested.geometry.coordinates,[place.lon,place.lat]);
+}
+const sanJose=o.features.find(f=>f.id==='caribbean-trinidad-raiders-1595');
+assert.ok(sanJose.properties.name.includes('焚毁西班牙殖民城镇'));
+assert.ok(sanJose.properties.source_urls.some(x=>x.includes('nalis.gov.tt')));
+assert.ok(trinidad.properties.source_urls.some(x=>x.includes('searcharchives.bl.uk')));
+assert.ok(renderer.includes('atlas-trinidad-1595-impact'));
+assert.ok(renderer.includes("if(small)")&&renderer.includes("map.getZoom()<8"));
+assert.ok(app.includes('renderAtlanticContactSites()}});'),'The impact cue must update on zoom');
 assert.ok(renderer.includes("openTerritoryDossier(f,'atlantic-contact')"));
 const refresh=app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener"));
 assert.ok(refresh.includes('renderAtlanticContactSites();'));

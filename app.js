@@ -1005,6 +1005,38 @@ function renderAtlanticContactSites(){
    p.territorial_claim===false&&p.area_sqkm===null&&
    p.map_layer==='territory_reference_not_political_control';
  });
+ // Region A: Raleigh's 1595 Port of Spain -> San José raiding episode.
+ // The archive attests TWO named towns; no route, damage-radius, sovereignty
+ // or island-wide control is reconstructed from this editorial polygon.
+ for(const f of selected.filter(x=>x.geometry.type==='Polygon')){
+  const p=f.properties;
+  if(p.zone_type!=='caribbean_english_raid_impact_region_schematic'||p.area_measurement_prohibited!==true||
+     p.territorial_claim!==false)continue;
+  const small=map.getZoom()<8;
+  const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML(p.label_type)+
+   (small?' · 位置提示；放大后显示局部示意面':' · 点击查看史料')+'</div>';
+  const open=e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   openTerritoryDossier(f,'atlantic-contact');};
+  if(small){
+   L.circleMarker(p.center_lat_lon,{
+    renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    radius:29,color:'#be6473',weight:2.5,dashArray:'7 6',opacity:.92,
+    fill:true,fillColor:'#aa4657',fillOpacity:.14,
+    className:'atlas-trinidad-1595-impact atlas-schematic-screen-cue',
+    bubblingMouseEvents:false
+   }).bindTooltip(tooltip,{sticky:true,pane:'eventTooltipPane',className:'atlas-hover'})
+    .on('click',open).addTo(groups.atlanticContact);
+  }else{
+   L.geoJSON(f,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+    interactive:true,bubblingMouseEvents:false,
+    style:()=>({color:'#be6473',weight:2.5,dashArray:'7 6',opacity:.9,
+     fill:true,fillColor:'#aa4657',fillOpacity:.14,className:'atlas-trinidad-1595-impact'}),
+    onEachFeature:(_f,layer)=>layer.bindTooltip(tooltip,{sticky:true,
+     pane:'eventTooltipPane',className:'atlas-hover'}).on('click',open)
+   }).addTo(groups.atlanticContact);
+  }
+ }
  // Draw the schematic stop sequence first, beneath the individual sites.
  for(const f of selected.filter(x=>x.geometry.type==='LineString')){
   L.geoJSON(f,{pane:'warReachPane',renderer:warReachRenderer,
@@ -1824,9 +1856,9 @@ async function boot(){
   const atlanticRes=await fetch('data/caribbean-maghreb-contact-raids-1551-1598.geojson',{cache:'no-store'});
   if(!atlanticRes.ok)throw new Error('加勒比与北非史料地理点未加载');
   const atlanticData=await atlanticRes.json();
-  if(atlanticData?.features?.length!==10||atlanticData.features.some(f=>{
+  if(atlanticData?.features?.length!==12||atlanticData.features.some(f=>{
     const p=f.properties||{},geom=f.geometry||{};
-    return !['Point','LineString'].includes(geom.type)||
+    return !['Point','LineString','Polygon'].includes(geom.type)||
      p.map_layer!=='territory_reference_not_political_control'||
      p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
      p.territorial_claim!==false||p.area_sqkm!==null||
@@ -1886,7 +1918,7 @@ $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistorica
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderAtlanticContactSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
