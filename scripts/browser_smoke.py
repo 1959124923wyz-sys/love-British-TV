@@ -868,10 +868,37 @@ try:
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelector('#chapterLabel').textContent.includes('第九章')""",driver)
+    verify("1580 Munster armed invasion must have one reference surface",
+           """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
+              document.querySelector('#map .atlas-tenth-invasion-impact').getAttribute('stroke-dasharray')==='8 6'""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1580-Munster-invasion-impact.png"))
+    toggle_layer('mapLayerTerritory',False)
+    verify("Turning off political geography must hide only Munster region and retain events",
+           """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0 &&
+              document.querySelector('#eventList [data-eid="1580S-E002"]')!==null &&
+              document.querySelector('#yearRange').value==='1580'""",driver)
+    toggle_layer('mapLayerTerritory',True)
+    verify("Munster impact area must return without changing year",
+           """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
+              document.querySelector('#yearRange').value==='1580'""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1580-Loughrea-recapture.png"))
     set_year(1582,10)
     verify("1582 famine testimony hidden", "!!document.querySelector('#eventList [data-eid=\"1580S-E009\"]')",driver)
+    verify("1582 Munster war area missing or incorrectly called an occupation",
+           """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
+              document.querySelector('#yearRange').value==='1582'""",driver)
+    driver.execute_script("""document.querySelector('#map .atlas-tenth-invasion-impact')
+       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
+    verify("Munster war area dossier must cite sources and hide 1583 future",
+           """document.querySelector('#dossierBody').textContent.includes('英军入侵影响区') &&
+              document.querySelector('#dossierBody').textContent.includes('战争') &&
+              document.querySelector('#dossierBody .source-link')!==null &&
+              [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1583年'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1582-Munster-war-impact.png"))
+
     set_year(1585,16)
+    verify("1585 must not retain ended 1580–1583 war area",
+           "document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0",driver)
     verify("1585 Roanoke site missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
     driver.save_screenshot(str(OUT / "chapter10-1585-Roanoke.png"))
     set_year(1586,23)
