@@ -65,7 +65,7 @@ assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fet
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
 assert.ok(app.includes("Math.min(lastPublishedYear"),'Years capped at old third chapter');
 assert.ok(app.includes("year===lastPublishedYear"),'Autoplay must reach 1529 then stop');
-assert.ok(app.includes("e.year>=chapter.start&&e.year<=year"),'Milestones expose future dates');
+assert.ok(!app.includes('function renderMilestones()')&&!html.includes('id="milestoneDots"'),'Removed yellow timeline markers returned');
 assert.ok(app.includes("fullArchive||occurredByYear(e,year)"),'Chapter sidebar reveals future events');
 assert.ok(app.includes("if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;"),'Routes have no year gate');
 assert.ok(app.includes("focusEventFromSidebar(item)"),'Double-click navigation missing');
