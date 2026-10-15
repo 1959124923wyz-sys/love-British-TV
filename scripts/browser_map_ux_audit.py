@@ -80,6 +80,15 @@ def run_case(label, width, height, mobile):
         event_id = selected.get_attribute("data-eid")
         before = js("window.atlasReadViewport()")
         selected.location_once_scrolled_into_view
+        print(label, "PRECLICK", json.dumps(js("""(() => {
+            const e=document.querySelector('#eventList .event-item');
+            const a=e.getBoundingClientRect(), b=document.querySelector('#sidebar').getBoundingClientRect(),
+                c=document.querySelector('.sidebar-main').getBoundingClientRect();
+            return {selected:{x:a.x,y:a.y,w:a.width,h:a.height},sidebar:{x:b.x,y:b.y,w:b.width,h:b.height},
+              scroll:{x:c.x,y:c.y,w:c.width,h:c.height,scrollTop:document.querySelector('.sidebar-main').scrollTop},
+              style:{display:getComputedStyle(e).display,visibility:getComputedStyle(e).visibility},
+              front:document.elementFromPoint(a.x+a.width/2,a.y+a.height/2)?.id || document.elementFromPoint(a.x+a.width/2,a.y+a.height/2)?.className};
+        })()"""),ensure_ascii=False),flush=True)
         selected.click()
         wait.until(lambda d: d.execute_script(
             "return document.querySelector('#dossierBody .dossier-map-action button')!==null"))
