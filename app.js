@@ -148,14 +148,34 @@ const svgIcon=(item,klass='atlas-glyph')=>{
 const iconHTML=item=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+'">'+svgIcon(item)+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
+const compactMapMedia=window.matchMedia('(max-width:980px)');
+const isCompactMap=()=>compactMapMedia.matches;
+// Mobile users should see the actual map on arrival, not a blocking sidebar.
+if(isCompactMap())workspace.classList.add('sidebar-collapsed');
+function syncMobileEventsButton(){
+ const button=$('mobileEventsToggle');
+ if(!button)return;
+ const open=!workspace.classList.contains('sidebar-collapsed');
+ button.setAttribute('aria-expanded',String(isCompactMap()&&open));
+ button.setAttribute('aria-label',open?'关闭事件列表':'打开事件列表');
+ button.textContent=open?'✕ 关闭事件':'☰ 事件';
+}
+syncMobileEventsButton();
 function syncPanels(){
 setTimeout(()=>map.invalidateSize({pan:false}),250);
 }
 function openPanel(which){
- workspace.classList.remove(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');syncPanels();
+ if(isCompactMap()){
+  // Do not leave a sidebar and a dossier stacked over a phone-sized map.
+  if(which==='dossier')workspace.classList.add('sidebar-collapsed');
+  else workspace.classList.add('dossier-collapsed');
+ }
+ workspace.classList.remove(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');
+ syncMobileEventsButton();syncPanels();
 }
 function togglePanel(which){
- workspace.classList.toggle(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');syncPanels();
+ workspace.classList.toggle(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');
+ syncMobileEventsButton();syncPanels();
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
@@ -244,8 +264,16 @@ function openDossier(item,typ){
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
 
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+listSources(item.source_ids,item);
+ const canMapFocus=typ==='event'&&canLocateEvent(item,year);
+ const locateAction=typ==='event'?'<div class="dossier-map-action"><button type="button" data-locate-event'+
+  (canMapFocus?'':' disabled')+'>◎ 在地图上定位</button><small>'+
+  (canMapFocus?'保留当前年份与缩放；手机上返回地图查看':'该事件暂无可定位地点，或尚未发生')+
+  '</small></div>':'';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+locateAction+listSources(item.source_ids,item);
  openPanel('dossier');
+ const locateButton=$('dossierBody').querySelector('[data-locate-event]');
+ if(locateButton&&!locateButton.disabled)
+  locateButton.addEventListener('click',()=>focusEventFromSidebar(item,{revealMap:true}));
  document.querySelectorAll('.event-item').forEach(el=>el.classList.toggle('selected',el.dataset.eid===selected));
 }
 // Modern heritage scheduled boundaries were fetched from the official HES ArcGIS service.
@@ -384,7 +412,7 @@ function canLocateEvent(item,atYear){
   Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&
   Math.abs(item.lat)<=90&&Math.abs(item.lng)<=180);
 }
-function focusEventFromSidebar(item){
+function focusEventFromSidebar(item,options={}){
  if(!item)return;
  openDossier(item,'event');
  focusRequestToken++;
@@ -397,6 +425,12 @@ function focusEventFromSidebar(item){
  }
  stopPlay();
  focusedEventId=item.id;
+ // Explicit touch/button location request should reveal the map rather than
+ // center the chosen event beneath an open mobile dossier.
+ if(options.revealMap&&isCompactMap()){
+  workspace.classList.add('dossier-collapsed','sidebar-collapsed');
+  syncMobileEventsButton();syncPanels();
+ }
  const token=focusRequestToken,position=[item.lat,item.lng];
  setTimeout(()=>{
   if(token!==focusRequestToken||focusedEventId!==item.id||!canLocateEvent(item,year))return;
@@ -1932,6 +1966,16 @@ async function boot(){
   setWarning('历史数据未能加载：'+String(e.message||e));
  }
 }
+$('mobileEventsToggle').addEventListener('click',()=>{
+ if(!isCompactMap())return;
+ if(workspace.classList.contains('sidebar-collapsed'))openPanel('sidebar');
+ else{workspace.classList.add('sidebar-collapsed');syncMobileEventsButton();syncPanels();}
+});
+compactMapMedia.addEventListener('change',e=>{
+ if(e.matches)workspace.classList.add('sidebar-collapsed');
+ else workspace.classList.remove('sidebar-collapsed');
+ syncMobileEventsButton();syncPanels();
+});
 $('mapLayerTerritory').addEventListener('change',syncMapLayers);
 $('mapLayerEvents').addEventListener('change',syncMapLayers);
 $('showModernBasemap').addEventListener('change',e=>setBasemap(e.target.checked?'modern':'physical'));
