@@ -1,0 +1,1578 @@
+{
+  "dataset_id": "combined-chapter-1497-1509",
+  "period": {
+    "from": 1497,
+    "to": 1509,
+    "next": 1510
+  },
+  "editorial_status": "published",
+  "intro": "1497年，卡博特持英王亨利七世特许状从布里斯托尔出航，抵达早已有原住民居住的北美海岸；登陆地点和航迹仍存在争议。1500年代，英王继续资助西航、授予贸易许可，并通过加来管理大陆据点；英格兰与苏格兰缔约联姻，爱尔兰各地则持续争夺城堡与权力。直到1509年亨利八世继位，此时期未出现能够证实的英格兰北美永久殖民控制区。",
+  "origin": {
+    "merged_from": [
+      "data/atlas-1497-1500.json",
+      "data/atlas-1500-1509.json"
+    ],
+    "original_files_retained": true,
+    "editorial_change": "chapter grouping only, historical records unchanged",
+    "legacy_chapters": [
+      1,
+      2
+    ]
+  },
+  "events": [
+    {
+      "id": "patent-1496",
+      "year": 1496,
+      "start_year": 1496,
+      "end_year": 1496,
+      "visible_from": 1497,
+      "date_label": "1496年3月5日（前史）",
+      "name": "亨利七世颁发首份远航特许状",
+      "category": "political",
+      "lat": 51.5,
+      "lng": -0.13,
+      "geo_precision": "representative-city",
+      "description": "1496年3月，英王亨利七世授予卡博特及其儿子跨大西洋远航特许状，允许他们为王室探索新的贸易通路。",
+      "source_ids": [
+        "bristol-patent-1496"
+      ],
+      "certainty": "documented",
+      "significance": {
+        "level": 2,
+        "rationale": "为1497年远航提供政治授权，属于重要背景，但本身不是殖民地建立。",
+        "review_status": "provisional"
+      },
+      "icon_code": "POL",
+      "short_description": "1496年3月，英王亨利七世授予卡博特及其儿子跨大西洋远航特许状，允许他们为王室探索新的贸易通路。"
+    },
+    {
+      "id": "bristol-sail-1497",
+      "year": 1497,
+      "start_year": 1497,
+      "end_year": 1497,
+      "visible_from": 1497,
+      "date_label": "1497年5月",
+      "name": "“马修号”从布里斯托尔启航",
+      "category": "voyage",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "city",
+      "description": "1497年5月，约翰·卡博特乘“马修号”从布里斯托尔启航，带领船员横渡大西洋，寻找通往亚洲的航路。",
+      "source_ids": [
+        "heritage-1497",
+        "soncino-1497"
+      ],
+      "certainty": "documented",
+      "significance": {
+        "level": 3,
+        "rationale": "英格兰王室支持的跨大西洋远航关键节点，改变后续海外探索的历史可能性。",
+        "review_status": "provisional"
+      },
+      "icon_code": "EXP",
+      "short_description": "1497年5月，约翰·卡博特乘“马修号”从布里斯托尔启航，带领船员横渡大西洋，寻找通往亚洲的航路。"
+    },
+    {
+      "id": "landfall-1497",
+      "year": 1497,
+      "start_year": 1497,
+      "end_year": 1497,
+      "visible_from": 1497,
+      "date_label": "约1497年6月24日",
+      "name": "北美沿岸登陆（位置未定）",
+      "category": "claim",
+      "lat": 48.8,
+      "lng": -57.2,
+      "geo_precision": "regional-symbol-only",
+      "description": "1497年6月下旬，卡博特与船员望见北美沿岸，随后为英格兰王室提出海外土地权利主张。登陆地点在后来的历史研究中出现多种解释。",
+      "source_ids": [
+        "pasqualigo-1497",
+        "heritage-landfall",
+        "heritage-newfoundland"
+      ],
+      "certainty": "place-uncertain",
+      "significance": {
+        "level": 3,
+        "rationale": "远航抵达北美是跨大西洋接触史的重大节点；地理精度低且绝不代表有效统治。",
+        "review_status": "provisional"
+      },
+      "icon_code": "CLM",
+      "short_description": "1497年6月下旬，卡博特与船员望见北美沿岸，随后为英格兰王室提出海外土地权利主张。登陆地点在后来的历史研究中出现多种解释。"
+    },
+    {
+      "id": "return-1497",
+      "year": 1497,
+      "start_year": 1497,
+      "end_year": 1497,
+      "visible_from": 1497,
+      "date_label": "1497年8月6日",
+      "name": "船队返回布里斯托尔",
+      "category": "voyage",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "city",
+      "description": "1497年8月，卡博特的船返回布里斯托尔，向英王呈报航行见闻。",
+      "source_ids": [
+        "heritage-1497",
+        "heritage-1498"
+      ],
+      "certainty": "documented",
+      "significance": {
+        "level": 1,
+        "rationale": "此次航行的回程记录，作为主远航事件的补充。",
+        "review_status": "provisional"
+      },
+      "icon_code": "EXP",
+      "short_description": "1497年8月，卡博特的船返回布里斯托尔，向英王呈报航行见闻。"
+    },
+    {
+      "id": "departure-1498",
+      "year": 1498,
+      "start_year": 1498,
+      "end_year": 1498,
+      "visible_from": 1498,
+      "date_label": "1498年5月",
+      "name": "卡博特率船队再次出航",
+      "category": "voyage",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "city",
+      "description": "1498年5月，卡博特率约五艘船再次从布里斯托尔出发。船队驶入大西洋，后来留下的航行消息十分有限。",
+      "source_ids": [
+        "heritage-1498",
+        "dcb-cabot"
+      ],
+      "certainty": "outcome-uncertain",
+      "significance": {
+        "level": 2,
+        "rationale": "第二次远航及结局不明，是主要研究问题，但证据不足以宣称新的殖民控制。",
+        "review_status": "provisional"
+      },
+      "icon_code": "EXP",
+      "short_description": "1498年5月，卡博特率约五艘船再次从布里斯托尔出发。船队驶入大西洋，后来留下的航行消息十分有限。"
+    },
+    {
+      "id": "patent-1498",
+      "year": 1498,
+      "start_year": 1498,
+      "end_year": 1498,
+      "visible_from": 1498,
+      "date_label": "1498年2月3日",
+      "name": "第二份远航特许状",
+      "category": "political",
+      "lat": 51.5,
+      "lng": -0.13,
+      "geo_precision": "representative-city",
+      "description": "1498年2月，亨利七世再次批准卡博特组织远航船队。",
+      "source_ids": [
+        "dcb-cabot",
+        "heritage-1498"
+      ],
+      "certainty": "documented",
+      "significance": {
+        "level": 1,
+        "rationale": "第二份远航许可，主要为后续航行提供背景。",
+        "review_status": "provisional"
+      },
+      "icon_code": "POL",
+      "short_description": "1498年2月，亨利七世再次批准卡博特组织远航船队。"
+    },
+    {
+      "id": "1500-1502-ELIOT-100",
+      "year": 1500,
+      "start_year": 1500,
+      "end_year": 1502,
+      "visible_from": 1500,
+      "date_label": "1500—1502年",
+      "name": "1500—1502年间向休·埃利奥特相关商团支付100英镑",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "associated-city",
+      "geography_label": "Bristol, England — royal port accounts",
+      "description": "1500—1502年的王室账簿记录向休·埃利奥特相关商人支付100英镑，用于前往新发现土地的船队。",
+      "short_description": "1500—1502年的王室账簿记录向休·埃利奥特相关商人支付100英镑，用于前往新发现土地的船队。",
+      "source_ids": [
+        "JONES-2010-CONDON"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [
+        {
+          "amount": 100,
+          "currency": "GBP",
+          "year_from": 1500,
+          "year_to": 1502,
+          "accounting_category": "royal_reward_expenditure",
+          "payer": "English Crown revenues from prisage/butlerage",
+          "recipient": "Hugh Eliot and associates",
+          "colonial_profit": false
+        }
+      ],
+      "colonial_profit": false
+    },
+    {
+      "id": "1500-CALAIS-ETAPLES",
+      "year": 1500,
+      "start_year": 1500,
+      "end_year": 1501,
+      "visible_from": 1500,
+      "date_label": "1500—1501年",
+      "name": "1500—1501年加来经手英法条约支付和保管",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 50.9513,
+      "lng": 1.8587,
+      "geo_precision": "documented-city",
+      "geography_label": "Calais, Crown of England-held enclave",
+      "description": "1500—1501年，加来官员经手英法《埃塔普勒条约》相关款项的收取与保管。",
+      "short_description": "1500—1501年，加来官员经手英法《埃塔普勒条约》相关款项的收取与保管。",
+      "source_ids": [
+        "BL-CALAIS-CHARTERS"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [],
+      "colonial_profit": false
+    },
+    {
+      "id": "1500-WESTON-ROYAL-REWARD",
+      "year": 1500,
+      "start_year": 1500,
+      "end_year": 1500,
+      "visible_from": 1500,
+      "date_label": "1500年",
+      "name": "英王向威廉·韦斯顿提供30英镑航海奖励",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "geo_precision": "regional-symbol-only",
+      "geography_label": "英格兰王室会计 · 伦敦地区示意",
+      "description": "1500年，亨利七世向威廉·韦斯顿支付30英镑航海奖励，支持前往大西洋彼岸的探索。",
+      "short_description": "1500年，亨利七世向威廉·韦斯顿支付30英镑航海奖励，支持前往大西洋彼岸的探索。",
+      "source_ids": [
+        "BRIS-WESTON-2018",
+        "BRIS-WESTON-2018-NEWS"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [
+        {
+          "amount": 30,
+          "currency": "GBP",
+          "year": 1500,
+          "accounting_category": "crown_reward_expenditure",
+          "payer": "English Crown",
+          "recipient": "William Weston",
+          "colonial_profit": false
+        }
+      ],
+      "colonial_profit": false,
+      "position_type": "region_or_associated_city_symbol"
+    },
+    {
+      "id": "status-1500",
+      "year": 1500,
+      "start_year": 1500,
+      "end_year": 1500,
+      "visible_from": 1500,
+      "date_label": "截至1500年",
+      "name": "尚无已证实的英格兰北美永久殖民地",
+      "category": "status",
+      "lat": 49.4,
+      "lng": -60.9,
+      "geo_precision": "regional-symbol-only",
+      "description": "1500年前后，英格兰商人与王室继续关注北美航路，西航许可与王室账簿成为这一时期探索活动的重要线索。",
+      "source_ids": [
+        "heritage-1497",
+        "heritage-1498"
+      ],
+      "certainty": "synthesis",
+      "significance": {
+        "level": 1,
+        "rationale": "阶段性历史认定；无明确地理发生点，不应使用地图点标记。",
+        "review_status": "provisional"
+      },
+      "icon_code": "DOC",
+      "short_description": "1500年前后，英格兰商人与王室继续关注北美航路，西航许可与王室账簿成为这一时期探索活动的重要线索。"
+    },
+    {
+      "id": "1501-1502-INDIGENOUS-AT-COURT",
+      "year": 1501,
+      "start_year": 1501,
+      "end_year": 1502,
+      "visible_from": 1501,
+      "date_label": "1501—1502年",
+      "name": "约1501—1502年三名来自北大西洋彼岸的人被带至英王宫廷",
+      "category": "documentary",
+      "icon_code": "DOC",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "geo_precision": "representative-capital-city",
+      "geography_label": "Kingdom of England, royal court (unknown original homeland)",
+      "description": "伦敦编年史记载，1501—1502年间三名来自大西洋彼岸岛屿的人出现在英王宫廷。这是英格兰早期与北大西洋彼岸居民接触的记录。",
+      "short_description": "伦敦编年史记载，1501—1502年间三名来自大西洋彼岸岛屿的人出现在英王宫廷。这是英格兰早期与北大西洋彼岸居民接触的记录。",
+      "source_ids": [
+        "BRIS-LONDON-CHRONICLES"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "早期跨洋接触与被带至英王宫廷者的相关记录，具体强制性尚无充分证据；不使用'驱逐'图标。"
+      },
+      "economic_fields": [],
+      "colonial_profit": false
+    },
+    {
+      "id": "1501-ANGLO-PORTUGUESE-PATENT",
+      "year": 1501,
+      "start_year": 1501,
+      "end_year": 1501,
+      "visible_from": 1501,
+      "date_label": "1501年3月19日",
+      "name": "1501年英王向英葡联合商团授予西航许可",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "associated-city",
+      "geography_label": "Bristol, Kingdom of England",
+      "description": "1501年3月，亨利七世向布里斯托尔商人与葡萄牙航海者联合组成的船队颁发西航许可。",
+      "short_description": "1501年3月，亨利七世向布里斯托尔商人与葡萄牙航海者联合组成的船队颁发西航许可。",
+      "source_ids": [
+        "DCB-GONSALVES",
+        "WILLIAMSON-MUN"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域制度或权力关系的重要变化；需经史料审稿"
+      },
+      "economic_fields": [],
+      "colonial_profit": false
+    },
+    {
+      "id": "1502-ANGLO-PORTUGUESE-PATENT",
+      "year": 1502,
+      "start_year": 1502,
+      "end_year": 1502,
+      "visible_from": 1502,
+      "date_label": "1502年12月9日",
+      "name": "1502年12月9日英王更新海外探索许可",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "associated-city",
+      "geography_label": "Kingdom of England (patent) / North Atlantic (target)",
+      "description": "1502年12月，亨利七世更新海外探索许可，支持商人与航海者继续寻找贸易航路。",
+      "short_description": "1502年12月，亨利七世更新海外探索许可，支持商人与航海者继续寻找贸易航路。",
+      "source_ids": [
+        "DCB-GONSALVES",
+        "JONES-2010-CONDON",
+        "WILLIAMSON-MUN"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域制度或权力关系的重要变化；需经史料审稿"
+      },
+      "economic_fields": [],
+      "colonial_profit": false
+    },
+    {
+      "id": "1502-GABRIEL-BOUNTY",
+      "year": 1502,
+      "start_year": 1502,
+      "end_year": 1502,
+      "visible_from": 1502,
+      "date_label": "1502年1月7日",
+      "name": "1502年1月7日王室资助购置Gabriel号",
+      "category": "voyage",
+      "icon_code": "EXP",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "associated-city",
+      "geography_label": "Bristol, Kingdom of England",
+      "description": "1502年1月，王室为购置“加百列号”向相关商人拨付赏金，用于继续筹备海外航行。",
+      "short_description": "1502年1月，王室为购置“加百列号”向相关商人拨付赏金，用于继续筹备海外航行。",
+      "source_ids": [
+        "BRIS-GABRIEL-2025",
+        "JONES-2010-CONDON"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [
+        {
+          "amount": 20,
+          "currency": "GBP",
+          "year": 1502,
+          "accounting_category": "royal_ship_acquisition_bounty",
+          "payer": "English Crown",
+          "recipient": "Bristol merchant group",
+          "colonial_profit": false
+        }
+      ],
+      "colonial_profit": false
+    },
+    {
+      "id": "1502-MERCHANT-RETURN-REWARD",
+      "year": 1502,
+      "start_year": 1502,
+      "end_year": 1502,
+      "visible_from": 1502,
+      "date_label": "1502年",
+      "name": "1502年秋对曾赴新发现土地的布里斯托尔商人给予赏金",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "associated-city",
+      "geography_label": "Bristol, Kingdom of England",
+      "description": "1502年秋，数名曾前往新发现土地的布里斯托尔商人收到王室赏金。",
+      "short_description": "1502年秋，数名曾前往新发现土地的布里斯托尔商人收到王室赏金。",
+      "source_ids": [
+        "JONES-2010-CONDON"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [
+        {
+          "amount": 20,
+          "currency": "GBP",
+          "year": 1502,
+          "accounting_category": "voyage_reward",
+          "payer": "English Crown",
+          "recipient": "unidentified Bristol merchants",
+          "colonial_profit": false
+        }
+      ],
+      "colonial_profit": false
+    },
+    {
+      "id": "1502-PERPETUAL-PEACE",
+      "year": 1502,
+      "start_year": 1502,
+      "end_year": 1502,
+      "visible_from": 1502,
+      "date_label": "1502年10月31日",
+      "name": "英格兰与苏格兰缔结永久和平条约",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 51.4996,
+      "lng": -0.1246,
+      "geo_precision": "ratification-place-city",
+      "description": "1502年10月，英格兰与苏格兰签订永久和平条约，双方王室开始筹备联姻。两国继续分别治理各自领地。",
+      "short_description": "1502年10月，英格兰与苏格兰签订永久和平条约，双方王室开始筹备联姻。两国继续分别治理各自领地。",
+      "source_ids": [
+        "NRS-SP6-31",
+        "NRS-TREATY-1502"
+      ],
+      "certainty": "archival-document",
+      "significance": {
+        "level": 2,
+        "rationale": "英苏外交转折，仍保留两国独立地位",
+        "review_status": "checked"
+      },
+      "economic_fields": []
+    },
+    {
+      "id": "1503-CARRICKFERGUS",
+      "year": 1503,
+      "start_year": 1503,
+      "end_year": 1503,
+      "visible_from": 1503,
+      "date_label": "1503年",
+      "name": "1503年基尔代尔军队进入卡里克弗格斯",
+      "description": "编年史记载，基尔代尔伯爵率军进入卡里克弗格斯，并拆毁贝尔法斯特城堡，随后任命当地城堡的管理者。",
+      "short_description": "编年史记载，基尔代尔伯爵率军进入卡里克弗格斯，并拆毁贝尔法斯特城堡，随后任命当地城堡的管理者。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 54.716,
+      "lng": -5.808,
+      "geo_precision": "associated-modern-town-centre",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ],
+      "certainty": "historical-annals",
+      "significance": {
+        "level": 2,
+        "rationale": "地方军政控制权的变化",
+        "review_status": "documented-in-published-annals"
+      },
+      "colonial_profit": false
+    },
+    {
+      "id": "1503-ROYAL-MARRIAGE",
+      "year": 1503,
+      "start_year": 1503,
+      "end_year": 1503,
+      "visible_from": 1503,
+      "date_label": "1503年8月",
+      "name": "詹姆斯四世与玛格丽特·都铎成婚",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 55.9533,
+      "lng": -3.1712,
+      "geo_precision": "documented-city",
+      "description": "1503年8月，苏格兰国王詹姆斯四世与英王亨利七世之女玛格丽特·都铎成婚，英苏王室关系进一步密切。",
+      "short_description": "1503年8月，苏格兰国王詹姆斯四世与英王亨利七世之女玛格丽特·都铎成婚，英苏王室关系进一步密切。",
+      "source_ids": [
+        "NRS-TREATY-1502"
+      ],
+      "certainty": "archival-summary",
+      "significance": {
+        "level": 2,
+        "rationale": "两国王朝关系重要节点",
+        "review_status": "checked"
+      },
+      "economic_fields": []
+    },
+    {
+      "id": "1504-KNOCKDOE",
+      "year": 1504,
+      "start_year": 1504,
+      "end_year": 1504,
+      "visible_from": 1504,
+      "date_label": "1504年8月19日",
+      "name": "1504年诺克多战役：基尔代尔伯爵在爱尔兰西部获胜",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 53.3782,
+      "lng": -8.895,
+      "geo_precision": "documented-area-not-exact-battle-boundary",
+      "geography_label": "Knockdoe, near Galway, Ireland (approximate locality)",
+      "description": "1504年8月，基尔代尔伯爵率领由英格兰与爱尔兰地方武装组成的联军，在诺克多击败克兰里卡德伯克等人的联盟。战后联军进入戈尔韦一带。",
+      "short_description": "1504年8月，基尔代尔伯爵率领由英格兰与爱尔兰地方武装组成的联军，在诺克多击败克兰里卡德伯克等人的联盟。战后联军进入戈尔韦一带。",
+      "source_ids": [
+        "EGAN-2024-EHR",
+        "EGAN-2024-KILDARE",
+        "TCD-ANNALS",
+        "KNOCKDOE-LOCAL-HERITAGE"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 2,
+        "review_status": "provisional",
+        "rationale": "区域制度或权力关系的重要变化；需经史料审稿"
+      },
+      "economic_fields": [],
+      "colonial_profit": false
+    },
+    {
+      "id": "1504-OKELLY-CASTLES",
+      "year": 1504,
+      "start_year": 1504,
+      "end_year": 1504,
+      "visible_from": 1504,
+      "date_label": "1504年",
+      "name": "1504年奥凯利家族三座城堡遭毁",
+      "description": "编年史记载，克兰里卡德伯克的军队拆毁奥凯利家族三座堡垒，随后双方争端引向诺克多战役。",
+      "short_description": "编年史记载，克兰里卡德伯克的军队拆毁奥凯利家族三座堡垒，随后双方争端引向诺克多战役。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 53.2783,
+      "lng": -9.0504,
+      "geo_precision": "regional-symbol-only",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ],
+      "certainty": "historical-annals",
+      "significance": {
+        "level": 1,
+        "rationale": "区域冲突相关背景",
+        "review_status": "documented-in-published-annals"
+      },
+      "colonial_profit": false,
+      "geography_label": "康诺特地区 · 戈尔韦参考点",
+      "position_type": "region_or_associated_city_symbol"
+    },
+    {
+      "id": "1505-CALAIS-STAPLE-ROYAL-PAYMENTS",
+      "year": 1505,
+      "start_year": 1505,
+      "end_year": 1509,
+      "visible_from": 1505,
+      "date_label": "1505—1509年",
+      "name": "加来羊毛贸易商团向英王汇款",
+      "description": "1505—1509年，加来羊毛贸易商团根据相关账目，平均每年向英王支付约4,020英镑；同时承担加来驻军薪饷等支出。",
+      "short_description": "加来羊毛贸易关税与英王财政相连。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 50.9513,
+      "lng": 1.8587,
+      "geo_precision": "documented-city",
+      "source_ids": [
+        "GRUMMITT-CALAIS-FINANCE-2008"
+      ],
+      "certainty": "scholarly-reconstruction",
+      "significance": {
+        "level": 2,
+        "rationale": "加来羊毛贸易财政与英王收入关系",
+        "review_status": "secondary-scholarship"
+      },
+      "colonial_profit": false,
+      "economic_fields": [
+        {
+          "value": 4020,
+          "currency": "GBP_nominal_early16C",
+          "unit": "GBP_per_year",
+          "period": "1505-04/1509-04",
+          "measure": "approximate-average-remittance-to-English-Crown",
+          "source_id": "GRUMMITT-CALAIS-FINANCE-2008",
+          "overlaps_with": "~32000GBP_over_1500_1509",
+          "counting_rule": "not_additive"
+        }
+      ]
+    },
+    {
+      "id": "1505-SEBASTIAN-PENSION",
+      "year": 1505,
+      "start_year": 1505,
+      "end_year": 1505,
+      "visible_from": 1505,
+      "date_label": "1505年4月3日",
+      "name": "1505年4月3日塞巴斯蒂安·卡博特获年金",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "associated-city",
+      "geography_label": "布里斯托尔 · 航海人物与王室年金相关城市",
+      "description": "1505年4月，亨利七世授予塞巴斯蒂安·卡博特每年20英镑的王室年金。",
+      "short_description": "1505年4月，亨利七世授予塞巴斯蒂安·卡博特每年20英镑的王室年金。",
+      "source_ids": [
+        "DCB-SEBASTIAN"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [
+        {
+          "amount": 20,
+          "currency": "GBP_per_year",
+          "year": 1505,
+          "accounting_category": "annuity_authorized",
+          "payer": "English Crown",
+          "recipient": "Sebastian Cabot",
+          "colonial_profit": false
+        }
+      ],
+      "colonial_profit": false,
+      "position_type": "region_or_associated_city_symbol"
+    },
+    {
+      "id": "1507-CARRICKFERGUS-O-NEILL",
+      "year": 1507,
+      "start_year": 1507,
+      "end_year": 1507,
+      "visible_from": 1507,
+      "date_label": "1507年",
+      "name": "1507年奥尼尔军夺取卡里克弗格斯城堡",
+      "description": "尼尔·奥尼尔率军夺取卡里克弗格斯大城堡，俘获当地市长，并救出己方人质。城堡控制权再次易手。",
+      "short_description": "尼尔·奥尼尔率军夺取卡里克弗格斯大城堡，俘获当地市长，并救出己方人质。城堡控制权再次易手。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 54.716,
+      "lng": -5.808,
+      "geo_precision": "associated-modern-town-centre",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S",
+        "UCC-ULSTER-1507"
+      ],
+      "certainty": "historical-annals",
+      "significance": {
+        "level": 2,
+        "rationale": "地方军政控制权的变化",
+        "review_status": "documented-in-published-annals"
+      },
+      "colonial_profit": false
+    },
+    {
+      "id": "1508-ENNISKILLEN",
+      "year": 1508,
+      "start_year": 1508,
+      "end_year": 1508,
+      "visible_from": 1508,
+      "date_label": "1508年",
+      "name": "1508年奥唐奈夺取恩尼斯基林城堡",
+      "description": "奥唐奈家族军队经厄恩湖抵达恩尼斯基林，夺取城堡后交由马圭尔家族的一支管理。",
+      "short_description": "奥唐奈家族军队经厄恩湖抵达恩尼斯基林，夺取城堡后交由马圭尔家族的一支管理。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 54.342,
+      "lng": -7.634,
+      "geo_precision": "associated-modern-town-centre",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ],
+      "certainty": "historical-annals",
+      "significance": {
+        "level": 2,
+        "rationale": "地方军政控制权的变化",
+        "review_status": "documented-in-published-annals"
+      },
+      "colonial_profit": false
+    },
+    {
+      "id": "1509-ACCESSION",
+      "year": 1509,
+      "start_year": 1509,
+      "end_year": 1509,
+      "visible_from": 1509,
+      "date_label": "1509年4月21日",
+      "name": "1509年亨利八世继承英格兰王位",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "geo_precision": "representative-capital-city",
+      "geography_label": "Kingdom of England",
+      "description": "1509年4月，亨利七世去世，亨利八世继承英格兰王位，开启都铎王朝的下一段统治。",
+      "short_description": "1509年4月，亨利七世去世，亨利八世继承英格兰王位，开启都铎王朝的下一段统治。",
+      "source_ids": [
+        "TNA-CALAIS",
+        "BL-CALAIS-CHARTERS"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [],
+      "colonial_profit": false
+    },
+    {
+      "id": "1509-O-NEILL-SUCCESSION",
+      "year": 1509,
+      "start_year": 1509,
+      "end_year": 1509,
+      "visible_from": 1509,
+      "date_label": "1509年",
+      "name": "1509年泰隆奥尼尔家族首领更替",
+      "description": "1509年8月，泰隆首领唐纳尔·奥尼尔去世，阿特·奥尼尔继任，延续当地氏族政治。",
+      "short_description": "1509年8月，泰隆首领唐纳尔·奥尼尔去世，阿特·奥尼尔继任，延续当地氏族政治。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 54.6,
+      "lng": -7.3,
+      "geo_precision": "regional-symbol-only",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S"
+      ],
+      "certainty": "historical-annals",
+      "significance": {
+        "level": 1,
+        "rationale": "区域冲突相关背景",
+        "review_status": "documented-in-published-annals"
+      },
+      "colonial_profit": false,
+      "geography_label": "泰隆地区 · 城镇参考点",
+      "position_type": "region_or_associated_city_symbol"
+    },
+    {
+      "id": "1509-OMAGH",
+      "year": 1509,
+      "start_year": 1509,
+      "end_year": 1509,
+      "visible_from": 1509,
+      "date_label": "1509年",
+      "name": "1509年基尔代尔军队攻占并拆毁奥马城堡",
+      "description": "基尔代尔伯爵率军攻占奥马城堡，俘获守军人员，拆毁城堡后撤离。",
+      "short_description": "基尔代尔伯爵率军攻占奥马城堡，俘获守军人员，拆毁城堡后撤离。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 54.6,
+      "lng": -7.3,
+      "geo_precision": "associated-modern-town-centre",
+      "source_ids": [
+        "UCC-FOUR-MASTERS-1500S",
+        "UCC-ULSTER-1509"
+      ],
+      "certainty": "historical-annals",
+      "significance": {
+        "level": 2,
+        "rationale": "地方军政控制权的变化",
+        "review_status": "documented-in-published-annals"
+      },
+      "colonial_profit": false
+    },
+    {
+      "id": "1509-PORT-CUSTOMS",
+      "year": 1509,
+      "start_year": 1509,
+      "end_year": 1509,
+      "visible_from": 1509,
+      "date_label": "1509年",
+      "name": "1509年布里斯托尔港海关与葡萄酒税账册",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "geo_precision": "documented-city",
+      "geography_label": "Bristol, Kingdom of England",
+      "description": "1509—1510年，布里斯托尔海关记录了港口货物与相关征税，留下这一时期英格兰对外贸易的账簿。",
+      "short_description": "1509—1510年，布里斯托尔海关记录了港口货物与相关征税，留下这一时期英格兰对外贸易的账簿。",
+      "source_ids": [
+        "BRIS-CABOT-PUBLICATIONS",
+        "BRIS-CUSTOMS-DATA"
+      ],
+      "certainty": "documentary_synthesis_checked",
+      "significance": {
+        "level": 1,
+        "review_status": "provisional",
+        "rationale": "背景、个别文书或局部事件；重要性仍待同行核查"
+      },
+      "economic_fields": [],
+      "colonial_profit": false
+    }
+  ],
+  "places": [
+    {
+      "id": "calais-crown",
+      "name": "加来：英王在法国的控制据点",
+      "lat": 50.9513,
+      "lng": 1.8587,
+      "status": "english-crown-controlled-city",
+      "description": "加来城由英王派驻的官员与军队管理，也是羊毛贸易和税收的重要口岸。",
+      "source_ids": [
+        "TNA-FRENCH-LANDS"
+      ],
+      "icon_code": "TER",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1509,
+      "end_year": null
+    },
+    {
+      "id": "dublin-pale",
+      "name": "都柏林：英王在爱尔兰的行政核心之一",
+      "lat": 53.3498,
+      "lng": -6.2603,
+      "status": "crown-administration-city",
+      "description": "都柏林是英王在爱尔兰的主要行政中心之一，周边的贵族与地方领主共同参与政治和军事事务。",
+      "source_ids": [
+        "EGAN-2024-EHR"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1509,
+      "end_year": null
+    },
+    {
+      "id": "channel-jersey",
+      "name": "泽西岛：英王属地",
+      "lat": 49.2144,
+      "lng": -2.1313,
+      "status": "crown-dependency",
+      "description": "泽西岛受英王统辖，沿用当地的法律和行政制度。",
+      "source_ids": [
+        "JERSEY-HISTORY-GOV"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1509,
+      "end_year": null
+    },
+    {
+      "id": "isle-of-man",
+      "name": "马恩岛：特殊领主制度",
+      "lat": 54.235,
+      "lng": -4.56,
+      "status": "autonomous-lordship",
+      "description": "马恩岛由斯坦利家族等当地领主治理，保留独特的岛屿政制。",
+      "source_ids": [
+        "CAMBRIDGE-LORDSHIP-MAN"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1509,
+      "end_year": null
+    },
+    {
+      "id": "orkney-scotland",
+      "name": "奥克尼：苏格兰王权相关群岛",
+      "lat": 59,
+      "lng": -3.1,
+      "status": "scottish-crown-territory",
+      "description": "奥克尼群岛处于苏格兰王权之下，拥有自己的地方治理传统。",
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1509,
+      "end_year": null
+    },
+    {
+      "id": "shetland-scotland",
+      "name": "设得兰：苏格兰王权相关群岛",
+      "lat": 60.15,
+      "lng": -1.15,
+      "status": "scottish-crown-territory",
+      "description": "设得兰群岛处于苏格兰王权关系之内，延续北方群岛的地方制度。",
+      "source_ids": [
+        "SHETLAND-MUSEUM-1472"
+      ],
+      "icon_code": "POL",
+      "geo_precision": "place-marker-only-no-polygon",
+      "certainty": "core-position-known-boundary-not-reconstructed",
+      "state_type": "political_relationship",
+      "start_year": 1500,
+      "observed_through_year": 1509,
+      "end_year": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "bristol-patent-1496",
+      "title": "First Letters Patent granted by Henry VII to John Cabot, 5 March 1496",
+      "publisher": "University of Bristol, source edition; manuscript National Archives",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1496cabotpatent.htm",
+      "kind": "primary-document-edition"
+    },
+    {
+      "id": "pasqualigo-1497",
+      "title": "Pasqualigo letter, August 1497",
+      "publisher": "University of Bristol, documentary edition",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1497pasqualigo.htm",
+      "kind": "primary-document-edition"
+    },
+    {
+      "id": "soncino-1497",
+      "title": "Raimondo de Soncino letter, December 1497",
+      "publisher": "University of Bristol, documentary edition",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1497soncino.htm",
+      "kind": "primary-document-edition"
+    },
+    {
+      "id": "heritage-1497",
+      "title": "John Cabot's Voyage of 1497",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/cabot-1497.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-landfall",
+      "title": "Evidence for a Northern Landfall",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/northern-landfall.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-newfoundland",
+      "title": "Newfoundland Landfall Argument",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/newfoundland-landfall-argument-cabot.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-cape-breton",
+      "title": "Cape Breton Landfall Argument",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/cape-breton-landfall.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "heritage-1498",
+      "title": "John Cabot's Voyage of 1498",
+      "publisher": "Newfoundland and Labrador Heritage, Memorial University",
+      "url": "https://www.heritage.nf.ca/articles/exploration/cabot-1498.php",
+      "kind": "scholarly-synthesis"
+    },
+    {
+      "id": "dcb-cabot",
+      "title": "CABOT, JOHN",
+      "publisher": "Dictionary of Canadian Biography / University of Toronto and Université Laval",
+      "url": "https://www.biographi.ca/en/bio/cabot_jean_1F.html",
+      "kind": "scholarly-biography"
+    },
+    {
+      "id": "BRIS-CABOT-PUBLICATIONS",
+      "title": "Cabot Project publications and annotated transcriptions",
+      "publisher": "University of Bristol",
+      "url": "https://www.bristol.ac.uk/history/research/cabot/publications/",
+      "kind": "university-research-index"
+    },
+    {
+      "id": "JONES-2010-CONDON",
+      "title": "Henry VII and the Bristol expeditions to North America: the Condon documents",
+      "publisher": "Historical Research / Wiley",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1468-2281.2009.00519.x",
+      "kind": "peer-reviewed-primary-text-edition"
+    },
+    {
+      "id": "BRIS-GABRIEL-2025",
+      "title": "Grant of a bounty, 7 January 1502, to Robert Thorne, Hugh Eliot and William Thorne",
+      "publisher": "University of Bristol",
+      "url": "https://research-information.bris.ac.uk/en/publications/grant-of-a-bounty-7-january-1502-to-robert-thorne-hugh-eliot-and-/",
+      "kind": "annotated-primary-document-edition"
+    },
+    {
+      "id": "BRIS-1509-1510-CUSTOMS",
+      "title": "Bristol 1509–1510 customs account transcriptions and supplements",
+      "publisher": "University of Bristol",
+      "url": "https://www.bristol.ac.uk/history/research/cabot/publications/",
+      "kind": "annotated-archival-financial-transcriptions"
+    },
+    {
+      "id": "EGAN-2024-EHR",
+      "title": "The English Lordship of Ireland and the Irish Sea World: Re-assessing the Origins of the Kildare Ascendancy, c.1390–c.1513",
+      "publisher": "English Historical Review / Queen's University Belfast",
+      "url": "https://doi.org/10.1093/ehr/ceae207",
+      "kind": "peer-reviewed-scholarship"
+    },
+    {
+      "id": "BRIS-LONDON-CHRONICLES",
+      "title": "London Chronicles of John Cabot's voyage of 1498",
+      "publisher": "University of Bristol / transcribed via Williamson 1962",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1498chronicles.htm",
+      "kind": "edited-later-chronicles"
+    },
+    {
+      "id": "TNA-FRENCH-LANDS",
+      "title": "French lands of the English kings",
+      "publisher": "The National Archives UK",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "kind": "national-archive-finding-guide"
+    },
+    {
+      "id": "NPS-ROANOKE",
+      "title": "1584 first English voyage to Roanoke, 1585 first colony attempt",
+      "publisher": "US National Park Service",
+      "url": "https://home.nps.gov/fora/learn/historyculture/1584-the-first-english-voyage.htm",
+      "kind": "government-historical-reference"
+    },
+    {
+      "id": "TCD-ANNALS",
+      "title": "Annals of the Four Masters",
+      "publisher": "Royal Irish Academy",
+      "url": "https://www.ria.ie/collections/manuscripts/irish-language-manuscripts/annals-of-the-four-masters/",
+      "kind": "historical-primary-chronicle-held-by-academy"
+    },
+    {
+      "id": "BRIS-WESTON-2018",
+      "title": "William Weston: early voyager to the New World",
+      "publisher": "Historical Research",
+      "url": "https://doi.org/10.1111/1468-2281.12243",
+      "kind": "peer-reviewed-scholarship"
+    },
+    {
+      "id": "CALENDARS-IRELAND",
+      "title": "State Papers Ireland 1509–1782",
+      "publisher": "The National Archives UK",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-ireland-1509-1782",
+      "kind": "national-archive-finding-guide"
+    },
+    {
+      "id": "DCB-GONSALVES",
+      "title": "GONSALES (Gonsalves, Gonçalves), João",
+      "publisher": "Dictionary of Canadian Biography (University of Toronto / Université Laval)",
+      "url": "https://www.biographi.ca/en/bio/gonsales_joao_1E.html",
+      "kind": "scholarly_biography"
+    },
+    {
+      "id": "DCB-SEBASTIAN",
+      "title": "CABOT, SEBASTIAN",
+      "publisher": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio/cabot_sebastian_1E.html",
+      "kind": "scholarly_biography"
+    },
+    {
+      "id": "BRIS-WESTON-2018-NEWS",
+      "title": "New evidence discovered regarding first English voyage to America",
+      "publisher": "University of Bristol",
+      "url": "https://www.bristol.ac.uk/news/2018/october/first-english-voyage.html",
+      "kind": "university_research_brief"
+    },
+    {
+      "id": "TNA-CALAIS",
+      "title": "French lands of the English kings, Calais 1347–1558",
+      "publisher": "The National Archives UK",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "kind": "national_archive_guide"
+    },
+    {
+      "id": "BL-CALAIS-CHARTERS",
+      "title": "Add Ch 74072–74111 charters and rolls of Calais",
+      "publisher": "British Library Archives Catalogue",
+      "url": "https://searcharchives.bl.uk/catalog/036-002165542",
+      "kind": "national_library_archival_finding_aid"
+    },
+    {
+      "id": "JERSEY-HISTORY-GOV",
+      "title": "Jersey's history and constitutional position",
+      "publisher": "Government of Jersey",
+      "url": "https://www.gov.je/Leisure/Jersey/pages/history.aspx",
+      "kind": "official_history"
+    },
+    {
+      "id": "CAMBRIDGE-JERSEY-HENRYVII",
+      "title": "Jersey, Guernsey and English Ecclesiastical Jurisdiction under Henry VII",
+      "publisher": "Journal of Ecclesiastical History",
+      "url": "https://www.cambridge.org/core/journals/journal-of-ecclesiastical-history/article/jersey-guernsey-and-english-ecclesiastical-jurisdiction-under-henry-vii/5710C0575A2F7F2116C2C64CE71AD9AF",
+      "kind": "peer_reviewed_research"
+    },
+    {
+      "id": "TYNWALD-MANX-1417",
+      "title": "1417 A Year of Records",
+      "publisher": "Tynwald (Isle of Man parliament)",
+      "url": "https://www.tynwald.im/history/1417",
+      "kind": "official_legislative_history"
+    },
+    {
+      "id": "CAMBRIDGE-LORDSHIP-MAN",
+      "title": "Lordship and Sovereignty in the Territories of the English Crown: Sub-kingship and Its Implications, 1300–1600",
+      "publisher": "Journal of British Studies",
+      "url": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/lordship-and-sovereignty-in-the-territories-of-the-english-crown-subkingship-and-its-implications-13001600/B84E5F7DFCC599634E20564622F84020",
+      "kind": "peer_reviewed_research"
+    },
+    {
+      "id": "MANX-NATIONAL-HERITAGE",
+      "title": "Castle Rushen Teachers Guide",
+      "publisher": "Manx National Heritage",
+      "url": "https://manxnationalheritage.im/wp-content/uploads/2016/11/Castle-Rushen-Teachers-Guide.pdf",
+      "kind": "heritage_educational_material"
+    },
+    {
+      "id": "BRIS-CUSTOMS-DATA",
+      "title": "Bristol 1509-10 customs transcriptions dataset entry",
+      "publisher": "University of Bristol institutional data repository",
+      "url": "https://data.bristol.ac.uk/data/en_GB/group/f27264c5-4949-42b8-b5c2-cef917983caa?Access=Open&license_id=uk-ncgl",
+      "kind": "institutional_dataset_listing"
+    },
+    {
+      "id": "BRIS-RICART",
+      "title": "Robert Ricart's Chronicle of Bristol, 1480–1508",
+      "publisher": "University of Bristol annotated chronicle edition",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1480ricart.htm",
+      "kind": "historical_local_chronicle_edition"
+    },
+    {
+      "id": "UKPARL-POYNINGS",
+      "title": "Poynings' Law",
+      "publisher": "UK Parliament",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/poynings-law/",
+      "kind": "official_constitutional_history"
+    },
+    {
+      "id": "EGAN-2024-KILDARE",
+      "title": "The English Lordship of Ireland and the Irish Sea World",
+      "publisher": "Simon Egan / Queen's University Belfast; English Historical Review",
+      "url": "https://pure.qub.ac.uk/en/publications/the-english-lordship-of-ireland-and-the-irish-sea-world-re-assess/",
+      "kind": "peer_reviewed_history"
+    },
+    {
+      "id": "WILLIAMSON-MUN",
+      "title": "The Cabot voyages and Bristol discovery under Henry VII (1962 digitized edition)",
+      "publisher": "J. A. Williamson / Hakluyt Society; Memorial University repository",
+      "url": "https://collections.mun.ca/digital/collection/cns/id/38304/",
+      "kind": "historical_documentary_collection"
+    },
+    {
+      "id": "NRS-STATE-PAPERS",
+      "title": "State Papers: Royal letter books and treaties (SP1, SP6)",
+      "publisher": "National Records of Scotland",
+      "url": "https://www.nrscotland.gov.uk/learning-and-events/research-guides/state-papers/?section=the-records",
+      "kind": "archive"
+    },
+    {
+      "id": "NRS-SP6-31",
+      "title": "Henry VII ratification of Treaty of Perpetual Peace",
+      "publisher": "National Records of Scotland",
+      "url": "https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?df=&di=y&dt=&k=&ko=a&r=SP6%2F31&reference=SP6%2F31&ro=s&st=1&tc=y&tl=n&tn=n&tp=n",
+      "kind": "archive"
+    },
+    {
+      "id": "NRS-TREATY-1502",
+      "title": "Flodden Scottish archive education: Scotland's relations with England",
+      "publisher": "National Records of Scotland education",
+      "url": "https://www.scottisharchivesforschools.org/Flodden/scotlandAndEngland.asp",
+      "kind": "archive"
+    },
+    {
+      "id": "SHETLAND-MUSEUM-1472",
+      "title": "550 Years Ago: how Shetland became part of Scotland",
+      "publisher": "Shetland Museum and Archives",
+      "url": "https://www.shetlandmuseumandarchives.org.uk/blog/550-years-ago-how-shetland-became-part-of-scotland",
+      "kind": "archive"
+    },
+    {
+      "id": "SCOTLANDSPLACES-ATLAS",
+      "title": "An Atlas of Scottish History to 1707",
+      "publisher": "ScotlandsPlaces / National Records of Scotland partners",
+      "url": "https://scotlandsplaces.gov.uk/digital-volumes/published-gazetteers-and-atlases/atlas-scottish-history-1707/atlas-scottish-history-1707?display=transcription",
+      "kind": "archive"
+    },
+    {
+      "id": "UK-NATIONAL-ARCHIVES-CALAIS",
+      "title": "French lands of the English kings",
+      "publisher": "The National Archives UK",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+      "kind": "archive"
+    },
+    {
+      "id": "PARL-POYNINGS",
+      "title": "Poynings' law 1494/1495",
+      "publisher": "UK Parliament",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/poynings-law/",
+      "kind": "archive"
+    },
+    {
+      "id": "ISLE-MAN-STUDY-2020",
+      "title": "Lordship and Sovereignty in the Territories of the English Crown",
+      "publisher": "Journal of British Studies",
+      "url": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/lordship-and-sovereignty-in-the-territories-of-the-english-crown-subkingship-and-its-implications-13001600/B84E5F7DFCC599634E20564622F84020",
+      "kind": "archive"
+    },
+    {
+      "id": "NRS-TREATY-1502-ORIGINAL",
+      "title": "Ratification Henry VII of Treaty of Perpetual Peace, SP6/31",
+      "publisher": "National Records of Scotland",
+      "url": "https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?df=&di=y&dt=&k=&ko=a&r=SP6%2F31&reference=SP6%2F31&ro=s&st=1&tc=y&tl=n&tn=n&tp=n",
+      "kind": "archive"
+    },
+    {
+      "id": "NRS-STATEPAPERS",
+      "title": "Scottish State Papers archival record series SP1 SP6 SP8",
+      "publisher": "National Records of Scotland",
+      "url": "https://www.nrscotland.gov.uk/learning-and-events/research-guides/state-papers/?section=the-records",
+      "kind": "archive"
+    },
+    {
+      "id": "NRS-EDUCATION-TREATY",
+      "title": "Scotland's relations with England",
+      "publisher": "National Records of Scotland educational archive programme",
+      "url": "https://www.scottisharchivesforschools.org/Flodden/scotlandAndEngland.asp",
+      "kind": "archive"
+    },
+    {
+      "id": "NRS-JAMESIV-TIMELINE",
+      "title": "The Reign of James IV 1488–1513",
+      "publisher": "National Records of Scotland educational archive programme",
+      "url": "https://www.scottisharchivesforschools.org/flodden/Timeline.asp",
+      "kind": "archive"
+    },
+    {
+      "id": "SHETLAND-1472",
+      "title": "550 Years Ago: how Shetland became part of Scotland",
+      "publisher": "Shetland Museum and Archives",
+      "url": "https://www.shetlandmuseumandarchives.org.uk/blog/550-years-ago-how-shetland-became-part-of-scotland",
+      "kind": "archive"
+    },
+    {
+      "id": "CATHCART-2014-HEBRIDES",
+      "title": "A Spent Force? The Clan Donald in the aftermath of 1493",
+      "publisher": "University of Strathclyde repository / Brill",
+      "url": "https://strathprints.strath.ac.uk/60239/",
+      "kind": "archive"
+    },
+    {
+      "id": "NRS-KING-JAMESIV-ADMIN",
+      "title": "The Government of King James IV",
+      "publisher": "National Records of Scotland educational archive programme",
+      "url": "https://www.scottisharchivesforschools.org/Flodden/reignJamesIvIndex.asp",
+      "kind": "archive"
+    },
+    {
+      "id": "BRISTOL-MERCHANTS-ACT-1500",
+      "title": "Act to Establish a Company of Merchants, Bristol 10 November 1500",
+      "publisher": "University of Bristol; J Latimer 1903 transcription",
+      "url": "https://www.bristol.ac.uk/Depts/History/Maritime/Sources/1500company.htm",
+      "kind": "primary_text_edited"
+    },
+    {
+      "id": "BRISTOL-1503-PIERS",
+      "title": "Alfonso Piers v Thomas Ashurst in Court of Requests c1503",
+      "publisher": "Margaret Condon and Evan Jones, University of Bristol 2025",
+      "url": "https://research-information.bris.ac.uk/en/publications/alfonso-piers-v-thomas-ashurst-in-the-court-of-requests-c1503",
+      "kind": "primary_text_edited"
+    },
+    {
+      "id": "BRISTOL-1505-MICHAEL",
+      "title": "William Clerk v Hugh Eliot as cape-merchant of Michael of Bristol in 1505",
+      "publisher": "Margaret Condon and Evan Jones, University of Bristol 2025",
+      "url": "https://research-information.bris.ac.uk/en/publications/william-clerk-v-hugh-eliot-as-cape-merchant-of-the-michael-of-bri/",
+      "kind": "primary_text_edited"
+    },
+    {
+      "id": "BRISTOL-2009-CUSTOMS-1503",
+      "title": "Bristol’s Trade with Ireland and the Continent 1503–1601",
+      "publisher": "Susan Flavin and Evan Jones, Bristol Record Society 61 (2009)",
+      "url": "https://www.bristol.ac.uk/history/research/cabot/publications/",
+      "kind": "trade_archive_published_edition"
+    },
+    {
+      "id": "BRISTOL-1505-ELIOT-1516-18",
+      "title": "Hugh Eliot v John Vaughan c1516–18 (retrospective about Bristol voyages circa 1496–1505)",
+      "publisher": "Margaret Condon and Evan Jones, University of Bristol 2025",
+      "url": "https://research-information.bris.ac.uk/en/publications/hugh-eliot-v-john-vaughan-merchant-of-bristol-pleadings-in-chance",
+      "kind": "primary_text_edited_later_case"
+    },
+    {
+      "id": "BL-CALAIS-ADD74072",
+      "title": "Treaty of Étaples: 1500 Calais commissioners",
+      "publisher": "British Library Archives and Manuscripts",
+      "url": "https://searcharchives.bl.uk/catalog/040-002165543",
+      "kind": "archival_item_catalogue"
+    },
+    {
+      "id": "BL-CALAIS-ADD74073",
+      "title": "Calais 1501 treaty cash receipts and castle safekeeping",
+      "publisher": "British Library Archives and Manuscripts",
+      "url": "https://searcharchives.bl.uk/catalog/040-002165544",
+      "kind": "archival_item_catalogue"
+    },
+    {
+      "id": "BL-CALAIS-ADD74074",
+      "title": "Henry VIII Calais commissioners 1509–1510",
+      "publisher": "British Library Archives and Manuscripts",
+      "url": "https://searcharchives.bl.uk/?f%5Bparent_reference_ssi%5D%5B%5D=Add+Ch+74072-74111&sort=hierarchy",
+      "kind": "archival_item_catalogue"
+    },
+    {
+      "id": "KNOCKDOE-LOCAL-HERITAGE",
+      "title": "诺克多战场地理研究",
+      "publisher": "Claregalway Historical Society",
+      "url": "https://claregalway.galwaycommunityheritage.org/content/places/townlands/townlands-townlands/knockdoemore",
+      "kind": "historical-source"
+    },
+    {
+      "id": "UCC-FOUR-MASTERS-1500S",
+      "title": "Annals of the Four Masters · 1500s entries",
+      "publisher": "University College Cork CELT",
+      "url": "https://celt.ucc.ie/published/T100005E/text001.html",
+      "kind": "edited-medieval-early-modern-chronicle"
+    },
+    {
+      "id": "UCC-ULSTER-1507",
+      "title": "Annals of Ulster U1507.6",
+      "publisher": "University College Cork CELT",
+      "url": "https://celt.ucc.ie/published/T100001C/text130.html",
+      "kind": "historical-annals"
+    },
+    {
+      "id": "UCC-ULSTER-1509",
+      "title": "Annals of Ulster U1509.8",
+      "publisher": "University College Cork CELT",
+      "url": "https://celt.ucc.ie/published/T100001C.html",
+      "kind": "historical-annals"
+    },
+    {
+      "id": "GRUMMITT-CALAIS-FINANCE-2008",
+      "title": "The Calais Garrison, Chapter 7: Financing and Supplying the Garrison",
+      "publisher": "David Grummitt / Boydell & Brewer / Cambridge Core",
+      "url": "https://www.cambridge.org/core/books/abs/calais-garrison/financing-and-supplying-the-garrison/C5D89F586F7A2176CC2B51192A3D0166",
+      "kind": "scholarly-monograph"
+    }
+  ],
+  "routes": [
+    {
+      "id": "route1497",
+      "year": 1497,
+      "name": "1497年航行方向示意",
+      "certainty": "illustrative",
+      "note": "非卡博特实际GPS轨迹；从布里斯托尔经爱尔兰西岸到北美的点列仅作跨洋方向展示。",
+      "coords": [
+        [
+          51.4545,
+          -2.5879
+        ],
+        [
+          51.1,
+          -5.6
+        ],
+        [
+          52.2,
+          -10.7
+        ],
+        [
+          53.1,
+          -24
+        ],
+        [
+          52.1,
+          -40
+        ],
+        [
+          49.4,
+          -51.5
+        ],
+        [
+          48.8,
+          -57.2
+        ]
+      ],
+      "source_ids": [
+        "heritage-1497",
+        "heritage-landfall"
+      ]
+    },
+    {
+      "id": "route1498",
+      "year": 1498,
+      "name": "1498年可能远航方向（未知具体航线）",
+      "certainty": "highly-uncertain",
+      "note": "仅证明从布里斯托尔出航；虚线箭头表现推测的西航方向，终点无史料支持，不能用于具体航程判断。",
+      "coords": [
+        [
+          51.4545,
+          -2.5879
+        ],
+        [
+          54,
+          -15
+        ],
+        [
+          54.7,
+          -27
+        ]
+      ],
+      "source_ids": [
+        "heritage-1498",
+        "dcb-cabot"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "bonavista",
+      "name": "博纳维斯塔角 · 纽芬兰",
+      "lat": 48.7,
+      "lng": -53.08,
+      "source_ids": [
+        "heritage-newfoundland"
+      ],
+      "note": "与较晚的纽芬兰地方传统相关；并未确认为实际登陆点。"
+    },
+    {
+      "id": "capebreton",
+      "name": "布雷顿角岛 · 新斯科舍",
+      "lat": 46.8,
+      "lng": -60.5,
+      "source_ids": [
+        "heritage-cape-breton"
+      ],
+      "note": "历史研究中的另一种登陆地点假说，并非确认坐标。"
+    },
+    {
+      "id": "northern",
+      "name": "纽芬兰北部／拉布拉多方向",
+      "lat": 51.9,
+      "lng": -55.8,
+      "source_ids": [
+        "heritage-landfall"
+      ],
+      "note": "部分学者支持北方登陆假说；图钉只是地理方向示意。"
+    }
+  ],
+  "polities": [
+    {
+      "id": "england",
+      "name": "英格兰王国",
+      "name_en": "Kingdom of England",
+      "start_year": 1497,
+      "end_year": 1500,
+      "status": "sovereign",
+      "note": "亨利七世在位；1497远航得到英格兰王室授权。威尔士已处于英格兰王权统治之下。",
+      "location": [
+        52.1,
+        -1.6
+      ],
+      "boundary_status": "modern-boundary-proxy-not-historical",
+      "source_ids": [
+        "bristol-patent-1496"
+      ]
+    },
+    {
+      "id": "scotland",
+      "name": "苏格兰王国",
+      "name_en": "Kingdom of Scotland",
+      "start_year": 1497,
+      "end_year": 1500,
+      "status": "sovereign",
+      "note": "詹姆斯四世在位；1497—1500并非英格兰王国的一部分。",
+      "location": [
+        56.5,
+        -4
+      ],
+      "boundary_status": "modern-boundary-proxy-not-historical",
+      "source_ids": []
+    }
+  ],
+  "colonial_polygons": [],
+  "methodology": {
+    "map": "Present-day geographic basemap; not a reconstructed map of the late fifteenth century.",
+    "uncertainty": "Suggested routes are illustrative and are not georeferenced historical tracks. Landfall hypotheses are not confirmed landing points. No colonial possession polygons are asserted in North America.",
+    "profits": "No reliable colony-related profit or forced-labor total is inferred for 1497–1500.",
+    "monarch": "Henry VII, Kingdom of England; Scotland was a separate kingdom under James IV.",
+    "date_logic": "Each record carries start_year/end_year; the 10-year scale is interface ticks, not a historical time bucket.",
+    "prose_publication_rule": "Factual short prose in public cards, primary source links remain expandable"
+  },
+  "visual_system": {
+    "version": "2.0-approved",
+    "standard": "docs/ICON_SYSTEM_V2_APPROVED.md",
+    "importance_independent_of_certainty": true,
+    "levels": {
+      "1": "地方细节或辅助背景",
+      "2": "区域重要进展",
+      "3": "世界性／帝国结构重大转折"
+    },
+    "default_visible_levels": [
+      3,
+      2
+    ],
+    "minor_explicit_opt_in": true,
+    "undocumented_significance_default": 1,
+    "sprite": "assets/atlas-icons.svg",
+    "catalog": "data/icon-categories.json",
+    "symbols": 16
+  },
+  "no_territorial_polygons_reason": "Historic effective-control limits not reconstructed to defensible geometry",
+  "provenance": {
+    "first": "cabot-1497-1500-pilot-v1",
+    "second": "1500-1509-collector1-public-v1"
+  }
+}
