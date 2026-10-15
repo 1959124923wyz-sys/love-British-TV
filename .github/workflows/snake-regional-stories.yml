@@ -1,0 +1,46 @@
+name: SNAKE regional occupation and violence story QA
+
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'css/dark-atlas-v2.css'
+      - 'data/early-war-colonial-impact-1544-1575.geojson'
+      - 'scripts/test_historical_region_guide.js'
+      - 'scripts/browser_regional_stories.py'
+      - '.github/workflows/snake-regional-stories.yml'
+  push:
+    branches:
+      - audit/snakeb-regional-stories-1544-1599-20261015
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  geography-and-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JS and historical impact region data
+        run: |
+          node --check app.js
+          node scripts/test_historical_region_guide.js
+          node scripts/test_tenth_land_and_drake_areas.js
+          node scripts/test_munster_invasion_impact.js
+          node scripts/test_two_public_layers.js
+      - name: Install browser test
+        run: python3 -m pip install selenium
+      - name: Real Chrome regional-area discoverability
+        run: |
+          python3 -m http.server 8765 > /tmp/region-map-http.log 2>&1 &
+          python3 scripts/browser_regional_stories.py
+      - name: Save dated region screenshots for human review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regional-area-dossiers-and-map-screenshots
+          path: regional-browser-evidence/
+          retention-days: 30
