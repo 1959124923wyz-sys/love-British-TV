@@ -306,11 +306,23 @@ function controllerAtYear(properties,selectedYear){
  return intervals.find(period=>Number.isInteger(period.start_year)&&Number.isInteger(period.end_year)
   &&period.start_year<=selectedYear&&selectedYear<=period.end_year)||null;
 }
+// Transition records contain later history for scholarly provenance, but the
+// public year-end map must not reveal a future conquest in early-year tooltips.
+function historicAreaDescription(properties,selectedYear){
+ const periods=properties?.controller_periods||[];
+ const controller=controllerAtYear(properties,selectedYear);
+ if(!controller||periods.length<2)
+  return properties?.summary_zh||properties?.history_description||properties?.description||'该地区的历史状态按所选年份显示。';
+ const siteEnvelope=properties?.geometry_role==='attested_settlement_envelope_not_surveyed_border';
+ return '所选年份由'+controller.controller_zh+'治理。'+(siteEnvelope?
+  '外缘依据史料地名概略描绘，并非当年的实测行政或军事疆界。':
+  '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
+}
 function openTerritoryDossier(feature,kind='historic'){
  const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
  const label=warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
- const description=p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。';
+ const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
  const parties=p.controller_zh||(contested?(p.contenders_zh||[]).join('、'):'');
@@ -628,7 +640,7 @@ function renderTerritories(){
    layer.options.className=klass;
    const controller=controllerAtYear(p,year);
    const controllerLine=controller?'当年治理主体：'+controller.controller_zh+'。':'';
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(controllerLine+' '+(p.history_description||''))+'</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(controllerLine+' '+historicAreaDescription(p,year))+'</div>',
       {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'historic')});
   }
@@ -684,7 +696,7 @@ function renderControlAreas(){
   const core=L.circleMarker(center,{pane:'controlAreaPane',radius,
    color:glowColor,weight:2,opacity:1,fill:true,fillColor:mainColor,fillOpacity:.85,
    bubblingMouseEvents:false})
-   .bindTooltip('<strong>'+escapeHTML(controller?p.draw_label+' · '+controller.controller_zh+'治理':p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.description)+'</div>',
+   .bindTooltip('<strong>'+escapeHTML(controller?p.draw_label+' · '+controller.controller_zh+'治理':p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(historicAreaDescription(p,year))+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',()=>{
     const record=findPlaceAcrossChapters(p.source_place_id);
