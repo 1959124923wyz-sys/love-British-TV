@@ -1719,6 +1719,18 @@ async function boot(){
   // Constant-time citation lookup across all published years.
   for(const dataset of [atlasFirstMerged,atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])
    for(const source of dataset.sources||[])sourcesById.set(source.id,source);
+  // Independent historical GIS reference IDs (e.g. Irish Pale research) are
+  // not always chapter event IDs. Resolve reviewed publication URLs without
+  // pretending these archival entries were published event sources.
+  const spatialCitationResponse=await fetch('data/spatial-citation-registry.json',{cache:'no-store'});
+  if(!spatialCitationResponse.ok)throw new Error('历史地理独立文献索引未能读取');
+  const spatialCitations=await spatialCitationResponse.json();
+  if(!Array.isArray(spatialCitations.sources))throw new Error('历史地理独立文献索引格式错误');
+  for(const source of spatialCitations.sources){
+   if(typeof source.id!=='string'||!/^https:\/\//.test(source.url)||!source.title||!source.publisher)
+    throw new Error('历史地理独立文献索引来源不完整');
+   if(!sourcesById.has(source.id))sourcesById.set(source.id,source);
+  }
   try{
    const iconResponse=await fetch('data/icon-categories.json',{cache:'no-store'});
    if(iconResponse.ok)iconCatalog=await iconResponse.json();
