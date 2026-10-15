@@ -2077,7 +2077,7 @@ $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistorica
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderAtlanticContactSites();renderEarlyRegionalImpactAreas()}});
+map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
