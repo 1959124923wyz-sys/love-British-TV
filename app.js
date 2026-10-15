@@ -577,7 +577,10 @@ function renderPoints(){
   }
   const important=g.items.some(x=>levelOf(x.item)===3);
   const newCount=g.items.filter(x=>x.type==='event'&&isNewEventThisYear(x.item)).length;
-  const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+(newCount?' atlas-cluster-new-this-year':'')+(g.items.some(x=>x.item.id===focusedEventId)?' atlas-target-aggregate':'')+'" aria-label="'+g.items.length+'项历史记录'+(newCount?'，其中本年新增'+newCount+'项':'')+'"><strong>'+g.items.length+'</strong>'+(newCount?'<span class="atlas-cluster-new-count" aria-hidden="true">+'+newCount+'新</span>':'')+'</div>',iconSize:[36,36],iconAnchor:[18,18]});
+  const containsUncertain=g.items.some(x=>isUncertain(x.item));
+  // The aggregation of a new event with a schematic place must retain its
+  // dotted uncertainty cue. Mixed hubs are not surveyed historical sites.
+  const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+(containsUncertain?' atlas-cluster-uncertain':'')+(newCount?' atlas-cluster-new-this-year':'')+(g.items.some(x=>x.item.id===focusedEventId)?' atlas-target-aggregate':'')+'" aria-label="'+g.items.length+'项历史记录'+(newCount?'，其中本年新增'+newCount+'项':'')+(containsUncertain?'，包含大致位置参考':'')+'"><strong>'+g.items.length+'</strong>'+(newCount?'<span class="atlas-cluster-new-count" aria-hidden="true">+'+newCount+'新</span>':'')+'</div>',iconSize:[36,36],iconAnchor:[18,18]});
   L.marker(g.latlng,{icon:ico,zIndexOffset:950})
    .on('mouseover',()=>{if(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|'))expandCluster(g)})
    .on('mouseout',scheduleClusterClose)
