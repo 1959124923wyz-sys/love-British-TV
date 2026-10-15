@@ -113,7 +113,7 @@ for(const g of geo.features){
  assert.ok(old&&JSON.stringify(old.geometry)===JSON.stringify(g.geometry),g.id+' invented historic border');
  assert.equal(g.properties.observed_through_year,1579);
 }
-const yearEvents=[2,4,8,11,13,16,21,28,33,41],yearRoutes=[0,0,1,2,4,5,12,14,14,18];
+const yearEvents=[2,4,8,11,13,16,21,28,34,42],yearRoutes=[0,0,1,2,4,5,12,14,14,18];
 for(let y=1570;y<=1579;y++){
  assert.equal(now.events.filter(x=>x.year<=y).length,yearEvents[y-1570],'events at '+y);
  assert.equal(now.routes.filter(x=>x.year<=y).length,yearRoutes[y-1570],'route count '+y);
@@ -131,4 +131,4 @@ assert.ok(app.includes('next>=1570?atlasNinth:next>=1560?atlasEighth'));
 assert.ok(app.includes('function renderNinthControlSites()'));
 assert.ok(app.includes('const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords'));
 assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
-console.log('PASS ch9: 41 events, 60 sources, 43 places, 18 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');
+console.log('PASS ch9: 42 events, 61 sources, 43 places, 18 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');
