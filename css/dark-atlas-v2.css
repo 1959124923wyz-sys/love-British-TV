@@ -725,3 +725,33 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .sidebar-settings-wrap .map-mode-help-body .basemap-option input:focus-visible{
  outline:2px solid #f1c69b;outline-offset:3px;
 }
+
+/* Historical regional narrative entry points, not another interactive layer switch.
+   The side list remains usable when an SVG area sits under a numeric event hub. */
+.historical-region-guide{margin:12px 0 13px;border:1px solid #466074;border-radius:9px;
+ background:linear-gradient(145deg,#172f43,#112336);color:#e9e6df}
+.historical-region-guide[hidden]{display:none!important}
+.historical-region-guide summary{display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+ padding:10px 10px;list-style:none;font-weight:750;font-size:12px;cursor:pointer;color:#edc7ad}
+.historical-region-guide summary::-webkit-details-marker{display:none}
+.historical-region-guide summary:before{content:'▸';font-size:12px;transform:rotate(90deg);color:#d9a878}
+.historical-region-guide details:not([open]) summary:before{transform:none}
+.historical-region-guide summary b{display:inline-grid;place-items:center;min-width:19px;height:19px;
+ background:#7f4c4f;border-radius:10px;font:700 11px system-ui;color:#fff4e5}
+.historical-region-guide summary small{font-size:10px;font-weight:400;color:#c2b6b0}
+.historical-region-list{display:flex;flex-direction:column;gap:5px;max-height:170px;overflow:auto;
+ padding:2px 8px 9px;overscroll-behavior:contain}
+.historical-region-entry{width:100%;display:flex;flex-direction:column;text-align:left;
+ background:#20384a;color:#f4e9db;border:1px solid #3b566a;border-radius:7px;
+ padding:8px 9px;cursor:pointer;gap:4px;font:inherit}
+.historical-region-entry strong{font-size:11px;line-height:1.45}
+.historical-region-entry span{font-size:10px;line-height:1.5;color:#b9cbd5;display:-webkit-box;
+ -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.historical-region-entry:hover,.historical-region-entry:focus-visible{background:#2c4760;
+ outline:1px solid #d3a87b;outline-offset:1px}
+#map .atlas-early-regional-impact{cursor:pointer;stroke-linejoin:round}
+@media(max-width:680px){
+ .historical-region-guide{margin:8px 0 10px}
+ .historical-region-list{max-height:180px}
+ .historical-region-entry{min-height:46px}
+}
