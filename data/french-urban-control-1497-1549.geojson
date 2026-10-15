@@ -48,7 +48,16 @@
         "role_for_continuity": "English_royal_city",
         "evidence_continuity_source": "research/continuity/CONTROL_TIMELINE_1497_1529.json",
         "actual_area_sqkm": null,
-        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
+        "controller_periods": [
+          {
+            "start_year": 1497,
+            "end_year": 1549,
+            "controller_group": "english_crown",
+            "controller_zh": "英格兰王室",
+            "relation_type": "direct_crown_control"
+          }
+        ]
       }
     },
     {
@@ -134,7 +143,16 @@
         "is_new_territory": false,
         "original_provenance": "editorial/intake-1520-1529-20261012:editorial/1520-1529/ATLAS_REVIEW_CANDIDATE.json",
         "editorial_status": "review_ready_not_live",
-        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed"
+        "continuity_review": "1540–1549 same prior reference outline/Point; historical geometry not re-surveyed",
+        "controller_periods": [
+          {
+            "start_year": 1520,
+            "end_year": 1549,
+            "controller_group": "english_crown",
+            "controller_zh": "英格兰王室",
+            "relation_type": "direct_crown_control"
+          }
+        ]
       }
     }
   ],
@@ -148,6 +166,7 @@
     "review_note": "PR25 old controls retained; no new historic area inferred; Scottish island governance distinct from English Crown",
     "editorial_continuity_1549": "Unmodified inherited geometry; period-end continuation of political relationship only",
     "precision_not_surveyed": true,
-    "production_provenance": "data/french-urban-control-1497-1539.geojson"
+    "production_provenance": "data/french-urban-control-1497-1539.geojson",
+    "controller_periods_are_authoritative": true
   }
 }
