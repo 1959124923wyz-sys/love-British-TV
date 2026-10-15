@@ -118,7 +118,7 @@ for(let y=1540;y<=1549;y++){
 assert.ok(app.includes("fetch('data/atlas-1540-1549.json'"));
 assert.ok(app.includes("fetch('data/military-control-points-1540-1549.geojson'"));
 assert.ok(app.includes("function renderWartimeControls()")&&app.includes('p.year_end_start')&&app.includes('p.year_end_stop'));
-assert.ok(app.includes('atlasSixth?.sources'),'New chapter dossier must resolve academic source links');
+assert.ok(app.includes('sourcesById.get(id)'),'New chapter dossier must resolve academic source links');
 assert.ok(app.includes("next>=1540?atlasSixth"),'Map must load the correct sixth Atlas slice');
 assert.ok(!app.includes("map.flyTo("),'Historical map focus must not auto-zoom');
 assert.ok(html.includes('max="1589"')&&html.includes('app.js?v=timeline-v1780-ch10-pr59'),'Seventh chapter extends global timeline without changing chapter six');
