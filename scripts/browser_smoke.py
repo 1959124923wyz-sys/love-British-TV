@@ -196,7 +196,29 @@ try:
     driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1500\"]').click()")
     wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent==='1500'"))
     verify("decade-local year slider must cover 1500–1509, not all 500 years",
-           "document.getElementById('yearRange').min==='1500'&&document.getElementById('yearRange').max==='1509'", driver)
+           "document.getElementById('yearRange').min==='1497'&&document.getElementById('yearRange').max==='1509'", driver)
+    # Consolidated 1497–1509 first chapter: one event archive and one chapter total.
+    set_year(1497, 4)
+    verify("1497 merged first chapter title or slider failed",
+           """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
+              document.querySelector('#yearRange').min==='1497' &&
+              document.querySelector('#yearRange').max==='1509'""", driver)
+    set_year(1499, 6)
+    set_year(1500, 10)
+    verify("1500 erroneously resets chapter or forgets 1497 history",
+           """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
+              document.querySelector('#eventList [data-eid="landfall-1497"]') &&
+              document.querySelector('#eventList [data-eid="1500-WESTON-ROYAL-REWARD"]')""", driver)
+    driver.save_screenshot(str(OUT / "merged-chapter1-1500.png"))
+    toggle_layer("showFullChapterArchive", True)
+    verify("First chapter full archive must have 28 combined items",
+           "document.querySelector('#eventCount').textContent==='28项'",driver)
+    set_year(1509, 28)
+    set_year(1510, 1)
+    verify("1510 must be the second chapter and clear previous archive preview",
+           """document.querySelector('#chapterLabel').textContent==='第二章 · 1510—1519' &&
+              !document.querySelector('#showFullChapterArchive').checked""",driver)
+    set_year(1500, 10)
     # Arrow advances an entire half-century, not a single decade.
     driver.execute_script("document.getElementById('browseDecadeNext').click()")
     verify("first half-century arrow did not show 1550–1599",
