@@ -50,11 +50,11 @@ try:
         assert "该地区的历史状态按所选年份显示" not in dossier_text
         browser.save_screenshot(str(OUT/f"region-{browser.find_element(By.ID,'bigYear').text}.png"))
         print("PASS region", label, "clickable sourced story", flush=True)
-    for year,needle in [(1544,"利斯—爱丁堡"),(1556,"莱伊什—奥法利"),(1573,"克兰德博伊"),(1575,"拉斯林岛"),(1580,"利默里克—凯里"),(1582,"芒斯特"),(1586,"圣多明各"),(1598,"黄渡口")]:
+    for year,needle in [(1544,"利斯—爱丁堡"),(1556,"莱伊什—奥法利"),(1572,"阿兹半岛"),(1572,"诺姆布雷德迪奥斯"),(1573,"克兰德博伊"),(1575,"拉斯林岛"),(1580,"利默里克—凯里"),(1582,"芒斯特"),(1586,"圣多明各"),(1598,"黄渡口")]:
         jump(year)
         current=titles()
         assert any(needle in n for n in current), f"{year}: missing {needle}; {current}"
-        if year in [1544,1556,1573,1575,1580,1582]:
+        if year in [1544,1556,1572,1573,1575,1580,1582]:
             press(needle)
         if year in [1544,1556,1575,1580,1598]:
             browser.save_screenshot(str(OUT/f"area-list-{year}.png"))
