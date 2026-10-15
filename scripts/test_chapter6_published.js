@@ -112,7 +112,7 @@ assert.equal(placeMap.get(frenchId).status,'French_sovereign_counter_fort_not_En
 assert.ok(garrisons.features.find(f=>f.properties.stable_id===frenchId).properties.not_an_English_control_feature);
 for(let y=1540;y<=1549;y++){
  let expected=sixth.events.filter(e=>e.year<=y);
- assert.deepEqual(expected.map(x=>x.id).length,[1,2,4,6,11,17,24,34,49,54][y-1540],y+' event count mismatch');
+ assert.deepEqual(expected.map(x=>x.id).length,[1,2,4,6,12,21,28,38,53,61][y-1540],y+' event count mismatch');
  assert.ok(expected.every(e=>e.year<=y));
 }
 assert.ok(app.includes("fetch('data/atlas-1540-1549.json'"));
@@ -122,4 +122,4 @@ assert.ok(app.includes('sourcesById.get(id)'),'New chapter dossier must resolve 
 assert.ok(app.includes("next>=1540?atlasSixth"),'Map must load the correct sixth Atlas slice');
 assert.ok(!app.includes("map.flyTo("),'Historical map focus must not auto-zoom');
 assert.ok(html.includes('max="1599"')&&html.includes('app.js?v=timeline-v1800-merged-ch1ch2'),'Seventh chapter extends global timeline without changing chapter six');
-console.log('PASS sixth chapter: 54 dated sourced events, 26 recorded places, 7 existing geographic outlines, 18 independent garrison/counterfort point features and exact annual control transitions');
+console.log('PASS sixth chapter: 61 dated sourced events, 26 recorded places, 7 existing geographic outlines, 18 independent garrison/counterfort point features and exact annual control transitions');
