@@ -978,7 +978,9 @@ function renderNineYearsWarImpact(){
   const p=f.properties,stage=p.year_stages?.find(q=>year>=q.start_year&&year<=q.end_year);
   const current=stage?{...f,properties:{...p,name:stage.title,
    summary_zh:stage.summary_zh,source_ids:stage.source_ids,
-   related_event_ids:stage.related_event_ids}}:f;
+   related_event_ids:stage.related_event_ids,
+   start_year:stage.start_year,
+   end_year:stage.start_year===stage.end_year?null:stage.end_year}}:f;
   const isRoute=f.geometry.type==='LineString',isResistance=p.zone_type==='gaelic_resistance_plantation_collapse_schematic',
    isBattle=p.zone_type==='gaelic_resistance_to_crown_campaign_schematic';
   const style=isRoute?
