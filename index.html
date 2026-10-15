@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-regions-1544-1599-mobile-focus-20261015">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-regions-1544-1599-mobile-focus-20261015-newyear-focus-v1">
 
 </head>
 <body>
@@ -37,6 +37,7 @@
     </details>
    </section>
    <div class="side-section-head"><span>已发生事件</span><span id="eventCount">—</span></div>
+   <div id="yearArrivalSummary" class="year-arrival-summary" role="status" aria-live="polite">当年事件加载中…</div>
    <label class="chapter-archive-toggle"><input type="checkbox" id="showFullChapterArchive">查阅本章完整档案</label>
    <div id="eventList" class="event-list"><div class="loading">正在读取历史资料……</div></div>
    <div class="sidebar-settings-wrap">
@@ -83,7 +84,7 @@
   </div>
 
   <div class="map-top">
-   <div class="map-year-card"><strong id="bigYear">1497</strong><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div>
+   <div class="map-year-card"><strong id="bigYear">1497</strong><div class="map-year-copy"><span id="periodTitle">亨利七世时期 · 英格兰王国</span><small id="yearArrivalMapCount" aria-live="polite">当年事件加载中…</small></div></div>
 
   </div>
   <div class="time-panel" aria-label="世纪、十年和逐年历史时间轴">
@@ -125,6 +126,6 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <script src="js/territory-geometry.js?v=shared-geo-v1"></script>
-<script src="app.js?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-calais-controller-20261015-shared-geo-v1-munster-invasion-study-v1-land-drake-study-v1-nine-years-war-1594-1599-v1-caribbean-maghreb-1551-1598-v1-visible-raid-areas-v2-trinidad-two-site-1595-spatial-narrative-1595-v1-ch11-source-anchor-20261015-regional-history-20261015-mobile-focus-pale-biblio-20261015"></script>
+<script src="app.js?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-calais-controller-20261015-shared-geo-v1-munster-invasion-study-v1-land-drake-study-v1-nine-years-war-1594-1599-v1-caribbean-maghreb-1551-1598-v1-visible-raid-areas-v2-trinidad-two-site-1595-spatial-narrative-1595-v1-ch11-source-anchor-20261015-regional-history-20261015-mobile-focus-pale-biblio-20261015-newyear-focus-v1"></script>
 </body>
 </html>
