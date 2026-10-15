@@ -103,6 +103,9 @@ map.getPane('garrisonHitPane').style.zIndex='620';
 const garrisonHitRenderer=L.svg({pane:'garrisonHitPane'});
 // The optional schematic area layer is below true site symbols; high zoom uses points only.
 map.createPane('warVicinityPane');map.getPane('warVicinityPane').style.zIndex='463';
+// Munster invasion impact study polygons remain behind historic city/event markers.
+map.createPane('invasionImpactPane');map.getPane('invasionImpactPane').style.zIndex='460';
+const invasionImpactRenderer=L.svg({pane:'invasionImpactPane'});
 map.getPane('warVicinityPane').style.pointerEvents='auto';
 const warVicinityRenderer=L.svg({pane:'warVicinityPane'});
 map.createPane('warReachPane');
@@ -120,7 +123,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map)};
+const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -187,7 +190,7 @@ function syncMapLayers(){
  if(atlas)refreshHistoricalLayers();
 }
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
-let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
+let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
  .map(a=>a?.places?.find(p=>p.id===id)).find(Boolean);
@@ -319,16 +322,16 @@ function historicAreaDescription(properties,selectedYear){
   '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
 }
 function openTerritoryDossier(feature,kind='historic'){
- const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach';
+ const p=feature.properties||{},occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
- const label=warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const label=invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
  const parties=p.controller_zh||(contested?(p.contenders_zh||[]).join('、'):'');
  const relatedPlaces=(p.related_place_ids||[]).map(id=>findPlaceAcrossChapters(id)).filter(Boolean);
  const relatedEvents=(p.related_event_ids||[]).map(id=>
-  [atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly].map(x=>x?.events?.find(e=>e.id===id)).find(Boolean))
+  [atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly].map(x=>x?.events?.find(e=>e.id===id)).find(Boolean))
   .filter(e=>e&&occurredByYear(e,year)); // Never expose later wartime events in an earlier year's territorial dossier.
  selected='';selectedItemYear=null;
  const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
@@ -882,6 +885,39 @@ function renderEleventhInfluenceAreas(){
   }
  }).addTo(groups.eleventhAreas);
 }
+// Distinct non-sovereign spatial history: invasion impact is a sourced regional
+// reading aid and never included in actual occupation or colonial area totals.
+// Only one schematic appears per year (1580 sweep; 1581-83 war consequences).
+function renderTenthInvasionImpactAreas(){
+ groups.invasionImpact.clearLayers();
+ if(!tenthInvasionImpactAreas||year<1580||year>1583||
+    !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
+ const features=tenthInvasionImpactAreas.features.filter(f=>{
+  const p=f.properties||{};
+  return f.geometry?.type==='Polygon'&&p.zone_type==='english_invasion_impact_schematic'&&
+   p.map_layer==='territory'&&p.fill_authorized===false&&
+   p.historical_boundary_confirmed===false&&p.territorial_claim===false&&
+   p.area_sqkm===null&&year>=p.start_year&&year<=p.end_year;
+ });
+ if(!features.length)return;
+ L.geoJSON({type:'FeatureCollection',features},{
+  renderer:invasionImpactRenderer,pane:'invasionImpactPane',
+  interactive:true,bubblingMouseEvents:false,
+  style:()=>({color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
+   fill:true,fillColor:'#b34e5c',fillOpacity:.14,
+   className:'atlas-tenth-invasion-impact'}),
+  onEachFeature:(f,layer)=>{
+   const p=f.properties;
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+    escapeHTML(p.label_type||'英军入侵影响区')+' · 点击查看史料</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
+   layer.on('click',e=>{
+    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+    openTerritoryDossier(f,'invasion-impact');
+   });
+  }
+ }).addTo(groups.invasionImpact);
+}
 function renderTenthControlSites(){
  if(!tenthControlSites||year<1580||year>1589||!$('toggleControlAreas').checked||!$('toggleTerritorialFootprints').checked)return;
  for(const feature of tenthControlSites.features||[]){
@@ -1361,7 +1397,7 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineContext').textContent=displayChapter?$('chapterLabel').textContent+'年事件':'';
  $('timelineNotice').textContent='事件逐年揭示，政治状态跨章节延续。';
- renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();
+ renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderMilestones();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -1568,6 +1604,17 @@ async function boot(){
   politicalRelationAreas.features.push(...p10.features);
   frenchCityAreas.features.push(...u10.features);
   tenthControlSites=s10;
+  const impactResponse=await fetch('data/tenth-invasion-impact-areas-1580-1583.geojson',{cache:'no-store'});
+  if(!impactResponse.ok)throw new Error('1580—1583芒斯特入侵影响区地图文件未加载');
+  tenthInvasionImpactAreas=await impactResponse.json();
+  const impactFeatures=tenthInvasionImpactAreas?.features;
+  if(impactFeatures?.length!==2||impactFeatures.some(f=>
+    f.geometry?.type!=='Polygon'||f.properties?.fill_authorized!==false||
+    f.properties?.historical_boundary_confirmed!==false||f.properties?.territorial_claim!==false||
+    f.properties?.area_sqkm!==null||
+    !f.properties?.source_ids?.every(id=>sourcesById.has(id))))
+   throw new Error('芒斯特影响区资料、几何或史料引用校验失败');
+
   const [geo11,relation11,urban11,core11,area11]=await Promise.all([
    fetch('data/territorial-footprints-1590-1599.geojson',{cache:'no-store'}),
    fetch('data/political-relations-1590-1599.geojson',{cache:'no-store'}),
@@ -1627,7 +1674,7 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
