@@ -28,12 +28,12 @@ try:
         """,y)
         wait.until(lambda d:d.execute_script("return document.getElementById('bigYear').textContent===arguments[0]",str(y)))
     def titles():
-        return [x.text for x in browser.find_elements(By.CSS_SELECTOR, "#historicalRegionList .historical-region-entry strong")]
+        return browser.execute_script("return [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')].map(n=>n.textContent)")
     def press(label):
         buttons=browser.find_elements(By.CSS_SELECTOR,"#historicalRegionList .historical-region-entry")
-        btn=next((x for x in buttons if label in x.find_element(By.CSS_SELECTOR,"strong").text),None)
+        btn=next((x for x in buttons if label in x.find_element(By.CSS_SELECTOR,"strong").get_attribute('textContent')),None)
         assert btn is not None, f"{label} missing. Seen: {titles()}"
-        browser.execute_script("arguments[0].scrollIntoView({block:'nearest'});",btn)
+        browser.execute_script("document.getElementById('historicalRegionGuideDetails').open=true;arguments[0].scrollIntoView({block:'nearest'});",btn)
         btn.click()
         wait.until(lambda d: d.execute_script("""
           return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])
