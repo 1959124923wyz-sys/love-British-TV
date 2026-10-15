@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Public map region discovery: verify sources & text are reachable by real clicks."""
 import json
+import time
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -37,12 +38,15 @@ try:
         if browser.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
             browser.find_element(By.ID,"mobileEventsToggle").click()
             wait.until(lambda d: d.execute_script("""
-                return !document.getElementById('workspace').classList.contains('sidebar-collapsed')
+                const w=document.getElementById('workspace'),r=document.getElementById('sidebar').getBoundingClientRect();
+                return !w.classList.contains('sidebar-collapsed') && r.width>=245;
             """))
+            # Wait until the 220ms column animation finishes before a real pointer click.
+            time.sleep(0.3)
         buttons=browser.find_elements(By.CSS_SELECTOR,"#historicalRegionList .historical-region-entry")
         btn=next((x for x in buttons if label in x.find_element(By.CSS_SELECTOR,"strong").get_attribute('textContent')),None)
         assert btn is not None, f"{label} missing. Seen: {titles()}"
-        browser.execute_script("document.getElementById('historicalRegionGuideDetails').open=true;arguments[0].scrollIntoView({block:'nearest'});",btn)
+        browser.execute_script("document.getElementById('historicalRegionGuideDetails').open=true;arguments[0].scrollIntoView({block:'center',inline:'nearest'});",btn)
         btn.click()
         wait.until(lambda d: d.execute_script("""
           return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])
