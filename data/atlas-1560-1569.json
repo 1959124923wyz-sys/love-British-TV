@@ -871,6 +871,105 @@
       "year_end_English_whole_Munster_control": false,
       "map_area_approved": false,
       "map_priority": true
+    },
+    {
+      "id": "GAP1566-CARRICKFERGUS",
+      "year": 1566,
+      "start_year": 1566,
+      "end_year": 1566,
+      "visible_from": 1566,
+      "date_label": "1566年",
+      "name": "卡里克弗格斯：英王军与沙恩·奥尼尔部交战",
+      "category": "military_attack",
+      "icon_code": "WAR",
+      "lat": 54.713,
+      "lng": -5.805,
+      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geography_label": "现代具名地点位置，仅供历史定位",
+      "description": "吉尔伯特率英王军登陆卡里克弗格斯，与沙恩·奥尼尔部发生战斗，后乘船前往德里会合锡德尼军队。不能据单次交战绘制整个阿尔斯特的英国统治区。",
+      "short_description": "吉尔伯特率英王军登陆卡里克弗格斯，与沙恩·奥尼尔部发生战斗，后乘船前往德里会合锡德尼军队。不能据单次交战绘制整个阿尔斯特的英国统治区。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER"
+      ],
+      "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
+      "significance": {
+        "level": 2,
+        "rationale": "有来源的军事行动、镇压、掠夺或抵抗；补全既有地图地理叙事",
+        "review_status": "source_checked_provisional_geocoding"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1566-DERRY",
+      "year": 1566,
+      "start_year": 1566,
+      "end_year": 1566,
+      "visible_from": 1566,
+      "date_label": "1566年",
+      "name": "英王军于德里会合并继续阿尔斯特行动",
+      "category": "military_campaign",
+      "icon_code": "WAR",
+      "lat": 54.996,
+      "lng": -7.322,
+      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geography_label": "现代具名地点位置，仅供历史定位",
+      "description": "1566年10月12日前后，吉尔伯特由卡里克弗格斯赴德里与锡德尼军队会合；这里是行动节点，不代表德里及全阿尔斯特长期英控。",
+      "short_description": "1566年10月12日前后，吉尔伯特由卡里克弗格斯赴德里与锡德尼军队会合；这里是行动节点，不代表德里及全阿尔斯特长期英控。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER"
+      ],
+      "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
+      "significance": {
+        "level": 2,
+        "rationale": "有来源的军事行动、镇压、掠夺或抵抗；补全既有地图地理叙事",
+        "review_status": "source_checked_provisional_geocoding"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "GAP1569-GILBERT-KILMALLOCK",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年",
+      "name": "吉尔伯特在基尔马洛克附近镇压反抗军并实施恐怖战术",
+      "category": "colonial_repression",
+      "icon_code": "REP",
+      "lat": 52.398,
+      "lng": -8.576,
+      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geography_label": "现代具名地点位置，仅供历史定位",
+      "description": "1569年9月25日，吉尔伯特在基尔马洛克附近击退爱尔兰反抗部队；其芒斯特军事行动还包括处死守军、杀害平民和牲畜，造成当地居民恐惧。受袭地点范围无法据此精确复原。",
+      "short_description": "1569年9月25日，吉尔伯特在基尔马洛克附近击退爱尔兰反抗部队；其芒斯特军事行动还包括处死守军、杀害平民和牲畜，造成当地居民恐惧。受袭地点范围无法据此精确复原。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER"
+      ],
+      "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
+      "significance": {
+        "level": 3,
+        "rationale": "有来源的军事行动、镇压、掠夺或抵抗；补全既有地图地理叙事",
+        "review_status": "source_checked_provisional_geocoding"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -1730,6 +1829,14 @@
       "evidence_read_level": "published preview indexed text and TNA original item identifiers, original manuscripts not personally inspected",
       "precision_warning": "TNA SP63/29/64,68,82a,82b,83; 1569 revolt spread across parts of Cork Limerick Tipperary and raiding near Kilkenny, Carlow, Wexford; named regions not surveyed rebel district boundaries",
       "origin": "PR52 editorial"
+    },
+    {
+      "id": "IR-DIB-GILBERT-MUNSTER",
+      "title": "Gilbert, Sir Humphrey (1537–83)",
+      "publisher": "Dictionary of Irish Biography, Royal Irish Academy",
+      "url": "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467",
+      "kind": "scholarly_biographical_reference",
+      "precision_warning": "Specific Munster Garrystown and Connellough old locations still require independent geolocation; do not map Dublin Garristown."
     }
   ],
   "routes": [
