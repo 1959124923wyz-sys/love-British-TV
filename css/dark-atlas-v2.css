@@ -755,3 +755,48 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .historical-region-list{max-height:180px}
  .historical-region-entry{min-height:46px}
 }
+
+/* Oct 2026 UX audit: map-first on narrow screens. The historical event
+   drawer remains available through a real visible header control. */
+.mobile-events-toggle{display:none}
+.dossier-map-action{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 17px}
+.dossier-map-action button{
+  min-height:40px;padding:9px 14px;border:1px solid #bb946e;
+  border-radius:8px;background:#243c53;color:#f2d4ba;
+  font:700 12px/1.4 "Noto Sans SC",system-ui,sans-serif;cursor:pointer;
+}
+.dossier-map-action button:hover{background:#304f68;border-color:#f2c293}
+.dossier-map-action button:focus-visible,.mobile-events-toggle:focus-visible{
+  outline:2px solid #f1c69b;outline-offset:3px;
+}
+.dossier-map-action button:disabled{opacity:.5;cursor:not-allowed}
+.dossier-map-action small{font-size:11px;line-height:1.5;color:#a8bed1}
+@media(max-width:980px){
+  .mobile-events-toggle{
+    display:inline-flex;align-items:center;justify-content:center;gap:5px;flex:none;
+    padding:6px 11px;min-height:36px;
+    background:#1f3851;color:#f2dfc8;border:1px solid #54708b;
+    border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;
+  }
+  .head-actions{display:flex;align-items:center;gap:9px}
+  .workspace.sidebar-collapsed .sidebar{pointer-events:none}
+  .workspace.dossier-collapsed .dossier{pointer-events:none}
+}
+@media(max-width:680px){
+  .masthead .head-actions .version,.masthead .head-actions .head-link{display:none}
+  .masthead .identity{min-width:0}
+  .masthead .identity b{font-size:16px}
+  .mobile-events-toggle{font-size:11px;white-space:nowrap;padding:6px 9px}
+}
+
+/* Fix the 2026 legacy base stylesheet's max-width:680px rule that set
+   .sidebar .event-list {display:none}. The menu must expose real history. */
+@media(max-width:680px){
+ .sidebar .event-list{display:flex;flex-direction:column}
+ .sidebar .side-section-head{display:flex}
+ .sidebar .chapter-facts{display:grid}
+ .sidebar .intro{display:block}
+ .sidebar .sidebar-main{overflow-y:auto;overscroll-behavior:contain}
+ .sidebar .event-item{min-height:48px;padding:10px 7px}
+ .sidebar .chapter-card:not([open]) .chapter-body{display:none}
+}

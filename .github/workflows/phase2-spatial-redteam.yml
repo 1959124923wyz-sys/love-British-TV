@@ -1,0 +1,64 @@
+name: Phase II independent historical GIS red-team
+
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/atlas-1570-1579.json'
+      - 'data/spatial-citation-registry.json'
+      - 'scripts/audit_spatial_semantics.py'
+      - 'scripts/browser_spatial_phase2.py'
+      - 'scripts/test_drake_landing_uncertainty.js'
+      - 'scripts/test_pale_independent_citations.js'
+      - '.github/workflows/phase2-spatial-redteam.yml'
+  push:
+    branches:
+      - audit/phase2-spatial-1497-1599-20261015
+    paths:
+      - 'data/**'
+      - 'scripts/audit_spatial_semantics.py'
+      - 'scripts/test_drake_landing_uncertainty.js'
+      - 'scripts/test_pale_independent_citations.js'
+      - 'data/spatial-citation-registry.json'
+      - 'scripts/browser_spatial_phase2.py'
+      - '.github/workflows/phase2-spatial-redteam.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check all chapter points, routes and historical spatial GeoJSON
+        run: python3 scripts/audit_spatial_semantics.py --out phase2-spatial-audit.json
+      - name: Regression check on disputed Drake landing and Pacific route seam
+        run: node scripts/test_drake_landing_uncertainty.js
+      - name: Preserve map timeline and voyage interaction tests
+        run: |
+          node scripts/test_voyage_routes.js
+          node scripts/test_pale_independent_citations.js
+          node scripts/test_chapter9_published.js
+      - name: Install Chromium browser driver library
+        run: python3 -m pip install selenium
+      - name: Serve map and test real annual shape visibility
+        run: |
+          python3 -m http.server 8765 > /tmp/atlas-phase2-http.log 2>&1 &
+          python3 scripts/browser_spatial_phase2.py
+      - name: Upload year-specific browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-historic-layer-screenshots
+          path: browser-phase2-results/
+          retention-days: 30
+      - name: Upload machine-readable non-destructive audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-spatial-audit
+          path: phase2-spatial-audit.json
+          retention-days: 30
