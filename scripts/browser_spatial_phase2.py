@@ -46,6 +46,20 @@ try:
             assert count(rule)==0, f"{year}: outdated/wrong historical layer {rule}"
         driver.save_screenshot(str(OUT / f"map-{year}.png"))
         print("PASS browser year", year, "positive", present, "negative", absent)
+    # Earlier chapters, 1547 Scotland and Hawkins's source-qualified
+    # coastal activity must also survive the common render dispatch.
+    check(1497, present=(".atlas-voyage-hit",),
+          absent=(".atlas-tenth-invasion-impact", ".atlas-seventh-site"))
+    check(1513, present=(".atlas-territory-solid",),
+          absent=(".atlas-tenth-invasion-impact",))
+    check(1547, present=(".atlas-local-english-garrison",),
+          absent=(".atlas-tenth-invasion-impact",))
+    check(1558, present=(".atlas-seventh-french",),
+          absent=(".atlas-tenth-invasion-impact",))
+    check(1562, present=(".atlas-eighth-enslavement-coast",),
+          absent=(".atlas-tenth-invasion-impact",))
+    check(1575, present=(".atlas-voyage-hit",),
+          absent=(".atlas-tenth-invasion-impact",))
     check(1579, present=(".atlas-voyage-hit",),
           absent=(".atlas-tenth-invasion-impact", ".atlas-trinidad-1595-impact"))
     check(1580, present=(".atlas-tenth-invasion-impact",),
