@@ -1,6 +1,17 @@
 name: Phase II independent historical GIS red-team
 
 on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/atlas-1570-1579.json'
+      - 'data/spatial-citation-registry.json'
+      - 'scripts/audit_spatial_semantics.py'
+      - 'scripts/browser_spatial_phase2.py'
+      - 'scripts/test_drake_landing_uncertainty.js'
+      - 'scripts/test_pale_independent_citations.js'
+      - '.github/workflows/phase2-spatial-redteam.yml'
   push:
     branches:
       - audit/phase2-spatial-1497-1599-20261015
