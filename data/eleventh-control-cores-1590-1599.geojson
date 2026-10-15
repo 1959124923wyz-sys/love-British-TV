@@ -1,0 +1,414 @@
+{
+  "type": "FeatureCollection",
+  "schema": "ch11_control_core_city_symbols_v1",
+  "metadata": {
+    "period": [
+      1590,
+      1599
+    ],
+    "point_count": 10,
+    "historical_occupation_polygons_certified": 0,
+    "rendering": "render Leaflet circleMarker radius screen_radius_px, colored by control_class, not a real world polygon",
+    "year_end_rule": "point appears for listed year_end_visible years; temporary episode may be shown when associated attack selected, never as yearend territory",
+    "all_other_years_not_certified": true
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "dublin-crown-core",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "stable_id": "dublin-crown-core",
+        "name": "都柏林英王核心",
+        "control_class": "Crown_administrative_city",
+        "start_year": 1590,
+        "end_year": 1599,
+        "year_end_visible": [
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1595,
+          1596,
+          1597,
+          1598,
+          1599
+        ],
+        "source_ids": [
+          "C11-S52",
+          "C11-S54"
+        ],
+        "geo_source": "main/data/atlas-1570-1579.json",
+        "evidence_note": "established royal Dublin core; screen symbol only",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 10,
+        "show_during_annual_slide": true,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "carrickfergus-crown-castle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.808,
+          54.713
+        ]
+      },
+      "properties": {
+        "stable_id": "carrickfergus-crown-castle",
+        "name": "卡里克弗格斯海岸英军堡",
+        "control_class": "temporary_or_inherited_English_fort",
+        "start_year": 1590,
+        "end_year": 1599,
+        "year_end_visible": [
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1595,
+          1596,
+          1597,
+          1598,
+          1599
+        ],
+        "source_ids": [
+          "C11-S01",
+          "C11-S55"
+        ],
+        "geo_source": "main/data/atlas-1570-1579.json",
+        "evidence_note": "English castle local reference, annual payroll incomplete",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 8,
+        "show_during_annual_slide": true,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "enniskillen-castle-1594-1595",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.644771,
+          54.346171
+        ]
+      },
+      "properties": {
+        "stable_id": "enniskillen-castle-1594-1595",
+        "name": "恩尼斯基林英军驻堡",
+        "control_class": "temporary_or_inherited_English_fort",
+        "start_year": 1594,
+        "end_year": 1595,
+        "year_end_visible": [
+          1594
+        ],
+        "source_ids": [
+          "C11-S02",
+          "C11-S03",
+          "C11-S57"
+        ],
+        "geo_source": "https://excavations.ie/report/2006/Fermanagh/0015468/",
+        "evidence_note": "1594-02-02 taken by England, May1595 lost to Maguire. Modern castle excavation, not historic earthwork perimeter.",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 8,
+        "show_during_annual_slide": true,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "blackwater-fort-before-1595",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.70544,
+          54.41288
+        ]
+      },
+      "properties": {
+        "stable_id": "blackwater-fort-before-1595",
+        "name": "布莱克沃特：英军1595年初失堡",
+        "control_class": "temporary_or_inherited_English_fort",
+        "start_year": 1594,
+        "end_year": 1595,
+        "year_end_visible": [
+          1594
+        ],
+        "source_ids": [
+          "C11-S01",
+          "C11-S02",
+          "C11-S69"
+        ],
+        "geo_source": "https://excavations.ie/report/2013/Armagh/0023672/",
+        "evidence_note": "point is modern village archaeological testing site, not original fort; 1595-02-16 lost",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 7,
+        "show_during_annual_slide": true,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "blackwater-fort-1598",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.70544,
+          54.41288
+        ]
+      },
+      "properties": {
+        "stable_id": "blackwater-fort-1598",
+        "name": "布莱克沃特：1598年围堡撤军",
+        "control_class": "temporary_or_inherited_English_fort",
+        "start_year": 1598,
+        "end_year": 1598,
+        "year_end_visible": [],
+        "source_ids": [
+          "C11-S04",
+          "C11-S69",
+          "C11-S70"
+        ],
+        "geo_source": "https://excavations.ie/report/2013/Armagh/0023672/",
+        "evidence_note": "English occupied during siege then lost after 14Aug1598; yearend absent; 1597 exact return unverified",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 7,
+        "show_during_annual_slide": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kilcolman-1590-1598",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.614258,
+          52.252298
+        ]
+      },
+      "properties": {
+        "stable_id": "kilcolman-1590-1598",
+        "name": "基尔科尔曼：殖民承领人城堡",
+        "control_class": "English_undertaker_residence",
+        "start_year": 1590,
+        "end_year": 1598,
+        "year_end_visible": [
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1595,
+          1596,
+          1597
+        ],
+        "source_ids": [
+          "C11-S65",
+          "C11-S66",
+          "C11-S67",
+          "C11-S68"
+        ],
+        "geo_source": "https://excavations.ie/report/1994/Cork/0001638/",
+        "evidence_note": "planter residence, not a Crown garrison; burned Oct1598",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 8,
+        "show_during_annual_slide": true,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santos-1591-1592",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.33361,
+          -23.96083
+        ]
+      },
+      "properties": {
+        "stable_id": "santos-1591-1592",
+        "name": "桑托斯：卡文迪什短期占据",
+        "control_class": "temporary_English_occupied_city",
+        "start_year": 1591,
+        "end_year": 1592,
+        "year_end_visible": [
+          1591
+        ],
+        "source_ids": [
+          "C11-S43",
+          "C11-S50"
+        ],
+        "geo_source": "https://texashistory.unt.edu/explore/locations/p18821/",
+        "evidence_note": "captured Christmas1591, approx two months into 1592; exact end day unknown",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 10,
+        "show_during_annual_slide": true,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "recife-1595",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -34.88111,
+          -8.05389
+        ]
+      },
+      "properties": {
+        "stable_id": "recife-1595",
+        "name": "累西腓：兰开斯特短期占据",
+        "control_class": "temporary_English_occupied_city",
+        "start_year": 1595,
+        "end_year": 1595,
+        "year_end_visible": [],
+        "source_ids": [
+          "C11-S43",
+          "C11-S51",
+          "C11-S62",
+          "C11-S63"
+        ],
+        "geo_source": "https://digital.library.unt.edu/explore/locations/p10764/",
+        "evidence_note": "captured 24Mar1595, held c30 or 34 days, no yearend control",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 10,
+        "show_during_annual_slide": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "san-juan-1598",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1236294,
+          18.4703808
+        ]
+      },
+      "properties": {
+        "stable_id": "san-juan-1598",
+        "name": "圣胡安：英军1598年6至8月驻占",
+        "control_class": "temporary_English_occupied_city",
+        "start_year": 1598,
+        "end_year": 1598,
+        "year_end_visible": [],
+        "source_ids": [
+          "C11-S16",
+          "C11-S17",
+          "C11-S30",
+          "C11-S56"
+        ],
+        "geo_source": "https://www.nps.gov/saju/planyourvisit/directions.htm",
+        "evidence_note": "English June16-Aug27 NPS timeline, Spanish yearend, later El Morro walls excluded",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 10,
+        "show_during_annual_slide": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cahir-1599",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.927156,
+          52.374557
+        ]
+      },
+      "properties": {
+        "stable_id": "cahir-1599",
+        "name": "卡希尔：1599年英军夺堡",
+        "control_class": "temporary_or_inherited_English_fort",
+        "start_year": 1599,
+        "end_year": 1599,
+        "year_end_visible": [],
+        "source_ids": [
+          "C11-S09",
+          "C11-S31",
+          "C11-S32"
+        ],
+        "geo_source": "https://excavations.ie/report/2014/Tipperary/0024115/",
+        "evidence_note": "Essex siege, yearend garrison unknown; episode only",
+        "display_type": "constant_screen_radius_core_not_land_polygon",
+        "screen_radius_px": 8,
+        "show_during_annual_slide": false,
+        "historical_boundary_confirmed": false,
+        "area_sqkm": null,
+        "exclude_from_area_statistics": true,
+        "exact_day_of_town_walls_undetermined": true,
+        "fill_authorized": false,
+        "map_layer": "territory",
+        "visual_years_are_precomputed": true
+      }
+    }
+  ]
+}
