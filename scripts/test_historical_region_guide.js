@@ -11,12 +11,14 @@ for(const period of ['1497-1509','1510-1519','1520-1529','1530-1539','1540-1549'
  for(const s of j.sources)all.set(s.id,s);
 }
 assert.equal(data.type,'FeatureCollection');
-assert.equal(data.features.length,4);
+assert.equal(data.features.length,6);
 const pairs=[
  ['rough-wooing-leith-edinburgh-raid-1544',1544,1544],
  ['leix-offaly-crown-plantation-1556-1569',1556,1569],
  ['essex-clandeboye-ulster-1573-1575',1573,1575],
- ['rathlin-island-crown-massacre-1575',1575,1575]
+ ['rathlin-island-crown-massacre-1575',1575,1575],
+ ['smith-ards-colonial-military-1572-1575',1572,1575],
+ ['drake-nombre-de-dios-attack-1572',1572,1572]
 ];
 for(const [id,start,end] of pairs){
  const f=data.features.find(x=>x.id===id);assert.ok(f,id);
@@ -31,17 +33,23 @@ for(const [id,start,end] of pairs){
  const ring=f.geometry.coordinates[0];assert.ok(ring.length>=4&&JSON.stringify(ring[0])===JSON.stringify(ring.at(-1)));
  for(const [lon,lat] of ring)assert.ok(Number.isFinite(lon)&&Number.isFinite(lat)&&Math.abs(lon)<=180&&Math.abs(lat)<=90);
 }
-for(const year of [1544,1556,1568,1573,1574,1575,1576,1580]){
- const active=data.features.filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year).map(f=>f.id);
- if(year===1544)assert.deepEqual(active,[pairs[0][0]]);
- if(year===1556||year===1568)assert.deepEqual(active,[pairs[1][0]]);
- if(year===1574)assert.deepEqual(active,[pairs[2][0]]);
- if(year===1575)assert.deepEqual(active,[pairs[2][0],pairs[3][0]]);
- if(year===1576||year===1580)assert.deepEqual(active,[]);
+const periods=new Map([
+ [1544,['rough-wooing-leith-edinburgh-raid-1544']],
+ [1556,['leix-offaly-crown-plantation-1556-1569']],
+ [1568,['leix-offaly-crown-plantation-1556-1569']],
+ [1572,['smith-ards-colonial-military-1572-1575','drake-nombre-de-dios-attack-1572']],
+ [1573,['essex-clandeboye-ulster-1573-1575','smith-ards-colonial-military-1572-1575']],
+ [1574,['essex-clandeboye-ulster-1573-1575','smith-ards-colonial-military-1572-1575']],
+ [1575,['essex-clandeboye-ulster-1573-1575','rathlin-island-crown-massacre-1575','smith-ards-colonial-military-1572-1575']],
+ [1576,[]],[1580,[]]
+]);
+for(const [year,expected] of periods){
+ const actual=data.features.filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year).map(f=>f.id);
+ assert.deepEqual(actual.sort(),expected.sort(),'Incorrect year '+year);
 }
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 assert.ok(app.includes('renderHistoricalRegionGuide()'));
 assert.ok(app.includes('renderEarlyRegionalImpactAreas()'));
 assert.ok(app.includes("openMapTerritoryAt(latlng)"));
 assert.ok(app.includes("data/early-war-colonial-impact-1544-1575.geojson"));
-console.log('PASS 4 source-backed illustrative early war/plantation areas + year gating + visible region dossiers');
+console.log('PASS 6 source-backed illustrative early war/plantation areas + year gating + visible region dossiers');
