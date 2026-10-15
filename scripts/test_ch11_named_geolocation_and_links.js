@@ -52,6 +52,7 @@ for(const [f,ids] of [[s1,['E005','E009']],[s2,['E024','E029','E028']]]){
  }),'New line endpoints must agree exactly with published chapter events');
 }
 assert.ok(app.includes("chapter11ActionLinks=linksData;"));
+assert.ok(app.includes('window.atlasReadActionLinks=()=>Object.freeze('), 'Browser must have immutable observability hook');
 const renderer=app.slice(app.indexOf('function renderChapter11ActionLinks(){'),app.indexOf('function renderNineYearsWarImpact(){'));
 assert.ok(renderer.includes('groups.chapter11ActionLinks.clearLayers()'));
 assert.ok(renderer.includes("!$('toggleTerritorialFootprints').checked")&&renderer.includes("!$('toggleControlAreas').checked"));
