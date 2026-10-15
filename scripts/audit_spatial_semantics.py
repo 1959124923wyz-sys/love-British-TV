@@ -136,6 +136,14 @@ def inspect():
         per_chapter.append({"period": f"{chapter['start']}-{chapter['end']}",
                             "events": len(events), "routes": len(routes),
                             "located_events": sum(e.get("lat") is not None for e in events)})
+    # Distinguish public event sources from reviewed independent spatial-archive
+    # citations. Their IDs legitimately differ; official bibliography links
+    # must be checked as well before reporting a public map dossier gap.
+    registry_path = DATA / "spatial-citation-registry.json"
+    if registry_path.exists():
+        for citation in load(registry_path).get("sources", []):
+            if isinstance(citation.get("id"), str) and re.match(r"^https://", citation.get("url", "")):
+                valid_sources.add(citation["id"])
     active_geo = set(re.findall(r"fetch\(['\"]data/([^'\"]+\.geojson)['\"]", APP))
     per_geo = []
     for path in sorted(DATA.glob("*.geojson")):
