@@ -1500,7 +1500,9 @@ async function boot(){
   // arrays are stored for following decades.
   if(!territorialFootprints?.features?.length||typeof AtlasTerritoryGeometry==='undefined')
    throw new Error('共享领土地理基准未正确加载');
-  const hydrateTerritoryPeriod=period=>AtlasTerritoryGeometry.hydrateFootprints(territorialFootprints,period);
+  // Take a fixed seven-feature canonical snapshot before appending dated states.
+  const canonicalTerritory={type:'FeatureCollection',features:territorialFootprints.features.slice()};
+  const hydrateTerritoryPeriod=period=>AtlasTerritoryGeometry.hydrateFootprints(canonicalTerritory,period);
   // New chapter keeps original 1497–1549 layer references intact. Older layers
   // have closed year intervals; append dated seventh-chapter continuations.
   const [geo7,relation7,urban7,sites7]=await Promise.all([
