@@ -1,0 +1,37 @@
+name: Map visitor mobile interaction QA
+
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'css/dark-atlas-v2.css'
+      - 'scripts/browser_map_ux_audit.py'
+      - '.github/workflows/map-visitor-ux.yml'
+  push:
+    branches:
+      - ux/mobile-map-visibility-focus-20261015
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mobile-desktop-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install browser test client
+        run: python3 -m pip install selenium
+      - name: Test map visibility and event interaction on desktop and phone
+        run: |
+          python3 -m http.server 8765 > /tmp/ux-map-http.log 2>&1 &
+          python3 scripts/browser_map_ux_audit.py
+      - name: Save real viewport screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: map-visitor-desktop-mobile-screenshots
+          path: ux-browser-results/
+          retention-days: 30
