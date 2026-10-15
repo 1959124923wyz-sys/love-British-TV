@@ -65,7 +65,7 @@ assert.ok(app.includes("fetch('data/atlas-1530-1539.json'"));
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
 assert.ok(app.includes("fetch('data/political-relations-1500-1549.geojson'"));
 assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("year===lastPublishedYear"));
-assert.ok(app.includes('e.year>=chapter.start&&e.year<=year')&&app.includes('((y-chapter.start)/span*100)'));
+assert.ok(!app.includes('function renderMilestones()')&&!html.includes('milestoneDots'),'Requested yellow timeline points must not return');
 assert.ok(app.includes('fullArchive||occurredByYear(e,year)'),'Unoccurred chapter events leaked');
 assert.ok(app.includes('sourcesById.get(id)')&&app.includes('atlasFifth,atlasSixth'),'fifth chapter source citations not available to dossier');
 assert.ok(app.includes("focusedEventId"),'sidebar event location must remain available');
