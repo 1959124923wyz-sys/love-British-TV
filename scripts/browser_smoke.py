@@ -930,6 +930,9 @@ try:
               [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1586年'))""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1584-Munster-forfeiture-survey.png"))
     set_year(1585,16)
+    verify("1585 Cape Verde Santiago assault now has a source-backed visible raid outline",
+           """document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===1 &&
+              document.querySelector('#eventList [data-eid="1580S-E016"]')!==null""",driver)
     verify("1585 must not retain ended 1580–1583 war area",
            "document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0",driver)
     verify("1585 Roanoke site missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
@@ -938,16 +941,21 @@ try:
     verify("1586 evacuated Roanoke site persisted into year-end",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===5""",driver)
-    verify("1586 must show one plantation policy region and two separate raided port city surfaces",
+    verify("1586 must show one Munster policy region and THREE separate Drake-raided towns",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
-              document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===2 &&
+              document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===3 &&
               document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0""",driver)
+    verify("1586 world view must use screen-size position cues until local zoom", 
+           """window.atlasReadViewport().zoom>=8 ||
+              [...document.querySelectorAll('#map .atlas-tenth-port-raid-impact')]
+               .every(el=>el.classList.contains('atlas-schematic-screen-cue'))""",driver)
     driver.execute_script("""document.querySelector('#map .atlas-tenth-port-raid-impact')
       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
     verify("1586 raided port city must open source-linked dossier without falsely naming it a Crown colony",
            """document.querySelector('#dossierBody').textContent.includes('英军入侵影响区') &&
               document.querySelector('#dossierBody .source-link')!==null &&
               document.querySelector('#dossierBody').textContent.includes('1586')""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids-plus-StAugustine.png"))
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids.png"))
     set_year(1587,26)
     verify("1587 Drake port-city raid surfaces persisted after fleet withdrew",
