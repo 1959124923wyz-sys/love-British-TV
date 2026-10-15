@@ -1017,7 +1017,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter11-1591-Santos-captured.png"))
     set_year(1592,9)
     verify("1592 Santos to Sao Vicente sourced link not visible in linked group",
-           """groups.chapter11ActionLinks.getLayers().length===1 &&
+           """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1592'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E009"]').click()""")
     verify("1592 Sao Vicente main published event must have modern name/location source",
@@ -1029,7 +1029,7 @@ try:
 
     set_year(1593,10)
     verify("1593 must not retain only-1592 Santos/Sao Vicente raid link",
-           "groups.chapter11ActionLinks.getLayers().length===0",driver)
+           "window.atlasReadActionLinks().count===0",driver)
     verify("1593 cannot show future Fermanagh and Ulster 1594 battles",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
@@ -1088,7 +1088,7 @@ try:
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
     set_year(1598,30)
     verify("1598 Armagh Yellow Ford Blackwater defeat is a source-backed link not occupation",
-           """groups.chapter11ActionLinks.getLayers().length===1 &&
+           """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E029"]').click()""")
     verify("1598 Yellow Ford main record now localizable with uncertain battlefield noted",
@@ -1116,7 +1116,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-raid.png"))
     set_year(1599,36)
     verify("1599 previous Yellow Ford connection expired",
-           "groups.chapter11ActionLinks.getLayers().length===0",driver)
+           "window.atlasReadActionLinks().count===0",driver)
     verify("1599 Essex south-Ireland march should be a CITY-ORDER LINE, not occupation land",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===1""",driver)
