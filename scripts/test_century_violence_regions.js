@@ -25,7 +25,7 @@ for(const p of periods){
 }
 for(const e of events.values())for(const id of e.source_ids||[])assert(sources.has(id),'unregistered citation '+id);
 const geo=read('data/century-violence-regions-1544-1589.geojson');
-assert.equal(geo.features.length,8);
+assert.equal(geo.features.length,15);
 for(const f of geo.features){
  const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
  assert.equal(f.geometry?.type,'Polygon');
@@ -50,4 +50,4 @@ assert(app.includes("p.exclude_from_area_aggregation!==true"),'no area safety ga
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert(html.includes('mapLayerTerritory')&&html.includes('mapLayerEvents'),'approved UI lost');
 assert(html.includes('historicalRegionGuideDetails'),'compact region archive lost');
-console.log('PASS: 21 added mapped events and 8 evidenced schematic regions, full source/chronology/area/UI reference gate');
+console.log('PASS: 33 added mapped events and 15 evidenced schematic regions, full source/chronology/area/UI reference gate');
