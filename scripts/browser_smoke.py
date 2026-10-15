@@ -488,7 +488,7 @@ try:
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
-    set_year(1549, 68)
+    set_year(1549, 80)
     verify("Norfolk 1549 must expose seven additional individually sourced locality events",
            """['GAP1549-KETT','GAP1549-NORFOLK-WYMONDHAM',
                'GAP1549-NORFOLK-MOUSEHOLD','GAP1549-NORFOLK-NORWICH-REBELS',
