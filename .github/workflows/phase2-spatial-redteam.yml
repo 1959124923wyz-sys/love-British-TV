@@ -8,6 +8,8 @@ on:
       - 'data/**'
       - 'scripts/audit_spatial_semantics.py'
       - 'scripts/test_drake_landing_uncertainty.js'
+      - 'scripts/test_pale_independent_citations.js'
+      - 'data/spatial-citation-registry.json'
       - 'scripts/browser_spatial_phase2.py'
       - '.github/workflows/phase2-spatial-redteam.yml'
   workflow_dispatch:
@@ -28,6 +30,7 @@ jobs:
       - name: Preserve map timeline and voyage interaction tests
         run: |
           node scripts/test_voyage_routes.js
+          node scripts/test_pale_independent_citations.js
           node scripts/test_chapter9_published.js
       - name: Install Chromium browser driver library
         run: python3 -m pip install selenium
