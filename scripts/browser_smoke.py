@@ -31,6 +31,9 @@ driver = webdriver.Chrome(options=opts)
 try:
     wait = WebDriverWait(driver, 30)
     driver.get("http://127.0.0.1:8765/?year=1520")
+    # Initialize the historical year before testing base-map switching; fetches
+    # across published decades are asynchronous and may finish after DOM load.
+    wait.until(lambda d: d.execute_script("return document.querySelector(\'#yearRange\')?.value===\'1520\' && document.querySelector(\'#eventCount\')?.textContent===\'4项\'"))
     # Default must provide familiar contemporary place names for comparison.
     # Switching only changes the basemap, never the selected Tudor year or zoom.
     verify("modern OSM reference must be default",
