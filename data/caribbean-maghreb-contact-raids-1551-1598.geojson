@@ -9,7 +9,7 @@
     "physical_geography": "modern_centroids_are_reference_only",
     "north_africa_colonial_polygons": 0,
     "caribbean_historical_measured_occupation_polygons": 0,
-    "features_by_kind": "trade and chartered-company commerce are NOT military territorial control; raids and failed assaults distinct from 1598 temporary San Juan occupation; one Trinidad schematic northwestern regional military action polygon connects TWO historically attested towns without claiming actual territorial reach",
+    "features_by_kind": "trade and chartered-company commerce are NOT military territorial control; raids and failed assaults distinct from 1598 temporary San Juan occupation; one Trinidad schematic northwestern regional military action polygon connects TWO historically attested towns without claiming actual territorial reach; one 1595 two-city documented campaign sequence line (no historical path geometry)",
     "source_review": "British Library, Hakluyt primary 16th c edited, scholarly Hesperis-Tamuda Morocco port identification, U.S. National Park Service",
     "area_statistics_prohibited": true,
     "northwest_trinidad_schematic_impact_polygons": 1,
@@ -232,7 +232,10 @@
         "territorial_claim": false,
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
-        "source_ids": [],
+        "source_ids": [
+          "C11-S23",
+          "C11-S24"
+        ],
         "validity": "occurrence_year_only",
         "map_layer": "territory_reference_not_political_control",
         "name": "1595年圣何塞·德奥鲁尼亚：罗利部队攻取并焚毁西班牙殖民城镇",
@@ -252,7 +255,10 @@
         "archive_folio": "British Library Add MS 36316 ff.150, 161, 168b",
         "updated_geographic_basis": "Replaces unhelpful Trinidad-island centroid with documented burnt city St Joseph; the city itself is a modern geographic reference",
         "evidence_crosscheck": "Raleigh self-account quoted by NALIS; independent Spanish official material described by British Library Add MS 36315 f264b; original manuscript not read",
-        "explicit_limits": "Raleigh's own account of indigenous involvement cannot safely be generalized as all indigenous people supporting his action."
+        "explicit_limits": "Raleigh's own account of indigenous involvement cannot safely be generalized as all indigenous people supporting his action.",
+        "related_event_ids": [
+          "1590S-E014"
+        ]
       }
     },
     {
@@ -397,7 +403,10 @@
         "end_year": 1595,
         "zone_type": "caribbean_english_military_raid",
         "summary_zh": "特立尼达国家图书馆的历史研究记载，罗利船队1595年到达Puerto de los Españoles（今西班牙港），传讯要求西班牙总督贝里奥前来，遭拒后英方转向内陆圣何塞·德奥鲁尼亚。现代城市位置仅用于定位，不代表16世纪码头或具体登陆点，也没有充分证据把整个港口和邻近聚落标为被焚毁。",
-        "source_ids": [],
+        "source_ids": [
+          "C11-S23",
+          "C11-S24"
+        ],
         "source_urls": [
           "https://www.nalis.gov.tt/resources/tt-content-guide/governors/governors-of-trinidad-and-tobago-1593-1701/",
           "https://www.nalis.gov.tt/resources/tt-content-guide/significant-sites/significant-sites-a-i/",
@@ -405,7 +414,10 @@
         ],
         "actor": "英格兰罗利远征队与西班牙地方总督",
         "geo_precision": "modern_Port_of_Spain_city_center_only_not_16th_century_port_site",
-        "chronology": "Arrival and military expedition 1595 only"
+        "chronology": "Arrival and military expedition 1595 only",
+        "related_event_ids": [
+          "1590S-E014"
+        ]
       }
     },
     {
@@ -483,7 +495,10 @@
           10.65065,
           -61.4704
         ],
-        "source_ids": [],
+        "source_ids": [
+          "C11-S23",
+          "C11-S24"
+        ],
         "source_urls": [
           "https://www.nalis.gov.tt/resources/tt-content-guide/significant-sites/significant-sites-a-i/",
           "https://www.nalis.gov.tt/resources/tt-content-guide/governors/governors-of-trinidad-and-tobago-1593-1701/",
@@ -496,7 +511,58 @@
         "mapped_raid_sites_count": 2,
         "area_measurement_prohibited": true,
         "precise_route_unknown": true,
-        "occupation_claim": false
+        "occupation_claim": false,
+        "related_event_ids": [
+          "1590S-E014"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trinidad-1595-puerto-espana-san-jose-operation-sequence",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -61.5166,
+            10.6619
+          ],
+          [
+            -61.4242,
+            10.6394
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory_reference_not_political_control",
+        "name": "1595年罗利行动次序：西班牙人港 → 圣何塞·德奥鲁尼亚（非实测路径）",
+        "start_year": 1595,
+        "end_year": 1595,
+        "zone_type": "caribbean_english_military_action_sequence",
+        "actor": "沃尔特·罗利率领的英格兰远征队（西属特立尼达）",
+        "summary_zh": "特立尼达国家图书馆援引罗利当事人叙述：远征船队首先抵达Puerto de los Españoles（今西班牙港），随后转向San José de Oruña（今St Joseph），英军攻击、拘押西班牙总督贝里奥并焚毁圣何塞。两城的直线只表示文献明确的先后联系，不是1595年实际行军道路、受灾走廊或领土疆界。",
+        "source_ids": [
+          "C11-S23",
+          "C11-S24"
+        ],
+        "source_urls": [
+          "https://www.nalis.gov.tt/resources/tt-content-guide/governors/governors-of-trinidad-and-tobago-1593-1701/",
+          "https://www.nalis.gov.tt/resources/tt-content-guide/significant-sites/significant-sites-a-i/",
+          "https://searcharchives.bl.uk/catalog/040-002054717",
+          "https://searcharchives.bl.uk/catalog/040-002054718"
+        ],
+        "related_event_ids": [
+          "1590S-E014"
+        ],
+        "geography_precision": "two_modern_named_city_reference_points_not_exact_campaign_track",
+        "mapping_method": "Source-verified two-city visit/assault order rendered as straight link between the already-reviewed modern location anchors, with NO military buffer",
+        "sequence_only": true,
+        "material_impacts_not_assumed_between_waypoints": true,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
       }
     }
   ]
