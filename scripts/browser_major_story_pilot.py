@@ -103,7 +103,22 @@ try:
     driver.save_screenshot(str(OUT/"07-mobile-small-event-preview.png"))
     driver.find_element(By.CSS_SELECTOR,'[data-story-preview-close]').click()
     assert driver.execute_script("return !document.querySelector('.story-event-preview')")
-    print("PASS story pilot real browser: auto-year focus, linked child simplification, popup, return and mobile")
+    # Regression: The article's "return to original event" must never collapse
+    # the dossier after readers have jumped through other years and events.
+    # The opening event was 1580S-E002, not the last linked 1584 event.
+    driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
+    wait.until(lambda d:d.execute_script("""return document.querySelector('#dossierBody h2')?.textContent.includes('佩勒姆与奥蒙德会师') &&
+      document.getElementById('bigYear').textContent==='1580' &&
+      !!document.querySelector('#dossierBody .major-story-entry')"""))
+    assert driver.execute_script("return !document.getElementById('workspace').classList.contains('dossier-collapsed')")
+    assert not driver.execute_script("return !!document.querySelector('.major-story-article')")
+    driver.save_screenshot(str(OUT/"08-return-to-original-child-year-1580.png"))
+    # Re-entering must capture this same child event once again.
+    driver.find_element(By.CSS_SELECTOR,'.major-story-enter').click()
+    wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article')"))
+    driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
+    wait.until(lambda d:d.execute_script("""return document.querySelector('#dossierBody h2')?.textContent.includes('佩勒姆与奥蒙德会师')"""))
+    print("PASS story pilot real browser: auto-year focus, popup, return to exact origin child and mobile")
 finally:
     driver.quit()
 
