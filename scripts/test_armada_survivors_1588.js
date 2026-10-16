@@ -29,7 +29,7 @@ for(const e of born){
  if(e.lat!==null)assert(Number.isFinite(e.lat)&&Number.isFinite(e.lng));
 }
 const four=regions.features.filter(f=>f.id.startsWith('ir-armada-1588-'));
-assert.equal(regions.features.length,23);
+assert(regions.features.length>=23,'four earlier 1588 Armada regions persist when later evidence adds unrelated studies');
 assert.equal(four.length,4);
 for(const f of four){
  const p=f.properties,ring=f.geometry.coordinates[0];
@@ -53,6 +53,7 @@ assert(overview.properties.area_sqkm===null&&overview.properties.exclude_from_ar
 assert(overview.properties.research_event_not_yet_chapter_atlas===false,'must not leave the now published regional story orphaned');
 assert(four.some(f=>f.id==='ir-armada-1588-rosclogher-refuge'&&f.properties.zone_type==='gaelic_refuge_anti_crown_resistance_schematic'));
 const app=fs.readFileSync(path.resolve(__dirname,'..','app.js'),'utf8');
-assert(app.includes('centuryData?.features?.length!==23'),'reader must import all region records');
+const regionGuard=app.match(/centuryData\?\.features\?\.length!==([0-9]+)/);
+assert(regionGuard&&Number(regionGuard[1])===regions.features.length,'reader must import all extant study regions');
 assert(app.includes("gaelic_refuge_anti_crown_resistance_schematic"));
 console.log('PASS: 1588 storm≠royal killings, Irish rescue and Clare executions; five sourced incidents, four local non-sovereign areas, linked older overview');

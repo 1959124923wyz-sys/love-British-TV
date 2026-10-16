@@ -1432,18 +1432,21 @@
       "start_year": 1578,
       "end_year": 1578,
       "visible_from": 1578,
-      "date_label": "1578年",
-      "name": "德雷克在瓦尔帕莱索劫掠西班牙殖民港口",
+      "date_label": "1578年12月上旬（具体日有史料差异）",
+      "name": "德雷克在瓦尔帕莱索劫掠西班牙商船、港口仓库及房屋",
       "category": "privateering_plunder",
       "icon_code": "ECO",
       "lat": -33.047,
       "lng": -71.613,
-      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
-      "geography_label": "现代具名地点位置，仅供历史定位",
-      "description": "德雷克1578年12月沿智利太平洋沿岸袭击瓦尔帕莱索港，劫取船货、补给与贵金属。袭港不能算英国占领智利土地。",
-      "short_description": "德雷克1578年12月沿智利太平洋沿岸袭击瓦尔帕莱索港，劫取船货、补给与贵金属。袭港不能算英国占领智利土地。",
+      "geo_precision": "modern_Valparaiso_port_locality_reference_1578_warehouse_attack_perimeter_unknown",
+      "geography_label": "现代瓦尔帕莱索港中心坐标：非1578年港区准确边界、具体被抢建筑物和船舶锚位",
+      "description": "1578年12月上旬，德雷克的英格兰私掠船在西属智利的瓦尔帕莱索港突袭载金西班牙商船，并洗劫港口仓储与房屋。智利国家图书馆明确记载黄金、仓库和民居被劫掠；1579年秘鲁总督托莱多致函亦记录该船于1578年12月6日抵达圣地亚哥港（即瓦尔帕莱索）并劫获载金船只。其他历史叙事给出12月4日前后，故不强行唯一化日期。这里是对西班牙殖民经济的武装私掠，不能据此推断智利居民普遍受害、港城全毁、英王获得城镇主权或英国国库确收收益。",
+      "short_description": "12月上旬德雷克袭夺瓦尔帕莱索载金船与港市财货；不是英国占领智利。",
       "source_ids": [
-        "SA-LOC-DRAKE-VALPARAISO-1578"
+        "SA-LOC-DRAKE-VALPARAISO-1578",
+        "CL-BNC-DRAKE-CHILE-1578",
+        "US-LOC-TOLEDO-DRAKE-CHILE-1579",
+        "US-LOC-TOLEDO-MANUSCRIPT-1579"
       ],
       "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
       "significance": {
@@ -1456,6 +1459,75 @@
       "actual_English_territory_created": false,
       "historical_control_boundary_verified": false,
       "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true,
+      "historical_boundary_confirmed": false
+    },
+    {
+      "id": "PAC1578-MOCHA-LAFKENCHE",
+      "year": 1578,
+      "start_year": 1578,
+      "end_year": 1578,
+      "visible_from": 1578,
+      "date_label": "1578年11月25日前后",
+      "name": "莫查岛：德雷克船队登陆补给，与拉夫肯切居民发生冲突",
+      "category": "indigenous_resistance_and_english_contact",
+      "icon_code": "RES",
+      "lat": -38.375,
+      "lng": -73.935,
+      "geo_precision": "modern_Isla_Mocha_approx_island_center_1578_landing_shore_unlocated",
+      "geography_label": "现代地点参考，未复原1578年实测登陆、战斗或受灾边界",
+      "description": "1578年11月德雷克船队抵达智利莫查岛（Isla Mocha），从当地取得食物和补给，并与Lafkenche（马普切沿海群体）居民接触。智利国家图书馆提到德雷克在岛上受伤的传统记载；交战细节、先动武方及死伤数量在不同时代叙述中尚有差异。不可凭此点断言英军屠杀原住民、英王占岛或所有岛民参战。",
+      "short_description": "1578年11月德雷克船队抵达智利莫查岛（Isla Mocha），从当地取得食物和补给，并与Lafkenche（马普切沿海群体）居民接触。智利国家图书馆提到德雷克在岛上受伤的传统记载；交战细节、先动武方及死伤数量在不同时代叙述中尚有差异。不可凭此点断言英军屠杀原住民、英王占岛或所有岛民参战。",
+      "source_ids": [
+        "CL-BNC-MOCHA-LAFKENCHE-1578",
+        "CL-BNC-DRAKE-CHILE-1578"
+      ],
+      "certainty": "source_supported_locality_no_measured_boundary",
+      "significance": {
+        "level": 2,
+        "rationale": "根据智利国家图书馆和同时代西班牙王室信件区分私掠、原住民接触与当地防御；不夸大占领规模",
+        "review_status": "source_cross_checked_location_approximation"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_coastal_locality_reference_not_surveyed_tudor_control_extent",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "PAC1578-LA-SERENA-DEFENSE",
+      "year": 1578,
+      "start_year": 1578,
+      "end_year": 1578,
+      "visible_from": 1578,
+      "date_label": "1578年12月中旬左右",
+      "name": "拉塞雷纳：居民组织防御，击退德雷克的港城袭击企图",
+      "category": "failed_privateering_raid_and_local_defense",
+      "icon_code": "RES",
+      "lat": -29.9045,
+      "lng": -71.2489,
+      "geo_precision": "modern_La_Serena_Coquimbo_harbour_vicinity_not_actual_failed_assault_site",
+      "geography_label": "现代地点参考，未复原1578年实测登陆、战斗或受灾边界",
+      "description": "德雷克船队洗劫瓦尔帕莱索后驶向智利科金博湾、拉塞雷纳附近。智利国家图书馆记载当地居民预知袭击，组织防御，英格兰私掠者未能攻下拉塞雷纳。史料时间大致为1578年12月，部分旧文献标到1579年；图上仅记录1578年这次北上行动，不以未遂攻击冒充成功洗劫、毁城或殖民管治。",
+      "short_description": "德雷克船队洗劫瓦尔帕莱索后驶向智利科金博湾、拉塞雷纳附近。智利国家图书馆记载当地居民预知袭击，组织防御，英格兰私掠者未能攻下拉塞雷纳。史料时间大致为1578年12月，部分旧文献标到1579年；图上仅记录1578年这次北上行动，不以未遂攻击冒充成功洗劫、毁城或殖民管治。",
+      "source_ids": [
+        "CL-BNC-DRAKE-CHILE-1578",
+        "C9-S10"
+      ],
+      "certainty": "source_supported_locality_no_measured_boundary",
+      "significance": {
+        "level": 2,
+        "rationale": "根据智利国家图书馆和同时代西班牙王室信件区分私掠、原住民接触与当地防御；不夸大占领规模",
+        "review_status": "source_cross_checked_location_approximation"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_coastal_locality_reference_not_surveyed_tudor_control_extent",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
     }
@@ -3006,6 +3078,38 @@
       "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-famous-voyage/",
       "kind": "national_library_curated_historical_collection",
       "precision_warning": "Port known, no measured raided buildings, route or English territorial control."
+    },
+    {
+      "id": "CL-BNC-DRAKE-CHILE-1578",
+      "title": "Los viajeros ingleses: Drake at Isla Mocha, Valparaíso, La Serena and Guayacán, 1578",
+      "publisher": "Biblioteca Nacional de Chile — Memoria Chilena",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-619.html",
+      "kind": "national_library_historical_research",
+      "precision_warning": "Chronicle distinguishes successful Valparaíso pillage from unsuccessful La Serena attack; its timeline also refers to Guayacán without proof of destruction."
+    },
+    {
+      "id": "CL-BNC-MOCHA-LAFKENCHE-1578",
+      "title": "Recordamos un nuevo aniversario del desembarco de Francis Drake en Isla Mocha (1578)",
+      "publisher": "Biblioteca Nacional de Chile — Memoria Chilena",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-126414.html",
+      "kind": "national_library_indigenous_history_and_locality",
+      "precision_warning": "Mocha indigenous agency is Lafkenche; note 25 Nov reported landing, historical eyewitness episodes debated; no English land occupation."
+    },
+    {
+      "id": "US-LOC-TOLEDO-DRAKE-CHILE-1579",
+      "title": "Report of Viceroy Francisco de Toledo on English ship incursion through Magellan Strait and Pacific plundering (1579 manuscript)",
+      "publisher": "Library of Congress — Kraus Drake Collection",
+      "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/strait-of-magellan/",
+      "kind": "catalogued_primary_1579_viceregal_dispatch_translation",
+      "precision_warning": "Toledo dates ship arrival at the port serving Santiago de Chile to 6 December 1578; other secondary sources propose 4 or 5 December, so the precise day remains disputed."
+    },
+    {
+      "id": "US-LOC-TOLEDO-MANUSCRIPT-1579",
+      "title": "Relación de la entrada que hizo por el estrecho el Navío Inglés... (manuscript 1579)",
+      "publisher": "Library of Congress — digitized primary manuscript",
+      "url": "https://www.loc.gov/item/2021699423/",
+      "kind": "primary_manuscript_catalogue",
+      "precision_warning": "Spanish royal official's report describes ship gold robbery; does not provide surveyed 1578 quay, warehouse, damage or atrocity polygons."
     }
   ],
   "routes": [
@@ -3551,6 +3655,66 @@
       "victims_overlap_other_legs": true,
       "origin_research_feature_id": "Nutaaq-1577-Bristol-to-London",
       "verified_English_territorial_control": false
+    },
+    {
+      "id": "ch9-Drake-1578-Mocha-Valparaiso",
+      "year": 1578,
+      "name": "1578年 · 莫查岛 → 瓦尔帕莱索（方向示意）",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_port_or_island_endpoints_no_ship_log_GPS",
+      "coords": [
+        [
+          -38.375,
+          -73.935
+        ],
+        [
+          -33.047,
+          -71.613
+        ]
+      ],
+      "source_ids": [
+        "CL-BNC-DRAKE-CHILE-1578",
+        "C9-S10"
+      ],
+      "related_event_ids": [
+        "PAC1578-MOCHA-LAFKENCHE",
+        "GAP1578-VALPARAISO"
+      ],
+      "note": "智利国家图书馆记载1578年沿岸航次的地点顺序。图上仅为地点间方向关系线，非实测船位、航程、连续英王占领或整段海岸遭袭。",
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null
+    },
+    {
+      "id": "ch9-Drake-1578-Valparaiso-LaSerena",
+      "year": 1578,
+      "name": "1578年 · 瓦尔帕莱索 → 拉塞雷纳（方向示意）",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_port_or_island_endpoints_no_ship_log_GPS",
+      "coords": [
+        [
+          -33.047,
+          -71.613
+        ],
+        [
+          -29.9045,
+          -71.2489
+        ]
+      ],
+      "source_ids": [
+        "CL-BNC-DRAKE-CHILE-1578",
+        "C9-S10"
+      ],
+      "related_event_ids": [
+        "GAP1578-VALPARAISO",
+        "PAC1578-LA-SERENA-DEFENSE"
+      ],
+      "note": "智利国家图书馆记载1578年沿岸航次的地点顺序。图上仅为地点间方向关系线，非实测船位、航程、连续英王占领或整段海岸遭袭。",
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null
     }
   ],
   "colonial_polygons": [],
@@ -3561,6 +3725,7 @@
     "research_pr56_incremental_import": "2026-10-14",
     "new_localized_church_records": 2,
     "schematic_inuit_transfer_legs": 3,
-    "original_folio_inventory": 14
+    "original_folio_inventory": 14,
+    "south_pacific_1578_supplement": "2026-10-16: 2 newly sourced sites + detailed existing Valparaiso raid; 2 non-surveyed navigation direction lines; coastal polygons solely for reading, never quantified as English territory."
   }
 }
