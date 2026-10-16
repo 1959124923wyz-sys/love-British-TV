@@ -8,6 +8,9 @@ on:
       - "data/atlas-1510-1519.json"
       - "scripts/test_first_group_history_stories.js"
       - "scripts/browser_first_group_stories.py"
+      - "data/atlas-1520-1529.json"
+      - "scripts/test_tournai_surrey_major_stories.js"
+      - "scripts/browser_tournai_surrey_stories.py"
       - "data/atlas-1540-1549.json"
       - "data/early-war-colonial-impact-1544-1575.geojson"
       - "data/war-front-corridors-1540-1549.geojson"
@@ -36,6 +39,7 @@ jobs:
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
           node scripts/test_first_group_history_stories.js
+          node scripts/test_tournai_surrey_major_stories.js
           node scripts/test_rough_wooing_cartography.js
       - name: Test real reading and map behavior in Chromium
         run: |
@@ -44,6 +48,7 @@ jobs:
           python scripts/browser_major_story_pilot.py
           python scripts/browser_rough_wooing_story.py
           python scripts/browser_first_group_stories.py
+          python scripts/browser_tournai_surrey_stories.py
       - name: Keep screenshots for review
         if: always()
         uses: actions/upload-artifact@v4
@@ -53,3 +58,4 @@ jobs:
             story-pilot-browser-results/
             rough-wooing-browser-results/
             first-group-major-story-browser-evidence/
+            tournai-surrey-browser-results/
