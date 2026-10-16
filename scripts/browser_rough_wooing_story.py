@@ -30,7 +30,7 @@ try:
     source=browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="GAP1544-MELROSE"]')
     js("arguments[0].scrollIntoView({block:'center'})",source)
     source.click()
-    wait.until(lambda d:d.execute_script("return !!document.querySelector('#dossierBody [data-story-open="rough-wooing-anglo-scottish-war-1543-1550"]')"))
+    wait.until(lambda d:d.execute_script("""return !!document.querySelector('#dossierBody [data-story-open="rough-wooing-anglo-scottish-war-1543-1550"]')"""))
     assert js("return document.querySelector('.major-story-enter').dataset.storySource==='GAP1544-MELROSE'")
     assert js("return !document.querySelector('#dossierBody .source-details')")
     browser.save_screenshot(str(OUT/'01-melrose-event-and-history-entry.png'))
@@ -51,7 +51,7 @@ try:
     js("arguments[0].scrollIntoView({block:'center'})",el)
     ActionChains(browser).double_click(el).perform()
     wait.until(lambda d:d.execute_script("return !!document.querySelector('[data-story-back]') && document.querySelector('#dossierBody h2')?.textContent.includes('布劳蒂')"))
-    assert js("return !document.querySelector('.source-details')",'')
+    assert js("return !document.querySelector('.source-details')")
     browser.find_element(By.CSS_SELECTOR,'[data-story-back]').click()
     wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article')"))
     # Returning from history to the originating child restores 1544, not 1550.
@@ -63,7 +63,7 @@ try:
     # Also accessible if reader starts in the following decade.
     js("""const ctl=document.getElementById('jumpYear');ctl.value='1550';ctl.dispatchEvent(new Event('change',{bubbles:true}));""")
     waityear(1550)
-    assert js("return !!document.querySelector('#eventList [data-eid="1550S-E001"]')")
+    assert js("""return !!document.querySelector('#eventList [data-eid="1550S-E001"]')""")
     source=browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1550S-E001"]')
     js("arguments[0].scrollIntoView({block:'center'})",source)
     source.click()
