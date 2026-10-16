@@ -107,7 +107,7 @@ try:
     # Full-chapter previews are opt-in per decade; returning to an earlier decade
     # must not leak future 1520s events into the 1510s or vice versa.
     toggle_layer("showFullChapterArchive", True)
-    set_year(1519, 18)
+    set_year(1519, 22)
     verify("complete-archive preview leaked into a new chapter",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     verify("switch to third chapter failed", """document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')""", driver)
