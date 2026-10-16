@@ -357,7 +357,7 @@ function historicAreaDescription(properties,selectedYear){
 function openTerritoryDossier(feature,kind='historic'){
  const p=feature.properties||{},restoration=kind==='restoration',occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war',atlanticContact=kind==='atlantic-contact',linkedAction=kind==='linked-action';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
- const label=kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const label=kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.ongoing_at_atlas_end?'起（至1599年地图研究范围）':p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
@@ -961,6 +961,7 @@ function renderEleventhInfluenceAreas(){
 function regionalFeatureKind(p){
  if(p.zone_type==='crown_internal_repression')return 'domestic-repression';
  if(p.zone_type==='colonial_fiscal_military_coercion')return 'colonial-coercion';
+ if(p.zone_type==='rebellion_and_crown_response')return 'rebellion-conflict';
  if(p.zone_type==='french_recapture_after_english_occupation_schematic')return 'restoration';
  if(p.zone_type==='documented_english_urban_garrison_schematic')return 'occupied';
  if(p.color_role==='plantation_ochre')return 'land-dispossession';
@@ -2103,7 +2104,7 @@ async function boot(){
   const centuryRes=await fetch('data/century-violence-regions-1544-1589.geojson',{cache:'no-store'});
   if(!centuryRes.ok)throw new Error('1544—1589地区暴力空间补档未加载');
   const centuryData=await centuryRes.json();
-  if(centuryData?.features?.length!==15||centuryData.features.some(f=>{
+  if(centuryData?.features?.length!==19||centuryData.features.some(f=>{
    const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
    return f.geometry?.type!=='Polygon'||!ring||ring.length<4||
     p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
