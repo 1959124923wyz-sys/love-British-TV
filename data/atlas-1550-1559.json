@@ -774,15 +774,16 @@
       "name": "托沃森第二航次从哈里奇港启航",
       "category": "commerce_and_navigation",
       "icon_code": "EXP",
-      "lat": 51.948,
-      "lng": -1.286,
+      "lat": 51.94639,
+      "lng": 1.287337,
       "geo_precision": "modern_named_site_reference_not_verified_historical_geometry",
       "geography_label": "哈里奇历史港口现代城市参考位置",
       "description": "1556年9月14日，托沃森乘Tiger号从哈里奇启航，计划会合其他英国船只驶往几内亚，经过锡利群岛及普利茅斯调整航行。",
       "short_description": "1556年9月14日，托沃森乘Tiger号从哈里奇启航，计划会合其他英国船只驶往几内亚，经过锡利群岛及普利茅斯调整航行。",
       "source_ids": [
         "AF-CAM-HKL-TOWERSON-1556",
-        "AF-KERR-TOWERSON-DETAILS"
+        "AF-KERR-TOWERSON-DETAILS",
+        "UK-GAZETTEER-HARWICH-ESSEX"
       ],
       "certainty": "historic_named_location_sourced_modern_reference",
       "significance": {
@@ -2319,6 +2320,13 @@
       "kind": "historical_institutional_archival_or_historic_publication",
       "evidence_read_level": "Source confirms named location/event; modern geocode is reference only",
       "precision_warning": "Modern named site is not 16th-century battlefield polygon or surveyed voyage location"
+    },
+    {
+      "id": "UK-GAZETTEER-HARWICH-ESSEX",
+      "title": "Harwich Essex historic port town WGS84 locator",
+      "publisher": "Gazetteer of British Place Names",
+      "url": "https://gazetteer.org.uk/place/Harwich,_Essex_20420",
+      "kind": "named_historic_town_modern_geolocation"
     }
   ],
   "routes": [
