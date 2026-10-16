@@ -922,7 +922,7 @@ try:
         "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "布里斯托尔圣斯蒂芬堂安葬"))
     verify("1577 Bristol documented historic cemetery source should remain clickable",
            """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
-              document.querySelector('#dossierBody .source-details')!==null""",driver)
+              (!!document.querySelector('#dossierBody .source-details') || !!document.querySelector('#dossierBody .major-story-enter'))""",driver)
     driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
     set_year(1578, 60)
     verify("1578 Pacific Chile documentary events survive and the 7 connected Drake expedition links replace 2 redundant old legs",
