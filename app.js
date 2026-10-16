@@ -2225,6 +2225,22 @@ map.getContainer().addEventListener('click',event=>{
 },true);
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
 
+// Read-only event access and deliberately narrow actions for optional longform stories.
+// This bridge does not expose mutable historic GIS or allow changing map coordinates.
+window.atlasStoryBridge={
+ currentYear:()=>year,
+ selectedEventId:()=>selected,
+ activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
+ eventById:id=>[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasFirstMerged]
+  .map(a=>a?.events?.find(e=>e.id===id)).find(Boolean)||null,
+ clearSelectedEventYear:()=>{selectedItemYear=null},
+ clearSelection:()=>{selectedItemYear=null;selected=''},
+ showDossier:()=>openPanel('dossier'),
+ openEvent:item=>openDossier(item,'event'),
+ focusEvent:(item,opts)=>focusEventFromSidebar(item,opts),
+ setYear:v=>setYear(v),
+ resetDossier:()=>resetDossier()
+};
 syncPanels();
 window.addEventListener('keydown',e=>{if(!atlas||e.target?.closest?.('input,button,select,textarea,[contenteditable="true"]'))return;if(e.key==='ArrowLeft'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'){stopPlay();setYear(year+1)}});
 window.addEventListener('resize',()=>map.invalidateSize());
