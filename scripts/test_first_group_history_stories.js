@@ -43,8 +43,8 @@ const multi=map.get('1504-OKELLY-CASTLES');
 assert.match(multi.geo_precision,/multi_site/);
 assert.match(multi.description,/乌利克·伯克/);
 assert.equal(multi.actual_English_territory_created,false);
-assert.equal(third.events.length,18,'15 older and three new sourced records');
-const newIds=['KILDARE1512-ROSCOMMON','KILDARE1512-DUNGANNON-ODONNELL','KILDARE1516-KILLYBEGS-CANNON-SHIP'];
+assert.equal(third.events.length,22,'15 original plus three first wave and four more source-audited records');
+const newIds=['KILDARE1512-ROSCOMMON','KILDARE1512-DUNGANNON-ODONNELL','KILDARE1516-KILLYBEGS-CANNON-SHIP','KILDARE1512-ATHLONE-CROSSING','KILDARE1512-BELFAST-ASSAULT','KILDARE1514-COLERAINE-ODONNELL','KILDARE1516-COLLOONEY-ODONNELL'];
 for(const id of newIds){
  const e=map.get(id);assert(e,id);
  assert(owned.get(id)===keys[1]);
@@ -57,4 +57,6 @@ for(const id of newIds){
 assert.equal(new Set(third.events.map(e=>e.id)).size,third.events.length);
 assert.equal(third.colonial_polygons.length,0);
 assert(first.events.every(x=>x.actual_English_territory_created!==true),'unexpectedly fabricated Cabot acquisition');
-console.log('PASS first batch: 2 sourced articles, restored 1496 legal-vs-contact difference, 18 Irish decade events, 3 new region-safe named points');
+assert.equal(third.routes.length,2,'Sourced 1512 march and 1516 maritime endpoint relations');
+assert(third.routes.every(r=>r.route_kind==='documented-endpoints-connection'&&r.area_sqkm===null));
+console.log('PASS early 1500s: readable narratives, 22 decade events, seven source-backed new places and two non-GPS connections');
