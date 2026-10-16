@@ -11,8 +11,8 @@ assert.equal(newcomers.length,2,'add only Mocha and failed La Serena, do not dou
 assert.equal(db.events.length,53);
 assert.equal(db.sources.length,69);
 assert.equal(db.routes.length,22);
-assert.equal(db.events.filter(e=>e.year<=1577).length,28,'no premature publication before Chile voyage');
-assert.equal(db.events.filter(e=>e.year<=1578).length,36);
+assert.equal(db.events.filter(e=>e.year<=1577).length,37,'no premature publication before Chile voyage');
+assert.equal(db.events.filter(e=>e.year<=1578).length,45);
 assert(core.name.includes('瓦尔帕莱索')&&core.name.includes('房屋'));
 assert(core.description.includes('总督托莱多'),'contemporary Spanish dispatch cited');
 assert(core.description.includes('12月6日')&&core.description.includes('12月4日'),'record day uncertainty rather than false exact date');
