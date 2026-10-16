@@ -139,9 +139,9 @@ assert third["presentation"]["chapter"]["event_visibility"] == "progressive-by-e
 assert len(third["events"]) >= 15 and len(third["places"]) >= 7
 assert len(third["sources"]) >= 22
 assert not third["colonial_polygons"]
-assert len(third["routes"]) == 2
-assert {r["id"] for r in third["routes"]} == {"KILDARE1512-ATHLONE-ROSCOMMON-AXIS","KILDARE1516-KILLYBEGS-SLIGO-SHIP"}
-assert all(r["route_kind"] == "documented-endpoints-connection" and r["certainty"].endswith(("unmeasured","unknown")) and r["source_ids"] == ["UCC-FOURMASTERS-1510s"] for r in third["routes"])
+assert len(third["routes"]) == 3
+assert {r["id"] for r in third["routes"]} == {"KILDARE1512-ATHLONE-ROSCOMMON-AXIS","KILDARE1516-KILLYBEGS-SLIGO-SHIP","FR1513-THEROUANNE-TOURNAI-ADVANCE"}
+assert all(r["route_kind"] == "documented-endpoints-connection" and len(r["coords"]) == 2 and r["valid_years"] == [r["year"]] and not r["historical_boundary_confirmed"] for r in third["routes"])
 third_source_ids = {row["id"] for row in third["sources"]}
 assert len(third_source_ids) == len(third["sources"])
 for src in third["sources"]:
