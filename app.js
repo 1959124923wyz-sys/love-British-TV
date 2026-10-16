@@ -274,8 +274,9 @@ function openDossier(item,typ){
   (canMapFocus?'':' disabled')+'>◎ 在地图上定位</button><small>'+
   (canMapFocus?'保留当前年份与缩放；手机上返回地图查看':'该事件暂无可定位地点，或尚未发生')+
   '</small></div>':'';
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+locateAction+listSources(item.source_ids,item);
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+(window.HistoryStories?.eventLinkMarkup?.(item,typ)||'')+locateAction+listSources(item.source_ids,item);
  openPanel('dossier');
+ window.HistoryStories?.onEventOpened?.(item,typ);
  const locateButton=$('dossierBody').querySelector('[data-locate-event]');
  if(locateButton&&!locateButton.disabled)
   locateButton.addEventListener('click',()=>focusEventFromSidebar(item,{revealMap:true}));
@@ -392,7 +393,7 @@ function openCollection(items,title){
  openPanel('dossier');
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
-function resetDossier(){selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
+function resetDossier(){window.HistoryStories?.onReset?.();selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
 
 function isNewEventThisYear(item){return item&&item.category!=='status'&&Number(item.year)===year;}
 let eventListClickTimer=null;
@@ -444,12 +445,12 @@ function canLocateEvent(item,atYear){
 function focusEventFromSidebar(item){
  const options=arguments[1]||{};
  if(!item)return;
- openDossier(item,'event');
+ if(!options.keepDossier)openDossier(item,'event');
  focusRequestToken++;
  focusedEventId=null;
  if(!canLocateEvent(item,year)){
   const note=!occurredByYear(item,year)?'请先将时间轴移至事件发生年份。':'此事件位置尚未核实，无法地图定位。';
-  $('dossierBody').insertAdjacentHTML('beforeend','<p class="atlas-location-note">'+escapeHTML(note)+'</p>');
+  if(!options.keepDossier)$('dossierBody').insertAdjacentHTML('beforeend','<p class="atlas-location-note">'+escapeHTML(note)+'</p>');
   renderPoints();
   return;
  }
