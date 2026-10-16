@@ -8,6 +8,7 @@ on:
       - "css/history-stories.css"
       - "scripts/test_major_story_pilot.js"
       - "scripts/browser_major_story_pilot.py"
+      - "scripts/browser_rough_wooing_story.py"
       - "app.js"
       - "index.html"
       - ".github/workflows/major-history-stories.yml"
@@ -31,9 +32,12 @@ jobs:
           pip install selenium
           python -m http.server 8765 &
           python scripts/browser_major_story_pilot.py
+          python scripts/browser_rough_wooing_story.py
       - name: Keep screenshots for review
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: major-story-browser-screenshots
-          path: story-pilot-browser-results/
+          path: |
+            story-pilot-browser-results/
+            rough-wooing-browser-results/
