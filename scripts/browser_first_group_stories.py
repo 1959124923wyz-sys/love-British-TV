@@ -62,7 +62,7 @@ try:
     assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===1"),"1516 Killybegs–Sligo relation should appear in source year"
     link('KILDARE1516-COLLOONEY-ODONNELL',1516)
     link('1507-CARRICKFERGUS-O-NEILL',1507)
-    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===0"),"future route must disappear on rewind"
+    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===2"),"Back in the 1497–1509 chapter, retain Cabot's two legacy voyage directions but never leak the 1512/1516 Irish corridors"
     target=driver.find_element(By.CSS_SELECTOR,'[data-story-event="1507-CARRICKFERGUS-O-NEILL"]')
     js("arguments[0].scrollIntoView({block:'center'})",target)
     ActionChains(driver).double_click(target).perform()
