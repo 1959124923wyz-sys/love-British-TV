@@ -9,7 +9,7 @@ const fifth=j('data/atlas-1530-1539.json'),fourth=j('data/atlas-1520-1529.json')
 const geo=j('data/territorial-footprints-1497-1539.geojson'),old=j('data/territorial-footprints-1497-1529.geojson');
 const urban=j('data/french-urban-control-1497-1539.geojson'),relations=j('data/political-relations-1500-1539.geojson');
 assert.deepEqual(fifth.period,{from:1530,to:1539,next:1540});
-assert.ok(fifth.events.length===27&&fifth.places.length===8&&fifth.sources.length===55);
+assert.ok(fifth.events.length===31&&fifth.places.length===8&&fifth.sources.length===63);
 assert.equal(fifth.colonial_polygons.length,0,'Unverified conquest boundary must not be promoted');
 assert.equal(fifth.routes.length,0,'No invented transatlantic ship routes');
 const ids=new Set(fifth.sources.map(q=>q.id)),placeIds=new Set(fifth.places.map(q=>q.id));
@@ -19,9 +19,9 @@ assert.ok(placeIds.has('channel-guernsey'),'Documented historic Guernsey relatio
 for(const item of [...fifth.events,...fifth.places]){
  assert.ok(item.source_ids?.length&&item.source_ids.every(id=>ids.has(id)),item.id+': source missing');
 }
-assert.equal(fifth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,12);
+assert.equal(fifth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,16);
 assert.equal(fifth.events.filter(e=>e.lat===null&&e.lng===null).length,15);
-const chronological={1530:0,1531:1,1532:3,1533:4,1534:6,1535:9,1536:15,1537:18,1538:22,1539:27};
+const chronological={1530:0,1531:1,1532:3,1533:4,1534:8,1535:12,1536:18,1537:22,1538:26,1539:31};
 for(const [v,n] of Object.entries(chronological)){
  const y=Number(v),actual=fifth.events.filter(e=>e.year<=y);
  assert.equal(actual.length,n,'1530s incomplete year-gated event data '+y);
@@ -69,4 +69,4 @@ assert.ok(!app.includes('function renderMilestones()')&&!html.includes('mileston
 assert.ok(app.includes('fullArchive||occurredByYear(e,year)'),'Unoccurred chapter events leaked');
 assert.ok(app.includes('sourcesById.get(id)')&&app.includes('atlasFifth,atlasSixth'),'fifth chapter source citations not available to dossier');
 assert.ok(app.includes("focusedEventId"),'sidebar event location must remain available');
-console.log('PASS 1530s: 27 chronological records, 8 continued polities, 12 reference sites, 13 no-border statutory shires, 0 fake area/colonial profit');
+console.log('PASS 1530s: 31 chronological records, 8 continued polities, 16 reference sites, 13 no-border statutory shires, 0 fake area/colonial profit');
