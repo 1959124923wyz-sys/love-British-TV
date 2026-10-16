@@ -475,8 +475,7 @@ function focusEventFromSidebar(item){
   map.once('moveend',()=>{
    if(token===focusRequestToken&&focusedEventId===item.id)renderPoints();
   });
-  // Deterministic historical-event recentering: avoid animation races during rapid date jumps.
-  map.panTo(position,{animate:false});
+  map.panTo(position,{animate:true,duration:0.9,easeLinearity:0.22});
   renderPoints();
  },300);
 }
