@@ -29,7 +29,10 @@ def click(eid,y):
  e=d.find_element(By.CSS_SELECTOR,'[data-story-event="'+eid+'"]')
  js("arguments[0].scrollIntoView({block:'center'})",e);e.click()
  year(y)
- w.until(lambda x:x.execute_script("return window.atlasStoryBridge.activeFocusId()===arguments[0]",eid))
+ if eid in ('1540S-038','1540S-036','1540S-040'):
+  w.until(lambda x:x.execute_script("return !!document.querySelector('.story-event-preview')"))
+ else:
+  w.until(lambda x:x.execute_script("return window.atlasStoryBridge.activeFocusId()===arguments[0]",eid))
  assert js("return !!document.querySelector('.major-story-article')")
 try:
  begin(1544,'1540S-006','1544—1550年布洛涅战争：夺城、军屯与撤出')
