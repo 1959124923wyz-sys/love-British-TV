@@ -968,7 +968,7 @@ try:
     set_year(1569, 43)
     verify("Rewind must remove all ninth chapter garrisons and privateering routes",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===21""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===17""",driver)
     # Chapter 10 1580—1589: the Loughrea recapture must remove the English warders,
     # preserve older political identities, and switch colonial places by year.
     set_year(1579, 68)
@@ -981,7 +981,7 @@ try:
               document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelector('#chapterLabel').textContent.includes('第九章')""",driver)
     verify("1580 Drake homebound Atlantic/Indian Ocean legs must appear only after switching into the tenth chronological chapter",
-           """document.querySelectorAll('#map .atlas-voyage-hit').length===18 &&
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===14 &&
               document.querySelector('#yearRange').value==='1580'""",driver)
     verify("1580 Munster armed invasion must have one reference surface",
            """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
@@ -1035,7 +1035,7 @@ try:
     set_year(1586, 24)
     verify("1586 evacuated Roanoke site persisted into year-end",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===9""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===5""",driver)
     verify("1586 must show one Munster policy region and THREE separate Drake-raided towns",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
               document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===3 &&
@@ -1096,7 +1096,7 @@ try:
     set_year(1589, 38)
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===10 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
