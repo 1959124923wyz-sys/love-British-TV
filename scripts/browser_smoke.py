@@ -1042,6 +1042,19 @@ try:
               document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1""",driver)
     verify("1587 Roanoke resettlement missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
     set_year(1588, 34)
+    verify("1588 shipwreck and Crown execution history needs five independent named entries",
+           """['ARM1588-STREEDAGH-STORM','ARM1588-STREEDAGH-SHORE-KILLING',
+               'ARM1588-ROSCLOGHER-REFUGE','ARM1588-CLARE-SPANISHPOINT-EXECUTIONS',
+               'ARM1588-SLIGO-OHART-TORTURE']
+               .every(id=>!!document.querySelector('#eventList .event-item[data-eid="'+id+'"]'))""",driver)
+    verify("1588 four geographic studies must retain Irish Gaelic refuge separately from Crown killings",
+           """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+               .map(el=>el.textContent).some(t=>t.includes('斯特里达')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+               .map(el=>el.textContent).some(t=>t.includes('Rosclogher')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+               .map(el=>el.textContent).some(t=>t.includes('Spanish Point'))""",driver)
+    driver.save_screenshot(str(OUT / "armada-1588-streedagh-rosclogher-clare-source-stories.png"))
     verify("1588 Marrakesh company representative must be commercial, not territorial",
            """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===1 &&
               document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
