@@ -113,7 +113,7 @@ try:
     verify("switch to third chapter failed", """document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')""", driver)
     set_year(1520, 4)
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
-    set_year(1513, 8)
+    set_year(1513, 10)
     # Desktop dossier now replaces the event sidebar instead of squeezing the
     # map into three columns. Return to the archive before WebDriver clicks it.
     if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
