@@ -476,6 +476,14 @@ function focusEventFromSidebar(item){
    if(token===focusRequestToken&&focusedEventId===item.id)renderPoints();
   });
   map.panTo(position,{animate:true,duration:0.9,easeLinearity:0.22});
+  // Preserve smooth motion; if a remote jump is interrupted by layout/tile races,
+  // settle on the requested historical event without changing zoom or the selected year.
+  setTimeout(()=>{
+   if(token!==focusRequestToken||focusedEventId!==item.id||!canLocateEvent(item,year))return;
+   if(Math.abs(map.getCenter().lat-position[0])>0.35||Math.abs(map.getCenter().lng-position[1])>0.35){
+    map.panTo(position,{animate:false});renderPoints();
+   }
+  },1600);
   renderPoints();
  },300);
 }
