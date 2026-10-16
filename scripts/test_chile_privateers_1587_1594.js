@@ -11,7 +11,7 @@ assert.equal(a.events.filter(e=>e.year<=1588).length,35);
 assert.equal(b.events.filter(e=>e.year<=1593).length,10,'Hawkins absent before 1594');
 assert.equal(b.events.filter(e=>e.year<=1594).length,14);
 const cases=[
-{atlas:a,id:'PAC1587-CAVENDISH-QUINTERO',year:1587,icon:'WAR',summary:'未建立',source:'CL-BNC-CAVENDISH-QUINTERO-1587',region:'cl-cavendish-1587-quintero-landing-defense'},
+{atlas:a,id:'PAC1587-CAVENDISH-QUINTERO',year:1587,icon:'WAR',summary:'不将金特罗标为',source:'CL-BNC-CAVENDISH-QUINTERO-1587',region:'cl-cavendish-1587-quintero-landing-defense'},
 {atlas:b,id:'PAC1594-HAWKINS-VALPARAISO',year:1594,icon:'ECO',summary:'被赎回',source:'CL-BNC-HAWKINS-VALPARAISO-1594',region:'cl-hawkins-1594-valparaiso-plunder'}
 ];
 assert.equal(regions.features.length,14,'two new regional study polygons without removing the previous 12');
