@@ -1766,6 +1766,143 @@
         ],
         "figure_precision": "entire_island_geographical_anchor_not_demonstrated_combat_area"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "fr-havre-1562-english-military-city-reading-area",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.082,
+              49.484
+            ],
+            [
+              0.135,
+              49.484
+            ],
+            [
+              0.135,
+              49.508
+            ],
+            [
+              0.082,
+              49.508
+            ],
+            [
+              0.082,
+              49.484
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "name": "1562年勒阿弗尔英军驻城与沃里克堡建设地区",
+        "label_type": "英法港城围城与居民影响 · 虚线阅读区",
+        "zone_type": "english_foreign_city_garrison_schematic",
+        "color_role": "raid_red",
+        "start_year": 1562,
+        "end_year": 1562,
+        "controller_zh": "沃里克英军及勒阿弗尔法国居民",
+        "summary_zh": "1562年英国军队在勒阿弗尔控制港口和城防、建设沃里克堡。此淡色虚线仅帮助理解市区及珀坎维尔方向的驻军活动，不是1562年英属法国领土的精确测绘范围。",
+        "source_ids": [
+          "C8-S07",
+          "FR-HAVRE-MUNICIPAL-WARWICK-MAP"
+        ],
+        "source_urls": [
+          "https://archives.lehavre.fr/vie-militaire-et-conflits-depuis-1548",
+          "https://archives.lehavre.fr/document-archives/plans/plan-dit-warwick-pendant-le-siege-du-havre-15-juillet-1563"
+        ],
+        "related_event_ids": [
+          "1560S-E007",
+          "LEH1562-WARWICK-FORT"
+        ],
+        "named_anchors": [
+          "Le Havre historic port named locality",
+          "Fort Warwick/Percanville modern direction"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Modern illustrative locality box around documented historical places; original Warwick 1563 plan 1FI227 has not been independently georeferenced; never use as military occupation border or damage area.",
+        "source_precision": "Municipal archival primary map identifies the named forts and French camp, not modern GPS vertices.",
+        "mapping_method": "archive_named_city_and_siege_area_non_measured_dashed_schematic",
+        "spatial_semantics": "Le_Havre_named_places_siege_vicinity_not_surveyed_Tudor_border"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fr-havre-1563-french-royal-siege-reading-area",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.069,
+              49.493
+            ],
+            [
+              0.145,
+              49.493
+            ],
+            [
+              0.145,
+              49.521
+            ],
+            [
+              0.069,
+              49.521
+            ],
+            [
+              0.069,
+              49.493
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "name": "1563年勒阿弗尔英古维尔法王军队围城影响区",
+        "label_type": "英法港城围城与居民影响 · 虚线阅读区",
+        "zone_type": "french_royal_siege_foreign_english_garrison",
+        "color_role": "restoration_blue",
+        "start_year": 1563,
+        "end_year": 1563,
+        "controller_zh": "法兰西王室围城军、英军驻城及法国平民",
+        "summary_zh": "1563年法王军队在英古维尔高地及海岸方向进围勒阿弗尔，英军固守港口直到七月末撤离。法军围城区为历史地名阅读范围，不是法军具体壕沟、炮击毁坏或英占城市的实测边界。",
+        "source_ids": [
+          "C8-S09",
+          "EN-BIRMINGHAM-CAMDEN-1563"
+        ],
+        "source_urls": [
+          "https://archives.lehavre.fr/document-archives/plans/plan-dit-warwick-pendant-le-siege-du-havre-15-juillet-1563",
+          "https://philological.cal.bham.ac.uk/camden/1563e.html"
+        ],
+        "related_event_ids": [
+          "LEH1563-INGOUVILLE-FRENCH-CAMP",
+          "LEH1563-PLAGUE-GARRISON",
+          "1560S-E009"
+        ],
+        "named_anchors": [
+          "Ingouville named hill and French camp",
+          "Le Havre port and defensive works"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Modern illustrative locality box around documented historical places; original Warwick 1563 plan 1FI227 has not been independently georeferenced; never use as military occupation border or damage area.",
+        "source_precision": "Municipal archival primary map identifies the named forts and French camp, not modern GPS vertices.",
+        "mapping_method": "archive_named_city_and_siege_area_non_measured_dashed_schematic",
+        "spatial_semantics": "Le_Havre_named_places_siege_vicinity_not_surveyed_Tudor_border"
+      }
     }
   ]
 }
