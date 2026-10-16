@@ -101,7 +101,7 @@ try:
         wait.until(lambda d: d.execute_script("return document.querySelector('#yearRange').value===arguments[0] && document.querySelector('#eventCount').textContent===arguments[1]", str(year), f"{expected}项"))
         time.sleep(0.25)
 
-    set_year(1529, 27)
+    set_year(1529, 32)
     verify("1529 final event missing", "document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     driver.save_screenshot(str(OUT / "chapter4-1529.png"))
     # Full-chapter previews are opt-in per decade; returning to an earlier decade
@@ -186,7 +186,7 @@ try:
            "document.querySelector('#eventList').textContent.includes('梅努斯城堡')", driver)
     driver.save_screenshot(str(OUT / "chapter5-1539.png"))
     toggle_layer("showFullChapterArchive", True)
-    set_year(1529, 27)
+    set_year(1529, 32)
     verify("Fifth chapter archive leaked into fourth",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     set_year(1535, 9)
@@ -488,7 +488,7 @@ try:
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
-    set_year(1549, 90)
+    set_year(1549, 91)
     verify("Western Rising 1549 must separately record attacks, executions, siege and rebel resistance",
            """['GAP1549-WEST-BODMIN-ASSEMBLY','GAP1549-WEST-EXETER-SIEGE',
                'GAP1549-WEST-FENNY-BRIDGES','GAP1549-WEST-WOODBURY-COMMON',

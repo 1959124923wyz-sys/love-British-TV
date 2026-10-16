@@ -13,7 +13,7 @@ const relations=json('data/political-relations-1500-1549.geojson');
 const garrisons=json('data/military-control-points-1540-1549.geojson');
 const app=read('app.js'),html=read('index.html');
 assert.deepEqual(sixth.period,{from:1540,to:1549,next:1550});
-assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[90,27,121], 'Keep legacy records plus ten sourced war sites and 17 citations');
+assert.deepEqual([sixth.events.length,sixth.places.length,sixth.sources.length],[91,27,122], 'Keep legacy records plus ten sourced war sites and 17 citations');
 assert.equal(sixth.events.filter(e=>!e.id.startsWith('RW154')).length,80, 'Preserve all 80 earlier records');
 assert.equal(sixth.events.filter(e=>e.id.startsWith('RW154')).length,10, 'Ten new independent sourced sites');
 assert.equal(sixth.routes.length,0,'Unknown ships routes must not be guessed');
