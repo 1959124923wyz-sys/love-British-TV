@@ -924,7 +924,7 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
               document.querySelector('#dossierBody .source-details')!==null""",driver)
     driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
-    set_year(1578, 34)
+    set_year(1578, 36)
     verify("1578 Mullaghmast massacre wrongly dated 1577",
            """document.querySelector('#eventList [data-eid="1570S-E028"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
@@ -935,17 +935,17 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('1578') &&
               !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1578-Mullaghmast-Inuit-Kodlunarn.png"))
-    set_year(1579, 42)
+    set_year(1579, 44)
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===18 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===20 &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Pacific-privateering-Munster.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("Disabling territory cannot hide 1579 events or voyages",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===18""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===20""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Disabling events left piracy lines or 1579 markers",
@@ -958,7 +958,7 @@ try:
               document.querySelectorAll('#map .atlas-voyage-hit').length===16""",driver)
     # Chapter 10 1580—1589: the Loughrea recapture must remove the English warders,
     # preserve older political identities, and switch colonial places by year.
-    set_year(1579, 42)
+    set_year(1579, 44)
     verify("1580 previous-year Loughrea English warders absent", 
            "document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2",driver)
     set_year(1580,7)
@@ -1080,11 +1080,11 @@ try:
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
-    set_year(1579, 42)
+    set_year(1579, 44)
     verify("rewinding to ninth chapter left tenth control sites",
            "document.querySelectorAll('#map .atlas-tenth-english-site').length===0",driver)
     # 1590s annual/year-end control differences, uncertain study areas, and Drake 1579 underlay.
-    set_year(1579, 42)
+    set_year(1579, 44)
     verify("Drake 1579 voyage schematic continuity backdrop missing",
            "document.querySelectorAll('#map .atlas-voyage-continuity').length>=2",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
