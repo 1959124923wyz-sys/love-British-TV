@@ -50,10 +50,10 @@ try:
     assert after["zoom"]==before["zoom"],"Scrubbing one year changed map zoom"
     assert after["center"]==before["center"],"Scrubbing unexpectedly recentered map"
     current=hits()
-    assert current["newRows"]==3 and "3 项" in current["yearBanner"],current
+    assert current["newRows"]==5 and "5 项" in current["yearBanner"],current
     assert current["singles"]+current["clusters"]>=1,"1512 Omagh new event is invisible on the map"
     assert js("document.querySelector('#eventList .event-item')?.dataset.eid") in (
-        "1512-OMAGH-ODONNELL","KILDARE1512-ROSCOMMON","KILDARE1512-DUNGANNON-ODONNELL"
+        "1512-OMAGH-ODONNELL","KILDARE1512-ROSCOMMON","KILDARE1512-DUNGANNON-ODONNELL","KILDARE1512-ATHLONE-CROSSING","KILDARE1512-BELFAST-ASSAULT"
     ),"A current-year event must be first regardless of significance ranking"
     assert js("document.querySelector('#eventList .year-arrival-tag')?.textContent")=="本年新"
     driver.save_screenshot(str(out/"1512-Omagh-highlight.png"))
@@ -64,7 +64,7 @@ try:
     """)
     hidden=hits()
     assert hidden["singles"]==0 and hidden["clusters"]==0,hidden
-    assert hidden["newRows"]==3,"Hiding map points cannot delete historical archives"
+    assert hidden["newRows"]==5,"Hiding map points cannot delete historical archives"
     assert "图层已关闭" in hidden["mapHint"],hidden
     driver.execute_script("""
       const box=document.querySelector('#mapLayerEvents');
