@@ -12,6 +12,7 @@ on:
       - 'scripts/test_western_prayerbook_1549.js'
       - 'scripts/test_munster_gilbert_1569.js'
       - 'scripts/test_armada_survivors_1588.js'
+      - 'scripts/test_drake_chile_1578.js'
       - '.github/workflows/century-violence-quality.yml'
   push:
     branches: [main]
@@ -42,3 +43,4 @@ jobs:
           node scripts/test_western_prayerbook_1549.js
           node scripts/test_munster_gilbert_1569.js
           node scripts/test_armada_survivors_1588.js
+          node scripts/test_drake_chile_1578.js
