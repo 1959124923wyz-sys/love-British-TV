@@ -1060,22 +1060,23 @@
       "name": "多佛阿奇克利夫炮台开始施工",
       "category": "war",
       "icon_code": "WAR",
-      "lat": null,
-      "lng": null,
-      "geo_precision": "not_verified_for_map",
-      "geography_label": "多佛阿奇克利夫城堡（英格兰）",
-      "description": "1539—1540年多佛Arcliffe附近修建海防设施。现缺阿奇克利夫本体可靠坐标，此事件暂不在地图放点；附近Moats Bulwark不得冒名顶替。",
-      "short_description": "1539—1540年多佛Arcliffe附近修建海防设施。现缺阿奇克利夫本体可靠坐标，此事件暂不在地图放点；附近Moats Bulwark不得冒名顶替。",
+      "lat": 51.115042,
+      "lng": 1.306476,
+      "geo_precision": "modern_NHLE_Archcliffe_Fort_reference_not_1539_bulwark_surviving_outline",
+      "geography_label": "多佛阿奇克利夫炮台现代古迹中心，Historic England NHLE 1016420",
+      "description": "1539—1540年英王在多佛港旁阿奇克利夫修筑海岸炮台。历史英格兰已确认古迹位置，现存防御结构多经后世改造，未能据此复原当年堡垒外缘。",
+      "short_description": "1539—1540年英王在多佛港旁阿奇克利夫修筑海岸炮台。历史英格兰已确认古迹位置，现存防御结构多经后世改造，未能据此复原当年堡垒外缘。",
       "source_ids": [
         "ENG-HE-ARCHCLIFFE-1539",
-        "ENG-HE-MOATS-BULWARK-COORD"
+        "ENG-HE-MOATS-BULWARK-COORD",
+        "ENG-HE-ARCHCLIFFE-NGR"
       ],
       "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
       "significance": {
         "level": 3
       },
       "colonial_profit": null,
-      "position_type": "chronology_only",
+      "position_type": "modern_named_site_reference_only",
       "editorial_status": "published_with_source_and_geographic_limitations",
       "research_event_id": "1530S-E022",
       "economic_fields": null,
@@ -1083,6 +1084,76 @@
       "review_note": "fortification_program_not_overseas_claim",
       "research_category": "WAR",
       "cartographic_rule": "No territorial polygon inferred from this event; modern/reference coordinates not historically surveyed"
+    },
+    {
+      "id": "FORT1539-PENDENNIS-WORKS",
+      "year": 1539,
+      "start_year": 1539,
+      "end_year": 1539,
+      "visible_from": 1539,
+      "date_label": "1539—1545年工程期起始",
+      "name": "英王在康沃尔彭登尼斯开始加强法尔河口炮兵防御",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 50.146116,
+      "lng": -5.046538,
+      "geo_precision": "modern_official_archaeological_heritage_site_reference_not_1539_fortification_footprint",
+      "geography_label": "彭登尼斯现存主堡现代遗产位置，NGR SW82434 31784",
+      "description": "彭登尼斯城堡于1539—1545年间建立，负责与对岸圣莫斯城堡共同控制卡里克锚地；1590年代新增的棱堡不属于1539年建设。",
+      "short_description": "彭登尼斯城堡于1539—1545年间建立，负责与对岸圣莫斯城堡共同控制卡里克锚地；1590年代新增的棱堡不属于1539年建设。",
+      "source_ids": [
+        "ENG-EH-PENDENNIS-1539",
+        "ENG-HE-PENDENNIS-NGR"
+      ],
+      "certainty": "official_heritage_source_verified_start_year_and_modern_site_reference",
+      "significance": {
+        "level": 2,
+        "review_status": "source_verified_historical_site",
+        "rationale": "英王1539年海岸防御工事建设及各堡确切遗产参考"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_site_reference_only",
+      "editorial_status": "published_with_source_and_geographic_limits",
+      "research_event_id": "FORT1539-PENDENNIS-WORKS",
+      "economic_fields": null,
+      "geographic_rule": "domestic_defensive_fortification_not_new_conquest_or_colonial_territory",
+      "review_note": "Construction beginning is not completion or permanent war footing; no sixteenth-century surveyed polygon"
+    },
+    {
+      "id": "FORT1539-WALMER-CONSTRUCTION",
+      "year": 1539,
+      "start_year": 1539,
+      "end_year": 1539,
+      "visible_from": 1539,
+      "date_label": "1539年开工",
+      "name": "亨利八世在肯特沃尔默兴建防御The Downs锚地的炮堡",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 51.200781,
+      "lng": 1.399426,
+      "geo_precision": "modern_official_archaeological_heritage_site_reference_not_1539_fortification_footprint",
+      "geography_label": "沃尔默城堡现存地点，NGR TR37579 50111；不是1539年精确炮位",
+      "description": "沃尔默城堡1539年开工、1540年建成并设常驻守军，与迪尔和桑当共同防守肯特海岸The Downs锚地。",
+      "short_description": "沃尔默城堡1539年开工、1540年建成并设常驻守军，与迪尔和桑当共同防守肯特海岸The Downs锚地。",
+      "source_ids": [
+        "ENG-EH-WALMER-1539",
+        "ENG-HE-WALMER-NGR"
+      ],
+      "certainty": "official_heritage_source_verified_start_year_and_modern_site_reference",
+      "significance": {
+        "level": 2,
+        "review_status": "source_verified_historical_site",
+        "rationale": "英王1539年海岸防御工事建设及各堡确切遗产参考"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_site_reference_only",
+      "editorial_status": "published_with_source_and_geographic_limits",
+      "research_event_id": "FORT1539-WALMER-CONSTRUCTION",
+      "economic_fields": null,
+      "geographic_rule": "domestic_defensive_fortification_not_new_conquest_or_colonial_territory",
+      "review_note": "Construction beginning is not completion or permanent war footing; no sixteenth-century surveyed polygon"
     }
   ],
   "places": [
@@ -1884,6 +1955,51 @@
       "kind": "modern_site_marker_coordinates",
       "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
       "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "ENG-EH-WALMER-1539",
+      "title": "English Heritage, Walmer Castle, built 1539–40",
+      "publisher": "English Heritage",
+      "url": "https://www.english-heritage.org.uk/visit/places/walmer-castle-and-gardens/history-and-stories",
+      "kind": "official_heritage_full_history",
+      "evidence_read_level": "official online heritage record read",
+      "precision_warning": "NGR denotes modern protected historic site; no verified Tudor exact fort outline"
+    },
+    {
+      "id": "ENG-HE-WALMER-NGR",
+      "title": "Historic England NHLE 1000291, Walmer Castle modern coordinate",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1000291/",
+      "kind": "official_heritage_modern_grid_reference",
+      "evidence_read_level": "official online heritage record read",
+      "precision_warning": "NGR denotes modern protected historic site; no verified Tudor exact fort outline"
+    },
+    {
+      "id": "ENG-EH-PENDENNIS-1539",
+      "title": "English Heritage, Pendennis 1539–1545 defensive construction",
+      "publisher": "English Heritage",
+      "url": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/history-and-stories/history/",
+      "kind": "official_heritage_full_history",
+      "evidence_read_level": "official online heritage record read",
+      "precision_warning": "NGR denotes modern protected historic site; no verified Tudor exact fort outline"
+    },
+    {
+      "id": "ENG-HE-PENDENNIS-NGR",
+      "title": "Historic England NHLE 1270096 original fort modern location",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1270096",
+      "kind": "official_heritage_modern_grid_reference",
+      "evidence_read_level": "official online heritage record read",
+      "precision_warning": "NGR denotes modern protected historic site; no verified Tudor exact fort outline"
+    },
+    {
+      "id": "ENG-HE-ARCHCLIFFE-NGR",
+      "title": "Historic England NHLE 1016420 Dover Archcliffe Fort modern site NGR TR31516 40283",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1016420",
+      "kind": "official_heritage_modern_grid_reference",
+      "evidence_read_level": "official online heritage record read",
+      "precision_warning": "NGR denotes modern protected historic site; no verified Tudor exact fort outline"
     }
   ],
   "routes": [],
