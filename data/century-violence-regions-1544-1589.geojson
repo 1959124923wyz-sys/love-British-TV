@@ -362,52 +362,54 @@
         "coordinates": [
           [
             [
-              -8.86,
-              51.79
+              -8.73,
+              52.326
             ],
             [
-              -8.18,
-              51.79
+              -8.44,
+              52.326
             ],
             [
-              -8.18,
-              52.54
+              -8.43,
+              52.494
             ],
             [
-              -8.86,
-              52.54
+              -8.68,
+              52.495
             ],
             [
-              -8.86,
-              51.79
+              -8.73,
+              52.326
             ]
           ]
         ]
       },
       "properties": {
         "map_layer": "territory",
-        "name": "1569年芒斯特：基尔马洛克—科克英军镇压行动",
-        "label_type": "军事或强制政策所涉地区 · 示意",
+        "name": "1569年基尔马洛克—布鲁里：吉尔伯特王室军据点与出击区",
+        "label_type": "王室军作战地点网络 · 非实测示意",
         "zone_type": "colonial_counterinsurgency",
         "color_role": "raid_red",
         "start_year": 1569,
         "end_year": 1569,
         "controller_zh": "英王在爱尔兰的吉尔伯特部队",
-        "summary_zh": "吉尔伯特于1569年9月25日在基尔马洛克附近击退反抗部队，并往返科克，军纪和处决政策包括杀害非战斗人员、毁粮和杀畜；10—11月行动还涉及北凯里。图形只显示基尔马洛克至科克的局部空间关系，不能外推整片芒斯特遭焚或完全被占。",
+        "summary_zh": "吉尔伯特与其部1569年9月23日自布鲁里前往基尔马洛克，9月25日击退菲茨莫里斯、麦卡锡部队。爱尔兰手稿委员会公布的约翰·沃德同期军报记载这两个地名。此图仅围绕有据地点示意，不代表军队实际占区、焚毁村落范围或战场死者分布。",
         "source_ids": [
-          "IR-DIB-GILBERT-MUNSTER"
+          "IR-DIB-GILBERT-MUNSTER",
+          "IR-IMC-GILBERT-LETTERS-1569"
         ],
         "source_urls": [
-          "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467"
+          "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467",
+          "https://www.irishmanuscripts.ie/product/campaign-journals-pb/?attachment_id=6689&download_file=iafqu46ifgcfl"
         ],
         "related_event_ids": [
           "GAP1569-GILBERT-KILMALLOCK",
+          "MUN1569-ROYAL-BRUREE",
           "1560S-E026"
         ],
         "named_anchors": [
           "Kilmallock",
-          "Cork",
-          "northern Kerry (separate campaign stage)"
+          "Bruree (Brulee, named in John Ward's 1569 dispatch)"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -415,10 +417,10 @@
         "area_sqkm": null,
         "occupation_area_sqkm": null,
         "exclude_from_area_aggregation": true,
-        "geometry_provenance": "Research illustration: manually enclosed documented named locality anchors; not historical measured devastation, troop-control, fiscal reach or battle boundary.",
-        "source_precision": "Named places and regional operations verified; line is schematic and is not a georeferenced period map.",
-        "mapping_method": "locality_network_reader_envelope_non_measured",
-        "spatial_semantics": "non_sovereign_historical_effect_region_schematic"
+        "geometry_provenance": "Manually authored location-reading envelope for Bruree and Kilmallock contemporary reports; NOT reconstructed 1569 army deployment, land occupation, village loss or troop-movement corridor.",
+        "source_precision": "Town names contemporaneously attested; no mapped period boundaries or historical battle lines supplied.",
+        "mapping_method": "documented_1569_military_locality_network_reader_envelope_not_surveyed",
+        "spatial_semantics": "named_crown_base_and_battle_environs_non_territorial"
       }
     },
     {
@@ -1022,6 +1024,271 @@
         ],
         "named_anchors": [
           "Stratton parish (locality only)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-munster-1569-kerry-raids",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -9.88,
+              52.19
+            ],
+            [
+              -9.15,
+              52.19
+            ],
+            [
+              -9.14,
+              52.53
+            ],
+            [
+              -9.82,
+              52.55
+            ],
+            [
+              -9.88,
+              52.19
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1569,
+        "end_year": 1569,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_precision": "Historic toponym or region documented; outline hand drawn for map readability, not boundary measurement, devastation footprint, occupation or casualty geography.",
+        "geometry_provenance": "Manually drawn named-place/region orientation frame, NOT a measured 1569 battlefield, burn zone, exploitation district, territorial boundary, or documented flight/army route.",
+        "mapping_method": "source_named_1569_localities_region_envelope_not_measured",
+        "spatial_semantics": "schematic_conflict_and_campaign_geography_excluded_from_sovereign_area",
+        "name": "1569年北凯里：吉尔伯特军袭掠及恐怖镇压涉及区",
+        "label_type": "史料提及的军事行动范围 · 非实测虚线",
+        "zone_type": "colonial_counterinsurgency",
+        "controller_zh": "英王吉尔伯特部队及当地抵抗力量",
+        "summary_zh": "皇家学院传记记载吉尔伯特1569年10—11月在北凯里扫荡，英王军队杀害沿途居民（包括妇女儿童），宰杀牲畜以破坏反抗军生计；其行为属于殖民军事恐怖镇压。这片虚线只表达文献提及的北凯里地区，尚无法确认每个村庄具体遭袭，或将框内全部人员列为受害者。",
+        "source_ids": [
+          "IR-DIB-GILBERT-MUNSTER"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467"
+        ],
+        "related_event_ids": [
+          "MUN1569-KERRY-TERROR"
+        ],
+        "named_anchors": [
+          "North Kerry (regional reference; not all Kerry attacked)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-munster-1569-connello-woods",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -9.16,
+              52.37
+            ],
+            [
+              -8.59,
+              52.37
+            ],
+            [
+              -8.56,
+              52.63
+            ],
+            [
+              -9.08,
+              52.64
+            ],
+            [
+              -9.16,
+              52.37
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1569,
+        "end_year": 1569,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_precision": "Historic toponym or region documented; outline hand drawn for map readability, not boundary measurement, devastation footprint, occupation or casualty geography.",
+        "geometry_provenance": "Manually drawn named-place/region orientation frame, NOT a measured 1569 battlefield, burn zone, exploitation district, territorial boundary, or documented flight/army route.",
+        "mapping_method": "source_named_1569_localities_region_envelope_not_measured",
+        "spatial_semantics": "schematic_conflict_and_campaign_geography_excluded_from_sovereign_area",
+        "name": "1569年Connellough／Connello林地：恐怖扫荡涉及区",
+        "label_type": "史料提及的军事行动范围 · 非实测虚线",
+        "zone_type": "colonial_counterinsurgency",
+        "controller_zh": "英王吉尔伯特部队及芒斯特居民",
+        "summary_zh": "爱尔兰皇家学院记载，吉尔伯特1569年10—11月在Connellough woods等反抗者据点展开军事行动，并以屠杀平民、杀畜等方式迫降。Connellough历史名称与后来Connello barony有关，范围不能机械等同；此示意借现代利默里克西部位置帮助阅读，不是古代森林边界或实际杀戮区。",
+        "source_ids": [
+          "IR-DIB-GILBERT-MUNSTER",
+          "IR-GALWAY-CONNELLO-UPPER-HISTGEO"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467",
+          "https://landedestates.ie/barony/346"
+        ],
+        "related_event_ids": [
+          "MUN1569-CONNELLO-TERROR"
+        ],
+        "named_anchors": [
+          "Connellough woods (not geolocated)",
+          "Connello historic region, west County Limerick"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-munster-1569-kilkenny-defense",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.295,
+              52.625
+            ],
+            [
+              -7.199,
+              52.625
+            ],
+            [
+              -7.19,
+              52.694
+            ],
+            [
+              -7.285,
+              52.694
+            ],
+            [
+              -7.295,
+              52.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1569,
+        "end_year": 1569,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_precision": "Historic toponym or region documented; outline hand drawn for map readability, not boundary measurement, devastation footprint, occupation or casualty geography.",
+        "geometry_provenance": "Manually drawn named-place/region orientation frame, NOT a measured 1569 battlefield, burn zone, exploitation district, territorial boundary, or documented flight/army route.",
+        "mapping_method": "source_named_1569_localities_region_envelope_not_measured",
+        "spatial_semantics": "schematic_conflict_and_campaign_geography_excluded_from_sovereign_area",
+        "name": "1569年基尔肯尼：反抗军围城与英王军军事回应",
+        "label_type": "史料提及的军事行动范围 · 非实测虚线",
+        "zone_type": "rebellion_and_crown_response",
+        "controller_zh": "爱尔兰反抗军；英王守军与吉尔伯特部队",
+        "summary_zh": "菲茨莫里斯与盟友1569年7月围攻基尔肯尼；吉尔伯特参与英王军的解围行动。该地区的英王守御行动不可与其当年秋季在芒斯特实施的杀害非战斗人员政策混为一谈；图形只表现城市围城所涉地域，不宣称实际城防、夺取或焚村边界。",
+        "source_ids": [
+          "IR-DIB-GILBERT-MUNSTER",
+          "IR-RIA-FITZMAURICE-1569"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467",
+          "https://www.dib.ie/biography/fitzgerald-james-fitz-maurice-a3161"
+        ],
+        "related_event_ids": [
+          "MUN1569-ROYAL-KILKENNY"
+        ],
+        "named_anchors": [
+          "Kilkenny city reference"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-munster-1569-cork-kerrycurrihy",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.62,
+              51.775
+            ],
+            [
+              -8.29,
+              51.775
+            ],
+            [
+              -8.28,
+              51.98
+            ],
+            [
+              -8.6,
+              51.982
+            ],
+            [
+              -8.62,
+              51.775
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1569,
+        "end_year": 1569,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_precision": "Historic toponym or region documented; outline hand drawn for map readability, not boundary measurement, devastation footprint, occupation or casualty geography.",
+        "geometry_provenance": "Manually drawn named-place/region orientation frame, NOT a measured 1569 battlefield, burn zone, exploitation district, territorial boundary, or documented flight/army route.",
+        "mapping_method": "source_named_1569_localities_region_envelope_not_measured",
+        "spatial_semantics": "schematic_conflict_and_campaign_geography_excluded_from_sovereign_area",
+        "name": "1569年科克—Kerrycurrihy：反抗军攻击与王室军通行区",
+        "label_type": "史料提及的军事行动范围 · 非实测虚线",
+        "zone_type": "rebellion_and_crown_response",
+        "controller_zh": "爱尔兰菲茨莫里斯部队及英王吉尔伯特部队",
+        "summary_zh": "1569年6月，菲茨莫里斯及其盟友袭击Kerrycurrihy英王殖民定居区，随后反抗活动波及科克。9月底吉尔伯特自基尔马洛克前往科克集结英王军。两种军事行为的主体与目的不同：此虚线说明地区事件与城市通行关系，不能当英王军烧毁科克的证据。",
+        "source_ids": [
+          "IR-RIA-FITZMAURICE-1569",
+          "IR-DIB-GILBERT-MUNSTER"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/fitzgerald-james-fitz-maurice-a3161",
+          "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467"
+        ],
+        "related_event_ids": [
+          "MUN1569-REB-KERRYCURRIHY",
+          "MUN1569-ROYAL-CORK"
+        ],
+        "named_anchors": [
+          "Kerrycurrihy regional reference",
+          "Cork city"
         ]
       }
     }

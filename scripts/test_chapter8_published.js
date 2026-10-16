@@ -14,7 +14,7 @@ const political=read('data/political-relations-1560-1569.geojson'),cities=read('
 const app=txt('app.js'),html=txt('index.html');new vm.Script(app);
 assert.deepEqual(atlas.period,{from:1560,to:1569,next:1570});
 assert.ok(chapters.chapters.some(c=>c.number===7&&c.start===1560&&c.end===1569&&c.status==='published'));
-assert.equal(atlas.events.length,29);assert.equal(atlas.sources.length,25);assert.equal(atlas.places.length,27);
+assert.equal(atlas.events.length,38);assert.equal(atlas.sources.length,30);assert.equal(atlas.places.length,27);
 assert.equal(atlas.routes.length,16);assert.equal(atlas.colonial_polygons.length,0);
 assert.equal(prev.events.length,29);
 const iconSet=new Set(read('data/icon-categories.json').categories.map(x=>x.code)),sources=new Set(atlas.sources.map(x=>x.id)),ids=new Set();
@@ -25,8 +25,15 @@ for(const e of atlas.events){
  assert.ok(iconSet.has(e.icon_code)&&e.icon_code!=='TRA',e.id+' unsupported icon');
  if(e.category==='slavery')assert.equal(e.icon_code,'SLV',e.id+' slavery must use the sanctioned glyph');
  assert.ok(e.source_ids.length&&e.source_ids.every(id=>sources.has(id)),e.id+' unknown citation');
- assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid reference geography');
- assert.ok(/regional|modern/.test(e.geo_precision)&&Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' internal geographical provenance must remain');
+ const explicitlyUnlocated=e.id==='MUN1569-GARRYSTOWN-MASSACRE'||e.id==='MUN1569-HEADS-TERROR';
+ if(explicitlyUnlocated){
+  assert.equal(e.lat,null,e.id+' unknown site must remain unlocated');
+  assert.equal(e.lng,null,e.id+' unknown site must remain unlocated');
+  assert.ok(e.geo_precision?.startsWith('unlocated_')&&e.position_type==='unlocated_historical_site_archival_only');
+ }else{
+  assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid reference geography');
+  assert.ok(/regional|modern/.test(e.geo_precision)&&Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' internal geographical provenance must remain');
+ }
  assert.equal(e.colonial_profit,null);
 }
 const nine=['calais-crown','guines-crown-1520s','dublin-pale','channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'];
@@ -58,7 +65,7 @@ for(const f of geo.features){
  assert.ok(old&&JSON.stringify(old.geometry)===JSON.stringify(f.geometry),'Invented inherited Tudor sovereign geometry '+f.id);
  assert.equal(f.properties.fill_authorized,false);assert.equal(f.properties.observed_through_year,1569);
 }
-const eventCount=[3,4,7,9,11,14,16,20,25,29],routeCount=[0,0,1,3,5,8,8,11,16,16],bandCount=[0,0,1,1,1,1,0,1,1,0];
+const eventCount=[3,4,7,9,11,14,16,20,25,38],routeCount=[0,0,1,3,5,8,8,11,16,16],bandCount=[0,0,1,1,1,1,0,1,1,0];
 for(let y=1560;y<=1569;y++){
  assert.equal(atlas.events.filter(e=>e.year<=y).length,eventCount[y-1560],'Event chronology '+y);
  assert.equal(atlas.routes.filter(r=>r.year<=y).length,routeCount[y-1560],'Voyage chronology '+y);

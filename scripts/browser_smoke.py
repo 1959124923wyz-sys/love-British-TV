@@ -839,7 +839,25 @@ try:
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-french').length===1""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    set_year(1569, 29)
+    set_year(1569, 38)
+    verify("1569 Munster campaign must expose linked Crown terror and named regional warfare locations",
+           """['GAP1569-GILBERT-KILMALLOCK','MUN1569-ROYAL-BRUREE',
+               'MUN1569-ROYAL-CORK','MUN1569-KERRY-TERROR',
+               'MUN1569-CONNELLO-TERROR','MUN1569-MACCARTHY-LIMERICK']
+              .every(id=>!!document.querySelector('#eventList .event-item[data-eid="'+id+'"]'))""",driver)
+    verify("1569 historical records with unlocatable Garrystown and moving field camp remain accessible",
+           """['MUN1569-GARRYSTOWN-MASSACRE','MUN1569-HEADS-TERROR']
+              .every(id=>!!document.querySelector('#eventList .event-item[data-eid="'+id+'"]'))""",driver)
+    verify("1569 four local study regions and original Kilmallock envelope must be visible to readers",
+           """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+             .map(el=>el.textContent).some(s=>s.includes('基尔马洛克')&&s.includes('布鲁里')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+             .map(el=>el.textContent).some(s=>s.includes('北凯里')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+             .map(el=>el.textContent).some(s=>s.includes('Connellough')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+             .map(el=>el.textContent).some(s=>s.includes('基尔肯尼'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter8-gilbert-1569-regional-conflict-studies.png"))
     verify("1569 documentary evidence wrongly continued a slave ship coastal raid",
            """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-french').length===1 &&
@@ -934,7 +952,7 @@ try:
            """document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    set_year(1569, 29)
+    set_year(1569, 38)
     verify("Rewind must remove all ninth chapter garrisons and privateering routes",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===16""",driver)
