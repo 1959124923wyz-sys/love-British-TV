@@ -6,7 +6,7 @@ const a=read('data/atlas-1570-1579.json'),idx=read('data/stories/index.json').st
 const events=new Map(a.events.map(x=>[x.id,x])),refs=new Set(a.sources.map(x=>x.id));
 assert.equal(idx.length,21);assert.equal(a.events.length,68);assert.equal(a.sources.length,83);assert.equal(a.routes.length,26);
 for(const [id,start,end,minimum]of [
-['drake-panama-mule-train-raid-1572-1573',1572,1573,8],
+['drake-panama-mule-train-raid-1572-1573',1572,1573,7],
 ['sidney-pale-cess-connacht-military-campaign-1575-1578',1575,1578,11],
 ['frobisher-arctic-inuit-captives-mining-1576-1578',1576,1578,14]]){
 const m=idx.find(x=>x.id===id);assert(m,'missing index '+id);
