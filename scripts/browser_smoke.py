@@ -383,7 +383,7 @@ try:
               document.querySelectorAll('#map .atlas-war-reach-schematic').length===0 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-aggregate').length===0 &&
-              document.querySelector('#eventCount').textContent==='65项'""",driver)
+              document.querySelector('#eventCount').textContent==='74项'""",driver)
     toggle_layer('mapLayerEvents',True)
     verify("events-only mode incorrectly resurrected British occupation polygons",
            """document.querySelector('#toggleEvents').checked &&
@@ -896,7 +896,7 @@ try:
     set_year(1574, 17)
     verify("1574 Essex murder or scorched-earth route missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===4 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===5 &&
               document.querySelector('#eventList [data-eid="1570S-E009"] use').getAttribute('href').endsWith('#REP')""",driver)
     set_year(1575, 25)
     verify("1575 Rathlin island massacre wrongly redrawn as English entire island",
@@ -906,7 +906,7 @@ try:
     set_year(1576, 30)
     verify("1576 Loughrea garrison and abducted Inuit symbol missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===12 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===14 &&
               document.querySelector('#eventList [data-eid="1570S-E012"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1576-Loughrea-Irish-garrison-Inuit-abduction.png"))
     set_year(1577, 37)
@@ -914,7 +914,7 @@ try:
            """document.querySelector('#eventList [data-eid="1570S-E035"]').textContent.includes('布里斯托尔') &&
               document.querySelector('#eventList [data-eid="1570S-E036"]').textContent.includes('伦敦')""",driver)
     verify("1577 forced transport must expose two Inuit relocation passages plus 1576 leg",
-           """document.querySelectorAll('#map .atlas-voyage-hit').length===14 &&
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===16 &&
               document.querySelector('#eventList [data-eid="1570S-E035"] use').getAttribute('href').endsWith('#DIS') &&
               document.querySelector('#eventList [data-eid="1570S-E036"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E035"]').click()""")
@@ -929,7 +929,7 @@ try:
            """['GAP1578-VALPARAISO','PAC1578-MOCHA-LAFKENCHE',
                'PAC1578-LA-SERENA-DEFENSE'].every(id=>
                  !!document.querySelector('#eventList .event-item[data-eid="'+id+'"]')) &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===21""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===23""",driver)
     verify("1578 Chile archive must distinguish plunder, failed town assault and Lafkenche encounter",
            """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
               .map(x=>x.textContent).some(s=>s.includes('瓦尔帕莱索')) &&
@@ -952,23 +952,23 @@ try:
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===27 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===29 &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Pacific-privateering-Munster.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("Disabling territory cannot hide 1579 events or voyages",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===27""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===29""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Disabling events left piracy lines or 1579 markers",
-           """document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===2 &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     set_year(1569, 43)
     verify("Rewind must remove all ninth chapter garrisons and privateering routes",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===16""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===17""",driver)
     # Chapter 10 1580—1589: the Loughrea recapture must remove the English warders,
     # preserve older political identities, and switch colonial places by year.
     set_year(1579, 53)
