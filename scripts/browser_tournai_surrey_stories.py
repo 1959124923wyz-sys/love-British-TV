@@ -63,7 +63,7 @@ try:
     driver.save_screenshot(str(OUT/'02-surrey-year-recall-and-return.png'))
     driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
     year(1520)
-    wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody h2')?.textContent.includes('莱伊什')"))
+    wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody h2')?.textContent.includes('萨里伯爵进军')"))
     driver.set_window_size(410,840)
     assert js("return document.querySelectorAll('.milestone-dot').length===0")
     print('PASS Tournai/Surrey: sourced campaign points and links, strict 1513/1521 route years, both longforms, double click and restore')
