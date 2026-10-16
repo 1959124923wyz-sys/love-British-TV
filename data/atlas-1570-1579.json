@@ -4097,6 +4097,36 @@
       "note": "1573年NombreDeDios至PanamaIsthmus的军事行动。"
     },
     {
+      "id": "ch9-drake-1573-panama-viejo-nombre-de-dios-silver-cargo",
+      "year": 1573,
+      "name": "1573年巴拿马旧城→Nombre de Dios：西班牙运银驮骡线的贸易端点",
+      "category": "voyage",
+      "route_kind": "schematic-evidence-linked-maritime-or-commercial-corridor",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "named_place_endpoints_without_logged_16c_path",
+      "coords": [
+        [
+          8.952,
+          -79.536
+        ],
+        [
+          9.565,
+          -79.472
+        ]
+      ],
+      "source_ids": [
+        "PA-LOC-DRAKE-CIMARRON",
+        "PA-LOC-DRAKE-1572-73"
+      ],
+      "related_event_ids": [
+        "DRA1573-PANAMA-VIEJO-SILVER-ROAD",
+        "1570S-E006"
+      ],
+      "note": "仅表示太平洋巴拿马旧城和加勒比Nombre de Dios之间的运输网络端点，不能把连接线作为16世纪Camino Real/驮骡的实测路径或1573抢劫地点。",
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null
+    },
+    {
       "id": "ch9-Essex-1574-Tyrone-crop-burning",
       "year": 1574,
       "name": "1574年 · Carrickfergus → Tyrone",
@@ -4248,15 +4278,19 @@
     {
       "id": "ch9-Frobisher-1576-1578-Harwich-Nunavut",
       "year": 1576,
-      "name": "1576年 · Harwich → Kodlunarn",
+      "name": "1576年拉特克利夫→设得兰→巴芬岛（仅有据端点示意）",
       "category": "voyage",
       "route_kind": "schematic-abduction-voyage",
       "certainty": "schematic-only-not-historical-track",
       "geometry_precision": "modern_named_endpoints_not_ship_logs",
       "coords": [
         [
-          51.944,
-          1.284
+          51.511,
+          -0.054
+        ],
+        [
+          60.15,
+          -1.14
         ],
         [
           62.816667,
@@ -4265,14 +4299,15 @@
       ],
       "source_ids": [
         "C9-S15",
-        "C9-S16"
+        "C9-S16",
+        "FR-CANADA-FROBISHER-DCB"
       ],
       "related_event_ids": [
         "1570S-E012",
         "1570S-E023",
         "1570S-E024"
       ],
-      "note": "1576年Harwich至Kodlunarn的远航。"
+      "note": "弗罗比舍1576年6月7日从伦敦拉特克利夫码头启航，6月26日到达设得兰附近后继续向巴芬岛。原路线把1577/78哈里奇出发日期误套到1576年，已校正。"
     },
     {
       "id": "ch9-Inuit-captive-1576-Baffin-to-London",
@@ -4447,6 +4482,36 @@
       "note": "1576年Limerick至Galway的军事行动。"
     },
     {
+      "id": "ch9-frobisher-1577-harwich-kodlunarn-expedition",
+      "year": 1577,
+      "name": "1577年哈里奇→Kodlunarn岛，3船探矿航行（示意）",
+      "category": "voyage",
+      "route_kind": "schematic-evidence-linked-maritime-or-commercial-corridor",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "named_place_endpoints_without_logged_16c_path",
+      "coords": [
+        [
+          51.94639,
+          1.287337
+        ],
+        [
+          62.816667,
+          -65.416667
+        ]
+      ],
+      "source_ids": [
+        "FR-CANADA-FROBISHER-DCB",
+        "FR-PARKS-KODLUNARN"
+      ],
+      "related_event_ids": [
+        "FRO1577-HARWICH-SECOND-VOYAGE",
+        "1570S-E014"
+      ],
+      "note": "1577年第二次北极航行首末节点，海冰与实际船位未复原。",
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null
+    },
+    {
       "id": "ch9-Inuit-captive-1577-Baffin-to-Bristol",
       "year": 1577,
       "name": "1577年 · 巴芬岛 → 布里斯托尔 · 三人遭掳",
@@ -4568,6 +4633,66 @@
         "PAC1578-LA-SERENA-DEFENSE"
       ],
       "note": "智利国家图书馆记载1578年沿岸航次的地点顺序。图上仅为地点间方向关系线，非实测船位、航程、连续英王占领或整段海岸遭袭。",
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null
+    },
+    {
+      "id": "ch9-frobisher-1578-harwich-kodlunarn-mining-fleet",
+      "year": 1578,
+      "name": "1578年哈里奇→Kodlunarn岛，15船矿业与未成越冬队（示意）",
+      "category": "voyage",
+      "route_kind": "schematic-evidence-linked-maritime-or-commercial-corridor",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "named_place_endpoints_without_logged_16c_path",
+      "coords": [
+        [
+          51.94639,
+          1.287337
+        ],
+        [
+          62.816667,
+          -65.416667
+        ]
+      ],
+      "source_ids": [
+        "FR-CANADA-FROBISHER-DCB",
+        "FR-PARKS-KODLUNARN"
+      ],
+      "related_event_ids": [
+        "FRO1578-HARWICH-15-SHIP-MINING",
+        "FRO1578-KODLUNARN-STONE-HOUSE"
+      ],
+      "note": "15艘船的远航首末端点，冰障和船只散失，不能假定所有舰艇采取同一真实航迹。",
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null
+    },
+    {
+      "id": "ch9-frobisher-1578-kodlunarn-to-dartford-ore",
+      "year": 1578,
+      "name": "1578年Kodlunarn矿石→英格兰达特福德熔炼（物流示意）",
+      "category": "voyage",
+      "route_kind": "schematic-evidence-linked-maritime-or-commercial-corridor",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "named_place_endpoints_without_logged_16c_path",
+      "coords": [
+        [
+          62.816667,
+          -65.416667
+        ],
+        [
+          51.443,
+          -0.22
+        ]
+      ],
+      "source_ids": [
+        "FR-PARKS-KODLUNARN",
+        "FR-KENT-DARTFORD-ORE"
+      ],
+      "related_event_ids": [
+        "1570S-E016",
+        "FRO1578-DARTFORD-SMELTING"
+      ],
+      "note": "表示北极矿石从开采点运至英格兰试炼厂的货物流，不构成已证精确航海路线，也不是移民殖民航程。",
       "verified_English_territorial_control": false,
       "actual_area_sqkm": null
     },
