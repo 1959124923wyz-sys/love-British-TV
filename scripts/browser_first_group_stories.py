@@ -26,7 +26,7 @@ def link(eid,yr):
     assert js("return !!document.querySelector('.major-story-article')"),"reading article should stay open"
 def open_from(yr,eid,title):
     driver.get('http://127.0.0.1:8765/?year='+str(yr))
-    wait.until(lambda d:d.execute_script("return !!document.querySelector('#eventList [data-eid=\"'+eid+'\"]')"))
+    wait.until(lambda d:d.execute_script("""return !!document.querySelector('#eventList [data-eid="'+arguments[0]+'"]')""",eid))
     event=driver.find_element(By.CSS_SELECTOR,'#eventList [data-eid="'+eid+'"]')
     js("arguments[0].scrollIntoView({block:'center'})",event)
     event.click()
