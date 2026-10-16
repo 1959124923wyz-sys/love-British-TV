@@ -1041,7 +1041,7 @@ try:
            """document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1""",driver)
     verify("1587 Roanoke resettlement missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
-    set_year(1588, 29)
+    set_year(1588, 34)
     verify("1588 Marrakesh company representative must be commercial, not territorial",
            """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===1 &&
               document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
@@ -1059,7 +1059,7 @@ try:
     verify("1588 land stages must show implementation lag",
            """document.querySelector('#dossierBody').textContent.includes('实际落实') &&
               document.querySelector('#dossierBody .source-link')!==null""",driver)
-    set_year(1589, 32)
+    set_year(1589, 37)
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
@@ -1226,7 +1226,7 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
-    set_year(1589, 32)
+    set_year(1589, 37)
     verify("Back to 1589 leaked year 1590 military area",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
