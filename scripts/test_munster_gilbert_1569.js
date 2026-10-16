@@ -6,10 +6,10 @@ const db=read('data/atlas-1560-1569.json'),areas=read('data/century-violence-reg
 const records=db.events.filter(e=>e.id.startsWith('MUN1569-'));
 assert.equal(records.length,9,'nine discrete 1569 Munster campaign/response events');
 assert.equal(new Set(records.map(e=>e.id)).size,9);
-assert.equal(db.events.length,38,'original 29 events plus the nine additions');
+assert.equal(db.events.length,53,'original 29 events plus the nine additions');
 assert.equal(db.events.filter(e=>e.year<=1568).length,db.events.length-db.events.filter(e=>e.year===1569).length,'all additions must be constrained to 1569');
 const sources=new Map(db.sources.map(s=>[s.id,s]));
-assert.equal(db.sources.length,30);
+assert.equal(db.sources.length,41);
 for(const e of records){
  assert(e.year===1569&&e.start_year===1569&&e.end_year===1569&&e.visible_from===1569,'time barrier '+e.id);
  assert(e.date_label.startsWith('1569年'),'year label '+e.id);
