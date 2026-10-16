@@ -387,6 +387,67 @@
       }
     },
     {
+      "id": "FR1522-CLOUET-CARANTEC-LANDING",
+      "year": 1522,
+      "name": "1522年英军在卡朗泰克克卢埃湾登陆，准备突袭莫尔莱",
+      "lat": 48.65952,
+      "lng": -3.9038,
+      "description": "1522年夏，亨利八世派出的英国舰队驶入莫尔莱海湾，大批士兵在卡朗泰克的克卢埃湾上岸。部队随后穿过海湾南侧乡村，向繁荣的港口城市莫尔莱进军。",
+      "source_ids": [
+        "FR-BRITTANY-INVENTORY-MORLAIX-1522",
+        "GEO-CLOUET-BEACH-OSM-REFERENCE"
+      ],
+      "geo_precision": "modern_Clouet_beach_location_named_1522_bay_no_historic_landing_meter_precision",
+      "category": "military_campaign",
+      "icon_code": "WAR",
+      "geography_label": "Anse du Clouët（克卢埃湾现代海滩）",
+      "start_year": 1522,
+      "end_year": 1522,
+      "visible_from": 1522,
+      "date_label": "1522年",
+      "short_description": "1522年夏，亨利八世派出的英国舰队驶入莫尔莱海湾，大批士兵在卡朗泰克的克卢埃湾上岸。部队随后穿过海湾南侧乡村，向繁荣的港口城市莫尔莱进军。",
+      "position_type": "modern_named_locality_reference_not_warfare_GPS",
+      "certainty": "Brittany_official_heritage_source_named_sequence_modern_reference",
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true,
+      "significance": {
+        "level": 2,
+        "review_status": "official_Brittany_heritage_attested_landing_henvic_burning"
+      }
+    },
+    {
+      "id": "FR1522-HENVIC-LEZIREUR-BURNING",
+      "year": 1522,
+      "name": "1522年英军焚毁埃讷维克莱济勒尔城堡并掠夺沿途农庄",
+      "lat": 48.6330556,
+      "lng": -3.9266667,
+      "description": "英军从克卢埃湾登陆后进入埃讷维克（Henvic）一带，焚烧莱济勒尔城堡（Lézireur），并洗劫附近农庄。部队继续向莫尔莱推进，随后攻入城内抢走商货、放火焚烧部分街区。",
+      "source_ids": [
+        "FR-BRITTANY-INVENTORY-MORLAIX-1522"
+      ],
+      "geo_precision": "modern_Henvic_commune_reference_chateau_Lezireur_precise_site_unverified",
+      "category": "raid_sack",
+      "icon_code": "REP",
+      "geography_label": "Henvic（莱济勒尔城堡遗址待定位，镇区代表点）",
+      "start_year": 1522,
+      "end_year": 1522,
+      "visible_from": 1522,
+      "date_label": "1522年",
+      "short_description": "英军从克卢埃湾登陆后进入埃讷维克（Henvic）一带，焚烧莱济勒尔城堡（Lézireur），并洗劫附近农庄。部队继续向莫尔莱推进，随后攻入城内抢走商货、放火焚烧部分街区。",
+      "position_type": "modern_named_locality_reference_not_warfare_GPS",
+      "certainty": "Brittany_official_heritage_source_named_sequence_modern_reference",
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true,
+      "significance": {
+        "level": 2,
+        "review_status": "official_Brittany_heritage_attested_landing_henvic_burning"
+      }
+    },
+    {
       "id": "1523-FR-SUFFOLK",
       "year": 1523,
       "start_year": 1523,
@@ -1664,6 +1725,18 @@
       "title": "Neil Murphy 2024, Anglo-Scottish War of 1522–1524 (book listing and extracts)",
       "url": "https://www.cambridge.org/core/books/henry-viii-the-duke-of-albany-and-the-angloscottish-war-of-15221524/6C49CCEF46C557C13ECD4DCC73C4A3B2/listing",
       "kind": "academic_book_public_excerpts"
+    },
+    {
+      "id": "FR-BRITTANY-INVENTORY-MORLAIX-1522",
+      "title": "Brittany Regional Cultural Heritage Inventory, Fort dit château du Taureau, 1522 Morlaix landing at Anse du Clouët, Henvic burning and urban sack",
+      "url": "https://rec.patrimoine.bzh/gertrude-diffusion/dossier/IA29000772",
+      "kind": "official_regional_heritage_inventory"
+    },
+    {
+      "id": "GEO-CLOUET-BEACH-OSM-REFERENCE",
+      "title": "OpenStreetMap / Mapcarta modern Anse du Clouët Carantec beach location",
+      "url": "https://mapcarta.com/W661149358",
+      "kind": "modern_geographic_reference_not_surveyed_1522_landing"
     }
   ],
   "routes": [
@@ -1750,6 +1823,40 @@
       ],
       "actor": "Scotland_France_counteroffensive",
       "certainty": "named_areas_documented_1523_exact_crossing_not_surveyed",
+      "historical_boundary_confirmed": false,
+      "territorial_claim": false,
+      "area_sqkm": null,
+      "exclude_from_area_aggregation": true
+    },
+    {
+      "id": "FR1522-CLOUET-HENVIC-MORLAIX-RAID",
+      "year": 1522,
+      "valid_years": [
+        1522
+      ],
+      "name": "1522年英国袭掠莫尔莱：克卢埃湾—埃讷维克—莫尔莱",
+      "category": "war",
+      "route_kind": "documented-named-localities-sequence",
+      "coords": [
+        [
+          48.65952,
+          -3.9038
+        ],
+        [
+          48.6330556,
+          -3.9266667
+        ],
+        [
+          48.57784,
+          -3.82792
+        ]
+      ],
+      "note": "布列塔尼大区文化遗产调查明确给出Carantec Clouët湾登陆、Henvic Lézireur庄堡焚毁、Morlaix城中洗劫的先后。虚线连接现代地名而非实际英国陆军道路；法国地方反击和内奸传说不与确证行动混合。",
+      "source_ids": [
+        "FR-BRITTANY-INVENTORY-MORLAIX-1522"
+      ],
+      "actor": "England_raid",
+      "certainty": "documented_named_places_and_order_no_surveyed_1522_road",
       "historical_boundary_confirmed": false,
       "territorial_claim": false,
       "area_sqkm": null,
