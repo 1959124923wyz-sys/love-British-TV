@@ -10,7 +10,7 @@ const geo=read('data/ch11-action-links-1590-1599.geojson'),sources=new Set(a.sou
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 new vm.Script(app,{filename:'app.js'});
 const indexed=new Map(a.events.map(e=>[e.id,e]));
-assert.equal(a.events.length,37);assert.ok(indexed.has('GAP1597-FAIAL'),'Independent 1597 raid must be preserved');
+assert.equal(a.events.length,38);assert.ok(indexed.has('GAP1597-FAIAL'),'Independent 1597 raid must be preserved');
 const verified=['E001','E002','E004','E008','E009','E010','E013','E018','E020','E023','E024','E026','E029','E033','E035','E036'].map(s=>'1590S-'+s);
 assert.equal(verified.length,16);
 for(const id of verified){

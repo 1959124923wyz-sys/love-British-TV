@@ -1393,6 +1393,41 @@
       "position_type": "unlocated_historical_archive_only",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
+    },
+    {
+      "id": "PAC1587-CAVENDISH-QUINTERO",
+      "year": 1587,
+      "start_year": 1587,
+      "end_year": 1587,
+      "visible_from": 1587,
+      "date_label": "1587年3—4月（史料日期有分歧）",
+      "name": "卡文迪什在智利金特罗登陆取水遭守军反击，船员被俘",
+      "category": "failed_english_privateering_landing",
+      "icon_code": "WAR",
+      "lat": -32.78,
+      "lng": -71.535,
+      "geo_precision": "modern_named_port_locality_reference_not_historical_action_perimeter",
+      "geography_label": "现代港湾地点参考，不是1587或1594年的海岸军阵、抢劫仓库或伤亡分布准确坐标",
+      "description": "1587年，英格兰私掠者托马斯·卡文迪什沿智利太平洋海岸北上，在瓦尔帕莱索以北的金特罗湾（Quintero）登陆取水和补给。西班牙殖民当局在阿隆索·德·索托马约尔任内组织兵力，与英格兰登陆人员交战；英方遭损失，部分人被俘，后来被处决的记载见于海事史研究。事件应区分当地守军杀死/俘获英格兰武装水兵与英方侵袭企图；不将金特罗标为英军成功劫掠、烧毁的殖民城镇。史料对抵港、交战日和伤亡人数存在不同说法，故不设精确人数、处决地或实测战场范围。",
+      "short_description": "1587年，英格兰私掠者托马斯·卡文迪什沿智利太平洋海岸北上，在瓦尔帕莱索以北的金特罗湾（Quintero）登陆取水和补给。西班牙殖民当局在阿隆索·德·索托马约尔任内组织兵力，与英格兰登陆人员交战；英方遭损失，部分人被俘，后来被处决的记载见于海事史研究。事件应区分当地守军杀死/俘获英格兰武装水兵与英方侵袭企图；不将金特罗标为英军成功劫掠、烧毁的殖民城镇。史料对抵港、交战日和伤亡人数存在不同说法，故不设精确人数、处决地或实测战场范围。",
+      "source_ids": [
+        "CL-BNC-CAVENDISH-QUINTERO-1587",
+        "CL-AHNM-CAVENDISH-QUINTERO-1587",
+        "CL-BNC-QUINTERO-PORT-HISTORY-1587"
+      ],
+      "certainty": "institutional_or_primary_record_attests_named_locality_spatial_extent_unknown",
+      "significance": {
+        "level": 3,
+        "rationale": "有来源的英国私掠侵袭或港湾武装冲突，明确行动主体、军事后果与无长期英王统治；地点示意不主张精确历史军控界",
+        "review_status": "cross_checked_national_library_university_or_historical_naval_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_coastal_locality_reference_not_surveyed_16th_century_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2775,6 +2810,30 @@
       "url": "https://heritage.clareheritage.org/places/reading-your-local-landscape/scariff-our-local-landscape/a-clare-mystery-brutally-executed-but-where-are-they-buried",
       "kind": "local_heritage_critical_source_review",
       "precision_warning": "Cnoc na Crocaire and alleged burial site unverified; use Spanish Point locality only."
+    },
+    {
+      "id": "CL-BNC-CAVENDISH-QUINTERO-1587",
+      "title": "Los viajeros ingleses — Thomas Cavendish came to Quintero in 1587",
+      "publisher": "Biblioteca Nacional de Chile — Memoria Chilena",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-619.html",
+      "kind": "chilean_national_library_historical_synthesis",
+      "precision_warning": "Quintero anchorage attested; no proof of sustained English occupation, town sack or a precise 1587 battle perimeter."
+    },
+    {
+      "id": "CL-AHNM-CAVENDISH-QUINTERO-1587",
+      "title": "Boletín de la Academia de Historia Naval y Marítima de Chile no. 22 (2018), Cavendish in Quintero",
+      "publisher": "Academia de Historia Naval y Marítima de Chile",
+      "url": "https://historianaval.cl/publico/publicacion_archivo/publicaciones/83_2.pdf",
+      "kind": "chilean_naval_historical_academic_article",
+      "precision_warning": "Battle and prisoner outcome attested in retrospective literature; casualty numbers and exact date vary and must not be treated as precise."
+    },
+    {
+      "id": "CL-BNC-QUINTERO-PORT-HISTORY-1587",
+      "title": "Historical account of Quintero Bay naming and Cavendish April 1587 combat (archived historical print)",
+      "publisher": "Biblioteca Nacional de Chile — Memoria Chilena digitized historical publication",
+      "url": "https://www.memoriachilena.gob.cl/archivos2/pdfs/MC0064379.pdf",
+      "kind": "digitized_secondary_chilean_local_history",
+      "precision_warning": "Historical print gives April 9 and April 11 while other accounts date March; preserve uncertainty."
     }
   ],
   "routes": [
@@ -2944,6 +3003,7 @@
     "unlocated_events": 15,
     "source_review_stage": "editorial_selection_from_research_QA_not_all_primary_manuscripts_read",
     "crown_net_profit": null,
-    "spatial_addendum": "2026-10-16 05: differentiate Streedagh storm deaths from shoreline murder and Bingham executions; distinguish Irish Gaelic refuge and Clare sheriff executions; O'Hart torture unlocated. No surveyed Crown killing polygons."
+    "spatial_addendum": "2026-10-16 05: differentiate Streedagh storm deaths from shoreline murder and Bingham executions; distinguish Irish Gaelic refuge and Clare sheriff executions; O'Hart torture unlocated. No surveyed Crown killing polygons.",
+    "south_pacific_1587_1594_supplement": "2026-10-16: independently evidenced English privateering and Crown/local defense histories in Chile; non-surveyed region, no quantified English governance, no manufactured casualty sums."
   }
 }

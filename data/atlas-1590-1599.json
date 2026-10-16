@@ -1395,6 +1395,41 @@
       "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
+    },
+    {
+      "id": "PAC1594-HAWKINS-VALPARAISO",
+      "year": 1594,
+      "start_year": 1594,
+      "end_year": 1594,
+      "visible_from": 1594,
+      "date_label": "1594年4月前后",
+      "name": "理查德·霍金斯在瓦尔帕莱索劫掠商船和仓库",
+      "category": "english_privateering_plunder",
+      "icon_code": "ECO",
+      "lat": -33.047,
+      "lng": -71.613,
+      "geo_precision": "modern_named_port_locality_reference_not_historical_action_perimeter",
+      "geography_label": "现代港湾地点参考，不是1587或1594年的海岸军阵、抢劫仓库或伤亡分布准确坐标",
+      "description": "1594年春，英格兰私掠者理查德·霍金斯率Dainty号穿越麦哲伦海峡，驶入西班牙殖民智利瓦尔帕莱索湾，夺取锚泊的商船与后续进入港湾的船只，掠取商品、补给，并洗劫岸上仓库。澳大利亚国立大学出版的历史研究据霍金斯自述记载先夺四艘船、后再获一艘，包含船上黄金，部分船只后来被赎回或释放；因此不能把五艘都写作永久没收。霍金斯本人1622年出版的航海记述是当事人证词，有自我辩护倾向。智利国家图书馆确认1594年英人掠港，但现有来源不足以证明整个城市持续被占领、居民集体遭杀或英国王室获利数额。",
+      "short_description": "1594年春，英格兰私掠者理查德·霍金斯率Dainty号穿越麦哲伦海峡，驶入西班牙殖民智利瓦尔帕莱索湾，夺取锚泊的商船与后续进入港湾的船只，掠取商品、补给，并洗劫岸上仓库。澳大利亚国立大学出版的历史研究据霍金斯自述记载先夺四艘船、后再获一艘，包含船上黄金，部分船只后来被赎回或释放；因此不能把五艘都写作永久没收。霍金斯本人1622年出版的航海记述是当事人证词，有自我辩护倾向。智利国家图书馆确认1594年英人掠港，但现有来源不足以证明整个城市持续被占领、居民集体遭杀或英国王室获利数额。",
+      "source_ids": [
+        "CL-BNC-HAWKINS-VALPARAISO-1594",
+        "AU-ANU-SPATE-HAWKINS-1594",
+        "GB-HAWKINS-OBSERVATIONS-1622"
+      ],
+      "certainty": "institutional_or_primary_record_attests_named_locality_spatial_extent_unknown",
+      "significance": {
+        "level": 3,
+        "rationale": "有来源的英国私掠侵袭或港湾武装冲突，明确行动主体、军事后果与无长期英王统治；地点示意不主张精确历史军控界",
+        "review_status": "cross_checked_national_library_university_or_historical_naval_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_coastal_locality_reference_not_surveyed_16th_century_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2824,6 +2859,30 @@
       "url": "https://philological.cal.bham.ac.uk/camden/1597e.html",
       "kind": "edited_early_modern_historical_account",
       "precision_warning": "Narrative identifies Faial town capture, Spanish withdrawal, plunder in parts of island; no exact shoreline occupation polygon or yearly control claim."
+    },
+    {
+      "id": "CL-BNC-HAWKINS-VALPARAISO-1594",
+      "title": "Los viajeros ingleses — Richard Hawkins plundered Valparaíso in 1594",
+      "publisher": "Biblioteca Nacional de Chile — Memoria Chilena",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-619.html",
+      "kind": "chilean_national_library_historical_synthesis",
+      "precision_warning": "The port is named, but actual ships' positions, warehouse buildings and any assault perimeter are not mapped."
+    },
+    {
+      "id": "AU-ANU-SPATE-HAWKINS-1594",
+      "title": "The Last English Foray: Richard Hawkins, The Spanish Lake (O. H. K. Spate)",
+      "publisher": "Australian National University Press — scholarly historical geography",
+      "url": "https://press-files.anu.edu.au/downloads/press/p66561/html/ch10s06.html",
+      "kind": "university_press_historical_monograph",
+      "precision_warning": "Four anchored prizes plus a fifth arriving vessel and ransom/seizure distinctions; no Crown net profit established."
+    },
+    {
+      "id": "GB-HAWKINS-OBSERVATIONS-1622",
+      "title": "Richard Hawkins, The Observations of Sir Richard Hawkins in his Voyage into the South Sea in the Year 1593 (1622 original, Hakluyt Society reprint)",
+      "publisher": "Project Gutenberg digitization of original participant testimony",
+      "url": "https://www.gutenberg.org/cache/epub/57502/pg57502-images.html",
+      "kind": "primary_participant_published_1622_source_reprinted_1847",
+      "precision_warning": "Participant testimony is interested/partisan and not a surveyed account of losses, shore occupation boundaries or annualized profit."
     }
   ],
   "routes": [],
@@ -2835,6 +2894,7 @@
     "schematic_research_areas": 2,
     "annual_control_core_symbols": 10,
     "english_net_colonial_profit": null,
-    "original_archives_not_all_read": true
+    "original_archives_not_all_read": true,
+    "south_pacific_1587_1594_supplement": "2026-10-16: independently evidenced English privateering and Crown/local defense histories in Chile; non-surveyed region, no quantified English governance, no manufactured casualty sums."
   }
 }

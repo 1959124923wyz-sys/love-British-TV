@@ -1049,12 +1049,17 @@ try:
               document.querySelector('#dossierBody').textContent.includes('1586')""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids-plus-StAugustine.png"))
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids.png"))
-    set_year(1587, 27)
+    set_year(1587, 28)
+    verify("1587 Cavendish Quintero failed landing and sourced dashed conflict region visible",
+           """!!document.querySelector('#eventList [data-eid="PAC1587-CAVENDISH-QUINTERO"]') &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+                .map(n=>n.textContent).some(t=>t.includes('金特罗')&&t.includes('1587'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1587-Cavendish-Quintero-failed-landing.png"))
     verify("1587 Drake port-city raid surfaces persisted after fleet withdrew",
            """document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1""",driver)
     verify("1587 Roanoke resettlement missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
-    set_year(1588, 34)
+    set_year(1588, 35)
     verify("1588 shipwreck and Crown execution history needs five independent named entries",
            """['ARM1588-STREEDAGH-STORM','ARM1588-STREEDAGH-SHORE-KILLING',
                'ARM1588-ROSCLOGHER-REFUGE','ARM1588-CLARE-SPANISHPOINT-EXECUTIONS',
@@ -1085,7 +1090,7 @@ try:
     verify("1588 land stages must show implementation lag",
            """document.querySelector('#dossierBody').textContent.includes('实际落实') &&
               document.querySelector('#dossierBody .source-link')!==null""",driver)
-    set_year(1589, 37)
+    set_year(1589, 38)
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
@@ -1142,7 +1147,12 @@ try:
     verify("1593 cannot show future Fermanagh and Ulster 1594 battles",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
-    set_year(1594,13)
+    set_year(1594,14)
+    verify("1594 Hawkins Valparaiso privateering episode and distinct regional study visible",
+           """!!document.querySelector('#eventList [data-eid="PAC1594-HAWKINS-VALPARAISO"]') &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+                .map(n=>n.textContent).some(t=>t.includes('瓦尔帕莱索')&&t.includes('1594'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1594-Hawkins-Valparaiso-harbour-plunder.png"))
     verify("1594 Fermanagh battle zone absent",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===1",driver)
     driver.execute_script("""document.querySelector('#map .atlas-nine-years-war-study')
@@ -1154,7 +1164,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1594-Fermanagh-contested.png"))
     verify("1594 documented Enniskillen/Blackwater English forts absent",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===5",driver)
-    set_year(1595,19)
+    set_year(1595,20)
     verify("1595 Caribbean actions have FIVE town/region RAID site markers, not occupied San Juan",
            """document.querySelectorAll('#map .atlas-caribbean-raid-site').length===5 &&
               document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===0""",driver)
@@ -1192,12 +1202,12 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
-    set_year(1597, 26)
+    set_year(1597, 27)
     verify("1597 must not retain 1595 Trinidad warfare research area",
            "document.querySelectorAll('#map .atlas-trinidad-1595-impact').length===0",driver)
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
-    set_year(1598, 31)
+    set_year(1598, 32)
     verify("1598 Armagh Yellow Ford Blackwater defeat is a source-backed link not occupation",
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
@@ -1227,7 +1237,7 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===1 &&
               !!document.querySelector('#eventList [data-eid="1590S-E027"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-raid.png"))
-    set_year(1599, 37)
+    set_year(1599, 38)
     verify("1599 previous Yellow Ford connection expired",
            "window.atlasReadActionLinks().count===0",driver)
     verify("1599 Essex south-Ireland march should be a CITY-ORDER LINE, not occupation land",
@@ -1252,7 +1262,7 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
-    set_year(1589, 37)
+    set_year(1589, 38)
     verify("Back to 1589 leaked year 1590 military area",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)

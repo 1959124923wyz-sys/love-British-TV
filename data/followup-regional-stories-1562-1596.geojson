@@ -810,6 +810,142 @@
         "research_event_not_yet_chapter_atlas": false,
         "figure_precision": "700_plus_supervised_executions_per_DIB_George_Bingham_Connacht_multiple_localities_unknown_versus_streedagh_approx_1100_total_shipwreck_and_aftermath_deaths"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "cl-cavendish-1587-quintero-landing-defense",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.618,
+              -32.842
+            ],
+            [
+              -71.436,
+              -32.842
+            ],
+            [
+              -71.435,
+              -32.724
+            ],
+            [
+              -71.596,
+              -32.722
+            ],
+            [
+              -71.618,
+              -32.842
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Approximate reader envelope manually drawn around modern Quintero Bay; NOT a 1587 English landing survey, battle perimeter, prisoner execution site, burned settlement map or English territorial possession.",
+        "source_precision": "Chilean national-library and naval-academy narratives confirm Quintero conflict; exact battle dates and prisoner/casualty counts contested, no historical GIS available.",
+        "name": "1587年智利金特罗：卡文迪什英舰登陆与殖民守军反击（未占领）",
+        "label_type": "英国私掠船登陆冲突 · 未占领港湾",
+        "zone_type": "failed_english_privateering_landing_schematic",
+        "color_role": "raid_red",
+        "start_year": 1587,
+        "end_year": 1587,
+        "controller_zh": "卡文迪什英格兰私掠船员登陆；索托马约尔辖下西班牙殖民守军反击",
+        "summary_zh": "1587年卡文迪什船队在智利Quintero湾停泊并派人登陆取水和补给，遭西班牙殖民守军袭击，船员有所损失并被俘，随后处决的记录存在不同历史说法。现代海湾虚线仅定位这场有记载的登陆战斗，不表示英军成功劫掠、焚毁金特罗城市，亦不表示战死者分布或已被勘测的俘虏刑场。英军此役未建立当地统治。",
+        "source_ids": [
+          "CL-BNC-CAVENDISH-QUINTERO-1587",
+          "CL-AHNM-CAVENDISH-QUINTERO-1587",
+          "CL-BNC-QUINTERO-PORT-HISTORY-1587"
+        ],
+        "source_urls": [
+          "https://www.memoriachilena.gob.cl/602/w3-article-619.html",
+          "https://historianaval.cl/publico/publicacion_archivo/publicaciones/83_2.pdf",
+          "https://www.memoriachilena.gob.cl/archivos2/pdfs/MC0064379.pdf"
+        ],
+        "related_event_ids": [
+          "PAC1587-CAVENDISH-QUINTERO"
+        ],
+        "named_anchors": [
+          "Quintero Bay / port locality",
+          "Valparaíso province"
+        ],
+        "mapping_method": "historic_named_coastal_conflict_modern_reader_envelope_no_measured_boundary"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cl-hawkins-1594-valparaiso-plunder",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.688,
+              -33.086
+            ],
+            [
+              -71.55,
+              -33.086
+            ],
+            [
+              -71.544,
+              -33.002
+            ],
+            [
+              -71.675,
+              -33.002
+            ],
+            [
+              -71.688,
+              -33.086
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Hand-created modern Valparaíso harbour reading area; NOT a 1594 survey of English occupation, robbed warehouses, anchorages or quantified loss geography, nor a continuation of Drake's 1578 attack.",
+        "source_precision": "The Chilean national library, university scholarly synthesis, and Hawkins' partisan contemporary account confirm named-port robbery but not an actual historical spatial perimeter.",
+        "name": "1594年瓦尔帕莱索：霍金斯劫掠商船与仓储（港区示意）",
+        "label_type": "英国私掠夺船及港口财物 · 非实测虚线",
+        "zone_type": "english_privateering_coastal_port_looting",
+        "color_role": "raid_red",
+        "start_year": 1594,
+        "end_year": 1594,
+        "controller_zh": "理查德·霍金斯英格兰私掠船员短时袭击；未建立瓦尔帕莱索英国治理",
+        "summary_zh": "1594年理查德·霍金斯率Dainty号进入瓦尔帕莱索湾，夺取商船并劫掠岸边仓库，部分船只获赎或被放还；智利国家图书馆、澳大利亚国立大学出版社研究与霍金斯1622年自述可互证事件。此半透明港湾虚线为现代地名说明，不是1594年所有被抢货物、军队陆上活动或受害房屋的已调查范围，更不是英王取得智利主权的领土。",
+        "source_ids": [
+          "CL-BNC-HAWKINS-VALPARAISO-1594",
+          "AU-ANU-SPATE-HAWKINS-1594",
+          "GB-HAWKINS-OBSERVATIONS-1622"
+        ],
+        "source_urls": [
+          "https://www.memoriachilena.gob.cl/602/w3-article-619.html",
+          "https://press-files.anu.edu.au/downloads/press/p66561/html/ch10s06.html",
+          "https://www.gutenberg.org/cache/epub/57502/pg57502-images.html"
+        ],
+        "related_event_ids": [
+          "PAC1594-HAWKINS-VALPARAISO"
+        ],
+        "named_anchors": [
+          "Valparaíso port and bay",
+          "Historic Spanish colonial trading harbour"
+        ],
+        "mapping_method": "documented_1594_piracy_named_harbour_schematic_not_historic_impact_gis"
+      }
     }
   ]
 }
