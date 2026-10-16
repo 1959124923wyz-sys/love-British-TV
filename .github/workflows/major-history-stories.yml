@@ -9,6 +9,9 @@ on:
       - "scripts/test_first_group_history_stories.js"
       - "scripts/browser_first_group_stories.py"
       - "data/atlas-1520-1529.json"
+      - "data/atlas-1530-1539.json"
+      - "scripts/test_rut_kildare_major_stories.js"
+      - "scripts/browser_rut_kildare_stories.py"
       - "scripts/test_tournai_surrey_major_stories.js"
       - "scripts/browser_tournai_surrey_stories.py"
       - "data/atlas-1540-1549.json"
@@ -41,6 +44,7 @@ jobs:
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
+          node scripts/test_rut_kildare_major_stories.js
           node scripts/test_first_group_history_stories.js
           node scripts/test_tournai_surrey_major_stories.js
           node scripts/test_scots_calais_stories.js
@@ -54,6 +58,7 @@ jobs:
           python scripts/browser_first_group_stories.py
           python scripts/browser_tournai_surrey_stories.py
           python scripts/browser_scots_calais_stories.py
+          python scripts/browser_rut_kildare_stories.py
       - name: Keep screenshots for review
         if: always()
         uses: actions/upload-artifact@v4
@@ -65,3 +70,4 @@ jobs:
             first-group-major-story-browser-evidence/
             tournai-surrey-browser-results/
             scots-calais-browser-results/
+            rut-kildare-browser-results/

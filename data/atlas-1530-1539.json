@@ -197,22 +197,23 @@
       "name": "基尔代尔叛乱：都柏林围城未能夺取英王城堡",
       "category": "war",
       "icon_code": "WAR",
-      "lat": 53.3498,
-      "lng": -6.2603,
-      "geo_precision": "verified_modern_place_or_archaeological_reference_not_historical_walls",
-      "geography_label": "都柏林城及城堡",
-      "description": "夏秋两季城堡及都柏林遭叛军围攻，英王军控制的城市核心未被攻陷；地方叛军影响范围需另查。",
-      "short_description": "夏秋两季城堡及都柏林遭叛军围攻，英王军控制的城市核心未被攻陷；地方叛军影响范围需另查。",
+      "lat": 53.342886,
+      "lng": -6.267428,
+      "geo_precision": "Dublin Castle archaeologically identifiable modern site reference, not 1534 bombardment position",
+      "geography_label": "都柏林城堡，现代考古遗址中心参照",
+      "description": "1534年夏秋，托马斯·菲茨杰拉德的军队围攻都柏林，却未能攻取王室控制的城堡及其中火炮、弹药。英王增援于秋季抵达，叛军未能实现夺城目标。",
+      "short_description": "1534年夏秋，托马斯·菲茨杰拉德的军队围攻都柏林，却未能攻取王室控制的城堡及其中火炮、弹药。英王增援于秋季抵达，叛军未能实现夺城目标。",
       "source_ids": [
         "IR-ELLIS-DUBLIN-2019",
-        "IR-OPW-DUBLIN-CASTLE"
+        "IR-OPW-DUBLIN-CASTLE",
+        "IR-DUBLIN-CASTLE-ARCHAEOGPS"
       ],
       "certainty": "secondary_official_or_scholarly_source_confirmed_for_event_with_limits",
       "significance": {
         "level": 1
       },
       "colonial_profit": null,
-      "position_type": "modern_site_reference",
+      "position_type": "modern_named_site_reference_not_historical_battle_perimeter",
       "editorial_status": "published_with_source_and_geographic_limitations",
       "research_event_id": "1530S-E003",
       "economic_fields": null,
@@ -220,6 +221,78 @@
       "review_note": "attempted_transfer_failed_crown_city_core_continues",
       "research_category": "WAR",
       "cartographic_rule": "No territorial polygon inferred from this event; modern/reference coordinates not historically surveyed"
+    },
+    {
+      "id": "KIL1534-ARTANE-ALEN-KILLED",
+      "year": 1534,
+      "start_year": 1534,
+      "end_year": 1534,
+      "visible_from": 1534,
+      "date_label": "1534年7月28日",
+      "name": "都柏林大主教约翰·阿伦在阿坦遭叛军人员杀害",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": 53.38274,
+      "lng": -6.195002,
+      "geo_precision": "Artane modern settlement reference, Archbishop's refuge and murder building not independently geolocated",
+      "geography_label": "Artane modern settlement reference, Archbishop's refuge and murder building not independently geolocated",
+      "description": "都柏林大主教阿伦乘船逃离围城时在克朗塔夫搁浅，转至阿坦避难后被托马斯·菲茨杰拉德的追随者杀害。托马斯是否直接下令处死仍有史料争论。",
+      "short_description": "都柏林大主教阿伦乘船逃离围城时在克朗塔夫搁浅，转至阿坦避难后被托马斯·菲茨杰拉德的追随者杀害。托马斯是否直接下令处死仍有史料争论。",
+      "source_ids": [
+        "IR-COI-ALEN-1534",
+        "GEO-ARTANE-SETTLEMENT-REF"
+      ],
+      "certainty": "official_heritage_or_academic_named_place_with_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "基尔代尔叛乱进程中有据的独立政治或军事节点",
+        "review_status": "editor_source_checked"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_site_or_locality_reference_only",
+      "editorial_status": "published_with_source_and_geographic_limitations",
+      "research_event_id": "KIL1534-ARTANE-ALEN-KILLED",
+      "economic_fields": null,
+      "geographic_rule": "single_site_or_legal_action_not_entire_county_control",
+      "review_note": "source-backed named-place only; no exact battle or execution geometry",
+      "cartographic_rule": "modern place reference; no measured 16th-century territorial polygon"
+    },
+    {
+      "id": "KIL1534-STMARYS-RENOUNCEMENT",
+      "year": 1534,
+      "start_year": 1534,
+      "end_year": 1534,
+      "visible_from": 1534,
+      "date_label": "1534年6月11日",
+      "name": "托马斯·菲茨杰拉德在都柏林圣玛丽修道院宣布反叛英王",
+      "category": "governance",
+      "icon_code": "POL",
+      "lat": 53.34752,
+      "lng": -6.2694,
+      "geo_precision": "St Mary's Abbey surviving chapter house modern site, not 1534 building perimeter",
+      "geography_label": "St Mary's Abbey surviving chapter house modern site, not 1534 building perimeter",
+      "description": "年轻的托马斯·菲茨杰拉德进入都柏林圣玛丽修道院议事厅，在王家爱尔兰议会官员面前公开放弃效忠亨利八世；基尔代尔叛乱由此爆发。",
+      "short_description": "年轻的托马斯·菲茨杰拉德进入都柏林圣玛丽修道院议事厅，在王家爱尔兰议会官员面前公开放弃效忠亨利八世；基尔代尔叛乱由此爆发。",
+      "source_ids": [
+        "IR-OPW-STMARYS-1534",
+        "IR-NIAH-STMARYS-COORD"
+      ],
+      "certainty": "official_heritage_or_academic_named_place_with_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "基尔代尔叛乱进程中有据的独立政治或军事节点",
+        "review_status": "editor_source_checked"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_site_or_locality_reference_only",
+      "editorial_status": "published_with_source_and_geographic_limitations",
+      "research_event_id": "KIL1534-STMARYS-RENOUNCEMENT",
+      "economic_fields": null,
+      "geographic_rule": "single_site_or_legal_action_not_entire_county_control",
+      "review_note": "source-backed named-place only; no exact battle or execution geometry",
+      "cartographic_rule": "modern place reference; no measured 16th-century territorial polygon"
     },
     {
       "id": "1530S-E004",
@@ -235,8 +308,8 @@
       "lng": -6.59407,
       "geo_precision": "verified_modern_place_or_archaeological_reference_not_historical_walls",
       "geography_label": "爱尔兰梅努斯",
-      "description": "1535年3月，Skeffington王军炮击并取得杰拉德家族堡垒；仅能确认城堡局部权力变化，不得连带把基尔代尔全郡涂作新占领。",
-      "short_description": "1535年3月，Skeffington王军炮击并取得杰拉德家族堡垒；仅能确认城堡局部权力变化，不得连带把基尔代尔全郡涂作新占领。",
+      "description": "1535年3月，斯凯芬顿率领英王军炮击并攻陷杰拉德家族的梅努斯城堡。城堡失守严重削弱托马斯叛军的军事能力。",
+      "short_description": "1535年3月，斯凯芬顿率领英王军炮击并攻陷杰拉德家族的梅努斯城堡。城堡失守严重削弱托马斯叛军的军事能力。",
       "source_ids": [
         "IR-OPW-MAYNOOTH-1535",
         "IR-OPW-MAYNOOTH-CASTLE",
@@ -324,6 +397,42 @@
       "cartographic_rule": "No territorial polygon inferred from this event; modern/reference coordinates not historically surveyed"
     },
     {
+      "id": "KIL1535-MAYNOOTH-GARRISON-EXECUTIONS",
+      "year": 1535,
+      "start_year": 1535,
+      "end_year": 1535,
+      "visible_from": 1535,
+      "date_label": "1535年3月",
+      "name": "王军夺取梅努斯后处决部分已经投降的城堡守军",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": 53.38116,
+      "lng": -6.59407,
+      "geo_precision": "Maynooth Castle modern ruins reference, executions exact places not known",
+      "geography_label": "Maynooth Castle modern ruins reference, executions exact places not known",
+      "description": "英王军攻入梅努斯家族堡垒后，对部分投降守军实施处决，后称“梅努斯赦免”。此事属于王军战后惩罚，不与叛军围攻都柏林混为一谈。",
+      "short_description": "英王军攻入梅努斯家族堡垒后，对部分投降守军实施处决，后称“梅努斯赦免”。此事属于王军战后惩罚，不与叛军围攻都柏林混为一谈。",
+      "source_ids": [
+        "IR-COUNTY-KILDARE-DURNEY",
+        "IR-OPW-MAYNOOTH-1535"
+      ],
+      "certainty": "official_heritage_or_academic_named_place_with_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "基尔代尔叛乱进程中有据的独立政治或军事节点",
+        "review_status": "editor_source_checked"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_site_or_locality_reference_only",
+      "editorial_status": "published_with_source_and_geographic_limitations",
+      "research_event_id": "KIL1535-MAYNOOTH-GARRISON-EXECUTIONS",
+      "economic_fields": null,
+      "geographic_rule": "single_site_or_legal_action_not_entire_county_control",
+      "review_note": "source-backed named-place only; no exact battle or execution geometry",
+      "cartographic_rule": "modern place reference; no measured 16th-century territorial polygon"
+    },
+    {
       "id": "1530S-E007",
       "year": 1536,
       "start_year": 1536,
@@ -370,8 +479,8 @@
       "lng": null,
       "geo_precision": "not_verified_for_map",
       "geography_label": "爱尔兰基尔代尔",
-      "description": "1536—1537年间王室通过法律追夺杰拉德家族相关地产。莱克斯利普（Leixlip）庄园议会法令在两种已整理学术/地方档案索引中有1536和1537的纪年分歧，待核原始会期。不可将所有现代基尔代尔郡涂作英王新占领。",
-      "short_description": "1536—1537年间王室通过法律追夺杰拉德家族相关地产。莱克斯利普（Leixlip）庄园议会法令在两种已整理学术/地方档案索引中有1536和1537的纪年分歧，待核原始会期。不可将所有现代基尔代尔郡涂作英王新占领。",
+      "description": "1536—1537年间，英王政府通过法律追夺杰拉德家族有关地产和继承权。其中莱克斯利普部分法令的会期纪年在地方资料与研究中存在差异。",
+      "short_description": "1536—1537年间，英王政府通过法律追夺杰拉德家族有关地产和继承权。其中莱克斯利普部分法令的会期纪年在地方资料与研究中存在差异。",
       "source_ids": [
         "IR-ULSTER-CHRONOLOGY",
         "IR-ELLIS-REBELLION-LAW",
@@ -629,6 +738,44 @@
       "review_note": "coercive_anglicisation_legislation_enforcement_not_proven",
       "research_category": "REP",
       "cartographic_rule": "No territorial polygon inferred from this event; modern/reference coordinates not historically surveyed"
+    },
+    {
+      "id": "KIL1537-TYBURN-EXECUTIONS",
+      "year": 1537,
+      "start_year": 1537,
+      "end_year": 1537,
+      "visible_from": 1537,
+      "date_label": "1537年2月3日",
+      "name": "托马斯·菲茨杰拉德及五名叔父在伦敦泰伯恩被处决",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": 51.51327,
+      "lng": -0.16033,
+      "geo_precision": "modern Tyburn Tree commemorative plaque reference, historical gallows not surveyed",
+      "geography_label": "modern Tyburn Tree commemorative plaque reference, historical gallows not surveyed",
+      "description": "1535年投降后的托马斯被押至英格兰，1537年2月3日与五名叔父在伦敦泰伯恩刑场处决。这是王室司法镇压，不是爱尔兰的战斗。",
+      "short_description": "1535年投降后的托马斯被押至英格兰，1537年2月3日与五名叔父在伦敦泰伯恩刑场处决。这是王室司法镇压，不是爱尔兰的战斗。",
+      "source_ids": [
+        "IR-COUNTY-KILDARE-DURNEY",
+        "IR-OPW-SILKEN-1537",
+        "ENG-EH-TYBURN-MONUMENT",
+        "GEO-TYBURN-MARKER-REF"
+      ],
+      "certainty": "official_heritage_or_academic_named_place_with_modern_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "基尔代尔叛乱进程中有据的独立政治或军事节点",
+        "review_status": "editor_source_checked"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_site_or_locality_reference_only",
+      "editorial_status": "published_with_source_and_geographic_limitations",
+      "research_event_id": "KIL1537-TYBURN-EXECUTIONS",
+      "economic_fields": null,
+      "geographic_rule": "single_site_or_legal_action_not_entire_county_control",
+      "review_note": "source-backed named-place only; no exact battle or execution geometry",
+      "cartographic_rule": "modern place reference; no measured 16th-century territorial polygon"
     },
     {
       "id": "1530S-E014",
@@ -1665,6 +1812,78 @@
       "evidence_read_level": "official Grade I heritage listing",
       "origin": "research/periods/1530-1539/SOURCE_REGISTRY.json",
       "precision_warning": "Disputed dates must be separated by legal surrender/refoundation/final dissolution; present structure partially later."
+    },
+    {
+      "id": "IR-OPW-STMARYS-1534",
+      "title": "Irish Office of Public Works St Mary's Abbey Chapter House",
+      "publisher": "Official heritage / archaeology institution",
+      "url": "https://heritageireland.ie/places-to-visit/st-marys-abbey-chapter-house/",
+      "kind": "official_heritage_full_page",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "IR-NIAH-STMARYS-COORD",
+      "title": "NIAH Dublin Saint Mary's Abbey Chapter House Record 50060660",
+      "publisher": "Official heritage / archaeology institution",
+      "url": "https://www.buildingsofireland.ie/buildings-search/building/50060660/saint-marys-abbey-chapter-house-meetinghouse-lane-dublin-7-dublin",
+      "kind": "official_historic_site_coordinates",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "IR-COI-ALEN-1534",
+      "title": "Church of Ireland, Archbishop John Alen and his Register, 2019",
+      "publisher": "Historical and geographical research source",
+      "url": "https://www.churchofireland.org/news/8930/archbishop-john-alen-c-14761534",
+      "kind": "primary_register_institution_commentary",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "IR-COUNTY-KILDARE-DURNEY",
+      "title": "James Durney, Tudor Re-Conquest in County Kildare, Kildare County Libraries",
+      "publisher": "Historical and geographical research source",
+      "url": "https://kildarelibraries.ie/ehistory/tudor-re-conquest-in-kildare/",
+      "kind": "public_county_library_historical_research",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "IR-DUBLIN-CASTLE-ARCHAEOGPS",
+      "title": "Dublin Castle archaeological excavation 1985 site coordinates",
+      "publisher": "Official heritage / archaeology institution",
+      "url": "https://excavations.ie/report/1985/Dublin/0000590/",
+      "kind": "official_archaeology_site_report",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "ENG-EH-TYBURN-MONUMENT",
+      "title": "English Heritage Tyburn Tree commemorative plaque",
+      "publisher": "Official heritage / archaeology institution",
+      "url": "https://www.english-heritage.org.uk/visit/blue-plaques/tyburn-tree/",
+      "kind": "official_historical_location_reference",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "GEO-ARTANE-SETTLEMENT-REF",
+      "title": "Artane Dublin modern locality coordinate",
+      "publisher": "Historical and geographical research source",
+      "url": "https://www.wikidata.org/wiki/Q2078191",
+      "kind": "modern_locality_reference_only",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
+    },
+    {
+      "id": "GEO-TYBURN-MARKER-REF",
+      "title": "Site of Tyburn Tree modern commemorative marker",
+      "publisher": "Historical and geographical research source",
+      "url": "https://mapcarta.com/N1612357132",
+      "kind": "modern_site_marker_coordinates",
+      "evidence_read_level": "named source page checked; archaeological/modern reference not 1530s measured boundary",
+      "precision_warning": "Do not use site point to infer historical siege perimeter or new territorial acquisition"
     }
   ],
   "routes": [],

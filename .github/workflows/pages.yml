@@ -26,6 +26,7 @@ jobs:
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
+          node scripts/test_rut_kildare_major_stories.js
           node scripts/test_first_group_history_stories.js
           node scripts/test_tournai_surrey_major_stories.js
           node scripts/test_scots_calais_stories.js

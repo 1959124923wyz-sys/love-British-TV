@@ -27,7 +27,9 @@ assert.ok(ireland.date_label.includes('1541年')&&ireland.date_label.includes('1
 assert.ok(data.events.every(e=>/中文/.test(e.date_label) || !/[A-Za-z]/.test(e.date_label)),'Public date badges must not contain untranslated research-English annotation');
 assert.ok(data.events.every(e=>e.research_date_label || /^\d{4}年/.test(e.date_label)),'Research dates must remain recoverable');
 const original=JSON.parse(text('data/atlas-1530-1539.json'));
-assert.equal(original.events.length,27,'Fifth-chapter historic record must remain untouched');
+const newKildareIds=new Set(['KIL1534-STMARYS-RENOUNCEMENT','KIL1534-ARTANE-ALEN-KILLED','KIL1535-MAYNOOTH-GARRISON-EXECUTIONS','KIL1537-TYBURN-EXECUTIONS']);
+assert.equal(original.events.filter(e=>!newKildareIds.has(e.id)).length,27,'Original 1530s historical events must survive independent additions');
+assert.equal(original.events.filter(e=>newKildareIds.has(e.id)).length,4,'Four new source-backed Kildare sites expected');
 assert.equal(garrison.features.length,19,'Roxburgh sourced 1547 artillery fort reference point included');
 assert.ok(garrison.features.some(f=>f.properties.stable_id==='roxburgh-english-artillery-fort-1547-1550'&&f.properties.fill_authorized===false));
 assert.ok(garrison.features.every(f=>f.geometry.type==='Point'),'Neither an English siege nor French defence implies surveyed polygon');

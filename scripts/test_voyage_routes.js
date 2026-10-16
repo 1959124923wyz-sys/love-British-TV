@@ -9,7 +9,7 @@ const last=JSON.parse(read('data/atlas-1520-1529.json'));
 assert.equal(early.routes.length,2);
 assert.ok(early.routes.some(r=>r.year===1497));
 assert.ok(early.routes.some(r=>r.year===1498));
-assert.equal(last.routes.length,4,'1527 Rut voyage and 1521–23 military history lines are independent');
+assert.equal(last.routes.length,5,'Preserve prior routes and separate English vessel sighting in Caribbean');
 const route=last.routes[0];
 assert.equal(route.id,'route1527-rut-endpoints-schematic');
 assert.equal(route.year,1527);

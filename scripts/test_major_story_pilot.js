@@ -21,7 +21,7 @@ for(const meta of index.stories){
  assert.equal(story.id,meta.id);
  assert.equal(story.start_year,meta.start_year);
  assert.equal(story.end_year,meta.end_year);
- assert.ok(story.start_year<story.end_year);
+ assert.ok(story.start_year<=story.end_year,'Single-year historic documentary narratives are permitted');
  assert.ok(story.sections.length>=8,'multi-stage historical narrative');
  assert.ok(story.lead.length>=120,'explain the significance without boilerplate');
  const paragraphs=story.sections.flatMap(s=>s.paragraphs);

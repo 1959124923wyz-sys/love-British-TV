@@ -10,7 +10,7 @@ const targets=[
  ['anglo-scottish-war-border-raids-1522-1523',1522,1523,['SC1522-KELSO-RAID','SC1523-KELSO-ABBEY-ATTACK','SC1523-ALBANY-COLDSTREAM-MUSTER']],
  ['calais-guines-english-pale-1497-1558',1497,1558,['1500-CALAIS-ETAPLES','1505-CALAIS-STAPLE-ROYAL-PAYMENTS','1529-GUINES-LAWS','CAL1542-GARRISON-ACCOUNTS','1550S-E018','1550S-E019','1550S-E025','CAL1558-RISBAN-FRENCH-CAPTURE','CAL1558-NEWNHAM-FRENCH-CAPTURE']]
 ];
-assert.equal(index.length,8);
+assert.ok(index.length>=10,'Preserve prior eight stories while accepting later verified articles');
 for(const[id,start,end,needed]of targets){
  const meta=index.find(x=>x.id===id);assert(meta,id+' not indexed');
  const story=j(meta.file);assert.equal(story.id,id);assert.equal(story.title,meta.title);
@@ -33,8 +33,8 @@ for(const[id,start,end,needed]of targets){
  console.log('PASS narrative',id,'chars',txt.length,'links',links);
 }
 const fourth=atlases[2],sixth=atlases[4];
-assert.equal(fourth.events.length,32);
-assert.equal(fourth.routes.length,4);
+assert.equal(fourth.events.length,35);
+assert.equal(fourth.routes.length,5);
 assert.equal(sixth.events.length,92);
 assert.equal(sixth.sources.length,124);
 assert.equal(atlases[5].events.length,31,'preserve 29 pre-existing 1550s events and map two French 1558 outworks');
