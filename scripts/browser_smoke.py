@@ -180,7 +180,7 @@ try:
     verify("Crown Calais controls lost at 1529/1530",
            "document.querySelectorAll('#map .control-area-label').length>=0", driver)
     driver.save_screenshot(str(OUT / "chapter5-1530.png"))
-    for annual, expected in [(1531,1),(1532,3),(1533,4),(1534,6),(1535,9),(1536,15),(1537,18),(1538,22),(1539,27)]:
+    for annual, expected in [(1531,1),(1532,3),(1533,4),(1534,8),(1535,12),(1536,18),(1537,22),(1538,26),(1539,33)]:
         set_year(annual, expected)
     verify("1539 lost 1535 Maynooth event",
            "document.querySelector('#eventList').textContent.includes('梅努斯城堡')", driver)
@@ -383,7 +383,7 @@ try:
               document.querySelectorAll('#map .atlas-war-reach-schematic').length===0 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-aggregate').length===0 &&
-              document.querySelector('#eventCount').textContent==='65项'""",driver)
+              document.querySelector('#eventCount').textContent==='74项'""",driver)
     toggle_layer('mapLayerEvents',True)
     verify("events-only mode incorrectly resurrected British occupation polygons",
            """document.querySelector('#toggleEvents').checked &&
