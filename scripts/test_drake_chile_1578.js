@@ -8,9 +8,9 @@ const core=db.events.find(e=>e.id==='GAP1578-VALPARAISO');
 const newcomers=db.events.filter(e=>e.id.startsWith('PAC1578-'));
 assert(core&&core.year===1578,'original 1578 Valparaiso raid must survive without duplication');
 assert.equal(newcomers.length,2,'add only Mocha and failed La Serena, do not double count already-published raid');
-assert.equal(db.events.length,44);
-assert.equal(db.sources.length,65);
-assert.equal(db.routes.length,20);
+assert.equal(db.events.length,53);
+assert.equal(db.sources.length,69);
+assert.equal(db.routes.length,22);
 assert.equal(db.events.filter(e=>e.year<=1577).length,28,'no premature publication before Chile voyage');
 assert.equal(db.events.filter(e=>e.year<=1578).length,36);
 assert(core.name.includes('瓦尔帕莱索')&&core.name.includes('房屋'));
@@ -42,7 +42,7 @@ for(const r of legs){
 }
 const selected=areas.features.filter(f=>f.id.startsWith('cl-drake-1578-'));
 assert.equal(selected.length,3,'three different coastline studies, not a single Chile-wide claim');
-assert.equal(areas.features.length,26);
+assert.equal(areas.features.length,28);
 for(const f of selected){
  const p=f.properties,ring=f.geometry?.coordinates?.[0];
  assert(f.geometry?.type==='Polygon'&&ring?.length>=5);
@@ -60,7 +60,7 @@ for(const f of selected){
 assert(selected.find(x=>x.id==='cl-drake-1578-la-serena-defense-region').properties.summary_zh.includes('袭击失败'),'must show local victory');
 assert(selected.find(x=>x.id==='cl-drake-1578-isla-mocha-lafkenche-contact').properties.color_role==='restoration_blue','indigenous locality distinguish from raid-red Crown aggression');
 const app=fs.readFileSync(path.join(base,'app.js'),'utf8');
-assert(app.includes('centuryData?.features?.length!==26'));
+assert(app.includes('centuryData?.features?.length!==28'));
 assert(app.includes('[atlasSixth,atlasEighth,atlasNinth,atlasTenth]'),'Ninth chapter region references verified at load time');
 assert(app.includes('indigenous_defense_and_privateer_contact_schematic'));
 console.log('PASS 06: 1578 Valparaiso original raid enhanced, Mocha and La Serena named incidents, two archival schematic routes, three dashed non-territorial zones, no invented Chile conquest');
