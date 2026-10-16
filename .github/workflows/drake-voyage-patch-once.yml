@@ -1,0 +1,41 @@
+name: Drake 1577-1580 route continuity PATCH QA
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix/drake-voyage-continuity-1577-1580-20261016
+    paths:
+      - .github/workflows/drake-voyage-patch-once.yml
+      - data/drake-circumnavigation-1577-1580.json
+      - js/voyage-geometry.js
+      - app.js
+      - index.html
+      - scripts/test_drake_circumnavigation_continuity.js
+      - scripts/test_chapter9_published.js
+
+permissions:
+  contents: read
+
+jobs:
+  route-chronology-and-geographic-projection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax and historical voyage continuity
+        run: |
+          node --check js/voyage-geometry.js
+          node --check app.js
+          node scripts/test_drake_circumnavigation_continuity.js
+      - name: No regression in published chapter 8/9 route stories and global chronology
+        run: |
+          node scripts/test_chapter9_published.js
+          node scripts/test_chapter10_published.js
+          node scripts/test_drake_chile_1578.js
+          node scripts/test_voyage_routes.js
+          node scripts/test_chronology.js
+          node scripts/validate_published_data_references.js
+      - name: Ensure no production deployment or main branch mutation
+        run: |
+          test "${GITHUB_REF_NAME}" = "fix/drake-voyage-continuity-1577-1580-20261016"
+          node -e "const x=require('./data/drake-circumnavigation-1577-1580.json');if(x.routes.some(r=>r.year>1580))process.exit(1);console.log('PATCH QA PASS; no merge/deploy')"
