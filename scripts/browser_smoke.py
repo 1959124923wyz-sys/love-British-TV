@@ -52,7 +52,7 @@ try:
            "!!document.querySelector('.leaflet-tile[src*=\"tile.openstreetmap.org\"]')",driver)
     assert driver.execute_script("return document.querySelector('#yearRange').value")==browser_year_before, "Basemap switch changed historical year"
 
-    wait.until(lambda d: d.execute_script("return document.querySelector('#eventCount')?.textContent==='4项'"))
+    wait.until(lambda d: d.execute_script("return document.querySelector('#eventCount')?.textContent==='5项'"))
     verify("chapter 4 not active at 1520", """document.querySelector('#chapterTrack [data-decade="1520"]').classList.contains('active')""", driver)
     verify("1520 list leaked 1529 historical event", "!document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     verify("modern representative 1520s locations lost dashed uncertainty markers",
@@ -107,13 +107,13 @@ try:
     # Full-chapter previews are opt-in per decade; returning to an earlier decade
     # must not leak future 1520s events into the 1510s or vice versa.
     toggle_layer("showFullChapterArchive", True)
-    set_year(1519, 22)
+    set_year(1519, 25)
     verify("complete-archive preview leaked into a new chapter",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     verify("switch to third chapter failed", """document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')""", driver)
-    set_year(1520, 4)
-    verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
-    set_year(1513, 10)
+    set_year(1520, 5)
+    verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='5项'", driver)
+    set_year(1513, 12)
     # Desktop dossier now replaces the event sidebar instead of squeezing the
     # map into three columns. Return to the archive before WebDriver clicks it.
     if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
