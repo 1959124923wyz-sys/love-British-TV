@@ -59,3 +59,5 @@
 - 编辑研究备注、坐标精度、来源访问层级、政治控制面禁令、军事主体归属必须继续严守，但**主要进入后台研究层，不占用故事正文**。
 
 本次对两篇第一组专题 `cabot-bristol-atlantic-voyages-1496-1498.json`、`kildare-gaelic-lordship-wars-1503-1519.json` 完成全面重写，并由 `scripts/test_first_group_history_stories.js` 验证正文不回退为地图技术报告。
+
+**子事件资料卡同样适用**：`atlas-*.json`中的`events[].description`和`short_description`只写历史事实和因果；地理定位误差、数据准入、如何解读地图等编研备注移至`geo_precision`、`position_type`、`geography_label`和单独来源核查记录。重要争议可用一句自然语言交代，不对观众讲解GIS方法。
