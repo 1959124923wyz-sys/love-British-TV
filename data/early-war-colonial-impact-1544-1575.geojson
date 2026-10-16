@@ -3,9 +3,9 @@
   "name": "Source-qualified Early Tudor war and colonial impact regional guide additions 1544-1575",
   "metadata": {
     "status": "researched_schematic_only",
-    "geometry_policy": "Shape is illustrative and cannot measure occupation, damage, hectares, death toll or stable Crown rule; direct source linked in each feature",
+    "geometry_policy": "ALL study features remain non-measured, non-territorial dashed locality envelopes; new East Lothian 1544 coastal raid corridor is a reading aid only.",
     "subject": "Evidence-backed regional narratives that were missing from existing plotted areas",
-    "feature_count": 6
+    "feature_count": 7
   },
   "features": [
     {
@@ -426,6 +426,90 @@
         "color_role": "raid_red"
       },
       "type": "Feature"
+    },
+    {
+      "type": "Feature",
+      "id": "rough-wooing-prestonpans-dunbar-raid-locality-1544",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.045,
+              55.923
+            ],
+            [
+              -2.914,
+              55.916
+            ],
+            [
+              -2.682,
+              55.947
+            ],
+            [
+              -2.463,
+              55.975
+            ],
+            [
+              -2.477,
+              56.042
+            ],
+            [
+              -2.7,
+              56.026
+            ],
+            [
+              -2.97,
+              55.997
+            ],
+            [
+              -3.045,
+              55.923
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "rough-wooing-prestonpans-dunbar-raid-locality-1544",
+        "map_layer": "territory",
+        "name": "1544年普雷斯顿潘斯—邓巴：英军焚掠关联地方（虚线示意）",
+        "label_type": "英军短时袭掠涉及区（非英军占领）",
+        "zone_type": "english_raid_impact_schematic",
+        "color_role": "raid_red",
+        "controller_zh": "赫特福德伯爵率领的英格兰入侵军；苏格兰独立王国仍保持主权",
+        "start_year": 1544,
+        "end_year": 1544,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "area_statistics_forbidden": true,
+        "spatial_semantics": "limited_named_localities_reader_envelope_not_measured_damage_or_control_boundary",
+        "geometry_provenance": "Hand-drawn rough visual research envelope spanning HES-documented 1544 Preston Tower and Dunbar raid places; vertices DO NOT follow Tudor camp, road, burnt area, municipal or troop-control limits.",
+        "mapping_method": "multi_sourced_named_sites_1544_Hertford_coastal_raid_visual_envelope_not_surveyed",
+        "named_anchors": [
+          "Preston Tower (Prestonpans)",
+          "Dunbar historic town"
+        ],
+        "related_event_ids": [
+          "RW1544-PRESTON-TOWER-BURNING",
+          "RW1544-DUNBAR-BURNING",
+          "1540S-008"
+        ],
+        "source_ids": [
+          "SC-HES-PRESTON-TOWER-1544",
+          "SC-HES-ANCRUM-KINGHORN-DUNBAR"
+        ],
+        "source_urls": [
+          "https://portal.historicenvironment.scot/designation/LB17530",
+          "https://portal.historicenvironment.scot/designation/BTL2"
+        ],
+        "source_precision": "Two 1544 named-sites and regional campaign supported; no evidence of every area inside outline being burned or held.",
+        "summary_zh": "1544年，赫特福德英军在苏格兰东洛锡安焚毁普雷斯顿塔、袭掠邓巴等具名地点。浅红虚线只是帮助读者看到同一沿岸军事行动的地点关系，图内其他乡野及村庄并未逐一核实遇袭。此处不能作为英军占领面积、房屋损毁面积或死亡人数分布使用。",
+        "geographical_precision": "Named modern heritage references only; editorial locality envelope completely schematic."
+      }
     }
   ]
 }
