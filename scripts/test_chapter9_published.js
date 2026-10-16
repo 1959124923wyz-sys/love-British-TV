@@ -24,7 +24,7 @@ assert.ok(manifest.chapters.length>=9);
 assert.ok(manifest.chapters.some(c=>c.number===8&&c.start===1570&&c.end===1579&&c.status==='published'));
 assert.equal(now.events.length,44);assert.equal(now.places.length,43);assert.equal(now.sources.length,65);
 assert.equal(now.routes.length,20);assert.equal(now.colonial_polygons.length,0);
-assert.equal(old.events.length,38);
+assert.equal(old.events.length,53);
 const ids=new Set(),src=new Set(now.sources.map(s=>s.id));
 assert.equal(icons.size,16);assert.equal(src.size,65);
 for(const e of now.events){
