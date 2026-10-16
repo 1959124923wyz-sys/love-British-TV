@@ -2440,15 +2440,23 @@
       "route_kind": "regional-sea-corridor-schematic",
       "certainty": "schematic-only-not-historical-track",
       "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
-      "note": "1554年John Lok船队从泰晤士河出航，经Sestos与三岬角海岸航往Mina一带。",
+      "note": "1554年洛克船队自泰晤士河出发，经过多佛、拉伊和达特茅斯再航往几内亚。",
       "coords": [
         [
           51.5,
           0.12
         ],
         [
-          50.36,
-          -3.58
+          51.126,
+          1.313
+        ],
+        [
+          50.95,
+          0.73
+        ],
+        [
+          50.35,
+          -3.57
         ],
         [
           33.1,
@@ -2483,7 +2491,7 @@
       "related_event_ids": [
         "1550S-E007"
       ],
-      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+      "cartographic_note": "港口顺序从Hakluyt/Kerr行记复原；离岸连接仅是示意折线，不能当实测航海航迹或英国沿岸占领线。"
     },
     {
       "id": "ch7-sea-1555-lok-enslaved-return",
@@ -2537,19 +2545,19 @@
       "route_kind": "regional-sea-corridor-schematic",
       "certainty": "schematic-only-not-historical-track",
       "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
-      "note": "1555年Towerson船队从英格兰驶向几内亚海岸。",
+      "note": "1555年托沃森船队由怀特岛纽波特出发，经达特茅斯驶往塞斯托斯河与黄金海岸。",
       "coords": [
         [
-          50.71,
-          -1.29
+          50.701,
+          -1.288
         ],
         [
-          42.5,
-          -13
+          50.35,
+          -3.57
         ],
         [
-          31,
-          -19
+          33.1,
+          -17.1
         ],
         [
           19,
@@ -2570,12 +2578,14 @@
       ],
       "source_ids": [
         "AF-CAMBRIDGE-HAKLUYT-TOURSON",
-        "AF-HISTORIC-ENGLAND-JOHN-LOK"
+        "AF-HISTORIC-ENGLAND-JOHN-LOK",
+        "AF-CAM-HKL-TOWERSON-1555",
+        "AF-KERR-TOWERSON-DETAILS"
       ],
       "related_event_ids": [
         "1550S-E010"
       ],
-      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+      "cartographic_note": "港口顺序从Hakluyt/Kerr行记复原；离岸连接仅是示意折线，不能当实测航海航迹或英国沿岸占领线。"
     },
     {
       "id": "ch7-sea-1556-towerson-elmina",
@@ -2585,8 +2595,16 @@
       "route_kind": "regional-sea-corridor-schematic",
       "certainty": "schematic-only-not-historical-track",
       "geometry_precision": "documented-voyage-regions-with-illustrative-offshore-bends",
-      "note": "1556年Towerson船队抵达几内亚和葡萄牙控制的Elmina堡附近。",
+      "note": "1556年托沃森从哈里奇出发，曾尝试于锡利群岛会合他船，再到普利茅斯整备后向西非前进。",
       "coords": [
+        [
+          51.94639,
+          1.287337
+        ],
+        [
+          49.9,
+          -6.3
+        ],
         [
           50.37,
           -4.14
@@ -2622,12 +2640,15 @@
       ],
       "source_ids": [
         "AF-CAMBRIDGE-HAKLUYT-TOURSON",
-        "AF-UNESCO-ELMINA-PORTUGUESE"
+        "AF-UNESCO-ELMINA-PORTUGUESE",
+        "AF-CAM-HKL-TOWERSON-1556",
+        "AF-KERR-TOWERSON-DETAILS",
+        "UK-GAZETTEER-HARWICH-ESSEX"
       ],
       "related_event_ids": [
         "1550S-E016"
       ],
-      "cartographic_note": "按史料出现的出发区、经行海域及贸易海岸概略连接。任何拐点及长度不得用于航程、货量、登陆地点或疆域测算。"
+      "cartographic_note": "港口顺序从Hakluyt/Kerr行记复原；离岸连接仅是示意折线，不能当实测航海航迹或英国沿岸占领线。"
     },
     {
       "id": "ch7-sea-1557-towerson-sestos",
