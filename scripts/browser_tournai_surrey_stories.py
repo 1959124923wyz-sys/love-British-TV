@@ -59,7 +59,7 @@ try:
     driver.find_element(By.CSS_SELECTOR,'[data-story-back]').click()
     wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article')"))
     jump('1522-SURREY-END-IRELAND',1522)
-    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===0"),'Surrey 1521 return must not persist'
+    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===1"),'1522 shows Morlaix landing relation, never continuing Surrey 1521 military line'
     driver.save_screenshot(str(OUT/'02-surrey-year-recall-and-return.png'))
     driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
     year(1520)

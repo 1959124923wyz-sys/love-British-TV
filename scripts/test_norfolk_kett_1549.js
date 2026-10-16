@@ -40,6 +40,6 @@ const regionGuard=app.match(/centuryData\?\.features\?\.length!==([0-9]+)/);
 assert(regionGuard&&Number(regionGuard[1])===areas.features.length,
  'App must validate the real total number of sourced geographic studies, including subsequent approved additions');
 assert(app.includes('renderEarlyRegionalImpactAreas()'));
-assert(db.events.filter(e=>e.year<=1548&&!e.id.startsWith('RW154')).length===53,'All 53 prior 1540–1548 records must remain');
+assert(db.events.filter(e=>e.year<=1548&&!e.id.startsWith('RW154')).length===55,'Preserve the existing 53 war records plus 1542 Calais and Morlaix sourced activity');
 assert.equal(db.events.filter(e=>e.id.startsWith('RW154')).length,10,'Additional Rough Wooing sites must not disturb Norfolk records');
 console.log('PASS: source-backed Norfolk 1549, eight year-gated events, two small non-territorial study polygons and actor distinction');

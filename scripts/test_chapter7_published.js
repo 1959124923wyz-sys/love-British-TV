@@ -12,9 +12,9 @@ const relations=read('data/political-relations-1550-1559.geojson'),urban=read('d
 const app=raw('app.js'),html=raw('index.html');
 new vm.Script(app);
 assert.deepEqual(atlas.period,{from:1550,to:1559,next:1560});
-assert.equal(atlas.events.length,29);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,52);
+assert.equal(atlas.events.length,31);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,54);
 assert.equal(atlas.routes.length,9);assert.equal(atlas.colonial_polygons.length,0);
-assert.equal(previous.events.filter(e=>!e.id.startsWith('RW154')).length,80,'Keep every pre-existing 1540s record');
+assert.equal(previous.events.filter(e=>!e.id.startsWith('RW154')).length,82,'Keep prior 1540s events plus 1542 Taureau and Calais finance records');
 assert.equal(previous.events.filter(e=>e.id.startsWith('RW154')).length,10,'Preserve ten newly sourced Rough Wooing events');
 assert.ok(chapter.chapters.some(c=>c.number===6&&c.start===1550&&c.end===1559&&c.status==='published'));
 const sources=new Set(atlas.sources.map(s=>s.id)),events=new Set();
@@ -99,6 +99,6 @@ assert.ok(app.includes("function controllerAtYear(properties,selectedYear)")&&!a
 assert.ok(app.includes('function renderSeventhControlSites()'));
 assert.ok(app.includes('sourcesById.get(id)'),'Seventh chapter bibliographies must be clickable');
 assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
-const expected=[6,6,6,8,9,12,19,21,26,29];
+const expected=[6,6,6,8,9,12,19,21,28,31];
 for(let y=1550;y<=1559;y++)assert.equal(atlas.events.filter(e=>e.year<=y).length,expected[y-1550],'year reveals future events: '+y);
 console.log('PASS seventh chapter: 29 events, 18 sites, 52 sources, 7 intact reference geometries, 9 military nodes; year-end 1558 French Calais transition and 1556 Irish plantation semantics.');

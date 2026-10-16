@@ -19,7 +19,7 @@ const hypotheses=data('data/geography-hypotheses-1500-1529.geojson');
 assert.deepEqual(fourth.period,{from:1520,to:1529,next:1530});
 assert.ok(fourth.events.length>=24&&fourth.places.length>=7&&fourth.sources.length>=49);
 assert.equal(fourth.colonial_polygons.length,0,'Unsourced 1520s land polygons must not be manufactured');
-assert.equal(fourth.routes.length,2,'Retain 1527 voyage and add 1521 source-attested Surrey departure line');
+assert.equal(fourth.routes.length,4,'1521 Surrey, 1522 Morlaix, 1523 Scots-French and 1527 Rut site/sea relations');
 assert.equal(fourth.routes[0].route_kind,'documented-endpoints-connection');
 assert.equal(fourth.routes[0].coords.length,2,'Do not fabricate ocean waypoint geometry');
 assert.ok(fourth.routes[0].source_ids.every(id=>fourth.sources.some(s=>s.id===id)));

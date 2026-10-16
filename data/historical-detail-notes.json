@@ -899,6 +899,90 @@
       "geo_precision": "historic_structure_or_locality_reference_not_war_perimeter",
       "source_index": "Research notes in docs/TOURNAI_SURREY_STORY_HANDOFF_1513_1522.md",
       "research_path": "docs/TOURNAI_SURREY_STORY_HANDOFF_1513_1522.md"
+    },
+    "SC1522-KELSO-RAID": {
+      "context": "1522年凯尔索遭英方部队袭击，地方史记录城镇受到火灾及掠夺。",
+      "source_ids": [
+        "SC-COCHRANE-KELSO-HISTORICAL",
+        "SC-MURPHY-2024-KELSO-SCORCHED"
+      ],
+      "geography": "Kelso现代城镇中心仅为地名参照点。"
+    },
+    "SC1523-KELSO-ABBEY-ATTACK": {
+      "context": "1523年英方军队攻击凯尔索修道院。",
+      "geography": "Kelso Abbey现代遗址参照点，1523战时建筑边界尚不确定。",
+      "source_ids": [
+        "SC-MURPHY-2024-BORDERS-BOOK"
+      ]
+    },
+    "SC1523-ALBANY-COLDSTREAM-MUSTER": {
+      "context": "1523年苏格兰摄政奥尔巴尼与法国部队在冷溪周边组织进攻沃克堡。",
+      "geography": "Coldstream现代地名参照，具体军营与渡口位置未知。",
+      "source_ids": [
+        "SC-MURPHY-2020-ALBANY-INVASION",
+        "ENG-HE-WARK-SM1013100"
+      ]
+    },
+    "FR1522-CLOUET-CARANTEC-LANDING": {
+      "context": "1522年英国军队在Carantec的Anse du Clouët上岸，向Morlaix出发。",
+      "geography": "Clouët海滩现代位置参考，不等于确切泊船位置。",
+      "source_ids": [
+        "FR-BRITTANY-INVENTORY-MORLAIX-1522",
+        "GEO-CLOUET-BEACH-OSM-REFERENCE"
+      ]
+    },
+    "FR1522-HENVIC-LEZIREUR-BURNING": {
+      "context": "1522年英国军队途经Henvic，袭击Lézireur城堡和附近农庄，随后进攻Morlaix。",
+      "geography": "Henvic现代市镇参考，未确认Lézireur遗址坐标。",
+      "source_ids": [
+        "FR-BRITTANY-INVENTORY-MORLAIX-1522"
+      ]
+    },
+    "CAL1542-GARRISON-ACCOUNTS": {
+      "context": "英国国家档案馆E351/530–535含加来财政官员1542—1545年的驻军财政账目。",
+      "geography": "今Calais城镇参照，不表示经费路线或古行政边界。",
+      "source_ids": [
+        "CAL-TNA-EXCHEQUER-1542-1545"
+      ]
+    },
+    "CAL1558-RISBAN-FRENCH-CAPTURE": {
+      "context": "1558年1月吉斯公爵率法军对加来实施突袭，先行控制港口入口的里斯班炮堡，进一步阻断英军海路支援。",
+      "impact": "独立于加来主城投降的先期外围堡垒攻取节点，属于法国军事行动，而不是英军继续占有港口。",
+      "geography": "现代里斯班堡留存区域，不能用现存建筑轮廓表示1558年炮兵阵地。",
+      "source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558",
+        "CAL-FR-ARCHIVES-1558-RISBAN"
+      ],
+      "certainty": "official_municipal_or_cultural_heritage_attested_naming_historic_footprint_unmeasured",
+      "geo_precision": "modern_site_reference_not_surveyed_16th_century_earthworks",
+      "source_index": "France regional and municipal heritage sources",
+      "research_path": "docs/SCOTS_CALAIS_MORLAIX_1522_1558_HANDOFF.md"
+    },
+    "CAL1558-NEWNHAM-FRENCH-CAPTURE": {
+      "context": "1558年1月法国吉斯公爵军队突击加来西侧纽纳姆桥及水闸防线，该关口被夺后英王外围防御遭严重削弱。",
+      "impact": "这是法军攻城过程的一部分，随后加来、吉讷与哈姆斯相继失守。",
+      "geography": "现代Fort Nieulay遗址的城市地理参照，不能认定现存形态就是1558年Newnham城墙。",
+      "source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558",
+        "CAL-FR-ARCHIVES-1558-NIEULAY"
+      ],
+      "certainty": "official_municipal_or_cultural_heritage_attested_naming_historic_footprint_unmeasured",
+      "geo_precision": "modern_site_reference_not_surveyed_16th_century_earthworks",
+      "source_index": "France regional and municipal heritage sources",
+      "research_path": "docs/SCOTS_CALAIS_MORLAIX_1522_1558_HANDOFF.md"
+    },
+    "FR1542-MORLAIX-TAUREAU-FORT": {
+      "context": "布列塔尼港口莫尔莱1522年遭英军袭掠后，当地商民建设陶罗岛海防。法国文化部古迹数据库将工程第一时期列为1542年，地区遗产调查记录地方筹资与港湾炮位的建设。",
+      "impact": "莫尔莱居民在遭英军掠夺后采取的当地自卫建设行动；1542年工程与1689年后沃邦改扩建是不同年代。",
+      "geography": "陶罗岛坐标由布列塔尼地方地理数据确定，现代海堡不是1542年原始炮塔的考古实测墙界。",
+      "source_ids": [
+        "FR-CULTURE-TAUREAU-1542",
+        "FR-BRETAGNE-TAUREAU-DEFENCE"
+      ],
+      "certainty": "official_municipal_or_cultural_heritage_attested_naming_historic_footprint_unmeasured",
+      "geo_precision": "modern_site_reference_not_surveyed_16th_century_earthworks",
+      "source_index": "France regional and municipal heritage sources",
+      "research_path": "docs/SCOTS_CALAIS_MORLAIX_1522_1558_HANDOFF.md"
     }
   },
   "chapters": [

@@ -9,7 +9,7 @@ const last=JSON.parse(read('data/atlas-1520-1529.json'));
 assert.equal(early.routes.length,2);
 assert.ok(early.routes.some(r=>r.year===1497));
 assert.ok(early.routes.some(r=>r.year===1498));
-assert.equal(last.routes.length,2,'1527 Cabot-era voyage and 1521 Surrey sourced action relationship coexist');
+assert.equal(last.routes.length,4,'1527 Rut voyage and 1521–23 military history lines are independent');
 const route=last.routes[0];
 assert.equal(route.id,'route1527-rut-endpoints-schematic');
 assert.equal(route.year,1527);
@@ -20,6 +20,8 @@ assert.ok(route.source_ids.every(id=>last.sources.some(s=>s.id===id)),'1527 voya
 const surrey=last.routes.find(x=>x.id==='IR1521-MONASTERORIS-TO-DUBLIN-RETURN');
 assert(surrey&&surrey.route_kind==='documented-endpoints-connection'&&surrey.coords.length===2);
 assert.deepEqual(surrey.valid_years,[1521]);
+assert(last.routes.some(r=>r.id==='FR1522-CLOUET-HENVIC-MORLAIX-RAID'&&r.valid_years?.[0]===1522));
+assert(last.routes.some(r=>r.id==='SC1523-COLDSTREAM-WARK-SCOTS-ADVANCE'&&r.actor==='Scotland_France_counteroffensive'&&r.valid_years?.[0]===1523));
 for(let y=1520;y<=1529;y++)
  assert.equal(last.routes.filter(r=>r.id==='route1527-rut-endpoints-schematic'&&r.year<=y).length, y>=1527?1:0,'voyage prematurely visible or missing at '+y);
 assert.ok(app.includes("map.createPane('voyagePane')"),'route pane missing');
