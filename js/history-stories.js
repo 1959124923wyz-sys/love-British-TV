@@ -10,11 +10,7 @@
  let clickTimer=null, requestSerial=0;
  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]});}
  function activeBody(){return document.getElementById('dossierBody');}
- function eventInMemory(id){
-  const datasets=[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasFirstMerged];
-  for(const data of datasets){const e=data&&data.events&&data.events.find(x=>x.id===id);if(e)return e;}
-  return null;
- }
+ function eventInMemory(id){return window.atlasStoryBridge?.eventById?.(id)||null;}
  function linkMarkupForEvent(item,typ){
   if(typ!=='event')return '';
   const id=storyByEvent.get(item.id),meta=storyMeta.get(id);
@@ -75,16 +71,16 @@
  async function openStory(id,restore){
   const meta=storyMeta.get(id);if(!meta)return;
   if(!restore){
-   const current=typeof selected==='string'?selected:null;
+   const current=window.atlasStoryBridge?.selectedEventId?.()||null;
    if(current&&storyByEvent.get(current)===id)sourceEventId=current;
    readingScroll=0;
   }
   returnStoryId=null;lastStoryId=id;
   document.getElementById('workspace').classList.add('story-reading');
-  selectedItemYear=null;
+  window.atlasStoryBridge?.clearSelectedEventYear?.();
   const container=activeBody();
   container.innerHTML='<p class="loading">正在打开历史专题……</p>';
-  openPanel('dossier');
+  window.atlasStoryBridge?.showDossier?.();
   const serial=++requestSerial;
   try{
    let story=storyCache.get(id);
@@ -107,31 +103,31 @@
  }
  function focusStoryEvent(item){
   if(!item)return;
-  const inChapter=atlas&&atlas.events.some(x=>x.id===item.id);
-  if(!inChapter||item.year>year){
+  const inChapter=window.atlasStoryBridge?.activeHasEvent?.(item.id);
+  if(!inChapter||item.year>window.atlasStoryBridge.currentYear()){
    showStatus('该事件属于'+item.year+'年；切换年份后才能在地图上定位。',item);return;
   }
   if(!Number.isFinite(item.lat)||!Number.isFinite(item.lng)){
    showStatus('这一事件没有经过确认的参考坐标，仍可双击阅读史料。');return;
   }
   readingScroll=activeBody().scrollTop;
-  focusEventFromSidebar(item,{keepDossier:true});
+  window.atlasStoryBridge.focusEvent(item,{keepDossier:true});
   showStatus('已定位：'+item.name+'。双击文中事件可阅读独立史料。');
  }
  function doubleOpen(item){
   if(!item)return;
-  if(!atlas||!atlas.events.some(x=>x.id===item.id)||item.year>year){showStatus('请先切换到'+item.year+'年，再查看该事件。',item);return;}
+  if(!window.atlasStoryBridge?.activeHasEvent?.(item.id)||item.year>window.atlasStoryBridge.currentYear()){showStatus('请先切换到'+item.year+'年，再查看该事件。',item);return;}
   readingScroll=activeBody().scrollTop;
   returnStoryId=lastStoryId;
-  openDossier(item,'event');
+  window.atlasStoryBridge.openEvent(item);
  }
  async function returnToOrigin(){
   const item=eventInMemory(sourceEventId);
   returnStoryId=null;
-  if(item && atlas&&atlas.events.some(x=>x.id===item.id)&&item.year<=year){openDossier(item,'event');return;}
+  if(item && window.atlasStoryBridge?.activeHasEvent?.(item.id)&&item.year<=window.atlasStoryBridge.currentYear()){window.atlasStoryBridge.openEvent(item);return;}
   document.getElementById('workspace').classList.remove('story-reading');
-  document.getElementById('dossierBody').innerHTML=infoDefault;
-  openPanel('dossier');
+  window.atlasStoryBridge?.resetDossier?.();
+  window.atlasStoryBridge?.showDossier?.();
  }
  document.addEventListener('click',function(e){
   const el=e.target.closest('[data-story-open],[data-story-event],[data-story-year],[data-story-back],[data-story-return],[data-story-section]');
@@ -146,9 +142,9 @@
   if(el.hasAttribute('data-story-year')){
    const item=eventInMemory(el.dataset.storyYear);
    if(!item)return;
-   selectedItemYear=null;selected='';
-   setYear(item.year);
-   if(Number.isFinite(item.lat)&&Number.isFinite(item.lng))focusEventFromSidebar(item,{keepDossier:true});
+   window.atlasStoryBridge?.clearSelection?.();
+   window.atlasStoryBridge?.setYear?.(item.year);
+   if(Number.isFinite(item.lat)&&Number.isFinite(item.lng))window.atlasStoryBridge.focusEvent(item,{keepDossier:true});
    else showStatus('已切换到'+item.year+'年。此记录没有可靠地点坐标，可双击查看文字详情。');
    return;
   }
@@ -174,8 +170,8 @@
     for(const id of story.event_ids||[])storyByEvent.set(id,story.id);
    }
    // An archive may already be open while the optional manifest is loading.
-   if(selected){
-    const record=eventInMemory(selected),body=activeBody();
+   if(window.atlasStoryBridge?.selectedEventId?.()){
+    const record=eventInMemory(window.atlasStoryBridge.selectedEventId()),body=activeBody();
     if(record&&body&&!body.querySelector('.major-story-entry')){
      const markup=linkMarkupForEvent(record,'event');
      const p=body.querySelector('h2+p');
