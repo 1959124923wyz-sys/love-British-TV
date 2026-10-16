@@ -925,6 +925,19 @@ try:
               document.querySelector('#dossierBody .source-details')!==null""",driver)
     driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
     set_year(1578, 36)
+    verify("1578 Pacific Chile added indigenous Mocha contact and La Serena town defense without duplicating old Valparaiso raid",
+           """['GAP1578-VALPARAISO','PAC1578-MOCHA-LAFKENCHE',
+               'PAC1578-LA-SERENA-DEFENSE'].every(id=>
+                 !!document.querySelector('#eventList .event-item[data-eid="'+id+'"]')) &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===16""",driver)
+    verify("1578 Chile archive must distinguish plunder, failed town assault and Lafkenche encounter",
+           """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+              .map(x=>x.textContent).some(s=>s.includes('瓦尔帕莱索')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+              .map(x=>x.textContent).some(s=>s.includes('拉塞雷纳')) &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+              .map(x=>x.textContent).some(s=>s.includes('莫查岛'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter9-1578-Chile-Drake-Mocha-Valparaiso-LaSerena.png"))
     verify("1578 Mullaghmast massacre wrongly dated 1577",
            """document.querySelector('#eventList [data-eid="1570S-E028"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
