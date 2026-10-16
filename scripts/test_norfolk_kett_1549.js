@@ -3,6 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const db=read('data/atlas-1540-1549.json');
+const archival=read('research/editorial/BOULOGNE_KETT_ORIGINAL_EVENT_SUMMARIES_20261016.json').events;
 const areas=read('data/century-violence-regions-1544-1589.geojson');
 const cohort=db.events.filter(e=>e.id==='GAP1549-KETT'||e.id.startsWith('GAP1549-NORFOLK-'));
 assert.equal(cohort.length,8,'one preserved Dussindale summary plus seven new discrete Norfolk events');
@@ -12,12 +13,13 @@ assert(cohort.every(e=>e.historical_control_boundary_verified===false&&e.actual_
 const sources=new Set(db.sources.map(s=>s.id));
 for(const e of cohort)assert(e.source_ids?.length>0&&e.source_ids.every(id=>sources.has(id)),'bad event provenance '+e.id);
 const d=cohort.find(e=>e.id==='GAP1549-KETT');
-assert(d.description.includes('2,000—3,000')&&d.geo_precision.includes('candidate'));
+assert(archival['GAP1549-KETT'].description.includes('2,000—3,000')&&d.geo_precision.includes('candidate'),'Keep casualty source note in research archive rather than visible summary');
 const resistance=cohort.filter(e=>e.category==='resistance');
 const repression=cohort.filter(e=>e.category==='domestic_repression');
 assert.equal(resistance.length,3);
 assert.equal(repression.length,5,'Royal actions or aftermath must not be conflated with rebel organization');
-assert(cohort.some(e=>e.id==='GAP1549-NORFOLK-EXECUTIONS'&&e.description.includes('不把战场阵亡一概算作处决')));
+assert(archival['GAP1549-NORFOLK-EXECUTIONS'].description.includes('不把战场阵亡一概算作处决'),'Retain battle/execution distinction in archival original');
+assert(cohort.some(e=>e.id==='GAP1549-NORFOLK-EXECUTIONS'&&e.description.includes('处决部分')));
 const norfolk=areas.features.filter(f=>f.id.startsWith('en-kett-1549-'));
 assert.equal(norfolk.length,2,'Norwich urban effects and Dussindale valley must be separate study areas');
 for(const f of norfolk){
