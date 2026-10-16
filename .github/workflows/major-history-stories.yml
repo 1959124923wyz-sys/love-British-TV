@@ -13,6 +13,9 @@ on:
       - "scripts/test_rut_kildare_major_stories.js"
       - "scripts/test_tudor_governance_device_forts.js"
       - "scripts/browser_tudor_device_forts.py"
+      - "scripts/test_boulogne_kett_major_stories.js"
+      - "scripts/browser_boulogne_kett_stories.py"
+      - "data/historical-detail-notes.json"
       - "data/atlas-1530-1539.json"
       - "scripts/browser_rut_kildare_stories.py"
       - "scripts/test_tournai_surrey_major_stories.js"
@@ -49,6 +52,7 @@ jobs:
           node scripts/test_major_story_pilot.js
           node scripts/test_rut_kildare_major_stories.js
           node scripts/test_tudor_governance_device_forts.js
+          node scripts/test_boulogne_kett_major_stories.js
           node scripts/test_first_group_history_stories.js
           node scripts/test_tournai_surrey_major_stories.js
           node scripts/test_scots_calais_stories.js
@@ -64,6 +68,7 @@ jobs:
           python scripts/browser_scots_calais_stories.py
           python scripts/browser_rut_kildare_stories.py
           python scripts/browser_tudor_device_forts.py
+          python scripts/browser_boulogne_kett_stories.py
       - name: Keep screenshots for review
         if: always()
         uses: actions/upload-artifact@v4
@@ -77,3 +82,4 @@ jobs:
             scots-calais-browser-results/
             rut-kildare-browser-results/
             tudor-forts-browser-results/
+            boulogne-kett-browser-results/

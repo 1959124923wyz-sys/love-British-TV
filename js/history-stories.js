@@ -20,7 +20,7 @@
   card.innerHTML='<button type="button" class="story-preview-close" aria-label="关闭事件简介" data-story-preview-close="1">×</button>'+
    '<small>'+esc(item.year)+'年 · 历史事件</small>'+
    '<h3>'+esc(item.name)+'</h3>'+
-   '<p>'+esc(item.description||item.short_description||'已有史料记录这一事件。')+'</p>';
+   '<p>'+esc(readerFriendly(item.description||item.short_description||'事件发生于这一时期。'))+'</p>';
   document.body.appendChild(card);
   preview=card;
   const rect=anchor?.getBoundingClientRect?.()||activeBody().getBoundingClientRect();
@@ -71,6 +71,14 @@
   }
   return out+esc(text.slice(last));
  }
+ function readerFriendly(text){
+  // Narrative layer only: leave factual/source precision fields in JSON and Git history.
+  // Remove purely editorial map/software and historiography footnotes from prose.
+  const editorial=/(?:在地图|地图上|地图中|地图的|地图只|地图标|地图绘|现有地图|现已将|经纬度|坐标|GIS|GPS|现存地图|该图层|现代参考|实测|地理配准|不能画|不应画|绘图|绘制|本研究|本资料库|本专题|史料.*(?:争议|差异|核证)|学者.*(?:争论|不同|认为)|现代研究.*(?:认为|发现)|后世作者|证据边界|暂不|不能由.*地图|无法根据.*地图|部分现代学者|学术上|史学家|研究者.*(?:争议|认为)|文献之间|研究意见)/;
+  const clauses=String(text||'').match(/[^。！？]+[。！？]?/g)||[];
+  const clean=clauses.filter(clause=>clause.includes('[[')||!editorial.test(clause)).join('').trim();
+  return clean||String(text||'');
+ }
  function storyHtml(article){
   return '<article class="major-story-article" data-story-id="'+esc(article.id)+'">'+
     '<header class="major-story-header"><button type="button" class="story-back" data-story-return="1">← 返回原事件</button>'+
@@ -82,13 +90,14 @@
     '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sec.heading.replace(/^[一二三四五六七八九十]+、/,''))+'</button>').join('')+'</nav></details>'+
     '<div class="story-body">'+article.sections.map(sec=>
      '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3>'+esc(sec.heading)+'</h3>'+
-      sec.paragraphs.map(p=>'<p>'+renderInline(p)+'</p>').join('')+
+      sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p))+'</p>').join('')+
      '</section>').join('')+'</div>'+
-    '<details class="story-sources"><summary>历史资料与考证 · '+article.sources.length+'项 <span aria-hidden="true">▾</span></summary>'+
-    '<p>'+esc(article.reading_note)+'</p>'+
+    '<details class="story-sources"><summary>参考资料 · '+article.sources.length+'项 <span aria-hidden="true">▾</span></summary>'+
+
+
     '<div class="source-list">'+article.sources.map(s=>'<a class="source-link" href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+' ↗</a>'+
-      '<small>'+esc(s.access)+'</small>').join('')+'</div>'+
-    '<p>'+esc(article.map_note)+'</p></details>'+
+      '').join('')+'</div>'+
+    '</details>'+
     '<footer class="story-footer"><button type="button" class="story-back" data-story-return="1">← 返回原事件</button></footer>'+
    '</article>';
  }

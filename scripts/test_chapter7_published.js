@@ -14,7 +14,7 @@ new vm.Script(app);
 assert.deepEqual(atlas.period,{from:1550,to:1559,next:1560});
 assert.equal(atlas.events.length,31);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,54);
 assert.equal(atlas.routes.length,9);assert.equal(atlas.colonial_polygons.length,0);
-assert.equal(previous.events.filter(e=>!e.id.startsWith('RW154')).length,91,'Keep prior 1540s events plus 1542 Taureau and Calais finance records');
+assert.equal(previous.events.filter(e=>!e.id.startsWith('RW154')).length,93,'Keep prior 1540s events plus 1542 Taureau and Calais finance records');
 assert.equal(previous.events.filter(e=>e.id.startsWith('RW154')).length,10,'Preserve ten newly sourced Rough Wooing events');
 assert.ok(chapter.chapters.some(c=>c.number===6&&c.start===1550&&c.end===1559&&c.status==='published'));
 const sources=new Set(atlas.sources.map(s=>s.id)),events=new Set();

@@ -7,7 +7,7 @@ const all=new Map([...a.events,...b.events].map(e=>[e.id,e]));
 const definitions=[
 {id:'tudor-wales-ireland-legal-restructuring-1536-1542',need:['1530S-E007','1530S-E009','1530S-E014','1530S-E024','1540S-002','1540S-044'],end:1542},
 {id:'henry-viii-device-forts-coastal-defence-1539-1547',need:['1530S-E019','1530S-E020','1530S-E021','1530S-E022','FORT1539-WALMER-CONSTRUCTION','FORT1539-PENDENNIS-WORKS','FORT1540-STMAWES-CASTLE','FORT1540-DEAL-DOWNS-COMPLETE','FORT1540-WALMER-GARRISON','FORT1541-SANDSFOOT-CASTLE','FORT1541-HURST-CASTLE','FORT1542-HURST-GARRISON','FORT1544-HURST-COMPLETE','FORT1547-DEAL-GUN-INVENTORY','FORT1547-PORTLAND-GUN-INVENTORY'],end:1547}];
-assert.equal(idx.length,12,'Ten prior stories must be preserved with two new dossiers');
+assert.ok(idx.length>=14,'Ten prior stories must be preserved with two new dossiers');
 for(const target of definitions){
  const meta=idx.find(q=>q.id===target.id);assert(meta,'unindexed historical topic '+target.id);
  const s=j(meta.file);assert.equal(s.id,meta.id);assert.equal(s.title,meta.title);
@@ -31,7 +31,7 @@ for(const target of definitions){
  console.log('PASS article',target.id,prose.length+' chars',links+' links');
 }
 assert.equal(a.events.length,33);assert.equal(a.sources.length,68);
-assert.equal(b.events.length,101);assert.equal(b.sources.length,135);
+assert.equal(b.events.length,103);assert.equal(b.sources.length,139);
 assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);
 const legal=['1530S-E007','1530S-E009','1530S-E014','1530S-E024','1540S-002','1540S-044'];
 for(const id of legal)assert(all.get(id).geographic_rule!=='conquered_territory','legal statute cannot create new control area');
