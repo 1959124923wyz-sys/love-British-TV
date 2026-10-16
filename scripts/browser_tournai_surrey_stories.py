@@ -18,7 +18,7 @@ def js(s,*args):return driver.execute_script(s,*args)
 def year(y):wait.until(lambda d:d.execute_script("return document.getElementById('bigYear').textContent===arguments[0]",str(y)))
 def story_from(y,eid,title):
     driver.get('http://127.0.0.1:8765/?year='+str(y))
-    wait.until(lambda d:d.execute_script('return !!document.querySelector(\'[data-eid="'+arguments[0]+'"]\')',eid))
+    wait.until(lambda d:d.execute_script("""return !!document.querySelector('#eventList [data-eid="'+arguments[0]+'"]')""",eid))
     ev=driver.find_element(By.CSS_SELECTOR,'#eventList [data-eid="'+eid+'"]')
     js("arguments[0].scrollIntoView({block:'center'})",ev)
     ev.click()
