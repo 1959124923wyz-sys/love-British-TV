@@ -1050,6 +1050,11 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids-plus-StAugustine.png"))
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids.png"))
     set_year(1587, 28)
+    verify("1587 Cavendish Quintero failed landing and sourced dashed conflict region visible",
+           """!!document.querySelector('#eventList [data-eid="PAC1587-CAVENDISH-QUINTERO"]') &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+                .map(n=>n.textContent).some(t=>t.includes('金特罗')&&t.includes('1587'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter10-1587-Cavendish-Quintero-failed-landing.png"))
     verify("1587 Drake port-city raid surfaces persisted after fleet withdrew",
            """document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1""",driver)
@@ -1143,6 +1148,11 @@ try:
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
     set_year(1594,14)
+    verify("1594 Hawkins Valparaiso privateering episode and distinct regional study visible",
+           """!!document.querySelector('#eventList [data-eid="PAC1594-HAWKINS-VALPARAISO"]') &&
+              [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
+                .map(n=>n.textContent).some(t=>t.includes('瓦尔帕莱索')&&t.includes('1594'))""",driver)
+    driver.save_screenshot(str(OUT / "chapter11-1594-Hawkins-Valparaiso-harbour-plunder.png"))
     verify("1594 Fermanagh battle zone absent",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===1",driver)
     driver.execute_script("""document.querySelector('#map .atlas-nine-years-war-study')
