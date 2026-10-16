@@ -35,8 +35,8 @@ for(const[id,start,end,needed]of targets){
 const fourth=atlases[2],sixth=atlases[4];
 assert.equal(fourth.events.length,35);
 assert.equal(fourth.routes.length,5);
-assert.equal(sixth.events.length,92);
-assert.equal(sixth.sources.length,124);
+assert.equal(sixth.events.length,101);
+assert.equal(sixth.sources.length,135);
 assert.equal(atlases[5].events.length,31,'preserve 29 pre-existing 1550s events and map two French 1558 outworks');
 assert.equal(atlases[5].sources.length,54);
 const routes={
