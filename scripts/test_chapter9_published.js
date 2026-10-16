@@ -129,6 +129,6 @@ assert.ok(ocean.segments?.length===2,'Pacific dateline must split into two short
 assert.ok(ocean.segments.every(segment=>Math.abs(segment.at(-1)[1]-segment[0][1])<180),'Date line wrap across Eurasia');
 assert.ok(app.includes('next>=1570?atlasNinth:next>=1560?atlasEighth'));
 assert.ok(app.includes('function renderNinthControlSites()'));
-assert.ok(app.includes('const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords'));
+assert.ok(app.includes('window.AtlasVoyageGeometry.routeGeometryForWorldWrap(r)'),'multiworld Pacific continuity helper missing');
 assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
 console.log('PASS ch9: 44 events, 65 sources, 43 places, 20 source-backed routes, three dated local garrison symbols, zero newly surveyed Tudor territory polygons.');
