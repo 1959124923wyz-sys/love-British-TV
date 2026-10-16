@@ -26,7 +26,7 @@ for(const e of main.events){
  if(e.lat===null){unknown++;assert.equal(e.lng,null,e.id+' invented location')}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid anchor');
 }
-assert.equal(unknown,14,'Unlocated events must remain unlocated until evidence exists');
+assert.equal(unknown,15,'Original unresolved events and O’Hart torture without a verified site must remain unlocated');
 assert.equal(main.places.filter(p=>p.render_as_event_only).length,16);
 const carried=['calais-crown','guines-crown-1520s','dublin-pale','channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'];
 for(const id of carried){
