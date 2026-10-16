@@ -157,10 +157,17 @@
   const meta=storyMeta.get(lastStoryId);
   const fallbackId=(meta?.event_ids||[]).find(id=>eventInMemory(id));
   const item=eventInMemory(sourceEventId)||eventInMemory(fallbackId);
-  if(item&&navigateToEventYear(item)){
-   returnStoryId=null;
-   window.atlasStoryBridge.openEvent(item);
-   return;
+  if(item){
+   const bridge=window.atlasStoryBridge;
+   // "Return to original event" restores its own year, not the last year
+   // visited while reading later or earlier events in the article.
+   bridge.clearSelectedEventYear();
+   if(bridge.currentYear()!==Number(item.year))bridge.setYear(item.year);
+   if(bridge.activeHasEvent(item.id)){
+    returnStoryId=null;
+    bridge.openEvent(item);
+    return;
+   }
   }
   // Never exit the article into a blank sidebar when its source is unavailable.
   // This can occur if story data and atlas data are temporarily out of sync.
