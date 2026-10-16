@@ -925,11 +925,11 @@ try:
               document.querySelector('#dossierBody .source-details')!==null""",driver)
     driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
     set_year(1578, 36)
-    verify("1578 Pacific Chile added indigenous Mocha contact and La Serena town defense without duplicating old Valparaiso raid",
+    verify("1578 Pacific Chile documentary events survive and the 7 connected Drake expedition links replace 2 redundant old legs",
            """['GAP1578-VALPARAISO','PAC1578-MOCHA-LAFKENCHE',
                'PAC1578-LA-SERENA-DEFENSE'].every(id=>
                  !!document.querySelector('#eventList .event-item[data-eid="'+id+'"]')) &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===16""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===21""",driver)
     verify("1578 Chile archive must distinguish plunder, failed town assault and Lafkenche encounter",
            """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
               .map(x=>x.textContent).some(s=>s.includes('瓦尔帕莱索')) &&
@@ -952,13 +952,13 @@ try:
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===20 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===27 &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Pacific-privateering-Munster.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("Disabling territory cannot hide 1579 events or voyages",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===20""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===27""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Disabling events left piracy lines or 1579 markers",
@@ -980,6 +980,9 @@ try:
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelector('#chapterLabel').textContent.includes('第九章')""",driver)
+    verify("1580 Drake homebound Atlantic/Indian Ocean legs must appear only after switching into the tenth chronological chapter",
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===14 &&
+              document.querySelector('#yearRange').value==='1580'""",driver)
     verify("1580 Munster armed invasion must have one reference surface",
            """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
               document.querySelector('#map .atlas-tenth-invasion-impact').getAttribute('stroke-dasharray')==='8 6'""",driver)
