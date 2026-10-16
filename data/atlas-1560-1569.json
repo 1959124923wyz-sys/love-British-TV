@@ -856,11 +856,12 @@
       "lng": -8.6267,
       "geography_label": "利默里克地区现代定位，仅战区参考",
       "geo_precision": "regional_or_modern_associated_place_not_exact_Tudor_event",
-      "description": "1569年吉尔伯特率英军在芒斯特进行镇压；军报涉及科克、利默里克、蒂珀雷里以及基尔肯尼、卡洛、韦克斯福德等地的抵抗活动。",
+      "description": "1569年英王军对第一次德斯蒙德叛乱采取严厉镇压，吉尔伯特部队在基尔马洛克、科克、北凯里与Connellough一带行动。早期王室军与爱尔兰反抗军双方都有围城和攻击行为；对当地居民及牲畜的系统性杀害应具体归于吉尔伯特的相关秋季军事行动。该事件为本章概况，不代表整个芒斯特被占领或均遭焚毁。",
       "short_description": "1569年吉尔伯特率英军在芒斯特进行镇压；军报涉及科克、利默里克、蒂珀雷里以及基尔肯尼、卡洛、韦克斯福德等地的抵抗活动。",
       "source_ids": [
         "C8-S23",
-        "C8-S24"
+        "C8-S24",
+        "IR-DIB-GILBERT-MUNSTER"
       ],
       "significance": {
         "level": 2,
@@ -944,18 +945,19 @@
       "start_year": 1569,
       "end_year": 1569,
       "visible_from": 1569,
-      "date_label": "1569年",
-      "name": "吉尔伯特在基尔马洛克附近镇压反抗军并实施恐怖战术",
+      "date_label": "1569年9月25日",
+      "name": "基尔马洛克交战：吉尔伯特王室军击退反抗部队",
       "category": "colonial_repression",
       "icon_code": "REP",
       "lat": 52.398,
       "lng": -8.576,
-      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geo_precision": "modern_kilmallock_town_reference_not_documented_1569_battle_perimeter",
       "geography_label": "现代具名地点位置，仅供历史定位",
-      "description": "1569年9月25日，吉尔伯特在基尔马洛克附近击退爱尔兰反抗部队；其芒斯特军事行动还包括处死守军、杀害平民和牲畜，造成当地居民恐惧。受袭地点范围无法据此精确复原。",
-      "short_description": "1569年9月25日，吉尔伯特在基尔马洛克附近击退爱尔兰反抗部队；其芒斯特军事行动还包括处死守军、杀害平民和牲畜，造成当地居民恐惧。受袭地点范围无法据此精确复原。",
+      "description": "1569年9月25日，吉尔伯特以少量士兵在基尔马洛克附近出击，击退菲茨莫里斯与麦卡锡等反抗军。1569年9月26日下属沃德的军报详细记载此战；其后吉尔伯特赴科克整合兵力，并在北凯里及Connellough等地以杀害平民和牲畜施行恐怖镇压。此点只表示战役城市参考，不得由单场战斗推定村落烧毁面积或全芒斯特英控。",
+      "short_description": "9月25日基尔马洛克英王军出击，随后发生针对芒斯特居民的镇压行动。",
       "source_ids": [
-        "IR-DIB-GILBERT-MUNSTER"
+        "IR-DIB-GILBERT-MUNSTER",
+        "IR-IMC-GILBERT-LETTERS-1569"
       ],
       "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
       "significance": {
@@ -968,6 +970,299 @@
       "actual_English_territory_created": false,
       "historical_control_boundary_verified": false,
       "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-REB-KERRYCURRIHY",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年6月",
+      "name": "凯里柯里希：德斯蒙德反抗军袭击英王殖民据点",
+      "category": "resistance_and_liberation",
+      "icon_code": "RES",
+      "lat": 51.8,
+      "lng": -8.39,
+      "geo_precision": "modern_regional_reference_not_1569_action_position",
+      "geography_label": "现代城市或历史地区参考坐标，不是战地、平民受害者或军营准确位置",
+      "description": "詹姆斯·菲茨莫里斯与盟友在科克郡Kerrycurrihy地区袭击英王殖民定居者，成为第一次德斯蒙德叛乱的开端。此为爱尔兰起义军行动，不能冒充吉尔伯特军对当地居民的杀害；现代科克南郊地区坐标仅为方位参考。",
+      "short_description": "詹姆斯·菲茨莫里斯与盟友在科克郡Kerrycurrihy地区袭击英王殖民定居者，成为第一次德斯蒙德叛乱的开端。此为爱尔兰起义军行动，不能冒充吉尔伯特军对当地居民的杀害；现代科克南郊地区坐标仅为方位参考。",
+      "source_ids": [
+        "IR-RIA-FITZMAURICE-1569"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 2,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "historical_region_modern_orientation_only",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-ROYAL-KILKENNY",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年7月",
+      "name": "基尔肯尼：吉尔伯特参与王室军解除反抗军围攻",
+      "category": "military_campaign",
+      "icon_code": "WAR",
+      "lat": 52.6541,
+      "lng": -7.2448,
+      "geo_precision": "modern_named_place_reference_not_1569_historic_position",
+      "geography_label": "现代城市或历史地区参考坐标，不是战地、平民受害者或军营准确位置",
+      "description": "第一次德斯蒙德叛乱期间，爱尔兰反抗军曾围攻基尔肯尼，吉尔伯特率王室军参与击退围城者。此处是英王军对城市的防御军事行动，不因胜利推定基尔肯尼周围村落均遭王室军杀戮或成为新殖民地。",
+      "short_description": "第一次德斯蒙德叛乱期间，爱尔兰反抗军曾围攻基尔肯尼，吉尔伯特率王室军参与击退围城者。此处是英王军对城市的防御军事行动，不因胜利推定基尔肯尼周围村落均遭王室军杀戮或成为新殖民地。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER",
+        "IR-RIA-FITZMAURICE-1569"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 2,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_named_locality_reference_not_historic_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-ROYAL-BRUREE",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年9月23日",
+      "name": "布鲁里—基尔马洛克：吉尔伯特部队行军节点",
+      "category": "military_campaign",
+      "icon_code": "WAR",
+      "lat": 52.425,
+      "lng": -8.662,
+      "geo_precision": "modern_named_place_reference_not_1569_historic_position",
+      "geography_label": "现代城市或历史地区参考坐标，不是战地、平民受害者或军营准确位置",
+      "description": "约翰·沃德1569年9月26日的军报称吉尔伯特与其部9月23日自布鲁里（Brulee/Bruree）前往基尔马洛克。这是军队行动起点的具名记录，不表示两地间精确路线或沿途均有暴行。",
+      "short_description": "约翰·沃德1569年9月26日的军报称吉尔伯特与其部9月23日自布鲁里（Brulee/Bruree）前往基尔马洛克。这是军队行动起点的具名记录，不表示两地间精确路线或沿途均有暴行。",
+      "source_ids": [
+        "IR-IMC-GILBERT-LETTERS-1569"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 2,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_named_locality_reference_not_historic_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-ROYAL-CORK",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年9月下旬",
+      "name": "基尔马洛克交战后，吉尔伯特赴科克调集兵员",
+      "category": "military_campaign",
+      "icon_code": "WAR",
+      "lat": 51.8985,
+      "lng": -8.4756,
+      "geo_precision": "modern_named_place_reference_not_1569_historic_position",
+      "geography_label": "现代城市或历史地区参考坐标，不是战地、平民受害者或军营准确位置",
+      "description": "9月25日基尔马洛克交战后，吉尔伯特冒险穿越仍有反抗力量的地区前往科克，准备集结其他王室军队。科克是有文献支持的进军和补给城市，现有史料不足以称他焚毁科克城区。",
+      "short_description": "9月25日基尔马洛克交战后，吉尔伯特冒险穿越仍有反抗力量的地区前往科克，准备集结其他王室军队。科克是有文献支持的进军和补给城市，现有史料不足以称他焚毁科克城区。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER",
+        "IR-IMC-GILBERT-LETTERS-1569"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 2,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_named_locality_reference_not_historic_survey",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-GARRYSTOWN-MASSACRE",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年10月",
+      "name": "Garrystown驻堡被攻破：吉尔伯特下令屠杀守军（古址待考）",
+      "category": "colonial_repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated_historic_Garrystown_in_Munster_not_modern_Dublin_Garristown",
+      "geography_label": "史料有名称但原址未核实：仅列档案，不制造地理点",
+      "description": "爱尔兰皇家学院《吉尔伯特传》记载，吉尔伯特在1569年10月攻下Garrystown守堡后杀死驻军，这种不受降的恐怖政策促使其他堡垒投降。这里的Garrystown地名尚未能在1569年芒斯特唯一定位，不能借用今日都柏林郡同名镇的坐标；故仅在事件档案和区域史料中记录，不添加虚构地点或杀害范围。",
+      "short_description": "爱尔兰皇家学院《吉尔伯特传》记载，吉尔伯特在1569年10月攻下Garrystown守堡后杀死驻军，这种不受降的恐怖政策促使其他堡垒投降。这里的Garrystown地名尚未能在1569年芒斯特唯一定位，不能借用今日都柏林郡同名镇的坐标；故仅在事件档案和区域史料中记录，不添加虚构地点或杀害范围。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 3,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "unlocated_historical_site_archival_only",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-KERRY-TERROR",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年10—11月",
+      "name": "北凯里：吉尔伯特军扫荡期间杀害平民、牲畜",
+      "category": "colonial_repression",
+      "icon_code": "REP",
+      "lat": 52.405,
+      "lng": -9.47,
+      "geo_precision": "modern_regional_reference_not_1569_action_position",
+      "geography_label": "现代城市或历史地区参考坐标，不是战地、平民受害者或军营准确位置",
+      "description": "1569年10—11月，吉尔伯特在北凯里发动军事镇压。爱尔兰皇家学院记载其部队在行军中杀害包括妇女儿童在内的居民，杀死牲畜、破坏反抗军维持生活的资源，以迫使地方领主投降。坐标只指北凯里地区大致方向，不表示确切袭击村落或北凯里每处均受灾。",
+      "short_description": "1569年10—11月，吉尔伯特在北凯里发动军事镇压。爱尔兰皇家学院记载其部队在行军中杀害包括妇女儿童在内的居民，杀死牲畜、破坏反抗军维持生活的资源，以迫使地方领主投降。坐标只指北凯里地区大致方向，不表示确切袭击村落或北凯里每处均受灾。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 3,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "historical_region_modern_orientation_only",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-CONNELLO-TERROR",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年10—11月",
+      "name": "康内洛林地：吉尔伯特军恐怖镇压和生计破坏",
+      "category": "colonial_repression",
+      "icon_code": "REP",
+      "lat": 52.47,
+      "lng": -8.78,
+      "geo_precision": "modern_regional_reference_not_1569_action_position",
+      "geography_label": "现代城市或历史地区参考坐标，不是战地、平民受害者或军营准确位置",
+      "description": "皇家学院传记记载吉尔伯特部队1569年10—11月进入Connellough（Connello）林地等反抗者藏身区域，并使用不分战斗人员和平民的杀害及宰杀牲畜等强制手段。近代Connello地方地理可参照利默里克西部；坐标为这一地区的阅读参考，并不证明16世纪林界、死亡分布和现今行政区相同。",
+      "short_description": "皇家学院传记记载吉尔伯特部队1569年10—11月进入Connellough（Connello）林地等反抗者藏身区域，并使用不分战斗人员和平民的杀害及宰杀牲畜等强制手段。近代Connello地方地理可参照利默里克西部；坐标为这一地区的阅读参考，并不证明16世纪林界、死亡分布和现今行政区相同。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER",
+        "IR-GALWAY-CONNELLO-UPPER-HISTGEO"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 3,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "historical_region_modern_orientation_only",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-HEADS-TERROR",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年秋",
+      "name": "吉尔伯特部队以断首排列营地入口恐吓投降者（营址不详）",
+      "category": "colonial_repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated_mobile_crown_camp_terror_practice_no_fixed_geographic_coordinate",
+      "geography_label": "史料有名称但原址未核实：仅列档案，不制造地理点",
+      "description": "皇家学院传记记载，吉尔伯特将遇害者的首级摆在军帐进出通道，迫使投降者经过，以恐怖展示逼迫服从。营帐的位置可能随行动变化，无法为这项行为指定一个经过核实的永久处决地点，因此仅作史事档案，不以某一城镇假充受害地点。",
+      "short_description": "皇家学院传记记载，吉尔伯特将遇害者的首级摆在军帐进出通道，迫使投降者经过，以恐怖展示逼迫服从。营帐的位置可能随行动变化，无法为这项行为指定一个经过核实的永久处决地点，因此仅作史事档案，不以某一城镇假充受害地点。",
+      "source_ids": [
+        "IR-DIB-GILBERT-MUNSTER",
+        "IR-IMC-GILBERT-LETTERS-1569"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 3,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "unlocated_historical_site_archival_only",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "MUN1569-MACCARTHY-LIMERICK",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年12月4日",
+      "name": "利默里克：麦卡锡·莫尔向王室军投降",
+      "category": "military_campaign",
+      "icon_code": "WAR",
+      "lat": 52.6639,
+      "lng": -8.6267,
+      "geo_precision": "modern_named_place_reference_not_1569_historic_position",
+      "geography_label": "现代城市或历史地区参考坐标，不是战地、平民受害者或军营准确位置",
+      "description": "皇家学院《Donal MacCarthy Mór传》记载其于1569年12月4日在利默里克正式向吉尔伯特投降。事件说明恐怖军事策略造成的短期服从与地方势力重组；并非全芒斯特已获长期英王有效控制，反抗活动仍在随后数年继续。",
+      "short_description": "皇家学院《Donal MacCarthy Mór传》记载其于1569年12月4日在利默里克正式向吉尔伯特投降。事件说明恐怖军事策略造成的短期服从与地方势力重组；并非全芒斯特已获长期英王有效控制，反抗活动仍在随后数年继续。",
+      "source_ids": [
+        "IR-RIA-MACCARTHY-1569",
+        "IR-DIB-GILBERT-MUNSTER"
+      ],
+      "certainty": "documented_historical_act_with_non_surveyed_geography",
+      "significance": {
+        "level": 2,
+        "rationale": "1569年反抗、英王军行动和殖民恐怖镇压具有独立史料，根据证据区分行动主体与地理精度",
+        "review_status": "historically_sourced_modern_reference_or_explicit_unlocated"
+      },
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_named_locality_reference_not_historic_survey",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
     }
@@ -1837,6 +2132,46 @@
       "url": "https://www.dib.ie/biography/gilbert-sir-humphrey-a3467",
       "kind": "scholarly_biographical_reference",
       "precision_warning": "Specific Munster Garrystown and Connellough old locations still require independent geolocation; do not map Dublin Garristown."
+    },
+    {
+      "id": "IR-IMC-GILBERT-LETTERS-1569",
+      "title": "Campaign Journals of the Elizabethan Irish Wars, part 2: Humphrey Gilbert in Munster, five letter-journals, 1569 (TNA SP 63/29/64, 68, 82a, 82b, 83)",
+      "publisher": "Irish Manuscripts Commission / David Edwards (ed., 2014)",
+      "url": "https://www.irishmanuscripts.ie/product/campaign-journals-pb/?attachment_id=6689&download_file=iafqu46ifgcfl",
+      "kind": "edited_primary_1569_crown_military_correspondence",
+      "precision_warning": "Officer accounts are partisan. Explicitly attested Bruree–Kilmallock and Cork movement does not establish measured march corridors or civilian harm at each point."
+    },
+    {
+      "id": "IR-RIA-FITZMAURICE-1569",
+      "title": "Fitzgerald, James fitz Maurice — Dictionary of Irish Biography",
+      "publisher": "Royal Irish Academy, Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/fitzgerald-james-fitz-maurice-a3161",
+      "kind": "scholarly_biography",
+      "precision_warning": "June rebel action and siege distinguished from later Crown military reprisals."
+    },
+    {
+      "id": "IR-RIA-MACCARTHY-1569",
+      "title": "MacCarthy Mór, Donal — Dictionary of Irish Biography",
+      "publisher": "Royal Irish Academy, Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/maccarthy-mor-donal-a5138",
+      "kind": "scholarly_biography",
+      "precision_warning": "Limerick surrender date 4 December 1569; does not imply enduring Crown pacification."
+    },
+    {
+      "id": "IR-UCC-CAMPAIGN-JOURNALS-2014",
+      "title": "Campaign Journals of the Elizabethan Irish Wars: scholarly edition by David Edwards",
+      "publisher": "University College Cork research portal",
+      "url": "https://research.ucc.ie/en/publications/campaign-journals-of-the-elizabethan-irish-wars/",
+      "kind": "university_bibliographic_peer_review",
+      "precision_warning": "This reference confirms edition provenance and scholarly review, not historical map geometry."
+    },
+    {
+      "id": "IR-GALWAY-CONNELLO-UPPER-HISTGEO",
+      "title": "Connello Upper Barony — historic locality index, Limerick",
+      "publisher": "University of Galway, Landed Estates project",
+      "url": "https://landedestates.ie/barony/346",
+      "kind": "university_historical_geography_reference",
+      "precision_warning": "Barony geography indexed for later cadastral records, not proof that 1569 military campaign covered every townland within it."
     }
   ],
   "routes": [
