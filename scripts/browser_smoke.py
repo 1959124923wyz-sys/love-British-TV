@@ -738,8 +738,11 @@ try:
               document.querySelector('#eventList [data-eid="1550S-E012"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelector('#eventList [data-eid="1550S-E015"] use').getAttribute('href').endsWith('#RES')""",driver)
     zoom_1556=driver.execute_script("return window.atlasReadViewport().zoom")
-    driver.execute_script("""document.querySelector('#eventList [data-eid="1550S-E016"]').dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))""")
-    wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.35 && !!document.querySelector('#dossierBody .source-details')"))
+    elmina=driver.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1550S-E016"]')
+    driver.execute_script("arguments[0].scrollIntoView({block:'center'})",elmina)
+    ActionChains(driver).double_click(elmina).perform()
+    wait.until(lambda d:d.execute_script("return !!document.querySelector('#dossierBody .source-details') && document.querySelector('#dossierBody').textContent.includes('托沃森')"))
+    wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.35"))
     verify("Portuguese Elmina caveat missing from the event dossier",
            "document.querySelector('#dossierBody').textContent.includes('葡萄牙')",driver)
     assert driver.execute_script("return window.atlasReadViewport().zoom")==zoom_1556
