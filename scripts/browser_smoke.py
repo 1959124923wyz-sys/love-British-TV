@@ -1202,12 +1202,12 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
-    set_year(1597, 26)
+    set_year(1597, 27)
     verify("1597 must not retain 1595 Trinidad warfare research area",
            "document.querySelectorAll('#map .atlas-trinidad-1595-impact').length===0",driver)
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
-    set_year(1598, 31)
+    set_year(1598, 32)
     verify("1598 Armagh Yellow Ford Blackwater defeat is a source-backed link not occupation",
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
