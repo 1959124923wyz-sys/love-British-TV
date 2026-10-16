@@ -46,11 +46,17 @@ assert.ok(linked>=12,'Interactive inline event references missing');
 const ui=read('js/history-stories.js'),app=read('app.js'),html=read('index.html');
 assert.ok(html.includes('js/history-stories.js')&&html.includes('css/history-stories.css'));
 assert.ok(html.indexOf('js/history-stories.js')>html.indexOf('app.js?'),'Story must load after core atlas');
-assert.ok(ui.includes('data-story-event')&&ui.includes("data-story-year")&&ui.includes("data-story-back"));
+assert.ok(ui.includes('data-story-event')&&ui.includes('story-event-preview')&&ui.includes("data-story-back"));
 assert.ok(ui.includes("document.addEventListener('dblclick'")&&ui.includes("document.addEventListener('click'"));
 assert.ok(ui.includes('readingScroll=activeBody().scrollTop'));
 assert.ok(app.includes('if(!options.keepDossier)openDossier(item'));
 assert.ok(app.includes('window.HistoryStories?.eventLinkMarkup'));
 assert.ok(app.includes('window.HistoryStories?.onEventOpened'));
+assert.ok(ui.includes('navigateToEventYear(item)'), 'Article inline events must own explicit year navigation');
+assert.ok(ui.includes('showUnlocatedPreview(item,anchor)'), 'Coordinate-free events must show a small card');
+assert.ok(!ui.includes('function showStatus('), 'Old story status banners must not return');
+assert.ok(!ui.includes('data-story-year'), 'Manual advance link must be replaced by direct event navigation');
+assert.ok(app.includes("(storyChild?'':listSources(item.source_ids,item))"), 'Only subevents already linked to major stories omit duplicated source dossier');
+assert.ok(ui.includes('closePreview()')&&ui.includes("e.key==='Escape'"));
 console.log('PASS Major story pilot:',story.sections.length,'sections,',paragraphs.join('').length,'characters,',linked,'inline event links,',meta.event_ids.length,'linked existing events');
 
