@@ -15,6 +15,12 @@ for(const id of keys){
  assert.deepEqual(new Set(article.related_event_ids),new Set(meta.event_ids));
  assert(article.sources.length>=5&&article.sections.length>=8);
  assert(article.sections.flatMap(x=>x.paragraphs).join('').length>=3000);
+ // Published reading prose tells history; provenance and mapping warnings stay
+ // in optional source metadata instead of lecturing an intelligent reader.
+ const prose=[article.lead,...article.sections.flatMap(x=>x.paragraphs)].join('');
+ const editorialMeta=/对地图来说|地图上应|地图中应|读者需要|图钉只是|不应当把|我们在专题|本专题以|绘制要求|现代地理参考坐标|如何在地图上/;
+ assert(!editorialMeta.test(prose),'technical cartography warning leaked into narrative: '+id);
+ assert(!article.sections.some(x=>/地图复核|怎样在地图上|地理精度|研究方法/.test(x.heading)),'no methodological chapter in historical narrative');
  const srcs=new Set(article.sources.map(s=>s.id));
  let clickable=0;
  for(const section of article.sections){
@@ -43,8 +49,8 @@ const multi=map.get('1504-OKELLY-CASTLES');
 assert.match(multi.geo_precision,/multi_site/);
 assert.match(multi.description,/乌利克·伯克/);
 assert.equal(multi.actual_English_territory_created,false);
-assert.equal(third.events.length,18,'15 older and three new sourced records');
-const newIds=['KILDARE1512-ROSCOMMON','KILDARE1512-DUNGANNON-ODONNELL','KILDARE1516-KILLYBEGS-CANNON-SHIP'];
+assert.equal(third.events.length,22,'15 original plus three first wave and four more source-audited records');
+const newIds=['KILDARE1512-ROSCOMMON','KILDARE1512-DUNGANNON-ODONNELL','KILDARE1516-KILLYBEGS-CANNON-SHIP','KILDARE1512-ATHLONE-CROSSING','KILDARE1512-BELFAST-ASSAULT','KILDARE1514-COLERAINE-ODONNELL','KILDARE1516-COLLOONEY-ODONNELL'];
 for(const id of newIds){
  const e=map.get(id);assert(e,id);
  assert(owned.get(id)===keys[1]);
@@ -57,4 +63,9 @@ for(const id of newIds){
 assert.equal(new Set(third.events.map(e=>e.id)).size,third.events.length);
 assert.equal(third.colonial_polygons.length,0);
 assert(first.events.every(x=>x.actual_English_territory_created!==true),'unexpectedly fabricated Cabot acquisition');
-console.log('PASS first batch: 2 sourced articles, restored 1496 legal-vs-contact difference, 18 Irish decade events, 3 new region-safe named points');
+assert.equal(third.routes.length,2,'Sourced 1512 march and 1516 maritime endpoint relations');
+assert(third.routes[0].valid_years?.length===1&&third.routes[1].valid_years?.length===1);
+assert(third.routes.some(x=>x.year===1512)&&third.routes.some(x=>x.year===1516));
+assert(fs.readFileSync(path.join(root,'app.js'),'utf8').includes('if(Array.isArray(r.valid_years)&&!r.valid_years.includes(year))continue;'));
+assert(third.routes.every(r=>r.route_kind==='documented-endpoints-connection'&&r.area_sqkm===null));
+console.log('PASS early 1500s: readable narratives, 22 decade events, seven source-backed new places and two non-GPS connections');

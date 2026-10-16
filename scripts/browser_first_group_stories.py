@@ -52,9 +52,17 @@ try:
     assert js("return !!document.querySelector('.major-story-entry')")
     open_from(1504,'1504-KNOCKDOE','1503—1519年基尔代尔伯爵与爱尔兰领主战争')
     assert js("return document.querySelectorAll('.story-section').length===10")
+    link('KILDARE1512-ATHLONE-CROSSING',1512)
+    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===1"),"1512 Athlone–Roscommon relation should be visible in its own year"
     link('KILDARE1512-ROSCOMMON',1512)
+    link('KILDARE1512-BELFAST-ASSAULT',1512)
+    link('KILDARE1514-COLERAINE-ODONNELL',1514)
+    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===0"),"1512 military relation must not persist to 1514"
     link('KILDARE1516-KILLYBEGS-CANNON-SHIP',1516)
+    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===1"),"1516 Killybegs–Sligo relation should appear in source year"
+    link('KILDARE1516-COLLOONEY-ODONNELL',1516)
     link('1507-CARRICKFERGUS-O-NEILL',1507)
+    assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length===2"),"Back in the 1497–1509 chapter, retain Cabot's two legacy voyage directions but never leak the 1512/1516 Irish corridors"
     target=driver.find_element(By.CSS_SELECTOR,'[data-story-event="1507-CARRICKFERGUS-O-NEILL"]')
     js("arguments[0].scrollIntoView({block:'center'})",target)
     ActionChains(driver).double_click(target).perform()
