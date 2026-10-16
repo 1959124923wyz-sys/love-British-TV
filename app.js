@@ -631,6 +631,7 @@ function renderPoints(){
  if(drakeCircumnavigation&&year>=1577&&year<=1580)mapRoutes.push(...drakeCircumnavigation.routes);
  for(const r of mapRoutes){
   if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;
+  if(Array.isArray(r.valid_years)&&!r.valid_years.includes(year))continue;
   if(!Array.isArray(r.coords)||r.coords.length<2)continue;
   const coastal=r.route_kind==='coastal-commercial-reference-schematic';
   const humanTransport=r.route_kind==='schematic-human-transport-sea-corridor'||r.route_kind==='schematic-forced-person-transport';
