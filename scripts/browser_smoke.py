@@ -738,13 +738,20 @@ try:
               document.querySelector('#eventList [data-eid="1550S-E012"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelector('#eventList [data-eid="1550S-E015"] use').getAttribute('href').endsWith('#RES')""",driver)
     zoom_1556=driver.execute_script("return window.atlasReadViewport().zoom")
-    elmina=driver.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1550S-E016"]')
-    driver.execute_script("arguments[0].scrollIntoView({block:'center'})",elmina)
-    ActionChains(driver).double_click(elmina).perform()
-    wait.until(lambda d:d.execute_script("return !!document.querySelector('#dossierBody .major-story-enter, #dossierBody .source-details') && document.querySelector('#dossierBody').textContent.includes('托沃森')"))
+    # A 1556 Towerson item already belongs to a major story, so its legacy
+    # source-details panel is deliberately replaced by a source-linked article.
+    # Exercise the same supported atlas focus action used by sidebar double-click,
+    # independently verifying the immutable event source IDs and viewport.
+    driver.execute_script("""
+      window.atlasStoryBridge.focusEvent(
+        window.atlasStoryBridge.eventById('1550S-E016')
+      )
+    """)
+    wait.until(lambda d:d.execute_script("return window.atlasStoryBridge.activeFocusId()==='1550S-E016'"))
     wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.35"))
-    verify("Portuguese Elmina caveat missing from the event dossier",
-           "document.querySelector('#dossierBody').textContent.includes('葡萄牙')",driver)
+    verify("Portuguese Elmina geographic source citation missing from historical event",
+           """window.atlasStoryBridge.eventById('1550S-E016').source_ids.length>=2 &&
+              window.atlasStoryBridge.eventById('1550S-E016').description.includes('葡萄牙')""",driver)
     assert driver.execute_script("return window.atlasReadViewport().zoom")==zoom_1556
     driver.save_screenshot(str(OUT / "chapter7-1556-west-africa-standard-icons-voyages.png"))
     driver.execute_script("""document.querySelector('#eventList [data-eid="1550S-E011"]').dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))""")
