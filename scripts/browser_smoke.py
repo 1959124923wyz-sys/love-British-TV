@@ -883,7 +883,7 @@ try:
            """document.querySelector('#eventList [data-eid="1570S-E039"] use').getAttribute('href').endsWith('#WAR') &&
               document.querySelector('#eventList [data-eid="1570S-E039"]').textContent.includes('牙买加')""",driver)
 
-    set_year(1572, 9)
+    set_year(1572, 11)
     verify("1572 local Ards outpost and first Drake voyage absent",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===1 &&
@@ -893,28 +893,28 @@ try:
               document.querySelector('#eventList [data-eid="1570S-E041"] use').getAttribute('href').endsWith('#EXP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1572-Comber-newcastle-small-outpost.png"))
-    set_year(1574, 17)
+    set_year(1574, 22)
     verify("1574 Essex murder or scorched-earth route missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===5 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
               document.querySelector('#eventList [data-eid="1570S-E009"] use').getAttribute('href').endsWith('#REP')""",driver)
-    set_year(1575, 25)
+    set_year(1575, 31)
     verify("1575 Rathlin island massacre wrongly redrawn as English entire island",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelector('#eventList [data-eid="1570S-E010"] use').getAttribute('href').endsWith('#REP')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1575-Rathlin-massacre-event.png"))
-    set_year(1576, 30)
+    set_year(1576, 37)
     verify("1576 Loughrea garrison and abducted Inuit symbol missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===14 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===15 &&
               document.querySelector('#eventList [data-eid="1570S-E012"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1576-Loughrea-Irish-garrison-Inuit-abduction.png"))
-    set_year(1577, 37)
+    set_year(1577, 47)
     verify("1577 kidnapped Inuit burials and source evidence disappeared",
            """document.querySelector('#eventList [data-eid="1570S-E035"]').textContent.includes('布里斯托尔') &&
               document.querySelector('#eventList [data-eid="1570S-E036"]').textContent.includes('伦敦')""",driver)
     verify("1577 forced transport must expose two Inuit relocation passages plus 1576 leg",
-           """document.querySelectorAll('#map .atlas-voyage-hit').length===16 &&
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===18 &&
               document.querySelector('#eventList [data-eid="1570S-E035"] use').getAttribute('href').endsWith('#DIS') &&
               document.querySelector('#eventList [data-eid="1570S-E036"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E035"]').click()""")
@@ -924,12 +924,12 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
               document.querySelector('#dossierBody .source-details')!==null""",driver)
     driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
-    set_year(1578, 45)
+    set_year(1578, 60)
     verify("1578 Pacific Chile documentary events survive and the 7 connected Drake expedition links replace 2 redundant old legs",
            """['GAP1578-VALPARAISO','PAC1578-MOCHA-LAFKENCHE',
                'PAC1578-LA-SERENA-DEFENSE'].every(id=>
                  !!document.querySelector('#eventList .event-item[data-eid="'+id+'"]')) &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===23""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===27""",driver)
     verify("1578 Chile archive must distinguish plunder, failed town assault and Lafkenche encounter",
            """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
               .map(x=>x.textContent).some(s=>s.includes('瓦尔帕莱索')) &&
@@ -948,17 +948,17 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('1578') &&
               !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1578-Mullaghmast-Inuit-Kodlunarn.png"))
-    set_year(1579, 53)
+    set_year(1579, 68)
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===29 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===33 &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Pacific-privateering-Munster.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("Disabling territory cannot hide 1579 events or voyages",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===29""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===33""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Disabling events left piracy lines or 1579 markers",
@@ -968,10 +968,10 @@ try:
     set_year(1569, 43)
     verify("Rewind must remove all ninth chapter garrisons and privateering routes",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===17""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===21""",driver)
     # Chapter 10 1580—1589: the Loughrea recapture must remove the English warders,
     # preserve older political identities, and switch colonial places by year.
-    set_year(1579, 53)
+    set_year(1579, 68)
     verify("1580 previous-year Loughrea English warders absent", 
            "document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2",driver)
     set_year(1580,7)
@@ -981,7 +981,7 @@ try:
               document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelector('#chapterLabel').textContent.includes('第九章')""",driver)
     verify("1580 Drake homebound Atlantic/Indian Ocean legs must appear only after switching into the tenth chronological chapter",
-           """document.querySelectorAll('#map .atlas-voyage-hit').length===14 &&
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===18 &&
               document.querySelector('#yearRange').value==='1580'""",driver)
     verify("1580 Munster armed invasion must have one reference surface",
            """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
@@ -1035,7 +1035,7 @@ try:
     set_year(1586, 24)
     verify("1586 evacuated Roanoke site persisted into year-end",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===5""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===9""",driver)
     verify("1586 must show one Munster policy region and THREE separate Drake-raided towns",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
               document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===3 &&
@@ -1096,16 +1096,16 @@ try:
     set_year(1589, 38)
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===10 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
-    set_year(1579, 53)
+    set_year(1579, 68)
     verify("rewinding to ninth chapter left tenth control sites",
            "document.querySelectorAll('#map .atlas-tenth-english-site').length===0",driver)
     # 1590s annual/year-end control differences, uncertain study areas, and Drake 1579 underlay.
-    set_year(1579, 53)
+    set_year(1579, 68)
     verify("Drake 1579 voyage schematic continuity backdrop missing",
            "document.querySelectorAll('#map .atlas-voyage-continuity').length>=2",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
