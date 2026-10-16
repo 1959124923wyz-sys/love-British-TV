@@ -13,7 +13,7 @@ assert.equal(db.sources.length,65);
 assert.equal(db.routes.length,20);
 assert.equal(db.events.filter(e=>e.year<=1577).length,28,'no premature publication before Chile voyage');
 assert.equal(db.events.filter(e=>e.year<=1578).length,36);
-assert(core.name.includes('瓦尔帕莱索')&&core.description.includes('仓库和房屋')===false?true:core.name.includes('房屋'));
+assert(core.name.includes('瓦尔帕莱索')&&core.name.includes('房屋'));
 assert(core.description.includes('总督托莱多'),'contemporary Spanish dispatch cited');
 assert(core.description.includes('12月6日')&&core.description.includes('12月4日'),'record day uncertainty rather than false exact date');
 assert(core.description.includes('不能据此推断智利居民普遍受害'),'territorial harms not imagined');
