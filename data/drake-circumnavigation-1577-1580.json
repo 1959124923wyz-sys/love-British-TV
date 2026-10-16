@@ -1,0 +1,670 @@
+{
+  "schema": "drake_circumnavigation_year_gated_route_v1",
+  "voyage_id": "drake-circumnavigation-1577-1580",
+  "description": "1577 December Plymouth departure, 1578 Atlantic/Magellan/Chile, 1579 Pacific to Ternate and 1580 Indian Ocean return; visible connected year-by-year schematic segments",
+  "begin_year": 1577,
+  "end_year": 1580,
+  "date_sensitive": true,
+  "coordinate_order": "[latitude,longitude] Leaflet",
+  "origin": "Library of Congress Kraus Drake Collection, with Chile National Library Mocha/Valparaiso supplementary evidence",
+  "sources": [
+    {
+      "id": "C9-S10",
+      "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/the-famous-voyage/"
+    },
+    {
+      "id": "C10-S30",
+      "url": "https://www.nps.gov/pore/learn/historyculture/people_europeanexplorers_francisdrake.htm"
+    },
+    {
+      "id": "CL-BNC-DRAKE-CHILE-1578",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-619.html"
+    }
+  ],
+  "waypoints": {
+    "plymouth": {
+      "coord": [
+        50.376,
+        -4.143
+      ],
+      "label": "Plymouth, England",
+      "precision": "named departure harbour, no 1577 exact berth"
+    },
+    "capeverde": {
+      "coord": [
+        14.916,
+        -23.605
+      ],
+      "label": "Cape Verde Islands – Santiago regional reference",
+      "precision": "island location, captured Portuguese pilot at Cape Verde in Jan 1578; not exact ship anchorage"
+    },
+    "plate": {
+      "coord": [
+        -34.85,
+        -56.25
+      ],
+      "label": "Río de la Plata estuary reference",
+      "precision": "modern estuary orientation; NOT exact claimed disembarkation"
+    },
+    "stjulian": {
+      "coord": [
+        -49.303,
+        -67.72
+      ],
+      "label": "Puerto San Julián",
+      "precision": "modern named bay reference, NOT sixteenth century ship GPS"
+    },
+    "magellan": {
+      "coord": [
+        -53.66,
+        -72
+      ],
+      "label": "Strait of Magellan middle-western passage orientation",
+      "precision": "strait geographic study point, NOT GPS route"
+    },
+    "mocha": {
+      "coord": [
+        -38.375,
+        -73.935
+      ],
+      "label": "Isla Mocha",
+      "precision": "modern island orientation, no precise coastal anchorage"
+    },
+    "valparaiso": {
+      "coord": [
+        -33.047,
+        -71.613
+      ],
+      "label": "Valparaíso",
+      "precision": "modern port location, not specific sacked storehouses"
+    },
+    "laserena": {
+      "coord": [
+        -29.9045,
+        -71.2489
+      ],
+      "label": "La Serena–Coquimbo Bay",
+      "precision": "modern city reference, failed attack not occupation"
+    },
+    "callao": {
+      "coord": [
+        -12.055,
+        -77.149
+      ],
+      "label": "Callao harbour",
+      "precision": "modern named port location"
+    },
+    "huatulco": {
+      "coord": [
+        15.765,
+        -96.128
+      ],
+      "label": "Huatulco Pacific port region",
+      "precision": "modern named port coastal study point, not exact anchorage"
+    },
+    "california": {
+      "coord": [
+        38.054,
+        -122.954
+      ],
+      "label": "Northern California coastal landing vicinity",
+      "precision": "Point Reyes–Drakes Bay candidate; disputed, not sole historically verified harbour"
+    },
+    "philippines": {
+      "coord": [
+        15.05,
+        122.3
+      ],
+      "label": "Philippine archipelago geographic orientation",
+      "precision": "LOC records Oct16 sighting Philippines, this is NOT the specific sighted island"
+    },
+    "ternate": {
+      "coord": [
+        0.79,
+        127.38
+      ],
+      "label": "Ternate (Moluccas)",
+      "precision": "modern named island centre not actual landing berth"
+    },
+    "java": {
+      "coord": [
+        -6.5,
+        110.4
+      ],
+      "label": "Java island geographic orientation",
+      "precision": "LOC confirms passage to Java during 1580, this is NOT evidenced harbour GPS"
+    },
+    "cape": {
+      "coord": [
+        -34.357,
+        18.496
+      ],
+      "label": "Cape of Good Hope geographic reference",
+      "precision": "well-known cape, not actual offshore ship position"
+    }
+  },
+  "routes": [
+    {
+      "id": "drake-1578-plymouth-cape-verde",
+      "year": 1578,
+      "segment_order": 1,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1578年 · Plymouth, England → Cape Verde Islands",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          50.376,
+          -4.143
+        ],
+        [
+          14.916,
+          -23.605
+        ]
+      ],
+      "waypoint_keys": [
+        "plymouth",
+        "capeverde"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC 1577 Dec departure and 1578 January Cape Verde visit; revealed in 1578 when endpoint was reached；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1578-cape-verde-river-plate",
+      "year": 1578,
+      "segment_order": 2,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1578年 · Cape Verde Islands → Río de la Plata estuary reference",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          14.916,
+          -23.605
+        ],
+        [
+          -34.85,
+          -56.25
+        ]
+      ],
+      "waypoint_keys": [
+        "capeverde",
+        "plate"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC records transit via River Plate region; no verified stop near the chosen estuary reference；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1578-river-plate-st-julian",
+      "year": 1578,
+      "segment_order": 3,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1578年 · Río de la Plata estuary reference → Puerto San Julián",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -34.85,
+          -56.25
+        ],
+        [
+          -49.303,
+          -67.72
+        ]
+      ],
+      "waypoint_keys": [
+        "plate",
+        "stjulian"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC gives Port St Julian 18 June 1578; estuary waypoint geographical orientation only；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1578-st-julian-magellan",
+      "year": 1578,
+      "segment_order": 4,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1578年 · Puerto San Julián → Strait of Magellan middle-western passage orientation",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -49.303,
+          -67.72
+        ],
+        [
+          -53.66,
+          -72
+        ]
+      ],
+      "waypoint_keys": [
+        "stjulian",
+        "magellan"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC documents Magellan Strait entry Aug20 1578, 16 day passage; interior waypoint not GPS；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1578-magellan-mocha",
+      "year": 1578,
+      "segment_order": 5,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1578年 · Strait of Magellan middle-western passage orientation → Isla Mocha",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -53.66,
+          -72
+        ],
+        [
+          -38.375,
+          -73.935
+        ]
+      ],
+      "waypoint_keys": [
+        "magellan",
+        "mocha"
+      ],
+      "source_ids": [
+        "C9-S10",
+        "CL-BNC-DRAKE-CHILE-1578"
+      ],
+      "note": "LOC storms in South Pacific; Chile national library describes Nov1578 Isla Mocha local contact；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1578-mocha-valparaiso",
+      "year": 1578,
+      "segment_order": 6,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1578年 · Isla Mocha → Valparaíso",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -38.375,
+          -73.935
+        ],
+        [
+          -33.047,
+          -71.613
+        ]
+      ],
+      "waypoint_keys": [
+        "mocha",
+        "valparaiso"
+      ],
+      "source_ids": [
+        "C9-S10",
+        "CL-BNC-DRAKE-CHILE-1578"
+      ],
+      "note": "Chile National Library locates Isla Mocha before Valparaiso Dec1578; no measured offshore course；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1578-valparaiso-la-serena",
+      "year": 1578,
+      "segment_order": 7,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1578年 · Valparaíso → La Serena–Coquimbo Bay",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -33.047,
+          -71.613
+        ],
+        [
+          -29.9045,
+          -71.2489
+        ]
+      ],
+      "waypoint_keys": [
+        "valparaiso",
+        "laserena"
+      ],
+      "source_ids": [
+        "C9-S10",
+        "CL-BNC-DRAKE-CHILE-1578"
+      ],
+      "note": "Chile library documents failed La Serena attack after Valparaiso, not conquest；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1579-la-serena-callao",
+      "year": 1579,
+      "segment_order": 8,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1579年 · La Serena–Coquimbo Bay → Callao harbour",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -29.9045,
+          -71.2489
+        ],
+        [
+          -12.055,
+          -77.149
+        ]
+      ],
+      "waypoint_keys": [
+        "laserena",
+        "callao"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC confirms Callao arrival Feb15 1579; connects otherwise omitted 1578–1579 coastal interval；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1579-callao-huatulco",
+      "year": 1579,
+      "segment_order": 9,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1579年 · Callao harbour → Huatulco Pacific port region",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -12.055,
+          -77.149
+        ],
+        [
+          15.765,
+          -96.128
+        ]
+      ],
+      "waypoint_keys": [
+        "callao",
+        "huatulco"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC confirms rich silver prize Mar1 at sea, later Huatulco port, no fake prize at fixed coordinates；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1579-huatulco-california",
+      "year": 1579,
+      "segment_order": 10,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1579年 · Huatulco Pacific port region → Northern California coastal landing vicinity",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          15.765,
+          -96.128
+        ],
+        [
+          38.054,
+          -122.954
+        ]
+      ],
+      "waypoint_keys": [
+        "huatulco",
+        "california"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC June-July coast near San Francisco and Huatulco; California landing uncertain Point Reyes vicinity；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1579-california-philippines-ternate",
+      "year": 1579,
+      "segment_order": 11,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1579年 · Northern California coastal landing vicinity → Philippine archipelago geographic orientation → Ternate (Moluccas)",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          38.054,
+          -122.954
+        ],
+        [
+          15.05,
+          122.3
+        ],
+        [
+          0.79,
+          127.38
+        ]
+      ],
+      "waypoint_keys": [
+        "california",
+        "philippines",
+        "ternate"
+      ],
+      "source_ids": [
+        "C9-S10"
+      ],
+      "note": "LOC July23 transpacific departure, Oct16 Philippines sighting, Nov3 Ternate visit; Philippines waypoint a modern region anchor, not exact landing；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": true,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1580-ternate-java",
+      "year": 1580,
+      "segment_order": 12,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1580年 · Ternate (Moluccas) → Java island geographic orientation",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          0.79,
+          127.38
+        ],
+        [
+          -6.5,
+          110.4
+        ]
+      ],
+      "waypoint_keys": [
+        "ternate",
+        "java"
+      ],
+      "source_ids": [
+        "C9-S10",
+        "C10-S30"
+      ],
+      "note": "LOC after Jan9 reef strikes heads for Java, exact port unknown；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1580-java-cape-good-hope",
+      "year": 1580,
+      "segment_order": 13,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1580年 · Java island geographic orientation → Cape of Good Hope geographic reference",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -6.5,
+          110.4
+        ],
+        [
+          -34.357,
+          18.496
+        ]
+      ],
+      "waypoint_keys": [
+        "java",
+        "cape"
+      ],
+      "source_ids": [
+        "C9-S10",
+        "C10-S30"
+      ],
+      "note": "LOC confirms route west Indian Ocean around Cape of Good Hope, no daily track；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    },
+    {
+      "id": "drake-1580-cape-good-hope-plymouth",
+      "year": 1580,
+      "segment_order": 14,
+      "voyage_id": "drake-circumnavigation-1577-1580",
+      "name": "1580年 · Cape of Good Hope geographic reference → Plymouth, England",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "source_supported_named_stops_or_geographic_orientation; interpolated_render_points_are_not_ship_GPS",
+      "coords": [
+        [
+          -34.357,
+          18.496
+        ],
+        [
+          50.376,
+          -4.143
+        ]
+      ],
+      "waypoint_keys": [
+        "cape",
+        "plymouth"
+      ],
+      "source_ids": [
+        "C9-S10",
+        "C10-S30"
+      ],
+      "note": "LOC confirms Plymouth Sep26 1580 return; no earlier 1579 return；虚线仅为已知地点先后顺序的海上示意，不代表逐日GPS或沿途土地被英国控制。",
+      "crosses_antimeridian": false,
+      "is_schematic_open_ocean_segment": true,
+      "schematic_render_interpolation": true,
+      "verified_English_territorial_control": false,
+      "actual_area_sqkm": null,
+      "no_intermediate_stops_implied": true
+    }
+  ],
+  "rendering": {
+    "draw_as": "multiworld_longitude-unwrapped_continuous_paths",
+    "wrap_offsets_degrees": [
+      -360,
+      0,
+      360
+    ],
+    "dashed": true,
+    "visible_1579_final_stop": "Ternate (November 1579)",
+    "show_1580_return_only_from": 1580,
+    "never_draw_exact_maritime_GPS": true,
+    "actual_English_territorial_control": false,
+    "polygon_fills": 0,
+    "do_not_imply_ship_stop_at_schematic_regional_orientations": true
+  },
+  "duplicate_old_route_ids": [
+    "ch9-Drake-1578-Mocha-Valparaiso",
+    "ch9-Drake-1578-Valparaiso-LaSerena",
+    "ch9-Drake-1579-Callao-California",
+    "ch9-Drake-1579-California-Ternate"
+  ]
+}
