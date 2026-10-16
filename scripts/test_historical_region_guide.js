@@ -11,9 +11,11 @@ for(const period of ['1497-1509','1510-1519','1520-1529','1530-1539','1540-1549'
  for(const s of j.sources)all.set(s.id,s);
 }
 assert.equal(data.type,'FeatureCollection');
-assert.equal(data.features.length,6);
+assert.equal(data.features.length,7);
+assert.equal(data.metadata.feature_count,data.features.length,'Schematic feature count metadata must match');
 const pairs=[
  ['rough-wooing-leith-edinburgh-raid-1544',1544,1544],
+ ['rough-wooing-prestonpans-dunbar-raid-locality-1544',1544,1544],
  ['leix-offaly-crown-plantation-1556-1569',1556,null],
  ['essex-clandeboye-ulster-1573-1575',1573,1575],
  ['rathlin-island-crown-massacre-1575',1575,1575],
@@ -34,7 +36,7 @@ for(const [id,start,end] of pairs){
  for(const [lon,lat] of ring)assert.ok(Number.isFinite(lon)&&Number.isFinite(lat)&&Math.abs(lon)<=180&&Math.abs(lat)<=90);
 }
 const periods=new Map([
- [1544,['rough-wooing-leith-edinburgh-raid-1544']],
+ [1544,['rough-wooing-leith-edinburgh-raid-1544','rough-wooing-prestonpans-dunbar-raid-locality-1544']],
  [1556,['leix-offaly-crown-plantation-1556-1569']],
  [1568,['leix-offaly-crown-plantation-1556-1569']],
  [1570,['leix-offaly-crown-plantation-1556-1569']],

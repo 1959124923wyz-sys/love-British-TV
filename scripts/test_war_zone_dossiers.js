@@ -42,7 +42,7 @@ for(const f of contested.features){
  assert.ok(p.precision_note?.includes('示意'),f.id+' must disclose invented illustrative outline');
  assert.deepEqual(f.geometry.coordinates[0][0],f.geometry.coordinates[0].at(-1),'Close GeoJSON polygons');
 }
-assert.equal(militaryReach.features.length,5,'PR38 1544 raid, 1547 advance, 1548 supply network and 1549 retreat');
+assert.equal(militaryReach.features.length,6,'Five preserved military corridors plus the cited 1544 Edinburgh–Dunbar coastal raid link');
 assert.equal(militaryReach.metadata.unapproved_occupation_polygon_count,0);
 for(const f of militaryReach.features){
  const p=f.properties;
@@ -58,7 +58,7 @@ for(const f of militaryReach.features){
  assert.ok(p.source_ids?.length&&p.source_ids.every(id=>citations.has(id)),f.id+' missing sources');
  assert.ok((p.related_event_ids||[]).every(id=>atlas.events.some(e=>e.id===id)),f.id+' missing historic events');
 }
-const yearlyReach={1543:0,1544:1,1545:0,1546:0,1547:1,1548:2,1549:1};
+const yearlyReach={1543:0,1544:2,1545:0,1546:0,1547:1,1548:2,1549:1};
 for(const [y,expected] of Object.entries(yearlyReach))
  assert.equal(militaryReach.features.filter(f=>f.properties.start_year<=Number(y)&&Number(y)<=f.properties.end_year).length,expected,'Reach chronology '+y);
 assert.ok(!militaryReach.features.find(f=>f.properties.start_year===1549).properties.name.includes('哈丁顿英军占领'),'Haddington must no longer be English occupied at the end of 1549');

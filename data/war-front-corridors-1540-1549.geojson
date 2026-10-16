@@ -7,10 +7,12 @@
     "source_warning": "HES official Pinkie BTL15 and HES 2025 Dunglass SOS p.6–7 and p.19–20; HES 2022 Haddington communications and French cavalry blockade",
     "data_years": [
       1544,
+      1547,
+      1548,
       1549
     ],
     "published": true,
-    "geometry_policy": "ALL 5 features are schematic LINESTRINGS (no filled polygon); visual ribbon width in screen pixels only, never a historic military controlled area measurement",
+    "geometry_policy": "ALL 6 features are non-surveyed LineString geographic reference axes; NEVER political control/actual war damage polygons",
     "old_version_replaced": "4 invented broad Polygon/MultiPolygon sketches; intentionally deleted as unsupported and partly detached from England",
     "road_caveat": "HES Dunglass Statement describes possible 1547 crossing c.1 mile upstream, and later relocation toward modern A1. Do NOT trace present A1 as Tudor survey.",
     "England_crossing_first_WGS84": [
@@ -437,6 +439,87 @@
         "uncertainty": "high_geometry_low_if_scholarship_indicates_route",
         "verified_route_segment_centrelines": false,
         "temporary_dated_military_event_not_yearend_suzerainty": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "war-reach-edinburgh-to-dunbar-1544-campaign-reference",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.188,
+            55.954
+          ],
+          [
+            -3.08,
+            55.957
+          ],
+          [
+            -2.978101,
+            55.955712
+          ],
+          [
+            -2.745,
+            55.978
+          ],
+          [
+            -2.516122,
+            56.003285
+          ]
+        ]
+      },
+      "properties": {
+        "id": "war-reach-edinburgh-to-dunbar-1544-campaign-reference",
+        "name": "1544年英军自爱丁堡往邓巴方向的沿岸袭掠地理关系（概略）",
+        "start_year": 1544,
+        "end_year": 1544,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "visual_historical_operational_axis_only",
+        "not_actual_occupied_area": true,
+        "controller": "Hertford English raid within independent Scotland",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "SC-HES-2026-WOOIN",
+          "SC-HES-ANCRUM-KINGHORN-DUNBAR",
+          "SC-HES-PRESTON-TOWER-1544"
+        ],
+        "source_urls": [
+          "https://blog.historicenvironment.scot/2026/08/mary-queen-of-scots-the-battle-of-pinkie-and-the-anglo-scottish-wars-of-the-1540s/",
+          "https://portal.historicenvironment.scot/designation/BTL2",
+          "https://portal.historicenvironment.scot/designation/LB17530"
+        ],
+        "anchors": [
+          "Edinburgh",
+          "Preston Tower (Prestonpans)",
+          "Dunbar"
+        ],
+        "related_event_ids": [
+          "1540S-008",
+          "RW1544-HOLYROOD-SACK",
+          "RW1544-PRESTON-TOWER-BURNING",
+          "RW1544-DUNBAR-BURNING"
+        ],
+        "route_role": "same_1544_campaign_named_localities_relation_not_surveyed_road",
+        "route_continuity_certainty": "HES documents raids and southward English withdrawal; exact sequence through Preston Tower and specific 1544 roads unverified. Intermediate visual bends are invented for schematic orientation only.",
+        "route_status": "brief_raid_not_military_occupation",
+        "summary_zh": "赫特福德英军在1544年焚掠爱丁堡，并破坏普雷斯顿塔与邓巴等东洛锡安据点。这条线仅把同一场行动中可证的具名地点连成读者用的方向关系，不主张英军一定按照所有折点逐站行军，更不说明整条路有安全或长期英国军管。",
+        "precision_note": "线为非实测军事行动示意；与现代地面道路、实际行军距离、焚毁房屋范围、领土面积没有直接对应。普雷斯顿和邓巴的具体当日行动次序仍须进一步核实。",
+        "map_disclaimer": "苏格兰独立主权未变，英军1544年短期纵火袭扰并非军占带。",
+        "stroke_color": "#ce8d94",
+        "halo_color": "#dd8f99",
+        "halo_weight_px": 16,
+        "halo_opacity": 0.12,
+        "stroke_weight_px": 2.5,
+        "stroke_dashes": "5 9",
+        "temporary_dated_military_event_not_yearend_suzerainty": true,
+        "verified_route_segment_centrelines": false,
+        "source_precision": "HES historic campaign narrative and named building heritage records"
       }
     }
   ]
