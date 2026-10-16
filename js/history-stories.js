@@ -40,7 +40,7 @@
   if(!meta)return '';
   return '<section class="major-story-entry" aria-label="相关重大历史专题">'+
    '<span class="major-story-eyebrow">相关重大历史专题</span>'+
-   '<button type="button" class="major-story-enter" data-story-open="'+esc(id)+'">'+
+   '<button type="button" class="major-story-enter" data-story-open="'+esc(id)+'" data-story-source="'+esc(item.id)+'">'+
    '<span>'+esc(meta.title)+'</span><span aria-hidden="true">›</span></button>'+
    '<small>'+esc(meta.period)+' · 了解战争的前因、经过及后果</small></section>';
  }
@@ -92,11 +92,15 @@
     '<footer class="story-footer"><button type="button" class="story-back" data-story-return="1">← 返回原事件</button></footer>'+
    '</article>';
  }
- async function openStory(id,restore){
+ async function openStory(id,restore,originId){
   const meta=storyMeta.get(id);if(!meta)return;
   if(!restore){
-   const current=window.atlasStoryBridge?.selectedEventId?.()||null;
-   if(current&&storyByEvent.get(current)===id)sourceEventId=current;
+   // Anchor the return path to the exact child from which this article opened.
+   // The selected map event can change as the reader explores links and years.
+   const current=originId||window.atlasStoryBridge?.selectedEventId?.()||null;
+   const metaEventIds=meta.event_ids||[];
+   sourceEventId=current&&storyByEvent.get(current)===id?current:
+     metaEventIds.find(eventId=>eventInMemory(eventId))||null;
    readingScroll=0;
   }
   closePreview();
@@ -150,12 +154,17 @@
   window.atlasStoryBridge.openEvent(item);
  }
  async function returnToOrigin(){
-  const item=eventInMemory(sourceEventId);
-  returnStoryId=null;
-  if(item && navigateToEventYear(item)){window.atlasStoryBridge.openEvent(item);return;}
-  document.getElementById('workspace').classList.remove('story-reading');
-  window.atlasStoryBridge?.resetDossier?.();
-  window.atlasStoryBridge?.showDossier?.();
+  const meta=storyMeta.get(lastStoryId);
+  const fallbackId=(meta?.event_ids||[]).find(id=>eventInMemory(id));
+  const item=eventInMemory(sourceEventId)||eventInMemory(fallbackId);
+  if(item&&navigateToEventYear(item)){
+   returnStoryId=null;
+   window.atlasStoryBridge.openEvent(item);
+   return;
+  }
+  // Never exit the article into a blank sidebar when its source is unavailable.
+  // This can occur if story data and atlas data are temporarily out of sync.
+  if(lastStoryId)await openStory(lastStoryId,true);
  }
  document.addEventListener('click',function(e){
   const el=e.target.closest('[data-story-open],[data-story-event],[data-story-back],[data-story-return],[data-story-section],[data-story-preview-close]');
@@ -164,7 +173,7 @@
    return;
   }
   if(el.hasAttribute('data-story-preview-close')){closePreview();return;}
-  if(el.hasAttribute('data-story-open')){openStory(el.dataset.storyOpen,false);return;}
+  if(el.hasAttribute('data-story-open')){openStory(el.dataset.storyOpen,false,el.dataset.storySource);return;}
   if(el.hasAttribute('data-story-back')){openStory(returnStoryId||lastStoryId,true);return;}
   if(el.hasAttribute('data-story-return')){returnToOrigin();return;}
   if(el.hasAttribute('data-story-section')){
