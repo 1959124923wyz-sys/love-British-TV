@@ -2229,6 +2229,7 @@ map.on('click',()=>{if(activeClusterKey)closeCluster()});
 // This bridge does not expose mutable historic GIS or allow changing map coordinates.
 window.atlasStoryBridge={
  currentYear:()=>year,
+ activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
  activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
  eventById:id=>[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasFirstMerged]
