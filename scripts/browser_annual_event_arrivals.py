@@ -73,7 +73,7 @@ try:
     assert hits()["singles"]+hits()["clusters"]>=1
     year(1513)
     y1513=hits()
-    assert y1513["newRows"]==4, y1513
+    assert y1513["newRows"]==6, y1513
     assert y1513["singles"]+y1513["clusters"]>=1, y1513
     driver.save_screenshot(str(out/"1513-multiple-new-events.png"))
     year(1511)
