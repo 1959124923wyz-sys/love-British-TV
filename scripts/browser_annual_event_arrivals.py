@@ -52,8 +52,9 @@ try:
     current=hits()
     assert current["newRows"]==3 and "3 项" in current["yearBanner"],current
     assert current["singles"]+current["clusters"]>=1,"1512 Omagh new event is invisible on the map"
-    assert js("document.querySelector('#eventList .event-item')?.dataset.eid")=="1512-OMAGH-ODONNELL", \
-        "New event must be first in the list"
+    assert js("document.querySelector('#eventList .event-item')?.dataset.eid") in (
+        "1512-OMAGH-ODONNELL","KILDARE1512-ROSCOMMON","KILDARE1512-DUNGANNON-ODONNELL"
+    ),"A current-year event must be first regardless of significance ranking"
     assert js("document.querySelector('#eventList .year-arrival-tag')?.textContent")=="本年新"
     driver.save_screenshot(str(out/"1512-Omagh-highlight.png"))
     # Respect two public layer switches: hiding events hides their new emblem.
