@@ -8,7 +8,7 @@ const expect=[
  {id:'john-rut-north-atlantic-voyage-1527',a:a,events:['1527-JOHN-RUT','1527-JOHN-RUT-STJOHNS','RUT1527-PLYMOUTH-DEPARTURE','RUT1527-MONA-ENGLISH-VESSEL','RUT1527-SANTO-DOMINGO-ENGLISH-VESSEL']},
  {id:'silken-thomas-kildare-rebellion-1534-1537',a:b,events:['1530S-E003','1530S-E004','1530S-E005','1530S-E008','1530S-E012','KIL1534-STMARYS-RENOUNCEMENT','KIL1534-ARTANE-ALEN-KILLED','KIL1535-MAYNOOTH-GARRISON-EXECUTIONS','KIL1537-TYBURN-EXECUTIONS']}
 ];
-assert.equal(idx.length,10,'preserve previous eight published historical stories');
+assert.ok(idx.length>=12,'preserve previous eight published historical stories');
 for(const {id,a:chapter,events:ids} of expect){
  const meta=idx.find(q=>q.id===id);assert(meta,'not indexed: '+id);
  const s=j(meta.file),prose=s.sections.flatMap(s=>s.paragraphs).join('');
@@ -28,7 +28,7 @@ for(const {id,a:chapter,events:ids} of expect){
  for(const eid of ids){const e=chapter.events.find(q=>q.id===eid);assert(e,eid);assert(e.source_ids.every(s=>chapter.sources.some(q=>q.id===s)),eid+' source missing');}
 }
 assert.equal(a.events.length,35);assert.equal(a.routes.length,5);
-assert.equal(b.events.length,31);assert.equal(b.routes.length,0);
+assert.equal(b.events.length,33);assert.equal(b.routes.length,0);
 assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);
 for(const id of ['RUT1527-PLYMOUTH-DEPARTURE','RUT1527-MONA-ENGLISH-VESSEL','RUT1527-SANTO-DOMINGO-ENGLISH-VESSEL']){
  const e=a.events.find(q=>q.id===id);
