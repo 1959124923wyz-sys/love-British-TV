@@ -59,11 +59,11 @@
     '<p class="story-lead">'+esc(article.lead)+'</p></header>'+
     '<details class="story-toc"><summary>阅读目录 · '+article.sections.length+'节 <span aria-hidden="true">▾</span></summary>'+
     '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sec.heading.replace(/^[一二三四五六七八九十]+、/,''))+'</button>').join('')+'</nav></details>'+
+    '<div class="story-status" id="storyStatus" role="status" aria-live="polite" hidden></div>'+
     '<div class="story-body">'+article.sections.map(sec=>
      '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3>'+esc(sec.heading)+'</h3>'+
       sec.paragraphs.map(p=>'<p>'+renderInline(p)+'</p>').join('')+
      '</section>').join('')+'</div>'+
-    '<div class="story-status" id="storyStatus" role="status" aria-live="polite" hidden></div>'+
     '<details class="story-sources"><summary>历史资料与考证 · '+article.sources.length+'项 <span aria-hidden="true">▾</span></summary>'+
     '<p>'+esc(article.reading_note)+'</p>'+
     '<div class="source-list">'+article.sources.map(s=>'<a class="source-link" href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+' ↗</a>'+
@@ -103,7 +103,7 @@
   status.hidden=false;
   status.innerHTML='<span>'+esc(message)+'</span>'+
    (targetEvent?'<button type="button" data-story-year="'+esc(targetEvent.id)+'">切换到'+esc(targetEvent.year)+'年查看 →</button>':'');
-  status.scrollIntoView({block:'nearest',behavior:'smooth'});
+  // Preserve the paragraph position when reporting a map action.
  }
  function focusStoryEvent(item){
   if(!item)return;
