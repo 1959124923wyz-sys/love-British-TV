@@ -962,7 +962,7 @@ try:
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Disabling events left piracy lines or 1579 markers",
-           """document.querySelectorAll('#map .atlas-voyage-hit').length===2 &&
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     set_year(1569, 43)
