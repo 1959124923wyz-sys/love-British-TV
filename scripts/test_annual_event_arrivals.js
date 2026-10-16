@@ -14,7 +14,7 @@ const chapter=JSON.parse(fs.readFileSync(path.join(root,'data/atlas-1510-1519.js
 const omagh=chapter.events.find(x=>x.id==='1512-OMAGH-ODONNELL');
 assert.ok(omagh&&Number.isFinite(omagh.lat)&&Number.isFinite(omagh.lng),'1512 source event must be mappable');
 assert.equal(chapter.events.filter(e=>e.year===1511).length,0,'1511 control year assumed empty');
-assert.equal(chapter.events.filter(e=>e.year===1512).length,1,'1512 control year assumed one event');
+assert.equal(chapter.events.filter(e=>e.year===1512).length,3,'1512 has original Omagh rebuilding and two independently sourced military raids');
 const old=chapter.events.find(e=>e.year===1510);
 assert.ok(old);
 const stat={year:1512};
@@ -33,4 +33,4 @@ assert.ok(!app.slice(app.indexOf('function setYear(v){'),app.indexOf('function s
 for(const id of ['yearArrivalSummary','yearArrivalMapCount'])assert.ok(html.includes('id="'+id+'"'));
 for(const klass of ['.atlas-new-this-year','.atlas-cluster-new-count','.event-new-this-year','.year-arrival-tag'])assert.ok(css.includes(klass),klass);
 assert.ok(css.includes('@media(prefers-reduced-motion:reduce)'));
-console.log('PASS 1511->1512 detects Omagh as one new event, prior events are not new, and new-year UI uses map/sidebar/cluster cues');
+console.log('PASS 1511->1512 detects Omagh, Roscommon and Dungannon as three year-specific events while previous-year events stay unhighlighted');
