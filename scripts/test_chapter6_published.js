@@ -18,7 +18,7 @@ assert.equal(sixth.events.filter(e=>!e.id.startsWith('RW154')).length,91, 'Keep 
 assert.equal(sixth.events.filter(e=>e.id.startsWith('RW154')).length,10, 'Ten new independent sourced sites');
 assert.equal(sixth.routes.length,0,'Unknown ships routes must not be guessed');
 assert.equal(sixth.colonial_polygons.length,0,'No invented historic sixteenth-century occupied border');
-assert.equal(sixth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,73);
+assert.equal(sixth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,82);
 assert.equal(sixth.events.filter(e=>e.lat===null&&e.lng===null).length,19);
 assert.ok(last.some(x=>x.id==='chapterSixth'&&x.start===1540&&x.end===1549&&x.status==='published'));
 assert.equal(last[5].start,last[4].end+1,'Chapter six must follow 1539 without a gap');
