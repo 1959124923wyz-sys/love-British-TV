@@ -515,15 +515,16 @@
       "name": "巴拿马城通往加勒比运银港的陆路驮骡商道",
       "category": "commerce_and_navigation",
       "icon_code": "EXP",
-      "lat": 8.952,
-      "lng": -79.536,
+      "lat": 9.006,
+      "lng": -79.486,
       "geo_precision": "modern_named_reference_not_historical_exact_construction",
-      "geography_label": "现代地名参考，不以坐标框定真实十六世纪行政、运输和殖民控制范围",
+      "geography_label": "UNESCO巴拿马旧城1519—1671年遗址现代参考，非1673年以后重建的Casco Viejo",
       "description": "秘鲁金银经太平洋运至当时的巴拿马城，随后由驮骡队沿巴拿马地峡跨山路运往Nombre de Dios等加勒比转运港。此点标明现存巴拿马古城遗址的道路起点方向，不代表1573年驮骡队受袭地。",
       "short_description": "秘鲁金银经太平洋运至当时的巴拿马城，随后由驮骡队沿巴拿马地峡跨山路运往Nombre de Dios等加勒比转运港。此点标明现存巴拿马古城遗址的道路起点方向，不代表1573年驮骡队受袭地。",
       "source_ids": [
         "PA-LOC-DRAKE-CIMARRON",
-        "PA-LOC-DRAKE-1572-73"
+        "PA-LOC-DRAKE-1572-73",
+        "PA-UNESCO-PANAMA-VIEJO-LOC"
       ],
       "certainty": "primary_national_archival_or_scholarly_recorded_action",
       "significance": {
@@ -4038,6 +4039,15 @@
       "kind": "national_archival_or_academic_history",
       "evidence_read_level": "public primary archive, national monument registry, scholarly published biographical or peer reviewed text",
       "precision_warning": "Named modern place reference; historic travel position, exact mine and killed captives location not inferred"
+    },
+    {
+      "id": "PA-UNESCO-PANAMA-VIEJO-LOC",
+      "title": "UNESCO: Panamá Viejo archaeologic 1519–1671 vs post-1673 Casco Viejo, two locations",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/tentativelists/5970",
+      "kind": "historical_geography_institutional",
+      "evidence_read_level": "UNESCO official location and historical relocation read",
+      "precision_warning": "Panamá Viejo circa 9.006,-79.486; modern Casco Viejo at 8.951,-79.541 built after 1673, must not use as 1573 town"
     }
   ],
   "routes": [
@@ -4106,8 +4116,8 @@
       "geometry_precision": "named_place_endpoints_without_logged_16c_path",
       "coords": [
         [
-          8.952,
-          -79.536
+          9.006,
+          -79.486
         ],
         [
           9.565,
@@ -4116,7 +4126,8 @@
       ],
       "source_ids": [
         "PA-LOC-DRAKE-CIMARRON",
-        "PA-LOC-DRAKE-1572-73"
+        "PA-LOC-DRAKE-1572-73",
+        "PA-UNESCO-PANAMA-VIEJO-LOC"
       ],
       "related_event_ids": [
         "DRA1573-PANAMA-VIEJO-SILVER-ROAD",
