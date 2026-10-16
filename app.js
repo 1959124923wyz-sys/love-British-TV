@@ -634,7 +634,7 @@ function renderPoints(){
    dashArray:coastal?'2 11':schematic?'3 10':'8 9',opacity:coastal?.7:.92,
    className:coastal?'atlas-merchant-coastline':'atlas-voyage-schematic'};
   const routeGeometry=r.voyage_id==='drake-circumnavigation-1577-1580'
-   ? AtlasVoyageGeometry.routeGeometryForWorldWrap(r)
+   ? window.AtlasVoyageGeometry.routeGeometryForWorldWrap(r)
    : r.segments&&r.segments.length?r.segments:r.coords;
    // A faint unbroken foundation joins historical endpoints without implying GPS.
    if(schematic)L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
