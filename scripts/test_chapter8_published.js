@@ -16,7 +16,7 @@ assert.deepEqual(atlas.period,{from:1560,to:1569,next:1570});
 assert.ok(chapters.chapters.some(c=>c.number===7&&c.start===1560&&c.end===1569&&c.status==='published'));
 assert.equal(atlas.events.length,38);assert.equal(atlas.sources.length,30);assert.equal(atlas.places.length,27);
 assert.equal(atlas.routes.length,16);assert.equal(atlas.colonial_polygons.length,0);
-assert.equal(prev.events.length,31);
+assert.equal(prev.events.length,35);
 const iconSet=new Set(read('data/icon-categories.json').categories.map(x=>x.code)),sources=new Set(atlas.sources.map(x=>x.id)),ids=new Set();
 assert.equal(iconSet.size,16);
 for(const e of atlas.events){
