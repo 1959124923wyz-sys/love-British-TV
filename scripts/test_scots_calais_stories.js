@@ -8,7 +8,7 @@ const events=new Map(atlases.flatMap(d=>d.events).map(e=>[e.id,e]));
 const index=j('data/stories/index.json').stories;
 const targets=[
  ['anglo-scottish-war-border-raids-1522-1523',1522,1523,['SC1522-KELSO-RAID','SC1523-KELSO-ABBEY-ATTACK','SC1523-ALBANY-COLDSTREAM-MUSTER']],
- ['calais-guines-english-pale-1497-1558',1497,1558,['1500-CALAIS-ETAPLES','1505-CALAIS-STAPLE-ROYAL-PAYMENTS','1529-GUINES-LAWS','CAL1542-GARRISON-ACCOUNTS','1550S-E018','1550S-E019','1550S-E025']]
+ ['calais-guines-english-pale-1497-1558',1497,1558,['1500-CALAIS-ETAPLES','1505-CALAIS-STAPLE-ROYAL-PAYMENTS','1529-GUINES-LAWS','CAL1542-GARRISON-ACCOUNTS','1550S-E018','1550S-E019','1550S-E025','CAL1558-RISBAN-FRENCH-CAPTURE','CAL1558-NEWNHAM-FRENCH-CAPTURE']]
 ];
 assert.equal(index.length,8);
 for(const[id,start,end,needed]of targets){
@@ -35,8 +35,10 @@ for(const[id,start,end,needed]of targets){
 const fourth=atlases[2],sixth=atlases[4];
 assert.equal(fourth.events.length,32);
 assert.equal(fourth.routes.length,4);
-assert.equal(sixth.events.length,91);
-assert.equal(sixth.sources.length,122);
+assert.equal(sixth.events.length,92);
+assert.equal(sixth.sources.length,124);
+assert.equal(atlases[5].events.length,31,'preserve 29 pre-existing 1550s events and map two French 1558 outworks');
+assert.equal(atlases[5].sources.length,54);
 const routes={
 'SC1523-COLDSTREAM-WARK-SCOTS-ADVANCE':{y:1523,actor:'Scotland_France_counteroffensive',points:2},
 'FR1522-CLOUET-HENVIC-MORLAIX-RAID':{y:1522,actor:'England_raid',points:3}
@@ -47,7 +49,7 @@ for(const [id,spec]of Object.entries(routes)){
  assert.equal(r.coords.length,spec.points);assert.equal(r.historical_boundary_confirmed,false);assert.equal(r.territorial_claim,false);assert.equal(r.area_sqkm,null);
  for(const sid of r.source_ids)assert(fourth.sources.some(s=>s.id===sid));
 }
-for(const id of ['SC1522-KELSO-RAID','SC1523-KELSO-ABBEY-ATTACK','SC1523-ALBANY-COLDSTREAM-MUSTER','FR1522-CLOUET-CARANTEC-LANDING','FR1522-HENVIC-LEZIREUR-BURNING','CAL1542-GARRISON-ACCOUNTS']){
+for(const id of ['SC1522-KELSO-RAID','SC1523-KELSO-ABBEY-ATTACK','SC1523-ALBANY-COLDSTREAM-MUSTER','FR1522-CLOUET-CARANTEC-LANDING','FR1522-HENVIC-LEZIREUR-BURNING','CAL1542-GARRISON-ACCOUNTS','FR1542-MORLAIX-TAUREAU-FORT','CAL1558-RISBAN-FRENCH-CAPTURE','CAL1558-NEWNHAM-FRENCH-CAPTURE']){
  const e=events.get(id);assert(e&&Number.isFinite(e.lat)&&Number.isFinite(e.lng));assert.equal(e.actual_English_land_area_sqkm,null);
  assert(j('data/historical-detail-notes.json').records[id],id+' missing archived note');
 }
