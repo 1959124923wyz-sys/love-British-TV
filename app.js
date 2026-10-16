@@ -184,7 +184,7 @@ function togglePanel(which){
 }
 const categoryName={political:'王室授权',voyage:'航海行动',claim:'王室宣称',status:'研究结论'};
 const categorySymbol=fallbackCodes;
-let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasFirstMerged=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let atlasEleventh=null;let year=1497;
+let atlas=null;let atlasEarly=null;let atlasLater=null;let atlasFirstMerged=null;let atlasThird=null;let atlasFourth=null;let atlasFifth=null;let atlasSixth=null;let atlasSeventh=null;let atlasEighth=null;let atlasNinth=null;let atlasTenth=null;let atlasEleventh=null;let drakeCircumnavigation=null;let year=1497;
 // Browsing the multi-century navigator never changes the verified year on the map.
 // UI contract: two independent user-facing layers, all earlier internal gate IDs
 // retained only for chronology, migration and backwards-compatible renderers.
@@ -616,7 +616,13 @@ function renderPoints(){
     .on('click',()=>openDossier(atlas.events.find(e=>e.id==='landfall-1497'),'event')).addTo(groups.claim);
   }
  }
- for(const r of atlas.routes||[]){
+ // The circumnavigation is one continuous, separately sourced 1577–1580 voyage.
+ // Preserve all published episode records but avoid drawing their four older,
+ // disconnected Pacific/Chile direction links twice when the new itinerary loads.
+ const mapRoutes=(atlas.routes||[]).filter(r=>!(drakeCircumnavigation&&
+  year>=1577&&year<=1580&&drakeCircumnavigation.duplicate_old_route_ids.includes(r.id)));
+ if(drakeCircumnavigation&&year>=1577&&year<=1580)mapRoutes.push(...drakeCircumnavigation.routes);
+ for(const r of mapRoutes){
   if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;
   if(!Array.isArray(r.coords)||r.coords.length<2)continue;
   const coastal=r.route_kind==='coastal-commercial-reference-schematic';
@@ -627,7 +633,9 @@ function renderPoints(){
    color:baseColor,weight:coastal?4.4:schematic?2.2:2.7,
    dashArray:coastal?'2 11':schematic?'3 10':'8 9',opacity:coastal?.7:.92,
    className:coastal?'atlas-merchant-coastline':'atlas-voyage-schematic'};
-  const routeGeometry=r.segments&&r.segments.length?r.segments:r.coords;
+  const routeGeometry=r.voyage_id==='drake-circumnavigation-1577-1580'
+   ? AtlasVoyageGeometry.routeGeometryForWorldWrap(r)
+   : r.segments&&r.segments.length?r.segments:r.coords;
    // A faint unbroken foundation joins historical endpoints without implying GPS.
    if(schematic)L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
     color:baseColor,weight:2.4,opacity:.48,interactive:false,
@@ -1877,6 +1885,13 @@ async function boot(){
   atlasTenth=await tenthRes.json();
   atlasEleventh=await eleventhRes.json();
   atlasFirstMerged=await combinedRes.json();
+  const drakeRes=await fetch('data/drake-circumnavigation-1577-1580.json',{cache:'no-store'});
+  if(!drakeRes.ok)throw new Error('德雷克环球航线补丁数据未能加载');
+  drakeCircumnavigation=await drakeRes.json();
+  if(drakeCircumnavigation.voyage_id!=='drake-circumnavigation-1577-1580'||
+     !Array.isArray(drakeCircumnavigation.routes)||!Array.isArray(drakeCircumnavigation.duplicate_old_route_ids)||
+     drakeCircumnavigation.routes.length!==14||!window.AtlasVoyageGeometry)
+   throw new Error('德雷克1577—1580航线补丁结构错误');
   const chapterRes=await fetch('data/chapters.json',{cache:'no-store'});
   if(!chapterRes.ok)throw new Error('章节目录未正确加载');
   chapterRegistry=await chapterRes.json();
