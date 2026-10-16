@@ -3572,6 +3572,72 @@
       "position_type": "approximate_modern_locality_centroid_not_verified_historical_point",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
+    },
+    {
+      "id": "KET1549-BISHOPS-BRIDGE",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年7月22日",
+      "name": "凯特起义者进攻诺里奇主教桥和东门",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 52.632418,
+      "lng": 1.308592,
+      "geo_precision": "modern_Bishop_Bridge_NHLE_1205642_reference_not_1549_entire_battle_area",
+      "geography_label": "诺里奇主教桥现代中世纪遗址，非当年全部阵地",
+      "description": "1549年7月22日，凯特率起义军向诺里奇东部主教桥、河岸和防御城门发起进攻，炮击守军设施，随后起义队伍夺取城市。",
+      "short_description": "凯特起义军在诺里奇主教桥交战并攻入城市。",
+      "source_ids": [
+        "EN-HISTENG-BISHOP-BRIDGE-1549",
+        "EN-NORWICH-SOCIETY-BISHOP-BRIDGE",
+        "EN-NCL-KETT-COMMONS-1549"
+      ],
+      "certainty": "historic_site_and_attack_supported_modern_bridge_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "反围地起义进入诺里奇的具名桥梁战斗",
+        "review_status": "source_checked"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_medieval_bridge_reference_only",
+      "geographic_rule": "domestic_rebel_attack_not_foreign_English_occupation",
+      "editorial_status": "published_with_site_limit"
+    },
+    {
+      "id": "KET1549-PALACE-PLAIN",
+      "year": 1549,
+      "start_year": 1549,
+      "end_year": 1549,
+      "visible_from": 1549,
+      "date_label": "1549年7月末至8月初",
+      "name": "北安普顿王室军在诺里奇宫殿广场一带遭起义者击败",
+      "category": "domestic_repression",
+      "icon_code": "REP",
+      "lat": 52.633214,
+      "lng": 1.301335,
+      "geo_precision": "historic_Palace_Plain_locality_modern_Bishops_Gate_NHLE_reference_not_entire_street_battle",
+      "geography_label": "诺里奇宫殿广场旁主教府门遗址参考位置",
+      "description": "1549年7月末至8月初，北安普顿侯爵率首支王室平叛军进入诺里奇，随后在宫殿广场等街道受到凯特支持者反击并被迫撤退，谢菲尔德勋爵在城中交战时阵亡。",
+      "short_description": "起义者在宫殿广场附近击退王室军，北安普顿撤离诺里奇。",
+      "source_ids": [
+        "EN-NORWICH-PRESERVATION-PALACE-1549",
+        "EN-HISTENG-BISHOP-GATE-PALACE",
+        "EN-HODGKINS-DUSSINDALE-2015"
+      ],
+      "certainty": "named_Palace_Plain_urban_fight_record_and_modern_heritage_reference",
+      "significance": {
+        "level": 2,
+        "rationale": "首次王室军诺里奇攻势失败所在有据街区",
+        "review_status": "source_checked"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "position_type": "modern_named_urban_site_reference_only",
+      "geographic_rule": "English_domestic_rising_Northampton_royal_defeat_not_foreign_territory",
+      "editorial_status": "published_with_site_limit"
     }
   ],
   "places": [
@@ -5656,6 +5722,38 @@
       "kind": "official_fort_construction_history",
       "evidence_read_level": "official historical site page read",
       "precision_warning": "1540 site-centred staffing is not territorial conquest"
+    },
+    {
+      "id": "EN-HISTENG-BISHOP-BRIDGE-1549",
+      "title": "Historic England NHLE 1205642 Bishop Bridge modern NGR TG2399308991",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1205642",
+      "kind": "official_medieval_bridge_site_reference",
+      "precision_warning": "Listed medieval bridge point is not 1549 battle boundary"
+    },
+    {
+      "id": "EN-NORWICH-SOCIETY-BISHOP-BRIDGE",
+      "title": "Norwich Society Bishop Bridge 1549 Kett's guns and gatehouse",
+      "publisher": "Norwich Society",
+      "url": "https://www.thenorwichsociety.org.uk/explore-norwich/bishop-bridge",
+      "kind": "regional_public_heritage_history",
+      "precision_warning": "modern bridge site; no garrison polygon"
+    },
+    {
+      "id": "EN-NORWICH-PRESERVATION-PALACE-1549",
+      "title": "Norwich Preservation Trust Palace Plain site and Kett's rebellion fighting",
+      "publisher": "Norwich Preservation Trust",
+      "url": "https://norwichpreservationtrust.co.uk/cotman-house-7-palace-plain-grade-ii/",
+      "kind": "local_heritage_organisation_historical_note",
+      "precision_warning": "Palace Plain modern square centre, not actual 1549 deployment coordinates"
+    },
+    {
+      "id": "EN-HISTENG-BISHOP-GATE-PALACE",
+      "title": "Historic England NHLE 1051328 Bishop's Gate at St Martin-at-Palace Plain",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1051328",
+      "kind": "official_listed_place_modern_NGR",
+      "precision_warning": "site near Palace Plain not continuous street battle perimeter"
     }
   ],
   "routes": [],
