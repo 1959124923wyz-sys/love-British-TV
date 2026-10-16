@@ -1291,6 +1291,277 @@
           "Cork city"
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-armada-1588-streedagh-coastal",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.66,
+              54.36
+            ],
+            [
+              -8.48,
+              54.36
+            ],
+            [
+              -8.45,
+              54.441
+            ],
+            [
+              -8.62,
+              54.45
+            ],
+            [
+              -8.66,
+              54.36
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1588,
+        "end_year": 1588,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Modern place orientation polygon manually drafted for reading historical accounts, NOT surveyed execution site, mapped deaths, storm-wreck archaeological outline, medieval fortification or Tudor Crown governance border.",
+        "source_precision": "Documented named coast or lordship region only, with no proven 1588 people killed per location or perimeter.",
+        "mapping_method": "documented_location_schematic_envelope_not_measured",
+        "spatial_semantics": "non_souvereign_reading_area_separating_disaster_murder_refuge",
+        "name": "1588年斯特里达海湾：风暴沉船与登陆后杀害分离示意",
+        "label_type": "1588年沉船事件与暴力后果 · 非实测范围",
+        "zone_type": "armada_shipwreck_and_shore_survivor_killings",
+        "controller_zh": "暴风造成船难；王室士兵及部分当地人员涉及随后杀害；幸存者另获一些盖尔领主救助",
+        "summary_zh": "1588年9月21日La Lavia、La Juliana和Santa Maria de Visón三艘西班牙战舰在Streedagh海湾遭风暴失事，部分登岸者之后遭王室士兵及当地人杀害。爱尔兰政府2025年联合研究记载约1,100名死者属于沉船及后续数日全部死亡，不能直接解释为英军处决1100人。虚线只表示海滩海湾所在，不复原船体或杀害者的真实外廓。",
+        "source_ids": [
+          "IR-NMS-CUELLAR-1588-2025",
+          "IR-DIB-RICHARD-BINGHAM-1588"
+        ],
+        "source_urls": [
+          "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/new-irishspanish-joint-publication-reveals-the-fascinating-story-of-captain-cu%C3%A9llar-1588-spanish-armada-shipwreck-survivor/",
+          "https://www.dib.ie/biography/bingham-byngham-sir-richard-a0665"
+        ],
+        "related_event_ids": [
+          "ARM1588-STREEDAGH-STORM",
+          "ARM1588-STREEDAGH-SHORE-KILLING"
+        ],
+        "named_anchors": [
+          "Streedagh Strand",
+          "Streedagh Bay",
+          "Grange, County Sligo"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-armada-1588-rosclogher-refuge",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.283,
+              54.422
+            ],
+            [
+              -8.055,
+              54.422
+            ],
+            [
+              -8.05,
+              54.506
+            ],
+            [
+              -8.256,
+              54.517
+            ],
+            [
+              -8.283,
+              54.422
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1588,
+        "end_year": 1588,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Modern place orientation polygon manually drafted for reading historical accounts, NOT surveyed execution site, mapped deaths, storm-wreck archaeological outline, medieval fortification or Tudor Crown governance border.",
+        "source_precision": "Documented named coast or lordship region only, with no proven 1588 people killed per location or perimeter.",
+        "mapping_method": "documented_location_schematic_envelope_not_measured",
+        "spatial_semantics": "non_souvereign_reading_area_separating_disaster_murder_refuge",
+        "name": "1588年梅尔文湖Rosclogher：爱尔兰领主庇护西班牙幸存者",
+        "label_type": "1588年沉船事件与暴力后果 · 非实测范围",
+        "zone_type": "gaelic_refuge_anti_crown_resistance_schematic",
+        "controller_zh": "奥罗克与麦克兰西等当地盖尔领主及西班牙幸存者；英王军队追捕",
+        "summary_zh": "1588年德·奎利亚尔和部分西班牙难民先后受Brian na Múrtha O’Rourke及MacClancy等盖尔领主保护，在梅尔文湖旁Rosclogher城堡抵御王室追捕，随后有人经德里逃往苏格兰。本段属于当地救援和反抗，不能标作英军占领梅尔文湖。虚线围绕现代湖区，没有证明原城堡或守军位置。",
+        "source_ids": [
+          "IR-NMS-CUELLAR-1588-2025",
+          "IR-DIB-OROURKE-SHELTER-1588"
+        ],
+        "source_urls": [
+          "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/new-irishspanish-joint-publication-reveals-the-fascinating-story-of-captain-cu%C3%A9llar-1588-spanish-armada-shipwreck-survivor/",
+          "https://www.dib.ie/biography/orourke-o-ruairc-brian-ballach-a7029"
+        ],
+        "related_event_ids": [
+          "ARM1588-ROSCLOGHER-REFUGE"
+        ],
+        "named_anchors": [
+          "Rosclogher Castle locality",
+          "Lough Melvin",
+          "O'Rourke lordship (not the entire lake area controlled by Crown)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-armada-1588-clare-spanish-point",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -9.527,
+              52.801
+            ],
+            [
+              -9.372,
+              52.801
+            ],
+            [
+              -9.36,
+              52.885
+            ],
+            [
+              -9.507,
+              52.884
+            ],
+            [
+              -9.527,
+              52.801
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1588,
+        "end_year": 1588,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Modern place orientation polygon manually drafted for reading historical accounts, NOT surveyed execution site, mapped deaths, storm-wreck archaeological outline, medieval fortification or Tudor Crown governance border.",
+        "source_precision": "Documented named coast or lordship region only, with no proven 1588 people killed per location or perimeter.",
+        "mapping_method": "documented_location_schematic_envelope_not_measured",
+        "spatial_semantics": "non_souvereign_reading_area_separating_disaster_murder_refuge",
+        "name": "1588年克莱尔郡Spanish Point：沉船幸存者被郡治安官处决",
+        "label_type": "1588年沉船事件与暴力后果 · 非实测范围",
+        "zone_type": "armada_crown_sheriff_executions",
+        "controller_zh": "克莱尔高级治安官Boetius Clancy及参与镇压的地方人员；西班牙沉船幸存者",
+        "summary_zh": "克莱尔郡地方历史记载San Esteban、San Marcos等船只遇险后，部分登岸幸存者被Boetius Clancy等郡治安人员押往Spanish Point附近绞刑，事发地区还出现当地人攻击幸存者。埋葬处及Cnoc na Crocaire（绞刑山）的现代指认缺考古确认，不可把整个Spanish Point海岸当作准确墓地或遇难者分布。",
+        "source_ids": [
+          "IR-CLARELIB-ARMADA-1588",
+          "IR-CLARELIB-CLANCY-1588",
+          "IR-CLAREHERITAGE-SPANISHPOINT"
+        ],
+        "source_urls": [
+          "https://clarelibraries.ie/localstudies/history/battles-and-fortifications-in-clare/the-spanish-armada/",
+          "https://clarelibraries.ie/localstudies/genealogy-and-family-history/notes-on-the-sheriffs-of-county-clare-1570-1700/1588-boethius-mcclancy/",
+          "https://heritage.clareheritage.org/places/reading-your-local-landscape/scariff-our-local-landscape/a-clare-mystery-brutally-executed-but-where-are-they-buried"
+        ],
+        "related_event_ids": [
+          "ARM1588-CLARE-SPANISHPOINT-EXECUTIONS"
+        ],
+        "named_anchors": [
+          "Spanish Point County Clare",
+          "Cnoc na Crocaire (historic name, not archaeologically pinned)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-armada-1588-north-sligo-ohart",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.85,
+              54.2
+            ],
+            [
+              -8.36,
+              54.2
+            ],
+            [
+              -8.32,
+              54.44
+            ],
+            [
+              -8.82,
+              54.45
+            ],
+            [
+              -8.85,
+              54.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "start_year": 1588,
+        "end_year": 1588,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "Modern place orientation polygon manually drafted for reading historical accounts, NOT surveyed execution site, mapped deaths, storm-wreck archaeological outline, medieval fortification or Tudor Crown governance border.",
+        "source_precision": "Documented named coast or lordship region only, with no proven 1588 people killed per location or perimeter.",
+        "mapping_method": "documented_location_schematic_envelope_not_measured",
+        "spatial_semantics": "non_souvereign_reading_area_separating_disaster_murder_refuge",
+        "name": "1588年斯莱戈北部：O’Hart家族因沉船财物遭英王官员拘捕拷打",
+        "label_type": "1588年沉船事件与暴力后果 · 非实测范围",
+        "zone_type": "colonial_violence_shipwreck_salvage_coercion",
+        "controller_zh": "乔治·宾厄姆王室地方军官与北斯莱戈O’Hart家族",
+        "summary_zh": "爱尔兰皇家学院《乔治·宾厄姆传》记载，1588年风暴沉船之后，乔治·宾厄姆怀疑北斯莱戈O’Hart家族保有被冲上海岸的金银财物，拘捕并施加酷刑。文献只识别北斯莱戈家族活动地区，未给关押拷问具体坐标；该宽泛地区图是历史取向示意，不表示区内所有居民受刑或土地遭英王没收。",
+        "source_ids": [
+          "IR-DIB-GEORGE-BINGHAM"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/bingham-byngham-sir-george-a0664"
+        ],
+        "related_event_ids": [
+          "ARM1588-SLIGO-OHART-TORTURE"
+        ],
+        "named_anchors": [
+          "North County Sligo",
+          "O'Hart family local lands, exact site unverified"
+        ]
+      }
     }
   ]
 }

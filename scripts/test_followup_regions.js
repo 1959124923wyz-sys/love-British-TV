@@ -57,6 +57,6 @@ assert.ok(read('early-war-colonial-impact-1544-1575.geojson').features.some(f=>f
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 for(const token of ['followupRegionalAreas','activeRegionalFeatures()','renderHistoricalRegionGuide()',
                     "data/followup-regional-stories-1562-1596.geojson"])assert.ok(app.includes(token),token);
-assert.equal(byId.get(checks[11][0]).properties.research_event_not_yet_chapter_atlas,true);
-assert.equal(byId.get(checks[11][0]).properties.source_ids.length,0);
+assert.equal(byId.get(checks[11][0]).properties.research_event_not_yet_chapter_atlas,false,'Streedagh/Connacht research is now published with source-linked historical events');
+assert.ok(byId.get(checks[11][0]).properties.source_ids.length>=3,'Published research must have traceable Royal Irish Academy and government source IDs');
 console.log('PASS: 12 independently sourced regions incl 1585–1587 Roanoke, 1589 Coruna, 1590 Breifne; 1562 Le Havre English garrison, 1563 French reoccupation, 1573 bullion raid, 1587 Cadiz naval raid, 1589 Vigo sack, 1596 joint Cadiz sack; sources/periods/non-sovereign metadata');

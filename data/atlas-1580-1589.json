@@ -1195,18 +1195,20 @@
       "start_year": 1588,
       "end_year": 1588,
       "visible_from": 1588,
-      "date_label": "1588年",
-      "name": "斯莱戈与梅奥沿岸沉船幸存者遭英王官员处决",
+      "date_label": "1588年9—10月",
+      "name": "康诺特：乔治·宾厄姆监督处决至少700名西班牙沉船幸存者",
       "category": "massacre_or_violent_repression",
       "icon_code": "REP",
       "lat": 54.272,
       "lng": -8.477,
-      "geo_precision": "modern_named_locality_reference_not_precise_battle_or_historical_boundary",
+      "geo_precision": "modern_Sligo_urban_reference_to_county_wide_Connacht_execution_campaign_not_single_execution_site",
       "geography_label": "现代具名地点位置，仅供历史定位",
-      "description": "1588年9—10月，无敌舰队在爱尔兰沿岸遇险后，乔治·宾厄姆监督处决至少700名沉船幸存者，史料还记载部分爱尔兰人帮助其他幸存者。现代斯莱戈参考点不表示处决集中发生于城区，海难死亡不可计入处决人数。",
-      "short_description": "1588年9—10月，无敌舰队在爱尔兰沿岸遇险后，乔治·宾厄姆监督处决至少700名沉船幸存者，史料还记载部分爱尔兰人帮助其他幸存者。现代斯莱戈参考点不表示处决集中发生于城区，海难死亡不可计入处决人数。",
+      "description": "爱尔兰皇家学院《乔治·宾厄姆传》记载，1588年9—10月乔治·宾厄姆在斯莱戈及梅奥沿海一带监督处决至少700名西班牙船难幸存者；其兄理查德·宾厄姆监督沉船及杀害措施。人数为这一阶段的历史研究记载，无法分摊至各村各海滩；也绝不可与Streedagh约1,100名遭风暴与后续事件致死者直接相加。斯莱戈参考点表示郡级历史行政区域，不是集体处决遗址。",
+      "short_description": "1588年9—10月，宾厄姆监督处决至少700名西班牙船难幸存者；确切各处位置未明。",
       "source_ids": [
-        "IR-DIB-GEORGE-BINGHAM"
+        "IR-DIB-GEORGE-BINGHAM",
+        "IR-DIB-RICHARD-BINGHAM-1588",
+        "IR-NMS-CUELLAR-1588-2025"
       ],
       "certainty": "verified_place_event_with_referenced_institutional_or_academic_source",
       "significance": {
@@ -1219,6 +1221,176 @@
       "actual_English_territory_created": false,
       "historical_control_boundary_verified": false,
       "position_type": "named_city_or_site_modern_anchor_not_measured_early_modern_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "ARM1588-STREEDAGH-STORM",
+      "year": 1588,
+      "start_year": 1588,
+      "end_year": 1588,
+      "visible_from": 1588,
+      "date_label": "1588年9月21日",
+      "name": "斯特里达海湾：西班牙三艘战舰遭风暴沉没",
+      "category": "maritime_shipwreck_disaster",
+      "icon_code": "DOC",
+      "lat": 54.403,
+      "lng": -8.56,
+      "geo_precision": "modern_named_locality_reference_not_surveyed_site_boundary",
+      "geography_label": "现代地点方位参照，并非1588年实测沉船、处决或防御外界",
+      "description": "1588年9月21日，La Lavia、La Juliana和Santa Maria de Visón三艘西班牙无敌舰队船只在斯莱戈郡Streedagh海湾遇猛烈风暴失事。爱尔兰国家古迹局记载三船沉没与随后几日死亡合计约1,100人，此数包含溺亡及后续杀害，不是英军处决总数。此点为现代海滩参考，不是逐艘船体精确遗址。",
+      "short_description": "1588年9月21日，La Lavia、La Juliana和Santa Maria de Visón三艘西班牙无敌舰队船只在斯莱戈郡Streedagh海湾遇猛烈风暴失事。爱尔兰国家古迹局记载三船沉没与随后几日死亡合计约1,100人，此数包含溺亡及后续杀害，不是英军处决总数。此点为现代海滩参考，不是逐艘船体精确遗址。",
+      "source_ids": [
+        "IR-NMS-CUELLAR-1588-2025",
+        "IR-NMS-STREEDAGH-WRECKS"
+      ],
+      "certainty": "sourced_historical_event_approximate_or_explicitly_unlocated",
+      "significance": {
+        "level": 2,
+        "rationale": "1588年西班牙沉船、登岸者遭处决与地方庇护应区分事故和故意杀害；地点等级如实表达",
+        "review_status": "institutional_sourced_non_surveyed"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_location_reference_not_measured_historical_violence_extent",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "ARM1588-STREEDAGH-SHORE-KILLING",
+      "year": 1588,
+      "start_year": 1588,
+      "end_year": 1588,
+      "visible_from": 1588,
+      "date_label": "1588年9月21日后",
+      "name": "斯特里达海滩：部分登岸幸存者遭王室士兵与当地人员杀害",
+      "category": "massacre_or_violent_repression",
+      "icon_code": "REP",
+      "lat": 54.401,
+      "lng": -8.558,
+      "geo_precision": "modern_named_locality_reference_not_surveyed_site_boundary",
+      "geography_label": "现代地点方位参照，并非1588年实测沉船、处决或防御外界",
+      "description": "德·奎利亚尔1589年书信和爱尔兰—西班牙联合国家研究记载，船难中的一些幸存者登上斯特里达岸后，遭部分当地人抢掠及王室军士兵杀害，也有幸存者后来获得其他爱尔兰地方领主庇护。此处只标海滩总体位置，不推算被杀人数、逐人处决地点或将风暴溺亡归为杀害。",
+      "short_description": "德·奎利亚尔1589年书信和爱尔兰—西班牙联合国家研究记载，船难中的一些幸存者登上斯特里达岸后，遭部分当地人抢掠及王室军士兵杀害，也有幸存者后来获得其他爱尔兰地方领主庇护。此处只标海滩总体位置，不推算被杀人数、逐人处决地点或将风暴溺亡归为杀害。",
+      "source_ids": [
+        "IR-NMS-CUELLAR-1588-2025",
+        "IR-DIB-RICHARD-BINGHAM-1588"
+      ],
+      "certainty": "sourced_historical_event_approximate_or_explicitly_unlocated",
+      "significance": {
+        "level": 3,
+        "rationale": "1588年西班牙沉船、登岸者遭处决与地方庇护应区分事故和故意杀害；地点等级如实表达",
+        "review_status": "institutional_sourced_non_surveyed"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_location_reference_not_measured_historical_violence_extent",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "ARM1588-ROSCLOGHER-REFUGE",
+      "year": 1588,
+      "start_year": 1588,
+      "end_year": 1588,
+      "visible_from": 1588,
+      "date_label": "1588年秋",
+      "name": "梅尔文湖Rosclogher：麦克兰西与奥罗克庇护西班牙幸存者",
+      "category": "resistance_and_liberation",
+      "icon_code": "RES",
+      "lat": 54.464,
+      "lng": -8.18,
+      "geo_precision": "modern_Lough_Melvin_Rosclogher_vicinity_reference_castle_precise_extent_unverified",
+      "geography_label": "现代地点方位参照，并非1588年实测沉船、处决或防御外界",
+      "description": "西班牙军官弗朗西斯科·德·奎利亚尔在德里逃离之前，曾受盖尔领主奥罗克与麦克兰西庇护，并在梅尔文湖畔Rosclogher城堡参与抵御英王军威胁。爱尔兰政府2025年联合出版物明确记述此段经历。现代梅尔文湖参考点不是修复过的城堡墙界，亦不意味着周边归英王占领。",
+      "short_description": "西班牙军官弗朗西斯科·德·奎利亚尔在德里逃离之前，曾受盖尔领主奥罗克与麦克兰西庇护，并在梅尔文湖畔Rosclogher城堡参与抵御英王军威胁。爱尔兰政府2025年联合出版物明确记述此段经历。现代梅尔文湖参考点不是修复过的城堡墙界，亦不意味着周边归英王占领。",
+      "source_ids": [
+        "IR-NMS-CUELLAR-1588-2025",
+        "IR-DIB-OROURKE-SHELTER-1588"
+      ],
+      "certainty": "sourced_historical_event_approximate_or_explicitly_unlocated",
+      "significance": {
+        "level": 3,
+        "rationale": "1588年西班牙沉船、登岸者遭处决与地方庇护应区分事故和故意杀害；地点等级如实表达",
+        "review_status": "institutional_sourced_non_surveyed"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_location_reference_not_measured_historical_violence_extent",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "ARM1588-CLARE-SPANISHPOINT-EXECUTIONS",
+      "year": 1588,
+      "start_year": 1588,
+      "end_year": 1588,
+      "visible_from": 1588,
+      "date_label": "1588年9月下旬",
+      "name": "克莱尔郡Spanish Point：海难幸存者遭郡治安官绞刑",
+      "category": "massacre_or_violent_repression",
+      "icon_code": "REP",
+      "lat": 52.84,
+      "lng": -9.44,
+      "geo_precision": "modern_named_locality_reference_not_surveyed_site_boundary",
+      "geography_label": "现代地点方位参照，并非1588年实测沉船、处决或防御外界",
+      "description": "爱尔兰克莱尔郡图书馆所收1979年地方历史研究记载，San Esteban及San Marcos等沉船少数生还人员被押交克莱尔高级治安官Boetius Clancy，随后在Spanish Point附近处以绞刑。当地人也有杀害登岸者的记载；沉船溺亡与绞刑分开记录。Cnoc na Crocaire绞刑山及墓地的确切位置尚未证实，只绘现代海岸地名。",
+      "short_description": "爱尔兰克莱尔郡图书馆所收1979年地方历史研究记载，San Esteban及San Marcos等沉船少数生还人员被押交克莱尔高级治安官Boetius Clancy，随后在Spanish Point附近处以绞刑。当地人也有杀害登岸者的记载；沉船溺亡与绞刑分开记录。Cnoc na Crocaire绞刑山及墓地的确切位置尚未证实，只绘现代海岸地名。",
+      "source_ids": [
+        "IR-CLARELIB-ARMADA-1588",
+        "IR-CLARELIB-CLANCY-1588",
+        "IR-CLAREHERITAGE-SPANISHPOINT"
+      ],
+      "certainty": "sourced_historical_event_approximate_or_explicitly_unlocated",
+      "significance": {
+        "level": 3,
+        "rationale": "1588年西班牙沉船、登岸者遭处决与地方庇护应区分事故和故意杀害；地点等级如实表达",
+        "review_status": "institutional_sourced_non_surveyed"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_location_reference_not_measured_historical_violence_extent",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
+      "id": "ARM1588-SLIGO-OHART-TORTURE",
+      "year": 1588,
+      "start_year": 1588,
+      "end_year": 1588,
+      "visible_from": 1588,
+      "date_label": "1588年末",
+      "name": "斯莱戈O’Hart家族：乔治·宾厄姆为沉船财宝拘捕并拷打居民",
+      "category": "colonial_repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated_OHart_torture_site_northern_Sligo_regional_only",
+      "geography_label": "旧地点不可定位，仅保留史事档案",
+      "description": "西班牙舰船在斯莱戈和梅奥海岸失事后，乔治·宾厄姆怀疑斯莱戈北部O’Hart家族藏匿冲上海岸的财物及金银，拘捕并拷打族人以逼问藏金位置。皇家爱尔兰学院传记明确记载这类酷刑。O’Hart家族的具体受刑地点没有可靠单点资料，因此史事档案保留、地图不伪造拘禁处坐标。",
+      "short_description": "西班牙舰船在斯莱戈和梅奥海岸失事后，乔治·宾厄姆怀疑斯莱戈北部O’Hart家族藏匿冲上海岸的财物及金银，拘捕并拷打族人以逼问藏金位置。皇家爱尔兰学院传记明确记载这类酷刑。O’Hart家族的具体受刑地点没有可靠单点资料，因此史事档案保留、地图不伪造拘禁处坐标。",
+      "source_ids": [
+        "IR-DIB-GEORGE-BINGHAM"
+      ],
+      "certainty": "sourced_historical_event_approximate_or_explicitly_unlocated",
+      "significance": {
+        "level": 3,
+        "rationale": "1588年西班牙沉船、登岸者遭处决与地方庇护应区分事故和故意杀害；地点等级如实表达",
+        "review_status": "institutional_sourced_non_surveyed"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "unlocated_historical_archive_only",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
     }
@@ -2547,6 +2719,62 @@
       "url": "https://www.dib.ie/biography/bingham-byngham-sir-george-a0664",
       "kind": "scholarly_biographical_reference",
       "precision_warning": "At least 700 executions per biographical synthesis; no single site identified for all; distinguish maritime deaths."
+    },
+    {
+      "id": "IR-NMS-CUELLAR-1588-2025",
+      "title": "The Letter from Captain Cuéllar – Shipwrecks of the Spanish Armada in Ireland (National Monuments Service & Spanish Ministry of Culture, December 2025)",
+      "publisher": "Government of Ireland / National Monuments Service",
+      "url": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/new-irishspanish-joint-publication-reveals-the-fascinating-story-of-captain-cu%C3%A9llar-1588-spanish-armada-shipwreck-survivor/",
+      "kind": "joint_government_maritime_archaeology_and_primary_narrative",
+      "precision_warning": "Approx. 1,100 deaths include storm drowning and subsequent killings; this is NOT 1,100 Crown executions."
+    },
+    {
+      "id": "IR-NMS-STREEDAGH-WRECKS",
+      "title": "Three 1588 Spanish Armada shipwrecks and archaeological investigation at Streedagh Beach",
+      "publisher": "National Monuments Service, Ireland",
+      "url": "https://www.uchireland.ie/projects/",
+      "kind": "national_underwater_archaeology_service",
+      "precision_warning": "Wreck archaeology does not assign all fatalities to human violence; protected wreck site not assumed exact battle/kill polygon."
+    },
+    {
+      "id": "IR-DIB-RICHARD-BINGHAM-1588",
+      "title": "Bingham (Byngham), Sir Richard – supervision of killing Armada survivors",
+      "publisher": "Royal Irish Academy, Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/bingham-byngham-sir-richard-a0665",
+      "kind": "scholarly_irish_biography",
+      "precision_warning": "Richard was Crown commander and brother of George; do not conflate his actions with George's distinct county-level orders."
+    },
+    {
+      "id": "IR-DIB-OROURKE-SHELTER-1588",
+      "title": "O'Rourke (Ó Ruairc), Brian Ballach – Brian na Múrtha's protection of Armada survivors",
+      "publisher": "Royal Irish Academy, Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/orourke-o-ruairc-brian-ballach-a7029",
+      "kind": "scholarly_irish_biography",
+      "precision_warning": "Brian Ballach died in 1562; survivor aid in 1588 was performed by his son Brian na Múrtha, not his deceased father."
+    },
+    {
+      "id": "IR-CLARELIB-ARMADA-1588",
+      "title": "The Spanish Armada and the fate of some of its ships off the West Clare coast (John O'Brien, The Other Clare 3, 1979)",
+      "publisher": "Clare County Library Local Studies Collection",
+      "url": "https://clarelibraries.ie/localstudies/history/battles-and-fortifications-in-clare/the-spanish-armada/",
+      "kind": "regional_secondary_history_with_quoted_period_orders",
+      "precision_warning": "Multiple ships and wrecks: distinguish storm drownings, survivors killed by individuals, Clancy-supervised executions; precise hanging site debated."
+    },
+    {
+      "id": "IR-CLARELIB-CLANCY-1588",
+      "title": "1588 Boethius McClancy, high sheriff of Clare (Westropp)",
+      "publisher": "Clare County Library Local Studies Collection",
+      "url": "https://clarelibraries.ie/localstudies/genealogy-and-family-history/notes-on-the-sheriffs-of-county-clare-1570-1700/1588-boethius-mcclancy/",
+      "kind": "regional_historical_prosopography",
+      "precision_warning": "Local sheriff under Crown authority is not identical to a stationed English army; archaeological hanging perimeter unconfirmed."
+    },
+    {
+      "id": "IR-CLAREHERITAGE-SPANISHPOINT",
+      "title": "1588 executed Armada survivors: disputed hanging-hill identification",
+      "publisher": "County Clare Heritage Office",
+      "url": "https://heritage.clareheritage.org/places/reading-your-local-landscape/scariff-our-local-landscape/a-clare-mystery-brutally-executed-but-where-are-they-buried",
+      "kind": "local_heritage_critical_source_review",
+      "precision_warning": "Cnoc na Crocaire and alleged burial site unverified; use Spanish Point locality only."
     }
   ],
   "routes": [
@@ -2712,10 +2940,10 @@
   "publication": {
     "research_pr": 59,
     "verified_historical_control_polygons": 0,
-    "geographic_reference_events": 18,
-    "unlocated_events": 14,
+    "geographic_reference_events": 22,
+    "unlocated_events": 15,
     "source_review_stage": "editorial_selection_from_research_QA_not_all_primary_manuscripts_read",
     "crown_net_profit": null,
-    "spatial_addendum": "2026-10-15: George Bingham fiscal coercion and Armada survivor executions geolocated to explicitly approximate modern regional anchors."
+    "spatial_addendum": "2026-10-16 05: differentiate Streedagh storm deaths from shoreline murder and Bingham executions; distinguish Irish Gaelic refuge and Clare sheriff executions; O'Hart torture unlocated. No surveyed Crown killing polygons."
   }
 }

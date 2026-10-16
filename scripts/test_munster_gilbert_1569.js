@@ -29,7 +29,7 @@ assert.equal(existing.length,1,'do not duplicate Kilmallock encounter');
 assert(existing[0].source_ids.includes('IR-IMC-GILBERT-LETTERS-1569'));
 const munster=areas.features.filter(f=>f.id==='ir-gilbert-1569-munster'||f.id.startsWith('ir-munster-1569-'));
 assert.equal(munster.length,5,'retain narrowed Kilmallock site + four properly sourced distinct localities');
-assert.equal(areas.features.length,19);
+assert(areas.features.length>=19,'1569 approved study regions must remain when later research adds more areas');
 for(const f of munster){
  const p=f.properties,ring=f.geometry?.coordinates?.[0];
  assert.equal(f.geometry?.type,'Polygon');assert(ring.length>=5&&JSON.stringify(ring[0])===JSON.stringify(ring.at(-1)),'closed ring required');
@@ -44,6 +44,7 @@ for(const f of munster){
 }
 assert(areas.features.filter(f=>f.id==='ir-munster-1569-kilkenny-defense')[0].properties.zone_type==='rebellion_and_crown_response');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
-assert(app.includes('centuryData?.features?.length!==19'),'app must load all extant study regions');
+const currentCount=app.match(/centuryData\?\.features\?\.length!==([0-9]+)/);
+assert(currentCount&&Number(currentCount[1])===areas.features.length,'app must load all extant study regions');
 assert(app.includes("kind==='rebellion-conflict'"),'no distinction between rebel attack and colonial repression in dossier');
 console.log('PASS: 1569 Gilbert / first Desmond rebellion, 9 distinct incidents, 2 deliberately unlocated atrocities, 5 non-sovereign regional studies');

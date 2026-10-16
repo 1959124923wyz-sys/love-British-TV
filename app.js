@@ -962,6 +962,7 @@ function regionalFeatureKind(p){
  if(p.zone_type==='crown_internal_repression')return 'domestic-repression';
  if(p.zone_type==='colonial_fiscal_military_coercion')return 'colonial-coercion';
  if(p.zone_type==='rebellion_and_crown_response')return 'rebellion-conflict';
+ if(p.zone_type==='gaelic_refuge_anti_crown_resistance_schematic')return 'rebellion-conflict';
  if(p.zone_type==='french_recapture_after_english_occupation_schematic')return 'restoration';
  if(p.zone_type==='documented_english_urban_garrison_schematic')return 'occupied';
  if(p.color_role==='plantation_ochre')return 'land-dispossession';
@@ -2104,7 +2105,7 @@ async function boot(){
   const centuryRes=await fetch('data/century-violence-regions-1544-1589.geojson',{cache:'no-store'});
   if(!centuryRes.ok)throw new Error('1544—1589地区暴力空间补档未加载');
   const centuryData=await centuryRes.json();
-  if(centuryData?.features?.length!==19||centuryData.features.some(f=>{
+  if(centuryData?.features?.length!==23||centuryData.features.some(f=>{
    const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
    return f.geometry?.type!=='Polygon'||!ring||ring.length<4||
     p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
