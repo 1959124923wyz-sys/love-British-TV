@@ -7,8 +7,9 @@ const db=read('data/atlas-1540-1549.json'),geo=read('data/century-violence-regio
 const western=db.events.filter(e=>e.id.startsWith('GAP1549-WEST-'));
 const bornEarlier=db.events.filter(e=>e.year<=1548);
 assert.equal(western.length,12,'twelve separately named rising/battle/reprisal locations are required');
-assert.equal(bornEarlier.length,53,'no unrelated chapter-six chronology may change');
-assert.equal(db.events.filter(e=>e.year<=1549).length,80,'1549 latest published event count');
+assert.equal(bornEarlier.filter(e=>!e.id.startsWith('RW154')).length,53,'all 53 unrelated pre-1549 events retained');
+assert.equal(bornEarlier.filter(e=>e.id.startsWith('RW154')).length,10);
+assert.equal(db.events.filter(e=>e.year<=1549&&!e.id.startsWith('RW154')).length,80,'all pre-existing chapter events retained');
 assert.equal(new Set(western.map(e=>e.id)).size,12);
 const sources=new Map(db.sources.map(s=>[s.id,s]));
 for(const e of western){
