@@ -741,7 +741,7 @@ try:
     elmina=driver.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1550S-E016"]')
     driver.execute_script("arguments[0].scrollIntoView({block:'center'})",elmina)
     ActionChains(driver).double_click(elmina).perform()
-    wait.until(lambda d:d.execute_script("return !!document.querySelector('#dossierBody .source-details') && document.querySelector('#dossierBody').textContent.includes('托沃森')"))
+    wait.until(lambda d:d.execute_script("return !!document.querySelector('#dossierBody .major-story-enter, #dossierBody .source-details') && document.querySelector('#dossierBody').textContent.includes('托沃森')"))
     wait.until(lambda d:d.execute_script("return Math.abs(window.atlasReadViewport().center.lat-5.08266)<0.35"))
     verify("Portuguese Elmina caveat missing from the event dossier",
            "document.querySelector('#dossierBody').textContent.includes('葡萄牙')",driver)
