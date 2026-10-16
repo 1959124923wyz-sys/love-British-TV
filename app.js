@@ -268,13 +268,19 @@ function openDossier(item,typ){
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
+ const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ));
 
  const canMapFocus=typ==='event'&&canLocateEvent(item,year);
- const locateAction=typ==='event'?'<div class="dossier-map-action"><button type="button" data-locate-event'+
-  (canMapFocus?'':' disabled')+'>◎ 在地图上定位</button><small>'+
-  (canMapFocus?'保留当前年份与缩放；手机上返回地图查看':'该事件暂无可定位地点，或尚未发生')+
-  '</small></div>':'';
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+(window.HistoryStories?.eventLinkMarkup?.(item,typ)||'')+locateAction+listSources(item.source_ids,item);
+ const locateAction=typ==='event'?
+  (storyChild?
+   (canMapFocus?'<div class="dossier-map-action"><button type="button" data-locate-event>◎ 地图定位</button></div>':''):
+   '<div class="dossier-map-action"><button type="button" data-locate-event'+
+   (canMapFocus?'':' disabled')+'>◎ 在地图上定位</button><small>'+
+   (canMapFocus?'保留当前年份与缩放；手机上返回地图查看':'该事件暂无可定位地点，或尚未发生')+
+   '</small></div>'):'';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+
+  (window.HistoryStories?.eventLinkMarkup?.(item,typ)||'')+locateAction+
+  (storyChild?'':listSources(item.source_ids,item));
  openPanel('dossier');
  window.HistoryStories?.onEventOpened?.(item,typ);
  const locateButton=$('dossierBody').querySelector('[data-locate-event]');
