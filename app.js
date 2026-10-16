@@ -2094,7 +2094,7 @@ async function boot(){
   const followupRes=await fetch('data/followup-regional-stories-1562-1596.geojson',{cache:'no-store'});
   if(!followupRes.ok)throw new Error('1562—1596地区军事行动叙事图层未加载');
   const laterRegions=await followupRes.json();
-  if(laterRegions?.features?.length!==12||laterRegions.features.some(f=>{
+  if(laterRegions?.features?.length!==14||laterRegions.features.some(f=>{
    const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
    return f.geometry?.type!=='Polygon'||!ring||ring.length<4||
     p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
