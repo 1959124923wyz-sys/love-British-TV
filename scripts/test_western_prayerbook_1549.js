@@ -51,5 +51,6 @@ for(const f of regions){
  assert(width<.13&&height<.08,'unexpectedly large schematic locality rectangle '+f.id);
 }
 const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
-assert(js.includes('centuryData?.features?.length!==15'),'JS region gate must match new geometry');
+const expectedGate=js.match(/centuryData\\?\\.features\\?\\.length!==([0-9]+)/);
+assert(expectedGate&&Number(expectedGate[1])===geo.features.length,'JS region gate must match total historical study areas, including later research');
 console.log('PASS: 1549 Western Prayer Book rising: 12 independent events, 9 distinct sourced non-territorial study areas, and all previous decade continuity');
