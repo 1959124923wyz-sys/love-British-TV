@@ -4,6 +4,10 @@ on:
     branches: [main]
     paths:
       - "data/stories/**"
+      - "data/atlas-1540-1549.json"
+      - "data/early-war-colonial-impact-1544-1575.geojson"
+      - "data/war-front-corridors-1540-1549.geojson"
+      - "scripts/test_rough_wooing_cartography.js"
       - "js/history-stories.js"
       - "css/history-stories.css"
       - "scripts/test_major_story_pilot.js"
@@ -27,6 +31,7 @@ jobs:
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
+          node scripts/test_rough_wooing_cartography.js
       - name: Test real reading and map behavior in Chromium
         run: |
           pip install selenium
