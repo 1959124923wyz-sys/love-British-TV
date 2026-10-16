@@ -130,7 +130,7 @@
   if(!bridge)return false;
   const desired=Number(item.year);
   if(!Number.isFinite(desired))return false;
-  if(desired>bridge.currentYear()||!bridge.activeHasEvent(item.id)){
+  if(desired!==bridge.currentYear()||!bridge.activeHasEvent(item.id)){
    bridge.clearSelectedEventYear();
    bridge.setYear(desired);
   }
