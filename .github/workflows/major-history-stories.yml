@@ -9,6 +9,8 @@ on:
       - "scripts/test_first_group_history_stories.js"
       - "scripts/browser_first_group_stories.py"
       - "data/atlas-1520-1529.json"
+      - "data/atlas-1530-1539.json"
+      - "scripts/test_rut_kildare_major_stories.js"
       - "scripts/test_tournai_surrey_major_stories.js"
       - "scripts/browser_tournai_surrey_stories.py"
       - "data/atlas-1540-1549.json"
@@ -41,6 +43,7 @@ jobs:
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
+          node scripts/test_rut_kildare_major_stories.js
           node scripts/test_first_group_history_stories.js
           node scripts/test_tournai_surrey_major_stories.js
           node scripts/test_scots_calais_stories.js
