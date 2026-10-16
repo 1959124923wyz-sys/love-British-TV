@@ -101,7 +101,7 @@ try:
         wait.until(lambda d: d.execute_script("return document.querySelector('#yearRange').value===arguments[0] && document.querySelector('#eventCount').textContent===arguments[1]", str(year), f"{expected}项"))
         time.sleep(0.25)
 
-    set_year(1529, 24)
+    set_year(1529, 27)
     verify("1529 final event missing", "document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     driver.save_screenshot(str(OUT / "chapter4-1529.png"))
     # Full-chapter previews are opt-in per decade; returning to an earlier decade
@@ -186,7 +186,7 @@ try:
            "document.querySelector('#eventList').textContent.includes('梅努斯城堡')", driver)
     driver.save_screenshot(str(OUT / "chapter5-1539.png"))
     toggle_layer("showFullChapterArchive", True)
-    set_year(1529, 24)
+    set_year(1529, 27)
     verify("Fifth chapter archive leaked into fourth",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     set_year(1535, 9)
