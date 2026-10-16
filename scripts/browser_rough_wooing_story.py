@@ -64,6 +64,12 @@ try:
     js("""const ctl=document.getElementById('jumpYear');ctl.value='1550';ctl.dispatchEvent(new Event('change',{bubbles:true}));""")
     waityear(1550)
     assert js("""return !!document.querySelector('#eventList [data-eid="1550S-E001"]')""")
+    # The article intentionally collapses the event-list sidebar to give map room.
+    # Expand it via the existing user control before attempting a real pointer click.
+    if js("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
+        browser.find_element(By.ID,'mobileEventsToggle').click()
+        wait.until(lambda d:d.execute_script("""return !document.getElementById('workspace').classList.contains('sidebar-collapsed') &&
+           document.getElementById('sidebar').getBoundingClientRect().width>=245"""))
     source=browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1550S-E001"]')
     js("arguments[0].scrollIntoView({block:'center'})",source)
     source.click()
