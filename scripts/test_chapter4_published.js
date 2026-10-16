@@ -19,7 +19,7 @@ const hypotheses=data('data/geography-hypotheses-1500-1529.geojson');
 assert.deepEqual(fourth.period,{from:1520,to:1529,next:1530});
 assert.ok(fourth.events.length>=24&&fourth.places.length>=7&&fourth.sources.length>=49);
 assert.equal(fourth.colonial_polygons.length,0,'Unsourced 1520s land polygons must not be manufactured');
-assert.equal(fourth.routes.length,1,'1527 must display one carefully limited voyage reference connector');
+assert.equal(fourth.routes.length,2,'Retain 1527 voyage and add 1521 source-attested Surrey departure line');
 assert.equal(fourth.routes[0].route_kind,'documented-endpoints-connection');
 assert.equal(fourth.routes[0].coords.length,2,'Do not fabricate ocean waypoint geometry');
 assert.ok(fourth.routes[0].source_ids.every(id=>fourth.sources.some(s=>s.id===id)));
@@ -46,7 +46,7 @@ for(let y=1520;y<=1529;y++){
  const mapped=grounds.features.filter(f=>f.properties.start_year<=y&&y<=f.properties.observed_through_year);
  assert.ok(mapped.length>=7,y+': coastal reference map erased on decade boundary');
 }
-assert.equal(fourth.events.filter(e=>e.year===1520).length,4);
+assert.equal(fourth.events.filter(e=>e.year===1520).length,5);
 assert.ok(fourth.events.some(e=>e.id==='1529-GUINES-LAWS'),'Guines legislation lost');
 assert.ok(!places.has('tournai-occupied-city-1513'),'Tournai wrongly persisted into chapter 4');
 assert.ok(third.places.some(q=>q.id==='tournai-occupied-city-1513'));
