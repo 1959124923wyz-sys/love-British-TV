@@ -82,8 +82,8 @@
       "category": "claim",
       "lat": 48.8,
       "lng": -57.2,
-      "geo_precision": "regional-symbol-only",
-      "description": "1497年6月下旬，卡博特与船员望见北美沿岸，随后为英格兰王室提出海外土地权利主张。登陆地点在后来的历史研究中出现多种解释。",
+      "geo_precision": "regional_hypothetical_landfall_display_pin_not_verified_historic_location",
+      "description": "1497年6月下旬，卡博特船队接触北美陆地，随后在英王旗帜下提出权利声索。确切登陆地点尚有纽芬兰、拉布拉多等多种研究假说；现有坐标仅供在地图上辨认北大西洋彼岸方位，不能称作已经证实的上岸GPS，更不代表当地居民让渡了领土或英格兰拥有实际殖民地。",
       "source_ids": [
         "pasqualigo-1497",
         "heritage-landfall",
@@ -96,7 +96,12 @@
         "review_status": "provisional"
       },
       "icon_code": "CLM",
-      "short_description": "1497年6月下旬，卡博特与船员望见北美沿岸，随后为英格兰王室提出海外土地权利主张。登陆地点在后来的历史研究中出现多种解释。"
+      "short_description": "1497年6月下旬，卡博特船队接触北美陆地，随后在英王旗帜下提出权利声索。确切登陆地点尚有纽芬兰、拉布拉多等多种研究假说；现有坐标仅供在地图上辨认北大西洋彼岸方位，不能称作已经证实的上岸GPS，更不代表当地居民让渡了领土或英格兰拥有实际殖民地。",
+      "geography_label": "1497年可能接触的北美大西洋沿岸（坐标是示意锚点，不是实测登陆点）",
+      "position_type": "northeast_north_america_hypothesis_marker_not_verified_shore",
+      "historical_control_boundary_verified": false,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false
     },
     {
       "id": "return-1497",
@@ -591,13 +596,13 @@
       "visible_from": 1504,
       "date_label": "1504年",
       "name": "1504年奥凯利家族三座城堡遭毁",
-      "description": "编年史记载，克兰里卡德伯克的军队拆毁奥凯利家族三座堡垒，随后双方争端引向诺克多战役。",
-      "short_description": "编年史记载，克兰里卡德伯克的军队拆毁奥凯利家族三座堡垒，随后双方争端引向诺克多战役。",
+      "description": "《四大师编年史》M1504.13记载：克兰里卡德的乌利克·伯克毁坏奥凯利家族Garbh-dhoire、Muine-an-mheadha、Gallach三座城堡，奥凯利随后向王室副总督申诉，冲突引向诺克多战役。该行动的发起者不是基尔代尔率领的王室军队。单一图钉是复合史事的地区参照点，并非其中任何一座古堡的已证位置；不可据此绘制三堡范围或英国新增占领土地。",
+      "short_description": "《四大师编年史》M1504.13记载：克兰里卡德的乌利克·伯克毁坏奥凯利家族Garbh-dhoire、Muine-an-mheadha、Gallach三座城堡，奥凯利随后向王室副总督申诉，冲突引向诺克多战役。该行动的发起者不是基尔代尔率领的王室军队。单一图钉是复合史事的地区参照点，并非其中任何一座古堡的已证位置；不可据此绘制三堡范围或英国新增占领土地。",
       "category": "war",
       "icon_code": "WAR",
       "lat": 53.2783,
       "lng": -9.0504,
-      "geo_precision": "regional-symbol-only",
+      "geo_precision": "multi_site_regional_reference_not_three_1504_castle_locations",
       "source_ids": [
         "UCC-FOUR-MASTERS-1500S"
       ],
@@ -608,8 +613,11 @@
         "review_status": "documented-in-published-annals"
       },
       "colonial_profit": false,
-      "geography_label": "康诺特地区 · 戈尔韦参考点",
-      "position_type": "region_or_associated_city_symbol"
+      "geography_label": "戈尔韦地区多处古堡损毁的复合史事，仅为地区参考点",
+      "position_type": "composite_three_separate_castles_unverified_geolocation",
+      "historical_control_boundary_verified": false,
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null
     },
     {
       "id": "1505-CALAIS-STAPLE-ROYAL-PAYMENTS",

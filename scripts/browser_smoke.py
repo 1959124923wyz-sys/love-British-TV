@@ -107,13 +107,13 @@ try:
     # Full-chapter previews are opt-in per decade; returning to an earlier decade
     # must not leak future 1520s events into the 1510s or vice versa.
     toggle_layer("showFullChapterArchive", True)
-    set_year(1519, 15)
+    set_year(1519, 18)
     verify("complete-archive preview leaked into a new chapter",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     verify("switch to third chapter failed", """document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')""", driver)
     set_year(1520, 4)
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='4项'", driver)
-    set_year(1513, 6)
+    set_year(1513, 8)
     # Desktop dossier now replaces the event sidebar instead of squeezing the
     # map into three columns. Return to the archive before WebDriver clicks it.
     if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
