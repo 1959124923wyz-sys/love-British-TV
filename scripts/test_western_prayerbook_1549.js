@@ -9,7 +9,7 @@ const bornEarlier=db.events.filter(e=>e.year<=1548);
 assert.equal(western.length,12,'twelve separately named rising/battle/reprisal locations are required');
 assert.equal(bornEarlier.filter(e=>!e.id.startsWith('RW154')).length,64,'all original records plus Calais account and Morlaix coastal defence retained');
 assert.equal(bornEarlier.filter(e=>e.id.startsWith('RW154')).length,10);
-assert.equal(db.events.filter(e=>e.year<=1549&&!e.id.startsWith('RW154')).length,93,'all 80 pre-existing unrelated records plus two 1542 activities retained');
+assert.equal(db.events.filter(e=>e.year<=1549&&!e.id.startsWith('RW154')).length,96,'all 80 pre-existing unrelated records plus two 1542 activities retained');
 assert.equal(new Set(western.map(e=>e.id)).size,12);
 const sources=new Map(db.sources.map(s=>[s.id,s]));
 for(const e of western){

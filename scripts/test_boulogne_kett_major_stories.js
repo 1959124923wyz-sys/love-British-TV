@@ -5,7 +5,7 @@ const ROOT=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(ROOT,p
 const idx=j('data/stories/index.json').stories,old=j('data/atlas-1540-1549.json'),later=j('data/atlas-1550-1559.json'),notes=j('data/historical-detail-notes.json').records;
 const editorial=read('js/history-stories.js');
 const all=new Map([...old.events,...later.events].map(x=>[x.id,x]));
-assert.equal(idx.length,14,'Previous 12 stories and two new history chapters');
+assert.equal(idx.length,16,'Previous 12 stories and two new history chapters');
 const cases=[
  {id:'boulogne-tudor-conquest-colonisation-withdrawal-1544-1550',start:1544,end:1550,minimumEvents:16},
  {id:'kett-rebellion-norfolk-enclosures-royal-repression-1549',start:1549,end:1549,minimumEvents:10}
@@ -28,7 +28,7 @@ for(const t of cases){
  assert(links>=12,'not enough inline historical event links');
  for(const id of a.related_event_ids)assert(all.has(id),'missing event '+id);
 }
-assert.equal(old.events.length,103);assert.equal(old.sources.length,139);
+assert.equal(old.events.length,106);assert.equal(old.sources.length,143);
 assert.equal(later.events.find(x=>x.id==='1550S-E003').year,1550);
 assert.equal(later.events.find(x=>x.id==='1550S-E004').year,1550);
 assert.equal(all.get('1540S-033').year,1549,'Ambleteuse French recapture');

@@ -521,6 +521,148 @@
         "verified_route_segment_centrelines": false,
         "source_precision": "HES historic campaign narrative and named building heritage records"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "pr1549-royal-east-west-exeter-approach",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.284,
+            50.779
+          ],
+          [
+            -3.345,
+            50.677
+          ],
+          [
+            -3.4579,
+            50.7103
+          ],
+          [
+            -3.532,
+            50.72
+          ]
+        ]
+      },
+      "properties": {
+        "id": "pr1549-royal-east-west-exeter-approach",
+        "name": "1549年王室军东向西解围埃克塞特的连续战役方向",
+        "start_year": 1549,
+        "end_year": 1549,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "named_battle_site_sequence_only",
+        "not_actual_occupied_area": true,
+        "controller": "English royal military campaign within England, not external territorial acquisition",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "fill_opacity": 0,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "EN-DEVON-DCC-FOARD-HODGKINS-2009",
+          "EN-HE-CLYST-BRIDGE-NHLE-1020209",
+          "EN-SWHT-EXETER-1549-CITY-ACCOUNTS"
+        ],
+        "source_urls": [
+          "https://www.devon.gov.uk/historicenvironment/projects/battlefieldsprayerbookrebellion/",
+          "https://historicengland.org.uk/listing/the-list/list-entry/1020209/",
+          "https://swheritage.org.uk/receivers-accounts-2/"
+        ],
+        "anchors": [
+          "Fenny Bridges",
+          "Woodbury",
+          "Clyst St Mary Bridge",
+          "Exeter"
+        ],
+        "related_event_ids": [
+          "GAP1549-WEST-FENNY-BRIDGES",
+          "GAP1549-WEST-WOODBURY-COMMON",
+          "PR1549-CLYST-BRIDGE",
+          "GAP1549-WEST-EXETER-RELIEF"
+        ],
+        "route_role": "dated_royal_army_major_battles_order_not_exact_road",
+        "route_continuity_certainty": "Named battle sequence sourced; straight links are visualization only",
+        "route_status": "one_time_domestic_campaign_not_area_control",
+        "summary_zh": "王室军依次在有史料支持的战场交战，取得埃克塞特通路并随后在桑普福德考特尼镇压残余起义军。",
+        "precision_note": "以有据地点直线连接的作战方向示意，不复原行军道路或军队持续控制带。",
+        "legal_sovereignty": "Kingdom of England internal civil rebellion",
+        "stroke_color": "#bc9ad9",
+        "halo_color": "#9171be",
+        "halo_weight_px": 18,
+        "halo_opacity": 0.14,
+        "stroke_weight_px": 3,
+        "stroke_dashes": "4 8",
+        "verified_route_segment_centrelines": false,
+        "temporary_dated_military_event_not_yearend_suzerainty": true,
+        "map_disclaimer": "1549年王室军作战地点之间的军事行动方向示意；连接线非实测行军道路，也不表示英格兰新增控制面积。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pr1549-royal-exeter-sampford-last-campaign",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.532,
+            50.72
+          ],
+          [
+            -3.929721,
+            50.797084
+          ]
+        ]
+      },
+      "properties": {
+        "id": "pr1549-royal-exeter-sampford-last-campaign",
+        "name": "1549年埃克塞特解围后至桑普福德考特尼的王室军作战方向",
+        "start_year": 1549,
+        "end_year": 1549,
+        "zone_type": "war_reach_schematic",
+        "geometry_role": "named_battle_site_sequence_only",
+        "not_actual_occupied_area": true,
+        "controller": "English royal military campaign within England, not external territorial acquisition",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "fill_opacity": 0,
+        "area_sqkm": null,
+        "area_statistics_forbidden": true,
+        "source_ids": [
+          "EN-DEVON-DCC-FOARD-HODGKINS-2009",
+          "EN-HE-CLYST-BRIDGE-NHLE-1020209",
+          "EN-SWHT-EXETER-1549-CITY-ACCOUNTS"
+        ],
+        "source_urls": [
+          "https://www.devon.gov.uk/historicenvironment/projects/battlefieldsprayerbookrebellion/",
+          "https://historicengland.org.uk/listing/the-list/list-entry/1020209/",
+          "https://swheritage.org.uk/receivers-accounts-2/"
+        ],
+        "anchors": [
+          "Exeter",
+          "Sampford Courtenay final battle"
+        ],
+        "related_event_ids": [
+          "GAP1549-WEST-EXETER-RELIEF",
+          "GAP1549-SAMPFORD"
+        ],
+        "route_role": "dated_royal_army_major_battles_order_not_exact_road",
+        "route_continuity_certainty": "Named battle sequence sourced; straight links are visualization only",
+        "route_status": "one_time_domestic_campaign_not_area_control",
+        "summary_zh": "王室军依次在有史料支持的战场交战，取得埃克塞特通路并随后在桑普福德考特尼镇压残余起义军。",
+        "precision_note": "以有据地点直线连接的作战方向示意，不复原行军道路或军队持续控制带。",
+        "legal_sovereignty": "Kingdom of England internal civil rebellion",
+        "stroke_color": "#bc9ad9",
+        "halo_color": "#9171be",
+        "halo_weight_px": 18,
+        "halo_opacity": 0.14,
+        "stroke_weight_px": 3,
+        "stroke_dashes": "4 8",
+        "verified_route_segment_centrelines": false,
+        "temporary_dated_military_event_not_yearend_suzerainty": true,
+        "map_disclaimer": "1549年王室军作战地点之间的军事行动方向示意；连接线非实测行军道路，也不表示英格兰新增控制面积。"
+      }
     }
   ]
 }
