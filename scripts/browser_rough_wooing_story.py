@@ -26,7 +26,7 @@ def clicklink(eid):
 try:
     browser.get('http://127.0.0.1:8765/?year=1544')
     wait.until(lambda d:d.execute_script("""return document.querySelector('#eventList [data-eid="GAP1544-MELROSE"]') &&
-       window.HistoryStories?.eventLinkMarkup?.({id:'GAP1544-MELROSE'},'event').includes('粗暴')===false &&
+       window.HistoryStories?.eventLinkMarkup?.({id:'GAP1544-MELROSE'},'event').includes('粗暴求婚战争') &&
        window.HistoryStories?.eventLinkMarkup?.({id:'GAP1544-MELROSE'},'event').includes('英苏战争')"""))
     source=browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="GAP1544-MELROSE"]')
     js("arguments[0].scrollIntoView({block:'center'})",source)
@@ -37,9 +37,16 @@ try:
     browser.save_screenshot(str(OUT/'01-melrose-event-and-history-entry.png'))
     browser.find_element(By.CSS_SELECTOR,'.major-story-enter').click()
     wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article') && document.querySelectorAll('.major-story-article .story-section').length===11"))
-    assert js("return document.querySelector('.major-story-article').innerText.length>4300")
+    assert js("return document.querySelector('.major-story-article').innerText.length>5200")
+    assert js("return document.querySelector('.major-story-header h2').textContent==='1543—1550年英苏粗暴求婚战争'")
     assert js("return !document.querySelector('.story-status') && !document.querySelector('.story-sources').open")
     browser.save_screenshot(str(OUT/'02-anglo-scottish-war-longform.png'))
+    # New historically located events are genuinely navigable before the legacy tour.
+    for eid,yr in [('RW1544-PRESTON-TOWER-BURNING',1544),('RW1544-DUNBAR-BURNING',1544),('RW1546-STANDREWS-CARDINAL',1546),('RW1547-STANDREWS-FRENCH-ASSAULT',1547),('RW1548-DUMBARTON-MARY-DEPARTURE',1548)]:
+        clicklink(eid)
+        waityear(yr)
+        wait.until(lambda d:d.execute_script("return window.atlasStoryBridge.activeFocusId()===arguments[0]",eid))
+        assert js("return !!document.querySelector('.major-story-article')")
     # Each link must reuse existing map markers and advance time axis directly.
     for eid,year in [('GAP1545-ANCRUM',1545),('1540S-014',1547),('1540S-019',1548),('1550S-E001',1550)]:
         clicklink(eid)
