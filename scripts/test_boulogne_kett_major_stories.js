@@ -5,7 +5,7 @@ const ROOT=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(ROOT,p
 const idx=j('data/stories/index.json').stories,old=j('data/atlas-1540-1549.json'),later=j('data/atlas-1550-1559.json'),notes=j('data/historical-detail-notes.json').records;
 const editorial=read('js/history-stories.js');
 const all=new Map([...old.events,...later.events].map(x=>[x.id,x]));
-assert.equal(idx.length,18,'Previous 12 stories and two new history chapters');
+assert.equal(idx.length,21,'Previous 12 stories and two new history chapters');
 const cases=[
  {id:'boulogne-tudor-conquest-colonisation-withdrawal-1544-1550',start:1544,end:1550,minimumEvents:16},
  {id:'kett-rebellion-norfolk-enclosures-royal-repression-1549',start:1549,end:1549,minimumEvents:10}
