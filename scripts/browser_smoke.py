@@ -325,8 +325,8 @@ try:
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===3", driver)
     verify("purple approximate fort localities are not rendered",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===2", driver)
-    verify("1544 raid around Leith is not presented as 1544 occupation of Edinburgh",
-           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
+    verify("1544 Leith attack and coastal raid both render as non-occupation relation lines",
+           "document.querySelectorAll('#map .atlas-war-reach-schematic').length===2",driver)
     set_year(1545, 27)
     verify("1545 French theater is not shown with blue/violet texture",
            "document.querySelectorAll('#map .atlas-contested-zone').length===1",driver)
