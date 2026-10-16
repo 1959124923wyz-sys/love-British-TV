@@ -27,7 +27,7 @@ try:
     browser.get('http://127.0.0.1:8765/?year=1544')
     wait.until(lambda d:d.execute_script("""return document.querySelector('#eventList [data-eid="GAP1544-MELROSE"]') &&
        window.HistoryStories?.eventLinkMarkup?.({id:'GAP1544-MELROSE'},'event').includes('粗暴求婚战争') &&
-       window.HistoryStories?.eventLinkMarkup?.({id:'GAP1544-MELROSE'},'event').includes('英苏战争')"""))
+       window.HistoryStories?.eventLinkMarkup?.({id:'GAP1544-MELROSE'},'event').includes('英苏粗暴求婚战争')"""))
     source=browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="GAP1544-MELROSE"]')
     js("arguments[0].scrollIntoView({block:'center'})",source)
     source.click()
