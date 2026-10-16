@@ -46,7 +46,7 @@ try:
     link=driver.find_element(By.CSS_SELECTOR,'[data-story-event="1580S-E003"]')
     driver.execute_script("arguments[0].scrollIntoView({block:'center'})",link)
     link.click()
-    wait.until(lambda d:d.execute_script("return focusedEventId==='1580S-E003'"))
+    wait.until(lambda d:d.execute_script("return window.atlasStoryBridge.activeFocusId()==='1580S-E003'"))
     assert driver.execute_script("return !!document.querySelector('.major-story-article')")
     assert driver.execute_script("return document.getElementById('bigYear').textContent==='1580'")
     driver.save_screenshot(str(OUT/"03-inline-event-single-click-map-focus.png"))
