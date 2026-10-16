@@ -2104,7 +2104,7 @@ async function boot(){
   const regionalRes=await fetch('data/early-war-colonial-impact-1544-1575.geojson',{cache:'no-store'});
   if(!regionalRes.ok)throw new Error('早期战争与殖民地区说明文件未加载');
   const regionalData=await regionalRes.json();
-  if(regionalData?.features?.length!==6||regionalData.features.some(f=>{
+  if(!regionalData?.features||regionalData?.metadata?.feature_count!==regionalData.features.length||regionalData.features.length<7||regionalData.features.some(f=>{
    const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
    return f.geometry?.type!=='Polygon'||!ring||ring.length<4||
     p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
