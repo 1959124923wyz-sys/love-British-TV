@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Real Chromium regression for the 1543–1550 cross-chapter Scottish war longform."""
 from pathlib import Path
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -73,8 +74,14 @@ try:
     source=browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1550S-E001"]')
     js("arguments[0].scrollIntoView({block:'center'})",source)
     source.click()
-    wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-enter')"))
-    browser.find_element(By.CSS_SELECTOR,'.major-story-enter').click()
+    wait.until(lambda d:d.execute_script("""return !document.getElementById('workspace').classList.contains('dossier-collapsed') &&
+       document.querySelector('#dossierBody h2')?.textContent.includes('布劳蒂') &&
+       !!document.querySelector('.major-story-enter')"""))
+    # The mutually exclusive event and dossier sidebar columns animate for 220ms.
+    time.sleep(0.35)
+    entry=browser.find_element(By.CSS_SELECTOR,'.major-story-enter')
+    js("arguments[0].scrollIntoView({block:'center'})",entry)
+    entry.click()
     wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article')"))
     clicklink('1540S-014')
     waityear(1547)
