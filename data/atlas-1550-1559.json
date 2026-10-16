@@ -928,6 +928,68 @@
       "research_date_label": "by 1558-01-04 according to contemporary Lord Grey dispatch cited by Royal Collection"
     },
     {
+      "id": "CAL1558-RISBAN-FRENCH-CAPTURE",
+      "year": 1558,
+      "name": "1558年法军攻占加来港的里斯班炮堡",
+      "lat": 50.96356,
+      "lng": 1.84798,
+      "category": "siege",
+      "icon_code": "WAR",
+      "description": "1558年1月，吉斯公爵率法国军队突然攻击加来。在主城投降之前，法军已夺取控制港口入口的里斯班炮堡，削弱英军从海上获得援助的能力。其后加来城亦告失守。",
+      "source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558",
+        "CAL-FR-ARCHIVES-1558-RISBAN"
+      ],
+      "geo_precision": "modern_surviving_Risban_location_not_1558_defensive_wallline",
+      "start_year": 1558,
+      "end_year": 1558,
+      "visible_from": 1558,
+      "date_label": "1558年",
+      "short_description": "1558年1月，吉斯公爵率法国军队突然攻击加来。在主城投降之前，法军已夺取控制港口入口的里斯班炮堡，削弱英军从海上获得援助的能力。其后加来城亦告失守。",
+      "geography_label": "加来港里斯班旧堡遗址",
+      "position_type": "modern_named_place_reference_not_measured_16th_century_military_footprint",
+      "certainty": "attested_by_municipal_or_regional_heritage_sources",
+      "historical_control_boundary_verified": false,
+      "actual_English_land_area_sqkm": null,
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true,
+      "significance": {
+        "level": 2,
+        "review_status": "official_historical_site_anchored_not_actual_invasion_geometry"
+      }
+    },
+    {
+      "id": "CAL1558-NEWNHAM-FRENCH-CAPTURE",
+      "year": 1558,
+      "name": "1558年法军夺取纽纳姆桥防线，切断加来西侧通道",
+      "lat": 50.94588,
+      "lng": 1.81667,
+      "category": "siege",
+      "icon_code": "WAR",
+      "description": "1558年1月法国军队进攻加来时，纽纳姆桥（Newnham Bridge，后世尼厄莱堡所在地）成为最先遭袭的重要外围防御点之一。法军控制这一关口后，加来西面通道与水闸系统难再为英方提供保护，城区随即失守。",
+      "source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558",
+        "CAL-FR-ARCHIVES-1558-NIEULAY"
+      ],
+      "geo_precision": "later_Fort_Nieulay_modern_site_reference_not_1558_Newnham_structure",
+      "start_year": 1558,
+      "end_year": 1558,
+      "visible_from": 1558,
+      "date_label": "1558年",
+      "short_description": "1558年1月法国军队进攻加来时，纽纳姆桥（Newnham Bridge，后世尼厄莱堡所在地）成为最先遭袭的重要外围防御点之一。法军控制这一关口后，加来西面通道与水闸系统难再为英方提供保护，城区随即失守。",
+      "geography_label": "纽纳姆桥／尼厄莱堡现址",
+      "position_type": "modern_named_place_reference_not_measured_16th_century_military_footprint",
+      "certainty": "attested_by_municipal_or_regional_heritage_sources",
+      "historical_control_boundary_verified": false,
+      "actual_English_land_area_sqkm": null,
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true,
+      "significance": {
+        "level": 2,
+        "review_status": "official_historical_site_anchored_not_actual_invasion_geometry"
+      }
+    },
+    {
       "id": "1550S-E021",
       "year": 1559,
       "start_year": 1559,
@@ -2053,6 +2115,18 @@
       "publisher": "Tufts University Perseus Digital Library",
       "title": "Hakluyt, The second voyage to Guinea, John Lok 1554: River Sesto, Cape Three Points and Mina",
       "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.03.0070%3Anarrative%3D522"
+    },
+    {
+      "id": "CAL-FR-ARCHIVES-1558-RISBAN",
+      "title": "Archives municipales de Calais — L'historique fort Risban",
+      "url": "https://archives.calais.fr/decouvrir/les-archives-du-moment/la-chronique-du-moment/lhistorique-fort-risban",
+      "kind": "municipal_history"
+    },
+    {
+      "id": "CAL-FR-ARCHIVES-1558-NIEULAY",
+      "title": "Archives municipales de Calais — Une charte de privilèges accordée à Calais, 1558 defence",
+      "url": "https://archives.calais.fr/decouvrir/les-archives-du-moment/le-document-du-moment/une-charte-de-privileges-accordee-a-calais",
+      "kind": "municipal_primary_archive"
     }
   ],
   "routes": [
