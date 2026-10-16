@@ -56,6 +56,8 @@ try:
     # No coordinates for the legislative event; it opens an in-article locality-free popup.
     click('1525-NEWEMBRIDGE-REFORTIFICATION',1525)
     click('CAL1542-GARRISON-ACCOUNTS',1542)
+    click('CAL1558-RISBAN-FRENCH-CAPTURE',1558)
+    click('CAL1558-NEWNHAM-FRENCH-CAPTURE',1558)
     click('1550S-E018',1558)
     click('1550S-E019',1558)
     click('1500-CALAIS-ETAPLES',1500)
