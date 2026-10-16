@@ -44,6 +44,7 @@ for(const f of munster){
 }
 assert(areas.features.filter(f=>f.id==='ir-munster-1569-kilkenny-defense')[0].properties.zone_type==='rebellion_and_crown_response');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
-assert(app.includes('centuryData?.features?.length!==19'),'app must load all extant study regions');
+const currentCount=app.match(/centuryData\?\.features\?\.length!==([0-9]+)/);
+assert(currentCount&&Number(currentCount[1])===areas.features.length,'app must load all extant study regions');
 assert(app.includes("kind==='rebellion-conflict'"),'no distinction between rebel attack and colonial repression in dossier');
 console.log('PASS: 1569 Gilbert / first Desmond rebellion, 9 distinct incidents, 2 deliberately unlocated atrocities, 5 non-sovereign regional studies');
