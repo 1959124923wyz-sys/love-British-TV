@@ -1,0 +1,39 @@
+name: Major history story reader pilot QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/stories/**"
+      - "js/history-stories.js"
+      - "css/history-stories.css"
+      - "scripts/test_major_story_pilot.js"
+      - "scripts/browser_major_story_pilot.py"
+      - "app.js"
+      - "index.html"
+      - ".github/workflows/major-history-stories.yml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  content-and-browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate article, source links and JavaScript
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+      - name: Test real reading and map behavior in Chromium
+        run: |
+          pip install selenium
+          python -m http.server 8765 &
+          python scripts/browser_major_story_pilot.py
+      - name: Keep screenshots for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: major-story-browser-screenshots
+          path: story-pilot-browser-results/

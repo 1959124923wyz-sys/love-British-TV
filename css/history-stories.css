@@ -1,0 +1,38 @@
+/* Optional long-form story lives in the second-level dossier only. */
+.major-story-entry{margin:17px 0;padding:12px 13px;border:1px solid #475d6f;border-left:3px solid #d3a77c;border-radius:7px;background:#1a2d41}
+.major-story-eyebrow{font-size:11px;letter-spacing:.04em;color:#d7ad89;font-weight:650}
+.major-story-enter{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;padding:7px 0 4px;border:0;background:transparent;color:#f1dec6;font-size:13px;font-weight:700;line-height:1.65;cursor:pointer}
+.major-story-enter>span:last-child{font-size:22px;flex:none}
+.major-story-entry small{display:block;color:#a7bbce;font-size:11px;line-height:1.6}
+.major-story-article{font-size:13px;color:#d4e1ec}
+.major-story-header h2{margin:12px 0!important;font-size:22px;line-height:1.6}
+.major-story-header .story-subtitle{font-size:12px;color:#c2a58e;line-height:1.8}
+.dossier .major-story-header .story-lead{font-size:13px;line-height:1.95;color:#e1e8f1;padding:12px 0;border-top:1px solid #2c4358}
+.major-story-article .story-section{margin:22px 0 28px;scroll-margin-top:25px}
+.major-story-article .story-section h3{font-size:16px;line-height:1.75;color:#f0cba5;margin:0 0 13px}
+.dossier .major-story-article .story-section p{font-size:13px;line-height:2.05;color:#cfdeea;margin:0 0 15px;text-align:justify}
+.story-event-link{display:inline;border:0;border-bottom:1px dotted #d8a879;padding:0 2px;background:none;color:#f7cd93;cursor:pointer;font-size:inherit;line-height:inherit;font-weight:650;text-align:inherit}
+.story-event-link:hover,.story-event-link:focus-visible{color:#fff0c8;background:#364b5c}
+.story-back{display:inline-block;min-height:36px;padding:7px 10px;margin:0 0 14px;border:1px solid #496478;border-radius:7px;background:#1b3249;color:#efd0ae;font-size:12px;cursor:pointer}
+.story-back:hover,.story-back:focus-visible{background:#2b4960;border-color:#c7a37b}
+.story-toc,.story-sources{padding:10px 12px;margin:14px 0;border:1px solid #324a5f;border-radius:8px;background:#13253a}
+.story-toc summary,.story-sources summary{cursor:pointer;color:#edc7a0;font-size:12px;font-weight:700;line-height:1.7}
+.story-toc nav{display:grid;gap:4px;margin:11px 0 1px}
+.story-toc nav button{padding:8px 5px;text-align:left;border:0;background:transparent;color:#d7e4f1;font-size:11px;line-height:1.65;cursor:pointer}
+.story-toc nav button:hover{color:#f3bd85}
+.story-sources{margin:28px 0}
+.story-sources .source-list small{display:block;margin:2px 4px 10px;color:#99afc3;font-size:10px}
+.dossier .story-sources p{font-size:11px;line-height:1.85;color:#bacbda;margin:9px 0}
+.story-status:not([hidden]){position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:8px;padding:12px;margin:15px 0;background:#213d55;border:1px solid #9c8060;border-radius:8px;font-size:11px;line-height:1.8;color:#f0e6db;box-shadow:0 -4px 16px #0006}
+.story-status button{border:1px solid #ccaa83;background:#314b63;color:#f8d5ad;padding:5px 9px;border-radius:6px;cursor:pointer}
+.story-footer{padding:12px 0 25px}
+@media(min-width:981px){
+ .workspace.story-reading.sidebar-collapsed:not(.dossier-collapsed){grid-template-columns:0 minmax(0,1fr) clamp(390px,40vw,610px)}
+ .workspace.story-reading .dossier #dossierBody{padding:23px clamp(19px,2.5vw,32px)}
+}
+@media(max-width:980px){
+ .workspace.story-reading .dossier{width:min(520px,92vw);max-width:92vw}
+ .workspace.story-reading .dossier #dossierBody{padding:22px 17px}
+}
+@media(prefers-reduced-motion:reduce){.story-section,.story-event-link{scroll-behavior:auto}}
+
