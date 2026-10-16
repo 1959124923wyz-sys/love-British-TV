@@ -25,8 +25,15 @@ for(const e of atlas.events){
  assert.ok(iconSet.has(e.icon_code)&&e.icon_code!=='TRA',e.id+' unsupported icon');
  if(e.category==='slavery')assert.equal(e.icon_code,'SLV',e.id+' slavery must use the sanctioned glyph');
  assert.ok(e.source_ids.length&&e.source_ids.every(id=>sources.has(id)),e.id+' unknown citation');
- assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid reference geography');
- assert.ok(/regional|modern/.test(e.geo_precision)&&Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' internal geographical provenance must remain');
+ const explicitlyUnlocated=e.id==='MUN1569-GARRYSTOWN-MASSACRE'||e.id==='MUN1569-HEADS-TERROR';
+ if(explicitlyUnlocated){
+  assert.equal(e.lat,null,e.id+' unknown site must remain unlocated');
+  assert.equal(e.lng,null,e.id+' unknown site must remain unlocated');
+  assert.ok(e.geo_precision?.startsWith('unlocated_')&&e.position_type==='unlocated_historical_site_archival_only');
+ }else{
+  assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid reference geography');
+  assert.ok(/regional|modern/.test(e.geo_precision)&&Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' internal geographical provenance must remain');
+ }
  assert.equal(e.colonial_profit,null);
 }
 const nine=['calais-crown','guines-crown-1520s','dublin-pale','channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'];
