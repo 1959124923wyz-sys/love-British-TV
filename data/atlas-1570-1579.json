@@ -3560,6 +3560,40 @@
       "note": "1574年Tyrone至Lifford的军事行动。"
     },
     {
+      "id": "uls1574-essex-tyrone-lifford-scorch-direction",
+      "year": 1574,
+      "name": "1574埃塞克斯焚毁泰隆庄稼的军事进军方向（虚线）",
+      "category": "voyage",
+      "route_kind": "schematic-military-action-point-sequence",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_locality_endpoints_not_16th_century_movement_track",
+      "coords": [
+        [
+          54.37,
+          -6.67
+        ],
+        [
+          54.6,
+          -6.74
+        ],
+        [
+          54.833,
+          -7.49
+        ]
+      ],
+      "source_ids": [
+        "C9-S03",
+        "IR-RIA-ESSEX-ULSTER-1573-1575"
+      ],
+      "related_event_ids": [
+        "1570S-E008"
+      ],
+      "note": "按皇家爱尔兰学院传记所列黑水河、泰隆、利福德命名顺序连接，不能推定所有途经村落遭烧毁。",
+      "cartographic_note": "虚线仅表示有史料的行动先后或从驻港乘船到目标岛方向。不是实测行军线、船舶GPS、军事占领边界。",
+      "actual_English_area_sqkm": null,
+      "verified_English_territorial_control": false
+    },
+    {
       "id": "ch9-Essex-1575-Carrick-Rathlin",
       "year": 1575,
       "name": "1575年 · Carrickfergus → Rathlin",
@@ -3589,6 +3623,38 @@
       "note": "1575年Carrickfergus至Rathlin的远航。"
     },
     {
+      "id": "uls1575-drake-carrickfergus-rathlin-assault",
+      "year": 1575,
+      "name": "1575年德雷克运英军从卡里克弗格斯赴拉斯林岛（虚线）",
+      "category": "voyage",
+      "route_kind": "schematic-military-action-point-sequence",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_locality_endpoints_not_16th_century_movement_track",
+      "coords": [
+        [
+          54.714,
+          -5.804
+        ],
+        [
+          55.298,
+          -6.192
+        ]
+      ],
+      "source_ids": [
+        "C9-S03",
+        "C9-S04"
+      ],
+      "related_event_ids": [
+        "1570S-E010",
+        "ULS1575-RATHLIN-CASTLE-DEFENDERS",
+        "ULS1575-RATHLIN-CAVE-CIVILIANS"
+      ],
+      "note": "埃塞克斯驻军由卡里克弗格斯乘德雷克舰船赴拉斯林岛登陆，准确离岸转向、登陆点和洞穴位置均未记载。",
+      "cartographic_note": "虚线仅表示有史料的行动先后或从驻港乘船到目标岛方向。不是实测行军线、船舶GPS、军事占领边界。",
+      "actual_English_area_sqkm": null,
+      "verified_English_territorial_control": false
+    },
+    {
       "id": "ch9-Frobisher-1576-1578-Harwich-Nunavut",
       "year": 1576,
       "name": "1576年 · Harwich → Kodlunarn",
@@ -3616,285 +3682,6 @@
         "1570S-E024"
       ],
       "note": "1576年Harwich至Kodlunarn的远航。"
-    },
-    {
-      "id": "ch9-Drake-1579-Callao-California",
-      "year": 1579,
-      "name": "1579年 · Callao → 北加利福尼亚海岸（推定Point Reyes一带）",
-      "category": "voyage",
-      "route_kind": "schematic-privateering-voyage",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          -12.055,
-          -77.149
-        ],
-        [
-          38.054,
-          -122.954
-        ]
-      ],
-      "source_ids": [
-        "C9-S09",
-        "C9-S10",
-        "C9-S13"
-      ],
-      "related_event_ids": [
-        "1570S-E018",
-        "1570S-E019",
-        "1570S-E020"
-      ],
-      "note": "1579年从Callao沿美洲太平洋岸航至北加利福尼亚海岸的方向示意。Point Reyes／Drakes Bay是较受支持的登陆候选地，实际登陆点仍有争议；此线不代表船舶实测航迹。"
-    },
-    {
-      "id": "ch9-Drake-1579-California-Ternate",
-      "year": 1579,
-      "name": "1579年 · 北加利福尼亚海岸（推定Point Reyes一带） → Ternate",
-      "category": "voyage",
-      "route_kind": "schematic-privateering-voyage",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          38.054,
-          -122.954
-        ],
-        [
-          0.79,
-          127.38
-        ]
-      ],
-      "segments": [
-        [
-          [
-            38.054,
-            -122.954
-          ],
-          [
-            18.670032826947274,
-            -180
-          ]
-        ],
-        [
-          [
-            18.670032826947274,
-            180
-          ],
-          [
-            0.79,
-            127.38
-          ]
-        ]
-      ],
-      "source_ids": [
-        "C9-S09",
-        "C9-S10"
-      ],
-      "related_event_ids": [
-        "1570S-E018",
-        "1570S-E019",
-        "1570S-E020"
-      ],
-      "note": "1579年德雷克自北加利福尼亚修船停靠地横渡太平洋至Ternate的方向示意。Point Reyes一带为推定登陆区域，并非唯一证实的停泊坐标；跨日期变更线只为地图显示连续性。"
-    },
-    {
-      "id": "ch9-Sidney-Cork-to-Limerick-Crown-coercion-1576",
-      "year": 1576,
-      "name": "1576年 · Cork → Limerick",
-      "category": "voyage",
-      "route_kind": "schematic-military-route",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          51.898,
-          -8.475
-        ],
-        [
-          52.664,
-          -8.63
-        ]
-      ],
-      "source_ids": [
-        "C9-S26"
-      ],
-      "related_event_ids": [
-        "1570S-E012",
-        "1570S-E023",
-        "1570S-E024"
-      ],
-      "note": "1576年Cork至Limerick的军事行动。"
-    },
-    {
-      "id": "ch9-Sidney-Limerick-to-Galway-tributary-summons-1576",
-      "year": 1576,
-      "name": "1576年 · Limerick → Galway",
-      "category": "voyage",
-      "route_kind": "schematic-military-route",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          52.664,
-          -8.63
-        ],
-        [
-          53.27,
-          -9.056
-        ]
-      ],
-      "source_ids": [
-        "C9-S26"
-      ],
-      "related_event_ids": [
-        "1570S-E012",
-        "1570S-E023",
-        "1570S-E024"
-      ],
-      "note": "1576年Limerick至Galway的军事行动。"
-    },
-    {
-      "id": "ch9-Sidney-Galway-to-Dublin-hostages-1576",
-      "year": 1576,
-      "name": "1576年 · Galway → Dublin",
-      "category": "voyage",
-      "route_kind": "schematic-military-route",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          53.27,
-          -9.056
-        ],
-        [
-          53.35,
-          -6.26
-        ]
-      ],
-      "source_ids": [
-        "C9-S26"
-      ],
-      "related_event_ids": [
-        "1570S-E012",
-        "1570S-E023",
-        "1570S-E024"
-      ],
-      "note": "1576年Galway至Dublin的军事行动。"
-    },
-    {
-      "id": "ch9-Sidney-Dublin-to-Athlone-chase-1576",
-      "year": 1576,
-      "name": "1576年 · Dublin → Athlone",
-      "category": "voyage",
-      "route_kind": "schematic-military-route",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          53.35,
-          -6.26
-        ],
-        [
-          53.42,
-          -7.94
-        ]
-      ],
-      "source_ids": [
-        "C9-S26"
-      ],
-      "related_event_ids": [
-        "1570S-E012",
-        "1570S-E023",
-        "1570S-E024"
-      ],
-      "note": "1576年Dublin至Athlone的军事行动。"
-    },
-    {
-      "id": "ch9-Sidney-Athlone-to-Loughrea-captured-1576",
-      "year": 1576,
-      "name": "1576年 · Athlone → Loughrea",
-      "category": "voyage",
-      "route_kind": "schematic-military-route",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          53.42,
-          -7.94
-        ],
-        [
-          53.1966,
-          -8.5649
-        ]
-      ],
-      "source_ids": [
-        "C9-S26"
-      ],
-      "related_event_ids": [
-        "1570S-E012",
-        "1570S-E023",
-        "1570S-E024"
-      ],
-      "note": "1576年Athlone至Loughrea的军事行动。"
-    },
-    {
-      "id": "ch9-Malby-Limerick-to-Askeaton-friary-raid-1579",
-      "year": 1579,
-      "name": "1579年 · Limerick → Askeaton",
-      "category": "voyage",
-      "route_kind": "schematic-military-route",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          52.664,
-          -8.63
-        ],
-        [
-          52.599,
-          -8.974
-        ]
-      ],
-      "source_ids": [
-        "C9-S26",
-        "C9-S41"
-      ],
-      "related_event_ids": [
-        "1570S-E018",
-        "1570S-E019",
-        "1570S-E020"
-      ],
-      "note": "1579年Limerick至Askeaton的军事行动。"
-    },
-    {
-      "id": "ch9-Malby-Askeaton-to-Adare-campaign-1579",
-      "year": 1579,
-      "name": "1579年 · Askeaton → Adare",
-      "category": "voyage",
-      "route_kind": "schematic-military-route",
-      "certainty": "schematic-only-not-historical-track",
-      "geometry_precision": "modern_named_endpoints_not_ship_logs",
-      "coords": [
-        [
-          52.599,
-          -8.974
-        ],
-        [
-          52.565,
-          -8.793
-        ]
-      ],
-      "source_ids": [
-        "C9-S26",
-        "C9-S41"
-      ],
-      "related_event_ids": [
-        "1570S-E018",
-        "1570S-E019",
-        "1570S-E020"
-      ],
-      "note": "1579年Askeaton至Adare的军事行动。"
     },
     {
       "id": "ch9-Inuit-captive-1576-Baffin-to-London",
@@ -3927,6 +3714,146 @@
       "victims_overlap_other_legs": true,
       "origin_research_feature_id": "Inuit-captive-1576-Baffin-to-London",
       "verified_English_territorial_control": false
+    },
+    {
+      "id": "ch9-Sidney-Athlone-to-Loughrea-captured-1576",
+      "year": 1576,
+      "name": "1576年 · Athlone → Loughrea",
+      "category": "voyage",
+      "route_kind": "schematic-military-route",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          53.42,
+          -7.94
+        ],
+        [
+          53.1966,
+          -8.5649
+        ]
+      ],
+      "source_ids": [
+        "C9-S26"
+      ],
+      "related_event_ids": [
+        "1570S-E012",
+        "1570S-E023",
+        "1570S-E024"
+      ],
+      "note": "1576年Athlone至Loughrea的军事行动。"
+    },
+    {
+      "id": "ch9-Sidney-Cork-to-Limerick-Crown-coercion-1576",
+      "year": 1576,
+      "name": "1576年 · Cork → Limerick",
+      "category": "voyage",
+      "route_kind": "schematic-military-route",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          51.898,
+          -8.475
+        ],
+        [
+          52.664,
+          -8.63
+        ]
+      ],
+      "source_ids": [
+        "C9-S26"
+      ],
+      "related_event_ids": [
+        "1570S-E012",
+        "1570S-E023",
+        "1570S-E024"
+      ],
+      "note": "1576年Cork至Limerick的军事行动。"
+    },
+    {
+      "id": "ch9-Sidney-Dublin-to-Athlone-chase-1576",
+      "year": 1576,
+      "name": "1576年 · Dublin → Athlone",
+      "category": "voyage",
+      "route_kind": "schematic-military-route",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          53.35,
+          -6.26
+        ],
+        [
+          53.42,
+          -7.94
+        ]
+      ],
+      "source_ids": [
+        "C9-S26"
+      ],
+      "related_event_ids": [
+        "1570S-E012",
+        "1570S-E023",
+        "1570S-E024"
+      ],
+      "note": "1576年Dublin至Athlone的军事行动。"
+    },
+    {
+      "id": "ch9-Sidney-Galway-to-Dublin-hostages-1576",
+      "year": 1576,
+      "name": "1576年 · Galway → Dublin",
+      "category": "voyage",
+      "route_kind": "schematic-military-route",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          53.27,
+          -9.056
+        ],
+        [
+          53.35,
+          -6.26
+        ]
+      ],
+      "source_ids": [
+        "C9-S26"
+      ],
+      "related_event_ids": [
+        "1570S-E012",
+        "1570S-E023",
+        "1570S-E024"
+      ],
+      "note": "1576年Galway至Dublin的军事行动。"
+    },
+    {
+      "id": "ch9-Sidney-Limerick-to-Galway-tributary-summons-1576",
+      "year": 1576,
+      "name": "1576年 · Limerick → Galway",
+      "category": "voyage",
+      "route_kind": "schematic-military-route",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          52.664,
+          -8.63
+        ],
+        [
+          53.27,
+          -9.056
+        ]
+      ],
+      "source_ids": [
+        "C9-S26"
+      ],
+      "related_event_ids": [
+        "1570S-E012",
+        "1570S-E023",
+        "1570S-E024"
+      ],
+      "note": "1576年Limerick至Galway的军事行动。"
     },
     {
       "id": "ch9-Inuit-captive-1577-Baffin-to-Bristol",
@@ -4052,6 +3979,145 @@
       "note": "智利国家图书馆记载1578年沿岸航次的地点顺序。图上仅为地点间方向关系线，非实测船位、航程、连续英王占领或整段海岸遭袭。",
       "verified_English_territorial_control": false,
       "actual_area_sqkm": null
+    },
+    {
+      "id": "ch9-Drake-1579-California-Ternate",
+      "year": 1579,
+      "name": "1579年 · 北加利福尼亚海岸（推定Point Reyes一带） → Ternate",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          38.054,
+          -122.954
+        ],
+        [
+          0.79,
+          127.38
+        ]
+      ],
+      "segments": [
+        [
+          [
+            38.054,
+            -122.954
+          ],
+          [
+            18.670032826947274,
+            -180
+          ]
+        ],
+        [
+          [
+            18.670032826947274,
+            180
+          ],
+          [
+            0.79,
+            127.38
+          ]
+        ]
+      ],
+      "source_ids": [
+        "C9-S09",
+        "C9-S10"
+      ],
+      "related_event_ids": [
+        "1570S-E018",
+        "1570S-E019",
+        "1570S-E020"
+      ],
+      "note": "1579年德雷克自北加利福尼亚修船停靠地横渡太平洋至Ternate的方向示意。Point Reyes一带为推定登陆区域，并非唯一证实的停泊坐标；跨日期变更线只为地图显示连续性。"
+    },
+    {
+      "id": "ch9-Drake-1579-Callao-California",
+      "year": 1579,
+      "name": "1579年 · Callao → 北加利福尼亚海岸（推定Point Reyes一带）",
+      "category": "voyage",
+      "route_kind": "schematic-privateering-voyage",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          -12.055,
+          -77.149
+        ],
+        [
+          38.054,
+          -122.954
+        ]
+      ],
+      "source_ids": [
+        "C9-S09",
+        "C9-S10",
+        "C9-S13"
+      ],
+      "related_event_ids": [
+        "1570S-E018",
+        "1570S-E019",
+        "1570S-E020"
+      ],
+      "note": "1579年从Callao沿美洲太平洋岸航至北加利福尼亚海岸的方向示意。Point Reyes／Drakes Bay是较受支持的登陆候选地，实际登陆点仍有争议；此线不代表船舶实测航迹。"
+    },
+    {
+      "id": "ch9-Malby-Askeaton-to-Adare-campaign-1579",
+      "year": 1579,
+      "name": "1579年 · Askeaton → Adare",
+      "category": "voyage",
+      "route_kind": "schematic-military-route",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          52.599,
+          -8.974
+        ],
+        [
+          52.565,
+          -8.793
+        ]
+      ],
+      "source_ids": [
+        "C9-S26",
+        "C9-S41"
+      ],
+      "related_event_ids": [
+        "1570S-E018",
+        "1570S-E019",
+        "1570S-E020"
+      ],
+      "note": "1579年Askeaton至Adare的军事行动。"
+    },
+    {
+      "id": "ch9-Malby-Limerick-to-Askeaton-friary-raid-1579",
+      "year": 1579,
+      "name": "1579年 · Limerick → Askeaton",
+      "category": "voyage",
+      "route_kind": "schematic-military-route",
+      "certainty": "schematic-only-not-historical-track",
+      "geometry_precision": "modern_named_endpoints_not_ship_logs",
+      "coords": [
+        [
+          52.664,
+          -8.63
+        ],
+        [
+          52.599,
+          -8.974
+        ]
+      ],
+      "source_ids": [
+        "C9-S26",
+        "C9-S41"
+      ],
+      "related_event_ids": [
+        "1570S-E018",
+        "1570S-E019",
+        "1570S-E020"
+      ],
+      "note": "1579年Limerick至Askeaton的军事行动。"
     }
   ],
   "colonial_polygons": [],
