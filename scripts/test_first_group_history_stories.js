@@ -49,7 +49,7 @@ const multi=map.get('1504-OKELLY-CASTLES');
 assert.match(multi.geo_precision,/multi_site/);
 assert.match(multi.description,/乌利克·伯克/);
 assert.equal(multi.actual_English_territory_created,false);
-assert.equal(third.events.length,22,'15 original plus three first wave and four more source-audited records');
+assert.equal(third.events.length,25,'22 previously attested early events and three new French campaign sites');
 const newIds=['KILDARE1512-ROSCOMMON','KILDARE1512-DUNGANNON-ODONNELL','KILDARE1516-KILLYBEGS-CANNON-SHIP','KILDARE1512-ATHLONE-CROSSING','KILDARE1512-BELFAST-ASSAULT','KILDARE1514-COLERAINE-ODONNELL','KILDARE1516-COLLOONEY-ODONNELL'];
 for(const id of newIds){
  const e=map.get(id);assert(e,id);
@@ -63,8 +63,8 @@ for(const id of newIds){
 assert.equal(new Set(third.events.map(e=>e.id)).size,third.events.length);
 assert.equal(third.colonial_polygons.length,0);
 assert(first.events.every(x=>x.actual_English_territory_created!==true),'unexpectedly fabricated Cabot acquisition');
-assert.equal(third.routes.length,2,'Sourced 1512 march and 1516 maritime endpoint relations');
-assert(third.routes[0].valid_years?.length===1&&third.routes[1].valid_years?.length===1);
+assert.equal(third.routes.length,3,'Retain two early Irish links plus documented 1513 French advance');
+assert(third.routes.every(r=>r.valid_years?.length===1));
 assert(third.routes.some(x=>x.year===1512)&&third.routes.some(x=>x.year===1516));
 assert(fs.readFileSync(path.join(root,'app.js'),'utf8').includes('if(Array.isArray(r.valid_years)&&!r.valid_years.includes(year))continue;'));
 assert(third.routes.every(r=>r.route_kind==='documented-endpoints-connection'&&r.area_sqkm===null));
