@@ -15,7 +15,7 @@ assert.equal(catalog.chapters.length,10);
 assert.ok(catalog.chapters.some(c=>c.number===10&&c.status==='published'&&c.start===1590&&c.end===1599));
 assert.equal(now.events.length,37);assert.equal(now.sources.length,71);assert.equal(now.places.length,31);
 assert.equal(now.routes.length,0);assert.equal(now.colonial_polygons.length,0);
-assert.equal(last.events.length,32);
+assert.equal(last.events.length,37);
 assert.equal(Object.keys(notes.records).length,36);assert.equal(ledger.records.length,32);
 const sources=new Set(now.sources.map(s=>s.id));
 const icons=new Set(read('data/icon-categories.json').categories.map(c=>c.code));
