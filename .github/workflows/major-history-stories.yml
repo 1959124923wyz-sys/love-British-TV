@@ -18,6 +18,8 @@ on:
       - "scripts/browser_western_prayerbook_guinea_stories.py"
       - "scripts/test_western_prayerbook_guinea_stories.js"
       - "scripts/test_munster_essex_story_1569_1575.js"
+      - "scripts/test_drake_sidney_frobisher_major_stories.js"
+      - "scripts/browser_drake_sidney_frobisher_stories.py"
       - "scripts/browser_munster_essex_stories.py"
       - "data/atlas-1560-1569.json"
       - "data/atlas-1570-1579.json"
@@ -64,6 +66,7 @@ jobs:
           node scripts/test_boulogne_kett_major_stories.js
           node scripts/test_western_prayerbook_guinea_stories.js
           node scripts/test_munster_essex_story_1569_1575.js
+          node scripts/test_drake_sidney_frobisher_major_stories.js
           node scripts/test_first_group_history_stories.js
           node scripts/test_tournai_surrey_major_stories.js
           node scripts/test_scots_calais_stories.js
@@ -82,6 +85,7 @@ jobs:
           python scripts/browser_boulogne_kett_stories.py
           python scripts/browser_western_prayerbook_guinea_stories.py
           python scripts/browser_munster_essex_stories.py
+          python scripts/browser_drake_sidney_frobisher_stories.py
       - name: Keep screenshots for review
         if: always()
         uses: actions/upload-artifact@v4
@@ -98,3 +102,4 @@ jobs:
             boulogne-kett-browser-results/
             prayerbook-guinea-browser-results/
             ireland-1569-1575-browser-results/
+            drake-sidney-frobisher-browser-results/
