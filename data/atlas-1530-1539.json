@@ -1154,6 +1154,41 @@
       "economic_fields": null,
       "geographic_rule": "domestic_defensive_fortification_not_new_conquest_or_colonial_territory",
       "review_note": "Construction beginning is not completion or permanent war footing; no sixteenth-century surveyed polygon"
+    },
+    {
+      "id": "DOM1537-ASKE-YORK-EXECUTION",
+      "year": 1537,
+      "start_year": 1537,
+      "end_year": 1537,
+      "visible_from": 1537,
+      "date_label": "1537年",
+      "name": "圣恩朝圣运动领袖罗伯特·阿斯克在约克城堡受处决",
+      "description": "1537年，亨利八世政府在约克城堡处死圣恩朝圣运动领袖罗伯特·阿斯克。此前他参与领导英格兰北部对王室宗教改革的反抗。",
+      "short_description": "1537年，亨利八世政府在约克城堡处死圣恩朝圣运动领袖罗伯特·阿斯克。",
+      "category": "domestic_royal_repression",
+      "icon_code": "REP",
+      "lat": 53.95577,
+      "lng": -1.080078,
+      "geo_precision": "Historic_England_Cliffords_Tower_modern_site_NGR_not_scaffold",
+      "geography_label": "约克城堡克利福德塔（历史遗迹）",
+      "source_ids": [
+        "EN-EH-ASKE-YORK-1537",
+        "EN-HISTENG-CLIFFORDS-NGR"
+      ],
+      "certainty": "official_heritage_event_and_site_correlated",
+      "significance": {
+        "level": 2,
+        "review_status": "English_Heritage_history_and_Historic_England_NGR_checked"
+      },
+      "colonial_profit": null,
+      "position_type": "historic_named_castle_modern_site_reference",
+      "editorial_status": "published_verified_history_modern_site_reference",
+      "research_event_id": "DOM1537-ASKE-YORK-EXECUTION",
+      "economic_fields": null,
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2000,6 +2035,26 @@
       "kind": "official_heritage_modern_grid_reference",
       "evidence_read_level": "official online heritage record read",
       "precision_warning": "NGR denotes modern protected historic site; no verified Tudor exact fort outline"
+    },
+    {
+      "id": "EN-EH-ASKE-YORK-1537",
+      "title": "English Heritage: York Clifford's Tower history, Robert Aske executed at York Castle in 1537",
+      "publisher": "English Heritage",
+      "url": "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/history-and-stories/history/",
+      "kind": "official_historical_place_research",
+      "evidence_read_level": "History page explicitly links Aske's 1537 hanging to the height of the castle dungeon",
+      "precision_warning": "Historic reference is the York Castle tower site; OS national grid is the location of the present surviving building, not a reconstructed scaffold",
+      "origin": "1530-1539"
+    },
+    {
+      "id": "EN-HISTENG-CLIFFORDS-NGR",
+      "title": "Historic England NHLE 1259325: Clifford's Tower, York; NGR SE6046351467",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1259325",
+      "kind": "official_modern_georeference",
+      "evidence_read_level": "National Grid Reference SE6046351467 converted OSGB36 to WGS84 reference point",
+      "precision_warning": "Modern Grade I listed tower is a named-site reference not exact 1537 scaffold",
+      "origin": "1530-1539"
     }
   ],
   "routes": [],
