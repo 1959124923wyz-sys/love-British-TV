@@ -29,7 +29,7 @@ try:
     driver.save_screenshot(str(OUT/"01-short-event-and-story-entry.png"))
     driver.find_element(By.CSS_SELECTOR,'.major-story-enter').click()
     try:
-        wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article .story-section:nth-of-type(9)')"))
+        wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article .story-section:nth-of-type(8)')"))
     except Exception:
         print("STORY DEBUG",driver.execute_script("""return {body:document.getElementById('dossierBody')?.innerText?.slice(0,600),
           year:document.getElementById('bigYear')?.textContent,
@@ -38,7 +38,7 @@ try:
         print("BROWSER CONSOLE",driver.get_log('browser'),flush=True)
         driver.save_screenshot(str(OUT/'story-load-failed.png'))
         raise
-    assert len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article .story-section'))==9
+    assert len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article .story-section'))==8
     assert driver.execute_script("return document.querySelector('.major-story-article').textContent.length>3000")
     assert driver.execute_script("return document.querySelector('.story-sources') && !document.querySelector('.story-sources').open")
     driver.save_screenshot(str(OUT/"02-long-story-1580-desktop.png"))
