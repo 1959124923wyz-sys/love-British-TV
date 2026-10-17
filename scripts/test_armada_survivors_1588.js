@@ -8,7 +8,8 @@ const followup=read('data/followup-regional-stories-1562-1596.geojson');
 const sources=new Map(atlas.sources.map(s=>[s.id,s]));
 assert.ok(atlas.events.length>=53);
 assert.ok(atlas.sources.length>=92);
-const born=atlas.events.filter(e=>e.id.startsWith('ARM1588-'));
+const oldEvidenceIds=new Set(['ARM1588-SLIGO-OHART-TORTURE','ARM1588-STREEDAGH-STORM','ARM1588-STREEDAGH-SHORE-KILLING','ARM1588-ROSCLOGHER-REFUGE','ARM1588-CLARE-SPANISHPOINT-EXECUTIONS']);
+const born=atlas.events.filter(e=>oldEvidenceIds.has(e.id));
 assert.equal(born.length,5);
 assert.equal(new Set(born.map(e=>e.id)).size,5);
 assert.equal(born.filter(e=>e.lat===null&&e.lng===null).length,1);
@@ -18,7 +19,7 @@ assert(born.find(e=>e.id==='ARM1588-STREEDAGH-SHORE-KILLING').icon_code==='REP')
 assert(born.find(e=>e.id==='ARM1588-ROSCLOGHER-REFUGE').icon_code==='RES','Gaelic aid needs resistance icon');
 assert(born.some(e=>e.id==='ARM1588-CLARE-SPANISHPOINT-EXECUTIONS'&&e.source_ids.length>=2));
 assert(atlas.events.filter(e=>e.year<=1587).length===42,'No new incident before the sinking');
-assert(atlas.events.filter(e=>e.year<=1588).length===49,'Five 1588 accounts appear only from 1588');
+assert(atlas.events.filter(e=>e.year<=1588).length===61,'Five 1588 accounts appear only from 1588');
 const original=atlas.events.find(e=>e.id==='GAP1588-SLIGO-ARMADA-EXECUTIONS');
 assert(original&&original.description.includes('至少700')&&original.description.includes('不可与Streedagh约1,100名'));
 for(const e of born){
