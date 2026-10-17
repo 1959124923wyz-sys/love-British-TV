@@ -9,7 +9,7 @@ const fifth=j('data/atlas-1530-1539.json'),fourth=j('data/atlas-1520-1529.json')
 const geo=j('data/territorial-footprints-1497-1539.geojson'),old=j('data/territorial-footprints-1497-1529.geojson');
 const urban=j('data/french-urban-control-1497-1539.geojson'),relations=j('data/political-relations-1500-1539.geojson');
 assert.deepEqual(fifth.period,{from:1530,to:1539,next:1540});
-assert.ok(fifth.events.length===33&&fifth.places.length===8&&fifth.sources.length===68);
+assert.ok(fifth.events.length===34&&fifth.places.length===8&&fifth.sources.length===70);
 assert.equal(fifth.colonial_polygons.length,0,'Unverified conquest boundary must not be promoted');
 assert.equal(fifth.routes.length,0,'No invented transatlantic ship routes');
 const ids=new Set(fifth.sources.map(q=>q.id)),placeIds=new Set(fifth.places.map(q=>q.id));
