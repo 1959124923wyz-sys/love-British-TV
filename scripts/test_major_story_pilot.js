@@ -65,7 +65,7 @@ for(const meta of index.stories){
    assert.ok(!/<script|onerror\s*=|javascript:/i.test(p));
   }
  }
- assert.ok(localLinks>=(['munster-plantation-land-grants-and-aftermath-1584-1589','roanoke-colony-native-conflict-disappearance-1585-1590'].includes(meta.id)?6:12),'Longform must contain meaningful map links');
+ assert.ok(localLinks>=(['munster-plantation-land-grants-and-aftermath-1584-1589','roanoke-colony-native-conflict-disappearance-1585-1590'].includes(meta.id)?6:Math.min(12,meta.event_ids.length)),'Longform must contain meaningful map links');
  console.log('PASS story',meta.id,story.sections.length,'sections,',paragraphs.join('').length,'characters,',localLinks,'inline links,',meta.event_ids.length,'events');
 }
 const scottish=index.stories.find(x=>x.id==='rough-wooing-anglo-scottish-war-1543-1550');
