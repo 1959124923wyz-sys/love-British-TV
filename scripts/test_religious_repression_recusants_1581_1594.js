@@ -36,7 +36,7 @@ assert(docs.get(ids[4]).description.includes('书面建议本身不能证明'));
 assert(docs.get(ids[5]).description.includes('报告还指控'));
 assert(docs.get(ids[6]).date_label.startsWith('1593年')&&docs.get(ids[6]).date_label.includes('1592'));
 assert(docs.get(ids[7]).description.includes('两部不同法令'));
-assert(docs.get(ids[8]).description.includes('实际执行'));
+assert(docs.get(ids[8]).description.includes('真实执行'));
 assert(body.includes('实际交付')&&body.includes('实际完成调查')&&body.includes('国库'));
 assert(!a.routes.some(r=>r.id.includes('RECUS'))&&!b.routes.some(r=>r.id.includes('RECUS')));
 assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);
