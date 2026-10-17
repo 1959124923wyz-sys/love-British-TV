@@ -1430,6 +1430,38 @@
       "position_type": "modern_coastal_locality_reference_not_surveyed_16th_century_site",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
+    },
+    {
+      "id": "BING1590-BALLYMOTE-ATTACK",
+      "year": 1590,
+      "start_year": 1590,
+      "end_year": 1590,
+      "visible_from": 1590,
+      "date_label": "1590年3月",
+      "name": "奥罗克反王室部队袭击并焚毁巴利莫特城镇",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 54.089,
+      "lng": -8.516,
+      "geo_precision": "modern_named_place_anchor_not_1580s_exact_site",
+      "geography_label": "仅是现代具名地点的历史参考位置；不代表具体建筑或边界",
+      "description": "乔治·宾厄姆的皇家爱尔兰学院传记记载，布赖恩·奥罗克在1590年3月袭击斯莱戈并焚毁巴利莫特城镇，造成当地居民财产损失。这是奥罗克一方行动，不可归责为王室军纵火；现代巴利莫特城镇参考点不能推定被焚街区。",
+      "short_description": "乔治·宾厄姆的皇家爱尔兰学院传记记载，布赖恩·奥罗克在1590年3月袭击斯莱戈并焚毁巴利莫特城镇，造成当地居民财产损失。这是奥罗克一方行动，不可归责为王室军纵火；现代巴利莫特城镇参考点不能推定被焚街区。",
+      "source_ids": [
+        "BING-DIB-GEORGE-1590"
+      ],
+      "certainty": "sourced_action_historical_location_not_surveyed",
+      "significance": {
+        "level": 2,
+        "review_status": "pending_story38_39_geo_editorial_review"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_town_or_landform_reference_not_exact_historical_site",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2883,6 +2915,15 @@
       "url": "https://www.gutenberg.org/cache/epub/57502/pg57502-images.html",
       "kind": "primary_participant_published_1622_source_reprinted_1847",
       "precision_warning": "Participant testimony is interested/partisan and not a surveyed account of losses, shore occupation boundaries or annualized profit."
+    },
+    {
+      "id": "BING-DIB-GEORGE-1590",
+      "title": "George Bingham biography: O Rourke attacked Ballymote town March 1590",
+      "publisher": "Dictionary of Irish Biography / Royal Irish Academy",
+      "url": "https://www.dib.ie/biography/bingham-byngham-sir-george-a0664",
+      "kind": "scholarly_biography",
+      "evidence_read_level": "read_public_text_or_catalogue_title_as_noted",
+      "precision_warning": "Only period named actions are proven; modern place points do not establish exact historic damage, battle, tax or occupation perimeter."
     }
   ],
   "routes": [],
