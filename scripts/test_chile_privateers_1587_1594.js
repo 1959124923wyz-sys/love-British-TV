@@ -3,13 +3,13 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const a=read('data/atlas-1580-1589.json'),b=read('data/atlas-1590-1599.json'),regions=read('data/followup-regional-stories-1562-1596.geojson');
-assert.equal(a.events.length,39);assert.equal(a.sources.length,82);
-assert.equal(b.events.length,38);assert.equal(b.sources.length,74);
+assert.equal(a.events.length,46);assert.equal(a.sources.length,89);
+assert.equal(b.events.length,45);assert.equal(b.sources.length,77);
 assert.equal(a.events.filter(e=>e.year<=1586).length,25);
-assert.equal(a.events.filter(e=>e.year<=1587).length,29,'Cavendish present by 1587 and only 1587');
-assert.equal(a.events.filter(e=>e.year<=1588).length,36);
-assert.equal(b.events.filter(e=>e.year<=1593).length,10,'Hawkins absent before 1594');
-assert.equal(b.events.filter(e=>e.year<=1594).length,14);
+assert.equal(a.events.filter(e=>e.year<=1587).length,31,'Cavendish present by 1587 and only 1587');
+assert.equal(a.events.filter(e=>e.year<=1588).length,43);
+assert.equal(b.events.filter(e=>e.year<=1593).length,17,'Hawkins absent before 1594');
+assert.equal(b.events.filter(e=>e.year<=1594).length,21);
 const cases=[
 {atlas:a,id:'PAC1587-CAVENDISH-QUINTERO',year:1587,icon:'WAR',summary:'不将金特罗标为',source:'CL-BNC-CAVENDISH-QUINTERO-1587',region:'cl-cavendish-1587-quintero-landing-defense'},
 {atlas:b,id:'PAC1594-HAWKINS-VALPARAISO',year:1594,icon:'ECO',summary:'被赎回',source:'CL-BNC-HAWKINS-VALPARAISO-1594',region:'cl-hawkins-1594-valparaiso-plunder'}
