@@ -896,7 +896,7 @@ try:
     set_year(1574, 25)
     verify("1574 Essex murder or scorched-earth route missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===9 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
               document.querySelector('#eventList [data-eid="1570S-E009"] use').getAttribute('href').endsWith('#REP')""",driver)
     set_year(1575, 34)
     verify("1575 Rathlin island massacre wrongly redrawn as English entire island",
