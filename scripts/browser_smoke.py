@@ -180,7 +180,7 @@ try:
     verify("Crown Calais controls lost at 1529/1530",
            "document.querySelectorAll('#map .control-area-label').length>=0", driver)
     driver.save_screenshot(str(OUT / "chapter5-1530.png"))
-    for annual, expected in [(1531,1),(1532,3),(1533,4),(1534,8),(1535,12),(1536,18),(1537,22),(1538,26),(1539,33)]:
+    for annual, expected in [(1531,1),(1532,3),(1533,4),(1534,8),(1535,12),(1536,18),(1537,23),(1538,27),(1539,34)]:
         set_year(annual, expected)
     verify("1539 lost 1535 Maynooth event",
            "document.querySelector('#eventList').textContent.includes('梅努斯城堡')", driver)
@@ -296,7 +296,7 @@ try:
     # Chapter six: year-end controls are distinct from archival events.
     # Temporary English garrison sites must disappear at the researched end year,
     # without erasing existing sovereign Scotland or the English Boulogne core.
-    set_year(1539, 33)
+    set_year(1539, 34)
     zoom_1539=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
     set_year(1540, 4)
     # The user explicitly removed the military-statistics badge; the compact

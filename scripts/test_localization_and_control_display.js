@@ -28,7 +28,8 @@ assert.ok(data.events.every(e=>/中文/.test(e.date_label) || !/[A-Za-z]/.test(e
 assert.ok(data.events.every(e=>e.research_date_label || /^\d{4}年/.test(e.date_label)),'Research dates must remain recoverable');
 const original=JSON.parse(text('data/atlas-1530-1539.json'));
 const newKildareIds=new Set(['KIL1534-STMARYS-RENOUNCEMENT','KIL1534-ARTANE-ALEN-KILLED','KIL1535-MAYNOOTH-GARRISON-EXECUTIONS','KIL1537-TYBURN-EXECUTIONS']);
-assert.equal(original.events.filter(e=>!newKildareIds.has(e.id)&&!e.id.startsWith('FORT1539-')).length,27,'Original 1530s historical events must survive independent additions');
+assert.equal(original.events.filter(e=>!newKildareIds.has(e.id)&&!e.id.startsWith('FORT1539-')).length,28,'Original 1530s events and the independently sourced 1537 Aske execution must survive');
+assert.ok(original.events.some(e=>e.id==='ENG1537-ASKE-YORK-CASTLE-EXECUTION'&&e.year===1537&&e.icon_code==='REP'))
 assert.equal(original.events.filter(e=>e.id.startsWith('FORT1539-')).length,2,'Documented 1539 domestic coastal forts are independent new history records');
 assert.equal(original.events.filter(e=>newKildareIds.has(e.id)).length,4,'Four new source-backed Kildare sites expected');
 assert.equal(garrison.features.length,19,'Roxburgh sourced 1547 artillery fort reference point included');
