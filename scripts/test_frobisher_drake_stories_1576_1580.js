@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const R=path.join(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(R,p),'utf8'));
+const a=read('data/atlas-1570-1579.json'),b=read('data/atlas-1580-1589.json'),index=read('data/stories/index.json').stories;
+const story=read('data/stories/drake-circumnavigation-privateering-resistance-1577-1580.json');
+const fro=read('data/stories/frobisher-arctic-inuit-captives-mining-1576-1578.json');
+const map=new Map([...a.events,...b.events].map(e=>[e.id,e]));
+const item=index.find(x=>x.id===story.id);assert(item);
+assert.equal(story.sections.length,14);
+const body=story.sections.flatMap(s=>s.paragraphs).join('');
+assert(body.length>=3000,'Drake longform must exceed 3000 chars');
+assert(story.sources.length>=5);
+assert.deepEqual(new Set(item.event_ids),new Set(story.related_event_ids));
+for(const id of item.event_ids)assert(map.has(id),'story references absent map event '+id);
+for(const match of body.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]\n]+\]\]/g))assert(map.has(match[1]),'broken article link');
+const newIds=['FRO1578-GREENLAND-WEST-ENGLAND-CLAIM','DRA1578-CAPE-VERDE-PILOT-CAPTURE','DRA1578-MAGELLAN-PASSAGE','DRA1578-PACIFIC-FLEET-STORM','DRA1579-CALLAO-INTELLIGENCE','DRA1579-TOLEDO-PACIFIC-PURSUIT','DRA1579-HUATULCO-DA-SILVA-RELEASE','DRA1579-TERNATE-SULTAN-CLOVES','DRA1580-JAVA-LANDCALL'];
+for(const id of newIds){
+ const e=map.get(id);assert(e,'new event absent '+id);
+ const ids=new Set((e.year===1580?b:a).sources.map(s=>s.id));
+ assert(e.source_ids.length>0&&e.source_ids.every(x=>ids.has(x)),'bad source '+id);
+ assert.equal(e.actual_English_territory_created,false);
+ assert.equal(e.actual_English_land_area_sqkm,null);
+ assert.equal(e.historical_control_boundary_verified,false);
+}
+assert(fro.related_event_ids.includes(newIds[0]));
+assert.equal(map.get(newIds[0]).lat,null,'Greenland invented location');
+assert.equal(map.get(newIds[3]).lat,null,'storm at unknown ocean GPS');
+assert.equal(map.get('1570S-E018').lat,null,'Cacafuego at-sea seizure must remain unlocated');
+assert.equal(a.colonial_polygons.length,0);
+assert.equal(b.colonial_polygons.length,0);
+assert.equal(a.routes.length,27);
+assert.equal(b.routes.length,6);
+const voyage=read('data/drake-circumnavigation-1577-1580.json');
+assert.equal(voyage.routes.length,14,'keep PR102 repaired 14-leg voyage');
+assert(voyage.routes.every(x=>x.actual_area_sqkm===null&&x.verified_English_territorial_control===false));
+assert.equal(a.events.length,84);
+assert.equal(b.events.length,39);
+assert.equal(index.length,22);
+console.log('PASS: Frobisher unlocated Greenland claim, Drake 14-section history, nine additional evidence-linked events, untouched 14-leg cross-dateline voyage, no colonial extent fabrication.');
