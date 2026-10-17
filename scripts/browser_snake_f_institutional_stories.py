@@ -26,11 +26,19 @@ def check(view):
   w.until(lambda x: js("return document.querySelector('#bigYear')?.textContent===arguments[0]",year))
   if view=='mobile':
    d.find_element(By.ID,'mobileEventsToggle').click()
-   w.until(lambda x: js("return !document.querySelector('#workspace').classList.contains('sidebar-collapsed')"))
+   # Sidebar opening is animated: class removal alone does not mean its
+   # off-screen event rows can yet receive a genuine pointer click.
+   w.until(lambda x: js("""const b=document.querySelector('#sidebar').getBoundingClientRect();
+      return !document.querySelector('#workspace').classList.contains('sidebar-collapsed') &&
+             b.width>170 && b.left>=-2 && b.right<=window.innerWidth+2;"""))
   css='#eventList .event-item[data-eid="'+event_id+'"]'
   w.until(lambda x: js("return !!document.querySelector(arguments[0])",css))
   el=d.find_element(By.CSS_SELECTOR,css)
   js("arguments[0].scrollIntoView({block:'center'})",el)
+  w.until(lambda x: js("""const e=document.querySelector(arguments[0]),r=e.getBoundingClientRect();
+     const b=document.querySelector('#sidebar').getBoundingClientRect();
+     return r.width>50 && r.height>15 && r.left>=b.left-2 &&
+            r.right<=b.right+2 && r.top>=0 && r.top<innerHeight;""",css))
   el.click()
   sel='#dossierBody [data-story-open="'+story+'"]'
   w.until(lambda x: js("return !!document.querySelector(arguments[0])",sel))
