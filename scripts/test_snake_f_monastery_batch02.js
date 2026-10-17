@@ -18,7 +18,7 @@ const target=[
 'MON1538-BATTLE-SURRENDER-BROWNE','MON1538-BYLAND-ABBOT-SURRENDER',
 'MON1539-GREATER-MONASTERIES-LEGAL-RECOGNITION','MON1539-FOUNTAINS-SURRENDER'
 ];
-assert.equal(db.events.length,44);assert.equal(db.sources.length,88);assert.equal(db.colonial_polygons.length,0);
+assert.equal(db.events.length,45);assert.equal(db.sources.length,90);assert.equal(db.colonial_polygons.length,0);
 assert.equal(db.events.filter(x=>Number.isFinite(x.lat)&&Number.isFinite(x.lng)).length,26);
 assert.equal(db.events.filter(x=>x.lat===null&&x.lng===null).length,18);
 const sources=new Map(db.sources.map(x=>[x.id,x]));
