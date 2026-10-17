@@ -31,7 +31,7 @@ def test():
   for story in index['stories']:
     for eid in story['event_ids']:
       previous=ownership.get(eid,[])
-      assert not previous or eid=='1580S-E029',('unexpected shared story entry',eid,previous,story['id'])
+      assert not previous or eid in {'1580S-E029','ARM1588-STREEDAGH-STORM','ARM1588-STREEDAGH-SHORE-KILLING','ARM1588-ROSCLOGHER-REFUGE','GAP1588-SLIGO-ARMADA-EXECUTIONS'},('unexpected unreviewed shared story entry',eid,previous,story['id'])
       ownership[eid]=previous+[story['id']]
   assert ownership['1580S-E029']==['munster-desmond-1579-1586','munster-plantation-land-grants-and-aftermath-1584-1589']
   assert 'munster-desmond-1579-1586' in stories[ids[0]]['related_story_ids']

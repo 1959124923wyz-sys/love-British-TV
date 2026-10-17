@@ -57,6 +57,7 @@ on:
       - "scripts/test_tudor_vagrancy_poor_laws_1547_1598.js"
       - "scripts/test_irish_martial_law_four_story_enrichments.js"
       - "scripts/test_irish_1595_1599_proclamations.js"
+      - "scripts/test_spanish_armada_1588_major_story.js"
       - "scripts/test_snake_f_monastery_batch02.js"
       - "scripts/browser_snake_f_institutional_stories.py"
       - "scripts/test_multi_story_entries.js"
@@ -87,6 +88,7 @@ jobs:
           node scripts/test_tudor_vagrancy_poor_laws_1547_1598.js
           node scripts/test_irish_martial_law_four_story_enrichments.js
           node scripts/test_irish_1595_1599_proclamations.js
+          node scripts/test_spanish_armada_1588_major_story.js
           node scripts/test_snake_f_monastery_batch02.js
           node scripts/test_multi_story_entries.js
           node scripts/test_rut_kildare_major_stories.js

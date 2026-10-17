@@ -43,7 +43,13 @@ for(const meta of index.stories){
  for(const id of meta.event_ids){
   assert.ok(eventIndex.has(id),'Story points to nonexistent official event: '+id);
   const prev=usedEventIds.get(id)||[];
-  if(prev.length)assert.equal(id,'1580S-E029','Only approved 1586 Munster charter may share two stories');
+  if(prev.length)assert.ok(new Set([
+   '1580S-E029',
+   'ARM1588-STREEDAGH-STORM',
+   'ARM1588-STREEDAGH-SHORE-KILLING',
+   'ARM1588-ROSCLOGHER-REFUGE',
+   'GAP1588-SLIGO-ARMADA-EXECUTIONS'
+  ]).has(id),'Only editorially audited historical actions may appear in multiple non-duplicative major articles: '+id);
   usedEventIds.set(id,[...prev,meta.id]);
   const e=eventIndex.get(id);
   assert.ok((e.year>=story.start_year&&e.year<=story.end_year)||(story.historical_context_event_ids?.includes(id)&&e.year<story.start_year&&e.year>=story.start_year-3),meta.id+': event outside article period '+id);
@@ -72,6 +78,12 @@ for(const meta of index.stories){
 assert.deepEqual(usedEventIds.get('1580S-E029'),[
  'munster-desmond-1579-1586','munster-plantation-land-grants-and-aftermath-1584-1589'
 ],'One real 1586 land-grant event must offer two non-duplicated histories');
+for(const id of ['ARM1588-STREEDAGH-STORM','ARM1588-STREEDAGH-SHORE-KILLING','ARM1588-ROSCLOGHER-REFUGE','GAP1588-SLIGO-ARMADA-EXECUTIONS']){
+ assert.deepEqual(usedEventIds.get(id),[
+  'bingham-connacht-military-exactions-1586-1591',
+  'spanish-armada-invasion-channel-battles-and-war-1585-1599'
+ ],'Previously published Irish Armada survivor event must link to BOTH articles');
+}
 const scottish=index.stories.find(x=>x.id==='rough-wooing-anglo-scottish-war-1543-1550');
 assert.ok(scottish,'Scottish longform missing');
 assert.ok(scottish.event_ids.includes('1540S-004')&&scottish.event_ids.includes('1550S-E001'));
