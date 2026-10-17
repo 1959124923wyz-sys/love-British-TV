@@ -43,7 +43,7 @@ for(const id of newGeolocatedIds){
  assert.ok(!notes.records[id].geography.includes('保持地图坐标空值'),id+' outdated note');
 }
 assert.deepEqual(now.events.filter(e=>e.lat===null).map(e=>e.id),
- ['1590S-E006','1590S-E007','1590S-E034','CAV1592-DEATH-AT-SEA'],'Only maritime intercepts and multi-site Essex return stay unlocated');
+ ['1590S-E006','1590S-E007','CAV1592-DEATH-AT-SEA','1590S-E034'],'Only maritime intercepts and multi-site Essex return stay unlocated');
 const raleigh=now.events.find(e=>e.id==='1590S-E014');
 assert.equal(raleigh.lat,10.6394,'Raleigh San Jose modern city is a known referent');
 assert.equal(raleigh.lng,-61.4242);
