@@ -19,7 +19,7 @@ assert.ok(placeIds.has('channel-guernsey'),'Documented historic Guernsey relatio
 for(const item of [...fifth.events,...fifth.places]){
  assert.ok(item.source_ids?.length&&item.source_ids.every(id=>ids.has(id)),item.id+': source missing');
 }
-assert.equal(fifth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,19);
+assert.equal(fifth.events.filter(e=>Number.isFinite(e.lat)&&Number.isFinite(e.lng)).length,20);
 assert.equal(fifth.events.filter(e=>e.lat===null&&e.lng===null).length,14);
 const chronological={1530:0,1531:1,1532:3,1533:4,1534:8,1535:12,1536:18,1537:23,1538:27,1539:34};
 for(const [v,n] of Object.entries(chronological)){
