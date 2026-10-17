@@ -38,5 +38,5 @@ const meta=idx.find(x=>x.id==='laois-offaly-crown-plantation-martial-law-1547-15
 const story=read(meta.file);
 assert(meta.event_ids.includes(sid)&&story.related_event_ids.includes(sid));
 assert(story.sections.some(s=>s.paragraphs.join('').includes('[['+sid+'|')));
-assert(!idx.some(s=>s.event_ids.includes(bid)),'1569 siege awaits full Northern Rising story, rather than a false pre-existing article');
+assert.equal(idx.filter(s=>s.event_ids.includes(bid)).length,1,'Barnard Castle siege belongs to the now-published Northern Rising story');
 console.log('PASS historical phase-1: June 1558 Maryborough royal fort counterattack and December 1569 Barnard Castle rebel siege; original events and 0 invented borders retained');
