@@ -55,6 +55,7 @@ on:
       - "scripts/test_snake_f_batch01_sieges.js"
       - "scripts/test_northern_rising_1569_1571.js"
       - "scripts/test_tudor_vagrancy_poor_laws_1547_1598.js"
+      - "scripts/test_irish_martial_law_four_story_enrichments.js"
       - "scripts/test_snake_f_monastery_batch02.js"
       - "scripts/browser_snake_f_institutional_stories.py"
       - "scripts/test_multi_story_entries.js"
@@ -83,6 +84,7 @@ jobs:
           node scripts/test_snake_f_batch01_sieges.js
           node scripts/test_northern_rising_1569_1571.js
           node scripts/test_tudor_vagrancy_poor_laws_1547_1598.js
+          node scripts/test_irish_martial_law_four_story_enrichments.js
           node scripts/test_snake_f_monastery_batch02.js
           node scripts/test_multi_story_entries.js
           node scripts/test_rut_kildare_major_stories.js
