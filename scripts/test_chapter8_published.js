@@ -26,7 +26,7 @@ for(const e of atlas.events){
  if(e.category==='slavery')assert.equal(e.icon_code,'SLV',e.id+' slavery must use the sanctioned glyph');
  assert.ok(e.source_ids.length&&e.source_ids.every(id=>sources.has(id)),e.id+' unknown citation');
  const explicitlyUnlocated=e.id==='MUN1569-GARRYSTOWN-MASSACRE'||e.id==='MUN1569-HEADS-TERROR';
- const narrativeUnlocated=e.id==='NR1569-SUSSEX-ROYAL-ADVANCE-REBEL-RETREAT';
+ const narrativeUnlocated=e.id==='NR1569-SUSSEX-ROYAL-ADVANCE-REBEL-RETREAT'||e.id==='DOM1563-EGYPTIANS-EXECUTION-LAW';
  if(narrativeUnlocated){
   assert.equal(e.lat,null);assert.equal(e.lng,null);
   assert.ok(e.geo_precision.startsWith('unlocated_'));
