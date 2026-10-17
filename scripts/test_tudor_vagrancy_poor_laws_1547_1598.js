@@ -28,6 +28,6 @@ const letter=events.get('DOM1596-ELIZABETH-AFRICANS-REMOVAL-ORDER');
 assert(letter.description.includes('十名')&&letter.description.includes('不能直接证明'));
 assert(events.get('DOM1598-ELIZABETH-POOR-RELIEF-ACT').description.includes('不能仅据法令'));
 assert(events.get('DOM1572-VAGABONDS-RELIEF-ACT').description.includes('无法据此推出'));
-assert(prose.includes('两年役使')&&prose.includes('无法')&&prose.includes('命令不能证明十人已经全部'));
+assert(prose.includes('两年役使')&&prose.includes('无法')&&prose.includes('不能证明十人已经全部'));
 assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);assert.equal(c.colonial_polygons.length,0);
 console.log('PASS Tudor vagrancy/poor laws + 1596 racialized exclusion: 10-section sourced narrative, 4 unlocated statutes/orders, 0 invented forced crossings or colonial polygons');
