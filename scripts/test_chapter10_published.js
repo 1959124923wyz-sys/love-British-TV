@@ -9,7 +9,7 @@ const ledger=read('data/chapter10-economic-violence-ledger.json'),notes=read('da
 const app=txt('app.js'),html=txt('index.html');new vm.Script(app);
 assert.deepEqual(main.period,{from:1580,to:1589,next:1590});
 assert.ok(manifest.chapters.some(c=>c.number===9&&c.status==='published'&&c.start===1580&&c.end===1589));
-assert.equal(main.events.length,46);assert.equal(main.sources.length,89);assert.equal(main.places.length,25);
+assert.equal(main.events.length,46);assert.equal(main.sources.length,90);assert.equal(main.places.length,25);
 assert.equal(main.routes.length,9);assert.equal(main.colonial_polygons.length,0);
 assert.equal(prior.events.length,84);assert.equal(prior.routes.length,27);
 assert.equal(ledger.records.length,31);assert.equal(Object.keys(notes.records).length,30);
