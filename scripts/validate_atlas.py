@@ -256,7 +256,9 @@ assert 'id="toggleHypotheses"' in html and 'id="internalLayerFlags"' in html
 assert 'id="mapLayerTerritory"' in html and 'id="mapLayerEvents"' in html
 assert 'id="mapControls"' not in html  # Public specialist menu retired in PR39
 assert html.index('id="mapModeHelp"') < html.index('<main class="map-stage"')
-assert html.index('id="mapLayerSwitch"') > html.index('<main class="map-stage"')
+assert html.index('id="mapLayerSwitch"') < html.index('<main class="map-stage"')
+assert html.index('id="mapLayerSwitch"') > html.index('<header class="masthead"')
+assert 'id="yearArrivalMapCount"' not in html and '项目仓库 ↗' not in html
 assert "leaflet-control-attribution{display:block!important" in css
 
 

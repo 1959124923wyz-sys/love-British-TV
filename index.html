@@ -17,8 +17,12 @@
 <div class="site">
 <header class="masthead">
  <div class="identity"><span class="identity-icon">✳</span><div class="identity-copy"><b>帝国的代价</b><small>英国殖民扩张与掠夺历史地图</small></div></div>
+ <div class="map-layer-switch" id="mapLayerSwitch" role="group" aria-label="地图显示层，可同时勾选">
+   <label for="mapLayerTerritory"><input type="checkbox" id="mapLayerTerritory" checked><span>版图</span></label>
+   <label for="mapLayerEvents"><input type="checkbox" id="mapLayerEvents" checked><span>事件</span></label>
+  </div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">大西洋远航与王室扩张</span></span></div>
- <div class="head-actions"><button type="button" id="mobileEventsToggle" class="mobile-events-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="打开事件列表">☰ 事件</button><span class="version">1497—1599 · PILOT v1.12.6</span><a class="head-link" href="https://github.com/1959124923wyz-sys/love-British-TV" target="_blank" rel="noopener">项目仓库 ↗</a></div>
+ <div class="head-actions"><button type="button" id="mobileEventsToggle" class="mobile-events-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="打开事件列表">☰ 事件</button><span class="version">1497—1599 · PILOT v1.12.6</span></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar" id="sidebar">
@@ -79,13 +83,10 @@
  </aside>
  <main class="map-stage" aria-label="1497—1599年历史地图">
   <div id="map" role="application" aria-label="历史地图：拖动浏览大西洋、放大并点击事件标记"></div>
-  <div class="map-layer-switch" id="mapLayerSwitch" role="group" aria-label="地图显示层，可同时勾选">
-   <label for="mapLayerTerritory"><input type="checkbox" id="mapLayerTerritory" checked><span>版图</span></label>
-   <label for="mapLayerEvents"><input type="checkbox" id="mapLayerEvents" checked><span>事件</span></label>
-  </div>
+
 
   <div class="map-top">
-   <div class="map-year-card"><strong id="bigYear">1497</strong><div class="map-year-copy"><span id="periodTitle">亨利七世时期 · 英格兰王国</span><small id="yearArrivalMapCount" aria-live="polite">当年事件加载中…</small></div></div>
+   <div class="map-year-card"><strong id="bigYear">1497</strong><div class="map-year-copy"><span id="periodTitle">亨利七世时期 · 英格兰王国</span></div></div>
 
   </div>
   <div class="time-panel" aria-label="世纪、十年和逐年历史时间轴">

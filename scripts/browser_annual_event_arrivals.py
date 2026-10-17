@@ -38,7 +38,7 @@ try:
           labels:[...document.querySelectorAll('.atlas-cluster-new-count')].map(x=>x.textContent),
           newRows:document.querySelectorAll('#eventList .event-new-this-year').length,
           yearBanner:document.getElementById('yearArrivalSummary').textContent,
-          mapHint:document.getElementById('yearArrivalMapCount').textContent
+          eventsLayerChecked:document.getElementById('mapLayerEvents').checked
         })""")
     before=js("window.atlasReadViewport()")
     first=hits()
@@ -65,7 +65,7 @@ try:
     hidden=hits()
     assert hidden["singles"]==0 and hidden["clusters"]==0,hidden
     assert hidden["newRows"]==5,"Hiding map points cannot delete historical archives"
-    assert "图层已关闭" in hidden["mapHint"],hidden
+    assert hidden["eventsLayerChecked"] is False,hidden
     driver.execute_script("""
       const box=document.querySelector('#mapLayerEvents');
       box.checked=true;box.dispatchEvent(new Event('change',{bubbles:true}));

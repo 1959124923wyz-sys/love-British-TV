@@ -30,7 +30,8 @@ assert.ok(app.includes("!isNewEventThisYear(e))continue;"),'Minor current-year e
 assert.ok(app.includes('const changedYear=year!==next;'));
 assert.ok(!app.slice(app.indexOf('function setYear(v){'),app.indexOf('function stopPlay(){')).includes('map.flyTo('),
   'Changing a year must not surprise-pan or zoom to each new event');
-for(const id of ['yearArrivalSummary','yearArrivalMapCount'])assert.ok(html.includes('id="'+id+'"'));
+assert.ok(html.includes('id="yearArrivalSummary"'));
+assert.ok(!html.includes('id="yearArrivalMapCount"'),'map year badge removed by design');
 for(const klass of ['.atlas-new-this-year','.atlas-cluster-new-count','.event-new-this-year','.year-arrival-tag'])assert.ok(css.includes(klass),klass);
 assert.ok(css.includes('@media(prefers-reduced-motion:reduce)'));
 console.log('PASS 1511->1512 detects five correctly year-gated events while previous-year events stay unhighlighted');

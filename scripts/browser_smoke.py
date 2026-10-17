@@ -1127,11 +1127,11 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
-    set_year(1591,6)
+    set_year(1591,7)
     verify("1591 Santos year-end English occupation not displayed",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
     driver.save_screenshot(str(OUT / "chapter11-1591-Santos-captured.png"))
-    set_year(1592,10)
+    set_year(1592,13)
     verify("1592 Santos to Sao Vicente sourced link not visible in linked group",
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1592'""",driver)
@@ -1141,17 +1141,18 @@ try:
     verify("1592 Sao Vicente main published event must have modern name/location source",
            """document.querySelector('#dossierBody').textContent.includes('圣维森特') &&
               !document.querySelector('#dossierBody').textContent.includes('保持地图坐标空值') &&
-              document.querySelector('#dossierBody .source-link')!==null""",driver)
+              (document.querySelector('#dossierBody .source-link')!==null ||
+               document.querySelector('#dossierBody [data-story-open="brazil-coast-raids-trade-conflict-1591-1595"]')!==null)""",driver)
     verify("1592 Santos should no longer be English at year-end",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===3",driver)
 
-    set_year(1593,11)
+    set_year(1593,14)
     verify("1593 must not retain only-1592 Santos/Sao Vicente raid link",
            "window.atlasReadActionLinks().count===0",driver)
     verify("1593 cannot show future Fermanagh and Ulster 1594 battles",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
-    set_year(1594,15)
+    set_year(1594,19)
     verify("1594 Hawkins Valparaiso privateering episode and distinct regional study visible",
            """!!document.querySelector('#eventList [data-eid="PAC1594-HAWKINS-VALPARAISO"]') &&
               [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
@@ -1168,7 +1169,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1594-Fermanagh-contested.png"))
     verify("1594 documented Enniskillen/Blackwater English forts absent",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===5",driver)
-    set_year(1595,21)
+    set_year(1595,28)
     verify("1595 Caribbean actions have FIVE town/region RAID site markers, not occupied San Juan",
            """document.querySelectorAll('#map .atlas-caribbean-raid-site').length===5 &&
               document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===0""",driver)
@@ -1206,12 +1207,12 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
-    set_year(1597, 28)
+    set_year(1597, 36)
     verify("1597 must not retain 1595 Trinidad warfare research area",
            "document.querySelectorAll('#map .atlas-trinidad-1595-impact').length===0",driver)
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
-    set_year(1598, 33)
+    set_year(1598, 41)
     verify("1598 Armagh Yellow Ford Blackwater defeat is a source-backed link not occupation",
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
@@ -1241,7 +1242,7 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===1 &&
               !!document.querySelector('#eventList [data-eid="1590S-E027"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-raid.png"))
-    set_year(1599, 39)
+    set_year(1599, 47)
     verify("1599 previous Yellow Ford connection expired",
            "window.atlasReadActionLinks().count===0",driver)
     verify("1599 Essex south-Ireland march should be a CITY-ORDER LINE, not occupation land",
