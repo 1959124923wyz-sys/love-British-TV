@@ -28,7 +28,7 @@ for(const {id,a:chapter,events:ids} of expect){
  for(const eid of ids){const e=chapter.events.find(q=>q.id===eid);assert(e,eid);assert(e.source_ids.every(s=>chapter.sources.some(q=>q.id===s)),eid+' source missing');}
 }
 assert.equal(a.events.length,35);assert.equal(a.routes.length,5);
-assert.equal(b.events.length,33);assert.equal(b.routes.length,0);
+assert.equal(b.events.length,34);assert.equal(b.routes.length,0);
 assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);
 for(const id of ['RUT1527-PLYMOUTH-DEPARTURE','RUT1527-MONA-ENGLISH-VESSEL','RUT1527-SANTO-DOMINGO-ENGLISH-VESSEL']){
  const e=a.events.find(q=>q.id===id);
