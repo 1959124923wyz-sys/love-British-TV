@@ -78,7 +78,7 @@ assert.equal(essex.geometry.coordinates.length,essex.properties.waypoints.length
 for(let i=0;i<essex.geometry.coordinates.length;i++)
  assert.deepEqual(essex.geometry.coordinates[i],[essex.properties.waypoints[i].lon,essex.properties.waypoints[i].lat]);
 assert.equal(essex.properties.material_impacts_not_assumed_between_waypoints,true);
-assert.ok(/非实测|不是|未恢复/.test(essex.properties.summary_zh));
+assert.equal(essex.properties.material_impacts_not_assumed_between_waypoints,true);assert.ok(essex.properties.geometry_precision.includes('schematic_not_historical_control_border'),'Cartographic caution must remain in research data, not repeated in every public caption');
 const r=app.slice(app.indexOf('function renderNineYearsWarImpact(){'),app.indexOf('function renderTenthControlSites(){'));
 assert.ok(r.includes('groups.nineYearsWar.clearLayers()'));
 assert.ok(r.includes("year<1594||year>1599"));

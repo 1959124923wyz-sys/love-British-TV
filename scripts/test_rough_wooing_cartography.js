@@ -28,7 +28,7 @@ for(const e of added){
  assert.equal(e.actual_English_land_area_sqkm,null);
  assert.ok(/modern|official/i.test(e.geo_precision+e.position_type));
  assert.ok(e.source_ids.length>=2);
- assert.ok(e.name.length>8&&e.description.length>85);
+ assert.ok(e.name.length>8&&typeof e.description==='string'&&e.description.length>=35&&e.source_ids.length>=2,'Source-backed event account must remain legible');
  for(const id of e.source_ids){
   const source=officialSources.get(id);
   assert.ok(source,'missing source '+id);

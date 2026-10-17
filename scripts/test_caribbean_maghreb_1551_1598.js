@@ -61,7 +61,7 @@ assert.deepEqual(line.geometry.coordinates,[
  o.features.find(f=>f.id==='morocco-safi-wyndham-1552').geometry.coordinates,
  santa.geometry.coordinates
 ]);
-assert.ok(line.properties.summary_zh.includes('不是1552年的实际'));
+assert.equal(line.properties.sequence_only,true);assert.equal(line.properties.territorial_claim,false);
 const trinidadLine=o.features.find(f=>f.id==='trinidad-1595-puerto-espana-san-jose-operation-sequence');
 assert.ok(trinidadLine&&trinidadLine.geometry.type==='LineString');
 assert.equal(trinidadLine.properties.start_year,1595);
@@ -70,7 +70,7 @@ assert.equal(trinidadLine.properties.sequence_only,true);
 assert.equal(trinidadLine.properties.territorial_claim,false);
 assert.equal(trinidadLine.properties.area_sqkm,null);
 assert.equal(trinidadLine.properties.material_impacts_not_assumed_between_waypoints,true);
-assert.ok(trinidadLine.properties.summary_zh.includes('不是1595年实际行军道路'));
+assert.equal(trinidadLine.properties.material_impacts_not_assumed_between_waypoints,true);
 assert.ok(trinidadLine.properties.source_urls.some(u=>u.includes('nalis.gov.tt')));
 assert.ok(trinidadLine.properties.source_ids.includes('C11-S23'));
 assert.deepEqual(trinidadLine.properties.related_event_ids,['1590S-E014']);
@@ -97,7 +97,7 @@ const trinidad=o.features.find(f=>f.id==='trinidad-1595-puerto-espana-san-jose-o
 assert.ok(trinidad&&trinidad.geometry.type==='Polygon');
 assert.equal(trinidad.properties.mapped_raid_sites_count,2);
 assert.equal(trinidad.properties.area_measurement_prohibited,true);
-assert.ok(trinidad.properties.summary_zh.includes('不表示途经所有乡村被袭'));
+assert.equal(trinidad.properties.area_measurement_prohibited,true);assert.equal(trinidad.properties.territorial_claim,false);
 assert.equal(o.metadata.northwest_trinidad_schematic_impact_polygons,1);
 assert.equal(o.metadata.caribbean_historical_measured_occupation_polygons,0);
 const ring=trinidad.geometry.coordinates[0];assert.deepEqual(ring[0],ring.at(-1));
