@@ -41,7 +41,7 @@ def check(view):
   assert js("return document.querySelectorAll('.major-story-article .story-section').length")>=8
   d.save_screenshot(str(out/(view+'-'+year+'-'+story+'.png')))
   d.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
-  w.until(lambda x: js("return document.querySelector('#bigYear')?.textContent===arguments[0] && document.querySelector('#dossierBody [data-story-open=\\\"'+arguments[1]+'\\\"]')!==null",year,story))
+  w.until(lambda x: js("return document.querySelector('#bigYear')?.textContent===arguments[0] && !!document.querySelector(arguments[1])",year,sel))
   print('PASS',view,year,story,'single event entry / longform / back')
 try:
  check('desktop')
