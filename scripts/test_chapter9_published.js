@@ -22,18 +22,18 @@ assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dos
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
 assert.ok(manifest.chapters.length>=9);
 assert.ok(manifest.chapters.some(c=>c.number===8&&c.start===1570&&c.end===1579&&c.status==='published'));
-assert.equal(now.events.length,44);assert.equal(now.places.length,43);assert.equal(now.sources.length,65);
-assert.equal(now.routes.length,20);assert.equal(now.colonial_polygons.length,0);
-assert.equal(old.events.length,38);
+assert.equal(now.events.length,68);assert.equal(now.places.length,43);assert.equal(now.sources.length,83);
+assert.equal(now.routes.length,26);assert.equal(now.colonial_polygons.length,0);
+assert.equal(old.events.length,43);
 const ids=new Set(),src=new Set(now.sources.map(s=>s.id));
-assert.equal(icons.size,16);assert.equal(src.size,65);
+assert.equal(icons.size,16);assert.equal(src.size,83);
 for(const e of now.events){
  assert.ok(e.year>=1570&&e.year<=1579&&e.date_label.includes(String(e.year)),e.id+' chronology');
  assert.ok(!ids.has(e.id));ids.add(e.id);
  assert.ok(icons.has(e.icon_code)&&e.icon_code!=='TRA',e.id+' disallowed glyph');
  assert.ok(e.source_ids.length&&e.source_ids.every(id=>src.has(id)),e.id+' source unknown');
  assert.equal(e.colonial_profit,null,e.id+' financial fabrication');
- if(e.id==='1570S-E018'){assert.equal(e.lat,null);assert.equal(e.lng,null)}
+ if(['1570S-E018','DRA1573-VENTA-DE-CRUCES-RAID','DRA1573-CIMARRON-LE-TESTU-ALLIANCE'].includes(e.id)){assert.equal(e.lat,null);assert.equal(e.lng,null)}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid GIS');
 }
 assert.equal(now.events.find(e=>e.id==='1570S-E010').icon_code,'REP');
@@ -61,7 +61,7 @@ for(const lid of ['C9-F29','C9-F30','C9-F31']){
  assert.ok(r&&r.source_ids.length&&r.source_ids.every(id=>src.has(id)));
  assert.equal(r.quantity,null,'Do not infer abductee or loot totals');
 }
-assert.equal(now.routes.length,20,'Two new 1578 evidence-linked coastal direction lines must not be mislabeled GPS voyages');
+assert.equal(now.routes.length,26,'Two new 1578 evidence-linked coastal direction lines must not be mislabeled GPS voyages');
 
 const churches=[
  ['bristol-st-stephen-Inuit-Kalicho-Arnaq-burials-1577',1577,1577,51.454311,-2.596003],
@@ -113,7 +113,7 @@ for(const g of geo.features){
  assert.ok(old&&JSON.stringify(old.geometry)===JSON.stringify(g.geometry),g.id+' invented historic border');
  assert.equal(g.properties.observed_through_year,1579);
 }
-const yearEvents=[2,4,8,11,13,16,21,28,36,44],yearRoutes=[0,0,1,2,4,5,12,14,16,20];
+const yearEvents=[2,4,11,18,22,31,37,47,60,68],yearRoutes=[0,0,1,3,6,8,15,18,22,26];
 for(let y=1570;y<=1579;y++){
  assert.equal(now.events.filter(x=>x.year<=y).length,yearEvents[y-1570],'events at '+y);
  assert.equal(now.routes.filter(x=>x.year<=y).length,yearRoutes[y-1570],'route count '+y);

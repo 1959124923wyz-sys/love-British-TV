@@ -476,6 +476,14 @@ function focusEventFromSidebar(item){
    if(token===focusRequestToken&&focusedEventId===item.id)renderPoints();
   });
   map.panTo(position,{animate:true,duration:0.9,easeLinearity:0.22});
+  // Preserve smooth motion; if a remote jump is interrupted by layout/tile races,
+  // settle on the requested historical event without changing zoom or the selected year.
+  setTimeout(()=>{
+   if(token!==focusRequestToken||focusedEventId!==item.id||!canLocateEvent(item,year))return;
+   if(Math.abs(map.getCenter().lat-position[0])>0.35||Math.abs(map.getCenter().lng-position[1])>0.35){
+    map.panTo(position,{animate:false});renderPoints();
+   }
+  },1600);
   renderPoints();
  },300);
 }
@@ -2129,7 +2137,7 @@ async function boot(){
   const centuryRes=await fetch('data/century-violence-regions-1544-1589.geojson',{cache:'no-store'});
   if(!centuryRes.ok)throw new Error('1544—1589地区暴力空间补档未加载');
   const centuryData=await centuryRes.json();
-  if(centuryData?.features?.length!==26||centuryData.features.some(f=>{
+  if(centuryData?.features?.length!==28||centuryData.features.some(f=>{
    const p=f.properties||{},ring=f.geometry?.coordinates?.[0];
    return f.geometry?.type!=='Polygon'||!ring||ring.length<4||
     p.historical_boundary_confirmed!==false||p.fill_authorized!==false||

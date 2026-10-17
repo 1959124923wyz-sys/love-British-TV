@@ -90,7 +90,14 @@ try:
     js("arguments[0].scrollIntoView({block:'center'})",entry)
     entry.click()
     wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article')"))
+    # After reopening the article from the next decade, allow its transition to settle
+    # before clicking a link back into the prior atlas. Retry only if the click was lost.
+    time.sleep(0.5)
     clicklink('1540S-014')
+    try:
+        WebDriverWait(browser,6).until(lambda d:d.execute_script("return document.getElementById('bigYear').textContent==='1547'"))
+    except Exception:
+        clicklink('1540S-014')
     waityear(1547)
     wait.until(lambda d:d.execute_script("return window.atlasStoryBridge.activeFocusId()==='1540S-014'"))
     browser.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
