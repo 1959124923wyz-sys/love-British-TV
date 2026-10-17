@@ -19,11 +19,18 @@ def inspect(mode):
  wait.until(lambda d:d.execute_script("return document.querySelector('#bigYear')?.textContent==='1586'"))
  if mode=='mobile':
   driver.find_element(By.ID,'mobileEventsToggle').click()
-  wait.until(lambda d:d.execute_script("return !document.querySelector('#workspace').classList.contains('sidebar-collapsed')"))
+  wait.until(lambda d:d.execute_script("""const r=document.querySelector('#sidebar').getBoundingClientRect();
+    return !document.querySelector('#workspace').classList.contains('sidebar-collapsed') &&
+           r.width>170 && r.left>=-2 && r.right<=window.innerWidth+2;"""))
  item='#eventList .event-item[data-eid="1580S-E029"]'
  wait.until(lambda d:d.execute_script("return !!document.querySelector(arguments[0])",item))
  el=driver.find_element(By.CSS_SELECTOR,item)
  js("arguments[0].scrollIntoView({block:'center'})",el)
+ wait.until(lambda d:d.execute_script("""const node=document.querySelector(arguments[0]),r=node.getBoundingClientRect();
+    const parent=document.querySelector('#sidebar').getBoundingClientRect();
+    return r.width>50 && r.height>15 && r.left>=parent.left-2 &&
+           r.right<=parent.right+2 && r.top>=0 && r.top<innerHeight;""",item))
+ if mode=='mobile':driver.save_screenshot(str(out/'mobile-event-list-before-tap.png'))
  el.click()
  wait.until(lambda d:d.execute_script("return document.querySelectorAll('#dossierBody .major-story-entry [data-story-open]').length===2"))
  choices=js("return Array.from(document.querySelectorAll('#dossierBody .major-story-entry [data-story-open]'),x=>[x.dataset.storyOpen,x.dataset.storySource])")
