@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const a=read('data/atlas-1580-1589.json'),b=read('data/atlas-1590-1599.json'),regions=read('data/followup-regional-stories-1562-1596.geojson');
-assert.equal(a.events.length,46);assert.equal(a.sources.length,89);
+assert.equal(a.events.length,46);assert.equal(a.sources.length,90);
 assert.equal(b.events.length,45);assert.equal(b.sources.length,77);
 assert.equal(a.events.filter(e=>e.year<=1586).length,25);
 assert.equal(a.events.filter(e=>e.year<=1587).length,31,'Cavendish present by 1587 and only 1587');
