@@ -35,8 +35,8 @@ for(const[id,start,end,needed]of targets){
 const fourth=atlases[2],sixth=atlases[4];
 assert.equal(fourth.events.length,35);
 assert.equal(fourth.routes.length,5);
-assert.equal(sixth.events.length,106);
-assert.equal(sixth.sources.length,143);
+assert.equal(sixth.events.length,107);
+assert.equal(sixth.sources.length,145);
 assert.equal(atlases[5].events.length,39,'preserve all historical 1550s events, including four documented Marian law and executions');
 assert.equal(atlases[5].sources.length,67);
 const routes={

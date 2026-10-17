@@ -65,7 +65,7 @@ for(const f of geo.features){
  assert.ok(old&&JSON.stringify(old.geometry)===JSON.stringify(f.geometry),'Invented inherited Tudor sovereign geometry '+f.id);
  assert.equal(f.properties.fill_authorized,false);assert.equal(f.properties.observed_through_year,1569);
 }
-const eventCount=[3,4,7,9,11,14,16,20,25,43],routeCount=[0,0,1,3,5,8,8,11,16,17],bandCount=[0,0,1,1,1,1,0,1,1,0];
+const eventCount=[3,4,7,9,11,14,16,20,25,44],routeCount=[0,0,1,3,5,8,8,11,16,17],bandCount=[0,0,1,1,1,1,0,1,1,0];
 for(let y=1560;y<=1569;y++){
  assert.equal(atlas.events.filter(e=>e.year<=y).length,eventCount[y-1560],'Event chronology '+y);
  assert.equal(atlas.routes.filter(r=>r.year<=y).length,routeCount[y-1560],'Voyage chronology '+y);
