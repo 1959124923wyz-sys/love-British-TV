@@ -1,0 +1,373 @@
+{
+  "schema": "atlas-major-story-v1",
+  "id": "spanish-armada-invasion-channel-battles-and-war-1585-1599",
+  "title": "1585—1599年西班牙无敌舰队、英格兰海防、1589年反攻与战争延续",
+  "subtitle": "1588年从利泽德与普利茅斯到加来火船、格拉沃利讷、爱尔兰海难；结合1585—1599年前因后果",
+  "start_year": 1585,
+  "end_year": 1599,
+  "region": "英吉利海峡、尼德兰、西班牙、英格兰、苏格兰、爱尔兰与葡萄牙",
+  "lead": "1588年夏，西班牙无敌舰队企图穿越英吉利海峡，与帕尔马公爵在尼德兰的陆军会合，从海上入侵英格兰。英国海军连续在普利茅斯、波特兰与怀特岛交锋，加来锚地火船袭击迫使西班牙舰队散开，格拉沃利讷交战进一步使会师落空。西班牙舰只北撤后绕行苏格兰与爱尔兰，风暴、补给与疾病造成严重损失，另有遇难幸存者遭英王驻军杀害。胜利并未结束战争：1589年英军反攻葡萄牙失败、1596年加的斯遭劫，西班牙1596和1597年再次试图组织远征。本专题用双方史料区分炮战、海难、岸上处决、军事宣传和后续袭港，也将英旧历与西班牙公历并列。",
+  "editorial_status": "published",
+  "reading_note": "1588年英国儒略历比西班牙格里高利历晚10天，例如7月29日英旧历＝8月8日公历。来源中的现代港口点不能当作海上战列精确位置。",
+  "map_note": "具名港口和海角仅为现代参考点；未知的海战位置保持空坐标。不根据1590年绘图伪造精确远洋航道，不画新增主权Polygon。16个新事件与10个已上线事件均不重复计数。",
+  "related_story_ids": [
+    "drake-great-west-indian-raid-1585-1586",
+    "bingham-connacht-military-exactions-1586-1591",
+    "hawkins-drake-final-pacific-caribbean-1594-1596"
+  ],
+  "sources": [
+    {
+      "id": "tna",
+      "label": "英国国家档案馆：1588年无敌舰队战争文书与原始通信",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/god-blew-they-were-scattered/",
+      "access": "公开的官方教学档案与原件选录，舰数是约数，不代表完整舰船审计"
+    },
+    {
+      "id": "howard",
+      "label": "国家档案馆SP12/212霍华德1588年7月21日英旧历原信",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/god-blew-they-were-scattered/source-2/",
+      "access": "已核对原信及转录：利泽德情报、普利茅斯交战、英舰弹药不足"
+    },
+    {
+      "id": "hawkins",
+      "label": "国家档案馆SP12/213霍金斯英旧历海战书信",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/god-blew-they-were-scattered/source-3a/",
+      "access": "已核对原信：Rosario、波特兰、加来火船与格拉沃利讷"
+    },
+    {
+      "id": "hawkins2",
+      "label": "国家档案馆SP12/213霍金斯谈西班牙补给及撤退",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/god-blew-they-were-scattered/source-3b/",
+      "access": "公开一手书信：与帕尔马会师目标、西班牙军人约数与舰船整补"
+    },
+    {
+      "id": "rmg",
+      "label": "格林尼治皇家博物馆藏1590年Adams／Ryther无敌舰队总图PBD8529(2)",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-542822",
+      "access": "馆藏原件编目，十幅分阶段图为同时代叙事而非现代实测航迹"
+    },
+    {
+      "id": "rmg-fire",
+      "label": "格林尼治皇家博物馆PBD8529(11)：公历1588年8月7日火船图",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-542831",
+      "access": "实物馆藏目录核对事件标题与公历日期，未擅用图版权"
+    },
+    {
+      "id": "rmg-wight",
+      "label": "格林尼治皇家博物馆PBD8529(9)：公历1588年8月4日怀特岛海战",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-542829",
+      "access": "实物馆藏目录核对战役顺序与公历日期"
+    },
+    {
+      "id": "historic",
+      "label": "Historic England Heritage Gateway：无敌舰队战斗及幸存文物概况",
+      "url": "https://historicengland.org.uk/listing/heritage-gateway/results/record/0d636742-8028-4a8c-8b7c-e1f9aaf2d338/f93f9bb0-105b-4d6a-982b-abbbc331fda2",
+      "access": "英国遗产机构海战考古目录，部分编目日期交叉比对TNA旧历与RMG公历"
+    },
+    {
+      "id": "nonsuch",
+      "label": "英国国家档案馆：伊丽莎白一世及1585年尼德兰外交战争背景",
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/elizabeth-i-monarchy-part-two/",
+      "access": "官方教学史料，条约的担保城镇并非英国吞并全尼德兰"
+    },
+    {
+      "id": "rmg-tilbury",
+      "label": "格林尼治皇家博物馆：伊丽莎白一世1588年蒂尔伯里讲话",
+      "url": "https://www.rmg.co.uk/stories/royal-history/queen-elizabeth-speech-troops-tilbury",
+      "access": "博物馆评论与文本传播；现存讲话记录与当时原话之间存在传抄环节"
+    },
+    {
+      "id": "eh-tilbury",
+      "label": "English Heritage：West Tilbury与今日蒂尔伯里堡的时代区分",
+      "url": "https://www.english-heritage.org.uk/visit/places/tilbury-fort/history/",
+      "access": "英格兰遗产资料确认女王在West Tilbury附近而当代现存堡垒主体建于17世纪"
+    },
+    {
+      "id": "nrs-1589",
+      "label": "Navy Records Society Wernham：《1589年德雷克／诺里斯远征西葡》编审档案",
+      "url": "https://www.navyrecords.org.uk/the-expedition-of-sir-john-norris-and-sir-francis-drake-to-spain-and-portugal-1589/",
+      "access": "可见学术编辑导言与索引；远征失败与英军劫掠、疾病、欠饷分开"
+    },
+    {
+      "id": "loc-1589",
+      "label": "美国国会图书馆：1589年德雷克／诺里斯西葡远征",
+      "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/drake-norris-expedition/",
+      "access": "国家图书馆历史综述；无需凭此推算投资总额或港市死者数"
+    },
+    {
+      "id": "spain",
+      "label": "西班牙政府2022年《1588年西班牙舰队与1589年英格兰反击》出版登记",
+      "url": "https://cpage.mpr.gob.es/publicacion/la-armada-espanola-de-1588-y-la-contra-armada-inglesa-de-1589-2022-822211012-0000/",
+      "access": "官方学术专书书目已核；没有宣称读完554页全部原文"
+    },
+    {
+      "id": "oxford1596",
+      "label": "R. B. Wernham，The 1596 Armada，牛津大学出版社1994年",
+      "url": "https://academic.oup.com/book/8173/chapter-abstract/153683479",
+      "access": "已核公开学术章节摘要及1596年10月18日风暴情节，未假称阅读付费全文"
+    },
+    {
+      "id": "wiley1597",
+      "label": "Roche 2023，Elizabethan Catholic Intelligencers and the Armada of 1597，《History》",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/1468-229X.13363",
+      "access": "学术期刊开放全文，区分1597年袭英目标、情报与被风暴阻挠的实际行动"
+    },
+    {
+      "id": "nmi",
+      "label": "爱尔兰国家博物馆：无敌舰队Juliana火炮与遗址保护",
+      "url": "https://source.museum.ie/en-IE/Collections-Research/Conservation/Conservation-Projects/Armada-Cannons-and-Gun-Carriage-Wheel",
+      "access": "博物馆沉船考古，不用其沉船位置复原所有1588年舰队航迹"
+    },
+    {
+      "id": "loc-armada",
+      "label": "美国国会图书馆：无敌舰队战役历史背景",
+      "url": "https://www.loc.gov/collections/sir-francis-drake/articles-and-essays/drake-biography/armada/",
+      "access": "国家图书馆专题叙述，Rosario与英格兰海战后勤须与当事人书信比较"
+    }
+  ],
+  "source_keys": [
+    "tna",
+    "howard",
+    "hawkins",
+    "hawkins2",
+    "rmg",
+    "rmg-fire",
+    "rmg-wight",
+    "historic",
+    "nonsuch",
+    "rmg-tilbury",
+    "eh-tilbury",
+    "nrs-1589",
+    "loc-1589",
+    "spain",
+    "oxford1596",
+    "wiley1597",
+    "nmi",
+    "loc-armada"
+  ],
+  "related_event_ids": [
+    "ARM1585-NONSUCH-TREATY",
+    "ARM1588-LISBON-MUSTER",
+    "ARM1588-LIZARD-SIGHTING",
+    "ARM1588-PLYMOUTH-BATTLE",
+    "ARM1588-ROSARIO-CAPTURE",
+    "ARM1588-PORTLAND-ENGAGEMENT",
+    "ARM1588-WIGHT-ENGAGEMENT",
+    "ARM1588-CALAIS-ANCHORAGE",
+    "ARM1588-FIRESHIPS-CALAIS",
+    "ARM1588-GRAVELINES",
+    "ARM1588-NORTHABOUT-RETREAT",
+    "ARM1588-TILBURY-REVIEW",
+    "ARM1589-LISBON-FAILED",
+    "ARM1595-CORNWALL-SPANISH-RAID",
+    "ARM1596-SPANISH-EXPEDITION-STORM",
+    "ARM1597-SPANISH-EXPEDITION-STORM",
+    "1580S-E024",
+    "ARM1588-STREEDAGH-STORM",
+    "ARM1588-STREEDAGH-SHORE-KILLING",
+    "ARM1588-ROSCLOGHER-REFUGE",
+    "ARM1588-CLARE-SPANISHPOINT-EXECUTIONS",
+    "GAP1588-SLIGO-ARMADA-EXECUTIONS",
+    "1580S-E026",
+    "1580S-E028",
+    "1590S-E022",
+    "GAP1597-FAIAL"
+  ],
+  "sections": [
+    {
+      "id": "prelude",
+      "heading": "一、为什么英西冲突走向舰队入侵",
+      "source_keys": [
+        "tna",
+        "nonsuch",
+        "spain"
+      ],
+      "paragraphs": [
+        "西班牙国王腓力二世统辖伊比利亚与海外帝国，长期在尼德兰对反叛者作战。伊丽莎白一世所治英格兰则逐步支持尼德兰反西班牙势力。[[ARM1585-NONSUCH-TREATY|1585年《农萨奇条约》]]使英军及财政资助直接介入尼德兰战局，也把部分担保城镇置于英军管理之下，但担保驻军不等于吞并整片尼德兰。",
+        "宗教与王位继承问题增加双方敌意，英格兰在西班牙商路及美洲殖民港口进行的私掠和勒索又扩大冲突。西班牙对英格兰的军事威胁有明确国家主导计划；英格兰的海上破坏也应按实际参与者、受害港口和财产转移分别归责。1588年海战发生在这一持续多年的冲突之中。"
+      ]
+    },
+    {
+      "id": "cadiz",
+      "heading": "二、1587年：加的斯突袭影响入侵准备",
+      "source_keys": [
+        "tna",
+        "historic",
+        "spain"
+      ],
+      "paragraphs": [
+        "[[1580S-E024|1587年德雷克袭击加的斯港湾]]，攻击西班牙在当地集结的商船、补给和海运装备。对英格兰指挥层而言，破坏这些准备能延缓威胁本土的敌方出航；对于商人及港城居民，这是一场针对船舶和货物的军事袭掠。",
+        "突袭损坏西班牙的远征准备，却未从根本上令腓力二世取消入侵计划。此次袭港与1588年英吉利海峡正面交战分属不同战役，地图必须保留既有加的斯事件而不重复创建相同袭击点。"
+      ]
+    },
+    {
+      "id": "plan",
+      "heading": "三、麦地那西多尼亚、帕尔马与不易实现的会师",
+      "source_keys": [
+        "tna",
+        "hawkins2",
+        "spain"
+      ],
+      "paragraphs": [
+        "腓力二世制定的远征方案需要两个作战集团成功协同：麦地那西多尼亚公爵统率庞大的海上舰队，从伊比利亚半岛北上；帕尔马公爵率西属尼德兰陆军准备渡海登陆英格兰。海军需要保证安全水道，并给陆军足够时间登船，这远比纯粹进行一场舰队决战困难。",
+        "[[ARM1588-LISBON-MUSTER|1588年远征舰队自里斯本出发]]，遇到天气、维修和补给问题，须在拉科鲁尼亚等港口整备。英国国家档案馆收录了当时军官谈论西班牙舰队粮食、船只和帕尔马会师目标的原信。130艘左右只代表不同舰种的编队量级，不能视作130艘可直接投入同样炮战的战舰。"
+      ]
+    },
+    {
+      "id": "sighting",
+      "heading": "四、7月19日：利泽德预警与英舰出港",
+      "source_keys": [
+        "howard",
+        "rmg",
+        "tna"
+      ],
+      "paragraphs": [
+        "[[ARM1588-LIZARD-SIGHTING|1588年7月19日英旧历，利泽德角一带发现无敌舰队]]。霍华德7月21日从旗舰致沃尔辛厄姆的原信说，消息在星期五传到普利茅斯，海军在风力不利时仍努力从港内驶出。海岸警报与海军指挥的衔接，是当时的实际战争准备。",
+        "英格兰使用儒略历，西班牙自1582年使用格里高利历，因此1588年同一日相差十天：旧历7月19日相当于公历7月29日。现代利泽德角海角坐标只能标示地理背景，不能当作当年发现西班牙舰船的精确海上位置。"
+      ]
+    },
+    {
+      "id": "plymouth",
+      "heading": "五、7月21日：普利茅斯外海第一次主战",
+      "source_keys": [
+        "howard",
+        "hawkins",
+        "rmg"
+      ],
+      "paragraphs": [
+        "霍华德原信与霍金斯书信共同记载[[ARM1588-PLYMOUTH-BATTLE|7月21日英旧历的普利茅斯近海交火]]。英军尝试利用风向和机动位置接近西班牙船阵，同时避免贸然深入有重型舰只保护的密集队列。霍华德称西班牙阵列很强，英军炮战后仍要求追加各规格炮弹与火药。",
+        "第一轮交战未摧毁整个西班牙主舰队。[[ARM1588-ROSARIO-CAPTURE|Rosario号因碰撞损伤脱队后被德雷克俘获]]；霍金斯还记载另有舰只因船上火药事故受损。舰船碰撞、意外爆炸和英军炮击须区分成不同原因，不能全算作英军直接击沉。"
+      ]
+    },
+    {
+      "id": "portland",
+      "heading": "六、波特兰角：激战与英军后勤短缺",
+      "source_keys": [
+        "hawkins",
+        "rmg",
+        "historic"
+      ],
+      "paragraphs": [
+        "[[ARM1588-PORTLAND-ENGAGEMENT|旧历7月23日（公历8月2日）波特兰角附近战斗]]持续较久。霍金斯回顾，英军消耗大量炮弹与火药，需要等补给到来才能再做密集炮击。这说明即使英军有较机动的作战舰只，也受限于仓储、补给船与岸上调度。",
+        "海战持续发生在开阔水域，单一现代海角参考点不能说明双方各艘战舰所处的纬度，也不足以把整片海峡划为英军实际控制区。1588年的海战进程只能在已知地点与日期范围内叙述。"
+      ]
+    },
+    {
+      "id": "wight",
+      "heading": "七、怀特岛近海争夺有利风位",
+      "source_keys": [
+        "rmg-wight",
+        "rmg",
+        "hawkins"
+      ],
+      "paragraphs": [
+        "[[ARM1588-WIGHT-ENGAGEMENT|旧历7月25日（公历8月4日），怀特岛外海再度交战]]。皇家海事博物馆收藏的1590年分幅刻图把这次交锋与此前波特兰交战和之后加来附近追击分开绘出。各舰队试图掌握风向与射击阵位，而无敌舰队继续向与帕尔马陆军可能会合的方向航行。",
+        "英格兰海军未能在怀特岛一日完全阻止西班牙船队的东行。16世纪刻图记录了同时代人如何理解舰队先后关系，却不是现代海军测量图；在没有同时代经纬度航海日志核证之前，不宜从刻画的队形反推精确海战路线。"
+      ]
+    },
+    {
+      "id": "calais",
+      "heading": "八、7月27日：加来锚地与登陆计划的瓶颈",
+      "source_keys": [
+        "rmg",
+        "tna",
+        "historic"
+      ],
+      "paragraphs": [
+        "[[ARM1588-CALAIS-ANCHORAGE|旧历7月27日，无敌舰队在加来外海停泊]]。加来自1558年起已由法国统治，西班牙舰队临时抛锚既不代表西班牙并吞加来，也不意味着英国恢复在此地的旧领地。",
+        "西班牙舰队此时距离帕尔马所在的佛兰德尔港口较近，但浅水、荷兰反西班牙舰船、传递命令和登陆船只准备都妨碍两支部队及时接应。只要无法从尼德兰将军队安全运到英格兰，西班牙主舰队即便保有大量船舶，入侵计划仍难实施。"
+      ]
+    },
+    {
+      "id": "fires",
+      "heading": "九、7月28日夜：英军放火船迫使舰队散开",
+      "source_keys": [
+        "hawkins",
+        "rmg-fire",
+        "historic"
+      ],
+      "paragraphs": [
+        "[[ARM1588-FIRESHIPS-CALAIS|旧历7月28日夜（公历8月7日）英军放出火船]]，驶向西班牙锚地。西班牙船员担忧着火或爆炸，部分舰只切断锚缆或迅速起锚离开，原有较严密的船队编组被打乱。皇家海事博物馆的1590年刻图把火船袭击单独列为一幕。",
+        "霍金斯还提到一艘西班牙大型桨帆船因舵损坏在加来附近搁浅。那次损失与后一天的格拉沃利讷炮战之间具有战术联系，但不能把火船袭扰记成直接焚毁无敌舰队的全部战船；同一天行动留下的损伤必须按原因分项说明。"
+      ]
+    },
+    {
+      "id": "gravelines",
+      "heading": "十、7月29日：格拉沃利讷海战与会师计划终止",
+      "source_keys": [
+        "hawkins",
+        "rmg",
+        "historic"
+      ],
+      "paragraphs": [
+        "旧历7月29日、公历8月8日，英军在[[ARM1588-GRAVELINES|格拉沃利讷附近追击并重创无敌舰队部分舰船]]。英方霍金斯当事信说当天出现长时间激战。西班牙船队此时难以恢复加来原有锚地队形，也未能按计划接应帕尔马陆军。",
+        "这次交战是英格兰阻止入侵的军事转折，但不能将所有后续失船都归为这一天英军炮火击沉。西班牙仍有很多舰只幸存并驶入北海；从此北撤与经过苏格兰、爱尔兰海岸的失事需要按后来数周的风暴与疾病独立调查。"
+      ]
+    },
+    {
+      "id": "retreat",
+      "heading": "十一、绕过独立的苏格兰与爱尔兰：谁因海难而死",
+      "source_keys": [
+        "tna",
+        "hawkins2",
+        "nmi"
+      ],
+      "paragraphs": [
+        "在无法继续入侵后，[[ARM1588-NORTHABOUT-RETREAT|西班牙舰队从北海绕过苏格兰北端，再沿爱尔兰西岸返航]]。补给耗尽、船只受损、疾病以及秋季风暴，使部分舰船在危险沿岸搁浅或破碎。苏格兰此时仍是独立王国，船队接近苏格兰不能表现为英国控制整个苏格兰。",
+        "主站现有[[ARM1588-STREEDAGH-STORM|斯特里达沿岸沉船]]及[[ARM1588-ROSCLOGHER-REFUGE|罗丝克洛赫避难]]等节点，不需重新制造沉船事件。沉船引起的溺亡和登岸后遭英军处决的经历属于不同原因；例如[[GAP1588-SLIGO-ARMADA-EXECUTIONS|斯莱戈地区王室处决]]与[[ARM1588-CLARE-SPANISHPOINT-EXECUTIONS|克莱尔郡幸存者遇害]]均须独立归责。"
+      ]
+    },
+    {
+      "id": "tilbury",
+      "heading": "十二、蒂尔伯里防御与英格兰战时宣传",
+      "source_keys": [
+        "rmg-tilbury",
+        "eh-tilbury",
+        "tna"
+      ],
+      "paragraphs": [
+        "[[ARM1588-TILBURY-REVIEW|伊丽莎白一世旧历8月9日前往蒂尔伯里地区检阅防登陆部队]]。英国海军在海峡作战之时，政府仍组织泰晤士河防线与地面军队；现存有关女王讲话的文本后来被广泛引用，成为伊丽莎白统治的政治象征。",
+        "蒂尔伯里堡今天可见的主要工事兴建于17世纪末，英格兰遗产署指出女王是在附近West Tilbury向军队讲话。不能将今天的晚建堡垒或现代行政地址称为1588年讲话的确切位置，也不能因为英军阻止入侵就推断国库与军人均无损失。"
+      ]
+    },
+    {
+      "id": "finance",
+      "heading": "十三、士兵欠饷、弹药需求与战争的财政后果",
+      "source_keys": [
+        "howard",
+        "hawkins",
+        "nrs-1589"
+      ],
+      "paragraphs": [
+        "霍华德在开战不久便急催补充炮弹和火药，霍金斯在连续交战后再次提到军需消耗。这些史料说明舰队能否维持优势取决于火炮、帆索、食物、通信和工资，不是一场只靠英军主将天才的短时胜利。",
+        "英格兰战时宣传强调宗教保卫与国家存亡，但研究军事财政时必须把王室计划预算、实际拨款、军人欠薪和缴获船货分开。没有原始会计账本，不应在地图中填入无法证实的‘无敌舰队战胜利润’。"
+      ]
+    },
+    {
+      "id": "counter",
+      "heading": "十四、1589年德雷克—诺里斯反攻与英格兰海袭责任",
+      "source_keys": [
+        "nrs-1589",
+        "loc-1589",
+        "spain"
+      ],
+      "paragraphs": [
+        "英格兰政府1589年组织德雷克统率舰队、诺里斯统率陆军的大规模反攻，希望袭击西班牙残存海军力量，帮助觊觎葡萄牙王位的安东尼奥，并争取西班牙美洲珍宝船收益。[[1580S-E026|英军首先进攻拉科鲁尼亚]]，随后[[ARM1589-LISBON-FAILED|未能夺取里斯本]]，最后[[1580S-E028|再袭击维戈一带]]。",
+        "海军档案学会编辑的远征文书说明，里斯本行动缺乏预期支持，陆海军协作和疾病、补给均构成难题，缴获品不足以弥补战争开支。英军沿海袭击造成葡萄牙居民和商船财产损害，这些行为仍属于英格兰军事行动的责任，不因1588年英格兰遭入侵威胁而自动免责。"
+      ]
+    },
+    {
+      "id": "later",
+      "heading": "十五、1595—1599年：西班牙继续行动，战争并未在1588结束",
+      "source_keys": [
+        "oxford1596",
+        "wiley1597",
+        "nrs-1589"
+      ],
+      "paragraphs": [
+        "[[ARM1595-CORNWALL-SPANISH-RAID|1595年康沃尔西岸受到西班牙袭扰]]，使英格兰沿岸仍须防备新威胁。翌年[[1590S-E022|英荷联军攻取并洗劫加的斯]]，再次损害西班牙港城。西班牙在[[ARM1596-SPANISH-EXPEDITION-STORM|1596年重组远征舰队]]，计划方向涉及爱尔兰，但遭严重风暴而未实现原定军事目标。",
+        "[[ARM1597-SPANISH-EXPEDITION-STORM|1597年西班牙再度筹划袭击法尔茅斯等英格兰西南海港]]，舰队因恶劣天气散开。学术研究把此次计划与跨境天主教情报往来及英方远征的时间窗口联系起来。政治宣传中以‘1588年一役结束西班牙威胁’概括整个战争并不符合随后十年多次军事行动的记录。和平谈判直到1604年才达成，这一年超过主站地图1599年截止范围，只作后记，不增加1604事件点。"
+      ]
+    }
+  ]
+}
