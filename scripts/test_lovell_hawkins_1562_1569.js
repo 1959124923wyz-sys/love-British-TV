@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const atlas=read('data/atlas-1560-1569.json'),stories=read('data/stories/index.json').stories;
 const id='hawkins-lovell-atlantic-enslavement-1562-1569',meta=stories.find(x=>x.id===id);
-assert(meta&&meta.status==='published'&&stories.length===37);
+assert(meta&&meta.status==='published'&&stories.length===38);
 const doc=read(meta.file),body=doc.sections.flatMap(s=>s.paragraphs).join('');
 assert(doc.id===meta.id&&doc.sections.length===10&&body.length>=3700);
 assert(doc.sources.length===10&&doc.sources.every(s=>s.url.startsWith('https://')&&s.access));
