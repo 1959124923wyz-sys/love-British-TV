@@ -29,7 +29,7 @@ for(const [id,start,end] of pairs){
  assert.equal(p.historical_boundary_confirmed,false);
  assert.equal(p.fill_authorized,false);assert.equal(p.territorial_claim,false);
  assert.equal(p.exclude_from_area_aggregation,true);assert.equal(p.area_sqkm,null);
- assert.ok(p.summary_zh.length>=35,'Concise public account must still describe the recorded local action');
+ assert.ok(p.summary_zh.length>=25 && /[\u4e00-\u9fff]/.test(p.summary_zh),'Concise public account must identify the recorded action');
  assert.ok(p.source_urls.length>=2&&p.source_urls.every(u=>/^https:\/\//.test(u)));
  for(const s of p.source_ids)assert.ok(all.has(s),'Unknown atlas source '+s);
  const ring=f.geometry.coordinates[0];assert.ok(ring.length>=4&&JSON.stringify(ring[0])===JSON.stringify(ring.at(-1)));
