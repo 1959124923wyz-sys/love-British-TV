@@ -37,8 +37,8 @@ assert.equal(fourth.events.length,35);
 assert.equal(fourth.routes.length,5);
 assert.equal(sixth.events.length,107);
 assert.equal(sixth.sources.length,145);
-assert.equal(atlases[5].events.length,40,'preserve Marian events plus the newly documented 1558 Maryborough siege');
-assert.equal(atlases[5].sources.length,68);
+assert.equal(atlases[5].events.length,41,'preserve Marian events plus the newly documented 1558 Maryborough siege');
+assert.equal(atlases[5].sources.length,70);
 const routes={
 'SC1523-COLDSTREAM-WARK-SCOTS-ADVANCE':{y:1523,actor:'Scotland_France_counteroffensive',points:2},
 'FR1522-CLOUET-HENVIC-MORLAIX-RAID':{y:1522,actor:'England_raid',points:3}

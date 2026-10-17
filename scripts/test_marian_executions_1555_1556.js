@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const a=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/atlas-1550-1559.json'),'utf8'));
 const events=new Map(a.events.map(e=>[e.id,e])),sources=new Map(a.sources.map(s=>[s.id,s]));
-assert.equal(a.events.length,40);assert.equal(a.sources.length,68);
+assert.equal(a.events.length,41);assert.equal(a.sources.length,70);
 const targets=[["MR1555-HERESY-LAWS-EFFECTIVE",1555,null],["MR1555-JOHN-ROGERS-SMITHFIELD",1555,51.518237],["MR1555-OXFORD-RIDLEY-LATIMER",1555,51.753922],["MR1556-OXFORD-CRANMER",1556,51.753922]];
 for(const [id,year,lat] of targets){
  const e=events.get(id);assert(e,id);

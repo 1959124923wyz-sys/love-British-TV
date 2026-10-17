@@ -1609,6 +1609,39 @@
       "position_type": "chronology_only_not_point",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": false
+    },
+    {
+      "id": "DOM1563-EGYPTIANS-EXECUTION-LAW",
+      "year": 1563,
+      "start_year": 1563,
+      "end_year": 1563,
+      "visible_from": 1563,
+      "date_label": "1563年（1562—1563年会期，5 Elizabeth I c.20）",
+      "name": "伊丽莎白一世时期法律将部分被称为“Egyptians”者列入死刑威胁",
+      "description": "伊丽莎白一世议会5 Eliz. I c.20在特定法定情形下将被官方称为“Egyptians”的人，以及被法律划作同一群体活动者，纳入可能受到死刑处罚的范围。剑桥大学和布里斯托大学的历史研究指出此种身份分类具有强烈的行政裁量与歧视性，实际执行并不均一；不能把可判处死刑直接写成确已执行，也不可生成假想处刑架地图坐标。",
+      "short_description": "伊丽莎白一世议会5 Eliz. I c.20在特定法定情形下将被官方称为“Egyptians”的人，以及被法律划作同一群体活动者，纳入可能受到死刑处罚的范围。剑桥大学和布里斯托大学的历史研究指出此种身份分类具有强",
+      "category": "political",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "geography_label": "针对所谓“Egyptians”的英格兰全国立法，非经核实刑场",
+      "geo_precision": "unlocated_statewide_discriminatory_law_no_individual_trial_location",
+      "position_type": "chronology_only_not_map_point",
+      "source_ids": [
+        "DOM-EGY-1563-cressy",
+        "DOM-EGY-1563-morgan"
+      ],
+      "certainty": "academic_statute_date_and_penalty_verified_enforcement_unknown",
+      "significance": {
+        "level": 3,
+        "review_status": "Cambridge_Bristol_UEA_editorial_provenance"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": false
     }
   ],
   "places": [
@@ -2681,6 +2714,26 @@
       "evidence_read_level": "Primary materials collection: letters, musters, court and financial records of Sir George Bowes; not all individual leaf facsimiles examined",
       "precision_warning": "Do not invent acts or counts from archival catalogue alone",
       "origin": "batch03-north-20261017"
+    },
+    {
+      "id": "DOM-EGY-1563-cressy",
+      "title": "David Cressy, Trouble with Gypsies in Early Modern England, Historical Journal 59 (2016)",
+      "publisher": "Cambridge University Press",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/trouble-with-gypsies-in-early-modern-england/D93181E028BCC1C2E2D8962C6B607552",
+      "kind": "peer_reviewed_or_archival_legal_history",
+      "evidence_read_level": "Peer-reviewed journal public abstract; legal change dates and uneven enforcement reviewed",
+      "precision_warning": "Historical legal labels and proposed penalties are not proven ethnicity, individual actual convictions or execution counts",
+      "origin": "institutional_20261017"
+    },
+    {
+      "id": "DOM-EGY-1563-morgan",
+      "title": "John E. Morgan, Counterfeit Egyptians, Romani Studies 26(2), 105–128 (2016)",
+      "publisher": "University of Bristol",
+      "url": "https://research-information.bris.ac.uk/en/publications/counterfeit-egyptians-the-construction-and-implementation-of-a-cr/",
+      "kind": "peer_reviewed_or_archival_legal_history",
+      "evidence_read_level": "Peer-reviewed academic abstract at Bristol; no claim to full article transcription",
+      "precision_warning": "Historical legal labels and proposed penalties are not proven ethnicity, individual actual convictions or execution counts",
+      "origin": "institutional_20261017"
     }
   ],
   "routes": [
