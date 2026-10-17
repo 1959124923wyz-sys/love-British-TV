@@ -43,7 +43,7 @@ for(const meta of index.stories){
   assert.equal(usedEventIds.has(id),false,'ambiguous single-story event ownership: '+id);
   usedEventIds.set(id,meta.id);
   const e=eventIndex.get(id);
-  assert.ok(e.year>=story.start_year&&e.year<=story.end_year,meta.id+': event outside article period '+id);
+  assert.ok((e.year>=story.start_year&&e.year<=story.end_year)||(story.historical_context_event_ids?.includes(id)&&e.year<story.start_year&&e.year>=story.start_year-3),meta.id+': event outside article period '+id);
  }
  const sectionIds=new Set();
  let localLinks=0;
