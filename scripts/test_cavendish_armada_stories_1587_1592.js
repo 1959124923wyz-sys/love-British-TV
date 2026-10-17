@@ -8,7 +8,7 @@ const specs=[
 ['cavendish-pacific-brazil-privateering-1587-1592',1587,1592,14],
 ['spanish-armada-ireland-wrecks-killings-refuge-1588',1588,1588,14]];
 assert.equal(index.length,24);
-assert.equal(a.events.length,46);assert.equal(a.sources.length,89);assert.equal(a.routes.length,9);
+assert.equal(a.events.length,46);assert.equal(a.sources.length,90);assert.equal(a.routes.length,9);
 assert.equal(b.events.length,45);assert.equal(b.sources.length,77);assert.equal(b.routes.length,2);
 for(const [id,from,to,min]of specs){
  const item=index.find(s=>s.id===id);assert(item,'story not indexed '+id);
