@@ -23,6 +23,7 @@ jobs:
         run: |
           python3 scripts/validate_atlas.py
           python3 scripts/validate_approved_ui.py
+          python3 scripts/validate_cartography_delivery.py
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js

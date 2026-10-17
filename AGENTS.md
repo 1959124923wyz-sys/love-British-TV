@@ -16,6 +16,8 @@
 
 **已批准的网站交互规则：** [docs/APPROVED_MAP_INTERACTION_STANDARD.md](docs/APPROVED_MAP_INTERACTION_STANDARD.md)
 
+**新章节研究→编辑→地图→视觉→上线的长期交付门禁：** [docs/CARTOGRAPHY_RELEASE_PIPELINE.md](docs/CARTOGRAPHY_RELEASE_PIPELINE.md)。**从1550年起**，主编在 `data/chapters.json` 将章节标为 `published` 之前，必须按 `editorial/cartography/releases/YYYY-YYYY.json` 完成可追踪的逐年控制、史料ID、地图Delta、两个图层和桌面/移动端验收；`scripts/validate_cartography_delivery.py` 已加入既有CI与Pages发布流程。只完成研究PR或GitHub结构QA不得声称地图已上线。
+
 ## 开工前执行
 
 1. 先读取上一期地图 JSON、控制图层、虚线参考层、研究控制数据和上一期`PROGRESS.md`，不要仅凭当前章节事件决定领土。

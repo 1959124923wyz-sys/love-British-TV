@@ -23,6 +23,8 @@ on:
       - 'docs/TERRITORY_CONTINUITY_RULE.md'
       - 'research/continuity/**'
       - 'research/periods/**'
+      - 'editorial/cartography/**'
+      - 'scripts/validate_cartography_delivery.py'
       - 'editorial/**'
       - 'data/atlas-*.json'
       - 'data/*control*.geojson'
@@ -46,6 +48,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Enforce future cartography release contract
+        run: |
+          python3 scripts/validate_cartography_delivery.py --self-test
+          python3 scripts/validate_cartography_delivery.py
       - name: Generic ten-year transition checker self-test
         run: python3 scripts/validate_control_transition.py --self-test
       - name: Audit every completed standardized transition

@@ -1,0 +1,127 @@
+{
+  "schema": "aytv-cartography-release-v1",
+  "template_only": false,
+  "period": {
+    "start": 1540,
+    "end": 1549
+  },
+  "chapter_id": "chapterSixth",
+  "release_stage": "legacy_integrated",
+  "source_research_prs": [
+    "https://github.com/1959124923wyz-sys/love-British-TV/pull/27",
+    "https://github.com/1959124923wyz-sys/love-British-TV/pull/44"
+  ],
+  "research_branch": "research/editor-ready-1544-1550-control-deltas-20261013",
+  "editor_pr_url": null,
+  "yearend_reference_path": null,
+  "source_registry_path": "data/atlas-1540-1549.json",
+  "map_delta_path": "data/war-front-corridors-1540-1549.geojson",
+  "atlas_path": "data/atlas-1540-1549.json",
+  "covered_stable_ids": [],
+  "critical_years": [
+    1544,
+    1547,
+    1548,
+    1549
+  ],
+  "material_changes": [
+    {
+      "id": "chapterSixth-1547-southwest-three-garrisons",
+      "year": 1547,
+      "change": "gained",
+      "control_class": "effective_occupation",
+      "map_layer": "territory",
+      "source_ids": [
+        "MAP1547-TROVE-CASTLEMILK",
+        "MAP1547-TROVE-LOCHWOOD",
+        "MAP1547-TROVE-DUMFRIES"
+      ],
+      "geometry_status": "official_site_point",
+      "area_counting_allowed": false,
+      "reason": "3 site locations published only for 1547, later English garrison unverified",
+      "notes": "Confirmed three added to main, not an area polygon"
+    },
+    {
+      "id": "chapterSixth-1549-haddington-exit",
+      "year": 1549,
+      "change": "lost",
+      "control_class": "effective_occupation",
+      "map_layer": "territory",
+      "source_ids": [
+        "SC-HES-2022-HADDINGTON"
+      ],
+      "geometry_status": "official_site_point",
+      "area_counting_allowed": false,
+      "reason": "English garrison withdrew from Haddington 1549",
+      "notes": "Never persist at 1549 year-end"
+    }
+  ],
+  "change_record_model": {
+    "id": "historical stable_id from previous or new evidence",
+    "year": null,
+    "change": "continued | gained | lost | recovered | disputed | unknown",
+    "control_class": "legal_sovereignty | effective_occupation | siege_dispute | temporary_raid | military_route | claim_only",
+    "map_layer": "territory | events",
+    "source_ids": [],
+    "geometry_status": "verified_period_polygon | official_site_point | dashed_schematic | no_geometry",
+    "area_counting_allowed": false,
+    "reason": "",
+    "notes": ""
+  },
+  "unresolved_history_questions": [
+    "No surveyed Tudor border of Scottish garrisons",
+    "Saltoun Yester 1548 endyear unsettled",
+    "Southwest 1548-1549 garrison continued presence unresolved"
+  ],
+  "uncertainty_disposition": "preserve_unknown_and_block_solid_fill",
+  "boundary_provenance": {
+    "true_period_polygon_count": 0,
+    "schematic_polygon_count": 14,
+    "not_verified_restrictions": [
+      "10 garrison reference polygons and 4 contested reference polygons are unverified and unmeasurable",
+      "5 war operation LineStrings are not territorial edges"
+    ],
+    "historic_geometry_licence_review": "scholarly 1996 atlas image not copied; further licence clearance if digitising"
+  },
+  "map_readiness": {
+    "source_citations_reviewed": true,
+    "annual_snapshots_checked": true,
+    "pr_editor_cherry_pick_confirmed": true,
+    "two_public_layers_verified": true,
+    "period_change_diffs_verified": true
+  },
+  "visual_acceptance": {
+    "status": "not_verified_in_this_governance_audit",
+    "desktop": {
+      "status": "pending_documented_evidence",
+      "tested_years": [],
+      "evidence_url": null
+    },
+    "mobile": {
+      "status": "pending_documented_evidence",
+      "tested_years": [],
+      "evidence_url": null
+    },
+    "tested_critical_years": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": "Existing test files exist and users supplied screenshots; no separate signed release screenshot audit is represented as complete here."
+  },
+  "ci_acceptance": {
+    "status": "not_verified_in_this_audit",
+    "run_url": null
+  },
+  "publication": {
+    "github_main_integration": true,
+    "pages_deployed": null,
+    "live_url": null,
+    "verified_at": null
+  },
+  "approval": {
+    "chief_editor": null,
+    "approved_at": null,
+    "decision": "legacy_published_in_git_repo_only"
+  },
+  "instructions": "On every new CHAPTER >=1550: fill source references into local checkout files, include a complete annual snapshot range, critical dates incl. first/end and disputed war changes, no P0 release blockers, recorded desktop/mobile browser evidence, actual CI run link, chief editor approval. Never mark published simply because a research PR exists.",
+  "legacy_baseline_exempt": true
+}
