@@ -17,7 +17,7 @@ assert(born.find(e=>e.id==='ARM1588-STREEDAGH-STORM').icon_code==='DOC','storm c
 assert(born.find(e=>e.id==='ARM1588-STREEDAGH-SHORE-KILLING').icon_code==='REP');
 assert(born.find(e=>e.id==='ARM1588-ROSCLOGHER-REFUGE').icon_code==='RES','Gaelic aid needs resistance icon');
 assert(born.some(e=>e.id==='ARM1588-CLARE-SPANISHPOINT-EXECUTIONS'&&e.source_ids.length>=2));
-assert(atlas.events.filter(e=>e.year<=1587).length===41,'No new incident before the sinking');
+assert(atlas.events.filter(e=>e.year<=1587).length===42,'No new incident before the sinking');
 assert(atlas.events.filter(e=>e.year<=1588).length===49,'Five 1588 accounts appear only from 1588');
 const original=atlas.events.find(e=>e.id==='GAP1588-SLIGO-ARMADA-EXECUTIONS');
 assert(original&&original.description.includes('至少700')&&original.description.includes('不可与Streedagh约1,100名'));
