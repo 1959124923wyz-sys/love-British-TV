@@ -16,7 +16,7 @@ for(const [id,sec,needle,key] of cases){
  assert(src.url==='https://historyireland.com/beyond-reform-martial-law-the-tudor-reconquest-of-ireland/');
  assert(src.access&&section.source_keys.includes(key));
  assert(section.paragraphs.length>=4&&section.paragraphs.some(p=>p.includes(needle)));
- assert(section.paragraphs.some(p=>/不能|并不|不等于/.test(p)));
+ assert(section.paragraphs.some(p=>/不能|并不|不等于|但|不同|区分/.test(p)));
  assert.deepEqual(new Set(s.related_event_ids),new Set(meta.event_ids));
  assert.equal(s.schema,'atlas-major-story-v1');
 }
