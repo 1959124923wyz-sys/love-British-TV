@@ -3,7 +3,7 @@
 const defs=[
 ['data/atlas-1530-1539.json','DOM1531-EGYPTIANS-EXPULSION-ACT',1531,45,90],
 ['data/atlas-1550-1559.json','DOM1554-EGYPTIANS-ACT-EXCLUSION',1554,41,70],
-['data/atlas-1560-1569.json','DOM1563-EGYPTIANS-EXECUTION-LAW',1563,56,57]
+['data/atlas-1560-1569.json','DOM1563-EGYPTIANS-EXECUTION-LAW',1563,60,63]
 ];
 const map=new Map();for(const[p,id,year,count,sources]of defs){const a=J(p);assert.equal(a.events.length,count);assert.equal(a.sources.length,sources);const e=a.events.find(x=>x.id===id);assert(e&&e.year===year);map.set(id,e);assert.equal(e.lat,null);assert.equal(e.lng,null);assert.equal(e.colonial_profit,null);assert.equal(e.actual_English_land_area_sqkm,null);assert.equal(e.actual_English_territory_created,false);assert.equal(e.historical_control_boundary_verified,false);assert.equal(e.exclude_point_buffer_from_area_statistics,true);assert.equal(e.source_ids.length,2);assert(e.source_ids.every(id=>a.sources.some(x=>x.id===id)));assert.equal(a.colonial_polygons.length,0)}
 const idx=J('data/stories/index.json').stories,id='tudor-egyptians-discriminatory-laws-mobility-1531-1598',meta=idx.find(x=>x.id===id);assert(meta&&meta.status==='published'&&idx.length>=35);
