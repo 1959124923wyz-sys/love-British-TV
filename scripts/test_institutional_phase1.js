@@ -20,7 +20,7 @@ assert(mary.source_keys.includes('vila-santa')&&mary.paragraphs.join('').include
 assert(gui.sources.some(s=>s.id==='vila-santa'&&s.url.includes('academic.oup.com')));
 const e=atlas.events.find(e=>e.id==='1550S-E008');
 assert(e&&e.source_ids.includes('AF-MIRANDA-KAUFMANN-LOK-1555'));
-assert(atlas.events.length===35&&atlas.sources.length===59&&atlas.colonial_polygons.length===0);
+assert(atlas.events.length===39&&atlas.sources.length===67&&atlas.colonial_polygons.length===0);
 for(const s of [mun,gui]){
  const ids=new Set(s.sources.map(x=>x.id));
  for(const sec of s.sections)assert(sec.source_keys.every(k=>ids.has(k)),s.id+': citation');
