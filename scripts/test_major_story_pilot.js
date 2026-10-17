@@ -32,7 +32,7 @@ for(const meta of index.stories){
  assert.equal(sources.size,story.sources.length);
  allSources+=story.sources.length;
  for(const s of story.sources){
-  assert.match(s.url,/^https:\/\/[^/]+\/.+/);
+  assert.match(s.url,/^https:\/\/[^/]+\/(?:.*)?$/,'HTTPS host root paths are valid references');
   assert.ok(s.access,'disclose whether full scholarly work was available');
  }
  assert.equal(new Set(meta.event_ids).size,meta.event_ids.length,meta.id+': duplicate event');
