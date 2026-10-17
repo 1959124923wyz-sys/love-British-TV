@@ -10,7 +10,7 @@ for(const period of ['1497-1509','1510-1519','1520-1529','1530-1539','1540-1549'
 }
 const cases=[
   ['laois-offaly-crown-plantation-martial-law-1547-1566',
-    ['1550S-E011','1550S-E012','1550S-E013','1550S-E014','1550S-E015']],
+    ['1550S-E011','1550S-E012','1550S-E013','1550S-E014','1550S-E015','IR1558-MARYBOROUGH-OMORE-SIEGE']],
   ['marian-heresy-trials-burnings-1554-1558',
     ['MR1555-HERESY-LAWS-EFFECTIVE','MR1555-JOHN-ROGERS-SMITHFIELD','MR1555-OXFORD-RIDLEY-LATIMER','MR1556-OXFORD-CRANMER']]
 ];
@@ -38,4 +38,4 @@ const marian=read('data/stories/'+cases[1][0]+'.json');
 assert(laois.sections.flatMap(x=>x.paragraphs).join('').includes('实际服从'));
 assert(marian.sections.flatMap(x=>x.paragraphs).join('').includes('约280人'));
 assert(!marian.sections.flatMap(x=>x.paragraphs).join('').includes('305人'));
-console.log('PASS Snake F: 2 linked sourced stories, 9 existing atlas events, 0 new boundary polygons');
+console.log('PASS Snake F: 2 linked sourced stories, 10 associated atlas events, 0 new boundary polygons');
