@@ -13,9 +13,9 @@ const app=txt('app.js'),html=txt('index.html');new vm.Script(app);
 assert.deepEqual(now.period,{from:1590,to:1599,next:1600});
 assert.equal(catalog.chapters.length,10);
 assert.ok(catalog.chapters.some(c=>c.number===10&&c.status==='published'&&c.start===1590&&c.end===1599));
-assert.equal(now.events.length,38);assert.equal(now.sources.length,74);assert.equal(now.places.length,31);
-assert.equal(now.routes.length,0);assert.equal(now.colonial_polygons.length,0);
-assert.equal(last.events.length,39);
+assert.equal(now.events.length,45);assert.equal(now.sources.length,77);assert.equal(now.places.length,31);
+assert.equal(now.routes.length,2);assert.equal(now.colonial_polygons.length,0);
+assert.equal(last.events.length,46);
 assert.equal(Object.keys(notes.records).length,36);assert.equal(ledger.records.length,32);
 const sources=new Set(now.sources.map(s=>s.id));
 const icons=new Set(read('data/icon-categories.json').categories.map(c=>c.code));
@@ -30,7 +30,7 @@ for(const e of now.events){
  if(e.lat==null){unlocated++;assert.equal(e.lng,null,e.id+' geographic invention')}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng)&&Math.abs(e.lat)<=90&&Math.abs(e.lng)<=180,e.id+' invalid GIS');
 }
-assert.equal(unlocated,3);
+assert.equal(unlocated,4);
 const newGeolocatedIds=['E001','E002','E004','E008','E009','E010','E013','E018',
  'E020','E023','E024','E026','E029','E033','E035','E036'].map(s=>'1590S-'+s);
 for(const id of newGeolocatedIds){
@@ -43,7 +43,7 @@ for(const id of newGeolocatedIds){
  assert.ok(!notes.records[id].geography.includes('保持地图坐标空值'),id+' outdated note');
 }
 assert.deepEqual(now.events.filter(e=>e.lat===null).map(e=>e.id),
- ['1590S-E006','1590S-E007','1590S-E034'],'Only maritime intercepts and multi-site Essex return stay unlocated');
+ ['1590S-E006','1590S-E007','CAV1592-DEATH-AT-SEA','1590S-E034'],'Only maritime intercepts and multi-site Essex return stay unlocated');
 const raleigh=now.events.find(e=>e.id==='1590S-E014');
 assert.equal(raleigh.lat,10.6394,'Raleigh San Jose modern city is a known referent');
 assert.equal(raleigh.lng,-61.4242);

@@ -7,7 +7,7 @@ const reach=J('data/war-front-corridors-1540-1549.geojson').features;
 const all=new Map([...a.events,...b.events].map(x=>[x.id,x]));
 assert.equal(a.events.length,106);assert.equal(a.sources.length,143);
 assert.equal(b.events.length,35);assert.equal(b.sources.length,58);
-assert.equal(idx.length,22);
+assert.equal(idx.length,24);
 for(const [id,start,end,minimum] of [
  ['western-prayer-book-rising-royal-suppression-1549',1549,1549,16],
  ['english-guinea-trade-enslaved-africans-1553-1557',1553,1557,10]

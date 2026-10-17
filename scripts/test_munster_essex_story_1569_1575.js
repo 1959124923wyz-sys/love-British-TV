@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),root=path.resolve(__dirname,'..'),J=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const a=J('data/atlas-1560-1569.json'),b=J('data/atlas-1570-1579.json'),idx=J('data/stories/index.json').stories,geo=J('data/century-violence-regions-1544-1589.geojson');
 const events=new Map([...a.events,...b.events].map(x=>[x.id,x]));
-assert.equal(idx.length,22);assert.equal(a.events.length,43);assert.equal(a.sources.length,35);assert.equal(a.routes.length,17);
+assert.equal(idx.length,24);assert.equal(a.events.length,43);assert.equal(a.sources.length,35);assert.equal(a.routes.length,17);
 assert.equal(b.events.length,84);assert.equal(b.sources.length,90);assert.equal(b.routes.length,27);
 const needs=[
 ['munster-gilbert-first-desmond-rebellion-1569',1569,1569,17],

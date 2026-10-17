@@ -9,8 +9,8 @@ const ledger=read('data/chapter10-economic-violence-ledger.json'),notes=read('da
 const app=txt('app.js'),html=txt('index.html');new vm.Script(app);
 assert.deepEqual(main.period,{from:1580,to:1589,next:1590});
 assert.ok(manifest.chapters.some(c=>c.number===9&&c.status==='published'&&c.start===1580&&c.end===1589));
-assert.equal(main.events.length,39);assert.equal(main.sources.length,82);assert.equal(main.places.length,25);
-assert.equal(main.routes.length,6);assert.equal(main.colonial_polygons.length,0);
+assert.equal(main.events.length,46);assert.equal(main.sources.length,90);assert.equal(main.places.length,25);
+assert.equal(main.routes.length,9);assert.equal(main.colonial_polygons.length,0);
 assert.equal(prior.events.length,84);assert.equal(prior.routes.length,27);
 assert.equal(ledger.records.length,31);assert.equal(Object.keys(notes.records).length,30);
 const source=new Set(main.sources.map(s=>s.id)),icons=new Set(read('data/icon-categories.json').categories.map(c=>c.code));
@@ -26,7 +26,7 @@ for(const e of main.events){
  if(e.lat===null){unknown++;assert.equal(e.lng,null,e.id+' invented location')}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid anchor');
 }
-assert.equal(unknown,15,'Original unresolved events and O’Hart torture without a verified site must remain unlocated');
+assert.equal(unknown,18,'Original unresolved events and O’Hart torture without a verified site must remain unlocated');
 assert.equal(main.places.filter(p=>p.render_as_event_only).length,16);
 const carried=['calais-crown','guines-crown-1520s','dublin-pale','channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'];
 for(const id of carried){
