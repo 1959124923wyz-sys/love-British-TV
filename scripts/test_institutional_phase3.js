@@ -7,7 +7,7 @@ const aske=base.events.find(e=>e.id==='ENG1537-ASKE-YORK-CASTLE-EXECUTION');
 assert(aske&&aske.year===1537&&base.events.filter(e=>/ASKE/.test(e.id)).length===1,'Keep parallel editor\'s single source-reviewed Aske site');
 const cases=[
  [a,'DOM1547-VAGABONDS-ACT-FORCED-LABOUR',1547,107,145],
- [b,'DOM1569-NORTHERN-RISING-DURHAM',1569,49,49]
+ [b,'DOM1569-NORTHERN-RISING-DURHAM',1569,56,57]
 ];
 for(const [db,id,year,total,sourceN] of cases){
  assert.equal(db.events.length,total);assert.equal(db.sources.length,sourceN);
