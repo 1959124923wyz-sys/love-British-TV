@@ -1,0 +1,107 @@
+{
+  "schema": "issue46_phase_specific_source_audit_v1",
+  "updated": "2026-10-14",
+  "source_stage": "official_heritage_peer_review_archaeology_and_survey_source_audit",
+  "verified_historic_english_territorial_polygon_count": 0,
+  "modern_archaeological_designation_polygon_count": 3,
+  "policy": "A dated source proving the existence of a fort does not certify the exact geospatial boundary of the fort. Modern archaeological statutory outer geometry must not be represented as historical English-held political area.",
+  "findings": [
+    {
+      "site_id": "roxburgh-english-artillery-fort-1547-1550",
+      "stage": "1545",
+      "source": "RCAHMS/HES site history references Hertford inspection of old Roxburgh castle in 1545",
+      "what_is_supported": "Hertford examined the castle, reported it ruined; later 1547 works attested",
+      "what_is_not_supported": "This 1545 reconnaissance does not prove English artillery garrison control of the c110x65m 1547-built fort",
+      "source_url": "https://www.trove.scot/place/58412?page=2&tab=related-archives",
+      "cartography": "no 1545 new English artillery fort polygon"
+    },
+    {
+      "site_id": "roxburgh-english-artillery-fort-1547-1550",
+      "stage": "1547",
+      "source": "RCAHMS 1956 inventory and HES site survey 2006–2009; 1547 Lord Grey letter",
+      "what_is_supported": "1547-10-15 contemporaneous fort plan; GIS interpreted c110x65m English enclosure amid larger medieval ridge",
+      "what_is_not_supported": "Maximal measurements are not digitized fort polygon vertices, and main earthwork ditch may predate Tudor forts",
+      "source_url": "https://canmore.org.uk/site/58412/roxburgh-castle",
+      "cartography": "verified garrison reference point + modern archaeological extent dashed; no historic solid Polygon"
+    },
+    {
+      "site_id": "dunglass-camp-english-1548-1549",
+      "stage": "1548–1549",
+      "source": "East Lothian study gazetteer references SM3191 and English artillery fort in the Haddington campaign",
+      "what_is_supported": "Surviving ramparts and deep ditches enclose a triangular area on the plateau, in the 1548-49 English fort; nearby gazebo dated early 18c is distinct",
+      "what_is_not_supported": "The official SM3191 scheduled perimeter is NOT a dated 1548 surveyed bastion trace. Later landscaping cannot be assumed Tudor",
+      "source_url": "https://docs.planning.org.uk/20220210/26/R45EEHGNIRJ00/6tzmtsslq5d36955.pdf",
+      "cartography": "modern legal scheduled polygon as unfilled dashed archaeology reference; historically bounded fort still needs footprint separation"
+    },
+    {
+      "site_id": "dunglass-camp-english-1548-1549",
+      "stage": "1858 Ordnance Survey namebook",
+      "source": "Ordnance Survey County Name Books, Oldhamstocks (ScotlandsPeople)",
+      "what_is_supported": "The label 'French Camp' existed as a later place name beside Summerhouse Hill",
+      "what_is_not_supported": "French Camp toponym does not prove the 1548 fort was occupied by French troops",
+      "source_url": "https://www.scotlandspeople.gov.uk/virtual-volumes/volume-images/volume_data-OS1-15-16/REX01678?image_number=58",
+      "cartography": "label etymology/reference only"
+    },
+    {
+      "site_id": "eyemouth-fort-English-1547-1550",
+      "stage": "1547–1550",
+      "source": "Caldwell and Ewart 1997 peer-reviewed excavations",
+      "what_is_supported": "1547 English garrison to summer 1550, then French 1557 additions; excavation investigated both distinct fort phases",
+      "what_is_not_supported": "1557 BL Cotton spy drawing depicts later French phase and cannot be used as English 1547 plan",
+      "source_url": "https://doi.org/10.1179/pma.1997.002",
+      "cartography": "two phase-specific layer candidate; historic English 1547 polygon needs first-phase plan"
+    },
+    {
+      "site_id": "eyemouth-fort-English-1547-1550",
+      "stage": "1980s excavations and community reconstruction",
+      "source": "SCAPE/Eyemouth Museum & St Andrews Open Virtual Worlds 1557 project",
+      "what_is_supported": "Later 1557 rampart/ditch archaeological remains and virtual interpretation existed",
+      "what_is_not_supported": "2010s virtual 1557 French fort image is a model, not measured 1547 English fort footprint",
+      "source_url": "https://scapetrust.org/eyemouth-fort/",
+      "cartography": "no direct historic 1547 polygon derived from VR"
+    }
+  ],
+  "next_archive_actions": [
+    {
+      "id": "46-B01",
+      "priority": "P0",
+      "target": "Roxburgh RCAHMS 2006-2009 GIS",
+      "specific_data": "separately encoded 1547 English artillery fort footprint features in differential GPS + hachure GIS, or georeferenced plan with source residuals; source labels for earlier castle curtains",
+      "verification": "geometry demonstrably 1547, not modern SM1718; expert-reviewed and reuse rights",
+      "status": "unobtained"
+    },
+    {
+      "id": "46-B02",
+      "priority": "P0",
+      "target": "RHP 6075 Belvoir copies",
+      "specific_data": "sheet-level contemporary forts: Eyemouth 1547, Roxburgh 1547, Dunglass 1548, Lauder; measured scale, scan at usable DPI, mapping and licence",
+      "verification": "phase-by-phase sheet metadata & ground-control points",
+      "status": "unobtained"
+    },
+    {
+      "id": "46-B03",
+      "priority": "P0",
+      "target": "Eyemouth Caldwell/Ewart 1997 and excavation original drawings",
+      "specific_data": "first-phase English 1547 line vs French 1557 line, excavation grid and drawing legend",
+      "verification": "does not confuse SM3190 polygon/SM4577 or 1557 BL spy map with 1547 plan",
+      "status": "unobtained"
+    },
+    {
+      "id": "46-B04",
+      "priority": "P1",
+      "target": "Dunglass survey earthwork 1548 field mapping",
+      "specific_data": "mapped original surviving triangular rampart (outer wall vs ditch) distinguish 1718 gazebo and park enhancements",
+      "verification": "if mixed period, only dashed archival reference",
+      "status": "unobtained"
+    }
+  ],
+  "publication_gate": {
+    "source_bound_historical_polygon_required": true,
+    "observed_19th_century_town_or_namebook_geometry_insufficient": true,
+    "polygon_may_have_extrapolated_unsupported_segments": false,
+    "uncertainty_required_for_any_inferred_vertices": true,
+    "no_auto_upgrade_from_hes_scheduled_area": true,
+    "no_full_scottish_territory_recoloring": true,
+    "year_end_control_is_independent_of_polygon_visibility": true
+  }
+}

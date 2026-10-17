@@ -1,0 +1,24 @@
+name: Issue 46 - one-time archaeological-vs-Tudor GIS gate
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/issue46-rough-wooing-cartography-20261013
+    paths:
+      - .github/workflows/issue46-boundary-gate-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test-historic-border-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/issue46-rough-wooing-cartography-20261013
+      - name: Reject all 3 modern scheduled monument polygons as English occupation
+        run: python3 research/issue46/validate_historic_occupied_polygon_gate.py --test-blocking
+      - name: Check actual occupation dataset currently lacks independently authenticated Tudor-era polygons
+        run: python3 research/issue46/validate_historic_occupied_polygon_gate.py
