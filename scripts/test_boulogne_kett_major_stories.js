@@ -28,7 +28,7 @@ for(const t of cases){
  assert(links>=12,'not enough inline historical event links');
  for(const id of a.related_event_ids)assert(all.has(id),'missing event '+id);
 }
-assert.equal(old.events.length,106);assert.equal(old.sources.length,143);
+assert.equal(old.events.length,107);assert.equal(old.sources.length,145);
 assert.equal(later.events.find(x=>x.id==='1550S-E003').year,1550);
 assert.equal(later.events.find(x=>x.id==='1550S-E004').year,1550);
 assert.equal(all.get('1540S-033').year,1549,'Ambleteuse French recapture');

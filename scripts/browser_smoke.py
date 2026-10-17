@@ -348,14 +348,14 @@ try:
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===4", driver)
     verify("1546 must not show 1547 Pinkie advance before the campaign",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===0",driver)
-    set_year(1547, 58)
+    set_year(1547, 59)
     verify("1547 frontier advances are not shown as blue/violet disputed theaters",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
     verify("1547 Scottish garrison map incomplete",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===13", driver)
     verify("1547 advance toward Pinkie/Musselburgh failed to extend northward",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
-    set_year(1548, 74)
+    set_year(1548, 75)
     # PR39: two *independently* checkable public layers. Check four modes,
     # stay on 1548 throughout, preserve military borders, campaign sources,
     # and keep the historical event directory available in every mode.
@@ -383,7 +383,7 @@ try:
               document.querySelectorAll('#map .atlas-war-reach-schematic').length===0 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-aggregate').length===0 &&
-              document.querySelector('#eventCount').textContent==='74项'""",driver)
+              document.querySelector('#eventCount').textContent==='75项'""",driver)
     toggle_layer('mapLayerEvents',True)
     verify("events-only mode incorrectly resurrected British occupation polygons",
            """document.querySelector('#toggleEvents').checked &&
@@ -435,10 +435,10 @@ try:
     driver.set_window_size(1620,1040)
     driver.execute_script("document.querySelector('#mapModeHelp').open=false")
     # Selecting a historical year must never auto-switch off either layer.
-    set_year(1547, 58)
+    set_year(1547, 59)
     verify("year switch reset the independently selected map layers",
            "document.querySelector('#mapLayerTerritory').checked && document.querySelector('#mapLayerEvents').checked",driver)
-    set_year(1548, 74)
+    set_year(1548, 75)
     driver.save_screenshot(str(OUT / "two-layer-modes-1548.png"))
     verify("1548 war-zone layer is missing after removing the card",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
@@ -481,14 +481,14 @@ try:
     click_map_path(".leaflet-sovereignty-pane path.leaflet-interactive")
     verify("clicking sovereign background no longer opens nation overview",
            """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史国家')""",driver)
-    set_year(1548, 74)
+    set_year(1548, 75)
     verify("1548 Inchcolm and Hume must exit as English-held sites",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===11", driver)
     verify("Hailes must not remain English at 1548 year end",
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
-    set_year(1549, 106)
+    set_year(1549, 107)
     verify("Western Rising 1549 must separately record attacks, executions, siege and rebel resistance",
            """['GAP1549-WEST-BODMIN-ASSEMBLY','GAP1549-WEST-EXETER-SIEGE',
                'GAP1549-WEST-FENNY-BRIDGES','GAP1549-WEST-WOODBURY-COMMON',
@@ -552,13 +552,13 @@ try:
     set_year(1546, 44)
     verify("1546 cannot show 1547 scheduled archaeology polygons",
            "document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===0",driver)
-    set_year(1547, 58)
+    set_year(1547, 59)
     verify("1547 must show Eyemouth and Roxburgh genuine archaeology, not Dunglass yet",
            """document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===2 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===13 &&
               document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline[fill="none"]').length===2""",driver)
     driver.save_screenshot(str(OUT / "chapter6-1547-hes-heritage-not-occupation.png"))
-    set_year(1548, 74)
+    set_year(1548, 75)
     verify("1548 HES modern heritage dashed outlines missing",
            """document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===3 &&
               [...document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline')].every(p=>
@@ -648,7 +648,7 @@ try:
          target:e.target.tagName,cls:(e.target.getAttribute('class')||'').slice(0,100)});
       },true);
     """)
-    set_year(1548, 74)
+    set_year(1548, 75)
     driver.execute_script("""
       const item=document.querySelector('#eventList [data-eid="1540S-021"]');
       if(!item)throw Error('Missing Haddington map-focus event');
@@ -839,7 +839,7 @@ try:
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-french').length===1""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    set_year(1569, 43)
+    set_year(1569, 44)
     verify("1569 Munster campaign must expose linked Crown terror and named regional warfare locations",
            """['GAP1569-GILBERT-KILMALLOCK','MUN1569-ROYAL-BRUREE',
                'MUN1569-ROYAL-CORK','MUN1569-KERRY-TERROR',
@@ -965,7 +965,7 @@ try:
            """document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    set_year(1569, 43)
+    set_year(1569, 44)
     verify("Rewind must remove all ninth chapter garrisons and privateering routes",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===17""",driver)
