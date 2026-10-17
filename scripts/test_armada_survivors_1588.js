@@ -7,7 +7,7 @@ const regions=read('data/century-violence-regions-1544-1589.geojson');
 const followup=read('data/followup-regional-stories-1562-1596.geojson');
 const sources=new Map(atlas.sources.map(s=>[s.id,s]));
 assert.equal(atlas.events.length,46);
-assert.equal(atlas.sources.length,89);
+assert.equal(atlas.sources.length,90);
 const born=atlas.events.filter(e=>e.id.startsWith('ARM1588-'));
 assert.equal(born.length,9);
 assert.equal(new Set(born.map(e=>e.id)).size,9);
