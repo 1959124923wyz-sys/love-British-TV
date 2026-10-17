@@ -1218,6 +1218,111 @@
       "position_type": "modern_archaeological_reference_not_battlefield_boundary",
       "actual_English_land_area_sqkm": null,
       "colonial_profit": null
+    },
+    "FRO1578-GREENLAND-WEST-ENGLAND-CLAIM": {
+      "context": "1578年6月弗罗比舍抵近格陵兰，在仍将其错认为弗里斯兰的情况下，以伊丽莎白一世名义宣称土地并称为“西英格兰”。船队没有建立永久殖民地，具体登岸处也无可靠可定位记录。",
+      "source_ids": [
+        "FR-CANADA-FROBISHER-DCB"
+      ],
+      "geo_precision": "location_not_documented_no_map_pin",
+      "position_type": "unlocated_event_no_fabricated_coordinate",
+      "map_note": "不可证明的点位保留null，不在地图上创建假位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1578-CAPE-VERDE-PILOT-CAPTURE": {
+      "context": "1578年1月30日德雷克在佛得角圣地亚哥岛附近截获葡萄牙商船，扣留领航员努诺·达·席尔瓦，强迫其随船航往美洲，直至1579年在瓦图尔科释放。",
+      "source_ids": [
+        "C9-S10",
+        "C9-S09"
+      ],
+      "geo_precision": "modern_named_geographic_reference_not_16th_century_exact_vessel_position",
+      "position_type": "modern_locality_or_region_reference_not_exact_historical_position",
+      "map_note": "地名参考坐标 14.916, -23.605，不是16世纪历史行动精准位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1578-MAGELLAN-PASSAGE": {
+      "context": "1578年8月20日起，德雷克船队用了约十六天穿越麦哲伦海峡。地图点为海峡中段地理参照，未标识唯一的16世纪船舶航迹。",
+      "source_ids": [
+        "C9-S10",
+        "C9-S09"
+      ],
+      "geo_precision": "modern_named_geographic_reference_not_16th_century_exact_vessel_position",
+      "position_type": "modern_locality_or_region_reference_not_exact_historical_position",
+      "map_note": "地名参考坐标 -53.66, -72，不是16世纪历史行动精准位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1578-PACIFIC-FLEET-STORM": {
+      "context": "1578年穿过麦哲伦海峡后，船队遭猛烈风暴，万寿菊号沉没，伊丽莎白号与德雷克失联并折返英国。沉船海域不能准确确定，因此只保留无坐标事件。",
+      "source_ids": [
+        "C9-S10",
+        "C9-S09"
+      ],
+      "geo_precision": "location_not_documented_no_map_pin",
+      "position_type": "unlocated_event_no_fabricated_coordinate",
+      "map_note": "不可证明的点位保留null，不在地图上创建假位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1579-CALLAO-INTELLIGENCE": {
+      "context": "1579年2月15日金鹿号抵达卡亚俄港，获知西班牙商船圣母受孕号载有金银，早已北上。德雷克随后追击并在3月1日海上夺取该船。这里是获知消息的港口，不是夺船地点。",
+      "source_ids": [
+        "C9-S10",
+        "C9-S09"
+      ],
+      "geo_precision": "modern_named_geographic_reference_not_16th_century_exact_vessel_position",
+      "position_type": "modern_locality_or_region_reference_not_exact_historical_position",
+      "map_note": "地名参考坐标 -12.055, -77.149，不是16世纪历史行动精准位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1579-TOLEDO-PACIFIC-PURSUIT": {
+      "context": "德雷克袭击后，秘鲁副王托莱多组织追击，同时遣萨米恩托·德·甘博亚赴麦哲伦海峡测绘与探察是否存在英军驻留。这是西班牙军政应对，不能说已追回被抢船货。",
+      "source_ids": [
+        "US-LOC-TOLEDO-DRAKE-CHILE-1579"
+      ],
+      "geo_precision": "modern_named_geographic_reference_not_16th_century_exact_vessel_position",
+      "position_type": "modern_locality_or_region_reference_not_exact_historical_position",
+      "map_note": "地名参考坐标 -12.055, -77.149，不是16世纪历史行动精准位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1579-HUATULCO-DA-SILVA-RELEASE": {
+      "context": "1579年4月13日，德雷克在瓦图尔科释放此前从佛得角被强制带走的努诺·达·席尔瓦。达·席尔瓦后来向西班牙殖民官员和宗教裁判机构陈述英国船队行动。",
+      "source_ids": [
+        "C9-S10",
+        "C9-S09"
+      ],
+      "geo_precision": "modern_named_geographic_reference_not_16th_century_exact_vessel_position",
+      "position_type": "modern_locality_or_region_reference_not_exact_historical_position",
+      "map_note": "地名参考坐标 15.765, -96.128，不是16世纪历史行动精准位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1579-TERNATE-SULTAN-CLOVES": {
+      "context": "1579年11月3日，德雷克抵达马鲁古群岛特尔纳特，与当地苏丹交涉并购买丁香。贸易接触未使特尔纳特转为英国驻军或主权控制地区。",
+      "source_ids": [
+        "C9-S10",
+        "C9-S09"
+      ],
+      "geo_precision": "modern_named_geographic_reference_not_16th_century_exact_vessel_position",
+      "position_type": "modern_locality_or_region_reference_not_exact_historical_position",
+      "map_note": "地名参考坐标 0.79, 127.38，不是16世纪历史行动精准位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    "DRA1580-JAVA-LANDCALL": {
+      "context": "1580年金鹿号在东印度海域触礁脱险后抵达爪哇一带，再横渡印度洋，绕好望角返回英格兰。坐标只代表爪哇岛屿地理方向，尚无证据确认唯一停靠港。",
+      "source_ids": [
+        "DRA-LOC-FAMOUS-1577-1580"
+      ],
+      "geo_precision": "modern_named_geographic_reference_not_16th_century_exact_vessel_position",
+      "position_type": "modern_locality_or_region_reference_not_exact_historical_position",
+      "map_note": "地名参考坐标 -6.5, 110.4，不是16世纪历史行动精准位置",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
     }
   },
   "chapters": [

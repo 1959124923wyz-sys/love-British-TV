@@ -1766,6 +1766,150 @@
         ],
         "figure_precision": "entire_island_geographical_anchor_not_demonstrated_combat_area"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-ards-1572-1575-smith-settlement-reading",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.88,
+              54.45
+            ],
+            [
+              -5.56,
+              54.45
+            ],
+            [
+              -5.56,
+              54.65
+            ],
+            [
+              -5.88,
+              54.65
+            ],
+            [
+              -5.88,
+              54.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "name": "1572—1575年阿兹殖民据点与反殖民抵抗",
+        "label_type": "史料地名示意 · 虚线",
+        "zone_type": "private_English_plantation_and_Gaelic_resistance_locality",
+        "start_year": 1572,
+        "end_year": 1575,
+        "controller_zh": "英王移民和驻军遭盖尔地方领主抵抗；岛上英军屠杀与平民避难分列",
+        "summary_zh": "以历史资料出现的地名标示殖民、战争、平民避难地点。示意区域没有经过十六世纪地籍或军事地图测绘，不可用于计算实际领地和死亡面积。",
+        "source_ids": [
+          "C9-S01",
+          "IR-RIA-SMITH-ARDS-1572-1575",
+          "IR-UCC-SMITH-PLANTATION-1572"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/smith-sir-thomas-a8152",
+          "https://celt.ucc.ie/published/E570001-001/text001.html"
+        ],
+        "related_event_ids": [
+          "1570S-E002",
+          "1570S-E003",
+          "1570S-E005",
+          "ULS1572-ARDS-NEWMONASTERY-BURNINGS",
+          "ULS1575-SMITH-ARDS-COLLAPSE"
+        ],
+        "named_anchors": [
+          "Ards Peninsula",
+          "Newcastle Comber",
+          "Lower Ards"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "NOT historical surveyed site or territorial perimeter; modern rectangular reference around documented island/peninsula named geographical area, dash outline only",
+        "source_precision": "Named island/peninsula supported by RIA/UCC, mapped box is a modern editorial locator only",
+        "mapping_method": "documented_named_locality_nonsurveyed_dashed_reference",
+        "spatial_semantics": "not_English_actual_possession_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-rathlin-1575-attack-civilian-refuge-reading",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.34,
+              55.25
+            ],
+            [
+              -6.09,
+              55.25
+            ],
+            [
+              -6.09,
+              55.35
+            ],
+            [
+              -6.34,
+              55.35
+            ],
+            [
+              -6.34,
+              55.25
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "map_layer": "territory",
+        "color_role": "raid_red",
+        "name": "1575年拉斯林岛：英军攻堡与杀害避难平民",
+        "label_type": "史料地名示意 · 虚线",
+        "zone_type": "castle_surrender_massacre_and_civilian_refuge_geography",
+        "start_year": 1575,
+        "end_year": 1575,
+        "controller_zh": "英王移民和驻军遭盖尔地方领主抵抗；岛上英军屠杀与平民避难分列",
+        "summary_zh": "以历史资料出现的地名标示殖民、战争、平民避难地点。示意区域没有经过十六世纪地籍或军事地图测绘，不可用于计算实际领地和死亡面积。",
+        "source_ids": [
+          "C9-S03",
+          "C9-S04",
+          "C9-S05"
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/devereux-walter-a2554",
+          "https://www.dib.ie/biography/norris-norreys-sir-john-a6234"
+        ],
+        "related_event_ids": [
+          "1570S-E010",
+          "ULS1575-RATHLIN-CASTLE-DEFENDERS",
+          "ULS1575-RATHLIN-CAVE-CIVILIANS"
+        ],
+        "named_anchors": [
+          "Rathlin Island named historical locality",
+          "Island castle garrison",
+          "civilian refuge on island (specific caves unlocated)"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_provenance": "NOT historical surveyed site or territorial perimeter; modern rectangular reference around documented island/peninsula named geographical area, dash outline only",
+        "source_precision": "Named island/peninsula supported by RIA/UCC, mapped box is a modern editorial locator only",
+        "mapping_method": "documented_named_locality_nonsurveyed_dashed_reference",
+        "spatial_semantics": "not_English_actual_possession_polygon"
+      }
     }
   ]
 }
