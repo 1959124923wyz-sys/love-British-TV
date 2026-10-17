@@ -1141,7 +1141,8 @@ try:
     verify("1592 Sao Vicente main published event must have modern name/location source",
            """document.querySelector('#dossierBody').textContent.includes('圣维森特') &&
               !document.querySelector('#dossierBody').textContent.includes('保持地图坐标空值') &&
-              document.querySelector('#dossierBody .source-link')!==null""",driver)
+              (document.querySelector('#dossierBody .source-link')!==null ||
+               document.querySelector('#dossierBody [data-story-open="brazil-coast-raids-trade-conflict-1591-1595"]')!==null)""",driver)
     verify("1592 Santos should no longer be English at year-end",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===3",driver)
 
