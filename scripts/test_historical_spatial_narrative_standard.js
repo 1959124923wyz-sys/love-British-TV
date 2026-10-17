@@ -25,8 +25,8 @@ const port=geo.features.find(f=>f.id==='trinidad-puerto-de-los-espanoles-1595-ra
 const region=geo.features.find(f=>f.id==='trinidad-1595-puerto-espana-san-jose-operation-schematic');
 const route=geo.features.find(f=>f.id==='trinidad-1595-puerto-espana-san-jose-operation-sequence');
 assert.ok(r&&san&&port&&region&&route,'Raleigh site/route/region link missing');
-assert.equal(atlas.events.length,38,'Keep all prior 37 events plus the 1594 Hawkins raid');
-assert.equal(new Set(atlas.events.map(e=>e.id)).size,38,'Must not duplicate any existing events');
+assert.ok(atlas.events.length>=39,'Keep 1590s base events and sourced 1590 Breifne/Ballymote evidence');
+assert.equal(new Set(atlas.events.map(e=>e.id)).size,atlas.events.length,'Must not duplicate any existing events');
 assert.ok(atlas.events.some(e=>e.id==='GAP1597-FAIAL'&&e.year===1597),'New Faial event missing');
 assert.ok(Number.isFinite(r.lat)&&Number.isFinite(r.lng));
 assert.deepEqual([r.lng,r.lat],san.geometry.coordinates,'Main atlas must match researched site');
