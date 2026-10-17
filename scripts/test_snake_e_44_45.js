@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),j=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8')),t=p=>fs.readFileSync(path.join(root,p),'utf8');
 const a=j('data/atlas-1590-1599.json'),s=j('data/stories/index.json').stories,h=t('index.html'),css=t('css/dark-atlas-v2.css');
-assert.equal(a.events.length,55);assert.equal(a.sources.length,87);assert.equal(a.routes.length,4);assert.equal(a.colonial_polygons.length,0);
+assert.equal(a.events.length,58);assert.equal(a.sources.length,90);assert.equal(a.routes.length,4);assert.equal(a.colonial_polygons.length,0);
 const src=new Set(a.sources.map(x=>x.id));
 for(const id of ["BRA1591-CAVENDISH-ILHA-GRANDE-LOOT","BRA1592-CAVENDISH-VITORIA-REPELLED","BRA1592-CAVENDISH-SANTOS-REPELLED","PAC1594-HAWKINS-ATACAMES-DEFEAT","CAR1595-RIOHACHA-PEARLS-CAPTIVES","CAR1595-SANTA-MARTA-BURNING","CAR1595-NOMBRE-DE-DIOS-RANSACK","CAR1596-NOMBRE-DE-DIOS-FIRE"]){
  const e=a.events.find(x=>x.id===id);assert(e,id);
