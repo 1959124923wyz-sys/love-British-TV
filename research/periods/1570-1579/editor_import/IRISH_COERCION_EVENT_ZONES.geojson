@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "schema": "ch09_important_but_as_yet_unsurveyed_colonial_violence_regions_v1",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ulster-Ards-Clandeboye-1571-75-planned-plantation",
+      "geometry": null,
+      "properties": {
+        "stable_id": "ulster-Ards-Clandeboye-1571-75-planned-plantation",
+        "name": "阿兹—克兰德博伊1571—75年私营殖民地契的拟征服土地（非实控区域）",
+        "start_year": 1571,
+        "end_year": 1575,
+        "source_ids": [
+          "C9-S01",
+          "C9-S02",
+          "C9-S03"
+        ],
+        "map_layer": "events",
+        "geometry": null,
+        "area_sqkm": null,
+        "independent_Gaelic_owners_present": true,
+        "why_no_polygon": "1572 original propaganda map exists in UCC CELT text record but map scan hasn't been georeferenced or licensed. Crown paper grant cannot authorize real-control fill.",
+        "editor_event_overlay": "use Comber/Carrickfergus points and dashed proposal label until archive map surveyed",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "interactive_click_label": true,
+        "no_broad_solid_purple": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Essex-Tyrone-raid-influence-1574",
+      "geometry": null,
+      "properties": {
+        "stable_id": "Essex-Tyrone-raid-influence-1574",
+        "name": "1574埃塞克斯军队穿越泰隆掠夺牛群、焚毁庄稼的军事行动范围（确切战线缺）",
+        "start_year": 1574,
+        "end_year": 1574,
+        "source_ids": [
+          "C9-S03"
+        ],
+        "map_layer": "events",
+        "geometry": null,
+        "area_sqkm": null,
+        "why_no_polygon": "Hiram Morgan/DIB attests Tyronelordship raiding as far as Lifford, no exact farms, raid perimeter or durable British land control.",
+        "editor_event_overlay": "plot directional military route plus Tyrone regional event point, do NOT fill modern Tyrone county as sacked",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "interactive_click_label": true,
+        "no_broad_solid_purple": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Munster-Desmond-conflict-1579",
+      "geometry": null,
+      "properties": {
+        "stable_id": "Munster-Desmond-conflict-1579",
+        "name": "1579第二次德斯蒙德战争始于丁格尔的军事争夺带（1580年代逐年扩展另查）",
+        "start_year": 1579,
+        "end_year": 1579,
+        "source_ids": [
+          "C9-S18",
+          "C9-S19"
+        ],
+        "map_layer": "events",
+        "geometry": null,
+        "area_sqkm": null,
+        "why_no_polygon": "Published social-economic study spans 1579–83; the scale of conflict and ruin over four years cannot be represented as county-wide 1579 battlefield.",
+        "editor_event_overlay": "use Dingle and Tralee event points; subsequent 1580–83 new decade primary battle maps needed",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "interactive_click_label": true,
+        "no_broad_solid_purple": true
+      }
+    }
+  ],
+  "notice": "Null geometry prevents falsely coloring whole modern Ards Clendeboye Tyrone or Munster. These are named historical conflict scopes, not automatic survey polygons."
+}

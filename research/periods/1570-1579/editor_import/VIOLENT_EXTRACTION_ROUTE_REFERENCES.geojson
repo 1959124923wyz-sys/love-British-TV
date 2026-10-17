@@ -1,0 +1,685 @@
+{
+  "type": "FeatureCollection",
+  "schema": "ch09_named_place_violence_and_extraction_schematic_links_v1",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "drake-1572-England-to-Panama",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.143,
+            50.376
+          ],
+          [
+            -79.472,
+            9.565
+          ]
+        ]
+      },
+      "properties": {
+        "id": "drake-1572-England-to-Panama",
+        "from": "Plymouth",
+        "to": "NombreDeDios",
+        "start_year": 1572,
+        "end_year": 1573,
+        "source_ids": [
+          "C9-S08"
+        ],
+        "route_kind": "armed_raiding_voyage",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "No exact voyage bearings; coastal anchor to Atlantic Spanish port.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drake-1573-Panama-bullion-mule-train",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.472,
+            9.565
+          ],
+          [
+            -79.53,
+            9.1
+          ]
+        ]
+      },
+      "properties": {
+        "id": "drake-1573-Panama-bullion-mule-train",
+        "from": "NombreDeDios",
+        "to": "PanamaIsthmus",
+        "start_year": 1573,
+        "end_year": 1573,
+        "source_ids": [
+          "C9-S08"
+        ],
+        "route_kind": "Spanish_land_bullion_transport_raided",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Represents Panama isthmus bullion logistics, NOT a straight precise mule path or Drake's march.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Essex-1574-Tyrone-crop-burning",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.805,
+            54.713
+          ],
+          [
+            -6.74,
+            54.6
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Essex-1574-Tyrone-crop-burning",
+        "from": "Carrickfergus",
+        "to": "Tyrone",
+        "start_year": 1574,
+        "end_year": 1574,
+        "source_ids": [
+          "C9-S03"
+        ],
+        "route_kind": "military_scorched_earth_operations",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Essex raiding into Tyrone; modern line is ONLY general direction, not actual march nor English-held corridor.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Essex-1574-Tyrone-Lifford",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.74,
+            54.6
+          ],
+          [
+            -7.489,
+            54.834
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Essex-1574-Tyrone-Lifford",
+        "from": "Tyrone",
+        "to": "Lifford",
+        "start_year": 1574,
+        "end_year": 1574,
+        "source_ids": [
+          "C9-S03"
+        ],
+        "route_kind": "military_scorched_earth_operations",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "DIB says troops burned crops and raided cattle until Lifford, not that whole corridor belonged to Crown.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Essex-1575-Carrick-Rathlin",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.805,
+            54.713
+          ],
+          [
+            -6.192,
+            55.298
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Essex-1575-Carrick-Rathlin",
+        "from": "Carrickfergus",
+        "to": "Rathlin",
+        "start_year": 1575,
+        "end_year": 1575,
+        "source_ids": [
+          "C9-S03",
+          "C9-S04"
+        ],
+        "route_kind": "naval_transport_for_massacre",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "English ships carrying Norreys soldiers to Rathlin, Drake naval role; route is a point-to-point schematic.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Frobisher-1576-1578-Harwich-Nunavut",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.284,
+            51.944
+          ],
+          [
+            -65.416667,
+            62.816667
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Frobisher-1576-1578-Harwich-Nunavut",
+        "from": "Harwich",
+        "to": "Kodlunarn",
+        "start_year": 1576,
+        "end_year": 1578,
+        "source_ids": [
+          "C9-S15",
+          "C9-S16"
+        ],
+        "route_kind": "seasonal_extraction_and_forced_human_transport",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Illustrates links between English capital fleet and Inuit island mining, NOT 1576/77/78 identical real ship tracks.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Drake-1579-Callao-California",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.149,
+            -12.055
+          ],
+          [
+            -122.954,
+            38.054
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Drake-1579-Callao-California",
+        "from": "Callao",
+        "to": "PointReyes",
+        "start_year": 1579,
+        "end_year": 1579,
+        "source_ids": [
+          "C9-S09",
+          "C9-S10",
+          "C9-S13"
+        ],
+        "route_kind": "Pacific_privateering_direction_not_ship_track",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Major endpoints, does NOT imply direct voyage route or full Peruvian coast in English control.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Drake-1579-California-Ternate",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.954,
+            38.054
+          ],
+          [
+            127.38,
+            0.79
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Drake-1579-California-Ternate",
+        "from": "PointReyes",
+        "to": "Ternate",
+        "start_year": 1579,
+        "end_year": 1579,
+        "source_ids": [
+          "C9-S09",
+          "C9-S10"
+        ],
+        "route_kind": "Pacific_ocean_crossing_trade",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Dateline/high longitude line must be handled carefully by editor so map does not draw through Eurasia; should split at longitude 180 for anti-meridian, no fake realistic sailing path.",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Sidney-Cork-to-Limerick-Crown-coercion-1576",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -8.475,
+            51.898
+          ],
+          [
+            -8.63,
+            52.664
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Sidney-Cork-to-Limerick-Crown-coercion-1576",
+        "from": "Cork",
+        "to": "Limerick",
+        "start_year": 1576,
+        "end_year": 1576,
+        "source_ids": [
+          "C9-S26"
+        ],
+        "route_kind": "retrospective_annals_named_itinerary_not_surveyed_historic_road",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Crown governor visits region with Irish lord retinues",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Sidney-Limerick-to-Galway-tributary-summons-1576",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -8.63,
+            52.664
+          ],
+          [
+            -9.056,
+            53.27
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Sidney-Limerick-to-Galway-tributary-summons-1576",
+        "from": "Limerick",
+        "to": "Galway",
+        "start_year": 1576,
+        "end_year": 1576,
+        "source_ids": [
+          "C9-S26"
+        ],
+        "route_kind": "retrospective_annals_named_itinerary_not_surveyed_historic_road",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Regional Crown fiscal/hostage negotiations, actual exact course not surveyed",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Sidney-Galway-to-Dublin-hostages-1576",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.056,
+            53.27
+          ],
+          [
+            -6.26,
+            53.35
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Sidney-Galway-to-Dublin-hostages-1576",
+        "from": "Galway",
+        "to": "Dublin",
+        "start_year": 1576,
+        "end_year": 1576,
+        "source_ids": [
+          "C9-S26"
+        ],
+        "route_kind": "retrospective_annals_named_itinerary_not_surveyed_historic_road",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Lord Deputy carries noble hostages into Crown metropolis",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Sidney-Dublin-to-Athlone-chase-1576",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.26,
+            53.35
+          ],
+          [
+            -7.94,
+            53.42
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Sidney-Dublin-to-Athlone-chase-1576",
+        "from": "Dublin",
+        "to": "Athlone",
+        "start_year": 1576,
+        "end_year": 1576,
+        "source_ids": [
+          "C9-S26"
+        ],
+        "route_kind": "retrospective_annals_named_itinerary_not_surveyed_historic_road",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Lord Deputy pursues Clanrickarde lords, compiled Gaelic annal retrospective",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Sidney-Athlone-to-Loughrea-captured-1576",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -7.94,
+            53.42
+          ],
+          [
+            -8.5649,
+            53.1966
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Sidney-Athlone-to-Loughrea-captured-1576",
+        "from": "Athlone",
+        "to": "Loughrea",
+        "start_year": 1576,
+        "end_year": 1576,
+        "source_ids": [
+          "C9-S26"
+        ],
+        "route_kind": "retrospective_annals_named_itinerary_not_surveyed_historic_road",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Taking local Loughrea fort and hostages, not broader Connacht land perimeter",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Malby-Limerick-to-Askeaton-friary-raid-1579",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -8.63,
+            52.664
+          ],
+          [
+            -8.974,
+            52.599
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Malby-Limerick-to-Askeaton-friary-raid-1579",
+        "from": "Limerick",
+        "to": "Askeaton",
+        "start_year": 1579,
+        "end_year": 1579,
+        "source_ids": [
+          "C9-S26",
+          "C9-S41"
+        ],
+        "route_kind": "retrospective_annals_named_itinerary_not_surveyed_historic_road",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Malby troops traveled and sacked friary but Askeaton Castle was never captured",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Malby-Askeaton-to-Adare-campaign-1579",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -8.974,
+            52.599
+          ],
+          [
+            -8.793,
+            52.565
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Malby-Askeaton-to-Adare-campaign-1579",
+        "from": "Askeaton",
+        "to": "Adare",
+        "start_year": 1579,
+        "end_year": 1579,
+        "source_ids": [
+          "C9-S26",
+          "C9-S41"
+        ],
+        "route_kind": "retrospective_annals_named_itinerary_not_surveyed_historic_road",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "Malby force left Askeaton to Adare and war continued; Adare warders proposed not confirmed",
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Inuit-captive-1576-Baffin-to-London",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -65.416667,
+            62.816667
+          ],
+          [
+            -0.07947,
+            51.5109
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Inuit-captive-1576-Baffin-to-London",
+        "from": "historic Baffin Island regional or Tudor monument locator only",
+        "to": "named Bristol/London city historical site reference, not exact sea dock",
+        "start_year": 1576,
+        "end_year": 1576,
+        "source_ids": [
+          "C9-S47",
+          "C9-S53"
+        ],
+        "route_kind": "forced_transatlantic_indigenous_human_transport_NOT_sale_and_NOT_ship_navigation",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "one abducted Inuit man taken 1576 to London, died, company paid St Olave burial costs",
+        "historically_abducted_aboard_count": 1,
+        "do_not_sum_people_across_voyage_legs": true,
+        "person_endpoint_exact_boat_berth_unknown": true,
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Inuit-captive-1577-Baffin-to-Bristol",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -65.416667,
+            62.816667
+          ],
+          [
+            -2.596003,
+            51.454311
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Inuit-captive-1577-Baffin-to-Bristol",
+        "from": "historic Baffin Island regional or Tudor monument locator only",
+        "to": "named Bristol/London city historical site reference, not exact sea dock",
+        "start_year": 1577,
+        "end_year": 1577,
+        "source_ids": [
+          "C9-S47",
+          "C9-S48",
+          "C9-S52"
+        ],
+        "route_kind": "forced_transatlantic_indigenous_human_transport_NOT_sale_and_NOT_ship_navigation",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "three coerced Inuit captives Kalicho Arnaq Nutaaq transported to Bristol; two adults died there",
+        "historically_abducted_aboard_count": 3,
+        "do_not_sum_people_across_voyage_legs": true,
+        "person_endpoint_exact_boat_berth_unknown": true,
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "Nutaaq-1577-Bristol-to-London",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2.596003,
+            51.454311
+          ],
+          [
+            -0.07947,
+            51.5109
+          ]
+        ]
+      },
+      "properties": {
+        "id": "Nutaaq-1577-Bristol-to-London",
+        "from": "historic Baffin Island regional or Tudor monument locator only",
+        "to": "named Bristol/London city historical site reference, not exact sea dock",
+        "start_year": 1577,
+        "end_year": 1577,
+        "source_ids": [
+          "C9-S47",
+          "C9-S53"
+        ],
+        "route_kind": "forced_transatlantic_indigenous_human_transport_NOT_sale_and_NOT_ship_navigation",
+        "map_layer": "events",
+        "draw_style": "dashed_schematic",
+        "notes": "ONLY Inuit child Nutaaq transported by nurse to London after mother Arnaq death; child also died; NOT Kalicho/Arnaq onward",
+        "historically_abducted_aboard_count": 1,
+        "do_not_sum_people_across_voyage_legs": true,
+        "person_endpoint_exact_boat_berth_unknown": true,
+        "actual_1570s_surveyed_track": false,
+        "English_territorial_control_proven": false,
+        "area_sqkm": null,
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false
+      }
+    }
+  ],
+  "metadata": {
+    "routes": 18,
+    "seasonal_ore_route_not_conquest": true,
+    "no_dayprecision_ship_charts": true,
+    "dateline_1579_route_requires_client_split": true,
+    "slavery_status": "No independently confirmed new 1570s English Guinea slave-raiding voyage; do not copy chapter8 Hawkins coastal activity into this decade by inertia.",
+    "royal_deputy_1576_reconstruction_is_ordered_named_waypoints_not_exact_march": true,
+    "Malby_1579_castle_Failed_no_purple_fill": true,
+    "Inuit_transatlantic_forced_transfers_only_1576_1577": true,
+    "Nutaaq_is_not_extra_person_when_Bristol_to_London": true
+  }
+}
