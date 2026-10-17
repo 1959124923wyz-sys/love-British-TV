@@ -52,6 +52,7 @@ on:
       - "css/history-stories.css"
       - "scripts/test_major_story_pilot.js"
       - "scripts/test_snake_f_two_institutional_stories.js"
+      - "scripts/test_snake_f_batch01_sieges.js"
       - "scripts/browser_snake_f_institutional_stories.py"
       - "scripts/test_multi_story_entries.js"
       - "scripts/browser_multi_story_entries.py"
@@ -76,6 +77,7 @@ jobs:
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
           node scripts/test_snake_f_two_institutional_stories.js
+          node scripts/test_snake_f_batch01_sieges.js
           node scripts/test_multi_story_entries.js
           node scripts/test_rut_kildare_major_stories.js
           node scripts/test_tudor_governance_device_forts.js
