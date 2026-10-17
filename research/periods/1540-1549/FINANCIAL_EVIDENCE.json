@@ -1,0 +1,137 @@
+{
+  "schema": "LoveBritishTV1540s_finance_v1",
+  "period": "1540-1549",
+  "compiled": "2026-10-13",
+  "financial_objects": [
+    {
+      "id": "FIN-1545-BENEVOLENCE",
+      "year": 1545,
+      "topic": "英格兰1545年度战事捐纳Benevolence",
+      "account_type": "English domestic levy / estimated receipts",
+      "value": 119581,
+      "currency": "GBP contemporary",
+      "valuation_status": "estimate_in_official_archive_notes_quoting_modern_historians",
+      "record_direction": "English people -> English Crown war treasury",
+      "source_ids": [
+        "GB-TNA-1545-BENEVOLENCE",
+        "GB-TNA-1545-FUNDING"
+      ],
+      "archive_series": "E 179 local returns, E 370/2/23 enrolled account",
+      "notes": "£119,581 is a published estimate of collected domestic benevolence, NOT Boulogne's generated revenue or net profit. Historic currency nominal no inflation conversion."
+    },
+    {
+      "id": "FIN-1546-VOLUNTARY-CONTRIBUTION",
+      "year": 1546,
+      "topic": "1546年度布洛涅及加来军费征集",
+      "account_type": "English domestic levy",
+      "value": null,
+      "currency": "GBP contemporary",
+      "valuation_status": "sum_not_verified",
+      "record_direction": "English inhabitants -> English Crown",
+      "source_ids": [
+        "GB-TNA-1546-CONTRIB"
+      ],
+      "archive_series": "E 179/185/233",
+      "notes": "16 May commissioned levy documented, no verified total."
+    },
+    {
+      "id": "FIN-1544-1550-BOULOGNE-DEFENCE",
+      "year": 1544,
+      "topic": "布洛涅军驻与城防建造",
+      "account_type": "royal military expenditure and fortification",
+      "value": null,
+      "currency": "GBP contemporary",
+      "valuation_status": "sum_not_verified",
+      "record_direction": "English Crown -> army/fortifications in occupied France",
+      "source_ids": [
+        "FR-MURPHY-2019-GARRISON",
+        "GB-TNA-1549-EDWARD-DEBT"
+      ],
+      "archive_series": "TNA state papers and royal accounts via Murphy",
+      "notes": "Expenditure not revenue and no net colonial profit amount provided."
+    },
+    {
+      "id": "FIN-1545-1549-BOULOGNE-LAND-RENT",
+      "year": 1545,
+      "topic": "布洛涅乡村土地重分配及租佃",
+      "account_type": "seized land/colonial farm tenure and possible rent",
+      "value": null,
+      "currency": "GBP contemporary",
+      "valuation_status": "monetary_data_not_verified",
+      "record_direction": "French land tenure -> Tudor commissioners/English settlers; French labor coerced by new regime",
+      "source_ids": [
+        "FR-MURPHY-2019-SETTLE"
+      ],
+      "archive_series": "re-settlement commission records in Murphy (2019) bibliography",
+      "notes": "Specific parcels, farm acres, rents, yearly revenue, coercion level must be evidenced before numeric maps."
+    },
+    {
+      "id": "FIN-1548-1549-SCOTLAND-FORTS",
+      "year": 1548,
+      "topic": "英军苏格兰堡垒、补给线和驻军成本",
+      "account_type": "Crown military expenditure",
+      "value": null,
+      "currency": "GBP contemporary",
+      "valuation_status": "amount_not_verified",
+      "record_direction": "English Crown -> forts in independent Scotland",
+      "source_ids": [
+        "SC-HES-2022-HADDINGTON",
+        "GB-TNA-1549-EDWARD-DEBT"
+      ],
+      "archive_series": "E 101 and soldiers' muster originals to check",
+      "notes": "Do not conflate mixed-nationality garrisons with English tax jurisdiction over all southern Scotland."
+    },
+    {
+      "id": "FIN-1549-ROYAL-DEBT-CLAIM",
+      "year": 1549,
+      "topic": "爱德华六世对继承债务的政治文书陈述",
+      "account_type": "contemporary rhetorical balance-sheet claim (not audited)",
+      "value": 300000,
+      "currency": "GBP contemporary",
+      "valuation_status": "lower_bound_claim_over_300000_not_exact_total",
+      "value_operator": ">",
+      "record_direction": "English monarchy royal borrowing owed to creditors",
+      "source_ids": [
+        "GB-TNA-1549-EDWARD-DEBT"
+      ],
+      "archive_series": "The National Archives Edward answers Western rebels 1549",
+      "notes": "The document claims more than £300,000 debt inherited from Henry VIII, a contemporaneous royal statement NOT audited total, and includes war causes other than Boulogne. Cannot use as actual French colony net outcome."
+    },
+    {
+      "id": "FIN-1547-HUME-FORT-700-TRUST",
+      "year": 1547,
+      "topic": "休姆城堡英军1547—1548年加固防御工程（地方机构报告）",
+      "account_type": "military_fortification_expenditure_secondary_claim",
+      "value": 700,
+      "currency": "GBP nominal Tudor pounds",
+      "valuation_status": "local_castle_preservation_trust_historical_description_unaudited_amount",
+      "record_direction": "English military garrison -> Hume Castle local fortification, NOT French or Scottish colonial profit",
+      "source_ids": [
+        "SC-HUME-TRUST-1547-1548"
+      ],
+      "archive_series": "Original English Royal Exchequer warrant/account NOT verified",
+      "notes": "Local Hume Castle Preservation Trust states English spent £700 strengthening the defenses. Not a paybook or invoice independently inspected; do not merge with audited spending totals or convert to colonial revenue.",
+      "historical_original_account_read": false
+    },
+    {
+      "id": "FIN-1545-1546-BOULOGNE-LOWER-TOWN-SEIZURES",
+      "year": 1545,
+      "topic": "英军占领布洛涅低城筑Citadelle而剥夺民房和方济各会修院",
+      "account_type": "land_and_building_expropriation_qualitative_not_audited_cash",
+      "value": null,
+      "currency": null,
+      "valuation_status": "reported_by_peer_reviewed_archival_historian_no_verified_sum",
+      "record_direction": "French town residents/religious institution property and building access -> English Tudor garrison/citadel construction",
+      "source_ids": [
+        "FR-HELIOT-1958-POPULATION-DISPLACEMENT",
+        "FR-HELIOT-1958-PLANS-PAGES"
+      ],
+      "archive_series": "Period orders to inspect via Héliot citations; no municipal damage rolls digitized",
+      "notes": "Strong property displacement evidence but no reliable amount/number of dispossessed households. English Council 1546 maximum desired 5000 residents is an instruction, NOT number expelled.",
+      "historical_original_account_read": false
+    }
+  ],
+  "verified_exact_Boulogne_net_profit": null,
+  "hard_statistic": "1545 estimated benevolence is not colonial proceeds; 1549 royalty debt is a contemporary claim with 'more than' operator, not audited revenue; new local Castle Trust £700 military expenditure is an unverified secondary account; Boulogne dispossession has no numerical estimate; never conflate a 5000-resident policy cap with proven removals.",
+  "source_registry": "SOURCE_REGISTRY.json"
+}
