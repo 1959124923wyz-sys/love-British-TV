@@ -7,10 +7,10 @@ const newMunster=new Set(['MUN1569-CORK-KERRY-COLONIAL-GRANT','MUN1569-FITZMAURI
 const records=db.events.filter(e=>e.id.startsWith('MUN1569-')&&!newMunster.has(e.id));
 assert.equal(records.length,9,'nine discrete 1569 Munster campaign/response events');
 assert.equal(new Set(records.map(e=>e.id)).size,9);
-assert.equal(db.events.length,56,'legacy events retained plus Northern Rising campaign nodes');
+assert.equal(db.events.length,60,'legacy events retained plus Northern Rising campaign nodes');
 assert.equal(db.events.filter(e=>e.year<=1568).length,db.events.length-db.events.filter(e=>e.year===1569).length,'all additions must be constrained to 1569');
 const sources=new Map(db.sources.map(s=>[s.id,s]));
-assert.equal(db.sources.length,57);
+assert.equal(db.sources.length,63);
 for(const e of records){
  assert(e.year===1569&&e.start_year===1569&&e.end_year===1569&&e.visible_from===1569,'time barrier '+e.id);
  assert(e.date_label.startsWith('1569年'),'year label '+e.id);
