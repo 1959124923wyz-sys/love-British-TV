@@ -34,7 +34,7 @@ assert.ok(b.routes.length>=7);
 const voyage=read('data/drake-circumnavigation-1577-1580.json');
 assert.equal(voyage.routes.length,14,'keep PR102 repaired 14-leg voyage');
 assert(voyage.routes.every(x=>x.actual_area_sqkm===null&&x.verified_English_territorial_control===false));
-assert.equal(a.events.length,89);
+assert.equal(a.events.length,90);
 assert.ok(b.events.length>=53);
 assert.ok(index.length>=26);
 console.log('PASS: Frobisher unlocated Greenland claim, Drake 14-section history, nine additional evidence-linked events, untouched 14-leg cross-dateline voyage, no colonial extent fabrication.');
