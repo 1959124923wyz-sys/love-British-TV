@@ -5,11 +5,11 @@ const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.
 const a=read('data/atlas-1580-1589.json'),b=read('data/atlas-1590-1599.json'),regions=read('data/followup-regional-stories-1562-1596.geojson');
 assert.ok(a.events.length>=53);assert.ok(a.sources.length>=92);
 assert.ok(b.events.length>=39);assert.ok(b.sources.length>=75);
-assert.equal(a.events.filter(e=>e.year<=1586).length,35);
-assert.equal(a.events.filter(e=>e.year<=1587).length,42,'Cavendish present by 1587 and only 1587');
-assert.equal(a.events.filter(e=>e.year<=1588).length,61);
-assert.equal(b.events.filter(e=>e.year<=1593).length,14,'Hawkins absent before 1594');
-assert.equal(b.events.filter(e=>e.year<=1594).length,19);
+assert.equal(a.events.filter(e=>e.year<=1586).length,40);
+assert.equal(a.events.filter(e=>e.year<=1587).length,47,'Cavendish present by 1587 and only 1587');
+assert.equal(a.events.filter(e=>e.year<=1588).length,66);
+assert.equal(b.events.filter(e=>e.year<=1593).length,17,'Hawkins absent before 1594');
+assert.equal(b.events.filter(e=>e.year<=1594).length,23);
 const cases=[
 {atlas:a,id:'PAC1587-CAVENDISH-QUINTERO',year:1587,icon:'WAR',summary:'不将金特罗标为',source:'CL-BNC-CAVENDISH-QUINTERO-1587',region:'cl-cavendish-1587-quintero-landing-defense'},
 {atlas:b,id:'PAC1594-HAWKINS-VALPARAISO',year:1594,icon:'ECO',summary:'被赎回',source:'CL-BNC-HAWKINS-VALPARAISO-1594',region:'cl-hawkins-1594-valparaiso-plunder'}
