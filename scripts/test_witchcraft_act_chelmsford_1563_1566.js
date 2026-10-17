@@ -41,7 +41,7 @@ assert(/modern_Chelmsford/.test(e.geo_precision)&&/not_original_court|not_verifi
 }
 const agnes=map.get(ids[2]),fraunces=map.get(ids[3]),joan=map.get(ids[4]),lora=map.get(ids[5]);
 assert(agnes.date_label.includes('7月29日')&&agnes.description.includes('绞死'));
-assert(fraunces.description.includes('监禁整一年')&&!fraunces.description.includes('被处死'));
+assert(fraunces.description.includes('监禁整一年')&&fraunces.description.includes('不支持将她写成当日被处死'));
 assert(joan.description.includes('无罪'));assert(lora.description.includes('无罪'));
 assert(body.includes('约1569年才建成')&&body.includes('1791年')&&body.includes('法院建筑的年代'));
 assert(body.includes('不能证明被告拥有巫术')||body.includes('不构成巫术确实存在'));
