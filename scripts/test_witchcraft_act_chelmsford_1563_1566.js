@@ -10,8 +10,8 @@ const ids=[
 'WITCH1563-ELIZABETH-STATUTE','WITCH1566-AGNES-CHELMFORD-GUILTY','WITCH1566-AGNES-EXECUTED',
 'WITCH1566-ELIZABETH-FRAUNCES-ONE-YEAR','WITCH1566-JOAN-WATERHOUSE-ACQUITTED',
 'WITCH1566-LORA-WYNCHESTER-ACQUITTED','WITCH1566-LONDON-PAMPHLET-PUBLICATION'];
-assert.equal(atlas.events.length,56);assert.equal(atlas.sources.length,57);
-assert.equal(manifest.length,36);
+assert.equal(atlas.events.length,60);assert.equal(atlas.sources.length,63);
+assert.equal(manifest.length,37);
 assert.equal(article.sections.length,10);assert(body.length>=3800);
 assert.equal(article.sources.length,10);assert(article.lead.length>=120);
 assert.deepEqual(article.related_event_ids,ids);assert.deepEqual(meta.event_ids,ids);
