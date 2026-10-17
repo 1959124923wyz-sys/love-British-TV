@@ -10,5 +10,5 @@ const idx=J('data/stories/index.json').stories,id='tudor-egyptians-discriminator
 const story=J(meta.file),prose=story.sections.flatMap(x=>x.paragraphs).join(''),links=[...prose.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]\n]+\]\]/g)].map(m=>m[1]);
 assert.equal(story.sections.length,9);assert(prose.length>=3000);assert(story.sources.length>=5);assert.deepEqual(meta.event_ids,defs.map(x=>x[1]));assert.deepEqual(new Set(story.related_event_ids),new Set(meta.event_ids));
 assert(story.sources.every(x=>/^https:\/\//.test(x.url)&&x.access));const keys=new Set(story.sources.map(x=>x.id));assert(story.sections.every(x=>x.paragraphs.length>=2&&x.source_keys.every(s=>keys.has(s))));
-assert(links.length>=3&&links.every(id=>map.has(id)));assert(prose.includes('不能把可判处死刑直接写成确已执行'));assert(prose.includes('约克'));assert.equal(idx.filter(x=>x.event_ids.includes('DOM1563-EGYPTIANS-EXECUTION-LAW')).length,1);
+assert(links.length>=3&&links.every(id=>map.has(id)));assert(prose.includes('不能仅凭第一层证据直接推导第四层的数量'));assert(prose.includes('约克'));assert.equal(idx.filter(x=>x.event_ids.includes('DOM1563-EGYPTIANS-EXECUTION-LAW')).length,1);
 console.log('PASS discriminatory Tudor legislation: 1531/1554/1563 accurately linked, judicial statistics not invented, 9 sections, 3 unlocated statutes, 0 colonial polygons');
