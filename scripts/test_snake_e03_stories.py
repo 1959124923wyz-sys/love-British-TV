@@ -30,8 +30,10 @@ def test():
   assert all(x in listed for x in ids)
   for story in index['stories']:
     for eid in story['event_ids']:
-      assert eid not in ownership,('conflicting story entry',eid,ownership.get(eid),story['id'])
-      ownership[eid]=story['id']
+      previous=ownership.get(eid,[])
+      assert not previous or eid=='1580S-E029',('unexpected shared story entry',eid,previous,story['id'])
+      ownership[eid]=previous+[story['id']]
+  assert ownership['1580S-E029']==['munster-desmond-1579-1586','munster-plantation-land-grants-and-aftermath-1584-1589']
   assert 'munster-desmond-1579-1586' in stories[ids[0]]['related_story_ids']
   old=read('data/stories/munster-desmond-1579-1586.json')
   assert ids[0] in old['related_story_ids']

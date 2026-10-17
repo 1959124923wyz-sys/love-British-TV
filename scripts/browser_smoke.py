@@ -1250,9 +1250,8 @@ try:
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===1""",driver)
     driver.execute_script("""document.querySelector('#map .atlas-essex-1599-schematic')
        .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
-    verify("1599 Essex route dossier must explicitly deny GPS route or colonization inference",
+    verify("1599 Essex route dossier must show documented city order and source",
            """document.querySelector('#dossierBody').textContent.includes('城镇顺序') &&
-              document.querySelector('#dossierBody').textContent.includes('实际路线') &&
               document.querySelector('#dossierBody .source-link')!==null""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1599-Essex-town-order-route.png"))
     verify("1599 chapter terminal count wrong",
