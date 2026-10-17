@@ -34,7 +34,7 @@ def inspect(mode):
   driver.save_screenshot(str(out/(mode+'-story-'+str(i+1)+'.png')))
   driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
   wait.until(lambda d:d.execute_script("return document.querySelector('#bigYear')?.textContent==='1586' && document.querySelectorAll('#dossierBody .major-story-entry [data-story-open]').length===2"))
- assert js("return document.querySelectorAll('#eventList [data-eid=\\"1580S-E029\\"]').length")<=1
+  assert js("return Array.from(document.querySelectorAll('#eventList .event-item')).filter(e=>e.dataset.eid==='1580S-E029').length")<=1
  print('PASS',mode,'both articles open/return to the same 1586 event')
 try:
  inspect('desktop')
