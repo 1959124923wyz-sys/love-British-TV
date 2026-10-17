@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const read=p=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'..',p),'utf8'));
 const a=read('data/atlas-1570-1579.json'),idx=read('data/stories/index.json').stories;
 const events=new Map(a.events.map(x=>[x.id,x])),refs=new Set(a.sources.map(x=>x.id));
-assert.ok(idx.length>=26);assert.equal(a.events.length,84);assert.equal(a.sources.length,90);assert.equal(a.routes.length,27);
+assert.ok(idx.length>=26);assert.equal(a.events.length,89);assert.equal(a.sources.length,94);assert.equal(a.routes.length,27);
 for(const [id,start,end,minimum]of [
 ['drake-panama-mule-train-raid-1572-1573',1572,1573,7],
 ['sidney-pale-cess-connacht-military-campaign-1575-1578',1575,1578,11],
