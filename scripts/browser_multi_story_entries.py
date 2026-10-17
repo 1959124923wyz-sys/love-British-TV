@@ -17,6 +17,9 @@ def js(s,*args):return driver.execute_script(s,*args)
 def inspect(mode):
  driver.get(BASE)
  wait.until(lambda d:d.execute_script("return document.querySelector('#bigYear')?.textContent==='1586'"))
+ if mode=='mobile':
+  driver.find_element(By.ID,'mobileEventsToggle').click()
+  wait.until(lambda d:d.execute_script("return !document.querySelector('#workspace').classList.contains('sidebar-collapsed')"))
  item='#eventList .event-item[data-eid="1580S-E029"]'
  wait.until(lambda d:d.execute_script("return !!document.querySelector(arguments[0])",item))
  el=driver.find_element(By.CSS_SELECTOR,item)
