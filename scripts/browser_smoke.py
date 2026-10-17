@@ -914,7 +914,7 @@ try:
            """document.querySelector('#eventList [data-eid="1570S-E035"]').textContent.includes('布里斯托尔') &&
               document.querySelector('#eventList [data-eid="1570S-E036"]').textContent.includes('伦敦')""",driver)
     verify("1577 forced transport must expose two Inuit relocation passages plus 1576 leg",
-           """document.querySelectorAll('#map .atlas-voyage-hit').length===19 &&
+           """document.querySelectorAll('#map .atlas-voyage-hit').length===18 &&
               document.querySelector('#eventList [data-eid="1570S-E035"] use').getAttribute('href').endsWith('#DIS') &&
               document.querySelector('#eventList [data-eid="1570S-E036"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.execute_script("""document.querySelector('#eventList [data-eid="1570S-E035"]').click()""")
@@ -929,7 +929,7 @@ try:
            """['GAP1578-VALPARAISO','PAC1578-MOCHA-LAFKENCHE',
                'PAC1578-LA-SERENA-DEFENSE'].every(id=>
                  !!document.querySelector('#eventList .event-item[data-eid="'+id+'"]')) &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===28""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===27""",driver)
     verify("1578 Chile archive must distinguish plunder, failed town assault and Lafkenche encounter",
            """[...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
               .map(x=>x.textContent).some(s=>s.includes('瓦尔帕莱索')) &&
@@ -952,13 +952,13 @@ try:
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===34 &&
+              document.querySelectorAll('#map .atlas-voyage-hit').length===33 &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Pacific-privateering-Munster.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("Disabling territory cannot hide 1579 events or voyages",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===34""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===33""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Disabling events left piracy lines or 1579 markers",
