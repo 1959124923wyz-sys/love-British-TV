@@ -2,7 +2,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const j=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/atlas-1530-1539.json'),'utf8'));
-assert.equal(j.events.length,34);assert.equal(j.sources.length,72);
+assert.equal(j.events.length,44);assert.equal(j.sources.length,88);
 const e=j.events.find(x=>x.id==='ENG1537-ASKE-YORK-CASTLE-EXECUTION');assert(e);
 assert.equal(e.year,1537);assert.equal(e.date_label,'1537年7月12日');
 assert.equal(e.icon_code,'REP');assert.equal(e.lat,53.955856);assert.equal(e.lng,-1.079992);
