@@ -1439,6 +1439,41 @@
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true,
       "colonial_profit": null
+    },
+    {
+      "id": "DOM1569-NORTHERN-RISING-DURHAM",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年11月14日",
+      "name": "英格兰北方起义军进入达勒姆，恢复天主教弥撒",
+      "description": "1569年11月14日，诺森伯兰伯爵托马斯·珀西与威斯特摩兰伯爵查尔斯·内维尔领导的起义军进入达勒姆，并在大教堂恢复天主教弥撒，公开反对伊丽莎白一世的宗教政策。",
+      "short_description": "1569年11月，北方起义军进入达勒姆并在大教堂恢复天主教弥撒。",
+      "category": "domestic_rebellion",
+      "icon_code": "RES",
+      "lat": 54.773474,
+      "lng": -1.576217,
+      "geo_precision": "Historic_England_Durham_Cathedral_modern_NGR_not_1569_control_extent",
+      "geography_label": "达勒姆大教堂（现代登记建筑地点）",
+      "source_ids": [
+        "EN-NEWCASTLE-NORTH-RISING-DURHAM-1569",
+        "EN-HISTENG-DURHAM-CATHEDRAL-NGR"
+      ],
+      "certainty": "university_regional_history_event_and_official_building_location_correlated",
+      "significance": {
+        "level": 2,
+        "review_status": "Newcastle_University_history_and_Historic_England_NGR_checked"
+      },
+      "colonial_profit": null,
+      "position_type": "historic_named_cathedral_modern_site_reference",
+      "editorial_status": "published_rebellion_event_not_royal_repression",
+      "research_event_id": "DOM1569-NORTHERN-RISING-DURHAM",
+      "economic_fields": null,
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2391,6 +2426,26 @@
       "kind": "public_primary_scholarly_history",
       "evidence_read_level": "public original/full authoritative historical research checked",
       "precision_warning": "historical named places modern centres; not surveyed old occupation boundary"
+    },
+    {
+      "id": "EN-NEWCASTLE-NORTH-RISING-DURHAM-1569",
+      "title": "Newcastle University Co-Curate: Revolt of the Northern Earls of 1569; Durham occupation 14 November",
+      "publisher": "Co-Curate / Newcastle University regional historical education",
+      "url": "https://co-curate.ncl.ac.uk/revolt-of-the-northern-earls-1569/",
+      "kind": "university_regional_historical_history",
+      "evidence_read_level": "November 14 1569 two earls occupied Durham and reintroduced Catholic worship in the cathedral",
+      "precision_warning": "Do not infer rebels occupied all County Durham or identify any supposed royal reprisals by unverified casualty count",
+      "origin": "1560-1569"
+    },
+    {
+      "id": "EN-HISTENG-DURHAM-CATHEDRAL-NGR",
+      "title": "Historic England NHLE 1161023: Durham Cathedral; NGR NZ2736042144",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1161023/?section=official-list-entry",
+      "kind": "official_modern_georeference",
+      "evidence_read_level": "Grade I Cathedral National Grid Reference NZ2736042144; WGS84 OS reference used for modern site location",
+      "precision_warning": "Modern building coordinates are a location anchor; not quantified 1569 rebel territorial boundary",
+      "origin": "1560-1569"
     }
   ],
   "routes": [

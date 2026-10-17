@@ -3764,6 +3764,41 @@
       "coordinate_role": "historical_geography_reading_reference",
       "historical_point_verified": false,
       "exclude_point_buffer_from_area_statistics": true
+    },
+    {
+      "id": "DOM1547-VAGABONDS-ACT-FORCED-LABOUR",
+      "year": 1547,
+      "start_year": 1547,
+      "end_year": 1547,
+      "visible_from": 1547,
+      "date_label": "1547年",
+      "name": "英格兰《流浪者法》规定烙印与强制役使",
+      "description": "1547年，爱德华六世时期的《流浪者法》（1 Edw. VI c. 3）规定，对被判定为无业游荡且拒绝劳动者可施以V字烙印，并交由举报者强制服役两年；逃跑者面临更重处罚。",
+      "short_description": "1547年《流浪者法》规定对部分被定罪者烙印并强制服役两年。",
+      "category": "domestic_forced_labour_legislation",
+      "icon_code": "LAB",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "nationwide_legal_act_no_unique_enforcement_site",
+      "geography_label": "英格兰（全国性法律）",
+      "source_ids": [
+        "EN-STATUTE-VAGABONDS-1547-C3",
+        "EN-EHR-DAVIES-VAGRANCY-1547"
+      ],
+      "certainty": "contemporary_statute_text_and_peer_reviewed_study_confirm_the_provision",
+      "significance": {
+        "level": 2,
+        "review_status": "statute_text_and_journal_crosschecked"
+      },
+      "colonial_profit": null,
+      "position_type": "chronology_only_not_map_point",
+      "editorial_status": "published_legal_provision_no_assumed_victims",
+      "research_event_id": "DOM1547-VAGABONDS-ACT-FORCED-LABOUR",
+      "economic_fields": null,
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "map_priority": false
     }
   ],
   "places": [
@@ -5915,6 +5950,26 @@
       "url": "https://www.planning.data.gov.uk/entity/7503475",
       "kind": "official_modern_heritage_location",
       "precision_warning": "Modern replacement church location; 1549 church tower destroyed in 1645"
+    },
+    {
+      "id": "EN-STATUTE-VAGABONDS-1547-C3",
+      "title": "Vagabonds, etc. Act 1547, 1 Edward VI c. 3 (published statute text)",
+      "publisher": "Historical Statute of the Realm, digitized via vLex",
+      "url": "https://vlex.co.uk/vid/vagabonds-etc-act-1547-861277049",
+      "kind": "digitized_original_statute_text",
+      "evidence_read_level": "Statutory language prescribes V-branding and two years of forced servitude; further punishment for escape; no counted real-world enforcement",
+      "precision_warning": "Normative enactment; not proof of specific person being branded or enslaved in practice",
+      "origin": "1540-1549"
+    },
+    {
+      "id": "EN-EHR-DAVIES-VAGRANCY-1547",
+      "title": "C. S. L. Davies, Slavery and Protector Somerset: the Vagrancy Act of 1547, Economic History Review 19 (1966)",
+      "publisher": "The Economic History Review / Wiley",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1468-0289.1966.tb00987.x",
+      "kind": "peer_reviewed_historical_research",
+      "evidence_read_level": "Scholarly analysis of act 1 Edw. VI c.3 and context; enactment distinct from empirical implementation",
+      "precision_warning": "Do not derive actual number of enslaved or assume enforcement throughout England",
+      "origin": "1540-1549"
     }
   ],
   "routes": [],
