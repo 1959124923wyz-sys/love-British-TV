@@ -12,7 +12,7 @@ const relations=read('data/political-relations-1550-1559.geojson'),urban=read('d
 const app=raw('app.js'),html=raw('index.html');
 new vm.Script(app);
 assert.deepEqual(atlas.period,{from:1550,to:1559,next:1560});
-assert.equal(atlas.events.length,40);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,68);
+assert.equal(atlas.events.length,41);assert.equal(atlas.places.length,18);assert.equal(atlas.sources.length,70);
 assert.equal(atlas.routes.length,9);assert.equal(atlas.colonial_polygons.length,0);
 assert.equal(previous.events.filter(e=>!e.id.startsWith('RW154')).length,97,'Keep prior 1540s events plus 1542 Taureau and Calais finance records');
 assert.equal(previous.events.filter(e=>e.id.startsWith('RW154')).length,10,'Preserve ten newly sourced Rough Wooing events');
