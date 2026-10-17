@@ -19,6 +19,7 @@ on:
       - "scripts/test_western_prayerbook_guinea_stories.js"
       - "scripts/test_munster_essex_story_1569_1575.js"
       - "scripts/test_drake_sidney_frobisher_major_stories.js"
+      - "scripts/test_snake_e_01_drake_sidney_supplement.js"
       - "scripts/test_frobisher_drake_stories_1576_1580.js"
       - "scripts/browser_frobisher_drake_stories.py"
       - "data/atlas-1580-1589.json"
@@ -70,6 +71,7 @@ jobs:
           node scripts/test_western_prayerbook_guinea_stories.js
           node scripts/test_munster_essex_story_1569_1575.js
           node scripts/test_drake_sidney_frobisher_major_stories.js
+          node scripts/test_snake_e_01_drake_sidney_supplement.js
           node scripts/test_frobisher_drake_stories_1576_1580.js
           node scripts/test_first_group_history_stories.js
           node scripts/test_tournai_surrey_major_stories.js
