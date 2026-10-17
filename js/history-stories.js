@@ -36,13 +36,14 @@
  function isLinkedEvent(item,typ){return typ==='event'&&Boolean(item&&storyByEvent.has(item.id));}
  function linkMarkupForEvent(item,typ){
   if(typ!=='event')return '';
-  const id=storyByEvent.get(item.id),meta=storyMeta.get(id);
-  if(!meta)return '';
+  const metas=(storyByEvent.get(item.id)||[]).map(id=>storyMeta.get(id)).filter(Boolean);
+  if(!metas.length)return '';
+  const choices=metas.map(meta=>
+   '<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(item.id)+'">'+
+   '<span>'+esc(meta.title)+'</span><span aria-hidden="true">›</span></button>').join('');
   return '<section class="major-story-entry" aria-label="相关重大历史专题">'+
-   '<span class="major-story-eyebrow">相关重大历史专题</span>'+
-   '<button type="button" class="major-story-enter" data-story-open="'+esc(id)+'" data-story-source="'+esc(item.id)+'">'+
-   '<span>'+esc(meta.title)+'</span><span aria-hidden="true">›</span></button>'+
-   '<small>'+esc(meta.period)+' · 了解战争的前因、经过及后果</small></section>';
+   '<span class="major-story-eyebrow">相关重大历史专题</span>'+choices+
+   (metas.length===1?'<small>'+esc(metas[0].period)+' · 了解战争的前因、经过及后果</small>':'')+'</section>';
  }
  function onEventOpened(item,typ){
   closePreview();
@@ -223,7 +224,11 @@
    const index=await res.json();
    for(const story of index.stories||[]){
     storyMeta.set(story.id,story);
-    for(const id of story.event_ids||[])storyByEvent.set(id,story.id);
+    for(const id of story.event_ids||[]){
+     const choices=storyByEvent.get(id)||[];
+     if(!choices.includes(story.id))choices.push(story.id);
+     storyByEvent.set(id,choices);
+    }
    }
    // An event may already be open while the optional manifest is loading.
    const current=window.atlasStoryBridge?.selectedEventId?.();

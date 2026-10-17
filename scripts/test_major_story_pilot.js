@@ -42,8 +42,9 @@ for(const meta of index.stories){
  allEvents+=meta.event_ids.length;
  for(const id of meta.event_ids){
   assert.ok(eventIndex.has(id),'Story points to nonexistent official event: '+id);
-  assert.equal(usedEventIds.has(id),false,'ambiguous single-story event ownership: '+id);
-  usedEventIds.set(id,meta.id);
+  const prev=usedEventIds.get(id)||[];
+  if(prev.length)assert.equal(id,'1580S-E029','Only approved 1586 Munster charter may share two stories');
+  usedEventIds.set(id,[...prev,meta.id]);
   const e=eventIndex.get(id);
   assert.ok((e.year>=story.start_year&&e.year<=story.end_year)||(story.historical_context_event_ids?.includes(id)&&e.year<story.start_year&&e.year>=story.start_year-3),meta.id+': event outside article period '+id);
  }
@@ -68,6 +69,9 @@ for(const meta of index.stories){
  assert.ok(localLinks>=(['munster-plantation-land-grants-and-aftermath-1584-1589','roanoke-colony-native-conflict-disappearance-1585-1590'].includes(meta.id)?6:Math.min(12,meta.event_ids.length)),'Longform must contain meaningful map links');
  console.log('PASS story',meta.id,story.sections.length,'sections,',paragraphs.join('').length,'characters,',localLinks,'inline links,',meta.event_ids.length,'events');
 }
+assert.deepEqual(usedEventIds.get('1580S-E029'),[
+ 'munster-desmond-1579-1586','munster-plantation-land-grants-and-aftermath-1584-1589'
+],'One real 1586 land-grant event must offer two non-duplicated histories');
 const scottish=index.stories.find(x=>x.id==='rough-wooing-anglo-scottish-war-1543-1550');
 assert.ok(scottish,'Scottish longform missing');
 assert.ok(scottish.event_ids.includes('1540S-004')&&scottish.event_ids.includes('1550S-E001'));
@@ -87,4 +91,5 @@ assert.ok(app.includes('window.HistoryStories?.onEventOpened'));
 assert.ok(app.includes("(storyChild?'':listSources(item.source_ids,item))"));
 assert.ok(ui.includes('closePreview()')&&ui.includes("e.key==='Escape'"));
 assert.ok(ui.includes('data-story-source')&&ui.includes('sourceEventId'),'Returning to exact child must remain possible');
+assert.ok(ui.includes("storyByEvent.get(item.id)||[]")&&ui.includes('metas.length===1'),'Multi-story card must remain simple for single-story events');
 console.log('PASS history library: ',index.stories.length,'articles',totalChars,'characters',linked,'inline links',allEvents,'event relations',allSources,'source references');
