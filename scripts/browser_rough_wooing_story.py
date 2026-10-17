@@ -36,7 +36,7 @@ try:
     assert js("return !document.querySelector('#dossierBody .source-details')")
     browser.save_screenshot(str(OUT/'01-melrose-event-and-history-entry.png'))
     browser.find_element(By.CSS_SELECTOR,'.major-story-enter').click()
-    wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article') && document.querySelectorAll('.major-story-article .story-section').length===11"))
+    wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article') && document.querySelectorAll('.major-story-article .story-section').length===10"))
     assert js("return document.querySelector('.major-story-article').innerText.length>5200")
     assert js("return document.querySelector('.major-story-header h2').textContent==='1543—1550年英苏粗暴求婚战争'")
     assert js("return !document.querySelector('.story-status') && !document.querySelector('.story-sources').open")
@@ -109,7 +109,7 @@ try:
     wait.until(lambda d:d.execute_script("return innerWidth<680"))
     assert js("return document.querySelectorAll('.milestone-dot').length===0")
     assert js("return !document.querySelector('.story-status')")
-    print('PASS Scottish war article: 11 sections, 1544↔1550 links, map focus, double-click, return to origin both directions and mobile')
+    print('PASS Scottish war article: 10 substantive sections, 1544↔1550 links, map focus, double-click, return to origin both directions and mobile')
 except Exception:
     print('CHROMIUM LOGS',browser.get_log('browser'),flush=True)
     browser.save_screenshot(str(OUT/'error.png'))
