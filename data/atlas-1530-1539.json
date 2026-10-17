@@ -1154,6 +1154,47 @@
       "economic_fields": null,
       "geographic_rule": "domestic_defensive_fortification_not_new_conquest_or_colonial_territory",
       "review_note": "Construction beginning is not completion or permanent war footing; no sixteenth-century surveyed polygon"
+    },
+    {
+      "id": "ENG1537-ASKE-YORK-CASTLE-EXECUTION",
+      "year": 1537,
+      "start_year": 1537,
+      "end_year": 1537,
+      "visible_from": 1537,
+      "date_label": "1537年7月12日",
+      "name": "英王政府在约克城堡处死圣恩朝圣领袖罗伯特·阿斯克",
+      "category": "royal_repression",
+      "icon_code": "REP",
+      "lat": 53.955856,
+      "lng": -1.079992,
+      "geo_precision": "official_modern_Cliffords_Tower_location_not_1537_scaffold",
+      "geography_label": "约克城堡克利福德塔（英格兰遗产机构的现代遗址坐标）",
+      "description": "1537年7月12日，亨利八世政府以叛国罪在约克城堡吊死“圣恩朝圣”起义领袖罗伯特·阿斯克。起义者此前曾获赦免承诺，随后王室又实施逮捕与处刑。",
+      "short_description": "1537年7月12日，亨利八世政府在约克城堡处死“圣恩朝圣”起义领袖罗伯特·阿斯克。",
+      "source_ids": [
+        "ENG-ASKE-ENGLISH-HERITAGE-CLIFFORD-1537",
+        "ENG-ASKE-NATIONAL-ARCHIVES-DISSOLUTION",
+        "ENG-ASKE-YORK-HER-CLIFFORD-REFERENCE",
+        "ENG-ASKE-1537-DATED-STUDY"
+      ],
+      "certainty": "official_heritage_and_national_archive_corroborrated_execution_modern_site_reference",
+      "significance": {
+        "level": 1,
+        "review_status": "official_heritage_and_state_archive_independently_checked"
+      },
+      "colonial_profit": null,
+      "editorial_status": "published_with_source_and_geographic_limits",
+      "position_type": "modern_named_site_reference_only",
+      "research_event_id": "ENG1537-ASKE-YORK-CASTLE-EXECUTION",
+      "economic_fields": null,
+      "geographic_rule": "domestic_royal_execution_not_new_territory",
+      "cartographic_rule": "No castle-shaped control polygon or claimed exact gallows coordinate",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "coordinate_role": "modern_registered_historic_castle_location_not_execution_gallows",
+      "historical_point_verified": false,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2000,6 +2041,42 @@
       "kind": "official_heritage_modern_grid_reference",
       "evidence_read_level": "official online heritage record read",
       "precision_warning": "NGR denotes modern protected historic site; no verified Tudor exact fort outline"
+    },
+    {
+      "id": "ENG-ASKE-ENGLISH-HERITAGE-CLIFFORD-1537",
+      "title": "History of Clifford's Tower: Robert Aske hanged at York Castle in 1537",
+      "publisher": "English Heritage",
+      "url": "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/history-and-stories/history/",
+      "kind": "official_heritage_history",
+      "evidence_read_level": "Clifford's Tower called castle dungeon; 1537 Robert Aske hanged on its height; citing 1537 Letters and Papers",
+      "precision_warning": "Modern preserved tower location not original gallows coordinate"
+    },
+    {
+      "id": "ENG-ASKE-NATIONAL-ARCHIVES-DISSOLUTION",
+      "title": "Chronicles of the Dissolution: Robert Aske hanged in chains from York Castle battlements",
+      "publisher": "The National Archives (UK)",
+      "url": "https://cdn.nationalarchives.gov.uk/documents/education/chronicles-of-dissolution-transcript.pdf",
+      "kind": "national_archives_scholarly_transcription",
+      "evidence_read_level": "Aske arrested and accused of treason; royal repression and execution at York Castle",
+      "precision_warning": "Exact part of battlements where he was executed not independently georeferenced"
+    },
+    {
+      "id": "ENG-ASKE-YORK-HER-CLIFFORD-REFERENCE",
+      "title": "Clifford's Tower official monument location SE 6046 5146",
+      "publisher": "City of York Historic Environment Record",
+      "url": "https://her.york.gov.uk/Monument/MYO1748",
+      "kind": "official_local_heritage_geolocation",
+      "evidence_read_level": "Medieval York Castle keep survives at registered modern location, grid reference SE6046 5146",
+      "precision_warning": "Tower monument, not sixteenth-century scaffold survey"
+    },
+    {
+      "id": "ENG-ASKE-1537-DATED-STUDY",
+      "title": "The Pilgrimage of Grace, 1536–1537 and the Exeter Conspiracy, 1538: Aske's execution 12 July 1537",
+      "publisher": "Historical study digitized by Project Gutenberg",
+      "url": "https://www.gutenberg.org/files/78639/78639-h/78639-h.htm",
+      "kind": "published_historical_research_with_contemporary_citations",
+      "evidence_read_level": "Identifies Thursday 12 July 1537 as date of Robert Aske's execution at York",
+      "precision_warning": "Secondary historical reconstruction; English Heritage separately supports year and tower"
     }
   ],
   "routes": [],
