@@ -22,6 +22,8 @@ on:
       - "scripts/test_snake_e_01_drake_sidney_supplement.js"
       - "scripts/test_frobisher_drake_stories_1576_1580.js"
       - "scripts/browser_frobisher_drake_stories.py"
+      - "scripts/browser_snake_e_36_39_stories.py"
+      - "scripts/test_snake_e03_stories.py"
       - "data/atlas-1580-1589.json"
       - "scripts/browser_drake_sidney_frobisher_stories.py"
       - "scripts/browser_munster_essex_stories.py"
@@ -73,6 +75,7 @@ jobs:
           node scripts/test_drake_sidney_frobisher_major_stories.js
           node scripts/test_snake_e_01_drake_sidney_supplement.js
           node scripts/test_frobisher_drake_stories_1576_1580.js
+          python3 scripts/test_snake_e03_stories.py
           node scripts/test_first_group_history_stories.js
           node scripts/test_tournai_surrey_major_stories.js
           node scripts/test_scots_calais_stories.js
@@ -93,6 +96,7 @@ jobs:
           python scripts/browser_munster_essex_stories.py
           python scripts/browser_drake_sidney_frobisher_stories.py
           python scripts/browser_frobisher_drake_stories.py
+          python scripts/browser_snake_e_36_39_stories.py
       - name: Keep screenshots for review
         if: always()
         uses: actions/upload-artifact@v4
@@ -111,3 +115,4 @@ jobs:
             ireland-1569-1575-browser-results/
             drake-sidney-frobisher-browser-results/
             frobisher-drake-browser-results/
+            snake-e-36-39-browser-results/
