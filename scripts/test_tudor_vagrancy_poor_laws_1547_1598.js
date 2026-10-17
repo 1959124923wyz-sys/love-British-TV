@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const a=read('data/atlas-1540-1549.json'),b=read('data/atlas-1570-1579.json'),c=read('data/atlas-1590-1599.json');
+const idx=read('data/stories/index.json').stories,m=idx.find(x=>x.id==='tudor-vagrancy-poor-law-racial-exclusion-1547-1598');
+assert(m&&m.status==='published'&&idx.length>=33);
+const st=read(m.file),prose=st.sections.flatMap(s=>s.paragraphs).join('');
+assert(st.id===m.id&&st.sections.length>=10&&prose.length>=3400);
+assert(st.sources.length>=10&&st.sources.every(x=>x.url.startsWith('https://')&&x.access));
+assert.deepEqual(new Set(m.event_ids),new Set(st.related_event_ids));
+const eventIds=['DOM1547-VAGABONDS-ACT-FORCED-LABOUR','DOM1572-VAGABONDS-RELIEF-ACT','DOM1596-ELIZABETH-AFRICANS-REMOVAL-ORDER','DOM1598-ELIZABETH-POOR-RELIEF-ACT','DOM1598-ELIZABETH-ROGUES-PUNISHMENT-ACT'];
+assert.deepEqual(m.event_ids,eventIds);
+const events=new Map([...a.events,...b.events,...c.events].map(e=>[e.id,e]));
+const links=[...prose.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]\n]+\]\]/g)].map(x=>x[1]);
+assert(links.length>=eventIds.length&&eventIds.every(id=>links.includes(id)));
+const keys=new Set(st.sources.map(x=>x.id));assert(st.sections.every(x=>x.paragraphs.length>=3&&x.source_keys.every(k=>keys.has(k))));
+for(const id of eventIds){const e=events.get(id);assert(e,id);
+ assert.equal(e.lat,null);assert.equal(e.lng,null);
+ assert.equal(e.actual_English_territory_created,false);
+ assert.equal(e.actual_English_land_area_sqkm,null);
+ assert.equal(e.colonial_profit,null);
+ assert(e.source_ids.length>=1);
+ const sourceSet=new Set((e.year===1547?a:e.year===1572?b:c).sources.map(x=>x.id));
+ assert(e.source_ids.every(k=>sourceSet.has(k)),id+' source unresolved');
+}
+const letter=events.get('DOM1596-ELIZABETH-AFRICANS-REMOVAL-ORDER');
+assert(letter.description.includes('十名')&&letter.description.includes('不能直接证明'));
+assert(events.get('DOM1598-ELIZABETH-POOR-RELIEF-ACT').description.includes('不能仅据法令'));
+assert(events.get('DOM1572-VAGABONDS-RELIEF-ACT').description.includes('无法据此推出'));
+assert(prose.includes('两年役使')&&prose.includes('无法')&&prose.includes('命令不能证明十人已经全部'));
+assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);assert.equal(c.colonial_polygons.length,0);
+console.log('PASS Tudor vagrancy/poor laws + 1596 racialized exclusion: 10-section sourced narrative, 4 unlocated statutes/orders, 0 invented forced crossings or colonial polygons');
