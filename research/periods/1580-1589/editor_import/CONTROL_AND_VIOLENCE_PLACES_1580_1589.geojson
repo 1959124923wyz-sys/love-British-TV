@@ -1,0 +1,446 @@
+{
+  "type": "FeatureCollection",
+  "schema": "ch10_1580s_map_editor_sites_v1",
+  "feature_count": 16,
+  "metadata": {
+    "crs": "EPSG:4326",
+    "point_geometry_only": true,
+    "source_provenance": "OPW/NMI/NPS historic heritage and OSM/TGN modern placenames per point; old battle line cannot be inferred from modern map points",
+    "real_1580s_English_occupation_polygons": 0,
+    "license_note": "Mapcarta links give OSM derived modern coordinate reference; respect ODbL attribution when reusing underlying OSM data"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ch10-site-loughrea",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5649,
+          53.1966
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-loughrea",
+        "name": "洛赫雷：1580地方伯克军队夺回驻堡",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1580-loughrea-recapture"
+        ],
+        "source_geography_url": "https://github.com/1959124923wyz-sys/love-British-TV/blob/research/ch09-1570-1579-coercion-plunder-map-20261014/research/periods/1570-1579/editor_import/CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson",
+        "geo_precision": "modern_city_centre_from_ch9_not_castle_or_battle_ground",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-dun-an-oir",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.41424,
+          52.19088
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-dun-an-oir",
+        "name": "斯梅里克 Dún an Óir：1580年投降屠杀遗址",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1580-smerwick"
+        ],
+        "source_geography_url": "https://mapcarta.com/N12125205900",
+        "geo_precision": "modern_fort_archaeological_anchor_not_locations_of_all_deaths",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-carrigafoyle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.49403,
+          52.5699
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-carrigafoyle",
+        "name": "卡里加福伊尔城堡：1580年英军攻城杀害守军",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1580-carrigafoyle-massacre"
+        ],
+        "source_geography_url": "https://mapcarta.com/W772414232",
+        "geo_precision": "extant_15c_castle_location_from_OSM_not_1580_battle_line",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-askeaton",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.973985,
+          52.600449
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-askeaton",
+        "name": "阿斯基顿德斯蒙德城堡：1580年守军撤离",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1580-askeaton-abandonment"
+        ],
+        "source_geography_url": "https://excavations.ie/report/2022/Limerick/0032387/",
+        "geo_precision": "NMI_excavation_ITM_converted_coordinates_castle_point_not_lordship_polygon",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-rathkeale",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9381,
+          52.5244
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-rathkeale",
+        "name": "拉斯基尔：1580年英军佩勒姆与奥蒙德会师",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1580-pelham-ormond-rathkeale"
+        ],
+        "source_geography_url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=&place=&subjectid=1042985",
+        "geo_precision": "Getty_TGN_modern_inhabited_place_centre_not_exact_army_meeting",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-plymouth",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.1424,
+          50.3714
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-plymouth",
+        "name": "普利茅斯：德雷克1580年返航关联点",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1580-drake-plymouth"
+        ],
+        "source_geography_url": "https://mapcarta.com/Plymouth_%28England%29",
+        "geo_precision": "modern_city_not_exact_1580_vessel_berth",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-aquascogoc-marker",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.631133,
+          35.54685
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-aquascogoc-marker",
+        "name": "阿奎斯科科克遭焚地区：北卡州历史标牌",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1585-aquascogoc-arson"
+        ],
+        "source_geography_url": "https://www.hmdb.org/m.asp?m=299657",
+        "geo_precision": "NCDNCR_B-72_modern_marker_in_Belhaven_vicinity_original_1585_village_not_located",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-fort-raleigh",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.70896,
+          35.936944
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-fort-raleigh",
+        "name": "罗阿诺克岛殖民驻点：现代Fort Raleigh国家遗址",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1585-roanoke-military-post"
+        ],
+        "source_geography_url": "https://www.nps.gov/fora/planyourvisit/directions.htm",
+        "geo_precision": "NPS_current_visitor_center_near_colonial_site_not_1585_fort_wall",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-cidade-velha",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -23.6048,
+          14.9159
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-cidade-velha",
+        "name": "圣地亚哥岛旧城：德雷克1585年葡属港口突袭",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1585-drake-santiago"
+        ],
+        "source_geography_url": "https://mapcarta.com/Cidade_Velha",
+        "geo_precision": "modern_port_town_reference_not_exact_1585_raid_area",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-santo-domingo",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.95,
+          18.47
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-santo-domingo",
+        "name": "圣多明各：1586年劫掠与赎金",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1586-drake-santo-domingo"
+        ],
+        "source_geography_url": "https://wiki.openstreetmap.org/wiki/Santo_Domingo",
+        "geo_precision": "modern_city_reference_not_1586_destroyed_parcels",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-cartagena",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5383,
+          10.419
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-cartagena",
+        "name": "卡塔赫纳：1586年劫掠、赎金、掳带人口证词",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1586-drake-cartagena"
+        ],
+        "source_geography_url": "https://wiki.openstreetmap.org/wiki/Cartagena",
+        "geo_precision": "modern_city_reference_not_1586_walled_city_footprint",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-st-augustine",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3145,
+          29.8947
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-st-augustine",
+        "name": "圣奥古斯丁：1586年英军纵火",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1586-drake-st-augustine"
+        ],
+        "source_geography_url": "https://mapcarta.com/St._Augustine",
+        "geo_precision": "modern_city_reference_not_later_1672_castillo_fort",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-cadiz",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2929,
+          36.5297
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-cadiz",
+        "name": "加的斯：1587年英军港湾袭击",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1587-drake-cadiz-attack"
+        ],
+        "source_geography_url": "https://mapcarta.com/C%C3%A1diz",
+        "geo_precision": "modern_city_reference_not_1587_shipwreck_geolocation",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-cabo-san-lucas",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.89436,
+          22.87656
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-cabo-san-lucas",
+        "name": "圣卢卡斯角：1587年圣安娜号遭英军夺取海域参考",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1587-cavendish-santa-ana"
+        ],
+        "source_geography_url": "https://mapcarta.com/20317066",
+        "geo_precision": "modern_cape_reference_not_ship_interception_GPS",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-a-coruna",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.403482,
+          43.360646
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-a-coruna",
+        "name": "拉科鲁尼亚：1589年英军劫掠与围城",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1589-coruna-eng-siege"
+        ],
+        "source_geography_url": "https://wiki.openstreetmap.org/wiki/A_Coru%C3%B1a",
+        "geo_precision": "modern_city_reference_not_1589_pescaderia_attack_line",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-site-vigo",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7247,
+          42.2377
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-site-vigo",
+        "name": "维戈：1589年英军纵火劫掠",
+        "kind": "modern_site_or_gazetteer_reference",
+        "event_ids": [
+          "ch10-1589-vigo-eng-sacking"
+        ],
+        "source_geography_url": "https://mapcarta.com/Vigo",
+        "geo_precision": "modern_city_reference_not_1589_burnt_house_locations",
+        "geography_type": "associated_modern_site_or_city_not_proven_exact_campaign_point",
+        "historical_control_boundary_confirmed": false,
+        "actual_English_territory_created": false,
+        "polygon_fill_authorized": false,
+        "area_sqkm": null,
+        "location_accuracy_not_violence_accuracy": true
+      }
+    }
+  ]
+}

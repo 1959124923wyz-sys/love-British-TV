@@ -1,0 +1,919 @@
+{
+  "schema": "ch10_violence_events_research_v1",
+  "period": [
+    1580,
+    1589
+  ],
+  "model": "year_of_act_not_year_of_printed_map",
+  "total": 30,
+  "events": [
+    {
+      "id": "ch10-1580-loughrea-recapture",
+      "year": 1580,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "洛赫雷夜袭，地方军队夺回英军驻镇",
+      "description": "爱尔兰的伯克家族军队夜袭洛赫雷，击败当地英军驻守，并释放遭扣押人员。",
+      "icon_code": "RES",
+      "kind": "local_garrison_loss",
+      "place": "Loughrea",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S04"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Loughrea",
+        "reason": "《四大师编年史》M1580.26只核至1580年，具体月日未考证"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-pelham-ormond-rathkeale",
+      "year": 1580,
+      "month_or_day": "03",
+      "date_precision": "month",
+      "title": "佩勒姆与奥蒙德会师，进军焚毁芒斯特聚落",
+      "description": "1580年3月，英王军政官佩勒姆与奥蒙德伯爵在拉斯基尔会师，随后进攻利默里克及凯里地区，摧毁聚落和粮食供应。",
+      "icon_code": "WAR",
+      "kind": "scorched_earth_march",
+      "place": "Rathkeale",
+      "region": "County Limerick, Ireland",
+      "source_ids": [
+        "C10-S53",
+        "C10-S54"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Rathkeale",
+        "reason": "行军方向确知但各村遭焚GPS及全年毁粮范围未审核"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-carrigafoyle-massacre",
+      "year": 1580,
+      "month_or_day": "03",
+      "date_precision": "March 1580, exact dates require Old Style calendar audit",
+      "title": "英军攻破卡里加福伊尔城堡，处死残存守军",
+      "description": "佩勒姆率英军炮击卡里加福伊尔，城墙倒塌后守军遭杀戮；幸存者被处死。爱尔兰国家遗产局记载守军中有约50名爱尔兰人及16名西班牙盟友。",
+      "icon_code": "REP",
+      "kind": "siege_and_killing_after_capture",
+      "place": "Carrigafoyle Castle",
+      "region": "County Kerry, Ireland",
+      "source_ids": [
+        "C10-S52",
+        "C10-S53"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Carrigafoyle Castle",
+        "reason": "16世纪围城发生于现存城堡，现代建筑坐标可作遗址锚点，伤亡总数未知"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-askeaton-abandonment",
+      "year": 1580,
+      "month_or_day": "04",
+      "date_precision": "approx_month",
+      "title": "卡里加福伊尔失守后，阿斯基顿等德斯蒙德堡垒被弃",
+      "description": "卡里加福伊尔被英军攻破后，附近的德斯蒙德守军放弃阿斯基顿及其他若干要塞，转入流动作战。",
+      "icon_code": "RES",
+      "kind": "garrison_withdrawal",
+      "place": "Askeaton Castle",
+      "region": "County Limerick, Ireland",
+      "source_ids": [
+        "C10-S52",
+        "C10-S53",
+        "C10-S64"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Askeaton Castle",
+        "reason": "旧时撤堡与新军驻堡的分期需逐堡再考证"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-pelham-second-kerry",
+      "year": 1580,
+      "month_or_day": "06",
+      "date_precision": "month",
+      "title": "佩勒姆组织第二轮凯里沿岸军事破坏",
+      "description": "1580年6月英军在凯里沿岸发动第二轮攻势，同时封锁海上补给，毁坏当地聚落和农业生产设施。",
+      "icon_code": "WAR",
+      "kind": "coastal_campaign_and_devastation",
+      "place": "Kerry Coast",
+      "region": "County Kerry, Ireland",
+      "source_ids": [
+        "C10-S53",
+        "C10-S54"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Kerry Coast",
+        "reason": "仅凯里沿岸地区已证；全部行军路线与被毁地点不应凭空连成面"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-drake-plymouth",
+      "year": 1580,
+      "month_or_day": "09",
+      "date_precision": "month",
+      "title": "德雷克环球航行返英，1579年劫获财物进入本土",
+      "description": "德雷克的环球航行船队于1580年9月返抵普利茅斯。此前从西班牙船只夺取的货物随船返回，具体分配与王室收益另须核账。",
+      "icon_code": "ECO",
+      "kind": "earlier_prize_return",
+      "place": "Plymouth",
+      "region": "England",
+      "source_ids": [
+        "C10-S30"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Plymouth",
+        "reason": "1579海上夺船不应重复列为1580发生"
+      },
+      "significance": {
+        "level": 1,
+        "rationale": "跨年代经济时间联系",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1580-smerwick",
+      "year": 1580,
+      "month_or_day": "11-10",
+      "date_precision": "day",
+      "title": "斯梅里克投降后约六百人遭英军杀害",
+      "description": "英军围攻凯里郡Dún an Óir后，投降的西班牙、意大利及爱尔兰人员遭到处决和杀戮，爱尔兰国家遗产机构记载约六百名死者。",
+      "icon_code": "REP",
+      "kind": "massacre",
+      "place": "Dún an Óir",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S01",
+        "C10-S02",
+        "C10-S03",
+        "C10-S56"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Dún an Óir",
+        "reason": "现代古迹属于遗址参考，不代表围城准确军事围界"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1582-munster-starvation-campaign",
+      "year": 1582,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "英军毁粮夺畜与长期战争促成芒斯特饥荒",
+      "description": "持续数年的军事扫荡毁坏村舍、农田与牲畜，芒斯特出现严重粮荒和人口流离。双方战事与强制征粮共同加剧灾难。",
+      "icon_code": "FAM",
+      "kind": "starvation_and_crop_destruction",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S54",
+        "C10-S55"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Munster",
+        "reason": "独立学术论文明确确认广泛毁坏与人口下降，不能拿当今省界涂死者分布"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1582-warham-stleger-famine-report",
+      "year": 1582,
+      "month_or_day": "04",
+      "date_precision": "month",
+      "title": "英军官员报告芒斯特严重饥荒与人口死亡",
+      "description": "1582年英方官员沃勒姆·圣莱杰向政府报告芒斯特的严重饥荒及疫病死亡。研究者将其所述六个月约三万人死亡视为缺乏独立印证的上限估计。",
+      "icon_code": "FAM",
+      "kind": "contemporaneous_famine_mortality_report",
+      "place": "Munster Province",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S54",
+        "C10-S55"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Munster Province",
+        "reason": "报告覆盖多个地点和六个月时间，不以现代芒斯特省中心当死难者确切位置"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1582-barkley-crops-hostages",
+      "year": 1582,
+      "month_or_day": "09-25",
+      "date_precision": "day",
+      "title": "芒斯特英军献策毁粮夺畜并抓捕家眷",
+      "description": "英王官员爱德华·巴克利在给政府的平乱建议中提出夺取粮食、牲畜，并扣押反抗者家眷以逼迫其作战。",
+      "icon_code": "LAB",
+      "kind": "coercive_policy_proposal",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S34",
+        "C10-S33"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Munster",
+        "reason": "这是明确成文政策主张，不等于每一处都已经实行"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1583-ormond-starving-army",
+      "year": 1583,
+      "month_or_day": "04",
+      "date_precision": "month",
+      "title": "奥蒙德向英王报告芒斯特军队补给匮乏",
+      "description": "战争后期奥蒙德向伊丽莎白一世报告饥荒与军队补给短缺，驻军甚至面临无法获取常规食物的局面。",
+      "icon_code": "FAM",
+      "kind": "military_famine_report",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S54"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_site_or_region_only",
+        "site_label": "Munster",
+        "reason": "仅根据McCormack已列英军SP63/101/40原档号及分析，不编造精确受灾地点"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "有政府遗产记录或同行评议研究证实的战争暴力与社会后果",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1583-desmond-death",
+      "year": 1583,
+      "month_or_day": "11-11",
+      "date_precision": "day",
+      "title": "德斯蒙德伯爵被俘后斩首，起义阶段结束",
+      "description": "杰拉尔德·菲茨杰拉德在芒斯特被地方武装发现，遭俘虏后斩首。此前持续数年的战争伴随农业破坏与饥荒。",
+      "icon_code": "WAR",
+      "kind": "rebellion_suppression",
+      "place": "Glanageenty",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S42",
+        "C10-S05"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Glanageenty",
+        "reason": "编年原文M1583.2；林谷具体历史处决地点仍需考证"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1584-desmond-survey-start",
+      "year": 1584,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "德斯蒙德战后土地清查展开",
+      "description": "英王委员会开始清查芒斯特被没收的庄园，为向英格兰承领人分配土地作准备。",
+      "icon_code": "TER",
+      "kind": "confiscation_land_survey",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S05",
+        "C10-S21"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Munster",
+        "reason": "地产司法权及地界须分别审定"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1585-roanoke-military-post",
+      "year": 1585,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "英军在罗阿诺克建立军事据点",
+      "description": "英格兰远征队在罗阿诺克岛设立军营，计划以此展开殖民探索和对西班牙航运的私掠。",
+      "icon_code": "TER",
+      "kind": "temporary_military_colony",
+      "place": "Roanoke Island",
+      "region": "North America",
+      "source_ids": [
+        "C10-S13",
+        "C10-S15"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Roanoke Island",
+        "reason": "本地原住民主权、殖民军营与全岛控制必须分开"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1585-aquascogoc-arson",
+      "year": 1585,
+      "month_or_day": "07-18",
+      "date_precision": "day per US North Carolina historic marker B-72",
+      "title": "英军焚毁阿奎斯科科克村庄及庄稼",
+      "description": "格伦维尔率领英军因丢失一只银杯而攻击阿尔冈昆人的阿奎斯科科克村庄，焚烧住宅、毁坏农作物。",
+      "icon_code": "REP",
+      "kind": "burning_indigenous_village",
+      "place": "Aquascogoc",
+      "region": "North America",
+      "source_ids": [
+        "C10-S23",
+        "C10-S61"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Aquascogoc",
+        "reason": "北卡罗来纳州历史标牌标注村庄在Belhaven附近；标牌现代坐标与已焚毁历史村落原址不得等同"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1585-drake-santiago",
+      "year": 1585,
+      "month_or_day": "11",
+      "date_precision": "month",
+      "title": "德雷克舰队袭击佛得角圣地亚哥",
+      "description": "德雷克的舰队袭击葡萄牙控制的佛得角圣地亚哥港镇，掠夺并破坏当地设施，随后横渡大西洋。",
+      "icon_code": "WAR",
+      "kind": "sack_raid",
+      "place": "Cidade Velha / Santiago",
+      "region": "Cape Verde",
+      "source_ids": [
+        "C10-S26",
+        "C10-S27",
+        "C10-S35"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Cidade Velha / Santiago",
+        "reason": "原地图仅航程线示意，非精确航迹"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-drake-displaced-captives",
+      "year": 1586,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "德雷克舰队掳带被奴役者及原住民",
+      "description": "多份1586年西班牙人证词记载，英军在加勒比袭击后把非洲人、穆斯林桨手及美洲原住民带上舰队。其身份、人数及最终去向存在分歧。",
+      "icon_code": "SLV",
+      "kind": "captives_forced_transport",
+      "place": "Caribbean",
+      "region": "Atlantic",
+      "source_ids": [
+        "C10-S25",
+        "C10-S26"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Caribbean",
+        "reason": "报告所称150/200/250/300并非独立可相加的数字; 北卡是否有人被留下仍未证"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-munster-allotment-map",
+      "year": 1586,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "芒斯特没收土地分配图绘制",
+      "description": "英国政府测绘并准备分配没收的芒斯特土地。1586年6月地图以红线标示向英格兰申请者分配的庄园位置。",
+      "icon_code": "TER",
+      "kind": "land_allotment_plan",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S05",
+        "C10-S08",
+        "C10-S31"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Munster",
+        "reason": "1586申请边界不是全年实际控制区; 原地图TNA MPF1/273"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-drake-santo-domingo",
+      "year": 1586,
+      "month_or_day": "01",
+      "date_precision": "month",
+      "title": "德雷克占领并勒索圣多明各",
+      "description": "德雷克英军攻取西属圣多明各，劫取财物并索取赎金后撤退。学术研究记载赎金约二万五千杜卡特。",
+      "icon_code": "ECO",
+      "kind": "ransom_privateering",
+      "place": "Santo Domingo",
+      "region": "Hispaniola",
+      "source_ids": [
+        "C10-S09",
+        "C10-S10",
+        "C10-S41"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Santo Domingo",
+        "reason": "金额应引用C10-S41新补充来源；只算谈判/记载赎金非净利润"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-drake-cartagena",
+      "year": 1586,
+      "month_or_day": "02",
+      "date_precision": "month",
+      "title": "德雷克攻占卡塔赫纳，索取巨额赎金",
+      "description": "英军攻入卡塔赫纳，掠夺并破坏部分城区。西班牙城市历史博物馆记载，该市交付十一万杜卡特后，德雷克舰队停止进一步破坏并撤离。",
+      "icon_code": "ECO",
+      "kind": "ransom_sack",
+      "place": "Cartagena de Indias",
+      "region": "New Granada",
+      "source_ids": [
+        "C10-S11",
+        "C10-S12",
+        "C10-S27"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Cartagena de Indias",
+        "reason": "城区约6周,具体开始结束日期可持续考证; 不当成英国长期殖民地"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-drake-st-augustine",
+      "year": 1586,
+      "month_or_day": "06",
+      "date_precision": "month",
+      "title": "德雷克舰队焚毁圣奥古斯丁",
+      "description": "德雷克的英军袭击佛罗里达西班牙城镇圣奥古斯丁，夺取财物并焚毁木制防御工事和城区，随后继续北航。",
+      "icon_code": "WAR",
+      "kind": "town_sacking_burning",
+      "place": "St. Augustine",
+      "region": "Florida",
+      "source_ids": [
+        "C10-S24",
+        "C10-S29",
+        "C10-S27"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "St. Augustine",
+        "reason": "现代Castillo石堡建于1672，不得用于1586城墙边界"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-wingina-killed",
+      "year": 1586,
+      "month_or_day": "06",
+      "date_precision": "month",
+      "title": "罗阿诺克英军杀害原住民首领温吉纳",
+      "description": "罗阿诺克英军总督拉尔夫·莱恩在双方关系恶化后，派人杀害当地首领温吉纳（亦称佩米萨潘）。英国据点随后撤离。",
+      "icon_code": "REP",
+      "kind": "indigenous_leader_killing",
+      "place": "Roanoke region",
+      "region": "North America",
+      "source_ids": [
+        "C10-S13",
+        "C10-S15"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Roanoke region",
+        "reason": "具体行凶点未经定位,勿误图为全岛英属"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1586-june27-munster-plantation-articles",
+      "year": 1586,
+      "month_or_day": "06-27",
+      "date_precision": "day",
+      "title": "英王批准芒斯特殖民地契：分配庄园、设租并排除本地爱尔兰人的承领权",
+      "description": "1586年6月27日，英王在威斯敏斯特批准芒斯特土地殖民安排，将没收土地划成数千英亩的庄园，规定英格兰承领人地租与定居义务，并限制向非英裔爱尔兰人转授土地。",
+      "icon_code": "TER",
+      "kind": "land_forfeiture_plantation_discriminatory_contract",
+      "place": "Munster, Crown instruments signed Westminster",
+      "region": "Ireland / England",
+      "source_ids": [
+        "C10-S69",
+        "C10-S66"
+      ],
+      "significance": {
+        "level": 3,
+        "rationale": "同时代英国王室明确地租与本地土地排斥制度，殖民法律与财政剥削机制的基本依据",
+        "review_status": "research_editorial_candidate"
+      },
+      "geography": {
+        "feature_type": "no_valid_georeferenced_historic_grant_polygon",
+        "geometry": null,
+        "geo_precision": "archival_region_no_surveyed_grant_outline",
+        "site_label": "Munster",
+        "reason": "1586订于威斯敏斯特而政策对象在芒斯特，没有经GIS配准的16世纪指定庄园界"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1587-croatoan-friendly-attack",
+      "year": 1587,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "罗阿诺克殖民者误袭友好克罗阿坦人",
+      "description": "约翰·怀特率领的殖民者为报复一次袭击，错误地袭击了原本友好的克罗阿坦社区。",
+      "icon_code": "REP",
+      "kind": "indigenous_allied_community_attacked",
+      "place": "Roanoke mainland",
+      "region": "North America",
+      "source_ids": [
+        "C10-S14"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Roanoke mainland",
+        "reason": "现代部落地名与具体战斗点不能混同"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1587-drake-cadiz-attack",
+      "year": 1587,
+      "month_or_day": "04-29",
+      "date_precision": "day",
+      "title": "德雷克袭击加的斯港，摧毁商船",
+      "description": "德雷克舰队袭击西班牙加的斯港湾。安达卢西亚官方考古研究确认，一艘热那亚商船在4月29日攻击中沉没。",
+      "icon_code": "WAR",
+      "kind": "port_raid",
+      "place": "Cádiz Bay",
+      "region": "Spain",
+      "source_ids": [
+        "C10-S20",
+        "C10-S36"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Cádiz Bay",
+        "reason": "可确认特定船只受损但总计被毁船舶数待原档; 不得将加的斯涂英王主权"
+      },
+      "significance": {
+        "level": 2,
+        "rationale": "对军事占领、殖民制度或地区冲突具有可证影响",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1587-cavendish-santa-ana",
+      "year": 1587,
+      "month_or_day": "11",
+      "date_precision": "month",
+      "title": "卡文迪什在下加利福尼亚劫获马尼拉大帆船",
+      "description": "英国私掠船在下加利福尼亚海域夺取西班牙商船圣安娜号，掠得船载财物。英国船员和西班牙方面的证词均有历史汇编，实际战利品清单尚未独立核账。",
+      "icon_code": "ECO",
+      "kind": "maritime_privateer_prize",
+      "place": "Cabo San Lucas waters",
+      "region": "New Spain",
+      "source_ids": [
+        "C10-S19"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Cabo San Lucas waters",
+        "reason": "不臆造海上精确拦截经纬度,不录入未审财物总数"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1588-munster-only35-undertakers",
+      "year": 1588,
+      "month_or_day": null,
+      "date_precision": "year",
+      "title": "芒斯特殖民授地实际进度远少于最初计划",
+      "description": "芒斯特殖民计划1586年曾预计86名英格兰承领人，大学研究汇总称至1588年首批实际获得土地的承领人约35名。法律授地与真正到地定居之间仍有落差。",
+      "icon_code": "TER",
+      "kind": "underfilled_colonial_grant_programme",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S70",
+        "C10-S69"
+      ],
+      "significance": {
+        "level": 2,
+        "rationale": "有数字可考的实际殖民实施不足，防止把计划中的每宗土地直接画为1588实际英军控制",
+        "review_status": "research_editorial_candidate"
+      },
+      "geography": {
+        "feature_type": "no_valid_georeferenced_historic_grant_polygon",
+        "geometry": null,
+        "geo_precision": "archival_region_no_surveyed_grant_outline",
+        "site_label": "Munster",
+        "reason": "1586订于威斯敏斯特而政策对象在芒斯特，没有经GIS配准的16世纪指定庄园界"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "year": 1589,
+      "month_or_day": "05",
+      "date_precision": "month",
+      "id": "ch10-1589-coruna-eng-siege",
+      "title": "英军进攻拉科鲁尼亚，劫掠并焚烧渔民区",
+      "description": "德雷克与诺里斯率领英军围攻拉科鲁尼亚，焚毁、劫掠城外渔民区。守城军民击退了英军对主城的进攻，舰队随后撤退。",
+      "icon_code": "WAR",
+      "kind": "sacking_and_failed_siege",
+      "place": "A Coruña Pescadería",
+      "region": "Galicia Spain",
+      "source_ids": [
+        "C10-S44",
+        "C10-S45",
+        "C10-S46",
+        "C10-S50"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_city_region_only",
+        "site_label": "A Coruña Pescadería",
+        "reason": "已核现代城市，但1589遭毁的具体每栋建筑不具古GPS"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有同时代城市教区文字与官方研究支持的英军攻掠及平民财产损毁",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "id": "ch10-1589-jobson-munster-map",
+      "year": 1589,
+      "month_or_day": "05-30",
+      "date_precision": "day",
+      "title": "乔布森呈交芒斯特殖民庄园地图",
+      "description": "测绘员弗朗西斯·乔布森呈交芒斯特地图，标出罗利、斯宾塞等英格兰殖民承领人的获授土地，也标出了仍存在的爱尔兰地方领主区。",
+      "icon_code": "TER",
+      "kind": "land_grants_cartography",
+      "place": "Munster",
+      "region": "Ireland",
+      "source_ids": [
+        "C10-S06",
+        "C10-S07",
+        "C10-S08"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "unlocated_exact_site",
+        "site_label": "Munster",
+        "reason": "TCD MS1209/36版CC BY 4.0; 不把所有田庄标成已经实际驱逐当地住民"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有可证具体的暴力、掳带人口、掠夺或殖民土地制度改变",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    },
+    {
+      "year": 1589,
+      "month_or_day": "06",
+      "date_precision": "month",
+      "id": "ch10-1589-vigo-eng-sacking",
+      "title": "德雷克英军袭击维戈，纵火焚烧民居和教堂",
+      "description": "德雷克率领的英军进入维戈，掠夺并烧毁民居、仓库、船只和教堂。当地堂区神父留下了损毁情况的记述。",
+      "icon_code": "REP",
+      "kind": "town_sacking_burning",
+      "place": "Vigo",
+      "region": "Galicia Spain",
+      "source_ids": [
+        "C10-S50",
+        "C10-S51",
+        "C10-S47"
+      ],
+      "geography": {
+        "feature_type": "none_until_site_provenance",
+        "geometry": null,
+        "geo_precision": "modern_city_region_only",
+        "site_label": "Vigo",
+        "reason": "已核现代城市，但1589遭毁的具体每栋建筑不具古GPS"
+      },
+      "significance": {
+        "level": 3,
+        "rationale": "有同时代城市教区文字与官方研究支持的英军攻掠及平民财产损毁",
+        "review_status": "research_editorial_candidate"
+      },
+      "inclusion": "candidate_not_in_main",
+      "foreign_sovereignty_does_not_flip": true
+    }
+  ],
+  "provenance_coverage": "Titles use modern normalised placenames; original source dates and places in registry; no synthetic coastal tracks or occupied area polygons."
+}
