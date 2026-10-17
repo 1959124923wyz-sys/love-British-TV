@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),root=path.resolve(__dirname,'..');
 const get=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const cases=[
- ['laois-offaly-crown-plantation-martial-law-1547-1566','phase-8','1556年11月','martial-edwards'],
+ ['laois-offaly-crown-plantation-martial-law-1547-1566','phase-8','同年11月爱尔兰行政机关','martial-edwards'],
  ['ards-clandeboye-essex-rathlin-colonisation-1571-1575','phase-5','1573年12月30日','edwards-martial-systems'],
  ['sidney-pale-cess-connacht-military-campaign-1575-1578','phase-6','弗朗西斯·阿加德','edwards-martial-systems'],
  ['bingham-connacht-military-exactions-1586-1591','phase-12','1591年10月','edwards-martial-systems']
