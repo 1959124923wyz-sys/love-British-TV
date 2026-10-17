@@ -114,7 +114,7 @@ assert.equal(placeMap.get(frenchId).status,'French_sovereign_counter_fort_not_En
 assert.ok(garrisons.features.find(f=>f.properties.stable_id===frenchId).properties.not_an_English_control_feature);
 for(let y=1540;y<=1549;y++){
  let expected=sixth.events.filter(e=>e.year<=y);
- assert.deepEqual(expected.map(x=>x.id).length,[4,7,12,15,27,36,44,58,74,106][y-1540],y+' event count mismatch');
+ assert.deepEqual(expected.map(x=>x.id).length,[4,7,12,15,27,36,44,59,75,107][y-1540],y+' event count mismatch');
  assert.ok(expected.every(e=>e.year<=y));
 }
 assert.ok(app.includes("fetch('data/atlas-1540-1549.json'"));

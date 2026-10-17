@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),J=p=>JSON.parse(fs.readFileSync(path.joi
 const a=J('data/atlas-1540-1549.json'),b=J('data/atlas-1550-1559.json'),idx=J('data/stories/index.json').stories;
 const reach=J('data/war-front-corridors-1540-1549.geojson').features;
 const all=new Map([...a.events,...b.events].map(x=>[x.id,x]));
-assert.equal(a.events.length,106);assert.equal(a.sources.length,143);
+assert.equal(a.events.length,107);assert.equal(a.sources.length,145);
 assert.equal(b.events.length,39);assert.equal(b.sources.length,67);
 assert.ok(idx.length>=26,'Keep all published stories and four integrated topics');
 for(const [id,start,end,minimum] of [
