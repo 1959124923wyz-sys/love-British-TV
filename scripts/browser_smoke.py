@@ -1115,8 +1115,9 @@ try:
         "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "宾厄姆英王军在布雷夫尼"))
     verify("1590 Breifne territorial devastation is now region-locatable without invented burned villages",
            """document.querySelector('#dossierBody').textContent.includes('布雷夫尼') &&
-              document.querySelector('#dossierBody').textContent.includes('地区') &&
-              !document.querySelector('#dossierBody').textContent.includes('暂无足以绘制精确史实地点')""",driver)
+              !!document.querySelector('#dossierBody [data-story-open="bingham-connacht-military-exactions-1586-1591"]') &&
+              window.atlasStoryBridge?.eventById('1590S-E002')?.lat===54.1167 &&
+              window.atlasStoryBridge?.eventById('1590S-E002')?.lng===-8""",driver)
     verify("1590 must not inherit earlier Drake sack or Munster 1584–89 policy overlay",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0""",driver)
