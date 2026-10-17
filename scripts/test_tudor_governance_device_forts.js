@@ -30,7 +30,7 @@ for(const target of definitions){
  for(const id of target.need)assert(all.has(id),'missing official event '+id);
  console.log('PASS article',target.id,prose.length+' chars',links+' links');
 }
-assert.equal(a.events.length,34);assert.equal(a.sources.length,72);
+assert.equal(a.events.length,44);assert.equal(a.sources.length,88);
 assert.equal(b.events.length,107);assert.equal(b.sources.length,145);
 assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);
 const legal=['1530S-E007','1530S-E009','1530S-E014','1530S-E024','1540S-002','1540S-044'];
