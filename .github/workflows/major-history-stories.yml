@@ -51,6 +51,8 @@ on:
       - "js/history-stories.js"
       - "css/history-stories.css"
       - "scripts/test_major_story_pilot.js"
+      - "scripts/test_snake_f_two_institutional_stories.js"
+      - "scripts/browser_snake_f_institutional_stories.py"
       - "scripts/test_multi_story_entries.js"
       - "scripts/browser_multi_story_entries.py"
       - "scripts/browser_major_story_pilot.py"
@@ -73,6 +75,7 @@ jobs:
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
+          node scripts/test_snake_f_two_institutional_stories.js
           node scripts/test_multi_story_entries.js
           node scripts/test_rut_kildare_major_stories.js
           node scripts/test_tudor_governance_device_forts.js
@@ -95,6 +98,7 @@ jobs:
           pip install selenium
           python -m http.server 8765 &
           python scripts/browser_major_story_pilot.py
+          python scripts/browser_snake_f_institutional_stories.py
           python scripts/browser_multi_story_entries.py
           python scripts/browser_rough_wooing_story.py
           python scripts/browser_first_group_stories.py
@@ -116,6 +120,7 @@ jobs:
           name: major-story-browser-screenshots
           path: |
             story-pilot-browser-results/
+            snake-f-institutional-browser-results/
             multi-story-browser-results/
             rough-wooing-browser-results/
             first-group-major-story-browser-evidence/
