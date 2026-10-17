@@ -1451,6 +1451,39 @@
       "position_type": "modern_named_fort_reference_not_1558_combat_point",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": true
+    },
+    {
+      "id": "DOM1554-EGYPTIANS-ACT-EXCLUSION",
+      "year": 1554,
+      "start_year": 1554,
+      "end_year": 1554,
+      "visible_from": 1554,
+      "date_label": "1554—1555年（玛丽一世与菲利普会期）",
+      "name": "玛丽一世时期进一步处罚被法令划为“Egyptians”的旅行群体",
+      "description": "玛丽一世时期1 & 2 Philip and Mary c.4延续并扩大针对被称作“Egyptians”群体的入境与居留限制，法律对旅行身份和与被归类者一同行动者设定更严厉的后果。学者David Cressy指出执法并不均匀，不能仅凭法律条文推断实际处决人数，或把古代法定称谓视为罗姆人全部真实身份。",
+      "short_description": "玛丽一世时期1 & 2 Philip and Mary c.4延续并扩大针对被称作“Egyptians”群体的入境与居留限制，法律对旅行身份和与被归类者一同行动者设定更严厉的后果。学者David Cressy指出",
+      "category": "political",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "geography_label": "针对所谓“Egyptians”的英格兰全国立法，非经核实刑场",
+      "geo_precision": "unlocated_statewide_discriminatory_law_no_individual_trial_location",
+      "position_type": "chronology_only_not_map_point",
+      "source_ids": [
+        "DOM-EGY-1554-cressy",
+        "DOM-EGY-1554-morgan"
+      ],
+      "certainty": "academic_statute_date_and_penalty_verified_enforcement_unknown",
+      "significance": {
+        "level": 3,
+        "review_status": "Cambridge_Bristol_UEA_editorial_provenance"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": false
     }
   ],
   "places": [
@@ -2624,6 +2657,26 @@
       "evidence_read_level": "June 1558 O'Mores nearly captured Maryborough, royal garrison led by Francis Cosby counterattacked",
       "precision_warning": "Fort Protector is an inherited modern monument reference, not a reconstructed 1558 siege perimeter",
       "origin": "snakef-batch01-20261017"
+    },
+    {
+      "id": "DOM-EGY-1554-cressy",
+      "title": "David Cressy, Trouble with Gypsies in Early Modern England, Historical Journal 59 (2016)",
+      "publisher": "Cambridge University Press",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/trouble-with-gypsies-in-early-modern-england/D93181E028BCC1C2E2D8962C6B607552",
+      "kind": "peer_reviewed_or_archival_legal_history",
+      "evidence_read_level": "Peer-reviewed journal public abstract; legal change dates and uneven enforcement reviewed",
+      "precision_warning": "Historical legal labels and proposed penalties are not proven ethnicity, individual actual convictions or execution counts",
+      "origin": "institutional_20261017"
+    },
+    {
+      "id": "DOM-EGY-1554-morgan",
+      "title": "John E. Morgan, Counterfeit Egyptians, Romani Studies 26(2), 105–128 (2016)",
+      "publisher": "University of Bristol",
+      "url": "https://research-information.bris.ac.uk/en/publications/counterfeit-egyptians-the-construction-and-implementation-of-a-cr/",
+      "kind": "peer_reviewed_or_archival_legal_history",
+      "evidence_read_level": "Peer-reviewed academic abstract at Bristol; no claim to full article transcription",
+      "precision_warning": "Historical legal labels and proposed penalties are not proven ethnicity, individual actual convictions or execution counts",
+      "origin": "institutional_20261017"
     }
   ],
   "routes": [
