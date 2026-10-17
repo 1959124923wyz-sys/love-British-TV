@@ -21,13 +21,23 @@ try:
     const switches=document.querySelector('#mapLayerSwitch'),card=document.querySelector('.map-year-card');
     const m=stage.getBoundingClientRect(),c=card.getBoundingClientRect(),t=switches.getBoundingClientRect();
     return {inMap:stage.contains(card),outsideMap:header.contains(switches)&&!stage.contains(switches),
-      mapTop:c.top>=m.top&&c.top-m.top<=32,mapLeft:c.left>=m.left&&c.left-m.left<=32,
+      mapTop:Math.abs(c.top-m.top)<=2,mapLeft:Math.abs(c.left-m.left)<=2,
       togglesAbove:t.bottom<=m.top+2,
       noMapHint:!document.getElementById('yearArrivalMapCount'),
       noRepo:!document.body.textContent.includes('项目仓库'),
       controlsOn:document.getElementById('mapLayerTerritory').checked&&document.getElementById('mapLayerEvents').checked};
     """)
     assert all(layout.values()),layout
+    # Verify identical top-left anchoring when the UI switches to its mobile layout.
+    d.set_window_size(390,844)
+    mobile=js("""
+    const stage=document.querySelector('.map-stage').getBoundingClientRect(),
+          card=document.querySelector('.map-year-card').getBoundingClientRect();
+    return {top:Math.abs(card.top-stage.top)<=2,left:Math.abs(card.left-stage.left)<=2,
+            withinMap:card.right<=stage.right+2};
+    """)
+    assert all(mobile.values()),mobile
+    d.set_window_size(1440,950)
     d.find_element(By.CSS_SELECTOR,'#mapLayerEvents').click()
     assert not js("return document.getElementById('mapLayerEvents').checked")
     d.find_element(By.CSS_SELECTOR,'#mapLayerEvents').click()
