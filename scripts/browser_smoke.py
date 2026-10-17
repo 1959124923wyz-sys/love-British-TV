@@ -1035,7 +1035,7 @@ try:
     set_year(1586, 34)
     verify("1586 evacuated Roanoke site persisted into year-end",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
-              document.querySelectorAll('#map .atlas-voyage-hit').length===5""",driver)
+              document.querySelectorAll('#map .atlas-voyage-hit').length===6""",driver)
     verify("1586 must show one Munster policy region and THREE separate Drake-raided towns",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
               document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===3 &&
