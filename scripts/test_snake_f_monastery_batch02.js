@@ -20,7 +20,7 @@ const target=[
 ];
 assert.equal(db.events.length,45);assert.equal(db.sources.length,90);assert.equal(db.colonial_polygons.length,0);
 assert.equal(db.events.filter(x=>Number.isFinite(x.lat)&&Number.isFinite(x.lng)).length,26);
-assert.equal(db.events.filter(x=>x.lat===null&&x.lng===null).length,18);
+assert.equal(db.events.filter(x=>x.lat===null&&x.lng===null).length,19);
 const sources=new Map(db.sources.map(x=>[x.id,x]));
 const locate=new Set(['MON1536-SAWLEY-SURRENDER','MON1536-SAWLEY-RESTORED','MON1536-EASBY-RESTORATION','MON1538-BATTLE-SURRENDER-BROWNE','MON1538-BYLAND-ABBOT-SURRENDER','MON1539-FOUNTAINS-SURRENDER']);
 for(const id of target){
