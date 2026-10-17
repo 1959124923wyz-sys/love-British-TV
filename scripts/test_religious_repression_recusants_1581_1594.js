@@ -37,7 +37,7 @@ assert(docs.get(ids[5]).description.includes('报告还指控'));
 assert(docs.get(ids[6]).date_label.startsWith('1593年')&&docs.get(ids[6]).date_label.includes('1592'));
 assert(docs.get(ids[7]).description.includes('两部不同法令'));
 assert(docs.get(ids[8]).description.includes('真实执行'));
-assert(body.includes('实际交付')&&body.includes('实际完成调查')&&body.includes('国库'));
+assert(body.includes('理论数')&&body.includes('实际完成调查')&&body.includes('国库'));
 assert(!a.routes.some(r=>r.id.includes('RECUS'))&&!b.routes.some(r=>r.id.includes('RECUS')));
 assert.equal(a.colonial_polygons.length,0);assert.equal(b.colonial_polygons.length,0);
 console.log('PASS recusancy 1581–1594: 11 story sections, nine law+named-person/primary memorandum records, authentic 1582 Salford custody, Tyburn monument only, legal liabilities separate from Exchequer receipt, no imaginary 5-mile control polygon');
