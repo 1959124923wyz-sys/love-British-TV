@@ -61,6 +61,7 @@ on:
       - "scripts/test_tudor_egyptians_laws_1531_1598.js"
       - "scripts/test_witchcraft_act_chelmsford_1563_1566.js"
       - "scripts/test_lovell_hawkins_1562_1569.js"
+      - "scripts/test_religious_repression_recusants_1581_1594.js"
       - "scripts/test_snake_f_monastery_batch02.js"
       - "scripts/browser_snake_f_institutional_stories.py"
       - "scripts/test_multi_story_entries.js"
@@ -95,6 +96,7 @@ jobs:
           node scripts/test_tudor_egyptians_laws_1531_1598.js
           node scripts/test_witchcraft_act_chelmsford_1563_1566.js
           node scripts/test_lovell_hawkins_1562_1569.js
+          node scripts/test_religious_repression_recusants_1581_1594.js
           node scripts/test_snake_f_monastery_batch02.js
           node scripts/test_multi_story_entries.js
           node scripts/test_rut_kildare_major_stories.js
