@@ -35,7 +35,8 @@ assert.deepEqual([returnSite.lat,returnSite.lng],[50.3755,-4.1427]);
 assert.deepEqual([rio.lat,rio.lng],[11.55,-72.91]);
 assert(rio.description.includes('约92名')&&rio.description.includes('不能据此推定'));
 assert(returnSite.description.includes('不足以确定')&&returnSite.description.includes('牛津大学'));
-assert(body.includes('三次远征')&&body.includes('洛弗尔')&&body.includes('不是同一事件'));
+assert(body.includes('三次率领')&&body.includes('洛弗尔')&&body.includes('不得合并'));
+assert(body.includes('约92人')&&body.includes('不能直接推断'));
 for(const eid of ['1560S-E005','1560S-E010','1560S-E015','1560S-E018','1560S-E021']){
  assert.equal(atlas.events.filter(e=>e.id===eid).length,1,'Do not duplicate existing Hawkins source-mapped events');
 }
