@@ -728,11 +728,11 @@ try:
            """document.querySelectorAll('#map .atlas-voyage-hit').length===3 &&
               document.querySelector('#eventList [data-eid="1550S-E005"] use').getAttribute('href').endsWith('#EXP') &&
               document.querySelector('#eventList [data-eid="1550S-E006"]').title.includes('双击定位')""",driver)
-    set_year(1555, 14)
+    set_year(1555, 17)
     verify("1555 enslaved human transport red icon and dashed passage absent",
            """document.querySelector('#eventList [data-eid="1550S-E008"] use').getAttribute('href').endsWith('#SLV') &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===7""",driver)
-    set_year(1556, 22)
+    set_year(1556, 26)
     verify("1556 Irish seizure and West African voyage routes absent",
            """document.querySelectorAll('#map .atlas-voyage-hit').length===8 &&
               document.querySelector('#eventList [data-eid="1550S-E012"] use').getAttribute('href').endsWith('#REP') &&
@@ -753,7 +753,7 @@ try:
     verify("Routes persist when events unchecked","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Year-qualified routes did not return","document.querySelectorAll('#map .atlas-voyage-hit').length===8",driver)
-    set_year(1557, 25)
+    set_year(1557, 29)
     verify("1557 Sestos map route absent","document.querySelectorAll('#map .atlas-voyage-hit').length===9",driver)
     set_year(1550,6)
     verify("Rewind leaves future voyage links","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
@@ -765,19 +765,19 @@ try:
               document.querySelectorAll('#map .atlas-seventh-scottish').length===1 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1550-french-boulogne-scottish-broughty.png"))
-    set_year(1556, 22)
+    set_year(1556, 26)
     verify("1556 Midland forts absent / invented county occupation",
            """document.querySelectorAll('#map .atlas-seventh-english').length===4 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelectorAll('#map .atlas-territory-solid[fill="#357f76"]').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1556-irish-colonisation.png"))
-    set_year(1558, 32)
+    set_year(1558, 36)
     verify("1558 Calais French recovery and Guines/Risban switch missing",
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-english').length===2 &&
               document.querySelectorAll('#map .atlas-territory-solid[stroke="#65c9bc"]').length>=1""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1558-calais-french-recovery.png"))
-    set_year(1559, 35)
+    set_year(1559, 39)
     verify("1559 Calais must stay French and Eyemouth unverified position must expire",
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
@@ -863,7 +863,7 @@ try:
               document.querySelectorAll('#map .atlas-eighth-french').length===1 &&
               document.querySelector('#yearRange').max==='1569'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1569-irish-rebellion-no-african-occupation.png"))
-    set_year(1559, 35)
+    set_year(1559, 39)
     verify("Backward navigation must restore old seventh chapter no new trading regions",
            "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 && document.querySelectorAll('#map .atlas-eighth-site').length===0",driver)
     # New ninth chapter: west-to-east privateering, Ulster massacres, Inuit kidnapping,
