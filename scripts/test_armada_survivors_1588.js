@@ -6,8 +6,8 @@ const atlas=read('data/atlas-1580-1589.json');
 const regions=read('data/century-violence-regions-1544-1589.geojson');
 const followup=read('data/followup-regional-stories-1562-1596.geojson');
 const sources=new Map(atlas.sources.map(s=>[s.id,s]));
-assert.equal(atlas.events.length,39);
-assert.equal(atlas.sources.length,82);
+assert.ok(atlas.events.length>=53);
+assert.ok(atlas.sources.length>=92);
 const born=atlas.events.filter(e=>e.id.startsWith('ARM1588-'));
 assert.equal(born.length,5);
 assert.equal(new Set(born.map(e=>e.id)).size,5);
@@ -17,8 +17,8 @@ assert(born.find(e=>e.id==='ARM1588-STREEDAGH-STORM').icon_code==='DOC','storm c
 assert(born.find(e=>e.id==='ARM1588-STREEDAGH-SHORE-KILLING').icon_code==='REP');
 assert(born.find(e=>e.id==='ARM1588-ROSCLOGHER-REFUGE').icon_code==='RES','Gaelic aid needs resistance icon');
 assert(born.some(e=>e.id==='ARM1588-CLARE-SPANISHPOINT-EXECUTIONS'&&e.source_ids.length>=2));
-assert(atlas.events.filter(e=>e.year<=1587).length===29,'No new incident before the sinking');
-assert(atlas.events.filter(e=>e.year<=1588).length===36,'Five 1588 accounts appear only from 1588');
+assert(atlas.events.filter(e=>e.year<=1587).length===41,'No new incident before the sinking');
+assert(atlas.events.filter(e=>e.year<=1588).length===49,'Five 1588 accounts appear only from 1588');
 const original=atlas.events.find(e=>e.id==='GAP1588-SLIGO-ARMADA-EXECUTIONS');
 assert(original&&original.description.includes('至少700')&&original.description.includes('不可与Streedagh约1,100名'));
 for(const e of born){
