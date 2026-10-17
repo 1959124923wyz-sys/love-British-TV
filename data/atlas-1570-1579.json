@@ -3005,6 +3005,39 @@
       "position_type": "unlocated_chronology_event_no_invented_coordinates",
       "exclude_point_buffer_from_area_statistics": true,
       "map_priority": false
+    },
+    {
+      "id": "DOM1572-VAGABONDS-RELIEF-ACT",
+      "year": 1572,
+      "date_label": "1572年（14 Eliz. I c.5）",
+      "name": "伊丽莎白一世《流浪者与济贫法》规定穷人登记、地方征款、鞭笞与耳烙印",
+      "category": "political",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "geography_label": "英格兰／威尔士法令适用框架，非真实个案刑场",
+      "geo_precision": "unlocated_statute_nationwide_law_not_execution_site",
+      "description": "1572年英格兰议会通过14 Eliz. I c.5，要求地方治安法官登记老弱贫民、评估供养费用并筹集按周救济资金；与此同时，对无有效许可的被定为流浪者的人员规定严重鞭笞、右耳烙印等惩处。流动戏剧演员和艺人也受许可规定约束。法条表达法律威胁，无法据此推出某年全英实际烙印、鞭笞或处死人数。",
+      "short_description": "1572年法令同时要求贫民调查、地方救济征款和对部分流浪者鞭笞、烙印。",
+      "source_ids": [
+        "DOM1572-UKPARL-VAGABOND-ACT",
+        "DOM1572-CAMBRIDGE-PLAYERS-VAGRANCY"
+      ],
+      "start_year": 1572,
+      "end_year": 1572,
+      "visible_from": 1572,
+      "certainty": "source_attested_statute_or_privy_council_directive_not_actual_implementation",
+      "significance": {
+        "level": 3,
+        "review_status": "national_archive_parliamentary_record_verified"
+      },
+      "colonial_profit": null,
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "chronology_only_not_map_point",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": false
     }
   ],
   "places": [
@@ -4850,6 +4883,26 @@
       "evidence_read_level": "Original letters, rosters, accounts, court proceedings survive; archives catalogue not the complete original record",
       "precision_warning": "No universal execution count from catalogue",
       "origin": "batch03-north-20261017"
+    },
+    {
+      "id": "DOM1572-UKPARL-VAGABOND-ACT",
+      "title": "Parliamentary Archives HL/PO/PU/1/1572/14Eliz1n5: Vagabond Act 14 Eliz I c.5",
+      "publisher": "UK Parliament",
+      "url": "https://www.parliament.uk/vagabondact/",
+      "kind": "official_parliamentary_archive_exhibition",
+      "evidence_read_level": "1972? no, 1572 Act on poor surveys, weekly taxation, unlicensed vagrants and entertainers, whipping and ear branding",
+      "precision_warning": "Statutory provisions not numbers actually punished",
+      "origin": "batch04-20261017"
+    },
+    {
+      "id": "DOM1572-CAMBRIDGE-PLAYERS-VAGRANCY",
+      "title": "Peter Roberts, Elizabethan players and minstrels and 1572 legislation",
+      "publisher": "Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/religion-culture-and-society-in-early-modern-britain/elizabethan-players-and-minstrels-and-the-legislation-of-1572-against-retainers-and-vagabonds/2FE7C982EEFD6D1481CF20745351293B",
+      "kind": "academic_chapter_abstract",
+      "evidence_read_level": "1572 legislation against unlicensed players, context of security after 1568–1572, distinguish law from Jan proclamation",
+      "precision_warning": "Abstract not full chapter; do not fabricate arrest cases",
+      "origin": "batch04-20261017"
     }
   ],
   "routes": [

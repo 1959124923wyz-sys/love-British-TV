@@ -22,18 +22,18 @@ assert.ok(app.includes("fetch('data/chapter9-detail-notes.json'"),'Published dos
 assert.deepEqual(now.period,{from:1570,to:1579,next:1580});
 assert.ok(manifest.chapters.length>=9);
 assert.ok(manifest.chapters.some(c=>c.number===8&&c.start===1570&&c.end===1579&&c.status==='published'));
-assert.equal(now.events.length,89);assert.equal(now.places.length,43);assert.equal(now.sources.length,94);
+assert.equal(now.events.length,90);assert.equal(now.places.length,43);assert.equal(now.sources.length,96);
 assert.equal(now.routes.length,27);assert.equal(now.colonial_polygons.length,0);
 assert.equal(old.events.length,48);
 const ids=new Set(),src=new Set(now.sources.map(s=>s.id));
-assert.equal(icons.size,16);assert.equal(src.size,94);
+assert.equal(icons.size,16);assert.equal(src.size,96);
 for(const e of now.events){
  assert.ok(e.year>=1570&&e.year<=1579&&e.date_label.includes(String(e.year)),e.id+' chronology');
  assert.ok(!ids.has(e.id));ids.add(e.id);
  assert.ok(icons.has(e.icon_code)&&e.icon_code!=='TRA',e.id+' disallowed glyph');
  assert.ok(e.source_ids.length&&e.source_ids.every(id=>src.has(id)),e.id+' source unknown');
  assert.equal(e.colonial_profit,null,e.id+' financial fabrication');
- if(e.id.startsWith('NR1570-')||e.id==='NR1571-REBEL-ATTAINDER-FORFEITURE'){assert.equal(e.lat,null);assert.equal(e.lng,null)}
+ if(e.id.startsWith('NR1570-')||e.id==='NR1571-REBEL-ATTAINDER-FORFEITURE'||e.id==='DOM1572-VAGABONDS-RELIEF-ACT'){assert.equal(e.lat,null);assert.equal(e.lng,null)}
  else if(['1570S-E018','DRA1573-VENTA-DE-CRUCES-RAID','DRA1573-CIMARRON-LE-TESTU-ALLIANCE','FRO1578-GREENLAND-WEST-ENGLAND-CLAIM','DRA1578-PACIFIC-FLEET-STORM','DRA1573-FEB-CIMARRON-TWO-SEAS-RIDGE','DRA1573-FEB-MULE-TRAIN-FAILED','DRA1573-MAR-RIO-FRANCISCO-LANDING','SID1576-MOY-SUCK-ROYAL-OPERATIONS'].includes(e.id)){assert.equal(e.lat,null);assert.equal(e.lng,null)}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng),e.id+' invalid GIS');
 }
@@ -114,7 +114,7 @@ for(const g of geo.features){
  assert.ok(old&&JSON.stringify(old.geometry)===JSON.stringify(g.geometry),g.id+' invented historic border');
  assert.equal(g.properties.observed_through_year,1579);
 }
-const yearEvents=[6,9,16,26,30,39,49,60,77,89],yearRoutes=[0,0,1,3,6,8,16,19,23,27];
+const yearEvents=[6,9,17,27,31,40,50,61,78,90],yearRoutes=[0,0,1,3,6,8,16,19,23,27];
 for(let y=1570;y<=1579;y++){
  assert.equal(now.events.filter(x=>x.year<=y).length,yearEvents[y-1570],'events at '+y);
  assert.equal(now.routes.filter(x=>x.year<=y).length,yearRoutes[y-1570],'route count '+y);

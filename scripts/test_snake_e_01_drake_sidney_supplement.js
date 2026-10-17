@@ -3,7 +3,7 @@
 const fs=require('node:fs'),assert=require('node:assert/strict'),path=require('node:path');const root=path.resolve(__dirname,'..');const J=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const atlas=J('data/atlas-1570-1579.json'),index=J('data/stories/index.json').stories;
 assert.ok(index.length>=26,'all earlier Drake/Sidney stories remain registered alongside four new topics');
-assert.equal(atlas.events.length,89);assert.equal(atlas.sources.length,94);assert.equal(atlas.routes.length,27);
+assert.equal(atlas.events.length,90);assert.equal(atlas.sources.length,96);assert.equal(atlas.routes.length,27);
 const found=new Map(atlas.events.map(x=>[x.id,x])),sources=new Set(atlas.sources.map(x=>x.id));
 for(const id of ['DRA1573-FEB-CIMARRON-TWO-SEAS-RIDGE','DRA1573-FEB-MULE-TRAIN-FAILED','DRA1573-MAR-RIO-FRANCISCO-LANDING','SID1576-GALWAY-CIRCUIT','SID1576-ATHENRY-LEVY','SID1576-ATHLONE-CIRCUIT','SID1576-MOY-SUCK-ROYAL-OPERATIONS','SID1577-CASTLEDERMOT-CESS-LETTER']){
  const e=found.get(id);assert(e,'new source-led historical record missing '+id);
