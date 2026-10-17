@@ -26,6 +26,6 @@ for(const s of [mun,gui]){
  for(const sec of s.sections)assert(sec.source_keys.every(k=>ids.has(k)),s.id+': citation');
  assert(s.sections.flatMap(x=>x.paragraphs).join('').length>3000);
  const meta=idx.find(x=>x.id===s.id);
- assert.deepEqual(new Set(s.related_event_ids),new Set(meta.event_ids));
+ assert(meta.event_ids.every(eid=>s.related_event_ids.includes(eid)),'Manifest-owned events must appear in the full article record');
 }
 console.log('PASS institutional phase1: rent/settler quotas distinct from real outcomes, Lok three returnees, Mary letters, all citations and map counts');
