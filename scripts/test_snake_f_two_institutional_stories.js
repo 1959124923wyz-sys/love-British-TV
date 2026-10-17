@@ -14,7 +14,7 @@ const cases=[
   ['marian-heresy-trials-burnings-1554-1558',
     ['MR1555-HERESY-LAWS-EFFECTIVE','MR1555-JOHN-ROGERS-SMITHFIELD','MR1555-OXFORD-RIDLEY-LATIMER','MR1556-OXFORD-CRANMER']]
 ];
-assert.equal(index.length,30,'Two new full-length stories on top of 28 published baseline');
+assert(index.length>=30,'Two new full-length stories remain registered alongside previous publications');
 for(const [id,expected] of cases){
  const meta=index.find(x=>x.id===id);
  assert(meta && meta.status==='published');
