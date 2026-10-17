@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const read=p=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'..',p),'utf8'));
 const a=read('data/atlas-1570-1579.json'),idx=read('data/stories/index.json').stories;
 const events=new Map(a.events.map(x=>[x.id,x])),refs=new Set(a.sources.map(x=>x.id));
-assert.equal(idx.length,21);assert.equal(a.events.length,68);assert.equal(a.sources.length,83);assert.equal(a.routes.length,26);
+assert.equal(idx.length,21);assert.equal(a.events.length,76);assert.equal(a.sources.length,90);assert.equal(a.routes.length,27);
 for(const [id,start,end,minimum]of [
 ['drake-panama-mule-train-raid-1572-1573',1572,1573,7],
 ['sidney-pale-cess-connacht-military-campaign-1575-1578',1575,1578,11],
@@ -42,3 +42,12 @@ assert.deepEqual(first.coords[0],[51.511,-0.054],'1576 departure must be Ratclif
 assert.equal(a.colonial_polygons.length,0);
 assert.equal(events.get('1570S-E035').year,1577);assert.equal(events.get('1570S-E036').year,1577);
 console.log('PASS: stories 31–33, 15 documented extra events, 13 geocoded/2 deliberately unlocated, Panama Viejo UNESCO coordinates, four schematic travel/ore links, Inuit victim chronology.');
+
+// Snake E 01 supplemental phase-and-geography assertions
+const supplemental=['DRA1573-FEB-CIMARRON-TWO-SEAS-RIDGE','DRA1573-FEB-MULE-TRAIN-FAILED','DRA1573-MAR-RIO-FRANCISCO-LANDING','SID1576-GALWAY-CIRCUIT','SID1576-ATHENRY-LEVY','SID1576-ATHLONE-CIRCUIT','SID1576-MOY-SUCK-ROYAL-OPERATIONS','SID1577-CASTLEDERMOT-CESS-LETTER'];
+for(const id of supplemental){const e=events.get(id);assert(e&&e.source_ids.every(s=>refs.has(s)),id+' must have sources');assert.equal(e.actual_English_territory_created,false);assert.equal(e.colonial_profit,null);assert.equal(e.actual_English_land_area_sqkm,null);}
+for(const id of supplemental.filter(x=>x.startsWith('DRA')).concat('SID1576-MOY-SUCK-ROYAL-OPERATIONS'))assert.equal(events.get(id).lat,null,id+' unlocated event must not invent coordinates');
+assert(a.routes.some(r=>r.id==='snakee01-sidney-1576-galway-athenry-athlone-circuit'&&r.related_event_ids.length===3&&r.certainty==='schematic-only-not-historical-track'&&r.verified_English_territorial_control===false));
+const drake=read('data/stories/drake-panama-mule-train-raid-1572-1573.json');
+assert(drake.sections.findIndex(s=>s.heading.includes('第一次运银伏击'))<drake.sections.findIndex(s=>s.heading.includes('4月1日')), 'February failure must precede April gold-silver capture');
+assert(drake.sections.some(s=>s.paragraphs.some(p=>p.includes('罗伯特·派克'))));
