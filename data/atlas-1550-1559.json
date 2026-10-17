@@ -1418,6 +1418,39 @@
       "actual_English_land_area_sqkm": null,
       "actual_English_territory_created": false,
       "historical_control_boundary_verified": false
+    },
+    {
+      "id": "IR1558-MARYBOROUGH-OMORE-SIEGE",
+      "year": 1558,
+      "start_year": 1558,
+      "end_year": 1558,
+      "visible_from": 1558,
+      "date_label": "1558年6月",
+      "name": "奥莫尔武装围攻玛丽堡王室军堡，科斯比率驻军反击",
+      "category": "domestic_rebellion",
+      "icon_code": "RES",
+      "lat": 53.035512,
+      "lng": -7.297781,
+      "geography_label": "现爱尔兰波特利什Fort Protector旧址（1558年战事现代遗址参考）",
+      "geo_precision": "existing_portlaoise_fort_modern_site_reference_not_1558_battle_footprint",
+      "description": "1558年6月，因莱伊什与奥法利土地没收和王室驻军扩张，奥莫尔武装攻打玛丽堡（Maryborough）军堡，一度接近攻占要塞。弗朗西斯·科斯比率王室驻军出击，将进攻者逐退。该事须与1556年军堡改名及殖民郡制分别记录；遗址参考点不表示交战的实际范围或王室稳定控制整个莱伊什。",
+      "short_description": "1558年6月，奥莫尔武装攻打玛丽堡王室军堡，科斯比率驻军反击并击退围攻。",
+      "source_ids": [
+        "IR-DIB-COSBY-MARYBOROUGH-SIEGE-1558",
+        "IE-LAOIS-COUNTY-DEVELOPMENT-FORT"
+      ],
+      "certainty": "royal_irish_academy_biography_with_local_authority_existing_fort_reference",
+      "significance": {
+        "level": 3,
+        "review_status": "direct_RIA_biography_plus_official_fort_reference"
+      },
+      "colonial_profit": null,
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_named_fort_reference_not_1558_combat_point",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2581,6 +2614,16 @@
       "evidence_read_level": "51.753922,-1.257977 denotes surviving north-wall bastion vicinity, not an execution pyre",
       "precision_warning": "Modern geographic reference and statutory text must not be treated as a surveyed 16th-century execution footprint",
       "origin": "1550-1559"
+    },
+    {
+      "id": "IR-DIB-COSBY-MARYBOROUGH-SIEGE-1558",
+      "title": "Dictionary of Irish Biography: Francis Cosby and O'More attack on Maryborough, June 1558",
+      "publisher": "Royal Irish Academy / Dictionary of Irish Biography",
+      "url": "https://www.dib.ie/biography/cosby-francis-a2070",
+      "kind": "royal_irish_academy_scholarly_biography",
+      "evidence_read_level": "June 1558 O'Mores nearly captured Maryborough, royal garrison led by Francis Cosby counterattacked",
+      "precision_warning": "Fort Protector is an inherited modern monument reference, not a reconstructed 1558 siege perimeter",
+      "origin": "snakef-batch01-20261017"
     }
   ],
   "routes": [

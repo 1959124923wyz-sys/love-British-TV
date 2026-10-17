@@ -1474,6 +1474,39 @@
       "actual_English_land_area_sqkm": null,
       "historical_control_boundary_verified": false,
       "map_priority": true
+    },
+    {
+      "id": "ENG1569-BARNARD-CASTLE-REBEL-SIEGE",
+      "year": 1569,
+      "start_year": 1569,
+      "end_year": 1569,
+      "visible_from": 1569,
+      "date_label": "1569年12月（围攻约11天）",
+      "name": "北方起义军围攻巴纳德城堡，乔治·鲍斯王室守军最终投降",
+      "category": "domestic_rebellion",
+      "icon_code": "RES",
+      "lat": 54.54291,
+      "lng": -1.925619,
+      "geography_label": "英格兰巴纳德城堡现遗址登记坐标，仅作1569年围城位置参考",
+      "geo_precision": "modern_Historic_England_NGR_NZ0491016408_transformed_WGS84_not_rebel_siege_footprint",
+      "description": "1569年12月北方起义中，反伊丽莎白一世的天主教贵族起义军围攻乔治·鲍斯把守的巴纳德城堡。起义军陆续夺取外堡及城堡部分区域，王室守军因兵员离散、水源被切断而被迫谈判投降；英国遗产机构记载围攻约11天。此处起义军是攻城方、英国女王守军是防御方，不得将战斗写成王室军队屠杀当地人，也不得把城堡易手扩充为整郡行政控制。",
+      "short_description": "1569年12月，北方起义军围攻巴纳德城堡约11天，乔治·鲍斯的王室守军最终投降。",
+      "source_ids": [
+        "EN-ENGLISH-HERITAGE-BARNARD-SIEGE-1569",
+        "EN-HISTENG-BARNARD-CASTLE-SCHEDULED-NGR"
+      ],
+      "certainty": "two_official_English_Heritage_Historic_England_sources_event_modern_site",
+      "significance": {
+        "level": 3,
+        "review_status": "English_Heritage_Historic_England_same_site_cross_checked"
+      },
+      "colonial_profit": null,
+      "actual_English_territory_created": false,
+      "actual_English_land_area_sqkm": null,
+      "historical_control_boundary_verified": false,
+      "position_type": "official_scheduled_monument_modern_site_anchor_not_exact_1569_siege_geography",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
     }
   ],
   "places": [
@@ -2446,6 +2479,26 @@
       "evidence_read_level": "Grade I Cathedral National Grid Reference NZ2736042144; WGS84 OS reference used for modern site location",
       "precision_warning": "Modern building coordinates are a location anchor; not quantified 1569 rebel territorial boundary",
       "origin": "1560-1569"
+    },
+    {
+      "id": "EN-ENGLISH-HERITAGE-BARNARD-SIEGE-1569",
+      "title": "English Heritage: Barnard Castle 11-day siege, rebellion and Royalist garrison surrender, Dec 1569",
+      "publisher": "English Heritage",
+      "url": "https://www.english-heritage.org.uk/visit/places/barnard-castle/history/",
+      "kind": "official_heritage_primary_summary",
+      "evidence_read_level": "Rising of the North rebels besieged George Bowes and forced surrender after 11 days; distinct rebel siege not crown repression",
+      "precision_warning": "Reference castle walls and modern site are not precise 1569 siege trenches, rebel positions or district control polygon",
+      "origin": "snakef-batch01-20261017"
+    },
+    {
+      "id": "EN-HISTENG-BARNARD-CASTLE-SCHEDULED-NGR",
+      "title": "Historic England NHLE 1007505: Barnard Castle Scheduled Monument NGR NZ0491016408",
+      "publisher": "Historic England",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1007505",
+      "kind": "official_heritage_scheduled_monument_modern_reference",
+      "evidence_read_level": "The scheduled medieval castle at NGR NZ0491016408 was besieged in the 1569 Rising of the North; site converted OSGB36 EPSG27700 to WGS84",
+      "precision_warning": "Current statutory site NGR is not a surveyed location for the 1569 conflict perimeter and cannot establish rebel control over County Durham",
+      "origin": "snakef-batch01-20261017"
     }
   ],
   "routes": [
