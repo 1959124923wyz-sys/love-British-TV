@@ -75,6 +75,17 @@ on:
       - ".github/workflows/major-history-stories.yml"
   push:
     branches: [main]
+    # Full Chromium story battery is needed for stories, atlas data, frontend,
+    # source checks and tests; NOT each archival note or status update.
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'app.js'
+      - 'index.html'
+      - 'css/**'
+      - 'js/**'
+      - 'assets/**'
+      - '.github/workflows/major-history-stories.yml'
   workflow_dispatch:
 permissions:
   contents: read

@@ -5,6 +5,23 @@ on:
     branches: [main]
   push:
     branches: [main]
+    # Keep PR checks unconditional for repository branch protection. Restrict
+    # only post-merge pushes to inputs that can alter the approved UI contract.
+    paths:
+      - 'README.md'
+      - 'AGENTS.md'
+      - 'index.html'
+      - 'app.js'
+      - 'css/**'
+      - 'js/**'
+      - 'assets/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md'
+      - 'docs/HISTORICAL_SPATIAL_REVIEW_CHECKLIST.md'
+      - 'docs/APPROVED_MAP_INTERACTION_STANDARD.md'
+      - 'docs/WAR_CONTROL_AND_CONTESTED_ZONES.md'
+      - '.github/workflows/approved-map-ui.yml'
   workflow_dispatch:
 
 permissions:
