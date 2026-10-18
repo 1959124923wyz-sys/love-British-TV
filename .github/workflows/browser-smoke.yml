@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - "scripts/browser_smoke.py"
+      - "scripts/browser_desktop_layer_timeline.py"
       - "app.js"
       - "index.html"
       - "js/*.js"
@@ -12,6 +13,7 @@ on:
     branches: [main]
     paths:
       - "scripts/browser_smoke.py"
+      - "scripts/browser_desktop_layer_timeline.py"
       - "app.js"
       - "index.html"
       - "js/*.js"
@@ -29,6 +31,7 @@ jobs:
         run: |
           python -m http.server 8765 &
           python scripts/browser_smoke.py
+          python scripts/browser_desktop_layer_timeline.py
       - name: Save screenshots
         if: always()
         uses: actions/upload-artifact@v4

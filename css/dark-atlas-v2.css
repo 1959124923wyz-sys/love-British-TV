@@ -273,6 +273,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 .time-panel{left:12px;right:12px;bottom:12px;padding:7px 11px 6px;box-shadow:0 5px 18px #0008;background:#102237f2}
 .timeline-head strong{font-size:11px}
 .year-buttons button{height:23px;width:24px}
+.year-buttons button:disabled{opacity:.32;cursor:default;pointer-events:none}
 .year-buttons span{font-size:15px!important}
 .chapter-track{margin:5px 0 6px;gap:4px}
 .chapter-segment{min-height:30px;padding:4px 9px;border-radius:5px}
