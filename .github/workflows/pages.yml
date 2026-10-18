@@ -41,6 +41,7 @@ jobs:
           python3 scripts/validate_approved_ui.py
           # Block publication on objective GeoJSON/event/source errors; keep historical REVIEW items non-blocking.
           python3 scripts/audit_spatial_semantics.py --strict --out /tmp/atlas-spatial-publish-audit.json
+          python3 scripts/audit_event_editorial_metadata.py --strict --out /tmp/atlas-editorial-metadata-publish-audit.json
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_major_story_pilot.js
