@@ -618,7 +618,7 @@ function renderPoints(){
    .on('click',()=>expandCluster(g,true))
    .addTo(groups.cluster);
  }
- if(atlas.candidates&&year<=1499){
+ if(atlas.candidates&&year<=1499&&$('toggleCandidates').checked){
   for(const c of atlas.candidates){
    const ico=L.divIcon({className:'',html:'<div class="candidate-pin"></div>',iconSize:[16,16],iconAnchor:[8,8]});
    L.marker([c.lat,c.lng],{icon:ico})
@@ -1143,10 +1143,10 @@ function renderTenthLandRaidImpactAreas(){
    className:land?'atlas-tenth-land-policy-impact':'atlas-tenth-port-raid-impact'};
   // At the default world-scale zoom an urban 0.1-degree envelope is below 2px.
   // The fixed-pixel symbol is ONLY an on-screen cue, never a larger GIS area.
-  const lowZoom=land?zoom<5:zoom<8;
+  const lowZoom=land?zoom<5:true;
   const tooltip='<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.label_type||'区域性历史影响')+
-   (lowZoom?' · 位置提示，放大查看地区示意面':' · 查看史料')+'</div>';
+   (land&&lowZoom?' · 位置提示，放大查看地区示意面':' · 查看史料')+'</div>';
   const open=e=>{
    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    const currentFeature=stage?{...feature,properties:{...p,name:stage.title,
@@ -1160,8 +1160,9 @@ function renderTenthLandRaidImpactAreas(){
     p.original_event_coordinates;
    if(!Array.isArray(location)||location.length!==2||!location.every(Number.isFinite))continue;
    L.circleMarker(location,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
-    radius:land?27:zoom<=3?23:zoom<=5?27:31,
-    ...style,fillOpacity:land?.11:.14,
+    radius:land?27:11,
+    ...style,fill:land,fillOpacity:land?.11:0,
+    dashArray:land?'6 6':'3 5',
     className:style.className+' atlas-schematic-screen-cue',
     bubblingMouseEvents:false})
     .bindTooltip(tooltip,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
@@ -1823,6 +1824,8 @@ function setYear(v){
  $('timelineNotice').textContent='';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
  if(changedYear)$('eventList').scrollTop=0;
+  $('prevYear').disabled=year<=1497;
+  $('nextYear').disabled=year>=lastPublishedYear;
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
 function togglePlay(){if(timer){stopPlay();return}if(year===lastPublishedYear)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year===lastPublishedYear){stopPlay();return}setYear(year+1)},1250)}
@@ -2201,7 +2204,8 @@ function jumpToEnteredYear(){
  if(!atlas)return;
  const raw=$('jumpYear').value.trim(),v=Number(raw);
  if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>lastPublishedYear){
-  timelineStatus('仅支持1497—'+lastPublishedYear+'年已发布的历史资料；地图仍停留'+year+'年。');return;
+  $('jumpYear').value=year;
+   timelineStatus('仅支持1497—'+lastPublishedYear+'年已发布的历史资料；地图仍停留'+year+'年。');return;
  }
  stopPlay();setYear(v);
 }
@@ -2235,7 +2239,7 @@ map.on('resize',()=>{if(atlas)renderPoints()});
 map.getContainer().addEventListener('click',event=>{
  if(!atlas)return;
  const t=event.target;
- if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit'))return;
+ if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
  openMapTerritoryAt(map.mouseEventToLatLng(event));
 },true);
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
