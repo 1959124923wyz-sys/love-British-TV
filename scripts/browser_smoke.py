@@ -17,6 +17,24 @@ from selenium.webdriver.support.ui import WebDriverWait
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "browser-smoke-results"
 OUT.mkdir(exist_ok=True)
+# Browser-visible year totals must reflect the published chapter datasets, not
+# frozen counts from an earlier editorial release. This still verifies that the
+# web page's progressive rendering matches the independent JSON source of truth.
+chapters_manifest = json.loads((ROOT / "data/chapters.json").read_text(encoding="utf-8"))
+published_event_ranges = []
+for chapter in chapters_manifest["chapters"]:
+    if chapter.get("status") == "published":
+        records = json.loads((ROOT / chapter["source"]).read_text(encoding="utf-8"))
+        published_event_ranges.append((chapter["start"], chapter["end"], records["events"]))
+
+
+def expected_count(selected_year):
+    matching = [events for start, end, events in published_event_ranges
+                if start <= selected_year <= end]
+    assert len(matching) == 1, f"Expected exactly one published chapter for {selected_year}"
+    return sum(isinstance(event.get("year"), (int, float)) and event["year"] <= selected_year
+               for event in matching[0])
+
 opts = Options()
 opts.add_argument("--headless=new")
 opts.add_argument("--disable-gpu")
@@ -101,19 +119,19 @@ try:
         wait.until(lambda d: d.execute_script("return document.querySelector('#yearRange').value===arguments[0] && document.querySelector('#eventCount').textContent===arguments[1]", str(year), f"{expected}项"))
         time.sleep(0.25)
 
-    set_year(1529, 35)
+    set_year(1529, expected_count(1529))
     verify("1529 final event missing", "document.querySelector('#eventList').textContent.includes('吉讷边区法规鼓励')", driver)
     driver.save_screenshot(str(OUT / "chapter4-1529.png"))
     # Full-chapter previews are opt-in per decade; returning to an earlier decade
     # must not leak future 1520s events into the 1510s or vice versa.
     toggle_layer("showFullChapterArchive", True)
-    set_year(1519, 25)
+    set_year(1519, expected_count(1519))
     verify("complete-archive preview leaked into a new chapter",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
     verify("switch to third chapter failed", """document.querySelector('#chapterTrack [data-decade="1510"]').classList.contains('active')""", driver)
-    set_year(1520, 5)
+    set_year(1520, expected_count(1520))
     verify("reentry 1520 changed number of events", "document.querySelector('#eventCount').textContent==='5项'", driver)
-    set_year(1513, 12)
+    set_year(1513, expected_count(1513))
     # Desktop dossier now replaces the event sidebar instead of squeezing the
     # map into three columns. Return to the archive before WebDriver clicks it.
     if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
@@ -174,22 +192,22 @@ try:
            "document.querySelectorAll('.atlas-target-marker').length===0", driver)
     toggle_layer("toggleEvents", True)
     # Fifth chapter: every reference event stays in the right decade and never leaks backwards.
-    set_year(1530, 0)
+    set_year(1530, expected_count(1530))
     verify("Fifth chapter not active at 1530", """document.querySelector('#chapterTrack [data-decade="1530"]').classList.contains('active')""", driver)
     verify("1530 shows later events despite the fixed date gate", "document.querySelector('#eventList').querySelectorAll('.event-item').length===0", driver)
     verify("Crown Calais controls lost at 1529/1530",
            "document.querySelectorAll('#map .control-area-label').length>=0", driver)
     driver.save_screenshot(str(OUT / "chapter5-1530.png"))
-    for annual, expected in [(1531,1),(1532,3),(1533,4),(1534,8),(1535,12),(1536,18),(1537,23),(1538,27),(1539,34)]:
-        set_year(annual, expected)
+    for annual in range(1531, 1540):
+        set_year(annual, expected_count(annual))
     verify("1539 lost 1535 Maynooth event",
            "document.querySelector('#eventList').textContent.includes('梅努斯城堡')", driver)
     driver.save_screenshot(str(OUT / "chapter5-1539.png"))
     toggle_layer("showFullChapterArchive", True)
-    set_year(1529, 35)
+    set_year(1529, expected_count(1529))
     verify("Fifth chapter archive leaked into fourth",
            "!document.querySelector('#showFullChapterArchive').checked", driver)
-    set_year(1535, 12)
+    set_year(1535, expected_count(1535))
     if driver.execute_script("return document.getElementById('workspace').classList.contains('sidebar-collapsed')"):
         driver.find_element(By.ID,"mobileEventsToggle").click()
         wait.until(lambda d: d.execute_script("""
@@ -233,7 +251,7 @@ try:
     verify("decade-local year slider must cover 1500–1509, not all 500 years",
            "document.getElementById('yearRange').min==='1497'&&document.getElementById('yearRange').max==='1509'", driver)
     # Consolidated 1497–1509 first chapter: one event archive and one chapter total.
-    set_year(1497, 4)
+    set_year(1497, expected_count(1497))
     verify("1497 chapter cards must have equal width and no double-span",
            """document.querySelectorAll('#chapterTrack .chapter-segment').length===5 &&
               document.querySelectorAll('#chapterTrack [data-decade="1500"]').length===1 &&
@@ -247,8 +265,8 @@ try:
            """document.querySelector('#chapterLabel').textContent==='第一章 · 1497—1509' &&
               document.querySelector('#yearRange').min==='1497' &&
               document.querySelector('#yearRange').max==='1509'""", driver)
-    set_year(1499, 6)
-    set_year(1500, 10)
+    set_year(1499, expected_count(1499))
+    set_year(1500, expected_count(1500))
     verify("1500s page must show first chapter exactly once",
            """document.querySelectorAll('#chapterTrack .chapter-segment').length===5 &&
               document.querySelectorAll('#chapterTrack .chapter-segment[data-decade="1500"]').length===1 &&
@@ -263,12 +281,12 @@ try:
     toggle_layer("showFullChapterArchive", True)
     verify("First chapter full archive must have 28 combined items",
            "document.querySelector('#eventCount').textContent==='28项'",driver)
-    set_year(1509, 28)
-    set_year(1510, 1)
+    set_year(1509, expected_count(1509))
+    set_year(1510, expected_count(1510))
     verify("1510 must be the second chapter and clear previous archive preview",
            """document.querySelector('#chapterLabel').textContent==='第二章 · 1510—1519' &&
               !document.querySelector('#showFullChapterArchive').checked""",driver)
-    set_year(1500, 10)
+    set_year(1500, expected_count(1500))
     # Arrow advances an entire half-century, not a single decade.
     driver.execute_script("document.getElementById('browseDecadeNext').click()")
     verify("first half-century arrow did not show 1550–1599",
@@ -296,9 +314,9 @@ try:
     # Chapter six: year-end controls are distinct from archival events.
     # Temporary English garrison sites must disappear at the researched end year,
     # without erasing existing sovereign Scotland or the English Boulogne core.
-    set_year(1539, 34)
+    set_year(1539, expected_count(1539))
     zoom_1539=driver.execute_script("return [...document.querySelectorAll('.leaflet-tile')].map(img=>img.src.match(/\\/(\\d+)\\/\\d+\\/\\d+\\.(?:png|jpe?g)/)?.[1]).find(Boolean)")
-    set_year(1540, 4)
+    set_year(1540, expected_count(1540))
     # The user explicitly removed the military-statistics badge; the compact
     # year/title card must remain without a hidden leftover statistics panel.
     verify("removed yearly military-status card is still present",
@@ -311,10 +329,10 @@ try:
            """document.querySelector('#chapterTrack [data-decade="1540"].active')!==null""", driver)
     verify("old Calais historical footprint was reset in 1540",
            "document.querySelectorAll('#map .atlas-territory-solid').length>=1", driver)
-    set_year(1541, 7)
+    set_year(1541, expected_count(1541))
     verify("Irish Crown Act title still has untranslated political status words",
            """document.querySelector('#eventList').textContent.includes('领主辖区') && document.querySelector('#eventList').textContent.includes('王国') && !document.querySelector('#eventList').textContent.includes('Lordship')""", driver)
-    set_year(1544, 27)
+    set_year(1544, expected_count(1544))
     verify("duplicate native browser title still overlays styled historical tooltip",
            """document.querySelectorAll('#map .leaflet-marker-icon[title]').length===0""", driver)
     verify("English garrison layer was accidentally removed with statistics card",
@@ -327,7 +345,7 @@ try:
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===2", driver)
     verify("1544 Leith attack and coastal raid both render as non-occupation relation lines",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===2",driver)
-    set_year(1545, 36)
+    set_year(1545, expected_count(1545))
     verify("1545 French theater is not shown with blue/violet texture",
            "document.querySelectorAll('#map .atlas-contested-zone').length===1",driver)
     # Data-integrity regression: the Boulogne battlefield is active in 1545,
@@ -343,19 +361,19 @@ try:
            "document.querySelectorAll('#map .atlas-french-counterfort').length===1", driver)
     verify("1545 must not inherit previous 1544 raid as English territorial control",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===0",driver)
-    set_year(1546, 44)
+    set_year(1546, expected_count(1546))
     verify("1546 Ambleteuse and Boulemberg must join English occupation",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===4", driver)
     verify("1546 must not show 1547 Pinkie advance before the campaign",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===0",driver)
-    set_year(1547, 59)
+    set_year(1547, expected_count(1547))
     verify("1547 frontier advances are not shown as blue/violet disputed theaters",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3",driver)
     verify("1547 Scottish garrison map incomplete",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===13", driver)
     verify("1547 advance toward Pinkie/Musselburgh failed to extend northward",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length===1",driver)
-    set_year(1548, 75)
+    set_year(1548, expected_count(1548))
     # PR39: two *independently* checkable public layers. Check four modes,
     # stay on 1548 throughout, preserve military borders, campaign sources,
     # and keep the historical event directory available in every mode.
@@ -377,13 +395,13 @@ try:
               document.querySelectorAll('#map .atlas-aggregate').length===0""",driver)
     toggle_layer('mapLayerTerritory',False)
     verify("turning off both modes left military control geography visible",
-           """!document.querySelector('#toggleKingdom').checked &&
+           f"""!document.querySelector('#toggleKingdom').checked &&
               !document.querySelector('#toggleControlAreas').checked &&
               document.querySelectorAll('#map .atlas-contested-zone').length===0 &&
               document.querySelectorAll('#map .atlas-war-reach-schematic').length===0 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-aggregate').length===0 &&
-              document.querySelector('#eventCount').textContent==='75项'""",driver)
+              document.querySelector('#eventCount').textContent==='${expected_count(1548)}项'""",driver)
     toggle_layer('mapLayerEvents',True)
     verify("events-only mode incorrectly resurrected British occupation polygons",
            """document.querySelector('#toggleEvents').checked &&
@@ -435,10 +453,10 @@ try:
     driver.set_window_size(1620,1040)
     driver.execute_script("document.querySelector('#mapModeHelp').open=false")
     # Selecting a historical year must never auto-switch off either layer.
-    set_year(1547, 59)
+    set_year(1547, expected_count(1547))
     verify("year switch reset the independently selected map layers",
            "document.querySelector('#mapLayerTerritory').checked && document.querySelector('#mapLayerEvents').checked",driver)
-    set_year(1548, 75)
+    set_year(1548, expected_count(1548))
     driver.save_screenshot(str(OUT / "two-layer-modes-1548.png"))
     verify("1548 war-zone layer is missing after removing the card",
            "document.querySelectorAll('#map .atlas-contested-zone').length===3 && document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
@@ -481,14 +499,14 @@ try:
     click_map_path(".leaflet-sovereignty-pane path.leaflet-interactive")
     verify("clicking sovereign background no longer opens nation overview",
            """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史国家')""",driver)
-    set_year(1548, 75)
+    set_year(1548, expected_count(1548))
     verify("1548 Inchcolm and Hume must exit as English-held sites",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===11", driver)
     verify("Hailes must not remain English at 1548 year end",
            """!document.querySelector('#map .atlas-local-english-garrison[data-site-id="hailes-english-1548-date_unknown"]')""", driver)
     verify("1548 local English occupations must show violet uncertain overlays",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9", driver)
-    set_year(1549, 107)
+    set_year(1549, expected_count(1549))
     verify("Western Rising 1549 must separately record attacks, executions, siege and rebel resistance",
            """['GAP1549-WEST-BODMIN-ASSEMBLY','GAP1549-WEST-EXETER-SIEGE',
                'GAP1549-WEST-FENNY-BRIDGES','GAP1549-WEST-WOODBURY-COMMON',
@@ -549,16 +567,16 @@ try:
         assert zoom_1539==zoom_1549, "Scrubbing to chapter six automatically zoomed the map"
     driver.save_screenshot(str(OUT / "chapter6-garrisons-1549.png"))
     # The PR #50 HES GIS polygons are modern statutory references, not occupied historic land.
-    set_year(1546, 44)
+    set_year(1546, expected_count(1546))
     verify("1546 cannot show 1547 scheduled archaeology polygons",
            "document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===0",driver)
-    set_year(1547, 59)
+    set_year(1547, expected_count(1547))
     verify("1547 must show Eyemouth and Roxburgh genuine archaeology, not Dunglass yet",
            """document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===2 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===13 &&
               document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline[fill="none"]').length===2""",driver)
     driver.save_screenshot(str(OUT / "chapter6-1547-hes-heritage-not-occupation.png"))
-    set_year(1548, 75)
+    set_year(1548, expected_count(1548))
     verify("1548 HES modern heritage dashed outlines missing",
            """document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline').length===3 &&
               [...document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline')].every(p=>
@@ -648,7 +666,7 @@ try:
          target:e.target.tagName,cls:(e.target.getAttribute('class')||'').slice(0,100)});
       },true);
     """)
-    set_year(1548, 75)
+    set_year(1548, expected_count(1548))
     driver.execute_script("""
       const item=document.querySelector('#eventList [data-eid="1540S-021"]');
       if(!item)throw Error('Missing Haddington map-focus event');
@@ -703,14 +721,14 @@ try:
     # Seventh chapter: site control ownership and historical period continuity.
 
     # Chapter 7: standard 16-class icons and existing clickable schematic voyage layer.
-    set_year(1550,6)
+    set_year(1550, expected_count(1550))
     verify("Future merchant routes or retired navigation cards already visible",
            "document.querySelectorAll('#map .atlas-voyage-hit').length===0 && !document.querySelector('#chapter7GeographyNav')",driver)
-    set_year(1551,6)
+    set_year(1551, expected_count(1551))
     verify("1551 Moroccan Santa Cruz trading site missing",
            """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===1 &&
               document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
-    set_year(1552,6)
+    set_year(1552, expected_count(1552))
     verify("1552 Safi and Santa Cruz have trade points and a non-navigational sequence",
            """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===2 &&
               document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===1""",driver)
@@ -720,7 +738,7 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('贸易') &&
               document.querySelector('#dossierBody .source-link')!==null""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1552-Morocco-trade-sites.png"))
-    set_year(1553,8)
+    set_year(1553, expected_count(1553))
     verify("1553 should have no lingering 1552 Moroccan voyage graphics",
            """document.querySelectorAll('#map .atlas-maghreb-commerce-site').length===0 &&
               document.querySelectorAll('#map .atlas-maghreb-trade-sequence').length===0""",driver)
@@ -728,11 +746,11 @@ try:
            """document.querySelectorAll('#map .atlas-voyage-hit').length===3 &&
               document.querySelector('#eventList [data-eid="1550S-E005"] use').getAttribute('href').endsWith('#EXP') &&
               document.querySelector('#eventList [data-eid="1550S-E006"]').title.includes('双击定位')""",driver)
-    set_year(1555, 17)
+    set_year(1555, expected_count(1555))
     verify("1555 enslaved human transport red icon and dashed passage absent",
            """document.querySelector('#eventList [data-eid="1550S-E008"] use').getAttribute('href').endsWith('#SLV') &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===7""",driver)
-    set_year(1556, 26)
+    set_year(1556, expected_count(1556))
     verify("1556 Irish seizure and West African voyage routes absent",
            """document.querySelectorAll('#map .atlas-voyage-hit').length===8 &&
               document.querySelector('#eventList [data-eid="1550S-E012"] use').getAttribute('href').endsWith('#REP') &&
@@ -753,11 +771,11 @@ try:
     verify("Routes persist when events unchecked","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
     verify("Year-qualified routes did not return","document.querySelectorAll('#map .atlas-voyage-hit').length===8",driver)
-    set_year(1557, 29)
+    set_year(1557, expected_count(1557))
     verify("1557 Sestos map route absent","document.querySelectorAll('#map .atlas-voyage-hit').length===9",driver)
-    set_year(1550,6)
+    set_year(1550, expected_count(1550))
     verify("Rewind leaves future voyage links","document.querySelectorAll('#map .atlas-voyage-hit').length===0",driver)
-    set_year(1550,6)
+    set_year(1550, expected_count(1550))
     verify("1550 new chapter missing or Boulogne still English",
            """document.querySelector('#chapterNav').textContent.includes('第六章') &&
               document.querySelectorAll('#map .atlas-seventh-site').length===7 &&
@@ -765,19 +783,19 @@ try:
               document.querySelectorAll('#map .atlas-seventh-scottish').length===1 &&
               document.querySelectorAll('#map .atlas-local-english-garrison').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1550-french-boulogne-scottish-broughty.png"))
-    set_year(1556, 26)
+    set_year(1556, expected_count(1556))
     verify("1556 Midland forts absent / invented county occupation",
            """document.querySelectorAll('#map .atlas-seventh-english').length===4 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelectorAll('#map .atlas-territory-solid[fill="#357f76"]').length===0""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1556-irish-colonisation.png"))
-    set_year(1558, 36)
+    set_year(1558, expected_count(1558))
     verify("1558 Calais French recovery and Guines/Risban switch missing",
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-english').length===2 &&
               document.querySelectorAll('#map .atlas-territory-solid[stroke="#65c9bc"]').length>=1""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1558-calais-french-recovery.png"))
-    set_year(1559, 39)
+    set_year(1559, expected_count(1559))
     verify("1559 Calais must stay French and Eyemouth unverified position must expire",
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
@@ -785,14 +803,14 @@ try:
               document.querySelector('#jumpYear').max==='1599'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
-    set_year(1560,3)
+    set_year(1560, expected_count(1560))
     verify("1560 new chapter or future overseas trade leaks into early history",
            """document.querySelector('#chapterNav').textContent.includes('第七章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
-    set_year(1562,7)
+    set_year(1562, expected_count(1562))
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
            """document.querySelectorAll('#map .atlas-eighth-english').length===1 &&
               document.querySelectorAll('#map .atlas-eighth-french').length===0 &&
@@ -800,24 +818,24 @@ try:
               document.querySelectorAll('#map .atlas-voyage-hit').length===1 &&
               document.querySelector('#eventList [data-eid="1560S-E006"] use').getAttribute('href').endsWith('#SLV')""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1562-hawkins-le-havre.png"))
-    set_year(1563,9)
+    set_year(1563, expected_count(1563))
     verify("1563 Le Havre remained English or first African forced transport absent",
            """document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-french').length===1 &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===3""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1563-french-restoration.png"))
-    set_year(1564,11)
+    set_year(1564, expected_count(1564))
     verify("1564 second Guinea voyage must keep activity event not new colonial territory",
            "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1",driver)
-    set_year(1566, 16)
+    set_year(1566, expected_count(1566))
     verify("1566 had no independently mapped new Hawkins raiding coast",
            "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0",driver)
-    set_year(1567, 20)
+    set_year(1567, expected_count(1567))
     verify("1567 third voyage Guinea scope missing",
            """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===11""",driver)
-    set_year(1568, 25)
+    set_year(1568, expected_count(1568))
     verify("1568 captive shipment route, unknown coastal raided settlement caveat missing",
            """document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===16 &&
@@ -839,7 +857,7 @@ try:
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-french').length===1""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    set_year(1569, 44)
+    set_year(1569, expected_count(1569))
     verify("1569 Munster campaign must expose linked Crown terror and named regional warfare locations",
            """['GAP1569-GILBERT-KILMALLOCK','MUN1569-ROYAL-BRUREE',
                'MUN1569-ROYAL-CORK','MUN1569-KERRY-TERROR',
@@ -863,12 +881,12 @@ try:
               document.querySelectorAll('#map .atlas-eighth-french').length===1 &&
               document.querySelector('#yearRange').max==='1569'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1569-irish-rebellion-no-african-occupation.png"))
-    set_year(1559, 39)
+    set_year(1559, expected_count(1559))
     verify("Backward navigation must restore old seventh chapter no new trading regions",
            "document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 && document.querySelectorAll('#map .atlas-eighth-site').length===0",driver)
     # New ninth chapter: west-to-east privateering, Ulster massacres, Inuit kidnapping,
     # year-end English garrisons distinct from paper grants.
-    set_year(1570,2)
+    set_year(1570, expected_count(1570))
     verify("Chapter 9 political continuity or new historic content absent",
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
@@ -878,12 +896,12 @@ try:
     verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
            """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
               document.querySelector('#eventList [data-eid="1570S-E038"]').textContent.includes('温特')""",driver)
-    set_year(1571,4)
+    set_year(1571, expected_count(1571))
     verify("1571 Jamaican ship robbery evidence missing or confused with slavery",
            """document.querySelector('#eventList [data-eid="1570S-E039"] use').getAttribute('href').endsWith('#WAR') &&
               document.querySelector('#eventList [data-eid="1570S-E039"]').textContent.includes('牙买加')""",driver)
 
-    set_year(1572, 11)
+    set_year(1572, expected_count(1572))
     verify("1572 local Ards outpost and first Drake voyage absent",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===1 &&
@@ -893,23 +911,23 @@ try:
               document.querySelector('#eventList [data-eid="1570S-E041"] use').getAttribute('href').endsWith('#EXP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1572-Comber-newcastle-small-outpost.png"))
-    set_year(1574, 25)
+    set_year(1574, expected_count(1574))
     verify("1574 Essex murder or scorched-earth route missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
               document.querySelector('#eventList [data-eid="1570S-E009"] use').getAttribute('href').endsWith('#REP')""",driver)
-    set_year(1575, 34)
+    set_year(1575, expected_count(1575))
     verify("1575 Rathlin island massacre wrongly redrawn as English entire island",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelector('#eventList [data-eid="1570S-E010"] use').getAttribute('href').endsWith('#REP')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1575-Rathlin-massacre-event.png"))
-    set_year(1576, 44)
+    set_year(1576, expected_count(1576))
     verify("1576 Loughrea garrison and abducted Inuit symbol missing",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===16 &&
               document.querySelector('#eventList [data-eid="1570S-E012"] use').getAttribute('href').endsWith('#DIS')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1576-Loughrea-Irish-garrison-Inuit-abduction.png"))
-    set_year(1577, 55)
+    set_year(1577, expected_count(1577))
     verify("1577 kidnapped Inuit burials and source evidence disappeared",
            """document.querySelector('#eventList [data-eid="1570S-E035"]').textContent.includes('布里斯托尔') &&
               document.querySelector('#eventList [data-eid="1570S-E036"]').textContent.includes('伦敦')""",driver)
@@ -924,7 +942,7 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('圣斯蒂芬') &&
               (!!document.querySelector('#dossierBody .source-details') || !!document.querySelector('#dossierBody .major-story-enter'))""",driver)
     driver.save_screenshot(str(OUT / "chapter9-pr56-1577-inuit-transport-burial-churches.png"))
-    set_year(1578, 72)
+    set_year(1578, expected_count(1578))
     verify("1578 Pacific Chile documentary events survive and the 7 connected Drake expedition links replace 2 redundant old legs",
            """['GAP1578-VALPARAISO','PAC1578-MOCHA-LAFKENCHE',
                'PAC1578-LA-SERENA-DEFENSE'].every(id=>
@@ -948,7 +966,7 @@ try:
            """document.querySelector('#dossierBody').textContent.includes('1578') &&
               !!document.querySelector('#dossierBody .source-details a[href*="cambridge.org"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1578-Mullaghmast-Inuit-Kodlunarn.png"))
-    set_year(1579, 84)
+    set_year(1579, expected_count(1579))
     verify("1579 Askeaton friary but non-occupied castle missing; Drake course absent",
            """document.querySelector('#eventList [data-eid="1570S-E030"] use').getAttribute('href').endsWith('#REP') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2 &&
@@ -965,16 +983,16 @@ try:
            """document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2""",driver)
     driver.execute_script("document.querySelector('#mapLayerEvents').click()")
-    set_year(1569, 44)
+    set_year(1569, expected_count(1569))
     verify("Rewind must remove all ninth chapter garrisons and privateering routes",
            """document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===17""",driver)
     # Chapter 10 1580—1589: the Loughrea recapture must remove the English warders,
     # preserve older political identities, and switch colonial places by year.
-    set_year(1579, 84)
+    set_year(1579, expected_count(1579))
     verify("1580 previous-year Loughrea English warders absent", 
            "document.querySelectorAll('#map .atlas-ninth-english-garrison').length===2",driver)
-    set_year(1580, 8)
+    set_year(1580, expected_count(1580))
     verify("1580 recapture not mapped or ninth controls leaked",
            """document.querySelector('#eventList [data-eid="1580S-E001"]') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===0 &&
@@ -997,7 +1015,7 @@ try:
            """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
               document.querySelector('#yearRange').value==='1580'""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1580-Loughrea-recapture.png"))
-    set_year(1582, 11)
+    set_year(1582, expected_count(1582))
     verify("1582 famine testimony hidden", "!!document.querySelector('#eventList [data-eid=\"1580S-E009\"]')",driver)
     verify("1582 Munster war area missing or incorrectly called an occupation",
            """document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===1 &&
@@ -1011,7 +1029,7 @@ try:
               [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1583年'))""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1582-Munster-war-impact.png"))
 
-    set_year(1584, 14)
+    set_year(1584, expected_count(1584))
     verify("1584 Munster royal forfeiture survey region should appear by itself",
            """document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1 &&
               document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0 &&
@@ -1024,7 +1042,7 @@ try:
               document.querySelector('#dossierBody .source-link')!==null &&
               [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1586年'))""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1584-Munster-forfeiture-survey.png"))
-    set_year(1585, 19)
+    set_year(1585, expected_count(1585))
     verify("1585 Cape Verde Santiago assault now has a source-backed visible raid outline",
            """document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===1 &&
               document.querySelector('#eventList [data-eid="1580S-E016"]')!==null""",driver)
@@ -1032,7 +1050,7 @@ try:
            "document.querySelectorAll('#map .atlas-tenth-invasion-impact').length===0",driver)
     verify("1585 Roanoke site missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
     driver.save_screenshot(str(OUT / "chapter10-1585-Roanoke.png"))
-    set_year(1586, 34)
+    set_year(1586, expected_count(1586))
     verify("1586 evacuated Roanoke site persisted into year-end",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6""",driver)
@@ -1052,7 +1070,7 @@ try:
               document.querySelector('#dossierBody').textContent.includes('1586')""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids-plus-StAugustine.png"))
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids.png"))
-    set_year(1587, 41)
+    set_year(1587, expected_count(1587))
     verify("1587 Cavendish Quintero failed landing and sourced dashed conflict region visible",
            """!!document.querySelector('#eventList [data-eid="PAC1587-CAVENDISH-QUINTERO"]') &&
               [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
@@ -1062,7 +1080,7 @@ try:
            """document.querySelectorAll('#map .atlas-tenth-port-raid-impact').length===0 &&
               document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1""",driver)
     verify("1587 Roanoke resettlement missing", "document.querySelectorAll('#map .atlas-tenth-english-site').length===2",driver)
-    set_year(1588, 49)
+    set_year(1588, expected_count(1588))
     verify("1588 shipwreck and Crown execution history needs five independent named entries",
            """['ARM1588-STREEDAGH-STORM','ARM1588-STREEDAGH-SHORE-KILLING',
                'ARM1588-ROSCLOGHER-REFUGE','ARM1588-CLARE-SPANISHPOINT-EXECUTIONS',
@@ -1093,7 +1111,7 @@ try:
     verify("1588 land stages must show implementation lag",
            """document.querySelector('#dossierBody').textContent.includes('实际落实') &&
               document.querySelector('#dossierBody .source-link')!==null""",driver)
-    set_year(1589, 53)
+    set_year(1589, expected_count(1589))
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
@@ -1101,15 +1119,15 @@ try:
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
-    set_year(1579, 84)
+    set_year(1579, expected_count(1579))
     verify("rewinding to ninth chapter left tenth control sites",
            "document.querySelectorAll('#map .atlas-tenth-english-site').length===0",driver)
     # 1590s annual/year-end control differences, uncertain study areas, and Drake 1579 underlay.
-    set_year(1579, 84)
+    set_year(1579, expected_count(1579))
     verify("Drake 1579 voyage schematic continuity backdrop missing",
            "document.querySelectorAll('#map .atlas-voyage-continuity').length>=2",driver)
     driver.save_screenshot(str(OUT / "chapter9-1579-Drake-voyage-continuous-underlay.png"))
-    set_year(1590,4)
+    set_year(1590, expected_count(1590))
     driver.execute_script("""document.querySelector('#eventList [data-eid="1590S-E002"]').click()""")
     wait.until(lambda d: d.execute_script(
         "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "宾厄姆英王军在布雷夫尼"))
@@ -1127,11 +1145,11 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
               document.querySelector('#jumpYear').max==='1599'""",driver)
-    set_year(1591,7)
+    set_year(1591, expected_count(1591))
     verify("1591 Santos year-end English occupation not displayed",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
     driver.save_screenshot(str(OUT / "chapter11-1591-Santos-captured.png"))
-    set_year(1592,13)
+    set_year(1592, expected_count(1592))
     verify("1592 Santos to Sao Vicente sourced link not visible in linked group",
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1592'""",driver)
@@ -1146,13 +1164,13 @@ try:
     verify("1592 Santos should no longer be English at year-end",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===3",driver)
 
-    set_year(1593,14)
+    set_year(1593, expected_count(1593))
     verify("1593 must not retain only-1592 Santos/Sao Vicente raid link",
            "window.atlasReadActionLinks().count===0",driver)
     verify("1593 cannot show future Fermanagh and Ulster 1594 battles",
            """document.querySelectorAll('#map .atlas-nine-years-war-study').length===0 &&
               document.querySelectorAll('#map .atlas-essex-1599-schematic').length===0""",driver)
-    set_year(1594,19)
+    set_year(1594, expected_count(1594))
     verify("1594 Hawkins Valparaiso privateering episode and distinct regional study visible",
            """!!document.querySelector('#eventList [data-eid="PAC1594-HAWKINS-VALPARAISO"]') &&
               [...document.querySelectorAll('#historicalRegionList .historical-region-entry strong')]
@@ -1169,7 +1187,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1594-Fermanagh-contested.png"))
     verify("1594 documented Enniskillen/Blackwater English forts absent",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===5",driver)
-    set_year(1595,28)
+    set_year(1595, expected_count(1595))
     verify("1595 Caribbean actions have FIVE town/region RAID site markers, not occupied San Juan",
            """document.querySelectorAll('#map .atlas-caribbean-raid-site').length===5 &&
               document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===0""",driver)
@@ -1207,12 +1225,12 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               !!document.querySelector('#eventList [data-eid="1590S-E016"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1595-Recife-raid.png"))
-    set_year(1597, 36)
+    set_year(1597, expected_count(1597))
     verify("1597 must not retain 1595 Trinidad warfare research area",
            "document.querySelectorAll('#map .atlas-trinidad-1595-impact').length===0",driver)
     verify("1597 Fermanagh local campaign should no longer persist",
            "document.querySelectorAll('#map .atlas-nine-years-war-study').length===0",driver)
-    set_year(1598, 41)
+    set_year(1598, expected_count(1598))
     verify("1598 Armagh Yellow Ford Blackwater defeat is a source-backed link not occupation",
            """window.atlasReadActionLinks().count===1 &&
               document.querySelector('#yearRange').value==='1598'""",driver)
@@ -1242,7 +1260,7 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===1 &&
               !!document.querySelector('#eventList [data-eid="1590S-E027"]')""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1598-San-Juan-raid.png"))
-    set_year(1599, 47)
+    set_year(1599, expected_count(1599))
     verify("1599 previous Yellow Ford connection expired",
            "window.atlasReadActionLinks().count===0",driver)
     verify("1599 Essex south-Ireland march should be a CITY-ORDER LINE, not occupation land",
@@ -1266,7 +1284,7 @@ try:
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
-    set_year(1589, 53)
+    set_year(1589, expected_count(1589))
     verify("Back to 1589 leaked year 1590 military area",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
