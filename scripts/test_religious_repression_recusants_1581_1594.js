@@ -6,8 +6,8 @@ const a=J('data/atlas-1580-1589.json'),b=J('data/atlas-1590-1599.json'),idx=J('d
 'DOM1581-RECUSANCY-CROWN-FINES','DOM1581-CAMPION-TYBURN-EXECUTION','DOM1582-SALFORD-RECUSANTS-IMPRISONED','DOM1585-JESUITS-SEMINARY-PRIESTS-ACT','DOM1585-NORTON-PORT-OATH-RECOMMENDATIONS',
 'DOM1591-LANCASHIRE-RECUSANCY-REPORT','DOM1593-CATHOLIC-RECUSANTS-FIVE-MILE-LAW','DOM1593-RELIGION-CONVENTICLES-ACT','DOM1594-BURGHLEY-RECUSANT-SEIZURE-PLANS'];
 assert.equal(a.events.length,71);assert.equal(a.sources.length,118);
-assert.equal(b.events.length,62);assert.equal(b.sources.length,96);
-assert.equal(idx.length,38);
+assert.equal(b.events.length,67);assert.equal(b.sources.length,102);
+assert.equal(idx.length,39);
 const sid='elizabethan-recusancy-fines-priests-confinement-1581-1594',meta=idx.find(x=>x.id===sid);
 assert(meta&&meta.status==='published');
 const story=J(meta.file),body=story.sections.flatMap(s=>s.paragraphs).join('');
