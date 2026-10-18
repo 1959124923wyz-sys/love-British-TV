@@ -3,6 +3,9 @@ name: Phase II independent historical GIS red-team
 on:
   pull_request:
     paths:
+      - 'data/chapters.json'
+      - 'data/atlas-*.json'
+      - 'data/*.geojson'
       - 'app.js'
       - 'index.html'
       - 'data/atlas-1570-1579.json'
@@ -14,8 +17,12 @@ on:
       - '.github/workflows/phase2-spatial-redteam.yml'
   push:
     branches:
+      - main
       - audit/phase2-spatial-1497-1599-20261015
     paths:
+      - 'data/chapters.json'
+      - 'data/atlas-*.json'
+      - 'data/*.geojson'
       - 'data/**'
       - 'scripts/audit_spatial_semantics.py'
       - 'scripts/test_drake_landing_uncertainty.js'
@@ -35,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check all chapter points, routes and historical spatial GeoJSON
-        run: python3 scripts/audit_spatial_semantics.py --out phase2-spatial-audit.json
+        run: python3 scripts/audit_spatial_semantics.py --strict --out phase2-spatial-audit.json
       - name: Regression check on disputed Drake landing and Pacific route seam
         run: node scripts/test_drake_landing_uncertainty.js
       - name: Preserve map timeline and voyage interaction tests
