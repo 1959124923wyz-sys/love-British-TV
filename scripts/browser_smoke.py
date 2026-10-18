@@ -186,6 +186,31 @@ try:
     verify("1527 front-facing story should not be overloaded with cartographic caveats",
            """!document.querySelector('#dossierBody > .atlas-route-disclaimer')""",driver)
     driver.save_screenshot(str(OUT / "voyage-endpoints-1527.png"))
+    # A voyage selected in 1527 must no longer remain in the dossier in 1526.
+    set_year(1526, expected_count(1526))
+    verify("1527 future voyage dossier leaked into 1526",
+           "document.querySelector('#dossierBody h2')?.textContent==='当年历史'", driver)
+    # The desktop Left/Right shortcut is for the atlas, not for scrolling a
+    # longform historical article. Unmodified keys still work outside stories.
+    driver.execute_script("""
+      const article=document.createElement('article');
+      article.className='major-story-article';
+      document.querySelector('#dossierBody').appendChild(article);
+      window.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
+    """)
+    assert driver.execute_script("return document.querySelector('#bigYear').textContent")=="1526", (
+        "Reading a longform story must not unexpectedly advance the global year")
+    driver.execute_script("""
+      document.querySelector('.major-story-article').remove();
+      window.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true,ctrlKey:true}));
+    """)
+    assert driver.execute_script("return document.querySelector('#bigYear').textContent")=="1526", (
+        "Ctrl+arrow must remain available for browser and desktop shortcuts")
+    driver.execute_script("""
+      window.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
+    """)
+    assert driver.execute_script("return document.querySelector('#bigYear').textContent")=="1527", (
+        "Plain arrow keys must continue to navigate the timeline")
 
     toggle_layer("toggleEvents", False)
     verify("a hidden event layer kept a previously focused marker visible",
