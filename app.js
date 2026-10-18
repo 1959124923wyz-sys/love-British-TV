@@ -1692,7 +1692,6 @@ function renderTimelineNavigation(){
   slider.min=currentChapter.start;slider.max=currentChapter.end;slider.value=year;
   $('yearStartLabel').textContent=currentChapter.start;
   $('yearEndLabel').textContent=currentChapter.end;
-  $('localYearTitle').textContent=year+'年';
   $('jumpYear').max=lastPublishedYear;
   $('jumpYear').value=year;
  }
@@ -1717,9 +1716,6 @@ function setYear(v){
  year=next;atlas=chosen;
  $('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540&&year<1550,seventh=year>=1550&&year<1560,eighth=year>=1560&&year<1570,ninth=year>=1570&&year<1580,tenth=year>=1580&&year<1590,eleventh=year>=1590;
- $('chapterNav').textContent=sixth?'历史地图 · 第六章':fifth?'历史地图 · 第五章':fourth?'历史地图 · 第四章':third?'历史地图 · 第三章':second?'历史地图 · 第二章':'历史地图 · 第一章';
- $('chapterNavName').textContent=sixth?'布洛涅与战争边区':fifth?'法权与边区':fourth?'边区与远航':third?'王冠越过海峡':second?'通往未知海岸的第二程':'远航与主权宣称';
- $('chapterLabel').textContent=sixth?'第六章 · 1540—1549':fifth?'第五章 · 1530—1539':fourth?'第四章 · 1520—1529':third?'第三章 · 1510—1519':second?'第二章 · 1500—1509':'第一章 · 1497—1499';
  $('chapterTitlePrimary').textContent=sixth?'布洛涅与':fifth?'王权与':fourth?'边区与':third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
  $('chapterTitleSecondary').textContent=sixth?'英苏边境':fifth?'边区变动':fourth?'远航':third?'海峡':second?'的第二程':'的第一道声索';
  $('chapterIntro').textContent=sixth?(typeof atlasSixth.intro==='string'?atlasSixth.intro:atlasSixth.intro?.description||''):fifth?(typeof atlasFifth.intro==='string'?atlasFifth.intro:atlasFifth.intro?.description||''):fourth?(typeof atlasFourth.intro==='string'?atlasFourth.intro:atlasFourth.intro?.description||''):third?atlasThird.intro.description:second?atlasLater.intro.description:earlyIntro;
@@ -1731,9 +1727,6 @@ function setYear(v){
  $('factCDesc').innerHTML=sixth?(year>=1549?'外围堡垒失守<br>布洛涅仍英占':year>=1546?'法国外围英军<br>增筑堡垒':''):fifth?(year>=1535?'梅努斯城堡<br>王室攻取':''):fourth?(year>=1527?'北美远航':''):third?(year>=1519?'英军撤离<br>图尔奈':''):second?(year>=1504?'爱尔兰<br>诺克多战役':''):(year>=1498?'第二次远航<br>后续出航':'');
  $('periodTitle').textContent=sixth?(year>=1547?'爱德华六世 · 英格兰王国':'亨利八世 · 英格兰王国'):fifth?'亨利八世 · 英格兰王国':fourth?'亨利八世 · 英格兰王国':third?'亨利八世 · 英格兰王国':second?(year===1509?'亨利八世 · 王位更替':'亨利七世 · 英格兰王国'):(year===1497?'亨利七世 · 首次远航':year===1498?'亨利七世 · 第二次远航':'亨利七世 · 英格兰王国');
  if(seventh){
-  $('chapterNav').textContent='历史地图 · 第七章';
-  $('chapterNavName').textContent='撤军、殖民与加来失守';
-  $('chapterLabel').textContent='第七章 · 1550—1559';
   $('chapterTitlePrimary').textContent='撤军、殖民与';
   $('chapterTitleSecondary').textContent='加来失守';
   $('chapterIntro').textContent=atlasSeventh.intro||'';
@@ -1746,9 +1739,6 @@ function setYear(v){
   $('periodTitle').textContent=year<=1552?'爱德华六世 · 英格兰王国':year<=1557?'玛丽一世 · 英格兰王国':'伊丽莎白一世 · 英格兰王国';
  }
  if(eighth){
-  $('chapterNav').textContent='历史地图 · 第八章';
-  $('chapterNavName').textContent='三角贸易与海上掠夺';
-  $('chapterLabel').textContent='第八章 · 1560—1569';
   $('chapterTitlePrimary').textContent='奴隶贸易与';
   $('chapterTitleSecondary').textContent='大西洋掠夺';
   $('chapterIntro').textContent=atlasEighth.intro;
@@ -1761,9 +1751,6 @@ function setYear(v){
   $('periodTitle').textContent='伊丽莎白一世 · 英格兰王国';
  }
  if(ninth){
-  $('chapterNav').textContent='历史地图 · 第九章';
-  $('chapterNavName').textContent='殖民暴力与海外掠夺';
-  $('chapterLabel').textContent='第九章 · 1570—1579';
   $('chapterTitlePrimary').textContent='殖民暴力与';
   $('chapterTitleSecondary').textContent='海外掠夺';
   $('chapterIntro').textContent=atlasNinth.intro;
@@ -1776,9 +1763,6 @@ function setYear(v){
   $('periodTitle').textContent='伊丽莎白一世 · 英格兰王国';
  }
  if(tenth){
-  $('chapterNav').textContent='历史地图 · 第十章';
-  $('chapterNavName').textContent='焦土、奴役与殖民地契';
-  $('chapterLabel').textContent='第十章 · 1580—1589';
   $('chapterTitlePrimary').textContent='焦土、奴役与';
   $('chapterTitleSecondary').textContent='殖民地契';
   $('chapterIntro').textContent=atlasTenth.intro;
@@ -1791,9 +1775,6 @@ function setYear(v){
   $('periodTitle').textContent='伊丽莎白一世 · 英格兰王国';
  }
  if(eleventh){
-  $('chapterNav').textContent='历史地图 · 第十一章';
-  $('chapterNavName').textContent='镇压、反抗与跨洋劫掠';
-  $('chapterLabel').textContent='第十一章 · 1590—1599';
   $('chapterTitlePrimary').textContent='镇压、反抗与';
   $('chapterTitleSecondary').textContent='跨洋劫掠';
   $('chapterIntro').textContent=atlasEleventh.intro;
@@ -1820,7 +1801,6 @@ function setYear(v){
   }
  }
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
- $('timelineContext').textContent=displayChapter?$('chapterLabel').textContent+'年事件':'';
  $('timelineNotice').textContent='';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
  if(changedYear)$('eventList').scrollTop=0;
