@@ -20,6 +20,7 @@
 1. `.github/workflows/phase2-spatial-redteam.yml`：对任意正式 Atlas 文件、`data/*.geojson`、章节索引等 PR 变更触发；对相关 `main` 推送触发；运行 `--strict --out`，使结构性 `ERROR` 真正导致失败，`REVIEW` 保持待审。
 2. `.github/workflows/pages.yml`：在 Pages 上传与部署之前执行同一严格审计，防止未通过空间完整性门禁的修改发布到正式地图。
 3. `.github/workflows/browser-smoke.yml`：扩大桌面浏览器冒烟检查到 CSS/JS 变更，并在前端变更进入 `main` 后复查；避免样式等改动跳过真实浏览器验收。
+   - 旧版 `scripts/browser_smoke.py` 中 81 处年切换引用硬编码的事件累计数，在正式 Atlas 扩充后失效。本分支以 `data/chapters.json` 加对应 `chapter.source` 实际事件年份计算页面预期累计数，仍检查浏览器画面与正式数据一致，不放宽对双图层、时间泄露和地图点击的专项断言。
 4. 无修改用户网站现有交互、史学事实、行政主权、军界边线、图层几何及面积数值。后续必须以 PR 工作流真实结果验收，不能把“已经提交到候审分支”等同于“正式网站已修复”。
 
 **基线依据**：2026-10-17 GitHub Actions `Phase II independent historical GIS red-team` 成功运行 [39030546094](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39030546094)，当时统计 0 项 `ERROR`、27 项 `REVIEW`，27 项均为 `geo_source_outside_published_index`。这些 ID 可能属于独立史料档案，必须人工建立引用对应关系，**不能机械复制新来源或删除疑点**。该日志是当时快照，不是对本分支或之后数据的最终验收。
