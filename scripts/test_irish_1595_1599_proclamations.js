@@ -25,7 +25,7 @@ for(const[id,year,term]of cases){
 }
 const essex=db.events.find(x=>x.id==='1590S-E032');
 assert(essex&&essex.source_ids.includes(src)&&essex.description.includes('1599年3月31日'));
-assert(db.events.length===62&&db.sources.length===96);
+assert(db.events.length===67&&db.sources.length===102);
 assert.equal(db.colonial_polygons.length,0);
 assert(!db.events.some(e=>e.id.startsWith('IR159')&&e.lat!==null));
 console.log('PASS Ireland proclamations: 1595 chattels/powder/corn, 1596 anti-extortion, 1599 Essex knighthoods, 1599 army order linked to existing event; official index ≠ verified enforcement');
