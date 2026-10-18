@@ -35,7 +35,7 @@ for(const eid of [eventIds[1],eventIds[2],eventIds[4]]){
 const capture=events.get(eventIds[0]),arrival=events.get(eventIds[1]),held=events.get(eventIds[2]),returnTrip=events.get(eventIds[3]),reimbursement=events.get(eventIds[4]);
 assert(capture.description.includes('捕获者')&&capture.description.includes('不是'));
 assert(arrival.description.includes('135名非洲人')&&arrival.description.includes('32名')&&arrival.description.includes('734箱糖')&&arrival.description.includes('13大桶糖蜜'));
-assert(held.description.includes('一周')&&held.description.includes('未')&&held.description.includes('谷仓'));
+assert(held.description.includes('一周')&&held.description.includes('没有足够证据')&&held.description.includes('谷仓'));
 assert(returnTrip.description.includes('西班牙')&&returnTrip.description.includes('不能')&&returnTrip.lat===null);
 assert(reimbursement.description.includes('302英镑13先令3便士')&&reimbursement.description.includes('申请补偿')&&reimbursement.description.includes('不能推断已经拨付'));
 assert(body.includes('身份')&&body.includes('不是两份')===false);
