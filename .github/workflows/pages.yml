@@ -2,6 +2,22 @@ name: Publish historical atlas
 on:
   push:
     branches: [main]
+    # Ordinary research/archival Markdown edits do not change the actual atlas
+    # application; avoid redundant Pages deployments and user notifications.
+    paths:
+      - 'index.html'
+      - 'app.js'
+      - 'app-continuity-1497-1529-preview.js'
+      - 'preview-continuity-1497-1529.html'
+      - 'icon-gallery.html'
+      - 'style.css'
+      - 'css/**'
+      - 'js/**'
+      - 'assets/**'
+      - 'data/**'
+      - 'scripts/**'
+      - '.nojekyll'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 permissions:
   contents: read
