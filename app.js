@@ -417,12 +417,10 @@ function renderEventList(){
  const hint=$('yearArrivalSummary');
  if(hint){
   hint.textContent=currentEvents.length?
-   '本年新增 '+currentEvents.length+' 项'+(locatable<currentEvents.length?' · '+locatable+' 项可定位':' · 地图金色标记'):
-   '本年无新增事件记录';
+   '本年新增 '+currentEvents.length+' 项'+(locatable<currentEvents.length?' · '+locatable+' 项可定位':''):
+   '本年无新增记录';
   hint.classList.toggle('none',!currentEvents.length);
  }
- const mapHint=$('yearArrivalMapCount');
- if(mapHint)mapHint.textContent=currentEvents.length?'本年新事件 '+currentEvents.length+(!$('mapLayerEvents').checked?' · 事件图层已关闭':locatable?' · 金色「新」标记':' · 无可靠地图位置'):'本年无新增事件记录';
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>{
   node.addEventListener('click',ev=>{
