@@ -7,7 +7,7 @@ assert.equal(a.events.length,76);assert.equal(a.sources.length,120);
 assert.equal(b.events.length,68);assert.equal(b.sources.length,104);
 const cases=[
 ['IR1581-SOLDIER-MEALS-RATES',1581,'munster-desmond-1579-1586','famine','定额'],
-['IR1583-TOWNS-PROVISIONS-ARREARS',1583,'munster-desmond-1579-1586','famine','款项'],
+['IR1583-TOWNS-PROVISIONS-ARREARS',1583,'munster-desmond-1579-1586','famine','款额'],
 ['IR1588-TROOPS-PROVISIONS-WARRANT',1588,'munster-plantation-land-grants-and-aftermath-1584-1589','phase-6','授权'],
 ['IR1589-MUNSTER-OFFICERS-OPPRESSION-REDRESS',1589,'munster-plantation-land-grants-and-aftermath-1584-1589','phase-6','纠正'],
 ['IR1589-CORN-VICTUALS-RESTRAINT-DEATH-PENALTY',1589,'munster-plantation-land-grants-and-aftermath-1584-1589','phase-6','死刑'],
