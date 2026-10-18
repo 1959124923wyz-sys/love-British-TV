@@ -2452,6 +2452,42 @@
       "map_priority": true,
       "position_is_historical_survey": false,
       "geolocation_limit_zh": "英王舰船海上截获坐标、1590年停泊、谷仓及会计房间均尚未证实，不创建具体位置或虚构航线"
+    },
+    {
+      "id": "IR1590-ROYAL-MARTIAL-LAW-RESTRAINT",
+      "year": 1590,
+      "start_year": 1590,
+      "end_year": 1590,
+      "visible_from": 1590,
+      "date_label": "1590年1月4日",
+      "name": "英格兰王室颁令限制爱尔兰军事司法的行使",
+      "description": "爱尔兰官方《2015年成文法修订法》附表在英格兰文书部分编号3382明确收录1590年1月4日限制爱尔兰军事司法的王室命令。军事司法扩权与限制是都铎殖民军事统治的一部分，限制命令证明中央王权至少试图约束其使用；不能据此证明1589年以前的处决被追认无效，也不能说爱尔兰各地武装此后不再实施暴力。",
+      "short_description": "爱尔兰官方《2015年成文法修订法》附表在英格兰文书部分编号3382明确收录1590年1月4日限制爱尔兰军事司法的王室命令。军事司法扩权与限制是都铎殖民军事统治的一部分，限制命令证明中央王权至少试图约束其",
+      "category": "political",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "geography_label": "英王对爱尔兰的全国／区域行政命令；未核实执行或受害人地点",
+      "geo_precision": "unlocated_official_Tudor_proclamation_not_real_implementation_case",
+      "source_ids": [
+        "IR1590-ENGLAND-ORDER-MARTIAL-LAW-2015",
+        "IR1590-EDWARDS-MARTIAL-RECONQUEST"
+      ],
+      "certainty": "official_2015_historic_statute_index_title_date_only_practical_enforcement_unverified",
+      "significance": {
+        "level": 3,
+        "review_status": "Irish_Statute_Book_Schedule2_official_index_verified"
+      },
+      "colonial_profit": null,
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "chronology_only_not_actual_execution_or_historic_territory",
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": false,
+      "date_precision": "day",
+      "source_context_warning": "Command and statutory penalty not tax paid, army supplies seized, troop lawful obedience, executed punishment or control area",
+      "position_is_historical_survey": false
     }
   ],
   "places": [
@@ -4184,6 +4220,26 @@
       "evidence_read_level": "Author's explicit description and catalogue reference read; original BL Lansdowne manuscript folios not directly inspected by this editor",
       "precision_warning": "Same historian in multiple sources; researcher reporting counts is not independent ship census, payout record, enslavement adjudication or ship log",
       "origin": "batch10_20261018_bristol"
+    },
+    {
+      "id": "IR1590-ENGLAND-ORDER-MARTIAL-LAW-2015",
+      "title": "Irish Statute Book Statute Law Revision Act 2015 Schedule 2 Part 2, English proclamation No.3382, 4 January 1590 limiting martial law in Ireland",
+      "publisher": "Office of the Attorney General, Republic of Ireland",
+      "url": "https://www.irishstatutebook.ie/eli/2015/act/23/schedule/2/enacted/en/html",
+      "kind": "official_date_title_index_English_royal_proclamation_affecting_Ireland",
+      "evidence_read_level": "Official 2015 statutory index specifically records 1590 January 4 order restraining martial law in Ireland; no full contemporary military commission text transcribed",
+      "precision_warning": "Order issued not proof any marshal was prosecuted, all troops obeyed, or killings ceased",
+      "origin": "institutional_editor_20261018_ireland_supply"
+    },
+    {
+      "id": "IR1590-EDWARDS-MARTIAL-RECONQUEST",
+      "title": "David Edwards, Beyond Reform: Martial Law & the Tudor reconquest of Ireland",
+      "publisher": "History Ireland 5(2), 1997",
+      "url": "https://historyireland.com/beyond-reform-martial-law-the-tudor-reconquest-of-ireland/",
+      "kind": "academic_study_royal_military_justice",
+      "evidence_read_level": "Scholar's published martial-law history provides London/Dublin policy tension; independent official catalogue dates precise 4 January 1590 announcement",
+      "precision_warning": "Military law limitation is administrative policy not end of all coercion",
+      "origin": "institutional_editor_20261018_ireland_supply"
     }
   ],
   "routes": [

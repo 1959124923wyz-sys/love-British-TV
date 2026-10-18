@@ -14,7 +14,7 @@ const eventIds=['BRI1590-CHARLES-PRIZE-AT-SEA','BRI1590-BRISTOL-135-AFRICANS-ARR
 assert.deepEqual(m.event_ids,eventIds);assert.deepEqual(story.related_event_ids,eventIds);
 const links=[...body.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]\n]+\]\]/g)].map(x=>x[1]);assert.deepEqual(links,eventIds);
 const events=new Map(a.events.map(x=>[x.id,x])),sources=new Set(a.sources.map(s=>s.id));
-assert.equal(a.events.length,67);assert.equal(a.sources.length,102);
+assert.equal(a.events.length,68);assert.equal(a.sources.length,104);
 assert.equal(a.colonial_polygons.length,0);assert.equal(a.routes.length,4);
 for(const eid of eventIds){
  const e=events.get(eid);assert(e&&e.year===1590&&e.source_ids.length>=3);
