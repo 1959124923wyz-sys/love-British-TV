@@ -264,7 +264,7 @@ function openDossier(item,typ){
  if(!item)return;
  const candidate=typ==='candidate',route=typ==='route',place=typ==='place';
  selected=item.id;
- selectedItemYear=typ==='event'&&Number.isFinite(Number(item.year))?Number(item.year):null;
+ selectedItemYear=(typ==='event'||typ==='route')&&Number.isFinite(Number(item.year))?Number(item.year):null;
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
@@ -2262,7 +2262,13 @@ window.atlasStoryBridge={
  resetDossier:()=>resetDossier()
 };
 syncPanels();
-window.addEventListener('keydown',e=>{if(!atlas||e.target?.closest?.('input,button,select,textarea,[contenteditable="true"]'))return;if(e.key==='ArrowLeft'){stopPlay();setYear(year-1)}if(e.key==='ArrowRight'){stopPlay();setYear(year+1)}});
+window.addEventListener('keydown',e=>{
+ if(!atlas||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey||
+    e.target?.closest?.('input,button,select,textarea,a,summary,[contenteditable="true"]')||
+    document.querySelector('.major-story-article'))return;
+ if(e.key==='ArrowLeft'){e.preventDefault();stopPlay();setYear(year-1)}
+ if(e.key==='ArrowRight'){e.preventDefault();stopPlay();setYear(year+1)}
+});
 window.addEventListener('resize',()=>map.invalidateSize());
 setTimeout(()=>map.invalidateSize(),150);
 boot();
