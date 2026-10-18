@@ -13,9 +13,9 @@ const app=txt('app.js'),html=txt('index.html');new vm.Script(app);
 assert.deepEqual(now.period,{from:1590,to:1599,next:1600});
 assert.equal(catalog.chapters.length,10);
 assert.ok(catalog.chapters.some(c=>c.number===10&&c.status==='published'&&c.start===1590&&c.end===1599));
-assert.equal(now.events.length,67);assert.equal(now.sources.length,102);assert.equal(now.places.length,31);
+assert.equal(now.events.length,68);assert.equal(now.sources.length,104);assert.equal(now.places.length,31);
 assert.equal(now.routes.length,4);assert.equal(now.colonial_polygons.length,0);
-assert.equal(last.events.length,71);
+assert.equal(last.events.length,76);
 assert.equal(Object.keys(notes.records).length,36);assert.equal(ledger.records.length,32);
 const sources=new Set(now.sources.map(s=>s.id));
 const icons=new Set(read('data/icon-categories.json').categories.map(c=>c.code));
@@ -30,7 +30,7 @@ for(const e of now.events){
  if(e.lat==null){unlocated++;assert.equal(e.lng,null,e.id+' geographic invention')}
  else assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng)&&Math.abs(e.lat)<=90&&Math.abs(e.lng)<=180,e.id+' invalid GIS');
 }
-assert.equal(unlocated,20);
+assert.equal(unlocated,21);
 const newGeolocatedIds=['E001','E002','E004','E008','E009','E010','E013','E018',
  'E020','E023','E024','E026','E029','E033','E035','E036'].map(s=>'1590S-'+s);
 for(const id of newGeolocatedIds){
@@ -43,7 +43,7 @@ for(const id of newGeolocatedIds){
  assert.ok(!notes.records[id].geography.includes('保持地图坐标空值'),id+' outdated note');
 }
 assert.deepEqual(now.events.filter(e=>e.lat===null).map(e=>e.id),
- ['1590S-E006','1590S-E007','1590S-E034','DOM1596-ELIZABETH-AFRICANS-REMOVAL-ORDER','DOM1598-ELIZABETH-POOR-RELIEF-ACT','DOM1598-ELIZABETH-ROGUES-PUNISHMENT-ACT','IR1595-ROYAL-SEIZE-TRAITOR-CHATTELS','IR1595-ROYAL-POWDER-TRADE-RESTRICTION','IR1595-ROYAL-CORN-CARRIAGE-BAN','IR1596-ROYAL-PROHIBIT-SOLDIER-EXTORTION','IR1599-ELIZABETH-REVOKES-ESSEX-KNIGHTHOODS','ARM1595-CORNWALL-SPANISH-RAID','ARM1596-SPANISH-EXPEDITION-STORM','ARM1597-SPANISH-EXPEDITION-STORM','DOM1591-LANCASHIRE-RECUSANCY-REPORT','DOM1593-CATHOLIC-RECUSANTS-FIVE-MILE-LAW','DOM1593-RELIGION-CONVENTICLES-ACT','DOM1594-BURGHLEY-RECUSANT-SEIZURE-PLANS','BRI1590-CHARLES-PRIZE-AT-SEA','BRI1590-AFRICANS-SENT-SPAIN'],'Existing maritime gaps plus three explicitly unlocated statutes and royal directives');
+ ['1590S-E006','1590S-E007','1590S-E034','DOM1596-ELIZABETH-AFRICANS-REMOVAL-ORDER','DOM1598-ELIZABETH-POOR-RELIEF-ACT','DOM1598-ELIZABETH-ROGUES-PUNISHMENT-ACT','IR1595-ROYAL-SEIZE-TRAITOR-CHATTELS','IR1595-ROYAL-POWDER-TRADE-RESTRICTION','IR1595-ROYAL-CORN-CARRIAGE-BAN','IR1596-ROYAL-PROHIBIT-SOLDIER-EXTORTION','IR1599-ELIZABETH-REVOKES-ESSEX-KNIGHTHOODS','ARM1595-CORNWALL-SPANISH-RAID','ARM1596-SPANISH-EXPEDITION-STORM','ARM1597-SPANISH-EXPEDITION-STORM','DOM1591-LANCASHIRE-RECUSANCY-REPORT','DOM1593-CATHOLIC-RECUSANTS-FIVE-MILE-LAW','DOM1593-RELIGION-CONVENTICLES-ACT','DOM1594-BURGHLEY-RECUSANT-SEIZURE-PLANS','BRI1590-CHARLES-PRIZE-AT-SEA','BRI1590-AFRICANS-SENT-SPAIN','IR1590-ROYAL-MARTIAL-LAW-RESTRAINT'],'Existing maritime gaps plus three explicitly unlocated statutes and royal directives');
 const raleigh=now.events.find(e=>e.id==='1590S-E014');
 assert.equal(raleigh.lat,10.6394,'Raleigh San Jose modern city is a known referent');
 assert.equal(raleigh.lng,-61.4242);
