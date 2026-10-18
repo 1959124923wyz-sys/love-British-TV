@@ -1,0 +1,42 @@
+{
+  "schema": "scotland_1540s_military_axes_geometry_qa_20261013",
+  "branch": "fix/1540s-sourced-coastal-route-no-invented-control-20261013",
+  "status": "PASS",
+  "scope": "Five historically sourced route LineStrings in candidate branch; GitHub remote readback only",
+  "checks": {
+    "JavaScript_function_syntax": "PASS",
+    "source_ids_all_registered": "PASS",
+    "features_all_LineString": "PASS",
+    "new_unverified_control_area_polygons": 0,
+    "original_four_misleading_schematic_polygons_removed": true,
+    "year_1544_1547_1548_twice_1549_order": true,
+    "England_sovereignty_topology_crossing_main_routes": "PASS",
+    "line_segments_sampled_against_repo_topology": "520 land points / 0 water or outside modern administrative polygon",
+    "1548_interdicted_Haddington_link_separate": true,
+    "1549_no_Haddington_garrison_or_control_route": true,
+    "source_Eyemouth_Dunglass_Haddington_locations_agree_existing_military_point_layer": true,
+    "clickable_route_dossiers_source_ids": true,
+    "visual_legend_avoids_claimed_military_occupation_area": true,
+    "zoomend_remakes_pixel_width_ribbons": true
+  },
+  "counts": {
+    "unapproved_old_filled_polygon_features_removed": 4,
+    "new_lines": 5,
+    "total_line_waypoints": 31,
+    "land_sample_evaluations": 520,
+    "authenticated_1540s_actual_control_area_polygons": 0
+  },
+  "historical_sources": [
+    "HES Pinkie battlefield inventory BTL15 / 1547 Berwick east coast march and naval support",
+    "HES Dunglass Collegiate Church Statement of Significance 2025 pp6-7,19-20 / old Pease Burn crossing and 1548 guarded communication",
+    "HES Haddington Siege 2022 / 1548 Franco-Scottish forces blocked supplies and 1549 retreat"
+  ],
+  "limitations": [
+    "Modern reference waypoints, not a surveyed Tudor road centreline",
+    "Line width is in screen pixels only; cannot calculate occupied area or accurate frontier",
+    "1547 route is a campaign narrative, not a verified secure year-end corridor",
+    "No direct re-survey of original English XVI century road/crossing plans",
+    "No browser Leaflet visual acceptance or manually dispatched GitHub Actions"
+  ],
+  "editor_action": "Review draft and merge selective changes from candidate into main; do not reuse PR38's old four hand-drawn wide polygons."
+}
