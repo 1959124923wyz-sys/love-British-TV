@@ -5,6 +5,17 @@ on:
       - "scripts/browser_smoke.py"
       - "app.js"
       - "index.html"
+      - "js/*.js"
+      - "css/*.css"
+      - ".github/workflows/browser-smoke.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/browser_smoke.py"
+      - "app.js"
+      - "index.html"
+      - "js/*.js"
+      - "css/*.css"
       - ".github/workflows/browser-smoke.yml"
   workflow_dispatch:
 jobs:
