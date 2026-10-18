@@ -1,3 +1,17 @@
+# 爱英TV｜仓库导航
+
+> **正式网站**：[GitHub Pages 历史地图](https://1959124923wyz-sys.github.io/love-British-TV/) · **主干权威数据**：[当前章节](data/chapters.json) · [已登记历史专题](data/stories/index.json)
+
+多人调查和维护请先使用：
+- [仓库整理与协作规范（2026-10-18）](docs/REPOSITORY_HOUSEKEEPING_20261018.md)：明确正式数据、研究档案、审核与分支的边界。
+- [31份开放PR逐项清单（2026-10-18快照）](docs/OPEN_PR_TRIAGE_20261018.md)：查看哪些是研究、哪些会修改正式网站，以及目前建议的处理顺序。
+- [智能体进入规则](AGENTS.md)：历史时间连续性、史实证据、虚线不确定区域和独立分支要求。
+- [正式地图交互规范](docs/APPROVED_MAP_INTERACTION_STANDARD.md)：网站既有交互的保护基线。
+
+**重要：** 候审PR/研究分支中的数据不代表已经出版。每次出版后以 `main/data/chapters.json`、`main/data/stories/index.json` 和实际部署状态为准。下面保留历史版本和专项工作的原有文档，避免丢失上下文。
+
+---
+
 ## 正式执行规范｜历史空间叙事与军事影响区（2026-10-15）
 
 从本次起，所有调查员、编审与地图维护智能体统一使用 [历史空间叙事与军事影响区正式标准](docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md) 和 [审核清单](docs/HISTORICAL_SPATIAL_REVIEW_CHECKLIST.md)：**有史料支持的具名城镇即可用注明精度的现代对应点落图；有据的多点行动可连线；只有地区性军事证据才能绘制淡色虚线影响区。** 这类线/区都不是测绘轨迹、焚毁边缘或殖民领土。区分失败袭击、短期城市占据、长期政治统治、当地反抗、贸易外交；绝不虚构面积或收益。保持原现代地点对照底图与已批准的简洁交互。相关入口已加入 [AGENTS.md](AGENTS.md)，供后续所有智能体必读。
