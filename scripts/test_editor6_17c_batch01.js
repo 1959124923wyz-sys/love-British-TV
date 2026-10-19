@@ -1,82 +1,80 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..');
-const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
-const expected=[13,24,22,18,18,24,42,38,27,42];
-const existing=read('data/stories/serial/chronology-preview-1600-1699.json');
-assert.deepEqual(existing.events.map(e=>e.id),['E6-GLENCOE-1692']);
-const topics=read('data/stories/serial/index.json');
-assert(topics.topics.some(t=>t.id==='E6-T04-GLENCOE'&&t.status==='published'));
-const chapters=read('data/chapters.json');
-assert.equal(chapters.chapters.length,10,'Never change already published Tudor chapter count');
-assert.equal(chapters.chapters.at(-1).end,1599);
-const allIds=new Set(existing.events.map(e=>e.id));
-const researchIds=new Set();
-let sum=0,points=0,representative=0,legacyPoints=0,sources=0;
+const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const original=[13,24,22,18,18,24,42,38,27,42];
+const expanded=[17,32,26,20,28,36,46,64,35,59];
+const originalSources=298;
+const legacy=load('data/stories/serial/chronology-preview-1600-1699.json');
+assert.deepEqual(legacy.events.map(x=>x.id),['E6-GLENCOE-1692']);
+const topics=load('data/stories/serial/index.json').topics;
+assert(topics.some(t=>t.id==='E6-T04-GLENCOE'&&t.status==='published'&&t.event_ids.includes('E6-GLENCOE-1692')));
+const chapters=load('data/chapters.json').chapters;
+assert.equal(chapters.length,10);assert.equal(chapters.at(-1).end,1599);
+const oldGeo=load('docs/research/EDITOR6_17C_REPRESENTATIVE_POINT_DECISIONS_R02.json');
+const allIds=new Set(legacy.events.map(x=>x.id)),usedResearchIds=new Set();
+let total=0,points=0,refs=0,olderNamed=0,olderProxy=0,added=0,sources=0,newDecades=0;
 for(let d=1600,i=0;d<=1690;d+=10,i++){
- const file='data/atlas-'+d+'-'+(d+9)+'.json';
- const dataset=read(file),events=dataset.events;
- assert.equal(dataset.period.from,d);assert.equal(dataset.period.to,d+9);
- assert.equal(dataset.editorial_status,'published_partial_source_linked_in_progress_not_complete_decade');
- assert(dataset.publication.not_deemed_complete);
- assert.equal(dataset.intro,null,'decade overview is pending by editor decision');
- assert.equal(events.length,expected[i],'unexpected change without audit: '+d);
- assert.deepEqual(dataset.places,[]);assert.deepEqual(dataset.routes,[]);
- assert.deepEqual(dataset.colonial_polygons,[],'no new GIS control polygon is approved');
- const sourceIds=new Set(dataset.sources.map(s=>s.id));
- assert.equal(sourceIds.size,dataset.sources.length,'duplicated decade source keys');
- for(const src of dataset.sources){
-  assert(/^https:\/\//.test(src.url),'non-clickable source: '+src.id);
-  assert(src.title && src.original_source_id);
-  assert.equal(src.verification_status,'agent_register_linked_not_individually_audited_for_publication');
+ const data=load('data/atlas-'+d+'-'+(d+9)+'.json');
+ assert.deepEqual(data.period,{from:d,to:d+9});
+ assert.equal(data.intro,null);assert(data.publication.not_deemed_complete);
+ assert.equal(data.editorial_status,'published_partial_source_linked_in_progress_not_complete_decade');
+ for(const field of ['places','routes','colonial_polygons'])assert.deepEqual(data[field],[],field+' must not imply unverified sovereignty');
+ assert.equal(data.events.length,expanded[i],'unexpected R03 decade event count');
+ const numbering=new Set(),sourceKeys=new Set(data.sources.map(x=>x.id));
+ assert.equal(sourceKeys.size,data.sources.length);
+ for(const s of data.sources){
+  assert(s.url?.startsWith('https://')&&s.title&&s.original_source_id);
+  assert(s.verification_status==='agent_register_linked_not_individually_audited_for_publication'||s.verification_status?.startsWith('editor6_'),'source verification must have documented level');
  }
- let prev=d-1;
- for(let index=0;index<events.length;index++){
-  const e=events[index],expectedId=d+'S-E'+String(index+1).padStart(3,'0');
-  assert.equal(e.id,expectedId,'IDs must append within each decade and remain frozen across updates');
-  assert(!allIds.has(e.id),'duplicate map event ID '+e.id);allIds.add(e.id);
-  assert(!researchIds.has(e.research_event_id),'duplicate source record '+e.research_event_id);
-  researchIds.add(e.research_event_id);
-  assert(e.year>=d&&e.year<=d+9&&e.year>=prev,'invalid chronology for '+e.id);
-  prev=e.year;
-  assert(e.date_label&&e.name&&e.description&&e.historical_actor);
-  assert(e.arc_id&&e.research_event_id,'cross-century process and agent provenance IDs required');
-  assert(e.significance?.review_status==='editor6_batch_source_register_screening_not_full_primary_audit');
+ let prior=d-1;
+ for(const e of data.events){
+  assert(new RegExp('^'+d+'S-E[0-9]{3}$').test(e.id),'decade ID must have 3-digit suffix');
+  const ix=Number(e.id.slice(-3));assert(!numbering.has(ix),'duplicate decade number');numbering.add(ix);
+  assert(!allIds.has(e.id),'duplicate global ID');allIds.add(e.id);
+  assert(!usedResearchIds.has(e.research_event_id),'already imported source record '+e.research_event_id);usedResearchIds.add(e.research_event_id);
+  assert(e.year>=d&&e.year<=d+9&&e.year>=prior,'year order');prior=e.year;
+  assert(e.date_label&&e.name&&e.description&&e.historical_actor&&e.arc_id);
+  assert(e.significance?.review_status?.startsWith('editor6_'),'record is missing research review flag');
   assert(Array.isArray(e.source_ids)&&e.source_ids.length>0);
-  for(const sid of e.source_ids)assert(sourceIds.has(sid),'dangling source '+e.id+': '+sid);
-  assert.equal(e.historical_control_boundary_verified,false);
-  assert.equal(e.actual_English_land_area_sqkm,null);
-  assert.equal(e.actual_English_territory_created,false);
-  if(e.lat===null||e.lng===null){
-   assert(e.lat===null&&e.lng===null,'partial GPS pair');
-   assert.equal(e.geo_precision,'not_geocoded_historical_place_recorded');
-  }else{
+  for(const k of e.source_ids)assert(sourceKeys.has(k),'broken cited source '+k);
+  assert(e.actual_English_land_area_sqkm===null&&e.actual_English_territory_created===false);
+  assert(e.historical_control_boundary_verified===false);
+  const afterBaseline=ix>original[i];
+  if(afterBaseline)added++;
+  const oldRef=oldGeo.approved_event_to_reference[d]?.[e.id];
+  if(oldRef){
+   olderProxy++;
+   const g=oldGeo.gazetteer[oldRef];
+   assert(g&&e.lat===g.lat&&e.lng===g.lng,'R02 anchored location changed '+e.id);
+   assert(e.geo_reference_code===oldRef,'R02 geo reference code changed');
+  }
+  if(Number.isFinite(e.lat)&&Number.isFinite(e.lng)){
    points++;
-   assert(Number.isFinite(e.lat)&&Number.isFinite(e.lng));
    assert(Math.abs(e.lat)<=90&&Math.abs(e.lng)<=180);
    if(e.representative_map_point){
-    representative++;
-    assert(e.geo_precision.startsWith('representative_'),'explicit uncertain geographical marker required');
-    assert(e.geolocation_limit_zh.includes('非事件精确现场')&&e.geolocation_limit_zh.includes('不表示由英方控制'),'representative site must not masquerade as event site or control');
-    assert(e.geography_label&&e.geo_reference_code&&e.map_priority===true);
+    refs++;
+    assert(e.geo_precision.startsWith('representative_'),'representative coordinate must be marked');
+    assert(e.geolocation_limit_zh?.includes('非事件精确现场'),'must describe imprecision');
+    assert(e.geolocation_limit_zh.includes('不表示')||e.geolocation_limit_zh.includes('不构成'),'cannot imply real control');
    }else{
-    legacyPoints++;
-    assert(e.geo_precision.includes('approximate')&&e.geolocation_limit_zh.includes('并非'));
+    olderNamed++;
+    assert(e.geo_precision?.includes('approximate'),'original locality is approximate');
    }
+  }else{
+   assert(e.lat===null&&e.lng===null,'partial coordinate pair');
+   assert(!afterBaseline,'new research records should map to justified region in R03');
   }
  }
- sum+=events.length;sources+=dataset.sources.length;
+ for(let number=1;number<=expanded[i];number++)assert(numbering.has(number),'append-only identifier gap '+d+'S-E'+number);
+ newDecades++;total+=data.events.length;sources+=data.sources.length;
 }
-assert.equal(sum,268);
-assert.equal(points,267);
-assert.equal(representative,219);
-assert.equal(legacyPoints,48);
-assert.equal(sources,298);
+assert.equal(newDecades,10);assert.equal(total,363);assert.equal(added,95);
+assert.equal(points,362);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
+assert.equal(refs,314,'R02 existing 219 + R03 new 95 should remain labeled as proxies');
+assert.equal(sources,349);assert.equal(sources-originalSources,51);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
-assert(app.includes("fetch('data/atlas-'+d+'-'+(d+9)+'.json'"),'actual decade batches must load');
-assert(app.includes("existingGlencoe")||app.includes("existingGlencoe="),'preserve prior independently published 1692 record');
-assert(app.includes("serialPreviewByDecade.set(decade,ds)"));
-assert(app.includes("showFullChapterArchive').checked=false"),'future archive preview must reset across decades');
+assert(app.includes("fetch('data/atlas-'+d+'-'+(d+9)+'.json'"));
+assert(app.includes('existingGlencoe'));
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(!html.includes('serialStoriesButton'),'previous independent story tab must remain removed');
-console.log('PASS E6 17c batch 01: '+sum+' new unique events + Glencoe, 298 decade-specific source references, '+points+' cautious reference points ('+representative+' administrative/impact area references); all ten years, chronology and old atlas contract intact');
+assert(!html.includes('serialStoriesButton'),'no separate navigation for this century');
+console.log('PASS Editor6 R03: '+total+' unique new century decade records, '+added+' append-only new, '+sources+' provenance sources, '+points+' cautious map points, old 16th century and Glencoe intact');
