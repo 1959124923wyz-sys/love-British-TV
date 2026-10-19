@@ -325,6 +325,51 @@
       "map_priority": true
     },
     {
+      "id": "1640S-E029",
+      "research_event_id": "EDITOR6:IRELAND-ADVENTURERS-ACT",
+      "arc_id": "ARC-IRISH-LAND-CONFISCATION-1642-1680",
+      "year": 1642,
+      "start_year": 1642,
+      "end_year": 1642,
+      "visible_from": 1642,
+      "date_label": "1642",
+      "name": "1642年《爱尔兰冒险家法》：议会军费与未来没收地产绑定",
+      "historical_actor": "英格兰议会及以爱尔兰地产作回报的认购者",
+      "historical_place": "爱尔兰战争、土地没收与重分配受影响地区",
+      "description": "英格兰议会在1642年通过资金认购方案，向出资镇压爱尔兰战争的投资者承诺以日后没收的爱尔兰土地偿付。该机制把战争财政、征服与土地所有权转移联结起来；它是筹款和承诺，不代表1642年已经完成逐块土地交割。英国国家档案馆SP63保留认购收据和后来索地文件。",
+      "short_description": "英格兰议会在1642年通过资金认购方案，向出资镇压爱尔兰战争的投资者承诺以日后没收的爱尔兰土地偿付。该机制把战争财政、征服与土地所有权转移联结起来；它是筹款和承诺，不代表1642年已经完成逐块土地交割。英国国家档案馆SP",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "source_ids": [
+        "1640S-S037"
+      ],
+      "source_access_reported": [
+        "government_archives_specific_record_series"
+      ],
+      "source_group": "EDITOR6_MAJOR_GAPS_20261020",
+      "significance": {
+        "level": 3,
+        "review_status": "editor6_major_20261020_archival_scholarly_source_screened"
+      },
+      "editorial_status": "published_source_review_major_structural_event",
+      "certainty": "year_and_institution_supported_by_accessible_credible_source",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "lat": 53.35,
+      "lng": -6.26,
+      "geography_label": "都柏林行政中心代表爱尔兰影响区；法令由英格兰议会推动",
+      "geo_precision": "representative_historical_affected_region_or_political_center_not_exact_event_site",
+      "representative_map_point": true,
+      "position_type": "main_affected_region_or_named_locality_reference",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】都柏林行政中心代表爱尔兰影响区；法令由英格兰议会推动。只作历史主要影响地区的可视化导览，不表示暴力的具体现场、条约实际签署地、船舶航线，也不表示英方实际占领该地点及其周边地区。",
+      "geolocation_basis_zh": "学术著作及权威档案记载的主要影响地区，或同时代政治决策行政中心；非实测历史坐标。",
+      "map_priority": true,
+      "major_case_group": true
+    },
+    {
       "id": "1640S-E006",
       "research_event_id": "B:B036",
       "arc_id": "ARC-CAR-PLANT",
@@ -1639,16 +1684,27 @@
       "original_source_id": "A:A-S96",
       "verification_status": "editor6_read_source_summary_not_original_volume_or_personal_execution_proof",
       "precision_warning": "Authority source describes dated general event; no individual original archival volume presumed read."
+    },
+    {
+      "id": "1640S-S037",
+      "title": "英国国家档案馆：SP63冒险家认购和1653—1654年土地申领文书",
+      "publisher": "www.nationalarchives.gov.uk",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-ireland-1509-1782/",
+      "kind": "major_historical_research_or_primary_archival_source",
+      "evidence_read_level": "government_archives_specific_record_series",
+      "original_source_id": "EDITOR6:IRELAND-ADVENTURERS-ACT",
+      "verification_status": "editor6_major_20261020_academic_or_institutional_summary_checked_not_full_archival_volume_read",
+      "precision_warning": "Access verified only to publicly available archival description, document transcription or academic extract/summary; do not imply full original manuscript or paywalled book read."
     }
   ],
   "routes": [],
   "colonial_polygons": [],
   "publication": {
-    "approved_event_count": 28,
-    "scope": "partial_17c_research_screening_batch1_plus_r03",
+    "approved_event_count": 29,
+    "scope": "editor6_major_historical_research_r04_plus_95_event_r03",
     "decade_overview": "年代介绍待定",
     "not_deemed_complete": true,
     "geography_policy": "zero invented geocoding; no new polygon of historic control",
-    "caution": "追加研究记录经过不同证据等级筛查。原始来源登记可复核，但尚未对每条原件进行最终审核；坐标为主要影响地区或当时行政中心代表点。"
+    "caution": "本次只加入确有权威史料的重大结构性事件，原著全文、档案卷页与执行程度仍按source_access分别标注。图钉是地区代表点而非精确暴行坐标，不新增任何未经证实的占领疆界。"
   }
 }
