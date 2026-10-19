@@ -54,9 +54,41 @@ for(const t of serial.topics){
  assert(/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.article_file));
  const article=load(t.article_file);
  assert.equal(article.id,t.id,'parent and article IDs must match');
- assert(Array.isArray(article.sources)&&article.sources.length>0);
- assert(Array.isArray(article.sections)&&article.sections.length>0);
- for(const s of article.sections){assert(s.id&&Array.isArray(s.paragraphs)&&s.paragraphs.length>0);}
+ assert.equal(article.schema,'atlas-major-story-v1');
+ assert.equal(typeof article.start_year,'number');
+ assert.equal(typeof article.end_year,'number');
+ assert(article.start_year<=article.end_year);
+ assert(Array.isArray(article.sources)&&article.sources.length>=5);
+ assert(Array.isArray(article.sections)&&article.sections.length>=8,'public story must contain full narrative stages');
+ assert(typeof article.lead==='string'&&article.lead.length>=120);
+ assert(article.sections.flatMap(s=>s.paragraphs).join('').length>=3000,'public major-story baseline: 3000 narrative characters');
+ const sourceKeys=new Set(article.sources.map(s=>s.id));
+ assert.equal(sourceKeys.size,article.sources.length,'duplicate source ID');
+ for(const source of article.sources){
+  assert(typeof source.url==='string'&&source.url.startsWith('https://'),'original source URL required');
+  assert(source.access&&!source.access.includes('placeholder'),'do not publish unverified source placeholders');
+ }
+ if(t.parent_topic_id)assert.equal(article.parent_serial_topic_id,t.parent_topic_id,'article must link to approved series parent');
+ const sections=new Set();
+ for(const sec of article.sections){
+  assert(sec.id&&sec.heading&&Array.isArray(sec.paragraphs)&&sec.paragraphs.length>=2);
+  assert(!sections.has(sec.id),'duplicate section ID');sections.add(sec.id);
+  assert(sec.period_start_year>=article.start_year&&sec.period_end_year<=article.end_year,'section date range differs from article period');
+  assert(sec.period_start_year<=sec.period_end_year,'invalid section date interval');
+  assert(Array.isArray(sec.source_keys)&&sec.source_keys.length>0);
+  for(const key of sec.source_keys)assert(sourceKeys.has(key),'section uses missing source key: '+key);
+  for(const paragraph of sec.paragraphs){
+   assert(!/(本轮研究|本轮任务|下轮补充|GIS|地图不应画|未伪称)/.test(paragraph),'work-in-progress editorial notes are not public prose');
+  }
+ }
+ assert(Array.isArray(article.topic_source_claims)&&article.topic_source_claims.length>0,'claim matrix must ship with article');
+ for(const claim of article.topic_source_claims){
+  assert(sections.has(claim.section_id),'claim references missing section');
+  assert(Array.isArray(claim.source_keys)&&claim.source_keys.length>0);
+  for(const key of claim.source_keys)assert(sourceKeys.has(key),'claim references missing source: '+key);
+  assert(claim.original_document_page||claim.verification_depth,'claim location or access depth missing');
+ }
+ assert(Array.isArray(t.event_ids),'topic event IDs are independent of long-form publication');
  for(const id of t.event_ids) assert(/^[A-Za-z0-9-]+$/.test(id));
 }
 assert(!reader.includes('data/stories/serial/atlas-'),'must not fold serial registry into decade atlas');
