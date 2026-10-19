@@ -8,6 +8,7 @@
  const storyCache=new Map();
  let sourceEventId=null, lastStoryId=null, readingScroll=0, returnStoryId=null;
  let clickTimer=null, requestSerial=0, preview=null;
+ let openedFromSerialLibrary=false;
  function closePreview(){if(preview){preview.remove();preview=null;}}
  // Inline map records without coordinates get a small non-modal summary.
  function showUnlocatedPreview(item,anchor){
@@ -34,6 +35,22 @@
  function activeBody(){return document.getElementById('dossierBody');}
  function eventInMemory(id){return window.atlasStoryBridge?.eventById?.(id)||null;}
  function isLinkedEvent(item,typ){return typ==='event'&&Boolean(item&&storyByEvent.has(item.id));}
+ function openSerialLibrary(){
+  const topics=[...storyMeta.values()].filter(meta=>meta.is_serial_topic).sort((a,b)=>Number(a.origin_year||0)-Number(b.origin_year||0));
+  if(!topics.length)return;
+  openedFromSerialLibrary=true;sourceEventId=null;lastStoryId=null;returnStoryId=null;
+  closePreview();
+  document.getElementById('workspace').classList.add('story-reading');
+  window.atlasStoryBridge?.showDossier?.();
+  activeBody().innerHTML='<section class="major-story-article" aria-label="长期历史专题目录">'+
+    '<div class="major-story-header"><div class="dossier-kicker">跨世纪历史专题</div><h2>长期专题</h2>'+ 
+    '<p>以完整历史进程为单位阅读。时间轴仍按十年逐年显示已经审核的地图事件。</p></div>'+ 
+    '<section class="major-story-entry">'+topics.map(meta=>
+      '<button class="major-story-enter" type="button" data-story-open="'+esc(meta.id)+'" data-story-source="">'+
+      '<span>'+esc(meta.title)+' <small>'+esc(meta.period||'')+'</small></span><span aria-hidden="true">›</span></button>').join('')+
+    '</section></section>';
+  activeBody().scrollTop=0;
+ }
  function linkMarkupForEvent(item,typ){
   if(typ!=='event')return '';
   const metas=(storyByEvent.get(item.id)||[]).map(id=>storyMeta.get(id)).filter(Boolean);
@@ -49,6 +66,7 @@
   closePreview();
   document.getElementById('workspace').classList.remove('story-reading');
   if(typ!=='event')returnStoryId=null;
+  if(!returnStoryId)openedFromSerialLibrary=false;
   if(!returnStoryId||!storyMeta.has(returnStoryId))return;
   const body=activeBody();
   if(!body)return;
@@ -60,6 +78,7 @@
   returnStoryId=null;
   sourceEventId=null;
   lastStoryId=null;
+  openedFromSerialLibrary=false;
  }
  function renderInline(text){
   const regex=/\[\[([A-Za-z0-9-]+)\|([^\]\n]{1,90})\]\]/g;
@@ -86,7 +105,7 @@
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
   return '<article class="major-story-article" data-story-id="'+esc(article.id)+'">'+
-    '<header class="major-story-header"><button type="button" class="story-back" data-story-return="1">← 返回原事件</button>'+
+    '<header class="major-story-header"><button type="button" class="story-back" data-story-return="1">'+(openedFromSerialLibrary?'← 返回长期专题目录':'← 返回原事件')+'</button>'+ 
     '<div class="dossier-kicker">重大历史专题 · '+esc(article.region)+'</div>'+
     '<h2>'+esc(article.title)+'</h2>'+
     '<p class="story-subtitle">'+esc(article.subtitle)+'</p>'+
@@ -103,7 +122,7 @@
     '<div class="source-list">'+article.sources.map(s=>'<a class="source-link" href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+' ↗</a>'+
       '').join('')+'</div>'+
     '</details>'+
-    '<footer class="story-footer"><button type="button" class="story-back" data-story-return="1">← 返回原事件</button></footer>'+
+    '<footer class="story-footer"><button type="button" class="story-back" data-story-return="1">'+(openedFromSerialLibrary?'← 返回长期专题目录':'← 返回原事件')+'</button></footer>'+ 
    '</article>';
  }
  async function openStory(id,restore,originId){
@@ -115,6 +134,8 @@
    const metaEventIds=meta.event_ids||[];
    sourceEventId=current&&eventInMemory(current)?current:
      metaEventIds.find(eventId=>eventInMemory(eventId))||null;
+   // The independent serial library has no originating map event.
+   if(openedFromSerialLibrary)sourceEventId=null;
    readingScroll=0;
   }
   closePreview();
@@ -168,6 +189,7 @@
   window.atlasStoryBridge.openEvent(item);
  }
  async function returnToOrigin(){
+  if(openedFromSerialLibrary){openSerialLibrary();return;}
   const meta=storyMeta.get(lastStoryId);
   const fallbackId=(meta?.event_ids||[]).find(id=>eventInMemory(id));
   const item=eventInMemory(sourceEventId)||eventInMemory(fallbackId);
@@ -222,13 +244,45 @@
   try{
    const res=await fetch(manifestUrl,{cache:'no-store'});if(!res.ok)throw new Error('missing story manifest');
    const index=await res.json();
-   for(const story of index.stories||[]){
+   function registerStory(story){
+    if(!story||typeof story.id!=='string'||typeof story.file!=='string'||storyMeta.has(story.id))return;
     storyMeta.set(story.id,story);
     for(const id of story.event_ids||[]){
+     if(typeof id!=='string')continue;
      const choices=storyByEvent.get(id)||[];
      if(!choices.includes(story.id))choices.push(story.id);
      storyByEvent.set(id,choices);
     }
+   }
+   for(const story of index.stories||[])registerStory(story);
+   // Long-running histories are keyed by one stable parent ID rather than one
+   // new article every ten years. The existing decade/year atlas stays intact.
+   // The independent serial manifest is OPTIONAL; research records never render.
+   try{
+    const serialRes=await fetch('data/stories/serial/index.json',{cache:'no-store'});
+    if(serialRes.ok){
+     const serial=await serialRes.json();
+     if(serial.schema==='atlas-serial-stories-v1'){
+      for(const topic of serial.topics||[]){
+       if(topic.status!=='published'||topic.publication_review!=='approved')continue;
+       if(typeof topic.id!=='string'||!/^[A-Za-z0-9-]+$/.test(topic.id))continue;
+       if(typeof topic.article_file!=='string'||!topic.article_file.startsWith('data/stories/serial/')||
+          !/^[a-z0-9-]+[.]json$/.test(topic.article_file.slice('data/stories/serial/'.length)))continue;
+       if(!Array.isArray(topic.event_ids))continue;
+       registerStory({
+        id:topic.id,title:topic.title,file:topic.article_file,
+        origin_year:topic.origin_year,region:topic.region||'',event_ids:topic.event_ids,
+        period:topic.period||String(topic.origin_year||'')+'年起',
+        is_serial_topic:true
+       });
+      }
+     }
+    }
+   }catch(_serialError){ /* No published long story yet; old articles remain available. */ }
+   const serialButton=document.getElementById('serialStoriesButton');
+   if(serialButton&&[...storyMeta.values()].some(meta=>meta.is_serial_topic)){
+    serialButton.hidden=false;
+    serialButton.addEventListener('click',openSerialLibrary);
    }
    // An event may already be open while the optional manifest is loading.
    const current=window.atlasStoryBridge?.selectedEventId?.();
@@ -244,6 +298,6 @@
    }
   }catch(err){ /* Reading library is optional; the entire original atlas keeps working. */ }
  }
- window.HistoryStories={eventLinkMarkup:linkMarkupForEvent,isLinkedEvent:isLinkedEvent,onEventOpened:onEventOpened,onReset:onReset,openStory:openStory};
+ window.HistoryStories={eventLinkMarkup:linkMarkupForEvent,isLinkedEvent:isLinkedEvent,onEventOpened:onEventOpened,onReset:onReset,openStory:openStory,openSerialLibrary:openSerialLibrary};
  init();
 })();

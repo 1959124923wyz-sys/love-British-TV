@@ -1,0 +1,30 @@
+name: Cross-century story contract
+on:
+  pull_request:
+    paths:
+      - 'js/history-stories.js'
+      - 'data/stories/serial/**'
+      - 'scripts/test_serial_story_contract.js'
+      - 'data/chapters.json'
+      - '.github/workflows/serial-story-contract.yml'
+  push:
+    branches:
+      - 'research/editor6-17c-serial-topics-20261019'
+    paths:
+      - 'js/history-stories.js'
+      - 'data/stories/serial/**'
+      - 'scripts/test_serial_story_contract.js'
+      - 'data/chapters.json'
+      - '.github/workflows/serial-story-contract.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node --check js/history-stories.js
+      - run: node scripts/test_serial_story_contract.js
+      - run: node scripts/test_major_story_pilot.js
+      - run: python scripts/test_editor6_research_zip_import.py
