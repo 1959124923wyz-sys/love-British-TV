@@ -1,0 +1,759 @@
+{
+  "schema": "editor6-representative-geopoints-v1",
+  "created": "2026-10-19",
+  "policy": "Screen marker is named contemporary geographic orientation point, NOT necessarily the event site. Use impacted political region first; when a legal or royal act has no unique site, use contemporaneous administrative center. Treat armed attacks as place-specific: no political-capital fallback. No polygon, area or sovereignty claim.",
+  "gazetteer": {
+    "WES": {
+      "lat": 51.4995,
+      "lng": -0.1247,
+      "label": "威斯敏斯特（英格兰议会和王室行政中心的现代参考点）",
+      "kind": "administrative"
+    },
+    "EDI": {
+      "lat": 55.9533,
+      "lng": -3.1883,
+      "label": "爱丁堡（17世纪苏格兰政治、法律中心的现代参考点）",
+      "kind": "administrative"
+    },
+    "DUB": {
+      "lat": 53.344,
+      "lng": -6.267,
+      "label": "都柏林（英格兰在爱尔兰统治行政中心的现代参考点）",
+      "kind": "administrative"
+    },
+    "ION": {
+      "lat": 56.335,
+      "lng": -6.396,
+      "label": "艾奥纳岛（《艾奥纳章程》名称及签署地点相关岛屿）",
+      "kind": "region"
+    },
+    "DERRY": {
+      "lat": 54.998,
+      "lng": -7.32,
+      "label": "德里地区（阿尔斯特地方统治关系代表点）",
+      "kind": "region"
+    },
+    "DON": {
+      "lat": 54.655,
+      "lng": -8.11,
+      "label": "多尼戈尔地区参考点",
+      "kind": "region"
+    },
+    "LIS": {
+      "lat": 52.45,
+      "lng": -9.49,
+      "label": "利斯托尔城堡所在城镇参考点",
+      "kind": "region"
+    },
+    "ISLANDM": {
+      "lat": 54.818,
+      "lng": -5.767,
+      "label": "岛麦吉半岛（地区参考点，非个别遇难者现场）",
+      "kind": "region"
+    },
+    "SCAR": {
+      "lat": 54.984,
+      "lng": -7.73,
+      "label": "斯卡里夫霍利斯战区概略参考点",
+      "kind": "region"
+    },
+    "DAL": {
+      "lat": 55.712,
+      "lng": -4.733,
+      "label": "达尔里地方事件所涉地区",
+      "kind": "region"
+    },
+    "DUM": {
+      "lat": 55.069,
+      "lng": -3.613,
+      "label": "邓弗里斯城（相关政治行动地点）",
+      "kind": "region"
+    },
+    "GLA": {
+      "lat": 55.864,
+      "lng": -4.252,
+      "label": "格拉斯哥城区（相关城镇战斗参考点）",
+      "kind": "region"
+    },
+    "TAUN": {
+      "lat": 51.018,
+      "lng": -3.1,
+      "label": "陶顿（司法审判发生城镇）",
+      "kind": "region"
+    },
+    "GEO": {
+      "lat": 51.35,
+      "lng": -0.45,
+      "label": "圣乔治山地区（掘地派聚落所在区域）",
+      "kind": "region"
+    },
+    "CLON": {
+      "lat": 52.351,
+      "lng": -7.704,
+      "label": "克隆梅尔城市参考点",
+      "kind": "region"
+    },
+    "KIL": {
+      "lat": 52.655,
+      "lng": -7.253,
+      "label": "基尔肯尼城市参考点",
+      "kind": "region"
+    },
+    "LIM": {
+      "lat": 52.663,
+      "lng": -8.626,
+      "label": "利默里克城市参考点",
+      "kind": "region"
+    },
+    "GAL": {
+      "lat": 53.271,
+      "lng": -9.056,
+      "label": "戈尔韦城市参考点",
+      "kind": "region"
+    },
+    "KINS": {
+      "lat": 51.707,
+      "lng": -8.53,
+      "label": "金塞尔港附近地区参考点",
+      "kind": "region"
+    },
+    "LEITH": {
+      "lat": 55.981,
+      "lng": -3.177,
+      "label": "利斯港（苏格兰达连公司船队离港相关港口）",
+      "kind": "region"
+    },
+    "JAMES": {
+      "lat": 37.209,
+      "lng": -76.778,
+      "label": "詹姆斯敦（弗吉尼亚殖民政府／波瓦坦战争地区代表点，非每个行动现场）",
+      "kind": "region"
+    },
+    "HEN": {
+      "lat": 37.375,
+      "lng": -77.38,
+      "label": "亨利科殖民点所在詹姆斯河沿岸概略参考点",
+      "kind": "region"
+    },
+    "HAM": {
+      "lat": 37.024,
+      "lng": -76.344,
+      "label": "凯科坦／今汉普顿城市一带（地区参考点）",
+      "kind": "region"
+    },
+    "SUFF": {
+      "lat": 36.729,
+      "lng": -76.583,
+      "label": "南西蒙德人相关东弗吉尼亚地区参考点",
+      "kind": "region"
+    },
+    "PAM": {
+      "lat": 37.53,
+      "lng": -76.8,
+      "label": "帕芒基河及相关社群地区概略参考点",
+      "kind": "region"
+    },
+    "APP": {
+      "lat": 37.382,
+      "lng": -77.4,
+      "label": "阿帕马托克社群所在弗吉尼亚东部概略参考点",
+      "kind": "region"
+    },
+    "WESTPT": {
+      "lat": 37.53,
+      "lng": -76.8,
+      "label": "东弗吉尼亚河流交汇地区参考点",
+      "kind": "region"
+    },
+    "NORTH": {
+      "lat": 37.355,
+      "lng": -75.94,
+      "label": "弗吉尼亚东海岸诺桑普顿郡参考点",
+      "kind": "region"
+    },
+    "WILLIAMS": {
+      "lat": 37.27,
+      "lng": -76.706,
+      "label": "中部种植地（后来的威廉斯堡）现代城镇参考点",
+      "kind": "region"
+    },
+    "STMARY": {
+      "lat": 38.188,
+      "lng": -76.43,
+      "label": "圣玛丽城（马里兰殖民政府历史中心）",
+      "kind": "administrative"
+    },
+    "PLY": {
+      "lat": 41.958,
+      "lng": -70.667,
+      "label": "普利茅斯殖民地行政与相关事件参考点",
+      "kind": "administrative"
+    },
+    "BOSTON": {
+      "lat": 42.36,
+      "lng": -71.06,
+      "label": "波士顿（马萨诸塞殖民地政府行政中心）",
+      "kind": "administrative"
+    },
+    "NEWPORT": {
+      "lat": 41.49,
+      "lng": -71.312,
+      "label": "纽波特（罗德岛殖民行政中心的地区参考点）",
+      "kind": "administrative"
+    },
+    "HART": {
+      "lat": 41.764,
+      "lng": -72.682,
+      "label": "哈特福德（康涅狄格地区条约、行政参考点）",
+      "kind": "administrative"
+    },
+    "MYSTIC": {
+      "lat": 41.352,
+      "lng": -71.98,
+      "label": "米斯蒂克／皮阔特地区参考点（非具体杀戮地点）",
+      "kind": "region"
+    },
+    "SAY": {
+      "lat": 41.282,
+      "lng": -72.35,
+      "label": "塞布鲁克堡地区现代参考点",
+      "kind": "region"
+    },
+    "NARR": {
+      "lat": 41.49,
+      "lng": -71.58,
+      "label": "罗德岛大沼泽地区概略参考点（非战斗精确坐标）",
+      "kind": "region"
+    },
+    "CAPE": {
+      "lat": 41.79,
+      "lng": -70.26,
+      "label": "科德角地区代表点（非诱拐海滩精确位置）",
+      "kind": "region"
+    },
+    "OCC": {
+      "lat": 36.625,
+      "lng": -78.54,
+      "label": "奥卡尼奇相关弗吉尼亚南部河谷宽域参考点",
+      "kind": "region"
+    },
+    "NOR": {
+      "lat": 41.525,
+      "lng": -72.073,
+      "label": "诺里奇地区（被迫迁居政策主要影响地区）",
+      "kind": "region"
+    },
+    "CONC": {
+      "lat": 43.25,
+      "lng": -71.56,
+      "label": "梅里马克河谷地区（阿贝纳基村社地区宽域参考点）",
+      "kind": "region"
+    },
+    "PEMA": {
+      "lat": 43.878,
+      "lng": -69.518,
+      "label": "佩马奎德半岛（堡垒与殖民冲突相关地区）",
+      "kind": "region"
+    },
+    "HAV": {
+      "lat": 42.776,
+      "lng": -71.079,
+      "label": "黑弗里尔及邻近梅里马克河谷地区参考点",
+      "kind": "region"
+    },
+    "CUPIDS": {
+      "lat": 47.55,
+      "lng": -53.22,
+      "label": "纽芬兰库珀斯科夫（今Cupids）地区参考点",
+      "kind": "region"
+    },
+    "STJOHNNF": {
+      "lat": 47.561,
+      "lng": -52.712,
+      "label": "纽芬兰圣约翰斯港参考点",
+      "kind": "region"
+    },
+    "PORTROYAL": {
+      "lat": 44.742,
+      "lng": -65.515,
+      "label": "阿卡迪亚罗亚尔港（今安纳波利斯罗亚尔）参考点",
+      "kind": "region"
+    },
+    "BEAUB": {
+      "lat": 45.85,
+      "lng": -64.25,
+      "label": "博巴桑（阿卡迪亚）地区参考点",
+      "kind": "region"
+    },
+    "BALEINE": {
+      "lat": 46.16,
+      "lng": -59.85,
+      "label": "开普布雷顿岛Baleine地区宽域参考点",
+      "kind": "region"
+    },
+    "BERMUDA": {
+      "lat": 32.381,
+      "lng": -64.678,
+      "label": "百慕大圣乔治镇（当时殖民行政中心）",
+      "kind": "administrative"
+    },
+    "BARB": {
+      "lat": 13.096,
+      "lng": -59.614,
+      "label": "巴巴多斯岛布里奇敦（殖民法律主要影响地区的城镇代表点）",
+      "kind": "administrative"
+    },
+    "ANT": {
+      "lat": 17.126,
+      "lng": -61.846,
+      "label": "安提瓜岛圣约翰斯（全岛法令现代代表点，非签署现场）",
+      "kind": "regional_administration"
+    },
+    "NEVIS": {
+      "lat": 17.151,
+      "lng": -62.591,
+      "label": "尼维斯岛城镇参考点（全岛法律适用）",
+      "kind": "regional_administration"
+    },
+    "MONTS": {
+      "lat": 16.705,
+      "lng": -62.217,
+      "label": "蒙特塞拉特岛普利茅斯地区（全岛立法影响区代表点）",
+      "kind": "regional_administration"
+    },
+    "STK": {
+      "lat": 17.296,
+      "lng": -62.722,
+      "label": "圣基茨岛巴斯特尔地区参考点（非具体攻击位置）",
+      "kind": "region"
+    },
+    "BROM": {
+      "lat": 17.345,
+      "lng": -62.84,
+      "label": "圣基茨硫磺山地区参考点（非炮台精确位置）",
+      "kind": "region"
+    },
+    "JAMADMIN": {
+      "lat": 17.992,
+      "lng": -76.955,
+      "label": "牙买加西班牙镇（17世纪殖民行政中心）",
+      "kind": "administrative"
+    },
+    "PORTROYALJM": {
+      "lat": 17.941,
+      "lng": -76.84,
+      "label": "牙买加罗亚尔港港口及地震影响区参考点",
+      "kind": "region"
+    },
+    "BLUEJM": {
+      "lat": 18.086,
+      "lng": -76.706,
+      "label": "牙买加蓝山地区（马龙社群活动区域的宽域参考点）",
+      "kind": "region"
+    },
+    "CHARLEST": {
+      "lat": 32.805,
+      "lng": -79.984,
+      "label": "阿尔伯马尔角／旧查尔斯顿登陆地区参考点",
+      "kind": "region"
+    },
+    "CHARLESP": {
+      "lat": 32.776,
+      "lng": -79.929,
+      "label": "查尔斯顿半岛城区（1680年迁址后的代表点）",
+      "kind": "region"
+    },
+    "CARCOAST": {
+      "lat": 32.8,
+      "lng": -79.94,
+      "label": "卡罗来纳沿海地区参考点（不是某次袭击现场）",
+      "kind": "region"
+    },
+    "GUALE": {
+      "lat": 31.48,
+      "lng": -81.36,
+      "label": "瓜莱海岸宽域参考点（并非具体被袭村庄）",
+      "kind": "region"
+    },
+    "NEWYORK": {
+      "lat": 40.705,
+      "lng": -74.013,
+      "label": "纽约港原新阿姆斯特丹城区参考点",
+      "kind": "region"
+    },
+    "MOOSE": {
+      "lat": 51.272,
+      "lng": -80.641,
+      "label": "穆斯河口及穆斯工厂贸易站地区参考点（不等于公司控制全流域）",
+      "kind": "region"
+    },
+    "NELSON": {
+      "lat": 57.065,
+      "lng": -92.39,
+      "label": "纳尔逊河口地区宽域参考点（并非已建立的1670年据点）",
+      "kind": "region"
+    },
+    "HAYES": {
+      "lat": 57.015,
+      "lng": -92.45,
+      "label": "海斯河口与早期约克堡历史活动区域概略参考点；不以今York Factory III充当早期堡址",
+      "kind": "region"
+    },
+    "ALBANY": {
+      "lat": 52.23,
+      "lng": -81.675,
+      "label": "詹姆斯湾奥尔巴尼堡地区参考点（不外推为流域占领）",
+      "kind": "region"
+    },
+    "RUPERT": {
+      "lat": 51.49,
+      "lng": -78.75,
+      "label": "鲁珀特河口及鲁珀特堡地区概略参考点",
+      "kind": "region"
+    },
+    "LOW": {
+      "lat": 52.478,
+      "lng": 1.746,
+      "label": "洛斯托夫特外海相关海战的陆岸地理参考点",
+      "kind": "region"
+    },
+    "MEDWAY": {
+      "lat": 51.394,
+      "lng": 0.52,
+      "label": "梅德韦河沿岸（海军袭击参考点，非船只精确位置）",
+      "kind": "region"
+    },
+    "DOVER": {
+      "lat": 51.122,
+      "lng": 1.31,
+      "label": "多佛及英吉利海峡东段代表点（非战斗具体海上坐标）",
+      "kind": "region"
+    },
+    "PORTS": {
+      "lat": 50.801,
+      "lng": -1.093,
+      "label": "朴次茅斯海军行政及舰船工业参考点（不是30舰共同建造地）",
+      "kind": "region"
+    },
+    "CADIZ": {
+      "lat": 36.529,
+      "lng": -6.293,
+      "label": "西班牙加的斯港（被强制运送者目的地，非出航点）",
+      "kind": "region"
+    },
+    "JASK": {
+      "lat": 25.653,
+      "lng": 57.772,
+      "label": "伊朗贾斯克沿海贸易地区参考点",
+      "kind": "region"
+    },
+    "HORMUZ": {
+      "lat": 27.07,
+      "lng": 56.458,
+      "label": "霍尔木兹岛及海峡控制要塞地区参考点",
+      "kind": "region"
+    },
+    "QESHM": {
+      "lat": 26.92,
+      "lng": 56.285,
+      "label": "格什姆岛沿岸地区参考点",
+      "kind": "region"
+    },
+    "BANDAR": {
+      "lat": 27.186,
+      "lng": 56.274,
+      "label": "阿巴斯港／贡布伦地区代表点",
+      "kind": "region"
+    },
+    "MADRAS": {
+      "lat": 13.082,
+      "lng": 80.27,
+      "label": "马德拉斯（东印度公司涉事管理机构区域）",
+      "kind": "administrative"
+    },
+    "BENGKULU": {
+      "lat": -3.79,
+      "lng": 102.26,
+      "label": "苏门答腊明古连／Bencoolen地区（意图使用劳动力的目的地，非已完成运输的证据）",
+      "kind": "region"
+    },
+    "BOMBAY": {
+      "lat": 18.938,
+      "lng": 72.835,
+      "label": "孟买（英属商站历史背景参考点）",
+      "kind": "region"
+    },
+    "STHEL": {
+      "lat": -15.94,
+      "lng": -5.718,
+      "label": "圣赫勒拿岛地区参考点（与劳工转运命令有关）",
+      "kind": "region"
+    },
+    "WHIDAH": {
+      "lat": 6.357,
+      "lng": 2.086,
+      "label": "维达海岸地区（奴隶船装载港的区域参考，非船只定位）",
+      "kind": "region"
+    },
+    "LAHOGUE": {
+      "lat": 49.593,
+      "lng": -1.267,
+      "label": "拉霍格附近法国海岸参考点（非舰船实际海战坐标）",
+      "kind": "region"
+    },
+    "ST_MALO": {
+      "lat": 48.649,
+      "lng": -2.024,
+      "label": "法国圣马洛港口参考点",
+      "kind": "region"
+    }
+  },
+  "approved_event_to_reference": {
+    "1600": {
+      "1600S-E001": "LIS",
+      "1600S-E002": "WES",
+      "1600S-E004": "JAMES",
+      "1600S-E005": "PORTROYAL",
+      "1600S-E006": "DERRY",
+      "1600S-E007": "JAMES",
+      "1600S-E008": "ION",
+      "1600S-E009": "ION",
+      "1600S-E010": "DERRY",
+      "1600S-E011": "JAMES",
+      "1600S-E012": "SUFF",
+      "1600S-E013": "JAMES"
+    },
+    "1610": {
+      "1610S-E001": "JAMES",
+      "1610S-E002": "HAM",
+      "1610S-E003": "JAMES",
+      "1610S-E004": "APP",
+      "1610S-E005": "CUPIDS",
+      "1610S-E006": "HEN",
+      "1610S-E007": "JAMES",
+      "1610S-E008": "SUFF",
+      "1610S-E010": "JAMES",
+      "1610S-E013": "JAMES",
+      "1610S-E014": "PORTROYAL",
+      "1610S-E015": "JAMES",
+      "1610S-E016": "CAPE",
+      "1610S-E017": "DON",
+      "1610S-E018": "WES",
+      "1610S-E019": "JASK",
+      "1610S-E020": "JAMES",
+      "1610S-E021": "WES",
+      "1610S-E022": "DERRY",
+      "1610S-E023": "JAMES",
+      "1610S-E024": "JAMES"
+    },
+    "1620": {
+      "1620S-E001": "PLY",
+      "1620S-E002": "BERMUDA",
+      "1620S-E003": "PLY",
+      "1620S-E004": "CAPE",
+      "1620S-E005": "PLY",
+      "1620S-E006": "EDI",
+      "1620S-E007": "DON",
+      "1620S-E008": "JAMES",
+      "1620S-E009": "HORMUZ",
+      "1620S-E010": "QESHM",
+      "1620S-E011": "JAMES",
+      "1620S-E012": "STK",
+      "1620S-E013": "WES",
+      "1620S-E014": "BANDAR",
+      "1620S-E015": "BARB",
+      "1620S-E016": "NEWYORK",
+      "1620S-E017": "STK",
+      "1620S-E018": "BARB",
+      "1620S-E019": "STK",
+      "1620S-E020": "STK",
+      "1620S-E021": "PORTROYAL",
+      "1620S-E022": "BALEINE"
+    },
+    "1630": {
+      "1630S-E001": "PEMA",
+      "1630S-E002": "JAMES",
+      "1630S-E003": "ANT",
+      "1630S-E004": "PORTROYAL",
+      "1630S-E005": "STMARY",
+      "1630S-E006": "GAL",
+      "1630S-E008": "STK",
+      "1630S-E009": "DUB",
+      "1630S-E010": "SAY",
+      "1630S-E011": "MYSTIC",
+      "1630S-E012": "MYSTIC",
+      "1630S-E013": "BOSTON",
+      "1630S-E015": "BOSTON",
+      "1630S-E016": "HART",
+      "1630S-E017": "BOSTON",
+      "1630S-E018": "STK"
+    },
+    "1640": {
+      "1640S-E001": "JAMES",
+      "1640S-E004": "ISLANDM",
+      "1640S-E005": "STK",
+      "1640S-E006": "BARB",
+      "1640S-E008": "JAMES",
+      "1640S-E015": "JAMES"
+    },
+    "1650": {
+      "1650S-E003": "CLON",
+      "1650S-E005": "KIL",
+      "1650S-E006": "SCAR",
+      "1650S-E007": "GEO",
+      "1650S-E008": "LIM",
+      "1650S-E009": "MYSTIC",
+      "1650S-E010": "WES",
+      "1650S-E013": "GAL",
+      "1650S-E014": "BARB",
+      "1650S-E015": "DOVER",
+      "1650S-E016": "DUB",
+      "1650S-E017": "PORTROYAL",
+      "1650S-E018": "JAMADMIN",
+      "1650S-E019": "BLUEJM",
+      "1650S-E020": "NORTH",
+      "1650S-E021": "DUB",
+      "1650S-E023": "JAMES",
+      "1650S-E024": "NEWPORT"
+    },
+    "1660": {
+      "1660S-E002": "JAMADMIN",
+      "1660S-E003": "WES",
+      "1660S-E004": "WES",
+      "1660S-E005": "EDI",
+      "1660S-E006": "BARB",
+      "1660S-E007": "BARB",
+      "1660S-E008": "PLY",
+      "1660S-E009": "GUALE",
+      "1660S-E011": "WES",
+      "1660S-E012": "WES",
+      "1660S-E013": "EDI",
+      "1660S-E014": "JAMADMIN",
+      "1660S-E015": "JAMES",
+      "1660S-E016": "PLY",
+      "1660S-E017": "JAMADMIN",
+      "1660S-E018": "WES",
+      "1660S-E019": "WES",
+      "1660S-E020": "WES",
+      "1660S-E022": "JAMADMIN",
+      "1660S-E023": "NEWYORK",
+      "1660S-E024": "STMARY",
+      "1660S-E026": "WES",
+      "1660S-E027": "NEWYORK",
+      "1660S-E028": "LOW",
+      "1660S-E029": "DAL",
+      "1660S-E030": "DUM",
+      "1660S-E032": "MYSTIC",
+      "1660S-E033": "STK",
+      "1660S-E034": "NEWYORK",
+      "1660S-E035": "JAMES",
+      "1660S-E036": "STK",
+      "1660S-E037": "MEDWAY",
+      "1660S-E038": "BARB",
+      "1660S-E039": "JAMES",
+      "1660S-E040": "ANT",
+      "1660S-E041": "JAMES",
+      "1660S-E042": "CARCOAST"
+    },
+    "1670": {
+      "1670S-E001": "WES",
+      "1670S-E002": "CHARLEST",
+      "1670S-E003": "NELSON",
+      "1670S-E004": "PORTROYAL",
+      "1670S-E005": "ANT",
+      "1670S-E006": "BARB",
+      "1670S-E007": "WES",
+      "1670S-E008": "WES",
+      "1670S-E009": "WES",
+      "1670S-E010": "NEWYORK",
+      "1670S-E011": "MOOSE",
+      "1670S-E012": "PLY",
+      "1670S-E013": "WES",
+      "1670S-E014": "NEWYORK",
+      "1670S-E015": "ANT",
+      "1670S-E016": "CARCOAST",
+      "1670S-E017": "NARR",
+      "1670S-E018": "ANT",
+      "1670S-E019": "PLY",
+      "1670S-E020": "JAMES",
+      "1670S-E021": "BARB",
+      "1670S-E022": "OCC",
+      "1670S-E023": "PAM",
+      "1670S-E024": "BARB",
+      "1670S-E025": "NEWPORT",
+      "1670S-E026": "PLY",
+      "1670S-E027": "WILLIAMS",
+      "1670S-E028": "PEMA",
+      "1670S-E029": "PORTS",
+      "1670S-E030": "WES",
+      "1670S-E031": "WES",
+      "1670S-E032": "BARB",
+      "1670S-E035": "GLA",
+      "1670S-E038": "MONTS"
+    },
+    "1680": {
+      "1680S-E001": "NEVIS",
+      "1680S-E002": "ANT",
+      "1680S-E003": "CHARLESP",
+      "1680S-E004": "NELSON",
+      "1680S-E005": "NEWYORK",
+      "1680S-E006": "HAYES",
+      "1680S-E009": "TAUN",
+      "1680S-E011": "NEWYORK",
+      "1680S-E012": "WES",
+      "1680S-E013": "MOOSE",
+      "1680S-E014": "RUPERT",
+      "1680S-E015": "ALBANY",
+      "1680S-E016": "NOR",
+      "1680S-E017": "BENGKULU",
+      "1680S-E018": "WES",
+      "1680S-E020": "NEWYORK",
+      "1680S-E021": "WES",
+      "1680S-E025": "WES",
+      "1680S-E026": "PEMA",
+      "1680S-E027": "MADRAS"
+    },
+    "1690": {
+      "1690S-E005": "LIM",
+      "1690S-E006": "KINS",
+      "1690S-E007": "KINS",
+      "1690S-E008": "BROM",
+      "1690S-E010": "NEWYORK",
+      "1690S-E012": "PORTROYALJM",
+      "1690S-E013": "STMARY",
+      "1690S-E014": "PEMA",
+      "1690S-E015": "BARB",
+      "1690S-E016": "BARB",
+      "1690S-E017": "BARB",
+      "1690S-E018": "LAHOGUE",
+      "1690S-E019": "MONTS",
+      "1690S-E020": "MONTS",
+      "1690S-E021": "HAYES",
+      "1690S-E022": "ANT",
+      "1690S-E023": "WES",
+      "1690S-E024": "WHIDAH",
+      "1690S-E025": "WHIDAH",
+      "1690S-E028": "ST_MALO",
+      "1690S-E029": "EDI",
+      "1690S-E030": "HAYES",
+      "1690S-E031": "PEMA",
+      "1690S-E032": "WES",
+      "1690S-E033": "BEAUB",
+      "1690S-E034": "STJOHNNF",
+      "1690S-E035": "WES",
+      "1690S-E036": "HAYES",
+      "1690S-E037": "CONC",
+      "1690S-E038": "BOSTON",
+      "1690S-E039": "WES",
+      "1690S-E040": "LEITH",
+      "1690S-E042": "STMARY"
+    }
+  },
+  "notes": [
+    "1609 Iona: recorded island, no extrapolation to all Highlands",
+    "1670 old Charlestown: Albemarle Point, not 1680 peninsula",
+    "HBC York Fort: broad Hayes River reference, not York Factory III historic exact footprint",
+    "1694 Hannibal fatalities: Whydah loading origin only, NOT where onboard deaths occurred",
+    "Treaty markers: policy impact region, NOT necessarily diplomatic signing venue"
+  ]
+}
