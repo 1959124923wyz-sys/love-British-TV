@@ -25,3 +25,12 @@
 - **首篇 E6-T15 已在完整ZIP的CURRENT/SERIAL_ARTICLES/下编辑为8节16段v0.2**，仍标记draft_research_only；E6-T12正文将历史结束时间修正为1874，与编辑6母索引统一，研究窗口仍只写至1699。
 - `R07_SERIAL_EDITORIAL_ROADMAP.md`、`R07_EDITORIAL_TRACKER.csv`、`R07_E6_T15_PUBLICATION_GATES.md`已在本Git分支保存，可逐篇追踪。**新全文JSON仍以R07全量ZIP为最新版本；本PR原`SERIAL_ARTICLES_R06`路径保留R06研究快照，勿当R07最新全文**。
 - R07包保存在Library，**不是GitHub二进制附件**，网站并未上线任何新叙事或地图。下一轮须从R07完整包继续累计，编辑6审校后另作正式发布PR。
+
+## R08｜编辑6甲组审查教训整改（2026-10-19）
+
+- 最新全部资料：ChatGPT Library `/爱英TV/Editor6-AgentC-1600-1699-R08-FULL.zip`（9,332,333字节；SHA256 `012f35e2211b78ff24bbb9c11f8de57b31a320bfd4ed9ead68cfb220d45a6b9d`；186文件，ZIP CRC、逐文件SHA256及前轮R07原ZIP无损比对均通过）。
+- 最新R08两篇全文现已**实际提交到本GitHub分支**：`CURRENT/SERIAL_ARTICLES/E6-T12-east-india-company-commerce-authority.json`（12节1600—1698、长期终止1874）；`CURRENT/SERIAL_ARTICLES/E6-T15-fiscal-credit-institutions.json`（11节1651—1698、长期终止未知）。
+- 当前仍为`draft_research_only`，没有把编辑说明写入读者正文，也没有发布地图或正式索引。较早`SERIAL_ARTICLES_R06`是历史快照，不能被引用为最新文章。
+- GitHub审校操作：`CURRENT/EDITORIAL/EDITOR6_STANDARD_AGENT_C_APPLICATION_R08.md`（A组教训对照）、`SERIAL_STORY_AUTHORING_GUIDE_C_R08.md`（后续调查员规则）、`E6_T12_T15_SOURCE_CLAIMS_R08.csv`、`E6_T12_T15_REVIEW_GATES_R08.md`、`qa_serial_research_r08.py`。
+- R08真实放行结果：ZIP结构/JSON规范/来源键/时间一致性通过；**内容原文核查不足，仍不能正式刊发**。后续先补E6-T15的原始财政法令/个人财务关系，再攻E6-T12的亚洲地方政治与战争原卷。
+- 用户无需手动更改任何代码。完整ZIP永久保存于Library而**未以二进制附件上传GitHub**，两篇最新文本和审核文件则已经GitHub化；主编批准仍不可由调查员替代。
