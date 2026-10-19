@@ -1703,7 +1703,9 @@ function renderTimelineNavigation(){
    :'浏览目录中 · 地图为'+year+'年';
 }
 function setYear(v){
- const next=Math.max(1497,Math.min(serialPreviewAtlas?1699:lastPublishedYear,Math.round(Number(v)||1497)));
+ const requested=Math.round(Number(v)||1497);
+ const publishedCap=Math.min(lastPublishedYear,requested);
+ const next=Math.max(1497,serialPreviewAtlas?Math.min(1699,requested):publishedCap);
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
  if(next>=1600){
