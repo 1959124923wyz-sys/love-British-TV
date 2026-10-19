@@ -19,3 +19,9 @@
 
 ## 最新审查交接
 先读 `R06_EDITORIAL_RELEASE_GATE.md`，本轮版本考据属于影响1661年具体条款归属的实质性问题。研究稿和矩阵已纠正，但**旧Library ZIP尚未重新打包同步**。PR #182持续Draft。Github R06来源新增加2项、9个claim、12条对应边。自动来源校验CI已通过： https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39221042922 。若需正式上线，必须有编辑6最终人审、跨分支serial接入、正式回归与浏览器验收。
+
+## R08最终交接（甲组问题的教训）
+1. 先阅读`R08_EDITORIAL_AUDIT_AND_HANDOFF.md`，不得再采用R07公众草稿里的“本轮”等后台话语。
+2. 正式待审核范围现为1625—1692巴巴多斯；E6-T07整个母题包含东加勒比，因此**只有阶段稿完成，没有整篇上线资格**。请求主编确认继续扩展母篇还是授权新子题。
+3. `SERIAL_ARTICLES/E6-T07-barbados-eastern-caribbean.json`为当前GitHub研究版本；新标准证据表`SOURCE_CLAIM_MATRIX.csv`（9主张11来源边）。保留旧R05/R06/R07原件，不使用旧R06门槛审查文档的数据计数作为R08现状。
+4. 当前完整ZIP：Library `/爱英TV/Editor6-AgentB-1600-1699-R08-FULL.zip`，11,173,200字节，SHA256 `da47db907691cc32c2decacd67b52956b16d0ea19d519cf73fc92ca6b11d8433`，含原始R05/R06/R07及CURRENT；日后R09要无损继承R08完整原包。
