@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate long-topic article source links
-        run: python3 research/periods/1600-1699/B/audit_r06_links.py
+        run: python3 research/periods/1600-1699/B/audit_serial_articles_r08.py
       - name: Publication safety check
         run: |
           python3 - <<'PY'
