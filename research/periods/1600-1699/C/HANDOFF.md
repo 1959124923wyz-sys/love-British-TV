@@ -16,3 +16,7 @@
 
 ## 保护线
 本分支未上传二进制原ZIP；本地下载链接由本对话文件区提供，避免误报远端归档。所有阶段性版本仍应按README、PROGRESS、CHANGELOG与源账审查。
+
+## R06完整归档已永久保存（2026-10-19追加）
+- 已成功上传ChatGPT Library：`/爱英TV/Editor6-AgentC-1600-1699-R06-FULL.zip`，此前本地R06完整包CRC与MANIFEST SHA256逐条通过。
+- ZIP本身仍**未以二进制形式上传到GitHub**；本分支用于研究资料审阅。后续R07可直接在Library找到完整R06并继续累计。
