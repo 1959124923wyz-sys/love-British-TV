@@ -1715,6 +1715,7 @@ function setYear(v){
    $('dossierBody').innerHTML='<div class="dossier-kicker">历史专题 · '+next+'年</div><h2>当年历史</h2><p>请选择已核证的历史记录。</p>';
   }
   focusedEventId=null;focusRequestToken++;
+  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
   year=next;atlas=chosen;
   $('bigYear').textContent=year;$('timeYear').textContent=year;
   $('chapterTitlePrimary').textContent='十七世纪';
