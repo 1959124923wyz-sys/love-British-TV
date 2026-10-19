@@ -1,0 +1,51 @@
+{
+  "schema": "atlas-major-story-v1",
+  "id": "E6-Txx",
+  "title": "待核证的起止年份＋史学通用专题名（正式稿前替换）",
+  "subtitle": "通过背景—行动—抵抗—后果四层把几十年史实讲清楚",
+  "region": "逐项核对历史区域及今日对应",
+  "start_year": null,
+  "end_year": null,
+  "historical_end_year": null,
+  "parent_serial_topic_id": "E6-Txx",
+  "predecessor_story_ids": [],
+  "successor_story_ids": [],
+  "related_story_ids": [],
+  "related_event_ids": [],
+  "reading_note": "所有原始档案与地理核查备注留在后台，不写入叙事正文。",
+  "map_note": "不得因大专题覆盖范围自动增加实控多边形、年份事件或伪GPS。",
+  "editorial_status": "draft_research_only",
+  "lead": "此处写一段史实充分的开场故事，必须由当事人、真实时间和地点构成。",
+  "sections": [
+    {
+      "id": "phase-1",
+      "heading": "一、真实历史背景与各方所处处境",
+      "period_start_year": null,
+      "period_end_year": null,
+      "source_keys": [],
+      "paragraphs": [
+        "请写清楚年份、当事主体、已核实具体行动；本模板不属于已核证史实。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "PRIMARY-SOURCE-PLACEHOLDER",
+      "label": "正式研究后补充档案名称、卷页与机构",
+      "url": "https://example.invalid/REPLACE_WITH_OFFICIAL_DOCUMENT",
+      "access": "placeholder_not_verified"
+    }
+  ],
+  "topic_source_claims": [
+    {
+      "claim_id": "CLAIM-EXAMPLE",
+      "section_id": "phase-1",
+      "source_keys": [
+        "PRIMARY-SOURCE-PLACEHOLDER"
+      ],
+      "original_document_page": null,
+      "verification_depth": "placeholder_pending",
+      "publication_approval": false
+    }
+  ]
+}
