@@ -5,7 +5,7 @@ const json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const cfg=json('docs/research/EDITOR6_17C_REPRESENTATIVE_POINT_DECISIONS_R02.json');
 assert.equal(cfg.schema,'editor6-representative-geopoints-v1');
 const used=new Set(),core=new Set();
-let newRefs=0,originalRefs=0,unmapped=0,admin=0,regional=0;
+let newRefs=0,originalRefs=0,round3Refs=0,unmapped=0,admin=0,regional=0;
 for(let d=1600;d<=1690;d+=10){
  const events=json('data/atlas-'+d+'-'+(d+9)+'.json').events;
  const assignments=cfg.approved_event_to_reference[d];
@@ -37,8 +37,10 @@ for(let d=1600;d<=1690;d+=10){
     assert(e.position_type==='main_affected_region_or_named_locality_reference');
    }
   }else if(e.lat!==null){
-   originalRefs++;
-   assert(e.representative_map_point!==true,'unmapped marker cannot be passed off as reviewed regional reference');
+   if(e.representative_map_point){
+    round3Refs++;
+    assert(e.geo_precision.startsWith('representative_')&&e.geolocation_limit_zh.includes('非事件精确现场'),'R03 reference must be labelled non-exact');
+   }else originalRefs++;
   }else{
    unmapped++;
    assert(e.lng===null,'coordinate pair must remain null together');
@@ -46,9 +48,10 @@ for(let d=1600;d<=1690;d+=10){
  }
  assert(Object.keys(assignments).every(id=>events.some(e=>e.id===id)),'mapping cannot point to missing event');
 }
-assert.equal(used.size,268);
+assert.equal(used.size,363);
 assert.equal(newRefs,219);
 assert.equal(originalRefs,48);
+assert.equal(round3Refs,95,'R03 must add events without altering existing 219 R02 anchors');
 assert.equal(unmapped,1);
 assert.equal(admin+regional,219);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
@@ -58,4 +61,4 @@ assert(app.includes('地区参考点'),'left event list must disclose representa
 assert(app.includes('非事件现场'),'map hover must disclose approximate interpretation');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert(!html.includes('serialStoriesButton'),'independent long-story navbar must remain removed');
-console.log('PASS: 268 unchanged IDs / 219 new explicitly labeled proxy map points / 48 original / 1 unplaced / zero GIS polygons or area claims; policy/admin='+admin+' region='+regional);
+console.log('PASS R02 GIS contract: 219 immutable anchors, 95 new separate R03 regional points, 48 original named locations, one not placed, zero invented occupied-area geometry');
