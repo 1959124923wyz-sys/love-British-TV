@@ -15,6 +15,9 @@ assert.equal(chapters.chapters.length,10,'published 1497-1599 decade chapters mu
 assert.equal(chapters.chapters.at(-1).end,1599);
 assert.equal(old.schema,'atlas-major-stories-index-v1');
 assert(reader.includes("data/stories/serial/index.json"),'reader must opt into approved serial registry');
+assert(reader.includes('openSerialLibrary'),'standalone long-form library must support publishing before decade events');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+assert(/id="serialStoriesButton"[^>]+hidden/.test(html),'library entry must remain hidden without approved topics');
 const seen=new Set();
 for(const t of serial.topics){
  assert(/^[A-Za-z0-9-]+$/.test(t.id));
