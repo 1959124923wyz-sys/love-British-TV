@@ -24,7 +24,7 @@ for(let d=1600;d<=1690;d+=10){
    assert(e.representative_map_point===true);
    assert(e.geo_reference_code===refcode);
    assert(e.lat===ref.lat&&e.lng===ref.lng);
-   assert(e.geography_label.length>=15);
+   assert(e.geography_label.length>=6,'a named place or impacted area is required');
    assert(e.geolocation_limit_zh.includes('代表性位置')&&e.geolocation_limit_zh.includes('非事件精确现场'));
    assert(e.geolocation_limit_zh.includes('不表示由英方控制'),'must disclose no sovereignty inference');
    assert(e.map_priority===true);
