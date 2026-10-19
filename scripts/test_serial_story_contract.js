@@ -19,13 +19,14 @@ assert(serial.topics.length>=15,'may grow by reviewed subtopic additions');
 const glencoe=serial.topics.find(t=>t.id==='E6-T04-GLENCOE');
 assert(glencoe && glencoe.parent_topic_id==='E6-T04','approved Glencoe subtopic ID must link to unchanged Scottish parent');
 assert(glencoe.status==='published' && glencoe.publication_review==='approved' && glencoe.article_file==='data/stories/serial/e6-t04-glencoe.json','Glencoe publication requires explicitly approved existing article file');
+assert.deepEqual(glencoe.event_ids,['E6-GLENCOE-1692'],'1692 year slider is the only published Glencoe entry');
 assert.equal(chapters.chapters.length,10,'published 1497-1599 decade chapters must not change');
 assert.equal(chapters.chapters.at(-1).end,1599);
 assert.equal(old.schema,'atlas-major-stories-index-v1');
 assert(reader.includes("data/stories/serial/index.json"),'reader must opt into approved serial registry');
-assert(reader.includes('openSerialLibrary'),'standalone long-form library must support publishing before decade events');
+assert(!reader.includes('openSerialLibrary'),'do not create a separate long-story catalog');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(/id="serialStoriesButton"[^>]+hidden/.test(html),'library entry must remain hidden without approved topics');
+assert(!html.includes('serialStoriesButton'),'top header must remain as in historical map design');
 const seen=new Set();
 for(const t of serial.topics){
  assert(/^[A-Za-z0-9-]+$/.test(t.id));
@@ -94,3 +95,19 @@ for(const t of serial.topics){
 }
 assert(!reader.includes('data/stories/serial/atlas-'),'must not fold serial registry into decade atlas');
 console.log('PASS: serial story registry,',serial.topics.length,'review families, existing 10 published chapters retained');
+
+const preview=load('data/stories/serial/chronology-preview-1600-1699.json');
+assert.equal(preview.schema,'atlas-serial-chronology-preview-v1');
+assert.equal(preview.from_year,1600);assert.equal(preview.to_year,1699);
+assert.equal(preview.events.length,1,'only documented 1692 event may appear before full 17c audit');
+assert.equal(preview.events[0].year,1692);
+assert.equal(preview.events[0].id,'E6-GLENCOE-1692');
+assert.equal(preview.events[0].historical_control_boundary_verified,false);
+assert.equal(preview.events[0].actual_English_land_area_sqkm,null);
+assert(!preview.colonial_polygons.length,'no fabricated 17c sovereignty polygons');
+assert.equal(preview.events[0].geo_precision,'historic_house_site_approximate_100m_not_all_massacre_sites');
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+assert(app.includes("function setYear(v)"),'preserve original year slider');
+assert(app.includes("storyPreviewChapterForDecade"),'continue to use ten-year chapters');
+assert(app.includes("serialPreviewByDecade.get(decadeForYear(next))"),'year slider must select 17c decade');
+assert(!html.includes('长期专题</button>'),'no new header feature');
