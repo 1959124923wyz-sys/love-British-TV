@@ -75,18 +75,15 @@ try:
     set_public_layer("mapLayerTerritory", True)
 
     year(1599)
-    assert js("document.querySelector('#nextYear').disabled"), (
-        "Final published year must disable the next-year arrow")
+    assert not js("document.querySelector('#nextYear').disabled"), (
+        "1599 can now advance to an explicitly marked seventeenth-century topic preview")
     assert not js("document.querySelector('#prevYear').disabled")
-    js("""(() => {
-        const input=document.querySelector('#jumpYear');
-        input.value='1600';
-        input.dispatchEvent(new Event('change',{bubbles:true}));
-        return true;
-    })()""")
-    assert js("document.querySelector('#bigYear').textContent") == "1599"
-    assert js("document.querySelector('#jumpYear').value") == "1599", (
-        "Invalid direct-year entry left impossible year visible in the input")
+    year(1600)
+    assert js("document.querySelector('#yearStartLabel').textContent") == "1600"
+    assert js("document.querySelector('#yearEndLabel').textContent") == "1609"
+    assert js("document.querySelector('#chapterIntro').textContent") == "年代介绍待定"
+    assert js("document.querySelector('#eventCount').textContent") == "0项"
+    year(1599)  # All previously published Tudor map and UI checks still apply.
 
     year(1586)
     assert not js("document.querySelector('#nextYear').disabled")
@@ -115,7 +112,7 @@ try:
     assert all("atlas-schematic-screen-cue" in x["cls"] for x in info)
     driver.save_screenshot(str(OUT / "1586-port-raids-point-cues.png"))
     print("PASS desktop: event/territory layer independence, candidate visibility, "
-          "bounded-year controls, invalid year recovery and small unfilled Drake port cues")
+          "historical-to-preview 1599/1600 controls and small unfilled Drake port cues")
 except Exception:
     driver.save_screenshot(str(OUT / "desktop-layer-timeline-error.png"))
     raise

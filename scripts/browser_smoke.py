@@ -825,7 +825,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1599'""",driver)
+              document.querySelector('#jumpYear').max==='1699'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560, expected_count(1560))
@@ -833,7 +833,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第七章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1599'""",driver)
+              document.querySelector('#jumpYear').max==='1699'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562, expected_count(1562))
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
@@ -916,7 +916,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
-              document.querySelector('#jumpYear').max==='1599'""",driver)
+              document.querySelector('#jumpYear').max==='1699'""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
     verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
            """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
@@ -1140,7 +1140,7 @@ try:
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
-              document.querySelector('#jumpYear').max==='1599'""",driver)
+              document.querySelector('#jumpYear').max==='1699'""",driver)
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
@@ -1169,7 +1169,7 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
-              document.querySelector('#jumpYear').max==='1599'""",driver)
+              document.querySelector('#jumpYear').max==='1699'""",driver)
     set_year(1591, expected_count(1591))
     verify("1591 Santos year-end English occupation not displayed",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
@@ -1299,7 +1299,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1599-Essex-town-order-route.png"))
     verify("1599 chapter terminal count wrong",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
-              document.querySelector('#jumpYear').max==='1599'""",driver)
+              document.querySelector('#jumpYear').max==='1699'""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1599-Ireland.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("1599 historical territory toggle must hide Essex route without hiding events",
