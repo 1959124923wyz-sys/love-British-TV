@@ -4,6 +4,7 @@ on:
     paths:
       - "scripts/browser_smoke.py"
       - "scripts/browser_desktop_layer_timeline.py"
+      - "scripts/browser_serial_1692_story.py"
       - "app.js"
       - "index.html"
       - "js/*.js"
@@ -14,6 +15,7 @@ on:
     paths:
       - "scripts/browser_smoke.py"
       - "scripts/browser_desktop_layer_timeline.py"
+      - "scripts/browser_serial_1692_story.py"
       - "app.js"
       - "index.html"
       - "js/*.js"
@@ -32,6 +34,7 @@ jobs:
           python -m http.server 8765 &
           python scripts/browser_smoke.py
           python scripts/browser_desktop_layer_timeline.py
+          python scripts/browser_serial_1692_story.py
       - name: Save screenshots
         if: always()
         uses: actions/upload-artifact@v4
