@@ -214,7 +214,7 @@ function syncMapLayers(){
  if(!events){focusedEventId=null;focusRequestToken++;}
  if(atlas){renderEventList();refreshHistoricalLayers();}
 }
-let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549; let selected=''; let selectedItemYear=null; let timer=null;
+let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map(); let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
@@ -1623,8 +1623,11 @@ function updateVisibility(){
 // The chapter registry is the only authority for published decade cards.
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
-const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d);
-const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end);
+const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&d>=1600&&d<=1690&&d%10===0?
+ ({id:'serial-topic-'+d,start:d,end:d+9,number:11+(d-1600)/10,label:d===1690?'格伦科惨案 · 专题试阅':'专题资料待补充',status:'topic_preview'}):null;
+const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
+const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
+ (y>=1600&&y<=1699?storyPreviewChapterForDecade(decadeForYear(y)):null);
 // 1497–1499 is an exceptional prologue; normal pages align to 1500–1549 / 1550–1599.
 const halfCenturyPageForYear=y=>y<1500?1490:Math.floor(y/50)*50;
 const pageForBrowse=d=>d<=1490?1490:Math.floor(d/50)*50;
@@ -1663,16 +1666,16 @@ function renderTimelineNavigation(){
  frame.innerHTML=decades.map((d,i)=>{
   if(d<chapterRegistry.navigation.firstDecade||d>chapterRegistry.navigation.lastDecade)
    return '<span class="chapter-placeholder" aria-hidden="true"></span>';
-  const chapter=chapterForDecade(d),published=!!chapter;
+  const chapter=chapterForDecade(d),published=chapter?.status==='published',preview=chapter?.status==='topic_preview';
   if(chapter&&renderedChapters.has(chapter.id))return '';
   if(chapter)renderedChapters.add(chapter.id);
   const from=chapter?chapter.start:d,to=chapter?chapter.end:d+9;
-  const onMap=published&&year>=from&&year<=to;
-  return '<button type="button" class="chapter-segment'+(published?' published':' unpublished')+
+  const onMap=!!chapter&&year>=from&&year<=to;
+  return '<button type="button" class="chapter-segment'+(published?' published':preview?' published topic-preview':' unpublished')+
     (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
-    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:'此十年尚无正式历史资料')+'">'+
-    '<span>'+(published?'第'+chapter.number+'章':'尚未发布')+'</span>'+
-    '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 待研究')+'</small></button>';
+    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:preview?'浏览'+from+'—'+to+'年专题试阅':'此十年尚无正式历史资料')+'">'+
+    '<span>'+(published?'第'+chapter.number+'章':preview?'专题试阅':'尚未发布')+'</span>'+
+    '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):preview&&d===1690?' · 格伦科惨案':' · 年代介绍待定')+'</small></button>';
  }).join('');
  frame.querySelectorAll('button[data-decade]').forEach(btn=>btn.addEventListener('click',()=>{
   const decade=Number(btn.dataset.decade),chapter=chapterForDecade(decade);
@@ -1690,17 +1693,50 @@ function renderTimelineNavigation(){
   slider.min=currentChapter.start;slider.max=currentChapter.end;slider.value=year;
   $('yearStartLabel').textContent=currentChapter.start;
   $('yearEndLabel').textContent=currentChapter.end;
-  $('jumpYear').max=lastPublishedYear;
+  $('jumpYear').max=serialPreviewAtlas?1699:lastPublishedYear;
   $('jumpYear').value=year;
  }
- $('timelineAvailability').textContent=browsingDecade===halfCenturyPageForYear(year)
-  ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
-  :'浏览目录中 · 地图为'+year+'年';
+ $('timelineAvailability').textContent=year>lastPublishedYear
+  ?'专题试阅 · 年代介绍待定'
+  :browsingDecade===halfCenturyPageForYear(year)
+   ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
+   :'浏览目录中 · 地图为'+year+'年';
 }
 function setYear(v){
- const next=Math.max(1497,Math.min(lastPublishedYear,Math.round(Number(v)||1497)));
- const chosen=next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
+ const next=Math.max(1497,Math.min(serialPreviewAtlas?1699:lastPublishedYear,Math.round(Number(v)||1497)));
+ const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
+ if(next>=1600){
+  const changed=next!==year;
+  if(selectedItemYear!==null&&selectedItemYear>next){
+   selected='';selectedItemYear=null;
+   $('dossierBody').innerHTML='<div class="dossier-kicker">历史专题 · '+next+'年</div><h2>当年历史</h2><p>请选择已核证的历史记录。</p>';
+  }
+  focusedEventId=null;focusRequestToken++;
+  year=next;atlas=chosen;
+  $('bigYear').textContent=year;$('timeYear').textContent=year;
+  $('chapterTitlePrimary').textContent='十七世纪';
+  $('chapterTitleSecondary').textContent='专题试阅';
+  $('chapterIntro').textContent='年代介绍待定';
+  for(const id of ['factA','factB','factC'])$(id).textContent='—';
+  for(const id of ['factADesc','factBDesc','factCDesc'])$(id).textContent='';
+  $('periodTitle').textContent='专题试阅 · 研究资料逐步发布';
+  const ch=chapterForYear(year);
+  $('chapterNav').textContent='历史地图 · 十七世纪';
+  $('chapterNavName').textContent=ch?.label||'年代介绍待定';
+  $('chapterLabel').textContent='专题试阅 · '+ch.start+'—'+ch.end;
+  browsingDecade=halfCenturyPageForYear(year);
+  renderTimelineNavigation();timelineStatus('');
+  for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
+  if(map.hasLayer(groups.kingdom))map.removeLayer(groups.kingdom);
+  $('historicalRegionGuide').hidden=true;
+  renderEventList();renderPoints();
+  if(changed)$('eventList').scrollTop=0;
+  $('prevYear').disabled=false;
+  $('nextYear').disabled=year>=1699;
+  return;
+ }
+ if($('toggleKingdom').checked&&!map.hasLayer(groups.kingdom))map.addLayer(groups.kingdom);
  // Keep map viewport and open dossier; avoid displaying a selected event from the future.
  if(selectedItemYear!==null&&selectedItemYear>next){
   selected='';selectedItemYear=null;
@@ -2181,9 +2217,9 @@ $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target
 function jumpToEnteredYear(){
  if(!atlas)return;
  const raw=$('jumpYear').value.trim(),v=Number(raw);
- if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>lastPublishedYear){
+ if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>(serialPreviewAtlas?1699:lastPublishedYear)){
   $('jumpYear').value=year;
-   timelineStatus('仅支持1497—'+lastPublishedYear+'年已发布的历史资料；地图仍停留'+year+'年。');return;
+   timelineStatus('仅支持1497—'+(serialPreviewAtlas?1699:lastPublishedYear)+'年，其中1600—1699年仅提供专题试阅。');return;
  }
  stopPlay();setYear(v);
 }
@@ -2202,6 +2238,11 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(atlas)renderPoints();
 }));
 function refreshHistoricalLayers(){
+ if(year>lastPublishedYear){
+  for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
+  renderPoints();
+  return;
+ }
  renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
@@ -2209,7 +2250,7 @@ $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistorica
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
+map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
