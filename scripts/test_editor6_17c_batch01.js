@@ -15,7 +15,8 @@ const allIds=new Set(legacy.events.map(x=>x.id)),usedResearchIds=new Set();
 let total=0,points=0,refs=0,olderNamed=0,olderProxy=0,added=0,sources=0,newDecades=0;
 for(let d=1600,i=0;d<=1690;d+=10,i++){
  const data=load('data/atlas-'+d+'-'+(d+9)+'.json');
- assert.deepEqual(data.period,{from:d,to:d+9});
+ assert.equal(data.period.from,d);assert.equal(data.period.to,d+9);
+ assert.equal(data.period.next,d+10,'old next-decade navigation remains intact');
  assert.equal(data.intro,null);assert(data.publication.not_deemed_complete);
  assert.equal(data.editorial_status,'published_partial_source_linked_in_progress_not_complete_decade');
  for(const field of ['places','routes','colonial_polygons'])assert.deepEqual(data[field],[],field+' must not imply unverified sovereignty');
