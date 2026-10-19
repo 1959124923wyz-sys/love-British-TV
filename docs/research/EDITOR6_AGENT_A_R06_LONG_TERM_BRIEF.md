@@ -17,3 +17,6 @@
 - 每一轮只需向编辑6交付这个最新 \`FULL.zip\`，不要求用户同时下载 R01—R05；编辑6另合并三组为一个全球总汇ZIP。
 - 下发任务期间可由调查组在Git独立分支额外保存已核工作，但**不能把未上传的ZIP声称已在GitHub**。任何Git push/PR都要记录URL与sha。正式地图仍由编辑6/主编审校，严禁研究记录直接上线。
 - 长期专题研究一律保留1590年代前史和1700年后续接口，使用\`E6-Txx\`专题ID/\`ARC-*\`进程ID。不受十年边界强行截断。参考 \`docs/research/EDITOR6_17C_SERIAL_STORY_PUBLICATION_CONTRACT.md\`、\`AGENTS.md\`、\`docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md\`。
+
+## 正式长篇写作交付（新增强制项）
+在既有专题MD研究底稿之外，至少把证据最完整的专题转写为 `CURRENT/SERIAL_ARTICLES/E6-Txx-<slug>.json`，严格参照GitHub的 `data/stories/serial/ARTICLE_TEMPLATE_RESEARCH_ONLY.json`。一篇历史进程只产生一份可读完整长篇，即使跨越十年、几十年、数百年，也不按每个十年硬分十篇。每节写具名人物、冲突与制度如何发生及实际后果，`sections[].source_keys` 必须对应真实核阅来源。完成稿仍标记 `draft_research_only`，不要自行设为 `published`，由编辑6与主编核定。正文之外保留 `topic_source_claims`、跨世纪 predecessor/successor、地图事件 ID、争议与精度，不把审稿备注写进公众文章。
