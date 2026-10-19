@@ -7,7 +7,7 @@ import re
 
 HERE=Path(__file__).resolve().parent
 ARTICLE=HERE/"SERIAL_ARTICLES/E6-T07-barbados-eastern-caribbean.json"
-MATRIX=HERE/"SOURCE_CLAIM_MATRIX_R06.csv"
+MATRIX=HERE/"SOURCE_CLAIM_MATRIX.csv"
 BAN=(r"本轮",r"下轮",r"下阶段",r"待审",r"待核",r"待补",
      r"主编",r"编辑6",r"(?i)GIS",r"(?i)Polygon",
      r"不能上线",r"研究窗口",r"地图上",r"本研究",
