@@ -16,3 +16,6 @@
 4. 与丙统一航次主键再建立抵港后生存制度关系。
 
 此PR是编辑审稿入口，不合并main、不更改现有网站UI/atlas。不要求用户手动修改GitHub代码。
+
+## 最新审查交接
+先读 `R06_EDITORIAL_RELEASE_GATE.md`，本轮版本考据属于影响1661年具体条款归属的实质性问题。研究稿和矩阵已纠正，但**旧Library ZIP尚未重新打包同步**。PR #182持续Draft。Github R06来源新增加2项、9个claim、12条对应边。自动来源校验CI已通过： https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39221042922 。若需正式上线，必须有编辑6最终人审、跨分支serial接入、正式回归与浏览器验收。
