@@ -222,14 +222,41 @@
   try{
    const res=await fetch(manifestUrl,{cache:'no-store'});if(!res.ok)throw new Error('missing story manifest');
    const index=await res.json();
-   for(const story of index.stories||[]){
+   function registerStory(story){
+    if(!story||typeof story.id!=='string'||typeof story.file!=='string'||storyMeta.has(story.id))return;
     storyMeta.set(story.id,story);
     for(const id of story.event_ids||[]){
+     if(typeof id!=='string')continue;
      const choices=storyByEvent.get(id)||[];
      if(!choices.includes(story.id))choices.push(story.id);
      storyByEvent.set(id,choices);
     }
    }
+   for(const story of index.stories||[])registerStory(story);
+   // Long-running histories are keyed by one stable parent ID rather than one
+   // new article every ten years. The existing decade/year atlas stays intact.
+   // The independent serial manifest is OPTIONAL; research records never render.
+   try{
+    const serialRes=await fetch('data/stories/serial/index.json',{cache:'no-store'});
+    if(serialRes.ok){
+     const serial=await serialRes.json();
+     if(serial.schema==='atlas-serial-stories-v1'){
+      for(const topic of serial.topics||[]){
+       if(topic.status!=='published'||topic.publication_review!=='approved')continue;
+       if(typeof topic.id!=='string'||!/^[A-Za-z0-9-]+$/.test(topic.id))continue;
+       if(typeof topic.article_file!=='string'||
+          !/^data\\/stories\\/serial\\/[a-z0-9-]+\\.json$/.test(topic.article_file))continue;
+       if(!Array.isArray(topic.event_ids))continue;
+       registerStory({
+        id:topic.id,title:topic.title,file:topic.article_file,
+        region:topic.region||'',event_ids:topic.event_ids,
+        period:topic.period||String(topic.origin_year||'')+'年起',
+        is_serial_topic:true
+       });
+      }
+     }
+    }
+   }catch(_serialError){ /* No published long story yet; old articles remain available. */ }
    // An event may already be open while the optional manifest is loading.
    const current=window.atlasStoryBridge?.selectedEventId?.();
    if(current&&storyByEvent.has(current))activeBody()?.querySelector('.source-details')?.remove();
