@@ -244,8 +244,8 @@
       for(const topic of serial.topics||[]){
        if(topic.status!=='published'||topic.publication_review!=='approved')continue;
        if(typeof topic.id!=='string'||!/^[A-Za-z0-9-]+$/.test(topic.id))continue;
-       if(typeof topic.article_file!=='string'||
-          !/^data\\/stories\\/serial\\/[a-z0-9-]+\\.json$/.test(topic.article_file))continue;
+       if(typeof topic.article_file!=='string'||!topic.article_file.startsWith('data/stories/serial/')||
+          !/^[a-z0-9-]+[.]json$/.test(topic.article_file.slice('data/stories/serial/'.length)))continue;
        if(!Array.isArray(topic.event_ids))continue;
        registerStory({
         id:topic.id,title:topic.title,file:topic.article_file,
