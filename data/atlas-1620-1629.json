@@ -1192,6 +1192,51 @@
       "geolocation_basis_zh": "地区代理定位：根据事件所述主要受影响地区或具名历史地名，选择现代城镇或宽域参考点；并非历史实测现场。",
       "geo_reference_code": "BALEINE",
       "map_priority": true
+    },
+    {
+      "id": "1620S-E027",
+      "research_event_id": "EDITOR6:MASSACHUSETTS-CHARTER",
+      "arc_id": "ARC-MASSACHUSETTS-COMPANY-LAND",
+      "year": 1629,
+      "start_year": 1629,
+      "end_year": 1629,
+      "visible_from": 1629,
+      "date_label": "1629",
+      "name": "1629年马萨诸塞湾公司特许：殖民公司获得治理与土地声索权",
+      "historical_actor": "英格兰查理一世和马萨诸塞湾公司",
+      "historical_place": "马萨诸塞湾及周边原住民土地",
+      "description": "查理一世给予马萨诸塞湾公司法人地位和殖民治理权，公司特许随后成为当地政府组织基础。特许文书向大范围地区提出声索，但与原住民的交涉、定居和暴力夺地均另有时序，不能把宣称的疆界直接绘成1629年已统治的区域。",
+      "short_description": "查理一世给予马萨诸塞湾公司法人地位和殖民治理权，公司特许随后成为当地政府组织基础。特许文书向大范围地区提出声索，但与原住民的交涉、定居和暴力夺地均另有时序，不能把宣称的疆界直接绘成1629年已统治的区域。",
+      "category": "political",
+      "icon_code": "POL",
+      "source_ids": [
+        "1620S-S026"
+      ],
+      "source_access_reported": [
+        "government_charter_transcription"
+      ],
+      "source_group": "EDITOR6_MAJOR_GAPS_20261020",
+      "significance": {
+        "level": 3,
+        "review_status": "editor6_major_20261020_archival_scholarly_source_screened"
+      },
+      "editorial_status": "published_source_review_major_structural_event",
+      "certainty": "year_and_institution_supported_by_accessible_credible_source",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "lat": 42.36,
+      "lng": -71.06,
+      "geography_label": "波士顿地区代表点，不等于1629年原住民土地实际被英人占领",
+      "geo_precision": "representative_historical_affected_region_or_political_center_not_exact_event_site",
+      "representative_map_point": true,
+      "position_type": "main_affected_region_or_named_locality_reference",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】波士顿地区代表点，不等于1629年原住民土地实际被英人占领。只作历史主要影响地区的可视化导览，不表示暴力的具体现场、条约实际签署地、船舶航线，也不表示英方实际占领该地点及其周边地区。",
+      "geolocation_basis_zh": "学术著作及权威档案记载的主要影响地区，或同时代政治决策行政中心；非实测历史坐标。",
+      "map_priority": true,
+      "major_case_group": true
     }
   ],
   "places": [],
@@ -1470,16 +1515,27 @@
       "original_source_id": "C:C68",
       "verification_status": "editor6_read_source_summary_not_original_volume_or_personal_execution_proof",
       "precision_warning": "Authority source describes dated general event; no individual original archival volume presumed read."
+    },
+    {
+      "id": "1620S-S026",
+      "title": "马萨诸塞州政府：1629年特许状与转写",
+      "publisher": "www.sec.state.ma.us",
+      "url": "https://www.sec.state.ma.us/divisions/commonwealth-museum/exhibits/v-tour/vt-details/vt-charter-of-1629.html",
+      "kind": "major_historical_research_or_primary_archival_source",
+      "evidence_read_level": "government_charter_transcription",
+      "original_source_id": "EDITOR6:MASSACHUSETTS-CHARTER",
+      "verification_status": "editor6_major_20261020_academic_or_institutional_summary_checked_not_full_archival_volume_read",
+      "precision_warning": "Access verified only to publicly available archival description, document transcription or academic extract/summary; do not imply full original manuscript or paywalled book read."
     }
   ],
   "routes": [],
   "colonial_polygons": [],
   "publication": {
-    "approved_event_count": 26,
-    "scope": "partial_source_linked_research_screening_r03",
+    "approved_event_count": 27,
+    "scope": "editor6_major_historical_research_r04_plus_95_event_r03",
     "decade_overview": "年代介绍待定",
     "not_deemed_complete": true,
     "geography_policy": "zero invented geocoding; no new polygon of historic control",
-    "caution": "来源等级分别为研究组全文/政府历史机构解说/英国图书馆馆藏历史综述，均不代表逐宗原件最终校勘；地图位置为代表性参考，不构成实际控制边界。"
+    "caution": "本次只加入确有权威史料的重大结构性事件，原著全文、档案卷页与执行程度仍按source_access分别标注。图钉是地区代表点而非精确暴行坐标，不新增任何未经证实的占领疆界。"
   }
 }
