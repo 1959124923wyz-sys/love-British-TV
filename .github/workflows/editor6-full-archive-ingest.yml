@@ -1,0 +1,54 @@
+name: Editor6 safe cumulative research archive import
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: read
+jobs:
+  archive:
+    # Only active after this workflow is merged into the default branch.
+    if: >-
+      github.event.issue.number == 180 &&
+      github.event.comment.user.login == '1959124923wyz-sys' &&
+      contains(github.event.comment.body, 'user-attachments/files/') &&
+      contains(github.event.comment.body, 'Editor6-17C-R05-ALL-FULL-20261019.zip')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Retrieve and verify exact approved ZIP
+        env:
+          COMMENT_TEXT: ${{ github.event.comment.body }}
+        run: |
+          python - <<'PY'
+          import hashlib,os,re,urllib.request
+          text=os.environ['COMMENT_TEXT']
+          target='Editor6-17C-R05-ALL-FULL-20261019.zip'
+          urls=re.findall(r'https://github[.]com/user-attachments/files/[0-9]+/'+re.escape(target),text)
+          if len(urls)!=1: raise SystemExit('One exact approved archive required')
+          request=urllib.request.Request(urls[0],headers={'User-Agent':'Editor6-archive-verifier'})
+          with urllib.request.urlopen(request,timeout=45) as response:
+              data=response.read(6_000_001)
+          if len(data)>6_000_000: raise SystemExit('ZIP is too large')
+          digest=hashlib.sha256(data).hexdigest()
+          if digest!='f2540168f2befb245055150434e5e882f1ea68043c239bf3da75f790002bb8b8':
+              raise SystemExit('ZIP hash mismatch: '+digest)
+          open('/tmp/editor6-full.zip','wb').write(data)
+          print('Verified archive length',len(data),'and SHA-256',digest)
+          PY
+      - name: Validate and unpack to research-only staging
+        run: |
+          python scripts/import_editor6_research_zip.py /tmp/editor6-full.zip
+          python scripts/import_editor6_research_zip.py /tmp/editor6-full.zip --commit-files
+      - name: Commit all source files to independent archive branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c research/editor6-17c-complete-archive-r05
+          git add research/periods/1600-1699/editor6-integrated-pack/
+          git diff --staged --check
+          git commit -m "research: import verified Editor6 17c R05 complete source archive"
+          git push origin HEAD:refs/heads/research/editor6-17c-complete-archive-r05
