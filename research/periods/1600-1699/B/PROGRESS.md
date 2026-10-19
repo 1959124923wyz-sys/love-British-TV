@@ -28,3 +28,9 @@
 - 修复初版`SOURCE_CLAIM_MATRIX_R06.csv`与JSON `topic_source_claims`错位；9条claim、12条claim→source关联；审查报告见`R06_EDITORIAL_RELEASE_GATE.md`。
 - GitHub Actions: [E6 B R06 source-claim gate](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39221042922) **success**；另外两项既有UI与疆域研究门禁在同SHA亦成功。自动测试不等于历史事实/浏览器上线批准。
 - 旧Library R06累计ZIP为审查前完整归档快照；**本Git分支是较新审查版本**，未声称ZIP已同步或远端已上架。
+
+## R08 甲组教训自纠（2026-10-19）
+- 审查编辑6的正式制作手册与甲组R07格式问题并在乙组同步落实；见`R08_EDITORIAL_AUDIT_AND_HANDOFF.md`。
+- 对E6-T07重写为**1625—1692巴巴多斯阶段稿**，7个实质章节、9条claim/11条来源边，读者正文去除编辑交接文字。过去R07的12条边与1627—1699范围是历史快照，**非最新Current**。
+- 保留1661法规的1667后修见证警告；来源仍需人工终审；东加勒比未写全所以不能直接发布母专题。
+- `audit_serial_articles_r08.py`已接入CI，检测正文工程术语、时间窗、来源ID及claim矩阵。R08全量ZIP 91件、11,173,200字节、SHA256 `da47db907691cc32c2decacd67b52956b16d0ea19d519cf73fc92ca6b11d8433`，CRC/Manifest/嵌套旧原包通过并存Library，GitHub未上传ZIP二进制。
