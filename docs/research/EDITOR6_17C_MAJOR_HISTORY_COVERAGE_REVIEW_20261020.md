@@ -2,7 +2,7 @@
 **完成日期：2026-10-20；编号原则：只收重大结构性事件，绝不为了密度收录无关联的个人小型抓捕、三五人的例行死刑或重复行军。**
 
 ## 结论：尚未穷尽，但重大制度主干已具备
-此前仅有一批较零散的战争、原住民与宗教案件，同时遗漏了让国家军事、金融、殖民公司、土地没收、奴隶劳动系统互相咬合的部分关键节点。编辑6本轮复读大学出版社史学著作、政府档案目录、正式原文转写以及奴隶贸易量化数据库，对已有364条候审案目分类查重，只新增**13条有明确年份、责任主体和学术依据的大事件**。连同原独立格伦科，共计**377条17世纪案目**（十年数据库376条，格伦科1条），但**不代表全部完成原件逐页校勘**。
+此前仅有一批较零散的战争、原住民与宗教案件，同时遗漏了让国家军事、金融、殖民公司、土地没收、奴隶劳动系统互相咬合的部分关键节点。编辑6本轮复读大学出版社史学著作、政府档案目录、正式原文转写以及奴隶贸易量化数据库，对已有364条候审案目分类查重，只新增**15条有明确年份、责任主体和学术依据的大事件**。连同原独立格伦科，共计**379条17世纪案目**（十年数据库378条，格伦科1条），但**不代表全部完成原件逐页校勘**。
 
 完整条目书目及代理落点决议：`docs/research/EDITOR6_17C_MAJOR_EVENT_GAP_AUDIT_20261020.json`；既有95条扩充的逐条索引：`docs/research/EDITOR6_17C_R03_95_EVENT_INDEX.csv`。
 
@@ -15,7 +15,7 @@
 6. Charles Ivar McGrath, “The Penal Laws: Origins, Purpose, Enforcement and Impact,” in *Law and Religion in Ireland, 1700–1970* (2021), https://link.springer.com/chapter/10.1007/978-3-030-74373-4_2 ；与J. G. Simms《1697年主教驱逐法》https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/bishops-banishment-act-of-1697-9-will-iii-c-1/D91194BF6F991DD9003ECA9D9F0BDFC8 ，区分法令、法定处罚与实际执行。
 7. SlaveVoyages Research Collaboration, `National Carriers Estimates`, https://legacy.slavevoyages.org/assessment/estimates 。其“Great Britain”船旗/承运分类在1626—1650、1651—1675、1676—1700三个25年格内分别为33,695、122,367、272,200人，累计**约428,262人被运离非洲（估计）**，不能误称为皇家非洲公司单独运送量、全部成功抵达数或死亡数。该数据库使用后设国家分类，论文写1600年代政治实体时仍要区分独立英格兰与苏格兰。
 
-## 本次十三项新增大事与正式编号
+## 本次十五项新增大事与正式编号
 | 事件发生年 | 固定新ID | 研究重点 |
 |---|---|---|
 |1606|`1600S-E018`|弗吉尼亚公司王室特许与资本—殖民权结合|
@@ -23,7 +23,10 @@
 |1630|`1630S-E021`|清教徒大迁移与公司殖民政府形成|
 |1642|`1640S-E029`|《爱尔兰冒险家法》把战争认购债权与未来没收土地连接|
 |1653|`1650S-E037`|康诺特迁居与战后地产分配制度安排|
+|1654|`1650S-E038`|克伦威尔西方计划：国家策划远征西属加勒比|
+
 |1660|`1660S-E047`|王室非洲冒险家商团特许与海上奴隶贸易融资|
+|1663|`1660S-E048`|王室非洲冒险家新特许明确将奴隶买卖列入独占业务|
 |1670|`1670S-E065`|哈德孙湾公司特许与鲁珀特地纸面声索|
 |1670|`1670S-E066`|英西《马德里条约》及加勒比殖民竞争的外交结果|
 |1671|`1670S-E067`|亨利·摩根私掠集团洗劫巴拿马城|
@@ -33,6 +36,12 @@
 |1697|`1690S-E062`|爱尔兰针对天主教教会组织的放逐法|
 
 额外加强两条已存在的重要历史进程（**不新增重复案目**）：`1670S-E007`（1672年皇家非洲公司）补SlaveVoyages与Pettigrew研究，`1690S-E057`（1698非洲贸易竞争开放）说明“限制垄断≠废除奴隶贸易”。
+
+## 对1654与1663两项新增重要史料的核验
+- Carla Gardina Pestana, *The English Conquest of Jamaica: Oliver Cromwell's Bid for Empire* (Harvard University Press/Belknap, 2017), https://www.jstor.org/stable/j.ctt1n7qkwf ：出版综述明确1654年克伦威尔计划扩展对西属美洲的征服、1655年实际先战伊斯帕尼奥拉再转攻牙买加；不能把计划军事范围直接画成实际英方占领地。
+- Abigail L. Swingen, *Competing Visions of Empire* (Yale University Press, 2015), 第二章“Commonwealth and Protectorate Imperialism: The Western Design and Its Consequences, 1654–1660”, https://academic.oup.com/yale-scholarship-online/book/14232/chapter-abstract/168102858 ：学术章摘要显示计划与加勒比强制贸易管理和殖民商人利益的关联。
+- 英国国家档案 CO1/17 文书1663年新特许转录，https://slaverylawpower.org/chapters/restoration-settlements/royal-african-company-documents-1660s/ ，查证1660年原特许、1663年把贩卖被奴役非洲人列为专营交易、1672年新公司重组的连续关系。
+- 2026年 *Historical Journal*《Samuel Pepys, the African Companies, and the Archives of Slavery, 1660–1689》，https://www.cambridge.org/core/journals/historical-journal/article/samuel-pepys-the-african-companies-and-the-archives-of-slavery-16601689/C3FD8D082C3E1048A21D23E46D19F78E ，援用航运记录称前期王室冒险家商团1662—1672年105艘航次装运至少27,489人；这是该机构范围的下限，不是后来皇家非洲公司或所有英国船旗总量。不得与SlaveVoyages较广运量混淆。
 
 ## 主要宏观领域审查结果
 - **爱尔兰军事征服、没收土地与战后重分配**：1641战争、1649德罗赫达和韦克斯福德、1652法令、1656 Down Survey、1662/1665复辟处置已列；1642融资和1653迁居现补齐。下一步仍需实际地产交割、军人获地与1660之后保留地权的精确定量，不能用单项《冒险家法》代替已交地清册。
