@@ -41,3 +41,9 @@
 - UNB牙买加1664法：https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1664-0
 
 **累积ZIP事项：先前用户Library内的R06-full存的是此番审查前的独立稿，当前**GitHub研究分支才是本轮法律版本修正与claim矩阵的较新版本；不得混称两个版本字节一致。下一次重新打包必须保留旧原件，并在CURRENT/中同步GitHub已修订稿与新的QA。**
+
+## 已实见GitHub自动检查（同SHA `f0f4704`）
+- [Editor6 B R06 source-claim gate](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39221042922)：**success**。
+- [Approved map UI contract](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39221043019)：**success**。
+- [Territory continuity research gate](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39221042942)：**success**。
+以上仅针对PR研究分支静态及规范门禁，**不能被描述为236事件历史审核全部通过或网站已上线**。
