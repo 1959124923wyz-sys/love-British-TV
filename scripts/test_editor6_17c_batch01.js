@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const original=[13,24,22,18,18,24,42,38,27,42];
-const expanded=[17,32,26,20,28,36,46,64,35,59];
+const expanded=[18,32,27,21,29,37,47,67,36,62];
 const originalSources=298;
 const legacy=load('data/stories/serial/chronology-preview-1600-1699.json');
 assert.deepEqual(legacy.events.map(x=>x.id),['E6-GLENCOE-1692']);
@@ -69,10 +69,10 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
  for(let number=1;number<=expanded[i];number++)assert(numbering.has(number),'append-only identifier gap '+d+'S-E'+number);
  newDecades++;total+=data.events.length;sources+=data.sources.length;
 }
-assert.equal(newDecades,10);assert.equal(total,363);assert.equal(added,95);
-assert.equal(points,362);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
-assert.equal(refs,314,'R02 existing 219 + R03 new 95 should remain labeled as proxies');
-assert.equal(sources,349);assert.equal(sources-originalSources,51);
+assert.equal(newDecades,10);assert.equal(total,376);assert.equal(added,108);
+assert.equal(points,375);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
+assert.equal(refs,327,'R02 base 219 + R03 95 + book-audited macro events 13');
+assert.equal(sources,375);assert.equal(sources-originalSources,77);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 assert(app.includes("fetch('data/atlas-'+d+'-'+(d+9)+'.json'"));
 assert(app.includes('existingGlencoe'));
