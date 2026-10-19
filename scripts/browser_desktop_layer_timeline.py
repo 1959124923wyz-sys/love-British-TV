@@ -82,7 +82,7 @@ try:
     assert js("document.querySelector('#yearStartLabel').textContent") == "1600"
     assert js("document.querySelector('#yearEndLabel').textContent") == "1609"
     assert js("document.querySelector('#chapterIntro').textContent") == "年代介绍待定"
-    assert js("document.querySelector('#eventCount').textContent") == "1项"
+    assert js("document.querySelector('#eventCount').textContent") == "2项"
     year(1599)  # All previously published Tudor map and UI checks still apply.
 
     year(1586)
