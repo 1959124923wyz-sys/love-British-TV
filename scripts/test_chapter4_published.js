@@ -63,7 +63,7 @@ assert.match(html,/id="yearRange"/);
 assert.match(html,/app\.js\?v=timeline-v1800-merged-ch1ch2/);
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
-assert.ok(app.includes("Math.min(serialPreviewAtlas?1699:lastPublishedYear"),'Year clamping preserves published-year limit when 17c topic preview is absent');
+assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("serialPreviewAtlas?Math.min(1699"),'Published-year cap must remain, with optional 17c topic preview explicitly bounded');
 assert.ok(app.includes("year===lastPublishedYear"),'Autoplay must reach 1529 then stop');
 assert.ok(!app.includes('function renderMilestones()')&&!html.includes('id="milestoneDots"'),'Removed yellow timeline markers returned');
 assert.ok(app.includes("fullArchive||occurredByYear(e,year)"),'Chapter sidebar reveals future events');
