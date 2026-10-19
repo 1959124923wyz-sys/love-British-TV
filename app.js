@@ -1932,6 +1932,26 @@ async function boot(){
   const ordered=chapterRegistry.chapters;
   if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
   lastPublishedYear=ordered[ordered.length-1].end;
+  // A new century may contain one published topic without a complete decade archive.
+  // Never infer that the empty preview years have no historical events.
+  try{
+   const r=await fetch('data/stories/serial/chronology-preview-1600-1699.json',{cache:'no-store'});
+   if(r.ok){
+    const p=await r.json();
+    if(p.schema==='atlas-serial-chronology-preview-v1'&&p.from_year===1600&&p.to_year===1699&&
+       Array.isArray(p.events)&&Array.isArray(p.sources)&&
+       p.events.every(e=>Number.isInteger(e.year)&&e.year>=1600&&e.year<=1699&&
+        e.actual_English_land_area_sqkm===null&&e.historical_control_boundary_verified===false)&&
+       !p.colonial_polygons?.length){
+     serialPreviewAtlas=p;
+     for(let decade=1600;decade<=1690;decade+=10)
+      serialPreviewByDecade.set(decade,{...p,
+       events:p.events.filter(e=>e.year>=decade&&e.year<=decade+9),
+       period:{from:decade,to:decade+9},intro:null,places:[],routes:[],colonial_polygons:[]});
+     for(const source of p.sources)sourcesById.set(source.id,source);
+    }
+   }
+  }catch(_e){ /* The published Tudor years remain fully usable. */ }
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
   // Constant-time citation lookup across all published years.
   for(const dataset of [atlasFirstMerged,atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])
