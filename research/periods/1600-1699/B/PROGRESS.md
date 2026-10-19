@@ -10,8 +10,8 @@
 
 ## 本轮实质增量
 1. 原文复核六篇UNB法律转录/后刊材料：1661巴巴多斯奴役法与仆役法、1676贵格会限制法、1688综合奴役法、1692告发者法、1664牙买加法。法条分级与日期区别见`R06_PRIMARY_LAW_CLAIM_AUDIT.md`。
-2. 新增`SERIAL_ARTICLES/E6-T07-barbados-eastern-caribbean.json`：完整7节、8个主张→来源对应的编辑候审长篇。**无新事件计数**：法律均已有R05事件键，不重复造年度统计。
-3. R06只增加证据审查与专题叙事，不将法律授权的刑罚、赏金和种植园利润视作实际执行数。
+2. 新增`SERIAL_ARTICLES/E6-T07-barbados-eastern-caribbean.json`：完整7节、9个主张→12个来源对应的编辑候审长篇。**无新事件计数**：法律均已有R05事件键，不重复造年度统计。
+3. R06新增两项经核来源键和证据审查与专题叙事，不将法律授权的刑罚、赏金和种植园利润视作实际执行数。
 
 ## 仍待调查
 - 对照1661仆役法目录`1661-09-07`与文本末署`1661-09-27`（未解决，不精确到日）。
@@ -21,3 +21,10 @@
 - 丙组船次主键未交接，禁止两组各自累加单船人头。
 
 本GitHub分支先持久化R06新增研究文件；**R05全文与R06累计ZIP在当前会话本地生成，不得声称该ZIP本体已上传GitHub**。
+
+## 第二次质量审查（2026-10-19）
+- 学术手稿研究披露：TNA CO 30/2中1661年署名的现存奴役法见证包含1664/1667年修改，不能把每条现见条款均误称1661初订。
+- 增加`B6-SLP-BARBADOS-WITNESS`、`B6-BARBADOS-PARLIAMENT-HISTORY`两项可查来源，新源键数2，研究组累计175（旧173保持原样）。
+- 修复初版`SOURCE_CLAIM_MATRIX_R06.csv`与JSON `topic_source_claims`错位；9条claim、12条claim→source关联；审查报告见`R06_EDITORIAL_RELEASE_GATE.md`。
+- GitHub Actions: [E6 B R06 source-claim gate](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/39221042922) **success**；另外两项既有UI与疆域研究门禁在同SHA亦成功。自动测试不等于历史事实/浏览器上线批准。
+- 旧Library R06累计ZIP为审查前完整归档快照；**本Git分支是较新审查版本**，未声称ZIP已同步或远端已上架。
