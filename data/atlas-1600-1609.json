@@ -188,6 +188,53 @@
       "map_priority": true
     },
     {
+      "id": "1600S-E018",
+      "research_event_id": "EDITOR6:VIRGINIA-1606-CHARTER",
+      "arc_id": "ARC-VIRGINIA-COMPANY-PLANTATION",
+      "year": 1606,
+      "start_year": 1606,
+      "end_year": 1606,
+      "visible_from": 1606,
+      "date_label": "1606",
+      "name": "1606年弗吉尼亚公司王室特许：股份资本推动英格兰北美殖民",
+      "historical_actor": "英格兰詹姆斯一世、弗吉尼亚公司及股东",
+      "historical_place": "切萨皮克湾与弗吉尼亚原住民生活区",
+      "description": "1606年英王授予弗吉尼亚公司特许，以投资者股份和海外盈利预期推动北美殖民。该授权在原住民长期生活的土地上提出殖民声索，1607年詹姆斯敦定居只是后来的一步。不能从纸面公司授权推定整片特许地已经被英人实际控制。",
+      "short_description": "1606年英王授予弗吉尼亚公司特许，以投资者股份和海外盈利预期推动北美殖民。该授权在原住民长期生活的土地上提出殖民声索，1607年詹姆斯敦定居只是后来的一步。不能从纸面公司授权推定整片特许地已经被英人实际控制。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "source_ids": [
+        "1600S-S016",
+        "1600S-S017"
+      ],
+      "source_access_reported": [
+        "official_history",
+        "official_archival_timeline"
+      ],
+      "source_group": "EDITOR6_MAJOR_GAPS_20261020",
+      "significance": {
+        "level": 3,
+        "review_status": "editor6_major_20261020_archival_scholarly_source_screened"
+      },
+      "editorial_status": "published_source_review_major_structural_event",
+      "certainty": "year_and_institution_supported_by_accessible_credible_source",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "lat": 37.21,
+      "lng": -76.78,
+      "geography_label": "切萨皮克湾殖民声索主要影响区，非特许颁发或实际占有的精确地点",
+      "geo_precision": "representative_historical_affected_region_or_political_center_not_exact_event_site",
+      "representative_map_point": true,
+      "position_type": "main_affected_region_or_named_locality_reference",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】切萨皮克湾殖民声索主要影响区，非特许颁发或实际占有的精确地点。只作历史主要影响地区的可视化导览，不表示暴力的具体现场、条约实际签署地、船舶航线，也不表示英方实际占领该地点及其周边地区。",
+      "geolocation_basis_zh": "学术著作及权威档案记载的主要影响地区，或同时代政治决策行政中心；非实测历史坐标。",
+      "map_priority": true,
+      "major_case_group": true
+    },
+    {
       "id": "1600S-E003",
       "research_event_id": "A:1607-FLIGHT-RATHMULLAN",
       "arc_id": "ARC-IRL-COL",
@@ -939,16 +986,38 @@
       "original_source_id": "A:A-S01",
       "verification_status": "editor6_read_source_summary_not_original_volume_or_personal_execution_proof",
       "precision_warning": "Authority source describes dated general event; no individual original archival volume presumed read."
+    },
+    {
+      "id": "1600S-S016",
+      "title": "美国国家公园管理局：1606年弗吉尼亚公司特许",
+      "publisher": "www.nps.gov",
+      "url": "https://www.nps.gov/jame/learn/historyculture/the-virginia-company-of-london.htm",
+      "kind": "major_historical_research_or_primary_archival_source",
+      "evidence_read_level": "official_history",
+      "original_source_id": "EDITOR6:VIRGINIA-1606-CHARTER",
+      "verification_status": "editor6_major_20261020_academic_or_institutional_summary_checked_not_full_archival_volume_read",
+      "precision_warning": "Access verified only to publicly available archival description, document transcription or academic extract/summary; do not imply full original manuscript or paywalled book read."
+    },
+    {
+      "id": "1600S-S017",
+      "title": "美国国会图书馆：1606年弗吉尼亚文书年表",
+      "publisher": "www.loc.gov",
+      "url": "https://www.loc.gov/collections/thomas-jefferson-papers/articles-and-essays/virginia-records-timeline-1553-to-1743/1600-to-1609/",
+      "kind": "major_historical_research_or_primary_archival_source",
+      "evidence_read_level": "official_archival_timeline",
+      "original_source_id": "EDITOR6:VIRGINIA-1606-CHARTER",
+      "verification_status": "editor6_major_20261020_academic_or_institutional_summary_checked_not_full_archival_volume_read",
+      "precision_warning": "Access verified only to publicly available archival description, document transcription or academic extract/summary; do not imply full original manuscript or paywalled book read."
     }
   ],
   "routes": [],
   "colonial_polygons": [],
   "publication": {
-    "approved_event_count": 17,
-    "scope": "partial_source_linked_research_screening_r03",
+    "approved_event_count": 18,
+    "scope": "editor6_major_historical_research_r04_plus_95_event_r03",
     "decade_overview": "年代介绍待定",
     "not_deemed_complete": true,
     "geography_policy": "zero invented geocoding; no new polygon of historic control",
-    "caution": "来源等级分别为研究组全文/政府历史机构解说/英国图书馆馆藏历史综述，均不代表逐宗原件最终校勘；地图位置为代表性参考，不构成实际控制边界。"
+    "caution": "本次只加入确有权威史料的重大结构性事件，原著全文、档案卷页与执行程度仍按source_access分别标注。图钉是地区代表点而非精确暴行坐标，不新增任何未经证实的占领疆界。"
   }
 }
