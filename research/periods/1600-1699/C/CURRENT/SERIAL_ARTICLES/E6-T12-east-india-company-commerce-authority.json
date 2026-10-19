@@ -230,6 +230,42 @@
       "access": "catalogue_only"
     },
     {
+      "id": "C18",
+      "label": "Encyclopaedia Iranica — East India Company British – the Safavid period",
+      "url": "https://www.iranicaonline.org/articles/east-india-company-british-i-the-safavid-period/",
+      "access": "scholarly_article_read"
+    },
+    {
+      "id": "C19",
+      "label": "Encyclopaedia Iranica — Anglo-Iranian relations Safavid to Zand",
+      "url": "https://www.iranicaonline.org/articles/anglo-iranian-relations-i/",
+      "access": "scholarly_article_read"
+    },
+    {
+      "id": "C20",
+      "label": "Encyclopaedia Iranica — Hormuz Islamic period",
+      "url": "https://www.iranicaonline.org/articles/hormuz-ii/",
+      "access": "scholarly_article_read"
+    },
+    {
+      "id": "C23",
+      "label": "Royal Museums Greenwich — A true relation of Amboyna (1624 pamphlet)",
+      "url": "https://www.rmg.co.uk/collections/library/rmgl-56089",
+      "access": "catalogue_only"
+    },
+    {
+      "id": "C31",
+      "label": "EBSCO Research Starters — Portugal Cedes Bombay to the English",
+      "url": "https://www.ebsco.com/research-starters/history/portugal-cedes-bombay-english/",
+      "access": "reference_article_read"
+    },
+    {
+      "id": "C43",
+      "label": "英国图书馆 British Library — East India Company charters 1600-1709: IOR/A/1 catalogue historical introduction",
+      "url": "https://searcharchives.bl.uk/catalog/036-000178601",
+      "access": "catalogue_introduction_read"
+    },
+    {
       "id": "C107",
       "label": "British Library — IOR/A/1/51 Act copy: raise no more than £2,000,000 and East Indies trade",
       "url": "https://searcharchives.bl.uk/catalog/040-000178656",
@@ -266,40 +302,10 @@
       "access": "catalogue_only"
     },
     {
-      "id": "C18",
-      "label": "Encyclopaedia Iranica — East India Company British – the Safavid period",
-      "url": "https://www.iranicaonline.org/articles/east-india-company-british-i-the-safavid-period/",
-      "access": "scholarly_article_read"
-    },
-    {
-      "id": "C19",
-      "label": "Encyclopaedia Iranica — Anglo-Iranian relations Safavid to Zand",
-      "url": "https://www.iranicaonline.org/articles/anglo-iranian-relations-i/",
-      "access": "scholarly_article_read"
-    },
-    {
-      "id": "C20",
-      "label": "Encyclopaedia Iranica — Hormuz Islamic period",
-      "url": "https://www.iranicaonline.org/articles/hormuz-ii/",
-      "access": "scholarly_article_read"
-    },
-    {
-      "id": "C23",
-      "label": "Royal Museums Greenwich — A true relation of Amboyna (1624 pamphlet)",
-      "url": "https://www.rmg.co.uk/collections/library/rmgl-56089",
-      "access": "catalogue_only"
-    },
-    {
-      "id": "C31",
-      "label": "EBSCO Research Starters — Portugal Cedes Bombay to the English",
-      "url": "https://www.ebsco.com/research-starters/history/portugal-cedes-bombay-english/",
-      "access": "reference_article_read"
-    },
-    {
-      "id": "C43",
-      "label": "英国图书馆 British Library — East India Company charters 1600-1709: IOR/A/1 catalogue historical introduction",
-      "url": "https://searcharchives.bl.uk/catalog/036-000178601",
-      "access": "catalogue_introduction_read"
+      "id": "C158",
+      "label": "UK legislation.gov.uk — East India Stock Dividend Redemption Act 1873 (36 & 37 Vict c.17), section 36",
+      "url": "https://www.legislation.gov.uk/ukpga/Vict/36-37/17/pdfs/ukpga_18730017_en.pdf",
+      "access": "primary_statute_text_search_verified"
     }
   ],
   "topic_source_claims": [
@@ -437,6 +443,17 @@
       "original_document_page": null,
       "verification_depth": "mixed_source_depth_see_editorial_claim_matrix",
       "publication_approval": false
+    },
+    {
+      "claim_id": "E6-T12-R08-HIST-END-1874",
+      "section_id": "eic-companies-1698",
+      "source_keys": [
+        "C158"
+      ],
+      "original_document_page": "East India Stock Dividend Redemption Act 1873, section 36",
+      "verification_depth": "legislation_text_search_verified_not_all_ancillary_sections_checked",
+      "publication_approval": false,
+      "claim_type": "metadata_historical_end_year_not_article_section_end_year"
     }
   ]
 }
