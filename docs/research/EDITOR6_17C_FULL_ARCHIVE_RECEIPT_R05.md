@@ -25,3 +25,7 @@
 
 ## 下一阶段连续交付
 R06/R07/R08 每轮在本组最新 `FULL.zip` 上累积全部历史研究成果，禁止只交delta。编辑6会每次合并A/B/C三个最新累积包形成唯一全球总包并校验完整性。跨世纪母专题同ID续写，十年层仅作为地图导航与已审核事件发布单元。
+
+
+## Library secondary backup
+An independently verified complete cumulative ZIP is saved in the user's ChatGPT Library at /爱英TV/Editor6-17C-R05-ALL-FULL-20261019.zip (1863774 bytes). Authorized agent conversations can retrieve it through their Library files access. This is a separate backup, not a Git repository import; Issue #180 remains the staged Git archival handoff.
