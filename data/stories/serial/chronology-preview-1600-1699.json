@@ -1,0 +1,80 @@
+{
+  "schema": "atlas-serial-chronology-preview-v1",
+  "from_year": 1600,
+  "to_year": 1699,
+  "status": "partial_topic_only",
+  "description": "17世纪专题先行导航。只放已核证可读的1692年格伦科事件；未有史料的年份不推断为没有事件，也不创建任何占领版图。十年导航仍由既有时间轴承载。",
+  "events": [
+    {
+      "id": "E6-GLENCOE-1692",
+      "year": 1692,
+      "start_year": 1692,
+      "end_year": 1692,
+      "visible_from": 1692,
+      "date_label": "1692年2月13日",
+      "name": "格伦科惨案：苏格兰政府军袭击寄宿的麦克唐纳族人",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": 56.68576,
+      "lng": -5.10534,
+      "geography_label": "格伦科：HES标记的麦克唐纳住宅旧址（现代遗址参考点）",
+      "geo_precision": "historic_house_site_approximate_100m_not_all_massacre_sites",
+      "geolocation_reference_url": "https://www.trove.scot/place/23545",
+      "geolocation_limit_zh": "HES按19世纪地图与后续测绘记载住宅旧址，现场建筑不存，100米位置仅作纪念性参考；1692年杀戮分布于谷地多个聚居点，不是现场精确坐标或袭击区域。",
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "description": "1692年2月13日，驻扎在格伦科居民家中的苏格兰政府军袭击麦克唐纳族人。苏格兰国家信托记载有38人被直接杀害，另有人在逃亡中死于严寒。1695年苏格兰议会认定杀戮为谋杀；有关调查不等于已经完成所有涉事军官的刑事定罪。地点标注为现代考古记录中的相关住宅旧址参考点，不代表全部遇害地点。",
+      "short_description": "政府军袭击格伦科居民；1695年苏格兰议会认定为谋杀。",
+      "source_ids": [
+        "E6-GLENCOE-NTS",
+        "E6-GLENCOE-HES",
+        "E6-GLENCOE-RPS"
+      ],
+      "significance": {
+        "level": 3,
+        "review_status": "editor6_publication_preview_sourced"
+      },
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_type": "modern_historical_site_reference_not_exact_conflict_location",
+      "certainty": "approximate_location_well_documented_event",
+      "editorial_status": "published_topic_preview_event",
+      "map_priority": true,
+      "related_story_ids": [
+        "E6-T04-GLENCOE"
+      ]
+    }
+  ],
+  "places": [],
+  "routes": [],
+  "colonial_polygons": [],
+  "intro": null,
+  "sources": [
+    {
+      "id": "E6-GLENCOE-NTS",
+      "title": "The Glencoe Massacre",
+      "publisher": "National Trust for Scotland",
+      "url": "https://www.nts.org.uk/visit/places/glencoe/the-glencoe-massacre",
+      "kind": "official_heritage_historical_synthesis",
+      "evidence_read_level": "full_official_page"
+    },
+    {
+      "id": "E6-GLENCOE-HES",
+      "title": "Glencoe, The House of the McDonald (NN05NE 2)",
+      "publisher": "Historic Environment Scotland – Trove",
+      "url": "https://www.trove.scot/place/23545",
+      "kind": "historic_site_reference",
+      "evidence_read_level": "site_entry_and_archaeological_notes",
+      "precision_warning": "19th-century cartographic attribution; circa 100m modern site reference and no extant original house"
+    },
+    {
+      "id": "E6-GLENCOE-RPS",
+      "title": "RPS 1695/5/99 – Consideration of Glencoe report",
+      "publisher": "Records of the Parliaments of Scotland",
+      "url": "https://www.rps.ac.uk/search.php?action=print&filename=williamii_trans&id=54240&type=trans",
+      "kind": "edited_primary_source",
+      "evidence_read_level": "edited_parliamentary_transcription"
+    }
+  ]
+}
