@@ -1,0 +1,28 @@
+name: Editor6 17c representative-geography QA
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'css/history-stories.css'
+      - 'data/atlas-16*.json'
+      - 'docs/research/EDITOR6_17C_REPRESENTATIVE_POINT_DECISIONS_R02.json'
+      - 'scripts/test_editor6_17c_georeference_r02.js'
+      - '.github/workflows/editor6-17c-representative-geography.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'css/history-stories.css'
+      - 'data/atlas-16*.json'
+      - 'scripts/test_editor6_17c_georeference_r02.js'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check app.js
+      - run: node scripts/test_editor6_17c_batch01.js
+      - run: node scripts/test_editor6_17c_georeference_r02.js

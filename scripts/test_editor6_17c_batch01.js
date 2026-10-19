@@ -12,7 +12,7 @@ assert.equal(chapters.chapters.length,10,'Never change already published Tudor c
 assert.equal(chapters.chapters.at(-1).end,1599);
 const allIds=new Set(existing.events.map(e=>e.id));
 const researchIds=new Set();
-let sum=0,points=0,sources=0;
+let sum=0,points=0,representative=0,legacyPoints=0,sources=0;
 for(let d=1600,i=0;d<=1690;d+=10,i++){
  const file='data/atlas-'+d+'-'+(d+9)+'.json';
  const dataset=read(file),events=dataset.events;
@@ -54,13 +54,23 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
    points++;
    assert(Number.isFinite(e.lat)&&Number.isFinite(e.lng));
    assert(Math.abs(e.lat)<=90&&Math.abs(e.lng)<=180);
-   assert(e.geo_precision.includes('approximate')&&e.geolocation_limit_zh.includes('并非'));
+   if(e.representative_map_point){
+    representative++;
+    assert(e.geo_precision.startsWith('representative_'),'explicit uncertain geographical marker required');
+    assert(e.geolocation_limit_zh.includes('非事件精确现场')&&e.geolocation_limit_zh.includes('不表示由英方控制'),'representative site must not masquerade as event site or control');
+    assert(e.geography_label&&e.geo_reference_code&&e.map_priority===true);
+   }else{
+    legacyPoints++;
+    assert(e.geo_precision.includes('approximate')&&e.geolocation_limit_zh.includes('并非'));
+   }
   }
  }
  sum+=events.length;sources+=dataset.sources.length;
 }
 assert.equal(sum,268);
-assert.equal(points,48);
+assert.equal(points,267);
+assert.equal(representative,219);
+assert.equal(legacyPoints,48);
 assert.equal(sources,298);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 assert(app.includes("fetch('data/atlas-'+d+'-'+(d+9)+'.json'"),'actual decade batches must load');
@@ -69,4 +79,4 @@ assert(app.includes("serialPreviewByDecade.set(decade,ds)"));
 assert(app.includes("showFullChapterArchive').checked=false"),'future archive preview must reset across decades');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert(!html.includes('serialStoriesButton'),'previous independent story tab must remain removed');
-console.log('PASS E6 17c batch 01: '+sum+' new unique events + Glencoe, 298 decade-specific source references, '+points+' cautious reference points; all ten years, chronology and old atlas contract intact');
+console.log('PASS E6 17c batch 01: '+sum+' new unique events + Glencoe, 298 decade-specific source references, '+points+' cautious reference points ('+representative+' administrative/impact area references); all ten years, chronology and old atlas contract intact');
