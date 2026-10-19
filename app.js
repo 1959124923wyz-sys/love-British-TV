@@ -418,7 +418,7 @@ function renderEventList(){
  if(hint){
   hint.textContent=currentEvents.length?
    '本年新增 '+currentEvents.length+' 项'+(locatable<currentEvents.length?' · '+locatable+' 项可定位':''):
-   '本年无新增记录';
+   (year>=1600?'本年暂无已入库记录 · 待继续调查':'本年无新增记录');
   hint.classList.toggle('none',!currentEvents.length);
  }
  $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
@@ -1624,7 +1624,7 @@ function updateVisibility(){
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
 const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&d>=1600&&d<=1690&&d%10===0?
- ({id:'serial-topic-'+d,start:d,end:d+9,number:11+(d-1600)/10,label:d===1690?'格伦科惨案 · 专题试阅':'专题资料待补充',status:'topic_preview'}):null;
+ ({id:'17c-'+d,start:d,end:d+9,number:11+(d-1600)/10,label:'年代介绍待定',status:serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
  (y>=1600&&y<=1699?storyPreviewChapterForDecade(decadeForYear(y)):null);
@@ -1666,16 +1666,16 @@ function renderTimelineNavigation(){
  frame.innerHTML=decades.map((d,i)=>{
   if(d<chapterRegistry.navigation.firstDecade||d>chapterRegistry.navigation.lastDecade)
    return '<span class="chapter-placeholder" aria-hidden="true"></span>';
-  const chapter=chapterForDecade(d),published=chapter?.status==='published',preview=chapter?.status==='topic_preview';
+  const chapter=chapterForDecade(d),published=chapter?.status==='published',partial=chapter?.status==='published_partial',preview=chapter?.status==='topic_preview';
   if(chapter&&renderedChapters.has(chapter.id))return '';
   if(chapter)renderedChapters.add(chapter.id);
   const from=chapter?chapter.start:d,to=chapter?chapter.end:d+9;
   const onMap=!!chapter&&year>=from&&year<=to;
-  return '<button type="button" class="chapter-segment'+(published?' published':preview?' published topic-preview':' unpublished')+
+  return '<button type="button" class="chapter-segment'+(published?' published':partial?' published partial-century':preview?' published topic-preview':' unpublished')+
     (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
-    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:preview?'浏览'+from+'—'+to+'年专题试阅':'此十年尚无正式历史资料')+'">'+
-    '<span>'+(published?'第'+chapter.number+'章':preview?'专题试阅':'尚未发布')+'</span>'+
-    '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):preview&&d===1690?' · 格伦科惨案':' · 年代介绍待定')+'</small></button>';
+    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:partial?'浏览'+from+'—'+to+'年已入库事件':'此十年年代介绍待定')+'">'+
+    '<span>'+(published?'第'+chapter.number+'章':partial?'第'+chapter.number+'章 · 补充中':preview?'专题试阅':'尚未发布')+'</span>'+
+    '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 年代介绍待定')+'</small></button>';
  }).join('');
  frame.querySelectorAll('button[data-decade]').forEach(btn=>btn.addEventListener('click',()=>{
   const decade=Number(btn.dataset.decade),chapter=chapterForDecade(decade);
@@ -1697,7 +1697,7 @@ function renderTimelineNavigation(){
   $('jumpYear').value=year;
  }
  $('timelineAvailability').textContent=year>lastPublishedYear
-  ?'专题试阅 · 年代介绍待定'
+  ?'17世纪事件持续入库 · 年代介绍待定'
   :browsingDecade===halfCenturyPageForYear(year)
    ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
    :'浏览目录中 · 地图为'+year+'年';
@@ -1715,18 +1715,19 @@ function setYear(v){
    $('dossierBody').innerHTML='<div class="dossier-kicker">历史专题 · '+next+'年</div><h2>当年历史</h2><p>请选择已核证的历史记录。</p>';
   }
   focusedEventId=null;focusRequestToken++;
+  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
   year=next;atlas=chosen;
   $('bigYear').textContent=year;$('timeYear').textContent=year;
   $('chapterTitlePrimary').textContent='十七世纪';
-  $('chapterTitleSecondary').textContent='专题试阅';
+  $('chapterTitleSecondary').textContent='史料持续入库';
   $('chapterIntro').textContent='年代介绍待定';
   for(const id of ['factA','factB','factC'])$(id).textContent='—';
   for(const id of ['factADesc','factBDesc','factCDesc'])$(id).textContent='';
-  $('periodTitle').textContent='专题试阅 · 研究资料逐步发布';
+  $('periodTitle').textContent='来源关联事件持续入库 · 年代介绍待定';
   const ch=chapterForYear(year);
   $('chapterNav').textContent='历史地图 · 十七世纪';
   $('chapterNavName').textContent=ch?.label||'年代介绍待定';
-  $('chapterLabel').textContent='专题试阅 · '+ch.start+'—'+ch.end;
+  $('chapterLabel').textContent='第'+ch.number+'章 · '+ch.start+'—'+ch.end;
   browsingDecade=halfCenturyPageForYear(year);
   renderTimelineNavigation();timelineStatus('');
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
@@ -1934,26 +1935,56 @@ async function boot(){
   const ordered=chapterRegistry.chapters;
   if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
   lastPublishedYear=ordered[ordered.length-1].end;
-  // A new century may contain one published topic without a complete decade archive.
-  // Never infer that the empty preview years have no historical events.
+  // Ten partial 17th-century decades; the original 1497-1599 chapters remain
+  // immutable. The published Glencoe event gets one stable extra ID in 1692.
   try{
-   const r=await fetch('data/stories/serial/chronology-preview-1600-1699.json',{cache:'no-store'});
-   if(r.ok){
-    const p=await r.json();
-    if(p.schema==='atlas-serial-chronology-preview-v1'&&p.from_year===1600&&p.to_year===1699&&
-       Array.isArray(p.events)&&Array.isArray(p.sources)&&
-       p.events.every(e=>Number.isInteger(e.year)&&e.year>=1600&&e.year<=1699&&
-        e.actual_English_land_area_sqkm===null&&e.historical_control_boundary_verified===false)&&
-       !p.colonial_polygons?.length){
-     serialPreviewAtlas=p;
-     for(let decade=1600;decade<=1690;decade+=10)
-      serialPreviewByDecade.set(decade,{...p,
-       events:p.events.filter(e=>e.year>=decade&&e.year<=decade+9),
-       period:{from:decade,to:decade+9},intro:null,places:[],routes:[],colonial_polygons:[]});
-     for(const source of p.sources)sourcesById.set(source.id,source);
+   const decades=Array.from({length:10},(_,i)=>1600+i*10);
+   const pairs=await Promise.all(decades.map(async d=>{
+    const response=await fetch('data/atlas-'+d+'-'+(d+9)+'.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('17c decade source file unavailable '+d);
+    const ds=await response.json();
+    if(ds.period?.from!==d||ds.period?.to!==d+9||!Array.isArray(ds.events)||!Array.isArray(ds.sources)||
+       ds.colonial_polygons?.length||ds.routes?.length||ds.places?.length||
+       ds.events.some(e=>!Number.isInteger(e.year)||e.year<d||e.year>d+9||
+         e.historical_control_boundary_verified!==false||e.actual_English_land_area_sqkm!==null))
+     throw new Error('17c decade source or spatial error '+d);
+    return [d,ds];
+   }));
+   const olderResponse=await fetch('data/stories/serial/chronology-preview-1600-1699.json',{cache:'no-store'});
+   let existingGlencoe=null;
+   if(olderResponse.ok){
+    const older=await olderResponse.json();
+    if(older.schema==='atlas-serial-chronology-preview-v1'){
+     existingGlencoe=older.events?.find(e=>e.id==='E6-GLENCOE-1692')||null;
+     for(const source of older.sources||[])sourcesById.set(source.id,source);
     }
    }
-  }catch(_e){ /* The published Tudor years remain fully usable. */ }
+   for(const [decade,ds] of pairs){
+    if(decade===1690&&existingGlencoe&&!ds.events.some(e=>e.id===existingGlencoe.id))
+     ds.events.push(existingGlencoe);
+    ds.events.sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
+    serialPreviewByDecade.set(decade,ds);
+    for(const source of ds.sources)sourcesById.set(source.id,source);
+   }
+   serialPreviewAtlas={schema:'atlas-17c-source-linked-batch01',from_year:1600,to_year:1699};
+  }catch(error){
+   console.warn('17c batch unavailable; Glencoe-only preview retained',error);
+   serialPreviewByDecade.clear();
+   try{
+    const response=await fetch('data/stories/serial/chronology-preview-1600-1699.json',{cache:'no-store'});
+    if(response.ok){
+     const p=await response.json();
+     if(p.schema==='atlas-serial-chronology-preview-v1'&&Array.isArray(p.events)){
+      serialPreviewAtlas=p;
+      for(let decade=1600;decade<=1690;decade+=10)
+       serialPreviewByDecade.set(decade,{...p,
+        events:p.events.filter(e=>e.year>=decade&&e.year<=decade+9),
+        period:{from:decade,to:decade+9},intro:null,places:[],routes:[],colonial_polygons:[]});
+      for(const source of p.sources||[])sourcesById.set(source.id,source);
+     }
+    }
+   }catch(_error){}
+  }
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
   // Constant-time citation lookup across all published years.
   for(const dataset of [atlasFirstMerged,atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])

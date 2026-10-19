@@ -1,0 +1,28 @@
+name: Editor6 seventeenth-century bulk event QA
+on:
+  pull_request:
+    paths:
+      - 'data/atlas-16*.json'
+      - 'app.js'
+      - 'scripts/test_editor6_17c_batch01.js'
+      - 'scripts/browser_serial_1692_story.py'
+      - '.github/workflows/editor6-17c-batch.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/atlas-16*.json'
+      - 'app.js'
+      - 'scripts/test_editor6_17c_batch01.js'
+      - 'scripts/browser_serial_1692_story.py'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check app.js
+      - run: node scripts/test_editor6_17c_batch01.js
+      - run: node scripts/test_serial_story_contract.js
+      - run: node scripts/test_major_story_pilot.js
