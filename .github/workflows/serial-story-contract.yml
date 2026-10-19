@@ -27,3 +27,4 @@ jobs:
       - run: node --check js/history-stories.js
       - run: node scripts/test_serial_story_contract.js
       - run: node scripts/test_major_story_pilot.js
+      - run: python scripts/test_editor6_research_zip_import.py
