@@ -27,3 +27,12 @@
 - 机构版本分级：1661及1676=TNA档卷数字全文**转录**（仍未现场核原稿影像）；1688与1692=17/18世纪**后印法令汇编转录**，不得统一标为“已读原档”。
 - `E6-T07`长篇已新增 `SERIAL_ARTICLES/E6-T07-barbados-eastern-caribbean.json`，`editorial_status:draft_research_only`、八条claim→source索引均存在；`related_event_ids`暂空，以防未经编辑6核对年度正式事件ID。
 - **本轮未增加确证人口数、税收、罚没实收、领土Polygon、航线坐标或真实受害面积**。
+
+
+## 上线预审追加（2026-10-19）｜1661文本版本与日期：**必须覆盖上述初步认定**
+- Holly Brewer、Jamie Gemmell 的手稿比较（https://slaverylawpower.org/barbados-huntington/）指出：所谓“1661年原文”现存英国国家档案馆 `CO 30/2` 见证实际上是**1667年送交英国政府的修订汇集版本**，包含1664、1667年的改动；尚无完整保存的初次1661年制定原件。UNB的`CO 30/2`转录确实可读，**但必须改标“后期修订见证文本之现代转录”**，不得逐条宣称1661年原法确有所有现见条款。
+- 手稿比较论文引用殖民议会会议簿`TNA CO 31/1`第63—64页及《殖民地国务文件目录》记载1661年**9月27日**议会通过相关法律；UNB奴役法见证抄件末署**9月24日**，两处文献版本/程序记载有别。我们只核阅了学术网页提供的会议簿**转述与档号**，没有直接取得`CO 31/1`原始会议簿影像，因而不能写“本人已核原档确认9月27日”。
+- 1661仆役法UNB索引标`1661-09-07`，转录文末署`1661-09-27`，问题仍未解决。现阶段对两部法案主要以**1661年**为安全精度。
+- UNB网站说明1630—1661有早期法规，且1688法规明文撤销此前有关奴役规制的法律；历史专题应区分“第一部综合性法典”“现存修订见证”“持续执行期间”。<https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1661> / <https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1688>
+- 额外核查巴巴多斯议会官方史：1625英人到访声索、1627殖民定居，可信度用于**事件年份与机构沿革**，不支持现代整岛历史地籍界线：<https://www.barbadosparliament.com/main_page_content/show_content/13>。
+- 新增R06来源主键：`B6-SLP-BARBADOS-WITNESS`、`B6-BARBADOS-PARLIAMENT-HISTORY`；见 `SOURCE_REGISTER_R06_ADDITIONS.csv`。**R06新增来源数由0更正为2**，旧R05的173项未篡改。
