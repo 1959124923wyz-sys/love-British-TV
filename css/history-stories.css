@@ -57,8 +57,3 @@
 @media(max-width:680px){
  .story-event-preview{width:min(320px,calc(100vw - 24px));max-height:48vh}
 }
-
-/* Invisible until at least one cross-century article has passed editorial approval. */
-.masthead .serial-stories-button{padding:7px 12px;border:1px solid #4a6172;border-radius:7px;background:#1b3249;color:#f4d6b0;font-size:12px;font-weight:650;cursor:pointer;white-space:nowrap}
-.masthead .serial-stories-button:hover,.masthead .serial-stories-button:focus-visible{background:#29425c;border-color:#d4a878}
-.masthead .serial-stories-button[hidden]{display:none!important}
