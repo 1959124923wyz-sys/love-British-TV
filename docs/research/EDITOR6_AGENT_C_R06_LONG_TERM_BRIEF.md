@@ -20,3 +20,6 @@
 - docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md
 
 后续第七、第八轮持续扩大范围，最终向编辑6交付一个可以解压复用、包含全部历史研究材料的累积总包。
+
+## 正式长篇写作交付（新增强制项）
+在既有专题MD研究底稿之外，至少把证据最完整的专题转写为 `CURRENT/SERIAL_ARTICLES/E6-Txx-<slug>.json`，严格参照GitHub的 `data/stories/serial/ARTICLE_TEMPLATE_RESEARCH_ONLY.json`。一篇历史进程只产生一份可读完整长篇，即使跨越十年、几十年、数百年，也不按每个十年硬分十篇。每节写具名人物、冲突与制度如何发生及实际后果，`sections[].source_keys` 必须对应真实核阅来源。完成稿仍标记 `draft_research_only`，不要自行设为 `published`，由编辑6与主编核定。正文之外保留 `topic_source_claims`、跨世纪 predecessor/successor、地图事件 ID、争议与精度，不把审稿备注写进公众文章。
