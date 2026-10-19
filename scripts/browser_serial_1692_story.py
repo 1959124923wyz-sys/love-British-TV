@@ -28,11 +28,11 @@ try:
     assert run("return document.getElementById('yearRange').min==='1690'")
     assert run("return document.getElementById('yearRange').max==='1699'")
     assert run("return document.getElementById('chapterIntro').textContent==='年代介绍待定'")
-    assert run("return document.querySelectorAll('#eventList .event-item').length===19")
+    assert run("return document.querySelectorAll('#eventList .event-item').length===29")
     assert run("return document.querySelectorAll('#map path.atlas-territory-solid').length===0"),"Unreviewed 17c control areas are visible"
     browser.save_screenshot(str(out/"1692-decade-slider-preview.png"))
     change_year(1691)
-    assert run("return document.getElementById('eventCount').textContent==='10项'")
+    assert run("return document.getElementById('eventCount').textContent==='16项'")
     change_year(1692)
     browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="E6-GLENCOE-1692"]').click()
     wait.until(lambda d:run("return !!document.querySelector('#dossierBody .major-story-enter')"))
@@ -52,7 +52,7 @@ try:
     wait.until(lambda d:run("return document.getElementById('bigYear').textContent==='1600'"))
     assert run("return document.getElementById('yearRange').min==='1600'")
     assert run("return document.getElementById('yearRange').max==='1609'")
-    assert run("return document.getElementById('eventCount').textContent==='1项'")
+    assert run("return document.getElementById('eventCount').textContent==='2项'")
     assert run("return document.getElementById('chapterIntro').textContent==='年代介绍待定'")
     # Jumping to already-published history must restore original data and boundaries.
     run("""const field=document.getElementById('jumpYear');field.value='1599';
