@@ -30,7 +30,7 @@
 
 ## R08｜编辑6甲组审查教训整改（2026-10-19）
 
-- 最新全部资料：ChatGPT Library `/爱英TV/Editor6-AgentC-1600-1699-R08-FULL.zip`（9,332,333字节；SHA256 `012f35e2211b78ff24bbb9c11f8de57b31a320bfd4ed9ead68cfb220d45a6b9d`；186文件，ZIP CRC、逐文件SHA256及前轮R07原ZIP无损比对均通过）。
+- 最新全部资料：ChatGPT Library `/爱英TV/Editor6-AgentC-1600-1699-R08-FULL.zip`（9,332,824字节；SHA256 `921f6a0176db8a0e1d3f881fc035ce3fd8c3933569f65d4c889789e999ecc370`；186文件，ZIP CRC、逐文件SHA256及前轮R07原ZIP无损比对均通过）。
 - 最新R08两篇全文现已**实际提交到本GitHub分支**：`CURRENT/SERIAL_ARTICLES/E6-T12-east-india-company-commerce-authority.json`（12节1600—1698、长期终止1874）；`CURRENT/SERIAL_ARTICLES/E6-T15-fiscal-credit-institutions.json`（11节1651—1698、长期终止未知）。
 - 当前仍为`draft_research_only`，没有把编辑说明写入读者正文，也没有发布地图或正式索引。较早`SERIAL_ARTICLES_R06`是历史快照，不能被引用为最新文章。
 - GitHub审校操作：`CURRENT/EDITORIAL/EDITOR6_STANDARD_AGENT_C_APPLICATION_R08.md`（A组教训对照）、`SERIAL_STORY_AUTHORING_GUIDE_C_R08.md`（后续调查员规则）、`E6_T12_T15_SOURCE_CLAIMS_R08.csv`、`E6_T12_T15_REVIEW_GATES_R08.md`、`qa_serial_research_r08.py`。
