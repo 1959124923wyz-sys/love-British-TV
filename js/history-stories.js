@@ -132,9 +132,10 @@
    // The selected map event can change as the reader explores links and years.
    const current=originId||window.atlasStoryBridge?.selectedEventId?.()||null;
    const metaEventIds=meta.event_ids||[];
-   sourceEventId=openedFromSerialLibrary?null:
-     current&&eventInMemory(current)?current:
+   sourceEventId=current&&eventInMemory(current)?current:
      metaEventIds.find(eventId=>eventInMemory(eventId))||null;
+   // The independent serial library has no originating map event.
+   if(openedFromSerialLibrary)sourceEventId=null;
    readingScroll=0;
   }
   closePreview();
