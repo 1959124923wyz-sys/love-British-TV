@@ -13,7 +13,7 @@ import stat
 import sys
 import zipfile
 
-ALLOWED_ROOTS = {"source_A", "source_B", "source_C", "INTEGRATED"}
+ALLOWED_ROOTS = {"source_A", "source_B", "source_C", "INTEGRATED", "ARCHIVES", "AGENT_TASKS", "EDITORIAL"}
 ALLOWED_SUFFIXES = {".md", ".csv", ".json", ".geojson", ".txt", ".py", ".yml", ".yaml"}
 MAX_FILES = 1000
 MAX_UNPACKED_BYTES = 60 * 1024 * 1024
@@ -29,8 +29,10 @@ def valid_name(name: str) -> bool:
         return False
     if parts[0] not in ALLOWED_ROOTS:
         return False
-    if not Path(name).suffix.lower() in ALLOWED_SUFFIXES:
-        return False
+    suffix = Path(name).suffix.lower()
+    if parts[0] == 'ARCHIVES':
+        return suffix == '.zip'
+    return suffix in ALLOWED_SUFFIXES
     return True
 
 
@@ -80,10 +82,13 @@ def main():
             parser.error("cumulative pack unexpectedly small: expected >50 research members")
         for info in sorted(candidates, key=lambda x: x.filename):
             content = z.read(info)
-            try:
-                content.decode("utf-8-sig")
-            except UnicodeDecodeError:
-                parser.error("non-UTF-8 research source: " + info.filename)
+            if not info.filename.startswith('ARCHIVES/'):
+                try:
+                    content.decode("utf-8-sig")
+                except UnicodeDecodeError:
+                    parser.error("non-UTF-8 research source: " + info.filename)
+            elif not zipfile.is_zipfile(__import__('io').BytesIO(content)):
+                parser.error('original archive is not a valid nested ZIP: ' + info.filename)
             sha = hashlib.sha256(content).hexdigest()
             dest = DESTINATION / info.filename
             if args.commit_files:
