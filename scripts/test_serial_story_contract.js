@@ -10,7 +10,14 @@ const old=load('data/stories/index.json');
 const reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert.equal(serial.schema,'atlas-serial-stories-v1');
 assert.equal(serial.navigation_contract,'existing_decade_chapters_unchanged');
-assert.equal(serial.topics.length,15,'Editor6 must retain 15 source research topic families');
+const canonicalFamilies=Array.from({length:15},(_,i)=>'E6-T'+String(i+1).padStart(2,'0'));
+const knownIds=new Set(serial.topics.map(t=>t.id));
+assert.equal(knownIds.size,serial.topics.length,'unique IDs required');
+for(const id of canonicalFamilies)assert(knownIds.has(id),'missing original mother family: '+id);
+assert(serial.topics.length>=15,'may grow by reviewed subtopic additions');
+const glencoe=serial.topics.find(t=>t.id==='E6-T04-GLENCOE');
+assert(glencoe && glencoe.parent_topic_id==='E6-T04','approved Glencoe subtopic ID must link to unchanged Scottish parent');
+assert(glencoe.status==='research_only' && !glencoe.article_file,'approving ID does not publish story');
 assert.equal(chapters.chapters.length,10,'published 1497-1599 decade chapters must not change');
 assert.equal(chapters.chapters.at(-1).end,1599);
 assert.equal(old.schema,'atlas-major-stories-index-v1');
@@ -21,7 +28,8 @@ assert(/id="serialStoriesButton"[^>]+hidden/.test(html),'library entry must rema
 const seen=new Set();
 for(const t of serial.topics){
  assert(/^[A-Za-z0-9-]+$/.test(t.id));
- assert(!seen.has(t.id),'duplicate mother topic ID: '+t.id);seen.add(t.id);
+ assert(!seen.has(t.id),'duplicate topic ID: '+t.id);seen.add(t.id);
+ if(t.parent_topic_id)assert(knownIds.has(t.parent_topic_id)&&t.parent_topic_id!==t.id,'orphan or circular direct parent ID');
  assert(typeof t.title==='string'&&t.title.length>0);
  assert(Number.isInteger(t.origin_year));
  assert(t.historical_end_year===null||(Number.isInteger(t.historical_end_year)&&t.historical_end_year>=t.origin_year));
