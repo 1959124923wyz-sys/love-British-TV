@@ -1,0 +1,27 @@
+name: "1540s independent historical map research QA"
+# Manual only. Research commits and PR edits must not repeatedly send
+# failed-run emails or launch unrelated historical source investigations.
+# The validation script and preview syntax check remain fully available.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Research data, chronology and control continuity audit
+        run: python3 research/periods/1540-1549/validate_research.py
+
+      - name: Validate independent 1540s preview JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          html=Path("research/periods/1540-1549/interactive_research_preview.html").read_text()
+          blocks=re.findall(r'<script[^>]*>(.*?)</script>',html,flags=re.S|re.I)
+          assert blocks and blocks[-1].strip(), "Missing preview JS"
+          Path("/tmp/1540s-map-preview.js").write_text(blocks[-1])
+          PY
+          node --check /tmp/1540s-map-preview.js

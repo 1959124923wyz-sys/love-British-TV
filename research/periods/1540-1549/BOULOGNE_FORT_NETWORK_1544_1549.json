@@ -1,0 +1,165 @@
+{
+  "schema": "1540s_Boulogne_tactical_control_network_v1",
+  "period": [
+    1544,
+    1549
+  ],
+  "role": "A bounded node/relationship atlas for English coastal occupation versus French counter-fortification; NOT a traced historical port route or digitized 16th-century fort wall plan",
+  "precise_Tudor_fort_polygons": 0,
+  "historic_road_or_sailing_polylines_verified": 0,
+  "sources": [
+    "FR-HELIOT-1958-PLANS-PAGES",
+    "FR-HELIOT-1958-OUTREAU-FRENCH",
+    "FR-MURPHY-MAPPING-2019",
+    "FR-MURPHY-2019-SETTLE"
+  ],
+  "nodes": [
+    {
+      "key": "calais",
+      "name": "Calais English Crown existing garrison city",
+      "owner": "English Crown",
+      "from": 1544,
+      "to": 1549,
+      "loc": [
+        1.8587,
+        50.9513
+      ],
+      "date_status": "old control continued"
+    },
+    {
+      "key": "boulogne_upper",
+      "name": "Boulogne upper city & castle",
+      "owner": "English Crown",
+      "from": 1544,
+      "to": 1549,
+      "loc": [
+        1.6169,
+        50.7256
+      ],
+      "date_status": "English from 1544-09-13 to 1550 restitution"
+    },
+    {
+      "key": "boulogne_lower_citadel",
+      "name": "Boulogne lower-town Citadelle / former Cordeliers neighborhood",
+      "owner": "English Crown",
+      "from": 1545,
+      "to": 1549,
+      "loc": null,
+      "date_status": "begun by Jul 1545; remaining works 1547; location only historic street names",
+      "dispossession": "large-scale householder and Franciscan friars removal per scholarly study"
+    },
+    {
+      "key": "tour_ordre",
+      "name": "Tour d'Ordre English fortified old lighthouse",
+      "owner": "English Crown",
+      "from": 1544,
+      "to": 1549,
+      "loc": [
+        1.5972222,
+        50.7316667
+      ],
+      "date_status": "English earthworks from Nov 1544; see SITE-precision caveat"
+    },
+    {
+      "key": "young_man",
+      "name": "Young Man / Petit Paradis / Fort Rouge",
+      "owner": "English Crown",
+      "from": 1545,
+      "to": 1549,
+      "loc": null,
+      "date_status": "attested 17 Jul 1545, later fortified; old sea-cliff locus not re-geo-registered"
+    },
+    {
+      "key": "clements",
+      "name": "Clements Bulwark / Fort de l'Eperon",
+      "owner": "English Crown",
+      "from": 1546,
+      "to": 1549,
+      "loc": null,
+      "date_status": "work attested March 1546, still incomplete autumn 1549"
+    },
+    {
+      "key": "ambleteuse",
+      "name": "English Ambleteuse / Slack fort",
+      "owner": "English Crown",
+      "from": 1546,
+      "to": 1548,
+      "loc": [
+        1.6072222,
+        50.8102778
+      ],
+      "date_status": "French captured Aug 25 1549; location modern town only"
+    },
+    {
+      "key": "boulemberg",
+      "name": "English Boulemberg / Mont Lambert fort",
+      "owner": "English Crown",
+      "from": 1546,
+      "to": 1548,
+      "loc": [
+        1.65893,
+        50.71777
+      ],
+      "date_status": "English left during French 1549 offensive; hill town modern reference"
+    },
+    {
+      "key": "french_outreau",
+      "name": "French Outreau/Villeneuve counter-fort across Liane",
+      "owner": "Kingdom of France (never English fort in this study)",
+      "from": 1545,
+      "to": 1549,
+      "loc": [
+        1.5947222,
+        50.7044444
+      ],
+      "date_status": "French siege fort begun July 1545, modern Outreau commune centroid not original French hill fort."
+    }
+  ],
+  "links": [
+    {
+      "from": "calais",
+      "to": "boulogne_upper",
+      "relation": "possible overland military communication",
+      "documented_as_topological_connection": true,
+      "exact_historic_line_trace": null,
+      "drawable_only_as_legend_connection_not_ship_track": true
+    },
+    {
+      "from": "boulogne_upper",
+      "to": "boulogne_lower_citadel",
+      "relation": "English Lower City garrison naval arsenal physically part of occupied town",
+      "documented_as_topological_connection": true,
+      "exact_historic_line_trace": null
+    },
+    {
+      "from": "boulogne_upper",
+      "to": "tour_ordre",
+      "relation": "English linked shore defence northern cliffs",
+      "documented_as_topological_connection": true,
+      "exact_historic_line_trace": null
+    },
+    {
+      "from": "boulogne_upper",
+      "to": "french_outreau",
+      "relation": "hostile opposed fortification across Liane; French, not an English garrison",
+      "documented_as_topological_connection": true,
+      "exact_historic_line_trace": null
+    },
+    {
+      "from": "boulogne_upper",
+      "to": "ambleteuse",
+      "relation": "English-held separate satellite coastal fort from 1546, lost 1549",
+      "documented_as_topological_connection": true,
+      "exact_historic_line_trace": null
+    },
+    {
+      "from": "boulogne_upper",
+      "to": "boulemberg",
+      "relation": "English eastern hill artillery fort from 1546, abandoned 1549",
+      "documented_as_topological_connection": true,
+      "exact_historic_line_trace": null
+    }
+  ],
+  "important_historiography": "Héliot 1958 pp. 23–35 distinguishes English fortifications north/east/lower town from French-built Outreau on the LEFT bank. Historical 1545,1547,1549 military plans exist but are not digitized as legally reusable registered geodata in this research. No fabricated maritime voyage polylines.",
+  "architecture_for_editor": "Map as named sites and optional schematic dashed city-relative relationships, never style all nodes English. Exactly separate independent French opposition layer, and let site visibility respect year-end dated control."
+}
