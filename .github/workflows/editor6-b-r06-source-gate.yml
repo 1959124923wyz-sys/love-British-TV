@@ -1,0 +1,33 @@
+name: Editor6 B R06 source-claim gate
+
+on:
+  push:
+    branches:
+      - research/1600-1699-b-americas-caribbean
+  pull_request:
+    paths:
+      - research/periods/1600-1699/B/**
+      - .github/workflows/editor6-b-r06-source-gate.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate-b-research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate long-topic article source links
+        run: python3 research/periods/1600-1699/B/audit_serial_articles_r08.py
+      - name: Publication safety check
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/periods/1600-1699/B/SERIAL_ARTICLES/E6-T07-barbados-eastern-caribbean.json')
+          a=json.loads(p.read_text('utf-8'))
+          assert a['editorial_status']=='draft_research_only'
+          assert a.get('historical_end_year') is None
+          assert a.get('related_event_ids') == []
+          print('PASS: research draft remains unpublished; 1699 is not historical termination')
+          PY
