@@ -28,7 +28,7 @@ def toggle_layer(id,checked):
 try:
     load_year(1613)
     assert evidence('economic-network')>=3, "company's Asian trade sites not on map"
-    assert evidence('land-dispossession')==0, "future Ireland confiscation shown in 1613"
+    assert evidence('land-dispossession')==1, "Ulster plantation effect must appear while 1650s confiscation remains future"
     browser.save_screenshot(str(out/'editor7-1613-eic-asian-commercial-cues.png'))
 
     load_year(1622)
