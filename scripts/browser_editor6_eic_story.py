@@ -40,11 +40,17 @@ try:
     wait.until(lambda d:script("return !!document.querySelector('#dossierBody .major-story-enter')"))
     assert script("return document.getElementById('bigYear').textContent==='1668'")
     jump(1698)
+    # A second direct arrival opens the sidebar in its normal state; do not
+    # programmatically click an event hidden behind an already-open dossier.
+    browser.get('http://127.0.0.1:8765/?year=1698')
+    wait.until(lambda d:script("return document.getElementById('bigYear')?.textContent==='1698'"))
     open_article("1690S-E058")
     browser.save_screenshot(str(out/"editor6-eic-1698-competing-charters.png"))
     assert script("return document.getElementById('bigYear').textContent==='1698'")
     browser.find_element(By.CSS_SELECTOR,'button[data-story-return]').click()
     jump(1600)
+    browser.get('http://127.0.0.1:8765/?year=1600')
+    wait.until(lambda d:script("return document.getElementById('bigYear')?.textContent==='1600'"))
     open_article("1600S-E014")
     browser.save_screenshot(str(out/"editor6-eic-1600-trade-charter.png"))
     assert script("return document.querySelectorAll('.major-story-article .story-section').length===12")
