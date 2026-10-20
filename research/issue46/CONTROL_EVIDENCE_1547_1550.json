@@ -1,0 +1,173 @@
+{
+  "schema": "issue46_primary_tudor_fort_maps_crosswalk_v1",
+  "updated": "2026-10-13",
+  "verified_occupied_area_polygon_count": 0,
+  "reason": "Contemporary plans and GPS-surveyed fort footprint proven to exist; accessible source-derived vertices, exact historic phases, licenses, and georeferencing have not been obtained. No arbitrary geometry permitted.",
+  "archival_group": {
+    "archival_ref": "NRS RHP 6075",
+    "nature": "Photostat copies of English contemporary Belvoir Castle fort plans",
+    "original_owner": "Belvoir Castle, Duke of Rutland historic collection",
+    "documentary_confirmation_urls": [
+      "https://era.ed.ac.uk/bitstream/1842/6848/2/253253_vol2.pdf",
+      "https://www.trove.scot/place/58412?page=2&tab=related-archives"
+    ],
+    "page": "University of Edinburgh Guns in Scotland PhD Vol.2 p.490 footnote 105",
+    "original_images_read": false,
+    "geographic_license_confirmed": false
+  },
+  "sites": [
+    {
+      "stable_id": "roxburgh-english-artillery-fort-1547-1550",
+      "name": "Roxburgh Castle 1547 English artillery enclosure",
+      "priority": "P0-first",
+      "site_hes_id": "SM1718",
+      "site_nrhe_id": "58412",
+      "historic_plan": "William Ridgeway/Belvoir Castle c.1547; RCAHMS 1956 Fig.517; NRS RHP6075",
+      "archeological_geometric_evidence": "RCAHMS 2006-2009 field DGPS/hachure/GIS registered 1547 plan against earthworks",
+      "measured_dims_m_approx": [
+        110,
+        65
+      ],
+      "separate_medieval_castle_dims_m_approx": [
+        320,
+        140
+      ],
+      "point_osgb36": [
+        371301,
+        633712
+      ],
+      "point_epsg4326": [
+        -2.45696819436,
+        55.59618019271
+      ],
+      "geometry_type_now": "Point only; modern monument centroid",
+      "english_fort_period": {
+        "earliest_attested_works": "1547-10-15",
+        "withdrawal_year": 1550,
+        "exact_end_day_verified": false
+      },
+      "historical_actual_fort_boundary": "known measured archaeological feature in protected area; no publicly read coordinates",
+      "polygon_authorized": false,
+      "rights_verified": false,
+      "source_urls": [
+        "https://canmore.org.uk/site/58412/roxburgh-castle",
+        "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM1718",
+        "https://i.rcahms.gov.uk/canmore-pdf/WP00005062.pdf"
+      ],
+      "required_next": "Request RHP6075 Roxburgh raster and 2006-09 GPS/GIS artillery-fort perimeter or source drawing. Do not turn 110 x 65 into simple rectangle."
+    },
+    {
+      "stable_id": "eyemouth-fort-English-1547-1550",
+      "name": "Eyemouth English phase",
+      "priority": "P0",
+      "historic_plan": "Belvoir contemporary English plan reported in PhD footnote105; NRS RHP6075",
+      "archeology": "Caldwell/Ewart 1997 excavated 1547 English first-phase earthworks; 1557 French extension distinct",
+      "phase_start_year": 1547,
+      "phase_end": "summer 1550",
+      "historical_actual_fort_boundary": "first-phase English rampart mapped in excavations, exact polyline not read",
+      "polygon_authorized": false,
+      "source_urls": [
+        "https://doi.org/10.1179/pma.1997.002",
+        "https://www.archaeologyscotland.org.uk/wp-content/uploads/2022/05/1980.pdf",
+        "https://scapetrust.org/the-next-generation-of-eyemouth-explorers/"
+      ],
+      "warning": "BL Cotton MS Augustus I i 60 = 1557 French fort, NOT 1547 English fort. HES SM4577 = nearby Corn Fort NW of English artillery fort; not same precise mapped footprint."
+    },
+    {
+      "stable_id": "broughty-english-1547-1550",
+      "name": "Broughty Castle and English 1547-50 works",
+      "priority": "P0",
+      "historic_plan": "Belvoir contemporary military plan; NRS RHP6075",
+      "polygon_authorized": false,
+      "warning": "Historic 1547 enclosing walls/base court differ from later stone castle footprint; mapping needs original plan."
+    },
+    {
+      "stable_id": "lauder-english-1548-1550",
+      "name": "Lauder English 1548 fort/base court",
+      "priority": "P0",
+      "historic_plan": "Belvoir contemporary fort and base-court plan; NRS RHP6075",
+      "polygon_authorized": false,
+      "warning": "A base court containing stables is described in thesis but has no accessible georeferenced vertices."
+    },
+    {
+      "stable_id": "dunglass-camp-english-1548-1549",
+      "name": "Dunglass September 1548 English fort",
+      "priority": "P0",
+      "historic_plan": "Belvoir contemporary fort plan; NRS RHP6075",
+      "polygon_authorized": false,
+      "warning": "Modern Dunglass Castle ruins/house and 1548 English camp must be differentiated."
+    },
+    {
+      "stable_id": "fast-castle-english-1549-unverified",
+      "name": "Fast Castle or Fastcastle English fort",
+      "priority": "P1",
+      "historic_plan": "Belvoir plan in doctoral footnote and McNeill/MacQueen atlas narrative",
+      "polygon_authorized": false,
+      "period_requires_check": true
+    },
+    {
+      "stable_id": "haddington-english-1548-1549",
+      "name": "Haddington English fortified town",
+      "priority": "P0",
+      "historic_plan": "No identified contemporary original Haddington plan according to thesis p490 and 2021 missing plans call",
+      "polygon_authorized": false,
+      "source_urls": [
+        "https://www.tudorsociety.com/the-search-for-the-lost-haddington-plans/",
+        "https://doi.org/10.1163/157407709X12634580640416"
+      ],
+      "warning": "Modern reconstruction graphic never becomes survey-backed historical walls."
+    }
+  ],
+  "region_level_evidence": {
+    "name": "English military pale of mutual-supporting forts east/south-west Scotland",
+    "scholarly_atlas": "McNeill and MacQueen, Atlas of Scottish History to 1707 pp.127-128",
+    "year_end_phase_evidence": {
+      "1547": "English east and Dumfriesshire strongpoints",
+      "1548": "Fortified Haddington / Lauder / Dunglass network with Scottish and French resistance",
+      "1549": "English network retreat and Haddington withdrawal",
+      "1550": "Remaining positions evacuated or recovered; do not conflate March and December snapshots"
+    },
+    "nature": "point network, relative connections and strategic reach, NOT geodetically mapped continuous border",
+    "frontier_polyline_available": false,
+    "fill_entire_region_forbidden": true,
+    "source_url": "https://books.socantscot.org/digital-books/catalog/book/25",
+    "reuse_license": "CC BY-NC 4.0; check actual website deployment conditions"
+  },
+  "open_actions": [
+    {
+      "id": "46-A01",
+      "priority": "P0",
+      "archive": "NRS RHP6075",
+      "ask": "Scan/copies/licensing of 1547-49 Broughty Dunglass Eyemouth Lauder Roxburgh Fast Castle plans; specify file-by-file date and scale",
+      "status": "confirmed_reference_not_images"
+    },
+    {
+      "id": "46-A02",
+      "priority": "P0",
+      "archive": "HES Roxburgh 2006-09 RCAHMS field survey",
+      "ask": "Request original DGPS/GIS traced 1547 enclosure polygons and uncertainty metadata; separate fort from medieval castle site",
+      "status": "confirmed_survey_not_vector_obtained"
+    },
+    {
+      "id": "46-A03",
+      "priority": "P0",
+      "archive": "Caldwell Ewart Post-Medieval Archaeology 31(1) 1997",
+      "ask": "Obtain original first-phase 1547 English trench/rampart plan and compare 1557 French walls",
+      "status": "verified_article_abstract_not_map"
+    },
+    {
+      "id": "46-A04",
+      "priority": "P0",
+      "archive": "Society of Antiquaries Atlas to 1707 pp127-128",
+      "ask": "Digitize verifiable strongpoint occupancy events only if licensed, never infer full pale",
+      "status": "source_verified_geography_points"
+    },
+    {
+      "id": "46-A05",
+      "priority": "P1",
+      "archive": "Haddington research group/Siege studies",
+      "ask": "Source-attribute individual conjectural bastions; no survey-based town footprint claimed",
+      "status": "scholarly_reconstruction_only"
+    }
+  ]
+}

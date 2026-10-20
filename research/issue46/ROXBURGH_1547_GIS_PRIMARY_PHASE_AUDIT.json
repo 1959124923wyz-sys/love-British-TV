@@ -1,0 +1,158 @@
+{
+  "schema": "issue46_roxburgh_official_four_dataset_provenance_v1",
+  "research_date": "2026-10-14",
+  "focus": "Roxburgh Castle 1547 English artillery fort: actual source-verified physical extent (not medieval castle or statutory scheduling polygon)",
+  "source_hierarchy": [
+    {
+      "role": "primary_contemporary_plan",
+      "archive": "Belvoir Castle/Rutland papers; copy in National Records of Scotland RHP 6075",
+      "date": "1547",
+      "creator": "William Ridgeway attributed; sent by William Grey of Wilton to Edward Seymour 1547-10-15",
+      "documentary_attestation": "RCAHMS Inventory of Roxburghshire 1956/1957 Fig 517; Edinburgh Guns in Scotland PhD v2 p490 note105",
+      "online_text_url": "https://www.trove.scot/place/58412?page=2&tab=related-archives",
+      "original_image_in_project": false,
+      "original_image_publication_permission_verified": false
+    },
+    {
+      "role": "modern_field_archaeology",
+      "organization": "Royal Commission on the Ancient and Historical Monuments of Scotland (now HES)",
+      "survey_interval": "2006–2009",
+      "nrhe_id": "58412",
+      "official_urls": [
+        "https://canmore.org.uk/site/58412/roxburgh-castle",
+        "https://canmore.org.uk/site/58422/roxburgh"
+      ],
+      "methods": [
+        "differential GPS 3D terrain model",
+        "detailed hachure earthwork survey",
+        "overlay of 1547 fort plan into GIS",
+        "1416 medieval castle survey cross-reference"
+      ],
+      "source_status": "official descriptive report read, raw DGPS and vector fortline not available"
+    },
+    {
+      "role": "modern_statutory_scheduling",
+      "designation_id": "SM1718",
+      "official_url": "https://portal.historicenvironment.scot/designation/SM1718",
+      "geometry_in_repo": "research/issue46/HES_OFFICIAL_MODERN_SCHEDULED_REFERENCE.geojson",
+      "geometry_reference_only": true,
+      "geo_precision": "HES Within 10m applies to modern scheduling polygon not 1547 fort",
+      "historical_fill_allowed": false
+    }
+  ],
+  "four_survey_datasets_confirmed": [
+    {
+      "name": "aerial_transcription_1984_2006",
+      "content": "archaeological cropmarks from 1984 and 2006 aerial images",
+      "castle_and_burgh_coverage": "primarily eastern burgh",
+      "specific_1547_phase": "not demonstrated",
+      "vector_delivered": false
+    },
+    {
+      "name": "lidar",
+      "content": "LiDAR topography circa 4.5km east–west × 2.5km transverse including the site",
+      "castle_and_burgh_coverage": "larger site area",
+      "specific_1547_phase": "not on its own",
+      "vector_delivered": false
+    },
+    {
+      "name": "differential_gps_terrain",
+      "content": "DGPS ground terrain model",
+      "castle_and_burgh_coverage": "castle and burgh",
+      "specific_1547_phase": "contemporary plan GIS overlay allowed researchers to interpret phases",
+      "vector_delivered": false
+    },
+    {
+      "name": "earthwork_survey_hachure",
+      "content": "surviving castle and burgh earthworks survey",
+      "castle_and_burgh_coverage": "castle and burgh",
+      "specific_1547_phase": "RCAHMS interpretation of 1547 earth ramparts against earlier castle",
+      "vector_delivered": false
+    }
+  ],
+  "independently_attested_features": [
+    {
+      "attribute": "long dimension",
+      "approx_m": 110,
+      "source": "Canmore 1547 English fort summary",
+      "geometry_semantics": "maximum footprint dimension, not rectangular shape"
+    },
+    {
+      "attribute": "transverse dimension",
+      "approx_m": 65,
+      "source": "Canmore 1547 English fort summary",
+      "geometry_semantics": "maximum cross dimension, not rectangular shape"
+    },
+    {
+      "attribute": "rampart width northeast/southwest",
+      "approx_m": 20,
+      "source": "Canmore 1547 English fort summary",
+      "geometry_semantics": "earth rampart width locally, not uniform"
+    },
+    {
+      "attribute": "rampart width northwest",
+      "approx_m": 13.5,
+      "source": "Canmore 1547 English fort summary",
+      "geometry_semantics": "earth rampart width locally, not uniform"
+    },
+    {
+      "attribute": "external southwest ditch width",
+      "approx_m": 20,
+      "source": "Canmore 1547 English fort summary",
+      "geometry_semantics": "ditch, not necessarily inside occupied fortress core"
+    }
+  ],
+  "phase_controls": {
+    "earlier_medieval_castle_extends_m_approx": [
+      320,
+      140
+    ],
+    "tudor_fort_extends_m_approx": [
+      110,
+      65
+    ],
+    "site_ruined_when_earl_of_hertford_inspected_1545": true,
+    "tudor_construction_attested_1547_10_15": true,
+    "should_not_assert_existing_1545_tudor_fort_without_distinct_evidence": true,
+    "final_1550_status": "English fort terminated during 1550 treaty period; precise day and individual earthwork dismantling require original documentation",
+    "full_english_control_polygon_verified": false,
+    "full_scottish_frontline_geometry_verified": false
+  },
+  "unresolved_acquisitions": [
+    {
+      "item": "raw GIS fort overlay vector for 1547 physical enclosure",
+      "requested_from": "HES Archives/NRHE team (former RCAHMS)",
+      "expected_files": [
+        "CAD/dxf/shp/gpkg or original DGPS earthwork survey",
+        "1547_English_artillery_fort_phase polygon or line",
+        "spatial reference and survey control",
+        "GIS alignment project or historical plan georeference residual report"
+      ],
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "item": "RHP6075 1547 Roxburgh plan scanned image",
+      "requested_from": "National Records of Scotland",
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "item": "RCAHMS 1956 Inventory Fig 517 licensed raster",
+      "requested_from": "HES or historical publisher",
+      "status": "NOT_ACQUIRED"
+    }
+  ],
+  "can_publish_statutory_extent_dashed": true,
+  "can_publish_historic_occupied_area": false,
+  "official_raw_sources": [
+    "https://canmore.org.uk/site/58412/roxburgh-castle",
+    "https://canmore.org.uk/site/58422/roxburgh",
+    "https://www.trove.scot/place/58412?page=2&tab=related-archives",
+    "https://portal.historicenvironment.scot/designation/SM1718",
+    "https://www.nrscotland.gov.uk/records-and-archives/accessing-our-search-rooms/?section=maps-and-plans-search-room"
+  ],
+  "notes": [
+    "Canmore's account specifically states 1547 original plan was placed over measured 3D differential GPS/hachure topographical survey in GIS; phase interpretation exists, not necessarily as a ready-made published separate polygon file.",
+    "The 2007 Martin/Oram study of medieval burgh provides useful earlier chronology, but its period is medieval and should not be used as a Tudor artillery-footprint vector.",
+    "Ancient 1547 fort shape cannot be inferred solely from maxima 110m × 65m, historical drawing orientation or modern HES scheduling polygon."
+  ]
+}

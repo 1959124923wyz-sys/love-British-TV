@@ -1,0 +1,74 @@
+{
+  "schema": "issue46_hes_modern_archaeology_polygon_fetch_spec_v1",
+  "generated_on": "2026-10-13",
+  "source_type": "official_heritage_statutory_protection_geometry_not_historic_front_line",
+  "publisher": "Historic Environment Scotland",
+  "resource_endpoint": "https://inspire.hes.scot/arcgis/rest/services/HES/Scheduled_Monuments/MapServer/0",
+  "service_information": "https://inspire.hes.scot/arcgis/rest/services/HES/Scheduled_Monuments/MapServer/0",
+  "layer_capabilities": {
+    "supports_geojson": true,
+    "geometry_type": "esriGeometryPolygon",
+    "geographic_output_spatial_ref": 4326,
+    "original_crs": 27700
+  },
+  "query_parameters": {
+    "where": "DES_REF IN ('SM3190','SM3191','SM1718')",
+    "outFields": "DES_REF,DES_TITLE,PRECISION,ACCURACY,AREA,LINK",
+    "outSR": 4326,
+    "returnGeometry": true,
+    "f": "geojson"
+  },
+  "query_api_reference": "https://inspire.hes.scot/arcgis/rest/services/HES/Scheduled_Monuments/MapServer/0/query",
+  "license": "UK Open Government Licence v3.0 for Historic Environment Scotland spatial downloads (excludes Historic Landuse Assessment dataset)",
+  "terms_page": "https://portal.historicenvironment.scot/apex/f?p=PORTAL:termsandconditions",
+  "attribution": "Contains Historic Environment Scotland and OS data © Historic Environment Scotland and Crown Copyright and database right 2026, licensed under the Open Government Licence v3.0.",
+  "entity_crosswalk": [
+    {
+      "designation_id": "SM3190",
+      "name": "Eyemouth Fort / King's Mount",
+      "historical_english_phase": "1547–summer 1550",
+      "other_phase": "1557 French fort distinct",
+      "required_phase_clipping": "identify first English rampart vs later French expansion via Caldwell/Ewart archaeology and RHP6075",
+      "historical_polygon_verified": false
+    },
+    {
+      "designation_id": "SM3191",
+      "name": "Dunglass French Camp (English built 1548)",
+      "historical_english_phase": "1548–1549",
+      "required_phase_clipping": "remove later gazebo/paths/modern scheduled buffer, match 1548 original rampart only",
+      "historical_polygon_verified": false
+    },
+    {
+      "designation_id": "SM1718",
+      "name": "Roxburgh Castle (English fort subset)",
+      "historical_english_phase": "1547–1549 yearends, 1550 demolished",
+      "required_phase_clipping": "identify 1547 110m by 65m artillery enclosure, not 320m by 140m medieval castle or broader legal scheduled envelope",
+      "historical_polygon_verified": false
+    }
+  ],
+  "publication_contract": {
+    "candidate_geometry_role": "modern_legal_designation_extent",
+    "can_publish_as": "clearly identified dashed archaeology reference only after editor checks geometry/license",
+    "cannot_publish_as": "actual_historic_english_occupation_polygon_or_frontline",
+    "occupancy_claim_requires_original_1547_1550_fort_geometry": true,
+    "historical_control_fill_authorized": false,
+    "historical_area_sqkm": null,
+    "requires_fort_phase_spatial_validation": true,
+    "prohibit_infer_continuous_english_frontier": true,
+    "historic_polygons_count": 0
+  },
+  "archive_workflow": {
+    "required_fields": [
+      "GCPs",
+      "historical_plan_scale",
+      "survey_ref",
+      "date_validity",
+      "georeferencing_RMSE",
+      "archaeological_phases",
+      "republication_rights"
+    ],
+    "critical_original_map_archive": "NRS RHP6075",
+    "critical_archaeological_case": "Roxburgh RCAHMS 2006–2009 surveyed 1547 artillery fort"
+  },
+  "retrieval_status": "API metadata and query contract independently verified; no actual three HES GeoJSON geometries downloaded/committed in this session due data transport limitations"
+}

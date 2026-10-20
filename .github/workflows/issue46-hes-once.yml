@@ -1,0 +1,51 @@
+name: Issue 46 - one-time official HES archaeology GeoJSON extraction
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/issue46-rough-wooing-cartography-20261013
+    paths:
+      - .github/workflows/issue46-hes-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  download-hes-modern-boundaries:
+    name: Fetch modern HES reference boundaries (NOT Tudor occupation)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/issue46-rough-wooing-cartography-20261013
+          persist-credentials: true
+      - name: Unit-test geospatial provenance and coordinate controls
+        run: python3 research/issue46/fetch_hes_scheduled.py --self-test
+      - name: Download official HES scheduled polygon data into research reference file
+        run: python3 research/issue46/fetch_hes_scheduled.py
+      - name: Check output is modern reference only, not an occupation claim
+        run: |
+          python3 - <<'PY'
+          import json
+          p = 'research/issue46/HES_OFFICIAL_MODERN_SCHEDULED_REFERENCE.geojson'
+          data = json.load(open(p, encoding='utf-8'))
+          assert data['metadata']['verified_historical_control_polygon_count'] == 0
+          assert len(data['features']) == 3
+          assert set(f['properties']['designation_ref'] for f in data['features']) == {'SM3190','SM3191','SM1718'}
+          assert all(f['geometry']['type'] in ('Polygon','MultiPolygon') for f in data['features'])
+          assert all(not f['properties']['fill_authorized'] for f in data['features'])
+          assert all(f['properties']['area_sqkm'] is None for f in data['features'])
+          print('PASS official polygons present; historic-control polygon count remains zero')
+          PY
+      - name: Save verified modern HES reference geometry back to research branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/issue46/HES_OFFICIAL_MODERN_SCHEDULED_REFERENCE.geojson
+          if git diff --cached --quiet; then
+            echo "Reference geometry already up-to-date"
+          else
+            git commit -m "data(issue46): import official HES archaeological designation polygons as non-historic references"
+            git push origin HEAD:research/issue46-rough-wooing-cartography-20261013
+          fi
