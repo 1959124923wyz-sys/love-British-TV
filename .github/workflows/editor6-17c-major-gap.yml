@@ -1,0 +1,25 @@
+name: Editor6 major seventeenth-century source audit
+on:
+  pull_request:
+    paths:
+      - 'data/atlas-16*.json'
+      - 'docs/research/EDITOR6_17C_MAJOR_EVENT_GAP_AUDIT_20261020.json'
+      - 'scripts/test_editor6_17c_major_gap_r04.js'
+      - '.github/workflows/editor6-17c-major-gap.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/atlas-16*.json'
+      - 'docs/research/EDITOR6_17C_MAJOR_EVENT_GAP_AUDIT_20261020.json'
+      - 'scripts/test_editor6_17c_major_gap_r04.js'
+jobs:
+  major-event-evidence-and-id-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/test_editor6_17c_batch01.js
+      - run: node scripts/test_editor6_17c_georeference_r02.js
+      - run: node scripts/test_editor6_17c_major_gap_r04.js
