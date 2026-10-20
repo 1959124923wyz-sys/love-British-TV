@@ -205,7 +205,9 @@
       "icon_code": "ECO",
       "source_ids": [
         "1600S-S016",
-        "1600S-S017"
+        "1600S-S017",
+        "1600S-S018",
+        "1600S-S019"
       ],
       "source_access_reported": [
         "official_history",
@@ -214,9 +216,9 @@
       "source_group": "EDITOR6_MAJOR_GAPS_20261020",
       "significance": {
         "level": 3,
-        "review_status": "editor6_major_20261020_archival_scholarly_source_screened"
+        "review_status": "editor6_20261020_major_deduplicated_authoritative_published_summary_review"
       },
-      "editorial_status": "published_source_review_major_structural_event",
+      "editorial_status": "published_major_source_evidence_summary_review",
       "certainty": "year_and_institution_supported_by_accessible_credible_source",
       "actual_English_land_area_sqkm": null,
       "actual_English_territory_created": false,
@@ -1008,16 +1010,38 @@
       "original_source_id": "EDITOR6:VIRGINIA-1606-CHARTER",
       "verification_status": "editor6_major_20261020_academic_or_institutional_summary_checked_not_full_archival_volume_read",
       "precision_warning": "Access verified only to publicly available archival description, document transcription or academic extract/summary; do not imply full original manuscript or paywalled book read."
+    },
+    {
+      "id": "1600S-S018",
+      "title": "美国国家公园管理局：1606年弗吉尼亚公司特许",
+      "publisher": "www.nps.gov",
+      "url": "https://www.nps.gov/jame/learn/historyculture/the-virginia-company-of-london.htm",
+      "kind": "editor6_major_history_research",
+      "evidence_read_level": "official_history",
+      "original_source_id": "EDITOR6-MAJOR:VIRGINIA-1606-CHARTER",
+      "verification_status": "editor6_authoritative_web_page_or_academic_abstract_read_original_volume_not_claimed",
+      "precision_warning": "Only available webpage, university-press abstract, archival finding aid or edited charter reviewed. Underlying full restricted monographs and every original manuscript page not necessarily examined."
+    },
+    {
+      "id": "1600S-S019",
+      "title": "美国国会图书馆：1606年弗吉尼亚文书年表",
+      "publisher": "www.loc.gov",
+      "url": "https://www.loc.gov/collections/thomas-jefferson-papers/articles-and-essays/virginia-records-timeline-1553-to-1743/1600-to-1609/",
+      "kind": "editor6_major_history_research",
+      "evidence_read_level": "official_archival_timeline",
+      "original_source_id": "EDITOR6-MAJOR:VIRGINIA-1606-CHARTER",
+      "verification_status": "editor6_authoritative_web_page_or_academic_abstract_read_original_volume_not_claimed",
+      "precision_warning": "Only available webpage, university-press abstract, archival finding aid or edited charter reviewed. Underlying full restricted monographs and every original manuscript page not necessarily examined."
     }
   ],
   "routes": [],
   "colonial_polygons": [],
   "publication": {
     "approved_event_count": 18,
-    "scope": "editor6_major_historical_research_r04_plus_95_event_r03",
+    "scope": "editor6_major_20261020_plus_17c_earlier_batches",
     "decade_overview": "年代介绍待定",
     "not_deemed_complete": true,
     "geography_policy": "zero invented geocoding; no new polygon of historic control",
-    "caution": "本次只加入确有权威史料的重大结构性事件，原著全文、档案卷页与执行程度仍按source_access分别标注。图钉是地区代表点而非精确暴行坐标，不新增任何未经证实的占领疆界。"
+    "caution": "仅明确重大国家/公司殖民及掠夺制度事件；史实来自官方档案概述、已公开转录和学术著作摘要，部分原卷尚未审阅；所有点仅代表地区，绝不授权实控疆界。"
   }
 }
