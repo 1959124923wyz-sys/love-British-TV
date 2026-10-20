@@ -1,0 +1,35 @@
+name: Editor6 East India Company 1600–1698 story QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e6-t12-east-india-company.json'
+      - 'data/stories/serial/index.json'
+      - 'js/history-stories.js'
+      - 'app.js'
+      - 'scripts/browser_editor6_eic_story.py'
+      - '.github/workflows/editor6-eic-story-browser.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/e6-t12-east-india-company.json'
+      - 'data/stories/serial/index.json'
+      - 'js/history-stories.js'
+      - 'app.js'
+      - 'scripts/browser_editor6_eic_story.py'
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate serial source manifest
+        run: node scripts/test_serial_story_contract.js
+      - run: pip install selenium
+      - name: Run desktop cross-decade long-story browser
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor6_eic_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor6-east-india-company-1600-1698-browser
+          path: browser-smoke-results/editor6-eic-*.png
