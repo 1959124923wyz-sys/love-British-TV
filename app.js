@@ -93,6 +93,11 @@ const voyageRenderer=L.svg({pane:'voyagePane'});
 map.createPane('territoryPane');
 map.getPane('territoryPane').style.zIndex='455';
 const territoryRenderer=L.svg({pane:'territoryPane'});
+// 17C cited region readers sit below events and above the base map, separate
+// from exact control geometry; polygons are only schematic orientation aids.
+map.createPane('seventeenthStudiesPane');
+map.getPane('seventeenthStudiesPane').style.zIndex='452';
+const seventeenthStudiesRenderer=L.svg({pane:'seventeenthStudiesPane'});
 // The base map prefers Canvas; precise year-end garrison markers need an explicit SVG layer.
 const wartimeRenderer=L.svg({pane:'controlAreaPane'});
 // Narrow invisible annulus ABOVE event icons restores access to occupied-zone
@@ -123,7 +128,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map),nineYearsWar:L.layerGroup().addTo(map),atlanticContact:L.layerGroup().addTo(map),chapter11ActionLinks:L.layerGroup().addTo(map),earlyRegionalImpact:L.layerGroup().addTo(map)};
+const groups={seventeenthStudies:L.layerGroup().addTo(map),territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map),nineYearsWar:L.layerGroup().addTo(map),atlanticContact:L.layerGroup().addTo(map),chapter11ActionLinks:L.layerGroup().addTo(map),earlyRegionalImpact:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -214,7 +219,7 @@ function syncMapLayers(){
  if(!events){focusedEventId=null;focusRequestToken++;}
  if(atlas){renderEventList();refreshHistoricalLayers();}
 }
-let seventeenthSpatialEvidence=null;
+let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null;
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map(); let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -704,6 +709,70 @@ function footprintEnabledFor(placeId){
 }
 // Source-backed 17C *place-level* military/economic influence cues; a screen
 // halo is never a measured battlefield, trading zone, colony or historical boundary.
+// Research polygons and relationship segments only: NO sovereign boundary,
+// measured march, ocean track, province-wide eviction or territorial area.
+function renderSeventeenthRegionalStudies(){
+ groups.seventeenthStudies.clearLayers();
+ if(year<1600||!seventeenthRegionalStudies||!$('toggleTerritorialFootprints').checked)return;
+ const selected=seventeenthRegionalStudies.features.filter(f=>{
+  const p=f.properties||{};
+  if(year<p.start_year||year>p.end_year)return false;
+  if(p.display_kind==='economic_network')return $('togglePoliticalRelations').checked;
+  return $('toggleControlAreas').checked;
+ });
+ if(!selected.length)return;
+ const colors={
+  economic_network:'#78b6ad',land_dispossession:'#d1a35a',
+  military_impact:'#bc7786',local_governance:'#ac8ad0'
+ };
+ const overlay=L.geoJSON({type:'FeatureCollection',features:selected},{
+  pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
+  style:f=>{
+   const p=f.properties||{},isPolygon=f.geometry?.type==='Polygon';
+   const c=colors[p.display_kind]||'#ac8ad0';
+   return {pane:'seventeenthStudiesPane',color:c,weight:isPolygon?2.8:2.5,
+    opacity:.88,dashArray:isPolygon?'7 6':'6 7',lineCap:'round',
+    fill:isPolygon,fillColor:c,fillOpacity:isPolygon?.085:0,
+    className:isPolygon?'atlas-17c-regional-area atlas-17c-'+p.display_kind.replaceAll('_','-'):
+     'atlas-17c-regional-link atlas-17c-'+p.display_kind.replaceAll('_','-'),
+    bubblingMouseEvents:false};
+  },
+  onEachFeature:(f,layer)=>{
+   const p=f.properties||{},isPolygon=f.geometry?.type==='Polygon';
+   const prefix=isPolygon?'具名地点构成的概略地区（非历史边界）':'有据关系线（非实测航迹/道路）';
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+    escapeHTML(prefix+' · '+(p.label_type||'历史研究层'))+'</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',ev=>{
+    if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
+    openTerritoryDossier(f,'seventeenth-reference');
+   });
+  }
+ });
+ overlay.addTo(groups.seventeenthStudies);
+ // At world zoom, historically local research areas may be smaller than a
+ // pixel: an optional fixed *SCREEN*-pixel cue preserves visibility, NOT an
+ // actual ground distance, occupied area, survey polygon or battle radius.
+ if(map.getZoom()<5){
+  for(const feature of selected){
+   if(feature.geometry.type!=='Polygon')continue;
+   const ring=feature.geometry.coordinates[0],box={
+    minX:Math.min(...ring.map(p=>p[0])),maxX:Math.max(...ring.map(p=>p[0])),
+    minY:Math.min(...ring.map(p=>p[1])),maxY:Math.max(...ring.map(p=>p[1]))};
+   const pos=[(box.minY+box.maxY)/2,(box.minX+box.maxX)/2];
+   const p=feature.properties,display=p.display_kind,color=colors[display]||'#ac8ad0';
+   const cue=L.circleMarker(pos,{renderer:seventeenthStudiesRenderer,pane:'seventeenthStudiesPane',
+    radius:display==='land_dispossession'?20:16,color,weight:2.2,
+    dashArray:'4 6',opacity:.85,fill:true,fillColor:color,fillOpacity:.04,
+    bubblingMouseEvents:false,className:'atlas-17c-regional-zoom-hint'});
+   cue.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">概略范围缩略提示 · 非历史边界，放大地图阅读原区域虚线</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   cue.on('click',event=>{if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
+    openTerritoryDossier(feature,'seventeenth-reference');});
+   cue.addTo(groups.seventeenthStudies);
+  }
+ }
+}
 function renderSeventeenthSpatialEvidence(){
  groups.territory.clearLayers();
  if(year<1600||!seventeenthSpatialEvidence||!$('toggleTerritorialFootprints').checked)return;
@@ -1779,7 +1848,7 @@ function setYear(v){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
   if(map.hasLayer(groups.kingdom))map.removeLayer(groups.kingdom);
   $('historicalRegionGuide').hidden=true;
-  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();
+  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
   $('nextYear').disabled=year>=1699;
@@ -2037,6 +2106,41 @@ async function boot(){
           !e.source_urls.every(u=>/^https:\/\//.test(u)))));
       }))throw new Error('17c location reference failed no-invented-boundary gate');
    seventeenthSpatialEvidence=spatialData;
+   // A separate soft-fail boundary for optional reference envelopes: failure
+   // must never erase the source-backed 1600–1699 event corpus or 44 point cues.
+   try{
+    const response=await fetch('data/seventeenth-century-regional-studies-1600-1699.geojson',{cache:'no-store'});
+    if(!response.ok)throw new Error('17c regional studies file unavailable');
+    const studyData=await response.json();
+    const yearsValid=(p)=>Number.isInteger(p.start_year)&&Number.isInteger(p.end_year)&&
+     p.start_year>=1600&&p.end_year<=1699&&p.start_year<=p.end_year;
+    const coordsValid=(f)=>{
+     const rings=f.geometry?.type==='Polygon'?f.geometry.coordinates:
+      f.geometry?.type==='LineString'?[f.geometry.coordinates]:[];
+     if(!rings.length)return false;
+     return rings.every(r=>Array.isArray(r)&&r.length>=
+       (f.geometry.type==='Polygon'?4:2)&&r.every(c=>Array.isArray(c)&&c.length===2&&
+        Number.isFinite(c[0])&&Number.isFinite(c[1])&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90)&&
+       (f.geometry.type!=='Polygon'||JSON.stringify(r[0])===JSON.stringify(r[r.length-1])));
+    };
+    if(studyData.type!=='FeatureCollection'||studyData.metadata?.schema!=='atlas-17c-regional-studies-v1'||
+       !Array.isArray(studyData.features)||!studyData.features.length||
+       studyData.features.some(f=>{
+        const p=f.properties||{};
+        return !['Polygon','LineString'].includes(f.geometry?.type)||!coordsValid(f)||!yearsValid(p)||
+         !['economic_network','land_dispossession','military_impact','local_governance'].includes(p.display_kind)||
+         p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+         p.territorial_claim!==false||p.area_sqkm!==null||
+         p.exclude_from_area_aggregation!==true||
+         !p.geometry_precision?.includes('not_')||!p.mapping_method||
+         !p.source_urls?.length||!p.source_urls.every(u=>/^https:\/\//.test(u))||
+         !p.related_event_ids?.length||!p.related_event_ids.every(id=>/^1[6][0-9][0-9]S-E\d{3}$/.test(id));
+       }))throw new Error('17c regional study failed geometry/provenance guard');
+    seventeenthRegionalStudies=studyData;
+   }catch(studyError){
+    seventeenthRegionalStudies=null;
+    console.warn('17c optional study envelopes withheld; historic event and site layers remain usable',studyError);
+   }
    serialPreviewAtlas={schema:'atlas-17c-source-linked-batch01',from_year:1600,to_year:1699};
   }catch(error){
    console.warn('17c batch unavailable; Glencoe-only preview retained',error);
@@ -2364,9 +2468,10 @@ $('resetDossier').addEventListener('click',resetDossier);
 function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
-  renderPoints();renderSeventeenthSpatialEvidence();
+  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();
   return;
  }
+ renderSeventeenthRegionalStudies();
  renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
@@ -2374,7 +2479,7 @@ $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistorica
 $('togglePoliticalRelations').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleTerritorialFootprints').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('showFullChapterArchive').addEventListener('change',()=>{if(atlas)renderEventList()});
-map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();renderSeventeenthSpatialEvidence();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
+map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
