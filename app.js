@@ -750,6 +750,28 @@ function renderSeventeenthRegionalStudies(){
   }
  });
  overlay.addTo(groups.seventeenthStudies);
+ // At world zoom, historically local research areas may be smaller than a
+ // pixel: an optional fixed *SCREEN*-pixel cue preserves visibility, NOT an
+ // actual ground distance, occupied area, survey polygon or battle radius.
+ if(map.getZoom()<5){
+  for(const feature of selected){
+   if(feature.geometry.type!=='Polygon')continue;
+   const ring=feature.geometry.coordinates[0],box={
+    minX:Math.min(...ring.map(p=>p[0])),maxX:Math.max(...ring.map(p=>p[0])),
+    minY:Math.min(...ring.map(p=>p[1])),maxY:Math.max(...ring.map(p=>p[1]))};
+   const pos=[(box.minY+box.maxY)/2,(box.minX+box.maxX)/2];
+   const p=feature.properties,display=p.display_kind,color=colors[display]||'#ac8ad0';
+   const cue=L.circleMarker(pos,{renderer:seventeenthStudiesRenderer,pane:'seventeenthStudiesPane',
+    radius:display==='land_dispossession'?20:16,color,weight:2.2,
+    dashArray:'4 6',opacity:.85,fill:true,fillColor:color,fillOpacity:.04,
+    bubblingMouseEvents:false,className:'atlas-17c-regional-zoom-hint'});
+   cue.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">概略范围缩略提示 · 非历史边界，放大地图阅读原区域虚线</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   cue.on('click',event=>{if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
+    openTerritoryDossier(feature,'seventeenth-reference');});
+   cue.addTo(groups.seventeenthStudies);
+  }
+ }
 }
 function renderSeventeenthSpatialEvidence(){
  groups.territory.clearLayers();
