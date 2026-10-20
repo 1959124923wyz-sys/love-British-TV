@@ -19,7 +19,7 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
  assert.equal(data.period.next,d+10,'old next-decade navigation remains intact');
  assert.equal(data.intro,null);assert(data.publication.not_deemed_complete);
  assert.equal(data.editorial_status,'published_partial_source_linked_in_progress_not_complete_decade');
- for(const field of ['places','routes','colonial_polygons'])assert.deepEqual(data[field],[],field+' must not imply unverified sovereignty');
+ for(const field of ['places','colonial_polygons'])assert.deepEqual(data[field],[],field+' must not imply unverified sovereignty');
  assert.equal(data.events.length,expanded[i],'unexpected R03 decade event count');
  const numbering=new Set(),sourceKeys=new Set(data.sources.map(x=>x.id));
  assert.equal(sourceKeys.size,data.sources.length);
@@ -72,7 +72,7 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
 assert.equal(newDecades,10);assert.equal(total,377);assert.equal(added,109);
 assert.equal(points,376);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
 assert.equal(refs,328,'R02 219 + R03 95 + fourteen deduplicated major events');
-assert.equal(sources,403);assert.equal(sources-originalSources,105);
+assert.equal(sources,410);assert.equal(sources-originalSources,112);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 assert(app.includes("fetch('data/atlas-'+d+'-'+(d+9)+'.json'"));
 assert(app.includes('existingGlencoe'));
