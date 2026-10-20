@@ -66,4 +66,6 @@ for(const x of ['function renderSeventeenthRegionalStudies(){','groups.seventeen
  assert(app.includes(x),'missing conservative 17C frontend branch: '+x);
 }
 assert(app.includes("groups.seventeenthStudies.clearLayers();"),'switching back to 16C must erase later ranges');
+assert(app.includes("if(map.getZoom()<5)"),'world zoom must preserve small sourced research area visibility without inventing metric boundaries');
+assert(app.includes("atlas-17c-regional-zoom-hint"),'desktop global view must use dashed, fixed-screen regional reference cues');
 console.log('PASS: 13 non-sovereign dashed locality envelopes, 6 zero-waypoint relation lines, year scopes & 44 earlier evidence points preserved');

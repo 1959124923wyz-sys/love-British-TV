@@ -20,6 +20,8 @@ def count(cls):
     return js("return document.querySelectorAll('#map path.'+arguments[0]).length",cls)
 def assert_shapes(n_area,n_link):
     wait.until(lambda d:count('atlas-17c-regional-area')==n_area and count('atlas-17c-regional-link')==n_link)
+    if js("return window.atlasReadViewport().zoom<5"):
+        assert count('atlas-17c-regional-zoom-hint')==n_area,"low-zoom province/battle study must remain visible as fixed screen circle"
     assert js("return [...document.querySelectorAll('#map path.atlas-17c-regional-area')].every(el=>el.getAttribute('stroke-dasharray')!==null||el.style.strokeDasharray!=='')"),'area should be dashed'
 try:
     year(1609)
