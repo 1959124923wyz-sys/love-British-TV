@@ -1,0 +1,33 @@
+name: Editor6 Ireland Land 1642-1698 story desktop QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e6-t03-ireland-land-1642-1698.json'
+      - 'data/stories/serial/index.json'
+      - 'scripts/browser_editor6_ireland_land_story.py'
+      - '.github/workflows/editor6-ireland-land-browser.yml'
+      - 'app.js'
+      - 'js/history-stories.js'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/e6-t03-ireland-land-1642-1698.json'
+      - 'data/stories/serial/index.json'
+      - 'scripts/browser_editor6_ireland_land_story.py'
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/test_serial_story_contract.js
+      - run: node scripts/test_editor6_ireland_land_story.js
+      - run: pip install selenium
+      - name: Test published 1652/1665/1691 navigation on desktop
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor6_ireland_land_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor6-ireland-land-desktop-story
+          path: browser-smoke-results/editor6-ireland-land-*.png
