@@ -1032,9 +1032,67 @@
       "original_source_id": "EDITOR6-MAJOR:VIRGINIA-1606-CHARTER",
       "verification_status": "editor6_authoritative_web_page_or_academic_abstract_read_original_volume_not_claimed",
       "precision_warning": "Only available webpage, university-press abstract, archival finding aid or edited charter reviewed. Underlying full restricted monographs and every original manuscript page not necessarily examined."
+    },
+    {
+      "id": "E6-R1-S01",
+      "title": "Royal Museums Greenwich: James Lancaster first East India Company voyage",
+      "publisher": "Royal Museums Greenwich",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-14301",
+      "kind": "scholarly_or_institutional_route_context",
+      "original_source_id": "E6-R1-S01",
+      "evidence_read_level": "institutional_or_scholarly_public_text",
+      "verification_status": "editor6_route_source_screened_20261020",
+      "precision_warning": "两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。"
+    },
+    {
+      "id": "E6-R1-S02",
+      "title": "Dictionary of National Biography: Sir James Lancaster voyage sequence",
+      "publisher": "Dictionary of National Biography",
+      "url": "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Lancaster,_James",
+      "kind": "scholarly_or_institutional_route_context",
+      "original_source_id": "E6-R1-S02",
+      "evidence_read_level": "institutional_or_scholarly_public_text",
+      "verification_status": "editor6_route_source_screened_20261020",
+      "precision_warning": "两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。"
     }
   ],
-  "routes": [],
+  "routes": [
+    {
+      "id": "E6-R1602-LANCASTER-ACEH-BANTAM",
+      "year": 1602,
+      "start_year": 1602,
+      "end_year": 1602,
+      "valid_years": [
+        1602
+      ],
+      "name": "兰开斯特首航：亚齐→万丹",
+      "route_kind": "schematic-commercial-voyage-connection",
+      "category": "voyage",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          5.55,
+          95.32
+        ],
+        [
+          -6.03,
+          106.16
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S01",
+        "E6-R1-S02"
+      ],
+      "related_event_ids": [
+        "1600S-E014"
+      ],
+      "note": "1602年船队先后访问亚齐与万丹；当地贸易准入不构成英格兰领土。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    }
+  ],
   "colonial_polygons": [],
   "publication": {
     "approved_event_count": 18,

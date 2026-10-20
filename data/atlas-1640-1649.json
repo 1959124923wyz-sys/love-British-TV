@@ -1721,9 +1721,103 @@
       "original_source_id": "EDITOR6-MAJOR:IRELAND-ADVENTURERS-ACT",
       "verification_status": "editor6_authoritative_web_page_or_academic_abstract_read_original_volume_not_claimed",
       "precision_warning": "Only available webpage, university-press abstract, archival finding aid or edited charter reviewed. Underlying full restricted monographs and every original manuscript page not necessarily examined."
+    },
+    {
+      "id": "E6-R1-S03",
+      "title": "National Army Museum: British Civil Wars 1649 timeline",
+      "publisher": "National Army Museum",
+      "url": "https://www.nam.ac.uk/explore/british-civil-wars",
+      "kind": "scholarly_or_institutional_route_context",
+      "original_source_id": "E6-R1-S03",
+      "evidence_read_level": "institutional_or_scholarly_public_text",
+      "verification_status": "editor6_route_source_screened_20261020",
+      "precision_warning": "两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。"
+    },
+    {
+      "id": "E6-R1-S04",
+      "title": "Royal Irish Academy: Cromwell biography",
+      "publisher": "Royal Irish Academy",
+      "url": "https://www.dib.ie/biography/cromwell-oliver-a2209",
+      "kind": "scholarly_or_institutional_route_context",
+      "original_source_id": "E6-R1-S04",
+      "evidence_read_level": "institutional_or_scholarly_public_text",
+      "verification_status": "editor6_route_source_screened_20261020",
+      "precision_warning": "两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。"
     }
   ],
-  "routes": [],
+  "routes": [
+    {
+      "id": "E6-R1649-DUBLIN-DROGHEDA",
+      "year": 1649,
+      "start_year": 1649,
+      "end_year": 1649,
+      "valid_years": [
+        1649
+      ],
+      "name": "共和国军：都柏林→德罗赫达",
+      "route_kind": "schematic-military-campaign-connection",
+      "category": "war",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          53.345,
+          -6.267
+        ],
+        [
+          53.714,
+          -6.351
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S03",
+        "E6-R1-S04"
+      ],
+      "related_event_ids": [
+        "1640S-E016"
+      ],
+      "note": "军队从都柏林出击，9月攻陷德罗赫达。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    {
+      "id": "E6-R1649-DROGHEDA-WEXFORD",
+      "year": 1649,
+      "start_year": 1649,
+      "end_year": 1649,
+      "valid_years": [
+        1649
+      ],
+      "name": "共和国军：德罗赫达→韦克斯福德",
+      "route_kind": "schematic-military-campaign-connection",
+      "category": "war",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          53.714,
+          -6.351
+        ],
+        [
+          52.335,
+          -6.462
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S03",
+        "E6-R1-S04"
+      ],
+      "related_event_ids": [
+        "1640S-E016",
+        "1640S-E017"
+      ],
+      "note": "两次攻城的先后关系有证；不代表两城之间所有地区均遭攻占。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    }
+  ],
   "colonial_polygons": [],
   "publication": {
     "approved_event_count": 29,

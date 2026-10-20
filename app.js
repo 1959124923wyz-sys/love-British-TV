@@ -1945,7 +1945,7 @@ async function boot(){
     if(!response.ok)throw new Error('17c decade source file unavailable '+d);
     const ds=await response.json();
     if(ds.period?.from!==d||ds.period?.to!==d+9||!Array.isArray(ds.events)||!Array.isArray(ds.sources)||
-       ds.colonial_polygons?.length||ds.routes?.length||ds.places?.length||
+       ds.colonial_polygons?.length||ds.places?.length||
        ds.events.some(e=>!Number.isInteger(e.year)||e.year<d||e.year>d+9||
          e.historical_control_boundary_verified!==false||e.actual_English_land_area_sqkm!==null))
      throw new Error('17c decade source or spatial error '+d);

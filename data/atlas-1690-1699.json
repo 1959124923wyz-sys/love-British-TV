@@ -3683,9 +3683,90 @@
       "original_source_id": "EDITOR6-MAJOR:IRISH-1697-CATHOLIC-CLERGY-BANISHMENT",
       "verification_status": "editor6_authoritative_web_page_or_academic_abstract_read_original_volume_not_claimed",
       "precision_warning": "Only available webpage, university-press abstract, archival finding aid or edited charter reviewed. Underlying full restricted monographs and every original manuscript page not necessarily examined."
+    },
+    {
+      "id": "E6-R1-S07",
+      "title": "Thomas Phillips: Hannibal of London voyage, 1693–1694 (printed 1732), bibliographic title",
+      "publisher": "Thomas Phillips",
+      "url": "https://books.google.bj/books?id=qFJBAAAAcAAJ",
+      "kind": "scholarly_or_institutional_route_context",
+      "original_source_id": "E6-R1-S07",
+      "evidence_read_level": "printed_journal_title_only",
+      "verification_status": "editor6_route_source_screened_20261020",
+      "precision_warning": "两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。"
     }
   ],
-  "routes": [],
+  "routes": [
+    {
+      "id": "E6-R1694-HANNIBAL-WHYDAH-STTHOMAS",
+      "year": 1694,
+      "start_year": 1694,
+      "end_year": 1694,
+      "valid_years": [
+        1694
+      ],
+      "name": "Hannibal号强制人口运输：维达→圣多美岛",
+      "route_kind": "schematic-forced-person-transport",
+      "category": "voyage",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          6.362,
+          2.085
+        ],
+        [
+          0.337,
+          6.731
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S07"
+      ],
+      "related_event_ids": [
+        "1690S-E024",
+        "1690S-E025"
+      ],
+      "note": "1732年刊航海记标题证实维达与圣多美次序，尚未完整核阅航海日志。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    {
+      "id": "E6-R1694-HANNIBAL-STTHOMAS-BARBADOS",
+      "year": 1694,
+      "start_year": 1694,
+      "end_year": 1694,
+      "valid_years": [
+        1694
+      ],
+      "name": "Hannibal号强制人口运输：圣多美岛→巴巴多斯",
+      "route_kind": "schematic-forced-person-transport",
+      "category": "voyage",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          0.337,
+          6.731
+        ],
+        [
+          13.103,
+          -59.614
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S07"
+      ],
+      "related_event_ids": [
+        "1690S-E025"
+      ],
+      "note": "同一航海记标题证实两端点，不据标题推算死亡或运输人数。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    }
+  ],
   "colonial_polygons": [],
   "publication": {
     "approved_event_count": 62,
