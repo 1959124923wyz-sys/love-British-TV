@@ -1,0 +1,65 @@
+# 编辑6｜1600—1699重大暴力、奴役、土地剥夺与原始积累专题总审计
+**完成日期：2026-10-20；编号原则：只收重大结构性事件，绝不为了密度收录无关联的个人小型抓捕、三五人的例行死刑或重复行军。**
+
+## 结论：尚未穷尽，但重大制度主干已具备
+此前仅有一批较零散的战争、原住民与宗教案件，同时遗漏了让国家军事、金融、殖民公司、土地没收、奴隶劳动系统互相咬合的部分关键节点。编辑6本轮复读大学出版社史学著作、政府档案目录、正式原文转写以及奴隶贸易量化数据库，对已有364条候审案目分类查重，只新增**15条有明确年份、责任主体和学术依据的大事件**。连同原独立格伦科，共计**379条17世纪案目**（十年数据库378条，格伦科1条），但**不代表全部完成原件逐页校勘**。
+
+完整条目书目及代理落点决议：`docs/research/EDITOR6_17C_MAJOR_EVENT_GAP_AUDIT_20261020.json`；既有95条扩充的逐条索引：`docs/research/EDITOR6_17C_R03_95_EVENT_INDEX.csv`。
+
+## 优先核阅的权威著作（不是将目录等同于全文）
+1. Nicholas Canny (ed.), *The Oxford History of the British Empire*, Vol. I: *The Origins of Empire: British Overseas Enterprise to the Close of the Seventeenth Century* (Oxford University Press, 1998), https://academic.oup.com/book/37233 ；阅读了出版社公开的编者摘要与相关章节摘要，尤其 Nuala Zahedieh（全球贸易），Hilary McD. Beckles（加勒比奴役经济）和 K. N. Chaudhuri（亚洲贸易）部分可访问介绍。**付费全文未读，不能伪称逐章查完**。
+2. John Cunningham, *Conquest and Land in Ireland: The Transplantation to Connacht, 1649–1680* (Boydell & Brewer, 2011), https://www.cambridge.org/core/books/conquest-and-land-in-ireland/01C7BD8006C0E094DBF4CFE128EA3A71 ；明确区分1652立法、1653重分配制度和1655以后迁居执行，不采纳“全部爱尔兰人已经被驱赶”的概括。
+3. Patrick J. Corish, “The Cromwellian Regime, 1650–60,” *A New History of Ireland* (Oxford University Press), https://academic.oup.com/book/40084/chapter-abstract/341042180 ；处理宗教、土地和征服的政治关系。
+4. William A. Pettigrew, *Freedom’s Debt: The Royal African Company and the Politics of the Atlantic Slave Trade, 1672–1752* (University of North Carolina Press, 2013)；同行评议书评 https://doi.org/10.1093/ahr/119.5.1766a ，区别1660王室冒险家商团、1672重组RAC和1698有条件开放；**1698并非废除奴隶贸易**。
+5. Alan Gallay, *The Indian Slave Trade: The Rise of the English Empire in the American South, 1670–1717* (Yale University Press, 2002), https://www.jstor.org/stable/j.ctt1npmvw ，第2章“Carolina, the Westo, and the Trade in Indian Slaves, 1670–1685”；区分英商的贸易与武器支持、原住民联盟决策和英军正规军事责任。
+6. Charles Ivar McGrath, “The Penal Laws: Origins, Purpose, Enforcement and Impact,” in *Law and Religion in Ireland, 1700–1970* (2021), https://link.springer.com/chapter/10.1007/978-3-030-74373-4_2 ；与J. G. Simms《1697年主教驱逐法》https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/bishops-banishment-act-of-1697-9-will-iii-c-1/D91194BF6F991DD9003ECA9D9F0BDFC8 ，区分法令、法定处罚与实际执行。
+7. SlaveVoyages Research Collaboration, `National Carriers Estimates`, https://legacy.slavevoyages.org/assessment/estimates 。其“Great Britain”船旗/承运分类在1626—1650、1651—1675、1676—1700三个25年格内分别为33,695、122,367、272,200人，累计**约428,262人被运离非洲（估计）**，不能误称为皇家非洲公司单独运送量、全部成功抵达数或死亡数。该数据库使用后设国家分类，论文写1600年代政治实体时仍要区分独立英格兰与苏格兰。
+
+## 本次十五项新增大事与正式编号
+| 事件发生年 | 固定新ID | 研究重点 |
+|---|---|---|
+|1606|`1600S-E018`|弗吉尼亚公司王室特许与资本—殖民权结合|
+|1629|`1620S-E027`|马萨诸塞湾公司获得殖民治理特许|
+|1630|`1630S-E021`|清教徒大迁移与公司殖民政府形成|
+|1642|`1640S-E029`|《爱尔兰冒险家法》把战争认购债权与未来没收土地连接|
+|1653|`1650S-E037`|康诺特迁居与战后地产分配制度安排|
+|1654|`1650S-E038`|克伦威尔西方计划：国家策划远征西属加勒比|
+
+|1660|`1660S-E047`|王室非洲冒险家商团特许与海上奴隶贸易融资|
+|1663|`1660S-E048`|王室非洲冒险家新特许明确将奴隶买卖列入独占业务|
+|1670|`1670S-E065`|哈德孙湾公司特许与鲁珀特地纸面声索|
+|1670|`1670S-E066`|英西《马德里条约》及加勒比殖民竞争的外交结果|
+|1671|`1670S-E067`|亨利·摩根私掠集团洗劫巴拿马城|
+|1680|`1680S-E036`|卡罗来纳英商支持对Westo战争与原住民俘虏贸易重组|
+|1695|`1690S-E060`|爱尔兰1695年首批教育/解除武装惩罚法|
+|1696|`1690S-E061`|贸易与种植园委员会制度化管理殖民法律与航运|
+|1697|`1690S-E062`|爱尔兰针对天主教教会组织的放逐法|
+
+额外加强两条已存在的重要历史进程（**不新增重复案目**）：`1670S-E007`（1672年皇家非洲公司）补SlaveVoyages与Pettigrew研究，`1690S-E057`（1698非洲贸易竞争开放）说明“限制垄断≠废除奴隶贸易”。
+
+## 对1654与1663两项新增重要史料的核验
+- Carla Gardina Pestana, *The English Conquest of Jamaica: Oliver Cromwell's Bid for Empire* (Harvard University Press/Belknap, 2017), https://www.jstor.org/stable/j.ctt1n7qkwf ：出版综述明确1654年克伦威尔计划扩展对西属美洲的征服、1655年实际先战伊斯帕尼奥拉再转攻牙买加；不能把计划军事范围直接画成实际英方占领地。
+- Abigail L. Swingen, *Competing Visions of Empire* (Yale University Press, 2015), 第二章“Commonwealth and Protectorate Imperialism: The Western Design and Its Consequences, 1654–1660”, https://academic.oup.com/yale-scholarship-online/book/14232/chapter-abstract/168102858 ：学术章摘要显示计划与加勒比强制贸易管理和殖民商人利益的关联。
+- 英国国家档案 CO1/17 文书1663年新特许转录，https://slaverylawpower.org/chapters/restoration-settlements/royal-african-company-documents-1660s/ ，查证1660年原特许、1663年把贩卖被奴役非洲人列为专营交易、1672年新公司重组的连续关系。
+- 2026年 *Historical Journal*《Samuel Pepys, the African Companies, and the Archives of Slavery, 1660–1689》，https://www.cambridge.org/core/journals/historical-journal/article/samuel-pepys-the-african-companies-and-the-archives-of-slavery-16601689/C3FD8D082C3E1048A21D23E46D19F78E ，援用航运记录称前期王室冒险家商团1662—1672年105艘航次装运至少27,489人；这是该机构范围的下限，不是后来皇家非洲公司或所有英国船旗总量。不得与SlaveVoyages较广运量混淆。
+
+## 主要宏观领域审查结果
+- **爱尔兰军事征服、没收土地与战后重分配**：1641战争、1649德罗赫达和韦克斯福德、1652法令、1656 Down Survey、1662/1665复辟处置已列；1642融资和1653迁居现补齐。下一步仍需实际地产交割、军人获地与1660之后保留地权的精确定量，不能用单项《冒险家法》代替已交地清册。
+- **强迫跨洋劳动和西非奴隶贸易**：巴巴多斯奴役法、弗吉尼亚身份世袭法、皇家非洲公司、奴隶航次若干例与1698变更均已存在；本轮补1660前身商团，并加大型海运数量背景。下一步重建“西非装运区—加勒比/北美市场—伦敦投资与海关”的长期网络，必须分清航次、人数、出发/到达、船旗与所有者。
+- **北美土地侵占与原住民战争**：弗吉尼亚战争、皮阔特战争、1675—1676新英格兰战争已列，本次补殖民公司特许及卡罗来纳原住民俘虏贸易结构。南卡罗来纳与西班牙势力、原住民同盟持续重组至18世纪，应留延续接口，不在1699年结案。
+- **加勒比糖业奴隶制度和私掠**：巴巴多斯1640年代糖业转型、1661奴役法、1655英夺牙买加已入库；本次补1670英西外交安排和1671巴拿马城大规模私掠。奴隶制、欧洲糖业利润与消费市场关联是长期研究，不可把每个港口出入船都拆成“重大历史事件”。
+- **海权、公司垄断和军费国家**：1600东印度公司、1651/1660/1663航海法律、英荷战争、1694英格兰银行、1698竞争东印度公司均已覆盖；本轮补哈德孙湾公司纸面授权和1696贸易委员会。公司特许不是军事疆域，普通贸易资本也不能一概直接归类为奴隶贸易利润。
+
+## 资本主义“原始积累”的表述纪律
+本项目可以客观说明土地没收、被奴役劳动、贸易特许、财政金融工具与帝国扩张之间的多层关系，但“17世纪英格兰致富**全部**来自掠夺/奴隶制”不是可以直接由上述案例验证的量化结论。需要另作英国本土产业、欧洲航运、沿海煤运、农业、政府债务、海外糖烟贸易及其收益占比的比较。制度性扩张本身包含诸多国内政治动力，也不能事后把查理一世/共和时期的所有行为写成1707年才诞生的统一“大不列颠国家”行动。
+
+## 尚未实现的真正意义上的穷尽
+1. 英属商站、军事堡垒、海岸交易点与西非地方统治权的逐点差别。
+2. 1641—1688年爱尔兰土地转移量和1649—1659实际人口迁居的微观数据（不得用《法》推测）。
+3. 原住民人身交易、攻击社群及殖民扩张的主要地区网络，特别是1680—1717南卡罗来纳长期进程。
+4. 17世纪加勒比大型种植园的土地、死亡率、商品量与跨洋资本流向。
+5. 17世纪末亚洲贸易有公司强制行为与莫卧儿统治者回应的主张核对：已经存在1686—1690英莫战争案例，不另造同一战争重复案目。
+6. “大事”地图的阅读权重：已有旧记录含个体审判；后续应按用户要求优先重大学术主张，不增一般无名人员羁押记录。旧稳定事件ID不能无记录删除重用。
+
+## 上线准则
+每条新记录保存可点击学术或官方来源、研究来源访问等级、原事件记录唯一ID、跨世纪ARC和不精确定位说明。全世纪事件图层尚无经审核的殖民疆域多边形；保持 `colonial_polygons=[]`、无面积声称。网站同世纪—十年—逐年滑条，年代介绍留待主编后续。
