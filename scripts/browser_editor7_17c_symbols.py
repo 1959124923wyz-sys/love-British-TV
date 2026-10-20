@@ -21,7 +21,7 @@ def load_year(y):
 def count(kind):
     return js("return document.querySelectorAll('#map path.atlas-17c-'+arguments[0]).length",kind)
 def evidence(kind):
-    return js("return document.querySelectorAll('#map path.atlas-17c-'+arguments[0]+'').length",kind)
+    return js("return document.querySelectorAll('#map path.atlas-17c-evidence-cue.atlas-17c-'+arguments[0]).length",kind)
 def toggle_layer(id,checked):
     js("""let x=document.getElementById(arguments[0]);x.checked=arguments[1];
       x.dispatchEvent(new Event('change',{bubbles:true}));""",id,checked)
