@@ -1,0 +1,1221 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "17世纪具名地点来源支持的军事、地权调查与公司商贸研究性虚线面和联系线",
+    "schema": "atlas-17c-regional-studies-v1",
+    "historical_start": 1600,
+    "historical_end": 1699,
+    "map_layer": "schematic_studies_not_political_control",
+    "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
+    "feature_count": 14,
+    "polygon_count": 9,
+    "line_count": 5,
+    "total_confirmed_historical_control_polygons": 0,
+    "prohibit_area_aggregation": true,
+    "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "17c-ulster-1613-derry-coleraine-city-corporations-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.358065949999999,
+              54.962
+            ],
+            [
+              -6.631979050000001,
+              54.962
+            ],
+            [
+              -6.61272905,
+              54.98125
+            ],
+            [
+              -6.61272905,
+              55.147194999999996
+            ],
+            [
+              -6.631979050000001,
+              55.166444999999996
+            ],
+            [
+              -7.358065949999999,
+              55.166444999999996
+            ],
+            [
+              -7.37731595,
+              55.147194999999996
+            ],
+            [
+              -7.37731595,
+              54.98125
+            ],
+            [
+              -7.358065949999999,
+              54.962
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1613年德里—科尔雷恩：伦敦公司殖民市镇与庄园制度参考",
+        "start_year": 1613,
+        "end_year": 1613,
+        "display_kind": "land_dispossession",
+        "label_type": "赭黄虚线·已证地权政策／调查目标区域参考",
+        "description": "北爱尔兰档案馆1613年殖民地检查报告明确记载伦敦公司承领人投资德里与科尔雷恩两个城市和更广庄园。虚线只联结两座具名城市的参考位置，不能据此宣称两城之间所有乡镇实际被夺地。",
+        "summary_zh": "北爱尔兰档案馆1613年殖民地检查报告明确记载伦敦公司承领人投资德里与科尔雷恩两个城市和更广庄园。虚线只联结两座具名城市的参考位置，不能据此宣称两城之间所有乡镇实际被夺地。",
+        "actor_zh": "英格兰王室、伦敦市公司与爱尔兰当地土地持有人",
+        "anchor_event_ids": [
+          "1610S-E012"
+        ],
+        "related_event_ids": [
+          "1610S-E012"
+        ],
+        "anchor_places": [
+          {
+            "name": "德里与科尔雷恩公司市镇体制形成",
+            "lon": -7.319,
+            "lat": 54.997,
+            "source_event_id": "1610S-E012",
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -6.671045,
+            "lat": 55.131445,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.proni.gov.uk/files/proni/2025-12/Plantations%20in%20Ulster.pdf",
+          "https://www.proni.gov.uk/publications/plantations-ulster-1600-41-collection-documents",
+          "https://www.proni.gov.uk/publications/derrylondonderry-freemen-records"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": true,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-hormuz-qeshm-1622-cooperative-operation-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              56.271049999999995,
+              26.885
+            ],
+            [
+              56.47195,
+              26.885
+            ],
+            [
+              56.489,
+              26.902050000000003
+            ],
+            [
+              56.489,
+              27.08795
+            ],
+            [
+              56.47195,
+              27.105
+            ],
+            [
+              56.271049999999995,
+              27.105
+            ],
+            [
+              56.254,
+              27.08795
+            ],
+            [
+              56.254,
+              26.902050000000003
+            ],
+            [
+              56.271049999999995,
+              26.885
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1622年霍尔木兹—格什姆：萨非军与东印度公司舰队军事合作",
+        "start_year": 1622,
+        "end_year": 1622,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线·已证地方性军事活动阅读范围",
+        "description": "格什姆堡首先遭到英商舰炮协助攻破，随后萨非军与公司船队对霍尔木兹展开行动。连接两岛的局部概略区不是真实炮射程或海上战线，绝不是英国征服伊朗。",
+        "summary_zh": "格什姆堡首先遭到英商舰炮协助攻破，随后萨非军与公司船队对霍尔木兹展开行动。连接两岛的局部概略区不是真实炮射程或海上战线，绝不是英国征服伊朗。",
+        "actor_zh": "萨非帝国军队主导，英格兰东印度公司舰队协助",
+        "anchor_event_ids": [
+          "1620S-E009",
+          "1620S-E010"
+        ],
+        "related_event_ids": [
+          "1620S-E009",
+          "1620S-E010"
+        ],
+        "anchor_places": [
+          {
+            "name": "波斯萨非—公司联军夺取霍尔木兹",
+            "lon": 56.458,
+            "lat": 27.07,
+            "source_event_id": "1620S-E009",
+            "modern_place_only": true
+          },
+          {
+            "name": "萨非伊朗与英国公司船队攻取格什姆岛葡萄牙要塞",
+            "lon": 56.285,
+            "lat": 26.92,
+            "source_event_id": "1620S-E010",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.iranicaonline.org/articles/qeshm-island/",
+          "https://www.iranicaonline.org/articles/east-india-company-british-i-the-safavid-period/",
+          "https://www.iranicaonline.org/articles/anglo-iranian-relations-i/",
+          "https://www.iranicaonline.org/articles/hormuz-ii/"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ireland-cahir-clonmel-1650-south-tipperary-operation",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.9416,
+              52.32
+            ],
+            [
+              -7.6886,
+              52.32
+            ],
+            [
+              -7.671,
+              52.3376
+            ],
+            [
+              -7.671,
+              52.391999999999996
+            ],
+            [
+              -7.6886,
+              52.4096
+            ],
+            [
+              -7.9416,
+              52.4096
+            ],
+            [
+              -7.9592,
+              52.391999999999996
+            ],
+            [
+              -7.9592,
+              52.3376
+            ],
+            [
+              -7.9416,
+              52.32
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1650年卡希尔—克隆梅尔：共和国军围城及爱尔兰守军抵抗地区",
+        "start_year": 1650,
+        "end_year": 1650,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线·已证地方性军事活动阅读范围",
+        "description": "卡希尔城堡通过谈判投降，克隆梅尔则发生激烈突破口战斗。示意包络只标两个有据地点的共同地方军事背景，不推断中间村落均遭破坏。",
+        "summary_zh": "卡希尔城堡通过谈判投降，克隆梅尔则发生激烈突破口战斗。示意包络只标两个有据地点的共同地方军事背景，不推断中间村落均遭破坏。",
+        "actor_zh": "英格兰共和国军及当地爱尔兰守城力量",
+        "anchor_event_ids": [
+          "1650S-E001",
+          "1650S-E002"
+        ],
+        "related_event_ids": [
+          "1650S-E001",
+          "1650S-E002"
+        ],
+        "anchor_places": [
+          {
+            "name": "卡希尔城堡在共和国军炮兵威慑下谈判投降",
+            "lon": -7.9272,
+            "lat": 52.3746,
+            "source_event_id": "1650S-E001",
+            "modern_place_only": true
+          },
+          {
+            "name": "克隆梅尔城墙突破口战斗与爱尔兰守军抵抗",
+            "lon": -7.703,
+            "lat": 52.355,
+            "source_event_id": "1650S-E002",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.heritageweek.ie/projects/never-so-hot-a-storm-the-1650-siege-of-clonmel",
+          "https://heritageireland.ie/2021/12/cahir-castle-50-years-open-to-the-public/"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ireland-boyne-oldbridge-rosnaree-duleek-1690",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.4965,
+              53.622
+            ],
+            [
+              -6.4025,
+              53.622
+            ],
+            [
+              -6.386,
+              53.6385
+            ],
+            [
+              -6.386,
+              53.74249999999999
+            ],
+            [
+              -6.4025,
+              53.75899999999999
+            ],
+            [
+              -6.4965,
+              53.75899999999999
+            ],
+            [
+              -6.513,
+              53.74249999999999
+            ],
+            [
+              -6.513,
+              53.6385
+            ],
+            [
+              -6.4965,
+              53.622
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1690年博因河：奥尔德布里奇—罗斯纳里—杜利克局部战事",
+        "start_year": 1690,
+        "end_year": 1690,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线·已证地方性军事活动阅读范围",
+        "description": "威廉派在奥尔德布里奇交战、罗斯纳里侧翼过河，詹姆斯派向杜利克撤退；淡红虚线仅是这三个地点的读图包络，不是兵力部署图，也非每处均发生战斗。",
+        "summary_zh": "威廉派在奥尔德布里奇交战、罗斯纳里侧翼过河，詹姆斯派向杜利克撤退；淡红虚线仅是这三个地点的读图包络，不是兵力部署图，也非每处均发生战斗。",
+        "actor_zh": "威廉派军队与詹姆斯派军队",
+        "anchor_event_ids": [
+          "1690S-E001",
+          "1690S-E002",
+          "1690S-E003"
+        ],
+        "related_event_ids": [
+          "1690S-E001",
+          "1690S-E002",
+          "1690S-E003"
+        ],
+        "anchor_places": [
+          {
+            "name": "波因河战役：威廉派在奥尔德布里奇突破",
+            "lon": -6.416,
+            "lat": 53.724,
+            "source_event_id": "1690S-E001",
+            "modern_place_only": true
+          },
+          {
+            "name": "波因河战役罗斯纳里侧翼过河牵制",
+            "lon": -6.483,
+            "lat": 53.718,
+            "source_event_id": "1690S-E002",
+            "modern_place_only": true
+          },
+          {
+            "name": "詹姆斯派向杜利克撤退",
+            "lon": -6.419,
+            "lat": 53.657,
+            "source_event_id": "1690S-E003",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/battle-boyne",
+          "https://heritageireland.ie/places-to-visit/battle-of-the-boyne-visitor-centre-oldbridge-estate/"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ireland-athlone-auchrim-1691-campaign-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.33675,
+              53.262
+            ],
+            [
+              -7.91525,
+              53.262
+            ],
+            [
+              -7.896,
+              53.28125
+            ],
+            [
+              -7.896,
+              53.43875
+            ],
+            [
+              -7.91525,
+              53.458
+            ],
+            [
+              -8.33675,
+              53.458
+            ],
+            [
+              -8.356,
+              53.43875
+            ],
+            [
+              -8.356,
+              53.28125
+            ],
+            [
+              -8.33675,
+              53.262
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1691年阿斯隆—奥格里姆：威廉派战役次序参考",
+        "start_year": 1691,
+        "end_year": 1691,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线·已证地方性军事活动阅读范围",
+        "description": "威廉派攻取阿斯隆后，1691年奥格里姆发生决定性战役。两地构成同年军事进程的两个有据节点；连成的虚线参考范围不等于军队移动路线或沿途均被占领。",
+        "summary_zh": "威廉派攻取阿斯隆后，1691年奥格里姆发生决定性战役。两地构成同年军事进程的两个有据节点；连成的虚线参考范围不等于军队移动路线或沿途均被占领。",
+        "actor_zh": "威廉派军队与詹姆斯派军队",
+        "anchor_event_ids": [
+          "1690S-E048",
+          "1690S-E047"
+        ],
+        "related_event_ids": [
+          "1690S-E048",
+          "1690S-E047"
+        ],
+        "anchor_places": [
+          {
+            "name": "威廉派攻陷阿斯隆，打开香农河防线",
+            "lon": -7.942,
+            "lat": 53.423,
+            "source_event_id": "1690S-E048",
+            "modern_place_only": true
+          },
+          {
+            "name": "奥格里姆战役：威廉派击败詹姆斯派主力",
+            "lon": -8.31,
+            "lat": 53.297,
+            "source_event_id": "1690S-E047",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://historyireland.com/the-battle-of-aughrim/",
+          "https://www.nam.ac.uk/explore/battle-boyne"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-eic-bengal-hooghly-kasimbazar-1658-source-network",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.25524999999999,
+              22.7427
+            ],
+            [
+              88.42475000000002,
+              22.7427
+            ],
+            [
+              88.45500000000001,
+              22.772949999999998
+            ],
+            [
+              88.45500000000001,
+              24.23705
+            ],
+            [
+              88.42475000000002,
+              24.2673
+            ],
+            [
+              88.25524999999999,
+              24.2673
+            ],
+            [
+              88.225,
+              24.23705
+            ],
+            [
+              88.225,
+              22.772949999999998
+            ],
+            [
+              88.25524999999999,
+              22.7427
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1658年孟加拉胡格利—卡西姆巴扎尔：两处商馆形成贸易网络",
+        "start_year": 1658,
+        "end_year": 1658,
+        "display_kind": "economic_network",
+        "label_type": "青绿虚线·商馆经济联系参考范围",
+        "description": "胡格利1651、卡西姆巴扎尔1658分别已有英商商馆，1658年存在两处有据节点。浅青绿虚线只展示商业网络的地理分布，不表示所有河岸受英格兰统治或船舶确曾沿直线航行。",
+        "summary_zh": "胡格利1651、卡西姆巴扎尔1658分别已有英商商馆，1658年存在两处有据节点。浅青绿虚线只展示商业网络的地理分布，不表示所有河岸受英格兰统治或船舶确曾沿直线航行。",
+        "actor_zh": "英格兰东印度公司，莫卧儿帝国辖下孟加拉手工业与地方交易商",
+        "anchor_event_ids": [
+          "1650S-E033",
+          "1650S-E035"
+        ],
+        "related_event_ids": [
+          "1650S-E033",
+          "1650S-E035"
+        ],
+        "anchor_places": [
+          {
+            "name": "英商设孟加拉胡格利商馆",
+            "lon": 88.4,
+            "lat": 22.9,
+            "source_event_id": "1650S-E033",
+            "modern_place_only": true
+          },
+          {
+            "name": "公司商人在孟加拉卡西姆巴扎尔建立内河商馆",
+            "lon": 88.28,
+            "lat": 24.11,
+            "source_event_id": "1650S-E035",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ireland-gross-survey-1653-munster-named-counties",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.7336255,
+              52.207609999999995
+            ],
+            [
+              -7.0023745,
+              52.207609999999995
+            ],
+            [
+              -6.97356,
+              52.2364245
+            ],
+            [
+              -6.97356,
+              52.6865755
+            ],
+            [
+              -7.0023745,
+              52.71539
+            ],
+            [
+              -8.7336255,
+              52.71539
+            ],
+            [
+              -8.76244,
+              52.6865755
+            ],
+            [
+              -8.76244,
+              52.2364245
+            ],
+            [
+              -8.7336255,
+              52.207609999999995
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1653年Gross Survey：芒斯特三郡调查范围参考",
+        "start_year": 1653,
+        "end_year": 1653,
+        "display_kind": "land_dispossession",
+        "label_type": "赭黄虚线·已证地权政策／调查目标区域参考",
+        "description": "1653年Gross Survey记载的芒斯特三个具名目标郡：Limerick、Tipperary、Waterford。图形只用三个现代城镇位置大致指示调查地域，不是郡界、完成调查地块、更不是已经没收的土地。",
+        "summary_zh": "1653年Gross Survey记载的芒斯特三个具名目标郡：Limerick、Tipperary、Waterford。图形只用三个现代城镇位置大致指示调查地域，不是郡界、完成调查地块、更不是已经没收的土地。",
+        "actor_zh": "英格兰共和国爱尔兰政府、调查员Benjamin Worsley及当地原业主",
+        "anchor_event_ids": [
+          "1650S-E008",
+          "1650S-E002",
+          "1650S-E016"
+        ],
+        "related_event_ids": [
+          "1650S-E008",
+          "1650S-E002",
+          "1650S-E016"
+        ],
+        "anchor_places": [
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -8.626,
+            "lat": 52.663,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -7.703,
+            "lat": 52.355,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -7.11,
+            "lat": 52.26,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.downsurvey.ie/about/",
+          "https://historyireland.com/siege-in-ireland-1641-53-blood-and-stone/",
+          "https://historyireland.com/hugh-dubh-oneill-cromwells-stoutest-enemy/",
+          "https://www.heritageweek.ie/projects/never-so-hot-a-storm-the-1650-siege-of-clonmel",
+          "https://celt.ucc.ie/document/E660001-001/"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": true,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ireland-gross-survey-1653-leinster-named-counties",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.522805,
+              52.95392
+            ],
+            [
+              -6.647195,
+              52.95392
+            ],
+            [
+              -6.6071,
+              52.994015
+            ],
+            [
+              -6.6071,
+              53.689985
+            ],
+            [
+              -6.647195,
+              53.73008
+            ],
+            [
+              -7.522805,
+              53.73008
+            ],
+            [
+              -7.5629,
+              53.689985
+            ],
+            [
+              -7.5629,
+              52.994015
+            ],
+            [
+              -7.522805,
+              52.95392
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1653年Gross Survey：伦斯特四郡调查范围参考",
+        "start_year": 1653,
+        "end_year": 1653,
+        "display_kind": "land_dispossession",
+        "label_type": "赭黄虚线·已证地权政策／调查目标区域参考",
+        "description": "1653年Gross Survey列出的伦斯特目标郡：Laois、Offaly、Meath和Westmeath。四座现代城市仅作为读者找寻这些名称的参考锚点，不表示所有田产在1653年完成丈量或交割。",
+        "summary_zh": "1653年Gross Survey列出的伦斯特目标郡：Laois、Offaly、Meath和Westmeath。四座现代城市仅作为读者找寻这些名称的参考锚点，不表示所有田产在1653年完成丈量或交割。",
+        "actor_zh": "英格兰共和国爱尔兰政府、调查员Benjamin Worsley及当地原业主",
+        "anchor_event_ids": [
+          "1650S-E031",
+          "1650S-E016"
+        ],
+        "related_event_ids": [
+          "1650S-E031",
+          "1650S-E016"
+        ],
+        "anchor_places": [
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -7.3,
+            "lat": 53.034,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -7.49,
+            "lat": 53.273,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -7.34,
+            "lat": 53.525,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -6.68,
+            "lat": 53.65,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.downsurvey.ie/about/",
+          "https://celt.ucc.ie/document/E660001-001/"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": true,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ireland-gross-survey-1653-ulster-named-counties",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.725204,
+              54.277820000000006
+            ],
+            [
+              -5.651496,
+              54.277820000000006
+            ],
+            [
+              -5.623897,
+              54.30541900000001
+            ],
+            [
+              -5.623897,
+              54.736580999999994
+            ],
+            [
+              -5.651496,
+              54.764179999999996
+            ],
+            [
+              -6.725204,
+              54.764179999999996
+            ],
+            [
+              -6.752802999999999,
+              54.736580999999994
+            ],
+            [
+              -6.752802999999999,
+              54.30541900000001
+            ],
+            [
+              -6.725204,
+              54.277820000000006
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1653年Gross Survey：阿尔斯特三郡调查范围参考",
+        "start_year": 1653,
+        "end_year": 1653,
+        "display_kind": "land_dispossession",
+        "label_type": "赭黄虚线·已证地权政策／调查目标区域参考",
+        "description": "1653年Gross Survey列出的阿尔斯特目标郡：Down、Antrim、Armagh。行政郡和城市中心近似定位不等于精确历史边线，也不等于这些郡所有居民在1653年失地。",
+        "summary_zh": "1653年Gross Survey列出的阿尔斯特目标郡：Down、Antrim、Armagh。行政郡和城市中心近似定位不等于精确历史边线，也不等于这些郡所有居民在1653年失地。",
+        "actor_zh": "英格兰共和国爱尔兰政府、调查员Benjamin Worsley及当地原业主",
+        "anchor_event_ids": [
+          "1650S-E031",
+          "1650S-E016"
+        ],
+        "related_event_ids": [
+          "1650S-E031",
+          "1650S-E016"
+        ],
+        "anchor_places": [
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -6.6667,
+            "lat": 54.35,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -6.217,
+            "lat": 54.714,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "机构说明列出的其他现代城市参照",
+            "lon": -5.71,
+            "lat": 54.328,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.downsurvey.ie/about/",
+          "https://celt.ucc.ie/document/E660001-001/"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
+        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": true,
+        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-eic-surat-bantam-textiles-commercial-market-1610",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.83,
+            21.17
+          ],
+          [
+            106.16,
+            -6.03
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1610年起古吉拉特棉布→万丹香料交易方向（仅商业关系）",
+        "start_year": 1610,
+        "end_year": 1610,
+        "display_kind": "economic_network",
+        "label_type": "青绿虚线·有据商业方向/地点联系",
+        "description": "英国图书馆IOR/G总目明确说明公司以苏拉特、坎贝棉布到万丹换取胡椒和香料，第六航次的Darling船后来从苏拉特派往万丹。两点直线仅表达有据贸易方向；1610年为第六航次背景，未核证此船在该年完整航行的日月路径。",
+        "summary_zh": "英国图书馆IOR/G总目明确说明公司以苏拉特、坎贝棉布到万丹换取胡椒和香料，第六航次的Darling船后来从苏拉特派往万丹。两点直线仅表达有据贸易方向；1610年为第六航次背景，未核证此船在该年完整航行的日月路径。",
+        "actor_zh": "英格兰东印度公司，印度与爪哇当地生产者及商人",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1600S-E016",
+          "1610S-E026"
+        ],
+        "anchor_event_ids": [
+          "1600S-E016",
+          "1610S-E026"
+        ],
+        "route_kind": "trade_market_direction_earliest_sixth_voyage_context_not_measured_navigation",
+        "geometry_precision": "straight_reference_endpoint_connection_not_measured_route",
+        "mapping_method": "named modern reference locations only; connecting segments do NOT represent historical ship course, army path or customs jurisdiction",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "uncertainty": "两个有据地点之间的地图直线不是历史实际运输/行军线路，也不能计算相连地区影响面积",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-eic-surat-jask-documented-cargo-1616",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.83,
+            21.17
+          ],
+          [
+            57.772,
+            25.653
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1616年苏拉特→贾斯克：东印度公司输货赴萨非伊朗",
+        "start_year": 1616,
+        "end_year": 1616,
+        "display_kind": "economic_network",
+        "label_type": "青绿虚线·有据商业方向/地点联系",
+        "description": "Ferrier载明1616年12月4日英公司货船James所载货物抵达贾斯克；通过苏拉特与波斯贸易形成商业联系。两端现代港市参考点之间不是船舶实测航线。",
+        "summary_zh": "Ferrier载明1616年12月4日英公司货船James所载货物抵达贾斯克；通过苏拉特与波斯贸易形成商业联系。两端现代港市参考点之间不是船舶实测航线。",
+        "actor_zh": "英格兰东印度公司与萨非王朝商贸官员",
+        "source_urls": [
+          "https://www.iranicaonline.org/articles/east-india-company-british-i-the-safavid-period/",
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://www.iranicaonline.org/articles/anglo-iranian-relations-i/"
+        ],
+        "related_event_ids": [
+          "1600S-E016",
+          "1610S-E019"
+        ],
+        "anchor_event_ids": [
+          "1600S-E016",
+          "1610S-E019"
+        ],
+        "route_kind": "documented_named_shipment_schematic_connection_not_sea_track",
+        "geometry_precision": "straight_reference_endpoint_connection_not_measured_route",
+        "mapping_method": "named modern reference locations only; connecting segments do NOT represent historical ship course, army path or customs jurisdiction",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "uncertainty": "两个有据地点之间的地图直线不是历史实际运输/行军线路，也不能计算相连地区影响面积",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-safavid-eic-qeshm-hormuz-campaign-1622",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            56.285,
+            26.92
+          ],
+          [
+            56.458,
+            27.07
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1622年格什姆→霍尔木兹：萨非—英商合作攻击葡萄牙据点",
+        "start_year": 1622,
+        "end_year": 1622,
+        "display_kind": "military_impact",
+        "label_type": "红色虚线·具名战役行动次序",
+        "description": "格什姆要塞于1622年2月被围攻后投降，萨非军与东印度公司舰队随后攻取霍尔木兹。该线不表示确切炮位和登陆航线；最终主导控制权不属于英王。",
+        "summary_zh": "格什姆要塞于1622年2月被围攻后投降，萨非军与东印度公司舰队随后攻取霍尔木兹。该线不表示确切炮位和登陆航线；最终主导控制权不属于英王。",
+        "actor_zh": "萨非军队主导、英格兰东印度公司舰只协助",
+        "source_urls": [
+          "https://www.iranicaonline.org/articles/qeshm-island/",
+          "https://www.iranicaonline.org/articles/anglo-iranian-relations-i/",
+          "https://www.iranicaonline.org/articles/east-india-company-british-i-the-safavid-period/",
+          "https://www.iranicaonline.org/articles/hormuz-ii/"
+        ],
+        "related_event_ids": [
+          "1620S-E010",
+          "1620S-E009"
+        ],
+        "anchor_event_ids": [
+          "1620S-E010",
+          "1620S-E009"
+        ],
+        "route_kind": "documented_campaign_sequence_schematic_connection_not_march",
+        "geometry_precision": "straight_reference_endpoint_connection_not_measured_route",
+        "mapping_method": "named modern reference locations only; connecting segments do NOT represent historical ship course, army path or customs jurisdiction",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "uncertainty": "两个有据地点之间的地图直线不是历史实际运输/行军线路，也不能计算相连地区影响面积",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ulster-1613-derry-coleraine-corporate-plantation-relation",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -7.319,
+            54.997
+          ],
+          [
+            -6.671045,
+            55.131445
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1613年德里↔科尔雷恩：伦敦公司殖民城市商业与土地机构关联",
+        "start_year": 1613,
+        "end_year": 1613,
+        "display_kind": "land_dispossession",
+        "label_type": "红色虚线·具名战役行动次序",
+        "description": "PRONI 1613年伦敦公司庄园调查同时记录德里、科尔雷恩两个公司市镇；连接线只说明共同殖民机构，不说明双方有一条已证道路或两城间每块地产已归英国公司。",
+        "summary_zh": "PRONI 1613年伦敦公司庄园调查同时记录德里、科尔雷恩两个公司市镇；连接线只说明共同殖民机构，不说明双方有一条已证道路或两城间每块地产已归英国公司。",
+        "actor_zh": "伦敦市承领公司、Irish Society与本地爱尔兰地权持有人",
+        "source_urls": [
+          "https://www.proni.gov.uk/files/proni/2025-12/Plantations%20in%20Ulster.pdf",
+          "https://www.proni.gov.uk/publications/plantations-ulster-1600-41-collection-documents",
+          "https://www.proni.gov.uk/publications/derrylondonderry-freemen-records"
+        ],
+        "related_event_ids": [
+          "1610S-E012"
+        ],
+        "anchor_event_ids": [
+          "1610S-E012"
+        ],
+        "route_kind": "documented_two_corporate_towns_in_same_plantation_not_transport",
+        "geometry_precision": "straight_reference_endpoint_connection_not_measured_route",
+        "mapping_method": "named modern reference locations only; connecting segments do NOT represent historical ship course, army path or customs jurisdiction",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "uncertainty": "两个有据地点之间的地图直线不是历史实际运输/行军线路，也不能计算相连地区影响面积",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-eic-hooghly-kasimbazar-bengal-factory-network-1658",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            88.4,
+            22.9
+          ],
+          [
+            88.28,
+            24.11
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1658年胡格利↔卡西姆巴扎尔：莫卧儿辖下两处英商商馆",
+        "start_year": 1658,
+        "end_year": 1658,
+        "display_kind": "economic_network",
+        "label_type": "青绿虚线·有据商业方向/地点联系",
+        "description": "英国图书馆东印度公司商馆总目分别记录胡格利和卡西姆巴扎尔商馆。两地之间的线仅表现贸易网络据点关系，没有证明一条实测船运线或英国在孟加拉拥有政治主权。",
+        "summary_zh": "英国图书馆东印度公司商馆总目分别记录胡格利和卡西姆巴扎尔商馆。两地之间的线仅表现贸易网络据点关系，没有证明一条实测船运线或英国在孟加拉拥有政治主权。",
+        "actor_zh": "英格兰东印度公司与莫卧儿孟加拉地方商业网络",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1650S-E033",
+          "1650S-E035"
+        ],
+        "anchor_event_ids": [
+          "1650S-E033",
+          "1650S-E035"
+        ],
+        "route_kind": "two_attested_factories_same_region_undirected_not_ship_track",
+        "geometry_precision": "straight_reference_endpoint_connection_not_measured_route",
+        "mapping_method": "named modern reference locations only; connecting segments do NOT represent historical ship course, army path or customs jurisdiction",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "uncertainty": "两个有据地点之间的地图直线不是历史实际运输/行军线路，也不能计算相连地区影响面积",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    }
+  ]
+}
