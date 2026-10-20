@@ -7,12 +7,13 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 14,
-    "polygon_count": 9,
-    "line_count": 5,
+    "feature_count": 19,
+    "polygon_count": 13,
+    "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
-    "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA."
+    "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA.",
+    "quality_note": "Added four 1609/1635/1649/1690 archival-source contextual regional studies, including incomplete Connacht plantation caveat."
   },
   "features": [
     {
@@ -1214,6 +1215,521 @@
         "uncertainty": "两个有据地点之间的地图直线不是历史实际运输/行军线路，也不能计算相连地区影响面积",
         "related_story_ids": [
           "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ulster-six-counties-1609-plantation-plan-reference",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.667,
+              53.945
+            ],
+            [
+              -6.6396999999999995,
+              53.945
+            ],
+            [
+              -6.6217,
+              53.963
+            ],
+            [
+              -6.6217,
+              55.025
+            ],
+            [
+              -6.6396999999999995,
+              55.043
+            ],
+            [
+              -7.667,
+              55.043
+            ],
+            [
+              -7.685,
+              55.025
+            ],
+            [
+              -7.685,
+              53.963
+            ],
+            [
+              -7.667,
+              53.945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1609年阿尔斯特六郡殖民安置：王室没产与英苏承领计划",
+        "start_year": 1609,
+        "end_year": 1609,
+        "display_kind": "land_dispossession",
+        "label_type": "赭黄虚线·有据地权政策涉及地域概略参考",
+        "description": "PRONI明确认定阿马、卡文、多尼戈尔、弗马纳、伦敦德里和蒂龙六郡是1609年王室种植园计划主要范围。围绕郡县现代参照地名画的虚线仅作北爱尔兰地区索引；不能把整个六郡视作已经过户、全部由英王有效管治的地块。",
+        "summary_zh": "PRONI明确认定阿马、卡文、多尼戈尔、弗马纳、伦敦德里和蒂龙六郡是1609年王室种植园计划主要范围。围绕郡县现代参照地名画的虚线仅作北爱尔兰地区索引；不能把整个六郡视作已经过户、全部由英王有效管治的地块。",
+        "actor_zh": "英格兰王室、苏格兰及英格兰承领者、各郡爱尔兰原土地持有人",
+        "anchor_event_ids": [
+          "1600S-E017",
+          "1600S-E010"
+        ],
+        "related_event_ids": [
+          "1600S-E017",
+          "1600S-E010"
+        ],
+        "anchor_places": [
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -6.6667,
+            "lat": 54.35,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -7.318,
+            "lat": 54.998,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -7.63,
+            "lat": 54.6,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -7.64,
+            "lat": 54.34,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -7.36,
+            "lat": 54.98,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -7.36,
+            "lat": 54.97,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -7.36,
+            "lat": 54.97,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -7.23,
+            "lat": 54.3,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -6.99,
+            "lat": 53.99,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.proni.gov.uk/files/proni/2025-12/Plantations%20in%20Ulster.pdf",
+          "https://ulsterhistoricalfoundation.com/ulster-plantation/plantation-people/the-irish-and-the-plantation"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; approximate regional envelope NOT enacted confiscation polygons or actual area of fighting",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic modern named city locator bbox with arbitrary display pad; NOT evidence of exact boundary, real geographic damage radius or de facto political control",
+        "provenance_method": "archive or scholarly text proves the historical named counties/fortresses and actions; vertices exclusively modern illustrative points with artistic margin",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "policy_area_not_all_land": true,
+        "uncertainty": "仅确认具名地区有行政政策/军事实事，不能认为包络内每处居民、地产或村落实际受同一事件影响",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-connacht-1635-wentworth-jury-inquisitions-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -9.327,
+              53.226
+            ],
+            [
+              -8.163,
+              53.226
+            ],
+            [
+              -8.145,
+              53.244
+            ],
+            [
+              -8.145,
+              54.297000000000004
+            ],
+            [
+              -8.163,
+              54.315000000000005
+            ],
+            [
+              -9.327,
+              54.315000000000005
+            ],
+            [
+              -9.345,
+              54.297000000000004
+            ],
+            [
+              -9.345,
+              53.244
+            ],
+            [
+              -9.327,
+              53.226
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1635年康诺特：温特沃斯四郡陪审与未完成殖民计划",
+        "start_year": 1635,
+        "end_year": 1635,
+        "display_kind": "land_dispossession",
+        "label_type": "赭黄虚线·有据地权政策涉及地域概略参考",
+        "description": "爱尔兰皇家学院人物传记确认罗斯康芒、梅奥、斯莱戈三郡陪审团认同王室产权主张，戈尔韦陪审拒绝，遭罚款拘禁。研究特别说明康诺特植民计划**未普遍实施**；此区域示意不应被用作已没收或英格兰定居结果地图。",
+        "summary_zh": "爱尔兰皇家学院人物传记确认罗斯康芒、梅奥、斯莱戈三郡陪审团认同王室产权主张，戈尔韦陪审拒绝，遭罚款拘禁。研究特别说明康诺特植民计划**未普遍实施**；此区域示意不应被用作已没收或英格兰定居结果地图。",
+        "actor_zh": "英王驻爱尔兰副王温特沃斯与康诺特各郡地主、陪审员",
+        "anchor_event_ids": [
+          "1630S-E006",
+          "1630S-E007"
+        ],
+        "related_event_ids": [
+          "1630S-E006",
+          "1630S-E007"
+        ],
+        "anchor_places": [
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -8.19,
+            "lat": 53.63,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -9.3,
+            "lat": 53.85,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -8.47,
+            "lat": 54.27,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -9.056,
+            "lat": 53.271,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.dib.ie/biography/wentworth-sir-thomas-a8968"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; approximate regional envelope NOT enacted confiscation polygons or actual area of fighting",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic modern named city locator bbox with arbitrary display pad; NOT evidence of exact boundary, real geographic damage radius or de facto political control",
+        "provenance_method": "archive or scholarly text proves the historical named counties/fortresses and actions; vertices exclusively modern illustrative points with artistic margin",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "policy_area_not_all_land": true,
+        "uncertainty": "仅确认具名地区有行政政策/军事实事，不能认为包络内每处居民、地产或村落实际受同一事件影响",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-drogheda-dundalk-newry-1649-english-expedition-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.428,
+              53.673
+            ],
+            [
+              -6.322,
+              53.673
+            ],
+            [
+              -6.304,
+              53.691
+            ],
+            [
+              -6.304,
+              54.027
+            ],
+            [
+              -6.322,
+              54.045
+            ],
+            [
+              -6.428,
+              54.045
+            ],
+            [
+              -6.446,
+              54.027
+            ],
+            [
+              -6.446,
+              53.691
+            ],
+            [
+              -6.428,
+              53.673
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1649年德罗赫达—邓多克／纽里：共和国军东部行动范围参考",
+        "start_year": 1649,
+        "end_year": 1649,
+        "display_kind": "military_impact",
+        "label_type": "红色虚线·确证具名军事行动参考",
+        "description": "德罗赫达遭共和国军攻陷后，邓多克、纽里等据点投降，显示军事推进与地方投降顺序。两端现代区域代理点构成的浅红虚线包络不是军队实际道路，也不能说沿线所有村庄遭破坏或被占。",
+        "summary_zh": "德罗赫达遭共和国军攻陷后，邓多克、纽里等据点投降，显示军事推进与地方投降顺序。两端现代区域代理点构成的浅红虚线包络不是军队实际道路，也不能说沿线所有村庄遭破坏或被占。",
+        "actor_zh": "英格兰共和国军、各城守军及爱尔兰地方居民",
+        "anchor_event_ids": [
+          "1640S-E016",
+          "1640S-E025"
+        ],
+        "related_event_ids": [
+          "1640S-E016",
+          "1640S-E025"
+        ],
+        "anchor_places": [
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -6.349,
+            "lat": 53.718,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -6.401,
+            "lat": 54,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/timeline-ireland-and-british-army",
+          "https://www.nam.ac.uk/explore/british-civil-wars",
+          "https://www.nam.ac.uk/explore/oliver-cromwell-lord-protector",
+          "https://www.maynoothuniversity.ie/research/spotlight-research/why-did-oliver-cromwell-end-ireland-first-place"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; approximate regional envelope NOT enacted confiscation polygons or actual area of fighting",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic modern named city locator bbox with arbitrary display pad; NOT evidence of exact boundary, real geographic damage radius or de facto political control",
+        "provenance_method": "archive or scholarly text proves the historical named counties/fortresses and actions; vertices exclusively modern illustrative points with artistic margin",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "policy_area_not_all_land": false,
+        "uncertainty": "仅确认具名地区有行政政策/军事实事，不能认为包络内每处居民、地产或村落实际受同一事件影响",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-kinsale-james-and-charles-forts-1690-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.556999999999999,
+              51.65
+            ],
+            [
+              -8.471,
+              51.65
+            ],
+            [
+              -8.453,
+              51.668
+            ],
+            [
+              -8.453,
+              51.734
+            ],
+            [
+              -8.471,
+              51.752
+            ],
+            [
+              -8.556999999999999,
+              51.752
+            ],
+            [
+              -8.575,
+              51.734
+            ],
+            [
+              -8.575,
+              51.668
+            ],
+            [
+              -8.556999999999999,
+              51.65
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1690年金塞尔两座堡垒：詹姆斯堡与查尔斯堡围攻示意区",
+        "start_year": 1690,
+        "end_year": 1690,
+        "display_kind": "military_impact",
+        "label_type": "红色虚线·确证具名军事行动参考",
+        "description": "爱尔兰国家遗产机构分别记载金塞尔詹姆斯堡和查尔斯堡的1690年失守。紧邻两堡的虚线包络只供辨认攻防地点，不表示已恢复城墙、炮火半径或长期整个科克郡的政治控制。",
+        "summary_zh": "爱尔兰国家遗产机构分别记载金塞尔詹姆斯堡和查尔斯堡的1690年失守。紧邻两堡的虚线包络只供辨认攻防地点，不表示已恢复城墙、炮火半径或长期整个科克郡的政治控制。",
+        "actor_zh": "威廉派军队与詹姆斯派守军",
+        "anchor_event_ids": [
+          "1690S-E007",
+          "1690S-E044"
+        ],
+        "related_event_ids": [
+          "1690S-E007",
+          "1690S-E044"
+        ],
+        "anchor_places": [
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -8.53,
+            "lat": 51.707,
+            "source_event_id": null,
+            "modern_place_only": true
+          },
+          {
+            "name": "文献具名城/郡现代参考",
+            "lon": -8.498,
+            "lat": 51.695,
+            "source_event_id": null,
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://heritageireland.ie/ga/blag/the-fall-of-charles-fort-october-1690/",
+          "https://heritageireland.ie/unguided-sites/james-fort/"
+        ],
+        "spatial_semantics": "source_attested_named_places_only; approximate regional envelope NOT enacted confiscation polygons or actual area of fighting",
+        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
+        "mapping_method": "deterministic modern named city locator bbox with arbitrary display pad; NOT evidence of exact boundary, real geographic damage radius or de facto political control",
+        "provenance_method": "archive or scholarly text proves the historical named counties/fortresses and actions; vertices exclusively modern illustrative points with artistic margin",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "policy_area_not_all_land": false,
+        "uncertainty": "仅确认具名地区有行政政策/军事实事，不能认为包络内每处居民、地产或村落实际受同一事件影响",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-kinsale-1690-two-forts-surrender-sequence",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -8.53,
+            51.707
+          ],
+          [
+            -8.498,
+            51.695
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1690年金塞尔：詹姆斯堡和查尔斯堡先后失守",
+        "start_year": 1690,
+        "end_year": 1690,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线·两堡有据军事关系线",
+        "description": "历史事件证实1690年两座金塞尔沿海要塞分别落入威廉派控制。两点直线只表示两堡的邻近及先后失守关系，不是炮弹线路、兵员行军路径或具体登陆轨迹。",
+        "summary_zh": "两堡军事影响及先后失守关系示意，非实测军事路线",
+        "actor_zh": "威廉派军队与詹姆斯派守军",
+        "source_urls": [
+          "https://heritageireland.ie/ga/blag/the-fall-of-charles-fort-october-1690/"
+        ],
+        "related_event_ids": [
+          "1690S-E007",
+          "1690S-E044"
+        ],
+        "anchor_event_ids": [
+          "1690S-E007",
+          "1690S-E044"
+        ],
+        "route_kind": "documented_two_fort_outcomes_not_measured_battle_route",
+        "geometry_precision": "straight_reference_endpoint_connection_not_measured_route",
+        "mapping_method": "point-to-point same-locality fortress association from 1690 archive-linked event entries; NOT measured army line",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "uncertainty": "不得外推真实城墙、沿线部队行动或某县全部受战火影响",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
         ]
       }
     }
