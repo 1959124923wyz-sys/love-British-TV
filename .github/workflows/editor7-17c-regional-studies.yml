@@ -1,0 +1,34 @@
+name: Editor7 17C Research Envelopes / Trade Links QA
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/test_editor7_17c_regional_studies.js'
+      - 'scripts/browser_editor7_17c_regional.py'
+      - '.github/workflows/editor7-17c-regional-studies.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/browser_editor7_17c_regional.py'
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node scripts/test_editor7_17c_regional_studies.js
+      - run: node scripts/test_editor6_17c_spatial_batch01.js
+      - run: node scripts/test_editor6_17c_batch01.js
+      - run: pip install selenium
+      - name: Check actual research envelope and commerce line rendering
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor7_17c_regional.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor7-seventeenth-regional-dashed-zones
+          path: browser-smoke-results/editor7-regional-*.png
