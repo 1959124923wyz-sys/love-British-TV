@@ -2252,9 +2252,138 @@
       "original_source_id": "EDITOR6-MAJOR:WESTERN-DESIGN-CROMWELL-1654",
       "verification_status": "editor6_authoritative_web_page_or_academic_abstract_read_original_volume_not_claimed",
       "precision_warning": "Only available webpage, university-press abstract, archival finding aid or edited charter reviewed. Underlying full restricted monographs and every original manuscript page not necessarily examined."
+    },
+    {
+      "id": "E6-R1-S05",
+      "title": "Oxford Historical Research (2021): Barbados Jamaica and news culture",
+      "publisher": "Oxford Historical Research (2021)",
+      "url": "https://academic.oup.com/histres/article/94/264/324/6259901",
+      "kind": "scholarly_or_institutional_route_context",
+      "original_source_id": "E6-R1-S05",
+      "evidence_read_level": "institutional_or_scholarly_public_text",
+      "verification_status": "editor6_route_source_screened_20261020",
+      "precision_warning": "两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。"
+    },
+    {
+      "id": "E6-R1-S06",
+      "title": "Carla Gardina Pestana: The English Conquest of Jamaica, Harvard UP (2017)",
+      "publisher": "Carla Gardina Pestana",
+      "url": "https://www.jstor.org/stable/j.ctt1n7qkwf",
+      "kind": "scholarly_or_institutional_route_context",
+      "original_source_id": "E6-R1-S06",
+      "evidence_read_level": "institutional_or_scholarly_public_text",
+      "verification_status": "editor6_route_source_screened_20261020",
+      "precision_warning": "两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。"
     }
   ],
-  "routes": [],
+  "routes": [
+    {
+      "id": "E6-R1654-PORTSMOUTH-BARBADOS",
+      "year": 1654,
+      "start_year": 1654,
+      "end_year": 1655,
+      "valid_years": [
+        1654,
+        1655
+      ],
+      "name": "护国公西方计划：朴次茅斯→巴巴多斯",
+      "route_kind": "schematic-military-expedition-connection",
+      "category": "war",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          50.806,
+          -1.086
+        ],
+        [
+          13.103,
+          -59.614
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S05"
+      ],
+      "related_event_ids": [
+        "1650S-E038"
+      ],
+      "note": "舰队1654年底出航，1655年在巴巴多斯集结。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    {
+      "id": "E6-R1655-BARBADOS-HISPANIOLA",
+      "year": 1655,
+      "start_year": 1655,
+      "end_year": 1655,
+      "valid_years": [
+        1655
+      ],
+      "name": "1655西方计划：巴巴多斯→圣多明各",
+      "route_kind": "schematic-military-expedition-connection",
+      "category": "war",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          13.103,
+          -59.614
+        ],
+        [
+          18.471,
+          -69.887
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S05",
+        "E6-R1-S06"
+      ],
+      "related_event_ids": [
+        "1650S-E038",
+        "1650S-E018"
+      ],
+      "note": "舰队先攻伊斯帕尼奥拉岛圣多明各，未能攻克。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    },
+    {
+      "id": "E6-R1655-HISPANIOLA-JAMAICA",
+      "year": 1655,
+      "start_year": 1655,
+      "end_year": 1655,
+      "valid_years": [
+        1655
+      ],
+      "name": "1655西方计划：圣多明各→牙买加",
+      "route_kind": "schematic-military-expedition-connection",
+      "category": "war",
+      "certainty": "documented_endpoint_order_schematic_only",
+      "geometry_precision": "named_modern_reference_endpoints_not_measured_navigation",
+      "coords": [
+        [
+          18.471,
+          -69.887
+        ],
+        [
+          17.994,
+          -76.955
+        ]
+      ],
+      "source_ids": [
+        "E6-R1-S05",
+        "E6-R1-S06"
+      ],
+      "related_event_ids": [
+        "1650S-E018"
+      ],
+      "note": "圣多明各失利后转攻牙买加；牙买加终点取现代西班牙镇参照，并非实际登陆点。两地连接只表现史料确证的地点关系与先后顺序，非历史实测航迹或行军道路，也不说明沿线地区为英国控制。",
+      "cartographic_note": "No hypothetical ocean waypoints; exclude from area statistics",
+      "territorial_claim": false,
+      "exclude_from_area_aggregation": true
+    }
+  ],
   "colonial_polygons": [],
   "publication": {
     "approved_event_count": 38,

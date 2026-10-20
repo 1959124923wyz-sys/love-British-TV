@@ -5,6 +5,8 @@ on:
       - 'data/atlas-16*.json'
       - 'app.js'
       - 'scripts/test_editor6_17c_batch01.js'
+      - 'scripts/test_editor6_17c_spatial_batch01.js'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
       - 'scripts/browser_serial_1692_story.py'
       - '.github/workflows/editor6-17c-batch.yml'
   push:
@@ -24,5 +26,6 @@ jobs:
           node-version: '22'
       - run: node --check app.js
       - run: node scripts/test_editor6_17c_batch01.js
+      - run: node scripts/test_editor6_17c_spatial_batch01.js
       - run: node scripts/test_serial_story_contract.js
       - run: node scripts/test_major_story_pilot.js
