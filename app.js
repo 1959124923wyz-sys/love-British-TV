@@ -710,20 +710,39 @@ function renderSeventeenthSpatialEvidence(){
  for(const f of seventeenthSpatialEvidence.features){
   const p=f.properties||{};
   if(year<p.start_year||year>p.display_through_year)continue;
+  // A statute/eviction policy does not automatically stay active during
+  // gaps: each dossier and pixel cue must refer to the selected dated episode.
+  const episode=p.episodes?.length?p.episodes.find(e=>e.start_year<=year&&year<=e.end_year):null;
+  if(p.episodes?.length&&!episode)continue;
   if(p.display_kind==='economic_network'&&!$('togglePoliticalRelations').checked)continue;
   if(p.display_kind!=='economic_network'&&!$('toggleControlAreas').checked)continue;
   if(f.geometry?.type!=='Point')continue;
   const coordinate=f.geometry.coordinates;
   if(!Array.isArray(coordinate)||coordinate.length!==2)continue;
-  const color=p.display_kind==='economic_network'?'#78b6ad':p.display_kind==='military_impact'?'#bc7786':'#ac8ad0';
+  const evidence=episode?{...f,properties:{...p,start_year:episode.start_year,
+   display_through_year:episode.end_year,description:episode.description,
+   summary_zh:episode.description,related_event_ids:episode.related_event_ids,
+   source_urls:episode.source_urls}}:f;
+  const display=p.display_kind;
+  // Fixed screen-space radius: NOT meters, colony area, historical cadastral
+  // plot, verified battlefront, geographical influence buffer or sovereignty.
+  const color=display==='economic_network'?'#78b6ad':
+   display==='military_impact'?'#bc7786':
+   display==='land_dispossession'?'#d1a35a':'#ac8ad0';
+  const radius=display==='land_dispossession'?23:
+   display==='military_impact'?20:display==='economic_network'?18:18;
   const center=[coordinate[1],coordinate[0]];
   const layer=L.circleMarker(center,{renderer:territoryRenderer,pane:'territoryPane',
-   radius:p.display_kind==='military_impact'?17:14,weight:2.2,color,
-   opacity:.95,dashArray:'4 6',fill:true,fillColor:color,fillOpacity:.10,
-   bubblingMouseEvents:false,className:'atlas-17c-evidence-cue'});
-  layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(p.label_type)+' · 非实测地理范围</div>',
+   radius,weight:2.4,color,opacity:.95,dashArray:'5 5',
+   fill:true,fillColor:color,fillOpacity:display==='land_dispossession'?.12:.085,
+   bubblingMouseEvents:false,
+   className:'atlas-17c-evidence-cue atlas-17c-'+display.replaceAll('_','-')});
+  const note=episode?episode.description:(p.description||'');
+  layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML(p.label_type)+' · '+escapeHTML(note)+' · 虚线为视觉提示，不是实测影响范围</div>',
    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
-  layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);openTerritoryDossier(f,'seventeenth-reference')});
+  layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
+   openTerritoryDossier(evidence,'seventeenth-reference')});
   layer.addTo(groups.territory);
  }
 }
@@ -2004,11 +2023,18 @@ async function boot(){
         !Number.isFinite(a[0])||!Number.isFinite(a[1])||Math.abs(a[0])>180||Math.abs(a[1])>90||
         !Number.isInteger(p.start_year)||!Number.isInteger(p.display_through_year)||
         p.start_year>p.display_through_year||
-        !['economic_network','military_impact','local_governance'].includes(p.display_kind)||
+        !['economic_network','military_impact','local_governance','land_dispossession'].includes(p.display_kind)||
         p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
         p.territorial_claim!==false||p.area_sqkm!==null||
         p.exclude_from_area_aggregation!==true||
-        !p.source_urls?.length||!p.source_urls.every(u=>/^https:\/\//.test(u));
+        !p.source_urls?.length||!p.source_urls.every(u=>/^https:\/\//.test(u))||
+        (p.episodes!=null&&(!Array.isArray(p.episodes)||!p.episodes.length||
+         p.episodes.some(e=>!Number.isInteger(e.start_year)||!Number.isInteger(e.end_year)||
+          e.start_year<p.start_year||e.end_year>p.display_through_year||
+          e.start_year>e.end_year||!e.description||
+          !Array.isArray(e.related_event_ids)||!e.related_event_ids.length||
+          !Array.isArray(e.source_urls)||!e.source_urls.length||
+          !e.source_urls.every(u=>/^https:\/\//.test(u)))));
       }))throw new Error('17c location reference failed no-invented-boundary gate');
    seventeenthSpatialEvidence=spatialData;
    serialPreviewAtlas={schema:'atlas-17c-source-linked-batch01',from_year:1600,to_year:1699};

@@ -1,0 +1,33 @@
+name: Editor7 17C EIC Ireland historical-map symbols
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'scripts/test_editor6_17c_spatial_batch01.js'
+      - 'scripts/browser_editor7_17c_symbols.py'
+      - '.github/workflows/editor7-17c-symbols.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'scripts/browser_editor7_17c_symbols.py'
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node scripts/test_editor6_17c_spatial_batch01.js
+      - run: node scripts/test_editor6_17c_batch01.js
+      - run: pip install selenium
+      - name: Verify historical dated evidence map with Chromium
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor7_17c_symbols.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor7-eic-ireland-symbol-map-screenshots
+          path: browser-smoke-results/editor7-*.png

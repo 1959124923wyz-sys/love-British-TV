@@ -2,14 +2,23 @@
   "type": "FeatureCollection",
   "metadata": {
     "name": "17世纪第一批地名与军事/经济影响提示点",
-    "status": "source_linked_low_geometry_precision",
+    "status": "attested_site_or_legally_documented_policy_reference_20261020",
     "period": [
       1600,
       1699
     ],
-    "feature_count": 12,
+    "feature_count": 44,
     "confirmed_territorial_polygons": 0,
-    "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference."
+    "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
+    "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
+    "visual_semantics": {
+      "economic_network": "青绿色虚线 · 商业许可及交易关系",
+      "land_dispossession": "赭黄色虚线 · 法令、地籍与土地剥夺参考",
+      "military_impact": "红色虚线 · 具名军事行动点",
+      "local_governance": "浅紫虚线 · 公司地方治理与设防据点"
+    },
+    "source_policy": "All added anchors inherit published atlas decade event IDs, source links and original representative coordinates; source metadata is independent from area or sovereignty proof.",
+    "episode_safe_rendering": true
   },
   "features": [
     {
@@ -402,6 +411,1463 @@
         "territorial_claim": false,
         "area_sqkm": null,
         "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-surat-1607",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83,
+          21.17
+        ]
+      },
+      "properties": {
+        "name": "苏拉特 · 早期英商接触与莫卧儿贸易准入",
+        "start_year": 1607,
+        "display_through_year": 1617,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "有据贸易接触与后续1612/1616商馆许可；主权仍属莫卧儿管辖",
+        "summary_zh": "有据贸易接触与后续1612/1616商馆许可；主权仍属莫卧儿管辖",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1600S-E016",
+          "1610S-E026",
+          "1610S-E030"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-masulipatnam-1610",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.13,
+          16.18
+        ]
+      },
+      "properties": {
+        "name": "马苏利帕特南 · 科罗曼德尔英国公司商路",
+        "start_year": 1610,
+        "display_through_year": 1610,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "公司商船抵达并求取棉布交易，港口不因此成为英国领地",
+        "summary_zh": "公司商船抵达并求取棉布交易，港口不因此成为英国领地",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1610S-E025"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-hirado-1613",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.554,
+          33.366
+        ]
+      },
+      "properties": {
+        "name": "日本平户 · 德川时期英商获准交易",
+        "start_year": 1613,
+        "display_through_year": 1613,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "公司凭日本政治当局许可经营而非取得日本土地统治",
+        "summary_zh": "公司凭日本政治当局许可经营而非取得日本土地统治",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1610S-E028"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-ayutthaya-1613",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.577,
+          14.356
+        ]
+      },
+      "properties": {
+        "name": "阿瑜陀耶 · 暹罗王室准许公司贸易",
+        "start_year": 1613,
+        "display_through_year": 1613,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "贸易许可由暹罗王室作出，并非英王在暹罗建立属地",
+        "summary_zh": "贸易许可由暹罗王室作出，并非英王在暹罗建立属地",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1610S-E029"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-jask-1616",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.772,
+          25.653
+        ]
+      },
+      "properties": {
+        "name": "贾斯克 · 萨非王朝下英商贸易联系",
+        "start_year": 1616,
+        "display_through_year": 1616,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "萨非王朝允许英商交易；地点取贾斯克现城市参考，不是公司治地",
+        "summary_zh": "萨非王朝允许英商交易；地点取贾斯克现城市参考，不是公司治地",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://www.iranicaonline.org/articles/anglo-iranian-relations-i/"
+        ],
+        "related_event_ids": [
+          "1610S-E019"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-mocha-1618",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.25,
+          13.32
+        ]
+      },
+      "properties": {
+        "name": "摩卡 · 红海贸易许可",
+        "start_year": 1618,
+        "display_through_year": 1618,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "英商进入也门红海贸易，不等于控制港口",
+        "summary_zh": "英商进入也门红海贸易，不等于控制港口",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1610S-E032"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-pulau-run-1620",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.69,
+          -4.55
+        ]
+      },
+      "properties": {
+        "name": "普洛伦 · 荷兰公司排挤英商",
+        "start_year": 1620,
+        "display_through_year": 1620,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "公司据点遭荷兰方面驱逐；不是英国当年取得主权",
+        "summary_zh": "公司据点遭荷兰方面驱逐；不是英国当年取得主权",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1620S-E023"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-hormuz-1622",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.458,
+          27.07
+        ]
+      },
+      "properties": {
+        "name": "霍尔木兹 · 萨非—英商舰队合作攻葡军",
+        "start_year": 1622,
+        "display_through_year": 1622,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "陆上战争主体萨非王朝，英国公司舰只协助；未建立英国对霍尔木兹的殖民统治",
+        "summary_zh": "陆上战争主体萨非王朝，英国公司舰只协助；未建立英国对霍尔木兹的殖民统治",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://www.iranicaonline.org/articles/east-india-company-british-i-the-safavid-period/",
+          "https://www.iranicaonline.org/articles/anglo-iranian-relations-i/",
+          "https://www.iranicaonline.org/articles/hormuz-ii/"
+        ],
+        "related_event_ids": [
+          "1620S-E009"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-amboyna-1623",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.18,
+          -3.69
+        ]
+      },
+      "properties": {
+        "name": "安汶 · 荷兰当局审讯处死英商",
+        "start_year": 1623,
+        "display_through_year": 1623,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "记录荷兰殖民当局军事司法冲突，不应误画为英国进攻或者领土扩张",
+        "summary_zh": "记录荷兰殖民当局军事司法冲突，不应误画为英国进攻或者领土扩张",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1620S-E025"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-bandarabbas-1624",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.274,
+          27.186
+        ]
+      },
+      "properties": {
+        "name": "贡布伦／阿巴斯港 · 萨非王朝允许的商站",
+        "start_year": 1624,
+        "display_through_year": 1624,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "商馆在萨非伊朗政治秩序下运营，非公司地方主权",
+        "summary_zh": "商馆在萨非伊朗政治秩序下运营，非公司地方主权",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://www.iranicaonline.org/articles/east-india-company-british-i-the-safavid-period/"
+        ],
+        "related_event_ids": [
+          "1620S-E014"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-balasore-1634",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.93,
+          21.49
+        ]
+      },
+      "properties": {
+        "name": "巴拉索尔 · 孟加拉湾商站贸易",
+        "start_year": 1634,
+        "display_through_year": 1634,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "有据英商商馆，不能用商馆数量计算英格兰领土",
+        "summary_zh": "有据英商商馆，不能用商馆数量计算英格兰领土",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1630S-E019"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-madras-1638",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.28,
+          13.08
+        ]
+      },
+      "properties": {
+        "name": "马德拉斯／圣乔治堡 · 公司据点",
+        "start_year": 1638,
+        "display_through_year": 1687,
+        "display_kind": "local_governance",
+        "label_type": "公司地方据点/治理核心 · 非现代城界",
+        "description": "公司在当地统治者许可下建立并营造据点；仅表达有据堡垒局部治理，不代表今金奈整市或科罗曼德尔海岸",
+        "summary_zh": "公司在当地统治者许可下建立并营造据点；仅表达有据堡垒局部治理，不代表今金奈整市或科罗曼德尔海岸",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://searcharchives.bl.uk/catalog/036-000178601"
+        ],
+        "related_event_ids": [
+          "1630S-E020",
+          "1680S-E029",
+          "1680S-E034"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-hooghly-1651",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.4,
+          22.9
+        ]
+      },
+      "properties": {
+        "name": "胡格利 · 莫卧儿辖下孟加拉英国商馆",
+        "start_year": 1651,
+        "display_through_year": 1685,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "公司取得商馆与棉布贸易机会，贸易连续性仅截至已知1686—90冲突前；不构成孟加拉主权",
+        "summary_zh": "公司取得商馆与棉布贸易机会，贸易连续性仅截至已知1686—90冲突前；不构成孟加拉主权",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1650S-E033"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-kasimbazar-1658",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.28,
+          24.11
+        ]
+      },
+      "properties": {
+        "name": "卡西姆巴扎尔 · 地方纺织商馆",
+        "start_year": 1658,
+        "display_through_year": 1658,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "公司依赖孟加拉手工业、印度商人及莫卧儿地方许可",
+        "summary_zh": "公司依赖孟加拉手工业、印度商人及莫卧儿地方许可",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1650S-E035"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-sthelena-1659",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.71,
+          -15.96
+        ]
+      },
+      "properties": {
+        "name": "圣赫勒拿 · 东印度公司岛上定居管理",
+        "start_year": 1659,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "公司地方据点/治理核心 · 非现代城界",
+        "description": "有据东印度公司岛屿定居经营；地点图标并非历史岛界或持有地籍界线",
+        "summary_zh": "有据东印度公司岛屿定居经营；地点图标并非历史岛界或持有地籍界线",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://www.sainthelena.gov.sh/wp-content/uploads/2017/08/Appendix-11.1-Cultural-Heritage-Detailed-Assessment.pdf"
+        ],
+        "related_event_ids": [
+          "1650S-E036"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-bencoolen-1687",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.26,
+          -3.79
+        ]
+      },
+      "properties": {
+        "name": "明古连 · 东印度公司Fort York据点",
+        "start_year": 1687,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "公司地方据点/治理核心 · 非现代城界",
+        "description": "Fort York据点由公司经营，并非苏门答腊西岸全部成为英国领土",
+        "summary_zh": "Fort York据点由公司经营，并非苏门答腊西岸全部成为英国领土",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1680S-E033"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-masulipatnam-1689",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.13,
+          16.18
+        ]
+      },
+      "properties": {
+        "name": "马苏利帕特南 · 莫卧儿军事压力使英商撤出",
+        "start_year": 1689,
+        "display_through_year": 1689,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "莫卧儿方面军事反制和商馆丧失，不是英国当年扩张",
+        "summary_zh": "莫卧儿方面军事反制和商馆丧失，不是英国当年扩张",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1680S-E035"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-fortdavid-1692",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.77,
+          11.75
+        ]
+      },
+      "properties": {
+        "name": "圣大卫堡 · 科罗曼德尔公司设防据点",
+        "start_year": 1692,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "公司地方据点/治理核心 · 非现代城界",
+        "description": "有据具名堡垒不意味着对现代古德洛尔全部土地拥有确切统治界线",
+        "summary_zh": "有据具名堡垒不意味着对现代古德洛尔全部土地拥有确切统治界线",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1690S-E053"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-anjengo-1694",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.76,
+          8.66
+        ]
+      },
+      "properties": {
+        "name": "安真戈 · 公司获当地贸易定居许可",
+        "start_year": 1694,
+        "display_through_year": 1694,
+        "display_kind": "economic_network",
+        "label_type": "公司有据贸易和融资网络 · 非主权",
+        "description": "准许贸易和定居，不能推成英王获得马拉巴尔海岸主权",
+        "summary_zh": "准许贸易和定居，不能推成英王获得马拉巴尔海岸主权",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1690S-E056"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eic-sutanuti-1699",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.37,
+          22.61
+        ]
+      },
+      "properties": {
+        "name": "苏塔努蒂 · 公司商站与威廉堡项目",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "公司地方据点/治理核心 · 非现代城界",
+        "description": "历史苏塔努蒂市镇参考点，不能等同后世加尔各答的全部行政市域",
+        "summary_zh": "历史苏塔努蒂市镇参考点，不能等同后世加尔各答的全部行政市域",
+        "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
+        "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1690S-E059"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T12"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-ulster-1609",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.32,
+          54.998
+        ]
+      },
+      "properties": {
+        "name": "阿尔斯特 · 1609年王室种植园及地产重划计划",
+        "start_year": 1609,
+        "display_through_year": 1619,
+        "display_kind": "land_dispossession",
+        "label_type": "土地征收、法规或地权争讼 · 参考地点",
+        "description": "种植园土地分配与租户排除政策的地区级参考，绝不等于阿尔斯特每块地已实际移交",
+        "summary_zh": "种植园土地分配与租户排除政策的地区级参考，绝不等于阿尔斯特每块地已实际移交",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://www.proni.gov.uk/files/proni/2025-12/Plantations%20in%20Ulster.pdf",
+          "https://ulsterhistoricalfoundation.com/ulster-plantation/plantation-people/the-irish-and-the-plantation"
+        ],
+        "related_event_ids": [
+          "1600S-E017",
+          "1600S-E010",
+          "1610S-E022"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-galway-1635",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.052,
+          53.274
+        ]
+      },
+      "properties": {
+        "name": "戈尔韦 · 温特沃斯王室产权陪审与罚款",
+        "start_year": 1635,
+        "display_through_year": 1635,
+        "display_kind": "land_dispossession",
+        "label_type": "土地征收、法规或地权争讼 · 参考地点",
+        "description": "拒承认王室产权主张的陪审员遭惩罚，地点为现代城镇参考，未据此创建没收地块",
+        "summary_zh": "拒承认王室产权主张的陪审员遭惩罚，地点为现代城镇参考，未据此创建没收地块",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://www.dib.ie/biography/wentworth-sir-thomas-a8968"
+        ],
+        "related_event_ids": [
+          "1630S-E007"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-clonmel-1650",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.703,
+          52.355
+        ]
+      },
+      "properties": {
+        "name": "克隆梅尔 · 爱尔兰守军抵抗共和国军",
+        "start_year": 1650,
+        "display_through_year": 1650,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "共和国军攻城受抵抗，此标识不是控制全郡或战斗真实半径",
+        "summary_zh": "共和国军攻城受抵抗，此标识不是控制全郡或战斗真实半径",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://www.heritageweek.ie/projects/never-so-hot-a-storm-the-1650-siege-of-clonmel"
+        ],
+        "related_event_ids": [
+          "1650S-E002"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-kilkenny-1650",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.253,
+          52.655
+        ]
+      },
+      "properties": {
+        "name": "基尔肯尼 · 爱尔兰同盟政治中心陷落",
+        "start_year": 1650,
+        "display_through_year": 1650,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "英格兰共和军攻占具名城市，不代表周边乡村当年全部缴械",
+        "summary_zh": "英格兰共和军攻占具名城市，不代表周边乡村当年全部缴械",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://www.maynoothuniversity.ie/research/spotlight-research/why-did-oliver-cromwell-end-ireland-first-place",
+          "https://historyireland.com/siege-in-ireland-1641-53-blood-and-stone/"
+        ],
+        "related_event_ids": [
+          "1650S-E005"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-limerick-1651",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.626,
+          52.663
+        ]
+      },
+      "properties": {
+        "name": "利默里克 · 围城饥荒与守城抵抗",
+        "start_year": 1651,
+        "display_through_year": 1651,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "艾尔顿部队围困利默里克，受损范围无法从单个城镇参考坐标推算",
+        "summary_zh": "艾尔顿部队围困利默里克，受损范围无法从单个城镇参考坐标推算",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://historyireland.com/siege-in-ireland-1641-53-blood-and-stone/",
+          "https://historyireland.com/hugh-dubh-oneill-cromwells-stoutest-enemy/"
+        ],
+        "related_event_ids": [
+          "1650S-E008"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-galway-1652",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.056,
+          53.271
+        ]
+      },
+      "properties": {
+        "name": "戈尔韦 · 1652年封锁后投降",
+        "start_year": 1652,
+        "display_through_year": 1652,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "城镇战役成果不同于周边没收政策和所有地产实际交割",
+        "summary_zh": "城镇战役成果不同于周边没收政策和所有地产实际交割",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://historyireland.com/siege-in-ireland-1641-53-blood-and-stone/",
+          "https://historyireland.com/comprehending-contemplation-the-poor-clare-order-in-ireland/"
+        ],
+        "related_event_ids": [
+          "1650S-E013"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-boyne-1690",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.416,
+          53.724
+        ]
+      },
+      "properties": {
+        "name": "博因河 · 1690年威廉派与詹姆斯派军事冲突",
+        "start_year": 1690,
+        "display_through_year": 1690,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "奥尔德布里奇附近有据战斗地点，但虚线圈并非实测战场范围",
+        "summary_zh": "奥尔德布里奇附近有据战斗地点，但虚线圈并非实测战场范围",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/battle-boyne",
+          "https://heritageireland.ie/places-to-visit/battle-of-the-boyne-visitor-centre-oldbridge-estate/"
+        ],
+        "related_event_ids": [
+          "1690S-E001"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-aughrim-1691",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.31,
+          53.297
+        ]
+      },
+      "properties": {
+        "name": "奥格里姆 · 威廉派战役",
+        "start_year": 1691,
+        "display_through_year": 1691,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "威廉派击败詹姆斯派主力，屏幕级影响圈不是史料绘定的战线",
+        "summary_zh": "威廉派击败詹姆斯派主力，屏幕级影响圈不是史料绘定的战线",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/battle-boyne"
+        ],
+        "related_event_ids": [
+          "1690S-E047"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-athlone-1691",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.942,
+          53.423
+        ]
+      },
+      "properties": {
+        "name": "阿斯隆 · 香农河通道争夺",
+        "start_year": 1691,
+        "display_through_year": 1691,
+        "display_kind": "military_impact",
+        "label_type": "具名战事影响 · 非测绘战场",
+        "description": "城市被威廉派攻取不等于整个西爱尔兰已经失地",
+        "summary_zh": "城市被威廉派攻取不等于整个西爱尔兰已经失地",
+        "scope_zh": "战争、地产和制度影响的具名地理锚点",
+        "actor_zh": "爱尔兰各方、英格兰共和／王室政体",
+        "source_urls": [
+          "https://historyireland.com/the-battle-of-aughrim/"
+        ],
+        "related_event_ids": [
+          "1690S-E048"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "named_place_reference_not_historic_district",
+        "display_scope": "evidence_specific_site_or_documented_political_presence",
+        "episode_basis": "specific_related_event_id_and_historical_institutional_register",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-dublin-land-statutes-and-restoration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.267,
+          53.344
+        ]
+      },
+      "properties": {
+        "name": "爱尔兰都柏林 · 没产、偿地、复辟再分配及1695年法律",
+        "start_year": 1642,
+        "display_through_year": 1698,
+        "display_kind": "land_dispossession",
+        "label_type": "土地剥夺政策／地权与法令影响 · 非地块",
+        "description": "不同年份适用不同法规，具体年度见按年提示；此位置是区域级参考点，并非具体地产界址",
+        "summary_zh": "参考性政策作用地点，请查看当前年份的法令或具体历史事件",
+        "actor_zh": "英格兰议会／共和政府／爱尔兰王室与受影响人士",
+        "scope_zh": "爱尔兰立法及被剥夺地产权益的政策问题（具体资格因地而异），不等于全岛每块土地实际遭没收",
+        "source_urls": [
+          "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-ireland-1509-1782/",
+          "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/civil-war/",
+          "https://academic.oup.com/manchester-scholarship-online/book/31525",
+          "https://constitution.org/1-History/eng/conpur094.htm",
+          "https://celt.ucc.ie/document/E660001-001/",
+          "https://www.downsurvey.ie/about/",
+          "https://www.downsurvey.ie/",
+          "https://link.springer.com/chapter/10.1007/978-3-030-74373-4_2",
+          "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/securing-the-protestant-interest-the-origins-and-purpose-of-the-penal-laws-of-1695/1C3FBF2A0BDC857775422FA48342B976",
+          "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/bishops-banishment-act-of-1697-9-will-iii-c-1/D91194BF6F991DD9003ECA9D9F0BDFC8"
+        ],
+        "related_event_ids": [
+          "1640S-E029",
+          "1650S-E012",
+          "1650S-E016",
+          "1650S-E031",
+          "1650S-E021",
+          "1660S-E010",
+          "1660S-E025",
+          "1690S-E060",
+          "1690S-E062"
+        ],
+        "episodes": [
+          {
+            "start_year": 1642,
+            "end_year": 1642,
+            "description": "1642年《冒险家法》预抵押未来土地；只是筹资和没收计划，不是实际交割",
+            "related_event_ids": [
+              "1640S-E029"
+            ],
+            "source_urls": [
+              "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-ireland-1509-1782/",
+              "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/civil-war/",
+              "https://academic.oup.com/manchester-scholarship-online/book/31525"
+            ]
+          },
+          {
+            "start_year": 1652,
+            "end_year": 1653,
+            "description": "1652安置法与1653军饷偿地；全岛政策牵涉不同资格土地持有人，不能视为各地实际已没收",
+            "related_event_ids": [
+              "1650S-E012",
+              "1650S-E016"
+            ],
+            "source_urls": [
+              "https://constitution.org/1-History/eng/conpur094.htm",
+              "https://celt.ucc.ie/document/E660001-001/",
+              "https://www.downsurvey.ie/about/"
+            ]
+          },
+          {
+            "start_year": 1654,
+            "end_year": 1659,
+            "description": "1654 Civil Survey与1656 Down Survey；测绘与权属登记服务再分配，不能直接标成已交割庄园",
+            "related_event_ids": [
+              "1650S-E031",
+              "1650S-E021"
+            ],
+            "source_urls": [
+              "https://www.downsurvey.ie/about/",
+              "https://www.downsurvey.ie/"
+            ]
+          },
+          {
+            "start_year": 1662,
+            "end_year": 1665,
+            "description": "1662复辟安置法与1665解释法：多类申请人的土地权利重审，法定资格不等于实际恢复占有",
+            "related_event_ids": [
+              "1660S-E010",
+              "1660S-E025"
+            ],
+            "source_urls": [
+              "https://celt.ucc.ie/document/E660001-001/"
+            ]
+          },
+          {
+            "start_year": 1695,
+            "end_year": 1698,
+            "description": "1695—1697爱尔兰宗教限制制度：对天主教教育、武器和神职人员限制；不是新的一次全岛没产判决",
+            "related_event_ids": [
+              "1690S-E060",
+              "1690S-E062"
+            ],
+            "source_urls": [
+              "https://link.springer.com/chapter/10.1007/978-3-030-74373-4_2",
+              "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/securing-the-protestant-interest-the-origins-and-purpose-of-the-penal-laws-of-1695/1C3FBF2A0BDC857775422FA48342B976",
+              "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/bishops-banishment-act-of-1697-9-will-iii-c-1/D91194BF6F991DD9003ECA9D9F0BDFC8"
+            ]
+          }
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "historical legal-reach reference point based on original records; fixed screen-pixel dashed halo, explicitly NOT exact area or estate boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "regional_administrative_reference_not_historic_cadastral_boundary",
+        "display_scope": "policy_jurisdiction_or_documented_regional_issue_not_inferred_individual_estates",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-connacht-title-transplantation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.05,
+          53.27
+        ]
+      },
+      "properties": {
+        "name": "康诺特地区 · 王室地权调查与共和政体迁居政策",
+        "start_year": 1635,
+        "display_through_year": 1659,
+        "display_kind": "land_dispossession",
+        "label_type": "土地剥夺政策／地权与法令影响 · 非地块",
+        "description": "不同年份适用不同法规，具体年度见按年提示；此位置是区域级参考点，并非具体地产界址",
+        "summary_zh": "参考性政策作用地点，请查看当前年份的法令或具体历史事件",
+        "actor_zh": "英格兰议会／共和政府／爱尔兰王室与受影响人士",
+        "scope_zh": "爱尔兰立法及被剥夺地产权益的政策问题（具体资格因地而异），不等于全岛每块土地实际遭没收",
+        "source_urls": [
+          "https://www.dib.ie/biography/wentworth-sir-thomas-a8968",
+          "https://www.cambridge.org/core/books/abs/conquest-and-land-in-ireland/land-settlement-under-threat-16531655/601348974E794A29C9DF70A5839BA7E3",
+          "https://www.cambridge.org/core/books/abs/conquest-and-land-in-ireland/enforcing-transplantation-16551659/13E2944447C6124D47A92AAE2A55D4A5"
+        ],
+        "related_event_ids": [
+          "1630S-E006",
+          "1650S-E037"
+        ],
+        "episodes": [
+          {
+            "start_year": 1635,
+            "end_year": 1635,
+            "description": "温特沃斯在康诺特推动王室地权调查，陪审过程与确认王室主张并不证明每块地已经实际过户",
+            "related_event_ids": [
+              "1630S-E006"
+            ],
+            "source_urls": [
+              "https://www.dib.ie/biography/wentworth-sir-thomas-a8968"
+            ]
+          },
+          {
+            "start_year": 1653,
+            "end_year": 1659,
+            "description": "1653—1659共和国强制迁往康诺特的政策涉及不同地主和当事人；迁居命令不等于每人实际迁入指定地块",
+            "related_event_ids": [
+              "1650S-E037"
+            ],
+            "source_urls": [
+              "https://www.cambridge.org/core/books/abs/conquest-and-land-in-ireland/land-settlement-under-threat-16531655/601348974E794A29C9DF70A5839BA7E3",
+              "https://www.cambridge.org/core/books/abs/conquest-and-land-in-ireland/enforcing-transplantation-16551659/13E2944447C6124D47A92AAE2A55D4A5"
+            ]
+          }
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "historical legal-reach reference point based on original records; fixed screen-pixel dashed halo, explicitly NOT exact area or estate boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "regional_administrative_reference_not_historic_cadastral_boundary",
+        "display_scope": "policy_jurisdiction_or_documented_regional_issue_not_inferred_individual_estates",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "irl-limerick-treaty-property-1691",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.626,
+          52.663
+        ]
+      },
+      "properties": {
+        "name": "利默里克 · 1691年条约中的有条件地产保障",
+        "start_year": 1691,
+        "display_through_year": 1692,
+        "display_kind": "land_dispossession",
+        "label_type": "土地剥夺政策／地权与法令影响 · 非地块",
+        "description": "不同年份适用不同法规，具体年度见按年提示；此位置是区域级参考点，并非具体地产界址",
+        "summary_zh": "参考性政策作用地点，请查看当前年份的法令或具体历史事件",
+        "actor_zh": "英格兰议会／共和政府／爱尔兰王室与受影响人士",
+        "scope_zh": "爱尔兰立法及被剥夺地产权益的政策问题（具体资格因地而异），不等于全岛每块土地实际遭没收",
+        "source_urls": [
+          "https://celt.ucc.ie/document/E703001-010/index.html",
+          "https://celt.ucc.ie/document/E703001-015/E703001-015.bib",
+          "https://celt.ucc.ie/document/E703001-016/"
+        ],
+        "related_event_ids": [
+          "1690S-E009",
+          "1690S-E011"
+        ],
+        "episodes": [
+          {
+            "start_year": 1691,
+            "end_year": 1692,
+            "description": "1691条约和1692确认材料许诺具有资格的参与者保留部分产权；签约并不等于所有土地立即归还",
+            "related_event_ids": [
+              "1690S-E009",
+              "1690S-E011"
+            ],
+            "source_urls": [
+              "https://celt.ucc.ie/document/E703001-010/index.html",
+              "https://celt.ucc.ie/document/E703001-015/E703001-015.bib",
+              "https://celt.ucc.ie/document/E703001-016/"
+            ]
+          }
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "historical legal-reach reference point based on original records; fixed screen-pixel dashed halo, explicitly NOT exact area or estate boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "regional_administrative_reference_not_historic_cadastral_boundary",
+        "display_scope": "policy_jurisdiction_or_documented_regional_issue_not_inferred_individual_estates",
+        "related_story_ids": [
+          "E6-T03-LAND-1642-1698"
+        ]
       }
     }
   ]

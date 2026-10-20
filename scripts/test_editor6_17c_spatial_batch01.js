@@ -26,7 +26,7 @@ for(let d=1600;d<=1690;d+=10){
 assert.equal(routeCount,8);
 const geo=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(geo.type,'FeatureCollection');
-assert.equal(geo.features.length,12);
+assert.equal(geo.features.length,44);
 assert.equal(geo.metadata.confirmed_territorial_polygons,0);
 const keys=new Set();
 for(const f of geo.features){
@@ -35,20 +35,30 @@ for(const f of geo.features){
  assert.equal(f.geometry.type,'Point','one uncertain center only, no fabricated areal border');
  assert(f.geometry.coordinates.length===2&&Math.abs(f.geometry.coordinates[0])<=180&&Math.abs(f.geometry.coordinates[1])<=90);
  assert(p.start_year>=1600&&p.display_through_year<=1699&&p.display_through_year>=p.start_year);
- assert(['economic_network','military_impact','local_governance'].includes(p.display_kind));
+ assert(['economic_network','military_impact','local_governance','land_dispossession'].includes(p.display_kind));
  assert(p.source_urls?.length&&p.source_urls.every(url=>/^https:\/\//.test(url)));
  assert(p.historical_boundary_confirmed===false&&p.fill_authorized===false&&p.territorial_claim===false);
  assert(p.area_sqkm===null&&p.exclude_from_area_aggregation===true);
  assert(/screen-pixel/.test(p.mapping_method));
+ if(p.episodes){
+  assert(p.episodes.length>0,'episodic legal cues cannot imply permanently active scope');
+  for(const ep of p.episodes){
+   assert(ep.start_year>=p.start_year&&ep.end_year<=p.display_through_year);
+   assert(ep.source_urls?.length&&ep.related_event_ids?.length);
+   assert(ep.source_urls.every(u=>/^https:\/\//.test(u)));
+  }
+ }
 }
 const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
 assert(js.includes('renderSeventeenthSpatialEvidence();'),'17C spatial render must be called');
 assert(js.includes("renderEventList();renderPoints();renderSeventeenthSpatialEvidence();"),'17C year slider must draw historic spatial cues');
 assert(!js.includes('ds.routes?.length||ds.places?.length'),'17C must allow referenced route data');
+assert(js.includes("'land_dispossession'"),'Ireland land influence category must be actually rendered');
+assert(js.includes("p.episodes.find"),'past legislation cannot be shown without dated episodes');
 assert(js.includes("seventeenthSpatialEvidence=spatialData;"),'17C source geometry must be validated and loaded');
 const s=load('data/stories/serial/index.json').topics.find(t=>t.id==='E6-T07-BARBADOS');
 const manuscript=load(s.article_file);
 assert(s.status==='published'&&s.publication_review==='approved');
 assert(s.event_ids.length>=10&&manuscript.sections.length>=8);
 assert(manuscript.sections.flatMap(x=>x.paragraphs).join('').length>=3000);
-console.log('PASS editor6 17C: '+routeCount+' route ties; '+geo.features.length+' evidenced site-level cues; 8-section Barbados story; zero invented area polygons');
+console.log('PASS editor6 17C: '+routeCount+' source linked routes; '+geo.features.length+' vetted symbolic hints incl Irish land dispossession and EIC commercial nodes; no fabricated land polygons');
