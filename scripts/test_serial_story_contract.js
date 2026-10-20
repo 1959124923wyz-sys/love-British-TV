@@ -10,7 +10,7 @@ const old=load('data/stories/index.json');
 const reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert.equal(serial.schema,'atlas-serial-stories-v1');
 assert.equal(serial.navigation_contract,'existing_decade_chapters_unchanged');
-assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E6-T04-GLENCOE','E6-T07-BARBADOS','E6-T12'],'only the three explicitly audited stories may publish');
+assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E6-T03-LAND-1642-1698','E6-T04-GLENCOE','E6-T07-BARBADOS','E6-T12'] ,'only explicitly editor-audited completed story stages may publish');
 const canonicalFamilies=Array.from({length:15},(_,i)=>'E6-T'+String(i+1).padStart(2,'0'));
 const knownIds=new Set(serial.topics.map(t=>t.id));
 assert.equal(knownIds.size,serial.topics.length,'unique IDs required');
@@ -23,6 +23,8 @@ assert.deepEqual(glencoe.event_ids,['E6-GLENCOE-1692'],'1692 year slider is the 
 const barbados=serial.topics.find(t=>t.id==='E6-T07-BARBADOS');
 assert(barbados&&barbados.parent_topic_id==='E6-T07'&&barbados.status==='published'&&barbados.publication_review==='approved');
 assert(barbados.event_ids.length>=8,'Barbados topic must connect across multiple decades');
+const irelandLand=serial.topics.find(t=>t.id==='E6-T03-LAND-1642-1698');
+assert(irelandLand&&irelandLand.parent_topic_id==='E6-T03'&&irelandLand.status==='published'&&irelandLand.publication_review==='approved'&&irelandLand.event_ids.length>=20);
 const eastIndia=serial.topics.find(t=>t.id==='E6-T12');
 assert(eastIndia&&eastIndia.status==='published'&&eastIndia.publication_review==='approved');
 assert(eastIndia.event_ids.length>=30,'EIC long story must be joined to the actual historic event records');
