@@ -44,7 +44,7 @@ try:
     wait.until(lambda d:js("return document.querySelectorAll('#map .atlas-17c-evidence-cue').length>=2"))
     assert js("return document.querySelectorAll('#map .atlas-voyage-hit').length>=2")
     jump(1692)
-    wait.until(lambda d:js("return !!document.querySelector('#eventList [data-eid=\\"1690S-E016\\"]')"))
+    wait.until(lambda d:js("return [...document.querySelectorAll('#eventList [data-eid]')].some(x=>x.dataset.eid==='1690S-E016')"))
     browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1690S-E016"]').click()
     wait.until(lambda d:js("return !!document.querySelector('#dossierBody .major-story-enter')"))
     browser.find_element(By.CSS_SELECTOR,'#dossierBody .major-story-enter').click()
