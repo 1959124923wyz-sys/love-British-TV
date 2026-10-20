@@ -5,9 +5,9 @@ const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.
 const g=json('data/seventeenth-century-regional-studies-1600-1699.geojson');
 assert.equal(g.type,'FeatureCollection');
 assert.equal(g.metadata.schema,'atlas-17c-regional-studies-v1');
-assert.equal(g.features.length,14);
-assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,9);
-assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,5);
+assert.equal(g.features.length,19);
+assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,13);
+assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,6);
 assert.equal(g.metadata.total_confirmed_historical_control_polygons,0);
 const existing=json('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(existing.features.length,44,'old 17C site-level layer must remain intact');
@@ -57,7 +57,7 @@ for(const f of g.features){
  }
 }
 const byYear=y=>g.features.filter(f=>f.properties.start_year<=y&&y<=f.properties.end_year);
-for(const [y,n] of [[1609,0],[1610,1],[1613,2],[1616,1],[1622,2],[1649,0],[1650,1],[1653,3],[1658,2],[1690,1],[1691,1],[1692,0]]){
+for(const [y,n] of [[1609,1],[1610,1],[1613,2],[1616,1],[1622,2],[1635,1],[1649,1],[1650,1],[1653,3],[1658,2],[1690,3],[1691,1],[1692,0]]){
  assert.equal(byYear(y).length,n,'schematic activity years must not be interpolated: '+y);
 }
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
@@ -66,4 +66,4 @@ for(const x of ['function renderSeventeenthRegionalStudies(){','groups.seventeen
  assert(app.includes(x),'missing conservative 17C frontend branch: '+x);
 }
 assert(app.includes("groups.seventeenthStudies.clearLayers();"),'switching back to 16C must erase later ranges');
-console.log('PASS: 9 non-sovereign dashed locality envelopes, 5 zero-waypoint relation lines, year scopes & 44 earlier evidence points preserved');
+console.log('PASS: 13 non-sovereign dashed locality envelopes, 6 zero-waypoint relation lines, year scopes & 44 earlier evidence points preserved');
