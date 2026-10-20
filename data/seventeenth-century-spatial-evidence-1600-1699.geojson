@@ -1,0 +1,408 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "17世纪第一批地名与军事/经济影响提示点",
+    "status": "source_linked_low_geometry_precision",
+    "period": [
+      1600,
+      1699
+    ],
+    "feature_count": 12,
+    "confirmed_territorial_polygons": 0,
+    "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "aceh-trade-1602",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.32,
+          5.55
+        ]
+      },
+      "properties": {
+        "name": "亚齐 · 东印度公司贸易交涉参考",
+        "start_year": 1602,
+        "display_through_year": 1602,
+        "display_kind": "economic_network",
+        "label_type": "有据经济活动地点 · 非领土",
+        "description": "1602年兰开斯特航次交涉节点；当地统治权属于苏门答腊地方政权，英国未取得亚齐主权。",
+        "summary_zh": "1602年兰开斯特航次交涉节点；当地统治权属于苏门答腊地方政权，英国未取得亚齐主权。",
+        "source_urls": [
+          "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Lancaster,_James"
+        ],
+        "related_event_ids": [
+          "1600S-E014"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bantam-trade-1602",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.16,
+          -6.03
+        ]
+      },
+      "properties": {
+        "name": "万丹 · 东印度公司早期贸易据点参考",
+        "start_year": 1602,
+        "display_through_year": 1602,
+        "display_kind": "economic_network",
+        "label_type": "有据经济活动地点 · 非领土",
+        "description": "1602年东印度公司航次贸易联系，绝非英格兰控制整个爪哇或贸易所在城市。",
+        "summary_zh": "1602年东印度公司航次贸易联系，绝非英格兰控制整个爪哇或贸易所在城市。",
+        "source_urls": [
+          "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Lancaster,_James"
+        ],
+        "related_event_ids": [
+          "1600S-E014"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "jamestown-governance-1607",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.778,
+          37.209
+        ]
+      },
+      "properties": {
+        "name": "詹姆斯敦 · 英格兰定居与公司行政地点",
+        "start_year": 1607,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "有据局部治理/定居地点 · 非历史界线",
+        "description": "1607年建立英格兰常住殖民据点，屏幕圆圈仅为具名殖民聚落参考，不代表弗吉尼亚整体原住民领土被占。",
+        "summary_zh": "1607年建立英格兰常住殖民据点，屏幕圆圈仅为具名殖民聚落参考，不代表弗吉尼亚整体原住民领土被占。",
+        "source_urls": [
+          "https://www.nps.gov/jame/learn/historyculture/the-virginia-company-of-london.htm"
+        ],
+        "related_event_ids": [
+          "1600S-E004"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "barbados-holetown-1627",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.641,
+          13.194
+        ]
+      },
+      "properties": {
+        "name": "巴巴多斯 · 早期定居与殖民土地活动",
+        "start_year": 1627,
+        "display_through_year": 1639,
+        "display_kind": "local_governance",
+        "label_type": "有据局部治理/定居地点 · 非历史界线",
+        "description": "1627年英格兰殖民定居。现代海岸地名仅作岛上参考点，未据此填充全岛实控面积。",
+        "summary_zh": "1627年英格兰殖民定居。现代海岸地名仅作岛上参考点，未据此填充全岛实控面积。",
+        "source_urls": [
+          "https://www.barbadosparliament.com/main_page_content/show_content/13"
+        ],
+        "related_event_ids": [
+          "1620S-E018"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mystic-1637",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.967,
+          41.354
+        ]
+      },
+      "properties": {
+        "name": "米斯蒂克 · 皮阔特战争与屠杀地点参考",
+        "start_year": 1637,
+        "display_through_year": 1637,
+        "display_kind": "military_impact",
+        "label_type": "有据军事行动地点 · 屏幕影响提示",
+        "description": "1637年英格兰殖民者与莫希干、纳拉甘西特盟军攻击皮阔特寨堡；具名现代地区参考不代表原寨堡精确边界。",
+        "summary_zh": "1637年英格兰殖民者与莫希干、纳拉甘西特盟军攻击皮阔特寨堡；具名现代地区参考不代表原寨堡精确边界。",
+        "source_urls": [
+          "https://www.nps.gov/subjects/teachingwithhistoricplaces/upload/Teaching-American-Indian-History-with-Primary-Sources-Compliant-1-2.pdf"
+        ],
+        "related_event_ids": [],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "barbados-bridgetown-sugar",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.614,
+          13.103
+        ]
+      },
+      "properties": {
+        "name": "巴巴多斯港市与糖业奴役经济参考",
+        "start_year": 1640,
+        "display_through_year": 1699,
+        "display_kind": "economic_network",
+        "label_type": "有据经济活动地点 · 非领土",
+        "description": "1640年代起巴巴多斯制糖种植园扩张与对外贸易、被奴役者劳动密不可分。本符号不是种植园或糖业影响面积的实测边界。",
+        "summary_zh": "1640年代起巴巴多斯制糖种植园扩张与对外贸易、被奴役者劳动密不可分。本符号不是种植园或糖业影响面积的实测边界。",
+        "source_urls": [
+          "https://whc.unesco.org/en/tentativelists/5942/"
+        ],
+        "related_event_ids": [
+          "1640S-E006"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "drogheda-1649",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.351,
+          53.714
+        ]
+      },
+      "properties": {
+        "name": "德罗赫达 · 1649年共和国军袭城影响地点",
+        "start_year": 1649,
+        "display_through_year": 1649,
+        "display_kind": "military_impact",
+        "label_type": "有据军事行动地点 · 屏幕影响提示",
+        "description": "1649年德罗赫达攻陷；局部屏幕提示不等于周边每处村落受袭或英格兰长期控制区。",
+        "summary_zh": "1649年德罗赫达攻陷；局部屏幕提示不等于周边每处村落受袭或英格兰长期控制区。",
+        "source_urls": [
+          "https://www.dib.ie/biography/cromwell-oliver-a2209"
+        ],
+        "related_event_ids": [
+          "1640S-E016"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wexford-1649",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.462,
+          52.335
+        ]
+      },
+      "properties": {
+        "name": "韦克斯福德 · 1649年共和国军袭城影响地点",
+        "start_year": 1649,
+        "display_through_year": 1649,
+        "display_kind": "military_impact",
+        "label_type": "有据军事行动地点 · 屏幕影响提示",
+        "description": "1649年韦克斯福德攻陷及杀戮，现代城镇位置提示，不代表史料确认的战火范围。",
+        "summary_zh": "1649年韦克斯福德攻陷及杀戮，现代城镇位置提示，不代表史料确认的战火范围。",
+        "source_urls": [
+          "https://www.dib.ie/biography/cromwell-oliver-a2209"
+        ],
+        "related_event_ids": [
+          "1640S-E017"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santo-domingo-1655",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.887,
+          18.471
+        ]
+      },
+      "properties": {
+        "name": "圣多明各 · 护国公舰队1655年失败进攻",
+        "start_year": 1655,
+        "display_through_year": 1655,
+        "display_kind": "military_impact",
+        "label_type": "有据军事行动地点 · 屏幕影响提示",
+        "description": "英军进攻圣多明各遭失败，并未获得对该城长期治理；不绘制占领面。",
+        "summary_zh": "英军进攻圣多明各遭失败，并未获得对该城长期治理；不绘制占领面。",
+        "source_urls": [
+          "https://academic.oup.com/histres/article/94/264/324/6259901"
+        ],
+        "related_event_ids": [
+          "1650S-E038"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "jamaica-spanish-town-1655",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.994
+        ]
+      },
+      "properties": {
+        "name": "西班牙镇 · 1655年牙买加征服核心参考",
+        "start_year": 1655,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "有据局部治理/定居地点 · 非历史界线",
+        "description": "1655年英格兰军队占据牙买加西班牙殖民行政中心一带；屏幕位置符号不表示即控制全岛山地和马龙社群。",
+        "summary_zh": "1655年英格兰军队占据牙买加西班牙殖民行政中心一带；屏幕位置符号不表示即控制全岛山地和马龙社群。",
+        "source_urls": [
+          "https://www.jstor.org/stable/j.ctt1n7qkwf"
+        ],
+        "related_event_ids": [
+          "1650S-E018"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bombay-1668",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83,
+          18.93
+        ]
+      },
+      "properties": {
+        "name": "孟买岛 · 东印度公司地方治理据点参考",
+        "start_year": 1668,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "有据局部治理/定居地点 · 非历史界线",
+        "description": "1668年公司取得孟买治理权，与此前及同期莫卧儿辖下商站贸易许可不同；现代城市坐标不能表示历史岛屿地形范围。",
+        "summary_zh": "1668年公司取得孟买治理权，与此前及同期莫卧儿辖下商站贸易许可不同；现代城市坐标不能表示历史岛屿地形范围。",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/036-000178601"
+        ],
+        "related_event_ids": [],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ouidah-hannibal-1694",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.085,
+          6.362
+        ]
+      },
+      "properties": {
+        "name": "维达 · Hannibal贩奴航次装运地区",
+        "start_year": 1694,
+        "display_through_year": 1694,
+        "display_kind": "economic_network",
+        "label_type": "有据经济活动地点 · 非领土",
+        "description": "1694年Hannibal航次经维达装运被奴役者。英格兰商业参与不构成对维达王国及其地区的政治统治。",
+        "summary_zh": "1694年Hannibal航次经维达装运被奴役者。英格兰商业参与不构成对维达王国及其地区的政治统治。",
+        "source_urls": [
+          "https://books.google.bj/books?id=qFJBAAAAcAAJ"
+        ],
+        "related_event_ids": [
+          "1690S-E024"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    }
+  ]
+}
