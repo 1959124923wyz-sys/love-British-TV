@@ -1,0 +1,65 @@
+# 16世纪重大历史专题、影响区与地图互动：永久制作范式
+
+**2026-10-21｜编辑审核纲领 v1.0｜适用所有新专题与地图研究｜桌面优先。**
+
+**源项目中真正已上线的16世纪范例**是本纲领的唯一代码参照，不再允许把没有正文事件超链接的纯文章当作完整“重大专题”提交。
+
+## 导览与文件
+
+- [ZIP：16世纪专题原始范例及操作规范](16C_stories_cartography_interaction_reference.zip)（自动从当前GitHub主干提取源文件、代码片段、史料研究地图及既有规范打包，仓库持续保存）。
+- 本纲领直接附于`AGENTS.md`，调查员开工前阅读；压缩包有原始示例、源代码摘录和SHA256溯源清单。
+- 主要范例：`data/stories/drake-panama-mule-train-raid-1572-1573.json`、`data/stories/munster-desmond-1579-1586.json`、`data/stories/hawkins-lovell-atlantic-enslavement-1562-1569.json`。
+- 地理范例：`data/nine-years-war-operational-impact-1594-1599.geojson`、`data/early-war-colonial-impact-1544-1575.geojson`、`data/eleventh-influence-areas-1590-1599.geojson`、`data/war-occupied-zones-1540-1549.geojson`、`data/political-relations-1570-1579.geojson`。
+- 技术范例：`js/history-stories.js`、`app.js`（ZIP摘出4个关键渲染/定位函数）、`css/history-stories.css`；测试`scripts/test_major_story_pilot.js`及后来的`scripts/test_editor7_17c_inline_story_map.js`。
+
+## 一、长篇专题必须是能导航的历史过程
+
+**结构：** 史实背景、各方动机与融资 → 有据年月的行动节点 → 非英国政治主体的抵抗与反击 → 直接战争/贸易影响 → 统治/立法/产权变化 → 受害者处境与长期后果 → 交代历史阶段结尾（不是编造历史自然终止）。
+
+- 章节ID稳定，`sections[].paragraphs`写自然、书面的历史叙述；`source_keys`按每节绑定已核来源，`sources`具作者、机构、标题、URL、原件/目录阅读深度，重大主张另列来源矩阵。档案目录≠逐页阅读；法令允许没产≠已经把每块地产交割。
+- **正文必须嵌入真实地图事件链接**，例如16世纪已发表的`[[1570S-E021|丁格尔登陆与战争爆发]]`、`[[1570S-E030|阿斯基顿遭袭]]`，这些事件都来自当前正式Atlas。链接须散布在事件发生、抵抗、转折与后果相关段落，而非只堆在文章开头。
+- 只有实际已登记的历史事件、准确对应的年份和有来源的现代具名地点才准连接；允许没有可靠位置的事件保持文字档案，不准发明坐标凑链接。**严禁往JSON正文注入HTML onclick**。
+- 新专题`data/stories/serial/index.json`母题按仓库的`published + approved`门禁审核；跨十年长篇保持同一个稳定ID和返回路径，不按十年拆成重复文章。
+
+## 二、影响区到底该怎么画
+
+| 历史对象 | 对应16世纪范例 | 表现 | 禁止推断 |
+| --- | --- | --- | --- |
+| 经核政治控制区域 | 加来城市/真正可审历史边界 | 有边界证据才实色控制面 | 地名凸包即实测边疆 |
+| 已证据点驻军/治理 | 都柏林行政中心、英军城堡 | **Point + 固定屏幕像素控制符号** | 圆半径即历史疆域面积 |
+| 具名地方军行动/破坏 | 1594–1595恩尼斯基林、1598黄渡口、1544利斯爱丁堡 | 低透明度+**虚线Polygon研究区** | 框内每处发生战斗、英国拥有全郡 |
+| 地方反抗、重新夺堡 | 九年战争按`year_stages`区分1594/1595 | 独立年份与政治主体 | 英军战败竟变英国新增殖民区 |
+| 行动顺序/航海联系 | 德雷克1572点到点，九年战争路线 | 有证方向的**虚线LineString** | 任意线是船舶GPS、现代公路或沿线受害区 |
+| 商馆/贸易与外交 | 非政治控制的公司商业关系 | 青绿点/关联线 | 公司有通商许可即在当地拥有主权 |
+
+无实际历史边线、只依靠有据具名地名制作的研究几何，强制`historical_boundary_confirmed:false`、`fill_authorized:false`、`area_sqkm:null`、`exclude_from_area_aggregation:true`，适当补`territorial_claim:false`，不得进入`colonial_polygons`，也不得生成任何虚假的平方公里数。每条多边形保留`source_ids/source_urls`、`related_event_ids`、`named_anchors`、`mapping_method`、`start_year/end_year`、`uncertainty`等。面积符号**屏幕像素单位**，不是地面公里。
+
+不同政治状态有不同配色/纹理：英国直接控制/城核、特殊属地、独立苏格兰/当地政治体、地方抵抗、公司贸易、战场等不能一色涂满。史料仅证明城市发生短期袭击，不能生成永久英国殖民行政区。
+
+**跨年代稳定控制：** 新十年必须对旧`stable_id`给出continued/ended/transferred/uncertain等去向。年滑块是当年年末状态；事件按实际年份显示，驻军/有据管治按起止时段持续。证据最后记载年不同于史实证实的撤离日期。
+
+坐标注意：GeoJSON为`[lon,lat]`，某些16世纪`atlas-*.json routes[].coords`实际是`[lat,lon]`。必须阅读前端解析器再转换，不得直接复制。
+
+## 三、16世纪已经运行的互动逻辑，必须复用
+
+1. 点击正式历史事件档案，相关重大专题入口由`HistoryStories.eventLinkMarkup`生成。
+2. `js/history-stories.js`中`renderInline`解析`[[事件ID|词句]]`，安全转义为`.story-event-link[data-story-event]`金色正文链接。
+3. **单击**根据真实目标事件`item.year`切换年轴，调用`atlasStoryBridge.focusEvent`，由`focusEventFromSidebar`执行Leaflet `map.panTo([lat,lng])`；文章保持可读，镜头平滑移动、不擅自变焦。
+4. **双击**进入原事件档案，返回按钮恢复原专题；另一个返回按钮恢复打开专题时的入口事件和年份。
+5. 空坐标/未来事件不得让地图瞬移；有证现代城市代表坐标也不等于精确战场。
+6. 17世纪跨年代地图ID查询已在PR #198修复，`app.js`的`eventById`必须查询`...serialPreviewByDecade.values()`，否则十个年代之间的链接会“点了没反应”。
+
+**沿用且不得破坏：**「版图」「事件」双开关；世纪→十年→年份时轴；事件主标记聚合与展开；既有桌面左右栏目。不为手机另造冗余交互。
+
+## 四、每位调查员和主编的最小交付清单
+
+1. 资料：逐项claim→来源编号、卷页或档案目录、阅读深度、地理证据等级。
+2. 正文：完整章节JSON、自然叙事、主要相关事件链接、注册母题索引。
+3. GIS：有据控制/地点/方向线/地方军事影响面，明确“是否真实历史边界”；不能画的存研究缺口。
+4. 年表：首次确认/结束/最后可证三个日期和每年的占领主体，跨年代连续台账。
+5. 测试：静态合同、JSON与地图语义，桌面Chromium测试实际正文链接**跨年＋镜头中心到达目标＋双击＋返回**，地图开关、无证面积、旧16世纪范例无回退。
+6. 版本：独立分支和分批commit，来源、方法及进度写HANDOFF，PR审核全绿后合并，必须确认Pages成功再称网站上线。
+
+**否决：** 只有漂亮纯文字而没有段落内地图跳转；把地名包络当英王实控；公司交易变成殖民主权；引用来源而无法追踪主张；胡乱制造船舶航迹/伤亡数据；16世纪已有点击/缩放/年轴回归失败。
+
+> 与仓库现有`docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md`、`docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md`、`docs/APPROVED_MAP_INTERACTION_STANDARD.md`、`docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md`共同执行。出现解释差异以史实及已批准UI规范为准，并记录主编裁定。
