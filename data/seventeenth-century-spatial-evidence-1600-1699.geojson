@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 44,
+    "feature_count": 46,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -18,7 +18,8 @@
       "local_governance": "浅紫虚线 · 公司地方治理与设防据点"
     },
     "source_policy": "All added anchors inherit published atlas decade event IDs, source links and original representative coordinates; source metadata is independent from area or sovereignty proof.",
-    "episode_safe_rendering": true
+    "episode_safe_rendering": true,
+    "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty."
   },
   "features": [
     {
@@ -1868,6 +1869,91 @@
         "related_story_ids": [
           "E6-T03-LAND-1642-1698"
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rac-cape-coast-castle-1665",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.24125,
+          5.10358
+        ]
+      },
+      "properties": {
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern identified named heritage fort location with fixed screen-pixel dashed cue; NOT historic fort boundary nor province-wide territorial claim",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "modern_identified_fort_site_historical_legal_or_military_event",
+        "display_scope": "single_fort_not_african_polity",
+        "related_story_ids": [
+          "E6-T13"
+        ],
+        "name": "开普海岸堡 · 英方据点与皇家非洲公司贸易总部",
+        "start_year": 1665,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "局部英方贸易堡垒／行政站 · 非整条黄金海岸主权",
+        "description": "加纳国家博物馆记英方1665年占有开普海岸堡（另有1664年纪年）；1672年皇家非洲公司承接经营，英国国家档案馆T70称其为公司西非总部。1665年前曾由瑞典、丹麦、费图当地统治者及荷兰等势力先后经营。本符号只标现代堡垒所在点，不宣称英格兰控制费图政体或黄金海岸。",
+        "summary_zh": "1660年代中期英方夺堡，1672年后为皇家非洲公司沿海枢纽；不等于周边非洲国家英国化",
+        "actor_zh": "1660年代英格兰先前贸易公司；1672后皇家非洲公司；加纳沿海费图及其他非洲政治势力",
+        "source_urls": [
+          "https://gmmb.gov.gh/cape-coast-castle-cape-coast-1653/",
+          "https://discovery.nationalarchives.gov.uk/details/r/C13807",
+          "https://www.wikidata.org/wiki/Q1254826"
+        ],
+        "related_event_ids": [
+          "1660S-E047",
+          "1670S-E007"
+        ],
+        "provenance_warning": "Related event IDs represent institutional context, not a Cape Coast seizure event ID or verified individual transported ship",
+        "publication_status": "sourced_local_site_reference_not_survey_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rac-cormantin-fort-dutch-capture-1665",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.090278,
+          5.2025
+        ]
+      },
+      "properties": {
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "modern identified named heritage fort location with fixed screen-pixel dashed cue; NOT historic fort boundary nor province-wide territorial claim",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "certainty": "modern_identified_fort_site_historical_legal_or_military_event",
+        "display_scope": "single_fort_not_african_polity",
+        "related_story_ids": [
+          "E6-T13"
+        ],
+        "name": "1665年科曼廷堡陷落 · 英方丧失黄金海岸据点",
+        "start_year": 1665,
+        "display_through_year": 1665,
+        "display_kind": "military_impact",
+        "label_type": "英荷堡垒争夺及英方失守 · 非英国扩张",
+        "description": "加纳国家博物馆确认德·鲁伊特荷兰舰队于1665年攻取此前由英商凭当地首领租借经营的科曼廷堡，后来更名Fort Amsterdam。该符号与开普海岸堡是两个不同地点，1665年英方在科曼廷失去控制，不应误写为英国扩张。",
+        "summary_zh": "1665年英方科曼廷堡被荷兰攻取；不是英国领土增加",
+        "actor_zh": "荷兰德·鲁伊特舰队与英格兰守军；原址与芳蒂地方首领租赁关系",
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-amsterdam-kormantin-abandze-1638/",
+          "https://www.wikidata.org/wiki/Q1254826"
+        ],
+        "related_event_ids": [
+          "1660S-E045"
+        ],
+        "publication_status": "sourced_event_site_reference_not_occupation_polygon"
       }
     }
   ]
