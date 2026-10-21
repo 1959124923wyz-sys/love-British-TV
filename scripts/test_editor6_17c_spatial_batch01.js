@@ -26,8 +26,14 @@ for(let d=1600;d<=1690;d+=10){
 assert.equal(routeCount,8);
 const geo=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(geo.type,'FeatureCollection');
-assert.equal(geo.features.length,44);
+assert.equal(geo.features.length,46);
 assert.equal(geo.metadata.confirmed_territorial_polygons,0);
+const cape=geo.features.find(f=>f.id==='rac-cape-coast-castle-1665');
+const lost=geo.features.find(f=>f.id==='rac-cormantin-fort-dutch-capture-1665');
+assert(cape&&lost&&cape.properties.display_kind==='local_governance'&&lost.properties.display_kind==='military_impact');
+assert.equal(lost.properties.display_through_year,1665,'Dutch capture is not a permanent British-held fort');
+assert.notDeepEqual(cape.geometry.coordinates,lost.geometry.coordinates,'two historically distinct Gold Coast forts must not share a point');
+assert.equal(cape.properties.territorial_claim,false);
 const keys=new Set();
 for(const f of geo.features){
  const p=f.properties;
