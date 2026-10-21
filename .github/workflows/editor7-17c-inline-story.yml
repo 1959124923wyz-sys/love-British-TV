@@ -1,0 +1,34 @@
+name: Editor7 17th Century Long-Story Inline Map Navigation QA
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'js/history-stories.js'
+      - 'data/stories/serial/**'
+      - 'scripts/test_editor7_17c_inline_story_map.js'
+      - 'scripts/browser_editor7_17c_inline_story.py'
+      - '.github/workflows/editor7-17c-inline-story.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'data/stories/serial/**'
+      - 'scripts/browser_editor7_17c_inline_story.py'
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node scripts/test_serial_story_contract.js
+      - run: node scripts/test_editor7_17c_inline_story_map.js
+      - run: pip install selenium
+      - name: Test article inline links really move the Leaflet map, across decades
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor7_17c_inline_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor7-seventeenth-stories-16c-parity-click-screenshots
+          path: browser-smoke-results/editor7-inline-*.png

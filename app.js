@@ -2499,7 +2499,14 @@ window.atlasStoryBridge={
  activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
  activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
- eventById:id=>[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasFirstMerged]
+ // 17th-century decades are loaded separately; 16C inline readers worked
+ // because all legacy chapter objects were in this list. Reuse the same
+ // lookup over actual published 1600–1699 decade datasets so that source
+ // paragraphs can focus an event in ANOTHER decade without fabricating
+ // locations, years or additional summary records.
+ eventById:id=>[atlas,...serialPreviewByDecade.values(),
+  atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,
+  atlasFifth,atlasFourth,atlasThird,atlasFirstMerged]
   .map(a=>a?.events?.find(e=>e.id===id)).find(Boolean)||null,
  clearSelectedEventYear:()=>{selectedItemYear=null},
  clearSelection:()=>{selectedItemYear=null;selected=''},
