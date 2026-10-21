@@ -49,7 +49,7 @@ jobs:
         with:
           name: Tudor-16C-historical-story-GIS-map-guidelines-ZIP
           path: docs/templates/16c-story-map-standard/16C_stories_cartography_interaction_reference.zip
-      - name: Commit binary reference ZIP in repository on main
+      - name: Stage binary ZIP on an unprotected PR branch (respect main branch rules)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
@@ -57,5 +57,8 @@ jobs:
           git add docs/templates/16c-story-map-standard/16C_stories_cartography_interaction_reference.zip
           if ! git diff --cached --quiet; then
             git commit -m "docs(16c): archive reproducible Tudor story, influence-area and map UI exemplars"
-            git push origin HEAD:main
+            ARCHIVE_BRANCH="generated/16c-standard-$(git rev-parse --short=12 HEAD)"
+            git push origin "HEAD:refs/heads/$ARCHIVE_BRANCH"
+            echo "ZIP staged: https://github.com/${{ github.repository }}/compare/main...$ARCHIVE_BRANCH"
+            echo "A separate reviewed PR must merge this archive; protected main is never bypassed."
           fi
