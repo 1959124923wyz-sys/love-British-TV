@@ -1,0 +1,61 @@
+name: Build 16C historical stories and GIS reference ZIP
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'docs/templates/16c-story-map-standard/README.md'
+      - 'scripts/build_16c_reference_bundle.py'
+      - '.github/workflows/16c-story-map-guidelines-zip.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'docs/templates/16c-story-map-standard/README.md'
+      - 'scripts/build_16c_reference_bundle.py'
+      - '.github/workflows/16c-story-map-guidelines-zip.yml'
+permissions:
+  contents: write
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify archive generator syntax
+        run: python -m py_compile scripts/build_16c_reference_bundle.py
+      - name: Build archive from checked-out actual Tudor map source
+        run: python scripts/build_16c_reference_bundle.py
+      - name: Check original source examples and ZIP contents
+        run: |
+          python - <<'PY'
+          from zipfile import ZipFile
+          from pathlib import Path
+          import json
+          z=Path('docs/templates/16c-story-map-standard/16C_stories_cartography_interaction_reference.zip')
+          with ZipFile(z) as a:
+              names=a.namelist()
+              assert a.testzip() is None
+              assert len(names) >= 25
+              assert any(x.endswith('munster-desmond-1579-1586.json') for x in names)
+              assert any(x.endswith('nine-years-war-operational-impact-1594-1599.geojson') for x in names)
+              assert any(x.endswith('history-stories.js') for x in names)
+              assert any(x.endswith('app.js_四项历史地图函数摘录.js') for x in names)
+              assert any(x.endswith('MANIFEST.json') for x in names)
+          print('PASS',len(names),'actual files and excerpts,',z.stat().st_size,'bytes')
+          PY
+      - name: Keep ZIP as downloadable PR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Tudor-16C-historical-story-GIS-map-guidelines-ZIP
+          path: docs/templates/16c-story-map-standard/16C_stories_cartography_interaction_reference.zip
+      - name: Commit binary reference ZIP in repository on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/templates/16c-story-map-standard/16C_stories_cartography_interaction_reference.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "docs(16c): archive reproducible Tudor story, influence-area and map UI exemplars"
+            git push origin HEAD:main
+          fi
