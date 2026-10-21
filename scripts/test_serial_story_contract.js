@@ -19,7 +19,7 @@ assert(serial.topics.length>=15,'may grow by reviewed subtopic additions');
 const glencoe=serial.topics.find(t=>t.id==='E6-T04-GLENCOE');
 assert(glencoe && glencoe.parent_topic_id==='E6-T04','approved Glencoe subtopic ID must link to unchanged Scottish parent');
 assert(glencoe.status==='published' && glencoe.publication_review==='approved' && glencoe.article_file==='data/stories/serial/e6-t04-glencoe.json','Glencoe publication requires explicitly approved existing article file');
-assert.deepEqual(glencoe.event_ids,['E6-GLENCOE-1692'],'1692 year slider is the only published Glencoe entry');
+assert.deepEqual(glencoe.event_ids,['E6-GLENCOE-1692','1690S-E049','1690S-E050','1690S-E027'],'Glencoe article must be accessible from 1692 oath and massacre plus 1695 parliamentary inquiry');
 const barbados=serial.topics.find(t=>t.id==='E6-T07-BARBADOS');
 assert(barbados&&barbados.parent_topic_id==='E6-T07'&&barbados.status==='published'&&barbados.publication_review==='approved');
 assert(barbados.event_ids.length>=8,'Barbados topic must connect across multiple decades');
