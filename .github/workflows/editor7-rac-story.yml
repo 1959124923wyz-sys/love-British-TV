@@ -1,0 +1,35 @@
+name: Editor7 Royal African Company 1618-1698 Story QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e6-t13-royal-african-company.json'
+      - 'data/stories/serial/index.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/atlas-1660-1669.json'
+      - 'scripts/test_editor7_rac_story.js'
+      - 'scripts/browser_editor7_rac_story.py'
+      - '.github/workflows/editor7-rac-story.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/e6-t13-royal-african-company.json'
+      - 'data/stories/serial/index.json'
+      - 'scripts/browser_editor7_rac_story.py'
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/test_editor7_rac_story.js
+      - run: node scripts/test_serial_story_contract.js
+      - run: node scripts/test_editor6_17c_spatial_batch01.js
+      - run: pip install selenium
+      - name: Check RAC historical reader from 4 decades and two fort cues
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor7_rac_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor7-royal-african-company-1618-1698-browser
+          path: browser-smoke-results/editor7-rac-*.png

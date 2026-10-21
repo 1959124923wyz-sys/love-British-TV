@@ -10,7 +10,7 @@ assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,13);
 assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,6);
 assert.equal(g.metadata.total_confirmed_historical_control_polygons,0);
 const existing=json('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
-assert.equal(existing.features.length,44,'old 17C site-level layer must remain intact');
+assert.equal(existing.features.length,46,'old 17C site-level layer must remain intact');
 const ids=new Set,evs=new Map();
 for(let y=1600;y<=1690;y+=10){
  let atlas=json('data/atlas-'+y+'-'+(y+9)+'.json');
@@ -68,4 +68,4 @@ for(const x of ['function renderSeventeenthRegionalStudies(){','groups.seventeen
 assert(app.includes("groups.seventeenthStudies.clearLayers();"),'switching back to 16C must erase later ranges');
 assert(app.includes("if(map.getZoom()<5)"),'world zoom must preserve small sourced research area visibility without inventing metric boundaries');
 assert(app.includes("atlas-17c-regional-zoom-hint"),'desktop global view must use dashed, fixed-screen regional reference cues');
-console.log('PASS: 13 non-sovereign dashed locality envelopes, 6 zero-waypoint relation lines, year scopes & 44 earlier evidence points preserved');
+console.log('PASS: 13 non-sovereign dashed locality envelopes, 6 zero-waypoint relation lines, year scopes & 46 earlier/extended evidence points preserved');
