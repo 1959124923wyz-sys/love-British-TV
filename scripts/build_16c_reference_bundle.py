@@ -12,6 +12,7 @@ PREFIX="爱英TV_16世纪专题地图交互指导纲领"
 GROUPS={
 "01_正式规范":[
  "AGENTS.md",
+ "docs/templates/16c-story-map-standard/HANDOFF_20261022.md",
  "docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md",
  "docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md",
  "docs/HISTORICAL_SPATIAL_REVIEW_CHECKLIST.md",
