@@ -4,13 +4,13 @@
 
 ## 16世纪成熟范例：所有后续重大专题必须模仿（2026-10-21生效）
 
-**正式制作模板：** [16世纪专题写法、影响区画法、正文互动、地图镜头及出版审查纲领](docs/templates/16c-story-map-standard/README.md)，配套 [完整原始范例 ZIP](docs/templates/16c-story-map-standard/16C_stories_cartography_interaction_reference.zip)。所有历史调查员、地图制作者、主编及后来接手的智能体必须先对照包内**已上线16世纪故事、九年战争影响区、交互源代码及测试**，再制作任何新重大专题。
+**正式制作模板：** [16世纪专题写法、影响区画法、正文互动、地图镜头及出版审查纲领](docs/templates/16c-story-map-standard/README.md)，配套 [完整原始范例 ZIP](docs/templates/16c-story-map-standard/16C_stories_cartography_interaction_reference.zip) 及 [2026-10-22 接手核查与操作记录](docs/templates/16c-story-map-standard/HANDOFF_20261022.md)。所有历史调查员、地图制作者、主编及后来接手的智能体必须先对照包内**已上线16世纪故事、九年战争影响区、交互源代码及测试**，再制作任何新重大专题。
 
 强制底线：**正文必须使用已核史实事件的 `[[ID|自然语言]]` 超链接**，单击能切到相应年份并移动地图、双击能进事件档案和返回；**军事/殖民影响区只有有据具名局部区域才允许虚线淡色示意**，无经核历史边界不能宣称实控Polygon或计算面积。所有新时期先查政治控制和跨年代延续，不能用商馆许可替代主权。GitHub按研究、文章、GIS、浏览器QA分批保存；全部通过后合并并核验Pages部署。
 
 ## 维护接手提醒（2026-10-18）
 
-正式出版范围、章号与数据量应以当下的 `data/chapters.json`、各章 Atlas 及 `data/stories/index.json` 为准，不能以旧 `PROJECT_STATUS.md` 段落、尚未合并的研究 PR 或旧章号推断当前状态。当前主干出版至1599年；1600—1699只有候审规划。
+正式出版范围、章号与数据量应以当下的 `data/chapters.json`、各章 Atlas 及 `data/stories/index.json` 为准，不能以旧 `PROJECT_STATUS.md` 段落、尚未合并的研究 PR 或旧章号推断当前状态。截至2026-10-22，16世纪专题及地图已正式发布；1600—1699系列专题已在 `data/stories/serial/index.json` 中标记五篇 `published`（爱尔兰土地、格伦科、巴巴多斯、东印度公司、皇家非洲公司），其余仍有 `research_only` 候审母题。17世纪专题发布不等于1600—1699全部年份的版图、事件和空间数据均已完成审核，必须分别核对数据与已批准的图层。
 
 研究分支与 `main` 的同一年代文件可能已大幅分化。**只按事件 ID、来源和几何变化择优移植，不得用旧研究包完整替换新版章节，亦不得批量合并或关闭旧 PR。** 所有 GIS 与版图变更必须通过严格空间审核（`python3 scripts/audit_spatial_semantics.py --strict`），`ERROR` 阻止合并/发布，`REVIEW` 记录为待调查，不应通过删去真实疑点来追求零警告。具体清理优先级与核实数据见 [2026-10-18维护交接](docs/MAINTENANCE_TRIAGE_20261018.md)。
 
