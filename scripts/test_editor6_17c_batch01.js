@@ -2,7 +2,9 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const original=[13,24,22,18,18,24,42,38,27,42];
-const expanded=[18,32,27,21,29,38,47,67,36,62];
+const baseline=[18,32,27,21,29,38,47,67,36,62];
+const expanded=[18,32,27,21,29,39,48,68,37,64];
+const JamaicaEvents={1650:['1650S-E090'],1660:['1660S-E090'],1670:['1670S-E090'],1680:['1680S-E090'],1690:['1690S-E090','1690S-E091']};
 const originalSources=298;
 const legacy=load('data/stories/serial/chronology-preview-1600-1699.json');
 assert.deepEqual(legacy.events.map(x=>x.id),['E6-GLENCOE-1692']);
@@ -25,7 +27,7 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
  assert.equal(sourceKeys.size,data.sources.length);
  for(const s of data.sources){
   assert(s.url?.startsWith('https://')&&s.title&&s.original_source_id);
-  assert(s.verification_status==='agent_register_linked_not_individually_audited_for_publication'||s.verification_status?.startsWith('editor6_'),'source verification must have documented level');
+  assert(s.verification_status==='agent_register_linked_not_individually_audited_for_publication'||(s.verification_status?.startsWith('editor6_')||s.verification_status?.startsWith('editor7_')),'source verification must have documented level');
  }
  let prior=d-1;
  for(const e of data.events){
@@ -35,7 +37,7 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
   assert(!usedResearchIds.has(e.research_event_id),'already imported source record '+e.research_event_id);usedResearchIds.add(e.research_event_id);
   assert(e.year>=d&&e.year<=d+9&&e.year>=prior,'year order');prior=e.year;
   assert(e.date_label&&e.name&&e.description&&e.historical_actor&&e.arc_id);
-  assert(e.significance?.review_status?.startsWith('editor6_'),'record is missing research review flag');
+  assert((e.significance?.review_status?.startsWith('editor6_')||e.significance?.review_status?.startsWith('editor7_')),'record is missing research review flag');
   assert(Array.isArray(e.source_ids)&&e.source_ids.length>0);
   for(const k of e.source_ids)assert(sourceKeys.has(k),'broken cited source '+k);
   assert(e.actual_English_land_area_sqkm===null&&e.actual_English_territory_created===false);
@@ -66,13 +68,14 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
    assert(!afterBaseline,'new research records should map to justified region in R03');
   }
  }
- for(let number=1;number<=expanded[i];number++)assert(numbering.has(number),'append-only identifier gap '+d+'S-E'+number);
+ for(let number=1;number<=baseline[i];number++)assert(numbering.has(number),'append-only original R03 identifier gap '+d+'S-E'+number);
+ for(const id of JamaicaEvents[d]||[])assert(numbering.has(Number(id.slice(-3))),'missing editor7 sourced Jamaica addition '+id);
  newDecades++;total+=data.events.length;sources+=data.sources.length;
 }
-assert.equal(newDecades,10);assert.equal(total,377);assert.equal(added,109);
-assert.equal(points,376);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
-assert.equal(refs,328,'R02 219 + R03 95 + fourteen deduplicated major events');
-assert.equal(sources,410);assert.equal(sources-originalSources,112);
+assert.equal(newDecades,10);assert.equal(total,383);assert.equal(added,115);
+assert.equal(points,382);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
+assert.equal(refs,334,'R02 219 + R03 base plus six additional evidence-linked Jamaica events');
+assert.equal(sources,416);assert.equal(sources-originalSources,118);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 assert(app.includes("fetch('data/atlas-'+d+'-'+(d+9)+'.json'"));
 assert(app.includes('existingGlencoe'));
