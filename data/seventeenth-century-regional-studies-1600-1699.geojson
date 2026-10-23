@@ -7,13 +7,13 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 19,
-    "polygon_count": 13,
+    "feature_count": 18,
+    "polygon_count": 12,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
     "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA.",
-    "quality_note": "Added four 1609/1635/1649/1690 archival-source contextual regional studies, including incomplete Connacht plantation caveat."
+    "quality_note": "2026-10-23 16C-parity: corrected Hormuz/Qeshm Safavid-EIC campaign to E6-T12 instead of Ireland; removed 1658 Bengal factory-to-factory polygon (two trading sites do not substantiate an affected area), retaining verified illustrative connection line. Other schematic polygons remain non-sovereign, non-area-aggregable."
   },
   "features": [
     {
@@ -213,7 +213,7 @@
         "policy_area_not_all_land": false,
         "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
         "related_story_ids": [
-          "E6-T03-LAND-1642-1698"
+          "E6-T12"
         ]
       }
     },
@@ -523,105 +523,6 @@
         "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
         "related_story_ids": [
           "E6-T03-LAND-1642-1698"
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "17c-eic-bengal-hooghly-kasimbazar-1658-source-network",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              88.25524999999999,
-              22.7427
-            ],
-            [
-              88.42475000000002,
-              22.7427
-            ],
-            [
-              88.45500000000001,
-              22.772949999999998
-            ],
-            [
-              88.45500000000001,
-              24.23705
-            ],
-            [
-              88.42475000000002,
-              24.2673
-            ],
-            [
-              88.25524999999999,
-              24.2673
-            ],
-            [
-              88.225,
-              24.23705
-            ],
-            [
-              88.225,
-              22.772949999999998
-            ],
-            [
-              88.25524999999999,
-              22.7427
-            ]
-          ]
-        ]
-      },
-      "properties": {
-        "name": "1658年孟加拉胡格利—卡西姆巴扎尔：两处商馆形成贸易网络",
-        "start_year": 1658,
-        "end_year": 1658,
-        "display_kind": "economic_network",
-        "label_type": "青绿虚线·商馆经济联系参考范围",
-        "description": "胡格利1651、卡西姆巴扎尔1658分别已有英商商馆，1658年存在两处有据节点。浅青绿虚线只展示商业网络的地理分布，不表示所有河岸受英格兰统治或船舶确曾沿直线航行。",
-        "summary_zh": "胡格利1651、卡西姆巴扎尔1658分别已有英商商馆，1658年存在两处有据节点。浅青绿虚线只展示商业网络的地理分布，不表示所有河岸受英格兰统治或船舶确曾沿直线航行。",
-        "actor_zh": "英格兰东印度公司，莫卧儿帝国辖下孟加拉手工业与地方交易商",
-        "anchor_event_ids": [
-          "1650S-E033",
-          "1650S-E035"
-        ],
-        "related_event_ids": [
-          "1650S-E033",
-          "1650S-E035"
-        ],
-        "anchor_places": [
-          {
-            "name": "英商设孟加拉胡格利商馆",
-            "lon": 88.4,
-            "lat": 22.9,
-            "source_event_id": "1650S-E033",
-            "modern_place_only": true
-          },
-          {
-            "name": "公司商人在孟加拉卡西姆巴扎尔建立内河商馆",
-            "lon": 88.28,
-            "lat": 24.11,
-            "source_event_id": "1650S-E035",
-            "modern_place_only": true
-          }
-        ],
-        "source_urls": [
-          "https://searcharchives.bl.uk/catalog/032-000173250"
-        ],
-        "spatial_semantics": "source_attested_named_places_only; area envelope illustrated solely for geographical orientation; NO claim each interior locality is affected",
-        "geometry_precision": "padded_modern_place_envelope_not_historical_surveyed_extent",
-        "mapping_method": "deterministic rounded bbox padded only for map readability around named modern reference anchors; pad is arbitrary cartographic whitespace, NOT geographic impact radius or cadastral scope",
-        "provenance_method": "sources confirm the named towns or counties and the activity period; computed vertices do NOT originate in source documents",
-        "historical_boundary_confirmed": false,
-        "fill_authorized": false,
-        "territorial_claim": false,
-        "area_sqkm": null,
-        "exclude_from_area_aggregation": true,
-        "occupation_area_sqkm": null,
-        "policy_area_not_all_land": false,
-        "uncertainty": "只说明所列地点/郡出现有据政策或行动；虚线内部的每块土地、人口、建筑、运输路径均不作事实推断",
-        "related_story_ids": [
-          "E6-T12"
         ]
       }
     },
@@ -1112,7 +1013,7 @@
         "exclude_from_area_aggregation": true,
         "uncertainty": "两个有据地点之间的地图直线不是历史实际运输/行军线路，也不能计算相连地区影响面积",
         "related_story_ids": [
-          "E6-T03-LAND-1642-1698"
+          "E6-T12"
         ]
       }
     },

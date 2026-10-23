@@ -26,7 +26,7 @@ for(let d=1600;d<=1690;d+=10){
 assert.equal(routeCount,8);
 const geo=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(geo.type,'FeatureCollection');
-assert.equal(geo.features.length,46);
+assert.equal(geo.features.length,51);
 assert.equal(geo.metadata.confirmed_territorial_polygons,0);
 const cape=geo.features.find(f=>f.id==='rac-cape-coast-castle-1665');
 const lost=geo.features.find(f=>f.id==='rac-cormantin-fort-dutch-capture-1665');
@@ -50,7 +50,8 @@ for(const f of geo.features){
   assert(p.episodes.length>0,'episodic legal cues cannot imply permanently active scope');
   for(const ep of p.episodes){
    assert(ep.start_year>=p.start_year&&ep.end_year<=p.display_through_year);
-   assert(ep.source_urls?.length&&ep.related_event_ids?.length);
+   assert(ep.source_urls?.length&&Array.isArray(ep.related_event_ids));
+   if(ep.related_event_ids.length===0)assert(f.id==='17c-barbados-slavery-legislation-1661-1692'&&ep.start_year===1688&&ep.source_only===true,'unmapped source-only statute must not fabricate a clickable atlas event');
    assert(ep.source_urls.every(u=>/^https:\/\//.test(u)));
   }
  }

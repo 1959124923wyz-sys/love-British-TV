@@ -47,8 +47,11 @@ try:
     assert js("return document.querySelector('#dossierBody h2')?.textContent.includes('冒险家法')")
     open_story(1600,'1600S-E014','E6-T12',18)
     click_link(1622,'1620S-E009',27.07,56.458,'eic')
+    click_link(1677,'1670S-E064',18.94,72.84,'eic-mumbai-mint')
     open_story(1625,'1620S-E015','E6-T07-BARBADOS',10)
     click_link(1664,'1660S-E022',17.992,-76.955,'barbados')
+    click_link(1668,'1660S-E038',13.096,-59.614,'barbados-property-law')
+    click_link(1672,'1670S-E006',13.096,-59.614,'barbados-debt-law')
     open_story(1672,'1670S-E007','E6-T13',12)
     click_link(1665,'1660S-E045',5.2025,-1.090278,'rac')
     open_story(1692,'E6-GLENCOE-1692','E6-T04-GLENCOE',7)
@@ -61,7 +64,7 @@ try:
     wait.until(lambda d:js("return !!document.querySelector('#dossierBody .major-story-enter')"))
     browser.find_element(By.CSS_SELECTOR,'.major-story-enter[data-story-open="drake-panama-mule-train-raid-1572-1573"]').click()
     wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-event-link').length>=15"))
-    print("PASS 16C-equivalent: 5 distinct 17C inline story map pans across decades, event double click and return, original 16C inline reader")
+    print("PASS 16C-equivalent: five published 17C stories, Barbados property-law jumps, EIC Bombay mint, cross-decade pan, double click and return, original 16C reader")
 except Exception:
     browser.save_screenshot(str(out/'editor7-inline-story-navigation-failure.png'))
     raise

@@ -2101,7 +2101,11 @@ async function boot(){
          p.episodes.some(e=>!Number.isInteger(e.start_year)||!Number.isInteger(e.end_year)||
           e.start_year<p.start_year||e.end_year>p.display_through_year||
           e.start_year>e.end_year||!e.description||
-          !Array.isArray(e.related_event_ids)||!e.related_event_ids.length||
+          // Source-only law (e.g. documented Barbados 1688) has evidence but no
+          // published Atlas event ID: do not erase ALL 1600s history or invent a link.
+          !Array.isArray(e.related_event_ids)||
+          (!e.related_event_ids.length&&e.source_only!==true)||
+          (e.source_only===true&&e.related_event_ids.length!==0)||
           !Array.isArray(e.source_urls)||!e.source_urls.length||
           !e.source_urls.every(u=>/^https:\/\//.test(u)))));
       }))throw new Error('17c location reference failed no-invented-boundary gate');
