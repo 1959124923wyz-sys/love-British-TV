@@ -9,6 +9,7 @@ on:
       - 'js/history-stories.js'
       - 'scripts/test_17c_tudor_parity_20261023.js'
       - 'scripts/test_editor7_new_england_major_story.js'
+      - 'scripts/test_editor7_virginia_powhatan_story.js'
       - '.github/workflows/17c-tudor-parity.yml'
   push:
     branches: [main]
@@ -29,10 +30,11 @@ jobs:
           node --check app.js
           node --check js/history-stories.js
           node --check scripts/test_17c_tudor_parity_20261023.js
-      - name: Verify 16C-equivalent six-story, GIS and source parity
+      - name: Verify 16C-equivalent seven-story, GIS and source parity
         run: |
           node scripts/test_17c_tudor_parity_20261023.js
           node scripts/test_editor7_new_england_major_story.js
+          node scripts/test_editor7_virginia_powhatan_story.js
       - name: Verify approved serial registry and 16C inline links
         run: |
           node scripts/test_serial_story_contract.js

@@ -1,0 +1,45 @@
+name: Editor7 Virginia Powhatan Wars and Slavery Tudor Story QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'data/atlas-1630-1639.json'
+      - 'scripts/browser_editor7_virginia_powhatan_story.py'
+      - 'scripts/test_editor7_virginia_powhatan_story.js'
+      - 'app.js'
+      - 'js/history-stories.js'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'data/atlas-1630-1639.json'
+      - 'scripts/browser_editor7_virginia_powhatan_story.py'
+      - 'scripts/test_editor7_virginia_powhatan_story.js'
+      - 'app.js'
+      - 'js/history-stories.js'
+jobs:
+  story-and-geometry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check real event IDs, original treaties, 14 historical chapters and conservative territory
+        run: |
+          node scripts/test_serial_story_contract.js
+          node scripts/test_editor7_virginia_powhatan_story.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install desktop Selenium
+        run: pip install selenium
+      - name: Test 1607 story / 1610 native locality / 1662 birth-status law / 1677 treaty camera pan / 1676 double click
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor7_virginia_powhatan_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor7-virginia-17c-desktop-story-evidence
+          path: browser-smoke-results/editor7-e6t05-*.png

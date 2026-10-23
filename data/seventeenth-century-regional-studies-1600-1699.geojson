@@ -7,14 +7,15 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 19,
-    "polygon_count": 13,
+    "feature_count": 20,
+    "polygon_count": 14,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
     "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA.",
     "quality_note": "2026-10-23 16C-parity: corrected Hormuz/Qeshm Safavid-EIC campaign to E6-T12 instead of Ireland; removed 1658 Bengal factory-to-factory polygon (two trading sites do not substantiate an affected area), retaining verified illustrative connection line. Other schematic polygons remain non-sovereign, non-area-aggregable.",
-    "new_england_1637_note": "One Pequot War 1637 dotted reading-only envelope between documented Saybrook and Mystic atlas coordinates. Geometry entirely cartographic; no lines or war route inferred and not a historical front, Indigenous territorial boundary or colony."
+    "new_england_1637_note": "One Pequot War 1637 dotted reading-only envelope between documented Saybrook and Mystic atlas coordinates. Geometry entirely cartographic; no lines or war route inferred and not a historical front, Indigenous territorial boundary or colony.",
+    "virginia_1610_note": "Single 1610 Jamestown/Kecoughtan two-attested-site dotted reader envelope only. 1646/1677 treaty geographic legal terms deliberately remain point referenced until actual cadastral/river boundary verification; no sovereignty polygon."
   },
   "features": [
     {
@@ -1709,6 +1710,92 @@
         "uncertainty": "虚线位置基于现代两处具名参考点；无法断定区域内其他聚落、路线、土地、人口是否受袭或处于英人控制，不计量任何受损/占地平方公里",
         "related_story_ids": [
           "E6-T06"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-first-war-jamestown-kecoughtan-1610-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.83,
+              36.97
+            ],
+            [
+              -76.28,
+              36.97
+            ],
+            [
+              -76.28,
+              37.28
+            ],
+            [
+              -76.83,
+              37.28
+            ],
+            [
+              -76.83,
+              36.97
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1610年詹姆斯敦—Kecoughtan：波瓦坦战争与殖民军夺粮具名节点阅读区",
+        "start_year": 1610,
+        "end_year": 1610,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线·两处具名战争地方阅读包络（非历史测绘范围）",
+        "description": "第一次英波瓦坦战争中，詹姆斯敦曾被封锁、Kecoughtan村社在1610年遭英殖民军夺粮袭击。线框仅使两个已核地点在地图上能同时被理解，不是双方兵员移动路线、实际攻击面积、围困范围或英王政治控制区。",
+        "summary_zh": "1610年詹姆斯敦与Kecoughtan两具名战事参考点的虚线地图阅读提示；不表示所围任何其他居民受到攻击或英国取得控制权。",
+        "actor_zh": "英格兰殖民军与波瓦坦各社群（包括Kecoughtan；不同社区政治意愿分开）",
+        "anchor_event_ids": [
+          "1600S-E011",
+          "1610S-E001",
+          "1610S-E002"
+        ],
+        "related_event_ids": [
+          "1600S-E011",
+          "1610S-E001",
+          "1610S-E002"
+        ],
+        "anchor_places": [
+          {
+            "name": "詹姆斯敦早期被围与饥饿冬季",
+            "lon": -76.778,
+            "lat": 37.209,
+            "source_event_id": "1610S-E001",
+            "modern_place_only": true
+          },
+          {
+            "name": "1610年Kecoughtan原住民村寨遭殖民军袭击",
+            "lon": -76.344,
+            "lat": 37.024,
+            "source_event_id": "1610S-E002",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://encyclopediavirginia.org/entries/first-anglo-powhatan-war-1609-1614/",
+          "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm"
+        ],
+        "spatial_semantics": "Two independently sourced modern named reference centers, NOT historical battle area or treaty land bound; no military path or sovereignty claim",
+        "geometry_precision": "padded_modern_two_place_envelope_not_historical_impact_extent_or_survey",
+        "mapping_method": "Illustrative nonmetric rectangle padded around two published Atlas modern reference points only, NOT a surveyed battle region; artificial vertices are not historical evidence",
+        "provenance_method": "Historical source confirms event at named localities in 1610 only; NO historical source specifies these four rectangular corners",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "图中边线是人为教学设计，不得认为线内所有土地发生军事行动、不把城镇间土地视为英格兰已征服，也不能据此计算面积。",
+        "related_story_ids": [
+          "E6-T05"
         ]
       }
     }

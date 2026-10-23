@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 61,
+    "feature_count": 73,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -22,7 +22,8 @@
     "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty.",
     "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events.",
     "source_only_1688": "Documented 1688 Barbados act is independently sourced but lacks canonical Atlas event; frontend explicitly permits e.source_only=true and forbids invented relation IDs.",
-    "new_england_wars_20261023": "Ten non-sovereign event-linked Pequot/Metacom/captivity/restitution cues; exact event reference coords, NOT original boundary lines."
+    "new_england_wars_20261023": "Ten non-sovereign event-linked Pequot/Metacom/captivity/restitution cues; exact event reference coords, NOT original boundary lines.",
+    "virginia_powhatan_story_20261023": "12 year-specific historical war/legal/locality cues tied to E6-T05; published atlas representative coordinates, NOT treaty boundary / native area / colonial actual control. No vessel GPS route."
   },
   "features": [
     {
@@ -2589,6 +2590,451 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "published atlas representative administrative location only, fixed screen-pixel symbol, NOT precise captivity house, plantation or geographic area",
         "geometry_precision": "published_atlas_modern_named_place_reference_not_historic_individual_residence",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-jamestown-1607",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.778,
+          37.209
+        ]
+      },
+      "properties": {
+        "name": "詹姆斯敦：弗吉尼亚公司在Tsenacomoco建立据点",
+        "start_year": 1607,
+        "display_through_year": 1607,
+        "display_kind": "local_governance",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "英殖民者建立詹姆斯敦，Tsenacomoco原住民政体仍在周边生活；仅代表英人具体设防据点，非英王统治全流域的面积。",
+        "summary_zh": "英殖民者建立詹姆斯敦，Tsenacomoco原住民政体仍在周边生活；仅代表英人具体设防据点，非英王统治全流域的面积。",
+        "source_urls": [
+          "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm"
+        ],
+        "related_event_ids": [
+          "1600S-E004"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-kecoughtan-1610",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.344,
+          37.024
+        ]
+      },
+      "properties": {
+        "name": "Kecoughtan：英军攻击波瓦坦村社与夺粮",
+        "start_year": 1610,
+        "display_through_year": 1610,
+        "display_kind": "military_impact",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "1610年英殖民武装进攻Kecoughtan、夺取玉米与农田，地图只落有据的地方参考点。",
+        "summary_zh": "1610年英殖民武装进攻Kecoughtan、夺取玉米与农田，地图只落有据的地方参考点。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/entries/first-anglo-powhatan-war-1609-1614/"
+        ],
+        "related_event_ids": [
+          "1610S-E002"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-appamattuck-1610",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.4,
+          37.382
+        ]
+      },
+      "properties": {
+        "name": "Appamattuck：女首领组织抵抗英军",
+        "start_year": 1610,
+        "display_through_year": 1610,
+        "display_kind": "military_impact",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "1610年Appamattuck原住民女首领Opossunoquonuske带领居民抵抗殖民军；现代地图参考点不等于真实村寨战线。",
+        "summary_zh": "1610年Appamattuck原住民女首领Opossunoquonuske带领居民抵抗殖民军；现代地图参考点不等于真实村寨战线。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/entries/first-anglo-powhatan-war-1609-1614/"
+        ],
+        "related_event_ids": [
+          "1610S-E004"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-pocahontas-1613",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.778,
+          37.209
+        ]
+      },
+      "properties": {
+        "name": "波卡洪塔斯遭扣押：外交胁迫而非自愿割地",
+        "start_year": 1613,
+        "display_through_year": 1613,
+        "display_kind": "military_impact",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "殖民者拘押波卡洪塔斯以索取俘虏及武器交换；詹姆斯敦是史事行政叙述参考点，不代表实际劫持处或原住民领土所有权。",
+        "summary_zh": "殖民者拘押波卡洪塔斯以索取俘虏及武器交换；詹姆斯敦是史事行政叙述参考点，不代表实际劫持处或原住民领土所有权。",
+        "source_urls": [
+          "https://www.nps.gov/jame/learn/historyculture/chronology-of-powhatan-indian-activity.htm"
+        ],
+        "related_event_ids": [
+          "1610S-E013"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-point-comfort-africans-1619",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.344,
+          37.024
+        ]
+      },
+      "properties": {
+        "name": "Point Comfort：被劫非洲人进入弗吉尼亚",
+        "start_year": 1619,
+        "display_through_year": 1619,
+        "display_kind": "economic_network",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "1619年非洲人在跨洋强迫贩运后抵达弗吉尼亚；这个代表点不用于重建船舶航迹及确切上岸码头。",
+        "summary_zh": "1619年非洲人在跨洋强迫贩运后抵达弗吉尼亚；这个代表点不用于重建船舶航迹及确切上岸码头。",
+        "source_urls": [
+          "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm"
+        ],
+        "related_event_ids": [
+          "1610S-E024"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-powhatan-attack-1622",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.778,
+          37.209
+        ]
+      },
+      "properties": {
+        "name": "詹姆斯河殖民据点遭袭：第二次战争爆发",
+        "start_year": 1622,
+        "display_through_year": 1622,
+        "display_kind": "military_impact",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "1622年原住民部众沿詹姆斯河攻打英商定居点，本点为相关殖民政府资料中心，非全部袭击村镇位置及战斗范围。",
+        "summary_zh": "1622年原住民部众沿詹姆斯河攻打英商定居点，本点为相关殖民政府资料中心，非全部袭击村镇位置及战斗范围。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/entries/anglo-powhatan-war-second-1622-1632/"
+        ],
+        "related_event_ids": [
+          "1620S-E008"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-third-war-1644",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.778,
+          37.209
+        ]
+      },
+      "properties": {
+        "name": "第三次英波瓦坦战争与殖民扩张冲突",
+        "start_year": 1644,
+        "display_through_year": 1644,
+        "display_kind": "military_impact",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "1644年奥佩坎卡纳夫发动协调攻势，本图保守落到现有已核历史事件的州内代表点，不推测战场边界。",
+        "summary_zh": "1644年奥佩坎卡纳夫发动协调攻势，本图保守落到现有已核历史事件的州内代表点，不推测战场边界。",
+        "source_urls": [
+          "https://www.nps.gov/jame/learn/historyculture/chronology-of-powhatan-indian-activity.htm"
+        ],
+        "related_event_ids": [
+          "1640S-E008"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-1646-treaty-law",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.778,
+          37.209
+        ]
+      },
+      "properties": {
+        "name": "1646条约：Necotowance贡赋与约克—詹姆斯河间居住限制",
+        "start_year": 1646,
+        "display_through_year": 1646,
+        "display_kind": "land_dispossession",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "条约在弗吉尼亚殖民政府中确认，规定归属、贡赋、贸易通行与居住限制。以行政参考点提示条文，不把河间全部现代地区直接填为英格兰实控地产。",
+        "summary_zh": "条约在弗吉尼亚殖民政府中确认，规定归属、贡赋、贸易通行与居住限制。以行政参考点提示条文，不把河间全部现代地区直接填为英格兰实控地产。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/primary-documents/treaty-ending-the-third-anglo-powhatan-war-1646/"
+        ],
+        "related_event_ids": [
+          "1640S-E015"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-1662-partus-law",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.778,
+          37.209
+        ]
+      },
+      "properties": {
+        "name": "1662年子从母身份法：世袭奴役法律",
+        "start_year": 1662,
+        "display_through_year": 1662,
+        "display_kind": "local_governance",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "弗吉尼亚议会以母亲身份确定新生儿自由或奴役身份，法令颁行并不能确定每一处庄园的人身交易记录和地域执行边界。",
+        "summary_zh": "弗吉尼亚议会以母亲身份确定新生儿自由或奴役身份，法令颁行并不能确定每一处庄园的人身交易记录和地域执行边界。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/primary-documents/negro-womens-children-to-serve-according-to-the-condition-of-the-mother-1662/"
+        ],
+        "related_event_ids": [
+          "1660S-E015"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-occaneechi-1676",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.54,
+          36.625
+        ]
+      },
+      "properties": {
+        "name": "培根部众袭击Occaneechi原住民贸易盟友",
+        "start_year": 1676,
+        "display_through_year": 1676,
+        "display_kind": "military_impact",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "1676年培根部众攻击原先与殖民者合作的Occaneechi人；英人内部叛军行为不可自动归作英王所下达的命令。",
+        "summary_zh": "1676年培根部众攻击原先与殖民者合作的Occaneechi人；英人内部叛军行为不可自动归作英王所下达的命令。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/entries/bacons-rebellion-1676-1677/"
+        ],
+        "related_event_ids": [
+          "1670S-E022"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-pamunkey-refuge-1676",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.79,
+          37.53
+        ]
+      },
+      "properties": {
+        "name": "Pamunkey：Cockacoeske带领族人避入沼泽",
+        "start_year": 1676,
+        "display_through_year": 1676,
+        "display_kind": "military_impact",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "Pamunkey女首领保护居民避开培根武装。此处为沼泽地理参考点，不是经过历史考古测绘的避难营地范围。",
+        "summary_zh": "Pamunkey女首领保护居民避开培根武装。此处为沼泽地理参考点，不是经过历史考古测绘的避难营地范围。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/entries/cockacoeske-d-by-july-1-1686/"
+        ],
+        "related_event_ids": [
+          "1670S-E049",
+          "1670S-E050"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-va-middle-plantation-treaty-1677",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.706,
+          37.27
+        ]
+      },
+      "properties": {
+        "name": "中部种植地条约：Cockacoeske参与和平及土地保护条款",
+        "start_year": 1677,
+        "display_through_year": 1677,
+        "display_kind": "land_dispossession",
+        "label_type": "历史具名地点／法律议事与影响 · 非地籍面积",
+        "description": "1677年条约限制殖民者进入原住民城镇附近，涉及若干签约政治共同体的权利与贡赋。不得用条约所述三英里在现代地图测出精确村镇保留地。",
+        "summary_zh": "1677年条约限制殖民者进入原住民城镇附近，涉及若干签约政治共同体的权利与贡赋。不得用条约所述三英里在现代地图测出精确村镇保留地。",
+        "source_urls": [
+          "https://encyclopediavirginia.org/primary-documents/articles-of-peace-1677/"
+        ],
+        "related_event_ids": [
+          "1670S-E027"
+        ],
+        "related_story_ids": [
+          "E6-T05"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
+        "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
