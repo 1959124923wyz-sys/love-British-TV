@@ -53,7 +53,7 @@ try:
           x.dispatchEvent(new Event('change',{bubbles:true}));""")
     assert_shapes(0,0)
     year(1658)
-    assert_shapes(0,1) # only evidenced commercial link; no inferred Bengal trade-affected area
+    assert_shapes(1,1) # one sourced Jamaica Rio Nuevo 1658 reader frame AND an unrelated evidenced Bengal trade line; no trade area polygon
     year(1690)
     assert_shapes(2,1)
     browser.save_screenshot(str(out/'editor7-regional-1690-boyne-battle.png'))
