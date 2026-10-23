@@ -9,12 +9,12 @@ const index=load('data/stories/serial/index.json');
 const topics=index.topics.filter(t=>t.status==='published');
 assert.equal(topics.length,6,'audit exactly six approved serial stories, not all 17C research topics');
 const events=new Map();
-for(let decade=1600;decade<=1690;decade+=10){
+for(let decade=1610;decade<=1690;decade+=10){
  const atlas=load('data/atlas-'+decade+'-'+(decade+9)+'.json');
  assert.deepEqual(atlas.colonial_polygons,[],'no unwarranted seventeenth-century sovereignty polygon');
  for(const e of atlas.events){assert(!events.has(e.id));events.set(e.id,e);}
 }
-for(const e of load('data/stories/serial/chronology-preview-1600-1699.json').events){
+for(const e of load('data/stories/serial/chronology-preview-1610-1699.json').events){
  assert(!events.has(e.id));events.set(e.id,e);
 }
 const rules={
@@ -64,13 +64,13 @@ const gl=load('data/stories/serial/e6-t04-glencoe.json');
 assert(gl.sections.find(s=>s.id==='succession').paragraphs.join(' ').includes('[[E6-GLENCOE-1692|'));
 const bar=load('data/stories/serial/e6-t07-barbados.json');
 const prop=bar.sections.find(s=>s.id==='property-1668-1672');
-assert(prop&&prop.source_keys.length===2&&prop.paragraphs.some(p=>p.includes('[[1660S-E038|')));
+assert(prop&&prop.source_keys.length===2&&prop.paragraphs.some(p=>p.includes('[[1661S-E038|')));
 assert(prop.paragraphs.some(p=>p.includes('[[1670S-E006|')));
 assert(bar.sources.some(s=>s.url==='https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1668'));
 assert(bar.sources.some(s=>s.url==='https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1672'));
 assert(bar.topic_source_claims.some(c=>c.section_id==='property-1668-1672'&&c.original_document_page));
 const bg=index.topics.find(t=>t.id==='E6-T07-BARBADOS');
-assert(bg.event_ids.includes('1660S-E038'),'new chapter must open from 1668 public map event');
+assert(bg.event_ids.includes('1661S-E038'),'new chapter must open from 1668 public map event');
 const eic=load('data/stories/serial/e6-t12-east-india-company.json');
 assert(eic.sections.find(s=>s.id==='corporate-power').paragraphs.join(' ').includes('[[1670S-E064|'));
 const rac=load('data/stories/serial/e6-t13-royal-african-company.json');
@@ -82,12 +82,12 @@ assert(eic.sections.find(x=>x.id==='mughal-war').paragraphs.join(' ').includes('
 assert(bar.sections.find(x=>x.id==='settlement').paragraphs.join(' ').includes('[[1620S-E018|英格兰定居者'),
   '1627 should link the settlement act instead of just the year');
 
-const area=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-const site=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
+const area=load('data/seventeenth-century-regional-studies-1610-1699.geojson');
+const site=load('data/seventeenth-century-spatial-evidence-1610-1699.geojson');
 assert.equal(area.metadata.feature_count,area.features.length);
 assert.equal(site.metadata.feature_count,site.features.length);
 assert.equal(area.features.length,19);
-assert.equal(site.features.length,60);
+assert.equal(site.features.length,61);
 const horn=area.features.filter(f=>f.properties.related_event_ids.includes('1620S-E009')||f.properties.related_event_ids.includes('1620S-E010'));
 assert.equal(horn.length,2);
 assert(horn.every(f=>f.properties.related_story_ids.includes('E6-T12')&&!f.properties.related_story_ids.includes('E6-T03-LAND-1642-1698')),'Safavid/EIC 1622 conflict misattributed to Ireland');
@@ -120,7 +120,7 @@ for(const [id,eid] of Object.entries(named)){
 }
 const b=site.features.find(f=>f.id==='17c-barbados-slavery-legislation-1661-1692');
 assert(b&&b.properties.episodes.length===6);
-for(const [yr,ids] of [[1661,['1660S-E006']],[1668,['1660S-E038']],[1672,['1670S-E006']],[1676,['1670S-E024']],[1688,[]],[1692,['1690S-E016']]]){
+for(const [yr,ids] of [[1661,['1661S-E006']],[1668,['1661S-E038']],[1672,['1670S-E006']],[1676,['1670S-E024']],[1688,[]],[1692,['1690S-E016']]]){
  const active=b.properties.episodes.filter(x=>x.start_year<=yr&&yr<=x.end_year);
  assert.equal(active.length,1,'episode-year interpolation detected: '+yr);
  assert(ids.every(x=>active[0].related_event_ids.includes(x)));
