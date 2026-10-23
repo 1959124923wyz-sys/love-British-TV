@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 60,
+    "feature_count": 61,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -22,7 +22,7 @@
     "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty.",
     "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events.",
     "source_only_1688": "Documented 1688 Barbados act is independently sourced but lacks canonical Atlas event; frontend explicitly permits e.source_only=true and forbids invented relation IDs.",
-    "new_england_wars_20261023": "9 source-attested indigenous campaign/refuge/captivity/return locality cues added, all from existing atlas representative coordinates; no native homeland boundary or English territorial polygon invented."
+    "new_england_wars_20261023": "Ten non-sovereign event-linked Pequot/Metacom/captivity/restitution cues; exact event reference coords, NOT original boundary lines."
   },
   "features": [
     {
@@ -2552,6 +2552,43 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
         "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-sassamon-family-petition-1679",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.662,
+          41.956
+        ]
+      },
+      "properties": {
+        "name": "普利茅斯：Sassamon家属追索被强制服役亲属的自由",
+        "start_year": 1679,
+        "display_through_year": 1679,
+        "display_kind": "local_governance",
+        "label_type": "原住民家属请愿·已发表历史事件参考点·非英王领土",
+        "description": "1679年前后，Sassamon家属持续争取一名女性亲属摆脱强制服役；普利茅斯法院现代参考位置不等于具体拘留家庭或女性所在地。",
+        "summary_zh": "Sassamon亲属在1679年仍努力争取强制服役女性家庭成员的自由，战俘处分后果没有在战事结束时终止。",
+        "source_urls": [
+          "https://www.colonialsociety.org/node/1397"
+        ],
+        "related_event_ids": [
+          "1670S-E063"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas representative administrative location only, fixed screen-pixel symbol, NOT precise captivity house, plantation or geographic area",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_historic_individual_residence",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
