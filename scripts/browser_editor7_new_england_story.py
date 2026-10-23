@@ -22,7 +22,7 @@ def map_click(id,year,lat,lng,tag):
     wait.until(lambda d:js("""const c=window.atlasReadViewport().center;
        return Math.abs(c.lat-arguments[0])<0.5&&Math.abs(c.lng-arguments[1])<0.5""",lat,lng))
     assert js("return !!document.querySelector('.major-story-article[data-story-id=\"E6-T06\"]')"),'single click lost long story'
-    browser.save_screenshot(str(out/'editor7-e6t06-'+tag+'-'+str(year)+'.png'))
+    browser.save_screenshot(str(out / f'editor7-e6t06-{tag}-{year}.png'))
 try:
     browser.get('http://127.0.0.1:8765/?year=1637')
     wait.until(lambda d:js("return document.getElementById('bigYear')?.textContent==='1637'"))
