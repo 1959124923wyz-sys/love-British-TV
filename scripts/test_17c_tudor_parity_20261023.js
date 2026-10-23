@@ -42,6 +42,13 @@ for(const meta of topics){
     const ev=events.get(m[1]);
     assert(ev,'orphaned link: '+m[1]);
     assert(Number.isInteger(ev.year)&&Number.isFinite(ev.lat)&&Number.isFinite(ev.lng),'linked item cannot pan map: '+m[1]);
+    const anchor=m[2].trim();
+    // 16C published example: a linked phrase names an action, not a bare date.
+    // Keep year outside the link in surrounding prose where appropriate.
+    assert(!/^(?:1[5-9]\d{2})(?:年(?:\d{1,2}月(?:\d{1,2}日)?)?)?$/.test(anchor),
+      'bare year is not a popular-history event link: '+meta.id+'/'+s.id+' '+anchor);
+    assert(!/^(?:1[5-9]\d{2})$/.test(anchor),'numeric-only historical link: '+meta.id+' '+anchor);
+    assert(anchor.length>=4,'click target has no reader-facing historical meaning: '+meta.id+' '+anchor);
     hits.push(m[1]);
    }
    assert.equal((p.match(/\[\[/g)||[]).length,(p.match(/\]\]/g)||[]).length,'broken inline token');
@@ -51,7 +58,7 @@ for(const meta of topics){
  total+=hits.length;
 }
 const ir=load('data/stories/serial/e6-t03-ireland-land-1642-1698.json');
-assert(ir.sections.find(s=>s.id==='conquest-1649').paragraphs.join(' ').includes('[[1650S-E013|戈尔韦]]'));
+assert(ir.sections.find(s=>s.id==='conquest-1649').paragraphs.join(' ').includes('[[1650S-E013|戈尔韦遭封锁后投降]]'));
 const gl=load('data/stories/serial/e6-t04-glencoe.json');
 assert(gl.sections.find(s=>s.id==='succession').paragraphs.join(' ').includes('[[E6-GLENCOE-1692|'));
 const bar=load('data/stories/serial/e6-t07-barbados.json');
@@ -67,6 +74,13 @@ const eic=load('data/stories/serial/e6-t12-east-india-company.json');
 assert(eic.sections.find(s=>s.id==='corporate-power').paragraphs.join(' ').includes('[[1670S-E064|'));
 const rac=load('data/stories/serial/e6-t13-royal-african-company.json');
 assert(!index.topics.find(t=>t.id==='E6-T13').event_ids.includes('1690S-E024'),'Hannibal must not become RAC-owned');
+assert(rac.sections.find(x=>x.id==='royal-capital').paragraphs.join(' ').includes('[[1670S-E008|约克公爵要求'),
+  '1672 Royal Exchange prepayment must link its real event, not incorrectly label it as generic London fundraising');
+assert(eic.sections.find(x=>x.id==='mughal-war').paragraphs.join(' ').includes('[[1680S-E035|莫卧儿方面夺取'),
+  '1689 link must identify a historical action rather than the year');
+assert(bar.sections.find(x=>x.id==='settlement').paragraphs.join(' ').includes('[[1620S-E018|英格兰定居者'),
+  '1627 should link the settlement act instead of just the year');
+
 const area=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
 const site=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(area.metadata.feature_count,area.features.length);
