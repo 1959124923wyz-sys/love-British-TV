@@ -4,9 +4,9 @@
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path');
 const root=path.resolve(__dirname,'..');
 const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
-const expected={'1600':1,'1640':2,'1650':3,'1690':2};
+const expected={'1610':1,'1640':2,'1650':3,'1690':2};
 let routeCount=0;const stable=new Set();
-for(let d=1600;d<=1690;d+=10){
+for(let d=1610;d<=1690;d+=10){
  const a=load('data/atlas-'+d+'-'+(d+9)+'.json');
  assert.equal(a.colonial_polygons.length,0,'no fabricated historic land control in 17C');
  const sourceIds=new Set(a.sources.map(s=>s.id)),eventIds=new Set(a.events.map(e=>e.id));
@@ -24,9 +24,9 @@ for(let d=1600;d<=1690;d+=10){
  }
 }
 assert.equal(routeCount,8);
-const geo=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
+const geo=load('data/seventeenth-century-spatial-evidence-1610-1699.geojson');
 assert.equal(geo.type,'FeatureCollection');
-assert.equal(geo.features.length,60);
+assert.equal(geo.features.length,61);
 assert.equal(geo.metadata.confirmed_territorial_polygons,0);
 const cape=geo.features.find(f=>f.id==='rac-cape-coast-castle-1665');
 const lost=geo.features.find(f=>f.id==='rac-cormantin-fort-dutch-capture-1665');
@@ -40,7 +40,7 @@ for(const f of geo.features){
  assert(!keys.has(f.id),'duplicate place id');keys.add(f.id);
  assert.equal(f.geometry.type,'Point','one uncertain center only, no fabricated areal border');
  assert(f.geometry.coordinates.length===2&&Math.abs(f.geometry.coordinates[0])<=180&&Math.abs(f.geometry.coordinates[1])<=90);
- assert(p.start_year>=1600&&p.display_through_year<=1699&&p.display_through_year>=p.start_year);
+ assert(p.start_year>=1610&&p.display_through_year<=1699&&p.display_through_year>=p.start_year);
  assert(['economic_network','military_impact','local_governance','land_dispossession'].includes(p.display_kind));
  assert(p.source_urls?.length&&p.source_urls.every(url=>/^https:\/\//.test(url)));
  assert(p.historical_boundary_confirmed===false&&p.fill_authorized===false&&p.territorial_claim===false);
