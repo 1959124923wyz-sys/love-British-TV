@@ -1,0 +1,579 @@
+{
+  "type": "FeatureCollection",
+  "name": "1550–1559 political city cores, forts and transition outcome",
+  "metadata": {
+    "period": [
+      1550,
+      1559
+    ],
+    "political_inherited_identifiers": 9,
+    "feature_count": 18,
+    "actual_authentic_old_border_polygons": 0,
+    "all_geometry_type": "Point",
+    "country_county_1556_proved_English_occupied_area_polygons": 0,
+    "important": "Calais and Guînes switch to French state in 1558; older Irish fort cores existed before legal 1556 plantations, Scottish sovereignty independent; British trade beyond home island not conquest.",
+    "collector3_note": "New French allied military garrison at Eyemouth 1557–1558 with Scottish sovereignty; no resurrected English fort; Hammes castle remains archival-only pending reliable Tudor site.",
+    "franco_scottish_sites": "Three French-allied/Suzerain-unrelated Scottish modern archaeological Point locations: Dunbar 1550, Inchkeith 1556, Eyemouth 1557; Leith 1559 research archival only (precise ramparts unlocated)."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "polity-calais-crown",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8587,
+          50.9513
+        ]
+      },
+      "properties": {
+        "stable_id": "calais-crown",
+        "name": "加来：英王在法国的控制据点",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "TNA-FRENCH-LANDS"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "English Crown urban garrison 1550–1557, French Crown urban control 1558–1559",
+        "requires_year_filter_for_controller": true,
+        "French_controller_year_start": 1558,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "actual_local_city_or_administration"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-guines-crown-1520s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.870254,
+          50.867081
+        ]
+      },
+      "properties": {
+        "stable_id": "guines-crown-1520s",
+        "name": "吉讷：加来边区英王军事与定居管理中心",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "CAL-ROYAL-HRP-1520",
+          "CAL-MURPHY-2025-GUINES"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "English Crown urban garrison 1550–1557, French Crown urban control 1558–1559",
+        "requires_year_filter_for_controller": true,
+        "French_controller_year_start": 1558,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "actual_local_city_or_administration"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-dublin-pale",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "stable_id": "dublin-pale",
+        "name": "都柏林：英王在爱尔兰的行政核心之一",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "EGAN-2024-EHR"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "limited_Crown_local_core_not_whole_Ireland",
+        "requires_year_filter_for_controller": false,
+        "French_controller_year_start": null,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "actual_local_city_or_administration"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-channel-jersey",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1313,
+          49.2144
+        ]
+      },
+      "properties": {
+        "stable_id": "channel-jersey",
+        "name": "泽西岛：英王属地",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "JERSEY-HISTORY-GOV"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "historic_separate_non_colony_political_relation",
+        "requires_year_filter_for_controller": false,
+        "French_controller_year_start": null,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "separate_Crown_dependency"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-channel-guernsey",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5333,
+          49.45
+        ]
+      },
+      "properties": {
+        "stable_id": "channel-guernsey",
+        "name": "根西岛：英王王室属地与地方独立法权（延续1530年代）",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "GUE-GOV-HOUSE-HISTORY",
+          "GUE-PARLIAMENT-ROYAL-COURT",
+          "GUE-UK-MOJ-CROWN",
+          "GUE-GETTY-ST-PETER"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "historic_separate_non_colony_political_relation",
+        "requires_year_filter_for_controller": false,
+        "French_controller_year_start": null,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "separate_Crown_dependency"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-isle-of-man",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.56,
+          54.235
+        ]
+      },
+      "properties": {
+        "stable_id": "isle-of-man",
+        "name": "马恩岛：特殊领主制度",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "CAMBRIDGE-LORDSHIP-MAN"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "historic_separate_non_colony_political_relation",
+        "requires_year_filter_for_controller": false,
+        "French_controller_year_start": null,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "autonomous_lordship"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-orkney-scotland",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1,
+          59
+        ]
+      },
+      "properties": {
+        "stable_id": "orkney-scotland",
+        "name": "奥克尼：苏格兰王权相关群岛",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "historic_separate_non_colony_political_relation",
+        "requires_year_filter_for_controller": false,
+        "French_controller_year_start": null,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "independent_Scottish_kingdom_islands"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polity-shetland-scotland",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.15,
+          60.15
+        ]
+      },
+      "properties": {
+        "stable_id": "shetland-scotland",
+        "name": "设得兰：苏格兰王权相关群岛",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "original_prior_year_end": 1549,
+        "source_ids": [
+          "SHETLAND-MUSEUM-1472"
+        ],
+        "historic_point_class": "inherited_prior_location_modern_reference",
+        "English_actual_status_by_year": "historic_separate_non_colony_political_relation",
+        "requires_year_filter_for_controller": false,
+        "French_controller_year_start": null,
+        "not_1558_disappeared_geographic_place": true,
+        "not_precise_16c_area_polygon": true,
+        "origin": "PR27 1540s preexisting political Point",
+        "point_precision": "modern municipality or island reference",
+        "render_kind": "independent_Scottish_kingdom_islands"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "political-kingdom-of-scotland",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1883,
+          55.9533
+        ]
+      },
+      "properties": {
+        "stable_id": "kingdom-of-scotland",
+        "name": "独立苏格兰王国（现代爱丁堡行政示意点）",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "source_ids": [
+          "SC-HES-BROUGHTY-1550"
+        ],
+        "historic_point_class": "modern_capital_reference_for_independent_scottish_sovereignty",
+        "English_actual_status_by_year": "independent Scottish state all 1550–1559; English castle occupations must be tracked at site level",
+        "requires_year_filter_for_controller": false,
+        "not_precise_16c_area_polygon": true,
+        "point_precision": "approximate modern Edinburgh city center",
+        "render_kind": "independent_sovereign_polity"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-french-boulogne-from-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6169,
+          50.7256
+        ]
+      },
+      "properties": {
+        "stable_id": "french-boulogne-from-1550",
+        "name": "法国收复布洛涅旧城（1550年4月25日）",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "controller": "French Crown, previous English colony ended 1550",
+        "source_ids": [
+          "FR-HELIOT-BOULOGNE-1958",
+          "FR-BNF-BOULOGNE-1550"
+        ],
+        "render_kind": "post_1550_French_recovered_city",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "precision": "Modern archaeology/protected landmark or county town site; never assert exact 1550s fort boundary",
+        "previously_existing_fort_before_1550": false,
+        "legal_1556_claim_not_automatic_county_military_occupation": false,
+        "French_controller_year_start": 1550,
+        "not_new_English_colony_in_Russia_or_Africa": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-scottish-broughty-from-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87022,
+          56.46293
+        ]
+      },
+      "properties": {
+        "stable_id": "scottish-broughty-from-1550",
+        "name": "苏格兰／法军1550年收复布劳蒂城堡",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "controller": "Scottish Kingdom, post-Franco-Scottish liberation",
+        "source_ids": [
+          "SC-HES-BROUGHTY-1550"
+        ],
+        "render_kind": "Scottish_castle_recovered",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "precision": "Modern archaeology/protected landmark or county town site; never assert exact 1550s fort boundary",
+        "previously_existing_fort_before_1550": false,
+        "legal_1556_claim_not_automatic_county_military_occupation": false,
+        "French_controller_year_start": null,
+        "not_new_English_colony_in_Russia_or_Africa": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-irish-fort-protector-1550s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.297781,
+          53.035512
+        ]
+      },
+      "properties": {
+        "stable_id": "irish-fort-protector-1550s",
+        "name": "Portlaoise／Maryborough的Fort Protector英王军事据点（1547–48已建立）",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "controller": "English royal garrison in contested Gaelic Midlands, connected to 1556 colony",
+        "source_ids": [
+          "IE-LAOIS-COUNTY-DEVELOPMENT-FORT",
+          "IE-NIAH-MARYBOROUGH-1560"
+        ],
+        "render_kind": "English_local_older_fort_not_new_1556_territory",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "precision": "Modern archaeology/protected landmark or county town site; never assert exact 1550s fort boundary",
+        "previously_existing_fort_before_1550": true,
+        "legal_1556_claim_not_automatic_county_military_occupation": true,
+        "French_controller_year_start": null,
+        "not_new_English_colony_in_Russia_or_Africa": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-irish-fort-governor-1550s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.302267,
+          53.296081
+        ]
+      },
+      "properties": {
+        "stable_id": "irish-fort-governor-1550s",
+        "name": "Daingean／Philipstown的Fort Governor英王军事据点（1546年始建）",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "controller": "English royal military foothold in contested Uí Failghe, renamed 1556",
+        "source_ids": [
+          "IE-OFFALY-NMS-URBAN-ARCHAEOLOGY",
+          "IE-VISIT-OFFALY-DAINGEAN"
+        ],
+        "render_kind": "English_local_older_fort_not_new_1556_territory",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "precision": "Modern archaeology/protected landmark or county town site; never assert exact 1550s fort boundary",
+        "previously_existing_fort_before_1550": true,
+        "legal_1556_claim_not_automatic_county_military_occupation": true,
+        "French_controller_year_start": null,
+        "not_new_English_colony_in_Russia_or_Africa": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-fort-risban-calais-1558",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.84706,
+          50.9641
+        ]
+      },
+      "properties": {
+        "stable_id": "fort-risban-calais-1558",
+        "name": "Calais Fort Risban现址（1558年控制权随城市转法军）",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "controller": "English till Jan 1558, French thereafter",
+        "source_ids": [
+          "FR-CATEAU-1559-ARTICLES",
+          "FR-FRENCH-MONUMENTS-CALAIS-RISBAN"
+        ],
+        "render_kind": "defended_Calais_port_fort_reference",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "precision": "Modern archaeology/protected landmark or county town site; never assert exact 1550s fort boundary",
+        "previously_existing_fort_before_1550": false,
+        "legal_1556_claim_not_automatic_county_military_occupation": false,
+        "French_controller_year_start": 1558,
+        "not_new_English_colony_in_Russia_or_Africa": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-fort-nieulay-calais-1558",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.81619,
+          50.9461
+        ]
+      },
+      "properties": {
+        "stable_id": "fort-nieulay-calais-1558",
+        "name": "Calais Fort Nieulay／旧Newenham方位参考",
+        "first_year_in_chapter": 1550,
+        "year_end_stop": 1559,
+        "controller": "English until 1558 fall, French thereafter",
+        "source_ids": [
+          "FR-FRENCH-MONUMENTS-CALAIS-NIEULAY",
+          "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558"
+        ],
+        "render_kind": "fort_newenham_modern_building_does_not_equal_1558_earthworks",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "precision": "Modern archaeology/protected landmark or county town site; never assert exact 1550s fort boundary",
+        "previously_existing_fort_before_1550": false,
+        "legal_1556_claim_not_automatic_county_military_occupation": false,
+        "French_controller_year_start": 1558,
+        "not_new_English_colony_in_Russia_or_Africa": true,
+        "historical_transfer_note": "French conquest of English Calais urban defence in Jan 1558; present-day Nieulay masonry later, plot center not 1558 precise fortification."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-eyemouth-french-1557-1559",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09156,
+          55.87731
+        ]
+      },
+      "properties": {
+        "stable_id": "eyemouth-french-allied-1557-1559",
+        "name": "埃茅斯1557年法国驻军与苏格兰盟军海岬炮台",
+        "first_year_in_chapter": 1557,
+        "year_end_start": 1557,
+        "year_end_stop": 1558,
+        "controller": "French troops, independent Scotland territory 1557–1558; 1559 negotiated withdrawal, no English occupancy",
+        "French_garrison_start_year": 1557,
+        "French_garrison_confirmed_years": [
+          1557,
+          1558
+        ],
+        "Scottish_sovereignty_remains": true,
+        "former_English_garrison_end": "summer 1550",
+        "former_English_stable_id": "eyemouth-fort-English-1547-1550",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+          "SC-SCAPE-EYEMOUTH-1557-PLAN"
+        ],
+        "render_kind": "French_military_presence_in_Scottish_sovereign_territory_not_English_colony",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "point_precision": "modern archaeological promontory anchor; BL 1557 espionage plan not georeferenced",
+        "must_not_use": "Corn Fort SM4577 lies c250m WNW of Tudor trace italienne fort; modern boundary cannot serve as French garrison polygons",
+        "origin": "Collector3 PR33 research addendum"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-dunbar-French-fort-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5173892,
+          56.0045018
+        ]
+      },
+      "properties": {
+        "stable_id": "dunbar-french-allied-fort-built-1550",
+        "name": "1550年苏格兰邓巴法军新筑防御堡历史考古点",
+        "first_year_in_chapter": 1550,
+        "year_end_start": 1550,
+        "year_end_stop": 1559,
+        "controller": "French-built allied military fortification on independently sovereign Scottish soil",
+        "Scottish_sovereignty_remains": true,
+        "garrison_each_year_confirmed": false,
+        "source_ids": [
+          "SC-HES-DUNBAR-FRENCH-FORT-1550",
+          "SC-TROVE-DUNBAR-1550-EXCAV"
+        ],
+        "render_kind": "dated_1550_French_fortification_heritage_location_not_French_sovereignty",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "point_precision": "HES NGR NT67833 79183 (367833 679183) modern archaeological site reference only, not French fort polygon",
+        "historical_demolition_year": 1560
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-inchkeith-Franco-Scottish-fort-1556",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1351895,
+          56.0323579
+        ]
+      },
+      "properties": {
+        "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+        "name": "1556年起苏法联合筑防的苏格兰因奇基斯岛",
+        "first_year_in_chapter": 1556,
+        "year_end_start": 1556,
+        "year_end_stop": 1559,
+        "controller": "Franco-Scottish fortification phase on independent Scottish island",
+        "Scottish_sovereignty_remains": true,
+        "garrison_each_year_confirmed": false,
+        "source_ids": [
+          "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+        ],
+        "render_kind": "Franco_Scottish_fortification_historic_site_not_british_conquest",
+        "actual_1550s_walls_survey_verified": false,
+        "actual_historic_control_area": null,
+        "area_sqkm": null,
+        "fill_authorized": false,
+        "point_precision": "HES NGR NT29358 82744 modern island heritage point; scheduled zone includes nearly all island and later 19th/20th century works, NOT 1556 walls",
+        "historical_fortification_period": "1556–1564; actual troops year-specific pending"
+      }
+    }
+  ]
+}

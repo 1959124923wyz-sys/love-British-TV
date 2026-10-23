@@ -1,0 +1,420 @@
+{
+  "schema": "1550s_control_gap_audit_v1",
+  "compiled": "2026-10-13",
+  "status": "readied_editor_second_wave_official_HES_20261013",
+  "purpose": "Audit all 10 year-end changes and avoid automatic extension or disappearance of 1540s forts",
+  "inherited_1549_garrison_site_missing": "Hammes (Hames-Boucres), not Chateau de Ham; English historic Pale last defended outpost. Start date of earlier garrison not independently investigated.",
+  "episodes": [
+    {
+      "stable_id": "hammes-castle-english-pale-pre1550-1558",
+      "from": "pre-1550",
+      "to": "1558-01 after Guines fall",
+      "controller": "English local garrison",
+      "source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558",
+        "FR-HAMMES-HISTOPALE-1558",
+        "FR-HISTORIC-PALE-TOPO-2016"
+      ],
+      "date_precision": "22/23 January only local-history secondary; Royal Collection confirms last English Calais fort left after Guines",
+      "year_end_1550_1557": "English garrison",
+      "year_end_1558": "English ended / French recovered region",
+      "coordinates": null,
+      "geo_precision": "historic Tudor Hammes fort unlocated, not Chateau de Ham",
+      "fill_authorized": false,
+      "map_render_eligible": false
+    },
+    {
+      "stable_id": "eyemouth-English-old-phase-1547-summer1550",
+      "from": "1547-09",
+      "to": "1550 summer",
+      "controller": "English occupation of a fort within independent Scotland",
+      "source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH",
+        "SC-EYEMOUTH-MUSEUM-FRENCH-1557"
+      ],
+      "date_precision": "English held until summer 1550 per archaeology abstract; exact withdrawal day not given",
+      "year_end_1550": "not_English",
+      "reference_coords": [
+        -2.09156,
+        55.87731
+      ],
+      "fill_authorized": false
+    },
+    {
+      "stable_id": "eyemouth-French-garrison-1557-1559",
+      "from": "1557",
+      "to": "1559-07 negotiated exit, physical demolition separately unclear",
+      "controller": "French military allied with independent Scottish Crown",
+      "source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH",
+        "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+        "SC-SCAPE-EYEMOUTH-1557-PLAN",
+        "SC-BLAKEWAY-2017-ANGLO-SCOTTISH-WAR"
+      ],
+      "year_end_1557": "French allied garrison",
+      "year_end_1558": "French allied garrison",
+      "year_end_1559": "negotiated withdrawal 1559, day and demolition unverified; do not claim still active at year end",
+      "reference_coords": [
+        -2.09156,
+        55.87731
+      ],
+      "geo_precision": "Historic artillery headland; not Corn Fort SM4577 250m WNW; no surveyed old French walls",
+      "fill_authorized": false
+    },
+    {
+      "stable_id": "hammes-English-exit-1558",
+      "from": "1558-01 after Guines surrendered",
+      "to": "1558-01 22/23 tentative",
+      "controller": "English left, effective French-controlled Calais region",
+      "source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558",
+        "FR-HAMMES-HISTOPALE-1558"
+      ],
+      "coordinates": null,
+      "precision": "Unlocated castle; archival only",
+      "fill_authorized": false
+    },
+    {
+      "stable_id": "newnham-bridge-early-1558",
+      "from": "1558-01 by 04",
+      "to": "French from siege onward",
+      "controller": "France capture of English Calais defensive causeway",
+      "source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558"
+      ],
+      "date_precision": "Grey letter 4 January already reports French control",
+      "site_ref": "modern Nieulay is not old Tudor geometry",
+      "fill_authorized": false
+    },
+    {
+      "stable_id": "rysbank-harbour-early-1558",
+      "from": "1558-01 by 04",
+      "to": "French from siege onward",
+      "controller": "France capture of English Calais port defence",
+      "source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558"
+      ],
+      "date_precision": "Grey letter 4 January already reports French control",
+      "site_ref": "modern Risban landmark not Tudor shoreline survey",
+      "fill_authorized": false
+    },
+    {
+      "stable_id": "calais-city-1558-transition",
+      "from": "1558-01-07/08",
+      "to": "French thereafter",
+      "controller": "English→French",
+      "source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558",
+        "FR-CALAIS-MUNICIPAL-1558"
+      ],
+      "site_ref": [
+        1.8587,
+        50.9513
+      ],
+      "date_precision": "Royal Collection quotes Jan7 castle breach and city capitulation; municipal Calais archive dates full recovery Jan8; retain both in chronology",
+      "fill_authorized": false
+    },
+    {
+      "stable_id": "guines-castle-1558-transition",
+      "from": "1558-01",
+      "to": "French thereafter",
+      "controller": "English→French",
+      "source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558"
+      ],
+      "site_ref": [
+        1.870254,
+        50.867081
+      ],
+      "date_precision": "Royal Collection confirms Jan 1558 without individual day",
+      "cartography_warning": "RCIN721026 fort plan demonstrably inconsistent with BL Cotton Augustus I ii71 contemporary survey, castle drawn wrong side of town; forbidden as control Polygon source",
+      "fill_authorized": false
+    },
+    {
+      "stable_id": "dunbar-french-allied-fort-built-1550",
+      "from_year": 1550,
+      "to_year": 1560,
+      "site": "Castle Park at Dunbar",
+      "controller_type": "French-allied fortification on independent Scottish soil",
+      "actual_sov": "Scotland",
+      "evidence": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ],
+      "map_ref": [
+        -2.5173892,
+        56.0045018
+      ],
+      "boundary_authorized": false,
+      "garrison_presence_each_year_verified": false,
+      "fort_demolition_year": 1560
+    },
+    {
+      "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+      "from_year": 1556,
+      "to_year": 1564,
+      "site": "Inchkeith Island",
+      "controller_type": "Franco-Scottish allied defensive fortification",
+      "actual_sov": "Scotland",
+      "evidence": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ],
+      "map_ref": [
+        -3.1351895,
+        56.0323579
+      ],
+      "boundary_authorized": false,
+      "garrison_presence_each_year_verified": false,
+      "warning": "HES scheduled polygon includes later defenses and full island, not 1556 period wall"
+    },
+    {
+      "stable_id": "leith-french-allied-fortifications-1559",
+      "from_year": 1559,
+      "to_year": null,
+      "site": "Leith",
+      "controller_type": "French garrison fortifying port during Scottish political conflict",
+      "actual_sov": "Scotland",
+      "evidence": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ],
+      "map_ref": null,
+      "boundary_authorized": false,
+      "garrison_presence_each_year_verified": false,
+      "original_folios": "Cotton MS Caligula B X/1 f28v–32r catalogue, not original examined"
+    }
+  ],
+  "year_end_matrix": [
+    {
+      "year": 1550,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Not active",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1551,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Not active",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1552,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Not active",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1553,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Not active",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1554,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Not active",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1555,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Not active",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": false,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1556,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Not active",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1557,
+      "calais_controller": "English Crown",
+      "guines_controller": "English Crown",
+      "hammes_controller": "English garrison (no trustworthy pin)",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "French allied to sovereign Scotland",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1558,
+      "calais_controller": "French Crown",
+      "guines_controller": "French Crown",
+      "hammes_controller": "French regional control, English garrison gone",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "French allied to sovereign Scotland",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": false,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    },
+    {
+      "year": 1559,
+      "calais_controller": "French Crown",
+      "guines_controller": "French Crown",
+      "hammes_controller": "French regional control, English garrison gone",
+      "eyemouth_English_garrison_year_end": false,
+      "eyemouth_French_garrison_year_end": "Withdrawal in 1559, precise fort demolition disputed",
+      "Hailes_controller": "Scottish (Scots retook from English during 1548)",
+      "Boulogne_controller": "French since 1550-04-25",
+      "Broughty_controller": "Scottish since 1550-Feb",
+      "Irish_Midlands_full_county_English_effective_control_approved": false,
+      "calais_Pale_precise_boundary_approved": false,
+      "English_Russian_or_West_Africa_sovereignty": false,
+      "dunbar_French_built_structure_since_1550": true,
+      "inchkeith_Franco_Scottish_structure_since_1556": true,
+      "leith_French_fortification_attested_Sep1559": true,
+      "Scottish_sovereignty_despite_allied_French_forts": true,
+      "period_surveys_authorizing_filled_polygons": 0
+    }
+  ],
+  "retroactive_PR27_Hailes_correction": {
+    "stable_id": "hailes-english-1548-date_unknown",
+    "actual_English_end_year": 1548,
+    "Scots_recovery_in_1548": true,
+    "source_ids": [
+      "SC-HES-HAILES-SOS-2019"
+    ],
+    "year_end_1548": "no English",
+    "year_end_1549": "no English",
+    "year_end_1550": "no English",
+    "exact_day_month": null
+  },
+  "treaty_vs_actual_retreat_1550": {
+    "source_ids": [
+      "GB-EDWARD-VI-DIARY-1550-TREATY"
+    ],
+    "Lauder_Dunglass": "24 March treaty provides handover within 6 months after proclamation; does NOT establish 24 March physical surrender",
+    "Eyemouth_Roxburgh": "English demolition promises linked to Scottish fort evacuation; museum/archaeology demonstrates Eyemouth actual English end during 1550 summer, exact day unverified",
+    "do_not_invent_retreat_dates": true
+  },
+  "precision_alerts": [
+    "RCIN721026 1558 Guines military etching is not consistent with period maps BL Cotton Augustus I ii71; cannot copy drawn castle outlines.",
+    "Medieval Corn Fort scheduled SM4577 is 250m WNW of Tudor Eyemouth artillery fort; no use of Corn Fort area as English/French walls.",
+    "Museum retrospective 1560 demolition and archaeology July 1559 French negotiated withdrawal are different historical actions. Archive exact end.",
+    "Hammes Chateau de Ham 49.743,3.073 and local Baron Saint-Paul 1800 house are entirely different sites; no fabricated precise Tudor fort pin.",
+    "The Crown's 1556 Leix/Offaly legal shires are not measured field-controlled county polygons.",
+    "No historical precise British-controlled polygon was authorized in this research iteration.",
+    "Dunbar Castle Park HES SM5960 modern 180x170m listed archaeological area includes many periods, not surveyed French fort contour of 1550.",
+    "Inchkeith SM3838 scheduled designation nearly full island includes later military works; not 1556 French wall or sovereign French jurisdiction.",
+    "Leith 1559 BL catalogue demonstrates French defense activity, but the French period ramparts have no authenticated GIS polygon or precise pin."
+  ],
+  "outstanding": [
+    "Locate actual Hammes castle with scholarly pale cadastre crosswalk and historical plan, not town centroid.",
+    "Read British Library Cotton Augustus I ii 71 c1550 military survey and compare RCIN Guines artistic engravings, check rights.",
+    "Read British Library Cotton Augustus I i60 Eyemouth 1557 spy plan, assess licensing/georeferencing, compare excavation phases.",
+    "Verify the month/day when Eyemouth French fort was vacated in 1559 and separately later demolition.",
+    "Verify actual handover dates at 1550 Lauder/Dunglass/Roxburgh via State Papers beyond treaty.",
+    "Measure 1556-1559 individual grant lands only when actual surveyed dated title documents available.",
+    "Read Dunbar excavations including Perry 2000 and 1550 military notes to separate French ditch from 1560 demolition.",
+    "Find period Inchkeith 1556–64 fort construction records; avoid resampling current scheduled-island polygon.",
+    "Read Leith 1559 British Library Cotton Caligula B X/1 and original period fortress plan distinct from English 1560 siegeworks."
+  ]
+}

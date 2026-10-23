@@ -1,0 +1,816 @@
+{
+  "schema": "1550s_control_transition_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "compiled": "2026-10-13",
+  "origin_PR27_seed": "research/periods/1540-1549/TRANSITION_1549_1550_RESEARCH_SEED.json",
+  "inherited_political_identities": [
+    {
+      "stable_id": "calais-crown",
+      "name": "加来英王军政据点",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name": "都柏林英王爱尔兰行政核心",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name": "泽西王室属地",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name": "马恩地方领主",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name": "奥克尼苏格兰王权",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name": "设得兰苏格兰王权",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "name": "吉讷英王边防据点",
+      "prior_status": "same_existing_polity_class_but_period_border_unknown",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "name": "独立苏格兰王国",
+      "prior_status": "independent_not_English",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    },
+    {
+      "stable_id": "channel-guernsey",
+      "name": "根西王室属地／独立法权（原有政制）",
+      "prior_status": "Crown_Dependency_separate_Guernsey_Bailiwick",
+      "source_period": "PR27 1549 seed",
+      "continuity": "political_identity_survives_change_of_controller",
+      "historical_border_verified": false
+    }
+  ],
+  "closed_before_1550": [
+    {
+      "stable_id": "inchcolm-english-1547-1548",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HES-INCHCOLM"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "haddington-english-1548-1549",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HES-2022-HADDINGTON"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "lochmaben-english-1544-1545",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HES-LOCHMABEN-HISTORY",
+        "SC-HES-LOCHMABEN-SITE"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "ambleteuse-english-fort-1546-1549",
+      "end_by_1549": true,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-MUNICIPAL-AMBLETEUSE-1549"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "boulemberg-english-fort-1546-1549",
+      "end_by_1549": true,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "hume-english-1547-1548",
+      "end_by_1549": true,
+      "source_ids": [
+        "SC-HUME-TRUST-1547-1548"
+      ],
+      "notes": "Do not restore as English at 1550"
+    },
+    {
+      "stable_id": "hailes-english-1548-date_unknown",
+      "end_by_1549": true,
+      "actual_end": "1548 (Scottish recapture same year, exact month unverified)",
+      "source_ids": [
+        "SC-HES-HAILES-SOS-2019"
+      ],
+      "notes": "Official HES Hailes Castle Statement of Significance p.2/7: English captured in 1548, Scots retook the same year. NO English 1548 year-end or 1549/1550 garrison."
+    }
+  ],
+  "confirmed_1550_end_of_English_occupation": [
+    {
+      "stable_id": "boulogne-english-1544-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "French Crown",
+      "reported_change_date": "1550-04-25",
+      "source_ids": [
+        "FR-HELIOT-BOULOGNE-1958"
+      ],
+      "reference_point": [
+        1.6169,
+        50.7256
+      ],
+      "precision": "French city restitution per scholarly day",
+      "authentic_1540s_walls_verified": false
+    },
+    {
+      "stable_id": "tour-d-ordre-english-fort-1544-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "French Crown",
+      "reported_change_date": "1550-04 (associated)",
+      "source_ids": [
+        "FR-HELIOT-BOULOGNE-1958"
+      ],
+      "reference_point": [
+        1.5972222,
+        50.7316667
+      ],
+      "precision": "English north coast outwork tied to Boulogne; individual transfer day unknown",
+      "authentic_1540s_walls_verified": false
+    },
+    {
+      "stable_id": "broughty-english-1547-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "Franco-Scottish reconquest / Scottish sovereignty",
+      "reported_change_date": "1550-02 (exact day not HES verified)",
+      "source_ids": [
+        "SC-HES-BROUGHTY-1550"
+      ],
+      "reference_point": [
+        -2.87022,
+        56.46293
+      ],
+      "precision": "Scottish national heritage official",
+      "authentic_1540s_walls_verified": false
+    },
+    {
+      "stable_id": "forthill-english-fort-1548-1550",
+      "old_controller": "English Crown local garrison",
+      "new_controller": "Scottish sovereignty, English fort demolished",
+      "reported_change_date": "1550 (month unknown)",
+      "source_ids": [
+        "SC-NLS-FORTHILL-1550"
+      ],
+      "reference_point": [
+        -2.87601,
+        56.47487
+      ],
+      "precision": "Digitized historic gazetteer",
+      "authentic_1540s_walls_verified": false
+    }
+  ],
+  "unresolved_1550_departure_and_local_continuity": [
+    {
+      "stable_id": "eyemouth-fort-English-1547-1550",
+      "last_English_yearend_verified": 1549,
+      "status_1550": "English occupation ended summer 1550; exact day not confirmed",
+      "map_ref": [
+        -2.09156,
+        55.87731
+      ],
+      "note": "Possible 1550 exit; site archival lead not independent current confirmation",
+      "year_end_1550_English_active": false,
+      "primary_scholarly_abstract_source_id": "SC-CALDWELL-EWART-1997-FRENCH",
+      "control_certainty": "peer_reviewed_archaeological_abstract"
+    },
+    {
+      "stable_id": "lauder-english-1548-1550",
+      "last_English_yearend_verified": 1549,
+      "status_1550": "uncertain_no_English_solid_fill_without_verified_evidence",
+      "map_ref": [
+        -2.74838,
+        55.71936
+      ],
+      "note": "Withdrawal date not independently established"
+    },
+    {
+      "stable_id": "dunglass-camp-english-1548-1549",
+      "last_English_yearend_verified": 1549,
+      "status_1550": "uncertain_no_English_solid_fill_without_verified_evidence",
+      "map_ref": [
+        -2.38613,
+        55.93584
+      ],
+      "note": "English camp last attested 1549; date of its destruction unknown"
+    }
+  ],
+  "French_1558_recoveries": [
+    {
+      "stable_id": "calais-crown",
+      "event_year": 1558,
+      "month": 1,
+      "day": 7,
+      "new_controller": "French Crown",
+      "source_ids": [
+        "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558"
+      ],
+      "precise_Pale_polygon": null
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "event_year": 1558,
+      "month": 1,
+      "day": null,
+      "new_controller": "French Crown",
+      "source_ids": [
+        "FR-HISTORY-PARLIAMENT-GREY-1558",
+        "FR-OXFORD-GUINES-1558"
+      ],
+      "precise_Pale_polygon": null
+    }
+  ],
+  "year_end_snapshots": [
+    {
+      "year": 1550,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [
+        "eyemouth-fort-English-1547-1550",
+        "lauder-english-1548-1550",
+        "dunglass-camp-english-1548-1549"
+      ],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "not French",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "documented_English_fort_ends_by_yearend_1550": [
+        "boulogne-english-1544-1550",
+        "broughty-english-1547-1550",
+        "eyemouth-fort-English-1547-1550",
+        "forthill-english-fort-1548-1550"
+      ],
+      "treaty_only_English_garrison_evacuations_without_day": [
+        "lauder-english-1548-1550",
+        "dunglass-camp-english-1548-1549"
+      ],
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": false,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1551,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "not French",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": false,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1552,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "not French",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": false,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1553,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "not French",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": false,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1554,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "not French",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": false,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1555,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": false,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "not French",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": false,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1556,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "not French",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": true,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1557,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "French_control_former_English_Calais_Guines": [],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English continued",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "French allied to Scottish Crown",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": true,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1558,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [],
+      "French_control_former_English_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English left after Guines January 1558",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "French allied to Scottish Crown",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "local_sequence_1558": {
+        "early_January_defensive_sites_lost_before_full_city": [
+          "Newnham Bridge/Nieulay old structure",
+          "Rysbank"
+        ],
+        "Calais_city_final_7_8_Jan": "city event Jan7 contemporary entry and Jan8 Calais municipal final",
+        "Guines_and_Hammes_followed_late_January": true,
+        "Hammes_final_old_English_Pale_castle": true,
+        "source_ids": [
+          "FR-RCT-CALAIS-SIEGE-1558",
+          "FR-CALAIS-MUNICIPAL-1558",
+          "FR-RCT-GUINES-SIEGE-1558"
+        ]
+      },
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": true,
+      "Leith_French_defences_attested_from_1559": false,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    },
+    {
+      "year": 1559,
+      "retained_1549_political_identity_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "English_control_Calais_Guines": [],
+      "French_control_former_English_Calais_Guines": [
+        "calais-crown",
+        "guines-crown-1520s"
+      ],
+      "Royal_Dublin_Pale_limited_local_core": true,
+      "Scottish_kingdom_remains_independent": true,
+      "Crown_dependencies": [
+        "channel-jersey",
+        "channel-guernsey"
+      ],
+      "Man_separate_lordship": true,
+      "Irish_1556_plantation_legal_claim": true,
+      "verified_actual_English_occupation_of_whole_modern_Laois_Offaly": false,
+      "active_1549_English_Boulogne_Broughty_outworks_yearend": false,
+      "disputed_site_1550_status": [],
+      "trade_company_territorial_annexation": false,
+      "Hammes_English_Pale_fort_without_geolocated_polygon": "English left after Guines January 1558",
+      "Eyemouth_English_garrison_yearend": false,
+      "Eyemouth_French_garrison_yearend": "French exit negotiated July 1559 (exact disbanding month/day and demolition unsettled)",
+      "Hailes_English_garrison_yearend": false,
+      "Crown_Pale_full_historical_polygon_verified": false,
+      "Dunbar_French_built_fort_architecture_active_reference_since_1550": true,
+      "Inchkeith_Franco_Scottish_fortification_phase_from_1556": true,
+      "Leith_French_defences_attested_from_1559": true,
+      "Scotland_french_allied_garrison_not_English_colony": true,
+      "Scotland_French_military_cannot_be_colored_French_sovereignty": true
+    }
+  ],
+  "precision_warning": "Do not reset previous political identities; Calais French after 1558. Historical areas unsurveyed; Irish law ≠ whole shire actual Crown control.",
+  "authentic_historic_control_polygons_verified": 0,
+  "collected_territorial_gap_audit_20261013": {
+    "data_path": "TERRITORIAL_CONTINUITY_GAP_AUDIT_COLLECTOR3_20261013.json",
+    "historic_boundary_verified": false,
+    "archaeological_source_count_new": 13,
+    "hammes_missing_in_1549_rollover": true,
+    "hammes_end_1558": "Last Calais-Pale English outpost evacuated after Guînes fell, exact night 22/23 January from local secondary account",
+    "French_1557_Eyemouth_missing": true,
+    "Eyemouth_1557_1558_status": "French garrison allied with independent Scotland, neither English nor French sovereign Scottish county",
+    "Eyemouth_French_1559_status": "Negotiated withdrawal July 1559 academic archaeology abstract, precise departure/demolition separate.",
+    "source_ids": [
+      "FR-RCT-GUINES-SIEGE-1558",
+      "SC-CALDWELL-EWART-1997-FRENCH",
+      "SC-BLAKEWAY-2017-ANGLO-SCOTTISH-WAR",
+      "SC-HES-HAILES-SOS-2019",
+      "GB-EDWARD-VI-DIARY-1550-TREATY"
+    ]
+  },
+  "Hammes_castle_lost_historical_garrison": {
+    "stable_id": "hammes-castle-english-pale-pre1550-1558",
+    "historical_first_year_precise": null,
+    "known_as_English_pre1550": true,
+    "year_end_1550_to_1557": "English-held small swamp fortress in Calais Pale",
+    "lost_after_Guines_in_1558": true,
+    "local_secondary_night_date": "1558-01-22_to_23",
+    "coordinates": null,
+    "source_ids": [
+      "FR-RCT-GUINES-SIEGE-1558",
+      "FR-HAMMES-HISTOPALE-1558"
+    ],
+    "site_rendering_prohibited_without_geolocation": true,
+    "geography": "near Hames-Boucres, not modern Château de Ham in Somme"
+  },
+  "eyemouth_French_reoccupation_1557_1559": {
+    "stable_id": "eyemouth-French-garrison-1557-1559",
+    "Scottish_sovereignty_preserved": true,
+    "controller_from_year": 1557,
+    "controller": "French military allied with independent Scotland",
+    "active_French_1557_1558": true,
+    "English_returned": false,
+    "negotiated_exit_year": 1559,
+    "month": 7,
+    "actual_demolition_1559_or_1560": "unresolved; do not infer English conquest or full French sovereignty",
+    "site_reference": [
+      -2.09156,
+      55.87731
+    ],
+    "source_ids": [
+      "SC-CALDWELL-EWART-1997-FRENCH",
+      "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+      "SC-SCAPE-EYEMOUTH-1557-PLAN"
+    ],
+    "geometry_verified": false
+  },
+  "Franco_Scottish_fortification_phases_1550s": [
+    {
+      "stable_id": "dunbar-french-allied-fort-built-1550",
+      "from": 1550,
+      "to": "1560 demolished",
+      "type": "built_in_1550_defensive_structure_site",
+      "military_built_by": "French allies of Scotland",
+      "Scottish_sovereignty": true,
+      "independent_all_years": true,
+      "source_ids": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ],
+      "modern_heritage_site_ref": [
+        -2.5173892,
+        56.0045018
+      ],
+      "authentic_French_rampart_geometry_verified": false,
+      "garrison_by_year_verified": false
+    },
+    {
+      "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+      "from": 1556,
+      "to": "1564 archaeological architectural phase",
+      "type": "Franco_Scottish_fortification_island_site",
+      "military_built_by": "Franco-Scottish allies",
+      "Scottish_sovereignty": true,
+      "independent_all_years": true,
+      "source_ids": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ],
+      "modern_heritage_site_ref": [
+        -3.1351895,
+        56.0323579
+      ],
+      "authentic_historic_wall_geometry_verified": false,
+      "garrison_by_year_verified": false
+    },
+    {
+      "stable_id": "leith-french-allied-fortifications-1559",
+      "from": 1559,
+      "to": "1560 (next decade siege/dismantling)",
+      "type": "French_military_defensive_works_Scottish_political_conflict",
+      "military_built_by": "French troops supporting Scottish regency",
+      "Scottish_sovereignty": true,
+      "source_ids": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ],
+      "modern_heritage_site_ref": null,
+      "authentic_historic_wall_geometry_verified": false,
+      "garrison_presence_1559": "BL document catalogue supports French fortifying Leith in September 1559",
+      "garrison_by_year_verified": false
+    }
+  ]
+}
