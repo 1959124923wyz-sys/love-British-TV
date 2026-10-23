@@ -2,17 +2,17 @@
 // Native 17C cartography regression: a geography narrative IS NOT a measured border.
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path');
 const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
-const g=json('data/seventeenth-century-regional-studies-1600-1699.geojson');
+const g=json('data/seventeenth-century-regional-studies-1610-1699.geojson');
 assert.equal(g.type,'FeatureCollection');
 assert.equal(g.metadata.schema,'atlas-17c-regional-studies-v1');
 assert.equal(g.features.length,19);
 assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,13);
 assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,6);
 assert.equal(g.metadata.total_confirmed_historical_control_polygons,0);
-const existing=json('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
-assert.equal(existing.features.length,60,'17C site-level layer includes New England, Glencoe and Barbados cues');
+const existing=json('data/seventeenth-century-spatial-evidence-1610-1699.geojson');
+assert.equal(existing.features.length,61,'17C site-level layer includes New England, Glencoe and Barbados cues');
 const ids=new Set,evs=new Map();
-for(let y=1600;y<=1690;y+=10){
+for(let y=1610;y<=1690;y+=10){
  let atlas=json('data/atlas-'+y+'-'+(y+9)+'.json');
  assert.deepEqual(atlas.colonial_polygons,[],'historical colonial polygons cannot be created from studies');
  for(const e of atlas.events)evs.set(e.id,e);
@@ -30,7 +30,7 @@ for(const f of g.features){
  assert(!ids.has(f.id),'duplicate geographic study id');ids.add(f.id);
  assert(/^[\w-]+$/.test(f.id));
  assert(Number.isInteger(p.start_year)&&Number.isInteger(p.end_year)&&p.start_year<=p.end_year);
- assert(p.start_year>=1600&&p.end_year<=1699);
+ assert(p.start_year>=1610&&p.end_year<=1699);
  assert(['military_impact','economic_network','land_dispossession'].includes(p.display_kind));
  for(const flag of ['historical_boundary_confirmed','fill_authorized','territorial_claim','exclude_from_area_aggregation'])
   assert.equal(p[flag],flag==='exclude_from_area_aggregation',flag+' must disallow area');
@@ -57,7 +57,7 @@ for(const f of g.features){
  }
 }
 const byYear=y=>g.features.filter(f=>f.properties.start_year<=y&&y<=f.properties.end_year);
-for(const [y,n] of [[1609,1],[1610,1],[1613,2],[1616,1],[1622,2],[1635,1],[1637,1],[1649,1],[1650,1],[1653,3],[1658,1],[1690,3],[1691,1],[1692,0]]){
+for(const [y,n] of [[1619,1],[1610,1],[1613,2],[1616,1],[1622,2],[1635,1],[1637,1],[1649,1],[1650,1],[1653,3],[1658,1],[1690,3],[1691,1],[1692,0]]){
  assert.equal(byYear(y).length,n,'schematic activity years must not be interpolated: '+y);
 }
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
@@ -68,4 +68,4 @@ for(const x of ['function renderSeventeenthRegionalStudies(){','groups.seventeen
 assert(app.includes("groups.seventeenthStudies.clearLayers();"),'switching back to 16C must erase later ranges');
 assert(app.includes("if(map.getZoom()<5)"),'world zoom must preserve small sourced research area visibility without inventing metric boundaries');
 assert(app.includes("atlas-17c-regional-zoom-hint"),'desktop global view must use dashed, fixed-screen regional reference cues');
-console.log('PASS: 13 sourced dashed reference envelopes, 6 non-GPS relation lines, 60 place/policy cues; no invented trade polygon');
+console.log('PASS: 13 sourced dashed reference envelopes, 6 non-GPS relation lines, 61 place/policy cues; no invented trade polygon');
