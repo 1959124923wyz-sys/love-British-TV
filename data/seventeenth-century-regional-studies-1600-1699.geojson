@@ -7,15 +7,16 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 20,
-    "polygon_count": 14,
+    "feature_count": 21,
+    "polygon_count": 15,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
     "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA.",
     "quality_note": "2026-10-23 16C-parity: corrected Hormuz/Qeshm Safavid-EIC campaign to E6-T12 instead of Ireland; removed 1658 Bengal factory-to-factory polygon (two trading sites do not substantiate an affected area), retaining verified illustrative connection line. Other schematic polygons remain non-sovereign, non-area-aggregable.",
     "new_england_1637_note": "One Pequot War 1637 dotted reading-only envelope between documented Saybrook and Mystic atlas coordinates. Geometry entirely cartographic; no lines or war route inferred and not a historical front, Indigenous territorial boundary or colony.",
-    "virginia_1610_note": "Single 1610 Jamestown/Kecoughtan two-attested-site dotted reader envelope only. 1646/1677 treaty geographic legal terms deliberately remain point referenced until actual cadastral/river boundary verification; no sovereignty polygon."
+    "virginia_1610_note": "Single 1610 Jamestown/Kecoughtan two-attested-site dotted reader envelope only. 1646/1677 treaty geographic legal terms deliberately remain point referenced until actual cadastral/river boundary verification; no sovereignty polygon.",
+    "jamaica_1658_note": "Only one modern Rio Nuevo nonmetric dashed reading box in year 1658, expressly not a surveyed fortress/battle zone and not a Jamaica-wide sovereignty polygon; no Maroon/Nanny Town geometry inferred."
   },
   "features": [
     {
@@ -1796,6 +1797,81 @@
         "uncertainty": "图中边线是人为教学设计，不得认为线内所有土地发生军事行动、不把城镇间土地视为英格兰已征服，也不能据此计算面积。",
         "related_story_ids": [
           "E6-T05"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-rio-nuevo-1658-reading-envelope",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -77.055,
+              18.382
+            ],
+            [
+              -76.975,
+              18.382
+            ],
+            [
+              -76.975,
+              18.444
+            ],
+            [
+              -77.055,
+              18.444
+            ],
+            [
+              -77.055,
+              18.382
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1658年里奥努埃沃：英西争岛战役现代具名地点虚线阅读区",
+        "start_year": 1658,
+        "end_year": 1658,
+        "display_kind": "military_impact",
+        "label_type": "1658年史料地点阅读示意框 · 非战场实测边界",
+        "description": "牙买加官方文化遗产记录证明1658年里奥努埃沃寨垒战事。本虚线框围绕现代里奥努埃沃海岸的公开参考点手工留白，只用于让读者找到地区，矩形四角没有17世纪历史考古证据。既不是寨垒范围，也不能当成英国有效控制的岛内面积。",
+        "summary_zh": "英西争岛后期里奥努埃沃战役的虚线教学参考框；无实测的交战范围或所有山地臣服的事实依据。",
+        "actor_zh": "英格兰D'Oyley部队、西班牙Ysassi部队及各自的本地盟友",
+        "anchor_event_ids": [
+          "1650S-E090"
+        ],
+        "related_event_ids": [
+          "1650S-E090"
+        ],
+        "anchor_places": [
+          {
+            "name": "里奥努埃沃海岸具名现代地点",
+            "lon": -77.0137,
+            "lat": 18.41,
+            "source_event_id": "1650S-E090",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://jis.gov.jm/information/jamaica-heritage-sites/st-mary-heritage-sites/",
+          "https://jnht.gov.jm/st_mary.php"
+        ],
+        "spatial_semantics": "dash only as modern named-location reading aid, not 1658 fort, historical battle extent or English sovereign colony boundary",
+        "geometry_precision": "manually_padded_modern_coastal_reference_rectangle_not_1658_fortification",
+        "mapping_method": "hand padded illustration only; rectangle corners cannot be interpreted as historic surveyed battlefield or coastline; NOT an actual controlled territory",
+        "provenance_method": "Jamaican JIS/JNHT confirms 1658 Rio Nuevo battle, but does NOT validate the vertices of this illustration",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "来源支持地点及战争年份，但不支持矩形四角、实际战线、马龙社群疆界或被征服面积。",
+        "related_story_ids": [
+          "E6-T08"
         ]
       }
     }

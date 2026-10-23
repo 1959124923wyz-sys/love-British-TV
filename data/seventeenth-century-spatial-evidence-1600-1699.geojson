@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 73,
+    "feature_count": 86,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -23,7 +23,8 @@
     "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events.",
     "source_only_1688": "Documented 1688 Barbados act is independently sourced but lacks canonical Atlas event; frontend explicitly permits e.source_only=true and forbids invented relation IDs.",
     "new_england_wars_20261023": "Ten non-sovereign event-linked Pequot/Metacom/captivity/restitution cues; exact event reference coords, NOT original boundary lines.",
-    "virginia_powhatan_story_20261023": "12 year-specific historical war/legal/locality cues tied to E6-T05; published atlas representative coordinates, NOT treaty boundary / native area / colonial actual control. No vessel GPS route."
+    "virginia_powhatan_story_20261023": "12 year-specific historical war/legal/locality cues tied to E6-T05; published atlas representative coordinates, NOT treaty boundary / native area / colonial actual control. No vessel GPS route.",
+    "jamaica_t08_20261023": "Added 13 year-scoped evidence cues, explicitly source-attested modern reference points; Nanny Town built ~1723 and 1739 Maroon treaties excluded. No island-wide land, Maroon area or slave-law implemented area polygons."
   },
   "features": [
     {
@@ -3035,6 +3036,487 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "published atlas named-locality longitude/latitude coordinate copied exactly, fixed screen-pixel dashed cue, NOT verified historical land or area buffer",
         "geometry_precision": "approved_atlas_modern_named_place_reference_not_historic_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1655-conquest-1655",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "英军登陆并接管西班牙殖民行政中心",
+        "start_year": 1655,
+        "display_through_year": 1655,
+        "display_kind": "military_impact",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "1655年英军接收西班牙殖民地据点，不代表整岛或马龙山地已归英国实控。",
+        "summary_zh": "1655年英军接收西班牙殖民地据点，不代表整岛或马龙山地已归英国实控。",
+        "source_urls": [
+          "https://jnht.gov.jm/history.php"
+        ],
+        "related_event_ids": [
+          "1650S-E018"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1655-maroon-1655",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.706,
+          18.086
+        ]
+      },
+      "properties": {
+        "name": "非洲后裔及部分泰诺居民转入山地建立自主社区",
+        "start_year": 1655,
+        "display_through_year": 1655,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "沿用旧图的山地区域参考点而非1655年已存在的南妮镇或经过验证的营地坐标；不标马龙政权疆域。",
+        "summary_zh": "沿用旧图的山地区域参考点而非1655年已存在的南妮镇或经过验证的营地坐标；不标马龙政权疆域。",
+        "source_urls": [
+          "https://www.nlj.gov.jm/history-notes/The%20Maroons%20edited%20final.htm"
+        ],
+        "related_event_ids": [
+          "1650S-E019"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1658-rio-nuevo-1658",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0137,
+          18.41
+        ]
+      },
+      "properties": {
+        "name": "里奥努埃沃：英西反复争夺据点",
+        "start_year": 1658,
+        "display_through_year": 1658,
+        "display_kind": "military_impact",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "现代里奥努埃沃海岸邻近具名位置，不是1658年西班牙寨垒的精确考古边界。",
+        "summary_zh": "现代里奥努埃沃海岸邻近具名位置，不是1658年西班牙寨垒的精确考古边界。",
+        "source_urls": [
+          "https://jis.gov.jm/information/jamaica-heritage-sites/st-mary-heritage-sites/"
+        ],
+        "related_event_ids": [
+          "1650S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "government_beach_nearby_not_battlefield_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1660-resistance-1660",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "英西争岛趋于结束但马龙山区自主持续",
+        "start_year": 1660,
+        "display_through_year": 1660,
+        "display_kind": "military_impact",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "英西政治战争渐止，山地抵抗并未随之自然消失；点是殖民政府地点参考，不是山地投降地点。",
+        "summary_zh": "英西政治战争渐止，山地抵抗并未随之自然消失；点是殖民政府地点参考，不是山地投降地点。",
+        "source_urls": [
+          "https://www.nlj.gov.jm/history-notes/The%20Maroons%20edited%20final.htm"
+        ],
+        "related_event_ids": [
+          "1660S-E002"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1661-movement-law-1661",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "殖民当局限制仆役与被奴役者擅离庄园",
+        "start_year": 1661,
+        "display_through_year": 1661,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "原法规的后拟题名须区分；仅提示1661年明文限制，不表示全岛每座庄园已实际执行。",
+        "summary_zh": "原法规的后拟题名须区分；仅提示1661年明文限制，不表示全岛每座庄园已实际执行。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1661"
+        ],
+        "related_event_ids": [
+          "1660S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1662-punishment-law-1662",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "殖民奴役惩罚及逃亡控制条例",
+        "start_year": 1662,
+        "display_through_year": 1662,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "1662年11月2日法规地点代理，不推定实际被施刑者、执行范围及数量。",
+        "summary_zh": "1662年11月2日法规地点代理，不推定实际被施刑者、执行范围及数量。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1662"
+        ],
+        "related_event_ids": [
+          "1660S-E014"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1664-slave-code-1664",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "巴巴多斯式奴役法在牙买加采用",
+        "start_year": 1664,
+        "display_through_year": 1664,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "1664年综合奴役法全文转录确认立法，但各庄园执行与人口状况仍待查。",
+        "summary_zh": "1664年综合奴役法全文转录确认立法，但各庄园执行与人口状况仍待查。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1664-0"
+        ],
+        "related_event_ids": [
+          "1660S-E022"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1670-treaty-1670",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.96,
+          17.99
+        ]
+      },
+      "properties": {
+        "name": "马德里条约确认英西加勒比既占秩序",
+        "start_year": 1670,
+        "display_through_year": 1670,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "外交承认不等于马龙或泰诺居民同意，不是整岛山地英军实际占领证明。",
+        "summary_zh": "外交承认不等于马龙或泰诺居民同意，不是整岛山地英军实际占领证明。",
+        "source_urls": [
+          "https://jis.gov.jm/information/jamaica-heritage-sites/st-mary-heritage-sites/"
+        ],
+        "related_event_ids": [
+          "1670S-E066"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1674-revised-law-1674",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "1674年奴役法反复强化票证和追逃",
+        "start_year": 1674,
+        "display_through_year": 1674,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "牙买加议会重订奴役控制法规，生效文字不是所有逃亡追捕行动的实证。",
+        "summary_zh": "牙买加议会重订奴役控制法规，生效文字不是所有逃亡追捕行动的实证。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1674"
+        ],
+        "related_event_ids": [
+          "1670S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1683-detention-law-1683",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "1683年追逃拘押、债务与庄园口粮地条款",
+        "start_year": 1683,
+        "display_through_year": 1683,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "一英亩等面积条款为法定管理义务，非种植完成面积；Colonial Office CO139/7原始转录。",
+        "summary_zh": "一英亩等面积条款为法定管理义务，非种植完成面积；Colonial Office CO139/7原始转录。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1683"
+        ],
+        "related_event_ids": [
+          "1680S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1692-port-royal-1692",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.84,
+          17.941
+        ]
+      },
+      "properties": {
+        "name": "皇家港地震毁坏17世纪贸易港",
+        "start_year": 1692,
+        "display_through_year": 1692,
+        "display_kind": "economic_network",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "UNESCO考古支持港市、堡垒和奴役贸易港地位；地震非武装征服或殖民疆域更替。",
+        "summary_zh": "UNESCO考古支持港市、堡垒和奴役贸易港地位；地震非武装征服或殖民疆域更替。",
+        "source_urls": [
+          "https://whc.unesco.org/en/list/1595"
+        ],
+        "related_event_ids": [
+          "1690S-E012"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1696-law-1696",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "1696年追逃拘押及奴役控制法规",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "local_governance",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "1696年殖民法治理规定，不得由一英亩/五人的条款绘出实际种植地。",
+        "summary_zh": "1696年殖民法治理规定，不得由一英亩/五人的条款绘出实际种植地。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1696"
+        ],
+        "related_event_ids": [
+          "1690S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-jamaica-1699-hunting-parties-1699",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.955,
+          17.992
+        ]
+      },
+      "properties": {
+        "name": "1699年殖民议会授权武装追捕逃亡者",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "military_impact",
+        "label_type": "17世纪牙买加历史据点／法规／反抗参考点 · 非英国实控范围",
+        "description": "1716年后印本记载1699年立法，具体月日不确定；法律授权≠某次追捕或全部山区被控制。",
+        "summary_zh": "1716年后印本记载1699年立法，具体月日不确定；法律授权≠某次追捕或全部山区被控制。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1699"
+        ],
+        "related_event_ids": [
+          "1690S-E091"
+        ],
+        "related_story_ids": [
+          "E6-T08"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
+        "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
