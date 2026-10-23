@@ -22,17 +22,17 @@ for(const s of story.sections){
 }
 assert(!story.related_event_ids.includes('1690S-E024'),'unattributed Hannibal voyage must not be claimed as RAC ship');
 const events=new Map;
-for(let d=1610;d<=1690;d+=10){
+for(let d=1600;d<=1690;d+=10){
  let a=read('data/atlas-'+d+'-'+(d+9)+'.json');
  assert.deepEqual(a.colonial_polygons,[],'trade charter cannot fill coast-wide empire');
  for(const e of a.events)events.set(e.id,e);
 }
 assert(story.related_event_ids.length>=20);
 for(const id of story.related_event_ids)assert(events.has(id),'RAC story event ID not in main decade '+id);
-assert.equal(events.get('1661S-E045').year,1665);
-assert.equal(events.get('1661S-E045').lat,5.2025,'Kormantin modern fort site corrected');
-assert.equal(events.get('1661S-E045').lng,-1.090278);
-const g=read('data/seventeenth-century-spatial-evidence-1610-1699.geojson');
+assert.equal(events.get('1660S-E045').year,1665);
+assert.equal(events.get('1660S-E045').lat,5.2025,'Kormantin modern fort site corrected');
+assert.equal(events.get('1660S-E045').lng,-1.090278);
+const g=read('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(g.features.length,61);
 for(const id of ['rac-cormantin-fort-dutch-capture-1665','rac-cape-coast-castle-1665']){
  const f=g.features.find(x=>x.id===id);
