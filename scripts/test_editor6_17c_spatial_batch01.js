@@ -50,7 +50,8 @@ for(const f of geo.features){
   assert(p.episodes.length>0,'episodic legal cues cannot imply permanently active scope');
   for(const ep of p.episodes){
    assert(ep.start_year>=p.start_year&&ep.end_year<=p.display_through_year);
-   assert(ep.source_urls?.length&&ep.related_event_ids?.length);
+   assert(ep.source_urls?.length&&Array.isArray(ep.related_event_ids));
+   if(ep.related_event_ids.length===0)assert(f.id==='17c-barbados-slavery-legislation-1661-1692'&&ep.start_year===1688,'unmapped statute must not fabricate a clickable atlas event');
    assert(ep.source_urls.every(u=>/^https:\/\//.test(u)));
   }
  }
