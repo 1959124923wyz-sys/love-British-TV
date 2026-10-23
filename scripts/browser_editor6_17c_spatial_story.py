@@ -48,10 +48,10 @@ try:
     browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="1690S-E016"]').click()
     wait.until(lambda d:js("return !!document.querySelector('#dossierBody .major-story-enter')"))
     browser.find_element(By.CSS_SELECTOR,'#dossierBody .major-story-enter').click()
-    wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-section').length===8"))
+    wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-section').length===9"))
     assert js("return document.querySelector('.major-story-article').textContent.includes('巴巴多斯')")
     browser.save_screenshot(str(out/"editor6-1692-barbados-full-story.png"))
-    print('PASS: 1655+1649 dated routes and cues; independent map toggles; published Barbados 8-section reader')
+    print('PASS: 1655+1649 dated routes and cues; independent map toggles; published Barbados 9-section reader with 1668/1672 property law')
 except Exception:
     browser.save_screenshot(str(out/"editor6-17c-browser-error.png"))
     raise
