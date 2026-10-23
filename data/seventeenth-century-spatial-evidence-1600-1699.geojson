@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 46,
+    "feature_count": 51,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -19,7 +19,8 @@
     },
     "source_policy": "All added anchors inherit published atlas decade event IDs, source links and original representative coordinates; source metadata is independent from area or sovereignty proof.",
     "episode_safe_rendering": true,
-    "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty."
+    "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty.",
+    "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events."
   },
   "features": [
     {
@@ -371,14 +372,20 @@
         "source_urls": [
           "https://searcharchives.bl.uk/catalog/036-000178601"
         ],
-        "related_event_ids": [],
+        "related_event_ids": [
+          "1660S-E043",
+          "1660S-E046"
+        ],
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "modern named town/island-level representative point with fixed screen-pixel halo, NOT geographic buffer or historical impact polygon",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
         "area_sqkm": null,
-        "exclude_from_area_aggregation": true
+        "exclude_from_area_aggregation": true,
+        "related_story_ids": [
+          "E6-T12"
+        ]
       }
     },
     {
@@ -1953,6 +1960,261 @@
           "1660S-E045"
         ],
         "publication_status": "sourced_event_site_reference_not_occupation_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-glen-fort-william-oath-1692",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.112,
+          56.816
+        ]
+      },
+      "properties": {
+        "name": "威廉堡 · 格伦科族长求见受誓官员",
+        "start_year": 1692,
+        "display_through_year": 1692,
+        "display_kind": "local_governance",
+        "label_type": "具名法律或行政史事地点 · 非领土",
+        "description": "麦克伊恩先至威廉堡未找到有权接受效忠宣誓的官员；仅以现代同名地方作参考点，不声称真实行军路线。",
+        "summary_zh": "麦克伊恩先至威廉堡未找到有权接受效忠宣誓的官员；仅以现代同名地方作参考点，不声称真实行军路线。",
+        "source_urls": [
+          "https://www.nts.org.uk/visit/places/glencoe/the-glencoe-massacre"
+        ],
+        "related_event_ids": [
+          "1690S-E049"
+        ],
+        "related_story_ids": [
+          "E6-T04-GLENCOE"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Reuse published event representative coordinate as GeoJSON [lon,lat], draw fixed screen-pixel symbol only, never ground distance",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "atlas_published_named_locality_reference_not_historical_area"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-glen-inveraray-oath-1692",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.073,
+          56.229
+        ]
+      },
+      "properties": {
+        "name": "因弗雷里 · 格伦科族长完成迟到的宣誓",
+        "start_year": 1692,
+        "display_through_year": 1692,
+        "display_kind": "local_governance",
+        "label_type": "具名法律或行政史事地点 · 非领土",
+        "description": "1692年1月6日麦克伊恩在因弗雷里完成宣誓，晚于截止日期，不可叙述为从未效忠。",
+        "summary_zh": "1692年1月6日麦克伊恩在因弗雷里完成宣誓，晚于截止日期，不可叙述为从未效忠。",
+        "source_urls": [
+          "https://www.nts.org.uk/visit/places/glencoe/the-glencoe-massacre"
+        ],
+        "related_event_ids": [
+          "1690S-E050"
+        ],
+        "related_story_ids": [
+          "E6-T04-GLENCOE"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Reuse published event representative coordinate as GeoJSON [lon,lat], draw fixed screen-pixel symbol only, never ground distance",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "atlas_published_named_locality_reference_not_historical_area"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-glen-massacre-site-1692",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.10534,
+          56.68576
+        ]
+      },
+      "properties": {
+        "name": "格伦科 · 政府军杀害寄宿家庭成员",
+        "start_year": 1692,
+        "display_through_year": 1692,
+        "display_kind": "military_impact",
+        "label_type": "具名军事事件地点 · 非领土",
+        "description": "1692年2月政府军在格伦科袭击麦克唐纳族人，位置沿用正式事件已核相关住宅旧址参考点，不是全部受害者地点或谷地受害边界。",
+        "summary_zh": "1692年2月政府军在格伦科袭击麦克唐纳族人，位置沿用正式事件已核相关住宅旧址参考点，不是全部受害者地点或谷地受害边界。",
+        "source_urls": [
+          "https://www.nts.org.uk/visit/places/glencoe/the-glencoe-massacre"
+        ],
+        "related_event_ids": [
+          "E6-GLENCOE-1692"
+        ],
+        "related_story_ids": [
+          "E6-T04-GLENCOE"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Reuse published event representative coordinate as GeoJSON [lon,lat], draw fixed screen-pixel symbol only, never ground distance",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "HES_approximate_related_house_site_not_all_massacre_sites"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-glen-edinburgh-parliament-1695",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.189,
+          55.952
+        ]
+      },
+      "properties": {
+        "name": "爱丁堡 · 苏格兰议会追查格伦科杀戮",
+        "start_year": 1695,
+        "display_through_year": 1695,
+        "display_kind": "local_governance",
+        "label_type": "具名法律或行政史事地点 · 非领土",
+        "description": "1695年苏格兰议会调查政府命令、责任官员及幸存者救济；议会认定谋杀不等于全部涉事军官已经获刑。",
+        "summary_zh": "1695年苏格兰议会调查政府命令、责任官员及幸存者救济；议会认定谋杀不等于全部涉事军官已经获刑。",
+        "source_urls": [
+          "https://www.rps.ac.uk/search.php?action=print&filename=williamii_trans&id=54240&type=trans"
+        ],
+        "related_event_ids": [
+          "1690S-E027"
+        ],
+        "related_story_ids": [
+          "E6-T04-GLENCOE"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Reuse published event representative coordinate as GeoJSON [lon,lat], draw fixed screen-pixel symbol only, never ground distance",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "atlas_published_named_locality_reference_not_historical_area"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-barbados-slavery-legislation-1661-1692",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.614,
+          13.096
+        ]
+      },
+      "properties": {
+        "name": "巴巴多斯 · 奴役立法、财产规则与告发奖赏",
+        "start_year": 1661,
+        "display_through_year": 1692,
+        "display_kind": "local_governance",
+        "label_type": "具名法律或行政史事地点 · 非领土",
+        "description": "殖民议会在不同时点形成限制被奴役者自由与支持奴隶主财产请求的法律。此处只作岛上代表政治中心的位置提示；法条不等于各庄园执法记录或实测土地影响区。",
+        "summary_zh": "殖民议会在不同时点形成限制被奴役者自由与支持奴隶主财产请求的法律。此处只作岛上代表政治中心的位置提示；法条不等于各庄园执法记录或实测土地影响区。",
+        "source_urls": [
+          "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1661"
+        ],
+        "related_event_ids": [
+          "1660S-E006"
+        ],
+        "related_story_ids": [
+          "E6-T07-BARBADOS"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Reuse published event representative coordinate as GeoJSON [lon,lat], draw fixed screen-pixel symbol only, never ground distance",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "atlas_published_named_locality_reference_not_historical_area",
+        "episodes": [
+          {
+            "start_year": 1661,
+            "end_year": 1661,
+            "description": "1661年综合奴役法与契约仆役法。现存1667修订文本与1661最初原文版本应区分。",
+            "related_event_ids": [
+              "1660S-E006",
+              "1660S-E007"
+            ],
+            "source_urls": [
+              "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1661",
+              "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1661-0"
+            ]
+          },
+          {
+            "start_year": 1668,
+            "end_year": 1668,
+            "description": "1668年法条将被奴役者纳入特殊不动产继承范畴；无法据此估算每一庄园实际过户。",
+            "related_event_ids": [
+              "1660S-E038"
+            ],
+            "source_urls": [
+              "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1661"
+            ]
+          },
+          {
+            "start_year": 1672,
+            "end_year": 1672,
+            "description": "1672年继承与债务清偿规定体现被奴役者的双重财产法属性。",
+            "related_event_ids": [
+              "1670S-E006"
+            ],
+            "source_urls": [
+              "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1661"
+            ]
+          },
+          {
+            "start_year": 1676,
+            "end_year": 1676,
+            "description": "1676年限制贵格会聚会及被奴役者参与相关宗教活动。",
+            "related_event_ids": [
+              "1670S-E024"
+            ],
+            "source_urls": [
+              "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1676"
+            ]
+          },
+          {
+            "start_year": 1688,
+            "end_year": 1688,
+            "description": "1688年《治理黑人法》增订追逃、补偿等规则，尚无核准地图事件可跳转，不虚构事件ID。",
+            "related_event_ids": [],
+            "source_urls": [
+              "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1688"
+            ]
+          },
+          {
+            "start_year": 1692,
+            "end_year": 1692,
+            "description": "1692年殖民议会的所谓阴谋告发与补偿措施；法律不证明具体起义人数或案件数量。",
+            "related_event_ids": [
+              "1690S-E016",
+              "1690S-E017",
+              "1690S-E015"
+            ],
+            "source_urls": [
+              "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1692-0"
+            ]
+          }
+        ]
       }
     }
   ]
