@@ -20,7 +20,8 @@
     "source_policy": "All added anchors inherit published atlas decade event IDs, source links and original representative coordinates; source metadata is independent from area or sovereignty proof.",
     "episode_safe_rendering": true,
     "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty.",
-    "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events."
+    "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events.",
+    "source_only_1688": "Documented 1688 Barbados act is independently sourced but lacks canonical Atlas event; frontend explicitly permits e.source_only=true and forbids invented relation IDs."
   },
   "features": [
     {
@@ -2199,7 +2200,8 @@
             "related_event_ids": [],
             "source_urls": [
               "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1688"
-            ]
+            ],
+            "source_only": true
           },
           {
             "start_year": 1692,
