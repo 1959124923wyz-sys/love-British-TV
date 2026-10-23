@@ -43,7 +43,7 @@ assert.equal(virginia.length,12);
 for(const f of virginia){
  const p=f.properties;const e=ev.get(p.related_event_ids[0]);
  assert(e&&e.year===p.start_year,'atlas canonical year copied');
- assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat],'event's georeferenced locality not to be guessed');
+ assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat],'event referenced geographic locality must use its known atlas coordinates');
  assert.equal(p.display_through_year,p.start_year);assert(!p.historical_boundary_confirmed&&!p.fill_authorized&&!p.territorial_claim);
  assert.equal(p.area_sqkm,null);assert.equal(p.exclude_from_area_aggregation,true);
 }
