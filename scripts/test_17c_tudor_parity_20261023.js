@@ -45,9 +45,9 @@ for(const meta of topics){
     const anchor=m[2].trim();
     // 16C published example: a linked phrase names an action, not a bare date.
     // Keep year outside the link in surrounding prose where appropriate.
-    assert(!/^(?:1[5-9]\\d{2})(?:年(?:\\d{1,2}月(?:\\d{1,2}日)?)?)?$/.test(anchor),
+    assert(!/^(?:1[5-9]\d{2})(?:年(?:\d{1,2}月(?:\d{1,2}日)?)?)?$/.test(anchor),
       'bare year is not a popular-history event link: '+meta.id+'/'+s.id+' '+anchor);
-    assert(!/^(?:1[5-9]\\d{2})$/.test(anchor),'numeric-only historical link: '+meta.id+' '+anchor);
+    assert(!/^(?:1[5-9]\d{2})$/.test(anchor),'numeric-only historical link: '+meta.id+' '+anchor);
     assert(anchor.length>=4,'click target has no reader-facing historical meaning: '+meta.id+' '+anchor);
     hits.push(m[1]);
    }
