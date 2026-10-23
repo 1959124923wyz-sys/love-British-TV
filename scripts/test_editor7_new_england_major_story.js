@@ -26,7 +26,7 @@ for(const sect of story.sections){
    const event=known.get(m[1]);
    assert(event,'historical link cannot invent event '+m[1]);
    assert(Number.isFinite(event.lat)&&Number.isFinite(event.lng),'no fabricated camera focus for '+m[1]);
-   assert(!/^1[56-9]\d\d(?:年.*)?$/.test(m[2]),'link anchor may not be a bare year '+m[2]);
+   assert(!/^(?:1[5-9]\d{2})(?:年(?:\d{1,2}月(?:\d{1,2}日)?)?)?$/.test(m[2]),'link anchor may not be a bare year '+m[2]);
    assert(m[2].length>=4,'link anchor needs specific event meaning');
    links.push(m[1]);
   }
