@@ -1,0 +1,41 @@
+name: Editor7 E6-T06 New England Indigenous Wars Desktop Story Navigation
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/browser_editor7_new_england_story.py'
+      - 'scripts/test_editor7_new_england_major_story.js'
+      - '.github/workflows/editor7-new-england-story.yml'
+      - 'app.js'
+      - 'js/history-stories.js'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'scripts/browser_editor7_new_england_story.py'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'app.js'
+      - 'js/history-stories.js'
+jobs:
+  desktop-story-map-and-indigenous-land-semantics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Static source, section, chronology and space contract
+        run: |
+          node scripts/test_editor7_new_england_major_story.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Prepare desktop browser
+        run: pip install selenium
+      - name: Exercise 1637 story to 1675/1677/1638, double-click and restore
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor7_new_england_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor7-e6t06-new-england-browser-proof
+          path: browser-smoke-results/editor7-e6t06-*.png

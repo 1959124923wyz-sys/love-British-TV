@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 51,
+    "feature_count": 61,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -21,7 +21,8 @@
     "episode_safe_rendering": true,
     "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty.",
     "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events.",
-    "source_only_1688": "Documented 1688 Barbados act is independently sourced but lacks canonical Atlas event; frontend explicitly permits e.source_only=true and forbids invented relation IDs."
+    "source_only_1688": "Documented 1688 Barbados act is independently sourced but lacks canonical Atlas event; frontend explicitly permits e.source_only=true and forbids invented relation IDs.",
+    "new_england_wars_20261023": "Ten non-sovereign event-linked Pequot/Metacom/captivity/restitution cues; exact event reference coords, NOT original boundary lines."
   },
   "features": [
     {
@@ -2217,6 +2218,382 @@
             ]
           }
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-pequot-saybrook-1636",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.35,
+          41.282
+        ]
+      },
+      "properties": {
+        "name": "塞布鲁克堡：皮阔特战争初期商路封锁",
+        "start_year": 1636,
+        "display_through_year": 1636,
+        "display_kind": "military_impact",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "康涅狄格河口1636年英殖民者与皮阔特人的水路及贸易争端。地名锚点不等于整个河口发生战争的面积。",
+        "summary_zh": "康涅狄格河口1636年英殖民者与皮阔特人的水路及贸易争端。地名锚点不等于整个河口发生战争的面积。",
+        "source_urls": [
+          "https://connecticuthistory.org/connecticut-declares-war-against-the-pequot/"
+        ],
+        "related_event_ids": [
+          "1630S-E010"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-pequot-mystic-1637",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.98,
+          41.352
+        ]
+      },
+      "properties": {
+        "name": "米斯蒂克：英殖民军与原住民盟军焚杀皮阔特聚落",
+        "start_year": 1637,
+        "display_through_year": 1637,
+        "display_kind": "military_impact",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "1637年米斯蒂克聚落遭袭，随后英军及盟友撤离时仍受皮阔特抵抗；现代代表点不等于村寨木栅或所有受害者精确坐标。",
+        "summary_zh": "1637年米斯蒂克聚落遭袭，随后英军及盟友撤离时仍受皮阔特抵抗；现代代表点不等于村寨木栅或所有受害者精确坐标。",
+        "source_urls": [
+          "https://www.mptn-nsn.gov/history/",
+          "https://connecticuthistory.org/connecticut-declares-war-against-the-pequot/"
+        ],
+        "related_event_ids": [
+          "1630S-E011",
+          "1630S-E012"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-hartford-pequot-treaty-1638",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.682,
+          41.764
+        ]
+      },
+      "properties": {
+        "name": "哈特福德条约：皮阔特土地及政治权利受限",
+        "start_year": 1638,
+        "display_through_year": 1638,
+        "display_kind": "land_dispossession",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "1638年殖民官员及原住民盟友签署强制限制皮阔特身份与土地的条约；本点是签约地点指示而非被没收祖地边界。",
+        "summary_zh": "1638年殖民官员及原住民盟友签署强制限制皮阔特身份与土地的条约；本点是签约地点指示而非被没收祖地边界。",
+        "source_urls": [
+          "https://www.mptn-nsn.gov/history/",
+          "https://connecticuthistory.org/edward-hopkins/"
+        ],
+        "related_event_ids": [
+          "1630S-E016"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-pequot-mashantucket-1666",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.98,
+          41.352
+        ]
+      },
+      "properties": {
+        "name": "Mashantucket皮阔特：幸存社群建立保留地",
+        "start_year": 1666,
+        "display_through_year": 1666,
+        "display_kind": "local_governance",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "Mashantucket皮阔特部族官方历史确认1666年形成保留地，保留地具体历史地籍边线未在此复原。",
+        "summary_zh": "Mashantucket皮阔特部族官方历史确认1666年形成保留地，保留地具体历史地籍边线未在此复原。",
+        "source_urls": [
+          "https://www.mptn-nsn.gov/history/"
+        ],
+        "related_event_ids": [
+          "1660S-E032"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-narragansett-great-swamp-1675",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.58,
+          41.49
+        ]
+      },
+      "properties": {
+        "name": "纳拉甘西特大沼泽：英殖民联军袭击冬季聚落",
+        "start_year": 1675,
+        "display_through_year": 1675,
+        "display_kind": "military_impact",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "1675年攻击纳拉甘西特冬季聚落及收容瓦姆帕诺亚格难民的政治争端；现代地点参考不表示沼泽居民受难范围。",
+        "summary_zh": "1675年攻击纳拉甘西特冬季聚落及收容瓦姆帕诺亚格难民的政治争端；现代地点参考不表示沼泽居民受难范围。",
+        "source_urls": [
+          "https://www.nps.gov/rowi/learn/historyculture/kingphilip.htm"
+        ],
+        "related_event_ids": [
+          "1670S-E017",
+          "1670S-E042"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-plymouth-captives-1675",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.667,
+          41.958
+        ]
+      },
+      "properties": {
+        "name": "普利茅斯：战俘拘押与经海路强制输出",
+        "start_year": 1675,
+        "display_through_year": 1675,
+        "display_kind": "local_governance",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "1675年殖民当局将部分原住民儿童强制学徒并将部分俘虏送向加的斯。地点沿用法庭所在殖民地参考坐标，不冒充该船实际装船码头或航线。",
+        "summary_zh": "1675年殖民当局将部分原住民儿童强制学徒并将部分俘虏送向加的斯。地点沿用法庭所在殖民地参考坐标，不冒充该船实际装船码头或航线。",
+        "source_urls": [
+          "https://www.colonialsociety.org/node/1397"
+        ],
+        "related_event_ids": [
+          "1670S-E019",
+          "1670S-E045"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-providence-captivity-1676",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.411,
+          41.825
+        ]
+      },
+      "properties": {
+        "name": "普罗维登斯：投降者驱离和出售收益",
+        "start_year": 1676,
+        "display_through_year": 1676,
+        "display_kind": "local_governance",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "1676年地方当局驱离投降原住民及按军役分配出售所得记录。法律/行政地点是参考点，不证明全部被驱离者目的地。",
+        "summary_zh": "1676年地方当局驱离投降原住民及按军役分配出售所得记录。法律/行政地点是参考点，不证明全部被驱离者目的地。",
+        "source_urls": [
+          "https://www.colonialsociety.org/node/1397"
+        ],
+        "related_event_ids": [
+          "1670S-E054",
+          "1670S-E055"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-mohegan-uncas-protection-1676",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.025,
+          41.515
+        ]
+      },
+      "properties": {
+        "name": "莫希干首领Uncas庇护遭殖民者追索的投降者",
+        "start_year": 1676,
+        "display_through_year": 1676,
+        "display_kind": "local_governance",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "1676年Uncas庇护其他原住民战士和家属，显示与英人结盟不等于失去原住民族独立决策。",
+        "summary_zh": "1676年Uncas庇护其他原住民战士和家属，显示与英人结盟不等于失去原住民族独立决策。",
+        "source_urls": [
+          "https://www.colonialsociety.org/node/1397"
+        ],
+        "related_event_ids": [
+          "1670S-E056"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-ct-scinnae-family-petition-1677",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.685,
+          41.763
+        ]
+      },
+      "properties": {
+        "name": "康涅狄格：原住民Scinnae请求家属团聚",
+        "start_year": 1677,
+        "display_through_year": 1677,
+        "display_kind": "local_governance",
+        "label_type": "17世纪原住民战争/俘虏处置/重居有据参考地点 · 非英王控制范围",
+        "description": "1677年原住民Scinnae请求归还被分离的妻子与三名子女，议会只部分批准。这是请愿行政中心的代表点，不是家属实际拘禁地址。",
+        "summary_zh": "1677年原住民Scinnae请求归还被分离的妻子与三名子女，议会只部分批准。这是请愿行政中心的代表点，不是家属实际拘禁地址。",
+        "source_urls": [
+          "https://www.colonialsociety.org/node/1397"
+        ],
+        "related_event_ids": [
+          "1670S-E061"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "official attested named place coordinates copied from published Atlas event; fixed screen-pixel cue, NOT historical geometric impact area; not measured coastline or village boundary",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_exact_historic_geography",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-sassamon-family-petition-1679",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.662,
+          41.956
+        ]
+      },
+      "properties": {
+        "name": "普利茅斯：Sassamon家属追索被强制服役亲属的自由",
+        "start_year": 1679,
+        "display_through_year": 1679,
+        "display_kind": "local_governance",
+        "label_type": "原住民家属请愿·已发表历史事件参考点·非英王领土",
+        "description": "1679年前后，Sassamon家属持续争取一名女性亲属摆脱强制服役；普利茅斯法院现代参考位置不等于具体拘留家庭或女性所在地。",
+        "summary_zh": "Sassamon亲属在1679年仍努力争取强制服役女性家庭成员的自由，战俘处分后果没有在战事结束时终止。",
+        "source_urls": [
+          "https://www.colonialsociety.org/node/1397"
+        ],
+        "related_event_ids": [
+          "1670S-E063"
+        ],
+        "related_story_ids": [
+          "E6-T06"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "published atlas representative administrative location only, fixed screen-pixel symbol, NOT precise captivity house, plantation or geographic area",
+        "geometry_precision": "published_atlas_modern_named_place_reference_not_historic_individual_residence",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
       }
     }
   ]

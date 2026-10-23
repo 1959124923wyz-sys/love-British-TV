@@ -7,13 +7,14 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 18,
-    "polygon_count": 12,
+    "feature_count": 19,
+    "polygon_count": 13,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
     "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA.",
-    "quality_note": "2026-10-23 16C-parity: corrected Hormuz/Qeshm Safavid-EIC campaign to E6-T12 instead of Ireland; removed 1658 Bengal factory-to-factory polygon (two trading sites do not substantiate an affected area), retaining verified illustrative connection line. Other schematic polygons remain non-sovereign, non-area-aggregable."
+    "quality_note": "2026-10-23 16C-parity: corrected Hormuz/Qeshm Safavid-EIC campaign to E6-T12 instead of Ireland; removed 1658 Bengal factory-to-factory polygon (two trading sites do not substantiate an affected area), retaining verified illustrative connection line. Other schematic polygons remain non-sovereign, non-area-aggregable.",
+    "new_england_1637_note": "One Pequot War 1637 dotted reading-only envelope between documented Saybrook and Mystic atlas coordinates. Geometry entirely cartographic; no lines or war route inferred and not a historical front, Indigenous territorial boundary or colony."
   },
   "features": [
     {
@@ -1621,6 +1622,93 @@
         "uncertainty": "不得外推真实城墙、沿线部队行动或某县全部受战火影响",
         "related_story_ids": [
           "E6-T03-LAND-1642-1698"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ne-pequot-war-saybrook-mystic-1637-study",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -72.4,
+              41.25
+            ],
+            [
+              -71.93,
+              41.25
+            ],
+            [
+              -71.93,
+              41.41
+            ],
+            [
+              -72.4,
+              41.41
+            ],
+            [
+              -72.4,
+              41.25
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1636—1637年塞布鲁克—米斯蒂克：皮阔特战争两个具名行动点的局部阅读范围",
+        "start_year": 1637,
+        "end_year": 1637,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线·史料确认的战事地点阅读包络（并非实测战区）",
+        "description": "资料记载1636年塞布鲁克河口封锁、1637年米斯蒂克皮阔特村寨遭杀戮及退却战；虚线仅帮助读者同时定位已知两处具名地点，不能推定围合范围内每处遭战火或被英殖民者占领。两地之间没有实测军事路线。",
+        "summary_zh": "塞布鲁克和米斯蒂克属同一皮阔特战争过程，但本图形是两个现代地点的说明性边框，不是1637年真实战场范围。",
+        "actor_zh": "英格兰殖民军、皮阔特居民与战士、莫希干和纳拉甘西特盟军（各有独立政治立场）",
+        "anchor_event_ids": [
+          "1630S-E010",
+          "1630S-E011",
+          "1630S-E012"
+        ],
+        "related_event_ids": [
+          "1630S-E010",
+          "1630S-E011",
+          "1630S-E012"
+        ],
+        "anchor_places": [
+          {
+            "name": "塞布鲁克堡战争与贸易封锁",
+            "lon": -72.35,
+            "lat": 41.282,
+            "source_event_id": "1630S-E010",
+            "modern_place_only": true
+          },
+          {
+            "name": "1637年米斯蒂克皮阔特聚落焚杀",
+            "lon": -71.98,
+            "lat": 41.352,
+            "source_event_id": "1630S-E011",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.mptn-nsn.gov/history/",
+          "https://connecticuthistory.org/connecticut-declares-war-against-the-pequot/",
+          "https://connecticuthistory.org/topics-page/pequot-war/"
+        ],
+        "spatial_semantics": "Two attested modern named places within one war; dashed reading-only study hull does not estimate reach, total war affected area or sovereignty",
+        "geometry_precision": "padded_modern_named_place_envelope_not_historic_battlefront_or_native_homeland",
+        "mapping_method": "deterministic hand-placed bounded rectangle around two published modern atlas points, NOT a surveyed 1636-1637 area; bounding vertices are design-only and not historical limits",
+        "provenance_method": "Native national institutional history and museum public-history battlefields studies confirm named places and sequence, not map vertex positions",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "虚线位置基于现代两处具名参考点；无法断定区域内其他聚落、路线、土地、人口是否受袭或处于英人控制，不计量任何受损/占地平方公里",
+        "related_story_ids": [
+          "E6-T06"
         ]
       }
     }
