@@ -26,7 +26,7 @@ for(let d=1600;d<=1690;d+=10){
 assert.equal(routeCount,8);
 const geo=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(geo.type,'FeatureCollection');
-assert.equal(geo.features.length,46);
+assert.equal(geo.features.length,51);
 assert.equal(geo.metadata.confirmed_territorial_polygons,0);
 const cape=geo.features.find(f=>f.id==='rac-cape-coast-castle-1665');
 const lost=geo.features.find(f=>f.id==='rac-cormantin-fort-dutch-capture-1665');
