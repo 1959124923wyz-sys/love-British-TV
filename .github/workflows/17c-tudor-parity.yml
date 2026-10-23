@@ -1,0 +1,43 @@
+name: Seventeenth-century stories must match Tudor story and research-map contracts
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'app.js'
+      - 'js/history-stories.js'
+      - 'scripts/test_17c_tudor_parity_20261023.js'
+      - '.github/workflows/17c-tudor-parity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'app.js'
+      - 'js/history-stories.js'
+      - 'scripts/test_17c_tudor_parity_20261023.js'
+jobs:
+  story-and-cartography-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check live reader and historical source JSON syntax
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node --check scripts/test_17c_tudor_parity_20261023.js
+      - name: Verify 16C-equivalent five-story, GIS and source parity
+        run: node scripts/test_17c_tudor_parity_20261023.js
+      - name: Verify approved serial registry and 16C inline links
+        run: |
+          node scripts/test_serial_story_contract.js
+          node scripts/test_editor7_17c_inline_story_map.js
+      - name: Verify all 17C spatial symbols and research surfaces
+        run: |
+          node scripts/test_editor6_17c_spatial_batch01.js
+          node scripts/test_editor7_17c_regional_studies.js
+          node scripts/test_editor7_rac_story.js
+      - name: Strict spatial semantic audit
+        run: python3 scripts/audit_spatial_semantics.py --strict
