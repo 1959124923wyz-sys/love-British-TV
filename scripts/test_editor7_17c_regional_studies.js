@@ -5,12 +5,12 @@ const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.
 const g=json('data/seventeenth-century-regional-studies-1600-1699.geojson');
 assert.equal(g.type,'FeatureCollection');
 assert.equal(g.metadata.schema,'atlas-17c-regional-studies-v1');
-assert.equal(g.features.length,20);
-assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,14);
+assert.equal(g.features.length,21);
+assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,15);
 assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,6);
 assert.equal(g.metadata.total_confirmed_historical_control_polygons,0);
 const existing=json('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
-assert.equal(existing.features.length,73,'17C site-level layer includes Virginia and earlier 17C cues');
+assert.equal(existing.features.length,86,'17C site-level layer includes Jamaica and earlier 17C cues');
 const ids=new Set,evs=new Map();
 for(let y=1600;y<=1690;y+=10){
  let atlas=json('data/atlas-'+y+'-'+(y+9)+'.json');
@@ -57,7 +57,7 @@ for(const f of g.features){
  }
 }
 const byYear=y=>g.features.filter(f=>f.properties.start_year<=y&&y<=f.properties.end_year);
-for(const [y,n] of [[1609,1],[1610,2],[1613,2],[1616,1],[1622,2],[1635,1],[1637,1],[1649,1],[1650,1],[1653,3],[1658,1],[1690,3],[1691,1],[1692,0]]){
+for(const [y,n] of [[1609,1],[1610,2],[1613,2],[1616,1],[1622,2],[1635,1],[1637,1],[1649,1],[1650,1],[1653,3],[1658,2],[1690,3],[1691,1],[1692,0]]){
  assert.equal(byYear(y).length,n,'schematic activity years must not be interpolated: '+y);
 }
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
@@ -68,4 +68,4 @@ for(const x of ['function renderSeventeenthRegionalStudies(){','groups.seventeen
 assert(app.includes("groups.seventeenthStudies.clearLayers();"),'switching back to 16C must erase later ranges');
 assert(app.includes("if(map.getZoom()<5)"),'world zoom must preserve small sourced research area visibility without inventing metric boundaries');
 assert(app.includes("atlas-17c-regional-zoom-hint"),'desktop global view must use dashed, fixed-screen regional reference cues');
-console.log('PASS: 14 sourced dashed reference envelopes, 6 zero-waypoint relation lines, 73 place/policy cues; no invented trade polygon');
+console.log('PASS: 15 sourced dashed reference envelopes, 6 zero-waypoint relation lines, 86 place/policy cues; no invented trade polygon');
