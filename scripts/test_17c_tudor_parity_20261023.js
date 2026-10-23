@@ -115,7 +115,7 @@ for(const yr of [1662,1669,1673,1677,1687,1689,1691])
 assert.equal(b.geometry.type,'Point');
 assert.equal(b.properties.episodes.find(e=>e.start_year===1688).related_event_ids.length,0,'source-only 1688 law cannot link to nonexistent map event');
 assert.equal(b.properties.episodes.find(e=>e.start_year===1688).source_only,true,'only explicit archival-source episodes can lack a published atlas event');
-assert(app.includes('e.source_only!==true'),'source-only event gate must not reject entire 17C decades');
+assert(fs.readFileSync(path.join(root,'app.js'),'utf8').includes('e.source_only!==true'),'source-only event gate must not reject entire 17C decades');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert(app.includes('...serialPreviewByDecade.values()'));
