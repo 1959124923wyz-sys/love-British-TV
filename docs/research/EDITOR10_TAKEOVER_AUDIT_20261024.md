@@ -10,7 +10,7 @@
 - 最近4篇主编9交付：[#215](https://github.com/1959124923wyz-sys/love-British-TV/pull/215) 纽约；[#217](https://github.com/1959124923wyz-sys/love-British-TV/pull/217) 卡罗来纳；[#219](https://github.com/1959124923wyz-sys/love-British-TV/pull/219) 哈德孙湾；[#221](https://github.com/1959124923wyz-sys/love-British-TV/pull/221) 阿卡迪亚。以上均经单独GitHub PR合并。
 - #221 PR HEAD `90aed9e3e6b3b7874a9d81a25d323cdc1b265d8f` 的27项可见工作流均为 `completed/success`。**这不是独立确认合并后Pages部署成功**；任何“网站已上线”的最终说法需单独核对Pages。
 - #221交接：[阿卡迪亚历史与地理](EDITOR9_E6_T10_ACADIA_20261024.md)，严格区分1605 Port-Royal Habitation、1629 Scottish Charles Fort、1654—1670英方驻点控制及1690短时袭击与米克马克自主权。未证殖民边界不画实控面积。
-- `AGENTS.md`目前记载12篇已发表17C子专题。正式ZIP最后一次确认合并的更新PR [#220](https://github.com/1959124923wyz-sys/love-British-TV/pull/220)仅同步到第11篇HBC：**应确认#221之后自动构建是否产生新的待合并二进制ZIP PR，不可以旧ZIP作为最新站点发布目录**。
+- `AGENTS.md`目前记载12篇已发表17C子专题。第十二篇合并后，ZIP更新PR [#222](https://github.com/1959124923wyz-sys/love-British-TV/pull/222) 已于2026-10-24合并（此前[#220](https://github.com/1959124923wyz-sys/love-British-TV/pull/220)只含11篇）；如需独立验收，仍须检查最新主分支ZIP的CRC、MANIFEST和正文，而不能把用户此前上传的较旧参考包当作最新归档。
 
 ## 2. 已核待办及原则
 
@@ -19,7 +19,7 @@
 | P0 | [#46](https://github.com/1959124923wyz-sys/love-British-TV/issues/46) 1547—1549英军实际占领范围 | Issue仍open；驻军点、方向线和非实测虚线概略面不能代表真实领土 | 核英国/苏格兰原时期堡图、据点控制时序及测绘参照；只对有据局部面作有据显示，其余留空/虚线与不计面积 |
 | P1 | 17C专题与逐年地图的差距 | 12篇serial已发表，不等于1600—1699整世纪控制/边界/航线/年末状态完备 | 按十年建立政治主体和控制继承台账，梳理地点、实际占领、短时袭击、贸易网络，明确真实边界与概念层 |
 | P1 | E6-T10纽芬兰子题缺口 | HBC、Acadia子题published，E6-T10母题仍research_only | 逐份核官方或学术史料，检验纽芬兰港口/渔场、各国据点、原住民权利及时段；条件符合再独立出子篇，绝不将季节性渔业当主权 |
-| P1 | 16C制作标准ZIP同步 | #220仅涵盖11篇，最新#221合并后 `AGENTS.md` 已更新 | 查自动工作流是否生成更新版PR；按仓库保护规则审核合并后核主分支ZIP内容/CRC/SHA |
+| 已合并、待独立校验 | 16C制作标准ZIP同步 | #222已合并，归档第12篇阿卡迪亚交接；旧用户附件不包含最新AGENTS | 可选择核主分支ZIP的MANIFEST/CRC/SHA和AGENTS收录，勿重复提交相同自动归档PR |
 | P1 | [#180](https://github.com/1959124923wyz-sys/love-British-TV/issues/180) 原始研究ZIP归档 | Issue仍open，正文明确并未将R05全量ZIP字节归档到GitHub | 实际核附件或分支原始字节入库状态；不得将索引/本地存在当远程归档 |
 | P2 | [#81](https://github.com/1959124923wyz-sys/love-British-TV/issues/81)、[#84](https://github.com/1959124923wyz-sys/love-British-TV/issues/84)等存量史学审校 | Issue open，旧数字来自旧主分支，不可直接当当前规模 | 按最新main重跑，逐条核重要性理由及Pale概略边界，不用填表代替真实史料 |
 
