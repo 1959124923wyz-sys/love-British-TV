@@ -1853,6 +1853,52 @@
       "geolocation_limit_zh": "【代表性位置，非事件精确现场】圣赫勒拿岛定居与公司据点区域。代表受影响地区或当时政治行政中心，未声称确定商馆墙址、战斗点、真实签约地点，也不表示英国对周边区域有实际主权。",
       "geolocation_basis_zh": "英国图书馆公司史分期／官方遗产研究关联具名现代城市或地区示意位置。",
       "map_priority": true
+    },
+    {
+      "id": "1650S-E094",
+      "research_event_id": "EDITOR10-NEWFOUNDLAND:1650S-E094",
+      "arc_id": "ARC-NEWFOUNDLAND-FISHERY",
+      "year": 1651,
+      "start_year": 1651,
+      "end_year": 1651,
+      "visible_from": 1651,
+      "date_label": "1651",
+      "name": "萨拉·柯克接手费里兰庄园和鳕鱼加工经营",
+      "historical_actor": "Sara Kirke, merchants and hired fishing labourers",
+      "historical_place": "Ferryland",
+      "description": "戴维·柯克1651年被召回英格兰后，萨拉·柯克持续经营费里兰Pool Plantation，组织鳕鱼加工和渔业劳作。其实际经营规模与海外王室给予家庭的全岛土地声索须分别考察。",
+      "short_description": "戴维·柯克1651年被召回英格兰后，萨拉·柯克持续经营费里兰Pool Plantation，组织鳕鱼加工和渔业劳作。其实际经营规模与海外王室给予家庭的全岛土地声索须分别考察。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 46.737,
+      "lng": -52.704,
+      "geography_label": "Ferryland（现代具名区域代理定位）",
+      "geo_precision": "representative_named_modern_site_not_exact_17c_action_or_boundary",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】只表示史料证实的现代具名镇区或海湾附近参考位置，并非原始居所墙址、渔船GPS、法令执行地界或战斗精确坐标；不代表英国或法国实际占据周边土地。",
+      "source_ids": [
+        "1650S-S112"
+      ],
+      "source_access_reported": [
+        "institutional_historical_or_original_transcription_read"
+      ],
+      "source_group": "EDITOR10",
+      "certainty": "institutional_primary_or_scholarly_attested_event_location_modern_proxy",
+      "significance": {
+        "level": 2,
+        "rationale": "纽芬兰英法渔业殖民、原住民关系或战争制度史中具名且可追溯的关键行动",
+        "review_status": "editor10_public_source_story_map_20261024"
+      },
+      "editorial_status": "published_source_vetted_modern_reference_point_only",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "position_type": "main_affected_named_place_or_policy_center_reference",
+      "representative_map_point": true,
+      "geolocation_basis_zh": "官方加拿大地名库和机构历史资料对应现代城镇、海湾或议会位置；独立史实验证并不构成古代地界测绘。",
+      "geo_reference_code": "NF_FERRYLAND",
+      "map_priority": true
     }
   ],
   "places": [],
@@ -2439,6 +2485,17 @@
       "evidence_read_level": "official_archaeological_historic_sources_and_academic_biography_read",
       "verification_status": "editor9_acadia_documented_source",
       "precision_warning": "Modern geographic proxy rather than a surveyed 17th century boundary, fort footprint, or army position"
+    },
+    {
+      "id": "1650S-S112",
+      "title": "Memorial University heritage history: Sara Kirke's business and 1651-1679 operations",
+      "publisher": "Memorial University of Newfoundland / Colony of Avalon Foundation / primary text transcriptions",
+      "url": "https://www.heritage.nf.ca/articles/exploration/kirke.php",
+      "kind": "university_public_history_or_primary_transcription",
+      "original_source_id": "EDITOR10-NEWFOUNDLAND:1650S-E094",
+      "evidence_read_level": "public_full_text_or_search_document_excerpts_verified",
+      "verification_status": "editor10_20261024_independent_newfoundland_source_review",
+      "precision_warning": "Modern named location not historic measured colony perimeter or surveyed seventeenth-century attack location"
     }
   ],
   "routes": [
