@@ -40,7 +40,7 @@ try:
     visit('1680S-E096',1682,45.11,-64.312,'grand-pre-farms')
     visit('1690S-E095',1690,44.74185,-65.51861,'phips-brief-raid')
     visit('1690S-E033',1696,45.85,-64.25,'english-beaubassin-raid')
-    visit('1690S-E098',1697,52.036,-4.327,'ryswick-diplomacy')
+    visit('1690S-E098',1697,52.0349,4.32785,'ryswick-diplomacy')
     assert run("return document.querySelectorAll('#map path.atlas-territory-solid').length===0"),'non-evidenced British sovereignty filled territory'
     el=browser.find_element(By.CSS_SELECTOR,'.major-story-article [data-story-event="1690S-E097"]')
     run('arguments[0].dispatchEvent(new MouseEvent("dblclick",{bubbles:true,cancelable:true}));',el)
