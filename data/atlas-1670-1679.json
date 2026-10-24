@@ -162,16 +162,17 @@
       "short_description": "英方结束阿卡迪亚港口管理并将罗亚尔港归还法国。法国在1667年条约后于1670年前后实际接收罗亚尔港殖民行政，据点结束1654年开始的英方阶段。不能把条约签署年当作实际交接日，也不能把法裔居留当作英化消失。",
       "category": "political",
       "icon_code": "POL",
-      "lat": 44.742,
-      "lng": -65.515,
-      "geography_label": "阿卡迪亚罗亚尔港（今安纳波利斯罗亚尔）参考点",
+      "lat": 44.74185,
+      "lng": -65.51861,
+      "geography_label": "1670年法国重获Port-Royal行政驻点（现代Fort Anne）",
       "geo_precision": "representative_impacted_historical_region_not_exact_event_site",
-      "geolocation_limit_zh": "【代表性位置，非事件精确现场】阿卡迪亚罗亚尔港（今安纳波利斯罗亚尔）参考点。该坐标只帮助读者寻找历史政策中心或主要受影响地区，不表示条约在此签署、暴力发生在此、船只到达此点，也不表示由英方控制该处或周边领土。",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】阿卡迪亚罗亚尔港（今安纳波利斯罗亚尔）参考点。该坐标只帮助读者寻找历史政策中心或主要受影响地区，不表示条约在此签署、暴力发生在此、船只到达此点，也不表示由英方控制该处或周边领土。【2026-10-24皇家港两遗址校正】现代Fort Anne国家遗址为1629年Charles Fort、1643年法国土堡及后世行政驻点所在考古区域，不是1605—1613年最初Habitation；非古堡墙精确边界。",
       "source_ids": [
         "1670S-S030"
       ],
       "source_access_reported": [
-        "government_expert_interview_read"
+        "government_expert_interview_read",
+        "Parks_Canada_two_distinct_Port_Royal_heritage_site_coordinates_reviewed_20261024"
       ],
       "source_group": "B",
       "certainty": "history_source_linked_geolocation_pending",
@@ -188,7 +189,7 @@
       "position_type": "main_affected_region_or_named_locality_reference",
       "representative_map_point": true,
       "geolocation_basis_zh": "地区代理定位：根据事件所述主要受影响地区或具名历史地名，选择现代城镇或宽域参考点；并非历史实测现场。",
-      "geo_reference_code": "PORTROYAL",
+      "geo_reference_code": "PORTROYAL_CHARLES_FORT_1629",
       "map_priority": true
     },
     {
@@ -700,6 +701,49 @@
       "representative_map_point": true,
       "geolocation_basis_zh": "行政中心代理定位：全国性立法、裁判或政策机构，无唯一实施现场；以当时政治或殖民行政中心作地图入口。",
       "geo_reference_code": "WES",
+      "map_priority": true
+    },
+    {
+      "id": "1670S-E096",
+      "research_event_id": "EDITOR9-ACADIA:1670S-E096",
+      "arc_id": "ARC-ACADIA-INDIGENOUS",
+      "year": 1672,
+      "start_year": 1672,
+      "end_year": 1672,
+      "visible_from": 1672,
+      "date_label": "1672年",
+      "name": "Mi’gmaq的Siknikt地区出现早期Beaubassin法国农庄",
+      "historical_actor": "Jacques Bourgeois等阿卡迪亚移民及当地Mi’gmaq居民",
+      "historical_place": "现代具名历史遗址或河流中心宽域参考点",
+      "description": "加拿大公园局称1671—1672年前后Jacques Bourgeois等自Port-Royal前来Beaubassin附近定居，已存原住民Siknikt地名和政治交通网络；现代Aulac参考点不是1672殖民地籍边界。",
+      "short_description": "加拿大公园局称1671—1672年前后Jacques Bourgeois等自Port-Royal前来Beaubassin附近定居，已存原住民Siknikt地名和政治交通网络；现代Aulac参考点不是1672殖民地籍边界。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "lat": 45.855,
+      "lng": -64.26,
+      "geography_label": "历史事件所在具名现代遗址或宽域代表性参考点",
+      "geo_precision": "representative_modern_named_site_not_original_footprint",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】现代具名位置只辅助阅读；不代表17世纪实测堡墙、海战船航迹、原住民割地或英国／苏格兰／法国实际政治疆界。不表示由英方控制周边原住民领土，不构成已测量的任何海军登陆、堡垒防务或条约权属界线。",
+      "source_ids": [
+        "1670S-S110"
+      ],
+      "source_access_reported": [
+        "federal_institutional_archaeology_archives_and_biography_read"
+      ],
+      "source_group": "EDITOR9",
+      "certainty": "historical_event_officially_or_scholarly_evidenced_nonmetric_locality",
+      "significance": {
+        "level": 2,
+        "review_status": "editor9_acadia_study_source_audited_nonmetric"
+      },
+      "editorial_status": "published_historical_event_geography_proxy",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "position_type": "modern_named_reference_for_17c_event",
+      "representative_map_point": true,
       "map_priority": true
     },
     {
@@ -4149,6 +4193,17 @@
       "evidence_read_level": "official_heritage_historical_source_or_primary_document_transcription_read",
       "verification_status": "editor9_hbc_individually_audited_web_source",
       "precision_warning": "现代导航点非17世纪精确原址、船舶航迹或欧洲国家实际占领边界"
+    },
+    {
+      "id": "1670S-S110",
+      "title": "Mi’gmaq的Siknikt地区出现早期Beaubassin法国农庄：官方历史研究与档案",
+      "publisher": "加拿大国家公园局",
+      "url": "https://www.parks.canada.ca/lhn-nhs/ns/beaubassin/culture/migmaq-acadie",
+      "kind": "canadian_federal_heritage_provincial_archive_or_scholarly_biography",
+      "original_source_id": "EDITOR9-ACADIA-20261024:1670S-S110",
+      "evidence_read_level": "official_archaeological_historic_sources_and_academic_biography_read",
+      "verification_status": "editor9_acadia_documented_source",
+      "precision_warning": "Modern geographic proxy rather than a surveyed 17th century boundary, fort footprint, or army position"
     }
   ],
   "routes": [],

@@ -7,8 +7,8 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 24,
-    "polygon_count": 18,
+    "feature_count": 27,
+    "polygon_count": 21,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
@@ -19,7 +19,8 @@
     "jamaica_1658_note": "Only one modern Rio Nuevo nonmetric dashed reading box in year 1658, expressly not a surveyed fortress/battle zone and not a Jamaica-wide sovereignty polygon; no Maroon/Nanny Town geometry inferred.",
     "new_york_t09_20261024": "One 1643 nonmetric two-site Dutch attack teaching box. No English occupation or province polygon.",
     "carolina_e6t09_20261024": "One artificial 1680 old/new Charles Town two-site teaching-only dotted region; no territorial or dispossession acreage inferred.",
-    "hbc_editor9_20261024": "One nonmetric 1686 James Bay three-fort reader-only dashed polygon; 1670 Rupert's Land charter NEVER converted to a territorial occupation polygon."
+    "hbc_editor9_20261024": "One nonmetric 1686 James Bay three-fort reader-only dashed polygon; 1670 Rupert's Land charter NEVER converted to a territorial occupation polygon.",
+    "acadia_editor9_20261024": "3 nonmetric source-attested dashed research frames: 1629 two distinct Port-Royal heritage places, 1690 Phips port raid and 1696 Beaubassin village raid. NONE represent occupied or dispossessed polygon."
   },
   "features": [
     {
@@ -2136,6 +2137,241 @@
         "uncertainty": "三座原木堡与现代地貌/参考点不完全重叠，原住民土地、法国军队行军路线及相邻贸易区界线未实测，此框不可折算平方公里。",
         "related_story_ids": [
           "E6-T10-HBC"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-acadia-1629-two-portroyal-sites-distinct",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -65.69,
+              44.678
+            ],
+            [
+              -65.475,
+              44.678
+            ],
+            [
+              -65.475,
+              44.776
+            ],
+            [
+              -65.69,
+              44.776
+            ],
+            [
+              -65.69,
+              44.678
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1629年苏格兰Charles Fort与1605—1613年第一处Port-Royal Habitation遗址对照",
+        "start_year": 1629,
+        "end_year": 1629,
+        "display_kind": "economic_network",
+        "label_type": "青绿虚线 · 两处不同历史遗址（不代表苏格兰占领框）",
+        "description": "加拿大公园局给出两个相距约10公里的不同国家历史遗址现代坐标；此淡青虚线阅读框只是把二者同时置于地图视野中，没有任何经核17世纪苏格兰殖民产权或城墙四至。",
+        "summary_zh": "仅对照1605法方Habitation与1629苏格兰Charles Fort两个不同位置，不暗示矩形内苏格兰驻防或已被原住民割地。",
+        "actor_zh": "Mi’kmaq等原住民主体以及英格兰／苏格兰／法国各自独立行动的殖民主体",
+        "anchor_event_ids": [
+          "1600S-E091",
+          "1620S-E021"
+        ],
+        "related_event_ids": [
+          "1600S-E091",
+          "1620S-E021"
+        ],
+        "anchor_places": [
+          {
+            "name": "1605—1613原Habitation",
+            "lon": -65.60947,
+            "lat": 44.71146,
+            "source_event_id": "1600S-E091",
+            "modern_place_only": true
+          },
+          {
+            "name": "1629苏格兰Charles Fort",
+            "lon": -65.51861,
+            "lat": 44.74185,
+            "source_event_id": "1620S-E021",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.parcs.canada.ca/lhn-nhs/ns/portroyal/visit/directions",
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/visit/directions.aspx",
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+        ],
+        "spatial_semantics": "Artificial nonmetric dashed readers' outline for geographically attested events, NOT British/Scottish/French political control or indigenous land transfer perimeter.",
+        "geometry_precision": "artificial_teaching_frame_vertices_not_surveyed_seventeenth_century_enclosure",
+        "mapping_method": "Padded modern named-reference-site coordinates used only for visual comparability; polygon vertices have no historic boundary evidence and cannot support war-extent or captured-area numbers.",
+        "provenance_method": "Parks Canada archaeology and institutional history confirm named events and two different Port-Royal sites, NOT the rectangular geometry.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "虚线为排版性研究框，面积与实控疆界不能反推；原住民政体、家园与使用权未由此转移。",
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-acadia-1690-phips-portroyal-nonmetric-raid",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -65.55,
+              44.723
+            ],
+            [
+              -65.49,
+              44.723
+            ],
+            [
+              -65.49,
+              44.763
+            ],
+            [
+              -65.55,
+              44.763
+            ],
+            [
+              -65.55,
+              44.723
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1690年Phips夺取并劫掠法国Port-Royal行政堡的局部虚线阅读框",
+        "start_year": 1690,
+        "end_year": 1690,
+        "display_kind": "military_impact",
+        "label_type": "淡红虚线 · 1690年Port-Royal驻军失守（非全阿卡迪亚被占区）",
+        "description": "史料记载Phips舰队迫使Port-Royal法国守军投降及其后财产劫掠，但未证实该矩形角点及事件实际攻击线。本虚线框只为与Mi’kmaq其他地区的政治持续性区分。",
+        "summary_zh": "1690年法方Port-Royal投降、英殖民军劫掠的具名区域提示，不代表英国永久驻军或英方已实际占领全部Mi’kma’ki。",
+        "actor_zh": "Mi’kmaq等原住民主体以及英格兰／苏格兰／法国各自独立行动的殖民主体",
+        "anchor_event_ids": [
+          "1690S-E095"
+        ],
+        "related_event_ids": [
+          "1690S-E095"
+        ],
+        "anchor_places": [
+          {
+            "name": "1690 Phips夺堡现代Fort Anne参考点",
+            "lon": -65.51861,
+            "lat": 44.74185,
+            "source_event_id": "1690S-E095",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.biographi.ca/en/bio/519",
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history"
+        ],
+        "spatial_semantics": "Artificial nonmetric dashed readers' outline for geographically attested events, NOT British/Scottish/French political control or indigenous land transfer perimeter.",
+        "geometry_precision": "artificial_teaching_frame_vertices_not_surveyed_seventeenth_century_enclosure",
+        "mapping_method": "Padded modern named-reference-site coordinates used only for visual comparability; polygon vertices have no historic boundary evidence and cannot support war-extent or captured-area numbers.",
+        "provenance_method": "Parks Canada archaeology and institutional history confirm named events and two different Port-Royal sites, NOT the rectangular geometry.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "虚线为排版性研究框，面积与实控疆界不能反推；原住民政体、家园与使用权未由此转移。",
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-acadia-1696-beaubassin-nonmetric-raid",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -64.308,
+              45.825
+            ],
+            [
+              -64.206,
+              45.825
+            ],
+            [
+              -64.206,
+              45.887
+            ],
+            [
+              -64.308,
+              45.887
+            ],
+            [
+              -64.308,
+              45.825
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1696年Benjamin Church对Beaubassin阿卡迪亚村落袭击的虚线阅读框",
+        "start_year": 1696,
+        "end_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "淡红虚线 · 1696年博巴桑聚落遇袭（不构成英国疆界）",
+        "description": "加拿大公园局确认1696年毁坏Beaubassin殖民聚落，未提供实测房屋破坏范围或行军战线。本框角点人为构造，不得用于英国殖民占领面积统计。",
+        "summary_zh": "1696英属新英格兰袭击阿卡迪亚村落是史实；虚线只是便于阅读的地区标识，Siknikt原住民主权不随之消失。",
+        "actor_zh": "Mi’kmaq等原住民主体以及英格兰／苏格兰／法国各自独立行动的殖民主体",
+        "anchor_event_ids": [
+          "1690S-E033"
+        ],
+        "related_event_ids": [
+          "1690S-E033"
+        ],
+        "anchor_places": [
+          {
+            "name": "1696 Beaubassin现代地名参考点",
+            "lon": -64.25,
+            "lat": 45.85,
+            "source_event_id": "1690S-E033",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/premier-conflit-first-warfare",
+          "https://www.parks.canada.ca/lhn-nhs/ns/beaubassin/culture/village"
+        ],
+        "spatial_semantics": "Artificial nonmetric dashed readers' outline for geographically attested events, NOT British/Scottish/French political control or indigenous land transfer perimeter.",
+        "geometry_precision": "artificial_teaching_frame_vertices_not_surveyed_seventeenth_century_enclosure",
+        "mapping_method": "Padded modern named-reference-site coordinates used only for visual comparability; polygon vertices have no historic boundary evidence and cannot support war-extent or captured-area numbers.",
+        "provenance_method": "Parks Canada archaeology and institutional history confirm named events and two different Port-Royal sites, NOT the rectangular geometry.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "虚线为排版性研究框，面积与实控疆界不能反推；原住民政体、家园与使用权未由此转移。",
+        "related_story_ids": [
+          "E6-T10-ACADIA"
         ]
       }
     }

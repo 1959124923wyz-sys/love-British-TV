@@ -281,6 +281,49 @@
       "map_priority": true
     },
     {
+      "id": "1610S-E090",
+      "research_event_id": "EDITOR9-ACADIA:1610S-E090",
+      "arc_id": "ARC-ACADIA-INDIGENOUS",
+      "year": 1610,
+      "start_year": 1610,
+      "end_year": 1610,
+      "visible_from": 1610,
+      "date_label": "1610年",
+      "name": "Mi’kmaw首领Membertou及亲属参与法方洗礼并续行外交",
+      "historical_actor": "米克马克首领Membertou及家族、Jean de Poutrincourt与法国传教者",
+      "historical_place": "现代遗址或具名河口区行政地理参考点",
+      "description": "1610年Membertou与部分亲族接受天主教洗礼、延续同返回的法国殖民者之外交和互助。米克马克并未因洗礼而自动失去全部独立政治或捕鱼、通行权。坐标为1605—1613 Habitation现代遗址参考，不代表举行仪式的准确GPS。",
+      "short_description": "1610年Membertou与部分亲族接受天主教洗礼、延续同返回的法国殖民者之外交和互助。米克马克并未因洗礼而自动失去全部独立政治或捕鱼、通行权。坐标为1605—1613 Habitation现代遗址参考，不代表举行仪式的准确GPS。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 44.71146,
+      "lng": -65.60947,
+      "geography_label": "现代可识别历史地名或考古遗址宽域参照点（非实测古代防线）",
+      "geo_precision": "representative_modern_named_site_or_region_not_exact_historical_footprint",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】现代遗址与区域索引未证明17世纪古城堡准确GPS、战斗路线或当时英苏法疆界；不表示外国君主已实际控制其周边原住民土地。",
+      "source_ids": [
+        "1610S-S110"
+      ],
+      "source_access_reported": [
+        "federal_historic_site_provincial_archives_or_biographical_primary_context_read"
+      ],
+      "source_group": "EDITOR9",
+      "certainty": "historically_reviewed_locality_nonmetric_point_original_site_perimeter_not_asserted",
+      "significance": {
+        "level": 2,
+        "review_status": "editor9_acadia_sources_checked_territorial_nonmetric"
+      },
+      "editorial_status": "published_source_linked_location_reference_not_historic_border",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "position_type": "modern_heritage_site_or_named_locality_reference",
+      "representative_map_point": true,
+      "map_priority": true
+    },
+    {
       "id": "1610S-E006",
       "research_event_id": "B:B005",
       "arc_id": "ARC-NA-LAND",
@@ -739,18 +782,18 @@
       "short_description": "弗吉尼亚英舰队焚毁米克马克地区法国罗亚尔港早期商站。从弗吉尼亚出航的塞缪尔·阿加尔一行趁法国居民外出袭击并焚毁罗亚尔港木堡和田地。幸存者依赖与米克马克的友好关系度过其后冬天；袭击不构成英军长期占领。",
       "category": "war",
       "icon_code": "WAR",
-      "lat": 44.742,
-      "lng": -65.515,
-      "geography_label": "阿卡迪亚罗亚尔港（今安纳波利斯罗亚尔）参考点",
+      "lat": 44.71146,
+      "lng": -65.60947,
+      "geography_label": "1613年被焚原Port-Royal Habitation（非Fort Anne）",
       "geo_precision": "representative_impacted_historical_region_not_exact_event_site",
-      "geolocation_limit_zh": "【代表性位置，非事件精确现场】阿卡迪亚罗亚尔港（今安纳波利斯罗亚尔）参考点。该坐标只帮助读者寻找历史政策中心或主要受影响地区，不表示条约在此签署、暴力发生在此、船只到达此点，也不表示由英方控制该处或周边领土。",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】阿卡迪亚罗亚尔港（今安纳波利斯罗亚尔）参考点。该坐标只帮助读者寻找历史政策中心或主要受影响地区，不表示条约在此签署、暴力发生在此、船只到达此点，也不表示由英方控制该处或周边领土。【2026-10-24皇家港两遗址校正】加拿大公园局Port-Royal Habitation（1605—1613）重建国家遗址坐标，不是1629/1643年Charles Fort/后来的Fort Anne。",
       "source_ids": [
         "1610S-S016",
         "1610S-S015"
       ],
       "source_access_reported": [
         "government_secondary_full_text_read",
-        "government_secondary_full_text_read"
+        "Parks_Canada_two_distinct_Port_Royal_heritage_site_coordinates_reviewed_20261024"
       ],
       "source_group": "B",
       "certainty": "history_source_linked_geolocation_pending",
@@ -767,7 +810,7 @@
       "position_type": "main_affected_region_or_named_locality_reference",
       "representative_map_point": true,
       "geolocation_basis_zh": "地区代理定位：根据事件所述主要受影响地区或具名历史地名，选择现代城镇或宽域参考点；并非历史实测现场。",
-      "geo_reference_code": "PORTROYAL",
+      "geo_reference_code": "PORTROYAL_HABITATION_1605",
       "map_priority": true
     },
     {
@@ -1712,6 +1755,17 @@
       "original_source_id": "C:C68",
       "verification_status": "editor6_read_source_summary_not_original_volume_or_personal_execution_proof",
       "precision_warning": "Authority source describes dated general event; no individual original archival volume presumed read."
+    },
+    {
+      "id": "1610S-S110",
+      "title": "Mi’kmaw首领Membertou及亲属参与法方洗礼并续行外交：机构史学／联邦史迹与地方档案证据",
+      "publisher": "加拿大公园局",
+      "url": "https://www.parks.canada.ca/lhn-nhs/ns/portroyal/visit/cartes-maps/guide-du-visiteur-visitor-guide",
+      "kind": "federal_archaeology_history_or_scholarly_biography_and_provincial_archives",
+      "original_source_id": "EDITOR9-ACADIA-20261024:1610S-S110",
+      "evidence_read_level": "institutional_historic_heritage_primary_excerpt_or_academic_biography_read",
+      "verification_status": "editor9_acadia_individually_read_historic_source",
+      "precision_warning": "Modern named-site coordinates identify study locality, not surveyed historical ownership or army position"
     }
   ],
   "routes": [],

@@ -34,6 +34,8 @@ try:
     year(1622)
     assert_shapes(1,1)
     browser.save_screenshot(str(out/'editor7-regional-1622-persian-hormuz-qeshm.png'))
+    year(1629)
+    assert_shapes(1,0) # Acadia: two different Port-Royal archaeological sites, NOT sovereignty
     year(1635)
     assert_shapes(1,0)
     year(1649)
@@ -55,12 +57,14 @@ try:
     year(1658)
     assert_shapes(1,1) # one sourced Jamaica Rio Nuevo 1658 reader frame AND an unrelated evidenced Bengal trade line; no trade area polygon
     year(1690)
-    assert_shapes(2,1)
+    assert_shapes(3,1) # Acadia: Phips Port-Royal transient raid reader box
     browser.save_screenshot(str(out/'editor7-regional-1690-boyne-battle.png'))
     year(1691)
     assert_shapes(1,0)
     year(1692)
     assert_shapes(0,0)
+    year(1696)
+    assert_shapes(1,0) # Acadia: dated Church raid Beaubassin, not ongoing occupation
     year(1599)
     assert count('atlas-17c-regional-area')==0
     assert js("return document.getElementById('eventCount').textContent!=='0项'")

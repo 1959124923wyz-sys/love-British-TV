@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 130,
+    "feature_count": 150,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -27,7 +27,8 @@
     "jamaica_t08_20261023": "Added 13 year-scoped evidence cues, explicitly source-attested modern reference points; Nanny Town built ~1723 and 1739 Maroon treaties excluded. No island-wide land, Maroon area or slave-law implemented area polygons.",
     "new_york_t09_20261024": "13 year-specific published atlas-linked reading cues for Dutch Indigenous violence, African freedom struggles, royal charter, Staten Island Native deed, English-Dutch transfers and Leisler; no historic boundary inferred",
     "carolina_e6t09_20261024": "15 year-scoped atlas-backed source cues; 1663/1665 claims, 1669 proposed constitution, 1675 native deed, 1690 law disallowed and 1696 new law separately; no real British territorial polygons.",
-    "hbc_editor9_20261024": "16 Atlas-linked nonmetric point events; 1670 London royal claim has no territorial polygon; 1686 three specific French captures and 1694, 1696, 1697 York Fort handover are separate year-specific evidence cues."
+    "hbc_editor9_20261024": "16 Atlas-linked nonmetric point events; 1670 London royal claim has no territorial polygon; 1686 three specific French captures and 1694, 1696, 1697 York Fort handover are separate year-specific evidence cues.",
+    "acadia_editor9_20261024": "20 year-scoped historical map anchors; 1605 original Port-Royal Habitation 44.71146,-65.60947 is distinct from 1629 Charles Fort/modern Fort Anne 44.74185,-65.51861; no sovereign occupation polygons or area measurements."
   },
   "features": [
     {
@@ -5161,6 +5162,748 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
         "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1600s-e090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.133637,
+          45.128588
+        ]
+      },
+      "properties": {
+        "name": "法国远征者在圣克罗伊岛建立脆弱殖民营地",
+        "start_year": 1604,
+        "display_through_year": 1604,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1604—1605年冬季，法国远征队在圣克罗伊岛尝试殖民，但食物与冬季疾病严重破坏生存条件。现代NPS访客岸边坐标只是圣克罗伊岛邻近宽域导航位置，并非1604营寨精确址；不能据此认为岛外原住民土地成为法国占领区。",
+        "summary_zh": "1604—1605年冬季，法国远征队在圣克罗伊岛尝试殖民，但食物与冬季疾病严重破坏生存条件。现代NPS访客岸边坐标只是圣克罗伊岛邻近宽域导航位置，并非1604营寨精确址；不能据此认为岛外原住民土地成为法国占领区。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/portroyal/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1600S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1600s-e091",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.60947,
+          44.71146
+        ]
+      },
+      "properties": {
+        "name": "法国人于安纳波利斯湾北岸建立首个皇家港Habitation商贸居所",
+        "start_year": 1605,
+        "display_through_year": 1605,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1605年法国人到Port-Royal Habitation建商贸与农业居所。坐标为加拿大公园局今Port-Royal Habitation历史遗址及重建地点，不是稍东安纳波利斯皇家港Fort Anne的1629苏格兰堡位置；Mi’kmaq土地不因建木房成为法国全境实控。",
+        "summary_zh": "1605年法国人到Port-Royal Habitation建商贸与农业居所。坐标为加拿大公园局今Port-Royal Habitation历史遗址及重建地点，不是稍东安纳波利斯皇家港Fort Anne的1629苏格兰堡位置；Mi’kmaq土地不因建木房成为法国全境实控。",
+        "source_urls": [
+          "https://www.parcs.canada.ca/lhn-nhs/ns/portroyal/visit/directions"
+        ],
+        "related_event_ids": [
+          "1600S-E091"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1600s-e005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.60947,
+          44.71146
+        ]
+      },
+      "properties": {
+        "name": "米克马克首领Membertou协助维持法方暂离的罗亚尔港居所",
+        "start_year": 1607,
+        "display_through_year": 1607,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "米克马克首领Membertou协助维持法方暂离的罗亚尔港居所。法国贸易垄断被撤销后居民离开，Membertou及米克马克社群照看据点直至1610年欧洲人重返，说明当地原住民族并非殖民地图上的被动背景。",
+        "summary_zh": "米克马克首领Membertou协助维持法方暂离的罗亚尔港居所。法国贸易垄断被撤销后居民离开，Membertou及米克马克社群照看据点直至1610年欧洲人重返，说明当地原住民族并非殖民地图上的被动背景。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/portroyal/visit/cartes-maps/guide-du-visiteur-visitor-guide"
+        ],
+        "related_event_ids": [
+          "1600S-E005"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1610s-e090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.60947,
+          44.71146
+        ]
+      },
+      "properties": {
+        "name": "Mi’kmaw首领Membertou及亲属参与法方洗礼并续行外交",
+        "start_year": 1610,
+        "display_through_year": 1610,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1610年Membertou与部分亲族接受天主教洗礼、延续同返回的法国殖民者之外交和互助。米克马克并未因洗礼而自动失去全部独立政治或捕鱼、通行权。坐标为1605—1613 Habitation现代遗址参考，不代表举行仪式的准确GPS。",
+        "summary_zh": "1610年Membertou与部分亲族接受天主教洗礼、延续同返回的法国殖民者之外交和互助。米克马克并未因洗礼而自动失去全部独立政治或捕鱼、通行权。坐标为1605—1613 Habitation现代遗址参考，不代表举行仪式的准确GPS。",
+        "source_urls": [
+          "https://www.parks.canada.ca/lhn-nhs/ns/portroyal/visit/cartes-maps/guide-du-visiteur-visitor-guide"
+        ],
+        "related_event_ids": [
+          "1610S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1610s-e014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.60947,
+          44.71146
+        ]
+      },
+      "properties": {
+        "name": "弗吉尼亚英舰队焚毁米克马克地区法国罗亚尔港早期商站",
+        "start_year": 1613,
+        "display_through_year": 1613,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "弗吉尼亚英舰队焚毁米克马克地区法国罗亚尔港早期商站。从弗吉尼亚出航的塞缪尔·阿加尔一行趁法国居民外出袭击并焚毁罗亚尔港木堡和田地。幸存者依赖与米克马克的友好关系度过其后冬天；袭击不构成英军长期占领。",
+        "summary_zh": "弗吉尼亚英舰队焚毁米克马克地区法国罗亚尔港早期商站。从弗吉尼亚出航的塞缪尔·阿加尔一行趁法国居民外出袭击并焚毁罗亚尔港木堡和田地。幸存者依赖与米克马克的友好关系度过其后冬天；袭击不构成英军长期占领。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/portroyal/visit/cartes-maps/guide-du-visiteur-visitor-guide",
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1610S-E014"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1620s-e006",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1883,
+          55.9533
+        ]
+      },
+      "properties": {
+        "name": "英苏共主詹姆斯六世授予苏格兰贵族新斯科舍殖民特许",
+        "start_year": 1621,
+        "display_through_year": 1621,
+        "display_kind": "local_governance",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "英苏共主詹姆斯六世授予苏格兰贵族新斯科舍殖民特许。君主以苏格兰殖民为目的授予威廉·亚历山大新斯科舍广泛法权与开发特许，涉及已属于米克马克传统家园的土地；整片地区当时并非取得实质殖民控制。",
+        "summary_zh": "英苏共主詹姆斯六世授予苏格兰贵族新斯科舍殖民特许。君主以苏格兰殖民为目的授予威廉·亚历山大新斯科舍广泛法权与开发特许，涉及已属于米克马克传统家园的土地；整片地区当时并非取得实质殖民控制。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+        ],
+        "related_event_ids": [
+          "1620S-E006"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1620s-e021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.51861,
+          44.74185
+        ]
+      },
+      "properties": {
+        "name": "苏格兰移民在阿纳波利斯河口建查尔斯堡驻点",
+        "start_year": 1629,
+        "display_through_year": 1629,
+        "display_kind": "local_governance",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "苏格兰移民在阿纳波利斯河口建查尔斯堡驻点。威廉·亚历山大之子率一批苏格兰殖民者在罗亚尔港上游筑查尔斯堡，后由考古确认位于阿纳波利斯河与Allain河汇流处。米克马克此前已把该地用作通行与渔猎营地。",
+        "summary_zh": "苏格兰移民在阿纳波利斯河口建查尔斯堡驻点。威廉·亚历山大之子率一批苏格兰殖民者在罗亚尔港上游筑查尔斯堡，后由考古确认位于阿纳波利斯河与Allain河汇流处。米克马克此前已把该地用作通行与渔猎营地。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+        ],
+        "related_event_ids": [
+          "1620S-E021"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1630s-e004",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.51861,
+          44.74185
+        ]
+      },
+      "properties": {
+        "name": "圣日耳曼昂莱条约促使苏格兰人撤离查尔斯堡",
+        "start_year": 1632,
+        "display_through_year": 1632,
+        "display_kind": "local_governance",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "圣日耳曼昂莱条约促使苏格兰人撤离查尔斯堡。1632年和约确认地区归还法国，苏格兰据点撤离，部分定居者则留在当地。这结束了有据的查尔斯堡苏格兰驻点事件，并未抹除米克马克对原有土地的关系。",
+        "summary_zh": "圣日耳曼昂莱条约促使苏格兰人撤离查尔斯堡。1632年和约确认地区归还法国，苏格兰据点撤离，部分定居者则留在当地。这结束了有据的查尔斯堡苏格兰驻点事件，并未抹除米克马克对原有土地的关系。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+        ],
+        "related_event_ids": [
+          "1630S-E004"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1640s-e093",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.51861,
+          44.74185
+        ]
+      },
+      "properties": {
+        "name": "法国殖民者在苏格兰Charles Fort旧址兴建首座土方要塞",
+        "start_year": 1643,
+        "display_through_year": 1643,
+        "display_kind": "local_governance",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "加拿大公园局考古证实原1629年苏格兰Charles Fort遗址在1632年转手后，1643年法国殖民行政兴建第一代土方堡垒。今日Fort Anne景观不是1643实测堡墙范围；不能据此填色法国实控Mi’kma’ki。",
+        "summary_zh": "加拿大公园局考古证实原1629年苏格兰Charles Fort遗址在1632年转手后，1643年法国殖民行政兴建第一代土方堡垒。今日Fort Anne景观不是1643实测堡墙范围；不能据此填色法国实控Mi’kma’ki。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+        ],
+        "related_event_ids": [
+          "1640S-E093"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1650s-e092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.8,
+          43.63
+        ]
+      },
+      "properties": {
+        "name": "La Tour授予Pobomcoup（Pubnico）殖民男爵领地",
+        "start_year": 1653,
+        "display_through_year": 1653,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1653年7月17日La Tour向Philippe Mius d’Entremont授予Pobomcoup男爵封地，新斯科舍省档案馆保存相关文书节录。法律赐封不等同原住民自愿割地；现代Pubnico区域点不是17世纪地籍四至。",
+        "summary_zh": "1653年7月17日La Tour向Philippe Mius d’Entremont授予Pobomcoup男爵封地，新斯科舍省档案馆保存相关文书节录。法律赐封不等同原住民自愿割地；现代Pubnico区域点不是17世纪地籍四至。",
+        "source_urls": [
+          "https://archives.novascotia.ca/communityalbums/Pubnico/archives/?ID=928"
+        ],
+        "related_event_ids": [
+          "1650S-E092"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1650s-e093",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.063,
+          45.273
+        ]
+      },
+      "properties": {
+        "name": "英共和国Sedgwick远征队夺取圣约翰河口La Tour堡垒",
+        "start_year": 1654,
+        "display_through_year": 1654,
+        "display_kind": "military_impact",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1654年7月英共和国舰队在圣约翰河口迫使La Tour军事驻点投降，随后夺Port-Royal及Pentagouet。地图以现代Saint John城市宽域定位，非当年具体军事登岸地；不表示英方同时实际控制原住民所有土地。",
+        "summary_zh": "1654年7月英共和国舰队在圣约翰河口迫使La Tour军事驻点投降，随后夺Port-Royal及Pentagouet。地图以现代Saint John城市宽域定位，非当年具体军事登岸地；不表示英方同时实际控制原住民所有土地。",
+        "source_urls": [
+          "https://www.biographi.ca/en/bio.php?id_nbr=264"
+        ],
+        "related_event_ids": [
+          "1650S-E093"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1650s-e017",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.51861,
+          44.74185
+        ]
+      },
+      "properties": {
+        "name": "英共和国军队攻占阿卡迪亚罗亚尔港",
+        "start_year": 1654,
+        "display_through_year": 1654,
+        "display_kind": "military_impact",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "英共和国军队攻占阿卡迪亚罗亚尔港。塞奇威克1654年7月攻占法军驻守的罗亚尔港要塞。加拿大公园局把1654—1670界定为当地英人统治阶段，但阿卡迪亚法裔村落仍延续耕种与生活。",
+        "summary_zh": "英共和国军队攻占阿卡迪亚罗亚尔港。塞奇威克1654年7月攻占法军驻守的罗亚尔港要塞。加拿大公园局把1654—1670界定为当地英人统治阶段，但阿卡迪亚法裔村落仍延续耕种与生活。",
+        "source_urls": [
+          "https://www.biographi.ca/en/bio.php?id_nbr=264",
+          "https://parks.canada.ca/lhn-nhs/ns/melanson/culture/interview"
+        ],
+        "related_event_ids": [
+          "1650S-E017"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1670s-e004",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.51861,
+          44.74185
+        ]
+      },
+      "properties": {
+        "name": "英方结束阿卡迪亚港口管理并将罗亚尔港归还法国",
+        "start_year": 1670,
+        "display_through_year": 1670,
+        "display_kind": "local_governance",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "英方结束阿卡迪亚港口管理并将罗亚尔港归还法国。法国在1667年条约后于1670年前后实际接收罗亚尔港殖民行政，据点结束1654年开始的英方阶段。不能把条约签署年当作实际交接日，也不能把法裔居留当作英化消失。",
+        "summary_zh": "英方结束阿卡迪亚港口管理并将罗亚尔港归还法国。法国在1667年条约后于1670年前后实际接收罗亚尔港殖民行政，据点结束1654年开始的英方阶段。不能把条约签署年当作实际交接日，也不能把法裔居留当作英化消失。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/melanson/culture/interview"
+        ],
+        "related_event_ids": [
+          "1670S-E004"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1670s-e096",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.26,
+          45.855
+        ]
+      },
+      "properties": {
+        "name": "Mi’gmaq的Siknikt地区出现早期Beaubassin法国农庄",
+        "start_year": 1672,
+        "display_through_year": 1672,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "加拿大公园局称1671—1672年前后Jacques Bourgeois等自Port-Royal前来Beaubassin附近定居，已存原住民Siknikt地名和政治交通网络；现代Aulac参考点不是1672殖民地籍边界。",
+        "summary_zh": "加拿大公园局称1671—1672年前后Jacques Bourgeois等自Port-Royal前来Beaubassin附近定居，已存原住民Siknikt地名和政治交通网络；现代Aulac参考点不是1672殖民地籍边界。",
+        "source_urls": [
+          "https://www.parks.canada.ca/lhn-nhs/ns/beaubassin/culture/migmaq-acadie"
+        ],
+        "related_event_ids": [
+          "1670S-E096"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1680s-e096",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.312,
+          45.11
+        ]
+      },
+      "properties": {
+        "name": "阿卡迪亚Melanson家族在Grand-Pré建立早期农庄",
+        "start_year": 1682,
+        "display_through_year": 1682,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "约1682年Melanson家庭在Grand-Pré开始阿卡迪亚农业居住，米克马克此前已在该区居住并开展贸易。现代Grand-Pré代理点不表示后来的全部千公顷盐沼农田在1682年已落成。",
+        "summary_zh": "约1682年Melanson家庭在Grand-Pré开始阿卡迪亚农业居住，米克马克此前已在该区居住并开展贸易。现代Grand-Pré代理点不表示后来的全部千公顷盐沼农田在1682年已落成。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/grandpre/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1680S-E096"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1690s-e095",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.51861,
+          44.74185
+        ]
+      },
+      "properties": {
+        "name": "William Phips率新英格兰军队夺取并劫掠Port-Royal",
+        "start_year": 1690,
+        "display_through_year": 1690,
+        "display_kind": "military_impact",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1690年5月英殖民武装迫使Port-Royal法方驻军投降，英军随后夺取货物及破坏天主教宗教物品，押送俘虏回波士顿，未留永久驻军。现代Fort Anne当地代理点非1690驻军堡墙精确位置，不能画整省为长年英属。",
+        "summary_zh": "1690年5月英殖民武装迫使Port-Royal法方驻军投降，英军随后夺取货物及破坏天主教宗教物品，押送俘虏回波士顿，未留永久驻军。现代Fort Anne当地代理点非1690驻军堡墙精确位置，不能画整省为长年英属。",
+        "source_urls": [
+          "https://www.biographi.ca/en/bio/519"
+        ],
+        "related_event_ids": [
+          "1690S-E095"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1690s-e096",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.063,
+          45.273
+        ]
+      },
+      "properties": {
+        "name": "Villebon在圣约翰河地区重组法方与原住民盟友的防御外交",
+        "start_year": 1691,
+        "display_through_year": 1691,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1690年Phips撤离Port-Royal后，Villebon在Saint John河区域恢复法方防御活动与原住民政治联盟。1691仅为年代标记，并非具体新堡奠基日期；Saint John现代码址不代表Villebon某年总部精确坐标，也不表示对流域全部原住民主权。",
+        "summary_zh": "1690年Phips撤离Port-Royal后，Villebon在Saint John河区域恢复法方防御活动与原住民政治联盟。1691仅为年代标记，并非具体新堡奠基日期；Saint John现代码址不代表Villebon某年总部精确坐标，也不表示对流域全部原住民主权。",
+        "source_urls": [
+          "https://www.rcaanc-cirnac.gc.ca/eng/1100100028966/1564584576068"
+        ],
+        "related_event_ids": [
+          "1690S-E096"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1690s-e033",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.25,
+          45.85
+        ]
+      },
+      "properties": {
+        "name": "新英格兰殖民武装袭击博巴桑阿卡迪亚聚落",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "新英格兰殖民武装袭击博巴桑阿卡迪亚聚落。1696年新英格兰武装队袭击博巴桑附近阿卡迪亚聚落；此地处米克马克Siknikt传统地域，袭击造成当地社会动荡，但未证持续英军管理。",
+        "summary_zh": "新英格兰殖民武装袭击博巴桑阿卡迪亚聚落。1696年新英格兰武装队袭击博巴桑附近阿卡迪亚聚落；此地处米克马克Siknikt传统地域，袭击造成当地社会动荡，但未证持续英军管理。",
+        "source_urls": [
+          "https://www.canada.ca/en/parks-canada/news/2017/09/beaubassin_fort_lawrencenovascotia.html"
+        ],
+        "related_event_ids": [
+          "1690S-E033"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1690s-e097",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.647,
+          45.958
+        ]
+      },
+      "properties": {
+        "name": "Villebon与Mi’kmaq盟友挫败新英格兰军队对圣约翰河基地的攻击",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "economic_network",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1696年Benjamin Church袭击Beaubassin后，新英格兰武装继续进攻Saint John河区Villebon的法国基地，Mi’kmaq盟军帮助防守方抵御攻击。坐标仅为现代Fredericton附近宽域参考，不证明军事战壕位置或原住民领地边界。",
+        "summary_zh": "1696年Benjamin Church袭击Beaubassin后，新英格兰武装继续进攻Saint John河区Villebon的法国基地，Mi’kmaq盟军帮助防守方抵御攻击。坐标仅为现代Fredericton附近宽域参考，不证明军事战壕位置或原住民领地边界。",
+        "source_urls": [
+          "https://www.rcaanc-cirnac.gc.ca/eng/1100100028966/1564584576068"
+        ],
+        "related_event_ids": [
+          "1690S-E097"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-acadia-1690s-e098",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.327,
+          52.036
+        ]
+      },
+      "properties": {
+        "name": "欧洲英法等列强签订赖斯韦克条约处理九年战争",
+        "start_year": 1697,
+        "display_through_year": 1697,
+        "display_kind": "local_governance",
+        "label_type": "阿卡迪亚Mi’kma’ki原住民／英苏法据点现代有据参考点，不是殖民占领面积",
+        "description": "1697年9月英法等列强在荷兰Rijswijk达成和平条约，北美殖民地原则上回复战前外交格局。Mi’kmaq与Wolastoqiyik等原住民不因此被证明已割地；现代Rijswijk城市参考点不是17世纪殖民边界。",
+        "summary_zh": "1697年9月英法等列强在荷兰Rijswijk达成和平条约，北美殖民地原则上回复战前外交格局。Mi’kmaq与Wolastoqiyik等原住民不因此被证明已割地；现代Rijswijk城市参考点不是17世纪殖民边界。",
+        "source_urls": [
+          "https://www.rcaanc-cirnac.gc.ca/eng/1100100028966/1564584576068"
+        ],
+        "related_event_ids": [
+          "1690S-E098"
+        ],
+        "related_story_ids": [
+          "E6-T10-ACADIA"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
+        "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,

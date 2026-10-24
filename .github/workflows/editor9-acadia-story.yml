@@ -1,0 +1,70 @@
+name: Editor9 Acadia Mi’kma’ki Port-Royal and English Scottish French Site Control QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/atlas-1600-1609.json'
+      - 'data/atlas-1610-1619.json'
+      - 'data/atlas-1620-1629.json'
+      - 'data/atlas-1630-1639.json'
+      - 'data/atlas-1640-1649.json'
+      - 'data/atlas-1650-1659.json'
+      - 'data/atlas-1670-1679.json'
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/test_editor9_acadia_story.js'
+      - 'scripts/browser_editor9_acadia_story.py'
+      - '.github/workflows/editor9-acadia-story.yml'
+      - 'app.js'
+      - 'js/history-stories.js'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/atlas-1600-1609.json'
+      - 'data/atlas-1610-1619.json'
+      - 'data/atlas-1620-1629.json'
+      - 'data/atlas-1630-1639.json'
+      - 'data/atlas-1640-1649.json'
+      - 'data/atlas-1650-1659.json'
+      - 'data/atlas-1670-1679.json'
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/test_editor9_acadia_story.js'
+      - 'scripts/browser_editor9_acadia_story.py'
+      - 'app.js'
+      - 'js/history-stories.js'
+jobs:
+  acadia-source-and-desktop-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate indigenous context, Port-Royal archaeological separation, archival maps
+        run: |
+          node --check scripts/test_editor9_acadia_story.js
+          node scripts/test_editor9_acadia_story.js
+          node scripts/test_editor9_hudson_bay_story.js
+          node scripts/test_editor9_carolina_story.js
+          node scripts/test_editor9_new_york_story.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          node scripts/test_editor7_17c_regional_studies.js
+          node scripts/test_editor6_17c_batch01.js
+          node scripts/test_editor6_17c_georeference_r02.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install Selenium for full-width desktop Chromium
+        run: pip install selenium
+      - name: Inspect 1605 and 1629 distinct sites, story-year-pan, archival dossier and 1690 return
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor9_acadia_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor9-acadia-desktop-evidence
+          path: browser-smoke-results/editor9-acadia-*.png

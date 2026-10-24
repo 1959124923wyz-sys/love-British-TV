@@ -506,6 +506,18 @@
       "lng": -2.024,
       "label": "法国圣马洛港口参考点",
       "kind": "region"
+    },
+    "PORTROYAL_HABITATION_1605": {
+      "lat": 44.71146,
+      "lng": -65.60947,
+      "label": "Port-Royal Habitation（1605—1613法国原木制居所及Membertou活动，现代加拿大公园局遗址GPS；不是Fort Anne）",
+      "kind": "region"
+    },
+    "PORTROYAL_CHARLES_FORT_1629": {
+      "lat": 44.74185,
+      "lng": -65.51861,
+      "label": "Charles Fort 1629苏格兰堡及后来法国Port-Royal行政堡（现代Fort Anne考古国家遗址GPS；不是1605原Habitation）",
+      "kind": "region"
     }
   },
   "approved_event_to_reference": {
@@ -513,7 +525,7 @@
       "1600S-E001": "LIS",
       "1600S-E002": "WES",
       "1600S-E004": "JAMES",
-      "1600S-E005": "PORTROYAL",
+      "1600S-E005": "PORTROYAL_HABITATION_1605",
       "1600S-E006": "DERRY",
       "1600S-E007": "JAMES",
       "1600S-E008": "ION",
@@ -534,7 +546,7 @@
       "1610S-E008": "SUFF",
       "1610S-E010": "JAMES",
       "1610S-E013": "JAMES",
-      "1610S-E014": "PORTROYAL",
+      "1610S-E014": "PORTROYAL_HABITATION_1605",
       "1610S-E015": "JAMES",
       "1610S-E016": "CAPE",
       "1610S-E017": "DON",
@@ -567,14 +579,14 @@
       "1620S-E018": "BARB",
       "1620S-E019": "STK",
       "1620S-E020": "STK",
-      "1620S-E021": "PORTROYAL",
+      "1620S-E021": "PORTROYAL_CHARLES_FORT_1629",
       "1620S-E022": "BALEINE"
     },
     "1630": {
       "1630S-E001": "PEMA",
       "1630S-E002": "JAMES",
       "1630S-E003": "ANT",
-      "1630S-E004": "PORTROYAL",
+      "1630S-E004": "PORTROYAL_CHARLES_FORT_1629",
       "1630S-E005": "STMARY",
       "1630S-E006": "GAL",
       "1630S-E008": "STK",
@@ -608,7 +620,7 @@
       "1650S-E014": "BARB",
       "1650S-E015": "DOVER",
       "1650S-E016": "DUB",
-      "1650S-E017": "PORTROYAL",
+      "1650S-E017": "PORTROYAL_CHARLES_FORT_1629",
       "1650S-E018": "JAMADMIN",
       "1650S-E019": "BLUEJM",
       "1650S-E020": "NORTH",
@@ -659,7 +671,7 @@
       "1670S-E001": "WES",
       "1670S-E002": "CHARLEST",
       "1670S-E003": "NELSON",
-      "1670S-E004": "PORTROYAL",
+      "1670S-E004": "PORTROYAL_CHARLES_FORT_1629",
       "1670S-E005": "ANT",
       "1670S-E006": "BARB",
       "1670S-E007": "WES",
@@ -754,7 +766,8 @@
     "1670 old Charlestown: Albemarle Point, not 1680 peninsula",
     "HBC York Fort: broad Hayes River reference, not York Factory III historic exact footprint",
     "1694 Hannibal fatalities: Whydah loading origin only, NOT where onboard deaths occurred",
-    "Treaty markers: policy impact region, NOT necessarily diplomatic signing venue"
+    "Treaty markers: policy impact region, NOT necessarily diplomatic signing venue",
+    "2026-10-24 Editor9 audited geographic correction: the six original R02 'PORTROYAL' anchors conflated separate historically archaeological sites. Official Parks Canada location coordinates: https://www.parcs.canada.ca/lhn-nhs/ns/portroyal/visit/directions (44.71146,-65.60947) original 1605–1613 Habitation and https://parks.canada.ca/lhn-nhs/ns/fortanne/visit/directions.aspx (44.74185,-65.51861) later 1629 Scottish Charles Fort/administrative garrison. Previous PORTROYAL reference retained for archive comparability but assignments split rather than move entire legacy reference. These modern site GPS coordinates are NOT historical cadastral or occupied-area polygons."
   ],
   "select_anchor_sources": [
     {
