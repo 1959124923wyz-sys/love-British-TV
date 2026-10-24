@@ -8,10 +8,10 @@ assert.equal(idx.topics.find(x=>x.id==='E6-T10')?.status,'research_only','The pa
 assert(idx.topics.find(x=>x.id==='E6-T10-HBC')?.status==='published','Hudson Bay preserved');
 const story=load(meta.article_file);
 assert(story.id===meta.id&&story.schema==='atlas-major-story-v1'&&story.start_year===1604&&story.end_year===1699&&story.historical_end_year===null);
-assert.equal(story.sections.length,18);assert.equal(story.sources.length,21);assert.equal(story.topic_source_claims.length,18);
+assert.equal(story.sections.length,18);assert.equal(story.sources.length,23);assert.equal(story.topic_source_claims.length,18);
 assert(story.sections.flatMap(x=>x.paragraphs).join('').length>6200);
 const all=new Map(),decades=new Map();for(let y=1600;y<=1690;y+=10){const a=load('data/atlas-'+y+'-'+(y+9)+'.json');decades.set(y,a);assert.deepEqual(a.colonial_polygons,[],'No inferred European province-control polygons');for(const e of a.events){assert(!all.has(e.id),e.id);all.set(e.id,e)}}
-const keys=new Set(story.sources.map(s=>s.id));assert.equal(keys.size,21);
+const keys=new Set(story.sources.map(s=>s.id));assert.equal(keys.size,23);
 let links=[],sections=new Set();for(const s of story.sections){
  assert(/^[一二三四五六七八九十]+、/.test(s.heading),s.heading);
  assert(s.paragraphs.length>=3&&s.source_keys.length>=2&&s.source_keys.every(x=>keys.has(x)));
@@ -50,6 +50,10 @@ assert.equal(all.get('1690S-E095').year,1690);
 assert.equal(all.get('1690S-E033').year,1696);
 assert.equal(all.get('1690S-E097').year,1696);
 assert.equal(all.get('1690S-E098').year,1697);
+assert.deepEqual(loc('1690S-E098'),[4.32785,52.0349],'Rijswijk, Netherlands longitude must be EAST; former negative longitude placed Ryswick in Wales');
+assert(all.get('1690S-E098').geography_label.includes('荷兰Rijswijk'),'1697 treaty must identify Dutch reference area');
+assert(story.sources.some(s=>s.url.includes('peacepalacelibrary.nl'))&&story.sources.some(s=>s.url.includes('geonames.org')));
+
 const raid=story.sections.find(s=>s.id==='phips-1690').paragraphs.join(' ');
 assert(raid.includes('劫掠')&&raid.includes('未留下'));
 assert(story.sections.find(s=>s.id==='scottish-charles-fort').paragraphs.join(' ').includes('苏格兰'));
@@ -75,4 +79,4 @@ for(const yr of [1628,1630,1689,1691,1695,1697])assert(!boxes.some(x=>x.properti
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert(app.includes('...serialPreviewByDecade.values()')&&app.includes('map.panTo(position,{animate:true'));
 for(const item of ['function renderInline(text)','function doubleOpen(item)','function returnToOrigin()'])assert(reader.includes(item));
-console.log('PASS E6-T10-ACADIA: 18 chapters, 21 official sources, 21 semantic links and 20 actual events; 12 new archival events, 20 nonmetric cues, three carefully dated dashed frames, 1605/1629 geographic correction and 1690 transient conquest');
+console.log('PASS E6-T10-ACADIA: 18 chapters, 23 documented sources, 21 semantic links and 20 actual events; 12 new archival events, 20 nonmetric cues, three carefully dated dashed frames, 1605/1629 geographic correction and 1690 transient conquest');
