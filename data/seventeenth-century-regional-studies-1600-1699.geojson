@@ -7,8 +7,8 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 23,
-    "polygon_count": 17,
+    "feature_count": 24,
+    "polygon_count": 18,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
@@ -18,7 +18,8 @@
     "virginia_1610_note": "Single 1610 Jamestown/Kecoughtan two-attested-site dotted reader envelope only. 1646/1677 treaty geographic legal terms deliberately remain point referenced until actual cadastral/river boundary verification; no sovereignty polygon.",
     "jamaica_1658_note": "Only one modern Rio Nuevo nonmetric dashed reading box in year 1658, expressly not a surveyed fortress/battle zone and not a Jamaica-wide sovereignty polygon; no Maroon/Nanny Town geometry inferred.",
     "new_york_t09_20261024": "One 1643 nonmetric two-site Dutch attack teaching box. No English occupation or province polygon.",
-    "carolina_e6t09_20261024": "One artificial 1680 old/new Charles Town two-site teaching-only dotted region; no territorial or dispossession acreage inferred."
+    "carolina_e6t09_20261024": "One artificial 1680 old/new Charles Town two-site teaching-only dotted region; no territorial or dispossession acreage inferred.",
+    "hbc_editor9_20261024": "One nonmetric 1686 James Bay three-fort reader-only dashed polygon; 1670 Rupert's Land charter NEVER converted to a territorial occupation polygon."
   },
   "features": [
     {
@@ -2042,6 +2043,99 @@
         "uncertainty": "矩形为现代两个具名城址所作视觉留白，不包含经过历史地籍确认的原住民土地范围，也不能计算迁城掠夺面积。",
         "related_story_ids": [
           "E6-T09-CAR"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-hbc-1686-three-james-bay-forts-review-box",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -82,
+              51.03
+            ],
+            [
+              -78.42,
+              51.03
+            ],
+            [
+              -78.42,
+              52.52
+            ],
+            [
+              -82,
+              52.52
+            ],
+            [
+              -82,
+              51.03
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1686年法军夺取詹姆斯湾三座英公司贸易站的地图阅读示意",
+        "start_year": 1686,
+        "end_year": 1686,
+        "display_kind": "military_impact",
+        "label_type": "淡红虚线：穆斯河／鲁珀特河／奥尔巴尼河三堡易手（不是法国实控区）",
+        "description": "加拿大公园局确认1686年法军夺取三处海湾贸易堡垒。所示四边形仅为围绕三处现代具名代理坐标的阅读留白，不能据此声称围合全部原住民土地被法国军事占领、不能计算战争面积。",
+        "summary_zh": "1686年三处商贸堡垒发生有证据的驻军控制变更，不等同整个詹姆斯湾地区法国主权。",
+        "actor_zh": "法国德特鲁瓦和迪贝维尔部队、英属公司堡垒守军，及仍具自主权的原住民商人社群",
+        "anchor_event_ids": [
+          "1680S-E013",
+          "1680S-E014",
+          "1680S-E015"
+        ],
+        "related_event_ids": [
+          "1680S-E013",
+          "1680S-E014",
+          "1680S-E015"
+        ],
+        "anchor_places": [
+          {
+            "name": "Moose Factory（现代河口参考点）",
+            "lon": -80.641,
+            "lat": 51.272,
+            "source_event_id": "1680S-E013",
+            "modern_place_only": true
+          },
+          {
+            "name": "Rupert Fort（现代河口参考点）",
+            "lon": -78.75,
+            "lat": 51.49,
+            "source_event_id": "1680S-E014",
+            "modern_place_only": true
+          },
+          {
+            "name": "Fort Albany（现代河口参考点）",
+            "lon": -81.675,
+            "lat": 52.23,
+            "source_event_id": "1680S-E015",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1951",
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+        ],
+        "spatial_semantics": "Teaching-only padded envelope of three documented 1686 fort capture location proxies. It does NOT represent a measured French occupation area, indigenous land transfer or army marching route.",
+        "geometry_precision": "schematic_padded_around_three_modern_place_proxy_coordinates_not_a_historic_boundary",
+        "mapping_method": "Manual dotted outline to let readers see all three named forts on one map; polygon vertices artificial and cannot substantiate occupation or measured military reach.",
+        "provenance_method": "Parks Canada nationally designated struggle for Hudson Bay documents three James Bay forts in 1686; does not support shape's vertices or any enclosed territory claim",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "三座原木堡与现代地貌/参考点不完全重叠，原住民土地、法国军队行军路线及相邻贸易区界线未实测，此框不可折算平方公里。",
+        "related_story_ids": [
+          "E6-T10-HBC"
         ]
       }
     }
