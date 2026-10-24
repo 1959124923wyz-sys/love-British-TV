@@ -37,7 +37,7 @@ assert.equal(new Set(c.map(x=>x.section_id)).size,14);
 assert(c.some(x=>x.original_document_page.includes('Hening Statutes at Large vol 1')));
 assert(c.some(x=>x.original_document_page.includes('Articles of Peace')));
 const sites=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson'),areas=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(sites.features.length,99);assert.equal(areas.features.length,22);
+assert.equal(sites.features.length,114);assert.equal(areas.features.length,23);
 const virginia=sites.features.filter(f=>f.properties.related_story_ids?.includes('E6-T05'));
 assert.equal(virginia.length,12);
 for(const f of virginia){

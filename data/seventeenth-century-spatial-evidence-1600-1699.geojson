@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 99,
+    "feature_count": 114,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -25,7 +25,8 @@
     "new_england_wars_20261023": "Ten non-sovereign event-linked Pequot/Metacom/captivity/restitution cues; exact event reference coords, NOT original boundary lines.",
     "virginia_powhatan_story_20261023": "12 year-specific historical war/legal/locality cues tied to E6-T05; published atlas representative coordinates, NOT treaty boundary / native area / colonial actual control. No vessel GPS route.",
     "jamaica_t08_20261023": "Added 13 year-scoped evidence cues, explicitly source-attested modern reference points; Nanny Town built ~1723 and 1739 Maroon treaties excluded. No island-wide land, Maroon area or slave-law implemented area polygons.",
-    "new_york_t09_20261024": "13 year-specific published atlas-linked reading cues for Dutch Indigenous violence, African freedom struggles, royal charter, Staten Island Native deed, English-Dutch transfers and Leisler; no historic boundary inferred"
+    "new_york_t09_20261024": "13 year-specific published atlas-linked reading cues for Dutch Indigenous violence, African freedom struggles, royal charter, Staten Island Native deed, English-Dutch transfers and Leisler; no historic boundary inferred",
+    "carolina_e6t09_20261024": "15 year-scoped atlas-backed source cues; 1663/1665 claims, 1669 proposed constitution, 1675 native deed, 1690 law disallowed and 1696 new law separately; no real British territorial polygons."
   },
   "features": [
     {
@@ -4003,6 +4004,569 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Published atlas reference coordinate copied into a fixed screen-pixel point cue [lon,lat]; any pixel radius is not a measurable historic land extent, route or political sovereignty.",
         "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1660s-e093",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.44,
+          36.22
+        ]
+      },
+      "properties": {
+        "name": "叶奥皮姆土地交易的地区索引",
+        "start_year": 1661,
+        "display_through_year": 1661,
+        "display_kind": "land_dispossession",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "北卡州历史机构记录1661和1662年杜兰特通过叶奥皮姆人达成土地购买。这是Perquimans湾一带宽域索引，不代表每宗实际地块测绘界，也不意味着全部叶奥皮姆人让渡所有政治权利。",
+        "summary_zh": "北卡州历史机构记录1661和1662年杜兰特通过叶奥皮姆人达成土地购买。这是Perquimans湾一带宽域索引，不代表每宗实际地块测绘界，也不意味着全部叶奥皮姆人让渡所有政治权利。",
+        "source_urls": [
+          "https://www.dncr.nc.gov/blog/2023/11/30/george-durant-1632-1694-3"
+        ],
+        "related_event_ids": [
+          "1660S-E093"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1660s-e018",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1663年领主王室特许（伦敦法律声索）",
+        "start_year": 1663,
+        "display_through_year": 1663,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "卡罗来纳八位领主取得王室特许。查理二世给予八名贵族殖民特许，属于伦敦颁布的法律声索，不能等同八人于1663实控所有原住民城镇。",
+        "summary_zh": "卡罗来纳八位领主取得王室特许。查理二世给予八名贵族殖民特许，属于伦敦颁布的法律声索，不能等同八人于1663实控所有原住民城镇。",
+        "source_urls": [
+          "https://home.nps.gov/articles/charleston-community-history.htm",
+          "https://www.nps.gov/orgs/1539/the-southeast-chronicles-ninety-six-national-historic-site.htm"
+        ],
+        "related_event_ids": [
+          "1660S-E018"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1660s-e094",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1665年王室调整卡罗来纳特许",
+        "start_year": 1665,
+        "display_through_year": 1665,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "1665年修订特许状调整领主对Albemarle等广大地区的法理声索，不能将海至海的特许地界绘成实际英国殖民领土。颁发位置使用威斯敏斯特行政代理点。",
+        "summary_zh": "1665年修订特许状调整领主对Albemarle等广大地区的法理声索，不能将海至海的特许地界绘成实际英国殖民领土。颁发位置使用威斯敏斯特行政代理点。",
+        "source_urls": [
+          "https://www.ncpedia.org/carolina-charters-1663-1665"
+        ],
+        "related_event_ids": [
+          "1660S-E094"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1660s-e042",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.94,
+          32.8
+        ]
+      },
+      "properties": {
+        "name": "1669年《基本宪制》的贵族及奴役设计",
+        "start_year": 1669,
+        "display_through_year": 1669,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "卡罗来纳领主提出绝对奴役权与土地须由领主授予的《基本宪制》。1669/1670年《基本宪制》文本含主人对黑人奴隶享绝对权力、从原住民取得地权仍必须追溯领主、未来按英亩计租等设计；这一完整宪制实际从未正式全面实施，只能作为殖民领主制度规划，绝不标为当地既行法律。",
+        "summary_zh": "卡罗来纳领主提出绝对奴役权与土地须由领主授予的《基本宪制》。1669/1670年《基本宪制》文本含主人对黑人奴隶享绝对权力、从原住民取得地权仍必须追溯领主、未来按英亩计租等设计；这一完整宪制实际从未正式全面实施，只能作为殖民领主制度规划，绝不标为当地既行法律。",
+        "source_urls": [
+          "https://avalon.law.yale.edu/17th_century/nc05.asp",
+          "https://www.scencyclopedia.org/sce/entries/fundamental-constitution-of-carolina/"
+        ],
+        "related_event_ids": [
+          "1660S-E042"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1670s-e002",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.984,
+          32.805
+        ]
+      },
+      "properties": {
+        "name": "1670年旧查尔斯敦Albemarle Point城址",
+        "start_year": 1670,
+        "display_through_year": 1670,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "查尔斯顿首次设在阿什利河西岸。来自英格兰、巴巴多斯的移民建立Albemarle Point殖民点，1680年迁往现半岛城址；1670与1680必须用两个不同地理标注。",
+        "summary_zh": "查尔斯顿首次设在阿什利河西岸。来自英格兰、巴巴多斯的移民建立Albemarle Point殖民点，1680年迁往现半岛城址；1670与1680必须用两个不同地理标注。",
+        "source_urls": [
+          "https://home.nps.gov/articles/charleston-community-history.htm",
+          "https://www.nps.gov/orgs/1539/the-southeast-chronicles-ninety-six-national-historic-site.htm"
+        ],
+        "related_event_ids": [
+          "1670S-E002"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1670s-e092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.984,
+          32.805
+        ]
+      },
+      "properties": {
+        "name": "1670年被奴役非洲裔进入查尔斯敦",
+        "start_year": 1670,
+        "display_through_year": 1670,
+        "display_kind": "economic_network",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "查尔斯顿县图书馆根据1670年殖民船记载，确证早期黑人被奴役者抵达Albemarle Point，不能断言每艘船具体身份和人数。坐标取正式1670年旧城址事件点。",
+        "summary_zh": "查尔斯顿县图书馆根据1670年殖民船记载，确证早期黑人被奴役者抵达Albemarle Point，不能断言每艘船具体身份和人数。坐标取正式1670年旧城址事件点。",
+        "source_urls": [
+          "https://www.ccpl.org/charleston-time-machine/commemorating-african-ness-charlestons-history"
+        ],
+        "related_event_ids": [
+          "1670S-E092"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1670s-e016",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.94,
+          32.8
+        ]
+      },
+      "properties": {
+        "name": "1674年Westo皮货与俘虏贸易",
+        "start_year": 1674,
+        "display_through_year": 1674,
+        "display_kind": "economic_network",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "卡罗来纳与Westo发展私商奴役俘虏贸易。1674—1677年Westo与私商贸易包含原住民战俘买卖；两者均有自己的政治和获利动机，不能把Westo的所有袭击等同英军远征。",
+        "summary_zh": "卡罗来纳与Westo发展私商奴役俘虏贸易。1674—1677年Westo与私商贸易包含原住民战俘买卖；两者均有自己的政治和获利动机，不能把Westo的所有袭击等同英军远征。",
+        "source_urls": [
+          "https://www.scencyclopedia.org/sce/entries/westos/",
+          "https://www.nps.gov/orgs/1539/the-southeast-chronicles-ninety-six-national-historic-site.htm"
+        ],
+        "related_event_ids": [
+          "1670S-E016"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1670s-e093",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.984,
+          32.805
+        ]
+      },
+      "properties": {
+        "name": "Kussoe沿岸地权契据：旧历1675年3月10日／现代开年制1676年",
+        "start_year": 1676,
+        "display_through_year": 1676,
+        "display_kind": "land_dispossession",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "记录1675年3月10日契据（当时英国3月25日开年制；按1月1日开年实际1676年3月10日）。Kussoe社群多个具名原住民代表与领主签署土地契据，不能据此证明全部Cusabo社群无争议地转让完整祖地；现代查尔斯敦行政参考点不代表签约地点或原始界址。查尔斯顿县公共图书馆解释这一1675/6旧历日期。",
+        "summary_zh": "记录1675年3月10日契据（当时英国3月25日开年制；按1月1日开年实际1676年3月10日）。Kussoe社群多个具名原住民代表与领主签署土地契据，不能据此证明全部Cusabo社群无争议地转让完整祖地；现代查尔斯敦行政参考点不代表签约地点或原始界址。查尔斯顿县公共图书馆解释这一1675/6旧历日期。",
+        "source_urls": [
+          "https://www.americanhistory.si.edu/explore/exhibitions/many-voices/online/unsettling-continent-1492%E2%80%931776/british-south-carolina",
+          "https://www.ccpl.org/charleston-time-machine/native-american-land-cessions-1684"
+        ],
+        "related_event_ids": [
+          "1670S-E093"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1670s-e094",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.22,
+          36.3
+        ]
+      },
+      "properties": {
+        "name": "1677年阿尔伯马尔殖民内部起事",
+        "start_year": 1677,
+        "display_through_year": 1677,
+        "display_kind": "military_impact",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "1677年12月Culpeper和Durant追随者在Albemarle反对海关与官员专断，拘禁Thomas Miller并控制殖民政府。Pasquotank地区现代码址仅作宽域导航；属于英国殖民内部政治冲突，不是原住民战争或重获土地。",
+        "summary_zh": "1677年12月Culpeper和Durant追随者在Albemarle反对海关与官员专断，拘禁Thomas Miller并控制殖民政府。Pasquotank地区现代码址仅作宽域导航；属于英国殖民内部政治冲突，不是原住民战争或重获土地。",
+        "source_urls": [
+          "https://www.dncr.nc.gov/blog/2023/12/01/culpepers-rebellion-21"
+        ],
+        "related_event_ids": [
+          "1670S-E094"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1680s-e003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.929,
+          32.776
+        ]
+      },
+      "properties": {
+        "name": "1680年牡蛎角新查尔斯敦",
+        "start_year": 1680,
+        "display_through_year": 1680,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "查尔斯顿从Albemarle Point迁往半岛。殖民首府转往现今查尔斯顿市中心半岛，原址仍属历史早期定居点，与全卡罗来纳疆界无关。",
+        "summary_zh": "查尔斯顿从Albemarle Point迁往半岛。殖民首府转往现今查尔斯顿市中心半岛，原址仍属历史早期定居点，与全卡罗来纳疆界无关。",
+        "source_urls": [
+          "https://home.nps.gov/articles/charleston-community-history.htm"
+        ],
+        "related_event_ids": [
+          "1680S-E003"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1680s-e036",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.1,
+          33.34
+        ]
+      },
+      "properties": {
+        "name": "1680年Westo战争地区参考",
+        "start_year": 1680,
+        "display_through_year": 1680,
+        "display_kind": "military_impact",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "1680年前后，卡罗来纳部分英商和殖民派系支持萨凡纳人对Westo发动战争，以改变枪支交换原住民俘虏的贸易关系。Alan Gallay的专题研究将卡罗来纳原住民奴隶贸易视作1670—1717年殖民暴力及获利结构的重要部分；冲突由多方共同参与，不能全部叙述成英格兰正规军实施的屠杀。",
+        "summary_zh": "1680年前后，卡罗来纳部分英商和殖民派系支持萨凡纳人对Westo发动战争，以改变枪支交换原住民俘虏的贸易关系。Alan Gallay的专题研究将卡罗来纳原住民奴隶贸易视作1670—1717年殖民暴力及获利结构",
+        "source_urls": [
+          "https://www.jstor.org/stable/j.ctt1npmvw.8",
+          "https://yalebooks.yale.edu/book/9780300101935/the-indian-slave-trade/",
+          "https://nmaahc.si.edu/object/siris_sil_714848",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC5654607/"
+        ],
+        "related_event_ids": [
+          "1680S-E036"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1680s-e092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.69,
+          32.43
+        ]
+      },
+      "properties": {
+        "name": "1684年Port Royal苏格兰移民定居",
+        "start_year": 1684,
+        "display_through_year": 1684,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "1684年苏格兰移民在Port Royal地区建立Stuart's Town；现代Beaufort/Port Royal岛宽域点不是遗址精确坐标，不能当作整个地区由苏格兰完全控制。",
+        "summary_zh": "1684年苏格兰移民在Port Royal地区建立Stuart's Town；现代Beaufort/Port Royal岛宽域点不是遗址精确坐标，不能当作整个地区由苏格兰完全控制。",
+        "source_urls": [
+          "https://www.nps.gov/orgs/1539/the-southeast-chronicles-ninety-six-national-historic-site.htm"
+        ],
+        "related_event_ids": [
+          "1680S-E092"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1680s-e093",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.69,
+          32.43
+        ]
+      },
+      "properties": {
+        "name": "1686年西班牙毁灭Stuart’s Town",
+        "start_year": 1686,
+        "display_through_year": 1686,
+        "display_kind": "military_impact",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "1686年西班牙远征军与盟友突袭、焚毁Port Royal地区Stuart's Town；暴力真实地点需要更精确遗址调查。该事件不是英国攻取西属佛罗里达的胜利。",
+        "summary_zh": "1686年西班牙远征军与盟友突袭、焚毁Port Royal地区Stuart's Town；暴力真实地点需要更精确遗址调查。该事件不是英国攻取西属佛罗里达的胜利。",
+        "source_urls": [
+          "https://www.nps.gov/orgs/1539/the-southeast-chronicles-ninety-six-national-historic-site.htm"
+        ],
+        "related_event_ids": [
+          "1680S-E093"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1690s-e092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.929,
+          32.776
+        ]
+      },
+      "properties": {
+        "name": "1690年奴役法制定后遭领主否决",
+        "start_year": 1690,
+        "display_through_year": 1690,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "1690年制定《奴隶管理法》，借鉴巴巴多斯法制，随后很快被领主否决。不能描述该法全部条款直到1696年持续生效；法律事件定位殖民行政中心而非实际每次惩罚现场。",
+        "summary_zh": "1690年制定《奴隶管理法》，借鉴巴巴多斯法制，随后很快被领主否决。不能描述该法全部条款直到1696年持续生效；法律事件定位殖民行政中心而非实际每次惩罚现场。",
+        "source_urls": [
+          "https://www.scencyclopedia.org/sce/entries/slave-codes/"
+        ],
+        "related_event_ids": [
+          "1690S-E092"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-car-1690s-e093",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.929,
+          32.776
+        ]
+      },
+      "properties": {
+        "name": "1696年新奴役法规制",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "local_governance",
+        "label_type": "17世纪卡罗来纳历史具名参考点 · 法理与实际土地占有不可互推",
+        "description": "1696年殖民议会再次以巴巴多斯规制经验为基础建立新奴役法，与遭否决的1690年旧法属于不同立法阶段；法令范围不能直接作为逐块实际奴役实施地理范围。",
+        "summary_zh": "1696年殖民议会再次以巴巴多斯规制经验为基础建立新奴役法，与遭否决的1690年旧法属于不同立法阶段；法令范围不能直接作为逐块实际奴役实施地理范围。",
+        "source_urls": [
+          "https://www.scencyclopedia.org/sce/entries/slave-codes/"
+        ],
+        "related_event_ids": [
+          "1690S-E093"
+        ],
+        "related_story_ids": [
+          "E6-T09-CAR"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
+        "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
