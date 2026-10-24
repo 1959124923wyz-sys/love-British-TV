@@ -51,7 +51,7 @@ assert(story.sources.some(x=>x.url.includes('canadahistory.ca')));
 assert(story.sources.some(x=>x.url.includes('parks.canada.ca')));
 const sites=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 const areas=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(sites.features.length,150);assert.equal(areas.features.length,27);
+assert.equal(sites.features.length,164);assert.equal(areas.features.length,29);
 const pt=sites.features.filter(x=>x.properties.related_story_ids?.includes('E6-T10-HBC'));
 assert.equal(pt.length,16);for(const f of pt){const e=all.get(f.properties.related_event_ids[0]);
  assert(e);assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);assert(f.properties.start_year===e.year&&f.properties.display_through_year===e.year);
