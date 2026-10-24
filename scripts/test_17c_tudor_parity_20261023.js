@@ -27,7 +27,7 @@ const rules={
  'E6-T05':36,
  'E6-T08':21,
  'E6-T09-NY':17,
- 'E6-T09-CAR':24
+ 'E6-T09-CAR':25
 };
 let total=0;
 for(const meta of topics){
