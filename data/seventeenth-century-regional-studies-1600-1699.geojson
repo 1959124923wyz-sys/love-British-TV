@@ -7,8 +7,8 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 21,
-    "polygon_count": 15,
+    "feature_count": 22,
+    "polygon_count": 16,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
@@ -16,7 +16,8 @@
     "quality_note": "2026-10-23 16C-parity: corrected Hormuz/Qeshm Safavid-EIC campaign to E6-T12 instead of Ireland; removed 1658 Bengal factory-to-factory polygon (two trading sites do not substantiate an affected area), retaining verified illustrative connection line. Other schematic polygons remain non-sovereign, non-area-aggregable.",
     "new_england_1637_note": "One Pequot War 1637 dotted reading-only envelope between documented Saybrook and Mystic atlas coordinates. Geometry entirely cartographic; no lines or war route inferred and not a historical front, Indigenous territorial boundary or colony.",
     "virginia_1610_note": "Single 1610 Jamestown/Kecoughtan two-attested-site dotted reader envelope only. 1646/1677 treaty geographic legal terms deliberately remain point referenced until actual cadastral/river boundary verification; no sovereignty polygon.",
-    "jamaica_1658_note": "Only one modern Rio Nuevo nonmetric dashed reading box in year 1658, expressly not a surveyed fortress/battle zone and not a Jamaica-wide sovereignty polygon; no Maroon/Nanny Town geometry inferred."
+    "jamaica_1658_note": "Only one modern Rio Nuevo nonmetric dashed reading box in year 1658, expressly not a surveyed fortress/battle zone and not a Jamaica-wide sovereignty polygon; no Maroon/Nanny Town geometry inferred.",
+    "new_york_t09_20261024": "One 1643 nonmetric two-site Dutch attack teaching box. No English occupation or province polygon."
   },
   "features": [
     {
@@ -1872,6 +1873,90 @@
         "uncertainty": "来源支持地点及战争年份，但不支持矩形四角、实际战线、马龙社群疆界或被征服面积。",
         "related_story_ids": [
           "E6-T08"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-ny-1643-pavonia-corlears-hook-education-only",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.077,
+              40.695
+            ],
+            [
+              -73.964,
+              40.695
+            ],
+            [
+              -73.964,
+              40.734
+            ],
+            [
+              -74.077,
+              40.734
+            ],
+            [
+              -74.077,
+              40.695
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1643年帕沃尼亚—科利尔斯角：荷兰对蒙西难民两处袭击地点阅读提示",
+        "start_year": 1643,
+        "end_year": 1643,
+        "display_kind": "military_impact",
+        "label_type": "浅红虚线 · 两处荷兰殖民军袭击具名地点示意（非历史战区）",
+        "description": "荷兰国家档案馆支持1643年2月25日帕沃尼亚与科利尔斯角两处袭击。外框四个顶点完全为教学排版留白，既不表示围合土地全受袭，也不是荷兰／英国殖民主权、所有原住民村寨位置或战线测量。",
+        "summary_zh": "1643年荷兰殖民当局对两个具名蒙西难民群体发动袭击，虚线仅提供地图同时阅读两个代理点的提示。",
+        "actor_zh": "荷兰殖民总督基夫特、殖民士兵与武装移民；遭袭蒙西原住民避难社群",
+        "anchor_event_ids": [
+          "1640S-E090",
+          "1640S-E091"
+        ],
+        "related_event_ids": [
+          "1640S-E090",
+          "1640S-E091"
+        ],
+        "anchor_places": [
+          {
+            "name": "帕沃尼亚现代泽西城参考点",
+            "lon": -74.055,
+            "lat": 40.713,
+            "source_event_id": "1640S-E090",
+            "modern_place_only": true
+          },
+          {
+            "name": "科利尔斯角现代曼哈顿下东城参考点",
+            "lon": -73.981,
+            "lat": 40.716,
+            "source_event_id": "1640S-E091",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.nationaalarchief.nl/en/research/400-years-of-dutch-american-stories/mass-murder-on-manhattan",
+          "https://history.nycourts.gov/about_period/twelve-men/"
+        ],
+        "spatial_semantics": "Two modern reference points for separate Dutch military assaults in 1643. NOT a mapped war extent, land dispossession area or British seizure.",
+        "geometry_precision": "artificially_padded_envelope_around_two_modern_localities_not_original_1643_site_coordinates",
+        "mapping_method": "Manual reader-only padded rectangle around two published named Atlas points; vertices not supported by original historic survey; NOT actual controlled territory.",
+        "provenance_method": "Dutch National Archives primary document excerpts support two attacked communities, not this illustrative polygon",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "1643年帕沃尼亚村寨原址、科利尔斯角袭击区域边线、难民活动地及死亡人数空间分布均未精测，不可据框面积计算侵占或伤亡地域。",
+        "related_story_ids": [
+          "E6-T09-NY"
         ]
       }
     }
