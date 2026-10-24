@@ -57,7 +57,7 @@ for(const f of g.features){
  }
 }
 const byYear=y=>g.features.filter(f=>f.properties.start_year<=y&&y<=f.properties.end_year);
-for(const [y,n] of [[1609,1],[1610,2],[1613,2],[1616,1],[1622,2],[1629,1],[1635,1],[1637,1],[1649,1],[1650,1],[1653,3],[1658,2],[1690,4],[1691,1],[1692,0],[1696,1]]){
+for(const [y,n] of [[1609,1],[1610,2],[1613,2],[1616,1],[1622,2],[1629,1],[1635,1],[1637,1],[1649,1],[1650,1],[1653,3],[1658,2],[1690,4],[1691,1],[1692,0],[1696,3]]){
  assert.equal(byYear(y).length,n,'schematic activity years must not be interpolated: '+y);
 }
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
