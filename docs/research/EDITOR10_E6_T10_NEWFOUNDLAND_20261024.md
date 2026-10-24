@@ -27,6 +27,9 @@
 | NF19 | https://heritagenl.ca/discover/provincial-historic-commemorations-program-designations/early-sponsored-settlement-in-newfoundland/ | 地方官方纪念资料：1610 Cupids、1621 Ferryland、1638 Kirke、1696—97劫毁与1699居民 |
 | NF20 | https://www.heritage.nf.ca/articles/indigenous/beothuk-distribution.php | 贝奥图克群体地方决策及1612时海陆资源网络，不绘制未经考证的族群精确边界 |
 
+
+**空间定位新增强校正（NF21）**：纽芬兰与拉布拉多省官方旅游机构记载费里兰Colony of Avalon历史考古遗址参考坐标为 **47.023926, -52.884649**，来源 https://www.newfoundlandlabrador.com/plan-and-book/attractions/210739 。这一现代遗址点取代先前错误的46.737,-52.704，并已同步更新七条Atlas史事、七个GeoJSON参考点、1696年非测量虚线阅读框和桌面导航脚本。现代遗址坐标绝不作为当年堡墙、古地籍、遭袭村落精确坐标。
+
 ## B. 历史时序和纠错
 
 - **1610** Cupids Cove确证英语实地据点；同年“英国王室全岛许可”是法律声索，不能画英国已占岛域面。
