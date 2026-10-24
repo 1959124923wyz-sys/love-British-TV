@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const base='data/stories/serial/';
-const expected={'E6-T03-LAND-1642-1698':23,'E6-T04-GLENCOE':8,'E6-T07-BARBADOS':12,'E6-T12':21,'E6-T13':13,'E6-T06':33,'E6-T05':36,'E6-T08':21,'E6-T09-NY':17,'E6-T09-CAR':24};
+const expected={'E6-T03-LAND-1642-1698':23,'E6-T04-GLENCOE':8,'E6-T07-BARBADOS':12,'E6-T12':21,'E6-T13':13,'E6-T06':33,'E6-T05':36,'E6-T08':21,'E6-T09-NY':17,'E6-T09-CAR':25};
 const index=json(base+'index.json'),lookups=new Map;
 for(let y=1600;y<=1690;y+=10){
  let d=json('data/atlas-'+y+'-'+(y+9)+'.json');
