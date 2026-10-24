@@ -27,7 +27,7 @@ for(let d=1600;d<=1690;d+=10){
   assert(!e.research_event_id?.startsWith('EDITOR6-MAJOR:'),'duplicate second import must be eliminated');
  }
 }
-assert.equal(records,399);assert.equal(geopoints,398);
+assert.equal(records,404);assert.equal(geopoints,403);
 assert.equal(index.size,14);
 for(const c of audit.cases){
  const e=index.get('EDITOR6:'+c.k);
@@ -40,4 +40,4 @@ assert(!index.has('EDITOR6:ROYAL-ADVENTURERS-AFRICA'),'1660 preliminary venture 
 const glencoe=load('data/stories/serial/chronology-preview-1600-1699.json');
 assert.deepEqual(glencoe.events.map(e=>e.id),['E6-GLENCOE-1692']);
 assert.equal(load('data/chapters.json').chapters.at(-1).end,1599);
-console.log('PASS 14 major history additions / 14 deduped parallel copies / 1 deferred corporation preliminary / 399 decade events including six Jamaica, seven New York and nine Carolina source-backed records + existing Glencoe, 398 mapped, no polygons');
+console.log('PASS 14 major history additions / 14 deduped parallel copies / 1 deferred corporation preliminary / 404 decade events including six Jamaica, seven New York, nine Carolina and five Hudson Bay source-backed records + existing Glencoe, 403 mapped, no polygons');
