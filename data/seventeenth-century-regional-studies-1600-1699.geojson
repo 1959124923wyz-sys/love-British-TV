@@ -7,8 +7,8 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 27,
-    "polygon_count": 21,
+    "feature_count": 29,
+    "polygon_count": 23,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
@@ -20,7 +20,8 @@
     "new_york_t09_20261024": "One 1643 nonmetric two-site Dutch attack teaching box. No English occupation or province polygon.",
     "carolina_e6t09_20261024": "One artificial 1680 old/new Charles Town two-site teaching-only dotted region; no territorial or dispossession acreage inferred.",
     "hbc_editor9_20261024": "One nonmetric 1686 James Bay three-fort reader-only dashed polygon; 1670 Rupert's Land charter NEVER converted to a territorial occupation polygon.",
-    "acadia_editor9_20261024": "3 nonmetric source-attested dashed research frames: 1629 two distinct Port-Royal heritage places, 1690 Phips port raid and 1696 Beaubassin village raid. NONE represent occupied or dispossessed polygon."
+    "acadia_editor9_20261024": "3 nonmetric source-attested dashed research frames: 1629 two distinct Port-Royal heritage places, 1690 Phips port raid and 1696 Beaubassin village raid. NONE represent occupied or dispossessed polygon.",
+    "editor10_newfoundland_20261024": "Two year 1696 only nonmetric port raid reading frames for Ferryland and St John's; all historic political control/Indigenous land area metrics absent; 1694 Ferryland defence separate Point."
   },
   "features": [
     {
@@ -2372,6 +2373,156 @@
         "uncertainty": "虚线为排版性研究框，面积与实控疆界不能反推；原住民政体、家园与使用权未由此转移。",
         "related_story_ids": [
           "E6-T10-ACADIA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-newfoundland-1696-ferryland-raid",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -52.737,
+              46.718
+            ],
+            [
+              -52.671,
+              46.718
+            ],
+            [
+              -52.671,
+              46.76
+            ],
+            [
+              -52.737,
+              46.76
+            ],
+            [
+              -52.737,
+              46.718
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1696年9月法军攻陷费里兰：现代地区虚线阅读框",
+        "start_year": 1696,
+        "end_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "淡红虚线 · 1696年纽芬兰具名港口遭袭（非真实地籍和实测军事控制）",
+        "description": "费里兰1696-09-21法国攻掠和居民受害已得到机构历史支持，但原始堡墙／毁损房舍与战线四至尚无测量。红色虚线矩形仅为定位读者的排版对象，不是法国占领面积或对Beothuk领土的主权显示。",
+        "summary_zh": "费里兰1696-09-21法国攻掠和居民受害已得到机构历史支持，但原始堡墙／毁损房舍与战线四至尚无测量。红色虚线矩形仅为定位读者的排版对象，不是法国占领面积或对Beothuk领土的主权显示。",
+        "actor_zh": "法军、当地英人常住渔业社群；贝奥图克人另有独立政治与土地使用权",
+        "anchor_event_ids": [
+          "1690S-E100"
+        ],
+        "related_event_ids": [
+          "1690S-E100"
+        ],
+        "anchor_places": [
+          {
+            "name": "Ferryland",
+            "lon": -52.704,
+            "lat": 46.737,
+            "source_event_id": "1690S-E100",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/winter-of-1696.php",
+          "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php"
+        ],
+        "spatial_semantics": "Artificial nonmetric dashed readers' outline for independently attested named port raids; not colonial occupied land, Beothuk historical land, measured destroyed premises or military control frontier.",
+        "geometry_precision": "artificial_teaching_rectangle_nonhistoric_vertices",
+        "mapping_method": "Modern municipality-scale site visual padding only; no historical war-zone geometry or area measurement claimed.",
+        "provenance_method": "Institutional historical chronology supports dates and named towns but not rectangular vertices",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "1696地理框为排版阅读提示；不证明历史实控边界、房屋毁损区或可以相加的面积。",
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-newfoundland-1696-stjohns-raid",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -52.754,
+              47.532
+            ],
+            [
+              -52.673,
+              47.532
+            ],
+            [
+              -52.673,
+              47.587
+            ],
+            [
+              -52.754,
+              47.587
+            ],
+            [
+              -52.754,
+              47.532
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1696年法军进攻圣约翰斯：现代港区虚线阅读框",
+        "start_year": 1696,
+        "end_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "淡红虚线 · 1696年纽芬兰具名港口遭袭（非真实地籍和实测军事控制）",
+        "description": "既有主站Atlas记录1696年圣约翰斯遭法军攻取。本阅读框选现代城市附近作为视觉定位，仅表明确有短时港区军事行动，不是法军永久占领半岛或全岛的实测地形。",
+        "summary_zh": "既有主站Atlas记录1696年圣约翰斯遭法军攻取。本阅读框选现代城市附近作为视觉定位，仅表明确有短时港区军事行动，不是法军永久占领半岛或全岛的实测地形。",
+        "actor_zh": "法军、当地英人常住渔业社群；贝奥图克人另有独立政治与土地使用权",
+        "anchor_event_ids": [
+          "1690S-E034"
+        ],
+        "related_event_ids": [
+          "1690S-E034"
+        ],
+        "anchor_places": [
+          {
+            "name": "St John’s Newfoundland harbour",
+            "lon": -52.712,
+            "lat": 47.561,
+            "source_event_id": "1690S-E034",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/nl/signalhill/visit/-/media/b2ea7cc3ea43465186898523b8c900bf.ashx",
+          "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php"
+        ],
+        "spatial_semantics": "Artificial nonmetric dashed readers' outline for independently attested named port raids; not colonial occupied land, Beothuk historical land, measured destroyed premises or military control frontier.",
+        "geometry_precision": "artificial_teaching_rectangle_nonhistoric_vertices",
+        "mapping_method": "Modern municipality-scale site visual padding only; no historical war-zone geometry or area measurement claimed.",
+        "provenance_method": "Institutional historical chronology supports dates and named towns but not rectangular vertices",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "1696地理框为排版阅读提示；不证明历史实控边界、房屋毁损区或可以相加的面积。",
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
         ]
       }
     }
