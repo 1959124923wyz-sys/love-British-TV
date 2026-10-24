@@ -7,8 +7,8 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 22,
-    "polygon_count": 16,
+    "feature_count": 23,
+    "polygon_count": 17,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
@@ -17,7 +17,8 @@
     "new_england_1637_note": "One Pequot War 1637 dotted reading-only envelope between documented Saybrook and Mystic atlas coordinates. Geometry entirely cartographic; no lines or war route inferred and not a historical front, Indigenous territorial boundary or colony.",
     "virginia_1610_note": "Single 1610 Jamestown/Kecoughtan two-attested-site dotted reader envelope only. 1646/1677 treaty geographic legal terms deliberately remain point referenced until actual cadastral/river boundary verification; no sovereignty polygon.",
     "jamaica_1658_note": "Only one modern Rio Nuevo nonmetric dashed reading box in year 1658, expressly not a surveyed fortress/battle zone and not a Jamaica-wide sovereignty polygon; no Maroon/Nanny Town geometry inferred.",
-    "new_york_t09_20261024": "One 1643 nonmetric two-site Dutch attack teaching box. No English occupation or province polygon."
+    "new_york_t09_20261024": "One 1643 nonmetric two-site Dutch attack teaching box. No English occupation or province polygon.",
+    "carolina_e6t09_20261024": "One artificial 1680 old/new Charles Town two-site teaching-only dotted region; no territorial or dispossession acreage inferred."
   },
   "features": [
     {
@@ -1957,6 +1958,90 @@
         "uncertainty": "1643年帕沃尼亚村寨原址、科利尔斯角袭击区域边线、难民活动地及死亡人数空间分布均未精测，不可据框面积计算侵占或伤亡地域。",
         "related_story_ids": [
           "E6-T09-NY"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-car-1680-charlestown-two-sites-nonmetric-reader",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.014,
+              32.754
+            ],
+            [
+              -79.907,
+              32.754
+            ],
+            [
+              -79.907,
+              32.826
+            ],
+            [
+              -80.014,
+              32.826
+            ],
+            [
+              -80.014,
+              32.754
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1680年旧查尔斯敦与牡蛎角：两处不同城址的虚线阅读范围",
+        "start_year": 1680,
+        "end_year": 1680,
+        "display_kind": "land_dispossession",
+        "label_type": "赭黄虚线 · 1670旧城址与1680新城址阅读包络（非土地征收面积）",
+        "description": "查尔斯敦1670年初建于Albemarle Point，1680年迁至Oyster Point。两个现代遗址索引位置之间的虚线矩形仅便于同时阅读，并非原住民土地契据四至、迁城征收区、17世纪行政城界或英人实控地理面。",
+        "summary_zh": "用于比较两个不同的历史殖民城址。此虚线框是排版辅助，不是英国对全部围合区域的征服范围。",
+        "actor_zh": "卡罗来纳殖民领主行政及城市定居者；周边原住民社区权利仍须另查",
+        "anchor_event_ids": [
+          "1670S-E002",
+          "1680S-E003"
+        ],
+        "related_event_ids": [
+          "1670S-E002",
+          "1680S-E003"
+        ],
+        "anchor_places": [
+          {
+            "name": "1670年Albemarle Point旧城址的Atlas现代参考点",
+            "lon": -79.984,
+            "lat": 32.805,
+            "source_event_id": "1670S-E002",
+            "modern_place_only": true
+          },
+          {
+            "name": "1680年Oyster Point现代半岛参考点",
+            "lon": -79.929,
+            "lat": 32.776,
+            "source_event_id": "1680S-E003",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://www.ccpl.org/charleston-time-machine/grasping-neck-origins-charlestons-northern-neighbor",
+          "https://southcarolinaparks.com/charles-towne-landing/history-and-interpretation"
+        ],
+        "spatial_semantics": "Two historically distinct settlement points used for city site relocation comparison in year 1680, NOT an Indigenous land forfeiture polygon or English claim/occupation extent",
+        "geometry_precision": "artificial_padded_bounding_rectangle_not_1680_survey_or_land_dispossession_area",
+        "mapping_method": "Manual 1680 schematic readers' rectangle enclosing two named modern atlas reference points. Four vertices NOT supported by period boundary surveys and are NOT an actual controlled territory.",
+        "provenance_method": "SC Parks and Charleston Public Library attest two historic city localities and relocation but NOT any rectangle geometry",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "occupation_area_sqkm": null,
+        "policy_area_not_all_land": false,
+        "uncertainty": "矩形为现代两个具名城址所作视觉留白，不包含经过历史地籍确认的原住民土地范围，也不能计算迁城掠夺面积。",
+        "related_story_ids": [
+          "E6-T09-CAR"
         ]
       }
     }
