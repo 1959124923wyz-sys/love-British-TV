@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 150,
+    "feature_count": 164,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -28,7 +28,8 @@
     "new_york_t09_20261024": "13 year-specific published atlas-linked reading cues for Dutch Indigenous violence, African freedom struggles, royal charter, Staten Island Native deed, English-Dutch transfers and Leisler; no historic boundary inferred",
     "carolina_e6t09_20261024": "15 year-scoped atlas-backed source cues; 1663/1665 claims, 1669 proposed constitution, 1675 native deed, 1690 law disallowed and 1696 new law separately; no real British territorial polygons.",
     "hbc_editor9_20261024": "16 Atlas-linked nonmetric point events; 1670 London royal claim has no territorial polygon; 1686 three specific French captures and 1694, 1696, 1697 York Fort handover are separate year-specific evidence cues.",
-    "acadia_editor9_20261024": "20 year-scoped historical map anchors; 1605 original Port-Royal Habitation 44.71146,-65.60947 is distinct from 1629 Charles Fort/modern Fort Anne 44.74185,-65.51861; no sovereign occupation polygons or area measurements."
+    "acadia_editor9_20261024": "20 year-scoped historical map anchors; 1605 original Port-Royal Habitation 44.71146,-65.60947 is distinct from 1629 Charles Fort/modern Fort Anne 44.74185,-65.51861; no sovereign occupation polygons or area measurements.",
+    "editor10_newfoundland_20261024": "14 per-year institutional-source-linked Newfoundland point symbols; 1612 Beothuk exchange and piracy separated; 1694 Ferryland defence/1696 fall, 1662 French Plaisance and 1699 Westminster statute separate; original Cupids and St John's Atlas targets reused. No sea tracks or island sovereignty polygon."
   },
   "features": [
     {
@@ -5904,6 +5905,525 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Source-attested published Atlas named modern site coordinate [lon,lat] displayed in fixed screen-pixel symbols; NO point buffer, measured influence polygon, 17C cadastral boundary or territorial control area. No historical metre radius is asserted.",
         "geometry_precision": "two_Parks_Canada_distinct_historic_Port_Royal_sites_or_named_locality_nonmetric",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1610s-e005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.22,
+          47.55
+        ]
+      },
+      "properties": {
+        "name": "约翰·盖伊在纽芬兰库珀斯科夫建立英人商人殖民据点",
+        "start_year": 1610,
+        "display_through_year": 1610,
+        "display_kind": "local_governance",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "约翰·盖伊在纽芬兰库珀斯科夫建立英人商人殖民据点。伦敦及布里斯托尔商人计划在Cupers Cove建立小规模英人据点；1610年建筑和随后遗物由纽芬兰省考古证实。这里只是定居点，不能表示控制全岛。",
+        "summary_zh": "约翰·盖伊在纽芬兰库珀斯科夫建立英人商人殖民据点。伦敦及布里斯托尔商人计划在Cupers Cove建立小规模英人据点；1610年建筑和随后遗物由纽芬兰省考古证实。这里只是定居点，不能表示控制全岛。",
+        "source_urls": [
+          "https://www.gov.nl.ca/tcar/provincial-archaeology-annual-report-series/1997-toc/gilbert-1997-cupids/"
+        ],
+        "related_event_ids": [
+          "1610S-E005"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1610s-e091",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.499167,
+          48
+        ]
+      },
+      "properties": {
+        "name": "约翰·盖伊与贝奥图克人在特里尼蒂湾交换物品",
+        "start_year": 1612,
+        "display_through_year": 1612,
+        "display_kind": "economic_network",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "贝奥图克人与英格兰商人于1612年在特里尼蒂湾会面并交换物品。盖伊留下的记述显示，贝奥图克人以自己的方式布置皮毛和贝壳，试图继续组织交易。现代特里尼蒂湾地名坐标为区域代理，无法定位具体接触海滩。",
+        "summary_zh": "贝奥图克人与英格兰商人于1612年在特里尼蒂湾会面并交换物品。盖伊留下的记述显示，贝奥图克人以自己的方式布置皮毛和贝壳，试图继续组织交易。现代特里尼蒂湾地名坐标为区域代理，无法定位具体接触海滩。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/indigenous/beothuk-history.php"
+        ],
+        "related_event_ids": [
+          "1610S-E091"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1610s-e092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.2535888,
+          47.6796861
+        ]
+      },
+      "properties": {
+        "name": "海盗彼得·伊斯顿在港恩典港强取渔船物资与船员",
+        "start_year": 1612,
+        "display_through_year": 1612,
+        "display_kind": "military_impact",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "约翰·盖伊1612年7月29日信称，海盗Peter Easton停泊Harbour Grace，征用各船木匠、物资和约百名水手。人数为信中同时代说法，不是精确独立船籍审计；坐标为现代镇区参考，不是海盗船停泊GPS。",
+        "summary_zh": "约翰·盖伊1612年7月29日信称，海盗Peter Easton停泊Harbour Grace，征用各船木匠、物资和约百名水手。人数为信中同时代说法，不是精确独立船籍审计；坐标为现代镇区参考，不是海盗船停泊GPS。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/john-guy-letter-1612.php"
+        ],
+        "related_event_ids": [
+          "1610S-E092"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1620s-e028",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.704,
+          46.737
+        ]
+      },
+      "properties": {
+        "name": "卡尔弗特派殖民者在费里兰建立阿瓦隆殖民据点",
+        "start_year": 1621,
+        "display_through_year": 1621,
+        "display_kind": "local_governance",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "1621年卡尔弗特支持的殖民群体在费里兰登陆建居，并逐步建设阿瓦隆（Avalon）殖民地。此处是英人小型海岸落脚点，并非王室在纽芬兰整岛实际建立边界明确的行政统治。",
+        "summary_zh": "1621年卡尔弗特支持的殖民群体在费里兰登陆建居，并逐步建设阿瓦隆（Avalon）殖民地。此处是英人小型海岸落脚点，并非王室在纽芬兰整岛实际建立边界明确的行政统治。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/ferryland-history-introduction.php"
+        ],
+        "related_event_ids": [
+          "1620S-E028"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1630s-e022",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.704,
+          46.737
+        ]
+      },
+      "properties": {
+        "name": "戴维·柯克接管费里兰卡尔弗特家族宅地与经营设施",
+        "start_year": 1638,
+        "display_through_year": 1638,
+        "display_kind": "land_dispossession",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "原始1652年证词回述，1638年戴维·柯克凭新特许及实力迫使代理人William Hill交出费里兰主要宅邸。1637法律特许与1638实际接管为两个层次；不能把地产占有扩大为英格兰全岛实控。",
+        "summary_zh": "原始1652年证词回述，1638年戴维·柯克凭新特许及实力迫使代理人William Hill交出费里兰主要宅邸。1637法律特许与1638实际接管为两个层次；不能把地产占有扩大为英格兰全岛实控。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/james-pratt-deposition-1652.php"
+        ],
+        "related_event_ids": [
+          "1630S-E022"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1650s-e094",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.704,
+          46.737
+        ]
+      },
+      "properties": {
+        "name": "萨拉·柯克接手费里兰庄园和鳕鱼加工经营",
+        "start_year": 1651,
+        "display_through_year": 1651,
+        "display_kind": "land_dispossession",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "戴维·柯克1651年被召回英格兰后，萨拉·柯克持续经营费里兰Pool Plantation，组织鳕鱼加工和渔业劳作。其实际经营规模与海外王室给予家庭的全岛土地声索须分别考察。",
+        "summary_zh": "戴维·柯克1651年被召回英格兰后，萨拉·柯克持续经营费里兰Pool Plantation，组织鳕鱼加工和渔业劳作。其实际经营规模与海外王室给予家庭的全岛土地声索须分别考察。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/kirke.php"
+        ],
+        "related_event_ids": [
+          "1650S-E094"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1660s-e096",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.9050916,
+          47.2705222
+        ]
+      },
+      "properties": {
+        "name": "法国在普莱桑斯增派军人并建立殖民防御基地",
+        "start_year": 1662,
+        "display_through_year": 1662,
+        "display_kind": "local_governance",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "法国王室1662年派军人和殖民者前往Plaisance，建立面向鳕鱼渔场的驻地与防御据点。现代Placentia城区定位不能用作原始堡墙四至，也不能把法方据点涂成英国领土。",
+        "summary_zh": "法国王室1662年派军人和殖民者前往Plaisance，建立面向鳕鱼渔场的驻地与防御据点。现代Placentia城区定位不能用作原始堡墙四至，也不能把法方据点涂成英国领土。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/french-settlement-placentia.php"
+        ],
+        "related_event_ids": [
+          "1660S-E096"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1670s-e097",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.704,
+          46.737
+        ]
+      },
+      "properties": {
+        "name": "费里兰萨拉·柯克家族持续经营鳕鱼加工及渔业雇工",
+        "start_year": 1675,
+        "display_through_year": 1675,
+        "display_kind": "economic_network",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "1670年代的殖民人口及渔业记录显示，萨拉·柯克拥有鱼台、渔船、熬油设施并雇用劳工。这里显示的是居民经营、港内设施与劳工关系，不是对贝奥图克人使用的所有内陆土地取得管治。",
+        "summary_zh": "1670年代的殖民人口及渔业记录显示，萨拉·柯克拥有鱼台、渔船、熬油设施并雇用劳工。这里显示的是居民经营、港内设施与劳工关系，不是对贝奥图克人使用的所有内陆土地取得管治。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/david-kirke-and-pool-plantation.php"
+        ],
+        "related_event_ids": [
+          "1670S-E097"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1690s-e099",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.704,
+          46.737
+        ]
+      },
+      "properties": {
+        "name": "费里兰渔业居民阻退法国袭击",
+        "start_year": 1694,
+        "display_through_year": 1694,
+        "display_kind": "military_impact",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "1694年法国袭击费里兰，William Holman组织殖民居民守卫并成功抵挡。此事不能与1696年9月殖民据点遭攻破混为一次战斗；现代城镇坐标仅供地方军事事件定位。",
+        "summary_zh": "1694年法国袭击费里兰，William Holman组织殖民居民守卫并成功抵挡。此事不能与1696年9月殖民据点遭攻破混为一次战斗；现代城镇坐标仅供地方军事事件定位。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php"
+        ],
+        "related_event_ids": [
+          "1690S-E099"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1690s-e100",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.704,
+          46.737
+        ]
+      },
+      "properties": {
+        "name": "法国军队九月攻陷费里兰并焚毁殖民渔业聚落",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "1696年9月21日法国军队攻占费里兰，毁坏家宅与鱼业设施，并将部分被俘居民押往普莱桑斯。此为具名城镇袭掠，不构成法国实际统治整座纽芬兰岛的地籍边界。",
+        "summary_zh": "1696年9月21日法国军队攻占费里兰，毁坏家宅与鱼业设施，并将部分被俘居民押往普莱桑斯。此为具名城镇袭掠，不构成法国实际统治整座纽芬兰岛的地籍边界。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/winter-of-1696.php"
+        ],
+        "related_event_ids": [
+          "1690S-E100"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1690s-e101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.7877777,
+          47.3041667
+        ]
+      },
+      "properties": {
+        "name": "法国军队在秋冬行动中经过伦纽斯与湾布尔斯沿海渔场",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "随军神职人员Jean Baudoin记载1696年11月伦纽斯、费里兰、湾布尔斯等具名地区的侦察、俘虏和物资困境。此地图点仅表示Bay Bulls现代海湾参考，不表示古代军队道路或所有沿岸村落同时受占。",
+        "summary_zh": "随军神职人员Jean Baudoin记载1696年11月伦纽斯、费里兰、湾布尔斯等具名地区的侦察、俘虏和物资困境。此地图点仅表示Bay Bulls现代海湾参考，不表示古代军队道路或所有沿岸村落同时受占。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/baudoin-extracts-1696.php"
+        ],
+        "related_event_ids": [
+          "1690S-E101"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1690s-e034",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.712,
+          47.561
+        ]
+      },
+      "properties": {
+        "name": "法军在1696年夺取纽芬兰圣约翰斯港口",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "法军在1696年夺取纽芬兰圣约翰斯港口。1696年法军进攻圣约翰斯并短期占领其港口。加拿大公园局确认1696年开始多次易手；不同叙述对十一月与十二月的精确接收日期存在差异，故只记录到年份。",
+        "summary_zh": "法军在1696年夺取纽芬兰圣约翰斯港口。1696年法军进攻圣约翰斯并短期占领其港口。加拿大公园局确认1696年开始多次易手；不同叙述对十一月与十二月的精确接收日期存在差异，故只记录到年份。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/nl/signalhill/culture/histoire-history/def",
+          "https://dai.mun.ca/pdfs/quarterly/TheNewfoundlandQuarterlyvolume90no3Summer1996.pdf"
+        ],
+        "related_event_ids": [
+          "1690S-E034"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1690s-e102",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.704,
+          46.737
+        ]
+      },
+      "properties": {
+        "name": "纽芬兰费里兰居民在法军摧毁后申请重返渔场",
+        "start_year": 1697,
+        "display_through_year": 1697,
+        "display_kind": "military_impact",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "1696年被劫毁后，费里兰居民于1697年向威廉三世申请援助以恢复定居和渔业。战争摧毁不等于英方居民永久消失或法国据点永久占据英人旧宅。",
+        "summary_zh": "1696年被劫毁后，费里兰居民于1697年向威廉三世申请援助以恢复定居和渔业。战争摧毁不等于英方居民永久消失或法国据点永久占据英人旧宅。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php"
+        ],
+        "related_event_ids": [
+          "1690S-E102"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-nf-1690s-e103",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.124,
+          51.499
+        ]
+      },
+      "properties": {
+        "name": "英格兰议会通过《纽芬兰贸易鼓励法》规定渔港经营次序",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "economic_network",
+        "label_type": "纽芬兰具名现代参考地点／地点型历史事件（像素虚线，非地籍、战场或殖民疆域）",
+        "description": "1699年英格兰议会通过鼓励纽芬兰贸易的法案，规定渔船先到者使用渔业设施、岸上熬油和晒鱼空间、争讼权限等。法条多处把具体新规则生效日期设为1700年3月25日，故不可声称1699年所有港口已实际执行或英王统治全岛原住民土地。",
+        "summary_zh": "1699年英格兰议会通过鼓励纽芬兰贸易的法案，规定渔船先到者使用渔业设施、岸上熬油和晒鱼空间、争讼权限等。法条多处把具体新规则生效日期设为1700年3月25日，故不可声称1699年所有港口已实际执行或英王统治全岛原住民土地。",
+        "source_urls": [
+          "https://www.heritage.nf.ca/lawfoundation/articles/doc2_1699william.html"
+        ],
+        "related_event_ids": [
+          "1690S-E103"
+        ],
+        "related_story_ids": [
+          "E6-T10-NEWFOUNDLAND"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Official modern named town/bay or parliamentary city coordinate; fixed-screen symbol, not an arbitrary area buffer, military perimeter, indigenous land transfer, ship course or 17C cadastral evidence.",
+        "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
