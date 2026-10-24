@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const idx=load('data/stories/serial/index.json'),meta=idx.topics.find(x=>x.id==='E6-T10-ACADIA');
 assert(meta&&meta.status==='published'&&meta.parent_topic_id==='E6-T10'&&meta.publication_review==='approved');
-assert.equal(idx.topics.find(x=>x.id==='E6-T10')?.status,'research_only','Newfoundland remains independent research');
+assert.equal(idx.topics.find(x=>x.id==='E6-T10')?.status,'research_only','The parent family stays research-only despite completed child topics');
 assert(idx.topics.find(x=>x.id==='E6-T10-HBC')?.status==='published','Hudson Bay preserved');
 const story=load(meta.article_file);
 assert(story.id===meta.id&&story.schema==='atlas-major-story-v1'&&story.start_year===1604&&story.end_year===1699&&story.historical_end_year===null);
@@ -59,7 +59,7 @@ assert(story.sources.some(x=>x.url.includes('biographi.ca')));
 assert(story.sources.some(x=>x.url.includes('parks.canada.ca')));
 const sites=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 const areas=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(sites.features.length,150);assert.equal(areas.features.length,27);
+assert.equal(sites.features.length,164);assert.equal(areas.features.length,29);
 const cues=sites.features.filter(f=>f.properties.related_story_ids?.includes('E6-T10-ACADIA'));
 assert.equal(cues.length,20);
 for(const f of cues){const e=all.get(f.properties.related_event_ids[0]);assert(e);assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);
