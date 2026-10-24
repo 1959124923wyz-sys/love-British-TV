@@ -64,7 +64,7 @@ try:
     year(1692)
     assert_shapes(0,0)
     year(1696)
-    assert_shapes(1,0) # Acadia: dated Church raid Beaubassin, not ongoing occupation
+    assert_shapes(3,0) # one Acadia Beaubassin plus two Newfoundland named-port reading frames, none imply sovereignty
     year(1599)
     assert count('atlas-17c-regional-area')==0
     assert js("return document.getElementById('eventCount').textContent!=='0项'")
