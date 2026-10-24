@@ -10,7 +10,7 @@ const old=load('data/stories/index.json');
 const reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert.equal(serial.schema,'atlas-serial-stories-v1');
 assert.equal(serial.navigation_contract,'existing_decade_chapters_unchanged');
-assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E6-T03-LAND-1642-1698','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T12','E6-T13'] ,'only explicitly editor-audited completed story stages may publish');
+assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E6-T03-LAND-1642-1698','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T10-HBC','E6-T12','E6-T13'] ,'only explicitly editor-audited completed story stages may publish');
 const canonicalFamilies=Array.from({length:15},(_,i)=>'E6-T'+String(i+1).padStart(2,'0'));
 const knownIds=new Set(serial.topics.map(t=>t.id));
 assert.equal(knownIds.size,serial.topics.length,'unique IDs required');
@@ -27,6 +27,9 @@ assert(ny&&ny.parent_topic_id==='E6-T09'&&ny.status==='published'&&ny.publicatio
 assert(serial.topics.find(t=>t.id==='E6-T09')?.status==='research_only','Carolina and New York mother topic must stay in research');
 const carolina=serial.topics.find(t=>t.id==='E6-T09-CAR');
 assert(carolina&&carolina.parent_topic_id==='E6-T09'&&carolina.status==='published'&&carolina.publication_review==='approved'&&carolina.event_ids.length>=15);
+const hudson=serial.topics.find(t=>t.id==='E6-T10-HBC');
+assert(hudson&&hudson.parent_topic_id==='E6-T10'&&hudson.status==='published'&&hudson.publication_review==='approved'&&hudson.event_ids.length>=16);
+assert(serial.topics.find(t=>t.id==='E6-T10')?.status==='research_only','Acadia and Newfoundland remain research-only');
 const virginia=serial.topics.find(t=>t.id==='E6-T05');
 assert(virginia?.status==='published'&&virginia.publication_review==='approved'&&virginia.event_ids.length>=30,'Virginia long-form Pequot-equivalent published entry must have source-linked existing events');
 const newEngland=serial.topics.find(t=>t.id==='E6-T06');
@@ -117,7 +120,7 @@ for(const t of serial.topics){
  for(const id of t.event_ids) assert(/^[A-Za-z0-9-]+$/.test(id));
 }
 assert(!reader.includes('data/stories/serial/atlas-'),'must not fold serial registry into decade atlas');
-console.log('PASS: serial story registry,',serial.topics.length,'review families, existing 10 published chapters retained');
+console.log('PASS: serial story registry,',serial.topics.length,'review families, existing 11 approved published stories retained');
 
 const preview=load('data/stories/serial/chronology-preview-1600-1699.json');
 assert.equal(preview.schema,'atlas-serial-chronology-preview-v1');

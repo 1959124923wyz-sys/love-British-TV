@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 114,
+    "feature_count": 130,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -26,7 +26,8 @@
     "virginia_powhatan_story_20261023": "12 year-specific historical war/legal/locality cues tied to E6-T05; published atlas representative coordinates, NOT treaty boundary / native area / colonial actual control. No vessel GPS route.",
     "jamaica_t08_20261023": "Added 13 year-scoped evidence cues, explicitly source-attested modern reference points; Nanny Town built ~1723 and 1739 Maroon treaties excluded. No island-wide land, Maroon area or slave-law implemented area polygons.",
     "new_york_t09_20261024": "13 year-specific published atlas-linked reading cues for Dutch Indigenous violence, African freedom struggles, royal charter, Staten Island Native deed, English-Dutch transfers and Leisler; no historic boundary inferred",
-    "carolina_e6t09_20261024": "15 year-scoped atlas-backed source cues; 1663/1665 claims, 1669 proposed constitution, 1675 native deed, 1690 law disallowed and 1696 new law separately; no real British territorial polygons."
+    "carolina_e6t09_20261024": "15 year-scoped atlas-backed source cues; 1663/1665 claims, 1669 proposed constitution, 1675 native deed, 1690 law disallowed and 1696 new law separately; no real British territorial polygons.",
+    "hbc_editor9_20261024": "16 Atlas-linked nonmetric point events; 1670 London royal claim has no territorial polygon; 1686 three specific French captures and 1694, 1696, 1697 York Fort handover are separate year-specific evidence cues."
   },
   "features": [
     {
@@ -4567,6 +4568,599 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Published atlas representative coordinate copied exactly as [lon,lat] for a fixed screen-pixel dashed landmark; this is a nonmetric visual reference and NOT an original cadastral map or actual occupation/war extent.",
         "geometry_precision": "modern_named_locality_reference_not_surveyed_seventeenth_century_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1660s-e095",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.76,
+          51.49
+        ]
+      },
+      "properties": {
+        "name": "1668年Nonsuch号与早期鲁珀特河贸易站",
+        "start_year": 1668,
+        "display_through_year": 1668,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "1668年Nonsuch远征与当地原住民交易者建立皮货贸易，在鲁珀特河附近形成Charles Fort早期商业地点。地图点使用现有鲁珀特河河口的现代参考位置，非1668堡墙实测。",
+        "summary_zh": "1668年Nonsuch远征与当地原住民交易者建立皮货贸易，在鲁珀特河附近形成Charles Fort早期商业地点。地图点使用现有鲁珀特河河口的现代参考位置，非1668堡墙实测。",
+        "source_urls": [
+          "https://www.mhs.mb.ca/docs/mb_history/37/aboriginalsovereignty.shtml"
+        ],
+        "related_event_ids": [
+          "1660S-E095"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1670s-e095",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1670年查理二世授予公司流域声索（伦敦）",
+        "start_year": 1670,
+        "display_through_year": 1670,
+        "display_kind": "local_governance",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "1670年5月2日英王在英格兰授予哈德孙湾公司特许贸易与治理权；王室流域声索并不等同于英国已实控遥远内陆原住民土地。伦敦行政参考点不是每处贸易签约地点。",
+        "summary_zh": "1670年5月2日英王在英格兰授予哈德孙湾公司特许贸易与治理权；王室流域声索并不等同于英国已实控遥远内陆原住民土地。伦敦行政参考点不是每处贸易签约地点。",
+        "source_urls": [
+          "https://canadahistory.ca/sections/documents/empire/HBC%20Charter.html"
+        ],
+        "related_event_ids": [
+          "1670S-E095"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1670s-e003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.39,
+          57.065
+        ]
+      },
+      "properties": {
+        "name": "1670年纳尔逊河口建站失败",
+        "start_year": 1670,
+        "display_through_year": 1670,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "公司在纳尔逊河口建立据点的尝试失败。Parks Canada记1670年公司尝试在Nelson River登陆建站因暴风受阻，实际船只返英，不能绘为1670实际控制炮台。",
+        "summary_zh": "公司在纳尔逊河口建立据点的尝试失败。Parks Canada记1670年公司尝试在Nelson River登陆建站因暴风受阻，实际船只返英，不能绘为1670实际控制炮台。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1670S-E003"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1670s-e039",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.76,
+          51.49
+        ]
+      },
+      "properties": {
+        "name": "1671年鲁珀特河贸易站",
+        "start_year": 1671,
+        "display_through_year": 1671,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "哈德孙湾公司在鲁珀特河建立贸易站。哈德孙湾公司在鲁珀特河附近设贸易站，与克里贸易网络相联系；设站并不转移整个流域的原住民主权。",
+        "summary_zh": "哈德孙湾公司在鲁珀特河附近设贸易站，与克里贸易网络相联系；设站并不转移整个流域的原住民主权。",
+        "source_urls": [
+          "https://opentextbc.ca/preconfederation2e/chapter/8-3-intrusions-during-the-17th-century/"
+        ],
+        "related_event_ids": [
+          "1670S-E039"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1670s-e011",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.641,
+          51.272
+        ]
+      },
+      "properties": {
+        "name": "1673年穆斯河口贸易站",
+        "start_year": 1673,
+        "display_through_year": 1673,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "哈德孙湾公司在克里地区建立穆斯工厂站。1673年建立毛皮贸易点，依靠克里人的交通、知识、食品和皮货交易；不将建立站点画作整个穆斯河流域英国占领。",
+        "summary_zh": "哈德孙湾公司在克里地区建立穆斯工厂站。1673年建立毛皮贸易点，依靠克里人的交通、知识、食品和皮货交易；不将建立站点画作整个穆斯河流域英国占领。",
+        "source_urls": [
+          "https://www.canada.ca/en/parks-canada/news/2017/08/moose_factory_buildingsmoosefactoryontario.html"
+        ],
+        "related_event_ids": [
+          "1670S-E011"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1670s-e060",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.675,
+          52.225
+        ]
+      },
+      "properties": {
+        "name": "1677年奥尔巴尼堡贸易站",
+        "start_year": 1677,
+        "display_through_year": 1677,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "哈德孙湾公司建立奥尔巴尼堡贸易站。英国公司于詹姆斯湾西岸开拓交易站；原住民仍有自治与贸易议价空间。",
+        "summary_zh": "英国公司于詹姆斯湾西岸开拓交易站；原住民仍有自治与贸易议价空间。",
+        "source_urls": [
+          "https://opentextbc.ca/preconfederation2e/chapter/8-3-intrusions-during-the-17th-century/"
+        ],
+        "related_event_ids": [
+          "1670S-E060"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1680s-e094",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.456944,
+          47.295
+        ]
+      },
+      "properties": {
+        "name": "约1680年Temiscamingue法国毛皮贸易竞争",
+        "start_year": 1680,
+        "display_through_year": 1680,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "加拿大公园局记载约1680年法国商人在当今Obadjiwan—Fort Témiscamingue历史遗址西南约30公里的小岛商贸地点设站。坐标采用加拿大官方地名数据库中的现代国家遗址点，特别不是1680年小岛商站原址。",
+        "summary_zh": "加拿大公园局记载约1680年法国商人在当今Obadjiwan—Fort Témiscamingue历史遗址西南约30公里的小岛商贸地点设站。坐标采用加拿大官方地名数据库中的现代国家遗址点，特别不是1680年小岛商站原址。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/qc/obadjiwan-temiscamingue/culture/site"
+        ],
+        "related_event_ids": [
+          "1680S-E094"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1680s-e006",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.45,
+          57.015
+        ]
+      },
+      "properties": {
+        "name": "1684年海斯河York Fort建站",
+        "start_year": 1684,
+        "display_through_year": 1684,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "哈德孙湾公司在海斯河北岸建立York Fort。1684 York Fort设在Hayes河北岸距海湾约八公里处；十七世纪初址与后世York Factory遗址不可直接等同同一建筑墙线。",
+        "summary_zh": "哈德孙湾公司在海斯河北岸建立York Fort。1684 York Fort设在Hayes河北岸距海湾约八公里处；十七世纪初址与后世York Factory遗址不可直接等同同一建筑墙线。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1680S-E006"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1680s-e013",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.641,
+          51.272
+        ]
+      },
+      "properties": {
+        "name": "1686年法军夺取穆斯河贸易站",
+        "start_year": 1686,
+        "display_through_year": 1686,
+        "display_kind": "military_impact",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "德特鲁瓦率法军夺取穆斯堡贸易站。1686年6月20日法军攻下穆斯堡并夺取驻点，随后再向鲁珀特河与奥尔巴尼推进；不是英国贸易站正常连续经营。",
+        "summary_zh": "德特鲁瓦率法军夺取穆斯堡贸易站。1686年6月20日法军攻下穆斯堡并夺取驻点，随后再向鲁珀特河与奥尔巴尼推进；不是英国贸易站正常连续经营。",
+        "source_urls": [
+          "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/pierre-de-troyes-1686/",
+          "https://www.canada.ca/en/parks-canada/news/2017/08/moose_factory_buildingsmoosefactoryontario.html"
+        ],
+        "related_event_ids": [
+          "1680S-E013"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1680s-e014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.75,
+          51.49
+        ]
+      },
+      "properties": {
+        "name": "1686年法军夜袭鲁珀特堡",
+        "start_year": 1686,
+        "display_through_year": 1686,
+        "display_kind": "military_impact",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "法军夜袭夺取并拆毁鲁珀特堡。穆斯堡沦陷后法军前往鲁珀特堡，夺取舰船、物资并拆毁贸易站；具体攻堡日当事记录未定，不能推导准确路线GPS。",
+        "summary_zh": "法军夜袭夺取并拆毁鲁珀特堡。穆斯堡沦陷后法军前往鲁珀特堡，夺取舰船、物资并拆毁贸易站；具体攻堡日当事记录未定，不能推导准确路线GPS。",
+        "source_urls": [
+          "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/pierre-de-troyes-1686/"
+        ],
+        "related_event_ids": [
+          "1680S-E014"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1680s-e015",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.675,
+          52.23
+        ]
+      },
+      "properties": {
+        "name": "1686年法军迫使奥尔巴尼堡投降",
+        "start_year": 1686,
+        "display_through_year": 1686,
+        "display_kind": "military_impact",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "法军围攻奥尔巴尼堡并迫使驻军投降。1686年7月23日开始进攻，26日英方投降；法方改名Fort Sainte-Anne；改变的是具体交易站占有而非整个詹姆斯湾所有权。",
+        "summary_zh": "法军围攻奥尔巴尼堡并迫使驻军投降。1686年7月23日开始进攻，26日英方投降；法方改名Fort Sainte-Anne；改变的是具体交易站占有而非整个詹姆斯湾所有权。",
+        "source_urls": [
+          "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/pierre-de-troyes-1686/"
+        ],
+        "related_event_ids": [
+          "1680S-E015"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1680s-e095",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.1667,
+          58.7667
+        ]
+      },
+      "properties": {
+        "name": "1689年丘吉尔河木制商站建立并被火烧毁",
+        "start_year": 1689,
+        "display_through_year": 1689,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "加拿大公园局记载1689年在丘吉尔河岸建木制贸易站并当年失火。坐标为现代Churchill河口宽域参考，不是1689木制站实测位置，更不能误当1731年后Prince of Wales石堡。",
+        "summary_zh": "加拿大公园局记载1689年在丘吉尔河岸建木制贸易站并当年失火。坐标为现代Churchill河口宽域参考，不是1689木制站实测位置，更不能误当1731年后Prince of Wales石堡。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover2"
+        ],
+        "related_event_ids": [
+          "1680S-E095"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1690s-e094",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.45,
+          57.015
+        ]
+      },
+      "properties": {
+        "name": "1690年起Kelsey与原住民商人内陆接触（海湾起点）",
+        "start_year": 1690,
+        "display_through_year": 1690,
+        "display_kind": "economic_network",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "约1690—1692年哈德孙湾公司雇员Henry Kelsey进入更广泛内陆，与原住民社会建立联系。事件以York Fort现有Atlas行政参考点表示行程商业起点，不是当时到达的确切内陆位置；不允许画未逐日验证的旅程路线。",
+        "summary_zh": "约1690—1692年哈德孙湾公司雇员Henry Kelsey进入更广泛内陆，与原住民社会建立联系。事件以York Fort现有Atlas行政参考点表示行程商业起点，不是当时到达的确切内陆位置；不允许画未逐日验证的旅程路线。",
+        "source_urls": [
+          "https://www.clo-ocol.gc.ca/en/founding-hudsons-bay-company-which-secures-monopoly-fur-trade-hudson-bay-region-english-crown"
+        ],
+        "related_event_ids": [
+          "1690S-E094"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1690s-e021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.45,
+          57.015
+        ]
+      },
+      "properties": {
+        "name": "1694年法方占领York Fort",
+        "start_year": 1694,
+        "display_through_year": 1694,
+        "display_kind": "military_impact",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "法军占领最初York Fort。法国远征军攻陷York Fort，英公司对该处交易站的实控中断，不代表法军取得整个Hudson流域。",
+        "summary_zh": "法军占领最初York Fort。法国远征军攻陷York Fort，英公司对该处交易站的实控中断，不代表法军取得整个Hudson流域。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1690S-E021"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1690s-e030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.45,
+          57.015
+        ]
+      },
+      "properties": {
+        "name": "1696年英方暂时收复York Fort",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "英公司暂时收复York Fort。1696英军收回贸易站，但控制不及周围原住民政治辖地。",
+        "summary_zh": "英公司暂时收复York Fort。1696英军收回贸易站，但控制不及周围原住民政治辖地。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1690S-E030"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-hbc-1690s-e036",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.45,
+          57.015
+        ]
+      },
+      "properties": {
+        "name": "1697年法方再夺York Fort改称Fort Bourbon",
+        "start_year": 1697,
+        "display_through_year": 1697,
+        "display_kind": "military_impact",
+        "label_type": "哈德孙湾公司与原住民商贸／据点战争具名代理点（非实控边界）",
+        "description": "法军重新夺取York Fort改名Fort Bourbon。1697法国指挥Pierre Le Moyne d’Iberville重新攻占并命名Fort Bourbon，该站直至1713前属法国控制，不能让年末英方继续持有。",
+        "summary_zh": "法军重新夺取York Fort改名Fort Bourbon。1697法国指挥Pierre Le Moyne d’Iberville重新攻占并命名Fort Bourbon，该站直至1713前属法国控制，不能让年末英方继续持有。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+        ],
+        "related_event_ids": [
+          "1690S-E036"
+        ],
+        "related_story_ids": [
+          "E6-T10-HBC"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published historical Atlas modern reference coordinate as [longitude,latitude], shown using a fixed screen-pixel marker, not a measurable circle, control zone or old fort survey.",
+        "geometry_precision": "named_modern_river_estuary_or_site_reference_not_17th_century_survey",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,

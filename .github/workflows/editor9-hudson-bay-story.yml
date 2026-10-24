@@ -1,0 +1,57 @@
+name: Editor9 HBC Indigenous Fur Trade and English-French Fort Control QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/atlas-1660-1669.json'
+      - 'data/atlas-1670-1679.json'
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/test_editor9_hudson_bay_story.js'
+      - 'scripts/browser_editor9_hudson_bay_story.py'
+      - '.github/workflows/editor9-hudson-bay-story.yml'
+      - 'app.js'
+      - 'js/history-stories.js'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/atlas-1660-1669.json'
+      - 'data/atlas-1670-1679.json'
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/test_editor9_hudson_bay_story.js'
+      - 'scripts/browser_editor9_hudson_bay_story.py'
+      - 'app.js'
+      - 'js/history-stories.js'
+jobs:
+  hbc-fur-nations-and-fort-chronology:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Hudson fur/native political autonomy and inherited Tudor story map contract
+        run: |
+          node --check scripts/test_editor9_hudson_bay_story.js
+          node scripts/test_editor9_hudson_bay_story.js
+          node scripts/test_editor9_carolina_story.js
+          node scripts/test_editor9_new_york_story.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_editor7_17c_regional_studies.js
+          node scripts/test_editor6_17c_batch01.js
+          node scripts/test_editor6_17c_georeference_r02.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - run: pip install selenium
+      - name: Desktop Chrome HBC 1668-1697 history, 1686 dossier and 1670 return
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor9_hudson_bay_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor9-hbc-desktop-browser-evidence
+          path: browser-smoke-results/editor9-hbc-*.png

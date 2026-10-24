@@ -5,12 +5,12 @@ const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.
 const g=json('data/seventeenth-century-regional-studies-1600-1699.geojson');
 assert.equal(g.type,'FeatureCollection');
 assert.equal(g.metadata.schema,'atlas-17c-regional-studies-v1');
-assert.equal(g.features.length,23);
-assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,17);
+assert.equal(g.features.length,24);
+assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,18);
 assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,6);
 assert.equal(g.metadata.total_confirmed_historical_control_polygons,0);
 const existing=json('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
-assert.equal(existing.features.length,114,'17C site-level layer includes Jamaica and earlier 17C cues');
+assert.equal(existing.features.length,130,'17C site-level layer includes Jamaica and earlier 17C cues');
 const ids=new Set,evs=new Map();
 for(let y=1600;y<=1690;y+=10){
  let atlas=json('data/atlas-'+y+'-'+(y+9)+'.json');
@@ -68,4 +68,4 @@ for(const x of ['function renderSeventeenthRegionalStudies(){','groups.seventeen
 assert(app.includes("groups.seventeenthStudies.clearLayers();"),'switching back to 16C must erase later ranges');
 assert(app.includes("if(map.getZoom()<5)"),'world zoom must preserve small sourced research area visibility without inventing metric boundaries');
 assert(app.includes("atlas-17c-regional-zoom-hint"),'desktop global view must use dashed, fixed-screen regional reference cues');
-console.log('PASS: 17 sourced dashed reference envelopes, 6 zero-waypoint relation lines, 114 place/policy cues; no invented trade polygon');
+console.log('PASS: 18 sourced dashed reference envelopes, 6 zero-waypoint relation lines, 130 place/policy cues; no invented trade polygon');

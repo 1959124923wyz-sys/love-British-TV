@@ -52,7 +52,7 @@ assert(story.sources.some(x=>x.url.includes('findingaids.nysed.gov')));
 assert(story.sources.some(x=>x.url.includes('wams.nyhistory.org')));
 const pts=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 const regions=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(pts.features.length,114);assert.equal(regions.features.length,23);
+assert.equal(pts.features.length,130);assert.equal(regions.features.length,24);
 const cues=pts.features.filter(x=>x.properties.related_story_ids?.includes('E6-T09-NY'));
 assert.equal(cues.length,13);
 for(const f of cues){const e=all.get(f.properties.related_event_ids[0]);assert(e);
