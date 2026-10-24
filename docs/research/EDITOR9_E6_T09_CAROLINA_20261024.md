@@ -8,7 +8,7 @@ Stage A: 独立专题与机构资料来源；Stage B: 文章/事件、地图辅�
 - 1669年《卡罗来纳基本宪制》为领主社会设计文本，多次修订且从未完全执行。其授权奴役与地产权条款不等于已经在每处原住民土地被实施。
 - 1670年Albemarle Point与1680年Oyster Point为两个不同城址。早期非洲裔抵达及奴役不可写成1690年代才突然开始。
 - 1674年Westo贸易与1680年Westo战争：Westo作为政治主体有自主决定；英殖民商人供应武器，参与跨部族掠俘与奴役贸易；不得把Westo活动/领土画成英国实控；其村镇精确点缺考古支撑。
-- 1675年Cusabo签订地权契据不代表所有Cusabo居民自愿出让全部祖居地。文本确认某宗交易行为，但不等同逐块实测领土和实际交付。
+- 1675/1676年Kussoe（较广义Cusabo沿岸社群之一）签订地权契据（旧历1675年3月10日，按1月1日开年的1676年3月10日）不代表所有Cusabo居民自愿出让全部祖居地。文本确认某宗交易行为，但不等同逐块实测领土和实际交付。
 - 1677—1678年Albemarle Culpeper起事是英殖民内部贸易税法与领主政治的争端，不属于原住民主权恢复。
 - 1684年Port Royal的苏格兰Stuart's Town与1686年西班牙毁灭为17世纪事实；1712年Beaufort不是1680年代已建立的殖民都市。
 - 1690年奴役法出台但迅速遭领主否决，1696年另制定新法；不要把1690法的所有条款写成1690—1696年无间断适用。University of New Brunswick在线法目录不提供全部1690/1696原文，不能标记“已逐页原件核对”。
@@ -38,3 +38,5 @@ SC19 南卡州历史学会 1670船队与新城 https://schistory.org/april-1670/
 SC20 北卡自然资源厅 George Durant与Yeopim 1661/1662土地契据 https://www.dncr.nc.gov/blog/2023/11/30/george-durant-1632-1694-3
 
 Source depth: public official/academic historical pages and Yale edited constitution transcription read; NOT archival full separate original 1675 Cusabo conveyance nor full 1690/1696 legal folios; external web links dated and separable from land geometry.
+## 2026-10-24资料深化与源码归档
+已保存15节正文、22项出版来源、25处真实事件语义链接、9条新增Atlas历史记录、15处固定像素辅助点和1处1680年查尔斯敦新旧城址纯教学虚线范围。Cusabo/Kussoe契据采用历史双年份：**原始旧式文书1675-03-10，按现代1月1日开年为1676-03-10**，故年份滑块事件使用1676年。1670年旧城址、1680年牡蛎角新城址禁止合并为一处点。1640年代/Westo政治主体不当作英国军队。未证实的17世纪领地仍不画实色多边形。
