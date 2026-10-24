@@ -5,14 +5,14 @@ const index=load('data/stories/serial/index.json'),topic=index.topics.find(t=>t.
 assert(topic&&topic.parent_topic_id==='E6-T09'&&topic.status==='published'&&topic.publication_review==='approved');
 assert(index.topics.find(t=>t.id==='E6-T09')?.status==='research_only','parent with unrelated research is not fully published');
 const story=load(topic.article_file);assert.equal(story.schema,'atlas-major-story-v1');assert.equal(story.id,'E6-T09-CAR');
-assert.equal(story.sections.length,15);assert.equal(story.sources.length,20);assert.equal(story.topic_source_claims.length,15);
+assert.equal(story.sections.length,15);assert.equal(story.sources.length,22);assert.equal(story.topic_source_claims.length,15);
 assert(story.start_year===1661&&story.end_year===1699&&story.historical_end_year===null);
 assert(story.lead.length>=120&&story.sections.flatMap(s=>s.paragraphs).join('').length>4500);
 const all=new Map(),decades=new Map();for(let d=1600;d<=1690;d+=10){
  let a=load('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(a.colonial_polygons,[]);
  decades.set(d,a);for(const e of a.events){assert(!all.has(e.id),'duplicate '+e.id);all.set(e.id,e);}
 }
-const sourceKeys=new Set(story.sources.map(s=>s.id));assert.equal(sourceKeys.size,20);
+const sourceKeys=new Set(story.sources.map(s=>s.id));assert.equal(sourceKeys.size,22);
 const links=[];let linkedSections=new Set;
 for(const sec of story.sections){
  assert(/^[一二三四五六七八九十]+、/.test(sec.heading));assert(sec.paragraphs.length>=3);
@@ -28,7 +28,7 @@ for(const sec of story.sections){
   }
  }
 }
-assert.equal(linkedSections.size,15);assert.equal(links.length,24);
+assert.equal(linkedSections.size,15);assert.equal(links.length,25);
 assert.deepEqual(new Set(topic.event_ids),new Set(links));
 for(const id of ['1660S-E093','1660S-E094','1670S-E092','1670S-E093','1670S-E094','1680S-E092','1680S-E093','1690S-E092','1690S-E093']){
  const e=all.get(id),d=decades.get(Math.floor(e.year/10)*10);
