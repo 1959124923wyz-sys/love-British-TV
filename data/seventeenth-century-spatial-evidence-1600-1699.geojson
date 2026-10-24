@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 86,
+    "feature_count": 99,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -24,7 +24,8 @@
     "source_only_1688": "Documented 1688 Barbados act is independently sourced but lacks canonical Atlas event; frontend explicitly permits e.source_only=true and forbids invented relation IDs.",
     "new_england_wars_20261023": "Ten non-sovereign event-linked Pequot/Metacom/captivity/restitution cues; exact event reference coords, NOT original boundary lines.",
     "virginia_powhatan_story_20261023": "12 year-specific historical war/legal/locality cues tied to E6-T05; published atlas representative coordinates, NOT treaty boundary / native area / colonial actual control. No vessel GPS route.",
-    "jamaica_t08_20261023": "Added 13 year-scoped evidence cues, explicitly source-attested modern reference points; Nanny Town built ~1723 and 1739 Maroon treaties excluded. No island-wide land, Maroon area or slave-law implemented area polygons."
+    "jamaica_t08_20261023": "Added 13 year-scoped evidence cues, explicitly source-attested modern reference points; Nanny Town built ~1723 and 1739 Maroon treaties excluded. No island-wide land, Maroon area or slave-law implemented area polygons.",
+    "new_york_t09_20261024": "13 year-specific published atlas-linked reading cues for Dutch Indigenous violence, African freedom struggles, royal charter, Staten Island Native deed, English-Dutch transfers and Leisler; no historic boundary inferred"
   },
   "features": [
     {
@@ -3517,6 +3518,491 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Published atlas representative event coordinates copied as GeoJSON [lon,lat]; visually fixed screen-pixel dashed cue only, not a measured geographic extent or actual occupation",
         "geometry_precision": "published_atlas_named_locality_or_administrative_reference_not_surveyed_area",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1640s-e090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.055,
+          40.713
+        ]
+      },
+      "properties": {
+        "name": "1643年帕沃尼亚蒙西难民遭荷兰军袭击",
+        "start_year": 1643,
+        "display_through_year": 1643,
+        "display_kind": "military_impact",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "荷兰殖民当局1643年2月25日夜袭帕沃尼亚的蒙西难民并造成大量平民死亡；泽西城现代地理参考点不是17世纪村寨实测坐标。",
+        "summary_zh": "荷兰殖民当局1643年2月25日夜袭帕沃尼亚的蒙西难民并造成大量平民死亡；泽西城现代地理参考点不是17世纪村寨实测坐标。",
+        "source_urls": [
+          "https://www.nationaalarchief.nl/en/research/400-years-of-dutch-american-stories/mass-murder-on-manhattan"
+        ],
+        "related_event_ids": [
+          "1640S-E090"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1640s-e091",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981,
+          40.716
+        ]
+      },
+      "properties": {
+        "name": "1643年科利尔斯角蒙西难民遭荷兰移民袭击",
+        "start_year": 1643,
+        "display_through_year": 1643,
+        "display_kind": "military_impact",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "1643年2月25日夜，荷兰殖民武装人员袭击科利尔斯角的蒙西难民；现代曼哈顿下东城参考点不是实测历史战场。",
+        "summary_zh": "1643年2月25日夜，荷兰殖民武装人员袭击科利尔斯角的蒙西难民；现代曼哈顿下东城参考点不是实测历史战场。",
+        "source_urls": [
+          "https://www.nationaalarchief.nl/en/research/400-years-of-dutch-american-stories/mass-murder-on-manhattan"
+        ],
+        "related_event_ids": [
+          "1640S-E091"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1640s-e092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1644年非洲裔居民争取附条件自由与耕地",
+        "start_year": 1644,
+        "display_through_year": 1644,
+        "display_kind": "local_governance",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "1644年2月25日理事会准许11名非洲裔男子及其妻子取得附交付年贡条件的自由及耕作土地，子女仍可能被奴役；现代城中心坐标不是地产边界。",
+        "summary_zh": "1644年2月25日理事会准许11名非洲裔男子及其妻子取得附交付年贡条件的自由及耕作土地，子女仍可能被奴役；现代城中心坐标不是地产边界。",
+        "source_urls": [
+          "https://encyclopedia.nahc-mapping.org/document/dutch-colonial-council-minutes-1-february-3-march-1644"
+        ],
+        "related_event_ids": [
+          "1640S-E092"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1660s-e091",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1664年Mayken van Angola取得自由文书",
+        "start_year": 1664,
+        "display_through_year": 1664,
+        "display_kind": "local_governance",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "1664年4月17日Mayken长期诉愿后取得无条件释放文书；坐标为荷兰殖民行政中心参考，非其住址。",
+        "summary_zh": "1664年4月17日Mayken长期诉愿后取得无条件释放文书；坐标为荷兰殖民行政中心参考，非其住址。",
+        "source_urls": [
+          "https://wams.nyhistory.org/primary-source/fighting-for-freedom-in-new-amsterdam"
+        ],
+        "related_event_ids": [
+          "1660S-E091"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1660s-e092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1664年约克公爵特许（英国法律声索）",
+        "start_year": 1664,
+        "display_through_year": 1664,
+        "display_kind": "local_governance",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "1664年3月12日王室特许将殖民声索与军事授权授予约克公爵；不代表已实控声索的广大原住民土地。",
+        "summary_zh": "1664年3月12日王室特许将殖民声索与军事授权授予约克公爵；不代表已实控声索的广大原住民土地。",
+        "source_urls": [
+          "https://findingaids.nysed.gov/do/cd9799cc-2348-557d-b7da-e79010f4d2e9"
+        ],
+        "related_event_ids": [
+          "1660S-E092"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1660s-e023",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1664年英军接收新阿姆斯特丹殖民城市",
+        "start_year": 1664,
+        "display_through_year": 1664,
+        "display_kind": "military_impact",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "英军夺取荷兰新阿姆斯特丹。1664-09-08荷兰驻城向Richard Nicoll指挥英军投降，新阿姆斯特丹更名纽约，城市及法权转换发生，但不意味着远离殖民据点的所有印第安土地自动受英控制。",
+        "summary_zh": "英军夺取荷兰新阿姆斯特丹。1664-09-08荷兰驻城向Richard Nicoll指挥英军投降，新阿姆斯特丹更名纽约，城市及法权转换发生，但不意味着远离殖民据点的所有印第安土地自动受英控制。",
+        "source_urls": [
+          "https://history.nycourts.gov/legal-history-by-era/new-york-under-dutch-rule/",
+          "https://history.nycourts.gov/figure/council-new-netherland/"
+        ],
+        "related_event_ids": [
+          "1660S-E023"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1660s-e027",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1665年《约克公爵法》地方行政参考",
+        "start_year": 1665,
+        "display_through_year": 1665,
+        "display_kind": "local_governance",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "纽约颁布《约克公爵法》。英属纽约制定法院和地方法体系并影响奴隶地位；法典实施范围有扩展历程，不能假定纽约以外每块被声索土地同时实行。",
+        "summary_zh": "纽约颁布《约克公爵法》。英属纽约制定法院和地方法体系并影响奴隶地位；法典实施范围有扩展历程，不能假定纽约以外每块被声索土地同时实行。",
+        "source_urls": [
+          "https://history.nycourts.gov/legal-history-by-era/colonial-new-york-under-british-rule/",
+          "https://history.nycourts.gov/product/2021-society-calendar-race-slavery-nys-courts/"
+        ],
+        "related_event_ids": [
+          "1660S-E027"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1670s-e091",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.15,
+          40.581
+        ]
+      },
+      "properties": {
+        "name": "1670年斯塔滕岛莱纳佩土地契据",
+        "start_year": 1670,
+        "display_through_year": 1670,
+        "display_kind": "land_dispossession",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "1670年4月13日契据有原文转录，现代斯塔滕岛坐标不表示签署现场或逐块土地实际交付。",
+        "summary_zh": "1670年4月13日契据有原文转录，现代斯塔滕岛坐标不表示签署现场或逐块土地实际交付。",
+        "source_urls": [
+          "https://wams.nyhistory.org/primary-source/selling-staten-island"
+        ],
+        "related_event_ids": [
+          "1670S-E091"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1670s-e010",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1673年荷兰舰队夺回纽约城",
+        "start_year": 1673,
+        "display_through_year": 1673,
+        "display_kind": "military_impact",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "荷兰人重夺新阿姆斯特丹改名New Orange。荷兰海军在英总督外出时接受投降并恢复荷兰法制，英方1664据点控制发生实际中断。",
+        "summary_zh": "荷兰人重夺新阿姆斯特丹改名New Orange。荷兰海军在英总督外出时接受投降并恢复荷兰法制，英方1664据点控制发生实际中断。",
+        "source_urls": [
+          "https://history.nycourts.gov/legal-history-by-era/new-york-under-dutch-rule/",
+          "https://history.nycourts.gov/figure/anthony-colve/"
+        ],
+        "related_event_ids": [
+          "1670S-E010"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1670s-e014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1674年英荷殖民当局实际交接",
+        "start_year": 1674,
+        "display_through_year": 1674,
+        "display_kind": "local_governance",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "荷兰当局实际移交纽约给英新总督。1674 Westminster条约奠定移交法理，Anthony Colve实际在11月向Edmund Andros交接，区分条约批准与当地撤军。",
+        "summary_zh": "荷兰当局实际移交纽约给英新总督。1674 Westminster条约奠定移交法理，Anthony Colve实际在11月向Edmund Andros交接，区分条约批准与当地撤军。",
+        "source_urls": [
+          "https://history.nycourts.gov/figure/anthony-colve/",
+          "https://history.nycourts.gov/legal-history-by-era/new-york-under-dutch-rule/"
+        ],
+        "related_event_ids": [
+          "1670S-E014"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1680s-e091",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1689年莱斯勒民兵夺取詹姆斯堡",
+        "start_year": 1689,
+        "display_through_year": 1689,
+        "display_kind": "military_impact",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "1689年5月31日纽约殖民民兵占据詹姆斯堡；为殖民政权内部争夺，不是原住民地权转移或新征服。",
+        "summary_zh": "1689年5月31日纽约殖民民兵占据詹姆斯堡；为殖民政权内部争夺，不是原住民地权转移或新征服。",
+        "source_urls": [
+          "https://history.nycourts.gov/case/jacob-leisler-treason-trial/"
+        ],
+        "related_event_ids": [
+          "1680S-E091"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1680s-e005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1683年纽约地方议会",
+        "start_year": 1683,
+        "display_through_year": 1683,
+        "display_kind": "local_governance",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "纽约召开地方议会并制定权利宪章。约克公爵治下第一届代表议会运作；其制度涉及殖民地白人业主代表，不可借此推断原住民与被奴役者平等参与。",
+        "summary_zh": "纽约召开地方议会并制定权利宪章。约克公爵治下第一届代表议会运作；其制度涉及殖民地白人业主代表，不可借此推断原住民与被奴役者平等参与。",
+        "source_urls": [
+          "https://history.nycourts.gov/legal-history-by-era/colonial-new-york-under-british-rule/"
+        ],
+        "related_event_ids": [
+          "1680S-E005"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor9-ny-1690s-e010",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "1691年新殖民省级议会与司法",
+        "start_year": 1691,
+        "display_through_year": 1691,
+        "display_kind": "local_governance",
+        "label_type": "纽约—新尼德兰事件／土地／政治参考点 · 非实测领土",
+        "description": "纽约恢复议会与地方权利法制。王室委任总督重建议会和省级司法，继续与原住民土地权利及奴隶制度并存。",
+        "summary_zh": "纽约恢复议会与地方权利法制。王室委任总督重建议会和省级司法，继续与原住民土地权利及奴隶制度并存。",
+        "source_urls": [
+          "https://history.nycourts.gov/legal-history-by-era/colonial-new-york-under-british-rule/"
+        ],
+        "related_event_ids": [
+          "1690S-E010"
+        ],
+        "related_story_ids": [
+          "E6-T09-NY"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Exact published atlas modern reference coordinate [lon,lat] for a named historical settlement, modern locality or administrative centre. This is a fixed-pixel visual cue, not a measured historical area.",
+        "geometry_precision": "modern_named_locality_or_administrative_centre_reference_not_seventeenth_century_survey",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
