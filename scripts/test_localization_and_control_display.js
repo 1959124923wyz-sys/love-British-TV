@@ -40,4 +40,16 @@ assert.equal(hailes,undefined,'Hailes must not be mapped as an English year-end 
 const dundee=garrison.features.find(f=>f.properties.stable_id==='dundee-english-town-late-1547');
 assert.equal(dundee.properties.year_end_start,1547);
 assert.equal(dundee.properties.year_end_stop,1547);
+// Guard against conflating the separate medieval Corn Fort SM4577 with the English artillery Eyemouth Fort SM3190.
+const eyemouthPoint=garrison.features.find(f=>f.properties.stable_id==='eyemouth-fort-English-1547-1550');
+assert(eyemouthPoint&&eyemouthPoint.properties.source_ids.includes('SC-HES-EYEMOUTH-SM3190'));
+for(const p of ['data/war-control-vicinity-1540-1549.geojson','data/war-occupied-zones-1540-1549.geojson']){
+ const layer=JSON.parse(text(p));
+ const fort=layer.features.find(f=>f.id==='eyemouth-english-fort-schematic-envelope');
+ assert(fort&&fort.properties.source_ids.includes('SC-HES-EYEMOUTH-SM3190'),p+' must cite correct HES monument');
+ assert(!fort.properties.source_ids.includes('SC-HES-EYEMOUTH-FORT-SM4577'),p+' accidentally cites distinct older Corn Fort');
+ assert.equal(fort.geometry.type,'Polygon');
+ assert.equal(fort.properties.historical_boundary_confirmed,false,'source correction cannot manufacture surveyed 1547 extent');
+ assert.equal(fort.properties.area_sqkm,null,'illustrative visual frame cannot be measured');
+}
 console.log('PASS: single map hover, Chinese titles/dates, documented 1548 Hailes Scots recapture and 1547 Dundee occupation');
