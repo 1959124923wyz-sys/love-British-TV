@@ -33,7 +33,7 @@ assert.equal(events.get('1660S-E045').year,1665);
 assert.equal(events.get('1660S-E045').lat,5.2025,'Kormantin modern fort site corrected');
 assert.equal(events.get('1660S-E045').lng,-1.090278);
 const g=read('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
-assert.equal(g.features.length,130);
+assert.equal(g.features.length,150);
 for(const id of ['rac-cormantin-fort-dutch-capture-1665','rac-cape-coast-castle-1665']){
  const f=g.features.find(x=>x.id===id);
  assert(f&&f.geometry.type==='Point'&&f.properties.source_urls.length>0);
