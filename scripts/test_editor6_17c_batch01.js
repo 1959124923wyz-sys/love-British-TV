@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const original=[13,24,22,18,18,24,42,38,27,42];
 const baseline=[18,32,27,21,29,38,47,67,36,62];
-const expanded=[20,35,28,22,33,43,57,79,46,89];
+const expanded=[20,35,28,22,33,43,57,79,47,91];
 const JamaicaEvents={1650:['1650S-E090'],1660:['1660S-E090'],1670:['1670S-E090'],1680:['1680S-E090'],1690:['1690S-E090','1690S-E091']};
 const originalSources=298;
 const legacy=load('data/stories/serial/chronology-preview-1600-1699.json');
@@ -72,10 +72,10 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
  for(const id of JamaicaEvents[d]||[])assert(numbering.has(Number(id.slice(-3))),'missing editor7 sourced Jamaica addition '+id);
  newDecades++;total+=data.events.length;sources+=data.sources.length;
 }
-assert.equal(newDecades,10);assert.equal(total,452);assert.equal(added,184);
-assert.equal(points,451);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
-assert.equal(refs,403,'R02 219 + R03 base plus six additional evidence-linked Jamaica events');
-assert.equal(sources,490);assert.equal(sources-originalSources,192);
+assert.equal(newDecades,10);assert.equal(total,455);assert.equal(added,187);
+assert.equal(points,454);assert.equal(olderNamed,48);assert.equal(olderProxy,219);
+assert.equal(refs,406,'R02 219 + R03 base plus six additional evidence-linked Jamaica events');
+assert.equal(sources,494);assert.equal(sources-originalSources,196);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 assert(app.includes("fetch('data/atlas-'+d+'-'+(d+9)+'.json'"));
 assert(app.includes('existingGlencoe'));
