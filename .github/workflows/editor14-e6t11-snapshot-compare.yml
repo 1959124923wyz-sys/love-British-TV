@@ -1,0 +1,40 @@
+name: E6-T11 verify official 2020 voyage database against 2019
+on:
+  push:
+    branches:
+      - 'research/editor14-e6t11-*'
+    paths:
+      - 'scripts/research_e6t11_compare_editions.py'
+      - '.github/workflows/editor14-e6t11-snapshot-compare.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare-original-snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get SPSS reader
+        run: python3 -m pip install pyreadstat
+      - name: Fetch official dataset snapshots and compare voyage IDs, codes and population
+        run: |
+          python3 - <<'PY'
+          from urllib.request import Request,urlopen
+          from pathlib import Path
+          for name in ['tastdb-exp-2019.csv','tastdb-exp-2020.sav']:
+              url='https://legacy.slavevoyages.org/documents/download/'+name
+              with urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0 ResearchAudit/1.0'}),timeout=90) as resp:
+                  data=resp.read(90_000_000)
+              if len(data)<2_000_000 or data[:256].lstrip().lower().startswith((b'<html',b'<!doctype')):
+                  raise RuntimeError('Official source fetch failed: '+name)
+              Path(name).write_bytes(data)
+              print('Official',name,'bytes',len(data))
+          PY
+          python3 scripts/research_e6t11_compare_editions.py --old tastdb-exp-2019.csv --new tastdb-exp-2020.sav --out output/e6-t11-official-2019-2020-compare.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: e6t11-official-2019-2020-comparison
+          path: output/e6-t11-official-2019-2020-compare.json
+          retention-days: 20
