@@ -708,7 +708,7 @@
         "start_year": 1600,
         "end_year": 1699
       },
-      "continuation_note": "现已核得1699 Albion Frigate具名船上起义（SlaveVoyages 20173）及1688 Calabar未具船名沿岸解救案例；仍缺全17世纪可审核完备航次/起义名册，母题research_only。1601—1700模型含1700不能冒充1600—1699精确人数。",
+      "continuation_note": "已新增Gambia James Fort 1681、America 1693、Adventure 1696、Albion 1699及Calabar 1688；原始T70文卷、抵抗船只穷尽清单及与1700年统计界限仍未完成，父级E6-T11保持research_only。",
       "status": "published",
       "publication_review": "approved",
       "article_file": "data/stories/serial/e6-t11-atlantic-slave-voyages-quant-resistance.json",
@@ -730,15 +730,19 @@
         "1690S-E057",
         "1690S-E131",
         "1680S-E122",
-        "1690S-E132"
+        "1690S-E132",
+        "1680S-E123",
+        "1690S-E133",
+        "1690S-E134"
       ],
       "segments": [],
       "predecessor_ids": [],
       "successor_ids": [],
       "source_register_path": "docs/research/EDITOR12_E6_T11_ATLANTIC_SLAVERY_QUANT_20261025.md",
       "quantitative_data_path": "data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json",
-      "source_register_state": "SlaveVoyages transatlantic 25-year aggregate + 1699 original voyage ID20173 with resistance coding and IMP deaths + 1688 Calabar book/secondary derived case; no 17c vessel-level census.",
-      "publication_note": "18章节、23来源、21正文事件链接、7项E6-T11新增地图事件（本轮2个）；已核一具名1699船上起义和1688未具名非洲沿岸攻击。600/250/350的350为IMP航程死亡不得说起义死亡；没有虚构船迹或英国在非洲的领土面。"
+      "source_register_state": "1681 James Fort Eltis scholarly primary-letter quotation & UNESCO location, 1693 America/1696 Adventure SlaveVoyages-derived voyage IDs, 1699 Albion official voyage with secondary Taylor conflict casualties; 1688 Calabar shore rescue separate.",
+      "publication_note": "18章，28来源，24条正文事件互动，10个E6-T11新增年度地图事件与10个非实测GIS标点；新增Gambia James Fort 1681、America 1693、Adventure 1696。研究候选Charles/Dragon/Cothrington未正式绘图。死亡、不明去向与分期估算口径分隔；无虚构船迹或英国在非洲地面统治面积。",
+      "resistance_ledger_path": "data/research/e6-t11-resistance-case-ledger-1600-1699.json"
     },
     {
       "id": "E6-T12",

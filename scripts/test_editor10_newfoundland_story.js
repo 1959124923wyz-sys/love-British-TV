@@ -48,7 +48,7 @@ assert(story.sections.find(s=>s.id==='act-1699').paragraphs.join('').includes('1
 assert(story.sections.find(s=>s.id==='beothuk-contact-1612').paragraphs.join('').includes('贝奥图克'));
 const points=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson'),
  areas=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(points.metadata.feature_count,188);assert.equal(areas.metadata.feature_count,32);
+assert.equal(points.metadata.feature_count,191);assert.equal(areas.metadata.feature_count,32);
 const cues=points.features.filter(f=>f.properties.related_story_ids?.includes(story.id));
 assert.equal(cues.length,14);
 for(const f of cues){const e=events.get(f.properties.related_event_ids[0]);assert(e);
