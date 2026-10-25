@@ -7,9 +7,9 @@ assert(topic?.parent_topic_id==='E6-T11'&&topic.status==='published'&&topic.publ
 assert(registry.topics.find(t=>t.id==='E6-T11').status==='research_only','individual undocumented shipboard revolt cases not automatically published');
 const article=read(topic.article_file);
 assert(article.id===topic.id&&article.schema==='atlas-major-story-v1'&&article.sections.length===18);
-assert(article.sources.length===18&&article.topic_source_claims.length===18);
+assert(article.sources.length===20&&article.topic_source_claims.length===18);
 assert(article.sections.flatMap(s=>s.paragraphs).join('').length>5800,'historical narrative must be substantive');
-const srcKeys=new Set(article.sources.map(s=>s.id));assert(srcKeys.size===18);
+const srcKeys=new Set(article.sources.map(s=>s.id));assert(srcKeys.size===20);
 assert(article.sources.every(s=>s.url.startsWith('https://')&&s.access));
 const stats=article.quantitative_summary,a=quantitative.primary_estimate;
 assert.equal(stats.rows.length,4);
@@ -59,7 +59,13 @@ for(const p of section.paragraphs){
 assert.equal((p.match(/\[\[/g)||[]).length,(p.match(/\]\]/g)||[]).length);
 for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|([^\]\n]{4,90})\]\]/g)){assert(evs.has(m[1]),'missing historical atlas target '+m[1]);markup.push(m[1]);}
 }}
-assert.equal(markup.length,18);
+assert.equal(markup.length,19);
+assert(markup.includes('1610S-E024'),'1619 White Lion and Treasurer maritime seizure links existing documented Virginia atlas event');
+assert(article.sections.find(x=>x.id==='early').source_keys.includes('SV19')&&article.sections.find(x=>x.id==='early').source_keys.includes('SV20'));
+assert(quantitative.privateering_case_1619.seized_population_precise===null&&quantitative.privateering_case_1619.existing_atlas_event_id==='1610S-E024');
+assert(quantitative.privateering_case_1619.measurement_warning.includes('1601-1625'));
+assert(quantitative.privateering_case_1619.ethical_warning.includes('not a humanitarian rescue'));
+
 assert.deepEqual(new Set(markup),new Set(topic.event_ids));
 assert(article.sections.find(x=>x.id==='rac-count').paragraphs.join('').includes('每年约二十三次'));
 assert(article.sections.find(x=>x.id==='cohort-1680').paragraphs.join('').includes('279'));
