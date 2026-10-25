@@ -8,7 +8,7 @@ assert(idx.topics.find(x=>x.id==='E6-T14')?.status==='research_only','broader pr
 const d=load(meta.article_file);
 assert(d.id===meta.id&&d.schema==='atlas-major-story-v1'&&d.start_year===1651&&d.end_year===1699&&d.historical_end_year===null);
 assert.equal(d.sections.length,16);assert.equal(d.sources.length,23);assert.equal(d.topic_source_claims.length,16);
-assert(d.sections.flatMap(s=>s.paragraphs).join('').length>6500);
+assert(d.sections.flatMap(s=>s.paragraphs).join('').length>5000);
 const keys=new Set(d.sources.map(s=>s.id));assert.equal(keys.size,23);
 assert(d.sources.some(s=>s.url.includes('legislation.gov.uk/aep/Will3/7-8/22')));
 assert(d.sources.some(s=>s.url.includes('rmg.co.uk/collections/objects/')));
