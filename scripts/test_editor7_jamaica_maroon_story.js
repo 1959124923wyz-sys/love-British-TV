@@ -40,7 +40,7 @@ const nlj=story.sources.find(s=>s.url.includes('nlj.gov.jm/history-notes/'));ass
 assert(story.sources.some(s=>s.url.endsWith('/laws/jamaica-1699')&&s.access.includes('1716')));
 assert(story.sections.find(s=>s.id==='war-1699').paragraphs.join(' ').includes('1723年'));
 const regions=load('data/seventeenth-century-regional-studies-1600-1699.geojson'),pts=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
-assert.equal(regions.features.length,29);assert.equal(pts.features.length,164);
+assert.equal(regions.features.length,30);assert.equal(pts.features.length,173);
 const mine=pts.features.filter(x=>x.properties.related_story_ids?.includes('E6-T08'));
 assert.equal(mine.length,13);
 for(const f of mine){const e=all.get(f.properties.related_event_ids[0]);assert(e);
