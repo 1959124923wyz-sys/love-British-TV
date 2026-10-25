@@ -1,0 +1,764 @@
+{
+  "schema": "e6t11-official-2019-vs-2020-snapshot-v1",
+  "dataset_urls": {
+    "2019": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+    "2020": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2020.sav"
+  },
+  "source_sha256": {
+    "2019": "3fbad142356e30a4662c7f455321d19b70d79770cfa0397278894bb9ae36096f",
+    "2020": "39585586cb7b17cdd38cd20a1ac77fea109f7855f5ae76df19a0708a65e5bc21"
+  },
+  "source_2020_metadata": {
+    "rows": 36108,
+    "columns": 274,
+    "metadata": null
+  },
+  "scope": {
+    "year": "YEARAM 1600..1699 inclusive, possibly imputed",
+    "british_flag": "NATINIMP 7 (imputed, not every 17th-century British voyage)",
+    "resistance": "nonblank RESISTANCE, code 1=onboard insurrection; 2=ship attacked from shore; 3=ship boat attacked from shore",
+    "no_code": "Unknown, NOT proof of no resistance"
+  },
+  "edition_2019": {
+    "rows": 3371,
+    "british_imputed_flag_rows": 1037,
+    "all_resistance_coded": {
+      "1": 20,
+      "2": 2,
+      "3": 2
+    },
+    "british_resistance_coded": {
+      "1": 12,
+      "2": 2
+    }
+  },
+  "edition_2020": {
+    "rows": 3371,
+    "british_imputed_flag_rows": 1037,
+    "all_resistance_coded": {
+      "1": 20,
+      "2": 2,
+      "3": 2
+    },
+    "british_resistance_coded": {
+      "1": 12,
+      "2": 2
+    }
+  },
+  "all_17c_rows_diagnostic": {
+    "changed_fields_frequency": {
+      "SOURCEA": 36
+    },
+    "shorter_exact_prefix_strings": 36,
+    "old_id_count": 3371,
+    "new_id_count": 3371,
+    "added_voyage_ids": [],
+    "removed_voyage_ids": [],
+    "shared_voyage_ids": 3371,
+    "changed_shared_rows_any_extracted_field": 36,
+    "changed_voyages_preview": [
+      {
+        "id": 26446,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "Binder:GAA,NA, 3212, 335-6, 365-7, 72.09.22. And 3213, p. 25",
+            "2020": "Binder:GAA,NA, 3212, 335-6, 365-7, 72.09.22. And 3"
+          }
+        }
+      },
+      {
+        "id": 33644,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "RouenBM,Mss. 2436, v. Jean Goupy, ca. 1691, pp. 120-22",
+            "2020": "RouenBM,Mss. 2436, v. Jean Goupy, ca. 1691, pp. 12"
+          }
+        }
+      },
+      {
+        "id": 37014,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "CO 323/2, f. 383, Vessels cleared at the Custome House",
+            "2020": "CO 323/2, f. 383, Vessels cleared at the Custome H"
+          }
+        }
+      },
+      {
+        "id": 37345,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "CO 323/2, f. 383, Vessels cleared at the Custome House",
+            "2020": "CO 323/2, f. 383, Vessels cleared at the Custome H"
+          }
+        }
+      },
+      {
+        "id": 41927,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI-Contaduría 1057, n.1, folios 22r, 26r-26v, n.6",
+            "2020": "AGI-Contaduría 1057, n.1, folios 22r, 26r-26v, n."
+          }
+        }
+      },
+      {
+        "id": 41973,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGNV, Real Hacienda, Commun y General, XII, ff. 25, ss",
+            "2020": "AGNV, Real Hacienda, Commun y General, XII, ff. 25"
+          }
+        }
+      },
+      {
+        "id": 41974,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGNV, Real Hacienda, Común y General, X, ff. 132-33.",
+            "2020": "AGNV, Real Hacienda, Común y General, X, ff. 132-"
+          }
+        }
+      },
+      {
+        "id": 42854,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas 123,s/n, Certificazion de esclavos, ff. 17r-17v",
+            "2020": "AGI,Charcas 123,s/n, Certificazion de esclavos, ff"
+          }
+        }
+      },
+      {
+        "id": 42917,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123, s/n,Certificazion de esclavos, f.3r-3v",
+            "2020": "AGI,Charcas,123, s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42918,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123, s/n,Certificazion de esclavos, f. 3v",
+            "2020": "AGI,Charcas,123, s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42919,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.3v",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.3"
+          }
+        }
+      },
+      {
+        "id": 42920,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.3v",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.3"
+          }
+        }
+      },
+      {
+        "id": 42921,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.3v",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.3"
+          }
+        }
+      },
+      {
+        "id": 42922,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123, s/n,Certificazion de esclavos, f. 3v",
+            "2020": "AGI,Charcas,123, s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42923,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123, s/n, Certificazion de esclavos, f.3v",
+            "2020": "AGI,Charcas,123, s/n, Certificazion de esclavos, f"
+          }
+        }
+      },
+      {
+        "id": 42924,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas123,s/n, Certificazion de esclavos, f. 3v",
+            "2020": "AGI,Charcas123,s/n, Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42925,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n, Certificazion de esclavos, ff. 3v-4r",
+            "2020": "AGI,Charcas,123,s/n, Certificazion de esclavos, ff"
+          }
+        }
+      },
+      {
+        "id": 42926,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n, Certificazion de esclavos, ff. 3v-4r",
+            "2020": "AGI,Charcas,123,s/n, Certificazion de esclavos, ff"
+          }
+        }
+      },
+      {
+        "id": 42927,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas.123,s/n, Certificazion de esclavos, f. 5r-5v",
+            "2020": "AGI,Charcas.123,s/n, Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42928,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas.123,s/n, Certificazion de esclavos, f. 5r-5v",
+            "2020": "AGI,Charcas.123,s/n, Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42929,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas.123,s/n, Certificazion de esclavos, ff. 5v-6r",
+            "2020": "AGI,Charcas.123,s/n, Certificazion de esclavos, ff"
+          }
+        }
+      },
+      {
+        "id": 42930,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas.123,s/n, Certificazion de esclavos, ff. 5v-6r",
+            "2020": "AGI,Charcas.123,s/n, Certificazion de esclavos, ff"
+          }
+        }
+      },
+      {
+        "id": 42931,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n, Certificazion de esclavos, ff. 5v-6r",
+            "2020": "AGI,Charcas,123,s/n, Certificazion de esclavos, ff"
+          }
+        }
+      },
+      {
+        "id": 42932,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, fols. 5v-6r",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, fol"
+          }
+        }
+      },
+      {
+        "id": 42933,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f. 7v",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42934,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, fols. 8r-8v",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, fol"
+          }
+        }
+      },
+      {
+        "id": 42935,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f. 7v",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42936,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f. 8r",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42938,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f. 8r",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42939,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f. 7r",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42940,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI-Charcas,123,s/n,Certificazion de esclavos, f. 10v",
+            "2020": "AGI-Charcas,123,s/n,Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42943,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n, Certificazion de esclavos, f. 11r",
+            "2020": "AGI,Charcas,123,s/n, Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42945,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, ff.13v-14r",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, ff."
+          }
+        }
+      },
+      {
+        "id": 42947,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n, Certificazion de esclavos, f.17r-17v",
+            "2020": "AGI,Charcas,123,s/n, Certificazion de esclavos, f."
+          }
+        }
+      },
+      {
+        "id": 42949,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.14v",
+            "2020": "AGI,Charcas,123,s/n,Certificazion de esclavos, f.1"
+          }
+        }
+      },
+      {
+        "id": 99025,
+        "changed_fields": {
+          "SOURCEA": {
+            "2019": "Binder:ARA,Aanwinsten, Blue, Journaal...Prins Willem",
+            "2020": "Binder:ARA,Aanwinsten, Blue, Journaal...Prins Will"
+          }
+        }
+      }
+    ]
+  },
+  "coded_case_changes": {
+    "new_2020": 0,
+    "removed_from_scope_2020": 0,
+    "still_coded": 24,
+    "common_changed_any_field": 0,
+    "new_cases": [],
+    "lost_cases": [],
+    "changed_cases": []
+  },
+  "all_coded_2020": [
+    {
+      "VOYAGEID": 9706,
+      "YEARAM": 1693,
+      "YEARAF": 1693,
+      "YEARDEP": 1692,
+      "SHIPNAME": "America",
+      "CAPTAINA": "Brome, John",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 421,
+      "SLAMIMP": 401,
+      "SOURCEA": "T70/57,79",
+      "SOURCEB": "T70/11,76",
+      "SOURCEC": "T70/946,65-6,73"
+    },
+    {
+      "VOYAGEID": 9844,
+      "YEARAM": 1686,
+      "YEARAF": 1686,
+      "YEARDEP": 1685,
+      "SHIPNAME": "Expedition",
+      "CAPTAINA": "Lambert, John",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 121,
+      "SLAMIMP": 84,
+      "SOURCEA": "T70/12,13,15",
+      "SOURCEB": "T70/1222,118",
+      "SOURCEC": "T70/964,17"
+    },
+    {
+      "VOYAGEID": 9848,
+      "YEARAM": 1686,
+      "YEARAF": 1686,
+      "YEARDEP": 1685,
+      "SHIPNAME": "Good Fellowship",
+      "CAPTAINA": "Payne, Silvanus",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 2,
+      "SLAXIMP": 400,
+      "SLAMIMP": 246,
+      "VYMRTIMP": 154,
+      "SOURCEA": "T70/12,15",
+      "SOURCEB": "T70/942",
+      "SOURCEC": "T70/914"
+    },
+    {
+      "VOYAGEID": 9892,
+      "YEARAM": 1681,
+      "YEARAF": 1681,
+      "YEARDEP": 1680,
+      "SHIPNAME": "Alexander",
+      "CAPTAINA": "Branfield, Andrew",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 408,
+      "SLAMIMP": 310,
+      "SOURCEA": "T70/16,17",
+      "SOURCEB": "T70/940",
+      "SOURCEC": "T70/1222,92"
+    },
+    {
+      "VOYAGEID": 9910,
+      "YEARAM": 1680,
+      "YEARAF": 1680,
+      "YEARDEP": 1680,
+      "SHIPNAME": "Convert",
+      "CAPTAINA": "Butcher, Robert",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 214,
+      "SLAMIMP": 180,
+      "VYMRTIMP": 34,
+      "SOURCEA": "T70/1,58",
+      "SOURCEB": "T70/15,39",
+      "SOURCEC": "T70/939,18"
+    },
+    {
+      "VOYAGEID": 10209,
+      "YEARAM": 1684,
+      "YEARAF": 1684,
+      "YEARDEP": 1683,
+      "SHIPNAME": "Koning Salomon",
+      "CAPTAINA": "Goes, Willem Jansen",
+      "NATIONAL": 8,
+      "NATINIMP": 8,
+      "RESISTANCE": 1,
+      "SLAXIMP": 524,
+      "SLAMIMP": 477,
+      "SOURCEA": "Postma,166,304-401",
+      "SOURCEB": "Heijer,1997,389-420",
+      "SOURCEC": "HDB"
+    },
+    {
+      "VOYAGEID": 10265,
+      "YEARAM": 1699,
+      "YEARAF": 1699,
+      "YEARDEP": 1698,
+      "SHIPNAME": "Rachel",
+      "CAPTAINA": "Eijck, Michiel Joosten van",
+      "NATIONAL": 8,
+      "NATINIMP": 8,
+      "RESISTANCE": 1,
+      "SLAXIMP": 620,
+      "SLAMIMP": 523,
+      "SOURCEA": "Postma,166,304-401",
+      "SOURCEB": "Heijer,1997,389-420",
+      "SOURCEC": "HDB"
+    },
+    {
+      "VOYAGEID": 11265,
+      "YEARAM": 1641,
+      "YEARAF": 1641,
+      "YEARDEP": 1641,
+      "SHIPNAME": "Zwarte Arend",
+      "CAPTAINA": "Cornelisz, Cornelis",
+      "NATIONAL": 8,
+      "NATINIMP": 8,
+      "RESISTANCE": 1,
+      "SLAXIMP": 318,
+      "SLAMIMP": 238,
+      "SOURCEA": "BGDB",
+      "SOURCEB": "ARA,OWIC56",
+      "SOURCEC": "ARA,OWIC69,DN30/6,3,12,19/7/41"
+    },
+    {
+      "VOYAGEID": 11353,
+      "YEARAM": 1647,
+      "YEARAF": 1647,
+      "YEARDEP": 1646,
+      "SHIPNAME": "Eendracht",
+      "CAPTAINA": "Meijnerts, Pieter",
+      "NATINIMP": 10,
+      "RESISTANCE": 1,
+      "SLAXIMP": 240,
+      "SLAMIMP": 155,
+      "VYMRTIMP": 85,
+      "SOURCEA": "GAA,NA,1690A:559,1009-12,16April1648",
+      "SOURCEB": "Ratelband,246,251"
+    },
+    {
+      "VOYAGEID": 11806,
+      "YEARAM": 1658,
+      "YEARAF": 1657,
+      "YEARDEP": 1656,
+      "SHIPNAME": "S Pieter",
+      "CAPTAINA": "Berg, Jacob Jansen van de (a) Japon",
+      "NATINIMP": 8,
+      "RESISTANCE": 3,
+      "SLAXIMP": 259,
+      "SLAMIMP": 207,
+      "SOURCEA": "BDB21",
+      "SOURCEB": "GAA,NA,2719:767(196),13/4/62",
+      "SOURCEC": "Binder:ARA,SG,5767,28/11/1658"
+    },
+    {
+      "VOYAGEID": 20127,
+      "YEARAM": 1696,
+      "YEARAF": 1696,
+      "YEARDEP": 1695,
+      "SHIPNAME": "Adventure",
+      "CAPTAINA": "Shering, Samuel",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 238,
+      "SLAMIMP": 186,
+      "SOURCEA": "T70/11,118",
+      "SOURCEB": "CO33/13",
+      "SOURCEC": "Law,EWA,letter1402"
+    },
+    {
+      "VOYAGEID": 20173,
+      "YEARAM": 1699,
+      "YEARAF": 1699,
+      "YEARDEP": 1698,
+      "SHIPNAME": "Albion Frigate",
+      "CAPTAINA": "Duport, Stephen",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 600,
+      "SLAMIMP": 250,
+      "VYMRTIMP": 350,
+      "SOURCEA": "Donnan,II,29",
+      "SOURCEB": "CO33/13",
+      "SOURCEC": "Barbot,II,681-93"
+    },
+    {
+      "VOYAGEID": 21015,
+      "YEARAM": 1685,
+      "YEARAF": 1685,
+      "YEARDEP": 1685,
+      "SHIPNAME": "Charlton",
+      "CAPTAINA": "Layton, John",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 100,
+      "SOURCEA": "T70/11,102",
+      "SOURCEB": "T70/1222,122",
+      "SOURCEC": "Rawl,C745,317,331,409"
+    },
+    {
+      "VOYAGEID": 21027,
+      "YEARAM": 1685,
+      "YEARAF": 1685,
+      "YEARDEP": 1685,
+      "SHIPNAME": "Ann",
+      "CAPTAINA": "Jobson",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 179,
+      "SOURCEA": "T70/11,55,60"
+    },
+    {
+      "VOYAGEID": 21261,
+      "YEARAM": 1691,
+      "YEARAF": 1691,
+      "YEARDEP": 1691,
+      "SHIPNAME": "Hester and Mary",
+      "CAPTAINA": "Ransom, Christoph",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 243,
+      "SLAMIMP": 195,
+      "SOURCEA": "T70/169,89"
+    },
+    {
+      "VOYAGEID": 21557,
+      "YEARAM": 1683,
+      "YEARAF": 1683,
+      "YEARDEP": 1683,
+      "SHIPNAME": "Trompeuse",
+      "CAPTAINA": "Hamlin, Jean",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 27,
+      "SLAMIMP": 22,
+      "SOURCEA": "CSPCS,11:471-3,519-21,",
+      "SOURCEB": "Donnan,I,329"
+    },
+    {
+      "VOYAGEID": 21950,
+      "YEARAM": 1693,
+      "YEARAF": 1693,
+      "YEARDEP": 1692,
+      "SHIPNAME": "Fredrik Wilhelm",
+      "CAPTAINA": "Sage, Jean le (a) Lesage, Jean",
+      "NATIONAL": 12,
+      "NATINIMP": 15,
+      "RESISTANCE": 1,
+      "SLAXIMP": 738,
+      "SLAMIMP": 729,
+      "VYMRTIMP": 9,
+      "SOURCEA": "Oettinger",
+      "SOURCEB": "Kellenbenz, 212",
+      "SOURCEC": "Jones, Doc.82"
+    },
+    {
+      "VOYAGEID": 35051,
+      "YEARAM": 1698,
+      "YEARAF": 1698,
+      "YEARDEP": 1698,
+      "SHIPNAME": "Københavns Børs",
+      "CAPTAINA": "Pietersen, Innes (a) Petersen, Jens",
+      "NATIONAL": 11,
+      "NATINIMP": 15,
+      "RESISTANCE": 1,
+      "SLAXIMP": 506,
+      "SLAMIMP": 280,
+      "VYMRTIMP": 226,
+      "SOURCEA": "Westergaard,146,320",
+      "SOURCEB": "Justesen,v.1,II,19,23,25",
+      "SOURCEC": "Hernæs,251"
+    },
+    {
+      "VOYAGEID": 41928,
+      "YEARAM": 1612,
+      "YEARAF": 1612,
+      "YEARDEP": 1612,
+      "SHIPNAME": "Jesus María",
+      "CAPTAINA": "Acosta, Antonio Rodrigues de",
+      "RESISTANCE": 1,
+      "SLAXIMP": 392,
+      "SLAMIMP": 313,
+      "SOURCEA": "Troconis de Veracoechea, 136-46",
+      "SOURCEB": "Arcila Farías, 1946, 394-5, 419, fn. 27",
+      "SOURCEC": "Acosta Saignes, 1961, 8"
+    },
+    {
+      "VOYAGEID": 44085,
+      "YEARAM": 1674,
+      "YEARAF": 1674,
+      "YEARDEP": 1674,
+      "SHIPNAME": "Vergulde Arend (a)",
+      "CAPTAINA": "Backer, Joris",
+      "NATINIMP": 8,
+      "RESISTANCE": 1,
+      "SLAXIMP": 150,
+      "SLAMIMP": 126,
+      "SOURCEA": "Binder:GAR,NA,83/136",
+      "SOURCEB": "Nørregård,50",
+      "SOURCEC": "Hernæs,189"
+    },
+    {
+      "VOYAGEID": 52104,
+      "YEARAM": 1678,
+      "YEARAF": 1677,
+      "YEARDEP": 1677,
+      "SHIPNAME": "Santissimo Sacramento",
+      "CAPTAINA": "Lima, Lourenço Fernandes de",
+      "NATIONAL": 4,
+      "NATINIMP": 6,
+      "RESISTANCE": 3,
+      "SLAXIMP": 408,
+      "SLAMIMP": 356,
+      "SOURCEA": "Matos,286 - 299"
+    },
+    {
+      "VOYAGEID": 99002,
+      "YEARAM": 1688,
+      "YEARAF": 1688,
+      "YEARDEP": 1688,
+      "CAPTAINA": "Osney",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 2,
+      "SLAXIMP": 251,
+      "SOURCEA": "T70/12,33"
+    },
+    {
+      "VOYAGEID": 99009,
+      "YEARAM": 1691,
+      "YEARAF": 1691,
+      "YEARDEP": 1691,
+      "SHIPNAME": "Charles",
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 179,
+      "SLAMIMP": 158,
+      "SOURCEA": "T70/17,26"
+    },
+    {
+      "VOYAGEID": 99026,
+      "YEARAM": 1654,
+      "YEARAF": 1654,
+      "YEARDEP": 1654,
+      "CAPTAINA": "Hiway, Thomas",
+      "NATIONAL": 7,
+      "NATINIMP": 7,
+      "RESISTANCE": 1,
+      "SLAXIMP": 60,
+      "SLAMIMP": 20,
+      "VYMRTIMP": 40,
+      "SOURCEA": "Appleby,1995,12",
+      "SOURCEB": "Steckley, 108"
+    }
+  ],
+  "interpretation": "This is an edition comparison for recorded voyage rows, NOT total historical crossings or prevalence. Changes may reflect corrected voyage identity, data incompleteness, reclassification, or date/flag imputation; inspect codebook and original sources before publishing individual casualties or precise geography."
+}

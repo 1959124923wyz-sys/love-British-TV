@@ -110,12 +110,24 @@
     '<details class="story-stat-census"><summary>查看'+num(census.british_coded_resistance)+'条有记录的英国旗反抗航次（非全量估计）</summary>'+
     '<table class="story-stat-table"><caption>2019版航次库编码记录 · 年份和船旗可能经推定</caption><thead><tr><th scope="col">抵岸年份</th><th scope="col">登记船名</th><th scope="col">航次编号</th><th scope="col">抵抗类型</th><th scope="col">登船人数 IMP</th><th scope="col">抵岸人数 IMP</th></tr></thead><tbody>'+censusRows+'</tbody></table></details>'+
     '<p class="story-stat-note">'+esc(census.warning)+' <a href="'+esc(census.source_url)+'" target="_blank" rel="noopener noreferrer">官方2019版航次数据</a> · <a href="'+esc(census.codebook_url)+'" target="_blank" rel="noopener noreferrer">编码手册</a></p>':'';
+  const sameSource=q.resistance_census_2019?.crossedition_2020;
+  const sameSourceHtml=sameSource?
+    '<p class="story-stat-note"><strong>官方2020版复核：</strong>2019版具抵抗编码船次在2020版相同口径中没有增删；' +
+    '但两版属同一编辑数据库，不构成两套独立原始目击文献。2020版有'+num(sameSource.sourceA_2020_prefix_truncations_in_17c_nonresistance_records)+'条17世纪船次SOURCEA索引前缀截短，应保留完整2019字段参考。' +
+    '<a href="'+esc(sameSource.source_url)+'" target="_blank" rel="noopener noreferrer">官方2020版SPSS数据</a></p>':'';
+  const law=q.colonial_counter_resistance_law_1699;
+  const lawHtml=law?
+    '<h4>1699年牙买加：镇压逃亡与反抗被编入财政激励</h4><p class="story-stat-cohort">'+
+    '殖民法规定追捕队指挥官每月'+num(law.monthly_commander_gbp)+'英镑、军士'+num(law.monthly_sergeant_gbp)+
+    '英镑、其他人员各'+num(law.monthly_ordinary_shillings)+'先令，并允许依已有奴役法规取得掠获物。'+
+    '<a href="'+esc(law.source_url)+'" target="_blank" rel="noopener noreferrer">1699年法令转录</a></p>'+
+    '<p class="story-stat-note">'+esc(law.warning)+'</p>':'';
   return '<section class="story-statistics" aria-label="历史人口强制运输数据与史料口径">'+
     '<h3>'+esc(q.title)+'</h3><p class="story-stat-measure">'+esc(q.measure)+'；'+esc(q.carrier)+'</p>'+
     '<table class="story-stat-table"><caption>同一来源的25年期人数估算 · 不能作为逐年记录</caption><thead><tr><th scope="col">时期</th><th scope="col">英船旗登船</th><th scope="col">全部船旗登船</th></tr></thead><tbody>'+carrierRows+
     '<tr class="story-stat-total"><th scope="row">'+esc(q.total.period)+'合计</th><td>'+num(q.total.embarked)+'</td><td>'+num(q.total.all_carriers_embarked)+'</td></tr></tbody></table>'+
     '<p class="story-stat-note">'+esc(q.period_note)+' <a href="'+esc(q.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(q.source_label)+'</a></p>'+
-    '<h4>另一个统计口径：皇家非洲公司具体航次</h4>'+cohort+second+costs+namedHtml+siteHtml+smaller+specificHtml+censusHtml+'</section>';
+    '<h4>另一个统计口径：皇家非洲公司具体航次</h4>'+cohort+second+costs+namedHtml+siteHtml+smaller+specificHtml+censusHtml+sameSourceHtml+lawHtml+'</section>';
  }
  function storyHtml(article){
   const relatedStories=(article.related_story_ids||[]).map(id=>storyMeta.get(id)).filter(Boolean)
