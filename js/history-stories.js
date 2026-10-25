@@ -80,6 +80,23 @@
   const clean=clauses.filter(clause=>clause.includes('[[')||!editorial.test(clause)).join('').trim();
   return clean||String(text||'');
  }
+ function quantitativeHistoryHtml(article){
+  // Optional story-only historical table. The data declares its own population,
+  // time window, national carrier, metric and source; never synthesize annual dots.
+  const q=article.quantitative_summary;
+  if(!q||!Array.isArray(q.rows)||!q.total||q.rows.length===0)return '';
+  const num=value=>Number.isFinite(value)?Number(value).toLocaleString('en-US'):'未核实';
+  const carrierRows=q.rows.map(row=>'<tr><th scope="row">'+esc(row.period)+'</th><td>'+num(row.embarked)+'</td><td>'+num(row.all_carriers_embarked)+'</td></tr>').join('');
+  const ra=q.cohort,rb=q.second_cohort;
+  const cohort=ra?'<p class="story-stat-cohort"><strong>'+esc(ra.operator)+'（'+esc(ra.period)+'）</strong>：'+num(ra.documented_voyages)+'次有记录航次；登船'+num(ra.recorded_embarked)+'人，抵岸'+num(ra.recorded_disembarked)+'人，差额'+num(ra.embarked_minus_disembarked)+'人。<a href="'+esc(ra.source_url)+'" target="_blank" rel="noopener noreferrer">航次统计来源</a></p><p class="story-stat-note">'+esc(ra.warning)+'</p>':'';
+  const second=rb?'<p class="story-stat-cohort"><strong>'+esc(rb.operator)+'（'+esc(rb.period)+'）</strong>：估计运送约'+num(rb.people_transported_low)+'—'+num(rb.people_transported_high)+'人，年均约'+num(rb.avg_voyages_per_year)+'次航运。<a href="'+esc(rb.source_url)+'" target="_blank" rel="noopener noreferrer">史密森尼馆藏说明</a></p><p class="story-stat-note">'+esc(rb.warning)+'</p>':'';
+  return '<section class="story-statistics" aria-label="历史人口强制运输数据与史料口径">'+
+    '<h3>'+esc(q.title)+'</h3><p class="story-stat-measure">'+esc(q.measure)+'；'+esc(q.carrier)+'</p>'+
+    '<table class="story-stat-table"><caption>同一来源的25年期人数估算 · 不能作为逐年记录</caption><thead><tr><th scope="col">时期</th><th scope="col">英船旗登船</th><th scope="col">全部船旗登船</th></tr></thead><tbody>'+carrierRows+
+    '<tr class="story-stat-total"><th scope="row">'+esc(q.total.period)+'合计</th><td>'+num(q.total.embarked)+'</td><td>'+num(q.total.all_carriers_embarked)+'</td></tr></tbody></table>'+
+    '<p class="story-stat-note">'+esc(q.period_note)+' <a href="'+esc(q.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(q.source_label)+'</a></p>'+
+    '<h4>另一个统计口径：皇家非洲公司具体航次</h4>'+cohort+second+'</section>';
+ }
  function storyHtml(article){
   const relatedStories=(article.related_story_ids||[]).map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(meta.title)+'</span><span aria-hidden="true">›</span></button>')
@@ -90,7 +107,7 @@
     '<div class="dossier-kicker">重大历史专题 · '+esc(article.region)+'</div>'+
     '<h2>'+esc(article.title)+'</h2>'+
     '<p class="story-subtitle">'+esc(article.subtitle)+'</p>'+
-    '<p class="story-lead">'+esc(article.lead)+'</p></header>'+relatedMarkup+
+    '<p class="story-lead">'+esc(article.lead)+'</p></header>'+relatedMarkup+quantitativeHistoryHtml(article)+
     '<details class="story-toc"><summary>阅读目录 · '+article.sections.length+'节 <span aria-hidden="true">▾</span></summary>'+
     '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sec.heading.replace(/^[一二三四五六七八九十]+、/,''))+'</button>').join('')+'</nav></details>'+
     '<div class="story-body">'+article.sections.map(sec=>
