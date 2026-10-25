@@ -1,0 +1,38 @@
+name: E6-T11 primary 2019 voyage dataset diagnostic
+on:
+  push:
+    branches:
+      - 'research/editor13-e6t11-*'
+    paths:
+      - 'scripts/research_e6t11_voyage_census.py'
+      - '.github/workflows/editor13-e6t11-voyage-census.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  primary-voyage-2019-census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch official 2019 CSV, verify headers, and extract constrained audit
+        run: |
+          python3 - <<'PY'
+          from urllib.request import Request, urlopen
+          from pathlib import Path
+          url = 'https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv'
+          request = Request(url, headers={'User-Agent': 'Mozilla/5.0 ResearchEvidenceAudit/1.0'})
+          with urlopen(request, timeout=75) as response:
+              data = response.read(65_000_000)
+          if not data or len(data) < 2_000_000 or data[:128].lower().lstrip().startswith(b'<!doctype'):
+              raise RuntimeError('Official CSV not available; abort rather than substitute third-party data')
+          Path('voyages_2019.csv').write_bytes(data)
+          print('Downloaded official SlaveVoyages 2019 CSV bytes:',len(data))
+          PY
+          python3 scripts/research_e6t11_voyage_census.py --csv voyages_2019.csv --output evidence/e6t11_2019_diagnostic.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: e6t11-2019-primary-diagnostic
+          path: evidence/e6t11_2019_diagnostic.json
+          retention-days: 14
