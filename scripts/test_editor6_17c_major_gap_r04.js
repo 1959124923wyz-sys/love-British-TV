@@ -27,7 +27,7 @@ for(let d=1600;d<=1690;d+=10){
   assert(!e.research_event_id?.startsWith('EDITOR6-MAJOR:'),'duplicate second import must be eliminated');
  }
 }
-assert.equal(records,437);assert.equal(geopoints,436);
+assert.equal(records,445);assert.equal(geopoints,444);
 assert.equal(index.size,14);
 for(const c of audit.cases){
  const e=index.get('EDITOR6:'+c.k);

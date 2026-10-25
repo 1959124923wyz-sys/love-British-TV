@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 173,
+    "feature_count": 181,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -30,7 +30,8 @@
     "hbc_editor9_20261024": "16 Atlas-linked nonmetric point events; 1670 London royal claim has no territorial polygon; 1686 three specific French captures and 1694, 1696, 1697 York Fort handover are separate year-specific evidence cues.",
     "acadia_editor9_20261024": "20 year-scoped historical map anchors; 1605 original Port-Royal Habitation 44.71146,-65.60947 is distinct from 1629 Charles Fort/modern Fort Anne 44.74185,-65.51861; no sovereign occupation polygons or area measurements.",
     "editor10_newfoundland_20261024": "14 per-year institutional-source-linked Newfoundland point symbols; 1612 Beothuk exchange and piracy separated; 1694 Ferryland defence/1696 fall, 1662 French Plaisance and 1699 Westminster statute separate; original Cupids and St John's Atlas targets reused. No sea tracks or island sovereignty polygon.",
-    "editor11_navigation_20261025": "Nine nonmetric year-scoped source-attested events for legislation, diplomacy, Dutch-English sea battles and 1688 landing; no ocean ownership or ship routes."
+    "editor11_navigation_20261025": "Nine nonmetric year-scoped source-attested events for legislation, diplomacy, Dutch-English sea battles and 1688 landing; no ocean ownership or ship routes.",
+    "darien_editor10_20261025": "Eight Guna/Scottish/Spanish source-linked modern named cues at only 1698 and 1699; national CIA gazetteer bay center nonmetric, includes July 1699 abandonment and November recolonization separated, no Scottish land-area polygon."
   },
   "features": [
     {
@@ -6764,6 +6765,310 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
         "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e122",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.177,
+          55.981
+        ]
+      },
+      "properties": {
+        "name": "苏格兰达连殖民首航船队从利斯港启程",
+        "start_year": 1698,
+        "display_through_year": 1698,
+        "display_kind": "economic_network",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "1698年7月14日，五艘载着约1200名人员的苏格兰公司船只从利斯港启航，谋求在达连建立殖民贸易据点。船名在苏格兰国家图书馆与国家博物馆展陈中存在异文，未经原始船籍核对不强定第五艘之名。利斯港是现代港区参考，而非单船泊位或1698年完整航线。",
+        "summary_zh": "1698年7月14日，五艘载着约1200名人员的苏格兰公司船只从利斯港启航，谋求在达连建立殖民贸易据点。船名在苏格兰国家图书馆与国家博物馆展陈中存在异文，未经原始船籍核对不强定第五艘之名。利斯港是现代港区参考，而非单船泊位或1698年完整航线。",
+        "source_urls": [
+          "https://www.nls.uk/exhibitions/treasures/scotland-and-darien/",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E122"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e123",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.7,
+          8.916667
+        ]
+      },
+      "properties": {
+        "name": "苏格兰首批殖民船队抵达古纳人生活的达连海湾",
+        "start_year": 1698,
+        "display_through_year": 1698,
+        "display_kind": "local_governance",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "1698年11月2日苏格兰远征船队到达今巴拿马古纳雅拉沿海达连湾；当地古纳社群已经营海岸交通与交换活动。现代海湾地名中心只为地区参考，不能代替Gold Island当年精确靠泊地点、古纳居住领地边界或苏格兰全海湾征服范围。",
+        "summary_zh": "1698年11月2日苏格兰远征船队到达今巴拿马古纳雅拉沿海达连湾；当地古纳社群已经营海岸交通与交换活动。现代海湾地名中心只为地区参考，不能代替Gold Island当年精确靠泊地点、古纳居住领地边界或苏格兰全海湾征服范围。",
+        "source_urls": [
+          "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E123"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e124",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.7,
+          8.916667
+        ]
+      },
+      "properties": {
+        "name": "苏格兰殖民者在达连湾建造圣安德鲁堡与新爱丁堡",
+        "start_year": 1698,
+        "display_through_year": 1698,
+        "display_kind": "local_governance",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "1698年登陆后，苏格兰殖民者在卡利多尼亚海湾附近建造圣安德鲁堡，设仓库、房屋并命名新爱丁堡。威廉三世作为苏格兰国王给予的公司权利不能说明西班牙行政声索或古纳各社群已经消失；此现代海湾点不是实测17世纪堡墙。",
+        "summary_zh": "1698年登陆后，苏格兰殖民者在卡利多尼亚海湾附近建造圣安德鲁堡，设仓库、房屋并命名新爱丁堡。威廉三世作为苏格兰国王给予的公司权利不能说明西班牙行政声索或古纳各社群已经消失；此现代海湾点不是实测17世纪堡墙。",
+        "source_urls": [
+          "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E124"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e125",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.7,
+          8.916667
+        ]
+      },
+      "properties": {
+        "name": "苏格兰殖民理事会与古纳领袖迭戈订立互保协定",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "1699年2月24日，苏格兰殖民理事会与古纳领袖迭戈·图库潘托（Diego Tucupanto）订立互保与通商协定，双方同意合作防御各自成员、土地及财物。原约书代表具体签约双方，而不是全体古纳社会把土地无条件让给苏格兰；会面原址未测绘。",
+        "summary_zh": "1699年2月24日，苏格兰殖民理事会与古纳领袖迭戈·图库潘托（Diego Tucupanto）订立互保与通商协定，双方同意合作防御各自成员、土地及财物。原约书代表具体签约双方，而不是全体古纳社会把土地无条件让给苏格兰；会面原址未测绘。",
+        "source_urls": [
+          "https://deriv.nls.uk/dcn23/7878/78785290.23.pdf",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E125"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e126",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.189,
+          55.952
+        ]
+      },
+      "properties": {
+        "name": "苏格兰公司董事向达连殖民理事会承诺再派船只补给",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "economic_network",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "1699年4月，苏格兰贸易公司董事在致达连理事会的信中承诺派更多船只、人员与补给，寄望王室与英格兰政府提供支持。承诺本身不证明这些物资已及时抵达；爱丁堡现代行政中心只代表书信发出地参考。",
+        "summary_zh": "1699年4月，苏格兰贸易公司董事在致达连理事会的信中承诺派更多船只、人员与补给，寄望王室与英格兰政府提供支持。承诺本身不证明这些物资已及时抵达；爱丁堡现代行政中心只代表书信发出地参考。",
+        "source_urls": [
+          "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E126"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e127",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.7,
+          8.916667
+        ]
+      },
+      "properties": {
+        "name": "粮食匮乏与疾病迫使苏格兰首次达连殖民者撤离",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "1699年7月，第一次达连殖民据点因缺粮、疾病与补给困境而被抛弃；其居民遭受重大死亡与财产损失。国家博物馆估计第一批约1200出发、约300幸存是该远征全程概括，并非1699年7月逐日统计。撤离意味着苏格兰首次驻地中断，并非古纳人土地使用结束。",
+        "summary_zh": "1699年7月，第一次达连殖民据点因缺粮、疾病与补给困境而被抛弃；其居民遭受重大死亡与财产损失。国家博物馆估计第一批约1200出发、约300幸存是该远征全程概括，并非1699年7月逐日统计。撤离意味着苏格兰首次驻地中断，并非古纳人土地使用结束。",
+        "source_urls": [
+          "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E127"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e128",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.55,
+          10.423
+        ]
+      },
+      "properties": {
+        "name": "西班牙军官从卡塔赫纳报告对达连苏格兰殖民的军事行动",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "military_impact",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "西班牙国家档案馆记载1699年8月29日卡塔赫纳军官迭戈·德·佩雷多（Diego de Peredo）的信，涉及对苏格兰达连殖民地采取的行动及附近法国船只。馆藏目录确认文件日期和主题，不等于已逐页核阅书信或在1699年攻陷圣安德鲁堡；地图位置只是发信城市。",
+        "summary_zh": "西班牙国家档案馆记载1699年8月29日卡塔赫纳军官迭戈·德·佩雷多（Diego de Peredo）的信，涉及对苏格兰达连殖民地采取的行动及附近法国船只。馆藏目录确认文件日期和主题，不等于已逐页核阅书信或在1699年攻陷圣安德鲁堡；地图位置只是发信城市。",
+        "source_urls": [
+          "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/3936320",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E128"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor10-darien-1690s-e129",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.7,
+          8.916667
+        ]
+      },
+      "properties": {
+        "name": "第二批苏格兰殖民远征抵达废弃的达连新爱丁堡",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "苏格兰达连公司 / 古纳外交 / 西班牙档案·现代地区非测量参考点",
+        "description": "1699年11月30日，第二批约千余名苏格兰移民抵达达连，发现第一批移民离开后的新爱丁堡已经荒废。此为实际第二次登陆，不等于第一批驻地在1699年7月至11月未曾中断。1700年的图巴坎蒂行动和西班牙围攻、最终投降属于下一世纪，不能回填此年。",
+        "summary_zh": "1699年11月30日，第二批约千余名苏格兰移民抵达达连，发现第一批移民离开后的新爱丁堡已经荒废。此为实际第二次登陆，不等于第一批驻地在1699年7月至11月未曾中断。1700年的图巴坎蒂行动和西班牙围攻、最终投降属于下一世纪，不能回填此年。",
+        "source_urls": [
+          "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+          "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+        ],
+        "related_event_ids": [
+          "1690S-E129"
+        ],
+        "related_story_ids": [
+          "E6-T04-DARIEN"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
+        "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
