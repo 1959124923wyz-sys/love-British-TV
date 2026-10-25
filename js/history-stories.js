@@ -94,12 +94,18 @@
   const costs=cost?'<p class="story-stat-cohort"><strong>'+esc(cost.operator)+'</strong>：男性约'+num(cost.male_pct_approx)+'%；'+num(cost.children_age_at_most)+'岁及以下儿童约'+num(cost.children_pct_approx)+'%；历史牙买加特定类别平均售价约£'+num(cost.historical_jamaica_prime_male_sale_price_gbp_average)+'。<a href="'+esc(cost.source_url)+'" target="_blank" rel="noopener noreferrer">人口与价格研究</a></p><p class="story-stat-note">'+esc(cost.warning)+'</p>':'';
   const named=q.verified_voyage_example;
   const namedHtml=named?'<h4>另一个已证船次：'+esc(String(named.year))+'年'+esc(named.vessel)+'号</h4><p class="story-stat-cohort"><strong>SlaveVoyages 单航次'+num(named.official_voyage_id)+'</strong>：被迫登船'+num(named.embarked)+'人；抵岸（数据库推算）'+num(named.disembarked_imputed)+'人；途中死亡（数据库推算）'+num(named.dead_imputed)+'人；航次记载'+esc(named.resistance)+'。<a href="'+esc(named.source_url)+'" target="_blank" rel="noopener noreferrer">官方具体航次记录</a></p><p class="story-stat-note">'+esc(named.warning)+'</p>':'';
+  const rs=q.resistance_case_reference;
+  const site=rs?.site;
+  const siteHtml=site?'<h4>1681年·非洲沿岸拘禁场所的反抗</h4><p class="story-stat-cohort"><strong>'+esc(site.location)+'</strong>：殖民方报告被囚'+num(site.held)+'人，镇压致死'+num(site.colonial_claim_killed)+'人、受伤'+num(site.colonial_claim_wounded)+'人。<a href="'+esc(site.source_url)+'" target="_blank" rel="noopener noreferrer">原信学术引录</a></p><p class="story-stat-note">'+esc(site.warning)+'</p>':'';
+  const smaller=Array.isArray(rs?.voyages)?rs.voyages.map(v=>'<p class="story-stat-cohort"><strong>'+esc(String(v.year))+'年'+esc(v.vessel)+'号（航次'+num(v.voyage_id)+'）</strong>：被迫登船'+num(v.embarked)+'人，抵岸'+num(v.landed)+'人；登记船上起义。<a href="'+esc(v.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(v.evidence)+'</a></p><p class="story-stat-note">'+esc(v.warning)+'</p>').join(''):'';
+  const specific=rs?.albion_revolt_killed_secondary;
+  const specificHtml=specific?'<p class="story-stat-cohort"><strong>同船反抗特定伤亡的二次史学记录</strong>：被奴役者'+num(specific.enslaved_people)+'人、船员'+num(specific.crew)+'人。<a href="'+esc(specific.source_url)+'" target="_blank" rel="noopener noreferrer">学术出版书目</a></p><p class="story-stat-note">'+esc(specific.source_level)+'。'+esc(specific.warning)+'</p>':'';
   return '<section class="story-statistics" aria-label="历史人口强制运输数据与史料口径">'+
     '<h3>'+esc(q.title)+'</h3><p class="story-stat-measure">'+esc(q.measure)+'；'+esc(q.carrier)+'</p>'+
     '<table class="story-stat-table"><caption>同一来源的25年期人数估算 · 不能作为逐年记录</caption><thead><tr><th scope="col">时期</th><th scope="col">英船旗登船</th><th scope="col">全部船旗登船</th></tr></thead><tbody>'+carrierRows+
     '<tr class="story-stat-total"><th scope="row">'+esc(q.total.period)+'合计</th><td>'+num(q.total.embarked)+'</td><td>'+num(q.total.all_carriers_embarked)+'</td></tr></tbody></table>'+
     '<p class="story-stat-note">'+esc(q.period_note)+' <a href="'+esc(q.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(q.source_label)+'</a></p>'+
-    '<h4>另一个统计口径：皇家非洲公司具体航次</h4>'+cohort+second+costs+namedHtml+'</section>';
+    '<h4>另一个统计口径：皇家非洲公司具体航次</h4>'+cohort+second+costs+namedHtml+siteHtml+smaller+specificHtml+'</section>';
  }
  function storyHtml(article){
   const relatedStories=(article.related_story_ids||[]).map(id=>storyMeta.get(id)).filter(Boolean)
