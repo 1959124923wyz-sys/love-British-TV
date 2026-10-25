@@ -8,7 +8,7 @@ on:
       - '.github/workflows/editor14-e6t11-snapshot-compare.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   compare-original-snapshots:
     runs-on: ubuntu-latest
@@ -31,10 +31,17 @@ jobs:
               Path(name).write_bytes(data)
               print('Official',name,'bytes',len(data))
           PY
-          python3 scripts/research_e6t11_compare_editions.py --old tastdb-exp-2019.csv --new tastdb-exp-2020.sav --out output/e6-t11-official-2019-2020-compare.json
+          python3 scripts/research_e6t11_compare_editions.py --old tastdb-exp-2019.csv --new tastdb-exp-2020.sav --out data/research/e6-t11-official-2019-2020-snapshot-comparison.json
+      - name: Preserve audit findings as independently reviewable GitHub branch source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/e6-t11-official-2019-2020-snapshot-comparison.json
+          git commit -m "research(E6-T11): preserve source-checksummed 2019-2020 snapshot comparison"
+          git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"
       - uses: actions/upload-artifact@v4
         if: success()
         with:
           name: e6t11-official-2019-2020-comparison
-          path: output/e6-t11-official-2019-2020-compare.json
+          path: data/research/e6-t11-official-2019-2020-snapshot-comparison.json
           retention-days: 20
