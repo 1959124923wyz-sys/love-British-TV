@@ -159,6 +159,133 @@
         "source_level": "Taylor 2006学术书附录目录/二次节录，原始船档未核查",
         "warning": "28名被奴役者与1名船员是二次史学附录记载的冲突相关死亡；不得与同航次350名全程死亡IMP相加作为独立死者。"
       }
+    },
+    "resistance_census_2019": {
+      "title": "2019版数据库：17世纪已记录的船上与沿岸反抗航次",
+      "dataset_label": "2019扩展版航次记录；按推定抵岸年份YEARAM=1600—1699筛选",
+      "source_url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+      "codebook_url": "https://legacy.slavevoyages.org/documents/download/SPSS_Codebook_2019.pdf",
+      "recorded_all_carriers_voyages": 3371,
+      "recorded_british_flag_voyages": 1037,
+      "all_carriers_resistance_coded": 24,
+      "british_coded_resistance": 14,
+      "british_coded_ship_insurrections": 12,
+      "british_coded_shore_vessel_attacks": 2,
+      "documented_examples": [
+        {
+          "id": 99026,
+          "year": 1654,
+          "ship": "船名未载",
+          "code": 1,
+          "embarked_imputed": 60,
+          "disembarked_imputed": 20
+        },
+        {
+          "id": 9910,
+          "year": 1680,
+          "ship": "Convert",
+          "code": 1,
+          "embarked_imputed": 214,
+          "disembarked_imputed": 180
+        },
+        {
+          "id": 9892,
+          "year": 1681,
+          "ship": "Alexander",
+          "code": 1,
+          "embarked_imputed": 408,
+          "disembarked_imputed": 310
+        },
+        {
+          "id": 21557,
+          "year": 1683,
+          "ship": "Trompeuse",
+          "code": 1,
+          "embarked_imputed": 27,
+          "disembarked_imputed": 22
+        },
+        {
+          "id": 21015,
+          "year": 1685,
+          "ship": "Charlton",
+          "code": 1,
+          "embarked_imputed": 100,
+          "disembarked_imputed": null
+        },
+        {
+          "id": 21027,
+          "year": 1685,
+          "ship": "Ann",
+          "code": 1,
+          "embarked_imputed": 179,
+          "disembarked_imputed": null
+        },
+        {
+          "id": 9844,
+          "year": 1686,
+          "ship": "Expedition",
+          "code": 1,
+          "embarked_imputed": 121,
+          "disembarked_imputed": 84
+        },
+        {
+          "id": 9848,
+          "year": 1686,
+          "ship": "Good Fellowship",
+          "code": 2,
+          "embarked_imputed": 400,
+          "disembarked_imputed": 246
+        },
+        {
+          "id": 99002,
+          "year": 1688,
+          "ship": "船名未载",
+          "code": 2,
+          "embarked_imputed": 251,
+          "disembarked_imputed": null
+        },
+        {
+          "id": 21261,
+          "year": 1691,
+          "ship": "Hester and Mary",
+          "code": 1,
+          "embarked_imputed": 243,
+          "disembarked_imputed": 195
+        },
+        {
+          "id": 99009,
+          "year": 1691,
+          "ship": "Charles",
+          "code": 1,
+          "embarked_imputed": 179,
+          "disembarked_imputed": 158
+        },
+        {
+          "id": 9706,
+          "year": 1693,
+          "ship": "America",
+          "code": 1,
+          "embarked_imputed": 421,
+          "disembarked_imputed": 401
+        },
+        {
+          "id": 20127,
+          "year": 1696,
+          "ship": "Adventure",
+          "code": 1,
+          "embarked_imputed": 238,
+          "disembarked_imputed": 186
+        },
+        {
+          "id": 20173,
+          "year": 1699,
+          "ship": "Albion Frigate",
+          "code": 1,
+          "embarked_imputed": 600,
+          "disembarked_imputed": 250
+        }
+      ],
+      "warning": "上述数字是官方2019版已收录船次中存在抵抗编码的记录，不代表全部实际反抗，也不是全17世纪英船估计总航次数。无编码不等于无反抗；YEARAM／船旗NATINIMP可能由数据库推定，非原始抵岸清单。港口和战场坐标未审核；登船与抵岸差额不是已证起义死亡或全航程死亡人数。"
     }
   },
   "sections": [
@@ -353,12 +480,14 @@
         "SV22",
         "SV23",
         "SV24",
-        "SV25"
+        "SV25",
+        "SV29",
+        "SV30"
       ],
       "paragraphs": [
         "非洲沿岸买卖结束后，船长将被迫带走的人关进船内隔间。船舶为了盈利可装载大量被俘者，而闷热、卫生条件恶劣、饮水不足和难以治疗的疾病使死亡危险增加。离岸前的拘禁同样可能持续数周，等待买够预期人数的商人不会把受奴役者的健康放在自由和尊严之前。",
         "船员通常以枷锁、木栅、枪械和分隔人群的方式防止集体反抗。SlaveVoyages记载，有人试图解开束缚、帮助同伴逃脱、夺取武器，或拒绝接受被迫迁移。船长记录常常称这些行动为“骚乱”，却很少留下抵抗者自己的文字。 1681年11月24日，皇家非洲公司在冈比亚詹姆斯堡拘押的105名非洲男性[[1680S-E123|共同发动反抗]]。历史学家David Eltis根据驻站人员John Kastell的1682年信件，摘录殖民方镇压报告称34人死亡、40人受伤；这是堡垒囚禁阶段而非船舱反抗，人数亦属镇压者自述，不可并入跨洋途中死亡统计。",
-        "关于船上起义的研究显示，反抗并非罕见的想象故事；沿非洲海岸等待装船期间尤其可能发生夺船与逃跑。但“约每十次航运有一次某种反抗”是跨世纪、跨不同船旗的总体概括，不能拿来直接估算1680年代某个英商船队发动了多少次具名叛乱。 1688年卡拉巴尔沿岸发生的[[1680S-E122|非洲人从岸上袭击一艘载有被囚者的英船并使囚禁者获得释放]]，说明抵抗也可以来自船外社群。史学研究提及船上曾有251人，但船名和袭击现场尚无法精确核实，这并不是已核全世纪船上起义总数。"
+        "关于船上起义的研究显示，反抗并非罕见的想象故事；沿非洲海岸等待装船期间尤其可能发生夺船与逃跑。但“约每十次航运有一次某种反抗”是跨世纪、跨不同船旗的总体概括，不能拿来直接估算1680年代某个英商船队发动了多少次具名叛乱。 1688年卡拉巴尔沿岸发生的[[1680S-E122|非洲人从岸上袭击一艘载有被囚者的英船并使囚禁者获得释放]]，说明抵抗也可以来自船外社群。史学研究提及船上曾有251人，但船名和袭击现场尚无法精确核实，这并不是已核全世纪船上起义总数。 对SlaveVoyages官方2019版完整航次表的独立核对，还发现1680年Convert号、1681年Alexander号、1685年Ann号与Charlton号、1686年Expedition号的反抗编码，均有可追踪的航次编号；这些记录仍不提供已核实的起义发生海上坐标，也不能据登船与抵岸差额判断每次起义的死者。"
       ]
     },
     {
@@ -419,7 +548,9 @@
         "SV11",
         "SV17",
         "SV26",
-        "SV27"
+        "SV27",
+        "SV29",
+        "SV30"
       ],
       "paragraphs": [
         "加勒比殖民地的奴役制度不仅迫使人工作，还持续防范人们结社、携带物品和互相传递消息。殖民官员将一些行动称为“反叛阴谋”，有时连尚未采取公开暴力的计划也会受到严厉惩罚。",
@@ -455,12 +586,14 @@
         "SV07",
         "SV08",
         "SV21",
-        "SV28"
+        "SV28",
+        "SV29",
+        "SV30"
       ],
       "paragraphs": [
         "本世纪结束时，跨大西洋人口贩运已把英格兰王室特许公司、私人船东、西非沿岸商贸、殖民地法庭与加勒比种植园连在一起。数十万人在这组船旗估计中的强迫登船记录，不是普通移民统计，而是人们被剥夺自由迁移权、身体自主权及劳动成果的记录。",
         "SlaveVoyages显示1626—1650年估计33,695人、1651—1675年122,367人、1676—1700年272,200人乘英船被迫离非洲。这些25年分期之和包括1700年，不能作为1600—1699的精确年度统计；另外，皇家非洲公司具体航次与抵岸者数量属于口径更窄的档案样本。年龄、性别、各港口来源与船内死亡案例也须按船次逐一核对。",
-        "1699年已有能辨认船名和航次的反抗：Albion Frigate号从非洲被迫装载600人；SlaveVoyages将[[1690S-E132|该船的反抗编码为“船上起义”，并记载其1699年11月22日抵达巴巴多斯]]，数据库估算抵岸250人、途中死亡350人。350为航次死亡的推算总量，不能说是该次起义杀死350人。被奴役者在船内及沿岸的反抗与山地逃亡共同构成不断争取自由的历史；而1700年及以后另一批船上起义，不可回填1699年作为本世纪已发生的事件。 学者Eric Robert Taylor另据早期文献整理，称Albion号反抗中约28名被奴役者与1名船员死亡；这一反抗冲突叙述须与数据库推算的350人全航程死亡分开标注，不能相加或当作350人全部死于起义。该书还列有Charles、Dragon与Cothrington等更早反抗，但原卷未阅，暂列核验候选，而不虚构其地图战场。"
+        "1699年已有能辨认船名和航次的反抗：Albion Frigate号从非洲被迫装载600人；SlaveVoyages将[[1690S-E132|该船的反抗编码为“船上起义”，并记载其1699年11月22日抵达巴巴多斯]]，数据库估算抵岸250人、途中死亡350人。350为航次死亡的推算总量，不能说是该次起义杀死350人。被奴役者在船内及沿岸的反抗与山地逃亡共同构成不断争取自由的历史；而1700年及以后另一批船上起义，不可回填1699年作为本世纪已发生的事件。 学者Eric Robert Taylor另据早期文献整理，称Albion号反抗中约28名被奴役者与1名船员死亡；这一反抗冲突叙述须与数据库推算的350人全航程死亡分开标注，不能相加或当作350人全部死于起义。该书还列有Charles、Dragon与Cothrington等更早反抗，但原卷未阅，暂列核验候选，而不虚构其地图战场。 同一官方2019版数据库内，按推定抵岸年1600—1699和推定英国登记船旗筛选，共有14条非空反抗编码记录，其中12条标为船上起义，2条标为从岸上袭击船只；这是有记录的样本，不能据此断言17世纪英国船只仅发生14次抵抗。2019版还编码1691年Charles号（航次99009）船上起义；此前把它仅列为二手待核候选的证据等级应上调为“官方历史航次数据库已收录，原档仍待核”。"
       ]
     }
   ],
@@ -632,6 +765,18 @@
       "label": "Eric Robert Taylor《If We Must Die》美国路易斯安那州立大学出版社2006年，附录｜1699年Albion号及Charles、Dragon、Cothrington待核事件",
       "url": "https://muse.jhu.edu/book/16586",
       "access": "university_press_catalogue_original_book_appendix_paywalled_excerpt_accessible_only_secondary_mirror"
+    },
+    {
+      "id": "SV29",
+      "label": "SlaveVoyages官方2019扩展航次数据库｜17世纪不同船旗抵抗编码、个船字段、航次编号与数据版本",
+      "url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+      "access": "official_bulk_2019_csv_downloaded_sha256_verified_by_github_actions_not_original_17c_manuscripts"
+    },
+    {
+      "id": "SV30",
+      "label": "SlaveVoyages官方2019版SPSS代码手册｜RESISTANCE 1船上起义／2岸袭船只／3岸袭小艇与NATINIMP推定船旗",
+      "url": "https://legacy.slavevoyages.org/documents/download/SPSS_Codebook_2019.pdf",
+      "access": "official_codebook_2019_text_values_verified_but_original_17c_archive_files_uninspected"
     }
   ],
   "topic_source_claims": [
@@ -813,14 +958,16 @@
         "SV22",
         "SV23",
         "SV24",
-        "SV25"
+        "SV25",
+        "SV29",
+        "SV30"
       ],
-      "original_document_page": "Hazareesingh 2025 Macmillan publisher historical extract + derivative SlaveVoyages id 99002; original ship entry unavailable, vessel name unverified. | Eltis 2000 p.172 quotes John Kastell RAC letter 1682-01-24, T70/16 f.21; UNESCO James Island 761-001 modern coordinate; original archival folio not personally inspected.",
+      "original_document_page": "Hazareesingh 2025 Macmillan publisher historical extract + derivative SlaveVoyages id 99002; original ship entry unavailable, vessel name unverified. | Eltis 2000 p.172 quotes John Kastell RAC letter 1682-01-24, T70/16 f.21; UNESCO James Island 761-001 modern coordinate; original archival folio not personally inspected. | SlaveVoyages 2019 official bulk CSV, voyage rows, 2019 resistance codebook; source citations in dataset uninspected original manuscripts",
       "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
       "publication_approval": true,
       "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
       "claim_summary": "十二、船舱中的中途航程：病痛、隔离和强迫管束",
-      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. 1688 Calabar ship name unknown; 251 boarded in study does not equal complete precise liberated list. Do not attribute to shipboard insurrection; this is attack from shore. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive."
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. 1688 Calabar ship name unknown; 251 boarded in study does not equal complete precise liberated list. Do not attribute to shipboard insurrection; this is attack from shore. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive. 2019 coded resistance counts are an edition-specific documented-case sample; never total all rebellions; NATINIMP/YEARAM imputed."
     },
     {
       "claim_id": "E6T11-C13",
@@ -875,14 +1022,16 @@
         "SV11",
         "SV17",
         "SV26",
-        "SV27"
+        "SV27",
+        "SV29",
+        "SV30"
       ],
-      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected | Istwa Nou Net 1693 America derived voyage 9706 (421/401), 1696 Adventure derived 20127 (238/186), original SlaveVoyages interactive field pages unreadable; not official original manifest.",
+      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected | Istwa Nou Net 1693 America derived voyage 9706 (421/401), 1696 Adventure derived 20127 (238/186), original SlaveVoyages interactive field pages unreadable; not official original manifest. | SlaveVoyages 2019 official bulk CSV, voyage rows, 2019 resistance codebook; source citations in dataset uninspected original manuscripts",
       "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
       "publication_approval": true,
       "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
       "claim_summary": "十六、1692年巴巴多斯：告发制度与被奴役者反抗的风险",
-      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive."
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive. 2019 coded resistance counts are an edition-specific documented-case sample; never total all rebellions; NATINIMP/YEARAM imputed."
     },
     {
       "claim_id": "E6T11-C17",
@@ -909,15 +1058,17 @@
         "SV07",
         "SV08",
         "SV21",
-        "SV28"
+        "SV28",
+        "SV29",
+        "SV30"
       ],
-      "original_document_page": "SlaveVoyages voyage 20173 page, itinerary date fields, African resistance field, number IMP and middle-passage deaths IMP. | Eric Robert Taylor LSU Press 2006 Appendix publicly catalogued at Project MUSE; third-party reproduced excerpt has Albion 28 enslaved and 1 crew killed, not independently archive-verified; 350 total voyage IMP not additional.",
+      "original_document_page": "SlaveVoyages voyage 20173 page, itinerary date fields, African resistance field, number IMP and middle-passage deaths IMP. | Eric Robert Taylor LSU Press 2006 Appendix publicly catalogued at Project MUSE; third-party reproduced excerpt has Albion 28 enslaved and 1 crew killed, not independently archive-verified; 350 total voyage IMP not additional. | SlaveVoyages 2019 official bulk CSV, voyage rows, 2019 resistance codebook; source citations in dataset uninspected original manuscripts",
       "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
       "publication_approval": true,
       "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
       "claim_summary": "十八、1699年：从估计数到完整的压迫体系",
-      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. Albion Frigate death number 350 has IMP marker and is not a revolt casualty count; 1699 arrival in Barbados is not an exact longitude of shipboard revolt. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive."
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. Albion Frigate death number 350 has IMP marker and is not a revolt casualty count; 1699 arrival in Barbados is not an exact longitude of shipboard revolt. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive. 2019 coded resistance counts are an edition-specific documented-case sample; never total all rebellions; NATINIMP/YEARAM imputed."
     }
   ],
-  "research_revision": "2026-10-25 editor12 E6-T11 slavevoyages national carrier quantitative evidence, primary archival scope NMAAHC stock certificate RAC cohorts; 18 chapters and explicit dual cohort; five new dated Atlas points and no speculative ship route or colonial sovereignty."
+  "research_revision": "2026-10-25 editor12 E6-T11 slavevoyages national carrier quantitative evidence, primary archival scope NMAAHC stock certificate RAC cohorts; 18 chapters and explicit dual cohort; five new dated Atlas points and no speculative ship route or colonial sovereignty. | 2026-10-25 Editor13: first official 2019 bulk voyage CSV checked SHA256, 14 British-flag coded resistance cases (12 insurrections / 2 shore attacks), 3,371 all-carrier rows, 1,037 British-flag rows; full case research ledger and no inferred battle points"
 }
