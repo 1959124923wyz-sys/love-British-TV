@@ -2006,6 +2006,55 @@
       "position_type": "modern_named_river_or_administrative_centre_reference",
       "representative_map_point": true,
       "map_priority": true
+    },
+    {
+      "id": "1680S-E122",
+      "research_event_id": "EDITOR12-E6T11:1680S-E122",
+      "arc_id": "ARC-ATL-TRADE",
+      "year": 1688,
+      "start_year": 1688,
+      "end_year": 1688,
+      "visible_from": 1688,
+      "date_label": "1688年",
+      "name": "卡拉巴尔非洲沿岸反抗者袭击英方贩奴船，使被囚者获得释放",
+      "historical_actor": "卡拉巴尔地区抵抗贩运的非洲人、被迫拘禁者与船长Osney记录中船名不详的英方贩奴船",
+      "historical_place": "Calabar / Old Calabar coast, present-day Nigeria; modern city reference, not exact 1688 attack site",
+      "description": "历史学家Sudhir Hazareesingh据SlaveVoyages研究记载，1688年卡拉巴尔沿岸非洲人从岸上袭击一艘载有251名被囚者的英国贩奴船，并使其获得释放。SlaveVoyages衍生条目99002称船长Osney、船名未保存、该船未抵达美洲；251为登记装船人数，不等于具有逐人姓名与命运确认的获释者名册。原数据库该ID具体页面未独立打开。现代Calabar城市坐标只代表区域，**不是袭击地点、真正战线或英国领土**。",
+      "short_description": "1688年卡拉巴尔沿岸非洲人从岸上袭击一艘载有251名被囚者的英国贩奴船并使人获释。船名及袭击准确现场未核，251并非逐人可考获释名单；现代Calabar仅用于定位。",
+      "category": "military",
+      "icon_code": "MIL",
+      "lat": 4.958931,
+      "lng": 8.32695,
+      "geography_label": "Calabar modern city, Nigeria（现代城市参考点，并非1688年海岸袭击位置）",
+      "geo_precision": "named_modern_calabar_city_reference_not_actual_1688_ship_or_shore_attack_site",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】仅导航至现代Calabar城市中心，1688年被袭英船、登陆沙洲或海岸救援战场坐标不详，不应描绘海上GPS、推测的军事范围或由此衍生英国政治控制区域。",
+      "source_ids": [
+        "1680S-S153",
+        "1680S-S154",
+        "1680S-S155"
+      ],
+      "source_access_reported": [
+        "2025_publisher_history_excerpt",
+        "slavevoyages_voyage_99002_secondary_derivative_not_primary_page_opened",
+        "geonames_modern_city_coordinates_only"
+      ],
+      "source_group": "EDITOR12",
+      "certainty": "two_secondary_records_year_coast_251_ship_unnamed_original_voyage_page_not_inspected",
+      "significance": {
+        "level": 2,
+        "rationale": "有明确1688年与卡拉巴尔地区的非洲自主解救行动，区别于同年弗吉尼亚公司垄断执法扣船",
+        "review_status": "editor12_1688_history_publisher_and_db_derived_not_verified_original_99002"
+      },
+      "editorial_status": "published_source_linked_secondary_attested_regional_event_no_exact_attack_location",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "representative_map_point": true,
+      "position_type": "nonmetric_named_island_colony_or_port_reference",
+      "geolocation_basis_zh": "GeoNames Calabar 4.958931 N, 8.32695 E：现代城市坐标代替宽泛具名地区，不表示旧卡拉巴尔河交战GPS；该事件人数来自二手史学而非实地测量",
+      "map_priority": true
     }
   ],
   "places": [],
@@ -2438,6 +2487,39 @@
       "verification_status": "editor12_20261025_museum_or_independent_reconstruction_checked",
       "evidence_read_level": "museum_timeline_or_secondary_voyage_reconstruction_not_individual_archival_folios",
       "precision_warning": "Year and island/colony only; cannot infer original vessel GPS, counted every captive, verified rebellion battle lines, or measurable human traffic density."
+    },
+    {
+      "id": "1680S-S153",
+      "title": "Sudhir Hazareesingh, Daring to Be Free (2025), publisher excerpt: Calabar 1688 African shore attack and 251 captives",
+      "publisher": "Farrar, Straus and Giroux / Macmillan Academic",
+      "url": "https://academic.macmillan.com/academictrade/9780374611071/daringtobefree/",
+      "kind": "published_historian_book_excerpt",
+      "original_source_id": "EDITOR12-E6T11:1680S-E122:historian",
+      "verification_status": "published_excerpt_20261025_book_no_original_maritime_ledger",
+      "evidence_read_level": "publisher_public_chapter_excerpt_historical_secondary_not_original_manuscript",
+      "precision_warning": "Historian's 251 persons transported does not establish exact number of named liberated survivors, vessel name, ship GPS or combat geometry."
+    },
+    {
+      "id": "1680S-S154",
+      "title": "SlaveVoyages-derived Istwanou chronology: voyage 99002, unnamed ship and captain Osney, 1688 African attack from shore",
+      "publisher": "Istwanou Haitian History (data source attributed SlaveVoyages)",
+      "url": "https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/",
+      "kind": "secondary_slavevoyages_derived_voyage_summary",
+      "original_source_id": "EDITOR12-E6T11:1680S-E122:sv_derived_99002",
+      "verification_status": "derived_entry_read_primary_individual_voyage_page_not_accessible",
+      "evidence_read_level": "secondary_data_mirror_not_official_SlaveVoyages_vessel_page",
+      "precision_warning": "Do not call unnamed ship a named ship or claim directly verified original record 99002."
+    },
+    {
+      "id": "1680S-S155",
+      "title": "GeoNames: modern Calabar city place coordinates 4.958931N 8.32695E",
+      "publisher": "GeoNames",
+      "url": "https://www.geonames.org/search.html?country=NG&q=Calabar",
+      "kind": "modern_location_gazetteer_only",
+      "original_source_id": "EDITOR12-E6T11:1680S-E122:modern_locator",
+      "verification_status": "modern_reference_coordinates_read",
+      "evidence_read_level": "modern_geonames_city_entry_not_1688_event_cartography",
+      "precision_warning": "Do not equate modern city centroid with historical Old Calabar estuary battle site."
     }
   ],
   "routes": [],
