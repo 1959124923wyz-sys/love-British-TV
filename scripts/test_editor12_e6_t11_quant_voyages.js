@@ -7,9 +7,9 @@ assert(topic?.parent_topic_id==='E6-T11'&&topic.status==='published'&&topic.publ
 assert(registry.topics.find(t=>t.id==='E6-T11').status==='research_only','individual undocumented shipboard revolt cases not automatically published');
 const article=read(topic.article_file);
 assert(article.id===topic.id&&article.schema==='atlas-major-story-v1'&&article.sections.length===18);
-assert(article.sources.length===30&&article.topic_source_claims.length===18);
+assert(article.sources.length===33&&article.topic_source_claims.length===18);
 assert(article.sections.flatMap(s=>s.paragraphs).join('').length>5800,'historical narrative must be substantive');
-const srcKeys=new Set(article.sources.map(s=>s.id));assert(srcKeys.size===30);
+const srcKeys=new Set(article.sources.map(s=>s.id));assert(srcKeys.size===33);
 assert(article.sources.every(s=>s.url.startsWith('https://')&&s.access));
 const stats=article.quantitative_summary,a=quantitative.primary_estimate;
 assert.equal(stats.rows.length,4);
@@ -63,7 +63,7 @@ for(const p of section.paragraphs){
 assert.equal((p.match(/\[\[/g)||[]).length,(p.match(/\]\]/g)||[]).length);
 for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|([^\]\n]{4,90})\]\]/g)){assert(evs.has(m[1]),'missing historical atlas target '+m[1]);markup.push(m[1]);}
 }}
-assert.equal(markup.length,24);
+assert.equal(markup.length,25);
 assert(markup.includes('1610S-E024'),'1619 White Lion and Treasurer maritime seizure links existing documented Virginia atlas event');
 assert(article.sections.find(x=>x.id==='early').source_keys.includes('SV19')&&article.sections.find(x=>x.id==='early').source_keys.includes('SV20'));
 assert(quantitative.privateering_case_1619.seized_population_precise===null&&quantitative.privateering_case_1619.existing_atlas_event_id==='1610S-E024');
@@ -120,6 +120,40 @@ assert(readerJs.includes('story-stat-census')&&readerJs.includes('censusRows'),'
 assert(article.sources.some(s=>s.id==='SV29'&&s.url===edition.dataset_url));
 assert(article.sources.some(s=>s.id==='SV30'&&s.url===edition.codebook_url));
 
+const cross=read('data/research/e6-t11-official-2019-2020-snapshot-comparison.json');
+assert(cross.schema==='e6t11-official-2019-vs-2020-snapshot-v1');
+assert.equal(cross.source_sha256['2019'],edition.source_sha256);
+assert.equal(cross.source_sha256['2020'],'39585586cb7b17cdd38cd20a1ac77fea109f7855f5ae76df19a0708a65e5bc21');
+assert.equal(cross.edition_2019.rows,3371);assert.equal(cross.edition_2020.rows,3371);
+assert.equal(cross.edition_2020.british_imputed_flag_rows,1037);
+assert.deepEqual(cross.edition_2019.british_resistance_coded,cross.edition_2020.british_resistance_coded);
+assert.deepEqual(cross.edition_2020.british_resistance_coded,{'1':12,'2':2});
+assert.equal(cross.coded_case_changes.new_2020,0);
+assert.equal(cross.coded_case_changes.removed_from_scope_2020,0);
+assert.equal(cross.coded_case_changes.still_coded,24);
+assert.equal(cross.coded_case_changes.common_changed_any_field,0);
+assert.equal(cross.all_17c_rows_diagnostic.shared_voyage_ids,3371);
+assert.equal(cross.all_17c_rows_diagnostic.changed_shared_rows_any_extracted_field,36);
+assert.deepEqual(cross.all_17c_rows_diagnostic.changed_fields_frequency,{SOURCEA:36});
+assert.equal(cross.all_17c_rows_diagnostic.shorter_exact_prefix_strings,36);
+assert.equal(stats.resistance_census_2019.crossedition_2020.sourceA_2020_prefix_truncations_in_17c_nonresistance_records,36);
+const law=read('data/research/e6-t11-jamaica-1699-coercion-dragon-vessel-evidence.json');
+assert.equal(law.jamaica_1699_law.exact_enactment_day,null);
+assert.equal(law.jamaica_1699_law.monthly_rewards_as_specified_in_statute.party_commander_pounds,6);
+assert.equal(law.jamaica_1699_law.monthly_rewards_as_specified_in_statute.sergeant_pounds,3);
+assert.equal(law.jamaica_1699_law.monthly_rewards_as_specified_in_statute.other_party_members_shillings_each,50);
+assert.equal(law.dragon_1699.exact_revolt_coordinates,null);
+assert.equal(law.dragon_1699.recorded_voyage_in_2019_2020_british_resistance_subset,false);
+assert.equal(stats.colonial_counter_resistance_law_1699.monthly_ordinary_shillings,50);
+assert(article.sources.some(s=>s.id==='SV31'&&s.url===law.jamaica_1699_law.source_url));
+assert(article.sources.some(s=>s.id==='SV32'&&s.url===law.dragon_1699.source_url));
+assert(article.sources.some(s=>s.id==='SV33'&&s.url===cross.dataset_urls['2020']));
+assert(markup.includes('1690S-E091')&&topic.event_ids.includes('1690S-E091'),'reused 1699 legal map target required; no new fabricated site');
+const sh=article.sections.find(s=>s.id==='after-1699');
+assert(sh.paragraphs.join('').includes('六英镑')&&sh.paragraphs.join('').includes('五十先令'));
+assert(sh.paragraphs.join('').includes('Dragon号')&&sh.paragraphs.join('').includes('14名'));
+assert(readerJs.includes('sameSourceHtml')&&readerJs.includes('lawHtml'),'historical quantified repressive mechanism visible in statistics panel');
+
 const ledger=read('data/research/e6-t11-resistance-case-ledger-1600-1699.json');
 assert(ledger.schema==='e6-t11-17c-ship-resistance-case-ledger-v1'&&ledger.scope.not_complete_inventory===true);
 const cases=ledger.case_records;
@@ -162,4 +196,4 @@ assert(html.includes('toLocaleString')&&css.includes('.story-statistics'));
 assert(html.includes('cohort_human_cost')&&html.includes('cost.children_pct_approx')&&html.includes('costs+'));
 assert(html.includes('resistance_case_reference')&&html.includes('specificHtml')&&html.includes('smaller')&&html.includes('verified_voyage_example')&&html.includes('dead_imputed')&&html.includes('namedHtml'),'named revolt must be shown separately from cohorts');
 assert(!html.includes('estimated_embarked/25'),'historical cohort statistics cannot become invented per-year measured events');
-console.log('PASS E6-T11: 18 chapters, 30 sources, 24 inline event links, 10 E6T11 markers and 10 nonmetric cues; 1681 105 held 34 killed 40 wounded colonial reported / 1693 America 9706 / 1696 Adventure 20127; candidate ledger and non-additive Albion revolt deaths.');
+console.log('PASS E6-T11: 18 chapters, 33 sources, 25 inline event links, 10 E6T11 markers and 10 nonmetric cues; 1681 105 held 34 killed 40 wounded colonial reported / 1693 America 9706 / 1696 Adventure 20127; candidate ledger and non-additive Albion revolt deaths.');
