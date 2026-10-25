@@ -1523,6 +1523,52 @@
       "map_priority": true
     },
     {
+      "id": "1680S-E120",
+      "research_event_id": "EDITOR11-NAVIGATION:1680S-E120",
+      "arc_id": "ARC-NAV",
+      "year": 1688,
+      "start_year": 1688,
+      "end_year": 1688,
+      "visible_from": 1688,
+      "date_label": "1688-11-05（旧历）",
+      "name": "1688年奥兰治威廉远征部队在英格兰布里克瑟姆登陆",
+      "historical_actor": "奥兰治威廉与荷兰联省及多国军队",
+      "historical_place": "Brixham/Torbay, Devon",
+      "description": "1688年威廉率远征军经海路在布里克瑟姆登陆，随后英格兰王位发生政治更替。英荷逐步成为同盟但两个国家未合并为一个行政或殖民主权体；登陆标点不提供舰队航线或各部队上岸的GPS。",
+      "short_description": "1688年威廉率远征军经海路在布里克瑟姆登陆，随后英格兰王位发生政治更替。英荷逐步成为同盟但两个国家未合并为一个行政或殖民主权体；登陆标点不提供舰队航线或各部队上岸的GPS。",
+      "category": "military",
+      "icon_code": "MIL",
+      "lat": 50.395,
+      "lng": -3.513,
+      "geography_label": "Brixham/Torbay, Devon（宽域现代参考）",
+      "geo_precision": "representative_named_modern_region_or_administrative_policy_center_not_exact_ship_position",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】布里克瑟姆现代城镇参考点；未推导登陆船只路线。不表示任何舰船精确位置、实际航线、海域主权、殖民地原住民地权、历史战线或可计量控制面积。",
+      "source_ids": [
+        "1680S-S150",
+        "1680S-S151"
+      ],
+      "source_access_reported": [
+        "official_museum_statute_or_archive_institutional_full_record_read",
+        "official_museum_statute_or_archive_institutional_full_record_read"
+      ],
+      "source_group": "EDITOR11",
+      "certainty": "institutional_sourced_historical_event_with_nonmetric_map_reference",
+      "significance": {
+        "level": 2,
+        "review_status": "editor11_navigation_acts_wars_official_source_review_20261025"
+      },
+      "editorial_status": "published_institutional_history_or_primary_statute_reference_location_only",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "position_type": "nonmetric_named_area_or_legislation_policy_reference",
+      "representative_map_point": true,
+      "geolocation_basis_zh": "布里克瑟姆现代城镇参考点；未推导登陆船只路线",
+      "map_priority": true
+    },
+    {
       "id": "1680S-E022",
       "research_event_id": "A:1689-DERRY-SIEGE",
       "arc_id": "ARC-IRL-REL",
@@ -2314,6 +2360,28 @@
       "evidence_read_level": "official_archaeological_historic_sources_and_academic_biography_read",
       "verification_status": "editor9_acadia_documented_source",
       "precision_warning": "Modern geographic proxy rather than a surveyed 17th century boundary, fort footprint, or army position"
+    },
+    {
+      "id": "1680S-S150",
+      "title": "UK Parliament, invasion and desertion 1688",
+      "publisher": "UK Parliament",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/invasiondesertion/",
+      "kind": "official_institutional_event_or_enacted_statute",
+      "evidence_read_level": "published_full_institutional_text_or_museum_record_read",
+      "original_source_id": "EDITOR11:NAVIGATION:20261025:1680S-E120:1",
+      "verification_status": "editor11_20261025_institutional_source_read_not_full_original_case_file",
+      "precision_warning": "Institutional source supports dated event, not GPS fleet routes, original battle front, sea sovereignty, imperial trade quantities or Indigenous land title."
+    },
+    {
+      "id": "1680S-S151",
+      "title": "UK National Archives, Glorious Revolution sources",
+      "publisher": "UK National Archives",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/glorious-revolution/",
+      "kind": "official_institutional_event_or_enacted_statute",
+      "evidence_read_level": "published_full_institutional_text_or_museum_record_read",
+      "original_source_id": "EDITOR11:NAVIGATION:20261025:1680S-E120:2",
+      "verification_status": "editor11_20261025_institutional_source_read_not_full_original_case_file",
+      "precision_warning": "Institutional source supports dated event, not GPS fleet routes, original battle front, sea sovereignty, imperial trade quantities or Indigenous land title."
     }
   ],
   "routes": [],
