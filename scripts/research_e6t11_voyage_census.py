@@ -13,7 +13,16 @@ import json
 from pathlib import Path
 
 INTERESTING_IDS = {9706, 20127, 20173, 99002}
-FIELDS = ("VOYAGEID", "YEARAM", "YEARDEP", "SHIPNAME", "CAPTAIN", "RESIST", "NATINIMP", "SLAMIMP")
+CODEBOOK = "https://legacy.slavevoyages.org/documents/download/SPSS_Codebook_2019.pdf"
+RESISTANCE_CODES = {
+    1: "Slave insurrection",
+    2: "Vessel attacked from shore",
+    3: "Vessel's boats attacked from shore",
+    4: "Cut-off (meaning unclear)",
+    5: "Three or more enslaved persons jumping overboard, missing or escaped",
+    6: "Insurrection planned, but thwarted",
+}
+PUBLIC_FIELDS = ("VOYAGEID","SHIPNAME","CAPTAINA","CAPTAINB","YEARDEP","YEARAF","YEARAM","NATIONAL","NATINIMP","RESISTANCE","TSLAVESP","TSLAVESD","SLAXIMP","SLAMIMP","VYMRTIMP","SOURCEA","SOURCEB","SOURCEC")
 
 def maybe_int(value):
     try:
@@ -37,6 +46,9 @@ def analyze(p):
         num_17c = 0
         year_counts = collections.Counter()
         resist_values = collections.Counter()
+        flags = collections.Counter()
+        inventory = []
+        british_arrival_count = 0
         for row in reader:
             year = maybe_int(row.get(year_field))
             vid = maybe_int(row.get(id_field))
@@ -45,6 +57,17 @@ def analyze(p):
             if year is not None and 1600 <= year <= 1699:
                 num_17c += 1
                 year_counts[str(year)] += 1
+                if maybe_int(row.get("NATINIMP")) == 7:
+                    british_arrival_count += 1
+                resistance_code = maybe_int(row.get("RESISTANCE"))
+                if resistance_code is not None:
+                    flags[str(row.get("NATINIMP","")).strip()] += 1
+                    inventory.append({
+                        "fields": {k: (row.get(k) or "").strip() or None for k in PUBLIC_FIELDS if k in names},
+                        "resistance_code_2019": resistance_code,
+                        "resistance_code_label_2019": RESISTANCE_CODES.get(resistance_code,"UNDEFINED CODE - REVIEW"),
+                        "is_british_2019_imputed_flag": maybe_int(row.get("NATINIMP")) == 7
+                    })
                 for field in resistance_keys:
                     raw = (row.get(field) or "").strip()
                     if raw:
@@ -60,7 +83,12 @@ def analyze(p):
         "year_window_semantics": "Based on YEARAM if present; not all departures and arrivals within 1600-1699",
         "resistance_field_value_frequencies_uninterpreted": dict(resist_values),
         "specific_voyage_rows": sample,
-        "disclaimer": "NOT a census of all crossings, NOT mortality, NOT verified insurrection counts. Missing and coded values require codebook."
+        "codebook_2019": CODEBOOK,
+        "resistance_code_values": RESISTANCE_CODES,
+        "british_flag_arrival_year_1600_1699_rows": british_arrival_count,
+        "coded_resistance_rows_by_imputed_flag": dict(flags),
+        "coded_resistance_case_rows": inventory,
+        "disclaimer": "Snapshot voyage records with YEARAM (imputed arrival) 1600-1699, not all traffic estimates. 1 means recorded insurrection, 2/3 shore actions. An empty code is not proof that resistance did not occur. Missing quantities must not be turned into mortality or rebellion deaths."
     }
 
 def main():
