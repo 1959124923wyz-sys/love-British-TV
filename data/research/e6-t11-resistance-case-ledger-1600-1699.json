@@ -1,6 +1,6 @@
 {
   "schema": "e6-t11-17c-ship-resistance-case-ledger-v1",
-  "updated": "2026-10-25 Editor13 official 2019 source batch",
+  "updated": "2026-10-25 Editor14 official 2020 SPSS cross-edition, Bristol Museums 1699 Dragon and UNB 1699 Jamaican law",
   "scope": {
     "years": [
       1600,
@@ -15,7 +15,8 @@
     "B": "Voyage-level derived SlaveVoyages result publicly visible, official voyage ID but interactive original page not field-readable from this audit",
     "C": "Academic chronology reproduced outside authorized book access; bibliographic publisher Project MUSE confirms book and appendix, but original source archive not inspected",
     "research_only": "Do not plot until dated and place-located with sufficient independent basis; unresolved vessel identity and name variants documented separately",
-    "B_2019_official_bulk": "Official SlaveVoyages 2019 expanded CSV directly downloaded and checksum verified; recorded vessel/RESISTANCE code directly visible, but contemporaneous SOURCEA archival folios not read and database may have imputed year, flag and population."
+    "B_2019_official_bulk": "Official SlaveVoyages 2019 expanded CSV directly downloaded and checksum verified; recorded vessel/RESISTANCE code directly visible, but contemporaneous SOURCEA archival folios not read and database may have imputed year, flag and population.",
+    "B_2020_official_compared": "Official SlaveVoyages 2020 SPSS version directly downloaded with SHA256; 2019/2020 same edited research database family, so not an independent 17th-century contemporary written witness"
   },
   "case_records": [
     {
@@ -175,7 +176,18 @@
       "reported_killed_enslaved": 7,
       "reported_killed_crew": 2,
       "reference": "Taylor 2006 Appendix; Tattersfield pp.282-284",
-      "warning": "A period scholarly compiled chronology, independent dated primary ship record not checked"
+      "warning": "Museum publication directly supports 1699 Dragon revolt at African coast, but its captain, exact action date, boarded population, 7+2 alleged dead, and original sources remain unresolved. Cannot infer deaths from 14 belonging to owners on arrival. Not included in the 2019/2020 14-code sample and must not be added to its numerator as if present in dataset.",
+      "resistance_confirmed_in_institutional_museum_secondary": true,
+      "bristol_museum_url": "https://www.discoveringbristol.org.uk/slavery/routes/places-involved/britain/south-west-ports/",
+      "bristol_museum_description": "Topsham voyage in 1699; enslaved people rebelled on board while off African coast; original Topsham owners' share recorded as 14 enslaved people upon Caribbean arrival after another RAC factor placed additional people aboard; museum says cargo originally valued GBP400 (not adjusted to 2026).",
+      "competing_captain_attributions": [
+        "Henry Taylor (secondary Taylor 2006 Appendix citing Tattersfield 1991)",
+        "Christopher Butcher (another trade-ports historical note citing Tattersfield 1991)"
+      ],
+      "voyage_record_in_official_2019_2020_coded_subset": false,
+      "alleged_7_enslaved_and_2_crew_revolt_deaths_original_report_examined": false,
+      "exact_revolt_coordinate": null,
+      "grade_for_rebellion_occurrence": "B_institutional_museum"
     },
     {
       "year": 1699,
@@ -188,6 +200,21 @@
       "possible_liberation": true,
       "reference": "Taylor 2006 Appendix; TNA T70/1434",
       "warning": "A question-marked outcome, vessel spelling and archival record unresolved; forbid publication as proven successful liberation"
+    },
+    {
+      "year": 1683,
+      "name": "Trompeuse",
+      "voyage_id": 21557,
+      "official_2019_2020_resistance_code": 1,
+      "official_imputed_national_flag_code": 7,
+      "captain_from_database": "Hamlin, Jean",
+      "competing_identity": "UC Press historical account identifies Jean Hamlin as French pirate captain of La Trompeuse at St Thomas in 1683; complex captured/renamed warship history",
+      "source_urls": [
+        "https://publishing.cdlib.org/ucpressebooks/public/book/a-buccaneer-s-atlas-basil-ringrose-s-south-sea-waggoner.html",
+        "https://istwanou.net/entry/1683-insurrection-aboard-the-trompeuse-bound-for-st-thomas-voyage-21557/"
+      ],
+      "grade": "B_official_code_but_imputed_nationality_identity_requires_crosscheck",
+      "warning": "Flag NATINIMP 7 only is an imputation; should not classify ship as definitively British-owned throughout the whole voyage or independently commanded by the Crown. No battle GPS or casualty attribution."
     }
   ],
   "excluded_after_1699": [
@@ -233,6 +260,24 @@
       "title": "SlaveVoyages 2019 expanded voyage CSV, RESISTANCE, NATINIMP and YEARAM; checksum verified on GitHub Actions",
       "url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
       "read_level": "Official edited 2019 dataset snapshot 22,182,700 bytes SHA256 3fbad142356e30a4662c7f455321d19b70d79770cfa0397278894bb9ae36096f. Historical archival records referenced, not personally read."
+    },
+    {
+      "id": "OFFICIAL-2020-SPSS",
+      "title": "SlaveVoyages expanded 2020 SPSS historical database",
+      "url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2020.sav",
+      "read_level": "Official dataset compared across 3,371 shared voyages; 24 coded resistance unchanged vs 2019; 36 SOURCEA strings in 2020 SPSS clipped to strict prefixes, older 2019 CSV should be cited for complete text."
+    },
+    {
+      "id": "BRISTOL-DRAGON-1699",
+      "title": "Bristol Museums PortCities, The South West Ports of England",
+      "url": "https://www.discoveringbristol.org.uk/slavery/routes/places-involved/britain/south-west-ports/",
+      "read_level": "Institutional historical summary confirms the Dragon 1699 shipboard revolt and 14 people on behalf of original Topsham owners; not an original ship log, no precise battle at sea."
+    },
+    {
+      "id": "UNB-JAMAICA-1699",
+      "title": "University of New Brunswick, Jamaica 1699 suppression law in 1716 printed compilation",
+      "url": "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1699",
+      "read_level": "Public full legal transcription read; law date inexact, 6/3 pounds and 50 shillings monthly statutory compensation, no proof actual payments."
     }
   ],
   "audit_guards": [
@@ -243,6 +288,9 @@
     "1689 Osney unresolved potential duplication with 1688",
     "1701 Don Carlos excluded",
     "No vessel track, territorial polygons or measured British land area",
-    "Official 2019 bulk CSV establishes *coded* resistance for 14 Great Britain flagged records, NOT total uprising prevalence; 1689 Osney potential duplication remains."
+    "Official 2019 bulk CSV establishes *coded* resistance for 14 Great Britain flagged records, NOT total uprising prevalence; 1689 Osney potential duplication remains.",
+    "2019 and 2020 are successive formats from same historiographical database, not independent original witnesses; 2020 SOURCEA can truncate citations.",
+    "Dragon 1699 uprising attested by Bristol Museums, despite absent in 14 code sample, so NEVER claim sample exhausts 17th-century resistance.",
+    "1699 Jamaica law authorized monthly fees plus booty, not proof of actual total spending; map via existing Spanish Town administrative reference E091."
   ]
 }
