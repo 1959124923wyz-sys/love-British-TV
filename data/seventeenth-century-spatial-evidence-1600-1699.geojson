@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 164,
+    "feature_count": 173,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -29,7 +29,8 @@
     "carolina_e6t09_20261024": "15 year-scoped atlas-backed source cues; 1663/1665 claims, 1669 proposed constitution, 1675 native deed, 1690 law disallowed and 1696 new law separately; no real British territorial polygons.",
     "hbc_editor9_20261024": "16 Atlas-linked nonmetric point events; 1670 London royal claim has no territorial polygon; 1686 three specific French captures and 1694, 1696, 1697 York Fort handover are separate year-specific evidence cues.",
     "acadia_editor9_20261024": "20 year-scoped historical map anchors; 1605 original Port-Royal Habitation 44.71146,-65.60947 is distinct from 1629 Charles Fort/modern Fort Anne 44.74185,-65.51861; no sovereign occupation polygons or area measurements.",
-    "editor10_newfoundland_20261024": "14 per-year institutional-source-linked Newfoundland point symbols; 1612 Beothuk exchange and piracy separated; 1694 Ferryland defence/1696 fall, 1662 French Plaisance and 1699 Westminster statute separate; original Cupids and St John's Atlas targets reused. No sea tracks or island sovereignty polygon."
+    "editor10_newfoundland_20261024": "14 per-year institutional-source-linked Newfoundland point symbols; 1612 Beothuk exchange and piracy separated; 1694 Ferryland defence/1696 fall, 1662 French Plaisance and 1699 Westminster statute separate; original Cupids and St John's Atlas targets reused. No sea tracks or island sovereignty polygon.",
+    "editor11_navigation_20261025": "Nine nonmetric year-scoped source-attested events for legislation, diplomacy, Dutch-English sea battles and 1688 landing; no ocean ownership or ship routes."
   },
   "features": [
     {
@@ -6426,6 +6427,343 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Source-attested modern named geographical reference, fixed screen-pixel symbol NOT a measured seventeenth-century territory, indigenous land boundary, exact battlefield, home or actual shipping route. ",
         "geometry_precision": "modern_named_locality_proxy_not_exact_seventeenth_century_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1650s-e120",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "英荷共和国签署第一次英荷战争终结的威斯敏斯特和约",
+        "start_year": 1654,
+        "display_through_year": 1654,
+        "display_kind": "local_governance",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "1654年英荷达成威斯敏斯特和平安排，结束1652—1654年第一次英荷战争；没有把北海和海峡转为英方领海，英方的航海限制也不能被假定全面废止。",
+        "summary_zh": "1654年英荷达成威斯敏斯特和平安排，结束1652—1654年第一次英荷战争；没有把北海和海峡转为英方领海，英方的航海限制也不能被假定全面废止。",
+        "source_urls": [
+          "https://www.huygens.knaw.nl/en/resources/bescheiden-uit-vreemde-archieven-omtrent-de-groote-nederlandsche-zeeoorlogen-1652-1676-2/",
+          "https://www.rmg.co.uk/collections/library/rmgl-2198"
+        ],
+        "related_event_ids": [
+          "1650S-E120"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1660s-e120",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1663年鼓励贸易法进一步要求特定欧洲货物经英港进入殖民地",
+        "start_year": 1663,
+        "display_through_year": 1663,
+        "display_kind": "economic_network",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "英格兰1663年继续限制殖民贸易链的承运与中转港口，此处概述经英格兰转口的法律政策，实施范围仍应按商品与法条例外逐件核对，不是实地绘制海上航线。",
+        "summary_zh": "英格兰1663年继续限制殖民贸易链的承运与中转港口，此处概述经英格兰转口的法律政策，实施范围仍应按商品与法条例外逐件核对，不是实地绘制海上航线。",
+        "source_urls": [
+          "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/importexport/keydates/",
+          "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/importexport/overview/navigationlaws/"
+        ],
+        "related_event_ids": [
+          "1660S-E120"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1660s-e121",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2,
+          52
+        ]
+      },
+      "properties": {
+        "name": "1666年英荷舰队在南部北海展开四日海战",
+        "start_year": 1666,
+        "display_through_year": 1666,
+        "display_kind": "military_impact",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "1666年6月英荷在南部北海激战四日，两国多艘舰只受损或沉没，战况复杂。皇家格林尼治博物馆的馆藏说明提供战争分期，但非实测海战航迹或舰艇坐标；此点仅为宽域画面入口。",
+        "summary_zh": "1666年6月英荷在南部北海激战四日，两国多艘舰只受损或沉没，战况复杂。皇家格林尼治博物馆的馆藏说明提供战争分期，但非实测海战航迹或舰艇坐标；此点仅为宽域画面入口。",
+        "source_urls": [
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-11780"
+        ],
+        "related_event_ids": [
+          "1660S-E121"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1670s-e120",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.67,
+          52.33
+        ]
+      },
+      "properties": {
+        "name": "1672年英法联合舰队与荷兰海军发生索尔湾海战",
+        "start_year": 1672,
+        "display_through_year": 1672,
+        "display_kind": "military_impact",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "1672年索尔湾海战双方均宣称取胜，但英舰Royal James毁于荷兰火船；该海战为三次英荷战争之一的具名海岸战区，并非英方或荷方新领海。",
+        "summary_zh": "1672年索尔湾海战双方均宣称取胜，但英舰Royal James毁于荷兰火船；该海战为三次英荷战争之一的具名海岸战区，并非英方或荷方新领海。",
+        "source_urls": [
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-1115587"
+        ],
+        "related_event_ids": [
+          "1670S-E120"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1670s-e121",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.8,
+          53.05
+        ]
+      },
+      "properties": {
+        "name": "1673年特塞尔海战挫败英法联军对荷兰舰队的攻击意图",
+        "start_year": 1673,
+        "display_through_year": 1673,
+        "display_kind": "military_impact",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "特塞尔海战中，荷兰舰队阻止英法对其海军造成预期毁灭性打击；皇家格林尼治博物馆说明双方均无大型军舰被明确俘获或摧毁，不得从单场交战推算荷兰已取得固定北海主权。",
+        "summary_zh": "特塞尔海战中，荷兰舰队阻止英法对其海军造成预期毁灭性打击；皇家格林尼治博物馆说明双方均无大型军舰被明确俘获或摧毁，不得从单场交战推算荷兰已取得固定北海主权。",
+        "source_urls": [
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-11808"
+        ],
+        "related_event_ids": [
+          "1670S-E121"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1670s-e122",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1674年英荷签署威斯敏斯特和约终止第三次英荷战争",
+        "start_year": 1674,
+        "display_through_year": 1674,
+        "display_kind": "local_governance",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "1674年《威斯敏斯特和约》结束第三次英荷战争并为北美殖民地归属安排外交基础；纽约实际政权交接延至11月，法律签署日不等于各据点实控变更日。",
+        "summary_zh": "1674年《威斯敏斯特和约》结束第三次英荷战争并为北美殖民地归属安排外交基础；纽约实际政权交接延至11月，法律签署日不等于各据点实控变更日。",
+        "source_urls": [
+          "https://history.nycourts.gov/legal-history-by-era/colonial-new-york-under-british-rule/",
+          "https://www.rmg.co.uk/collections/library/rmgl-2198"
+        ],
+        "related_event_ids": [
+          "1670S-E122"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1680s-e120",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.513,
+          50.395
+        ]
+      },
+      "properties": {
+        "name": "1688年奥兰治威廉远征部队在英格兰布里克瑟姆登陆",
+        "start_year": 1688,
+        "display_through_year": 1688,
+        "display_kind": "military_impact",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "1688年威廉率远征军经海路在布里克瑟姆登陆，随后英格兰王位发生政治更替。英荷逐步成为同盟但两个国家未合并为一个行政或殖民主权体；登陆标点不提供舰队航线或各部队上岸的GPS。",
+        "summary_zh": "1688年威廉率远征军经海路在布里克瑟姆登陆，随后英格兰王位发生政治更替。英荷逐步成为同盟但两个国家未合并为一个行政或殖民主权体；登陆标点不提供舰队航线或各部队上岸的GPS。",
+        "source_urls": [
+          "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/invasiondesertion/",
+          "https://www.nationalarchives.gov.uk/education/resources/glorious-revolution/"
+        ],
+        "related_event_ids": [
+          "1680S-E120"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1690s-e120",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1695年《种植园贸易法》立法加强跨殖民港口运送稽查",
+        "start_year": 1695,
+        "display_through_year": 1695,
+        "display_kind": "economic_network",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "英国立法网站列为Plantation Trade Act 1695, 7&8 Will III c22；但条文包含1698年3月25日之后开始适用的货运规则，法律题名与个别条款生效不得混为同一年。",
+        "summary_zh": "英国立法网站列为Plantation Trade Act 1695, 7&8 Will III c22；但条文包含1698年3月25日之后开始适用的货运规则，法律题名与个别条款生效不得混为同一年。",
+        "source_urls": [
+          "https://www.legislation.gov.uk/aep/Will3/7-8/22/enacted"
+        ],
+        "related_event_ids": [
+          "1690S-E120"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1690s-e121",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1247,
+          51.4995
+        ]
+      },
+      "properties": {
+        "name": "1695年《种植园贸易法》部分殖民船运限制自1698年3月25日适用",
+        "start_year": 1698,
+        "display_through_year": 1698,
+        "display_kind": "economic_network",
+        "label_type": "英荷海战与航海法规具名现代参考点／像素虚线（非航迹与法定领海）",
+        "description": "1695年法案原始文本写明特定船舶建造、所有权及航运资格限制从1698年3月25日之后适用；不意味着英方在这一天新控制海洋、全境殖民地或所有港口。",
+        "summary_zh": "1695年法案原始文本写明特定船舶建造、所有权及航运资格限制从1698年3月25日之后适用；不意味着英方在这一天新控制海洋、全境殖民地或所有港口。",
+        "source_urls": [
+          "https://www.legislation.gov.uk/aep/Will3/7-8/22/enacted"
+        ],
+        "related_event_ids": [
+          "1690S-E121"
+        ],
+        "related_story_ids": [
+          "E6-T14-NAV"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Sourced administrative law centre or named modern coastal reference for year-scoped event. Fixed screen-pixel marker, not an attested historic fleet position, 17th-century navigation route, historic sea/frontier polygon, trading ship trajectory or political territorial claim.",
+        "geometry_precision": "modern_named_policy_site_or_coastal_area_proxy_not_original_battle_georeference",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
