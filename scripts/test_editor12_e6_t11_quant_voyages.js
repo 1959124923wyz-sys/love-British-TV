@@ -28,6 +28,15 @@ assert.equal(stats.cohort.recorded_embarked-stats.cohort.recorded_disembarked,st
 assert.equal(stats.second_cohort.people_transported_low,90000);
 assert.equal(stats.second_cohort.people_transported_high,100000);
 assert.equal(stats.second_cohort.avg_voyages_per_year,23);
+const human=quantitative.human_cost_cohort_1680_1692,front=stats.cohort_human_cost;
+assert.equal(human.male_pct_approx,58);assert.equal(human.children_pct_approx,14);
+assert.equal(human.children_age_threshold_years,10);assert.equal(human.historical_jamaica_prime_male_sale_price_gbp_average,18.73);
+assert.deepEqual([front.male_pct_approx,front.children_pct_approx,front.historical_jamaica_prime_male_sale_price_gbp_average],[58,14,18.73]);
+assert(front.warning.includes('不能据此算出精确人数')&&front.warning.includes('不是皇家非洲公司的纯利润')===false);
+assert(front.warning.includes('公司净利润'));assert(front.warning.includes('所有人的均价'));
+assert(article.sections.find(x=>x.id==='cohort-1680').paragraphs.join('').includes('十岁及以下儿童约占14%'));
+assert(article.sections.find(x=>x.id==='cohort-1680').paragraphs.join('').includes('18.73英镑'));
+
 assert(stats.cohort.period==='1680—1692'&&stats.second_cohort.period==='1673—1688');
 assert(quantitative.data_governance.ship_count_not_inferred_from_population===true);
 const atlas=new Map(),evs=new Map();
@@ -73,5 +82,6 @@ const html=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8'),
 css=fs.readFileSync(path.join(root,'css/history-stories.css'),'utf8');
 assert(html.includes('quantitativeHistoryHtml(article)')&&html.includes('story-stat-table'));
 assert(html.includes('toLocaleString')&&css.includes('.story-statistics'));
+assert(html.includes('cohort_human_cost')&&html.includes('cost.children_pct_approx')&&html.includes('costs+'));
 assert(!html.includes('estimated_embarked/25'),'historical cohort statistics cannot become invented per-year measured events');
 console.log('PASS E6-T11: 18 chapters, 18 source files, 18 links, 5 new sourced events, 5 cues and 1 real-endpoints-only reference; exact original estimate table + 279 distinct RAC cohort voyages / 19341 difference; no annual false precision.');
