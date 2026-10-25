@@ -48,7 +48,7 @@ assert(story.sections.find(s=>s.id==='constitution').paragraphs.join(' ').includ
 assert(story.sources.some(s=>s.url.includes('americanhistory.si.edu')));
 assert(story.sources.some(s=>s.url.includes('avalon.law.yale.edu')));
 const pts=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson'),areas=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(pts.features.length,164);assert.equal(areas.features.length,29);
+assert.equal(pts.features.length,173);assert.equal(areas.features.length,30);
 const group=pts.features.filter(x=>x.properties.related_story_ids?.includes('E6-T09-CAR'));assert.equal(group.length,15);
 for(const f of group){let e=all.get(f.properties.related_event_ids[0]);assert(e);
  assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);

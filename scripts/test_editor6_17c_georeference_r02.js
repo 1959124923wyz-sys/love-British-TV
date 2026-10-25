@@ -48,10 +48,10 @@ for(let d=1600;d<=1690;d+=10){
  }
  assert(Object.keys(assignments).every(id=>events.some(e=>e.id===id)),'mapping cannot point to missing event');
 }
-assert.equal(used.size,428);
+assert.equal(used.size,437);
 assert.equal(newRefs,219);
 assert.equal(originalRefs,48);
-assert.equal(round3Refs,160,'original 109 R03/R04 points, six Jamaica events and seven editor9 New York and nine Carolina and five Hudson Bay and twelve Acadia/Port Royal evidence-backed representative events, while 219 R02 remain fixed');
+assert.equal(round3Refs,169,'original 109 R03/R04 points, six Jamaica events and seven editor9 New York and nine Carolina and five Hudson Bay and twelve Acadia/Port Royal evidence-backed representative events, while 219 R02 remain fixed');
 assert.equal(unmapped,1);
 assert.equal(admin+regional,219);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
