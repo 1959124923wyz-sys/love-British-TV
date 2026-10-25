@@ -5,12 +5,12 @@ const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.
 const g=json('data/seventeenth-century-regional-studies-1600-1699.geojson');
 assert.equal(g.type,'FeatureCollection');
 assert.equal(g.metadata.schema,'atlas-17c-regional-studies-v1');
-assert.equal(g.features.length,31);
+assert.equal(g.features.length,32);
 assert.equal(g.features.filter(f=>f.geometry.type==='Polygon').length,24);
-assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,7);
+assert.equal(g.features.filter(f=>f.geometry.type==='LineString').length,8);
 assert.equal(g.metadata.total_confirmed_historical_control_polygons,0);
 const existing=json('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
-assert.equal(existing.features.length,181,'17C site-level layer includes Jamaica and earlier 17C cues');
+assert.equal(existing.features.length,186,'17C site-level layer includes Jamaica and earlier 17C cues');
 const ids=new Set,evs=new Map();
 for(let y=1600;y<=1690;y+=10){
  let atlas=json('data/atlas-'+y+'-'+(y+9)+'.json');

@@ -49,8 +49,8 @@ assert(art.sections.find(x=>x.id==='second').paragraphs.join('').includes('1699å
 assert(!a.events.some(x=>x.year===1699&&x.name.includes('1700å¹´')&&x.research_event_id?.startsWith('EDITOR10-DARIEN')),'do not misdate 1700 siege');
 const sites=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 const areas=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(sites.features.length,181);assert.equal(sites.metadata.feature_count,181);
-assert.equal(areas.features.length,31);assert.equal(areas.metadata.feature_count,31);
+assert.equal(sites.features.length,186);assert.equal(sites.metadata.feature_count,186);
+assert.equal(areas.features.length,32);assert.equal(areas.metadata.feature_count,32);
 let pts=sites.features.filter(x=>x.properties.related_story_ids?.includes(art.id));assert.equal(pts.length,8);
 for(let f of pts){let e=events.get(f.properties.related_event_ids[0]);assert(e);
  assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);assert(f.properties.start_year===e.year&&f.properties.display_through_year===e.year);

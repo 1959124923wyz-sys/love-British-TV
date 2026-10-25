@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 181,
+    "feature_count": 186,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -31,7 +31,8 @@
     "acadia_editor9_20261024": "20 year-scoped historical map anchors; 1605 original Port-Royal Habitation 44.71146,-65.60947 is distinct from 1629 Charles Fort/modern Fort Anne 44.74185,-65.51861; no sovereign occupation polygons or area measurements.",
     "editor10_newfoundland_20261024": "14 per-year institutional-source-linked Newfoundland point symbols; 1612 Beothuk exchange and piracy separated; 1694 Ferryland defence/1696 fall, 1662 French Plaisance and 1699 Westminster statute separate; original Cupids and St John's Atlas targets reused. No sea tracks or island sovereignty polygon.",
     "editor11_navigation_20261025": "Nine nonmetric year-scoped source-attested events for legislation, diplomacy, Dutch-English sea battles and 1688 landing; no ocean ownership or ship routes.",
-    "darien_editor10_20261025": "Eight Guna/Scottish/Spanish source-linked modern named cues at only 1698 and 1699; national CIA gazetteer bay center nonmetric, includes July 1699 abandonment and November recolonization separated, no Scottish land-area polygon."
+    "darien_editor10_20261025": "Eight Guna/Scottish/Spanish source-linked modern named cues at only 1698 and 1699; national CIA gazetteer bay center nonmetric, includes July 1699 abandonment and November recolonization separated, no Scottish land-area polygon.",
+    "e6_t11_editor12_20261025": "5 explicitly year-gated sourced action cues for 1668 escape, 1675 colonial executions, 1688 seized slaving ships, 1694 Hannibal mortality and 1698 Bristol Beginning; no annual counts inferred from 25-year estimates; no territorial area."
   },
   "features": [
     {
@@ -7069,6 +7070,191 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Modern named center fixed screen-pixel cue, NOT 1698 Scottish fort survey, indigenous Guna land perimeter, historic sea GPS, local battle boundary or island sovereignty. CIA gazetteer Caledonia Bay 8°55N,77°42W is regional proxy only.",
         "geometry_precision": "modern_bay_town_or_port_reference_not_historic_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1660s-e122",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.29,
+          18.01
+        ]
+      },
+      "properties": {
+        "name": "牙买加“洛比起义”后约200名非洲人逃往山地",
+        "start_year": 1668,
+        "display_through_year": 1668,
+        "display_kind": "military_impact",
+        "label_type": "已证17世纪被奴役者抵抗、航次死亡或奴役贸易垄断执法·现代地区参考",
+        "description": "布里斯托尔历史博物馆17世纪奴役时间表记载，1668年牙买加发生被称为“洛比起义”（Lobby's rebellion）的抵抗，约200名非洲人逃往岛上山地。来源未给出准确逃离路线或山地定居点，本地图只采用现代牙买加岛级参考中心；不能将该概数当正式人口登记，也不把殖民官员的叙述当作全部抵抗者的自我陈述。",
+        "summary_zh": "布里斯托尔历史博物馆17世纪奴役时间表记载，1668年牙买加发生被称为“洛比起义”（Lobby's rebellion）的抵抗，约200名非洲人逃往岛上山地。来源未给出准确逃离路线或山地定居点，本地图只采用现代牙买加岛级参考中心；不能将该概数当正式人口登记，也不把殖民官员的叙述当作全部抵抗者的自我陈述。",
+        "source_urls": [
+          "https://www.discoveringbristol.org.uk/slavery/timeline/17th-century/"
+        ],
+        "related_event_ids": [
+          "1660S-E122"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Museum-source-dated historic action with a modern named island/colony/port fixed screen-pixel, NOT surveyed seventeenth-century resistance area, actual quay, human death coordinate, ship course, slave-count spatial raster or polygon.",
+        "geometry_precision": "modern_named_island_colony_or_port_not_historical_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1670s-e123",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.29,
+          18.01
+        ]
+      },
+      "properties": {
+        "name": "牙买加当局以涉嫌策划反抗为由处死35名被奴役者",
+        "start_year": 1675,
+        "display_through_year": 1675,
+        "display_kind": "military_impact",
+        "label_type": "已证17世纪被奴役者抵抗、航次死亡或奴役贸易垄断执法·现代地区参考",
+        "description": "布里斯托尔历史博物馆时间表记载，1675年牙买加殖民当局处决35名被奴役非洲人，指控他们策划反抗。35是档案转述的处决人数，不是当年被奴役总人口、实际起义死亡数或必然已实施的武装行动。资料未给出每位被处死者的姓名和地点，因此仅标岛级参考位置。",
+        "summary_zh": "布里斯托尔历史博物馆时间表记载，1675年牙买加殖民当局处决35名被奴役非洲人，指控他们策划反抗。35是档案转述的处决人数，不是当年被奴役总人口、实际起义死亡数或必然已实施的武装行动。资料未给出每位被处死者的姓名和地点，因此仅标岛级参考位置。",
+        "source_urls": [
+          "https://www.discoveringbristol.org.uk/slavery/timeline/17th-century/"
+        ],
+        "related_event_ids": [
+          "1670S-E123"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Museum-source-dated historic action with a modern named island/colony/port fixed screen-pixel, NOT surveyed seventeenth-century resistance area, actual quay, human death coordinate, ship course, slave-count spatial raster or polygon.",
+        "geometry_precision": "modern_named_island_colony_or_port_not_historical_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1680s-e121",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.7075,
+          37.2707
+        ]
+      },
+      "properties": {
+        "name": "布里斯托尔商船Society与Betty在弗吉尼亚因违反皇家非洲公司垄断而被扣押",
+        "start_year": 1688,
+        "display_through_year": 1688,
+        "display_kind": "local_governance",
+        "label_type": "已证17世纪被奴役者抵抗、航次死亡或奴役贸易垄断执法·现代地区参考",
+        "description": "布里斯托尔历史博物馆记录，1688年运载被奴役非洲人与象牙的商船Society在弗吉尼亚遭扣押并宣告没收，另有布里斯托尔Betty号因违反皇家非洲公司独占权而被扣。此为垄断经营下的货物和船舶司法截夺，不是1688年英国政府禁止奴隶运输或解放乘船者；确切审判码头未核。",
+        "summary_zh": "布里斯托尔历史博物馆记录，1688年运载被奴役非洲人与象牙的商船Society在弗吉尼亚遭扣押并宣告没收，另有布里斯托尔Betty号因违反皇家非洲公司独占权而被扣。此为垄断经营下的货物和船舶司法截夺，不是1688年英国政府禁止奴隶运输或解放乘船者；确切审判码头未核。",
+        "source_urls": [
+          "https://www.discoveringbristol.org.uk/slavery/timeline/17th-century/"
+        ],
+        "related_event_ids": [
+          "1680S-E121"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Museum-source-dated historic action with a modern named island/colony/port fixed screen-pixel, NOT surveyed seventeenth-century resistance area, actual quay, human death coordinate, ship course, slave-count spatial raster or polygon.",
+        "geometry_precision": "modern_named_island_colony_or_port_not_historical_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1690s-e130",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.614,
+          13.096
+        ]
+      },
+      "properties": {
+        "name": "Hannibal号抵巴巴多斯：被迫跨洋者约320至328人途中死亡",
+        "start_year": 1694,
+        "display_through_year": 1694,
+        "display_kind": "economic_network",
+        "label_type": "已证17世纪被奴役者抵抗、航次死亡或奴役贸易垄断执法·现代地区参考",
+        "description": "1694年Hannibal号运送自维达（Ouidah）购买及拘禁的非洲人前往巴巴多斯；Bristol Radical History Group据Thomas Phillips船长事后记述报告约328名非洲人在横渡中死亡（约47%），另有学术文献摘录记约320人死亡、约700人原计划装运。人数有版本/阶段口径差别，**不得将其中任一整数当全航次经逐人点名核验结果**；本点只为巴巴多斯现代岛级抵达参考。",
+        "summary_zh": "1694年Hannibal号运送自维达（Ouidah）购买及拘禁的非洲人前往巴巴多斯；Bristol Radical History Group据Thomas Phillips船长事后记述报告约328名非洲人在横渡中死亡（约47%），另有学术文献摘录记约320人死亡、约700人原计划装运。人数有版本/阶段口径差别，**不得将其中任一整数当全航次经逐人点名核验结果**；本点只为巴巴多斯现代岛级抵达参考。",
+        "source_urls": [
+          "https://www.brh.org.uk/site/project/the-hannibal-slave-ship/"
+        ],
+        "related_event_ids": [
+          "1690S-E130"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Museum-source-dated historic action with a modern named island/colony/port fixed screen-pixel, NOT surveyed seventeenth-century resistance area, actual quay, human death coordinate, ship course, slave-count spatial raster or polygon.",
+        "geometry_precision": "modern_named_island_colony_or_port_not_historical_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1690s-e131",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.588,
+          51.4545
+        ]
+      },
+      "properties": {
+        "name": "布里斯托尔商船Beginning在自由参与非洲贩奴新制度下开航牙买加",
+        "start_year": 1698,
+        "display_through_year": 1698,
+        "display_kind": "economic_network",
+        "label_type": "已证17世纪被奴役者抵抗、航次死亡或奴役贸易垄断执法·现代地区参考",
+        "description": "布里斯托尔历史博物馆记录，1698年Royal African Company独占权开放后，布里斯托尔商船Beginning成为其获准组织的奴隶贩运航次之一，从非洲运输被奴役者前往牙买加。档案提要未给出航程中某一天的全员点名、准确登陆码头或完整非洲登船港口，不能凭地名自行画精确英国—非洲—牙买加海路。",
+        "summary_zh": "布里斯托尔历史博物馆记录，1698年Royal African Company独占权开放后，布里斯托尔商船Beginning成为其获准组织的奴隶贩运航次之一，从非洲运输被奴役者前往牙买加。档案提要未给出航程中某一天的全员点名、准确登陆码头或完整非洲登船港口，不能凭地名自行画精确英国—非洲—牙买加海路。",
+        "source_urls": [
+          "https://www.discoveringbristol.org.uk/slavery/timeline/17th-century/"
+        ],
+        "related_event_ids": [
+          "1690S-E131"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Museum-source-dated historic action with a modern named island/colony/port fixed screen-pixel, NOT surveyed seventeenth-century resistance area, actual quay, human death coordinate, ship course, slave-count spatial raster or polygon.",
+        "geometry_precision": "modern_named_island_colony_or_port_not_historical_survey",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,

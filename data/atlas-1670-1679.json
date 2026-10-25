@@ -1791,6 +1791,51 @@
       "map_priority": true
     },
     {
+      "id": "1670S-E123",
+      "research_event_id": "EDITOR12-E6T11:1670S-E123",
+      "arc_id": "ARC-ATL-TRADE",
+      "year": 1675,
+      "start_year": 1675,
+      "end_year": 1675,
+      "visible_from": 1675,
+      "date_label": "1675年",
+      "name": "牙买加当局以涉嫌策划反抗为由处死35名被奴役者",
+      "historical_actor": "牙买加被奴役非洲人、殖民司法及种植园当局",
+      "historical_place": "Jamaica island (modern island administrative reference)",
+      "description": "布里斯托尔历史博物馆时间表记载，1675年牙买加殖民当局处决35名被奴役非洲人，指控他们策划反抗。35是档案转述的处决人数，不是当年被奴役总人口、实际起义死亡数或必然已实施的武装行动。资料未给出每位被处死者的姓名和地点，因此仅标岛级参考位置。",
+      "short_description": "布里斯托尔历史博物馆时间表记载，1675年牙买加殖民当局处决35名被奴役非洲人，指控他们策划反抗。35是档案转述的处决人数，不是当年被奴役总人口、实际起义死亡数或必然已实施的武装行动。资料未给出每位被处死者的姓名和地点，因此仅标岛级参考位置。",
+      "category": "military",
+      "icon_code": "MIL",
+      "lat": 18.01,
+      "lng": -77.29,
+      "geography_label": "Jamaica island (modern island administrative reference)（现代地区参考位置，不是史实精确现场）",
+      "geo_precision": "representative_modern_named_island_colony_or_port_not_historic_survey",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】仅为年代及地理具名地区参考，不能表示真实航线、船只GPS、起义准确战场、被奴役者原住处或实际占领疆界，不表示任何测量人数的具体位置。",
+      "source_ids": [
+        "1670S-S154"
+      ],
+      "source_access_reported": [
+        "published_museum_or_archival_research_assessed"
+      ],
+      "source_group": "EDITOR12",
+      "certainty": "museum_attested_regional_annual_event_not_surveyed_exact",
+      "significance": {
+        "level": 2,
+        "rationale": "17世纪英国船旗跨洋强制迁移、垄断法律、殖民地反抗及人命损失的关键记录，含可核概数而非推估全岛实控面积",
+        "review_status": "editor12_quant_voyages_museum_source_20261025"
+      },
+      "editorial_status": "published_primary_or_museum_source_checked_region_proxy",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "representative_map_point": true,
+      "position_type": "nonmetric_named_island_colony_or_port_reference",
+      "geolocation_basis_zh": "现代具名殖民岛、区域行政中心或出港城市参考，史料未说明事件精确点，非被奴役者实际地理行动精确测绘",
+      "map_priority": true
+    },
+    {
       "id": "1670S-E020",
       "research_event_id": "B:B019",
       "arc_id": "ARC-NA-LAND",
@@ -4439,6 +4484,17 @@
       "original_source_id": "EDITOR11:NAVIGATION:20261025:1670S-E122:2",
       "verification_status": "editor11_20261025_institutional_source_read_not_full_original_case_file",
       "precision_warning": "Institutional source supports dated event, not GPS fleet routes, original battle front, sea sovereignty, imperial trade quantities or Indigenous land title."
+    },
+    {
+      "id": "1670S-S154",
+      "title": "Bristol Museums / Discovering Bristol 1675 Jamaica 35 enslaved people executed for alleged rebel conspiracy",
+      "publisher": "Bristol Museums / Bristol Radical History Group (per source)",
+      "url": "https://www.discoveringbristol.org.uk/slavery/timeline/17th-century/",
+      "kind": "institutional_museum_history_or_archival_voyage_reconstruction",
+      "original_source_id": "EDITOR12-E6T11:1670S-E123",
+      "verification_status": "editor12_20261025_museum_or_independent_reconstruction_checked",
+      "evidence_read_level": "museum_timeline_or_secondary_voyage_reconstruction_not_individual_archival_folios",
+      "precision_warning": "Year and island/colony only; cannot infer original vessel GPS, counted every captive, verified rebellion battle lines, or measurable human traffic density."
     }
   ],
   "routes": [],
