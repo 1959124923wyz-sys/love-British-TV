@@ -110,3 +110,15 @@
 - 读者表格逐条显示数据库IMP估计人数，缺失字段为“未核实”；所有被奴役者人命差额不得自动称死亡、反抗牺牲或解救。对于只有船次有据而起义海上位置未知的事件，**先归入研究账本，不能把出海、抵岸港定位为战斗现场、不能画GPS曲线或英国领土Polygon**。
 
 复核闸口：`node scripts/test_editor12_e6_t11_quant_voyages.js` 校验官方CSV提取SHA、原本18章/30源、14条英旗码值和前端表格，`python3 scripts/browser_editor12_e6_t11_quant_voyages.py` 在1780px桌面校验原25年人口估算表、14船折叠表、点击年轴、地图移动、双击与返回。**这只核查可证的研究子样本，E6-T11父级仍为research_only**。
+
+## 九、官方2019／2020航次版次、档案来源截短与殖民镇压法令（2026-10-25）
+
+[PR #246](https://github.com/1959124923wyz-sys/love-British-TV/pull/246) 首次用SlaveVoyages官方2019扩展CSV与2020 SPSS源文件作逐航次版本比较，严格依据`YEARAM=1600..1699`推定抵岸年与`NATINIMP=7`推定英国船旗，两个版本皆为全旗3,371条、英旗1,037条、英国推定旗船上起义码1共12条、岸袭船码2共2条。24条全部船旗的具抵抗编码船只在15个抽取字段完全不变。**相邻两个版本来自同一历史数据编纂工程，不能称互相独立的17世纪船籍原件核实；未编码不等于无反抗，14也不是所有实际反抗总次数。**
+
+进一步逐船对比3,371条ID与主要字段，发现2020 SPSS的**36个`SOURCEA`卷页来源字符串被截成2019 CSV来源的真前缀**，没有发现其他此次抽取字段内容变化。复制原始档案索引必须优先保留**较完整的2019字段**，不能用2020版较短字符串臆造完整页码。全部36件对比及双文件SHA256见[永久数据](../../../data/research/e6-t11-official-2019-2020-snapshot-comparison.json)，复现工具`scripts/research_e6t11_compare_editions.py`。
+
+在1699年，牙买加[UNB所刊法规转录](https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1699)写明为追捕逃亡及反抗奴役的人：指挥官月薪£6、军士月薪£3、普通成员每月50先令，另有掠获激励。原文见1716年法律汇编，**1699年内具体颁布日未知**，法定津贴不能误作为实际总支出。另见两名获得有条件自由者Cornelius与Sawcy的**前奴役者**补偿£35与£30，不是给已获释者的解放金。正文跳转已存Atlas `1690S-E091` 的殖民行政机关参考位置，**不得由法律适用推造山区镇压实际范围或英国新殖民地地块**。
+
+[Bristol Museums历史介绍](https://www.discoveringbristol.org.uk/slavery/routes/places-involved/britain/south-west-ports/)另记录1699年Topsham商船`Dragon`在非洲海岸发生船上反抗，原船东最后仅有14名被奴役者在巴巴多斯由其出售（另有皇家非洲公司代理人在同船载人）。**这不是整艘船幸存者总数，也不证明其他人必定死于起义**。该事不在SlaveVoyages 2019／2020英旗14件有编码集合中，强化“数据库观察下限”规则。Dragon船长另有Henry Taylor与Christopher Butcher两种二手记载，未读Tattersfield历史原卷前不做确证，也不画海上交战点或GPS航行线。`Trompeuse`（数据库2019/2020英旗推定码7）因Jean Hamlin在1683年法国海盗船史记载存在严重船籍归属风险，不可将推定代码偷换成稳定英王控制或公司隶属。
+
+详见[本轮研究交接](../../../docs/research/EDITOR14_E6_T11_2020_CROSS_EDITION_AND_1699_COERCION_20261025.md)与[结构化法律及Dragon证据](../../../data/research/e6-t11-jamaica-1699-coercion-dragon-vessel-evidence.json)。新增文章采用18章、33项来源、25处正文地图内链；维持旧十六世纪点击定位、双击、返回、控制/影响区域分隔及严格 GIS 审核。父级E6-T11继续`research_only`。
