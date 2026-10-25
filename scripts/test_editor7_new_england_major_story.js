@@ -42,7 +42,7 @@ assert(story.sources.some(x=>x.url==='https://www.nps.gov/rowi/learn/historycult
 assert(story.sources.some(x=>x.url==='https://www.colonialsociety.org/node/1397'));
 const points=read('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 const regions=read('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(points.features.length,173);assert.equal(regions.features.length,30);
+assert.equal(points.features.length,181);assert.equal(regions.features.length,31);
 const indigenous=points.features.filter(f=>f.properties.related_story_ids?.includes('E6-T06'));
 assert.equal(indigenous.length,10,'new story source-attested geography cues must not silently shrink');
 for(const p of indigenous){
