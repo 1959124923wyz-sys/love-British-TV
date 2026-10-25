@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 188,
+    "feature_count": 191,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -7331,6 +7331,118 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Source-year dated region reference as fixed screen-pixel, never actual battle location, accurate ship ocean track, historic boundary or metric occupation radius.",
         "geometry_precision": "named_region_or_arrival_port_proxy_not_original_insurrection_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1680s-e123",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.3613528,
+          13.3176417
+        ]
+      },
+      "properties": {
+        "name": "冈比亚詹姆斯堡105名被囚者集体反抗，殖民方报告34人死亡、40人受伤",
+        "start_year": 1681,
+        "display_through_year": 1681,
+        "display_kind": "military_impact",
+        "label_type": "有史料记载的被囚者抵抗 · 遗址或抵岸地区导航点，不是战场精确坐标",
+        "description": "历史学家David Eltis《The Rise of African Slavery in the Americas》（剑桥大学出版社，2000年，第172页）引录皇家非洲公司驻詹姆斯岛人员John Kastell于1682年1月24日致公司的信。信中称1681年11月24日岛上有105名男性被囚者集体反抗，驻站方在镇压中杀死34人、击伤40人；这属于殖民方事后陈述，不是完整独立遇害名册。英国国家档案馆原卷T70/16第21叶见作者注26，未在本轮独立翻看。地图使用UNESCO遗址761-001现代James Island组件坐标，不是1681年的室内冲突GPS、实际死亡位置或英国控制区边界。",
+        "summary_zh": "1681年11月24日皇家非洲公司冈比亚詹姆斯堡105名非洲男性被囚者集体反抗，殖民方称镇压造成34人死、40人伤。数字系RAC驻站者事后自述，非独立死亡名册；遗址坐标不是精确冲突位置。",
+        "source_urls": [
+          "https://www.youreintheknow.net/wp-content/uploads/2020/02/Eltis-The-Rise-of-African-Slavery-in-the-Americas-2000.pdf",
+          "https://whc.unesco.org/en/list/761/maps/"
+        ],
+        "related_event_ids": [
+          "1680S-E123"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published year-specific historical resistance and named region/site reference as a fixed screen-pixel marker; NOT a measured revolt location, passage GPS, cadastral area, or political control zone.",
+        "geometry_precision": "modern_unesco_site_or_arrival_island_not_1681_or_ship_revolt_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1690s-e133",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.29,
+          18.01
+        ]
+      },
+      "properties": {
+        "name": "America号1693年冈比亚至牙买加航次发生船上反抗",
+        "start_year": 1693,
+        "display_through_year": 1693,
+        "display_kind": "military_impact",
+        "label_type": "有史料记载的被囚者抵抗 · 遗址或抵岸地区导航点，不是战场精确坐标",
+        "description": "SlaveVoyages衍生逐航次网页登记，英国旗America号（航次ID9706）1693年从冈比亚方向强迫登船421人、在牙买加抵岸401人，反抗栏标注船上起义，船长为John Brome。该结果仅于衍生公开网页逐栏可读，原SlaveVoyages交互页面当前无法提取具体字段，未宣称直接读过原始数据库或卷宗。两数差额20人不能在缺乏死亡字段核证时写成20名被杀害者。某学者叛乱时间表将Brome写在船名栏，当前衍生航次数据将Brome识别为船长而America为船名；不能以此重复制造两起叛乱。只显示牙买加现代抵岸地区参考点，绝不是船上起义海域。",
+        "summary_zh": "1693年America号（SlaveVoyages衍生航次9706）记发生船上起义，421人被迫登船、401人抵牙买加。20人两栏差额不能直接当作船上反抗死亡；Brome按衍生条目是船长。",
+        "source_urls": [
+          "https://istwanou.net/entry/1693-insurrection-aboard-the-america-bound-for-jamaica-voyage-9706/"
+        ],
+        "related_event_ids": [
+          "1690S-E133"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published year-specific historical resistance and named region/site reference as a fixed screen-pixel marker; NOT a measured revolt location, passage GPS, cadastral area, or political control zone.",
+        "geometry_precision": "modern_unesco_site_or_arrival_island_not_1681_or_ship_revolt_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1690s-e134",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.614,
+          13.096
+        ]
+      },
+      "properties": {
+        "name": "Adventure号1696年黄金海岸至巴巴多斯航次发生船上反抗",
+        "start_year": 1696,
+        "display_through_year": 1696,
+        "display_kind": "military_impact",
+        "label_type": "有史料记载的被囚者抵抗 · 遗址或抵岸地区导航点，不是战场精确坐标",
+        "description": "SlaveVoyages衍生逐航次页面记录英国旗Adventure号（航次ID20127）由黄金海岸强迫登船238人、1696年抵巴巴多斯186人，反抗类别为船上起义，船长Samuel Shering（学者时间表作Sherring）。238与186差额52人并非经过核实的死者数，不能说起义中52人被杀；原SlaveVoyages互动页本轮不能直接读取人员字段，保留衍生证据等级。巴巴多斯现代岛点只用于抵岸关联，起义具体年月日和实际航海位置不详。",
+        "summary_zh": "1696年Adventure号（SlaveVoyages衍生航次20127）船上起义。记录238人被迫从黄金海岸登船、186人抵巴巴多斯；52人差额不是已证的死者或起义伤亡。",
+        "source_urls": [
+          "https://istwanou.net/entry/1696-insurrection-aboard-the-adventure-bound-for-barbados-voyage-20127/"
+        ],
+        "related_event_ids": [
+          "1690S-E134"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Published year-specific historical resistance and named region/site reference as a fixed screen-pixel marker; NOT a measured revolt location, passage GPS, cadastral area, or political control zone.",
+        "geometry_precision": "modern_unesco_site_or_arrival_island_not_1681_or_ship_revolt_survey",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
