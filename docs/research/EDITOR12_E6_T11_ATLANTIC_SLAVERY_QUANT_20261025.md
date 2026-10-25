@@ -72,3 +72,13 @@
 海岸攻击与船内起义要在史类上区分；海上航程中死亡（IMP）与起义镇压中死亡绝不混记。1688只以GeoNames现代Calabar城市中心作为具名区域导航参照（4.958931 N, 8.32695 E），不是岸上交战位置；1699只以巴巴多斯岛既有现代参考点示意**抵岸**，绝非起义发生经纬度。没有可靠国界/殖民主权边线，相关空间面积均为null。参考 [GeoNames Calabar](https://www.geonames.org/search.html?country=NG&q=Calabar)。后续待挖原船航次99002原始编目、Charles 1691与 Dragon 1699 等证据，不能把本轮两项研究冒充17世纪全量反抗船次统计。
 
 **年代闸口：** 被后世文本出版于1732年的Don Carlos号反抗，另据[Eric Robert Taylor《If We Must Die》](https://books.google.com/books?id=ciBfDwAAQBAJ)附录对应1701年1月5日，不纳入1600—1699故事地图。出版年代、发生年代与故事时间界限必须分开。
+
+## 10. 1681年冈比亚詹姆斯堡反抗与1693/1696具名起义航次（2026-10-25，第三轮）
+
+**公开研究证据等级升级，研究样本不冒充全量。** David Eltis（剑桥大学出版社2000年）[《The Rise of African Slavery in the Americas》第7章第172页](https://www.youreintheknow.net/wp-content/uploads/2020/02/Eltis-The-Rise-of-African-Slavery-in-the-Americas-2000.pdf)引录皇家非洲公司驻冈比亚詹姆斯堡员工John Kastell于1682年1月24日致公司的原信：1681年11月24日岛上105名**被囚男性**集体反抗，殖民方报告镇压中**34人死亡、40人受伤**。作者原始档案注为英国国家档案馆**T70/16，第21叶**。已经阅读可公开访问的出版书页和脚注，**未翻阅国家档案馆该卷原件**。这不是船上起义，也不能与1680—1692 RAC跨洋差额19341、1699 Albion航程死亡350相加。[UNESCO世遗名录761-001 James Island](https://whc.unesco.org/en/list/761/maps/)给出现代遗址点 N13°19′3.51″、W16°21′40.87″，只定位James Fort原岛所在，不把当代遗址保护面积当17世纪皇家非洲公司占地，更不能将其当死亡准确GPS。
+
+**1693年America（SlaveVoyages ID9706）：** [Istwa Nou Net逐航次公开转录](https://istwanou.net/entry/1693-insurrection-aboard-the-america-bound-for-jamaica-voyage-9706/)记英国旗、John Brome船长、冈比亚登船421人、抵牙买加401人及船上起义。**1696年Adventure（ID20127）：** [逐航次转录](https://istwanou.net/entry/1696-insurrection-aboard-the-adventure-bound-for-barbados-voyage-20127/)记英国旗、Samuel Shering船长、黄金海岸登船238人、抵巴巴多斯186人及船上起义。官方SlaveVoyages单船动态URL可访问但文本抓取不到各字段，因此此轮只标 **SlaveVoyages衍生逐航次公开条目（二级证据）**，**不声称直接核读原始数据库或单船日志**。421−401=20、238−186=52只是两个字段之间的差额，**没有经过证据核实的海上死亡率/起义战斗死亡数**。Eric Robert Taylor时间表将1693年“Brome”列在船名栏，但此处衍生航次称Brome为America船长，须视作潜在名称混淆，不能凭此记录拆出第二条船次。
+
+**1699年Albion伤亡进一步分层：** Eric Robert Taylor的[2006年路易斯安那州立大学出版社学术著作](https://muse.jhu.edu/book/16586)附录以Dow等历史资料概称该次反抗约有**28名被奴役者与1名船员死亡**。出版社书目和附录位置可由Project MUSE独立核实；这些数值目前来源于非出版社的附录文本转录（[二次文本位置](https://www.studocu.com/en-us/document/fred-t-korematsu-middle-school/us-history/taylor-appendix-chronology-of-shipboard-slave-revolts-1509-1865/147658507)），未宣称看过原始航次日志。二次叛乱死者**不能再与航次数据库推算的350个全航程死亡相加**。有待进一步查T70/349、Dow原书；否则只标核查中，绝不升格为已审核实际全部死亡。
+
+未达公开地图闸口但已分类存研究清单：**1691 Charles**（17名被奴役者死亡，据Taylor引用T70/11 p69）、**1699 Dragon**（7名被奴役者与2船员死亡，据Tattersfield）、**1699 Cothrington**（可能获得自由，但学术编者打问号，T70/1434卷未核）、以及Taylor的1689年Osney记录与1688年Calabar Osney是否同一事件的**重复统计风险**。先不画、不可合并为定量总数。[结构化待考账本](../../../data/research/e6-t11-resistance-case-ledger-1600-1699.json)记来源、证据等级、船名、死亡口径及映射条件。
