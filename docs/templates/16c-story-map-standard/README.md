@@ -65,3 +65,15 @@
 **否决：** 只有漂亮纯文字而没有段落内地图跳转；把地名包络当英王实控；公司交易变成殖民主权；引用来源而无法追踪主张；胡乱制造船舶航迹/伤亡数据；16世纪已有点击/缩放/年轴回归失败。
 
 > 与仓库现有`docs/MAP_FIRST_CARTOGRAPHY_STANDARD.md`、`docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md`、`docs/APPROVED_MAP_INTERACTION_STANDARD.md`、`docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md`共同执行。出现解释差异以史实及已批准UI规范为准，并记录主编裁定。
+
+## 五、数量叙事与海上截掠的新版验收样例（2026-10-25）
+
+17世纪已发表的 [E6-T11-VOYAGES 长篇](../../../data/stories/serial/e6-t11-atlantic-slave-voyages-quant-resistance.json) 和 [来源分母与研究约束](../../../data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json) 为本16世纪制作范式追加**跨时段统计**的审核实例；它们不修改16世纪既有历史结论。
+
+- SlaveVoyages 的1601—1700年 Great Britain 船旗类别428,262人是**估计从非洲被强制登船的人数**，统计区间含1700年，不是1600—1699年精确人数、抵岸人数或航次数。25年汇总只进入文章显著列明来源的统计表，**不可**除以25推造逐年点线。
+- 皇家非洲公司1680—1692年的279航次、84,498登船、65,157抵岸及差额19,341与1673—1688年另一组公司估算有时间交叉，不能相加；样本差额不能一律解释为被杀害的人数。年龄、性别比例来自部分航次样本，儿童约14%、男性约58%，不能伪装全体个人名单。
+- 特定人群的历史售价（如研究中1680—1692牙买加某类别约£18.73）是特定历史时期和交易类别的估价证据，不代表所有人的均价、当代币值，更不是公司的净利润。
+- 1619年 White Lion 与 Treasurer 在海上劫夺葡萄牙贩奴船上的非洲人，随后在弗吉尼亚交易，属于**中途截掠与继续贩卖**，不是英船自非洲始发的同口径登记，也不是救援。可链接既存 Atlas `1610S-E024` 的 Point Comfort 参考点，不能为坎佩切湾强填精确交战坐标或沿途船舶轨迹。
+- 非洲海岸的贸易联系、欧洲王室特许和抵达美洲的私人暴利**均不构成整个地区的英王主权面**。数量和贸易关系不得用于推出Polygon或面积；对于没有史料还原的船上起义，要记录为待研究而不是凭概率生成具名航次。
+
+参考出处、原始界限、检查方式记录于 [E6-T11审稿与交接](../../../docs/research/EDITOR12_E6_T11_ATLANTIC_SLAVERY_QUANT_20261025.md)；任何未来更新必须同时重跑 `scripts/test_editor12_e6_t11_quant_voyages.js` 与 `scripts/browser_editor12_e6_t11_quant_voyages.py`，并确认既有16世纪地图交互无回退。
