@@ -1,0 +1,47 @@
+name: Editor10 Darien Guna Scottish Overseas Colony History QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/atlas-1690-1699.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/test_editor10_darien_story.js'
+      - 'scripts/browser_editor10_darien_story.py'
+      - '.github/workflows/editor10-darien-story.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/atlas-1690-1699.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'scripts/test_editor10_darien_story.js'
+      - 'scripts/browser_editor10_darien_story.py'
+jobs:
+  scottish-charter-guna-treaty-and-year-gated-desktop-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify institutional sources real Atlas links and Guna independence
+        run: |
+          node --check scripts/test_editor10_darien_story.js
+          node scripts/test_editor10_darien_story.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          node scripts/test_editor6_17c_batch01.js
+          node scripts/test_editor6_17c_georeference_r02.js
+          node scripts/test_editor7_17c_regional_studies.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install desktop Selenium
+        run: pip install selenium
+      - name: Check 1780px Scottish/Guna story annual pan and archive return
+        run: |
+          python -m http.server 8765 &
+          python3 scripts/browser_editor10_darien_story.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor10-darien-guna-scottish-story-desktop-evidence
+          path: browser-smoke-results/editor10-darien-*.png
