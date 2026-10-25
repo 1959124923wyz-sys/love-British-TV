@@ -1,0 +1,775 @@
+{
+  "schema": "atlas-major-story-v1",
+  "id": "E6-T11-VOYAGES",
+  "title": "1600—1699年英格兰跨大西洋人口奴役：运输人数、利润、死亡与反抗",
+  "subtitle": "约42.8万人被迫登船的1601—1700模型区间；皇家非洲公司具体航次、海上囚禁、巴巴多斯和牙买加的殖民剥削与抵抗",
+  "region": "英格兰及布里斯托尔、黄金海岸与几内亚湾、巴巴多斯、牙买加、弗吉尼亚",
+  "start_year": 1600,
+  "end_year": 1699,
+  "historical_end_year": null,
+  "parent_serial_topic_id": "E6-T11",
+  "predecessor_story_ids": [],
+  "successor_story_ids": [],
+  "related_story_ids": [
+    "E6-T13",
+    "E6-T07-BARBADOS",
+    "E6-T08",
+    "E6-T05"
+  ],
+  "related_event_ids": [
+    "1610S-E021",
+    "1620S-E018",
+    "1660S-E006",
+    "1660S-E047",
+    "1660S-E024",
+    "1670S-E007",
+    "1660S-E122",
+    "1670S-E018",
+    "1670S-E123",
+    "1680S-E121",
+    "1690S-E024",
+    "1690S-E130",
+    "1690S-E017",
+    "1690S-E057",
+    "1690S-E131"
+  ],
+  "reading_note": "官方SlaveVoyages 1601—1700英船旗25年估算合计428262被强制登船，包含1700年，不是1600—1699精确数。RAC 1680—92子样本279航次/84498登船/65157抵岸/19341差额与NMAAHC 1673—88 90000—100000人/约23年航次属不同重叠来源，不可相加。Hannibal约320—328死亡源间存在计数差别；1694既有Atlas事件不得不经确证改归RAC。",
+  "map_note": "25年统计只展示文章定量证据表，绝不冒充逐年事件点或真实动态运量；具年史事显示现代地名参考点。无实测船舶航迹、起义作战区、西非被劫掠范围或英王跨洋主权面；面积null。",
+  "editorial_status": "published_source_linked_approved",
+  "publication_approval": true,
+  "lead": "跨大西洋贩卖被奴役非洲人，是一项有船只、资本、合同、武力、殖民法和大量人命损失的系统性事业。SlaveVoyages估计1601—1700年约42.8万人在英国船旗分类下被迫从非洲登船，这个数字包括1700年，并非17世纪末某一年的精确统计。英格兰王室公司与私人商人争夺利润，船上的人却承受拘禁和疾病，美洲种植园则用法律维持强迫劳动。与此同时，人们在海上、沿岸和山地不断寻找逃离与自决的机会。",
+  "quantitative_summary": {
+    "title": "跨大西洋奴役贸易的可核人数",
+    "unit": "人",
+    "measure": "估计被迫从非洲登船人数（不是航次数、抵岸人数或公司的净利润）",
+    "carrier": "Great Britain（SlaveVoyages数据库船旗类别）",
+    "source_url": "https://legacy.slavevoyages.org/assessment/estimates",
+    "source_label": "SlaveVoyages 官方估算表（25年区间）",
+    "period_note": "统计完整区间为1601—1700年，包含1700年；正式历史地图本篇聚焦1600—1699年，不能把合计当地图年窗精确值。1601—1625显示0为该数据库英船旗分类估算结果，不代表无人涉入其他船旗贩运。",
+    "rows": [
+      {
+        "period": "1601—1625",
+        "embarked": 0,
+        "all_carriers_embarked": 352844
+      },
+      {
+        "period": "1626—1650",
+        "embarked": 33695,
+        "all_carriers_embarked": 315050
+      },
+      {
+        "period": "1651—1675",
+        "embarked": 122367,
+        "all_carriers_embarked": 488065
+      },
+      {
+        "period": "1676—1700",
+        "embarked": 272200,
+        "all_carriers_embarked": 719675
+      }
+    ],
+    "total": {
+      "period": "1601—1700",
+      "embarked": 428262,
+      "all_carriers_embarked": 1875634
+    },
+    "cohort": {
+      "period": "1680—1692",
+      "operator": "皇家非洲公司部分航次（另一个来源及年代样本）",
+      "documented_voyages": 279,
+      "recorded_embarked": 84498,
+      "recorded_disembarked": 65157,
+      "embarked_minus_disembarked": 19341,
+      "source_url": "https://www.brh.org.uk/site/articles/edward-colston-research-paper-1/",
+      "warning": "这是公司航次子样本的登船与抵岸差额，约22.9%；与船旗总估算及史密森尼1673—1688年RAC人数重叠，不可相加或外推全世纪死亡率。"
+    },
+    "second_cohort": {
+      "period": "1673—1688",
+      "operator": "皇家非洲公司（史密森尼估计）",
+      "people_transported_low": 90000,
+      "people_transported_high": 100000,
+      "avg_voyages_per_year": 23,
+      "source_url": "https://transcription.si.edu/projects/nmaahc/29682",
+      "warning": "年度平均航次数不等于精确全公司航次总数；不能与重叠时期统计相加。"
+    }
+  },
+  "sections": [
+    {
+      "id": "early",
+      "heading": "一、1600—1625年：英商尚未成为跨洋人口贩运的主力",
+      "period_start_year": 1600,
+      "period_end_year": 1625,
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV10"
+      ],
+      "paragraphs": [
+        "十七世纪初，大西洋上的非洲人口贩运主要由葡萄牙与西班牙殖民贸易网络经营；西非沿海既有各自的政治组织和市场，也存在战争、掳掠与被迫出卖。英格兰商人虽然在上一个世纪便涉入贩运，1618年国王又[[1610S-E021|特许伦敦非洲贸易冒险者商团]]，但一次王室授予的贸易许可既不是持续跨洋航运的证明，也不意味着英方控制了非洲海岸。",
+        "SlaveVoyages的船旗估算在1601—1625年英格兰／英国这一栏为零，而同期全部船旗合计估计约35.3万人被迫登船。这里的零是研究模型在该特定分类和年段中的数值，不能用来断言英商个人、经他国船只转运的被奴役者或更早年代的活动不存在。",
+        "当时的海上货舱可能载有欧洲纺织品、金属器、酒和火器，被奴役者的转运又依赖沿海囚禁地点和海外殖民市场。后来英格兰商人进入这一网络，逐步建立的不是一条与非洲社会隔绝的新航路，而是借战争、交易、海军和殖民法规扩张的一整套跨洋强制迁移事业。"
+      ]
+    },
+    {
+      "id": "growth-1626",
+      "heading": "二、1626—1650年：约三万余人被英船强制运离非洲",
+      "period_start_year": 1626,
+      "period_end_year": 1650,
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV10"
+      ],
+      "paragraphs": [
+        "巴巴多斯在[[1620S-E018|英格兰定居者建立殖民据点]]以后，种植园农业逐渐改变了土地与劳动力安排。甘蔗和烟草等产品需要繁重的长期劳动，欧洲商人从美洲殖民地市场看到贩卖被奴役非洲人的商机。",
+        "SlaveVoyages估算1626—1650年英船旗从非洲强制登船的人数为33,695，同期全球各船旗合计315,050。与大西洋整体规模相比，英格兰此时仍非最大承运方，却已由零散冒险转向与海外殖民需求相连的持续商业组织。",
+        "这个人数统计的是被迫登上奴隶贸易船只的人，而不是最终活着抵达美洲的居民；它也不能替我们计算每个家庭被拆散的人数。大洋彼岸船主买卖人口得来的金钱，与殖民地被迫劳动产出的糖和烟草形成循环，生产者本人却不拥有决定自己航程、工作或报酬的自由。"
+      ]
+    },
+    {
+      "id": "plantations",
+      "heading": "三、糖业、公司与强迫劳动：美洲需求如何反过来推动贩运",
+      "period_start_year": 1630,
+      "period_end_year": 1660,
+      "source_keys": [
+        "SV02",
+        "SV03",
+        "SV10",
+        "SV17"
+      ],
+      "paragraphs": [
+        "糖的收获和熬制需要持续投入大量人手，制糖厂房、农田、磨坊和运货港口必须相互配合。英格兰投资者和种植园主希望依靠可以买卖、可强制长期劳动的人，保持蔗糖、糖蜜和相关贸易品的供应。",
+        "种植园生产并不会自然地生成工人。殖民者将大量非洲人通过商贸船只强行移到加勒比，并把土地占有、法律和种族化身份制度结合。[[1660S-E006|巴巴多斯后来制定的1661年奴役法]]，正是把惩戒、搜捕和限制流动等做法写入殖民法条的例子。",
+        "这种制度使船东、投资者、货商、运输人员和种植园主获得不同形式的收益，而被奴役的人须在强迫下劳动并面对家属被分开出售的风险。非洲海岸的贸易关系、跨洋船运与美洲农场不是互不相干的三段故事，而是相互强化的剥削链条。"
+      ]
+    },
+    {
+      "id": "middle-century",
+      "heading": "四、1651—1675年：英船旗强制运输人数上升至约十二万",
+      "period_start_year": 1651,
+      "period_end_year": 1675,
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV08"
+      ],
+      "paragraphs": [
+        "十七世纪中叶，英格兰共和国及复辟后的斯图亚特王室都试图扩大航运、殖民贸易与海军力量。牙买加1655年被英军夺取后，被奴役劳动的需求也随种植园经济和殖民港市发展而增加。",
+        "SlaveVoyages将1651—1675年英船旗估计登船人数列为122,367，同期全部船旗估计488,065。这个英船数字约为上一25年段的数倍，但它没有说明在同一时期运送这些人的究竟是几艘船，也不能精确量出从每一个非洲港口驶出的航线。",
+        "对一个被强行带离家乡的人来说，所谓扩大的贸易规模意味着更长的拘禁、更少的选择以及不确定的横渡风险。商人按抵达人数、健康状况和市场价格计算投资回报，很多离开非洲的人却在船舱内丧生，另一些人抵达后还要面对种植园长期奴役。"
+      ]
+    },
+    {
+      "id": "law",
+      "heading": "五、1661—1664年：殖民法把身体、婚姻和世袭身份纳入财产制度",
+      "period_start_year": 1661,
+      "period_end_year": 1664,
+      "source_keys": [
+        "SV10",
+        "SV17",
+        "SV09"
+      ],
+      "paragraphs": [
+        "为了维持种植园生产，殖民议会日益用法律规定人们何时能够外出、如何被搜捕、怎样接受体罚，以及被奴役家庭所生子女的身份。[[1660S-E006|巴巴多斯1661年奴役法]]使这种暴力管理制度更具条文化和常态化特征。",
+        "英格兰王室同时推进新的非洲商贸特许。[[1660S-E047|1663年非洲王室冒险家商团新特许]]把买卖被奴役非洲人写进商业垄断安排；[[1660S-E024|马里兰1664年规定非洲裔的终身奴役身份]]，显示类似制度正在不同殖民地扩张。",
+        "法律能证明统治者希望如何管理被奴役的人，却不能仅凭一个条款就知道实际受到多少次鞭打、多少人被杀害或有多少家庭因此分离。被奴役者对管束的躲避、对亲属的保护和尝试取得自由，也始终伴随这些殖民制度。"
+      ]
+    },
+    {
+      "id": "coasts",
+      "heading": "六、西非海岸：贸易许可证、堡垒与非自愿的人的买卖",
+      "period_start_year": 1660,
+      "period_end_year": 1680,
+      "source_keys": [
+        "SV03",
+        "SV07",
+        "SV09"
+      ],
+      "paragraphs": [
+        "欧洲商船沿冈比亚河口、黄金海岸和几内亚湾寻找交易地点。它们需要依赖非洲政治领袖、商人、地方法规与岸上运输，有时也以炮台和武装船只参与当地冲突。英国商人取得在某座城堡或海滩贸易的许可，并不能据此宣布取得全部河口、王国或腹地。",
+        "对商人来说，交换品包括纺织品、金属品、火器和其他货物。对于遭战争捕获、被人口掠夺者带走或因债务、压迫而被迫出售的人，所谓交易却是被迫离开原本生活、亲人和土地。[[1670S-E007|1672年皇家非洲公司的王室特许]]进一步把伦敦资本与海岸囚禁、船上强制迁移连接起来。",
+        "非洲各地并不存在单一的“奴隶出售者”；地方国家、沿海中间商、内陆人口与遭捕的人处境和利益并不相同。殖民商人的账目能列出装船数量，却常常不记录被迫离家者的姓名，更难复原他们对于被俘与离别的具体经历。"
+      ]
+    },
+    {
+      "id": "escape-1668",
+      "heading": "七、1668年牙买加：逃入山区的约二百名非洲人",
+      "period_start_year": 1668,
+      "period_end_year": 1668,
+      "source_keys": [
+        "SV06",
+        "SV11",
+        "SV03"
+      ],
+      "paragraphs": [
+        "奴役劳动不仅在船上遭到反抗，逃离种植园本身也可能是争取生存与自由的行动。英国在牙买加建立殖民统治后，山地、河谷和难以行军的林地为逃亡者提供了避开殖民追捕的机会。",
+        "布里斯托尔历史博物馆记载，1668年牙买加发生被称为“洛比起义”的事件，约二百名非洲人[[1660S-E122|逃离殖民控制、进入山区]]。这个人数是馆方保存的历史记载概数，不能当作岛上当年所有逃亡者的总人数，也不能据此准确画出二百人走过的每条小路。",
+        "这些人并不是只在船上被运输的人口数字；他们有自己的同伴关系、求生计划与对山地地形的理解。逃离之后能否建立长久安全的生活，需要继续追踪殖民档案和后来马龙社区的材料，而不能在逃脱的当年便假定所有参与者命运相同。"
+      ]
+    },
+    {
+      "id": "royal-monopoly",
+      "heading": "八、1672年：王室和股份资本将大西洋人口运输制度化",
+      "period_start_year": 1672,
+      "period_end_year": 1673,
+      "source_keys": [
+        "SV04",
+        "SV09",
+        "SV10"
+      ],
+      "paragraphs": [
+        "1672年9月27日，查理二世给予皇家非洲公司新的贸易特许，授予它在广大非洲沿岸从事贸易的排他性权利。公司与王室、贵族投资及伦敦商业网络相联系，[[1670S-E007|王室独占贸易特许]]让海外人口贩卖获得股东资本和海军保护。",
+        "史密森尼博物馆保存的公司股份凭证，让这种关系不再只是抽象的“王室资助”。博物馆研究指出，一些被强行带走的非洲人被烙上代表皇家非洲公司的RAC或代表约克公爵的DY字母，商人以自己的经营符号标记活生生的人。",
+        "人身烙印、股本与货船清单背后是制度化的控制：公司能采购货物、派船、在非洲囚禁人、组织跨洋运输，并在殖民地要求买家付款。它是人身压迫与财务获利高度结合的贸易机制；无论谁掌握股份，英格兰公司的许可都不等于拥有非洲全部海岸的政治主权。"
+      ]
+    },
+    {
+      "id": "rac-count",
+      "heading": "九、1673—1688年：一个垄断公司的航次数和人数",
+      "period_start_year": 1673,
+      "period_end_year": 1688,
+      "source_keys": [
+        "SV04",
+        "SV05",
+        "SV15"
+      ],
+      "paragraphs": [
+        "皇家非洲公司的商业规模可以通过特定时段的历史统计来接近，而不必只凭一句“运输了许多人”。史密森尼国家非裔美国人历史文化博物馆估计，1673—1688年公司运送约九万至十万名被奴役者，平均每年约二十三次相关航运。",
+        "这组数字是公司的规模估算，涵盖一段较长时日，不能被标成某一个1673或1688单年的事实，也不能和同期所有英船的运载人口相加。[[1670S-E007|皇家非洲公司1672年获得垄断特许]]之后，另有未经授权的商船尝试参与买卖，使独占权的实际执行始终受到挑战。",
+        "公司经营的港口网络连着伦敦出资人、非洲的沿海贸易与西印度群岛的糖业市场。平均航次数意味着年复一年向海上派遣船舶，但它没有告诉我们每一艘船上受奴役者的精确名单，也不能保证出航的船最后都完成了强制运输和出售。"
+      ]
+    },
+    {
+      "id": "court-1675",
+      "heading": "十、1675年：欠款速审与被指控谋反者遭处死",
+      "period_start_year": 1675,
+      "period_end_year": 1676,
+      "source_keys": [
+        "SV06",
+        "SV09",
+        "SV17"
+      ],
+      "paragraphs": [
+        "除了大洋航行的危险，被奴役者一旦登陆，还面对殖民司法机构围绕“人的财产价值”建立的法律制度。1675年，[[1670S-E018|安提瓜将皇家非洲公司买卖人口的合同纳入特别登记和快速债务追索]]，种植园买主若欠款可以遭迅速诉讼。",
+        "同年，牙买加殖民当局[[1670S-E123|以涉嫌筹划反抗为由处死三十五名被奴役非洲人]]，布里斯托尔历史机构保存的时间表给出这一人数。它是处决人数而不是确实实施的起义人数，能反映统治者在怀疑集体反抗时使用致命惩罚。",
+        "在商人和殖民官员的文书里，一边是买主债务能够多快偿还，一边是被奴役者是否受到惩罚。奴役制度因而并非单纯靠船舱中的锁链维持；法庭、刑罚、税收和股份投资，都参与了对一个个家庭的控制。"
+      ]
+    },
+    {
+      "id": "expansion-1676",
+      "heading": "十一、1676—1700年：25年约二十七万余人被英船强行登船",
+      "period_start_year": 1676,
+      "period_end_year": 1699,
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV08"
+      ],
+      "paragraphs": [
+        "随着加勒比种植园扩大，英格兰投资者对从非洲购买和运送人的需求继续增加。SlaveVoyages估计1676—1700年英船旗强制登船人数272,200人，同期全船旗估计719,675人。这是25年期的历史模型结果，不是某次大型船队的实测名册。",
+        "与1626—1650年的约三万余人相比，数字已增长至约八倍，但这种扩大不能脱离更早在非洲的捕获、沿海贩卖、船上拘禁与海外强迫劳动来看。增长背后有更密集的商业组织、船员纪律、法院追债和国际航运竞争。",
+        "这一统计区间包含1700年，然而本世纪的历史地图到1699年结束。我们可以准确告诉读者模型使用了哪些年份，却不能从一个跨25年的总数推断1699年单年有多少人被贩运，或者借这项统计在地图上给整个大西洋涂出英国的控制色块。"
+      ]
+    },
+    {
+      "id": "sea-confinement",
+      "heading": "十二、船舱中的中途航程：病痛、隔离和强迫管束",
+      "period_start_year": 1680,
+      "period_end_year": 1699,
+      "source_keys": [
+        "SV03",
+        "SV11",
+        "SV14"
+      ],
+      "paragraphs": [
+        "非洲沿岸买卖结束后，船长将被迫带走的人关进船内隔间。船舶为了盈利可装载大量被俘者，而闷热、卫生条件恶劣、饮水不足和难以治疗的疾病使死亡危险增加。离岸前的拘禁同样可能持续数周，等待买够预期人数的商人不会把受奴役者的健康放在自由和尊严之前。",
+        "船员通常以枷锁、木栅、枪械和分隔人群的方式防止集体反抗。SlaveVoyages记载，有人试图解开束缚、帮助同伴逃脱、夺取武器，或拒绝接受被迫迁移。船长记录常常称这些行动为“骚乱”，却很少留下抵抗者自己的文字。",
+        "关于船上起义的研究显示，反抗并非罕见的想象故事；沿非洲海岸等待装船期间尤其可能发生夺船与逃跑。但“约每十次航运有一次某种反抗”是跨世纪、跨不同船旗的总体概括，不能拿来直接估算1680年代某个英商船队发动了多少次具名叛乱。"
+      ]
+    },
+    {
+      "id": "cohort-1680",
+      "heading": "十三、1680—1692年：279个已识别皇家非洲公司航次",
+      "period_start_year": 1680,
+      "period_end_year": 1692,
+      "source_keys": [
+        "SV05",
+        "SV04",
+        "SV16"
+      ],
+      "paragraphs": [
+        "另一项依据SlaveVoyages检索记录开展的研究专门挑出1680—1692年皇家非洲公司拥有的船只，识别出279个跨大西洋奴役航次，并计算这些记录中约84,498名被迫登船者和65,157名抵岸者。这一研究样本给出登船与抵岸人数之差19,341人，约为登船人数的22.9%。",
+        "差额呈现了航海拘禁带来的巨大生命损失，但还需要核对各艘船的具体情况：有人在离岸之前死亡，有船可能沉没或遇袭，登记的人数还可能经过研究者补全。我们不能把19,341简单地说成在某一条船上被杀害的准确人数，更不能说这是全部英国船在17世纪的死亡总数。",
+        "这279次只属于特定公司、特定年份和当时数据库所能识别的记录；它与史密森尼1673—1688年约九万至十万人估计相互交叠。严谨的数量研究应当让两组数据并列比较来源与口径，而不是把它们相加来制造一个看似壮观却重复统计的总数。"
+      ]
+    },
+    {
+      "id": "intercept-1688",
+      "heading": "十四、1688年：奴隶贩运船被扣，不等于受奴役者获救",
+      "period_start_year": 1688,
+      "period_end_year": 1688,
+      "source_keys": [
+        "SV06",
+        "SV09",
+        "SV10"
+      ],
+      "paragraphs": [
+        "皇家非洲公司的垄断并没有阻止其他英格兰船主尝试贩运被奴役者。布里斯托尔商人希望获得非洲人口买卖利润，部分船只没有公司许可，也照样带着商品和非洲人驶向殖民地。",
+        "1688年，两艘与布里斯托尔商人有关的船只Society和Betty，[[1680S-E121|因违反皇家非洲公司排他贸易规定而在弗吉尼亚被扣押]]。其中Society号载有被奴役非洲人和象牙；扣船引发的争议首先围绕谁有权贩卖和取得货款，而不是禁止人口奴役。",
+        "被截获的船可能改变船主的经济收益、律师费及商船处置，却不自动意味着船上的非洲人获得自由。殖民制度中的商业垄断和私人商人竞争，双方都可能以可出售的人为商品；这正是公司牌照争执与反奴役运动必须区分的原因。"
+      ]
+    },
+    {
+      "id": "hannibal-1694",
+      "heading": "十五、1694年Hannibal号：有船名的死亡与统计争议",
+      "period_start_year": 1694,
+      "period_end_year": 1695,
+      "source_keys": [
+        "SV13",
+        "SV03",
+        "SV05"
+      ],
+      "paragraphs": [
+        "1694年，船长托马斯·菲利普斯（Thomas Phillips）指挥的Hannibal号在维达一带采购并[[1690S-E024|将数百名被奴役非洲人强行装上跨洋船只]]。随后驶往巴巴多斯的航程给乘船者造成严重死亡，幸存者还要面对美洲种植园的出售与强迫劳动。",
+        "航海记述的不同校读对总数略有差别。Bristol Radical History Group公布的研究报约328人死亡、死亡率约47%；另一个学术转录摘要称约320人死亡。[[1690S-E130|Hannibal号在巴巴多斯抵岸所留下的死亡记忆]]，可视为经过具名记录的极端航程案例，却不能将任一数字当作每名死者都经现代人口普查确认。",
+        "船长用货物损失和投资者收益描述这趟贩运，船上的非洲人则面临被永久带离家人和土地的暴力。Hannibal这个个案提醒人们，统计数字来自有人亲身经历的病痛、恐惧与死亡；它既不代表所有奴隶船的平均死亡率，也不能单凭一个船长的商贸叙述还原所有人的命运。"
+      ]
+    },
+    {
+      "id": "barbados-1692",
+      "heading": "十六、1692年巴巴多斯：告发制度与被奴役者反抗的风险",
+      "period_start_year": 1692,
+      "period_end_year": 1692,
+      "source_keys": [
+        "SV03",
+        "SV11",
+        "SV17"
+      ],
+      "paragraphs": [
+        "加勒比殖民地的奴役制度不仅迫使人工作，还持续防范人们结社、携带物品和互相传递消息。殖民官员将一些行动称为“反叛阴谋”，有时连尚未采取公开暴力的计划也会受到严厉惩罚。",
+        "1692年10月，[[1690S-E017|巴巴多斯当局设置告发被奴役者阴谋的奖励与估价补偿]]：一名被迫劳动者若告发其他人，并由殖民司法确认，可有条件得到释放，而原奴隶主则从公共金库获得估价补偿。这类制度把对集体反抗的恐惧与把人视为财产的金融逻辑联系起来。",
+        "殖民法律保存的是统治者想要鼓励告密与惩罚的文字，并不能证明被控参与秘密会议的每一个人确实实施了暴力。抵抗可以表现为逃跑、隐匿、互助、保存家庭文化和拒绝服从，也可能发生在海上船舱；被奴役者追求生存与自由的行动，并不完全符合殖民档案的分类方式。"
+      ]
+    },
+    {
+      "id": "open-1698",
+      "heading": "十七、1698年：商人“自由”与被奴役者无自由",
+      "period_start_year": 1698,
+      "period_end_year": 1698,
+      "source_keys": [
+        "SV06",
+        "SV09",
+        "SV10"
+      ],
+      "paragraphs": [
+        "十七世纪末，更多英格兰私人商人不满皇家非洲公司垄断港口、商馆及贩运人口的特权。1698年，[[1690S-E057|议会开放原公司独占的对非洲贸易]]；公司竞争对手得到进入市场的机会，并不代表受奴役非洲人因此得到自由。",
+        "布里斯托尔商船[[1690S-E131|Beginning号在1698年开始公开组织从非洲向牙买加的贩奴航次]]，便是这种制度变化下的一例。商人能够追求更多利润与航次，殖民地仍有买主购买人，种植园奴役法律也没有因市场竞争而失去效力。",
+        "所谓“自由贸易”一词在这里指商人摆脱某家公司的垄断，而不是被贩运者自愿选择目的地。法律向更多船主开放市场，往往也扩大了向人身奴役制度提供船舶、货款、兵器和劳工控制的能力。"
+      ]
+    },
+    {
+      "id": "after-1699",
+      "heading": "十八、1699年：从估计数到完整的压迫体系",
+      "period_start_year": 1699,
+      "period_end_year": 1699,
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV05",
+        "SV07",
+        "SV08"
+      ],
+      "paragraphs": [
+        "本世纪结束时，跨大西洋人口贩运已把英格兰王室特许公司、私人船东、西非沿岸商贸、殖民地法庭与加勒比种植园连在一起。数十万人在这组船旗估计中的强迫登船记录，不是普通移民统计，而是人们被剥夺自由迁移权、身体自主权及劳动成果的记录。",
+        "SlaveVoyages显示1626—1650年估计33,695人、1651—1675年122,367人、1676—1700年272,200人乘英船被迫离非洲。这些25年分期之和包括1700年，不能作为1600—1699的精确年度统计；另外，皇家非洲公司具体航次与抵岸者数量属于口径更窄的档案样本。年龄、性别、各港口来源与船内死亡案例也须按船次逐一核对。",
+        "从逃往牙买加山区的非洲人，到在商船舱中策划摆脱束缚的囚禁者，再到面对惩罚仍设法保护家人与同伴的劳动者，反抗贯穿整个制度。十八世纪英格兰后来进一步扩大贩运规模，但更晚的战争、法律与废奴斗争不能提前写成1699年已经出现的解放。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SV01",
+      "label": "SlaveVoyages｜跨大西洋奴隶贸易船旗及25年期被迫登船人数估算",
+      "url": "https://legacy.slavevoyages.org/assessment/estimates",
+      "access": "specialist_digital_database_estimates_live_table_checked"
+    },
+    {
+      "id": "SV02",
+      "label": "SlaveVoyages｜跨大西洋航次数据库估算与缺漏方法说明",
+      "url": "https://legacy.slavevoyages.org/blog/methodology-trans-atlantic",
+      "access": "specialist_dataset_primary_methodology"
+    },
+    {
+      "id": "SV03",
+      "label": "SlaveVoyages｜奴役贸易航次、死亡、反抗与船舶分类词汇表",
+      "url": "https://legacy.slavevoyages.org/blog/glossary",
+      "access": "specialist_database_methodology_glossary"
+    },
+    {
+      "id": "SV04",
+      "label": "美国史密森尼NMAAHC｜皇家非洲公司股权凭证：1673—1688年人数和航次",
+      "url": "https://transcription.si.edu/projects/nmaahc/29682",
+      "access": "national_museum_collection_primary_stock_certificate_context"
+    },
+    {
+      "id": "SV05",
+      "label": "Bristol Radical History Group｜1680—1692皇家非洲公司279航次登船与抵岸比较",
+      "url": "https://www.brh.org.uk/site/articles/edward-colston-research-paper-1/",
+      "access": "scholarly_reconstruction_slavevoyages_subset_secondary"
+    },
+    {
+      "id": "SV06",
+      "label": "Bristol Museums｜17世纪奴役历史时序含1668/1675抵抗、1688扣船、1698 Beginning",
+      "url": "https://www.discoveringbristol.org.uk/slavery/timeline/17th-century/",
+      "access": "regional_museum_early_modern_archive_timeline"
+    },
+    {
+      "id": "SV07",
+      "label": "英国国家档案｜非洲裔祖先档案导览及皇家非洲公司T70/1209个别航次记录",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/african-ancestors-an-overview/",
+      "access": "official_national_archive_primary_fonds_guide"
+    },
+    {
+      "id": "SV08",
+      "label": "英国国家档案｜英国跨大西洋奴隶贸易档案与总体数字统计口径",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/british-transatlantic-slave-trade-records/",
+      "access": "official_archive_research_guide_period_scope_warning"
+    },
+    {
+      "id": "SV09",
+      "label": "英国国家档案｜1672皇家非洲公司王室特许与非洲人名册",
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/transatlantic-slave-trade/",
+      "access": "official_archive_charter_history_collections"
+    },
+    {
+      "id": "SV10",
+      "label": "英国历史遗产局｜英国奴隶贸易历史时序与1618、1672、1698制度变化",
+      "url": "https://historicengland.org.uk/research/inclusive-heritage/the-slave-trade-and-abolition/time-line/",
+      "access": "official_historic_england_institutional_review"
+    },
+    {
+      "id": "SV11",
+      "label": "美国殖民威廉斯堡基金会Slavery and Remembrance｜反抗船内奴役与统计局限",
+      "url": "https://www.slaveryandremembrance.org/articles/article/index.cfm?id=A0035",
+      "access": "historical_museum_institutional_research_resistance"
+    },
+    {
+      "id": "SV12",
+      "label": "Cambridge University Press｜船上反抗、非洲政治与1680年以后研究方法",
+      "url": "https://www.cambridge.org/core/books/abs/fighting-the-slave-trade/shipboard-revolts-african-authority-and-the-transatlantic-slave-trade/83A1B52F9EE783D3A00233B04509CBB0",
+      "access": "academic_press_peer_review_chapter_abstract"
+    },
+    {
+      "id": "SV13",
+      "label": "Bristol Radical History Group｜Hannibal号船长Thomas Phillips与约328名非洲乘船者死亡",
+      "url": "https://www.brh.org.uk/site/project/the-hannibal-slave-ship/",
+      "access": "independent_archival_reconstruction_named_voyage"
+    },
+    {
+      "id": "SV14",
+      "label": "University of Houston Digital History｜John Barbot关于被迫拘禁者船内起义的后刊亲历文字",
+      "url": "https://www.digitalhistory.uh.edu/disp_textbook.cfm?psid=472&smtid=3",
+      "access": "primary_account_published_1732_event_dating_not_fully_certified"
+    },
+    {
+      "id": "SV15",
+      "label": "PBS WGBH｜1680—1688皇家非洲公司赴非洲249次航次及公司商贸组织史",
+      "url": "https://cgi.pbs.org/wgbh/aia/part1/1p269.html",
+      "access": "public_broadcast_scholarly_history_period_specific"
+    },
+    {
+      "id": "SV16",
+      "label": "SlaveVoyages｜跨大西洋航次数据库下载档及2019、2020版本说明",
+      "url": "https://legacy.slavevoyages.org/blog/downloads-trans-atlantic",
+      "access": "specialist_dataset_versions_documented_not_bulk_recomputed"
+    },
+    {
+      "id": "SV17",
+      "label": "University of New Brunswick｜1661 Barbados slave law，历史法令原件整理",
+      "url": "https://slaveryandfreedomlaws.lib.unb.ca/laws/barbados-1661",
+      "access": "university_primary_legal_transcription_not_all_enforcement_cases"
+    },
+    {
+      "id": "SV18",
+      "label": "Bristol Archives｜保存的1698—1704布里斯托尔商人Day家族账册档案简介",
+      "url": "https://archives.bristol.gov.uk/guides/Guide%20to%20African-Caribbean%20Sources.pdf",
+      "access": "city_archives_primary_register_guide_not_full_account_books_read"
+    }
+  ],
+  "topic_source_claims": [
+    {
+      "claim_id": "E6T11-C01",
+      "section_id": "early",
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV10"
+      ],
+      "original_document_page": "SlaveVoyages transatlantic estimates public 25-year row and Great Britain embarked column",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "一、1600—1625年：英商尚未成为跨洋人口贩运的主力",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C02",
+      "section_id": "growth-1626",
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV10"
+      ],
+      "original_document_page": "SlaveVoyages transatlantic estimates public 25-year row and Great Britain embarked column",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "二、1626—1650年：约三万余人被英船强制运离非洲",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C03",
+      "section_id": "plantations",
+      "source_keys": [
+        "SV02",
+        "SV03",
+        "SV10",
+        "SV17"
+      ],
+      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "三、糖业、公司与强迫劳动：美洲需求如何反过来推动贩运",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C04",
+      "section_id": "middle-century",
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV08"
+      ],
+      "original_document_page": "SlaveVoyages transatlantic estimates public 25-year row and Great Britain embarked column",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "四、1651—1675年：英船旗强制运输人数上升至约十二万",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C05",
+      "section_id": "law",
+      "source_keys": [
+        "SV10",
+        "SV17",
+        "SV09"
+      ],
+      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "五、1661—1664年：殖民法把身体、婚姻和世袭身份纳入财产制度",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C06",
+      "section_id": "coasts",
+      "source_keys": [
+        "SV03",
+        "SV07",
+        "SV09"
+      ],
+      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "六、西非海岸：贸易许可证、堡垒与非自愿的人的买卖",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C07",
+      "section_id": "escape-1668",
+      "source_keys": [
+        "SV06",
+        "SV11",
+        "SV03"
+      ],
+      "original_document_page": "Bristol Museums 17th-century timeline item",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "七、1668年牙买加：逃入山区的约二百名非洲人",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C08",
+      "section_id": "royal-monopoly",
+      "source_keys": [
+        "SV04",
+        "SV09",
+        "SV10"
+      ],
+      "original_document_page": "Smithsonian NMAAHC original stock certificate collection description",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "八、1672年：王室和股份资本将大西洋人口运输制度化",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C09",
+      "section_id": "rac-count",
+      "source_keys": [
+        "SV04",
+        "SV05",
+        "SV15"
+      ],
+      "original_document_page": "Bristol Radical History Paper #1 Tables 3-4, historical SV extract",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "九、1673—1688年：一个垄断公司的航次数和人数",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C10",
+      "section_id": "court-1675",
+      "source_keys": [
+        "SV06",
+        "SV09",
+        "SV17"
+      ],
+      "original_document_page": "Bristol Museums 17th-century timeline item",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十、1675年：欠款速审与被指控谋反者遭处死",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C11",
+      "section_id": "expansion-1676",
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV08"
+      ],
+      "original_document_page": "SlaveVoyages transatlantic estimates public 25-year row and Great Britain embarked column",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十一、1676—1700年：25年约二十七万余人被英船强行登船",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C12",
+      "section_id": "sea-confinement",
+      "source_keys": [
+        "SV03",
+        "SV11",
+        "SV14"
+      ],
+      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十二、船舱中的中途航程：病痛、隔离和强迫管束",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C13",
+      "section_id": "cohort-1680",
+      "source_keys": [
+        "SV05",
+        "SV04",
+        "SV16"
+      ],
+      "original_document_page": "Bristol Radical History Paper #1 Tables 3-4, historical SV extract",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十三、1680—1692年：279个已识别皇家非洲公司航次",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C14",
+      "section_id": "intercept-1688",
+      "source_keys": [
+        "SV06",
+        "SV09",
+        "SV10"
+      ],
+      "original_document_page": "Bristol Museums 17th-century timeline item",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十四、1688年：奴隶贩运船被扣，不等于受奴役者获救",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C15",
+      "section_id": "hannibal-1694",
+      "source_keys": [
+        "SV13",
+        "SV03",
+        "SV05"
+      ],
+      "original_document_page": "Bristol Radical History Paper #1 Tables 3-4, historical SV extract",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十五、1694年Hannibal号：有船名的死亡与统计争议",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C16",
+      "section_id": "barbados-1692",
+      "source_keys": [
+        "SV03",
+        "SV11",
+        "SV17"
+      ],
+      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十六、1692年巴巴多斯：告发制度与被奴役者反抗的风险",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C17",
+      "section_id": "open-1698",
+      "source_keys": [
+        "SV06",
+        "SV09",
+        "SV10"
+      ],
+      "original_document_page": "Bristol Museums 17th-century timeline item",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十七、1698年：商人“自由”与被奴役者无自由",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    },
+    {
+      "claim_id": "E6T11-C18",
+      "section_id": "after-1699",
+      "source_keys": [
+        "SV01",
+        "SV02",
+        "SV05",
+        "SV07",
+        "SV08"
+      ],
+      "original_document_page": "SlaveVoyages transatlantic estimates public 25-year row and Great Britain embarked column",
+      "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
+      "publication_approval": true,
+      "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
+      "claim_summary": "十八、1699年：从估计数到完整的压迫体系",
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+    }
+  ],
+  "research_revision": "2026-10-25 editor12 E6-T11 slavevoyages national carrier quantitative evidence, primary archival scope NMAAHC stock certificate RAC cohorts; 18 chapters and explicit dual cohort; five new dated Atlas points and no speculative ship route or colonial sovereignty."
+}
