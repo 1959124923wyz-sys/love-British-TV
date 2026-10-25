@@ -46,8 +46,8 @@ for(const required of ['[[1660S-E037|','[[1670S-E010|','[[1670S-E014|','[[1690S-
 assert(articleText.includes('1698年3月25日'));
 const geo=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 const regions=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(geo.features.length,173);assert.equal(geo.metadata.feature_count,173);
-assert.equal(regions.features.length,30);assert.equal(regions.metadata.feature_count,30);
+assert.equal(geo.features.length,181);assert.equal(geo.metadata.feature_count,181);
+assert.equal(regions.features.length,31);assert.equal(regions.metadata.feature_count,31);
 const pts=geo.features.filter(f=>f.properties.related_story_ids?.includes('E6-T14-NAV'));
 assert.equal(pts.length,9);assert.deepEqual(new Set(pts.flatMap(p=>p.properties.related_event_ids)),new Set(added));
 for(const cue of pts){let e=all.get(cue.properties.related_event_ids[0]);assert.deepEqual(cue.geometry.coordinates,[e.lng,e.lat]);
