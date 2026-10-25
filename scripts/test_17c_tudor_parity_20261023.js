@@ -97,7 +97,7 @@ const site=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(area.metadata.feature_count,area.features.length);
 assert.equal(site.metadata.feature_count,site.features.length);
 assert.equal(area.features.length,32);
-assert.equal(site.features.length,188);
+assert.equal(site.features.length,191);
 const horn=area.features.filter(f=>f.properties.related_event_ids.includes('1620S-E009')||f.properties.related_event_ids.includes('1620S-E010'));
 assert.equal(horn.length,2);
 assert(horn.every(f=>f.properties.related_story_ids.includes('E6-T12')&&!f.properties.related_story_ids.includes('E6-T03-LAND-1642-1698')),'Safavid/EIC 1622 conflict misattributed to Ireland');
