@@ -32,9 +32,11 @@
     "1690S-E017",
     "1690S-E057",
     "1690S-E131",
-    "1610S-E024"
+    "1610S-E024",
+    "1680S-E122",
+    "1690S-E132"
   ],
-  "reading_note": "官方SlaveVoyages 1601—1700英船旗25年估算合计428262被强制登船，包含1700年，不是1600—1699精确数。RAC 1680—92子样本279航次/84498登船/65157抵岸/19341差额与NMAAHC 1673—88 90000—100000人/约23年航次属不同重叠来源，不可相加。Hannibal约320—328死亡源间存在计数差别；1694既有Atlas事件不得不经确证改归RAC。",
+  "reading_note": "官方SlaveVoyages 1601—1700英船旗25年估算合计428262被强制登船，包含1700年，不是1600—1699精确数。RAC 1680—92子样本279航次/84498登船/65157抵岸/19341差额与NMAAHC 1673—88 90000—100000人/约23年航次属不同重叠来源，不可相加。Hannibal约320—328死亡源间存在计数差别；1694既有Atlas事件不得不经确证改归RAC。 新增：1699 Albion Frigate SlaveVoyages正式航次20173证实船上起义、600人被迫登船、250人估算抵岸、350人数据库推算航程死亡（不可全算成反抗者死伤）；1688卡拉巴尔251人遭沿岸救援有学术二手依据，船名及具体现场未核。",
   "map_note": "25年统计只展示文章定量证据表，绝不冒充逐年事件点或真实动态运量；具年史事显示现代地名参考点。无实测船舶航迹、起义作战区、西非被劫掠范围或英王跨洋主权面；面积null。",
   "editorial_status": "published_source_linked_approved",
   "publication_approval": true,
@@ -101,6 +103,17 @@
       "children_pct_approx": 14,
       "historical_jamaica_prime_male_sale_price_gbp_average": 18.73,
       "warning": "男性约58%及10岁以下（含10岁）儿童约14%为研究根据部分航次年龄和性别记录作出的加权近似构成，不能据此算出精确人数。£18.73是研究采用的1680—1692年牙买加特定类别历史平均售价，绝非所有人的均价、公司净利润或现代币值。"
+    },
+    "verified_voyage_example": {
+      "year": 1699,
+      "vessel": "Albion Frigate",
+      "official_voyage_id": 20173,
+      "embarked": 600,
+      "disembarked_imputed": 250,
+      "dead_imputed": 350,
+      "resistance": "船上起义",
+      "source_url": "https://www.slavevoyages.org/voyage/20173/variables",
+      "warning": "这是1699年单船的航次资料，死亡350人系SlaveVoyages标注IMP的推算值，绝不能把350人全部说成起义死亡、也不能将单船样本与1680—1692公司总数相加；地图巴巴多斯标记仅为抵岸参考位置。"
     }
   },
   "sections": [
@@ -291,12 +304,14 @@
       "source_keys": [
         "SV03",
         "SV11",
-        "SV14"
+        "SV14",
+        "SV22",
+        "SV23"
       ],
       "paragraphs": [
         "非洲沿岸买卖结束后，船长将被迫带走的人关进船内隔间。船舶为了盈利可装载大量被俘者，而闷热、卫生条件恶劣、饮水不足和难以治疗的疾病使死亡危险增加。离岸前的拘禁同样可能持续数周，等待买够预期人数的商人不会把受奴役者的健康放在自由和尊严之前。",
         "船员通常以枷锁、木栅、枪械和分隔人群的方式防止集体反抗。SlaveVoyages记载，有人试图解开束缚、帮助同伴逃脱、夺取武器，或拒绝接受被迫迁移。船长记录常常称这些行动为“骚乱”，却很少留下抵抗者自己的文字。",
-        "关于船上起义的研究显示，反抗并非罕见的想象故事；沿非洲海岸等待装船期间尤其可能发生夺船与逃跑。但“约每十次航运有一次某种反抗”是跨世纪、跨不同船旗的总体概括，不能拿来直接估算1680年代某个英商船队发动了多少次具名叛乱。"
+        "关于船上起义的研究显示，反抗并非罕见的想象故事；沿非洲海岸等待装船期间尤其可能发生夺船与逃跑。但“约每十次航运有一次某种反抗”是跨世纪、跨不同船旗的总体概括，不能拿来直接估算1680年代某个英商船队发动了多少次具名叛乱。 1688年卡拉巴尔沿岸发生的[[1680S-E122|非洲人从岸上袭击一艘载有被囚者的英船并使囚禁者获得释放]]，说明抵抗也可以来自船外社群。史学研究提及船上曾有251人，但船名和袭击现场尚无法精确核实，这并不是已核全世纪船上起义总数。"
       ]
     },
     {
@@ -389,12 +404,13 @@
         "SV02",
         "SV05",
         "SV07",
-        "SV08"
+        "SV08",
+        "SV21"
       ],
       "paragraphs": [
         "本世纪结束时，跨大西洋人口贩运已把英格兰王室特许公司、私人船东、西非沿岸商贸、殖民地法庭与加勒比种植园连在一起。数十万人在这组船旗估计中的强迫登船记录，不是普通移民统计，而是人们被剥夺自由迁移权、身体自主权及劳动成果的记录。",
         "SlaveVoyages显示1626—1650年估计33,695人、1651—1675年122,367人、1676—1700年272,200人乘英船被迫离非洲。这些25年分期之和包括1700年，不能作为1600—1699的精确年度统计；另外，皇家非洲公司具体航次与抵岸者数量属于口径更窄的档案样本。年龄、性别、各港口来源与船内死亡案例也须按船次逐一核对。",
-        "从逃往牙买加山区的非洲人，到在商船舱中策划摆脱束缚的囚禁者，再到面对惩罚仍设法保护家人与同伴的劳动者，反抗贯穿整个制度。十八世纪英格兰后来进一步扩大贩运规模，但更晚的战争、法律与废奴斗争不能提前写成1699年已经出现的解放。"
+        "1699年已有能辨认船名和航次的反抗：Albion Frigate号从非洲被迫装载600人；SlaveVoyages将[[1690S-E132|该船的反抗编码为“船上起义”，并记载其1699年11月22日抵达巴巴多斯]]，数据库估算抵岸250人、途中死亡350人。350为航次死亡的推算总量，不能说是该次起义杀死350人。被奴役者在船内及沿岸的反抗与山地逃亡共同构成不断争取自由的历史；而1700年及以后另一批船上起义，不可回填1699年作为本世纪已发生的事件。"
       ]
     }
   ],
@@ -518,6 +534,24 @@
       "label": "Encyclopedia Virginia（Joseph C. Miller）｜1619年英方私掠São João Bautista、被劫人转卖及历史背景",
       "url": "https://encyclopediavirginia.org/entries/transatlantic-slave-trade-the/",
       "access": "academic_editorial_history_joseph_c_miller_1619_seizure_context"
+    },
+    {
+      "id": "SV21",
+      "label": "SlaveVoyages｜1699年英国贩奴船Albion Frigate原始航次条目20173、船上起义编码、600登船／250抵岸／推算350人死亡",
+      "url": "https://www.slavevoyages.org/voyage/20173/variables",
+      "access": "direct_official_individual_voyage_page_opened_numbers_coded_and_imputed_flags_read"
+    },
+    {
+      "id": "SV22",
+      "label": "Sudhir Hazareesingh《Daring to Be Free》｜1688年卡拉巴尔非洲沿岸袭击贩奴船、救出被囚非洲人的学术叙述",
+      "url": "https://academic.macmillan.com/academictrade/9780374611071/daringtobefree/",
+      "access": "university_historian_2025_publisher_public_book_excerpt_identifies_1688_calabar_251_not_original_ship_ledger"
+    },
+    {
+      "id": "SV23",
+      "label": "Istwanou｜依据SlaveVoyages航次ID99002整理1688年船名不详船只遭非洲沿岸攻击的记录",
+      "url": "https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/",
+      "access": "secondary_public_display_of_slavevoyages_voyage_99002_direct_primary_url_not_independently_accessible"
     }
   ],
   "topic_source_claims": [
@@ -695,14 +729,16 @@
       "source_keys": [
         "SV03",
         "SV11",
-        "SV14"
+        "SV14",
+        "SV22",
+        "SV23"
       ],
-      "original_document_page": "Museums/archival contextual descriptions; individual unpublished book or microfilm not inspected",
+      "original_document_page": "Hazareesingh 2025 Macmillan publisher historical extract + derivative SlaveVoyages id 99002; original ship entry unavailable, vessel name unverified.",
       "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
       "publication_approval": true,
       "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
       "claim_summary": "十二、船舱中的中途航程：病痛、隔离和强迫管束",
-      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. 1688 Calabar ship name unknown; 251 boarded in study does not equal complete precise liberated list. Do not attribute to shipboard insurrection; this is attack from shore."
     },
     {
       "claim_id": "E6T11-C13",
@@ -787,14 +823,15 @@
         "SV02",
         "SV05",
         "SV07",
-        "SV08"
+        "SV08",
+        "SV21"
       ],
-      "original_document_page": "SlaveVoyages transatlantic estimates public 25-year row and Great Britain embarked column",
+      "original_document_page": "SlaveVoyages voyage 20173 page, itinerary date fields, African resistance field, number IMP and middle-passage deaths IMP.",
       "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
       "publication_approval": true,
       "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
       "claim_summary": "十八、1699年：从估计数到完整的压迫体系",
-      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. Albion Frigate death number 350 has IMP marker and is not a revolt casualty count; 1699 arrival in Barbados is not an exact longitude of shipboard revolt."
     }
   ],
   "research_revision": "2026-10-25 editor12 E6-T11 slavevoyages national carrier quantitative evidence, primary archival scope NMAAHC stock certificate RAC cohorts; 18 chapters and explicit dual cohort; five new dated Atlas points and no speculative ship route or colonial sovereignty."
