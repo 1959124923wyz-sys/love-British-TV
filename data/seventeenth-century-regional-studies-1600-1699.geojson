@@ -7,9 +7,9 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 31,
+    "feature_count": 32,
     "polygon_count": 24,
-    "line_count": 7,
+    "line_count": 8,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
     "provenance_warning": "Schematic boxes and line segments generated exclusively from attested named regions, modern representative sites, and artificial readability pads. THEIR GEOMETRY IS NOT A HISTORIC MAP, SURVEY OR ACTUAL AFFECTED AREA.",
@@ -23,7 +23,8 @@
     "acadia_editor9_20261024": "3 nonmetric source-attested dashed research frames: 1629 two distinct Port-Royal heritage places, 1690 Phips port raid and 1696 Beaubassin village raid. NONE represent occupied or dispossessed polygon.",
     "editor10_newfoundland_20261024": "Two year 1696 only nonmetric port raid reading frames for Ferryland and St John's; all historic political control/Indigenous land area metrics absent; 1694 Ferryland defence separate Point.",
     "editor11_navigation_20261025": "1667 Medway documented named river battle: one wholly artificial red dashed reader-only rectangle. The 1652–1674 battles were never transcribed as sea sovereignty polygons.",
-    "darien_editor10_20261025": "1698 Leith–Caledonia Bay two named endpoint dotted relationship only; not measured ship GPS route, no polygon for Scottish control, Guna lands or Spanish area."
+    "darien_editor10_20261025": "1698 Leith–Caledonia Bay two named endpoint dotted relationship only; not measured ship GPS route, no polygon for Scottish control, Guna lands or Spanish area.",
+    "e6_t11_editor12_20261025": "ONE 1694 Hannibal source-attested embark/disembark endpoint link; 25-year 428262 population estimate NEVER geometry, no British 1600-1699 true slavery/sea-control polygon."
   },
   "features": [
     {
@@ -2656,6 +2657,59 @@
         "occupation_area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "uncertainty": "两端点确有文献、跨洋所经航路仍未复原；几何直线在屏幕上仅为虚线联系，不能计算长度和军控面积。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6t11-hannibal-1694-whydah-barbados-attested-endpoints",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.086,
+            6.357
+          ],
+          [
+            -59.614,
+            13.096
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1694年Hannibal号：维达贩运装船地与巴巴多斯抵达地有据端点",
+        "start_year": 1694,
+        "end_year": 1694,
+        "display_kind": "economic_network",
+        "label_type": "暗红虚线 · 受害人口的已证装船和抵岸两端联系（非船舶GPS航线）",
+        "description": "1694年Hannibal号从维达（Whydah/Ouidah）装运被奴役者，驶向巴巴多斯；两端在既有Atlas `1690S-E024` 和本批 `1690S-E130` 历史事件中独立有史料。直线只表达两个地点与船上约320—328人的死亡记录相关，不能代表真实跨洋船只航线、途中停靠、经纬航迹、海上死亡位置或王室控制海域。",
+        "summary_zh": "约320—328人丧生的1694年具名贩奴航次。两端点有史料，地理连线不代表真实航道。",
+        "actor_zh": "受害非洲人、Thomas Phillips的Hannibal号船员及商业投资者",
+        "source_urls": [
+          "https://www.brh.org.uk/site/project/the-hannibal-slave-ship/",
+          "https://legacy.slavevoyages.org/blog/glossary"
+        ],
+        "related_event_ids": [
+          "1690S-E024",
+          "1690S-E130"
+        ],
+        "anchor_event_ids": [
+          "1690S-E024",
+          "1690S-E130"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "route_kind": "named_embarkation_and_disembarkation_endpoints_no_measured_atlantic_vessel_course",
+        "geometry_precision": "straight_schematic_documented_endpoints_not_measured_ship_route",
+        "mapping_method": "Institutionally sourced Whydah and Barbados named vicinity positions joined by mathematical straight relationship line ONLY; NOT 1694 ship GPS, nautical speed, enslaved individual's whereabouts, death site, ocean sovereignty or coerced human volume density.",
+        "spatial_semantics": "Documented two-point human trafficking relationship and mortality, not a real-world navigational path, radius, military control, commercial sovereignty or total national migration volume.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "uncertainty": "船长航路未在本轮复原；维达与巴巴多斯为已证端点，屏幕直线不代表真实航迹、死亡地点或实际控制区。"
       }
     }
   ]
