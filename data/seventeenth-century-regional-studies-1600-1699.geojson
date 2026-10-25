@@ -7,8 +7,8 @@
     "historical_end": 1699,
     "map_layer": "schematic_studies_not_political_control",
     "source_verification": "TCD, PRONI, British Library IOR/G, National Army Museum, Encyclopaedia Iranica, official published event corpus",
-    "feature_count": 29,
-    "polygon_count": 23,
+    "feature_count": 30,
+    "polygon_count": 24,
     "line_count": 6,
     "total_confirmed_historical_control_polygons": 0,
     "prohibit_area_aggregation": true,
@@ -21,7 +21,8 @@
     "carolina_e6t09_20261024": "One artificial 1680 old/new Charles Town two-site teaching-only dotted region; no territorial or dispossession acreage inferred.",
     "hbc_editor9_20261024": "One nonmetric 1686 James Bay three-fort reader-only dashed polygon; 1670 Rupert's Land charter NEVER converted to a territorial occupation polygon.",
     "acadia_editor9_20261024": "3 nonmetric source-attested dashed research frames: 1629 two distinct Port-Royal heritage places, 1690 Phips port raid and 1696 Beaubassin village raid. NONE represent occupied or dispossessed polygon.",
-    "editor10_newfoundland_20261024": "Two year 1696 only nonmetric port raid reading frames for Ferryland and St John's; all historic political control/Indigenous land area metrics absent; 1694 Ferryland defence separate Point."
+    "editor10_newfoundland_20261024": "Two year 1696 only nonmetric port raid reading frames for Ferryland and St John's; all historic political control/Indigenous land area metrics absent; 1694 Ferryland defence separate Point.",
+    "editor11_navigation_20261025": "1667 Medway documented named river battle: one wholly artificial red dashed reader-only rectangle. The 1652–1674 battles were never transcribed as sea sovereignty polygons."
   },
   "features": [
     {
@@ -2524,6 +2525,81 @@
         "uncertainty": "1696地理框为排版阅读提示；不证明历史实控边界、房屋毁损区或可以相加的面积。",
         "related_story_ids": [
           "E6-T10-NEWFOUNDLAND"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor11-nav-1667-medway-river-reading-frame",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.47,
+              51.35
+            ],
+            [
+              0.84,
+              51.35
+            ],
+            [
+              0.84,
+              51.49
+            ],
+            [
+              0.47,
+              51.49
+            ],
+            [
+              0.47,
+              51.35
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "1667年梅德韦河袭击具名河段虚线研究框（非实测海战航迹）",
+        "start_year": 1667,
+        "end_year": 1667,
+        "display_kind": "military_impact",
+        "label_type": "淡红虚线 · 1667年荷舰梅德韦袭击具名地区，非荷兰实控范围",
+        "description": "Kent Historic Environment Record 记载Sheerness、Queenborough、Upnor防御链、Chatham等具名地点的1667年荷军海上袭击。框的四角是任意阅读排版坐标，绝非17世纪军事边界、所有舰船路径、毁损面积或荷兰取得的英国领土。",
+        "summary_zh": "仅提示Sheerness—Upnor—Chatham有据可查的梅德韦具名袭击地点；非历史实测战线或领地。",
+        "actor_zh": "荷兰联省海军；英格兰沿海守军与海军",
+        "anchor_event_ids": [
+          "1660S-E037"
+        ],
+        "related_event_ids": [
+          "1660S-E037"
+        ],
+        "anchor_places": [
+          {
+            "name": "Medway / Chatham river locality, modern proxy",
+            "lon": 0.52,
+            "lat": 51.394,
+            "source_event_id": "1660S-E037",
+            "modern_place_only": true
+          }
+        ],
+        "source_urls": [
+          "https://heritage.kent.gov.uk/Monument/MKE123206/",
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-11787"
+        ],
+        "spatial_semantics": "1667 named estuarine battle site schematic display only; NO historic battle area, navy fleet route, sea ownership, actual survey or territorial control.",
+        "geometry_precision": "artificial_reading_frame_vertices_not_measured_seventeenth_century_fleet_route",
+        "mapping_method": "NOT historical military-front extent or actual ship course. Arbitrary visual cartographic padding around named Medway river locations documented by government HER; map viewer should draw lightly dashed. No real-world area measurement or territorial inference.",
+        "provenance_method": "Kent HER and Royal Museums Greenwich describe named river engagement, not this rectangle",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "occupation_area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "policy_area_not_all_land": false,
+        "uncertainty": "仅表示现代地图的阅读范围；无法证明战斗边界、毁船分布或一平方公里实际被占。",
+        "related_story_ids": [
+          "E6-T14-NAV"
         ]
       }
     }
