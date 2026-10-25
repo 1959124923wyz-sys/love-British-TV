@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 186,
+    "feature_count": 188,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -7255,6 +7255,82 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Museum-source-dated historic action with a modern named island/colony/port fixed screen-pixel, NOT surveyed seventeenth-century resistance area, actual quay, human death coordinate, ship course, slave-count spatial raster or polygon.",
         "geometry_precision": "modern_named_island_colony_or_port_not_historical_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1680s-e122",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.32695,
+          4.958931
+        ]
+      },
+      "properties": {
+        "name": "卡拉巴尔非洲沿岸反抗者袭击英方贩奴船，使被囚者获得释放",
+        "start_year": 1688,
+        "display_through_year": 1688,
+        "display_kind": "military_impact",
+        "label_type": "有证非洲人沿岸抵抗／具名船上起义 · 现代地区参考，非战场精确位置",
+        "description": "历史学家Sudhir Hazareesingh据SlaveVoyages研究记载，1688年卡拉巴尔沿岸非洲人从岸上袭击一艘载有251名被囚者的英国贩奴船，并使其获得释放。SlaveVoyages衍生条目99002称船长Osney、船名未保存、该船未抵达美洲；251为登记装船人数，不等于具有逐人姓名与命运确认的获释者名册。原数据库该ID具体页面未独立打开。现代Calabar城市坐标只代表区域，**不是袭击地点、真正战线或英国领土**。",
+        "summary_zh": "1688年卡拉巴尔沿岸非洲人从岸上袭击一艘载有251名被囚者的英国贩奴船并使人获释。船名及袭击准确现场未核，251并非逐人可考获释名单；现代Calabar仅用于定位。",
+        "source_urls": [
+          "https://academic.macmillan.com/academictrade/9780374611071/daringtobefree/",
+          "https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/",
+          "https://www.geonames.org/search.html?country=NG&q=Calabar"
+        ],
+        "related_event_ids": [
+          "1680S-E122"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-year dated region reference as fixed screen-pixel, never actual battle location, accurate ship ocean track, historic boundary or metric occupation radius.",
+        "geometry_precision": "named_region_or_arrival_port_proxy_not_original_insurrection_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17c-editor12-e6-t11-1690s-e132",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.614,
+          13.096
+        ]
+      },
+      "properties": {
+        "name": "Albion Frigate号船上反抗：600人被强行登船、250人抵巴巴多斯",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "military_impact",
+        "label_type": "有证非洲人沿岸抵抗／具名船上起义 · 现代地区参考，非战场精确位置",
+        "description": "SlaveVoyages跨大西洋航次20173直接登记英国船旗Albion Frigate号1698年12月8日离伦敦、1699年8月29日离非洲、1699年11月22日抵巴巴多斯，African resistance栏明确为Slave insurrection（船上起义）。600名被奴役者从非洲登船、抵岸估算250人，数据库的途中死亡350人及58.0%死亡率均标注IMP（推算），**不代表350人在起义冲突中丧生**，也不是逐人核对遇害名单。巴巴多斯点是抵岸地区参考，并非船上起义海域或精确靠泊码头。",
+        "summary_zh": "1699年英国贩奴船Albion Frigate被记录发生船上起义；航次20173登船600、抵岸估算250、途中死亡推算350。350绝非起义战死人数，岛级标记不是起义地点。",
+        "source_urls": [
+          "https://www.slavevoyages.org/voyage/20173/variables"
+        ],
+        "related_event_ids": [
+          "1690S-E132"
+        ],
+        "related_story_ids": [
+          "E6-T11-VOYAGES"
+        ],
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Source-year dated region reference as fixed screen-pixel, never actual battle location, accurate ship ocean track, historic boundary or metric occupation radius.",
+        "geometry_precision": "named_region_or_arrival_port_proxy_not_original_insurrection_site",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,

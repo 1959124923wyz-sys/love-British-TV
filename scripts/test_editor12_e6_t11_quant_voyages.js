@@ -7,9 +7,9 @@ assert(topic?.parent_topic_id==='E6-T11'&&topic.status==='published'&&topic.publ
 assert(registry.topics.find(t=>t.id==='E6-T11').status==='research_only','individual undocumented shipboard revolt cases not automatically published');
 const article=read(topic.article_file);
 assert(article.id===topic.id&&article.schema==='atlas-major-story-v1'&&article.sections.length===18);
-assert(article.sources.length===20&&article.topic_source_claims.length===18);
+assert(article.sources.length===23&&article.topic_source_claims.length===18);
 assert(article.sections.flatMap(s=>s.paragraphs).join('').length>5800,'historical narrative must be substantive');
-const srcKeys=new Set(article.sources.map(s=>s.id));assert(srcKeys.size===20);
+const srcKeys=new Set(article.sources.map(s=>s.id));assert(srcKeys.size===23);
 assert(article.sources.every(s=>s.url.startsWith('https://')&&s.access));
 const stats=article.quantitative_summary,a=quantitative.primary_estimate;
 assert.equal(stats.rows.length,4);
@@ -41,7 +41,7 @@ assert(stats.cohort.period==='1680—1692'&&stats.second_cohort.period==='1673�
 assert(quantitative.data_governance.ship_count_not_inferred_from_population===true);
 const atlas=new Map(),evs=new Map();
 for(let y=1600;y<=1690;y+=10){const a=read('data/atlas-'+y+'-'+(y+9)+'.json');atlas.set(y,a);assert.deepEqual(a.colonial_polygons,[],'no Atlantic English ocean polygon');for(const e of a.events){assert(!evs.has(e.id));evs.set(e.id,e)}}
-const ids=['1660S-E122','1670S-E123','1680S-E121','1690S-E130','1690S-E131'];
+const ids=['1660S-E122','1670S-E123','1680S-E121','1680S-E122','1690S-E130','1690S-E131','1690S-E132'];
 for(const id of ids){const e=evs.get(id),d=atlas.get(Number(id.slice(0,4)));assert(e&&e.research_event_id==='EDITOR12-E6T11:'+id);
 assert(e.source_ids.every(s=>d.sources.some(x=>x.id===s&&x.url.startsWith('https://'))));
 assert(e.exclude_point_buffer_from_area_statistics===true&&e.historical_control_boundary_verified===false&&e.actual_English_territory_created===false);
@@ -51,6 +51,8 @@ assert.equal(evs.get('1670S-E123').year,1675);
 assert.equal(evs.get('1680S-E121').year,1688);
 assert.equal(evs.get('1690S-E130').year,1694);
 assert.equal(evs.get('1690S-E131').year,1698);
+assert.equal(evs.get('1680S-E122').year,1688);
+assert.equal(evs.get('1690S-E132').year,1699);
 assert(evs.get('1690S-E024').description.includes('700'),'preexisting 1694 Whydah entry retained');
 const markup=[];
 for(const section of article.sections){assert(/^[一二三四五六七八九十]+、/.test(section.heading));assert(section.paragraphs.length===3&&section.source_keys.length>=2);
@@ -59,7 +61,7 @@ for(const p of section.paragraphs){
 assert.equal((p.match(/\[\[/g)||[]).length,(p.match(/\]\]/g)||[]).length);
 for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|([^\]\n]{4,90})\]\]/g)){assert(evs.has(m[1]),'missing historical atlas target '+m[1]);markup.push(m[1]);}
 }}
-assert.equal(markup.length,19);
+assert.equal(markup.length,21);
 assert(markup.includes('1610S-E024'),'1619 White Lion and Treasurer maritime seizure links existing documented Virginia atlas event');
 assert(article.sections.find(x=>x.id==='early').source_keys.includes('SV19')&&article.sections.find(x=>x.id==='early').source_keys.includes('SV20'));
 assert(quantitative.privateering_case_1619.seized_population_precise===null&&quantitative.privateering_case_1619.existing_atlas_event_id==='1610S-E024');
@@ -70,10 +72,26 @@ assert.deepEqual(new Set(markup),new Set(topic.event_ids));
 assert(article.sections.find(x=>x.id==='rac-count').paragraphs.join('').includes('每年约二十三次'));
 assert(article.sections.find(x=>x.id==='cohort-1680').paragraphs.join('').includes('279'));
 assert(article.sections.find(x=>x.id==='expansion-1676').paragraphs.join('').includes('1700年'));
+const r1688=quantitative.verified_resistance_cases.find(x=>x.year===1688);
+const r1699=quantitative.verified_resistance_cases.find(x=>x.year===1699);
+assert(r1688.vessel_name===null&&r1688.reported_slavevoyages_voyage_id===99002&&r1688.official_voyage_page_verified===false);
+assert(r1688.captives_loaded_reported===251&&r1688.captives_liberated_precise===null);
+assert(r1699.vessel_name==='Albion Frigate'&&r1699.slavevoyages_voyage_id===20173);
+assert.equal(r1699.resistance_code,'Slave insurrection');
+assert.deepEqual([r1699.total_embarked,r1699.total_disembarked_imputed,r1699.middle_passage_deaths_imputed],[600,250,350]);
+assert(r1699.documented_rebellion_killed_people===null&&r1699.exact_revolt_position===null&&r1699.exact_revolt_date===null);
+assert(r1699.death_causation_warning.includes('neither 350 victims of uprising'));
+assert.equal(stats.verified_voyage_example.official_voyage_id,20173);
+assert.equal(stats.verified_voyage_example.dead_imputed,350);
+assert(stats.verified_voyage_example.warning.includes('绝不能把350人全部说成起义死亡'));
+assert(article.sections.find(x=>x.id==='sea-confinement').source_keys.includes('SV22'));
+assert(article.sections.find(x=>x.id==='after-1699').source_keys.includes('SV21'));
+assert(markup.includes('1680S-E122')&&markup.includes('1690S-E132'));
+
 const site=read('data/seventeenth-century-spatial-evidence-1600-1699.geojson'),study=read('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(site.features.length,186);assert.equal(site.metadata.feature_count,186);
+assert.equal(site.features.length,188);assert.equal(site.metadata.feature_count,188);
 assert.equal(study.features.length,32);assert.equal(study.metadata.feature_count,32);
-const points=site.features.filter(x=>x.properties.related_story_ids?.includes(article.id));assert.equal(points.length,5);
+const points=site.features.filter(x=>x.properties.related_story_ids?.includes(article.id));assert.equal(points.length,7);
 for(const f of points){const e=evs.get(f.properties.related_event_ids[0]);assert(e);
 assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);assert.equal(f.properties.start_year,e.year);assert.equal(f.properties.display_through_year,e.year);
 for(const key of ['historical_boundary_confirmed','territorial_claim','fill_authorized'])assert.equal(f.properties[key],false);
@@ -89,5 +107,6 @@ css=fs.readFileSync(path.join(root,'css/history-stories.css'),'utf8');
 assert(html.includes('quantitativeHistoryHtml(article)')&&html.includes('story-stat-table'));
 assert(html.includes('toLocaleString')&&css.includes('.story-statistics'));
 assert(html.includes('cohort_human_cost')&&html.includes('cost.children_pct_approx')&&html.includes('costs+'));
+assert(html.includes('verified_voyage_example')&&html.includes('dead_imputed')&&html.includes('namedHtml'),'named revolt must be shown separately from cohorts');
 assert(!html.includes('estimated_embarked/25'),'historical cohort statistics cannot become invented per-year measured events');
-console.log('PASS E6-T11: 18 chapters, 18 source files, 18 links, 5 new sourced events, 5 cues and 1 real-endpoints-only reference; exact original estimate table + 279 distinct RAC cohort voyages / 19341 difference; no annual false precision.');
+console.log('PASS E6-T11: 18 chapters, 23 institutionally-labeled sources, 21 links, 7 dated map events, 7 non-metric cues, Albion 20173 recorded shipboard insurrection, 1688 Calabar shore action limited to secondary evidence; 600/250/350 IMP, no fabricated uprising mortality or ship track.');

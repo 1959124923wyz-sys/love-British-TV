@@ -1,6 +1,6 @@
 {
   "schema": "e6-t11-transatlantic-quantitative-evidence-v1",
-  "revision": "2026-10-25 institutional sources independently reviewed; estimates grouped 25 years, no invented yearly values",
+  "revision": "2026-10-25 institutional sources independently reviewed; estimates grouped 25 years, no invented yearly values; 1688 Calabar shore response + SlaveVoyages voyage 20173 named 1699 Albion Frigate original record",
   "period_of_story": {
     "start_year": 1600,
     "end_year": 1699
@@ -109,7 +109,11 @@
     ],
     "specific_17c_english_ship_revolt_count": null,
     "prevalence_statement": "Secondary SlaveVoyages/Slavery and Remembrance overview says roughly one in ten voyage experienced some form of African resistance. Not restricted to Great Britain, nor seventeenth century; DO NOT multiply period voyage counts by 10%.",
-    "specific_17c_english_slave_voyage_inventory_complete": false
+    "specific_17c_english_slave_voyage_inventory_complete": false,
+    "documented_individual_examples_added": [
+      "1688 unnamed Calabar coastal rescue: a named coast, unnamed ship; secondary publisher excerpt plus derived vessel list",
+      "1699 Albion Frigate: official SlaveVoyages voyage 20173; resistance code explicitly 'Slave insurrection'"
+    ]
   },
   "systemic_economic_archival_link": {
     "sources": [
@@ -166,5 +170,54 @@
     "numerical_disagreement": "Encyclopedia Virginia main text says about fifty intercepted; its own timeline says about sixty. Avoid spurious precision and do not compute survivors/deaths from either.",
     "measurement_warning": "Secondary seizure mid-voyage, not a departure from Africa under English carrier classification. Does not contradict the official 1601-1625 Great Britain embarkations estimate of zero. No precise location of interception, no ocean route geometries to infer.",
     "ethical_warning": "An English privateer captured and transferred enslaved people, not a humanitarian rescue or abolition event."
-  }
+  },
+  "verified_resistance_cases": [
+    {
+      "case_key": "E6T11-CALABAR-1688",
+      "year": 1688,
+      "kind": "African attack from shore on a slave-trading vessel; not a shipboard revolt",
+      "vessel_name": null,
+      "captain_name_reported": "Osney",
+      "reported_slavevoyages_voyage_id": 99002,
+      "official_voyage_page_verified": false,
+      "secondary_database_record_url": "https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/",
+      "scholarly_book_excerpt_url": "https://academic.macmillan.com/academictrade/9780374611071/daringtobefree/",
+      "captives_loaded_reported": 251,
+      "captives_arrived_americas": 0,
+      "captives_liberated_precise": null,
+      "liberation_outcome": "Historian says African shore attackers freed people held captive; derivative database classifies vessel as cut off by Africans and did not reach the Americas. Do not present 251 as individually named emancipated survivors.",
+      "study_location": "Old Calabar / Calabar coast, Nigeria",
+      "event_location_precise": null,
+      "record_warning": "One year/shore locality supported by historian and secondary visualization; SlaveVoyages individual voyage URL 99002 not independently retrievable. This is an attempted prevention/rescue on the African coast, not the 1699 onboard Albion revolt or 1688 Virginian monopoly seizures."
+    },
+    {
+      "case_key": "E6T11-ALBION-1699",
+      "year": 1699,
+      "kind": "Shipboard insurrection coded in official voyage database",
+      "vessel_name": "Albion Frigate",
+      "slavevoyages_voyage_id": 20173,
+      "official_voyage_record_url": "https://www.slavevoyages.org/voyage/20173/variables",
+      "flag": "Great Britain",
+      "voyage_departure_date": "1698-12-08",
+      "departure_from_africa_date": "1699-08-29",
+      "arrival_with_captives_date": "1699-11-22",
+      "arrival_region": "Barbados, unspecified port",
+      "captain_reported": "Duport, Stephen",
+      "resistance_code": "Slave insurrection",
+      "total_embarked": 600,
+      "total_disembarked_imputed": 250,
+      "middle_passage_deaths_imputed": 350,
+      "mortality_pct_imputed": 58,
+      "documented_rebellion_killed_people": null,
+      "record_includes_archive_citations": [
+        "T70/349",
+        "Barbot (Hair, Jones & Law ed., 1992) II 681-93",
+        "Dow 1927 p.83"
+      ],
+      "exact_revolt_date": null,
+      "exact_revolt_position": null,
+      "death_causation_warning": "The 350 is the voyage database's middle-passage death IMPUTED field: neither 350 victims of uprising nor a victim-by-victim primary death register. Do not add this to the RAC overlapping cohort or the 1694 Hannibal deaths.",
+      "spatial_mapping_warning": "Map point indicates modern Barbados landing/reference only, never the oceanic location of the insurrection, nor an accurate historic landing pier."
+    }
+  ]
 }
