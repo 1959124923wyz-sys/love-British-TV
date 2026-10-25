@@ -62,3 +62,13 @@
 美国国家公园管理局 [Historic Jamestowne 专文](https://www.nps.gov/jame/learn/historyculture/the-royal-african-company-supplying-slaves-to-jamestown.htm) 记载，White Lion、Treasurer两艘英方武装私掠船在坎佩切湾从葡萄牙贩奴船上劫取被奴役非洲人；White Lion后来在弗吉尼亚Point Comfort以史书所谓“20 and odd”名非洲人换取物资。White Lion船长John Jope所持的是荷兰毛里茨亲王签发的私掠许可证。 [Encyclopedia Virginia（Joseph C. Miller）](https://encyclopediavirginia.org/entries/transatlantic-slave-trade-the/) 同样记载袭击葡萄牙船São João Bautista，但该文主体称约50人被截、同篇年表称约60人；**暂不将50或60冒充精确人数**。
 
 **分类差异是本案核心：**1601—1625年SlaveVoyages Great Britain=0是数据库“从非洲出航且按英船旗承运”的推算单元格，1619年是在中途对原属葡萄牙船上的被奴役者进行截取及再贩卖；二者不矛盾，不能为了调整0而把二次截掠当作英船从非洲登船数据。该事件是**掠夺与继续奴役，不是从奴役中解救人们**。地图仅链接已有Atlas `1610S-E024` 的1619年Point Comfort登陆参考点，不给坎佩切湾加虚假精确交战坐标，也不画推测跨洋航迹。本轮将二次来源及此限制补入正式18章正文第一章和统计研究表。
+
+## 9. 1688年卡拉巴尔海岸反抗与1699年阿尔比恩号具名船上起义（2026-10-25）
+
+**先查船次主数据库，后写历史故事。** SlaveVoyages [单航次20173《Albion Frigate》(1699)](https://www.slavevoyages.org/voyage/20173/variables) 已直接读取。船名、伦敦登记、英船旗、1698-12-08从伦敦启航、1699-08-29离非洲、1699-11-22抵巴巴多斯均为官方具体航次字段；`African resistance = Slave insurrection`。非洲总登船600、巴巴多斯第一目的地到港250、`Total slaves disembarked IMP = 250`、`Slave deaths during middle passage IMP = 350`、死亡率IMP 58.0%。这些属**数据库航次级记录（部分数值含IMP推算），不是600人逐人姓名单、也不是350名起义战斗死者**。历史航次路径有黄金海岸、Bonny、New Calabar及São Tomé等停靠地，但没有单航海GPS、起义准确日期或海上起义坐标，绝不能仅凭港口顺序画实测航行曲线。数据库来源字段列T70/349、Barbot学术整理与Dow研究，**未声称已亲自翻阅这些原始档案卷页**。
+
+**另一个不同类型的1688年反抗：** [Sudhir Hazareesingh《Daring to Be Free》出版商节录](https://academic.macmillan.com/academictrade/9780374611071/daringtobefree/)记载，1688年非洲人从卡拉巴尔沿岸攻击一艘载有251名被囚者的英国船，并使其获释；[Istwanou按SlaveVoyages汇编的99002条目](https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/)记录船长Osney、船名不详、海岸攻击及未驶达美洲。官方SlaveVoyages的99002具体链接本轮无法独立打开，暂定 **academic_secondary_plus_derived_database**，不声称直接核过该笔原始航次；251为记载中装载人数，不等于251名具有逐人姓名和结局的已核幸存者。
+
+海岸攻击与船内起义要在史类上区分；海上航程中死亡（IMP）与起义镇压中死亡绝不混记。1688只以GeoNames现代Calabar城市中心作为具名区域导航参照（4.958931 N, 8.32695 E），不是岸上交战位置；1699只以巴巴多斯岛既有现代参考点示意**抵岸**，绝非起义发生经纬度。没有可靠国界/殖民主权边线，相关空间面积均为null。参考 [GeoNames Calabar](https://www.geonames.org/search.html?country=NG&q=Calabar)。后续待挖原船航次99002原始编目、Charles 1691与 Dragon 1699 等证据，不能把本轮两项研究冒充17世纪全量反抗船次统计。
+
+**年代闸口：** 被后世文本出版于1732年的Don Carlos号反抗，另据[Eric Robert Taylor《If We Must Die》](https://books.google.com/books?id=ciBfDwAAQBAJ)附录对应1701年1月5日，不纳入1600—1699故事地图。出版年代、发生年代与故事时间界限必须分开。
