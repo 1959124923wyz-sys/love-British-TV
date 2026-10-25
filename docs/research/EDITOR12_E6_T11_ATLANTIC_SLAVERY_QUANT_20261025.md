@@ -56,3 +56,9 @@
 同篇研究借助1680—1692年牙买加档案中的分年市场价格，估计当时所谓 *prime male*（按贩卖者分类的成年男性）的**平均历史售价约£18.73**。此处金额是具体类别与地域的售价研究参数，并非全部被奴役者的人均价格，更不是RAC净利润或可直接换算的当代价值。成年女性及儿童在该研究的金额模型中被赋予不同系数，这反映历史上把人作为可转让财产估价的暴力制度，展示时不采用其商品分类作为人的真实价值判断。
 
 已把上述有来源限定的补充写入结构化证据、18章文章第13节、读者可见的定量摘要与自动回归测试；**未引入伪造的精确儿童人数、伪造单船航线或新殖民主权地块**。
+
+## 8. 海上截掠案例补齐：1619年White Lion、Treasurer与São João Bautista（2026-10-25）
+
+美国国家公园管理局 [Historic Jamestowne 专文](https://www.nps.gov/jame/learn/historyculture/the-royal-african-company-supplying-slaves-to-jamestown.htm) 记载，White Lion、Treasurer两艘英方武装私掠船在坎佩切湾从葡萄牙贩奴船上劫取被奴役非洲人；White Lion后来在弗吉尼亚Point Comfort以史书所谓“20 and odd”名非洲人换取物资。White Lion船长John Jope所持的是荷兰毛里茨亲王签发的私掠许可证。 [Encyclopedia Virginia（Joseph C. Miller）](https://encyclopediavirginia.org/entries/transatlantic-slave-trade-the/) 同样记载袭击葡萄牙船São João Bautista，但该文主体称约50人被截、同篇年表称约60人；**暂不将50或60冒充精确人数**。
+
+**分类差异是本案核心：**1601—1625年SlaveVoyages Great Britain=0是数据库“从非洲出航且按英船旗承运”的推算单元格，1619年是在中途对原属葡萄牙船上的被奴役者进行截取及再贩卖；二者不矛盾，不能为了调整0而把二次截掠当作英船从非洲登船数据。该事件是**掠夺与继续奴役，不是从奴役中解救人们**。地图仅链接已有Atlas `1610S-E024` 的1619年Point Comfort登陆参考点，不给坎佩切湾加虚假精确交战坐标，也不画推测跨洋航迹。本轮将二次来源及此限制补入正式18章正文第一章和统计研究表。
