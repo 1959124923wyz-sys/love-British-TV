@@ -10,7 +10,7 @@ const old=load('data/stories/index.json');
 const reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert.equal(serial.schema,'atlas-serial-stories-v1');
 assert.equal(serial.navigation_contract,'existing_decade_chapters_unchanged');
-assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E6-T03-LAND-1642-1698','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T10-ACADIA','E6-T10-HBC','E6-T10-NEWFOUNDLAND','E6-T12','E6-T13'] ,'only explicitly editor-audited completed story stages may publish');
+assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E6-T03-LAND-1642-1698','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T10-ACADIA','E6-T10-HBC','E6-T10-NEWFOUNDLAND','E6-T12','E6-T13','E6-T14-NAV'] ,'only explicitly editor-audited completed story stages may publish');
 const canonicalFamilies=Array.from({length:15},(_,i)=>'E6-T'+String(i+1).padStart(2,'0'));
 const knownIds=new Set(serial.topics.map(t=>t.id));
 assert.equal(knownIds.size,serial.topics.length,'unique IDs required');
@@ -34,6 +34,9 @@ assert(hudson&&hudson.parent_topic_id==='E6-T10'&&hudson.status==='published'&&h
 assert(serial.topics.find(t=>t.id==='E6-T10')?.status==='research_only','E6-T10 mother arc remains research-only after publication of three independent children');
 const nf=serial.topics.find(t=>t.id==='E6-T10-NEWFOUNDLAND');
 assert(nf&&nf.parent_topic_id==='E6-T10'&&nf.status==='published'&&nf.publication_review==='approved'&&nf.event_ids.length>=14,'Newfoundland publication must have source-backed episode targets');
+const navigation=serial.topics.find(t=>t.id==='E6-T14-NAV');
+assert(navigation?.parent_topic_id==='E6-T14'&&navigation.status==='published'&&navigation.publication_review==='approved'&&navigation.event_ids.length>=20);
+assert(serial.topics.find(t=>t.id==='E6-T14')?.status==='research_only','individual privateer cases still await research');
 const virginia=serial.topics.find(t=>t.id==='E6-T05');
 assert(virginia?.status==='published'&&virginia.publication_review==='approved'&&virginia.event_ids.length>=30,'Virginia long-form Pequot-equivalent published entry must have source-linked existing events');
 const newEngland=serial.topics.find(t=>t.id==='E6-T06');
