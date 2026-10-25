@@ -51,6 +51,16 @@ def main():
     old=read_2019(files["2019"])
     new,metadata=read_2020(files["2020"])
     x=scope(old);y=scope(new)
+    old_scope={r["VOYAGEID"]:r for r in old if isinstance(r["YEARAM"],int) and 1600<=r["YEARAM"]<=1699}
+    new_scope={r["VOYAGEID"]:r for r in new if isinstance(r["YEARAM"],int) and 1600<=r["YEARAM"]<=1699}
+    shared_ids=sorted(set(old_scope)&set(new_scope))
+    common_any_changed=[i for i in shared_ids if any(old_scope[i].get(k)!=new_scope[i].get(k) for k in FIELDS)]
+    all_17c_changes={"old_id_count":len(old_scope),"new_id_count":len(new_scope),
+        "added_voyage_ids":sorted(set(new_scope)-set(old_scope)),
+        "removed_voyage_ids":sorted(set(old_scope)-set(new_scope)),
+        "shared_voyage_ids":len(shared_ids),
+        "changed_shared_rows_any_extracted_field":len(common_any_changed),
+        "changed_voyages_preview":[{"id":i,"changed_fields":{k:{"2019":old_scope[i].get(k),"2020":new_scope[i].get(k)} for k in FIELDS if old_scope[i].get(k)!=new_scope[i].get(k)}} for i in common_any_changed[:70]]}
     orig={r["VOYAGEID"]:r for r in x["with_resistance"]}
     next_={r["VOYAGEID"]:r for r in y["with_resistance"]}
     if len(orig)!=len(x["with_resistance"]) or len(next_)!=len(y["with_resistance"]): raise RuntimeError("Duplicate voyage IDs in coded resistance case")
@@ -61,11 +71,12 @@ def main():
     out={"schema":"e6t11-official-2019-vs-2020-snapshot-v1","dataset_urls":{"2019":"https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv","2020":"https://legacy.slavevoyages.org/documents/download/tastdb-exp-2020.sav"},"source_sha256":sums,"source_2020_metadata":metadata,
          "scope":{"year":"YEARAM 1600..1699 inclusive, possibly imputed","british_flag":"NATINIMP 7 (imputed, not every 17th-century British voyage)","resistance":"nonblank RESISTANCE, code 1=onboard insurrection; 2=ship attacked from shore; 3=ship boat attacked from shore","no_code":"Unknown, NOT proof of no resistance"},
          "edition_2019":{k:v for k,v in x.items() if k!="with_resistance"},"edition_2020":{k:v for k,v in y.items() if k!="with_resistance"},
+         "all_17c_rows_diagnostic":all_17c_changes,
          "coded_case_changes":{"new_2020":len(gained),"removed_from_scope_2020":len(lost),"still_coded":len(both),"common_changed_any_field":len(changed),"new_cases":[clean(next_[i]) for i in gained],"lost_cases":[clean(orig[i]) for i in lost],"changed_cases":changed},
          "all_coded_2020":[clean(r) for r in y["with_resistance"]],
          "interpretation":"This is an edition comparison for recorded voyage rows, NOT total historical crossings or prevalence. Changes may reflect corrected voyage identity, data incompleteness, reclassification, or date/flag imputation; inspect codebook and original sources before publishing individual casualties or precise geography."}
     Path(opts.out).parent.mkdir(parents=True,exist_ok=True)
     Path(opts.out).write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("SUMMARY_JSON="+json.dumps({k:v for k,v in out.items() if k in ["edition_2019","edition_2020","coded_case_changes","source_sha256"]},ensure_ascii=False,default=str)[:3500])
+    print("SUMMARY_JSON="+json.dumps({k:v for k,v in out.items() if k in ["edition_2019","edition_2020","coded_case_changes","all_17c_rows_diagnostic","source_sha256"]},ensure_ascii=False,default=str)[:3500])
     print("SUCCESS wrote",opts.out,"bytes",Path(opts.out).stat().st_size)
 if __name__=="__main__": main()
