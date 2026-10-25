@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Get SPSS reader
-        run: python3 -m pip install pyreadstat
+        run: python3 -m pip install pyreadstat pandas
       - name: Fetch official dataset snapshots and compare voyage IDs, codes and population
         run: |
           python3 - <<'PY'
