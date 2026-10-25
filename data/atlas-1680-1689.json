@@ -283,6 +283,53 @@
       "map_priority": true
     },
     {
+      "id": "1680S-E123",
+      "research_event_id": "EDITOR12-E6T11:1680S-E123",
+      "arc_id": "ARC-ATL-TRADE",
+      "year": 1681,
+      "start_year": 1681,
+      "end_year": 1681,
+      "visible_from": 1681,
+      "date_label": "1681年11月24日",
+      "name": "冈比亚詹姆斯堡105名被囚者集体反抗，殖民方报告34人死亡、40人受伤",
+      "historical_actor": "被囚禁于皇家非洲公司James Fort的105名非洲男性、皇家非洲公司驻站人员John Kastell及镇压者",
+      "historical_place": "James Island / present Kunta Kinteh Island, The Gambia",
+      "description": "历史学家David Eltis《The Rise of African Slavery in the Americas》（剑桥大学出版社，2000年，第172页）引录皇家非洲公司驻詹姆斯岛人员John Kastell于1682年1月24日致公司的信。信中称1681年11月24日岛上有105名男性被囚者集体反抗，驻站方在镇压中杀死34人、击伤40人；这属于殖民方事后陈述，不是完整独立遇害名册。英国国家档案馆原卷T70/16第21叶见作者注26，未在本轮独立翻看。地图使用UNESCO遗址761-001现代James Island组件坐标，不是1681年的室内冲突GPS、实际死亡位置或英国控制区边界。",
+      "short_description": "1681年11月24日皇家非洲公司冈比亚詹姆斯堡105名非洲男性被囚者集体反抗，殖民方称镇压造成34人死、40人伤。数字系RAC驻站者事后自述，非独立死亡名册；遗址坐标不是精确冲突位置。",
+      "category": "military",
+      "icon_code": "MIL",
+      "lat": 13.3176417,
+      "lng": -16.3613528,
+      "geography_label": "James Island / Kunta Kinteh Island (UNESCO 761-001 现代遗址参考坐标；不是1681年战斗实测点)",
+      "geo_precision": "representative_modern_unesco_heritage_site_not_1681_battle_surveys",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】只用UNESCO詹姆斯岛遗址组件坐标定位原RAC堡垒所在岛屿，不表示1681年反抗的室内战斗或死伤地点、不表示由英方控制冈比亚河流域、不构成历史主权面及占地平方公里测量。",
+      "source_ids": [
+        "1680S-S156",
+        "1680S-S157"
+      ],
+      "source_access_reported": [
+        "cambridge_university_press_book_text_online_facsimile_ch7_p172_read",
+        "UNESCO_World_Heritage_761_001_modern_component_coordinates"
+      ],
+      "source_group": "EDITOR12",
+      "certainty": "contemporaneous_company_letter_quoted_in_scholarly_book_original_archival_folio_not_examined",
+      "significance": {
+        "level": 2,
+        "rationale": "1681年可定位的RAC奴役拘禁点反抗，并含殖民方明确自述的105被囚、34死亡、40受伤数字",
+        "review_status": "editor12_20261025_eltis_cambridge_excerpt_and_UNESCO_site"
+      },
+      "editorial_status": "published_scholarly_transcribed_company_letter_cautious_unesco_site_proxy",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "representative_map_point": true,
+      "position_type": "nonmetric_named_island_colony_or_port_reference",
+      "geolocation_basis_zh": "UNESCO James Island 761-001 N13 19 3.51 W16 21 40.87 转十进制度；只表示现代文化遗址锚点，不把2003年遗址地籍当1681年王室堡垒占地",
+      "map_priority": true
+    },
+    {
       "id": "1680S-E004",
       "research_event_id": "B:B071",
       "arc_id": "ARC-HBC",
@@ -2520,6 +2567,28 @@
       "verification_status": "editor12_modern_reference_coordinates_read",
       "evidence_read_level": "modern_geonames_city_entry_not_1688_event_cartography",
       "precision_warning": "Do not equate modern city centroid with historical Old Calabar estuary battle site."
+    },
+    {
+      "id": "1680S-S156",
+      "title": "David Eltis, The Rise of African Slavery in the Americas (Cambridge University Press 2000), Chapter 7 p.172, John Kastell Jan 24 1682 RAC letter quoting Nov 24 1681 105 held, 34 killed, 40 wounded, TNA T70/16 f.21",
+      "publisher": "Cambridge University Press / David Eltis",
+      "url": "https://www.youreintheknow.net/wp-content/uploads/2020/02/Eltis-The-Rise-of-African-Slavery-in-the-Americas-2000.pdf",
+      "kind": "academic_book_direct_text_with_quote_from_company_letter",
+      "original_source_id": "EDITOR12-E6T11:1680S-E123:Eltis",
+      "verification_status": "editor12_book_primary_letter_quotation_read_original_T70_not_opened",
+      "evidence_read_level": "full_book_page_172_and_footnote_26_read_colonial_letter_facsimile_only_as_scholarly_transcription",
+      "precision_warning": "RAC company official is biased eyewitness; claimed 34 killed and 40 wounded are not an independently audited casualty ledger; event at fort is not a shipboard uprising."
+    },
+    {
+      "id": "1680S-S157",
+      "title": "UNESCO Kunta Kinteh Island and Related Sites 761-001 James Island coordinate N13 19 3.51 W16 21 40.87",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/761/maps/",
+      "kind": "official_modern_heritage_component_gazetteer",
+      "original_source_id": "EDITOR12-E6T11:1680S-E123:UNESCO",
+      "verification_status": "editor12_world_heritage_761_001_component_location_read",
+      "evidence_read_level": "modern_UNESCO_heritage_component_not_1681_micro_site_or_colonial_boundary",
+      "precision_warning": "UNESCO heritage mapped island coordinates not location of specific rebel fatalities, British sovereignty boundary or countable seventeenth-century territory."
     }
   ],
   "routes": [],
