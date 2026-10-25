@@ -42,3 +42,9 @@
 ## 5. 研究及GitHub准入规则
 
 数据：`data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json`。**十年Slider只能放有明确年份的实际历史法令／航次／反抗事件**，不能把25年的估计总数在某一年的地图点伪装为该年人口迁移。规模统计置于独立可见的专题证据表格，且在源级明确测量指标（estimated embarked vs documented voyages vs arrived vs observed death）。以作者已批准的桌面Leaflet和17C长文模型呈现，不自造欧洲—非洲—美洲地理折线作为“实测船迹”。来源版本变化需在统计卡登记抓取时间、网址、字段与筛选条件。
+
+## 6. 2026-10-25主编12二次校正：Hannibal购入人员性别数
+
+旧Atlas `1690S-E024` 从较早节录留下“480名男性+200名女性＝680人与700人不相符”的说法。现交叉核对17C船长Phillips后刊航海叙述的学术引录：[JSTOR学术章节《A Fixed Melancholy》](https://www.jstor.org/stable/j.ctt1b7x67k.9)、[ProQuest同章节全文](https://www.proquest.com/docview/1543993799/7D95A2C364924F81PQ/3)、[Macmillan 1694年Phillips原文选录](https://digfir-published.macmillanusa.com/hewittlawson1e/hewittlawson1e_ch3_37.html)。引录明确为 **480男性+220女性＝700人**。旧“200”应属誊写/节录误差，不能凭旧数字制造700人帐目有20人缺失的结论。
+
+已更新 `data/atlas-1690-1699.json` E024事件描述及S046史料精度提醒。另保留抵岸存活372及中途死亡320/328两种口径的不同来源，不推定每一名被害者确切个人身份。Bristol Radical History研究328、学术章节Phillips所记320，**差异未见原始逐人名册核验**。本次校对的参考端点是学术章节/出版摘录，并不冒称已逐页核对大英图书馆1732年整部原刻本。
