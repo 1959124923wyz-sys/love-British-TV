@@ -1,6 +1,6 @@
 {
   "schema": "e6-t11-17c-ship-resistance-case-ledger-v1",
-  "updated": "2026-10-25",
+  "updated": "2026-10-25 Editor13 official 2019 source batch",
   "scope": {
     "years": [
       1600,
@@ -14,7 +14,8 @@
     "A": "Full scholarly source text transcribing contemporaneous letter, precise original shelfmark; letter itself not inspected",
     "B": "Voyage-level derived SlaveVoyages result publicly visible, official voyage ID but interactive original page not field-readable from this audit",
     "C": "Academic chronology reproduced outside authorized book access; bibliographic publisher Project MUSE confirms book and appendix, but original source archive not inspected",
-    "research_only": "Do not plot until dated and place-located with sufficient independent basis; unresolved vessel identity and name variants documented separately"
+    "research_only": "Do not plot until dated and place-located with sufficient independent basis; unresolved vessel identity and name variants documented separately",
+    "B_2019_official_bulk": "Official SlaveVoyages 2019 expanded CSV directly downloaded and checksum verified; recorded vessel/RESISTANCE code directly visible, but contemporaneous SOURCEA archival folios not read and database may have imputed year, flag and population."
   },
   "case_records": [
     {
@@ -59,7 +60,11 @@
         "https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/"
       ],
       "grade": "B",
-      "claim_limits": "Secondary academic excerpt + voyage derivative, no original ship register; do not conflate this 1688 event with Taylor's separately dated 1689 Capt Osney entry before checking original chronology."
+      "claim_limits": "Secondary academic excerpt + voyage derivative, no original ship register; do not conflate this 1688 event with Taylor's separately dated 1689 Capt Osney entry before checking original chronology.",
+      "official_2019_snapshot_bulk_confirmed": true,
+      "official_2019_bulk_url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+      "grade_for_coded_voyage": "B_2019_official_bulk",
+      "grade_for_original_archival_event": "original_manuscript_uninspected"
     },
     {
       "id": "R1693-AMERICA",
@@ -80,7 +85,11 @@
         "https://www.slavevoyages.org/voyage/9706/variables"
       ],
       "grade": "B",
-      "claim_limits": "Only derived site presents readable numbers; 421-401 is a cross-field difference not verified death total; some secondary chronology writes Brome as vessel but derived voyage dataset lists captain John Brome and vessel America. Do not claim both are separate voyages."
+      "claim_limits": "Only derived site presents readable numbers; 421-401 is a cross-field difference not verified death total; some secondary chronology writes Brome as vessel but derived voyage dataset lists captain John Brome and vessel America. Do not claim both are separate voyages.",
+      "official_2019_snapshot_bulk_confirmed": true,
+      "official_2019_bulk_url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+      "grade_for_coded_voyage": "B_2019_official_bulk",
+      "grade_for_original_archival_event": "original_manuscript_uninspected"
     },
     {
       "id": "R1696-ADVENTURE",
@@ -101,7 +110,11 @@
         "https://www.slavevoyages.org/voyage/20127/variables"
       ],
       "grade": "B",
-      "claim_limits": "238-186 is comparison not independent death ledger; chronological description gives ca.1696, voyage derivative says 1696 arrival. Source does not confirm precise day or latitude of uprising."
+      "claim_limits": "238-186 is comparison not independent death ledger; chronological description gives ca.1696, voyage derivative says 1696 arrival. Source does not confirm precise day or latitude of uprising.",
+      "official_2019_snapshot_bulk_confirmed": true,
+      "official_2019_bulk_url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+      "grade_for_coded_voyage": "B_2019_official_bulk",
+      "grade_for_original_archival_event": "original_manuscript_uninspected"
     },
     {
       "id": "R1699-ALBION",
@@ -124,7 +137,11 @@
         "https://www.studocu.com/en-us/document/fred-t-korematsu-middle-school/us-history/taylor-appendix-chronology-of-shipboard-slave-revolts-1509-1865/147658507"
       ],
       "grade": "B",
-      "claim_limits": "28 people enslaved and 1 crewmember reported killed in a published academic bibliography's chronology are not to be combined with total 350 IMP middle-passage deaths as separate nonoverlapping losses. Neither is a list of individually identified persons."
+      "claim_limits": "28 people enslaved and 1 crewmember reported killed in a published academic bibliography's chronology are not to be combined with total 350 IMP middle-passage deaths as separate nonoverlapping losses. Neither is a list of individually identified persons.",
+      "official_2019_snapshot_bulk_confirmed": true,
+      "official_2019_bulk_url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+      "grade_for_coded_voyage": "B_2019_official_bulk",
+      "grade_for_original_archival_event": "original_manuscript_uninspected"
     }
   ],
   "research_only_candidates": [
@@ -144,7 +161,11 @@
       "location": "Gambia (regional, not actual incident site)",
       "reported_killed_enslaved": 17,
       "reference": "Taylor 2006 Appendix, TNA T70/11 p.69",
-      "warning": "Chronology excerpt only, no ship-level database match or direct original archival folio"
+      "warning": "Official 2019 CSV confirms Charles (ID99009) as RESISTANCE=1, YEARAM1691, NATINIMP7, SLAXIMP179, SLAMIMP158, and SOURCEA=T70/17,26. Taylor's 17 killed is a separate scholarly claim unverified by original T70 folio. No exact revolt date or sea position; not yet in Atlas.",
+      "slavevoyages_2019_voyage_id": 99009,
+      "shipboard_insurrection_coded_2019": true,
+      "official_2019_snapshot_confirmed": true,
+      "grade_for_revolt_type": "B_2019_official_bulk"
     },
     {
       "year": 1699,
@@ -206,6 +227,12 @@
       "title": "Istwa Nou Net SlaveVoyages-derived individual 1693/1696/1699 resistances",
       "url": "https://istwanou.net/entry/1693-insurrection-aboard-the-america-bound-for-jamaica-voyage-9706/",
       "read_level": "visible derived individual record, original dynamic slavevoyages.org pages not field-readable via this interface"
+    },
+    {
+      "id": "SV-2019-BULK",
+      "title": "SlaveVoyages 2019 expanded voyage CSV, RESISTANCE, NATINIMP and YEARAM; checksum verified on GitHub Actions",
+      "url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+      "read_level": "Official edited 2019 dataset snapshot 22,182,700 bytes SHA256 3fbad142356e30a4662c7f455321d19b70d79770cfa0397278894bb9ae36096f. Historical archival records referenced, not personally read."
     }
   ],
   "audit_guards": [
@@ -215,6 +242,7 @@
     "1699 Albion 350 IMP not 28 revolt death, no summing 28+350",
     "1689 Osney unresolved potential duplication with 1688",
     "1701 Don Carlos excluded",
-    "No vessel track, territorial polygons or measured British land area"
+    "No vessel track, territorial polygons or measured British land area",
+    "Official 2019 bulk CSV establishes *coded* resistance for 14 Great Britain flagged records, NOT total uprising prevalence; 1689 Osney potential duplication remains."
   ]
 }
