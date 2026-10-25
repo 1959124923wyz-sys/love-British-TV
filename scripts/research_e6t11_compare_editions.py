@@ -55,7 +55,10 @@ def main():
     new_scope={r["VOYAGEID"]:r for r in new if isinstance(r["YEARAM"],int) and 1600<=r["YEARAM"]<=1699}
     shared_ids=sorted(set(old_scope)&set(new_scope))
     common_any_changed=[i for i in shared_ids if any(old_scope[i].get(k)!=new_scope[i].get(k) for k in FIELDS)]
-    all_17c_changes={"old_id_count":len(old_scope),"new_id_count":len(new_scope),
+    field_change_counts=collections.Counter(k for i in common_any_changed for k in FIELDS if old_scope[i].get(k)!=new_scope[i].get(k))
+    prefix_shortenings=sum(1 for i in common_any_changed for k in FIELDS if isinstance(old_scope[i].get(k),str) and isinstance(new_scope[i].get(k),str) and len(new_scope[i][k])<len(old_scope[i][k]) and old_scope[i][k].startswith(new_scope[i][k]))
+    all_17c_changes={"changed_fields_frequency":dict(field_change_counts),"shorter_exact_prefix_strings":prefix_shortenings,
+        "old_id_count":len(old_scope),"new_id_count":len(new_scope),
         "added_voyage_ids":sorted(set(new_scope)-set(old_scope)),
         "removed_voyage_ids":sorted(set(old_scope)-set(new_scope)),
         "shared_voyage_ids":len(shared_ids),
@@ -77,6 +80,6 @@ def main():
          "interpretation":"This is an edition comparison for recorded voyage rows, NOT total historical crossings or prevalence. Changes may reflect corrected voyage identity, data incompleteness, reclassification, or date/flag imputation; inspect codebook and original sources before publishing individual casualties or precise geography."}
     Path(opts.out).parent.mkdir(parents=True,exist_ok=True)
     Path(opts.out).write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("SUMMARY_JSON="+json.dumps({k:v for k,v in out.items() if k in ["edition_2019","edition_2020","coded_case_changes","all_17c_rows_diagnostic","source_sha256"]},ensure_ascii=False,default=str)[:3500])
+    print("SUMMARY_JSON="+json.dumps({"source_sha256":sums,"edition_2019":out["edition_2019"],"edition_2020":out["edition_2020"],"all_17c_rows_diagnostic":{k:v for k,v in all_17c_changes.items() if k!="changed_voyages_preview"},"coded_case_changes":{k:v for k,v in out["coded_case_changes"].items() if k not in ("changed_cases","new_cases","lost_cases")}},ensure_ascii=False,default=str))
     print("SUCCESS wrote",opts.out,"bytes",Path(opts.out).stat().st_size)
 if __name__=="__main__": main()
