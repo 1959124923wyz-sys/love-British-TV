@@ -1,0 +1,140 @@
+{
+  "schema": "e6-t11-transatlantic-quantitative-evidence-v1",
+  "revision": "2026-10-25 institutional sources independently reviewed; estimates grouped 25 years, no invented yearly values",
+  "period_of_story": {
+    "start_year": 1600,
+    "end_year": 1699
+  },
+  "statistics_not_a_historical_territory": true,
+  "primary_estimate": {
+    "dataset": "SlaveVoyages Trans-Atlantic Slave Trade Estimates (carrier=Great Britain; cells=embarked; rows=25-year periods)",
+    "url": "https://legacy.slavevoyages.org/assessment/estimates",
+    "definition": "Estimated number of people forced to embark from Africa on vessels categorized as Great Britain carrier, NOT voyages, not arrivals, not RAC-only, not all inhabitants of British colonies.",
+    "source_data_table": {
+      "flag": "Great Britain",
+      "measure": "enslaved_people_embarked_estimated",
+      "source_period_boundary": "1601 through 1700 INCLUDING 1700",
+      "period_rows": [
+        {
+          "period": "1601-1625",
+          "start": 1601,
+          "end": 1625,
+          "estimated_embarked": 0,
+          "estimated_all_carriers_embarked": 352844,
+          "qualification": "zero in model's carrier/period cell is not a proof that no English individual ever participated indirectly"
+        },
+        {
+          "period": "1626-1650",
+          "start": 1626,
+          "end": 1650,
+          "estimated_embarked": 33695,
+          "estimated_all_carriers_embarked": 315050
+        },
+        {
+          "period": "1651-1675",
+          "start": 1651,
+          "end": 1675,
+          "estimated_embarked": 122367,
+          "estimated_all_carriers_embarked": 488065
+        },
+        {
+          "period": "1676-1700",
+          "start": 1676,
+          "end": 1700,
+          "estimated_embarked": 272200,
+          "estimated_all_carriers_embarked": 719675
+        }
+      ]
+    },
+    "published_subtotals": {
+      "period": "1601-1700",
+      "great_britain_estimated_embarked": 428262,
+      "all_carriers_estimated_embarked": 1875634,
+      "computation": "0+33695+122367+272200; all carriers 352844+315050+488065+719675; sums of DISPLAYED historical estimates rows, not new model fit",
+      "precise_1600_1699_value": null,
+      "warning": "The displayed bins include year 1700 (and exclude year 1600). Do not reuse this sum as a precise 1600-1699 count. No year-by-year Scottish/English carrier correction reconstructed."
+    }
+  },
+  "voyage_evidence": [
+    {
+      "dataset": "Smithsonian NMAAHC Royal African Company share certificate contextual history",
+      "url": "https://transcription.si.edu/projects/nmaahc/29682",
+      "period": "1673-1688",
+      "operator": "Royal African Company (English company; subset of British carrier)",
+      "estimated_people_transported_range": [
+        90000,
+        100000
+      ],
+      "average_annual_voyages": 23,
+      "exact_voyage_count": null,
+      "transported_definition": "museum states transported, not a new count of British-total embarkations",
+      "qualification": "Approximate annual voyages and persons during RAC monopoly. Not additive to Great Britain SlaveVoyages totals or the Bristol 1680-92 overlapping subset."
+    },
+    {
+      "dataset": "Bristol Radical History Group, Edward Colston Research Paper #1, Tables 3 and 4",
+      "url": "https://www.brh.org.uk/site/articles/edward-colston-research-paper-1/",
+      "period": "1680-1692",
+      "operator": "Royal African Company voyages retrieved from SlaveVoyages in that study",
+      "documented_voyages": 279,
+      "people_embarked": 84498,
+      "people_disembarked": 65157,
+      "derived_difference": 19341,
+      "derived_difference_divided_by_embarked_pct": 22.89,
+      "qualification": "Secondary scholarly reconstruction from historical SlaveVoyages extract. This is a specific RAC-filtered, 1680-1692 cohort; figures/analysis may vary with database version. Difference is a cohort-based transit-loss proxy, not a global 17C British mortality rate, not a count of killings by specific rebel events."
+    },
+    {
+      "dataset": "UK National Archives Royal African Company record descriptions",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/african-ancestors-an-overview/",
+      "period": "1695-1749",
+      "archive_ref": "T 70/1209",
+      "known_voyages": null,
+      "people_embarked": null,
+      "people_disembarked": null,
+      "qualification": "Catalog describes voyage summaries, individuals enslaved by the Company; no numeric voyage total extracted from archival fonds description."
+    }
+  ],
+  "resistance_methodology": {
+    "dataset": "SlaveVoyages methodology and glossary",
+    "urls": [
+      "https://legacy.slavevoyages.org/blog/methodology-trans-atlantic",
+      "https://legacy.slavevoyages.org/blog/glossary",
+      "https://www.slaveryandremembrance.org/articles/article/index.cfm?id=A0035"
+    ],
+    "coding": [
+      "on-board collective revolt",
+      "ship attacked from shore",
+      "boat attacked from shore",
+      "three or more people jumping overboard/escaping",
+      "planned revolt thwarted"
+    ],
+    "specific_17c_english_ship_revolt_count": null,
+    "prevalence_statement": "Secondary SlaveVoyages/Slavery and Remembrance overview says roughly one in ten voyage experienced some form of African resistance. Not restricted to Great Britain, nor seventeenth century; DO NOT multiply period voyage counts by 10%.",
+    "specific_17c_english_slave_voyage_inventory_complete": false
+  },
+  "systemic_economic_archival_link": {
+    "sources": [
+      "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/transatlantic-slave-trade/",
+      "https://historicengland.org.uk/research/inclusive-heritage/the-slave-trade-and-abolition/time-line/",
+      "https://www.slavevoyages.org/blog/the-transatlantic-slave-trade-database/163"
+    ],
+    "terms": [
+      "European capital and joint-stock monopolies",
+      "force and sale at coastal factories",
+      "Middle Passage confinement and death",
+      "plantation forced labor and racial hereditary laws",
+      "sale proceeds and slave-produced sugar/tobacco",
+      "resistance at sea and in plantation societies"
+    ]
+  },
+  "data_governance": {
+    "estimate_vs_documented_voyages_separated": true,
+    "aboard_vs_landed_separated": true,
+    "unnamed_captives_not_erased": true,
+    "period_bins_cannot_be_drawn_as_yearly_events": true,
+    "period_flow_not_exact_ship_course": true,
+    "no_geographic_territorial_inference": true,
+    "areas_sqkm": null,
+    "ship_count_not_inferred_from_population": true,
+    "statistical_timelines_require_explicit_coverage_start_end": true
+  }
+}
