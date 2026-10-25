@@ -3978,6 +3978,51 @@
       "representative_map_point": true,
       "geolocation_basis_zh": "美国政府解密巴拿马地名录：Bahía de Caledonia 8°55'N,77°42'W 现代地理区域参考；不代表1698年堡墙、原住民土地地界或船只精确位置",
       "map_priority": true
+    },
+    {
+      "id": "1690S-E132",
+      "research_event_id": "EDITOR12-E6T11:1690S-E132",
+      "arc_id": "ARC-ATL-TRADE",
+      "year": 1699,
+      "start_year": 1699,
+      "end_year": 1699,
+      "visible_from": 1699,
+      "date_label": "1699年11月22日（抵岸；起义具体日期未知）",
+      "name": "Albion Frigate号船上反抗：600人被强行登船、250人抵巴巴多斯",
+      "historical_actor": "Albion Frigate号上的被奴役非洲人、船长Stephen Duport及英方船东",
+      "historical_place": "Barbados (1699 arrival region recorded; exact landing port and mid-ocean revolt position unknown)",
+      "description": "SlaveVoyages跨大西洋航次20173直接登记英国船旗Albion Frigate号1698年12月8日离伦敦、1699年8月29日离非洲、1699年11月22日抵巴巴多斯，African resistance栏明确为Slave insurrection（船上起义）。600名被奴役者从非洲登船、抵岸估算250人，数据库的途中死亡350人及58.0%死亡率均标注IMP（推算），**不代表350人在起义冲突中丧生**，也不是逐人核对遇害名单。巴巴多斯点是抵岸地区参考，并非船上起义海域或精确靠泊码头。",
+      "short_description": "1699年英国贩奴船Albion Frigate被记录发生船上起义；航次20173登船600、抵岸估算250、途中死亡推算350。350绝非起义战死人数，岛级标记不是起义地点。",
+      "category": "military",
+      "icon_code": "MIL",
+      "lat": 13.096,
+      "lng": -59.614,
+      "geography_label": "Barbados (modern island reference for 1699 voyage landing, not uprising at sea)",
+      "geo_precision": "modern_barbados_island_arrival_reference_not_1699_revolt_sea_position",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】本点只示意Albion Frigate号1699年抵岸的巴巴多斯，不表示船舱内起义发生于此、任何真实海上航迹或精确抵岸码头；不能由载运人数生成殖民疆域面积。",
+      "source_ids": [
+        "1690S-S162"
+      ],
+      "source_access_reported": [
+        "slavevoyages_official_direct_voyage_20173_page_all_fields_checked"
+      ],
+      "source_group": "EDITOR12",
+      "certainty": "official_individual_voyage_resistance_confirmed_count_some_imputed_geolocation_only_arrival_island",
+      "significance": {
+        "level": 2,
+        "rationale": "十七世纪具名英国船上反抗与登船、抵岸、途中死亡同一航次的可核记录，死亡需标示IMP",
+        "review_status": "editor12_official_SlaveVoyages_20173_20261025"
+      },
+      "editorial_status": "published_official_voyage_record_proxy_arrival_marker_nonmetric",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "representative_map_point": true,
+      "position_type": "nonmetric_named_island_colony_or_port_reference",
+      "geolocation_basis_zh": "SlaveVoyages直接记录首次抵岸Barbados unspecified；沿用已审核的巴巴多斯现代岛级参考坐标（Hannibal同岛点），不得把该点解释为起义坐标",
+      "map_priority": true
     }
   ],
   "places": [],
@@ -5136,6 +5181,17 @@
       "verification_status": "editor12_20261025_museum_or_independent_reconstruction_checked",
       "evidence_read_level": "museum_timeline_or_secondary_voyage_reconstruction_not_individual_archival_folios",
       "precision_warning": "Year and island/colony only; cannot infer original vessel GPS, counted every captive, verified rebellion battle lines, or measurable human traffic density."
+    },
+    {
+      "id": "1690S-S162",
+      "title": "SlaveVoyages Trans-Atlantic Slave Trade voyage 20173: Albion Frigate, 1699 revolt, departure, arrival, embarkation, disembarkation IMP, deaths IMP",
+      "publisher": "SlaveVoyages Consortium",
+      "url": "https://www.slavevoyages.org/voyage/20173/variables",
+      "kind": "direct_official_voyage_record_with_imputed_fields",
+      "original_source_id": "EDITOR12-E6T11:1690S-E132",
+      "verification_status": "official_individual_voyage_webpage_direct_read_20261025",
+      "evidence_read_level": "SlaveVoyages_official_public_voyage_entry_not_underlying_T70_349_manuscripts",
+      "precision_warning": "350 deaths and 58% mortality are IMP imputed voyage measure, not rebellion battle casualties; exact revolt position and exact landing quay unrecorded."
     }
   ],
   "routes": [
