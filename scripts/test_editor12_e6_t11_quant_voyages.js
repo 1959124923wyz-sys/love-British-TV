@@ -106,7 +106,7 @@ assert.equal(cases.find(c=>c.year===1699).secondary_scholarly_revolt_killed_ensl
 assert.equal(cases.find(c=>c.year===1699).secondary_scholarly_revolt_killed_crew_approx,1);
 assert(ledger.research_only_candidates.some(c=>c.name==='Dragon'));
 assert(ledger.research_only_candidates.some(c=>c.name==='Cothrington'));
-assert(a.verified_ledger_path==='data/research/e6-t11-resistance-case-ledger-1600-1699.json');
+assert(quantitative.verified_ledger_path==='data/research/e6-t11-resistance-case-ledger-1600-1699.json');
 assert(stats.resistance_case_reference.voyages.length===2);
 assert(stats.resistance_case_reference.albion_revolt_killed_secondary.warning.includes('不得与同航次350名全程死亡IMP相加'));
 
