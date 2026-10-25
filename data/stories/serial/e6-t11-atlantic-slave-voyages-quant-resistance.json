@@ -31,7 +31,8 @@
     "1690S-E130",
     "1690S-E017",
     "1690S-E057",
-    "1690S-E131"
+    "1690S-E131",
+    "1610S-E024"
   ],
   "reading_note": "官方SlaveVoyages 1601—1700英船旗25年估算合计428262被强制登船，包含1700年，不是1600—1699精确数。RAC 1680—92子样本279航次/84498登船/65157抵岸/19341差额与NMAAHC 1673—88 90000—100000人/约23年航次属不同重叠来源，不可相加。Hannibal约320—328死亡源间存在计数差别；1694既有Atlas事件不得不经确证改归RAC。",
   "map_note": "25年统计只展示文章定量证据表，绝不冒充逐年事件点或真实动态运量；具年史事显示现代地名参考点。无实测船舶航迹、起义作战区、西非被劫掠范围或英王跨洋主权面；面积null。",
@@ -91,6 +92,15 @@
       "avg_voyages_per_year": 23,
       "source_url": "https://transcription.si.edu/projects/nmaahc/29682",
       "warning": "年度平均航次数不等于精确全公司航次总数；不能与重叠时期统计相加。"
+    },
+    "cohort_human_cost": {
+      "source_url": "https://www.brh.org.uk/site/articles/edward-colston-research-paper-1/",
+      "operator": "1680—1692年RAC航次的年龄、性别与被当作商品估价的情况",
+      "male_pct_approx": 58,
+      "children_age_at_most": 10,
+      "children_pct_approx": 14,
+      "historical_jamaica_prime_male_sale_price_gbp_average": 18.73,
+      "warning": "男性约58%及10岁以下（含10岁）儿童约14%为研究根据部分航次年龄和性别记录作出的加权近似构成，不能据此算出精确人数。£18.73是研究采用的1680—1692年牙买加特定类别历史平均售价，绝非所有人的均价、公司净利润或现代币值。"
     }
   },
   "sections": [
@@ -102,11 +112,13 @@
       "source_keys": [
         "SV01",
         "SV02",
-        "SV10"
+        "SV10",
+        "SV19",
+        "SV20"
       ],
       "paragraphs": [
         "十七世纪初，大西洋上的非洲人口贩运主要由葡萄牙与西班牙殖民贸易网络经营；西非沿海既有各自的政治组织和市场，也存在战争、掳掠与被迫出卖。英格兰商人虽然在上一个世纪便涉入贩运，1618年国王又[[1610S-E021|特许伦敦非洲贸易冒险者商团]]，但一次王室授予的贸易许可既不是持续跨洋航运的证明，也不意味着英方控制了非洲海岸。",
-        "SlaveVoyages的船旗估算在1601—1625年英格兰／英国这一栏为零，而同期全部船旗合计估计约35.3万人被迫登船。这里的零是研究模型在该特定分类和年段中的数值，不能用来断言英商个人、经他国船只转运的被奴役者或更早年代的活动不存在。",
+        "SlaveVoyages的船旗估算在1601—1625年英格兰／英国这一栏为零，而同期全部船旗合计估计约35.3万人被迫登船。这里的零是研究模型在该特定分类和年段中的数值，不能用来断言英商个人、经他国船只转运的被奴役者或更早年代的活动不存在。 不过1619年另有不同性质的明确个案：White Lion和Treasurer两艘英方私掠船在坎佩切湾袭击葡萄牙贩奴船São João Bautista，将遭强制转运的非洲人再次劫走；之后[[1610S-E024|White Lion驶抵弗吉尼亚Point Comfort]]，把二十余名非洲人交给殖民地方面以换取粮食。这里的海上截掠并非救援，也不能直接拿去修改SlaveVoyages“从非洲由英船承运”的1601—1625年分类估算。",
         "当时的海上货舱可能载有欧洲纺织品、金属器、酒和火器，被奴役者的转运又依赖沿海囚禁地点和海外殖民市场。后来英格兰商人进入这一网络，逐步建立的不是一条与非洲社会隔绝的新航路，而是借战争、交易、海军和殖民法规扩张的一整套跨洋强制迁移事业。"
       ]
     },
@@ -298,9 +310,9 @@
         "SV16"
       ],
       "paragraphs": [
-        "另一项依据SlaveVoyages检索记录开展的研究专门挑出1680—1692年皇家非洲公司拥有的船只，识别出279个跨大西洋奴役航次，并计算这些记录中约84,498名被迫登船者和65,157名抵岸者。这一研究样本给出登船与抵岸人数之差19,341人，约为登船人数的22.9%。",
+        "另一项依据SlaveVoyages检索记录开展的研究专门挑出1680—1692年皇家非洲公司拥有的船只，识别出279个跨大西洋奴役航次，并计算这些记录中约84,498名被迫登船者和65,157名抵岸者。这一研究样本给出登船与抵岸人数之差19,341人，约为登船人数的22.9%。 研究进一步按有年龄和性别资料的部分航次进行加权估算：男性约占58%，十岁及以下儿童约占14%。这些是样本比例而不是逐人点名的全体人数，不能据此计算全世纪英船上男童女童的精确人数。",
         "差额呈现了航海拘禁带来的巨大生命损失，但还需要核对各艘船的具体情况：有人在离岸之前死亡，有船可能沉没或遇袭，登记的人数还可能经过研究者补全。我们不能把19,341简单地说成在某一条船上被杀害的准确人数，更不能说这是全部英国船在17世纪的死亡总数。",
-        "这279次只属于特定公司、特定年份和当时数据库所能识别的记录；它与史密森尼1673—1688年约九万至十万人估计相互交叠。严谨的数量研究应当让两组数据并列比较来源与口径，而不是把它们相加来制造一个看似壮观却重复统计的总数。"
+        "这279次只属于特定公司、特定年份和当时数据库所能识别的记录；它与史密森尼1673—1688年约九万至十万人估计相互交叠。严谨的数量研究应当让两组数据并列比较来源与口径，而不是把它们相加来制造一个看似壮观却重复统计的总数。 研究还用当时牙买加的分年份价格资料，估出所谓“主要成年男性”被拍卖时的历史平均价格约18.73英镑；这揭示人被作为财产估价的商业暴力，却既非所有人的统一售价，也不是皇家非洲公司的纯利润。"
       ]
     },
     {
@@ -494,6 +506,18 @@
       "label": "Bristol Archives｜保存的1698—1704布里斯托尔商人Day家族账册档案简介",
       "url": "https://archives.bristol.gov.uk/guides/Guide%20to%20African-Caribbean%20Sources.pdf",
       "access": "city_archives_primary_register_guide_not_full_account_books_read"
+    },
+    {
+      "id": "SV19",
+      "label": "美国国家公园管理局 Historic Jamestowne｜1619年White Lion、Treasurer扣取葡萄牙贩奴船被奴役者并于Point Comfort交易",
+      "url": "https://www.nps.gov/jame/learn/historyculture/the-royal-african-company-supplying-slaves-to-jamestown.htm",
+      "access": "us_national_park_service_public_history_voyage_case_secondary_with_archival_context"
+    },
+    {
+      "id": "SV20",
+      "label": "Encyclopedia Virginia（Joseph C. Miller）｜1619年英方私掠São João Bautista、被劫人转卖及历史背景",
+      "url": "https://encyclopediavirginia.org/entries/transatlantic-slave-trade-the/",
+      "access": "academic_editorial_history_joseph_c_miller_1619_seizure_context"
     }
   ],
   "topic_source_claims": [
@@ -503,14 +527,16 @@
       "source_keys": [
         "SV01",
         "SV02",
-        "SV10"
+        "SV10",
+        "SV19",
+        "SV20"
       ],
       "original_document_page": "SlaveVoyages transatlantic estimates public 25-year row and Great Britain embarked column",
       "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
       "publication_approval": true,
       "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
       "claim_summary": "一、1600—1625年：英商尚未成为跨洋人口贩运的主力",
-      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area."
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. 1619 privateering interception by White Lion and Treasurer is not an English-origin African embarkation count and should not override Great Britain carrier=0 in 1601-1625."
     },
     {
       "claim_id": "E6T11-C02",

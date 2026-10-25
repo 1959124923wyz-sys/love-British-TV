@@ -48,3 +48,17 @@
 旧Atlas `1690S-E024` 从较早节录留下“480名男性+200名女性＝680人与700人不相符”的说法。现交叉核对17C船长Phillips后刊航海叙述的学术引录：[JSTOR学术章节《A Fixed Melancholy》](https://www.jstor.org/stable/j.ctt1b7x67k.9)、[ProQuest同章节全文](https://www.proquest.com/docview/1543993799/7D95A2C364924F81PQ/3)、[Macmillan 1694年Phillips原文选录](https://digfir-published.macmillanusa.com/hewittlawson1e/hewittlawson1e_ch3_37.html)。引录明确为 **480男性+220女性＝700人**。旧“200”应属誊写/节录误差，不能凭旧数字制造700人帐目有20人缺失的结论。
 
 已更新 `data/atlas-1690-1699.json` E024事件描述及S046史料精度提醒。另保留抵岸存活372及中途死亡320/328两种口径的不同来源，不推定每一名被害者确切个人身份。Bristol Radical History研究328、学术章节Phillips所记320，**差异未见原始逐人名册核验**。本次校对的参考端点是学术章节/出版摘录，并不冒称已逐页核对大英图书馆1732年整部原刻本。
+
+## 7. 新增核验：公司样本中的儿童、性别与历史售卖估值（2026-10-25）
+
+[Roger Ball, Bristol Radical History Group, *Edward Colston Research Paper #1*, Table 9及Summary](https://www.brh.org.uk/site/articles/edward-colston-research-paper-1/) 使用1680—1692年皇家非洲公司279次可识别航次当中**具有年龄、性别资料的显著子样本**，对比例作加权估算。作者报告男性约占**58%**、十岁及以下儿童约占**14%**。这是历史数据库子样本的近似构成，**不可把84,498人分别直接乘58%或14%冒充精确逐人统计**，也不涵盖全英船旗或1600—1699世纪总体。
+
+同篇研究借助1680—1692年牙买加档案中的分年市场价格，估计当时所谓 *prime male*（按贩卖者分类的成年男性）的**平均历史售价约£18.73**。此处金额是具体类别与地域的售价研究参数，并非全部被奴役者的人均价格，更不是RAC净利润或可直接换算的当代价值。成年女性及儿童在该研究的金额模型中被赋予不同系数，这反映历史上把人作为可转让财产估价的暴力制度，展示时不采用其商品分类作为人的真实价值判断。
+
+已把上述有来源限定的补充写入结构化证据、18章文章第13节、读者可见的定量摘要与自动回归测试；**未引入伪造的精确儿童人数、伪造单船航线或新殖民主权地块**。
+
+## 8. 海上截掠案例补齐：1619年White Lion、Treasurer与São João Bautista（2026-10-25）
+
+美国国家公园管理局 [Historic Jamestowne 专文](https://www.nps.gov/jame/learn/historyculture/the-royal-african-company-supplying-slaves-to-jamestown.htm) 记载，White Lion、Treasurer两艘英方武装私掠船在坎佩切湾从葡萄牙贩奴船上劫取被奴役非洲人；White Lion后来在弗吉尼亚Point Comfort以史书所谓“20 and odd”名非洲人换取物资。White Lion船长John Jope所持的是荷兰毛里茨亲王签发的私掠许可证。 [Encyclopedia Virginia（Joseph C. Miller）](https://encyclopediavirginia.org/entries/transatlantic-slave-trade-the/) 同样记载袭击葡萄牙船São João Bautista，但该文主体称约50人被截、同篇年表称约60人；**暂不将50或60冒充精确人数**。
+
+**分类差异是本案核心：**1601—1625年SlaveVoyages Great Britain=0是数据库“从非洲出航且按英船旗承运”的推算单元格，1619年是在中途对原属葡萄牙船上的被奴役者进行截取及再贩卖；二者不矛盾，不能为了调整0而把二次截掠当作英船从非洲登船数据。该事件是**掠夺与继续奴役，不是从奴役中解救人们**。地图仅链接已有Atlas `1610S-E024` 的1619年Point Comfort登陆参考点，不给坎佩切湾加虚假精确交战坐标，也不画推测跨洋航迹。本轮将二次来源及此限制补入正式18章正文第一章和统计研究表。
