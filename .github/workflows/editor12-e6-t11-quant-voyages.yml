@@ -1,0 +1,53 @@
+name: Editor12 17C Atlantic enslavement quantitative voyages and resistance QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json'
+      - 'data/atlas-1660-1669.json'
+      - 'data/atlas-1670-1679.json'
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
+      - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
+      - 'js/history-stories.js'
+      - 'css/history-stories.css'
+      - 'scripts/test_editor12_e6_t11_quant_voyages.js'
+      - 'scripts/browser_editor12_e6_t11_quant_voyages.py'
+      - '.github/workflows/editor12-e6-t11-quant-voyages.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json'
+      - 'data/atlas-1690-1699.json'
+      - 'js/history-stories.js'
+      - 'scripts/test_editor12_e6_t11_quant_voyages.js'
+jobs:
+  audited-human-counts-ship-cohorts-resistance-desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check primary estimates, documented voyages and GIS no-fabrication contracts
+        run: |
+          node --check js/history-stories.js
+          node --check scripts/test_editor12_e6_t11_quant_voyages.js
+          node scripts/test_editor12_e6_t11_quant_voyages.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          node scripts/test_editor6_17c_batch01.js
+          node scripts/test_editor6_17c_georeference_r02.js
+          node scripts/test_editor7_17c_regional_studies.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install Selenium for real desktop
+        run: pip install selenium
+      - name: Verify historical quantitative panel, year-pan, source notes, dossier and article return at 1780px
+        run: |
+          python -m http.server 8765 &
+          python3 scripts/browser_editor12_e6_t11_quant_voyages.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor12-e6-t11-human-counts-and-voyage-desktop-evidence
+          path: browser-smoke-results/editor12-e6t11-*.png
