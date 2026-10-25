@@ -285,7 +285,29 @@
           "disembarked_imputed": 250
         }
       ],
-      "warning": "上述数字是官方2019版已收录船次中存在抵抗编码的记录，不代表全部实际反抗，也不是全17世纪英船估计总航次数。无编码不等于无反抗；YEARAM／船旗NATINIMP可能由数据库推定，非原始抵岸清单。港口和战场坐标未审核；登船与抵岸差额不是已证起义死亡或全航程死亡人数。"
+      "warning": "上述数字是官方2019版已收录船次中存在抵抗编码的记录，不代表全部实际反抗，也不是全17世纪英船估计总航次数。无编码不等于无反抗；YEARAM／船旗NATINIMP可能由数据库推定，非原始抵岸清单。港口和战场坐标未审核；登船与抵岸差额不是已证起义死亡或全航程死亡人数。",
+      "crossedition_2020": {
+        "source_url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2020.sav",
+        "dataset_sha256": "39585586cb7b17cdd38cd20a1ac77fea109f7855f5ae76df19a0708a65e5bc21",
+        "same_24_resistance_case_ids_and_selected_fields": true,
+        "edition_2020_17c_records": 3371,
+        "edition_2020_british_flag_records": 1037,
+        "edition_2020_british_shipboard_insurrections": 12,
+        "edition_2020_british_shore_vessel_attacks": 2,
+        "sourceA_2020_prefix_truncations_in_17c_nonresistance_records": 36,
+        "warning": "2019／2020是同源数据库的两个相邻版本，不是互不相关的原始档案。17世纪3,371个筛选船次的航次ID及主要抽取字段一致；2020版36条SOURCEA长索引截短，不能把SPSS较短字符串当史料出处完整卷页。"
+      }
+    },
+    "colonial_counter_resistance_law_1699": {
+      "law_year": 1699,
+      "place": "牙买加",
+      "source_url": "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1699",
+      "payer": "殖民当局财政",
+      "monthly_commander_gbp": 6,
+      "monthly_sergeant_gbp": 3,
+      "monthly_ordinary_shillings": 50,
+      "plunder_authorised": true,
+      "warning": "该法律文本来自1716年印本，1699年立法日期为不精确年份；此为法定支付标准，不代表所有月度费用已实际发生。不得当作被奴役者售价或公司的航运收益。"
     }
   },
   "sections": [
@@ -588,12 +610,15 @@
         "SV21",
         "SV28",
         "SV29",
-        "SV30"
+        "SV30",
+        "SV31",
+        "SV32",
+        "SV33"
       ],
       "paragraphs": [
-        "本世纪结束时，跨大西洋人口贩运已把英格兰王室特许公司、私人船东、西非沿岸商贸、殖民地法庭与加勒比种植园连在一起。数十万人在这组船旗估计中的强迫登船记录，不是普通移民统计，而是人们被剥夺自由迁移权、身体自主权及劳动成果的记录。",
-        "SlaveVoyages显示1626—1650年估计33,695人、1651—1675年122,367人、1676—1700年272,200人乘英船被迫离非洲。这些25年分期之和包括1700年，不能作为1600—1699的精确年度统计；另外，皇家非洲公司具体航次与抵岸者数量属于口径更窄的档案样本。年龄、性别、各港口来源与船内死亡案例也须按船次逐一核对。",
-        "1699年已有能辨认船名和航次的反抗：Albion Frigate号从非洲被迫装载600人；SlaveVoyages将[[1690S-E132|该船的反抗编码为“船上起义”，并记载其1699年11月22日抵达巴巴多斯]]，数据库估算抵岸250人、途中死亡350人。350为航次死亡的推算总量，不能说是该次起义杀死350人。被奴役者在船内及沿岸的反抗与山地逃亡共同构成不断争取自由的历史；而1700年及以后另一批船上起义，不可回填1699年作为本世纪已发生的事件。 学者Eric Robert Taylor另据早期文献整理，称Albion号反抗中约28名被奴役者与1名船员死亡；这一反抗冲突叙述须与数据库推算的350人全航程死亡分开标注，不能相加或当作350人全部死于起义。该书还列有Charles、Dragon与Cothrington等更早反抗，但原卷未阅，暂列核验候选，而不虚构其地图战场。 同一官方2019版数据库内，按推定抵岸年1600—1699和推定英国登记船旗筛选，共有14条非空反抗编码记录，其中12条标为船上起义，2条标为从岸上袭击船只；这是有记录的样本，不能据此断言17世纪英国船只仅发生14次抵抗。2019版还编码1691年Charles号（航次99009）船上起义；此前把它仅列为二手待核候选的证据等级应上调为“官方历史航次数据库已收录，原档仍待核”。"
+        "本世纪结束时，跨大西洋人口贩运已把英格兰王室特许公司、私人船东、西非沿岸商贸、殖民地法庭与加勒比种植园连在一起。数十万人在这组船旗估计中的强迫登船记录，不是普通移民统计，而是人们被剥夺自由迁移权、身体自主权及劳动成果的记录。 1699年的[[1690S-E091|牙买加武装追捕逃亡者及反抗者法令]]，把镇压也安排为可由殖民财政支付的制度性活动：追捕队指挥官每月六英镑、军士三英镑、其余成员各五十先令，另引用既有奴役法规定的掠获激励。法律写明的是授权和给付标准，不能据此虚构某年实际出动队伍数量或已经支付的总额。",
+        "SlaveVoyages显示1626—1650年估计33,695人、1651—1675年122,367人、1676—1700年272,200人乘英船被迫离非洲。这些25年分期之和包括1700年，不能作为1600—1699的精确年度统计；另外，皇家非洲公司具体航次与抵岸者数量属于口径更窄的档案样本。年龄、性别、各港口来源与船内死亡案例也须按船次逐一核对。 对官方2019年CSV与2020年SPSS历史数据库按相同1600—1699推定抵岸年及英国推定船旗筛选，船上起义与岸袭船只的有记录条数保持一致，但两版属于同一数据工程的连续版本，不能将它们当成两个互相独立的原始船长日记来源。",
+        "1699年已有能辨认船名和航次的反抗：Albion Frigate号从非洲被迫装载600人；SlaveVoyages将[[1690S-E132|该船的反抗编码为“船上起义”，并记载其1699年11月22日抵达巴巴多斯]]，数据库估算抵岸250人、途中死亡350人。350为航次死亡的推算总量，不能说是该次起义杀死350人。被奴役者在船内及沿岸的反抗与山地逃亡共同构成不断争取自由的历史；而1700年及以后另一批船上起义，不可回填1699年作为本世纪已发生的事件。 学者Eric Robert Taylor另据早期文献整理，称Albion号反抗中约28名被奴役者与1名船员死亡；这一反抗冲突叙述须与数据库推算的350人全航程死亡分开标注，不能相加或当作350人全部死于起义。皇家非洲公司旧档仍未逐页核实起义的全部死伤。布里斯托尔博物馆另记载，1699年从英格兰Topsham港组织的Dragon号贩奴航次在非洲海岸发生被奴役者起义，最终仅有14名属于原船东账下的被奴役者抵达巴巴多斯以供出售。这一数字不等于整船抵岸总人数，更不能把其他原先搭载者都判为起义死者；其船长姓名在不同二手编年叙述中尚有矛盾，起义发生的准确海面位置也不明。 同一官方2019版数据库内，按推定抵岸年1600—1699和推定英国登记船旗筛选，共有14条非空反抗编码记录，其中12条标为船上起义，2条标为从岸上袭击船只；这是有记录的样本，不能据此断言17世纪英国船只仅发生14次抵抗。2019版还编码1691年Charles号（航次99009）船上起义；此前把它仅列为二手待核候选的证据等级应上调为“官方历史航次数据库已收录，原档仍待核”。"
       ]
     }
   ],
@@ -777,6 +802,24 @@
       "label": "SlaveVoyages官方2019版SPSS代码手册｜RESISTANCE 1船上起义／2岸袭船只／3岸袭小艇与NATINIMP推定船旗",
       "url": "https://legacy.slavevoyages.org/documents/download/SPSS_Codebook_2019.pdf",
       "access": "official_codebook_2019_text_values_verified_but_original_17c_archive_files_uninspected"
+    },
+    {
+      "id": "SV31",
+      "label": "UNB《Laws of Enslavement and Freedom》｜1699年牙买加武装追捕逃亡/反抗奴役者法令及追捕者津贴，原法见1716年印本257—261页",
+      "url": "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1699",
+      "access": "university_primary_law_transcription_from_1716_print_year_1699_exact_day_inexact_no_proof_of_payments_made"
+    },
+    {
+      "id": "SV32",
+      "label": "Bristol Museums PortCities｜1699年德文郡Topsham港Dragon号及船上被奴役者起义、私人商人剩余抵岸人数",
+      "url": "https://www.discoveringbristol.org.uk/slavery/routes/places-involved/britain/south-west-ports/",
+      "access": "museum_curated_historical_secondary_not_original_ship_manifest_or_original_tattersfield_journal"
+    },
+    {
+      "id": "SV33",
+      "label": "SlaveVoyages官方2020年SPSS扩展航次数据库｜与2019版具名反抗船只字段交叉核对",
+      "url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2020.sav",
+      "access": "official_2020_versioned_spss_dataset_bulk_read_with_pyreadstat_not_second_independent_primary_17c_manuscript"
     }
   ],
   "topic_source_claims": [
@@ -1060,15 +1103,18 @@
         "SV21",
         "SV28",
         "SV29",
-        "SV30"
+        "SV30",
+        "SV31",
+        "SV32",
+        "SV33"
       ],
-      "original_document_page": "SlaveVoyages voyage 20173 page, itinerary date fields, African resistance field, number IMP and middle-passage deaths IMP. | Eric Robert Taylor LSU Press 2006 Appendix publicly catalogued at Project MUSE; third-party reproduced excerpt has Albion 28 enslaved and 1 crew killed, not independently archive-verified; 350 total voyage IMP not additional. | SlaveVoyages 2019 official bulk CSV, voyage rows, 2019 resistance codebook; source citations in dataset uninspected original manuscripts",
+      "original_document_page": "SlaveVoyages voyage 20173 page, itinerary date fields, African resistance field, number IMP and middle-passage deaths IMP. | Eric Robert Taylor LSU Press 2006 Appendix publicly catalogued at Project MUSE; third-party reproduced excerpt has Albion 28 enslaved and 1 crew killed, not independently archive-verified; 350 total voyage IMP not additional. | SlaveVoyages 2019 official bulk CSV, voyage rows, 2019 resistance codebook; source citations in dataset uninspected original manuscripts | University of New Brunswick 1699 Jamaica law as transcribed from 1716 print pp.257-261; Bristol Museums PortCities Topsham Dragon account; 2020 official SlaveVoyages SPSS edition compared with 2019, original log not opened.",
       "verification_depth": "SlaveVoyages_estimates_25_year_explicit_NMAAHC_museum_RAC_cohort_BRHG_company_subset_archives_guides",
       "publication_approval": true,
       "assertion_type": "early_English_forced_migration_trade_coercion_port_granularity_resistance_dates_and_limits",
       "claim_summary": "十八、1699年：从估计数到完整的压迫体系",
-      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. Albion Frigate death number 350 has IMP marker and is not a revolt casualty count; 1699 arrival in Barbados is not an exact longitude of shipboard revolt. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive. 2019 coded resistance counts are an edition-specific documented-case sample; never total all rebellions; NATINIMP/YEARAM imputed."
+      "conflicting_evidence_or_limits": "Quarter-century estimates include 1700 and are NOT voyages/arrivals; RAC cohort different overlapping subsets; no named rebel ship without vessel-level primary documentation; Hannibal 320 vs 328 scholarly variant; no historic ocean/land area. Albion Frigate death number 350 has IMP marker and is not a revolt casualty count; 1699 arrival in Barbados is not an exact longitude of shipboard revolt. | Separate 1681 fort death counts, voyage embarked/landed differences, Albion imputed middle passage deaths and secondary revolt-specific deaths; all non-additive. 2019 coded resistance counts are an edition-specific documented-case sample; never total all rebellions; NATINIMP/YEARAM imputed. 1699 statute effective exact day not known; monthly bounties no actual expenditure proven; 1699 Dragon 14 accounts for owner-side trade after rebellion, NOT precise ship mortality; commander conflicts Christopher Butcher vs Henry Taylor. 2020 SPSS 36 SOURCEA citation strings truncated, retain 2019 original CSV refs."
     }
   ],
-  "research_revision": "2026-10-25 editor12 E6-T11 slavevoyages national carrier quantitative evidence, primary archival scope NMAAHC stock certificate RAC cohorts; 18 chapters and explicit dual cohort; five new dated Atlas points and no speculative ship route or colonial sovereignty. | 2026-10-25 Editor13: first official 2019 bulk voyage CSV checked SHA256, 14 British-flag coded resistance cases (12 insurrections / 2 shore attacks), 3,371 all-carrier rows, 1,037 British-flag rows; full case research ledger and no inferred battle points"
+  "research_revision": "2026-10-25 editor12 E6-T11 slavevoyages national carrier quantitative evidence, primary archival scope NMAAHC stock certificate RAC cohorts; 18 chapters and explicit dual cohort; five new dated Atlas points and no speculative ship route or colonial sovereignty. | 2026-10-25 Editor13: first official 2019 bulk voyage CSV checked SHA256, 14 British-flag coded resistance cases (12 insurrections / 2 shore attacks), 3,371 all-carrier rows, 1,037 British-flag rows; full case research ledger and no inferred battle points | 2026-10-25 Editor14 official 2020 SPSS checksum cohort match and 36 SOURCEA truncated fields; 1699 Jamaica statute 6/3 GBP+50s statutory bounty; 1699 Dragon Bristol museum confirmed vessel revolt without battle map"
 }
