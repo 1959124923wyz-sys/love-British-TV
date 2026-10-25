@@ -98,3 +98,15 @@
 - **1699 Albion Frigate口径复核**：Eric Robert Taylor《If We Must Die》2006年大学出版社历史学研究附录（[Project MUSE正式书目](https://muse.jhu.edu/book/16586)）经公开二次引录称起义中约28名被奴役者及1名船员死亡；原附录及其引证的商船档案尚未全卷查阅。**28／1应标二次史学研究记录，350是航次数据库的途中死亡IMP估算，两组不可相加。**
 
 `1691 Charles`、`1699 Dragon`、`1699 Cothrington`以及`1688/1689 Osney`重复风险属于 **research_only** 待核名单，不能仅凭一份学术附录就虚构起义精确地图点、成功解救人数或历史船迹。主编应同时运行本专题静态与桌面测试及全站17C、Tudor旧地图语义门禁；严禁因新增历史事件而删除既有的来源分级或面积为null的测试。最新全面交接见 [E6-T11研究说明](../../../docs/research/EDITOR12_E6_T11_ATLANTIC_SLAVERY_QUANT_20261025.md)。
+
+## 八、官方数据库版本化审读与反抗码值：E6-T11 2019版全量筛选范例（2026-10-25）
+
+[已合并PR #243](https://github.com/1959124923wyz-sys/love-British-TV/pull/243) 第一次对官方SlaveVoyages **2019年扩展CSV**实行带SHA256的数据提取，记录在 [数据证据表](../../../data/research/e6-t11-slavevoyages-2019-resistance-census.json) 与 [可复现方法及交接](../../../docs/research/EDITOR13_E6_T11_OFFICIAL_2019_RESISTANCE_CENSUS_20261025.md)。源文件 `https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv` 22,182,700字节，SHA256 `3fbad142356e30a4662c7f455321d19b70d79770cfa0397278894bb9ae36096f`；码本 `https://legacy.slavevoyages.org/documents/download/SPSS_Codebook_2019.pdf`。
+
+- `YEARAM=1600—1699`的**数据库推定抵岸年**过滤得到3,371条全旗航次行，其中`NATINIMP=7`英国推定船旗1,037行。这是2019快照**收录的记录**，不是估算17世纪全部英船贩奴航次数，也不能与1601—1700年428,262被迫登船人数或RAC 279航次相加。
+- 官方码本的`RESISTANCE=1`表示**船上起义**；2表示**岸上袭击船**；3表示**岸上袭击船艇**。全船旗有抵抗码24件：20/2/2。英国推定船旗有抵抗码14件：其中**12件船上起义、2件岸袭船只**。空白**不是证据证明没有发生反抗**，缺年/被遗忘航次不属于这份分母，禁止将12/1037当历史全部起义发生率。
+- 14件官方2019版英旗编码航次保存原船名（含两个未知）、船长、年份、航次ID、部分由数据库插补的登/抵岸人数、档案来源文字及核查限制。包括1691年`Charles` ID99009及1686年`Good Fellowship` ID9848岸袭船；1693年`America` ID9706、1696年`Adventure` ID20127、1699年`Albion Frigate` ID20173 已有的地图案例得到官方批量版本证据复核。 **Charles的179/158差额不等于21名起义死者**；二次史学所称17死未经T70原档查阅。1681年`Alexander`独立于1681年`James Fort`拘留所反抗。1688年Osney船名仍未知且有1689年史学记录去重风险。
+- 官方CSV是可信的**数据发布机构原始公开产品**，不是17世纪纸本船籍或船长日志；数据库中`SOURCEA/B/C`只是指向TNA及出版档的**目录索引**，逐叶未查验必须明示未阅。2019版不是2026年实时更新总表，若换版本必须重新执行数据校验、记录变动、审旧船名/码值。
+- 读者表格逐条显示数据库IMP估计人数，缺失字段为“未核实”；所有被奴役者人命差额不得自动称死亡、反抗牺牲或解救。对于只有船次有据而起义海上位置未知的事件，**先归入研究账本，不能把出海、抵岸港定位为战斗现场、不能画GPS曲线或英国领土Polygon**。
+
+复核闸口：`node scripts/test_editor12_e6_t11_quant_voyages.js` 校验官方CSV提取SHA、原本18章/30源、14条英旗码值和前端表格，`python3 scripts/browser_editor12_e6_t11_quant_voyages.py` 在1780px桌面校验原25年人口估算表、14船折叠表、点击年轴、地图移动、双击与返回。**这只核查可证的研究子样本，E6-T11父级仍为research_only**。
