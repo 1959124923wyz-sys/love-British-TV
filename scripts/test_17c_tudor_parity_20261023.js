@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const index=load('data/stories/serial/index.json');
 const topics=index.topics.filter(t=>t.status==='published');
-assert.equal(topics.length,15,'audit exactly fifteen approved serial stories, not all 17C research topics');
+assert.equal(topics.length,16,'audit exactly fifteen approved serial stories, not all 17C research topics');
 const events=new Map();
 for(let decade=1600;decade<=1690;decade+=10){
  const atlas=load('data/atlas-'+decade+'-'+(decade+9)+'.json');
@@ -32,7 +32,8 @@ const rules={
  'E6-T10-ACADIA':21,
  'E6-T10-NEWFOUNDLAND':16,
  'E6-T14-NAV':24,
- 'E6-T04-DARIEN':15
+ 'E6-T04-DARIEN':15,
+ 'E6-T11-VOYAGES':18
 };
 let total=0;
 for(const meta of topics){
@@ -95,8 +96,8 @@ const area=load('data/seventeenth-century-regional-studies-1600-1699.geojson');
 const site=load('data/seventeenth-century-spatial-evidence-1600-1699.geojson');
 assert.equal(area.metadata.feature_count,area.features.length);
 assert.equal(site.metadata.feature_count,site.features.length);
-assert.equal(area.features.length,31);
-assert.equal(site.features.length,181);
+assert.equal(area.features.length,32);
+assert.equal(site.features.length,186);
 const horn=area.features.filter(f=>f.properties.related_event_ids.includes('1620S-E009')||f.properties.related_event_ids.includes('1620S-E010'));
 assert.equal(horn.length,2);
 assert(horn.every(f=>f.properties.related_story_ids.includes('E6-T12')&&!f.properties.related_story_ids.includes('E6-T03-LAND-1642-1698')),'Safavid/EIC 1622 conflict misattributed to Ireland');
