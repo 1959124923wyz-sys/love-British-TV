@@ -1,6 +1,6 @@
 {
   "schema": "e6-t11-transatlantic-quantitative-evidence-v1",
-  "revision": "2026-10-25 institutional sources independently reviewed; estimates grouped 25 years, no invented yearly values; 1688 Calabar shore response + SlaveVoyages voyage 20173 named 1699 Albion Frigate original record",
+  "revision": "2026-10-25 institutional sources independently reviewed; estimates grouped 25 years, no invented yearly values; 1688 Calabar shore response + SlaveVoyages voyage 20173 named 1699 Albion Frigate original record; 1681 RAC James Fort documented suppression; 1693 America/1696 Adventure SlaveVoyages derivative named revolt, 1699 Albion casualty-source divergence",
   "period_of_story": {
     "start_year": 1600,
     "end_year": 1699
@@ -112,7 +112,9 @@
     "specific_17c_english_slave_voyage_inventory_complete": false,
     "documented_individual_examples_added": [
       "1688 unnamed Calabar coastal rescue: a named coast, unnamed ship; secondary publisher excerpt plus derived vessel list",
-      "1699 Albion Frigate: official SlaveVoyages voyage 20173; resistance code explicitly 'Slave insurrection'"
+      "1699 Albion Frigate: official SlaveVoyages voyage 20173; resistance code explicitly 'Slave insurrection'",
+      "1681 James Fort 105 captives, 34 killed, 40 wounded per company-side contemporary letter transcribed in Eltis; NOT a shipboard revolt",
+      "1693 America voyage ID9706 and 1696 Adventure ID20127 publicly readable SlaveVoyages-derived on-board resistance entries; do not claim official webpage fields directly read"
     ]
   },
   "systemic_economic_archival_link": {
@@ -217,7 +219,70 @@
       "exact_revolt_date": null,
       "exact_revolt_position": null,
       "death_causation_warning": "The 350 is the voyage database's middle-passage death IMPUTED field: neither 350 victims of uprising nor a victim-by-victim primary death register. Do not add this to the RAC overlapping cohort or the 1694 Hannibal deaths.",
-      "spatial_mapping_warning": "Map point indicates modern Barbados landing/reference only, never the oceanic location of the insurrection, nor an accurate historic landing pier."
+      "spatial_mapping_warning": "Map point indicates modern Barbados landing/reference only, never the oceanic location of the insurrection, nor an accurate historic landing pier.",
+      "scholarly_chronology_specific_revolt_deaths_reported": {
+        "enslaved_people": 28,
+        "crew": 1,
+        "source": "Eric Robert Taylor 2006 Appendix pp 179-180, citing Dow pp 79–84, checked in third-party text mirror; Project MUSE bibliographic listing verified, original paywalled",
+        "source_url": "https://muse.jhu.edu/book/16586",
+        "original_merchant_source_directly_checked": false,
+        "nonadditive_with_350_imputed_middle_passage_deaths": true
+      }
+    },
+    {
+      "case_key": "E6T11-JAMES-FORT-1681",
+      "year": 1681,
+      "kind": "Detention fort revolt before Atlantic embarkation - NOT an onboard ship insurrection",
+      "vessel_name": null,
+      "site": "James Fort, later Kunta Kinteh Island, Gambia River",
+      "total_captive_men_reported": 105,
+      "colonial_report_killed": 34,
+      "colonial_report_wounded": 40,
+      "incident_date": "1681-11-24",
+      "report_date": "1682-01-24",
+      "report_author": "John Kastell",
+      "archival_folio_cited_by_eltis": "T70/16 f.21",
+      "archival_folio_directly_examined": false,
+      "source": "David Eltis 2000 Cambridge p.172 quoted letter",
+      "source_url": "https://www.youreintheknow.net/wp-content/uploads/2020/02/Eltis-The-Rise-of-African-Slavery-in-the-Americas-2000.pdf",
+      "unesco_reference": "https://whc.unesco.org/en/list/761/maps/",
+      "map_event_id": "1680S-E123",
+      "limit": "RAC officer's own reported 34 killed and 40 wounded during fort suppression. Not verified independent victims list, not a sea-voyage casualty count; UNESCO modern island point not building GPS."
+    },
+    {
+      "case_key": "E6T11-AMERICA-1693",
+      "year": 1693,
+      "kind": "Slave insurrection aboard British carrier, detailed counts readable in derived voyage page",
+      "vessel_name": "America",
+      "slavevoyages_voyage_id": 9706,
+      "reported_embarked": 421,
+      "reported_landed": 401,
+      "dead_people_verified": null,
+      "unverified_difference_not_death": 20,
+      "captain": "John Brome",
+      "record_url": "https://istwanou.net/entry/1693-insurrection-aboard-the-america-bound-for-jamaica-voyage-9706/",
+      "direct_official_data_fields_readable_now": false,
+      "arrival_location": "Jamaica",
+      "map_event_id": "1690S-E133",
+      "limit": "Brome appears as a vessel in a separate academic chronology but as captain in the derived voyage 9706; treat one case until reconciliation, never add a Brome voyage. Landing deficit is not a casualty figure."
+    },
+    {
+      "case_key": "E6T11-ADVENTURE-1696",
+      "year": 1696,
+      "kind": "Slave insurrection aboard British carrier, derived voyage page",
+      "vessel_name": "Adventure",
+      "slavevoyages_voyage_id": 20127,
+      "reported_embarked": 238,
+      "reported_landed": 186,
+      "dead_people_verified": null,
+      "unverified_difference_not_death": 52,
+      "captain": "Samuel Shering/Sherring",
+      "record_url": "https://istwanou.net/entry/1696-insurrection-aboard-the-adventure-bound-for-barbados-voyage-20127/",
+      "direct_official_data_fields_readable_now": false,
+      "arrival_location": "Barbados",
+      "map_event_id": "1690S-E134",
+      "limit": "Only secondary SlaveVoyages-derived readable record, no exact rebellion day or route, 52 is not verified deaths."
     }
-  ]
+  ],
+  "verified_ledger_path": "data/research/e6-t11-resistance-case-ledger-1600-1699.json"
 }
