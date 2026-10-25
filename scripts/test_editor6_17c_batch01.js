@@ -26,8 +26,8 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
  const numbering=new Set(),sourceKeys=new Set(data.sources.map(x=>x.id));
  assert.equal(sourceKeys.size,data.sources.length);
  for(const s of data.sources){
-  assert(s.url?.startsWith('https://')&&s.title&&(s.original_source_id||(s.verification_status?.startsWith('editor9_')||s.verification_status?.startsWith('editor10_')||s.verification_status?.startsWith('editor11_'))));
-  assert(s.verification_status==='agent_register_linked_not_individually_audited_for_publication'||(s.verification_status?.startsWith('editor6_')||s.verification_status?.startsWith('editor7_')||s.verification_status?.startsWith('editor9_')||s.verification_status?.startsWith('editor10_')||s.verification_status?.startsWith('editor11_')),'source verification must have documented level');
+  assert(s.url?.startsWith('https://')&&s.title&&(s.original_source_id||(s.verification_status?.startsWith('editor9_')||s.verification_status?.startsWith('editor10_')||s.verification_status?.startsWith('editor11_')||s.verification_status?.startsWith('editor12_'))));
+  assert(s.verification_status==='agent_register_linked_not_individually_audited_for_publication'||(s.verification_status?.startsWith('editor6_')||s.verification_status?.startsWith('editor7_')||s.verification_status?.startsWith('editor9_')||s.verification_status?.startsWith('editor10_')||s.verification_status?.startsWith('editor11_')||s.verification_status?.startsWith('editor12_')),'source verification must have documented level');
  }
  let prior=d-1;
  for(const e of data.events){
@@ -37,7 +37,7 @@ for(let d=1600,i=0;d<=1690;d+=10,i++){
   assert(!usedResearchIds.has(e.research_event_id),'already imported source record '+e.research_event_id);usedResearchIds.add(e.research_event_id);
   assert(e.year>=d&&e.year<=d+9&&e.year>=prior,'year order');prior=e.year;
   assert(e.date_label&&e.name&&e.description&&e.historical_actor&&e.arc_id);
-  assert((e.significance?.review_status?.startsWith('editor6_')||e.significance?.review_status?.startsWith('editor7_')||e.significance?.review_status?.startsWith('editor9_')||e.significance?.review_status?.startsWith('editor10_')||e.significance?.review_status?.startsWith('editor11_')),'record is missing research review flag');
+  assert((e.significance?.review_status?.startsWith('editor6_')||e.significance?.review_status?.startsWith('editor7_')||e.significance?.review_status?.startsWith('editor9_')||e.significance?.review_status?.startsWith('editor10_')||e.significance?.review_status?.startsWith('editor11_')||e.significance?.review_status?.startsWith('editor12_')),'record is missing research review flag');
   assert(Array.isArray(e.source_ids)&&e.source_ids.length>0);
   for(const k of e.source_ids)assert(sourceKeys.has(k),'broken cited source '+k);
   assert(e.actual_English_land_area_sqkm===null&&e.actual_English_territory_created===false);
