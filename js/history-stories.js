@@ -102,13 +102,13 @@
   const specificHtml=specific?'<p class="story-stat-cohort"><strong>同船反抗特定伤亡的二次史学记录</strong>：被奴役者'+num(specific.enslaved_people)+'人、船员'+num(specific.crew)+'人。<a href="'+esc(specific.source_url)+'" target="_blank" rel="noopener noreferrer">学术出版书目</a></p><p class="story-stat-note">'+esc(specific.source_level)+'。'+esc(specific.warning)+'</p>':'';
   const census=q.resistance_census_2019;
   const censusRows=Array.isArray(census?.documented_examples)?census.documented_examples.map(v=>
-    '<tr><th scope="row">'+esc(String(v.year))+'</th><td>'+esc(v.ship)+'</td><td>'+num(v.id)+'</td><td>'+esc(v.code===1?'船上起义':v.code===2?'沿岸袭船':'其他（核实编码）')+'</td></tr>'
+    '<tr><th scope="row">'+esc(String(v.year))+'</th><td>'+esc(v.ship)+'</td><td>'+num(v.id)+'</td><td>'+esc(v.code===1?'船上起义':v.code===2?'沿岸袭船':'其他（核实编码）')+'</td><td>'+num(v.embarked_imputed)+'</td><td>'+num(v.disembarked_imputed)+'</td></tr>'
   ).join(''):'';
   const censusHtml=census?
     '<h4>2019版航次数据库：留有记录的反抗</h4>'+
     '<p class="story-stat-cohort"><strong>'+esc(census.dataset_label)+'</strong>：全部船旗有记录航次'+num(census.recorded_all_carriers_voyages)+'条，其中英国推定船旗'+num(census.recorded_british_flag_voyages)+'条；英旗非空反抗编码'+num(census.british_coded_resistance)+'条（船上起义'+num(census.british_coded_ship_insurrections)+'条；岸上袭船'+num(census.british_coded_shore_vessel_attacks)+'条）。</p>'+
     '<details class="story-stat-census"><summary>查看'+num(census.british_coded_resistance)+'条有记录的英国旗反抗航次（非全量估计）</summary>'+
-    '<table class="story-stat-table"><caption>2019版航次库编码记录 · 年份和船旗可能经推定</caption><thead><tr><th scope="col">抵岸年份</th><th scope="col">登记船名</th><th scope="col">航次编号</th><th scope="col">抵抗类型</th></tr></thead><tbody>'+censusRows+'</tbody></table></details>'+
+    '<table class="story-stat-table"><caption>2019版航次库编码记录 · 年份和船旗可能经推定</caption><thead><tr><th scope="col">抵岸年份</th><th scope="col">登记船名</th><th scope="col">航次编号</th><th scope="col">抵抗类型</th><th scope="col">登船人数 IMP</th><th scope="col">抵岸人数 IMP</th></tr></thead><tbody>'+censusRows+'</tbody></table></details>'+
     '<p class="story-stat-note">'+esc(census.warning)+' <a href="'+esc(census.source_url)+'" target="_blank" rel="noopener noreferrer">官方2019版航次数据</a> · <a href="'+esc(census.codebook_url)+'" target="_blank" rel="noopener noreferrer">编码手册</a></p>':'';
   return '<section class="story-statistics" aria-label="历史人口强制运输数据与史料口径">'+
     '<h3>'+esc(q.title)+'</h3><p class="story-stat-measure">'+esc(q.measure)+'；'+esc(q.carrier)+'</p>'+
