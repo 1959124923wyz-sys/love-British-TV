@@ -1,0 +1,220 @@
+{
+  "schema": "e6-t11-17c-ship-resistance-case-ledger-v1",
+  "updated": "2026-10-25",
+  "scope": {
+    "years": [
+      1600,
+      1699
+    ],
+    "carrier": "English / Great Britain / company facilities when documented",
+    "not_complete_inventory": true,
+    "counts_not_additive": true
+  },
+  "confidence_policy": {
+    "A": "Full scholarly source text transcribing contemporaneous letter, precise original shelfmark; letter itself not inspected",
+    "B": "Voyage-level derived SlaveVoyages result publicly visible, official voyage ID but interactive original page not field-readable from this audit",
+    "C": "Academic chronology reproduced outside authorized book access; bibliographic publisher Project MUSE confirms book and appendix, but original source archive not inspected",
+    "research_only": "Do not plot until dated and place-located with sufficient independent basis; unresolved vessel identity and name variants documented separately"
+  },
+  "case_records": [
+    {
+      "id": "R1681-JAMES-FORT",
+      "year": 1681,
+      "day": "1681-11-24",
+      "kind": "shore_detention_revolt_not_shipboard",
+      "vessel_name": null,
+      "location": "James Fort / James Island (later Kunta Kinteh Island), Gambia River",
+      "mapped_event_id": "1680S-E123",
+      "reported_people_held": 105,
+      "reported_killed": 34,
+      "reported_wounded": 40,
+      "casualty_source": "RAC factor John Kastell letter Jan 24 1682 quoted in Eltis 2000 p.172",
+      "original_archive_reference": "TNA T70/16 f.21",
+      "original_archive_folio_examined": false,
+      "exact_site_survey_verified": false,
+      "modern_unesco_heritage_reference": [
+        -16.3613528,
+        13.3176417
+      ],
+      "claim_limits": "Numbers are the fort officer's retrospective account; the group of 105 was specifically male prisoners on 24 November. The 34 dead/40 wounded are from suppression at the trading fort, NOT shipboard middle-passage deaths; not to be added to voyage IMP deaths.",
+      "source_urls": [
+        "https://www.youreintheknow.net/wp-content/uploads/2020/02/Eltis-The-Rise-of-African-Slavery-in-the-Americas-2000.pdf",
+        "https://whc.unesco.org/en/list/761/maps/"
+      ],
+      "grade": "A"
+    },
+    {
+      "id": "R1688-CALABAR",
+      "year": 1688,
+      "kind": "African_shore_attack_release_not_shipboard",
+      "vessel_name": null,
+      "reported_voyage_id": 99002,
+      "mapped_event_id": "1680S-E122",
+      "reported_people_loaded": 251,
+      "documented_release_count_individually_verified": null,
+      "location": "Calabar coast; no event-specific location",
+      "captain": "Osney",
+      "source_urls": [
+        "https://academic.macmillan.com/academictrade/9780374611071/daringtobefree/",
+        "https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/"
+      ],
+      "grade": "B",
+      "claim_limits": "Secondary academic excerpt + voyage derivative, no original ship register; do not conflate this 1688 event with Taylor's separately dated 1689 Capt Osney entry before checking original chronology."
+    },
+    {
+      "id": "R1693-AMERICA",
+      "year": 1693,
+      "kind": "onboard_slave_insurrection",
+      "vessel_name": "America",
+      "reported_voyage_id": 9706,
+      "mapped_event_id": "1690S-E133",
+      "reported_people_embarked": 421,
+      "reported_people_disembarked": 401,
+      "recorded_revolt_casualties": null,
+      "estimated_middle_passage_deaths": null,
+      "captain": "John Brome",
+      "departure_region": "Gambia / Senegambia",
+      "arrival_region": "Jamaica",
+      "source_urls": [
+        "https://istwanou.net/entry/1693-insurrection-aboard-the-america-bound-for-jamaica-voyage-9706/",
+        "https://www.slavevoyages.org/voyage/9706/variables"
+      ],
+      "grade": "B",
+      "claim_limits": "Only derived site presents readable numbers; 421-401 is a cross-field difference not verified death total; some secondary chronology writes Brome as vessel but derived voyage dataset lists captain John Brome and vessel America. Do not claim both are separate voyages."
+    },
+    {
+      "id": "R1696-ADVENTURE",
+      "year": 1696,
+      "kind": "onboard_slave_insurrection",
+      "vessel_name": "Adventure",
+      "reported_voyage_id": 20127,
+      "mapped_event_id": "1690S-E134",
+      "reported_people_embarked": 238,
+      "reported_people_disembarked": 186,
+      "recorded_revolt_casualties": null,
+      "estimated_middle_passage_deaths": null,
+      "captain": "Samuel Shering (variant Sherring)",
+      "departure_region": "Gold Coast",
+      "arrival_region": "Barbados",
+      "source_urls": [
+        "https://istwanou.net/entry/1696-insurrection-aboard-the-adventure-bound-for-barbados-voyage-20127/",
+        "https://www.slavevoyages.org/voyage/20127/variables"
+      ],
+      "grade": "B",
+      "claim_limits": "238-186 is comparison not independent death ledger; chronological description gives ca.1696, voyage derivative says 1696 arrival. Source does not confirm precise day or latitude of uprising."
+    },
+    {
+      "id": "R1699-ALBION",
+      "year": 1699,
+      "kind": "onboard_slave_insurrection",
+      "vessel_name": "Albion Frigate",
+      "reported_voyage_id": 20173,
+      "mapped_event_id": "1690S-E132",
+      "reported_people_embarked": 600,
+      "reported_people_disembarked_imputed": 250,
+      "reported_middle_passage_deaths_imputed": 350,
+      "secondary_scholarly_revolt_killed_enslaved_approx": 28,
+      "secondary_scholarly_revolt_killed_crew_approx": 1,
+      "source_of_revolt_casualties": "Eric Robert Taylor 2006 Appendix pp. 179-180 quotes Dow 1927 pp.79-84 and voyage 20173, text accessible on Studocu; original publisher Project MUSE paywalled",
+      "original_merchant_records_inspected": false,
+      "source_urls": [
+        "https://www.slavevoyages.org/voyage/20173/variables",
+        "https://istwanou.net/entry/1699-insurrection-aboard-the-albion-frigate-bound-for-barbados-voyage-20173/",
+        "https://muse.jhu.edu/book/16586",
+        "https://www.studocu.com/en-us/document/fred-t-korematsu-middle-school/us-history/taylor-appendix-chronology-of-shipboard-slave-revolts-1509-1865/147658507"
+      ],
+      "grade": "B",
+      "claim_limits": "28 people enslaved and 1 crewmember reported killed in a published academic bibliography's chronology are not to be combined with total 350 IMP middle-passage deaths as separate nonoverlapping losses. Neither is a list of individually identified persons."
+    }
+  ],
+  "research_only_candidates": [
+    {
+      "year": 1689,
+      "name": null,
+      "captain": "Osney",
+      "location": null,
+      "reported_casualties": null,
+      "reference": "Taylor 2006 Appendix; TNA T70/12 p.33",
+      "warning": "Potential overlap with 1688 Osney/Calabar shore attack; different year and event type in different studies, reconcile archival reference before publication"
+    },
+    {
+      "year": 1691,
+      "name": "Charles",
+      "captain": null,
+      "location": "Gambia (regional, not actual incident site)",
+      "reported_killed_enslaved": 17,
+      "reference": "Taylor 2006 Appendix, TNA T70/11 p.69",
+      "warning": "Chronology excerpt only, no ship-level database match or direct original archival folio"
+    },
+    {
+      "year": 1699,
+      "name": "Dragon",
+      "captain": "Henry Taylor",
+      "location": "Gambia",
+      "reported_killed_enslaved": 7,
+      "reported_killed_crew": 2,
+      "reference": "Taylor 2006 Appendix; Tattersfield pp.282-284",
+      "warning": "A period scholarly compiled chronology, independent dated primary ship record not checked"
+    },
+    {
+      "year": 1699,
+      "name": "Cothrington",
+      "name_variants": [
+        "Cothrington"
+      ],
+      "captain": "Brewser?",
+      "location": "Gambia River",
+      "possible_liberation": true,
+      "reference": "Taylor 2006 Appendix; TNA T70/1434",
+      "warning": "A question-marked outcome, vessel spelling and archival record unresolved; forbid publication as proven successful liberation"
+    }
+  ],
+  "excluded_after_1699": [
+    {
+      "year": 1701,
+      "name": "Don Carlos",
+      "reason": "Dated January 5, 1701 by Taylor Appendix, not 1600-1699"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ELTIS-2000",
+      "title": "David Eltis, The Rise of African Slavery in the Americas (Cambridge University Press, 2000), p.172 and footnote 26",
+      "url": "https://www.youreintheknow.net/wp-content/uploads/2020/02/Eltis-The-Rise-of-African-Slavery-in-the-Americas-2000.pdf",
+      "read_level": "public book text full page read; original T70/16 folio NOT personally inspected"
+    },
+    {
+      "id": "UNESCO-761",
+      "title": "UNESCO Kunta Kinteh Island and Related Sites, James Island component 761-001 maps",
+      "url": "https://whc.unesco.org/en/list/761/maps/",
+      "read_level": "modern surveyed heritage coordinate, 1681 room-level and colonial fort perimeter not surveyed"
+    },
+    {
+      "id": "TAYLOR-2006",
+      "title": "Eric Robert Taylor, If We Must Die (LSU Press, 2006), Appendix pp.179–213",
+      "url": "https://muse.jhu.edu/book/16586",
+      "read_level": "publisher metadata verified, paywall prevents reading original complete book; partial appendix accessible at third-party mirror"
+    },
+    {
+      "id": "TAYLOR-EXCERPT",
+      "title": "Taylor shipboard revolt appendix publicly mirrored excerpt, early entries 1689–1699",
+      "url": "https://www.studocu.com/en-us/document/fred-t-korematsu-middle-school/us-history/taylor-appendix-chronology-of-shipboard-slave-revolts-1509-1865/147658507",
+      "read_level": "third-party extracted text, copyright work; paraphrase only, author bibliographic at Project MUSE"
+    },
+    {
+      "id": "SV-DERIVED",
+      "title": "Istwa Nou Net SlaveVoyages-derived individual 1693/1696/1699 resistances",
+      "url": "https://istwanou.net/entry/1693-insurrection-aboard-the-america-bound-for-jamaica-voyage-9706/",
+      "read_level": "visible derived individual record, original dynamic slavevoyages.org pages not field-readable via this interface"
+    }
+  ],
+  "audit_guards": [
+    "1681 James Fort not at sea",
+    "1688 Calabar shore attack not within ship",
+    "1693/1696 embarked minus disembarked not inherently deaths",
+    "1699 Albion 350 IMP not 28 revolt death, no summing 28+350",
+    "1689 Osney unresolved potential duplication with 1688",
+    "1701 Don Carlos excluded",
+    "No vessel track, territorial polygons or measured British land area"
+  ]
+}
