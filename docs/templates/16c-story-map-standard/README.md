@@ -87,3 +87,14 @@
 - **数值与地理双重门禁：** 每项人口数都注明 `observed`/ `estimated`/ `imputed (IMP)`，以及分母、时间窗、船旗和记录级别。每个不具测绘根据的参考点都必须设置 `historical_boundary_confirmed:false`、`territorial_claim:false`、`fill_authorized:false`、`area_sqkm:null`、`exclude_from_area_aggregation:true`。不准用船数、营运资本或运送人数推造占领面积、跨洋GPS折线、起义准确战场。
 
 回归要求：`node scripts/test_editor12_e6_t11_quant_voyages.js` 检查死亡字段IMP/事件归属；`python3 scripts/browser_editor12_e6_t11_quant_voyages.py` 检查桌面地图年份、原文链接、地图镜头、双击及返回。E6-T11母专题仍为`research_only`，不以两件案例假装穷尽全部反抗事件。
+
+## 七、1681年囚禁场所反抗与1693—1696年英船起义：研究样本分母和原件层级（2026-10-25）
+
+[PR #240](https://github.com/1959124923wyz-sys/love-British-TV/pull/240) 新增来源分级账本 [E6-T11抵抗逐例ledger](../../../data/research/e6-t11-resistance-case-ledger-1600-1699.json)，**仅是已找到的可靠案例，不能说成17世纪所有英国奴隶船反抗的完整列表**。
+
+- **1681年James Fort / James Island冈比亚囚禁场所反抗**：David Eltis（剑桥大学出版社，2000年）第172页引RAC驻站John Kastell 1682-01-24信，记1681-11-24拘押105名男性非洲人反抗，殖民方**报告**34人死亡和40人受伤。原文件索引 **TNA T70/16 f.21** 只根据学术注脚确定，未亲自翻阅时不得标为已读原件；被囚者并未上跨大西洋奴隶船，严禁将34或40加进中途航海死亡人数。地图 `1680S-E123` 采用 [UNESCO詹姆斯岛遗址761-001的现代坐标](https://whc.unesco.org/en/list/761/maps/)，不是1681年室内冲突点、堡垒占地或英国在冈比亚的领土边界。
+- **1693 America（航次9706）**：SlaveVoyages二次整理公开记录船长**John Brome**、421人强制登船、401人抵牙买加，船上起义；学术附录的“Brome”可能是把船长写成船名，**不能当另一条具名航次重复统计**。
+- **1696 Adventure（航次20127）**：二次整理记录船长**Samuel Shering/Sherring**、238人强制登船、186人抵巴巴多斯，船上起义。两个病例的“登船数−抵岸数”分别是20和52，只表示**差额**，没有船上叛乱死亡的单独核验结果，既不能叫做“被镇压杀害人数”，也不能无条件叫做航程死亡总数。官方动态网页字段本轮无法抓取，必须标注**SlaveVoyages衍生二次资料**，而非谎称查阅了原始逐人登记。
+- **1699 Albion Frigate口径复核**：Eric Robert Taylor《If We Must Die》2006年大学出版社历史学研究附录（[Project MUSE正式书目](https://muse.jhu.edu/book/16586)）经公开二次引录称起义中约28名被奴役者及1名船员死亡；原附录及其引证的商船档案尚未全卷查阅。**28／1应标二次史学研究记录，350是航次数据库的途中死亡IMP估算，两组不可相加。**
+
+`1691 Charles`、`1699 Dragon`、`1699 Cothrington`以及`1688/1689 Osney`重复风险属于 **research_only** 待核名单，不能仅凭一份学术附录就虚构起义精确地图点、成功解救人数或历史船迹。主编应同时运行本专题静态与桌面测试及全站17C、Tudor旧地图语义门禁；严禁因新增历史事件而删除既有的来源分级或面积为null的测试。最新全面交接见 [E6-T11研究说明](../../../docs/research/EDITOR12_E6_T11_ATLANTIC_SLAVERY_QUANT_20261025.md)。
