@@ -77,3 +77,13 @@
 - 非洲海岸的贸易联系、欧洲王室特许和抵达美洲的私人暴利**均不构成整个地区的英王主权面**。数量和贸易关系不得用于推出Polygon或面积；对于没有史料还原的船上起义，要记录为待研究而不是凭概率生成具名航次。
 
 参考出处、原始界限、检查方式记录于 [E6-T11审稿与交接](../../../docs/research/EDITOR12_E6_T11_ATLANTIC_SLAVERY_QUANT_20261025.md)；任何未来更新必须同时重跑 `scripts/test_editor12_e6_t11_quant_voyages.js` 与 `scripts/browser_editor12_e6_t11_quant_voyages.py`，并确认既有16世纪地图交互无回退。
+
+## 六、可识别船上起义与非洲岸上解救：1699 / 1688 分级样例（2026-10-25）
+
+2026-10-25 完成 [PR #237](https://github.com/1959124923wyz-sys/love-British-TV/pull/237) 的全部30项独立检查并合并，更新正式 [E6-T11 专题正文](../../../data/stories/serial/e6-t11-atlantic-slave-voyages-quant-resistance.json) 与 [结构化证据](../../../data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json)。本规范及ZIP应继承以下证据分层，而不是复制所谓宏观“抵抗概率”制造虚假的十七世纪船次。
+
+- **1699年已确证具名船上反抗：** [SlaveVoyages 单航次20173](https://www.slavevoyages.org/voyage/20173/variables) 的 `Albion Frigate`，官方具体航次编码 `African resistance: Slave insurrection`。登记被迫登船600人、1699-11-22抵巴巴多斯，`Total slaves disembarked IMP = 250`、`Slave deaths during middle passage IMP = 350`。**IMP表示数据库推算，350是整段途中死亡推算，绝非起义镇压所致死亡人数。** 原始档案T70/349仅由数据库引用栏确定，未逐页阅读时不可冒充查过原卷。对应Atlas `1690S-E132` 只用巴巴多斯**抵岸位置**作为现代参考，不能把起义定位于陆上或沿线海面。
+- **1688年海岸反抗与释放：** [Sudhir Hazareesingh 著作出版商节录](https://academic.macmillan.com/academictrade/9780374611071/daringtobefree/) 与 [SlaveVoyages衍生航次99002记录](https://istwanou.net/entry/1688-attack-from-shore-on-an-unnamed-great-britain-ship-voyage-99002/) 显示卡拉巴尔地区非洲人从岸上袭击一艘英方贩奴船，被囚者得到释放；251为当时船上载有的被囚者报告人数，不是可逐人核实名单。该船**名称未知**、准确岸上袭击位置未核，官方99002直达记录本轮未独立读取；`1680S-E122` 为现代Calabar地区参考点，**不是起义精确现场**。岸上攻击和船上起义在数据库分类上不同，不能合并计算一个“起义死亡率”。
+- **数值与地理双重门禁：** 每项人口数都注明 `observed`/ `estimated`/ `imputed (IMP)`，以及分母、时间窗、船旗和记录级别。每个不具测绘根据的参考点都必须设置 `historical_boundary_confirmed:false`、`territorial_claim:false`、`fill_authorized:false`、`area_sqkm:null`、`exclude_from_area_aggregation:true`。不准用船数、营运资本或运送人数推造占领面积、跨洋GPS折线、起义准确战场。
+
+回归要求：`node scripts/test_editor12_e6_t11_quant_voyages.js` 检查死亡字段IMP/事件归属；`python3 scripts/browser_editor12_e6_t11_quant_voyages.py` 检查桌面地图年份、原文链接、地图镜头、双击及返回。E6-T11母专题仍为`research_only`，不以两件案例假装穷尽全部反抗事件。
