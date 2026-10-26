@@ -3625,6 +3625,52 @@
       "map_priority": true
     },
     {
+      "id": "1690S-E135",
+      "research_event_id": "EDITOR15:E6T12-1698-ZAMINDARI-DEED",
+      "arc_id": "ARC-EIC",
+      "year": 1698,
+      "start_year": 1698,
+      "end_year": 1698,
+      "visible_from": 1698,
+      "date_label": "1698（契据公历具体日存在不同读法）",
+      "name": "莫卧儿治下东印度公司取得加尔各答三村扎明达里权益",
+      "historical_actor": "莫卧儿孟加拉地方行政、阿齐姆·乌沙恩、Sabarna家族的扎明达里持权者与东印度公司",
+      "historical_place": "Sutanuti、Dihi Kalikata、Gobindapur，今印度加尔各答",
+      "description": "1698年莫卧儿孟加拉地方当局同意英东印度公司取得苏塔努蒂、迪希卡利卡塔和戈宾德布尔三村的扎明达里租税征收与管理权益。后世重刊1698年转让契据载明对原有权利者支付1,300卢比；这是土地租税权利交易对价，不是该年度公司从居民收走的税款，不等于英王获得孟加拉或今日加尔各答整个市区的主权。1686—1690年公司与莫卧儿战争受挫后，这份授权反映其仍处于莫卧儿行政权序列。契据公历具体日有11月8、9、10日等不同释读，故只将1698年作为已核史实；历史村界尚无可靠可测的GIS界线。",
+      "short_description": "1698年在莫卧儿行政授权下，公司取得加尔各答三村的租税征收等扎明达里权益，契据记载对价1,300卢比；并非英国吞并孟加拉。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 22.61,
+      "lng": 88.37,
+      "geography_label": "苏塔努蒂／今加尔各答北部参考点（代表三村范围，无17世纪村界实测）",
+      "geo_precision": "representative_historical_named_trade_station_or_political_center_not_exact_event_site",
+      "representative_map_point": true,
+      "position_type": "main_affected_region_or_named_locality_reference",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】仅作三村所在加尔各答地区的现代地名导航，不表示1698年契据签署地点、实际征税边界、三村实测几何或英国对莫卧儿土地的主权。",
+      "geolocation_basis_zh": "沿用已发布的苏塔努蒂/加尔各答近代地名参考位置；真正的1698三村空间范围缺少可配准历史地籍图。",
+      "source_ids": [
+        "1690S-S165",
+        "1690S-S166"
+      ],
+      "source_access_reported": [
+        "academic_publisher_chapter_summary",
+        "reprinted_historical_deed_translation_not_original_manuscript"
+      ],
+      "source_group": "EDITOR15",
+      "certainty": "historical_transfer_year_and_transaction_amount_secondary_confirmed_exact_day_and_boundaries_unverified",
+      "significance": {
+        "level": 2,
+        "review_status": "editor15_20261026_scholarly_and_translated_deed_review"
+      },
+      "editorial_status": "published_source_checked_rights_distinguished_from_sovereignty",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "map_priority": true
+    },
+    {
       "id": "1690S-E041",
       "research_event_id": "A:1699-DARIEN-FAILURE",
       "arc_id": "ARC-SCT-UNION",
@@ -3723,18 +3769,20 @@
       "end_year": 1699,
       "visible_from": 1699,
       "date_label": "1699",
-      "name": "英东印度公司取得苏塔努蒂经营权并兴建威廉堡",
+      "name": "1699年东印度公司在加尔各答推进威廉堡建设",
       "historical_actor": "英东印度公司、孟加拉地方地主/莫卧儿行政",
       "historical_place": "Sutanuti/Chutanuttee，今加尔各答",
-      "description": "英东印度公司取得苏塔努蒂经营权并兴建威廉堡。1699年公司获得苏塔努蒂商贸地并开始营造威廉堡；须继续追踪地方行政与具体堡垒营造阶段。",
-      "short_description": "1699年公司获得苏塔努蒂商贸地并开始营造威廉堡；须继续追踪地方行政与具体堡垒营造阶段。",
+      "description": "1698年莫卧儿孟加拉地方当局允许公司在苏塔努蒂、迪希卡利卡塔和戈宾德布尔取得扎明达里（租税征收等）权益，与1699年前后公司巩固加尔各答据点、营造旧威廉堡是两个阶段。1699年建设不应被误写成公司在该年才首次取得三个村落权益。此为胡格利河畔公司营建活动，未说明堡垒完整建成，也不等于英国取得整个孟加拉主权或精确实控疆界。",
+      "short_description": "1698年获得三村扎明达里权益之后，1699年前后公司推进加尔各答旧威廉堡建设；地权授予与营建年代须分开，不等于全孟加拉主权。",
       "category": "wealth_flow",
       "icon_code": "ECO",
       "source_ids": [
-        "1690S-S064"
+        "1690S-S064",
+        "1690S-S165"
       ],
       "source_access_reported": [
-        "institutional_historical_catalogue_synopsis_full_read_original_archival_volumes_not_read"
+        "institutional_historical_synopsis",
+        "academic_publisher_chapter_summary"
       ],
       "source_group": "C",
       "significance": {
@@ -3742,7 +3790,7 @@
         "review_status": "editor6_r03_independent_british_library_or_govt_history_checked_not_archival_page_verified"
       },
       "editorial_status": "published_institutional_historical_synthesis_requires_original_document_review",
-      "certainty": "dated_institutional_history_or_government_heritage_source",
+      "certainty": "dated_secondary_history_fort_construction_year_needs_archival_check",
       "actual_English_land_area_sqkm": null,
       "actual_English_territory_created": false,
       "historical_control_boundary_verified": false,
@@ -5304,6 +5352,28 @@
       "verification_status": "editor12_derived_SlaveVoyages_20127_read_direct_official_record_fields_not_available",
       "evidence_read_level": "secondary_summary_voyage_20127_not_merchant_archive_or_actual_website_field_level",
       "precision_warning": "Embarked-minus-landed 52 does not equal documented sea deaths or revolt casualties; Atlantic revolt location unknown."
+    },
+    {
+      "id": "1690S-S165",
+      "title": "David Veevers, 2020, The Origins of the British Empire in Asia 1600–1750, chapter 5: A Firm Settlement in This Place",
+      "publisher": "Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/origins-of-the-british-empire-in-asia-16001750/firm-settlement-in-this-place/2C131E2C18C1FEEF9C2D4A240477C2A6",
+      "kind": "academic_peer_reviewed_historical_chapter_summary",
+      "evidence_read_level": "publisher_public_chapter_summary_read_not_full_original_Mughal_order",
+      "original_source_id": "EDITOR15:E6T12:1698_NISHAN",
+      "verification_status": "editor15_20261026_secondary_academic_source_audited",
+      "precision_warning": "1698 local revenue/jurisdiction grant under Mughal oversight, not a British takeover of Bengal; no GIS boundary survey."
+    },
+    {
+      "id": "1690S-S166",
+      "title": "1698 bainama Sutanuti/Kalikata/Gobindapur translation, as reproduced from P.T. Nair's 1986 Calcutta text",
+      "publisher": "Published translation cited through Kolkata historical heritage writing",
+      "url": "https://blogheritagewalk.wordpress.com/2018/01/03/bainama-deed-of-transfer-of-zemindary-rights-of-calcutta-9-november-1698/",
+      "kind": "secondary_republication_of_translated_historical_deed",
+      "evidence_read_level": "translated_deed_republication_read_original_British_Museum_Add_MS_24039_39_not_accessed",
+      "original_source_id": "EDITOR15:E6T12:1698_DEED_1300",
+      "verification_status": "editor15_20261026_translated_primary_excerpt_only",
+      "precision_warning": "Agreement recites Rs1300 for zamindari rights, not purchase of all modern Kolkata land; contemporary boundary wording cannot generate survey polygons, exact translated Gregorian day debated."
     }
   ],
   "routes": [

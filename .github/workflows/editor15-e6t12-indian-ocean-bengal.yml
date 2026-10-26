@@ -1,0 +1,28 @@
+name: Editor15 E6-T12 documented Indian Ocean slavery and 1698 Mughal Bengal rights
+on:
+  push:
+    branches:
+      - 'research/editor15-e6t12-*'
+  pull_request:
+    paths:
+      - 'data/research/e6-t12-*'
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/stories/serial/e6-t12-east-india-company.json'
+      - 'data/stories/serial/index.json'
+      - 'scripts/test_editor15_e6t12_slavery_bengal.js'
+      - '.github/workflows/editor15-e6t12-indian-ocean-bengal.yml'
+permissions:
+  contents: read
+jobs:
+  audited-history-and-non-territory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source-linked 1687-1699 EIC data, dates, rights and map
+        run: |
+          node scripts/test_editor15_e6t12_slavery_bengal.js
+          node scripts/test_serial_story_contract.js
+      - name: Validate strict geography without converting revenue rights to a colony
+        run: python3 scripts/audit_spatial_semantics.py --strict

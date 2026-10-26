@@ -1,0 +1,98 @@
+{
+  "schema": "e6t12-17c-eic-enslavement-and-bengal-rights-v1",
+  "topic": "E6-T12",
+  "years": [
+    1687,
+    1689,
+    1698,
+    1699
+  ],
+  "summary": "East India Company corporate slavery across Indian Ocean, land rent collection rights under Mughal Bengal. Distinguish orders from voyages arrived, contract consideration from revenue, and local zamindari from sovereign territory.",
+  "cases": [
+    {
+      "case_id": "E6T12-1687-STHELENA-BENCOOLEN",
+      "year": 1687,
+      "kind": "planned_involuntary_transfer_order",
+      "quantity": 10,
+      "quantity_unit": "persons",
+      "number_is": "number expressly ordered for transfer from St Helena, not independently verified transport or survival count",
+      "actor": "English East India Company Court of Directors",
+      "origin": "St Helena",
+      "intended_destination": "Bencoolen / Bengkulu, western Sumatra",
+      "source_url": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+      "evidence": "peer-reviewed 2024 scholarship quotes 1687 Court of Directors letter, citing original India Office Records in footnote 37",
+      "original_manuscript_personally_examined": false,
+      "voyage_ship_name": null,
+      "embarked_count_verified": null,
+      "arrived_count_verified": null,
+      "casualties_verified": null,
+      "existing_atlas_event_id": "1680S-E017",
+      "gis_note": "Map point at Bencoolen denotes intended destination only; do not draw sea route or assume arrival."
+    },
+    {
+      "case_id": "E6T12-1689-MADAGASCAR-EXPEDITION",
+      "year": 1689,
+      "kind": "slave_procurement_expedition_organized",
+      "quantity": null,
+      "quantity_unit": "persons",
+      "number_is": "no verified embarked or arrived quantity",
+      "actor": "East India Company Madras Council",
+      "intended_procurement_area": "Madagascar",
+      "intended_destination": "Bencoolen",
+      "source_url": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+      "evidence": "peer-reviewed scholarship explicitly dates 1689 expedition organized from Madras; ship, exact departures and arrivals not extracted",
+      "original_manuscript_personally_examined": false,
+      "voyage_ship_name": null,
+      "embarked_count_verified": null,
+      "arrived_count_verified": null,
+      "casualties_verified": null,
+      "existing_atlas_event_id": "1680S-E027",
+      "gis_note": "Madras marker denotes organization, not actual sailing track or Madagascar landing point."
+    },
+    {
+      "case_id": "E6T12-1698-CALCUTTA-ZAMINDARI",
+      "year": 1698,
+      "kind": "mughal_authorized_zamindari_right_transfer",
+      "amount": 1300,
+      "currency": "historical_rupees",
+      "amount_semantics": "stated consideration in reproduced Bengali land-rent collection rights deed; NOT 1698 annual company revenue, trade profits, full value of Bengal, cost of construction, or British property purchase of all land in modern Kolkata",
+      "granting_authority": "Mughal Bengal, Prince Azim-us-Shan",
+      "preexisting_rights_holders": "local zamindar families of Sabarna group",
+      "named_villages": [
+        "Sutanuti",
+        "Dihi Kalikata",
+        "Gobindapur"
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/origins-of-the-british-empire-in-asia-16001750/firm-settlement-in-this-place/2C131E2C18C1FEEF9C2D4A240477C2A6",
+        "https://blogheritagewalk.wordpress.com/2018/01/03/bainama-deed-of-transfer-of-zemindary-rights-of-calcutta-9-november-1698/",
+        "https://www.telegraphindia.com/my-kolkata/news/yesterdate-this-day-from-kolkatas-past-november-10-1698/cid/1897275"
+      ],
+      "source_cautions": "Reproduced English translation of 1698 deed as printed in later reference book, not inspection of original British Museum Add.MS 24039/39. Contemporary negotiations and associated political gifts are separate transactions. Local land-revenue rights under Mughal sovereignty; exact historic boundaries NOT measured.",
+      "exact_deed_date_verified": false,
+      "date_conflict": "Later reproductions/readings of Hijri date vary November 8, 9 or 10, 1698; use just year in map, note Cambridge 2020 narrates Mughal nishan in spring",
+      "original_manuscript_personally_examined": false,
+      "atlas_event_id": "1690S-E135",
+      "geography": "three named villages on Hooghly's east side; admin modern Kolkata reference, not measured survey polygon"
+    },
+    {
+      "case_id": "E6T12-1699-FORTWILLIAM",
+      "year": 1699,
+      "kind": "company_fortification_construction",
+      "atlas_event_id": "1690S-E059",
+      "source_urls": [
+        "https://en.banglapedia.org/index.php?title=Colonial_Period",
+        "https://www.cambridge.org/core/books/abs/origins-of-the-british-empire-in-asia-16001750/firm-settlement-in-this-place/2C131E2C18C1FEEF9C2D4A240477C2A6"
+      ],
+      "limit": "Do not repeat 'zamindari rights obtained in 1699'; they were obtained 1698. Fort construction chronology differs in published secondary accounts, use coarse year and separate from verified wall outline or full 1712 completion. No new polygon."
+    }
+  ],
+  "methods": [
+    "1687 10 enslaved people is an order, not 10 proven survivors, purchases, captured, or arrivals.",
+    "1689 Madagascar is an expedition to acquire enslaved persons with total blank and no ship GPS.",
+    "Modern Indian Ocean coerced labor included local pepper growers and Company-owned enslaved persons, but do not sum overlapping categories.",
+    "1698 Rs1300 is consideration to local rights holders in deed translation, not amount of tax extracted; 1698 nishan and Mughal sovereignty separate. No conversion to modern money.",
+    "Cited scholarship refers to original files in BL India Office Records but those manuscripts were not personally accessed.",
+    "The later 1719 Bencoolen uprising and 1704 labor demand are NOT 1600-1699 events; keep as future chapter continuation."
+  ]
+}
