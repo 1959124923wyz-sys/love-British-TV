@@ -53,7 +53,7 @@
 
 ### B2. 最新同行评审比较研究：2026-09-01发表
 
-论文：[Jeremy Bowles、Gabriel Koehler-Derrick、Michael Olson, “To Hell or to Connacht”: Expropriation, Inequality, and Local Legacies of Settler Colonialism, International Organization (2026)](https://www.cambridge.org/core/journals/international-organization/article/to-hell-or-to-connacht-expropriation-inequality-and-local-legacies-of-settler-colonialism/805564D91100463C60FFA47F603F93DC)，DOI `10.1017/S0020818326101465`。已阅读大学出版社公开完整文章，而不止搜索摘要。使用其1770? **不是**：全部本轮地图事件截至1670年，论文还研究后世影响，但那些结果均排除在17世纪时间轴。
+论文：[Jeremy Bowles、Gabriel Koehler-Derrick、Michael Olson, “To Hell or to Connacht”: Expropriation, Inequality, and Local Legacies of Settler Colonialism, International Organization (2026)](https://www.cambridge.org/core/journals/international-organization/article/to-hell-or-to-connacht-expropriation-inequality-and-local-legacies-of-settler-colonialism/805564D91100463C60FFA47F603F93DC)，DOI `10.1017/S0020818326101465`。已阅读大学出版社公开完整文章，而不止搜索摘要。本轮仅采用论文所核实的1654年分配制度、1670年地权变化及其原始史料方法。论文另研究后世影响，那些结果均不进入17世纪时间轴。
 
 - 论文追溯共和国于**1654-01-24**在**十个拆分的郡**抽取男爵领地，将土地抵偿权划给**军队债权人／冒险投资者**；这一机制不是1654年英国完整控制爱尔兰疆域的GIS边界。
 - 为了适用历史抽签条件，论文将无可分配土地的**49个教区**排除，最后分析样本为**10郡、90个男爵领地、794个教区**。统计口径为可分析的地籍分配区域，不是被驱逐居民户数。
