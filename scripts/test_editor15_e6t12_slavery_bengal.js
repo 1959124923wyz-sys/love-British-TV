@@ -1,0 +1,47 @@
+/* Editor15 audit: 1698 Bengal zamindari <> British imperial sovereignty. */
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const article=read('data/stories/serial/e6-t12-east-india-company.json');
+const index=read('data/stories/serial/index.json').topics.find(t=>t.id==='E6-T12');
+const ledger=read('data/research/e6-t12-eic-indian-ocean-slavery-bengal-rights-1687-1699.json');
+const a80=read('data/atlas-1680-1689.json');
+const a90=read('data/atlas-1690-1699.json');
+const byID=new Map([...a80.events,...a90.events].map(e=>[e.id,e]));
+assert.equal(article.id,'E6-T12');
+assert.equal(article.sections.length,15,'must retain 12 original chapters and add 3 source-checked chapters');
+assert.equal(article.sources.length,22);
+assert.equal(new Set(article.sources.map(s=>s.id)).size,22);
+assert.equal(article.topic_source_claims.filter(x=>x.publication_approval).length>=15,true);
+const storyKeys=new Set(article.sources.map(x=>x.id));
+for(const s of article.sections){for(const k of s.source_keys)assert(storyKeys.has(k),'missing source: '+k);}
+const ids=[];
+for(const s of article.sections)for(const p of s.paragraphs)for(const [_,id] of p.matchAll(/\[\[([\w-]+)\|[^\]]+\]\]/g)){ids.push(id);assert(byID.has(id)||index.event_ids.includes(id),'story markups must be confirmed in Atlas: '+id);}
+assert.equal(new Set(index.event_ids).size,index.event_ids.length,'event registry should not duplicate');
+assert.deepEqual(new Set(article.related_event_ids),new Set(index.event_ids));
+assert(['1680S-E017','1680S-E027','1690S-E135'].every(x=>ids.includes(x)&&index.event_ids.includes(x)));
+const e87=byID.get('1680S-E017');assert(e87.description.includes('下令')&&e87.description.includes('不是已核证'));
+const e89=byID.get('1680S-E027');assert(e89.description.includes('未核具体船名'));
+const e98=byID.get('1690S-E135');const e99=byID.get('1690S-E059');
+assert.equal(e98.year,1698);assert.equal(e99.year,1699);
+assert.equal(e98.actual_English_territory_created,false);
+assert.equal(e98.actual_English_land_area_sqkm,null);
+assert.equal(e98.historical_control_boundary_verified,false);
+assert.equal(e98.representative_map_point,true);
+assert.equal(e98.exclude_point_buffer_from_area_statistics,true);
+assert(!e99.name.includes('取得苏塔努蒂经营权'),'1698 land revenue rights not misdated 1699');
+assert(e99.description.includes('1698年'));
+assert(e98.description.includes('1,300卢比'),'consideration in translated deed');
+assert.deepEqual(e98.source_ids,['1690S-S165','1690S-S166']);
+assert(a90.sources.some(s=>s.id==='1690S-S165'&&s.url.includes('cambridge.org')));
+assert(a90.sources.some(s=>s.id==='1690S-S166'&&s.evidence_read_level.includes('original_')));
+const l87=ledger.cases.find(x=>x.year===1687),l89=ledger.cases.find(x=>x.year===1689),l98=ledger.cases.find(x=>x.year===1698);
+assert.equal(l87.quantity,10);assert.equal(l87.arrived_count_verified,null);assert.equal(l87.embarked_count_verified,null);
+assert.equal(l89.quantity,null);assert.equal(l89.voyage_ship_name,null);assert.equal(l89.arrived_count_verified,null);
+assert.equal(l98.amount,1300);assert.equal(l98.currency,'historical_rupees');
+assert.equal(l98.exact_deed_date_verified,false);
+assert.equal(l98.original_manuscript_personally_examined,false);
+for(const p of article.sections.slice(12).flatMap(x=>x.paragraphs))assert(!p.includes('17世纪英国占领孟加拉'),'no undocumented conquered state');
+console.log('PASS Editor15 E6-T12: 15 chapters, 22 sources, 1698 Rs1300 land-rights transaction, 1687 10 ordered != arrived, 1689 no invented crew/voyage/population, 1699 fort separated and no survey polygons.');
