@@ -11,7 +11,8 @@
     "No modern Suriname, Ghana, Morocco or island city borders converted to British control polygons",
     "Distinguish charters, actual site occupation, revenue, successful military transfer and indigenous political sovereignty",
     "Exact number means its source's denominator and not annual victims/plantations when given as phase summary",
-    "Conflicting capture dates 1664 vs 1665 shown as uncertainty; English Tangier ended 1684; Old Providence ended 1641; English Suriname ended 1667."
+    "Conflicting capture dates 1664 vs 1665 shown as uncertainty; English Tangier ended 1684; Old Providence ended 1641; English Suriname ended 1667.",
+    "1667 Dutch original capture followed by Oct 1667 temporary English recovery and 1668 renewed Dutch control; no unjustified continuous Dutch possession all of 1667."
   ],
   "cases": [
     {
@@ -94,8 +95,9 @@
       "kind": "English_fort_garrison_lost_to_Dutch",
       "source": "https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/societeit-van-suriname-1683-1795",
       "treaty": "Breda 1667",
-      "English_occupation_after_1667_assumed": false,
-      "indigenous_land_auto_transferred": false
+      "indigenous_land_auto_transferred": false,
+      "initial_dutch_occupation_not_terminal": true,
+      "important_1667_english_reoccupation_verified": true
     },
     {
       "id": "PRO1630_COLONY",
@@ -198,6 +200,30 @@
       "port_fortifications_damage_described": true,
       "exact_port_damage_polygon": null,
       "English_colonial_control_after_1684": false
+    },
+    {
+      "id": "SUR1667_ENGLISH_RECAPTURE",
+      "year": 1667,
+      "month": 10,
+      "event_id": "1660S-E126",
+      "kind": "English_temporary_reoccupation_of_colony",
+      "academic_source": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/abs/left-behind-subjecthood-nationality-and-the-status-of-jews-after-the-loss-of-english-surinam/0825CCCDCE13530139601CE6032B1392",
+      "footnote": "61",
+      "english_garrison_exclusive_boundary_verified": null,
+      "duration_in_days_verified": null,
+      "no_new_country_polygon": true
+    },
+    {
+      "id": "SUR1668_DUTCH_RETAKE",
+      "year": 1668,
+      "event_id": "1660S-E127",
+      "kind": "Dutch_reestablished_colonial_control_with_english_fort_holdout_date_ambiguity",
+      "academic_source": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/abs/left-behind-subjecthood-nationality-and-the-status-of-jews-after-the-loss-of-english-surinam/0825CCCDCE13530139601CE6032B1392",
+      "secondary_source": "https://www.sidestone.com/openaccess/9789088902635.pdf",
+      "by_april_1668_colonial_control_return_to_dutch": true,
+      "final_english_fort_garrison_withdrawal_day_verified": null,
+      "fort_holdout_1668_spotty_secondary_news_reports": true,
+      "complete_all_surinaam_sovereign_polygon_verified": false
     }
   ],
   "deliberate_non_derived_fields": [
