@@ -4,8 +4,8 @@ const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const registry=read('data/stories/serial/index.json');
 const stories=[
-{id:'E6-T15',file:'data/stories/serial/e6-t15-bank-war-colonial-capital.json',sections:10,sources:14,events:10},
-{id:'E6-T02',file:'data/stories/serial/e6-t02-ireland-conquest-land-finance.json',sections:11,sources:13,events:17}
+{id:'E6-T15',file:'data/stories/serial/e6-t15-bank-war-colonial-capital.json',sections:13,sources:17,events:10},
+{id:'E6-T02',file:'data/stories/serial/e6-t02-ireland-conquest-land-finance.json',sections:15,sources:17,events:17}
 ];
 const atl=new Map();
 for(let y=1600;y<=1690;y+=10)for(const e of read('data/atlas-'+y+'-'+(y+9)+'.json').events)atl.set(e.id,e);
@@ -55,4 +55,4 @@ assert(ireland.related_event_ids.includes('1640S-E017')&&ireland.related_event_i
 assert(ireland.related_story_ids.includes('E6-T03-LAND-1642-1698'),'cannot discard or duplicate existing land rights story');
 assert(registry.topics.find(t=>t.id==='E6-T03-LAND-1642-1698')?.status==='published');
 assert.equal(registry.topics.filter(t=>t.status==='published').length,18);
-console.log('PASS editor16: 2 public historical capital stories, 21 chapters, 27 sources, 27 existing audited Atlas links; original £1.2m/8%, £140k split, unverified death/colonial investor accounting remain explicit.');
+console.log('PASS editor16: 2 public historical capital stories, 28 chapters, 34 sources, 27 existing audited Atlas links; original £1.2m/8%, £140k split, unverified death/colonial investor accounting remain explicit.');

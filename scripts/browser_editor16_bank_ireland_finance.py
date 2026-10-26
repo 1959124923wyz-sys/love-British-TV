@@ -31,13 +31,13 @@ def open_story(year,event,topic,chapters,word):
     assert js("return document.getElementById('bigYear').textContent===String(arguments[0])",year)
     print("PASS",topic,year,"event",event,"chapters",chapters)
 try:
-    open_story(1694,"1690S-E023","E6-T15",10,"120万英镑")
-    open_story(1649,"1640S-E016","E6-T02",11,"德罗赫达")
+    open_story(1694,"1690S-E023","E6-T15",13,"John Houblon")
+    open_story(1649,"1640S-E016","E6-T02",15,"Erasmus Smith")
     # 16C old map remains unaffected after serial entries.
     browser.get("http://127.0.0.1:8765/?year=1599")
     wait.until(lambda d:js("return document.getElementById('bigYear')?.textContent==='1599'"))
     assert js("return document.getElementById('eventCount').textContent!=='0项'")
-    print("PASS E6-T02 & E6-T15: 10+11 chapters, 1694 & 1649 docs, dossier return, prior century preserved")
+    print("PASS E6-T02 & E6-T15: 13+15 chapters, 1694 & 1649 docs, dossier return, prior century preserved")
 except Exception:
     browser.save_screenshot(str(out/"editor16-browser-error.png"))
     raise

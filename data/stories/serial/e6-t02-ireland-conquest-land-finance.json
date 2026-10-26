@@ -1,12 +1,12 @@
 {
   "schema": "atlas-major-story-v1",
   "id": "E6-T02",
-  "title": "1641—1658年爱尔兰征服：城镇屠杀、土地没收与战争债权兑现",
-  "subtitle": "从德罗赫达、韦克斯福德到1650年代Down Survey：军事暴力、土地财政与失地者",
+  "title": "1641—1670年爱尔兰征服：屠杀、土地债权与被没收财产的转移",
+  "subtitle": "从1642年冒险投资到1653年Erasmus Smith的10,404爱尔兰英亩，再到1654年抽签和1670年所有权调查",
   "region": "爱尔兰及英格兰议会",
   "start_year": 1641,
-  "end_year": 1658,
-  "historical_end_year": 1658,
+  "end_year": 1670,
+  "historical_end_year": null,
   "parent_serial_topic_id": null,
   "predecessor_story_ids": [],
   "successor_story_ids": [
@@ -34,11 +34,11 @@
     "1650S-E031",
     "1650S-E021"
   ],
-  "reading_note": "军事指挥官自述的约三千守军和约两千死者不等于已核证平民和全战争死者；1642筹资、1652法律、1653债权与1654–58测绘分开。",
+  "reading_note": "军事指挥官自述的约三千守军和约两千死者不等于已核证平民和全战争死者；1642筹资、1652法律、1653债权与1654–58测绘分开。 1643年300英镑权益在后续名义2995英镑范围内，1653年的10404爱尔兰英亩不等于其他面积制；2026论文79%／84%是十郡样本中1670年的持地比例。",
   "map_note": "全部链接至原有历史城镇或立法行政参考点；尚未取得逐地契许可GIS范围，不新增真实控制面积、战役兵线或大圆缓冲区。",
   "editorial_status": "published_source_checked_violence_land_finance",
   "publication_approval": true,
-  "lead": "1649年英格兰共和国军在德罗赫达和韦克斯福德攻城时杀死守军和居民；征服的另一面，则是1642年筹集战争资金、1652年没产法令、1653年以土地清偿欠饷与投资者债权，及1650年代为拨地而进行的实地调查。战争死亡、失地者人数、受领面积和资本收益是不同量纲，必须逐件档案核证。",
+  "lead": "1649年英格兰共和国军在德罗赫达和韦克斯福德攻城时杀死守军和居民；征服的另一面，则是1642年筹集战争资金、1652年没产法令、1653年以土地清偿欠饷与投资者债权，及1650年代为拨地而进行的实地调查。战争死亡、失地者人数、受领面积和资本收益是不同量纲，必须逐件档案核证。 2026年最新大学研究还能将这一机制落实到商人Erasmus Smith的具名投资与1654年十郡抽签、1670年地方地权变化；这些是有明确适用人群及地理样本的指标。",
   "sections": [
     {
       "id": "revolt-witness-1641",
@@ -212,6 +212,69 @@
         "历史档案已提供下一步资料：三一学院1641年证词、克伦威尔1649年原信件经现代校勘的出版、英国图书馆1655—1659年佩蒂测绘手稿，以及土地受领清册。未看过的原地契、受领人名、精确界址和债权计算需要保持未核状态。",
         "1662年及1665年复辟政权继续通过法案处理此前土地所有权争议，但属于E6-T03-LAND现有专题的后续，不能在本篇1658年结束处宣称历史争讼已停止，亦不可将复辟法案反记为1653年已实施。"
       ]
+    },
+    {
+      "id": "erasmus-smith-investment-1643",
+      "heading": "十二、1643年：Erasmus Smith承接300英镑战争投资权",
+      "period_start_year": 1643,
+      "period_end_year": 1643,
+      "source_keys": [
+        "IRL14",
+        "IRL15"
+      ],
+      "paragraphs": [
+        "此前叙述的[[1640S-E029|1642年爱尔兰《冒险家法》]]说明用未来被没收土地筹集军费的机制。爱尔兰皇家学院《爱尔兰人物传记辞典》对商人**Erasmus Smith（1611—1691）**给出了具名账目：1643年他的父亲Roger Smith把一份**300英镑**的冒险投资权益转让给他。这笔权益是战争筹资制度下对未来地产的债权，不能等同他在1643年已经占有爱尔兰某处田产。",
+        "Smith早年加入伦敦杂货商同业公会，后来通过供应燕麦、面粉、奶酪等军粮参与英格兰共和国在爱尔兰及苏格兰的军事供应链。爱尔兰土地征服与这一类军事商业合同存在具体个人层面的关联：一名商人能够同时持有未来的地权请求并向战争部队出售物资，但**军粮销售款额和土地债权额不能在缺账时混算为一笔利润**。",
+        "原始投资权益于1643年转移给Smith，也不说明最初缴纳现金的责任人和后续受偿都属于同一时期。要沿其个人财产继续追踪，必须区分父亲原投资、子女承继、后来购买他人债权和1653年抽签后的法定地权。"
+      ]
+    },
+    {
+      "id": "erasmus-smith-claims-1653",
+      "heading": "十三、1653年：2,995英镑名义债权换得10,404爱尔兰英亩",
+      "period_start_year": 1653,
+      "period_end_year": 1657,
+      "source_keys": [
+        "IRL14",
+        "IRL15",
+        "IRL06"
+      ],
+      "paragraphs": [
+        "同一人物传记进一步记载：Smith以折价方式大量购买其他冒险投资者的土地债权，使其名义投资规模达到**2,995英镑**；在1653年土地抽签中，他凭这些权益取得位于Armagh、Down与Tipperary的**10,404爱尔兰英亩**。**2,995英镑是债权名义规模，未必等于其购买这些折价债权实际付出的全部现金；10,404是当年授予土地的历史面积单位，不能写成10,404现代英亩，更不是已经出售土地取得的英镑盈利。**",
+        "Smith的地产随后通过其他收购及置换扩展到约45,000英亩、横跨九个郡。后期的约45,000英亩是一段更长时期的累计地权规模，**可能包含1653年获得的早期土地，不能同10,404相加成为新一轮占地总额**。不同来源对后来持有量的计量和达到时间亦有差别，此处优先保留爱尔兰皇家学院有明确1653年份的数字。",
+        "1657年Smith设立信托，试图从地产租金收益支持学校和学业资助。他的教育安排与地产来源之间有真实制度关系，但土地处于何人实耕、地租多少、学校具体获得多少钱，需要相关领地租簿而不是从[[1650S-E016|共和国以土地抵偿投资者与军饷]]的总体法令推算。"
+      ]
+    },
+    {
+      "id": "lottery-1654-new-research",
+      "heading": "十四、1654年：十郡抽签如何分配士兵与投资人可领的土地",
+      "period_start_year": 1654,
+      "period_end_year": 1658,
+      "source_keys": [
+        "IRL16",
+        "IRL17",
+        "IRL08"
+      ],
+      "paragraphs": [
+        "2026年9月《International Organization》发表的Jeremy Bowles、Gabriel Koehler-Derrick和Michael Olson研究，对历史土地分配作了定量再分析：**1654年1月24日**，共和国为十个需要拆分的郡举行男爵领地抽签，把领地分配给持有军饷债权的军人和曾经预付战争款的冒险投资者。该制度并非把爱尔兰所有郡同时以同样比例划分，抽签也不是对每片农田已经完成实测的证明。",
+        "该论文对符合条件的区域作分层筛选：排除了没有符合没产条件土地的49个教区，最后统计**十郡、90个男爵领地、794个教区**的研究样本。研究还关联约1,500名冒险投资者和约2,200名军官的历史名单。这些数字是**各自的历史名录或统计样本规模**，不是本专题亲自逐名鉴别的人数，也不能相加当作当时全部失地人口或人口被迫迁移规模。",
+        "抽签之后土地债权人仍可能转售权益、改变受领地块或不去爱尔兰定居。学术研究估计，到1670年**少于四分之一**的原始军人及冒险投资者实际亲自取得土地。这条证据非常重要：法律承诺的全部份额、被测地块和某位出资者后来持有的土地，并非一张静态地图中必然完全重合的集合。[[1650S-E031|1654年Civil Survey]]和[[1650S-E021|1650年代的Down Survey测量]]只能分别对应其已核证的测量时段。"
+      ]
+    },
+    {
+      "id": "1670-estate-pattern",
+      "heading": "十五、1670年：有多少土地成为新地主的财产？",
+      "period_start_year": 1659,
+      "period_end_year": 1670,
+      "source_keys": [
+        "IRL16",
+        "IRL14",
+        "IRL13"
+      ],
+      "paragraphs": [
+        "借助都柏林三一学院土地调查及1641与1670年地权书册，2026年研究指出：在其**十郡抽签样本**中，划给军人受偿的区域至1670年由新教人士持有土地的比例约为**84%**，划给冒险投资者受偿的区域约为**79%**，差约**5个百分点**。该研究在控制原有地区差异后仍得到相近结果。**这不是说全爱尔兰在1654年又有5%的国土被没收，更不是每个新教地主都持有英国王室主权领土。**",
+        "同篇论文根据已有史学材料概括，爱尔兰天主教人士持地份额经历从大约50%到大约20%的显著下降。这是宏观历史所有权比例，不等于用2026年研究样本的79%与84%重新计算的全国人口、全国土地确切总面积或一个可立即导入数字地图的村镇边界。同一领地可能经历1641年原主、1653年法定处分、1657年测绘和1670年另一位实际买主。",
+        "论文发现抽给军人的区域中，新教土地持有更普遍，但未发现同样清晰的单人土地集中度变化；也就是说，**原地产持有人所属社群的变化**与**少数个人是否积聚更多地权**是两个不同的量化问题。这既帮助理解大规模掠夺的制度后果，也意味着不能把1700年以后的结果提前写作17世纪既成事实。能够确定的战争城镇和调查机构可以作为地点参考，1654年抽签男爵领地的准确边界仍须同当时地籍原图逐一对照。"
+      ]
     }
   ],
   "sources": [
@@ -292,6 +355,30 @@
       "label": "爱尔兰历史研究 Down Survey 官方项目概述及战争及没收",
       "url": "https://www.downsurvey.ie/about/",
       "access": "academic_digital_project_institutional_synthesis_read_casualty_estimates_not_used_as_exact"
+    },
+    {
+      "id": "IRL14",
+      "label": "爱尔兰皇家学院《Dictionary of Irish Biography》Aidan Clarke撰Erasmus Smith传：1643年300英镑债权、1653年2995英镑名义投资、10404爱尔兰英亩与学校基金",
+      "url": "https://www.dib.ie/index.php/biography/smith-erasmus-a8139",
+      "access": "royal_irish_academy_scholarly_biography_full_public_entry_read_direct_name_amount_unit_dates"
+    },
+    {
+      "id": "IRL15",
+      "label": "Erasmus Smith Schools Archive历史：军粮承包、土地权益与1657年信托",
+      "url": "https://erasmussmithschools.ie/history/",
+      "access": "successor_educational_endowment_official_archive_institutional_history_read"
+    },
+    {
+      "id": "IRL16",
+      "label": "Jeremy Bowles, Gabriel Koehler-Derrick, Michael Olson, 2026《International Organization》：To Hell or to Connacht; 十郡1654抽签、794教区及1670年土地持有估计",
+      "url": "https://www.cambridge.org/core/journals/international-organization/article/to-hell-or-to-connacht-expropriation-inequality-and-local-legacies-of-settler-colonialism/805564D91100463C60FFA47F603F93DC",
+      "access": "2026_peer_reviewed_open_access_full_article_web_text_read_method_sample_and_estimates_not_independently_recomputed"
+    },
+    {
+      "id": "IRL17",
+      "label": "2024 Cambridge《British Journal for the History of Science》：Petty's instruments; Down Survey 1655测绘、1656扩大到冒险家与1659分配",
+      "url": "https://www.cambridge.org/core/journals/british-journal-for-the-history-of-science/article/pettys-instruments-the-down-survey-territorial-natural-history-and-the-birth-of-statistics/0C35B4A6C753DE4DF81B523B4AD6B62B",
+      "access": "2024_open_access_peer_reviewed_historical_methods_excerpt_read"
     }
   ],
   "topic_source_claims": [
@@ -434,7 +521,58 @@
       "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
       "publication_approval": true,
       "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "E6-T02-EDITOR17-12",
+      "section_id": "erasmus-smith-investment-1643",
+      "source_keys": [
+        "IRL14",
+        "IRL15"
+      ],
+      "original_document_page": "Royal Irish Academy Dictionary of Irish Biography Erasmus Smith entry (1643/1653/1657) and Cambridge International Organization 2026 article methodology + Tables 1/2; original 1654 barony allotment GIS not individually copied",
+      "verification_depth": "editor17_royal_irish_academy_authoritative_biography_and_2026_peer_reviewed_full_web_text_read_no_independent_estimate_recalculation",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Keep historical Irish acres separate from English acres, 2026 ten-county sample 79/84 percentages separate from national historiography, and 1653 awards separate from actual settled estates."
+    },
+    {
+      "claim_id": "E6-T02-EDITOR17-13",
+      "section_id": "erasmus-smith-claims-1653",
+      "source_keys": [
+        "IRL14",
+        "IRL15",
+        "IRL06"
+      ],
+      "original_document_page": "Royal Irish Academy Dictionary of Irish Biography Erasmus Smith entry (1643/1653/1657) and Cambridge International Organization 2026 article methodology + Tables 1/2; original 1654 barony allotment GIS not individually copied",
+      "verification_depth": "editor17_royal_irish_academy_authoritative_biography_and_2026_peer_reviewed_full_web_text_read_no_independent_estimate_recalculation",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Keep historical Irish acres separate from English acres, 2026 ten-county sample 79/84 percentages separate from national historiography, and 1653 awards separate from actual settled estates."
+    },
+    {
+      "claim_id": "E6-T02-EDITOR17-14",
+      "section_id": "lottery-1654-new-research",
+      "source_keys": [
+        "IRL16",
+        "IRL17",
+        "IRL08"
+      ],
+      "original_document_page": "Royal Irish Academy Dictionary of Irish Biography Erasmus Smith entry (1643/1653/1657) and Cambridge International Organization 2026 article methodology + Tables 1/2; original 1654 barony allotment GIS not individually copied",
+      "verification_depth": "editor17_royal_irish_academy_authoritative_biography_and_2026_peer_reviewed_full_web_text_read_no_independent_estimate_recalculation",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Keep historical Irish acres separate from English acres, 2026 ten-county sample 79/84 percentages separate from national historiography, and 1653 awards separate from actual settled estates."
+    },
+    {
+      "claim_id": "E6-T02-EDITOR17-15",
+      "section_id": "1670-estate-pattern",
+      "source_keys": [
+        "IRL16",
+        "IRL14",
+        "IRL13"
+      ],
+      "original_document_page": "Royal Irish Academy Dictionary of Irish Biography Erasmus Smith entry (1643/1653/1657) and Cambridge International Organization 2026 article methodology + Tables 1/2; original 1654 barony allotment GIS not individually copied",
+      "verification_depth": "editor17_royal_irish_academy_authoritative_biography_and_2026_peer_reviewed_full_web_text_read_no_independent_estimate_recalculation",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Keep historical Irish acres separate from English acres, 2026 ten-county sample 79/84 percentages separate from national historiography, and 1653 awards separate from actual settled estates."
     }
   ],
-  "research_revision": "2026-10-26 Editor16: 11 sourced chapters of wars, siege violence and finance-land links, scoped to 1641–1658; no fabricated casualties or geographic estate ownership."
+  "research_revision": "2026-10-26 Editor16: 11 sourced chapters of wars, siege violence and finance-land links, scoped to 1641–1658; no fabricated casualties or geographic estate ownership. Editor17 2026-10-26: 1643 £300 inheritance, Smith's £2,995 nominal debt shares, 1653 award 10,404 Irish acres, 1654 ten-county lottery and 2026 794-parish/90-barony scholarly comparison up to 1670; excludes 18th-century events."
 }

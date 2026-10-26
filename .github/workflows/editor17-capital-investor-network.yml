@@ -1,0 +1,37 @@
+name: Editor17 1694 Bank shareholder-slave-trade overlaps and 1654 Ireland allotment studies
+on:
+  push:
+    branches:
+      - 'research/editor17-*'
+  pull_request:
+    paths:
+      - 'data/research/e6t15-e6t02-person-network-and-1654-lottery-evidence-20261026.json'
+      - 'data/stories/serial/e6-t15-bank-war-colonial-capital.json'
+      - 'data/stories/serial/e6-t02-ireland-conquest-land-finance.json'
+      - 'scripts/test_editor17_capital_people_land_lottery.js'
+      - '.github/workflows/editor17-capital-investor-network.yml'
+permissions:
+  contents: read
+jobs:
+  critical-source-people-geometry-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify financial and land claimant identity, source denominators and article contracts
+        run: |
+          node scripts/test_editor17_capital_people_land_lottery.js
+          node scripts/test_editor16_bank_ireland_finance.js
+          node scripts/test_serial_story_contract.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Desktop Selenium history map behavior
+        run: |
+          python3 -m pip install selenium
+          python3 -m http.server 8765 &
+          python3 scripts/browser_editor16_bank_ireland_finance.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor17-1694-bank-1654-irish-land
+          path: browser-smoke-results/editor16-*.png
+          retention-days: 15
