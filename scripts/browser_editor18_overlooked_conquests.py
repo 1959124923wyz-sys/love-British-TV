@@ -30,12 +30,13 @@ def open_story(year,event_id,story_id,chapters,term):
 try:
  open_story(1610,"1610S-E093","E6-T01",10,"阿尔斯特")
  open_story(1630,"1630S-E023","E6-T16-PROVIDENCE",10,"普罗维登斯")
- open_story(1650,"1650S-E121","E6-T16-SURINAME",10,"苏里南")
+ open_story(1650,"1650S-E121","E6-T16-SURINAME",11,"1668")
+ open_story(1668,"1660S-E127","E6-T16-SURINAME",11,"1667年10月")
  open_story(1665,"1660S-E124","E6-T17-AFRICAN-FORTS",12,"海岸角")
  driver.get('http://127.0.0.1:8765/?year=1599')
  wait.until(lambda d:js("return document.getElementById('bigYear')?.textContent==='1599'"))
  assert js("return document.getElementById('eventCount').textContent!=='0项'")
- print("PASS Editor18 cross-century 1599 preserved; 4 published stories 42 chapters, 11 new event references, desktop map navigation")
+ print("PASS Editor18 cross-century 1599 preserved; 4 published stories 43 chapters, 13 new event references, desktop map navigation")
 except Exception:
  driver.save_screenshot(str(out/'editor18-desktop-error.png'))
  raise
