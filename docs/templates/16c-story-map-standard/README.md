@@ -144,3 +144,23 @@
 研究结构化来源账本：[E6-T15/E6-T02各层金额与伤亡数字](../../../data/research/e6t15-e6t02-war-finance-land-forfeiture-evidence-20261026.json)，刊前手稿与继续搜集项目：[主编16正式交接](../../../docs/research/EDITOR16_E6T15_E6T02_WAR_FINANCE_IRELAND_20261026.md)。全部来源不等于原档已逐页检视，证据等级说明不可从正文/数据删除。
 
 已通过PR全量24项检查。后续回归应运行`node scripts/test_editor16_bank_ireland_finance.js`、`node scripts/test_serial_story_contract.js`、`python3 scripts/browser_editor16_bank_ireland_finance.py`与`python3 scripts/audit_spatial_semantics.py --strict`。同一个1652没产法事件会挂载E6-T02征服篇与E6-T03-LAND土地篇两个合法入口；**浏览器测试务必显式按`data-story-open`文章ID选择，不能永远默认第一个进入的专题。**
+
+## 十二、E6-T15/E6-T02具名金融网络与抽签土地数据：准许高质量二次史料，但不得捏造连线（2026-10-26）
+
+本规范接续[Editor17具名商人与量化研究PR](https://github.com/1959124923wyz-sys/love-British-TV/pull/255)及[长期研究交接](../../../docs/research/EDITOR17_BANK_SLAVE_INVESTOR_IRELAND_LOTTERY_20261026.md)。历史材料的可信度按**机构原始文书、权威专业机构研究、同行评审史学全文、经研究者署名确认的新闻采访、未经核实网页**分层记录。**无需等待每一份古代手稿逐页亲阅才发布**；但是二次资料说了多少就只能据证断言多少，绝不能把未查的17世纪股东账、现金流或历史地界伪称已经验证。
+
+### E6-T15：人物、机构与金钱三层证据
+
+- [英国NatWest集团的Hankey & Co机构史](https://www.natwestgroup.com/heritage/companies/hankey-and-co.html)写明**1674年John Houblon和Samuel Hankey在Fenchurch Street共同从事西印度殖民贸易**，涉及牙买加、安提瓜及背风群岛，并明确这种贸易依赖被奴役的非洲劳动者，两名合伙人因此获益。[英格兰银行1694首批董事名录](https://www.bankofengland.co.uk/archive/directors-annual-lists-1694-1950)独立核对Houblon为首任总裁。此为**具名贸易合伙＋具名银行领导任职**的可证连接，不等于Houblon具名贩奴航次、银行股本中利润百分比，也不代表Hankey属于1694银行创办董事。
+- 2026年9月[《卫报》对Michael Bennett／Register of British Slave Traders直接研究采访](https://www.theguardian.com/uk-news/ng-interactive/2026/sep/16/slave-trade-wealth-britain-financial-system-bank-of-england-enslaved-africans)载：历届银行董事中**24人**曾投资跨大西洋人口奴役贸易，其中**4人**属于1694年创办董事；**至少30位**银行最早的股票认购者涉足奴隶贸易投资。四人属于24人的子集，30与4可能有重叠；24人的董事履历涉及后世，**不能写成“1694年24名创办董事全部从事贩奴”**，亦不可在尚无公开四人名单时随便给四个董事贴同一标签。
+- [英格兰银行创立账册展示](https://www.bankofengland.co.uk/museum/online-collections/archive-gallery/founding-documents)记威廉三世和玛丽二世1694年**共同**认股£10,000，2026研究报道两人亦曾持有皇家非洲公司股份。**共同£10,000≠各人£10,000，持有两家公司股票≠已查明从RAC到1694银行存在同额分红转账**。原1694国家£1,200,000贷款、8%利率及£140,000法定年拨款继续按各自会计字段记录，禁止将它们和同一批股东个人财富相加为“英国殖民直接净收益”。
+- 地图仍使用已知`1690S-E023`1694银行成立的威斯敏斯特立法行政参考点，以及已有1672皇家非洲公司事件。**英国海上殖民商贸流量和私人账目关系不能等同新领土Polygon，也不能凭西印度贸易合伙想象出一条17世纪资金实测海运线**。
+
+### E6-T02：给人名、金额、历史面积与统计分母各自标记
+
+- [爱尔兰皇家学院Erasmus Smith权威人物传记](https://www.dib.ie/index.php/biography/smith-erasmus-a8139)记录1643年其父让渡**£300**战争投资权益，1653年折价收购扩成**£2,995名义权益**、抽签获授**10,404 Irish acres**位于Armagh/Down/Tipperary，后又扩大地产、1657年创办地产教育信托。£300可能已经包含在后来的£2,995之中；名义债权不是折价实际现金购买成本；**Irish acres不是英亩或平方公里，不可未经面积制校验就换算**。早期10,404也不可与后来的全部持有量简单相加。
+- [2026年《International Organization》同行评审全文](https://www.cambridge.org/core/journals/international-organization/article/to-hell-or-to-connacht-expropriation-inequality-and-local-legacies-of-settler-colonialism/805564D91100463C60FFA47F603F93DC)考证1654年十郡士兵/冒险家受偿抽签，排除不符合条件的49个教区后形成**90个男爵领地、794个教区的分析样本**。1670年样本中军队获分区域由新教地主持有约**84%**土地、冒险家获分区域约**79%**（相差约5个百分点），绝非全爱尔兰“新占领5%面积”。原始受偿债权人至1670年亲自取得地产的比例不足四分之一，涉及权利买卖和不同地主，不得把1653年的每个抽签权人直接绘成1670年真实地产主人。
+- 论文转引的全爱尔兰天主教持地从约50%降至约20%属历史综述，**不能同研究十郡84/79的不同分母拼接推导新国界**。有关地主集中度的零效果也不可省掉，群体身份变化不等于已证明所有土地都集中到少数人手中。
+- [都柏林三一学院Down Survey／Books of Survey and Distribution数字地图](https://www.downsurvey.ie/about/)的确可按1641／1670地主与历史村镇关联；但未实际复制检验具体**原图、地权人、日期与边界**前，不可把现代郡域画为1654没产土地、也不能把Smith在三郡的授权总额机械拆分为虚构地块。缺几何来源以既有1652/53没产及1654—1658勘测历史**参考点**与文中比例表呈现；有史料但边界未定的区域使用虚线淡色并标“参考范围”，严格不得称实测实控面积。
+
+永久审查文件：`data/research/e6t15-e6t02-person-network-and-1654-lottery-evidence-20261026.json`。验证工具：`node scripts/test_editor17_capital_people_land_lottery.js`、`node scripts/test_editor16_bank_ireland_finance.js`、`node scripts/test_serial_story_contract.js`及`python3 scripts/audit_spatial_semantics.py --strict`；桌面地图需核验1694/1649点入、全篇新段、双击及返回，旧16世纪地图与先刊土地专题不能回退。所有发生于1700年及以后的事件继续排除在本轮专题地图之外。
