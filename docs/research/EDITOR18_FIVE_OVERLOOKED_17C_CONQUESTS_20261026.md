@@ -4,12 +4,12 @@
 
 ## 一、研究成果与一览
 
-这次研究填补5个17世纪重大殖民空白，其中**四篇重大专题**（阿尔斯特、苏里南、普罗维登斯岛、非洲海岸角—丹吉尔对比）合计 **42章**、36项各篇来源条目（其中乌尔斯特7、苏里南7、普罗维登斯岛9、非洲两据点13；不同篇来源可能重合，非36个不同的原始档案），年度Atlas新增 **11条经来源与现代地名核实的参考事件**。不修改已发表的E6-T13皇家非洲公司、E6-T02爱尔兰征服等原篇核心叙事，亦不建立任何无测绘数据的历史“英国实控”Polygon。
+这次研究填补5个17世纪重大殖民空白，其中**四篇重大专题**（阿尔斯特、苏里南、普罗维登斯岛、非洲海岸角—丹吉尔对比）合计 **43章**、37项各篇来源条目（其中乌尔斯特7、苏里南8、普罗维登斯岛9、非洲两据点13；不同篇来源可能重合，非37个不同的原始档案），年度Atlas新增 **13条经来源与现代地名核实的参考事件**。不修改已发表的E6-T13皇家非洲公司、E6-T02爱尔兰征服等原篇核心叙事，亦不建立任何无测绘数据的历史“英国实控”Polygon。
 
 | 专题ID | 有据时段 | 文章 | 主要实证史料 | GIS原则 |
 |---|---|---|---|---|
 | E6-T01 | 1603—1641 | `data/stories/serial/e6-t01-ulster-plantation-1603-1641.json` | Oxford University Press Nicholas Canny; Cambridge《Irish Historical Studies》David Heffernan（2025）；Fermanagh地方博物馆1609年Bodley原图编目；爱尔兰城市考古档案 | 1609六郡殖民政策与1610五郡英格兰承领人统计不相加；现代德里点非六郡没产疆域 |
-| E6-T16-SURINAME | 1650—1667 | `data/stories/serial/e6-t16-suriname-1650-1667.json` | 荷兰国家档案馆约1650英殖民、约50个糖园发展期、1667泽兰舰队夺取；2024学术迁入研究 | Fort Willoughby/Zeelandia现址为地区参考；约50不是1650年精确种植园数量 |
+| E6-T16-SURINAME | 1650—1668 | `data/stories/serial/e6-t16-suriname-1650-1667.json` | 荷兰国家档案馆约1650英殖民、约50个糖园发展期、1667泽兰舰队夺取；2024学术迁入研究 | Fort Willoughby/Zeelandia现址为地区参考；约50不是1650年精确种植园数量 |
 | E6-T16-PROVIDENCE | 1630—1641 | `data/stories/serial/e6-t16-providence-island-1630-1641.json` | Karen Ordahl Kupperman Cambridge 1993重要专著；USC考古大学项目；企业认股史 £3,800最初承诺 | 今哥伦比亚Providencia非美国罗德岛Providence；岛中心非1630工事坐标 |
 | E6-T17-AFRICAN-FORTS | 1653—1684 | `data/stories/serial/e6-t17-cape-coast-tangier-1653-1684.json` | 加纳地方政府、Andrew Apter《American Historical Review》2017、National Army Museum、Folger、Cambridge及2026年Hannah Kaemmer筑防研究 | 英方1664/1665海岸角夺堡年份矛盾明确显示；1662—1684丹吉尔驻点实际情况与整个摩洛哥疆域分开 |
 
@@ -23,11 +23,11 @@
 
 原已发表地图 `1600S-E003, 1600S-E010, 1600S-E017, 1610S-E022, 1640S-E003`复用，新增`1610S-E093` 1610授地、`1610S-E094` 1613城防，均用德里现代**行政参考点**（从爱尔兰考古报告取得两处不同有据位置）；1610的授地远非发生在这一个坐标。
 
-## 三、1650—1667苏里南：短命英属糖园和荷兰征服
+## 三、1650—1668苏里南：短命英属糖园和荷兰征服
 
 [荷兰国家档案馆殖民史与种植园地图介绍](https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/plantagekaart-suriname-1737)证实1650左右英殖民开始沿苏里南河建设蔗糖庄园，早期形成**约五十处**糖业种植园，大量使用被奴役的西非人。2024[专业历史论文](https://www.tandfonline.com/doi/full/10.1080/14788810.2024.2393037)将初始巴巴多斯移民年份置于1650—1651并追踪Willoughby1657年殖民权利许可，说明一个权利许可不能被误当成最早定居。
 
-**约五十**为阶段性概括，不是1650年单年统计，不推算所有糖园面积、遇难人口、总获利。1667年荷兰泽兰舰队夺取殖民地；[荷兰国家档案馆苏里南公司编目](https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/societeit-van-suriname-1683-1795)记《布雷达和约》确认苏里南保留在荷兰。原居民Lokono、Kari’na及其他社群的土地权力仍不能直接视为欧洲国家间交换的财产。Atlas 新`1650S-E121`与`1660S-E125`。现代Fort Zeelandia GPS`5.825194,-55.14975`为遗址位置，**非全部英属种植园实控面**。更晚1737殖民地地图不能当1650年的精准历史测绘。
+**约五十**为阶段性概括，不是1650年单年统计，不推算所有糖园面积、遇难人口、总获利。1667年荷兰泽兰舰队首次夺取殖民地；[荷兰国家档案馆苏里南公司编目](https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/societeit-van-suriname-1683-1795)记《布雷达和约》确认苏里南保留在荷兰。原居民Lokono、Kari’na及其他社群的土地权力仍不能直接视为欧洲国家间交换的财产。Atlas 新`1650S-E121`与`1660S-E125`。现代Fort Zeelandia GPS`5.825194,-55.14975`为遗址位置，**非全部英属种植园实控面**。更晚1737殖民地地图不能当1650年的精准历史测绘。
 
 ## 四、普罗维登斯岛：公司承诺资本与实际奴役暴力
 
@@ -49,10 +49,14 @@
 
 - 4篇文章：`data/stories/serial/e6-t01-ulster-plantation-1603-1641.json`、`data/stories/serial/e6-t16-suriname-1650-1667.json`、`data/stories/serial/e6-t16-providence-island-1630-1641.json`、`data/stories/serial/e6-t17-cape-coast-tangier-1653-1684.json`。
 - 证据账：`data/research/editor18-seventeenth-century-ulster-suriname-providence-african-forts-evidence-20261026.json`。
-- 全局专题索引：`data/stories/serial/index.json`；17世纪地图文件 `data/atlas-1610-1619.json`、`data/atlas-1630-1639.json`、`data/atlas-1640-1649.json`、`data/atlas-1650-1659.json`、`data/atlas-1660-1669.json`、`data/atlas-1680-1689.json`。新增11项来源关联事件。
+- 全局专题索引：`data/stories/serial/index.json`；17世纪地图文件 `data/atlas-1610-1619.json`、`data/atlas-1630-1639.json`、`data/atlas-1640-1649.json`、`data/atlas-1650-1659.json`、`data/atlas-1660-1669.json`、`data/atlas-1680-1689.json`。新增13项来源关联事件。
 - 自动检查：`scripts/test_editor18_overlooked_17c_conquests.js`，`scripts/browser_editor18_overlooked_conquests.py`，`.github/workflows/editor18-overlooked-17c-colonial-events.yml`；原16世纪/17世纪所有旧专题回归必须通过。
-- 最值得接下来的重型考古GIS任务：阿尔斯特1609每男爵领地古图配准与受封契据交叉；苏里南1650—1667糖园旧地籍及房主逐地块定位；普罗维登斯岛New Westminster军事遗址与1633公司账；1664—1665Cape Coast夺堡原始航海与Fetu编年；丹吉尔1662—1684港堤修筑、军械局工程账与撤军毁弃图。**当前没有任何一处能够有把握给出全域被征服面积**。
+- 最值得接下来的重型考古GIS任务：阿尔斯特1609每男爵领地古图配准与受封契据交叉；苏里南1650—1668糖园旧地籍及房主逐地块定位；普罗维登斯岛New Westminster军事遗址与1633公司账；1664—1665Cape Coast夺堡原始航海与Fetu编年；丹吉尔1662—1684港堤修筑、军械局工程账与撤军毁弃图。**当前没有任何一处能够有把握给出全域被征服面积**。
 
 引文说明：开放获取机构史和学术摘要属于可出版的权威二次资料，但未拿到单条原始交易名册时不能称已直接校阅；所有未核具体死亡人数、船货额、土地面积、年度种植园统计和真实守军战线保持空缺。18世纪只在史料目录提及与17世纪相连的后续，不落任何1700年以后的新地图事件。
 
 交接以已合并的GitHub PR／主分支SHA为准，上传分支或ZIP工作流生成候选包不等于正式上线。
+
+### 关键追加核查：苏里南1667年反夺与1668年荷军最终再占
+
+原简史仅按荷兰国家档案馆概述写作1667荷军征服，是不够精细的单次事件叙述。剑桥《英国研究杂志》[Left Behind: Subjecthood, Nationality and the Status of Jews after the Loss of English Surinam](https://www.cambridge.org/core/journals/journal-of-british-studies/article/abs/left-behind-subjecthood-nationality-and-the-status-of-jews-after-the-loss-of-english-surinam/0825CCCDCE13530139601CE6032B1392) 的注61引荷兰同期国家档案指出：1667年10月英军一度重新夺回该殖民地，而荷兰最迟1668年4月再度取得主要殖民行政控制。开放[1668年代报刊研究](https://www.sidestone.com/openaccess/9789088902635.pdf)另显示，个别英方守堡的最终结束日期可能晚于一般殖民控制重建，因此**不得写1668年4月某一天所有英军都已撤尽**。新年度事件为1660S-E126（1667-10英军反夺）、1660S-E127（1668荷方重掌），与1660S-E125（1667首次荷军夺取）依次排列。**本次增加两项事件、1章和1篇论文来源，合计43章、37项来源条目、13新增Atlas事件**。未获得英荷驻地实际控制地籍面，因此3个事件沿用同一现代河口堡址参考点，不涂全苏里南主权区。
