@@ -1,0 +1,440 @@
+{
+  "schema": "atlas-serial-major-story-v1",
+  "id": "E6-T02",
+  "title": "1641—1658年爱尔兰征服：城镇屠杀、土地没收与战争债权兑现",
+  "subtitle": "从德罗赫达、韦克斯福德到1650年代Down Survey：军事暴力、土地财政与失地者",
+  "region": "爱尔兰及英格兰议会",
+  "start_year": 1641,
+  "end_year": 1658,
+  "historical_end_year": 1658,
+  "parent_serial_topic_id": null,
+  "predecessor_story_ids": [],
+  "successor_story_ids": [
+    "E6-T03-LAND-1642-1698"
+  ],
+  "related_story_ids": [
+    "E6-T03-LAND-1642-1698"
+  ],
+  "related_event_ids": [
+    "1640S-E002",
+    "1640S-E003",
+    "1640S-E004",
+    "1640S-E029",
+    "1640S-E028",
+    "1640S-E016",
+    "1640S-E017",
+    "1650S-E002",
+    "1650S-E003",
+    "1650S-E005",
+    "1650S-E008",
+    "1650S-E013",
+    "1650S-E012",
+    "1650S-E016",
+    "1650S-E037",
+    "1650S-E031",
+    "1650S-E021"
+  ],
+  "reading_note": "军事指挥官自述的约三千守军和约两千死者不等于已核证平民和全战争死者；1642筹资、1652法律、1653债权与1654–58测绘分开。",
+  "map_note": "全部链接至原有历史城镇或立法行政参考点；尚未取得逐地契许可GIS范围，不新增真实控制面积、战役兵线或大圆缓冲区。",
+  "editorial_status": "published_source_checked_violence_land_finance",
+  "publication_approval": true,
+  "lead": "1649年英格兰共和国军在德罗赫达和韦克斯福德攻城时杀死守军和居民；征服的另一面，则是1642年筹集战争资金、1652年没产法令、1653年以土地清偿欠饷与投资者债权，及1650年代为拨地而进行的实地调查。战争死亡、失地者人数、受领面积和资本收益是不同量纲，必须逐件档案核证。",
+  "sections": [
+    {
+      "id": "revolt-witness-1641",
+      "heading": "一、1641年：起事、难民与暴力证词的双重立场",
+      "period_start_year": 1641,
+      "period_end_year": 1641,
+      "source_keys": [
+        "IRL01",
+        "IRL02"
+      ],
+      "paragraphs": [
+        "1641年爱尔兰爆发起事，[[1640S-E003|邓甘嫩等地的王室据点与当地社会秩序遭到争夺]]。当地天主教土地持有者、英国及苏格兰定居者、王党、议会及宗教联盟的立场并不一致，暴力伤害亦发生在多个社群。",
+        "都柏林三一学院已数字化约8,000件证词、调查和关联材料，但许多证词来自新教见证者，依殖民政府调查程序整理。具体见证可能真实记录袭击、驱逐和损失，不能把这些证词直接当作无偏见的全部遇难名单。",
+        "[[1640S-E002|波特当桥杀害难民的叙述]]、[[1640S-E004|岛麦吉天主教居民的杀害证据]]显示双方受害事实需要分别调查。后世拿1641年起事替1649年之后每一处战争屠杀辩护，是政治宣传论证，不是能够证明受害者个人罪责的史料。"
+      ]
+    },
+    {
+      "id": "prepaid-forfeiture-1642",
+      "heading": "二、1642年：出资者在征服前取得未来土地债权",
+      "period_start_year": 1642,
+      "period_end_year": 1642,
+      "source_keys": [
+        "IRL06",
+        "IRL07",
+        "IRL11"
+      ],
+      "paragraphs": [
+        "英格兰议会[[1640S-E029|1642年《爱尔兰冒险家法》把募资与未来被没收土地联系起来]]。出资者被称为Adventurers，其缴款支持战争，偿付依据是在之后征服与法律处分后取得爱尔兰地产；不是所有出资者都亲自参战。",
+        "资本积累的关键制度步骤在于：尚未取得的土地可以先被描述为潜在的偿债资产。这把伦敦的战争债权人与爱尔兰的土地持有人联系起来，但须谨慎区分一份投资合同和已实地分到某一块田产。",
+        "冒险家投资、军队欠饷和一般国家财政开支是三个可区分的会计口径。若没有原始认购账、没收清册和具体受领名册，不能把每一项法定土地额度自动转成已经收取的英镑净利润。"
+      ]
+    },
+    {
+      "id": "cashel-war-1647",
+      "heading": "三、1647年卡舍尔：战争暴力早于克伦威尔抵达",
+      "period_start_year": 1647,
+      "period_end_year": 1647,
+      "source_keys": [
+        "IRL04",
+        "IRL01"
+      ],
+      "paragraphs": [
+        "爱尔兰战争的镇压和大规模杀戮并非1649年才开始。[[1640S-E028|1647年因奇金麾下议会派军队进入卡舍尔]]，包括避难者和宗教人员在内的居民遭到杀害。这一事件说明战争中的宗教身份、政治军事站队与难民保护均难以一概而论。",
+        "争夺城市和驻军并不等于征服了某一郡的全部土地；即便军事行动有明确城市名称，受影响的地理区域也不能用没有来源的圆形半径作为实际占领面积。",
+        "本篇用卡舍尔已有历史地图事件作为参考，不由此推出确切死者人数或城市所有居民的不同信仰分布；进一步人员研究需核原城堡、教会和同时代证人文书。"
+      ]
+    },
+    {
+      "id": "drogheda-1649",
+      "heading": "四、1649年德罗赫达：指挥官自述与平民死亡不能混算",
+      "period_start_year": 1649,
+      "period_end_year": 1649,
+      "source_keys": [
+        "IRL03",
+        "IRL04",
+        "IRL05"
+      ],
+      "paragraphs": [
+        "克伦威尔指挥的英格兰共和国军[[1640S-E016|1649年9月攻陷德罗赫达]]，杀死大量守军，并造成平民伤亡。英国国家陆军博物馆明确称德罗赫达和韦克斯福德均出现士兵与平民的广泛杀戮；不能把攻城后拒绝赦免投降者视作一般军事胜利而略去。",
+        "在1649年9月16日致国务委员会主席约翰·布拉德肖信中，克伦威尔称城内敌军约3,000人，几乎全部被杀，不到30名逃生；信中亦提及有人被扣留以送往巴巴多斯。这里**约3,000、不到30是胜利方指挥官对守军/逃离者的陈述**，不是史学界核证的全城死者总数，更不能由此计算平民具体死亡数或已抵达加勒比人数。",
+        "对这封信需要同时记录当时战争宣传和自我辩护功能。它可以证明克伦威尔本人如何报告并解释暴力，却不是独立的居民户籍或战死者逐名清单。"
+      ]
+    },
+    {
+      "id": "wexford-1649",
+      "heading": "五、1649年韦克斯福德：死亡与战利品两条账",
+      "period_start_year": 1649,
+      "period_end_year": 1649,
+      "source_keys": [
+        "IRL03",
+        "IRL05"
+      ],
+      "paragraphs": [
+        "共和国军[[1640S-E017|1649年10月攻入韦克斯福德]]，造成守军及平民死亡。克伦威尔就此向议会官员写信，报告大约2,000人溺死或被杀；这同样属于交战方陈述，不能不查另一方或独立人口记录就标成验证的确切遇害人数。",
+        "同时代信函叙及军队获得铁、皮革、桶板、100门火炮及三艘船只等战利品。物资列表可以展示战时夺取及军事供给如何同商业资产转移相连，但此时没有证实的逐件市场价、折旧或实际转卖账，**不能编造总战利品收入**。",
+        "这条记录与德罗赫达是两处不同战争事件，不可把两封战报各自的约数简单相加后说成全爱尔兰征服战争死亡人数。"
+      ]
+    },
+    {
+      "id": "clonmel-kilkenny-1650",
+      "heading": "六、1650年：克隆梅尔抵抗与军事占领过程",
+      "period_start_year": 1650,
+      "period_end_year": 1650,
+      "source_keys": [
+        "IRL04",
+        "IRL03"
+      ],
+      "paragraphs": [
+        "1650年[[1650S-E002|共和国军在克隆梅尔城墙突破口遭遇守军抵抗]]，[[1650S-E003|休·杜布·奥尼尔组织守城并撤出]]。围城中的兵员损失、移交地点和后续军政驻留不是一个时间点的同一个数字。",
+        "[[1650S-E005|基尔肯尼失守]]意味着爱尔兰天主教同盟的重要政治中心受到严重打击，但不代表爱尔兰各郡在1650年已经拥有统一英方占领边界。部分地方军队和盟军仍继续抵抗。",
+        "军事征服为随后的财产再分配创造条件，但真正没收、测量、受领、上缴地租的年月各有区别。将这数个不同程序全部画成同一年的橙色面积，会误导读者以为一场战斗立即产生可计算的资本收益。"
+      ]
+    },
+    {
+      "id": "sieges-1651",
+      "heading": "七、1651—1652年：围城、饥病和地方抵抗",
+      "period_start_year": 1651,
+      "period_end_year": 1652,
+      "source_keys": [
+        "IRL04",
+        "IRL13"
+      ],
+      "paragraphs": [
+        "[[1650S-E008|1651年利默里克围城]]期间，守军、居民、粮食供应与疫病交织；城镇受困带来的流亡和死亡不只来自直接交战。围城的军事胜负和经济社会后果需要不同来源核证。",
+        "[[1650S-E013|1652年戈尔韦守城方经长期封锁后投降]]，地方协商、疾病、补给和军事优势共同影响战争收尾。不能因最终投降就把之前几个年份标为早已受英军稳定管治。",
+        "对1649—1653战争的死亡统计学术争议很大；若采用全岛人口减量估计，须说明迁徙、出生率、病荒、战争死亡和不完备户籍的区别。现阶段不写单一确定的战争死亡总人数。"
+      ]
+    },
+    {
+      "id": "legal-settlement-1652",
+      "heading": "八、1652—1653年：征服如何成为没产与受领程序",
+      "period_start_year": 1652,
+      "period_end_year": 1653,
+      "source_keys": [
+        "IRL06",
+        "IRL07",
+        "IRL11"
+      ],
+      "paragraphs": [
+        "[[1650S-E012|1652年英格兰议会制定爱尔兰没产安置法]]，通过法律类别决定土地没收与不同人群的处罚。战争中的一次军队胜利不等于直接证实某村土地被该天划归指定投资者。",
+        "1653年[[1650S-E016|军饷与冒险投资者得到以土地抵偿的法律程序]]，剑桥历史研究特别区分这一年《Satisfaction》制度设计与之后实际拨地实施。英军士兵的欠饷形成对国家的债权，冒险家1642年的投资形成不同债权，两者可能通过没产地契兑现。",
+        "这种结算改变了土地租金和家族财产的持有权，却不等于有现成资料说明1649—1653年所有英兵都在同一日期被分配了具体面积。精确土地持有者名单须继续连结Survey and Distribution土地册及原地产条款。"
+      ]
+    },
+    {
+      "id": "transplantation-1653",
+      "heading": "九、1653年康诺特迁居与财产权侵夺",
+      "period_start_year": 1653,
+      "period_end_year": 1653,
+      "source_keys": [
+        "IRL06",
+        "IRL13"
+      ],
+      "paragraphs": [
+        "战后殖民政策还包含[[1650S-E037|1653年向康诺特一带迁居的安排]]，涉及被没产的爱尔兰天主教土地持有人及其家庭。法律命令、申请豁免、抵达迁居地及最后处分的实际过程不尽相同。",
+        "“不去康诺特就下地狱”等后世流行概括不能替代清楚的移居条例全文、法院记录和流动名单。我们可以证实该政策有相当规模的强制性，但本篇未从逐村迁居簿统计实际被迁人数，不应自行给出受影响人数总计。",
+        "1652年法律、1653年分地与迁居和后来1650年代实际丈量需按原始文件日期逐段回放，不能用现代都柏林或康诺特省边界当作全部被夺地的几何。"
+      ]
+    },
+    {
+      "id": "mapping-1654-1658",
+      "heading": "十、1654—1658年：把地面转化为可分配的债权资产",
+      "period_start_year": 1654,
+      "period_end_year": 1658,
+      "source_keys": [
+        "IRL07",
+        "IRL08",
+        "IRL09",
+        "IRL10",
+        "IRL11"
+      ],
+      "paragraphs": [
+        "[[1650S-E031|1654年Civil Survey核对旧地产权益]]，[[1650S-E021|威廉·佩蒂主持Down Survey的地图测量]]把被没收的土地逐层登记。剑桥历史研究指出，佩蒂于1654年12月受命测量22个拟分给英军的郡中划出的被没收土地；都柏林三一学院将调查地图保存并与地名关联。",
+        "这类测绘有双重意义：它既是罕见的历史空间史料，也将当地田地、面积、原持有人和未来可分配债权纳入共和国管理。原图可能保存可核的旧封邑边界，但必须逐张解决时间、扭曲、地名演变和许可问题，**不能拿现代郡界整体涂色成1656年没收全部地区**。",
+        "目前E6-T03-LAND专题已经覆盖相应土地法律和后续复辟争讼；本篇集中解释战争暴力如何使土地融资可能。研究者可沿着1649年具体城市暴力、1652/1653没产授权、1654/1658测绘和个人受领记录追踪资金链。"
+      ]
+    },
+    {
+      "id": "losses-limit-1658",
+      "heading": "十一、战争、人命与财产：哪些账还没有核全",
+      "period_start_year": 1658,
+      "period_end_year": 1658,
+      "source_keys": [
+        "IRL01",
+        "IRL05",
+        "IRL10",
+        "IRL12"
+      ],
+      "paragraphs": [
+        "把战争称为资本原始积累案例，并不要求把每场屠杀都强行换算成英镑。具体人命损失、村庄被烧、强制迁居、劳役和地产收益是不同的经济与社会维度；死亡数字尤其须区分主战指挥官自述与独立户籍。",
+        "历史档案已提供下一步资料：三一学院1641年证词、克伦威尔1649年原信件经现代校勘的出版、英国图书馆1655—1659年佩蒂测绘手稿，以及土地受领清册。未看过的原地契、受领人名、精确界址和债权计算需要保持未核状态。",
+        "1662年及1665年复辟政权继续通过法案处理此前土地所有权争议，但属于E6-T03-LAND现有专题的后续，不能在本篇1658年结束处宣称历史争讼已停止，亦不可将复辟法案反记为1653年已实施。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "IRL01",
+      "label": "都柏林三一学院1641年证词项目：见证与归档方法",
+      "url": "https://www.tcd.ie/history/research/1641.php",
+      "access": "trinity_college_institutional_archives_history_read"
+    },
+    {
+      "id": "IRL02",
+      "label": "三一学院数字人文中心1641证词8000件编目",
+      "url": "https://dh.tcd.ie/past-projects/1641-depositions/",
+      "access": "trinity_college_postproject_digital_corpus_metadata_read"
+    },
+    {
+      "id": "IRL03",
+      "label": "英国国家陆军博物馆：克伦威尔与爱尔兰1649—1650战争",
+      "url": "https://www.nam.ac.uk/explore/oliver-cromwell-lord-protector",
+      "access": "national_army_museum_curated_campaign_history_read"
+    },
+    {
+      "id": "IRL04",
+      "label": "英国国家陆军博物馆：爱尔兰与英国陆军历史时间轴",
+      "url": "https://www.nam.ac.uk/explore/timeline-ireland-and-british-army",
+      "access": "national_army_museum_chronology_read"
+    },
+    {
+      "id": "IRL05",
+      "label": "History Ireland评论克伦威尔原始信件及德罗赫达/韦克斯福德抢掠记述",
+      "url": "https://historyireland.com/the-letters-writings-and-speeches-of-oliver-cromwell/",
+      "access": "historical_journal_review_direct_letter_excerpts_read_colonial_eyewitness_source_partial"
+    },
+    {
+      "id": "IRL06",
+      "label": "剑桥大学爱尔兰土地征服研究：1652—1654年种植与外迁安排",
+      "url": "https://www.cambridge.org/core/books/abs/conquest-and-land-in-ireland/towards-plantation-and-transportation-16521654/221642F0C095EDF36E7AAF8B1204A40D",
+      "access": "university_press_scholarly_chapter_abstract_read_not_entire_monograph"
+    },
+    {
+      "id": "IRL07",
+      "label": "剑桥《爱尔兰历史研究》Down Survey地图研究",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/maps-of-the-down-survey/967F28B9E821A3DFE947B152CD5B8E3A",
+      "access": "peer_reviewed_historical_academic_abstract_read"
+    },
+    {
+      "id": "IRL08",
+      "label": "爱尔兰都柏林三一学院Down Survey官方历史测绘项目",
+      "url": "https://www.tcd.ie/history/research/centres/early-modern/down-survey.php",
+      "access": "university_digital_archive_project_description_read_no_map_data_shapefile_import"
+    },
+    {
+      "id": "IRL09",
+      "label": "爱尔兰都柏林三一学院 Down Survey 数字化档案项目",
+      "url": "https://www.tchpc.tcd.ie/tchpc-projects/down-survey",
+      "access": "university_digital_research_project_summary_read"
+    },
+    {
+      "id": "IRL10",
+      "label": "英国图书馆 Add MS 72868-72873：1655—1659年Petty调查原图手稿目录",
+      "url": "https://searcharchives.bl.uk/catalog/037-001949837",
+      "access": "original_maps_archive_catalogue_read_maps_not_all_viewed_or_georeferenced"
+    },
+    {
+      "id": "IRL11",
+      "label": "爱尔兰克莱尔郡图书馆：Petty地籍测量与拖欠军饷",
+      "url": "https://clarelibraries.ie/localstudies/maps/pettys-maps-1658-9-1685-the-down-survey/introduction/",
+      "access": "local_government_library_historical_essay_read"
+    },
+    {
+      "id": "IRL12",
+      "label": "University College Cork CELT：1662年土地安置法与1665年解释法原法摘录",
+      "url": "https://celt.ucc.ie/document/E660001-001/",
+      "access": "university_digitisation_of_early_modern_statute_excerpts_1660s_context_only"
+    },
+    {
+      "id": "IRL13",
+      "label": "爱尔兰历史研究 Down Survey 官方项目概述及战争及没收",
+      "url": "https://www.downsurvey.ie/about/",
+      "access": "academic_digital_project_institutional_synthesis_read_casualty_estimates_not_used_as_exact"
+    }
+  ],
+  "topic_source_claims": [
+    {
+      "claim_id": "EDITOR16-T02-1",
+      "section_id": "revolt-witness-1641",
+      "source_keys": [
+        "IRL01",
+        "IRL02"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-2",
+      "section_id": "prepaid-forfeiture-1642",
+      "source_keys": [
+        "IRL06",
+        "IRL07",
+        "IRL11"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-3",
+      "section_id": "cashel-war-1647",
+      "source_keys": [
+        "IRL04",
+        "IRL01"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-4",
+      "section_id": "drogheda-1649",
+      "source_keys": [
+        "IRL03",
+        "IRL04",
+        "IRL05"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-5",
+      "section_id": "wexford-1649",
+      "source_keys": [
+        "IRL03",
+        "IRL05"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-6",
+      "section_id": "clonmel-kilkenny-1650",
+      "source_keys": [
+        "IRL04",
+        "IRL03"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-7",
+      "section_id": "sieges-1651",
+      "source_keys": [
+        "IRL04",
+        "IRL13"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-8",
+      "section_id": "legal-settlement-1652",
+      "source_keys": [
+        "IRL06",
+        "IRL07",
+        "IRL11"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-9",
+      "section_id": "transplantation-1653",
+      "source_keys": [
+        "IRL06",
+        "IRL13"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-10",
+      "section_id": "mapping-1654-1658",
+      "source_keys": [
+        "IRL07",
+        "IRL08",
+        "IRL09",
+        "IRL10",
+        "IRL11"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    },
+    {
+      "claim_id": "EDITOR16-T02-11",
+      "section_id": "losses-limit-1658",
+      "source_keys": [
+        "IRL01",
+        "IRL05",
+        "IRL10",
+        "IRL12"
+      ],
+      "original_document_page": "British and Irish museum history, edited 1649 Cromwell primary correspondence, TCD depositions/survey archive descriptions and Cambridge conquest/land scholarship; full legal manuscripts and survey maps not individually inspected",
+      "verification_depth": "editor16_20261026_public_official_museum_scholarly_or_edited_primary_material_not_whole_original_mss",
+      "publication_approval": true,
+      "conflicting_evidence_or_limits": "Commander's defenders killed estimates not independently proven civilian totals. 1652 legal forfeiture, 1653 future land entitlement and 1654-1658 land survey not proof of fully delimited estate parcels or measured national loss."
+    }
+  ],
+  "research_revision": "2026-10-26 Editor16: 11 sourced chapters of wars, siege violence and finance-land links, scoped to 1641–1658; no fabricated casualties or geographic estate ownership."
+}
