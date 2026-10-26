@@ -1,0 +1,153 @@
+{
+  "schema": "editor16-1694-financial-capital-and-1649-land-finance-evidence-v1",
+  "date": "2026-10-26",
+  "cases": [
+    {
+      "id": "BANK1694_LOAN",
+      "year": 1694,
+      "amount": 1200000,
+      "currency": "GBP_1694",
+      "type": "founding_subscriptions_used_for_government_loan",
+      "from": "private stock subscribers (various trades and royal stockholders)",
+      "to": "William and Mary's English government war finance",
+      "source": "https://www.bankofengland.co.uk/freedom-of-information/2020/details-of-the-bank-of-england-loan-to-the-government-in-1694",
+      "not": "slave-trade capital or profits cannot be established from this total"
+    },
+    {
+      "id": "BANK1694_RATE",
+      "year": 1694,
+      "amount": 8,
+      "unit": "percent per annum original loan rate",
+      "source": "https://www.bankofengland.co.uk/freedom-of-information/2020/details-of-the-bank-of-england-loan-to-the-government-in-1694",
+      "not": "£100000 annuity appropriation should not be confused with arithmetic 8% of £1200000 (£96000)"
+    },
+    {
+      "id": "BANK1694_FISCAL",
+      "year": 1694,
+      "amount": 140000,
+      "currency": "GBP_1694_per_year_statutory_fund",
+      "statutory_components": {
+        "subscriber_fund_gbp": 100000,
+        "life_annuities_fund_gbp": 40000
+      },
+      "funded_from": [
+        "tonnage duties",
+        "excise duties"
+      ],
+      "source": "https://www.bankofengland.co.uk/freedom-of-information/2015/28-august-2015-2",
+      "not": "£140000 should not be called yearly pure bank interest or actual cash spent on colonial campaigns"
+    },
+    {
+      "id": "BANK1694_SUBSCRIBERS",
+      "year": 1694,
+      "archive_indexed_separate_names": 1520,
+      "distinct_people_independently_verified": null,
+      "reported_over_1200_people": true,
+      "royal_subscription_gbp": 10000,
+      "source": "https://www.bankofengland.co.uk/archive/index-to-original-subscribers-to-bank-stock-1694?sf149379530=1",
+      "not": "1520 separate names/entries not necessarily exactly 1520 independent modern-identity investors; no blanket slave trader identity classification"
+    },
+    {
+      "id": "BANK1694_FOUNDERS",
+      "year": 1694,
+      "archive_refs": [
+        "M6/48",
+        "M1/1",
+        "AC27/382",
+        "AC27/414",
+        "G4/1",
+        "M5/436-437"
+      ],
+      "persons": [
+        "Sir John Houblon",
+        "Michael Godfrey",
+        "Sir James Houblon",
+        "Sir Henry Furnese"
+      ],
+      "original_handwritten_accounts_digitised_excerpts_available": true,
+      "all_original_ledger_pages_read": false,
+      "source": "https://www.bankofengland.co.uk/museum/online-collections/archive-gallery/founding-documents",
+      "not": "not all directors proven RAC shareholders; specific people need independently supported 1694 cross-holdings"
+    },
+    {
+      "id": "BANK_FUTURE_1780S",
+      "year": 1786,
+      "in_17c_scope": false,
+      "source": "https://www.bankofengland.co.uk/museum/online-collections/blog/a-story-of-archival-discovery",
+      "not": "Bank's direct ownership of Grenada plantations belongs to late 18th century and MUST NOT be backdated 1694"
+    },
+    {
+      "id": "IRL1649_DROGHEDA",
+      "year": 1649,
+      "kind": "battle_military_and_civilian_killings",
+      "cromwell_reported_enemy_garrison_about": 3000,
+      "cromwell_reported_escaped_under": 30,
+      "actual_civilian_fatalities": null,
+      "primary_actor_letter_date": "1649-09-16",
+      "source": "https://historyireland.com/the-letters-writings-and-speeches-of-oliver-cromwell/",
+      "not": "general's self-report about defenders not independently verified total fatalities or every victim"
+    },
+    {
+      "id": "IRL1649_WEXFORD",
+      "year": 1649,
+      "kind": "storming_and_killings",
+      "cromwell_letter_reported_drowned_or_killed_approx": 2000,
+      "verified_civilian_split": null,
+      "loot_reported_items": [
+        "iron",
+        "hides",
+        "staves",
+        "100 guns",
+        "three vessels"
+      ],
+      "source": "https://historyireland.com/the-letters-writings-and-speeches-of-oliver-cromwell/",
+      "not": "correspondence from victorious commander not audited civic death registry nor exact quantified loot cash revenue"
+    },
+    {
+      "id": "IRL1652_1653_LAND",
+      "years": [
+        1652,
+        1653
+      ],
+      "mechanism": "statutory_confiscation_and_debt_satisfaction",
+      "beneficiaries": [
+        "army soldiers unpaid wages",
+        "1642 Parliament adventurers pre-war finance",
+        "other recognized creditors"
+      ],
+      "sources": [
+        "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/maps-of-the-down-survey/967F28B9E821A3DFE947B152CD5B8E3A",
+        "https://www.cambridge.org/core/books/abs/conquest-and-land-in-ireland/towards-plantation-and-transportation-16521654/221642F0C095EDF36E7AAF8B1204A40D"
+      ],
+      "not": "statutory entitlement does not prove each claimant physically possessed mapped county parcel in 1653"
+    },
+    {
+      "id": "IRL1654_1658_SURVEY",
+      "years": [
+        1654,
+        1655,
+        1656,
+        1657,
+        1658
+      ],
+      "surveyor": "William Petty",
+      "source": "https://www.tcd.ie/history/research/centres/early-modern/down-survey.php",
+      "geometry_reuse_legal_caution": "Down Survey extant original barony/townland map may be georeferenced but estate-owner boundary parcels require specific original map, provenance rights, surveying distortion, and year. Do not draw modern county polygons as confiscation."
+    },
+    {
+      "id": "IRL1641_DEPOSITIONS",
+      "year": 1641,
+      "source": "https://dh.tcd.ie/past-projects/1641-depositions/",
+      "deposition_items_digitized_about": 8000,
+      "warning": "document collection of testimony, not verified death list or neutral casualty census; TCD secondary pages also mention outdated figure 3400"
+    }
+  ],
+  "uncertainty_rules": [
+    "1694 Royal African Company and Bank cross-shareholdings cannot be presumed from contemporaneity, ethnicity, surnames, or later directorship",
+    "£1200000 raised for war is public loan capital not direct slave voyage receipts",
+    "17c Ireland fatalities distinguish siege commander claims, populations, and modern contested demographic estimates",
+    "1642 land investment creates contingent claim; 1652 law creates legal forfeiture; 1653 formal satisfaction creates entitlement; 1654-1658 measurement and physical allocation separate",
+    "No territorial area/survey claim without maps georeferenced and rights provenance; reuse earlier atlas verified points",
+    "No 18th century events in timeline for this publication"
+  ]
+}

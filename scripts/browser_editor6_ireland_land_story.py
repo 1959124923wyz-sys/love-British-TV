@@ -19,7 +19,7 @@ def open_case(year,event_id):
     wait.until(lambda d:js("return [...document.querySelectorAll('#eventList [data-eid]')].some(x=>x.dataset.eid===arguments[0])",event_id))
     browser.find_element(By.CSS_SELECTOR,f'#eventList [data-eid="{event_id}"]').click()
     wait.until(lambda d:js("return !!document.querySelector('#dossierBody .major-story-enter')"))
-    browser.find_element(By.CSS_SELECTOR,'#dossierBody .major-story-enter').click()
+    browser.find_element(By.CSS_SELECTOR,'#dossierBody button[data-story-open="E6-T03-LAND-1642-1698"]').click()
     wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-section').length===11"))
     assert js("return document.querySelector('.major-story-article').textContent.length>4500")
     assert js("return !!document.querySelector('.story-sources')")

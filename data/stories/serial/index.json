@@ -31,20 +31,40 @@
       "lead_group": "A",
       "arc_family": "ARC-IRL-REL",
       "origin_year": 1641,
-      "historical_end_year": 1653,
+      "historical_end_year": null,
       "research_window": {
-        "start_year": 1600,
-        "end_year": 1699
+        "start_year": 1641,
+        "end_year": 1658
       },
-      "continuation_note": "战后土地处分另见E6-T03",
-      "status": "research_only",
-      "article_file": null,
-      "event_ids": [],
+      "continuation_note": "1658 research scope does not end 17C land claims; statutory Restorations 1662/1665 already in published E6-T03-LAND-1642-1698. Deeds and grants incomplete; 18C out of scope.",
+      "status": "published",
+      "article_file": "data/stories/serial/e6-t02-ireland-conquest-land-finance.json",
+      "event_ids": [
+        "1640S-E002",
+        "1640S-E003",
+        "1640S-E004",
+        "1640S-E029",
+        "1640S-E028",
+        "1640S-E016",
+        "1640S-E017",
+        "1650S-E002",
+        "1650S-E003",
+        "1650S-E005",
+        "1650S-E008",
+        "1650S-E013",
+        "1650S-E012",
+        "1650S-E016",
+        "1650S-E037",
+        "1650S-E031",
+        "1650S-E021"
+      ],
       "segments": [],
       "predecessor_ids": [],
       "successor_ids": [],
-      "source_register_path": "research/periods/1600-1699/editor6-integrated-pack/source_A/SOURCE_REGISTER.csv",
-      "source_register_state": "awaiting_full_archive_git_ingest"
+      "source_register_path": "docs/research/EDITOR16_E6T15_E6T02_WAR_FINANCE_IRELAND_20261026.md",
+      "source_register_state": "1641 source-critical testimony, 1649 Drogheda/Wexford commander claims and looting separate, 1652/53 legal seizure and compensation, 1654-58 William Petty Down Survey, no unverified polygon; archive manuscript not fully personally inspected; 2026-10-26 Editor16",
+      "publication_review": "approved",
+      "publication_note": "11 chapters, 13 sources, 17 linked atlas events; no newly fabricated site, sea route or territorial polygon. Audited linked historic events reused and original documentary caveats retained."
     },
     {
       "id": "E6-T03",
@@ -935,18 +955,31 @@
       "origin_year": 1660,
       "historical_end_year": null,
       "research_window": {
-        "start_year": 1600,
+        "start_year": 1660,
         "end_year": 1699
       },
-      "continuation_note": "1694借贷体制等制度长期延续",
-      "status": "research_only",
-      "article_file": null,
-      "event_ids": [],
+      "continuation_note": "1694 original Bank governance limited to 17C; no colonial slave trade funding numerator proven, 18C Grenada plantation holdings out of 17C period. Financial institution continues after 1699.",
+      "status": "published",
+      "article_file": "data/stories/serial/e6-t15-bank-war-colonial-capital.json",
+      "event_ids": [
+        "1660S-E003",
+        "1660S-E019",
+        "1660S-E037",
+        "1670S-E007",
+        "1680S-E120",
+        "1690S-E046",
+        "1690S-E018",
+        "1690S-E023",
+        "1690S-E039",
+        "1690S-E057"
+      ],
       "segments": [],
       "predecessor_ids": [],
       "successor_ids": [],
-      "source_register_path": "research/periods/1600-1699/editor6-integrated-pack/source_C/SOURCE_REGISTER.csv",
-      "source_register_state": "awaiting_full_archive_git_ingest"
+      "source_register_path": "docs/research/EDITOR16_E6T15_E6T02_WAR_FINANCE_IRELAND_20261026.md",
+      "source_register_state": "1694£1.2m government loan and 8% interest, 1694 140k fund with 100k+40k statutory components, 1520 indexed names/over1200 shareholders with dedup unresolved, 1697 bills capital; colonial director cross-shares require person-level proof; archive manuscript not fully personally inspected; 2026-10-26 Editor16",
+      "publication_review": "approved",
+      "publication_note": "10 chapters, 14 sources, 10 linked atlas events; no newly fabricated site, sea route or territorial polygon. Audited linked historic events reused and original documentary caveats retained."
     }
   ],
   "archive_issue": 180,
