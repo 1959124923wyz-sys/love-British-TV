@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const index=load('data/stories/serial/index.json');
 const topics=index.topics.filter(t=>t.status==='published');
-assert.equal(topics.length,18,'audit explicitly approved source-reviewed 17C stories; no unpublished mother families');
+assert.equal(topics.length,22,'audit all 22 explicitly approved audited 17C stories');
 const events=new Map();
 for(let decade=1600;decade<=1690;decade+=10){
  const atlas=load('data/atlas-'+decade+'-'+(decade+9)+'.json');
@@ -34,6 +34,10 @@ const rules={
  'E6-T14-NAV':24,
  'E6-T04-DARIEN':15,
  'E6-T11-VOYAGES':18,
+ 'E6-T01':7,
+ 'E6-T16-SURINAME':4,
+ 'E6-T16-PROVIDENCE':3,
+ 'E6-T17-AFRICAN-FORTS':6,
  'E6-T02':17,
  'E6-T15':10
 };
