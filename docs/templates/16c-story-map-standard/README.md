@@ -164,3 +164,21 @@
 - [都柏林三一学院Down Survey／Books of Survey and Distribution数字地图](https://www.downsurvey.ie/about/)的确可按1641／1670地主与历史村镇关联；但未实际复制检验具体**原图、地权人、日期与边界**前，不可把现代郡域画为1654没产土地、也不能把Smith在三郡的授权总额机械拆分为虚构地块。缺几何来源以既有1652/53没产及1654—1658勘测历史**参考点**与文中比例表呈现；有史料但边界未定的区域使用虚线淡色并标“参考范围”，严格不得称实测实控面积。
 
 永久审查文件：`data/research/e6t15-e6t02-person-network-and-1654-lottery-evidence-20261026.json`。验证工具：`node scripts/test_editor17_capital_people_land_lottery.js`、`node scripts/test_editor16_bank_ireland_finance.js`、`node scripts/test_serial_story_contract.js`及`python3 scripts/audit_spatial_semantics.py --strict`；桌面地图需核验1694/1649点入、全篇新段、双击及返回，旧16世纪地图与先刊土地专题不能回退。所有发生于1700年及以后的事件继续排除在本轮专题地图之外。
+
+## 十三、17世纪陆地殖民与海上堡垒易手：阿尔斯特、苏里南、普罗维登斯岛、海岸角及丹吉尔（2026-10-26）
+
+正式研究基于[Editor18的五地征服专题PR #258](https://github.com/1959124923wyz-sys/love-British-TV/pull/258)和[结构化出处账](../../../data/research/editor18-seventeenth-century-ulster-suriname-providence-african-forts-evidence-20261026.json)、[权威史学资料交接](../../../docs/research/EDITOR18_FIVE_OVERLOOKED_17C_CONQUESTS_20261026.md)。新做四篇逐年地图关联的重大专题，**只限17世纪，不能把英格兰王室、苏格兰王室及当地政治权力倒写成1707年后联合王国。** 强制采用权威大学出版、同行评审学术论文、国家档案馆与博物馆及考古报告；专业二手资料可发表，原始地契、舰队日志未直接阅览时标注验证深度，不要求为追求“原始档案”耽误整个历史调查。
+
+### 各地数值与土地范围的强制口径
+
+- **1609／1610阿尔斯特**：1609年六郡没收地调查计划与1610年五郡50余名English undertakers的学术研究具有**不同区域与人数分母**。1609年Bodley地图属真实王室土地调查文书，但未逐幅配准前不得用今天北爱尔兰的县界涂实“1610殖民面积”。1613年的德里城市考古具现代遗址参考坐标，不是1610年五郡授地统一签约地点，也不是整个爱尔兰地籍。
+- **1650—1668苏里南**：荷兰国家档案馆早期英属糖业殖民“约50处糖园”是**某段发展期概述，并非1650年当年种植园数**。地图年份务必保留 **1667年初荷兰首次夺取苏里南，1667年10月英军短暂反夺，1668年荷方重掌主要殖民控制权** 的三条相异占领转换记录；剑桥《Journal of British Studies》脚注61直接回溯同期荷兰文书。还存在个别堡垒英军在1668年春的留守时间争议，不能把1668年4月等同所有驻军撤出确切日。三件事均使用可核现代Fort Willoughby/Zeelandia参考堡址点，不能把现代苏里南国界描作英属殖民地实控多边形，亦不能据一次欧洲和约抹掉原住民土地自主和遭奴役者继续遭强迫劳动。
+- **1630—1641哥伦比亚Providencia**：Kupperman剑桥大学出版社的Providence Island Company史研究给出最初**£3,800资本承诺，约20名股东**；该数字是承诺总额，不是现金收齐或已实现净利润。1633年向荷兰贩奴商购买被奴役非洲人的董事指令≠确切实际购入人数。1634年Warwick报告遭奴役者Sander家庭被拆散的信件对象是**百慕大**，只能作同一出资者殖民奴役做法的比较资料，不得重写成Providencia岛事件。1641年西班牙夺取殖民地后英方军事控制终止；不要与美国罗德岛Providence混淆。
+- **1664／1665年加纳海岸角Cape Coast**：加纳地区官方与专业考古研究对英军夺取年份存在1664和1665不同记载；档案第1阶段把年度定位在1665，标题和信源明确**“1664—1665年份待进一步核对”**，不得伪造“1655年7月某日攻陷”等精确日期。当地Fetu统治者以及瑞典、丹麦、荷兰、英国驻堡者的权利不同；1663 Royal Adventurers不等于1672重组后的Royal African Company。真实堡垒坐标不等于整个加纳黄金海岸的英属领土。
+- **1661—1684年摩洛哥丹吉尔**：1661年葡萄牙婚约转让港口，英军1662年实际驻城；1680年摩洛哥军队围城，英王1684年弃守且摩洛哥恢复控制。英方地中海商贸与港堤筑防的国家财政投入**不自动等于获利**；不能把王室葡萄牙的对外特许写成整个摩洛哥军政实体主动接受英方统治，1684年以后不再延长英方驻港占领的地图时段。
+
+### 通用技术与故事验收机制
+
+殖民公司的特许、实际驻军控制、君主对外外交声索、当地原住民地权、英法荷西军事易手及奴役贸易人员是不同史实层。新地理事件必须满足`representative_map_point=true`、`geo_precision`以`representative_`开头、`geolocation_limit_zh`明确写`非事件精确现场`及`不表示`历史控制范围、`historical_control_boundary_verified=false`、`actual_English_land_area_sqkm=null`、`exclude_point_buffer_from_area_statistics=true`。历史时期界线来源缺失时仅用具名现代参考点，不画未经考古或史图测绘的多边形；真实有史料但争议的地界才可按准则制作**虚线＋显式不确定**的区域，且不能把这样的区域计入英王主权面积。
+
+新增专题里的`[[ID|自然语言]]`点击必须调用有据已登记的17世纪年度事件，让年份滑块和镜头切换；全文来源与返航地图操作必须按既有桌面Chromium互相验证，避免用一条没有人名、船名和真实航次账的猜测连线绘出海上资本流。审查运行`node scripts/test_editor18_overlooked_17c_conquests.js`、`node scripts/test_serial_story_contract.js`、`node scripts/test_17c_tudor_parity_20261023.js`、`python3 scripts/audit_spatial_semantics.py --strict`及`python3 scripts/browser_editor18_overlooked_conquests.py`，并观察旧专题全站检查成功后才合并。年度Atlas新增事件允许经来源审核后使原基线计数增长，旧有地图锚点与文章不得回退。
