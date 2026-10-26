@@ -1,0 +1,213 @@
+{
+  "schema": "editor18-five-seventeenth-century-conquests-evidence-v1",
+  "date": "2026-10-26",
+  "project": "love-British-TV",
+  "temporal_scope": [
+    1600,
+    1699
+  ],
+  "rules": [
+    "All positions sourced to documented modern places or exact heritage structure GPS; zero historic border inferred from site coords",
+    "No modern Suriname, Ghana, Morocco or island city borders converted to British control polygons",
+    "Distinguish charters, actual site occupation, revenue, successful military transfer and indigenous political sovereignty",
+    "Exact number means its source's denominator and not annual victims/plantations when given as phase summary",
+    "Conflicting capture dates 1664 vs 1665 shown as uncertainty; English Tangier ended 1684; Old Providence ended 1641; English Suriname ended 1667."
+  ],
+  "cases": [
+    {
+      "id": "ULS1607_FLIGHT",
+      "year": 1607,
+      "event_id": "1600S-E003",
+      "kind": "noble_flight_forfeiture_context",
+      "source": "https://academic.oup.com/book/9765/chapter-abstract/156955500",
+      "no_verified_land_area_sqkm": null
+    },
+    {
+      "id": "ULS1609_BODLEY",
+      "year": 1609,
+      "event_id": "1600S-E017",
+      "kind": "historical_survey_territory_classification",
+      "museum_original_object": "https://collectionsonline.fermanaghomagh.com/object-fcm-1979-066",
+      "tna_exhibition": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/early-modern/early-modern-maps/",
+      "original_survey_map_georeferenced": false,
+      "original_map_requires_georeference_and_estate_legality_check": true,
+      "history": "Bodley maps were prepared as Crown confiscation-land allocations, but estate lines are not modern exact survey."
+    },
+    {
+      "id": "ULS1610_ENGLISH_UNDERTAKERS",
+      "year": 1610,
+      "event_id": "1610S-E093",
+      "kind": "Royal_mapped_estate_grants",
+      "english_undertakers_count_lower_bound": 50,
+      "english_undertakers_count_text": "just over fifty",
+      "county_count_studied": 5,
+      "county_names": [
+        "Armagh",
+        "Cavan",
+        "Donegal",
+        "Fermanagh",
+        "Tyrone"
+      ],
+      "study_source": "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/selection-of-the-english-undertakers-in-the-ulster-plantation-160910/DCB0FE0EE57B05FE51AE1D023FE6C836",
+      "other_applicants_count_lower_bound": 100,
+      "acres_study_text": "hundreds of thousands",
+      "exact_grant_area_acres": null,
+      "actual_leasehold_transfers_confirmed": null,
+      "english_settler_households_displaced_total": null,
+      "do_not_generalise_to_all_six_counties": true
+    },
+    {
+      "id": "ULS1613_DERRY",
+      "year": 1613,
+      "event_id": "1610S-E094",
+      "kind": "documented_plantation_defences",
+      "walls_begun_around_year": 1614,
+      "walls_finished_around_year": 1619,
+      "source": "https://excavations.ie/report/1999/Derry/0004013/",
+      "lat": 54.996234,
+      "lng": -7.319053,
+      "geo_role": "modern archaeological fortifications locality not 17c line"
+    },
+    {
+      "id": "SUR1650_PLANTATION",
+      "year": 1650,
+      "event_id": "1650S-E121",
+      "kind": "settlement_beginning_approximate",
+      "start_range_years": [
+        1650,
+        1651
+      ],
+      "source_national_archive": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/plantagekaart-suriname-1737",
+      "source_academic": "https://www.tandfonline.com/doi/full/10.1080/14788810.2024.2393037",
+      "sugar_plantations_english_period_approx": 50,
+      "period_sugar_plantation_count_exact_year_unknown": true,
+      "slaved_labor_numbers_verified": null,
+      "modern_reference_location": "Fort Willoughby/Zeelandia",
+      "modern_lat": 5.825194,
+      "modern_lng": -55.14975,
+      "all_surinaam_sov_polygon_verified": false
+    },
+    {
+      "id": "SUR1667_DUTCH_CAPTURE",
+      "year": 1667,
+      "event_id": "1660S-E125",
+      "kind": "English_fort_garrison_lost_to_Dutch",
+      "source": "https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/societeit-van-suriname-1683-1795",
+      "treaty": "Breda 1667",
+      "English_occupation_after_1667_assumed": false,
+      "indigenous_land_auto_transferred": false
+    },
+    {
+      "id": "PRO1630_COLONY",
+      "year": 1630,
+      "event_id": "1630S-E023",
+      "kind": "English_Puritan_stock_colony",
+      "company_formation_year": 1630,
+      "initial_capital_pledged_gbp": 3800,
+      "adventurers_described": 20,
+      "one_adventure_initial_gbp": 200,
+      "one_adventure_by_june_1632_gbp": 520,
+      "one_adventure_by_may_1633_gbp": 1025,
+      "payments_actually_received_unknown": true,
+      "actual_net_profit_gbp": null,
+      "source": "https://www.cambridge.org/core/books/abs/providence-island-16301641/business-history-of-the-providence-island-company/A3F07B32FA8AE78B156BE1A407536543",
+      "not_providence_rhode_island": true
+    },
+    {
+      "id": "PRO1633_PURCHASE_ORDER",
+      "year": 1633,
+      "event_id": "1630S-E024",
+      "kind": "purchase_enslaved_Africans_authorization",
+      "source": "https://www.cambridge.org/core/books/providence-island-16301641/2D80A7915966CD48D2401A45EB2C0EDD/listing",
+      "additional_academic_article": "https://dhjhkxawhe8q4.cloudfront.net/cornell-university-press-wp/wp-content/uploads/2019/04/16195818/NYH_106_1_FF.pdf",
+      "number_actual_purchased_verified": null,
+      "number_arrived_verified": null
+    },
+    {
+      "id": "PRO1641_SPANISH",
+      "year": 1641,
+      "event_id": "1640S-E094",
+      "kind": "English_fort_defeat",
+      "source": "https://dornsife.usc.edu/arclab/archaeology-projects/in-the-field/providence-island-colombia/",
+      "slave_survivors_verified": null,
+      "not_english_control_1642": true
+    },
+    {
+      "id": "CAPE1653_SWEDISH",
+      "year": 1653,
+      "kind": "first_Carolusborg_fort",
+      "source": "https://crcc.gov.gh/cape-coast-castle/"
+    },
+    {
+      "id": "CAPE1664_1665_CAPTURE",
+      "reference_year": 1665,
+      "year_dispute": [
+        1664,
+        1665
+      ],
+      "event_id": "1660S-E124",
+      "kind": "local_English_capture_of_Carolusborg",
+      "academic_source": "https://history.ucla.edu/wp-content/uploads/2023/09/Apter_Dungeon_ahr_1.pdf",
+      "academic_original_p40_screenshot_confirmed": true,
+      "source_african_heritage": "https://slaveryandremembrance.org/articles/article/?id=A0103",
+      "modern_fort_gps": {
+        "lat": 5.103917,
+        "lng": -1.241083
+      },
+      "capture_month_exact_verified": null,
+      "all_Fetu_or_Ghana_control_area_sqkm": null,
+      "company_in_1665": "Royal Adventurers; distinguish 1672 reorganized RAC",
+      "actual_slave_export_volume_1665": null
+    },
+    {
+      "id": "TANG1661_DOWRY",
+      "year": 1661,
+      "kind": "Portuguese_marriage_treaty_transfer",
+      "source": "https://www.nam.ac.uk/explore/kings-own-royal-regiment-lancaster",
+      "local_Moroccan_approval_documented": false
+    },
+    {
+      "id": "TANG1662_GARRISON",
+      "year": 1662,
+      "event_id": "1660S-E123",
+      "kind": "English_Crown_royal_port_garrison",
+      "source": "https://www.repository.cam.ac.uk/items/66c8425c-42b4-4d08-aa07-ccb7499c5150",
+      "site_type": "city_and_port_not_all_Morocco",
+      "modern_city_coords": {
+        "lat": 35.7806,
+        "lng": -5.8136
+      },
+      "historical_walls_verified_shapefile": null
+    },
+    {
+      "id": "TANG1680_SIEGE",
+      "year": 1680,
+      "event_id": "1680S-E124",
+      "kind": "Moroccan_siege_against_English_garrison",
+      "source": "https://www.nam.ac.uk/explore/kings-own-royal-regiment-lancaster",
+      "battle_line_verified": null,
+      "known_death_count": null
+    },
+    {
+      "id": "TANG1684_WITHDRAWAL",
+      "year": 1684,
+      "event_id": "1680S-E125",
+      "kind": "English_withdrawal_and_Moroccan_restoration",
+      "source": "https://www.folger.edu/blogs/collation/north-africa-england/",
+      "source_military": "https://www.nam.ac.uk/explore/kings-own-royal-regiment-lancaster",
+      "port_fortifications_damage_described": true,
+      "exact_port_damage_polygon": null,
+      "English_colonial_control_after_1684": false
+    }
+  ],
+  "deliberate_non_derived_fields": [
+    "estimated_dead_in_people",
+    "hypothetical_population_slavery_totals",
+    "history_cadastral_acreages",
+    "unobserved_sea_routes",
+    "net_profits_from_forts",
+    "modern_sovereignty_area"
+  ],
+  "source_access_note": "Scholarly books partly read via publisher abstracts/excerpts, web institutional records directly, 2017 American Historical Review Cape Coast history p40 PDF visually viewed via web screenshot. No claim to have transcribed original 1609 Ulster deeds or private African Company ledgers.",
+  "handoff": "docs/research/EDITOR18_FIVE_OVERLOOKED_17C_CONQUESTS_20261026.md"
+}
