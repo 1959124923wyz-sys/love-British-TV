@@ -1,0 +1,158 @@
+{
+  "schema": "e6t15-e6t02-editor17-documented-relationship-graph-v1",
+  "date": "2026-10-26",
+  "scope": "1641-1699 17th-century only",
+  "finance": {
+    "people": [
+      {
+        "id": "john-houblon",
+        "name": "Sir John Houblon",
+        "roles": [
+          {
+            "type": "West Indies merchant partner of Samuel Hankey",
+            "from_year": 1674,
+            "trade_areas": [
+              "Jamaica",
+              "Antigua",
+              "Leeward Islands"
+            ],
+            "evidence": "https://www.natwestgroup.com/heritage/companies/hankey-and-co.html"
+          },
+          {
+            "type": "first governor, Bank of England",
+            "year": 1694,
+            "evidence": "https://www.bankofengland.co.uk/archive/directors-annual-lists-1694-1950"
+          }
+        ],
+        "verified_1694_bank_share_amount_gbp": null,
+        "verified_particular_slave_voyage": null,
+        "verified_flow_of_slavery_profits_to_bank_shares": null,
+        "interpretation": "NatWest heritage explicitly describes partnership's West Indies trade as dependent on enslaved Africans and states both partners profited; it does not provide a named slave-voyage investment or bank remittance."
+      },
+      {
+        "id": "samuel-hankey",
+        "name": "Samuel Hankey",
+        "roles": [
+          {
+            "type": "West Indies merchant partner with John Houblon",
+            "year": 1674
+          },
+          {
+            "type": "goldsmith banking business",
+            "year": 1685
+          }
+        ],
+        "evidence": "https://www.natwestgroup.com/heritage/companies/hankey-and-co.html",
+        "bank_of_england_1694_director_confirmed": false,
+        "verified_bank_subscription_amount_gbp": null
+      },
+      {
+        "id": "william-iii-mary-ii",
+        "name": "William III and Mary II",
+        "bank_subscription_year": 1694,
+        "bank_subscription_joint_gbp": 10000,
+        "bank_source": "https://www.bankofengland.co.uk/museum/online-collections/archive-gallery/founding-documents",
+        "royal_african_company_shareholding_reported": true,
+        "rac_report_source": "https://www.theguardian.com/uk-news/ng-interactive/2026/sep/16/slave-trade-wealth-britain-financial-system-bank-of-england-enslaved-africans",
+        "rac_share_amount_gbp": null,
+        "rac_exact_shareholding_year": null,
+        "royal_african_company_to_bank_capital_trace": null,
+        "warning": "£10000 is joint Bank stock entry, not £10000 per sovereign or documented RAC dividend contribution."
+      }
+    ],
+    "study_2026": {
+      "historian": "Michael Bennett",
+      "project": "Register of British Slave Traders",
+      "source": "https://www.theguardian.com/uk-news/ng-interactive/2026/sep/16/slave-trade-wealth-britain-financial-system-bank-of-england-enslaved-africans",
+      "total_bank_directors_ever_identified_slave_trade_investors": 24,
+      "bank_founding_directors_1694_subset": 4,
+      "founding_subscribers_1694_involved_min": 30,
+      "bank_governors_across_period_subset": 9,
+      "unnamed_founding_director_names_not_verified": true,
+      "individual_director_ids": [],
+      "bank_sharecapital_in_slave_profit_pounds": null,
+      "source_level": "scholarly register investigator quoted in original Guardian reporting; BritishSlaveTraders website homepage inaccessible to research browser; not a firsthand full database reanalysis",
+      "period_warning": "24 directors and 9 governors span later centuries, 4 only founding; do not assign all individuals 1694."
+    },
+    "verified_edges": [
+      {
+        "from": "john-houblon",
+        "to": "samuel-hankey",
+        "kind": "merchant_partnership",
+        "year": 1674,
+        "source": "https://www.natwestgroup.com/heritage/companies/hankey-and-co.html"
+      },
+      {
+        "from": "john-houblon",
+        "to": "bank-of-england",
+        "kind": "first_governor",
+        "year": 1694,
+        "source": "https://www.bankofengland.co.uk/archive/directors-annual-lists-1694-1950"
+      },
+      {
+        "from": "william-iii-mary-ii",
+        "to": "bank-of-england",
+        "kind": "joint_stock_subscription",
+        "year": 1694,
+        "amount_gbp": 10000,
+        "source": "https://www.bankofengland.co.uk/museum/online-collections/archive-gallery/founding-documents"
+      }
+    ]
+  },
+  "ireland": {
+    "erasmus_smith": {
+      "person_name": "Erasmus Smith",
+      "initial_assigned_rights_year": 1643,
+      "initial_rights_gbp": 300,
+      "nominal_investment_after_discounted_acquisitions_gbp": 2995,
+      "land_lots_year": 1653,
+      "land_awarded_irish_acres": 10404,
+      "awarded_counties": [
+        "Armagh",
+        "Down",
+        "Tipperary"
+      ],
+      "later_holdings_approx_acres": 45000,
+      "later_holdings_year": null,
+      "trust_formation_year": 1657,
+      "source": "https://www.dib.ie/index.php/biography/smith-erasmus-a8139",
+      "corroboration": "https://erasmussmithschools.ie/history/",
+      "historical_units": "Irish acres (1653 allotment), not English acres; later 45000 figure broader holdings and must not be added to original 10404.",
+      "cash_profit_verified": null,
+      "parcel_geometry_verified": null
+    },
+    "barony_lottery_study": {
+      "source": "https://www.cambridge.org/core/journals/international-organization/article/to-hell-or-to-connacht-expropriation-inequality-and-local-legacies-of-settler-colonialism/805564D91100463C60FFA47F603F93DC",
+      "year_of_publication": 2026,
+      "date_of_lottery": "1654-01-24",
+      "split_counties": 10,
+      "analysis_baronies": 90,
+      "analysis_parishes": 794,
+      "excluded_ineligible_parishes": 49,
+      "approx_fraction_of_ireland_land_in_lottery": 0.25,
+      "authors_roster_adventurers": 1500,
+      "authors_roster_army_officers": 2200,
+      "protestant_land_ownership_1670_sample_adventurers_percent": 79,
+      "protestant_land_ownership_1670_sample_army_percent": 84,
+      "army_minus_adventurers_percentage_points": 5,
+      "under_quarter_orig_claimants_personally_took_up_land_by_1670": true,
+      "catholic_national_land_ownership_pre_percent_historiography": 50,
+      "catholic_national_land_ownership_post_percent_historiography": 20,
+      "geo_precision": "analysis sample is not all Ireland; historical barony lottery GIS polygons NOT reconstructed",
+      "statistical_warning": "79/84 are 1670 ownership rates in sample. Five-point difference is not nationwide percentage of acreage newly stolen. Changes by 1703 or 19th century from original article NOT 17th century events."
+    },
+    "map_event_links": [
+      "1640S-E029",
+      "1650S-E016",
+      "1650S-E031",
+      "1650S-E021"
+    ]
+  },
+  "prohibitions": [
+    "No 18th-century events in 17th-century map",
+    "Never make up names of four 1694 founders from unknown 2026 study",
+    "Do not assert all £1.2m founding bank loan from slave trade",
+    "Do not assume 1653 10404 Irish acres physically surveyed or profitable same year",
+    "Do not extrapolate ten-county experiment to all Irish parishes or create geometry by modern county borders"
+  ]
+}
