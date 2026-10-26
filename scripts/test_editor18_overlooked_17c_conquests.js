@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.
 const idx=read('data/stories/serial/index.json');
 const stories=[
 ['E6-T01','data/stories/serial/e6-t01-ulster-plantation-1603-1641.json',10,7,7],
-['E6-T16-SURINAME','data/stories/serial/e6-t16-suriname-1650-1667.json',10,7,4],
+['E6-T16-SURINAME','data/stories/serial/e6-t16-suriname-1650-1667.json',11,8,6],
 ['E6-T16-PROVIDENCE','data/stories/serial/e6-t16-providence-island-1630-1641.json',10,9,3],
 ['E6-T17-AFRICAN-FORTS','data/stories/serial/e6-t17-cape-coast-tangier-1653-1684.json',12,13,6]
 ];
@@ -27,12 +27,12 @@ totalchapters+=nchap;sources+=nsrc;
 }
 const expected=[
 ['1610S-E093',1610],['1610S-E094',1613],['1630S-E023',1630],['1630S-E024',1633],['1640S-E094',1641],
-['1650S-E121',1650],['1660S-E123',1662],['1660S-E124',1665],['1660S-E125',1667],['1680S-E124',1680],['1680S-E125',1684]
+['1650S-E121',1650],['1660S-E126',1667],['1660S-E127',1668],['1660S-E123',1662],['1660S-E124',1665],['1660S-E125',1667],['1680S-E124',1680],['1680S-E125',1684]
 ];
 for(const [id,year] of expected){const e=events.get(id);assert(e&&e.year===year,'expected new source-audited event '+id);assert(Number.isFinite(e.lat)&&Number.isFinite(e.lng));assert(e.source_ids.length>=1);assert(/参考|现代地名/.test(e.geolocation_limit_zh));assert.strictEqual(e.historical_control_boundary_verified,false);assert.equal(e.actual_English_land_area_sqkm,null);assert.strictEqual(e.exclude_point_buffer_from_area_statistics,true);}
 const cape=events.get('1660S-E124');assert(cape.certainty.includes('disagreement')||cape.certainty.includes('source_'));assert(cape.name.includes('1664')&&cape.name.includes('1665'));
 const tangier=events.get('1680S-E125');assert(tangier.name.includes('撤离'));assert.equal(tangier.year,1684);
-const sur=read('data/stories/serial/e6-t16-suriname-1650-1667.json');assert.equal(sur.end_year,1667);assert(sur.reading_note.includes('约50'));
+const sur=read('data/stories/serial/e6-t16-suriname-1650-1667.json');assert.equal(sur.end_year,1668);assert(sur.reading_note.includes('约50'));assert(sur.reading_note.includes('1668'));
 const prov=read('data/stories/serial/e6-t16-providence-island-1630-1641.json');assert.equal(prov.end_year,1641);assert(prov.reading_note.includes('百慕大'));
 const ul=read('data/stories/serial/e6-t01-ulster-plantation-1603-1641.json');assert(ul.reading_note.includes('五郡'));assert.equal(ul.end_year,1641);
 const bas=read('data/research/editor18-seventeenth-century-ulster-suriname-providence-african-forts-evidence-20261026.json');
