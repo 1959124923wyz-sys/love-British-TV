@@ -54,5 +54,5 @@ assert(bank.related_event_ids.includes('1690S-E023') && ireland.related_event_id
 assert(ireland.related_event_ids.includes('1640S-E017')&&ireland.related_event_ids.includes('1650S-E021'));
 assert(ireland.related_story_ids.includes('E6-T03-LAND-1642-1698'),'cannot discard or duplicate existing land rights story');
 assert(registry.topics.find(t=>t.id==='E6-T03-LAND-1642-1698')?.status==='published');
-assert.equal(registry.topics.filter(t=>t.status==='published').length,22);
+assert.equal(registry.topics.filter(t=>t.status==='published').length,23);
 console.log('PASS editor16: 2 public historical capital stories, 28 chapters, 34 sources, 27 existing audited Atlas links; original £1.2m/8%, £140k split, unverified death/colonial investor accounting remain explicit.');
