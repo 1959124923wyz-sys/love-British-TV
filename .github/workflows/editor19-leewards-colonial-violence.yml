@@ -1,0 +1,47 @@
+name: Editor19 East Caribbean Kalinago colonial land violence and slavery raids QA
+on:
+  pull_request:
+    paths:
+      - 'data/atlas-1620-1629.json'
+      - 'data/atlas-1630-1639.json'
+      - 'data/atlas-1660-1669.json'
+      - 'data/atlas-1670-1679.json'
+      - 'data/stories/serial/**'
+      - 'data/research/editor19-leewards*'
+      - 'scripts/test_editor19_leewards_kalinago.js'
+      - 'scripts/browser_editor19_leewards.py'
+      - '.github/workflows/editor19-leewards-colonial-violence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/atlas-1620-1629.json'
+      - 'data/atlas-1630-1639.json'
+      - 'data/atlas-1660-1669.json'
+      - 'data/atlas-1670-1679.json'
+      - 'scripts/test_editor19_leewards_kalinago.js'
+      - 'scripts/browser_editor19_leewards.py'
+jobs:
+  source-cartography-story:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Editor19 evidence integrity with 17C older-story regression
+        run: |
+          node --check scripts/test_editor19_leewards_kalinago.js
+          node scripts/test_editor19_leewards_kalinago.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_editor18_overlooked_17c_conquests.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install desktop browser tools
+        run: pip install selenium
+      - name: Verify 1626 / 1632 / 1671 year-slider entry and article return
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor19_leewards.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor19-leewards-desktop-screenshots
+          path: browser-smoke-results/editor19-leewards-*.png
