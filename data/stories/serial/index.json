@@ -6,24 +6,34 @@
   "topics": [
     {
       "id": "E6-T01",
-      "title": "阿尔斯特土地征收、测绘与殖民庄园",
+      "title": "1603—1641年阿尔斯特殖民：王室没产、地籍调查、庄园授予与爱尔兰住民",
       "lead_group": "A",
       "arc_family": "ARC-IRL-COL",
       "origin_year": 1603,
       "historical_end_year": null,
       "research_window": {
-        "start_year": 1600,
-        "end_year": 1699
+        "start_year": 1603,
+        "end_year": 1641
       },
-      "continuation_note": "研究止于1641但后续地权延续",
-      "status": "research_only",
-      "article_file": null,
-      "event_ids": [],
+      "continuation_note": "Evidence publication ends 1641; 18th-century events not admitted in this round. Historic 17c site, islands and rent grants lack surveyed jurisdictional polygons; date conflicts disclosed.",
+      "status": "published",
+      "article_file": "data/stories/serial/e6-t01-ulster-plantation-1603-1641.json",
+      "event_ids": [
+        "1600S-E003",
+        "1600S-E010",
+        "1600S-E017",
+        "1610S-E093",
+        "1610S-E094",
+        "1610S-E022",
+        "1640S-E003"
+      ],
       "segments": [],
       "predecessor_ids": [],
       "successor_ids": [],
-      "source_register_path": "research/periods/1600-1699/editor6-integrated-pack/source_A/SOURCE_REGISTER.csv",
-      "source_register_state": "awaiting_full_archive_git_ingest"
+      "source_register_path": "docs/research/EDITOR18_FIVE_OVERLOOKED_17C_CONQUESTS_20261026.md",
+      "source_register_state": "2026-10-26 Editor18 reviewed authoritative institutional archives, museum/archaeology material, academic Cambridge/Oxford historical monographs and peer-reviewed source summaries; source access depth explicitly recorded; original cadastral and business ledgers not fully digitized.",
+      "publication_review": "approved",
+      "publication_note": "10 chapters, 8 unique chapter source links, 7 source-attested interactive history events, no fabricated land control polygon or transoceanic GIS route."
     },
     {
       "id": "E6-T02",
@@ -980,6 +990,93 @@
       "source_register_state": "Editor17 2026-10-26: NatWest Group original banking partner-history John Houblon & Samuel Hankey in West Indies 1674; 2026 Michael Bennett Register of British Slave Traders reporting 4 of 1694 founders and >=30 1694 subscribers; four founder identities not independently verified, no slave profits traced to specific Bank remittances. 13 chapters/17 institutional-scholarly references.",
       "publication_review": "approved",
       "publication_note": "13 chapters, 17 source links. Original approved Atlas reference events unchanged; 2026 scholarly at-least-30 subscriber and 4 founder overlap is research-supported aggregate, not individually identified or quantified sources of founding money."
+    },
+    {
+      "id": "E6-T16-SURINAME",
+      "lead_group": "B",
+      "arc_family": "ARC-SURINAME",
+      "origin_year": 1650,
+      "historical_end_year": 1668,
+      "segments": [],
+      "predecessor_ids": [],
+      "successor_ids": [],
+      "title": "1650—1668年英属苏里南：糖业奴役、英荷反复夺取与荷兰再占据",
+      "status": "published",
+      "publication_review": "approved",
+      "article_file": "data/stories/serial/e6-t16-suriname-1650-1667.json",
+      "event_ids": [
+        "1650S-E121",
+        "1660S-E003",
+        "1660S-E125",
+        "1660S-E034",
+        "1660S-E126",
+        "1660S-E127"
+      ],
+      "research_window": {
+        "start_year": 1650,
+        "end_year": 1668
+      },
+      "continuation_note": "Evidence publication ends 1667; 18th-century events not admitted in this round. Historic 17c site, islands and rent grants lack surveyed jurisdictional polygons; date conflicts disclosed.",
+      "source_register_path": "docs/research/EDITOR18_FIVE_OVERLOOKED_17C_CONQUESTS_20261026.md",
+      "source_register_state": "2026-10-26 Editor18 reviewed authoritative institutional archives, museum/archaeology material, academic Cambridge/Oxford historical monographs and peer-reviewed source summaries; source access depth explicitly recorded; original cadastral and business ledgers not fully digitized. Cambridge JBS article note 61 documents Oct 1667 English recapture and Dutch recover by Apr 1668; last English fort withdrawal must not be given an unsupported exact day.",
+      "publication_note": "11章、8项权威文献及6个事件链接；1650移民、1667荷军首次夺据点／十月英军短暂反夺、1668荷方再控殖民地；实际守军最后交接日期与原住民/种植园历史地界不可测。"
+    },
+    {
+      "id": "E6-T16-PROVIDENCE",
+      "lead_group": "B",
+      "arc_family": "ARC-ATL-SLAVERY",
+      "origin_year": 1630,
+      "historical_end_year": 1641,
+      "segments": [],
+      "predecessor_ids": [],
+      "successor_ids": [],
+      "title": "1630—1641年普罗维登斯岛：清教徒投资、奴役劳动和西班牙征服",
+      "status": "published",
+      "publication_review": "approved",
+      "article_file": "data/stories/serial/e6-t16-providence-island-1630-1641.json",
+      "event_ids": [
+        "1630S-E023",
+        "1630S-E024",
+        "1640S-E094"
+      ],
+      "research_window": {
+        "start_year": 1630,
+        "end_year": 1641
+      },
+      "continuation_note": "Evidence publication ends 1641; 18th-century events not admitted in this round. Historic 17c site, islands and rent grants lack surveyed jurisdictional polygons; date conflicts disclosed.",
+      "source_register_path": "docs/research/EDITOR18_FIVE_OVERLOOKED_17C_CONQUESTS_20261026.md",
+      "source_register_state": "2026-10-26 Editor18 reviewed authoritative institutional archives, museum/archaeology material, academic Cambridge/Oxford historical monographs and peer-reviewed source summaries; source access depth explicitly recorded; original cadastral and business ledgers not fully digitized.",
+      "publication_note": "10 chapters, 9 unique chapter source links, 3 source-attested interactive history events, no fabricated land control polygon or transoceanic GIS route."
+    },
+    {
+      "id": "E6-T17-AFRICAN-FORTS",
+      "lead_group": "B",
+      "arc_family": "ARC-WEST-AFRICA",
+      "origin_year": 1653,
+      "historical_end_year": 1684,
+      "segments": [],
+      "predecessor_ids": [],
+      "successor_ids": [],
+      "title": "1653—1684年非洲沿海殖民据点：海岸角争夺与丹吉尔被迫撤离",
+      "status": "published",
+      "publication_review": "approved",
+      "article_file": "data/stories/serial/e6-t17-cape-coast-tangier-1653-1684.json",
+      "event_ids": [
+        "1660S-E123",
+        "1660S-E124",
+        "1680S-E124",
+        "1680S-E125",
+        "1660S-E047",
+        "1670S-E007"
+      ],
+      "research_window": {
+        "start_year": 1653,
+        "end_year": 1684
+      },
+      "continuation_note": "Evidence publication ends 1684; 18th-century events not admitted in this round. Historic 17c site, islands and rent grants lack surveyed jurisdictional polygons; date conflicts disclosed.",
+      "source_register_path": "docs/research/EDITOR18_FIVE_OVERLOOKED_17C_CONQUESTS_20261026.md",
+      "source_register_state": "2026-10-26 Editor18 reviewed authoritative institutional archives, museum/archaeology material, academic Cambridge/Oxford historical monographs and peer-reviewed source summaries; source access depth explicitly recorded; original cadastral and business ledgers not fully digitized.",
+      "publication_note": "12 chapters, 12 unique chapter source links, 6 source-attested interactive history events, no fabricated land control polygon or transoceanic GIS route."
     }
   ],
   "archive_issue": 180,

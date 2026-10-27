@@ -1,0 +1,46 @@
+name: Editor18 17C overlooked English conquests and source-audited cartography
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e6-t01-ulster-plantation-1603-1641.json'
+      - 'data/stories/serial/e6-t16-**'
+      - 'data/stories/serial/e6-t17-**'
+      - 'data/stories/serial/index.json'
+      - 'data/atlas-1610-1619.json'
+      - 'data/atlas-1630-1639.json'
+      - 'data/atlas-1640-1649.json'
+      - 'data/atlas-1650-1659.json'
+      - 'data/atlas-1660-1669.json'
+      - 'data/atlas-1680-1689.json'
+      - 'data/research/editor18-*'
+      - 'scripts/test_editor18_overlooked_17c_conquests.js'
+      - '.github/workflows/editor18-overlooked-17c-colonial-events.yml'
+  push:
+    branches:
+      - 'research/editor18-*'
+permissions:
+  contents: read
+jobs:
+  source-and-geography-history-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source, chronology, land-boundary checks
+        run: |
+          node scripts/test_editor18_overlooked_17c_conquests.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install Selenium desktop
+        run: python3 -m pip install selenium
+      - name: Confirm historical year slider, real event clicks and dossier return
+        run: |
+          python3 -m http.server 8765 &
+          python3 scripts/browser_editor18_overlooked_conquests.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor18-four-conquests-desktop
+          path: browser-smoke-results/editor18-*.png
+          retention-days: 15

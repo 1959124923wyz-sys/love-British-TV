@@ -457,6 +457,54 @@
       "map_priority": true
     },
     {
+      "id": "1650S-E121",
+      "research_event_id": "EDITOR18-1650S-E121",
+      "arc_id": "ARC-SURINAME",
+      "year": 1650,
+      "start_year": 1650,
+      "end_year": 1650,
+      "visible_from": 1650,
+      "date_label": "1650",
+      "name": "约1650年英格兰殖民者沿苏里南河建立糖业殖民地",
+      "historical_actor": "英格兰殖民者、荷兰泽兰军事力量、苏里南本地居民与被奴役人口",
+      "historical_place": "Fort Willoughby（今苏里南Paramaribo的Zeelandia堡）",
+      "description": "荷兰国家档案馆说明1650年前后英格兰人开始在苏里南河地区移入并建立种植园，使用从非洲被强制贩入的奴役人口劳动；荷兰档案关于约50座糖园的概括是这段早期殖民期的发展情况，绝不是1650年当年庄园确切数量。2024年学术论文将来自巴巴多斯的移民初始年份列为1650—1651。堡址现代坐标属于河口地区历史Fort Willoughby据点参考，不能代表所有甘蔗园、内陆原住民社会或现苏里南共和国全境被英国统治。",
+      "short_description": "荷兰国家档案馆说明1650年前后英格兰人开始在苏里南河地区移入并建立种植园，使用从非洲被强制贩入的奴役人口劳动；荷兰档案关于约50座糖园的概括是这段早期殖民期的发展情况，绝不是1650年当年庄园确切数量。2024年学术论文将来自巴巴多斯的移民初始年份列",
+      "category": "enslavement",
+      "icon_code": "SLV",
+      "lat": 5.825194,
+      "lng": -55.14975,
+      "geography_label": "Fort Willoughby（今苏里南Paramaribo的Zeelandia堡）（有据现代位置/地名参考点）",
+      "geo_precision": "representative_modern_documented_named_locality_not_17c_exact_site_or_ownership_polygon",
+      "geolocation_limit_zh": "【现代具名地点或考古遗址参考坐标，非事件精确现场】仅用于识别相关地名或近代遗址，不表示17世纪实际庄园、原住民地区、守军战线、城墙或英方殖民实控范围，不构成用于面积计算的测绘地界。",
+      "geolocation_basis_zh": "本事件的参考经纬度来自具名博物馆、Getty地名表或历史遗产堡址资料，未主张还原17世纪墙垣界线。",
+      "source_ids": [
+        "1650S-S152",
+        "1650S-S153",
+        "1650S-S154"
+      ],
+      "source_access_reported": [
+        "institutional_or_scholarly_secondary_history_reviewed",
+        "institutional_or_scholarly_secondary_history_reviewed",
+        "institutional_or_scholarly_secondary_history_reviewed"
+      ],
+      "source_group": "EDITOR18",
+      "certainty": "scholarly_event_confirmed_historical_site_geometry_unknown",
+      "significance": {
+        "level": 2,
+        "review_status": "editor18_20261026_scholar_audit"
+      },
+      "editorial_status": "published_source_checked_representative_site",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "representative_map_point": true,
+      "position_type": "historically_named_place_modern_reference",
+      "map_priority": true
+    },
+    {
       "id": "1650S-E008",
       "research_event_id": "A:A1651-LIMERICK-IRETON-SIEGE",
       "arc_id": "ARC-IRL-COL",
@@ -2564,6 +2612,36 @@
       "original_source_id": "EDITOR11:NAVIGATION:20261025:1650S-E120:2",
       "verification_status": "editor11_20261025_institutional_source_read_not_full_original_case_file",
       "precision_warning": "Institutional source supports dated event, not GPS fleet routes, original battle front, sea sovereignty, imperial trade quantities or Indigenous land title."
+    },
+    {
+      "id": "1650S-S152",
+      "title": "Dutch National Archives: English began colonizing Suriname c1650 and established around 50 sugar plantations (not exact 1650 count)",
+      "publisher": "Institutional archive / museum / university scholarship",
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/plantagekaart-suriname-1737",
+      "kind": "institutional_or_peer_reviewed_historical_research",
+      "evidence_read_level": "editor18_public_institutional_or_scholarly_summary_reviewed_no_17c_original_deed_claim",
+      "verification_status": "editor18_20261026_source_vetted",
+      "precision_warning": "Dates may conflict across authoritative histories; modern site does not establish territorial polygon."
+    },
+    {
+      "id": "1650S-S153",
+      "title": "2024 peer-reviewed article on settlers from Barbados 1650-51 Willoughby 1657 patent Suriname",
+      "publisher": "Institutional archive / museum / university scholarship",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/14788810.2024.2393037",
+      "kind": "institutional_or_peer_reviewed_historical_research",
+      "evidence_read_level": "editor18_public_institutional_or_scholarly_summary_reviewed_no_17c_original_deed_claim",
+      "verification_status": "editor18_20261026_source_vetted",
+      "precision_warning": "Dates may conflict across authoritative histories; modern site does not establish territorial polygon."
+    },
+    {
+      "id": "1650S-S154",
+      "title": "Fort Zeelandia former Willoughby modern fort GPS 5.825194,-55.14975",
+      "publisher": "Institutional archive / museum / university scholarship",
+      "url": "https://www.museuexea.org/en/fortificacoes/fort-zeelandia-fort-willoughby",
+      "kind": "institutional_or_peer_reviewed_historical_research",
+      "evidence_read_level": "editor18_public_institutional_or_scholarly_summary_reviewed_no_17c_original_deed_claim",
+      "verification_status": "editor18_20261026_source_vetted",
+      "precision_warning": "Dates may conflict across authoritative histories; modern site does not establish territorial polygon."
     }
   ],
   "routes": [
