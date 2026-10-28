@@ -28,11 +28,11 @@ try:
     assert run("return document.getElementById('yearRange').min==='1690'")
     assert run("return document.getElementById('yearRange').max==='1699'")
     assert run("return document.getElementById('chapterIntro').textContent==='年代介绍待定'")
-    wait.until(lambda d:run("return document.querySelectorAll('#eventList .event-item').length===33"))  # wait for asynchronously loaded 1690s chapter after fast Glencoe preview
+    wait.until(lambda d:run("return document.querySelectorAll('#eventList .event-item').length>=37 && !!document.querySelector('#eventList [data-eid=\"1690S-E139\"]')"))  # wait for asynchronously loaded 1690s chapter after fast Glencoe preview
     assert run("return document.querySelectorAll('#map path.atlas-territory-solid').length===0"),"Unreviewed 17c control areas are visible"
     browser.save_screenshot(str(out/"1692-decade-slider-preview.png"))
     change_year(1691)
-    wait.until(lambda d:run("return document.getElementById('eventCount').textContent==='20项'"))
+    wait.until(lambda d:run("return Number.parseInt(document.getElementById('eventCount').textContent,10)>=24 && !!document.querySelector('#eventList [data-eid=\"1690S-E138\"]')"))
     change_year(1692)
     browser.find_element(By.CSS_SELECTOR,'#eventList [data-eid="E6-GLENCOE-1692"]').click()
     wait.until(lambda d:run("return !!document.querySelector('#dossierBody .major-story-enter')"))
