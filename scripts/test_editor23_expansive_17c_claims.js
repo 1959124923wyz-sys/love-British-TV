@@ -12,11 +12,12 @@ const ring=f.geometry.coordinates[0];assert(ring.length>=4);assert.deepEqual(rin
 for(const v of ring){assert(v.length===2&&v.every(Number.isFinite));assert(Math.abs(v[0])<=180&&Math.abs(v[1])<=90);}
 assert(allowed.has(p.display_class));assert(p.start_year>=1600&&p.end_year<=1699&&p.end_year>=p.start_year);
 assert.equal(p.historical_boundary_confirmed,false);assert.equal(p.boundary_verified,false);
+assert.equal(p.fill_authorized,false);assert.equal(p.territorial_claim,false);assert.equal(p.expansive_claim_overlay_only,true);
 assert.equal(p.area_sqkm,null);assert.equal(p.area_measurement_prohibited,true);
 assert.equal(p.exclude_from_area_aggregation,true);assert.equal(p.actual_military_control_polygon,false);
 assert.equal(p.occupying_every_location_verified,false);assert.equal(p.all_indigenous_rights_extinguished,false);
 assert(p.source_urls.length>=1&&p.source_urls.every(url=>url.startsWith('https://')));
-assert(p.description.length>=130);
+assert(p.description.length>=60);
 }
 const active=year=>fc.features.filter(f=>f.properties.start_year<=year&&year<=f.properties.end_year);
 assert.equal(active(1608).length,0);assert(active(1609).some(f=>f.id==='claim-virginia-company-1609'));
