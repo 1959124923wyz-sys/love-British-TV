@@ -1418,6 +1418,50 @@
       "representative_map_point": true,
       "geolocation_basis_zh": "具名近代城市或岛屿现代参考点，非历史实测边界和土地契约界线。",
       "map_priority": true
+    },
+    {
+      "id": "1620S-E032",
+      "research_event_id": "EDITOR22-1620S-E032",
+      "arc_id": "ARC-QUEBEC-KIRKE",
+      "year": 1629,
+      "start_year": 1629,
+      "end_year": 1629,
+      "visible_from": 1629,
+      "date_label": "1629",
+      "name": "1629—1632年被贩卖非洲儿童奥利维耶·勒热纳进入英占魁北克",
+      "historical_actor": "See primary or governmental institutional source QC3",
+      "historical_place": "1629—1632年被贩卖非洲儿童奥利维耶·勒热纳进入英占魁北克相关地区",
+      "description": "加拿大公园局认定Olivier Le Jeune为定居现今加拿大地区的最早有据非洲裔人物，他在英格兰柯克兄弟占领魁北克期间作为受奴役儿童到来并被转卖；记录仅支持其个人遭遇，不构成1629年当地全部非洲人口的数量统计。",
+      "short_description": "加拿大公园局认定Olivier Le Jeune为定居现今加拿大地区的最早有据非洲裔人物，他在英格兰柯克兄弟占领魁北克期间作为受奴役儿童到来并被转卖；记录仅支持其个人遭遇，不构成1629年当地全部非洲人口的数量统计。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 46.8139,
+      "lng": -71.208,
+      "geography_label": "现代城市或历史地区参考点",
+      "geo_precision": "representative_modern_named_locality_not_17c_exact_site",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】现代具名地区参考坐标，不表示精确历史签字、军队行军、战斗范围、原住民正式转让土地或英方实际控制范围；不表示周边领土均受王室直接有效控制。",
+      "source_ids": [
+        "1620S-S033"
+      ],
+      "source_access_reported": [
+        "editor22_20261028_official_government_archive_text_read"
+      ],
+      "source_group": "EDITOR22",
+      "certainty": "historic_fact_source_vetted_spatial_extent_unknown",
+      "significance": {
+        "level": 2,
+        "review_status": "editor22_20261028_sourced_event"
+      },
+      "editorial_status": "published_source_critical_geolocation_reference",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "position_type": "modern_named_place_or_administrative_reference",
+      "representative_map_point": true,
+      "geolocation_basis_zh": "现代相关城市、岛屿或地区参考位置，不推断历史实控边界与面积。",
+      "map_priority": true
     }
   ],
   "places": [],
@@ -1769,6 +1813,16 @@
       "evidence_read_level": "web indexed primary-edition, government museum archive or academic publication read 2026-10-28; original handwritten manuscript and all settlement rolls uninspected",
       "verification_status": "editor22_verified_institutional_history",
       "precision_warning": "Point is modern representative locality; historical area, property and casualties not surveyed"
+    },
+    {
+      "id": "1620S-S033",
+      "title": "Olivier Le Jeune named historical figure 2020",
+      "publisher": "Quebec Ministry of Culture",
+      "url": "https://www.quebec.ca/nouvelles/actualites/details/mois-de-lhistoire-des-noirs-la-ministre-nathalie-roy-designe-olivier-le-jeune-comme-personnage-historique",
+      "kind": "official_institutional_or_archival_edition",
+      "evidence_read_level": "official government NPS institutional heritage or archive text screened 2026-10-28",
+      "verification_status": "editor22_verified_institutional_history",
+      "precision_warning": "Modern point is not full historic territorial rights or actual surveyed ownership."
     }
   ],
   "routes": [],
