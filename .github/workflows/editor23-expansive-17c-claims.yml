@@ -1,0 +1,43 @@
+name: Editor23 expansive paper charters not real-control territory desktop map QA
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'css/dark-atlas-v2.css'
+      - 'data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson'
+      - 'scripts/test_editor23_expansive_17c_claims.js'
+      - 'scripts/browser_editor23_expansive_17c_claims.py'
+      - '.github/workflows/editor23-expansive-17c-claims.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'css/dark-atlas-v2.css'
+      - 'data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson'
+      - 'scripts/test_editor23_expansive_17c_claims.js'
+      - 'scripts/browser_editor23_expansive_17c_claims.py'
+jobs:
+  source-claims-and-desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node source and year-limited claims, preserve original chronological contracts
+        run: |
+          node --check app.js
+          node scripts/test_editor23_expansive_17c_claims.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install Selenium
+        run: pip install selenium
+      - name: Verify visible broad 17c territory overlays, toggling, provenance and original 1599 in desktop browser
+        run: |
+          python3 -m http.server 8765 &
+          python3 scripts/browser_editor23_expansive_17c_claims.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor23-expansive-17c-claims-screenshots
+          path: browser-smoke-results/editor23-*.png
