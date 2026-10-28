@@ -1,0 +1,42 @@
+name: Editor22 four 17C gaps Pennsylvania Quebec Bermuda Bahamas Dominion QA
+on:
+  pull_request:
+    paths:
+      - 'data/atlas-16*.json'
+      - 'data/stories/serial/**'
+      - 'data/research/editor22-four-17c-gap-evidence*'
+      - 'scripts/test_editor22_four_gaps.js'
+      - 'scripts/browser_editor22_four_gaps.py'
+      - '.github/workflows/editor22-four-17c-gaps.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/atlas-16*.json'
+      - 'data/stories/serial/**'
+      - 'scripts/test_editor22_four_gaps.js'
+jobs:
+  history-legal-maps-and-desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Historical contracts and non-territorial source QA
+        run: |
+          node --check scripts/test_editor22_four_gaps.js
+          node scripts/test_editor22_four_gaps.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_editor21_williamite_ireland.js
+          node scripts/test_editor20_scotland_conquest_pow.js
+          node scripts/test_editor19_leewards_kalinago.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install desktop Selenium
+        run: pip install selenium
+      - name: Browser verifies all four century gaps and earlier map
+        run: |
+          python -m http.server 8765 &
+          python3 scripts/browser_editor22_four_gaps.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor22-four-gaps-desktop
+          path: browser-smoke-results/editor22-*.png
