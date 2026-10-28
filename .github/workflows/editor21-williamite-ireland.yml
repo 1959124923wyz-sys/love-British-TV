@@ -1,0 +1,46 @@
+name: Editor21 1689–1691 Williamite Ireland treaty and contested land chronology QA
+on:
+  pull_request:
+    paths:
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/stories/serial/**'
+      - 'data/research/editor21-williamite*'
+      - 'scripts/test_editor21_williamite_ireland.js'
+      - 'scripts/browser_editor21_williamite_ireland.py'
+      - '.github/workflows/editor21-williamite-ireland.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/atlas-1680-1689.json'
+      - 'data/atlas-1690-1699.json'
+      - 'data/stories/serial/**'
+      - 'scripts/test_editor21_williamite_ireland.js'
+      - 'scripts/browser_editor21_williamite_ireland.py'
+jobs:
+  treaty-and-cartography:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit 1689-1691 war, treaty conditions, historic events and earlier chapters
+        run: |
+          node --check scripts/test_editor21_williamite_ireland.js
+          node scripts/test_editor21_williamite_ireland.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_editor20_scotland_conquest_pow.js
+          node scripts/test_editor19_leewards_kalinago.js
+          node scripts/test_editor18_overlooked_17c_conquests.js
+          node scripts/test_editor16_bank_ireland_finance.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install Selenium desktop verifier
+        run: pip install selenium
+      - name: Test 1689 Derry, 1690 Boyne, 1691 Treaty and 1599 old-map return in Chromium
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor21_williamite_ireland.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor21-ireland-williamite-browser
+          path: browser-smoke-results/editor21-williamite-*.png
