@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.
 const index=read('data/stories/serial/index.json'),articles=index.topics.filter(x=>x.status==='published');
 const meta=index.topics.find(x=>x.id==='E6-T03-WILLIAMITE-WAR'),mother=index.topics.find(x=>x.id==='E6-T03');
 const land=index.topics.find(x=>x.id==='E6-T03-LAND-1642-1698');
-assert.equal(articles.length,25);assert(mother&&mother.status==='research_only');
+assert.equal(articles.length,29);assert(mother&&mother.status==='research_only');
 assert(land&&land.status==='published');assert(meta&&meta.parent_topic_id==='E6-T03'&&meta.status==='published'&&meta.publication_review==='approved');
 const d=read(meta.article_file),ledger=read('data/research/editor21-williamite-war-1689-1691-evidence-20261028.json');
 assert.equal(d.id,meta.id);assert.equal(d.schema,'atlas-major-story-v1');assert.equal(d.start_year,1689);assert.equal(d.end_year,1691);
@@ -35,4 +35,4 @@ assert.equal(ledger.verified.find(x=>x.key==='AUG1691').confirmed_killed,null);
 assert(d.reading_note.includes('旧历'));assert(d.reading_note.includes('誊写遗漏'));
 assert(d.sections.find(x=>x.id==='treaty-law').paragraphs.join('').includes('George Clarke'));
 assert(d.sources.some(x=>x.url.includes('celt.ucc.ie/published/E703001-010')));
-console.log('PASS Editor21: 15 Irish Williamite War chapters / 13 reliable story sources / 20 map anchors / 7 new non-polygon events / 25 prior-approved historical stories.');
+console.log('PASS Editor21: 15 Irish Williamite War chapters / 13 reliable story sources / 20 map anchors / 7 new non-polygon events / 29 prior-approved historical stories.');

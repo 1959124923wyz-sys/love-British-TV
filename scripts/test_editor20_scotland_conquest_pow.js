@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.
 const index=read('data/stories/serial/index.json'),meta=index.topics.find(t=>t.id==='E6-T04-CONQUEST');
 const parent=index.topics.find(t=>t.id==='E6-T04'),article=read('data/stories/serial/e6-t04-scotland-conquest-prisoners-1650-1652.json');
 const evidence=read('data/research/editor20-scotland-1650-1652-prisoners-evidence-20261028.json');
-assert.equal(index.topics.filter(t=>t.status==='published').length,25);
+assert.equal(index.topics.filter(t=>t.status==='published').length,29);
 assert(parent.status==='research_only');assert.equal(meta.parent_topic_id,'E6-T04');
 assert.equal(meta.status,'published');assert.equal(meta.publication_review,'approved');
 assert.equal(article.id,meta.id);assert.equal(article.parent_serial_topic_id,meta.parent_topic_id);
@@ -43,4 +43,4 @@ assert.equal(claims.DUNDEE.verified_dead,null);assert.equal(claims.INVERKEITHING
 assert.equal(claims.UNITY1650.estimated_forced_indentures_to_massachusetts,150);
 assert.equal(claims.CONTROL.modern_UK_in_1652,false);assert.equal(evidence.geography_policy.new_verified_polygons,0);
 assert(article.reading_note.includes('1707'));assert(article.reading_note.includes('约150'));
-console.log('PASS Editor20: 15 sections, 16 authoritative sources, 11 new mapped events, 12 clickable anchors, 1650–52 Scottish polity and forced indenture semantics; 25 stories, '+eventCount+' atlas records checked.');
+console.log('PASS Editor20: 15 sections, 16 authoritative sources, 11 new mapped events, 12 clickable anchors, 1650–52 Scottish polity and forced indenture semantics; 29 stories, '+eventCount+' atlas records checked.');

@@ -907,6 +907,51 @@
       "geolocation_limit_zh": "【代表性位置，非事件精确现场】阿尔斯特德里及六郡种植园影响地区之代表点。代表受影响地区或当时政治行政中心，未声称确定商馆墙址、战斗点、真实签约地点，也不表示英国对周边区域有实际主权。",
       "geolocation_basis_zh": "英国图书馆公司史分期／官方遗产研究关联具名现代城市或地区示意位置。",
       "map_priority": true
+    },
+    {
+      "id": "1600S-E092",
+      "research_event_id": "EDITOR22-1600S-E092",
+      "arc_id": "ATL-BERMUDA",
+      "year": 1609,
+      "start_year": 1609,
+      "end_year": 1609,
+      "visible_from": 1609,
+      "date_label": "1609",
+      "name": "1609年Sea Venture补给船在百慕大礁群触礁",
+      "historical_actor": "See registered source record BE2, BE3",
+      "historical_place": "1609年Sea Venture补给船在百慕大礁群触礁相关历史地点",
+      "description": "美国海洋与大气管理局记载，前往弗吉尼亚补给的Sea Venture号1609年7月在海上遭遇飓风，萨默斯使漏水船在百慕大礁群搁浅，幸存者上岸。此航次并非原计划占领百慕大；该机构约150人的幸存人数是近似估计。",
+      "short_description": "美国海洋与大气管理局记载，前往弗吉尼亚补给的Sea Venture号1609年7月在海上遭遇飓风，萨默斯使漏水船在百慕大礁群搁浅，幸存者上岸。此航次并非原计划占领百慕大；该机构约150人的幸存人数是近似估计。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 32.3064,
+      "lng": -64.75,
+      "geography_label": "现代具名历史地区参考点",
+      "geo_precision": "representative_modern_named_locality_not_17c_exact_site",
+      "geolocation_limit_zh": "【代表性位置，非事件精确现场】现代具名地区定位，不表示当日签署室、船只实际触礁点、军事占领范围或全部居民土地权属；不表示周边地区由英国实际控制或可据此计算面积。",
+      "source_ids": [
+        "1600S-S112",
+        "1600S-S113"
+      ],
+      "source_access_reported": [
+        "editor22_official_government_and_scholarly_source_read"
+      ],
+      "source_group": "EDITOR22",
+      "certainty": "date_source_vetted_but_actual_area_unverified",
+      "significance": {
+        "level": 2,
+        "review_status": "editor22_research_source_vetted"
+      },
+      "editorial_status": "published_source_critical_geolocation_reference",
+      "actual_English_land_area_sqkm": null,
+      "actual_English_territory_created": false,
+      "historical_control_boundary_verified": false,
+      "position_is_historical_survey": false,
+      "exclude_point_buffer_from_area_statistics": true,
+      "position_type": "modern_named_territory_historic_proxy",
+      "representative_map_point": true,
+      "geolocation_basis_zh": "具名近代城市或岛屿现代参考点，非历史实测边界和土地契约界线。",
+      "map_priority": true
     }
   ],
   "places": [],
@@ -1163,6 +1208,26 @@
       "evidence_read_level": "institutional_historic_heritage_primary_excerpt_or_academic_biography_read",
       "verification_status": "editor9_acadia_individually_read_historic_source",
       "precision_warning": "Modern named-site coordinates identify study locality, not surveyed historical ownership or army position"
+    },
+    {
+      "id": "1600S-S112",
+      "title": "Historical notes page 1: settlement, labor, assembly",
+      "publisher": "Government of Bermuda Facts and Figures 2016 PDF",
+      "url": "https://www2.gov.bm/files/media-library/20260413/ed6325d8-2016-facts-and-figures.pdf",
+      "kind": "official_institutional_or_archival_edition",
+      "evidence_read_level": "web indexed primary-edition, government museum archive or academic publication read 2026-10-28; original handwritten manuscript and all settlement rolls uninspected",
+      "verification_status": "editor22_verified_institutional_history",
+      "precision_warning": "Point is modern representative locality; historical area, property and casualties not surveyed"
+    },
+    {
+      "id": "1600S-S113",
+      "title": "405th Anniversary of the Sea Venture",
+      "publisher": "US NOAA Atlantic Oceanographic and Meteorological Laboratory",
+      "url": "https://www.aoml.noaa.gov/hurricane_blog/405th-anniversary-of-the-sea-ventures-hurricane-encounter/",
+      "kind": "official_institutional_or_archival_edition",
+      "evidence_read_level": "web indexed primary-edition, government museum archive or academic publication read 2026-10-28; original handwritten manuscript and all settlement rolls uninspected",
+      "verification_status": "editor22_verified_institutional_history",
+      "precision_warning": "Point is modern representative locality; historical area, property and casualties not surveyed"
     }
   ],
   "routes": [
