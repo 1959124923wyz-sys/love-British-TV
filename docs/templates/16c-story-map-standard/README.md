@@ -193,3 +193,21 @@
 - **1666—1671年奴役者掳掠网络**：2026年《[Itinerario: Human Plunder](https://www.cambridge.org/core/journals/itinerario/article/human-plunder-slaving-raids-economic-warfare-and-mercantilism-in-the-french-caribbean-16651713/E04B5E1449BA2207661E50DFAAFECD7F)》依据TNA CO 1/20与CO 1/27指出1666年4月法国占领圣基茨英区并取得英殖民者控制的被奴役非洲人口，1668年英私掠者亦进行反掠；英总督1671年索赔称从安提瓜和蒙特塞拉特共掳**1,500人**、圣基茨**400人**。研究者明确认为数字明显夸大，故**1,500和400永远按「英方索赔数字」字段记账，实际人口数为null**；不许写实际共1,900人、单位价格、法国净利润或英殖民者已收到同额赔偿。
 - **空间制图与交互**：新增1628尼维斯、1632蒙特塞拉特、1671殖民官员索赔三处**有据现代地名代表点**；既有1626冲突、1666法国攻占及1667《布雷达和约》继续对应原Atlas事件。所有新点必须保留\`geo_precision=representative_...\`、\`historical_control_boundary_verified=false\`、\`actual_English_land_area_sqkm=null\`、\`exclude_point_buffer_from_area_statistics=true\`。**1627法英分区不能拿现代区划推测填色，战争兵力分布也不能拿点缓冲区做面积。**真实可校准但残缺的历史边界才用虚线及「未确定」说明。
 - **固定回归**：\`node scripts/test_editor19_leewards_kalinago.js\`、\`node scripts/test_serial_story_contract.js\`、\`node scripts/test_17c_tudor_parity_20261023.js\`、\`python3 scripts/audit_spatial_semantics.py --strict\`，并在桌面Chromium核对1626/1632/1671年点入正文、来源和返回地图；原1497—1599年地图、巴巴多斯分篇及其他22篇不得回退。原始英法分界测绘、各庄园名册、军官索赔的真实返还及售出记录仍是后续研究缺口。
+
+## 十五、1650—1652年英格兰共和国军事征服苏格兰：战场、俘虏和北美强迫契约劳动（2026-10-28）
+
+**对应 [Editor20苏格兰征服重大专题PR #264](https://github.com/1959124923wyz-sys/love-British-TV/pull/264)。** 15章长文、16项正式分篇文献、11条新年度地图事件、12项文章内可点击Atlas地图节点。全量来源账：[Editor20权威资料/统计分母账](../../../data/research/editor20-scotland-1650-1652-prisoners-evidence-20261028.json)；制作交接：[Editor20史实和地图执行规则](../../../docs/research/EDITOR20_SCOTLAND_CONQUEST_POW_1650_1652_20261028.md)。
+
+### 史实与政治身份
+
+- 1650年，入侵方是**英格兰共和国（Commonwealth of England）**军队，对手是具有独立政制和苏格兰议会的**苏格兰王国**。1650年7月入侵、9月邓巴、1651年7月因弗基辛、同年8月珀斯及斯特灵失守、9月邓迪与伍斯特、1652年5月邓诺特投降分别记年。**严禁倒写为1707年后联合王国内部行动，或画上今天苏格兰行政边界代表1650年英方实控**。剑桥[David L Smith关于克伦威尔军政统治的研究](https://www.repository.cam.ac.uk/items/6cb2fb45-2935-4f13-9281-1a06f8969141)和[爱丁堡大学苏格兰城市占领研究](https://era.ed.ac.uk/items/688deac2-5e66-43b0-b0f4-16cb9eb422f2)均应保留为证据。
+- [苏格兰国家历史环境局邓巴战场清单BTL7](https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,BTL7)区分英方宣称约**3000战死、10000被俘**与苏格兰约**800战死**等不同口径；**绝不把英军胜方报告作为独立核实的真实总死亡数**。同机构[因弗基辛BTL23](https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,BTL23)关于2000战死及1500被俘等战争宣传数字也有苏格兰记载的不同口径，不得单一数据化。
+- [杜伦大学考古](https://dur.ac.uk/departments/academic/archaeology/research/archaeology-research-projects/scottish-soldiers/)与[2020《PLOS ONE》同行评审分析](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0243369)核对战俘**约3900人强迫南下、约3000—3500抵达达勒姆、1650年10月底约1600人在拘押中死亡**，三者时期／分母不同；不能相减算出全部为某方故意杀死者。考古发现的少量遗骸不等于1600具全部已出土遗骸。
+- [苏格兰档案机构邓迪篇](https://www.scottisharchives.org.uk/explore/dundee-city-archives/)支持1651年9月1日英军攻陷洗劫邓迪，但**死亡700至1500属于不同历史报道，真实总数未知**。[HES Broughty城堡史](https://www.historicenvironment.scot/visit/all/broughty-castle/history-and-stories/)指出若干洗劫细节来自地方传统，须与确证攻城日期分别记录。
+- [剑桥古物学刊邓诺特城堡研究](https://www.cambridge.org/core/journals/antiquaries-journal/article/abs/scottish-regalia-and-dunnottar-castle/1F7981E87C7E4BECE218BB82B82B4877)可核1652年5月24日投降条款。苏格兰王室冠冕器物此前被转移；占领一座城堡不等于当年取得整个苏格兰的完整私人土地所有权。
+
+### 劳动力、资本与地图纪律
+
+- [马萨诸塞州政府历史博物馆](https://www.sec.state.ma.us/divisions/commonwealth-museum/exhibits/online/diversity-colonial-massachusetts/diversity-colonial-massachusetts-8.htm)记载约**150名**邓巴战俘于1650年由Unity运输至马萨诸塞；[美国国家公园Saugus铁厂史](https://www.nps.gov/articles/000/scottish-prisoners-at-the-iron-works.htm)确认一部分被迫从事铁业和木材劳动，契约常为约七年。**150是单船预计人数，不是铁厂每年实际用工、死亡人数或各被掳人的准确售价；公司净利润未知。** 须用明确的概念区分战俘的有期限强迫契约劳动与非洲裔人口遭受的终身、世袭、种族化动产奴役，而不能因二者都涉及强迫劳动就合并财产权字段。
+- 官方战场清单的NGR经OSGB36/EPSG:27700→WGS84标准转换，仅形成历史**战斗景观代表点**。HES/HE战场保护区**不是英国主权或军事统治区**；登陆、围城、强迫行军与海上押送无逐年精确矢量证据不得凭直线或任意点缓冲推测路线/控制面积。所有新图钉维持`representative_map_point=true`、`historical_control_boundary_verified=false`、`actual_English_land_area_sqkm=null`、`exclude_point_buffer_from_area_statistics=true`。
+- 验收运行`node scripts/test_editor20_scotland_conquest_pow.js`、`node scripts/test_serial_story_contract.js`、`node scripts/test_17c_tudor_parity_20261023.js`及`python3 scripts/audit_spatial_semantics.py --strict`。桌面Chromium真实点击1650年邓巴与Saugus、1651年邓迪、1652年邓诺特并核查返回1599年。所有已发表旧篇保留；E6-T04仍是未研究完的母题，不允许因征服子篇发表自动改标全部苏格兰史完成。
