@@ -98,6 +98,10 @@ const territoryRenderer=L.svg({pane:'territoryPane'});
 map.createPane('seventeenthStudiesPane');
 map.getPane('seventeenthStudiesPane').style.zIndex='452';
 const seventeenthStudiesRenderer=L.svg({pane:'seventeenthStudiesPane'});
+// Sourced but deliberately expansive cartographic claims; no historical cadastral truth asserted.
+map.createPane('seventeenthColonialClaimsPane');
+map.getPane('seventeenthColonialClaimsPane').style.zIndex='418';
+const seventeenthColonialClaimsRenderer=L.svg({pane:'seventeenthColonialClaimsPane'});
 // The base map prefers Canvas; precise year-end garrison markers need an explicit SVG layer.
 const wartimeRenderer=L.svg({pane:'controlAreaPane'});
 // Narrow invisible annulus ABOVE event icons restores access to occupied-zone
@@ -128,7 +132,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={seventeenthStudies:L.layerGroup().addTo(map),territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map),nineYearsWar:L.layerGroup().addTo(map),atlanticContact:L.layerGroup().addTo(map),chapter11ActionLinks:L.layerGroup().addTo(map),earlyRegionalImpact:L.layerGroup().addTo(map)};
+const groups={colonialClaims:L.layerGroup().addTo(map),seventeenthStudies:L.layerGroup().addTo(map),territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map),nineYearsWar:L.layerGroup().addTo(map),atlanticContact:L.layerGroup().addTo(map),chapter11ActionLinks:L.layerGroup().addTo(map),earlyRegionalImpact:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -219,7 +223,7 @@ function syncMapLayers(){
  if(!events){focusedEventId=null;focusRequestToken++;}
  if(atlas){renderEventList();refreshHistoricalLayers();}
 }
-let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null;
+let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthColonialClaims=null;
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map(); let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -371,14 +375,14 @@ function historicAreaDescription(properties,selectedYear){
 function openTerritoryDossier(feature,kind='historic'){
  const p=feature.properties||{},restoration=kind==='restoration',occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war',atlanticContact=kind==='atlantic-contact',linkedAction=kind==='linked-action';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
- const label=kind==='seventeenth-reference'?(p.label_type||'17世纪来源地理参考 · 非实测历史影响区'):kind==='indigenous-encounter'?'原住民接触与抵抗 · 无占领':kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室广域殖民声索 · 非实际逐地控制'):kind==='seventeenth-reference'?(p.label_type||'17世纪来源地理参考 · 非实测历史影响区'):kind==='indigenous-encounter'?'原住民接触与抵抗 · 无占领':kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.ongoing_at_atlas_end?'起（至1599年地图研究范围）':p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
  const parties=p.controller_zh||p.actor||(contested?(p.contenders_zh||[]).join('、'):'');
  const relatedPlaces=(p.related_place_ids||[]).map(id=>findPlaceAcrossChapters(id)).filter(Boolean);
  const relatedEvents=(p.related_event_ids||[]).map(id=>
-  [atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly].map(x=>x?.events?.find(e=>e.id===id)).find(Boolean))
+  [atlas,...serialPreviewByDecade.values(),atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly].map(x=>x?.events?.find(e=>e.id===id)).find(Boolean))
   .filter(e=>e&&occurredByYear(e,year)); // Never expose later wartime events in an earlier year's territorial dossier.
  selected='';selectedItemYear=null;
  const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
@@ -711,6 +715,33 @@ function footprintEnabledFor(placeId){
 // halo is never a measured battlefield, trading zone, colony or historical boundary.
 // Research polygons and relationship segments only: NO sovereign boundary,
 // measured march, ocean track, province-wide eviction or territorial area.
+function renderSeventeenthColonialClaims(){
+ groups.colonialClaims.clearLayers();
+ if(year<1600||!seventeenthColonialClaims||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
+ const selected=seventeenthColonialClaims.features.filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year);
+ if(!selected.length)return;
+ const colors={charter:'#b985e8',company:'#ad7bd2',island:'#c5a6db',conquest:'#b875c5',administrative:'#c6a06c'};
+ L.geoJSON({type:'FeatureCollection',features:selected},{
+  pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
+  style:f=>{
+   const p=f.properties||{},shade=colors[p.display_class]||'#ab85d1';
+   return {pane:'seventeenthColonialClaimsPane',color:shade,weight:2.3,opacity:.95,
+    dashArray:'8 7',lineCap:'round',fill:true,fillColor:shade,
+    fillOpacity:p.display_class==='island'?.31:p.display_class==='conquest'?.25:.20,
+    bubblingMouseEvents:false,className:'atlas-17c-expansive-claim'};
+  },
+  onEachFeature:(feature,layer)=>{
+   const p=feature.properties||{};
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+    escapeHTML(p.label_type+' · 示意宽取／非实测边界 · 点击查看来源')+'</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',event=>{
+    if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
+    openTerritoryDossier(feature,'seventeenth-claim');
+   });
+  }
+ }).addTo(groups.colonialClaims);
+}
 function renderSeventeenthRegionalStudies(){
  groups.seventeenthStudies.clearLayers();
  if(year<1600||!seventeenthRegionalStudies||!$('toggleTerritorialFootprints').checked)return;
@@ -1848,7 +1879,7 @@ function setYear(v){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
   if(map.hasLayer(groups.kingdom))map.removeLayer(groups.kingdom);
   $('historicalRegionGuide').hidden=true;
-  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();
+  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
   $('nextYear').disabled=year>=1699;
@@ -2144,6 +2175,32 @@ async function boot(){
    }catch(studyError){
     seventeenthRegionalStudies=null;
     console.warn('17c optional study envelopes withheld; historic event and site layers remain usable',studyError);
+   }
+   // Source-backed MAXIMAL CLAIM layer: optional, independent, nonmetric, and never fused into Atlas occupied polygons.
+   try{
+    const res=await fetch('data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson',{cache:'no-store'});
+    if(!res.ok)throw new Error('macro claim map file unavailable');
+    const data=await res.json(),safe=f=>{
+     const p=f.properties||{},rings=f.geometry?.coordinates;
+     return f.type==='Feature'&&f.geometry?.type==='Polygon'&&Array.isArray(rings)&&rings.length===1&&
+      rings[0].length>=4&&JSON.stringify(rings[0][0])===JSON.stringify(rings[0].at(-1))&&
+      rings[0].every(c=>Array.isArray(c)&&c.length===2&&Number.isFinite(c[0])&&
+       Number.isFinite(c[1])&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90)&&
+      Number.isInteger(p.start_year)&&Number.isInteger(p.end_year)&&p.start_year>=1600&&
+      p.end_year<=1699&&p.start_year<=p.end_year&&
+      ['charter','company','island','conquest','administrative'].includes(p.display_class)&&
+      p.boundary_verified===false&&p.historical_boundary_confirmed===false&&p.area_sqkm===null&&
+      p.exclude_from_area_aggregation===true&&p.actual_military_control_polygon===false&&
+      p.occupying_every_location_verified===false&&p.source_urls?.length>0&&
+      p.source_urls.every(u=>/^https:\/\//.test(u));
+    };
+    if(data.type!=='FeatureCollection'||data.metadata?.schema!=='atlas-17c-expansive-claim-v1'||
+       !Array.isArray(data.features)||data.features.length<10||data.features.some(f=>!safe(f)))
+     throw new Error('reject unlabelled or non-source-backed political boundary');
+    seventeenthColonialClaims=data;
+   }catch(err){
+    seventeenthColonialClaims=null;
+    console.warn('Wide legal paper-claim map withheld, event records unaffected',err);
    }
    serialPreviewAtlas={schema:'atlas-17c-source-linked-batch01',from_year:1600,to_year:1699};
   }catch(error){
@@ -2472,9 +2529,10 @@ $('resetDossier').addEventListener('click',resetDossier);
 function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
-  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();
+  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();
   return;
  }
+ renderSeventeenthColonialClaims();
  renderSeventeenthRegionalStudies();
  renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
 }
@@ -2491,7 +2549,7 @@ map.on('resize',()=>{if(atlas)renderPoints()});
 map.getContainer().addEventListener('click',event=>{
  if(!atlas)return;
  const t=event.target;
- if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
+ if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-17c-expansive-claim,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
  openMapTerritoryAt(map.mouseEventToLatLng(event));
 },true);
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
