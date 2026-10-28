@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const index=load('data/stories/serial/index.json');
 const topics=index.topics.filter(t=>t.status==='published');
-assert.equal(topics.length,23,'audit all 23 explicitly approved audited 17C stories');
+assert.equal(topics.length,24,'audit all 24 explicitly approved audited 17C stories');
 const events=new Map();
 for(let decade=1600;decade<=1690;decade+=10){
  const atlas=load('data/atlas-'+decade+'-'+(decade+9)+'.json');
@@ -20,6 +20,7 @@ for(const e of load('data/stories/serial/chronology-preview-1600-1699.json').eve
 const rules={
  'E6-T03-LAND-1642-1698':29,
  'E6-T04-GLENCOE':9,
+ 'E6-T04-CONQUEST':12,
  'E6-T07-BARBADOS':15,
  'E6-T07-LEEWARD':13,
  'E6-T12':24,

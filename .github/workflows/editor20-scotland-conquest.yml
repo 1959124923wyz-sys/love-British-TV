@@ -1,0 +1,43 @@
+name: Editor20 Scotland 1650–52 conquest and Dunbar POW forced indenture history QA
+on:
+  pull_request:
+    paths:
+      - 'data/atlas-1650-1659.json'
+      - 'data/stories/serial/**'
+      - 'data/research/editor20-scotland*'
+      - 'scripts/test_editor20_scotland_conquest_pow.js'
+      - 'scripts/browser_editor20_scotland_conquest.py'
+      - '.github/workflows/editor20-scotland-conquest.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/atlas-1650-1659.json'
+      - 'data/stories/serial/**'
+      - 'scripts/test_editor20_scotland_conquest_pow.js'
+      - 'scripts/browser_editor20_scotland_conquest.py'
+jobs:
+  source-map-and-story:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Scotland source denominators, event geography and old-story preservation
+        run: |
+          node --check scripts/test_editor20_scotland_conquest_pow.js
+          node scripts/test_editor20_scotland_conquest_pow.js
+          node scripts/test_serial_story_contract.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_editor16_bank_ireland_finance.js
+          node scripts/test_editor18_overlooked_17c_conquests.js
+          node scripts/test_editor19_leewards_kalinago.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install Selenium
+        run: pip install selenium
+      - name: Verify 1650, 1651, 1652 on desktop and 1599 return
+        run: |
+          python -m http.server 8765 &
+          python scripts/browser_editor20_scotland_conquest.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor20-scotland-browser-screenshots
+          path: browser-smoke-results/editor20-scotland-*.png

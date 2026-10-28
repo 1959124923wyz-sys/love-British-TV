@@ -39,5 +39,5 @@ const bas=read('data/research/editor18-seventeenth-century-ulster-suriname-provi
 assert(bas.cases.find(c=>c.id==='SUR1650_PLANTATION').period_sugar_plantation_count_exact_year_unknown);
 assert.equal(bas.cases.find(c=>c.id==='PRO1630_COLONY').initial_capital_pledged_gbp,3800);
 assert.deepEqual(bas.cases.find(c=>c.id==='CAPE1664_1665_CAPTURE').year_dispute,[1664,1665]);
-assert.equal(idx.topics.filter(x=>x.status==='published').length,23);
-console.log('PASS Editor18: four new major colonial history articles / '+totalchapters+' chapters / '+sources+' distinct source slots / '+expected.length+' dated map events; 1664-65 dispute preserved, non-metric geographic points, all 23 published topics intact.');
+assert.equal(idx.topics.filter(x=>x.status==='published').length,24);
+console.log('PASS Editor18: four new major colonial history articles / '+totalchapters+' chapters / '+sources+' distinct source slots / '+expected.length+' dated map events; 1664-65 dispute preserved, non-metric geographic points, all 24 published topics intact.');
