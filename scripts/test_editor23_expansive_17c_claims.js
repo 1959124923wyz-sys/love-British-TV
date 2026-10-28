@@ -1,0 +1,43 @@
+'use strict';
+// Maximal historical CHARITABLE DOCUMENTARY CLAIMS, NOT historic military control areas.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const fc=json('data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson');
+assert.equal(fc.type,'FeatureCollection');assert.equal(fc.metadata.schema,'atlas-17c-expansive-claim-v1');
+assert(fc.features.length>=14);
+const ids=new Set(),allowed=new Set(['charter','company','island','conquest','administrative']);
+for(let f of fc.features){const p=f.properties;assert(f.id&&!ids.has(f.id));ids.add(f.id);
+assert.equal(f.geometry.type,'Polygon');assert.equal(f.geometry.coordinates.length,1);
+const ring=f.geometry.coordinates[0];assert(ring.length>=4);assert.deepEqual(ring[0],ring.at(-1));
+for(const v of ring){assert(v.length===2&&v.every(Number.isFinite));assert(Math.abs(v[0])<=180&&Math.abs(v[1])<=90);}
+assert(allowed.has(p.display_class));assert(p.start_year>=1600&&p.end_year<=1699&&p.end_year>=p.start_year);
+assert.equal(p.historical_boundary_confirmed,false);assert.equal(p.boundary_verified,false);
+assert.equal(p.area_sqkm,null);assert.equal(p.area_measurement_prohibited,true);
+assert.equal(p.exclude_from_area_aggregation,true);assert.equal(p.actual_military_control_polygon,false);
+assert.equal(p.occupying_every_location_verified,false);assert.equal(p.all_indigenous_rights_extinguished,false);
+assert(p.source_urls.length>=1&&p.source_urls.every(url=>url.startsWith('https://')));
+assert(p.description.length>=130);
+}
+const active=year=>fc.features.filter(f=>f.properties.start_year<=year&&year<=f.properties.end_year);
+assert.equal(active(1608).length,0);assert(active(1609).some(f=>f.id==='claim-virginia-company-1609'));
+assert(!active(1625).some(f=>f.id==='claim-virginia-company-1609'),'company charter cannot outlive its 1624 termination');
+assert(active(1629).some(f=>f.id==='claim-massachusetts-1629'));
+assert(active(1654).some(f=>f.id==='claim-ireland-conquest-1653'));
+assert(!active(1651).some(f=>f.id==='claim-scotland-commonwealth-1652'));
+assert(active(1652).some(f=>f.id==='claim-scotland-commonwealth-1652'));
+assert(!active(1660).some(f=>f.id==='claim-scotland-commonwealth-1652'),'Scottish 1660 restoration must end English occupation tint');
+assert(active(1663).some(f=>f.id==='claim-carolina-1663'));
+assert(!active(1665).some(f=>f.id==='claim-carolina-1663'));
+assert(active(1665).some(f=>f.id==='claim-carolina-1665'));
+assert(active(1670).some(f=>f.id==='claim-hudson-bay-1670'));
+assert(!active(1680).some(f=>f.id==='claim-pennsylvania-1681'));
+assert(active(1681).some(f=>f.id==='claim-pennsylvania-1681'));
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),css=fs.readFileSync(path.join(root,'css/dark-atlas-v2.css'),'utf8');
+assert(app.includes('renderSeventeenthColonialClaims()'));assert(app.includes("groups.colonialClaims.clearLayers()"));
+assert(app.includes("if(year<1600||!seventeenthColonialClaims"));assert(app.includes("'toggleTerritorialFootprints'"));
+assert(app.includes("openTerritoryDossier(feature,'seventeenth-claim')"));
+assert(app.includes("pane:'seventeenthColonialClaimsPane'"));assert(app.includes("data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson"));
+assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
+for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
+assert.equal(json('data/chapters.json').chapters.length,10);
+console.log('PASS: 14 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
