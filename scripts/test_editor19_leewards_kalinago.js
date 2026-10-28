@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const idx=read('data/stories/serial/index.json');
 const p=idx.topics.filter(x=>x.status==='published'),t=idx.topics.find(x=>x.id==='E6-T07-LEEWARD'),mother=idx.topics.find(x=>x.id==='E6-T07'),bar=idx.topics.find(x=>x.id==='E6-T07-BARBADOS');
-assert.equal(p.length,25,'only one new approved story permitted');assert(mother&&mother.status==='research_only');assert(bar?.status==='published');
+assert.equal(p.length,29,'only one new approved story permitted');assert(mother&&mother.status==='research_only');assert(bar?.status==='published');
 assert.equal(t.parent_topic_id,'E6-T07');assert(t.status==='published'&&t.publication_review==='approved');assert.equal(t.event_ids.length,13);
 const story=read(t.article_file),evidence=read('data/research/editor19-leewards-kalinago-1666-captives-evidence-20261027.json');
 assert.equal(story.id,'E6-T07-LEEWARD');assert.equal(story.start_year,1623);assert.equal(story.end_year,1699);assert.equal(story.sections.length,11);assert.equal(story.sources.length,12);assert.equal(story.topic_source_claims.length,11);
@@ -33,4 +33,4 @@ const claim=evidence.claims.find(x=>x.key==='CLA1671');assert(claim);assert.equa
 assert(story.reading_note.includes('索赔'));assert(story.reading_note.includes('1900'));
 assert(story.sections.find(x=>x.id==='bloodypoint').paragraphs.join('').includes('Tegreman'));
 assert(!JSON.stringify(maps.get('1670S-E124')).includes('actual_captured_slaves":1900'));
-console.log('PASS Editor19: 11 chapters, 12 source entries, 13 linked map events, 3 new non-territorial points; 25 published stories and all previous map events intact.');
+console.log('PASS Editor19: 11 chapters, 12 source entries, 13 linked map events, 3 new non-territorial points; 29 published stories and all previous map events intact.');
