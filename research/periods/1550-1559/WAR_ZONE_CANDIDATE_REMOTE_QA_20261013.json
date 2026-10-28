@@ -1,0 +1,49 @@
+{
+  "schema": "chapter7_1550s_war_map_candidate_remote_QA_v1",
+  "checked_date": "2026-10-13",
+  "branch": "research/territorial-1550-1559-20261013",
+  "status": "PASS",
+  "result": "GitHub remote readback of 11 files and crossreferences",
+  "files_checked": [
+    "WAR_CONTROL_ZONES_CANDIDATE_1550_1559.geojson",
+    "WAR_CONTESTED_ZONES_CANDIDATE_1550_1559.geojson",
+    "WAR_FRONT_NOTES_1550_1559.json",
+    "WAR_ISOLATED_OUTPOSTS_CANDIDATE_1550_1559.json",
+    "SOURCE_REGISTRY.json",
+    "MAP_REFERENCE_OUTLINES_1550_1559.geojson",
+    "validate_research.py",
+    "WAR_MAP_SPEC_1550s.md",
+    "EDITOR_HANDOFF.md",
+    "README.md",
+    "PROGRESS.md"
+  ],
+  "counts": {
+    "control_zone_candidates": 6,
+    "contested_zone_candidates": 4,
+    "yearend_states": 10,
+    "narrative_stages": 15,
+    "outpost_candidates": 8,
+    "pale_schematic_Polygon_reuses_in_two_layers": 3,
+    "manual_drawn_new_Polygon_count": 0,
+    "authentic_period_surveyed_control_Polygon_count": 0,
+    "chapter_source_ids_resolvable": true
+  },
+  "passed": [
+    "All GeoJSON/JSON syntax parsed and 1550-1559 date ranges valid",
+    "All new candidate source_ids and timeline/outpost references exist in 62 item SOURCE_REGISTRY",
+    "Actual war control/contested polygons reuse only previously existing dashed historic Calais Pale named-place reference envelope; not claimed historical boundaries",
+    "Non-georeferenced Scottish and Irish disputed regions have null geometry and preview_schematic_fill_allowed=false",
+    "No fixed invented coordinates for Hammes or 1559 Leith walls",
+    "1558 annual Calais switches England to France; Jan siege contested overlay not shown as ongoing year-end",
+    "1550 Scottish retreat front not given year-end occupied English polygon",
+    "Irish 1556 legal shire claim not converted into modern county area",
+    "Existing chapter validator was extended and updated editorial handoff/README/PROGRESS links"
+  ],
+  "limits": [
+    "The historic Calais Pale named-place envelope is approximate older GIS reference, not proven 1550s actual control boundary",
+    "No new continuous-front polygons in Scotland/Ireland without historically grounded anchor and human editorial approval",
+    "Main interactive site unchanged, PR remains research-only",
+    "Actual execution of Python validator, browser renderer and manual GitHub Actions workflow not performed, only JS remote data invariant checks"
+  ],
+  "chief_editor_instruction": "Use layer data and chronological source notes; do not import draft as authenticated colonial_polygons; do not automatically buffer null geometry."
+}

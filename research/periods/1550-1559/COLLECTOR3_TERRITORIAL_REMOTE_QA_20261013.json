@@ -1,0 +1,43 @@
+{
+  "schema": "collector3_remote_structural_qa_v1",
+  "compiled": "2026-10-13",
+  "branch": "research/territorial-1550-1559-20261013",
+  "status": "PASS",
+  "remote_sources": 62,
+  "remote_events": 29,
+  "remote_atlas_sites": 18,
+  "remote_atlas_source_refs": 49,
+  "remote_geo_map_delta_points": 15,
+  "control_episodes": 11,
+  "annual_snapshots": 10,
+  "archival_tasks": 23,
+  "P0_tasks": 13,
+  "inherited_political_ids": 9,
+  "dashed_context_areas": 8,
+  "authenticated_precise_tudor_control_polygons": 0,
+  "checks": {
+    "source_ids_unique": true,
+    "source_crossrefs_valid": true,
+    "geo_coordinates_in_WGS84_range": true,
+    "proper_French_Calais_from_1558": true,
+    "old_English_Hailes_not_carried_after_1548": true,
+    "old_English_Eyemouth_not_carried_after_1550": true,
+    "French_Eyemouth_1557_distinct_phase": true,
+    "Dunbar_1550_heritage_anchor": true,
+    "Inchkeith_1556_allied_fort_phase": true,
+    "Leith_1559_French_fortifying_event": true,
+    "Hammes_1558_final_English_Pale_fort_no_fake_point": true,
+    "Scottish_sovereignty_remains_independent": true,
+    "Ireland_legal_county_not_painted_as_actual_Effective_control": true,
+    "next_decade_seed_includes_new_forts": true
+  },
+  "unverified": [
+    "Tudor Hammes fort original GIS coordinate",
+    "Lauder and Dunglass actual 1550 abandonment day",
+    "Irish plantation real-grant parcel boundaries",
+    "Dunbar/Inchkeith/Leith original fort wall survey and reuse permissions",
+    "Eyemouth French 1559 physical withdrawal day and demolition date",
+    "Actual period-fiscal colonial net profit"
+  ],
+  "limitations": "GitHub remote JSON readback structural assertions only; no direct original manuscripts, no manual GitHub Actions or browser visual test. No main publication."
+}
