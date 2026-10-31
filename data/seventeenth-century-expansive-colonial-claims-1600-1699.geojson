@@ -9,11 +9,13 @@
     "modern_map_based_broad_envelopes": true,
     "start": 1600,
     "end": 1699,
-    "feature_count": 26,
+    "feature_count": 32,
     "period_limits_verified_sources": true,
     "do_not_change_event_polygons": true,
     "phase2_review_date": "2026-10-31",
-    "phase2_method": "12 additional documentary paper / polity reference envelopes; preserve old data, never derive measured occupation or colonial area from geometry"
+    "phase2_method": "12 additional documentary paper / polity reference envelopes; preserve old data, never derive measured occupation or colonial area from geometry",
+    "phase3_review_date": "2026-10-31",
+    "phase3_method": "6 scholarly/archival-sourced early colonial settlements and forts, schematic envelopes only, no sovereignty or measured area"
   },
   "features": [
     {
@@ -2102,6 +2104,397 @@
             [
               -71.95,
               41.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-surinam-willoughbyland-1650",
+      "properties": {
+        "name": "1650—1666年英属苏里南（威洛比领地）：殖民河谷与海岸声索",
+        "start_year": 1650,
+        "end_year": 1666,
+        "display_class": "charter",
+        "period_label": "1650—1666年",
+        "label_type": "英格兰种植园殖民地广域声索 · 1667英荷反复争夺",
+        "description": "1650／1651年英格兰殖民者开始在苏里南河沿线建设种植园，1663年威洛比与海德获得领主特许。大面积着色仅展示殖民特许及沿海河谷的宽取范围，不等于英方掌控整个现代苏里南或当地原住民族土地。1667年荷兰攻占、英军短暂反夺，1668年重新落入荷方之手；本年末示意层只显示1650—1666，1667—1668交接依原事件点与历史专题说明。",
+        "summary_zh": "1650／1651年英格兰殖民者开始在苏里南河沿线建设种植园，1663年威洛比与海德获得领主特许。大面积着色仅展示殖民特许及沿海河谷的宽取范围，不等于英方掌控整个现代苏里南或当地原住民族土地。1667年荷兰攻占、英军短暂反夺，1668年重新落入荷方之手；本年末示意层只显示1650—1666，1667—1668交接依原事件点与历史专题说明。",
+        "source_urls": [
+          "https://www.cambridge.org/core/journals/journal-of-british-studies/article/abs/left-behind-subjecthood-nationality-and-the-status-of-jews-after-the-loss-of-english-surinam/0825CCCDCE13530139601CE6032B1392",
+          "https://www.tandfonline.com/doi/full/10.1080/03096564.2019.1616141"
+        ],
+        "related_event_ids": [
+          "1650S-E121",
+          "1660S-E003"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -58.3,
+              3.45
+            ],
+            [
+              -55.1,
+              3.65
+            ],
+            [
+              -53.9,
+              4.1
+            ],
+            [
+              -53.4,
+              5.7
+            ],
+            [
+              -54.8,
+              6.2
+            ],
+            [
+              -56.5,
+              6.3
+            ],
+            [
+              -58.5,
+              5.6
+            ],
+            [
+              -58.3,
+              3.45
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-providence-island-1630",
+      "properties": {
+        "name": "1630—1640年普罗维登斯岛清教徒殖民地：加勒比西南部岛屿",
+        "start_year": 1630,
+        "end_year": 1640,
+        "display_class": "island",
+        "period_label": "1630—1640年",
+        "label_type": "英格兰短命殖民岛屿 · 1641年被西班牙征服",
+        "description": "普罗维登斯岛公司自1630年起于今哥伦比亚圣卡塔利娜岛与普罗维登西亚附近设立殖民地、奴役劳工种植园及私掠基地，1641年为西班牙军队攻占。为避免将1641年年末仍染成英属，本图结束于1640；宽取岛屿包络仅是识别位置，不意味着周边海域均为英国主权。",
+        "summary_zh": "普罗维登斯岛公司自1630年起于今哥伦比亚圣卡塔利娜岛与普罗维登西亚附近设立殖民地、奴役劳工种植园及私掠基地，1641年为西班牙军队攻占。为避免将1641年年末仍染成英属，本图结束于1640；宽取岛屿包络仅是识别位置，不意味着周边海域均为英国主权。",
+        "source_urls": [
+          "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581795119",
+          "https://www.cambridge.org/core/books/abs/providence-island-16301641/providence-island-company-and-its-colony-the-program/286208AFED06439921A3752C04DE44B7"
+        ],
+        "related_event_ids": [
+          "1630S-E023",
+          "1640S-E094"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.65,
+              13.15
+            ],
+            [
+              -81.15,
+              13.15
+            ],
+            [
+              -81.15,
+              13.62
+            ],
+            [
+              -81.65,
+              13.62
+            ],
+            [
+              -81.65,
+              13.15
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-tangier-english-garrison-1662",
+      "properties": {
+        "name": "1662—1683年英格兰丹吉尔驻军港：摩洛哥海峡军政据点",
+        "start_year": 1662,
+        "end_year": 1683,
+        "display_class": "conquest",
+        "period_label": "1662—1683年",
+        "label_type": "葡萄牙嫁妆移交后的英方驻军城市 · 1684撤离",
+        "description": "丹吉尔1661年按葡萄牙王室婚约交予英国王室，1661—1662年英军实际进驻。港城与外缘军事工事受到邻近摩洛哥军队长期挑战，1684年2月6日最后英军撤离。图示仅为丹吉尔港口周边的宽幅参考框，不能将摩洛哥北部或当地人民视为全部被英格兰统治。",
+        "summary_zh": "丹吉尔1661年按葡萄牙王室婚约交予英国王室，1661—1662年英军实际进驻。港城与外缘军事工事受到邻近摩洛哥军队长期挑战，1684年2月6日最后英军撤离。图示仅为丹吉尔港口周边的宽幅参考框，不能将摩洛哥北部或当地人民视为全部被英格兰统治。",
+        "source_urls": [
+          "https://archives.lib.ku.edu/repositories/3/resources/4365"
+        ],
+        "related_event_ids": [
+          "1660S-E123",
+          "1680S-E125"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -6.05,
+              35.67
+            ],
+            [
+              -5.65,
+              35.67
+            ],
+            [
+              -5.65,
+              35.96
+            ],
+            [
+              -6.05,
+              35.96
+            ],
+            [
+              -6.05,
+              35.67
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-cape-coast-castle-1665",
+      "properties": {
+        "name": "1665年后英方海岸角城堡：加纳黄金海岸奴隶贸易据点",
+        "start_year": 1665,
+        "end_year": 1699,
+        "display_class": "company",
+        "period_label": "1665—1699年",
+        "label_type": "英方堡垒据点宏观参考 · 非加纳内陆殖民地",
+        "description": "加纳博物馆与古迹委员会记录1665年英方舰队夺取海岸角堡垒，随后发展成为英属贸易和奴隶运输设施。色块仅为海岸角镇及堡垒周边的视觉识别示意，不表示英国在1665年征服黄金海岸全境、内陆阿肯社会或其贸易通道。",
+        "summary_zh": "加纳博物馆与古迹委员会记录1665年英方舰队夺取海岸角堡垒，随后发展成为英属贸易和奴隶运输设施。色块仅为海岸角镇及堡垒周边的视觉识别示意，不表示英国在1665年征服黄金海岸全境、内陆阿肯社会或其贸易通道。",
+        "source_urls": [
+          "https://gmmb.gov.gh/cape-coast-castle-cape-coast-1653/"
+        ],
+        "related_event_ids": [
+          "1660S-E124"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.45,
+              5.02
+            ],
+            [
+              -1.13,
+              5.02
+            ],
+            [
+              -1.13,
+              5.3
+            ],
+            [
+              -1.45,
+              5.3
+            ],
+            [
+              -1.45,
+              5.02
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-bombay-east-india-company-1668",
+      "properties": {
+        "name": "1668年后东印度公司孟买岛：王室授予的港口司法和军事管辖",
+        "start_year": 1668,
+        "end_year": 1699,
+        "display_class": "company",
+        "period_label": "1668—1699年",
+        "label_type": "东印度公司港岛管辖参考 · 非印度半岛主权",
+        "description": "葡萄牙1661年同意把孟买作为王室婚姻嫁妆的一部分交予英王，1668年查理二世将孟买岛的民政与军事管辖权授予东印度公司。地图采用现代孟买港口附近宽幅参考区，既不是17世纪七岛精确复原，也不表示公司控制当时整个马拉塔领地、印度次大陆或周边海域。",
+        "summary_zh": "葡萄牙1661年同意把孟买作为王室婚姻嫁妆的一部分交予英王，1668年查理二世将孟买岛的民政与军事管辖权授予东印度公司。地图采用现代孟买港口附近宽幅参考区，既不是17世纪七岛精确复原，也不表示公司控制当时整个马拉塔领地、印度次大陆或周边海域。",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1660S-E043",
+          "1660S-E046"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.63,
+              18.78
+            ],
+            [
+              73.03,
+              18.78
+            ],
+            [
+              73.03,
+              19.3
+            ],
+            [
+              72.63,
+              19.3
+            ],
+            [
+              72.63,
+              18.78
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-madras-fort-st-george-1640",
+      "properties": {
+        "name": "1640年后东印度公司圣乔治堡：马德拉斯沿海商馆与城镇",
+        "start_year": 1640,
+        "end_year": 1699,
+        "display_class": "company",
+        "period_label": "1640—1699年",
+        "label_type": "获地方统治者授权的商馆／堡垒 · 非南印度征服",
+        "description": "1639—1640年东印度公司取得当地统治者许可，在马德拉斯帕特南附近修建圣乔治堡并建立商馆；早期城镇依赖南印度纺织贸易和地方政治秩序。淡色宽框仅用于凸显堡垒、商馆及早期殖民聚落的局部范围；不可把南印度周边村镇或戈尔康达、莫卧儿等政权直接涂为英属土地。",
+        "summary_zh": "1639—1640年东印度公司取得当地统治者许可，在马德拉斯帕特南附近修建圣乔治堡并建立商馆；早期城镇依赖南印度纺织贸易和地方政治秩序。淡色宽框仅用于凸显堡垒、商馆及早期殖民聚落的局部范围；不可把南印度周边村镇或戈尔康达、莫卧儿等政权直接涂为英属土地。",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://tamildigitallibrary.in/assets/docs/uploads/primary_files/book/TVA_BOK_0046310/TVA_BOK_0046310_List_of_Factory_Records.pdf"
+        ],
+        "related_event_ids": [
+          "1630S-E020"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.1,
+              12.92
+            ],
+            [
+              80.48,
+              12.92
+            ],
+            [
+              80.48,
+              13.3
+            ],
+            [
+              80.1,
+              13.3
+            ],
+            [
+              80.1,
+              12.92
             ]
           ]
         ]

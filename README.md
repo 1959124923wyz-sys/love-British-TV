@@ -7,9 +7,11 @@
 ## 当前状态
 
 - **正式发表**：1497—1599年，共10章。逐年导航、历史事件、长篇专题、史料与地图图层均以 `main` 分支为准。
-- **正在研究**：1600—1699年，分爱尔兰/不列颠、美洲/加勒比、非洲/亚洲/海上扩张三组推进；这部分研究分支尚未正式发表。
+- **17世纪长篇专题已发表**：截至2026-10-31，1600—1699年共有29篇专题标为 `published`，另有7篇 `research_only` 不得视为发表；以 [`data/stories/serial/index.json`](data/stories/serial/index.json) 为准。17世纪十年Atlas已有事件与独立的殖民声索示意图层；**这不等于 `data/chapters.json` 已新增17世纪正式章号，也不代表已核准实测殖民面积**。
 - **正式章节索引**：[`data/chapters.json`](data/chapters.json)。**专题文章索引**：[`data/stories/index.json`](data/stories/index.json)。
 - **网站交互**：使用已经批准的桌面地图规范。两个可独立启闭的「版图」「事件」开关、现代地名参考底图、按年更新、历史事件与来源点击均需保留。
+
+**17世纪宏观着色：** 现有32块大范围王室特许、公司声索、殖民岛屿或局部堡垒的独立可开关半透明虚线图层；所有外缘均是宽取概略示意，不表示整个区域实控，更不得用来累计领土面积。数据见 [`17世纪大面积声索图层`](data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson)，研究核验见 [`第二批编审`](docs/research/EDITOR14_17C_EXPANSIVE_CLAIMS_PHASE2_20261031.md)和[`第三批编审`](docs/research/EDITOR14_17C_OVERSEAS_CLAIMS_PHASE3_20261031.md)。
 
 **制图原则：** 只有证据充分的占领和政治关系才可作为实际统治判断；尚无测绘依据的版图须以虚线/不确定示意表示。现代OpenStreetMap道路和地名只作当代位置参考，不代表16世纪的国家或疆域。进军线、袭击区、奴役航线、法理统治与实际占领面积不可以混算。
 
