@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const fc=json('data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson');
 assert.equal(fc.type,'FeatureCollection');assert.equal(fc.metadata.schema,'atlas-17c-expansive-claim-v1');
-assert(fc.features.length>=26,'all 12 second-phase documentary claim envelopes must be retained');
+assert(fc.features.length>=32,'all 26 inherited and six overseas phase-three claim envelopes must be retained');
 assert.equal(fc.metadata.feature_count,fc.features.length,'metadata count must equal actual features');
 const ids=new Set(),allowed=new Set(['charter','company','island','conquest','administrative']);
 for(let f of fc.features){const p=f.properties;assert(f.id&&!ids.has(f.id));ids.add(f.id);
@@ -49,6 +49,19 @@ assert(!has(1691,'claim-massachusetts-province-1692')&&has(1692,'claim-massachus
 assert(has(1610,'claim-newfoundland-island-1610')&&has(1659,'claim-st-helena-1659'));
 assert(has(1632,'claim-leeward-islands-1632')&&has(1663,'claim-rhode-island-1663'));
 for(const f of fc.features)assert(!f.properties.area_sqkm&&f.properties.expansive_claim_overlay_only,'schematic areas must never become measured territory');
+// Phase 3 macro colonial footprint continuity beyond North America; 1641, 1667, 1684 must not overclaim.
+assert(has(1630,'claim-providence-island-1630')&&has(1640,'claim-providence-island-1630')&&!has(1641,'claim-providence-island-1630'));
+assert(has(1650,'claim-surinam-willoughbyland-1650')&&has(1666,'claim-surinam-willoughbyland-1650')&&!has(1667,'claim-surinam-willoughbyland-1650'),'contested 1667/68 Suriname not shown as unbroken English control');
+assert(has(1662,'claim-tangier-english-garrison-1662')&&has(1683,'claim-tangier-english-garrison-1662')&&!has(1684,'claim-tangier-english-garrison-1662'));
+assert(!has(1664,'claim-cape-coast-castle-1665')&&has(1665,'claim-cape-coast-castle-1665'));
+assert(!has(1667,'claim-bombay-east-india-company-1668')&&has(1668,'claim-bombay-east-india-company-1668'));
+assert(!has(1639,'claim-madras-fort-st-george-1640')&&has(1640,'claim-madras-fort-st-george-1640'));
+const repoEventIds=new Set();
+for(let d=1600;d<=1690;d+=10)for(const e of json('data/atlas-'+d+'-'+(d+9)+'.json').events)repoEventIds.add(e.id);
+for(const f of fc.features.filter(f=>['claim-surinam-willoughbyland-1650','claim-providence-island-1630','claim-tangier-english-garrison-1662','claim-cape-coast-castle-1665','claim-bombay-east-india-company-1668','claim-madras-fort-st-george-1640'].includes(f.id))){
+ assert(f.properties.related_event_ids.length>0, f.id+' must link genuine published chronology events');
+ for(const id of f.properties.related_event_ids)assert(repoEventIds.has(id),f.id+' references non-existent '+id);
+}
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),css=fs.readFileSync(path.join(root,'css/dark-atlas-v2.css'),'utf8');
 assert(app.includes('renderSeventeenthColonialClaims()'));assert(app.includes("groups.colonialClaims.clearLayers()"));
 assert(app.includes("if(year<1600||!seventeenthColonialClaims"));assert(app.includes("'toggleTerritorialFootprints'"));
@@ -57,4 +70,4 @@ assert(app.includes("pane:'seventeenthColonialClaimsPane'"));assert(app.includes
 assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
 assert.equal(json('data/chapters.json').chapters.length,10);
-console.log('PASS: 26 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
+console.log('PASS: 32 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
