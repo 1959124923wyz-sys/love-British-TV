@@ -9,9 +9,11 @@
     "modern_map_based_broad_envelopes": true,
     "start": 1600,
     "end": 1699,
-    "feature_count": 14,
+    "feature_count": 26,
     "period_limits_verified_sources": true,
-    "do_not_change_event_polygons": true
+    "do_not_change_event_polygons": true,
+    "phase2_review_date": "2026-10-31",
+    "phase2_method": "12 additional documentary paper / polity reference envelopes; preserve old data, never derive measured occupation or colonial area from geometry"
   },
   "features": [
     {
@@ -1235,6 +1237,874 @@
         "royal_paper_claim": true,
         "fill_authorized": false,
         "expansive_claim_overlay_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-virginia-crown-1625",
+      "properties": {
+        "name": "1625年后王室弗吉尼亚殖民地：切萨皮克及内陆宽幅参考",
+        "start_year": 1625,
+        "end_year": 1699,
+        "display_class": "administrative",
+        "period_label": "1625—1699年",
+        "label_type": "王室殖民地治理参考 · 非全部内陆实际控制",
+        "description": "1624年弗吉尼亚公司特许被撤销，次年殖民地转为王室直辖，英格兰殖民扩张继续。此图采用切萨皮克沿岸向西延伸的宽幅示意，并不继承旧公司的跨大陆太平洋特许，也不表示波瓦坦及其他原住民领土已经全部被殖民者掌握。",
+        "summary_zh": "1624年弗吉尼亚公司特许被撤销，次年殖民地转为王室直辖，英格兰殖民扩张继续。此图采用切萨皮克沿岸向西延伸的宽幅示意，并不继承旧公司的跨大陆太平洋特许，也不表示波瓦坦及其他原住民领土已经全部被殖民者掌握。",
+        "source_urls": [
+          "https://www.nps.gov/jame/learn/historyculture/chronology-of-jamestown-events.htm",
+          "https://encyclopediavirginia.org/entries/house-of-burgesses/"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -83,
+              36.5
+            ],
+            [
+              -78,
+              36.5
+            ],
+            [
+              -75.1,
+              36.65
+            ],
+            [
+              -75.4,
+              38.4
+            ],
+            [
+              -77.2,
+              38.9
+            ],
+            [
+              -81.3,
+              39.1
+            ],
+            [
+              -83,
+              37.6
+            ],
+            [
+              -83,
+              36.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-maryland-1632",
+      "properties": {
+        "name": "1632年马里兰领主特许：切萨皮克湾与波托马克河间领地",
+        "start_year": 1632,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1632—1699年",
+        "label_type": "领主王室特许地区 · 1634后陆续定居",
+        "description": "1632年查理一世授予巴尔的摩勋爵马里兰特许，正文对切萨皮克湾、波托马克河、北纬40度及德拉瓦半岛有文字界定。多边形仅为宏观参考，领主授权不等于1632年各处已有驻军或波托马克流域原住民族丧失土地权利。",
+        "summary_zh": "1632年查理一世授予巴尔的摩勋爵马里兰特许，正文对切萨皮克湾、波托马克河、北纬40度及德拉瓦半岛有文字界定。多边形仅为宏观参考，领主授权不等于1632年各处已有驻军或波托马克流域原住民族丧失土地权利。",
+        "source_urls": [
+          "https://avalon.law.yale.edu/17th_century/ma01.asp"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.6,
+              39.7
+            ],
+            [
+              -75.1,
+              39.7
+            ],
+            [
+              -75.1,
+              37.9
+            ],
+            [
+              -76.1,
+              37.9
+            ],
+            [
+              -76.5,
+              38.2
+            ],
+            [
+              -77.4,
+              38.2
+            ],
+            [
+              -78.5,
+              38.6
+            ],
+            [
+              -79.6,
+              39.2
+            ],
+            [
+              -79.6,
+              39.7
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-connecticut-1662",
+      "properties": {
+        "name": "1662年康涅狄格王室特许：东岸至南海（太平洋）纸面声索",
+        "start_year": 1662,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1662—1699年",
+        "label_type": "横贯北美的法律声索 · 非内陆征服",
+        "description": "1662年王室特许从纳拉甘西特湾向西至所谓南海（太平洋），并与马萨诸塞的纸面纬度地带相关。横跨北美的狭长多边形仅把这一夸张特许可视化，不能代表内陆原住民族、法属或荷属地区遭实际兼并。",
+        "summary_zh": "1662年王室特许从纳拉甘西特湾向西至所谓南海（太平洋），并与马萨诸塞的纸面纬度地带相关。横跨北美的狭长多边形仅把这一夸张特许可视化，不能代表内陆原住民族、法属或荷属地区遭实际兼并。",
+        "source_urls": [
+          "https://avalon.law.yale.edu/17th_century/ct03.asp"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -124.5,
+              40.8
+            ],
+            [
+              -111,
+              40.8
+            ],
+            [
+              -98,
+              40.9
+            ],
+            [
+              -83,
+              41
+            ],
+            [
+              -71.3,
+              41
+            ],
+            [
+              -71.3,
+              42.15
+            ],
+            [
+              -83,
+              42.2
+            ],
+            [
+              -98,
+              42.2
+            ],
+            [
+              -111,
+              42.2
+            ],
+            [
+              -124.5,
+              42.15
+            ],
+            [
+              -124.5,
+              40.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-york-duke-1664",
+      "properties": {
+        "name": "1664—1672年约克公爵殖民地：夺取新尼德兰后的广域授权",
+        "start_year": 1664,
+        "end_year": 1672,
+        "display_class": "charter",
+        "period_label": "1664—1672年",
+        "label_type": "英方领主授予与殖民行政 · 非边界实测",
+        "description": "1664年英军夺取荷兰新尼德兰，约克公爵被授予覆盖纽约、新泽西和更广泛沿岸的权利。广域淡色参考的是授予及殖民争夺，不是每个山谷已受英军管理；1673年荷军重占前，该阶段在1672年结束。",
+        "summary_zh": "1664年英军夺取荷兰新尼德兰，约克公爵被授予覆盖纽约、新泽西和更广泛沿岸的权利。广域淡色参考的是授予及殖民争夺，不是每个山谷已受英军管理；1673年荷军重占前，该阶段在1672年结束。",
+        "source_urls": [
+          "https://history.nycourts.gov/judiciary-timeline/",
+          "https://history.nycourts.gov/legal-history-by-era/new-york-under-dutch-rule/"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80,
+              39.7
+            ],
+            [
+              -74.6,
+              39.7
+            ],
+            [
+              -71.7,
+              41.3
+            ],
+            [
+              -71.3,
+              43
+            ],
+            [
+              -72.1,
+              45.2
+            ],
+            [
+              -77.5,
+              45.3
+            ],
+            [
+              -80,
+              43
+            ],
+            [
+              -80,
+              39.7
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-york-duke-1674",
+      "properties": {
+        "name": "1674年后恢复的英属纽约：区别1673—1674荷兰收复期",
+        "start_year": 1674,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1674—1699年",
+        "label_type": "英荷政权再次转移 · 1674年底控制参考",
+        "description": "1673年荷军夺回纽约，1674年《威斯敏斯特条约》及同年11月的交接令英方恢复政权。以年为单位的地图在1674年展示年底英方状态，不代表该年1月至10月也一直为英方占领；虚线宽幅不是后来的精确纽约州边界。",
+        "summary_zh": "1673年荷军夺回纽约，1674年《威斯敏斯特条约》及同年11月的交接令英方恢复政权。以年为单位的地图在1674年展示年底英方状态，不代表该年1月至10月也一直为英方占领；虚线宽幅不是后来的精确纽约州边界。",
+        "source_urls": [
+          "https://www.nysenate.gov/timeline",
+          "https://history.nycourts.gov/figure/anthony-colve/"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80,
+              39.7
+            ],
+            [
+              -74.6,
+              39.7
+            ],
+            [
+              -71.7,
+              41.3
+            ],
+            [
+              -71.3,
+              43
+            ],
+            [
+              -72.1,
+              45.2
+            ],
+            [
+              -77.5,
+              45.3
+            ],
+            [
+              -80,
+              43
+            ],
+            [
+              -80,
+              39.7
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-nova-scotia-scottish-1621",
+      "properties": {
+        "name": "1621年苏格兰新斯科舍特许：海洋诸省与加斯佩半岛声索",
+        "start_year": 1621,
+        "end_year": 1632,
+        "display_class": "charter",
+        "period_label": "1621—1632年",
+        "label_type": "苏格兰王室纸面声索 · 非英格兰实控",
+        "description": "1621年詹姆斯六世以苏格兰君主身份授予威廉·亚历山大新斯科舍特许，原范围涉及今加拿大海洋诸省和加斯佩半岛，且与法属阿卡迪亚和米克马克人的米克马克基领地重叠。多边形并非英国占领整个海洋诸省；1629—1632查尔斯堡另由既有小范围图层体现。",
+        "summary_zh": "1621年詹姆斯六世以苏格兰君主身份授予威廉·亚历山大新斯科舍特许，原范围涉及今加拿大海洋诸省和加斯佩半岛，且与法属阿卡迪亚和米克马克人的米克马克基领地重叠。多边形并非英国占领整个海洋诸省；1629—1632查尔斯堡另由既有小范围图层体现。",
+        "source_urls": [
+          "https://www.parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.8,
+              43.1
+            ],
+            [
+              -67.8,
+              45.1
+            ],
+            [
+              -69,
+              47.7
+            ],
+            [
+              -67.3,
+              49.2
+            ],
+            [
+              -63.5,
+              49.1
+            ],
+            [
+              -59.8,
+              47.1
+            ],
+            [
+              -60.1,
+              44.3
+            ],
+            [
+              -64.8,
+              43.1
+            ],
+            [
+              -69.8,
+              43.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-newfoundland-island-1610",
+      "properties": {
+        "name": "1610年后英格兰纽芬兰殖民特许：整岛声索与英法争夺",
+        "start_year": 1610,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1610—1699年",
+        "label_type": "整岛殖民文书声索 · 非整岛持续统治",
+        "description": "1610年伦敦与布里斯托尔公司的特许包含整个纽芬兰岛，实际定居主要从丘比兹和阿瓦隆半岛展开。1662年后法国也在普莱桑斯建立殖民据点，贝奥图克人持续拥有自己的土地和行动空间。整岛外廓展示英方最大声索而非英格兰在1610—1699年连续实控全岛。",
+        "summary_zh": "1610年伦敦与布里斯托尔公司的特许包含整个纽芬兰岛，实际定居主要从丘比兹和阿瓦隆半岛展开。1662年后法国也在普莱桑斯建立殖民据点，贝奥图克人持续拥有自己的土地和行动空间。整岛外廓展示英方最大声索而非英格兰在1610—1699年连续实控全岛。",
+        "source_urls": [
+          "https://heritagenl.ca/discover/provincial-historic-commemorations-program-designations/early-sponsored-settlement-in-newfoundland/",
+          "https://www.gov.nl.ca/publicat/royalcomm/research/bakerchronology.pdf"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.4,
+              47.5
+            ],
+            [
+              -58.8,
+              49.2
+            ],
+            [
+              -57.6,
+              50.8
+            ],
+            [
+              -55,
+              51.8
+            ],
+            [
+              -53.4,
+              50.1
+            ],
+            [
+              -52.5,
+              47.5
+            ],
+            [
+              -53.8,
+              46.4
+            ],
+            [
+              -56.2,
+              46.5
+            ],
+            [
+              -58.5,
+              46.4
+            ],
+            [
+              -59.4,
+              47.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-leeward-islands-1632",
+      "properties": {
+        "name": "1632年后背风群岛英格兰殖民据点：圣基茨、尼维斯、安提瓜、蒙特塞拉特",
+        "start_year": 1632,
+        "end_year": 1699,
+        "display_class": "island",
+        "period_label": "1632—1699年",
+        "label_type": "多个岛屿殖民地包络 · 不能算海域主权",
+        "description": "英国国家档案馆记录17世纪前半叶英人在圣基茨、尼维斯、安提瓜与蒙特塞拉特等背风群岛建立殖民据点。大面积包络同时包含海水和英法争夺地区，圣基茨还存在法方辖区；不得视作英国对包络内全部岛陆、海域的连续排他控制。",
+        "summary_zh": "英国国家档案馆记录17世纪前半叶英人在圣基茨、尼维斯、安提瓜与蒙特塞拉特等背风群岛建立殖民据点。大面积包络同时包含海水和英法争夺地区，圣基茨还存在法方辖区；不得视作英国对包络内全部岛陆、海域的连续排他控制。",
+        "source_urls": [
+          "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -63.25,
+              16.45
+            ],
+            [
+              -62.95,
+              17.65
+            ],
+            [
+              -62.1,
+              17.95
+            ],
+            [
+              -61.05,
+              17.58
+            ],
+            [
+              -60.9,
+              16.7
+            ],
+            [
+              -62.2,
+              16.45
+            ],
+            [
+              -63.25,
+              16.45
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-st-helena-1659",
+      "properties": {
+        "name": "1659年后东印度公司圣赫勒拿岛：南大西洋补给殖民地",
+        "start_year": 1659,
+        "end_year": 1699,
+        "display_class": "island",
+        "period_label": "1659—1699年",
+        "label_type": "东印度公司岛屿控制参考 · 1673年短暂荷兰占领",
+        "description": "英格兰东印度公司1659年在圣赫勒拿建立补给据点，1673年荷兰人短暂攻占，同年英人夺回，1673年王室特许重申公司统治。小范围加宽包络突出海岛的位置，不表示周边海洋均归英国，更不表示1673年整年英方连续控制。",
+        "summary_zh": "英格兰东印度公司1659年在圣赫勒拿建立补给据点，1673年荷兰人短暂攻占，同年英人夺回，1673年王室特许重申公司统治。小范围加宽包络突出海岛的位置，不表示周边海洋均归英国，更不表示1673年整年英方连续控制。",
+        "source_urls": [
+          "https://www.legislation.gov.uk/uksi/2009/1751/schedule/part/PREAMBLE",
+          "https://www.sthelenahistory.com/navContent/02-Studies/Land_and_Property.html"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.93,
+              -15.77
+            ],
+            [
+              -5.45,
+              -15.77
+            ],
+            [
+              -5.45,
+              -16.15
+            ],
+            [
+              -5.93,
+              -16.15
+            ],
+            [
+              -5.93,
+              -15.77
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-quebec-kirke-1629",
+      "properties": {
+        "name": "1629—1632年柯克兄弟短占魁北克：圣劳伦斯河局部驻点",
+        "start_year": 1629,
+        "end_year": 1632,
+        "display_class": "conquest",
+        "period_label": "1629—1632年",
+        "label_type": "短时军事占领的河谷示意 · 非征服加拿大",
+        "description": "1629年柯克兄弟迫使尚普兰在魁北克投降，英人据守殖民聚落及附近河道要点，1632年依和约交还法国。淡色宽框仅用来让读者识别短期军事地点，不能误读为英格兰曾占领整个魁北克省、加拿大或全部圣劳伦斯河流域。",
+        "summary_zh": "1629年柯克兄弟迫使尚普兰在魁北克投降，英人据守殖民聚落及附近河道要点，1632年依和约交还法国。淡色宽框仅用来让读者识别短期军事地点，不能误读为英格兰曾占领整个魁北克省、加拿大或全部圣劳伦斯河流域。",
+        "source_urls": [
+          "https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=25855&methode=consulter&type=pge",
+          "https://www.historymuseum.ca/cmc/vmnf/champlain/bat2c_en.html"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -72,
+              46.15
+            ],
+            [
+              -70.3,
+              46.15
+            ],
+            [
+              -70.3,
+              47.4
+            ],
+            [
+              -72,
+              47.4
+            ],
+            [
+              -72,
+              46.15
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-massachusetts-province-1692",
+      "properties": {
+        "name": "1692年后马萨诸塞湾省：新特许下的普利茅斯、缅因及部分阿卡迪亚声索",
+        "start_year": 1692,
+        "end_year": 1699,
+        "display_class": "administrative",
+        "period_label": "1692—1699年",
+        "label_type": "1691特许在1692实施 · 王室行政声索",
+        "description": "威廉与玛丽于1691年签署新特许，并在1692年于波士顿实施，合并原马萨诸塞湾、普利茅斯、缅因和部分新斯科舍声索。大面显示特许法理范围，并不证明1690年代法国阿卡迪亚、佩诺布斯科特等原住民族所处地区全部落入省政府实际控制。",
+        "summary_zh": "威廉与玛丽于1691年签署新特许，并在1692年于波士顿实施，合并原马萨诸塞湾、普利茅斯、缅因和部分新斯科舍声索。大面显示特许法理范围，并不证明1690年代法国阿卡迪亚、佩诺布斯科特等原住民族所处地区全部落入省政府实际控制。",
+        "source_urls": [
+          "https://www.sec.state.ma.us/divisions/archives/collections/mass-archives-collection.htm",
+          "https://www.mass.gov/info-details/massachusetts-historical-laws-and-legal-documents"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.5,
+              41.25
+            ],
+            [
+              -69.9,
+              41.25
+            ],
+            [
+              -68.65,
+              42.2
+            ],
+            [
+              -66.25,
+              44.4
+            ],
+            [
+              -65.95,
+              46.5
+            ],
+            [
+              -68.6,
+              47.4
+            ],
+            [
+              -71.8,
+              46
+            ],
+            [
+              -72.7,
+              44
+            ],
+            [
+              -73.5,
+              42.3
+            ],
+            [
+              -73.5,
+              41.25
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-rhode-island-1663",
+      "properties": {
+        "name": "1663年罗得岛与普罗维登斯殖民地特许：纳拉甘西特湾",
+        "start_year": 1663,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1663—1699年",
+        "label_type": "小型特许殖民地大轮廓 · 原住民权利未消失",
+        "description": "1663年查理二世授予罗得岛与普罗维登斯种植园新王室特许，承认殖民自治及宗教宽容，涉及纳拉甘西特湾土地。绘制比早期定居地更大的示意参考框，不构成当时整个纳拉甘西特人领地已被一致、合法并完全割让的证明。",
+        "summary_zh": "1663年查理二世授予罗得岛与普罗维登斯种植园新王室特许，承认殖民自治及宗教宽容，涉及纳拉甘西特湾土地。绘制比早期定居地更大的示意参考框，不构成当时整个纳拉甘西特人领地已被一致、合法并完全割让的证明。",
+        "source_urls": [
+          "https://www.sos.ri.gov/divisions/civics-and-education/for-educators/themed-collections/rhode-island-charter",
+          "https://avalon.law.yale.edu/17th_century/ri04.asp"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.95,
+              41.1
+            ],
+            [
+              -71.05,
+              41.1
+            ],
+            [
+              -71.05,
+              42.05
+            ],
+            [
+              -71.95,
+              42.05
+            ],
+            [
+              -71.95,
+              41.1
+            ]
+          ]
+        ]
       }
     }
   ]
