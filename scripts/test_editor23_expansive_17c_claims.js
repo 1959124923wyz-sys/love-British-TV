@@ -4,7 +4,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const fc=json('data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson');
 assert.equal(fc.type,'FeatureCollection');assert.equal(fc.metadata.schema,'atlas-17c-expansive-claim-v1');
-assert(fc.features.length>=14);
+assert(fc.features.length>=26,'all 12 second-phase documentary claim envelopes must be retained');
+assert.equal(fc.metadata.feature_count,fc.features.length,'metadata count must equal actual features');
 const ids=new Set(),allowed=new Set(['charter','company','island','conquest','administrative']);
 for(let f of fc.features){const p=f.properties;assert(f.id&&!ids.has(f.id));ids.add(f.id);
 assert.equal(f.geometry.type,'Polygon');assert.equal(f.geometry.coordinates.length,1);
@@ -33,6 +34,21 @@ assert(active(1665).some(f=>f.id==='claim-carolina-1665'));
 assert(active(1670).some(f=>f.id==='claim-hudson-bay-1670'));
 assert(!active(1680).some(f=>f.id==='claim-pennsylvania-1681'));
 assert(active(1681).some(f=>f.id==='claim-pennsylvania-1681'));
+// Phase 2 cross-year political and charter continuity: these are still schematic non-metric areas.
+const has=(year,id)=>active(year).some(f=>f.id===id);
+assert(has(1624,'claim-virginia-company-1609')&&!has(1624,'claim-virginia-crown-1625'));
+assert(!has(1625,'claim-virginia-company-1609')&&has(1625,'claim-virginia-crown-1625'),'royal Virginia follows revoked company without loss of colonial story');
+assert(!has(1631,'claim-maryland-1632')&&has(1632,'claim-maryland-1632'));
+assert(has(1662,'claim-connecticut-1662')&&!has(1661,'claim-connecticut-1662'));
+assert(has(1664,'claim-new-york-duke-1664')&&has(1672,'claim-new-york-duke-1664'));
+assert(!has(1673,'claim-new-york-duke-1664')&&!has(1673,'claim-new-york-duke-1674'),'Dutch recapture cannot be shown as continued English rule');
+assert(!has(1672,'claim-new-york-duke-1674')&&has(1674,'claim-new-york-duke-1674'),'English restored late 1674');
+assert(has(1621,'claim-nova-scotia-scottish-1621')&&!has(1633,'claim-nova-scotia-scottish-1621'));
+assert(has(1629,'claim-quebec-kirke-1629')&&!has(1633,'claim-quebec-kirke-1629'));
+assert(!has(1691,'claim-massachusetts-province-1692')&&has(1692,'claim-massachusetts-province-1692'));
+assert(has(1610,'claim-newfoundland-island-1610')&&has(1659,'claim-st-helena-1659'));
+assert(has(1632,'claim-leeward-islands-1632')&&has(1663,'claim-rhode-island-1663'));
+for(const f of fc.features)assert(!f.properties.area_sqkm&&f.properties.expansive_claim_overlay_only,'schematic areas must never become measured territory');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),css=fs.readFileSync(path.join(root,'css/dark-atlas-v2.css'),'utf8');
 assert(app.includes('renderSeventeenthColonialClaims()'));assert(app.includes("groups.colonialClaims.clearLayers()"));
 assert(app.includes("if(year<1600||!seventeenthColonialClaims"));assert(app.includes("'toggleTerritorialFootprints'"));
@@ -41,4 +57,4 @@ assert(app.includes("pane:'seventeenthColonialClaimsPane'"));assert(app.includes
 assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
 assert.equal(json('data/chapters.json').chapters.length,10);
-console.log('PASS: 14 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
+console.log('PASS: 26 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
