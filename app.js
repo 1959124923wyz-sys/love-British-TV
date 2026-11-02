@@ -407,7 +407,7 @@ function openTerritoryDossier(feature,kind='historic'){
   '<h2>'+escapeHTML(kind==='seventeenth-claim'?conciseRegionTitle(p.name):(p.name||feature.id||'历史领土概况'))+'</h2>'+
   (kind==='seventeenth-claim'&&conciseRegionTitle(p.name)!==p.name?'<details class="atlas-complete-title"><summary>完整区域名称</summary><p>'+escapeHTML(p.name)+'</p></details>':'')+
   '<p>'+escapeHTML(description)+'</p>'+
-  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
+  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('图层性质',kind==='seventeenth-claim'?(p.map_presentation==='optional_maximal_paper_claim'?'跨大陆等最大法律声索 · 默认仅存档':p.label_type||'殖民文书与贸易活动地理参考'):null)+row('边界说明',kind==='seventeenth-claim'?'概略示意外缘 · 非实测边界 · 不得计算实控面积':null)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
   ''+'</div>'+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
@@ -416,12 +416,13 @@ function openTerritoryDossier(feature,kind='historic'){
   (alternativeClaims.length?'<h3 class="zone-links-heading">当前位置的其他声索／治理参考（'+alternativeClaims.length+'）</h3>'+ 
    '<p>多项纸面授权或行政参考重叠，不表示该地被多方同时实际占领。选择另一块查看其独立史料。</p>'+
    '<div class="zone-related">'+alternativeClaims.map((f,i)=>
-    '<button type="button" class="zone-record-link" data-overlap-claim="'+i+'">'+escapeHTML(f.properties.name)+'</button>').join('')+'</div>':'')+
+    '<button type="button" class="zone-record-link" data-overlap-claim="'+i+'">'+escapeHTML(conciseRegionTitle(f.properties.name))+'</button>').join('')+'</div>':'')+
   listSources(p.source_ids||[],{id:p.id||feature.id})+
   ((p.source_urls||[]).filter(u=>/^https:\/\//.test(u)&&!(p.source_ids||[]).some(id=>sourcesById.get(id)?.url===u)).length?
    '<div class="zone-source-links"><h3 class="zone-links-heading">补充资料</h3>'+
    [...new Set(p.source_urls.filter(u=>/^https:\/\//.test(u)&&!(p.source_ids||[]).some(id=>sourcesById.get(id)?.url===u)))].map(url=>
-    '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">阅读 ↗</a>').join('')+'</div>':'');
+    '<a class="source-link atlas-source-host" href="'+escapeHTML(url)+'" title="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">'+
+     '原始来源网站 · '+escapeHTML((()=>{try{return new URL(url).hostname.replace(/^www\\./,'')}catch(_){return '史料站点'}})())+' ↗</a>').join('')+'</div>':'');
  openPanel('dossier');
  $('dossierBody').querySelector('[data-return-claim-directory]')?.addEventListener('click',openSeventeenthClaimDirectory);
  $('dossierBody').querySelectorAll('[data-zone-place]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedPlaces[Number(n.dataset.zonePlace)],'place')));
