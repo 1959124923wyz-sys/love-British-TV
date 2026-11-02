@@ -84,3 +84,29 @@
 .major-story-article .story-stat-census summary{cursor:pointer;color:#f5cd99;font-size:12px;line-height:1.7;position:sticky;left:0}
 .major-story-article .story-stat-census .story-stat-table{min-width:640px}
 .major-story-article .story-stat-census .story-stat-table caption{white-space:normal}
+
+/* Long-form desktop history reading: show place in the article without
+   overloading the narrative with repeated headings or deleting any paragraphs. */
+.story-reading-toolbar{display:none}
+@media(min-width:1050px){
+ .major-story-article .story-reading-toolbar{
+  position:sticky;top:0;z-index:5;display:flex;gap:10px;align-items:center;
+  padding:9px 10px;margin:0 0 15px;
+  border:1px solid #47627a;border-radius:8px;
+  color:#d8e4f0;background:#13273b;box-shadow:0 5px 13px rgba(0,0,0,.2);
+ }
+ .story-reading-toolbar button{
+  flex-shrink:0;background:#203c54;border:1px solid #4b6982;border-radius:6px;
+  color:#f0c9a4;padding:7px 8px;font:inherit;font-size:11px;cursor:pointer
+ }
+ .story-reading-toolbar button:hover,.story-reading-toolbar button:focus-visible{
+  background:#30536c;outline:2px solid #d8aa80;outline-offset:2px
+ }
+ .story-reading-progress{flex:1;min-width:68px;display:grid;gap:5px}
+ .story-reading-progress-label{font-size:11px;color:#c1d5e5;text-align:center;white-space:nowrap}
+ .story-reading-progress-meter{height:4px;background:#385065;border-radius:7px;overflow:hidden}
+ .story-reading-progress-fill{display:block;height:100%;width:0;background:#d6a983;border-radius:7px;transition:width .12s linear}
+ .major-story-article .story-section{scroll-margin-top:88px}
+ .major-story-article .story-toc{scroll-margin-top:88px}
+}
+@media(prefers-reduced-motion:reduce){.story-reading-progress-fill{transition:none}}
