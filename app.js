@@ -372,13 +372,18 @@ function historicAreaDescription(properties,selectedYear){
   '外缘依据史料地名概略描绘，并非当年的实测行政或军事疆界。':
   '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
 }
-function openTerritoryDossier(feature,kind='historic'){
+function openTerritoryDossier(feature,kind='historic',claimPoint=null){
  const p=feature.properties||{},restoration=kind==='restoration',occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war',atlanticContact=kind==='atlantic-contact',linkedAction=kind==='linked-action';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
  const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室广域殖民声索 · 非实际逐地控制'):kind==='seventeenth-reference'?(p.label_type||'17世纪来源地理参考 · 非实测历史影响区'):kind==='indigenous-encounter'?'原住民接触与抵抗 · 无占领':kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
  const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.ongoing_at_atlas_end?'起（至1599年地图研究范围）':p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
+ // Allow the 53 broad and often overlapping legal envelopes to be inspected individually.
+ // Reuse the original point when changing dossier, never treat overlap as shared sovereignty.
+ const alternativeClaims=kind==='seventeenth-claim'&&claimPoint
+  ?seventeenthClaimsAtPoint(claimPoint.lng,claimPoint.lat,year).filter(f=>f.id!==feature.id)
+  :[];
  const parties=p.controller_zh||p.actor||(contested?(p.contenders_zh||[]).join('、'):'');
  const relatedPlaces=(p.related_place_ids||[]).map(id=>findPlaceAcrossChapters(id)).filter(Boolean);
  const relatedEvents=(p.related_event_ids||[]).map(id=>
@@ -394,6 +399,10 @@ function openTerritoryDossier(feature,kind='historic'){
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
    '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+ev.name)+'</button>').join('')+'</div>':'')+
+  (alternativeClaims.length?'<h3 class="zone-links-heading">当前位置的其他声索／治理参考（'+alternativeClaims.length+'）</h3>'+ 
+   '<p>多项纸面授权或行政参考重叠，不表示该地被多方同时实际占领。选择另一块查看其独立史料。</p>'+
+   '<div class="zone-related">'+alternativeClaims.map((f,i)=>
+    '<button type="button" class="zone-record-link" data-overlap-claim="'+i+'">'+escapeHTML(f.properties.name)+'</button>').join('')+'</div>':'')+
   listSources(p.source_ids||[],{id:p.id||feature.id})+
   ((p.source_urls||[]).filter(u=>/^https:\/\//.test(u)&&!(p.source_ids||[]).some(id=>sourcesById.get(id)?.url===u)).length?
    '<div class="zone-source-links"><h3 class="zone-links-heading">补充资料</h3>'+
@@ -402,6 +411,7 @@ function openTerritoryDossier(feature,kind='historic'){
  openPanel('dossier');
  $('dossierBody').querySelectorAll('[data-zone-place]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedPlaces[Number(n.dataset.zonePlace)],'place')));
  $('dossierBody').querySelectorAll('[data-zone-event]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedEvents[Number(n.dataset.zoneEvent)],'event')));
+ $('dossierBody').querySelectorAll('[data-overlap-claim]').forEach(n=>n.addEventListener('click',()=>openTerritoryDossier(alternativeClaims[Number(n.dataset.overlapClaim)],'seventeenth-claim',claimPoint)));
 }
 function openCollection(items,title){
  if(!items.length)return;
@@ -715,6 +725,28 @@ function footprintEnabledFor(placeId){
 // halo is never a measured battlefield, trading zone, colony or historical boundary.
 // Research polygons and relationship segments only: NO sovereign boundary,
 // measured march, ocean track, province-wide eviction or territorial area.
+// Let readers inspect competing documentary claims under the same map coordinate.
+// This tests point-in-polygon for an *illustrative* envelope only: not real territorial ownership.
+function seventeenthClaimContainsPoint(feature,lng,lat){
+ const ring=feature.geometry?.coordinates?.[0];
+ if(!ring||ring.length<4||!Number.isFinite(lng)||!Number.isFinite(lat))return false;
+ let inside=false;
+ for(let i=0,j=ring.length-1;i<ring.length;j=i++){
+  const [xi,yi]=ring[i],[xj,yj]=ring[j];
+  // Include a click exactly on a schematic edge so its own dossier stays navigable.
+  const cross=(lng-xi)*(yj-yi)-(lat-yi)*(xj-xi);
+  if(Math.abs(cross)<1e-9&&lng>=Math.min(xi,xj)&&lng<=Math.max(xi,xj)
+      &&lat>=Math.min(yi,yj)&&lat<=Math.max(yi,yj))return true;
+  if((yi>lat)!==(yj>lat)&&lng<(xj-xi)*(lat-yi)/(yj-yi)+xi)inside=!inside;
+ }
+ return inside;
+}
+function seventeenthClaimsAtPoint(lng,lat,atYear=year){
+ if(!seventeenthColonialClaims||!Number.isFinite(lng)||!Number.isFinite(lat))return [];
+ return seventeenthColonialClaims.features.filter(f=>
+  atYear>=f.properties.start_year&&atYear<=f.properties.end_year
+  &&seventeenthClaimContainsPoint(f,lng,lat));
+}
 function renderSeventeenthColonialClaims(){
  groups.colonialClaims.clearLayers();
  if(year<1600||!seventeenthColonialClaims||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
@@ -745,7 +777,7 @@ function renderSeventeenthColonialClaims(){
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',event=>{
     if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
-    openTerritoryDossier(feature,'seventeenth-claim');
+    openTerritoryDossier(feature,'seventeenth-claim',event.latlng);
    });
   }
  }).addTo(groups.colonialClaims);
