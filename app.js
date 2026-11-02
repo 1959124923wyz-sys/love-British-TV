@@ -519,6 +519,12 @@ function expandCluster(group,pin=false){
  expandedPinned=Boolean(pin||(wasSame&&expandedPinned));
  groups.clusterExpanded.clearLayers();
  const items=group.items,count=items.length;
+ // Never fan dozens of icons into a screen-filling grid. Show a scrollable
+ // chronological record list instead; all records and event provenance remain.
+ if(count>8&&!(focusedEventId&&items.some(x=>x.item.id===focusedEventId))){
+  if(pin)openCollection(items,'该地区的'+count+'项历史记录');
+  return;
+ }
  const pt=map.latLngToContainerPoint(group.latlng),size=map.getSize();
  const spacing=34,diameter=28,margin=14;
  const otherPoints=clusterObstacles.filter(p=>p.key!==key);
@@ -596,7 +602,10 @@ function renderPoints(){
   }
  }
  // Aggregate by screen distance, without changing the historically stored coordinates.
- const nearby=[],cells=new Map(),cellSize=32;
+ // At world scale 17C accumulated events form a dense Atlantic icon wall.
+ // Merge within a slightly larger SCREEN radius; do not alter source coordinates.
+ const clusterRadius=year>=1600&&map.getZoom()<=4?56:32;
+ const nearby=[],cells=new Map(),cellSize=clusterRadius;
  // Spatial hashing limits grouping checks to neighboring 32-pixel cells.
  for(const record of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item)||a.item.id.localeCompare(b.item.id))){
   const point=map.latLngToLayerPoint([record.lat,record.lng]);
@@ -604,7 +613,7 @@ function renderPoints(){
   let group=null,earliest=Infinity;
   for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)
    for(const g of cells.get((gx+dx)+','+(gy+dy))||[]){
-    if(g.order<earliest&&Math.hypot(g.pt.x-point.x,g.pt.y-point.y)<32){group=g;earliest=g.order}
+    if(g.order<earliest&&Math.hypot(g.pt.x-point.x,g.pt.y-point.y)<clusterRadius){group=g;earliest=g.order}
    }
   if(!group){
    group={pt:point,latlng:map.layerPointToLatLng(point),items:[],order:nearby.length};
@@ -635,7 +644,7 @@ function renderPoints(){
   // dotted uncertainty cue. Mixed hubs are not surveyed historical sites.
   const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+(containsUncertain?' atlas-cluster-uncertain':'')+(newCount?' atlas-cluster-new-this-year':'')+(g.items.some(x=>x.item.id===focusedEventId)?' atlas-target-aggregate':'')+'" aria-label="'+g.items.length+'项历史记录'+(newCount?'，其中本年新增'+newCount+'项':'')+(containsUncertain?'，包含大致位置参考':'')+'"><strong>'+g.items.length+'</strong>'+(newCount?'<span class="atlas-cluster-new-count" aria-hidden="true">+'+newCount+'新</span>':'')+'</div>',iconSize:[36,36],iconAnchor:[18,18]});
   L.marker(g.latlng,{icon:ico,zIndexOffset:950})
-   .on('mouseover',()=>{if(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|'))expandCluster(g)})
+   .on('mouseover',()=>{if(g.items.length<=8&&(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|')))expandCluster(g)})
    .on('mouseout',scheduleClusterClose)
    .on('click',()=>expandCluster(g,true))
    .addTo(groups.cluster);
@@ -750,6 +759,25 @@ function seventeenthClaimsAtPoint(lng,lat,atYear=year){
   atYear>=f.properties.start_year&&atYear<=f.properties.end_year
   &&seventeenthClaimContainsPoint(f,lng,lat));
 }
+// The catalogue is a dependable alternative when tiny, crowded, or dashed-only areas
+// cannot be hit with a mouse; every archival envelope remains accessible by year.
+function openSeventeenthClaimDirectory(){
+ if(!seventeenthColonialClaims||year<1600||year>1699)return;
+ const active=seventeenthColonialClaims.features.filter(f=>
+  year>=f.properties.start_year&&year<=f.properties.end_year)
+  .sort((a,b)=>a.properties.name.localeCompare(b.properties.name,'zh'));
+ const large=active.filter(f=>f.properties.map_presentation==='optional_maximal_paper_claim').length;
+ $('dossierBody').innerHTML='<div class="dossier-kicker">17世纪地图 · '+year+'年</div>'+
+  '<h2>本年殖民区域与原始声索</h2>'+
+  '<p>本年共'+active.length+'块史料参考区域，其中'+large+'块属于默认隐藏的跨大陆或巨大流域纸面声索。点击逐项核对史料。此目录并非实际军事占领面积清单，区域重叠不累计。</p>'+
+  '<div class="zone-related">'+active.map((f,i)=>'<button type="button" class="zone-record-link" data-colonial-directory="'+i+'">'+
+   escapeHTML(f.properties.name)+
+   (f.properties.map_presentation==='optional_maximal_paper_claim'?' · 纯纸面特许':'')+
+   '</button>').join('')+'</div>';
+ openPanel('dossier');
+ $('dossierBody').querySelectorAll('[data-colonial-directory]').forEach(btn=>
+  btn.addEventListener('click',()=>openTerritoryDossier(active[Number(btn.dataset.colonialDirectory)],'seventeenth-claim')));
+}
 function renderSeventeenthColonialClaims(){
  groups.colonialClaims.clearLayers();
  if(year<1600||!seventeenthColonialClaims||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
@@ -760,7 +788,8 @@ function renderSeventeenthColonialClaims(){
   return xs.length?(Math.max(...xs)-Math.min(...xs))*(Math.max(...ys)-Math.min(...ys)):0;
  };
  const selected=seventeenthColonialClaims.features
-  .filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year)
+  .filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year
+   &&(f.properties.map_presentation!=='optional_maximal_paper_claim'||$('showMaximalPaperCharters').checked))
   .sort((a,b)=>displaySpan(b)-displaySpan(a));
  if(!selected.length)return;
  const colors={charter:'#b985e8',company:'#ad7bd2',island:'#c5a6db',conquest:'#b875c5',administrative:'#c6a06c'};
@@ -768,15 +797,17 @@ function renderSeventeenthColonialClaims(){
   pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
   style:f=>{
    const p=f.properties||{},shade=colors[p.display_class]||'#ab85d1';
-   return {pane:'seventeenthColonialClaimsPane',color:shade,weight:2.3,opacity:.95,
-    dashArray:'8 7',lineCap:'round',fill:true,fillColor:shade,
-    fillOpacity:p.display_class==='island'?.31:p.display_class==='conquest'?.25:.20,
-    bubblingMouseEvents:false,className:'atlas-17c-expansive-claim'};
+   const maxPaper=p.map_presentation==='optional_maximal_paper_claim';
+   return {pane:'seventeenthColonialClaimsPane',color:shade,weight:maxPaper?2:2.3,
+    opacity:maxPaper?.69:.9,dashArray:maxPaper?'4 10':'8 7',lineCap:'round',
+    fill:!maxPaper,fillColor:shade,
+    fillOpacity:maxPaper?0:p.display_class==='island'?.19:p.display_class==='conquest'?.17:.12,
+    bubblingMouseEvents:false,className:'atlas-17c-expansive-claim'+(maxPaper?' atlas-17c-paper-only':'')};
   },
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(p.label_type+' · 示意宽取／非实测边界 · 点击查看来源')+'</div>',
+    escapeHTML(p.label_type+(p.map_presentation==='optional_maximal_paper_claim'?' · 仅纸面远距声索，无填色':' · 非实测边界')+' · 点击查看史料')+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',event=>{
     if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
@@ -1796,6 +1827,18 @@ function openMapTerritoryAt(latlng){
   });
   if(historic){openTerritoryDossier(historic,'historic');return true;}
  }
+ // Source-backed 17th-century envelopes sit below other historic map panes;
+ // this coordinate hit-test also handles SVG/Canvas overlays intercepting their clicks.
+ if(year>=1600&&$('toggleTerritorialFootprints').checked&&$('toggleControlAreas').checked){
+  const candidates=seventeenthClaimsAtPoint(lon,lat).filter(f=>
+   f.properties.map_presentation!=='optional_maximal_paper_claim'||$('showMaximalPaperCharters').checked);
+  if(candidates.length){
+   const span=f=>{const v=f.geometry.coordinates[0],xs=v.map(p=>p[0]),ys=v.map(p=>p[1]);return (Math.max(...xs)-Math.min(...xs))*(Math.max(...ys)-Math.min(...ys));};
+   candidates.sort((a,b)=>span(a)-span(b));
+   openTerritoryDossier(candidates[0],'seventeenth-claim',latlng);
+   return true;
+  }
+ }
  if($('toggleKingdom').checked){
   const polity=sovereigntyReferenceAreas.find(x=>featureContainsCoordinate(x.feature,lon,lat));
   if(polity){openPolity(polity.group);return true;}
@@ -2545,6 +2588,8 @@ compactMapMedia.addEventListener('change',e=>{
 $('mapLayerTerritory').addEventListener('change',syncMapLayers);
 $('mapLayerEvents').addEventListener('change',syncMapLayers);
 $('showModernBasemap').addEventListener('change',e=>setBasemap(e.target.checked?'modern':'physical'));
+$('showMaximalPaperCharters').addEventListener('change',()=>{if(atlas)renderSeventeenthColonialClaims()});
+$('showSeventeenthClaimDirectory').addEventListener('click',openSeventeenthClaimDirectory);
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
 function jumpToEnteredYear(){
  if(!atlas)return;
