@@ -19,7 +19,7 @@
   card.setAttribute('aria-label','事件简介：'+item.name);
   card.innerHTML='<button type="button" class="story-preview-close" aria-label="关闭事件简介" data-story-preview-close="1">×</button>'+
    '<small>'+esc(item.year)+'年 · 历史事件</small>'+
-   '<h3>'+esc(item.name)+'</h3>'+
+   '<h3>'+esc(eventHeadline(item))+'</h3>'+
    '<p>'+esc(readerFriendly(item.description||item.short_description||'事件发生于这一时期。'))+'</p>';
   document.body.appendChild(card);
   preview=card;
@@ -30,6 +30,9 @@
   card.style.left=Math.round(x)+'px';
   card.style.top=Math.round(y)+'px';
  }
+ function eventHeadline(item){return window.HistoryHeadlines?.eventTitle?.(item)||item?.name||'';}
+ function storyHeadline(item){return window.HistoryHeadlines?.storyTitle?.(item)||item?.title||'';}
+ function sectionHeadline(s){return window.HistoryHeadlines?.sectionTitle?.(s)||s;}
  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]});}
  function activeBody(){return document.getElementById('dossierBody');}
  function eventInMemory(id){return window.atlasStoryBridge?.eventById?.(id)||null;}
@@ -40,7 +43,7 @@
   if(!metas.length)return '';
   const choices=metas.map(meta=>
    '<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(item.id)+'">'+
-   '<span>'+esc(meta.title)+'</span><span aria-hidden="true">›</span></button>').join('');
+   '<span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>').join('');
   return '<section class="major-story-entry" aria-label="相关重大历史专题">'+
    '<span class="major-story-eyebrow">相关重大历史专题</span>'+choices+
    (metas.length===1?'<small>'+esc(metas[0].period)+' · 了解战争的前因、经过及后果</small>':'')+'</section>';
@@ -67,7 +70,9 @@
   while((match=regex.exec(text))){
    out+=esc(text.slice(last,match.index));
    const id=match[1],label=match[2];
-   out+='<button type="button" class="story-event-link" data-story-event="'+esc(id)+'" title="单击定位或查看简介，双击阅读详情">'+esc(label)+'</button>';
+   const linked=eventInMemory(id),short=linked&&label.length>22?eventHeadline(linked):label;
+   out+='<button type="button" class="story-event-link" data-story-event="'+esc(id)+
+    '" title="'+esc(label)+' · 单击定位或查看简介，双击阅读详情">'+esc(short)+'</button>';
    last=regex.lastIndex;
   }
   return out+esc(text.slice(last));
@@ -131,19 +136,20 @@
  }
  function storyHtml(article){
   const relatedStories=(article.related_story_ids||[]).map(id=>storyMeta.get(id)).filter(Boolean)
-   .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(meta.title)+'</span><span aria-hidden="true">›</span></button>')
+   .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
   return '<article class="major-story-article" data-story-id="'+esc(article.id)+'">'+
     '<header class="major-story-header"><button type="button" class="story-back" data-story-return="1">← 返回原事件</button>'+ 
     '<div class="dossier-kicker">重大历史专题 · '+esc(article.region)+'</div>'+
-    '<h2>'+esc(article.title)+'</h2>'+
+    '<h2>'+esc(storyHeadline(article))+'</h2>'+
+    (storyHeadline(article)!==article.title?'<details class="atlas-complete-title"><summary>完整专题题名</summary><p>'+esc(article.title)+'</p></details>':'')+
     '<p class="story-subtitle">'+esc(article.subtitle)+'</p>'+
     '<p class="story-lead">'+esc(article.lead)+'</p></header>'+relatedMarkup+quantitativeHistoryHtml(article)+
     '<details class="story-toc"><summary>阅读目录 · '+article.sections.length+'节 <span aria-hidden="true">▾</span></summary>'+
-    '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sec.heading.replace(/^[一二三四五六七八九十]+、/,''))+'</button>').join('')+'</nav></details>'+
+    '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sectionHeadline(sec.heading))+'</button>').join('')+'</nav></details>'+
     '<div class="story-body">'+article.sections.map(sec=>
-     '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3>'+esc(sec.heading)+'</h3>'+
+     '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3>'+esc(sectionHeadline(sec.heading))+'</h3>'+
       sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p))+'</p>').join('')+
      '</section>').join('')+'</div>'+
     '<details class="story-sources"><summary>参考资料 · '+article.sources.length+'项 <span aria-hidden="true">▾</span></summary>'+
