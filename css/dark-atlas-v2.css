@@ -884,3 +884,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 /* Editor23: user-requested broad colonial paper-claim tint, explicitly no exact historic boundary. */
 .map-mode-help .swatch.expansive-claim{background:rgba(185,133,232,.38);border:2px dashed #b985e8;border-radius:2px;box-sizing:border-box}
 .atlas-17c-expansive-claim{cursor:pointer;vector-effect:non-scaling-stroke}
+
+/* Desktop 17C source directory: functional access to all year-active colonial references. */
+#showSeventeenthClaimDirectory{display:block;width:100%;padding:8px 10px;text-align:left;background:#20384c;color:#e4d1ed;border:1px solid #54728a;border-radius:6px;font:inherit;cursor:pointer}
+#showSeventeenthClaimDirectory:hover,#showSeventeenthClaimDirectory:focus-visible{background:#31516b;outline:2px solid #b985e8;outline-offset:2px}
