@@ -220,6 +220,24 @@ assert(api.eventTitle({year:1599,id:'legacy',name:'1599年旧版事件标题'})=
 assert(app.includes('conciseEventTitle(e)')&&app.includes('conciseEventTitle(item)'));
 assert(readerCode.includes('storyHeadline(article)')&&readerCode.includes('sectionHeadline(sec.heading)'));
 assert(readerCode.includes('eventHeadline(linked)')&&readerCode.includes('完整专题题名'));
+// Readability audit 2026-11-02: 17C year counts must come from actual decade data,
+// and the archival directory may be searched and navigated without loss of provenance.
+assert(html.includes('id="seventeenthEventTools"')&&html.includes('id="seventeenthEventSearch"')&&html.includes('id="showYearEventsOnly"'));
+assert(html.includes('id="showDecadeEventsToYear"')&&html.includes('id="clearSeventeenthEventSearch"'));
+assert(app.includes('const visibleEvents=query?scoped.filter(')&&app.includes('conciseEventTitle(e),e.description,e.short_description,e.date_label'),
+ 'search must include original full historical event titles and dates, not just edited snippets');
+assert(app.includes("'chapterIntro').textContent='本十年已收录'+decadeTotal")&&
+ app.includes('const observed=atlas.events.filter(e=>occurredByYear(e,year)).length'),
+ '17C annual chronology and counts must be derived from actual historic records');
+assert(!app.includes("textContent='年代介绍待定'"),'obsolete 17C placeholder must not appear in actual year summary');
+assert(app.includes('function openSeventeenthClaimDirectory()')&&app.includes('claimDirectorySearch')&&
+ app.includes('data-directory-group')&&app.includes('data-return-claim-directory'),
+ 'every source dossier must be reachable via grouped searchable directory and allow a return');
+assert(css.includes('.atlas-event-tools-17c')&&css.includes('.atlas-colony-directory-group'));
+const atlas1690=json('data/atlas-1690-1699.json');
+assert(atlas1690.events.length>=90,'1690s event count source unexpectedly changed');
+assert(atlas1690.events.some(e=>e.year===1699)&&atlas1690.events.some(e=>e.year===1691),
+ 'search and year-specific controls need distinct new and earlier decade events');
 console.log('PASS: quiet overview polygon overlap, explicit detailed boundaries, '+longEventCount+' long 17C events, and 29 concise serial-story headlines.');
 console.log('PASS: overlapping Delaware legal-claim navigation, Dutch recapture, cross-link integrity, 29 published essays and '+withoutLinks.length+' documented event-link gaps.');
 console.log('PASS: 53 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
