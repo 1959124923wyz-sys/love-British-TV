@@ -128,7 +128,7 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),html=fs.readFileSync(
 assert(app.includes('renderSeventeenthColonialClaims()'));
 assert(app.includes('.sort((a,b)=>displaySpan(b)-displaySpan(a))'),'large polygon rendering must not cover clickable small colonies');assert(app.includes("groups.colonialClaims.clearLayers()"));
 assert(app.includes("if(year<1600||!seventeenthColonialClaims"));assert(app.includes("'toggleTerritorialFootprints'"));
-assert(app.includes("openTerritoryDossier(feature,'seventeenth-claim')"));
+assert(app.includes("openTerritoryDossier(feature,'seventeenth-claim',event.latlng)"),'click passes the point for competing historical claim dossier navigation');
 assert(app.includes("pane:'seventeenthColonialClaimsPane'"));assert(app.includes("data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson"));
 assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
