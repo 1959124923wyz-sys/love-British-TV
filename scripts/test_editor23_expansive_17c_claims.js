@@ -178,5 +178,48 @@ assert(withoutLinks.length<=7,'event links accidentally removed; manually invest
 const index=json('data/stories/serial/index.json');
 assert.equal(index.topics.filter(t=>t.status==='published'&&t.publication_review==='approved').length,29,'published count unexpectedly changed: refresh public description');
 assert(html.includes('29篇正式发表的17世纪专题')&&!html.includes('仅1692年格伦科专题可试阅'),'public landing metadata must not contradict published stories');
+// November 2026 desktop readability: compact historical overlap geometry and
+// scan-friendly 17C editorial headlines shared by event cards and long-form stories.
+assert(html.includes('id="showDetailedClaimBoundaries"')&&!html.includes('id="showDetailedClaimBoundaries" checked'),
+ 'detailed overlapping boundaries must not be the default');
+assert(html.includes('js/editorial-headlines-17c.js'));
+assert(html.indexOf('js/editorial-headlines-17c.js')<html.indexOf('app.js?v='),
+ 'shared editorial headlines must be available when app boots');
+assert(app.includes("const detailed=$('showDetailedClaimBoundaries').checked"));
+assert(app.includes("fillOpacity:maxPaper?0:detailed?")&&app.includes(":.055"),
+ 'compact schematic fill must be faint; seven enormous paper claims remain unfilled');
+assert(app.includes("layer.on('mouseover',()=>layer.setStyle(")&&app.includes("layer.on('mouseout',()=>layer.setStyle(base))"),
+ 'every overview polygon must still expose an inspectable highlighted boundary');
+assert(app.includes("$('showDetailedClaimBoundaries').addEventListener('change'"));
+const titlesCode=fs.readFileSync(path.join(root,'js/editorial-headlines-17c.js'),'utf8');
+const readerCode=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
+for(const file of ['js/editorial-headlines-17c.js','js/history-stories.js']){
+ require('node:child_process').execFileSync(process.execPath,['--check',path.join(root,file)]);
+}
+const context={window:{}};vm.runInNewContext(titlesCode,context);
+const api=context.window.HistoryHeadlines;
+assert(api&&typeof api.eventTitle==='function'&&typeof api.storyTitle==='function');
+assert(api.counts.reviewedEvents>=60&&api.counts.reviewedStories===29);
+let longEventCount=0;
+for(const e of eventRegister.values()){
+ const label=api.eventTitle(e);
+ assert(label&&typeof label==='string',e.id+' headline empty');
+ if(e.name.length>28){
+  longEventCount++;
+  assert(label.length<e.name.length,e.id+' unsimplified very long event title');
+  assert(label.length<=28,e.id+' overly long short title');
+ }
+}
+for(const t of index.topics.filter(x=>x.status==='published'&&x.publication_review==='approved')){
+ const label=api.storyTitle(t);
+ assert(label&&label.length<=20,t.id+' long or missing short serial-story title');
+ assert(label.length<=t.title.length,t.id+' headline should not lengthen full historical name');
+}
+assert(api.eventTitle({year:1599,id:'legacy',name:'1599年旧版事件标题'})==='1599年旧版事件标题',
+ 'existing Tudor-era editorial titles must remain unchanged');
+assert(app.includes('conciseEventTitle(e)')&&app.includes('conciseEventTitle(item)'));
+assert(readerCode.includes('storyHeadline(article)')&&readerCode.includes('sectionHeadline(sec.heading)'));
+assert(readerCode.includes('eventHeadline(linked)')&&readerCode.includes('完整专题题名'));
+console.log('PASS: quiet overview polygon overlap, explicit detailed boundaries, '+longEventCount+' long 17C events, and 29 concise serial-story headlines.');
 console.log('PASS: overlapping Delaware legal-claim navigation, Dutch recapture, cross-link integrity, 29 published essays and '+withoutLinks.length+' documented event-link gaps.');
 console.log('PASS: 53 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
