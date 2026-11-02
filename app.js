@@ -422,7 +422,7 @@ function openTerritoryDossier(feature,kind='historic'){
    '<div class="zone-source-links"><h3 class="zone-links-heading">补充资料</h3>'+
    [...new Set(p.source_urls.filter(u=>/^https:\/\//.test(u)&&!(p.source_ids||[]).some(id=>sourcesById.get(id)?.url===u)))].map(url=>
     '<a class="source-link atlas-source-host" href="'+escapeHTML(url)+'" title="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">'+
-     '原始来源网站 · '+escapeHTML((()=>{try{return new URL(url).hostname.replace(/^www\\./,'')}catch(_){return '史料站点'}})())+' ↗</a>').join('')+'</div>':'');
+     '原始来源网站 · '+escapeHTML((()=>{try{const host=new URL(url).hostname;return host.startsWith('www.')?host.slice(4):host}catch(_){return '史料站点'}})())+' ↗</a>').join('')+'</div>':'');
  openPanel('dossier');
  $('dossierBody').querySelector('[data-return-claim-directory]')?.addEventListener('click',openSeventeenthClaimDirectory);
  $('dossierBody').querySelectorAll('[data-zone-place]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedPlaces[Number(n.dataset.zonePlace)],'place')));
