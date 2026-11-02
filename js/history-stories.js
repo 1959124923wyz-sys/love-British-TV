@@ -70,7 +70,10 @@
   while((match=regex.exec(text))){
    out+=esc(text.slice(last,match.index));
    const id=match[1],label=match[2];
-   const linked=eventInMemory(id),short=linked&&label.length>22?eventHeadline(linked):label;
+   // Preserve literal quantities/measurements embedded in the author's source-linked
+   // prose: shortening a 10-person transfer label must never erase the 10 people.
+   const hasCriticalNumber=/\d[\d,.]*\s*(?:名|人|艘|吨|镑|英镑|英里|亩|英亩|%|％)/.test(label);
+   const linked=eventInMemory(id),short=linked&&label.length>22&&!hasCriticalNumber?eventHeadline(linked):label;
    out+='<button type="button" class="story-event-link" data-story-event="'+esc(id)+
     '" title="'+esc(label)+' · 单击定位或查看简介，双击阅读详情">'+esc(short)+'</button>';
    last=regex.lastIndex;
