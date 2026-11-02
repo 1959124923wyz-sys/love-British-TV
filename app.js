@@ -718,7 +718,15 @@ function footprintEnabledFor(placeId){
 function renderSeventeenthColonialClaims(){
  groups.colonialClaims.clearLayers();
  if(year<1600||!seventeenthColonialClaims||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
- const selected=seventeenthColonialClaims.features.filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year);
+ // Render broadest documentary envelopes first so smaller colonial sites remain visible/clickable.
+ // This angular bounding-span is ONLY a draw-order proxy; it is not land area or an occupation metric.
+ const displaySpan=f=>{
+  const ring=f.geometry?.coordinates?.[0]||[],xs=ring.map(p=>p[0]),ys=ring.map(p=>p[1]);
+  return xs.length?(Math.max(...xs)-Math.min(...xs))*(Math.max(...ys)-Math.min(...ys)):0;
+ };
+ const selected=seventeenthColonialClaims.features
+  .filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year)
+  .sort((a,b)=>displaySpan(b)-displaySpan(a));
  if(!selected.length)return;
  const colors={charter:'#b985e8',company:'#ad7bd2',island:'#c5a6db',conquest:'#b875c5',administrative:'#c6a06c'};
  L.geoJSON({type:'FeatureCollection',features:selected},{

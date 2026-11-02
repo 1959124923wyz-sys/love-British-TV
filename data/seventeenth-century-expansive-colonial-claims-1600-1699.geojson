@@ -9,13 +9,16 @@
     "modern_map_based_broad_envelopes": true,
     "start": 1600,
     "end": 1699,
-    "feature_count": 32,
+    "feature_count": 39,
     "period_limits_verified_sources": true,
     "do_not_change_event_polygons": true,
     "phase2_review_date": "2026-10-31",
     "phase2_method": "12 additional documentary paper / polity reference envelopes; preserve old data, never derive measured occupation or colonial area from geometry",
     "phase3_review_date": "2026-10-31",
-    "phase3_method": "6 scholarly/archival-sourced early colonial settlements and forts, schematic envelopes only, no sovereignty or measured area"
+    "phase3_method": "6 scholarly/archival-sourced early colonial settlements and forts, schematic envelopes only, no sovereignty or measured area",
+    "phase4_review_date": "2026-11-02",
+    "phase4_cartographic_rule": "when documentary wording supports a larger maximal legal grant, prefer the larger dashed schematic envelope; never confuse it with observed military or indigenous land control",
+    "phase4_year_end_policy": "limited-duration charter expirations and restoration transitions rendered by year-end; short in-year contest remains in chronology"
   },
   "features": [
     {
@@ -450,10 +453,6 @@
             [
               -108,
               49
-            ],
-            [
-              -116,
-              50
             ],
             [
               -116,
@@ -2495,6 +2494,607 @@
             [
               80.1,
               12.92
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-ireland-crown-1600",
+      "properties": {
+        "name": "1600—1652年英格兰王室对爱尔兰王国的全岛政治声索（不等于驻军实控）",
+        "start_year": 1600,
+        "end_year": 1652,
+        "display_class": "administrative",
+        "period_label": "1600—1652年",
+        "label_type": "1542年起的爱尔兰王国王权声索 · 1600—1652战事与地方自治并存",
+        "description": "1542年《爱尔兰王冠法》确立英格兰君主兼任爱尔兰国王的政治法律地位；1600年王室声索覆盖爱尔兰岛，但1594—1603年九年战争、1641年起义、1642—1653年邦联战争等时期，岛上大片地方并非受英方连续军事统治。此全岛示意仅表示英格兰王权／法理声索，并不宣称每一郡、村落的实际控制、当地民众同意或已完成土地没收。1653年后的不同政治控制概略另由原有图层负责。",
+        "summary_zh": "1542年《爱尔兰王冠法》确立英格兰君主兼任爱尔兰国王的政治法律地位；1600年王室声索覆盖爱尔兰岛，但1594—1603年九年战争、1641年起义、1642—1653年邦联战争等时期，岛上大片地方并非受英方连续军事统治。此全岛示意仅表示英格兰王权／法理声索，并不宣称每一郡、村落的实际控制、当地民众同意或已完成土地没收。1653年后的不同政治控制概略另由原有图层负责。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/timeline-ireland-and-british-army",
+          "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-ireland-1509-1782"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -10.58,
+              51.45
+            ],
+            [
+              -9.93,
+              51.48
+            ],
+            [
+              -9.47,
+              51.82
+            ],
+            [
+              -9.1,
+              51.95
+            ],
+            [
+              -8.51,
+              51.82
+            ],
+            [
+              -7.75,
+              52
+            ],
+            [
+              -6.41,
+              52.06
+            ],
+            [
+              -6.05,
+              52.67
+            ],
+            [
+              -5.44,
+              53.13
+            ],
+            [
+              -5.56,
+              54.01
+            ],
+            [
+              -5.98,
+              54.45
+            ],
+            [
+              -6.55,
+              55.11
+            ],
+            [
+              -7.29,
+              55.38
+            ],
+            [
+              -8.11,
+              55.22
+            ],
+            [
+              -8.76,
+              54.66
+            ],
+            [
+              -9.88,
+              54.26
+            ],
+            [
+              -10.1,
+              53.52
+            ],
+            [
+              -10.48,
+              52.85
+            ],
+            [
+              -10.58,
+              51.45
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-virginia-first-charter-1606",
+      "properties": {
+        "name": "1606—1608年弗吉尼亚第一特许：北美大西洋沿岸34°—45°殖民选址走廊",
+        "start_year": 1606,
+        "end_year": 1608,
+        "display_class": "charter",
+        "period_label": "1606—1608年",
+        "label_type": "两公司允许选址的沿岸宽幅示意 · 仅沿岸有限纵深",
+        "description": "1606年詹姆斯一世特许允许伦敦公司在北纬34°—41°、普利茅斯公司在38°—45°之间的大西洋海岸分别选择殖民定居点。实际授权土地以所选定居点沿海两侧各50英里、向内陆约100英里为原则；色块是多个可选地点的大范围地理包络，不代表两家公司同时获封整条34°—45°海岸、任何未占领原住民领土或1606年已实现殖民统治。1609第二特许改为远达太平洋的另一套纸面声索，此1606示意到1608年止。",
+        "summary_zh": "1606年詹姆斯一世特许允许伦敦公司在北纬34°—41°、普利茅斯公司在38°—45°之间的大西洋海岸分别选择殖民定居点。实际授权土地以所选定居点沿海两侧各50英里、向内陆约100英里为原则；色块是多个可选地点的大范围地理包络，不代表两家公司同时获封整条34°—45°海岸、任何未占领原住民领土或1606年已实现殖民统治。1609第二特许改为远达太平洋的另一套纸面声索，此1606示意到1608年止。",
+        "source_urls": [
+          "https://avalon.law.yale.edu/17th_century/va01.asp",
+          "https://law.lis.virginia.gov/compacts/extent-of-territory-of-the-commonwealth-after-the-constitution-of-1776/"
+        ],
+        "related_event_ids": [
+          "1600S-E018"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.8,
+              33.9
+            ],
+            [
+              -81,
+              33.9
+            ],
+            [
+              -77.3,
+              35.5
+            ],
+            [
+              -75.1,
+              37.4
+            ],
+            [
+              -72.8,
+              40.5
+            ],
+            [
+              -69,
+              42.6
+            ],
+            [
+              -66.9,
+              45
+            ],
+            [
+              -70.7,
+              45
+            ],
+            [
+              -73.9,
+              43.2
+            ],
+            [
+              -77.5,
+              40.8
+            ],
+            [
+              -81.6,
+              37.1
+            ],
+            [
+              -84.8,
+              33.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-council-new-england-1620",
+      "properties": {
+        "name": "1620—1634年新英格兰委员会：北纬40°—48°横贯北美的最大纸面声索",
+        "start_year": 1620,
+        "end_year": 1634,
+        "display_class": "charter",
+        "period_label": "1620—1634年",
+        "label_type": "国王明文特许：大西洋至太平洋 · 法属和原住民权利未消失",
+        "description": "1620年11月3日詹姆斯一世将北纬40°—48°、从海到海的大片大陆授予在普利茅斯设立的新英格兰委员会。文书排除其他基督教君主已实际占有地区，且不能自动证明原住民族放弃土地或英军征服内陆。图示按原始纬度条款故意画至太平洋，是王室法律文本的最大包络，而非殖民地军政实控。委员会1635年解散并交回特许，故本图到1634年底停止显示。",
+        "summary_zh": "1620年11月3日詹姆斯一世将北纬40°—48°、从海到海的大片大陆授予在普利茅斯设立的新英格兰委员会。文书排除其他基督教君主已实际占有地区，且不能自动证明原住民族放弃土地或英军征服内陆。图示按原始纬度条款故意画至太平洋，是王室法律文本的最大包络，而非殖民地军政实控。委员会1635年解散并交回特许，故本图到1634年底停止显示。",
+        "source_urls": [
+          "https://avalon.law.yale.edu/17th_century/mass01.asp",
+          "https://www.mass.gov/info-details/massachusetts-historical-laws-and-legal-documents",
+          "https://publications.newberry.org/ahcb/documents/MA_Consolidated_Chronology.htm"
+        ],
+        "related_event_ids": [
+          "1620S-E001"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -125,
+              40
+            ],
+            [
+              -113,
+              40
+            ],
+            [
+              -100,
+              40
+            ],
+            [
+              -87,
+              40
+            ],
+            [
+              -75,
+              40
+            ],
+            [
+              -70,
+              40
+            ],
+            [
+              -67,
+              41.5
+            ],
+            [
+              -64.7,
+              47.9
+            ],
+            [
+              -75,
+              48
+            ],
+            [
+              -90,
+              48
+            ],
+            [
+              -105,
+              48
+            ],
+            [
+              -117,
+              48
+            ],
+            [
+              -125,
+              48
+            ],
+            [
+              -125,
+              40
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-plymouth-colony-1620",
+      "properties": {
+        "name": "1620—1691年普利茅斯殖民地：马萨诸塞东南部英格兰殖民行政范围",
+        "start_year": 1620,
+        "end_year": 1691,
+        "display_class": "administrative",
+        "period_label": "1620—1691年",
+        "label_type": "长期存在的殖民政体 · 原住民族土地权利仍有争议",
+        "description": "1620年普利茅斯聚落在Patuxet原住民故址建立，殖民地法令与地契记录延续至1691年；1691年新王室特许后并入马萨诸塞湾省（1692年正式实施）。宽取的东南马萨诸塞区域仅表示历年殖民政权大致活动与声索地点，不能当作1620年初始占地、部落交地的已核边线，也不将整个瓦姆帕诺亚格家园视为已经服从英王。",
+        "summary_zh": "1620年普利茅斯聚落在Patuxet原住民故址建立，殖民地法令与地契记录延续至1691年；1691年新王室特许后并入马萨诸塞湾省（1692年正式实施）。宽取的东南马萨诸塞区域仅表示历年殖民政权大致活动与声索地点，不能当作1620年初始占地、部落交地的已核边线，也不将整个瓦姆帕诺亚格家园视为已经服从英王。",
+        "source_urls": [
+          "https://www.sec.state.ma.us/divisions/archives/collections/plymouth-records.htm",
+          "https://www.mass.gov/info-details/massachusetts-historical-laws-and-legal-documents"
+        ],
+        "related_event_ids": [
+          "1620S-E001",
+          "1620S-E003"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -72.25,
+              41.05
+            ],
+            [
+              -70.3,
+              40.98
+            ],
+            [
+              -69.45,
+              41.35
+            ],
+            [
+              -69.1,
+              42.35
+            ],
+            [
+              -70.3,
+              42.65
+            ],
+            [
+              -72.25,
+              42.6
+            ],
+            [
+              -72.25,
+              41.05
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-st-kitts-nevis-1623",
+      "properties": {
+        "name": "1623—1631年圣基茨、尼维斯早期英格兰殖民聚落与法方分区",
+        "start_year": 1623,
+        "end_year": 1631,
+        "display_class": "island",
+        "period_label": "1623—1631年",
+        "label_type": "英人1623进驻、尼维斯1628 · 圣基茨英法共同殖民",
+        "description": "美国国务院历史资料和17世纪地图事件记录1623年英人抵圣基茨、1628年英人开始殖民尼维斯，圣基茨岛与此同时有法国殖民占地，并伴随针对卡利纳戈人的严重暴力。着色包络特意包含两岛及岛际海域作为视觉定位，绝不代表英人从1623年就占领两岛全部土地或附近海水；1632年后改由背风群岛大区域图层承接。",
+        "summary_zh": "美国国务院历史资料和17世纪地图事件记录1623年英人抵圣基茨、1628年英人开始殖民尼维斯，圣基茨岛与此同时有法国殖民占地，并伴随针对卡利纳戈人的严重暴力。着色包络特意包含两岛及岛际海域作为视觉定位，绝不代表英人从1623年就占领两岛全部土地或附近海水；1632年后改由背风群岛大区域图层承接。",
+        "source_urls": [
+          "https://1997-2001.state.gov/background_notes/St_Kitts_Nevis_0497_bgn.html"
+        ],
+        "related_event_ids": [
+          "1620S-E012",
+          "1620S-E029"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -63.15,
+              16.91
+            ],
+            [
+              -62.31,
+              16.91
+            ],
+            [
+              -62.31,
+              17.58
+            ],
+            [
+              -63.15,
+              17.58
+            ],
+            [
+              -63.15,
+              16.91
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-england-dominion-1686",
+      "properties": {
+        "name": "1686—1687年新英格兰自治领：波士顿王室治理整合的宽大范围",
+        "start_year": 1686,
+        "end_year": 1687,
+        "display_class": "administrative",
+        "period_label": "1686—1687年",
+        "label_type": "詹姆斯二世殖民集权政制范围 · 不表示全区民众顺服",
+        "description": "1686年王室在波士顿建立新英格兰自治领政府，整合马萨诸塞、普利茅斯、新罕布什尔、缅因及涉及罗得岛、康涅狄格的后续管辖争议。大面积淡色区仅展示王室行政安排覆盖的广义新英格兰，边线按现代位置宽取，不能解释为所有当地自治机构、原住民族或法属阿卡迪亚均在1686年服从安德罗斯。1688年扩大范围另用独立色块。",
+        "summary_zh": "1686年王室在波士顿建立新英格兰自治领政府，整合马萨诸塞、普利茅斯、新罕布什尔、缅因及涉及罗得岛、康涅狄格的后续管辖争议。大面积淡色区仅展示王室行政安排覆盖的广义新英格兰，边线按现代位置宽取，不能解释为所有当地自治机构、原住民族或法属阿卡迪亚均在1686年服从安德罗斯。1688年扩大范围另用独立色块。",
+        "source_urls": [
+          "https://www.sec.state.ma.us/divisions/archives/collections/mass-archives-collection.htm",
+          "https://www.sec.state.ma.us/divisions/archives/collections/mass-archives-volume-list.htm"
+        ],
+        "related_event_ids": [
+          "1680S-E135",
+          "1680S-E136"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.95,
+              40.72
+            ],
+            [
+              -69.65,
+              40.72
+            ],
+            [
+              -67.15,
+              42.1
+            ],
+            [
+              -65.9,
+              44.7
+            ],
+            [
+              -67.7,
+              47.4
+            ],
+            [
+              -71.8,
+              46.9
+            ],
+            [
+              -73.95,
+              44.5
+            ],
+            [
+              -73.95,
+              40.72
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-england-dominion-1688",
+      "properties": {
+        "name": "1688年扩大后的新英格兰自治领：纽约与新泽西加入王室声索政区",
+        "start_year": 1688,
+        "end_year": 1688,
+        "display_class": "administrative",
+        "period_label": "1688—1688年",
+        "label_type": "1688年王室正式扩大政区 · 1689起义终结集权",
+        "description": "1688年詹姆斯二世的进一步委任将纽约、东新泽西与西新泽西并入新英格兰自治领的法定管辖。色块以宽大范围显示当时王室试图整合的殖民行政区，而不是每条河流、每处原住民居地均有统一的殖民官员管理。1689年波士顿起义推翻安德罗斯政权，此自治领图层在1688年末结束；英方若干原有殖民声索则由各自图层继续显示。",
+        "summary_zh": "1688年詹姆斯二世的进一步委任将纽约、东新泽西与西新泽西并入新英格兰自治领的法定管辖。色块以宽大范围显示当时王室试图整合的殖民行政区，而不是每条河流、每处原住民居地均有统一的殖民官员管理。1689年波士顿起义推翻安德罗斯政权，此自治领图层在1688年末结束；英方若干原有殖民声索则由各自图层继续显示。",
+        "source_urls": [
+          "https://www.sec.state.ma.us/divisions/archives/collections/mass-archives-volume-list.htm",
+          "https://publications.newberry.org/ahcb/documents/NJ_Consolidated_Chronology.htm",
+          "https://www.nysenate.gov/timeline"
+        ],
+        "related_event_ids": [
+          "1680S-E020",
+          "1680S-E138",
+          "1680S-E139"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.85,
+              39.1
+            ],
+            [
+              -74.4,
+              38.95
+            ],
+            [
+              -71,
+              40.5
+            ],
+            [
+              -68.8,
+              41.7
+            ],
+            [
+              -65.7,
+              44.6
+            ],
+            [
+              -67.6,
+              47.4
+            ],
+            [
+              -72.3,
+              46.8
+            ],
+            [
+              -77.9,
+              44.4
+            ],
+            [
+              -78.85,
+              39.1
             ]
           ]
         ]

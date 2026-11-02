@@ -20,7 +20,11 @@ def goto(year,required,forbidden=None):
  d.save_screenshot(str(out/f'editor23-wide-paper-claims-{year}.png'))
  print('PASS',year,active,'large-area SVG polygons')
 try:
+ goto(1600,1)  # English Crown's paper claim over Ireland, even amid resistance
+ goto(1606,2)  # First Virginia coast-charter eligibility corridor
  goto(1609,1)
+ goto(1620,7)  # Sea-to-sea Council for New England and separate Plymouth colony
+ goto(1623,8)  # St Kitts broad island visual claim; not all British-controlled
  goto(1629,3)
  goto(1652,4)
  goto(1670,7)
@@ -37,6 +41,7 @@ try:
  wait.until(lambda _:j("return !!document.querySelector('#dossierBody .zone-source-links a.source-link')"))
  assert j("return document.getElementById('dossierBody').textContent.includes('声索')")
  d.save_screenshot(str(out/'editor23-wide-colonial-source-dossier.png'))
+ goto(1688,12)  # Separate enlarged Dominion alongside prior colonial claims
  goto(1690,8)
  d.get('http://127.0.0.1:8765/?year=1599')
  wait.until(lambda _:j("return document.getElementById('bigYear')?.textContent==='1599'"))
