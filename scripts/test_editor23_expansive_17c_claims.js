@@ -128,9 +128,36 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),html=fs.readFileSync(
 assert(app.includes('renderSeventeenthColonialClaims()'));
 assert(app.includes('.sort((a,b)=>displaySpan(b)-displaySpan(a))'),'large polygon rendering must not cover clickable small colonies');assert(app.includes("groups.colonialClaims.clearLayers()"));
 assert(app.includes("if(year<1600||!seventeenthColonialClaims"));assert(app.includes("'toggleTerritorialFootprints'"));
-assert(app.includes("openTerritoryDossier(feature,'seventeenth-claim')"));
+assert(app.includes("openTerritoryDossier(feature,'seventeenth-claim',event.latlng)"),'click passes the point for competing historical claim dossier navigation');
 assert(app.includes("pane:'seventeenthColonialClaimsPane'"));assert(app.includes("data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson"));
 assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
 assert.equal(json('data/chapters.json').chapters.length,10);
+// Read-only point-in-schematic-polygon regression: overlaps are *claims*, not area or occupation.
+const vm=require('node:vm');
+const helperStart=app.indexOf('function seventeenthClaimContainsPoint(');
+const helperEnd=app.indexOf('function renderSeventeenthColonialClaims(){',helperStart);
+assert(helperStart>=0&&helperEnd>helperStart,'historical overlap helper must exist');
+const query=vm.runInNewContext(app.slice(helperStart,helperEnd)+
+ '\n({seventeenthClaimContainsPoint,seventeenthClaimsAtPoint})',
+ {seventeenthColonialClaims:fc,year:1699});
+const names=(lon,lat,y)=>Array.from(query.seventeenthClaimsAtPoint(lon,lat,y),f=>f.id);
+const d1699=names(-75.4,39.1,1699);
+for(const id of ['claim-maryland-1632','claim-new-jersey-proprietors-1674','claim-delaware-penn-lower-counties-1682'])
+ assert(d1699.includes(id),'overlap navigation must expose all documented Delaware Valley claims: '+id);
+assert(!names(-75.4,39.1,1673).some(id=>id.startsWith('claim-new-jersey-proprietors')||id.startsWith('claim-delaware-duke')),'Dutch control year must not leak restored English political claim dossiers');
+assert.equal(names(0,0,1699).length,0,'open-ocean point with no schematic claims');
+assert(query.seventeenthClaimContainsPoint(fc.features[0],
+ ...fc.features[0].geometry.coordinates[0][0]),'boundary click should not lose the original layer');
+assert(app.includes("openTerritoryDossier(feature,'seventeenth-claim',event.latlng)")&&app.includes('data-overlap-claim'),'overlapping feature click and cross-dossier navigation must be wired');
+const eventRegister=new Map();
+for(let d=1600;d<=1690;d+=10)for(const e of json('data/atlas-'+d+'-'+(d+9)+'.json').events)eventRegister.set(e.id,e);
+for(const f of fc.features)for(const id of f.properties.related_event_ids||[])
+ assert(eventRegister.has(id),f.id+' references non-existent historical record '+id);
+const withoutLinks=fc.features.filter(f=>!f.properties.related_event_ids?.length);
+assert(withoutLinks.length<=7,'event links accidentally removed; manually investigate the remaining known editorial gaps');
+const index=json('data/stories/serial/index.json');
+assert.equal(index.topics.filter(t=>t.status==='published'&&t.publication_review==='approved').length,29,'published count unexpectedly changed: refresh public description');
+assert(html.includes('29篇正式发表的17世纪专题')&&!html.includes('仅1692年格伦科专题可试阅'),'public landing metadata must not contradict published stories');
+console.log('PASS: overlapping Delaware legal-claim navigation, Dutch recapture, cross-link integrity, 29 published essays and '+withoutLinks.length+' documented event-link gaps.');
 console.log('PASS: 53 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
