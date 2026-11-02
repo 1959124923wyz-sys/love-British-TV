@@ -21,9 +21,14 @@ require("function expandCluster(group,pin=false)" in app,
         "open-on-demand multi-event cluster")
 require("atlas-aggregate" in app and "groups.clusterExpanded.clearLayers()" in app,
         "compact count hub and mutually exclusive expansion")
-require(".on('mouseover',()=>{if(!expandedPinned" in app
+# 2026-11-02 user-approved correction: small clusters still expand on hover,
+# but 9+ accumulated 17C records must open a readable dossier list on click.
+require((".on('mouseover',()=>{if(!expandedPinned" in app
+         or ".on('mouseover',()=>{if(g.items.length<=8" in app)
         and ".on('click',()=>expandCluster(g,true))" in app,
-        "hover/click expansion from group hub")
+        "small cluster hover and all cluster click remain accessible")
+require("if(count>8&&" in app and "if(pin)openCollection(items," in app,
+        "dense cluster opens a scrollable list rather than an icon wall")
 require("if(activeClusterKey)closeCluster()" in app
         and ("map.on('click',e=>{" in app or "map.on('click',()=>{" in app)
         and (("openMapTerritoryAt(e.latlng)" in app) or

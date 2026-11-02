@@ -124,12 +124,31 @@ assert(has(1690,'claim-eic-calcutta-sutanati-1690')&&!has(1689,'claim-eic-calcut
 for(const f of fc.features)if(f.id.startsWith('claim-eic-')||f.id.startsWith('claim-delaware-')||f.id==='claim-scottish-darien-1698'){
  assert(f.properties.actual_military_control_polygon===false&&f.properties.exclude_from_area_aggregation===true);
 }
+// Oversize paper grants must remain archived and browseable but never default-fill continents.
+const giant=fc.features.filter(f=>f.properties.map_presentation==='optional_maximal_paper_claim');
+assert.equal(giant.length,7,'seven documented extreme royal/company grants are optional');
+assert.equal(fc.metadata.maximal_paper_claims_count,giant.length);
+assert.equal(fc.metadata.default_maximal_paper_claims_visible,false);
+for(const f of giant)assert(f.properties.map_presentation_note.includes('不等于逐地占领'));
+for(const f of fc.features)assert(['regional_documentary_reference','optional_maximal_paper_claim'].includes(f.properties.map_presentation));
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),css=fs.readFileSync(path.join(root,'css/dark-atlas-v2.css'),'utf8');
 assert(app.includes('renderSeventeenthColonialClaims()'));
 assert(app.includes('.sort((a,b)=>displaySpan(b)-displaySpan(a))'),'large polygon rendering must not cover clickable small colonies');assert(app.includes("groups.colonialClaims.clearLayers()"));
 assert(app.includes("if(year<1600||!seventeenthColonialClaims"));assert(app.includes("'toggleTerritorialFootprints'"));
 assert(app.includes("openTerritoryDossier(feature,'seventeenth-claim',event.latlng)"),'click passes the point for competing historical claim dossier navigation');
 assert(app.includes("pane:'seventeenthColonialClaimsPane'"));assert(app.includes("data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson"));
+// Each remaining regional polygon is still selectable; giant paper envelopes are in a
+// separate explicit opt-in control and the year-scoped source directory.
+assert(html.includes('id="showMaximalPaperCharters"')&&!html.includes('id="showMaximalPaperCharters" checked'));
+assert(html.includes('id="showSeventeenthClaimDirectory"'));
+assert(app.includes("f.properties.map_presentation!=='optional_maximal_paper_claim'||$('showMaximalPaperCharters').checked"));
+assert(app.includes("fill:!maxPaper")&&app.includes("fillOpacity:maxPaper?0"),'giant charters must have zero area fill even when explicitly enabled');
+assert(app.includes("function openSeventeenthClaimDirectory()")&&app.includes("data-colonial-directory"));
+assert(app.includes("openSeventeenthClaimDirectory);")&&app.includes("openTerritoryDossier(candidates[0],'seventeenth-claim',latlng)"),
+ 'archived reference and territory hit fallback must be wired');
+assert(app.includes("const clusterRadius=year>=1600&&map.getZoom()<=4?56:32"),'coarser clustering only at seventeenth-century world zoom');
+assert(app.includes("if(count>8&&!(focusedEventId&&items.some(x=>x.item.id===focusedEventId)))"),'giant clusters must not fan out into screen-filling icon walls');
+assert(app.includes("if(pin)openCollection(items,'该地区的'+count+'项历史记录')"),'large cluster click should reveal every event in a scrollable accessible dossier');
 assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
 assert.equal(json('data/chapters.json').chapters.length,10);
