@@ -26,6 +26,7 @@ try:
  goto(1609,1)
  goto(1612,2)  # Surat trading permission from Mughal authority
  goto(1620,7)  # Sea-to-sea Council for New England and separate Plymouth colony
+ d.find_element(By.CSS_SELECTOR,'#mapModeHelp > summary').click()
  # A transcontinental paper grant must not paint half a continent by default.
  assert not j("return document.getElementById('showMaximalPaperCharters').checked")
  assert j("return document.querySelectorAll('path.atlas-17c-paper-only').length===0")
