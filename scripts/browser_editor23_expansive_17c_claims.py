@@ -43,6 +43,19 @@ try:
  wait.until(lambda _:j("return !!document.querySelector('#dossierBody .zone-source-links a.source-link')"))
  assert j("return document.getElementById('dossierBody').textContent.includes('历史时段')")
  d.save_screenshot(str(out/'editor23-1620-source-directory.png'))
+ # Year-scoped documentary directory can be searched and returned to without opening the map legend again.
+ assert j("return !!document.querySelector('#dossierBody [data-return-claim-directory]')")
+ j("document.querySelector('#dossierBody [data-return-claim-directory]').click()")
+ wait.until(lambda _:j("return !!document.querySelector('#dossierBody #claimDirectorySearch')"))
+ assert j("return document.querySelectorAll('#dossierBody [data-directory-group]').length>=3")
+ j("""const el=document.getElementById('claimDirectorySearch');el.value='没有这种殖民区域';
+    el.dispatchEvent(new Event('input',{bubbles:true}));""")
+ assert j("return document.querySelectorAll('#dossierBody [data-colonial-directory]:not([hidden])').length===0")
+ assert j("return document.querySelector('#claimDirectoryStatus').textContent.startsWith('匹配0 /')")
+ j("""const el=document.getElementById('claimDirectorySearch');el.value='';
+    el.dispatchEvent(new Event('input',{bubbles:true}));""")
+ assert j("return document.querySelectorAll('#dossierBody [data-colonial-directory]:not([hidden])').length>=7")
+ d.save_screenshot(str(out/'editor23-1620-searchable-claims-by-type.png'))
  goto(1623,8)  # St Kitts broad island visual claim; not all British-controlled
  goto(1629,3)
  goto(1651,4)  # English Hugli factory under Mughal jurisdiction
@@ -70,6 +83,25 @@ try:
  goto(1690,8)
  goto(1698,8)  # Scottish New Caledonia at Darien and Bengal early Calcutta
  goto(1699,8)
+ # Desktop historical reading mode must distinguish this year from earlier
+ # decade entries while keeping all archived records intact and searchable.
+ initial=j("return document.querySelectorAll('#eventList .event-item').length")
+ assert initial>10 and j("return !document.getElementById('seventeenthEventTools').hidden")
+ assert j("return document.getElementById('chapterIntro').textContent.includes('本十年已收录')")
+ assert j("return document.getElementById('chapterLabel').textContent.includes('史料年表')")
+ d.find_element(By.ID,'showYearEventsOnly').click()
+ year_only=j("return document.querySelectorAll('#eventList .event-item').length")
+ assert year_only>0 and year_only<initial,(year_only,initial)
+ assert j("return [...document.querySelectorAll('#eventList .event-item')].every(el=>el.querySelector('small')?.textContent.includes('1699'))")
+ d.find_element(By.ID,'showDecadeEventsToYear').click()
+ assert j("return document.querySelectorAll('#eventList .event-item').length===arguments[0]",initial)
+ j("""const el=document.getElementById('seventeenthEventSearch');el.value='无此历史记录测试';
+    el.dispatchEvent(new Event('input',{bubbles:true}));""")
+ assert j("return document.querySelectorAll('#eventList .event-item').length===0")
+ assert j("return !!document.querySelector('#eventList .atlas-event-empty')")
+ d.find_element(By.ID,'clearSeventeenthEventSearch').click()
+ assert j("return document.querySelectorAll('#eventList .event-item').length===arguments[0]",initial)
+ d.save_screenshot(str(out/'editor23-1699-year-scope-and-search.png'))
  # Dense 17th-century clusters expose a record list instead of a grid of 30+ icons.
  biggest=j("return [...document.querySelectorAll('.atlas-aggregate')].sort((a,b)=>Number(b.querySelector('strong')?.textContent)-Number(a.querySelector('strong')?.textContent))[0]?.querySelector('strong')?.textContent||'0'")
  if int(biggest)>8:
