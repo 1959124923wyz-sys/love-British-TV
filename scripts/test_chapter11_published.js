@@ -90,7 +90,7 @@ assert.ok(!core.features.find(f=>f.id==='recife-1595').properties.year_end_visib
 assert.ok(!core.features.find(f=>f.id==='blackwater-fort-1598').properties.year_end_visible.includes(1598));
 assert.ok(app.includes('atlasEleventh=await eleventhRes.json()')&&app.includes('renderEleventhControlCores()')&&app.includes('renderEleventhInfluenceAreas()'));
 assert.ok(app.includes('p.year_end_visible?.includes(year)'),'published annual precomputed status skipped');
-assert.ok(app.includes('const nearby=[],cells=new Map(),cellSize=32'),'map point spatial index regressed');
+assert.ok(app.includes('const nearby=[],cells=new Map(),cellSize=clusterRadius')&&app.includes('const clusterRadius=year>=1600&&map.getZoom()<=4?56:32'),'16C 32px spatial index must remain while 17C world map can cluster more densely');
 assert.ok(app.includes("className:'atlas-voyage-continuity'"),'route continuity underlay absent');
 assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
 console.log('PASS ch11: 36 events, 70 sources, 31 places, 3 unresolved maritime/multi-site records, 10 sites, 2 dashed areas, zero fabricated boundaries');
