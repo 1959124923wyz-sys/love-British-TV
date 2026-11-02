@@ -372,7 +372,10 @@ function historicAreaDescription(properties,selectedYear){
   '外缘依据史料地名概略描绘，并非当年的实测行政或军事疆界。':
   '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
 }
-function openTerritoryDossier(feature,kind='historic',claimPoint=null){
+function openTerritoryDossier(feature,kind='historic'){
+ // Preserve the established two-parameter dossier API used throughout legacy cartography.
+ // The optional third argument is the 17C map click location for overlapping-claim navigation.
+ const claimPoint=arguments.length>2?arguments[2]:null;
  const p=feature.properties||{},restoration=kind==='restoration',occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war',atlanticContact=kind==='atlantic-contact',linkedAction=kind==='linked-action';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
  const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室广域殖民声索 · 非实际逐地控制'):kind==='seventeenth-reference'?(p.label_type||'17世纪来源地理参考 · 非实测历史影响区'):kind==='indigenous-encounter'?'原住民接触与抵抗 · 无占领':kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
