@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const fc=json('data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson');
 assert.equal(fc.type,'FeatureCollection');assert.equal(fc.metadata.schema,'atlas-17c-expansive-claim-v1');
-assert(fc.features.length>=39,'all 32 previous and seven fourth-phase legal claim envelopes must remain');
+assert(fc.features.length>=53,'all previous 39 envelopes plus fourteen phase-five archival locations must remain');
 assert.equal(fc.metadata.feature_count,fc.features.length,'metadata count must equal actual features');
 const ids=new Set(),allowed=new Set(['charter','company','island','conquest','administrative']);
 for(let f of fc.features){const p=f.properties;assert(f.id&&!ids.has(f.id));ids.add(f.id);
@@ -85,6 +85,45 @@ for(let y=1600;y<=1699;y++)assert(active(y).length>0,'documentary map should not
 for(const f of fc.features.filter(f=>f.id.startsWith('claim-ireland-crown-')||f.id.startsWith('claim-virginia-first-')||f.id==='claim-council-new-england-1620'||f.id==='claim-plymouth-colony-1620'||f.id==='claim-st-kitts-nevis-1623'||f.id.startsWith('claim-new-england-dominion-'))){
  assert(f.properties.source_urls.length>0&&f.properties.area_sqkm===null&&f.properties.expansive_claim_overlay_only===true);
 }
+// Phase 5: New Jersey, Delaware, New Hampshire, Darien, Gambia, Mughal-licensed and Indonesian factories.
+const phase5=[
+ ['claim-new-jersey-proprietors-1664',1664,1672],
+ ['claim-new-jersey-proprietors-1674',1674,1699],
+ ['claim-delaware-duke-1664',1664,1672],
+ ['claim-delaware-duke-1674',1674,1681],
+ ['claim-delaware-penn-lower-counties-1682',1682,1699],
+ ['claim-new-hampshire-royal-1679',1679,1685],
+ ['claim-new-hampshire-royal-1692',1692,1699],
+ ['claim-scottish-darien-1698',1698,1699],
+ ['claim-gambia-james-island-1661',1661,1694],
+ ['claim-eic-surat-factory-1612',1612,1685],
+ ['claim-eic-hugli-bengal-1651',1651,1685],
+ ['claim-eic-calcutta-sutanati-1690',1690,1699],
+ ['claim-eic-bencoolen-1685',1685,1699],
+ ['claim-eic-bantam-1602',1602,1681]
+];
+for(const [id,start,end] of phase5){
+ const f=fc.features.find(f=>f.id===id);
+ assert(f&&f.properties.start_year===start&&f.properties.end_year===end,'new phase-five dated region '+id);
+ assert(!has(start-1,id)&&has(start,id)&&has(end,id)&&!has(end+1,id),'chronological boundaries for '+id);
+ assert(f.properties.source_urls.length&&f.properties.area_sqkm===null&&!f.properties.territorial_claim);
+ for(const eventId of f.properties.related_event_ids)assert(repoEventIds.has(eventId),id+' references non-existent event '+eventId);
+}
+for(const [y,ids] of [[1673,['claim-new-jersey-proprietors-1664','claim-new-jersey-proprietors-1674','claim-delaware-duke-1664','claim-delaware-duke-1674','claim-delaware-penn-lower-counties-1682']],
+ [1686,['claim-new-hampshire-royal-1679','claim-new-hampshire-royal-1692']],
+ [1682,['claim-eic-bantam-1602']],
+ [1695,['claim-gambia-james-island-1661']]]){
+ for(const id of ids)assert(!has(y,id),id+' must not claim uninterrupted English control in '+y);
+}
+assert(has(1698,'claim-scottish-darien-1698')&&has(1699,'claim-scottish-darien-1698'));
+assert(has(1685,'claim-eic-bencoolen-1685')&&!has(1684,'claim-eic-bencoolen-1685'));
+assert(has(1651,'claim-eic-hugli-bengal-1651')&&!has(1686,'claim-eic-hugli-bengal-1651'));
+assert(has(1690,'claim-eic-calcutta-sutanati-1690')&&!has(1689,'claim-eic-calcutta-sutanati-1690'));
+// A paper colony outline, a licensed Mughal factory and an unmeasured trade-post envelope
+// must never enter sovereign polygons or a territorial area sum.
+for(const f of fc.features)if(f.id.startsWith('claim-eic-')||f.id.startsWith('claim-delaware-')||f.id==='claim-scottish-darien-1698'){
+ assert(f.properties.actual_military_control_polygon===false&&f.properties.exclude_from_area_aggregation===true);
+}
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),css=fs.readFileSync(path.join(root,'css/dark-atlas-v2.css'),'utf8');
 assert(app.includes('renderSeventeenthColonialClaims()'));
 assert(app.includes('.sort((a,b)=>displaySpan(b)-displaySpan(a))'),'large polygon rendering must not cover clickable small colonies');assert(app.includes("groups.colonialClaims.clearLayers()"));
@@ -94,4 +133,4 @@ assert(app.includes("pane:'seventeenthColonialClaimsPane'"));assert(app.includes
 assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
 assert.equal(json('data/chapters.json').chapters.length,10);
-console.log('PASS: 39 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
+console.log('PASS: 53 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');

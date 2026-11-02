@@ -9,7 +9,7 @@
     "modern_map_based_broad_envelopes": true,
     "start": 1600,
     "end": 1699,
-    "feature_count": 39,
+    "feature_count": 53,
     "period_limits_verified_sources": true,
     "do_not_change_event_polygons": true,
     "phase2_review_date": "2026-10-31",
@@ -18,7 +18,9 @@
     "phase3_method": "6 scholarly/archival-sourced early colonial settlements and forts, schematic envelopes only, no sovereignty or measured area",
     "phase4_review_date": "2026-11-02",
     "phase4_cartographic_rule": "when documentary wording supports a larger maximal legal grant, prefer the larger dashed schematic envelope; never confuse it with observed military or indigenous land control",
-    "phase4_year_end_policy": "limited-duration charter expirations and restoration transitions rendered by year-end; short in-year contest remains in chronology"
+    "phase4_year_end_policy": "limited-duration charter expirations and restoration transitions rendered by year-end; short in-year contest remains in chronology",
+    "phase5_review_date": "2026-11-02",
+    "phase5_method": "14 new broad geolocation envelopes from named New Jersey / Delaware charters, New Hampshire province, Scottish Darien, Gambian island fort, Mughal-granted EIC trade factories, Sumatra and Bantam; take largest documentary political or trading reference, keep dashed outline and strict non-sovereignty flags"
   },
   "features": [
     {
@@ -3095,6 +3097,933 @@
             [
               -78.85,
               39.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-jersey-proprietors-1664",
+      "properties": {
+        "name": "1664—1672年新泽西领主特许：哈得孙河—特拉华河宽幅纸面省界",
+        "start_year": 1664,
+        "end_year": 1672,
+        "display_class": "charter",
+        "period_label": "1664—1672年",
+        "label_type": "1664年约克公爵授予伯克利与卡特雷特的领主治理／地产权",
+        "description": "1664年6月24日约克公爵将哈得孙河与特拉华河之间、由开普梅延至约北纬41°的地区封给伯克利与卡特雷特。1760年代以后的现代州界不能倒推为1664年的逐点实测边界；本宽幅只示意原始领主特许地域，不等于英人逐地占领，亦不免除勒纳佩人土地权利。1673年荷兰收复时停止英方标色。",
+        "summary_zh": "1664年6月24日约克公爵将哈得孙河与特拉华河之间、由开普梅延至约北纬41°的地区封给伯克利与卡特雷特。1760年代以后的现代州界不能倒推为1664年的逐点实测边界；本宽幅只示意原始领主特许地域，不等于英人逐地占领，亦不免除勒纳佩人土地权利。1673年荷兰收复时停止英方标色。",
+        "source_urls": [
+          "https://nj.gov/state/archives/documentary-treasures-release-james-1664.shtml",
+          "https://www.njlandrecords.org/who-were-the-east-and-west-jersey-proprietors/"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.7,
+              38.75
+            ],
+            [
+              -74.68,
+              38.75
+            ],
+            [
+              -73.65,
+              40.12
+            ],
+            [
+              -73.65,
+              41.02
+            ],
+            [
+              -74.67,
+              41.45
+            ],
+            [
+              -75.45,
+              40.12
+            ],
+            [
+              -75.7,
+              38.75
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-jersey-proprietors-1674",
+      "properties": {
+        "name": "1674—1699年英属新泽西领主殖民省：东、西泽西授地与政治分治",
+        "start_year": 1674,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1674—1699年",
+        "label_type": "约克公爵1674年复获英方管辖、1676年领主分治",
+        "description": "1673年荷兰重新控制旧新尼德兰，新泽西地区的英方省政中断；1674年英方重新恢复影响，随后新泽西分为东、西两个领主实体。这里用整块合并色区表示两个领主省大致合起来的权利声索，绝不称两个省在全部时间内行政统一、全区军事占领或与原住民产权争议已经解决。",
+        "summary_zh": "1673年荷兰重新控制旧新尼德兰，新泽西地区的英方省政中断；1674年英方重新恢复影响，随后新泽西分为东、西两个领主实体。这里用整块合并色区表示两个领主省大致合起来的权利声索，绝不称两个省在全部时间内行政统一、全区军事占领或与原住民产权争议已经解决。",
+        "source_urls": [
+          "https://avalon.law.yale.edu/17th_century/nj11.asp",
+          "https://www.njlandrecords.org/who-were-the-east-and-west-jersey-proprietors/"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.7,
+              38.75
+            ],
+            [
+              -74.68,
+              38.75
+            ],
+            [
+              -73.65,
+              40.12
+            ],
+            [
+              -73.65,
+              41.02
+            ],
+            [
+              -74.67,
+              41.45
+            ],
+            [
+              -75.45,
+              40.12
+            ],
+            [
+              -75.7,
+              38.75
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-delaware-duke-1664",
+      "properties": {
+        "name": "1664—1672年特拉华河下游英属约克公爵附属辖区",
+        "start_year": 1664,
+        "end_year": 1672,
+        "display_class": "administrative",
+        "period_label": "1664—1672年",
+        "label_type": "英国征服荷兰殖民据点后的纽卡斯尔—下三郡政治管辖",
+        "description": "1664年英方夺取新阿姆斯特尔及特拉华下游的荷兰聚落，随后作为约克公爵纽约殖民政府的辖区管理。边界以现今特拉华及周边河谷大幅包络，仅代表英方对若干聚落和河谷的政治管理与声索，不代表各处特拉华、萨斯奎哈诺克等原住民族土地被英人夺尽。1673年荷兰恢复控制而终止本段示意。",
+        "summary_zh": "1664年英方夺取新阿姆斯特尔及特拉华下游的荷兰聚落，随后作为约克公爵纽约殖民政府的辖区管理。边界以现今特拉华及周边河谷大幅包络，仅代表英方对若干聚落和河谷的政治管理与声索，不代表各处特拉华、萨斯奎哈诺克等原住民族土地被英人夺尽。1673年荷兰恢复控制而终止本段示意。",
+        "source_urls": [
+          "https://archives.delaware.gov/delaware-agency-histories/colonialprestatehood-records/",
+          "https://publications.newberry.org/ahcb/documents/DE_Consolidated_Chronology.htm"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.05,
+              38.35
+            ],
+            [
+              -75.13,
+              38.35
+            ],
+            [
+              -74.83,
+              39.1
+            ],
+            [
+              -75,
+              39.9
+            ],
+            [
+              -75.92,
+              40.06
+            ],
+            [
+              -76.05,
+              38.35
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-delaware-duke-1674",
+      "properties": {
+        "name": "1674—1681年特拉华英属下三郡：约克公爵恢复辖制",
+        "start_year": 1674,
+        "end_year": 1681,
+        "display_class": "administrative",
+        "period_label": "1674—1681年",
+        "label_type": "1674年荷方归还各特拉华法院管辖，1682交付佩恩",
+        "description": "1674年《威斯敏斯特条约》后荷兰将特拉华河下游诸聚落归还英方，纽约殖民政府对三处法院恢复行政监督；1682年由约克公爵转授威廉·佩恩。此宏观色区仅是下游法院、殖民聚落及相关争议地带的宽取行政参考，不代表英王能够实际控制所有内陆，且马里兰仍声索部分地区。",
+        "summary_zh": "1674年《威斯敏斯特条约》后荷兰将特拉华河下游诸聚落归还英方，纽约殖民政府对三处法院恢复行政监督；1682年由约克公爵转授威廉·佩恩。此宏观色区仅是下游法院、殖民聚落及相关争议地带的宽取行政参考，不代表英王能够实际控制所有内陆，且马里兰仍声索部分地区。",
+        "source_urls": [
+          "https://publications.newberry.org/ahcb/documents/DE_Consolidated_Chronology.htm",
+          "https://archives.delaware.gov/delaware-agency-histories/colonialprestatehood-records/"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.05,
+              38.35
+            ],
+            [
+              -75.13,
+              38.35
+            ],
+            [
+              -74.83,
+              39.1
+            ],
+            [
+              -75,
+              39.9
+            ],
+            [
+              -75.92,
+              40.06
+            ],
+            [
+              -76.05,
+              38.35
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-delaware-penn-lower-counties-1682",
+      "properties": {
+        "name": "1682—1699年佩恩的特拉华下三郡：与宾夕法尼亚并行的殖民领主辖区",
+        "start_year": 1682,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1682—1699年",
+        "label_type": "佩恩从约克公爵获得下三郡、马里兰权利主张并未消失",
+        "description": "1682年威廉·佩恩从约克公爵获得特拉华河下游纽卡斯尔、肯特与苏塞克斯三郡，并与宾夕法尼亚建立共同的殖民领主行政体系。广阔多边形按当地下游沿河及近海地域故意宽取，不是丈量过的17世纪地籍边线；马里兰对该区域的王室特许争议未随英方行政交接自动消失。",
+        "summary_zh": "1682年威廉·佩恩从约克公爵获得特拉华河下游纽卡斯尔、肯特与苏塞克斯三郡，并与宾夕法尼亚建立共同的殖民领主行政体系。广阔多边形按当地下游沿河及近海地域故意宽取，不是丈量过的17世纪地籍边线；马里兰对该区域的王室特许争议未随英方行政交接自动消失。",
+        "source_urls": [
+          "https://archives.delaware.gov/delaware-agency-histories/colonialprestatehood-records/",
+          "https://publications.newberry.org/ahcb/documents/DE_Consolidated_Chronology.htm",
+          "https://legis.delaware.gov/Resources/History"
+        ],
+        "related_event_ids": [
+          "1680S-E130"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.05,
+              38.35
+            ],
+            [
+              -75.13,
+              38.35
+            ],
+            [
+              -74.83,
+              39.1
+            ],
+            [
+              -75,
+              39.9
+            ],
+            [
+              -75.92,
+              40.06
+            ],
+            [
+              -76.05,
+              38.35
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-hampshire-royal-1679",
+      "properties": {
+        "name": "1679—1685年新罕布什尔王室殖民省：脱离马萨诸塞",
+        "start_year": 1679,
+        "end_year": 1685,
+        "display_class": "administrative",
+        "period_label": "1679—1685年",
+        "label_type": "王室1679年独立设省、1686年纳入新英格兰自治领",
+        "description": "1679年9月查理二世使新罕布什尔从马萨诸塞分离成为王室殖民省；1686年新英格兰自治领成立后，独立王室省政府不再以原来方式运行。示意面包含宽取的皮斯卡塔夸河沿岸与后背广泛争议地带；因当时西界未明确规定，虚线仅是示意参考，绝不是英方实际定居或驻军范围。",
+        "summary_zh": "1679年9月查理二世使新罕布什尔从马萨诸塞分离成为王室殖民省；1686年新英格兰自治领成立后，独立王室省政府不再以原来方式运行。示意面包含宽取的皮斯卡塔夸河沿岸与后背广泛争议地带；因当时西界未明确规定，虚线仅是示意参考，绝不是英方实际定居或驻军范围。",
+        "source_urls": [
+          "https://publications.newberry.org/ahcb/documents/NH_Consolidated_Chronology.htm",
+          "https://www.sos.nh.gov/archives-0/research/archival-holdings/land-title-research"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.45,
+              42.55
+            ],
+            [
+              -70.32,
+              42.55
+            ],
+            [
+              -69.75,
+              43.55
+            ],
+            [
+              -69.75,
+              45.48
+            ],
+            [
+              -72.2,
+              45.62
+            ],
+            [
+              -73.45,
+              44.75
+            ],
+            [
+              -73.45,
+              42.55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-new-hampshire-royal-1692",
+      "properties": {
+        "name": "1692—1699年复设新罕布什尔王室殖民省：西部界线不明",
+        "start_year": 1692,
+        "end_year": 1699,
+        "display_class": "administrative",
+        "period_label": "1692—1699年",
+        "label_type": "1691任命新王室总督、1692行政重建；部分与马萨诸塞有争议",
+        "description": "1689年新英格兰自治领被推翻后，新罕布什尔短期经历地方临时治理和与马萨诸塞联合的阶段。1691—1692年王室设立新的省政府。此大面以未明确的西侧界线宽取，提醒观众17世纪新罕布什尔省界存在悬而未决的问题，不代表北部森林或阿贝纳基人居地已全部接受王室官员管辖。",
+        "summary_zh": "1689年新英格兰自治领被推翻后，新罕布什尔短期经历地方临时治理和与马萨诸塞联合的阶段。1691—1692年王室设立新的省政府。此大面以未明确的西侧界线宽取，提醒观众17世纪新罕布什尔省界存在悬而未决的问题，不代表北部森林或阿贝纳基人居地已全部接受王室官员管辖。",
+        "source_urls": [
+          "https://publications.newberry.org/ahcb/documents/NH_Consolidated_Chronology.htm",
+          "https://www.sos.nh.gov/archives-0/research/archival-holdings/land-title-research"
+        ],
+        "related_event_ids": [],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.45,
+              42.55
+            ],
+            [
+              -70.32,
+              42.55
+            ],
+            [
+              -69.75,
+              43.55
+            ],
+            [
+              -69.75,
+              45.48
+            ],
+            [
+              -72.2,
+              45.62
+            ],
+            [
+              -73.45,
+              44.75
+            ],
+            [
+              -73.45,
+              42.55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-scottish-darien-1698",
+      "properties": {
+        "name": "1698—1699年苏格兰达连殖民计划：巴拿马加勒比海岸与新爱丁堡",
+        "start_year": 1698,
+        "end_year": 1699,
+        "display_class": "charter",
+        "period_label": "1698—1699年",
+        "label_type": "苏格兰王国与英格兰尚未1707合并；古纳人领地、与西班牙冲突",
+        "description": "1698年苏格兰非洲与印度群岛贸易公司首批船队在巴拿马达连湾登陆，于古纳人的生活地区建立新爱丁堡和圣安德鲁堡；首批殖民地1699年7月撤离，第二批1699年11月抵达废墟并重建。色块为了地图识别故意宽取达连湾及地峡东岸走廊，绝不意味着苏格兰控制整个地峡、西班牙承认产权或古纳人割让全部土地。1698时苏格兰与英格兰为不同王国，不能将其直接当作英格兰殖民地。",
+        "summary_zh": "1698年苏格兰非洲与印度群岛贸易公司首批船队在巴拿马达连湾登陆，于古纳人的生活地区建立新爱丁堡和圣安德鲁堡；首批殖民地1699年7月撤离，第二批1699年11月抵达废墟并重建。色块为了地图识别故意宽取达连湾及地峡东岸走廊，绝不意味着苏格兰控制整个地峡、西班牙承认产权或古纳人割让全部土地。1698时苏格兰与英格兰为不同王国，不能将其直接当作英格兰殖民地。",
+        "source_urls": [
+          "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme"
+        ],
+        "related_event_ids": [
+          "1690S-E123",
+          "1690S-E124",
+          "1690S-E127",
+          "1690S-E129"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": true,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.75,
+              7.6
+            ],
+            [
+              -77,
+              7.5
+            ],
+            [
+              -76.2,
+              8.35
+            ],
+            [
+              -76.3,
+              9.35
+            ],
+            [
+              -77.35,
+              9.8
+            ],
+            [
+              -78.65,
+              9
+            ],
+            [
+              -78.75,
+              7.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-gambia-james-island-1661",
+      "properties": {
+        "name": "1661—1694年冈比亚詹姆斯岛英方贩奴堡垒：河口贸易走廊",
+        "start_year": 1661,
+        "end_year": 1694,
+        "display_class": "company",
+        "period_label": "1661—1694年",
+        "label_type": "皇家非洲冒险者公司1661年夺取前库尔兰堡垒",
+        "description": "联合国教科文组织的冈比亚遗址提名史表载明，1661年英格兰皇家非洲冒险者公司从库尔兰方面夺取冈比亚河上的詹姆斯堡；1695年法国舰队攻取并破坏堡垒，故只显示1661—1694的已知英方驻点时期。示意区故意涵盖河口附近水道与两岸用于地图可读性，但并不意味英方占有整片冈比亚海岸、水域或当地曼丁卡等民族的内陆家园。",
+        "summary_zh": "联合国教科文组织的冈比亚遗址提名史表载明，1661年英格兰皇家非洲冒险者公司从库尔兰方面夺取冈比亚河上的詹姆斯堡；1695年法国舰队攻取并破坏堡垒，故只显示1661—1694的已知英方驻点时期。示意区故意涵盖河口附近水道与两岸用于地图可读性，但并不意味英方占有整片冈比亚海岸、水域或当地曼丁卡等民族的内陆家园。",
+        "source_urls": [
+          "https://whc.unesco.org/en/list/761",
+          "https://whc.unesco.org/uploads/nominations/761rev.pdf"
+        ],
+        "related_event_ids": [
+          "1680S-E123"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -16.96,
+              13.12
+            ],
+            [
+              -16.23,
+              13.12
+            ],
+            [
+              -16.1,
+              13.53
+            ],
+            [
+              -16.65,
+              13.6
+            ],
+            [
+              -16.96,
+              13.12
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-eic-surat-factory-1612",
+      "properties": {
+        "name": "1612—1685年东印度公司苏拉特商馆：莫卧儿帝国内的英商贸易许可",
+        "start_year": 1612,
+        "end_year": 1685,
+        "display_class": "company",
+        "period_label": "1612—1685年",
+        "label_type": "1612年贾汉吉尔皇帝敕令准许苏拉特等商站、绝非英国征服古吉拉特",
+        "description": "英国图书馆东印度公司商馆档案记载，1612年东印度公司从莫卧儿皇帝贾汉吉尔获得苏拉特、坎贝与戈加等地设商馆的敕令，苏拉特为公司西印度交易中心。示意面只是苏拉特一带贸易驻点的宽取视觉包络，不表示英国对古吉拉特或莫卧儿帝国取得领土主权；1680年代中叶公司与莫卧儿皇帝发生武装冲突，故本阶段不连续涂至1699年。",
+        "summary_zh": "英国图书馆东印度公司商馆档案记载，1612年东印度公司从莫卧儿皇帝贾汉吉尔获得苏拉特、坎贝与戈加等地设商馆的敕令，苏拉特为公司西印度交易中心。示意面只是苏拉特一带贸易驻点的宽取视觉包络，不表示英国对古吉拉特或莫卧儿帝国取得领土主权；1680年代中叶公司与莫卧儿皇帝发生武装冲突，故本阶段不连续涂至1699年。",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1610S-E026"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.27,
+              20.84
+            ],
+            [
+              73.23,
+              20.84
+            ],
+            [
+              73.23,
+              21.58
+            ],
+            [
+              72.27,
+              21.58
+            ],
+            [
+              72.27,
+              20.84
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-eic-hugli-bengal-1651",
+      "properties": {
+        "name": "1651—1685年英东印度公司孟加拉胡格利商馆：莫卧儿治下河港",
+        "start_year": 1651,
+        "end_year": 1685,
+        "display_class": "company",
+        "period_label": "1651—1685年",
+        "label_type": "东印度公司1651年在胡格利落脚，1680年代对莫卧儿战争中丢失旧商馆",
+        "description": "英国图书馆的公司商馆总述明确记载，1651年英方在孟加拉胡格利开设商馆，后在卡西姆巴扎尔等处扩展。它依赖当地莫卧儿统治者的准入许可而存在；1680年代英东印度公司与莫卧儿帝国冲突，旧商馆被没收。宽取的恒河三角洲河港包络只示意贸易地点，绝不能画成英国已经统治孟加拉或强制剥夺周围农村土地。",
+        "summary_zh": "英国图书馆的公司商馆总述明确记载，1651年英方在孟加拉胡格利开设商馆，后在卡西姆巴扎尔等处扩展。它依赖当地莫卧儿统治者的准入许可而存在；1680年代英东印度公司与莫卧儿帝国冲突，旧商馆被没收。宽取的恒河三角洲河港包络只示意贸易地点，绝不能画成英国已经统治孟加拉或强制剥夺周围农村土地。",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&per_page=50"
+        ],
+        "related_event_ids": [
+          "1650S-E033",
+          "1680S-E028"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.97,
+              22.47
+            ],
+            [
+              88.86,
+              22.47
+            ],
+            [
+              88.86,
+              23.27
+            ],
+            [
+              87.97,
+              23.27
+            ],
+            [
+              87.97,
+              22.47
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-eic-calcutta-sutanati-1690",
+      "properties": {
+        "name": "1690—1699年东印度公司苏塔纳蒂—加尔各答三村商馆与1698扎明达里",
+        "start_year": 1690,
+        "end_year": 1699,
+        "display_class": "company",
+        "period_label": "1690—1699年",
+        "label_type": "1690年前后重建英商河港；1698获得三村扎明达里权益，非印度领土主权",
+        "description": "英国图书馆东印度公司加尔各答商馆档案记载，莫卧儿当局与公司冲突后，英商向下游苏塔纳蒂转移，1690年前后逐渐把苏塔纳蒂、卡利卡塔和戈文德布尔视为统一贸易站。1698年公司取得这些村庄的扎明达里权益，1699年推进威廉堡，但莫卧儿政权仍是地方政治主权主体。本宽取色块只是约束到胡格利河下游的商馆行政/经济示意，不能反推整个孟加拉或加尔各答外围地区受英国征服。",
+        "summary_zh": "英国图书馆东印度公司加尔各答商馆档案记载，莫卧儿当局与公司冲突后，英商向下游苏塔纳蒂转移，1690年前后逐渐把苏塔纳蒂、卡利卡塔和戈文德布尔视为统一贸易站。1698年公司取得这些村庄的扎明达里权益，1699年推进威廉堡，但莫卧儿政权仍是地方政治主权主体。本宽取色块只是约束到胡格利河下游的商馆行政/经济示意，不能反推整个孟加拉或加尔各答外围地区受英国征服。",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/036-000173393",
+          "https://searcharchives.bl.uk/catalog/032-000173250"
+        ],
+        "related_event_ids": [
+          "1690S-E135",
+          "1690S-E059"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.96,
+              22.23
+            ],
+            [
+              88.85,
+              22.23
+            ],
+            [
+              88.85,
+              22.85
+            ],
+            [
+              87.96,
+              22.85
+            ],
+            [
+              87.96,
+              22.23
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-eic-bencoolen-1685",
+      "properties": {
+        "name": "1685—1699年英东印度公司本古伦商站与约克堡：苏门答腊西岸",
+        "start_year": 1685,
+        "end_year": 1699,
+        "display_class": "company",
+        "period_label": "1685—1699年",
+        "label_type": "1685年本古伦常设商馆、胡椒收购与沿岸堡垒，不代表控制全岛",
+        "description": "《英国研究杂志》经剑桥大学出版社发表的研究证明，东印度公司于1685年在苏门答腊西海岸建立本古伦殖民贸易据点，随后设约克堡。英国图书馆亦存本古伦商馆会计和船舶记录。图形以大幅沿岸矩形展示商站与商路附近参考范围，包含当地非英方主权地区、岛岸海水，不能直接当作对苏门答腊西岸的实际占有，更不能推成英国控制整个苏门答腊。",
+        "summary_zh": "《英国研究杂志》经剑桥大学出版社发表的研究证明，东印度公司于1685年在苏门答腊西海岸建立本古伦殖民贸易据点，随后设约克堡。英国图书馆亦存本古伦商馆会计和船舶记录。图形以大幅沿岸矩形展示商站与商路附近参考范围，包含当地非英方主权地区、岛岸海水，不能直接当作对苏门答腊西岸的实际占有，更不能推成英国控制整个苏门答腊。",
+        "source_urls": [
+          "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+          "https://searcharchives.bl.uk/catalog/041-000956311"
+        ],
+        "related_event_ids": [
+          "1680S-E033",
+          "1680S-E017"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.87,
+              -4.28
+            ],
+            [
+              102.78,
+              -4.28
+            ],
+            [
+              102.78,
+              -3.36
+            ],
+            [
+              101.87,
+              -3.36
+            ],
+            [
+              101.87,
+              -4.28
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "claim-eic-bantam-1602",
+      "properties": {
+        "name": "1602—1681年英东印度公司万丹商馆：爪哇西北海岸胡椒贸易枢纽",
+        "start_year": 1602,
+        "end_year": 1681,
+        "display_class": "company",
+        "period_label": "1602—1681年",
+        "label_type": "1602年詹姆斯·兰开斯特获贸易许可，荷兰东印度公司1682年迫使英商退出",
+        "description": "英国图书馆印度事务档案总述载明，公司首航在万丹取得设立商馆许可，第二航次继续经营；伦敦大学研究记录万丹从1602年到1682年在不同阶段充当公司东南亚交易枢纽。具体驻点经营受万丹苏丹国及荷兰东印度公司牵制；包括早期一度遭荷方驱逐，本地图仅示意英商在当地有文书可证的商馆活动，绝不是公司在1602年征服爪哇或占有整个万丹湾。1682年退出的事件在年度视角以1681为最后完整年份。",
+        "summary_zh": "英国图书馆印度事务档案总述载明，公司首航在万丹取得设立商馆许可，第二航次继续经营；伦敦大学研究记录万丹从1602年到1682年在不同阶段充当公司东南亚交易枢纽。具体驻点经营受万丹苏丹国及荷兰东印度公司牵制；包括早期一度遭荷方驱逐，本地图仅示意英商在当地有文书可证的商馆活动，绝不是公司在1602年征服爪哇或占有整个万丹湾。1682年退出的事件在年度视角以1681为最后完整年份。",
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://etheses.bham.ac.uk/id/eprint/10007/1/Tran2019PhD.pdf"
+        ],
+        "related_event_ids": [
+          "1620S-E024"
+        ],
+        "boundary_verified": false,
+        "historical_boundary_confirmed": false,
+        "geometry_precision": "maximal_charter_claim_or_modern_island_envelope_not_historical_survey",
+        "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+        "all_indigenous_rights_extinguished": false,
+        "area_sqkm": null,
+        "area_measurement_prohibited": true,
+        "exclude_from_area_aggregation": true,
+        "occupying_every_location_verified": false,
+        "territorial_claim": false,
+        "actual_military_control_polygon": false,
+        "style_note": "solid translucency denotes documentary claim exists; dashed edge means actual historical boundary not measured; overlaps expected and non-additive",
+        "royal_paper_claim": false,
+        "fill_authorized": false,
+        "expansive_claim_overlay_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.61,
+              -6.48
+            ],
+            [
+              106.68,
+              -6.48
+            ],
+            [
+              106.68,
+              -5.62
+            ],
+            [
+              105.61,
+              -5.62
+            ],
+            [
+              105.61,
+              -6.48
             ]
           ]
         ]
