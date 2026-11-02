@@ -781,7 +781,7 @@ function openSeventeenthClaimDirectory(){
   '<h2>本年殖民区域与原始声索</h2>'+
   '<p>本年共'+active.length+'块史料参考区域，其中'+large+'块属于默认隐藏的跨大陆或巨大流域纸面声索。点击逐项核对史料。此目录并非实际军事占领面积清单，区域重叠不累计。</p>'+
   '<div class="zone-related">'+active.map((f,i)=>'<button type="button" class="zone-record-link" data-colonial-directory="'+i+'">'+
-   escapeHTML(f.properties.name)+
+   escapeHTML(conciseRegionTitle(f.properties.name))+
    (f.properties.map_presentation==='optional_maximal_paper_claim'?' · 纯纸面特许':'')+
    '</button>').join('')+'</div>';
  openPanel('dossier');
@@ -820,7 +820,7 @@ function renderSeventeenthColonialClaims(){
   },
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   layer.bindTooltip('<strong>'+escapeHTML(conciseRegionTitle(p.name))+'</strong><div class="atlas-hover-summary">'+
     escapeHTML(p.label_type+(p.map_presentation==='optional_maximal_paper_claim'?' · 仅纸面远距声索，无填色':' · 非实测边界')+' · 点击查看史料')+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    const base={weight:layer.options.weight,opacity:layer.options.opacity,
