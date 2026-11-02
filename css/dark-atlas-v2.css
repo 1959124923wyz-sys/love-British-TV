@@ -897,3 +897,39 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .event-item strong{font-size:12px;line-height:1.6;overflow-wrap:break-word;text-wrap:pretty}
  .atlas-17c-expansive-claim{transition:stroke-opacity .12s ease,fill-opacity .12s ease}
 }
+
+/* Research archive controls: compact, readable, desktop-only for the 17C extension. */
+@media (min-width:1050px){
+ .atlas-event-tools-17c{display:grid;gap:8px;padding:10px 8px 12px;margin:7px 0 4px;background:#112337;border:1px solid #294258;border-radius:8px}
+ .atlas-event-tools-17c[hidden],#clearSeventeenthEventSearch[hidden]{display:none}
+ .atlas-event-view{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+ .atlas-event-view button{border:1px solid #38516b;border-radius:6px;padding:8px 4px;background:#1b3045;color:#bfcfe0;font-size:12px;cursor:pointer}
+ .atlas-event-view button[aria-pressed="true"]{background:#35516b;color:#ffe2bf;border-color:#bb9268;font-weight:700}
+ .atlas-event-query-row{display:flex;gap:6px;align-items:center}
+ #seventeenthEventSearch{box-sizing:border-box;width:100%;min-width:0;flex:1;background:#0b1c2f;color:#f3eadc;border:1px solid #405a74;border-radius:6px;padding:9px 10px;font:inherit;font-size:12px}
+ #seventeenthEventSearch::placeholder{color:#98adbf}
+ #seventeenthEventSearch:focus-visible,.atlas-event-view button:focus-visible,#clearSeventeenthEventSearch:focus-visible{outline:2px solid #d8b180;outline-offset:2px}
+ #clearSeventeenthEventSearch{border:1px solid #466077;color:#e2c7a5;background:#20364d;border-radius:5px;padding:8px;font-size:12px;cursor:pointer}
+ .atlas-event-search-status{color:#a4bacd;font-size:11px;line-height:1.6;min-height:18px}
+ .atlas-event-empty{padding:18px 13px;color:#c1cfe0;background:#13263b;line-height:1.8;font-size:12px;border:1px dashed #3e5770;border-radius:8px}
+}
+
+/* Year-scoped colonial reference index, source-first and non-sovereignty by design. */
+@media (min-width:1050px){
+ .atlas-directory-filter{display:grid;gap:7px;margin:12px 0;padding:10px;background:#102439;border:1px solid #35516b;border-radius:8px}
+ .atlas-directory-filter label{font-size:12px;color:#e4c9a8;font-weight:650}
+ #claimDirectorySearch{width:100%;box-sizing:border-box;background:#0b1c2f;color:#f4eadd;border:1px solid #4b6981;border-radius:6px;padding:10px;font:inherit;font-size:12px}
+ #claimDirectorySearch:focus-visible{outline:2px solid #dab28b;outline-offset:2px}
+ #claimDirectoryStatus{font-size:11px;color:#abc2d5}
+ .atlas-colony-directory{display:grid;gap:10px}
+ .atlas-colony-directory-group{border:1px solid #334c66;border-radius:8px;background:#14283b;padding:9px}
+ .atlas-colony-directory-group summary{font-size:13px;line-height:1.65;color:#f4d1a9;cursor:pointer;font-weight:650}
+ .atlas-colony-directory-group summary span{color:#a5b9ce;font-size:11px}
+ .atlas-colony-directory-group .zone-related{margin-top:8px;display:grid;gap:6px}
+ .atlas-colony-directory-item{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left}
+ .atlas-colony-directory-item strong{font-size:12px;line-height:1.5;color:#edf2f7;font-weight:600}
+ .atlas-colony-directory-item small{font-size:10px;line-height:1.5;color:#aac0d3}
+ .atlas-colony-directory-item[hidden],.atlas-colony-directory-group[hidden]{display:none}
+ .atlas-colony-directory-back{border:1px solid #59728d;border-radius:6px;padding:7px 11px;background:#23394f;color:#f0d4b4;font:inherit;font-size:12px;cursor:pointer;margin:0 0 12px}
+ .atlas-colony-directory-back:hover,.atlas-colony-directory-back:focus-visible{background:#324d66;outline:2px solid #d5ad88;outline-offset:2px}
+}

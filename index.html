@@ -43,6 +43,18 @@
    </section>
    <div class="side-section-head"><span>已发生事件</span><span id="eventCount">—</span></div>
    <div id="yearArrivalSummary" class="year-arrival-summary" role="status" aria-live="polite">当年事件加载中…</div>
+   <div id="seventeenthEventTools" class="atlas-event-tools-17c" hidden>
+    <div class="atlas-event-view" role="group" aria-label="17世纪事件列表范围">
+     <button type="button" id="showYearEventsOnly" aria-pressed="false">仅本年</button>
+     <button type="button" id="showDecadeEventsToYear" aria-pressed="true">本十年至今</button>
+    </div>
+    <div class="atlas-event-query-row">
+     <label for="seventeenthEventSearch" class="sr-only">搜索本十年历史事件</label>
+     <input type="search" id="seventeenthEventSearch" autocomplete="off" placeholder="搜索事件名称、人物或地点" aria-describedby="seventeenthSearchStatus">
+     <button type="button" id="clearSeventeenthEventSearch" aria-label="清除事件搜索" hidden>清除</button>
+    </div>
+    <div id="seventeenthSearchStatus" class="atlas-event-search-status" role="status" aria-live="polite"></div>
+   </div>
    <label class="chapter-archive-toggle"><input type="checkbox" id="showFullChapterArchive">查阅本章完整档案</label>
    <div id="eventList" class="event-list"><div class="loading">正在读取历史资料……</div></div>
    <div class="sidebar-settings-wrap">
