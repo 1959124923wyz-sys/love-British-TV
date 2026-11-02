@@ -21,14 +21,22 @@ def goto(year,required,forbidden=None):
  print('PASS',year,active,'large-area SVG polygons')
 try:
  goto(1600,1)  # English Crown's paper claim over Ireland, even amid resistance
+ goto(1602,1)  # English factory at Bantam (trade licence, NOT Java sovereignty)
  goto(1606,2)  # First Virginia coast-charter eligibility corridor
  goto(1609,1)
+ goto(1612,2)  # Surat trading permission from Mughal authority
  goto(1620,7)  # Sea-to-sea Council for New England and separate Plymouth colony
  goto(1623,8)  # St Kitts broad island visual claim; not all British-controlled
  goto(1629,3)
+ goto(1651,4)  # English Hugli factory under Mughal jurisdiction
  goto(1652,4)
+ goto(1664,5)  # Separate New Jersey and Delaware documentary provinces
+ goto(1673,5)  # Dutch recovery: do not retain English New Jersey and Delaware sub-layers
+ goto(1674,5)  # English political jurisdiction returns
  goto(1670,7)
  goto(1681,9)
+ goto(1682,9)  # Penn's Delaware Lower Counties
+ goto(1685,9)  # Company post at Bencoolen, separate from Mughal or Dutch sovereignty
  assert j("return document.getElementById('mapLayerTerritory').checked")
  d.find_element(By.ID,'mapLayerTerritory').click()
  wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length===0"))
@@ -43,6 +51,8 @@ try:
  d.save_screenshot(str(out/'editor23-wide-colonial-source-dossier.png'))
  goto(1688,12)  # Separate enlarged Dominion alongside prior colonial claims
  goto(1690,8)
+ goto(1698,8)  # Scottish New Caledonia at Darien and Bengal early Calcutta
+ goto(1699,8)
  d.get('http://127.0.0.1:8765/?year=1599')
  wait.until(lambda _:j("return document.getElementById('bigYear')?.textContent==='1599'"))
  assert j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length===0")
