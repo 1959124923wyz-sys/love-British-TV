@@ -402,7 +402,8 @@ function openTerritoryDossier(feature,kind='historic'){
   .filter(e=>e&&occurredByYear(e,year)); // Never expose later wartime events in an earlier year's territorial dossier.
  selected='';selectedItemYear=null;
  const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
+ $('dossierBody').innerHTML=(kind==='seventeenth-claim'?'<button type="button" class="atlas-colony-directory-back" data-return-claim-directory="1">← 返回本年区域目录</button>':'')+
+  '<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
   '<h2>'+escapeHTML(kind==='seventeenth-claim'?conciseRegionTitle(p.name):(p.name||feature.id||'历史领土概况'))+'</h2>'+
   (kind==='seventeenth-claim'&&conciseRegionTitle(p.name)!==p.name?'<details class="atlas-complete-title"><summary>完整区域名称</summary><p>'+escapeHTML(p.name)+'</p></details>':'')+
   '<p>'+escapeHTML(description)+'</p>'+
@@ -422,6 +423,7 @@ function openTerritoryDossier(feature,kind='historic'){
    [...new Set(p.source_urls.filter(u=>/^https:\/\//.test(u)&&!(p.source_ids||[]).some(id=>sourcesById.get(id)?.url===u)))].map(url=>
     '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">阅读 ↗</a>').join('')+'</div>':'');
  openPanel('dossier');
+ $('dossierBody').querySelector('[data-return-claim-directory]')?.addEventListener('click',openSeventeenthClaimDirectory);
  $('dossierBody').querySelectorAll('[data-zone-place]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedPlaces[Number(n.dataset.zonePlace)],'place')));
  $('dossierBody').querySelectorAll('[data-zone-event]').forEach(n=>n.addEventListener('click',()=>openDossier(relatedEvents[Number(n.dataset.zoneEvent)],'event')));
  $('dossierBody').querySelectorAll('[data-overlap-claim]').forEach(n=>n.addEventListener('click',()=>openTerritoryDossier(alternativeClaims[Number(n.dataset.overlapClaim)],'seventeenth-claim',claimPoint)));
@@ -790,17 +792,51 @@ function openSeventeenthClaimDirectory(){
  const active=seventeenthColonialClaims.features.filter(f=>
   year>=f.properties.start_year&&year<=f.properties.end_year)
   .sort((a,b)=>a.properties.name.localeCompare(b.properties.name,'zh'));
- const large=active.filter(f=>f.properties.map_presentation==='optional_maximal_paper_claim').length;
+ const huge=active.filter(f=>f.properties.map_presentation==='optional_maximal_paper_claim').length;
+ const groups=[
+  {id:'governance',title:'殖民行政与争夺参考',items:active.filter(f=>['administrative','conquest'].includes(f.properties.display_class))},
+  {id:'charters',title:'王室与领主土地特许',items:active.filter(f=>f.properties.display_class==='charter'&&f.properties.map_presentation!=='optional_maximal_paper_claim')},
+  {id:'companies',title:'公司商馆与海岸堡垒',items:active.filter(f=>f.properties.display_class==='company'&&f.properties.map_presentation!=='optional_maximal_paper_claim')},
+  {id:'islands',title:'岛屿殖民与群岛声索',items:active.filter(f=>f.properties.display_class==='island')},
+  {id:'paper',title:'仅纸面巨型声索 · 默认不着色',items:active.filter(f=>f.properties.map_presentation==='optional_maximal_paper_claim')}
+ ];
+ const buttons=items=>items.map(f=>{
+  const i=active.indexOf(f),p=f.properties;
+  return '<button type="button" class="zone-record-link atlas-colony-directory-item" data-colonial-directory="'+i+'">'+
+   '<strong>'+escapeHTML(conciseRegionTitle(p.name))+'</strong>'+
+   '<small>'+escapeHTML(p.start_year+'—'+p.end_year+'年 · '+(p.label_type||'历史概略参考'))+'</small></button>';
+ }).join('');
  $('dossierBody').innerHTML='<div class="dossier-kicker">17世纪地图 · '+year+'年</div>'+
   '<h2>本年殖民区域与原始声索</h2>'+
-  '<p>本年共'+active.length+'块史料参考区域，其中'+large+'块属于默认隐藏的跨大陆或巨大流域纸面声索。点击逐项核对史料。此目录并非实际军事占领面积清单，区域重叠不累计。</p>'+
-  '<div class="zone-related">'+active.map((f,i)=>'<button type="button" class="zone-record-link" data-colonial-directory="'+i+'">'+
-   escapeHTML(conciseRegionTitle(f.properties.name))+
-   (f.properties.map_presentation==='optional_maximal_paper_claim'?' · 纯纸面特许':'')+
-   '</button>').join('')+'</div>';
+  '<p>当前有'+active.length+'块历史参考区域，其中'+huge+'块为默认隐藏的跨大陆或巨大流域法律声索。分组和搜索只为阅读方便；地图范围未经历史测绘，不代表实际控制，重叠不累计。</p>'+
+  '<div class="atlas-directory-filter"><label for="claimDirectorySearch">检索本年区域与史料</label>'+
+   '<input id="claimDirectorySearch" type="search" placeholder="输入地区、殖民公司或地名" autocomplete="off">'+
+   '<span id="claimDirectoryStatus" role="status" aria-live="polite">'+active.length+'块参考区域</span></div>'+
+  '<div class="atlas-colony-directory">'+groups.filter(g=>g.items.length).map(g=>
+   '<details class="atlas-colony-directory-group" data-directory-group="'+g.id+'" open>'+
+   '<summary>'+escapeHTML(g.title)+' <span>('+g.items.length+')</span></summary>'+
+   '<div class="zone-related">'+buttons(g.items)+'</div></details>').join('')+'</div>';
  openPanel('dossier');
  $('dossierBody').querySelectorAll('[data-colonial-directory]').forEach(btn=>
   btn.addEventListener('click',()=>openTerritoryDossier(active[Number(btn.dataset.colonialDirectory)],'seventeenth-claim')));
+ const search=$('dossierBody').querySelector('#claimDirectorySearch');
+ search.addEventListener('input',()=>{
+  const term=search.value.trim().toLocaleLowerCase();
+  let found=0;
+  $('dossierBody').querySelectorAll('[data-colonial-directory]').forEach(btn=>{
+   const f=active[Number(btn.dataset.colonialDirectory)],p=f.properties;
+   const corpus=[p.name,p.label_type,p.description,p.start_year,p.end_year].join(' ').toLocaleLowerCase();
+   const matched=!term||corpus.includes(term);
+   btn.hidden=!matched;
+   if(matched)found++;
+  });
+  $('dossierBody').querySelectorAll('[data-directory-group]').forEach(group=>{
+   const any=!!group.querySelector('[data-colonial-directory]:not([hidden])');
+   group.hidden=!any;
+   if(term&&any)group.open=true;
+  });
+  $('dossierBody').querySelector('#claimDirectoryStatus').textContent='匹配'+found+' / '+active.length+'块参考区域';
+ });
 }
 function renderSeventeenthColonialClaims(){
  groups.colonialClaims.clearLayers();
