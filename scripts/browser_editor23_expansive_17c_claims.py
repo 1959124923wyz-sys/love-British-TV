@@ -26,6 +26,22 @@ try:
  goto(1609,1)
  goto(1612,2)  # Surat trading permission from Mughal authority
  goto(1620,7)  # Sea-to-sea Council for New England and separate Plymouth colony
+ # A transcontinental paper grant must not paint half a continent by default.
+ assert not j("return document.getElementById('showMaximalPaperCharters').checked")
+ assert j("return document.querySelectorAll('path.atlas-17c-paper-only').length===0")
+ d.find_element(By.ID,'showMaximalPaperCharters').click()
+ wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-paper-only').length>0"))
+ assert j("return [...document.querySelectorAll('path.atlas-17c-paper-only')].every(p=>p.getAttribute('fill')==='none')")
+ d.save_screenshot(str(out/'editor23-1620-optional-sea-to-sea-unfilled.png'))
+ d.find_element(By.ID,'showMaximalPaperCharters').click()
+ wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-paper-only').length===0"))
+ d.find_element(By.ID,'showSeventeenthClaimDirectory').click()
+ wait.until(lambda _:j("return document.querySelectorAll('#dossierBody [data-colonial-directory]').length>=7"))
+ assert j("return document.getElementById('dossierBody').textContent.includes('纸面声索')")
+ j("document.querySelector('#dossierBody [data-colonial-directory]').click()")
+ wait.until(lambda _:j("return !!document.querySelector('#dossierBody .zone-source-links a.source-link')"))
+ assert j("return document.getElementById('dossierBody').textContent.includes('历史时段')")
+ d.save_screenshot(str(out/'editor23-1620-source-directory.png'))
  goto(1623,8)  # St Kitts broad island visual claim; not all British-controlled
  goto(1629,3)
  goto(1651,4)  # English Hugli factory under Mughal jurisdiction
@@ -53,6 +69,15 @@ try:
  goto(1690,8)
  goto(1698,8)  # Scottish New Caledonia at Darien and Bengal early Calcutta
  goto(1699,8)
+ # Dense 17th-century clusters expose a record list instead of a grid of 30+ icons.
+ biggest=j("return [...document.querySelectorAll('.atlas-aggregate')].sort((a,b)=>Number(b.querySelector('strong')?.textContent)-Number(a.querySelector('strong')?.textContent))[0]?.querySelector('strong')?.textContent||'0'")
+ if int(biggest)>8:
+  j("""const marker=[...document.querySelectorAll('.atlas-aggregate')].sort((a,b)=>
+   Number(b.querySelector('strong')?.textContent)-Number(a.querySelector('strong')?.textContent))[0];
+   marker.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));""")
+  wait.until(lambda _:j("return !!document.querySelector('#dossierBody .cluster-list')"))
+  assert j("return document.querySelectorAll('.atlas-flyout-icon').length===0")
+  d.save_screenshot(str(out/'editor23-1699-compact-cluster-list.png'))
  d.get('http://127.0.0.1:8765/?year=1599')
  wait.until(lambda _:j("return document.getElementById('bigYear')?.textContent==='1599'"))
  assert j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length===0")
