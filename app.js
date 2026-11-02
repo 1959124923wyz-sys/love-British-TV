@@ -270,6 +270,12 @@ function listSources(ids,item){
    '</div>'+
    (refs.length?'<div class="mini-heading">文献出处 · '+refs.length+'项</div><div class="source-list">'+refs.map(x=>'<a class="source-link" href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.publisher)+' · '+escapeHTML(x.title)+' ↗</a>').join('')+'</div>':'')+'</details>';
 }
+function conciseEventTitle(item){return window.HistoryHeadlines?.eventTitle?.(item)||item?.name||'';}
+function conciseRegionTitle(name){
+ const full=String(name||'');
+ const first=full.split('：')[0].replace(/^(?:1[6][0-9]{2})(?:—1[6][0-9]{2})?年(?:后)?/,'').trim();
+ return first.length>=4&&first.length<=25?first:full;
+}
 function openDossier(item,typ){
  if(!item)return;
  const candidate=typ==='candidate',route=typ==='route',place=typ==='place';
@@ -289,7 +295,9 @@ function openDossier(item,typ){
    (canMapFocus?'':' disabled')+'>◎ 在地图上定位</button><small>'+
    (canMapFocus?'保留当前年份与缩放；手机上返回地图查看':'该事件暂无可定位地点，或尚未发生')+
    '</small></div>'):'';
- $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(item.name)+'</h2><p>'+escapeHTML(description)+'</p>'+representativeNote+
+ $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(conciseEventTitle(item))+'</h2>'+
+  (conciseEventTitle(item)!==item.name?'<details class="atlas-complete-title"><summary>完整事件名称</summary><p>'+escapeHTML(item.name)+'</p></details>':'')+
+  '<p>'+escapeHTML(description)+'</p>'+representativeNote+
   (window.HistoryStories?.eventLinkMarkup?.(item,typ)||'')+locateAction+
   (storyChild?'':listSources(item.source_ids,item));
  openPanel('dossier');
@@ -395,13 +403,15 @@ function openTerritoryDossier(feature,kind='historic'){
  selected='';selectedItemYear=null;
  const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
-  '<h2>'+escapeHTML(p.name||feature.id||'历史领土概况')+'</h2><p>'+escapeHTML(description)+'</p>'+
+  '<h2>'+escapeHTML(kind==='seventeenth-claim'?conciseRegionTitle(p.name):(p.name||feature.id||'历史领土概况'))+'</h2>'+
+  (kind==='seventeenth-claim'&&conciseRegionTitle(p.name)!==p.name?'<details class="atlas-complete-title"><summary>完整区域名称</summary><p>'+escapeHTML(p.name)+'</p></details>':'')+
+  '<p>'+escapeHTML(description)+'</p>'+
   '<div class="zone-dossier-facts">'+row('历史时段',period)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
   ''+'</div>'+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
-   '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+ev.name)+'</button>').join('')+'</div>':'')+
+   '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+conciseEventTitle(ev))+'</button>').join('')+'</div>':'')+
   (alternativeClaims.length?'<h3 class="zone-links-heading">当前位置的其他声索／治理参考（'+alternativeClaims.length+'）</h3>'+ 
    '<p>多项纸面授权或行政参考重叠，不表示该地被多方同时实际占领。选择另一块查看其独立史料。</p>'+
    '<div class="zone-related">'+alternativeClaims.map((f,i)=>
@@ -419,7 +429,7 @@ function openTerritoryDossier(feature,kind='historic'){
 function openCollection(items,title){
  if(!items.length)return;
  const choices=items.slice().sort((a,b)=>Number(b.item.significance?.level||1)-Number(a.item.significance?.level||1)||Number(a.item.year||0)-Number(b.item.year||0));
- $('dossierBody').innerHTML='<div class="dossier-kicker">同一地区的历史记录</div><h2>'+escapeHTML(title||'附近事件')+'</h2><div class="cluster-list">'+choices.map((x,i)=>'<button type="button" class="cluster-entry" data-record="'+i+'"><span class="cluster-entry-icon">'+svgIcon(x.item,'atlas-list-icon')+'</span><span><small>'+escapeHTML(x.item.date_label||'持续状态')+'</small><strong>'+escapeHTML(x.item.name)+'</strong></span><span class="cluster-entry-arrow">›</span></button>').join('')+'</div>';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">同一地区的历史记录</div><h2>'+escapeHTML(title||'附近事件')+'</h2><div class="cluster-list">'+choices.map((x,i)=>'<button type="button" class="cluster-entry" data-record="'+i+'"><span class="cluster-entry-icon">'+svgIcon(x.item,'atlas-list-icon')+'</span><span><small>'+escapeHTML(x.item.date_label||'持续状态')+'</small><strong>'+escapeHTML(conciseEventTitle(x.item))+'</strong></span><span class="cluster-entry-arrow">›</span></button>').join('')+'</div>';
  openPanel('dossier');
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
@@ -445,7 +455,7 @@ function renderEventList(){
    (year>=1600?'本年暂无已入库记录 · 待继续调查':'本年无新增记录');
   hint.classList.toggle('none',!currentEvents.length);
  }
- $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.representative_map_point?' · ◎地区参考点':'')+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(e.name)+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
+ $('eventList').innerHTML=events.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" aria-label="'+escapeHTML(e.name)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.representative_map_point?' · ◎地区参考点':'')+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(conciseEventTitle(e))+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join('');
  $('eventList').querySelectorAll('.event-item').forEach(node=>{
   node.addEventListener('click',ev=>{
    // A double-click must complete before the first click hides its target.
@@ -565,7 +575,7 @@ function expandCluster(group,pin=false){
   const record=items[i],item=record.item,d=27;
   const icon=L.divIcon({className:'atlas-flyout-icon'+(item.id===focusedEventId?' atlas-target-marker':''),html:'<div class="expanded-event">'+iconHTML(item,record.type==='event'&&isNewEventThisYear(item))+'</div>',iconSize:[d,d],iconAnchor:[d/2,d/2]});
   const marker=L.marker(map.containerPointToLatLng(L.point(pos.x,pos.y)),{icon,zIndexOffset:1800+i,bubblingMouseEvents:false})
-   .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),
+   .bindTooltip(hoverCard(conciseEventTitle(item),item.short_description||item.description,item),
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[14,0]})
    .on('mouseover',cancelClusterClose)
    .on('mouseout',scheduleClusterClose)
@@ -633,7 +643,7 @@ function renderPoints(){
    const d=levelOf(item)===3?30:levelOf(item)===2?27:23;
    const ico=L.divIcon({className:item.id===focusedEventId?'atlas-target-marker':'',html:iconHTML(item,record.type==='event'&&isNewEventThisYear(item)),iconSize:[d,d],iconAnchor:[d/2,d/2]});
    L.marker([record.lat,record.lng],{icon:ico,zIndexOffset:500+levelOf(item)*60})
-    .bindTooltip(hoverCard(item.name,item.short_description||item.description,item),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
+    .bindTooltip(hoverCard(conciseEventTitle(item),item.short_description||item.description,item),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
     .on('click',()=>openDossier(item,record.type)).addTo(groups.cluster);
    continue;
   }
@@ -798,10 +808,14 @@ function renderSeventeenthColonialClaims(){
   style:f=>{
    const p=f.properties||{},shade=colors[p.display_class]||'#ab85d1';
    const maxPaper=p.map_presentation==='optional_maximal_paper_claim';
-   return {pane:'seventeenthColonialClaimsPane',color:shade,weight:maxPaper?2:2.3,
-    opacity:maxPaper?.69:.9,dashArray:maxPaper?'4 10':'8 7',lineCap:'round',
+   const detailed=$('showDetailedClaimBoundaries').checked;
+   // Overview mode avoids visually compounding uncertain paper claims into "more control".
+   return {pane:'seventeenthColonialClaimsPane',color:shade,
+    weight:maxPaper?1.7:detailed?2.15:.85,
+    opacity:maxPaper?.69:detailed?.83:.22,
+    dashArray:maxPaper?'4 10':detailed?'8 7':'3 9',lineCap:'round',
     fill:!maxPaper,fillColor:shade,
-    fillOpacity:maxPaper?0:p.display_class==='island'?.19:p.display_class==='conquest'?.17:.12,
+    fillOpacity:maxPaper?0:detailed?(p.display_class==='island'?.19:p.display_class==='conquest'?.17:.12):.055,
     bubblingMouseEvents:false,className:'atlas-17c-expansive-claim'+(maxPaper?' atlas-17c-paper-only':'')};
   },
   onEachFeature:(feature,layer)=>{
@@ -809,6 +823,11 @@ function renderSeventeenthColonialClaims(){
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
     escapeHTML(p.label_type+(p.map_presentation==='optional_maximal_paper_claim'?' · 仅纸面远距声索，无填色':' · 非实测边界')+' · 点击查看史料')+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   const base={weight:layer.options.weight,opacity:layer.options.opacity,
+    dashArray:layer.options.dashArray,fillOpacity:layer.options.fillOpacity};
+   layer.on('mouseover',()=>layer.setStyle({weight:2.8,opacity:1,dashArray:'6 6',
+    fillOpacity:feature.properties.map_presentation==='optional_maximal_paper_claim'?0:.14}));
+   layer.on('mouseout',()=>layer.setStyle(base));
    layer.on('click',event=>{
     if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
     openTerritoryDossier(feature,'seventeenth-claim',event.latlng);
@@ -2589,6 +2608,7 @@ $('mapLayerTerritory').addEventListener('change',syncMapLayers);
 $('mapLayerEvents').addEventListener('change',syncMapLayers);
 $('showModernBasemap').addEventListener('change',e=>setBasemap(e.target.checked?'modern':'physical'));
 $('showMaximalPaperCharters').addEventListener('change',()=>{if(atlas)renderSeventeenthColonialClaims()});
+$('showDetailedClaimBoundaries').addEventListener('change',()=>{if(atlas)renderSeventeenthColonialClaims()});
 $('showSeventeenthClaimDirectory').addEventListener('click',openSeventeenthClaimDirectory);
 $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target.value)});
 function jumpToEnteredYear(){
