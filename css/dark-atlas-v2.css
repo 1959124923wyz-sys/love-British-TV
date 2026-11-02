@@ -933,3 +933,18 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .atlas-colony-directory-back{border:1px solid #59728d;border-radius:6px;padding:7px 11px;background:#23394f;color:#f0d4b4;font:inherit;font-size:12px;cursor:pointer;margin:0 0 12px}
  .atlas-colony-directory-back:hover,.atlas-colony-directory-back:focus-visible{background:#324d66;outline:2px solid #d5ad88;outline-offset:2px}
 }
+
+/* Evidence links identify their originating institution's hostname instead of
+   several indistinguishable 'read' buttons; exact URL is in the link target/title. */
+@media (min-width:1050px){
+ .dossier .zone-source-links .atlas-source-host{
+  display:block;white-space:normal;overflow-wrap:anywhere;
+  font-size:12px;line-height:1.65;
+  border:1px solid #45637a;border-radius:6px;
+  padding:10px 12px;margin:7px 0;
+ }
+ .dossier .zone-source-links .atlas-source-host:hover,
+ .dossier .zone-source-links .atlas-source-host:focus-visible{
+  border-color:#cbab7e;outline:2px solid #c8a67c;outline-offset:1px;
+ }
+}

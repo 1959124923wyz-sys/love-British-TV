@@ -238,6 +238,15 @@ const atlas1690=json('data/atlas-1690-1699.json');
 assert(atlas1690.events.length>=90,'1690s event count source unexpectedly changed');
 assert(atlas1690.events.some(e=>e.year===1699)&&atlas1690.events.some(e=>e.year===1691),
  'search and year-specific controls need distinct new and earlier decade events');
+// Source dossier legibility: domain labels are conservative. We never fabricate
+// an archival document title or silently replace a URL with a broad website.
+assert(app.includes('原始来源网站 · ')&&app.includes('new URL(url).hostname'),'source citations must show the specific host domain');
+assert(app.includes('atlas-source-host')&&css.includes('.atlas-source-host'),'generic indistinguishable citation links must be styled and keyboard visible');
+assert(app.includes("row('边界说明',kind==='seventeenth-claim'")&&
+ app.includes('概略示意外缘 · 非实测边界 · 不得计算实控面积'),
+ 'every colonial claim dossier must communicate its schematic and non-aggregatable nature');
+assert(app.includes("escapeHTML(conciseRegionTitle(f.properties.name))+'</button>'"),
+ 'competing legal claims must use readable short labels while retaining detailed original title');
 console.log('PASS: quiet overview polygon overlap, explicit detailed boundaries, '+longEventCount+' long 17C events, and 29 concise serial-story headlines.');
 console.log('PASS: overlapping Delaware legal-claim navigation, Dutch recapture, cross-link integrity, 29 published essays and '+withoutLinks.length+' documented event-link gaps.');
 console.log('PASS: 53 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
