@@ -22,7 +22,9 @@ assert(p.source_urls.length>=1&&p.source_urls.every(url=>url.startsWith('https:/
 assert(p.description.length>=60);
 }
 const active=year=>fc.features.filter(f=>f.properties.start_year<=year&&year<=f.properties.end_year);
-assert.equal(active(1608).length,0);assert(active(1609).some(f=>f.id==='claim-virginia-company-1609'));
+assert(active(1608).some(f=>f.id==='claim-ireland-crown-1600')&&active(1608).some(f=>f.id==='claim-virginia-first-charter-1606'),'pre-1609 sovereign legal claims and 1606 limited coastal grant now intentionally appear');
+assert(active(1609).some(f=>f.id==='claim-virginia-company-1609'));
+assert(!active(1609).some(f=>f.id==='claim-virginia-first-charter-1606'))
 assert(!active(1625).some(f=>f.id==='claim-virginia-company-1609'),'company charter cannot outlive its 1624 termination');
 assert(active(1629).some(f=>f.id==='claim-massachusetts-1629'));
 assert(active(1654).some(f=>f.id==='claim-ireland-conquest-1653'));
