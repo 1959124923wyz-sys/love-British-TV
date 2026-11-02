@@ -888,3 +888,12 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 /* Desktop 17C source directory: functional access to all year-active colonial references. */
 #showSeventeenthClaimDirectory{display:block;width:100%;padding:8px 10px;text-align:left;background:#20384c;color:#e4d1ed;border:1px solid #54728a;border-radius:6px;font:inherit;cursor:pointer}
 #showSeventeenthClaimDirectory:hover,#showSeventeenthClaimDirectory:focus-visible{background:#31516b;outline:2px solid #b985e8;outline-offset:2px}
+
+/* 17C desktop editorial: the short headline is primary; archival full names stay available. */
+@media (min-width:1050px){
+ .dossier .atlas-complete-title{margin:-5px 0 12px;padding:0 0 7px;border-bottom:1px solid #294258;color:#adc3d7}
+ .dossier .atlas-complete-title summary{cursor:pointer;font-size:12px;line-height:1.7;color:#a8b6c8}
+ .dossier .atlas-complete-title p{font-size:12px;line-height:1.7;color:#bacde0;margin:5px 0 0}
+ .event-item strong{font-size:12px;line-height:1.6;overflow-wrap:break-word;text-wrap:pretty}
+ .atlas-17c-expansive-claim{transition:stroke-opacity .12s ease,fill-opacity .12s ease}
+}
