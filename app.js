@@ -441,6 +441,32 @@ function resetDossier(){window.HistoryStories?.onReset?.();selected='';selectedI
 // Only event symbols use this rolling window. Map territories remain tied to
 // the selected single year and cannot be combined into an invented 4-year border.
 let eventWindowMode17c='rolling4';
+let activeStoryEventLens=null; // optional explicit 17C story focus, never an occupation map
+function displayedSeventeenthEvents(atYear){
+ const historical=seventeenthEventsForWindow(atYear);
+ return activeStoryEventLens?
+  historical.filter(e=>activeStoryEventLens.ids.has(e.id)):historical;
+}
+function displayedSeventeenthRoutes(atYear){
+ const historical=seventeenthRoutesForWindow(atYear);
+ return activeStoryEventLens?historical.filter(r=>
+  (r.related_event_ids||[]).some(id=>activeStoryEventLens.ids.has(id))):historical;
+}
+function setStoryEventLens(request){
+ if(!request){
+  activeStoryEventLens=null;
+ }else{
+  const ids=new Set((request.eventIds||[]).filter(id=>
+   typeof id==='string'&&[...serialPreviewByDecade.values()].some(ds=>ds.events.some(e=>e.id===id))));
+  if(!ids.size||typeof request.id!=='string'||!request.id)return false;
+  activeStoryEventLens={id:request.id,title:String(request.title||request.id),ids};
+  eventWindowMode17c='rolling4';
+  $('showFullChapterArchive').checked=false;
+ }
+ focusedEventId=null;focusRequestToken++;
+ if(atlas){renderEventList();renderPoints()}
+ return true;
+}
 function seventeenthEventWindowStart(atYear,mode=eventWindowMode17c){
  if(mode==='year')return atYear;
  if(mode==='decade')return decadeForYear(atYear);
@@ -487,12 +513,12 @@ function renderEventList(){
  // A deliberate archival switch allows browsing the full chapter without changing time.
  const fullArchive=$('showFullChapterArchive').checked;
  const tools17=year>=1600;
- const windowEvents=tools17?seventeenthEventsForWindow(year):atlas.events.filter(e=>(fullArchive||occurredByYear(e,year)));
+ const windowEvents=tools17?displayedSeventeenthEvents(year):atlas.events.filter(e=>(fullArchive||occurredByYear(e,year)));
  // Explicit future full-archive preview affects the sidebar only.
- const events=(fullArchive?atlas.events.slice():windowEvents).sort((a,b)=>
+ const events=(fullArchive?(tools17&&activeStoryEventLens?atlas.events.filter(e=>activeStoryEventLens.ids.has(e.id)):atlas.events.slice()):windowEvents).sort((a,b)=>
   Number(isNewEventThisYear(b))-Number(isNewEventThisYear(a))||
   a.year-b.year||levelOf(b)-levelOf(a)||a.name.localeCompare(b.name,'zh'));
- const currentEvents=atlas.events.filter(isNewEventThisYear);
+ const currentEvents=atlas.events.filter(e=>isNewEventThisYear(e)&&(!tools17||!activeStoryEventLens||activeStoryEventLens.ids.has(e.id)));
  const locatable=currentEvents.filter(e=>canLocateEvent(e,year)).length;
  $('seventeenthEventTools').hidden=!tools17;
  const onlyYear=tools17&&eventWindowMode17c==='year'&&!fullArchive;
@@ -504,9 +530,9 @@ function renderEventList(){
   $('showYearEventsOnly').setAttribute('aria-pressed',String(eventWindowMode17c==='year'&&!fullArchive));
   $('showRollingFourYears').setAttribute('aria-pressed',String(eventWindowMode17c==='rolling4'&&!fullArchive));
   $('showDecadeEventsToYear').setAttribute('aria-pressed',String(eventWindowMode17c==='decade'&&!fullArchive));
-  $('seventeenthEventWindowRange').textContent=fullArchive?
+  $('seventeenthEventWindowRange').textContent=(activeStoryEventLens?'专题聚焦：'+activeStoryEventLens.title+' · ':'')+(fullArchive?
    '正在浏览完整十年档案（含未来记录），地图事件仍按所选窗口显示':
-   '地图动态事件：'+range+' · 共'+windowEvents.length+'项，'+windowEvents.filter(e=>canLocateEvent(e,year)).length+'项可定位';
+   '地图动态事件：'+range+' · 共'+windowEvents.length+'项，'+windowEvents.filter(e=>canLocateEvent(e,year)).length+'项可定位');
   $('clearSeventeenthEventSearch').hidden=!query;
   $('seventeenthSearchStatus').textContent=query||onlyYear||fullArchive?
    '显示 '+visibleEvents.length+' / '+events.length+' 项'+(onlyYear?' · 仅'+year+'年':'')+(query?' · 搜索结果':'')+(fullArchive?' · 完整档案预览':''):
@@ -656,7 +682,7 @@ function renderPoints(){
  const shown=[];
  const showAll=map.getZoom()>=6||$('toggleMinorEvents').checked||(year>=1600&&eventWindowMode17c==='rolling4');
  if($('toggleEvents').checked||focusedEventId){
-  for(const e of (year>=1600?seventeenthEventsForWindow(year):atlas.events)){
+  for(const e of (year>=1600?displayedSeventeenthEvents(year):atlas.events)){
    if(!occurredByYear(e,year))continue;
    if(!Number.isFinite(e.lat)||!Number.isFinite(e.lng))continue;
    if(!$('toggleEvents').checked&&e.id!==focusedEventId)continue;
@@ -743,7 +769,7 @@ function renderPoints(){
  // The circumnavigation is one continuous, separately sourced 1577–1580 voyage.
  // Preserve all published episode records but avoid drawing their four older,
  // disconnected Pacific/Chile direction links twice when the new itinerary loads.
- const mapRoutes=(year>=1600?seventeenthRoutesForWindow(year):(atlas.routes||[])).filter(r=>!(drakeCircumnavigation&&
+ const mapRoutes=(year>=1600?displayedSeventeenthRoutes(year):(atlas.routes||[])).filter(r=>!(drakeCircumnavigation&&
   year>=1577&&year<=1580&&drakeCircumnavigation.duplicate_old_route_ids.includes(r.id)));
  if(drakeCircumnavigation&&year>=1577&&year<=1580)mapRoutes.push(...drakeCircumnavigation.routes);
  for(const r of mapRoutes){
@@ -2792,9 +2818,13 @@ window.atlasStoryBridge={
  // historical control. Events only, including adjacent source decades.
  activeEventWindow:()=>year>=1600?{
   from:seventeenthEventWindowStart(year),to:year,mode:eventWindowMode17c,
-  ids:seventeenthEventsForWindow(year).map(e=>e.id),
-  routeIds:seventeenthRoutesForWindow(year).map(r=>r.id)
+  ids:displayedSeventeenthEvents(year).map(e=>e.id),
+  routeIds:displayedSeventeenthRoutes(year).map(r=>r.id),
+  topicId:activeStoryEventLens?.id||null
  }:null,
+ activeTopicFocusId:()=>activeStoryEventLens?.id||null,
+ setStoryFocus:spec=>year>=1600&&setStoryEventLens(spec),
+ clearStoryFocus:()=>setStoryEventLens(null),
  activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
  activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
