@@ -2123,6 +2123,7 @@ function setYear(v){
   $('historicalRegionGuide').hidden=true;
   renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();
   if(changed)$('eventList').scrollTop=0;
+  window.HistoryStories?.onYearChanged?.();
   $('prevYear').disabled=false;
   $('nextYear').disabled=year>=1699;
   return;
