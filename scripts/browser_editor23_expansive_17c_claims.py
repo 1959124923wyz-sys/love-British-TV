@@ -69,6 +69,8 @@ try:
  assert j("return [...document.querySelectorAll('#eventList [data-eid]')].filter(el=>el.dataset.eid.startsWith('1640S-')).length>=7")
  assert j("return [...document.querySelectorAll('#eventList [data-eid]')].filter(el=>el.dataset.eid.startsWith('1650S-')).length>=15")
  assert not j("return window.atlasStoryBridge.activeEventWindow().ids.includes('1640S-E001')")
+ assert j("return window.atlasStoryBridge.activeEventWindow().routeIds.includes('E6-R1649-DUBLIN-DROGHEDA')")
+ assert j("return window.atlasStoryBridge.activeEventWindow().routeIds.includes('E6-R1649-DROGHEDA-WEXFORD')")
  d.save_screenshot(str(out/'editor23-1650-rolling-1647-1650.png'))
  goto(1651,4)  # rolls to 1648–1651, not the fixed 1650s chapter
  assert j("return window.atlasStoryBridge.activeEventWindow().from===1648")
