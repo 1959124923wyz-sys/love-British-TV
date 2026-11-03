@@ -457,6 +457,21 @@ function seventeenthEventsForWindow(atYear,mode=eventWindowMode17c){
  }
  return result;
 }
+// Source-linked expedition / forced-transport routes share the 4-year historical
+// window, while their dated record never asserts continuous activity in each year.
+function seventeenthRoutesForWindow(atYear,mode=eventWindowMode17c){
+ if(atYear<1600)return atlas?.routes||[];
+ const start=seventeenthEventWindowStart(atYear,mode),result=[],seen=new Set();
+ for(let d=decadeForYear(start);d<=decadeForYear(atYear);d+=10){
+  for(const r of serialPreviewByDecade.get(d)?.routes||[]){
+   const begun=Number(r.start_year??r.year),ended=Number(r.end_year??r.year);
+   if(!Number.isFinite(begun)||!Number.isFinite(ended)||begun>atYear||ended<start||seen.has(r.id))continue;
+   if(Array.isArray(r.valid_years)&&!r.valid_years.some(y=>y>=start&&y<=atYear))continue;
+   seen.add(r.id);result.push(r);
+  }
+ }
+ return result;
+}
 function setSeventeenthEventWindowMode(mode){
  if(!['year','rolling4','decade'].includes(mode))return;
  eventWindowMode17c=mode;
@@ -728,12 +743,14 @@ function renderPoints(){
  // The circumnavigation is one continuous, separately sourced 1577–1580 voyage.
  // Preserve all published episode records but avoid drawing their four older,
  // disconnected Pacific/Chile direction links twice when the new itinerary loads.
- const mapRoutes=(atlas.routes||[]).filter(r=>!(drakeCircumnavigation&&
+ const mapRoutes=(year>=1600?seventeenthRoutesForWindow(year):(atlas.routes||[])).filter(r=>!(drakeCircumnavigation&&
   year>=1577&&year<=1580&&drakeCircumnavigation.duplicate_old_route_ids.includes(r.id)));
  if(drakeCircumnavigation&&year>=1577&&year<=1580)mapRoutes.push(...drakeCircumnavigation.routes);
  for(const r of mapRoutes){
-  if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;
-  if(Array.isArray(r.valid_years)&&!r.valid_years.includes(year))continue;
+  if(year<1600){
+   if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;
+   if(Array.isArray(r.valid_years)&&!r.valid_years.includes(year))continue;
+  }else if(!$('toggleRoutes').checked)continue;
   if(!Array.isArray(r.coords)||r.coords.length<2)continue;
   const coastal=r.route_kind==='coastal-commercial-reference-schematic';
   const humanTransport=r.route_kind==='schematic-human-transport-sea-corridor'||r.route_kind==='schematic-forced-person-transport';
@@ -755,7 +772,7 @@ function renderPoints(){
   L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
    color:baseColor,weight:22,opacity:.025,interactive:true,
    className:'atlas-voyage-hit'})
-   .bindTooltip(hoverCard(r.name,r.note),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
+   .bindTooltip(hoverCard(year>=1600?(Number(r.start_year??r.year)+'年 · '+r.name):r.name,r.note),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('mouseover',()=>line.setStyle({weight:coastal?5.6:schematic?3.2:4}))
    .on('mouseout',()=>line.setStyle({weight:style.weight}))
    .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openDossier(r,'route')})
@@ -2775,7 +2792,8 @@ window.atlasStoryBridge={
  // historical control. Events only, including adjacent source decades.
  activeEventWindow:()=>year>=1600?{
   from:seventeenthEventWindowStart(year),to:year,mode:eventWindowMode17c,
-  ids:seventeenthEventsForWindow(year).map(e=>e.id)
+  ids:seventeenthEventsForWindow(year).map(e=>e.id),
+  routeIds:seventeenthRoutesForWindow(year).map(r=>r.id)
  }:null,
  activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
