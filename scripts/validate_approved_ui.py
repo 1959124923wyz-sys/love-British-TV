@@ -85,7 +85,11 @@ require("renderTerritories()" in app and "territoryPane" in app and "toggleTerri
 require("year>=1502?'1502':'—'" in app and "year>=1513?'1513':'—'" in app, "future-year chapter cards stay hidden")
 require('id="milestoneDots"' not in html and 'function renderMilestones()' not in app,
         "removed year milestone dots must stay absent")
-require("!occurredByYear(e,year)" in app and "fullArchive||occurredByYear(e,year)" in app and "showFullChapterArchive" in html, "chronological events with explicitly accessible chapter archive")
+require("!occurredByYear(e,year)" in app
+        and "const events=(fullArchive?atlas.events.slice():windowEvents)" in app
+        and "seventeenthEventsForWindow(year)" in app
+        and "showFullChapterArchive" in html,
+        "chronological source-backed rolling event windows and explicitly accessible chapter archive")
 require("data/historical-detail-notes.json" in app
         and "历史文献与详细考证" in app,
         "two-level primary narrative and supporting archive")
