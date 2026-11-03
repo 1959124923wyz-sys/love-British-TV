@@ -224,7 +224,7 @@ assert(readerCode.includes('eventHeadline(linked)')&&readerCode.includes('完整
 // and the archival directory may be searched and navigated without loss of provenance.
 assert(html.includes('id="seventeenthEventTools"')&&html.includes('id="seventeenthEventSearch"')&&html.includes('id="showYearEventsOnly"'));
 assert(html.includes('id="showDecadeEventsToYear"')&&html.includes('id="clearSeventeenthEventSearch"'));
-assert(app.includes('const visibleEvents=query?scoped.filter(')&&app.includes('conciseEventTitle(e),e.description,e.short_description,e.date_label'),
+assert(app.includes('const visibleEvents=query?events.filter(')&&app.includes('conciseEventTitle(e),e.description,e.short_description,e.date_label'),
  'search must include original full historical event titles and dates, not just edited snippets');
 assert(app.includes("'chapterIntro').textContent='本十年已收录'+decadeTotal")&&
  app.includes('const observed=atlas.events.filter(e=>occurredByYear(e,year)).length'),
@@ -247,6 +247,22 @@ assert(app.includes("row('边界说明',kind==='seventeenth-claim'")&&
  'every colonial claim dossier must communicate its schematic and non-aggregatable nature');
 assert(app.includes("escapeHTML(conciseRegionTitle(f.properties.name))+'</button>'"),
  'competing legal claims must use readable short labels while retaining detailed original title');
+// The selected-year, rolling-four-year and decade modes are mutually exclusive
+// and only affect EVENT symbols; dated colonial claim areas remain single-year.
+assert(html.includes('id="showRollingFourYears" aria-pressed="true"')&&html.includes('id="seventeenthEventWindowRange"'),
+ 'rolling four-year event map must be the default, with visible range feedback');
+assert(app.includes("let eventWindowMode17c='rolling4'")&&app.includes('function seventeenthEventsForWindow(atYear,mode=eventWindowMode17c)'));
+assert(app.includes('for(let d=decadeForYear(start);d<=decadeForYear(atYear);d+=10)'),
+ 'event chronology lookup must traverse adjacent decade archives');
+assert(app.includes("for(const e of (year>=1600?seventeenthEventsForWindow(year):atlas.events))"),
+ 'map marker source must follow the selected rolling window');
+assert(app.includes('const windowEvents=tools17?seventeenthEventsForWindow(year)'),
+ 'sidebar must use same rolling window as the event markers');
+assert(app.includes("const showAll=map.getZoom()>=6||$('toggleMinorEvents').checked||(year>=1600&&eventWindowMode17c==='rolling4')"),
+ 'all mapped event significance tiers must remain eligible inside the four-year window');
+assert(app.includes('atlas-event-prior-year')&&css.includes('.atlas-event-prior-year'));
+assert(app.includes('function renderSeventeenthColonialClaims(){')&&app.includes('year>=f.properties.start_year&&year<=f.properties.end_year'),
+ 'existing territorial claims must continue to use a single selected year');
 console.log('PASS: quiet overview polygon overlap, explicit detailed boundaries, '+longEventCount+' long 17C events, and 29 concise serial-story headlines.');
 console.log('PASS: overlapping Delaware legal-claim navigation, Dutch recapture, cross-link integrity, 29 published essays and '+withoutLinks.length+' documented event-link gaps.');
 console.log('PASS: 53 sourced broad paper colonial claim coloured polygons, year-scoped, source links and claim-only guards, no fabricated actual military control or changed Tudor boundaries.');
