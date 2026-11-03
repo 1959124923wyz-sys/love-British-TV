@@ -58,6 +58,7 @@
   body.insertAdjacentHTML('afterbegin','<button type="button" class="story-back" data-story-back="1">← 返回重大历史专题</button>');
  }
  function onReset(){
+  window.atlasStoryBridge?.clearStoryFocus?.();
   closePreview();
   document.getElementById('workspace').classList.remove('story-reading');
   returnStoryId=null;
@@ -139,6 +140,31 @@
  }
  // Descriptive reading progress is computed only from scroll position and actual
  // published section nodes; it is not a historical chronology, event count or statistic.
+ // Published linked source events provide the topic's actual jump years;
+ // no mechanical ten-year chapter breaks or invented intermediate events.
+ function storyNodeYears(story){
+  return [...new Set((story?.related_event_ids||[]).map(eventInMemory)
+   .filter(e=>e&&Number.isInteger(Number(e.year))&&Number(e.year)>=1600)
+   .map(e=>Number(e.year)))].sort((a,b)=>a-b);
+ }
+ function updateStoryTopicControls(){
+  const bar=activeBody()?.querySelector('.story-topic-controls');
+  if(!bar||!lastStoryId)return;
+  const story=storyCache.get(lastStoryId),bridge=window.atlasStoryBridge;
+  if(!story||!bridge)return;
+  const current=bridge.currentYear(),years=storyNodeYears(story);
+  const focused=bridge.activeTopicFocusId?.()===story.id;
+  const toggle=bar.querySelector('[data-story-topic="toggle"]');
+  toggle.setAttribute('aria-pressed',String(focused));
+  toggle.textContent=focused?'退出专题聚焦':'仅看本专题';
+  bar.querySelector('[data-story-topic="prev"]').disabled=!years.some(y=>y<current);
+  bar.querySelector('[data-story-topic="next"]').disabled=!years.some(y=>y>current);
+  const relevantYears=years.filter(y=>y>=Math.max(1600,current-3)&&y<=current).length;
+  bar.querySelector('.story-topic-status').textContent=
+   (focused?'专题地图已聚焦 · ':'专题地图可选 · ')+
+   years.length+'个有据年份 · 近四年涉及'+relevantYears+'年';
+ }
+ function onYearChanged(){updateStoryTopicControls();}
  function updateStoryReadingProgress(){
   const body=activeBody(),article=body?.querySelector('.major-story-article');
   const toolbar=article?.querySelector('.story-reading-toolbar');
@@ -172,7 +198,14 @@
      '<button type="button" data-story-nav="toc">章节目录</button>'+
      '<div class="story-reading-progress"><span class="story-reading-progress-label">第1/'+article.sections.length+'节 · 已读0%</span>'+
       '<div class="story-reading-progress-meter" role="progressbar" aria-label="专题页面阅读位置" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="story-reading-progress-fill"></span></div></div>'+
-     '<button type="button" data-story-nav="top">回到开头</button></div>'+relatedMarkup+quantitativeHistoryHtml(article)+
+     '<button type="button" data-story-nav="top">回到开头</button></div>'+
+    (Number(article.start_year)>=1600&&storyNodeYears(article).length?
+     '<div class="story-topic-controls" role="group" aria-label="专题事件地图与跨年节点导航">'+
+       '<div class="story-topic-actions"><button type="button" data-story-topic="toggle" aria-pressed="false">仅看本专题</button>'+
+       '<button type="button" data-story-topic="prev">‹ 上一历史节点</button>'+
+       '<button type="button" data-story-topic="next">下一历史节点 ›</button></div>'+
+       '<span class="story-topic-status" aria-live="polite">专题历史节点已加载</span></div>':'')+
+    relatedMarkup+quantitativeHistoryHtml(article)+
     '<details class="story-toc"><summary>阅读目录 · '+article.sections.length+'节 <span aria-hidden="true">▾</span></summary>'+
     '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sectionHeadline(sec.heading))+'</button>').join('')+'</nav></details>'+
     '<div class="story-body">'+article.sections.map(sec=>
@@ -202,6 +235,9 @@
   closePreview();
   returnStoryId=null;lastStoryId=id;
   document.getElementById('workspace').classList.add('story-reading');
+  if(window.atlasStoryBridge?.activeTopicFocusId?.()&&
+     window.atlasStoryBridge.activeTopicFocusId()!==id)
+   window.atlasStoryBridge.clearStoryFocus?.();
   window.atlasStoryBridge?.clearSelectedEventYear?.();
   const container=activeBody();
   container.innerHTML='<p class="loading">正在打开历史专题……</p>';
@@ -213,8 +249,8 @@
    if(serial!==requestSerial)return;
    container.innerHTML=storyHtml(story);
    container.scrollTop=restore?readingScroll:0;
-   updateStoryReadingProgress();
-   if(restore){requestAnimationFrame(()=>{container.scrollTop=readingScroll;updateStoryReadingProgress()});}
+   updateStoryReadingProgress();updateStoryTopicControls();
+   if(restore){requestAnimationFrame(()=>{container.scrollTop=readingScroll;updateStoryReadingProgress();updateStoryTopicControls()});}
   }catch(err){
    if(serial!==requestSerial)return;
    container.innerHTML='<p>历史专题暂时无法读取，请稍后再试。</p><button class="story-back" type="button" data-story-return="1">← 返回原事件</button>';
@@ -256,6 +292,7 @@
   const item=eventInMemory(sourceEventId)||eventInMemory(fallbackId);
   if(item){
    const bridge=window.atlasStoryBridge;
+   bridge?.clearStoryFocus?.();
    // "Return to original event" restores its own year, not the last year
    // visited while reading later or earlier events in the article.
    bridge.clearSelectedEventYear();
@@ -271,7 +308,7 @@
   if(lastStoryId)await openStory(lastStoryId,true);
  }
  document.addEventListener('click',function(e){
-  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
+  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-topic],[data-story-preview-close]');
   if(!el){
    if(preview&&!e.target.closest('.story-event-preview'))closePreview();
    return;
@@ -287,6 +324,22 @@
     const toc=body.querySelector('.major-story-article .story-toc');
     if(toc){toc.open=true;toc.scrollIntoView({block:'start',behavior:'smooth'});}
    }else if(el.dataset.storyNav==='top')body.scrollTo({top:0,behavior:'smooth'});
+   return;
+  }
+  if(el.hasAttribute('data-story-topic')){
+   closePreview();
+   const story=storyCache.get(lastStoryId),bridge=window.atlasStoryBridge;
+   if(!story||!bridge)return;
+   const kind=el.dataset.storyTopic,years=storyNodeYears(story);
+   if(kind==='toggle'){
+    if(bridge.activeTopicFocusId?.()===story.id)bridge.clearStoryFocus?.();
+    else bridge.setStoryFocus?.({id:story.id,title:storyHeadline(story),eventIds:story.related_event_ids});
+   }else{
+    const current=bridge.currentYear();
+    const destination=kind==='prev'?years.filter(y=>y<current).at(-1):years.find(y=>y>current);
+    if(destination!=null)bridge.setYear(destination);
+   }
+   updateStoryTopicControls();
    return;
   }
   if(el.hasAttribute('data-story-section')){
@@ -363,6 +416,6 @@
    }
   }catch(err){ /* Reading library is optional; the entire original atlas keeps working. */ }
  }
- window.HistoryStories={eventLinkMarkup:linkMarkupForEvent,isLinkedEvent:isLinkedEvent,onEventOpened:onEventOpened,onReset:onReset,openStory:openStory};
+ window.HistoryStories={eventLinkMarkup:linkMarkupForEvent,isLinkedEvent:isLinkedEvent,onEventOpened:onEventOpened,onReset:onReset,onYearChanged:onYearChanged,openStory:openStory};
  init();
 })();
