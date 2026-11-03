@@ -2771,6 +2771,12 @@ map.on('click',()=>{if(activeClusterKey)closeCluster()});
 // This bridge does not expose mutable historic GIS or allow changing map coordinates.
 window.atlasStoryBridge={
  currentYear:()=>year,
+ // Read-only chronology for subject readers and desktop QA; not a claim of
+ // historical control. Events only, including adjacent source decades.
+ activeEventWindow:()=>year>=1600?{
+  from:seventeenthEventWindowStart(year),to:year,mode:eventWindowMode17c,
+  ids:seventeenthEventsForWindow(year).map(e=>e.id)
+ }:null,
  activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
  activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
