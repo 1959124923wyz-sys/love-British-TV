@@ -498,7 +498,7 @@ function renderEventList(){
  const onlyYear=tools17&&eventWindowMode17c==='year'&&!fullArchive;
  const query=tools17?$('seventeenthEventSearch').value.trim().toLocaleLowerCase():'';
  const visibleEvents=query?events.filter(e=>[e.name,conciseEventTitle(e),e.description,e.short_description,e.date_label,String(e.year)].some(v=>String(v||'').toLocaleLowerCase().includes(query))):events;
- $('eventCount').textContent=(tools17&&(!fullArchive&&eventWindowMode17c==='rolling4'||query||onlyYear)?visibleEvents.length+' / '+atlas.events.length:events.length)+'项';
+ $('eventCount').textContent=visibleEvents.length+'项';
  if(tools17){
   const start=seventeenthEventWindowStart(year),range=start===year?year+'年':start+'—'+year+'年';
   $('showYearEventsOnly').setAttribute('aria-pressed',String(eventWindowMode17c==='year'&&!fullArchive));
