@@ -16,7 +16,7 @@ const to=code.indexOf('function isNewEventThisYear(item)',from);
 assert(from>0&&to>from,'rolling chronological helper should remain isolated for independent source testing');
 const env={serialPreviewByDecade:archives,atlas:{events:[{id:'legacy-1599',year:1599}]},
  decadeForYear:y=>Math.floor(Number(y)/10)*10};
-const get=vm.runInNewContext(code.slice(from,to)+'\n({seventeenthEventWindowStart,seventeenthEventsForWindow})',env);
+const get=vm.runInNewContext(code.slice(from,to)+'\n({seventeenthEventWindowStart,seventeenthEventsForWindow,seventeenthRoutesForWindow})',env);
 const normalize=items=>Array.from(items,e=>e.id).sort();
 const factual=(start,end)=>[...archives.values()].flatMap(d=>d.events)
  .filter(e=>e.year>=start&&e.year<=end);
@@ -40,6 +40,13 @@ const expectedPrevious=archives.get(1640).events.filter(e=>e.year>=1647&&e.year<
 assert(expectedPrevious.length>=1);
 assert.equal(in1650.filter(e=>e.year<1650).length,expectedPrevious.length,
  '1650 must actually contain prior-decade 1647-49 records');
+const sourceRoutes1649=archives.get(1640).routes.filter(r=>r.year===1649);
+assert(sourceRoutes1649.length>=2,'two attested 1649 Irish invasion campaign routes');
+const routes1650=Array.from(get.seventeenthRoutesForWindow(1650));
+for(const route of sourceRoutes1649)assert(routes1650.some(r=>r.id===route.id),
+ '1650 rolling window must still show the dated 1649 campaign route from the preceding decade');
+assert.equal(get.seventeenthRoutesForWindow(1653).some(r=>sourceRoutes1649.some(q=>q.id===r.id)),false,
+ '1649 campaign cannot remain in the historical event map after its 4-year visibility window');
 const following=test(1651,1648);
 assert(following.every(e=>e.year!==1647),'1651 removes 1647 while retaining 1648-51');
 assert(following.some(e=>e.year===1648)&&following.some(e=>e.year===1651));
