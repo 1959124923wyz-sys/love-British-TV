@@ -487,7 +487,7 @@ function renderEventList(){
  // A deliberate archival switch allows browsing the full chapter without changing time.
  const fullArchive=$('showFullChapterArchive').checked;
  const tools17=year>=1600;
- const windowEvents=tools17?seventeenthEventsForWindow(year):atlas.events.filter(e=>occurredByYear(e,year));
+ const windowEvents=tools17?seventeenthEventsForWindow(year):atlas.events.filter(e=>(fullArchive||occurredByYear(e,year)));
  // Explicit future full-archive preview affects the sidebar only.
  const events=(fullArchive?atlas.events.slice():windowEvents).sort((a,b)=>
   Number(isNewEventThisYear(b))-Number(isNewEventThisYear(a))||
