@@ -241,7 +241,7 @@ assert "function renderPoliticalRelationAreas()" in app
 assert "if(!occurredByYear(e,year))continue;" in app, "Merged first chapter must use uniform historical year gate"
 assert "year>=1502?'1502':'—'" in app
 assert "year>=1513?'1513':'—'" in app
-assert "fullArchive||occurredByYear(e,year)" in app
+assert "const events=(fullArchive?atlas.events.slice():windowEvents)" in app and "seventeenthEventsForWindow(year)" in app, "Explicit archival browsing and sourced rolling map chronology must remain available"
 assert "if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;" in app, "Voyage routes must only show when begun"
 assert "a.year-b.year||levelOf(b)-levelOf(a)" in app, "List chronology must sort by year first"
 assert "$('showFullChapterArchive').checked=false;" in app, "Full-archive mode must be opt-in"

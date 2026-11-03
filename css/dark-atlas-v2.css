@@ -902,7 +902,7 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 @media (min-width:1050px){
  .atlas-event-tools-17c{display:grid;gap:8px;padding:10px 8px 12px;margin:7px 0 4px;background:#112337;border:1px solid #294258;border-radius:8px}
  .atlas-event-tools-17c[hidden],#clearSeventeenthEventSearch[hidden]{display:none}
- .atlas-event-view{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+ .atlas-event-view{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
  .atlas-event-view button{border:1px solid #38516b;border-radius:6px;padding:8px 4px;background:#1b3045;color:#bfcfe0;font-size:12px;cursor:pointer}
  .atlas-event-view button[aria-pressed="true"]{background:#35516b;color:#ffe2bf;border-color:#bb9268;font-weight:700}
  .atlas-event-query-row{display:flex;gap:6px;align-items:center}
@@ -947,4 +947,13 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .dossier .zone-source-links .atlas-source-host:focus-visible{
   border-color:#cbab7e;outline:2px solid #c8a67c;outline-offset:1px;
  }
+}
+
+/* Four-year source-event window, with current-year emphasis.
+   These tints describe event recency only and never change historical boundaries. */
+@media (min-width:1050px){
+ .atlas-event-window-summary{padding:8px 9px;border:1px solid #3b5470;border-radius:6px;
+  background:#0c1d30;color:#dcc1a0;font-size:11px;line-height:1.6}
+ .atlas-event-prior-year{opacity:.66}
+ .atlas-event-prior-year:hover,.atlas-event-prior-year:focus-visible{opacity:1}
 }

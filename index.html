@@ -44,10 +44,12 @@
    <div class="side-section-head"><span>已发生事件</span><span id="eventCount">—</span></div>
    <div id="yearArrivalSummary" class="year-arrival-summary" role="status" aria-live="polite">当年事件加载中…</div>
    <div id="seventeenthEventTools" class="atlas-event-tools-17c" hidden>
-    <div class="atlas-event-view" role="group" aria-label="17世纪事件列表范围">
-     <button type="button" id="showYearEventsOnly" aria-pressed="false">仅本年</button>
-     <button type="button" id="showDecadeEventsToYear" aria-pressed="true">本十年至今</button>
+    <div class="atlas-event-view" role="group" aria-label="17世纪地图事件时间窗口">
+     <button type="button" id="showYearEventsOnly" aria-pressed="false" title="地图仅显示所选年份的事件">仅本年</button>
+     <button type="button" id="showRollingFourYears" aria-pressed="true" title="所选年份及之前三年，跨十年连续滚动">近四年</button>
+     <button type="button" id="showDecadeEventsToYear" aria-pressed="false" title="本十年第一年至当前年份">本十年至今</button>
     </div>
+    <div id="seventeenthEventWindowRange" class="atlas-event-window-summary" role="status" aria-live="polite">地图默认展示所选年份及此前三年事件；疆域始终按当前年份</div>
     <div class="atlas-event-query-row">
      <label for="seventeenthEventSearch" class="sr-only">搜索本十年历史事件</label>
      <input type="search" id="seventeenthEventSearch" autocomplete="off" placeholder="搜索事件名称、人物或地点" aria-describedby="seventeenthSearchStatus">

@@ -51,7 +51,9 @@ for (let year=1497; year<=1519; year++) {
 const segment = (start,end) => js.split(start)[1]?.split(end)[0] || '';
 const list = segment('function renderEventList(){','function expandCluster(');
 const points = segment('function renderPoints(){','function ensureTerritorialPatterns(){');
-assert.ok(list.includes('fullArchive||occurredByYear(e,year)'), 'sidebar fails to gate future events');
+assert.ok(list.includes('const events=(fullArchive?atlas.events.slice():windowEvents)')&&
+ list.includes('seventeenthEventsForWindow(year)')&&list.includes('atlas.events.filter(e=>(fullArchive||occurredByYear(e,year)))'),
+ 'sidebar must exclude future events in every normal view while keeping a separately selected complete archive');
 assert.ok(list.includes('a.year-b.year'), 'sidebar not chronological');
 assert.ok(points.includes('!occurredByYear(e,year)'), 'map markers bypass year gate');
 assert.ok(points.includes("if(!occurredByYear(r,year)||!$('toggleRoutes').checked)continue;"), 'map routes bypass year gate');

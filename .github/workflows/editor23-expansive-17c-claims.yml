@@ -7,6 +7,7 @@ on:
       - 'css/dark-atlas-v2.css'
       - 'data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson'
       - 'scripts/test_editor23_expansive_17c_claims.js'
+      - 'scripts/test_17c_rolling_four_year_window.js'
       - 'scripts/browser_editor23_expansive_17c_claims.py'
       - '.github/workflows/editor23-expansive-17c-claims.yml'
   push:
@@ -17,6 +18,7 @@ on:
       - 'css/dark-atlas-v2.css'
       - 'data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson'
       - 'scripts/test_editor23_expansive_17c_claims.js'
+      - 'scripts/test_17c_rolling_four_year_window.js'
       - 'scripts/browser_editor23_expansive_17c_claims.py'
 jobs:
   source-claims-and-desktop:
@@ -27,6 +29,7 @@ jobs:
         run: |
           node --check app.js
           node scripts/test_editor23_expansive_17c_claims.js
+          node scripts/test_17c_rolling_four_year_window.js
           node scripts/test_serial_story_contract.js
           node scripts/test_17c_tudor_parity_20261023.js
           python3 scripts/audit_spatial_semantics.py --strict

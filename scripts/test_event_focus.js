@@ -33,7 +33,8 @@ for(const file of ['app.js','app-continuity-1497-1529-preview.js']){
  assert.ok(!/map\.(setZoom|flyTo|setView)\s*\(/.test(focus),file+': locate changed zoom');
  assert.ok(!/\bsetYear\s*\(/.test(focus),file+': locator modified historical timeline');
  assert.ok(focus.includes('renderPoints()'),file+': visual markers not recomputed');
- assert.ok(app.includes("className:item.id===focusedEventId?'atlas-target-marker'"),file+': no singleton SVG target');
+ assert.ok(app.includes("className:item.id===focusedEventId?'atlas-target-marker'")||
+    app.includes("(item.id===focusedEventId?'atlas-target-marker '"),file+': no singleton SVG target');
  assert.ok(app.includes("className:'atlas-flyout-icon'+(item.id===focusedEventId?"),file+': no grouped SVG target');
  assert.ok(app.includes('if(targetGroup&&targetGroup.items.length>1)expandCluster(targetGroup,true)'),file+': grouped event not revealed');
  assert.ok(app.includes("focusedEventId&&!chosen.events.some"),file+': selected target survives after switching chapters');
