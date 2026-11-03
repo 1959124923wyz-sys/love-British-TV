@@ -61,7 +61,21 @@ try:
  d.save_screenshot(str(out/'editor23-1620-searchable-claims-by-type.png'))
  goto(1623,8)  # St Kitts broad island visual claim; not all British-controlled
  goto(1629,3)
- goto(1651,4)  # English Hugli factory under Mughal jurisdiction
+ goto(1650,3)  # 1647–1650 rolling source events straddle two ten-year files
+ assert j("return document.getElementById('showRollingFourYears').getAttribute('aria-pressed')==='true'")
+ assert j("return document.getElementById('seventeenthEventWindowRange').textContent.includes('1647—1650')")
+ assert j("return window.atlasStoryBridge.activeEventWindow().from===1647 && window.atlasStoryBridge.activeEventWindow().to===1650")
+ assert j("return window.atlasStoryBridge.activeEventWindow().ids.includes('1640S-E016') && window.atlasStoryBridge.activeEventWindow().ids.includes('1650S-E001')")
+ assert j("return document.querySelectorAll('#eventList [data-eid^=\\\"1640S-\\\"]').length>=7")
+ assert j("return document.querySelectorAll('#eventList [data-eid^=\\\"1650S-\\\"]').length>=15")
+ assert not j("return window.atlasStoryBridge.activeEventWindow().ids.includes('1640S-E001')")
+ d.save_screenshot(str(out/'editor23-1650-rolling-1647-1650.png'))
+ goto(1651,4)  # rolls to 1648–1651, not the fixed 1650s chapter
+ assert j("return window.atlasStoryBridge.activeEventWindow().from===1648")
+ assert not j("return window.atlasStoryBridge.activeEventWindow().ids.includes('1640S-E028')")
+ assert j("return window.atlasStoryBridge.activeEventWindow().ids.includes('1640S-E023')")
+ assert j("return window.atlasStoryBridge.activeEventWindow().ids.includes('1650S-E010')")
+ d.save_screenshot(str(out/'editor23-1651-rolling-1648-1651.png'))
  goto(1652,4)
  goto(1664,5)  # Separate New Jersey and Delaware documentary provinces
  goto(1673,5)  # Dutch recovery: do not retain English New Jersey and Delaware sub-layers
@@ -96,7 +110,11 @@ try:
  year_only=j("return document.querySelectorAll('#eventList .event-item').length")
  assert year_only>0 and year_only<initial,(year_only,initial)
  assert j("return [...document.querySelectorAll('#eventList .event-item')].every(el=>el.querySelector('small')?.textContent.includes('1699'))")
+ d.find_element(By.ID,'showRollingFourYears').click()
+ assert j("return document.querySelectorAll('#eventList .event-item').length===arguments[0]",initial)
  d.find_element(By.ID,'showDecadeEventsToYear').click()
+ assert j("return document.querySelectorAll('#eventList .event-item').length>arguments[0]",initial)
+ d.find_element(By.ID,'showRollingFourYears').click()
  assert j("return document.querySelectorAll('#eventList .event-item').length===arguments[0]",initial)
  j("""const el=document.getElementById('seventeenthEventSearch');el.value='无此历史记录测试';
     el.dispatchEvent(new Event('input',{bubbles:true}));""")
