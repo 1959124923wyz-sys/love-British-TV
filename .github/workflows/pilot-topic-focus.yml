@@ -1,0 +1,30 @@
+name: Isolated 17C subject-focus pilot QA
+on:
+  push:
+    branches:
+      - pilot/editor15-topic-focus-three-year-century-20261104
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pilot-map-and-reader:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check published sources and JavaScript
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_pilot_three_year_century_focus.js
+          python3 scripts/audit_spatial_semantics.py --strict
+      - name: Verify original map in desktop Chromium
+        run: |
+          pip install selenium
+          python3 -m http.server 8765 >/tmp/editor15-pilot-http.log 2>&1 &
+          python3 scripts/browser_pilot_three_year_century_focus.py
+      - name: Preserve screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isolated-topic-pilot-desktop-screenshots
+          path: browser-smoke-results/pilot-*.png

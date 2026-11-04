@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="style.css?v=pilot1">
 <link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-regions-1544-1599-mobile-focus-20261015-newyear-focus-v1-compact-no-milestones-v2-two-pane-desktop-v1-legend-wrap-20261015-year-badge-flush-top-left-v2">
 
-<link rel="stylesheet" href="css/history-stories.css?v=editor6-georef-r02-20261019">
+<link rel="stylesheet" href="css/history-stories.css?v=pilot-topic-focus-three-year-20261104">
 </head>
 <body>
 <div class="site">
@@ -22,7 +22,7 @@
    <label for="mapLayerEvents"><input type="checkbox" id="mapLayerEvents" checked><span>事件</span></label>
   </div>
  <div class="head-center"><span class="chapter-tag"><span id="chapterNav">历史地图 · 第一章</span></span><span class="head-divider"></span><span><span id="chapterNavName">大西洋远航与王室扩张</span></span></div>
- <div class="head-actions"><button type="button" id="mobileEventsToggle" class="mobile-events-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="打开事件列表">☰ 事件</button></div>
+ <div class="head-actions"><button type="button" id="pilotLaunchFromHeader" class="atlas-pilot-badge" title="直接进入爱尔兰征服试点；仅独立分支">专题专注试点 · 点击进入</button><button type="button" id="mobileEventsToggle" class="mobile-events-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="打开事件列表">☰ 事件</button></div>
 </header>
 <div class="workspace dossier-collapsed" id="workspace">
  <aside class="sidebar" id="sidebar">
@@ -44,12 +44,22 @@
    <div class="side-section-head"><span>已发生事件</span><span id="eventCount">—</span></div>
    <div id="yearArrivalSummary" class="year-arrival-summary" role="status" aria-live="polite">当年事件加载中…</div>
    <div id="seventeenthEventTools" class="atlas-event-tools-17c" hidden>
+    <div class="pilot-topic-launch"><button type="button" id="pilotOpenIrelandTopic">试读专题 · 爱尔兰征服（1641—1670）</button></div>
+    <div id="topicFocusStatus" class="pilot-topic-focus-status" hidden>
+     <span class="pilot-topic-eyebrow">正在专注一个专题</span>
+     <strong id="topicFocusName"></strong>
+     <div class="pilot-topic-actions"><button type="button" id="topicFocusOpen">打开专题正文</button><button type="button" id="topicFocusExit">退出专题专注</button></div>
+    </div>
     <div class="atlas-event-view" role="group" aria-label="17世纪地图事件时间窗口">
      <button type="button" id="showYearEventsOnly" aria-pressed="false" title="地图仅显示所选年份的事件">仅本年</button>
-     <button type="button" id="showRollingFourYears" aria-pressed="true" title="所选年份及之前三年，跨十年连续滚动">近四年</button>
+     <button type="button" id="showRollingThreeYears" aria-pressed="true" title="所选年份及之前两年，跨十年连续滚动">近三年</button>
      <button type="button" id="showDecadeEventsToYear" aria-pressed="false" title="本十年第一年至当前年份">本十年至今</button>
     </div>
-    <div id="seventeenthEventWindowRange" class="atlas-event-window-summary" role="status" aria-live="polite">地图默认展示所选年份及此前三年事件；疆域始终按当前年份</div>
+    <label class="pilot-century-option" for="showCenturyEventPanorama">
+      <input type="checkbox" id="showCenturyEventPanorama">
+      <span><strong>显示整个17世纪事件（1600—1699）</strong><small>主动开启百年全览；晚于所选年的事件仅作预览，点击即跳至真实年份。历史版图始终只代表所选年。</small></span>
+    </label>
+    <div id="seventeenthEventWindowRange" class="atlas-event-window-summary" role="status" aria-live="polite">地图默认展示所选年份及此前两年事件；疆域始终按当前年份</div>
     <div class="atlas-event-query-row">
      <label for="seventeenthEventSearch" class="sr-only">搜索本十年历史事件</label>
      <input type="search" id="seventeenthEventSearch" autocomplete="off" placeholder="搜索事件名称、人物或地点" aria-describedby="seventeenthSearchStatus">
@@ -147,7 +157,7 @@
 <script src="js/territory-geometry.js?v=shared-geo-v1"></script>
 <script src="js/voyage-geometry.js?v=drake-dateline-v1"></script>
 <script src="js/editorial-headlines-17c.js?v=20261102-01"></script>
-<script src="app.js?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-calais-controller-20261015-shared-geo-v1-munster-invasion-study-v1-land-drake-study-v1-nine-years-war-1594-1599-v1-caribbean-maghreb-1551-1598-v1-visible-raid-areas-v2-trinidad-two-site-1595-spatial-narrative-1595-v1-ch11-source-anchor-20261015-regional-history-20261015-mobile-focus-pale-biblio-20261015-newyear-focus-v1-violence-regions-1544-1589-v1-two-pane-desktop-v1-doubleclick-fix-v1-western-prayerbook-1549-v1-munster-gilbert-1569-04-v1-armada-sligo-clare-1588-05-v1-drake-1578-chile-06-v1-cavendish-hawkins-07-v1-drake-voyage-continuity-1577-1580-v1-story-child-clean-v2-17c-georef-r02-20261019"></script>
-<script src="js/history-stories.js?v=event-linked-story-20261019"></script>
+<script src="app.js?v=pilot-topic-focus-three-year-20261104"></script>
+<script src="js/history-stories.js?v=pilot-topic-focus-three-year-20261104"></script>
 </body>
 </html>

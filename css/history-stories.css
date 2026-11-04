@@ -126,3 +126,69 @@
 .story-chronology-events{display:grid;grid-template-columns:1fr;gap:5px}
 .story-chronology-event{width:100%;border:1px solid #38546d;border-radius:6px;background:#20394e;color:#e5d4be;text-align:left;padding:7px 9px;font:inherit;font-size:11px;line-height:1.55;cursor:pointer}
 .story-chronology-event:hover,.story-chronology-event:focus-visible{color:#ffe0b6;background:#305068;outline:2px solid #9f7e59;outline-offset:1px}
+
+
+/* Editor15 pilot ONLY: preserve the approved map and two source panels. */
+@media(min-width:1050px){
+ .workspace.topic-focus.story-reading:not(.sidebar-collapsed):not(.dossier-collapsed),
+ .workspace.topic-focus:not(.sidebar-collapsed):not(.dossier-collapsed){
+  grid-template-columns:clamp(250px,20vw,325px) minmax(0,1fr) clamp(385px,32vw,535px);
+ }
+ .workspace.topic-focus .chapter-card,
+ .workspace.topic-focus .chapter-facts{display:none}
+}
+.atlas-pilot-badge{
+ display:inline-flex;align-items:center;max-width:215px;
+ border:1px solid #a17d59;background:#253648;color:#f4cc9b;
+ border-radius:6px;padding:7px 9px;font-size:11px;font-weight:700;cursor:pointer
+}
+.atlas-pilot-badge:hover,.atlas-pilot-badge:focus-visible{
+ background:#35516a;outline:2px solid #dcaa7a;outline-offset:1px
+}
+.pilot-topic-launch{margin-bottom:3px}
+.pilot-topic-launch[hidden]{display:none}
+.pilot-topic-launch button{
+ width:100%;background:#263e52;border:1px solid #7f846e;color:#ead9be;
+ border-radius:6px;padding:9px;text-align:left;font-size:12px;font-weight:700;cursor:pointer
+}
+.pilot-topic-launch button:hover{background:#38536b}
+.pilot-topic-focus-status{
+ display:grid;gap:7px;padding:11px;border:1px solid #aa8a69;border-radius:7px;
+ background:#1b3244;margin-bottom:4px
+}
+.pilot-topic-focus-status[hidden]{display:none}
+.pilot-topic-eyebrow{color:#e5b989;font-size:10px;letter-spacing:.06em}
+.pilot-topic-focus-status strong{color:#e4ecf5;font-size:12px;line-height:1.65}
+.pilot-topic-actions{display:flex;gap:7px;flex-wrap:wrap}
+.pilot-topic-actions button{
+ background:#30465a;border:1px solid #567187;border-radius:5px;
+ color:#efcdac;padding:7px 8px;cursor:pointer;font-size:11px
+}
+.pilot-topic-actions button:hover{background:#41627a}
+.pilot-century-option{
+ display:flex;gap:9px;align-items:flex-start;padding:9px 10px;
+ border:1px solid #496079;border-radius:7px;background:#1b3045;
+ cursor:pointer;color:#e5dcce
+}
+.pilot-century-option input{flex:none;margin-top:4px;accent-color:#c4a27c}
+.pilot-century-option span{display:grid;gap:3px;min-width:0}
+.pilot-century-option strong{font-size:12px;line-height:1.55}
+.pilot-century-option small{font-size:10px;color:#aebed1;line-height:1.5}
+.pilot-century-option:has(input:checked){
+ border-color:#c6a278;background:#344254
+}
+.atlas-event-future-preview{opacity:.32!important;filter:grayscale(.5)}
+.pilot-story-focus-control{
+ display:grid;gap:6px;margin:13px 0 11px;padding:11px 12px;
+ border:1px solid #556c79;border-left:3px solid #c19d77;
+ border-radius:7px;background:#1b3142
+}
+.pilot-story-focus-control button{
+ width:fit-content;background:#2c4961;color:#f1d4b6;
+ border:1px solid #ab8863;border-radius:5px;
+ font-weight:750;font-size:12px;padding:8px 12px;cursor:pointer
+}
+.pilot-story-focus-control button[aria-pressed="true"]{
+ background:#51634c;border-color:#b7b482
+}
+.pilot-story-focus-control small{font-size:11px;color:#b8cada;line-height:1.6}

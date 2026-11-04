@@ -202,13 +202,16 @@
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
+  const isSerial=Boolean(storyMeta.get(article.id)?.is_serial_topic);
+  const inFocus=window.atlasStoryBridge?.focusedTopicId?.()===article.id;
+  const focusControl=isSerial?'<div class="pilot-story-focus-control"><button type="button" data-story-focus="'+esc(article.id)+'" aria-pressed="'+inFocus+'">'+(inFocus?'退出专题专注':'专注观看本专题')+'</button><small>使用原地图逐年观看专题关联事件，右侧保留完整原文与史料。左栏可勾选百年总览。</small></div>':'';
   return '<article class="major-story-article" data-story-id="'+esc(article.id)+'">'+
     '<header class="major-story-header"><button type="button" class="story-back" data-story-return="1">← 返回原事件</button>'+ 
     '<div class="dossier-kicker">重大历史专题 · '+esc(article.region)+'</div>'+
     '<h2>'+esc(storyHeadline(article))+'</h2>'+
     (storyHeadline(article)!==article.title?'<details class="atlas-complete-title"><summary>完整专题题名</summary><p>'+esc(article.title)+'</p></details>':'')+
     '<p class="story-subtitle">'+esc(article.subtitle)+'</p>'+
-    '<p class="story-lead">'+esc(article.lead)+'</p></header>'+
+    '<p class="story-lead">'+esc(article.lead)+'</p>'+focusControl+'</header>'+
     '<div class="story-reading-toolbar" role="navigation" aria-label="专题阅读进度与章节跳转">'+
      '<button type="button" data-story-nav="toc">章节目录</button>'+
      '<div class="story-reading-progress"><span class="story-reading-progress-label">第1/'+article.sections.length+'节 · 已读0%</span>'+
@@ -318,12 +321,19 @@
   if(lastStoryId)await openStory(lastStoryId,true);
  }
  document.addEventListener('click',function(e){
-  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-index-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
+  const el=e.target.closest('[data-story-open],[data-story-focus],[data-story-event],[data-story-index-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
   if(!el){
    if(preview&&!e.target.closest('.story-event-preview'))closePreview();
    return;
   }
   if(el.hasAttribute('data-story-preview-close')){closePreview();return;}
+  if(el.hasAttribute('data-story-focus')){
+   const meta=storyMeta.get(el.dataset.storyFocus),bridge=window.atlasStoryBridge;
+   if(!meta?.is_serial_topic||!bridge?.setFocusTopic)return;
+   const active=bridge.focusedTopicId?.()===meta.id;
+   bridge.setFocusTopic(active?null:{id:meta.id,title:storyHeadline(meta),event_ids:meta.event_ids});
+   return;
+  }
   if(el.hasAttribute('data-story-open')){openStory(el.dataset.storyOpen,false,el.dataset.storySource);return;}
   if(el.hasAttribute('data-story-back')){openStory(returnStoryId||lastStoryId,true);return;}
   if(el.hasAttribute('data-story-return')){returnToOrigin();return;}
@@ -396,6 +406,28 @@
      }
     }
    }catch(_serialError){ /* No published long story yet; old articles remain available. */ }
+   // Dedicated opt-in pilot, using the exact published topic and original atlas maps.
+   // Poll the existing atlas bootstrap; never seed synthetic locations or source events.
+   function launchIrelandPilot(){
+    const meta=storyMeta.get('E6-T02'),bridge=window.atlasStoryBridge;
+    if(!meta||!bridge?.eventById?.('1640S-E016'))return false;
+    bridge.setYear(1649);
+    if(bridge.currentYear()!==1649)return false;
+    if(!bridge.setFocusTopic?.({id:meta.id,title:storyHeadline(meta),event_ids:meta.event_ids}))return false;
+    openStory(meta.id,false,'1640S-E016');
+    return true;
+   }
+   const launchButtons=[document.getElementById('pilotOpenIrelandTopic'),document.getElementById('pilotLaunchFromHeader')];
+   for(const launchButton of launchButtons)launchButton?.addEventListener('click',()=>{
+    if(!launchIrelandPilot()){
+     launchButton.title='原始十七世纪资料尚未加载完成，请稍后重试';
+    }
+   });
+   if(new URLSearchParams(location.search).get('topicPilot')==='E6-T02'){
+    let attempts=0;
+    const start=()=>{if(launchIrelandPilot())return;if(++attempts<100)setTimeout(start,250)};
+    start();
+   }
    // An event may already be open while the optional manifest is loading.
    const current=window.atlasStoryBridge?.selectedEventId?.();
    if(current&&storyByEvent.has(current))activeBody()?.querySelector('.source-details')?.remove();
