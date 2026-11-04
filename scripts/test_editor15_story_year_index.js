@@ -33,11 +33,11 @@ for(const meta of topics){
  assert(!html.includes('data-story-year'),'year navigation must use verified event IDs, not synthetic year-only records');
  assert(!html.includes('undefined年'),'not all chronology years have a source');
  for(const id of availableIds){
-  assert(html.includes('data-story-event="'+esc(id)+'"'),meta.id+': missing linked event '+id);
+  assert(html.includes('data-story-index-event="'+esc(id)+'"'),meta.id+': missing linked event '+id);
  }
  const years=[...new Set(availableIds.map(id=>available.get(id).year))];
  for(const y of years)assert(html.includes(y+'年'),meta.id+': missing observed year '+y);
- assert.equal((html.match(/data-story-event="/g)||[]).length,availableIds.length,
+ assert.equal((html.match(/data-story-index-event="/g)||[]).length,availableIds.length,
   meta.id+': every verified source is linked exactly once');
 }
 assert(reviewed>=20,'expected multi-event 17C topics');

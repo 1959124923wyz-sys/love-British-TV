@@ -28,10 +28,10 @@ try:
     assert js("return document.querySelector('.story-chronology').textContent.includes('1640年代') && document.querySelector('.story-chronology').textContent.includes('1650年代')")
     original=js("return document.querySelector('.major-story-article').dataset.storyId")
     # Choose a real source-linked event from the 1650s; no synthetic year pin.
-    selected=js("""return [...document.querySelectorAll('.story-chronology [data-story-event]')]
-      .find(el=>window.atlasStoryBridge.eventById(el.dataset.storyEvent)?.year>=1650)?.dataset.storyEvent""")
+    selected=js("""return [...document.querySelectorAll('.story-chronology [data-story-index-event]')]
+      .find(el=>window.atlasStoryBridge.eventById(el.dataset.storyIndexEvent)?.year>=1650)?.dataset.storyIndexEvent""")
     assert selected,'published source item from next decade missing'
-    js("""const node=document.querySelector('.story-chronology [data-story-event="'+arguments[0]+'"]');
+    js("""const node=document.querySelector('.story-chronology [data-story-index-event="'+arguments[0]+'"]');
       node.scrollIntoView({block:'center'});node.click();""",selected)
     wait.until(lambda _:js("return Number(document.getElementById('bigYear').textContent)>=1650"))
     assert js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",original)

@@ -183,7 +183,7 @@
    [...byYear].map(([y,items])=>
     '<div class="story-chronology-year"><h5>'+y+'年 <small>'+items.length+'项</small></h5>'+
     '<div class="story-chronology-events">'+items.map(item=>
-     '<button type="button" class="story-chronology-event" data-story-event="'+esc(item.id)+'" title="'+esc(item.name)+' · 单击对照地图，双击打开事件档案">'+
+     '<button type="button" class="story-chronology-event" data-story-index-event="'+esc(item.id)+'" title="'+esc(item.name)+' · 单击对照地图，双击打开事件档案">'+
      esc(eventHeadline(item))+'</button>').join('')+'</div></div>').join('')+
    '</section>').join('');
   return '<details class="story-chronology">'+
@@ -306,7 +306,7 @@
   if(lastStoryId)await openStory(lastStoryId,true);
  }
  document.addEventListener('click',function(e){
-  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
+  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-index-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
   if(!el){
    if(preview&&!e.target.closest('.story-event-preview'))closePreview();
    return;
@@ -330,20 +330,20 @@
    if(anchor)anchor.scrollIntoView({block:'start',behavior:'smooth'});
    return;
   }
-  if(el.hasAttribute('data-story-event')){
+  if(el.hasAttribute('data-story-event')||el.hasAttribute('data-story-index-event')){
    if(clickTimer!==null)clearTimeout(clickTimer);
-   const id=el.dataset.storyEvent,anchor=el;
+   const id=el.dataset.storyEvent||el.dataset.storyIndexEvent,anchor=el;
    clickTimer=setTimeout(function(){clickTimer=null;focusStoryEvent(eventInMemory(id),anchor);},285);
   }
  });
  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePreview();});
  activeBody().addEventListener('scroll',()=>{closePreview();updateStoryReadingProgress()},{passive:true});
  document.addEventListener('dblclick',function(e){
-  const el=e.target.closest('[data-story-event]');
+  const el=e.target.closest('[data-story-event],[data-story-index-event]');
   if(!el)return;
   e.preventDefault();
   if(clickTimer!==null){clearTimeout(clickTimer);clickTimer=null;}
-  doubleOpen(eventInMemory(el.dataset.storyEvent));
+  doubleOpen(eventInMemory(el.dataset.storyEvent||el.dataset.storyIndexEvent));
  });
  async function init(){
   try{
