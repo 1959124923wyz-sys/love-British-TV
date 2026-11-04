@@ -41,7 +41,10 @@ try:
     # Original 16C readers must not be given a 17C index.
     browser.get('http://127.0.0.1:8765/?year=1497')
     wait.until(lambda _:js("return document.getElementById('bigYear')?.textContent==='1497'"))
-    wait.until(lambda _:js("return !!window.HistoryStories && !!window.atlasStoryBridge"))
+    wait.until(lambda _:js("return !!window.HistoryStories && !!window.atlasStoryBridge?.eventById?.('landfall-1497')"))
+    # The optional manifest is loaded after the atlas. Wait for registration,
+    # rather than calling openStory before its storyMeta index exists.
+    wait.until(lambda _:js("return window.HistoryStories.eventLinkMarkup(window.atlasStoryBridge.eventById('landfall-1497'),'event').includes('cabot-bristol-atlantic-voyages-1496-1498')"))
     js("window.HistoryStories.openStory('cabot-bristol-atlantic-voyages-1496-1498',false)")
     wait.until(lambda _:js("return document.querySelector('.major-story-article')?.dataset.storyId==='cabot-bristol-atlantic-voyages-1496-1498'"))
     assert js("return !document.querySelector('.major-story-article .story-chronology')")
