@@ -156,6 +156,41 @@
   toolbar.querySelector('.story-reading-progress-fill').style.width=percent+'%';
   toolbar.querySelector('.story-reading-progress-meter').setAttribute('aria-valuenow',String(percent));
  }
+ // Optional 17C topic index: every entry is a real published atlas event.
+ // This is a navigation aid, not a continuous occupation chronology.
+ function storyChronologyHtml(article){
+  const meta=storyMeta.get(article.id);
+  if(!meta?.is_serial_topic)return '';
+  const found=[],seen=new Set();
+  for(const id of meta.event_ids||[]){
+   const item=eventInMemory(id),y=Number(item?.year);
+   if(!item||seen.has(id)||!Number.isInteger(y)||y<1600||y>1699)continue;
+   seen.add(id);found.push(item);
+  }
+  if(found.length<2)return '';
+  found.sort((a,b)=>a.year-b.year||String(a.id).localeCompare(String(b.id)));
+  const decades=new Map(),years=new Set();
+  for(const item of found){
+   const y=Number(item.year),d=Math.floor(y/10)*10;
+   years.add(y);
+   if(!decades.has(d))decades.set(d,new Map());
+   const byYear=decades.get(d);
+   if(!byYear.has(y))byYear.set(y,[]);
+   byYear.get(y).push(item);
+  }
+  const markup=[...decades].map(([decade,byYear])=>
+   '<section class="story-chronology-decade"><h4>'+decade+'年代</h4>'+
+   [...byYear].map(([y,items])=>
+    '<div class="story-chronology-year"><h5>'+y+'年 <small>'+items.length+'项</small></h5>'+
+    '<div class="story-chronology-events">'+items.map(item=>
+     '<button type="button" class="story-chronology-event" data-story-index-event="'+esc(item.id)+'" title="'+esc(item.name)+' · 单击对照地图，双击打开事件档案">'+
+     esc(eventHeadline(item))+'</button>').join('')+'</div></div>').join('')+
+   '</section>').join('');
+  return '<details class="story-chronology">'+
+   '<summary>专题史事年表 · '+years.size+'个有据年份 / '+found.length+'项关联事件</summary>'+
+   '<p class="story-chronology-note">仅整理本专题已入库、可查证年份的关联事件；空白年份不代表没有历史活动。单击事件将地图切换至该年并对照位置或简介，双击查看独立档案；地图疆域始终只显示所选当年，不累计整个专题时期。</p>'+
+   '<div class="story-chronology-scroll">'+markup+'</div></details>';
+ }
  function storyHtml(article){
   const relatedStories=(article.related_story_ids||[]).map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
@@ -172,7 +207,7 @@
      '<button type="button" data-story-nav="toc">章节目录</button>'+
      '<div class="story-reading-progress"><span class="story-reading-progress-label">第1/'+article.sections.length+'节 · 已读0%</span>'+
       '<div class="story-reading-progress-meter" role="progressbar" aria-label="专题页面阅读位置" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="story-reading-progress-fill"></span></div></div>'+
-     '<button type="button" data-story-nav="top">回到开头</button></div>'+relatedMarkup+quantitativeHistoryHtml(article)+
+     '<button type="button" data-story-nav="top">回到开头</button></div>'+relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+
     '<details class="story-toc"><summary>阅读目录 · '+article.sections.length+'节 <span aria-hidden="true">▾</span></summary>'+
     '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sectionHeadline(sec.heading))+'</button>').join('')+'</nav></details>'+
     '<div class="story-body">'+article.sections.map(sec=>
@@ -271,7 +306,7 @@
   if(lastStoryId)await openStory(lastStoryId,true);
  }
  document.addEventListener('click',function(e){
-  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
+  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-index-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
   if(!el){
    if(preview&&!e.target.closest('.story-event-preview'))closePreview();
    return;
@@ -295,20 +330,20 @@
    if(anchor)anchor.scrollIntoView({block:'start',behavior:'smooth'});
    return;
   }
-  if(el.hasAttribute('data-story-event')){
+  if(el.hasAttribute('data-story-event')||el.hasAttribute('data-story-index-event')){
    if(clickTimer!==null)clearTimeout(clickTimer);
-   const id=el.dataset.storyEvent,anchor=el;
+   const id=el.dataset.storyEvent||el.dataset.storyIndexEvent,anchor=el;
    clickTimer=setTimeout(function(){clickTimer=null;focusStoryEvent(eventInMemory(id),anchor);},285);
   }
  });
  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePreview();});
  activeBody().addEventListener('scroll',()=>{closePreview();updateStoryReadingProgress()},{passive:true});
  document.addEventListener('dblclick',function(e){
-  const el=e.target.closest('[data-story-event]');
+  const el=e.target.closest('[data-story-event],[data-story-index-event]');
   if(!el)return;
   e.preventDefault();
   if(clickTimer!==null){clearTimeout(clickTimer);clickTimer=null;}
-  doubleOpen(eventInMemory(el.dataset.storyEvent));
+  doubleOpen(eventInMemory(el.dataset.storyEvent||el.dataset.storyIndexEvent));
  });
  async function init(){
   try{

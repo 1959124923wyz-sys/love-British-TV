@@ -111,3 +111,18 @@
  .major-story-article .story-toc{scroll-margin-top:88px}
 }
 @media(prefers-reduced-motion:reduce){.story-reading-progress-fill{transition:none}}
+
+
+/* Editor15: optional source-backed index for long published 17C stories. */
+.major-story-article .story-chronology{margin:15px 0 19px;border:1px solid #405a70;border-radius:8px;background:#14273a;padding:11px 12px}
+.major-story-article .story-chronology>summary{cursor:pointer;color:#f0cba5;font-size:12px;font-weight:700;line-height:1.65}
+.major-story-article .story-chronology-note{font-size:11px!important;line-height:1.75!important;color:#bed0df!important;text-align:left!important;margin:9px 0!important}
+.story-chronology-scroll{max-height:370px;overflow:auto;overscroll-behavior:contain;margin-top:8px;padding-right:5px}
+.story-chronology-decade{margin:12px 0;border-top:1px solid #344e63}
+.story-chronology-decade h4{font-size:12px;color:#cbb49b;margin:10px 0 7px}
+.story-chronology-year{padding:8px 0;border-bottom:1px dashed #2d465b}
+.story-chronology-year h5{font-size:12px;color:#e4eefa;margin:0 0 8px}
+.story-chronology-year h5 small{color:#95b2c8;font-weight:400}
+.story-chronology-events{display:grid;grid-template-columns:1fr;gap:5px}
+.story-chronology-event{width:100%;border:1px solid #38546d;border-radius:6px;background:#20394e;color:#e5d4be;text-align:left;padding:7px 9px;font:inherit;font-size:11px;line-height:1.55;cursor:pointer}
+.story-chronology-event:hover,.story-chronology-event:focus-visible{color:#ffe0b6;background:#305068;outline:2px solid #9f7e59;outline-offset:1px}
