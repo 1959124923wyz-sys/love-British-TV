@@ -38,6 +38,26 @@ try:
     assert js("return Number(document.getElementById('bigYear').textContent)===window.atlasStoryBridge.eventById(arguments[0]).year",selected)
     assert js("return window.atlasStoryBridge.activeEventWindow().to===Number(document.getElementById('bigYear').textContent)")
     browser.save_screenshot(str(out/'editor15-17c-source-year-index.png'))
+    # BUGFIX REGRESSION: returning from a source event must restore the expanded index.
+    js("""const btn=document.querySelector('.story-chronology [data-story-index-event="'+arguments[0]+'"]');
+      btn.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));""",selected)
+    wait.until(lambda _:js("return !!document.querySelector('#dossierBody [data-story-back]')"))
+    browser.find_element(By.CSS_SELECTOR,'#dossierBody [data-story-back]').click()
+    wait.until(lambda _:js("return document.querySelector('.major-story-article')?.dataset.storyId==='E6-T02'"))
+    assert js("return !!document.querySelector('.major-story-article .story-chronology[open]')")
+    # BUGFIX REGRESSION: resolve an old article fetch after navigating to a new event.
+    js("""window.__realPreviewFetch=window.fetch;
+      window.fetch=(url,options)=>String(url).includes('e6-t15-bank-war-colonial-capital.json')
+       ?new Promise(resolve=>{window.__finishPreviewFetch=()=>resolve({ok:false})})
+       :window.__realPreviewFetch(url,options);
+      window.HistoryStories.openStory('E6-T15',false);""")
+    wait.until(lambda _:js("return typeof window.__finishPreviewFetch==='function'"))
+    js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById('1640S-E016'))")
+    wait.until(lambda _:js("return document.getElementById('dossierBody').textContent.includes('德罗赫达')"))
+    js("window.__finishPreviewFetch();")
+    wait.until(lambda _:js("return !document.querySelector('#dossierBody .loading')"))
+    assert js("return !document.getElementById('dossierBody').textContent.includes('历史专题暂时无法读取')")
+    js("window.fetch=window.__realPreviewFetch")
     # Original 16C readers must not be given a 17C index.
     browser.get('http://127.0.0.1:8765/?year=1497')
     wait.until(lambda _:js("return document.getElementById('bigYear')?.textContent==='1497'"))

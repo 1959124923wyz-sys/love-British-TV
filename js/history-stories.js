@@ -7,6 +7,7 @@
  const storyMeta=new Map();
  const storyCache=new Map();
  let sourceEventId=null, lastStoryId=null, readingScroll=0, returnStoryId=null;
+ let chronologyExpanded=false;
  let clickTimer=null, requestSerial=0, preview=null;
  function closePreview(){if(preview){preview.remove();preview=null;}}
  // Inline map records without coordinates get a small non-modal summary.
@@ -49,6 +50,8 @@
    (metas.length===1?'<small>'+esc(metas[0].period)+' · 了解战争的前因、经过及后果</small>':'')+'</section>';
  }
  function onEventOpened(item,typ){
+  // Cancel in-flight article fetches when a different dossier opens.
+  ++requestSerial;
   closePreview();
   document.getElementById('workspace').classList.remove('story-reading');
   if(typ!=='event')returnStoryId=null;
@@ -58,11 +61,14 @@
   body.insertAdjacentHTML('afterbegin','<button type="button" class="story-back" data-story-back="1">← 返回重大历史专题</button>');
  }
  function onReset(){
+  // Closing the dossier invalidates outstanding article fetches.
+  ++requestSerial;
   closePreview();
   document.getElementById('workspace').classList.remove('story-reading');
   returnStoryId=null;
   sourceEventId=null;
   lastStoryId=null;
+  chronologyExpanded=false;
  }
  function renderInline(text){
   const regex=/\[\[([A-Za-z0-9-]+)\|([^\]\n]{1,90})\]\]/g;
@@ -233,6 +239,7 @@
    sourceEventId=current&&eventInMemory(current)?current:
      metaEventIds.find(eventId=>eventInMemory(eventId))||null;
    readingScroll=0;
+   chronologyExpanded=false;
   }
   closePreview();
   returnStoryId=null;lastStoryId=id;
@@ -247,6 +254,10 @@
    if(!story){const res=await fetch(meta.file,{cache:'no-store'});if(!res.ok)throw new Error('article not available');story=await res.json();if(story.id!==id)throw new Error('article identifier mismatch');storyCache.set(id,story);}
    if(serial!==requestSerial)return;
    container.innerHTML=storyHtml(story);
+   if(restore){
+    const chronology=container.querySelector('.major-story-article .story-chronology');
+    if(chronology)chronology.open=chronologyExpanded;
+   }
    container.scrollTop=restore?readingScroll:0;
    updateStoryReadingProgress();
    if(restore){requestAnimationFrame(()=>{container.scrollTop=readingScroll;updateStoryReadingProgress()});}
@@ -282,6 +293,7 @@
   if(!item||!navigateToEventYear(item))return;
   closePreview();
   readingScroll=activeBody().scrollTop;
+  chronologyExpanded=Boolean(activeBody().querySelector('.major-story-article .story-chronology')?.open);
   returnStoryId=lastStoryId;
   window.atlasStoryBridge.openEvent(item);
  }
