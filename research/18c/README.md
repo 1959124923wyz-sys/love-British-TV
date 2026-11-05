@@ -4,12 +4,12 @@
 
 ## 研究入口
 - [94项专题母题与结构化ID](MAJOR_TOPICS.json) — 全部`research_only`。
-- [69条机构/学术资料登记与阅读层级](SOURCE_REGISTRY.json) — 含原始文献目录，但**未将目录当逐页原卷**。
+- [71条机构/学术资料登记与阅读层级](SOURCE_REGISTRY.json) — 含原始文献目录，但**未将目录当逐页原卷**。
 - [正式主编总清单与实证界限](../../docs/research/EDITOR_18C_MASTER_RESEARCH_20261105.md)。
 - [1699→1700连续性研究种子](TRANSITION_1699_1700_RESEARCH_SEED.json) — 27个17世纪末已显示的**法理/地理示意形**逐项待核；不是27个已证实国土。
-- [工作进度及审计分流](PROGRESS.md)。
-- [第一批阿卡迪亚专题深入证据研究](ACADIAN_EXPULSION_1755_1764_RESEARCH.md)（准备中）。
-- [第一批非出版地图候审点位](ACADIAN_REVIEW_POINTS.geojson)（准备中）。
+- [工作进度及审计分流](PROGRESS.md)、[下一轮交接](HANDOFF_20261105.md)。
+- [第一批阿卡迪亚专题证据矩阵](../../docs/research/EDITOR_18C_ACADIAN_1755_CASE_20261105.md)（已完成研究候审）。
+- [第一批非出版地图候审点位](ACADIAN_REVIEW_POINTS.geojson)（14处已录入）；[候审史事](ACADIAN_REVIEW_EVENTS.json)（18件）与[专题完整初稿](ACADIAN_REVIEW_STORY.json)（10节，18个候审锚点）。
 
 ## 状态与出版
 母题列表只是研究问题。候审事件上图必须是原始机构文献可支持的真实发生年份、具名行动与参考地点。现代纪念遗址GPS只是位置参照，不是1755年精确拘留建筑；此项目不绘制未经实测的“全阿卡迪亚驱逐面积”。跨17/18世纪既有控制关系须承接，不因年表截断便错误结束。
