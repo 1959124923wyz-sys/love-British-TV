@@ -1,0 +1,144 @@
+{
+  "schema": "ch09_1570s_slave_trade_source_critical_addendum_v1",
+  "period": [
+    1570,
+    1572
+  ],
+  "study_date": "2026-10-14",
+  "revision_reason": "Earlier version incorrectly implied there were NO evidenced new English ships to Guinea in 1570s. New independent UK academic doctoral research plus Royal Empire Society 1937 volume and 1932 edited original Spanish papers show maritime ventures in 1570-1572.",
+  "expeditions": [
+    {
+      "id": "winter_guinea_three_ships_1570",
+      "year": 1570,
+      "agent": "Sir William Winter, vessel owner/backer",
+      "reported_english_ships": 3,
+      "source_ids": [
+        "C9-S55",
+        "C9-S54",
+        "C9-S56",
+        "C9-S59"
+      ],
+      "evidence": "J. W. Blake (1937), quoting Calendar of State Papers Spanish 1568–79 no.192, says fleet of three ships Winter owned was dispatched to Guinea to engage Atlantic trafficking; one of those ships returned to England WITHOUT visiting Caribbean; Southampton dissertation reports Winter 1570 enterprise and Oxford thesis records Guinea voyage reports.",
+      "confidence": "high fleet association with Guinea, purpose as described by historians; not independently demonstrated captives landed on this voyage",
+      "ship_departure_day": null,
+      "documented_specific_African_port": null,
+      "actual_enslaved_people_transport_count": null,
+      "documented_enslaved_person_captured": null,
+      "realized_proceeds_gbp": null,
+      "land_control_polygon": null,
+      "can_map": "event point in general offshore 'Guinea coast regional reference', no false harbor/sale port; no slave coastline sovereign polygon"
+    },
+    {
+      "id": "winter_caribbean_privateering_1571_to_1572",
+      "year_start": 1571,
+      "year_end": 1572,
+      "agent": "William and George Winter, maritime investors; captains unnamed in available summaries",
+      "reported_english_ships": 3,
+      "source_ids": [
+        "C9-S57",
+        "C9-S54",
+        "C9-S56"
+      ],
+      "evidence": "Wright (1932) edited Spanish evidence Nos.14-16 associates ships departed by March1571, witnessed Borburata July1571, Spanish vessel raided/burned near Jamaica, attempted unsuccessful attack St Augustine Florida early1572. At least one more scholarly discussion warns evidence does not attest sale of enslaved people on these West Indies sightings.",
+      "confidence": "high observed raiding/country-level route as scholarly edition; attribution to same venture tentative",
+      "victim_goods_value_gbp": null,
+      "actual_enslaved_aboard": null,
+      "African_landfall_this_1571_fleet_verified": false,
+      "ports": [
+        {
+          "name": "Borburata, Spanish Venezuela",
+          "year": 1571,
+          "month": 7,
+          "point_modern_reference": [
+            -67.998,
+            10.477
+          ]
+        },
+        {
+          "name": "Jamaica (island reference only)",
+          "year": 1571,
+          "point_modern_reference": [
+            -77.3,
+            18.12
+          ]
+        },
+        {
+          "name": "St. Augustine Florida, Spanish settlement",
+          "year": 1572,
+          "point_modern_reference": [
+            -81.312,
+            29.894
+          ]
+        }
+      ],
+      "English_possession_of_any_port": false,
+      "can_map": "piracy events at Borburata/Jamaica island and St Augustine; only dashed links if marked 'reported contacts – not actual tracks'; no English control"
+    },
+    {
+      "id": "winter_hawkins_guinea_investment_c1570_71",
+      "year_start": 1570,
+      "year_end": 1571,
+      "agent": "William Winter and John Hawkins, alleged organizers, not necessarily onboard",
+      "source_ids": [
+        "C9-S54",
+        "C9-S55",
+        "C9-S60"
+      ],
+      "evidence": "Spanish envoy de Spes early1571 reported Hawkins and Winter set out or backed 7–8 ships potentially on slaving voyage, but cannot unambiguously determine single fleet, departure harbor, African arrivals, or prisoner numbers. Historical reading describes two contingents possibly separate.",
+      "confidence": "medium Spanish reported intention and dispatch; distinguish from observed slave sale; potential overlap with Winter already counted 1570–71",
+      "reported_ships_range": [
+        7,
+        8
+      ],
+      "potential_overlap_with_other_expeditons": true,
+      "actual_African_disembarkation_sites": null,
+      "persons_captured_count": null,
+      "realized_net_gbp": null,
+      "create_new_independent_fleet_count": false
+    },
+    {
+      "id": "hawkins_owned_three_guinea_ships_1572",
+      "year": 1572,
+      "agent": "John Hawkins as vessel owner/backer, not personally at sea",
+      "reported_english_ships": 3,
+      "source_ids": [
+        "C9-S54",
+        "C9-S55"
+      ],
+      "evidence": "Lior Blum doctoral research says Hawkins sent three vessels to West Africa around autumn1572, 'probably' a slaving voyage. Not to be confused with Drake's 1572 Panama raid nor Hawkins famous three 1562/1564/1567 slaving expeditions. Full original letter and sale documents not yet personally retrieved.",
+      "confidence": "medium for Guinea journey; low for actual transatlantic slave shipment",
+      "departure_month_approx": "autumn",
+      "enslaved_people_acquired_verified": false,
+      "slave_sale_location_verified": null,
+      "realized_income_verified": null,
+      "African_exact_port_coordinates": null,
+      "can_map": "Guinea off-shore REGIONAL labeled suspected slave-trade voyage 1572, not actual kidnapping port or English sovereignty"
+    },
+    {
+      "id": "bartolomew_bayao_senegal_1571_planned_not_observed",
+      "year": 1571,
+      "agent": "Portuguese merchant Bartolomew Bayao with UK base",
+      "ships_planned": 3,
+      "pinnaces_planned": 1,
+      "source_ids": [
+        "C9-S55"
+      ],
+      "evidence": "1937 Blake says planned spring1571 Senegal → Hispaniola enslaved-human trade but embargo possibly blocked departure; author explicitly says whether sailed is unknown",
+      "confidence": "high planning, NO proven sail/raid",
+      "departed_confirmed": false,
+      "not_for_present_map_actual_slave_event": true
+    }
+  ],
+  "overall_rules": {
+    "do_not_resume_Hawkins_1560s_band_unchanged": true,
+    "new_events_layer_allowed_for_1570_and_1572_voyage_documentary_presence": true,
+    "confirmed_specific_landfall_or_capture_point_count": 0,
+    "confirmed_1570s_enslaved_persons_transported_on_these_new_ventures": null,
+    "english_occupied_african_area_sqkm": null,
+    "possible_multiple_reports_same_three_ships": true,
+    "avoid_double_counting_fleets": true,
+    "source_2024_qualifier": "English slaving traffic declined dramatically after 1568 but small-scale illicit ventures remained; not zero.",
+    "map_geometry_rule": "Use a labelled West African broad regional event anchor, no drawn historic landing coastline Polygon, never colour purple colonial control. For piracy St Augustine and Jamaica references represent Spanish territory under attack.",
+    "stronger_original_documents_needed": "Calendar of State Papers Spanish 1568–1579 nos 161,180,192,238,242,291 plus Wright ed. 1932 nos 14-16; compare port papers and ship crew/cargo manifests"
+  }
+}
