@@ -3,9 +3,12 @@
 当前状态：**研究进行中，不在正式地图发表。** 依照 [AGENTS](../../AGENTS.md)、[16世纪专题/地图范例纲领](../../docs/templates/16c-story-map-standard/README.md)、[跨十年承接](../../docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md) 和[历史空间图层审查](../../docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md) 分批调查。
 
 ## 研究入口
-- [94项专题母题与结构化ID](MAJOR_TOPICS.json) — 全部`research_only`。
-- [71条机构/学术资料登记与阅读层级](SOURCE_REGISTRY.json) — 含原始文献目录，但**未将目录当逐页原卷**。
+- [105项专题母题与结构化ID](MAJOR_TOPICS.json) — 全部`research_only`。
+- [88条机构/学术资料登记与阅读层级](SOURCE_REGISTRY.json) — 含原始文献目录，但**未将目录当逐页原卷**。
 - [正式主编总清单与实证界限](../../docs/research/EDITOR_18C_MASTER_RESEARCH_20261105.md)。
+- [36篇17世纪全部专题跨世纪承接总表](CROSS_CENTURY_STORY_CONTINUITY.json)（29篇已发表、7个研究母题；区别真正跨年行动、制度延续、历史后果及已结束系列）。
+- [10件有来源的新世纪事件候审资料](CROSS_CENTURY_REVIEW_EVENTS.json)（全部为空坐标、未正式上图）。
+- [跨世纪核查方法与达连1700等重点证据报告](../../docs/research/EDITOR_18C_17C_LONG_SERIES_HANDOFF_20261106.md)。
 - [1699→1700连续性研究种子](TRANSITION_1699_1700_RESEARCH_SEED.json) — 27个17世纪末已显示的**法理/地理示意形**逐项待核；不是27个已证实国土。
 - [工作进度及审计分流](PROGRESS.md)、[下一轮交接](HANDOFF_20261105.md)。
 - [第一批阿卡迪亚专题证据矩阵](../../docs/research/EDITOR_18C_ACADIAN_1755_CASE_20261105.md)（已完成研究候审）。
