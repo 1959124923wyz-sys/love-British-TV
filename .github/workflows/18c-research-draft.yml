@@ -1,0 +1,24 @@
+name: 18C historical research draft audit (not publication)
+on:
+  push:
+    branches:
+      - research/18c-master-agenda-acadian-map-20261105
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research-source-and-geometry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 18C draft topics, sources, original GIS point references, draft story links
+        run: |
+          node scripts/test_18c_research_acadian_seed.js
+          python3 -m json.tool research/18c/MAJOR_TOPICS.json >/dev/null
+          python3 -m json.tool research/18c/SOURCE_REGISTRY.json >/dev/null
+          python3 -m json.tool research/18c/TRANSITION_1699_1700_RESEARCH_SEED.json >/dev/null
+          python3 -m json.tool research/18c/ACADIAN_REVIEW_EVENTS.json >/dev/null
+          python3 -m json.tool research/18c/ACADIAN_REVIEW_POINTS.geojson >/dev/null
+          python3 -m json.tool research/18c/ACADIAN_REVIEW_STORY.json >/dev/null
+      - name: Check project spatial semantics without publishing draft history
+        run: python3 scripts/audit_spatial_semantics.py --strict
