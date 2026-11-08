@@ -91,8 +91,14 @@ with zipfile.ZipFile(bundle) as z:
     for name in registry_names:
         assert name in included, f"Missing original assistants source register: {name}"
         payload=json.loads(z.read("18c_consolidation/"+name))
-        print("ZIP source register",name,"root type",type(payload).__name__,
-              "length",len(payload),"keys",list(payload)[:10] if isinstance(payload,dict) else "list")
+        if name.startswith("SOURCES_") and name!="SOURCES_AUDIT.json":
+            assistant=name[len("SOURCES_"):-len(".json")]
+            assert len(payload["sources"])==manifest["source_registry_sizes"][assistant], assistant
+        if name=="SOURCES_AUDIT.json":
+            assert not payload["unresolved_original_registry_ids"]
+            assert len(payload["all_used_source_references"])==manifest["referenced_namespaced_sources_count"]
+        print("PASS source register",name,"entries",
+              len(payload.get("sources",payload.get("all_used_source_references",[]))))
     for name in ("ORIGINAL_TO_GROUP.json","COMPLETE_1126_ARCHIVE_CROSSWALK.json",
                  "ORIGINAL_RESEARCH_ZIP_SHA256.json"):
         assert name in included, f"Missing original research audit JSON: {name}"
