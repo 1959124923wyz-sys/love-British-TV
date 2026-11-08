@@ -6,7 +6,9 @@ const data=load('data/stories/serial/chronology-preview-atlantic-zong-1700-1799.
 const story=load('data/stories/serial/e18-t01-t02-atlantic-zong-1711-1799.json');
 const index=load('data/stories/serial/preview-18c-index.json');
 const published=load('data/stories/serial/index.json'),chapters=load('data/chapters.json');
-const a=load('research/18c/consolidated/series/T01.json'),b=load('research/18c/consolidated/series/T02.json');
+const a=load('research/18c/consolidated/series/T01.json'),b=load('research/18c/consolidated/series/T02.json'),c=load('research/18c/consolidated/series/T26.json');
+const provenance=load('research/18c/EDITOR16_T01_T02_ORIGINAL_1126_PROVENANCE_AUDIT_20261108.json');
+const crosswalk=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),ui=read('js/history-stories.js'),html=read('index.html');
 assert.equal(chapters.chapters.at(-1).end,1599);
 assert.equal(published.topics.find(t=>t.id==='E6-T11-VOYAGES').status,'published');
@@ -29,7 +31,12 @@ assert.equal(data.places.length,0);assert.equal(data.routes.length,0);assert.equ
 assert.equal(story.sources.length,23);
 const registry=new Set(data.sources.map(s=>s.id)),sourceLocal=new Set(story.sources.map(s=>s.id));
 assert.equal(registry.size,23);assert.equal(sourceLocal.size,23);
-const merged=new Set([...a.groups,...b.groups].map(g=>g.id));
+const allGroups=[...a.groups,...b.groups,...c.groups];
+const merged=new Map(allGroups.map(g=>[g.id,g]));
+assert.equal(provenance.counts.preview_events,14);
+assert.equal(provenance.counts.direct_group_events,8);
+assert.equal(provenance.counts.archival_narrative_only_events,2);
+assert.equal(provenance.counts.new_supplementary_events,4);
 const events=new Map(),years=new Set();let points=0;
 for(const e of data.events){
  assert(e.id.startsWith('E18C-ATL-'));assert(!events.has(e.id));events.set(e.id,e);
@@ -41,7 +48,19 @@ for(const e of data.events){
  assert.equal(e.fill_authorized,false);assert.equal(e.territorial_claim,false);
  assert.equal(e.position_is_historical_survey,false);
  assert.equal(e.exclude_point_buffer_from_area_statistics,true);
- assert(merged.has(e.research_merge_group_id),'unmapped T01/T02 research merge group '+e.id);
+ if(e.research_merge_group_id!==null){
+  const group=merged.get(e.research_merge_group_id);
+  assert(group,'unmapped T01/T02/T26 research group '+e.id);
+  assert(group.source_years.includes(e.year),'group falsely assigned to wrong historic year '+e.id);
+  assert(e.research_original_record_ids.some(id=>group.original_candidate_ids.includes(id)),
+   'direct merge group must contain actual candidate ID '+e.id);
+ }else assert(['archived_narrative_evidence_promoted_for_review','supplementary_institutional_source_outside_original_1126'].includes(e.research_provenance_kind));
+ assert(Array.isArray(e.research_original_record_ids));
+ assert(Array.isArray(e.research_related_group_ids));
+ for(const id of e.research_original_record_ids)
+  assert(crosswalk.includes('\n'+id+','),'original research source ID absent from 1126 crosswalk '+id);
+ assert(provenance.records.some(x=>x.event_id===e.id&&x.direct_group_id===e.research_merge_group_id),
+  'missing immutable original-research linkage '+e.id);
  assert(e.source_ids.length>0);
  for(const sid of e.source_ids)assert(registry.has(sid),'unregistered '+sid);
  if(e.lat===null){
