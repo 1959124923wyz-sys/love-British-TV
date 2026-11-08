@@ -1,0 +1,16 @@
+name: 18C Scotland T31 T32 original source provenance QA
+on:
+  push:
+    branches:
+      - map/18c-scotland-union-culloden-clearances-20261108
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-prior-editor-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 scripts/audit_18c_scotland_source_registry.py
+          python3 scripts/test_18c_archival_integrity.py
