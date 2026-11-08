@@ -18,6 +18,8 @@
 | `raw_sources/assistant_C_continuity_round8.zip` | 助手C的跨世纪/爱尔兰/苏格兰/澳大利亚研究 | Git树有真实二进制，711,148字节 |
 | `18C_Consolidated_Research_Handoff_20261108.zip` | 162组、315原ID、1126去向、原来源登记册等完整集中包 | Git树有真实二进制，615,391字节，包含未逐一拆出仓库目录的JSON/来源登记册 |
 
+**集中ZIP内部结构：** 来源登记册在压缩包内实际命名为 `SOURCES_A.json`、`SOURCES_B.json`、`SOURCES_C.json`，另有 `SOURCES_AUDIT.json`。该ZIP包含34个非空 `series/Txx.json`；空队列 `T33.json` 单独存于GitHub `series/` 目录。其余34个非空系列及T33合计35个，数据未因此漏组。
+
 **目录差异：** README提及的 `ORIGINAL_TO_GROUP.json`、`COMPLETE_1126_ARCHIVE_CROSSWALK.json` 和 `ORIGINAL_RESEARCH_ZIP_SHA256.json` 并非都在`consolidated/`作为独立根级文件展开；应到集中ZIP内部查找，或使用已展开的CSV及`raw_sources/README.md`。不能因根路径不存在便声称证据丢失，也不能将压缩包文件存在误说成已经逐字验证原始手稿。
 
 完整性独立脚本：`python3 scripts/test_18c_archival_integrity.py`。它验证35个分系列与162组一致、315与1126去向一一对应、三份原始ZIP的SHA-256及ZIP CRC、集中ZIP主要文件。由 `.github/workflows/18c-atlantic-zong-map.yml` 在代码提交时自动执行；以Actions实际通过结果作为验收凭据。
