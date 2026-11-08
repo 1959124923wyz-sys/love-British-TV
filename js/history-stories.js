@@ -421,7 +421,7 @@
       const draft=await response.json();
       if(draft.schema==='atlas-18c-story-review-index-v1'&&
          draft.editorial_status==='research_preview_not_published'&&
-         draft.stories?.length===5&&draft.stories[0].status==='research_preview'&&
+         draft.stories?.length===6&&draft.stories[0].status==='research_preview'&&
          draft.stories[0].publication_review==='not_submitted'&&
          draft.stories.every(t=>t.status==='research_preview'&&t.publication_review==='not_submitted'&&
           /^E18-[A-Z0-9-]+$/.test(t.id)&&/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.file)&&

@@ -1,0 +1,16 @@
+name: 18C Australia T34 T35 original assistant research source audit
+on:
+  push:
+    branches:
+      - map/18c-australia-first-fleet-resistance-20261108
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 scripts/audit_18c_australia_source_registry.py
+          python3 scripts/test_18c_archival_integrity.py
