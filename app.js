@@ -228,7 +228,9 @@ let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPr
 const enable18cPilot=new URLSearchParams(window.location.search).get('review18c')==='1';
 let preview18cReady=false;
 let eighteenthAcadiaControlCores=null;
-const previewYearCap=()=>preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
+let bengal18cReady=false;
+let eighteenthBengalControlCores=null,continuity1700References=null;
+const previewYearCap=()=>bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
@@ -1038,6 +1040,47 @@ function renderEighteenthAcadiaControlCores(){
    openPanel('dossier');
   });
   point.addTo(groups.controlAreas);
+ }
+}
+
+
+// 1700 transition and Bengal research site cores: actor-differentiated dashed
+// Point references, never measured state polygons or territory area.
+function renderEighteenthReviewEvidenceCores(){
+ if(!preview18cReady||year<1700||!$('toggleControlAreas').checked)return;
+ const visible=[];
+ for(const f of continuity1700References?.features||[]){
+  if(year>=f.properties.start_year&&year<=f.properties.end_year)
+   visible.push({f,mode:'continuity',text:'该年机构史料支持的驻点/商馆；非实测行政边界'});
+ }
+ for(const f of eighteenthBengalControlCores?.features||[]){
+  const p=f.properties||{};
+  const period=(p.periods||[]).find(x=>year>=x.start_year&&year<=x.end_year);
+  if(period)visible.push({f,mode:'bengal',text:period.status});
+ }
+ for(const {f,mode,text:caption} of visible){
+  const p=f.properties||{},c=f.geometry.coordinates;
+  const french=/French|法方/.test(p.actor||p.controller||'');
+  const color=french?'#58a7c9':/English Royal African/.test(p.actor||'')?'#c9958d':'#ab98dd';
+  const circle=L.circleMarker([c[1],c[0]],{pane:'controlAreaPane',radius:7,
+   color,weight:2,dashArray:'3 3',fill:true,fillColor:color,fillOpacity:0.15,bubblingMouseEvents:false});
+  circle.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML((p.actor||p.controller||'')+' · '+caption)+'</div>',
+   {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[10,0]});
+  circle.on('click',ev=>{
+   if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
+   selected='';selectedItemYear=null;
+   const arr=p.source_urls||[],links=arr.map(u=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+
+    escapeHTML(u)+'">'+escapeHTML(new URL(u).hostname)+' · 史料 ↗</a>').join('');
+   $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪研究地理 · '+year+'年 · 非面积参考点</div>'+
+    '<h2>'+escapeHTML(p.name)+'</h2>'+
+    '<p>'+escapeHTML((p.actor||p.controller||'')+' · '+caption)+'</p>'+
+    '<p>'+escapeHTML(p.note||p.location_limit||'此处是现代地点参考，原有地方政体的政治权利需分别确认。')+'</p>'+
+    '<p class="atlas-location-note">虚线圆仅代表证据关联的地点；不对古堡的边界、土地占领面积或民族主权作填色推断。</p>'+
+    '<details class="story-sources"><summary>机构资料 · '+arr.length+'项</summary><div class="source-list">'+links+'</div></details>';
+   openPanel('dossier');
+  });
+  circle.addTo(groups.controlAreas);
  }
 }
 
@@ -2018,7 +2061,7 @@ function updateVisibility(){
 // The chapter registry is the only authority for published decade cards.
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
-const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=(preview18cReady?1760:1690)&&d%10===0?
+const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=(bengal18cReady?1770:preview18cReady?1760:1690)&&d%10===0?
  ({id:(d>=1700?'18c-':'17c-')+d,start:d,end:d+9,number:11+(d-1600)/10,
  label:d>=1700?'阿卡迪亚研究试阅 · 未发表':'事件年表 · 专题持续编审',
  status:d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
@@ -2102,8 +2145,9 @@ function renderTimelineNavigation(){
 function setYear(v){
  const requested=Math.round(Number(v)||1497);
  const publishedCap=Math.min(lastPublishedYear,requested);
- const next=Math.max(1497,preview18cReady?Math.min(1769,requested):
-  (serialPreviewAtlas?Math.min(1699,requested):publishedCap));
+ const next=Math.max(1497,bengal18cReady?Math.min(1779,requested):
+  (preview18cReady?Math.min(1769,requested):
+   (serialPreviewAtlas?Math.min(1699,requested):publishedCap)));
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
  if(next>=1600){
@@ -2148,7 +2192,7 @@ function setYear(v){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
   if(map.hasLayer(groups.kingdom))map.removeLayer(groups.kingdom);
   $('historicalRegionGuide').hidden=true;
-  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();
+  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
   $('nextYear').disabled=year>=previewYearCap();
@@ -2513,6 +2557,35 @@ async function boot(){
     preview18cReady=true;
    }catch(err){console.warn('18C Acadia pilot withheld (production chronology unchanged)',err)}
   }
+  // The Bengal topic is a second isolated source-checked research dataset.
+  // It adds source-linked years to the SAME decade map registry, not a competing UI.
+  if(preview18cReady){
+   try{
+    const response=await fetch('data/stories/serial/chronology-preview-bengal-1750-1779.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('Bengal 18C research corpus missing');
+    const bengal=await response.json(),events=bengal.events||[];
+    const sourceIds=new Set((bengal.sources||[]).map(s=>s.id));
+    if(bengal.schema!=='atlas-18c-bengal-source-linked-preview-v1'||
+       bengal.editorial_status!=='research_preview_not_published'||
+       events.length!==17||bengal.colonial_polygons?.length||bengal.routes?.length||bengal.places?.length||
+       events.some(e=>e.year<1750||e.year>1779||e.historical_control_boundary_verified!==false||
+        e.actual_English_land_area_sqkm!==null||e.publication_status!=='research_only'||
+        (e.lat!==null&&(!Number.isFinite(e.lat)||!Number.isFinite(e.lng)))||
+        !e.source_ids?.length||e.source_ids.some(id=>!sourceIds.has(id))))
+     throw new Error('Bengal year/source/territorial contract failed');
+    for(let d=1750;d<=1770;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...bengal,events:[],sources:[],
+      places:[],routes:[],colonial_polygons:[]};
+     const additions=events.filter(e=>e.year>=d&&e.year<=d+9);
+     if(additions.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('Duplicate 18C event ID');
+     const merged=[...base.events,...additions].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
+     serialPreviewByDecade.set(d,{...base,dataset_id:'eighteenth-century-combined-preview-'+d,
+      period:{from:d,to:d+9},events:merged,places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const source of bengal.sources||[])sourcesById.set(source.id,source);
+    bengal18cReady=true;
+   }catch(error){console.warn('Bengal 18C preview withheld, Acadia preview preserved',error)}
+  }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
   if(preview18cReady){
@@ -2534,6 +2607,31 @@ async function boot(){
       }))throw new Error('18C source-backed core Point geo semantics rejected');
     eighteenthAcadiaControlCores=geo;
    }catch(error){console.warn('18C historic urban control points held back',error)}
+  }
+  // Unpublished continuity/map points are separate from event episodes and area layers.
+  if(preview18cReady){
+   try{
+    const [continuityResponse,bengalResponse]=await Promise.all([
+     fetch('research/continuity/1700-1709/REFERENCE_CONTROL_CORES_1700_1709.geojson',{cache:'no-store'}),
+     fetch('data/eighteenth-century-bengal-control-cores-1710-1779.geojson',{cache:'no-store'})
+    ]);
+    if(!continuityResponse.ok||!bengalResponse.ok)throw new Error('18C evidence point file missing');
+    const docs=[await continuityResponse.json(),await bengalResponse.json()];
+    for(const [idx,g] of docs.entries()){
+     if(g.type!=='FeatureCollection'||g.metadata?.schema!==
+         (idx===0?'atlas-1700-continuity-site-references-v1':'atlas-18c-bengal-evidence-led-control-cores-v1')||
+       g.features?.length!==(idx===0?7:2)||g.features.some(f=>{
+        const p=f.properties||{},c=f.geometry?.coordinates;
+        return f.geometry?.type!=='Point'||!Array.isArray(c)||c.length!==2||
+         !Number.isFinite(c[0])||!Number.isFinite(c[1])||
+         p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+         p.territorial_claim!==false||p.area_sqkm!==null||
+         p.exclude_from_area_aggregation!==true||!p.source_urls?.length||
+         !p.source_urls.every(u=>/^https:\/\//.test(u));
+       }))throw new Error('18C evidence-only site geo field gate failed');
+    }
+    continuity1700References=docs[0];eighteenthBengalControlCores=docs[1];
+   }catch(error){console.warn('18C evidence location layer withheld',error)}
   }
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
   // Constant-time citation lookup across all published years.
@@ -2846,7 +2944,7 @@ $('resetDossier').addEventListener('click',resetDossier);
 function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
-  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();
+  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
   return;
  }
  renderSeventeenthColonialClaims();
@@ -2869,7 +2967,7 @@ $('clearSeventeenthEventSearch').addEventListener('click',()=>{
  if(atlas)renderEventList();
  $('seventeenthEventSearch').focus();
 });
-map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
+map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
@@ -2901,6 +2999,10 @@ window.atlasStoryBridge={
   (eighteenthAcadiaControlCores?.features||[])
     .filter(f=>year>=f.properties.start_year&&year<=f.properties.observed_through_year)
     .map(f=>f.properties.stable_id):[],
+ active18cContinuityIds:()=>year>=1700&&year<=1709&&preview18cReady&&$('toggleControlAreas').checked?
+  (continuity1700References?.features||[]).filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year).map(f=>f.properties.stable_id):[],
+ active18cBengalCoreIds:()=>year>=1700&&bengal18cReady&&$('toggleControlAreas').checked?
+  (eighteenthBengalControlCores?.features||[]).filter(f=>(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year)).map(f=>f.properties.stable_id):[],
 
  // 17th-century decades are loaded separately; 16C inline readers worked
  // because all legacy chapter objects were in this list. Reuse the same
