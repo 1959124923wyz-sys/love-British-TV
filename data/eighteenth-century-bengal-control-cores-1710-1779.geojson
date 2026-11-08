@@ -1,0 +1,114 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "schema": "atlas-18c-bengal-evidence-led-control-cores-v1",
+    "status": "research_preview",
+    "period": {
+      "from": 1710,
+      "to": 1779
+    },
+    "doctrine": "Fiscal Diwani 1765 and actual Company port site are separate spatial and political meanings; never use these dots as area. 1756 Company port military control is interrupted."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "C1700-ENGLISH-CALCUTTA",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.3474,
+          22.5726
+        ]
+      },
+      "properties": {
+        "stable_id": "C1700-ENGLISH-CALCUTTA",
+        "name": "加尔各答东印度公司港市与行政点",
+        "controller": "English/British East India Company",
+        "control_class": "company_city_trade_and_administration_not_mughal_provincial_sovereignty",
+        "start_year": 1710,
+        "end_year": 1779,
+        "periods": [
+          {
+            "start_year": 1710,
+            "end_year": 1755,
+            "status": "company_urban_fort_core"
+          },
+          {
+            "start_year": 1757,
+            "end_year": 1764,
+            "status": "recaptured_company_port_and_private_army"
+          },
+          {
+            "start_year": 1765,
+            "end_year": 1771,
+            "status": "company_port_and_diwani_revenue_administrative_role"
+          },
+          {
+            "start_year": 1772,
+            "end_year": 1774,
+            "status": "company_revenue_board_at_presidency"
+          },
+          {
+            "start_year": 1775,
+            "end_year": 1779,
+            "status": "company_port_presidency_not_particular_1772_board_proven"
+          }
+        ],
+        "note": "1756年的纳瓦卜军队夺取旧威廉堡，使EIC在该年年末失去原堡垒。1757年公司重新占有加尔各答；现今邮政总局附近只是旧堡与公司城镇的地理参照，不是新威廉堡古界。1772财政委员会依据当年西孟加拉档案。",
+        "year_1756_garrison_interruption_verified": true,
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/battle-plassey",
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00284_en_wholecouncil30thoctober-17thnovember1772"
+        ],
+        "geography_precision": "modern_city_old_fort_district_reference_not_actual_old_new_fort_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "position_is_historical_survey": false,
+        "publication_status": "research_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "18C-BNG-MURSHIDABAD-REVENUE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.2729,
+          24.1745
+        ]
+      },
+      "properties": {
+        "stable_id": "18C-BNG-MURSHIDABAD-REVENUE",
+        "name": "Murshidabad纳瓦卜朝廷与公司Diwani财政交涉点",
+        "controller": "Bengal Nawab's court with East India Company fiscal supervision",
+        "control_class": "fiscal_resident_royal_court_not_company_garrison_territorial_area",
+        "start_year": 1765,
+        "end_year": 1772,
+        "periods": [
+          {
+            "start_year": 1765,
+            "end_year": 1772,
+            "status": "fiscal_authority_with_local_intermediaries"
+          }
+        ],
+        "note": "1765 Diwani使公司享有孟加拉、比哈尔和奥里萨财政权；地方纳瓦卜和原官僚仍参与征收。Murshidabad城镇点是机构和账簿的参考，不是全省地税管辖边界。1772年后本条证据年限结束并不意味纳瓦卜朝廷历史终止。",
+        "source_urls": [
+          "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/",
+          "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00358_en_committeeofcircuit_7thjuly-20thaugust1772"
+        ],
+        "geography_precision": "modern_murshidabad_city_reference_not_tax_district_boundary",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "position_is_historical_survey": false,
+        "publication_status": "research_only"
+      }
+    }
+  ]
+}
