@@ -89,6 +89,7 @@ with zipfile.ZipFile(bundle) as z:
         assert name in included, f"Missing expected consolidated ZIP file: {name}"
     print("Consolidated ZIP members",len(included),
           "source-registry-like",len([n for n in included if "source" in n.lower() and "registr" in n.lower()]))
+    print("Consolidated ZIP index:",json.dumps(z.namelist(),ensure_ascii=False))
 print("PASS 18C original archive: 35 series (T33 empty), 162 merged groups, "
       "315 one-to-one original mappings, 1126 retained records, "
       "3 byte-identical source ZIP SHA256 and CRC checks, complete consolidated ZIP.")
