@@ -230,7 +230,8 @@ let preview18cReady=false;
 let eighteenthAcadiaControlCores=null;
 let bengal18cReady=false;
 let eighteenthBengalControlCores=null,continuity1700References=null;
-const previewYearCap=()=>bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
+let jamaica18cReady=false,eighteenthJamaicaMaroonAutonomyCores=null;
+const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
@@ -1058,10 +1059,15 @@ function renderEighteenthReviewEvidenceCores(){
   const period=(p.periods||[]).find(x=>year>=x.start_year&&year<=x.end_year);
   if(period)visible.push({f,mode:'bengal',text:period.status});
  }
+ for(const f of eighteenthJamaicaMaroonAutonomyCores?.features||[]){
+  const p=f.properties||{};
+  const period=(p.periods||[]).find(x=>year>=x.start_year&&year<=x.end_year);
+  if(period)visible.push({f,mode:'maroon_autonomy',text:period.status});
+ }
  for(const {f,mode,text:caption} of visible){
   const p=f.properties||{},c=f.geometry.coordinates;
   const french=/French|法方/.test(p.actor||p.controller||'');
-  const color=french?'#58a7c9':/English Royal African/.test(p.actor||'')?'#c9958d':'#ab98dd';
+  const color=mode==='maroon_autonomy'?'#54b9a1':french?'#58a7c9':/English Royal African/.test(p.actor||'')?'#c9958d':'#ab98dd';
   const circle=L.circleMarker([c[1],c[0]],{pane:'controlAreaPane',radius:7,
    color,weight:2,dashArray:'3 3',fill:true,fillColor:color,fillOpacity:0.15,bubblingMouseEvents:false});
   circle.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
@@ -2061,9 +2067,9 @@ function updateVisibility(){
 // The chapter registry is the only authority for published decade cards.
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
-const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=(bengal18cReady?1770:preview18cReady?1760:1690)&&d%10===0?
+const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=(jamaica18cReady?1790:bengal18cReady?1770:preview18cReady?1760:1690)&&d%10===0?
  ({id:(d>=1700?'18c-':'17c-')+d,start:d,end:d+9,number:11+(d-1600)/10,
- label:d>=1700?'阿卡迪亚研究试阅 · 未发表':'事件年表 · 专题持续编审',
+ label:d>=1700?'18世纪重大专题研究试阅 · 未发表':'事件年表 · 专题持续编审',
  status:d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
@@ -2145,9 +2151,10 @@ function renderTimelineNavigation(){
 function setYear(v){
  const requested=Math.round(Number(v)||1497);
  const publishedCap=Math.min(lastPublishedYear,requested);
- const next=Math.max(1497,bengal18cReady?Math.min(1779,requested):
-  (preview18cReady?Math.min(1769,requested):
-   (serialPreviewAtlas?Math.min(1699,requested):publishedCap)));
+ const next=Math.max(1497,jamaica18cReady?Math.min(1799,requested):
+  (bengal18cReady?Math.min(1779,requested):
+   (preview18cReady?Math.min(1769,requested):
+    (serialPreviewAtlas?Math.min(1699,requested):publishedCap))));
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
  if(next>=1600){
@@ -2166,8 +2173,8 @@ function setYear(v){
   const eighteenthPilot=year>=1700;
   if(eighteenthPilot){
    $('chapterTitlePrimary').textContent='十八世纪';
-   $('chapterTitleSecondary').textContent='阿卡迪亚 · 研究试阅';
-   $('chapterIntro').textContent='本十年仅收录阿卡迪亚专题'+decadeTotal+
+   $('chapterTitleSecondary').textContent='重大殖民专题 · 研究试阅';
+   $('chapterIntro').textContent='本十年收录多个殖民专题合并后的'+decadeTotal+
      '件候审历史节点（截至'+year+'年已有'+observed+'件，本年'+fresh+
      '件）。地点为现代遗址参考，不是18世纪实占疆界；研究试阅尚未正式发表。';
   }else{
@@ -2182,10 +2189,10 @@ function setYear(v){
   $('factADesc').textContent='本十年已入库事件';
   $('factBDesc').textContent='截至本年的记录';
   $('factCDesc').textContent='本年新增事件';
-  $('periodTitle').textContent=eighteenthPilot?'18世纪阿卡迪亚事件试阅 · 未审版图不显示':'17世纪已收录历史事件 · 专题持续编审';
+  $('periodTitle').textContent=eighteenthPilot?'18世纪重大专题试阅 · 未审版图不显示':'17世纪已收录历史事件 · 专题持续编审';
   const ch=chapterForYear(year);
   $('chapterNav').textContent=eighteenthPilot?'历史地图 · 十八世纪研究试阅':'历史地图 · 十七世纪';
-  $('chapterNavName').textContent=eighteenthPilot?'阿卡迪亚驱逐 · 研究候审':'逐年事件与历史专题';
+  $('chapterNavName').textContent=eighteenthPilot?'阿卡迪亚／孟加拉／牙买加 · 研究候审':'逐年事件与历史专题';
   $('chapterLabel').textContent=ch.start+'—'+ch.end+' · 史料年表';
   browsingDecade=halfCenturyPageForYear(year);
   renderTimelineNavigation();timelineStatus('');
@@ -2586,6 +2593,36 @@ async function boot(){
     bengal18cReady=true;
    }catch(error){console.warn('Bengal 18C preview withheld, Acadia preview preserved',error)}
   }
+  // Third 18C topic: Jamaican Maroon autonomy, colonial laws, and forced exile.
+  // Years outside the evidence range are still navigable as empty research time, NOT claims of no history.
+  if(preview18cReady){
+   try{
+    const response=await fetch('data/stories/serial/chronology-preview-jamaica-1700-1799.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('18C Jamaica research corpus missing');
+    const jamaica=await response.json(),events=jamaica.events||[];
+    const available=new Set((jamaica.sources||[]).map(s=>s.id));
+    if(jamaica.schema!=='atlas-18c-jamaica-maroon-preview-v1'||
+      jamaica.editorial_status!=='research_preview_not_published'||
+      events.length!==17||jamaica.colonial_polygons?.length||jamaica.routes?.length||jamaica.places?.length||
+      events.some(e=>e.year<1700||e.year>1799||e.historical_control_boundary_verified!==false||
+       e.actual_English_land_area_sqkm!==null||e.area_sqkm!==null||e.fill_authorized!==false||
+       e.publication_status!=='research_only'||!e.source_ids?.length||
+       e.source_ids.some(id=>!available.has(id))||
+       (e.lat!==null&&(!Number.isFinite(e.lat)||!Number.isFinite(e.lng)))))
+     throw new Error('18C Jamaica source-year/area contract failed');
+    for(let d=1700;d<=1790;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...jamaica,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+     const additions=events.filter(e=>e.year>=d&&e.year<=d+9);
+     if(additions.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('Repeated Jamaica Atlas candidate ID');
+     serialPreviewByDecade.set(d,{...base,dataset_id:'eighteenth-century-three-research-stories-'+d,
+      period:{from:d,to:d+9},
+      events:[...base.events,...additions].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+      places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const source of jamaica.sources||[])sourcesById.set(source.id,source);
+    jamaica18cReady=true;
+   }catch(error){console.warn('18C Jamaica research dataset withheld; Acadia/Bengal preserved',error)}
+  }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
   if(preview18cReady){
@@ -2632,6 +2669,28 @@ async function boot(){
     }
     continuity1700References=docs[0];eighteenthBengalControlCores=docs[1];
    }catch(error){console.warn('18C evidence location layer withheld',error)}
+  }
+  // Maroon self-government sites: these modern town points must NEVER be colored
+  // as British garrisons; no old treaty-defined boundary can be inferred from them.
+  if(jamaica18cReady){
+   try{
+    const response=await fetch('data/eighteenth-century-jamaica-maroon-autonomy-cores-1739-1799.geojson',{cache:'no-store'});
+    if(!response.ok)throw new Error('Jamaica autonomous town sources absent');
+    const doc=await response.json();
+    if(doc.type!=='FeatureCollection'||doc.metadata?.schema!=='atlas-18c-maroon-autonomy-reference-cores-v1'||
+      doc.features?.length!==2||doc.features.some(f=>{
+       const p=f.properties||{},c=f.geometry?.coordinates;
+       return f.geometry?.type!=='Point'||!Array.isArray(c)||c.length!==2||
+        !Number.isFinite(c[0])||!Number.isFinite(c[1])||
+        p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+        p.territorial_claim!==false||p.area_sqkm!==null||
+        p.exclude_from_area_aggregation!==true||
+        !p.control_class?.startsWith('maroon_')||!p.source_urls?.length||
+        !p.source_urls.every(u=>/^https:\/\//.test(u))||
+        !Array.isArray(p.periods)||!p.periods.length;
+      }))throw new Error('Autonomous community Point GIS meaning rejected');
+    eighteenthJamaicaMaroonAutonomyCores=doc;
+   }catch(error){console.warn('Jamaica autonomous site references withheld',error)}
   }
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
   // Constant-time citation lookup across all published years.
@@ -3003,6 +3062,10 @@ window.atlasStoryBridge={
   (continuity1700References?.features||[]).filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year).map(f=>f.properties.stable_id):[],
  active18cBengalCoreIds:()=>year>=1700&&bengal18cReady&&$('toggleControlAreas').checked?
   (eighteenthBengalControlCores?.features||[]).filter(f=>(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year)).map(f=>f.properties.stable_id):[],
+ active18cMaroonCoreIds:()=>year>=1700&&jamaica18cReady&&$('toggleControlAreas').checked?
+  (eighteenthJamaicaMaroonAutonomyCores?.features||[])
+    .filter(f=>(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year))
+    .map(f=>f.properties.stable_id):[],
 
  // 17th-century decades are loaded separately; 16C inline readers worked
  // because all legacy chapter objects were in this list. Reuse the same
