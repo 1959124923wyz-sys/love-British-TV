@@ -2102,7 +2102,8 @@ function renderTimelineNavigation(){
 function setYear(v){
  const requested=Math.round(Number(v)||1497);
  const publishedCap=Math.min(lastPublishedYear,requested);
- const next=Math.max(1497,serialPreviewAtlas?Math.min(previewYearCap(),requested):publishedCap);
+ const next=Math.max(1497,preview18cReady?Math.min(1769,requested):
+  (serialPreviewAtlas?Math.min(1699,requested):publishedCap));
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
  if(next>=1600){
@@ -2119,11 +2120,18 @@ function setYear(v){
   const observed=atlas.events.filter(e=>occurredByYear(e,year)).length;
   const fresh=atlas.events.filter(e=>e.category!=='status'&&Number(e.year)===year).length;
   const eighteenthPilot=year>=1700;
-  $('chapterTitlePrimary').textContent=eighteenthPilot?'十八世纪':'十七世纪';
-  $('chapterTitleSecondary').textContent=eighteenthPilot?'阿卡迪亚 · 研究试阅':'事件与专题';
-  $('chapterIntro').textContent=eighteenthPilot?
-   ('本十年仅收录阿卡迪亚专题'+decadeTotal+'件候审历史节点（截至'+year+'年已有'+observed+'件，本年'+fresh+'件）。地点为现代遗址参考，不是18世纪实占疆界；研究试阅尚未正式发表。'):
-   ('本十年已收录'+decadeTotal+'项历史事件；截至'+year+'年已有'+observed+'项进入时间轴。本年新增'+fresh+'项。具体事件与地图概略声索均有独立来源，尚不能代表对当时所有史事的完整统计。');
+  if(eighteenthPilot){
+   $('chapterTitlePrimary').textContent='十八世纪';
+   $('chapterTitleSecondary').textContent='阿卡迪亚 · 研究试阅';
+   $('chapterIntro').textContent='本十年仅收录阿卡迪亚专题'+decadeTotal+
+     '件候审历史节点（截至'+year+'年已有'+observed+'件，本年'+fresh+
+     '件）。地点为现代遗址参考，不是18世纪实占疆界；研究试阅尚未正式发表。';
+  }else{
+   // Keep the original 17C textual chronology and its tested source-derived calculations intact.
+   $('chapterTitlePrimary').textContent='十七世纪';
+   $('chapterTitleSecondary').textContent='事件与专题';
+   $('chapterIntro').textContent='本十年已收录'+decadeTotal+'项历史事件；截至'+year+'年已有'+observed+'项进入时间轴。本年新增'+fresh+'项。具体事件与地图概略声索均有独立来源，尚不能代表对当时所有史事的完整统计。';
+  }
   $('factA').textContent=decadeTotal;
   $('factB').textContent=observed;
   $('factC').textContent=fresh;
