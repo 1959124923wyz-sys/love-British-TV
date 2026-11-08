@@ -2,6 +2,9 @@
 
 当前状态：**研究进行中，不在正式地图发表。** 依照 [AGENTS](../../AGENTS.md)、[16世纪专题/地图范例纲领](../../docs/templates/16c-story-map-standard/README.md)、[跨十年承接](../../docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md) 和[历史空间图层审查](../../docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md) 分批调查。
 
+## 2026-11-08三位助手初筛
+- [35个长篇系列与1126条原始候审记录分类汇总](INITIAL_TRIAGE_20261108.json)；[中文编辑原则与审核结论](../../docs/research/EDITOR_18C_INITIAL_TRIAGE_20261108.md)。原始1126条逐行分类与ZIP、Excel在对应对话附件中保存，尚未进入正式地图。
+
 ## 研究入口
 - [105项专题母题与结构化ID](MAJOR_TOPICS.json) — 全部`research_only`。
 - [88条机构/学术资料登记与阅读层级](SOURCE_REGISTRY.json) — 含原始文献目录，但**未将目录当逐页原卷**。
