@@ -103,7 +103,7 @@ for(const concept of ['捕回','Nanny','Cudjoe','Quao','1760年','1788年','1795
  assert(allText.includes(concept),'story is missing important full-period history '+concept);
 }
 assert(allText.includes('不能把四月离岛500多人和七月抵达的同一批人口相加'));
-assert(allText.includes('约1740年'));
+assert(story.sections.some(s=>s.heading.includes('1740年')),'uncertain Nanny/Quao post-treaty timing must be visible in heading');
 assert(allText.includes('条约'));
 assert(data.sources.find(s=>s.id==='18J-J07').notes.includes('Inexact'));
 assert.equal(core.type,'FeatureCollection');
