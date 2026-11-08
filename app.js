@@ -232,6 +232,7 @@ let bengal18cReady=false;
 let eighteenthBengalControlCores=null,continuity1700References=null;
 let jamaica18cReady=false,eighteenthJamaicaMaroonAutonomyCores=null;
 let atlantic18cReady=false;
+let ireland18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -2651,6 +2652,37 @@ async function boot(){
     for(const s of ds.sources||[])sourcesById.set(s.id,s);
     atlantic18cReady=true;
    }catch(err){console.warn('Atlantic review file withheld, prior topics retained',err)}
+  }
+  // Fifth 18C story: T29/T30 Irish land/religion legislation, United Irishmen,
+  // 1798 rebellion and actor-separated reprisals. Opt-in review dataset only.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-ireland-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C Ireland research file absent');
+    const dataset=await res.json(),ev=dataset.events||[];
+    const ids=new Set((dataset.sources||[]).map(s=>s.id));
+    if(dataset.schema!=='atlas-18c-ireland-penal-rebellion-preview-v1'||
+       dataset.editorial_status!=='research_preview_not_published'||
+       ev.length!==20||dataset.colonial_polygons?.length||dataset.routes?.length||dataset.places?.length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.actual_English_land_area_sqkm!==null||e.area_sqkm!==null||
+        e.fill_authorized!==false||e.territorial_claim!==false||!e.source_ids?.length||
+        e.source_ids.some(id=>!ids.has(id))||!Array.isArray(e.research_original_record_ids)||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+       throw new Error('18C Ireland evidence/year/GIS contract rejected');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...dataset,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=d&&e.year<=d+9);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('Duplicate Ireland map candidate ID');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'eighteenth-century-five-topic-preview-'+d,
+       period:{from:d,to:d+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of dataset.sources||[])sourcesById.set(s.id,s);
+    ireland18cReady=true;
+   }catch(error){console.warn('Ireland 18C preview withheld; first four topics preserved',error)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
