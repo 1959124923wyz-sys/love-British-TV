@@ -102,5 +102,5 @@ assert(app.includes("const enable18cPilot=new URLSearchParams(window.location.se
 assert(ui.includes('draft.stories?.length===5'));
 assert(ui.includes("article.id==='E6-T11-VOYAGES'"));
 assert(ui.includes("storyMeta.has('E18-T01-T02-ATLANTIC-ZONG-1711-1799')"));
-assert(html.includes('18c-atlantic-zong-20261108'));
+assert(html.includes('18c-ireland-rebellion-20261108'),'Fifth story cache revision must not revert Atlantic source files');
 console.log('PASS 18C Atlantic/Zong fourth story: 14 dated candidates, 23 source entries, 15 sections/45 paragraphs, 14 valid inline map links, 7 modern place references, 0 ocean fake locations and 0 colonial polygons, E6-T11 link and prior 3 stories intact.');
