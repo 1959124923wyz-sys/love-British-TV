@@ -1,0 +1,637 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T12",
+  "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+  "status": "research_only",
+  "main_map_candidates": 4,
+  "topic_mode_candidates": 3,
+  "narrative_only_groups": 0,
+  "groups": [
+    {
+      "id": "E18-MRG-T12-01",
+      "story_arc_id": "T12",
+      "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+      "title_zh": "1764—1767年英国议会北美殖民地征税与货币限制",
+      "start_year": 1764,
+      "end_year": 1767,
+      "source_years": [
+        1764,
+        1767
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "policy_series",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C15"
+      ],
+      "original_candidate_count": 3,
+      "original_candidate_ids": [
+        "E18A8-1764-CURRENCY-ACT-1764",
+        "E18A8-1764-SUGAR-ACT-1764",
+        "E18A8-1767-TOWNSHEND-DUTIES-1767"
+      ],
+      "source_keys": [
+        "A:R8004",
+        "A:R8005",
+        "A:R8007",
+        "A:R8006"
+      ],
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm",
+        "https://www.loc.gov/classroom-materials/united-states-history-primary-source-timeline/american-revolution-1763-1783/british-reforms-1763-1766/",
+        "https://history.state.gov/milestones/1750-1775/parliamentary-taxation",
+        "https://www.loc.gov/collections/continental-congress-and-constitutional-convention-from-1774-to-1789/articles-and-essays/timeline/1766-to-1767/"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1,
+        "专题关键节点": 2
+      },
+      "merge_justification": "相同制度/政策机制多次立法或执行动作合为制度系列，禁止将中间没有证据的年份画为持续事件",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A8-1764-CURRENCY-ACT-1764",
+          "year": 1764,
+          "date": "1764-04-19",
+          "title": "英国《货币法》限制北美殖民地纸币充作法定偿债货币",
+          "description": "英国议会立法限制殖民地纸币法偿地位，影响货币短缺地区支付与债务争端，殖民地居民提出经济和政治反对意见。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R8004",
+            "A:R8005"
+          ],
+          "source_urls": [
+            "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm",
+            "https://www.loc.gov/classroom-materials/united-states-history-primary-source-timeline/american-revolution-1763-1783/british-reforms-1763-1766/"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A8-1764-SUGAR-ACT-1764",
+          "year": 1764,
+          "date": "1764-04-05",
+          "title": "英国通过《糖法》强化殖民地糖蜜进口关税和海关征收",
+          "description": "调整糖蜜等商品征税并强化海关缉私和帝国财政；影响新英格兰朗姆贸易与加勒比奴役制糖品市场。与1733未严格执行的税法需区分。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R8004",
+            "A:R8005",
+            "A:R8007"
+          ],
+          "source_urls": [
+            "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm",
+            "https://www.loc.gov/classroom-materials/united-states-history-primary-source-timeline/american-revolution-1763-1783/british-reforms-1763-1766/",
+            "https://history.state.gov/milestones/1750-1775/parliamentary-taxation"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A8-1767-TOWNSHEND-DUTIES-1767",
+          "year": 1767,
+          "date": "1767-06-29",
+          "title": "英国通过唐森德关税扩大对殖民地商品征税",
+          "description": "议会对玻璃、铅、油漆、纸及茶等征税并强化执法筹款，部分税款拟支付殖民地行政法官和总督薪俸，导致抵制与抗议。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R8004",
+            "A:R8006",
+            "A:R8007"
+          ],
+          "source_urls": [
+            "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm",
+            "https://www.loc.gov/collections/continental-congress-and-constitutional-convention-from-1774-to-1789/articles-and-essays/timeline/1766-to-1767/",
+            "https://history.state.gov/milestones/1750-1775/parliamentary-taxation"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T12-02",
+      "story_arc_id": "T12",
+      "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+      "title_zh": "1774年英议会关闭波士顿港惩罚措施",
+      "start_year": 1774,
+      "end_year": 1774,
+      "source_years": [
+        1774
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C15"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "E18A8-1774-BOSTON-PORT-ACT-1774"
+      ],
+      "source_keys": [
+        "A:R8004",
+        "A:R8007"
+      ],
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm",
+        "https://history.state.gov/milestones/1750-1775/parliamentary-taxation"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A8-1774-BOSTON-PORT-ACT-1774",
+          "year": 1774,
+          "date": "1774-03",
+          "title": "英国议会以关闭波士顿港贸易惩罚茶叶抵抗",
+          "description": "英国政府通过港口关停法，要求赔偿东印度公司茶叶货物等条件后才能恢复正常贸易，影响城市航运和雇工；有来源将3月30日或31日列为成法日期，本批精确到月。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R8004",
+            "A:R8007"
+          ],
+          "source_urls": [
+            "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm",
+            "https://history.state.gov/milestones/1750-1775/parliamentary-taxation"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T12-03",
+      "story_arc_id": "T12",
+      "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+      "title_zh": "1775年Dunmore宣布对特定反英奴隶主劳工附条件自由",
+      "start_year": 1775,
+      "end_year": 1775,
+      "source_years": [
+        1775
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "same_operation",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C17"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "E18A-1775-C17-02",
+        "E18A5-DUNMORE-1775-NOV7-EDICT"
+      ],
+      "source_keys": [
+        "A:N34",
+        "A:N35",
+        "A:V5012",
+        "A:V5013",
+        "A:V5015"
+      ],
+      "source_urls": [
+        "https://www.nps.gov/articles/warpoli.htm",
+        "https://www.nps.gov/articles/000/chapter-1-race-slavery-and-freedom-the-contagion-of-liberty.htm",
+        "https://www.loc.gov/item/2020769135/",
+        "https://www.colonialwilliamsburg.org/discover/moments-in-history/road-to-independence/dunmores-proclamation/",
+        "https://www.lva.virginia.gov/collections/dvb/bio/dunmore-john-murray-earl"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1,
+        "专题关键节点": 1
+      },
+      "merge_justification": "同一事件/政策的不同记录、地点或阶段，保留多地行动细节和来源差异",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A-1775-C17-02",
+          "year": 1775,
+          "date": "1775-11-07",
+          "title": "Virginia王室总督Dunmore承诺逃向英军的叛乱者奴役人口自由",
+          "description": "公告以参与英军为条件，许多非洲裔利用政策自主逃离，未覆盖所有殖民地被奴役者",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:N34",
+            "A:N35"
+          ],
+          "source_urls": [
+            "https://www.nps.gov/articles/warpoli.htm",
+            "https://www.nps.gov/articles/000/chapter-1-race-slavery-and-freedom-the-contagion-of-liberty.htm"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A5-DUNMORE-1775-NOV7-EDICT",
+          "year": 1775,
+          "date": "1775-11-07",
+          "title": "Dunmore总督颁布仅对反英奴隶主劳工附条件自由的军事公告",
+          "description": "原传单注明11月7日在停泊诺福克附近的William号签发，宣布戒严并承诺凡属于“叛乱者”且愿参军的被奴役人及契约仆役自由；对效忠英王者的奴役人口没有普遍解放。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:V5012",
+            "A:V5013",
+            "A:V5015"
+          ],
+          "source_urls": [
+            "https://www.loc.gov/item/2020769135/",
+            "https://www.colonialwilliamsburg.org/discover/moments-in-history/road-to-independence/dunmores-proclamation/",
+            "https://www.lva.virginia.gov/collections/dvb/bio/dunmore-john-murray-earl"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T12-04",
+      "story_arc_id": "T12",
+      "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+      "title_zh": "1781年约克镇英军投降",
+      "start_year": 1781,
+      "end_year": 1781,
+      "source_years": [
+        1781
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C17"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "E18A-1781-C17-01"
+      ],
+      "source_keys": [
+        "A:S34",
+        "A:N34"
+      ],
+      "source_urls": [
+        "https://www.nps.gov/subjects/americanrevolution/timeline.htm",
+        "https://www.nps.gov/articles/warpoli.htm"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A-1781-C17-01",
+          "year": 1781,
+          "date": "1781",
+          "title": "Yorktown战役英军主力陷入围困并投降",
+          "description": "军事战败与1783条约承认独立日期不同",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:S34",
+            "A:N34"
+          ],
+          "source_urls": [
+            "https://www.nps.gov/subjects/americanrevolution/timeline.htm",
+            "https://www.nps.gov/articles/warpoli.htm"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T12-05",
+      "story_arc_id": "T12",
+      "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+      "title_zh": "1783年巴黎和约对被奴役人口撤运限制条款",
+      "start_year": 1783,
+      "end_year": 1783,
+      "source_years": [
+        1783
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C17"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "E18A5-CROWN-1783-PARIS-ARTICLE7"
+      ],
+      "source_keys": [
+        "A:V5020",
+        "A:V5013"
+      ],
+      "source_urls": [
+        "https://www.archives.gov/milestone-documents/treaty-of-paris",
+        "https://www.colonialwilliamsburg.org/discover/moments-in-history/road-to-independence/dunmores-proclamation/"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A5-CROWN-1783-PARIS-ARTICLE7",
+          "year": 1783,
+          "date": "1783-09-03",
+          "title": "1783巴黎和约第七条把非裔人身视为可被声索的财产并限制英军撤运",
+          "description": "第七条要求英军撤军不得带走“Negroes or other Property of the American inhabitants”；其与此前英方给予逃亡者自由的承诺存在紧张关系，具体个案仍按撤离检查和人身自由证据另判。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:V5020",
+            "A:V5013"
+          ],
+          "source_urls": [
+            "https://www.archives.gov/milestone-documents/treaty-of-paris",
+            "https://www.colonialwilliamsburg.org/discover/moments-in-history/road-to-independence/dunmores-proclamation/"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T12-06",
+      "story_arc_id": "T12",
+      "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+      "title_zh": "1793年Chloe Cooley遭强制售往美国",
+      "start_year": 1793,
+      "end_year": 1793,
+      "source_years": [
+        1793
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C17"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "E18A2-CHLOE-MARCH14"
+      ],
+      "source_keys": [
+        "A:R20",
+        "A:R39",
+        "A:R40"
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/culture/designation/personnage-person/chloe-cooley",
+        "https://www.archives.gov.on.ca/ao-content/media/uploads/2026/02/Grade-7-Document-Box.pdf",
+        "https://www.biographi.ca/en/bio/cooley_chloe_4E.html"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A2-CHLOE-MARCH14",
+          "year": 1793,
+          "date": "1793-03-14",
+          "title": "Chloe Cooley被奴隶主捆绑押过Niagara河售给美国买方",
+          "description": "加拿大公园局记Chloe反抗绑缚与贩卖，见证人Peter Martin等后来作证；此为加拿大境内受奴役者主动抵抗，不可将她写成获得自由。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R20",
+            "A:R39",
+            "A:R40"
+          ],
+          "source_urls": [
+            "https://parks.canada.ca/culture/designation/personnage-person/chloe-cooley",
+            "https://www.archives.gov.on.ca/ao-content/media/uploads/2026/02/Grade-7-Document-Box.pdf",
+            "https://www.biographi.ca/en/bio/cooley_chloe_4E.html"
+          ],
+          "geo_status": "named_historical_location_reference_without_independently_verified_WGS84",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T12-07",
+      "story_arc_id": "T12",
+      "story_arc_title": "北美独立战争中的英军暴力、关押及黑人自由",
+      "title_zh": "1794—1795年Jay条约美英西部据点撤离安排",
+      "start_year": 1794,
+      "end_year": 1795,
+      "source_years": [
+        1794,
+        1795
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "same_operation",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C17"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "E18A6-1794-047",
+        "E18A6-1795-048"
+      ],
+      "source_keys": [
+        "A:V6024",
+        "A:V6025",
+        "A:V6021"
+      ],
+      "source_urls": [
+        "https://guides.loc.gov/jays-treaty",
+        "https://avalon.law.yale.edu/18th_century/jay.asp",
+        "https://www.nps.gov/articles/jay-s-treaty.htm"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 2
+      },
+      "merge_justification": "同一事件/政策的不同记录、地点或阶段，保留多地行动细节和来源差异",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A6-1794-047",
+          "year": 1794,
+          "date": "1794-11-19",
+          "title": "英国Grenville与美国John Jay签订条约约定撤离西部堡垒",
+          "description": "《杰伊条约》1794年11月19日在伦敦签署；第二条约定1796-06-01前撤出被1783条约划归美国的驻军堡垒，签署日不等于各据点实控交接日，原住民族领土权利仍另行调查。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:V6024",
+            "A:V6025",
+            "A:V6021"
+          ],
+          "source_urls": [
+            "https://guides.loc.gov/jays-treaty",
+            "https://avalon.law.yale.edu/18th_century/jay.asp",
+            "https://www.nps.gov/articles/jay-s-treaty.htm"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A6-1795-048",
+          "year": 1795,
+          "date": "1795-06-24",
+          "title": "美国参议院对杰伊条约附条件表示批准同意",
+          "description": "国会图书馆史料指1795年6月24日参院以20比10作出同意，须与1794签署、1795批准交换、1796实际军事撤离分开。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:V6024",
+            "A:V6025"
+          ],
+          "source_urls": [
+            "https://guides.loc.gov/jays-treaty",
+            "https://avalon.law.yale.edu/18th_century/jay.asp"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T25",
+  "story_arc_title": "1795开普占领及Khoikhoi/Xhosa的反抗",
+  "status": "research_only",
+  "main_map_candidates": 3,
+  "topic_mode_candidates": 0,
+  "narrative_only_groups": 0,
+  "groups": [
+    {
+      "id": "E18-MRG-T25-01",
+      "story_arc_id": "T25",
+      "story_arc_title": "1795开普占领及Khoikhoi/Xhosa的反抗",
+      "title_zh": "1795年英军登陆并迫使开普VOC政权投降",
+      "start_year": 1795,
+      "end_year": 1795,
+      "source_years": [
+        1795
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E06"
+      ],
+      "original_candidate_count": 4,
+      "original_candidate_ids": [
+        "AB-E06-001",
+        "AB-NEW-046-001",
+        "AB-NEW-046-002",
+        "AB-NEW-046-003"
+      ],
+      "source_keys": [
+        "B:BS38",
+        "B:BS74",
+        "B:BS168",
+        "B:BS170",
+        "B:BS167",
+        "B:BS173"
+      ],
+      "source_urls": [
+        "https://www.gov.za/about-sa/history",
+        "https://sahistory.org.za/place/battle-muizenburg-monument-muizenburg",
+        "https://sahistory.org.za/place/dutch-and-british-coastal-fortifications-cape-good-hope-1665-1829",
+        "https://www.capetown.gov.za/media-and-news/city-secures-battle-of-muizenberg-site-as-a-provincial-heritage-site/",
+        "https://resource.capetown.gov.za/documentcentre/Documents/City%20research%20reports%20and%20review/Stories_of_the_South_Peninsula_chapter_08_2014-06.pdf"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 3,
+        "主图核心": 1
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-E06-001",
+          "year": 1795,
+          "date": "",
+          "title": "英军占据开普殖民地",
+          "description": "1795年英军出于掌握印度航线的考虑占领开普，后于1803归还；不能以现代南非疆界描绘。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS38",
+            "B:BS74"
+          ],
+          "source_urls": [
+            "https://www.gov.za/about-sa/history"
+          ],
+          "geo_status": "modern_named_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-NEW-046-001",
+          "year": 1795,
+          "date": "",
+          "title": "英海军在开普False Bay和Simon’s Town部署",
+          "description": "1795年6月英舰抵False Bay、英军同VOC谈判而后进驻Simon’s Town；到8月仍未占领Cape Town城。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS168",
+            "B:BS170"
+          ],
+          "source_urls": [
+            "https://sahistory.org.za/place/battle-muizenburg-monument-muizenburg",
+            "https://sahistory.org.za/place/dutch-and-british-coastal-fortifications-cape-good-hope-1665-1829"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-NEW-046-002",
+          "year": 1795,
+          "date": "",
+          "title": "英军8月7日炮击Muizenberg荷军防线",
+          "description": "VOC守军及由有色士兵构成的Korps Pandoeren、布尔民兵参与反抗；现今历史遗迹并非全1795战线。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS167",
+            "B:BS168",
+            "B:BS173"
+          ],
+          "source_urls": [
+            "https://www.capetown.gov.za/media-and-news/city-secures-battle-of-muizenberg-site-as-a-provincial-heritage-site/",
+            "https://sahistory.org.za/place/battle-muizenburg-monument-muizenburg",
+            "https://resource.capetown.gov.za/documentcentre/Documents/City%20research%20reports%20and%20review/Stories_of_the_South_Peninsula_chapter_08_2014-06.pdf"
+          ],
+          "geo_status": "modern_named_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-NEW-046-003",
+          "year": 1795,
+          "date": "",
+          "title": "开普VOC当局9月16日向英军投降",
+          "description": "Britain在战事后取得开普殖民行政据点；保留Khoikhoi、San及内陆非欧政治体自主，城堡投降不是现代西开普省全域法权。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS168"
+          ],
+          "source_urls": [
+            "https://sahistory.org.za/place/battle-muizenburg-monument-muizenburg"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T25-02",
+      "story_arc_id": "T25",
+      "story_arc_title": "1795开普占领及Khoikhoi/Xhosa的反抗",
+      "title_zh": "1799年Graaff-Reinet布尔居民起义及英军镇压",
+      "start_year": 1799,
+      "end_year": 1799,
+      "source_years": [
+        1799
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "same_operation",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E06"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "AB-F5-ZA-001",
+        "AB-F5-ZA-002"
+      ],
+      "source_keys": [
+        "B:BS200",
+        "B:BS201"
+      ],
+      "source_urls": [
+        "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+        "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 2
+      },
+      "merge_justification": "同一事件/政策的不同记录、地点或阶段，保留多地行动细节和来源差异",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-F5-ZA-001",
+          "year": 1799,
+          "date": "",
+          "title": "开普Graaff-Reinet布尔居民再次反抗殖民政府",
+          "description": "1799年1月驻地布尔殖民者反抗英国第一占领时期政府；此与稍后Khoikhoi/Xhosa抵抗是不同群体的行动。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS200",
+            "B:BS201"
+          ],
+          "source_urls": [
+            "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+            "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-F5-ZA-002",
+          "year": 1799,
+          "date": "",
+          "title": "Vandeleur率英军镇压Graaff-Reinet布尔居民反抗",
+          "description": "英军于1799年3月行动镇压布尔叛乱；英国财政和军数尚无原始核。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "具体事实仍有证据缺口",
+          "source_keys": [
+            "B:BS200",
+            "B:BS201"
+          ],
+          "source_urls": [
+            "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+            "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T25-03",
+      "story_arc_id": "T25",
+      "story_arc_title": "1795开普占领及Khoikhoi/Xhosa的反抗",
+      "title_zh": "1799年Gqunukwebe武装抵抗英军与Zuurveld谈判",
+      "start_year": 1799,
+      "end_year": 1799,
+      "source_years": [
+        1799
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "same_operation",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E06"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "AB-F5-ZA-005",
+        "AB-F5-ZA-006"
+      ],
+      "source_keys": [
+        "B:BS200",
+        "B:BS201"
+      ],
+      "source_urls": [
+        "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+        "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1,
+        "专题关键节点": 1
+      },
+      "merge_justification": "同一事件/政策的不同记录、地点或阶段，保留多地行动细节和来源差异",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-F5-ZA-005",
+          "year": 1799,
+          "date": "",
+          "title": "Gqunukwebe武装在英军返回Algoa Bay途中阻击",
+          "description": "南非史资料记载Gqunukwebe部族担心遭驱逐而袭击返程英军，未确认精确战地与日期。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS200",
+            "B:BS201"
+          ],
+          "source_urls": [
+            "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+            "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-F5-ZA-006",
+          "year": 1799,
+          "date": "",
+          "title": "殖民当局在1799年谈判中允许Xhosa继续留在Zuurveld",
+          "description": "当局畏惧Khoikhoi普遍起义，选择议和并让Xhosa留在Zuurveld；实际各社区管辖与地图边界需核对，非英军全面征服。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS200",
+            "B:BS201"
+          ],
+          "source_urls": [
+            "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+            "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}
