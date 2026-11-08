@@ -19,6 +19,7 @@ jobs:
           node --check app.js
           node --check js/history-stories.js
           node scripts/test_18c_atlantic_zong_map.js
+          python3 scripts/test_18c_archival_integrity.py
           node scripts/test_18c_jamaica_maroon_map.js
           node scripts/test_18c_bengal_continuity_map.js
           node scripts/test_18c_acadia_map_pilot.js
