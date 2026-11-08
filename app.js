@@ -2632,7 +2632,7 @@ async function boot(){
     const ds=await res.json(),ev=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
     if(ds.schema!=='atlas-18c-atlantic-zong-insurance-preview-v1'||
        ds.editorial_status!=='research_preview_not_published'||ev.length!==14||
-       ds.colonial_polygons?.length||ds.routes?.length||ds.places?.length||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
        ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
         e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
         e.area_sqkm!==null||e.fill_authorized!==false||e.territorial_claim!==false||
