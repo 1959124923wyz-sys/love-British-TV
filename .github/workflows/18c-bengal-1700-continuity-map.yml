@@ -1,0 +1,47 @@
+name: 18C Bengal and 1700 continuity map review (unpublished)
+on:
+  push:
+    branches:
+      - map/18c-bengal-1700-continuity-20261108
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-and-ui-static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax and research editorial contracts
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_18c_acadia_map_pilot.js
+          node scripts/test_18c_bengal_continuity_map.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          python3 -m json.tool research/continuity/1700-1709/TRANSITION_1699_1700_CONTROL_REVIEW_20261108.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-bengal-1750-1779.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t14-t15-bengal-company-famine-1756-1773.json >/dev/null
+      - name: Run shared project GIS audit
+        run: python3 scripts/audit_spatial_semantics.py --strict
+  desktop-chromium:
+    runs-on: ubuntu-latest
+    needs: historical-and-ui-static
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Selenium desktop driver
+        run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real desktop navigation regression
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c-bengal-http.log 2>&1 &
+          python3 scripts/browser_18c_bengal_continuity.py
+          python3 scripts/browser_18c_acadia_pilot.py
+      - name: Preserve real browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c-bengal-continuity-desktop-screenshots
+          path: browser-smoke-results/
+          if-no-files-found: ignore
