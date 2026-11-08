@@ -1,0 +1,277 @@
+{
+  "schema": "atlas-18c-editor16-original-research-provenance-v1",
+  "date": "2026-11-08",
+  "source_branch": "map/18c-atlantic-zong-insurance-20261108",
+  "parent_study": "research/18c/consolidated/",
+  "method": "Only assign research_merge_group_id if the original candidate is a member of that group and episode year matches. Other archival evidence and newly checked institutional sources retain their own provenance without simulated group membership.",
+  "preserve_all_archive_rows": true,
+  "source_zip_archives": [
+    "raw_sources/assistant_A_americas_round8.zip",
+    "raw_sources/assistant_B_asia_africa_round7.zip",
+    "raw_sources/assistant_C_continuity_round8.zip"
+  ],
+  "counts": {
+    "preview_events": 14,
+    "direct_group_events": 8,
+    "archival_narrative_only_events": 2,
+    "new_supplementary_events": 4
+  },
+  "records": [
+    {
+      "event_id": "E18C-ATL-1711-SOUTH-SEA-CHARTER",
+      "year": 1711,
+      "original_record_ids": [],
+      "archive_dispositions": {},
+      "direct_group_id": null,
+      "related_group_ids": [],
+      "evidence_notes": "南海公司1711年设立由后续博物馆及档案书目补证，1126档案仅1711布里斯托反RAC垄断游说，不可套用该记录",
+      "source_ids": [
+        "18ATL-A01",
+        "18ATL-A02"
+      ],
+      "map_tier": "topic_only"
+    },
+    {
+      "event_id": "E18C-ATL-1713-ASIENTO-CONTRACT",
+      "year": 1713,
+      "original_record_ids": [
+        "E18A-1713-A02-01"
+      ],
+      "archive_dispositions": {
+        "E18A-1713-A02-01": "story_narrative_evidence"
+      },
+      "direct_group_id": null,
+      "related_group_ids": [],
+      "evidence_notes": "原归史料正文，重新经机构线索核证后作为研究试阅主图节点；不是1750年西非公司改革",
+      "source_ids": [
+        "18ATL-A01",
+        "18ATL-A02"
+      ],
+      "map_tier": "main_candidate"
+    },
+    {
+      "event_id": "E18C-ATL-1720-SOUTH-SEA-BUBBLE",
+      "year": 1720,
+      "original_record_ids": [],
+      "archive_dispositions": {},
+      "direct_group_id": null,
+      "related_group_ids": [],
+      "evidence_notes": "南海泡沫由英国央行及伦敦大学档案目录补证；已有T02-01的1720年是Old Calabar购奴，不可混为同组",
+      "source_ids": [
+        "18ATL-A01",
+        "18ATL-A03"
+      ],
+      "map_tier": "topic_only"
+    },
+    {
+      "event_id": "E18C-ATL-1750-AFRICAN-TRADE-ACT",
+      "year": 1750,
+      "original_record_ids": [
+        "AB-R7-POL-005",
+        "AB-E10-002",
+        "E18A-1750-A03-01"
+      ],
+      "archive_dispositions": {
+        "AB-R7-POL-005": "assigned_to_group",
+        "AB-E10-002": "assigned_to_group",
+        "E18A-1750-A03-01": "story_narrative_evidence"
+      },
+      "direct_group_id": "E18-MRG-T26-02",
+      "related_group_ids": [
+        "E18-MRG-T01-03"
+      ],
+      "evidence_notes": "原T26-02直接记录1750年议会改革及种植园劳工供给，T01-03仅是该制度的三港委员选举细节",
+      "source_ids": [
+        "18ATL-A04"
+      ],
+      "map_tier": "main_candidate"
+    },
+    {
+      "event_id": "E18C-ATL-1765-SALLY-REVOLT",
+      "year": 1765,
+      "original_record_ids": [
+        "E18A3-SALLY-REVOLT-1765"
+      ],
+      "archive_dispositions": {
+        "E18A3-SALLY-REVOLT-1765": "assigned_to_group"
+      },
+      "direct_group_id": "E18-MRG-T01-01",
+      "related_group_ids": [],
+      "evidence_notes": "直接对应原始Sally海上起义候选；其他单船买卖和账册往来融入正文",
+      "source_ids": [
+        "18ATL-A05",
+        "18ATL-A06",
+        "18ATL-A22"
+      ],
+      "map_tier": "topic_only"
+    },
+    {
+      "event_id": "E18C-ATL-1772-SOMERSET-DECISION",
+      "year": 1772,
+      "original_record_ids": [
+        "E18A-1772-A08-01"
+      ],
+      "archive_dispositions": {
+        "E18A-1772-A08-01": "assigned_to_group"
+      },
+      "direct_group_id": "E18-MRG-T01-04",
+      "related_group_ids": [],
+      "evidence_notes": "对应英格兰Somerset案；苏格兰Knight案是该比较组另一起独立判决",
+      "source_ids": [
+        "18ATL-A07",
+        "18ATL-A08"
+      ],
+      "map_tier": "main_candidate"
+    },
+    {
+      "event_id": "E18C-ATL-1781-ZONG-MASS-KILLING",
+      "year": 1781,
+      "original_record_ids": [
+        "E18A-1781-A09-01"
+      ],
+      "archive_dispositions": {
+        "E18A-1781-A09-01": "assigned_to_group"
+      },
+      "direct_group_id": "E18-MRG-T02-03",
+      "related_group_ids": [],
+      "evidence_notes": "对应1781宗号船上杀人，位置未知；1783保险诉讼是不同法律行为",
+      "source_ids": [
+        "18ATL-A09",
+        "18ATL-A10",
+        "18ATL-A11"
+      ],
+      "map_tier": "main_candidate"
+    },
+    {
+      "event_id": "E18C-ATL-1781-ZONG-BLACK-RIVER",
+      "year": 1781,
+      "original_record_ids": [
+        "E18A2-ZONG-ARRIVAL"
+      ],
+      "archive_dispositions": {
+        "E18A2-ZONG-ARRIVAL": "assigned_to_group"
+      },
+      "direct_group_id": "E18-MRG-T02-03",
+      "related_group_ids": [],
+      "evidence_notes": "对应同一航次1781年牙买加到港；本地图的Black River是现代地区参考点，不是杀人海位",
+      "source_ids": [
+        "18ATL-A11",
+        "18ATL-A12",
+        "18ATL-A13"
+      ],
+      "map_tier": "topic_only"
+    },
+    {
+      "event_id": "E18C-ATL-1783-ZONG-INSURANCE-TRIAL",
+      "year": 1783,
+      "original_record_ids": [
+        "E18A-1783-A09-01"
+      ],
+      "archive_dispositions": {
+        "E18A-1783-A09-01": "assigned_to_group"
+      },
+      "direct_group_id": "E18-MRG-T02-03",
+      "related_group_ids": [],
+      "evidence_notes": "直接对应1783年宗号保险索赔争议，非杀人刑事定罪",
+      "source_ids": [
+        "18ATL-A09",
+        "18ATL-A11",
+        "18ATL-A14"
+      ],
+      "map_tier": "main_candidate"
+    },
+    {
+      "event_id": "E18C-ATL-1783-EQUIANO-SHARP",
+      "year": 1783,
+      "original_record_ids": [],
+      "archive_dispositions": {},
+      "direct_group_id": null,
+      "related_group_ids": [
+        "E18-MRG-T02-03"
+      ],
+      "evidence_notes": "1783 Equiano→Sharp通报为同案额外公共舆论节点，由本批新增二次史学线索提供；不冒充原315条之一",
+      "source_ids": [
+        "18ATL-A15",
+        "18ATL-A09"
+      ],
+      "map_tier": "topic_only"
+    },
+    {
+      "event_id": "E18C-ATL-1787-ABOLITION-SOCIETY",
+      "year": 1787,
+      "original_record_ids": [
+        "E18A-1787-A10-01"
+      ],
+      "archive_dispositions": {
+        "E18A-1787-A10-01": "story_narrative_evidence"
+      },
+      "direct_group_id": null,
+      "related_group_ids": [
+        "E18-MRG-T01-07"
+      ],
+      "evidence_notes": "原档仅正文证据，不属于1792议会动议正式合并组；重新分为研究试阅节点后须单独审其重要性",
+      "source_ids": [
+        "18ATL-A16",
+        "18ATL-A17"
+      ],
+      "map_tier": "main_candidate"
+    },
+    {
+      "event_id": "E18C-ATL-1788-DOLBEN-SLAVE-TRADE-ACT",
+      "year": 1788,
+      "original_record_ids": [
+        "E18A5-ABOL-1788-MAY21-DOLBEN",
+        "E18A3-DOLBEN-ACT-EFFECT-1788",
+        "E18A3-DOLBEN-ASSENT-1788"
+      ],
+      "archive_dispositions": {
+        "E18A5-ABOL-1788-MAY21-DOLBEN": "assigned_to_group",
+        "E18A3-DOLBEN-ACT-EFFECT-1788": "story_narrative_evidence",
+        "E18A3-DOLBEN-ASSENT-1788": "low_value_archive"
+      },
+      "direct_group_id": "E18-MRG-T01-06",
+      "related_group_ids": [],
+      "evidence_notes": "同一法令从提出、通过到生效条件，防止拆成重复地图事件；原归档含正文与低价值子步骤，保留来源链接",
+      "source_ids": [
+        "18ATL-A16",
+        "18ATL-A18",
+        "18ATL-A19"
+      ],
+      "map_tier": "main_candidate"
+    },
+    {
+      "event_id": "E18C-ATL-1789-DOLBEN-AMENDMENT",
+      "year": 1789,
+      "original_record_ids": [],
+      "archive_dispositions": {},
+      "direct_group_id": null,
+      "related_group_ids": [
+        "E18-MRG-T01-06"
+      ],
+      "evidence_notes": "来自法规补充条款的新年节点，原162组合并T01-06仅收1788提案；标为后续而不伪装已归组",
+      "source_ids": [
+        "18ATL-A20",
+        "18ATL-A16"
+      ],
+      "map_tier": "topic_only"
+    },
+    {
+      "event_id": "E18C-ATL-1792-GRADUAL-ABOLITION-FAILED",
+      "year": 1792,
+      "original_record_ids": [
+        "E18A5-ABOL-1792-MAY1-GRADUAL"
+      ],
+      "archive_dispositions": {
+        "E18A5-ABOL-1792-MAY1-GRADUAL": "assigned_to_group"
+      },
+      "direct_group_id": "E18-MRG-T01-07",
+      "related_group_ids": [],
+      "evidence_notes": "直接对应1792渐进废止动议未落实的原始候选",
+      "source_ids": [
+        "18ATL-A21",
+        "18ATL-A23"
+      ],
+      "map_tier": "main_candidate"
+    }
+  ]
+}
