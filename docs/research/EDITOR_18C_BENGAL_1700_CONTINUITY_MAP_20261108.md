@@ -40,3 +40,7 @@ QA 包括 `node scripts/test_18c_acadia_map_pilot.js`、`node scripts/test_18c_b
 1. 把1700各独立殖民政体的**真实1699年末** stable_id 从17C Atlas和具名控制点中完整提取，随后逐处比对已审核真实边线。不能将27个旧参考Polygon偷换成实控版图。
 2. 建立孟加拉各县的1765—1773年Diwani实际收支`zamindar/pargana`账目矩阵、地方抗议/控诉证据的同时性，必要时把大范围**有据地理影响区**作虚线，而非用现代邦界着色。
 3. 本分支只作为研究试阅原型，地图主编完成历史核实、空间监督和完整出版集成后，才可登记正式十年Atlas及原生故事目录。切勿合并未经审核的空间段。
+
+## 1699年末点位／首府搬迁的补充修正
+
+除原27项纸面边线外，新增 `research/continuity/1700-1709/OLD_1699_SPATIAL_POINTS_CROSSWALK.json`，对16世纪末继承来的**17个1699年有效的史事参考点**逐一记录出处、1700年处理、是否仅是当期事件、对应旧stable_id。最重要的具体治理变化为**1699弗吉尼亚殖民首府迁至威廉斯堡**，不能把詹姆斯敦永续标注为殖民行政首府；见美国国家公园局[官方年表](https://www.nps.gov/jame/learn/historyculture/chronology-of-jamestown-events.htm)和[弗吉尼亚议会首府史](https://vga.virginia.gov/visit/about-capitol/three-capital-cities/)。另据[圣赫勒拿政府官方历史](https://www.sainthelena.gov.sh/st-helena/history-and-heritage/)，圣赫勒拿1659年以来英国／东印度公司殖民历史跨越1700年，应续作已存在公司政体而非1700年新增占领。

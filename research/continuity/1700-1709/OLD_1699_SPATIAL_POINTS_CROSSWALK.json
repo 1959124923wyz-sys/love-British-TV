@@ -1,0 +1,429 @@
+{
+  "schema": "atlas-17c-point-to-18c-1700-evidence-crosswalk-v1",
+  "source_file": "data/seventeenth-century-spatial-evidence-1600-1699.geojson",
+  "reference_records": 17,
+  "connected_to_1700_anchors": 4,
+  "dated_1699_events_not_to_extend": 8,
+  "cartographic_rules": "reference Point from previous dataset is neither original 1700 surveyed historical geometry nor any country polygon",
+  "separate_1699_control_change": {
+    "event": "1699 Virginia colonial capital moved Jamestown to Williamsburg, Jamestown remained inhabited; colonial political centre should be reassigned",
+    "status": "officially_documented_year_1699",
+    "official_sources": [
+      "https://www.nps.gov/jame/learn/historyculture/chronology-of-jamestown-events.htm",
+      "https://vga.virginia.gov/visit/about-capitol/three-capital-cities/"
+    ],
+    "not_a_1700_territorial_conquest": true,
+    "need_williamsburg_site_historical_geometry_review": true
+  },
+  "official_st_helena_1700_note": {
+    "actor": "English East India Company settlement/administration, local social and slavery history distinct",
+    "official_source": "https://www.sainthelena.gov.sh/st-helena/history-and-heritage/",
+    "status": "documented_era_colonial_administration_but_not_an_18c_survey_polygon",
+    "not_a_1700_new_conquest": true
+  },
+  "old_point_dispositions": [
+    {
+      "previous_point_id": "jamestown-governance-1607",
+      "previous_name": "詹姆斯敦 · 英格兰定居与公司行政地点",
+      "previous_type": "local_governance",
+      "previous_start_year": 1607,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -76.778,
+        37.209
+      ],
+      "previous_urls": [
+        "https://www.nps.gov/jame/learn/historyculture/the-virginia-company-of-london.htm"
+      ],
+      "continuance_category": "site_or_economic_network_individual_review",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [
+        "https://www.nps.gov/jame/learn/historyculture/chronology-of-jamestown-events.htm",
+        "https://vga.virginia.gov/visit/about-capitol/three-capital-cities/"
+      ],
+      "disposition_reason": "1699 COLONIAL CAPITAL MOVED TO WILLIAMSBURG; Jamestown site itself not eradicated but do not continue capital designation",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "barbados-bridgetown-sugar",
+      "previous_name": "巴巴多斯港市与糖业奴役经济参考",
+      "previous_type": "economic_network",
+      "previous_start_year": 1640,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -59.614,
+        13.103
+      ],
+      "previous_urls": [
+        "https://whc.unesco.org/en/tentativelists/5942/"
+      ],
+      "continuance_category": "site_or_economic_network_individual_review",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "independent review required: previous data ends in 1699 because of project range; not proof of historic expiry",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "jamaica-spanish-town-1655",
+      "previous_name": "西班牙镇 · 1655年牙买加征服核心参考",
+      "previous_type": "local_governance",
+      "previous_start_year": 1655,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -76.955,
+        17.994
+      ],
+      "previous_urls": [
+        "https://www.jstor.org/stable/j.ctt1n7qkwf"
+      ],
+      "continuance_category": "site_or_economic_network_individual_review",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "independent review required: previous data ends in 1699 because of project range; not proof of historic expiry",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "bombay-1668",
+      "previous_name": "孟买岛 · 东印度公司地方治理据点参考",
+      "previous_type": "local_governance",
+      "previous_start_year": 1668,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        72.83,
+        18.93
+      ],
+      "previous_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000178601"
+      ],
+      "continuance_category": "earlier_footprint_related_to_1700_site_anchor",
+      "approved_1700_point_stable_id": "C1700-ENGLISH-BOMBAY",
+      "additional_1700_official_sources": [],
+      "disposition_reason": "same named core as 1700 institutional-point anchor; retain old source coordinate independently",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "eic-sthelena-1659",
+      "previous_name": "圣赫勒拿 · 东印度公司岛上定居管理",
+      "previous_type": "local_governance",
+      "previous_start_year": 1659,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -5.71,
+        -15.96
+      ],
+      "previous_urls": [
+        "https://www.sainthelena.gov.sh/wp-content/uploads/2017/08/Appendix-11.1-Cultural-Heritage-Detailed-Assessment.pdf"
+      ],
+      "continuance_category": "site_or_economic_network_individual_review",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [
+        "https://www.sainthelena.gov.sh/st-helena/history-and-heritage/"
+      ],
+      "disposition_reason": "Saint Helena governmental official history affirms EIC island settlement continued across 1700; no estate survey dimensions",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "eic-bencoolen-1687",
+      "previous_name": "明古连 · 东印度公司Fort York据点",
+      "previous_type": "local_governance",
+      "previous_start_year": 1687,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        102.26,
+        -3.79
+      ],
+      "previous_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "continuance_category": "earlier_footprint_related_to_1700_site_anchor",
+      "approved_1700_point_stable_id": "C1700-ENGLISH-BENCOOLEN",
+      "additional_1700_official_sources": [],
+      "disposition_reason": "same named core as 1700 institutional-point anchor; retain old source coordinate independently",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "eic-fortdavid-1692",
+      "previous_name": "圣大卫堡 · 科罗曼德尔公司设防据点",
+      "previous_type": "local_governance",
+      "previous_start_year": 1692,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        79.77,
+        11.75
+      ],
+      "previous_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "continuance_category": "site_or_economic_network_individual_review",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "Fort St David site requires fort-specific 1700 continuous garrison source, British Library factory broad collection not enough",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "eic-sutanuti-1699",
+      "previous_name": "苏塔努蒂 · 公司商站与威廉堡项目",
+      "previous_type": "local_governance",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        88.37,
+        22.61
+      ],
+      "previous_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "continuance_category": "earlier_footprint_related_to_1700_site_anchor",
+      "approved_1700_point_stable_id": "C1700-ENGLISH-CALCUTTA",
+      "additional_1700_official_sources": [],
+      "disposition_reason": "same named core as 1700 institutional-point anchor; retain old source coordinate independently",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "rac-cape-coast-castle-1665",
+      "previous_name": "开普海岸堡 · 英方据点与皇家非洲公司贸易总部",
+      "previous_type": "local_governance",
+      "previous_start_year": 1665,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -1.24125,
+        5.10358
+      ],
+      "previous_urls": [
+        "https://gmmb.gov.gh/cape-coast-castle-cape-coast-1653/",
+        "https://discovery.nationalarchives.gov.uk/details/r/C13807",
+        "https://www.wikidata.org/wiki/Q1254826"
+      ],
+      "continuance_category": "earlier_footprint_related_to_1700_site_anchor",
+      "approved_1700_point_stable_id": "C1700-ENGLISH-CAPE-COAST",
+      "additional_1700_official_sources": [],
+      "disposition_reason": "same named core as 1700 institutional-point anchor; retain old source coordinate independently",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-jamaica-1699-hunting-parties-1699",
+      "previous_name": "1699年殖民议会授权武装追捕逃亡者",
+      "previous_type": "military_impact",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -76.955,
+        17.992
+      ],
+      "previous_urls": [
+        "https://slaveryandfreedomlaws.lib.unb.ca/laws/jamaica-1699"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 event only; 1700 political status cannot be inferred from this modern reference point",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-editor10-nf-1690s-e103",
+      "previous_name": "英格兰议会通过《纽芬兰贸易鼓励法》规定渔港经营次序",
+      "previous_type": "economic_network",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -0.124,
+        51.499
+      ],
+      "previous_urls": [
+        "https://www.heritage.nf.ca/lawfoundation/articles/doc2_1699william.html"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 event only; 1700 political status cannot be inferred from this modern reference point",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-editor10-darien-1690s-e125",
+      "previous_name": "苏格兰殖民理事会与古纳领袖迭戈订立互保协定",
+      "previous_type": "local_governance",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -77.7,
+        8.916667
+      ],
+      "previous_urls": [
+        "https://deriv.nls.uk/dcn23/7878/78785290.23.pdf",
+        "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 episode belongs to Scottish independent Darien venture. 1700 campaign ended after Spanish siege; not an English colonial acquisition",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-editor10-darien-1690s-e126",
+      "previous_name": "苏格兰公司董事向达连殖民理事会承诺再派船只补给",
+      "previous_type": "economic_network",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -3.189,
+        55.952
+      ],
+      "previous_urls": [
+        "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+        "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 episode belongs to Scottish independent Darien venture. 1700 campaign ended after Spanish siege; not an English colonial acquisition",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-editor10-darien-1690s-e127",
+      "previous_name": "粮食匮乏与疾病迫使苏格兰首次达连殖民者撤离",
+      "previous_type": "local_governance",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -77.7,
+        8.916667
+      ],
+      "previous_urls": [
+        "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+        "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 episode belongs to Scottish independent Darien venture. 1700 campaign ended after Spanish siege; not an English colonial acquisition",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-editor10-darien-1690s-e128",
+      "previous_name": "西班牙军官从卡塔赫纳报告对达连苏格兰殖民的军事行动",
+      "previous_type": "military_impact",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -75.55,
+        10.423
+      ],
+      "previous_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/3936320",
+        "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 episode belongs to Scottish independent Darien venture. 1700 campaign ended after Spanish siege; not an English colonial acquisition",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-editor10-darien-1690s-e129",
+      "previous_name": "第二批苏格兰殖民远征抵达废弃的达连新爱丁堡",
+      "previous_type": "local_governance",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -77.7,
+        8.916667
+      ],
+      "previous_urls": [
+        "https://www.nms.ac.uk/discover-catalogue/the-darien-scheme",
+        "https://www.cia.gov/readingroom/document/cia-rdp01-00707r000100140015-7"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 episode belongs to Scottish independent Darien venture. 1700 campaign ended after Spanish siege; not an English colonial acquisition",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    },
+    {
+      "previous_point_id": "17c-editor12-e6-t11-1690s-e132",
+      "previous_name": "Albion Frigate号船上反抗：600人被强行登船、250人抵巴巴多斯",
+      "previous_type": "military_impact",
+      "previous_start_year": 1699,
+      "previous_documentation_cap": 1699,
+      "previous_coordinate_wgs84": [
+        -59.614,
+        13.096
+      ],
+      "previous_urls": [
+        "https://www.slavevoyages.org/voyage/20173/variables"
+      ],
+      "continuance_category": "dated_1699_event_not_political_control_territory",
+      "approved_1700_point_stable_id": null,
+      "additional_1700_official_sources": [],
+      "disposition_reason": "1699 event only; 1700 political status cannot be inferred from this modern reference point",
+      "current_1700_verified_territorial_area_polygon": false,
+      "no_auto_decision_about_indigenous_political_authority": true,
+      "verified_1700_territorial_area_sqkm": null,
+      "no_auto_carry_1699_event_to_new_year": true,
+      "review_status": "17c_reference_1700_crosswalk_research_only"
+    }
+  ]
+}
