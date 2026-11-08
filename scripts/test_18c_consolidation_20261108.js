@@ -27,4 +27,11 @@ for(let i=1;i<=35;i++){
 assert.equal(fs.readFileSync(path.join(base,'ORIGINAL_TO_GROUP.csv'),'utf8').trimEnd().split('\n').length,316);
 assert.equal(fs.readFileSync(path.join(base,'COMPLETE_1126_ARCHIVE_CROSSWALK.csv'),'utf8').trimEnd().split('\n').length,1127);
 assert.equal(fs.readFileSync(path.join(base,'18C_Consolidated_Research_Handoff_20261108.zip')).subarray(0,2).toString(),'PK');
+const sourceArchives=[{"name":"assistant_A_americas_round8.zip","size":1436728,"sha256":"75be4b7845da3d879958fb248797a1cdcfa86d562bccab45ec959483bfb72ec5"},{"name":"assistant_B_asia_africa_round7.zip","size":992322,"sha256":"7bb1ec8d55b2b576c47ddab64c95bd06998778bb07787e257655231a680c8b74"},{"name":"assistant_C_continuity_round8.zip","size":711148,"sha256":"24f180645cca22f21e0d515164ed3214878d8c6f18dc81af56d758c2be1d96da"}];
+const crypto=require('node:crypto');
+for(const f of sourceArchives){
+ const buf=fs.readFileSync(path.join(base,'raw_sources',f.name));
+ assert.equal(buf.length,f.size);assert.equal(buf.subarray(0,2).toString(),'PK');
+ assert.equal(crypto.createHash('sha256').update(buf).digest('hex'),f.sha256);
+}
 console.log('PASS: 1126 originals preserved, 315 selected assigned once to 162 research groups, 35 series files, no approved geometry');

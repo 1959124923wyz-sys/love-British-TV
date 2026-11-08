@@ -6,6 +6,14 @@
 
 **按文件查阅**：[完整162个组](MERGED_EPISODE_GROUPS.json) · [315条源ID→组ID](ORIGINAL_TO_GROUP.csv) · [1126条历史记录去向](COMPLETE_1126_ARCHIVE_CROSSWALK.csv) · [交接手册](EDITOR_HANDOFF.md) · [数据门禁](CONSOLIDATION_MANIFEST.json)。
 
+## 三份调查员完整原始资料（已存GitHub）
+- [A｜美洲、加勒比及奴役贸易原始Round 8](raw_sources/assistant_A_americas_round8.zip)
+- [B｜印度、东南亚及非洲原始Round 7](raw_sources/assistant_B_asia_africa_round7.zip)
+- [C｜跨世纪、爱尔兰、苏格兰及澳大利亚原始Round 8](raw_sources/assistant_C_continuity_round8.zip)
+- [原始ZIP校验值与如何使用](raw_sources/README.md)
+
+三份原始报告保留不被合并文件替代；原始个案中的时间、数字、政治主体及地图位置仍需逐份核实。
+
 ## 总体压缩结果
 1126条原始记录：315条上一轮主图/专题候审被整理为162个事件或长期事件系列（82组主图优先、58组专题内、22组仅正文）。另外432条归专题史料，363条低价值归档，16条待核。每个候审组保留原始子行动、年份和来源链接，绝不删除原始证据。
 
