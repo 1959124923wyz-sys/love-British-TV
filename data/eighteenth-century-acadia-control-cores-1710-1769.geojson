@@ -1,0 +1,209 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "schema": "atlas-18c-acadia-evidence-led-control-cores-v1",
+    "status": "research_preview",
+    "period": {
+      "from": 1710,
+      "to": 1769
+    },
+    "data_semantics": "source-attested British military and administrative landmark Point-only periods, NOT surveyed districts, ownership polygons or provincial sovereignty",
+    "stages_note": "start_year/observed_through_year restrict what the institution's dates attest. Not all endpoints mean historic departure; Fort Cumberland ends 1768 per Parks Canada and was reoccupied in 1776 outside this pilot.",
+    "predecessor": "E6-T10-ACADIA",
+    "polygon_count": 0,
+    "area_statistics_allowed": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ACD-CORE-ANNAPOLIS-1710",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.518724,
+          44.741533
+        ]
+      },
+      "properties": {
+        "stable_id": "ACD-CORE-ANNAPOLIS-1710",
+        "name": "安纳波利斯皇家城（原Port-Royal）英方要塞/行政点",
+        "controller": "Great_Britain_colonial_authority",
+        "control_class": "garrison_and_colonial_admin",
+        "start_year": 1710,
+        "observed_through_year": 1769,
+        "historical_garrison_end_year": null,
+        "evidence_end_is_historic_end": false,
+        "cartographic_precision": "modern_historic_fort_or_urban_landmark_reference_not_18c_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "position_is_historical_survey": false,
+        "symbol_unit": "screen_px",
+        "symbol_radius_px": 8,
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history",
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/visit/carte-map/guidedevisiteur-visitorguide",
+          "https://www.parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1710,
+            "end_year": 1712,
+            "role": "英方占有皇家港堡垒；1713年的全区主权转让仍未发生"
+          },
+          {
+            "start_year": 1713,
+            "end_year": 1748,
+            "role": "英方军事驻点及新斯科舍殖民行政中心；米克马克等原住民保有各自政治权利"
+          },
+          {
+            "start_year": 1749,
+            "end_year": 1769,
+            "role": "英方驻防据点；省级行政中心已迁至哈利法克斯"
+          }
+        ],
+        "description": "1710年英军和新英格兰殖民军取得Fort Anne遗址的旧法军堡垒；欧洲殖民政权更替不等于整个Mi'kma'ki被英国占领。现代国家遗址坐标不是1710年城堡勘测边界。官方记载英国驻军持续到1854年，本试阅仅显示到1769。",
+        "review_status": "source_linked_first_pass_not_approved_for_territorial_area",
+        "map_presentation": "garrison_or_urban_core_point_only",
+        "source_original_manuscript_read": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ACD-CORE-HALIFAX-1749",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.580392,
+          44.647308
+        ]
+      },
+      "properties": {
+        "stable_id": "ACD-CORE-HALIFAX-1749",
+        "name": "哈利法克斯（Kjipuktuk）英国殖民港口/行政核心",
+        "controller": "Great_Britain_colonial_authority",
+        "control_class": "british_colonial_urban_administrative_core",
+        "start_year": 1749,
+        "observed_through_year": 1769,
+        "historical_garrison_end_year": null,
+        "evidence_end_is_historic_end": false,
+        "cartographic_precision": "modern_historic_fort_or_urban_landmark_reference_not_18c_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "position_is_historical_survey": false,
+        "symbol_unit": "screen_px",
+        "symbol_radius_px": 8,
+        "source_urls": [
+          "https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels",
+          "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=281"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1749,
+            "end_year": 1769,
+            "role": "哈利法克斯殖民城镇、港口及英国行政/军用基地；Citadel旧木堡与今日石堡不是同一建筑"
+          }
+        ],
+        "description": "英国1749年建立定居和行政港口，木质第一座Citadel于当年9月11日完成；1749年至1769年城镇行政与军事港口继续存在，今日19世纪石堡轮廓并非18世纪堡墙。此符号不代表整片Kjipuktuk原住民土地被测绘或交割。",
+        "review_status": "source_linked_first_pass_not_approved_for_territorial_area",
+        "map_presentation": "garrison_or_urban_core_point_only",
+        "source_original_manuscript_read": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ACD-CORE-FORT-EDWARD-1750",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.134978,
+          44.996456
+        ]
+      },
+      "properties": {
+        "stable_id": "ACD-CORE-FORT-EDWARD-1750",
+        "name": "Fort Edward：Pisiquid英方驻军及驱逐中心",
+        "controller": "Great_Britain_colonial_authority",
+        "control_class": "british_garrison_attested_period",
+        "start_year": 1750,
+        "observed_through_year": 1755,
+        "historical_garrison_end_year": null,
+        "evidence_end_is_historic_end": false,
+        "cartographic_precision": "modern_historic_fort_or_urban_landmark_reference_not_18c_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "position_is_historical_survey": false,
+        "symbol_unit": "screen_px",
+        "symbol_radius_px": 8,
+        "source_urls": [
+          "https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/histoire-history"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1750,
+            "end_year": 1755,
+            "role": "1750年英军建堡、1755年为Pisiquid居民驱逐提供军政中心"
+          }
+        ],
+        "description": "加拿大公园局明确记录1750年筑堡及1755年驱逐。这里保守只显示已逐年核实的1750—1755军事核心阶段；1755后还可能驻守，研究年限截止并非该年正式撤军。",
+        "review_status": "source_linked_first_pass_not_approved_for_territorial_area",
+        "map_presentation": "garrison_or_urban_core_point_only",
+        "source_original_manuscript_read": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ACD-CORE-FORT-CUMBERLAND-1755",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.292126,
+          45.863618
+        ]
+      },
+      "properties": {
+        "stable_id": "ACD-CORE-FORT-CUMBERLAND-1755",
+        "name": "Fort Cumberland：1755—1768英国驻军要塞",
+        "controller": "Great_Britain_colonial_authority",
+        "control_class": "british_garrison_dated_end",
+        "start_year": 1755,
+        "observed_through_year": 1768,
+        "historical_garrison_end_year": 1768,
+        "evidence_end_is_historic_end": true,
+        "cartographic_precision": "modern_historic_fort_or_urban_landmark_reference_not_18c_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "position_is_historical_survey": false,
+        "symbol_unit": "screen_px",
+        "symbol_radius_px": 8,
+        "source_urls": [
+          "https://www.parcs.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/siege-1755",
+          "https://parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/brit",
+          "https://www.parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1755,
+            "end_year": 1768,
+            "role": "1755年6月16日英军与新英格兰殖民军接管原法军Beauséjour堡；英国驻军持续至1768年"
+          }
+        ],
+        "description": "英军1755年6月16日接收法方堡垒并改名Fort Cumberland。Parks Canada指出军队驻防到1768年停止；1776因美洲独立战争重新占用，本试阅1769年须撤去驻军符号，且不能把整个Chignecto地峡画成已确定的英国驻防区。",
+        "review_status": "source_linked_first_pass_not_approved_for_territorial_area",
+        "map_presentation": "garrison_or_urban_core_point_only",
+        "source_original_manuscript_read": false
+      }
+    }
+  ]
+}
