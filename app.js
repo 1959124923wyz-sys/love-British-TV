@@ -231,6 +231,7 @@ let eighteenthAcadiaControlCores=null;
 let bengal18cReady=false;
 let eighteenthBengalControlCores=null,continuity1700References=null;
 let jamaica18cReady=false,eighteenthJamaicaMaroonAutonomyCores=null;
+let atlantic18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -2622,6 +2623,34 @@ async function boot(){
     for(const source of jamaica.sources||[])sourcesById.set(source.id,source);
     jamaica18cReady=true;
    }catch(error){console.warn('18C Jamaica research dataset withheld; Acadia/Bengal preserved',error)}
+  }
+  // Fourth eighteenth-century source-backed stream (review18c=1 only).
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-atlantic-zong-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('Atlantic review file missing');
+    const ds=await res.json(),ev=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-atlantic-zong-insurance-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==14||
+       ds.colonial_polygons?.length||ds.routes?.length||ds.places?.length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.area_sqkm!==null||e.fill_authorized!==false||e.territorial_claim!==false||
+        !e.source_ids?.length||e.source_ids.some(s=>!src.has(s))||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('Atlantic evidence/geometry review gate failed');
+    for(let d=1700;d<=1790;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+     const additions=ev.filter(e=>e.year>=d&&e.year<d+10);
+     if(additions.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('duplicate 18C Atlantic event ID');
+     serialPreviewByDecade.set(d,{...base,dataset_id:'18c-fourth-topic-'+d,
+      period:{from:d,to:d+9},
+      events:[...base.events,...additions].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+      places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    atlantic18cReady=true;
+   }catch(err){console.warn('Atlantic review file withheld, prior topics retained',err)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
