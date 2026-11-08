@@ -214,8 +214,11 @@
   const irelandContinuation=['E6-T03-LAND-1642-1698','E6-T03-WILLIAMITE-WAR'].includes(article.id)&&
     new URLSearchParams(window.location.search).get('review18c')==='1'&&
     storyMeta.has('E18-T29-T30-IRELAND-PENAL-REBELLION-1704-1799')?['E18-T29-T30-IRELAND-PENAL-REBELLION-1704-1799']:[];
+  const scotlandContinuation=['E6-T04-DARIEN','E6-T04-CONQUEST','E6-T04-GLENCOE'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T31-T32-SCOTLAND-UNION-CULLODEN-1700-1799')?['E18-T31-T32-SCOTLAND-UNION-CULLODEN-1700-1799']:[];
   const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,
-    ...eicStoryContinuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
+    ...eicStoryContinuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
@@ -421,7 +424,7 @@
       const draft=await response.json();
       if(draft.schema==='atlas-18c-story-review-index-v1'&&
          draft.editorial_status==='research_preview_not_published'&&
-         draft.stories?.length===6&&draft.stories[0].status==='research_preview'&&
+         draft.stories?.length===7&&draft.stories[0].status==='research_preview'&&
          draft.stories[0].publication_review==='not_submitted'&&
          draft.stories.every(t=>t.status==='research_preview'&&t.publication_review==='not_submitted'&&
           /^E18-[A-Z0-9-]+$/.test(t.id)&&/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.file)&&
