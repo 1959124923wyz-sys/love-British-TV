@@ -8,8 +8,8 @@
 
 本次**真正接入现有主地图引擎**，不另造一套不兼容的网页或更改已有16/17C事件ID：
 
-- `data/stories/serial/chronology-preview-1700-1769.json`：18件具发生年历史事件候审对象，**14处现代官方遗址参考点**、4件无坐标；6件高重要度主图候审，其余为专题节点或正文背景。每项含来源、主体/地点精度与原合并专题组ID（如`E18-MRG-T07-04`）。`colonial_polygons`、`routes`、`places`均为空数组；绝不伪造驱逐船路线或米克马克土地的英国领土实心面。
-- `data/stories/serial/e18-c07-acadia-deportation-1713-1764.json`：与16C/17C一致的10节完整中文历史叙事与18个`[[已登记候审事件ID|历史行为词句]]`。单击跨年定位，双击开事件档案、返回专题，再返回入口事件。原`E6-T10-ACADIA`前篇不变，作该专题的`related_story_ids`。
+- `data/stories/serial/chronology-preview-1700-1769.json`：19件具发生年历史事件候审对象，**15处现代官方遗址参考点**、4件无坐标；7件高重要度主图候审，其余为专题节点或正文背景。每项含来源、主体/地点精度与原合并专题组ID（如`E18-MRG-T07-04`）。`colonial_polygons`、`routes`、`places`均为空数组；绝不伪造驱逐船路线或米克马克土地的英国领土实心面。
+- `data/stories/serial/e18-c07-acadia-deportation-1713-1764.json`：与16C/17C一致的11节完整中文历史叙事与19个`[[已登记候审事件ID|历史行为词句]]`。单击跨年定位，双击开事件档案、返回专题，再返回入口事件。原`E6-T10-ACADIA`前篇不变，作该专题的`related_story_ids`。
 - `data/stories/serial/preview-18c-index.json`：**研究试阅专用**注册器，`status=research_preview`，不向正式`data/stories/serial/index.json`加未经审稿的published记录。
 - `app.js`和`js/history-stories.js`：复用已批准的金色内文链接、十年/年份滑块、事件聚合、现有右侧资料卡及地图平滑`map.panTo`；**只有显式`?review18c=1`才读取18C试阅**，普通网页仍以1699年为17C候审上限。研究试阅可选1700—1769年，但其余年代空白并不意味着历史活动消失。
 - `scripts/test_18c_acadia_map_pilot.js`、`scripts/browser_18c_acadia_pilot.py`、`.github/workflows/18c-acadia-map-pilot.yml`：自动校验及真正桌面浏览器脚本。浏览器脚本在1780×1020运行并保存截图。
@@ -19,6 +19,14 @@
 加拿大公园局 [Grand-Pré历史](https://parks.canada.ca/lhn-nhs/ns/grandpre/culture/histoire-history) 记录1755年Les Mines约2200人被驱逐，1764允许返乡时旧田地已被新英格兰移民占据。加拿大公园局 [Fort Beauséjour驱逐与抵抗](https://parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/deportation) 记录**1755-07-28哈利法克斯驱逐决定**，8月Fort Cumberland地区先执行，9月Grand-Pré与Pisiquid跟进；约6000—7000人包含较长时间段，不与Les Mines、Pisiquid、Beauséjour各地子样本机械相加。[Beauséjour围城原址](https://www.parcs.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/siege-1755) 记**1755-06-16法方守军投降**。 [Fort Edward历史](https://parks.canada.ca/lhn-nhs/ns/edward/culture/histoire-history) 记1755年秋Pisiquid约1200人被驱逐。[Skmaqn–Port-la-Joye–Fort Amherst](https://parks.canada.ca/culture/designation/lieu-site/skmaqn) 记1758年从Île Saint-Jean岛强制驱逐另批阿卡迪亚人。来源登记里的国家历史遗址点属于今日公园/纪念地位置，不冒充当时精确监禁、船舶停靠和屠杀现场。
 
 17C前篇保留Mi'kmaq与Wolastoqiyik等政治主体的自治、1713条约主张争议及英法帝国竞争。1750年Beaubassin烧毁原研究有证据表明为**法国方面及其盟友**，不能错误归到英军。1758 Île Saint-Jean在该年英国夺取前**不是英国一直占据的土地**。
+
+## 1710皇家港与真正按年显示的驻防核心（追加史料审查）
+
+新核对的加拿大公园局官方资料证实，1710年10月16日法国皇家港守军向英国及新英格兰军队投降，英方取得实际城堡控制，而非取得整个未明界的Mi'kma'ki主权。[Fort Anne历史](https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history)；[Fort Anne游客史](https://parks.canada.ca/lhn-nhs/ns/fortanne/visit/carte-map/guidedevisiteur-visitorguide)。故新增真正年份的1710地图事件，将本篇扩大为1710—1764年，11节中文正文、19件事件和15处现代遗址位置参照。
+
+新增 `data/eighteenth-century-acadia-control-cores-1710-1769.geojson`，仅四个有制度/军事实控原址可追溯的**Point地点**：Fort Anne英方堡垒1710—1769（研究试阅周期终止，真实英国驻军更长）、Halifax行政港口1749—1769（今石堡不是1749木质第一堡墙）、Fort Edward有确切逐年依据的1750—1755研究期（**1755年为证据现阶段终点，非真实军队撤离日**）、Fort Cumberland **1755—1768**有驻军（加拿大公园局明确说1768后撤兵，1776才再次驻防）。[Parks Canada Fort Cumberland驻英史](https://parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/brit)、[Fort Edward历史](https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/histoire-history)、[Halifax Citadel历史](https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels)。
+
+这些点采用原有`groups.controlAreas`、`toggleControlAreas`和右侧历史文献抽屉，使用小型圆形符号，不绘制哪怕一个据现代遗址捏造的占领面，也不能用圆圈像素面积计算领土。1776 Fort Cumberland复驻是下一批越过本试阅上限的后续事件，不能给1769年制造英国驻军。研究仪表`window.atlasStoryBridge.active18cControlCoreIds()`可核对所选年份的四类核心实例，无控制权限。旧世纪`E6-T10-ACADIA`长篇仅在研究试阅下显示新的18世纪续篇入口，生产故事库保持不变。
 
 ## 地图制作的下一轮具体任务
 
