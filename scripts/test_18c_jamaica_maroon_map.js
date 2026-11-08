@@ -80,7 +80,7 @@ assert(ids.get('E18C-JAM-1739-QUAO-TREATY').description.includes('十二月'));
 assert.equal(ids.get('E18C-JAM-1795-SECOND-WAR').lat,null,'Trelawny War no fictitious battlefield coordinates');
 assert.equal(ids.get('E18C-JAM-1796-APR-DEPORTATION').lat,null,'No invented Jamaica port');
 assert.equal(ids.get('E18C-JAM-1796-PRESTON-MOVE').lat,null,'No invented 1796 family plot location');
-assert(ids.get('E18C-JAM-1796-APR-DEPORTATION').description.includes('同一群体'));
+assert(ids.get('E18C-JAM-1796-APR-DEPORTATION').description.includes('同一批流放者'));
 const links=[],linked=new Set(),withLink=new Set();
 for(const section of story.sections){
  assert(section.paragraphs.length>=3);
