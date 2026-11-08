@@ -96,9 +96,10 @@ with zipfile.ZipFile(bundle) as z:
             assert len(payload["sources"])==manifest["source_registry_sizes"][assistant], assistant
         if name=="SOURCES_AUDIT.json":
             assert not payload["unresolved_original_registry_ids"]
-            assert len(payload["all_used_source_references"])==manifest["referenced_namespaced_sources_count"]
-        print("PASS source register",name,"entries",
-              len(payload.get("sources",payload.get("all_used_source_references",[]))))
+            used=payload["all_used_source_references"]
+            assert (used if isinstance(used,int) else len(used))==manifest["referenced_namespaced_sources_count"]
+        count=payload.get("sources",payload.get("all_used_source_references",[]))
+        print("PASS source register",name,"entries",count if isinstance(count,int) else len(count))
     for name in ("ORIGINAL_TO_GROUP.json","COMPLETE_1126_ARCHIVE_CROSSWALK.json",
                  "ORIGINAL_RESEARCH_ZIP_SHA256.json"):
         assert name in included, f"Missing original research audit JSON: {name}"
