@@ -170,7 +170,7 @@
   const found=[],seen=new Set();
   for(const id of meta.event_ids||[]){
    const item=eventInMemory(id),y=Number(item?.year);
-   if(!item||seen.has(id)||!Number.isInteger(y)||y<1600||y>1699)continue;
+   if(!item||seen.has(id)||!Number.isInteger(y)||y<1600||y>1799)continue;
    seen.add(id);found.push(item);
   }
   if(found.length<2)return '';
@@ -396,6 +396,20 @@
      }
     }
    }catch(_serialError){ /* No published long story yet; old articles remain available. */ }
+   // 18C editorial preview is opt-in and never included in the published story manifest.
+   if(new URLSearchParams(window.location.search).get('review18c')==='1'){
+    try{
+     const response=await fetch('data/stories/serial/preview-18c-index.json',{cache:'no-store'});
+     if(response.ok){
+      const draft=await response.json();
+      if(draft.schema==='atlas-18c-story-review-index-v1'&&
+         draft.editorial_status==='research_preview_not_published'&&
+         draft.stories?.length===1&&draft.stories[0].status==='research_preview'&&
+         draft.stories[0].publication_review==='not_submitted')
+       registerStory({...draft.stories[0],is_serial_topic:true});
+     }
+    }catch(_previewError){ /* No 18C story in ordinary atlas mode. */ }
+   }
    // An event may already be open while the optional manifest is loading.
    const current=window.atlasStoryBridge?.selectedEventId?.();
    if(current&&storyByEvent.has(current))activeBody()?.querySelector('.source-details')?.remove();
