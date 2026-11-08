@@ -87,9 +87,20 @@ with zipfile.ZipFile(bundle) as z:
     for name in ("MERGED_EPISODE_GROUPS.json","COMPLETE_1126_ARCHIVE_CROSSWALK.csv",
                  "ORIGINAL_TO_GROUP.csv","EDITOR_HANDOFF.md","CONSOLIDATION_MANIFEST.json"):
         assert name in included, f"Missing expected consolidated ZIP file: {name}"
-    print("Consolidated ZIP members",len(included),
-          "source-registry-like",len([n for n in included if "source" in n.lower() and "registr" in n.lower()]))
-    print("Consolidated ZIP index:",json.dumps(z.namelist(),ensure_ascii=False))
+    registry_names=("SOURCES_A.json","SOURCES_B.json","SOURCES_C.json","SOURCES_AUDIT.json")
+    for name in registry_names:
+        assert name in included, f"Missing original assistants source register: {name}"
+        payload=json.loads(z.read("18c_consolidation/"+name))
+        print("ZIP source register",name,"root type",type(payload).__name__,
+              "length",len(payload),"keys",list(payload)[:10] if isinstance(payload,dict) else "list")
+    for name in ("ORIGINAL_TO_GROUP.json","COMPLETE_1126_ARCHIVE_CROSSWALK.json",
+                 "ORIGINAL_RESEARCH_ZIP_SHA256.json"):
+        assert name in included, f"Missing original research audit JSON: {name}"
+    zip_series=[n for n in z.namelist() if n.startswith("18c_consolidation/series/T") and n.endswith(".json")]
+    assert len(zip_series)==34, f"ZIP must include all 34 nonempty series: {len(zip_series)}"
+    assert "18c_consolidation/series/T33.json" not in zip_series, "Empty T33 is preserved as a standalone Git file"
+    print("Consolidated ZIP members",len(included),"3 original source registers and audit",
+          "34 nonempty series, empty T33 separately present on GitHub")
 print("PASS 18C original archive: 35 series (T33 empty), 162 merged groups, "
       "315 one-to-one original mappings, 1126 retained records, "
       "3 byte-identical source ZIP SHA256 and CRC checks, complete consolidated ZIP.")
