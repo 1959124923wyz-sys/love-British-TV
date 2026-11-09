@@ -1,0 +1,125 @@
+{
+  "schema": "atlas-mysore-historical-actor-transitions-research-v1",
+  "status": "research_only",
+  "date": "2026-11-09",
+  "research_series": "T17",
+  "historic_geometry_verified": false,
+  "modern_place_point_is_not_territorial_polygon": true,
+  "prior_17c_stable_id": "await_existing_17c_EIC_site_account_review",
+  "distribution_schedules": "await_British_Library_IOR_H_635_and_IOR_L_PS_19_3_georeferenced_locality_crosswalk",
+  "transitions": [
+    {
+      "effective_date": "1769-04-03",
+      "year": 1769,
+      "actors": "Kingdom of Mysore under Haidar Ali",
+      "transition_kind": "independent_ruler_after_treaty",
+      "evidence": "Treaty with East India Company: restitution/defensive alliance",
+      "spatial_limit": "not_English_or_Company_sovereignty",
+      "related_event_id": "E18C-MYS-1769-MADRAS-TREATY",
+      "polygon_allowed": false,
+      "area_sqkm": null,
+      "source_ids": [
+        "18MY-B-BS11",
+        "18MY-B-BS109",
+        "18MY-S05"
+      ]
+    },
+    {
+      "effective_date": "1780-09-10",
+      "year": 1780,
+      "actors": "Mysore army at Pollilur/Perambakkam",
+      "transition_kind": "military_battlefield_victory",
+      "evidence": "Baillie column defeated; battle not sovereignty change",
+      "spatial_limit": "no_colonial_area_from_battle",
+      "related_event_id": "E18C-MYS-1780-POLLILUR-MYSORE-VICTORY",
+      "polygon_allowed": false,
+      "area_sqkm": null,
+      "source_ids": [
+        "18MY-B-BS11",
+        "18MY-B-BS109",
+        "18MY-S05"
+      ]
+    },
+    {
+      "effective_date": "1781-08-27",
+      "year": 1781,
+      "actors": "East India Company and British forces near Pollilur",
+      "transition_kind": "military_battlefield_victory",
+      "evidence": "Eyre Coote defeat of Hyder Ali forces; no continuous local occupation claim",
+      "spatial_limit": "no_colonial_area_from_battle",
+      "related_event_id": "E18C-MYS-1781-POLLILUR-COMPANY-VICTORY",
+      "polygon_allowed": false,
+      "area_sqkm": null,
+      "source_ids": [
+        "18MY-B-BS11",
+        "18MY-B-BS109",
+        "18MY-S05"
+      ]
+    },
+    {
+      "effective_date": "1792-03-18",
+      "year": 1792,
+      "actors": "Company; Nizam of Hyderabad; Maratha allies; Mysore",
+      "transition_kind": "multi_party_territorial_cession",
+      "evidence": "Definitive treaty and revenue schedules, different recipients",
+      "spatial_limit": "unmapped_historic_parcels_not_entire_Mysore_Company",
+      "related_event_id": "E18C-MYS-1792-SERINGAPATAM-TREATY",
+      "polygon_allowed": false,
+      "area_sqkm": null,
+      "source_ids": [
+        "18MY-B-BS11",
+        "18MY-B-BS109",
+        "18MY-S05"
+      ]
+    },
+    {
+      "effective_date": "1799-05-04",
+      "year": 1799,
+      "actors": "East India Company and Nizam allied attackers; Tipu's Mysore",
+      "transition_kind": "siege_of_capital_ended",
+      "evidence": "Capital falls and Tipu dies; urban battle no region-wide footprint",
+      "spatial_limit": "historically_named_city_reference_only",
+      "related_event_id": "E18C-MYS-1799-SERINGAPATAM-STORM",
+      "polygon_allowed": false,
+      "area_sqkm": null,
+      "source_ids": [
+        "18MY-B-BS11",
+        "18MY-B-BS109",
+        "18MY-S05"
+      ]
+    },
+    {
+      "effective_date": "1799-06-22",
+      "year": 1799,
+      "actors": "East India Company; Nizam; restored Wodeyar Mysore; proposed Peshwa share",
+      "transition_kind": "partition_treaty_with_multiple_actors",
+      "evidence": "Treaty with schedules A/B/C, proposed separate Peshwa allocation, no verified geometry",
+      "spatial_limit": "company_share_must_be_separate_from_allies_and_Wodeyar",
+      "related_event_id": "E18C-MYS-1799-MYSORE-PARTITION",
+      "polygon_allowed": false,
+      "area_sqkm": null,
+      "source_ids": [
+        "18MY-B-BS11",
+        "18MY-B-BS109",
+        "18MY-S05"
+      ]
+    },
+    {
+      "effective_date": "1799-07-08",
+      "year": 1799,
+      "actors": "Wodeyar Mysore state and English East India Company",
+      "transition_kind": "subsidiary_alliance_indirect_control",
+      "evidence": "Subsidiary force and protected kingdom arrangement, not all Mysore Company districts",
+      "spatial_limit": "indirect_vs_direct_control_separate",
+      "related_event_id": "E18C-MYS-1799-MYSORE-SUBSIDIARY-TREATY",
+      "polygon_allowed": false,
+      "area_sqkm": null,
+      "source_ids": [
+        "18MY-B-BS11",
+        "18MY-B-BS109",
+        "18MY-S05"
+      ]
+    }
+  ],
+  "warning": "1792 tripartite recipients and 1799 Company/Nizam/restored Mysore territory are not collapsed into British sovereignty. 1799-07-13 Nizam ratification remains editor15 unverified chronology; do not invent map polygon."
+}
