@@ -235,6 +235,7 @@ let atlantic18cReady=false;
 let ireland18cReady=false;
 let australia18cReady=false;
 let scotland18cReady=false;
+let mysore18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -2747,6 +2748,37 @@ async function boot(){
     for(const s of ds.sources||[])sourcesById.set(s.id,s);
     scotland18cReady=true;
    }catch(err){console.warn('Scotland seventh research topic withheld, previous six preserved',err)}
+  }
+  // Eighth T17 Mysore: local state, military victories, 1792 cession and 1799 partition.
+  // Only review mode; modern village anchors do not create colonial areas.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-mysore-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C Mysore preview missing');
+    const ds=await res.json(),ev=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-mysore-wars-partition-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==12||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+         e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+         e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+         e.fill_authorized!==false||e.territorial_claim!==false||
+         !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+         e.source_ids.some(id=>!ids.has(id))||
+         (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('Mysore T17 archive/date/territory gate');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=d&&e.year<d+10);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('Mysore atlas ID duplicate');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'18c-eight-topic-mysore-'+d,
+       period:{from:d,to:d+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    mysore18cReady=true;
+   }catch(error){console.warn('Mysore research preview withheld; seven predecessors kept',error)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
