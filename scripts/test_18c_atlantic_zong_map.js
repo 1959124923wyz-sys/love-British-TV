@@ -13,7 +13,7 @@ const app=read('app.js'),ui=read('js/history-stories.js'),html=read('index.html'
 assert.equal(chapters.chapters.at(-1).end,1599);
 assert.equal(published.topics.find(t=>t.id==='E6-T11-VOYAGES').status,'published');
 assert(!published.topics.some(t=>t.id===story.id));
-assert.equal(index.stories.length,7);
+assert.equal(index.stories.length,8);
 assert.deepEqual(index.stories.slice(0,3).map(s=>s.id),
  ['E18-C07-ACADIA-DEPORTATION','E18-T14-T15-BENGAL-1756-1773','E18-T03-T04-JAMAICA-MAROONS-1718-1799']);
 assert.equal(index.stories[3].id,story.id);
@@ -99,7 +99,7 @@ assert.deepEqual(new Set(links),new Set(index.stories[3].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-atlantic-zong-1700-1799.json'"));
 assert(app.includes('atlantic18cReady=true'));
 assert(app.includes("const enable18cPilot=new URLSearchParams(window.location.search).get('review18c')==='1'"));
-assert(ui.includes('draft.stories?.length===7'));
+assert(ui.includes('draft.stories?.length===8'));
 assert(ui.includes("article.id==='E6-T11-VOYAGES'"));
 assert(ui.includes("storyMeta.has('E18-T01-T02-ATLANTIC-ZONG-1711-1799')"));
 assert(html.includes('18c-scotland-union-20261108'),'Fifth story cache revision must not revert Atlantic source files');
