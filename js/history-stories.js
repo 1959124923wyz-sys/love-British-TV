@@ -190,7 +190,7 @@
     (storyHeadline(article)!==article.title?'<details class="atlas-complete-title"><summary>完整专题题名</summary><p>'+esc(article.title)+'</p></details>':'')+
     '<p class="story-subtitle">'+esc(article.subtitle)+'</p>'+
     '<p class="story-lead">'+esc(article.lead)+'</p></header>'+
-    '"+relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+'
+    relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+
     '<div class="story-body">'+article.sections.map(sec=>
      '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3 title="'+esc(sec.heading)+'">'+esc(sectionHeadline(sec.heading))+'</h3>'+
       sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p))+'</p>').join('')+
