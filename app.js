@@ -241,6 +241,7 @@ let carnatic18cReady=false;
 let manila18cReady=false;
 let cape18cReady=false;
 let westafrica18cReady=false;
+let sierraLeone18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -2930,6 +2931,33 @@ async function boot(){
     for(const x of ds.sources||[])sourcesById.set(x.id,x);
     westafrica18cReady=true;
    }catch(error){console.warn('T26 withheld; previous twelve episodes intact',error)}
+  }
+  // Fourteenth T27: Bunce slave trading, Black Nova Scotian settlers and Temne land rights.
+  // Three modern place georeferences never become eighteenth-century territory polygons.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-sierra-leone-1728-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T27 Sierra Leone archival chronology missing');
+    const ds=await res.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-sierra-leone-bunce-black-settlement-land-rights-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==18||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+          x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+          x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+          x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(s=>!keys.has(s))||
+          (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T27 map gate rejected unverifiable history, source or area');
+    for(let decade=1700;decade<=1790;decade+=10){
+     const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+     const part=e.filter(x=>x.year>=decade&&x.year<decade+10);
+     if(part.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T27 duplicate Atlas event ID');
+     serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-fourteen-topic-sierra-leone-'+decade,period:{from:decade,to:decade+9},
+       events:[...base.events,...part].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    sierraLeone18cReady=true;
+   }catch(error){console.warn('T27 withheld; thirteen earlier historical research maps preserved',error)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
