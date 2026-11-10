@@ -110,6 +110,8 @@ assert.ok(!ui.includes('data-story-nav=')&&!ui.includes('story-toc')&&!ui.includ
  'Delete all duplicate article table-of-contents navigation; retain human-readable chapter headings');
 assert.ok(!storyCss.includes('.story-reading-toolbar')&&!storyCss.includes('.story-toc'),
  'Remove the dynamic directory CSS from all desktop story readers');
+assert.ok(ui.includes("relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+"),
+ 'Article body and related story links must be concatenated, never printed as raw template source');
 assert.ok(ui.includes('class="story-section"')&&ui.includes('storyChronologyHtml(article)'),
  'Keep the chapter paragraphs and independently verified historical chronology');
 
