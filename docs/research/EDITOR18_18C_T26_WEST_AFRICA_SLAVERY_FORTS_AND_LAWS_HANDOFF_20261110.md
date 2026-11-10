@@ -10,7 +10,7 @@
 
 ## 02. 原始研究完整继承
 
-主编15 `research/18c/consolidated/series/T26.json` **7组合并、13个原候审ID、20个真实助手B来源注册键**。真实原ID按日期和组号分配至12个原组核实事件，其余9件是新权威材料补证事件（`research_merge_group_id:null`／`research_original_record_ids:[]`），绝不篡改先前的315条入选映射。
+主编15 `research/18c/consolidated/series/T26.json` **7组合并、13个原候审ID、20个真实助手B来源注册键**。真实原ID按日期和组号分配至13个原组核实事件，其余8件是新权威材料补证事件（`research_merge_group_id:null`／`research_original_record_ids:[]`），绝不篡改先前的315条入选映射。
 
 | 原合并组 | 原始候审ID、对应年代 |
 | --- | --- |
