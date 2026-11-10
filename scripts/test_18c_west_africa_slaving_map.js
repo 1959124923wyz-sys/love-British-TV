@@ -66,7 +66,7 @@ for(const e of d.events){
  if(e.lat===null){assert.equal(e.lng,null);assert.equal(e.representative_map_point,false)}
  else{points++;assert(e.representative_map_point&&Number.isFinite(e.lat)&&Number.isFinite(e.lng))}
 }
-assert.equal(originals.size,13);assert.equal(mapped,12);assert.equal(supplement,9);assert.equal(points,4);
+assert.equal(originals.size,13);assert.equal(mapped,13);assert.equal(supplement,8);assert.equal(points,4);
 const by=s=>seen.get('E18C-WAF-'+s);
 assert.equal(by('1727-DAHOMEY-HUEDA-CONQUEST').research_original_record_ids[0],'AB-R6-066-01');
 assert.equal(by('1727-DAHOMEY-HUEDA-CONQUEST').lat,null);
@@ -104,4 +104,4 @@ assert(html.includes('18c13-westafrica-enslavement-20261110'));
 assert(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
 assert(!css.includes('.story-reading-toolbar')&&!css.includes('.story-toc'));
 assert(reader.includes('relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+'));
-console.log('PASS T26: 7 authentic research groups, 13 original IDs in 12 events, 20 original B sources, 9 independent source-supplemented events, 21 actual dated episodes, 40 cited sources, 19 sections/57 paragraphs/21 true map links, 4 UNESCO current site markers and 0 false slaving-colony polygons; all prior twelve stories unchanged and dynamic TOC absent.');
+console.log('PASS T26: 7 authentic research groups, 13 original IDs in 13 events, 20 original B sources, 8 independent source-supplemented events, 21 actual dated episodes, 40 cited sources, 19 sections/57 paragraphs/21 true map links, 4 UNESCO current site markers and 0 false slaving-colony polygons; all prior twelve stories unchanged and dynamic TOC absent.');
