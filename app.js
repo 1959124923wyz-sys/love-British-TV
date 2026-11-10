@@ -240,6 +240,7 @@ let maratha18cReady=false;
 let carnatic18cReady=false;
 let manila18cReady=false;
 let cape18cReady=false;
+let westafrica18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -2907,6 +2908,28 @@ async function boot(){
     for(const s of ds.sources||[])sourcesById.set(s.id,s);
     cape18cReady=true;
    }catch(error){console.warn('T25 disputed Cape map withheld; first eleven previews remain',error)}
+  }
+  // Thirteenth study T26: Britain’s West African slave forts, coerced labour, human sales, and African resistance.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-west-africa-1727-1792.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T26 West Africa archive missing');
+    const ds=await r.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(x=>x.id));
+    if(ds.schema!=='atlas-18c-west-africa-slave-forts-trade-resistance-v1'||ds.editorial_status!=='research_preview_not_published'||e.length!==17||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+       x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||
+       x.territorial_claim!==false||x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(s=>!keys.has(s))||
+       (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))throw new Error('T26 GIS and source gate rejected');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const additions=e.filter(x=>x.year>=d&&x.year<d+10);
+      if(additions.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T26 duplicated historical ID');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'18c-thirteen-topic-west-africa-'+d,period:{from:d,to:d+9},
+        events:[...base.events,...additions].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const x of ds.sources||[])sourcesById.set(x.id,x);
+    westafrica18cReady=true;
+   }catch(error){console.warn('T26 withheld; previous twelve episodes intact',error)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
