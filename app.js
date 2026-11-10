@@ -241,6 +241,7 @@ let carnatic18cReady=false;
 let manila18cReady=false;
 let cape18cReady=false;
 let westafrica18cReady=false;
+let sierraLeone18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -2939,6 +2940,38 @@ async function boot(){
       for(const s of ds.sources||[])sourcesById.set(s.id,s);
       westafrica18cReady=true;
     }catch(error){console.warn('T26 Africa historical-source preview withheld; earlier twelve stories intact',error)}
+  }
+  // Fourteenth T27: British Bunce slave fort, free Black migrants, Temne land rights and 1799 freehold conflict.
+  // The 1792 migration's 65 at-sea deaths are included within 112 at sea or soon after landing.
+  // The 1800 armed uprising must not be antedated to 1799; no unverified Temne/Company polygons.
+  if(preview18cReady){
+    try{
+      const res=await fetch('data/stories/serial/chronology-preview-sierra-leone-1700-1799.json',{cache:'no-store'});
+      if(!res.ok)throw new Error('T27 Sierra Leone independent land-right source dataset missing');
+      const ds=await res.json(),ev=ds.events||[],sourceKeys=new Set((ds.sources||[]).map(s=>s.id));
+      if(ds.schema!=='atlas-18c-sierra-leone-bunce-black-settler-land-preview-v1'||
+        ds.editorial_status!=='research_preview_not_published'||ev.length!==18||
+        ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+        ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+          e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+          e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+          e.fill_authorized!==false||e.territorial_claim!==false||
+          !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+          e.source_ids.some(id=>!sourceKeys.has(id))||
+          (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+        throw new Error('T27 land-rights, double-counted deaths or false African territory source gate rejected');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+        const add=ev.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('T27 duplicate event ID');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-fourteen-topic-sierra-leone-'+decade,
+          period:{from:decade,to:decade+9},
+          events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const s of ds.sources||[])sourcesById.set(s.id,s);
+      sierraLeone18cReady=true;
+    }catch(error){console.warn('T27 archival checks denied, earlier 13 topic research remains intact',error)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
