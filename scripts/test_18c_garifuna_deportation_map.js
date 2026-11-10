@@ -52,7 +52,7 @@ A.equal(E('1797-APR-ROATAN-ARRIVE').lat,16.37219);
 A.equal(E('1797-TRUJILLO-REBUILD').lat,15.9174115);
 A.equal(E('1795-SETON-EXTIRPATION').lat,null);
 A.equal(E('1795-ROEBUCK-SHELLS').lat,null);
-A(E('1795-SETON-EXTIRPATION').description.includes('消灭'));
+A(E('1795-SETON-EXTIRPATION').name.includes('消灭') && E('1795-SETON-EXTIRPATION').description.includes('清除'));
 A(E('1796-BALICEAUX-MORTALITY').description.includes('死亡'));
 A(E('1797-APR-ROATAN-ARRIVE').description.includes('4月12'));
 A.equal(d.statistics.Hamilton_baliceaux_displacement,4776);
