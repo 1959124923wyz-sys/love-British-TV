@@ -2916,7 +2916,7 @@ async function boot(){
     if(!r.ok)throw new Error('T26 West Africa archive missing');
     const ds=await r.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(x=>x.id));
     if(ds.schema!=='atlas-18c-west-africa-slave-forts-trade-resistance-v1'||ds.editorial_status!=='research_preview_not_published'||e.length!==17||
-       ds.colonial_polygons?.length||ds.routes?.length||ds.places?.length||e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||
        x.territorial_claim!==false||x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(s=>!keys.has(s))||
        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))throw new Error('T26 GIS and source gate rejected');
