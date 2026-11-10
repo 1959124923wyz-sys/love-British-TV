@@ -128,3 +128,15 @@
 - [x] [本批原始ID、GIS史料、回归及网页交接](../../docs/research/EDITOR17_18C_T18_MARATHA_ROHILLA_AWADH_MAP_HANDOFF_20261109.md)。
 - [ ] 最新HEAD的GitHub Actions完结核验、需要修复的测试；未经确认不写通过结论。
 - [ ] 1774罗希拉战场图配准、1779 Wadgaon与1780 Gwalior实际驻军时段、阿瓦德军费/地税原件、1782条约地籍权限。
+
+## 2026-11-10｜第十批：T19卡纳提克英法战争、海得拉巴附属军与Kattabomman抵抗
+
+- [x] 主编15原T19三组合并、5个原始ID、7个原B来源键完整核对并保留研究ZIP审计门禁。
+- [x] 14个真实具年历史事件：5件直连前辈原合并组，另9件明确以机构来源新增，原研究ID保持空值而不冒造。
+- [x] 20项登记来源，18章节54段中文长篇，14处真实Atlas正文交互，继承九篇研究目录与旧17C公司故事E6-T12。
+- [x] 皇家收藏4事件现代参考点（3个具名地理位置）；10无充分定位事件空GPS；0未经核实历史主权Polygon与0编造战争路线。
+- [x] 13个英、法、尼扎姆和Palayakkarar的军事、条约、税权状态过渡；1748与实际Madras归还、1798常驻军与1800割地分开。
+- [x] 十篇静态GIS原ZIP证据、真桌面Chromium回归与第三方预览HTTP门禁已加入独立GitHub工作流。
+- [x] [第十批研究、源证、GIS和网页交接](../../docs/research/EDITOR17_18C_T19_CARNATIC_HYDERABAD_KATTABOMMAN_MAP_HANDOFF_20261110.md)。
+- [ ] 最终Actions按本PR最新HEAD检验；未核实之前不宣称全部通过。
+- [ ] 皇家军图古址测绘、1763后法商馆实际控制、尼扎姆1798军费实付、Panchalankurichi原堡与Kayathar执行地点地籍以及1800—1801跨世纪衔接。
