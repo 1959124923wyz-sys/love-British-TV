@@ -242,6 +242,7 @@ let manila18cReady=false;
 let cape18cReady=false;
 let westafrica18cReady=false;
 let sierraLeone18cReady=false;
+let indiaFiscal18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -2958,6 +2959,34 @@ async function boot(){
     for(const s of ds.sources||[])sourcesById.set(s.id,s);
     sierraLeone18cReady=true;
    }catch(error){console.warn('T27 withheld; thirteen earlier historical research maps preserved',error)}
+  }
+  // Fifteenth T21: Bengal salt and opium monopolies, ryot and weaver coercion, and 1792 famine evidence.
+  // Economic monopolies are not colonial territorial boundaries; all event site pins are modern references.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-india-opium-salt-1761-1799.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T21 Indian colonial fiscal archive missing');
+    const ds=await r.json(),e=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-india-eic-opium-salt-famine-coercion-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==18||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+         x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+         x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.fill_authorized!==false||
+         x.territorial_claim!==false||!x.source_ids?.length||x.source_ids.some(id=>!ids.has(id))||
+         (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+       throw new Error('T21 failed mandatory archival and fake-geography gate');
+    for(let decade=1700;decade<=1790;decade+=10){
+     const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+     const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+     if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T21 duplicated event');
+     serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-fifteen-topic-indian-fiscal-'+decade,
+       period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    indiaFiscal18cReady=true;
+   }catch(error){console.warn('T21 map held back; fourteen earlier previews intact',error)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
