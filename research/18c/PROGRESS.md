@@ -217,3 +217,12 @@
 - [x] [第十七批交接](../../docs/research/EDITOR18_18C_T35_ABORIGINAL_FRONTIER_HANDOFF_20261110.md)。
 - [ ] 1801—1802 King、Pemulwuy被杀与Powell被告获赦应在19C单列；1794、1795、1799各具体地点仍待原地籍和社群文献核证。
 - [ ] 第十七批验收以最新HEAD的GitHub Actions全三job成功为准。
+
+## 2026-11-10｜第十八批 T05 英国镇压Garifuna、Balliceaux拘禁与1797流放
+- [x] 原T05 3组合并、9原候审ID和5个原A来源保留，原始1126交叉档及ZIP不动。
+- [x] 23个具年事件、22条史料、26章78段正文、23个真实地图导航与多主体政治过渡。
+- [x] 1795英国舰炮和殖民官署灭族主张、1796集中拘押Balliceaux、1797驱逐Roatán分开；人口4338/4776/5080不同档案数字不混算死亡。
+- [x] 13现代城镇/岛屿参考点和10空GPS，0英方未经证实疆域或臆造航路。
+- [x] [第十八批史料与代码交接](../../docs/research/EDITOR18_18C_T05_GARIFUNA_DEPORTATION_HANDOFF_20261110.md)。
+- [ ] 1773和约原历史地名、Balliceaux单户死亡及被拘留者清册、英国ADM/CO/WO逐项核对仍在长期研究计划。
+- [ ] GitHub Actions以本PR最新SHA实际三job成功为准。
