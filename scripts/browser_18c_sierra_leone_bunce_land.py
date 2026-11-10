@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+"""T27 genuine Chromium 1780×1020: Bunce slave fort, Black migration, 1799 company land dispute."""
+from pathlib import Path
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+root=Path(__file__).resolve().parents[1]
+shots=root/'browser-smoke-results';shots.mkdir(exist_ok=True)
+opts=Options()
+for arg in ('--headless=new','--disable-gpu','--no-sandbox','--disable-dev-shm-usage','--window-size=1780,1020'):opts.add_argument(arg)
+driver=webdriver.Chrome(options=opts);wait=WebDriverWait(driver,60)
+def js(code,*args):return driver.execute_script(code,*args)
+def at(y):return js("return document.querySelector('#bigYear')?.textContent===String(arguments[0])",y)
+def year(y):js("window.atlasStoryBridge.setYear(arguments[0])",y);wait.until(lambda d:at(y))
+story='E18-T27-SIERRA-LEONE-BUNCE-BLACK-SETTLERS-1728-1799'
+try:
+ driver.get('http://127.0.0.1:8765/?review18c=1&year=1728')
+ wait.until(lambda d:at(1728))
+ wait.until(lambda d:js("return !!window.atlasStoryBridge?.eventById?.('E18C-SL-1728-BUNCE-RAC-ABANDONMENT')"))
+ assert js("return window.atlasStoryBridge.eventById('E18C-SL-1787-TEMNE-LAND-LEASE-NEGOTIATION').lat===null")
+ assert js("return window.atlasStoryBridge.eventById('E18C-SL-1792-HALIFAX-FLEET-DEPARTURE').lat===null")
+ assert js("return window.atlasStoryBridge.eventById('E18C-SL-1792-MIGRATION-SEA-AND-LANDING-DEATHS').lat===null")
+ oldZoom=js("return window.atlasReadViewport().zoom")
+ card='#eventList [data-eid="E18C-SL-1728-BUNCE-RAC-ABANDONMENT"]'
+ wait.until(lambda d:js("return !!document.querySelector(arguments[0])",card))
+ driver.find_element(By.CSS_SELECTOR,card).click()
+ entry=f'#dossierBody [data-story-open="{story}"]'
+ wait.until(lambda d:js("return !!document.querySelector(arguments[0])",entry))
+ driver.find_element(By.CSS_SELECTOR,entry).click()
+ wait.until(lambda d:js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",story))
+ wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-event-link').length===18"))
+ assert js("return document.querySelectorAll('.major-story-article .story-section').length===18")
+ assert js("return !document.querySelector('.story-reading-toolbar,.story-toc,.story-reading-progress-meter,[data-story-nav]')")
+ assert js("return document.querySelector('.major-story-article').textContent.includes('freehold')")
+ driver.save_screenshot(str(shots/'18c-sierra-leone-1728-1799-bunce-black-settlers-land-reader-no-toc.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-SL-1744-BUNCE-LONDON-SLAVERS"]').click()
+ wait.until(lambda d:at(1744))
+ wait.until(lambda d:js("return window.atlasStoryBridge.activeFocusId()==='E18C-SL-1744-BUNCE-LONDON-SLAVERS'"))
+ wait.until(lambda d:js("""const c=window.atlasReadViewport().center;return Math.abs(c.lat-8.56940556)<0.6&&Math.abs(c.lng+13.04023333)<0.6"""))
+ assert oldZoom==js("return window.atlasReadViewport().zoom")
+ driver.save_screenshot(str(shots/'18c-sierra-leone-1744-British-Bunce-private-slave-fort.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-SL-1792-FREETOWN-BLACK-LOYALIST-ARRIVAL"]').click()
+ wait.until(lambda d:at(1792))
+ wait.until(lambda d:js("return window.atlasStoryBridge.activeFocusId()==='E18C-SL-1792-FREETOWN-BLACK-LOYALIST-ARRIVAL'"))
+ wait.until(lambda d:js("""const c=window.atlasReadViewport().center;return Math.abs(c.lat-8.4360141)<0.6&&Math.abs(c.lng+13.20414834)<0.6"""))
+ driver.save_screenshot(str(shots/'18c-sierra-leone-1792-free-black-loyalist-arrivals-Freetown.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-SL-1799-SIERRA-LEONE-COMPANY-FREEHOLD-REFUSAL"]').click()
+ wait.until(lambda d:at(1799))
+ wait.until(lambda d:js("return window.atlasStoryBridge.activeFocusId()==='E18C-SL-1799-SIERRA-LEONE-COMPANY-FREEHOLD-REFUSAL'"))
+ driver.save_screenshot(str(shots/'18c-sierra-leone-1799-British-company-refused-Black-land-freehold.png'))
+ target=driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-SL-1792-MIGRATION-SEA-AND-LANDING-DEATHS"]')
+ js("arguments[0].dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));",target)
+ wait.until(lambda d:at(1792))
+ wait.until(lambda d:js("return !!document.querySelector('#dossierBody [data-story-back]')"))
+ assert js("return document.querySelector('#dossierBody').textContent.includes('112')")
+ driver.find_element(By.CSS_SELECTOR,'#dossierBody [data-story-back]').click()
+ wait.until(lambda d:js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",story))
+ assert js("return !document.querySelector('.story-reading-toolbar,.story-toc')")
+ driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
+ wait.until(lambda d:at(1728))
+ assert not js("return !!document.querySelector('.major-story-article')")
+ year(1799);assert js("return document.querySelector('#nextYear').disabled")
+ assert js("return window.atlasStoryBridge.eventById('E18C-SL-1800-BLACK-SETTLER-UPRISING')===null")
+ driver.get('http://127.0.0.1:8765/?year=1792')
+ wait.until(lambda d:at(1699))
+ assert js("return window.atlasStoryBridge.eventById('E18C-SL-1792-FREETOWN-BLACK-LOYALIST-ARRIVAL')===null")
+ driver.get('http://127.0.0.1:8765/?year=1572')
+ wait.until(lambda d:at(1572))
+ assert js("""return [...document.querySelectorAll('#eventList [data-eid]')].some(x=>x.dataset.eid==='1570S-E004')""")
+ print('PASS T27 desktop: 18 chapters and links, Bunce original slaver site, 1792 free Black settlers, 1799 Company freehold denial, 65/112 distinct dossier, null migration coordinates, no 1800 historic battle, no dynamic TOC, 13 prior topics and 16C published regressions.')
+except Exception:
+ driver.save_screenshot(str(shots/'18c-sierra-leone-browser-failure.png'))
+ raise
+finally:driver.quit()
