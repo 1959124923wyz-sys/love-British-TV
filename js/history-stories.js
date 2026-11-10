@@ -225,6 +225,9 @@
   const slaveryT11Continuation=article.id==='E18-T01-T02-ATLANTIC-ZONG-1711-1799'&&
    new URLSearchParams(window.location.search).get('review18c')==='1'&&
    storyMeta.has('E18-T11-BRITISH-ENSLAVEMENT-LAWS-STONO-FORTMOSE-1705-1752')?['E18-T11-BRITISH-ENSLAVEMENT-LAWS-STONO-FORTMOSE-1705-1752']:[];
+  const tuscarora21Continuation=article.id==='E18-T11-BRITISH-ENSLAVEMENT-LAWS-STONO-FORTMOSE-1705-1752'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T09-CAROLINA-TUSCARORA-YAMASEE-SLAVE-RAIDS-1707-1732')?['E18-T09-CAROLINA-TUSCARORA-YAMASEE-SLAVE-RAIDS-1707-1732']:[];
   const jamaicaStoryContinuation=article.id==='E6-T08'&&
    new URLSearchParams(window.location.search).get('review18c')==='1'&&
    storyMeta.has('E18-T03-T04-JAMAICA-MAROONS-1718-1799')?['E18-T03-T04-JAMAICA-MAROONS-1718-1799']:[];
@@ -238,7 +241,7 @@
    new URLSearchParams(window.location.search).get('review18c')==='1'&&
    storyMeta.has('E18-T31-T32-SCOTLAND-UNION-CULLODEN-1700-1799')?['E18-T31-T32-SCOTLAND-UNION-CULLODEN-1700-1799']:[];
   const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,
-    ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...slaveryT11Continuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
+    ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...slaveryT11Continuation,...tuscarora21Continuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
@@ -422,7 +425,7 @@
       const draft=await response.json();
       if(draft.schema==='atlas-18c-story-review-index-v1'&&
          draft.editorial_status==='research_preview_not_published'&&
-         draft.stories?.length===20&&draft.stories[0].status==='research_preview'&&
+         draft.stories?.length===21&&draft.stories[0].status==='research_preview'&&
          draft.stories[0].publication_review==='not_submitted'&&
          draft.stories.every(t=>t.status==='research_preview'&&t.publication_review==='not_submitted'&&
           /^E18-[A-Z0-9-]+$/.test(t.id)&&/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.file)&&

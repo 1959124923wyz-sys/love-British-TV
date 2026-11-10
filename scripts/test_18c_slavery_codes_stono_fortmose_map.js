@@ -3,7 +3,7 @@
 const A=require('node:assert/strict'),F=require('node:fs'),P=require('node:path'),root=P.resolve(__dirname,'..'),rd=p=>F.readFileSync(P.join(root,p),'utf8'),J=p=>JSON.parse(rd(p));
 const d=J('data/stories/serial/chronology-preview-british-slavery-stono-fortmose-1705-1752.json'),story=J('data/stories/serial/e18-t11-slavery-violence-fortmose-1705-1752.json'),idx=J('data/stories/serial/preview-18c-index.json'),raw=J('research/18c/consolidated/series/T11.json'),geo=J('research/continuity/1705-1752-british-colonies/ENSLAVEMENT_LAWS_BLACK_RESISTANCE_FORTMOSE_CONTROL_TRANSITIONS.json');
 const app=rd('app.js'),ui=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css'),crosswalk=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,20);
+A.equal(idx.stories.length,21);
 A.equal(idx.stories[19].id,story.id);A.equal(idx.stories[19].status,'research_preview');A.equal(idx.stories[19].publication_review,'not_submitted');
 A.equal(story.id,'E18-T11-BRITISH-ENSLAVEMENT-LAWS-STONO-FORTMOSE-1705-1752');
 A.equal(story.publication_status,'research_only');A.equal(story.publication_approval,'not_submitted');
@@ -72,7 +72,7 @@ A.deepEqual(new Set(links),new Set(idx.stories[19].event_ids));
 A.deepEqual(new Set(links),new Set(story.related_event_ids));
 A(app.includes("fetch('data/stories/serial/chronology-preview-british-slavery-stono-fortmose-1705-1752.json'"));
 A(app.includes('slaveryT11Ready=true'));
-A(ui.includes('draft.stories?.length===20'));
+A(ui.includes('draft.stories?.length===21'));
 A(ui.includes("storyMeta.has('E18-T11-BRITISH-ENSLAVEMENT-LAWS-STONO-FORTMOSE-1705-1752')"));
 A(html.includes('18c20-northamerica-20261110'));
 A(!ui.includes('story-reading-toolbar')&&!ui.includes('story-toc')&&!ui.includes('story-reading-progress-meter')&&!ui.includes('data-story-nav'));

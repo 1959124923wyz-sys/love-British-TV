@@ -248,3 +248,13 @@
 - [x] [第二十批交接](../../docs/research/EDITOR18_18C_T11_NORTH_AMERICAN_SLAVERY_STONO_FORTMOSE_HANDOFF_20261110.md)。
 - [ ] Stono起点‘Stone how’需确认历史庄园/桥位置；1712庭审及杀戮姓名和1740 Fort Mose历史军事边界待原案。
 - [ ] 最新GitHub Actions三job成功后才可宣布全批完整验收。
+
+## 2026-11-10｜第二十一批 T09 卡罗来纳Tuscarora焚堡、英国掳奴及Yamasee反抗
+- [x] 原T09 5合并组、9候审ID、9原A来源全量保留，与1126交叉档/不可变ZIP核对。
+- [x] 27具年Atlas历史事实、26来源、30章90段、27真实正文导航及多主体GIS过渡。
+- [x] 1712 Barnwell英军和约后掳卖约200妇孺；1713 Nooheroka950被杀或俘合计，和约/死亡/奴役分别登记。
+- [x] 1715 Yamasee因殖民贸易债务、夺地和掳奴反抗，1716英国贸易专营/政治分化；1723原法获释人返境可被卖七年苦役。
+- [x] 5现代城镇参考点，22空GPS，0伪造英国实际征服Polygon或历史掳奴路线。
+- [x] [第二十一批交接](../../docs/research/EDITOR18_18C_T09_CAROLINA_INDIGENOUS_ENSLAVEMENT_HANDOFF_20261110.md)。
+- [ ] Nooheroka详细死伤与1715年2月不同社群签约主体待追加原档。
+- [ ] 最新SHA三个GitHub Actions job通过后才宣布最终验收。
