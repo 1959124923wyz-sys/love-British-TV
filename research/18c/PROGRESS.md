@@ -237,3 +237,14 @@
 - [x] [第十九批研究交接](../../docs/research/EDITOR18_18C_T06_FEDON_GRENADA_HAITI_REPRESSION_HANDOFF_20261110.md)。
 - [ ] Fédon山地营地历史地籍、英国原始受害者/处决者名册、1800以前海地英军各港交接准确日仍须补证。
 - [ ] 最新SHA专项三个工作流success后才能宣称浏览器完成。
+
+## 2026-11-10｜第二十批 T11 英国北美奴役暴力刑法和黑人反抗
+- [x] T11 8合并组、10原候审ID、21原A史料键完整对应；1126原始交叉档与ZIP不篡改。
+- [x] 27具年史事、39史料、30章节90段与27正文地图双向联动。
+- [x] 1705 Virginia主人打死被奴役者免责与逃亡后合法可杀、1729马里兰断手绞刑分尸、1740 South Carolina禁舟船鼓会与快速死刑审判均源自原始法文。
+- [x] 1712 Columbia 43审25定20绞3烧独立记数，1739 William Bull原信44名黑人战死与处决合计，不能当作两份44。
+- [x] 1738西属Fort Mose自由黑人社区，1740英国侵占、Francisco Menéndez6月26日反攻收复、1752重建；1751 Georgia恢复奴役立法。
+- [x] 14现代地名参考点，13空GPS、0英国历史殖民假Polygon、0奴役死者或获利推算。
+- [x] [第二十批交接](../../docs/research/EDITOR18_18C_T11_NORTH_AMERICAN_SLAVERY_STONO_FORTMOSE_HANDOFF_20261110.md)。
+- [ ] Stono起点‘Stone how’需确认历史庄园/桥位置；1712庭审及杀戮姓名和1740 Fort Mose历史军事边界待原案。
+- [ ] 最新GitHub Actions三job成功后才可宣布全批完整验收。
