@@ -1,0 +1,89 @@
+name: 18C T22 British Manila invasion looting and four-million ransom QA
+on:
+  push:
+    branches:
+      - map/18c-manila-sack-ransom-1762-1764-20261110
+  pull_request:
+    branches:
+      - map/18c-carnatic-hyderabad-kattabomman-20261110
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  eleven-story-source-GIS-and-reader:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit British looting, original T22 four IDs, prior ten stories, no floating directory and GIS
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          node scripts/test_18c_manila_sack_map.js
+          node scripts/test_18c_carnatic_hyderabad_map.js
+          node scripts/test_18c_maratha_rohilla_map.js
+          node scripts/test_18c_mysore_map.js
+          node scripts/test_18c_scotland_map.js
+          node scripts/test_18c_australia_map.js
+          node scripts/test_18c_ireland_map.js
+          node scripts/test_18c_atlantic_zong_map.js
+          node scripts/test_18c_jamaica_maroon_map.js
+          node scripts/test_18c_bengal_continuity_map.js
+          node scripts/test_18c_acadia_map_pilot.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          node scripts/test_editor6_17c_spatial_batch01.js
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_manila_source_registry.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m json.tool data/stories/serial/chronology-preview-manila-1700-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t22-manila-invasion-sack-ransom-1762-1764.json >/dev/null
+          python3 -m json.tool research/continuity/1762-1764-manila/BRITISH_SACK_RANSOM_CONTROL_RESEARCH.json >/dev/null
+  full-real-desktop-chromium:
+    needs: eleven-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Desktop 1780x1020 T22 Manila atrocity navigation, all ten earlier stories and no dynamic toolbar
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c-manila-http.log 2>&1 &
+          python3 scripts/browser_18c_manila_sack.py
+          python3 scripts/browser_18c_carnatic_hyderabad.py
+          python3 scripts/browser_18c_maratha_rohilla_awadh.py
+          python3 scripts/browser_18c_mysore_wars.py
+          python3 scripts/browser_18c_scotland_union.py
+          python3 scripts/browser_18c_australia_resistance.py
+          python3 scripts/browser_18c_ireland_rebellion.py
+          python3 scripts/browser_18c_atlantic_zong.py
+          python3 scripts/browser_18c_jamaica_maroon.py
+          python3 scripts/browser_18c_bengal_continuity.py
+          python3 scripts/browser_18c_acadia_pilot.py
+          python3 scripts/browser_major_story_pilot.py
+      - name: Save real browser screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c-manila-sack-ransom-1762-1764-no-dynamic-directory-screenshots
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  review-web-html-check:
+    needs: eleven-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public branch review loads real Manila map, JS, CSS, source files
+        run: |
+          set -e
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js css/history-stories.css data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-manila-1700-1799.json data/stories/serial/e18-t22-manila-invasion-sack-ransom-1762-1764.json; do
+            curl --fail --location --retry 3 --retry-delay 3 --max-time 30 --silent --show-error "$BASE/$path" -o "/tmp/t22-$(basename "$path")"
+          done
+          grep -q '帝国的代价' /tmp/t22-index.html
+          grep -q 'E18C-MNL-1762-MANILA-STORM-RANSOM' /tmp/t22-chronology-preview-manila-1700-1799.json
+          grep -q 'E18-T22-MANILA-INVASION-SACK-RANSOM-1762-1764' /tmp/t22-preview-18c-index.json
+          if grep -q 'story-reading-toolbar' /tmp/t22-history-stories.js; then echo 'Reader still contains removed dynamic toolbar'; exit 1; fi
+          echo "MANILA_REVIEW_URL=$BASE/index.html?review18c=1&year=1762"
