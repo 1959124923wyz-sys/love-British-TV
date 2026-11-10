@@ -3087,7 +3087,7 @@ async function boot(){
     if(ds.schema!=='atlas-18c-fedon-grenada-haiti-slavery-repression-v1'||
        ds.editorial_status!=='research_preview_not_published'||e.length!==25||
        ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_A_keys!==8||
-       ds.routes?.length||ds.places?.length||ds.colonial_polygons?.length||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
        e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
         x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
         x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
