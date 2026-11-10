@@ -152,3 +152,14 @@
 - [x] [第十一批原始史料、受害者与财务证据、地图/GIS及交接](../../docs/research/EDITOR17_18C_T22_MANILA_SACK_RANSOM_VIOLENCE_HANDOFF_20261110.md)。
 - [ ] 本批最新HEAD Actions与网页完整验收；失败以实际日志修复，不预先宣称成功。
 - [ ] 英国公司分赃原始账、PARES具体被害者证词、英军占城局部历史工程图配准、船货估价及汇票真实收款。
+
+## 2026-11-10｜第十二批：T25英国1795年炮击夺取开普与1799 Khoikhoi/Xhosa抵抗土地掠夺
+
+- [x] 先查主编15原T25三组合并、8原候审ID、8个原助手B来源键；原始ZIP、全部1126归档与315映射保持不动。
+- [x] 17条具年份史事、20项登记来源、19章57段完整中文专题、17处真实一对一正文—地图互动链接。
+- [x] 1795英舰Simon’s Bay扣船、Muizenberg炮击、Pandoeren反击及薪饷抗议、VOC政府9月降约，与1799英国镇压布尔居民、Khoikhoi牧地牲畜遭夺、Xhosa联动抵抗、英军解械与Gqunukhwebe伏击及议和分开。
+- [x] 5件Stats SA/SA History Online现代城镇GPS事件点、其余12空GPS；0编造殖民主权Polygon，0英军假行军/舰航轨迹，17条政治及土地控制状态研究账。
+- [x] 新T25及前十一批静态原档/GIS回归、实桌面1780x1020 Chrome全套测试、第三方网页HTTP完整探测加入Actions；全部专题保持无浮动目录。
+- [x] [第十二批史料、受害者、政治主体、GIS、代码与网页交接](../../docs/research/EDITOR18_18C_T25_CAPE_INVASION_KHOEKHOE_XHOSA_MAP_HANDOFF_20261110.md)。
+- [ ] 最新HEAD的所有GitHub Actions实际结果待最终核验；未过前不能宣称正式网页预览完整通过。
+- [ ] VOC/英军1795海湾船只扣押与Pandoeren原始军报、1799土地/牲畜损失与Stuurman协议原件、历史旧图逐地配准，1802—1806跨世纪续篇。
