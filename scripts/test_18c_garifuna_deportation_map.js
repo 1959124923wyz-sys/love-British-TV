@@ -3,7 +3,7 @@
 const A=require('node:assert/strict'),F=require('node:fs'),P=require('node:path'),root=P.resolve(__dirname,'..'),rd=p=>F.readFileSync(P.join(root,p),'utf8'),J=p=>JSON.parse(rd(p));
 const d=J('data/stories/serial/chronology-preview-garifuna-1763-1797.json'),story=J('data/stories/serial/e18-t05-garifuna-forced-exile-1763-1797.json'),index=J('data/stories/serial/preview-18c-index.json'),raw=J('research/18c/consolidated/series/T05.json'),geo=J('research/continuity/1763-1797-garifuna/BRITISH_GARIFUNA_EXILE_LAND_CONTROL_TRANSITIONS.json'),published=J('data/stories/serial/index.json');
 const app=rd('app.js'),ui=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
-A.equal(index.stories.length,19);A.equal(index.stories[17].id,story.id);A.equal(index.stories[17].status,'research_preview');A.equal(index.stories[17].publication_review,'not_submitted');
+A.equal(index.stories.length,20);A.equal(index.stories[17].id,story.id);A.equal(index.stories[17].status,'research_preview');A.equal(index.stories[17].publication_review,'not_submitted');
 A.equal(story.id,'E18-T05-GARIFUNA-STVINCENT-WAR-DEPORTATION-1763-1797');A.equal(story.publication_status,'research_only');A.equal(story.publication_approval,'not_submitted');
 A.deepEqual(story.predecessor_17c_story_ids,['E6-T08']);A(published.topics.some(x=>x.id==='E6-T08'&&x.status==='published'));
 A(!published.topics.some(x=>x.id===story.id));
@@ -68,7 +68,7 @@ A.equal(links.length,23);A.equal(new Set(links).size,23);
 A.deepEqual(new Set(links),new Set(story.related_event_ids));A.deepEqual(new Set(links),new Set(index.stories[17].event_ids));
 A(app.includes("fetch('data/stories/serial/chronology-preview-garifuna-1763-1797.json'"));
 A(app.includes('garifuna18cReady=true'));
-A(ui.includes('draft.stories?.length===19'));
+A(ui.includes('draft.stories?.length===20'));
 A(ui.includes("storyMeta.has('E18-T05-GARIFUNA-STVINCENT-WAR-DEPORTATION-1763-1797')"));
 A(html.includes('18c18-garifuna-20261110'));
 A(!ui.includes('story-reading-toolbar')&&!ui.includes('story-toc')&&!ui.includes('story-reading-progress-meter')&&!ui.includes('data-story-nav'));
