@@ -3,7 +3,7 @@
 日期2026-11-10。Draft子分支 map/18c-t27-sierra-leone-bunce-land-rights-1728-1799-20261110；继承前第十三批 PR #306 的独立研究地图，正式 main 不改。
 
 ## 本批落地研究
-- 18条具年地图事件、31项登记来源（7原始B键、24机构/学术交叉补证）、21章63段长篇中文叙事、18条正文实际地图事件链接。
+- 18条具年地图事件、33项登记来源（7原始B键、26机构/学术交叉补证）、21章63段长篇中文叙事、18条正文实际地图事件链接。
 - 主编15 T27原始3组合并、4原始ID、7来源键由原ZIP及完整1126行保留。独立补充事件不冒造原始ID。
 - 13条现代具名遗产/城市点，5条无核实GPS；0殖民实控Polygon，0虚构跨洋船线，0史料缺失伤亡及获利。
 
@@ -55,3 +55,5 @@
 
 本批审稿地图：https://raw.githack.com/1959124923wyz-sys/love-British-TV/map/18c-t27-sierra-leone-bunce-land-rights-1728-1799-20261110/index.html?review18c=1&year=1792
 正式主站：https://1959124923wyz-sys.github.io/love-British-TV/（暂不含第十四批）。
+
+补核原始史料：1791年8月2日新斯科舍省档案 RG1第419卷原招募公告 https://archives.novascotia.ca/african-heritage/archives/?ID=23；1790年Peters赴伦敦请愿的加拿大人物传记 https://www.biographi.ca/en/bio.php?BioId=36237 。
