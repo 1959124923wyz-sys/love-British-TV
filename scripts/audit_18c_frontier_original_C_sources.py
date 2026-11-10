@@ -19,7 +19,7 @@ assert kept==keys,(keys-kept,kept-keys)
 older={id for e in prior['events'] for id in e.get('research_original_record_ids',[]) if id in ids}
 new={id for e in latest['events'] for id in e.get('research_original_record_ids',[])}
 assert len(older)==11 and len(new)==4 and older.isdisjoint(new) and older|new==ids
-with (base/'COMPLETE_1126_ARCHIVE_CROSSWALK.csv').open(encoding='utf8-sig',newline='') as f:
+with (base/'COMPLETE_1126_ARCHIVE_CROSSWALK.csv').open(encoding='utf-8-sig',newline='') as f:
  rows=list(csv.DictReader(f))
  assert all(any(r['original_id']==id and r['consolidation_disposition']=='assigned_to_group' for r in rows) for id in ids)
 print('PASS T35 immutable original archive: 7 groups, 15 unique original IDs, 11 already sixth-batch + 4 newly mapped, 14 C sources verified in real ZIP')
