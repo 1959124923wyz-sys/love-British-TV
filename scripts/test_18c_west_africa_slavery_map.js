@@ -56,7 +56,7 @@ for(const e of c.events){
  if(e.lat===null){assert.equal(e.lng,null);assert.equal(e.representative_map_point,false)}
  else{points++;assert(e.representative_map_point&&Number.isFinite(e.lat)&&Number.isFinite(e.lng))}
 }
-assert.equal(originals.size,13);assert.equal(mapped,10);assert.equal(supplement,7);assert.equal(points,10);
+assert.equal(originals.size,13);assert.equal(mapped,12);assert.equal(supplement,5);assert.equal(points,10);
 assert.deepEqual(originals,new Set(src.groups.flatMap(x=>x.original_candidate_ids)));
 const get=x=>byEvent.get('E18C-WAF-'+x);
 assert.equal(get('1727-DAHOMEY-HUEDA').control_state,'Dahomey independent conquest, not British sovereignty');
