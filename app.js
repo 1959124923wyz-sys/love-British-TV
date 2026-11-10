@@ -245,6 +245,7 @@ let sierraLeone18cReady=false;
 let indiaFiscal18cReady=false;
 let ceylon18cReady=false;
 let frontier17Ready=false;
+let garifuna18cReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -3048,6 +3049,33 @@ async function boot(){
     for(const s of ds.sources||[])sourcesById.set(s.id,s);
     frontier17Ready=true;
    }catch(err){console.warn('T35 additional frontier map withheld; old 16 maps untouched',err)}
+  }
+  // 18th T05 British forced Garifuna displacement, source-bounded dates and island-only GPS.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-garifuna-1763-1797.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T05 source research unavailable');
+    const ds=await r.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-garifuna-forced-deportation-v1'||ds.editorial_status!=='research_preview_not_published'||
+       e.length!==23||ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_A_keys!==5||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+         x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+         x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.fill_authorized!==false||
+         x.territorial_claim!==false||!x.source_ids?.length||x.source_ids.some(k=>!keys.has(k))||
+         (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+        throw new Error('T05 GIS and evidence gate rejected');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T05 duplicate ID');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-eighteen-topic-garifuna-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    garifuna18cReady=true;
+   }catch(error){console.warn('T05 held back, previous seventeen stories intact',error)}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.

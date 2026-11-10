@@ -3,7 +3,7 @@
 const A=require('node:assert/strict'),F=require('node:fs'),P=require('node:path'),root=P.resolve(__dirname,'..');
 const get=p=>F.readFileSync(P.join(root,p),'utf8'),J=p=>JSON.parse(get(p));
 const d=J('data/stories/serial/chronology-preview-sierra-leone-1728-1799.json'),a=J('data/stories/serial/e18-t27-sierra-leone-bunce-black-settlers-1728-1799.json'),idx=J('data/stories/serial/preview-18c-index.json'),t=J('research/18c/consolidated/series/T27.json'),geo=J('research/continuity/1728-1799-sierra-leone/BUNCE_FREETOWN_AFRICAN_LAND_CONTROL_TRANSITIONS.json'),old=J('data/stories/serial/index.json');
-A.equal(idx.stories.length,17);A.equal(idx.stories[13].id,a.id);A.equal(idx.stories[13].status,'research_preview');A.equal(idx.stories[13].publication_review,'not_submitted');
+A.equal(idx.stories.length,18);A.equal(idx.stories[13].id,a.id);A.equal(idx.stories[13].status,'research_preview');A.equal(idx.stories[13].publication_review,'not_submitted');
 A.equal(a.id,'E18-T27-SIERRA-LEONE-BUNCE-BLACK-SETTLERS-1728-1799');A.equal(a.publication_status,'research_only');A.equal(a.publication_approval,'not_submitted');
 A.deepEqual(a.predecessor_17c_story_ids,['E6-T13','E6-T17-AFRICAN-FORTS']);
 A(old.topics.some(x=>x.id==='E6-T13'&&x.status==='published'));A(!old.topics.some(x=>x.id===a.id));
@@ -40,7 +40,7 @@ let links=[];for(const section of a.sections){A.equal(section.paragraphs.length,
 A.equal(links.length,18);A.equal(new Set(links).size,18);A.deepEqual(new Set(links),new Set(idx.stories[13].event_ids));
 const app=get('app.js'),ui=get('js/history-stories.js'),html=get('index.html'),css=get('css/history-stories.css');
 A(app.includes("fetch('data/stories/serial/chronology-preview-sierra-leone-1728-1799.json'"));A(app.includes('sierraLeone18cReady=true'));
-A(ui.includes('draft.stories?.length===17'));A(ui.includes("storyMeta.has('E18-T27-SIERRA-LEONE-BUNCE-BLACK-SETTLERS-1728-1799')"));
+A(ui.includes('draft.stories?.length===18'));A(ui.includes("storyMeta.has('E18-T27-SIERRA-LEONE-BUNCE-BLACK-SETTLERS-1728-1799')"));
 A(html.includes('18c14-sierra-leone-20261110'));A(!ui.includes('story-reading-toolbar')&&!ui.includes('story-toc')&&!ui.includes('story-reading-progress-meter')&&!ui.includes('data-story-nav'));
 A(!css.includes('.story-reading-toolbar')&&!css.includes('.story-toc'));
 console.log('PASS T27: 3 original groups/4 IDs/7 B keys, 18 events/33 sources, 21 chapters/63 paragraphs, 18 real links, 13 modern named-place anchor occurrences, no fake polygons, no early 1800 uprising, 13 previous topics intact.');
