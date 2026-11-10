@@ -99,7 +99,7 @@ assert(app.includes("fetch('data/stories/serial/chronology-preview-manila-1700-1
 assert(app.includes('manila18cReady=true'));
 assert(reader.includes('draft.stories?.length===12'));
 assert(reader.includes("storyMeta.has('E18-T22-MANILA-INVASION-SACK-RANSOM-1762-1764')"));
-assert(html.includes('18c11-manila-sack-story-20261110'));
+assert(html.includes('18c12-cape-indigenous-resistance-20261110'),'Latest script remains cached freshly without reverting Manila links');
 assert(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc'));
 assert(!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
 assert(!css.includes('.story-reading-toolbar')&&!css.includes('.story-toc'));
