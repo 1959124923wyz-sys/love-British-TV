@@ -201,7 +201,7 @@
   const capeIndigenousContinuation=article.id==='E6-T12'&&
    new URLSearchParams(window.location.search).get('review18c')==='1'&&
    storyMeta.has('E18-T25-CAPE-INVASION-KHOEKHOE-XHOSA-1795-1799')?['E18-T25-CAPE-INVASION-KHOEKHOE-XHOSA-1795-1799']:[];
-  const westAfricanSlaveryContinuation=['E6-T07','E6-T11-VOYAGES'].includes(article.id)&&
+  const westAfricanSlaveryContinuation=['E6-T13','E6-T17-AFRICAN-FORTS','E6-T11-VOYAGES'].includes(article.id)&&
    new URLSearchParams(window.location.search).get('review18c')==='1'&&
    storyMeta.has('E18-T26-WEST-AFRICA-SLAVE-FORTS-1727-1792')?['E18-T26-WEST-AFRICA-SLAVE-FORTS-1727-1792']:[];
   const jamaicaStoryContinuation=article.id==='E6-T08'&&
