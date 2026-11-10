@@ -1,0 +1,103 @@
+name: 18C T27 Sierra Leone slave castle and Black settlers land-rights QA
+on:
+  push:
+    branches:
+      - map/18c-t27-sierra-leone-bunce-land-rights-1728-1799-20261110
+  pull_request:
+    branches:
+      - map/18c-west-africa-t26-forts-slavery-1727-1792-20261110
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fourteen-story-source-GIS-and-reader:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify T27 original four archive IDs, seven B sources, 14 story preview maps, GIS and no dynamic reading toolbar
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          node scripts/test_18c_sierra_leone_colonial_land_map.js
+          node scripts/test_18c_west_africa_slavery_map.js
+          node scripts/test_18c_cape_khoekhoe_xhosa_map.js
+          node scripts/test_18c_manila_sack_map.js
+          node scripts/test_18c_carnatic_hyderabad_map.js
+          node scripts/test_18c_maratha_rohilla_map.js
+          node scripts/test_18c_mysore_map.js
+          node scripts/test_18c_scotland_map.js
+          node scripts/test_18c_australia_map.js
+          node scripts/test_18c_ireland_map.js
+          node scripts/test_18c_atlantic_zong_map.js
+          node scripts/test_18c_jamaica_maroon_map.js
+          node scripts/test_18c_bengal_continuity_map.js
+          node scripts/test_18c_acadia_map_pilot.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          node scripts/test_editor6_17c_spatial_batch01.js
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_sierra_leone_original_sources.py
+          python3 scripts/audit_18c_west_africa_original_sources.py
+          python3 scripts/audit_18c_cape_source_registry.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m json.tool data/stories/serial/chronology-preview-sierra-leone-1728-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-west-africa-1727-1792.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-cape-1795-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t27-sierra-leone-bunce-black-settlers-1728-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t26-west-africa-slave-forts-1727-1792.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t25-cape-invasion-khoekhoe-xhosa-1795-1799.json >/dev/null
+          python3 -m json.tool research/continuity/1728-1799-sierra-leone/BUNCE_FREETOWN_AFRICAN_LAND_CONTROL_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1727-1792-west-africa/BRITISH_SLAVE_FORTS_AFRICAN_STATES_CONTROL_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1795-1799-cape/BRITISH_INVASION_INDIGENOUS_TERRITORIAL_TRANSITIONS.json >/dev/null
+  real-desktop-chromium:
+    needs: fourteen-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: 1780x1020 genuine Sierra Leone slavery and Black land rights, all thirteen earlier stories and 16C regression
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c-cape-http.log 2>&1 &
+          python3 scripts/browser_18c_sierra_leone_colonial_land.py
+          python3 scripts/browser_18c_west_africa_slavery.py
+          python3 scripts/browser_18c_cape_khoekhoe_xhosa.py
+          python3 scripts/browser_18c_manila_sack.py
+          python3 scripts/browser_18c_carnatic_hyderabad.py
+          python3 scripts/browser_18c_maratha_rohilla_awadh.py
+          python3 scripts/browser_18c_mysore_wars.py
+          python3 scripts/browser_18c_scotland_union.py
+          python3 scripts/browser_18c_australia_resistance.py
+          python3 scripts/browser_18c_ireland_rebellion.py
+          python3 scripts/browser_18c_atlantic_zong.py
+          python3 scripts/browser_18c_jamaica_maroon.py
+          python3 scripts/browser_18c_bengal_continuity.py
+          python3 scripts/browser_18c_acadia_pilot.py
+          python3 scripts/browser_major_story_pilot.py
+      - name: Upload desktop screenshots for T27 British slaving and Black settlers freehold resistance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c-t27-sierra-leone-bunce-black-settlers-land-rights-desktop-images
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  public-draft-web-preview:
+    needs: fourteen-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify GitHub branch static preview HTML JS CSS Atlas datasets and long story via external proxy
+        run: |
+          set -e
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js css/history-stories.css data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-sierra-leone-1728-1799.json data/stories/serial/e18-t27-sierra-leone-bunce-black-settlers-1728-1799.json; do
+            curl --fail --location --retry 3 --retry-delay 3 --max-time 30 --silent --show-error "$BASE/$path" -o "/tmp/t27-$(basename "$path")"
+          done
+          grep -q '帝国的代价' /tmp/t27-index.html
+          grep -q 'E18C-SLE-1799-SETTLER-FREEHOLD-DISPUTE' /tmp/t27-chronology-preview-sierra-leone-1728-1799.json
+          grep -q 'E18-T27-SIERRA-LEONE-BUNCE-BLACK-SETTLERS-1728-1799' /tmp/t27-preview-18c-index.json
+          if grep -q 'story-reading-toolbar' /tmp/t27-history-stories.js; then echo 'BUG: deleted dynamic TOC still present'; exit 1; fi
+          echo "SIERRA_LEONE_REVIEW_URL=$BASE/index.html?review18c=1&year=1792"
