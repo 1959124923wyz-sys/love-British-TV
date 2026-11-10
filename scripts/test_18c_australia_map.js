@@ -12,7 +12,7 @@ const d=load('data/stories/serial/chronology-preview-australia-1700-1799.json'),
 const original=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),ui=read('js/history-stories.js'),html=read('index.html');
 assert.equal(chapters.chapters.at(-1).end,1599);
-assert.equal(index.stories.length,12);
+assert.equal(index.stories.length,13);
 assert.deepEqual(index.stories.slice(0,5).map(x=>x.id),[
  'E18-C07-ACADIA-DEPORTATION',
  'E18-T14-T15-BENGAL-1756-1773',
@@ -106,6 +106,6 @@ assert.deepEqual(new Set(links),new Set(index.stories[5].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-australia-1700-1799.json'"));
 assert(app.includes('australia18cReady=true'));
 assert(app.includes("const enable18cPilot=new URLSearchParams(window.location.search).get('review18c')==='1'"));
-assert(ui.includes('draft.stories?.length===12'));
+assert(ui.includes('draft.stories?.length===13'));
 assert(html.includes('18c-scotland-union-20261108'));
 console.log('PASS 18C Australia T34/T35: 23 events, 47 registered sources, 21 sections/63 paragraphs, 23 atlas links, 9 modern named locations, 10 original research groups, 0 invented land claims or sea tracks, 5 earlier topics intact.');
