@@ -43,7 +43,7 @@ A.equal(E('E18A2-TUS-NEOHEROKA-FALL').lat,null);
 A.equal(E('1715-APR14-POCOTALIGO-MEETING').lat,32.6371251);
 A.equal(E('1715-CRAVEN-ARMS-ENSLAVED').lng,-79.93275);
 A.equal(E('1712-BARNWELL-ENSLAVES-200').lat,null);
-A(E('1712-BARNWELL-ENSLAVES-200').description.includes('200'));
+A(E('1712-BARNWELL-ENSLAVES-200').name.includes('200')&&E('1712-BARNWELL-ENSLAVES-200').description.includes('奴役'));
 A(E('1713-NEOHEROKA-950-TOTAL').description.includes('950'));
 A(E('1723-FREED-REENTRY-SEVEN-YEARS').description.includes('七年'));
 A.equal(d.statistics.NC_Neoheroka_1713_killed_or_captured_combined,950);
