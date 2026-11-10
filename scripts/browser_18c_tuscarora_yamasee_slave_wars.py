@@ -39,7 +39,7 @@ try:
  d.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-TUS-1712-BARNWELL-ENSLAVES-200"]').click()
  wait.until(lambda _:at(1712))
  d.save_screenshot(str(shots/'18c21-1712-British-Barnwell-treaty-betrayal-200-women-children-enslaved.png'))
- target=d.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-TUS-1723-FREED-REENTRY-SEVEN-YEARS"]')
+ target=d.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-TUS-E18A6-1723-003"]')
  js("arguments[0].dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));",target)
  wait.until(lambda _:at(1723))
  wait.until(lambda _:js("return !!document.querySelector('#dossierBody [data-story-back]')"))
