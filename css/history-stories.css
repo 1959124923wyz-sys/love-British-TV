@@ -16,11 +16,8 @@
 .story-event-link:hover,.story-event-link:focus-visible{color:#fff0c8;background:#364b5c}
 .story-back{display:inline-block;min-height:36px;padding:7px 10px;margin:0 0 14px;border:1px solid #496478;border-radius:7px;background:#1b3249;color:#efd0ae;font-size:12px;cursor:pointer}
 .story-back:hover,.story-back:focus-visible{background:#2b4960;border-color:#c7a37b}
-.story-toc,.story-sources{padding:10px 12px;margin:14px 0;border:1px solid #324a5f;border-radius:8px;background:#13253a}
-.story-toc summary,.story-sources summary{cursor:pointer;color:#edc7a0;font-size:12px;font-weight:700;line-height:1.7}
-.story-toc nav{display:grid;gap:4px;margin:11px 0 1px}
-.story-toc nav button{padding:8px 5px;text-align:left;border:0;background:transparent;color:#d7e4f1;font-size:11px;line-height:1.65;cursor:pointer}
-.story-toc nav button:hover{color:#f3bd85}
+.story-sources{padding:10px 12px;margin:14px 0;border:1px solid #324a5f;border-radius:8px;background:#13253a}
+.story-sources summary{cursor:pointer;color:#edc7a0;font-size:12px;font-weight:700;line-height:1.7}
 .story-sources{margin:28px 0}
 .story-sources .source-list small{display:block;margin:2px 4px 10px;color:#99afc3;font-size:10px}
 .dossier .story-sources p{font-size:11px;line-height:1.85;color:#bacbda;margin:9px 0}
@@ -84,34 +81,6 @@
 .major-story-article .story-stat-census summary{cursor:pointer;color:#f5cd99;font-size:12px;line-height:1.7;position:sticky;left:0}
 .major-story-article .story-stat-census .story-stat-table{min-width:640px}
 .major-story-article .story-stat-census .story-stat-table caption{white-space:normal}
-
-/* Long-form desktop history reading: show place in the article without
-   overloading the narrative with repeated headings or deleting any paragraphs. */
-.story-reading-toolbar{display:none}
-@media(min-width:1050px){
- .major-story-article .story-reading-toolbar{
-  position:sticky;top:0;z-index:5;display:flex;gap:10px;align-items:center;
-  padding:9px 10px;margin:0 0 15px;
-  border:1px solid #47627a;border-radius:8px;
-  color:#d8e4f0;background:#13273b;box-shadow:0 5px 13px rgba(0,0,0,.2);pointer-events:none;
- }
- .story-reading-toolbar button{
-  pointer-events:auto;flex-shrink:0;background:#203c54;border:1px solid #4b6982;border-radius:6px;
-  color:#f0c9a4;padding:7px 8px;font:inherit;font-size:11px;cursor:pointer
- }
- .story-reading-toolbar button:hover,.story-reading-toolbar button:focus-visible{
-  background:#30536c;outline:2px solid #d8aa80;outline-offset:2px
- }
- .story-reading-progress{flex:1;min-width:68px;display:grid;gap:5px}
- .story-reading-progress-label{font-size:11px;color:#c1d5e5;text-align:center;white-space:nowrap}
- .story-reading-progress-meter{height:4px;background:#385065;border-radius:7px;overflow:hidden}
- .story-reading-progress-fill{display:block;height:100%;width:0;background:#d6a983;border-radius:7px;transition:width .12s linear}
- .major-story-article .story-event-link{scroll-margin-top:105px}
- .major-story-article .story-section{scroll-margin-top:88px}
- .major-story-article .story-toc{scroll-margin-top:88px}
-}
-@media(prefers-reduced-motion:reduce){.story-reading-progress-fill{transition:none}}
-
 
 /* Editor15: optional source-backed index for long published 17C stories. */
 .major-story-article .story-chronology{margin:15px 0 19px;border:1px solid #405a70;border-radius:8px;background:#14273a;padding:11px 12px}
