@@ -104,15 +104,14 @@ assert.ok(app.includes("(storyChild?'':listSources(item.source_ids,item))"));
 assert.ok(ui.includes('closePreview()')&&ui.includes("e.key==='Escape'"));
 assert.ok(ui.includes('data-story-source')&&ui.includes('sourceEventId'),'Returning to exact child must remain possible');
 const storyCss=read('css/history-stories.css');
-assert.ok(ui.includes('function updateStoryReadingProgress()')&&ui.includes('story-reading-progress-meter'),
- 'reader progress must be computed from actual displayed article sections, not historical map estimates');
-assert.ok(ui.includes('data-story-nav="toc"')&&ui.includes('data-story-nav="top"'),'long narrative should retain one-click navigation');
-assert.ok(ui.includes('if(toc){toc.open=true;toc.scrollIntoView('),'TOC navigation must expand real table of contents');
-assert.ok(ui.includes('if(sections[i].getBoundingClientRect().top<=top)position=i+1'),
- 'progress section number must follow actual reader viewport');
-assert.ok(storyCss.includes('.story-reading-toolbar')&&storyCss.includes('position:sticky'),
- 'desktop scroll context should remain visible when reading long histories');
-assert.ok(storyCss.includes('prefers-reduced-motion:reduce'),'reader progress animation must respect reduced-motion');
+assert.ok(!ui.includes('story-reading-toolbar')&&!ui.includes('story-reading-progress-meter'),
+ 'No sticky chapter directory or percentage progress bar should be injected in any story');
+assert.ok(!ui.includes('data-story-nav=')&&!ui.includes('story-toc')&&!ui.includes('data-story-section'),
+ 'Delete all duplicate article table-of-contents navigation; retain human-readable chapter headings');
+assert.ok(!storyCss.includes('.story-reading-toolbar')&&!storyCss.includes('.story-toc'),
+ 'Remove the dynamic directory CSS from all desktop story readers');
+assert.ok(ui.includes('class="story-section"')&&ui.includes('storyChronologyHtml(article)'),
+ 'Keep the chapter paragraphs and independently verified historical chronology');
 
 assert.ok(ui.includes("storyByEvent.get(item.id)||[]")&&ui.includes('metas.length===1'),'Multi-story card must remain simple for single-story events');
 console.log('PASS history library: ',index.stories.length,'articles',totalChars,'characters',linked,'inline links',allEvents,'event relations',allSources,'source references');
