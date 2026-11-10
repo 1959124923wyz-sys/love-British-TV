@@ -143,25 +143,6 @@
     '<p class="story-stat-note">'+esc(q.period_note)+' <a href="'+esc(q.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(q.source_label)+'</a></p>'+
     '<h4>另一个统计口径：皇家非洲公司具体航次</h4>'+cohort+second+costs+namedHtml+siteHtml+smaller+specificHtml+censusHtml+sameSourceHtml+lawHtml+'</section>';
  }
- // Descriptive reading progress is computed only from scroll position and actual
- // published section nodes; it is not a historical chronology, event count or statistic.
- function updateStoryReadingProgress(){
-  const body=activeBody(),article=body?.querySelector('.major-story-article');
-  const toolbar=article?.querySelector('.story-reading-toolbar');
-  if(!toolbar)return;
-  const sections=[...article.querySelectorAll('.story-section')];
-  if(!sections.length)return;
-  const top=body.getBoundingClientRect().top+76;
-  let position=1;
-  for(let i=0;i<sections.length;i++){
-   if(sections[i].getBoundingClientRect().top<=top)position=i+1;
-  }
-  const scrollable=Math.max(0,body.scrollHeight-body.clientHeight);
-  const percent=scrollable?Math.min(100,Math.max(0,Math.round(body.scrollTop/scrollable*100))):100;
-  toolbar.querySelector('.story-reading-progress-label').textContent='第'+position+'/'+sections.length+'节 · 已读'+percent+'%';
-  toolbar.querySelector('.story-reading-progress-fill').style.width=percent+'%';
-  toolbar.querySelector('.story-reading-progress-meter').setAttribute('aria-valuenow',String(percent));
- }
  // Optional 17C topic index: every entry is a real published atlas event.
  // This is a navigation aid, not a continuous occupation chronology.
  function storyChronologyHtml(article){
@@ -209,13 +190,7 @@
     (storyHeadline(article)!==article.title?'<details class="atlas-complete-title"><summary>完整专题题名</summary><p>'+esc(article.title)+'</p></details>':'')+
     '<p class="story-subtitle">'+esc(article.subtitle)+'</p>'+
     '<p class="story-lead">'+esc(article.lead)+'</p></header>'+
-    '<div class="story-reading-toolbar" role="navigation" aria-label="专题阅读进度与章节跳转">'+
-     '<button type="button" data-story-nav="toc">章节目录</button>'+
-     '<div class="story-reading-progress"><span class="story-reading-progress-label">第1/'+article.sections.length+'节 · 已读0%</span>'+
-      '<div class="story-reading-progress-meter" role="progressbar" aria-label="专题页面阅读位置" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="story-reading-progress-fill"></span></div></div>'+
-     '<button type="button" data-story-nav="top">回到开头</button></div>'+relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+
-    '<details class="story-toc"><summary>阅读目录 · '+article.sections.length+'节 <span aria-hidden="true">▾</span></summary>'+
-    '<nav aria-label="专题文章目录">'+article.sections.map((sec,i)=>'<button type="button" data-story-section="'+esc(sec.id)+'">'+(i+1)+'. '+esc(sectionHeadline(sec.heading))+'</button>').join('')+'</nav></details>'+
+    '"+relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+'
     '<div class="story-body">'+article.sections.map(sec=>
      '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3 title="'+esc(sec.heading)+'">'+esc(sectionHeadline(sec.heading))+'</h3>'+
       sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p))+'</p>').join('')+
@@ -259,8 +234,7 @@
     if(chronology)chronology.open=chronologyExpanded;
    }
    container.scrollTop=restore?readingScroll:0;
-   updateStoryReadingProgress();
-   if(restore){requestAnimationFrame(()=>{container.scrollTop=readingScroll;updateStoryReadingProgress()});}
+   if(restore){requestAnimationFrame(()=>{container.scrollTop=readingScroll});}
   }catch(err){
    if(serial!==requestSerial)return;
    container.innerHTML='<p>历史专题暂时无法读取，请稍后再试。</p><button class="story-back" type="button" data-story-return="1">← 返回原事件</button>';
@@ -318,7 +292,7 @@
   if(lastStoryId)await openStory(lastStoryId,true);
  }
  document.addEventListener('click',function(e){
-  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-index-event],[data-story-back],[data-story-return],[data-story-section],[data-story-nav],[data-story-preview-close]');
+  const el=e.target.closest('[data-story-open],[data-story-event],[data-story-index-event],[data-story-back],[data-story-return],[data-story-preview-close]');
   if(!el){
    if(preview&&!e.target.closest('.story-event-preview'))closePreview();
    return;
@@ -327,21 +301,6 @@
   if(el.hasAttribute('data-story-open')){openStory(el.dataset.storyOpen,false,el.dataset.storySource);return;}
   if(el.hasAttribute('data-story-back')){openStory(returnStoryId||lastStoryId,true);return;}
   if(el.hasAttribute('data-story-return')){returnToOrigin();return;}
-  if(el.hasAttribute('data-story-nav')){
-   closePreview();
-   const body=activeBody();
-   if(el.dataset.storyNav==='toc'){
-    const toc=body.querySelector('.major-story-article .story-toc');
-    if(toc){toc.open=true;toc.scrollIntoView({block:'start',behavior:'smooth'});}
-   }else if(el.dataset.storyNav==='top')body.scrollTo({top:0,behavior:'smooth'});
-   return;
-  }
-  if(el.hasAttribute('data-story-section')){
-   closePreview();
-   const anchor=document.getElementById('story-section-'+el.dataset.storySection);
-   if(anchor)anchor.scrollIntoView({block:'start',behavior:'smooth'});
-   return;
-  }
   if(el.hasAttribute('data-story-event')||el.hasAttribute('data-story-index-event')){
    if(clickTimer!==null)clearTimeout(clickTimer);
    const id=el.dataset.storyEvent||el.dataset.storyIndexEvent,anchor=el;
@@ -349,7 +308,7 @@
   }
  });
  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePreview();});
- activeBody().addEventListener('scroll',()=>{closePreview();updateStoryReadingProgress()},{passive:true});
+ activeBody().addEventListener('scroll',closePreview,{passive:true});
  document.addEventListener('dblclick',function(e){
   const el=e.target.closest('[data-story-event],[data-story-index-event]');
   if(!el)return;
