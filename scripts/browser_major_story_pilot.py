@@ -42,17 +42,15 @@ try:
     assert driver.execute_script("return document.querySelector('.major-story-article').textContent.length>3000")
     assert driver.execute_script("return document.querySelector('.story-sources') && !document.querySelector('.story-sources').open")
     driver.save_screenshot(str(OUT/"02-long-story-1580-desktop.png"))
-    # Desktop: a large historical essay keeps its real section index and contents access
-    # in a compact sticky reading control; scroll progress is reading UI, not historic data.
-    assert driver.execute_script("return !!document.querySelector('.major-story-article .story-reading-toolbar')")
-    assert driver.execute_script("return document.querySelector('.story-reading-progress-label').textContent.includes('1/8节')")
-    driver.find_element(By.CSS_SELECTOR,'[data-story-nav="toc"]').click()
-    wait.until(lambda d:d.execute_script("return document.querySelector('.story-toc').open"))
+    # Reader request: no sticky chapters, progress percentage, return-to-top toolbar,
+    # or duplicated in-article dynamic directory; content and source records remain.
+    assert driver.execute_script("return !document.querySelector('.story-reading-toolbar,.story-toc,[data-story-nav]')")
+    assert driver.execute_script("return !document.querySelector('.story-reading-progress-meter,.story-reading-progress-label')")
     driver.execute_script("document.querySelectorAll('.major-story-article .story-section')[5].scrollIntoView({block:'start'})")
-    wait.until(lambda d:d.execute_script("return /第[4-8]\/8节/.test(document.querySelector('.story-reading-progress-label').textContent)"))
-    assert driver.execute_script("return Number(document.querySelector('.story-reading-progress-meter').getAttribute('aria-valuenow'))>0")
-    driver.save_screenshot(str(OUT/"02b-reading-progress-and-toc.png"))
-    driver.find_element(By.CSS_SELECTOR,'[data-story-nav="top"]').click()
+    wait.until(lambda d:d.execute_script("return document.getElementById('dossierBody').scrollTop>0"))
+    assert len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article .story-section'))==8
+    driver.save_screenshot(str(OUT/"02b-clean-reader-without-dynamic-directory.png"))
+    driver.execute_script("document.getElementById('dossierBody').scrollTo({top:0})")
     wait.until(lambda d:d.execute_script("return document.getElementById('dossierBody').scrollTop<60"))
 
     # Banner-free reading; short child dossier has a link, not duplicated research.
