@@ -4,7 +4,7 @@ const A=require('node:assert/strict'),F=require('node:fs'),P=require('node:path'
 const rd=p=>F.readFileSync(P.join(root,p),'utf8'),j=p=>JSON.parse(rd(p));
 const d=j('data/stories/serial/chronology-preview-india-opium-salt-1761-1799.json'),a=j('data/stories/serial/e18-t21-east-india-opium-salt-famine-1761-1799.json'),index=j('data/stories/serial/preview-18c-index.json'),raw=j('research/18c/consolidated/series/T21.json'),g=j('research/continuity/1761-1799-india/EIC_OPIUM_SALT_TEXTILE_FAMINE_ACTOR_TRANSITIONS.json'),pub=j('data/stories/serial/index.json');
 const app=rd('app.js'),ui=rd('js/history-stories.js'),css=rd('css/history-stories.css'),html=rd('index.html');
-A.equal(index.stories.length,22);A.equal(index.stories[14].id,a.id);A.equal(index.stories[14].status,'research_preview');A.equal(index.stories[14].publication_review,'not_submitted');
+A.equal(index.stories.length,23);A.equal(index.stories[14].id,a.id);A.equal(index.stories[14].status,'research_preview');A.equal(index.stories[14].publication_review,'not_submitted');
 A.equal(a.id,'E18-T21-EIC-OPIUM-SALT-FAMINE-1761-1799');A.equal(a.publication_status,'research_only');A.equal(a.publication_approval,'not_submitted');
 A.deepEqual(a.predecessor_17c_story_ids,['E6-T12']);A(pub.topics.some(x=>x.id==='E6-T12'&&x.status==='published'));A(!pub.topics.some(x=>x.id===a.id));
 A.equal(d.schema,'atlas-18c-india-eic-opium-salt-famine-coercion-v1');A.equal(d.editorial_status,'research_preview_not_published');
@@ -62,7 +62,7 @@ for(const s of a.sections){A.equal(s.paragraphs.length,3);A(s.source_keys.length
 A.equal(links.length,18);A.equal(new Set(links).size,18);
 A.deepEqual(new Set(links),new Set(a.related_event_ids));A.deepEqual(new Set(links),new Set(index.stories[14].event_ids));
 A(app.includes("fetch('data/stories/serial/chronology-preview-india-opium-salt-1761-1799.json'"));
-A(app.includes('indiaFiscal18cReady=true'));A(ui.includes('draft.stories?.length===22'));
+A(app.includes('indiaFiscal18cReady=true'));A(ui.includes('draft.stories?.length===23'));
 A(ui.includes("storyMeta.has('E18-T21-EIC-OPIUM-SALT-FAMINE-1761-1799')"));
 A(html.includes('18c15-india-fiscal-20261110'));
 A(!ui.includes('story-reading-toolbar')&&!ui.includes('story-toc')&&!ui.includes('story-reading-progress-meter')&&!ui.includes('data-story-nav'));
