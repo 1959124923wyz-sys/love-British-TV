@@ -1,0 +1,67 @@
+{
+  "type": "FeatureCollection",
+  "name": "1580 historical-violence geography anchors (modern reference, not exact violence footprints)",
+  "metadata": {
+    "historical_control_polygon_count": 0,
+    "polygon_fill_authorized": false,
+    "source_qualifier": "Smerwick OSM fort modern location and Loughrea reused reviewed chapter9 city anchor; positions not proven 1580 exact soldier location."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ch10-1580-loughrea-recapture-modern-town",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5649,
+          53.1966
+        ]
+      },
+      "properties": {
+        "stable_id": "loughrea-english-warders-1576-1580",
+        "event_id": "ch10-1580-loughrea-recapture",
+        "name": "洛赫雷：1580伯克军队收复",
+        "source_ids": [
+          "C10-S04"
+        ],
+        "coordinate_source": "PR#56, 1570s geography file uses modern town centre at this coordinate; source historical chronology UCC AFM M1580.26",
+        "coordinate_source_url": "https://github.com/1959124923wyz-sys/love-British-TV/blob/research/ch09-1570-1579-coercion-plunder-map-20261014/research/periods/1570-1579/editor_import/CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson",
+        "year": 1580,
+        "map_class": "local_castle_garrison_recaptured_by_Burke_force",
+        "coordinate_precision": "modern city reference; exact battle castle and 1580 defenders locations unlocated",
+        "old_controller": "English captain Jones",
+        "new_controller": "Burke family local lordship",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-1580-smerwick-dun-an-oir-modern-fort",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.41424,
+          52.19088
+        ]
+      },
+      "properties": {
+        "stable_id": "dun-an-oir-smerwick-1580",
+        "event_id": "ch10-1580-smerwick",
+        "name": "斯梅里克 Dún an Óir 1580年英军屠杀史迹",
+        "year": 1580,
+        "source_ids": [
+          "C10-S01",
+          "C10-S38"
+        ],
+        "coordinate_source": "OpenStreetMap historic fort node 12125205900 as shown in Mapcarta; geological heritage site coordinates, not precise killing ground",
+        "coordinate_source_url": "https://mapcarta.com/N12125205900",
+        "coordinate_precision": "modern fort/site node OSM, not accurate location of each execution",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null
+      }
+    }
+  ]
+}

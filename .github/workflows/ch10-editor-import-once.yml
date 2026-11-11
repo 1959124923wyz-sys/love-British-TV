@@ -1,0 +1,43 @@
+name: Chapter 10 one-time chief editor import QA
+# Final historic-act audit: 30 dated events, 70 sources, 31 human/finance records, 8 undertaker/native lord groups and future 1590 settlement quotas.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/ch10-1580-1589-violence-enslavement-plunder-20261014
+    paths:
+      - .github/workflows/ch10-editor-import-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  run-ch10-direct-editor-import-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/ch10-1580-1589-violence-enslavement-plunder-20261014
+          persist-credentials: true
+      - name: Verify entire Atlas candidate against archived documents and geographic records
+        run: python3 research/periods/1580-1589/editor_import/validate_editor_import.py
+      - name: Parse all JSON and GeoJSON editor packages
+        run: |
+          python3 - <<'PY'
+          import glob,json
+          for p in glob.glob("research/periods/1580-1589/editor_import/*.json")+glob.glob("research/periods/1580-1589/editor_import/*.geojson"):
+            with open(p,encoding='utf8') as f: json.load(f)
+            print('PARSED',p)
+          PY
+      - name: Save signed test result to research branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/periods/1580-1589/editor_import/EDITOR_QA.json
+          if git diff --cached --quiet; then
+            echo "Editor QA report unchanged"
+          else
+            git commit -m "test(ch10): archive successful 30-event direct import and Munster contract verification"
+            git push origin HEAD:research/ch10-1580-1589-violence-enslavement-plunder-20261014
+          fi

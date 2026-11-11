@@ -1,0 +1,238 @@
+{
+  "type": "FeatureCollection",
+  "schema": "ch10_archival_schematic_route_network_v1",
+  "count": 6,
+  "metadata": {
+    "year_begin": 1585,
+    "year_end": 1589,
+    "dashed_only": true,
+    "actual_voyage_gps": false,
+    "forced_human_transport_segment_routes_individually_verified": false,
+    "polygon_area_count": 0
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ch10-route-drake-1585-plymouth-santiago",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.1424,
+            50.3714
+          ],
+          [
+            -23.6048,
+            14.9159
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-route-drake-1585-plymouth-santiago",
+        "year": 1585,
+        "name": "drake-1585-plymouth-santiago",
+        "source_ids": [
+          "C10-S27",
+          "C10-S35"
+        ],
+        "from_site": "ch10-site-plymouth",
+        "to_site": "ch10-site-cidade-velha",
+        "render_style": "dashed_reference_line_not_real_sailing_path",
+        "geography_precision": "two_verified_modern_named_place_anchors_but_no_intermediate_course_data",
+        "movement_sequence_supported": true,
+        "original_16c_route_points_measured": false,
+        "claim_sea_GPS_track": false,
+        "route_corridor_controlled_by_England": false,
+        "carried_captives_on_this_entire_segment_proven": false,
+        "historical_territory_polygon": false,
+        "schema_note": "English 1585 Drake campaign began Plymouth; Santiago port first named stage"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-route-drake-1585-86-santiago-domingo",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -23.6048,
+            14.9159
+          ],
+          [
+            -69.95,
+            18.47
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-route-drake-1585-86-santiago-domingo",
+        "year": 1586,
+        "name": "drake-1585-86-santiago-domingo",
+        "source_ids": [
+          "C10-S27",
+          "C10-S09"
+        ],
+        "from_site": "ch10-site-cidade-velha",
+        "to_site": "ch10-site-santo-domingo",
+        "render_style": "dashed_reference_line_not_real_sailing_path",
+        "geography_precision": "two_verified_modern_named_place_anchors_but_no_intermediate_course_data",
+        "movement_sequence_supported": true,
+        "original_16c_route_points_measured": false,
+        "claim_sea_GPS_track": false,
+        "route_corridor_controlled_by_England": false,
+        "carried_captives_on_this_entire_segment_proven": false,
+        "historical_territory_polygon": false,
+        "schema_note": "Santiago to Santo Domingo documented sequence, not route or speed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-route-drake-1586-domingo-cartagena",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.95,
+            18.47
+          ],
+          [
+            -75.5383,
+            10.419
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-route-drake-1586-domingo-cartagena",
+        "year": 1586,
+        "name": "drake-1586-domingo-cartagena",
+        "source_ids": [
+          "C10-S27",
+          "C10-S11"
+        ],
+        "from_site": "ch10-site-santo-domingo",
+        "to_site": "ch10-site-cartagena",
+        "render_style": "dashed_reference_line_not_real_sailing_path",
+        "geography_precision": "two_verified_modern_named_place_anchors_but_no_intermediate_course_data",
+        "movement_sequence_supported": true,
+        "original_16c_route_points_measured": false,
+        "claim_sea_GPS_track": false,
+        "route_corridor_controlled_by_England": false,
+        "carried_captives_on_this_entire_segment_proven": false,
+        "historical_territory_polygon": false,
+        "schema_note": "Santo Domingo and Cartagena raided in chronological sequence"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-route-drake-1586-cartagena-staugustine",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5383,
+            10.419
+          ],
+          [
+            -81.3145,
+            29.8947
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-route-drake-1586-cartagena-staugustine",
+        "year": 1586,
+        "name": "drake-1586-cartagena-staugustine",
+        "source_ids": [
+          "C10-S27",
+          "C10-S24"
+        ],
+        "from_site": "ch10-site-cartagena",
+        "to_site": "ch10-site-st-augustine",
+        "render_style": "dashed_reference_line_not_real_sailing_path",
+        "geography_precision": "two_verified_modern_named_place_anchors_but_no_intermediate_course_data",
+        "movement_sequence_supported": true,
+        "original_16c_route_points_measured": false,
+        "claim_sea_GPS_track": false,
+        "route_corridor_controlled_by_England": false,
+        "carried_captives_on_this_entire_segment_proven": false,
+        "historical_territory_polygon": false,
+        "schema_note": "West Indies to Florida attack theatre order only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-route-drake-1586-staugustine-roanoke",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -81.3145,
+            29.8947
+          ],
+          [
+            -75.70896,
+            35.936944
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-route-drake-1586-staugustine-roanoke",
+        "year": 1586,
+        "name": "drake-1586-staugustine-roanoke",
+        "source_ids": [
+          "C10-S13",
+          "C10-S24"
+        ],
+        "from_site": "ch10-site-st-augustine",
+        "to_site": "ch10-site-fort-raleigh",
+        "render_style": "dashed_reference_line_not_real_sailing_path",
+        "geography_precision": "two_verified_modern_named_place_anchors_but_no_intermediate_course_data",
+        "movement_sequence_supported": true,
+        "original_16c_route_points_measured": false,
+        "claim_sea_GPS_track": false,
+        "route_corridor_controlled_by_England": false,
+        "carried_captives_on_this_entire_segment_proven": false,
+        "historical_territory_polygon": false,
+        "schema_note": "Drake visited Outer Banks where Lane force evacuated after raiding Caribbean/Florida; geographic route unverified"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ch10-route-english-1589-coruna-vigo",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -8.403482,
+            43.360646
+          ],
+          [
+            -8.7247,
+            42.2377
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "ch10-route-english-1589-coruna-vigo",
+        "year": 1589,
+        "name": "english-1589-coruna-vigo",
+        "source_ids": [
+          "C10-S45",
+          "C10-S50",
+          "C10-S51"
+        ],
+        "from_site": "ch10-site-a-coruna",
+        "to_site": "ch10-site-vigo",
+        "render_style": "dashed_reference_line_not_real_sailing_path",
+        "geography_precision": "two_verified_modern_named_place_anchors_but_no_intermediate_course_data",
+        "movement_sequence_supported": true,
+        "original_16c_route_points_measured": false,
+        "claim_sea_GPS_track": false,
+        "route_corridor_controlled_by_England": false,
+        "carried_captives_on_this_entire_segment_proven": false,
+        "historical_territory_polygon": false,
+        "schema_note": "1589 English Galician action: unsuccessful Coruña siege and later Vigo sacking"
+      }
+    }
+  ]
+}
