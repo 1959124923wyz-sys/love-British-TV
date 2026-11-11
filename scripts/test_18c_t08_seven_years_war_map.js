@@ -55,7 +55,7 @@ const names=tag=>data.events.filter(e=>e.id.includes(tag));
 A.equal(names('E18A-1760-C11-02').length,1);
 A.equal(names('E18A-1763-C14-02').length,1);
 A(names('1763-POX-BLANKETS')[0].description.includes('Trent'));
-A(names('1763-PAXTON-SIX')[0].description.includes('六名'));
+A(names('1763-PAXTON-SIX')[0].description.includes('3男2女'));
 A.equal(data.statistics.paxton_1763_total_murdered,20);
 A.equal(data.statistics.verified_deaths_causally_due_to_blankets,null);
 A.equal(data.statistics.verified_actual_british_land_sqkm,null);
