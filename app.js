@@ -253,6 +253,7 @@ let t08SevenYears22Ready=false;
 let t10Lenape23Ready=false;
 let t12Revolution24Ready=false;
 let t13Hudson25Ready=false;
+let t15Famine26Ready=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -3287,6 +3288,36 @@ async function boot(){
     for(const src of ds.sources||[])sourcesById.set(src.id,src);
     t13Hudson25Ready=true;
    }catch(err){console.warn('T13 excluded; earlier 24 research stories preserved',err);}
+  }
+
+  // Twenty-sixth T15: original Bengal 1770 letters, tax, seed grain and farmers' petition/denial.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t15-bengal-famine-tax-1770-1772.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T15 famine archive missing');
+    const ds=await res.json(),e=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t15-bengal-famine-original-letters-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==26||
+       ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_B_keys!==7||
+       ds.provenance?.mapped_original_ids!==9||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1770||x.year>1772||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sourceIds.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T15 archive provenance or colonial polygon violation');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T15 duplicated map event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentysix-bengal-famine-originals-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t15Famine26Ready=true;
+   }catch(err){console.warn('T15 preview excluded; prior 25 stories preserved',err);}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
