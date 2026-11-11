@@ -12,7 +12,7 @@ const d=load('data/stories/serial/chronology-preview-scotland-1700-1799.json'),
 const crosswalk=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),reader=read('js/history-stories.js'),html=read('index.html');
 assert.equal(chap.chapters.at(-1).end,1599);
-assert.equal(idx.stories.length,25);
+assert.equal(idx.stories.length,26);
 assert.deepEqual(idx.stories.slice(0,6).map(x=>x.id),[
  'E18-C07-ACADIA-DEPORTATION','E18-T14-T15-BENGAL-1756-1773',
  'E18-T03-T04-JAMAICA-MAROONS-1718-1799',
@@ -120,7 +120,7 @@ assert.deepEqual(new Set(linked),new Set(a.related_event_ids));
 assert.deepEqual(new Set(linked),new Set(idx.stories[6].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-scotland-1700-1799.json'"));
 assert(app.includes('scotland18cReady=true'));
-assert(reader.includes('draft.stories?.length===25'));
+assert(reader.includes('draft.stories?.length===26'));
 assert(reader.includes("storyMeta.has('E18-T31-T32-SCOTLAND-UNION-CULLODEN-1700-1799')"));
 assert(html.includes('18c-scotland-union-20261108'));
 console.log('PASS 18C Scotland: 23 dated events, 37 sources (24 original registry), 19 sections/57 paragraphs/23 interactive links, 5 verified modern place refs incl 3 HES EPSG27700 conversions, 9 merged groups, six history transitions, no imaginary polygons and all six earlier 18C subjects preserved.');
