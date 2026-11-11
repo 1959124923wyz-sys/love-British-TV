@@ -8,7 +8,7 @@ const geo=J('research/continuity/1764-1796-north-america/BRITISH_REPRESSION_BLAC
 const old=J('research/18c/consolidated/series/T12.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,27);A.equal(idx.stories[23].id,story.id);A.equal(idx.stories[23].status,'research_preview');
+A.equal(idx.stories.length,28);A.equal(idx.stories[23].id,story.id);A.equal(idx.stories[23].status,'research_preview');
 A.equal(d.schema,'atlas-18c-t12-revolution-prison-ships-black-freedom-v1');
 A.equal(d.editorial_status,'research_preview_not_published');
 A.equal(d.events.length,35);A.equal(d.sources.length,47);
@@ -56,7 +56,7 @@ A.deepEqual(new Set(links),new Set(idx.stories[23].event_ids));
 A.equal(geo.transitions.length,35);
 A(geo.transitions.every(x=>x.polygon_allowed===false&&x.area_sqkm===null&&x.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t12-revolution-black-freedom-1764-1796.json'"));
-A(app.includes('t12Revolution24Ready=true'));A(reader.includes('draft.stories?.length===27'));
+A(app.includes('t12Revolution24Ready=true'));A(reader.includes('draft.stories?.length===28'));
 A(reader.includes("storyMeta.has('E18-T12-REVOLUTION-PRISON-SHIPS-BLACK-FREEDOM-1764-1796')"));
 A(html.includes('18c24-t12-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));

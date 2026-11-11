@@ -1,0 +1,71 @@
+name: 18C T20 EIC Parliament State Loans Monopoly 28-topic Historical GIS QA
+on:
+  push:
+    branches:
+      - map/18c-t20-eic-parliament-loan-monopoly-1709-1793-20261111
+  pull_request:
+    branches:
+      - map/18c-t16-permanent-settlement-adivasi-paik-land-resistance-1762-1799-20261111
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  twentyeight-story-source-GIS-and-reader:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify 28 research chapters, T20 original B IDs, all 27 predecessor topics and GIS
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          node scripts/test_18c_t20_eic_parliament_loan_monopoly_map.js
+          for testfile in scripts/test_18c_*.js; do node "$testfile"; done
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_t20_original_B_sources.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m json.tool data/stories/serial/chronology-preview-t20-eic-parliament-loan-monopoly-1702-1793.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t20-eic-parliament-loan-monopoly-1702-1793.json >/dev/null
+          python3 -m json.tool research/continuity/1702-1793-eic-state-parliament/T20_EIC_PARLIAMENT_LOANS_TRADE_RIGHTS_TRANSITIONS.json >/dev/null
+  real-desktop-chromium:
+    needs: twentyeight-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real 1780x1020 desktop 28 topics all prior historical preview and 16C return
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c28-http.log 2>&1 &
+          python3 scripts/browser_18c_t20_eic_parliament_loan_monopoly.py
+          for browser_test in scripts/browser_18c_*.py; do
+            if [ "$browser_test" != "scripts/browser_18c_t20_eic_parliament_loan_monopoly.py" ]; then
+              python3 "$browser_test"
+            fi
+          done
+          python3 scripts/browser_major_story_pilot.py
+      - name: Preserve real desktop screenshots and regressions
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c28-eic-parliament-finance-trade-monopoly-desktop-screenshots
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  public-draft-web-preview:
+    needs: twentyeight-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify source, map, JS and article available on SHA-pinned public preview
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-t20-eic-parliament-loan-monopoly-1702-1793.json data/stories/serial/e18-t20-eic-parliament-loan-monopoly-1702-1793.json data/stories/serial/chronology-preview-t16-permanent-settlement-1760-1799.json data/stories/serial/e18-t16-bengal-permanent-settlement-adivasi-1760-1799.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$path"
+          done

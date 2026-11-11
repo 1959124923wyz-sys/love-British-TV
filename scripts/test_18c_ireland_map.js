@@ -10,7 +10,7 @@ const t29=load('research/18c/consolidated/series/T29.json'),t30=load('research/1
 const originals=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),reader=read('js/history-stories.js'),html=read('index.html');
 assert.equal(chapters.chapters.at(-1).end,1599,'Fifth 18C review is not a published chapter');
-assert.equal(index.stories.length,27);
+assert.equal(index.stories.length,28);
 assert.deepEqual(index.stories.slice(0,4).map(x=>x.id),
  ['E18-C07-ACADIA-DEPORTATION','E18-T14-T15-BENGAL-1756-1773',
   'E18-T03-T04-JAMAICA-MAROONS-1718-1799','E18-T01-T02-ATLANTIC-ZONG-1711-1799']);
@@ -87,7 +87,7 @@ assert.deepEqual(new Set(linked),new Set(article.related_event_ids));
 assert.deepEqual(new Set(linked),new Set(index.stories[4].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-ireland-1700-1799.json'"));
 assert(app.includes('ireland18cReady=true'));
-assert(reader.includes('draft.stories?.length===27'));
+assert(reader.includes('draft.stories?.length===28'));
 assert(reader.includes("storyMeta.has('E18-T29-T30-IRELAND-PENAL-REBELLION-1704-1799')"));
 assert(html.includes('18c-scotland-union-20261108'));
 console.log('PASS fifth Ireland T29/T30: 20 dated research events, 29 sources, 16 chapters 48 paragraphs/20 real links, 8 modern history refs, 7 date-bounded rebel control episodes and 0 fake polygons; old four stories preserved.');
