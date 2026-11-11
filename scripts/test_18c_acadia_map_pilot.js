@@ -59,7 +59,7 @@ assert.equal(major,7);
 assert.equal(groupLinks,7);
 assert.equal(index.schema,'atlas-18c-story-review-index-v1');
 assert.equal(index.editorial_status,'research_preview_not_published');
-assert.equal(index.stories.length,24);
+assert.equal(index.stories.length,25);
 assert.equal(index.stories[0].status,'research_preview');
 assert.equal(index.stories[0].publication_review,'not_submitted');
 assert.equal(index.stories[0].id,story.id);
