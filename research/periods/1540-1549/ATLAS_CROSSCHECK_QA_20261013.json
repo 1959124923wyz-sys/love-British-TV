@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-13",
+  "branch": "research/1540-1550-atlas-source-triangulation-20261013",
+  "status": "PASS",
+  "checked": [
+    "ATLAS_1547_1550_GARRISON_CROSSCHECK_20261013.json",
+    "ATLAS_SOURCE_CROSSCHECK_ACTIONS_20261013.json",
+    "SOURCE_TRIANGULATION_1548_EDITOR_HANDOFF_20261013.md"
+  ],
+  "counts": {
+    "new_sources": 11,
+    "new_site_control_candidates": 15,
+    "high_priority_site_candidates": 12,
+    "research_action_tasks": 9,
+    "high_priority_research_tasks": 6,
+    "confirmed_new_1548_control_polygon": 0
+  },
+  "checks": {
+    "unique_source_ids": true,
+    "site_citations_resolved": true,
+    "archive_citations_resolved": true,
+    "negative_Letham_archaeology_explicit": true,
+    "Fast_Castle_conflict_flagged": true,
+    "Balgillo_HES_February_1550_source_page_explicit": true,
+    "modern_Glasgow_Castlemilk_name_confusion_warned": true,
+    "new_firsthand_Tudor_manuscript_review": false,
+    "firsthand_Digitized_Atlas_map_geometry_registration": false
+  },
+  "cautions": [
+    "No current main production GIS edited",
+    "No user-visible war theatre polygon or fort point invented",
+    "PDF Haddington p4 and p26 read visually; original atlas historical map image not fully visually surveyed, indexed text only",
+    "Scottish Medievalists vs Society of Antiquaries licence conditions need clarification before tracing artwork"
+  ],
+  "issues": []
+}

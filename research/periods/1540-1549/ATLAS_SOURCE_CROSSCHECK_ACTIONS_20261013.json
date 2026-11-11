@@ -1,0 +1,108 @@
+{
+  "schema": "ch6_archival_crossvalidation_queue_v1",
+  "branch": "research/1540-1550-atlas-source-triangulation-20261013",
+  "date": "2026-10-13",
+  "task_count": 9,
+  "high_priority_count": 6,
+  "all_tasks_pending_original_source_review": true,
+  "site_candidates_total": 15,
+  "linked_sources_total": 11,
+  "entries": [
+    {
+      "id": "MAP-CROSS-P0-001",
+      "priority": "P0",
+      "title": "Read original p127—128 printed 1996 Atlas maps",
+      "deliverable": "Hand-verified legend, era, marks, sites by symbol and date. Resolve suspect Balgillo/Broughty parenthetical Feb1549 vs HES Feb1550.",
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-HES-BROUGHTY-STATEMENT-SIGNIFICANCE"
+      ],
+      "gate": "Do not scrape/reproduce atlas copyrighted images without clarifying licence; textual factual candidate only."
+    },
+    {
+      "id": "MAP-CROSS-P0-002",
+      "priority": "P0",
+      "title": "Crosscheck 1547 SW English garrisons against original documentary calendars",
+      "deliverable": "Date- and site-specific status Dumfries, Cockpool, Castlemilk, Lochwood; old specific castle coordinates from HES/NRS.",
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "gate": "English-affiliated local lairds are not proof the entire southwestern county is occupied."
+    },
+    {
+      "id": "MAP-CROSS-P0-003",
+      "priority": "P0",
+      "title": "Resolve 1548 east Lothian multi-stage seizures and returns",
+      "deliverable": "Month-by-month flags/English vs Scots for Saltoun, Ormiston, Yester, Dalkeith with English/Scottish original military letters.",
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-SHRG-LETHAM-2022-PRELIM-SURVEY"
+      ],
+      "gate": "Do not label 1548 year-end English until original last dated garrison supports."
+    },
+    {
+      "id": "MAP-CROSS-P0-004",
+      "priority": "P0",
+      "title": "Resolve Fast Castle 1548/1549 conflicting accounts",
+      "deliverable": "Contemporary document for 1548 recapture vs 1549 new English fort site; map by verified year only.",
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128"
+      ],
+      "gate": "Do not assert 1549 English year-end fort."
+    },
+    {
+      "id": "MAP-CROSS-P0-005",
+      "priority": "P0",
+      "title": "Haddington 1548 CSP Scotland 228 229 230 253 295 original entries",
+      "deliverable": "Precise siege-related site/campaign evidence, Shrewsbury relief, observed fortress walls, control-vs-harassment and no free standing Letham confirmed battery.",
+      "source_ids": [
+        "SC-SHRG-LETHAM-2022-PRELIM-SURVEY"
+      ],
+      "gate": "2022 fieldwalk negative military occupancy proof; no artillery range to control polygon."
+    },
+    {
+      "id": "MAP-CROSS-P0-006",
+      "priority": "P0",
+      "title": "Old map reproduction rights and licence resolution",
+      "deliverable": "Clarify Scottish Medievalists permission policy versus 2026 SocAntScot CC BY-NC 4.0 for reproducing original atlas figures; record written permission where needed.",
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128"
+      ],
+      "gate": "Until resolved only source-linked place/date facts; no copying atlas graphics."
+    },
+    {
+      "id": "MAP-CROSS-P1-007",
+      "priority": "P1",
+      "title": "Validate 1544-1547 Caerlaverock Threave Langholm Lo(h)maben episodes",
+      "deliverable": "Original 1544/45 captures + Scottish 1547 positions, prevent false yearly English persistence.",
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "gate": "No whole county coloring from written submission to Edward VI."
+    },
+    {
+      "id": "MAP-CROSS-P1-008",
+      "priority": "P1",
+      "title": "Pilot Cliopatria against six pivotal historical years",
+      "deliverable": "Compare 1500 1547 1548 1550 1558 1707 Britain and Ireland polygons to actual documented sovereignties, check for modern coastline bias.",
+      "source_ids": [
+        "GLOBAL-CLIOPATRIA-SESHAT-GIS"
+      ],
+      "gate": "Dataset polygon is state territory conceptual layer, not wartime 1548 English occupied area."
+    },
+    {
+      "id": "MAP-CROSS-P1-009",
+      "priority": "P1",
+      "title": "License and coverage pilot of modern colonial base data",
+      "deliverable": "Compare CShapes 2.0 after 1886 and OpenHistoricalMap site/period coverage, note missing minor dependencies; verify separate dataset licenses before republication.",
+      "source_ids": [
+        "GLOBAL-CSHAPES-2-LOC",
+        "GLOBAL-OHM-CC0"
+      ],
+      "gate": "No synthetic 1500s CShapes or assumption all British islands in dataset."
+    }
+  ],
+  "nonnegotiable": "No exact polygon, claimed seized hectares or year-end English area enters main without original source, proper military/status semantics, and historic GIS method review."
+}

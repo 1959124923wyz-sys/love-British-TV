@@ -1,0 +1,429 @@
+{
+  "schema": "ch6_crosscheck_1544_1550_v1",
+  "date": "2026-10-13",
+  "branch": "research/1540-1550-atlas-source-triangulation-20261013",
+  "against_current_main": {
+    "source": "data/military-control-points-1540-1549.geojson",
+    "yearend_points": 15,
+    "missing_sites_all_provisional": true
+  },
+  "policy": "Scholarly map POINT and text garrison status may trigger a new research candidate, not a retroactive year-end active military point without chronology. No speculative polygons, no whole-county English shading.",
+  "new_source_registry": [
+    {
+      "id": "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+      "title": "McNeill & MacQueen (eds.), An Atlas of Scottish History to 1707, maps pp127–128, 1996",
+      "type": "scholarly_printed_historical_map_with_historian_narrative",
+      "url": "https://books.socantscot.org/digital-books/catalog/book/25",
+      "indexed_transcription_url": "https://scotlandsplaces.gov.uk/digital-volumes/published-gazetteers-and-atlases/atlas-scottish-history-1707/atlas-scottish-history-1707?display=transcription",
+      "review": "Original page 127 indexed transcription and page 128 legend checked, original official 2026 digitization found, reproducing images subject to licence",
+      "reliable_for": [
+        "site identity",
+        "reported campaign stage",
+        "garrison network",
+        "coarse spatial placement"
+      ],
+      "not_reliable_for": [
+        "precise_1548_occupied_polygon",
+        "continuous year-end sovereignty",
+        "without verification ambiguous 1549 vs 1550 Broughty date"
+      ]
+    },
+    {
+      "id": "GB-OUP-WILLIAMS-LATER-TUDORS-1995-P40",
+      "title": "Penry Williams, The Later Tudors: England, 1547–1603, p.40 Map 6",
+      "type": "university_press_scholarship",
+      "url": "https://books.google.com/books?id=Njep2dFM6k0C",
+      "review": "Google Books catalogue confirms p40 preview listing; searchable book excerpt confirms Map 6 main garrisons and caution that garrisons are not imposition of English governance; do not digitize book cartography",
+      "reliable_for": [
+        "corroboration broad military garrison pattern",
+        "distinguish strategic intentions and effective civil administration"
+      ],
+      "not_reliable_for": [
+        "year-end military control area polygon without independent sources"
+      ]
+    },
+    {
+      "id": "SC-SHRG-LETHAM-2022-PRELIM-SURVEY",
+      "title": "Siege of Haddington Research Group, The Letham Gun Platform – Preliminary Site Visit, September 2022",
+      "type": "published_local_preliminary_archaeological_report",
+      "url": "https://haddingtonshistory.org.uk/files/2022/11/HHS-2008-The-Letham-Gun-Position-Prem-Survey-Report-v3.pdf",
+      "review": "Full 35-page PDF directly inspected including printed p4 figure1 and p26 conclusions: hypothetical garrison influence circle and planned forts, negative survey evidence for confirmed 16th century military occupation",
+      "reliable_for": [
+        "historical reconstruction discussion",
+        "citations to CSP Scotland",
+        "hypotheses and artillery-range NOT occupation"
+      ],
+      "not_reliable_for": [
+        "actual Tudor control perimeter",
+        "confirmed Letham battery archaeological site",
+        "proof that entire line to Edinburgh secure"
+      ]
+    },
+    {
+      "id": "SC-NLS-FLEET-ENGLISH-MAPS-1540S-2018",
+      "title": "National Library of Scotland, Chris Fleet, Scotland: Defending the Nation – Mapping the Military Landscape (2018)",
+      "type": "national_library_exhibition_research",
+      "url": "https://blog.nls.uk/scotland-defending-the-nation/",
+      "review": "Exact NLS text read: Richard Lee, Thomas Petit, John Elder, contemporary Eyemouth plan, earliest regional distance maps",
+      "reliable_for": [
+        "historic military maps existence and search targets"
+      ],
+      "not_reliable_for": [
+        "automatic GPS-ready line for 1548 occupied land"
+      ]
+    },
+    {
+      "id": "GB-BL-COTTON-AUGUSTUS-I-II-56",
+      "title": "British Library Cotton MS Augustus I ii 56, Edinburgh assault plan, probably Richard Lee",
+      "type": "official_original_manuscript_catalogue",
+      "url": "https://searcharchives.bl.uk/catalog/040-001101921",
+      "review": "BL catalogue confirms shelfmark, probable Richard Lee attribution; ?1544 at Exeter British Town Maps catalogue",
+      "reliable_for": [
+        "specific old military plan existence",
+        "Edinburgh attack planning at city scale"
+      ],
+      "not_reliable_for": [
+        "1548 east Lothian English year-end occupation polygons"
+      ]
+    },
+    {
+      "id": "SC-RCAHMS-DUMFRIES-1920-SUMMARY",
+      "title": "RCAHMS, Seventh Report and Inventory of Monuments and Constructions in County Dumfries (1920) historical summary",
+      "type": "historic_public_authority_county_monument_survey",
+      "url": "https://scotlandsplaces.gov.uk/digital-volumes/rcahms-archives/inventories/dumfries-1920?display=transcription",
+      "review": "Old transcription indexed: Dumfriesshire apparently all English on paper 1547; Castlemilk and Lochwood garrisoned while Caerlaverock and Lochmaben stayed Scottish then; royal assurances != occupation",
+      "reliable_for": [
+        "local cross-check and political-versus-actual distinctions"
+      ],
+      "not_reliable_for": [
+        "entire county English occupation polygon"
+      ]
+    },
+    {
+      "id": "SC-HES-BROUGHTY-STATEMENT-SIGNIFICANCE",
+      "title": "Historic Environment Scotland, Broughty Castle Statement of Significance",
+      "type": "official_heritage_site_history",
+      "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/8efce139-303d-49bf-a1af-b0ca00f35d92",
+      "review": "Official HES Broughty Castle Statement of Significance, p17: February 1550 French-Scottish artillery seized Balgillo Hill English new fort 800m north; Broughty garrison capitulated following day. Strong month-year HES evidence; day number not supplied by this document.",
+      "reliable_for": [
+        "site military custody chronology"
+      ],
+      "not_reliable_for": [
+        "museum environs as colonial area"
+      ]
+    },
+    {
+      "id": "GLOBAL-CLIOPATRIA-SESHAT-GIS",
+      "title": "Seshat Global History Databank, Cliopatria GeoJSON date-ranged polity dataset",
+      "type": "academic_global_historical_polity_geodata",
+      "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+      "license_url": "https://github.com/Seshat-Global-History-Databank/cliopatria/blob/main/LICENSE.md",
+      "review": "Actual upstream LICENSE.md fetched by GitHub: CC BY 4.0; polity polygons date ranges 3400BCE–2024CE coarse independent of wartime actual control",
+      "reliable_for": [
+        "global political backdrop indicative"
+      ],
+      "not_reliable_for": [
+        "specific 1548 British occupied Scotland corridor",
+        "every single year's surveyed precise boundaries"
+      ]
+    },
+    {
+      "id": "GLOBAL-CSHAPES-2-LOC",
+      "title": "CShapes 2.0, ETH Zurich; Library of Congress archival downloadable GIS dataset",
+      "type": "modern_sovereign_and_dependent_territory_polygons",
+      "url": "https://www.loc.gov/item/2023592015/",
+      "review": "LOC confirms 1886–2019 independent and dependent territorial polygons GeoJSON/CSV/SHP; not earlier 1500–1885, licence conditions of actual dataset to be reverified per download",
+      "reliable_for": [
+        "post-1886 polity/dependent region temporal backbone"
+      ],
+      "not_reliable_for": [
+        "Tudor military corridor",
+        "claims about 2020–2026 updated borders"
+      ]
+    },
+    {
+      "id": "GLOBAL-OHM-CC0",
+      "title": "OpenHistoricalMap historical OSM-like temporally labelled geographic database",
+      "type": "volunteer_contributed_historical_geodata",
+      "url": "https://www.openhistoricalmap.org/copyright",
+      "review": "Official licence CC0 by default, individual third-party ways may have tagged CC BY or BY-SA; coverage incomplete and cannot infer no garrison from absent way",
+      "reliable_for": [
+        "targeted forts and sites when source/date independently verified"
+      ],
+      "not_reliable_for": [
+        "fully complete precise 1500-present continuous empire GIS"
+      ]
+    },
+    {
+      "id": "GLOBAL-HISTORY-ATLAS-LWHITE-REPO",
+      "title": "Laurence White, history-atlas (Cliopatria-powered interactive world map)",
+      "type": "independent_software_secondary_visualisation",
+      "url": "https://github.com/laurencefwhite/history-atlas",
+      "review": "GitHub repo now public for code & methods; earlier colleague's implication that all code is non-open should be revised; must inspect upstream code license before reuse",
+      "reliable_for": [
+        "year-slicing and cartographic data pipelines as technical reference"
+      ],
+      "not_reliable_for": [
+        "independent Tudor fort site control evidence"
+      ]
+    }
+  ],
+  "garrison_gap_candidates": [
+    {
+      "id": "CH6-LOC-001",
+      "site": "Dumfries",
+      "region": "Southwest Scottish Borders",
+      "event_year": 1547,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "claim": "Atlas says an English army had garrisoned Dumfries by end-1547",
+      "confidence": "secondary_correlated_needs_garrison_ledger",
+      "risk": "Do not shade whole Dumfriesshire; 1920 RCAHMS distinguishes paper allegiance from actual Scottish castles",
+      "geometry_status": "no_authenticated_period_wall_or_border",
+      "map_action": "missing English garrison candidate Point, not currently in sixth main yearend layer",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-002",
+      "site": "Cockpool",
+      "region": "Southwest Scotland",
+      "event_year": 1547,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128"
+      ],
+      "claim": "Atlas states English garrison by end-1547",
+      "confidence": "independent_original_needed",
+      "risk": "Specific historic Cockpool castle/siege building exact identification and location must be verified",
+      "geometry_status": "unlocated",
+      "map_action": "stage missing location candidate, no pin yet",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-003",
+      "site": "Castlemilk",
+      "region": "Dumfriesshire",
+      "event_year": 1547,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "claim": "Atlas & RCAHMS cross corroborate Castlemilk turned over to English in Sept 1547, English-appointed captain",
+      "confidence": "two_secondary_source_lines_not_independent_archival_autograph",
+      "risk": "Modern Castlemilk Glasgow unrelated; do not invent Glasgow suburb point",
+      "geometry_status": "historic_castle_not_geolocated",
+      "map_action": "high-confidence 1547 English garrison candidate, no unchecked pin or area",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-004",
+      "site": "Lochwood",
+      "region": "Dumfriesshire",
+      "event_year": 1547,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "claim": "By end 1547 English garrison in Lochwood",
+      "confidence": "two_secondary_source_lines",
+      "risk": "Must identify actual Lochwood Tower locality not multiple Lochwood hamlets",
+      "geometry_status": "unverified precise location",
+      "map_action": "high-priority missing garrison candidate",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-005",
+      "site": "Saltoun",
+      "region": "East Lothian",
+      "event_year": 1548,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-SHRG-LETHAM-2022-PRELIM-SURVEY"
+      ],
+      "claim": "Atlas says captured during strengthening East Lothian English pale in 1548; SHRG says English-affiliated Saltoun fortification",
+      "confidence": "historical_episode_certain_yearend_uncertain",
+      "risk": "Other account of Regent Arran retaking Saltoun in Feb1548; may be MULTIPLE captures; end-1548 English occupancy NOT proven",
+      "geometry_status": "no_1548_polygon",
+      "map_action": "split capture and recovery episodes, no guaranteed 1548 yearend English purple",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-006",
+      "site": "Ormiston",
+      "region": "East Lothian",
+      "event_year": 1548,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-SHRG-LETHAM-2022-PRELIM-SURVEY"
+      ],
+      "claim": "English-aligned fortified house and episode of English capture 1548",
+      "confidence": "historic_claim_site_specific_endyear_unverified",
+      "risk": "Scottish Regent assault on Ormiston early 1548, later retake possible; avoid steady one-direction English control",
+      "geometry_status": "unknown",
+      "map_action": "archive month-by-month 1548 control episode",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-007",
+      "site": "Yester Castle",
+      "region": "East Lothian",
+      "event_year": 1548,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-SHRG-LETHAM-2022-PRELIM-SURVEY"
+      ],
+      "claim": "1548 English fortified/garrisoned under Somerset east Lothian advance",
+      "confidence": "two_historical_secondary_sources",
+      "risk": "Differ historic site Yester Castle vs Yester House, avoid modern manor footprint",
+      "geometry_status": "historic castle known general area precise wall_to_actual_control_unknown",
+      "map_action": "stage distinct fort garrison Point research",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-008",
+      "site": "Dalkeith",
+      "region": "Midlothian",
+      "event_year": 1548,
+      "source_ids": [
+        "SC-SHRG-LETHAM-2022-PRELIM-SURVEY"
+      ],
+      "claim": "SHRG reports Dalkeith included April1548 English fortification/garrison coercion campaign",
+      "confidence": "one_secondary_report_needs_CSP_crosscheck",
+      "risk": "How long English military held any specific castle must be verified; not Edinburgh city",
+      "geometry_status": "unknown",
+      "map_action": "archival review, no English 1548 year-end map footprint",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-009",
+      "site": "Balgillo",
+      "region": "North of Broughty, Firth of Tay",
+      "event_year": 1548,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-HES-BROUGHTY-STATEMENT-SIGNIFICANCE"
+      ],
+      "claim": "Atlas describes English modern fort at Balgillo; HES identifies northern outwork captured before Broughty surrender Feb1550",
+      "confidence": "site_context_confirmed_exact_construction_start_review",
+      "risk": "Atlas figure page 128 OCR seems Feb1549 at Balgillo/Broughty, conflicts with HES February1550; could be legend misalignment, MUST INSPECT printed figure",
+      "geometry_status": "fort_archaeology precision still open",
+      "map_action": "Add 1548-1550 construction/fort episode only after old atlas page-128 date-legend visual clarified; 1550 loss month now verified by HES official source.",
+      "archive_priority": "P0",
+      "confirmed_end_year": 1550,
+      "cross_validation_extra": "HES Broughty official SoS printed p17: February 1550 allied forces took English outwork at Balgillo Hill, 800m north of Broughty, castle garrison surrendered next day."
+    },
+    {
+      "id": "CH6-LOC-010",
+      "site": "Fast Castle",
+      "region": "Berwickshire coast",
+      "event_year": 1549,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128"
+      ],
+      "claim": "Atlas narrative says new English fort made at Fast Castle in 1549",
+      "confidence": "CONTESTED",
+      "risk": "Older Groome gazetteer describes English Fast Castle recaptured by Scots 1548; may be separate episodes or source error",
+      "geometry_status": "place known historic occupancy disputed",
+      "map_action": "Do NOT assert an English garrison at 1549 yearend until reconciled with original military letters",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-011",
+      "site": "Caerlaverock",
+      "region": "Dumfries",
+      "event_year": null,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "claim": "Atlas says English briefly held during 1544-46 Rough Wooing; RCAHMS says still Scottish in 1547",
+      "confidence": "distinct_episodes_year_uncertain",
+      "risk": "Do not transfer generic earlier occupation into 1547; old book explicitly contrasts castles Scottish 1547 with some temporarily English earlier",
+      "geometry_status": "castle known not old control perimeter",
+      "map_action": "date earlier 1544-46 temporary garrison if primary document supports",
+      "archive_priority": "P1",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-012",
+      "site": "Threave",
+      "region": "Galloway",
+      "event_year": null,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128"
+      ],
+      "claim": "Atlas says temporarily held English 1544–46",
+      "confidence": "secondary_only",
+      "risk": "No assigned same-year end/point yet",
+      "geometry_status": "existing historic site needs temporal research",
+      "map_action": "look for specific occupation chronology, do not automatically add year-end English",
+      "archive_priority": "P1",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-013",
+      "site": "Langholm",
+      "region": "Dumfriesshire",
+      "event_year": null,
+      "source_ids": [
+        "SC-ATLAS-MCNEILL-MACQUEEN-1996-127-128",
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "claim": "Atlas temporary English 1544–46; RCAHMS says Scottish Regent captured Langholm Tower July 1547",
+      "confidence": "date_rough_1547_Scottish_end_supported_secondary",
+      "risk": "Need original 1547 English site prior/after July and annual year-end status",
+      "geometry_status": "no warranted control area",
+      "map_action": "create temporally segregated capture/recovery episodes after CSP research",
+      "archive_priority": "P1",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-014",
+      "site": "Dumfries and southwest nobles",
+      "region": "Dumfriesshire",
+      "event_year": 1547,
+      "source_ids": [
+        "SC-RCAHMS-DUMFRIES-1920-SUMMARY"
+      ],
+      "claim": "Old official survey notes area on paper politically all English despite some Scottish castles; English client allegiance/political declarations diverged from forts",
+      "confidence": "documented_older_county_historiography",
+      "risk": "Do not color entire Dumfriesshire purple merely because lairds declared support to Edward",
+      "geometry_status": "no polygon",
+      "map_action": "political influence or declaration event, not colonial military conquest",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    },
+    {
+      "id": "CH6-LOC-015",
+      "site": "Letham proposed gun platform",
+      "region": "Haddington western approaches",
+      "event_year": 1548,
+      "source_ids": [
+        "SC-SHRG-LETHAM-2022-PRELIM-SURVEY"
+      ],
+      "claim": "2022 SHRG fieldwalk considered site might be sixteenth-century artillery/siegework; exact military function not confirmed",
+      "confidence": "NEGATIVE_ARCHAEOLOGICAL_CONFIRMATION",
+      "risk": "Report p26 explicitly found NO definitive evidence of 16th century military occupation; must not mark as established English battery",
+      "geometry_status": "unverified suspected historic siege battery",
+      "map_action": "archival hypothesis only; don't add military point and don't copy 1548 influence radius",
+      "archive_priority": "P0",
+      "confirmed_end_year": null
+    }
+  ],
+  "priorities": {
+    "P0": 12,
+    "P1": 3
+  },
+  "GIS_polygon_authorized": 0,
+  "manual_browser_or_original_16th_century_survey_verified": false
+}
