@@ -8,7 +8,7 @@ const geo=J('research/continuity/1770-1772-bengal-famine/COMPANY_TAX_GRAIN_AND_P
 const raw=J('research/18c/consolidated/series/T15.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,27);A.equal(idx.stories[25].id,s.id);A.equal(idx.stories[25].status,'research_preview');
+A.equal(idx.stories.length,28);A.equal(idx.stories[25].id,s.id);A.equal(idx.stories[25].status,'research_preview');
 A.equal(d.schema,'atlas-18c-t15-bengal-famine-original-letters-v1');A.equal(d.editorial_status,'research_preview_not_published');
 A.equal(d.events.length,26);A.equal(d.sources.length,22);
 A.equal(d.sources.filter(x=>x.original_registry_key?.startsWith('B:')).length,7);
@@ -50,7 +50,7 @@ A.deepEqual(new Set(links),new Set(s.related_event_ids));A.deepEqual(new Set(lin
 A.equal(geo.transitions.length,26);
 A(geo.transitions.every(x=>x.polygon_allowed===false&&x.area_sqkm===null&&x.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t15-bengal-famine-tax-1770-1772.json'"));
-A(app.includes('t15Famine26Ready=true'));A(reader.includes('draft.stories?.length===27'));
+A(app.includes('t15Famine26Ready=true'));A(reader.includes('draft.stories?.length===28'));
 A(reader.includes("storyMeta.has('E18-T15-BENGAL-FAMINE-TAX-PEASANT-PETITIONS-1770-1772')"));
 A(html.includes('18c26-t15-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
