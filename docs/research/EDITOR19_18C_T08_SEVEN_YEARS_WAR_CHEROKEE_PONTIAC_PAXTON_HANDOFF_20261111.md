@@ -1,6 +1,6 @@
 # 主编19第二十二批｜T08 七年战争、英国军事殖民、Cherokee焚村、Fort Pitt天花毯子和Paxton屠杀
 
-编审时间：2026-11-11。新分支 `map/18c-t08-seven-years-war-cherokee-pontiac-paxton-land-1740-1775-20261111`，严格继承第二十一批Draft PR #316的22世纪研究前端与原20批累积作品；正式main不变。
+编审时间：2026-11-11。新分支 `map/18c-t08-seven-years-war-cherokee-pontiac-paxton-land-1740-1775-20261111`，严格继承第二十一批Draft PR #316的18世纪研究预览前端与原20批累积作品；正式main不变。
 
 ## 一、GitHub现存研究底稿完整继承
 
@@ -26,7 +26,7 @@
 - 现代Montréal(45.50884,-73.58781)、Detroit(42.33143,-83.04575)、Pittsburgh(40.44062,-79.99589)、Lancaster(40.03788,-76.30551)仅现代具名城市代表点，有GeoNames完整链接。并非1759战场、1763Fort Pitt历史毯子交接地点或Lancaster牢房精确位置。其余堡垒、历史条约线、侵掠路线无依据则lat/lng=null。
 - **0英国新增实际控制多边形、0虚构军事路线、0借王室条约面积推导实际英占面积、0无来源直接屠杀死亡估算。** 暂不填实色；待真正历史边界地图及考古原坐标出现才讨论虚线示意。
 - `research/continuity/1740-1775-seven-years/BRITISH_WAR_INDIGENOUS_LAND_TRANSITIONS.json`逐条登记军事、殖民外交、独立原住民社群主体，严格 `polygon_allowed:false` 和面积null。
-- 1763 Conestoga两次屠杀6+14=20明确实际死亡；1759英国Rogers袭村约30是加拿大军史综述估计；1763小儿麻痹/天花毯子造成的直接死亡人数未知，保持null。
+- 1763 Conestoga两次屠杀6+14=20明确实际死亡；1759英国Rogers袭村约30是加拿大军史综述估计；1763天花病院毯子造成的直接死亡人数未知，保持null。
 
 ## 四、测试标准与上线边界
 
