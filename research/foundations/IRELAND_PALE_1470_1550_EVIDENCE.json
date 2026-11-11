@@ -1,0 +1,182 @@
+{
+  "dataset_id": "pale-1490s-control-research-v0.1",
+  "prepared": "2026-10-11",
+  "publication_status": "archival-research-only",
+  "polygons_approved": 0,
+  "region": "late-medieval English lordship in Ireland / the English Pale",
+  "time_window": {
+    "from": 1470,
+    "to": 1550,
+    "focus": [
+      1490,
+      1500
+    ]
+  },
+  "lead_sources": [
+    {
+      "id": "ELLIS-PALE-BOOK",
+      "author": "Steven G. Ellis",
+      "title": "Ireland's English Pale, 1470–1550: The Making of a Tudor Region",
+      "publisher": "Boydell & Brewer; Cambridge Core hosting",
+      "publication_year": 2021,
+      "online_date": "2024-01-09",
+      "url": "https://www.cambridge.org/core/books/irelands-english-pale-14701550/75C7AB64DF6AAF406B9544F2D2BCDCFA/listing",
+      "access": "summaries_public; full chapters institution subscription may be required"
+    },
+    {
+      "id": "ELLIS-PALE-CH1",
+      "author": "Steven G. Ellis",
+      "title": "The horizons of English rule: retreat and recovery",
+      "year": 2021,
+      "chapter": 1,
+      "doi": "10.1017/9781800104068.003",
+      "url": "https://www.cambridge.org/core/books/abs/irelands-english-pale-14701550/horizons-of-english-rule-retreat-and-recovery/6749412C475B45C10232E1EE95406703",
+      "access": "chapter abstract read; complete chapter not checked"
+    },
+    {
+      "id": "ELLIS-PALE-CH2",
+      "author": "Steven G. Ellis",
+      "title": "The fortifications and identity of a military frontier",
+      "year": 2021,
+      "chapter": 2,
+      "doi": "10.1017/9781800104068.004",
+      "url": "https://www.cambridge.org/core/books/abs/irelands-english-pale-14701550/fortifications-and-identity-of-a-military-frontier/75B0338A9C26F63D69DAC1B3A843B992",
+      "access": "chapter abstract read; complete chapter not checked"
+    },
+    {
+      "id": "ELLIS-PALE-CH3",
+      "author": "Steven G. Ellis",
+      "title": "County Dublin and the military frontier",
+      "year": 2021,
+      "chapter": 3,
+      "doi": "10.1017/9781800104068.005",
+      "url": "https://www.cambridge.org/core/books/abs/irelands-english-pale-14701550/county-dublin-and-the-military-frontier/F06181BE84BE8537BE3B304D87FD1DEC",
+      "access": "chapter abstract read; complete chapter not checked"
+    },
+    {
+      "id": "MAGINN-MARCHER",
+      "author": "Christopher Maginn",
+      "title": "English marcher lineages in south Dublin in the late middle ages",
+      "publisher": "Irish Historical Studies / Cambridge Core",
+      "year": 2016,
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/english-marcher-lineages-in-south-dublin-in-the-late-middle-ages/3DBA700493DAC994C8669BD31E3504A1",
+      "access": "abstract read; full paper not checked"
+    },
+    {
+      "id": "TNA-IRELAND-GUIDE",
+      "author": "The National Archives",
+      "title": "State Papers Ireland 1509–1782",
+      "year": null,
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-ireland-1509-1782",
+      "access": "guide read, coverage after 1509"
+    }
+  ],
+  "claims": [
+    {
+      "id": "PALE-1495-STATUTE",
+      "claim_zh": "1495年爱尔兰议会以防御“四个服从王权的郡”为由规定修筑壕沟等工事，并出现 English Pale 的明确称呼。",
+      "date_precision": "year",
+      "start_year": 1495,
+      "end_year": 1495,
+      "claim_type": "law/administrative_reference",
+      "source_ids": [
+        "ELLIS-PALE-CH1"
+      ],
+      "review_status": "secondary_academic_abstract_checked",
+      "point_or_polygon": "none"
+    },
+    {
+      "id": "PALE-FOUR-SHIRES",
+      "claim_zh": "所谓四个受服从郡是都柏林、米斯、基尔代尔和劳斯的历史建制范围，但其法律管辖与实际控制范围均不等于今天四郡的地图边界。",
+      "date_precision": "period",
+      "start_year": 1470,
+      "end_year": 1550,
+      "claim_type": "historic_geography",
+      "source_ids": [
+        "ELLIS-PALE-CH1"
+      ],
+      "review_status": "secondary_academic_abstract_checked",
+      "point_or_polygon": "none"
+    },
+    {
+      "id": "PALE-1515-PARTIAL-CONTROL",
+      "claim_zh": "Ellis援引1515年的都铎时期政策报告指出四郡只有约半数地区受到英王法律管辖；这是1515年文献指称，不能简单套到1490年的精确面积。",
+      "date_precision": "year",
+      "start_year": 1515,
+      "end_year": 1515,
+      "claim_type": "extent_qualitative",
+      "source_ids": [
+        "ELLIS-PALE-CH1"
+      ],
+      "review_status": "secondary_academic_abstract_checked_requires_original_1515_text",
+      "point_or_polygon": "none"
+    },
+    {
+      "id": "PALE-1488-FRONTIER",
+      "claim_zh": "1488年一条地方防御边界涉及 Ballymore Eustace、Rathmore、Kilteel、Saggart、Tallaght 一带，属于局部防御地段的历史线索，而非完整 Pale 闭合疆界。",
+      "date_precision": "year",
+      "start_year": 1488,
+      "end_year": 1488,
+      "claim_type": "partial_frontier_anchor_sequence",
+      "source_ids": [
+        "ELLIS-PALE-CH3"
+      ],
+      "review_status": "secondary_academic_abstract_checked",
+      "point_or_polygon": "none",
+      "mentioned_places": [
+        "Ballymore Eustace",
+        "Rathmore",
+        "Kilteel",
+        "Saggart",
+        "Tallaght"
+      ]
+    },
+    {
+      "id": "PALE-MILITARY-DIFF",
+      "claim_zh": "都柏林南侧边缘出现守备工事、边地与反复争夺的地域；地形和土地利用影响了军事控制范围。",
+      "date_precision": "period",
+      "start_year": 1400,
+      "end_year": 1550,
+      "claim_type": "territorial_heterogeneity",
+      "source_ids": [
+        "ELLIS-PALE-CH2",
+        "ELLIS-PALE-CH3"
+      ],
+      "review_status": "secondary_academic_abstract_checked",
+      "point_or_polygon": "none"
+    },
+    {
+      "id": "PALE-1490S-INDIGENOUS-AUTONOMY",
+      "claim_zh": "1490年代都柏林南侧与伦斯特高地存在 O'Toole、O'Byrne、MacMurrough-Kavanagh 等盖尔领主势力，限制英方对于名义辖区内外地域的实际控制。",
+      "date_precision": "decade",
+      "start_year": 1490,
+      "end_year": 1499,
+      "claim_type": "competing_authority",
+      "source_ids": [
+        "ELLIS-PALE-CH3"
+      ],
+      "review_status": "secondary_academic_abstract_checked",
+      "point_or_polygon": "none"
+    }
+  ],
+  "conclusions": [
+    "Safe: a bounded area of English royal influence existed around Dublin and four obedient shires at end 15th century.",
+    "Unsafe: filling entire island of Ireland or all modern Dublin/Meath/Kildare/Louth counties.",
+    "Unsafe: computing area fraction based on 1515 'half' without historical geometry and denominators.",
+    "Not yet enough evidence to reconstruct a closed Pale political-control polygon for 1490–1500.",
+    "Next: identify primary statute 1488 and 1495; review full Ellis chapters and corroborating cartography; only then provisional dashed segment."
+  ],
+  "boundary": {
+    "geojson": null,
+    "coordinate_precision": "not_geocoded",
+    "provisional_line": null,
+    "reason": "Some anchors listed in abstract but not complete or georeferenced historical line"
+  },
+  "open_questions": [
+    "1495 law original manuscript citation and parliamentary edition",
+    "1488 law original text and geometry of all frontier segments",
+    "What independent 1490s tax/court/provisioning records provide local effectiveness?",
+    "Whether modern toponyms match historical places without ambiguity",
+    "TNA SP series starts 1509 and cannot substitute contemporaneous late-15th-c documents"
+  ]
+}

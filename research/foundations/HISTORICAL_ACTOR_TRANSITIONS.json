@@ -1,0 +1,85 @@
+{
+  "id": "british-entity-and-governance-transitions-v1",
+  "created": "2026-10-11",
+  "status": "source-backed chronology; NOT territorial polygon layer",
+  "notes": [
+    "A shared monarch is not a single unified government; no retroactive UK label.",
+    "Transfer of authority for one colony/company is not equivalent to all colonial territories being administered identically.",
+    "Ireland’s political relationship cannot be accurately coded by modern border fills across the whole timeline.",
+    "A historical year tag is not the same as a full-year effective-control claim."
+  ],
+  "events": [
+    {
+      "id": "entity-1600-eic-charter",
+      "date": "1600-12-30",
+      "date_precision": "day",
+      "name_zh": "伊丽莎白一世授予东印度公司贸易特许状",
+      "change": "corporate_trade_rights",
+      "before": "English private merchants",
+      "after": "East India Company chartered under Crown of England",
+      "source_url": "https://searcharchives.bl.uk/catalog/036-000178601",
+      "assertion": "Company established as legally privileged trader, NOT automatically exercising territorial control over India.",
+      "map_action": "no_polygon_from_charter"
+    },
+    {
+      "id": "entity-1603-crowns",
+      "date": "1603",
+      "date_precision": "year",
+      "name_zh": "英格兰与苏格兰共戴一位君主",
+      "change": "personal_union_only",
+      "before": "Kingdom of England and Kingdom of Scotland separate monarchs",
+      "after": "Separate kingdoms sharing one monarch",
+      "source_url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/union-of-the-crowns/",
+      "assertion": "Parliaments and constitutions remained distinct; neither all Scottish colonial enterprise nor English laws can be relabelled simply 'UK'.",
+      "map_action": "keep_separate_polities"
+    },
+    {
+      "id": "entity-1707-union",
+      "date": "1707-05-01",
+      "date_precision": "day",
+      "name_zh": "英格兰与苏格兰王国组成大不列颠王国",
+      "change": "state_union",
+      "before": "Kingdom of England; Kingdom of Scotland",
+      "after": "Kingdom of Great Britain",
+      "source_url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/",
+      "assertion": "State level changed by statutory union; colonial control geometry still needs each colony's own historical evidence.",
+      "map_action": "switch_actor_identity_not_territorial_polygon"
+    },
+    {
+      "id": "entity-1801-irish-union",
+      "date": "1801-01-01",
+      "date_precision": "day",
+      "name_zh": "大不列颠与爱尔兰议会联合生效",
+      "change": "state_union",
+      "before": "Kingdom of Great Britain and Kingdom of Ireland",
+      "after": "United Kingdom of Great Britain and Ireland",
+      "source_url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/collections/ireland/act-of-union-1800/",
+      "assertion": "Parliamentary incorporation legal change, not evidence that everyone or every rural district obeyed identical central administration.",
+      "map_action": "switch_actor_identity_not_territorial_polygon"
+    },
+    {
+      "id": "entity-1858-india-rule",
+      "date": "1858",
+      "date_precision": "year",
+      "name_zh": "印度主要公司统治权移交英国王室",
+      "change": "administration_transfer",
+      "before": "East India Company governments in territories under its administration",
+      "after": "Crown government of India",
+      "source_url": "https://hansard.parliament.uk/commons/1858-06-17/debates/37564106-0039-4b5f-9af3-805464f7a721/GovernmentOfIndia",
+      "assertion": "Transfer of government and revenues of Company territories to Crown; other princely states and treaties must be categorized separately.",
+      "map_action": "change_control_actor_and_type_only_where_evidenced"
+    },
+    {
+      "id": "entity-1922-irish-free-state",
+      "date": "1922-12-06",
+      "date_precision": "day",
+      "name_zh": "爱尔兰自由邦根据1921年条约成立",
+      "change": "dominional_self_government",
+      "before": "UK and differing governance in Irish jurisdictions",
+      "after": "Irish Free State, a Dominion, with Northern Ireland distinct and treaty-retained British port rights",
+      "source_url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9260/",
+      "assertion": "Avoid simplistic instant fully independent map of the whole island in 1921; treaty effect and constitutional form differ.",
+      "map_action": "review_separate_control_episodes"
+    }
+  ]
+}
