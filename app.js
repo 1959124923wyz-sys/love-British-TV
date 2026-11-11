@@ -248,6 +248,7 @@ let frontier17Ready=false;
 let garifuna18cReady=false;
 let fedon19Ready=false;
 let t11Slavery20Ready=false;
+let t09Tuscarora21Ready=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -3135,6 +3136,36 @@ async function boot(){
     for(const src of ds.sources||[])sourcesById.set(src.id,src);
     t11Slavery20Ready=true;
    }catch(err){console.warn('T11 excluded: all 19 previous research stories intact',err);}
+  }
+
+  // Twenty-first T09: British colonial Indian slavery, Tuscarora burned forts, Yamasee anti-colonial war.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t09-tuscarora-yamasee-1702-1732.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T09 original indigenous research missing');
+    const ds=await res.json(),e=ds.events||[],sources=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t09-tuscarora-yamasee-captivity-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==23||
+       ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_A_keys!==9||
+       ds.provenance?.mapped_original_ids!==8||ds.provenance?.deferred_original_ids?.length!==1||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.year!==x.start_year||x.year!==x.end_year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sources.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T09 rejected unreviewed indigenous colonial border and enslavement data');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T09 duplicate event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyone-tuscarora-yamasee-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t09Tuscarora21Ready=true;
+   }catch(err){console.warn('T09 excluded; previous 20 stories intact',err);}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
