@@ -56,7 +56,7 @@ A(E('1750-MONTGOMERY-SALE').description.includes('1750年3月9'));
 A(E('1756-APR21-JAMIE-ESCAPE').description.includes('4月21'));
 A(E('1757-JAN4-CASE-NEVER-HEARD').description.includes('1月4'));
 A(E('1769-SEP1-SPENS-BAPTISM').description.includes('9月1'));
-A(E('1770-SPENS-RELEASE').description.includes('未裁决'));
+A(E('1770-SPENS-RELEASE').description.includes('诉讼中止'));
 A(E('1772-JUN22-SOMERSET').description.includes('6月22'));
 A(E('1778-JAN15-KNIGHT-VERDICT').description.includes('10对4'));
 A(E('1790-AUG6-GEORGE-DALE').description.includes('8月6'));
