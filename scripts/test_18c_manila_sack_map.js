@@ -11,7 +11,7 @@ const d=load('data/stories/serial/chronology-preview-manila-1700-1799.json'),
 const crosswalk=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),reader=read('js/history-stories.js'),css=read('css/history-stories.css'),html=read('index.html');
 assert.equal(chapters.chapters.at(-1).end,1599);
-assert.equal(idx.stories.length,25);assert.equal(idx.stories[10].id,a.id);
+assert.equal(idx.stories.length,26);assert.equal(idx.stories[10].id,a.id);
 assert.equal(a.id,'E18-T22-MANILA-INVASION-SACK-RANSOM-1762-1764');
 assert.equal(a.publication_status,'research_only');assert.equal(a.publication_approval,'not_submitted');
 assert.equal(a.editorial_status,'research_preview_not_published');
@@ -97,7 +97,7 @@ assert.deepEqual(new Set(linked),new Set(a.related_event_ids));
 assert.deepEqual(new Set(linked),new Set(idx.stories[10].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-manila-1700-1799.json'"));
 assert(app.includes('manila18cReady=true'));
-assert(reader.includes('draft.stories?.length===25'));
+assert(reader.includes('draft.stories?.length===26'));
 assert(reader.includes("storyMeta.has('E18-T22-MANILA-INVASION-SACK-RANSOM-1762-1764')"));
 assert(html.includes('18c12-cape-indigenous-resistance-20261110'),'Latest script remains cached freshly without reverting Manila links');
 assert(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc'));
