@@ -8,7 +8,7 @@ const geo=J('research/continuity/1700-1792-hudson-bay/BRITISH_HBC_BEOTHUK_DENE_C
 const raw=J('research/18c/consolidated/series/T13.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=read('app.js'),reader=read('js/history-stories.js'),html=read('index.html'),css=read('css/history-stories.css');
 const cross=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,25);A.equal(idx.stories[24].id,story.id);A.equal(idx.stories[24].status,'research_preview');
+A.equal(idx.stories.length,26);A.equal(idx.stories[24].id,story.id);A.equal(idx.stories[24].status,'research_preview');
 A.equal(d.schema,'atlas-18c-t13-hbc-beothuk-dene-cree-fur-trade-v1');
 A.equal(d.editorial_status,'research_preview_not_published');
 A.equal(d.events.length,29);A.equal(d.sources.length,39);
@@ -59,7 +59,7 @@ A.deepEqual(new Set(links),new Set(idx.stories[24].event_ids));
 A.equal(geo.transitions.length,29);
 A(geo.transitions.every(e=>e.polygon_allowed===false&&e.area_sqkm===null&&e.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t13-hbc-beothuk-dene-1700-1792.json'"));
-A(app.includes('t13Hudson25Ready=true'));A(reader.includes('draft.stories?.length===25'));
+A(app.includes('t13Hudson25Ready=true'));A(reader.includes('draft.stories?.length===26'));
 A(reader.includes("storyMeta.has('E18-T13-HBC-NEWFOUNDLAND-BEOTHUK-DENE-CREE-1700-1792')"));
 A(html.includes('18c25-t13-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
