@@ -125,7 +125,7 @@ assert(app.includes('active18cBengalCoreIds:()'));
 assert(app.includes('active18cContinuityIds:()'));
 assert(app.includes('...serialPreviewByDecade.values()'));
 assert(app.includes("serialPreviewAtlas?Math.min(1699"),'ordinary 17th century cap must survive');
-assert(reader.includes("draft.stories?.length===27")&&reader.includes('for(const item of draft.stories)registerStory'));
+assert(reader.includes("draft.stories?.length===28")&&reader.includes('for(const item of draft.stories)registerStory'));
 assert(reader.includes("article.id==='E6-T12'"),'predecessor EIC narrative must link to Bengal follow-up');
 assert(html.includes('js/history-stories.js')&&html.includes('app.js?'));
 console.log('PASS 18C Bengal: 17 independent dated events, 15 modern site references, 7 high priority; 15 sections, '+links+' verified inline links; 1756 old fort loss, 1757 regain, 1765 fiscal authorization not geographic annexation; 1700 27 reference audit, 7 actors, 10 annual research frames, zero territorial polygons');
