@@ -331,3 +331,19 @@
 - [x] 26篇索引、原B候审与ZIP/1126审计、严格GIS、25旧专题静态及真实桌面Chromium、发布16世纪数据回归、公开网页资产验证都写入独立Actions工作流。
 - [x] [第26批完整编辑交接](../../docs/research/EDITOR19_18C_T15_BENGAL_FAMINE_RANGPUR_PURNIA_TAX_HANDOFF_20261111.md)。
 - [ ] 1772 Purnea农民控诉的原审判全文、原1770-05-09伦敦书信页号、分区实际人口损失和公司预算核定待后续独立核证；最新HEAD GitHub三个专项job全部success后才能认定终验。
+
+## 2026-11-11｜主编19第二十七批 T16 英国孟加拉永久地税、强制拍卖与Adivasi—paik地权反抗
+
+- [x] GitHub原主编15 T16 **6组合并研究、8件原始候审、10个B注册史料键**完整继承到独立具年Atlas事件，原1126条crosswalk及原不可变ZIP不修改。
+- [x] 29条具年份历史事件、29项来源记录、29章87段实质中文专题、29个一对一正文—地图链接、29项税收法律/地方抵抗行为者台账，加入27篇18世纪研究预览索引并保留前26批。
+- [x] 1762年英国公司三年公开竞卖Burdwan财政承包有1918年法院回溯早期第五报告独立核证，原候审提Midnapore同年竞价未得独立足够佐证，保留缺口不伪造。
+- [x] 1770—1771饥荒Rajshahi征税核定2676000卢比、实际收款2146247卢比，逐税区/财政年度分口径，不当全孟加拉税额。
+- [x] 1773年Stuart英军Press List报告对Baikunthpur及Darap Deo、Sannyasi的武力镇压，2月15日仅为文书记录日，原卷缺失、实际驻防时间未知。
+- [x] 1781—1786税务委员会与1786 Board of Revenue重组基于西孟加拉邦国家档案目录，不凭旧1783卷宗单独宣称机构确切成立日。
+- [x] 1789—1792十年地税程序逐地历史延续；1793年3月22日公告、5月1日Regulation I立法分开，精确核印度政府Regulation I原条。
+- [x] **1793 Article VI明示旱洪不可申请减免地税、欠缴可拍卖全部或部分地产**。与固定地主对公司jama、raiyat耕作者独立租佃权、Regulation VIII细则分层写入，未编造已拍卖面积。
+- [x] **1799 Midnapore Jungle Mahals Adivasi、sirdar、paik及农民联合反抗殖民当局已收回的jagir土地**，对殖民旧词Chuar明确标为含歧视称呼，具体英军杀戮数保持null。
+- [x] 只有11个现代Bardhaman、Rajshahi、Jalpaiguri、Kolkata、Medinipur地名参考位置。0新英国未经确认实际占领Polygon、0假历史路线、0从税账推断英公司净利润、0未证受害人数。
+- [x] 新建26前辈全部静态测试兼容第27故事及本批独立法律/原B注册键/1126审计，并增1780×1020实桌面Chromium互跳/双击档案/返回、公开GitHub研究预览专项Actions。
+- [x] [第27批编审交接全文及29项具体来源](../../docs/research/EDITOR19_18C_T16_PERMANENT_SETTLEMENT_ADIVASI_PAIK_HANDOFF_20261111.md)。
+- [ ] 1762 Midnapore同制证据、1799逐村jagir收回原文件及武装死者清册、1793公司实际地权拍卖土地数量待后续调查；最新HEAD三项独立Actions都成功才宣告最终验收。

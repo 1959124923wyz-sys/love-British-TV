@@ -8,7 +8,7 @@ const geo=J('research/continuity/1702-1741-north-america-slavery/COLONIAL_LAW_RE
 const original=J('research/18c/consolidated/series/T11.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,26);A.equal(idx.stories[19].id,story.id);A.equal(idx.stories[19].status,'research_preview');
+A.equal(idx.stories.length,27);A.equal(idx.stories[19].id,story.id);A.equal(idx.stories[19].status,'research_preview');
 A.equal(data.schema,'atlas-18c-t11-slavery-laws-resistance-v1');A.equal(data.editorial_status,'research_preview_not_published');
 A.equal(data.events.length,26);A.equal(data.sources.length,47);
 A.equal(data.sources.filter(s=>s.original_registry_key?.startsWith('A:')).length,21);
@@ -44,7 +44,7 @@ A.deepEqual(new Set(links),new Set(story.related_event_ids));A.deepEqual(new Set
 A.equal(geo.transitions.length,26);
 A(geo.transitions.every(e=>e.polygon_allowed===false&&e.area_sqkm===null&&e.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t11-slavery-law-resistance-1702-1741.json'"));
-A(app.includes('t11Slavery20Ready=true'));A(reader.includes('draft.stories?.length===26'));
+A(app.includes('t11Slavery20Ready=true'));A(reader.includes('draft.stories?.length===27'));
 A(reader.includes("storyMeta.has('E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741')"));
 A(html.includes('18c20-t11-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
