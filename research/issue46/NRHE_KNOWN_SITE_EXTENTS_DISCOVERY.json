@@ -1,0 +1,25 @@
+{
+  "schema": "issue46_nrhe_site_extent_discovery_v1",
+  "observed_date_utc": "2026-10-14",
+  "official_source_url": "https://www.trove.scot/explore/datasets/national-record-of-the-historic-environment-data-for-download",
+  "method": "GitHub runner fetched HTML and parsed hyperlinks only",
+  "purpose": "Locate separately surveyed extent dataset, distinct from HES legal scheduled monument polygons",
+  "candidate_sites": [
+    {
+      "nrhe": 58412,
+      "name": "Roxburgh Castle"
+    },
+    {
+      "nrhe": 58903,
+      "name": "Dunglass French Camp"
+    }
+  ],
+  "known_site_extent_geometry_obtained": false,
+  "verified_1547_1550_occupied_area_count": 0,
+  "legal_status": "NRHE area polygons have no legal designation status, unlike HES SM1718/SM3190/SM3191",
+  "historic_footprint_certified": false,
+  "downloads": [],
+  "retrieval_status": "source_page_not_readable_in_runner",
+  "error_type": "HTTPError",
+  "error_text": "HTTP Error 403: Forbidden"
+}

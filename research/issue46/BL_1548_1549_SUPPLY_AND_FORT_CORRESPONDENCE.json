@@ -1,0 +1,130 @@
+{
+  "schema": "issue46_british_library_hamilton_papers_source_index_v1",
+  "updated": "2026-10-14",
+  "title": "1548–1549 contemporary English garrison supply and correspondence evidence",
+  "source_archive": "British Library, Add MS 32657 (Hamilton Papers, Volume 12)",
+  "source_catalogue_url": "https://searcharchives.bl.uk/catalog/040-002026717",
+  "companion_transcripts": "British Library Add MS 33256, ff.104–133 (copies relating to Haddington siege 1548; original in Add MS32657)",
+  "companion_transcripts_url": "https://searcharchives.bl.uk/catalog/040-002027422",
+  "research_method": "Read only official online catalogue descriptions; original handwritten folio, actual victual quantities and letter bodies have NOT been inspected",
+  "original_manuscripts_read": false,
+  "direct_geo_polygon_boundary_attested": false,
+  "potential_network_evidence_for_year_1548": [
+    {
+      "ref": "ff. 4r–6v",
+      "record_date": "1548-07-02",
+      "document_kind": "ciphered letter from Haddington governor Sir James Wilford to William Grey",
+      "site": "Haddington",
+      "what_catalogue_proves": "Haddington governor authored correspondence from place on dated day",
+      "geospatial_role": "dated fortified place presence, no area",
+      "old_style_date_note": "catalogue dates [1548]"
+    },
+    {
+      "ref": "ff. 28r–32v",
+      "record_date": "1548-07-20",
+      "document_kind": "George Stonehouse letter to Somerset with lists of victuals delivered",
+      "sites_from_catalogue": [
+        {
+          "place": "Louther Castle (Lauder context)",
+          "commander": "Sir Hugh Willoughbie",
+          "site_link_note": "Identification Louther/Lauder requires source crosswalk, not modern generic palace polygon"
+        },
+        {
+          "place": "Eyemouth",
+          "commander": "Thomas Gower"
+        },
+        {
+          "place": "Roxburgh Castle",
+          "commander": "Robert Crouche (lieutenant)"
+        },
+        {
+          "place": "Hume Castle",
+          "commander": "Edward Dudley"
+        },
+        {
+          "place": "Berwick",
+          "commander": null
+        },
+        {
+          "place": "William Grey's forces",
+          "commander": "William Grey",
+          "exact_station": null
+        }
+      ],
+      "what_catalogue_proves": "A July 1548 victual delivery list explicitly names officers and locations supporting multiple English strongpoints",
+      "geospatial_role": "fort nodes + dated logistics network existence; no verified original road routes and no territorial area",
+      "do_not_infer": "Actual quantities, independent base positions, precise supply paths or year-end English control cannot be concluded without the original ledger"
+    },
+    {
+      "ref": "ff. 45r–46v",
+      "record_date": "1548-08-16",
+      "document_kind": "Ralph Bulmer letter from Roxburgh to Somerset",
+      "site": "Roxburgh",
+      "geospatial_role": "date-specific garrison command correspondence"
+    },
+    {
+      "ref": "ff. 56r–58v",
+      "record_date": "1549-01-20",
+      "original_catalogue_date": "1548/9-01-20",
+      "document_kind": "Ralph Bulmer letter from Roxburgh to Somerset",
+      "site": "Roxburgh",
+      "geospatial_role": "January 1549 source; provides a cross-year control episode but not proven Jan–Dec continuous or occupied area"
+    },
+    {
+      "ref": "ff. 63r–64v",
+      "record_date": "1549-01-24",
+      "original_catalogue_date": "1548/9-01-24",
+      "document_kind": "Ralph Bulmer letter from Roxburgh to Somerset",
+      "site": "Roxburgh",
+      "geospatial_role": "second January 1549 fort correspondence"
+    },
+    {
+      "ref": "ff. 52r–53v",
+      "record_date": "1549-01-17",
+      "original_catalogue_date": "1548/9-01-17",
+      "document_kind": "John Brende, Surveyor of Works in the North to Somerset, sent from Berwick",
+      "site": "Berwick",
+      "geospatial_role": "map/garrison engineering source lead, actual page needed"
+    },
+    {
+      "ref": "ff. 54r–55v",
+      "record_date": "1549-01-19",
+      "original_catalogue_date": "1548/9-01-19",
+      "document_kind": "John Brende to Somerset, from Newcastle",
+      "site": "Newcastle",
+      "geospatial_role": "works and financing potential source lead, exact content not yet read"
+    }
+  ],
+  "additional_related_orig_src": {
+    "ref": "BL Add MS 33256 ff.104–133",
+    "description": "1548 transcripts of original Scotland / Haddington letters; possible independent reading path",
+    "status": "catalogue_verified_content_not_read"
+  },
+  "archival_targets": [
+    {
+      "ref": "Add MS 32657 ff.28r–32v",
+      "priority": "P0",
+      "request": "Dated 20 July 1548 victualling quantities, site names, possibly paths or territorial controls; reproduce only with permission"
+    },
+    {
+      "ref": "Add MS 32657 ff.45r–46v; ff.56r–58v; ff.63r–64v",
+      "priority": "P0",
+      "request": "Read captain Bulmer's 1548-08 and 1549-01 source positions and fort engineering details; do not claim signed/actual land boundary without mapped statements"
+    },
+    {
+      "ref": "Add MS 33256 ff.104–133",
+      "priority": "P1",
+      "request": "Find extant transcriptions of same original Haddington siege correspondence to improve access"
+    }
+  ],
+  "note_on_old_style_calendar": "Catalogue years written [1548/9] for January refer to Gregorian-numbered year 1549 in normal modern annual map; actual Julian/Gregorian calendar conversion of day/month not attempted. Do not annotate exact modern day without calendar audit.",
+  "display_contract": {
+    "map_points_allowed_after_editor_source_validation": true,
+    "route_line_geometry_allowed": false,
+    "war_occupied_polygons_justified": false,
+    "medieval_road_inference_forbidden": true,
+    "hume_recovery_date_requires_separate_sources": true,
+    "political_sovereignty_scotland": "Independent Kingdom of Scotland"
+  },
+  "source_citation": "British Library. Add MS 32657, official archives and manuscripts catalogue, folio-level metadata; consulted 2026-10-14"
+}

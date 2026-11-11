@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Issue #46｜英苏战争堡垒考古地理证据研究预览</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root{color-scheme:dark;font-family:"Noto Sans SC","Microsoft Yahei",system-ui,sans-serif}
+  body{margin:0;background:#0c1724;color:#e9f0fc}
+  header{max-width:1300px;margin:auto;padding:14px 20px}
+  h1{font-size:18px;margin:0 0 7px}
+  p{font-size:13px;line-height:1.5;margin:4px 0}
+  #layout{max-width:1300px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:14px;padding:0 16px 16px}
+  #map{height:min(75vh,750px);min-height:510px;border:1px solid #3a506b;border-radius:12px}
+  aside{border:1px solid #3a506b;border-radius:12px;padding:15px;line-height:1.55}
+  label{display:block;margin:12px 0}
+  input{width:100%}
+  #year{font-size:30px;color:#cfb9ff;font-weight:700}
+  .info{background:#15273d;padding:10px;border-radius:9px;margin:8px 0;font-size:13px}
+  .muted{color:#b6c4d6}
+  .swatch{display:inline-block;width:20px;height:3px;margin-right:7px;vertical-align:middle}
+  a{color:#94d8ff}
+  .legend{margin:8px 0}
+  .warning{border-left:3px solid #e3b35f;padding-left:9px;color:#ffe7ba}
+  .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#182c43;color:#edf1f7}
+  @media(max-width:790px){#layout{grid-template-columns:1fr}#map{height:60vh;min-height:390px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Issue #46｜1547—1550 英苏战争堡垒真实地理证据（研究预览）</h1>
+<p class="warning">蓝色虚线为苏格兰官方现代遗址保护范围，<strong>不是1548年英国实际占地</strong>。紫色小点只显示有文献的英军驻堡年末状态。尚无可发布的16世纪实占多边形。</p>
+</header>
+<div id="layout">
+<div id="map" role="region" aria-label="苏格兰历史堡垒 GIS 研究地图"></div>
+<aside>
+<div class="muted">选择年份（年末状态）</div>
+<div id="year">1548</div>
+<input type="range" id="slider" min="1546" max="1550" step="1" value="1548" aria-label="选择历史年份">
+<div class="legend"><span class="swatch" style="border-top:3px dashed #55d6ee"></span>HES现代法定遗址界：不随战争年份变化</div>
+<div class="legend"><span class="swatch" style="background:#b896f6;height:10px;width:10px;border-radius:50%"></span>该年年末有证据的英军堡垒位置</div>
+<div id="summary" class="info"></div>
+<div id="sites"></div>
+<p class="muted">数据来自 Historic Environment Scotland 官方 ArcGIS 服务，按遗址编号 SM3190、SM3191、SM1718 精确查询。原始现代边界图层不可据此计算英国历史占地面积。</p>
+<p><a href="https://github.com/1959124923wyz-sys/love-British-TV/issues/46" target="_blank" rel="noreferrer">问题 #46</a> · <a href="https://github.com/1959124923wyz-sys/love-British-TV/pull/50" target="_blank" rel="noreferrer">证据 PR #50</a></p>
+<div class="muted" id="loadstatus" aria-live="polite">正在加载官方 GeoJSON…</div>
+</aside>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+"use strict";
+const SITE={
+ SM3190:{name:"埃茅斯英军炮兵堡",start:1547,stop:1549,lat:55.8766,lon:-2.0913,notes:"1547英军建造；1550年夏结束英军驻守。1557法国新防线不同。"},
+ SM3191:{name:"邓格拉斯英军营垒",start:1548,stop:1549,lat:55.938,lon:-2.381,notes:"1548—1549英军营垒。French Camp只是后世名称，不代表1548法军占领。"},
+ SM1718:{name:"罗克斯堡英军炮堡",start:1547,stop:1549,lat:55.5963,lon:-2.4569,notes:"1547炮堡仅覆盖更大中世纪城堡的一部分；1550撤离/拆毁。"}
+};
+const map=L.map("map",{zoomControl:false}).setView([55.86,-2.43],9);
+L.control.zoom({position:"bottomright"}).addTo(map);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:"© OpenStreetMap contributors | HES OGL v3.0"}).addTo(map);
+let layer=null, siteMarkers=[];
+const yearField=document.getElementById("year"),slider=document.getElementById("slider"),summary=document.getElementById("summary"),sites=document.getElementById("sites");
+function showYear(){
+ const y=Number(slider.value);yearField.textContent=y;
+ siteMarkers.forEach(m=>map.removeLayer(m));siteMarkers=[];
+ const active=Object.entries(SITE).filter(([id,s])=>s.start<=y&&y<=s.stop);
+ for(const [id,s] of active){
+   const mk=L.circleMarker([s.lat,s.lon],{radius:6,color:"#efdcff",fillColor:"#a26ff2",weight:2,fillOpacity:1});
+   mk.bindPopup("<strong>"+s.name+"</strong><p>"+s.notes+"</p><p>仅代表历史驻堡，不是地理控制界线。</p>");
+   mk.addTo(map);siteMarkers.push(mk);
+ }
+ summary.textContent=y+"年末：三处样本据点中有证驻英军的地点数 "+active.length+"。这不是苏格兰英军据点总数。";
+ sites.replaceChildren();
+ for(const [id,s] of Object.entries(SITE)){
+   const e=document.createElement("div");e.className="info";
+   const activeNow=(s.start<=y&&y<=s.stop);
+   e.textContent=(activeNow?"● 英军占驻（年末）　":"○ 非当年英军年末占驻　")+s.name+"｜"+s.notes;
+   sites.append(e);
+ }
+}
+slider.addEventListener("input",showYear);
+showYear();
+fetch("./HES_OFFICIAL_MODERN_SCHEDULED_REFERENCE.geojson")
+ .then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json()})
+ .then(data=>{
+   if(data.type!=="FeatureCollection"||data.features.length!==3||data.metadata?.verified_historical_control_polygon_count!==0)throw Error("数据审计未通过");
+   if(data.features.some(f=>f.properties.fill_authorized!==false||f.properties.historical_boundary_confirmed!==false))throw Error("发现未经批准的历史边界");
+   layer=L.geoJSON(data,{style:{color:"#55d6ee",weight:2.5,opacity:.92,dashArray:"7 6",fillOpacity:0},
+    onEachFeature:function(f,l){l.bindPopup("<b>"+f.properties.title_from_hes+"</b><p>官方现代遗址保护区（"+f.properties.designation_ref+"）</p><p>不是16世纪英军驻地实测范围。原始精度："+f.properties.hes_precision+"</p>")}})
+    .addTo(map);
+   map.fitBounds(layer.getBounds().pad(0.09),{animate:false});
+   document.getElementById("loadstatus").textContent="3块HES原始现代保护范围已加载；经审历史实占面仍为0。";
+ }).catch(e=>{document.getElementById("loadstatus").textContent="无法加载数据："+e.message+"。请通过支持HTTP的服务器打开本目录。";});
+})();
+</script>
+</body></html>
