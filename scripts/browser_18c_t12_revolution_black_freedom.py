@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+"""Real 1780x1020 Chromium: 24th story, British prisons and Black freedom, 23 predecessors, published 16C."""
+from pathlib import Path
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+root=Path(__file__).resolve().parents[1]
+shots=root/'browser-smoke-results';shots.mkdir(exist_ok=True)
+o=Options()
+for a in ('--headless=new','--disable-gpu','--no-sandbox','--disable-dev-shm-usage','--window-size=1780,1020'):o.add_argument(a)
+driver=webdriver.Chrome(options=o);wait=WebDriverWait(driver,60)
+def js(s,*args):return driver.execute_script(s,*args)
+def at(y):return js("return document.querySelector('#bigYear')?.textContent===String(arguments[0])",y)
+topic='E18-T12-REVOLUTION-PRISON-SHIPS-BLACK-FREEDOM-1764-1796'
+try:
+ driver.get('http://127.0.0.1:8765/?review18c=1&year=1783')
+ wait.until(lambda d:at(1783))
+ wait.until(lambda d:js("return !!window.atlasStoryBridge?.eventById?.('E18C-T12-1783-AUG2-BETTY')"))
+ assert js("return window.atlasStoryBridge.eventById('E18C-T12-1783-AUG2-BETTY').lat===40.71427")
+ assert js("return window.atlasStoryBridge.eventById('E18C-T12-1793-COOLEY').lat===null")
+ target='#eventList [data-eid="E18C-T12-1783-AUG2-BETTY"]'
+ wait.until(lambda d:js("return !!document.querySelector(arguments[0])",target))
+ driver.find_element(By.CSS_SELECTOR,target).click()
+ entry='#dossierBody [data-story-open="'+topic+'"]'
+ wait.until(lambda d:js("return !!document.querySelector(arguments[0])",entry))
+ driver.find_element(By.CSS_SELECTOR,entry).click()
+ wait.until(lambda d:js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",topic))
+ wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-event-link').length===35"))
+ assert js("return document.querySelectorAll('.major-story-article .story-section').length===35")
+ assert js("return !document.querySelector('.story-reading-toolbar,.story-toc,.story-reading-progress-meter,[data-story-nav]')")
+ driver.save_screenshot(str(shots/'18c24-1783-Betty-reenslavement-British-American-review.png'))
+ zoom=js("return window.atlasReadViewport().zoom")
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T12-1770-MASSACRE"]').click()
+ wait.until(lambda d:at(1770))
+ wait.until(lambda d:js("const c=window.atlasReadViewport().center;return Math.abs(c.lat-42.35843)<0.5&&Math.abs(c.lng+71.05977)<0.5"))
+ assert zoom==js("return window.atlasReadViewport().zoom")
+ driver.save_screenshot(str(shots/'18c24-1770-British-soldiers-Boston-civilian-killings.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T12-1775-DUNMORE"]').click()
+ wait.until(lambda d:at(1775))
+ wait.until(lambda d:js("const c=window.atlasReadViewport().center;return Math.abs(c.lat-36.84681)<0.5&&Math.abs(c.lng+76.28522)<0.5"))
+ driver.save_screenshot(str(shots/'18c24-1775-Dunmore-conditional-black-emancipation.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T12-1776-WHITBY"]').click()
+ wait.until(lambda d:at(1776))
+ wait.until(lambda d:js("const c=window.atlasReadViewport().center;return Math.abs(c.lat-40.71427)<0.5&&Math.abs(c.lng+74.00597)<0.5"))
+ driver.save_screenshot(str(shots/'18c24-1776-British-Whitby-prison-ship-Wallabout.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T12-1779-FAIRFIELD"]').click()
+ wait.until(lambda d:at(1779))
+ driver.save_screenshot(str(shots/'18c24-1779-Tryon-British-burning-civilian-homes.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T12-1783-JUL24-CHILDREN"]').click()
+ wait.until(lambda d:at(1783))
+ driver.save_screenshot(str(shots/'18c24-1783-two-Black-children-returned-to-enslaver.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T12-1793-COOLEY"]').click()
+ wait.until(lambda d:at(1793))
+ driver.save_screenshot(str(shots/'18c24-1793-Chloe-Cooley-violent-sale-Black-resistance.png'))
+ link=driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T12-1794-JAY"]')
+ js("arguments[0].dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));",link)
+ wait.until(lambda d:at(1794))
+ wait.until(lambda d:js("return !!document.querySelector('#dossierBody [data-story-back]')"))
+ driver.find_element(By.CSS_SELECTOR,'#dossierBody [data-story-back]').click()
+ wait.until(lambda d:js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",topic))
+ driver.save_screenshot(str(shots/'18c24-1794-Jay-British-fort-treaty-dossier-return.png'))
+ driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
+ wait.until(lambda d:at(1783))
+ driver.get('http://127.0.0.1:8765/?year=1783')
+ wait.until(lambda d:at(1699))
+ assert js("return window.atlasStoryBridge.eventById('E18C-T12-1783-AUG2-BETTY')===null")
+ driver.get('http://127.0.0.1:8765/?year=1572')
+ wait.until(lambda d:at(1572))
+ assert js("return [...document.querySelectorAll('#eventList [data-eid]')].some(x=>x.dataset.eid==='1570S-E004')")
+ print('PASS T12 24-story desktop: 35 chapters/links; Boston killings, Dunmore self-emancipation, 1776 British prison ships, Tryon burnings, 1783 child/Betty return to slavery, Chloe Cooley, Jay treaty dossier and full reader return, 23 older stories and official 16C.')
+except Exception:
+ driver.save_screenshot(str(shots/'18c24-T12-browser-failure.png'))
+ raise
+finally:driver.quit()
