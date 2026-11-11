@@ -2,7 +2,7 @@
 'use strict';
 const A=require('node:assert/strict'),F=require('node:fs'),P=require('node:path'),root=P.resolve(__dirname,'..'),rd=p=>F.readFileSync(P.join(root,p),'utf8'),J=p=>JSON.parse(rd(p));
 const d=J('data/stories/serial/chronology-preview-australia-frontier-1788-1799.json'),story=J('data/stories/serial/e18-t35-aboriginal-frontier-violence-1788-1799.json'),idx=J('data/stories/serial/preview-18c-index.json'),orig=J('research/18c/consolidated/series/T35.json'),prev=J('data/stories/serial/chronology-preview-australia-1700-1799.json'),oldStory=J('data/stories/serial/e18-t34-t35-australia-first-fleet-1717-1799.json'),geo=J('research/continuity/1788-1799-australia/BRITISH_FRONTIER_MASSACRE_RESISTANCE_TRANSITIONS.json');
-A.equal(idx.stories.length,28);A.equal(idx.stories[16].id,story.id);
+A.equal(idx.stories.length,29);A.equal(idx.stories[16].id,story.id);
 A.equal(idx.stories[16].status,'research_preview');A.equal(idx.stories[16].publication_review,'not_submitted');
 A.equal(story.id,'E18-T35-ABORIGINAL-FRONTIER-MASSACRE-1788-1799');
 A.equal(story.publication_status,'research_only');A.equal(story.publication_approval,'not_submitted');
@@ -81,7 +81,7 @@ A.deepEqual(new Set(links),new Set(story.related_event_ids));
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 A(app.includes("fetch('data/stories/serial/chronology-preview-australia-frontier-1788-1799.json'"));
 A(app.includes('frontier17Ready=true'));
-A(reader.includes('draft.stories?.length===28'));
+A(reader.includes('draft.stories?.length===29'));
 A(reader.includes("storyMeta.has('E18-T35-ABORIGINAL-FRONTIER-MASSACRE-1788-1799')"));
 A(html.includes('18c17-frontier-20261110'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));

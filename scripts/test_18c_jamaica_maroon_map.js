@@ -15,7 +15,7 @@ const jamaica=read('app.js'),ui=read('js/history-stories.js'),html=read('index.h
 assert.equal(chapters.chapters.at(-1).end,1599,'Do not ship an unapproved 18C chapter');
 assert.equal(published.topics.find(t=>t.id==='E6-T08').status,'published');
 assert(!published.topics.some(t=>t.id===story.id));
-assert.equal(draft.stories.length,28);
+assert.equal(draft.stories.length,29);
 assert.equal(draft.stories[2].id,story.id);
 assert.equal(draft.stories[2].status,'research_preview');
 assert.equal(draft.stories[2].publication_review,'not_submitted');
@@ -137,7 +137,7 @@ assert(jamaica.includes("jamaica18cReady?1799:"));
 assert(jamaica.includes('active18cMaroonCoreIds:()'));
 assert(jamaica.includes('renderEighteenthReviewEvidenceCores()'));
 assert(jamaica.includes("serialPreviewAtlas?Math.min(1699"),'original nonopt-in year cap regression');
-assert(ui.includes('draft.stories?.length===28'));
+assert(ui.includes('draft.stories?.length===29'));
 assert(ui.includes("article.id==='E6-T08'"));
 assert(ui.includes("storyMeta.has('E18-T03-T04-JAMAICA-MAROONS-1718-1799')"));
 assert(html.includes('app.js?')&&html.includes('js/history-stories.js?'));
