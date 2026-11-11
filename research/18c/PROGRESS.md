@@ -269,3 +269,17 @@
 - [x] GitHub新研究分支独立Draft预览 `?review18c=1&year=1763`，22篇专题测试与全部前21篇旧数据回归、原ZIP/1126审计、真1780×1020 Chromium、公开网页预览工作流全部入库。
 - [x] [完整第22批研究交接](../../docs/research/EDITOR19_18C_T08_SEVEN_YEARS_WAR_CHEROKEE_PONTIAC_PAXTON_HANDOFF_20261111.md)。
 - [ ] T08最新HEAD三项CI全部success为最终验收条件；历史原军事日记、Cherokee受害人名册、1768与1770边界原测图和1775商人逐人债权仍需后续深化。
+
+## 2026-11-11｜主编19第二十三批 T10 Penn家族步行购买土地欺诈、Lenape迁居与1744年六族条约
+
+- [x] GitHub主编15原T10两合并组、6候审ID与7个A来源注册键全部一对一保留；原1126逐条去向、原ZIP及档案记录不动。
+- [x] 29逐年事件、29项注册来源、29章87段完整中文正文、29条正文Atlas跳转与29条多主体政治土地过渡。
+- [x] 宾州州史档RG26/Indian Deeds #35明确**1737-08-25契据**，宾州历史标记明确**1737-09-19快速步行**；另拆1735-04-22试走、1737地图欺诈、斜接上游河边界、Lenape现场抗议及持续迁居。
+- [x] 保留宾州州史1741 Haudenosaunee强制迁居的叙述和学术资料1742 Philadelphia集中施压日期差异，均不捏造准确受害人数。
+- [x] 1744 Lancaster Benjamin Franklin原印本分别确证6月22/25/26/30日、7月2/4日与六族政治独立发言；该议约牵涉Maryland/Virginia，未混成Lenape Walking Purchase 1737原地块。
+- [x] 1756-11-12与11-13 Teedyuscung在Easton抗议欺诈、1757总督Denny历史地籍调查馆藏、1758多民族Easton条约原印本、1759殖民领主辩解与1762报告补偿按阅览等级记录。
+- [x] Bucks县‘约120万英亩’与Haverford历史概述‘1200平方英里’矛盾，保留各自源并将核准历史面积保持null；殖民净收益、被强迫迁移人数保持null。
+- [x] 仅12个有GeoNames来源的现代Philadelphia/Lancaster/Easton城市标记，历史丈量路线、地契多边形、Lenape社区迁移地理保持0未经批准绘制。
+- [x] 23专题索引及前22批测试守卫已更新；独立严格GIS/原档1126/原ZIP/旧16C和17C桌面回归工作流已存GitHub。
+- [x] [第二十三批完整编辑交接](../../docs/research/EDITOR19_18C_T10_WALKING_PURCHASE_LENAPE_LANCASTER_HANDOFF_20261111.md)。
+- [ ] 原地图测绘配准、原财务交易账本、Lenape受害人口及1758实际归地契据尚需后续补充；以最新HEAD GitHub三项Actions success为最终验收条件。
