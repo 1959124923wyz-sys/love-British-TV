@@ -1,0 +1,800 @@
+{
+  "schema": "chapter8_control_transition_1559_1569_v1",
+  "period": [
+    1560,
+    1569
+  ],
+  "source_period_main": "main:data/atlas-1550-1559.json",
+  "source_period_research": "research/periods/1550-1559/TRANSITION_1559_1560_RESEARCH_SEED.json",
+  "inherited_polity_count": 9,
+  "political_place_identities": [
+    {
+      "stable_id": "calais-crown",
+      "name": "加来（法国1558年收复，1560年代不得复活英占）",
+      "lat": 50.9513,
+      "lng": 1.8587,
+      "controller": "France",
+      "role": "French_former_English_city",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S10"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "inherited_from": "main data/atlas-1550-1559.json",
+      "legal_caveat": "1559 treaty future-return clause not a restoration"
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "name": "吉讷（法国收复）",
+      "lat": 50.867081,
+      "lng": 1.870254,
+      "controller": "France",
+      "role": "French_former_English_garrison",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S10"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "inherited_from": "main 1550s atlas; source IDs for specific 1558 Guines take retained upstream"
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name": "都柏林王室行政中心（不代表爱尔兰全岛实控）",
+      "lat": 53.3498,
+      "lng": -6.2603,
+      "controller": "English Crown administrative core with local autonomy",
+      "role": "limited_English_administration_not_all_Ireland",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S15",
+        "C8-S17"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name": "泽西王室属地",
+      "lat": 49.2144,
+      "lng": -2.1313,
+      "controller": "England",
+      "role": "crown_dependency_not_mainland_English_county",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S15"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "existing_source_must_be_inherited": "main 1550s atlas"
+    },
+    {
+      "stable_id": "channel-guernsey",
+      "name": "根西王室属地",
+      "lat": 49.45,
+      "lng": -2.5333,
+      "controller": "England",
+      "role": "crown_dependency_not_direct_annexation",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S15"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "existing_source_must_be_inherited": "main 1550s atlas"
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name": "马恩岛领主制度",
+      "lat": 54.235,
+      "lng": -4.56,
+      "controller": "distinct lordship",
+      "role": "separate_lordship_not_English_parish",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S15"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "existing_source_must_be_inherited": "main 1550s atlas"
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name": "奥克尼苏格兰政权",
+      "lat": 59,
+      "lng": -3.1,
+      "controller": "Independent Kingdom of Scotland",
+      "role": "Scottish_kingdom",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S11"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name": "设得兰苏格兰政权",
+      "lat": 60.15,
+      "lng": -1.15,
+      "controller": "Independent Kingdom of Scotland",
+      "role": "Scottish_kingdom",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S11"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "name": "苏格兰独立王国",
+      "lat": 55.9533,
+      "lng": -3.1883,
+      "controller": "Independent Kingdom of Scotland",
+      "role": "sovereign_kingdom_not_English_or_French",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S11"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false
+    },
+    {
+      "stable_id": "french-boulogne-from-1550",
+      "name": "布洛涅法国实际控制（继承1550）",
+      "lat": 50.7256,
+      "lng": 1.6169,
+      "controller": "France",
+      "role": "restored_French_port",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S10"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "prior_source_main_only": true
+    },
+    {
+      "stable_id": "scottish-broughty-from-1550",
+      "name": "布劳蒂城堡苏格兰归属（继承1550）",
+      "lat": 56.46293,
+      "lng": -2.87022,
+      "controller": "Independent Kingdom of Scotland",
+      "role": "Scottish_castle_restored_not_English",
+      "start_year": 1560,
+      "end_year": 1569,
+      "source_ids": [
+        "C8-S11"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "prior_source_main_only": true
+    },
+    {
+      "stable_id": "irish-fort-protector-1550s",
+      "name": "Fort Protector：中部英王堡点，控制周边范围不明",
+      "lat": 53.035512,
+      "lng": -7.297781,
+      "controller": "England",
+      "role": "actual_local_fort_1560s_continuity_requires_documentary_review",
+      "start_year": 1560,
+      "end_year": null,
+      "source_ids": [
+        "C8-S17",
+        "C8-S15"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "year_end_garrison_verified_by_original_1560s_sources": false
+    },
+    {
+      "stable_id": "irish-fort-governor-1550s",
+      "name": "Fort Governor：英王堡点，中部盖尔抵抗继续",
+      "lat": 53.296081,
+      "lng": -7.302267,
+      "controller": "England",
+      "role": "actual_local_fort_1560s_continuity_requires_documentary_review",
+      "start_year": 1560,
+      "end_year": null,
+      "source_ids": [
+        "C8-S17",
+        "C8-S15"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "year_end_garrison_verified_by_original_1560s_sources": false
+    },
+    {
+      "stable_id": "inchkeith-franco-scottish-fort-1556-1564",
+      "name": "因奇基斯岛苏法堡：1560年代建筑时段",
+      "lat": 56.0323579,
+      "lng": -3.1351895,
+      "controller": "Independent Kingdom of Scotland",
+      "role": "Scottish_island_Franco_Scottish_fort_build_phase",
+      "start_year": 1560,
+      "end_year": 1564,
+      "source_ids": [
+        "C8-S14"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "garrison_annual_controller_not_proven": true,
+      "do_not_assume_French_until_1564": true
+    },
+    {
+      "stable_id": "dunbar-french-allied-fort-built-1550",
+      "name": "邓巴苏格兰沿岸法国盟军炮台：1560拆除",
+      "lat": 56.0045018,
+      "lng": -2.5173892,
+      "controller": "Independent Kingdom of Scotland",
+      "role": "French_allied_fort_demolished_1560",
+      "start_year": 1560,
+      "end_year": 1560,
+      "source_ids": [
+        "C8-S13"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "end_year_is_fortification_presence_not_city_sovereignty": true
+    },
+    {
+      "stable_id": "leith-french-allied-fortifications-1559",
+      "name": "利斯港法军城垒：1560英苏围城和谈撤出",
+      "lat": 55.979,
+      "lng": -3.17,
+      "controller": "Independent Kingdom of Scotland",
+      "role": "French_allied_garrison_relinquished_1560",
+      "start_year": 1560,
+      "end_year": 1560,
+      "source_ids": [
+        "C8-S11",
+        "C8-S18",
+        "C8-S20"
+      ],
+      "geo_precision": "Leith modern port/locality event anchor; unverified 1559/1560 rampart outline",
+      "actual_area_polygon_verified": false,
+      "French_foreign_sovereignty": false
+    },
+    {
+      "stable_id": "le-havre-english-1562-1563",
+      "name": "勒阿弗尔英军军事占领港城",
+      "lat": 49.4938,
+      "lng": 0.1077,
+      "controller": "England military garrison under French sovereign contested context",
+      "role": "short_English_military_governance",
+      "start_year": 1562,
+      "end_year": 1563,
+      "source_ids": [
+        "C8-S07",
+        "C8-S08",
+        "C8-S09",
+        "C8-S10"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "year_end_English_control": [
+        1562
+      ],
+      "controller_French_restored_from": 1563,
+      "England_colonial_port_perimeter_verified": false,
+      "exact_start_day_disputed": [
+        4,
+        8
+      ],
+      "exact_end_day_disputed": [
+        28,
+        29
+      ],
+      "English_1563_yearend": false
+    },
+    {
+      "stable_id": "fort-warwick-le-havre-1562",
+      "name": "勒阿弗尔Fort Warwick／Percanville同一性待查",
+      "lat": 49.4938,
+      "lng": 0.1077,
+      "controller": "English fortification episode",
+      "role": "fort_named_no_archaeological_geopoint",
+      "start_year": 1562,
+      "end_year": 1563,
+      "source_ids": [
+        "C8-S07",
+        "C8-S09"
+      ],
+      "geo_precision": "current documented locality reference, not Tudor walls",
+      "actual_area_polygon_verified": false,
+      "geometry_authorized": false,
+      "render_point_as_fort": false,
+      "point_is_Le_Havre_only_not_true_1562_fort_location": true
+    }
+  ],
+  "year_end_snapshots": [
+    {
+      "year": 1560,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": true,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": true,
+      "Inchkeith_French_built_period_documented_young_fort": true,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": false,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": false,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary I Queen of Scots independent",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1561,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": true,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": false,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": false,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary I Queen of Scots independent",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1562,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": true,
+      "LeHavre_French_city_actual_control_yearend": false,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": true,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": true,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": true,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary I Queen of Scots independent",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1563,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": true,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": true,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": true,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": false,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary I Queen of Scots independent",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1564,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": true,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": true,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": true,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary I Queen of Scots independent",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1565,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": false,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": true,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": false,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary I Queen of Scots independent",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1566,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": false,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": false,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": false,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary I Queen of Scots independent",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1567,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": false,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": true,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": true,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "Mary forced abdication; James VI Scottish monarch under regency",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1568,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": false,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": true,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": false,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "James VI Scottish monarch under regency amid intra-Scottish factional conflict",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    },
+    {
+      "year": 1569,
+      "political_identity_ids_preserved": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "England_English_Calais_Guines_yearend": false,
+      "French_Calais_Guines_yearend": true,
+      "Scottish_kingdom_independent_yearend": true,
+      "LeHavre_English_garrison_yearend": false,
+      "LeHavre_French_city_actual_control_yearend": true,
+      "LeHavre_English_siege_ephemeral_during_1563": false,
+      "Leith_French_garrison_from_1559_English_siege_and_treaty_exit": false,
+      "Leith_English_occupation_of_Scotland_yearend": false,
+      "Dunbar_French_built_old_fort_demolition": false,
+      "Inchkeith_French_built_period_documented_young_fort": false,
+      "Inchkeith_French_garrison_confirmed_yearend": null,
+      "English_Old_Laois_Offaly_forts_available_as_heritage_points": true,
+      "English_full_modern_Laois_Offaly_effectively_controlled": false,
+      "Irish_Gaelic_local_rulers_resistance": true,
+      "English_West_Africa_control_polygon_area_sqkm": null,
+      "English_West_Africa_slave_trade_coastal_activity": false,
+      "West_Africa_activity_is_not_colony": true,
+      "Hawkins_fleet_on_ocean_at_yearend": false,
+      "no_fabricated_daily_GIS_track": true,
+      "main_chapter_seven_inherited_id_count": 9,
+      "material_event_ids": [],
+      "snapshot_precision": "year_end for political and known garrison control; slaving voyages inclusive years are ACTIVITY not yearend sovereignty",
+      "Scottish_monarch_and_regency_context": "James VI Scottish monarch under regency amid intra-Scottish factional conflict",
+      "English_suzerainty_claim_from_Scottish_internal_war": false
+    }
+  ],
+  "control_change_ledger": [
+    {
+      "date": "1560-07",
+      "stable_id": "leith-french-allied-fortifications-1559",
+      "before": "French allied garrison in independent Scotland",
+      "after": "French military leaves; Scottish sovereignty unchanged; English allied army leaves",
+      "change": "withdrawn",
+      "source_ids": [
+        "C8-S11",
+        "C8-S18"
+      ],
+      "precision": "month"
+    },
+    {
+      "date": "1560",
+      "stable_id": "dunbar-french-allied-fort-built-1550",
+      "before": "French built defensive work on Scottish coast",
+      "after": "historical fort dismantled, no transfer of Scotland sovereignty",
+      "change": "demolished",
+      "source_ids": [
+        "C8-S13"
+      ],
+      "precision": "year"
+    },
+    {
+      "date": "1562-10",
+      "stable_id": "le-havre-english-1562-1563",
+      "before": "French Huguenot hold, French royal territory",
+      "after": "English military garrison governs port under Tudor queen",
+      "change": "gained",
+      "source_ids": [
+        "C8-S07",
+        "C8-S08",
+        "C8-S10"
+      ],
+      "precision": "month"
+    },
+    {
+      "date": "1563-07",
+      "stable_id": "le-havre-english-1562-1563",
+      "before": "English military garrison",
+      "after": "French Charles IX army recovers port",
+      "change": "lost",
+      "source_ids": [
+        "C8-S07",
+        "C8-S08",
+        "C8-S10"
+      ],
+      "precision": "month",
+      "day_discrepancy": "French municipal official 28 vs 29 Jul"
+    },
+    {
+      "date": "1569-06",
+      "stable_id": "butler-1569-irish-revolt",
+      "before": "Crown-aligned Butler lordships, local power not direct English county-scale land control",
+      "after": "Butler family revolt near Carlow/Kilkenny/Tipperary",
+      "change": "disputed",
+      "source_ids": [
+        "C8-S16"
+      ],
+      "precision": "month"
+    },
+    {
+      "date": "1567",
+      "stable_id": "kingdom-of-scotland",
+      "before": "Mary Queen of Scots sovereign monarchy",
+      "after": "James VI Scottish monarch under regency (independent Scotland)",
+      "change": "political_regime_transition_not_England_annexation",
+      "source_ids": [
+        "C8-S21",
+        "C8-S22"
+      ],
+      "precision": "year"
+    },
+    {
+      "date": "1568-05-13",
+      "stable_id": "kingdom-of-scotland",
+      "before": "Scottish internal royal/regency conflict",
+      "after": "Moray's faction prevails Langside; Mary flees to England; Scotland independent",
+      "change": "intra_Scottish_war_not_sovereignty_transfer",
+      "source_ids": [
+        "C8-S21"
+      ],
+      "precision": "day"
+    }
+  ],
+  "never_restore": [
+    "Calais England after 1558",
+    "Guines England after 1558",
+    "Boulogne England after 1550",
+    "Broughty England after 1550",
+    "French sovereignty over Scotland due to French garrisons",
+    "British territory anywhere in African Hawkins contact bands"
+  ],
+  "verified_true_1560s_control_polygon_count": 0,
+  "legal_claim_vs_actual_occupation_area_invariant": true
+}

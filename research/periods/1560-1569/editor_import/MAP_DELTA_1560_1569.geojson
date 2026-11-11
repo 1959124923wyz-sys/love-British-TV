@@ -1,0 +1,365 @@
+{
+  "type": "FeatureCollection",
+  "schema": "chapter8_edits_control_and_coercion_map_deltas_v1",
+  "period": [
+    1560,
+    1569
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "id": "leith-french-allied-fortifications-1559",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.17,
+          55.98
+        ]
+      },
+      "properties": {
+        "stable_id": "leith-french-allied-fortifications-1559",
+        "year": 1560,
+        "change_year": 1560,
+        "month": 7,
+        "precision": "month",
+        "change_type": "garrison_withdrawal",
+        "name": "利斯法军在1560年7月根据英法苏协议离开，英军同样撤出",
+        "controller_before": "French allied garrison in Scotland",
+        "controller_after": "Independent Scottish locality, no English garrison",
+        "source_ids": [
+          "C8-S11",
+          "C8-S18"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dunbar-french-allied-fort-built-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5173892,
+          56.0045018
+        ]
+      },
+      "properties": {
+        "stable_id": "dunbar-french-allied-fort-built-1550",
+        "year": 1560,
+        "change_year": 1560,
+        "month": null,
+        "precision": "year",
+        "change_type": "fortification_demolition",
+        "name": "邓巴1550法国盟军筑垒于1560年拆除",
+        "controller_before": "Scottish sovereign site with old French-built fort",
+        "controller_after": "Scottish sovereign site, fortification dismantled",
+        "source_ids": [
+          "C8-S13"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "le-havre-english-1562-1563",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1077,
+          49.4938
+        ]
+      },
+      "properties": {
+        "stable_id": "le-havre-english-1562-1563",
+        "year": 1562,
+        "change_year": 1562,
+        "month": 10,
+        "precision": "month",
+        "change_type": "garrison_gain",
+        "name": "勒阿弗尔英军十月进驻，1562年末由英国驻军统治",
+        "controller_before": "French Huguenot local hold within French crown realm",
+        "controller_after": "English garrison governs Le Havre",
+        "source_ids": [
+          "C8-S07",
+          "C8-S08",
+          "C8-S10"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "exact_landing_day_conflict": [
+          "1562-10-04",
+          "1562-10-08"
+        ],
+        "English_sovereignty_Normandy_countryside": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "le-havre-english-1562-1563",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1077,
+          49.4938
+        ]
+      },
+      "properties": {
+        "stable_id": "le-havre-english-1562-1563",
+        "year": 1563,
+        "change_year": 1563,
+        "month": 7,
+        "precision": "month",
+        "change_type": "garrison_loss",
+        "name": "法国在1563年7月重新夺取勒阿弗尔",
+        "controller_before": "English military garrison",
+        "controller_after": "French Crown city actual control",
+        "source_ids": [
+          "C8-S07",
+          "C8-S08",
+          "C8-S09"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "territory",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "exact_restoration_day_conflict": [
+          "1563-07-28",
+          "1563-07-29"
+        ],
+        "yearend_English": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hawkins-sierra-leone-coastal-activity-1562-1563",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.23,
+          8.49
+        ]
+      },
+      "properties": {
+        "stable_id": "hawkins-sierra-leone-coastal-activity-1562-1563",
+        "year": 1562,
+        "change_year": 1562,
+        "month": null,
+        "precision": "year",
+        "change_type": "slave_trade_activity_begin",
+        "name": "塞拉利昂海岸1562年英国奴隶掠卖船队活动开始",
+        "controller_before": "African coast local sovereignty",
+        "controller_after": "Same African sovereignty; English slave-trafficking episode",
+        "source_ids": [
+          "C8-S01",
+          "C8-S03",
+          "C8-S06"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "refer_to_its_broad_band": "WEST_AFRICA_FORCED_TRADE_COASTAL_ACTIVITY_1560_1569.geojson",
+        "not_a_transfer_of_territorial_control": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hawkins-capvert-upperguinea-sierra-1564-1565",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.505,
+          14.724
+        ]
+      },
+      "properties": {
+        "stable_id": "hawkins-capvert-upperguinea-sierra-1564-1565",
+        "year": 1564,
+        "change_year": 1564,
+        "month": null,
+        "precision": "year",
+        "change_type": "slave_trade_activity_begin",
+        "name": "1564年英国第二次奴役航次进入佛得角海角与上几内亚海岸",
+        "controller_before": "African polities retained sovereignty",
+        "controller_after": "African polities retained sovereignty; English ships sought captives",
+        "source_ids": [
+          "C8-S03",
+          "C8-S05"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "not_a_transfer_of_territorial_control": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hawkins-capvert-riogrande-sierra-1567-1568",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.505,
+          14.724
+        ]
+      },
+      "properties": {
+        "stable_id": "hawkins-capvert-riogrande-sierra-1567-1568",
+        "year": 1567,
+        "change_year": 1567,
+        "month": 11,
+        "precision": "month",
+        "change_type": "slave_trade_activity_begin",
+        "name": "1567年英国第三次奴役航次抵达Cap Vert及Rio Grande—塞拉利昂海岸",
+        "controller_before": "African sovereign territories",
+        "controller_after": "African sovereign territories; slave raid coastal network",
+        "source_ids": [
+          "C8-S03",
+          "C8-S04"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "not_a_transfer_of_territorial_control": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hawkins-westafrica-assault-1568",
+      "geometry": null,
+      "properties": {
+        "stable_id": "hawkins-westafrica-assault-1568",
+        "year": 1568,
+        "change_year": 1568,
+        "month": 1,
+        "precision": "month",
+        "change_type": "slave_raid_forced_person_seizure",
+        "name": "1568年初英船队袭击未确定位置的西非城镇并掳走居民",
+        "controller_before": "local African town autonomous or self-governed",
+        "controller_after": "local sovereignty not documented as British transferred",
+        "source_ids": [
+          "C8-S04"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "event_area": "Rio Grande–Sierra Leone named regional coast, exact settlement UNLOCATED",
+        "people_claimed_captured_250": "Hawkins self-serving narrative",
+        "no_fake_village_coordinates": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "riohacha-1568-English-force",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.91,
+          11.55
+        ]
+      },
+      "properties": {
+        "stable_id": "riohacha-1568-English-force",
+        "year": 1568,
+        "change_year": 1568,
+        "month": null,
+        "precision": "year",
+        "change_type": "temporary_raid_not_colonial_control",
+        "name": "1568英国船队武力进入西属里奥阿查并强迫进行奴隶交易",
+        "controller_before": "Spanish local control",
+        "controller_after": "Spanish sovereignty maintained, temporary violent English ship party",
+        "source_ids": [
+          "C8-S04"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "captain_reports_people_sold": "about 200, not independently audited",
+        "never_yearend_English_occupation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "butler-1569-carlow-resistance",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.929,
+          52.84
+        ]
+      },
+      "properties": {
+        "stable_id": "butler-1569-carlow-resistance",
+        "year": 1569,
+        "change_year": 1569,
+        "month": 6,
+        "precision": "month",
+        "change_type": "resistance_to_Crown",
+        "name": "巴特勒家族反抗英王政策，1569年爱尔兰东南部爆发叛乱",
+        "controller_before": "Crown aligned local Irish lordships",
+        "controller_after": "contested Crown jurisdiction, local lord conflict",
+        "source_ids": [
+          "C8-S16"
+        ],
+        "source_file": "SOURCE_REGISTRY.json",
+        "map_layer": "events",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "measured_Tudor_territorial_boundary": false,
+        "editorial_status": "candidate_editor_selection",
+        "anchor_is_modern_Carlow_town_not_1569_kidnapping_site": true,
+        "do_not_fill_whole_county": true
+      }
+    }
+  ],
+  "metadata": {
+    "true_period_control_polygon_count": 0,
+    "source_ledger": "SOURCE_REGISTRY.json",
+    "recommended_map_layer_split": {
+      "territory": "Le Havre 1562 gain/1563 loss, Leith garrison exit, Dunbar fort dismantle",
+      "events": "slave raid/capture and trafficking band activation, 1569 Butler revolt"
+    },
+    "african_delta_events_are_not_territorial_transfer": true,
+    "nonpoint_exact_1568_attacked_settlement_geometry_null": true,
+    "duplicate_action": "If an Atlas event already carries same stable_id/year/kind, merge or relate and do not create visual double dots"
+  }
+}

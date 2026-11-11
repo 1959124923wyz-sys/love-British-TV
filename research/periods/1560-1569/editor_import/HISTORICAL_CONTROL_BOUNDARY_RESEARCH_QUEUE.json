@@ -1,0 +1,91 @@
+{
+  "schema": "ch8_historically_precise_perimeters_research_candidates_v1",
+  "accepted_English_real_Tudor_GIS_control_polygons": 0,
+  "candidates": [
+    {
+      "id": "C8-B01",
+      "name": "Le Havre English held city and Percyville / Warwick fort 1562-63",
+      "years": [
+        1562,
+        1563
+      ],
+      "historical_plan_source_ids": [
+        "C8-S09",
+        "C8-S07",
+        "C8-S08"
+      ],
+      "archive_item": "Le Havre municipal 1FI227 1563-07-15 English-labelled siege map copied c1880 from original UK State Papers",
+      "geometry": null,
+      "original_period_mapped_outline_exists": true,
+      "rights_to_vectorize": "pending",
+      "georeferencing_completed": false,
+      "approve_control_polygon": false,
+      "actual_control": "English garrison dominates historical harbor/city until July 1563; cannot equate full 1563 modern Le Havre commune to English rule",
+      "GIS_plan": "Request scan + license, find visible historic landmarks Notre-Dame, François Ier tower, Ingouville, georeference to pre-reclamation 16th century shoreline, check plan date/legend with French municipal archives; draw only defended English garrison perimeter with uncertainty hatch."
+    },
+    {
+      "id": "C8-B02",
+      "name": "Leith French-held fortifications until 1560 capitulation",
+      "years": [
+        1560,
+        1560
+      ],
+      "historical_plan_source_ids": [
+        "C8-S18",
+        "C8-S11",
+        "C8-S12"
+      ],
+      "archive_item": "1560 fortifications drawn on period surrender siege plan, archaeology at Great Junction and West Bowling Green",
+      "geometry": null,
+      "original_period_mapped_outline_exists": true,
+      "rights_to_vectorize": "pending",
+      "georeferencing_completed": false,
+      "approve_control_polygon": false,
+      "actual_control": "French allied garrison, sovereign Scottish territory. English outside besieging forces never owned the city",
+      "GIS_plan": "Use published archaeological registration with rights and HES artillery mounds ambiguity, do not label English invaded siege ring as British rule."
+    },
+    {
+      "id": "C8-B03",
+      "name": "Laois and Offaly 1560s actual land-grant estates vs legal Queen's / King's county",
+      "years": [
+        1560,
+        1569
+      ],
+      "historical_plan_source_ids": [
+        "C8-S15",
+        "C8-S17"
+      ],
+      "archive_item": "TNA MPF 1/35–102 1558–1610 plantation and fortification maps, underlying SP64 documents",
+      "geometry": null,
+      "original_period_mapped_outline_exists": false,
+      "rights_to_vectorize": "not_checked",
+      "georeferencing_completed": false,
+      "approve_control_polygon": false,
+      "actual_control": "specific royal forts and land seizure legally claimed but Gaelic local rule and periodic resistance not nullified",
+      "GIS_plan": "Obtain named estate/fort primary maps and separate grant validity from actual garrison possession; no modern whole-county polygon."
+    },
+    {
+      "id": "C8-B04",
+      "name": "Upper Guinea Sierra Leone Cap Vert Hawkins kidnapping maritime influence",
+      "years": [
+        1562,
+        1568
+      ],
+      "historical_plan_source_ids": [
+        "C8-S04",
+        "C8-S05",
+        "C8-S03"
+      ],
+      "archive_item": "Hakluyt sailing texts names Cap Vert, Rio Grande to Sierra Leone but 16th century coastal full track / actual shore raid village unknown",
+      "geometry": null,
+      "original_period_mapped_outline_exists": false,
+      "rights_to_vectorize": "not_applicable",
+      "georeferencing_completed": false,
+      "approve_control_polygon": false,
+      "actual_control": "ZERO documentary evidence England sovereign controlled the West African illustrative coastal band",
+      "GIS_plan": "Only show named-source wide striped EVENT geographic activity overlay, label possible extent not claim all coast attacked, avoid mile-radius territorial shading."
+    }
+  ],
+  "editing_policy": "Signed/copyright-cleared 1563 Le Havre and 1560 Leith historical plans outrank synthetic city buffers. No copy-paste chart geometry or modern council boundaries.",
+  "not_a_blocker_for_current_usable_map": "Cities and evidence region stripes are operational without precise Tudor occupation cadastral boundaries. Omit true Polygon fill until review."
+}

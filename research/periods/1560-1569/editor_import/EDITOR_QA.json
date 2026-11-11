@@ -1,0 +1,42 @@
+{
+  "schema": "ch08_editor_data_qa_v1",
+  "branch": "research/ch08-editor-ready-1560-1569-20261014",
+  "checked_at": "2026-10-14",
+  "status": "PASS",
+  "verified_remote_files": [
+    "SOURCE_REGISTRY.json",
+    "CONTROL_TRANSITION_1559_1569.json",
+    "WEST_AFRICA_FORCED_TRADE_COASTAL_ACTIVITY_1560_1569.geojson",
+    "HAWKINS_ENSLAVEMENT_VOYAGE_SCHEMATIC_ROUTES.geojson",
+    "CONTROL_AND_EVENT_PLACE_REFERENCES_1560_1569.geojson",
+    "ATLAS_REVIEW_CANDIDATE.json",
+    "MAP_DELTA_1560_1569.geojson",
+    "HISTORICAL_CONTROL_BOUNDARY_RESEARCH_QUEUE.json",
+    "ENSLAVEMENT_PLUNDER_AND_FINANCIAL_EVIDENCE.json",
+    "ARCHIVAL_ACTION_QUEUE.json",
+    "EDITOR_IMPORT_README.md"
+  ],
+  "QA_details": {
+    "source_unique_count": 24,
+    "atlas_events": 26,
+    "atlas_places": 18,
+    "yearend_snapshots": 10,
+    "coastal_slave_trade_event_bands": 3,
+    "schematic_Atlantic_slaving_route_segments": 16,
+    "map_change_features": 10,
+    "verified_English_yearend_le_havre_only": [
+      1562
+    ],
+    "unverified_actual_Tudor_control_polygons": 0,
+    "unmapped_captives_village_geometry": null,
+    "financial_net_profit": null,
+    "pending_archival_research": 18
+  },
+  "limits": [
+    "Structural historical semantic QA only; does not certify original 16th century surveyed coast/border",
+    "Historic Le Havre plan not yet licensed or georeferenced",
+    "No actual browser screenshot/Pages publication verified",
+    "Original archival letters not all read, only named excerpt/history sources"
+  ],
+  "errors": []
+}

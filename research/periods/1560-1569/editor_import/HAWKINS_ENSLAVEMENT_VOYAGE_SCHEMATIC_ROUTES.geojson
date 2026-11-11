@@ -1,0 +1,1311 @@
+{
+  "type": "FeatureCollection",
+  "schema": "hawkins_1560s_navigational_schematic_network_v1",
+  "source_notation": "Hakluyt historical first/second/third accounts cross-confirmed Oxford EHR and Historic England",
+  "links": [
+    {
+      "type": "Feature",
+      "id": "1562-63-ENGLAND-SIERRALEONE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.1427,
+            50.3755
+          ],
+          [
+            -13.23,
+            8.49
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1562-63-ENGLAND-SIERRALEONE",
+        "from": "Plymouth",
+        "to": "SierraLeone",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1562,
+        "end_year": 1563,
+        "source_ids": [
+          "C8-S01",
+          "C8-S06"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "voyage_outward",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "First voyage departure English port to Sierra Leone coast approximate; exact landfall and actual path unknown.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1562-63-SIERRALEONE-HISPANIOLA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.23,
+            8.49
+          ],
+          [
+            -69.6,
+            19.1
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1562-63-SIERRALEONE-HISPANIOLA",
+        "from": "SierraLeone",
+        "to": "Hispaniola",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1562,
+        "end_year": 1563,
+        "source_ids": [
+          "C8-S01",
+          "C8-S03",
+          "C8-S06"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "enslaved_person_forced_transatlantic_transport",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Hispaniola midpoint merely ISLAND reference, not documented sale port; English carried enslaved people.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1562-63-HISPANIOLA-ENGLAND",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.6,
+            19.1
+          ],
+          [
+            -4.1427,
+            50.3755
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1562-63-HISPANIOLA-ENGLAND",
+        "from": "Hispaniola",
+        "to": "Plymouth",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1562,
+        "end_year": 1563,
+        "source_ids": [
+          "C8-S06",
+          "C8-S03"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trade_returns",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Return to England attested at country level; this leg is not measured ship track.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1564-65-ENGLAND-CAPVERT",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.1427,
+            50.3755
+          ],
+          [
+            -17.505,
+            14.724
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1564-65-ENGLAND-CAPVERT",
+        "from": "Plymouth",
+        "to": "CapeVert",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1564,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "departure_approach_Africa",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "1564 Plymouth departure; 1564 Cape Verde refers Dakar cape/headland in Senegal, not Cabo Verde islands.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1564-65-CAPVERT-SIERRALEONE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -17.505,
+            14.724
+          ],
+          [
+            -13.23,
+            8.49
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1564-65-CAPVERT-SIERRALEONE",
+        "from": "CapeVert",
+        "to": "SierraLeone",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1564,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05",
+          "C8-S01"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "upper_Guinea_enslaving_coast",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Schematic source region from Cape Vert toward documented Sierra Leone coast; do not interpret segment as surveyed ship route.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1564-65-AFRICA-BORBURATA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.23,
+            8.49
+          ],
+          [
+            -67.998,
+            10.477
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1564-65-AFRICA-BORBURATA",
+        "from": "SierraLeone",
+        "to": "Borburata",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1564,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "forced_transatlantic_trade_to_Venezuela",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Transatlantic link endpoints are broad Sierra Leone reference and Borburata attested 1565.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1565-BORBURATA-CURACAO",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -67.998,
+            10.477
+          ],
+          [
+            -68.99,
+            12.17
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1565-BORBURATA-CURACAO",
+        "from": "Borburata",
+        "to": "Curacao",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1565,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trade_ports",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Early modern narrative Borburata then Curaçao.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1565-CURACAO-RIOHACHA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -68.99,
+            12.17
+          ],
+          [
+            -72.91,
+            11.55
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1565-CURACAO-RIOHACHA",
+        "from": "Curacao",
+        "to": "Riohacha",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1565,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "coerced_slaving_trade",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Early modern narrative records Rio de la Hacha May 1565; no actual measured sea track.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1567-68-ENGLAND-CAPVERT",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.1427,
+            50.3755
+          ],
+          [
+            -17.505,
+            14.724
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1567-68-ENGLAND-CAPVERT",
+        "from": "Plymouth",
+        "to": "CapeVert",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1567,
+        "end_year": 1567,
+        "source_ids": [
+          "C8-S03",
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "third_voyage_depart_and_abduction_attempt",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "1567-10-02 Plymouth departure, arrives Cap Vert 1567-11-18.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1567-68-CAPVERT-RIOGRANDE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -17.505,
+            14.724
+          ],
+          [
+            -15.28,
+            11.54
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1567-68-CAPVERT-RIOGRANDE",
+        "from": "CapeVert",
+        "to": "RioGrande",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1567,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "coastal_enslaving_search",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Captain says surveying rivers from Rio Grande to Sierra Leone; route indicator only, exact river identity/location still archival.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1567-68-RIOGRANDE-SIERRALEONE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -15.28,
+            11.54
+          ],
+          [
+            -13.23,
+            8.49
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1567-68-RIOGRANDE-SIERRALEONE",
+        "from": "RioGrande",
+        "to": "SierraLeone",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1567,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "documented_guinea_coastal_search",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Sierra Leone coastline broad and Rio Grande historical name approximate, no specific village site verified.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-SIERRALEONE-DOMINICA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.23,
+            8.49
+          ],
+          [
+            -61.38,
+            15.41
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-SIERRALEONE-DOMINICA",
+        "from": "SierraLeone",
+        "to": "Dominica",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "forced_Atlantic_enslaved_transport",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Departure coast 3 Feb 1568, sight Dominica 27 Mar 1568, southern African coastal marker is NOT proven final point.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-DOMINICA-MARGARITA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -61.38,
+            15.41
+          ],
+          [
+            -63.93,
+            11
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-DOMINICA-MARGARITA",
+        "from": "Dominica",
+        "to": "Margarita",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trafficking_ports_reference",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Modern island point only, not wharf location.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-MARGARITA-RIOHACHA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -63.93,
+            11
+          ],
+          [
+            -72.91,
+            11.55
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-MARGARITA-RIOHACHA",
+        "from": "Margarita",
+        "to": "Riohacha",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "enslaved_sale_and_coercion",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Captain's account records forced occupation of Riohacha short term and trafficking c.200; Spanish territory, not British annexation.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-RIOHACHA-CARTAGENA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.91,
+            11.55
+          ],
+          [
+            -75.5,
+            10.4
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-RIOHACHA-CARTAGENA",
+        "from": "Riohacha",
+        "to": "Cartagena",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trade_and_port_contact",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Captain mentions Cartagena with trade restrictions; no secured port possession.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-CARTAGENA-SANJUAN",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5,
+            10.4
+          ],
+          [
+            -96.13,
+            19.21
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-CARTAGENA-SANJUAN",
+        "from": "Cartagena",
+        "to": "SanJuanUlua",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04",
+          "C8-S03"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "battle_destination",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Source includes intervening Cuba/Florida storms; do NOT claim direct Cartagena–Mexico course.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "id": "1562-63-ENGLAND-SIERRALEONE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.1427,
+            50.3755
+          ],
+          [
+            -13.23,
+            8.49
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1562-63-ENGLAND-SIERRALEONE",
+        "from": "Plymouth",
+        "to": "SierraLeone",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1562,
+        "end_year": 1563,
+        "source_ids": [
+          "C8-S01",
+          "C8-S06"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "voyage_outward",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "First voyage departure English port to Sierra Leone coast approximate; exact landfall and actual path unknown.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1562-63-SIERRALEONE-HISPANIOLA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.23,
+            8.49
+          ],
+          [
+            -69.6,
+            19.1
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1562-63-SIERRALEONE-HISPANIOLA",
+        "from": "SierraLeone",
+        "to": "Hispaniola",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1562,
+        "end_year": 1563,
+        "source_ids": [
+          "C8-S01",
+          "C8-S03",
+          "C8-S06"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "enslaved_person_forced_transatlantic_transport",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Hispaniola midpoint merely ISLAND reference, not documented sale port; English carried enslaved people.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1562-63-HISPANIOLA-ENGLAND",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.6,
+            19.1
+          ],
+          [
+            -4.1427,
+            50.3755
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1562-63-HISPANIOLA-ENGLAND",
+        "from": "Hispaniola",
+        "to": "Plymouth",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1562,
+        "end_year": 1563,
+        "source_ids": [
+          "C8-S06",
+          "C8-S03"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trade_returns",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Return to England attested at country level; this leg is not measured ship track.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1564-65-ENGLAND-CAPVERT",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.1427,
+            50.3755
+          ],
+          [
+            -17.505,
+            14.724
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1564-65-ENGLAND-CAPVERT",
+        "from": "Plymouth",
+        "to": "CapeVert",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1564,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "departure_approach_Africa",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "1564 Plymouth departure; 1564 Cape Verde refers Dakar cape/headland in Senegal, not Cabo Verde islands.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1564-65-CAPVERT-SIERRALEONE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -17.505,
+            14.724
+          ],
+          [
+            -13.23,
+            8.49
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1564-65-CAPVERT-SIERRALEONE",
+        "from": "CapeVert",
+        "to": "SierraLeone",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1564,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05",
+          "C8-S01"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "upper_Guinea_enslaving_coast",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Schematic source region from Cape Vert toward documented Sierra Leone coast; do not interpret segment as surveyed ship route.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1564-65-AFRICA-BORBURATA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.23,
+            8.49
+          ],
+          [
+            -67.998,
+            10.477
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1564-65-AFRICA-BORBURATA",
+        "from": "SierraLeone",
+        "to": "Borburata",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1564,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "forced_transatlantic_trade_to_Venezuela",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Transatlantic link endpoints are broad Sierra Leone reference and Borburata attested 1565.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1565-BORBURATA-CURACAO",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -67.998,
+            10.477
+          ],
+          [
+            -68.99,
+            12.17
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1565-BORBURATA-CURACAO",
+        "from": "Borburata",
+        "to": "Curacao",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1565,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trade_ports",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Early modern narrative Borburata then Curaçao.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1565-CURACAO-RIOHACHA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -68.99,
+            12.17
+          ],
+          [
+            -72.91,
+            11.55
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1565-CURACAO-RIOHACHA",
+        "from": "Curacao",
+        "to": "Riohacha",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1565,
+        "end_year": 1565,
+        "source_ids": [
+          "C8-S05"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "coerced_slaving_trade",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Early modern narrative records Rio de la Hacha May 1565; no actual measured sea track.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1567-68-ENGLAND-CAPVERT",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.1427,
+            50.3755
+          ],
+          [
+            -17.505,
+            14.724
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1567-68-ENGLAND-CAPVERT",
+        "from": "Plymouth",
+        "to": "CapeVert",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1567,
+        "end_year": 1567,
+        "source_ids": [
+          "C8-S03",
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "third_voyage_depart_and_abduction_attempt",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "1567-10-02 Plymouth departure, arrives Cap Vert 1567-11-18.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1567-68-CAPVERT-RIOGRANDE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -17.505,
+            14.724
+          ],
+          [
+            -15.28,
+            11.54
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1567-68-CAPVERT-RIOGRANDE",
+        "from": "CapeVert",
+        "to": "RioGrande",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1567,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "coastal_enslaving_search",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Captain says surveying rivers from Rio Grande to Sierra Leone; route indicator only, exact river identity/location still archival.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1567-68-RIOGRANDE-SIERRALEONE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -15.28,
+            11.54
+          ],
+          [
+            -13.23,
+            8.49
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1567-68-RIOGRANDE-SIERRALEONE",
+        "from": "RioGrande",
+        "to": "SierraLeone",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1567,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "documented_guinea_coastal_search",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Sierra Leone coastline broad and Rio Grande historical name approximate, no specific village site verified.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-SIERRALEONE-DOMINICA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.23,
+            8.49
+          ],
+          [
+            -61.38,
+            15.41
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-SIERRALEONE-DOMINICA",
+        "from": "SierraLeone",
+        "to": "Dominica",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "forced_Atlantic_enslaved_transport",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Departure coast 3 Feb 1568, sight Dominica 27 Mar 1568, southern African coastal marker is NOT proven final point.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-DOMINICA-MARGARITA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -61.38,
+            15.41
+          ],
+          [
+            -63.93,
+            11
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-DOMINICA-MARGARITA",
+        "from": "Dominica",
+        "to": "Margarita",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trafficking_ports_reference",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Modern island point only, not wharf location.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-MARGARITA-RIOHACHA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -63.93,
+            11
+          ],
+          [
+            -72.91,
+            11.55
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-MARGARITA-RIOHACHA",
+        "from": "Margarita",
+        "to": "Riohacha",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "enslaved_sale_and_coercion",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Captain's account records forced occupation of Riohacha short term and trafficking c.200; Spanish territory, not British annexation.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-RIOHACHA-CARTAGENA",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.91,
+            11.55
+          ],
+          [
+            -75.5,
+            10.4
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-RIOHACHA-CARTAGENA",
+        "from": "Riohacha",
+        "to": "Cartagena",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "trade_and_port_contact",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Captain mentions Cartagena with trade restrictions; no secured port possession.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1568-CARTAGENA-SANJUAN",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5,
+            10.4
+          ],
+          [
+            -96.13,
+            19.21
+          ]
+        ]
+      },
+      "properties": {
+        "id": "1568-CARTAGENA-SANJUAN",
+        "from": "Cartagena",
+        "to": "SanJuanUlua",
+        "from_place_role": "modern_named_regional_reference",
+        "to_place_role": "modern_named_regional_reference",
+        "start_year": 1568,
+        "end_year": 1568,
+        "source_ids": [
+          "C8-S04",
+          "C8-S03"
+        ],
+        "trade_kind": "English participation in transatlantic trafficking of enslaved Africans",
+        "route_role": "battle_destination",
+        "actual_ship_track_verified": false,
+        "schematic_source_anchored_link": true,
+        "geometry_status": "two modern name reference points connected geometrically; NOT navigational 16th century ship track or sailing bearing",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "territory_claim": false,
+        "precision_note": "Source includes intervening Cuba/Florida storms; do NOT claim direct Cartagena–Mexico course.",
+        "segment_not_separate_ship": "All segments across one expedition depict only selected reported ordered places. Do not claim ship sailed direct great-circle path."
+      }
+    }
+  ],
+  "metadata": {
+    "count": 16,
+    "route_precision": "regional major stops joined with straight display aids; actual voyages NOT plotted precisely",
+    "editor_warning": "Show in events layer '示意航线' with dashes; not real Tudor navigation / imperial sea control; 1567-68 third voyage does NOT automatically loop back to Plymouth after naval disaster",
+    "negative_event": "Some ports refused English trades, ship presence does not imply English territory",
+    "forced_human_cargo": "Atlantic shipping of enslaved African human beings, not a commodity neutral trade graphic",
+    "copyright": "Original names, dates cited and modern reference points; no map trace"
+  }
+}
