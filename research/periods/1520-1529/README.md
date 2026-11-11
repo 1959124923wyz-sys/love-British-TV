@@ -1,0 +1,35 @@
+**地图点位深挖更新（2026-10-12）**：已从31来源／24事件初稿扩至**54条研究来源、27条历史事件、10个有出处的地图细节点**。直接读 [MAP_DETAIL_REPORT.md](MAP_DETAIL_REPORT.md)、[MAP_SITES_DEEP_GEO.geojson](MAP_SITES_DEEP_GEO.geojson) 和 [MAP_DETAIL_SOURCES_1520S.json](MAP_DETAIL_SOURCES_1520S.json)，其余仍保留在本目录。主编审阅包为**24事件／7地点／49条链接来源**（见 PR #9），遗址对位一律不当16世纪的准确占领面。
+
+---
+
+# 爱英TV · 1520—1529年英国殖民实际控制资料包
+研究员1号，2026-10-12；资料分支 `research/territorial-1520-1529-20261012`；本目录尚未并入 `main`。
+
+## 新旧年代一眼判断
+- **1519年2月图尔奈已交还法国；整个1520年代不能再表示为英王占领。**
+- **加来与吉讷**连续在英王政府与军队手中。1521—26 Newembridge（纽纳姆桥，加来周边，非英格兰Newnham）修造；1525吉讷委员会、1529定居法令显示殖民治理转向英格兰农户迁入与对法国/佛兰德租户及语言/婚姻限制。
+- **爱尔兰**：1520—22萨里远征耗费较高，大部分防守Pale；1521 Monasteroris城堡被围取并设临时守军，1528本地O'Connor Faly控制的势力俘获德尔文副总督。
+- **苏格兰**：1522—24英军破坏性边境突袭、1528苏格兰国王詹姆斯五世脱离安格斯并执政。苏格兰仍独立。
+- **北美**：1527英王John Rut航行确有纽芬兰圣约翰港的英文报告，**没有成立当地英国殖民地**。不同于1517未完成航海的John Rastell企划。
+
+## 研究文档（选读顺序）
+1. [RESEARCH_REPORT.md](RESEARCH_REPORT.md) — 面向任何人可读的分区简明结论、年代对比、后续文献和财政口径。
+2. [CHRONOLOGY.json](CHRONOLOGY.json) — **24项**历史事件（1520—29含金缕衣会、法国与苏格兰战役、爱尔兰本地政权、1527北美探险）；每条有来源号和审稿状态。
+3. [CONTROL_EPISODES.json](CONTROL_EPISODES.json) — **13种**分期军政/司法状态；均无尚未复核的实控polygon。
+4. [SOURCE_REGISTRY.json](SOURCE_REGISTRY.json) — **31条**可回查的出版学术/政府、档案馆来源（含加拿大地名数据库正式St John's Harbour的特定地名编号AAWED）。
+5. [FINANCIAL_EVIDENCE.json](FINANCIAL_EVIDENCE.json) — **7个**财务对象，保存1520—22税收、军用转账、欠缴款、军费和预算。区分英王支出与从爱尔兰收到的收入，**未提供任何殖民利润合计**。
+6. [GEOGRAPHY_CONTEXT.geojson](GEOGRAPHY_CONTEXT.geojson) — **6项**原先1500年加来/爱尔兰Pale粗略地理参考及Guînes、法属Ardres和Calais地点；旧法定线只是历史参考，不能当1525年有效实控界线。
+7. [ARCHIVAL_ACTION_QUEUE.json](ARCHIVAL_ACTION_QUEUE.json) — **15项**研究后续，优先原档Guînes1529法规实施、Monasteroris驻军、Newembridge测图、爱尔兰财政和北美Rut来信。
+
+## 主编减负渠道
+已建立并行分支 `editorial/intake-1520-1529-20261012`，提供符合当前网页`data/atlas-1500-1509.json`主要字段的**21条候选事件、7处持续政体地点**及28条引用，附研究24条→候审21条/暂存3条对照表，避免重复阅读本目录所有原件。**不自动修改网站**。
+
+## 考证与工程红线
+- 只将真正有长期英王驻军和政务记录的据点作为持续政治点，攻陷城堡不等于吃下整个郡。
+- 完整爱尔兰Pale税收地理与Guînes农田租户分布未通过一手账簿审计，地图可以保留早期虚线参考，但不可计算土地面积。
+- **1520金缕衣会中立地带**不属于新殖民地。1522 Morlaix洗劫和1523 Jedburgh边境破坏，事件与长期控制分开。
+- **1519年结束的Tournai**不进入1520年代控制据点。北美Rut1527圣约翰港`AAWED`位置不要误选同名北部拉布拉多海湾`AAWEG`。
+- 如果前端默认展示全部24条历史研究事件将引入重复宏观战争叙述；编辑候选层筛至21条并保留研究层全部24条。
+- 所有古国疆界必须有可审来源。原学术地图版权无授权时只存来源，不擅自矢量化或发布。
+
+**2026-10-12 GitHub 草稿审查入口：**[PR #8 完整历史研究](https://github.com/1959124923wyz-sys/love-British-TV/pull/8)；[PR #9 1520—1529年主编预审包](https://github.com/1959124923wyz-sys/love-British-TV/pull/9)。两份 PR 均为 Draft，main 不受本轮影响。

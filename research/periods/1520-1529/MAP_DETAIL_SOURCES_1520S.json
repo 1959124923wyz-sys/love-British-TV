@@ -1,0 +1,241 @@
+{
+  "schema": "map-geographic-detail-sources-1520s-v1",
+  "compiled": "2026-10-12",
+  "sources": [
+    {
+      "id": "FRA-MCC-2025-GUINES",
+      "url": "https://www.culture.gouv.fr/mc/content/download/337416/pdf_file/SRA_GUINES-WEB.pdf?inLanguage=fre-FR&version=48",
+      "institution": "Ministère français de la Culture / DRAC Hauts-de-France",
+      "level": "French national government archaeology brochure, p.2-3",
+      "verification": "PDF text and p2 (0-index 1) screenshot read",
+      "finding": "Calais English Pale historically approx 300km2 spanning 1352–1558, English Guînes vs French Ardres garrisons, map of fortified sites. Massive modernised English bastions at Guînes explicitly dated 1530–1545, NOT 1520s.",
+      "time_warning": "Government historical map combines 1352–1558 enclave and 1540 forts, cannot reverse-date exact outlines or bastions into 1529. Copyrighted map not traced."
+    },
+    {
+      "id": "GUINES-MURPHY-2025-SECOND",
+      "url": "https://researchportal.northumbria.ac.uk/en/publications/agriculture-anglicisation-and-landholding-henry-viii-the-laws-of-",
+      "institution": "Neil Murphy, Northumbria University, Wehrhahn Verlag",
+      "level": "peer-reviewed 2025 scholarly chapter publisher bibliography",
+      "verification": "Chapter metadata and abstract inaccessible full chapter",
+      "finding": "Separate 23-page 2025 chapter on Guînes agricultural tenancy and restrictions. No village-by-village eviction data verified.",
+      "time_warning": "Publication 2025 contextualizes 1529 laws; legal intention ≠ executed removals."
+    },
+    {
+      "id": "GUINES-HIST-DIRECTORY-1907",
+      "url": "https://ancetresdartois.com/fichiers/Dictionnaire%20topographique%20du%20Pas-de-Calais%201907.pdf",
+      "institution": "Dictionnaire topographique du Pas-de-Calais 1907 historical gazetteer",
+      "level": "scholarly older locality directory",
+      "verification": "PDF indexed list only, not complete period jurisdiction; no detailed site screenshot",
+      "finding": "Doyenné de Guînes place-name list includes Andres, Balinghem, Boucres, Guînes, Hames, Nielles and others alongside Ardres, Fiennes etc, ecclesiastical not Tudor political.",
+      "time_warning": "Parish deanery geography and centuries do not equal 1529 English governed farms; Ardres explicitly French, avoid orange fill."
+    },
+    {
+      "id": "IR-FRANCISCANS-MONASTERORIS",
+      "url": "https://www.franciscans.ie/our-friaries/former-friaries/leinster/monasteroris-co-offaly/",
+      "institution": "Irish Franciscans, original religious order of site",
+      "level": "religious order historical site summary",
+      "verification": "Full webpage read",
+      "finding": "Monasteroris friary founded 1325, site approx 4km west of Edenderry, used as fort by local Irish, severely damaged in lord lieutenant's 1521 siege; ruins in graveyard.",
+      "time_warning": "Monastery and distinct castle positions not yet proven identical."
+    },
+    {
+      "id": "IR-NMS-MONASTERORIS-SMR",
+      "url": "https://www.danielkirkpatrick.co.uk/baronies/coolestown-offaly-heritage-profile/",
+      "institution": "National Monuments Service SMR content reproduced by private heritage index",
+      "level": "official-record text in secondary mirror, not accessed directly",
+      "verification": "Indexed SMR OF011-009001- and 1550 Offaly survey excerpt",
+      "finding": "Monasteroris SMR OF011-009001 church/friary. 1550 survey reports TWO castles at Monasteroris (one new, one ruinous) separately from ruined friary. Distinct sites' identity/years uncertain; critical to 1521 castle claims.",
+      "time_warning": "Private SMR mirror; get archaeological direct viewer before publishing precise footprint; 1550 state cannot be projected to 1521."
+    },
+    {
+      "id": "IR-EXCAV-2010-MONASTERORIS",
+      "url": "https://excavations.ie/report/2010/Offaly/0021762/",
+      "institution": "Excavations.ie / archaeological fieldwork publication",
+      "level": "professional excavation 2010 site and coordinates",
+      "verification": "Site page read, ITM E660737 N733226, lat53.345777 lon-7.087840",
+      "finding": "Medieval deserted settlement excavated immediately near Monasteroris friary, different SMR feature OF011-009006. Confirms approximate historic village locus, not castle walls.",
+      "time_warning": "Excavation site is neither definite 1521 besieged monastery nor castle exact coordinate."
+    },
+    {
+      "id": "IR-FRIARY-LOCATOR-2026",
+      "url": "https://irishhistory.com/places/church-in-ruins-monasteroris-co-offaly/",
+      "institution": "IrishHistory.com monument narrative",
+      "level": "secondary historic monument geolocation",
+      "verification": "Text inspected, old church vicinity 53.34635313 -7.08543742",
+      "finding": "Possible reference of former friary surviving church site 53.346353 -7.085437, consistent with professional field archaeology ca few hundred metres away.",
+      "time_warning": "Unverified private geocode; label provisional 'church ruin location', not exact surviving 1521 castle."
+    },
+    {
+      "id": "SC-BL-COTTON-BII",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102369",
+      "institution": "British Library Archives and Manuscripts",
+      "level": "official original archive register with manuscript folio",
+      "verification": "Catalogue directly read",
+      "finding": "Original Surrey to Wolsey letter reporting Jedburgh raid, Fernherst fortress and lost horses: Cotton MS Caligula B II, f.29, Berwick 27 September 1523. Other letters Aug 27 f.33, Oct28 f.27.",
+      "time_warning": "Official catalogue verified; original handwritten letters not directly read."
+    },
+    {
+      "id": "SC-SURREY-LETTER-1523-PRINTED",
+      "url": "https://electricscotland.com/hiStory/other/minstrelsy_apdx1.htm",
+      "institution": "Original Surrey letter printed in Walter Scott Minstrelsy / ElectricScotland edition",
+      "level": "edited transcription of Tudor first-person dispatch, not autograph",
+      "verification": "Letter text directly read on web",
+      "finding": "Surrey reports Jedburgh town burned and towers demolished, ABBEY assault lasted until after nightfall and abbey could NOT be taken; Ferniehirst attacked after, artillery brought and house thrown down; livestock/horse losses. Distinguish Scottish monastery from burned urban district.",
+      "time_warning": "Older reprint needs alignment against BL autograph; 16th c commander could exaggerate, no census mortality assigned."
+    },
+    {
+      "id": "SC-HES-FERNIEHIRST-LB13369",
+      "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,LB13369",
+      "institution": "Historic Environment Scotland",
+      "level": "national heritage listed building designation",
+      "verification": "Official page read NGR NT65235 17969",
+      "finding": "Ferniehirst castle building with earlier fabric, later 16th century extant tower and modern rebuild. Historic 1523 structure's precise footprint may differ. Modern representative approx 55.4543 -2.5512.",
+      "time_warning": "Avoid confusion with Fernie Castle Fife (separate location)."
+    },
+    {
+      "id": "SC-HES-CESSFORD-SM1710",
+      "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM1710",
+      "institution": "Historic Environment Scotland",
+      "level": "national scheduled monument designation",
+      "verification": "Direct protected-site page read NGR NT73759 23853",
+      "finding": "Cessford tower and earthworks possibly remains of English 1523 siege. Modern registered site approx 55.5077 -2.4170. Note siege—not proven continuous English governorship.",
+      "time_warning": "Protected area up to 125x239m refers modern archaeological protected zone, not 1523 armies' territory."
+    },
+    {
+      "id": "SC-HES-CESSFORD-TROVE",
+      "url": "https://www.trove.scot/place/58306",
+      "institution": "Historic Environment Scotland national historic environment record",
+      "level": "government historic-site archaeological note",
+      "verification": "Site archaeology summary read",
+      "finding": "Historical archive letters call Cessford third strongest Scottish castle in 1523; possible earthwork siegeworks.",
+      "time_warning": "Some later damage 1543/1544 must not be projected to 1523."
+    },
+    {
+      "id": "SC-MURPHY-2024-BORDERS",
+      "url": "https://www.cambridge.org/core/books/abs/henry-viii-the-duke-of-albany-and-the-angloscottish-war-of-15221524/destruction-of-the-scottish-borders/AEB84746253F32C515E7BCC9A0BF05E8",
+      "institution": "Cambridge University Press / Boydell & Brewer, Neil Murphy",
+      "level": "specialist academic monograph chapter summary",
+      "verification": "Full publisher summary read",
+      "finding": "Surrey 1523 deliberately burned Scottish crop and villages across productive border lands, strategic famine and forced depopulation; case for scarred land layer, not a fixed new English territorial occupation.",
+      "time_warning": "The chapter introduction doesn't individually attest each village name and dates."
+    },
+    {
+      "id": "FR-MORLAIX-CITY-MAG",
+      "url": "https://www.morlaix.bzh/fileadmin/mediatheque_ville-de-morlaix/kiosque/Morlaixmag/V6.pdf",
+      "institution": "Ville de Morlaix 2022 municipal history magazine pp14",
+      "level": "local government historical retrospective",
+      "verification": "PDF text indexed p14; full page screenshot request timed out",
+      "finding": "City plundered early July 1522; reports local defenders and forest at Coatserho/Styvel, felling near city; 2022 municipality essay says narrow time early July, so avoid exact day and dubious 700-dead story.",
+      "time_warning": "PDF detailed assertions cannot be counted as directly page-screenshot audited; date month only, surrounding landmarks research leads."
+    },
+    {
+      "id": "ENG-HE-WARK-SM1013100",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1013100",
+      "institution": "Historic England National Heritage List",
+      "level": "UK scheduled monument official record",
+      "verification": "Official full protected entry directly examined, NGR NT82394 38725",
+      "finding": "Wark Castle defended vs Scottish/French Albany attack 1523; approx 2000 French troops breached outer ward then repulsed. Reviews of English defences, 1523 garrison reinforced.",
+      "time_warning": "No permanent Scots control; some secondary accounts confuse with 1522 incidents. English castle not same as Warkworth. WGS84 converted from NGR using EPSG27700→4326."
+    },
+    {
+      "id": "ENG-BL-WARK-1523-AUTOGRAPH",
+      "url": "https://www.pastperfect.org.uk/sites/wark/ms/surrey.html",
+      "institution": "PastPerfect site records British Library Cotton Caligula B VI fols 354–355",
+      "level": "historical letter facsimile catalogue / original letter transcribed by heritage project",
+      "verification": "Text indexed title and 3 November 1523 archive shelfmark; original manuscript images not opened (403)",
+      "finding": "Surrey to Henry VIII report dated 3 Nov 1523 on Albany's failed siege of Wark.",
+      "time_warning": "Period dispute in some secondary summaries 1522/1523: preference official Historic England + dated 1523 original letter, confirm siege exact month with Cotton MS."
+    },
+    {
+      "id": "ENG-BL-DACRE-CORR-1523",
+      "url": "https://searcharchives.bl.uk/catalog/032-002032259",
+      "institution": "British Library Archives Manuscripts Add MS24965",
+      "level": "government-level primary manuscript finding aid",
+      "verification": "BL official detailed catalogue directly read",
+      "finding": "Dacre letter-book 1523–24, plans for incursions 10 and 29 June 1523 ff150/164, correspondence with Kelso abbey and Kerr of Ferniehirst, named Coldstream and Teviotdale; names evidence of diplomatic/contact geography, NOT automatically confirmed burned villages.",
+      "time_warning": "Separate military planning and burned-town events; primary letters unread."
+    },
+    {
+      "id": "SC-EDIN-CESSFORD-SIEGE-19MAY",
+      "url": "https://era.ed.ac.uk/bitstream/1842/6848/2/253253_vol2.pdf",
+      "institution": "University of Edinburgh doctoral thesis volume II",
+      "level": "scholarly dissertation quoting Tudor original",
+      "verification": "Web search-indexed passage from PDF, full PDF pages not screenshot verified",
+      "finding": "Cessford artillery began bombardment 19 May1523, capitulation alleged after owner's surrender to Surrey; cites Letters & Papers Henry VIII III ii no.3039.",
+      "time_warning": "Month/day extracted from index, verify original printed government calendar before presenting exact date publicly."
+    },
+    {
+      "id": "SC-MURPHY-ALBANY-2024",
+      "url": "https://www.cambridge.org/core/books/abs/henry-viii-the-duke-of-albany-and-the-angloscottish-war-of-15221524/albanys-march-on-wark-to-the-treaty-of-berwick-september-1523january-1526/65E3E212EEAAF37592D7113240A898B8",
+      "institution": "Neil Murphy, Cambridge Core historical monograph",
+      "level": "peer-reviewed specialist published chapter summary",
+      "verification": "Academic publisher full abstract directly read",
+      "finding": "Albany's siege of English Wark failed but materially damaged outer defences; Scottish forces continued cross-border operations into 1524. Contrary to English-only raid narrative; Scots remained independent.",
+      "time_warning": "Do not interpret a failed siege as a permanent royal boundary change."
+    },
+    {
+      "id": "ACADEMIC-ROSE-NEWENHAM-NIEULAY",
+      "title": "Susan Rose, Calais: An English Town in France 1347–1558, figure Fort Nieulay on Newenham Bridge site",
+      "institution": "Susan Rose / Boydell & Brewer scholarly monograph preview",
+      "url": "https://api.pageplace.de/preview/DT0400.9781846156151_A47141070/preview-9781846156151_A47141070.pdf",
+      "kind": "scholarly_monograph_figure_index_only",
+      "read_scope": "Figure identity indexed by publisher preview, original figure not examined or copied",
+      "finding": "Identifies Fort Nieulay as on site of Newenham Bridge; 16c English military crossing and modern fortified site linked, but map shape not transposable.",
+      "primary_original_examined": false,
+      "precision_warning": "Book figure index, not survey of original fort or its centroid.",
+      "level": "scholarly_monograph_figure_index_only",
+      "verification": "Figure identity indexed by publisher preview, original figure not examined or copied",
+      "time_warning": "Book figure index, not survey of original fort or its centroid."
+    },
+    {
+      "id": "FRA-CALAIS-NIEULAY-OFFICIAL",
+      "title": "Le Fort Nieulay, former medieval toll bridge, sluice fort reconstructed by Vauban",
+      "institution": "Calais XXL Tourist Office municipal tourism",
+      "url": "https://www.calaisxxl.com/en/offers/have-to-do/Fort-Nieulay/",
+      "kind": "official_local_heritage_history",
+      "read_scope": "Official page text read including bridge and subsequent French Vauban rebuild",
+      "finding": "Medieval toll bridge and western access to Calais, flood sluices and later seventeenth-century Vauban rebuilt fort (which is today's visible built structure).",
+      "primary_original_examined": false,
+      "precision_warning": "Modern building envelope/structure not authentic 1525 fortified footprint.",
+      "level": "official_local_heritage_history",
+      "verification": "Official page text read including bridge and subsequent French Vauban rebuild",
+      "time_warning": "Modern building envelope/structure not authentic 1525 fortified footprint."
+    },
+    {
+      "id": "FRA-FORTNIEULAY-REGISTER",
+      "title": "Fort Nieulay French heritage registered PA62000181 (05 Nov 2024)",
+      "institution": "French Ministry of Culture POP listing via heritage registry mirror",
+      "url": "https://www.plan-du-patrimoine.fr/monument-historique/62/calais/fort-nieulay/PA62000181/",
+      "kind": "government_heritage_register_mirror",
+      "read_scope": "Monument registration number, protective parcel context and coordinates read; official POP source linked as provenance",
+      "finding": "Modern registered Fort Nieulay listed at lat50.946075 lon1.816194. This represents current site/park not original 16c fort center.",
+      "primary_original_examined": false,
+      "precision_warning": "GPS modern heritage site center, no asserted exact 1521 English construction georeference.",
+      "level": "government_heritage_register_mirror",
+      "verification": "Monument registration number, protective parcel context and coordinates read; official POP source linked as provenance",
+      "time_warning": "GPS modern heritage site center, no asserted exact 1521 English construction georeference."
+    },
+    {
+      "id": "RCTR-NEWNHAM-1558",
+      "title": "Siege of Calais 1558 historical military map Newnham Bridge site",
+      "institution": "Royal Collection Trust British royal map collection",
+      "url": "https://militarymaps.rct.uk/other-16th-century-conflicts/view-of-the-siege-of-calais-1558-calais-nord-pas-de-calais-france-50deg5707n-01deg5122e-0",
+      "kind": "royal_historical_cartographic_catalogue",
+      "read_scope": "Royal Collection historical item catalogue, do not copy map",
+      "finding": "Newnham Bridge position on 1558 siege map confirms geographic linkage as fortified western passage. 1558 map not equal 1525 boundary.",
+      "primary_original_examined": false,
+      "precision_warning": "1558 source cannot be reverse-dated as 1525 accurate fortification shape.",
+      "level": "royal_historical_cartographic_catalogue",
+      "verification": "Royal Collection historical item catalogue, do not copy map",
+      "time_warning": "1558 source cannot be reverse-dated as 1525 accurate fortification shape."
+    }
+  ],
+  "curation_rules": [
+    "Never add 1530-1545 bastions to decade 1520s.",
+    "Official SMR Monasteroris separately notes friary and two castles in 1550: keep possible site identity distinction.",
+    "Scots 1523 Jedburgh abbey not confirmed burned; primary Surrey says abbey not taken.",
+    "Cessford: siege evidence; Ferniehirst: short physical capture/destruction; no Scottish county transfer.",
+    "Church deanery of Guînes and 1907 parish list does not prove 1529 Crown English farms.",
+    "No coordinate for historic Grummitt Newembridge until independent place identity resolved."
+  ]
+}

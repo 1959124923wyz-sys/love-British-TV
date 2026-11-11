@@ -1,0 +1,134 @@
+{
+  "schema": "1520s-financial-evidence-v1",
+  "compiled": "2026-10-12",
+  "context": "Tudor Irish Crown administration and Guînes colonization; distinguish receipts, arrears, transfer, appropriation, hypothetical spending and illegal sum",
+  "claims": [
+    {
+      "id": "IR-1520-1522-RECEIPTS",
+      "period": "two years to Easter 1522",
+      "amount_gbp_decimal": null,
+      "amount_original": "£3,536 17s. 8d.",
+      "category": "Irish_exchequer_total_receipts_for_two_years",
+      "payer": "various Crown tenants and taxes administered by English Pale Exchequer",
+      "recipient": "Irish royal government",
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ],
+      "evidence_tier": "peer_reviewed_scholar_directly_extracts_Stile_undertreasurer_accounts",
+      "primary_shelfmark": "Locate Ellis 2023 footnote 48 original Stile accounts",
+      "original_manuscript_reviewed": false,
+      "actual_paid": true,
+      "currency_disambiguation": "Ellis discusses Irish pounds separately from sterling; unit given in scholar's passage as £, conversion unverified",
+      "notes": "Do not call it total wealth extracted from all Ireland. It is exchequer receipts, not monarchy profit."
+    },
+    {
+      "id": "IR-1520-1522-MIL_TRANSFER",
+      "period": "two years to Easter 1522",
+      "amount_gbp_decimal": null,
+      "amount_original": "£1,500 15s. 11½d.",
+      "category": "part_of_above_receipts_transferred_to_military_account",
+      "payer": "Irish treasury",
+      "recipient": "Surrey military payroll/admin",
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ],
+      "evidence_tier": "peer_reviewed_academic",
+      "primary_shelfmark": "Ellis 2023 fn 48",
+      "original_manuscript_reviewed": false,
+      "actual_paid": true,
+      "accounting_relation": "SUBSET_OF_IR-1520-1522-RECEIPTS, ABSOLUTELY DO NOT ADD",
+      "notes": "A transfer out, not a second independent inflow."
+    },
+    {
+      "id": "IR-1520-1522-ARREARS",
+      "period": "to Easter 1522, some unpaid 1538",
+      "amount_gbp_decimal": null,
+      "amount_original": "£511 6s. 1d.",
+      "category": "outstanding_receivables_not_cash",
+      "payer": "assessed taxpayers/arrears unknown distribution",
+      "recipient": "Irish treasury receivable",
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ],
+      "evidence_tier": "peer_reviewed_academic",
+      "primary_shelfmark": "Ellis 2023 fn 48",
+      "original_manuscript_reviewed": false,
+      "actual_paid": false,
+      "notes": "Mostly still not paid 1538. Do not count as 1522 money received."
+    },
+    {
+      "id": "IR-1520-DUBLIN-CASTLE-REPAIRS",
+      "period": "1520 Surrey castle refurbishment",
+      "amount_gbp_decimal": null,
+      "amount_original": "£367 3s. 3d.",
+      "category": "crown_occupation_works_cost",
+      "payer": "English royal government (Irish treasury/other payer cross-check)",
+      "recipient": "repair labour and materials",
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ],
+      "evidence_tier": "peer_reviewed_scholar_documenting_engineering_expense",
+      "primary_shelfmark": "Ellis 2023 fn 35",
+      "original_manuscript_reviewed": false,
+      "actual_paid": "quoted_archival_cost_by_scholar",
+      "notes": "Dublin Castle improvements are royal government expenditure, not Irish colonial revenue or England's net profit."
+    },
+    {
+      "id": "IR-1520-ROYAL-EXTRA-REMITTANCE",
+      "period": "late 1520 royal grant",
+      "amount_gbp_decimal": 4000,
+      "amount_original": "£4,000",
+      "category": "English_Crown_support_advance_to_Irish_forces",
+      "payer": "Henry VIII central treasury",
+      "recipient": "Surrey lieutenant in Ireland",
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ],
+      "evidence_tier": "peer_reviewed_academic_reproduces_contemporary_correspondence",
+      "primary_shelfmark": "Ellis 2023 fn 47",
+      "original_manuscript_reviewed": false,
+      "actual_paid": "sent_as_reported_by_study",
+      "notes": "Direction England->Irish campaign; should not be labelled Irish colonial wealth sent to England."
+    },
+    {
+      "id": "IR-1521-REINFORCEMENT-COST",
+      "period": "1521 reinforcement proposal",
+      "amount_gbp_decimal": null,
+      "amount_original": "£16,000–£17,000 per annum",
+      "category": "projected_annual_expedition_cost_if_reinforced",
+      "payer": "English royal Treasury anticipated",
+      "recipient": "reinforced soldiers and campaigns",
+      "source_ids": [
+        "IR-ELLIS-2023"
+      ],
+      "evidence_tier": "peer_reviewed_academic_cites_contemporary_estimate",
+      "primary_shelfmark": "Ellis 2023 fn 56",
+      "original_manuscript_reviewed": false,
+      "actual_paid": false,
+      "notes": "Counterfactual proposed/estimated annual cost, not actual 1521 spending and not revenue."
+    },
+    {
+      "id": "CAL-1529-SETTLER-ECONOMIC-INCENTIVES",
+      "period": "1525 commission to 1529 ordinances",
+      "amount_gbp_decimal": null,
+      "amount_original": null,
+      "category": "discriminatory_tenure_policy_and_settler_agricultural_incentive",
+      "payer": "Crown and local tenure structures, unspecified",
+      "recipient": "English incoming farmers/landholders, variable",
+      "source_ids": [
+        "CAL-MURPHY-2025-GUINES"
+      ],
+      "evidence_tier": "peer_reviewed_book_chapter_abstract",
+      "primary_shelfmark": null,
+      "original_manuscript_reviewed": false,
+      "actual_paid": null,
+      "notes": "Strong evidence legal intention for expelling foreign tenants and incentives to English settlers; actual enforced number of farms, coercion, monetary transfers not yet verified."
+    }
+  ],
+  "rules": [
+    "No derived net colonial profit, no inflation conversions or conversions Irish £ to sterling without evidence.",
+    "Do not double count gross income plus its transfer subset, or add arrears to realized receipts.",
+    "Costs must remain labelled costs, proposals remain proposals, settled restrictions remain legal policy until enforcement evidence found.",
+    "Every value with pre-decimal d and fractional d preserved verbatim."
+  ]
+}
