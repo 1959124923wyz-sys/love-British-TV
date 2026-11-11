@@ -1,0 +1,599 @@
+{
+  "type": "FeatureCollection",
+  "name": "1540-1549 historical year-specific control entries and exits",
+  "metadata": {
+    "period": [
+      1540,
+      1549
+    ],
+    "verified_new_historical_territorial_polygons": 0,
+    "actual_changes_are_named_forts_and_captured_Boulogne_urban_core": true,
+    "historic_area_sqkm": null,
+    "annual_slices": "CONTROL_TRANSITION_1539_1549.json",
+    "map_drawing": "Do not fill independent Scotland because some strategic towns were temporarily occupied. Do not draw full Boulonnais exact border; old seven reference polygons persist until control proven to cease.",
+    "deepening_20261013": "Plus 4 occupation/recovery fort point changes: Hume entry 1547 exit 1548; Tour d'Ordre English 1544; Forthill separate fort 1548. French Outreau opponent in independent layer FRENCH_COUNTERFORTS_1540_1549.geojson"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "entry-boulogne-english-1544-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6169,
+          50.7256
+        ]
+      },
+      "properties": {
+        "name": "布洛涅：1544年英军实占城市及周边据地",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1544,
+        "change_month": 9,
+        "stable_id": "boulogne-english-1544-1550",
+        "controller": "English Crown military/colonial administration",
+        "source_ids": [
+          "FR-MURPHY-2019-BOULOGNE",
+          "FR-MURPHY-2019-SETTLE",
+          "FR-MURPHY-2019-MAP"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1544,
+        "known_actual_end_year": 1550,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-broughty-english-1547-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87022,
+          56.46293
+        ]
+      },
+      "properties": {
+        "name": "布劳蒂城堡：1547年英军控制",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1547,
+        "change_month": 9,
+        "stable_id": "broughty-english-1547-1550",
+        "controller": "English Crown garrison in otherwise independent Scottish kingdom",
+        "source_ids": [
+          "SC-HES-BROUGHTY",
+          "SC-HES-INCHCOLM",
+          "SC-HES-BROUGHTY-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1547,
+        "known_actual_end_year": 1550,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-inchcolm-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.30171,
+          56.03001
+        ]
+      },
+      "properties": {
+        "name": "因奇科姆岛：英军短暂驻岛",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1547,
+        "change_month": null,
+        "stable_id": "inchcolm-english-1547-1548",
+        "controller": "English Crown naval garrison inside Scottish waters",
+        "source_ids": [
+          "SC-HES-INCHCOLM",
+          "SC-UVA-INCHCOLM-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1547,
+        "known_actual_end_year": 1548,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-inchcolm-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.30171,
+          56.03001
+        ]
+      },
+      "properties": {
+        "name": "因奇科姆岛：英军短暂驻岛：撤军或失去实际驻守",
+        "change_type": "site_control_ended",
+        "change_year": 1548,
+        "change_month": 3,
+        "stable_id": "inchcolm-english-1547-1548",
+        "controller_after": "Independent Scotland / local holders; check garrison and French assistance individually",
+        "source_ids": [
+          "SC-HES-INCHCOLM",
+          "SC-UVA-INCHCOLM-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-haddington-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.77198,
+          55.95332
+        ]
+      },
+      "properties": {
+        "name": "哈丁顿英军占领与围城",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1548,
+        "change_month": null,
+        "stable_id": "haddington-english-1548-1549",
+        "controller": "English Crown garrison in otherwise independent Scotland",
+        "source_ids": [
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-HADDINGTON-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1548,
+        "known_actual_end_year": 1549,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-haddington-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.77198,
+          55.95332
+        ]
+      },
+      "properties": {
+        "name": "哈丁顿英军占领与围城：撤军或失去实际驻守",
+        "change_type": "site_control_ended",
+        "change_year": 1549,
+        "change_month": 9,
+        "stable_id": "haddington-english-1548-1549",
+        "controller_after": "Independent Scotland / local holders; check garrison and French assistance individually",
+        "source_ids": [
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-HADDINGTON-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-lauder-english-1548-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.74838,
+          55.71936
+        ]
+      },
+      "properties": {
+        "name": "劳德尔：英军占用的补给线要塞",
+        "change_type": "temporary_or_persistent_local_site_entry",
+        "change_year": 1548,
+        "change_month": null,
+        "stable_id": "lauder-english-1548-1550",
+        "controller": "English Crown garrison",
+        "source_ids": [
+          "SC-HES-LAUDER",
+          "SC-HES-LAUDER-1548"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": 1548,
+        "known_actual_end_year": 1550,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-hailes-english-1548-date_unknown",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6832,
+          55.973
+        ]
+      },
+      "properties": {
+        "name": "海尔斯城堡：1548年3月被英军占据并交给盟友",
+        "change_type": "temporary_English_capture_1548_then_same_year_Scottish_recapture",
+        "change_year": 1548,
+        "change_month": 3,
+        "stable_id": "hailes-english-1548-date_unknown",
+        "controller": "English garrison with Hugh Douglas allied Scottish lord",
+        "source_ids": [
+          "SC-HES-2022-HAILES",
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-HAILES-SOS-2019"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "valid_year_end_start": null,
+        "known_actual_end_year": 1548,
+        "verified_boundary": false,
+        "not_whole_region_acquisition": true,
+        "year_end_active": false,
+        "capture_then_lost_same_year": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "law-1541-irish-royal-title",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2603,
+          53.3498
+        ]
+      },
+      "properties": {
+        "name": "1541英王爱尔兰王国称号法律改变",
+        "change_type": "constitutional_legal_title_not_new_actual_territory",
+        "change_year": 1541,
+        "source_ids": [
+          "IE-LEG-CROWN-1542",
+          "IE-ELLIS-2016-LEINSTER"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "no_colonial_map_area_generated": true,
+        "legal_note": "Kingdom legal claim cannot color all Ireland as crown-controlled."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-eyemouth-fort-English-1547-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.09156,
+          55.87731
+        ]
+      },
+      "properties": {
+        "name": "埃茅斯1547年英军炮兵要塞",
+        "change_type": "English_1547_fort_entry_in_Scottish_sovereign_territory",
+        "change_year": 1547,
+        "change_month": 9,
+        "stable_id": "eyemouth-fort-English-1547-1550",
+        "controller": "English Crown garrison, Scotland independent",
+        "source_ids": [
+          "SC-NLS-1540S-MAPS",
+          "SC-EYEMOUTH-MUSEUM",
+          "SC-CALDWELL-EYEMOUTH",
+          "SC-HES-EYEMOUTH-FORT-SM4577",
+          "SC-EYEMOUTH-GEOGRAPH-PIN"
+        ],
+        "not_whole_region_acquisition": true,
+        "verified_boundary": false,
+        "historic_area_polygon_confirmed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-lochmaben-english-1544-1545",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.43092,
+          55.11633
+        ]
+      },
+      "properties": {
+        "name": "洛赫马本城堡英军1544年攻占",
+        "change_type": "English_1544_temporary_castle_capture",
+        "change_year": 1544,
+        "stable_id": "lochmaben-english-1544-1545",
+        "source_ids": [
+          "SC-HES-LOCHMABEN-HISTORY",
+          "SC-HES-LOCHMABEN-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-lochmaben-english-1544-1545",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.43092,
+          55.11633
+        ]
+      },
+      "properties": {
+        "name": "洛赫马本城堡苏格兰1545年收复",
+        "change_type": "Scottish_recapture_1545",
+        "change_year": 1545,
+        "stable_id": "lochmaben-english-1544-1545",
+        "source_ids": [
+          "SC-HES-LOCHMABEN-HISTORY",
+          "SC-HES-LOCHMABEN-SITE"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-dunglass-camp-english-1548-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.38613,
+          55.93584
+        ]
+      },
+      "properties": {
+        "name": "Dunglass英军1548—1549临时营地",
+        "change_type": "English_camp_evidenced_1548_1549",
+        "change_year": 1548,
+        "stable_id": "dunglass-camp-english-1548-1549",
+        "source_ids": [
+          "SC-HES-DUNGLASS-CAMP"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "not_whole_region_acquisition": true,
+        "approx_position": "Modern East Lothian Dunglass garden designation. English camp west-of-house hill."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-ambleteuse-english-fort-1546-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6072222,
+          50.8102778
+        ]
+      },
+      "properties": {
+        "name": "阿姆布勒特斯英军炮台：1546年开始建造并驻守",
+        "change_type": "English_1546_outlying_fort_began",
+        "change_year": 1546,
+        "change_month": 4,
+        "change_day": null,
+        "stable_id": "ambleteuse-english-fort-1546-1549",
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-MUNICIPAL-AMBLETEUSE-1549"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-ambleteuse-english-fort-1546-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6072222,
+          50.8102778
+        ]
+      },
+      "properties": {
+        "name": "阿姆布勒特斯英军炮台：1549年失去英国驻军",
+        "change_type": "French_1549_takeover_or_English_1549_retreat",
+        "change_year": 1549,
+        "change_month": 8,
+        "change_day": 25,
+        "stable_id": "ambleteuse-english-fort-1546-1549",
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-MUNICIPAL-AMBLETEUSE-1549"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-boulemberg-english-fort-1546-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.65893,
+          50.71777
+        ]
+      },
+      "properties": {
+        "name": "蒙朗贝尔／Boulemberg英军炮台：1546年开始建造并驻守",
+        "change_type": "English_1546_outlying_fort_began",
+        "change_year": 1546,
+        "change_month": 5,
+        "change_day": null,
+        "stable_id": "boulemberg-english-fort-1546-1549",
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-RCT-BOULOGNE-MAP1549"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-boulemberg-english-fort-1546-1549",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.65893,
+          50.71777
+        ]
+      },
+      "properties": {
+        "name": "蒙朗贝尔／Boulemberg英军炮台：1549年失去英国驻军",
+        "change_type": "French_1549_takeover_or_English_1549_retreat",
+        "change_year": 1549,
+        "change_month": null,
+        "change_day": null,
+        "stable_id": "boulemberg-english-fort-1546-1549",
+        "source_ids": [
+          "FR-HELIOT-1958-BOULOGNE",
+          "FR-RCT-BOULOGNE-MAP1549"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-hume-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.47093,
+          55.66515
+        ]
+      },
+      "properties": {
+        "name": "Hume苏格兰城堡被英军迫使投降",
+        "change_type": "English_named_castle_capture_only",
+        "change_year": 1547,
+        "stable_id": "hume-english-1547-1548",
+        "source_ids": [
+          "SC-HUME-TRUST-1547-1548",
+          "SC-HES-HUME-NRHE-58561"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1547,
+        "uncertainty": "government heritage medieval castle center not Tudor walls"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "exit-hume-english-1547-1548",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.47093,
+          55.66515
+        ]
+      },
+      "properties": {
+        "name": "1548年12月苏格兰重夺Hume，英军占领终止",
+        "change_type": "Scottish_recapture_English_garrison_ends",
+        "change_year": 1548,
+        "stable_id": "hume-english-1547-1548",
+        "source_ids": [
+          "SC-HUME-TRUST-1547-1548"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1548,
+        "uncertainty": "government heritage medieval castle center not Tudor walls"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-tour-d-ordre-english-fort-1544-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.5972222,
+          50.7316667
+        ]
+      },
+      "properties": {
+        "name": "英军1544年11月加固Odre海崖旧灯塔",
+        "change_type": "English_northern_Boulogne_outwork_begins",
+        "change_year": 1544,
+        "stable_id": "tour-d-ordre-english-fort-1544-1550",
+        "source_ids": [
+          "FR-HELIOT-1958-PLANS-PAGES",
+          "FR-WIKIDATA-TOUR-ODRE"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1544,
+        "uncertainty": "former eroded Roman cliff lighthouse approximate coordinate"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "entry-forthill-english-fort-1548-1550",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.87601,
+          56.47487
+        ]
+      },
+      "properties": {
+        "name": "布劳蒂Forthill第二英军山顶堡垒1548建立",
+        "change_type": "separate_English_garrison_near_Broughty_not_whole_Scotland",
+        "change_year": 1548,
+        "stable_id": "forthill-english-fort-1548-1550",
+        "source_ids": [
+          "SC-NLS-FORTHILL-OS-GAZETTEER",
+          "SC-FORTHILL-CURRENT-LOCALITY"
+        ],
+        "site_is_modern_reference_only": true,
+        "not_whole_region_acquisition": true,
+        "historic_area_polygon_confirmed": false,
+        "display_year_event": 1548,
+        "uncertainty": "Modern Forthill quarter location uncertain relative old vanished fort"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hailes-1548-scottish-recapture",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6832,
+          55.973
+        ]
+      },
+      "properties": {
+        "stable_id": "hailes-english-1548-scottish-recapture",
+        "parent_stable_id": "hailes-english-1548-date_unknown",
+        "name": "Hailes Castle苏格兰军队1548年收复英军暂占城堡",
+        "change_type": "English_occupation_ended_Scottish_recapture",
+        "change_year": 1548,
+        "change_month": null,
+        "controller": "Scots (Regent Arran)",
+        "source_ids": [
+          "SC-HES-HAILES-SOS-2019"
+        ],
+        "historic_area_polygon_confirmed": false,
+        "verified_boundary": false,
+        "fill_authorized": false,
+        "not_whole_region_acquisition": true,
+        "source_page": "HES Hailes Castle SoS printed p.2/7",
+        "evidence_precision": "year-only: 1548 Scots recaptured, month unverified; iron gates reportedly moved to Edinburgh",
+        "valid_year_end_start": 1548
+      }
+    }
+  ]
+}

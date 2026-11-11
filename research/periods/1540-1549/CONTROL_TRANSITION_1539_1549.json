@@ -1,0 +1,933 @@
+{
+  "schema": "territory-transition-1540s-v1",
+  "period": {
+    "from": 1540,
+    "to": 1549
+  },
+  "compiled": "2026-10-13",
+  "prior_snapshot_year": 1539,
+  "prior_seed": "research/periods/1530-1539/NEXT_DECADE_1539_1540_RESEARCH_SEED.json",
+  "previous_political_identifiers": [
+    {
+      "stable_id": "calais-crown",
+      "name": "加来英王军政据点",
+      "prior_snapshot_year": 1539,
+      "prior_status": "continued",
+      "transition": "continued",
+      "current_status": "same_existing_polity_class_but_period_border_unknown",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [
+        "FR-MURPHY-2019-BOULOGNE",
+        "GB-TNA-1546-CONTRIB"
+      ],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "previous_dashed_envelope_and_named_city_core",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Check 1530 onward Guines bastion building and 1529 policy enforcement, update actual control footprint only after evidence."
+    },
+    {
+      "stable_id": "dublin-pale",
+      "name": "都柏林英王爱尔兰行政核心",
+      "prior_snapshot_year": 1539,
+      "prior_status": "continued",
+      "transition": "continued",
+      "current_status": "same_existing_polity_class_but_period_border_unknown",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [
+        "IE-ELLIS-2016-LEINSTER",
+        "IE-LEG-CROWN-1542"
+      ],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "previous_dashed_envelope_and_named_city_core",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Compare 1529–30 Irish government and tax jurisdiction with existing Pale; preserve Gaelic rulers independently."
+    },
+    {
+      "stable_id": "channel-jersey",
+      "name": "泽西王室属地",
+      "prior_snapshot_year": 1539,
+      "prior_status": "uncertain_continuity",
+      "transition": "continued",
+      "current_status": "same_existing_polity_class_but_period_border_unknown",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "patterned_island_or_named_fort_reference",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Verify continuing historic political relation from original source; do not fabricate termination."
+    },
+    {
+      "stable_id": "isle-of-man",
+      "name": "马恩地方领主",
+      "prior_snapshot_year": 1539,
+      "prior_status": "uncertain_continuity",
+      "transition": "continued",
+      "current_status": "same_existing_polity_class_but_period_border_unknown",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "patterned_island_or_named_fort_reference",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Verify continuing historic political relation from original source; do not fabricate termination."
+    },
+    {
+      "stable_id": "orkney-scotland",
+      "name": "奥克尼苏格兰王权",
+      "prior_snapshot_year": 1539,
+      "prior_status": "uncertain_continuity",
+      "transition": "continued",
+      "current_status": "same_existing_polity_class_but_period_border_unknown",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [
+        "SC-HES-2026-WOOIN"
+      ],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "patterned_island_or_named_fort_reference",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory."
+    },
+    {
+      "stable_id": "shetland-scotland",
+      "name": "设得兰苏格兰王权",
+      "prior_snapshot_year": 1539,
+      "prior_status": "uncertain_continuity",
+      "transition": "continued",
+      "current_status": "same_existing_polity_class_but_period_border_unknown",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [
+        "SC-HES-2026-WOOIN"
+      ],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "patterned_island_or_named_fort_reference",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory."
+    },
+    {
+      "stable_id": "guines-crown-1520s",
+      "name": "吉讷英王边防据点",
+      "prior_snapshot_year": 1539,
+      "prior_status": "continued",
+      "transition": "continued",
+      "current_status": "same_existing_polity_class_but_period_border_unknown",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [
+        "FR-MURPHY-2019-MAP",
+        "GB-TNA-1546-CONTRIB"
+      ],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "patterned_island_or_named_fort_reference",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Check 1530 onward Guines bastion building and 1529 policy enforcement, update actual control footprint only after evidence."
+    },
+    {
+      "stable_id": "kingdom-of-scotland",
+      "name": "独立苏格兰王国",
+      "prior_snapshot_year": 1539,
+      "prior_status": "continued",
+      "transition": "continued",
+      "current_status": "independent_not_English",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013",
+      "source_ids": [
+        "SC-HES-2026-WOOIN",
+        "SC-HES-2022-HADDINGTON"
+      ],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "independent_state_not_English",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Preserve Scottish independence and check regency/kingdom source; never treat as English territory."
+    },
+    {
+      "stable_id": "channel-guernsey",
+      "name": "根西：英王关联的独立王室属地，保留地方法律",
+      "prior_snapshot_year": 1539,
+      "prior_status": "uncertain_continuity",
+      "transition": "continued",
+      "current_status": "preexisting_Crown_dependency_distinct_Bailiwick_not_English_shire",
+      "first_historic_acquisition_date": null,
+      "last_historic_end_date": null,
+      "observed_prior_data": "research/periods/1530-1539/ATLAS_REVIEW_CANDIDATE.json @ research/territorial-1530-1539-20261013 after PR25 deficiency follow-up",
+      "source_ids": [
+        "GUE-GOV-HOUSE-HISTORY",
+        "GUE-PARLIAMENT-ROYAL-COURT",
+        "GUE-UK-MOJ-CROWN",
+        "GUE-GETTY-ST-PETER"
+      ],
+      "evidence_1530s_source_paths": [
+        "research/periods/1530-1539/TRANSITION_1529_1530.json"
+      ],
+      "area_polygon_verified": false,
+      "draw_mode": "separate_bailiwick_special_political_symbol_and_prior_island_coastline",
+      "geometry_still_historical_reference_only": true,
+      "period_end_1549_known": null,
+      "period_research_warning": "Not newly created in 1540: Guernsey already existing Crown dependency pre-1530; preserve separate source place and does not imply direct mainland England sovereignty.",
+      "controller_as_of_prior_research": "English Crown's Guernsey Bailiwick, distinct from Jersey"
+    }
+  ],
+  "real_new_or_changed_place_episodes": [
+    {
+      "id": "boulogne-english-1544-1550",
+      "name": "布洛涅：1544年英军实占城市及周边据地",
+      "start_year": 1544,
+      "start_month": 9,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English Crown military/colonial administration",
+      "type": "foreign_urban_military_conquest_with_rural_settlement",
+      "source_ids": [
+        "FR-MURPHY-2019-BOULOGNE",
+        "FR-MURPHY-2019-SETTLE",
+        "FR-MURPHY-2019-MAP",
+        "FR-HELIOT-1958-BOULOGNE"
+      ],
+      "coords": [
+        1.6169,
+        50.7256
+      ],
+      "precision": "modern_Boulogne_upper_town_castle_anchor_not_1544_survey",
+      "territorial_change": "new_conquered_city_since_1544",
+      "polygon_verified": false,
+      "start_day": 13,
+      "start_date_precision": "1544-09-13 peer reviewed paper Héliot 1958"
+    },
+    {
+      "id": "broughty-english-1547-1550",
+      "name": "布劳蒂城堡：1547年英军控制",
+      "start_year": 1547,
+      "start_month": 9,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English Crown garrison in otherwise independent Scottish kingdom",
+      "type": "occupied_scottish_named_fort",
+      "source_ids": [
+        "SC-HES-BROUGHTY",
+        "SC-HES-INCHCOLM",
+        "SC-HES-BROUGHTY-SITE"
+      ],
+      "coords": [
+        -2.87022,
+        56.46293
+      ],
+      "precision": "government_heritage_modern_monument",
+      "territorial_change": "new_English_castle_garrison_1547",
+      "polygon_verified": false
+    },
+    {
+      "id": "inchcolm-english-1547-1548",
+      "name": "因奇科姆岛：英军短暂驻岛",
+      "start_year": 1547,
+      "start_month": null,
+      "observed_through_year": 1547,
+      "end_year": 1548,
+      "end_month": 3,
+      "controller": "English Crown naval garrison inside Scottish waters",
+      "type": "temporary_island_garrison_ended_March_1548",
+      "source_ids": [
+        "SC-HES-INCHCOLM",
+        "SC-UVA-INCHCOLM-SITE"
+      ],
+      "coords": [
+        -3.30171,
+        56.03001
+      ],
+      "precision": "abbey_site_not_island_coastal_outline",
+      "territorial_change": "temporary_base_established_and_abandoned",
+      "polygon_verified": false
+    },
+    {
+      "id": "haddington-english-1548-1549",
+      "name": "哈丁顿英军占领与围城",
+      "start_year": 1548,
+      "start_month": null,
+      "observed_through_year": 1548,
+      "end_year": 1549,
+      "end_month": 9,
+      "controller": "English Crown garrison in otherwise independent Scotland",
+      "type": "fortified_occupied_scottish_town",
+      "source_ids": [
+        "SC-HES-2022-HADDINGTON",
+        "SC-HES-HADDINGTON-SITE"
+      ],
+      "coords": [
+        -2.77198,
+        55.95332
+      ],
+      "precision": "modern_church_in_town_not_1548_siege_earthworks",
+      "territorial_change": "1548 English fortified town; retreated 1549",
+      "polygon_verified": false
+    },
+    {
+      "id": "lauder-english-1548-1550",
+      "name": "劳德尔：英军占用的补给线要塞",
+      "start_year": 1548,
+      "start_month": null,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English Crown garrison",
+      "type": "fortified_supply_line_site",
+      "source_ids": [
+        "SC-HES-LAUDER",
+        "SC-HES-LAUDER-1548"
+      ],
+      "coords": [
+        -2.74838,
+        55.71936
+      ],
+      "precision": "modern_village_anchor_not_lost_1548_earthwork_site",
+      "territorial_change": "outpost_1548",
+      "polygon_verified": false
+    },
+    {
+      "id": "hailes-english-1548-date_unknown",
+      "name": "海尔斯城堡：英军1548短期夺取，同年苏格兰收复",
+      "start_year": 1548,
+      "start_month": 3,
+      "observed_through_year": 1548,
+      "end_year": 1548,
+      "end_month": null,
+      "controller": "English garrison with Hugh Douglas allied Scottish lord",
+      "type": "castle_taken_with_local_alliance",
+      "source_ids": [
+        "SC-HES-2022-HAILES",
+        "SC-HES-2022-HADDINGTON",
+        "SC-HES-HAILES-SOS-2019"
+      ],
+      "coords": [
+        -2.6832,
+        55.973
+      ],
+      "precision": "modern_historic_monument_position_not_castle_title_extent",
+      "territorial_change": "castle_change_and_assurance_1548",
+      "polygon_verified": false,
+      "actual_end_precision": "year_only_verified_HES_2019",
+      "controller_after_1548": "Scots under Regent Arran, guardian Lord Borthwick",
+      "end_reason": "Scots retook castle within 1548, removed great iron gates to Edinburgh (HES Statement of Significance p.2/7)",
+      "historical_end_source_id": "SC-HES-HAILES-SOS-2019",
+      "legacy_stable_id_not_rename": "Date-unknown suffix kept for cross-file identity; same-year Scottish recapture now supported by HES official timeline"
+    },
+    {
+      "id": "irish-crown-title-1541",
+      "name": "爱尔兰王国称号和臣服／再授封政策",
+      "start_year": 1541,
+      "start_month": null,
+      "observed_through_year": 1549,
+      "end_year": null,
+      "end_month": null,
+      "controller": "Henry VIII/Edward VI claim as King of Ireland; actual Gaelic local rule layered",
+      "type": "constitutional_status_change_not_new_full_island_control",
+      "source_ids": [
+        "IE-LEG-CROWN-1542",
+        "IE-ELLIS-2016-LEINSTER",
+        "IE-NLI-THOMOND-1543"
+      ],
+      "coords": [
+        -6.2603,
+        53.3498
+      ],
+      "precision": "Dublin_legislative_anchor_only",
+      "territorial_change": "English_monarch_royal_title_new_legal_claim",
+      "polygon_verified": false
+    },
+    {
+      "id": "eyemouth-fort-English-1547-1550",
+      "name": "埃茅斯1547年英军炮兵要塞",
+      "start_year": 1547,
+      "start_month": 9,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English Crown garrison inside Scottish sovereign country",
+      "type": "fortified_scottish_border_outpost",
+      "source_ids": [
+        "SC-NLS-1540S-MAPS",
+        "SC-EYEMOUTH-MUSEUM",
+        "SC-CALDWELL-EYEMOUTH",
+        "SC-HES-EYEMOUTH-FORT-SM4577",
+        "SC-EYEMOUTH-GEOGRAPH-PIN"
+      ],
+      "coords": [
+        -2.09156,
+        55.87731
+      ],
+      "site_national_grid": "NT943649",
+      "precision": "modern Eyemouth Fort photo site matching archaeological NT943649, NOT old surveyed 1547 walls",
+      "territorial_change": "new_small_strategic_English_fort_site_1547",
+      "polygon_verified": false,
+      "wall_boundary_reference": "Modern scholarly excavation published but original lines not digitized or licensed"
+    },
+    {
+      "id": "lochmaben-english-1544-1545",
+      "name": "洛赫马本城堡：英军1544年占领，1545年苏军收复",
+      "start_year": 1544,
+      "start_month": null,
+      "observed_through_year": 1544,
+      "end_year": 1545,
+      "end_month": null,
+      "controller": "English military garrison at individual Lochmaben Castle; Scottish kingdom independent",
+      "type": "temporary_castle_capture_in_independent_Scotland",
+      "source_ids": [
+        "SC-HES-LOCHMABEN-HISTORY",
+        "SC-HES-LOCHMABEN-SITE"
+      ],
+      "coords": [
+        -3.43092,
+        55.11633
+      ],
+      "precision": "official modern stone castle center, not original 1544 walls",
+      "territorial_change": "English temporary named castle occupation 1544, ended 1545",
+      "polygon_verified": false
+    },
+    {
+      "id": "dunglass-camp-english-1548-1549",
+      "name": "东洛锡安Dunglass：1548—1549英军山岗营垒",
+      "start_year": 1548,
+      "start_month": null,
+      "observed_through_year": 1549,
+      "end_year": null,
+      "end_month": null,
+      "controller": "English encampment within sovereign Kingdom of Scotland",
+      "type": "military_camp_with_visible_ramparts_but_1540s_actual_boundary_not_traced",
+      "source_ids": [
+        "SC-HES-DUNGLASS-CAMP"
+      ],
+      "coords": [
+        -2.38613,
+        55.93584
+      ],
+      "precision": "modern Dunglass designed-landscape point; real camp on hill WEST of house; this is approximate context location",
+      "territorial_change": "English supported Haddington occupation 1548–49; Scots destroyed fort shortly later (no dated termination certified)",
+      "polygon_verified": false
+    },
+    {
+      "id": "ambleteuse-english-fort-1546-1549",
+      "name": "阿姆布勒特斯英军要塞：1546年动工、1549年8月25日被法军收复",
+      "start_year": 1546,
+      "start_month": 4,
+      "observed_through_year": 1548,
+      "end_year": 1549,
+      "end_month": 8,
+      "end_day": 25,
+      "controller": "English garrison at Ambleteuse/Slack, France; French Crown after 25 August 1549",
+      "type": "fortified_English_northern_Boulonnais_outpost",
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-MUNICIPAL-AMBLETEUSE-1549",
+        "FR-AMBLETEUSE-MODERN-GAZETTEER"
+      ],
+      "coords": [
+        1.6072222,
+        50.8102778
+      ],
+      "precision": "modern Ambleteuse town center, not contemporary 1546 English citadel or later Vauban fort",
+      "territorial_change": "English fort documented from 1546, French storm and recapture 1549",
+      "polygon_verified": false
+    },
+    {
+      "id": "boulemberg-english-fort-1546-1549",
+      "name": "蒙朗贝尔／Boulemberg英军外围炮台：1546年动工、1549年撤离",
+      "start_year": 1546,
+      "start_month": 5,
+      "observed_through_year": 1548,
+      "end_year": 1549,
+      "end_month": null,
+      "controller": "English garrison on Mont Lambert height east of Boulogne; French forces occupied after English withdrawal in 1549",
+      "type": "English_outlying_artillery_fort_dated_1546_to_1549",
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549",
+        "FR-MONTLAMBERT-MODERN-LOCATOR"
+      ],
+      "coords": [
+        1.65893,
+        50.71777
+      ],
+      "precision": "modern Mont Lambert hamlet reference; Tudor Boulemberg fort exact hill plot unknown",
+      "territorial_change": "English fort from May 1546; evacuated/damaged 1549 after Ambleteuse loss, while core Boulogne held to 1550",
+      "polygon_verified": false
+    },
+    {
+      "id": "hume-english-1547-1548",
+      "name": "休姆城堡：英军1547-09-22夺取，1548-12苏格兰收复",
+      "start_year": 1547,
+      "start_month": 9,
+      "start_day": 22,
+      "observed_through_year": 1547,
+      "end_year": 1548,
+      "end_month": 12,
+      "controller": "English local castle garrison only (Kingdom of Scotland independent)",
+      "type": "locally_captured_Scottish_border_castle_with_scottish_retake",
+      "source_ids": [
+        "SC-HUME-TRUST-1547-1548",
+        "SC-HES-HUME-NRHE-58561",
+        "SC-HES-HUME-SM387"
+      ],
+      "coords": [
+        -2.47093,
+        55.66515
+      ],
+      "precision": "Historic Environment Scotland medieval castle modern site; eighteenth century raised walls do not show 1547 perimeter",
+      "territorial_change": "1547-09-22 forced surrender; retaken by Scottish defenders December 1548, in 1548 year-end English marker must be OFF",
+      "polygon_verified": false
+    },
+    {
+      "id": "tour-d-ordre-english-fort-1544-1550",
+      "name": "Odre古灯塔英王防御工事：1544年11月起加固",
+      "start_year": 1544,
+      "start_month": 11,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English Crown garrison at Boulogne north seafront, Roman Tour d'Ordre repurposed",
+      "type": "English_coastal_artillery_outwork_attached_to_occupied_Boulogne",
+      "source_ids": [
+        "FR-HELIOT-1958-PLANS-PAGES",
+        "FR-WIKIDATA-TOUR-ODRE"
+      ],
+      "coords": [
+        1.5972222,
+        50.7316667
+      ],
+      "precision": "Former Roman lighthouse cliff-edge Wikidata approximate marker, historical erosion. NOT authentic 1544 bastion footprint",
+      "territorial_change": "Earthworks began November 1544, finished 1545 or early 1546; remains English held through 1549 before 1550 return",
+      "polygon_verified": false
+    },
+    {
+      "id": "forthill-english-fort-1548-1550",
+      "name": "布劳蒂Forthill英军前进炮台：1548年修建",
+      "start_year": 1548,
+      "start_month": null,
+      "observed_through_year": 1549,
+      "end_year": 1550,
+      "end_month": null,
+      "controller": "English outlying fortified hill supporting Broughty Castle, inside independent Scotland",
+      "type": "English_support_artillery_fort_separate_from_Broughty_Castle",
+      "source_ids": [
+        "SC-NLS-FORTHILL-OS-GAZETTEER",
+        "SC-HES-2022-HADDINGTON",
+        "SC-FORTHILL-CURRENT-LOCALITY"
+      ],
+      "coords": [
+        -2.87601,
+        56.47487
+      ],
+      "precision": "Modern quarter Forthill centroid, NOT vanished 1548 fort archaeological footprint; 500+m location uncertainty",
+      "territorial_change": "1548 fortified English hill position until 1550 dismantling, location not precise enough for source-supported point",
+      "polygon_verified": false,
+      "draw_mode": "approximate_dashed_locator"
+    }
+  ],
+  "year_end_snapshots": [
+    {
+      "year": 1540,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [],
+      "confirmed_expired_episode_ids": [],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1541,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "irish-crown-title-1541"
+      ],
+      "confirmed_expired_episode_ids": [],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1542,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "irish-crown-title-1541"
+      ],
+      "confirmed_expired_episode_ids": [],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1543,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "irish-crown-title-1541"
+      ],
+      "confirmed_expired_episode_ids": [],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1544,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "boulogne-english-1544-1550",
+        "irish-crown-title-1541",
+        "lochmaben-english-1544-1545",
+        "tour-d-ordre-english-fort-1544-1550"
+      ],
+      "confirmed_expired_episode_ids": [],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1545,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "boulogne-english-1544-1550",
+        "irish-crown-title-1541",
+        "tour-d-ordre-english-fort-1544-1550"
+      ],
+      "confirmed_expired_episode_ids": [
+        "lochmaben-english-1544-1545"
+      ],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1546,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "boulogne-english-1544-1550",
+        "irish-crown-title-1541",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549",
+        "tour-d-ordre-english-fort-1544-1550"
+      ],
+      "confirmed_expired_episode_ids": [
+        "lochmaben-english-1544-1545"
+      ],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1547,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "boulogne-english-1544-1550",
+        "broughty-english-1547-1550",
+        "inchcolm-english-1547-1548",
+        "irish-crown-title-1541",
+        "eyemouth-fort-English-1547-1550",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549",
+        "hume-english-1547-1548",
+        "tour-d-ordre-english-fort-1544-1550"
+      ],
+      "confirmed_expired_episode_ids": [
+        "lochmaben-english-1544-1545"
+      ],
+      "year_end_note": "Claim/status of regional perimeter varies by site; city Point and dashed reference only",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1548,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "boulogne-english-1544-1550",
+        "broughty-english-1547-1550",
+        "haddington-english-1548-1549",
+        "lauder-english-1548-1550",
+        "irish-crown-title-1541",
+        "eyemouth-fort-English-1547-1550",
+        "dunglass-camp-english-1548-1549",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549",
+        "tour-d-ordre-english-fort-1544-1550",
+        "forthill-english-fort-1548-1550"
+      ],
+      "confirmed_expired_episode_ids": [
+        "inchcolm-english-1547-1548",
+        "lochmaben-english-1544-1545",
+        "hume-english-1547-1548",
+        "hailes-english-1548-date_unknown"
+      ],
+      "year_end_note": "Inchcolm withdrawn March: do not show English occupied island at year-end. Haddington held, Hailes taken and Scots retook within 1548 per official HES Statement; no English garrison at 1548 year end. Hume castle retaken by Scots in December 1548; Forthill English fort is separate from Broughty castle.",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    },
+    {
+      "year": 1549,
+      "carried_1539_stable_ids": [
+        "calais-crown",
+        "dublin-pale",
+        "channel-jersey",
+        "isle-of-man",
+        "orkney-scotland",
+        "shetland-scotland",
+        "guines-crown-1520s",
+        "kingdom-of-scotland",
+        "channel-guernsey"
+      ],
+      "new_active_episode_ids": [
+        "boulogne-english-1544-1550",
+        "broughty-english-1547-1550",
+        "lauder-english-1548-1550",
+        "irish-crown-title-1541",
+        "eyemouth-fort-English-1547-1550",
+        "dunglass-camp-english-1548-1549",
+        "tour-d-ordre-english-fort-1544-1550",
+        "forthill-english-fort-1548-1550"
+      ],
+      "confirmed_expired_episode_ids": [
+        "inchcolm-english-1547-1548",
+        "haddington-english-1548-1549",
+        "lochmaben-english-1544-1545",
+        "ambleteuse-english-fort-1546-1549",
+        "boulemberg-english-fort-1546-1549",
+        "hume-english-1547-1548",
+        "hailes-english-1548-date_unknown"
+      ],
+      "year_end_note": "Haddington removed September; Boulogne/Broughty/Lauder continue into next decade. Hailes returned to Scottish control in 1548 according to official HES Statement; ended English episode must remain expired through 1549. Exact 1548 recapture month unknown. France retook Ambleteuse 25 August; Mont Lambert fort evacuated in 1549. Boulogne urban garrison remains English.",
+      "false_new_province_area_polygons": 0,
+      "uncertain_continuity_episode_ids": [],
+      "previously_existing_political_identity_additions_from_PR25": [
+        "channel-guernsey"
+      ]
+    }
+  ],
+  "all_inherited_political_identities_accounted_for": true,
+  "historic_geography_policy": "Always distinguish independent Scotland from English-held isolated forts and legal Irish kingdom claim from actual administration. Zero certified ancient polygons; dashed rough context polygon only. No fabricated km2. 1549 British Boulogne urban core survived even after two English frontier forts fell; city and outpost control must be mapped separately. Newly identified French Outreau fort (built 1545) is a FRENCH defending force opposing English-held Boulogne, not part of English occupation. English Tour d'Ordre and Broughty Forthill were separately fortified. Hume taken 1547 and Scots retook 1548. Guernsey has its own Bailiwick/royal court and is inherited from PR25 late research; do not present 1540 as new territorial conquest. Nine recorded polities include independent Scotland.",
+  "cross_decade_seed_1549_1550": {
+    "continue_expected": [
+      "boulogne-english-1544-1550",
+      "broughty-english-1547-1550",
+      "lauder-english-1548-1550",
+      "calais-crown",
+      "dublin-pale",
+      "channel-jersey",
+      "isle-of-man",
+      "orkney-scotland",
+      "shetland-scotland",
+      "guines-crown-1520s",
+      "kingdom-of-scotland",
+      "eyemouth-fort-English-1547-1550",
+      "dunglass-camp-english-1548-1549",
+      "tour-d-ordre-english-fort-1544-1550",
+      "forthill-english-fort-1548-1550"
+    ],
+    "end_before_1550": [
+      "inchcolm-english-1547-1548",
+      "haddington-english-1548-1549",
+      "lochmaben-english-1544-1545",
+      "ambleteuse-english-fort-1546-1549",
+      "boulemberg-english-fort-1546-1549",
+      "hume-english-1547-1548"
+    ],
+    "need_new_1550_study": true,
+    "do_not_claim_1550_actual_site_control_without_evidence": true,
+    "dunglass_note": "Official heritage source confirms camp during 1548–49 but does not identify exact 1550 withdrawal or destruction year. Carry as 1549 observed site and reassess in 1550. Modern estate point not camp walls."
+  },
+  "sources_registry": "SOURCE_REGISTRY.json",
+  "precision_quality_note": "Hailes documented English castle garrison in 1548 only; neither documentary silence nor the year 1549 certifies its abandonment. When 1549 unverified, show dashed question point instead of verified solid English control.",
+  "important_archived_1549_outpost_losses": [
+    {
+      "stable_id": "ambleteuse-english-fort-1546-1549",
+      "former_English_controller": true,
+      "loss_year": 1549,
+      "loss_month": 8,
+      "loss_day": 25,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-MUNICIPAL-AMBLETEUSE-1549",
+        "FR-AMBLETEUSE-MODERN-GAZETTEER"
+      ]
+    },
+    {
+      "stable_id": "boulemberg-english-fort-1546-1549",
+      "former_English_controller": true,
+      "loss_year": 1549,
+      "loss_month": null,
+      "loss_day": null,
+      "source_ids": [
+        "FR-HELIOT-1958-BOULOGNE",
+        "FR-RCT-BOULOGNE-MAP1549",
+        "FR-MONTLAMBERT-MODERN-LOCATOR"
+      ]
+    }
+  ],
+  "pr25_1530s_supplemental_inheritance": "channel-guernsey",
+  "collector3_hailes_official_correction": {
+    "source_id": "SC-HES-HAILES-SOS-2019",
+    "source_page": "Printed p.2/7, PDF p.4 (zero-index screenshot page 3)",
+    "english_capture_year": 1548,
+    "scottish_recapture_year": 1548,
+    "scottish_recapture_month": null,
+    "confirmed_English_control_at_end_1548": false,
+    "confirmed_English_control_at_end_1549": false,
+    "original_letter_verified": false
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema": "1540s_dundee_control_and_damage_research_v1",
+  "research_status": "editor_pending_no_changes_to_published_atlas",
+  "compiled": "2026-10-13",
+  "previous_broughty_stable_id": "broughty-english-1547-1550",
+  "new_stable_id": "dundee-english-intermittent-1547-1548",
+  "classification": "intermittent_English_military_occupation_of_Scottish_burgh_not_permanent_suzerainty",
+  "context": "Dundee was within independent Scotland throughout; English military actions were temporary, with conflicting local alignments and garrison negotiations.",
+  "control_episodes": [
+    {
+      "id": "dundee-english-town-late-1547",
+      "start_date": "1547-12 (before Christmas, exact day unverified)",
+      "end_date": "1548-01 (Argyll relief, exact day unverified)",
+      "transition": "transferred_by_local_submission_and_seizure_then_ended",
+      "english_effective_military_occupation": true,
+      "year_end_1547": "evidenced_English_town_control",
+      "year_end_1548": "not_automatically_carried",
+      "sources": [
+        "SC-STANDREWS-DUNDEE-STMARY-1548",
+        "SC-DRISCOLL-1995-DUNDEE-LAW-1548"
+      ],
+      "geometry_status": "named_historic_town_without_authenticated_Tudor_siege_or_town_boundary",
+      "fill_authorized": false,
+      "publication_gate": "editor_review"
+    },
+    {
+      "id": "dundee-english-second-occupation-aug-1548",
+      "start_date": "1548-08 (exact day unverified)",
+      "end_date": null,
+      "last_documented_date": "1548-08",
+      "transition": "transferred_to_English_military_temporarily_end_unverified",
+      "english_effective_military_occupation": true,
+      "year_end_1548": "uncertain_continuity_not_English_confirmed",
+      "sources": [
+        "SC-DRISCOLL-1995-DUNDEE-LAW-1548",
+        "SC-HES-2026-DUNDEE-BURNING"
+      ],
+      "geometry_status": "named_historic_town_and_burning_without_authenticated_town_control_polygon",
+      "fill_authorized": false,
+      "publication_gate": "editor_review",
+      "not_proven": "No reliable 1548 year-end garrison handover day, no civilian loss count."
+    }
+  ],
+  "new_event_candidates": [
+    {
+      "id": "1540S-C3-NEW-DUNDEE-STMARY-1548",
+      "year": 1548,
+      "start_year": 1548,
+      "end_year": 1548,
+      "month": 1,
+      "day": null,
+      "name": "英军撤离邓迪前掠取圣玛丽教堂钟及金属器物，并焚毁塔楼",
+      "category": "repression",
+      "icon_code": "REP",
+      "historical_site": "Dundee St Mary's church steeple",
+      "coordinates_reference_file": "DUNDEE_EVENT_RESEARCH_POINTS_PR27_20261013.geojson",
+      "year_event_placement_rule": "January 1548 after 12 January English military report; exact destruction date unknown",
+      "source_ids": [
+        "SC-STANDREWS-DUNDEE-STMARY-1548"
+      ],
+      "relevance": "documented material deprivation / war violence / short-term town occupation",
+      "material_extraction_quantities": {
+        "church_bells": null,
+        "brass": null,
+        "copper": null
+      },
+      "colonial_profit": null,
+      "editorial_gate": "candidate_only"
+    },
+    {
+      "id": "1540S-C3-NEW-DUNDEE-AUG-1548",
+      "year": 1548,
+      "start_year": 1548,
+      "end_year": 1548,
+      "month": 8,
+      "day": null,
+      "name": "英军再度围攻并占领邓迪，城镇遭焚毁",
+      "category": "military_campaign",
+      "icon_code": "REP",
+      "source_ids": [
+        "SC-DRISCOLL-1995-DUNDEE-LAW-1548",
+        "SC-HES-2026-DUNDEE-BURNING"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_precision": "named_historic_city_location_no_burning_perimeter",
+      "colonial_profit": null,
+      "editorial_gate": "candidate_only",
+      "do_not_assume": "Dundee city entire area remains English by 1548-12-31."
+    }
+  ],
+  "evidence_gaps": [
+    "Underlying original 1547 and 1548 Scottish and English state papers must be read for precise entry/exit date.",
+    "Merriman & Summerson 1982 and Mudie et al. 1970 support background but this study has not retrieved original pages.",
+    "Tudor Dundee town limit and burned building footprints unavailable; do not copy current city boundary.",
+    "Archaeology at Dundee Law does not conclusively date the standing earthworks to 1547-48; not proof of a newly occupied hillfort."
+  ],
+  "validation_expectations": [
+    "No English-controlled Dundee city polygon",
+    "Do not imply England annexed Scotland",
+    "Do not merge St Mary's bell loss into an invented cash profit",
+    "Treat Dec 1547 town-control year-end and Aug 1548 continuity separately"
+  ]
+}

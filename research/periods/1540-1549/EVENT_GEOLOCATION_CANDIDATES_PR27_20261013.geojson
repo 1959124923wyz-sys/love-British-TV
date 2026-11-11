@@ -1,0 +1,74 @@
+{
+  "type": "FeatureCollection",
+  "name": "Research-only 1547-1548 event coordinates (not authoritative battle geographies)",
+  "metadata": {
+    "generated": "2026-10-13",
+    "status": "editor_review_required_not_published",
+    "coordinate_conversion": "EPSG:27700 to EPSG:4326 via pyproj Transformer(always_xy=True)",
+    "geographical_rule": "These points identify modern registered heritage locations or battlefield-area context. They are NOT Tudor site/siege boundaries or English control polygons.",
+    "prohibit_for_area_calculations": true,
+    "fill_authorized": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "1540S-023",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.651418,
+          56.056104
+        ]
+      },
+      "properties": {
+        "event_id": "1540S-023",
+        "year": 1548,
+        "location_name_zh": "坦塔隆城堡（1548年英军围攻未得）",
+        "source_ids": [
+          "SC-HES-2022-HADDINGTON",
+          "SC-HES-TANTALLON-SM13326"
+        ],
+        "source_grid": "NT 59529 84997",
+        "source_easting": 359529,
+        "source_northing": 684997,
+        "geo_precision": "modern_scheduled_castle_site_only_not_1548_siege_emplacement",
+        "position_type": "historic_structure_modern_anchor",
+        "historic_boundary_confirmed": false,
+        "fill_authorized": false,
+        "direct_English_control": false,
+        "editorial_gate": "candidate_point_review",
+        "do_not_claim": "Do not render English controlled castle or siege gun position; the English failed to capture it."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1540S-014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.025416,
+          55.931615
+        ]
+      },
+      "properties": {
+        "event_id": "1540S-014",
+        "year": 1547,
+        "location_name_zh": "平基战役历史景观登记区代表点",
+        "source_ids": [
+          "SC-HES-PINKIE",
+          "SC-HES-PINKIE-BTL15"
+        ],
+        "source_grid": "NT 36032 71425",
+        "source_easting": 336032,
+        "source_northing": 671425,
+        "geo_precision": "official_battlefield_inventory_area_reference_not_a_single_clash_coordinate",
+        "position_type": "modern_designated_battlefield_reference_point",
+        "historic_boundary_confirmed": false,
+        "fill_authorized": false,
+        "direct_English_control": false,
+        "editorial_gate": "candidate_point_review_only_with_visual_uncertainty",
+        "do_not_claim": "Battle extended across Musselburgh, Wallyford, Carberry and Falside; inventory map is a modern scholarly boundary not an occupied county or measured battle location."
+      }
+    }
+  ]
+}
