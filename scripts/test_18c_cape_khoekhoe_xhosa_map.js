@@ -11,7 +11,7 @@ const d=load('data/stories/serial/chronology-preview-cape-1795-1799.json'),
 const crosswalk=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),reader=read('js/history-stories.js'),css=read('css/history-stories.css'),html=read('index.html');
 assert.equal(chapters.chapters.at(-1).end,1599);
-assert.equal(idx.stories.length,28);assert.equal(idx.stories[11].id,a.id);
+assert.equal(idx.stories.length,29);assert.equal(idx.stories[11].id,a.id);
 assert.equal(a.id,'E18-T25-CAPE-INVASION-KHOEKHOE-XHOSA-1795-1799');
 assert.equal(a.publication_status,'research_only');
 assert.equal(a.publication_approval,'not_submitted');
@@ -99,7 +99,7 @@ assert.deepEqual(new Set(links),new Set(a.related_event_ids));
 assert.deepEqual(new Set(links),new Set(idx.stories[11].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-cape-1795-1799.json'"));
 assert(app.includes('cape18cReady=true'));
-assert(reader.includes('draft.stories?.length===28'));
+assert(reader.includes('draft.stories?.length===29'));
 assert(reader.includes("storyMeta.has('E18-T25-CAPE-INVASION-KHOEKHOE-XHOSA-1795-1799')"));
 assert(html.includes('18c12-cape-indigenous-resistance-20261110'));
 assert(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
