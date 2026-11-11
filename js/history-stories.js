@@ -246,8 +246,11 @@
   const lenapePurchaseContinuation=['E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775'].includes(article.id)&&
    new URLSearchParams(window.location.search).get('review18c')==='1'&&
    storyMeta.has('E18-T10-WALKING-PURCHASE-LENAPE-LANCASTER-EASTON-1734-1762')?['E18-T10-WALKING-PURCHASE-LENAPE-LANCASTER-EASTON-1734-1762']:[];
+  const revolution24Continuation=['E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775','E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T12-REVOLUTION-PRISON-SHIPS-BLACK-FREEDOM-1764-1796')?['E18-T12-REVOLUTION-PRISON-SHIPS-BLACK-FREEDOM-1764-1796']:[];
   const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,
-    ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...virginiaNewYorkSlaveContinuation,...carolinaTuscaroraContinuation,...sevenYearsContinuation,...lenapePurchaseContinuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
+    ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...virginiaNewYorkSlaveContinuation,...carolinaTuscaroraContinuation,...sevenYearsContinuation,...lenapePurchaseContinuation,...revolution24Continuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
@@ -431,7 +434,7 @@
       const draft=await response.json();
       if(draft.schema==='atlas-18c-story-review-index-v1'&&
          draft.editorial_status==='research_preview_not_published'&&
-         draft.stories?.length===23&&draft.stories[0].status==='research_preview'&&
+         draft.stories?.length===24&&draft.stories[0].status==='research_preview'&&
          draft.stories[0].publication_review==='not_submitted'&&
          draft.stories.every(t=>t.status==='research_preview'&&t.publication_review==='not_submitted'&&
           /^E18-[A-Z0-9-]+$/.test(t.id)&&/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.file)&&

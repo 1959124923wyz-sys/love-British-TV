@@ -8,7 +8,7 @@ const geo=J('research/continuity/1702-1732-carolina/BRITISH_TRADE_CAPTIVITY_TUSC
 const raw=J('research/18c/consolidated/series/T09.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,23);A.equal(idx.stories[20].id,story.id);A.equal(idx.stories[20].status,'research_preview');A.equal(idx.stories[20].publication_review,'not_submitted');
+A.equal(idx.stories.length,24);A.equal(idx.stories[20].id,story.id);A.equal(idx.stories[20].status,'research_preview');A.equal(idx.stories[20].publication_review,'not_submitted');
 A.equal(data.schema,'atlas-18c-t09-tuscarora-yamasee-captivity-v1');A.equal(data.editorial_status,'research_preview_not_published');
 A.equal(data.events.length,23);A.equal(data.sources.length,32);A.equal(data.sources.filter(s=>s.original_registry_key?.startsWith('A:')).length,9);
 A.equal(raw.groups.length,5);A.equal(data.provenance.original_candidate_ids,9);A.equal(data.provenance.mapped_original_ids,8);
@@ -46,7 +46,7 @@ A.deepEqual(new Set(links),new Set(story.related_event_ids));A.deepEqual(new Set
 A.equal(geo.transitions.length,23);
 A(geo.transitions.every(e=>e.polygon_allowed===false&&e.area_sqkm===null&&e.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t09-tuscarora-yamasee-1702-1732.json'"));
-A(app.includes('t09Tuscarora21Ready=true'));A(reader.includes('draft.stories?.length===23'));
+A(app.includes('t09Tuscarora21Ready=true'));A(reader.includes('draft.stories?.length===24'));
 A(reader.includes("storyMeta.has('E18-T09-TUSCARORA-YAMASEE-INDIGENOUS-CAPTIVITY-1702-1732')"));
 A(html.includes('18c21-t09-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));

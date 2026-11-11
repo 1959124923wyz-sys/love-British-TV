@@ -8,7 +8,7 @@ const geo=J('research/continuity/1734-1762-pennsylvania/BRITISH_WALKING_PURCHASE
 const raw=J('research/18c/consolidated/series/T10.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,23);A.equal(idx.stories[22].id,s.id);A.equal(idx.stories[22].status,'research_preview');
+A.equal(idx.stories.length,24);A.equal(idx.stories[22].id,s.id);A.equal(idx.stories[22].status,'research_preview');
 A.equal(d.schema,'atlas-18c-t10-walking-purchase-lenape-land-fraud-v1');
 A.equal(d.editorial_status,'research_preview_not_published');
 A.equal(d.events.length,29);A.equal(d.sources.length,29);
@@ -53,7 +53,7 @@ A.deepEqual(new Set(links),new Set(idx.stories[22].event_ids));
 A.equal(geo.transitions.length,29);
 A(geo.transitions.every(x=>x.polygon_allowed===false&&x.area_sqkm===null&&x.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t10-walking-purchase-1734-1762.json'"));
-A(app.includes('t10Lenape23Ready=true'));A(reader.includes('draft.stories?.length===23'));
+A(app.includes('t10Lenape23Ready=true'));A(reader.includes('draft.stories?.length===24'));
 A(reader.includes("storyMeta.has('E18-T10-WALKING-PURCHASE-LENAPE-LANCASTER-EASTON-1734-1762')"));
 A(html.includes('18c23-t10-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
