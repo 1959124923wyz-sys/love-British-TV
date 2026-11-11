@@ -316,3 +316,18 @@
 - [x] 25篇研究索引、24个前辈静态守卫和真实桌面浏览器回归、原1126与ZIP独立审计、严格GIS和公开GitHub预览均已写入独立Actions。
 - [x] [第25批完整编辑交接](../../docs/research/EDITOR19_18C_T13_HBC_BEOTHUK_DENE_CREE_FUR_TRADE_HANDOFF_20261111.md)。
 - [ ] T13最新HEAD三项Actions均success为最终验收条件；公司毛皮利润实账、York I/II古站址配准、Dene口述、Inuit遇害具体人数及Beothuk受害名册后续再查。
+
+## 2026-11-11｜主编19第二十六批 T15 孟加拉1770—1772饥荒、公司税赋与农户抗争
+
+- [x] 复用GitHub `research/18c/consolidated/series/T15.json` 的1合并组、9件原B候审编号、7个原B来源键，与1126项研究去向CSV全部核对。原ZIP与宏观T14/T15孟加拉长篇保存不动；新T15专做原始地方函件与农民控诉的精细专题。
+- [x] 26件具年份档案事件、22个来源注册、26章78段完整中文正文、26个真实正文—Atlas互动及26项按政治行为者区分的税制状态记录。
+- [x] 1770-04-24 Rangpur John Grose批评无薪Pykes向居民索钱，称每年五至八万卢比为听闻估算；公司官员同日要求处罚粮商囤积。
+- [x] 1770-05-09公司信后世转录报告Purnea约三分之一人口死亡，地区与全省口径分开，整体准确死亡总数保持null，遵守Cambridge McLane与OUP 2026多项学术研究的不同统计。
+- [x] 1770-05-23 Bhagalpur税官称Sujan Singh三万卢比被课额而仅交2500，因严重灾情要求部分退还，公司税官另发严厉威胁措辞，未编造已实施的军事屠杀。
+- [x] 1770-07-16 Rajmahal贫民缺粮、07-24 Dhaka/Rajshahi洪水、1770-09税收账、1770-11 Becher分项救济和尸体运送开支、12月公司称粮荒已结束，均按原档或新学术史分开。
+- [x] 1771-08-28董事会正式引Becher与Muhammad Reza Khan指控公司代理强买农户来年留种，区分个别代理行为与公司没有全省官方粮食统购专卖。
+- [x] 1772-08-05 Purnea农民控诉强购谷物、加租和烙铁刑，另有地方地主呈诉；1772-08-24公司Collector Ducarel否认指控。各项均按证据类型区分，终局裁定未审不编造。
+- [x] 11处由现代Rangpur、Purnia、Bhagalpur、Rajmahal城市地名点代表，未经审核的村庄、古地契多边形、军队行军/粮食路线一律lat/lng null。0英国新增实际控制Polygon、0虚构孟加拉被害人数或英国财政净收益。
+- [x] 26篇索引、原B候审与ZIP/1126审计、严格GIS、25旧专题静态及真实桌面Chromium、发布16世纪数据回归、公开网页资产验证都写入独立Actions工作流。
+- [x] [第26批完整编辑交接](../../docs/research/EDITOR19_18C_T15_BENGAL_FAMINE_RANGPUR_PURNIA_TAX_HANDOFF_20261111.md)。
+- [ ] 1772 Purnea农民控诉的原审判全文、原1770-05-09伦敦书信页号、分区实际人口损失和公司预算核定待后续独立核证；最新HEAD GitHub三个专项job全部success后才能认定终验。
