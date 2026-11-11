@@ -50,7 +50,7 @@ A(html.includes('18c20-t11-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
 A(!css.includes('.story-reading-toolbar')&&!css.includes('.story-toc'));
 const E=tag=>data.events.find(e=>e.id==='E18C-T11-'+tag);
-A(E('1705-VIRGINIA-KILLING-IMMUNITY').description.includes('免责'));
+A(E('1705-VIRGINIA-KILLING-IMMUNITY').description.includes('免于刑责'));
 A(E('1712-NEW-YORK-EXECUTIONS').description.includes('不同'));
 A(E('1729-MARYLAND-MUTILATION-ACT').description.includes('准许'));
 A(E('1739-STONO-SEPTEMBER-RISING').lat===null);
