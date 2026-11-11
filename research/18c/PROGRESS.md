@@ -300,3 +300,19 @@
 - [x] [第24批完整史料与代码交接](../../docs/research/EDITOR19_18C_T12_REVOLUTION_PRISON_SHIPS_BLACK_FREEDOM_HANDOFF_20261111.md)。
 - [ ] 逐船囚犯与死亡原卷、Tryon逐村损失清单、英美审查委员会被返主者后续命运、Chloe Cooley更准确日期以及1796各堡垒交接日继续研究。
 - [ ] 以最新HEAD三项GitHub Actions全部success为最终验收，不自行合并Draft。
+
+## 2026-11-11｜主编19第二十五批 T13 哈德孙湾公司、纽芬兰Beothuk被殖民驱逐与Dene/Cree外交
+
+- [x] 直接复用GitHub主编15原T13 **7研究合并组、10原候审ID、11项A来源注册键及2项C来源注册键**，原1126逐项交叉表与不可变ZIP保持原样；1713同一外交和约的2个历史候审原ID合为1 Atlas地图事件，双原编号不丢失。
+- [x] 29项具年份殖民、贸易与原住民史事、39项登记来源、29章87段独立完整中文正文、29条真实Atlas正文跨年互动与29条按主体分离的贸易/军事控制状态过渡。
+- [x] 1700年3月25日英国纽芬兰渔业法明确赋英国船长渔港、林木及海岸晒鱼场权利；英国船主的法律制度未代替Beothuk的土地权利和实际居住。
+- [x] 1720年代Dog Bay英商鲑鱼网场、1730年代Twillingate定居扩张，使Beothuk沿海渔猎食物资源被挤压；1768英官Cartwright接触失败、1784原住民保护地建议和1792 Pulling记录英国毛皮猎人暴行按原学术史登记，不虚构总伤亡。
+- [x] **1713年乌得勒支英法公司商贸权外交变更和1714年HBC Knight实际重接York Factory分开**，而且今York Factory III是1788洪水后另择的站址，原I/II已被河蚀，不以现代旅游遗迹直接当旧堡战场GPS。
+- [x] 1714 Thanadelthur逃出Cree拘禁，1715—1716 Dene-Cree和解系她主导的独立原住民外交，1717 HBC Churchill River Post才在后续商业扩展中建成；1732 Prince of Wales首石，Dene/Cree居民供给食物、物资与向导角色有Parks Canada史料。
+- [x] 1754 Henday随Cree向导进入草原，1755返回，1759再赴内陆，1760回York有61艘原住民独木舟；原Henday日志遗失、四版副本路线有争议，禁止绘假精确行军和商务路线。
+- [x] 1771 Matonabbee带HBC Hearne入Coppermine探铜，Bloody Falls Inuit遭同行Dene武装袭杀单列；英国雇员/原住民杀害主体区别，死亡数及原住民土地实控面积均null。
+- [x] 1782年8月9日法国La Pérouse夺Prince of Wales Fort、8月24日夺York Factory两个不同据点；法国抢掠依真实法国责任标记；1783年HBC恢复Churchill但放弃坏损石堡。
+- [x] 1783巴黎和约第三条纽芬兰渔业权同岛上陆地政治主权分开。现代St John's和Churchill两处城市级参考位置共7事件点；0虚构英属历史实控Polygon、0未经核准贸易/军事路线、0臆造HBC净利润和Beothuk被害人总数。
+- [x] 25篇研究索引、24个前辈静态守卫和真实桌面浏览器回归、原1126与ZIP独立审计、严格GIS和公开GitHub预览均已写入独立Actions。
+- [x] [第25批完整编辑交接](../../docs/research/EDITOR19_18C_T13_HBC_BEOTHUK_DENE_CREE_FUR_TRADE_HANDOFF_20261111.md)。
+- [ ] T13最新HEAD三项Actions均success为最终验收条件；公司毛皮利润实账、York I/II古站址配准、Dene口述、Inuit遇害具体人数及Beothuk受害名册后续再查。
