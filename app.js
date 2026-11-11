@@ -255,6 +255,7 @@ let t12Revolution24Ready=false;
 let t13Hudson25Ready=false;
 let t15Famine26Ready=false;
 let t16Bengal27Ready=false;
+let t20Eic28Ready=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -3351,6 +3352,36 @@ async function boot(){
       for(const source of ds.sources||[])sourcesById.set(source.id,source);
       t16Bengal27Ready=true;
     }catch(error){console.warn('T16 preview excluded; all prior 26 stories retained',error);}
+  }
+  // Twenty-eighth T20: parliamentary EIC financial regulation and colonial company monopolies.
+  if(preview18cReady){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-t20-eic-parliament-loan-monopoly-1702-1793.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('T20 evidence file not available');
+      const ds=await response.json(),es=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+      if(ds.schema!=='atlas-18c-t20-eic-parliament-finance-monopoly-v1'||
+        ds.editorial_status!=='research_preview_not_published'||es.length!==29||
+        ds.provenance?.original_merge_groups!==4||ds.provenance?.original_candidate_ids!==9||
+        ds.provenance?.original_B_keys!==9||ds.provenance?.mapped_original_ids!==9||
+        ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+        es.some(e=>e.year<1702||e.year>1793||e.start_year!==e.year||e.end_year!==e.year||
+          e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+          e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+          e.territorial_claim!==false||e.fill_authorized!==false||
+          !e.source_ids?.length||e.source_ids.some(s=>!sourceIds.has(s))||
+          (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+        throw new Error('T20 source/GIS audit failed');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+        const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('duplicate T20 event');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyeight-eic-parliament-'+decade,
+          period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const source of ds.sources||[])sourcesById.set(source.id,source);
+      t20Eic28Ready=true;
+    }catch(error){console.warn('T20 preview excluded; prior 27 stories preserved',error);}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
