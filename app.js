@@ -251,6 +251,7 @@ let t11Slavery20Ready=false;
 let t09Tuscarora21Ready=false;
 let t08SevenYears22Ready=false;
 let t10Lenape23Ready=false;
+let t12Revolution24Ready=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -3226,6 +3227,35 @@ async function boot(){
     for(const src of ds.sources||[])sourcesById.set(src.id,src);
     t10Lenape23Ready=true;
    }catch(err){console.warn('T10 excluded; prior 22 stories intact',err);}
+  }
+
+  // Twenty-fourth T12: colonial Boston repression, British prison ships, Black self-emancipation, 1783 re-enslavement.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t12-revolution-black-freedom-1764-1796.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T12 British colonial captivity source file unavailable');
+    const ds=await res.json(),e=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t12-revolution-prison-ships-black-freedom-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==35||
+       ds.provenance?.original_candidate_ids!==11||ds.provenance?.original_A_keys!==17||
+       ds.provenance?.mapped_original_ids!==11||ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sourceIds.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T12 invalid source integrity or unapproved colonial control boundary');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T12 duplicate event id');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyfour-revolution-black-freedom-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t12Revolution24Ready=true;
+   }catch(err){console.warn('T12 preview excluded; prior 23 draft stories intact',err);}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
