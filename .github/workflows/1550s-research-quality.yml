@@ -1,0 +1,24 @@
+name: "1550s independent historical map research QA"
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-map-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify chapter seven historical/source/GIS continuity
+        run: python3 research/periods/1550-1559/validate_research.py
+      - name: Validate independent Leaflet 1550s JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          path=Path("research/periods/1550-1559/interactive_research_preview.html")
+          contents=path.read_text(encoding="utf8")
+          chunks=re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', contents, flags=re.I|re.S)
+          assert chunks and chunks[-1].strip(),"No locally authored JS script in preview"
+          Path("/tmp/1550s-research-map.js").write_text(chunks[-1],encoding="utf8")
+          PY
+          node --check /tmp/1550s-research-map.js

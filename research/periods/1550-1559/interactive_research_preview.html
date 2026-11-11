@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>爱英TV｜1550—1559年独立地图预览</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+body{margin:0;color:#eee;background:#19222c;font:14px/1.45 system-ui}*{box-sizing:border-box}
+main{display:grid;grid-template-columns:390px 1fr;height:100vh}aside{overflow:auto;padding:16px 18px;border-right:1px solid #4b5665}
+h1{font-size:20px;margin:0 0 9px}h2{font-size:15px;margin:16px 0 7px;color:#eabb84}
+#year{font-size:31px;color:#ffc78c;font-weight:700}#slider{width:100%;accent-color:#d89b64}
+label{display:block;margin:7px 0;color:#b9c4ce}small,p.muted{font-size:12px;color:#b1bdcb}
+#map{height:100%;background:#26323a}.event{border:1px solid #435161;border-radius:5px;padding:7px;margin:5px 0;cursor:pointer}
+.event:hover{border-color:#efbe8e}.event.no-pos{border-style:dashed}
+#events{max-height:40vh;overflow-y:auto}#detail{padding:8px;background:#26313f;border-radius:5px;min-height:65px}
+#detail a{color:#ffc08b}.leaflet-container{background:#27333c}
+.pin{width:24px;height:24px;border-radius:50%;border:2px solid #ffbd7b;background:#483628;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:0 0 8px #0008}
+.pin.scot{border-color:#83b8e0;background:#30405b}.pin.special{border-color:#caace9;background:#443b55}
+.pin.event{border-color:#eaa4a0;background:#593239}
+.pin.france{border-color:#64c3b0;background:#215c50}
+</style></head><body><main><aside>
+<h1>1550—1559｜爱英TV研究地图</h1>
+<p class="muted">第七章独立预览。十年不重置控制；不确定疆域虚线。尚未发布正式页面。</p>
+<div id="year">1550</div><input id="slider" type="range" value="1550" min="1550" max="1559" step="1">
+<label><input id="geo" type="checkbox" checked> 历史参考概略边界（虚线；加来1558年换色）</label>
+<label><input id="cores" type="checkbox" checked> 城市/城堡政权动态（英国、法国、爱尔兰）</label>
+<label><input id="polities" type="checkbox" checked> 海岛法权与独立苏格兰</label>
+<p class="muted">橙色：英王实占据点；绿色：法国收复；蓝色：独立苏格兰；紫色：王室属地。局部法律宣称不能代表全郡实际占领。</p>
+<label><input id="pins" type="checkbox" checked> 截至当前年的事件点</label>
+<p class="muted">现代威尔士外壳只是继承的行政法地理参考；1556爱尔兰种植园并未用现代郡界填色。点击事件阅读史料，双击有地点的事件则平滑定位并高亮，不改变缩放比例。</p>
+<h2 id="head">事件</h2><div id="events"></div>
+<h2>历史档案</h2><div id="detail"></div>
+</aside><div id="map"></div></main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
+const map=L.map('map').setView([53.0,-1.3],5);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap contributors'}).addTo(map);
+const territory=L.layerGroup().addTo(map),coreLayer=L.layerGroup().addTo(map),otherLayer=L.layerGroup().addTo(map),frenchLayer=L.layerGroup().addTo(map),eventLayer=L.layerGroup().addTo(map),focusLayer=L.layerGroup().addTo(map);
+let a,g,c,p,french,markers={};
+function sym(t){const cl=t==='scot'?'scot':t==='special'?'special':t==='event'?'event':t==='france'?'france':'';return L.divIcon({className:'',html:'<div class="pin '+cl+'">'+(t==='event'?'•':'◆')+'</div>',iconSize:[24,24],iconAnchor:[12,12]})}
+function show(title,body,sourceIds){
+const refs=(sourceIds||[]).map(id=>{const v=a.sources.find(s=>s.id===id);return v&&v.url?'<li><a href="'+esc(v.url)+'" target="_blank" rel="noopener">'+esc(v.title||id)+'</a></li>':'<li>'+esc(id)+'</li>'}).join('');
+$('detail').innerHTML='<b>'+esc(title)+'</b><p>'+esc(body||'历史地点研究记录。')+'</p>'+(refs?'<ul>'+refs+'</ul>':'');
+}
+function marker(f,target,style,year){const pt=f.geometry.coordinates,p=f.properties,z=L.marker([pt[1],pt[0]],{icon:sym(style)}).addTo(target);const switchAt=p.French_controller_year_start;const liveLabel=Number.isInteger(switchAt)?(year>=switchAt?'本年受法国控制':'本年受英王控制'):(p.controller||p.English_actual_status_by_year||p.render_kind||'历史政治地点');z.bindTooltip(esc(p.name)+' · '+esc(liveLabel));z.on('click',()=>show(p.name,liveLabel+'。'+(p.precision||p.point_precision||p.description||'现代地点参考，不是16世纪边线。'),p.source_ids));}
+function render(){
+const y=Number($('slider').value);$('year').textContent=y;for(const z of [territory,coreLayer,otherLayer,frenchLayer,eventLayer,focusLayer])z.clearLayers();markers={};
+if($('geo').checked){const gf=g.features.filter(f=>(f.properties.render_start_year??f.properties.start_year??1550)<=y&&y<=(f.properties.render_end_year??1559));
+L.geoJSON({type:'FeatureCollection',features:gf},{style:f=>{let t=f.properties.relation_type;let col=f.properties.French_control_change_year&&y>=f.properties.French_control_change_year?'#4ba58a':t==='scottish_crown_territory'?'#6ea2cd':t==='crown_dependency'?'#a38edc':t==='autonomous_lordship'?'#caad7d':t==='partial_crown_administration'?'#d6ae74':'#e4a46c';
+return {color:col,dashArray:'7 5',weight:2,fillColor:col,fillOpacity:.05};},onEachFeature:(f,layer)=>{layer.bindTooltip(esc(f.properties.name)+'（仅地理参考）');layer.on('click',()=>show(f.properties.name,f.properties.uncertainty||'边界不能视作1550年代历史实测。',f.properties.source_ids))}}).addTo(territory);}
+if($('cores').checked)c.features.filter(f=>(f.properties.first_year_in_chapter??1550)<=y&&y<=(f.properties.year_end_stop??1559)).forEach(f=>{const p=f.properties;const style=Number.isInteger(p.French_controller_year_start)&&y>=p.French_controller_year_start?'france':p.render_kind?.includes('Scottish')?'scot':'core';marker(f,coreLayer,style,y);});
+if($('polities').checked)p.features.filter(f=>(f.properties.first_year_in_chapter??1550)<=y&&y<=(f.properties.year_end_stop??1559)).forEach(f=>marker(f,otherLayer,['orkney-scotland','shetland-scotland','kingdom-of-scotland'].includes(f.properties.stable_id)?'scot':'special',y));
+// French controller changes are rendered from each city's year field, never as a separate invented county map.
+const e=a.events.filter(ev=>ev.year<=y).sort((a,b)=>a.year-b.year);$('head').textContent='已发生事件 '+e.length+' / '+a.events.length;$('events').innerHTML='';
+const grouped=new Map();
+for(const ev of e){
+const d=document.createElement('div');d.className='event'+(ev.lat===null?' no-pos':'');d.innerHTML='<small>'+esc(ev.date_label||ev.year)+'</small><div>'+esc(ev.name)+'</div>';
+d.addEventListener('click',()=>show(ev.name,ev.description,ev.source_ids));
+d.addEventListener('dblclick',()=>{show(ev.name,ev.description,ev.source_ids);if(ev.lat!==null&&ev.lng!==null){map.panTo([ev.lat,ev.lng],{animate:true,duration:.7});focusLayer.clearLayers();L.circleMarker([ev.lat,ev.lng],{radius:18,color:'#ffed90',weight:3,fillOpacity:0,interactive:false}).addTo(focusLayer);const f=markers[ev.id];if(f)f.openTooltip();}});
+$('events').appendChild(d);
+if(ev.lat!==null&&ev.lng!==null){const key=ev.lat.toFixed(4)+'/'+ev.lng.toFixed(4);if(!grouped.has(key))grouped.set(key,[]);grouped.get(key).push(ev);}
+}
+if($('pins').checked){for(const es of grouped.values()){const v=es[0],m=L.marker([v.lat,v.lng],{icon:sym('event')}).addTo(eventLayer);m.bindTooltip(esc(es.length>1?es.length+'项事件：'+v.geography_label:v.name));m.on('click',()=>show(es.length===1?v.name:es.length+'项事件',es.map(e=>e.year+' '+e.name).join('；'),es.flatMap(e=>e.source_ids)));for(const z of es)markers[z.id]=m;}}
+}
+async function boot(){const paths=['ATLAS_REVIEW_CANDIDATE.json','MAP_REFERENCE_OUTLINES_1550_1559.geojson','POLITICAL_CONTROL_SITES_1550_1559.geojson'];const j=await Promise.all(paths.map(async path=>{const r=await fetch('./'+path,{cache:'no-store'});if(!r.ok)throw Error(path+' HTTP '+r.status);return r.json()}));[a,g,c]=j;french={features:[]};
+p={features:c.features.filter(f=>['channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'].includes(f.properties.stable_id))};
+c={features:c.features.filter(f=>!['channel-jersey','channel-guernsey','isle-of-man','orkney-scotland','shetland-scotland','kingdom-of-scotland'].includes(f.properties.stable_id))};
+render();for(const x of document.querySelectorAll('input'))x.addEventListener('input',render);}
+boot().catch(err=>{$('detail').textContent='预览资料无法载入：'+err.message+'。请在克隆仓库后运行静态HTTP服务，不要通过file://协议打开。';});
+</script></body></html>

@@ -1,0 +1,189 @@
+{
+  "schema": "1550s_maritime_and_trade_evidence_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "compiled": "2026-10-13",
+  "trips": [
+    {
+      "key": "chancellor-1553-white-sea",
+      "event_year": 1553,
+      "actors": [
+        "Richard Chancellor",
+        "Sebastian Cabot merchants"
+      ],
+      "start_geo_label": "England / Thames-region exploration sponsorship",
+      "reported_waypoints": [
+        "English ports, unspecified in British Museum history",
+        "White Sea coast near later Archangel; the town named Arkhangelsk was not yet founded",
+        "Muscovite commercial court contact"
+      ],
+      "verified_as_English_territory": false,
+      "source_ids": [
+        "RU-BRITISH-MUSEUM-MUSCOVY-CHARTER",
+        "RU-CAMBRIDGE-MUSCOVY-NETWORK"
+      ],
+      "route_polyline": null,
+      "commercial_goal": "England and Muscovy negotiated trading privileges and Arctic navigation; no Russian conquest"
+    },
+    {
+      "key": "wyndham-1553-guinea",
+      "event_year": 1553,
+      "actors": [
+        "Thomas Wyndham"
+      ],
+      "start_geo_label": "English ships",
+      "reported_waypoints": [
+        "Guinea coast",
+        "Benin kingdom in Hakluyt chapter heading"
+      ],
+      "verified_as_English_territory": false,
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON"
+      ],
+      "route_polyline": null,
+      "commercial_goal": "Trade voyage; no coastal sovereignty"
+    },
+    {
+      "key": "lok-1554-1555-guinea",
+      "event_year": 1554,
+      "reported_return_year": 1555,
+      "actors": [
+        "John Lok"
+      ],
+      "ships": [
+        {
+          "name": "Trinity",
+          "burden_tons_reported": 140
+        },
+        {
+          "name": "Bartholomew",
+          "burden_tons_reported": 90
+        },
+        {
+          "name": "John Evangelist",
+          "burden_tons_reported": 140
+        }
+      ],
+      "reported_departure_dates": [
+        "1554-10-11 Thames",
+        "1554-11-01 English coast"
+      ],
+      "reported_waypoints": [
+        "Thames River",
+        "Dover",
+        "Rye",
+        "Dartmouth",
+        "Madeira sighting 1554-11-17",
+        "Guinea coast undetermined specific port",
+        "England returned 1555"
+      ],
+      "source_ids": [
+        "AF-HAKLUYT-JOHN-LOK-1554",
+        "AF-HISTORIC-ENGLAND-JOHN-LOK",
+        "AF-OXFORD-EHR-2024"
+      ],
+      "return_with_enslaved_people_reported": 5,
+      "source_precision_note": "Later edited Hakluyt log and official Historic England; not all route legs georeferenced or ship log plotted",
+      "route_polyline": null,
+      "forced_transport_origin_exact_location": null,
+      "forced_transport_destination_exact_wharf": null,
+      "verified_as_English_territory": false
+    },
+    {
+      "key": "towerson-1555-guinea",
+      "event_year": 1555,
+      "actors": [
+        "William Towerson"
+      ],
+      "reported_waypoints": [
+        "Guinea coast (specific landfalls source TOC only)"
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON"
+      ],
+      "route_polyline": null,
+      "verified_as_English_territory": false
+    },
+    {
+      "key": "towerson-1556-elmina",
+      "event_year": 1556,
+      "actors": [
+        "William Towerson"
+      ],
+      "reported_waypoints": [
+        "Guinea coast",
+        "Elmina Portuguese coastal fortress; English merchant VISIT not possession"
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON"
+      ],
+      "route_polyline": null,
+      "verified_as_English_territory": false,
+      "elmina_actual_foreign_controller": "Portugal"
+    },
+    {
+      "key": "towerson-1557-sestos",
+      "event_year": 1557,
+      "actors": [
+        "William Towerson"
+      ],
+      "reported_waypoints": [
+        "Guinea coast",
+        "Sestos river historical name (modern alignment unverified)"
+      ],
+      "source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON",
+        "AF-HISTORIC-ENGLAND-JOHN-LOK"
+      ],
+      "route_polyline": null,
+      "verified_as_English_territory": false
+    }
+  ],
+  "company_events": [
+    {
+      "year": 1555,
+      "name": "Muscovy Company",
+      "state": "English-chartered commercial corporation",
+      "charter_authority": "Philip & Mary",
+      "source_ids": [
+        "RU-BRITISH-MUSEUM-MUSCOVY-CHARTER",
+        "RU-CAMBRIDGE-MUSCOVY-NETWORK"
+      ],
+      "territorial_takeover_in_Russia": false,
+      "actual_precise_foreign_warehouses_verified": null
+    }
+  ],
+  "networks": [
+    {
+      "kind": "English-northern-trade",
+      "end_regions": [
+        "White Sea",
+        "Muscovy"
+      ],
+      "legal_state": "rights under Russian ruler, no English colonial authority",
+      "verified_sailing_tracks": 0,
+      "route_display_permission": "named nodes only unless original log waypoints documented"
+    },
+    {
+      "kind": "English-Guinea-gold-ivory-human-captivity",
+      "end_regions": [
+        "Guinea coast",
+        "Elmina Portuguese base"
+      ],
+      "legal_state": "commercial contact and enslavement, no English military shore province",
+      "verified_sailing_tracks": 0,
+      "route_display_permission": "relative sequence labels, no fabricated coastline crossing polyline"
+    }
+  ],
+  "economic_terms": "Labour trafficking of five people is a sourced reported COUNT, not value/profit; Muscovy capital subscriptions and voyage tonnages not colonial net profit.",
+  "human_rights_layer": {
+    "enslaved_people_John_Lok_return_year": 1555,
+    "count": 5,
+    "place_origin": "Guinea coast, not precise town",
+    "not_yet_Hawkins_1562_triangular_slave_trade": true
+  },
+  "route_GeoJSON_files_approved": [],
+  "reason": "Source-derived waypoints are qualitative/edited later; no complete navigational manuscript lat/lon series. Routes are not invented."
+}

@@ -1,0 +1,145 @@
+{
+  "schema": "1550s_fiscal_expropriation_nonaggregation_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "objects": [
+    {
+      "id": "FIN-1550-BOULOGNE-TREATY-400K",
+      "year": 1550,
+      "name": "Treaty consideration for restitution of French Boulogne from English occupation",
+      "value": 400000,
+      "unit": "gold_ecus",
+      "amount_status": "treaty_nominal_consideration_not_audited_payment",
+      "source_ids": [
+        "FR-BNF-BOULOGNE-1550"
+      ],
+      "transfer_logic": "French Crown to England under negotiated 24 March 1550 treaty; 25 April handover",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    },
+    {
+      "id": "FIN-1555-MUSCOVY-SUBSCRIPTIONS-6000",
+      "year": 1555,
+      "name": "English joint-stock exploration merchant subscriptions (nineteenth-century scholarly retelling)",
+      "value": 6000,
+      "unit": "GBP",
+      "amount_status": "historical_scholarly_estimate_of_collected_company_capital_unverified_1555_ledger",
+      "source_ids": [
+        "RU-CAMBRIDGE-EARLY-COMPANY-FINANCE"
+      ],
+      "transfer_logic": "English private investors into charter-era company capital; NOT English state taxation or Russia colonization profit",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    },
+    {
+      "id": "FIN-1555-LOK-ENSLAVED-5",
+      "year": 1555,
+      "name": "John Lok transported enslaved Africans Guinea to England",
+      "value": 5,
+      "unit": "people",
+      "amount_status": "official_Historic_England_historic_count_not_money_valuation",
+      "source_ids": [
+        "AF-HISTORIC-ENGLAND-JOHN-LOK",
+        "AF-OXFORD-EHR-2024"
+      ],
+      "transfer_logic": "West Africa enslaved persons to England; a human rights violation, count is not financial revenue",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    },
+    {
+      "id": "FIN-1556-IRISH-MIDLANDS-CONFISCATED-LAND",
+      "year": 1556,
+      "name": "Confiscation and settlement grants to English settlers in Laois and Offaly",
+      "value": null,
+      "unit": null,
+      "amount_status": "qualitative_property_expropriation_real_aggregate_area_value_unknown",
+      "source_ids": [
+        "IE-ASKABOUTIRELAND-MIDLANDS-1556",
+        "IE-LANCASTER-1556-COLONIAL"
+      ],
+      "transfer_logic": "O'More/O'Connor local lands through Crown statutory seizure to settler grants; no verified historical hectares/cash sum",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    },
+    {
+      "id": "FIN-1556-IRISH-CROWN-GARRISON-COST",
+      "year": 1556,
+      "name": "English Exchequer funding fortified Midlands colonial settlements",
+      "value": null,
+      "unit": null,
+      "amount_status": "historian_qualitative_negative_budget_burden_no_audited_amount",
+      "source_ids": [
+        "IE-LANCASTER-1556-COLONIAL"
+      ],
+      "transfer_logic": "English Exchequer cost of defense; named garrison towns depended on state support; not colonial income",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    },
+    {
+      "id": "FIN-1558-CALAIS-FRENCH-RECOVERY",
+      "year": 1558,
+      "name": "Loss of English Calais customs and military garrison control",
+      "value": null,
+      "unit": null,
+      "amount_status": "historic_control_ended_no_audited_1558_customs_revenue",
+      "source_ids": [
+        "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558"
+      ],
+      "transfer_logic": "English Pale tax/customs rights lost; cannot calculate decade fiscal loss without ledgers",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    },
+    {
+      "id": "FIN-1559-GREY-PRIVATE-RANSOM",
+      "year": 1559,
+      "name": "William Grey of Wilton ransom after surrender of Guînes",
+      "value": 25000,
+      "unit": "crowns",
+      "amount_status": "scholarly_History_of_Parliament_biographical_private_ransom_quote",
+      "source_ids": [
+        "FR-HISTORY-PARLIAMENT-GREY-1558"
+      ],
+      "transfer_logic": "private family / diplomatic ransom associated with French captors; NOT English Crown colonial income or audited state payment",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    },
+    {
+      "id": "FIN-1559-CALAIS-FUTURE-500K-SURETY",
+      "year": 1559,
+      "name": "500,000 gold crowns contingent merchant bond for eventual Calais restitution after eight years",
+      "value": 500000,
+      "unit": "gold_crowns",
+      "amount_status": "Anglo_French_1559_treaty_Article_9_nominal_guarantee_NOT_cash_paid",
+      "source_ids": [
+        "FR-CATEAU-1559-ARTICLES"
+      ],
+      "transfer_logic": "conditional security for French promise of future restitution; no realized English revenue in 1559",
+      "source_original_ledger_read": false,
+      "reportable_as_English_colonial_net_profit": false,
+      "actual_cash_received_audited": null,
+      "estimate_standard": "If value exists, use original nominal currency/count without conversion or cumulative total; never sum cross-units."
+    }
+  ],
+  "count": 8,
+  "colonial_realized_net_profit_GBP": null,
+  "royal_English_1550_to_1559_audited_foreign_income": null,
+  "no_double_count": "Never add treaty bond 1559 to 1550 compensation, private Grey ransom, trader capital, count of enslaved humans, Scottish fort pay or Irish confiscated properties.",
+  "currency_policy": "Historic GBP, gold écus and crowns have different money systems; no unsourced exchange conversion.",
+  "source_priority": "Archival Exchequer/muster/accounts absent; prefer explicitly conditional sums from treaty, note secondary estimates."
+}

@@ -1,0 +1,178 @@
+{
+  "schema": "war_outpost_candidate_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "editorial_status": "candidate_not_published",
+  "context": "Identity/location based on PR33 existing protected heritage sites and continuity research. Outpost != sovereign border, point marker may be used only when an existing period research site reference exists.",
+  "items": [
+    {
+      "id": "c7-outpost-broughty-english-ending-1550",
+      "name": "布劳蒂城堡英军1550年退出",
+      "actual_controller_before": "english_garrison_on_Scottish_land",
+      "actual_controller_after": "Scottish and French allies recapture, Scottish sovereignty",
+      "start_year": 1550,
+      "end_year": 1550,
+      "year_end_1550_english": false,
+      "reference_point_id": "scottish-broughty-from-1550",
+      "coordinate": [
+        -2.87022,
+        56.46293
+      ],
+      "symbol": "historic_garrison_recovered_by_Scotland",
+      "geometry_role": "heritage_location_not_castle_walls",
+      "no_connect_to_Scotland_border_corridor": true,
+      "source_ids": [
+        "SC-HES-BROUGHTY-1550"
+      ]
+    },
+    {
+      "id": "c7-outpost-eyemouth-english-ended-1550",
+      "name": "埃茅斯旧英军炮台1550年夏结束",
+      "actual_controller_before": "english_garrison_on_Scottish_land",
+      "actual_controller_after": "Scottish site following 1550 withdrawal; 1557 separate French fort stage",
+      "start_year": 1550,
+      "end_year": 1550,
+      "year_end_1550_english": false,
+      "reference_point_id": "eyemouth-fort-English-1547-1550",
+      "coordinate": [
+        -2.09156,
+        55.87731
+      ],
+      "symbol": "ending_English_isolated_outpost",
+      "geometry_role": "archaeological_promontory_not_1547_exact_walls",
+      "no_connect_to_Scotland_border_corridor": true,
+      "source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH"
+      ]
+    },
+    {
+      "id": "c7-outpost-dunbar-1550-1559",
+      "name": "苏格兰邓巴法国盟军1550年新筑堡",
+      "actual_controller_before": "Scottish sovereign Dunbar site",
+      "actual_controller_after": "French-built allied military works under Scottish sovereignty",
+      "start_year": 1550,
+      "end_year": 1559,
+      "demolished_according_to_HES": 1560,
+      "reference_point_id": "dunbar-french-allied-fort-built-1550",
+      "coordinate": [
+        -2.5173892,
+        56.0045018
+      ],
+      "symbol": "french_allied_fort_while_Scottish_sovereign",
+      "not_French_national_territory": true,
+      "actual_military_garrison_year_by_year_unverified": true,
+      "fill_authorized": false,
+      "source_ids": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ]
+    },
+    {
+      "id": "c7-outpost-inchkeith-1556-1559",
+      "name": "因奇基斯岛1556—1564苏法联盟工事",
+      "actual_controller_before": "Scottish island",
+      "actual_controller_after": "Scottish sovereignty / allied defensive works",
+      "start_year": 1556,
+      "end_year": 1559,
+      "fortification_architecture_period": [
+        1556,
+        1564
+      ],
+      "reference_point_id": "inchkeith-franco-scottish-fort-1556-1564",
+      "coordinate": [
+        -3.1351895,
+        56.0323579
+      ],
+      "symbol": "isolated_Franco_Scottish_island_fort",
+      "not_French_national_territory": true,
+      "actual_military_garrison_year_by_year_unverified": true,
+      "fill_authorized": false,
+      "source_ids": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ]
+    },
+    {
+      "id": "c7-outpost-eyemouth-french-1557-1558",
+      "name": "埃茅斯1557—1558法军驻堡与苏格兰主权",
+      "actual_controller_before": "Scottish fort after English evacuation",
+      "actual_controller_after": "French garrison allied with Scottish independent kingdom",
+      "start_year": 1557,
+      "end_year": 1558,
+      "withdrawal_negotiated": 1559,
+      "reference_point_id": "eyemouth-french-allied-1557-1559",
+      "coordinate": [
+        -2.09156,
+        55.87731
+      ],
+      "symbol": "french_garrison_not_French_sovereignty",
+      "not_French_national_territory": true,
+      "no_authentic_1557_rampart_geometry": true,
+      "fill_authorized": false,
+      "source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH",
+        "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+        "SC-SCAPE-EYEMOUTH-1557-PLAN"
+      ]
+    },
+    {
+      "id": "c7-outpost-leith-1559",
+      "name": "1559利斯法国驻军新筑防御工事",
+      "actual_controller_before": "Scottish territory under Scottish regency political contest",
+      "actual_controller_after": "French allied military occupation at Leith 1559, no French sovereignty",
+      "start_year": 1559,
+      "end_year": 1559,
+      "reference_point_id": null,
+      "coordinate": null,
+      "archival_location_name": "Leith, Edinburgh Scotland",
+      "symbol": "unlocated_historic_fortification_event_only",
+      "not_French_national_territory": true,
+      "fill_authorized": false,
+      "source_ids": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ]
+    },
+    {
+      "id": "c7-outpost-hammes-1550-1558",
+      "name": "哈姆堡—英王加来边区最后撤离的军事据点",
+      "actual_controller_before": "English Calais Pale castle garrison",
+      "actual_controller_after": "English evacuated after Guines fall Jan 1558; French region",
+      "start_year": 1550,
+      "end_year": 1558,
+      "last_English_active_year_end": 1557,
+      "English_end_in": "January 1558 after Guines; night Jan22/23 only locally cited",
+      "reference_point_id": null,
+      "coordinate": null,
+      "archival_location_name": "Hammes near Hames-Boucres Calais Pale (NOT Chateau de Ham in Somme)",
+      "symbol": "unlocated_historic_last_English_garrison_event_only",
+      "do_not_invent_point": true,
+      "fill_authorized": false,
+      "source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558",
+        "FR-HAMMES-HISTOPALE-1558"
+      ]
+    },
+    {
+      "id": "c7-outpost-boulogne-french-return-1550",
+      "name": "法国正式接收布洛涅1550年4月25日",
+      "actual_controller_before": "English garrison",
+      "actual_controller_after": "France",
+      "start_year": 1550,
+      "end_year": 1550,
+      "English_end_date": "1550-04-25",
+      "reference_point_id": "french-boulogne-from-1550",
+      "coordinate": [
+        1.6169,
+        50.7256
+      ],
+      "symbol": "recovered_by_France",
+      "fill_authorized": false,
+      "source_ids": [
+        "FR-HELIOT-BOULOGNE-1958",
+        "FR-BNF-BOULOGNE-1550"
+      ]
+    }
+  ],
+  "editor_application": "Editor should reuse named point IDs and popovers from existing PR33 POLITICAL_CONTROL_SITES_1550_1559.geojson and MAP_DELTA_1550_1559.geojson, not create new polygons around forts. Null coordinates must remain archival-only."
+}

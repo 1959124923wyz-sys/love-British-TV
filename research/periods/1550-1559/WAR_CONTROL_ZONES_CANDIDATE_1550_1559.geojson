@@ -1,0 +1,337 @@
+{
+  "type": "FeatureCollection",
+  "name": "Chapter7 editor-review estimated control zones (no verified historical polygons)",
+  "schema": "war_zone_candidates_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "metadata": {
+    "branch": "research/territorial-1550-1559-20261013",
+    "origin": "editor's proposed sovereignty / effective-control / front / isolated-garrison design",
+    "published": false,
+    "approver": "chief-editor",
+    "intent": "Illustrative approximate purple control and French recapture overlays, not legal boundary or known garrison jurisdiction",
+    "geometry_provenance": "Reuse only already existing dashed Calais Pale reference envelope. No newly imagined polygons, fort buffers or county shapes. Undefined shapes have null geometry.",
+    "verified_period_control_polygon_count": 0,
+    "newly_drawn_polygon_count": 0,
+    "inherited_approx_reference_polygon_copies": 2,
+    "area_statistics_allowed": false,
+    "year_end_semantics": "visible_from <= selected_year <= visible_through (unless explicit intra_year_only). Year-end 1558 must show French not English."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "c7-calais-pale-english-core-1550-1557",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.753207,
+              50.945644
+            ],
+            [
+              1.843379,
+              50.881781
+            ],
+            [
+              1.870254,
+              50.867081
+            ],
+            [
+              1.943655,
+              50.860735
+            ],
+            [
+              1.997517,
+              50.915701
+            ],
+            [
+              2.042758,
+              50.977126
+            ],
+            [
+              1.753207,
+              50.945644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "c7-calais-pale-english-core-1550-1557",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "加来边区英军实际统治的城镇网络／旧史料概略范围",
+        "controller": "english",
+        "zone_type": "stable_control",
+        "start_year": 1550,
+        "end_year": 1557,
+        "visible_from": 1550,
+        "visible_through": 1557,
+        "render_as": "semi_translucent_purple_schematic_overlay",
+        "preview_schematic_fill_allowed": true,
+        "outline_dashed": true,
+        "fill_authorized": false,
+        "fill_opacity_max": 0.14,
+        "reference_geometry_reused_feature_id": "calais-pale-sourced-places-approx-1497-1519",
+        "reference_geometry_was_originally": "historically_unverified_early_1500s_named_place_convex_hull",
+        "anchor_site_ids": [
+          "calais-crown",
+          "guines-crown-1520s",
+          "fort-risban-calais-1558",
+          "fort-nieulay-calais-1558"
+        ],
+        "ungrounded_named_site_not_geolocated": "Hammes castle; no invented coordinate",
+        "source_ids": [
+          "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558",
+          "FR-HISTORIC-PALE-TOPO-2016",
+          "FR-RCT-CALAIS-SIEGE-1558"
+        ],
+        "assessment": "Historical English hold of Calais/Guînes proven. Geometry is an older approximate locality envelope, NOT actual 1550s limit or full military reach. Use map legend and dashed border; no solid legal fill.",
+        "future_change": "On transition to 1558 turn off English immediately; same inherited area may be displayed as France-restored schematic context."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-calais-pale-french-return-1558-1559",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.753207,
+              50.945644
+            ],
+            [
+              1.843379,
+              50.881781
+            ],
+            [
+              1.870254,
+              50.867081
+            ],
+            [
+              1.943655,
+              50.860735
+            ],
+            [
+              1.997517,
+              50.915701
+            ],
+            [
+              2.042758,
+              50.977126
+            ],
+            [
+              1.753207,
+              50.945644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "c7-calais-pale-french-return-1558-1559",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "1558年后法国收复加来与吉讷／前英占据地概略范围",
+        "controller": "french",
+        "zone_type": "recovered_control",
+        "start_year": 1558,
+        "end_year": 1559,
+        "visible_from": 1558,
+        "visible_through": 1559,
+        "render_as": "semi_translucent_french_schematic_overlay",
+        "preview_schematic_fill_allowed": true,
+        "outline_dashed": true,
+        "fill_authorized": false,
+        "fill_opacity_max": 0.14,
+        "reference_geometry_reused_feature_id": "calais-pale-sourced-places-approx-1497-1519",
+        "reference_geometry_was_originally": "historically_unverified_early_1500s_named_place_convex_hull",
+        "anchor_site_ids": [
+          "calais-crown",
+          "guines-crown-1520s",
+          "fort-risban-calais-1558",
+          "fort-nieulay-calais-1558"
+        ],
+        "source_ids": [
+          "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558",
+          "FR-CALAIS-MUNICIPAL-1558",
+          "FR-RCT-GUINES-SIEGE-1558"
+        ],
+        "assessment": "Actual French government of Calais/Guînes from Jan 1558 corroborated. Reused outline is ONLY disputed old Pale locator, not exact French-controlled perimeter. Overlay must not overwrite French sovereign background."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-fort-protector-limited-core-1550-1559",
+      "geometry": null,
+      "properties": {
+        "id": "c7-fort-protector-limited-core-1550-1559",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "爱尔兰Fort Protector／后Maryborough英王堡垒控制核心",
+        "controller": "english",
+        "zone_type": "local_garrison_core",
+        "start_year": 1550,
+        "end_year": 1559,
+        "visible_from": 1550,
+        "visible_through": 1559,
+        "fort_built_before_chapter": "1547–48",
+        "administrative_plantation_law_year": 1556,
+        "reference_site_id": "irish-fort-protector-1550s",
+        "reference_point": [
+          -7.297781,
+          53.035512
+        ],
+        "preview_schematic_fill_allowed": false,
+        "fill_authorized": false,
+        "render_as": "fort_core_point_only_pending_historical_wall_reconstruction",
+        "source_ids": [
+          "IE-LAOIS-COUNTY-DEVELOPMENT-FORT",
+          "IE-ASKABOUTIRELAND-MIDLANDS-1556",
+          "IE-LANCASTER-1556-COLONIAL"
+        ],
+        "assessment": "English garrison site supported; extent and control of surrounding rural holdings unknown. Do NOT create modern Laois county polygon or arbitrary circular buffer."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-fort-governor-limited-core-1550-1559",
+      "geometry": null,
+      "properties": {
+        "id": "c7-fort-governor-limited-core-1550-1559",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "爱尔兰Fort Governor／后Philipstown英王堡垒控制核心",
+        "controller": "english",
+        "zone_type": "local_garrison_core",
+        "start_year": 1550,
+        "end_year": 1559,
+        "visible_from": 1550,
+        "visible_through": 1559,
+        "fort_built_before_chapter": "1546",
+        "administrative_plantation_law_year": 1556,
+        "reference_site_id": "irish-fort-governor-1550s",
+        "reference_point": [
+          -7.302267,
+          53.296081
+        ],
+        "preview_schematic_fill_allowed": false,
+        "fill_authorized": false,
+        "render_as": "fort_core_point_only_pending_historical_wall_reconstruction",
+        "source_ids": [
+          "IE-OFFALY-NMS-URBAN-ARCHAEOLOGY",
+          "IE-ASKABOUTIRELAND-MIDLANDS-1556",
+          "IE-LANCASTER-1556-COLONIAL"
+        ],
+        "assessment": "Fort predates 1556. Not full King's County nor O'Connor territory. Do NOT make indiscriminate radius polygon."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-boulogne-exit-transition-1550",
+      "geometry": null,
+      "properties": {
+        "id": "c7-boulogne-exit-transition-1550",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "1550布洛涅英军撤退、法国正式接管",
+        "controller": "english_to_french",
+        "zone_type": "historically_dated_transfer",
+        "start_year": 1550,
+        "end_year": 1550,
+        "transferred_on": "1550-04-25",
+        "visible_from": 1550,
+        "visible_through": 1550,
+        "year_end_controller": "french",
+        "reference_point": [
+          1.6169,
+          50.7256
+        ],
+        "reference_site_id": "french-boulogne-from-1550",
+        "render_as": "dated_point_transition_no_unsurveyed_colonial_polygon",
+        "preview_schematic_fill_allowed": false,
+        "fill_authorized": false,
+        "source_ids": [
+          "FR-HELIOT-BOULOGNE-1958",
+          "FR-BNF-BOULOGNE-1550"
+        ],
+        "assessment": "France receipt is dated; local town/fort walls and outside Boulonnais perimeter require independent surveys. 1550 year-end must never stay English."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c7-scottish-english-garrison-withdrawal-1550",
+      "geometry": null,
+      "properties": {
+        "id": "c7-scottish-english-garrison-withdrawal-1550",
+        "historic_polygon_verified": false,
+        "stable_military_control_boundary_proven": false,
+        "area_sqkm": null,
+        "area_calculation_allowed": false,
+        "editorial_status": "candidate_editor_review_only",
+        "authoritative_for_colonial_statistics": false,
+        "geometric_precision": "SCHEMATIC_OR_MISSING_not_a_survey",
+        "draw_border": "dashed",
+        "legend_requires_word": "推定范围／界线未证实",
+        "name": "1550苏格兰东南部英军撤退中残存据点，不得扩绘成整片年末英占区",
+        "controller": "english_ending",
+        "zone_type": "temporary_control_retreat",
+        "start_year": 1550,
+        "end_year": 1550,
+        "visible_from": 1550,
+        "visible_through": 1550,
+        "active_at_year_end": false,
+        "reference_site_ids": [
+          "eyemouth-fort-English-1547-1550",
+          "lauder-english-1548-1550",
+          "dunglass-camp-english-1548-1549"
+        ],
+        "render_as": "1550_intra_year_site_markers_only",
+        "preview_schematic_fill_allowed": false,
+        "fill_authorized": false,
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "GB-EDWARD-VI-DIARY-1550-TREATY"
+        ],
+        "assessment": "English Eyemouth ended summer 1550; treaty says other Scots posts to transfer within treaty window but actual Lauder/Dunglass timing unknown. Not an occupied corridor at year end."
+      }
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "schema": "1550s_editorial_archive_action_queue_v1",
+  "period": [
+    1550,
+    1559
+  ],
+  "count": 23,
+  "P0": 13,
+  "tasks": [
+    {
+      "id": "1550-Q01",
+      "priority": "P0",
+      "topic": "1558加来Pale完整历史乡村界",
+      "archive_action": "TNA French lands record E101/1386– etc, contemporary Calais 1558 manuscript siege survey, Calais Pale parishes; verify land tenancy and named hamlets, redraw only if dated GIS/rights reproducible.",
+      "lead_source_ids": [
+        "FR-CAMBRIDGE-GRUMMITT-CALAIS-1558",
+        "FR-HISTORICAL-ENGLISH-CALAIS-CARTOGRAPHY"
+      ],
+      "must_not_assume": "No default modern Pas-de-Calais map area.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "partial_scholarly_cartography_lead",
+        "source_ids": [
+          "FR-HISTORIC-PALE-TOPO-2016"
+        ],
+        "note": "English Heritage Historical Review published landscape and cadastre reconstruction with Hammes and Guines; full article maps/rights/georeferencing not obtained. No historic British Calais Pale polygon authorized."
+      }
+    },
+    {
+      "id": "1550-Q02",
+      "priority": "P0",
+      "topic": "1558吉讷1558年一月具体陷落日",
+      "archive_action": "History of Parliament Lord Grey archival footnotes, Oxford Churchyard eyewitness, 1558 French contemporary war dispatches; date may 20 or 21 Jan.",
+      "lead_source_ids": [
+        "FR-HISTORY-PARLIAMENT-GREY-1558",
+        "FR-OXFORD-GUINES-1558"
+      ],
+      "must_not_assume": "Do not invent exact day; year and month sufficient.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "partial_royal_collection_and_secondary_dates",
+        "source_ids": [
+          "FR-RCT-GUINES-SIEGE-1558",
+          "FR-HAMMES-HISTOPALE-1558"
+        ],
+        "note": "Royal Collection confirms Guines fell Jan 1558, then Hammes last English castle abandoned; local source dates Hammes overnight Jan22/23. Guines exact 20/21 Jan not confirmed via original letter."
+      }
+    },
+    {
+      "id": "1550-Q03",
+      "priority": "P0",
+      "topic": "1558 Risban／Nieulay／Hames据点真实古代形状",
+      "archive_action": "1559 treaty listed sites crosswalk to French archaeology official PA monument descriptions and dated 1558 plan; modern Vauban structures differ.",
+      "lead_source_ids": [
+        "FR-CATEAU-1559-ARTICLES",
+        "FR-FRENCH-MONUMENTS-CALAIS-RISBAN",
+        "FR-FRENCH-MONUMENTS-CALAIS-NIEULAY"
+      ],
+      "must_not_assume": "Modern walls and present marsh shoreline are anachronistic.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "important_warning_verified_illustrative_map_not_accurate",
+        "source_ids": [
+          "FR-RCT-GUINES-SIEGE-1558",
+          "FR-RCT-CALAIS-SIEGE-1558"
+        ],
+        "note": "Royal Collection RCIN721026 says Guines engraved castle location and walls contradict c1550 BL Cotton Augustus I ii71 plans: exclude direct tracing of engraving polygons. RCIN721024 documents 4 Jan Newnham Bridge and Rysbank captures before town."
+      }
+    },
+    {
+      "id": "1550-Q04",
+      "priority": "P0",
+      "topic": "1556 Leix/Offaly地方法定宣称与实际定居宗地",
+      "archive_action": "Original Irish 3 & 4 Philip and Mary c2 statute and 1556–59 patents/fiants in National Archives Ireland, split year-by-year verified granted estates.",
+      "lead_source_ids": [
+        "IE-QUEENS-COUNTY-STATUTE-LEAD",
+        "IE-ASKABOUTIRELAND-MIDLANDS-1556"
+      ],
+      "must_not_assume": "Do not fill full modern counties with solid orange.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q05",
+      "priority": "P0",
+      "topic": "1556 Fort Protector与Fort Governor 1546/48军事可控堡内界",
+      "archive_action": "Laois County Fort Protector plan Appendix 1 and original English National Archives Kew MPF1/277 dated 1560-ish, NMS urban archaeology record original fort in 1546.",
+      "lead_source_ids": [
+        "IE-LAOIS-CONSERVATION-PDF",
+        "IE-OFFALY-NMS-URBAN-ARCHAEOLOGY"
+      ],
+      "must_not_assume": "Present c1560 walls vs earlier 1547/48 fort phases explicitly separate.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q06",
+      "priority": "P0",
+      "topic": "1550 Eyemouth、Lauder、Dunglass、Hailes残存驻军末日",
+      "archive_action": "Scottish HES SM4577, Richard Lee Eyemouth 1547 plan, Lauder archival muster; determine 1550 French/Scottish return exact, and avoid unjustified colored English sites.",
+      "lead_source_ids": [
+        "SC-HES-EYEMOUTH-1550",
+        "SC-HES-LAUDER-1550"
+      ],
+      "must_not_assume": "No solid English 1550 occupation without direct records.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "partial_eyemouth_year_end_and_hailes_resolved",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557",
+          "SC-HES-HAILES-SOS-2019",
+          "GB-EDWARD-VI-DIARY-1550-TREATY"
+        ],
+        "note": "Hailes Scots recaptured 1548 according HES p2; should not be in unknown 1550 list. English Eyemouth held to summer 1550 per peer-reviewed archaeology abstract. 24 March 1550 treaty says Lauder/Dunglass due delivered within 6 months, not actual handover day; keep archival checks."
+      }
+    },
+    {
+      "id": "1550-Q07",
+      "priority": "P0",
+      "topic": "1550 Broughty 2月具体收复日与Forthill撤军",
+      "archive_action": "HES history gives 1550 year, contemporary garrison accounts to test 12 February date (secondary).",
+      "lead_source_ids": [
+        "SC-HES-BROUGHTY-1550",
+        "SC-NLS-FORTHILL-1550"
+      ],
+      "must_not_assume": "Do not adopt Wikimedia exact dates as archival verification.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q08",
+      "priority": "P1",
+      "topic": "1550布洛涅法国接城地点与名义40万金埃居实际缴款",
+      "archive_action": "Héliot pp.37–38 with La Roche-Pot 25 April and BnF Treaty, compare Edward VI treasury accounts for actual instalments.",
+      "lead_source_ids": [
+        "FR-HELIOT-BOULOGNE-1958",
+        "FR-BNF-BOULOGNE-1550"
+      ],
+      "must_not_assume": "Treaty price is not audited English exchequer receipt.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q09",
+      "priority": "P1",
+      "topic": "1559卡托和约8年条款及50万金埃居担保",
+      "archive_action": "Read signed treaties (England and France 2 April) and merchants' surety/bond transmission records; identify pledge versus cash.",
+      "lead_source_ids": [
+        "FR-CATEAU-1559-ARTICLES",
+        "FR-LAROUSSE-CATEAU-1559"
+      ],
+      "must_not_assume": "Do not make 500k actual revenue.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q10",
+      "priority": "P1",
+      "topic": "1559 William Grey of Guînes 25000 crowns prisoner ransom",
+      "archive_action": "Parliament archive and original private Wilton estate records, date and paid amount.",
+      "lead_source_ids": [
+        "FR-HISTORY-PARLIAMENT-GREY-1558"
+      ],
+      "must_not_assume": "Private ransom not English Crown profit.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q11",
+      "priority": "P1",
+      "topic": "1554/55 Lok Guinea voyage named landing ports and five enslaved people",
+      "archive_action": "Hakluyt edited John Lok eyewitness route chapters; compare National Archives shipping registers and Maritime Museum African landing identifiers.",
+      "lead_source_ids": [
+        "AF-HAKLUYT-JOHN-LOK-1554",
+        "AF-HISTORIC-ENGLAND-JOHN-LOK"
+      ],
+      "must_not_assume": "Never infer exact capture village or invent ship polyline.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q12",
+      "priority": "P1",
+      "topic": "1556/57 William Towerson west African trade and enslavement",
+      "archive_action": "Find Hakluyt edited full separate voyages, trade cargo manifests and participants; distinguish Elmina Portuguese fort and trade contact.",
+      "lead_source_ids": [
+        "AF-CAMBRIDGE-HAKLUYT-TOURSON",
+        "AF-OXFORD-EHR-2024"
+      ],
+      "must_not_assume": "No 1550s English colony at Portuguese Elmina.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q13",
+      "priority": "P1",
+      "topic": "1553–1559 Muscovy Company northern route and trading privileges",
+      "archive_action": "British Museum 1555 company seal, published royal charter, Russian Ivan IV privileges, distinct London shares vs gains.",
+      "lead_source_ids": [
+        "RU-BRITISH-MUSEUM-MUSCOVY-CHARTER",
+        "RU-CAMBRIDGE-MUSCOVY-NETWORK"
+      ],
+      "must_not_assume": "No Russian English sovereignty; late 1562/66 map not anachronistically used in 1555.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q14",
+      "priority": "P1",
+      "topic": "1556 plantation English-Exchequer garrison expenditure and land grant volumes",
+      "archive_action": "TNA Ireland Exchequer and Cambridge/Lancaster historian, separate confiscated land share from claimed area.",
+      "lead_source_ids": [
+        "IE-LANCASTER-1556-COLONIAL"
+      ],
+      "must_not_assume": "Do not claim plantations were financially self-supporting without ledger.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q15",
+      "priority": "P2",
+      "topic": "1550年代英法之外的具体新海外控制地",
+      "archive_action": "Read historic Admiralty records and charters: verify if any fixed English overseas garrison outside French fort cores and Irish settlements.",
+      "lead_source_ids": [
+        "RU-BRITISH-MUSEUM-MUSCOVY-CHARTER"
+      ],
+      "must_not_assume": "Don't invent Canada/America/Africa 1550s British colonies; first Hawkins voyage 1562.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q16",
+      "priority": "P2",
+      "topic": "1560年代接续：Leith war, Muscovy south, Guinea trade, 1562 Hawkins",
+      "archive_action": "Prepare year-end 1559 continuity only; next chapter handles verified 1560/61/62 developments.",
+      "lead_source_ids": [
+        "AF-HISTORIC-ENGLAND-JOHN-LOK"
+      ],
+      "must_not_assume": "Avoid projecting future 1560 Scottish events and Hawkins slave voyages backwards.",
+      "status": "open_original_archival_evidence_not_verified",
+      "blocking_publication": false,
+      "collector3_findings_20261013": {
+        "status": "next_chapter_1559_Eyemouth_french_phase",
+        "source_ids": [
+          "SC-CALDWELL-EWART-1997-FRENCH",
+          "SC-EYEMOUTH-MUSEUM-FRENCH-1557"
+        ],
+        "note": "French military Eyemouth 1557-58 separately; archaeologists describe negotiated July 1559 exit, museum later demolition 1560, possible mismatch in physical abandonment and flattening. Do not carry as English 1560."
+      }
+    },
+    {
+      "id": "1550-Q17",
+      "priority": "P0",
+      "topic": "1558 Hammes Castle last English Calais Pale fort: historical location and 1549 carryover",
+      "archive_action": "Royal Collection RCIN721026 establishes Jan 1558 retreat, Histopale local night 22/23 Jan. Examine BnF 1558 Hames castle view btv1b72002499, English Heritage Historical Review Pale landscape paper, Napoleonic cadastre and antiquarian plans; differentiate demolished Tudor Hammes from Château de Ham (Somme) and c1800 Château du Baron de Saint-Paul. Verify fortified castle GPS before any Point.",
+      "lead_source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558",
+        "FR-HAMMES-HISTOPALE-1558",
+        "FR-HISTORIC-PALE-TOPO-2016"
+      ],
+      "must_not_assume": "Never place modern Château de Ham coordinates at 49.743,3.073 for Hammes near Calais, or fabricate a Hames-Boucres polygon.",
+      "status": "historically_verified_location_not_georeferenced",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q18",
+      "priority": "P0",
+      "topic": "1557–1559 Eyemouth French occupation is separate phase from 1547-1550 English fort",
+      "archive_action": "Consult Caldwell/Ewart Post-Medieval Archaeology 31 pp61–119 excavation, British Library Cotton Augustus I i60 1557 English spy map, SCAPE Trust archaeologists and National Records Scotland withdrawal correspondence. Extract year/month of French forces leaving in 1559 and separate original Tudor and 1557 French rampart lines; obtain permissions before use.",
+      "lead_source_ids": [
+        "SC-CALDWELL-EWART-1997-FRENCH",
+        "SC-SCAPE-EYEMOUTH-1557-PLAN",
+        "SC-STANDREWS-EYEMOUTH-VIRTUAL-1557",
+        "SC-HES-EYEMOUTH-CORN-SM4577"
+      ],
+      "must_not_assume": "French garrison does not give France Scottish sovereignty and cannot revive English control; nearby Corn Fort SM4577 is not the Tudor artillery earthwork.",
+      "status": "year_1557_and_1558_controller_evidenced_later_withdrawal_demolition_partial",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q19",
+      "priority": "P0",
+      "topic": "Guînes contemporary castle footprint vs erroneous 1558 engraved siege plan",
+      "archive_action": "Royal Collection RCIN721026 states BL Cotton Augustus I ii71 c1550 survey places the castle NE of the town while engraved Guînes fortress appears south, and wall outlines differ. Read original Cotton map, identify proper historic North and calibratable points, copyright and actual controller footprint; compare with peer-reviewed English Heritage Historical Review Pale reconstruction.",
+      "lead_source_ids": [
+        "FR-RCT-GUINES-SIEGE-1558",
+        "FR-HISTORIC-PALE-TOPO-2016"
+      ],
+      "must_not_assume": "Antiquarian oblique art is not a measured surveyed historic control polygon; ignore false wall loops until georeferenced.",
+      "status": "official_museum_identified_print_vs_plan_mismatch",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q20",
+      "priority": "P1",
+      "topic": "1558 Jan Calais incremental siege changes and 7 vs 8 Jan transfer convention",
+      "archive_action": "Inspect original 4 Jan Grey dispatch cited by Royal Collection, museum calais original public letter and regional French charter exhibits: Newnham/Rysbank conquered by Jan4, city breach/surrender Jan7 and municipal final Jan8; confirm distinction without forcing a single exact date on all forts.",
+      "lead_source_ids": [
+        "FR-RCT-CALAIS-SIEGE-1558",
+        "FR-CALAIS-MUNICIPAL-1558"
+      ],
+      "must_not_assume": "Do not make city 7 Jan entry conflict with municipal Jan8 final into mutually exclusive 'inaccurate' claims or claim 4 Jan precise individual outwork fall.",
+      "status": "official_contemporary_secondary_quotes_support_sequence_not_all_days",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q21",
+      "priority": "P0",
+      "topic": "Dunbar 1550 French fort built in independent Scotland, 1560 demolition",
+      "archive_action": "HES SM5960 historic NGR NT67833 79183 and Trove NRHE68375 trench show French-built defence ditch of 1550. Read Perry 2000 Castle Park Dunbar excavation monograph and original state papers; reconstruct military section only after source and rights confirm, do not copy modern 180x170m scheduling rectangle.",
+      "lead_source_ids": [
+        "SC-HES-DUNBAR-FRENCH-FORT-1550",
+        "SC-TROVE-DUNBAR-1550-EXCAV"
+      ],
+      "must_not_assume": "French-built allied fort != Scotland annexed by France; site scheduled area is not 1550 controlled footprint.",
+      "status": "official_monument_1550_date_geo_reference_checked_original_wall_outline_not_mapped",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q22",
+      "priority": "P0",
+      "topic": "Inchkeith island Franco-Scottish artillery fort from 1556–64",
+      "archive_action": "HES SM3838 NGR NT29358 82744 documents surviving 1556–64 curtain and flanker. Source original Saunders 1984, late Tudor accounts and fort wall plan; identify accurate 1556-phase wall positions versus almost-whole-island modern schedule with later 1880 and 1900 batteries.",
+      "lead_source_ids": [
+        "SC-HES-INCHKEITH-FRENCH-FORT-1556"
+      ],
+      "must_not_assume": "Entire modern island scheduling polygon or naval 19th-century batteries are not 'French empire soil'; Scottish island retains sovereignty.",
+      "status": "official_monument_1556_64_phase_checked_no_period_GIS",
+      "blocking_publication": false
+    },
+    {
+      "id": "1550-Q23",
+      "priority": "P0",
+      "topic": "1559 French fortifying Leith and 1560 English/Scottish Protestant siege separate decades",
+      "archive_action": "Read British Library Cotton MS Caligula B X/1 f28v–32r containing Scottish Protestant lords declaration, 1559 Sept defense, compare original 1560 Petworth siege plan and 1560 English artillery points; confirm 1559 French garrison bastions vs next-year English besiegers; no fabricated precise 1559 Leith rampart.",
+      "lead_source_ids": [
+        "GB-BL-CALIGULA-BX-1559-LEITH"
+      ],
+      "must_not_assume": "1560 English siegeworks on Leith Links are NOT 1559 French fortified town or proof England annexed Scotland.",
+      "status": "official_British_Library_1559_document_catalogue_Leith_fortification_month_verified",
+      "blocking_publication": false
+    }
+  ],
+  "fast_release_rule": "Any problem without high-confidence primary evidence can remain unrendered/approximate dotted; do not obstruct entire chapter.",
+  "collector3_territorial_audit": {
+    "date": "2026-10-13",
+    "new_IDs": [
+      "1550-Q17",
+      "1550-Q18",
+      "1550-Q19",
+      "1550-Q20"
+    ],
+    "critical_map_gaps": [
+      "Hammes final English Calais Pale site (no precise coordinate)",
+      "1557 French Eyemouth reoccupied on Scottish soil",
+      "Hailes 1548 Scots recapture must not reappear in 1550",
+      "Guines 1558 printed map does not match contemporary plans",
+      "Calais 4 Jan outerworks vs 7-8 Jan city"
+    ],
+    "new_original_16c_autographs_read": 0,
+    "second_wave": {
+      "date": "2026-10-13",
+      "added": [
+        "1550-Q21",
+        "1550-Q22",
+        "1550-Q23"
+      ],
+      "grounded_HES_original_phases": [
+        "Dunbar France built 1550 dismantled 1560",
+        "Inchkeith Franco-Scottish 1556–64"
+      ],
+      "British_Library_archival_catalogue": "Leith French fortifying September 1559, precise historic wall unlocated",
+      "caution": "No French sovereign expansion across Scottish islands; no historic precise old borders."
+    }
+  }
+}
