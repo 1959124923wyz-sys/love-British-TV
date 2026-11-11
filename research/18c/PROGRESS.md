@@ -255,3 +255,17 @@
 - [x] 第二十一篇试阅注册、前20篇历史专题回归和桌面浏览器自动测试脚本已经写入GitHub；最新HEAD三项Actions全成功后方算最终验收。
 - [x] [第二十一批完整交接](../../docs/research/EDITOR19_18C_T09_TUSCARORA_YAMASEE_CAPTIVITY_HANDOFF_20261111.md)。
 - [ ] Barnwell捕俘名册、1715二月和约、Nooherooka考古原测图、Yamasee交易账本、Ocmulgee焚镇发生年份及幸存人口流向继续待核。
+
+## 2026-11-11｜主编19第二十二批 T08 英国北美七年战争、原住民焦土镇压与Paxton屠杀
+
+- [x] 完整复用主编15原T08十一组、12原始候审ID、24项A来源注册键，原1126逐项研究去向与原ZIP不动；完整互相映射，原始材料未覆盖。
+- [x] 32个逐年历史行动、50来源、32章96段中文完整专题、32处正文Atlas真实事件联动、32条按历史主体/年份记录的战争与殖民地权过渡。
+- [x] 法军1745丢Louisbourg、1748归还、1758英国再占；1755英军驱逐Acadian，1759英军袭击Abenaki村、1760—61 Montgomerie/Grant军烧毁Cherokee村镇农田。
+- [x] 1763原住民Pontiac联盟围攻Detroit；Fort Pitt英国驻军曾赠出天花病院毯子，7月Amherst与Bouquet通信另讨论疾病战；目前无法证明此次赠毯造成具体多少死亡，所有此项数字保持null。
+- [x] 1763年12月Paxton白人殖民暴徒两次杀害Conestoga六人、十四人共20名；直接行凶者归于殖民定居武装，殖民官署的防护失败独立记录。
+- [x] 1763巴黎和约/公告、1764 Bradstreet越权议和、1768 Stanwix、1770 Lochaber、1773 Augusta债务抵地与1774 Quebec Act单列；不把英国外交条约、原住民土地权利、驻军实控混为一谈。
+- [x] 1775-03-27英国Georgia王室总督及议事会记录商人追索1773地权抵债请愿，已经找到Georgia Digital Library原议事会汇编逐字文本。
+- [x] 现代Montréal/Detroit/Pittsburgh/Lancaster仅5个有凭据城市代表点，其他历史战斗/原住民地权边界保持空GPS；0新增历史Polygon、0虚构路线及不合理英军控制面积。
+- [x] GitHub新研究分支独立Draft预览 `?review18c=1&year=1763`，22篇专题测试与全部前21篇旧数据回归、原ZIP/1126审计、真1780×1020 Chromium、公开网页预览工作流全部入库。
+- [x] [完整第22批研究交接](../../docs/research/EDITOR19_18C_T08_SEVEN_YEARS_WAR_CHEROKEE_PONTIAC_PAXTON_HANDOFF_20261111.md)。
+- [ ] T08最新HEAD三项CI全部success为最终验收条件；历史原军事日记、Cherokee受害人名册、1768与1770边界原测图和1775商人逐人债权仍需后续深化。
