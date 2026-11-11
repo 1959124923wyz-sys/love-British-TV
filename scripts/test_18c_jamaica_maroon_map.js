@@ -137,7 +137,7 @@ assert(jamaica.includes("jamaica18cReady?1799:"));
 assert(jamaica.includes('active18cMaroonCoreIds:()'));
 assert(jamaica.includes('renderEighteenthReviewEvidenceCores()'));
 assert(jamaica.includes("serialPreviewAtlas?Math.min(1699"),'original nonopt-in year cap regression');
-assert(ui.includes('draft.stories?.length===27'));
+assert(ui.includes('draft.stories?.length===28'));
 assert(ui.includes("article.id==='E6-T08'"));
 assert(ui.includes("storyMeta.has('E18-T03-T04-JAMAICA-MAROONS-1718-1799')"));
 assert(html.includes('app.js?')&&html.includes('js/history-stories.js?'));
