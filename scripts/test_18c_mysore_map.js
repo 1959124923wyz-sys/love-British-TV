@@ -10,7 +10,7 @@ const d=load('data/stories/serial/chronology-preview-mysore-1700-1799.json'),
 const crosswalk=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),reader=read('js/history-stories.js'),html=read('index.html');
 assert.equal(chap.chapters.at(-1).end,1599);
-assert.equal(idx.stories.length,21);assert.equal(idx.stories[7].id,a.id);
+assert.equal(idx.stories.length,22);assert.equal(idx.stories[7].id,a.id);
 assert.equal(a.id,'E18-T17-MYSORE-WARS-PARTITION-1767-1799');
 assert.equal(a.publication_status,'research_only');assert.equal(a.publication_approval,'not_submitted');
 assert.equal(a.editorial_status,'research_preview_not_published');
@@ -87,7 +87,7 @@ assert.deepEqual(new Set(linked),new Set(a.related_event_ids));
 assert.deepEqual(new Set(linked),new Set(idx.stories[7].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-mysore-1700-1799.json'"));
 assert(app.includes('mysore18cReady=true'));
-assert(reader.includes('draft.stories?.length===21'));
+assert(reader.includes('draft.stories?.length===22'));
 assert(reader.includes("storyMeta.has('E18-T17-MYSORE-WARS-PARTITION-1767-1799')"));
 assert(html.includes('18c-scotland-union-20261108-mysore-20261109'));
 console.log('PASS Mysore T17: 5 genuine groups, 12 original IDs covered, 10 group-backed events + 2 official supplements, 16 sources, 16 chapters/48 paragraphs/12 links, five modern named-point anchors, no fictitious 1792/1799 sovereignty polygons; earlier seven retained.');
