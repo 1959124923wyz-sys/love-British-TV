@@ -9,7 +9,7 @@ const original=J('research/18c/consolidated/series/T08.json');
 const idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,30);A.equal(idx.stories[21].id,story.id);A.equal(idx.stories[21].status,'research_preview');
+A.equal(idx.stories.length,31);A.equal(idx.stories[21].id,story.id);A.equal(idx.stories[21].status,'research_preview');
 A.equal(data.schema,'atlas-18c-t08-seven-years-colonial-atrocities-v1');A.equal(data.editorial_status,'research_preview_not_published');
 A.equal(data.events.length,32);A.equal(data.sources.length,50);A.equal(data.sources.filter(s=>s.original_registry_key?.startsWith('A:')).length,24);
 A.equal(original.groups.length,11);A.equal(data.provenance.original_candidate_ids,12);A.equal(data.provenance.original_A_keys,24);
@@ -46,7 +46,7 @@ A.deepEqual(new Set(links),new Set(story.related_event_ids));A.deepEqual(new Set
 A.equal(geo.transitions.length,32);
 A(geo.transitions.every(e=>e.polygon_allowed===false&&e.area_sqkm===null&&e.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t08-seven-years-1740-1775.json'"));
-A(app.includes('t08SevenYears22Ready=true'));A(reader.includes('draft.stories?.length===30'));
+A(app.includes('t08SevenYears22Ready=true'));A(reader.includes('draft.stories?.length===31'));
 A(reader.includes("storyMeta.has('E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775')"));
 A(html.includes('18c22-t08-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));

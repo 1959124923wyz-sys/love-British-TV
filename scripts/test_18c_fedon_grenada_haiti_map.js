@@ -3,7 +3,7 @@
 const A=require('node:assert/strict'),F=require('node:fs'),P=require('node:path'),root=P.resolve(__dirname,'..'),rd=p=>F.readFileSync(P.join(root,p),'utf8'),J=p=>JSON.parse(rd(p));
 const d=J('data/stories/serial/chronology-preview-fedon-grenada-haiti-1789-1798.json'),story=J('data/stories/serial/e18-t06-fedon-grenada-haiti-colonial-repression-1789-1798.json'),idx=J('data/stories/serial/preview-18c-index.json'),raw=J('research/18c/consolidated/series/T06.json'),geo=J('research/continuity/1789-1798-grenada-haiti/BRITISH_SLAVERY_REPRESSION_FEDON_HAITI_TRANSITIONS.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css'),cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,30);A.equal(idx.stories[18].id,story.id);A.equal(idx.stories[18].status,'research_preview');A.equal(idx.stories[18].publication_review,'not_submitted');
+A.equal(idx.stories.length,31);A.equal(idx.stories[18].id,story.id);A.equal(idx.stories[18].status,'research_preview');A.equal(idx.stories[18].publication_review,'not_submitted');
 A.equal(story.id,'E18-T06-FEDON-GRENADA-HAITI-BRITISH-REPRESSION-1789-1798');
 A.equal(story.publication_status,'research_only');A.equal(story.publication_approval,'not_submitted');
 A.deepEqual(story.predecessor_story_ids,['E18-T05-GARIFUNA-STVINCENT-WAR-DEPORTATION-1763-1797']);
@@ -70,7 +70,7 @@ A.deepEqual(new Set(links),new Set(story.related_event_ids));
 A.deepEqual(new Set(links),new Set(idx.stories[18].event_ids));
 A(app.includes("fetch('data/stories/serial/chronology-preview-fedon-grenada-haiti-1789-1798.json'"));
 A(app.includes('fedon19Ready=true'));
-A(reader.includes('draft.stories?.length===30'));
+A(reader.includes('draft.stories?.length===31'));
 A(reader.includes("storyMeta.has('E18-T06-FEDON-GRENADA-HAITI-BRITISH-REPRESSION-1789-1798')"));
 A(html.includes('18c19-fedon-20261110'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));

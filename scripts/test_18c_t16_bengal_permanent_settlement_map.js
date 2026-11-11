@@ -8,7 +8,7 @@ const led=J('research/continuity/1760-1799-bengal-permanent-land-tax/T16_EIC_ADI
 const raw=J('research/18c/consolidated/series/T16.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),css=rd('css/history-stories.css');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,30);A.equal(idx.stories[26].id,story.id);A.equal(idx.stories[26].status,'research_preview');
+A.equal(idx.stories.length,31);A.equal(idx.stories[26].id,story.id);A.equal(idx.stories[26].status,'research_preview');
 A.equal(d.schema,'atlas-18c-t16-permanent-settlement-adivasi-v1');
 A.equal(d.editorial_status,'research_preview_not_published');
 A.equal(d.events.length,29);A.equal(d.sources.length,29);
@@ -57,7 +57,7 @@ A.deepEqual(new Set(links),new Set(story.related_event_ids));
 A.deepEqual(new Set(links),new Set(idx.stories[26].event_ids));
 A.equal(led.transitions.length,29);A(led.transitions.every(x=>x.polygon_allowed===false&&x.area_sqkm===null&&x.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t16-permanent-settlement-1760-1799.json'"));
-A(app.includes('t16Bengal27Ready=true'));A(reader.includes('draft.stories?.length===30'));
+A(app.includes('t16Bengal27Ready=true'));A(reader.includes('draft.stories?.length===31'));
 A(reader.includes("storyMeta.has('E18-T16-BENGAL-PERMANENT-SETTLEMENT-ADIVASI-PAIK-1760-1799')"));
 A(html.includes('18c27-t16-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
