@@ -1,0 +1,71 @@
+name: 18C T28 Havana Port Egmont Malta 30-topic strict historical GIS QA
+on:
+  push:
+    branches:
+      - map/18c-t28-havana-falklands-malta-short-occupations-1762-1799-20261111
+  pull_request:
+    branches:
+      - map/18c-t23-penang-kedah-banda-ambon-andaman-1773-1796-20261111
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  thirty-story-source-GIS-and-reader:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 30 topics, all 33 T28 events, original 4 IDs and B keys, strict geometry, full back-catalog
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          for test in scripts/test_18c_*.js; do node "$test"; done
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_t28_original_B_sources.py
+          python3 scripts/audit_18c_t23_original_B_sources.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m json.tool data/stories/serial/chronology-preview-t28-havana-egmont-malta-1762-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t28-havana-egmont-malta-1762-1799.json >/dev/null
+          python3 -m json.tool research/continuity/1762-1799-havana-falklands-malta/T28_SHORT_OCCUPATIONS_MULTIACTOR_TRANSITIONS.json >/dev/null
+  real-desktop-chromium:
+    needs: thirty-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real 1780x1020 T28 and all 29 predecessor 18C stories plus published Tudor regressions
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c30-http.log 2>&1 &
+          python3 scripts/browser_18c_t28_havana_egmont_malta.py
+          for browser_test in scripts/browser_18c_*.py; do
+            if [ "$browser_test" != "scripts/browser_18c_t28_havana_egmont_malta.py" ]; then
+              python3 "$browser_test"
+            fi
+          done
+          python3 scripts/browser_major_story_pilot.py
+      - name: Preserve full real desktop screenshots and historical back-catalog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c30-havana-egmont-malta-historical-desktop-screenshots
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  public-draft-web-preview:
+    needs: thirty-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Independently check SHA-bound research web files and previous two topics
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js css/history-stories.css data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-t28-havana-egmont-malta-1762-1799.json data/stories/serial/e18-t28-havana-egmont-malta-1762-1799.json data/stories/serial/chronology-preview-t23-penang-kedah-moluccas-1768-1796.json data/stories/serial/e18-t23-penang-kedah-andaman-ambon-banda-1768-1796.json data/stories/serial/chronology-preview-t20-eic-parliament-loan-monopoly-1702-1793.json data/stories/serial/e18-t20-eic-parliament-loan-monopoly-1702-1793.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$path"
+          done
