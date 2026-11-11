@@ -283,3 +283,20 @@
 - [x] 23专题索引及前22批测试守卫已更新；独立严格GIS/原档1126/原ZIP/旧16C和17C桌面回归工作流已存GitHub。
 - [x] [第二十三批完整编辑交接](../../docs/research/EDITOR19_18C_T10_WALKING_PURCHASE_LENAPE_LANCASTER_HANDOFF_20261111.md)。
 - [ ] 原地图测绘配准、原财务交易账本、Lenape受害人口及1758实际归地契据尚需后续补充；以最新HEAD GitHub三项Actions success为最终验收条件。
+
+## 2026-11-11｜主编19第二十四批 T12 英国独立战争镇压、纽约监狱船与黑人争取自由
+
+- [x] 原T12七合并组、11个原始候审编号、17项A注册来源键全部保留，并与原1126项研究交叉表及不可变ZIP核对。1775 Dunmore两条相同日期候审合并为一个具年地图事件，所有原编号保留。
+- [x] 35具年份史事、47来源、35章105段完整中文长文（每段具独立可核来源及局限说明）、35个正文—Atlas真实互动和35项多政治主体控制过渡。
+- [x] 英国1764糖法及货币法、1767税政、1770 Boston英军射死5位居民、1774 Boston封港集体经济惩罚，分年交代且不虚构税收总额。
+- [x] 1776英军Wallabout Bay的Whitby监狱船、纽约Jersey及其他战俘船的长期饥饿疾病与大量死亡，原NPS逾万人为战争长期综合估计，不作单船/单年已审死亡计数。
+- [x] 1777英军Tryon在Danbury烧毁19处反英民宅；1779英军对Fairfield、Norwalk、New Haven多镇纵火，约400房屋与谷仓为Connecticut州长当时系列估计，未按城重复相加。
+- [x] 1775-11-07 Dunmore只对反王室奴役主劳工许诺参加英军后自由，1775-11-26黑人自行逃离奴役及12月Great Bridge战斗单独载入。
+- [x] 英国国家档案馆1783原档中黑人Peter、Elizabeth两个孩子及Betty被英美联合审查机关交还美国奴役主，另有约3000人登Book of Negroes、许多自主逃奴成功抵达Nova Scotia。自由人数与奴隶人数不乱相加。
+- [x] 1793年3月Chloe Cooley被绑并卖往美国、Peter Martin3月21日检举、Upper Canada有限限制新输入奴役法分开，原候审3月14日缺直接日证故不展示精确日，不虚构Chloe获释。
+- [x] 1794签Jay Treaty、1795参院批准、1796英军西部堡垒交割与原住民族持续独立权利分开；英国军事城市/港镇和纸面条约绝不画成全面大陆实占。
+- [x] 17条现代Boston、New York、Norfolk、Charleston地名参考点；其他战场/绑卖位置null；0英国新增实控Polygon、0假囚船/流亡航迹、0未经核实死亡与利润。
+- [x] 24专题索引、23旧专题测试、原档1126/ZIP独立审计、严格GIS、1780×1020真实桌面Chromium逐年点击/双击档案/返回、公开网页资产检查均已写入独立GitHub Actions。
+- [x] [第24批完整史料与代码交接](../../docs/research/EDITOR19_18C_T12_REVOLUTION_PRISON_SHIPS_BLACK_FREEDOM_HANDOFF_20261111.md)。
+- [ ] 逐船囚犯与死亡原卷、Tryon逐村损失清单、英美审查委员会被返主者后续命运、Chloe Cooley更准确日期以及1796各堡垒交接日继续研究。
+- [ ] 以最新HEAD三项GitHub Actions全部success为最终验收，不自行合并Draft。
