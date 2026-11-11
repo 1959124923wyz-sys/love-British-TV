@@ -15,7 +15,7 @@ const jamaica=read('app.js'),ui=read('js/history-stories.js'),html=read('index.h
 assert.equal(chapters.chapters.at(-1).end,1599,'Do not ship an unapproved 18C chapter');
 assert.equal(published.topics.find(t=>t.id==='E6-T08').status,'published');
 assert(!published.topics.some(t=>t.id===story.id));
-assert.equal(draft.stories.length,27);
+assert.equal(draft.stories.length,28);
 assert.equal(draft.stories[2].id,story.id);
 assert.equal(draft.stories[2].status,'research_preview');
 assert.equal(draft.stories[2].publication_review,'not_submitted');

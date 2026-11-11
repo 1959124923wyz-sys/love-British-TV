@@ -16,7 +16,7 @@ const app=read('app.js'),reader=read('js/history-stories.js'),html=read('index.h
 assert.equal(pub.chapters.at(-1).end,1599);
 assert(old17.topics.find(x=>x.id==='E6-T12'&&x.status==='published'));
 assert(!old17.topics.some(x=>x.id==='E18-T14-T15-BENGAL-1756-1773'));
-assert.equal(draft.stories.length,27);
+assert.equal(draft.stories.length,28);
 assert.equal(draft.stories[0].status,'research_preview');
 assert.equal(draft.stories[1].id,story.id);
 assert.equal(draft.stories[1].publication_review,'not_submitted');
