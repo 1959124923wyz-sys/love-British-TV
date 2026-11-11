@@ -34,7 +34,7 @@ try:
   element=d.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T20-'+eid+'"]')
   element.click()
   wait.until(lambda x:year(y))
-  d.save_screenshot(str(shots/'18c28-'+fn+'.png'))
+  d.save_screenshot(str(shots/('18c28-'+fn+'.png')))
  target=d.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-T20-1773-LOAN"]')
  js("arguments[0].dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))",target)
  wait.until(lambda x:js("return !!document.querySelector('#dossierBody [data-story-back]')"))
