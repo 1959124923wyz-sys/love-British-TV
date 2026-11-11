@@ -10,7 +10,7 @@ const d=load('data/stories/serial/chronology-preview-maratha-rohilla-awadh-1700-
 const crosswalk=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),reader=read('js/history-stories.js'),html=read('index.html');
 assert.equal(chap.chapters.at(-1).end,1599);
-assert.equal(idx.stories.length,19);assert.equal(idx.stories[8].id,a.id);
+assert.equal(idx.stories.length,20);assert.equal(idx.stories[8].id,a.id);
 assert.equal(a.id,'E18-T18-MARATHA-ROHILLA-AWADH-1773-1782');
 assert.equal(a.publication_status,'research_only');assert.equal(a.publication_approval,'not_submitted');
 assert.equal(a.editorial_status,'research_preview_not_published');
@@ -88,7 +88,7 @@ assert.deepEqual(new Set(linked),new Set(idx.stories[8].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-maratha-rohilla-awadh-1700-1799.json'"));
 assert(app.includes('maratha18cReady=true'));
 assert(!app.includes('ds.routes?.length||ds.places?.length'),'17C spatial referenced routes regression');
-assert(reader.includes('draft.stories?.length===19'));
+assert(reader.includes('draft.stories?.length===20'));
 assert(reader.includes("storyMeta.has('E18-T18-MARATHA-ROHILLA-AWADH-1773-1782')"));
 assert(html.includes('maratha-20261109'));
 console.log('PASS T18 Maratha/Rohilla/Awadh: 3 genuine merged groups, 8 original IDs tracked by 1126 archive, 7 group-backed nodes + 5 independent supplements, 12 dated events, 20 sources, 16 chapters/48 paragraphs/12 real interactive links, 3 modern official city point anchors, 0 fabricated territorial polygons; first eight stories preserved.');
