@@ -63,7 +63,7 @@ A(!ui.includes('story-reading-toolbar')&&!ui.includes('story-toc')&&!ui.includes
 const E=key=>d.events.find(e=>e.id==='E18C-T28-'+key);
 A(E('1762-JUL30-MORRO').description.includes('7月30'));
 A(E('1762-ENSLAVED-LABOUR').description.includes('2400'));
-A(E('1762-SPANISH-FLEET-SEIZED').description.includes('缴获'));
+A(E('1762-SPANISH-FLEET-SEIZED').description.includes('俘获'));
 A(E('1763-HAVANA-RETURN').description.includes('11个月'));
 A(E('1770-JUN10-EGMONT-CAPTURE').description.includes('6月10'));
 A.equal(E('1770-JUN10-EGMONT-CAPTURE').lat,null);
