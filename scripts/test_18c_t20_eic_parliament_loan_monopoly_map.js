@@ -8,7 +8,7 @@ const ledger=J('research/continuity/1702-1793-eic-state-parliament/T20_EIC_PARLI
 const raw=J('research/18c/consolidated/series/T20.json'),idx=J('data/stories/serial/preview-18c-index.json');
 const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,28);A.equal(idx.stories[27].id,s.id);A.equal(idx.stories[27].status,'research_preview');
+A.equal(idx.stories.length,29);A.equal(idx.stories[27].id,s.id);A.equal(idx.stories[27].status,'research_preview');
 A.equal(d.schema,'atlas-18c-t20-eic-parliament-finance-monopoly-v1');
 A.equal(d.editorial_status,'research_preview_not_published');A.equal(d.events.length,29);A.equal(s.sections.length,29);
 A.equal(d.provenance.original_merge_groups,4);A.equal(d.provenance.original_candidate_ids,9);
@@ -56,7 +56,7 @@ A.deepEqual(new Set(links),new Set(s.related_event_ids));
 A.deepEqual(new Set(links),new Set(idx.stories[27].event_ids));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t20-eic-parliament-loan-monopoly-1702-1793.json'"));
 A(app.includes('t20Eic28Ready=true'));
-A(reader.includes('draft.stories?.length===28')&&reader.includes('eicParliament28Continuation'));
+A(reader.includes('draft.stories?.length===29')&&reader.includes('eicParliament28Continuation'));
 A(html.includes('18c28-t20-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
 const E=k=>d.events.find(e=>e.id==='E18C-T20-'+k);
