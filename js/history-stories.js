@@ -264,8 +264,11 @@
   const penangT23Continuation=['E18-T20-EIC-PARLIAMENT-LOAN-MONOPOLY-1702-1793'].includes(article.id)&&
     new URLSearchParams(window.location.search).get('review18c')==='1'&&
     storyMeta.has('E18-T23-EIC-PENANG-KEDAH-ANDAMAN-AMBON-BANDA-1768-1796')?['E18-T23-EIC-PENANG-KEDAH-ANDAMAN-AMBON-BANDA-1768-1796']:[];
+  const t28HavanaMaltaContinuation=['E18-T23-EIC-PENANG-KEDAH-ANDAMAN-AMBON-BANDA-1768-1796'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T28-HAVANA-EGMONT-MALTA-1762-1799')?['E18-T28-HAVANA-EGMONT-MALTA-1762-1799']:[];
   const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,
-    ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...virginiaNewYorkSlaveContinuation,...carolinaTuscaroraContinuation,...sevenYearsContinuation,...lenapePurchaseContinuation,...revolution24Continuation,...hudsonBay25Continuation,...bengalFamine26Continuation,...bengalLand27Continuation,...eicParliament28Continuation,...penangT23Continuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
+    ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...virginiaNewYorkSlaveContinuation,...carolinaTuscaroraContinuation,...sevenYearsContinuation,...lenapePurchaseContinuation,...revolution24Continuation,...hudsonBay25Continuation,...bengalFamine26Continuation,...bengalLand27Continuation,...eicParliament28Continuation,...penangT23Continuation,...t28HavanaMaltaContinuation,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
@@ -449,7 +452,7 @@
       const draft=await response.json();
       if(draft.schema==='atlas-18c-story-review-index-v1'&&
          draft.editorial_status==='research_preview_not_published'&&
-         draft.stories?.length===29&&draft.stories[0].status==='research_preview'&&
+         draft.stories?.length===30&&draft.stories[0].status==='research_preview'&&
          draft.stories[0].publication_review==='not_submitted'&&
          draft.stories.every(t=>t.status==='research_preview'&&t.publication_review==='not_submitted'&&
           /^E18-[A-Z0-9-]+$/.test(t.id)&&/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.file)&&
