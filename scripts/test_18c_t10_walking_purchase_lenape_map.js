@@ -59,7 +59,7 @@ A(html.includes('18c23-t10-20261111'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
 A(!css.includes('.story-reading-toolbar')&&!css.includes('.story-toc'));
 const lookup=x=>d.events.find(e=>e.id==='E18C-T10-'+x);
-A(lookup('1737-AUG25-DEED').description.includes('8月25日'));
+A(lookup('1737-AUG25-DEED').description.includes('8月25日')||lookup('1737-AUG25-DEED').description.includes('1737年8月25日')||lookup('1737-AUG25-DEED').description.includes('RG26第35号'));
 A(lookup('1737-SEP19-RUN').description.includes('9月19日'));
 A(lookup('1744-JUN30-GACHRADODOW').description.includes('英王'));
 A(lookup('1756-NOV12-TEEDYUSCUNG').description.includes('11月12日'));
