@@ -11,7 +11,7 @@ const d=load('data/stories/serial/chronology-preview-carnatic-hyderabad-1700-179
 const crosswalk=read('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 const app=read('app.js'),reader=read('js/history-stories.js'),html=read('index.html');
 assert.equal(chap.chapters.at(-1).end,1599);
-assert.equal(idx.stories.length,26);assert.equal(idx.stories[9].id,a.id);
+assert.equal(idx.stories.length,27);assert.equal(idx.stories[9].id,a.id);
 assert.equal(a.id,'E18-T19-CARNATIC-HYDERABAD-PALAYAKKARAR-1746-1799');
 assert.equal(a.publication_status,'research_only');assert.equal(a.publication_approval,'not_submitted');
 assert.equal(a.editorial_status,'research_preview_not_published');
@@ -93,7 +93,7 @@ assert.deepEqual(new Set(linked),new Set(idx.stories[9].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-carnatic-hyderabad-1700-1799.json'"));
 assert(app.includes('carnatic18cReady=true'));
 assert(!app.includes('ds.routes?.length||ds.places?.length'));
-assert(reader.includes('draft.stories?.length===26'));
+assert(reader.includes('draft.stories?.length===27'));
 assert(reader.includes("storyMeta.has('E18-T19-CARNATIC-HYDERABAD-PALAYAKKARAR-1746-1799')"));
 assert(html.includes('carnatic-20261110'));
 console.log('PASS T19: 3 real merged groups / five original IDs, seven original B keys, 14 dated events, 20 sources, 18 sections/54 paragraphs/14 unique map links, four Royal Collection modern point refs, 13 historical actor transitions, 0 invented colonial polygons and nine earlier story regressions retained.');
