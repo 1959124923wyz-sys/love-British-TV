@@ -8,7 +8,7 @@ const ledger=J('research/continuity/1762-1799-havana-falklands-malta/T28_SHORT_O
 const raw=J('research/18c/consolidated/series/T28.json');
 const idx=J('data/stories/serial/preview-18c-index.json'),app=rd('app.js'),ui=rd('js/history-stories.js'),html=rd('index.html');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
-A.equal(idx.stories.length,31);A.equal(idx.stories[29].id,story.id);A.equal(idx.stories[29].status,'research_preview');
+A.equal(idx.stories.length,34);A.equal(idx.stories[29].id,story.id);A.equal(idx.stories[29].status,'research_preview');
 A.equal(raw.groups.length,2);A.equal(d.schema,'atlas-18c-t28-havana-egmont-malta-v1');
 A.equal(d.events.length,33);A.equal(d.sources.length,24);A.equal(story.sections.length,33);
 A.equal(d.provenance.original_merge_groups,2);A.equal(d.provenance.original_candidate_ids,4);
@@ -57,7 +57,7 @@ A.equal(links.length,33);A.equal(new Set(links).size,33);
 A.deepEqual(new Set(links),new Set(story.related_event_ids));
 A.deepEqual(new Set(links),new Set(idx.stories[29].event_ids));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t28-havana-egmont-malta-1762-1799.json'"));
-A(app.includes('t28HavanaMalta30Ready=true'));A(ui.includes('draft.stories?.length===31'));
+A(app.includes('t28HavanaMalta30Ready=true'));A(ui.includes('draft.stories?.length===34'));
 A(ui.includes('t28HavanaMaltaContinuation'));A(html.includes('18c30-t28-20261111'));
 A(!ui.includes('story-reading-toolbar')&&!ui.includes('story-toc')&&!ui.includes('story-reading-progress-meter')&&!ui.includes('data-story-nav'));
 const E=key=>d.events.find(e=>e.id==='E18C-T28-'+key);
