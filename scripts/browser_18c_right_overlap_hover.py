@@ -48,7 +48,7 @@ try:
   if(!native)target=document.querySelector('.atlas-18c-b39-zone');
   if(!target)throw Error('No historic SVG reference target');
   target.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,clientX:x,clientY:y}));
-  return {native,tag:target.tagName,cx:x,cy:y,history:audit?.length||0};
+  return {native,tag:target.tagName,cx:x,cy:y};
  """)
  wait.until(lambda _:audit()['open'] and audit()['selectedCount']>=4)
  assert d.find_element(By.ID,'workspace').get_attribute('class').find('sidebar-collapsed')>=0
