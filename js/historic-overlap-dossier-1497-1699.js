@@ -188,20 +188,22 @@
   renderCards();outline(found[0]);
   return true;
  }
- // Intercept only visible source-backed POLYGON SVG paths (not event pins,
- // route links, or the vast background for kingdom political outlines).
+ // Capture actual map pixels before other Leaflet layers can stop propagation.
+ // Event glyphs and their dedicated interactive paths retain their own actions.
  function capture(e){
   if(!enabled()||!map.getContainer().contains(e.target))return;
-  if(e.target.closest?.('.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip'))return;
+  if(e.target.closest?.('.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip,.atlas-voyage-hit'))return;
   const candidates=live();
   const hit=candidates.find(r=>r.layer._path&&(r.layer._path===e.target||r.layer._path.contains(e.target)));
-  if(!hit)return;
-  const ll=map.mouseEventToLatLng(e);
-  let records=at(ll);
-  if(!records.length)records=[hit]; // thin stroke clicked at a ring edge
-  activeRecords=records;point=ll;currentYear=host.getYear();openedVia='visible-polygon';
-  selected=records[0].key;
-  renderCards();outline(records[0]);
+  if(!hit&&e.target.closest?.('.leaflet-interactive'))return;
+  const ll=map.mouseEventToLatLng(e),records=at(ll);
+  if(!records.length&&!hit)return;
+  if(!records.length&&hit){
+   activeRecords=[hit];point=ll;currentYear=host.getYear();openedVia='visible-polygon';
+   selected=hit.key;renderCards();outline(hit);
+  }else{
+   openAt(ll,hit?'visible-polygon':records.length>1?'capture-transparent-overlap':'capture-transparent-single');
+  }
   e.preventDefault();e.stopPropagation();e.stopImmediatePropagation?.();
  }
  document.addEventListener('click',capture,true);
