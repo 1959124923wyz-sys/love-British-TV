@@ -21,7 +21,7 @@ def click(x,y):
   browser.execute_cdp_cmd('Input.dispatchMouseEvent',payload)
 try:
  browser.get('http://127.0.0.1:8765/?review18c=1&year=1762')
- wait.until(lambda _:js("return window.eighteenthOverlapDossier?.getAudit?.()?.loaded && !!window.AtlasPublicCopyGuard"))
+ wait.until(lambda _:js("return window.eighteenthOverlapDossier?.getAudit?.()?.loaded && !!window.AtlasPublicCopyGuard && Number(document.getElementById('bigYear').textContent)===1762 && window.eighteenthOverlapDossier.hitCountAt(23.14,-82.36)>=2"))
  result=js("""
   const host=window.__eighteenthSpatialHost, map=host.map;
   const lat=23.14,lng=-82.36;
