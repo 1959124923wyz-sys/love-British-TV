@@ -151,7 +151,7 @@
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源 ('+src.length+')</summary>'+
     '<div class="atlas-18c-overlap-source-links">'+src.map(u=>
      '<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">资料来源 · '+esc(urlHost(u))+' ↗</a>').join('')+
-    (src.length?'':'<p>这条绘图记录未附可访问的独立原始链接；详见相邻地图专题档案。</p>')+
+
     '</div></details></div>':'')+'</article>';
  }
  function renderCards(){
