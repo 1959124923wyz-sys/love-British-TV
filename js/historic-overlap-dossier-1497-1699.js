@@ -8,6 +8,7 @@
  const host=window.__historicOverlapHost;
  if(!host||!window.L)return;
  const {map}=host,$=host.element,esc=host.escapeHTML;
+ const reader=window.AtlasReaderCopy;
  const insideRing=(ring,lon,lat)=>{
   let ok=false;
   if(!Array.isArray(ring)||ring.length<3)return false;
@@ -63,7 +64,7 @@
    const interval=p.controller_periods.find(z=>z.start_year<=host.getYear()&&host.getYear()<=z.end_year);
    if(interval?.controller_zh)return interval.controller_zh+' · 政治治理';
   }
-  return String(p.label_type||labelByKind[key]||groupName[r.group]||'历史地理参考');
+  return reader.label(p.label_type||labelByKind[key]||groupName[r.group]||'历史区域');
  };
  const title=r=>{
   const p=r.feature.properties||{},y=host.getYear();
@@ -73,8 +74,8 @@
  const summary=r=>{
   const p=r.feature.properties||{},y=host.getYear();
   const stage=p.year_stages?.find(x=>x.start_year<=y&&y<=x.end_year);
-  return String(stage?.summary_zh||p.summary_zh||p.history_description||p.description||
-   p.annotation||p.note||'该区域具有历史地理记录，可查阅关联资料。');
+  return reader.clean(stage?.summary_zh||p.summary_zh||p.history_description||p.description||
+   p.annotation||p.note||'');
  };
  const clip=(t,n=120)=>t.length>n?t.slice(0,n-1)+'…':t;
  const period=r=>{
@@ -142,12 +143,11 @@
    '<span class="atlas-18c-overlap-kind">'+esc(clip(category(r),47))+'</span>'+
    '<span class="atlas-18c-overlap-years">'+esc(period(r))+'</span></span>'+
    '<strong class="atlas-18c-overlap-title">'+esc(title(r))+'</strong>'+
-   '<span class="atlas-18c-overlap-summary">'+esc(clip(desc))+'</span></button>'+
+   (desc&&!isOpen?'<span class="atlas-18c-overlap-summary">'+esc(clip(desc))+'</span>':'')+'</button>'+
    (isOpen?'<div class="atlas-18c-overlap-detail">'+
     '<div class="atlas-18c-overlap-facts"><div><span>历史时段</span><b>'+esc(period(r))+'</b></div>'+
     '<div><span>图层性质</span><b>'+esc(clip(category(r),75))+'</b></div></div>'+
-    '<p>'+esc(desc)+'</p>'+
-    '<p class="atlas-18c-overlap-precision">边缘仅用于标识有史料关联的参考地理，不得按轮廓计算当年的真实统治面积。</p>'+
+    (desc?'<p>'+esc(desc)+'</p>':'')+
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源 ('+src.length+')</summary>'+
     '<div class="atlas-18c-overlap-source-links">'+src.map(u=>
      '<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">资料来源 · '+esc(urlHost(u))+' ↗</a>').join('')+
@@ -160,9 +160,8 @@
   container.innerHTML='<section id="atlasHistoricOverlapPanel" class="atlas-18c-overlap-panel">'+
    '<div class="dossier-kicker">历史地理区块 · '+host.getYear()+'年</div>'+
    '<h2>'+(activeRecords.length===1?'历史区域档案':'此处涉及 '+activeRecords.length+' 条历史区域记录')+'</h2>'+
-   '<p class="atlas-18c-overlap-lead">将鼠标移到下方任意区块，地图对应范围的边缘会发光；点击条目，在这里展开简约介绍及史料。</p>'+
+   '<p class="atlas-18c-overlap-lead">悬停高亮区域 · 点击展开详情</p>'+
    '<div class="atlas-18c-overlap-list">'+activeRecords.map(card).join('')+'</div>'+
-   '<p class="atlas-18c-overlap-footnote">同处重叠的军事、行政、贸易和纸面声索属于不同历史关系；轮廓不能累加为英国领土面积。</p>'+
    '</section>';
   for(const el of container.querySelectorAll('[data-historic-index]')){
    const rec=activeRecords[Number(el.dataset.historicIndex)];
