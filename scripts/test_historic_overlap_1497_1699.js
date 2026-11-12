@@ -33,7 +33,8 @@ for(const group of ['territory','colonialClaims','seventeenthStudies','archaeolo
  'eleventhAreas','hypotheses','enslavementBands'])
  assert(a.includes("'"+group+"'"),'missing active map layer '+group);
 assert(!logic.includes('sourcesById.set('));
-assert(logic.includes("getLayers()")===false,'should access Leaflet groups via the explicit host only');
+assert(logic.includes('host.visibleAreaFeatures()'),'historic polygons must only be accessed via source adapter');
+assert(!logic.includes('window.__eighteenthSpatialHost.map'),'cross-century module must not borrow preview-only host');
 assert(logic.includes("const inGeom=(g,lon,lat)=>"));
 assert(logic.includes("g?.type==='MultiPolygon'"));
 assert(logic.includes('map.getContainer().contains(e.target)'));
