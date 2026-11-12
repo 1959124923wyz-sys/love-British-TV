@@ -345,7 +345,14 @@
       "research_original_record_ids": [],
       "narrative_analysis": "议会将公司海外征税资格与英国国家财政建立直接交换。",
       "narrative_limit": "法定缴款承诺不是已经核销的公司税收净利润。",
-      "actor_note": "英国政府、殖民贸易公司、地方印度邦君、居民及北美抗议者独立归责。"
+      "actor_note": "英国政府、殖民贸易公司、地方印度邦君、居民及北美抗议者独立归责。",
+      "research_audited_cross_arc_group_ids": [
+        "E18-MRG-T14-06"
+      ],
+      "research_audited_cross_arc_original_ids": [
+        "AB-B18-003"
+      ],
+      "cross_arc_review_note": "2026-11-12: independent original T14 candidate matched to existing same-year T20 parliamentary event and existing authoritative source. T20 original research counts and historical GIS unchanged; no duplicated event."
     },
     {
       "id": "E18C-T20-1769-PAYMENT",
@@ -1119,7 +1126,14 @@
       "research_original_record_ids": [],
       "narrative_analysis": "公司在更严密国家监管下保留商业和政治双重机构身份。",
       "narrative_limit": "1793续期与1813开放部分印度贸易、1833取消中国茶贸易垄断，发生于不同年份。",
-      "actor_note": "英国政府、殖民贸易公司、地方印度邦君、居民及北美抗议者独立归责。"
+      "actor_note": "英国政府、殖民贸易公司、地方印度邦君、居民及北美抗议者独立归责。",
+      "research_audited_cross_arc_group_ids": [
+        "E18-MRG-T14-09"
+      ],
+      "research_audited_cross_arc_original_ids": [
+        "AB-R7-POL-032"
+      ],
+      "cross_arc_review_note": "2026-11-12: independent original T14 candidate matched to existing same-year T20 parliamentary event and existing authoritative source. T20 original research counts and historical GIS unchanged; no duplicated event."
     }
   ],
   "places": [],
@@ -1342,7 +1356,23 @@
     "original_B_keys": 9,
     "mapped_original_ids": 9,
     "original_archive": "research/18c/consolidated/18C_Consolidated_Research_Handoff_20261108.zip",
-    "crosswalk": "research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv"
+    "crosswalk": "research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv",
+    "audited_cross_arc_originals": [
+      {
+        "original_id": "AB-B18-003",
+        "original_merge_group_id": "E18-MRG-T14-06",
+        "already_verified_atlas_event_id": "E18C-T20-1767-PAYMENT",
+        "year": 1767,
+        "source_id": "18CT20-HANS"
+      },
+      {
+        "original_id": "AB-R7-POL-032",
+        "original_merge_group_id": "E18-MRG-T14-09",
+        "already_verified_atlas_event_id": "E18C-T20-1793-CHARTER",
+        "year": 1793,
+        "source_id": "18CT20-UK1793"
+      }
+    ]
   },
   "statistics": {
     "government_loan_1773_pounds": 1400000,
