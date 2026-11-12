@@ -151,7 +151,7 @@
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源 ('+src.length+')</summary>'+
     '<div class="atlas-18c-overlap-source-links">'+src.map(u=>
      '<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">资料来源 · '+esc(urlHost(u))+' ↗</a>').join('')+
-    (src.length?'':'<p>这条绘图记录未附可访问的独立原始链接；详见相邻地图专题档案。</p>')+
+
     '</div></details></div>':'')+'</article>';
  }
  function renderCards(){
@@ -209,7 +209,8 @@
  // directly inspectable, without demanding a pixel-perfect stroke click.
  map.on('click',ev=>{
   if(!enabled()||ev.originalEvent?.target?.closest?.('.leaflet-marker-icon,.leaflet-popup'))return;
-  if(at(ev.latlng).length>1)openAt(ev.latlng,'transparent-overlap');
+  const matches=at(ev.latlng);
+  if(matches.length)openAt(ev.latlng,matches.length>1?'transparent-overlap':'transparent-single');
  });
  // Do not leave historic hover focus behind after a normal story is opened.
  new MutationObserver(()=>{
@@ -245,6 +246,7 @@
  }
  window.historicOverlapDossier={
   render,
+  hitCountAt:(lat,lng)=>at(L.latLng(lat,lng)).length,
   getAudit:()=>{
    const current=enabled()?live():[],groups={};
    for(const r of current)groups[r.group]=(groups[r.group]||0)+1;

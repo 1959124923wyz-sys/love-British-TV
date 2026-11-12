@@ -40,7 +40,7 @@ assert(logic.includes("g?.type==='MultiPolygon'"));
 assert(logic.includes('map.getContainer().contains(e.target)'));
 assert(logic.includes("document.addEventListener('click',capture,true)"));
 assert(logic.includes("map.on('click',ev=>"));
-assert(logic.includes("if(at(ev.latlng).length>1)"));
+assert(logic.includes("if(matches.length)openAt(ev.latlng,matches.length>1?'transparent-overlap':'transparent-single')"));
 assert(logic.includes("el.addEventListener('pointerenter',()=>outline(rec))"));
 assert(logic.includes("el.addEventListener('pointerleave',()=>outline(activeRecords.find"));
 assert(logic.includes("el.addEventListener('focusin',()=>outline(rec))"));

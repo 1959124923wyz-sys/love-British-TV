@@ -227,7 +227,7 @@
   if(!loaded||!enabled())return;
   if(ev.originalEvent?.target?.closest?.('.leaflet-marker-icon,.leaflet-popup'))return;
   const matched=locate(ev.latlng,false);
-  if(matched.length>1)openAt(ev.latlng,false,'map-background-overlap');
+  if(matched.length)openAt(ev.latlng,false,matched.length>1?'map-background-overlap':'map-background-single');
  });
 
  // Clear obsolete selection if an ordinary event/story replaces the right dossier.
@@ -306,6 +306,7 @@
  }
  window.eighteenthOverlapDossier={
   render,
+  hitCountAt:(lat,lng)=>loaded&&enabled()?locate(L.latLng(lat,lng),false).length:0,
   getAudit:()=>({loaded,error,year:host.getYear(),areas:areas.length,sites:sites.length,
    selectedCount:activeRecords.length,selected,focused,lastActivation,
    glowCount:glowGroup.getLayers().length,
