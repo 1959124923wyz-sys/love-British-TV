@@ -42,10 +42,10 @@
 .atlas-18c-overlap-footnote{font-size:11px;color:#899eb3;
  padding:8px 1px;margin:15px 0;line-height:1.75}
 /* Glow is drawn in a dedicated, pointer-transparent Leaflet pane, above all six archives. */
-.leaflet-overlay-pane .atlas-18c-overlap-halo{
+.atlas-18c-overlap-halo{
  filter:drop-shadow(0 0 6px #fff0a6) drop-shadow(0 0 10px #f7ba6c);
 }
-.leaflet-overlay-pane .atlas-18c-overlap-glow{
+.atlas-18c-overlap-glow{
  filter:drop-shadow(0 0 3px #fff8cb) drop-shadow(0 0 8px #ffd07b);
  stroke-linejoin:round;vector-effect:non-scaling-stroke;
 }
