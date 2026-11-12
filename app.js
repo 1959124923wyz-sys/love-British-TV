@@ -155,7 +155,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
 const iconHTML=(item,annualNew=false)=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+(annualNew?' atlas-new-this-year':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+(annualNew?' · 本年新增事件':'')+'">'+svgIcon(item)+(annualNew?'<span class="atlas-new-mark" aria-hidden="true">新</span>':'')+'</div>';
-const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+(item.representative_map_point?' · ◎地区参考点（非事件现场）':'')+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
+const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])++' · 点击查看详情</small>':'<small>查看航行路线</small>');
 const workspace=$('workspace');
  const readerCopy=window.AtlasReaderCopy;
 const compactMapMedia=window.matchMedia('(max-width:980px)');
@@ -347,17 +347,11 @@ function openDossier(item,typ){
 function openArchaeologyReference(feature){
  const p=feature.properties||{};
  selected='';selectedItemYear=null;
- const text='Historic Environment Scotland 登记的现代古迹保护区范围，包含多期军事考古遗存。';
- $('dossierBody').innerHTML='<div class="dossier-kicker">现代考古遗址地理参考 · '+year+'年</div>'+
-  '<h2>'+escapeHTML(p.public_name||p.title_from_hes||'法定古迹参考区')+'</h2>'+
-  
-  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
-  '<div class="research-body"><h3>地图几何性质</h3><p>'+escapeHTML(text)+'</p>'+
-  '<h3>军堡建造与分期</h3><p>'+escapeHTML(p.phase_reminder||'需区分后续改建与16世纪城堡分期。')+'</p>'+
-  '<h3>官方地理资料</h3><p>'+escapeHTML((p.hes_precision||'HES考古登记')+'；'+(p.hes_accuracy||''))+'</p>'+
-  '</div>'+
-  '<div class="source-list"><a class="source-link" href="'+escapeHTML(p.designation_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland 官方古迹档案 ↗</a>'+
-  '<a class="source-link" href="'+escapeHTML(p.data_source_url)+'" target="_blank" rel="noopener noreferrer">HES 官方GIS数据接口 ↗</a></div></details>';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史古迹 · '+year+'年</div>'+
+  '<h2>'+escapeHTML(p.public_name||p.title_from_hes||'历史遗址')+'</h2>'+
+  '<details class="source-details"><summary>历史来源</summary>'+
+  '<div class="source-list"><a class="source-link" href="'+escapeHTML(p.designation_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland · 官方档案 ↗</a>'+
+  '<a class="source-link" href="'+escapeHTML(p.data_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland · 地理资料 ↗</a></div></details>';
  openPanel('dossier');
 }
 function renderArchaeologyReferences(){
@@ -382,10 +376,10 @@ function renderArchaeologyReferences(){
 }
 function openHypothesis(feature){
  const p=feature.properties||{};
- const title=p.public_title||'推定地理范围';
+ const title=p.public_title||'历史区域';
  const url=p.source_path||'research/hypotheses/1500/README.md';
  selectedItemYear=null;
- $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(readerCopy.clean(p.public_summary||''))+'</p>'+
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史区域</div><h2>'+escapeHTML(title)+'</h2>'+(readerCopy.clean(p.public_summary||'')?'<p>'+escapeHTML(readerCopy.clean(p.public_summary))+'</p>':'')+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
  
  '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看原始地理研究 ↗</a></details>';
@@ -417,7 +411,7 @@ function openTerritoryDossier(feature,kind='historic'){
  const claimPoint=arguments.length>2?arguments[2]:null;
  const p=feature.properties||{},restoration=kind==='restoration',occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war',atlanticContact=kind==='atlantic-contact',linkedAction=kind==='linked-action';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
- const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室广域殖民声索 · 非实际逐地控制'):kind==='seventeenth-reference'?(p.label_type||'17世纪来源地理参考 · 非实测历史影响区'):kind==='indigenous-encounter'?'原住民接触与抵抗 · 无占领':kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
+ const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室殖民声索'):kind==='seventeenth-reference'?(p.label_type||'17世纪地区史料'):kind==='indigenous-encounter'?'原住民接触与抵抗':kind==='rebellion-conflict'?'起义军与王室军事交锋':kind==='domestic-repression'?'王室军事镇压':kind==='colonial-coercion'?'殖民军需与强制征赋':linkedAction?(p.label_type||'军事行动'):atlanticContact?(p.label_type||'大西洋贸易与军事行动'):nineYearsWar?(p.label_type||'九年战争与爱尔兰抵抗'):landDispossession?'殖民土地没收与庄园政策':restoration?'法军收复与英国撤军':invasionImpact?'英军入侵':warReach?'军事行动':occupied?'英军驻地':contested?'战争争夺':'历史政治地理';
  const description=readerCopy.clean(controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||''));
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.ongoing_at_atlas_end?'起（至1599年地图研究范围）':p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
@@ -438,7 +432,7 @@ function openTerritoryDossier(feature,kind='historic'){
   '<h2>'+escapeHTML(kind==='seventeenth-claim'?conciseRegionTitle(p.name):(p.name||feature.id||'历史领土概况'))+'</h2>'+
   (kind==='seventeenth-claim'&&conciseRegionTitle(p.name)!==p.name?'<details class="atlas-complete-title"><summary>完整区域名称</summary><p>'+escapeHTML(p.name)+'</p></details>':'')+
   (description?'<p>'+escapeHTML(description)+'</p>':'')+
-  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('图层性质',kind==='seventeenth-claim'?(p.map_presentation==='optional_maximal_paper_claim'?'跨大陆等最大法律声索 · 默认仅存档':p.label_type||'殖民文书与贸易活动地理参考'):null)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
+  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('图层性质',kind==='seventeenth-claim'?readerCopy.label(p.label_type||'殖民文书与贸易'):null)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
   ''+'</div>'+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
@@ -1548,7 +1542,7 @@ function renderTenthInvasionImpactAreas(){
   const p=f.properties,small=map.getZoom()<5;
   const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.label_type||'英军入侵影响区')+
-   (small?' · 位置提示，放大查看地区示意面':' · 点击查看史料')+'</div>';
+   (small?' · 点击查看史料':' · 点击查看史料')+'</div>';
   const open=e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    openTerritoryDossier(f,'invasion-impact');};
   if(small){
@@ -1600,7 +1594,7 @@ function renderTenthLandRaidImpactAreas(){
   const lowZoom=land?zoom<5:true;
   const tooltip='<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.label_type||'区域性历史影响')+
-   (land&&lowZoom?' · 位置提示，放大查看地区示意面':' · 查看史料')+'</div>';
+   (land&&lowZoom?' · 点击查看史料':' · 查看史料')+'</div>';
   const open=e=>{
    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    const currentFeature=stage?{...feature,properties:{...p,name:stage.title,
@@ -1660,7 +1654,7 @@ function renderAtlanticContactSites(){
   const small=map.getZoom()<8;
   const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.label_type)+
-   (small?' · 位置提示；放大后显示局部示意面':' · 点击查看史料')+'</div>';
+   (small?' · 点击查看史料':' · 点击查看史料')+'</div>';
   const open=e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    openTerritoryDossier(f,'atlantic-contact');};
   if(small){
@@ -1716,7 +1710,7 @@ function renderAtlanticContactSites(){
    className:commerce?'atlas-maghreb-commerce-site':
     occupied?'atlas-caribbean-urban-occupation':'atlas-caribbean-raid-site'
   }).bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(commerce?'有据贸易活动，不是殖民地':occupied?'短期占据城市，非全岛统治':failed?'袭击受挫，无英军占领':'港口/岛屿行动定位示意')+
+   escapeHTML(commerce?'贸易活动':occupied?'城市短期占领':failed?'袭击受挫':'港口与岛屿行动')+
    ' · 点击查阅史料</div>',
    {sticky:true,pane:'eventTooltipPane',className:'atlas-hover'})
    .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
@@ -1949,7 +1943,7 @@ function renderWartimeControls(){
    className:french?'atlas-french-counterfort':'atlas-local-english-garrison',
    bubblingMouseEvents:false})
    .bindTooltip('<strong>'+escapeHTML(p.name||record?.name||'驻军据点')+'</strong><div class="atlas-hover-summary">'+
-     escapeHTML(french?'法国守军 · 非英王控制':linkedOccupiedZone?'点击查看军控概略范围、年份与相关堡垒':'英军实际驻点 · 非整个地区的疆界')+'</div>',
+     escapeHTML(french?'法国守军 · 非英王控制':linkedOccupiedZone?'查看驻军与相关堡垒':'英军驻点 · 查看史料')+'</div>',
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',showGarrisonInfo)
    .addTo(groups.wartimeControl);
