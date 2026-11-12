@@ -2337,6 +2337,8 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineNotice').textContent='';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
+ // Also clear 18C-only area overlays when the user navigates back into the published 16C atlas.
+ window.eighteenthSpatial?.render?.();
  if(changedYear)$('eventList').scrollTop=0;
   $('prevYear').disabled=year<=1497;
   $('nextYear').disabled=year>=(serialPreviewAtlas?previewYearCap():lastPublishedYear);
