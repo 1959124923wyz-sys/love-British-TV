@@ -20,8 +20,11 @@ def phase35():return js('return window.eighteenthMassSpatial?.getAudit?.()')
 def phase34():return js('return window.eighteenthSpatial?.getAudit?.()')
 def screenshot(s):driver.save_screenshot(str(screens/('18c-map36-'+s+'.png')))
 def set_year(y):
+ before=js("return {year:document.querySelector('#bigYear').textContent,input:document.querySelector('#jumpYear').value,max:document.querySelector('#jumpYear').max,min:document.querySelector('#jumpYear').min,notices:document.querySelector('#timelineNotice')?.textContent}")
  js("const el=document.querySelector('#jumpYear');el.value=String(arguments[0]);el.dispatchEvent(new Event('change',{bubbles:true}));",y)
- wait.until(lambda d:d.find_element(By.ID,'bigYear').text==str(y))
+ after=js("return {year:document.querySelector('#bigYear').textContent,input:document.querySelector('#jumpYear').value,max:document.querySelector('#jumpYear').max,min:document.querySelector('#jumpYear').min,notices:document.querySelector('#timelineNotice')?.textContent}")
+ print('YEAR NAV',y,'BEFORE',before,'AFTER',after,flush=True)
+ WebDriverWait(driver,12).until(lambda d:d.find_element(By.ID,'bigYear').text==str(y))
  wait.until(lambda _:audit() and audit()['year']==y)
 def has(word):return any(word in v for v in audit()['activeZoneTitles'])
 try:
