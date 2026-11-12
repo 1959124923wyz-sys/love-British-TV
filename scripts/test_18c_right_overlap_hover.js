@@ -32,7 +32,7 @@ assert(!js.includes('reader18c'), 'no separate reader mode');
 assert(!html.includes('eighteenth-reader-overlap-pilot.js')&&!html.includes('reader18c=1'));
 assert(js.includes("map.getContainer().addEventListener('click',captureMapClick,true)"));
 assert(js.includes('map.mouseEventToLatLng(e)'));
-assert(js.includes('function polygonInside('));
+assert(js.includes('const polygonInside=('));
 assert(js.includes("function showCollection")===false);
 assert(js.includes("area_sqkm")&&js.includes("areas.length!==629||sites.length!==421"));
 assert(js.includes("for(const zone of data.zones"));
