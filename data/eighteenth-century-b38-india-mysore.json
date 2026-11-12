@@ -13,7 +13,8 @@
     "BL1784": "https://searcharchives.bl.uk/catalog/032-002059709",
     "BLTREATY": "https://searcharchives.bl.uk/catalog/040-000004780",
     "NAM_BURMA": "https://www.nam.ac.uk/explore/timeline-burma-army",
-    "TAX": "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772"
+    "TAX": "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772",
+    "POND_RESTORE": "https://searcharchives.bl.uk/catalog/032-002282738"
   },
   "area_sqkm_totals": null,
   "area_aggregation_forbidden": true,
@@ -518,7 +519,7 @@
       "periods": [
         {
           "start_year": 1761,
-          "end_year": 1762
+          "end_year": 1764
         }
       ],
       "bbox": [
@@ -531,7 +532,7 @@
       "source_urls": [
         "https://www.nam.ac.uk/explore/seven-years-war"
       ],
-      "note": "法国1763条约后恢复商站，短时英占",
+      "note": "1761英军攻陷法属据点，法国商馆至1765恢复；未延伸为整个卡纳提克统治",
       "marker": true,
       "geometry_precision": "unsurveyed_editorial_reference_bbox",
       "precise_historic_border": false,
@@ -571,11 +572,11 @@
     },
     {
       "id": "B38-I-Z020",
-      "title": "1763年后Pondicherry法属商馆恢复",
+      "title": "1765年后Pondicherry法属商馆恢复",
       "kind": "foreign_occupation",
       "periods": [
         {
-          "start_year": 1763,
+          "start_year": 1765,
           "end_year": 1777
         }
       ],
@@ -585,11 +586,11 @@
         79.98,
         12.07
       ],
-      "source_key": "SEVEN",
+      "source_key": "POND_RESTORE",
       "source_urls": [
-        "https://www.nam.ac.uk/explore/seven-years-war"
+        "https://searcharchives.bl.uk/catalog/032-002282738"
       ],
-      "note": "法国据点并非英国政权",
+      "note": "英国图书馆保存1765年马德拉斯议会关于将Pondicherry归还法国的往来，年份以实际重开参考",
       "marker": true,
       "geometry_precision": "unsurveyed_editorial_reference_bbox",
       "precise_historic_border": false,
@@ -920,7 +921,7 @@
     {
       "id": "B38-I-Z032",
       "title": "1784年Mangalore公司撤回部分争议占地",
-      "kind": "foreign_occupation",
+      "kind": "diplomacy",
       "periods": [
         {
           "start_year": 1784,
@@ -937,7 +938,7 @@
       "source_urls": [
         "https://searcharchives.bl.uk/catalog/040-000004780"
       ],
-      "note": "和约后英国必须承认迈索尔统治并停止战时占据主张",
+      "note": "1784和约规定复原战争期间所争地与俘虏处置，实际军事撤离的各点需独立核对",
       "marker": true,
       "geometry_precision": "unsurveyed_editorial_reference_bbox",
       "precise_historic_border": false,
@@ -949,7 +950,7 @@
     {
       "id": "B38-I-Z033",
       "title": "1784年Mangalore交换战争俘虏与英国守军离开",
-      "kind": "displacement",
+      "kind": "diplomacy",
       "periods": [
         {
           "start_year": 1784,
@@ -966,7 +967,7 @@
       "source_urls": [
         "https://searcharchives.bl.uk/catalog/040-000004780"
       ],
-      "note": "条约包括释放战争俘虏，非英国新占地区",
+      "note": "英方印度事务文书列出交换战俘条款及人员名单，非新征服区域",
       "marker": true,
       "geometry_precision": "unsurveyed_editorial_reference_bbox",
       "precise_historic_border": false,
@@ -1354,25 +1355,25 @@
     },
     {
       "id": "B38-I-Z047",
-      "title": "1784后Tripura与缅甸战争边境商贸接触",
-      "kind": "trade_influence",
+      "title": "1784年缅甸王朝夺取Arakan的东部边境战事",
+      "kind": "foreign_occupation",
       "periods": [
         {
           "start_year": 1784,
-          "end_year": 1799
+          "end_year": 1784
         }
       ],
       "bbox": [
-        90.7,
-        22.7,
-        92.5,
-        24.4
+        91.9,
+        19.75,
+        93.6,
+        21.85
       ],
       "source_key": "NAM_BURMA",
       "source_urls": [
         "https://www.nam.ac.uk/explore/timeline-burma-army"
       ],
-      "note": "只作地理背景，不推断英军在此大面积驻扎",
+      "note": "1784年缅甸王朝征服Arakan，英国并未占领该区；局部参考框显示边境局势",
       "marker": false,
       "geometry_precision": "unsurveyed_editorial_reference_bbox",
       "precise_historic_border": false,
@@ -1715,7 +1716,7 @@
       "periods": [
         {
           "start_year": 1761,
-          "end_year": 1762
+          "end_year": 1764
         }
       ],
       "coordinates": [
@@ -1727,7 +1728,7 @@
       "source_urls": [
         "https://www.nam.ac.uk/explore/seven-years-war"
       ],
-      "note": "法国1763条约后恢复商站，短时英占",
+      "note": "1761英军攻陷法属据点，法国商馆至1765恢复；未延伸为整个卡纳提克统治",
       "location_confidence": "proxy_region_centre",
       "historical_city_wall_survey": false,
       "screen_radius_not_ground_area": true,
@@ -1760,11 +1761,11 @@
     },
     {
       "id": "B38-I-P020",
-      "title": "1763年后Pondicherry法属商馆恢复",
+      "title": "1765年后Pondicherry法属商馆恢复",
       "kind": "foreign_occupation",
       "periods": [
         {
-          "start_year": 1763,
+          "start_year": 1765,
           "end_year": 1777
         }
       ],
@@ -1773,11 +1774,11 @@
         11.93
       ],
       "linked_zone_id": "B38-I-Z020",
-      "source_key": "SEVEN",
+      "source_key": "POND_RESTORE",
       "source_urls": [
-        "https://www.nam.ac.uk/explore/seven-years-war"
+        "https://searcharchives.bl.uk/catalog/032-002282738"
       ],
-      "note": "法国据点并非英国政权",
+      "note": "英国图书馆保存1765年马德拉斯议会关于将Pondicherry归还法国的往来，年份以实际重开参考",
       "location_confidence": "proxy_region_centre",
       "historical_city_wall_survey": false,
       "screen_radius_not_ground_area": true,
@@ -1986,7 +1987,7 @@
     {
       "id": "B38-I-P032",
       "title": "1784年Mangalore公司撤回部分争议占地",
-      "kind": "foreign_occupation",
+      "kind": "diplomacy",
       "periods": [
         {
           "start_year": 1784,
@@ -2002,7 +2003,7 @@
       "source_urls": [
         "https://searcharchives.bl.uk/catalog/040-000004780"
       ],
-      "note": "和约后英国必须承认迈索尔统治并停止战时占据主张",
+      "note": "1784和约规定复原战争期间所争地与俘虏处置，实际军事撤离的各点需独立核对",
       "location_confidence": "proxy_region_centre",
       "historical_city_wall_survey": false,
       "screen_radius_not_ground_area": true,
@@ -2011,7 +2012,7 @@
     {
       "id": "B38-I-P033",
       "title": "1784年Mangalore交换战争俘虏与英国守军离开",
-      "kind": "displacement",
+      "kind": "diplomacy",
       "periods": [
         {
           "start_year": 1784,
@@ -2027,7 +2028,7 @@
       "source_urls": [
         "https://searcharchives.bl.uk/catalog/040-000004780"
       ],
-      "note": "条约包括释放战争俘虏，非英国新占地区",
+      "note": "英方印度事务文书列出交换战俘条款及人员名单，非新征服区域",
       "location_confidence": "proxy_region_centre",
       "historical_city_wall_survey": false,
       "screen_radius_not_ground_area": true,
