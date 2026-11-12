@@ -40,5 +40,5 @@ assert(overlap.includes("capture-transparent-overlap"));
 assert(overlap.includes("capture-transparent-single"));
 const html=read('index.html');
 for(const file of ['app.js','js/atlas-reader-copy.js','js/eighteenth-mass-spatial.js','js/eighteenth-overlap-right-dossier.js'])
- assert(html.includes(file+'?v=atlas46-click-notes-20261112'),'cache mismatch: '+file);
+ assert(html.includes(file+'?v=atlas46-click-notes-20261112')||html.includes(file+'?v=atlas47-public-copy-lock-20261112'),'cache mismatch: '+file);
 console.log('PASS atlas46: exact user waterway text removed, all seven notes filtered, history preserved, complete capture-phase hit-test and cache-busting.');

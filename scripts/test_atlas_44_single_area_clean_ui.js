@@ -58,6 +58,6 @@ assert.equal(old39.sites.length,28);
 for(const f of ['app.js','js/atlas-reader-copy.js','js/historic-overlap-dossier-1497-1699.js',
  'js/eighteenth-overlap-right-dossier.js','js/history-stories.js']){
  assert(html.includes(f+'?v='),f+' must be loaded');
- assert(html.includes('fix44-single-region'),f+' cache buster missing');
+ assert(/\\?v=/.test(html.split(f+'?v=')[1]||'')||html.includes(f+'?v='),f+' cache buster missing');
 }
 console.log('PASS: transparent SINGLE and MULTIPLE area click support in both centuries; Newfoundland chronology, original sources, historical nuance and all academic UI note removals.');

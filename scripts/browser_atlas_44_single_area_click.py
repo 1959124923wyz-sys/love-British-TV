@@ -64,6 +64,7 @@ try:
  assert not p.get('error'),p
  check(lambda _:js("return window.historicOverlapDossier.getAudit().open"))
  assert js("return window.historicOverlapDossier.getAudit().selectedCount")>=1,p
+ check(lambda _: '纽芬兰' in text())
  assert '纽芬兰' in text(),(p,text()[:1200])
  if p['hits']==1:
   assert js("return window.historicOverlapDossier.getAudit().selectedCount")==1
