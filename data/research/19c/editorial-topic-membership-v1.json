@@ -2,7 +2,7 @@
   "schema": "19c-editorial-topic-membership-v1",
   "generated_on": "2026-11-12",
   "stage": "research_only_not_for_publishing",
-  "note": "Every primary topic is assigned to exactly one editorial narrative. Keep original 1339 event nodes in child timelines. Titles, source records and full time data are in 19c local editor handoff archive. No new mapping geometry is authorized.",
+  "note": "408 raw topics are reversibly assigned; 210 story clusters after geographically specific QC. Full titles, event nodes and sources remain in the local consolidated handoff archive. Unverified geometries are not approved.",
   "input_topics": {
     "A": 101,
     "B": 125,
@@ -224,9 +224,14 @@
       ]
     },
     {
-      "id": "19c-asia-china-1898-leases",
+      "id": "19c-asia-hongkong-1899",
       "topic_ids": [
-        "A-87",
+        "A-87"
+      ]
+    },
+    {
+      "id": "19c-asia-weihaiwei-1898",
+      "topic_ids": [
         "A-95"
       ]
     },
@@ -263,9 +268,14 @@
       ]
     },
     {
-      "id": "19c-africa-bunyoro-buganda",
+      "id": "19c-africa-bunyoro",
       "topic_ids": [
-        "B-12",
+        "B-12"
+      ]
+    },
+    {
+      "id": "19c-africa-buganda",
+      "topic_ids": [
         "B-13",
         "B-14",
         "B-61"
@@ -710,11 +720,16 @@
       ]
     },
     {
-      "id": "19c-america-canada-bc-treaties",
+      "id": "19c-america-canada-bc-land",
       "topic_ids": [
         "C-81",
-        "C-82",
         "C-130"
+      ]
+    },
+    {
+      "id": "19c-america-canada-robinson-treaties",
+      "topic_ids": [
+        "C-82"
       ]
     },
     {
@@ -1456,9 +1471,9 @@
     }
   ],
   "stats": {
-    "story_count": 207,
-    "multi_topic_groups": 96,
-    "standalone_stories": 111,
+    "story_count": 210,
+    "multi_topic_groups": 95,
+    "standalone_stories": 115,
     "retained_input_topics": 408
   },
   "safeguards": [
