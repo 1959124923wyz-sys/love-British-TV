@@ -175,7 +175,7 @@
    '</section>').join('');
   return '<details class="story-chronology">'+
    '<summary>专题史事年表 · '+years.size+'个有据年份 / '+found.length+'项关联事件</summary>'+
-   '<p class="story-chronology-note">仅整理本专题已入库、可查证年份的关联事件；空白年份不代表没有历史活动。单击事件将地图切换至该年并对照位置或简介，双击查看独立档案；地图疆域始终只显示所选当年，不累计整个专题时期。</p>'+
+   '<p class="story-chronology-note">单击事件定位年份；双击打开事件档案。</p>'+
    '<div class="story-chronology-scroll">'+markup+'</div></details>';
  }
  function storyHtml(article){
