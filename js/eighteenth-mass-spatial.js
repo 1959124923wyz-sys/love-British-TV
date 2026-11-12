@@ -14,12 +14,13 @@ map.createPane(corePane);map.getPane(corePane).style.zIndex='472';
 const areaGroup=L.layerGroup().addTo(map),siteGroup=L.layerGroup().addTo(map);
 const polyRenderer=L.svg({pane:areaPane}),pointRenderer=L.svg({pane:corePane});
 let meta=null,loaded=false,error=null,year=host.getYear();
+ const reader=window.AtlasReaderCopy;
 const active=(x,y)=>x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
 const color={administration:'#a78bfa',wartime_occupation:'#e0a17c',paper_claim:'#e2ba79',
 revenue:'#dfb66c',trade_influence:'#73cbbf',military_vicinity:'#d0a8ff'};
-const classText={administration:'殖民行政涉及区',wartime_occupation:'英军短期占领中心周边示意',
+const classText={administration:'殖民行政涉及区',wartime_occupation:'英军短期占领',
 paper_claim:'法律/主权名义声索',revenue:'公司税收及财政权',trade_influence:'贸易、外交与间接影响',
-military_vicinity:'有驻军记录的周边区域概览'};
+military_vicinity:'驻军活动地区'};
 function showDossier(x,period,isSite){
  host.clearSelection();
  const urls=[...new Set(x.source_urls||[])].filter(u=>/^https:\/\//.test(u));
@@ -28,8 +29,6 @@ function showDossier(x,period,isSite){
   '<h2>'+escapeHTML(x.title)+'</h2>'+
   '<p><strong>'+escapeHTML(isSite?'地点驻军/港口核心':classText[x.kind]||x.kind)+'</strong>　阶段：'+period.start_year+'—'+period.end_year+'</p>'+
   '<p>'+escapeHTML(x.note||'')+'</p>'+
-  '<p>边界为当代编辑绘制的概略地理包络，未作十八世纪史地图配准；虚线表示边界不确定。军事驻点以屏幕像素表示，无面积单位。殖民法定管辖、驻军、贸易与当地社群政治自主状况须分开判读。</p>'+
-  '<p>此对象未核实实际占领地理外界，禁止计算平方公里和累加版图。</p>'+
   '<details open><summary>历史依据</summary><ul class="source-list">'+urls.map(u=>{
    let h=u;try{h=new URL(u).hostname}catch{}
    return '<li><a href="'+escapeHTML(u)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(h)+'</a></li>';
@@ -58,7 +57,7 @@ function render(){
    fill:!outline,fillColor:c,fillOpacity:opacity,
    interactive:true,bubblingMouseEvents:false,className:'atlas-18c-mass-zone'
   }).bindTooltip('<strong>'+escapeHTML(z.title)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(classText[z.kind]+' · '+p.start_year+'—'+p.end_year+' · 概略范围')+'</div>',
+   escapeHTML(classText[z.kind]+' · '+p.start_year+'—'+p.end_year)+'</div>',
    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);showDossier(z,p,false)})
    .addTo(areaGroup);
@@ -71,7 +70,7 @@ function render(){
    fillColor:'#9d79df',fillOpacity:.88,bubblingMouseEvents:false,
    className:'atlas-18c-mass-core'
   }).bindTooltip('<strong>'+escapeHTML(x.title)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(p.start_year+'—'+p.end_year+' · 史料支持的地点核心')+'</div>',
+   escapeHTML(p.start_year+'—'+p.end_year)+'</div>',
    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);showDossier(x,p,true)})
    .addTo(siteGroup);
