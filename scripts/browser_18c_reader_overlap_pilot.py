@@ -25,7 +25,7 @@ try:
  driver.get('http://127.0.0.1:8765/?review18c=1&reader18c=1&year=1762')
  wait.until(lambda d:audit() and audit()['ready'] and js("return document.querySelector('#jumpYear')?.max==='1799'"))
  a=audit()
- assert (a['areas'],a['legacyCores'])==(605,15),a
+ assert (a['areas'],a['archivalAreas'],a['legacyCores'])==(605,24,15),a
  assert a['activeAreas']==170,a
  assert a['legacyHidden'] and a['theme']=='control' and a['mode']=='reader',a
  assert js("return document.querySelectorAll('.atlas-18c-reader-zone').length")>0
