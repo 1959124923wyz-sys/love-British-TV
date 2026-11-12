@@ -28,7 +28,7 @@ function showDossier(x,period,isSite){
   '<div class="dossier-kicker">18世纪 · 批量动态版图 · '+year+'年</div>'+
   '<h2>'+escapeHTML(x.title)+'</h2>'+
   '<p><strong>'+escapeHTML(isSite?'地点驻军/港口核心':classText[x.kind]||x.kind)+'</strong>　阶段：'+period.start_year+'—'+period.end_year+'</p>'+
-  '<p>'+escapeHTML(x.note||'')+'</p>'+
+  (reader.clean(x.note||'')?'<p>'+escapeHTML(reader.clean(x.note))+'</p>':'')+
   '<details open><summary>历史依据</summary><ul class="source-list">'+urls.map(u=>{
    let h=u;try{h=new URL(u).hostname}catch{}
    return '<li><a href="'+escapeHTML(u)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(h)+'</a></li>';
