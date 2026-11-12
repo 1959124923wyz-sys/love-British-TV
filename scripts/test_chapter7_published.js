@@ -98,7 +98,7 @@ assert.ok(app.includes("function controllerAtYear(properties,selectedYear)")&&!a
  'Calais governance must derive from dated polygon and city records, not a hardcoded year/name recolor');
 assert.ok(app.includes('function renderSeventhControlSites()'));
 assert.ok(app.includes('sourcesById.get(id)'),'Seventh chapter bibliographies must be clickable');
-assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
+assert.ok(html.includes('max="1599"') && html.includes('1497—1799'), 'Public page metadata must cover both historical centuries while the year control keeps its default verified cap');
 const expected=[6,6,6,8,10,18,27,30,38,41];
 for(let y=1550;y<=1559;y++)assert.equal(atlas.events.filter(e=>e.year<=y).length,expected[y-1550],'year reveals future events: '+y);
 console.log('PASS seventh chapter: 29 events, 18 sites, 52 sources, 7 intact reference geometries, 9 military nodes; year-end 1558 French Calais transition and 1556 Irish plantation semantics.');
