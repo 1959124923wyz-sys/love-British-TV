@@ -47,6 +47,7 @@ A(active(city('MENORCA'),1755));A(!active(city('MENORCA'),1756));A(active(city('
 A(active(city('MENORCA'),1781));A(!active(city('MENORCA'),1782));A(active(city('MENORCA'),1798));
 A(active(city('HAVANA'),1762));A(!active(city('HAVANA'),1763));
 A(active(city('MANILA'),1763));A(!active(city('MANILA'),1764));
+A(active(city('LOUISBOURG'),1748));A(!active(city('LOUISBOURG'),1749));A(active(city('LOUISBOURG'),1758));
 A(active(city('ST_EUSTATIUS'),1781));A(!active(city('ST_EUSTATIUS'),1782));
 A(city('ST_EUSTATIUS').category.includes('年内短占'));A(city('ST_EUSTATIUS').note.includes('11月'));
 A(active(city('PENANG'),1786));A(!active(city('PENANG'),1785));

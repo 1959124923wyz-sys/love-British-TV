@@ -20,7 +20,7 @@
 |---|---|---|
 | 1704英国夺直布罗陀；1713法律割让 | 英军城堡实芯出现并继续；1713前后不同法律身份在点击文本注明 | [英国下议院外交委员会](https://publications.parliament.uk/pa/cm199899/cmselect/cmfaff/366/36604.htm) |
 | 1708英军据米诺卡、1756丧失、1763夺回、1782西班牙夺回、1798英国再占 | Mahón点在对应年份出现、消失、再出现 | [西班牙米诺卡官方资料](https://www.menorca.es/documents/documents/10047doc4.pdf)；[英国陆军博物馆](https://www.nam.ac.uk/explore/american-war-independence-key-battles) |
-| 1745–1747英国第一次占路易堡，1758再次夺城，1760后毁堡 | 仅两个有据短期驻军时期显示 | [加拿大公园局](https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/histoire-history) |
+| 1745–1748英国第一次驻路易堡（1748和约约定归还，实际1749年7月移交法国），1758再夺、1760开始拆堡 | 仅两个有据短期驻军时期显示 | [加拿大公园局](https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/histoire-history) |
 | 1746法军夺马德拉斯；1756孟加拉纳瓦卜夺加尔各答堡；1749与1757英方分别恢复 | 公司贸易据点参考区相应年份消失，不连续填色 | [英国议会东印度公司研究](https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/)及本项目孟加拉连续专题 |
 | 1759/1760魁北克、蒙特利尔英军夺城 | 仅城市核心持续出现，**没有**扩画整个加拿大和Mi’kma’ki | [加拿大公园局](https://parks.canada.ca/lhn-nhs/qc/saintlouisforts/culture/histoire-history/natcul1) |
 | **1762哈瓦那英军夺城→1763归还**；**1762马尼拉英军夺城→1764撤离** | 两个实色港口占驻标志精确出现和撤退 | [National Army Museum 哈瓦那](https://collection.nam.ac.uk/detail.php?acc=1952-07-30-1)；[美国国会图书馆1762原件地图](https://www.loc.gov/item/75692515/) |
