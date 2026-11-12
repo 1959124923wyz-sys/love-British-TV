@@ -1,0 +1,6068 @@
+{
+  "schema": "atlas-18c-batch36-frontiers-mysore-atlantic-v1",
+  "editorial_status": "research_preview_not_published",
+  "year_range": [
+    1700,
+    1799
+  ],
+  "based_on": "PR #329 + PR #330; all upstream areas remain as separate unchanged modules",
+  "semantic_policy": "Approximate regional bboxes locate dated military posts, battles, war impact, fiscal rights, colonial bureaucracy, Indigenous and Maroon autonomy. Borders are editorial graphics; never accurate 18c political maps; no ground area aggregation.",
+  "area_sqkm_totals": null,
+  "area_aggregation_forbidden": true,
+  "approved_actual_control_polygons": 0,
+  "source_register": {
+    "ACADIA": "https://acadien.novascotia.ca/en/timeline",
+    "CAN": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/",
+    "PROCLAMATION": "https://rcaanc.gc.ca/eng/1370355181092/1607905122267",
+    "STANWIX": "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm",
+    "STANWIX_POST": "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm",
+    "PONTIAC": "https://history.state.gov/milestones/1750-1775/proclamation-line-1763",
+    "MACK": "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/",
+    "NIAGARA": "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george",
+    "TRADE": "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm",
+    "DISMAL": "https://www.nps.gov/articles/000/tom-copper-and-great-dismal.htm",
+    "WAR": "https://home.nps.gov/subjects/americanrevolution/timeline.htm",
+    "SOUTH": "https://home.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm",
+    "YORK": "https://home.nps.gov/york/learn/historyculture/eventstoyorktown.htm",
+    "NEWPORT": "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D",
+    "EIC": "https://www.nam.ac.uk/explore/armies-east-india-company",
+    "MYSORE": "https://www.nam.ac.uk/explore/tipu-sultans-war-turban",
+    "MYSORE1782": "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot",
+    "MYSORE1792": "https://searcharchives.bl.uk/catalog/040-000564194",
+    "ACQUISITIONS": "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf",
+    "MADRAS": "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf",
+    "JAMAICA": "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf",
+    "MAROON": "https://www.jnht.gov.jm/special_communities.php",
+    "ACCOMPONG": "https://www.jnht.gov.jm/site_accompong.php",
+    "NANNY": "https://jis.gov.jm/information/heroes/nanny-of-the-maroons/",
+    "FEDON": "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC",
+    "HAITI": "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358",
+    "CARIBBEAN": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/",
+    "PARIS1763": "https://avalon.law.yale.edu/18th_century/paris763.asp",
+    "PARIS1783": "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+  },
+  "category_notes": {
+    "administration": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+    "military": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+    "displacement": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土",
+    "resistance": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+    "paper_claim": "法律、条约及公司名义声索示意，不计算占领面积",
+    "diplomacy": "条约协商及外交接触位置，参与方各自具有政治自主性",
+    "trade_influence": "跨区域商贸往来或间接影响，不代表英国军政占领",
+    "battle": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+    "revenue": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+    "coercion": "公司财产强制、官员拘捕等暴力手段的受害地点，不代表英国新扩张地块",
+    "foreign_occupation": "英军失去控制而由他国军队占领的地理事实"
+  },
+  "zones": [
+    {
+      "id": "B36-Z001",
+      "title": "1713后安纳波利斯罗亚尔英驻军港区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -65.63,
+        44.6,
+        -65.34,
+        44.85
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z002",
+      "title": "1749后哈利法克斯海军与军事港口",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -63.78,
+        44.5,
+        -63.42,
+        44.82
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z003",
+      "title": "1755年博塞茹尔堡英军攻占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -64.36,
+        45.76,
+        -64.19,
+        45.91
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z004",
+      "title": "1755大普雷阿卡迪亚人被强制驱逐",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        -64.43,
+        45.05,
+        -64.22,
+        45.17
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z005",
+      "title": "1755奇格内克托半岛驱逐阿卡迪亚人",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        -64.5,
+        45.63,
+        -64,
+        46
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z006",
+      "title": "1755阿纳波利斯河谷强制驱逐区",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        -65.6,
+        44.63,
+        -64.3,
+        45.2
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": false,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z007",
+      "title": "1755米纳斯湾岸强制迁移影响区",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        -64.7,
+        44.92,
+        -63.5,
+        45.56
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": false,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z008",
+      "title": "1745、1758两次路易堡英军夺占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1745,
+          "end_year": 1748
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1760
+        }
+      ],
+      "bbox": [
+        -60.13,
+        45.85,
+        -59.89,
+        46.06
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z009",
+      "title": "1750年后新斯科舍Fort Edward军事核心",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -64.2,
+        44.94,
+        -63.95,
+        45.06
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z010",
+      "title": "1750年代达特茅斯殖民港市",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -63.62,
+        44.65,
+        -63.51,
+        44.74
+      ],
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z011",
+      "title": "18世纪大阴郁沼泽逃奴与原住民避难社区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -76.67,
+        36.36,
+        -76.14,
+        36.88
+      ],
+      "source_key": "DISMAL",
+      "source_urls": [
+        "https://www.nps.gov/articles/000/tom-copper-and-great-dismal.htm"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z012",
+      "title": "1760年后底特律英国军事堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -83.2,
+        42.2,
+        -82.9,
+        42.47
+      ],
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z013",
+      "title": "1763年底特律原住民围困英军",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1765
+        }
+      ],
+      "bbox": [
+        -83.32,
+        42.02,
+        -82.66,
+        42.71
+      ],
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z014",
+      "title": "1761年后米希利麦基诺克英国旧要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        -84.83,
+        45.7,
+        -84.6,
+        45.89
+      ],
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z015",
+      "title": "1763年原住民夺取米希利麦基诺克堡",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        -84.83,
+        45.7,
+        -84.6,
+        45.89
+      ],
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z016",
+      "title": "1781年麦基诺岛英国新要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -84.66,
+        45.82,
+        -84.54,
+        45.88
+      ],
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z017",
+      "title": "1759—1795英国尼亚加拉堡驻军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -79.13,
+        43.22,
+        -79.02,
+        43.3
+      ],
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z018",
+      "title": "1760—1795安大略湖奥斯威戈英国驻军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -76.57,
+        43.43,
+        -76.44,
+        43.52
+      ],
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z019",
+      "title": "1763年匹兹堡英军守堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -80.07,
+        40.39,
+        -79.91,
+        40.48
+      ],
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z020",
+      "title": "1763—1766俄亥俄河谷原住民反英联盟影响带",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1766
+        }
+      ],
+      "bbox": [
+        -84.8,
+        38.4,
+        -79,
+        42.4
+      ],
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z021",
+      "title": "1763—1766莫米河原住民反殖民战事区域",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1766
+        }
+      ],
+      "bbox": [
+        -85,
+        40.9,
+        -82.4,
+        42.3
+      ],
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z022",
+      "title": "1763—1766伊利湖原住民反英战事带",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1766
+        }
+      ],
+      "bbox": [
+        -83.6,
+        41.1,
+        -78.7,
+        43
+      ],
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z023",
+      "title": "1763皇家公告阿巴拉契亚北部禁垦政策带",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -81.9,
+        39.1,
+        -76.9,
+        43
+      ],
+      "source_key": "PROCLAMATION",
+      "source_urls": [
+        "https://rcaanc.gc.ca/eng/1370355181092/1607905122267"
+      ],
+      "marker": false,
+      "note": "法律、条约及公司名义声索示意，不计算占领面积",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z024",
+      "title": "1763皇家公告阿巴拉契亚南部禁垦政策带",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -85.8,
+        34.1,
+        -79.3,
+        39.4
+      ],
+      "source_key": "PROCLAMATION",
+      "source_urls": [
+        "https://rcaanc.gc.ca/eng/1370355181092/1607905122267"
+      ],
+      "marker": false,
+      "note": "法律、条约及公司名义声索示意，不计算占领面积",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z025",
+      "title": "1768斯坦威克斯堡边界条约纽约周边",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -78.9,
+        41.8,
+        -74.9,
+        43.9
+      ],
+      "source_key": "STANWIX",
+      "source_urls": [
+        "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm"
+      ],
+      "marker": false,
+      "note": "法律、条约及公司名义声索示意，不计算占领面积",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z026",
+      "title": "1768斯坦威克斯堡条约俄亥俄—卡纳瓦",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -83.5,
+        37.5,
+        -79.1,
+        40.7
+      ],
+      "source_key": "STANWIX",
+      "source_urls": [
+        "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm"
+      ],
+      "marker": false,
+      "note": "法律、条约及公司名义声索示意，不计算占领面积",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z027",
+      "title": "1768斯坦威克斯堡原住民与英方会盟地点",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1768
+        }
+      ],
+      "bbox": [
+        -75.5,
+        43.16,
+        -75.39,
+        43.25
+      ],
+      "source_key": "STANWIX_POST",
+      "source_urls": [
+        "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm"
+      ],
+      "marker": true,
+      "note": "条约协商及外交接触位置，参与方各自具有政治自主性",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z028",
+      "title": "1767后密西西比上游英商毛皮贸易网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -93.9,
+        43.5,
+        -90,
+        47
+      ],
+      "source_key": "TRADE",
+      "source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "marker": false,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z029",
+      "title": "1767后草原之犬原住民—欧洲毛皮贸易点",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -91.26,
+        42.91,
+        -90.94,
+        43.09
+      ],
+      "source_key": "TRADE",
+      "source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "marker": true,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z030",
+      "title": "1763后休伦湖毛皮交易联系带",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -84.8,
+        43,
+        -80.6,
+        46.1
+      ],
+      "source_key": "TRADE",
+      "source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "marker": false,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z031",
+      "title": "1763后渥太华河商旅联系带",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -79.2,
+        44.4,
+        -75.2,
+        47.3
+      ],
+      "source_key": "TRADE",
+      "source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "marker": false,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z032",
+      "title": "1763后圣劳伦斯河三河市殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -72.7,
+        46.2,
+        -72.48,
+        46.44
+      ],
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z033",
+      "title": "1763后拉欣港口毛皮商站往来",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -73.73,
+        45.37,
+        -73.57,
+        45.48
+      ],
+      "source_key": "TRADE",
+      "source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "marker": true,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z034",
+      "title": "1784后新不伦瑞克弗雷德里克顿殖民行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -66.74,
+        45.86,
+        -66.54,
+        46.04
+      ],
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z035",
+      "title": "1783后谢尔本保皇派移民定居港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -65.41,
+        43.66,
+        -65.2,
+        43.82
+      ],
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z036",
+      "title": "1783后迪格比保皇派定居港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -65.92,
+        44.55,
+        -65.64,
+        44.72
+      ],
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z037",
+      "title": "1796英军交还尼亚加拉堡后在加拿大一侧筑防",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -79.12,
+        43.19,
+        -79.02,
+        43.29
+      ],
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z038",
+      "title": "1776—1783斯塔滕岛英军后勤与驻扎区",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -74.27,
+        40.47,
+        -74.05,
+        40.67
+      ],
+      "source_key": "NEWPORT",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z039",
+      "title": "1776后曼哈顿北部Washington要塞英军驻守",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -73.97,
+        40.83,
+        -73.9,
+        40.89
+      ],
+      "source_key": "NEWPORT",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z040",
+      "title": "1781约克镇英军投降与法美围攻",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -76.6,
+        37.15,
+        -76.43,
+        37.31
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://home.nps.gov/york/learn/historyculture/eventstoyorktown.htm"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z041",
+      "title": "1780卡姆登英国军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        -80.75,
+        34.11,
+        -80.44,
+        34.36
+      ],
+      "source_key": "SOUTH",
+      "source_urls": [
+        "https://home.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z042",
+      "title": "1777萨拉托加英国军队战败区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "bbox": [
+        -73.83,
+        42.9,
+        -73.48,
+        43.16
+      ],
+      "source_key": "WAR",
+      "source_urls": [
+        "https://home.nps.gov/subjects/americanrevolution/timeline.htm"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z043",
+      "title": "1777布兰迪万河英国军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "bbox": [
+        -75.75,
+        39.78,
+        -75.45,
+        40.01
+      ],
+      "source_key": "WAR",
+      "source_urls": [
+        "https://home.nps.gov/subjects/americanrevolution/timeline.htm"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z044",
+      "title": "1777斯坦威克斯堡英军围攻失利",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "bbox": [
+        -75.55,
+        43.13,
+        -75.34,
+        43.28
+      ],
+      "source_key": "STANWIX_POST",
+      "source_urls": [
+        "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z045",
+      "title": "1781彭萨科拉英军被西班牙军攻陷",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -87.33,
+        30.3,
+        -87.13,
+        30.52
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z046",
+      "title": "1763后圣奥古斯丁英国东佛罗里达港口",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -81.36,
+        29.83,
+        -81.24,
+        29.97
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z047",
+      "title": "1784后莫霍克社群迁往加拿大大河流域",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -80.4,
+        42.75,
+        -79.6,
+        43.35
+      ],
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z048",
+      "title": "1757后加尔各答威廉堡公司军政据点",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.26,
+        22.47,
+        88.41,
+        22.61
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z049",
+      "title": "1757后穆尔希达巴德纳瓦卜与公司政治干预",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.16,
+        24.1,
+        88.41,
+        24.3
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z050",
+      "title": "1757普拉西战役公司军队胜利",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "bbox": [
+        88.15,
+        23.68,
+        88.45,
+        23.87
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z051",
+      "title": "1764布克萨尔战役公司战胜莫卧儿联军",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1764
+        }
+      ],
+      "bbox": [
+        83.86,
+        25.49,
+        84.12,
+        25.65
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z052",
+      "title": "1760万迪瓦什英法军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "bbox": [
+        79.5,
+        12.41,
+        79.75,
+        12.63
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z053",
+      "title": "1761英军围攻法属本地治里",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1761
+        }
+      ],
+      "bbox": [
+        79.73,
+        11.81,
+        79.96,
+        12.08
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z054",
+      "title": "1780波利卢尔迈索尔军队重创英军",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        79.52,
+        12.74,
+        79.79,
+        12.94
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z055",
+      "title": "1781波尔图诺伏英迈军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        79.69,
+        11.45,
+        79.91,
+        11.65
+      ],
+      "source_key": "MYSORE1782",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z056",
+      "title": "1782波纳尼英迈战争海岸防卫",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        75.84,
+        10.69,
+        76.05,
+        10.89
+      ],
+      "source_key": "MYSORE1782",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z057",
+      "title": "1792斯里兰加帕特南被围及割让条约",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792
+        }
+      ],
+      "bbox": [
+        76.58,
+        12.34,
+        76.79,
+        12.53
+      ],
+      "source_key": "MYSORE1792",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z058",
+      "title": "1799斯里兰加帕特南攻陷及战利品掠夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.6,
+        12.36,
+        76.78,
+        12.51
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z059",
+      "title": "1765后伯德万地区东印度公司地税权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        87.6,
+        22.9,
+        88.3,
+        23.75
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z060",
+      "title": "1765后胡格利地区东印度公司地税权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        87.86,
+        22.65,
+        88.7,
+        23.27
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z061",
+      "title": "1765后纳迪亚地区公司财政影响",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.2,
+        23,
+        89.08,
+        24.17
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z062",
+      "title": "1765后杰索尔地区公司财政影响",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.75,
+        22.8,
+        89.78,
+        23.49
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z063",
+      "title": "1765后达卡地区公司财政影响",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        90,
+        23.3,
+        90.95,
+        24.2
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z064",
+      "title": "1765后迈门辛地区公司财政权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        89.5,
+        24.05,
+        90.9,
+        25.5
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z065",
+      "title": "1765后拉杰沙希地区公司财政权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.1,
+        24,
+        89.4,
+        25.17
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z066",
+      "title": "1765后朗布尔地区公司财政权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.5,
+        25.5,
+        89.85,
+        26.65
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z067",
+      "title": "1765后巴特那地区公司地税权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        84.83,
+        25.36,
+        85.45,
+        25.85
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z068",
+      "title": "1765后伽耶地区公司财政影响",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        84.65,
+        24.33,
+        85.35,
+        25.15
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z069",
+      "title": "1765后蒂尔胡特地区公司财政权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        85.15,
+        25.75,
+        86.35,
+        26.8
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z070",
+      "title": "1765后普尔尼亚地区公司财政权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        86.7,
+        25.3,
+        88.25,
+        26.7
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z071",
+      "title": "1765后巴加尔布尔地区公司财政权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        86.45,
+        24.72,
+        87.65,
+        25.76
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z072",
+      "title": "1765后沙哈巴德地区公司财政权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        83.3,
+        24.7,
+        84.57,
+        25.65
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z073",
+      "title": "1765年奥里萨巴拉索尔名义Diwani授予",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        86.6,
+        20.9,
+        87.5,
+        21.8
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "法律、条约及公司名义声索示意，不计算占领面积",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z074",
+      "title": "1765年奥里萨克塔克名义Diwani授予",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        85.4,
+        20.05,
+        86.42,
+        20.95
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "法律、条约及公司名义声索示意，不计算占领面积",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z075",
+      "title": "1766后北萨卡尔维沙卡帕特南税政介入",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        83.05,
+        17.43,
+        83.6,
+        18.1
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z076",
+      "title": "1766后北萨卡尔斯里卡库拉姆财政介入",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        83.55,
+        18.2,
+        84.25,
+        19
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z077",
+      "title": "1766后北萨卡尔拉贾蒙德里财政介入",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        81.45,
+        16.85,
+        82.25,
+        17.65
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z078",
+      "title": "1766后北萨卡尔埃卢鲁财政介入",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        81,
+        16.45,
+        81.56,
+        17.02
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z079",
+      "title": "1788后北萨卡尔贡土尔公司财政辖区",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.88,
+        15.9,
+        80.84,
+        16.65
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z080",
+      "title": "1775后贝拿勒斯地区公司Zamindari税务干预",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        82.6,
+        24.95,
+        83.6,
+        25.62
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": false,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z081",
+      "title": "1781—1782法扎巴德Begam财产强夺",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        82.07,
+        26.65,
+        82.27,
+        26.88
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "公司财产强制、官员拘捕等暴力手段的受害地点，不代表英国新扩张地块",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z082",
+      "title": "1792后马拉巴尔卡利卡特割让地区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.5,
+        11,
+        76.15,
+        11.6
+      ],
+      "source_key": "MYSORE1792",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z083",
+      "title": "1792后马拉巴尔坎纳诺尔公司辖区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.17,
+        11.65,
+        75.64,
+        12.15
+      ],
+      "source_key": "MYSORE1792",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z084",
+      "title": "1792后马拉巴尔帕拉卡德地区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.33,
+        10.6,
+        77,
+        11.2
+      ],
+      "source_key": "MYSORE1792",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "marker": false,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z085",
+      "title": "1792迈索尔割让丁迪古尔",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        77.8,
+        10.15,
+        78.25,
+        10.6
+      ],
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z086",
+      "title": "1792迈索尔割让巴拉马哈尔塞勒姆",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        77.7,
+        11.6,
+        78.55,
+        12
+      ],
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z087",
+      "title": "1792迈索尔割让达尔马普里附近巴拉马哈尔",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        77.55,
+        11.9,
+        78.45,
+        12.65
+      ],
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "marker": false,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z088",
+      "title": "1792后库格王公与公司附属贡赋关系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.42,
+        12.1,
+        76.35,
+        12.74
+      ],
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "marker": true,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z089",
+      "title": "1799迈索尔战后哥印拜陀划归公司",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.75,
+        10.72,
+        77.28,
+        11.33
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z090",
+      "title": "1799迈索尔战后南卡纳拉沿海易手",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        74.7,
+        12.3,
+        75.8,
+        13.65
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z091",
+      "title": "1799迈索尔战后北卡纳拉沿海易手",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        74,
+        13.45,
+        75.4,
+        15.5
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": false,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z092",
+      "title": "1799怀纳德地区迈索尔战后划转",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.6,
+        11.4,
+        76.65,
+        12.2
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": false,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z093",
+      "title": "1799尼尔吉里山地条约辖区变化",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.45,
+        11.1,
+        77.12,
+        11.66
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": false,
+      "note": "法律、条约及公司名义声索示意，不计算占领面积",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z094",
+      "title": "1799坦贾武尔地区公司财政和统治权增强",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        78.68,
+        10.48,
+        79.36,
+        11.2
+      ],
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "marker": true,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z095",
+      "title": "1781英军夺取荷兰纳加帕蒂南港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.76,
+        10.73,
+        79.95,
+        10.83
+      ],
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z096",
+      "title": "18世纪特利切里英公司沿海商馆",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.43,
+        11.71,
+        75.6,
+        11.83
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z097",
+      "title": "18世纪安詹戈英公司沿海商馆",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.72,
+        8.6,
+        76.87,
+        8.78
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z098",
+      "title": "18世纪古德洛尔圣大卫堡商港与法英易手",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1757
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.7,
+        11.65,
+        79.92,
+        11.84
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z099",
+      "title": "1720—1739南妮镇东部马龙武装抵抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1720,
+          "end_year": 1739
+        }
+      ],
+      "bbox": [
+        -76.72,
+        18.05,
+        -76.49,
+        18.24
+      ],
+      "source_key": "NANNY",
+      "source_urls": [
+        "https://jis.gov.jm/information/heroes/nanny-of-the-maroons/"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z100",
+      "title": "1739后阿康蓬马龙条约自治土地",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1739,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -77.84,
+        18.1,
+        -77.64,
+        18.32
+      ],
+      "source_key": "ACCOMPONG",
+      "source_urls": [
+        "https://www.jnht.gov.jm/site_accompong.php"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z101",
+      "title": "1740后摩尔镇东部马龙自治社区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1740,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -76.5,
+        18,
+        -76.35,
+        18.17
+      ],
+      "source_key": "MAROON",
+      "source_urls": [
+        "https://www.jnht.gov.jm/special_communities.php"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z102",
+      "title": "1754后查尔斯镇马龙独立社区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1754,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -76.45,
+        18.08,
+        -76.31,
+        18.22
+      ],
+      "source_key": "MAROON",
+      "source_urls": [
+        "https://www.jnht.gov.jm/special_communities.php"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z103",
+      "title": "1730—1739牙买加第一次马龙战争山地",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1739
+        }
+      ],
+      "bbox": [
+        -77.9,
+        17.93,
+        -76.3,
+        18.42
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z104",
+      "title": "1795—1796特里劳尼镇第二次马龙战争",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -77.78,
+        18.25,
+        -77.47,
+        18.51
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z105",
+      "title": "1795—1796鸡笼山地马龙抵抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -77.9,
+        18.25,
+        -77.48,
+        18.51
+      ],
+      "source_key": "MAROON",
+      "source_urls": [
+        "https://www.jnht.gov.jm/special_communities.php"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z106",
+      "title": "1760圣玛丽教区塔基起义",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "bbox": [
+        -77.15,
+        18.18,
+        -76.84,
+        18.47
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z107",
+      "title": "1765圣玛丽教区科罗曼提起义",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1765
+        }
+      ],
+      "bbox": [
+        -77.15,
+        18.18,
+        -76.84,
+        18.47
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z108",
+      "title": "1766西摩兰被奴役者反抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1766
+        }
+      ],
+      "bbox": [
+        -78.35,
+        17.84,
+        -77.9,
+        18.25
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z109",
+      "title": "1776汉诺威教区被奴役者反抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776
+        }
+      ],
+      "bbox": [
+        -78.35,
+        18.27,
+        -77.75,
+        18.54
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z110",
+      "title": "1791—1792海地革命影响下牙买加广域奴隶制动荡",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1792
+        }
+      ],
+      "bbox": [
+        -78.2,
+        17.8,
+        -76.35,
+        18.54
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z111",
+      "title": "1795—1796格林纳达费东起义山区营地",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.79,
+        12.09,
+        -61.52,
+        12.32
+      ],
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "marker": true,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z112",
+      "title": "1795格林纳达格伦维尔起义战斗",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -61.69,
+        12.07,
+        -61.57,
+        12.18
+      ],
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z113",
+      "title": "1795—1796英殖民政府被迫缩守圣乔治港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.79,
+        11.99,
+        -61.68,
+        12.1
+      ],
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z114",
+      "title": "1795—1796费东起义高地战事",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.77,
+        12.12,
+        -61.57,
+        12.27
+      ],
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z115",
+      "title": "1793—1797英军热雷米海港占据",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -74.14,
+        18.54,
+        -73.92,
+        18.77
+      ],
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z116",
+      "title": "1793—1797英军圣尼古拉斯角驻军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -73.52,
+        19.66,
+        -73.24,
+        19.86
+      ],
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z117",
+      "title": "1794—1797英军太子港占据",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -72.45,
+        18.43,
+        -72.16,
+        18.65
+      ],
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z118",
+      "title": "1793—1797英国与保王派在海地西岸战争影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -74.6,
+        18.12,
+        -72.1,
+        19.95
+      ],
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "marker": false,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z119",
+      "title": "1781圣尤斯特歇斯Oranjestad英军抄没商产",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -62.99,
+        17.47,
+        -62.95,
+        17.52
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z120",
+      "title": "1781圣尤斯特歇斯港湾英军短期控制",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -62.99,
+        17.46,
+        -62.94,
+        17.52
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "marker": true,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z121",
+      "title": "1763—1797圣文森特加里富纳人政治抵抗区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -61.34,
+        13.11,
+        -61.08,
+        13.42
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z122",
+      "title": "1797年巴利索岛加里富纳人强制关押转运",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -61.15,
+        12.99,
+        -61.1,
+        13.05
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "marker": true,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z123",
+      "title": "1763后多米尼克卡利纳戈社群生活区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.31,
+        15.36,
+        -61.22,
+        15.56
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "marker": false,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z124",
+      "title": "1796年圣卢西亚英法军队争夺战场",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.06,
+        13.81,
+        -60.94,
+        14.09
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "marker": true,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z125",
+      "title": "1782年巴哈马拿骚被西班牙军占领",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -77.5,
+        25.02,
+        -77.28,
+        25.13
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "marker": true,
+      "note": "英军失去控制而由他国军队占领的地理事实",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z126",
+      "title": "18世纪牙买加罗亚尔港英国海军驻地",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -76.86,
+        17.91,
+        -76.75,
+        18
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z127",
+      "title": "18世纪牙买加西班牙镇殖民行政中心",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -77.11,
+        17.97,
+        -76.99,
+        18.06
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z128",
+      "title": "18世纪牙买加金斯敦英国殖民商港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -76.88,
+        17.93,
+        -76.72,
+        18.08
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z129",
+      "title": "18世纪牙买加蒙特哥贝糖业外贸港",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -77.99,
+        18.41,
+        -77.84,
+        18.52
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "marker": true,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B36-Z130",
+      "title": "1763—1778及1783后格林纳达圣乔治殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.79,
+        11.99,
+        -61.66,
+        12.12
+      ],
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "marker": true,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同",
+      "geometry_precision": "unsurveyed_editorial_reference_rectangle",
+      "boundary_confidence": "schematic",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    }
+  ],
+  "sites": [
+    {
+      "id": "B36-P001",
+      "title": "1713后安纳波利斯罗亚尔英驻军港区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -65.485,
+        44.725
+      ],
+      "linked_zone_id": "B36-Z001",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P002",
+      "title": "1749后哈利法克斯海军与军事港口",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -63.6,
+        44.66
+      ],
+      "linked_zone_id": "B36-Z002",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P003",
+      "title": "1755年博塞茹尔堡英军攻占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -64.275,
+        45.834999999999994
+      ],
+      "linked_zone_id": "B36-Z003",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P004",
+      "title": "1755大普雷阿卡迪亚人被强制驱逐",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        -64.325,
+        45.11
+      ],
+      "linked_zone_id": "B36-Z004",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土"
+    },
+    {
+      "id": "B36-P005",
+      "title": "1755奇格内克托半岛驱逐阿卡迪亚人",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        -64.25,
+        45.815
+      ],
+      "linked_zone_id": "B36-Z005",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土"
+    },
+    {
+      "id": "B36-P008",
+      "title": "1745、1758两次路易堡英军夺占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1745,
+          "end_year": 1748
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1760
+        }
+      ],
+      "coordinates": [
+        -60.010000000000005,
+        45.955
+      ],
+      "linked_zone_id": "B36-Z008",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P009",
+      "title": "1750年后新斯科舍Fort Edward军事核心",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -64.075,
+        45
+      ],
+      "linked_zone_id": "B36-Z009",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P010",
+      "title": "1750年代达特茅斯殖民港市",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -63.565,
+        44.695
+      ],
+      "linked_zone_id": "B36-Z010",
+      "source_key": "ACADIA",
+      "source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P012",
+      "title": "1760年后底特律英国军事堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -83.05000000000001,
+        42.335
+      ],
+      "linked_zone_id": "B36-Z012",
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P013",
+      "title": "1763年底特律原住民围困英军",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1765
+        }
+      ],
+      "coordinates": [
+        -82.99,
+        42.365
+      ],
+      "linked_zone_id": "B36-Z013",
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P014",
+      "title": "1761年后米希利麦基诺克英国旧要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        -84.715,
+        45.795
+      ],
+      "linked_zone_id": "B36-Z014",
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P015",
+      "title": "1763年原住民夺取米希利麦基诺克堡",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        -84.715,
+        45.795
+      ],
+      "linked_zone_id": "B36-Z015",
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P016",
+      "title": "1781年麦基诺岛英国新要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -84.6,
+        45.85
+      ],
+      "linked_zone_id": "B36-Z016",
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P017",
+      "title": "1759—1795英国尼亚加拉堡驻军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -79.07499999999999,
+        43.26
+      ],
+      "linked_zone_id": "B36-Z017",
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P018",
+      "title": "1760—1795安大略湖奥斯威戈英国驻军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -76.505,
+        43.475
+      ],
+      "linked_zone_id": "B36-Z018",
+      "source_key": "MACK",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/99c4e6c6-d262-44b5-a1d6-0e3550d23109/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P019",
+      "title": "1763年匹兹堡英军守堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1775
+        }
+      ],
+      "coordinates": [
+        -79.99,
+        40.435
+      ],
+      "linked_zone_id": "B36-Z019",
+      "source_key": "PONTIAC",
+      "source_urls": [
+        "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P027",
+      "title": "1768斯坦威克斯堡原住民与英方会盟地点",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1768
+        }
+      ],
+      "coordinates": [
+        -75.445,
+        43.205
+      ],
+      "linked_zone_id": "B36-Z027",
+      "source_key": "STANWIX_POST",
+      "source_urls": [
+        "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "条约协商及外交接触位置，参与方各自具有政治自主性"
+    },
+    {
+      "id": "B36-P029",
+      "title": "1767后草原之犬原住民—欧洲毛皮贸易点",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -91.1,
+        43
+      ],
+      "linked_zone_id": "B36-Z029",
+      "source_key": "TRADE",
+      "source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领"
+    },
+    {
+      "id": "B36-P032",
+      "title": "1763后圣劳伦斯河三河市殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -72.59,
+        46.32
+      ],
+      "linked_zone_id": "B36-Z032",
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P033",
+      "title": "1763后拉欣港口毛皮商站往来",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -73.65,
+        45.425
+      ],
+      "linked_zone_id": "B36-Z033",
+      "source_key": "TRADE",
+      "source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领"
+    },
+    {
+      "id": "B36-P034",
+      "title": "1784后新不伦瑞克弗雷德里克顿殖民行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -66.64,
+        45.95
+      ],
+      "linked_zone_id": "B36-Z034",
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P035",
+      "title": "1783后谢尔本保皇派移民定居港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -65.305,
+        43.739999999999995
+      ],
+      "linked_zone_id": "B36-Z035",
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P036",
+      "title": "1783后迪格比保皇派定居港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -65.78,
+        44.635
+      ],
+      "linked_zone_id": "B36-Z036",
+      "source_key": "CAN",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P037",
+      "title": "1796英军交还尼亚加拉堡后在加拿大一侧筑防",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -79.07,
+        43.239999999999995
+      ],
+      "linked_zone_id": "B36-Z037",
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P038",
+      "title": "1776—1783斯塔滕岛英军后勤与驻扎区",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -74.16,
+        40.57
+      ],
+      "linked_zone_id": "B36-Z038",
+      "source_key": "NEWPORT",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P039",
+      "title": "1776后曼哈顿北部Washington要塞英军驻守",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -73.935,
+        40.86
+      ],
+      "linked_zone_id": "B36-Z039",
+      "source_key": "NEWPORT",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P040",
+      "title": "1781约克镇英军投降与法美围攻",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -76.515,
+        37.230000000000004
+      ],
+      "linked_zone_id": "B36-Z040",
+      "source_key": "YORK",
+      "source_urls": [
+        "https://home.nps.gov/york/learn/historyculture/eventstoyorktown.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P041",
+      "title": "1780卡姆登英国军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        -80.595,
+        34.235
+      ],
+      "linked_zone_id": "B36-Z041",
+      "source_key": "SOUTH",
+      "source_urls": [
+        "https://home.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P042",
+      "title": "1777萨拉托加英国军队战败区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "coordinates": [
+        -73.655,
+        43.03
+      ],
+      "linked_zone_id": "B36-Z042",
+      "source_key": "WAR",
+      "source_urls": [
+        "https://home.nps.gov/subjects/americanrevolution/timeline.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P043",
+      "title": "1777布兰迪万河英国军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "coordinates": [
+        -75.6,
+        39.894999999999996
+      ],
+      "linked_zone_id": "B36-Z043",
+      "source_key": "WAR",
+      "source_urls": [
+        "https://home.nps.gov/subjects/americanrevolution/timeline.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P044",
+      "title": "1777斯坦威克斯堡英军围攻失利",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "coordinates": [
+        -75.445,
+        43.205
+      ],
+      "linked_zone_id": "B36-Z044",
+      "source_key": "STANWIX_POST",
+      "source_urls": [
+        "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P045",
+      "title": "1781彭萨科拉英军被西班牙军攻陷",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -87.22999999999999,
+        30.41
+      ],
+      "linked_zone_id": "B36-Z045",
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P046",
+      "title": "1763后圣奥古斯丁英国东佛罗里达港口",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -81.3,
+        29.9
+      ],
+      "linked_zone_id": "B36-Z046",
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P048",
+      "title": "1757后加尔各答威廉堡公司军政据点",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.33500000000001,
+        22.54
+      ],
+      "linked_zone_id": "B36-Z048",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P049",
+      "title": "1757后穆尔希达巴德纳瓦卜与公司政治干预",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.285,
+        24.200000000000003
+      ],
+      "linked_zone_id": "B36-Z049",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领"
+    },
+    {
+      "id": "B36-P050",
+      "title": "1757普拉西战役公司军队胜利",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "coordinates": [
+        88.30000000000001,
+        23.775
+      ],
+      "linked_zone_id": "B36-Z050",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P051",
+      "title": "1764布克萨尔战役公司战胜莫卧儿联军",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1764
+        }
+      ],
+      "coordinates": [
+        83.99000000000001,
+        25.57
+      ],
+      "linked_zone_id": "B36-Z051",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P052",
+      "title": "1760万迪瓦什英法军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "coordinates": [
+        79.625,
+        12.52
+      ],
+      "linked_zone_id": "B36-Z052",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P053",
+      "title": "1761英军围攻法属本地治里",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1761
+        }
+      ],
+      "coordinates": [
+        79.845,
+        11.945
+      ],
+      "linked_zone_id": "B36-Z053",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P054",
+      "title": "1780波利卢尔迈索尔军队重创英军",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        79.655,
+        12.84
+      ],
+      "linked_zone_id": "B36-Z054",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P055",
+      "title": "1781波尔图诺伏英迈军队战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        79.8,
+        11.55
+      ],
+      "linked_zone_id": "B36-Z055",
+      "source_key": "MYSORE1782",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P056",
+      "title": "1782波纳尼英迈战争海岸防卫",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        75.945,
+        10.79
+      ],
+      "linked_zone_id": "B36-Z056",
+      "source_key": "MYSORE1782",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P057",
+      "title": "1792斯里兰加帕特南被围及割让条约",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792
+        }
+      ],
+      "coordinates": [
+        76.685,
+        12.434999999999999
+      ],
+      "linked_zone_id": "B36-Z057",
+      "source_key": "MYSORE1792",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P058",
+      "title": "1799斯里兰加帕特南攻陷及战利品掠夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        76.69,
+        12.434999999999999
+      ],
+      "linked_zone_id": "B36-Z058",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P067",
+      "title": "1765后巴特那地区公司地税权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        85.14,
+        25.605
+      ],
+      "linked_zone_id": "B36-Z067",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同"
+    },
+    {
+      "id": "B36-P081",
+      "title": "1781—1782法扎巴德Begam财产强夺",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        82.16999999999999,
+        26.765
+      ],
+      "linked_zone_id": "B36-Z081",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "公司财产强制、官员拘捕等暴力手段的受害地点，不代表英国新扩张地块"
+    },
+    {
+      "id": "B36-P082",
+      "title": "1792后马拉巴尔卡利卡特割让地区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.825,
+        11.3
+      ],
+      "linked_zone_id": "B36-Z082",
+      "source_key": "MYSORE1792",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P083",
+      "title": "1792后马拉巴尔坎纳诺尔公司辖区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.405,
+        11.9
+      ],
+      "linked_zone_id": "B36-Z083",
+      "source_key": "MYSORE1792",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P085",
+      "title": "1792迈索尔割让丁迪古尔",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        78.025,
+        10.375
+      ],
+      "linked_zone_id": "B36-Z085",
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P086",
+      "title": "1792迈索尔割让巴拉马哈尔塞勒姆",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        78.125,
+        11.8
+      ],
+      "linked_zone_id": "B36-Z086",
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P088",
+      "title": "1792后库格王公与公司附属贡赋关系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.88499999999999,
+        12.42
+      ],
+      "linked_zone_id": "B36-Z088",
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领"
+    },
+    {
+      "id": "B36-P089",
+      "title": "1799迈索尔战后哥印拜陀划归公司",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        77.015,
+        11.025
+      ],
+      "linked_zone_id": "B36-Z089",
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P090",
+      "title": "1799迈索尔战后南卡纳拉沿海易手",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.25,
+        12.975000000000001
+      ],
+      "linked_zone_id": "B36-Z090",
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P094",
+      "title": "1799坦贾武尔地区公司财政和统治权增强",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.02000000000001,
+        10.84
+      ],
+      "linked_zone_id": "B36-Z094",
+      "source_key": "ACQUISITIONS",
+      "source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同"
+    },
+    {
+      "id": "B36-P095",
+      "title": "1781英军夺取荷兰纳加帕蒂南港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.855,
+        10.780000000000001
+      ],
+      "linked_zone_id": "B36-Z095",
+      "source_key": "MADRAS",
+      "source_urls": [
+        "https://www.tamildigitallibrary.in/admin/assets/periodicals/TVA_PRL_0034754/TVA_PRL_0034754_The_Madras_Journal_of_Literature_and_Science_1879.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P096",
+      "title": "18世纪特利切里英公司沿海商馆",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.515,
+        11.77
+      ],
+      "linked_zone_id": "B36-Z096",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领"
+    },
+    {
+      "id": "B36-P097",
+      "title": "18世纪安詹戈英公司沿海商馆",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        76.795,
+        8.69
+      ],
+      "linked_zone_id": "B36-Z097",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领"
+    },
+    {
+      "id": "B36-P098",
+      "title": "18世纪古德洛尔圣大卫堡商港与法英易手",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1757
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.81,
+        11.745000000000001
+      ],
+      "linked_zone_id": "B36-Z098",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P099",
+      "title": "1720—1739南妮镇东部马龙武装抵抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1720,
+          "end_year": 1739
+        }
+      ],
+      "coordinates": [
+        -76.60499999999999,
+        18.145
+      ],
+      "linked_zone_id": "B36-Z099",
+      "source_key": "NANNY",
+      "source_urls": [
+        "https://jis.gov.jm/information/heroes/nanny-of-the-maroons/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P100",
+      "title": "1739后阿康蓬马龙条约自治土地",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1739,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -77.74000000000001,
+        18.21
+      ],
+      "linked_zone_id": "B36-Z100",
+      "source_key": "ACCOMPONG",
+      "source_urls": [
+        "https://www.jnht.gov.jm/site_accompong.php"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P101",
+      "title": "1740后摩尔镇东部马龙自治社区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1740,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -76.425,
+        18.085
+      ],
+      "linked_zone_id": "B36-Z101",
+      "source_key": "MAROON",
+      "source_urls": [
+        "https://www.jnht.gov.jm/special_communities.php"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P102",
+      "title": "1754后查尔斯镇马龙独立社区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1754,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -76.38,
+        18.15
+      ],
+      "linked_zone_id": "B36-Z102",
+      "source_key": "MAROON",
+      "source_urls": [
+        "https://www.jnht.gov.jm/special_communities.php"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P104",
+      "title": "1795—1796特里劳尼镇第二次马龙战争",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -77.625,
+        18.380000000000003
+      ],
+      "linked_zone_id": "B36-Z104",
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P106",
+      "title": "1760圣玛丽教区塔基起义",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "coordinates": [
+        -76.995,
+        18.325
+      ],
+      "linked_zone_id": "B36-Z106",
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P107",
+      "title": "1765圣玛丽教区科罗曼提起义",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1765
+        }
+      ],
+      "coordinates": [
+        -76.995,
+        18.325
+      ],
+      "linked_zone_id": "B36-Z107",
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P108",
+      "title": "1766西摩兰被奴役者反抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1766
+        }
+      ],
+      "coordinates": [
+        -78.125,
+        18.045
+      ],
+      "linked_zone_id": "B36-Z108",
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P109",
+      "title": "1776汉诺威教区被奴役者反抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776
+        }
+      ],
+      "coordinates": [
+        -78.05,
+        18.405
+      ],
+      "linked_zone_id": "B36-Z109",
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P111",
+      "title": "1795—1796格林纳达费东起义山区营地",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -61.655,
+        12.205
+      ],
+      "linked_zone_id": "B36-Z111",
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控"
+    },
+    {
+      "id": "B36-P112",
+      "title": "1795格林纳达格伦维尔起义战斗",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -61.629999999999995,
+        12.125
+      ],
+      "linked_zone_id": "B36-Z112",
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P113",
+      "title": "1795—1796英殖民政府被迫缩守圣乔治港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -61.735,
+        12.045
+      ],
+      "linked_zone_id": "B36-Z113",
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P115",
+      "title": "1793—1797英军热雷米海港占据",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -74.03,
+        18.655
+      ],
+      "linked_zone_id": "B36-Z115",
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P116",
+      "title": "1793—1797英军圣尼古拉斯角驻军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -73.38,
+        19.759999999999998
+      ],
+      "linked_zone_id": "B36-Z116",
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P117",
+      "title": "1794—1797英军太子港占据",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -72.305,
+        18.54
+      ],
+      "linked_zone_id": "B36-Z117",
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P119",
+      "title": "1781圣尤斯特歇斯Oranjestad英军抄没商产",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -62.97,
+        17.494999999999997
+      ],
+      "linked_zone_id": "B36-Z119",
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P120",
+      "title": "1781圣尤斯特歇斯港湾英军短期控制",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -62.965,
+        17.490000000000002
+      ],
+      "linked_zone_id": "B36-Z120",
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "堡垒、城市或港口附近军事驻点示意，无法由此推定周边全部土地被占领"
+    },
+    {
+      "id": "B36-P122",
+      "title": "1797年巴利索岛加里富纳人强制关押转运",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -61.125,
+        13.02
+      ],
+      "linked_zone_id": "B36-Z122",
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土"
+    },
+    {
+      "id": "B36-P124",
+      "title": "1796年圣卢西亚英法军队争夺战场",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -61,
+        13.95
+      ],
+      "linked_zone_id": "B36-Z124",
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "战场所在地区，一年内战况不能替代年末逐地军政控制"
+    },
+    {
+      "id": "B36-P125",
+      "title": "1782年巴哈马拿骚被西班牙军占领",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -77.39,
+        25.075
+      ],
+      "linked_zone_id": "B36-Z125",
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "英军失去控制而由他国军队占领的地理事实"
+    },
+    {
+      "id": "B36-P126",
+      "title": "18世纪牙买加罗亚尔港英国海军驻地",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -76.805,
+        17.955
+      ],
+      "linked_zone_id": "B36-Z126",
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P127",
+      "title": "18世纪牙买加西班牙镇殖民行政中心",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -77.05,
+        18.015
+      ],
+      "linked_zone_id": "B36-Z127",
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P128",
+      "title": "18世纪牙买加金斯敦英国殖民商港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -76.8,
+        18.005
+      ],
+      "linked_zone_id": "B36-Z128",
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    },
+    {
+      "id": "B36-P129",
+      "title": "18世纪牙买加蒙特哥贝糖业外贸港",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -77.91499999999999,
+        18.465
+      ],
+      "linked_zone_id": "B36-Z129",
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "跨区域商贸往来或间接影响，不代表英国军政占领"
+    },
+    {
+      "id": "B36-P130",
+      "title": "1763—1778及1783后格林纳达圣乔治殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.724999999999994,
+        12.055
+      ],
+      "linked_zone_id": "B36-Z130",
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "location_confidence": "schematic_bbox_centre_not_surveyed",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null,
+      "note": "殖民行政涉及的地区示意，地方治理与实际驻军各不相同"
+    }
+  ]
+}
