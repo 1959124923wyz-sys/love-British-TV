@@ -49,7 +49,7 @@ try:
  first=d.find_element(By.CSS_SELECTOR,'.atlas-18c-dynamic-core')
  d.execute_script('arguments[0].dispatchEvent(new MouseEvent("click",{bubbles:true,cancelable:true}))',first)
  wait.until(lambda x:js('return document.querySelector("#dossierBody")?.textContent.includes("18世纪地图优先")'))
- assert '平方公里' in d.find_element(By.CSS_SELECTOR,'#dossierBody').text
+ assert js('return document.querySelector("#dossierBody")?.textContent.includes("平方公里")')
  snap('1762-clickable-occupation-dossier')
  # The top-level territory switch controls ALL geographic fills and garrison symbols.
  d.find_element(By.CSS_SELECTOR,'#mapLayerTerritory').click()
