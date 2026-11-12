@@ -155,7 +155,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
 const iconHTML=(item,annualNew=false)=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+(annualNew?' atlas-new-this-year':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+(annualNew?' · 本年新增事件':'')+'">'+svgIcon(item)+(annualNew?'<span class="atlas-new-mark" aria-hidden="true">新</span>':'')+'</div>';
-const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])++' · 点击查看详情</small>':'<small>查看航行路线</small>');
+const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>查看航行路线</small>');
 const workspace=$('workspace');
  const readerCopy=window.AtlasReaderCopy;
 const compactMapMedia=window.matchMedia('(max-width:980px)');
