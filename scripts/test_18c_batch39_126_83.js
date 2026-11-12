@@ -100,7 +100,7 @@ const app=read('app.js'),html=read('index.html'),js=read('js/eighteenth-batch39-
 assert.equal((app.match(/window\.eighteenthBatch39Spatial\?\.render\?\.\(\);/g)||[]).length,4);
 assert(app.includes('.atlas-18c-b39-zone,.atlas-18c-b39-site,'));
 assert(html.includes('js/eighteenth-batch39-spatial.js?v=18c-batch39-caribbean-goldcoast-gulf-126-83-20261112'));
-assert(html.includes('累计629组区域面、421个核心、1099个时间阶段'));
+assert(!html.includes('第39批地图扩容')&&html.includes('地图图例'),'release log should live in research docs, not the reader legend');
 assert(js.includes("get('review18c')!=='1'"));
 assert(js.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(js.includes("window.eighteenthBatch39Spatial="));

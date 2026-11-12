@@ -44,7 +44,8 @@ try:
  assert j("return document.getElementById('dossierBody').textContent.includes('历史时段')")
  assert j("return document.querySelectorAll('#dossierBody a.atlas-source-host').length>=1")
  assert j("return [...document.querySelectorAll('#dossierBody a.atlas-source-host')].every(a=>a.textContent.includes('原始来源网站') && a.textContent.includes(new URL(a.href).hostname.replace(/^www\\./,'')))")
- assert j("return document.querySelector('#dossierBody .zone-dossier-facts').textContent.includes('非实测边界')")
+ assert j("return document.querySelector('#dossierBody .zone-dossier-facts').textContent.includes('历史时段')")
+ assert not j("return document.getElementById('dossierBody').textContent.includes('非实测边界')")
  d.save_screenshot(str(out/'editor23-1620-source-directory.png'))
  # Year-scoped documentary directory can be searched and returned to without opening the map legend again.
  assert j("return !!document.querySelector('#dossierBody [data-return-claim-directory]')")

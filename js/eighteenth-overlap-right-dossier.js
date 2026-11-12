@@ -9,6 +9,7 @@
  const host=window.__eighteenthSpatialHost;
  if(!host||!window.L)return;
  const map=host.map,$=host.element,esc=host.escapeHTML;
+ const reader=window.AtlasReaderCopy;
  const sourceFiles=[
   'data/eighteenth-century-mass-schematic-zones-1700-1799.json',
   'data/eighteenth-century-expansion-batch36-1700-1799.json',
@@ -113,10 +114,7 @@
  }
  const sources=o=>[...new Set(o.source_urls||[])].filter(u=>/^https:\/\//.test(u));
  const urlName=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch{return'资料来源'}};
- const note=o=>o.note||'此记录已有年份及史料链接，具体经过尚待进一步核对。';
- const edgeText=o=>o.coordinates?
-  '地点符号为参考定位，不表示堡垒或港口的实测范围。':
-  '虚线为概略历史地理参考，边界未经历史地图实测配准。';
+ const note=o=>reader.clean(o.note||'');
  const enabled=()=>host.getYear()>=1700&&host.getYear()<=1799&&
   $('mapLayerTerritory').checked&&$('toggleControlAreas').checked&&$('toggleTerritorialFootprints').checked;
  const intersects=(o,lng,lat)=>o.geometry?polygonInside(o.geometry,lng,lat):within(o.bbox,lng,lat);
@@ -147,20 +145,20 @@
  function selectedRecord(){return activeRecords.find(r=>r.id===selected)||activeRecords[0]||null}
  function inlineCard(record,i,isOpen){
   const y=host.getYear(),p=phase(record,y),n=note(record);
-  const desc=n.length>110?clip(n,110):n;
+  const desc=n.length>105?clip(n,105):n;
   return '<article class="atlas-18c-overlap-card'+(isOpen?' is-selected':'')+
    '" data-overlap-id="'+esc(record.id)+'" data-overlap-index="'+i+'">'+
    '<button class="atlas-18c-overlap-trigger" type="button" data-open-overlap="'+i+
    '" aria-expanded="'+String(isOpen)+'">'+
    '<span class="atlas-18c-overlap-topline"><span class="atlas-18c-overlap-order">'+String(i+1).padStart(2,'0')+
-   '</span><span class="atlas-18c-overlap-kind">'+esc(named[record.kind]||record.category||'历史地理记录')+
+   '</span><span class="atlas-18c-overlap-kind">'+esc(reader.label(named[record.kind]||record.category||'历史地理记录'))+
    '</span><span class="atlas-18c-overlap-years">'+p.start_year+'—'+p.end_year+'</span></span>'+
    '<strong class="atlas-18c-overlap-title">'+esc(record.title)+'</strong>'+
-   '<span class="atlas-18c-overlap-summary">'+esc(desc)+'</span></button>'+
+   (desc&&!isOpen?'<span class="atlas-18c-overlap-summary">'+esc(desc)+'</span>':'')+'</button>'+
    (isOpen?'<div class="atlas-18c-overlap-detail">'+
     '<div class="atlas-18c-overlap-facts"><div><span>历史时期</span><b>'+p.start_year+'—'+p.end_year+'</b></div>'+
-    '<div><span>图层性质</span><b>'+esc(named[record.kind]||record.category||'历史参考')+'</b></div></div>'+
-    '<p>'+esc(n)+'</p><p class="atlas-18c-overlap-precision">'+esc(edgeText(record))+'</p>'+
+    '<div><span>图层性质</span><b>'+esc(reader.label(named[record.kind]||record.category||'历史记录'))+'</b></div></div>'+
+    (n?'<p>'+esc(n)+'</p>':'')+
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源</summary>'+
     '<div class="atlas-18c-overlap-source-links">'+sources(record).map(u=>
      '<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">原始来源 · '+esc(urlName(u))+' ↗</a>'
@@ -192,12 +190,8 @@
   const el=$('dossierBody'),y=host.getYear(),count=activeRecords.length;
   el.innerHTML='<section id="atlas18cOverlapPanel" class="atlas-18c-overlap-panel">'+
    '<div class="dossier-kicker">历史地理区域 · '+y+'年</div>'+
-   '<h2>'+(count>1?'此处涉及 '+count+' 条历史记录':'历史区域档案')+'</h2>'+
-   '<p class="atlas-18c-overlap-lead">'+
-    (count>1?'这里有多组时间与性质不同的区域参考。悬停下方任意一项，地图边缘会发光；点击可展开说明。':
-     '将鼠标停留在下方说明上，地图会高亮对应范围。')+'</p>'+
+   '<h2>'+(count>1?'此处涉及 '+count+' 条历史记录':'历史区域档案')+'</h2>'+   '<p class="atlas-18c-overlap-lead">悬停高亮区域 · 点击展开详情</p>'+
    '<div class="atlas-18c-overlap-list">'+activeRecords.map((r,i)=>inlineCard(r,i,r.id===selected)).join('')+'</div>'+
-   '<p class="atlas-18c-overlap-footnote">重叠的示意区块各有独立史料，不能将多层颜色叠加计算历史占地。</p>'+
    '</section>';
   bindCardInteractions();
   host.openPanel('dossier');

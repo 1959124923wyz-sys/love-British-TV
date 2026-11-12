@@ -157,6 +157,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
 const iconHTML=(item,annualNew=false)=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+(annualNew?' atlas-new-this-year':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+(annualNew?' · 本年新增事件':'')+'">'+svgIcon(item)+(annualNew?'<span class="atlas-new-mark" aria-hidden="true">新</span>':'')+'</div>';
 const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+(item.representative_map_point?' · ◎地区参考点（非事件现场）':'')+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
 const workspace=$('workspace');
+ const readerCopy=window.AtlasReaderCopy;
 const compactMapMedia=window.matchMedia('(max-width:980px)');
 const isCompactMap=()=>compactMapMedia.matches;
 if(isCompactMap()){
@@ -320,9 +321,7 @@ function openDossier(item,typ){
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
- const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ));
-
- const representativeNote=typ==='event'&&item.representative_map_point?'<div class="atlas-representative-notice" role="note"><strong>◎ 代表性地图位置 · 非事件精确发生地</strong><p>'+escapeHTML(item.geolocation_limit_zh||item.geography_label||'代表性地理参考点')+'</p></div>':'';
+ const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ)); const representativeNote='';
  const canMapFocus=typ==='event'&&canLocateEvent(item,year);
  const locateAction=typ==='event'?
   (storyChild?
@@ -333,7 +332,7 @@ function openDossier(item,typ){
    '</small></div>'):'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(conciseEventTitle(item))+'</h2>'+
   (conciseEventTitle(item)!==item.name?'<details class="atlas-complete-title"><summary>完整事件名称</summary><p>'+escapeHTML(item.name)+'</p></details>':'')+
-  '<p>'+escapeHTML(description)+'</p>'+representativeNote+
+  (readerCopy.clean(description)?'<p>'+escapeHTML(readerCopy.clean(description))+'</p>':'')+representativeNote+
   (window.HistoryStories?.eventLinkMarkup?.(item,typ)||'')+locateAction+
   (storyChild?'':listSources(item.source_ids,item));
  openPanel('dossier');
@@ -351,7 +350,7 @@ function openArchaeologyReference(feature){
  const text='Historic Environment Scotland 登记的现代古迹保护区范围，包含多期军事考古遗存。';
  $('dossierBody').innerHTML='<div class="dossier-kicker">现代考古遗址地理参考 · '+year+'年</div>'+
   '<h2>'+escapeHTML(p.public_name||p.title_from_hes||'法定古迹参考区')+'</h2>'+
-  '<p>Historic Environment Scotland 官方保护区的现代外廓，用于辅助理解历史堡垒遗址的位置。</p>'+
+  
   '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
   '<div class="research-body"><h3>地图几何性质</h3><p>'+escapeHTML(text)+'</p>'+
   '<h3>军堡建造与分期</h3><p>'+escapeHTML(p.phase_reminder||'需区分后续改建与16世纪城堡分期。')+'</p>'+
@@ -386,9 +385,9 @@ function openHypothesis(feature){
  const title=p.public_title||'推定地理范围';
  const url=p.source_path||'research/hypotheses/1500/README.md';
  selectedItemYear=null;
- $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(p.public_summary||'根据历史记载的地点绘制的范围示意。')+'</p>'+
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(readerCopy.clean(p.public_summary||''))+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
- '<div class="research-body"><h3>史料与制图</h3><p>'+escapeHTML(p.method||'依据史料中的地点绘制。')+'</p></div>'+
+ 
  '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看原始地理研究 ↗</a></details>';
  openPanel('dossier');
 }
@@ -410,11 +409,7 @@ function historicAreaDescription(properties,selectedYear){
  const periods=properties?.controller_periods||[];
  const controller=controllerAtYear(properties,selectedYear);
  if(!controller||periods.length<2)
-  return properties?.summary_zh||properties?.history_description||properties?.description||'该地区的历史状态按所选年份显示。';
- const siteEnvelope=properties?.geometry_role==='attested_settlement_envelope_not_surveyed_border';
- return '所选年份由'+controller.controller_zh+'治理。'+(siteEnvelope?
-  '外缘依据史料地名概略描绘，并非当年的实测行政或军事疆界。':
-  '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
+  return properties?.summary_zh||properties?.history_description||properties?.description||'该地区的历史状态按所选年份显示。';  return '所选年份由'+controller.controller_zh+'治理。';
 }
 function openTerritoryDossier(feature,kind='historic'){
  // Preserve the established two-parameter dossier API used throughout legacy cartography.
@@ -423,7 +418,7 @@ function openTerritoryDossier(feature,kind='historic'){
  const p=feature.properties||{},restoration=kind==='restoration',occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war',atlanticContact=kind==='atlantic-contact',linkedAction=kind==='linked-action';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
  const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室广域殖民声索 · 非实际逐地控制'):kind==='seventeenth-reference'?(p.label_type||'17世纪来源地理参考 · 非实测历史影响区'):kind==='indigenous-encounter'?'原住民接触与抵抗 · 无占领':kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
- const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
+ const description=readerCopy.clean(controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||''));
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.ongoing_at_atlas_end?'起（至1599年地图研究范围）':p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
  // Allow the 53 broad and often overlapping legal envelopes to be inspected individually.
@@ -439,18 +434,18 @@ function openTerritoryDossier(feature,kind='historic'){
  selected='';selectedItemYear=null;
  const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
  $('dossierBody').innerHTML=(kind==='seventeenth-claim'?'<button type="button" class="atlas-colony-directory-back" data-return-claim-directory="1">← 返回本年区域目录</button>':'')+
-  '<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
+  '<div class="dossier-kicker">'+escapeHTML(readerCopy.label(label))+' · '+year+'年</div>'+
   '<h2>'+escapeHTML(kind==='seventeenth-claim'?conciseRegionTitle(p.name):(p.name||feature.id||'历史领土概况'))+'</h2>'+
   (kind==='seventeenth-claim'&&conciseRegionTitle(p.name)!==p.name?'<details class="atlas-complete-title"><summary>完整区域名称</summary><p>'+escapeHTML(p.name)+'</p></details>':'')+
-  '<p>'+escapeHTML(description)+'</p>'+
-  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('图层性质',kind==='seventeenth-claim'?(p.map_presentation==='optional_maximal_paper_claim'?'跨大陆等最大法律声索 · 默认仅存档':p.label_type||'殖民文书与贸易活动地理参考'):null)+row('边界说明',kind==='seventeenth-claim'?'概略示意外缘 · 非实测边界 · 不得计算实控面积':null)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
+  (description?'<p>'+escapeHTML(description)+'</p>':'')+
+  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('图层性质',kind==='seventeenth-claim'?(p.map_presentation==='optional_maximal_paper_claim'?'跨大陆等最大法律声索 · 默认仅存档':p.label_type||'殖民文书与贸易活动地理参考'):null)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
   ''+'</div>'+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
    '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+conciseEventTitle(ev))+'</button>').join('')+'</div>':'')+
   (alternativeClaims.length?'<h3 class="zone-links-heading">当前位置的其他声索／治理参考（'+alternativeClaims.length+'）</h3>'+ 
-   '<p>多项纸面授权或行政参考重叠，不表示该地被多方同时实际占领。选择另一块查看其独立史料。</p>'+
+   
    '<div class="zone-related">'+alternativeClaims.map((f,i)=>
     '<button type="button" class="zone-record-link" data-overlap-claim="'+i+'">'+escapeHTML(conciseRegionTitle(f.properties.name))+'</button>').join('')+'</div>':'')+
   listSources(p.source_ids||[],{id:p.id||feature.id})+
@@ -894,11 +889,11 @@ function openSeventeenthClaimDirectory(){
   const i=active.indexOf(f),p=f.properties;
   return '<button type="button" class="zone-record-link atlas-colony-directory-item" data-colonial-directory="'+i+'">'+
    '<strong>'+escapeHTML(conciseRegionTitle(p.name))+'</strong>'+
-   '<small>'+escapeHTML(p.start_year+'—'+p.end_year+'年 · '+(p.label_type||'历史概略参考'))+'</small></button>';
+   '<small>'+escapeHTML(p.start_year+'—'+p.end_year+'年 · '+readerCopy.label(p.label_type||'历史区域'))+'</small></button>';
  }).join('');
  $('dossierBody').innerHTML='<div class="dossier-kicker">17世纪地图 · '+year+'年</div>'+
   '<h2>本年殖民区域与原始声索</h2>'+
-  '<p>当前有'+active.length+'块历史参考区域，其中'+huge+'块为默认隐藏的跨大陆或巨大流域法律声索。分组和搜索只为阅读方便；地图范围未经历史测绘，不代表实际控制，重叠不累计。</p>'+
+  '<p>本年'+active.length+'处区域 · '+huge+'处大型纸面声索</p>'+
   '<div class="atlas-directory-filter"><label for="claimDirectorySearch">检索本年区域与史料</label>'+
    '<input id="claimDirectorySearch" type="search" placeholder="输入地区、殖民公司或地名" autocomplete="off">'+
    '<span id="claimDirectoryStatus" role="status" aria-live="polite">'+active.length+'块参考区域</span></div>'+
@@ -961,7 +956,7 @@ function renderSeventeenthColonialClaims(){
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
    layer.bindTooltip('<strong>'+escapeHTML(conciseRegionTitle(p.name))+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(p.label_type+(p.map_presentation==='optional_maximal_paper_claim'?' · 仅纸面远距声索，无填色':' · 非实测边界')+' · 点击查看史料')+'</div>',
+    escapeHTML(readerCopy.label(p.label_type||'纸面声索')+' · 点击查看史料')+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    const base={weight:layer.options.weight,opacity:layer.options.opacity,
     dashArray:layer.options.dashArray,fillOpacity:layer.options.fillOpacity};
@@ -1003,9 +998,9 @@ function renderSeventeenthRegionalStudies(){
   },
   onEachFeature:(f,layer)=>{
    const p=f.properties||{},isPolygon=f.geometry?.type==='Polygon';
-   const prefix=isPolygon?'具名地点构成的概略地区（非历史边界）':'有据关系线（非实测航迹/道路）';
+   const prefix=isPolygon?'地区记录':'关联行动';
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(prefix+' · '+(p.label_type||'历史研究层'))+'</div>',
+    escapeHTML(readerCopy.label(prefix+' · '+(p.label_type||'地区记录')))+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',ev=>{
     if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
@@ -1029,7 +1024,7 @@ function renderSeventeenthRegionalStudies(){
     radius:display==='land_dispossession'?20:16,color,weight:2.2,
     dashArray:'4 6',opacity:.85,fill:true,fillColor:color,fillOpacity:.04,
     bubblingMouseEvents:false,className:'atlas-17c-regional-zoom-hint'});
-   cue.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">概略范围缩略提示 · 非历史边界，放大地图阅读原区域虚线</div>',
+   cue.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">点击查看历史</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    cue.on('click',event=>{if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
     openTerritoryDossier(feature,'seventeenth-reference');});
@@ -1055,7 +1050,7 @@ function renderEighteenthAcadiaControlCores(){
   const point=L.circleMarker(center,{pane:'controlAreaPane',radius:8,color:c,weight:2.2,
    fill:true,fillColor:'#513a75',fillOpacity:0.65,opacity:0.95,bubblingMouseEvents:false});
   point.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML('英方有据核心地点（非占领面积） · '+stage.role)+'</div>',{
+   escapeHTML(stage.role)+'</div>',{
     sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
   point.on('click',ev=>{
    if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
@@ -1065,7 +1060,7 @@ function renderEighteenthAcadiaControlCores(){
    $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪史料地图 · '+year+'年 · 军政核心点</div>'+
     '<h2>'+escapeHTML(p.name)+'</h2><p>'+escapeHTML(stage.role)+'</p>'+
     '<p>'+escapeHTML(p.description)+'</p>'+
-    '<p class="atlas-location-note">此处为现代历史遗址代表坐标，圆形仅为屏幕可读标记；不作为地面实际控制面积或古堡边界。</p>'+
+    
     '<details class="story-sources"><summary>地点与驻防年代来源 · '+p.source_urls.length+'项</summary><div class="source-list">'+sources+'</div></details>';
    openPanel('dossier');
   });
@@ -1081,7 +1076,7 @@ function renderEighteenthReviewEvidenceCores(){
  const visible=[];
  for(const f of continuity1700References?.features||[]){
   if(year>=f.properties.start_year&&year<=f.properties.end_year)
-   visible.push({f,mode:'continuity',text:'该年机构史料支持的驻点/商馆；非实测行政边界'});
+   visible.push({f,mode:'continuity',text:'驻军或商馆活动'});
  }
  for(const f of eighteenthBengalControlCores?.features||[]){
   const p=f.properties||{};
@@ -1107,11 +1102,11 @@ function renderEighteenthReviewEvidenceCores(){
    selected='';selectedItemYear=null;
    const arr=p.source_urls||[],links=arr.map(u=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+
     escapeHTML(u)+'">'+escapeHTML(new URL(u).hostname)+' · 史料 ↗</a>').join('');
-   $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪研究地理 · '+year+'年 · 非面积参考点</div>'+
+   $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪历史地点 · '+year+'年</div>'+
     '<h2>'+escapeHTML(p.name)+'</h2>'+
     '<p>'+escapeHTML((p.actor||p.controller||'')+' · '+caption)+'</p>'+
-    '<p>'+escapeHTML(p.note||p.location_limit||'此处是现代地点参考，原有地方政体的政治权利需分别确认。')+'</p>'+
-    '<p class="atlas-location-note">虚线圆仅代表证据关联的地点；不对古堡的边界、土地占领面积或民族主权作填色推断。</p>'+
+    (readerCopy.clean(p.note||'')?'<p>'+escapeHTML(readerCopy.clean(p.note))+'</p>':'')+
+    
     '<details class="story-sources"><summary>机构资料 · '+arr.length+'项</summary><div class="source-list">'+links+'</div></details>';
    openPanel('dossier');
   });
@@ -1154,7 +1149,7 @@ function renderSeventeenthSpatialEvidence(){
    className:'atlas-17c-evidence-cue atlas-17c-'+display.replaceAll('_','-')});
   const note=episode?episode.description:(p.description||'');
   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(p.label_type)+' · '+escapeHTML(note)+' · 虚线为视觉提示，不是实测影响范围</div>',
+   escapeHTML(readerCopy.label(p.label_type))+(readerCopy.clean(note)?' · '+escapeHTML(readerCopy.clean(note)):'')+'</div>',
    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
   layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
    openTerritoryDossier(evidence,'seventeenth-reference')});
@@ -1296,7 +1291,7 @@ function renderWartimeVicinities(){
   style:()=>({color:'#bd92fa',weight:2,opacity:.95,dashArray:'4 7',
     fill:true,fillColor:'#8652dd',fillOpacity:.23,className:'atlas-violet-wartime-vicinity'}),
   onEachFeature:(feature,layer)=>{
-   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">已证实英军驻点，周边范围为概略示意；点击查看领土概况</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">英军驻点 · 点击查看历史</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'occupied')});
   }
@@ -1428,7 +1423,7 @@ function renderEleventhInfluenceAreas(){
    className:'atlas-eleventh-research-area',bubblingMouseEvents:false}),
   onEachFeature:(f,layer)=>{
    const p=f.properties;
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">法律地名及殖民活动参考 · 非实测边界</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">殖民活动 · 点击查看历史</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(f,'historic')});
   }
@@ -1470,7 +1465,7 @@ function renderEarlyRegionalImpactAreas(){
   const style={color,weight:2.5,opacity:.95,dashArray:ochre?'7 6':'8 6',fill:true,fillColor:color,
    fillOpacity:ochre?.11:.14,className:'atlas-early-regional-impact'};
   const open=e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,regionalFeatureKind(p));};
-  const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">史料支持的地区示意 · 点击阅读背景与后果</div>';
+  const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">地区历史 · 点击查看事件</div>';
   if(map.getZoom()<5){
    const center=ring.slice(0,-1).reduce((xy,[lon,lat],_,arr)=>[xy[0]+lat/arr.length,xy[1]+lon/arr.length],[0,0]);
    L.circleMarker(center,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',radius:26,
@@ -1699,7 +1694,7 @@ function renderAtlanticContactSites(){
     className:isMilitary?'atlas-trinidad-1595-action-sequence':'atlas-maghreb-trade-sequence'}),
    onEachFeature:(item,layer)=>{
     layer.bindTooltip('<strong>'+escapeHTML(item.properties.name)+'</strong><div class="atlas-hover-summary">'+
-      escapeHTML(isMilitary?'先后顺序示意，非实际行军路线':'贸易港口次序示意，非实际航线')+'</div>',
+      escapeHTML(isMilitary?'军事行动线路':'贸易港口联系')+'</div>',
       {sticky:true,pane:'eventTooltipPane',className:'atlas-hover'});
     layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
      openTerritoryDossier(item,'atlantic-contact');});
@@ -1750,7 +1745,7 @@ function renderChapter11ActionLinks(){
      className:brazil?'atlas-ch11-brazil-two-town-link':'atlas-ch11-yellow-ford-relief-link'}),
    onEachFeature:(feat,layer)=>{
     layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-      '军事行动地点顺序示意，非真实行军或航行路线 · 查看史料</div>',
+      '军事行动 · 点击查看史料</div>',
       {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
     layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
       openTerritoryDossier(feat,'linked-action');});
@@ -2202,15 +2197,15 @@ function setYear(v){
   const eighteenthPilot=year>=1700;
   if(eighteenthPilot){
    $('chapterTitlePrimary').textContent='十八世纪';
-   $('chapterTitleSecondary').textContent='重大殖民专题 · 研究试阅';
+   $('chapterTitleSecondary').textContent='殖民扩张与抵抗';
    $('chapterIntro').textContent='本十年收录多个殖民专题合并后的'+decadeTotal+
      '件候审历史节点（截至'+year+'年已有'+observed+'件，本年'+fresh+
-     '件）。地点为现代遗址参考，不是18世纪实占疆界；研究试阅尚未正式发表。';
+     '件）。';
   }else{
    // Keep the original 17C textual chronology and its tested source-derived calculations intact.
    $('chapterTitlePrimary').textContent='十七世纪';
    $('chapterTitleSecondary').textContent='事件与专题';
-   $('chapterIntro').textContent='本十年已收录'+decadeTotal+'项历史事件；截至'+year+'年已有'+observed+'项进入时间轴。本年新增'+fresh+'项。具体事件与地图概略声索均有独立来源，尚不能代表对当时所有史事的完整统计。';
+   $('chapterIntro').textContent='本十年已收录'+decadeTotal+'项历史事件；截至'+year+'年已有'+observed+'项进入时间轴。本年新增'+fresh+'项。';
   }
   $('factA').textContent=decadeTotal;
   $('factB').textContent=observed;
