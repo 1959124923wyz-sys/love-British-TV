@@ -49,7 +49,9 @@ try:
  no_scholarly()
  assert js("return window.eighteenthOverlapDossier.getAudit().glowCount")>=2
  assert js("return document.querySelectorAll('#atlas18cOverlapPanel .atlas-18c-overlap-detail').length")==1
- assert js("return document.querySelectorAll('#atlas18cOverlapPanel .atlas-18c-overlap-summary').length")<=3
+ assert js("""return document.querySelectorAll('#atlas18cOverlapPanel .atlas-18c-overlap-summary').length <=
+  document.querySelectorAll('#atlas18cOverlapPanel .atlas-18c-overlap-card').length-1""")
+ assert js("return document.querySelector('#atlas18cOverlapPanel .atlas-18c-overlap-card.is-selected .atlas-18c-overlap-summary')===null")
  snap('1762-selected-havana-card-no-duplicate-summary')
  # Earlier century: original 17c charter point, same accepted hover/glow UI.
  d.get('http://127.0.0.1:8765/?year=1609')
