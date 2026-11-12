@@ -1,0 +1,2867 @@
+{
+  "schema": "atlas-18c-batch37-region-v1",
+  "region": "india-ocean",
+  "status": "research_preview_not_published",
+  "source_register": {
+    "NAM": "https://www.nam.ac.uk/explore/armies-east-india-company",
+    "MYS": "https://www.nam.ac.uk/explore/tipu-sultans-war-turban",
+    "PAR": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/",
+    "MYSBL": "https://searcharchives.bl.uk/catalog/040-000564194",
+    "BENGAL": "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772",
+    "BENCOOLEN": "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+    "MARLBOROUGH": "https://searcharchives.bl.uk/catalog/040-000177998",
+    "BAL": "https://searcharchives.bl.uk/catalog/041-000173313",
+    "BALGEN": "https://searcharchives.bl.uk/catalog/036-000173310",
+    "SEA": "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6",
+    "PEN": "https://penangport.gov.my/en/contact-us/public/port-history",
+    "PENBL": "https://searcharchives.bl.uk/catalog/041-000177515",
+    "PENST": "https://www.tandfonline.com/doi/full/10.1080/1031461X.2023.2273482",
+    "CEYL": "https://archives.gov.lk/English/about-us"
+  },
+  "area_aggregation_forbidden": true,
+  "area_sqkm_totals": null,
+  "zones": [
+    {
+      "id": "B37-I-Z001",
+      "title": "1757后加尔各答Fort William公司军政堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.28,
+        22.5,
+        88.42,
+        22.62
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "城市堡垒与东印度公司税收权分开",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z002",
+      "title": "1757后加尔各答胡格利河商船出口航道",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.26,
+        22.36,
+        88.54,
+        22.77
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "航运往来不能外推河岸全部殖民管辖",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z003",
+      "title": "1757后穆尔希达巴德纳瓦卜与公司政治干预",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.16,
+        24.05,
+        88.42,
+        24.32
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "当地纳瓦卜政权独立政治主体",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z004",
+      "title": "1765后加尔各答Diwani行政税务中心",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.26,
+        22.42,
+        88.5,
+        22.7
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "公司征税权区别军政实占",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z005",
+      "title": "1765后巴特那财政管理中心",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        84.93,
+        25.49,
+        85.34,
+        25.75
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "财政涉及的城市区域示意",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z006",
+      "title": "1765后普尔尼亚税务涉及区",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        86.88,
+        25.45,
+        87.97,
+        26.56
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "名义财政权益不等于全域驻军",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z007",
+      "title": "1765后巴加尔布尔税务涉及区",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        86.44,
+        24.93,
+        87.59,
+        25.67
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "财政区域仅按地区大致定位",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z008",
+      "title": "1765后达卡公司税务商贸中枢",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        90.15,
+        23.57,
+        90.62,
+        24.03
+      ],
+      "source_key": "BENGAL",
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772"
+      ],
+      "note": "税收与地方中介参与共存",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z009",
+      "title": "1772—1773孟加拉公司税收体制改组",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1773
+        }
+      ],
+      "bbox": [
+        87.4,
+        22.2,
+        90.6,
+        26.2
+      ],
+      "source_key": "BENGAL",
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772"
+      ],
+      "note": "制度影响范围并非地籍测绘",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z010",
+      "title": "1757普拉西战役区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "bbox": [
+        88.17,
+        23.66,
+        88.43,
+        23.9
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "战争点不是长期控制面积",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z011",
+      "title": "1764布克萨尔战役区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1764
+        }
+      ],
+      "bbox": [
+        83.88,
+        25.48,
+        84.14,
+        25.69
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "战争后1765才取得Diwani税收权",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z012",
+      "title": "马德拉斯Fort St George英公司旧驻城",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1745
+        }
+      ],
+      "bbox": [
+        80.23,
+        13.02,
+        80.34,
+        13.12
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "1746被法国夺取",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z013",
+      "title": "马德拉斯Fort St George法军占城",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1746,
+          "end_year": 1748
+        }
+      ],
+      "bbox": [
+        80.23,
+        13.02,
+        80.34,
+        13.12
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "1749归还英公司",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z014",
+      "title": "马德拉斯Fort St George英公司恢复",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        80.23,
+        13.02,
+        80.34,
+        13.12
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "恢复港城驻守不是卡纳提克全境占领",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z015",
+      "title": "1758—1759马德拉斯法军围城战场",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1759
+        }
+      ],
+      "bbox": [
+        80.15,
+        12.95,
+        80.43,
+        13.22
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "围城法军未夺取城池",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z016",
+      "title": "1751阿尔科特Arcot英军战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1751
+        }
+      ],
+      "bbox": [
+        79.28,
+        12.81,
+        79.45,
+        12.99
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "局部战役不代表卡纳提克行政划转",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z017",
+      "title": "1751后Trichinopoly公司参与的军事联盟",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        78.62,
+        10.73,
+        78.85,
+        10.91
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "公司与当地纳瓦卜军事联盟",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z018",
+      "title": "1765后卡纳提克纳瓦卜政府英方政治影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.5,
+        12.4,
+        80.7,
+        13.8
+      ],
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "英方财政影响增强，纳瓦卜依旧政治主体",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z019",
+      "title": "1775后阿瓦德Lucknow英国驻扎官政治影响",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        80.84,
+        26.71,
+        81.16,
+        27.05
+      ],
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "阿瓦德纳瓦卜未在18世纪被公司完全吞并",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z020",
+      "title": "1781—1782法扎巴德Begam财产强取",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        82.04,
+        26.7,
+        82.26,
+        26.91
+      ],
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "专题已有专门档案，空间仅宫廷周边",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z021",
+      "title": "1781年贝拿勒斯Cheyt Singh政治与战争冲突",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        82.91,
+        25.2,
+        83.14,
+        25.42
+      ],
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "反抗公司贡税和驻军压力",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z022",
+      "title": "1775后贝拿勒斯财税权干预地区",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        82.63,
+        24.9,
+        83.59,
+        26.04
+      ],
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "税权不等于王室行政直辖",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z023",
+      "title": "1775—1782第一次英马战争孟买周边战事",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        72.54,
+        18.75,
+        74.01,
+        19.83
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "战争影响带内地方王国仍自主",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z024",
+      "title": "1775—1782第一次英马战争浦那周边战事",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        73.45,
+        18.25,
+        74.24,
+        18.98
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "不能把Maratha整体画成英国占领",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z025",
+      "title": "1782年Salbai条约英马和议影响",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        72.68,
+        18.88,
+        73.09,
+        19.41
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "英方保留Salsette岛，非取得印度西岸全部",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z026",
+      "title": "1782后Salsette公司岛港参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.72,
+        18.82,
+        73.06,
+        19.34
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "概略岛屿行政不按现代区界计算",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z027",
+      "title": "1798海得拉巴Nizam与公司附属条约",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        78.32,
+        17.2,
+        78.67,
+        17.55
+      ],
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "Nizam王朝治理未被取消",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z028",
+      "title": "1798后海得拉巴周边公司政治军事影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        77.8,
+        16.2,
+        80.2,
+        19
+      ],
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "虚线影响区不是英国直接占领区域",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z029",
+      "title": "1791 Bangalore英迈战争攻城",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791
+        }
+      ],
+      "bbox": [
+        77.5,
+        12.87,
+        77.71,
+        13.1
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "迈索尔战争堡垒攻陷历史阶段",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z030",
+      "title": "1792 Seringapatam首府围困后割让",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792
+        }
+      ],
+      "bbox": [
+        76.58,
+        12.33,
+        76.8,
+        12.56
+      ],
+      "source_key": "MYSBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "note": "迈索尔王国继续治理首府",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z031",
+      "title": "1792后Malabar Calicut割让沿海区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.66,
+        11.12,
+        75.91,
+        11.42
+      ],
+      "source_key": "MYSBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "note": "条约割让周边参考面",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z032",
+      "title": "1792后Salem Baramahal公司行政区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        78.05,
+        11.43,
+        78.37,
+        11.81
+      ],
+      "source_key": "MYSBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "note": "割让地与周围独立土邦分开",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z033",
+      "title": "1799 Seringapatam英军攻城和战利品掠夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.56,
+        12.29,
+        76.83,
+        12.6
+      ],
+      "source_key": "MYS",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "5月英军攻城，所得战利品不反映公司直接统治全部领土",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z034",
+      "title": "1799后Coimbatore公司接管地区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.81,
+        10.83,
+        77.2,
+        11.21
+      ],
+      "source_key": "MYS",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "迈索尔分割后的地方辖区示意",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z035",
+      "title": "1799后South Canara公司沿海接管",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        74.73,
+        12.52,
+        75.3,
+        13.26
+      ],
+      "source_key": "MYS",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "沿海易手不是整片东南印度洋",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z036",
+      "title": "1799后Mysore王室政治附属关系",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.42,
+        12.1,
+        77.4,
+        13.22
+      ],
+      "source_key": "MYS",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "保留本地王权，与英公司行政分色",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z037",
+      "title": "1700—1713 Fort York Bencoolen英商旧堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1713
+        }
+      ],
+      "bbox": [
+        102.19,
+        -3.86,
+        102.35,
+        -3.71
+      ],
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "被Marlborough堡替换",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z038",
+      "title": "1714后Fort Marlborough Bencoolen公司要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1714,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        102.2,
+        -3.85,
+        102.37,
+        -3.7
+      ],
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "英方控制港堡并与地方统治者签订贸易合约",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z039",
+      "title": "1760—1785 Bencoolen公司Presidency",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1785
+        }
+      ],
+      "bbox": [
+        102.09,
+        -3.94,
+        102.5,
+        -3.52
+      ],
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "行政升格不导致整座苏门答腊岛归英",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z040",
+      "title": "1786—1799 Bencoolen行政降格港堡保留",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        102.14,
+        -3.9,
+        102.43,
+        -3.63
+      ],
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "自1785后地位下降但据点继续",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z041",
+      "title": "1765后Fort Marlborough公司文书和商贸",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        102.1,
+        -3.94,
+        102.5,
+        -3.57
+      ],
+      "source_key": "MARLBOROUGH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000177998"
+      ],
+      "note": "印度事务档案说明经营持续",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z042",
+      "title": "1700—1799西苏门答腊胡椒贸易契约影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        101.6,
+        -4.6,
+        102.86,
+        -2.84
+      ],
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "村社与本土统治者签约，非全域英国主权",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z043",
+      "title": "1761 Balambangan苏禄王室让渡名义权利",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1772
+        }
+      ],
+      "bbox": [
+        117.09,
+        7.04,
+        117.48,
+        7.4
+      ],
+      "source_key": "BALGEN",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173310"
+      ],
+      "note": "合同权与1773实地占据拆开",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z044",
+      "title": "1773—1774 Balambangan英东印度公司商站",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1773,
+          "end_year": 1774
+        }
+      ],
+      "bbox": [
+        117.11,
+        7.08,
+        117.39,
+        7.32
+      ],
+      "source_key": "BAL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000173313"
+      ],
+      "note": "1775被苏禄力量攻占",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z045",
+      "title": "1775 Balambangan苏禄力量攻占英公司站",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        117.08,
+        7.04,
+        117.47,
+        7.4
+      ],
+      "source_key": "BALGEN",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173310"
+      ],
+      "note": "不能延续英国占岛标记",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z046",
+      "title": "1781英军在Padang夺荷兰港站",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        100.26,
+        -1.02,
+        100.47,
+        -0.83
+      ],
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "战时夺取，后续常驻年份未知",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z047",
+      "title": "1786 Penang岛英国公司乔治市港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        100.23,
+        5.3,
+        100.42,
+        5.49
+      ],
+      "source_key": "PEN",
+      "source_urls": [
+        "https://penangport.gov.my/en/contact-us/public/port-history"
+      ],
+      "note": "槟城曾有当地马来居民，不能当无人岛",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z048",
+      "title": "1786 Penang Fort Cornwallis英国公司堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        100.32,
+        5.4,
+        100.37,
+        5.45
+      ],
+      "source_key": "PENBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177515"
+      ],
+      "note": "初始堡垒与海军防务港区",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z049",
+      "title": "1790—1791 Kedah苏丹准备夺回Penang岛",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1790,
+          "end_year": 1791
+        }
+      ],
+      "bbox": [
+        100.34,
+        5.25,
+        100.5,
+        5.54
+      ],
+      "source_key": "PEN",
+      "source_urls": [
+        "https://penangport.gov.my/en/contact-us/public/port-history"
+      ],
+      "note": "英军夜袭后条约谈判，海峡本土仍为当地治理",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z050",
+      "title": "1791 Kedah与公司议定槟城租金和地权",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791
+        }
+      ],
+      "bbox": [
+        100.23,
+        5.26,
+        100.5,
+        5.52
+      ],
+      "source_key": "PENST",
+      "source_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/1031461X.2023.2273482"
+      ],
+      "note": "英方以每年6000西班牙银元换取承认殖民权",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z051",
+      "title": "1795 Malacca荷兰旧港英军战时接管",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        102.15,
+        2.15,
+        102.35,
+        2.3
+      ],
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "临时战时据点，非英国取得整个马来半岛",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z052",
+      "title": "1795 Malacca海峡商航网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        101.6,
+        1.52,
+        103.13,
+        3.5
+      ],
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "海上联系不等于海峡水域专属主权",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z053",
+      "title": "1796 Ambon旧荷兰香料港战时英占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        128.02,
+        -3.89,
+        128.31,
+        -3.5
+      ],
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "英军夺港不意味南摩鹿加诸岛全归英国",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z054",
+      "title": "1796 Banda岛荷兰商站战时英占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        129.76,
+        -4.66,
+        130.05,
+        -4.36
+      ],
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "历史岛群周边示意",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z055",
+      "title": "1796后Moluccas香料商业联系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        127.7,
+        -5.2,
+        130.6,
+        -2.7
+      ],
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "多岛地方社会贸易与欧洲战争并存",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z056",
+      "title": "1796 Colombo旧荷兰港英方驻地",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.74,
+        6.79,
+        79.96,
+        7.08
+      ],
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "沿岸军政与康提王国分开",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z057",
+      "title": "1796 Galle旧荷兰沿海堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        80.12,
+        5.94,
+        80.33,
+        6.17
+      ],
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "1796年英军接收荷兰旧加勒港堡，仅限沿海局部接管",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z058",
+      "title": "1796 Jaffna旧荷兰沿海行政港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.89,
+        9.52,
+        80.14,
+        9.78
+      ],
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "1796年英方接管荷兰旧贾夫纳城市行政，未控制康提王国",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z059",
+      "title": "1796 Trincomalee旧荷兰英方海军港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        81.11,
+        8.48,
+        81.31,
+        8.71
+      ],
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "1796年英军接管荷兰旧亭可马里海湾军事基地，不延伸整个内陆",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-Z060",
+      "title": "1796—1799 Kandy内陆王国仍自主",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        80.23,
+        6.8,
+        81.11,
+        8.32
+      ],
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "不允许把康提王国纳入英军沿岸夺取面积",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    }
+  ],
+  "sites": [
+    {
+      "id": "B37-I-P001",
+      "title": "1757后加尔各答Fort William公司军政堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.35,
+        22.560000000000002
+      ],
+      "linked_zone_id": "B37-I-Z001",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "城市堡垒与东印度公司税收权分开",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P003",
+      "title": "1757后穆尔希达巴德纳瓦卜与公司政治干预",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.28999999999999,
+        24.185000000000002
+      ],
+      "linked_zone_id": "B37-I-Z003",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "当地纳瓦卜政权独立政治主体",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P004",
+      "title": "1765后加尔各答Diwani行政税务中心",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.38,
+        22.560000000000002
+      ],
+      "linked_zone_id": "B37-I-Z004",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "公司征税权区别军政实占",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P005",
+      "title": "1765后巴特那财政管理中心",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        85.135,
+        25.619999999999997
+      ],
+      "linked_zone_id": "B37-I-Z005",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "财政涉及的城市区域示意",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P008",
+      "title": "1765后达卡公司税务商贸中枢",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        90.385,
+        23.8
+      ],
+      "linked_zone_id": "B37-I-Z008",
+      "source_key": "BENGAL",
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772"
+      ],
+      "note": "税收与地方中介参与共存",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P010",
+      "title": "1757普拉西战役区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "coordinates": [
+        88.30000000000001,
+        23.78
+      ],
+      "linked_zone_id": "B37-I-Z010",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "战争点不是长期控制面积",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P011",
+      "title": "1764布克萨尔战役区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1764
+        }
+      ],
+      "coordinates": [
+        84.00999999999999,
+        25.585
+      ],
+      "linked_zone_id": "B37-I-Z011",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "战争后1765才取得Diwani税收权",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P012",
+      "title": "马德拉斯Fort St George英公司旧驻城",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1745
+        }
+      ],
+      "coordinates": [
+        80.285,
+        13.07
+      ],
+      "linked_zone_id": "B37-I-Z012",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "1746被法国夺取",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P013",
+      "title": "马德拉斯Fort St George法军占城",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1746,
+          "end_year": 1748
+        }
+      ],
+      "coordinates": [
+        80.285,
+        13.07
+      ],
+      "linked_zone_id": "B37-I-Z013",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "1749归还英公司",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P014",
+      "title": "马德拉斯Fort St George英公司恢复",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        80.285,
+        13.07
+      ],
+      "linked_zone_id": "B37-I-Z014",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "恢复港城驻守不是卡纳提克全境占领",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P015",
+      "title": "1758—1759马德拉斯法军围城战场",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1759
+        }
+      ],
+      "coordinates": [
+        80.29,
+        13.085
+      ],
+      "linked_zone_id": "B37-I-Z015",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "围城法军未夺取城池",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P016",
+      "title": "1751阿尔科特Arcot英军战役",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1751
+        }
+      ],
+      "coordinates": [
+        79.36500000000001,
+        12.9
+      ],
+      "linked_zone_id": "B37-I-Z016",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "局部战役不代表卡纳提克行政划转",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P017",
+      "title": "1751后Trichinopoly公司参与的军事联盟",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        78.735,
+        10.82
+      ],
+      "linked_zone_id": "B37-I-Z017",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "公司与当地纳瓦卜军事联盟",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P019",
+      "title": "1775后阿瓦德Lucknow英国驻扎官政治影响",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        81,
+        26.880000000000003
+      ],
+      "linked_zone_id": "B37-I-Z019",
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "阿瓦德纳瓦卜未在18世纪被公司完全吞并",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P020",
+      "title": "1781—1782法扎巴德Begam财产强取",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        82.15,
+        26.805
+      ],
+      "linked_zone_id": "B37-I-Z020",
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "专题已有专门档案，空间仅宫廷周边",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P021",
+      "title": "1781年贝拿勒斯Cheyt Singh政治与战争冲突",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        83.025,
+        25.310000000000002
+      ],
+      "linked_zone_id": "B37-I-Z021",
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "反抗公司贡税和驻军压力",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P025",
+      "title": "1782年Salbai条约英马和议影响",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        72.885,
+        19.145
+      ],
+      "linked_zone_id": "B37-I-Z025",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "英方保留Salsette岛，非取得印度西岸全部",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P026",
+      "title": "1782后Salsette公司岛港参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        72.89,
+        19.08
+      ],
+      "linked_zone_id": "B37-I-Z026",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "概略岛屿行政不按现代区界计算",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P027",
+      "title": "1798海得拉巴Nizam与公司附属条约",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        78.495,
+        17.375
+      ],
+      "linked_zone_id": "B37-I-Z027",
+      "source_key": "PAR",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "Nizam王朝治理未被取消",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P029",
+      "title": "1791 Bangalore英迈战争攻城",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791
+        }
+      ],
+      "coordinates": [
+        77.60499999999999,
+        12.985
+      ],
+      "linked_zone_id": "B37-I-Z029",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "迈索尔战争堡垒攻陷历史阶段",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P030",
+      "title": "1792 Seringapatam首府围困后割让",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792
+        }
+      ],
+      "coordinates": [
+        76.69,
+        12.445
+      ],
+      "linked_zone_id": "B37-I-Z030",
+      "source_key": "MYSBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "note": "迈索尔王国继续治理首府",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P031",
+      "title": "1792后Malabar Calicut割让沿海区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.785,
+        11.27
+      ],
+      "linked_zone_id": "B37-I-Z031",
+      "source_key": "MYSBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "note": "条约割让周边参考面",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P032",
+      "title": "1792后Salem Baramahal公司行政区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        78.21000000000001,
+        11.620000000000001
+      ],
+      "linked_zone_id": "B37-I-Z032",
+      "source_key": "MYSBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000564194"
+      ],
+      "note": "割让地与周围独立土邦分开",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P033",
+      "title": "1799 Seringapatam英军攻城和战利品掠夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        76.695,
+        12.445
+      ],
+      "linked_zone_id": "B37-I-Z033",
+      "source_key": "MYS",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "5月英军攻城，所得战利品不反映公司直接统治全部领土",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P034",
+      "title": "1799后Coimbatore公司接管地区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        77.005,
+        11.02
+      ],
+      "linked_zone_id": "B37-I-Z034",
+      "source_key": "MYS",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "迈索尔分割后的地方辖区示意",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P035",
+      "title": "1799后South Canara公司沿海接管",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.015,
+        12.89
+      ],
+      "linked_zone_id": "B37-I-Z035",
+      "source_key": "MYS",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "沿海易手不是整片东南印度洋",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P037",
+      "title": "1700—1713 Fort York Bencoolen英商旧堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1713
+        }
+      ],
+      "coordinates": [
+        102.27,
+        -3.785
+      ],
+      "linked_zone_id": "B37-I-Z037",
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "被Marlborough堡替换",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P038",
+      "title": "1714后Fort Marlborough Bencoolen公司要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1714,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        102.285,
+        -3.7750000000000004
+      ],
+      "linked_zone_id": "B37-I-Z038",
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "英方控制港堡并与地方统治者签订贸易合约",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P039",
+      "title": "1760—1785 Bencoolen公司Presidency",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1785
+        }
+      ],
+      "coordinates": [
+        102.295,
+        -3.73
+      ],
+      "linked_zone_id": "B37-I-Z039",
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "行政升格不导致整座苏门答腊岛归英",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P040",
+      "title": "1786—1799 Bencoolen行政降格港堡保留",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        102.285,
+        -3.7649999999999997
+      ],
+      "linked_zone_id": "B37-I-Z040",
+      "source_key": "BENCOOLEN",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
+      ],
+      "note": "自1785后地位下降但据点继续",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P044",
+      "title": "1773—1774 Balambangan英东印度公司商站",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1773,
+          "end_year": 1774
+        }
+      ],
+      "coordinates": [
+        117.25,
+        7.2
+      ],
+      "linked_zone_id": "B37-I-Z044",
+      "source_key": "BAL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000173313"
+      ],
+      "note": "1775被苏禄力量攻占",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P045",
+      "title": "1775 Balambangan苏禄力量攻占英公司站",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1775
+        }
+      ],
+      "coordinates": [
+        117.275,
+        7.220000000000001
+      ],
+      "linked_zone_id": "B37-I-Z045",
+      "source_key": "BALGEN",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173310"
+      ],
+      "note": "不能延续英国占岛标记",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P046",
+      "title": "1781英军在Padang夺荷兰港站",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        100.36500000000001,
+        -0.925
+      ],
+      "linked_zone_id": "B37-I-Z046",
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "战时夺取，后续常驻年份未知",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P047",
+      "title": "1786 Penang岛英国公司乔治市港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        100.325,
+        5.395
+      ],
+      "linked_zone_id": "B37-I-Z047",
+      "source_key": "PEN",
+      "source_urls": [
+        "https://penangport.gov.my/en/contact-us/public/port-history"
+      ],
+      "note": "槟城曾有当地马来居民，不能当无人岛",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P048",
+      "title": "1786 Penang Fort Cornwallis英国公司堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        100.345,
+        5.425000000000001
+      ],
+      "linked_zone_id": "B37-I-Z048",
+      "source_key": "PENBL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177515"
+      ],
+      "note": "初始堡垒与海军防务港区",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P049",
+      "title": "1790—1791 Kedah苏丹准备夺回Penang岛",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1790,
+          "end_year": 1791
+        }
+      ],
+      "coordinates": [
+        100.42,
+        5.395
+      ],
+      "linked_zone_id": "B37-I-Z049",
+      "source_key": "PEN",
+      "source_urls": [
+        "https://penangport.gov.my/en/contact-us/public/port-history"
+      ],
+      "note": "英军夜袭后条约谈判，海峡本土仍为当地治理",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P050",
+      "title": "1791 Kedah与公司议定槟城租金和地权",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791
+        }
+      ],
+      "coordinates": [
+        100.36500000000001,
+        5.39
+      ],
+      "linked_zone_id": "B37-I-Z050",
+      "source_key": "PENST",
+      "source_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/1031461X.2023.2273482"
+      ],
+      "note": "英方以每年6000西班牙银元换取承认殖民权",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P051",
+      "title": "1795 Malacca荷兰旧港英军战时接管",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        102.25,
+        2.2249999999999996
+      ],
+      "linked_zone_id": "B37-I-Z051",
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "临时战时据点，非英国取得整个马来半岛",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P053",
+      "title": "1796 Ambon旧荷兰香料港战时英占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        128.16500000000002,
+        -3.6950000000000003
+      ],
+      "linked_zone_id": "B37-I-Z053",
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "英军夺港不意味南摩鹿加诸岛全归英国",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P054",
+      "title": "1796 Banda岛荷兰商站战时英占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        129.905,
+        -4.51
+      ],
+      "linked_zone_id": "B37-I-Z054",
+      "source_key": "SEA",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
+      ],
+      "note": "历史岛群周边示意",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P056",
+      "title": "1796 Colombo旧荷兰港英方驻地",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.85,
+        6.9350000000000005
+      ],
+      "linked_zone_id": "B37-I-Z056",
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "沿岸军政与康提王国分开",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P057",
+      "title": "1796 Galle旧荷兰沿海堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        80.225,
+        6.055
+      ],
+      "linked_zone_id": "B37-I-Z057",
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "1796年英军接收荷兰旧加勒港堡，仅限沿海局部接管",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P058",
+      "title": "1796 Jaffna旧荷兰沿海行政港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        80.015,
+        9.649999999999999
+      ],
+      "linked_zone_id": "B37-I-Z058",
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "1796年英方接管荷兰旧贾夫纳城市行政，未控制康提王国",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-I-P059",
+      "title": "1796 Trincomalee旧荷兰英方海军港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        81.21000000000001,
+        8.595
+      ],
+      "linked_zone_id": "B37-I-Z059",
+      "source_key": "CEYL",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "1796年英军接管荷兰旧亭可马里海湾军事基地，不延伸整个内陆",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}
