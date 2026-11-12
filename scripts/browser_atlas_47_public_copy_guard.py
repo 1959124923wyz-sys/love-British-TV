@@ -65,8 +65,6 @@ try:
  # Confirm the user-supplied source's explanatory caveat never reappears after click.
  ready(1783)
  marker=js("""
-  const geo=requireNoop=1;
-  const f=window.__eighteenthSpatialHost;
   return {loaded:window.eighteenthOverlapDossier.getAudit().loaded};
  """)
  assert marker['loaded']
