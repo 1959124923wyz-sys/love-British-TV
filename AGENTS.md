@@ -9,7 +9,7 @@
 - **宽标准判断**：只要句子的主要用途是解释地图画法、像素／矩形／虚线／边界配准／地理代理坐标／面积不能计算／控制权不能凭颜色推定／编辑审核状态，就属于读者禁用文案。**不要换一种措辞重新塞回来**，也不要为了凑字数添加“仅供参考”“不代表真实主权”等提示。
 - 对外只写**历史事实本身**：年份、地点、具体行动、组织者与受影响者、当地抵抗、可核结果，以及可靠史料链接。合法主权、政治主体及真实历史争议仍属于应写史实，不能被误删。所有不确定地图边界继续以**虚线**表达，图层类别和几何来源继续区分。
 - **原始数据严禁批量删除**：`source_urls`、`geo_precision`、`geolocation_limit_zh`、`historical_boundary_confirmed`、`area_sqkm`、`note`、原始史学争议和史料证据照旧保存。**只在展示层过滤**，使用 `window.AtlasReaderCopy.clean()/label()`；新增展示组件须接入 `js/atlas-public-ui-guard.js` 的公共DOM最终保护。
-- **每个后续PR必跑**：`node scripts/test_atlas_47_public_copy_guard.js` 和 `python3 scripts/browser_atlas_47_public_copy_guard.py`（需Chrome/Selenium与本地服务）。CI工作流 `.github/workflows/atlas-47-public-copy-policy.yml` 自动执行；用真实Chrome测试跨16／17／18世纪、重叠区块与文章显示。出现读者可见的类似文本，PR不能验收。
+- **每个后续PR必跑**：`node scripts/test_atlas_47_public_copy_guard.js` 、`node scripts/lint_atlas_47_frontend_copy.js`、`python3 scripts/browser_atlas_47_public_copy_guard.py` 和 `python3 scripts/browser_atlas_47_all_years.py`（逐年检查1497—1799年）（需Chrome/Selenium与本地服务）。CI工作流 `.github/workflows/atlas-47-public-copy-policy.yml` 自动执行；用真实Chrome测试跨16／17／18世纪、重叠区块与文章显示。出现读者可见的类似文本，PR不能验收。
 - 详细规则、示例、排查清单及新同事操作流程：[读者界面文案永久约束](docs/READER_PUBLIC_COPY_POLICY.md)。历史来源与地图不确定性说明可留在研究档案，不可在读者页面以“学术备注”呈现。
 
 
