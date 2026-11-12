@@ -3878,10 +3878,12 @@ function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
   renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
+  window.eighteenthSpatial?.render?.();
   return;
  }
  renderSeventeenthColonialClaims();
  renderSeventeenthRegionalStudies();
+ window.eighteenthSpatial?.render?.();
  renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
@@ -3908,7 +3910,7 @@ map.on('resize',()=>{if(atlas)renderPoints()});
 map.getContainer().addEventListener('click',event=>{
  if(!atlas)return;
  const t=event.target;
- if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-17c-expansive-claim,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
+ if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-17c-expansive-claim,.atlas-18c-dynamic-area,.atlas-18c-dynamic-core,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
  openMapTerritoryAt(map.mouseEventToLatLng(event));
 },true);
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
