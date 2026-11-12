@@ -14,7 +14,7 @@ def js(script,*args):return d.execute_script(script,*args)
 def audit():return js('return window.eighteenthSpatial?.getAudit?.()')
 def snap(name):d.save_screenshot(str(screens/'18c-map-34-'+name+'.png'))
 def set_year(y):
- js('setYear(arguments[0])',y)
+ js("const input=document.querySelector('#jumpYear');input.value=String(arguments[0]);input.dispatchEvent(new Event('change',{bubbles:true}));",y)
  wait.until(lambda x:x.find_element(By.CSS_SELECTOR,'#bigYear').text==str(y))
  wait.until(lambda x:audit()['activeYear']==y)
 try:
