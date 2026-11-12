@@ -5,6 +5,10 @@
 (function(){
  'use strict';
  if(new URLSearchParams(location.search).get('review18c')!=='1')return;
+ const host=window.__eighteenthSpatialHost;
+ if(!host)throw new Error('18C spatial host is missing');
+ const map=host.map,$=host.element,escapeHTML=host.escapeHTML,openPanel=host.openPanel;
+ let year=host.getYear();
  const areaPane='eighteenthReferenceAreaPane',sitePane='eighteenthControlSitePane';
  map.createPane(areaPane);map.getPane(areaPane).style.zIndex='433';
  map.createPane(sitePane);map.getPane(sitePane).style.zIndex='466';
@@ -22,7 +26,7 @@
    return '<li><a href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(host)+'</a></li>';
  }).join('');
  function dossier(p,period,isSite){
-   selectedItemYear=null;
+   host.clearSelection();
    const category=isSite?'已核实的城市驻军/公司港口核心（圆形为屏幕符号）':p.category;
    $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪地图优先 · '+escapeHTML(String(year))+'年</div>'+
     '<h2>'+escapeHTML(p.title||'历史地理范围')+'</h2>'+
@@ -33,6 +37,7 @@
    openPanel('dossier');
  }
  function render(){
+   year=host.getYear();
    areaLayer.clearLayers();coreLayer.clearLayers();
    if(!loaded||year<1700||year>1799||!$('mapLayerTerritory').checked||
       !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;

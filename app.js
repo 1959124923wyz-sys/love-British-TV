@@ -3874,6 +3874,13 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(id==='toggleEvents'&&!$('toggleEvents').checked){focusedEventId=null;focusRequestToken++}
  if(atlas)renderPoints();
 }));
+// Separate 18C cartography module has an explicit internal facade because the Atlas
+// application is isolated in an IIFE. No historical geometry or official area stats
+// are exposed as editable data; only real Leaflet drawing and dossier callbacks.
+window.__eighteenthSpatialHost={
+ map,getYear:()=>year,element:$,escapeHTML,openPanel,
+ clearSelection:()=>{selectedItemYear=null;}
+};
 function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
