@@ -1,0 +1,2028 @@
+{
+  "schema": "atlas-18c-batch39-v1",
+  "region": "caribbean-1759-1763",
+  "review_only": true,
+  "source_register": {
+    "NAM": "https://www.nam.ac.uk/explore/seven-years-war",
+    "UNB": "https://lib.unb.ca/guides/loyalist-collection-british-west-indies",
+    "ACD": "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750",
+    "TREATY": "https://avalon.law.yale.edu/18th_century/paris763.asp",
+    "PARIS": "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties",
+    "TNA": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782",
+    "UCHI": "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en",
+    "EH": "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/",
+    "JAMAICA": "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+  },
+  "area_aggregation_forbidden": true,
+  "area_sqkm_totals": null,
+  "notes": "Seven Years War island-level context is not evidence of garrisons in each locality; proxy bboxes and icons distinguish treaty claims from verified occupation.",
+  "zones": [
+    {
+      "id": "B39-C-Z001",
+      "title": "1759—1762法国瓜德罗普岛英军短期占领",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.84,
+        15.79,
+        -61.03,
+        16.54
+      ],
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "1759英军夺岛，1763和约归还法国；框仅示意岛屿位置，非历史边界",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z002",
+      "title": "1759年瓜德罗普巴斯特尔登陆和军事争夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1759
+        }
+      ],
+      "bbox": [
+        -61.76,
+        15.9,
+        -61.65,
+        16.05
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "英国七年战争行动的地点背景，未测绘军队线",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z003",
+      "title": "1759年瓜德罗普格朗德特尔战时占领背景",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.58,
+        16.13,
+        -61.15,
+        16.48
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "地区框属于英军占岛的地理示意，不证明各村有英国驻军",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z004",
+      "title": "1759年瓜德罗普巴斯特尔城镇英占背景",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.78,
+        15.93,
+        -61.63,
+        16.08
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "指向被占岛屿的港城，地方军政范围尚未实测",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z005",
+      "title": "1759年瓜德罗普Pointe-a-Pitre泻湖港区",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.57,
+        16.17,
+        -61.44,
+        16.31
+      ],
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英占期间的贸易港参考区，不确认具体船只航次",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z006",
+      "title": "1759年瓜德罗普殖民糖业贸易战时转移",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.9,
+        15.76,
+        -61.02,
+        16.64
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "占领后糖品出口背景，农业经营和劳动力受殖民奴役制约",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z007",
+      "title": "1763瓜德罗普归还法国的条约阶段",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1793
+        }
+      ],
+      "bbox": [
+        -61.83,
+        15.78,
+        -61.05,
+        16.53
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763法国主权恢复，1794出现另一次英军短占；不算英国领土",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z008",
+      "title": "1761—1762多米尼克英军占据及和约续属",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.54,
+        15.17,
+        -61.2,
+        15.66
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "英国1761占岛，1763和约承认，卡利纳戈社群保有自主政治",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z009",
+      "title": "1761年多米尼克Roseau港英军占领阶段",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.43,
+        15.25,
+        -61.34,
+        15.35
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "军事驻港附近参考，未验证内陆实占",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z010",
+      "title": "1761年多米尼克Portsmouth港战争期间",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.5,
+        15.5,
+        -61.42,
+        15.61
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "占岛时期北部港湾地理定位，非驻军证明",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z011",
+      "title": "1763—1777多米尼克英殖民法定港区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1777
+        }
+      ],
+      "bbox": [
+        -61.51,
+        15.14,
+        -61.21,
+        15.66
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763—1777法定英方殖民行政；1778法军重新夺占",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z012",
+      "title": "1763后多米尼克Kalinago政治独立背景",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.35,
+        15.33,
+        -61.22,
+        15.6
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ],
+      "note": "殖民文件不能替代原住民族实际土地所有权；位置为示意",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z013",
+      "title": "1762年英国占Martinique法属殖民岛",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.28,
+        14.34,
+        -60.77,
+        14.94
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "1762英军夺取马提尼克，1763归法，未画实测战线",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z014",
+      "title": "1762年Martinique Fort Royal英军占港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.15,
+        14.52,
+        -61,
+        14.68
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "港城小范围参考而非城墙测量",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z015",
+      "title": "1762年Martinique Saint Pierre英占岛背景",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.23,
+        14.67,
+        -61.1,
+        14.83
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "英军战时占岛在北部港口地理参考，不推断每座村落驻军",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z016",
+      "title": "1762年Martinique南岸Marin战争港湾背景",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -60.98,
+        14.4,
+        -60.82,
+        14.53
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "只标出被占岛内的南岸港口与海上联络",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z017",
+      "title": "1763—1793 Martinique返还法方殖民统治",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1793
+        }
+      ],
+      "bbox": [
+        -61.28,
+        14.33,
+        -60.77,
+        14.94
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763和约归法，1794另有英国占领期",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z018",
+      "title": "1762—1763 Grenada英军夺取法国殖民岛",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.85,
+        11.97,
+        -61.43,
+        12.35
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "1762战争夺岛，1763和约确认归英，非全部内陆兵营",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z019",
+      "title": "1762 Grenada St George英军占港期",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.82,
+        11.99,
+        -61.69,
+        12.12
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "1763后法定殖民行政阶段另已有早期数据",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z020",
+      "title": "1762 Grenada Grenville沿岸战争背景",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.69,
+        12.09,
+        -61.57,
+        12.2
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "表示英方岛屿占领期受影响海岸，缺乏独立驻军证据",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z021",
+      "title": "1763—1778 Grenada英殖民糖业行政扩展",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -61.85,
+        11.97,
+        -61.43,
+        12.35
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "岛级法定管辖，山区和被奴役者抵抗另计",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z022",
+      "title": "1762 Saint Lucia英国短期占据",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.11,
+        13.68,
+        -60.85,
+        14.11
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "1762英军占岛，1763回法国",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z023",
+      "title": "1762 Saint Lucia Castries军港接触",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.08,
+        13.97,
+        -60.97,
+        14.07
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "占岛背景下港口局部位置参考",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z024",
+      "title": "1762 Saint Lucia Soufriere港湾战时活动",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.08,
+        13.8,
+        -61,
+        13.91
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "海湾仅为战时交通地理参考，不当成占领军驻守点",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z025",
+      "title": "1763—1793 Saint Lucia归法外交法政范围",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1793
+        }
+      ],
+      "bbox": [
+        -61.1,
+        13.68,
+        -60.85,
+        14.12
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763和约归法，1794英国短占历史另外显示",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z026",
+      "title": "1762 Saint Vincent英军占岛引发主权争议",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.35,
+        12.91,
+        -61.07,
+        13.43
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "当地Garifuna与Kalinago政治主体独立；框是英国法政声索之争",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z027",
+      "title": "1762 Saint Vincent Kingstown英占殖民港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.25,
+        13.11,
+        -61.19,
+        13.21
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "此为殖民港镇参考，山地控制存在争议",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z028",
+      "title": "1763 Saint Vincent加里富纳族群争议土地",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.35,
+        13.11,
+        -61.04,
+        13.43
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "英国取得纸面殖民统治，Garifuna土地与政治权并未消失",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z029",
+      "title": "1763 Grenadines岛链英方声索并存地方权属",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.5,
+        12,
+        -60.9,
+        13.01
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "小岛链政治声索示意，无法定位每座岛的有效控制",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z030",
+      "title": "1762 Tobago战时英国军事行动岛屿背景",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -60.88,
+        11,
+        -60.55,
+        11.4
+      ],
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "英方七年战争期所争殖民岛，战争影响非完整军政占据凭据",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z031",
+      "title": "1763 Tobago英方殖民主权和约确认",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        -60.84,
+        11,
+        -60.55,
+        11.41
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763割让法定主权；1781年法军占岛",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z032",
+      "title": "1762 Havana英军短期占港及船坞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -82.5,
+        22.95,
+        -82.21,
+        23.25
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "英军围城攻陷并占港，1763归西班牙",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z033",
+      "title": "1762 Havana Morro Castle围城军事区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -82.37,
+        23.12,
+        -82.31,
+        23.19
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "西班牙守堡与英军围困地点，包络非工事测绘",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z034",
+      "title": "1762 Havana城内英军驻地与没收船只",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -82.39,
+        23.1,
+        -82.32,
+        23.18
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "占据西班牙殖民港并夺取舰艇，具体财物数量不在本地图捏造",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z035",
+      "title": "1762 Havana湾内俘获舰船的港区",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -82.46,
+        23.02,
+        -82.32,
+        23.18
+      ],
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "归档称舰船被夺，地点仅为港湾而非捕获每艘船的坐标",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z036",
+      "title": "1763 Havana撤出与西班牙恢复",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -82.49,
+        22.95,
+        -82.2,
+        23.28
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "西班牙恢复殖民统治，英国短期占领结束",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z037",
+      "title": "1762 Philippines Manila英军港城短占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        120.94,
+        14.47,
+        121.07,
+        14.66
+      ],
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "英军短占港城不等于占菲律宾群岛",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z038",
+      "title": "1763 Caribbean战后归还法国诸岛分层",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        -61.87,
+        13.5,
+        -60.7,
+        16.6
+      ],
+      "source_key": "TREATY",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "概览归还与割让条约，宽幅框跨岛无实际占地含义",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z039",
+      "title": "1782 Saint Kitts法军短占期间英军失守",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -62.79,
+        17.23,
+        -62.65,
+        17.43
+      ],
+      "source_key": "PARIS",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1783和约英国恢复，法国战时驻军",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z040",
+      "title": "1782 Nevis法军占领英属岛港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -62.7,
+        17.07,
+        -62.56,
+        17.24
+      ],
+      "source_key": "PARIS",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "战时失守，1783英国恢复",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z041",
+      "title": "1782 Montserrat英军失去岛上驻地",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -62.26,
+        16.65,
+        -62.13,
+        16.83
+      ],
+      "source_key": "PARIS",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "法国军占阶段，1783归英",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z042",
+      "title": "1794 Guadeloupe法国革命军夺回此前英占港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "bbox": [
+        -61.75,
+        15.88,
+        -61.19,
+        16.5
+      ],
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "年内英军短暂登陆，Victor Hugues领导法军反攻，不能记为全年英占",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z043",
+      "title": "1796 Saint Lucia英国重夺Fort Charlotte",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.04,
+        13.97,
+        -60.94,
+        14.05
+      ],
+      "source_key": "EH",
+      "source_urls": [
+        "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "note": "1796年英军受降，法方革命军俘虏问题另述",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z044",
+      "title": "1797 Trinidad英军攻占西班牙岛港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.64,
+        10.47,
+        -61.41,
+        10.82
+      ],
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "1797军事接管，1802才正式割让",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-Z045",
+      "title": "1798 Saint Domingue英军撤离沿海殖民占领",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1798
+        }
+      ],
+      "bbox": [
+        -74.45,
+        18.13,
+        -72.15,
+        19.86
+      ],
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "港城英军驻守结束，不能继续涂到1799年",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    }
+  ],
+  "sites": [
+    {
+      "id": "B39-C-P001",
+      "title": "1759—1762法国瓜德罗普岛英军短期占领",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.435,
+        16.165
+      ],
+      "linked_zone_id": "B39-C-Z001",
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "1759英军夺岛，1763和约归还法国；框仅示意岛屿位置，非历史边界",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P002",
+      "title": "1759年瓜德罗普巴斯特尔登陆和军事争夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1759
+        }
+      ],
+      "coordinates": [
+        -61.705,
+        15.975000000000001
+      ],
+      "linked_zone_id": "B39-C-Z002",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "英国七年战争行动的地点背景，未测绘军队线",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P004",
+      "title": "1759年瓜德罗普巴斯特尔城镇英占背景",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.705,
+        16.005
+      ],
+      "linked_zone_id": "B39-C-Z004",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "指向被占岛屿的港城，地方军政范围尚未实测",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P005",
+      "title": "1759年瓜德罗普Pointe-a-Pitre泻湖港区",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.504999999999995,
+        16.240000000000002
+      ],
+      "linked_zone_id": "B39-C-Z005",
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英占期间的贸易港参考区，不确认具体船只航次",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P008",
+      "title": "1761—1762多米尼克英军占据及和约续属",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.370000000000005,
+        15.415
+      ],
+      "linked_zone_id": "B39-C-Z008",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "英国1761占岛，1763和约承认，卡利纳戈社群保有自主政治",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P009",
+      "title": "1761年多米尼克Roseau港英军占领阶段",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.385000000000005,
+        15.3
+      ],
+      "linked_zone_id": "B39-C-Z009",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "军事驻港附近参考，未验证内陆实占",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P010",
+      "title": "1761年多米尼克Portsmouth港战争期间",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.46,
+        15.555
+      ],
+      "linked_zone_id": "B39-C-Z010",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "占岛时期北部港湾地理定位，非驻军证明",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P013",
+      "title": "1762年英国占Martinique法属殖民岛",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.025000000000006,
+        14.64
+      ],
+      "linked_zone_id": "B39-C-Z013",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "1762英军夺取马提尼克，1763归法，未画实测战线",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P014",
+      "title": "1762年Martinique Fort Royal英军占港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.075,
+        14.6
+      ],
+      "linked_zone_id": "B39-C-Z014",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "港城小范围参考而非城墙测量",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P015",
+      "title": "1762年Martinique Saint Pierre英占岛背景",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.165,
+        14.75
+      ],
+      "linked_zone_id": "B39-C-Z015",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "英军战时占岛在北部港口地理参考，不推断每座村落驻军",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P018",
+      "title": "1762—1763 Grenada英军夺取法国殖民岛",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.64,
+        12.16
+      ],
+      "linked_zone_id": "B39-C-Z018",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "1762战争夺岛，1763和约确认归英，非全部内陆兵营",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P019",
+      "title": "1762 Grenada St George英军占港期",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.754999999999995,
+        12.055
+      ],
+      "linked_zone_id": "B39-C-Z019",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "1763后法定殖民行政阶段另已有早期数据",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P020",
+      "title": "1762 Grenada Grenville沿岸战争背景",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.629999999999995,
+        12.145
+      ],
+      "linked_zone_id": "B39-C-Z020",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "表示英方岛屿占领期受影响海岸，缺乏独立驻军证据",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P022",
+      "title": "1762 Saint Lucia英国短期占据",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -60.980000000000004,
+        13.895
+      ],
+      "linked_zone_id": "B39-C-Z022",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "1762英军占岛，1763回法国",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P023",
+      "title": "1762 Saint Lucia Castries军港接触",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.025,
+        14.02
+      ],
+      "linked_zone_id": "B39-C-Z023",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "占岛背景下港口局部位置参考",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P024",
+      "title": "1762 Saint Lucia Soufriere港湾战时活动",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.04,
+        13.855
+      ],
+      "linked_zone_id": "B39-C-Z024",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "海湾仅为战时交通地理参考，不当成占领军驻守点",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P026",
+      "title": "1762 Saint Vincent英军占岛引发主权争议",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.21,
+        13.17
+      ],
+      "linked_zone_id": "B39-C-Z026",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "当地Garifuna与Kalinago政治主体独立；框是英国法政声索之争",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P027",
+      "title": "1762 Saint Vincent Kingstown英占殖民港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.22,
+        13.16
+      ],
+      "linked_zone_id": "B39-C-Z027",
+      "source_key": "UCHI",
+      "source_urls": [
+        "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en"
+      ],
+      "note": "此为殖民港镇参考，山地控制存在争议",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P032",
+      "title": "1762 Havana英军短期占港及船坞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -82.35499999999999,
+        23.1
+      ],
+      "linked_zone_id": "B39-C-Z032",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "英军围城攻陷并占港，1763归西班牙",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P033",
+      "title": "1762 Havana Morro Castle围城军事区域",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -82.34,
+        23.155
+      ],
+      "linked_zone_id": "B39-C-Z033",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "西班牙守堡与英军围困地点，包络非工事测绘",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P034",
+      "title": "1762 Havana城内英军驻地与没收船只",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -82.35499999999999,
+        23.14
+      ],
+      "linked_zone_id": "B39-C-Z034",
+      "source_key": "UNB",
+      "source_urls": [
+        "https://lib.unb.ca/guides/loyalist-collection-british-west-indies"
+      ],
+      "note": "占据西班牙殖民港并夺取舰艇，具体财物数量不在本地图捏造",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P037",
+      "title": "1762 Philippines Manila英军港城短占",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        121.005,
+        14.565000000000001
+      ],
+      "linked_zone_id": "B39-C-Z037",
+      "source_key": "NAM",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "英军短占港城不等于占菲律宾群岛",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P039",
+      "title": "1782 Saint Kitts法军短占期间英军失守",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -62.72,
+        17.33
+      ],
+      "linked_zone_id": "B39-C-Z039",
+      "source_key": "PARIS",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1783和约英国恢复，法国战时驻军",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P040",
+      "title": "1782 Nevis法军占领英属岛港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -62.63,
+        17.155
+      ],
+      "linked_zone_id": "B39-C-Z040",
+      "source_key": "PARIS",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "战时失守，1783英国恢复",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P041",
+      "title": "1782 Montserrat英军失去岛上驻地",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -62.195,
+        16.74
+      ],
+      "linked_zone_id": "B39-C-Z041",
+      "source_key": "PARIS",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "法国军占阶段，1783归英",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P042",
+      "title": "1794 Guadeloupe法国革命军夺回此前英占港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "coordinates": [
+        -61.47,
+        16.19
+      ],
+      "linked_zone_id": "B39-C-Z042",
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "年内英军短暂登陆，Victor Hugues领导法军反攻，不能记为全年英占",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P043",
+      "title": "1796 Saint Lucia英国重夺Fort Charlotte",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -60.989999999999995,
+        14.010000000000002
+      ],
+      "linked_zone_id": "B39-C-Z043",
+      "source_key": "EH",
+      "source_urls": [
+        "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "note": "1796年英军受降，法方革命军俘虏问题另述",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-C-P044",
+      "title": "1797 Trinidad英军攻占西班牙岛港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.525,
+        10.645
+      ],
+      "linked_zone_id": "B39-C-Z044",
+      "source_key": "ACD",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "1797军事接管，1802才正式割让",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}
