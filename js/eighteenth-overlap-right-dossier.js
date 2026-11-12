@@ -294,7 +294,8 @@
  window.eighteenthOverlapDossier={
   render,
   getAudit:()=>({loaded,error,year:host.getYear(),areas:areas.length,sites:sites.length,
-   selectedCount:activeRecords.length,selected,glowCount:glowGroup.getLayers().length,
+   selectedCount:activeRecords.length,selected,focused,
+   glowCount:glowGroup.getLayers().length,
    open:!!$('atlas18cOverlapPanel'),sourceRecords:activeRecords.map(r=>r.id)})
  };
  void load();
