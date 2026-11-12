@@ -61,7 +61,7 @@ def audit():
         zip_names=sorted(z.namelist())
     index=read_json(READER/"preview-18c-index.json")
     stories=index["stories"]
-    assert len(stories)==31 and len({s["id"] for s in stories})==31
+    assert len(stories)==34 and len({s["id"] for s in stories})==34
     coverage_arcs=set()
     for s in stories:
         story=read_json(ROOT/s["file"])

@@ -1,0 +1,78 @@
+name: 18C R33 Awadh Calabar Mi'kmaq three archive gap dossiers strict GIS QA
+on:
+  push:
+    branches:
+      - map/18c-33-awadh-begams-calabar-mikmaq-1761-1785-20261112
+  pull_request:
+    branches:
+      - audit/18c-1126-source-to-atlas-coverage-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  thirtyfour-story-source-GIS-and-reader:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: All 34 articles, original 1126 crosswalk five archive ID keys, chronology, strict GIS
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          for test in scripts/test_18c_*.js; do node "$test"; done
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_r33_original_archive_gaps.py
+          python3 scripts/audit_18c_1126_coverage.py --out-dir 18c-r33-audit-results
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m json.tool data/stories/serial/chronology-preview-r33-three-archival-gaps-1761-1790.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-r33-awadh-bahu-begam-1765-1783.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-r33-old-calabar-robin-johns-1766-1790.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-r33-mikmaq-peace-treaties-1761.json >/dev/null
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c33-1126-refreshed-archive-gap-audit
+          path: 18c-r33-audit-results/
+          if-no-files-found: ignore
+  real-desktop-chromium:
+    needs: thirtyfour-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real 1780x1020 three R33 dossiers, all previous 31 studies and published Tudor map regressions
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c33-http.log 2>&1 &
+          python3 scripts/browser_18c_r33_three_archive_gaps.py
+          for browser_test in scripts/browser_18c_*.py; do
+            if [ "$browser_test" != "scripts/browser_18c_r33_three_archive_gaps.py" ]; then
+              python3 "$browser_test"
+            fi
+          done
+          python3 scripts/browser_major_story_pilot.py
+      - name: Preserve full desktop screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c33-awadh-calabar-mikmaq-34-topic-desktop-screenshots
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  public-draft-web-preview:
+    needs: thirtyfour-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify independent SHA-bound HTML, 3 research articles, 26 events and previous T33 and T28
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js css/history-stories.css data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-r33-three-archival-gaps-1761-1790.json data/stories/serial/e18-r33-awadh-bahu-begam-1765-1783.json data/stories/serial/e18-r33-old-calabar-robin-johns-1766-1790.json data/stories/serial/e18-r33-mikmaq-peace-treaties-1761.json data/stories/serial/chronology-preview-t33-scotland-slavery-courts-1707-1792.json data/stories/serial/chronology-preview-t28-havana-egmont-malta-1762-1799.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$path"
+          done

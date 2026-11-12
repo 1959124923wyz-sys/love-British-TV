@@ -8,7 +8,7 @@ const ledger=J('research/continuity/1707-1792-scotland-slavery-courts/T33_ARCHIV
 const raw=J('research/18c/consolidated/series/T33.json');
 const idx=J('data/stories/serial/preview-18c-index.json'),app=rd('app.js'),ui=rd('js/history-stories.js'),html=rd('index.html');
 A.equal(raw.story_arc_id,'T33');A.equal(raw.groups.length,0);A.equal(raw.main_map_candidates,0);A.equal(raw.topic_mode_candidates,0);
-A.equal(idx.stories.length,31);A.equal(idx.stories[30].id,story.id);A.equal(idx.stories[30].status,'research_preview');
+A.equal(idx.stories.length,34);A.equal(idx.stories[30].id,story.id);A.equal(idx.stories[30].status,'research_preview');
 A.equal(d.schema,'atlas-18c-t33-scotland-slavery-freedom-court-v1');A.equal(d.events.length,29);
 A.equal(d.sources.length,21);A.equal(story.sections.length,29);
 A.equal(d.provenance.original_merge_groups,0);A.equal(d.provenance.original_candidate_ids,0);A.equal(d.provenance.original_B_keys,0);A.equal(d.provenance.mapped_original_ids,0);
@@ -46,7 +46,7 @@ A.equal(links.length,29);A.equal(new Set(links).size,29);
 A.deepEqual(new Set(links),new Set(story.related_event_ids));
 A.deepEqual(new Set(links),new Set(idx.stories[30].event_ids));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t33-scotland-slavery-courts-1707-1792.json'"));
-A(app.includes('t33ScottishFreedom31Ready=true'));A(ui.includes('draft.stories?.length===31'));
+A(app.includes('t33ScottishFreedom31Ready=true'));A(ui.includes('draft.stories?.length===34'));
 A(ui.includes('t33ScottishFreedomContinuation'));A(html.includes('18c31-t33-20261111'));
 A(!ui.includes('story-reading-toolbar')&&!ui.includes('story-toc')&&!ui.includes('story-reading-progress-meter')&&!ui.includes('data-story-nav'));
 const E=k=>d.events.find(e=>e.id==='E18C-T33-'+k);
