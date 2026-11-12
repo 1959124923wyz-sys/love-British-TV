@@ -51,10 +51,26 @@ try:
  browser.save_screenshot(str(OUT/'atlas49-independent-foreground-symbol.png'))
  js("window.atlas49TestMarker.remove()")
  position=js("""
-  const map=window.__eighteenthSpatialHost.map;
-  const p=map.latLngToContainerPoint([23.14,-82.36]),r=map.getContainer().getBoundingClientRect();
-  return {x:r.left+p.x,y:r.top+p.y};
+  const map=window.__eighteenthSpatialHost.map,api=window.eighteenthOverlapDossier;
+  const center=map.latLngToContainerPoint([23.14,-82.36]),
+    rect=map.getContainer().getBoundingClientRect();
+  let choice=null;
+  for(const dy of [24,-24,40,-40,64,-64,0]){
+   for(const dx of [0,24,-24,40,-40,64,-64]){
+    const p=L.point(center.x+dx,center.y+dy);
+    if(p.x<55||p.y<55||p.x>rect.width-55||p.y>rect.height-55)continue;
+    const x=rect.left+p.x,y=rect.top+p.y,target=document.elementFromPoint(x,y);
+    if(!target||target.closest('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.leaflet-interactive'))continue;
+    const ll=map.containerPointToLatLng(p),hits=api.hitCountAt(ll.lat,ll.lng);
+    if(hits<2)continue;
+    choice={x,y,hits,target:target.outerHTML.slice(0,190)};
+    break;
+   }
+   if(choice)break;
+  }
+  return choice||{error:'No exposed polygon interior beside event marker'};
  """)
+ assert 'error' not in position,position
  click(position['x'],position['y'])
  wait.until(lambda _:js("return window.eighteenthOverlapDossier.getAudit().open"))
  audit=js("return window.eighteenthOverlapDossier.getAudit()")
