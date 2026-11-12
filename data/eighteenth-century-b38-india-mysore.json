@@ -1,0 +1,2213 @@
+{
+  "schema": "atlas-18c-batch38-v1",
+  "region": "india-mysore",
+  "review_only": true,
+  "documentation": "NAM military history, British Library treaty documents, official Burma military history; 18C local-area rectangles not surveyed polygons.",
+  "source_register": {
+    "EIC": "https://www.nam.ac.uk/explore/armies-east-india-company",
+    "CLIVE": "https://www.nam.ac.uk/explore/robert-clive",
+    "SEVEN": "https://www.nam.ac.uk/explore/seven-years-war",
+    "PLASSEY": "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block",
+    "MYSORE": "https://www.nam.ac.uk/explore/tipu-sultans-war-turban",
+    "SOLDIER": "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot",
+    "BL1784": "https://searcharchives.bl.uk/catalog/032-002059709",
+    "BLTREATY": "https://searcharchives.bl.uk/catalog/040-000004780",
+    "NAM_BURMA": "https://www.nam.ac.uk/explore/timeline-burma-army",
+    "TAX": "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772",
+    "POND_RESTORE": "https://searcharchives.bl.uk/catalog/032-002282738"
+  },
+  "area_sqkm_totals": null,
+  "area_aggregation_forbidden": true,
+  "zones": [
+    {
+      "id": "B38-I-Z001",
+      "title": "1746年法国夺占Madras Fort St George英方控制中断",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1746,
+          "end_year": 1748
+        }
+      ],
+      "bbox": [
+        80.2,
+        12.99,
+        80.36,
+        13.16
+      ],
+      "source_key": "CLIVE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/robert-clive"
+      ],
+      "note": "法国短时接管，公司于1749恢复",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z002",
+      "title": "1749年后Madras Fort St George英方军驻市区",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        80.23,
+        13.01,
+        80.34,
+        13.15
+      ],
+      "source_key": "CLIVE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/robert-clive"
+      ],
+      "note": "逐地驻军仅限城堡和城市附近",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z003",
+      "title": "1751年Arcot城堡Clive据守并战胜围军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1751
+        }
+      ],
+      "bbox": [
+        79.27,
+        12.79,
+        79.49,
+        13.01
+      ],
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "临时军事控制，纳瓦卜及法军同盟关系复杂",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z004",
+      "title": "1751年Arcot英法与地方纳瓦卜围城战况",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1751
+        }
+      ],
+      "bbox": [
+        79.2,
+        12.68,
+        79.53,
+        13.04
+      ],
+      "source_key": "CLIVE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/robert-clive"
+      ],
+      "note": "1751年英法及当地纳瓦卜同盟争夺Arcot外围，矩形只表示战斗附近",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z005",
+      "title": "1756年Bengal纳瓦卜夺取Calcutta公司要塞",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1756,
+          "end_year": 1756
+        }
+      ],
+      "bbox": [
+        88.2,
+        22.44,
+        88.52,
+        22.66
+      ],
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "英国公司1756失去加尔各答驻点",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z006",
+      "title": "1757年Clive重新攻取Calcutta要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.19,
+        22.45,
+        88.51,
+        22.69
+      ],
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "1757重新取得公司驻城",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z007",
+      "title": "1757年Chandernagore英军夺取法国商馆",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "bbox": [
+        88.32,
+        22.82,
+        88.43,
+        22.93
+      ],
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "东印度公司与法国商馆争夺，不等于征服全孟加拉",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z008",
+      "title": "1757年Chandernagore法英商馆战争影响",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "bbox": [
+        88.28,
+        22.77,
+        88.49,
+        22.96
+      ],
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "法国商馆与当地纳瓦卜的关系分层",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z009",
+      "title": "1757年Plassey战场及英公司获胜",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "bbox": [
+        88.11,
+        23.64,
+        88.42,
+        23.91
+      ],
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "军事胜利不是整个孟加拉即刻直接行政",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z010",
+      "title": "1757年Siraj ud Daulah被推翻后纳瓦卜政权政治介入",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1764
+        }
+      ],
+      "bbox": [
+        88.1,
+        23.84,
+        88.51,
+        24.4
+      ],
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "Mir Jafar等本地政治主体仍参与治理",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z011",
+      "title": "1764年Buxar英公司对莫卧儿及Awadh联军战斗",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1764
+        }
+      ],
+      "bbox": [
+        83.86,
+        25.47,
+        84.17,
+        25.71
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "次年授税权，与战场控制分开",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z012",
+      "title": "1765年公司获得Bengal税关Diwani权利",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        87,
+        21.4,
+        92.4,
+        26.8
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "整体财政权参考面，须和地方行政/驻军分离",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z013",
+      "title": "1765年公司获得Bihar名义Diwani权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        83.5,
+        23.5,
+        88.9,
+        27.5
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "属财政税收权，并非逐县完成军事征服",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z014",
+      "title": "1765年公司名义Orissa Diwani税权声索",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        83.8,
+        18.7,
+        88,
+        22.7
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "与1803年后英国直接控制奥里萨的情形严分",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z015",
+      "title": "1765年Murshidabad纳瓦卜宫廷受英公司财政干涉",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88.1,
+        24,
+        88.46,
+        24.37
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "纳瓦卜机构及当地中介并存",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z016",
+      "title": "1772年Bengal公司财政制度改革涉区",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1772
+        }
+      ],
+      "bbox": [
+        87.6,
+        22.1,
+        90.7,
+        26.3
+      ],
+      "source_key": "TAX",
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772"
+      ],
+      "note": "财税改革而非突然增加英国军政领土",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z017",
+      "title": "1760年Wandiwash英法战役胜利关联",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "bbox": [
+        79.45,
+        12.37,
+        79.83,
+        12.76
+      ],
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "南印度英法军事优势更迭",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z018",
+      "title": "1761年Pondicherry法国商馆被英军围陷",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1764
+        }
+      ],
+      "bbox": [
+        79.7,
+        11.79,
+        79.98,
+        12.07
+      ],
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "1761英军攻陷法属据点，法国商馆至1765恢复；未延伸为整个卡纳提克统治",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z019",
+      "title": "1761年Pondicherry英法围城战场",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1761
+        }
+      ],
+      "bbox": [
+        79.68,
+        11.76,
+        80.02,
+        12.11
+      ],
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "战场不等同于全卡纳提克行政",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z020",
+      "title": "1765年后Pondicherry法属商馆恢复",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1777
+        }
+      ],
+      "bbox": [
+        79.7,
+        11.79,
+        79.98,
+        12.07
+      ],
+      "source_key": "POND_RESTORE",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002282738"
+      ],
+      "note": "英国图书馆保存1765年马德拉斯议会关于将Pondicherry归还法国的往来，年份以实际重开参考",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z021",
+      "title": "1778年Pondicherry英军夺取法属商馆",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        79.7,
+        11.79,
+        79.98,
+        12.07
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "与法国争夺期间局部控制",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z022",
+      "title": "1793年Pondicherry英军再次占领法属城",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.7,
+        11.79,
+        79.98,
+        12.07
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "法国大革命战争中的阶段性占据",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z023",
+      "title": "1767—1769第一次Anglo Mysore战争主要影响带",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1769
+        }
+      ],
+      "bbox": [
+        76.15,
+        11.1,
+        80.2,
+        15.4
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "军队战线变动频繁，绝不可涂为英国占据迈索尔",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z024",
+      "title": "1769年Madras条约英公司与Hyder Ali外交",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1769
+        }
+      ],
+      "bbox": [
+        80.19,
+        12.95,
+        80.43,
+        13.18
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "敌对两方订约，迈索尔依旧独立",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z025",
+      "title": "1780年Hyder Ali迈索尔军进入Carnatic",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        77.2,
+        10.6,
+        80.7,
+        14.1
+      ],
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "地方王国军队主动进攻，不能算英国实控",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z026",
+      "title": "1780年Pollilur迈索尔军大胜英军",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        79.51,
+        12.74,
+        79.87,
+        13.02
+      ],
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "1780年Pollilur迈索尔军队重创东印度公司军，独立王国政治行动",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z027",
+      "title": "1781年Porto Novo英迈战斗地点",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        79.67,
+        11.4,
+        80,
+        11.71
+      ],
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "战役胜负不等于整片沿岸占领",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z028",
+      "title": "1781年Negapatam英军夺取荷兰港堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.72,
+        10.65,
+        80.02,
+        10.92
+      ],
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "1781年英国攻占Negapatam荷兰商馆港口，欧洲战争导致据点易手",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z029",
+      "title": "1782年英法舰队沿Coromandel海岸海战影响",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        79.3,
+        9.4,
+        81.4,
+        15.2
+      ],
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "只提示海上战事，不主张英国专属水域",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z030",
+      "title": "1783年Mangalore英迈两军围攻和争夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1783
+        }
+      ],
+      "bbox": [
+        74.75,
+        12.78,
+        74.96,
+        13.04
+      ],
+      "source_key": "BL1784",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002059709"
+      ],
+      "note": "英国使团和迈索尔和谈背景",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z031",
+      "title": "1784年Tipu Sultan与公司Mangalore和平条约",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784
+        }
+      ],
+      "bbox": [
+        74.75,
+        12.78,
+        74.96,
+        13.04
+      ],
+      "source_key": "BL1784",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002059709"
+      ],
+      "note": "英国图书馆记载1784年3月11日签约，双方为独立交战政权",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z032",
+      "title": "1784年Mangalore公司撤回部分争议占地",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784
+        }
+      ],
+      "bbox": [
+        74.63,
+        12.69,
+        75.07,
+        13.13
+      ],
+      "source_key": "BLTREATY",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000004780"
+      ],
+      "note": "1784和约规定复原战争期间所争地与俘虏处置，实际军事撤离的各点需独立核对",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z033",
+      "title": "1784年Mangalore交换战争俘虏与英国守军离开",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784
+        }
+      ],
+      "bbox": [
+        74.67,
+        12.74,
+        75.03,
+        13.07
+      ],
+      "source_key": "BLTREATY",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000004780"
+      ],
+      "note": "英方印度事务文书列出交换战俘条款及人员名单，非新征服区域",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z034",
+      "title": "1791年Bangalore第三次Mysore战争围城",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791
+        }
+      ],
+      "bbox": [
+        77.45,
+        12.83,
+        77.8,
+        13.22
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "英军攻占战地，仅战役影响",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z035",
+      "title": "1792年Seringapatam英军围城后和约",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792
+        }
+      ],
+      "bbox": [
+        76.56,
+        12.26,
+        76.87,
+        12.64
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "首府并非被公司长期吞并",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z036",
+      "title": "1792年Malabar海岸公司获得割让土地",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        74.98,
+        10.4,
+        76.75,
+        12.65
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "条约后公司财政行政涉及海岸，不等于整个西高止山脉被控",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z037",
+      "title": "1792年Baramahal和Salem公司取得地区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        77.33,
+        11.3,
+        79,
+        12.8
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "割让地广域参考，不代表附近地方村社完全受军驻管",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z038",
+      "title": "1792年Dindigul公司财政管理权转移",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        77.74,
+        10.06,
+        78.45,
+        10.91
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "Diwani式财税关系与军政驻地分开",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z039",
+      "title": "1798年Hyderabad Nizam与公司附属条约",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        78.3,
+        17.1,
+        78.69,
+        17.6
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "海得拉巴地方王国自治和王室权力持续",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z040",
+      "title": "1798年Hyderabad条约军事援助及财政义务影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.9,
+        15.7,
+        81.2,
+        19.9
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "附属同盟范围不等于直接吞并或公司实际占地",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z041",
+      "title": "1799年Seringapatam英军攻破王都",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.57,
+        12.31,
+        76.86,
+        12.59
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "Tipu Sultan战死，战后战利品掠夺",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z042",
+      "title": "1799年Coimbatore公司接管局部辖区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.6,
+        10.55,
+        77.5,
+        11.48
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "1799年迈索尔战后Coimbatore地区并入公司管辖，宽幅参考而非实测边界",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z043",
+      "title": "1799年South Canara公司接管沿海地",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        74.3,
+        11.9,
+        75.82,
+        14.15
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "战后割地但具体现代地区界线不适用",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z044",
+      "title": "1799年Mysore保留本地王室及间接控制",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.9,
+        11.3,
+        78.45,
+        14.4
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "迈索尔土邦王室继续，本地权利不算英国直接行政省",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z045",
+      "title": "1784年Burma征服Arakan与英属Chittagong边境",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        92,
+        19.6,
+        93.6,
+        21.8
+      ],
+      "source_key": "NAM_BURMA",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/timeline-burma-army"
+      ],
+      "note": "阿拉干属于缅甸王朝征服，不是英国领土",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z046",
+      "title": "1784后Chittagong与Arakan边界英国公司警戒",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        91.3,
+        21.5,
+        92.6,
+        23
+      ],
+      "source_key": "NAM_BURMA",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/timeline-burma-army"
+      ],
+      "note": "边境接触及冲突增加，英国未征服Arakan",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-Z047",
+      "title": "1784年缅甸王朝夺取Arakan的东部边境战事",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784
+        }
+      ],
+      "bbox": [
+        91.9,
+        19.75,
+        93.6,
+        21.85
+      ],
+      "source_key": "NAM_BURMA",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/timeline-burma-army"
+      ],
+      "note": "1784年缅甸王朝征服Arakan，英国并未占领该区；局部参考框显示边境局势",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    }
+  ],
+  "sites": [
+    {
+      "id": "B38-I-P001",
+      "title": "1746年法国夺占Madras Fort St George英方控制中断",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1746,
+          "end_year": 1748
+        }
+      ],
+      "coordinates": [
+        80.28,
+        13.075
+      ],
+      "linked_zone_id": "B38-I-Z001",
+      "source_key": "CLIVE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/robert-clive"
+      ],
+      "note": "法国短时接管，公司于1749恢复",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P002",
+      "title": "1749年后Madras Fort St George英方军驻市区",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        80.285,
+        13.08
+      ],
+      "linked_zone_id": "B38-I-Z002",
+      "source_key": "CLIVE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/robert-clive"
+      ],
+      "note": "逐地驻军仅限城堡和城市附近",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P003",
+      "title": "1751年Arcot城堡Clive据守并战胜围军",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1751
+        }
+      ],
+      "coordinates": [
+        79.38,
+        12.899999999999999
+      ],
+      "linked_zone_id": "B38-I-Z003",
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "临时军事控制，纳瓦卜及法军同盟关系复杂",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P004",
+      "title": "1751年Arcot英法与地方纳瓦卜围城战况",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1751
+        }
+      ],
+      "coordinates": [
+        79.36500000000001,
+        12.86
+      ],
+      "linked_zone_id": "B38-I-Z004",
+      "source_key": "CLIVE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/robert-clive"
+      ],
+      "note": "1751年英法及当地纳瓦卜同盟争夺Arcot外围，矩形只表示战斗附近",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P005",
+      "title": "1756年Bengal纳瓦卜夺取Calcutta公司要塞",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1756,
+          "end_year": 1756
+        }
+      ],
+      "coordinates": [
+        88.36,
+        22.55
+      ],
+      "linked_zone_id": "B38-I-Z005",
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "英国公司1756失去加尔各答驻点",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P006",
+      "title": "1757年Clive重新攻取Calcutta要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.35,
+        22.57
+      ],
+      "linked_zone_id": "B38-I-Z006",
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "1757重新取得公司驻城",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P007",
+      "title": "1757年Chandernagore英军夺取法国商馆",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "coordinates": [
+        88.375,
+        22.875
+      ],
+      "linked_zone_id": "B38-I-Z007",
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "东印度公司与法国商馆争夺，不等于征服全孟加拉",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P008",
+      "title": "1757年Chandernagore法英商馆战争影响",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "coordinates": [
+        88.38499999999999,
+        22.865000000000002
+      ],
+      "linked_zone_id": "B38-I-Z008",
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "法国商馆与当地纳瓦卜的关系分层",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P009",
+      "title": "1757年Plassey战场及英公司获胜",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757
+        }
+      ],
+      "coordinates": [
+        88.265,
+        23.775
+      ],
+      "linked_zone_id": "B38-I-Z009",
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "军事胜利不是整个孟加拉即刻直接行政",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P010",
+      "title": "1757年Siraj ud Daulah被推翻后纳瓦卜政权政治介入",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1764
+        }
+      ],
+      "coordinates": [
+        88.305,
+        24.119999999999997
+      ],
+      "linked_zone_id": "B38-I-Z010",
+      "source_key": "PLASSEY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/battle-plassey?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "note": "Mir Jafar等本地政治主体仍参与治理",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P011",
+      "title": "1764年Buxar英公司对莫卧儿及Awadh联军战斗",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1764
+        }
+      ],
+      "coordinates": [
+        84.015,
+        25.59
+      ],
+      "linked_zone_id": "B38-I-Z011",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "次年授税权，与战场控制分开",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P015",
+      "title": "1765年Murshidabad纳瓦卜宫廷受英公司财政干涉",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.28,
+        24.185000000000002
+      ],
+      "linked_zone_id": "B38-I-Z015",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "纳瓦卜机构及当地中介并存",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P017",
+      "title": "1760年Wandiwash英法战役胜利关联",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "coordinates": [
+        79.64,
+        12.565
+      ],
+      "linked_zone_id": "B38-I-Z017",
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "南印度英法军事优势更迭",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P018",
+      "title": "1761年Pondicherry法国商馆被英军围陷",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1764
+        }
+      ],
+      "coordinates": [
+        79.84,
+        11.93
+      ],
+      "linked_zone_id": "B38-I-Z018",
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "1761英军攻陷法属据点，法国商馆至1765恢复；未延伸为整个卡纳提克统治",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P019",
+      "title": "1761年Pondicherry英法围城战场",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1761
+        }
+      ],
+      "coordinates": [
+        79.85,
+        11.934999999999999
+      ],
+      "linked_zone_id": "B38-I-Z019",
+      "source_key": "SEVEN",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "note": "战场不等同于全卡纳提克行政",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P020",
+      "title": "1765年后Pondicherry法属商馆恢复",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1777
+        }
+      ],
+      "coordinates": [
+        79.84,
+        11.93
+      ],
+      "linked_zone_id": "B38-I-Z020",
+      "source_key": "POND_RESTORE",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002282738"
+      ],
+      "note": "英国图书馆保存1765年马德拉斯议会关于将Pondicherry归还法国的往来，年份以实际重开参考",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P021",
+      "title": "1778年Pondicherry英军夺取法属商馆",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        79.84,
+        11.93
+      ],
+      "linked_zone_id": "B38-I-Z021",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "与法国争夺期间局部控制",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P022",
+      "title": "1793年Pondicherry英军再次占领法属城",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.84,
+        11.93
+      ],
+      "linked_zone_id": "B38-I-Z022",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "法国大革命战争中的阶段性占据",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P024",
+      "title": "1769年Madras条约英公司与Hyder Ali外交",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1769
+        }
+      ],
+      "coordinates": [
+        80.31,
+        13.065
+      ],
+      "linked_zone_id": "B38-I-Z024",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "敌对两方订约，迈索尔依旧独立",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P026",
+      "title": "1780年Pollilur迈索尔军大胜英军",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        79.69,
+        12.879999999999999
+      ],
+      "linked_zone_id": "B38-I-Z026",
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "1780年Pollilur迈索尔军队重创东印度公司军，独立王国政治行动",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P027",
+      "title": "1781年Porto Novo英迈战斗地点",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        79.83500000000001,
+        11.555
+      ],
+      "linked_zone_id": "B38-I-Z027",
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "战役胜负不等于整片沿岸占领",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P028",
+      "title": "1781年Negapatam英军夺取荷兰港堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.87,
+        10.785
+      ],
+      "linked_zone_id": "B38-I-Z028",
+      "source_key": "SOLDIER",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "note": "1781年英国攻占Negapatam荷兰商馆港口，欧洲战争导致据点易手",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P030",
+      "title": "1783年Mangalore英迈两军围攻和争夺",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1783
+        }
+      ],
+      "coordinates": [
+        74.85499999999999,
+        12.91
+      ],
+      "linked_zone_id": "B38-I-Z030",
+      "source_key": "BL1784",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002059709"
+      ],
+      "note": "英国使团和迈索尔和谈背景",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P031",
+      "title": "1784年Tipu Sultan与公司Mangalore和平条约",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784
+        }
+      ],
+      "coordinates": [
+        74.85499999999999,
+        12.91
+      ],
+      "linked_zone_id": "B38-I-Z031",
+      "source_key": "BL1784",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002059709"
+      ],
+      "note": "英国图书馆记载1784年3月11日签约，双方为独立交战政权",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P032",
+      "title": "1784年Mangalore公司撤回部分争议占地",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784
+        }
+      ],
+      "coordinates": [
+        74.85,
+        12.91
+      ],
+      "linked_zone_id": "B38-I-Z032",
+      "source_key": "BLTREATY",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000004780"
+      ],
+      "note": "1784和约规定复原战争期间所争地与俘虏处置，实际军事撤离的各点需独立核对",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P033",
+      "title": "1784年Mangalore交换战争俘虏与英国守军离开",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784
+        }
+      ],
+      "coordinates": [
+        74.85,
+        12.905000000000001
+      ],
+      "linked_zone_id": "B38-I-Z033",
+      "source_key": "BLTREATY",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000004780"
+      ],
+      "note": "英方印度事务文书列出交换战俘条款及人员名单，非新征服区域",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P034",
+      "title": "1791年Bangalore第三次Mysore战争围城",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791
+        }
+      ],
+      "coordinates": [
+        77.625,
+        13.025
+      ],
+      "linked_zone_id": "B38-I-Z034",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "英军攻占战地，仅战役影响",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P035",
+      "title": "1792年Seringapatam英军围城后和约",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792
+        }
+      ],
+      "coordinates": [
+        76.715,
+        12.45
+      ],
+      "linked_zone_id": "B38-I-Z035",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "首府并非被公司长期吞并",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P038",
+      "title": "1792年Dindigul公司财政管理权转移",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        78.095,
+        10.485
+      ],
+      "linked_zone_id": "B38-I-Z038",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "Diwani式财税关系与军政驻地分开",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P039",
+      "title": "1798年Hyderabad Nizam与公司附属条约",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        78.495,
+        17.35
+      ],
+      "linked_zone_id": "B38-I-Z039",
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "海得拉巴地方王国自治和王室权力持续",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P041",
+      "title": "1799年Seringapatam英军攻破王都",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        76.715,
+        12.45
+      ],
+      "linked_zone_id": "B38-I-Z041",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "Tipu Sultan战死，战后战利品掠夺",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P042",
+      "title": "1799年Coimbatore公司接管局部辖区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        77.05,
+        11.015
+      ],
+      "linked_zone_id": "B38-I-Z042",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "1799年迈索尔战后Coimbatore地区并入公司管辖，宽幅参考而非实测边界",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-I-P043",
+      "title": "1799年South Canara公司接管沿海地",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        75.06,
+        13.025
+      ],
+      "linked_zone_id": "B38-I-Z043",
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "战后割地但具体现代地区界线不适用",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}
