@@ -84,6 +84,21 @@ try:
  assert js('return document.querySelectorAll(".atlas-18c-overlap-source-links a[href^=https]").length')>=1
  assert '历史文献与来源' in d.find_element(By.ID,'dossierBody').text
  snap('1762-selected-card-expanded-minimal-source-dossier')
+ # A native click on the map background inside several transparent bbox
+ # envelopes must still show their archive, without needing to hit thin strokes.
+ js("document.querySelector('#resetDossier').click();")
+ wait.until(lambda _:audit()['selectedCount']==0)
+ js("""
+  const map=window.__eighteenthSpatialHost.map;
+  const ll=L.latLng(23.14,-82.36);
+  map.setView(ll,9,{animate:false});
+  const p=map.latLngToContainerPoint(ll),r=map.getContainer().getBoundingClientRect();
+  map.getContainer().dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,
+   clientX:r.left+p.x,clientY:r.top+p.y}));
+ """)
+ wait.until(lambda _:audit()['open'] and audit()['selectedCount']>=4)
+ assert audit()['lastActivation']=='map-background-overlap',audit()
+ snap('1762-click-interior-transparent-overlap-fallback')
  year(1763)
  assert audit()['open']
  assert audit()['selectedCount']>=1
