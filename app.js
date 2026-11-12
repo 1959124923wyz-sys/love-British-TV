@@ -259,6 +259,7 @@ let t20Eic28Ready=false;
 let t23Penang29Ready=false;
 let t28HavanaMalta30Ready=false;
 let t33ScottishFreedom31Ready=false;
+let r33OriginalResearchThreeStoriesReady=false;
 const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
@@ -3466,6 +3467,35 @@ async function boot(){
       for(const s of ds.sources||[])sourcesById.set(s.id,s);
       t33ScottishFreedom31Ready=true;
     }catch(err){console.warn('T33 slavery court research omitted; first 30 research articles retained',err);}
+  }
+  // Batch 33: 3 separate original-dossier readers; one chronology dataset with 5 individually verified 1126-crosswalk IDs.
+  if(preview18cReady){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-r33-three-archival-gaps-1761-1790.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('R33 original archive dossiers missing');
+      const ds=await response.json(),es=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+      const originals=new Set(es.flatMap(e=>e.research_original_record_ids||[])),grps=new Set(es.map(e=>e.research_merge_group_id).filter(Boolean));
+      if(ds.schema!=='atlas-18c-r33-three-original-gaps-v1'||ds.editorial_status!=='research_preview_not_published'||
+         es.length!==26||originals.size!==5||grps.size!==3||ds.provenance?.original_merge_groups!==3||
+         ds.provenance?.mapped_original_ids!==5||ds.provenance?.original_source_key_count!==8||
+         ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+         es.some(e=>e.year<1761||e.year>1790||e.start_year!==e.year||e.end_year!==e.year||
+          e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||e.area_sqkm!==null||
+          e.actual_English_land_area_sqkm!==null||e.territorial_claim!==false||e.fill_authorized!==false||
+          !e.source_ids?.length||e.source_ids.some(id=>!src.has(id))||
+          (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+        throw new Error('R33 strict historical archive, chronological and GIS guard failed');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+        const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('R33 event ID duplicate');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-r33-awadh-calabar-mikmaq-'+decade,
+          period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const s of ds.sources||[])sourcesById.set(s.id,s);
+      r33OriginalResearchThreeStoriesReady=true;
+    }catch(err){console.warn('R33 dossier review not loaded; 31 previous drafts preserved',err);}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.
