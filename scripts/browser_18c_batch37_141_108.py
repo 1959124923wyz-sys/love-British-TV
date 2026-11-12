@@ -36,7 +36,7 @@ try:
   (1700,['海岸角Cape Coast英国','Fort Charles旧英国堡'],['Beyin Fort Apollonia','马德拉斯Fort St George法军占城'],'1700-forts'),
   (1731,['阿诺马布旧英堡拆毁','Fort Marlborough Bencoolen'],['1757后阿诺马布'],'1731-anomabu'),
   (1746,['马德拉斯Fort St George法军占城','1744—1778 Bunce Island'],['马德拉斯Fort St George英公司旧驻城'],'1746-madras-french'),
-  (1757,['1757后阿诺马布','1757后加尔各答Fort William'],['Gambia James Island英国'], '1757-coastal'),
+  (1757,['1757后阿诺马布','1757后加尔各答Fort William'],['Beyin Fort Apollonia'], '1757-coastal'),
   (1767,['Old Calabar英商协助伏击','Beyin的Nzema首领'],['Beyin Fort Apollonia'],'1767-calabar'),
   (1768,['Beyin Fort Apollonia','Calabar与利物浦贩奴贸易网'],['Old Calabar英商协助伏击'],'1768-africa'),
   (1775,['Balambangan苏禄力量攻占','英马战争孟买周边'],['1773—1774 Balambangan'],'1775-sulu'),
