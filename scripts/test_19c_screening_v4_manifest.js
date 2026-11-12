@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs');
+const path=require('node:path');
+const assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../data/research/19c');
+const m=JSON.parse(fs.readFileSync(path.join(root,'staged-v4-manifest.json'),'utf8'));
+const a=JSON.parse(fs.readFileSync(path.join(root,'screening-v4-aliases.json'),'utf8'));
+assert.equal(m.stage,'research_only_not_published');
+assert.equal(m.counts.v3_event_groups-m.counts.new_reversible_merges,m.counts.v4_event_groups);
+assert.equal(m.counts.v4_event_groups,485);
+assert.equal(m.counts.macro_topics,83);
+assert.equal(m.counts.evidence_nodes,1339);
+assert.equal(m.counts.source_links,2148);
+assert.equal(Object.values(m.class_breakdown).reduce((sum,x)=>sum+x,0),m.counts.v4_event_groups);
+assert.equal(m.counts.p0_research_candidates+m.counts.p1_research_candidates+m.counts.p2_internal_candidates,485);
+assert.equal(m.counts.approved_map_geometries,0);
+assert.equal(m.counts.published_events,0);
+assert.equal(m.qa.integrity_checks_failed,0);
+const all=Object.values(m.first_source_and_GIS_verification_batch).flat();
+assert.equal(all.length,36);
+assert.equal(new Set(all).size,36);
+for(const list of Object.values(m.first_source_and_GIS_verification_batch))assert.equal(list.length,12);
+assert.equal(a.aliases.length,11);
+for(const x of a.aliases)assert.notEqual(x.source_event_id,x.target_event_id);
+assert.equal(new Set(a.aliases.map(x=>x.source_event_id)).size,11);
+console.log('PASS: V4 staging: 83 themes, 485 review groups, 11 reversible merges, 1339 source nodes, balanced A/B/C 36-item QA queue.');
