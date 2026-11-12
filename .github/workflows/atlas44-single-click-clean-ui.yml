@@ -1,0 +1,65 @@
+name: Atlas 44 single region click and no scholarly UI notes
+on:
+  push:
+    branches:
+      - fix/atlas-44-single-area-click-no-editorial-warnings-20261112
+  pull_request:
+    branches:
+      - ux/atlas-43-clean-reader-copy-simplify-overlap-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  map44-static-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Valid JS, Python and source-backed single-region selection
+        run: |
+          for f in app.js js/atlas-reader-copy.js js/history-stories.js js/eighteenth-overlap-right-dossier.js js/historic-overlap-dossier-1497-1699.js; do node --check "$f"; done
+          python3 -m py_compile scripts/browser_atlas_44_single_area_click.py
+          node scripts/test_atlas_44_single_area_clean_ui.js
+          node scripts/test_reader_clean_copy_1497_1799.js
+          node scripts/test_historic_overlap_1497_1699.js
+          node scripts/test_18c_right_overlap_hover.js
+          node scripts/test_editor23_expansive_17c_claims.js
+          node scripts/test_18c_batch39_126_83.js
+          python3 scripts/audit_spatial_semantics.py --strict
+  map44-real-chromium:
+    needs: map44-static-sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Newfoundland 1610 standalone outlined polygon, isolated 18C, Havana overlap and historical regression
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas44-http.log 2>&1 &
+          python3 scripts/browser_atlas_44_single_area_click.py
+          python3 scripts/browser_atlas_clean_reader_copy.py
+          python3 scripts/browser_historic_overlap_1497_1699.py
+          python3 scripts/browser_18c_right_overlap_hover.py
+          python3 scripts/browser_editor23_expansive_17c_claims.py
+      - name: Keep real 1780x1020 desktop map screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas44-newfoundland-single-click-and-clean-dossiers
+          path: browser-smoke-results/
+          if-no-files-found: ignore
+  map44-sha-preview:
+    needs: map44-static-sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Verify immutable preview contains new map behavior and source files
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          for f in index.html app.js js/atlas-reader-copy.js js/history-stories.js js/eighteenth-overlap-right-dossier.js js/historic-overlap-dossier-1497-1699.js data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson data/eighteenth-century-mass-schematic-zones-1700-1799.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$f"
+          done
