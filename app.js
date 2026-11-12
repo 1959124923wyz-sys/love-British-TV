@@ -2229,6 +2229,8 @@ function setYear(v){
   if(map.hasLayer(groups.kingdom))map.removeLayer(groups.kingdom);
   $('historicalRegionGuide').hidden=true;
   renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
+  // The 1600–1799 setYear branch bypasses refreshHistoricalLayers; redraw true annual 18C surfaces here.
+  window.eighteenthSpatial?.render?.();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
   $('nextYear').disabled=year>=previewYearCap();
