@@ -44,7 +44,7 @@ try:
   (1781,['St Eustatius Oranjestad','1781英军在Padang'],['1795 Malacca'],'1781-navy'),
   (1783,['Grenada St George恢复英国','Dominica Roseau英方复占'],['1779—1782法国夺取'],'1783-treaties'),
   (1794,['Victor Hugues夺回Guadeloupe','英军短占Guadeloupe'],['1796英军攻占Saint Lucia'],'1794-guadeloupe'),
-  (1795,['1795 Malacca荷兰旧港','英军占Martinique Fort de France'],['1796 Banda'],'1795-trading-ports'),
+  (1795,['1795 Malacca荷兰旧港','英国占Martinique Fort de France'],['1796 Banda'],'1795-trading-ports'),
   (1796,['1796 Ambon','1796 Banda','Saint Lucia Fort Charlotte'],['1773—1774 Balambangan'],'1796-shifting-seas'),
   (1797,['Trinidad Port of Spain','Baliceaux岛Garifuna'],['Gambia James Island英商'],'1797-caribbean'),
   (1799,['1799后South Canara','1796 Banda','Sierra Leone河港'],['St Eustatius Oranjestad'],'1799-colonies')
