@@ -1,0 +1,112 @@
+name: Atlas 48 Pages publication preflight
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'app.js'
+      - 'js/**'
+      - 'css/**'
+      - 'data/**'
+      - 'scripts/**'
+      - '.github/workflows/pages.yml'
+      - '.github/workflows/atlas-48-pages-preflight.yml'
+  push:
+    branches: [fix/atlas-48-pages-publishing-and-desktop-qa-20261112]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run publication gate without deploying
+        run: |
+          # Collect all failing regressions while retaining the publication gate.
+          failures=0
+          python3 scripts/validate_atlas.py || { echo 'FAILED CHECK 1: python3 scripts/validate_atlas.py'; failures=$((failures+1)); }
+          python3 scripts/validate_approved_ui.py || { echo 'FAILED CHECK 2: python3 scripts/validate_approved_ui.py'; failures=$((failures+1)); }
+          python3 scripts/audit_spatial_semantics.py --strict --out /tmp/atlas-spatial-publish-audit.json || { echo 'FAILED CHECK 3: python3 scripts/audit_spatial_semantics.py --strict --out /tmp/atlas-spatial-publish-audit.json'; failures=$((failures+1)); }
+          python3 scripts/audit_event_editorial_metadata.py --strict --out /tmp/atlas-editorial-metadata-publish-audit.json || { echo 'FAILED CHECK 4: python3 scripts/audit_event_editorial_metadata.py --strict --out /tmp/atlas-editorial-metadata-publish-audit.json'; failures=$((failures+1)); }
+          node --check app.js || { echo 'FAILED CHECK 5: node --check app.js'; failures=$((failures+1)); }
+          node --check js/history-stories.js || { echo 'FAILED CHECK 6: node --check js/history-stories.js'; failures=$((failures+1)); }
+          node scripts/test_major_story_pilot.js || { echo 'FAILED CHECK 7: node scripts/test_major_story_pilot.js'; failures=$((failures+1)); }
+          node scripts/test_multi_story_entries.js || { echo 'FAILED CHECK 8: node scripts/test_multi_story_entries.js'; failures=$((failures+1)); }
+          node scripts/test_rut_kildare_major_stories.js || { echo 'FAILED CHECK 9: node scripts/test_rut_kildare_major_stories.js'; failures=$((failures+1)); }
+          node scripts/test_tudor_governance_device_forts.js || { echo 'FAILED CHECK 10: node scripts/test_tudor_governance_device_forts.js'; failures=$((failures+1)); }
+          node scripts/test_boulogne_kett_major_stories.js || { echo 'FAILED CHECK 11: node scripts/test_boulogne_kett_major_stories.js'; failures=$((failures+1)); }
+          node scripts/test_western_prayerbook_guinea_stories.js || { echo 'FAILED CHECK 12: node scripts/test_western_prayerbook_guinea_stories.js'; failures=$((failures+1)); }
+          node scripts/test_institutional_phase1.js || { echo 'FAILED CHECK 13: node scripts/test_institutional_phase1.js'; failures=$((failures+1)); }
+          node scripts/test_marian_executions_1555_1556.js || { echo 'FAILED CHECK 14: node scripts/test_marian_executions_1555_1556.js'; failures=$((failures+1)); }
+          node scripts/test_institutional_phase3.js || { echo 'FAILED CHECK 15: node scripts/test_institutional_phase3.js'; failures=$((failures+1)); }
+          node scripts/test_snake_f_two_institutional_stories.js || { echo 'FAILED CHECK 16: node scripts/test_snake_f_two_institutional_stories.js'; failures=$((failures+1)); }
+          node scripts/test_snake_f_batch01_sieges.js || { echo 'FAILED CHECK 17: node scripts/test_snake_f_batch01_sieges.js'; failures=$((failures+1)); }
+          node scripts/test_northern_rising_1569_1571.js || { echo 'FAILED CHECK 18: node scripts/test_northern_rising_1569_1571.js'; failures=$((failures+1)); }
+          node scripts/test_tudor_vagrancy_poor_laws_1547_1598.js || { echo 'FAILED CHECK 19: node scripts/test_tudor_vagrancy_poor_laws_1547_1598.js'; failures=$((failures+1)); }
+          node scripts/test_irish_martial_law_four_story_enrichments.js || { echo 'FAILED CHECK 20: node scripts/test_irish_martial_law_four_story_enrichments.js'; failures=$((failures+1)); }
+          node scripts/test_irish_1595_1599_proclamations.js || { echo 'FAILED CHECK 21: node scripts/test_irish_1595_1599_proclamations.js'; failures=$((failures+1)); }
+          node scripts/test_spanish_armada_1588_major_story.js || { echo 'FAILED CHECK 22: node scripts/test_spanish_armada_1588_major_story.js'; failures=$((failures+1)); }
+          node scripts/test_tudor_egyptians_laws_1531_1598.js || { echo 'FAILED CHECK 23: node scripts/test_tudor_egyptians_laws_1531_1598.js'; failures=$((failures+1)); }
+          node scripts/test_witchcraft_act_chelmsford_1563_1566.js || { echo 'FAILED CHECK 24: node scripts/test_witchcraft_act_chelmsford_1563_1566.js'; failures=$((failures+1)); }
+          node scripts/test_lovell_hawkins_1562_1569.js || { echo 'FAILED CHECK 25: node scripts/test_lovell_hawkins_1562_1569.js'; failures=$((failures+1)); }
+          node scripts/test_bristol_charles_africans_1590.js || { echo 'FAILED CHECK 26: node scripts/test_bristol_charles_africans_1590.js'; failures=$((failures+1)); }
+          node scripts/test_irish_military_supply_proclamations_1581_1590.js || { echo 'FAILED CHECK 27: node scripts/test_irish_military_supply_proclamations_1581_1590.js'; failures=$((failures+1)); }
+          node scripts/test_religious_repression_recusants_1581_1594.js || { echo 'FAILED CHECK 28: node scripts/test_religious_repression_recusants_1581_1594.js'; failures=$((failures+1)); }
+          node scripts/test_munster_essex_story_1569_1575.js || { echo 'FAILED CHECK 29: node scripts/test_munster_essex_story_1569_1575.js'; failures=$((failures+1)); }
+          node scripts/test_drake_sidney_frobisher_major_stories.js || { echo 'FAILED CHECK 30: node scripts/test_drake_sidney_frobisher_major_stories.js'; failures=$((failures+1)); }
+          node scripts/test_snake_e_01_drake_sidney_supplement.js || { echo 'FAILED CHECK 31: node scripts/test_snake_e_01_drake_sidney_supplement.js'; failures=$((failures+1)); }
+          node scripts/test_frobisher_drake_stories_1576_1580.js || { echo 'FAILED CHECK 32: node scripts/test_frobisher_drake_stories_1576_1580.js'; failures=$((failures+1)); }
+          python3 scripts/test_snake_e03_stories.py || { echo 'FAILED CHECK 33: python3 scripts/test_snake_e03_stories.py'; failures=$((failures+1)); }
+          node scripts/test_snake_e_44_45.js || { echo 'FAILED CHECK 34: node scripts/test_snake_e_44_45.js'; failures=$((failures+1)); }
+          node scripts/test_first_group_history_stories.js || { echo 'FAILED CHECK 35: node scripts/test_first_group_history_stories.js'; failures=$((failures+1)); }
+          node scripts/test_tournai_surrey_major_stories.js || { echo 'FAILED CHECK 36: node scripts/test_tournai_surrey_major_stories.js'; failures=$((failures+1)); }
+          node scripts/test_scots_calais_stories.js || { echo 'FAILED CHECK 37: node scripts/test_scots_calais_stories.js'; failures=$((failures+1)); }
+          node scripts/test_rough_wooing_cartography.js || { echo 'FAILED CHECK 38: node scripts/test_rough_wooing_cartography.js'; failures=$((failures+1)); }
+          node scripts/test_chronology.js || { echo 'FAILED CHECK 39: node scripts/test_chronology.js'; failures=$((failures+1)); }
+          node scripts/test_map_interactions.js || { echo 'FAILED CHECK 40: node scripts/test_map_interactions.js'; failures=$((failures+1)); }
+          node scripts/test_event_focus.js || { echo 'FAILED CHECK 41: node scripts/test_event_focus.js'; failures=$((failures+1)); }
+          node scripts/test_chapter4_published.js || { echo 'FAILED CHECK 42: node scripts/test_chapter4_published.js'; failures=$((failures+1)); }
+          node scripts/test_chapter5_published.js || { echo 'FAILED CHECK 43: node scripts/test_chapter5_published.js'; failures=$((failures+1)); }
+          node scripts/test_snake_f_monastery_batch02.js || { echo 'FAILED CHECK 44: node scripts/test_snake_f_monastery_batch02.js'; failures=$((failures+1)); }
+          node scripts/test_aske_execution_1537.js || { echo 'FAILED CHECK 45: node scripts/test_aske_execution_1537.js'; failures=$((failures+1)); }
+          node scripts/test_chapter6_published.js || { echo 'FAILED CHECK 46: node scripts/test_chapter6_published.js'; failures=$((failures+1)); }
+          node scripts/test_norfolk_kett_1549.js || { echo 'FAILED CHECK 47: node scripts/test_norfolk_kett_1549.js'; failures=$((failures+1)); }
+          node scripts/test_western_prayerbook_1549.js || { echo 'FAILED CHECK 48: node scripts/test_western_prayerbook_1549.js'; failures=$((failures+1)); }
+          node scripts/test_munster_gilbert_1569.js || { echo 'FAILED CHECK 49: node scripts/test_munster_gilbert_1569.js'; failures=$((failures+1)); }
+          node scripts/test_armada_survivors_1588.js || { echo 'FAILED CHECK 50: node scripts/test_armada_survivors_1588.js'; failures=$((failures+1)); }
+          node scripts/test_drake_chile_1578.js || { echo 'FAILED CHECK 51: node scripts/test_drake_chile_1578.js'; failures=$((failures+1)); }
+          node scripts/test_chile_privateers_1587_1594.js || { echo 'FAILED CHECK 52: node scripts/test_chile_privateers_1587_1594.js'; failures=$((failures+1)); }
+          node scripts/test_chapter7_published.js || { echo 'FAILED CHECK 53: node scripts/test_chapter7_published.js'; failures=$((failures+1)); }
+          node scripts/test_calais_governance.js || { echo 'FAILED CHECK 54: node scripts/test_calais_governance.js'; failures=$((failures+1)); }
+          node scripts/test_shared_territorial_geometries.js || { echo 'FAILED CHECK 55: node scripts/test_shared_territorial_geometries.js'; failures=$((failures+1)); }
+          node scripts/test_chapter8_published.js || { echo 'FAILED CHECK 56: node scripts/test_chapter8_published.js'; failures=$((failures+1)); }
+          node scripts/test_chapter9_published.js || { echo 'FAILED CHECK 57: node scripts/test_chapter9_published.js'; failures=$((failures+1)); }
+          node scripts/test_chapter10_published.js || { echo 'FAILED CHECK 58: node scripts/test_chapter10_published.js'; failures=$((failures+1)); }
+          node scripts/test_munster_invasion_impact.js || { echo 'FAILED CHECK 59: node scripts/test_munster_invasion_impact.js'; failures=$((failures+1)); }
+          node scripts/test_tenth_land_and_drake_areas.js || { echo 'FAILED CHECK 60: node scripts/test_tenth_land_and_drake_areas.js'; failures=$((failures+1)); }
+          node scripts/test_chapter11_published.js || { echo 'FAILED CHECK 61: node scripts/test_chapter11_published.js'; failures=$((failures+1)); }
+          node scripts/test_nine_years_war_impact.js || { echo 'FAILED CHECK 62: node scripts/test_nine_years_war_impact.js'; failures=$((failures+1)); }
+          node scripts/test_caribbean_maghreb_1551_1598.js || { echo 'FAILED CHECK 63: node scripts/test_caribbean_maghreb_1551_1598.js'; failures=$((failures+1)); }
+          node scripts/test_historical_spatial_narrative_standard.js || { echo 'FAILED CHECK 64: node scripts/test_historical_spatial_narrative_standard.js'; failures=$((failures+1)); }
+          node scripts/test_ch11_named_geolocation_and_links.js || { echo 'FAILED CHECK 65: node scripts/test_ch11_named_geolocation_and_links.js'; failures=$((failures+1)); }
+          node scripts/test_war_zone_dossiers.js || { echo 'FAILED CHECK 66: node scripts/test_war_zone_dossiers.js'; failures=$((failures+1)); }
+          node scripts/test_two_public_layers.js || { echo 'FAILED CHECK 67: node scripts/test_two_public_layers.js'; failures=$((failures+1)); }
+          node scripts/validate_published_data_references.js || { echo 'FAILED CHECK 68: node scripts/validate_published_data_references.js'; failures=$((failures+1)); }
+          node scripts/test_localization_and_control_display.js || { echo 'FAILED CHECK 69: node scripts/test_localization_and_control_display.js'; failures=$((failures+1)); }
+          node scripts/test_timeline_scale.js || { echo 'FAILED CHECK 70: node scripts/test_timeline_scale.js'; failures=$((failures+1)); }
+          node scripts/test_merged_first_chapter.js || { echo 'FAILED CHECK 71: node scripts/test_merged_first_chapter.js'; failures=$((failures+1)); }
+          node scripts/test_geographic_precision.js || { echo 'FAILED CHECK 72: node scripts/test_geographic_precision.js'; failures=$((failures+1)); }
+          node scripts/test_voyage_routes.js || { echo 'FAILED CHECK 73: node scripts/test_voyage_routes.js'; failures=$((failures+1)); }
+          node scripts/test_historical_basemap.js || { echo 'FAILED CHECK 74: node scripts/test_historical_basemap.js'; failures=$((failures+1)); }
+          grep -q 'id="toggleEvents"' index.html || { echo 'FAILED CHECK 75: grep -q id="toggleEvents" index.html'; failures=$((failures+1)); }
+          grep -q 'css/dark-atlas-v2.css' index.html || { echo 'FAILED CHECK 76: grep -q css/dark-atlas-v2.css index.html'; failures=$((failures+1)); }
+          grep -q 'BlueMarble_ShadedRelief_Bathymetry' app.js || { echo 'FAILED CHECK 77: grep -q BlueMarble_ShadedRelief_Bathymetry app.js'; failures=$((failures+1)); }
+          test -s data/natural-earth-land-110m.topojson || { echo 'FAILED CHECK 78: test -s data/natural-earth-land-110m.topojson'; failures=$((failures+1)); }
+          test -s index.html || { echo 'FAILED CHECK 79: test -s index.html'; failures=$((failures+1)); }
+          test -s app.js || { echo 'FAILED CHECK 80: test -s app.js'; failures=$((failures+1)); }
+          test -s style.css || { echo 'FAILED CHECK 81: test -s style.css'; failures=$((failures+1)); }
+          node scripts/test_atlas_47_public_copy_guard.js || { echo 'FAILED CHECK 82: node scripts/test_atlas_47_public_copy_guard.js'; failures=$((failures+1)); }
+          node scripts/lint_atlas_47_frontend_copy.js || { echo 'FAILED CHECK 83: node scripts/lint_atlas_47_frontend_copy.js'; failures=$((failures+1)); }
+          if [ "$failures" -gt 0 ]; then echo "PAGES BLOCKED: $failures failed checks"; exit 1; fi
