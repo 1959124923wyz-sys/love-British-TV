@@ -81,7 +81,7 @@
   ];
  };
  const areas=[],sites=[],byId=new Map();
- let loaded=false,error=null,renderYear=host.getYear(),selected=null,focused=null,activeRecords=[],clickLocation=null;
+ let loaded=false,error=null,renderYear=host.getYear(),selected=null,focused=null,activeRecords=[],clickLocation=null,lastActivation=null;
  const glowPane='atlas18cOverlapGlowPane';
  map.createPane(glowPane);map.getPane(glowPane).style.zIndex='620';
  map.getPane(glowPane).style.pointerEvents='none';
@@ -202,11 +202,11 @@
   bindCardInteractions();
   host.openPanel('dossier');
  }
- function openAt(latlng,targetIsPoint){
+ function openAt(latlng,targetIsPoint,via='source-layer'){
   if(!loaded||!enabled())return false;
   const found=locate(latlng,targetIsPoint);
   if(!found.length)return false;
-  renderYear=host.getYear();clickLocation=latlng;activeRecords=found;
+  renderYear=host.getYear();clickLocation=latlng;activeRecords=found;lastActivation=via;
   selected=found[0].id;paint();glow(found[0]);
   return true;
  }
@@ -225,6 +225,17 @@
   if(e.stopImmediatePropagation)e.stopImmediatePropagation();
  }
  map.getContainer().addEventListener('click',captureMapClick,true);
+ // Fallback for intentionally hollow/transparent historical polygons.
+ // Leaflet only targets the STROKE of fill:false outlines. A click inside two or
+ // more reference envelopes must still open their source chooser, without
+ // stealing clicks from unrelated marker layers or single-source plain map.
+ map.on('click',ev=>{
+  if(!loaded||!enabled())return;
+  if(ev.originalEvent?.target?.closest?.('.leaflet-marker-icon,.leaflet-popup'))return;
+  const matched=locate(ev.latlng,false);
+  if(matched.length>1)openAt(ev.latlng,false,'map-background-overlap');
+ });
+
  // Clear obsolete selection if an ordinary event/story replaces the right dossier.
  new MutationObserver(()=>{
   if(activeRecords.length&&!$('atlas18cOverlapPanel')){
@@ -302,7 +313,7 @@
  window.eighteenthOverlapDossier={
   render,
   getAudit:()=>({loaded,error,year:host.getYear(),areas:areas.length,sites:sites.length,
-   selectedCount:activeRecords.length,selected,focused,
+   selectedCount:activeRecords.length,selected,focused,lastActivation,
    glowCount:glowGroup.getLayers().length,
    open:!!$('atlas18cOverlapPanel'),sourceRecords:activeRecords.map(r=>r.id)})
  };
