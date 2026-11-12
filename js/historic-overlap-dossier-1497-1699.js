@@ -246,6 +246,7 @@
  }
  window.historicOverlapDossier={
   render,
+  hitCountAt:(lat,lng)=>at(L.latLng(lat,lng)).length,
   getAudit:()=>{
    const current=enabled()?live():[],groups={};
    for(const r of current)groups[r.group]=(groups[r.group]||0)+1;
