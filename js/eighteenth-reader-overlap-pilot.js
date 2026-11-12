@@ -55,7 +55,7 @@
  const matches=(x,y)=>active(x,y)&&(!thematic[current].kinds||thematic[current].kinds.includes(x.kind));
  const prefix=x=>String(x.title||'').replace(/^\d{4}[-—年]?.{0,1}/,'');
  const trim=(s,n)=>s.length<=n?s:s.slice(0,n-1)+'…';
- const areas=[],cores=[],all=[],byKey=new Map();
+ const areas=[],cores=[],archivalAreas=[],all=[],byKey=new Map();
  let ready=false,error=null,year=host.getYear(),current='control',mode='reader',query='',selected=[],lastCoord=null,selectedIndex=null;
  let groupsRendered=0,collapsed=0;
  const pane='reader18cZonePane',pointPane='reader18cPointPane';
@@ -276,11 +276,39 @@
      all.push(obj);areas.push(obj);byKey.set(obj.id,obj);
     }
    }
-   // The 421 original click cores are retained in their source arrays; the
-   // reader's dense-map symbols are aggregate zone markers, not fictional ports.
+   // Legacy batch34 has 24 non-surveyed source-linked polygons based on an
+   // older geometry file. Include all 24 in searchable/overlap archives, but
+   // do not fill those reused 17th-century shapes in the simplified view.
    const old=await fetch('data/eighteenth-century-dynamic-spatial-1700-1799.json',{cache:'no-store'});
-   if(!old.ok)throw Error('legacy core data unavailable');
+   if(!old.ok)throw Error('legacy archive unavailable');
    const oldest=await old.json();
+   const original=await fetch(oldest.original_geometry_file,{cache:'no-store'});
+   if(!original.ok)throw Error('legacy 17C reference geometry unavailable');
+   const geo=await original.json();
+   const geometryByName=new Map(geo.features.map(f=>[f.properties.name,f.geometry]));
+   const bounds=geometry=>{
+    const pairs=[];const visit=c=>{
+     if(Array.isArray(c)&&typeof c[0]==='number'&&typeof c[1]==='number'){pairs.push(c);return}
+     if(Array.isArray(c))c.forEach(visit);
+    };
+    visit(geometry.coordinates);if(!pairs.length)throw Error('geometry coordinates missing');
+    const xs=pairs.map(x=>x[0]),ys=pairs.map(x=>x[1]);
+    return[Math.min(...xs),Math.min(...ys),Math.max(...xs),Math.max(...ys)];
+   };
+   for(const x of oldest.area_references||[]){
+    const geometry=geometryByName.get(x.geometry_key);
+    if(!geometry)throw Error('original historic reference geometry missing: '+x.id);
+    const cat=String(x.category||'');
+    const kind=cat.includes('行政')?'administration':
+     cat.includes('贸易')?'trade_influence':
+     cat.includes('驻军')?'military':
+     cat.includes('自主')||cat.includes('抵抗')?'resistance':'paper_claim';
+    const obj={...x,id:'B34-'+x.id,kind,bbox:bounds(geometry),
+     _readerId:all.length,sourceFile:'original-batch34-17c-geometry-reuse'};
+    all.push(obj);archivalAreas.push(obj);
+   }
+   // The 406 newer click cores retain their archived JSON source/zone linkages.
+   // Batch34's 15 points are included as distinct records in the reader index.
    for(const x of oldest.control_sites||[]){
     const originalKind=String(x.category||'');
     const oldKind=originalKind.includes('贸易')?'trade_influence':originalKind.includes('纸面')?'paper_claim':'military';
@@ -288,13 +316,15 @@
      _readerId:all.length,sourceFile:'oldest18c'};
     all.push(obj);cores.push(obj);
    }
-   if(areas.length!==605||cores.length!==15||all.length!==620)throw Error('source tally mismatch 605/15');
+   if(areas.length!==605||archivalAreas.length!==24||cores.length!==15||all.length!==644)
+    throw Error('source tally mismatch 605 +24 +15');
    ready=true;update();
   }catch(e){error=String(e);count.textContent='读取失败：可切换回原始地图';console.error('Reader lens rejected invalid research input',e)}
  }
  legacyVisibility();
  window.eighteenthReaderPilot={
-  render,getAudit:()=>({ready,error,year,mode,theme:current,areas:areas.length,legacyCores:cores.length,
+  render,getAudit:()=>({ready,error,year,mode,theme:current,areas:areas.length,
+   archivalAreas:archivalAreas.length,legacyCores:cores.length,
    groupsRendered,visibleGroups:markers.getLayers().length,collapsed,
    activeAreas:areas.filter(x=>active(x,year)).length,
    legacyHidden:doc.body.classList.contains('atlas-18c-reader-enabled'),
