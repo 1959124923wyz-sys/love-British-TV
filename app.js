@@ -155,7 +155,7 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
 const iconHTML=(item,annualNew=false)=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+(annualNew?' atlas-new-this-year':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+(annualNew?' · 本年新增事件':'')+'">'+svgIcon(item)+(annualNew?'<span class="atlas-new-mark" aria-hidden="true">新</span>':'')+'</div>';
-const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>查看航行路线</small>');
+const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(readerCopy.clean(String(summary||'')).replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>查看航行路线</small>');
 const workspace=$('workspace');
  const readerCopy=window.AtlasReaderCopy;
 const compactMapMedia=window.matchMedia('(max-width:980px)');
@@ -289,7 +289,7 @@ function listSources(ids,item){
   ['财政核算',note?.accounting]
 
  ].filter(x=>x[1]);
- const questions=(note?.archive_questions||[]).map(text=>'<li>'+escapeHTML(text)+'</li>').join('');
+ const questions='';
  const accountingNames={crown_reward_expenditure:'王室远航奖励',royal_ship_acquisition_bounty:'购船补助',royal_grant_expenditure:'王室拨款',royal_pension:'王室年金'};
  const sums=(note?.economic_records||[]).map(row=>{
   const time=row.year||[row.year_from,row.year_to].filter(Boolean).join('—')||'相关账期';
@@ -301,7 +301,7 @@ function listSources(ids,item){
   return '<li>'+escapeHTML(parts.join('；'))+'</li>';
  }).join('');
  return '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
-   '<div class="research-body">'+fields.map(([head,text])=>'<h3>'+escapeHTML(head)+'</h3><p>'+escapeHTML(text)+'</p>').join('')+
+   '<div class="research-body">'+fields.map(([head,text])=>readerCopy.clean(text)?'<h3>'+escapeHTML(head)+'</h3><p>'+escapeHTML(readerCopy.clean(text))+'</p>':'').join('')+
    (questions?'<h3>待进一步核对的档案</h3><ul>'+questions+'</ul>':'')+
    (sums?'<h3>原始账目字段</h3><ul class="accounting-list">'+sums+'</ul>':'')+
    '</div>'+
@@ -1838,7 +1838,7 @@ function openEighthCoastalDossier(feature){
   .filter(Boolean).map(s=>'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>').join('');
  $('dossierBody').innerHTML='<div class="dossier-kicker">第八章 · 非洲人口奴役活动 · '+year+'年</div>'+
  '<h2>'+escapeHTML(p.name)+'</h2>'+
- '<p>'+escapeHTML(p.summary_zh||'霍金斯船队在相关西非沿岸进行人口掳取、贩卖和强制装运活动。')+'</p>'+
+ '<p>'+escapeHTML(readerCopy.clean(p.summary_zh||'霍金斯船队在相关西非沿岸进行人口掳取、贩卖和强制装运活动。'))+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
  '<div class="mini-heading">历史文献</div>'+refs+'</details>';
  openPanel('dossier');
@@ -1983,7 +1983,7 @@ function renderHypotheses(){
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
    layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+
-    '</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
+    '</strong><div class="atlas-hover-summary">'+escapeHTML(readerCopy.clean(p.public_summary||''))+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',()=>openHypothesis(feature));
   }
@@ -2161,7 +2161,7 @@ function renderTimelineNavigation(){
   $('jumpYear').value=year;
  }
  $('timelineAvailability').textContent=year>lastPublishedYear
-  ?(year>=1700?'18世纪阿卡迪亚专题 · 研究试阅，版图未发布':'17世纪已入库事件年表 · 专题持续编审')
+  ?(year>=1700?'十八世纪历史年表':'十七世纪历史年表')
   :browsingDecade===halfCenturyPageForYear(year)
    ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
    :'浏览目录中 · 地图为'+year+'年';
