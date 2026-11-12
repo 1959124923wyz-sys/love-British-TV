@@ -2087,7 +2087,7 @@ function updateVisibility(){
 const decadeForYear=y=>Math.floor(y/10)*10;
 const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=(jamaica18cReady?1790:bengal18cReady?1770:preview18cReady?1760:1690)&&d%10===0?
  ({id:(d>=1700?'18c-':'17c-')+d,start:d,end:d+9,number:11+(d-1600)/10,
- label:d>=1700?'18世纪重大专题研究试阅 · 未发表':'事件年表 · 专题持续编审',
+ label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1700?'18世纪历史专题':'17世纪历史专题'),
  status:d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
@@ -2138,8 +2138,8 @@ function renderTimelineNavigation(){
   return '<button type="button" class="chapter-segment'+(published?' published':partial?' published partial-century':preview?' published topic-preview':' unpublished')+
     (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
     '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:partial?'浏览'+from+'—'+to+'年已入库事件':preview?'浏览已核证的专题年表':'此十年无已发布年表')+'">'+
-    '<span>'+(published?'第'+chapter.number+'章':partial?'17世纪事件年表':preview?(d>=1700?'18世纪研究试阅':'17世纪专题资料'):'尚未发布')+'</span>'+
-    '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 事件年表 · 专题编审中')+'</small></button>';
+    '<span>'+(chapter&&(published||partial||preview)?'第'+chapter.number+'章':'尚未发布')+'</span>'+
+    '<small>'+from+'—'+to+(chapter&&(published||partial||preview)?' · '+escapeHTML(chapter.label):' · 尚未发布')+'</small></button>';
  }).join('');
  frame.querySelectorAll('button[data-decade]').forEach(btn=>btn.addEventListener('click',()=>{
   const decade=Number(btn.dataset.decade),chapter=chapterForDecade(decade);
@@ -2189,17 +2189,19 @@ function setYear(v){
   const observed=atlas.events.filter(e=>occurredByYear(e,year)).length;
   const fresh=atlas.events.filter(e=>e.category!=='status'&&Number(e.year)===year).length;
   const eighteenthPilot=year>=1700;
-  if(eighteenthPilot){
+  const chapterStory=window.AtlasChapterNarratives?.forDecade(year);
+  if(chapterStory){
+   $('chapterTitlePrimary').textContent=chapterStory.primary;
+   $('chapterTitleSecondary').textContent=chapterStory.secondary;
+   $('chapterIntro').textContent=chapterStory.intro;
+  }else if(eighteenthPilot){
    $('chapterTitlePrimary').textContent='十八世纪';
    $('chapterTitleSecondary').textContent='殖民扩张与抵抗';
-   $('chapterIntro').textContent='本十年收录多个殖民专题合并后的'+decadeTotal+
-     '件候审历史节点（截至'+year+'年已有'+observed+'件，本年'+fresh+
-     '件）。';
+   $('chapterIntro').textContent='本十年收录'+decadeTotal+'项历史记录。';
   }else{
-   // Keep the original 17C textual chronology and its tested source-derived calculations intact.
    $('chapterTitlePrimary').textContent='十七世纪';
-   $('chapterTitleSecondary').textContent='事件与专题';
-   $('chapterIntro').textContent='本十年已收录'+decadeTotal+'项历史事件；截至'+year+'年已有'+observed+'项进入时间轴。本年新增'+fresh+'项。';
+   $('chapterTitleSecondary').textContent='历史专题';
+   $('chapterIntro').textContent='本十年收录'+decadeTotal+'项历史记录。';
   }
   $('factA').textContent=decadeTotal;
   $('factB').textContent=observed;
@@ -2207,11 +2209,11 @@ function setYear(v){
   $('factADesc').textContent='本十年已入库事件';
   $('factBDesc').textContent='截至本年的记录';
   $('factCDesc').textContent='本年新增事件';
-  $('periodTitle').textContent=eighteenthPilot?'18世纪重大专题试阅 · 未审版图不显示':'17世纪已收录历史事件 · 专题持续编审';
+  $('periodTitle').textContent=chapterStory?.title||(eighteenthPilot?'十八世纪历史专题':'十七世纪历史专题');
   const ch=chapterForYear(year);
-  $('chapterNav').textContent=eighteenthPilot?'历史地图 · 十八世纪研究试阅':'历史地图 · 十七世纪';
-  $('chapterNavName').textContent=eighteenthPilot?'阿卡迪亚／孟加拉／牙买加 · 研究候审':'逐年事件与历史专题';
-  $('chapterLabel').textContent=ch.start+'—'+ch.end+' · 史料年表';
+  $('chapterNav').textContent=ch?'历史地图 · 第'+ch.number+'章':'历史地图';
+  $('chapterNavName').textContent=chapterStory?.title||ch?.label||'历史事件';
+  $('chapterLabel').textContent=ch?'第'+ch.number+'章 · '+ch.start+'—'+ch.end:'历史年表';
   browsingDecade=halfCenturyPageForYear(year);
   renderTimelineNavigation();timelineStatus('');
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
