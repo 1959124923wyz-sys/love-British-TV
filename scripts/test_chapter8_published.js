@@ -85,5 +85,5 @@ for(const r of atlas.routes){
 assert.ok(app.includes('next>=1560?atlasEighth:next>=1550?atlasSeventh'));
 assert.ok(app.includes('function renderEighthControlSites()')&&app.includes('function renderEighthCoastalActivity()'));
 assert.ok(app.includes('sourcesById.get(id)'),'Dossier citation registry missing');
-assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
+assert.ok(html.includes('max="1599"')&&html.includes('1497—1799'));
 console.log('PASS chapter8: 29 events, 27 places, 25 sources, 16 distinct schematic-route segments, 3 dated African slave trafficking activity bands and 1562-only English Le Havre point.');
