@@ -1,0 +1,69 @@
+name: 18C 1126 source provenance to 162 merger groups Atlas gap audit
+on:
+  push:
+    branches:
+      - audit/18c-1126-source-to-atlas-coverage-20261112
+  pull_request:
+    branches:
+      - map/18c-t33-scotland-slavery-investment-court-resistance-1707-1792-20261111
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-and-map-coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - name: Immutable 1126 A B C archive plus all 31 story regressions, original historical GIS
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          for test in scripts/test_18c_*.js; do node "$test"; done
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 scripts/audit_18c_1126_coverage.py --out-dir 18c-coverage-audit-results
+      - name: Upload full 1126-row human-readable and machine-checkable audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c32-1126-original-records-315-selected-162-groups-coverage
+          path: 18c-coverage-audit-results/
+          if-no-files-found: error
+  real-desktop-chromium:
+    needs: source-and-map-coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real desktop historical 31 topics and published 16C regression
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c32-http.log 2>&1 &
+          for browser_test in scripts/browser_18c_*.py; do python3 "$browser_test"; done
+          python3 scripts/browser_major_story_pilot.py
+      - name: Preserve real full-sized desktop browser inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c32-31-topics-desktop-regression-screenshots
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  external-independent-preview:
+    needs: source-and-map-coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify SHA-fixed research web preview plus archived original GitHub source data
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-t33-scotland-slavery-courts-1707-1792.json data/stories/serial/e18-t33-scotland-slavery-courts-1707-1792.json data/stories/serial/chronology-preview-t28-havana-egmont-malta-1762-1799.json data/stories/serial/e18-t28-havana-egmont-malta-1762-1799.json research/18c/consolidated/CONSOLIDATION_MANIFEST.json research/18c/consolidated/series/T33.json scripts/audit_18c_1126_coverage.py; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$path"
+          done
