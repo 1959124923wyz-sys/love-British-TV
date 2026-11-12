@@ -12,7 +12,7 @@ assert(historical.includes("if(matches.length)openAt(ev.latlng,matches.length>1?
 assert(modern.includes('hitCountAt:(lat,lng)'));
 assert(historical.includes('hitCountAt:(lat,lng)'));
 assert(modern.includes("map.on('click',ev=>")&&historical.includes("map.on('click',ev=>"));
-assert(modern.includes("'.leaflet-marker-icon,.leaflet-popup'"));
+assert(modern.includes("const found=locate(coordinate,false)") && modern.includes(".leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip"));
 assert(historical.includes("'.leaflet-marker-icon,.leaflet-popup'"));
 assert(modern.includes("const found=locate(latlng,targetIsPoint)"));
 assert(historical.includes("return host.visibleAreaFeatures().filter"));
