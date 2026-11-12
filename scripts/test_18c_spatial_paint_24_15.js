@@ -12,7 +12,7 @@ A.equal(d.area_references.reduce((n,x)=>n+x.periods.length,0),28);
 A.equal(d.control_sites.reduce((n,x)=>n+x.periods.length,0),18);
 A.equal(geo.features.length,53);A.equal(d.approved_actual_control_polygons,0);
 A.equal(d.area_sqkm_totals,null);A.equal(d.area_aggregation_forbidden,true);
-A.equal(d.original_geometry_reused_in_place,undefined);
+A.equal(d.original_geometry_reused_in_place,true);
 const validPeriods=p=>p.length>0&&p.every(x=>Number.isInteger(x.start_year)&&Number.isInteger(x.end_year)&&x.start_year>=1700&&x.end_year<=1799&&x.start_year<=x.end_year);
 const allIds=new Set(),geoNames=new Set(geo.features.map(f=>f.properties.name));
 for(const r of d.area_references){
