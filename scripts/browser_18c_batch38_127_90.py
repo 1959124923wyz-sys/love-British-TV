@@ -38,7 +38,7 @@ try:
   (1765,['1765年公司获得Bengal','1765年后Pondicherry法属'],['1761年Pondicherry法国商馆'],'1765-diwan-french-recovery'),
   (1774,['1774 Cumberland House'],['1782法国舰队攻取'],'1774-hbc-inland'),
   (1780,['1780年英军在卡姆登','1780年Ninety Six','1780年Fort Watson'],['1781年Fort Watson美军'],'1780-british-garrisons'),
-  (1781,['1781年Fort Watson美军','1781年Fort Cornwallis投降','1780—1781 Charleston'],['1780年Fort Watson英方'],'1781-forts-fall'),
+  (1781,['1781年Fort Watson美军','1781年Augusta Fort Cornwallis投降','1780—1781 Charleston'],['1780年Fort Watson英方'],'1781-forts-fall'),
   (1782,['1782法国舰队攻取','1782年Charleston撤军'],['Prince of Wales Fort英军商堡'],'1782-twin-retreat'),
   (1783,['1783—1787 York Factory','1783后Fort Churchill'],['1782法国舰队攻取'],'1783-trading-rebuild'),
   (1784,['1784年Tipu Sultan','1784年Burma征服Arakan'],['1780年英军在卡姆登'],'1784-mangalore-treaty'),
