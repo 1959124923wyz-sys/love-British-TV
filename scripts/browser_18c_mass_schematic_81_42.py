@@ -25,6 +25,9 @@ def shot(name):d.save_screenshot(str(screen/('18c-map-35-'+name+'.png')))
 try:
  d.get('http://127.0.0.1:8765/?review18c=1&year=1762')
  wait.until(lambda _:bool(audit()) and audit()['loaded'] and bool(old()) and old()['loaded'])
+ # Leaflet layers may fetch faster than the unpublished 18C chronology and year-input cap.
+ # Await the actual year navigation controller before automated year changes.
+ wait.until(lambda _:js("return document.querySelector('#jumpYear')?.max==='1799' && Boolean(document.querySelector('#jumpYear')?.value)"))
  a=audit()
  assert (a['zoneCount'],a['coreCount'],a['timePhases'])==(81,42,149),a
  assert old()['areaReferences']==24 and old()['documentedCityCores']==15,old()
