@@ -2230,7 +2230,7 @@ function setYear(v){
   $('historicalRegionGuide').hidden=true;
   renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
   // The 1600–1799 setYear branch bypasses refreshHistoricalLayers; redraw true annual 18C surfaces here.
-  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();
+  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthReaderPilot?.render?.();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
   $('nextYear').disabled=year>=previewYearCap();
@@ -2338,7 +2338,7 @@ function setYear(v){
  $('timelineNotice').textContent='';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
  // Also clear 18C-only area overlays when the user navigates back into the published 16C atlas.
- window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();
+ window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthReaderPilot?.render?.();
  if(changedYear)$('eventList').scrollTop=0;
   $('prevYear').disabled=year<=1497;
   $('nextYear').disabled=year>=(serialPreviewAtlas?previewYearCap():lastPublishedYear);
@@ -3889,12 +3889,12 @@ function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
   renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
-  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();
+  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthReaderPilot?.render?.();
   return;
  }
  renderSeventeenthColonialClaims();
  renderSeventeenthRegionalStudies();
- window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();
+ window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthReaderPilot?.render?.();
  renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
