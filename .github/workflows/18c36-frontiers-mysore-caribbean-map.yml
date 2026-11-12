@@ -1,0 +1,66 @@
+name: 18C batch36 massive 130 frontiers 83 locality symbols
+on:
+  push:
+    branches:
+      - map/18c-36-mass-frontiers-mysore-caribbean-1700-1799-20261112
+  pull_request:
+    branches:
+      - map/18c-35-mass-dynamic-zones-1700-1799-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  batch36-static-archive-and-gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: 235 dated regions 140 clickable centres 416 phases and original archives
+        run: |
+          node --check app.js
+          node --check js/eighteenth-dynamic-spatial.js
+          node --check js/eighteenth-mass-spatial.js
+          node --check js/eighteenth-batch36-spatial.js
+          node scripts/test_18c_batch36_130_83.js
+          node scripts/test_18c_mass_spatial_81_42.js
+          node scripts/test_18c_spatial_paint_24_15.js
+          for test in scripts/test_18c_*.js; do node "$test"; done
+          python3 -m json.tool data/eighteenth-century-expansion-batch36-1700-1799.json >/dev/null
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_r33_original_archive_gaps.py
+          python3 scripts/audit_spatial_semantics.py --strict
+  batch36-desktop-chronology:
+    needs: batch36-static-archive-and-gis
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Browser map 1780 by 1020 14 years three layers and old atlas checks
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c36-http.log 2>&1 &
+          python3 scripts/browser_18c_batch36_130_83.py
+          python3 scripts/browser_18c_mass_schematic_81_42.py
+          python3 scripts/browser_18c_map_first_dynamic_areas.py
+      - name: Save desktop 18C historical map frames for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c36-desktop-map-235-zones-140-cores-screenshots
+          path: browser-smoke-results/
+          if-no-files-found: ignore
+  batch36-sha-preview:
+    needs: batch36-static-archive-and-gis
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Confirm independently hosted SHA-stable map and data
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          for file in index.html app.js js/eighteenth-dynamic-spatial.js js/eighteenth-mass-spatial.js js/eighteenth-batch36-spatial.js data/eighteenth-century-dynamic-spatial-1700-1799.json data/eighteenth-century-mass-schematic-zones-1700-1799.json data/eighteenth-century-expansion-batch36-1700-1799.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$file"
+          done
