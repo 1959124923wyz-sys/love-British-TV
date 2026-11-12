@@ -15,6 +15,7 @@
  const zonesLayer=L.layerGroup().addTo(map),pointsLayer=L.layerGroup().addTo(map);
  const zoneRenderer=L.svg({pane:zonePane}),pointRenderer=L.svg({pane:pointPane});
  let meta=null,loaded=false,error=null,year=host.getYear();
+ const reader=window.AtlasReaderCopy;
  const colors={
   administration:'#a58df5',military:'#cc9ffc',displacement:'#dca18a',resistance:'#60c9ba',
   paper_claim:'#ebc479',diplomacy:'#70b8e1',trade_influence:'#7ad2cc',
@@ -37,11 +38,7 @@
   $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪 · 第36批动态地理 · '+year+'年</div>'+
    '<h2>'+esc(x.title)+'</h2>'+
    '<p><strong>'+esc(labels[x.kind])+'</strong>　'+p.start_year+'—'+p.end_year+'</p>'+
-   '<p>'+esc(x.note||'')+'</p>'+
-   '<p>'+esc(isPoint?'核心圆形只表示大致地点，中心来自对应的概略框；并非实测经纬度。':'区域虚线是现代编辑绘制的矩形参考范围，未经历史地图配准。')+'</p>'+
-   '<p>行政管辖、军事驻守、战场、税务、原住民自治、当地抗争、名义法律声索严格分开；面积不计算、不相加。</p>'+
-   '<details open><summary>可核查的历史来源</summary><ul class="source-list">'+urls.map(u=>{
-    let domain=u;try{domain=new URL(u).hostname}catch{}
+   (reader.clean(x.note||'')?'<p>'+esc(reader.clean(x.note))+'</p>':'')+try{domain=new URL(u).hostname}catch{}
     return '<li><a href="'+esc(u)+'" rel="noopener noreferrer" target="_blank">'+esc(domain)+'</a></li>';
    }).join('')+'</ul></details>';
   host.openPanel('dossier');
@@ -61,7 +58,7 @@
     dashArray:isHollow?'3 8':'5 6',lineCap:'round',fill:!isHollow,fillColor:c,fillOpacity:op,
     bubblingMouseEvents:false,interactive:true,className:'atlas-18c-b36-zone'
    }).bindTooltip('<strong>'+esc(z.title)+'</strong><div class="atlas-hover-summary">'+
-    esc(labels[z.kind]+' · '+p.start_year+'—'+p.end_year+' · 地理参考')+'</div>',{
+    esc(labels[z.kind]+' · '+p.start_year+'—'+p.end_year)+'</div>',{
      sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]
    }).on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);show(z,false)})
     .addTo(zonesLayer);
