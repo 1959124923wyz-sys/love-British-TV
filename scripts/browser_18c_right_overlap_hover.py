@@ -81,7 +81,7 @@ try:
  assert js("return document.querySelectorAll('.atlas-18c-overlap-card').length")==count
  assert js("return document.querySelectorAll('.atlas-18c-overlap-card.is-selected').length")==1
  assert js("return document.querySelectorAll('.atlas-18c-overlap-detail').length")==1
- assert js("return document.querySelectorAll('.atlas-18c-overlap-source-links a[href^='https://']").length")>=1
+ assert js('return document.querySelectorAll(".atlas-18c-overlap-source-links a[href^=https]").length')>=1
  assert '历史文献与来源' in d.find_element(By.ID,'dossierBody').text
  snap('1762-selected-card-expanded-minimal-source-dossier')
  year(1763)
