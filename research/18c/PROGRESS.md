@@ -404,3 +404,5 @@
 - [x] GitHub Actions将保存全量1126行CSV、JSON、中文风险汇总及真实桌面回归截图，可追溯到每个原ID和对应合并组。
 - [x] 优先尚未覆盖的原组选题：T14-07 阿瓦德Bahu Begam 1775—1782财产剥夺、T02-02 1767 Old Calabar伏击与人口贩运、T07-06 1761 Mi’kmaq多社区和平条约。独立史料核准后再补真正Atlas事件。
 - [x] [第32批交接](../../docs/research/EDITOR20_18C_BATCH32_ORIGINAL_1126_COVERAGE_HANDOFF_20261112.md)。
+
+- [x] 第32批审计最终源流修复后，**257条原ID级关联、39条组合并级关联、1条仅元数据、18条无结构化关联；162组中146直连、1元数据、15无地图链接**。详细逐条下一批清单见[实测报告](../../docs/research/EDITOR20_18C_BATCH32_1126_VERIFIED_GAP_REPORT_20261112.md)。
