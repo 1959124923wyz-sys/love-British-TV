@@ -123,5 +123,5 @@ assert.ok(app.includes("function renderWartimeControls()")&&app.includes('p.year
 assert.ok(app.includes('sourcesById.get(id)'),'New chapter dossier must resolve academic source links');
 assert.ok(app.includes("next>=1540?atlasSixth"),'Map must load the correct sixth Atlas slice');
 assert.ok(!app.includes("map.flyTo("),'Historical map focus must not auto-zoom');
-assert.ok(html.includes('max="1599"')&&html.includes('app.js?v=timeline-v1800-merged-ch1ch2'),'Seventh chapter extends global timeline without changing chapter six');
+assert.ok(html.includes('max="1599"')&&html.includes('app.js?v=atlas46-click-notes-20261112'),'Seventh chapter extends global timeline without changing chapter six');
 console.log('PASS 1540s: 80 preserved historic events plus ten sourced Rough Wooing sites; pre-existing occupation and chronology unchanged');
