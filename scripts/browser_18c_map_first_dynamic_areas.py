@@ -20,6 +20,9 @@ def set_year(y):
 try:
  d.get('http://127.0.0.1:8765/?review18c=1&year=1704')
  wait.until(lambda x:bool(audit()) and audit()['loaded'])
+ # Leaflet layers may fetch faster than the unpublished 18C chronology and year-input cap.
+ # Await the actual year navigation controller before automated year changes.
+ wait.until(lambda _:js("return document.querySelector('#jumpYear')?.max==='1799' && Boolean(document.querySelector('#jumpYear')?.value)"))
  assert audit()['areaReferences']==24 and audit()['documentedCityCores']==15,audit()
  for yr,expected,missing,name in [
   (1704,['GIBRALTAR'],['HAVANA','MANILA','MENORCA'],'1704-gibraltar'),
