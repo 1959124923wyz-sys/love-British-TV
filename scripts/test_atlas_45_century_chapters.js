@@ -49,10 +49,9 @@ assert(html.includes('app.js?v=atlas45'),'map app cache URL must change');
 assert(app.includes('window.AtlasChapterNarratives?.forDecade(d)?.title'));
 assert(app.includes('window.AtlasChapterNarratives?.forDecade(year)'));
 for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro','chapterNav','chapterNavName','chapterLabel']){
- assert(app.includes(`$('\${field}').textContent`)||app.includes(`$('\${field}').textContent=`),`chapter field missing: ${field}`);
+ assert(app.includes("$('"+field+"').textContent"),'chapter field missing: '+field);
 }
 assert(app.includes("const decadeTotal=atlas.events.length"),'event statistics must remain intact');
 assert(app.includes("status:d>=1700?'topic_preview'"),'original research status must remain intact');
 assert(app.includes("$('chapterIntro').textContent=atlasFirstMerged.intro"),'16C chapter introduction must stay untouched');
-assert(app.includes("matches.length>1?'transparent-overlap':'transparent-single'")===false || true); // selection is handled by original unchanged modules
 console.log('PASS: all 20 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
