@@ -186,6 +186,7 @@
   const newYear=host.getYear();
   if(newYear!==year){year=newYear;selected=[];selectedIndex=null;focus.clearLayers()}
   zones.clearLayers();markers.clearLayers();
+  groupsRendered=0;collapsed=0;
   if(!ready||!enabled())return;
   let actual=areas.filter(x=>matches(x,year));
   if(query)actual=actual.filter(x=>((x.title||'')+' '+note(x)).toLocaleLowerCase().includes(query));
@@ -294,7 +295,8 @@
  legacyVisibility();
  window.eighteenthReaderPilot={
   render,getAudit:()=>({ready,error,year,mode,theme:current,areas:areas.length,legacyCores:cores.length,
-   groupsRendered,collapsed,activeAreas:areas.filter(x=>active(x,year)).length,
+   groupsRendered,visibleGroups:markers.getLayers().length,collapsed,
+   activeAreas:areas.filter(x=>active(x,year)).length,
    legacyHidden:doc.body.classList.contains('atlas-18c-reader-enabled'),
    choiceCount:selected.length})
  };
