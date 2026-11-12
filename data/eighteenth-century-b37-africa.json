@@ -1,0 +1,1864 @@
+{
+  "schema": "atlas-18c-batch37-region-v1",
+  "region": "africa",
+  "status": "research_preview_not_published",
+  "source_register": {
+    "GHU": "https://whc.unesco.org/en/list/34/",
+    "GHM": "https://gmmb.gov.gh/forts-and-castles/",
+    "GHAN": "https://gmmb.gov.gh/fort-william-anomabu-1753/",
+    "GHD": "https://gmmb.gov.gh/fort-metal-cross-dixcove-1692/",
+    "GHAP": "https://gmmb.gov.gh/fort-apollonia-beyin-1768/",
+    "GHKO": "https://gmmb.gov.gh/british-fort-english-komenda/",
+    "GHAS": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/ashanti-question-and-the-british-eighteenthcentury-origins/31ECA3E746C70147090FCA23AF454AC4",
+    "GAUN": "https://whc.unesco.org/en/list/761/",
+    "BUN": "https://www.sierraleoneheritage.org/sites/monuments/bunce",
+    "BUNY": "https://macmillan.yale.edu/glc/bunce-island-history",
+    "BUNU": "https://whc.unesco.org/en/tentativelists/5745/",
+    "CAL": "https://academic.oup.com/book/58166/chapter-abstract/485239549",
+    "CALA": "https://www.historians.org/presidential-address/james-h-sweet/",
+    "OUI": "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+    "OUIH": "https://www.jstor.org/stable/j.ctv136c1qg",
+    "SL": "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+  },
+  "area_aggregation_forbidden": true,
+  "area_sqkm_totals": null,
+  "zones": [
+    {
+      "id": "B37-A-Z001",
+      "title": "海岸角Cape Coast英国贩奴堡核心",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.29,
+        5.08,
+        -1.23,
+        5.15
+      ],
+      "source_key": "GHU",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/34/"
+      ],
+      "note": "堡垒不是整个Fante或Efutu内陆殖民地",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z002",
+      "title": "海岸角附近登陆和船只商贸水域",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.35,
+        5.02,
+        -1.2,
+        5.2
+      ],
+      "source_key": "GHM",
+      "source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "note": "海运交易范围仅示意",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z003",
+      "title": "阿诺马布Fort Charles旧英国堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1730
+        }
+      ],
+      "bbox": [
+        -1.31,
+        5.15,
+        -1.24,
+        5.22
+      ],
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "1731拆毁，旧堡控制中止",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z004",
+      "title": "1731阿诺马布旧英堡拆毁",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1731,
+          "end_year": 1731
+        }
+      ],
+      "bbox": [
+        -1.31,
+        5.15,
+        -1.24,
+        5.22
+      ],
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "拆堡不属于新领土扩张",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z005",
+      "title": "1753—1756阿诺马布新堡建设期",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1753,
+          "end_year": 1756
+        }
+      ],
+      "bbox": [
+        -1.31,
+        5.15,
+        -1.24,
+        5.22
+      ],
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "1753拨款，1757竣工，建设期非已完工堡",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z006",
+      "title": "1757后阿诺马布Fort William新英堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.31,
+        5.15,
+        -1.24,
+        5.22
+      ],
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "英方在Fante地区的海岸据点",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z007",
+      "title": "阿诺马布湾外奴隶贸易船运航区",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.42,
+        5.05,
+        -1.14,
+        5.3
+      ],
+      "source_key": "GHAS",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/ashanti-question-and-the-british-eighteenthcentury-origins/31ECA3E746C70147090FCA23AF454AC4"
+      ],
+      "note": "英国交易网络不等于占有周边土著土地",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z008",
+      "title": "Dixcove Fort Metal Cross英方堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -2.67,
+        4.73,
+        -2.58,
+        4.87
+      ],
+      "source_key": "GHD",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-metal-cross-dixcove-1692/"
+      ],
+      "note": "1692兴筑，英堡控制限于堡及周边",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z009",
+      "title": "Dixcove当地Infuma社群多次抗英堡",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1750
+        }
+      ],
+      "bbox": [
+        -2.74,
+        4.7,
+        -2.5,
+        4.92
+      ],
+      "source_key": "GHD",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-metal-cross-dixcove-1692/"
+      ],
+      "note": "史料未给出逐次年份，区间为冲突背景而非连续交战",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z010",
+      "title": "Dixcove近岸英商黄金贸易企图",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -2.76,
+        4.67,
+        -2.48,
+        4.98
+      ],
+      "source_key": "GHD",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-metal-cross-dixcove-1692/"
+      ],
+      "note": "失败的金矿商业企图并非征服内陆",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z011",
+      "title": "1766 Beyin的Nzema首领与英商筑堡协商",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1768
+        }
+      ],
+      "bbox": [
+        -2.74,
+        5.01,
+        -2.51,
+        5.24
+      ],
+      "source_key": "GHAP",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "Nzema首领同意筑堡，政治主体仍独立",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z012",
+      "title": "1768后Beyin Fort Apollonia英堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -2.68,
+        5.06,
+        -2.57,
+        5.17
+      ],
+      "source_key": "GHAP",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "1768开工，年份标志兴筑，非竣工的地籍控制",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z013",
+      "title": "Beyin及Nzema海岸英商关系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -2.88,
+        4.96,
+        -2.43,
+        5.32
+      ],
+      "source_key": "GHAP",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "海岸贸易涉及当地Nzema自主政治",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z014",
+      "title": "Accra Jamestown Fort James英国要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.25,
+        5.5,
+        -0.18,
+        5.58
+      ],
+      "source_key": "GHU",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/34/"
+      ],
+      "note": "英方堡垒，不包含整个阿克拉政治空间",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z015",
+      "title": "Accra附近英商海岸接驳网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.3,
+        5.41,
+        -0.08,
+        5.62
+      ],
+      "source_key": "GHM",
+      "source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "note": "与荷丹等堡垒商贸竞争",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z016",
+      "title": "English Komenda英堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.77,
+        5,
+        -1.64,
+        5.15
+      ],
+      "source_key": "GHKO",
+      "source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "note": "邻近Dutch Komenda，但不混同为同一座英国堡",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z017",
+      "title": "Komenda英荷堡垒竞争海岸",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.82,
+        4.96,
+        -1.55,
+        5.21
+      ],
+      "source_key": "GHKO",
+      "source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "note": "跨国竞争、当地贸易权并存",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z018",
+      "title": "Gold Coast英荷丹葡多国堡垒共存",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -3.2,
+        4.7,
+        0.45,
+        6.2
+      ],
+      "source_key": "GHU",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/34/"
+      ],
+      "note": "全区多国堡垒混合分布，绝不可涂成英属黄金海岸整片土地",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z019",
+      "title": "Gambia James Island英商据点",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -16.59,
+        13.3,
+        -16.53,
+        13.35
+      ],
+      "source_key": "GAUN",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/761/"
+      ],
+      "note": "1779法国攻毁后不再按年持续显示英军",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z020",
+      "title": "1779年James Island法国海军摧毁英堡",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1779
+        }
+      ],
+      "bbox": [
+        -16.63,
+        13.28,
+        -16.49,
+        13.4
+      ],
+      "source_key": "GAUN",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/761/"
+      ],
+      "note": "法国摧毁英商堡，不能延续英占标记",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z021",
+      "title": "Gambia河James Island英商贸易水路",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -16.95,
+        13.16,
+        -16.25,
+        13.72
+      ],
+      "source_key": "GAUN",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/761/"
+      ],
+      "note": "当地两岸政治主体未被英国统一征服",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z022",
+      "title": "Sierra Leone Bunce Island早期英国奴隶堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1727
+        }
+      ],
+      "bbox": [
+        -13.01,
+        8.55,
+        -12.94,
+        8.64
+      ],
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "1728遭非洲葡裔商人袭击后废弃一段时期",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z023",
+      "title": "1728 Bunce Island遭José Lopes da Moura袭击",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1728,
+          "end_year": 1728
+        }
+      ],
+      "bbox": [
+        -13.08,
+        8.51,
+        -12.89,
+        8.69
+      ],
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "非英国、非法国方面的夺堡",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z024",
+      "title": "1744—1778 Bunce Island英私人贩奴堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1744,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -13.01,
+        8.55,
+        -12.94,
+        8.64
+      ],
+      "source_key": "BUNU",
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5745/"
+      ],
+      "note": "1740年代英国私人商队恢复，1779遭法舰袭击",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z025",
+      "title": "1779 Bunce Island法军打击英国奴隶堡",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1779
+        }
+      ],
+      "bbox": [
+        -13.08,
+        8.51,
+        -12.89,
+        8.69
+      ],
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "法国舰队袭击，短期中断贸易",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z026",
+      "title": "1780—1793 Bunce Island英国商业影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1793
+        }
+      ],
+      "bbox": [
+        -13.08,
+        8.51,
+        -12.89,
+        8.69
+      ],
+      "source_key": "BUNY",
+      "source_urls": [
+        "https://macmillan.yale.edu/glc/bunce-island-history"
+      ],
+      "note": "恢复贸易的确切年需细查，画为行业网络而非每年有效英军驻堡",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z027",
+      "title": "1794 Bunce Island法国海军再次袭击",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "bbox": [
+        -13.08,
+        8.51,
+        -12.89,
+        8.69
+      ],
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "袭击不等于长期法国领土",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z028",
+      "title": "1795—1799 Bunce Island英国私人贸易",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -13.08,
+        8.51,
+        -12.89,
+        8.69
+      ],
+      "source_key": "BUNU",
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5745/"
+      ],
+      "note": "长期英国贩奴港；阶段精确重建仍需档案",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z029",
+      "title": "Sierra Leone河港奴隶贸易船运流域",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1744,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -13.42,
+        8.3,
+        -12.64,
+        8.96
+      ],
+      "source_key": "BUNY",
+      "source_urls": [
+        "https://macmillan.yale.edu/glc/bunce-island-history"
+      ],
+      "note": "交易水路不是英国殖民行政面积",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z030",
+      "title": "1787—1788 Granville Town殖民安置企图",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1788
+        }
+      ],
+      "bbox": [
+        -13.29,
+        8.42,
+        -13.14,
+        8.6
+      ],
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "note": "1789年原定居点遭破坏，居民权益另有争议",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z031",
+      "title": "1792—1799 Freetown黑人定居与公司治理",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -13.31,
+        8.41,
+        -13.15,
+        8.57
+      ],
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "note": "黑人移民的自治与公司权力必须独立",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z032",
+      "title": "Old Calabar Duke Town英国贩奴商接触区",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        8.23,
+        4.89,
+        8.44,
+        5.06
+      ],
+      "source_key": "CALA",
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/"
+      ],
+      "note": "当地政治社群与英国船长贸易，不是英国管辖区",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z033",
+      "title": "Old Calabar Old Town当地商人政治活动",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        8.22,
+        4.93,
+        8.38,
+        5.08
+      ],
+      "source_key": "CAL",
+      "source_urls": [
+        "https://academic.oup.com/book/58166/chapter-abstract/485239549"
+      ],
+      "note": "1767遭受Duke Town和英国商人合谋屠杀",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z034",
+      "title": "Old Calabar Creek Town与英奴隶船商交往",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        8.28,
+        4.94,
+        8.53,
+        5.16
+      ],
+      "source_key": "CALA",
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/"
+      ],
+      "note": "当地社会独立政治行动",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z035",
+      "title": "1767 Old Calabar英商协助伏击屠杀",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1767
+        }
+      ],
+      "bbox": [
+        8.2,
+        4.87,
+        8.51,
+        5.12
+      ],
+      "source_key": "CAL",
+      "source_urls": [
+        "https://academic.oup.com/book/58166/chapter-abstract/485239549"
+      ],
+      "note": "英国船长与Duke Town社群合谋，杀害三百多人",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z036",
+      "title": "1767 Old Calabar幸存者被劫上奴隶船",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1767
+        }
+      ],
+      "bbox": [
+        8.17,
+        4.83,
+        8.59,
+        5.21
+      ],
+      "source_key": "CALA",
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/"
+      ],
+      "note": "幸存者被劫，地点是河口范围示意",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z037",
+      "title": "1768—1786 Calabar与利物浦贩奴贸易网",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1786
+        }
+      ],
+      "bbox": [
+        8.12,
+        4.76,
+        8.69,
+        5.26
+      ],
+      "source_key": "CALA",
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/"
+      ],
+      "note": "船长与商人的经济关系不等于英国本地行政",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z038",
+      "title": "Ouidah原住王国及1727后Dahomey政治",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1727,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        1.83,
+        6.13,
+        2.3,
+        6.57
+      ],
+      "source_key": "OUIH",
+      "source_urls": [
+        "https://www.jstor.org/stable/j.ctv136c1qg"
+      ],
+      "note": "当时Ouidah归当地Dahomey王国而非英国统治",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z039",
+      "title": "Ouidah英国商馆与奴役交易",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        1.96,
+        6.26,
+        2.18,
+        6.44
+      ],
+      "source_key": "OUI",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3"
+      ],
+      "note": "Ouidah在海岸以北约四公里，非封闭海港",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-A-Z040",
+      "title": "Ouidah奴役押运路线至海岸泻湖",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        1.91,
+        6.18,
+        2.27,
+        6.43
+      ],
+      "source_key": "OUI",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3"
+      ],
+      "note": "海岸运送路线概略，英法葡商人共在此贸易",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "precise_historic_border": false,
+      "exclude_from_territorial_area_totals": true
+    }
+  ],
+  "sites": [
+    {
+      "id": "B37-A-P001",
+      "title": "海岸角Cape Coast英国贩奴堡核心",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.26,
+        5.115
+      ],
+      "linked_zone_id": "B37-A-Z001",
+      "source_key": "GHU",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/34/"
+      ],
+      "note": "堡垒不是整个Fante或Efutu内陆殖民地",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P003",
+      "title": "阿诺马布Fort Charles旧英国堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1730
+        }
+      ],
+      "coordinates": [
+        -1.275,
+        5.1850000000000005
+      ],
+      "linked_zone_id": "B37-A-Z003",
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "1731拆毁，旧堡控制中止",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P004",
+      "title": "1731阿诺马布旧英堡拆毁",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1731,
+          "end_year": 1731
+        }
+      ],
+      "coordinates": [
+        -1.275,
+        5.1850000000000005
+      ],
+      "linked_zone_id": "B37-A-Z004",
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "拆堡不属于新领土扩张",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P005",
+      "title": "1753—1756阿诺马布新堡建设期",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1753,
+          "end_year": 1756
+        }
+      ],
+      "coordinates": [
+        -1.275,
+        5.1850000000000005
+      ],
+      "linked_zone_id": "B37-A-Z005",
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "1753拨款，1757竣工，建设期非已完工堡",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P006",
+      "title": "1757后阿诺马布Fort William新英堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.275,
+        5.1850000000000005
+      ],
+      "linked_zone_id": "B37-A-Z006",
+      "source_key": "GHAN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "英方在Fante地区的海岸据点",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P008",
+      "title": "Dixcove Fort Metal Cross英方堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -2.625,
+        4.800000000000001
+      ],
+      "linked_zone_id": "B37-A-Z008",
+      "source_key": "GHD",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-metal-cross-dixcove-1692/"
+      ],
+      "note": "1692兴筑，英堡控制限于堡及周边",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P011",
+      "title": "1766 Beyin的Nzema首领与英商筑堡协商",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1768
+        }
+      ],
+      "coordinates": [
+        -2.625,
+        5.125
+      ],
+      "linked_zone_id": "B37-A-Z011",
+      "source_key": "GHAP",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "Nzema首领同意筑堡，政治主体仍独立",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P012",
+      "title": "1768后Beyin Fort Apollonia英堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -2.625,
+        5.115
+      ],
+      "linked_zone_id": "B37-A-Z012",
+      "source_key": "GHAP",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "1768开工，年份标志兴筑，非竣工的地籍控制",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P014",
+      "title": "Accra Jamestown Fort James英国要塞",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -0.215,
+        5.54
+      ],
+      "linked_zone_id": "B37-A-Z014",
+      "source_key": "GHU",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/34/"
+      ],
+      "note": "英方堡垒，不包含整个阿克拉政治空间",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P016",
+      "title": "English Komenda英堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.705,
+        5.075
+      ],
+      "linked_zone_id": "B37-A-Z016",
+      "source_key": "GHKO",
+      "source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "note": "邻近Dutch Komenda，但不混同为同一座英国堡",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P019",
+      "title": "Gambia James Island英商据点",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1778
+        }
+      ],
+      "coordinates": [
+        -16.560000000000002,
+        13.325
+      ],
+      "linked_zone_id": "B37-A-Z019",
+      "source_key": "GAUN",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/761/"
+      ],
+      "note": "1779法国攻毁后不再按年持续显示英军",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P020",
+      "title": "1779年James Island法国海军摧毁英堡",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1779
+        }
+      ],
+      "coordinates": [
+        -16.56,
+        13.34
+      ],
+      "linked_zone_id": "B37-A-Z020",
+      "source_key": "GAUN",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/761/"
+      ],
+      "note": "法国摧毁英商堡，不能延续英占标记",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P022",
+      "title": "Sierra Leone Bunce Island早期英国奴隶堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1727
+        }
+      ],
+      "coordinates": [
+        -12.975,
+        8.595
+      ],
+      "linked_zone_id": "B37-A-Z022",
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "1728遭非洲葡裔商人袭击后废弃一段时期",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P023",
+      "title": "1728 Bunce Island遭José Lopes da Moura袭击",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1728,
+          "end_year": 1728
+        }
+      ],
+      "coordinates": [
+        -12.985,
+        8.6
+      ],
+      "linked_zone_id": "B37-A-Z023",
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "非英国、非法国方面的夺堡",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P024",
+      "title": "1744—1778 Bunce Island英私人贩奴堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1744,
+          "end_year": 1778
+        }
+      ],
+      "coordinates": [
+        -12.975,
+        8.595
+      ],
+      "linked_zone_id": "B37-A-Z024",
+      "source_key": "BUNU",
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5745/"
+      ],
+      "note": "1740年代英国私人商队恢复，1779遭法舰袭击",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P025",
+      "title": "1779 Bunce Island法军打击英国奴隶堡",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1779
+        }
+      ],
+      "coordinates": [
+        -12.985,
+        8.6
+      ],
+      "linked_zone_id": "B37-A-Z025",
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "法国舰队袭击，短期中断贸易",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P026",
+      "title": "1780—1793 Bunce Island英国商业影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1793
+        }
+      ],
+      "coordinates": [
+        -12.985,
+        8.6
+      ],
+      "linked_zone_id": "B37-A-Z026",
+      "source_key": "BUNY",
+      "source_urls": [
+        "https://macmillan.yale.edu/glc/bunce-island-history"
+      ],
+      "note": "恢复贸易的确切年需细查，画为行业网络而非每年有效英军驻堡",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P027",
+      "title": "1794 Bunce Island法国海军再次袭击",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "coordinates": [
+        -12.985,
+        8.6
+      ],
+      "linked_zone_id": "B37-A-Z027",
+      "source_key": "BUN",
+      "source_urls": [
+        "https://www.sierraleoneheritage.org/sites/monuments/bunce"
+      ],
+      "note": "袭击不等于长期法国领土",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P028",
+      "title": "1795—1799 Bunce Island英国私人贸易",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -12.985,
+        8.6
+      ],
+      "linked_zone_id": "B37-A-Z028",
+      "source_key": "BUNU",
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5745/"
+      ],
+      "note": "长期英国贩奴港；阶段精确重建仍需档案",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P030",
+      "title": "1787—1788 Granville Town殖民安置企图",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1788
+        }
+      ],
+      "coordinates": [
+        -13.215,
+        8.51
+      ],
+      "linked_zone_id": "B37-A-Z030",
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "note": "1789年原定居点遭破坏，居民权益另有争议",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P031",
+      "title": "1792—1799 Freetown黑人定居与公司治理",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -13.23,
+        8.49
+      ],
+      "linked_zone_id": "B37-A-Z031",
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "note": "黑人移民的自治与公司权力必须独立",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P032",
+      "title": "Old Calabar Duke Town英国贩奴商接触区",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        8.335,
+        4.975
+      ],
+      "linked_zone_id": "B37-A-Z032",
+      "source_key": "CALA",
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/"
+      ],
+      "note": "当地政治社群与英国船长贸易，不是英国管辖区",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P033",
+      "title": "Old Calabar Old Town当地商人政治活动",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        8.3,
+        5.005
+      ],
+      "linked_zone_id": "B37-A-Z033",
+      "source_key": "CAL",
+      "source_urls": [
+        "https://academic.oup.com/book/58166/chapter-abstract/485239549"
+      ],
+      "note": "1767遭受Duke Town和英国商人合谋屠杀",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P034",
+      "title": "Old Calabar Creek Town与英奴隶船商交往",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        8.405,
+        5.050000000000001
+      ],
+      "linked_zone_id": "B37-A-Z034",
+      "source_key": "CALA",
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/"
+      ],
+      "note": "当地社会独立政治行动",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P035",
+      "title": "1767 Old Calabar英商协助伏击屠杀",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1767
+        }
+      ],
+      "coordinates": [
+        8.355,
+        4.995
+      ],
+      "linked_zone_id": "B37-A-Z035",
+      "source_key": "CAL",
+      "source_urls": [
+        "https://academic.oup.com/book/58166/chapter-abstract/485239549"
+      ],
+      "note": "英国船长与Duke Town社群合谋，杀害三百多人",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P036",
+      "title": "1767 Old Calabar幸存者被劫上奴隶船",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1767
+        }
+      ],
+      "coordinates": [
+        8.379999999999999,
+        5.02
+      ],
+      "linked_zone_id": "B37-A-Z036",
+      "source_key": "CALA",
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/"
+      ],
+      "note": "幸存者被劫，地点是河口范围示意",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-A-P039",
+      "title": "Ouidah英国商馆与奴役交易",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        2.0700000000000003,
+        6.35
+      ],
+      "linked_zone_id": "B37-A-Z039",
+      "source_key": "OUI",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3"
+      ],
+      "note": "Ouidah在海岸以北约四公里，非封闭海港",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}
