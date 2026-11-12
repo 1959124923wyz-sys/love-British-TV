@@ -30,6 +30,9 @@ def has(word):return any(word in v for v in audit()['activeZoneTitles'])
 try:
  driver.get('http://127.0.0.1:8765/?review18c=1&year=1762')
  wait.until(lambda _:audit() and audit()['loaded'] and phase35() and phase35()['loaded'] and phase34() and phase34()['loaded'])
+ # Leaflet layers may fetch faster than the unpublished 18C chronology and year-input cap.
+ # Await the actual year navigation controller before automated year changes.
+ wait.until(lambda _:js("return document.querySelector('#jumpYear')?.max==='1799' && Boolean(document.querySelector('#jumpYear')?.value)"))
  assert (audit()['zoneCount'],audit()['siteCount'],audit()['phaseCount'])==(130,83,221),audit()
  assert phase35()['zoneCount']==81 and phase34()['areaReferences']==24
  cases=[
