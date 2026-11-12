@@ -3885,17 +3885,44 @@ window.__eighteenthSpatialHost={
  map,getYear:()=>year,element:$,escapeHTML,openPanel,
  clearSelection:()=>{selectedItemYear=null;}
 };
+// Current rendered source-backed polygons, not invented historic polygons or
+// country-wide background. All source provenance comes from the existing Atlas.
+window.__historicOverlapHost={
+ map,getYear:()=>year,element:$,escapeHTML,openPanel,
+ sourceForId:id=>sourcesById.get(id)||null,
+ visibleAreaFeatures:()=>{
+  const included=['territory','colonialClaims','seventeenthStudies','archaeologyReference',
+   'warVicinity','warReach','contestedZones','earlyRegionalImpact','invasionImpact',
+   'tenthExtraction','nineYearsWar','atlanticContact','eleventhAreas',
+   'hypotheses','enslavementBands'];
+  const out=[],seen=new Set();
+  const traverse=(group,groupName)=>{
+   for(const item of group.getLayers()){
+    if(typeof item.getLayers==='function'){traverse(item,groupName);continue}
+    const f=item.feature,kind=f?.geometry?.type;
+    if(!['Polygon','MultiPolygon'].includes(kind)||!map.hasLayer(item))continue;
+    const key=String(f.id||f.properties?.id||'')+'|'+String(f.properties?.name||'')+'|'+String(f.properties?.start_year||'')+'|'+groupName;
+    if(seen.has(key))continue;seen.add(key);
+    out.push({group:groupName,layer:item,feature:f});
+   }
+  };
+  for(const name of included){
+   const group=groups[name];if(group&&map.hasLayer(group))traverse(group,name);
+  }
+  return out;
+ }
+};
 function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
   renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
-  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
+  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();window.historicOverlapDossier?.render?.();
   return;
  }
  renderSeventeenthColonialClaims();
  renderSeventeenthRegionalStudies();
  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();window.historicOverlapDossier?.render?.();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
