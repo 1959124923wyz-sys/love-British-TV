@@ -306,6 +306,7 @@
  }
  window.eighteenthOverlapDossier={
   render,
+  hitCountAt:(lat,lng)=>loaded&&enabled()?locate(L.latLng(lat,lng),false).length:0,
   getAudit:()=>({loaded,error,year:host.getYear(),areas:areas.length,sites:sites.length,
    selectedCount:activeRecords.length,selected,focused,lastActivation,
    glowCount:glowGroup.getLayers().length,
