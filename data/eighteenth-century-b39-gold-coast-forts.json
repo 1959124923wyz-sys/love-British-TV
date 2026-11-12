@@ -1,0 +1,1573 @@
+{
+  "schema": "atlas-18c-batch39-v1",
+  "region": "gold-coast-forts",
+  "review_only": true,
+  "source_register": {
+    "CAMB": "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11",
+    "SOUTH": "https://www.southampton.ac.uk/assets/imported/transforms/content-block/UsefulDownloads_Download/119BE1E844494324BE203BB3AEEA2F71/0921.pdf",
+    "GMMB": "https://gmmb.gov.gh/forts-and-castles/",
+    "TANT": "https://gmmb.gov.gh/the-fort-at-tantumquery/",
+    "VERN": "https://gmmb.gov.gh/fort-vernon-prampram/",
+    "SEKO": "https://gmmb.gov.gh/fort-orange-sekondi-1670s/",
+    "PAT": "https://gmmb.gov.gh/fort-patience-apam-1697/",
+    "KORM": "https://gmmb.gov.gh/fort-amsterdam-kormantin-abandze-1638/",
+    "DANE": "https://gmmb.gov.gh/christiansborg-castle-accra-1661/",
+    "ADA": "https://gmmb.gov.gh/fort-kongenstein-ada/",
+    "KOM": "https://gmmb.gov.gh/british-fort-english-komenda/",
+    "ANO": "https://gmmb.gov.gh/fort-william-anomabu-1753/",
+    "APOL": "https://gmmb.gov.gh/fort-apollonia-beyin-1768/",
+    "UNESCO": "https://whc.unesco.org/en/list/34/",
+    "OUI": "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3"
+  },
+  "area_aggregation_forbidden": true,
+  "area_sqkm_totals": null,
+  "notes": "Ghana fort ownership specifically validated: British/Dutch/Danish posts not merged; unsurveyed boxes, archival names/approx centres.",
+  "zones": [
+    {
+      "id": "B39-A-Z001",
+      "title": "约1730后Otuam Tantumquery英商堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.87,
+        5.22,
+        -0.78,
+        5.32
+      ],
+      "source_key": "TANT",
+      "source_urls": [
+        "https://gmmb.gov.gh/the-fort-at-tantumquery/"
+      ],
+      "note": "GMMB称1720年代建成并使用约一世纪，1730仅为有据已存在的保守显示起点",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z002",
+      "title": "Otuam Tantumquery周围Fante社群海岸商贸",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.95,
+        5.16,
+        -0.69,
+        5.4
+      ],
+      "source_key": "TANT",
+      "source_urls": [
+        "https://gmmb.gov.gh/the-fort-at-tantumquery/"
+      ],
+      "note": "堡垒所处海滨交流地理参考，不能推定英商取得当地村社土地",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z003",
+      "title": "Tantumquery英国商人沿岸小船运输",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1,
+        5.08,
+        -0.7,
+        5.39
+      ],
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "当时沿海堡垒点状分布，海航框不是英国控制的陆海疆域",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z004",
+      "title": "1742年Prampram Fort Vernon英方小型贸易堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        0.08,
+        5.67,
+        0.16,
+        5.78
+      ],
+      "source_key": "VERN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/"
+      ],
+      "note": "GMMB明确1742建造，约1816才废弃；据点范围仅堡址",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z005",
+      "title": "1742年Prampram海岸英国商人补给地",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        0.01,
+        5.6,
+        0.26,
+        5.85
+      ],
+      "source_key": "VERN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/"
+      ],
+      "note": "渔村与当地政治关系继续，贸易联系不得解释为英国统治内陆",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z006",
+      "title": "1742年Prampram当地渔业社群与商站往来",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        0.02,
+        5.61,
+        0.23,
+        5.84
+      ],
+      "source_key": "VERN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/"
+      ],
+      "note": "当地渔村并非英国殖民政区，表达互相接触而非占领",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z007",
+      "title": "1750前后英国Winneba贸易堡所在沿岸",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.69,
+        5.31,
+        -0.57,
+        5.43
+      ],
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "Cambridge所载1750时英方堡名录有Winnebah，年份以档案确认存在为基准",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z008",
+      "title": "Winneba附近Fante沿岸政治商贸关系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.79,
+        5.25,
+        -0.45,
+        5.57
+      ],
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "名义英堡与Fante各社群地权并存",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z009",
+      "title": "1750英国Succondee/Sekondi商馆参考",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.78,
+        4.86,
+        -1.69,
+        4.98
+      ],
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "Cambridge列有Succondee英方据点，但不等同邻近Dutch Fort Orange",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z010",
+      "title": "1700—1799荷兰Sekondi Fort Orange对英国竞争",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.8,
+        4.86,
+        -1.68,
+        5.03
+      ],
+      "source_key": "SEKO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-orange-sekondi-1670s/"
+      ],
+      "note": "GMMB明确Fort Orange为荷兰设施，1872才割让英国",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z011",
+      "title": "1704后Sekondi Dutch Fort Orange防御提升",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1704,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.79,
+        4.88,
+        -1.68,
+        4.99
+      ],
+      "source_key": "SEKO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-orange-sekondi-1670s/"
+      ],
+      "note": "与近旁英商馆互射火炮的欧洲竞争区",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z012",
+      "title": "Sekondi附近Ahanta当地反欧洲据点行动背景",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.9,
+        4.78,
+        -1.57,
+        5.13
+      ],
+      "source_key": "SEKO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-orange-sekondi-1670s/"
+      ],
+      "note": "GMMB记载1694当地Ahanta袭击荷堡，18世纪仅示社群自主背景，不假定持续交战",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z013",
+      "title": "1702后Apam Fort Patience荷兰炮堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1702,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.79,
+        5.24,
+        -0.7,
+        5.32
+      ],
+      "source_key": "PAT",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-patience-apam-1697/"
+      ],
+      "note": "荷兰建造，勿因英文名Patience而误填为英国堡",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z014",
+      "title": "1697—1702 Apam居民与荷方围绕堡垒规模争议结尾",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1702
+        }
+      ],
+      "bbox": [
+        -0.84,
+        5.21,
+        -0.67,
+        5.4
+      ],
+      "source_key": "PAT",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-patience-apam-1697/"
+      ],
+      "note": "原住居民屡次要求强化防御，建筑完成于1702，地方社群为参与主体",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z015",
+      "title": "Apam荷兰贸易与邻近英商贸易竞争岸段",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1702,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.91,
+        5.15,
+        -0.57,
+        5.43
+      ],
+      "source_key": "PAT",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-patience-apam-1697/"
+      ],
+      "note": "沿岸有荷兰据点和英国控制影响的邻近社群，不能统一英国占领色",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z016",
+      "title": "1700—1799Kormantin Fort Amsterdam荷兰统治堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.26,
+        5.15,
+        -1.16,
+        5.28
+      ],
+      "source_key": "KORM",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-amsterdam-kormantin-abandze-1638/"
+      ],
+      "note": "GMMB明确1665荷军攻取，18世纪仍归荷兰，直到1811遭当地盟军摧毁",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z017",
+      "title": "Kormantin最初英堡1665失守后未恢复英军驻城",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.32,
+        5.09,
+        -1.12,
+        5.33
+      ],
+      "source_key": "KORM",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-amsterdam-kormantin-abandze-1638/"
+      ],
+      "note": "英方历史旧称不可误导18世纪土地和要塞控制状态",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z018",
+      "title": "1700—1799 Accra Christiansborg丹麦贸易堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.2,
+        5.52,
+        -0.12,
+        5.61
+      ],
+      "source_key": "DANE",
+      "source_urls": [
+        "https://gmmb.gov.gh/christiansborg-castle-accra-1661/"
+      ],
+      "note": "丹麦1850才将城堡售给英国，18世纪不是英国总督府",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z019",
+      "title": "Akwamu 1693短占Christiansborg后丹麦重掌",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1750
+        }
+      ],
+      "bbox": [
+        -0.24,
+        5.47,
+        -0.07,
+        5.67
+      ],
+      "source_key": "DANE",
+      "source_urls": [
+        "https://gmmb.gov.gh/christiansborg-castle-accra-1661/"
+      ],
+      "note": "Akwamu主导者曾夺取城堡与商路，1700—1750仅背景政治关系",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z020",
+      "title": "1700—1799Accra英国Fort James与丹麦堡竞争",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -0.3,
+        5.46,
+        -0.09,
+        5.67
+      ],
+      "source_key": "UNESCO",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/34/"
+      ],
+      "note": "多国欧洲堡垒并存，Ga及Akwamu社群自主",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z021",
+      "title": "1783年Ada丹麦Fort Kongenstein建堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        0.57,
+        5.73,
+        0.73,
+        5.91
+      ],
+      "source_key": "ADA",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-kongenstein-ada/"
+      ],
+      "note": "GMMB列1783丹麦建堡，1850出售给英方",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z022",
+      "title": "Volta河口Ada当地贸易与丹麦小堡关系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        0.5,
+        5.65,
+        0.9,
+        6.02
+      ],
+      "source_key": "ADA",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-kongenstein-ada/"
+      ],
+      "note": "海河航道和当地村社贸易，不属于英方直辖地表",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z023",
+      "title": "English Komenda英国堡与Dutch Komenda对立",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.75,
+        5.04,
+        -1.64,
+        5.15
+      ],
+      "source_key": "KOM",
+      "source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "note": "英堡邻近荷堡，具体四至未实测",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z024",
+      "title": "English Komenda英国商站附近河道交易",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.8,
+        4.98,
+        -1.58,
+        5.2
+      ],
+      "source_key": "KOM",
+      "source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "note": "当地商人中介地权继续",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z025",
+      "title": "Dutch Komenda Fort Vredenburg荷兰旧堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.72,
+        5.02,
+        -1.61,
+        5.14
+      ],
+      "source_key": "GMMB",
+      "source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "note": "与英堡近邻，但不是同一英堡",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z026",
+      "title": "1700—1730 Anomabu Fort Charles英商旧堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1730
+        }
+      ],
+      "bbox": [
+        -1.33,
+        5.13,
+        -1.25,
+        5.24
+      ],
+      "source_key": "ANO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "旧堡1731英商拆毁",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z027",
+      "title": "1731 Anomabu旧堡拆除后空置阶段",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1731,
+          "end_year": 1752
+        }
+      ],
+      "bbox": [
+        -1.35,
+        5.12,
+        -1.23,
+        5.25
+      ],
+      "source_key": "ANO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "该区域记录旧堡拆除和新堡未建期间，非连续战斗",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z028",
+      "title": "1753—1756 Anomabu英国新堡兴建中",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1753,
+          "end_year": 1756
+        }
+      ],
+      "bbox": [
+        -1.34,
+        5.13,
+        -1.23,
+        5.25
+      ],
+      "source_key": "ANO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "英议会1753拨款，1757方竣工",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z029",
+      "title": "1757后Anomabu Fort William英堡完工",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.34,
+        5.13,
+        -1.23,
+        5.25
+      ],
+      "source_key": "ANO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "英堡控股与Fante政治结构独立",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z030",
+      "title": "1766—1767 Beyin Nzema首领批准英国筑堡计划",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1767
+        }
+      ],
+      "bbox": [
+        -2.76,
+        5.01,
+        -2.53,
+        5.2
+      ],
+      "source_key": "APOL",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "当地Nzema政治同意作为贸易协议，不等于让渡整个国家",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z031",
+      "title": "1768 Beyin Apollonia英方筑堡开端",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -2.69,
+        5.05,
+        -2.57,
+        5.17
+      ],
+      "source_key": "APOL",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "筑堡于1768开始，非已核准完整外墙边界",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z032",
+      "title": "1750年英方在Whydah/Ouidah的贸易堡登记",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        2,
+        6.3,
+        2.12,
+        6.43
+      ],
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "Cambridge载1750英方Whydah据点，非达荷美王国英国军事占有",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z033",
+      "title": "1727后Ouidah当地Dahomey王国政治控制",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1727,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        1.85,
+        6.2,
+        2.24,
+        6.54
+      ],
+      "source_key": "OUI",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3"
+      ],
+      "note": "当地王国主权与欧洲商站严格区分",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z034",
+      "title": "Ouidah经内陆到海岸的被奴役者转运",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        1.88,
+        6.19,
+        2.25,
+        6.45
+      ],
+      "source_key": "OUI",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3"
+      ],
+      "note": "地图标记人口强制迁移走廊，无法逐条核定发生年份和地块",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z035",
+      "title": "1750英国Cape Coast至Winneba稀疏堡垒网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -1.38,
+        5.03,
+        -0.45,
+        5.51
+      ],
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "多个堡点供应商贸，矩形并非英国整片沿海殖民区",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-Z036",
+      "title": "1750 Gold Coast英国与荷丹多堡并存主权图",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -3.05,
+        4.57,
+        0.69,
+        6.2
+      ],
+      "source_key": "SOUTH",
+      "source_urls": [
+        "https://www.southampton.ac.uk/assets/imported/transforms/content-block/UsefulDownloads_Download/119BE1E844494324BE203BB3AEEA2F71/0921.pdf"
+      ],
+      "note": "学术堡图显示多国占据点和当地社会，仅供地理参考，不描成单一英属行政省",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    }
+  ],
+  "sites": [
+    {
+      "id": "B39-A-P001",
+      "title": "约1730后Otuam Tantumquery英商堡垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -0.825,
+        5.27
+      ],
+      "linked_zone_id": "B39-A-Z001",
+      "source_key": "TANT",
+      "source_urls": [
+        "https://gmmb.gov.gh/the-fort-at-tantumquery/"
+      ],
+      "note": "GMMB称1720年代建成并使用约一世纪，1730仅为有据已存在的保守显示起点",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P004",
+      "title": "1742年Prampram Fort Vernon英方小型贸易堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        0.12,
+        5.725
+      ],
+      "linked_zone_id": "B39-A-Z004",
+      "source_key": "VERN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/"
+      ],
+      "note": "GMMB明确1742建造，约1816才废弃；据点范围仅堡址",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P005",
+      "title": "1742年Prampram海岸英国商人补给地",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        0.135,
+        5.725
+      ],
+      "linked_zone_id": "B39-A-Z005",
+      "source_key": "VERN",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/"
+      ],
+      "note": "渔村与当地政治关系继续，贸易联系不得解释为英国统治内陆",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P007",
+      "title": "1750前后英国Winneba贸易堡所在沿岸",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -0.6299999999999999,
+        5.369999999999999
+      ],
+      "linked_zone_id": "B39-A-Z007",
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "Cambridge所载1750时英方堡名录有Winnebah，年份以档案确认存在为基准",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P009",
+      "title": "1750英国Succondee/Sekondi商馆参考",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.7349999999999999,
+        4.92
+      ],
+      "linked_zone_id": "B39-A-Z009",
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "Cambridge列有Succondee英方据点，但不等同邻近Dutch Fort Orange",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P010",
+      "title": "1700—1799荷兰Sekondi Fort Orange对英国竞争",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.74,
+        4.945
+      ],
+      "linked_zone_id": "B39-A-Z010",
+      "source_key": "SEKO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-orange-sekondi-1670s/"
+      ],
+      "note": "GMMB明确Fort Orange为荷兰设施，1872才割让英国",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P013",
+      "title": "1702后Apam Fort Patience荷兰炮堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1702,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -0.745,
+        5.28
+      ],
+      "linked_zone_id": "B39-A-Z013",
+      "source_key": "PAT",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-patience-apam-1697/"
+      ],
+      "note": "荷兰建造，勿因英文名Patience而误填为英国堡",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P014",
+      "title": "1697—1702 Apam居民与荷方围绕堡垒规模争议结尾",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1702
+        }
+      ],
+      "coordinates": [
+        -0.755,
+        5.305
+      ],
+      "linked_zone_id": "B39-A-Z014",
+      "source_key": "PAT",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-patience-apam-1697/"
+      ],
+      "note": "原住居民屡次要求强化防御，建筑完成于1702，地方社群为参与主体",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P016",
+      "title": "1700—1799Kormantin Fort Amsterdam荷兰统治堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.21,
+        5.215
+      ],
+      "linked_zone_id": "B39-A-Z016",
+      "source_key": "KORM",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-amsterdam-kormantin-abandze-1638/"
+      ],
+      "note": "GMMB明确1665荷军攻取，18世纪仍归荷兰，直到1811遭当地盟军摧毁",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P018",
+      "title": "1700—1799 Accra Christiansborg丹麦贸易堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -0.16,
+        5.5649999999999995
+      ],
+      "linked_zone_id": "B39-A-Z018",
+      "source_key": "DANE",
+      "source_urls": [
+        "https://gmmb.gov.gh/christiansborg-castle-accra-1661/"
+      ],
+      "note": "丹麦1850才将城堡售给英国，18世纪不是英国总督府",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P020",
+      "title": "1700—1799Accra英国Fort James与丹麦堡竞争",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -0.195,
+        5.5649999999999995
+      ],
+      "linked_zone_id": "B39-A-Z020",
+      "source_key": "UNESCO",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/34/"
+      ],
+      "note": "多国欧洲堡垒并存，Ga及Akwamu社群自主",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P021",
+      "title": "1783年Ada丹麦Fort Kongenstein建堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        0.6499999999999999,
+        5.82
+      ],
+      "linked_zone_id": "B39-A-Z021",
+      "source_key": "ADA",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-kongenstein-ada/"
+      ],
+      "note": "GMMB列1783丹麦建堡，1850出售给英方",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P023",
+      "title": "English Komenda英国堡与Dutch Komenda对立",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.6949999999999998,
+        5.095000000000001
+      ],
+      "linked_zone_id": "B39-A-Z023",
+      "source_key": "KOM",
+      "source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "note": "英堡邻近荷堡，具体四至未实测",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P025",
+      "title": "Dutch Komenda Fort Vredenburg荷兰旧堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.665,
+        5.08
+      ],
+      "linked_zone_id": "B39-A-Z025",
+      "source_key": "GMMB",
+      "source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "note": "与英堡近邻，但不是同一英堡",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P026",
+      "title": "1700—1730 Anomabu Fort Charles英商旧堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1730
+        }
+      ],
+      "coordinates": [
+        -1.29,
+        5.1850000000000005
+      ],
+      "linked_zone_id": "B39-A-Z026",
+      "source_key": "ANO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "旧堡1731英商拆毁",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P028",
+      "title": "1753—1756 Anomabu英国新堡兴建中",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1753,
+          "end_year": 1756
+        }
+      ],
+      "coordinates": [
+        -1.2850000000000001,
+        5.1899999999999995
+      ],
+      "linked_zone_id": "B39-A-Z028",
+      "source_key": "ANO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "英议会1753拨款，1757方竣工",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P029",
+      "title": "1757后Anomabu Fort William英堡完工",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -1.2850000000000001,
+        5.1899999999999995
+      ],
+      "linked_zone_id": "B39-A-Z029",
+      "source_key": "ANO",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-william-anomabu-1753/"
+      ],
+      "note": "英堡控股与Fante政治结构独立",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P030",
+      "title": "1766—1767 Beyin Nzema首领批准英国筑堡计划",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1767
+        }
+      ],
+      "coordinates": [
+        -2.6449999999999996,
+        5.105
+      ],
+      "linked_zone_id": "B39-A-Z030",
+      "source_key": "APOL",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "当地Nzema政治同意作为贸易协议，不等于让渡整个国家",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P031",
+      "title": "1768 Beyin Apollonia英方筑堡开端",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -2.63,
+        5.109999999999999
+      ],
+      "linked_zone_id": "B39-A-Z031",
+      "source_key": "APOL",
+      "source_urls": [
+        "https://gmmb.gov.gh/fort-apollonia-beyin-1768/"
+      ],
+      "note": "筑堡于1768开始，非已核准完整外墙边界",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-A-P032",
+      "title": "1750年英方在Whydah/Ouidah的贸易堡登记",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        2.06,
+        6.365
+      ],
+      "linked_zone_id": "B39-A-Z032",
+      "source_key": "CAMB",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "note": "Cambridge载1750英方Whydah据点，非达荷美王国英国军事占有",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}
