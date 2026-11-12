@@ -3851,7 +3851,7 @@ function jumpToEnteredYear(){
  const raw=$('jumpYear').value.trim(),v=Number(raw);
  if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>(serialPreviewAtlas?previewYearCap():lastPublishedYear)){
   $('jumpYear').value=year;
-   timelineStatus('仅支持1497—'+(serialPreviewAtlas?previewYearCap():lastPublishedYear)+'年，1600年后均为非正式专题研究试阅。');return;
+   timelineStatus('请输入1497—'+(serialPreviewAtlas?previewYearCap():lastPublishedYear)+'之间的年份。');return;
  }
  stopPlay();setYear(v);
 }
