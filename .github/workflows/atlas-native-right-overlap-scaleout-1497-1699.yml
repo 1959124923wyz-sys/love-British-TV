@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: All 1497-1799 source geometry and original 18C data preserved
         run: |
+          python3 -m py_compile scripts/browser_historic_overlap_1497_1699.py scripts/browser_editor23_expansive_17c_claims.py
           node --check app.js
           node --check js/historic-overlap-dossier-1497-1699.js
           node --check js/eighteenth-overlap-right-dossier.js
