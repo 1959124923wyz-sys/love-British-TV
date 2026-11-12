@@ -29,14 +29,28 @@ def sample(year,selector,need):
   z=next(a for a in x['zones'] if a['id']=='B38-H-Z006')
   lon=(z['bbox'][0]+z['bbox'][2])/2;lat=(z['bbox'][1]+z['bbox'][3])/2
  res=js("""
-  const lat=arguments[0],lon=arguments[1],host=window.__eighteenthSpatialHost,
-    map=host.map;
-  map.setView([lat,lon],selector==='havana'?9:7,{animate:false});
-  const p=map.latLngToContainerPoint([lat,lon]),r=map.getContainer().getBoundingClientRect();
-  const x=r.left+p.x,y=r.top+p.y;
-  return {x,y,element:document.elementFromPoint(x,y)?.outerHTML.slice(0,400),
-    hits:window.eighteenthOverlapDossier.hitCountAt(lat,lon)};
- """.replace("selector==='havana'","arguments[2]==='havana'"),lat,lon,selector)
+  const lat=arguments[0],lon=arguments[1],which=arguments[2],
+    host=window.__eighteenthSpatialHost,map=host.map;
+  map.setView([lat,lon],which==='havana'?9:7,{animate:false});
+  const base=map.latLngToContainerPoint([lat,lon]),
+    rect=map.getContainer().getBoundingClientRect(),api=window.eighteenthOverlapDossier;
+  const margin=45;let choice=null;
+  for(const dx of [0,24,-24,40,-40,64,-64]){
+   for(const dy of [0,24,-24,40,-40,64,-64]){
+    const local=L.point(base.x+dx,base.y+dy);
+    if(local.x<margin||local.y<margin||local.x>rect.width-margin||local.y>rect.height-margin)continue;
+    const x=rect.left+local.x,y=rect.top+local.y,el=document.elementFromPoint(x,y);
+    if(!el||el.closest('.leaflet-marker-icon,.leaflet-control-container,.leaflet-tooltip,.leaflet-popup'))continue;
+    const ll=map.containerPointToLatLng(local),hits=api.hitCountAt(ll.lat,ll.lng);
+    if(hits<arguments[3])continue;
+    const candidate={x,y,element:el.outerHTML.slice(0,400),hits,
+       sampleLat:ll.lat,sampleLon:ll.lng};
+    if(!choice || candidate.hits>choice.hits)choice=candidate;
+   }
+  }
+  return choice||{error:'no unobstructed interactive map pixel',base:base,point:[lat,lon]};
+ """,lat,lon,selector,need)
+ assert 'error' not in res,(year,selector,res)
  assert res['hits']>=need,(year,selector,res)
  point(res['x'],res['y'])
  wait.until(lambda _:js("return window.eighteenthOverlapDossier.getAudit().open"))
