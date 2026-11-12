@@ -36,7 +36,7 @@ assert.match(html,/id="showModernBasemap" checked/,
 assert.match(html,/现代地名与道路/);
 assert.match(html,/古今地点对照/);
 assert.match(html,/不代表所选年份的国名、疆界/);
-assert.ok(html.includes('app.js?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015'));
+assert.ok(html.includes('app.js?v=atlas46-click-notes-20261112-singlecard-stablewidth-basemap-compare-20261015'));
 assert.ok(html.includes('dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015'));
 assert.ok(css.includes('.basemap-option')&&css.includes('.leaflet-tile-pane'));
 
