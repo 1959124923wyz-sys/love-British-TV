@@ -40,7 +40,7 @@ try:
   (1767,['Old Calabar英商协助伏击','Beyin的Nzema首领'],['Beyin Fort Apollonia'],'1767-calabar'),
   (1768,['Beyin Fort Apollonia','Calabar与利物浦贩奴贸易网'],['Old Calabar英商协助伏击'],'1768-africa'),
   (1775,['Balambangan苏禄力量攻占','英马战争孟买周边'],['1773—1774 Balambangan'],'1775-sulu'),
-  (1779,['法军摧毁','1779 Bunce Island'],['Gambia James Island英商'],'1779-french-attacks'),
+  (1779,['James Island法国海军摧毁','1779 Bunce Island'],['Gambia James Island英商'],'1779-french-attacks'),
   (1781,['St Eustatius Oranjestad','1781英军在Padang'],['1795 Malacca'],'1781-navy'),
   (1783,['Grenada St George恢复英国','Dominica Roseau英方复占'],['1779—1782法国夺取'],'1783-treaties'),
   (1794,['Victor Hugues夺回Guadeloupe','英军短占Guadeloupe'],['1796英军攻占Saint Lucia'],'1794-guadeloupe'),
