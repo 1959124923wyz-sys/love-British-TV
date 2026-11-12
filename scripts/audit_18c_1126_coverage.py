@@ -66,7 +66,7 @@ def audit():
     for s in stories:
         story=read_json(ROOT/s["file"])
         assert story["id"]==s["id"] and story.get("publication_status")=="research_only"
-        coverage_arcs.update(items(story.get("series_family")))
+        coverage_arcs.update(arc for arc in items(story.get("series_family")) if arc.startswith("T") and len(arc)==3 and arc[1:].isdigit())
         if story["id"].startswith("E18-C07-"):
             coverage_arcs.add("T07")
     assert len(coverage_arcs)==35 and all("T%02d"%x in coverage_arcs for x in range(1,36))
