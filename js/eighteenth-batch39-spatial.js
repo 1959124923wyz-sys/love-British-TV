@@ -19,7 +19,7 @@
   resistance:'#5cccc0',paper_claim:'#ebc479',diplomacy:'#6cb4e7',
   trade_influence:'#7bd2c6',battle:'#ed9a78',revenue:'#e4bd76',
   coercion:'#e399ab',foreign_occupation:'#879eac'};
- const label={administration:'殖民行政局部参考',military:'英方军事堡垒／局部占领',
+ const label={administration:'殖民行政',military:'英方军事堡垒／局部占领',
   displacement:'强制迁移／人口剥夺',resistance:'当地政治自治／抵抗',
   paper_claim:'纸面或外交声索',diplomacy:'外交会商与条约',
   trade_influence:'贸易航路和商业联系',battle:'局部战役和围城',
@@ -30,6 +30,7 @@
  const active=(obj,yr)=>obj.periods.some(p=>p.start_year<=yr&&yr<=p.end_year);
  const phase=(obj,yr)=>obj.periods.find(p=>p.start_year<=yr&&yr<=p.end_year);
  let year=host.getYear(),loaded=false,error=null,areas=[],points=[],loadedRegions=[];
+ const reader=window.AtlasReaderCopy;
  const sourceHTML=x=>([...new Set(x.source_urls||[])]).map(url=>{
   let domain=url;try{domain=new URL(url).hostname}catch{}
   return '<li><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(domain)+'</a></li>';
@@ -39,10 +40,7 @@
   $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪地图 · 第39批 · '+year+'年</div>'+
    '<h2>'+esc(x.title)+'</h2>'+
    '<p><strong>'+esc(label[x.kind])+'</strong>　'+p.start_year+'—'+p.end_year+'</p>'+
-   '<p>'+esc(x.note)+'</p>'+
-   '<p>'+esc(isSite?'地点符号使用编辑参考框的中心点，非历史实测城门或港口经纬度。':
-    '虚线矩形是参考地点／走廊的当代概略包络，未曾按照历史地图配准。')+'</p>'+
-   '<p>堡垒驻军、领土的法政声索、财政管理、贸易航路、他国军队进驻及当地居民自主权均分开展示。不提供占领地平方公里合计。</p>'+
+   (reader.clean(x.note)?'<p>'+esc(reader.clean(x.note))+'</p>':'')+
    '<details open><summary>可追溯历史来源</summary><ul class="source-list">'+sourceHTML(x)+'</ul></details>';
   host.openPanel('dossier');
  }
@@ -64,7 +62,7 @@
     fillColor:c,fillOpacity:fill,interactive:true,bubblingMouseEvents:false,
     className:'atlas-18c-b39-zone'
    }).bindTooltip('<strong>'+esc(z.title)+'</strong><div class="atlas-hover-summary">'+
-    esc(label[z.kind]+' · '+p.start_year+'—'+p.end_year+' · 非实测边界')+'</div>',
+    esc(label[z.kind]+' · '+p.start_year+'—'+p.end_year)+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
     .on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);dossier(z,false)})
     .addTo(areaLayer);
