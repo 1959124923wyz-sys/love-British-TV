@@ -35,10 +35,13 @@
  function show(x,isPoint){
   host.clearSelection();
   const p=period(x),urls=[...new Set(x.source_urls||[])];
-  $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪 · 第36批动态地理 · '+year+'年</div>'+
+  const cleanNote=reader.clean(x.note||'');
+  $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪 · '+year+'年</div>'+
    '<h2>'+esc(x.title)+'</h2>'+
    '<p><strong>'+esc(labels[x.kind])+'</strong>　'+p.start_year+'—'+p.end_year+'</p>'+
-   (reader.clean(x.note||'')?'<p>'+esc(reader.clean(x.note))+'</p>':'')+try{domain=new URL(u).hostname}catch{}
+   (cleanNote?'<p>'+esc(cleanNote)+'</p>':'')+
+   '<details open><summary>历史来源</summary><ul class="source-list">'+urls.map(u=>{
+    let domain=u;try{domain=new URL(u).hostname}catch{}
     return '<li><a href="'+esc(u)+'" rel="noopener noreferrer" target="_blank">'+esc(domain)+'</a></li>';
    }).join('')+'</ul></details>';
   host.openPanel('dossier');
