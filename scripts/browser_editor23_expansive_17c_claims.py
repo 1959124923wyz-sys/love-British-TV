@@ -98,7 +98,7 @@ try:
  wait.until(lambda _:j("return window.historicOverlapDossier?.getAudit?.()?.open===true"))
  assert j("return document.querySelectorAll('#atlasHistoricOverlapPanel .atlas-18c-overlap-card').length>=1")
  assert j("return document.querySelectorAll('#atlasHistoricOverlapPanel .atlas-18c-overlap-source-links a[href^=https]').length>=1")
- assert j("return document.getElementById('dossierBody').textContent.includes('历史')"))
+ assert j("return document.getElementById('dossierBody').textContent.includes('历史')")
  assert j("return document.querySelectorAll('.atlas-18c-overlap-glow').length>=1")
  d.save_screenshot(str(out/'editor23-wide-colonial-source-dossier.png'))
  goto(1688,12)  # Separate enlarged Dominion alongside prior colonial claims
