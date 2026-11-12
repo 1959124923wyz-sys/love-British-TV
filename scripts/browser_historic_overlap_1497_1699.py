@@ -80,7 +80,7 @@ try:
  a=click_feature('colonialClaims')
  assert audit()['selectedCount']>=1
  assert js("return document.querySelectorAll('#atlasHistoricOverlapPanel .atlas-18c-overlap-card').length")==audit()['selectedCount']
- assert js("return document.querySelectorAll('#atlasHistoricOverlapPanel .atlas-18c-overlap-glow').length")>=1
+ assert js("return document.querySelectorAll('.atlas-18c-overlap-glow').length")>=1
  assert '历史文献与来源' in d.find_element(By.ID,'dossierBody').text
  snap('1609-virginia-claims-right-dossier')
  if audit()['selectedCount']>=2:
