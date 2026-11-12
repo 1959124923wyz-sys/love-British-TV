@@ -23,6 +23,7 @@ try:
  assert audit()['areaReferences']==24 and audit()['documentedCityCores']==15,audit()
  for yr,expected,missing,name in [
   (1704,['GIBRALTAR'],['HAVANA','MANILA','MENORCA'],'1704-gibraltar'),
+  (1746,['MENORCA'],['HAVANA','MANILA'],'1746-madras-under-french-occupation'),
   (1749,['MENORCA'],['HAVANA','MANILA'],'1749-minorca-madras-restored'),
   (1756,['GIBRALTAR'],['MENORCA','HAVANA'],'1756-france-takes-minorca-and-madras'),
   (1762,['HAVANA','MANILA'],['PENANG','ST_EUSTATIUS'],'1762-havana-manila-short-occupation'),
@@ -38,7 +39,8 @@ try:
   assert a['visibleAreaLayerObjects']>0 and a['visibleSiteLayerObjects']>0,(yr,a)
   if yr==1776:assert 'VIRGINIA' not in a['activeAreas'] and 'PENNSYLVANIA' not in a['activeAreas']
   if yr==1763:assert 'MADRAS' in a['activeAreas'] and 'CALCUTTA' in a['activeAreas']
-  if yr==1756:assert 'MADRAS' not in a['activeAreas'] and 'CALCUTTA' not in a['activeAreas']
+  if yr==1746:assert 'MADRAS' not in a['activeAreas'] and 'CALCUTTA' in a['activeAreas']
+  if yr==1756:assert 'MADRAS' in a['activeAreas'] and 'CALCUTTA' not in a['activeAreas']
   snap(name)
  set_year(1762)
  assert js('return document.querySelectorAll(".atlas-18c-dynamic-area").length')>=10
@@ -62,7 +64,7 @@ try:
  d.get('http://127.0.0.1:8765/?year=1762')
  wait.until(lambda x:x.find_element(By.CSS_SELECTOR,'#bigYear').text=='1699')
  assert js('return !window.eighteenthSpatial')
- print('PASS 18C 24 reference outlines + 15 occupied site symbols, 1704/1749/1756/1762/1763/1776/1781/1782/1798, clicks/territory toggle/16C and unreleased concealment, real 1780x1020 Chromium')
+ print('PASS 18C 24 reference outlines + 15 occupied site symbols, 1704/1746/1749/1756/1762/1763/1776/1781/1782/1798, clicks/territory toggle/16C and unreleased concealment, real 1780x1020 Chromium')
 except Exception:
  d.save_screenshot(str(screens/'18c-map-34-FAILED.png'))
  raise
