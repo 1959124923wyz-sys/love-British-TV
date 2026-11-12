@@ -234,7 +234,15 @@
  function render(){
   const newYear=host.getYear();
   if(!loaded)return;
-  if(!enabled()){clearGlow();return}
+  if(!enabled()){
+   clearGlow();
+   if($('atlas18cOverlapPanel')){
+    activeRecords=[];selected=null;clickLocation=null;
+    $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理区域</div>'+
+     '<h2>本年未显示18世纪区域</h2><p>返回18世纪并开启“版图”，即可重新选择历史区块。</p>';
+   }
+   return;
+  }
   if(newYear!==renderYear){
    renderYear=newYear;
    if(clickLocation&&$('atlas18cOverlapPanel')){
