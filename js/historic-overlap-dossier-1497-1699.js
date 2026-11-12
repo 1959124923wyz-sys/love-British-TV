@@ -192,6 +192,8 @@
  // Event glyphs and their dedicated interactive paths retain their own actions.
  function capture(e){
   if(!enabled()||!map.getContainer().contains(e.target))return;
+  // Keep legacy synthetic map-container tests on the ordinary Leaflet fallback.
+  if(!e.isTrusted&&e.target===map.getContainer())return;
   if(e.target.closest?.('.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip,.atlas-voyage-hit'))return;
   const candidates=live();
   const hit=candidates.find(r=>r.layer._path&&(r.layer._path===e.target||r.layer._path.contains(e.target)));
