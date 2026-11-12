@@ -1,0 +1,96 @@
+{
+  "schema": "19c-three-level-contract-v1",
+  "status": "research_stage",
+  "editorial_rule": "one macro article > multiple local continuous event blocks > all raw evidence records",
+  "contracts": {
+    "theme": {
+      "required": [
+        "topic_id",
+        "title",
+        "child_story_ids",
+        "event_block_ids",
+        "stage"
+      ],
+      "allowed_stage": [
+        "editorial_outline_not_published",
+        "source_verified",
+        "editorial_approved",
+        "published"
+      ],
+      "definition": "Systematic historical process, may span multiple years and locations"
+    },
+    "event_block": {
+      "required": [
+        "event_id",
+        "topic_id",
+        "origin_topic_id",
+        "original_event_ids",
+        "supporting_record_ids",
+        "start_year_candidate",
+        "end_year_candidate",
+        "source_registry_keys",
+        "geometry",
+        "publication_status",
+        "review_checklist"
+      ],
+      "allowed_status": [
+        "research_only",
+        "source_verified",
+        "geo_verified",
+        "editorial_approved",
+        "published"
+      ],
+      "definition": "One coherent local operation, optionally covering multiple small raids; never infer geography solely from city list"
+    },
+    "evidence_node": {
+      "required": [
+        "original_event_id",
+        "date",
+        "place",
+        "actor",
+        "action",
+        "source_registry_keys",
+        "node_role_candidate",
+        "aggregated_event_id"
+      ],
+      "roles": [
+        "historical_action_candidate",
+        "source_or_retrospective_record",
+        "outside_19c_date_review",
+        "unparsed_date_review"
+      ],
+      "definition": "A source-traceable micro record, not necessarily public map point"
+    }
+  },
+  "geometry_policy": {
+    "research_only_geometry": null,
+    "suggested_impact_area_line_style": "dashed",
+    "required_impact_polygon_fields": [
+      "historical_boundary_confirmed",
+      "territorial_claim",
+      "area_sqkm",
+      "exclude_from_area_aggregation",
+      "mapping_method",
+      "named_anchors",
+      "source_ids"
+    ],
+    "forbidden": [
+      "synthetic_polygon_from_unreviewed_place_list",
+      "count_repeated_summaries_as_new_casualties",
+      "post1900_events_visible_in_1899"
+    ]
+  },
+  "integration_paths": {
+    "published_story_index": "data/stories/index.json",
+    "serial_index": "data/stories/serial/index.json",
+    "published_chapters": "data/chapters.json",
+    "published_atlas": "data/atlas-YYYY-YYYY.json",
+    "guidelines": "docs/research/19C_THREE_LEVEL_EVENT_MODEL_20261112.md"
+  },
+  "import_gate": {
+    "full_local_dataset_required": true,
+    "allow_partial_upload": false,
+    "reader_ui": "desktop_only",
+    "links_must_reference_published_atlas_event": true
+  }
+}
