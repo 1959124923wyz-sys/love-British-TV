@@ -1,0 +1,62 @@
+name: Atlas public reader-copy policy (mandatory future PR QA)
+on:
+  push:
+    branches:
+      - ux/atlas-47-no-reader-cartography-notes-guardrail-20261112
+      - main
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'js/**'
+      - 'css/**'
+      - 'style.css'
+      - 'data/**'
+      - 'scripts/test_atlas_47_public_copy_guard.js'
+      - 'scripts/browser_atlas_47_public_copy_guard.py'
+      - 'AGENTS.md'
+      - 'docs/READER_PUBLIC_COPY_POLICY.md'
+      - '.github/pull_request_template.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-copy-policy-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source syntax and mandatory reader text contract
+        run: |
+          node --check js/atlas-public-ui-guard.js
+          node --check js/atlas-reader-copy.js
+          node --check app.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/test_atlas_46_copy_click.js
+          node scripts/test_atlas_44_single_area_clean_ui.js
+          node scripts/test_reader_clean_copy_1497_1799.js
+          python3 -m py_compile scripts/browser_atlas_47_public_copy_guard.py
+          python3 scripts/audit_spatial_semantics.py --strict
+  public-copy-policy-real-desktop:
+    needs: public-copy-policy-static
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real 1780x1020 Chrome scans all reader surfaces from 1497 to 1799
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas47-http.log 2>&1 &
+          python3 scripts/browser_atlas_47_public_copy_guard.py
+          python3 scripts/browser_atlas_46_real_pointer.py
+          python3 scripts/browser_atlas_44_single_area_click.py
+      - name: Keep screenshots and final user-surface evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas47-public-copy-clean-desktop-proof
+          path: browser-smoke-results/
+          if-no-files-found: ignore
