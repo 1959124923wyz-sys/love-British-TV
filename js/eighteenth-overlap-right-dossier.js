@@ -215,13 +215,16 @@
   if(target?.closest?.(
    '.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip,'+
    '.atlas-voyage-hit,[data-open-overlap],[data-historic-open]'))return;
+  // A distinct SVG event/site/route owns its own click. Map background
+  // hit-testing is reserved for our 18C source paths and transparent canvas.
+  const onSource=Boolean(target.closest?.(classSelector));
+  if(!onSource&&target.closest?.('.leaflet-interactive'))return;
   const coordinate=map.mouseEventToLatLng(e);
   const found=locate(coordinate,false);
   if(!found.length)return;
   const isPoint=Boolean(target.closest?.(
    '.atlas-18c-dynamic-core,.atlas-18c-mass-core,'+
    '.atlas-18c-b36-site,.atlas-18c-b37-site,.atlas-18c-b38-site,.atlas-18c-b39-site'));
-  const onSource=Boolean(target.closest?.(classSelector));
   const via=onSource?'source-layer':
    found.length>1?'capture-transparent-overlap':'capture-transparent-single';
   if(!openAt(coordinate,isPoint,via))return;
@@ -231,8 +234,10 @@
  // Leaflet's ordinary map click remains a fallback for keyboard/plugin events.
  map.on('click',ev=>{
   if(!loaded||!enabled())return;
-  if(ev.originalEvent?.target?.closest?.(
+  const target=ev.originalEvent?.target;
+  if(target?.closest?.(
    '.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip'))return;
+  if(target?.closest?.('.leaflet-interactive')&&!target.closest?.(classSelector))return;
   const matched=locate(ev.latlng,false);
   if(matched.length)openAt(ev.latlng,false,matched.length>1?'map-background-overlap':'map-background-single');
  });

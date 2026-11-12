@@ -1,0 +1,43 @@
+name: Atlas 49 map SVG event precedence and original area click QA
+on:
+  push:
+    branches: [fix/atlas-49-independent-map-symbol-click-priority-20261112]
+  pull_request:
+    branches: [main]
+    paths:
+      - 'js/eighteenth-overlap-right-dossier.js'
+      - 'index.html'
+      - 'scripts/browser_atlas_49_symbol_click.py'
+      - '.github/workflows/atlas-49-event-priority.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-and-desktop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+      - name: Current reader copy, prior polygon click and JS syntax
+        run: |
+          node --check js/eighteenth-overlap-right-dossier.js
+          node scripts/test_atlas_46_copy_click.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+          python3 -m py_compile scripts/browser_atlas_49_symbol_click.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: True mouse event priority, 16C isolated regions and 18C overlapping regions
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas49-http.log 2>&1 &
+          python3 scripts/browser_atlas_49_symbol_click.py
+          python3 scripts/browser_atlas_46_real_pointer.py
+          python3 scripts/browser_atlas_44_single_area_click.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atlas49-independent-marker-and-overlap-desktop
+          path: browser-smoke-results/
+          if-no-files-found: ignore
