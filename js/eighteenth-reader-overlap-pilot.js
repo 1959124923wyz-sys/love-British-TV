@@ -240,7 +240,7 @@
   $('atlas18cReaderHint').textContent=thematic[current].help+
    '。重叠只合并外观，历史原件均保留；放大或点击数字可查看详情。';
  }
- function render(){year=host.getYear();update()}
+ function render(){update()}
  $('atlas18cTheme').addEventListener('change',()=>{current=theme.value;update()});
  $('atlas18cQuery').addEventListener('input',()=>{query=search.value.trim().toLocaleLowerCase();update()});
  $('atlas18cQuery').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();showSearch()}});
@@ -256,6 +256,7 @@
   if(e.target.closest('[data-reader-more]'))more();
  });
  map.on('zoomend moveend',()=>{if(ready)update()});
+ map.on('click',e=>{if(enabled()&&ready){const found=all.some(x=>active(x,host.getYear())&&inside(x,e.latlng));if(found)showCollection(e.latlng)}});
  // Preserve source original geometry/validation in all six historical modules.
  // CSS only hides original DOM paths within this voluntary pilot view.
  async function load(){
@@ -280,7 +281,9 @@
    if(!old.ok)throw Error('legacy core data unavailable');
    const oldest=await old.json();
    for(const x of oldest.control_sites||[]){
-    const obj={...x,kind:'military',coordinates:x.geometry.coordinates,
+    const originalKind=String(x.category||'');
+    const oldKind=originalKind.includes('贸易')?'trade_influence':originalKind.includes('纸面')?'paper_claim':'military';
+    const obj={...x,kind:oldKind,coordinates:x.geometry.coordinates,
      _readerId:all.length,sourceFile:'oldest18c'};
     all.push(obj);cores.push(obj);
    }
