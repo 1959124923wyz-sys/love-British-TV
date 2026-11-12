@@ -1,0 +1,63 @@
+name: 18C 35 mass schematic zones 81 overlays 42 cores regression
+on:
+  push:
+    branches:
+      - map/18c-35-mass-dynamic-zones-1700-1799-20261112
+  pull_request:
+    branches:
+      - map/18c-34-dynamic-territory-occupation-influence-1700-1799-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  map35-static-and-archival-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: 81 extra surfaces 42 cores 149 extra stages and full old 34 regression
+        run: |
+          node --check app.js
+          node --check js/eighteenth-dynamic-spatial.js
+          node --check js/eighteenth-mass-spatial.js
+          node scripts/test_18c_mass_spatial_81_42.js
+          node scripts/test_18c_spatial_paint_24_15.js
+          for test in scripts/test_18c_*.js; do node "$test"; done
+          python3 -m json.tool data/eighteenth-century-mass-schematic-zones-1700-1799.json >/dev/null
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_r33_original_archive_gaps.py
+          python3 scripts/audit_spatial_semantics.py --strict
+  map35-real-1780-desktop-browser:
+    needs: map35-static-and-archival-qa
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Chromium 1780 by 1020 real map changes old and new, PR review only
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c35-http.log 2>&1 &
+          python3 scripts/browser_18c_mass_schematic_81_42.py
+          python3 scripts/browser_18c_map_first_dynamic_areas.py
+      - name: Store actual desktop evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c35-mass-zones-105-surfaces-57-sites-desktop-evidence
+          path: browser-smoke-results/
+          if-no-files-found: ignore
+  map35-sha-public-preview:
+    needs: map35-static-and-archival-qa
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Public app and complete source files respond by immutable SHA
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          for file in index.html app.js js/eighteenth-dynamic-spatial.js js/eighteenth-mass-spatial.js data/eighteenth-century-mass-schematic-zones-1700-1799.json data/eighteenth-century-dynamic-spatial-1700-1799.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$file"
+          done

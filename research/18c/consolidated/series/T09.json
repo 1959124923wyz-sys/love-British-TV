@@ -1,0 +1,463 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T09",
+  "story_arc_title": "卡罗来纳原住民掳奴贸易与1715亚马西战争",
+  "status": "research_only",
+  "main_map_candidates": 2,
+  "topic_mode_candidates": 2,
+  "narrative_only_groups": 1,
+  "groups": [
+    {
+      "id": "E18-MRG-T09-01",
+      "story_arc_id": "T09",
+      "story_arc_title": "卡罗来纳原住民掳奴贸易与1715亚马西战争",
+      "title_zh": "1712—1713年Tuscarora战争、Nooherooka攻陷与俘虏",
+      "start_year": 1712,
+      "end_year": 1713,
+      "source_years": [
+        1712,
+        1713
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C21"
+      ],
+      "original_candidate_count": 4,
+      "original_candidate_ids": [
+        "E18A2-TUS-FORTHANCOCK",
+        "E18A2-TUS-NARHANTES",
+        "E18A2-TUS-NEOHEROKA-BEGIN",
+        "E18A2-TUS-NEOHEROKA-FALL"
+      ],
+      "source_keys": [
+        "A:R15",
+        "A:R16",
+        "A:R17",
+        "A:R14"
+      ],
+      "source_urls": [
+        "https://www.ncpedia.org/american-indians/tuscarora",
+        "https://www.ncpedia.org/nooherooka-tuscarora-war",
+        "https://www.ncpedia.org/media/boston-news-letter-reports",
+        "https://www.ncpedia.org/waywelived/tuscarora-war"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 3,
+        "主图核心": 1
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A2-TUS-FORTHANCOCK",
+          "year": 1712,
+          "date": "1712-04",
+          "title": "Barnwell以壕沟和燃烧威胁围攻Tuscarora在Catechna的堡垒",
+          "description": "北卡州史料记1712年4月Barnwell再围攻Fort Hancock并迫使签署割地和平条件；出兵对象是原住民实际防御社区而非纸面空地。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "A:R15"
+          ],
+          "source_urls": [
+            "https://www.ncpedia.org/american-indians/tuscarora"
+          ],
+          "geo_status": "named_historical_location_reference_without_independently_verified_WGS84",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A2-TUS-NARHANTES",
+          "year": 1712,
+          "date": "1712-01",
+          "title": "Barnwell与原住民盟军攻打Tuscarora的Narhantes防御点",
+          "description": "北卡州历史记Barnwell在1712年1月围攻Narhantes，造成数百原住民死亡或被俘；确切数分源，不自动视为被奴役者数。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "A:R15"
+          ],
+          "source_urls": [
+            "https://www.ncpedia.org/american-indians/tuscarora"
+          ],
+          "geo_status": "named_historical_location_reference_without_independently_verified_WGS84",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A2-TUS-NEOHEROKA-BEGIN",
+          "year": 1713,
+          "date": "1713-03-20",
+          "title": "Moore率殖民军及原住民盟军围攻Tuscarora的Nooherooka",
+          "description": "官方州史将攻坚起始日记为1713年3月20日，堡内抵抗者与家庭在防御工事内被围。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R16",
+            "A:R17"
+          ],
+          "source_urls": [
+            "https://www.ncpedia.org/nooherooka-tuscarora-war",
+            "https://www.ncpedia.org/media/boston-news-letter-reports"
+          ],
+          "geo_status": "named_historical_location_reference_without_independently_verified_WGS84",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A2-TUS-NEOHEROKA-FALL",
+          "year": 1713,
+          "date": "1713-03-23",
+          "title": "殖民军焚毁Nooherooka防御工事并大量俘虏Tuscarora",
+          "description": "官方州史记3月23日堡垒最终失守，幸存者遭俘；同期1713 Boston News-Letter报640死160俘，现代学者汇总不同，均不可当确证死亡总数。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R14",
+            "A:R17",
+            "A:R16"
+          ],
+          "source_urls": [
+            "https://www.ncpedia.org/waywelived/tuscarora-war",
+            "https://www.ncpedia.org/media/boston-news-letter-reports",
+            "https://www.ncpedia.org/nooherooka-tuscarora-war"
+          ],
+          "geo_status": "named_historical_location_reference_without_independently_verified_WGS84",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T09-02",
+      "story_arc_id": "T09",
+      "story_arc_title": "卡罗来纳原住民掳奴贸易与1715亚马西战争",
+      "title_zh": "1715年Yamasee及盟友战争反抗",
+      "start_year": 1715,
+      "end_year": 1715,
+      "source_years": [
+        1715
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C21"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "E18A-1715-C21-02"
+      ],
+      "source_keys": [
+        "A:S73",
+        "A:N39"
+      ],
+      "source_urls": [
+        "https://www.scencyclopedia.org/sce/entries/yamassee-war/",
+        "https://www.ncpedia.org/yamassee-war"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A-1715-C21-02",
+          "year": 1715,
+          "date": "1715-04-15",
+          "title": "Yamasee及盟友起兵攻打Carolina贸易商和定居点",
+          "description": "大学百科与北卡州史均记4月15日起义，贸易债务/掳奴与越界定居是关键背景",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:S73",
+            "A:N39"
+          ],
+          "source_urls": [
+            "https://www.scencyclopedia.org/sce/entries/yamassee-war/",
+            "https://www.ncpedia.org/yamassee-war"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T09-03",
+      "story_arc_id": "T09",
+      "story_arc_title": "卡罗来纳原住民掳奴贸易与1715亚马西战争",
+      "title_zh": "1715—1716年卡罗来纳战后条约及贸易规制",
+      "start_year": 1715,
+      "end_year": 1716,
+      "source_years": [
+        1715,
+        1716
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "policy_series",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C21"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "E18A2-TUS-FEBTREATY",
+        "E18A-1716-C21-01"
+      ],
+      "source_keys": [
+        "A:R14",
+        "A:S73",
+        "A:N39"
+      ],
+      "source_urls": [
+        "https://www.ncpedia.org/waywelived/tuscarora-war",
+        "https://www.scencyclopedia.org/sce/entries/yamassee-war/",
+        "https://www.ncpedia.org/yamassee-war"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1,
+        "主图核心": 1
+      },
+      "merge_justification": "相同制度/政策机制多次立法或执行动作合为制度系列，禁止将中间没有证据的年份画为持续事件",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A2-TUS-FEBTREATY",
+          "year": 1715,
+          "date": "1715-02",
+          "title": "北卡与残余Tuscarora交战群体订立和约",
+          "description": "北卡图书馆编年记持续抵抗至1715年2月签订和约；条款和各签字人待查原档。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "A:R14"
+          ],
+          "source_urls": [
+            "https://www.ncpedia.org/waywelived/tuscarora-war"
+          ],
+          "geo_status": "named_historical_location_reference_without_independently_verified_WGS84",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A-1716-C21-01",
+          "year": 1716,
+          "date": "1716",
+          "title": "South Carolina政府加强对印第安贸易的直接规制",
+          "description": "战后州政府进一步直接监管印第安贸易；各部族失地范围仍需地契",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:S73",
+            "A:N39"
+          ],
+          "source_urls": [
+            "https://www.scencyclopedia.org/sce/entries/yamassee-war/",
+            "https://www.ncpedia.org/yamassee-war"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T09-04",
+      "story_arc_id": "T09",
+      "story_arc_title": "卡罗来纳原住民掳奴贸易与1715亚马西战争",
+      "title_zh": "1723年北卡获释者驱逐法条",
+      "start_year": 1723,
+      "end_year": 1723,
+      "source_years": [
+        1723
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "article_only",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C21"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "E18A6-1723-003"
+      ],
+      "source_keys": [
+        "A:V6002"
+      ],
+      "source_urls": [
+        "https://slaveryandfreedomlaws.lib.unb.ca/laws/north-carolina-1723"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A6-1723-003",
+          "year": 1723,
+          "date": "1723",
+          "title": "北卡法条规定已获释者离境义务并惩罚重新入境",
+          "description": "法律指出获释者应于六个月内离境，并修订重新进入辖区者的拘捕/劳动处罚；它陈述既存和新增法律，未证明卖身/驱逐已发生的人数。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "A:V6002"
+          ],
+          "source_urls": [
+            "https://slaveryandfreedomlaws.lib.unb.ca/laws/north-carolina-1723"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T09-05",
+      "story_arc_id": "T09",
+      "story_arc_title": "卡罗来纳原住民掳奴贸易与1715亚马西战争",
+      "title_zh": "1732年乔治亚皇家托管殖民特许",
+      "start_year": 1732,
+      "end_year": 1732,
+      "source_years": [
+        1732
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-C21"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "E18A3-GEORGIA-CHARTER-1732"
+      ],
+      "source_keys": [
+        "A:V310",
+        "A:V312"
+      ],
+      "source_urls": [
+        "https://www.georgiaencyclopedia.org/articles/history-archaeology/trustee-georgia-1732-1752/",
+        "https://www.loc.gov/classroom-materials/united-states-history-primary-source-timeline/colonial-settlement-1600-1763/georgia-colony-1732-1750/"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A3-GEORGIA-CHARTER-1732",
+          "year": 1732,
+          "date": "1732-06-09",
+          "title": "英国王室签发乔治亚托管殖民地特许",
+          "description": "英王1732-06-09签特许给英国托管人，不等于已在原住民住地完成军事征服或取得地籍。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:V310",
+            "A:V312"
+          ],
+          "source_urls": [
+            "https://www.georgiaencyclopedia.org/articles/history-archaeology/trustee-georgia-1732-1752/",
+            "https://www.loc.gov/classroom-materials/united-states-history-primary-source-timeline/colonial-settlement-1600-1763/georgia-colony-1732-1750/"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}

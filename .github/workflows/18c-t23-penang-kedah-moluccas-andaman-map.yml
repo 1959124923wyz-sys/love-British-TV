@@ -1,0 +1,71 @@
+name: 18C T23 Penang Kedah Sulu Andaman Banda Ambon 29-topic historical GIS QA
+on:
+  push:
+    branches:
+      - map/18c-t23-penang-kedah-banda-ambon-andaman-1773-1796-20261111
+  pull_request:
+    branches:
+      - map/18c-t20-eic-parliament-loan-monopoly-1709-1793-20261111
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  twentynine-story-source-GIS-and-reader:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify 29 topics, T23 original 12 B records, 13 keys, immutable archives, 36 historical events and strict GIS
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          for test in scripts/test_18c_*.js; do node "$test"; done
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_t23_original_B_sources.py
+          python3 scripts/audit_18c_t20_original_B_sources.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m json.tool data/stories/serial/chronology-preview-t23-penang-kedah-moluccas-1768-1796.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t23-penang-kedah-andaman-ambon-banda-1768-1796.json >/dev/null
+          python3 -m json.tool research/continuity/1768-1796-penang-moluccas-andaman/T23_KEDAH_SULU_MOLUCCAS_INDIGENOUS_TRANSITIONS.json >/dev/null
+  real-desktop-chromium:
+    needs: twentynine-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real desktop 1780x1020 T23, all previous 28 topics and published 16C
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c29-http.log 2>&1 &
+          python3 scripts/browser_18c_t23_penang_kedah_banda_ambon.py
+          for browser_test in scripts/browser_18c_*.py; do
+            if [ "$browser_test" != "scripts/browser_18c_t23_penang_kedah_banda_ambon.py" ]; then
+              python3 "$browser_test"
+            fi
+          done
+          python3 scripts/browser_major_story_pilot.py
+      - name: Preserve real desktop Chromium screenshots and regression results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c29-sulu-penang-kedah-andaman-moluccas-desktop-screenshots
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  public-draft-web-preview:
+    needs: twentynine-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check SHA-pinned public research preview and historical articles
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js css/history-stories.css data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-t23-penang-kedah-moluccas-1768-1796.json data/stories/serial/e18-t23-penang-kedah-andaman-ambon-banda-1768-1796.json data/stories/serial/chronology-preview-t20-eic-parliament-loan-monopoly-1702-1793.json data/stories/serial/e18-t20-eic-parliament-loan-monopoly-1702-1793.json data/stories/serial/chronology-preview-t16-permanent-settlement-1760-1799.json data/stories/serial/e18-t16-bengal-permanent-settlement-adivasi-1760-1799.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$path"
+          done

@@ -1,0 +1,574 @@
+{
+  "schema": "atlas-major-history-story-v1",
+  "id": "E18-T29-T30-IRELAND-PENAL-REBELLION-1704-1799",
+  "title": "1704—1799年爱尔兰：宗教惩罚法、土地权利与1798年起义镇压",
+  "subtitle": "从1704地权和宗教法规、1720伦敦议会依附声明到1798年政府镇压、共和起义与双方暴力",
+  "region": "爱尔兰 · Dublin / Wexford / Ulster / Wicklow / Mayo",
+  "start_year": 1704,
+  "end_year": 1799,
+  "historical_end_year": null,
+  "lead": "17世纪爱尔兰的军事征服与土地剥夺在18世纪转化为一套宗教、继承、租地与行政权限制。都柏林与伦敦议会共同参与这些不平等制度，随后又在1778至1782年进行有限改革。1790年代，联合爱尔兰人试图建立跨宗教公民联盟，英国任命的爱尔兰政府与亲政府武装通过反叛乱行动和军事镇压加剧冲突。1798年起义既有政府军报复和Dunlavin被拘者处决，也存在Scullabogue由起义方实施的杀害平民事件。本篇从法律、经济、政治主体和真实地理出发，追踪制度性压迫与多方责任。",
+  "publication_status": "research_only",
+  "publication_review": "not_submitted",
+  "editorial_status": "research_preview_not_published",
+  "publication_approval": "not_submitted",
+  "series_family": [
+    "T29",
+    "T30"
+  ],
+  "parent_serial_topic_id": "E6-T03",
+  "predecessor_story_ids": [
+    "E6-T03-LAND-1642-1698",
+    "E6-T03-WILLIAMITE-WAR"
+  ],
+  "predecessor_17c_story_ids": [
+    "E6-T03-LAND-1642-1698",
+    "E6-T03-WILLIAMITE-WAR"
+  ],
+  "successor_story_ids": [],
+  "related_story_ids": [
+    "E6-T03-LAND-1642-1698",
+    "E6-T03-WILLIAMITE-WAR"
+  ],
+  "source_verification_scope": "对照主编15的T29/T30全部10组和C来源注册记录，读取爱尔兰国家档案馆公开文本、国立陆军博物馆、英国议会法律史、明尼苏达大学法令节录、Wicklow历史学者文章；现代坐标来自考古、Sport Ireland、Getty及地名资料。未亲读当年全部法院与王室手写原卷，1798战线未实测。",
+  "reading_note": "1703法会期与1704王室批准不同；1798双方杀害囚犯分清不同责任；Dunlavin伤亡名册存在数量出入，不捏造精确死亡总数；一场战斗不能外推英国控制爱尔兰面积。",
+  "map_note": "1798 Oulart Hill/Vinegar Hill为可核现代战场点，其他为现代城镇索引或无唯一可核位置；起义军于五月末控制部分城镇，但年末政府恢复控制，研究无新增英国或起义政权实控Polygon。",
+  "sources": [
+    {
+      "id": "IR01",
+      "label": "University of Minnesota Law Library：1703/1704爱尔兰2 Anne c.6土地、监护、宗教与城居法规转录",
+      "url": "https://librarycollections.law.umn.edu/archive/irishlaws/chron-anne.html",
+      "access": "statutory_excerpt_not_manuscript",
+      "original_registry_key": "C:S53a",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR02",
+      "label": "Cambridge Irish Historical Studies：1703—1704天主教惩罚法立法过程与历史背景",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/making-of-a-penal-law-2-anne-c6-17034/BFF887B070C7357A2D7A26C2AA2E9E45",
+      "access": "peer_reviewed_abstract",
+      "original_registry_key": "C:S53",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR03",
+      "label": "UK Parliament：1720英国对爱尔兰Declaratory Act立法与上诉权",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/constitutional-differences/",
+      "access": "parliamentary_history",
+      "original_registry_key": "C:S61a",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR04",
+      "label": "UK Parliament：1782年撤销1720依附法及限制/恢复爱尔兰议会权力",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/meeting-irelands-terms/",
+      "access": "parliamentary_history",
+      "original_registry_key": "C:C2-IRL-1782",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR05",
+      "label": "Ulster Historical Foundation：1778天主教租地与继承权放宽、后续宗教法规改革",
+      "url": "https://ulsterhistoricalfoundation.com/irish-parliament/background-to-statutes/religion",
+      "access": "historical_foundation_legal_review",
+      "original_registry_key": "C:C3-IRL-UHF-RELIGION",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR06",
+      "label": "Cambridge Church History：Robert E Burns论文摘要：1778爱尔兰天主教土地权利的重大松绑",
+      "url": "https://www.cambridge.org/core/journals/church-history/article/abs/catholic-relief-act-in-ireland-1778/00046185A6727830F62990B4BB170D6E",
+      "access": "peer_reviewed_abstract",
+      "original_registry_key": "C:C3-IRL-CAM-RELIEF",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR07",
+      "label": "Cambridge Irish Historical Studies：Whiteboys 1761—1765土地和税赋抗议研究摘要",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/whiteboy-movement-17615/51FA8CC01E50A1784078B5A38581D400",
+      "access": "peer_reviewed_abstract",
+      "original_registry_key": "C:C7-S10",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR08",
+      "label": "Ulster University CAIN：1795—1797爱尔兰政治宗派冲突及军事紧急状态编年",
+      "url": "https://cain.ulster.ac.uk/othelem/chron/ch1169-1799.htm",
+      "access": "university_history_chronology",
+      "original_registry_key": "C:C7-S14",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR09",
+      "label": "National Army Museum：1798起义、双方暴力、Oulart、New Ross、Antrim、Vinegar Hill及法军登陆",
+      "url": "https://www.nam.ac.uk/explore/irish-rebellion-1798",
+      "access": "national_military_museum_detailed_history",
+      "original_registry_key": "C:S23",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR10",
+      "label": "National Archives of Ireland：1798年叛乱17份历史档案影印和馆方说明（包含Oulart原信和军事镇压）",
+      "url": "https://www.nationalarchives.ie/PDF/1798.pdf",
+      "access": "national_archive_educational_facsimile_transcription",
+      "original_registry_key": "C:C5-IRL-NAI-1798",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR11",
+      "label": "Wicklow Heritage：1798年Wicklow地方编年和暴力责任",
+      "url": "https://heritage.wicklowheritage.org/topics/1798_in_county_wicklow/chronology_of_the_important_events_during_the_1798_rebellion_in_county_wicklow",
+      "access": "regional_historical_chronology",
+      "original_registry_key": "C:C6-WICKLOW-LOCAL-CHRON",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR12",
+      "label": "History Ireland：1798阿尔斯特起义及Ballymena临时控制研究",
+      "url": "https://historyireland.com/1798-in-the-north/",
+      "access": "historical_research_article",
+      "original_registry_key": "C:C7-S15",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR13",
+      "label": "Discover Ulster-Scots：北爱长老会与1798年政治动员史",
+      "url": "https://discoverulsterscots.com/history-culture/story-presbyterians-ulster",
+      "access": "regional_history",
+      "original_registry_key": "C:C7-S16",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR14",
+      "label": "History Ireland：1798年Wexford起义军军事战略与具名战役",
+      "url": "https://historyireland.com/the-military-strategy-of-the-wexford-united-irishmen-in-1798/",
+      "access": "scholarly_historical_article",
+      "original_registry_key": "C:C6-IRL-HISTIRELAND-WEXFORD",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR15",
+      "label": "National Army Museum collection：1798年英国军人Blomeley关于New Ross的信件编目与节录",
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1987-10-7-1",
+      "access": "primary_letter_catalogue_quote_not_neutral_casualty_source",
+      "original_registry_key": "C:C5-IRL-NAM-BLOMELEY",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR16",
+      "label": "National Army Museum：1798亲政府部队报复、遭镇压起义人群的审查",
+      "url": "https://www.nam.ac.uk/explore/irish-rebellion-1798",
+      "access": "national_military_museum_historical_analysis",
+      "original_registry_key": "C:C6-IRL-NAM-1798",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR17",
+      "label": "National 1798 Rebellion Centre：国家1798起义纪念中心按日期的战事年表",
+      "url": "https://1798centre.ie/history/timeline-of-1798/",
+      "access": "specialist_heritage_rebellion_chronology",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR18",
+      "label": "County Wicklow Heritage, Chris Lawlor：1798-05-24 Dunlavin处决被拘者：原信、人数差异及行为主体",
+      "url": "https://heritage.wicklowheritage.org/new-contributions/the-dunlavin-massacre-24-may-1798",
+      "access": "local_historical_study_primary_letters_cited",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR19",
+      "label": "Sport Ireland：Oulart Hill历史战场公共步道现代GPS参考点",
+      "url": "https://www.sportireland.ie/outdoors/walking/trails/oulart-hill-1798-walking-hub-cosan-na-gloire",
+      "access": "government_sport_historical_site_gps_reference",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR20",
+      "label": "Irish archaeological excavations register：Vinegar Hill纪念遗址近峰处考古位置与1798战场",
+      "url": "https://excavations.ie/report/2022/Wexford/0031602/",
+      "access": "archaeological_site_reference_coordinates",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR21",
+      "label": "Mapcarta / OSM + GeoNames：Dunlavin现代镇中心参考点",
+      "url": "https://mapcarta.com/18274692",
+      "access": "modern_settlement_reference_not_event_scene",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR22",
+      "label": "Mapcarta / OSM + GeoNames：Belfast现代城市中心参考点",
+      "url": "https://mapcarta.com/Belfast",
+      "access": "modern_city_reference_not_1791_meeting_room",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR23",
+      "label": "Mapcarta / OSM + GeoNames：New Ross现代城镇参考点",
+      "url": "https://mapcarta.com/New_Ross",
+      "access": "modern_town_reference_not_1798_battlefront",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR24",
+      "label": "Mapcarta / OSM + GeoNames：Antrim现代城镇参考点",
+      "url": "https://mapcarta.com/Antrim_%28town%29",
+      "access": "modern_town_reference_not_street_combat_trace",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR25",
+      "label": "Mapcarta / OSM + GeoNames：Killala现代城镇参考点",
+      "url": "https://mapcarta.com/18272434",
+      "access": "modern_town_reference_not_1798_french_disembarkation",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR26",
+      "label": "Getty Research TGN + historical geographic gazetteer：Ballinamuck现代村庄参考点／1789战役所在地名称",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=&place&subjectid=6000599",
+      "access": "modern_named_village_reference_not_surveyed_battle_lines",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR27",
+      "label": "UK Parliament：1782以后爱尔兰议会行政依附仍然存在与古代Poynings Law",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/key-dates/",
+      "access": "parliamentary_yearly_key_dates",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR28",
+      "label": "Cambridge Irish Historical Studies：1774—1782天主教惩罚法的复杂分阶段撤销",
+      "url": "https://www.cambridge.org/core/journals/irish-historical-studies/article/abs/ecclesiastical-politics-and-the-dismantling-of-the-penal-laws-in-ireland-177482/F2661777B964E395DF52D42680441C9A",
+      "access": "peer_reviewed_abstract",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "IR29",
+      "label": "Ballinamuck local history group：Ballinamuck 1798年战场逐点古迹参照，不用现代村中心代替每一交战点",
+      "url": "https://www.ballinamuck.ie/virtual-trail/",
+      "access": "local_battlefield_site_notes",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    }
+  ],
+  "sections": [
+    {
+      "id": "roots",
+      "heading": "一、17世纪土地剥夺延续为18世纪法律性歧视",
+      "period_start_year": 1700,
+      "period_end_year": 1703,
+      "source_keys": [
+        "IR09",
+        "IR03",
+        "IR01"
+      ],
+      "paragraphs": [
+        "爱尔兰在1691年威廉派战争败局后，既是有自己都柏林议会的王国，又处在英王及伦敦任命行政当局的实权安排下。17世纪的阿尔斯特种植园、征服与土地重分配，已被前代主编分别编成长期专题。本专题在其基础上追问：失地、租佃与宗教身份如何在18世纪继续影响政治权利。",
+        "从17世纪起，爱尔兰天主教土地所有和公职资格受长期限制；多数爱尔兰长老会等非国教新教群体也面对不平等限制。这些群体在1790年代的共同改革尝试，是复杂社会结构中出现的政治联合，并非全体居民自然归于同一阵营。",
+        "本篇先讲法律中的土地交易、继承和宗教权利，再进入乡村社会的租佃负担，最后具体追踪1798年暴力冲突、政府武装行动和起义者的责任，避免把1699年当作压迫和抵抗突然消失的年份。"
+      ]
+    },
+    {
+      "id": "penal",
+      "heading": "二、1704年宗教惩罚法：继承、土地及监护如何被法律改写",
+      "period_start_year": 1704,
+      "period_end_year": 1705,
+      "source_keys": [
+        "IR01",
+        "IR02"
+      ],
+      "paragraphs": [
+        "1703—1704年都柏林议会通过的2 Anne c.6法案，[[E18C-IRL-1704-PENAL-LAW|从1704年起以宗教资格对天主教土地、租赁、子女监护及官职施加成套限制]]。它允许以子女改宗作为继承优待机制，改变天主教家庭传承地产时的法理地位。",
+        "法规节录的第6条限制天主教徒取得土地及超过31年的租约，第10条推动未出售土地在天主教子嗣之间分割。部分妇女、家属和未成年人的权利通过监护与继承条款间接受影响；这属于制度性的产权差别对待。",
+        "原转写将2 Anne c.6按1703议会会期编入目录，主编15查到1704年3月4日王室批准资料；二者是同一项法令的两个时间口径。1705年Limerick与Galway城市居住担保期限另见条款，不在地图上虚构两份独立征服战争。"
+      ]
+    },
+    {
+      "id": "dependence",
+      "heading": "三、1720年：英国议会争夺对爱尔兰立法与终审权",
+      "period_start_year": 1720,
+      "period_end_year": 1720,
+      "source_keys": [
+        "IR03",
+        "IR27"
+      ],
+      "paragraphs": [
+        "因爱尔兰上院与英国上院的上诉权限之争，[[E18C-IRL-1720-DECLARATORY-ACT|英国议会1720年通过法律声称可直接为爱尔兰立法并处理终审上诉]]。这项Declaratory Act具有明确的跨海政治控制目的。",
+        "它将法律权限从都柏林向伦敦倾斜，却不能简单说都柏林议会从1720年开始不存在。爱尔兰保留本身制度，但受国王、总督及英国议会的不同约束。",
+        "议会档案还说明英国对爱尔兰羊毛出口的限制与经济竞争有关。国家权力干预、土地租佃压迫和私人地主行为不能互相等同；这也是本项目把制度、地理和执行主体拆开的理由。"
+      ]
+    },
+    {
+      "id": "whiteboys",
+      "heading": "四、1762年乡村Whiteboys对土地与税负的抗争",
+      "period_start_year": 1762,
+      "period_end_year": 1762,
+      "source_keys": [
+        "IR07"
+      ],
+      "paragraphs": [
+        "进入18世纪中叶，[[E18C-IRL-1762-WHITEBOYS|蒙斯特多个乡村地区出现Whiteboys反对牧场圈地和什一税的抗争]]，租佃关系、土地利用变化与宗教性税费共同推动基层冲突。",
+        "Whiteboys并非一个拥有固定省界、统一军队和成文国家机关的政权。各地成员、具体袭击和地方诉求不同，军事冲突应与独立农户经济处境并列陈述。",
+        "剑桥出版的历史研究提供1761—1765年运动的专题审查，但仅凭这篇摘要不能给出全省精确参加人数或每年死亡人数。本批将其作为长期财政地权矛盾的核心背景，而非满地图的细碎冲突标记。"
+      ]
+    },
+    {
+      "id": "relief",
+      "heading": "五、1778至1782年：部分改革与尚未消失的政治依附",
+      "period_start_year": 1778,
+      "period_end_year": 1782,
+      "source_keys": [
+        "IR04",
+        "IR05",
+        "IR06",
+        "IR28"
+      ],
+      "paragraphs": [
+        "在持续压力与英帝国战争形势变化下，[[E18C-IRL-1778-CATHOLIC-RELIEF|1778年爱尔兰天主教救济法放宽土地取得、长期租赁和继承方面的限制]]。这属于先前惩罚法体系的重要修正。",
+        "到了[[E18C-IRL-1782-IRISH-LEGISLATIVE-RELIEF|1782年英国撤销对爱尔兰的1720年依附法，并调整Poynings Law]]，爱尔兰议会取得更完整的立法及终审司法权。但总督及首席秘书仍由英国政府委任，政治自主仍有限。",
+        "财政利益、自由贸易诉求、天主教土地权与新教爱尔兰议会改革互有重叠，也有政治分歧。它们组成了1790年代新共和政治运动的制度背景，不能把所有改革都写成1782年已经实现的完全独立。"
+      ]
+    },
+    {
+      "id": "union",
+      "heading": "六、1791年联合爱尔兰人与跨宗教改革联盟",
+      "period_start_year": 1791,
+      "period_end_year": 1796,
+      "source_keys": [
+        "IR09",
+        "IR10",
+        "IR22"
+      ],
+      "paragraphs": [
+        "在法国革命和美国革命影响下，[[E18C-IRL-1791-UNITED-IRISH-FOUNDING|1791年Belfast联合爱尔兰人协会形成跨宗教议会改革运动]]。其初期领导者中有长老会新教徒，也呼吁天主教徒享有更平等的权利。",
+        "政治诉求随后经历变化：英国与革命法国开战，组织受到查禁，部分成员与Defenders结盟，最终转向推翻英国政治控制的共和国计划。两种政治阶段应分开，不能把1791年的初期改革会议说成已经发生武装起义。",
+        "1796年法国舰队曾试图在Bantry Bay一带登陆支援爱尔兰革命，风暴使此次入侵未能实施。当地各派宗教身份、地主利益与政治目标复杂，不宜把爱尔兰人划成单一阵营。"
+      ]
+    },
+    {
+      "id": "terror",
+      "heading": "七、1797年：国家军事镇压与起义前的恐怖",
+      "period_start_year": 1797,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR08",
+        "IR09",
+        "IR10"
+      ],
+      "paragraphs": [
+        "1797年左右，[[E18C-IRL-1797-COUNTERINSURGENCY|政府军和地方效忠派武装开展解除武装、逮捕与恐吓的反叛乱行动]]。英国国家陆军博物馆同时记载酷刑、草率处决、焚烧房屋与被广泛使用的政府告密者网络。",
+        "地方性的Yeomanry具有亲政府倾向，但具体部队与军官的行为不宜全都当作伦敦议会亲自下达的统一命令。英国任命的爱尔兰行政当局支持和部署反起义体系，仍承担国家治理层面的责任。",
+        "国家档案馆所收当时政府通信与士兵来函带有各自政治立场。要呈现暴力及其后果，须将文书自述与后世史学家证实的行动区别记录。"
+      ]
+    },
+    {
+      "id": "leadership",
+      "heading": "八、1798年春：领导层被捕，地方起义失去协调",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR10",
+        "IR09"
+      ],
+      "paragraphs": [
+        "1798年3月，[[E18C-IRL-1798-MARCH-ARRESTS|都柏林当局凭告密情报突袭Oliver Bond住所并逮捕联合爱尔兰人骨干]]，起义核心领导层遭重创。国家档案馆公开了与密报和抓捕有关的当代通信。",
+        "5月18日，[[E18C-IRL-1798-FITZGERALD-ARREST|Edward Fitzgerald在被捕时身受致命伤]]。这项政府政治逮捕发生于武装起义全面爆发前；其伤亡不纳入后来某座战场死亡数。",
+        "起义组织对是否等待法国军事支援存在分歧，政府持续搜捕进一步损害跨地区联络。将所有地方行动强行归因于一名统一总司令，既会误读组织结构，也会掩盖地方乡村的土地与宗教压力。"
+      ]
+    },
+    {
+      "id": "outbreak",
+      "heading": "九、1798年5月：多地反抗与Dunlavin处决",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR18",
+        "IR11",
+        "IR10"
+      ],
+      "paragraphs": [
+        "5月23日晚至24日，[[E18C-IRL-1798-MAY-UPRISING|联合爱尔兰人在Dublin周边多县发动反英起义]]。国家档案馆说明Meath和Kildare起义军大多很快被打散，Wexford起义却维持了更长时间的短暂城镇控制。",
+        "同月24日，[[E18C-IRL-1798-DUNLAVIN-EXECUTIONS|Dunlavin亲政府民兵把被拘押的嫌疑者带到公共绿地枪决并绞死部分人员]]。地方历史研究指出至少有36人被带出枪击，另有人被绞死；实际死亡者的名单与总人数存在记录差异，因此不合并不同名册作精确总数。",
+        "当地史家还记录此事促使反政府抵抗长期化。Dunlavin遭杀害者属被拘押人员，不能与New Ross两军战斗伤亡或Scullabogue起义方杀人合并成一项死亡统计。"
+      ]
+    },
+    {
+      "id": "oulart",
+      "heading": "十、Oulart胜利和Wexford短暂反叛统治",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR10",
+        "IR09",
+        "IR17",
+        "IR19"
+      ],
+      "paragraphs": [
+        "5月27日，[[E18C-IRL-1798-OULART|John Murphy和当地起义者在Oulart Hill击败North Cork Militia]]；国家档案馆保存了Wexford副市长Ebenezer Jacob向当局写信描述这次溃败的影印文本。",
+        "随后[[E18C-IRL-1798-ENNISCORTHY-TAKEN|起义军于5月28日攻取Enniscorthy并在月底控制Wexford城镇]]。这是军事控制发生改变的明确事实，但城镇、郡县、乡村领地的控制各自不同。起义军并未稳定掌控全爱尔兰。",
+        "本研究为Oulart只使用Sport Ireland的现代历史步道参考点；Enniscorthy短时控制记录于单独的战争期控制台账，但不把现代郡界涂为起义政权实控面积。"
+      ]
+    },
+    {
+      "id": "newross",
+      "heading": "十一、New Ross攻防：胜利与失败均有社会代价",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR09",
+        "IR15",
+        "IR17",
+        "IR23"
+      ],
+      "paragraphs": [
+        "6月5日，[[E18C-IRL-1798-NEW-ROSS|起义军攻入New Ross部分街区，但政府军最终夺回并守住该城]]。英国陆军博物馆保存的士兵亲历信将起义军描写得十分敌对，战况和人数必须另作史学对照。",
+        "从领导指挥、武器与粮食组织到各镇民兵的不同立场，这场战争包括政治改革诉求、地方社会矛盾和具体作战军事组织，不能只用单一的宗教身份解释。",
+        "本地图使用今日New Ross城镇中心作战役地域参考，真实战线、炮位与遇难者分布须以1798战场考古、原件军图和当地地籍调查才能获准绘制。"
+      ]
+    },
+    {
+      "id": "massacres",
+      "heading": "十二、Scullabogue：必须写明起义方杀害平民的责任",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR09",
+        "IR17",
+        "IR10"
+      ],
+      "paragraphs": [
+        "与New Ross战役同日，[[E18C-IRL-1798-SCULLABOGUE|Scullabogue部分起义人员将100多名被拘亲政府居民关在谷仓中纵火烧死]]。这是起义者一方实施的严重暴行，不能归咎于当时英国政府军。",
+        "史料记录具体受害者身份、人数和实施者时存在差异，编审不能把全部起义者或所有天主教居民认定为这次屠杀参与者。起义团体内部可能存在地方报复、宗派仇杀和指挥纪律问题。",
+        "Scullabogue历史谷仓的具体地籍或立体位置仍需校验。本篇保留具年事件与受害者说明，但不在New Ross现代城区伪造杀戮GPS；各责任人的行政与刑责属于下一层原卷调查。"
+      ]
+    },
+    {
+      "id": "ulster",
+      "heading": "十三、Antrim起义：长老会共和派也参与反抗",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR09",
+        "IR12",
+        "IR13",
+        "IR24"
+      ],
+      "paragraphs": [
+        "6月7日，[[E18C-IRL-1798-ANTRIM|Henry Joy McCracken参与领导阿尔斯特Antrim起义，进入城镇后遭政府军反攻]]。这个北方战场反映爱尔兰起义并不是天主教徒单独发动的宗教战争。",
+        "起义军被迅速击败，McCracken随后被捕并遭处决。短时控制与最终政府军恢复城镇统治是同一年内的两段不同历史状态，不能做成跨年持续起义控制Polygon。",
+        "北部Belfast长老会和联合爱尔兰人中的政治联合具有不同内部派别，地方效忠派与反抗者也并非按宗教划线。现代Antrim镇点不等于当年的每一条巷道战线。"
+      ]
+    },
+    {
+      "id": "vinegar",
+      "heading": "十四、Vinegar Hill战役和胜利后政府暴力",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR09",
+        "IR10",
+        "IR16",
+        "IR20"
+      ],
+      "paragraphs": [
+        "6月21日，[[E18C-IRL-1798-VINEGAR-HILL|Gerard Lake统率政府军围攻Vinegar Hill并使用火炮打击起义军阵地]]，多数Wexford起义军被击败；仍有部分人员突破政府围堵，之后在山区继续活动。",
+        "胜利后，[[E18C-IRL-1798-LOYALIST-REPRISALS|部分英国王室军人与亲政府武装又针对起义者及居民进行掠夺和报复]]。英国总督Cornwallis公开指责一些亲政府部队的残酷行为，这一国家内部批评也是研究政府默许与管辖失败的线索。",
+        "战役临近的Wexford镇还发生起义方杀害亲政府囚犯事件。对照这些不同主体的犯罪与政治报复，既能真实展示殖民统治中的有组织暴力，也不会消除起义方个别群体的责任。"
+      ]
+    },
+    {
+      "id": "french",
+      "heading": "十五、法国远征与1798年最后的大规模战事",
+      "period_start_year": 1798,
+      "period_end_year": 1798,
+      "source_keys": [
+        "IR09",
+        "IR10",
+        "IR25",
+        "IR26",
+        "IR29"
+      ],
+      "paragraphs": [
+        "8月23日，[[E18C-IRL-1798-KILLALA-FRENCH|法国Humbert远征军抵达Killala地区并获得部分爱尔兰起义者支持]]，随后向Mayo内陆进军。法国远征军是第三方，所带军事力量与当地爱尔兰反叛者不能写成英国皇家部队。",
+        "虽然法爱联军一度赢得Castlebar战斗，但[[E18C-IRL-1798-BALLINAMUCK|1798年9月8日Ballinamuck战役以法军投降、爱尔兰起义军战败告终]]。此处标记现代Ballinamuck村庄，战斗全线与具体兵力不能据村中心反推。",
+        "局部山区抵抗与军法处置并未在9月突然结束。1798革命失败导致英国进一步考虑结束单独的爱尔兰议会，1800年《联合法案》及1801年生效属于下一世纪制度转型，不应倒填为1798年已经完成的统一。"
+      ]
+    },
+    {
+      "id": "synthesis",
+      "heading": "十六、法律、经济与军队构成了一条什么样的历史链？",
+      "period_start_year": 1704,
+      "period_end_year": 1799,
+      "source_keys": [
+        "IR09",
+        "IR10",
+        "IR03",
+        "IR01",
+        "IR04"
+      ],
+      "paragraphs": [
+        "1704惩罚法、1720伦敦立法控制、1762田地和税赋抗争、1778及1782有限改革，构成18世纪爱尔兰被控制与反抗的一条长期制度线；1797—1798年政府动员和战争镇压则显示了行政与军队的连续关系。",
+        "必须将英国政府任命总督、爱尔兰议会制定法令、乡村大地主的经济利益、政府军和地方民兵、联合爱尔兰人派别、法国革命军等主体分别识别。一切掠夺、逮捕和 杀害的责任应依史料逐项归属，而非笼统写作全社会一方对另一方。",
+        "本批19世纪以前已证的事实保持具年事件，长期地租、人口损失和法律歧视只列能追溯来源与分母的结论。没有经历史调查的战争前线、宗派社区界线、整体起义区或英国军控边界，统一保持Point或空坐标，不创造彩色实控Polygon；下一任应核1699→1700稳定政治/驻军状态再考虑正式出版。"
+      ]
+    }
+  ],
+  "related_event_ids": [
+    "E18C-IRL-1704-PENAL-LAW",
+    "E18C-IRL-1720-DECLARATORY-ACT",
+    "E18C-IRL-1762-WHITEBOYS",
+    "E18C-IRL-1778-CATHOLIC-RELIEF",
+    "E18C-IRL-1782-IRISH-LEGISLATIVE-RELIEF",
+    "E18C-IRL-1791-UNITED-IRISH-FOUNDING",
+    "E18C-IRL-1797-COUNTERINSURGENCY",
+    "E18C-IRL-1798-MARCH-ARRESTS",
+    "E18C-IRL-1798-FITZGERALD-ARREST",
+    "E18C-IRL-1798-MAY-UPRISING",
+    "E18C-IRL-1798-DUNLAVIN-EXECUTIONS",
+    "E18C-IRL-1798-OULART",
+    "E18C-IRL-1798-ENNISCORTHY-TAKEN",
+    "E18C-IRL-1798-NEW-ROSS",
+    "E18C-IRL-1798-SCULLABOGUE",
+    "E18C-IRL-1798-ANTRIM",
+    "E18C-IRL-1798-VINEGAR-HILL",
+    "E18C-IRL-1798-LOYALIST-REPRISALS",
+    "E18C-IRL-1798-KILLALA-FRENCH",
+    "E18C-IRL-1798-BALLINAMUCK"
+  ],
+  "quantitative_claims": [
+    {
+      "value": "36名被带到Dunlavin公共绿地枪击；另有被绞死者，死亡总数资料分歧",
+      "reference": "1798-05-24 Dunlavin massacre",
+      "status": "regional_historian_source_reconciled_counts_not_exact_final_total",
+      "source_ids": [
+        "IR18"
+      ]
+    },
+    {
+      "value": "Scullabogue超过100名被拘亲政府人士遭杀害",
+      "reference": "1798-06-05 Scullabogue",
+      "status": "British_National_Army_Museum_magnitude_not_exact",
+      "source_ids": [
+        "IR09"
+      ]
+    }
+  ],
+  "historic_control_note": "1798年5月底至6月21日短暂起义城镇控制，只作有据地方时间片，不以单一年份地图常驻面表示整个郡县。",
+  "future_historical_continuation_note": "1800 Acts of Union和1801统一生效属于未来世纪承接，不能在1799年伪造已经实施的王国合并。"
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "atlas-18c-scotland-state-and-darien-actor-transition-research-v1",
+  "publication_status": "research_only",
+  "scope": "1699 year-end/1700 Darien departure; 1706/1707 separate Parliaments and kingdom incorporation; 1746/1792 non-sovereign episodes",
+  "sources": [
+    "data/stories/serial/e6-t04-darien-guna-scotland.json",
+    "research/18c/consolidated/series/T31.json",
+    "research/18c/consolidated/series/T32.json",
+    "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
+    "https://commonslibrary.parliament.uk/research-briefings/cbp-10649/",
+    "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,BTL6"
+  ],
+  "transitions": [
+    {
+      "entity": "Scottish Company Darien fort St Andrew",
+      "previous_state": "Scots overseas colonial military site at Caledonia Bay in 1699, local Guna Country remained autonomous",
+      "from_legacy_story_id": "E6-T04-DARIEN",
+      "original_17c_stable_id": "await_actual_17c_CONTROL_EPISODES_review",
+      "effective_year": 1700,
+      "by_date": "1700-04",
+      "after_state": "surrendered to Spanish besiegers; Scottish company garrison did not survive as a Scots or later British controlled possession",
+      "transfer_to": "Spanish claim/force established over the fort site only, without asserting verified sovereignty over all Guna country",
+      "polygon_allowed": false,
+      "retain_1700_everlasting": false,
+      "source_keys": [
+        "C:S72",
+        "C:C2-DAR-2025"
+      ]
+    },
+    {
+      "entity": "Kingdom of Scotland sovereign legislature",
+      "previous_state": "separate kingdom and legislature 1706 to 1707-04-30 while monarch shared with England",
+      "effective_date": "1707-05-01",
+      "legal_actors": [
+        "Scottish Parliament ratified 1707-01-16",
+        "English Parliament ratified 1707-03-06"
+      ],
+      "after_state": "incorporated Great Britain with one Parliament; Scots law, courts and established Church survive under Union settlement",
+      "old_actor": "Kingdom of Scotland (separate parliament)",
+      "new_actor": "Kingdom of Great Britain",
+      "legal_vs_military": "parliamentary statutory incorporation under English economic coercion; not a new military occupation frontier",
+      "polygon_allowed": false,
+      "source_keys": [
+        "C:C2-UNION-ART",
+        "C:C6-UK-COMMONS-UNION2026"
+      ]
+    },
+    {
+      "entity": "Kingdom of England sovereign legislature",
+      "previous_state": "separate kingdom with parliament until 1707-04-30",
+      "effective_date": "1707-05-01",
+      "after_state": "England incorporated with Scotland into Great Britain; not a British conquest of a third country",
+      "new_actor": "Kingdom of Great Britain",
+      "polygon_allowed": false,
+      "source_keys": [
+        "C:C5-UK-PARL-UNION-HOUSE"
+      ]
+    },
+    {
+      "entity": "Kingdom of Ireland",
+      "previous_state": "separate Crown-connected kingdom with Dublin parliament",
+      "effective_date": "1707-05-01",
+      "after_state": "retained separate constitutional status from Great Britain; 1801 future Anglo-Irish union not operative in 1707",
+      "new_actor": "Kingdom of Ireland",
+      "polygon_allowed": false,
+      "source_keys": [
+        "C:C6-UK-COMMONS-UNION2026"
+      ]
+    },
+    {
+      "entity": "Jacobite strongholds or battlefields",
+      "previous_state": "wartime local positions, with claims to restore the Stuart dynasty",
+      "effective_year": 1746,
+      "after_state": "Battle of Culloden did not cause a fresh 1746 Scotland-wide annexation; Great Britain already existed since 1707",
+      "polygon_allowed": false,
+      "source_keys": [
+        "C:S01a",
+        "C:C7-S21"
+      ]
+    },
+    {
+      "entity": "Highland landownership and court competence",
+      "previous_state": "mixed royal/landlord and heritable jurisdictions",
+      "effective_year": 1748,
+      "after_state": "1747 vesting and 1752 targeted annexations affect named estates; 1748 judicial shift affects most heritable jurisdictions; no cartographic Highland-wide Crown estate polygon permitted",
+      "polygon_allowed": false,
+      "source_keys": [
+        "C:C3-SCO-NRS-COURTS",
+        "C:C3-SCO-NRS-CAT"
+      ]
+    }
+  ],
+  "geo_review": {
+    "published_existing_17c_polygon_untouched": true,
+    "new_polygon_count": 0,
+    "conceptual_boundary": "The modern Scottish border must not be reinterpreted as a battle front, a newly seized state polygon in 1707, or the territorial footprint of all Annexed Estates.",
+    "unverified_line_should_be_dashed_if_later_documented": true
+  },
+  "research_tasks_remaining": [
+    "Locate exact old 17C Darien territorial stable_id in control ledger, do not invent it",
+    "Add day-granular 1707 legal sovereign actor overlay only after existing atlas transition architecture review",
+    "Survey individual 1747/1752 estate plans before calculating acres transferred to Crown",
+    "Research tenant expulsions in 18th-century Ross-shire versus 19th-century land clearance"
+  ]
+}

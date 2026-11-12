@@ -1,0 +1,48 @@
+name: 18C Jamaica Maroon and Atlantic exile map editorial QA
+on:
+  push:
+    branches:
+      - map/18c-jamaica-maroon-exile-20261108
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  javascript-story-and-geography-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source, event links, edit gates and original research regression
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_18c_jamaica_maroon_map.js
+          node scripts/test_18c_bengal_continuity_map.js
+          node scripts/test_18c_acadia_map_pilot.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          python3 -m json.tool data/stories/serial/chronology-preview-jamaica-1700-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t03-t04-jamaica-maroons-1718-1799.json >/dev/null
+      - name: Strict source semantics and GeoJSON audit
+        run: python3 scripts/audit_spatial_semantics.py --strict
+  real-desktop-chromium:
+    runs-on: ubuntu-latest
+    needs: javascript-story-and-geography-contract
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Selenium
+        run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Verify Jamaica, Bengal, Acadia and old century browsing
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/18c-jamaica-http.log 2>&1 &
+          python3 scripts/browser_18c_jamaica_maroon.py
+          python3 scripts/browser_18c_bengal_continuity.py
+          python3 scripts/browser_18c_acadia_pilot.py
+      - name: Save review screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c-jamaica-maroon-desktop-research-smoke
+          path: browser-smoke-results/
+          if-no-files-found: ignore

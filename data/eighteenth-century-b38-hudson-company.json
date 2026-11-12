@@ -1,0 +1,1353 @@
+{
+  "schema": "atlas-18c-batch38-v1",
+  "region": "hudson-company",
+  "review_only": true,
+  "documentation": "Parks Canada Hudson Bay trade forts, indigenous middlemen, and French raids; drawn rectangles nonhistorical boundary.",
+  "source_register": {
+    "YORK": "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history",
+    "YORK_C": "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/commemoration",
+    "PRINCE": "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024",
+    "FRENCH": "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/fort-strong",
+    "WAPUSK": "https://parks.canada.ca/pn-np/mb/wapusk/culture",
+    "FORKS": "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/contact",
+    "SLOOP": "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3",
+    "NIAGARA": "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george",
+    "STANWIX": "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm",
+    "ONEIDA": "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm",
+    "YORK_ACTUAL": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?i=57716&id=158"
+  },
+  "area_sqkm_totals": null,
+  "area_aggregation_forbidden": true,
+  "zones": [
+    {
+      "id": "B38-H-Z001",
+      "title": "1714年后York Factory英方Hudson Bay商站恢复",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1714,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -92.14,
+        56.97,
+        -91.94,
+        57.16
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "1713年和约决定归还，1714年HBC实际接收York Fort；原住民族腹地不算公司军事领地",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z002",
+      "title": "1782年法国军舰袭击York Factory附近商站",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -92.22,
+        56.91,
+        -91.86,
+        57.19
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "哈德孙湾1782年法军战时破坏，商站居住史另有变化",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z003",
+      "title": "1783—1787 York Factory英商贸易重新展开",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1787
+        }
+      ],
+      "bbox": [
+        -92.15,
+        56.94,
+        -91.89,
+        57.2
+      ],
+      "source_key": "YORK_C",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/commemoration"
+      ],
+      "note": "堡垒及货站位置反复调整，不画未实测驻军实体",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z004",
+      "title": "1788后York Factory III公司贸易仓库群",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -92.13,
+        56.96,
+        -91.95,
+        57.13
+      ],
+      "source_key": "YORK_C",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/commemoration"
+      ],
+      "note": "第三处York Factory站址1788后开发，岸边公司枢纽",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z005",
+      "title": "York Factory向Hayes River上游运输走廊",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -96.1,
+        54.9,
+        -91.7,
+        57.25
+      ],
+      "source_key": "YORK_C",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/commemoration"
+      ],
+      "note": "仅用于船货往返与原住民族运输联系示意",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z006",
+      "title": "York Factory向Nelson River河口通航网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -94.8,
+        55.7,
+        -92,
+        57.5
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "区域海河贸易通道，非英国河两岸主权",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z007",
+      "title": "York Factory沿Hudson Bay英国商业船只航道",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -95.4,
+        56.6,
+        -87.5,
+        60.7
+      ],
+      "source_key": "WAPUSK",
+      "source_urls": [
+        "https://parks.canada.ca/pn-np/mb/wapusk/culture"
+      ],
+      "note": "海上贸易航路，不是整片哈德孙湾军事占领",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z008",
+      "title": "1717—1730 Churchill River Post英国公司据点",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1717,
+          "end_year": 1730
+        }
+      ],
+      "bbox": [
+        -94.33,
+        58.69,
+        -94.06,
+        58.9
+      ],
+      "source_key": "WAPUSK",
+      "source_urls": [
+        "https://parks.canada.ca/pn-np/mb/wapusk/culture"
+      ],
+      "note": "1717新公司据点，后有石堡建设",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z009",
+      "title": "1731—1771 Prince of Wales Fort英公司石堡建设",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1731,
+          "end_year": 1771
+        }
+      ],
+      "bbox": [
+        -94.28,
+        58.72,
+        -94.12,
+        58.84
+      ],
+      "source_key": "PRINCE",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
+      ],
+      "note": "堡垒建设过程持续数十年，直至1771年竣工",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z010",
+      "title": "1772—1781 Prince of Wales Fort英军商堡驻守",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -94.27,
+        58.73,
+        -94.13,
+        58.84
+      ],
+      "source_key": "PRINCE",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
+      ],
+      "note": "驻军与商馆仅局部，Cree Dene Inuit为独立政治参与方",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z011",
+      "title": "1782法国舰队攻取Prince of Wales Fort",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -94.33,
+        58.68,
+        -94.05,
+        58.89
+      ],
+      "source_key": "FRENCH",
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/fort-strong"
+      ],
+      "note": "法舰迫使39名守兵投降并洗劫损毁堡垒",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z012",
+      "title": "1783—1799 Prince of Wales Fort废堡遗迹",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -94.29,
+        58.72,
+        -94.12,
+        58.84
+      ],
+      "source_key": "PRINCE",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
+      ],
+      "note": "法国1782年破坏后英方未重新驻此石堡，残址非军事驻军",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z013",
+      "title": "1783后Fort Churchill重新建立英商驻站",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -94.3,
+        58.65,
+        -94.04,
+        58.84
+      ],
+      "source_key": "SLOOP",
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3"
+      ],
+      "note": "Samuel Hearne于1782后在上游另建后继据点",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z014",
+      "title": "Churchill Sloop Cove英国船只冬季停泊地",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -94.34,
+        58.7,
+        -94.08,
+        58.84
+      ],
+      "source_key": "SLOOP",
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3"
+      ],
+      "note": "多次船只冬停港湾，与堡垒驻军分开",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z015",
+      "title": "Cree Dene Inuit在Churchill河岸长期利用区域",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -96.2,
+        58,
+        -93.2,
+        60.1
+      ],
+      "source_key": "PRINCE",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
+      ],
+      "note": "当地社群政治与土地利用先于英方据点，不计公司面积",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z016",
+      "title": "Samuel Hearne与Matonabbee内陆旅行贸易关系",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1772
+        }
+      ],
+      "bbox": [
+        -113.2,
+        62.5,
+        -102.3,
+        67.9
+      ],
+      "source_key": "SLOOP",
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3"
+      ],
+      "note": "Matonabbee及妇女参与旅程与生存知识提供，行程示意非英国远征占地",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z017",
+      "title": "1774 Cumberland House首处内陆HBC商馆",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -102.37,
+        53.86,
+        -102.13,
+        54.07
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "哈德孙湾公司1774年建内陆据点，依赖当地克里交易伙伴",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z018",
+      "title": "1774后Saskatchewan River河路公司交易联系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -108.5,
+        52,
+        -101.1,
+        55.4
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "内陆水路贸易涉及多族群，非公司领土所有权",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z019",
+      "title": "Cumberland House周围Cree原住民贸易外交",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -103.8,
+        53.1,
+        -100.7,
+        55.2
+      ],
+      "source_key": "FORKS",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/contact"
+      ],
+      "note": "当地Cree、Assiniboin是自主商贸与运输主体",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z020",
+      "title": "1774后York Factory至Cumberland House货运往来",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -103.3,
+        53.6,
+        -91.6,
+        57.6
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "河道和陆路网络示意，不代表中间土地均归英公司",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z021",
+      "title": "1734—1760 The Forks Assiniboin中介贸易网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1734,
+          "end_year": 1760
+        }
+      ],
+      "bbox": [
+        -98.2,
+        49.15,
+        -96.1,
+        51.1
+      ],
+      "source_key": "FORKS",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/contact"
+      ],
+      "note": "Assiniboin贸易中介拥有自主政治经济地位",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z022",
+      "title": "1738后The Forks法国贸易站Fort Rouge",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1738,
+          "end_year": 1760
+        }
+      ],
+      "bbox": [
+        -97.25,
+        49.8,
+        -97.03,
+        50
+      ],
+      "source_key": "FORKS",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/contact"
+      ],
+      "note": "French trader La Verendrye建立的堡垒与英国公司竞争",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z023",
+      "title": "1760后The Forks苏格兰和Métis贸易者网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -98.25,
+        49.05,
+        -96.1,
+        51.15
+      ],
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "不是英公司直接占领，商业竞逐与本地治理并存",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z024",
+      "title": "Assiniboin原住民湖湾交易中介政治影响",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -108,
+        50.5,
+        -96.6,
+        56.1
+      ],
+      "source_key": "FORKS",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/contact"
+      ],
+      "note": "这是原住民交易政治空间概览，不画为英国占地",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z025",
+      "title": "HBC在Hudson Bay北部纸面特许范围",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -103.2,
+        57.3,
+        -79.1,
+        65.5
+      ],
+      "source_key": "YORK_C",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/commemoration"
+      ],
+      "note": "广域法律声索区域示意，所有地表实际控制面积为null",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z026",
+      "title": "1763后上五大湖英国毛皮商路联系",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -90.1,
+        44.1,
+        -79.4,
+        49.4
+      ],
+      "source_key": "ONEIDA",
+      "source_urls": [
+        "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm"
+      ],
+      "note": "英国商人联系地域不代表当地Anishinaabe等政治权属转移",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z027",
+      "title": "1783—1795 Niagara旧英军堡延迟移交",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -79.17,
+        43.19,
+        -79,
+        43.32
+      ],
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "note": "美国1783法律取得，英军1796才移交旧堡",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z028",
+      "title": "1796年Niagara河美英军政交接",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -79.19,
+        43.17,
+        -79,
+        43.34
+      ],
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "note": "以驻军撤离和对岸建设分开",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z029",
+      "title": "1796—1799加拿大河岸Fort George英方修建",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -79.14,
+        43.2,
+        -79.02,
+        43.31
+      ],
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "note": "1802才完成建设，1796起为英军建设阶段",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z030",
+      "title": "1763 Fort Stanwix皇家公告边界接触",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1767
+        }
+      ],
+      "bbox": [
+        -76.7,
+        42.4,
+        -74.2,
+        44.4
+      ],
+      "source_key": "STANWIX",
+      "source_urls": [
+        "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm"
+      ],
+      "note": "法律边界触及原住民族土地，非逐地军事管辖",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z031",
+      "title": "1768 Fort Stanwix条约外交边界争议",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1768
+        }
+      ],
+      "bbox": [
+        -75.59,
+        43.1,
+        -75.29,
+        43.34
+      ],
+      "source_key": "STANWIX",
+      "source_urls": [
+        "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm"
+      ],
+      "note": "当地签约代表权与部族土地权利存在争议",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-Z032",
+      "title": "1769—1775 Stanwix条约更西部殖民土地声索",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -81.4,
+        39.2,
+        -75,
+        43.6
+      ],
+      "source_key": "STANWIX",
+      "source_urls": [
+        "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm"
+      ],
+      "note": "英国法律主张扩大，不代表征服全部Shawnee等社群",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    }
+  ],
+  "sites": [
+    {
+      "id": "B38-H-P001",
+      "title": "1714年后York Factory英方Hudson Bay商站恢复",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1714,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -92.03999999999999,
+        57.065
+      ],
+      "linked_zone_id": "B38-H-Z001",
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "1713年和约决定归还，1714年HBC实际接收York Fort；原住民族腹地不算公司军事领地",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P002",
+      "title": "1782年法国军舰袭击York Factory附近商站",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -92.03999999999999,
+        57.05
+      ],
+      "linked_zone_id": "B38-H-Z002",
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "哈德孙湾1782年法军战时破坏，商站居住史另有变化",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P003",
+      "title": "1783—1787 York Factory英商贸易重新展开",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1787
+        }
+      ],
+      "coordinates": [
+        -92.02000000000001,
+        57.07
+      ],
+      "linked_zone_id": "B38-H-Z003",
+      "source_key": "YORK_C",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/commemoration"
+      ],
+      "note": "堡垒及货站位置反复调整，不画未实测驻军实体",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P004",
+      "title": "1788后York Factory III公司贸易仓库群",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -92.03999999999999,
+        57.045
+      ],
+      "linked_zone_id": "B38-H-Z004",
+      "source_key": "YORK_C",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/commemoration"
+      ],
+      "note": "第三处York Factory站址1788后开发，岸边公司枢纽",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P008",
+      "title": "1717—1730 Churchill River Post英国公司据点",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1717,
+          "end_year": 1730
+        }
+      ],
+      "coordinates": [
+        -94.195,
+        58.795
+      ],
+      "linked_zone_id": "B38-H-Z008",
+      "source_key": "WAPUSK",
+      "source_urls": [
+        "https://parks.canada.ca/pn-np/mb/wapusk/culture"
+      ],
+      "note": "1717新公司据点，后有石堡建设",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P009",
+      "title": "1731—1771 Prince of Wales Fort英公司石堡建设",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1731,
+          "end_year": 1771
+        }
+      ],
+      "coordinates": [
+        -94.2,
+        58.78
+      ],
+      "linked_zone_id": "B38-H-Z009",
+      "source_key": "PRINCE",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
+      ],
+      "note": "堡垒建设过程持续数十年，直至1771年竣工",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P010",
+      "title": "1772—1781 Prince of Wales Fort英军商堡驻守",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -94.19999999999999,
+        58.785
+      ],
+      "linked_zone_id": "B38-H-Z010",
+      "source_key": "PRINCE",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
+      ],
+      "note": "驻军与商馆仅局部，Cree Dene Inuit为独立政治参与方",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P011",
+      "title": "1782法国舰队攻取Prince of Wales Fort",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -94.19,
+        58.785
+      ],
+      "linked_zone_id": "B38-H-Z011",
+      "source_key": "FRENCH",
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/fort-strong"
+      ],
+      "note": "法舰迫使39名守兵投降并洗劫损毁堡垒",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P013",
+      "title": "1783后Fort Churchill重新建立英商驻站",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -94.17,
+        58.745000000000005
+      ],
+      "linked_zone_id": "B38-H-Z013",
+      "source_key": "SLOOP",
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3"
+      ],
+      "note": "Samuel Hearne于1782后在上游另建后继据点",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P014",
+      "title": "Churchill Sloop Cove英国船只冬季停泊地",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -94.21000000000001,
+        58.77
+      ],
+      "linked_zone_id": "B38-H-Z014",
+      "source_key": "SLOOP",
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3"
+      ],
+      "note": "多次船只冬停港湾，与堡垒驻军分开",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P017",
+      "title": "1774 Cumberland House首处内陆HBC商馆",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -102.25,
+        53.965
+      ],
+      "linked_zone_id": "B38-H-Z017",
+      "source_key": "YORK",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "note": "哈德孙湾公司1774年建内陆据点，依赖当地克里交易伙伴",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P022",
+      "title": "1738后The Forks法国贸易站Fort Rouge",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1738,
+          "end_year": 1760
+        }
+      ],
+      "coordinates": [
+        -97.14,
+        49.9
+      ],
+      "linked_zone_id": "B38-H-Z022",
+      "source_key": "FORKS",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/contact"
+      ],
+      "note": "French trader La Verendrye建立的堡垒与英国公司竞争",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P027",
+      "title": "1783—1795 Niagara旧英军堡延迟移交",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -79.08500000000001,
+        43.254999999999995
+      ],
+      "linked_zone_id": "B38-H-Z027",
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "note": "美国1783法律取得，英军1796才移交旧堡",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P028",
+      "title": "1796年Niagara河美英军政交接",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -79.095,
+        43.255
+      ],
+      "linked_zone_id": "B38-H-Z028",
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "note": "以驻军撤离和对岸建设分开",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P029",
+      "title": "1796—1799加拿大河岸Fort George英方修建",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -79.08,
+        43.255
+      ],
+      "linked_zone_id": "B38-H-Z029",
+      "source_key": "NIAGARA",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george"
+      ],
+      "note": "1802才完成建设，1796起为英军建设阶段",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B38-H-P031",
+      "title": "1768 Fort Stanwix条约外交边界争议",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1768
+        }
+      ],
+      "coordinates": [
+        -75.44,
+        43.22
+      ],
+      "linked_zone_id": "B38-H-Z031",
+      "source_key": "STANWIX",
+      "source_urls": [
+        "https://home.nps.gov/articles/000/1768-boundary-line-treaty-of-fort-stanwix.htm"
+      ],
+      "note": "当地签约代表权与部族土地权利存在争议",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}

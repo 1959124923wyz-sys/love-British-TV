@@ -1,0 +1,279 @@
+{
+  "schema": "atlas-18c-initial-editorial-triage-summary-v1",
+  "date": "2026-11-08",
+  "source_material": "Three user-supplied Assistant A round8, Assistant B round7, Assistant C round8 local research ZIPs",
+  "source_event_row_counts": {
+    "assistant_A": 519,
+    "assistant_B": 381,
+    "assistant_C": 226
+  },
+  "raw_event_rows": 1126,
+  "grades": {
+    "default_map_candidate": 142,
+    "topic_mode_candidate": 173,
+    "narrative_evidence_only": 432,
+    "low_value_no_separate_event": 363,
+    "date_or_evidence_deferred": 16
+  },
+  "screening_status": "editorial_first_pass_not_historically_verified",
+  "existing_18c_topic_count": 105,
+  "proposed_long_form_story_arcs": 35,
+  "additional_new_research_suggestions": 106,
+  "proposals": {
+    "standalone_idea_needs_review": 17,
+    "merge_as_subchapter": 32,
+    "archive_as_support": 51,
+    "defer": 6
+  },
+  "cross_agent_overlap_record_flags": 29,
+  "source_rows_with_only_one_listed_source": 603,
+  "cartography_policy": "No Atlas event, modern border polygon or verified map point is approved by this summary. 17C/18C political continuity must be researched independently.",
+  "storage_notice": "The full 1126-row classified CSV/XLSX and 106 proposal review sheets are delivered as downloadable artifacts in the 2026-11-08 ChatGPT exchange. This GitHub summary only stores category counts and 35 narrative themes.",
+  "story_arcs": [
+    {
+      "id": "T01",
+      "title": "跨大西洋奴役运输、英国金融与制度性获利",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T02",
+      "title": "宗号惨案、奴隶船杀人与保险诉讼",
+      "default_map_candidates": 3,
+      "topic_mode_candidates": 2,
+      "phase": "research_only"
+    },
+    {
+      "id": "T03",
+      "title": "加勒比种植园奴役法律及反抗",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 5,
+      "phase": "research_only"
+    },
+    {
+      "id": "T04",
+      "title": "牙买加马龙战争、条约与1796流放",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 7,
+      "phase": "research_only"
+    },
+    {
+      "id": "T05",
+      "title": "圣文森特Garifuna战争与1797驱逐",
+      "default_map_candidates": 3,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T06",
+      "title": "格林纳达Fédon起义、圣多明各英军干涉",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 5,
+      "phase": "research_only"
+    },
+    {
+      "id": "T07",
+      "title": "阿卡迪亚驱逐与Mi'kmaw土地政治",
+      "default_map_candidates": 7,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T08",
+      "title": "七年战争、原住民抵抗及1763公告",
+      "default_map_candidates": 6,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T09",
+      "title": "卡罗来纳掳奴贸易与亚马西战争",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 5,
+      "phase": "research_only"
+    },
+    {
+      "id": "T10",
+      "title": "宾夕法尼亚步行购买与Lenape失地",
+      "default_map_candidates": 2,
+      "topic_mode_candidates": 4,
+      "phase": "research_only"
+    },
+    {
+      "id": "T11",
+      "title": "弗吉尼亚及纽约奴役法律与黑人反抗",
+      "default_map_candidates": 5,
+      "topic_mode_candidates": 5,
+      "phase": "research_only"
+    },
+    {
+      "id": "T12",
+      "title": "独立战争中英军拘押及黑人自由",
+      "default_map_candidates": 5,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T13",
+      "title": "HBC/纽芬兰原住民土地与贸易",
+      "default_map_candidates": 5,
+      "topic_mode_candidates": 5,
+      "phase": "research_only"
+    },
+    {
+      "id": "T14",
+      "title": "普拉西—布克萨尔—Diwani征税权与财富转移",
+      "default_map_candidates": 5,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T15",
+      "title": "1770孟加拉饥荒及税政",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 5,
+      "phase": "research_only"
+    },
+    {
+      "id": "T16",
+      "title": "孟加拉永久地税及农民反抗",
+      "default_map_candidates": 2,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T17",
+      "title": "迈索尔战争及1799征服",
+      "default_map_candidates": 6,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T18",
+      "title": "罗希拉、马拉塔、阿瓦德战争及财富剥夺",
+      "default_map_candidates": 5,
+      "topic_mode_candidates": 3,
+      "phase": "research_only"
+    },
+    {
+      "id": "T19",
+      "title": "卡纳提克、海得拉巴条约和南印度税收抵抗",
+      "default_map_candidates": 3,
+      "topic_mode_candidates": 2,
+      "phase": "research_only"
+    },
+    {
+      "id": "T20",
+      "title": "东印度公司英国议会监管与财权",
+      "default_map_candidates": 3,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T21",
+      "title": "织工、鸦片、盐业强制采购和地方饥荒",
+      "default_map_candidates": 5,
+      "topic_mode_candidates": 4,
+      "phase": "research_only"
+    },
+    {
+      "id": "T22",
+      "title": "马尼拉短占及战利品",
+      "default_map_candidates": 3,
+      "topic_mode_candidates": 1,
+      "phase": "research_only"
+    },
+    {
+      "id": "T23",
+      "title": "槟城与吉打、东南亚公司据点争夺",
+      "default_map_candidates": 6,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T24",
+      "title": "锡兰海岸占领及康提王国独立",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 3,
+      "phase": "research_only"
+    },
+    {
+      "id": "T25",
+      "title": "开普占领及Khoikhoi/Xhosa反抗",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 4,
+      "phase": "research_only"
+    },
+    {
+      "id": "T26",
+      "title": "西非奴役贸易堡垒及政策",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 9,
+      "phase": "research_only"
+    },
+    {
+      "id": "T27",
+      "title": "塞拉利昂黑人定居者土地争议",
+      "default_map_candidates": 2,
+      "topic_mode_candidates": 2,
+      "phase": "research_only"
+    },
+    {
+      "id": "T28",
+      "title": "海上战争短期占领及返还",
+      "default_map_candidates": 1,
+      "topic_mode_candidates": 3,
+      "phase": "research_only"
+    },
+    {
+      "id": "T29",
+      "title": "爱尔兰惩罚法与土地宗教权利",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 5,
+      "phase": "research_only"
+    },
+    {
+      "id": "T30",
+      "title": "1798爱尔兰起义及镇压",
+      "default_map_candidates": 6,
+      "topic_mode_candidates": 7,
+      "phase": "research_only"
+    },
+    {
+      "id": "T31",
+      "title": "1700达连撤离、1707英苏联盟",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 6,
+      "phase": "research_only"
+    },
+    {
+      "id": "T32",
+      "title": "詹姆斯党战争、战后镇压及高地清场",
+      "default_map_candidates": 4,
+      "topic_mode_candidates": 7,
+      "phase": "research_only"
+    },
+    {
+      "id": "T33",
+      "title": "苏格兰与英国本土奴役投资及法律抗争",
+      "default_map_candidates": 0,
+      "topic_mode_candidates": 0,
+      "phase": "research_only"
+    },
+    {
+      "id": "T34",
+      "title": "澳大利亚东岸声索、第一舰队及流放殖民",
+      "default_map_candidates": 3,
+      "topic_mode_candidates": 7,
+      "phase": "research_only"
+    },
+    {
+      "id": "T35",
+      "title": "新南威尔士土地剥夺、抓捕与原住民抵抗",
+      "default_map_candidates": 8,
+      "topic_mode_candidates": 7,
+      "phase": "research_only"
+    }
+  ]
+}

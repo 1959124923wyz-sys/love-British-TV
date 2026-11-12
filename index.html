@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#081422">
-<meta name="description" content="英国殖民扩张与政治控制历史动态地图：已发布1497—1599年十个历史章节，以及29篇正式发表的17世纪专题；1600—1699年另有53块史料关联的宽取虚线殖民声索和政治参考区，不等同实际军事控制或经过核验的历史边界。">
+<meta name="description" content="帝国的代价：1497—1799年英国殖民扩张、战争、掠夺、奴役与当地抵抗的历史动态地图。包含29篇正式发表的17世纪专题。">
 <title>帝国的代价 | 1497—1699年英国殖民扩张、掠夺与历史动态地图</title>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-regions-1544-1599-mobile-focus-20261015-newyear-focus-v1-compact-no-milestones-v2-two-pane-desktop-v1-legend-wrap-20261015-year-badge-flush-top-left-v2">
 
 <link rel="stylesheet" href="css/history-stories.css?v=remove-dynamic-toc-20261110">
+<link rel="stylesheet" href="css/eighteenth-overlap-right-dossier.css?v=18c-native-right-overlap-20261112-fix44-single-region-">
 </head>
 <body>
 <div class="site">
@@ -63,22 +64,19 @@
     <details class="map-mode-help" id="mapModeHelp">
      <summary><span>地图图例</span><span aria-hidden="true">▾</span></summary>
      <div class="map-mode-help-body">
-      <p>17世纪默认展示殖民聚落、政区及商馆的概略参考范围；跨北美至太平洋和鲁珀特地的七块超大纸面声索默认隐藏，可按需以无填充虚线查看。所有范围均非实测疆界，不表示英国逐地控制或原住民已经失去土地。现代底图地名、道路与国界是当代定位参考，不代表所选年份的国名、疆界。</p>
-       <div><i class="swatch expansive-claim"></i><span><strong>殖民区域概览</strong> · 默认淡色、细边，重叠不表示控制增强；悬停高亮，点击查看各独立声索</span></div>
-      <div class="basemap-option"><label for="showDetailedClaimBoundaries"><input type="checkbox" id="showDetailedClaimBoundaries"><span><strong>显示各殖民地详细边界</strong> · 手动开启虚线轮廓，适合局部放大研究</span></label></div>
-      <div class="basemap-option"><label for="showMaximalPaperCharters"><input type="checkbox" id="showMaximalPaperCharters"><span><strong>显示7块跨大陆等最大纸面声索</strong> · 仅虚线无填色</span></label></div>
-      <div><button type="button" id="showSeventeenthClaimDirectory" class="atlas-region-directory-link">查看本年殖民区域与史料目录</button></div>
-      <div class="basemap-option"><label for="showModernBasemap"><input type="checkbox" id="showModernBasemap" checked><span><strong>显示现代地名与道路</strong> · 方便古今地点对照</span></label></div>
-
-      <div><i class="swatch kingdom"></i><span><strong>国家底色</strong> · 表示政治归属</span></div>
-      <div><i class="swatch wartime-vicinity"></i><span><strong>紫色虚线</strong> · 有据驻军位置附近的概略范围</span></div>
-      <div><i class="swatch war-reach"></i><span><strong>紫色方向虚线</strong> · 军事行进／补给</span></div>
-      <div><i class="swatch contested-war"></i><span><strong>蓝紫条纹</strong> · 交战与争夺，非稳定占领</span></div>
-      <div><i class="swatch archaeology-modern"></i><span><strong>浅色短虚线</strong> · HES现代古迹保护区</span></div>
-      <div><i class="swatch english-garrison"></i><span><strong>驻军标记</strong> · 经史料考证的城堡与据点</span></div>
-      <div><i class="swatch french-defence"></i><span><strong>法国控制／苏法盟军据点</strong></span></div><div><i class="swatch major"></i><span><strong>事件标记</strong> · 战斗、焚掠、远航等按年发生的史事</span></div>
-      <div><i class="swatch enslavement-area"></i><span><strong>奴隶掠卖海岸参考带</strong> · 西非人口掳取与奴役运输活动</span></div>
-      <div><i class="swatch merchant-route"></i><span><strong>海上贸易及沿岸虚线</strong> · 贸易航线与沿岸活动</span></div>
+      <p><strong>操作</strong> · 点击色块，在右侧查看区域；悬停条目，地图边缘发光。</p>
+      <div><i class="swatch expansive-claim"></i><span><strong>殖民区域</strong> · 历史授地与行政声索</span></div>
+      <div><i class="swatch" style="background:#ad8be8;border:2px dashed #d1b0ff"></i><span><strong>紫色</strong> · 殖民行政与军事据点</span></div>
+      <div><i class="swatch" style="background:transparent;border:2px dashed #e5ba74"></i><span><strong>金色</strong> · 纸面声索与公司税权</span></div>
+      <div><i class="swatch" style="background:transparent;border:2px dashed #5cccc0"></i><span><strong>青绿</strong> · 当地反抗、自主政权、贸易联系</span></div>
+      <div><i class="swatch" style="background:transparent;border:2px dashed #879eac"></i><span><strong>蓝灰</strong> · 外国占据与英国失去据点</span></div>
+      <div><i class="swatch contested-war"></i><span><strong>蓝紫</strong> · 战斗与争夺</span></div>
+      <div><i class="swatch english-garrison"></i><span><strong>圆形</strong> · 驻军与港口地点</span></div>
+      <div><i class="swatch major"></i><span><strong>事件标记</strong> · 战争、掠夺、奴役与反抗</span></div>
+      <div class="basemap-option"><label for="showDetailedClaimBoundaries"><input type="checkbox" id="showDetailedClaimBoundaries"><span><strong>显示殖民地区轮廓</strong></span></label></div>
+      <div class="basemap-option"><label for="showMaximalPaperCharters"><input type="checkbox" id="showMaximalPaperCharters"><span><strong>显示7处最大纸面特许范围</strong></span></label></div>
+      <div><button type="button" id="showSeventeenthClaimDirectory" class="atlas-region-directory-link">17世纪殖民区域目录</button></div>
+      <div class="basemap-option"><label for="showModernBasemap"><input type="checkbox" id="showModernBasemap" checked><span><strong>显示现代地名与道路</strong></span></label></div>
      </div>
     </details>
    </div>
@@ -147,7 +145,18 @@
 <script src="js/territory-geometry.js?v=shared-geo-v1"></script>
 <script src="js/voyage-geometry.js?v=drake-dateline-v1"></script>
 <script src="js/editorial-headlines-17c.js?v=20261102-01"></script>
-<script src="app.js?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-calais-controller-20261015-shared-geo-v1-munster-invasion-study-v1-land-drake-study-v1-nine-years-war-1594-1599-v1-caribbean-maghreb-1551-1598-v1-visible-raid-areas-v2-trinidad-two-site-1595-spatial-narrative-1595-v1-ch11-source-anchor-20261015-regional-history-20261015-mobile-focus-pale-biblio-20261015-newyear-focus-v1-violence-regions-1544-1589-v1-two-pane-desktop-v1-doubleclick-fix-v1-western-prayerbook-1549-v1-munster-gilbert-1569-04-v1-armada-sligo-clare-1588-05-v1-drake-1578-chile-06-v1-cavendish-hawkins-07-v1-drake-voyage-continuity-1577-1580-v1-story-child-clean-v2-17c-georef-r02-20261019"></script>
-<script src="js/history-stories.js?v=remove-dynamic-toc-20261110"></script>
+<script src="js/atlas-reader-copy.js?v=atlas47-public-copy-lock-20261112"></script>
+<script src="js/century-chapter-narratives.js?v=atlas45-history-20261112"></script>
+ <script src="app.js?v=atlas46-click-notes-20261112"></script>
+<script src="js/history-stories.js?v=18c12-cape-indigenous-resistance-20261110-18c13-westafrica-20261110-18c14-sierra-leone-20261110-18c15-india-fiscal-20261110-18c16-ceylon-20261110-18c17-frontier-20261110-18c18-garifuna-20261110-18c19-fedon-20261110-18c20-t11-20261111-18c28-t20-20261111-18c29-t23-20261111-18c30-t28-20261111-18c31-t33-20261111-18c33-gaps-20261112-fix44-single-region-"></script>
+<script src="js/eighteenth-dynamic-spatial.js?v=18c-map-first-dynamic-areas-20261112"></script>
+<script src="js/eighteenth-mass-spatial.js?v=atlas46-click-notes-20261112"></script>
+<script src="js/eighteenth-batch36-spatial.js?v=18c-batch36-frontiers-mysore-130-83-20261112"></script>
+<script src="js/eighteenth-batch37-spatial.js?v=18c-batch37-three-region-141-108-20261112"></script>
+<script src="js/eighteenth-batch38-spatial.js?v=18c-batch38-south-hudson-mysore-127-90-20261112"></script>
+<script src="js/eighteenth-batch39-spatial.js?v=18c-batch39-caribbean-goldcoast-gulf-126-83-20261112"></script>
+<script src="js/eighteenth-overlap-right-dossier.js?v=atlas46-click-notes-20261112"></script>
+<script src="js/historic-overlap-dossier-1497-1699.js?v=atlas46-click-notes-20261112"></script>
+<script src="js/atlas-public-ui-guard.js?v=atlas47-public-copy-lock-20261112"></script>
 </body>
 </html>

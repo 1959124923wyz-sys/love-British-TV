@@ -1,0 +1,3336 @@
+{
+  "schema": "atlas-18c-mass-schematic-zones-v1",
+  "editorial_status": "research_preview_not_published",
+  "based_on": "18C map-first PR #329 24 old outlines plus 15 old cores unchanged",
+  "year_range": [
+    1700,
+    1799
+  ],
+  "mapping_method": "All new bbox boundaries are editorial schematic envelopes approximating named places and legal or trade areas, not surveys. Polygon counts reflect items, not square kilometers. Do not infer indigenous land extinguishment, historical sovereignty or control from bounding boxes.",
+  "square_km_totals": null,
+  "area_aggregation_forbidden": true,
+  "approved_actual_control_polygons": 0,
+  "sources": {
+    "NA": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782",
+    "NA1763": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/",
+    "INDIGENOUS": "https://www.nationalarchives.gov.uk/explore-the-collection/stories/anglo-indigenous-diplomacy-in-colonial-north-america/",
+    "PARIS1763": "https://avalon.law.yale.edu/18th_century/paris763.asp",
+    "PARIS1783": "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties",
+    "USWAR": "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm",
+    "USARMY": "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D",
+    "CARIBBEAN": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/",
+    "EIC": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/",
+    "EICREVENUE": "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772",
+    "MYSORE": "https://www.nam.ac.uk/explore/tipu-sultans-war-turban",
+    "CEYLON": "https://archives.gov.lk/English/about-us",
+    "SL": "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801",
+    "AFRICA": "https://avalon.law.yale.edu/18th_century/paris763.asp",
+    "AUS": "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Migration/MigrationPathway/Report/Chapter_2_-_Migration_and_the_Formation_of_Modern_Australia",
+    "NORFOLK": "https://www.infrastructure.gov.au/territories-regions-cities/territories/norfolk-island/history",
+    "FALKLAND": "https://nationalarchives.gov.fk/jdownloads/Mail%20Stamps%20and%20Telecommunications/Mail/MAI-STA-10-1.%20Early%20settlements%20issue%20late%201980.pdf",
+    "MED": "https://www.um.edu.mt/library/oar/handle/123456789/25181",
+    "TRINIDAD": "https://www.napoleon-empire.org/en/official-texts/treaty-of-amiens.php",
+    "GAMBIA_UNESCO": "https://whc.unesco.org/en/list/761/",
+    "GHANA_GMMB": "https://gmmb.gov.gh/cape-coast-castle-cape-coast-1653/"
+  },
+  "zones": [
+    {
+      "id": "NS_MAIN",
+      "title": "新斯科舍殖民行政涉及区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1783
+        }
+      ],
+      "bbox": [
+        -66.8,
+        43.2,
+        -59.8,
+        47.4
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "示意覆盖英方主张的殖民省地理，Mi'kmaq社群与条约权利独立",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NS_REVISED",
+      "title": "1784年后新斯科舍省缩减参考区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -64.9,
+        43.2,
+        -59.8,
+        46.4
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "note": "新不伦瑞克分出，边界仅概略",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAPE_BRETON",
+      "title": "1758年后布雷顿角岛英军及殖民行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.7,
+        45.4,
+        -59.6,
+        47.1
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1758攻陷路易堡，1763和约确认加拿大与附属海岛",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "QUEBEC_1763",
+      "title": "1763年魁北克殖民省核心参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1773
+        }
+      ],
+      "bbox": [
+        -73.9,
+        45,
+        -64.9,
+        50.1
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "note": "圣劳伦斯河沿岸参考，不代表所有内陆社群受控",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "QUEBEC_1774",
+      "title": "1774年魁北克法令扩大的管辖声索",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1790
+        }
+      ],
+      "bbox": [
+        -89.5,
+        40.4,
+        -71.8,
+        51.7
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "note": "法定疆域扩张，五大湖以西原住民族政治仍独立",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NEW_BRUNSWICK",
+      "title": "1784年新不伦瑞克殖民省",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -68.1,
+        44.5,
+        -63.6,
+        48.2
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "note": "从新斯科舍分出，概略地理范围",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "UPPER_CANADA",
+      "title": "1791年上加拿大行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -83.9,
+        41.8,
+        -74.7,
+        49
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "note": "殖民法律管辖参考，原住民土地和军事驻点须分开",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "LOWER_CANADA",
+      "title": "1791年下加拿大行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -79.2,
+        44.7,
+        -63,
+        51.4
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "note": "主要围绕圣劳伦斯河，不作实控面积推断",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PRINCE_EDWARD",
+      "title": "1769年圣约翰岛独立殖民行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -64.5,
+        45.85,
+        -62.05,
+        47.3
+      ],
+      "source_key": "NA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ],
+      "note": "当时称圣约翰岛，后称爱德华王子岛",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "EAST_FLORIDA",
+      "title": "1763—1783英属东佛罗里达",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -83.1,
+        24.5,
+        -80,
+        31.1
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "依和约从西班牙取得，1783和约归还西班牙",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "WEST_FLORIDA",
+      "title": "1763—1781英属西佛罗里达参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        -90.2,
+        29.4,
+        -85.1,
+        33.3
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "西班牙军事攻取彭萨科拉于1781，区域实际控制更复杂",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NC_COLONY",
+      "title": "北卡罗来纳英属殖民行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1712,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -84.4,
+        33.6,
+        -75.4,
+        36.7
+      ],
+      "source_key": "NA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ],
+      "note": "沿大西洋聚落和内陆原住民族地区控制程度不同",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SC_COLONY",
+      "title": "南卡罗来纳英属殖民行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1712,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -83.4,
+        32,
+        -78.6,
+        35.1
+      ],
+      "source_key": "NA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ],
+      "note": "殖民省行政外缘不等于各地持续驻军",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GEORGIA_COLONY",
+      "title": "1732年后佐治亚英属殖民行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1732,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -85.4,
+        30.4,
+        -80.6,
+        35.1
+      ],
+      "source_key": "NA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ],
+      "note": "1732殖民特许成立，原住民族土地另有权利",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CONNECTICUT",
+      "title": "康涅狄格英属殖民行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -73.8,
+        40.85,
+        -71.5,
+        42.3
+      ],
+      "source_key": "NA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ],
+      "note": "按今日地理作粗略定位",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAROLINA_PROPRIETORS",
+      "title": "1700年代卡罗来纳领主殖民省",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1711
+        }
+      ],
+      "bbox": [
+        -83.8,
+        31.3,
+        -75.5,
+        36.7
+      ],
+      "source_key": "NA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ],
+      "note": "南北卡分立前领主权示意，实际定居非整个包络",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "OHIO_PROCLAMATION",
+      "title": "1763年公告线外王室保留区",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1773
+        }
+      ],
+      "bbox": [
+        -87.2,
+        36.1,
+        -78.7,
+        44.2
+      ],
+      "source_key": "INDIGENOUS",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/explore-the-collection/stories/anglo-indigenous-diplomacy-in-colonial-north-america/"
+      ],
+      "note": "是英王限制殖民者西进的法律及外交方案，绝非英方逐地占领",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GREAT_LAKES_POSTS",
+      "title": "独立后英国仍驻守五大湖边境据点群",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -88.5,
+        41.1,
+        -79.1,
+        46.6
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "英军未立刻撤离部分据点，面仅为驻点分布示意",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "BOSTON_GARRISON",
+      "title": "波士顿英军占城与围困范围",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1775
+        }
+      ],
+      "bbox": [
+        -71.2,
+        42.28,
+        -70.9,
+        42.43
+      ],
+      "source_key": "USARMY",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "note": "1776年3月撤城，年度分界按年末驻守",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NEWPORT_GARRISON",
+      "title": "纽波特1776—1779英国占领城镇",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -71.38,
+        41.44,
+        -71.25,
+        41.56
+      ],
+      "source_key": "USARMY",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "note": "1776年底攻占、1779撤离，年末驻守图仅显示1777—1778",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PHILADELPHIA_GARRISON",
+      "title": "费城1777—1778英军占城",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "bbox": [
+        -75.27,
+        39.85,
+        -75.06,
+        40.03
+      ],
+      "source_key": "USWAR",
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+      ],
+      "note": "1778年6月英军撤离，年底不再显示占领面",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SAVANNAH_GARRISON",
+      "title": "萨凡纳英军占城与近港",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -81.2,
+        31.95,
+        -80.93,
+        32.19
+      ],
+      "source_key": "USWAR",
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+      ],
+      "note": "1778年12月攻占，1782年撤离，年末稳定阶段为1779—1781",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CHARLESTON_GARRISON",
+      "title": "查尔斯顿英军占城与海港",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -80.1,
+        32.66,
+        -79.82,
+        32.88
+      ],
+      "source_key": "USWAR",
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+      ],
+      "note": "1780年5月攻占，1782年撤军，年末不覆盖整个南卡",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NEW_YORK_HARBOR",
+      "title": "1776—1783纽约英国港湾驻军范围",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -74.22,
+        40.53,
+        -73.75,
+        40.9
+      ],
+      "source_key": "USARMY",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "note": "港湾的示意包络，不覆盖全纽约殖民省",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GRENADA",
+      "title": "格林纳达1763后英国殖民行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.82,
+        11.93,
+        -61.37,
+        12.33
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1779法军夺岛，1783再次归英",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GRENADINES",
+      "title": "格林纳丁斯群岛1763后英方声索",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.7,
+        12.25,
+        -61.07,
+        13.05
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "群岛原住民和居民土地权利另论",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ST_VINCENT",
+      "title": "圣文森特1763后英属殖民争夺",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.34,
+        12.53,
+        -61.08,
+        13.42
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1790年代黑加勒比人Garifuna抵抗不能抹去",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "DOMINICA",
+      "title": "多米尼克1763后英方殖民行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1777
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.53,
+        15.16,
+        -61.21,
+        15.68
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1778法军攻占、1783归英，Kalinago政治须单列",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "TOBAGO",
+      "title": "多巴哥1763及1793后英国控制",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1780
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -60.86,
+        11.08,
+        -60.45,
+        11.4
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1781法军夺取、1783归法；1793英军再次攻占",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ST_LUCIA",
+      "title": "圣卢西亚英国短期军事控制范围",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.09,
+        13.69,
+        -60.84,
+        14.14
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1763及1783均由法国取得，战时英国占领间断",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GUADELOUPE",
+      "title": "瓜德罗普1759—1763英军占领",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.83,
+        15.75,
+        -61.1,
+        16.55
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763归还法国，全岛轮廓为概略",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MARIE_GALANTE",
+      "title": "玛丽加朗特1759—1763英军短占",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.37,
+        15.82,
+        -61.16,
+        16.04
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763和约归还法国",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MARTINIQUE_1762",
+      "title": "马提尼克1762年英军短占",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -61.26,
+        14.35,
+        -60.79,
+        14.93
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763归还法国",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MARTINIQUE_1794",
+      "title": "1794年后马提尼克英军占领",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.26,
+        14.35,
+        -60.79,
+        14.93
+      ],
+      "source_key": "TRINIDAD",
+      "source_urls": [
+        "https://www.napoleon-empire.org/en/official-texts/treaty-of-amiens.php"
+      ],
+      "note": "拿破仑战争时期的占领，1802和约归还法国",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ST_KITTS",
+      "title": "圣基茨英国殖民岛屿参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -62.89,
+        17.15,
+        -62.53,
+        17.45
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782年法军曾夺取英军要塞，1783回归英国",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NEVIS",
+      "title": "尼维斯英国殖民岛屿参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -62.65,
+        17.09,
+        -62.52,
+        17.23
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782年战争期间法军攻占",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ANTIGUA",
+      "title": "安提瓜英国殖民行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.95,
+        16.94,
+        -61.68,
+        17.24
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "糖园奴役及被奴役者持续抵抗",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MONTSERRAT",
+      "title": "蒙特塞拉特英国殖民岛屿参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -62.26,
+        16.62,
+        -62.12,
+        16.84
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "战争阶段曾受法国攻击控制，年限取年末稳定阶段",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "BARBUDA",
+      "title": "巴布达英国殖民行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.92,
+        17.47,
+        -61.72,
+        17.75
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "概略岛屿范围",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAYMAN",
+      "title": "开曼群岛殖民隶属及奴役贸易参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -81.51,
+        19.24,
+        -79.7,
+        19.8
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "离散群岛矩形包络非海面主权",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "HAVANA_HARBOR",
+      "title": "1762年哈瓦那英军占领港口区域",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -82.53,
+        22.93,
+        -82.2,
+        23.23
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "只示意哈瓦那港，不是英国占据整个古巴",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NASSAU_PORT",
+      "title": "拿骚1783年归英后的岛港行政参考",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -77.6,
+        24.93,
+        -77.17,
+        25.2
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "巴哈马行政意义，不指全部岛礁可控",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "TRINIDAD_1797",
+      "title": "1797年英军夺取特立尼达后的殖民区域",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.94,
+        9.95,
+        -60.46,
+        10.87
+      ],
+      "source_key": "TRINIDAD",
+      "source_urls": [
+        "https://www.napoleon-empire.org/en/official-texts/treaty-of-amiens.php"
+      ],
+      "note": "1797军事占领，主权至1802年和约正式转让",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "BELIZE_LOGGING",
+      "title": "1783/1786条约下伯利兹英商采木权范围",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -89.3,
+        16,
+        -87.7,
+        18.5
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "在西班牙主权主张下的采木贸易特权，非英国领土",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "BENGAL_DIWANI",
+      "title": "1765年孟加拉地区东印度公司税收权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        87,
+        21.5,
+        92.3,
+        26.6
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "莫卧儿授予Diwani，旧纳瓦卜政权和各地权力安排复杂",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "BIHAR_DIWANI",
+      "title": "1765年比哈尔地区东印度公司税收权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        83.4,
+        23.5,
+        88.7,
+        27.7
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "财政权区域约略标注，非现代邦界实测",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ORISSA_DIWANI",
+      "title": "1765年奥里萨财税权名义辖区",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        83.7,
+        18.7,
+        87.9,
+        22.5
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "1765授税权包含奥里萨，但地方行政与海岸控制不等同",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CALCUTTA_24_PARGANAS",
+      "title": "加尔各答周边24 Parganas公司税收/产权",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        88,
+        21.8,
+        89.2,
+        23.1
+      ],
+      "source_key": "EICREVENUE",
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772"
+      ],
+      "note": "局部赋税地，不等于孟加拉全部",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NORTHERN_CIRCARS",
+      "title": "1760年代北萨卡尔公司财税与驻军势力",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        81.2,
+        16.1,
+        85.1,
+        20.1
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "沿海省份财政政治介入示意，须与土邦权利区分",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CARNATIC_RELATIONS",
+      "title": "卡纳提克英公司与纳瓦卜联盟及财政影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        78.3,
+        10.8,
+        81.5,
+        14.8
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "地方纳瓦卜仍为政治行为者，标注的是影响地带",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SURAT_FACTORY",
+      "title": "苏拉特东印度公司商馆贸易影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.65,
+        20.9,
+        73.15,
+        21.35
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "港口商馆，不延伸为古吉拉特内陆领土",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "BENARES_ESTATES",
+      "title": "1775年后贝拿勒斯地区公司征税及驻扎官介入",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        82.2,
+        24.6,
+        84,
+        26.7
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "对地方统治者的税收压迫，非整个阿瓦德吞并",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SALSETTE_BOMBAY",
+      "title": "18世纪末萨尔塞特岛及孟买周边英公司经营",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.75,
+        18.77,
+        73.13,
+        19.35
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "以1782条约后的稳定占有作示意起点",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PONDICHERRY_BRITISH",
+      "title": "本地治里英军阶段性占据商站周边",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1764
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.73,
+        11.82,
+        79.93,
+        12.05
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "多次英法易手，仅商站城镇附近概略包络",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "HYDERABAD_INFLUENCE",
+      "title": "1798年海得拉巴与英公司附属同盟影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.5,
+        16.2,
+        80.4,
+        19.8
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "由海得拉巴君主及其盟约决定，不能涂成英国占领区",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MYSORE_1799_PARTITION",
+      "title": "1799年迈索尔战后瓜分与附属政权影响",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        75.1,
+        11.7,
+        78.5,
+        14.3
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "部分土地被割让，保留的迈索尔王国由当地王室统治",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SERINGAPATAM_ZONE",
+      "title": "1799年斯里兰加帕特南城堡英军攻占核心",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        76.63,
+        12.36,
+        76.74,
+        12.45
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "note": "只取被攻陷首府附近，不涂满整个迈索尔",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CEYLON_JAFFNA",
+      "title": "1796年后锡兰贾夫纳沿海英国公司管辖",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.6,
+        9.3,
+        80.5,
+        9.9
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "荷兰旧沿海辖区接管，康提王国并未被征服",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CEYLON_COLOMBO",
+      "title": "1796年后锡兰科伦坡西岸英国公司管辖",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.7,
+        6.2,
+        80.15,
+        7.3
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "沿海城市港口，禁止将内陆康提涂为英属",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CEYLON_GALLE",
+      "title": "1796年后锡兰加勒南岸英国公司管辖",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        79.85,
+        5.8,
+        80.45,
+        6.3
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "海岸设施示意，不及康提王国",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CEYLON_TRINCOMALEE",
+      "title": "1796年后锡兰亭可马里东海岸英国公司控制",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        81.05,
+        8.3,
+        81.45,
+        9
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "note": "港口海湾行政示意，内陆不涂色",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PENANG_ISLAND",
+      "title": "1786年槟榔屿英公司港岛概略范围",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        100.16,
+        5.21,
+        100.48,
+        5.5
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "note": "概略岛屿参考，1786后公司港口开发",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MANILA_PORT",
+      "title": "1762—1763马尼拉英占城及港湾",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        120.91,
+        14.49,
+        121.07,
+        14.69
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "英军仅控制马尼拉、甲米地附近，菲律宾多数地区未被控制",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAVITE_PORT",
+      "title": "1762—1763甲米地西班牙舰队基地英占",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        120.85,
+        14.37,
+        121.01,
+        14.53
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "英军占领港区，不代表整座吕宋岛",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SENEGAL_FORTS",
+      "title": "1758—1779塞内加尔河英军要塞与贸易驻点",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -16.7,
+        15.6,
+        -13.1,
+        17
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "条约保障部分河岸堡垒与商站，非内陆广域殖民控制",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SENEGAL_STLOUIS",
+      "title": "圣路易斯堡英军港口占领范围",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -16.58,
+        15.8,
+        -16.33,
+        16.2
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1779被法国收复，1783归法",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GAMBIA_JAMES",
+      "title": "冈比亚河英商与詹姆斯堡贸易区",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -17.2,
+        13.25,
+        -16,
+        13.6
+      ],
+      "source_key": "GAMBIA_UNESCO",
+      "source_urls": [
+        "https://whc.unesco.org/en/list/761/"
+      ],
+      "note": "商馆与奴隶贸易网络，沿岸当地统治者仍存",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "FREETOWN_1787",
+      "title": "1787年格兰维尔镇安置尝试",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1788
+        }
+      ],
+      "bbox": [
+        -13.3,
+        8.35,
+        -13.05,
+        8.63
+      ],
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "note": "定居者包含获释黑人，1789原定居点被毁",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "FREETOWN_1792",
+      "title": "1792年后塞拉利昂公司弗里敦聚落",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -13.35,
+        8.34,
+        -13.08,
+        8.6
+      ],
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "note": "公司与黑人定居者治理权有争议，1794法国袭击",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GOLD_COAST_TRADE",
+      "title": "黄金海岸英商堡垒与贩运贸易海岸",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -3.3,
+        4.8,
+        -0.7,
+        5.8
+      ],
+      "source_key": "GHANA_GMMB",
+      "source_urls": [
+        "https://gmmb.gov.gh/cape-coast-castle-cape-coast-1653/"
+      ],
+      "note": "多个堡垒贸易及当地政治关系，仅沿岸示意，不覆盖内陆",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAPE_TOWN_ZONE",
+      "title": "1795年英军开普敦与桌湾军事控制",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        18.15,
+        -34.12,
+        18.65,
+        -33.72
+      ],
+      "source_key": "TRINIDAD",
+      "source_urls": [
+        "https://www.napoleon-empire.org/en/official-texts/treaty-of-amiens.php"
+      ],
+      "note": "开普荷兰原殖民地在1795军事易手，不延伸整个南部非洲",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NSW_CROWN_CLAIM",
+      "title": "1788年新南威尔士殖民法律声索宽幅",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        135,
+        -39,
+        153.9,
+        -16
+      ],
+      "source_key": "AUS",
+      "source_urls": [
+        "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Migration/MigrationPathway/Report/Chapter_2_-_Migration_and_the_Formation_of_Modern_Australia"
+      ],
+      "note": "现代矩形仅提示殖民文件巨大声索，绝无内陆实际占据之意",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SYDNEY_COVE",
+      "title": "1788年后悉尼湾强制流放及殖民定居区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        150.91,
+        -34.02,
+        151.38,
+        -33.65
+      ],
+      "source_key": "AUS",
+      "source_urls": [
+        "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Migration/MigrationPathway/Report/Chapter_2_-_Migration_and_the_Formation_of_Modern_Australia"
+      ],
+      "note": "地方Eora社群土地和抵抗必须独立呈现",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PARRAMATTA",
+      "title": "1788年后帕拉马塔流放殖民聚落",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        150.86,
+        -33.93,
+        151.07,
+        -33.72
+      ],
+      "source_key": "AUS",
+      "source_urls": [
+        "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Migration/MigrationPathway/Report/Chapter_2_-_Migration_and_the_Formation_of_Modern_Australia"
+      ],
+      "note": "局部定居地而非整个殖民州的实控",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "NORFOLK_SETTLEMENT",
+      "title": "1788年后诺福克岛英国流放定居区",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        167.89,
+        -29.2,
+        168.11,
+        -28.93
+      ],
+      "source_key": "NORFOLK",
+      "source_urls": [
+        "https://www.infrastructure.gov.au/territories-regions-cities/territories/norfolk-island/history"
+      ],
+      "note": "1814之前第一流放殖民时期",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PORT_EGMONT",
+      "title": "福克兰群岛Port Egmont英军短期据点范围",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1769
+        },
+        {
+          "start_year": 1771,
+          "end_year": 1773
+        }
+      ],
+      "bbox": [
+        -61.43,
+        -51.49,
+        -60.95,
+        -51.18
+      ],
+      "source_key": "FALKLAND",
+      "source_urls": [
+        "https://nationalarchives.gov.fk/jdownloads/Mail%20Stamps%20and%20Telecommunications/Mail/MAI-STA-10-1.%20Early%20settlements%20issue%20late%201980.pdf"
+      ],
+      "note": "1770西军驱逐，1771英军回返，1774再次撤离",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "FALKLAND_PAPER",
+      "title": "1774年撤兵后英国持续提出群岛主权声索",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.6,
+        -53.3,
+        -57.7,
+        -50.7
+      ],
+      "source_key": "FALKLAND",
+      "source_urls": [
+        "https://nationalarchives.gov.fk/jdownloads/Mail%20Stamps%20and%20Telecommunications/Mail/MAI-STA-10-1.%20Early%20settlements%20issue%20late%201980.pdf"
+      ],
+      "note": "绝非1799英军实际驻岛；西班牙及当地政治形势仍应展示",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MENORCA_ISLAND",
+      "title": "米诺卡岛英国海军与殖民驻军控制阶段",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1708,
+          "end_year": 1755
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        3.77,
+        39.79,
+        4.36,
+        40.11
+      ],
+      "source_key": "MED",
+      "source_urls": [
+        "https://www.um.edu.mt/library/oar/handle/123456789/25181"
+      ],
+      "note": "不同战事易手，画岛屿参考外缘而非精确海岸线",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GIBRALTAR_PENINSULA",
+      "title": "1704年后直布罗陀英军据守半岛",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1704,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -5.38,
+        36.09,
+        -5.31,
+        36.17
+      ],
+      "source_key": "MED",
+      "source_urls": [
+        "https://www.um.edu.mt/library/oar/handle/123456789/25181"
+      ],
+      "note": "1704占领，1713乌得勒支和约确认，主权争议独立于驻军事实",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CORSICA_1794",
+      "title": "1794—1796英国与科西嘉地方政治联盟",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        8.55,
+        41.25,
+        9.65,
+        43
+      ],
+      "source_key": "MED",
+      "source_urls": [
+        "https://www.um.edu.mt/library/oar/handle/123456789/25181"
+      ],
+      "note": "英科西嘉王国具有本地制度，1796英军撤离；不等同英国直辖殖民",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ELBA_1796",
+      "title": "1796—1797英国短期占驻厄尔巴军事港岛",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        10.1,
+        42.69,
+        10.47,
+        42.9
+      ],
+      "source_key": "MED",
+      "source_urls": [
+        "https://www.um.edu.mt/library/oar/handle/123456789/25181"
+      ],
+      "note": "英国1797撤离，年末驻军只取1796",
+      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "precise_historic_border": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    }
+  ],
+  "sites": [
+    {
+      "id": "HALIFAX",
+      "title": "哈利法克斯英军海军基地",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -63.58,
+        44.65
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "NEW_BRUNSWICK_STJOHN",
+      "title": "圣约翰保皇派新殖民港口",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -66.06,
+        45.27
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "KINGSTON_ONTARIO",
+      "title": "金斯顿五大湖英军据点",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -76.48,
+        44.23
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "DETROIT_BRITISH",
+      "title": "英军底特律驻点与后续撤离",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -83.05,
+        42.33
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "NIAGARA_BRITISH",
+      "title": "尼亚加拉堡英军据点",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -79.06,
+        43.26
+      ],
+      "source_key": "NA1763",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "BOSTON_OCCUPIED",
+      "title": "独立战争波士顿英军驻城",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1775
+        }
+      ],
+      "coordinates": [
+        -71.06,
+        42.36
+      ],
+      "source_key": "USARMY",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "NEWPORT_OCCUPIED",
+      "title": "独立战争纽波特英军驻城",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1778
+        }
+      ],
+      "coordinates": [
+        -71.31,
+        41.49
+      ],
+      "source_key": "USARMY",
+      "source_urls": [
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "PHILADELPHIA_OCCUPIED",
+      "title": "独立战争费城英军驻城",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777
+        }
+      ],
+      "coordinates": [
+        -75.16,
+        39.95
+      ],
+      "source_key": "USWAR",
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "SAVANNAH_OCCUPIED",
+      "title": "独立战争萨凡纳英军驻城",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -81.1,
+        32.08
+      ],
+      "source_key": "USWAR",
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "CHARLESTON_OCCUPIED",
+      "title": "独立战争查尔斯顿英军驻城",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -79.93,
+        32.78
+      ],
+      "source_key": "USWAR",
+      "source_urls": [
+        "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "ST_GEORGES_GRENADA",
+      "title": "格林纳达圣乔治英军殖民港",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.75,
+        12.05
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "ROSEAU",
+      "title": "多米尼克罗索英军行政港",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1777
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.39,
+        15.3
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "KINGSTOWN",
+      "title": "圣文森特金斯敦殖民港",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.23,
+        13.16
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "SCARBOROUGH_TOBAGO",
+      "title": "多巴哥斯卡伯勒英军驻港",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1780
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -60.73,
+        11.18
+      ],
+      "source_key": "PARIS1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "CASTRIES",
+      "title": "圣卢西亚卡斯特里战时占领港",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.01,
+        14
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "BASSETERRE",
+      "title": "圣基茨巴斯特尔殖民港",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -62.72,
+        17.29
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "ST_JOHNS_ANTIGUA",
+      "title": "安提瓜圣约翰殖民港",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.84,
+        17.12
+      ],
+      "source_key": "CARIBBEAN",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "POINTE_A_PITRE",
+      "title": "瓜德罗普英军战时港口",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -61.53,
+        16.24
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "FORT_DE_FRANCE",
+      "title": "马提尼克法兰西堡英军占领",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.07,
+        14.6
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "PORT_OF_SPAIN",
+      "title": "西班牙港1797英军夺城",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.51,
+        10.66
+      ],
+      "source_key": "TRINIDAD",
+      "source_urls": [
+        "https://www.napoleon-empire.org/en/official-texts/treaty-of-amiens.php"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "SURAT",
+      "title": "苏拉特英东印度公司商馆",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        72.83,
+        21.17
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "PATNA",
+      "title": "巴特那公司税务与行政驻地",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        85.14,
+        25.59
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "MURSHIDABAD",
+      "title": "穆尔希达巴德税收控制关联地点",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        88.27,
+        24.18
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "CUTTACK",
+      "title": "克塔克名义奥里萨Diwani背景点",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        85.88,
+        20.47
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "BENARES",
+      "title": "贝拿勒斯公司压迫及驻扎官",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        83,
+        25.31
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "MASULIPATNAM",
+      "title": "马苏利帕特南英公司贸易港",
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        81.14,
+        16.17
+      ],
+      "source_key": "EIC",
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "PONDICHERRY",
+      "title": "本地治里被英军间断占领",
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1764
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.83,
+        11.94
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "SERINGAPATAM",
+      "title": "1799年英军攻陷斯里兰加帕特南",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        76.69,
+        12.42
+      ],
+      "source_key": "MYSORE",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "COLOMBO",
+      "title": "科伦坡1796英公司占港",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        79.86,
+        6.93
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "JAFFNA",
+      "title": "贾夫纳1796英公司接管",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        80.02,
+        9.66
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "GALLE",
+      "title": "加勒1796沿海辖区接管",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        80.22,
+        6.05
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "TRINCOMALEE",
+      "title": "亭可马里1796沿海辖区接管",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        81.23,
+        8.57
+      ],
+      "source_key": "CEYLON",
+      "source_urls": [
+        "https://archives.gov.lk/English/about-us"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "CAVITE",
+      "title": "甲米地1762—1763英军海港驻点",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        120.94,
+        14.48
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "SAINT_LOUIS_SENEGAL",
+      "title": "塞内加尔圣路易斯英军要塞",
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1778
+        }
+      ],
+      "coordinates": [
+        -16.5,
+        16.03
+      ],
+      "source_key": "PARIS1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "FREETOWN",
+      "title": "1792弗里敦公司与黑人移民聚落",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -13.23,
+        8.49
+      ],
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "GRANVILLE_TOWN",
+      "title": "1787格兰维尔镇首个安置聚落",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1788
+        }
+      ],
+      "coordinates": [
+        -13.19,
+        8.49
+      ],
+      "source_key": "SL",
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "SYDNEY",
+      "title": "悉尼湾1788年英国流放殖民驻点",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        151.21,
+        -33.86
+      ],
+      "source_key": "AUS",
+      "source_urls": [
+        "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Migration/MigrationPathway/Report/Chapter_2_-_Migration_and_the_Formation_of_Modern_Australia"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "PARRAMATTA_CORE",
+      "title": "帕拉马塔1788年殖民聚落",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        151.01,
+        -33.81
+      ],
+      "source_key": "AUS",
+      "source_urls": [
+        "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Migration/MigrationPathway/Report/Chapter_2_-_Migration_and_the_Formation_of_Modern_Australia"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "NORFOLK_KINGSTON",
+      "title": "诺福克岛1788流放地",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        167.96,
+        -29.05
+      ],
+      "source_key": "NORFOLK",
+      "source_urls": [
+        "https://www.infrastructure.gov.au/territories-regions-cities/territories/norfolk-island/history"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "PORT_EGMONT_CORE",
+      "title": "福克兰Port Egmont英方驻点",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1769
+        },
+        {
+          "start_year": 1771,
+          "end_year": 1773
+        }
+      ],
+      "coordinates": [
+        -61.17,
+        -51.38
+      ],
+      "source_key": "FALKLAND",
+      "source_urls": [
+        "https://nationalarchives.gov.fk/jdownloads/Mail%20Stamps%20and%20Telecommunications/Mail/MAI-STA-10-1.%20Early%20settlements%20issue%20late%201980.pdf"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "BASTIA_CORSICA",
+      "title": "1794—1796英国与科西嘉驻城",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        9.45,
+        42.7
+      ],
+      "source_key": "MED",
+      "source_urls": [
+        "https://www.um.edu.mt/library/oar/handle/123456789/25181"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    },
+    {
+      "id": "PORTOFERRAIO",
+      "title": "1796厄尔巴英国短暂驻军",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        10.3,
+        42.82
+      ],
+      "source_key": "MED",
+      "source_urls": [
+        "https://www.um.edu.mt/library/oar/handle/123456789/25181"
+      ],
+      "category": "dated_city_or_port_core",
+      "historical_city_wall_survey": false,
+      "area_sqkm": null,
+      "screen_radius_not_ground_area": true
+    }
+  ]
+}

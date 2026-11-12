@@ -90,5 +90,5 @@ assert.ok(app.includes("nineYearsWarImpact=nineYearsData"));
 const refresh=app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener"));
 assert.ok(refresh.includes('renderNineYearsWarImpact();'));
 assert.ok(app.includes('renderNineYearsWarImpact();'));
-assert.ok(html.includes('1497—1599'));
+assert.ok(html.includes('1497—1799'));
 console.log('PASS: 1594–95 Fermanagh, 1598 Gaelic victory/plantation resistance, 1599 Essex city itinerary; no fabricated land controls');

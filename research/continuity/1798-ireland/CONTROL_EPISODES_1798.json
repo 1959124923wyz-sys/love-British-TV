@@ -1,0 +1,130 @@
+{
+  "schema": "atlas-18c-ireland-1798-war-control-episodes-research-v1",
+  "status": "research_only_not_publication",
+  "date": "2026-11-08",
+  "range": {
+    "from": 1791,
+    "to": 1799
+  },
+  "episodes": [
+    {
+      "stable_id": "IRL-1798-ENNISCORTHY-REBELS",
+      "place": "Enniscorthy, Wexford",
+      "actor": "Wexford local rebel command",
+      "class": "temporary_rebel_town_control",
+      "start_date": "1798-05-28",
+      "end_on_or_before": "1798-06-21",
+      "end_precision": "government reconquest by Vinegar Hill phase; exact town loss day not asserted",
+      "source_keys": [
+        "C:C5-IRL-NAI-1798",
+        "C:S23"
+      ],
+      "map_points_not_polygon": true
+    },
+    {
+      "stable_id": "IRL-1798-WEXFORD-TOWN-REBELS",
+      "place": "Wexford town, Wexford",
+      "actor": "United rebel forces of Wexford",
+      "class": "temporary_rebel_town_control",
+      "start_date": "1798-05-30",
+      "end_on_or_before": "1798-06-21",
+      "end_precision": "archives describe broad south-east rebel control until June21; no surveyed individual town transfer hour",
+      "source_keys": [
+        "C:C5-IRL-NAI-1798",
+        "C:S23"
+      ],
+      "map_points_not_polygon": true
+    },
+    {
+      "stable_id": "IRL-1798-NEW-ROSS-CONTESTED",
+      "place": "New Ross",
+      "actor": "United rebel attackers and government garrison",
+      "class": "single_day_contested_not_sustained_rebel_control",
+      "start_date": "1798-06-05",
+      "end_on_or_before": "1798-06-05",
+      "end_precision": "government retained/recovered city after day's combat",
+      "source_keys": [
+        "C:C5-IRL-NAM-1798",
+        "C:C5-IRL-NAM-BLOMELEY"
+      ],
+      "map_points_not_polygon": true
+    },
+    {
+      "stable_id": "IRL-1798-ANTRIM-CONTESTED",
+      "place": "Antrim town",
+      "actor": "United Irishmen insurgents and Crown forces",
+      "class": "single_day_rebel_entry_followed_by_recapture",
+      "start_date": "1798-06-07",
+      "end_on_or_before": "1798-06-07",
+      "end_precision": "no enduring town takeover established",
+      "source_keys": [
+        "C:C7-S15",
+        "C:S23"
+      ],
+      "map_points_not_polygon": true
+    },
+    {
+      "stable_id": "IRL-1798-VINEGAR-HILL-REBEL-CAMP",
+      "place": "Vinegar Hill, Enniscorthy",
+      "actor": "Wexford rebel encampment",
+      "class": "wartime_rebel_camp_not_territorial_sovereignty",
+      "start_date": "1798-05-28",
+      "start_precision": "may 28 lower-bound estimate, camp became focal point over the ensuing weeks",
+      "end_on_or_before": "1798-06-21",
+      "end_precision": "site stormed June 21; military retreat does not establish a mapped provincial border",
+      "source_keys": [
+        "C:S23",
+        "C:C5-IRL-NAI-1798"
+      ],
+      "map_points_not_polygon": true
+    },
+    {
+      "stable_id": "IRL-1798-KILLALA-FRENCH-IRISH",
+      "place": "Killala and surrounding north Mayo",
+      "actor": "French expedition under Humbert and local Irish allies",
+      "class": "french_irish_temporary_occupation_not_british_control",
+      "start_date": "1798-08-23",
+      "end_on_or_before": "1798-09-25",
+      "end_precision": "Killala retaken by Crown according to Sept 25 NAI letter; exact local boundaries unclear",
+      "source_keys": [
+        "C:S23",
+        "C:C5-IRL-NAI-1798"
+      ],
+      "map_points_not_polygon": true
+    },
+    {
+      "stable_id": "IRL-1798-BALLINAMUCK-SURRENDER",
+      "place": "Ballinamuck",
+      "actor": "British Crown forces versus French and local Irish insurgent army",
+      "class": "battle_and_surrender_not_territory_award",
+      "start_date": "1798-09-08",
+      "end_on_or_before": "1798-09-08",
+      "end_precision": "field battle; no British land annexation created",
+      "source_keys": [
+        "C:S23",
+        "C:C5-IRL-NAI-1798"
+      ],
+      "map_points_not_polygon": true
+    }
+  ],
+  "mapping_contract": {
+    "fill_authorized": false,
+    "territorial_polygons_created": 0,
+    "area_sqkm": null,
+    "year_end_1798_rebel_state_continuity": "None of the listed temporary Wexford/Ulster or Killala rebellion episodes is demonstrated as a year-end December 31 sovereign region. Do not extend to year-end map or modern county outlines.",
+    "year_end_1798_crown_administration": "Crown-appointed Irish executive and surviving Irish parliament continued; no claim that every local fortress and inland estate was verified site by site.",
+    "historical_boundary_verified": false,
+    "source_only_under_1700_continuity": "These 1798 episodes are not full replacement for 1699–1700 stable_id ledger.",
+    "unmapped_actions": [
+      "Dunlavin loyalist killings",
+      "Scullabogue rebel killings",
+      "Wexford-wide retaliatory violence"
+    ]
+  },
+  "editorial_source_basis": [
+    "research/18c/consolidated/series/T30.json",
+    "https://www.nationalarchives.ie/PDF/1798.pdf",
+    "https://www.nam.ac.uk/explore/irish-rebellion-1798"
+  ],
+  "history_review": "pending"
+}

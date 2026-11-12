@@ -16,9 +16,9 @@ assert.ok(app.includes('function openTerritoryDossier(feature,kind=')&&app.inclu
 assert.ok(app.includes('dashArray:french?'), 'Occupied strongholds should display a clear dashed uncertainty boundary on the correct map point');
 assert.ok(app.includes("radius:map.getZoom()>=6?19:17"),'Occupied areas must be pixel-sized status rings, never measured land area');
 assert.ok(app.includes("p.year_end_start")&&app.includes("p.year_end_stop"),'Status rings must track evidence-supported annual years');
-assert.ok(!html.includes('id="controlStatus"')&&html.includes('swatch english-garrison')&&html.includes('swatch french-defence'),'Delete statistics but retain the military layer legend');
+assert.ok(!html.includes('id="controlStatus"')&&html.includes('swatch english-garrison')&&html.includes('swatch contested-war'),'Delete statistics but retain the military layer legend');
 assert.ok(!css.includes('.year-control-status'),'Do not ship obsolete yearly badge layout');
-assert.ok(html.includes('app.js?v=timeline-v1800-merged-ch1ch2')&&html.includes('css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2'));
+assert.ok(html.includes('app.js?v=atlas46-click-notes-20261112')&&html.includes('css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2'));
 assert.ok(html.includes('历史档案与文献')&&!html.includes('HISTORICAL DOSSIER'));
 assert.ok(!html.includes('已发布1497—1549五个历史章节'),'Incorrect published chapter count');
 const ireland=data.events.find(e=>e.id==='1540S-002');

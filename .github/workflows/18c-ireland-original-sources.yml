@@ -1,0 +1,15 @@
+name: 18C Ireland T29 T30 original source registry audit
+on:
+  push:
+    branches:
+      - map/18c-ireland-penal-rebellion-20261108
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archive-source-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify T29 T30 source keys in assistants unmodified ZIP registry
+        run: python3 scripts/audit_18c_ireland_source_registry.py

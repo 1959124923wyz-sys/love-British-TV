@@ -1,0 +1,53 @@
+name: 18C Atlantic slavery Zong insurance and law map editorial QA
+on:
+  push:
+    branches:
+      - map/18c-atlantic-zong-insurance-20261108
+  pull_request:
+    branches:
+      - map/18c-jamaica-maroon-exile-20261108
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-data-and-story-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify legacy and fourth preview schema, links and spatial safety
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_18c_atlantic_zong_map.js
+          python3 scripts/test_18c_archival_integrity.py
+          node scripts/test_18c_jamaica_maroon_map.js
+          node scripts/test_18c_bengal_continuity_map.js
+          node scripts/test_18c_acadia_map_pilot.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          python3 -m json.tool data/stories/serial/chronology-preview-atlantic-zong-1700-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t01-t02-atlantic-zong-1711-1799.json >/dev/null
+          python3 scripts/audit_spatial_semantics.py --strict
+  real-desktop-chromium:
+    needs: historical-data-and-story-contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Selenium
+        run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Chromium Atlas historic map year links and returns
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/18c-atlantic-http.log 2>&1 &
+          python3 scripts/browser_18c_atlantic_zong.py
+          python3 scripts/browser_18c_jamaica_maroon.py
+          python3 scripts/browser_18c_bengal_continuity.py
+          python3 scripts/browser_18c_acadia_pilot.py
+      - name: Archive desktop screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c-atlantic-zong-desktop-preview
+          path: browser-smoke-results/
+          if-no-files-found: ignore

@@ -61,6 +61,6 @@ assert.ok(!region.includes('area_sqkm>0')&&!region.includes('calculateArea'));
 assert.ok(app.includes('tenthInvasionImpactAreas=await impactResponse.json()'));
 assert.ok(app.includes('renderTenthInvasionImpactAreas();'));
 assert.ok(app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener")).includes('renderTenthInvasionImpactAreas();'), 'Impact areas must refresh on territory checkbox without changing year');
-assert.ok(app.includes("invasionImpact?'英军入侵影响区'"));
+assert.ok(app.includes("invasionImpact?'英军入侵'"));
 assert.ok(app.includes('[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth'));
 console.log('PASS: Munster source-backed non-sovereign invasion impact polygons, stable 1580-83 time gates and evidence linked');

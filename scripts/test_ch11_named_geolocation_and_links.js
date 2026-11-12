@@ -61,5 +61,5 @@ assert.ok(renderer.includes('atlas-ch11-brazil-two-town-link')&&renderer.include
 assert.ok(renderer.includes("openTerritoryDossier(feat,'linked-action')"));
 const refresh=app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener"));
 assert.ok(refresh.includes('renderChapter11ActionLinks();'),'Territory checkbox must switch links');
-assert.ok(fs.readFileSync(path.join(root,'index.html'),'utf8').includes('ch11-source-anchor-20261015'));
+assert.ok(fs.readFileSync(path.join(root,'index.html'),'utf8').includes('app.js?v=atlas46-click-notes-20261112'));
 console.log('PASS chapter11: 16 named events located, 3 genuinely unresolved, 2 sourced non-territorial action-order lines');

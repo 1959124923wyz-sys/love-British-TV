@@ -1,0 +1,308 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T06",
+  "story_arc_title": "格林纳达Fédon起义及其他岛屿镇压",
+  "status": "research_only",
+  "main_map_candidates": 2,
+  "topic_mode_candidates": 0,
+  "narrative_only_groups": 0,
+  "groups": [
+    {
+      "id": "E18-MRG-T06-01",
+      "story_arc_id": "T06",
+      "story_arc_title": "格林纳达Fédon起义及其他岛屿镇压",
+      "title_zh": "1793—1798年英军介入并占领圣多明各部分港口后撤离",
+      "start_year": 1793,
+      "end_year": 1798,
+      "source_years": [
+        1793,
+        1794,
+        1798
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-A18"
+      ],
+      "original_candidate_count": 6,
+      "original_candidate_ids": [
+        "E18A-1793-A18-01",
+        "E18A7-1793-HAITI-1793-JEREMIE",
+        "E18A7-1793-HAITI-1793-MOLE",
+        "E18A7-1794-HAITI-1794-PORT",
+        "E18A-1798-A18-01",
+        "E18A7-1798-HAITI-1798-EVAC"
+      ],
+      "source_keys": [
+        "A:N62",
+        "A:N20",
+        "A:R7021",
+        "A:R7022"
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/itinerario/article/considering-him-not-as-a-prisoner-but-as-a-refugee-the-categorisation-of-french-refugees-in-jamaica-during-the-time-of-the-haitian-revolution-and-the-revolutionary-wars/352FDE5E8A34AAD90DBCB71EAC5FF6D5",
+        "https://www.cambridge.org/core/journals/international-review-of-social-history/article/from-slaves-and-servants-to-citizens-regulating-dependency-race-and-gender-in-revolutionary-france-and-the-french-west-indies/B116464991B8994CF9C2CDA63EA85F73",
+        "https://www.loc.gov/item/02012343/",
+        "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/96644/dcasslem.pdf?sequence=1"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 4,
+        "主图核心": 2
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A-1793-A18-01",
+          "year": 1793,
+          "date": "1793",
+          "title": "英国军队介入法属圣多明各革命战争",
+          "description": "英国应保王派请求占领法属殖民地若干地区；对奴役劳动的维持和复辟目的须逐地核账",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:N62",
+            "A:N20"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/itinerario/article/considering-him-not-as-a-prisoner-but-as-a-refugee-the-categorisation-of-french-refugees-in-jamaica-during-the-time-of-the-haitian-revolution-and-the-revolutionary-wars/352FDE5E8A34AAD90DBCB71EAC5FF6D5",
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/from-slaves-and-servants-to-citizens-regulating-dependency-race-and-gender-in-revolutionary-france-and-the-french-west-indies/B116464991B8994CF9C2CDA63EA85F73"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A7-1793-HAITI-1793-JEREMIE",
+          "year": 1793,
+          "date": "1793-09",
+          "title": "英国军队登陆法属Saint-Domingue的Jérémie并支持殖民奴役秩序恢复",
+          "description": "英国军队于1793年9月在Jérémie等地区开始占领，获法国反共和派庄园主合作，企图恢复奴役人口的强迫劳动；未整体征服海地。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R7021",
+            "A:R7022"
+          ],
+          "source_urls": [
+            "https://www.loc.gov/item/02012343/",
+            "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/96644/dcasslem.pdf?sequence=1"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A7-1793-HAITI-1793-MOLE",
+          "year": 1793,
+          "date": "1793-09",
+          "title": "英国占领Môle Saint-Nicolas港堡并组织军政据点",
+          "description": "史料研究记1793年9月英军另在Môle Saint-Nicolas建立占领据点，不等于控制北部全部区域。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "A:R7022"
+          ],
+          "source_urls": [
+            "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/96644/dcasslem.pdf?sequence=1"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A7-1794-HAITI-1794-PORT",
+          "year": 1794,
+          "date": "1794-06",
+          "title": "英军与反共和派协同行动夺取Port-au-Prince",
+          "description": "大学史学研究转引David Geggus记六月上旬港城被英国部队占据（搜索摘录给出6月4日）；在原研究PDF未截图前保留月级，原稿日级候审。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R7022",
+            "A:R7021"
+          ],
+          "source_urls": [
+            "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/96644/dcasslem.pdf?sequence=1",
+            "https://www.loc.gov/item/02012343/"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A-1798-A18-01",
+          "year": 1798,
+          "date": "1798",
+          "title": "英国军队结束对圣多明各占领并撤离",
+          "description": "英国撤军与革命一方谈判并存，具体条款和撤离港口待逐案核实",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:N62",
+            "A:N20"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/itinerario/article/considering-him-not-as-a-prisoner-but-as-a-refugee-the-categorisation-of-french-refugees-in-jamaica-during-the-time-of-the-haitian-revolution-and-the-revolutionary-wars/352FDE5E8A34AAD90DBCB71EAC5FF6D5",
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/from-slaves-and-servants-to-citizens-regulating-dependency-race-and-gender-in-revolutionary-france-and-the-french-west-indies/B116464991B8994CF9C2CDA63EA85F73"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A7-1798-HAITI-1798-EVAC",
+          "year": 1798,
+          "date": "1798",
+          "title": "英军在海地革命军压力下逐港撤离Saint-Domingue",
+          "description": "英军占据的岛上多处沿海据点在1798年被迫撤除；不能从一个港口撤军推定整座岛行政主权统一归英方或法方。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:R7022",
+            "A:R7021"
+          ],
+          "source_urls": [
+            "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/96644/dcasslem.pdf?sequence=1",
+            "https://www.loc.gov/item/02012343/"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T06-02",
+      "story_arc_id": "T06",
+      "story_arc_title": "格林纳达Fédon起义及其他岛屿镇压",
+      "title_zh": "1795—1796年Fédon起义及英国殖民军事镇压",
+      "start_year": 1795,
+      "end_year": 1796,
+      "source_years": [
+        1795,
+        1796
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-A13"
+      ],
+      "original_candidate_count": 3,
+      "original_candidate_ids": [
+        "E18A-1795-A13-01",
+        "E18A7-1795-GR-1795-REINFORCE",
+        "E18A-1796-A13-01"
+      ],
+      "source_keys": [
+        "A:S24",
+        "A:N16",
+        "A:N18",
+        "A:N17"
+      ],
+      "source_urls": [
+        "https://journals.sagepub.com/doi/full/10.1177/08438714231219455",
+        "https://ideas.repec.org/p/hal/journl/hal-01856739.html",
+        "https://journals.sagepub.com/doi/10.1177/08438714231219455",
+        "https://www.tandfonline.com/doi/abs/10.1080/0144039X.2018.1464623"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "A"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 2,
+        "专题关键节点": 1
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "E18A-1795-A13-01",
+          "year": 1795,
+          "date": "1795-03-02",
+          "title": "Julien Fédon起义攻占Gouyave及La Baye",
+          "description": "反抗队伍攻取两处港镇并依托Belvidere山区；军事真实控制边界待核",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:S24",
+            "A:N16"
+          ],
+          "source_urls": [
+            "https://journals.sagepub.com/doi/full/10.1177/08438714231219455",
+            "https://ideas.repec.org/p/hal/journl/hal-01856739.html"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A7-1795-GR-1795-REINFORCE",
+          "year": 1795,
+          "date": "1795-03-15",
+          "title": "英国海军运送Colin Lindsay陆军登陆Gouyave进攻起义军",
+          "description": "史料记3月15日Lindsay援军从Martinique运抵Gouyave并向Belvidere进军，受到被奴役者与其他反抗者坚决抵御。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "A:N18"
+          ],
+          "source_urls": [
+            "https://journals.sagepub.com/doi/10.1177/08438714231219455"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        },
+        {
+          "original_id": "E18A-1796-A13-01",
+          "year": 1796,
+          "date": "1796",
+          "title": "英国殖民军与皇家海军合力镇压Fédon起义",
+          "description": "英军依赖海上阻断和镇压重夺殖民统治；人数和具体山地路线另核",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "A:S24",
+            "A:N17"
+          ],
+          "source_urls": [
+            "https://journals.sagepub.com/doi/full/10.1177/08438714231219455",
+            "https://www.tandfonline.com/doi/abs/10.1080/0144039X.2018.1464623"
+          ],
+          "geo_status": "no_verified_coordinate",
+          "source_package": "18c_americas_round8_download(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}

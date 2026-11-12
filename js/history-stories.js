@@ -151,7 +151,7 @@
   const found=[],seen=new Set();
   for(const id of meta.event_ids||[]){
    const item=eventInMemory(id),y=Number(item?.year);
-   if(!item||seen.has(id)||!Number.isInteger(y)||y<1600||y>1699)continue;
+   if(!item||seen.has(id)||!Number.isInteger(y)||y<1600||y>1799)continue;
    seen.add(id);found.push(item);
   }
   if(found.length<2)return '';
@@ -175,11 +175,106 @@
    '</section>').join('');
   return '<details class="story-chronology">'+
    '<summary>专题史事年表 · '+years.size+'个有据年份 / '+found.length+'项关联事件</summary>'+
-   '<p class="story-chronology-note">仅整理本专题已入库、可查证年份的关联事件；空白年份不代表没有历史活动。单击事件将地图切换至该年并对照位置或简介，双击查看独立档案；地图疆域始终只显示所选当年，不累计整个专题时期。</p>'+
+   '<p class="story-chronology-note">单击事件定位年份；双击打开事件档案。</p>'+
    '<div class="story-chronology-scroll">'+markup+'</div></details>';
  }
  function storyHtml(article){
-  const relatedStories=(article.related_story_ids||[]).map(id=>storyMeta.get(id)).filter(Boolean)
+  // 17C predecessor links forward to the 18C successor ONLY in an explicit research preview.
+  const oldStoryContinuation=article.id==='E6-T10-ACADIA'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-C07-ACADIA-DEPORTATION')?['E18-C07-ACADIA-DEPORTATION']:[];
+  const eicStoryContinuation=article.id==='E6-T12'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T14-T15-BENGAL-1756-1773')?['E18-T14-T15-BENGAL-1756-1773']:[];
+  const mysoreEicContinuation=article.id==='E6-T12'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T17-MYSORE-WARS-PARTITION-1767-1799')?['E18-T17-MYSORE-WARS-PARTITION-1767-1799']:[];
+  const marathaEicContinuation=article.id==='E6-T12'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T18-MARATHA-ROHILLA-AWADH-1773-1782')?['E18-T18-MARATHA-ROHILLA-AWADH-1773-1782']:[];
+  const carnaticEicContinuation=article.id==='E6-T12'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T19-CARNATIC-HYDERABAD-PALAYAKKARAR-1746-1799')?['E18-T19-CARNATIC-HYDERABAD-PALAYAKKARAR-1746-1799']:[];
+  const manilaEicContinuation=article.id==='E6-T12'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T22-MANILA-INVASION-SACK-RANSOM-1762-1764')?['E18-T22-MANILA-INVASION-SACK-RANSOM-1762-1764']:[];
+  const capeIndigenousContinuation=article.id==='E6-T12'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T25-CAPE-INVASION-KHOEKHOE-XHOSA-1795-1799')?['E18-T25-CAPE-INVASION-KHOEKHOE-XHOSA-1795-1799']:[];
+  const westAfricanSlaveryContinuation=['E6-T13','E6-T17-AFRICAN-FORTS','E6-T11-VOYAGES'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T26-WEST-AFRICA-SLAVE-FORTS-1727-1792')?['E18-T26-WEST-AFRICA-SLAVE-FORTS-1727-1792']:[];
+  const sierraLeoneContinuation=['E6-T13','E6-T17-AFRICAN-FORTS','E6-T11-VOYAGES'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T27-SIERRA-LEONE-BUNCE-BLACK-SETTLERS-1728-1799')?['E18-T27-SIERRA-LEONE-BUNCE-BLACK-SETTLERS-1728-1799']:[];
+  const indianFiscalContinuation=article.id==='E6-T12'&&
+    new URLSearchParams(window.location.search).get('review18c')==='1'&&
+    storyMeta.has('E18-T21-EIC-OPIUM-SALT-FAMINE-1761-1799')?['E18-T21-EIC-OPIUM-SALT-FAMINE-1761-1799']:[];
+  const ceylonColonialContinuation=article.id==='E6-T12'&&
+    new URLSearchParams(window.location.search).get('review18c')==='1'&&
+    storyMeta.has('E18-T24-CEYLON-COASTAL-INVASION-KANDY-RESISTANCE-1791-1797')?['E18-T24-CEYLON-COASTAL-INVASION-KANDY-RESISTANCE-1791-1797']:[];
+  const frontierArchiveContinuation=article.id==='E18-T34-T35-AUSTRALIA-FIRST-FLEET-1717-1799'&&
+    new URLSearchParams(window.location.search).get('review18c')==='1'&&
+    storyMeta.has('E18-T35-ABORIGINAL-FRONTIER-MASSACRE-1788-1799')?['E18-T35-ABORIGINAL-FRONTIER-MASSACRE-1788-1799']:[];
+  const garifunaContinuation=article.id==='E6-T08'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T05-GARIFUNA-STVINCENT-WAR-DEPORTATION-1763-1797')?['E18-T05-GARIFUNA-STVINCENT-WAR-DEPORTATION-1763-1797']:[];
+  const fedonRebellionContinuation=article.id==='E18-T05-GARIFUNA-STVINCENT-WAR-DEPORTATION-1763-1797'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T06-FEDON-GRENADA-HAITI-BRITISH-REPRESSION-1789-1798')?['E18-T06-FEDON-GRENADA-HAITI-BRITISH-REPRESSION-1789-1798']:[];
+  const jamaicaStoryContinuation=article.id==='E6-T08'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T03-T04-JAMAICA-MAROONS-1718-1799')?['E18-T03-T04-JAMAICA-MAROONS-1718-1799']:[];
+  const atlanticContinuation=article.id==='E6-T11-VOYAGES'&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T01-T02-ATLANTIC-ZONG-1711-1799')?['E18-T01-T02-ATLANTIC-ZONG-1711-1799']:[];
+  const irelandContinuation=['E6-T03-LAND-1642-1698','E6-T03-WILLIAMITE-WAR'].includes(article.id)&&
+    new URLSearchParams(window.location.search).get('review18c')==='1'&&
+    storyMeta.has('E18-T29-T30-IRELAND-PENAL-REBELLION-1704-1799')?['E18-T29-T30-IRELAND-PENAL-REBELLION-1704-1799']:[];
+  const scotlandContinuation=['E6-T04-DARIEN','E6-T04-CONQUEST','E6-T04-GLENCOE'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T31-T32-SCOTLAND-UNION-CULLODEN-1700-1799')?['E18-T31-T32-SCOTLAND-UNION-CULLODEN-1700-1799']:[];
+  const virginiaNewYorkSlaveContinuation=['E6-T05','E6-T09-NY','E6-T09-CAR'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741')?['E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741']:[];
+  const carolinaTuscaroraContinuation=['E6-T09-CAR','E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T09-TUSCARORA-YAMASEE-INDIGENOUS-CAPTIVITY-1702-1732')?['E18-T09-TUSCARORA-YAMASEE-INDIGENOUS-CAPTIVITY-1702-1732']:[];
+  const sevenYearsContinuation=['E6-T10-ACADIA','E18-C07-ACADIA-DEPORTATION','E18-T09-TUSCARORA-YAMASEE-INDIGENOUS-CAPTIVITY-1702-1732'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775')?['E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775']:[];
+  const lenapePurchaseContinuation=['E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T10-WALKING-PURCHASE-LENAPE-LANCASTER-EASTON-1734-1762')?['E18-T10-WALKING-PURCHASE-LENAPE-LANCASTER-EASTON-1734-1762']:[];
+  const revolution24Continuation=['E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775','E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T12-REVOLUTION-PRISON-SHIPS-BLACK-FREEDOM-1764-1796')?['E18-T12-REVOLUTION-PRISON-SHIPS-BLACK-FREEDOM-1764-1796']:[];
+  const hudsonBay25Continuation=['E18-T12-REVOLUTION-PRISON-SHIPS-BLACK-FREEDOM-1764-1796'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T13-HBC-NEWFOUNDLAND-BEOTHUK-DENE-CREE-1700-1792')?['E18-T13-HBC-NEWFOUNDLAND-BEOTHUK-DENE-CREE-1700-1792']:[];
+  const bengalFamine26Continuation=['E18-T14-T15-BENGAL-1756-1773'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T15-BENGAL-FAMINE-TAX-PEASANT-PETITIONS-1770-1772')?['E18-T15-BENGAL-FAMINE-TAX-PEASANT-PETITIONS-1770-1772']:[];
+  const bengalLand27Continuation=['E18-T15-BENGAL-FAMINE-TAX-PEASANT-PETITIONS-1770-1772'].includes(article.id)&&
+    new URLSearchParams(window.location.search).get('review18c')==='1'&&
+    storyMeta.has('E18-T16-BENGAL-PERMANENT-SETTLEMENT-ADIVASI-PAIK-1760-1799')?['E18-T16-BENGAL-PERMANENT-SETTLEMENT-ADIVASI-PAIK-1760-1799']:[];
+  const eicParliament28Continuation=['E18-T16-BENGAL-PERMANENT-SETTLEMENT-ADIVASI-PAIK-1760-1799'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T20-EIC-PARLIAMENT-LOAN-MONOPOLY-1702-1793')?['E18-T20-EIC-PARLIAMENT-LOAN-MONOPOLY-1702-1793']:[];
+  const penangT23Continuation=['E18-T20-EIC-PARLIAMENT-LOAN-MONOPOLY-1702-1793'].includes(article.id)&&
+    new URLSearchParams(window.location.search).get('review18c')==='1'&&
+    storyMeta.has('E18-T23-EIC-PENANG-KEDAH-ANDAMAN-AMBON-BANDA-1768-1796')?['E18-T23-EIC-PENANG-KEDAH-ANDAMAN-AMBON-BANDA-1768-1796']:[];
+  const t28HavanaMaltaContinuation=['E18-T23-EIC-PENANG-KEDAH-ANDAMAN-AMBON-BANDA-1768-1796'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T28-HAVANA-EGMONT-MALTA-1762-1799')?['E18-T28-HAVANA-EGMONT-MALTA-1762-1799']:[];
+  const t33ScottishFreedomContinuation=['E18-T28-HAVANA-EGMONT-MALTA-1762-1799'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'&&
+   storyMeta.has('E18-T33-SCOTLAND-ENSLAVEMENT-CAPITAL-FREEDOM-1707-1792')?['E18-T33-SCOTLAND-ENSLAVEMENT-CAPITAL-FREEDOM-1707-1792']:[];
+  const r33Dossiers=['E18-T33-SCOTLAND-ENSLAVEMENT-CAPITAL-FREEDOM-1707-1792'].includes(article.id)&&
+   new URLSearchParams(window.location.search).get('review18c')==='1'?
+   ["E18-R33-AWADH-BAHU-BEGAM-1765-1783","E18-R33-OLD-CALABAR-ROBIN-JOHNS-1766-1790","E18-R33-MIKMAQ-PEACE-TREATIES-1761"].filter(id=>storyMeta.has(id)):[];
+  const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,
+    ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...virginiaNewYorkSlaveContinuation,...carolinaTuscaroraContinuation,...sevenYearsContinuation,...lenapePurchaseContinuation,...revolution24Continuation,...hudsonBay25Continuation,...bengalFamine26Continuation,...bengalLand27Continuation,...eicParliament28Continuation,...penangT23Continuation,...t28HavanaMaltaContinuation,...t33ScottishFreedomContinuation,...r33Dossiers,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
   const relatedMarkup=relatedStories?'<section class="major-story-entry" aria-label="延伸阅读"><span class="major-story-eyebrow">相关重大历史专题</span>'+relatedStories+'</section>':'';
@@ -355,6 +450,23 @@
      }
     }
    }catch(_serialError){ /* No published long story yet; old articles remain available. */ }
+   // 18C editorial preview is opt-in and never included in the published story manifest.
+   if(new URLSearchParams(window.location.search).get('review18c')==='1'){
+    try{
+     const response=await fetch('data/stories/serial/preview-18c-index.json',{cache:'no-store'});
+     if(response.ok){
+      const draft=await response.json();
+      if(draft.schema==='atlas-18c-story-review-index-v1'&&
+         draft.editorial_status==='research_preview_not_published'&&
+         draft.stories?.length===34&&draft.stories[0].status==='research_preview'&&
+         draft.stories[0].publication_review==='not_submitted'&&
+         draft.stories.every(t=>t.status==='research_preview'&&t.publication_review==='not_submitted'&&
+          /^E18-[A-Z0-9-]+$/.test(t.id)&&/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.file)&&
+          Array.isArray(t.event_ids)&&t.event_ids.length))
+       for(const item of draft.stories)registerStory({...item,is_serial_topic:true});
+     }
+    }catch(_previewError){ /* No 18C story in ordinary atlas mode. */ }
+   }
    // An event may already be open while the optional manifest is loading.
    const current=window.atlasStoryBridge?.selectedEventId?.();
    if(current&&storyByEvent.has(current))activeBody()?.querySelector('.source-details')?.remove();

@@ -1,0 +1,70 @@
+name: 18C native right dossier overlapping regions hover glow
+on:
+  push:
+    branches:
+      - ux/18c-right-overlap-hover-glow-concise-dossier-20261112
+  pull_request:
+    branches:
+      - map/18c-39-caribbean-1759-gold-coast-persian-gulf-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  overlap-static-preserve-archives:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate original six 18C overlay generations + native right inspector
+        run: |
+          node --check app.js
+          node --check js/eighteenth-overlap-right-dossier.js
+          node scripts/test_18c_right_overlap_hover.js
+          node scripts/test_18c_batch39_126_83.js
+          node scripts/test_18c_batch38_127_90.js
+          node scripts/test_18c_batch37_141_108.js
+          node scripts/test_18c_batch36_130_83.js
+          node scripts/test_18c_mass_spatial_81_42.js
+          node scripts/test_18c_spatial_paint_24_15.js
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_r33_original_archive_gaps.py
+          python3 scripts/audit_spatial_semantics.py --strict
+  overlap-real-desktop-six-generations:
+    needs: overlap-static-preserve-archives
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Native right-hand multiple source cards, hovered SVG glow, timeline regressions
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c-native-overlap-http.log 2>&1 &
+          python3 scripts/browser_18c_right_overlap_hover.py
+          python3 scripts/browser_18c_batch39_126_83.py
+          python3 scripts/browser_18c_batch38_127_90.py
+          python3 scripts/browser_18c_batch37_141_108.py
+          python3 scripts/browser_18c_batch36_130_83.py
+          python3 scripts/browser_18c_mass_schematic_81_42.py
+          python3 scripts/browser_18c_map_first_dynamic_areas.py
+      - name: Preserve authentic 1780x1020 map and right-dossier screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c-original-map-right-multi-zone-hover-glow-evidence
+          path: browser-smoke-results/
+          if-no-files-found: ignore
+  overlap-public-fixed-sha:
+    needs: overlap-static-preserve-archives
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Verify fixed-SHA hosted original map, new UX CSS and JS and source data
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          for f in index.html app.js css/eighteenth-overlap-right-dossier.css js/eighteenth-overlap-right-dossier.js js/eighteenth-batch39-spatial.js data/eighteenth-century-mass-schematic-zones-1700-1799.json data/eighteenth-century-b39-caribbean-1759-1763.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$f"
+          done

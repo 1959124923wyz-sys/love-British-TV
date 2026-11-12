@@ -242,9 +242,12 @@ assert(atlas1690.events.some(e=>e.year===1699)&&atlas1690.events.some(e=>e.year=
 // an archival document title or silently replace a URL with a broad website.
 assert(app.includes('原始来源网站 · ')&&app.includes('new URL(url).hostname'),'source citations must show the specific host domain');
 assert(app.includes('atlas-source-host')&&css.includes('.atlas-source-host'),'generic indistinguishable citation links must be styled and keyboard visible');
-assert(app.includes("row('边界说明',kind==='seventeenth-claim'")&&
- app.includes('概略示意外缘 · 非实测边界 · 不得计算实控面积'),
- 'every colonial claim dossier must communicate its schematic and non-aggregatable nature');
+assert(!app.includes("row('边界说明'")&&
+ app.includes("readerCopy.clean(controller?historicAreaDescription"),
+ 'public view must be concise and source-backed');
+assert(json('data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson').features.every(
+ f=>f.properties.area_sqkm===null&&f.properties.historical_boundary_confirmed===false),
+ 'GIS uncertainty must remain in the authoritative source data');
 assert(app.includes("escapeHTML(conciseRegionTitle(f.properties.name))+'</button>'"),
  'competing legal claims must use readable short labels while retaining detailed original title');
 // The selected-year, rolling-four-year and decade modes are mutually exclusive

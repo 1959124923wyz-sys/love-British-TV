@@ -1,0 +1,68 @@
+name: 18C 38 Southern Campaign Hudson Bay Mysore 127 areas 90 cores
+on:
+  push:
+    branches:
+      - map/18c-38-southern-campaign-hudson-bay-india-frontier-20261112
+  pull_request:
+    branches:
+      - map/18c-37-westafrica-ports-india-caribbean-dynamics-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  batch38-strict-static-gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate 503 area references and 338 historical point cores + original archive
+        run: |
+          node --check app.js
+          for f in js/eighteenth-*.js; do node --check "$f"; done
+          node scripts/test_18c_batch38_127_90.js
+          node scripts/test_18c_batch37_141_108.js
+          node scripts/test_18c_batch36_130_83.js
+          node scripts/test_18c_mass_spatial_81_42.js
+          node scripts/test_18c_spatial_paint_24_15.js
+          for script in scripts/test_18c_*.js; do node "$script"; done
+          for region in south-campaign hudson-company india-mysore; do python3 -m json.tool "data/eighteenth-century-b38-$region.json" >/dev/null; done
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_r33_original_archive_gaps.py
+          python3 scripts/audit_spatial_semantics.py --strict
+  batch38-desktop-1780x1020:
+    needs: batch38-strict-static-gis
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Actual Chromium annual territory changes 1700 to 1799 and old batches 34–37
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c38-http.log 2>&1 &
+          python3 scripts/browser_18c_batch38_127_90.py
+          python3 scripts/browser_18c_batch37_141_108.py
+          python3 scripts/browser_18c_batch36_130_83.py
+          python3 scripts/browser_18c_mass_schematic_81_42.py
+          python3 scripts/browser_18c_map_first_dynamic_areas.py
+      - name: Preserve real 1780x1020 desktop screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c38-503-region-footprints-338-cores-desktop-evidence
+          path: browser-smoke-results/
+          if-no-files-found: ignore
+  batch38-public-preview:
+    needs: batch38-strict-static-gis
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify SHA-stable public web scripts and historical datasets
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          for f in index.html app.js js/eighteenth-dynamic-spatial.js js/eighteenth-mass-spatial.js js/eighteenth-batch36-spatial.js js/eighteenth-batch37-spatial.js js/eighteenth-batch38-spatial.js data/eighteenth-century-b38-south-campaign.json data/eighteenth-century-b38-hudson-company.json data/eighteenth-century-b38-india-mysore.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$f"
+          done

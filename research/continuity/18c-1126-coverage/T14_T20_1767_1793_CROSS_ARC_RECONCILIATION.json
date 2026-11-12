@@ -1,0 +1,33 @@
+{
+  "schema": "atlas-18c-1126-cross-arc-reconciliation-v1",
+  "editorial_status": "research_preview_not_published",
+  "date": "2026-11-12",
+  "source_arc": "T14",
+  "existing_story_arc": "T20",
+  "extra_event_count": 0,
+  "extra_historic_polygons": 0,
+  "original_t20_candidate_count": 9,
+  "original_t20_group_count": 4,
+  "records": [
+    {
+      "original_id": "AB-B18-003",
+      "original_merge_group_id": "E18-MRG-T14-06",
+      "existing_atlas_event_id": "E18C-T20-1767-PAYMENT",
+      "original_year": 1767,
+      "corroborating_existing_atlas_source_ids": [
+        "18CT20-HANS"
+      ],
+      "rationale": "原T14选中候审AB-B18-003所述1767英国议会东印度公司财政年款与T20已刊研究预览真实同年法令、原Hansard检索URL完全匹配；只补来源跨弧线ID"
+    },
+    {
+      "original_id": "AB-R7-POL-032",
+      "original_merge_group_id": "E18-MRG-T14-09",
+      "existing_atlas_event_id": "E18C-T20-1793-CHARTER",
+      "original_year": 1793,
+      "corroborating_existing_atlas_source_ids": [
+        "18CT20-UK1793"
+      ],
+      "rationale": "原T14选中候审AB-R7-POL-032的1793东印度公司特许续期与T20同年真实议会文献、官网来源URL完全一致；补跨弧线ID，不重复年份事件"
+    }
+  ]
+}

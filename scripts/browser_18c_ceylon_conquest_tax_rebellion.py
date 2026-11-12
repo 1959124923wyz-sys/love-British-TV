@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+"""T24 sixteenth draft: desktop Chromium 1795 invasion, 1796 loot, 1797 popular resistance."""
+from pathlib import Path
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+root=Path(__file__).resolve().parents[1]
+shots=root/'browser-smoke-results';shots.mkdir(exist_ok=True)
+opts=Options()
+for arg in ('--headless=new','--disable-gpu','--no-sandbox','--disable-dev-shm-usage','--window-size=1780,1020'):opts.add_argument(arg)
+driver=webdriver.Chrome(options=opts);wait=WebDriverWait(driver,60)
+def js(code,*args):return driver.execute_script(code,*args)
+def at(y):return js("return document.querySelector('#bigYear')?.textContent===String(arguments[0])",y)
+def year(y):js("window.atlasStoryBridge.setYear(arguments[0])",y);wait.until(lambda d:at(y))
+story='E18-T24-CEYLON-COASTAL-INVASION-KANDY-RESISTANCE-1791-1797'
+try:
+ driver.get('http://127.0.0.1:8765/?review18c=1&year=1796')
+ wait.until(lambda d:at(1796))
+ wait.until(lambda d:js("return !!window.atlasStoryBridge?.eventById?.('E18C-CEY-1796-COLOMBO-FORT-ENTRY')"))
+ assert js("return window.atlasStoryBridge.eventById('E18C-CEY-1797-COASTAL-PETITIONS-AND-RESISTANCE').lat===null")
+ assert js("return window.atlasStoryBridge.eventById('E18C-CEY-1795-COCHIN-DUTCH-FORT-CAPTURE').lng===76.242943")
+ assert js("return window.atlasStoryBridge.eventById('E18C-CEY-1795-KANDY-ALLIANCE-TREATY').lat===7.2930778")
+ card='#eventList [data-eid="E18C-CEY-1796-COLOMBO-FORT-ENTRY"]'
+ wait.until(lambda d:js("return !!document.querySelector(arguments[0])",card))
+ driver.find_element(By.CSS_SELECTOR,card).click()
+ entry=f'#dossierBody [data-story-open="{story}"]'
+ wait.until(lambda d:js("return !!document.querySelector(arguments[0])",entry))
+ driver.find_element(By.CSS_SELECTOR,entry).click()
+ wait.until(lambda d:js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",story))
+ wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-event-link').length===20"))
+ assert js("return document.querySelectorAll('.major-story-article .story-section').length===23")
+ assert js("return !document.querySelector('.story-reading-toolbar,.story-toc,.story-reading-progress-meter,[data-story-nav]')")
+ zoom=js("return window.atlasReadViewport().zoom")
+ driver.save_screenshot(str(shots/'18c-t24-1796-British-Colombo-fort-cinnamon-loot-article.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-CEY-1795-FORT-FREDERICK-CAPTURE"]').click()
+ wait.until(lambda d:at(1795))
+ wait.until(lambda d:js("return window.atlasStoryBridge.activeFocusId()==='E18C-CEY-1795-FORT-FREDERICK-CAPTURE'"))
+ wait.until(lambda d:js("""const c=window.atlasReadViewport().center;return Math.abs(c.lat-8.5769)<0.7&&Math.abs(c.lng-81.2421)<0.7"""))
+ assert zoom==js("return window.atlasReadViewport().zoom")
+ driver.save_screenshot(str(shots/'18c-t24-1795-Trincomalee-Fort-Frederick-British-invasion.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-CEY-1795-COCHIN-DUTCH-FORT-CAPTURE"]').click()
+ wait.until(lambda d:at(1795))
+ wait.until(lambda d:js("return window.atlasStoryBridge.activeFocusId()==='E18C-CEY-1795-COCHIN-DUTCH-FORT-CAPTURE'"))
+ wait.until(lambda d:js("""const c=window.atlasReadViewport().center;return Math.abs(c.lat-9.964793)<0.7&&Math.abs(c.lng-76.242943)<0.7"""))
+ driver.save_screenshot(str(shots/'18c-t24-1795-Fort-Cochin-in-India-not-Sri-Lanka.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-CEY-1795-KANDY-ALLIANCE-TREATY"]').click()
+ wait.until(lambda d:js("return window.atlasStoryBridge.activeFocusId()==='E18C-CEY-1795-KANDY-ALLIANCE-TREATY'"))
+ wait.until(lambda d:js("""const c=window.atlasReadViewport().center;return Math.abs(c.lat-7.2930778)<0.7&&Math.abs(c.lng-80.63505)<0.7"""))
+ driver.save_screenshot(str(shots/'18c-t24-1795-independent-Kandyan-Kingdom-diplomacy.png'))
+ driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-CEY-1797-COASTAL-PETITIONS-AND-RESISTANCE"]').click()
+ wait.until(lambda d:at(1797))
+ assert js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",story)
+ target=driver.find_element(By.CSS_SELECTOR,'.story-event-link[data-story-event="E18C-CEY-1797-BRITISH-ARMED-COUNTERINSURGENCY"]')
+ js("arguments[0].dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}));",target)
+ wait.until(lambda d:at(1797))
+ wait.until(lambda d:js("return !!document.querySelector('#dossierBody [data-story-back]')"))
+ driver.find_element(By.CSS_SELECTOR,'#dossierBody [data-story-back]').click()
+ wait.until(lambda d:js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",story))
+ driver.save_screenshot(str(shots/'18c-t24-1797-British-counterinsurgency-no-uncertain-GPS.png'))
+ driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
+ wait.until(lambda d:at(1796))
+ assert not js("return !!document.querySelector('.major-story-article')")
+ year(1799);assert js("return document.querySelector('#nextYear').disabled")
+ driver.get('http://127.0.0.1:8765/?year=1796')
+ wait.until(lambda d:at(1699))
+ assert js("return window.atlasStoryBridge.eventById('E18C-CEY-1796-COLOMBO-FORT-ENTRY')===null")
+ driver.get('http://127.0.0.1:8765/?year=1572')
+ wait.until(lambda d:at(1572))
+ assert js("""return [...document.querySelectorAll('#eventList [data-eid]')].some(x=>x.dataset.eid==='1570S-E004')""")
+ print('PASS 16-story T24 real Chrome desktop: 20 links 23 chapters, Fort Frederick vs mainland India Cochin vs sovereign Kandy map pans, colonial tax protests and British suppression, unknown exact sites null, double dossier/back, existing 15 stories and 16C intact.')
+except Exception:
+ driver.save_screenshot(str(shots/'18c-t24-ceylon-desktop-failure.png'))
+ raise
+finally:driver.quit()

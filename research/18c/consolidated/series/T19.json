@@ -1,0 +1,275 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T19",
+  "story_arc_title": "卡纳提克战争、海德拉巴附属同盟和1799税收抵抗",
+  "status": "research_only",
+  "main_map_candidates": 2,
+  "topic_mode_candidates": 1,
+  "narrative_only_groups": 0,
+  "groups": [
+    {
+      "id": "E18-MRG-T19-01",
+      "story_arc_id": "T19",
+      "story_arc_title": "卡纳提克战争、海德拉巴附属同盟和1799税收抵抗",
+      "title_zh": "1761—1763年本地治里法军驻军投降及返还安排",
+      "start_year": 1761,
+      "end_year": 1763,
+      "source_years": [
+        1761,
+        1763
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "policy_series",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-B22"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "AB-B22-001",
+        "AB-B22-003"
+      ],
+      "source_keys": [
+        "B:BS04",
+        "B:BS22",
+        "B:BS93",
+        "B:BS129"
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250",
+        "https://searcharchives.bl.uk/catalog/040-003394106",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/map-of-pondicherry-1760-61-puducherry-tamil-nadu-india-11deg5548n-79deg4948e-1",
+        "https://www.uottawa.ca/about-us/official-languages-bilingualism-institute/clmc/linguistic-history/historic-documents/treaty-paris-1763"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1,
+        "专题关键节点": 1
+      },
+      "merge_justification": "相同制度/政策机制多次立法或执行动作合为制度系列，禁止将中间没有证据的年份画为持续事件",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-B22-001",
+          "year": 1761,
+          "date": "",
+          "title": "本地治里法军驻点投降",
+          "description": "在第三次卡纳提克战争期间英军夺取法国殖民商馆核心据点。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS04",
+            "B:BS22",
+            "B:BS93"
+          ],
+          "source_urls": [
+            "https://searcharchives.bl.uk/catalog/032-000173250",
+            "https://searcharchives.bl.uk/catalog/040-003394106",
+            "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/map-of-pondicherry-1760-61-puducherry-tamil-nadu-india-11deg5548n-79deg4948e-1"
+          ],
+          "geo_status": "modern_named_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-B22-003",
+          "year": 1763,
+          "date": "",
+          "title": "1763巴黎和约规定法属印度沿岸商馆归还",
+          "description": "英法《巴黎和约》第十一条规定法国取回1749年初在印度的商馆（Coromandel、Orissa、Malabar、Bengal等）；具体各处实际驻军撤离和地方权力另核。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS129"
+          ],
+          "source_urls": [
+            "https://www.uottawa.ca/about-us/official-languages-bilingualism-institute/clmc/linguistic-history/historic-documents/treaty-paris-1763"
+          ],
+          "geo_status": "location_name_only_no_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T19-02",
+      "story_arc_id": "T19",
+      "story_arc_title": "卡纳提克战争、海德拉巴附属同盟和1799税收抵抗",
+      "title_zh": "1798年海得拉巴与公司附属军队条约",
+      "start_year": 1798,
+      "end_year": 1798,
+      "source_years": [
+        1798
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-B17"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "AB-NEW-029-001"
+      ],
+      "source_keys": [
+        "B:BS133"
+      ],
+      "source_urls": [
+        "https://dl.tufts.edu/downloads/7s75dr260?filename=2r36v8583.pdf"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-NEW-029-001",
+          "year": 1798,
+          "date": "",
+          "title": "海得拉巴附属条约规定公司驻军与尼扎姆军费",
+          "description": "条约约定6000 sepoys及炮兵、每月201425卢比/年度2417100卢比、季度604275卢比，禁止尼扎姆继续使用法国官兵；尼扎姆保留本邦政体",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS133"
+          ],
+          "source_urls": [
+            "https://dl.tufts.edu/downloads/7s75dr260?filename=2r36v8583.pdf"
+          ],
+          "geo_status": "named_place_no_verified_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T19-03",
+      "story_arc_id": "T19",
+      "story_arc_title": "卡纳提克战争、海德拉巴附属同盟和1799税收抵抗",
+      "title_zh": "1798—1799年Kattabomman税权抗争和公司攻堡",
+      "start_year": 1798,
+      "end_year": 1799,
+      "source_years": [
+        1798,
+        1799
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-B21"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "AB-R6-069-01",
+        "AB-R6-069-02"
+      ],
+      "source_keys": [
+        "B:BS234",
+        "B:BS235"
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/bandits-and-kings-moral-authority-and-resistance-in-early-colonial-india/F5C6466E58EA233E8678A2917D81159D",
+        "https://www.tnarch.gov.in/panchalankurichi"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1,
+        "主图核心": 1
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-R6-069-01",
+          "year": 1798,
+          "date": "",
+          "title": "Kattabomman与公司税务官发生征收权争执",
+          "description": "公司试图扩大对Palayakkarar的地税控制，本地统治者反对；具体接见日期及冲突细节需一手Revenue Consultations复核。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS234"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/bandits-and-kings-moral-authority-and-resistance-in-early-colonial-india/F5C6466E58EA233E8678A2917D81159D"
+          ],
+          "geo_status": "named_place_without_verified_event_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-R6-069-02",
+          "year": 1799,
+          "date": "",
+          "title": "英公司军围攻Panchalankurichi堡",
+          "description": "1799年英公司军攻打Kattabomman的堡垒，当地地方首领反抗并有部分首领支持公司；堡垒被攻战经过须核军报。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS234",
+            "B:BS235"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/bandits-and-kings-moral-authority-and-resistance-in-early-colonial-india/F5C6466E58EA233E8678A2917D81159D",
+            "https://www.tnarch.gov.in/panchalankurichi"
+          ],
+          "geo_status": "named_place_without_verified_event_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}

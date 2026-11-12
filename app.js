@@ -155,8 +155,9 @@ const svgIcon=(item,klass='atlas-glyph')=>{
  return '<svg class="'+klass+'" viewBox="0 0 24 24" aria-hidden="true" style="color:'+escapeHTML(meta.color)+'"><use href="assets/atlas-icons.svg#'+escapeHTML(meta.code)+'"></use></svg>';
 };
 const iconHTML=(item,annualNew=false)=>'<div class="map-pin '+escapeHTML(item.category||'voyage')+' tier-'+levelOf(item)+(isUncertain(item)?' uncertain':'')+(annualNew?' atlas-new-this-year':'')+'" aria-label="'+escapeHTML(item.name||'历史记录')+' · '+escapeHTML(rankName[levelOf(item)])+(annualNew?' · 本年新增事件':'')+'">'+svgIcon(item)+(annualNew?'<span class="atlas-new-mark" aria-hidden="true">新</span>':'')+'</div>';
-const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(String(summary||'').replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+(item.representative_map_point?' · ◎地区参考点（非事件现场）':'')+' · 点击查看详情</small>':'<small>航行方向示意 · 点击查看详情</small>');
+const hoverCard=(title,summary,item)=>'<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+escapeHTML(readerCopy.clean(String(summary||'')).replace(/\s+/g,' ').slice(0,56))+'</div>'+(item?'<small>'+escapeHTML(rankName[levelOf(item)])+' · 点击查看详情</small>':'<small>查看航行路线</small>');
 const workspace=$('workspace');
+ const readerCopy=window.AtlasReaderCopy;
 const compactMapMedia=window.matchMedia('(max-width:980px)');
 const isCompactMap=()=>compactMapMedia.matches;
 if(isCompactMap()){
@@ -224,7 +225,43 @@ function syncMapLayers(){
  if(atlas){renderEventList();refreshHistoricalLayers();}
 }
 let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthColonialClaims=null;
-let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map(); let selected=''; let selectedItemYear=null; let timer=null;
+let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
+const enable18cPilot=new URLSearchParams(window.location.search).get('review18c')==='1';
+let preview18cReady=false;
+let eighteenthAcadiaControlCores=null;
+let bengal18cReady=false;
+let eighteenthBengalControlCores=null,continuity1700References=null;
+let jamaica18cReady=false,eighteenthJamaicaMaroonAutonomyCores=null;
+let atlantic18cReady=false;
+let ireland18cReady=false;
+let australia18cReady=false;
+let scotland18cReady=false;
+let mysore18cReady=false;
+let maratha18cReady=false;
+let carnatic18cReady=false;
+let manila18cReady=false;
+let cape18cReady=false;
+let westafrica18cReady=false;
+let sierraLeone18cReady=false;
+let indiaFiscal18cReady=false;
+let ceylon18cReady=false;
+let frontier17Ready=false;
+let garifuna18cReady=false;
+let fedon19Ready=false;
+let t11Slavery20Ready=false;
+let t09Tuscarora21Ready=false;
+let t08SevenYears22Ready=false;
+let t10Lenape23Ready=false;
+let t12Revolution24Ready=false;
+let t13Hudson25Ready=false;
+let t15Famine26Ready=false;
+let t16Bengal27Ready=false;
+let t20Eic28Ready=false;
+let t23Penang29Ready=false;
+let t28HavanaMalta30Ready=false;
+let t33ScottishFreedom31Ready=false;
+let r33OriginalResearchThreeStoriesReady=false;
+const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
@@ -252,7 +289,7 @@ function listSources(ids,item){
   ['财政核算',note?.accounting]
 
  ].filter(x=>x[1]);
- const questions=(note?.archive_questions||[]).map(text=>'<li>'+escapeHTML(text)+'</li>').join('');
+ const questions='';
  const accountingNames={crown_reward_expenditure:'王室远航奖励',royal_ship_acquisition_bounty:'购船补助',royal_grant_expenditure:'王室拨款',royal_pension:'王室年金'};
  const sums=(note?.economic_records||[]).map(row=>{
   const time=row.year||[row.year_from,row.year_to].filter(Boolean).join('—')||'相关账期';
@@ -264,7 +301,7 @@ function listSources(ids,item){
   return '<li>'+escapeHTML(parts.join('；'))+'</li>';
  }).join('');
  return '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
-   '<div class="research-body">'+fields.map(([head,text])=>'<h3>'+escapeHTML(head)+'</h3><p>'+escapeHTML(text)+'</p>').join('')+
+   '<div class="research-body">'+fields.map(([head,text])=>readerCopy.clean(text)?'<h3>'+escapeHTML(head)+'</h3><p>'+escapeHTML(readerCopy.clean(text))+'</p>':'').join('')+
    (questions?'<h3>待进一步核对的档案</h3><ul>'+questions+'</ul>':'')+
    (sums?'<h3>原始账目字段</h3><ul class="accounting-list">'+sums+'</ul>':'')+
    '</div>'+
@@ -284,9 +321,7 @@ function openDossier(item,typ){
  const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
- const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ));
-
- const representativeNote=typ==='event'&&item.representative_map_point?'<div class="atlas-representative-notice" role="note"><strong>◎ 代表性地图位置 · 非事件精确发生地</strong><p>'+escapeHTML(item.geolocation_limit_zh||item.geography_label||'代表性地理参考点')+'</p></div>':'';
+ const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ)); const representativeNote='';
  const canMapFocus=typ==='event'&&canLocateEvent(item,year);
  const locateAction=typ==='event'?
   (storyChild?
@@ -297,7 +332,7 @@ function openDossier(item,typ){
    '</small></div>'):'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(conciseEventTitle(item))+'</h2>'+
   (conciseEventTitle(item)!==item.name?'<details class="atlas-complete-title"><summary>完整事件名称</summary><p>'+escapeHTML(item.name)+'</p></details>':'')+
-  '<p>'+escapeHTML(description)+'</p>'+representativeNote+
+  (readerCopy.clean(description)?'<p>'+escapeHTML(readerCopy.clean(description))+'</p>':'')+representativeNote+
   (window.HistoryStories?.eventLinkMarkup?.(item,typ)||'')+locateAction+
   (storyChild?'':listSources(item.source_ids,item));
  openPanel('dossier');
@@ -312,17 +347,11 @@ function openDossier(item,typ){
 function openArchaeologyReference(feature){
  const p=feature.properties||{};
  selected='';selectedItemYear=null;
- const text='Historic Environment Scotland 登记的现代古迹保护区范围，包含多期军事考古遗存。';
- $('dossierBody').innerHTML='<div class="dossier-kicker">现代考古遗址地理参考 · '+year+'年</div>'+
-  '<h2>'+escapeHTML(p.public_name||p.title_from_hes||'法定古迹参考区')+'</h2>'+
-  '<p>Historic Environment Scotland 官方保护区的现代外廓，用于辅助理解历史堡垒遗址的位置。</p>'+
-  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
-  '<div class="research-body"><h3>地图几何性质</h3><p>'+escapeHTML(text)+'</p>'+
-  '<h3>军堡建造与分期</h3><p>'+escapeHTML(p.phase_reminder||'需区分后续改建与16世纪城堡分期。')+'</p>'+
-  '<h3>官方地理资料</h3><p>'+escapeHTML((p.hes_precision||'HES考古登记')+'；'+(p.hes_accuracy||''))+'</p>'+
-  '</div>'+
-  '<div class="source-list"><a class="source-link" href="'+escapeHTML(p.designation_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland 官方古迹档案 ↗</a>'+
-  '<a class="source-link" href="'+escapeHTML(p.data_source_url)+'" target="_blank" rel="noopener noreferrer">HES 官方GIS数据接口 ↗</a></div></details>';
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史古迹 · '+year+'年</div>'+
+  '<h2>'+escapeHTML(p.public_name||p.title_from_hes||'历史遗址')+'</h2>'+
+  '<details class="source-details"><summary>历史来源</summary>'+
+  '<div class="source-list"><a class="source-link" href="'+escapeHTML(p.designation_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland · 官方档案 ↗</a>'+
+  '<a class="source-link" href="'+escapeHTML(p.data_source_url)+'" target="_blank" rel="noopener noreferrer">Historic Environment Scotland · 地理资料 ↗</a></div></details>';
  openPanel('dossier');
 }
 function renderArchaeologyReferences(){
@@ -347,12 +376,12 @@ function renderArchaeologyReferences(){
 }
 function openHypothesis(feature){
  const p=feature.properties||{};
- const title=p.public_title||'推定地理范围';
+ const title=p.public_title||'历史区域';
  const url=p.source_path||'research/hypotheses/1500/README.md';
  selectedItemYear=null;
- $('dossierBody').innerHTML='<div class="dossier-kicker">历史地理 · 虚线推定</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(p.public_summary||'根据历史记载的地点绘制的范围示意。')+'</p>'+
+ $('dossierBody').innerHTML='<div class="dossier-kicker">历史区域</div><h2>'+escapeHTML(title)+'</h2>'+(readerCopy.clean(p.public_summary||'')?'<p>'+escapeHTML(readerCopy.clean(p.public_summary))+'</p>':'')+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
- '<div class="research-body"><h3>史料与制图</h3><p>'+escapeHTML(p.method||'依据史料中的地点绘制。')+'</p></div>'+
+ 
  '<a class="source-link" href="'+escapeHTML(url)+'" target="_blank" rel="noopener">查看原始地理研究 ↗</a></details>';
  openPanel('dossier');
 }
@@ -374,11 +403,7 @@ function historicAreaDescription(properties,selectedYear){
  const periods=properties?.controller_periods||[];
  const controller=controllerAtYear(properties,selectedYear);
  if(!controller||periods.length<2)
-  return properties?.summary_zh||properties?.history_description||properties?.description||'该地区的历史状态按所选年份显示。';
- const siteEnvelope=properties?.geometry_role==='attested_settlement_envelope_not_surveyed_border';
- return '所选年份由'+controller.controller_zh+'治理。'+(siteEnvelope?
-  '外缘依据史料地名概略描绘，并非当年的实测行政或军事疆界。':
-  '城市圆形符号仅用于标记具名地点，不代表实测城墙或统治面积。');
+  return properties?.summary_zh||properties?.history_description||properties?.description||'该地区的历史状态按所选年份显示。';  return '所选年份由'+controller.controller_zh+'治理。';
 }
 function openTerritoryDossier(feature,kind='historic'){
  // Preserve the established two-parameter dossier API used throughout legacy cartography.
@@ -386,8 +411,8 @@ function openTerritoryDossier(feature,kind='historic'){
  const claimPoint=arguments.length>2?arguments[2]:null;
  const p=feature.properties||{},restoration=kind==='restoration',occupied=kind==='occupied',contested=kind==='contested',warReach=kind==='war-reach',invasionImpact=kind==='invasion-impact',landDispossession=kind==='land-dispossession',nineYearsWar=kind==='nine-years-war',atlanticContact=kind==='atlantic-contact',linkedAction=kind==='linked-action';
  const controller=kind==='historic'?controllerAtYear(p,year):null;
- const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室广域殖民声索 · 非实际逐地控制'):kind==='seventeenth-reference'?(p.label_type||'17世纪来源地理参考 · 非实测历史影响区'):kind==='indigenous-encounter'?'原住民接触与抵抗 · 无占领':kind==='rebellion-conflict'?'起义军攻防与王室军事回应 · 概略范围':kind==='domestic-repression'?'王室国内军事镇压 · 概略范围':kind==='colonial-coercion'?'殖民军需与强制征赋 · 概略范围':linkedAction?(p.label_type||'有据军事行动关系线'):atlanticContact?(p.label_type||'大西洋贸易与武装行动地理参考'):nineYearsWar?(p.label_type||'九年战争及爱尔兰抵抗影响区'):landDispossession?'殖民土地没收与庄园政策涉及区':restoration?'法军围攻收复及英国撤军地理说明':invasionImpact?'英军入侵影响区':warReach?'有据军事行动方向示意':occupied?'英军驻地附近概略控制区':contested?'交战与争夺区':'历史政治地理';
- const description=controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||'该地区的历史状态按所选年份显示。');
+ const label=kind==='seventeenth-claim'?(p.label_type||'17世纪王室殖民声索'):kind==='seventeenth-reference'?(p.label_type||'17世纪地区史料'):kind==='indigenous-encounter'?'原住民接触与抵抗':kind==='rebellion-conflict'?'起义军与王室军事交锋':kind==='domestic-repression'?'王室军事镇压':kind==='colonial-coercion'?'殖民军需与强制征赋':linkedAction?(p.label_type||'军事行动'):atlanticContact?(p.label_type||'大西洋贸易与军事行动'):nineYearsWar?(p.label_type||'九年战争与爱尔兰抵抗'):landDispossession?'殖民土地没收与庄园政策':restoration?'法军收复与英国撤军':invasionImpact?'英军入侵':warReach?'军事行动':occupied?'英军驻地':contested?'战争争夺':'历史政治地理';
+ const description=readerCopy.clean(controller?historicAreaDescription(p,year):(p.summary_zh||p.history_description||p.description||p.annotation||''));
  const period=p.start_year!=null?(p.start_year+(p.end_year!=null?'—'+p.end_year:p.ongoing_at_atlas_end?'起（至1599年地图研究范围）':p.observed_through_year!=null?'—'+p.observed_through_year:''))+'年':year+'年';
 
  // Allow the 53 broad and often overlapping legal envelopes to be inspected individually.
@@ -403,18 +428,18 @@ function openTerritoryDossier(feature,kind='historic'){
  selected='';selectedItemYear=null;
  const row=(key,value)=>value?'<div class="zone-dossier-row"><span>'+escapeHTML(key)+'</span><strong>'+escapeHTML(value)+'</strong></div>':'';
  $('dossierBody').innerHTML=(kind==='seventeenth-claim'?'<button type="button" class="atlas-colony-directory-back" data-return-claim-directory="1">← 返回本年区域目录</button>':'')+
-  '<div class="dossier-kicker">'+escapeHTML(label)+' · '+year+'年</div>'+
+  '<div class="dossier-kicker">'+escapeHTML(readerCopy.label(label))+' · '+year+'年</div>'+
   '<h2>'+escapeHTML(kind==='seventeenth-claim'?conciseRegionTitle(p.name):(p.name||feature.id||'历史领土概况'))+'</h2>'+
   (kind==='seventeenth-claim'&&conciseRegionTitle(p.name)!==p.name?'<details class="atlas-complete-title"><summary>完整区域名称</summary><p>'+escapeHTML(p.name)+'</p></details>':'')+
-  '<p>'+escapeHTML(description)+'</p>'+
-  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('图层性质',kind==='seventeenth-claim'?(p.map_presentation==='optional_maximal_paper_claim'?'跨大陆等最大法律声索 · 默认仅存档':p.label_type||'殖民文书与贸易活动地理参考'):null)+row('边界说明',kind==='seventeenth-claim'?'概略示意外缘 · 非实测边界 · 不得计算实控面积':null)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
+  (description?'<p>'+escapeHTML(description)+'</p>':'')+
+  '<div class="zone-dossier-facts">'+row('历史时段',period)+row('图层性质',kind==='seventeenth-claim'?readerCopy.label(p.label_type||'殖民文书与贸易'):null)+row('当年治理主体',controller?.controller_zh)+row(atlanticContact?'参与主体':'相关军事方',parties)+
   ''+'</div>'+
   (relatedPlaces.length?'<h3 class="zone-links-heading">关联据点</h3><div class="zone-related">'+relatedPlaces.map((pl,i)=>
    '<button type="button" class="zone-record-link" data-zone-place="'+i+'">'+escapeHTML(pl.name)+'</button>').join('')+'</div>':'')+
   (relatedEvents.length?'<h3 class="zone-links-heading">相关历史事件</h3><div class="zone-related">'+relatedEvents.map((ev,i)=>
    '<button type="button" class="zone-record-link" data-zone-event="'+i+'">'+escapeHTML(ev.year+'年 · '+conciseEventTitle(ev))+'</button>').join('')+'</div>':'')+
   (alternativeClaims.length?'<h3 class="zone-links-heading">当前位置的其他声索／治理参考（'+alternativeClaims.length+'）</h3>'+ 
-   '<p>多项纸面授权或行政参考重叠，不表示该地被多方同时实际占领。选择另一块查看其独立史料。</p>'+
+   
    '<div class="zone-related">'+alternativeClaims.map((f,i)=>
     '<button type="button" class="zone-record-link" data-overlap-claim="'+i+'">'+escapeHTML(conciseRegionTitle(f.properties.name))+'</button>').join('')+'</div>':'')+
   listSources(p.source_ids||[],{id:p.id||feature.id})+
@@ -444,7 +469,7 @@ let eventWindowMode17c='rolling4';
 function seventeenthEventWindowStart(atYear,mode=eventWindowMode17c){
  if(mode==='year')return atYear;
  if(mode==='decade')return decadeForYear(atYear);
- return Math.max(1600,atYear-3);
+ return Math.max(atYear>=1700?1700:1600,atYear-3);
 }
 function seventeenthEventsForWindow(atYear,mode=eventWindowMode17c){
  if(atYear<1600)return atlas?.events||[];
@@ -858,11 +883,11 @@ function openSeventeenthClaimDirectory(){
   const i=active.indexOf(f),p=f.properties;
   return '<button type="button" class="zone-record-link atlas-colony-directory-item" data-colonial-directory="'+i+'">'+
    '<strong>'+escapeHTML(conciseRegionTitle(p.name))+'</strong>'+
-   '<small>'+escapeHTML(p.start_year+'—'+p.end_year+'年 · '+(p.label_type||'历史概略参考'))+'</small></button>';
+   '<small>'+escapeHTML(p.start_year+'—'+p.end_year+'年 · '+readerCopy.label(p.label_type||'历史区域'))+'</small></button>';
  }).join('');
  $('dossierBody').innerHTML='<div class="dossier-kicker">17世纪地图 · '+year+'年</div>'+
   '<h2>本年殖民区域与原始声索</h2>'+
-  '<p>当前有'+active.length+'块历史参考区域，其中'+huge+'块为默认隐藏的跨大陆或巨大流域法律声索。分组和搜索只为阅读方便；地图范围未经历史测绘，不代表实际控制，重叠不累计。</p>'+
+  '<p>本年'+active.length+'处区域 · '+huge+'处大型纸面声索</p>'+
   '<div class="atlas-directory-filter"><label for="claimDirectorySearch">检索本年区域与史料</label>'+
    '<input id="claimDirectorySearch" type="search" placeholder="输入地区、殖民公司或地名" autocomplete="off">'+
    '<span id="claimDirectoryStatus" role="status" aria-live="polite">'+active.length+'块参考区域</span></div>'+
@@ -925,7 +950,7 @@ function renderSeventeenthColonialClaims(){
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
    layer.bindTooltip('<strong>'+escapeHTML(conciseRegionTitle(p.name))+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(p.label_type+(p.map_presentation==='optional_maximal_paper_claim'?' · 仅纸面远距声索，无填色':' · 非实测边界')+' · 点击查看史料')+'</div>',
+    escapeHTML(readerCopy.label(p.label_type||'纸面声索')+' · 点击查看史料')+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    const base={weight:layer.options.weight,opacity:layer.options.opacity,
     dashArray:layer.options.dashArray,fillOpacity:layer.options.fillOpacity};
@@ -967,9 +992,9 @@ function renderSeventeenthRegionalStudies(){
   },
   onEachFeature:(f,layer)=>{
    const p=f.properties||{},isPolygon=f.geometry?.type==='Polygon';
-   const prefix=isPolygon?'具名地点构成的概略地区（非历史边界）':'有据关系线（非实测航迹/道路）';
+   const prefix=isPolygon?'地区记录':'关联行动';
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-    escapeHTML(prefix+' · '+(p.label_type||'历史研究层'))+'</div>',
+    escapeHTML(readerCopy.label(prefix+' · '+(p.label_type||'地区记录')))+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',ev=>{
     if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
@@ -993,7 +1018,7 @@ function renderSeventeenthRegionalStudies(){
     radius:display==='land_dispossession'?20:16,color,weight:2.2,
     dashArray:'4 6',opacity:.85,fill:true,fillColor:color,fillOpacity:.04,
     bubblingMouseEvents:false,className:'atlas-17c-regional-zoom-hint'});
-   cue.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">概略范围缩略提示 · 非历史边界，放大地图阅读原区域虚线</div>',
+   cue.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">点击查看历史</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    cue.on('click',event=>{if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
     openTerritoryDossier(feature,'seventeenth-reference');});
@@ -1001,6 +1026,88 @@ function renderSeventeenthRegionalStudies(){
   }
  }
 }
+
+// Eighteenth-century first-map pilot: evidence-led urban/garrison cores only.
+// Reuse approved map marker and dossier panels; each circle is SCREEN PX, not a territory polygon.
+function renderEighteenthAcadiaControlCores(){
+ if(year<1700||!preview18cReady||!eighteenthAcadiaControlCores)return;
+ groups.controlAreas.clearLayers();
+ if(!$('toggleControlAreas').checked)return;
+ for(const f of eighteenthAcadiaControlCores.features){
+  const p=f.properties||{};
+  if(year<p.start_year||year>p.observed_through_year)continue;
+  const coords=f.geometry.coordinates;
+  const stage=p.year_stages?.find(x=>year>=x.start_year&&year<=x.end_year);
+  if(!stage)continue;
+  const center=[coords[1],coords[0]];
+  const c=p.control_class==='british_colonial_urban_administrative_core'?'#b79af2':'#bd9bdc';
+  const point=L.circleMarker(center,{pane:'controlAreaPane',radius:8,color:c,weight:2.2,
+   fill:true,fillColor:'#513a75',fillOpacity:0.65,opacity:0.95,bubblingMouseEvents:false});
+  point.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML(stage.role)+'</div>',{
+    sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+  point.on('click',ev=>{
+   if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
+   selected='';selectedItemYear=null;
+   const sources=p.source_urls.map(url=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+
+    escapeHTML(url)+'">'+escapeHTML(new URL(url).hostname)+' · 机构史料 ↗</a>').join('');
+   $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪史料地图 · '+year+'年 · 军政核心点</div>'+
+    '<h2>'+escapeHTML(p.name)+'</h2><p>'+escapeHTML(stage.role)+'</p>'+
+    '<p>'+escapeHTML(p.description)+'</p>'+
+    
+    '<details class="story-sources"><summary>地点与驻防年代来源 · '+p.source_urls.length+'项</summary><div class="source-list">'+sources+'</div></details>';
+   openPanel('dossier');
+  });
+  point.addTo(groups.controlAreas);
+ }
+}
+
+
+// 1700 transition and Bengal research site cores: actor-differentiated dashed
+// Point references, never measured state polygons or territory area.
+function renderEighteenthReviewEvidenceCores(){
+ if(!preview18cReady||year<1700||!$('toggleControlAreas').checked)return;
+ const visible=[];
+ for(const f of continuity1700References?.features||[]){
+  if(year>=f.properties.start_year&&year<=f.properties.end_year)
+   visible.push({f,mode:'continuity',text:'驻军或商馆活动'});
+ }
+ for(const f of eighteenthBengalControlCores?.features||[]){
+  const p=f.properties||{};
+  const period=(p.periods||[]).find(x=>year>=x.start_year&&year<=x.end_year);
+  if(period)visible.push({f,mode:'bengal',text:period.status});
+ }
+ for(const f of eighteenthJamaicaMaroonAutonomyCores?.features||[]){
+  const p=f.properties||{};
+  const period=(p.periods||[]).find(x=>year>=x.start_year&&year<=x.end_year);
+  if(period)visible.push({f,mode:'maroon_autonomy',text:period.status});
+ }
+ for(const {f,mode,text:caption} of visible){
+  const p=f.properties||{},c=f.geometry.coordinates;
+  const french=/French|法方/.test(p.actor||p.controller||'');
+  const color=mode==='maroon_autonomy'?'#54b9a1':french?'#58a7c9':/English Royal African/.test(p.actor||'')?'#c9958d':'#ab98dd';
+  const circle=L.circleMarker([c[1],c[0]],{pane:'controlAreaPane',radius:7,
+   color,weight:2,dashArray:'3 3',fill:true,fillColor:color,fillOpacity:0.15,bubblingMouseEvents:false});
+  circle.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML((p.actor||p.controller||'')+' · '+caption)+'</div>',
+   {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[10,0]});
+  circle.on('click',ev=>{
+   if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
+   selected='';selectedItemYear=null;
+   const arr=p.source_urls||[],links=arr.map(u=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+
+    escapeHTML(u)+'">'+escapeHTML(new URL(u).hostname)+' · 史料 ↗</a>').join('');
+   $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪历史地点 · '+year+'年</div>'+
+    '<h2>'+escapeHTML(p.name)+'</h2>'+
+    '<p>'+escapeHTML((p.actor||p.controller||'')+' · '+caption)+'</p>'+
+    (readerCopy.clean(p.note||'')?'<p>'+escapeHTML(readerCopy.clean(p.note))+'</p>':'')+
+    
+    '<details class="story-sources"><summary>机构资料 · '+arr.length+'项</summary><div class="source-list">'+links+'</div></details>';
+   openPanel('dossier');
+  });
+  circle.addTo(groups.controlAreas);
+ }
+}
+
 function renderSeventeenthSpatialEvidence(){
  groups.territory.clearLayers();
  if(year<1600||!seventeenthSpatialEvidence||!$('toggleTerritorialFootprints').checked)return;
@@ -1036,7 +1143,7 @@ function renderSeventeenthSpatialEvidence(){
    className:'atlas-17c-evidence-cue atlas-17c-'+display.replaceAll('_','-')});
   const note=episode?episode.description:(p.description||'');
   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(p.label_type)+' · '+escapeHTML(note)+' · 虚线为视觉提示，不是实测影响范围</div>',
+   escapeHTML(readerCopy.label(p.label_type))+(readerCopy.clean(note)?' · '+escapeHTML(readerCopy.clean(note)):'')+'</div>',
    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
   layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
    openTerritoryDossier(evidence,'seventeenth-reference')});
@@ -1178,7 +1285,7 @@ function renderWartimeVicinities(){
   style:()=>({color:'#bd92fa',weight:2,opacity:.95,dashArray:'4 7',
     fill:true,fillColor:'#8652dd',fillOpacity:.23,className:'atlas-violet-wartime-vicinity'}),
   onEachFeature:(feature,layer)=>{
-   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">已证实英军驻点，周边范围为概略示意；点击查看领土概况</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">英军驻点 · 点击查看历史</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,'occupied')});
   }
@@ -1310,7 +1417,7 @@ function renderEleventhInfluenceAreas(){
    className:'atlas-eleventh-research-area',bubblingMouseEvents:false}),
   onEachFeature:(f,layer)=>{
    const p=f.properties;
-   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">法律地名及殖民活动参考 · 非实测边界</div>',
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">殖民活动 · 点击查看历史</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
    layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(f,'historic')});
   }
@@ -1352,7 +1459,7 @@ function renderEarlyRegionalImpactAreas(){
   const style={color,weight:2.5,opacity:.95,dashArray:ochre?'7 6':'8 6',fill:true,fillColor:color,
    fillOpacity:ochre?.11:.14,className:'atlas-early-regional-impact'};
   const open=e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,regionalFeatureKind(p));};
-  const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">史料支持的地区示意 · 点击阅读背景与后果</div>';
+  const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">地区历史 · 点击查看事件</div>';
   if(map.getZoom()<5){
    const center=ring.slice(0,-1).reduce((xy,[lon,lat],_,arr)=>[xy[0]+lat/arr.length,xy[1]+lon/arr.length],[0,0]);
    L.circleMarker(center,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',radius:26,
@@ -1435,7 +1542,7 @@ function renderTenthInvasionImpactAreas(){
   const p=f.properties,small=map.getZoom()<5;
   const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.label_type||'英军入侵影响区')+
-   (small?' · 位置提示，放大查看地区示意面':' · 点击查看史料')+'</div>';
+   (small?' · 点击查看史料':' · 点击查看史料')+'</div>';
   const open=e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    openTerritoryDossier(f,'invasion-impact');};
   if(small){
@@ -1487,7 +1594,7 @@ function renderTenthLandRaidImpactAreas(){
   const lowZoom=land?zoom<5:true;
   const tooltip='<strong>'+escapeHTML(title)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.label_type||'区域性历史影响')+
-   (land&&lowZoom?' · 位置提示，放大查看地区示意面':' · 查看史料')+'</div>';
+   (land&&lowZoom?' · 点击查看史料':' · 查看史料')+'</div>';
   const open=e=>{
    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    const currentFeature=stage?{...feature,properties:{...p,name:stage.title,
@@ -1547,7 +1654,7 @@ function renderAtlanticContactSites(){
   const small=map.getZoom()<8;
   const tooltip='<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.label_type)+
-   (small?' · 位置提示；放大后显示局部示意面':' · 点击查看史料')+'</div>';
+   (small?' · 点击查看史料':' · 点击查看史料')+'</div>';
   const open=e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    openTerritoryDossier(f,'atlantic-contact');};
   if(small){
@@ -1581,7 +1688,7 @@ function renderAtlanticContactSites(){
     className:isMilitary?'atlas-trinidad-1595-action-sequence':'atlas-maghreb-trade-sequence'}),
    onEachFeature:(item,layer)=>{
     layer.bindTooltip('<strong>'+escapeHTML(item.properties.name)+'</strong><div class="atlas-hover-summary">'+
-      escapeHTML(isMilitary?'先后顺序示意，非实际行军路线':'贸易港口次序示意，非实际航线')+'</div>',
+      escapeHTML(isMilitary?'军事行动线路':'贸易港口联系')+'</div>',
       {sticky:true,pane:'eventTooltipPane',className:'atlas-hover'});
     layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
      openTerritoryDossier(item,'atlantic-contact');});
@@ -1603,7 +1710,7 @@ function renderAtlanticContactSites(){
    className:commerce?'atlas-maghreb-commerce-site':
     occupied?'atlas-caribbean-urban-occupation':'atlas-caribbean-raid-site'
   }).bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(commerce?'有据贸易活动，不是殖民地':occupied?'短期占据城市，非全岛统治':failed?'袭击受挫，无英军占领':'港口/岛屿行动定位示意')+
+   escapeHTML(commerce?'贸易活动':occupied?'城市短期占领':failed?'袭击受挫':'港口与岛屿行动')+
    ' · 点击查阅史料</div>',
    {sticky:true,pane:'eventTooltipPane',className:'atlas-hover'})
    .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
@@ -1632,7 +1739,7 @@ function renderChapter11ActionLinks(){
      className:brazil?'atlas-ch11-brazil-two-town-link':'atlas-ch11-yellow-ford-relief-link'}),
    onEachFeature:(feat,layer)=>{
     layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
-      '军事行动地点顺序示意，非真实行军或航行路线 · 查看史料</div>',
+      '军事行动 · 点击查看史料</div>',
       {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
     layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
       openTerritoryDossier(feat,'linked-action');});
@@ -1731,7 +1838,7 @@ function openEighthCoastalDossier(feature){
   .filter(Boolean).map(s=>'<a class="source-link" href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(s.publisher)+' · '+escapeHTML(s.title)+' ↗</a>').join('');
  $('dossierBody').innerHTML='<div class="dossier-kicker">第八章 · 非洲人口奴役活动 · '+year+'年</div>'+
  '<h2>'+escapeHTML(p.name)+'</h2>'+
- '<p>'+escapeHTML(p.summary_zh||'霍金斯船队在相关西非沿岸进行人口掳取、贩卖和强制装运活动。')+'</p>'+
+ '<p>'+escapeHTML(readerCopy.clean(p.summary_zh||'霍金斯船队在相关西非沿岸进行人口掳取、贩卖和强制装运活动。'))+'</p>'+
  '<details class="source-details"><summary>历史文献与详细考证 <span>▾</span></summary>'+
  '<div class="mini-heading">历史文献</div>'+refs+'</details>';
  openPanel('dossier');
@@ -1836,7 +1943,7 @@ function renderWartimeControls(){
    className:french?'atlas-french-counterfort':'atlas-local-english-garrison',
    bubblingMouseEvents:false})
    .bindTooltip('<strong>'+escapeHTML(p.name||record?.name||'驻军据点')+'</strong><div class="atlas-hover-summary">'+
-     escapeHTML(french?'法国守军 · 非英王控制':linkedOccupiedZone?'点击查看军控概略范围、年份与相关堡垒':'英军实际驻点 · 非整个地区的疆界')+'</div>',
+     escapeHTML(french?'法国守军 · 非英王控制':linkedOccupiedZone?'查看驻军与相关堡垒':'英军驻点 · 查看史料')+'</div>',
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',showGarrisonInfo)
    .addTo(groups.wartimeControl);
@@ -1876,7 +1983,7 @@ function renderHypotheses(){
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
    layer.bindTooltip('<strong>'+escapeHTML(p.public_title||'历史地理推定')+
-    '</strong><div class="atlas-hover-summary">'+escapeHTML(p.public_summary||'')+'</div>',
+    '</strong><div class="atlas-hover-summary">'+escapeHTML(readerCopy.clean(p.public_summary||''))+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
    layer.on('click',()=>openHypothesis(feature));
   }
@@ -1978,11 +2085,13 @@ function updateVisibility(){
 // The chapter registry is the only authority for published decade cards.
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
-const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&d>=1600&&d<=1690&&d%10===0?
- ({id:'17c-'+d,start:d,end:d+9,number:11+(d-1600)/10,label:'事件年表 · 专题持续编审',status:serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
+const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=(jamaica18cReady?1790:bengal18cReady?1770:preview18cReady?1760:1690)&&d%10===0?
+ ({id:(d>=1700?'18c-':'17c-')+d,start:d,end:d+9,number:11+(d-1600)/10,
+ label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1700?'18世纪历史专题':'17世纪历史专题'),
+ status:d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
- (y>=1600&&y<=1699?storyPreviewChapterForDecade(decadeForYear(y)):null);
+ (y>=1600&&y<=previewYearCap()?storyPreviewChapterForDecade(decadeForYear(y)):null);
 // 1497–1499 is an exceptional prologue; normal pages align to 1500–1549 / 1550–1599.
 const halfCenturyPageForYear=y=>y<1500?1490:Math.floor(y/50)*50;
 const pageForBrowse=d=>d<=1490?1490:Math.floor(d/50)*50;
@@ -2029,8 +2138,8 @@ function renderTimelineNavigation(){
   return '<button type="button" class="chapter-segment'+(published?' published':partial?' published partial-century':preview?' published topic-preview':' unpublished')+
     (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
     '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:partial?'浏览'+from+'—'+to+'年已入库事件':preview?'浏览已核证的专题年表':'此十年无已发布年表')+'">'+
-    '<span>'+(published?'第'+chapter.number+'章':partial?'17世纪事件年表':preview?'17世纪专题资料':'尚未发布')+'</span>'+
-    '<small>'+from+'—'+to+(published?' · '+escapeHTML(chapter.label):' · 事件年表 · 专题编审中')+'</small></button>';
+    '<span>'+(chapter&&(published||partial||preview)?'第'+chapter.number+'章':'尚未发布')+'</span>'+
+    '<small>'+from+'—'+to+(chapter&&(published||partial||preview)?' · '+escapeHTML(chapter.label):' · 尚未发布')+'</small></button>';
  }).join('');
  frame.querySelectorAll('button[data-decade]').forEach(btn=>btn.addEventListener('click',()=>{
   const decade=Number(btn.dataset.decade),chapter=chapterForDecade(decade);
@@ -2048,11 +2157,11 @@ function renderTimelineNavigation(){
   slider.min=currentChapter.start;slider.max=currentChapter.end;slider.value=year;
   $('yearStartLabel').textContent=currentChapter.start;
   $('yearEndLabel').textContent=currentChapter.end;
-  $('jumpYear').max=serialPreviewAtlas?1699:lastPublishedYear;
+  $('jumpYear').max=serialPreviewAtlas?previewYearCap():lastPublishedYear;
   $('jumpYear').value=year;
  }
  $('timelineAvailability').textContent=year>lastPublishedYear
-  ?'17世纪已入库事件年表 · 专题持续编审'
+  ?(year>=1700?'十八世纪历史年表':'十七世纪历史年表')
   :browsingDecade===halfCenturyPageForYear(year)
    ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
    :'浏览目录中 · 地图为'+year+'年';
@@ -2060,7 +2169,10 @@ function renderTimelineNavigation(){
 function setYear(v){
  const requested=Math.round(Number(v)||1497);
  const publishedCap=Math.min(lastPublishedYear,requested);
- const next=Math.max(1497,serialPreviewAtlas?Math.min(1699,requested):publishedCap);
+ const next=Math.max(1497,jamaica18cReady?Math.min(1799,requested):
+  (bengal18cReady?Math.min(1779,requested):
+   (preview18cReady?Math.min(1769,requested):
+    (serialPreviewAtlas?Math.min(1699,requested):publishedCap))));
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
  if(next>=1600){
@@ -2076,29 +2188,43 @@ function setYear(v){
   const decadeTotal=atlas.events.length;
   const observed=atlas.events.filter(e=>occurredByYear(e,year)).length;
   const fresh=atlas.events.filter(e=>e.category!=='status'&&Number(e.year)===year).length;
-  $('chapterTitlePrimary').textContent='十七世纪';
-  $('chapterTitleSecondary').textContent='事件与专题';
-  $('chapterIntro').textContent='本十年已收录'+decadeTotal+'项历史事件；截至'+year+'年已有'+observed+'项进入时间轴。本年新增'+fresh+'项。具体事件与地图概略声索均有独立来源，尚不能代表对当时所有史事的完整统计。';
+  const eighteenthPilot=year>=1700;
+  const chapterStory=window.AtlasChapterNarratives?.forDecade(year);
+  if(chapterStory){
+   $('chapterTitlePrimary').textContent=chapterStory.primary;
+   $('chapterTitleSecondary').textContent=chapterStory.secondary;
+   $('chapterIntro').textContent=chapterStory.intro;
+  }else if(eighteenthPilot){
+   $('chapterTitlePrimary').textContent='十八世纪';
+   $('chapterTitleSecondary').textContent='殖民扩张与抵抗';
+   $('chapterIntro').textContent='本十年收录'+decadeTotal+'项历史记录。';
+  }else{
+   $('chapterTitlePrimary').textContent='十七世纪';
+   $('chapterTitleSecondary').textContent='历史专题';
+   $('chapterIntro').textContent='本十年收录'+decadeTotal+'项历史记录。';
+  }
   $('factA').textContent=decadeTotal;
   $('factB').textContent=observed;
   $('factC').textContent=fresh;
   $('factADesc').textContent='本十年已入库事件';
   $('factBDesc').textContent='截至本年的记录';
   $('factCDesc').textContent='本年新增事件';
-  $('periodTitle').textContent='17世纪已收录历史事件 · 专题持续编审';
+  $('periodTitle').textContent=chapterStory?.title||(eighteenthPilot?'十八世纪历史专题':'十七世纪历史专题');
   const ch=chapterForYear(year);
-  $('chapterNav').textContent='历史地图 · 十七世纪';
-  $('chapterNavName').textContent='逐年事件与历史专题';
-  $('chapterLabel').textContent=ch.start+'—'+ch.end+' · 史料年表';
+  $('chapterNav').textContent=ch?'历史地图 · 第'+ch.number+'章':'历史地图';
+  $('chapterNavName').textContent=chapterStory?.title||ch?.label||'历史事件';
+  $('chapterLabel').textContent=ch?'第'+ch.number+'章 · '+ch.start+'—'+ch.end:'历史年表';
   browsingDecade=halfCenturyPageForYear(year);
   renderTimelineNavigation();timelineStatus('');
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
   if(map.hasLayer(groups.kingdom))map.removeLayer(groups.kingdom);
   $('historicalRegionGuide').hidden=true;
-  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();
+  renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
+  // The 1600–1799 setYear branch bypasses refreshHistoricalLayers; redraw true annual 18C surfaces here.
+  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
-  $('nextYear').disabled=year>=1699;
+  $('nextYear').disabled=year>=previewYearCap();
   return;
  }
  if($('toggleKingdom').checked&&!map.hasLayer(groups.kingdom))map.addLayer(groups.kingdom);
@@ -2202,12 +2328,14 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineNotice').textContent='';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
+ // Also clear 18C-only area overlays when the user navigates back into the published 16C atlas.
+ window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
  if(changedYear)$('eventList').scrollTop=0;
   $('prevYear').disabled=year<=1497;
-  $('nextYear').disabled=year>=(serialPreviewAtlas?1699:lastPublishedYear);
+  $('nextYear').disabled=year>=(serialPreviewAtlas?previewYearCap():lastPublishedYear);
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
-function togglePlay(){if(timer){stopPlay();return}const animationEnd=serialPreviewAtlas?1699:lastPublishedYear;if(year===lastPublishedYear&&!serialPreviewAtlas)setYear(1497);else if(year>=animationEnd)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year>=animationEnd){stopPlay();return}setYear(year+1)},1250)}
+function togglePlay(){if(timer){stopPlay();return}const animationEnd=serialPreviewAtlas?previewYearCap():lastPublishedYear;if(year===lastPublishedYear&&!serialPreviewAtlas)setYear(1497);else if(year>=animationEnd)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year>=animationEnd){stopPlay();return}setYear(year+1)},1250)}
 async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
@@ -2436,6 +2564,1002 @@ async function boot(){
      }
     }
    }catch(_error){}
+  }
+  // Explicitly opt-in unpublished 18C editorial pilot, with empty territorial geometry.
+  if(enable18cPilot&&serialPreviewByDecade.has(1690)){
+   try{
+    const response=await fetch('data/stories/serial/chronology-preview-1700-1769.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('18C review corpus missing');
+    const pilot=await response.json(),events=pilot.events||[];
+    const sourceIds=new Set((pilot.sources||[]).map(s=>s.id));
+    if(pilot.schema!=='atlas-serial-chronology-preview-18c-v1'||pilot.editorial_status!=='research_preview_not_published'||
+       events.length!==19||pilot.colonial_polygons?.length||pilot.routes?.length||pilot.places?.length||
+       events.some(e=>e.year<1700||e.year>1769||e.historical_control_boundary_verified!==false||
+         e.actual_English_land_area_sqkm!==null||e.publication_status!=='research_only'||
+         (e.lat!==null&&(!Number.isFinite(e.lat)||!Number.isFinite(e.lng)))||
+         e.source_ids?.some(id=>!sourceIds.has(id))))
+      throw new Error('18C editorial or geography boundary gate failed');
+    for(let d=1700;d<=1760;d+=10){
+     serialPreviewByDecade.set(d,{...pilot,dataset_id:'eighteenth-century-acadia-preview-'+d,
+      period:{from:d,to:d+9},events:events.filter(e=>e.year>=d&&e.year<=d+9),
+      intro:null,places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const source of pilot.sources||[])sourcesById.set(source.id,source);
+    preview18cReady=true;
+   }catch(err){console.warn('18C Acadia pilot withheld (production chronology unchanged)',err)}
+  }
+  // The Bengal topic is a second isolated source-checked research dataset.
+  // It adds source-linked years to the SAME decade map registry, not a competing UI.
+  if(preview18cReady){
+   try{
+    const response=await fetch('data/stories/serial/chronology-preview-bengal-1750-1779.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('Bengal 18C research corpus missing');
+    const bengal=await response.json(),events=bengal.events||[];
+    const sourceIds=new Set((bengal.sources||[]).map(s=>s.id));
+    if(bengal.schema!=='atlas-18c-bengal-source-linked-preview-v1'||
+       bengal.editorial_status!=='research_preview_not_published'||
+       events.length!==17||bengal.colonial_polygons?.length||bengal.routes?.length||bengal.places?.length||
+       events.some(e=>e.year<1750||e.year>1779||e.historical_control_boundary_verified!==false||
+        e.actual_English_land_area_sqkm!==null||e.publication_status!=='research_only'||
+        (e.lat!==null&&(!Number.isFinite(e.lat)||!Number.isFinite(e.lng)))||
+        !e.source_ids?.length||e.source_ids.some(id=>!sourceIds.has(id))))
+     throw new Error('Bengal year/source/territorial contract failed');
+    for(let d=1750;d<=1770;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...bengal,events:[],sources:[],
+      places:[],routes:[],colonial_polygons:[]};
+     const additions=events.filter(e=>e.year>=d&&e.year<=d+9);
+     if(additions.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('Duplicate 18C event ID');
+     const merged=[...base.events,...additions].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
+     serialPreviewByDecade.set(d,{...base,dataset_id:'eighteenth-century-combined-preview-'+d,
+      period:{from:d,to:d+9},events:merged,places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const source of bengal.sources||[])sourcesById.set(source.id,source);
+    bengal18cReady=true;
+   }catch(error){console.warn('Bengal 18C preview withheld, Acadia preview preserved',error)}
+  }
+  // Third 18C topic: Jamaican Maroon autonomy, colonial laws, and forced exile.
+  // Years outside the evidence range are still navigable as empty research time, NOT claims of no history.
+  if(preview18cReady){
+   try{
+    const response=await fetch('data/stories/serial/chronology-preview-jamaica-1700-1799.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('18C Jamaica research corpus missing');
+    const jamaica=await response.json(),events=jamaica.events||[];
+    const available=new Set((jamaica.sources||[]).map(s=>s.id));
+    if(jamaica.schema!=='atlas-18c-jamaica-maroon-preview-v1'||
+      jamaica.editorial_status!=='research_preview_not_published'||
+      events.length!==17||jamaica.colonial_polygons?.length||jamaica.routes?.length||jamaica.places?.length||
+      events.some(e=>e.year<1700||e.year>1799||e.historical_control_boundary_verified!==false||
+       e.actual_English_land_area_sqkm!==null||e.area_sqkm!==null||e.fill_authorized!==false||
+       e.publication_status!=='research_only'||!e.source_ids?.length||
+       e.source_ids.some(id=>!available.has(id))||
+       (e.lat!==null&&(!Number.isFinite(e.lat)||!Number.isFinite(e.lng)))))
+     throw new Error('18C Jamaica source-year/area contract failed');
+    for(let d=1700;d<=1790;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...jamaica,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+     const additions=events.filter(e=>e.year>=d&&e.year<=d+9);
+     if(additions.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('Repeated Jamaica Atlas candidate ID');
+     serialPreviewByDecade.set(d,{...base,dataset_id:'eighteenth-century-three-research-stories-'+d,
+      period:{from:d,to:d+9},
+      events:[...base.events,...additions].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+      places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const source of jamaica.sources||[])sourcesById.set(source.id,source);
+    jamaica18cReady=true;
+   }catch(error){console.warn('18C Jamaica research dataset withheld; Acadia/Bengal preserved',error)}
+  }
+  // Fourth eighteenth-century source-backed stream (review18c=1 only).
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-atlantic-zong-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('Atlantic review file missing');
+    const ds=await res.json(),ev=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-atlantic-zong-insurance-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==14||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.area_sqkm!==null||e.fill_authorized!==false||e.territorial_claim!==false||
+        !e.source_ids?.length||e.source_ids.some(s=>!src.has(s))||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('Atlantic evidence/geometry review gate failed');
+    for(let d=1700;d<=1790;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+     const additions=ev.filter(e=>e.year>=d&&e.year<d+10);
+     if(additions.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('duplicate 18C Atlantic event ID');
+     serialPreviewByDecade.set(d,{...base,dataset_id:'18c-fourth-topic-'+d,
+      period:{from:d,to:d+9},
+      events:[...base.events,...additions].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+      places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    atlantic18cReady=true;
+   }catch(err){console.warn('Atlantic review file withheld, prior topics retained',err)}
+  }
+  // Fifth 18C story: T29/T30 Irish land/religion legislation, United Irishmen,
+  // 1798 rebellion and actor-separated reprisals. Opt-in review dataset only.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-ireland-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C Ireland research file absent');
+    const dataset=await res.json(),ev=dataset.events||[];
+    const ids=new Set((dataset.sources||[]).map(s=>s.id));
+    if(dataset.schema!=='atlas-18c-ireland-penal-rebellion-preview-v1'||
+       dataset.editorial_status!=='research_preview_not_published'||
+       ev.length!==20||dataset.colonial_polygons?.length||dataset.routes?.length||dataset.places?.length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.actual_English_land_area_sqkm!==null||e.area_sqkm!==null||
+        e.fill_authorized!==false||e.territorial_claim!==false||!e.source_ids?.length||
+        e.source_ids.some(id=>!ids.has(id))||!Array.isArray(e.research_original_record_ids)||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+       throw new Error('18C Ireland evidence/year/GIS contract rejected');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...dataset,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=d&&e.year<=d+9);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('Duplicate Ireland map candidate ID');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'eighteenth-century-five-topic-preview-'+d,
+       period:{from:d,to:d+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of dataset.sources||[])sourcesById.set(s.id,s);
+    ireland18cReady=true;
+   }catch(error){console.warn('Ireland 18C preview withheld; first four topics preserved',error)}
+  }
+  // Sixth 18C Australia T34/T35: paper claims separated from actual local cores;
+  // Dharug and Eora Country, forcible transportation, Pemulwuy and Hawkesbury.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-australia-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('Australia review file missing');
+    const atlas=await res.json(),ev=atlas.events||[],src=new Set((atlas.sources||[]).map(s=>s.id));
+    if(atlas.schema!=='atlas-18c-australia-first-fleet-resistance-preview-v1'||
+       atlas.editorial_status!=='research_preview_not_published'||ev.length!==23||
+       atlas.colonial_polygons?.length||atlas.routes?.length||atlas.places?.length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+        e.fill_authorized!==false||e.territorial_claim!==false||
+        !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+        e.source_ids.some(id=>!src.has(id))||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('Australia 18C source/date/paper-boundary gate rejected');
+    for(let d=1700;d<=1790;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...atlas,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+     const add=ev.filter(e=>e.year>=d&&e.year<d+10);
+     if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('Australia 18C duplicate event ID');
+     serialPreviewByDecade.set(d,{...base,dataset_id:'18c-sixth-topic-'+d,
+      period:{from:d,to:d+9},
+      events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+      places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of atlas.sources||[])sourcesById.set(s.id,s);
+    australia18cReady=true;
+   }catch(err){console.warn('Australia sixth research topic withheld, previous five preserved',err)}
+  }
+  // Seventh 18C Scotland T31/T32: pre-Union independent crowns, 1707 constitution,
+  // Jacobite battles and post-1746 state/laird land and culture policies; research-only.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-scotland-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C Scotland source-backed research file missing');
+    const ds=await res.json(),ev=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-scotland-union-jacobite-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==23||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+         e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+         e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+         e.fill_authorized!==false||e.territorial_claim!==false||
+         !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+         e.source_ids.some(id=>!ids.has(id))||
+         (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('Scotland T31/T32 evidence, year and geometry contract rejected');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=d&&e.year<d+10);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('Scotland event ID collision');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'18c-seven-topic-scotland-'+d,
+       period:{from:d,to:d+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    scotland18cReady=true;
+   }catch(err){console.warn('Scotland seventh research topic withheld, previous six preserved',err)}
+  }
+  // Eighth T17 Mysore: local state, military victories, 1792 cession and 1799 partition.
+  // Only review mode; modern village anchors do not create colonial areas.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-mysore-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C Mysore preview missing');
+    const ds=await res.json(),ev=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-mysore-wars-partition-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==12||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+         e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+         e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+         e.fill_authorized!==false||e.territorial_claim!==false||
+         !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+         e.source_ids.some(id=>!ids.has(id))||
+         (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('Mysore T17 archive/date/territory gate');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=d&&e.year<d+10);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('Mysore atlas ID duplicate');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'18c-eight-topic-mysore-'+d,
+       period:{from:d,to:d+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    mysore18cReady=true;
+   }catch(error){console.warn('Mysore research preview withheld; seven predecessors kept',error)}
+  }
+  // Ninth T18: Maratha military setbacks, Rohilla-Awadh alliance, Benares levy and treaty states.
+  // Research-only; no award of sovereignty or territorial polygon from battles or promises.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-maratha-rohilla-awadh-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C Maratha/Rohilla/Awadh research dataset unavailable');
+    const ds=await res.json(),ev=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-maratha-rohilla-awadh-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==12||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+        e.fill_authorized!==false||e.territorial_claim!==false||
+        !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+        e.source_ids.some(id=>!ids.has(id))||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+     throw new Error('Maratha T18 archive/year/GIS contract');
+    for(let d=1700;d<=1790;d+=10){
+     const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+     const add=ev.filter(e=>e.year>=d&&e.year<d+10);
+     if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('Maratha Atlas ID collision');
+     serialPreviewByDecade.set(d,{...base,dataset_id:'18c-nine-topic-maratha-'+d,
+      period:{from:d,to:d+9},
+      events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+      places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    maratha18cReady=true;
+   }catch(error){console.warn('T18 ninth map story withheld; prior eight datasets remain',error)}
+  }
+  // Tenth 18C stream T19: changing French/British city garrisons, 1763 French
+  // factory restitution, Hyderabad's contracted subsidiary troops, and local
+  // Palayakkarar tax resistance. Only opt-in research; no fabricated state polygons.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-carnatic-hyderabad-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C T19 historical map corpus absent');
+    const ds=await res.json(),ev=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-carnatic-hyderabad-palayakkarar-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==14||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+         e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+         e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+         e.fill_authorized!==false||e.territorial_claim!==false||
+         !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+         e.source_ids.some(id=>!ids.has(id))||
+         (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('T19 original source, dated event and territorial geometry contract rejected');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=d&&e.year<d+10);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('T19 duplicate historic Atlas event ID');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'18c-ten-topic-carnatic-'+d,
+       period:{from:d,to:d+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    carnatic18cReady=true;
+   }catch(error){console.warn('T19 tenth draft denied; earlier nine streams preserved',error)}
+  }
+  // T22: British invasion, looting, ransom, financial collection and Filipino resistance.
+  // Only opt-in research; the UNESCO urban anchor never creates Luzon-wide British polygons.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-manila-1700-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T22 Manila source dataset unavailable');
+    const ds=await res.json(),ev=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-manila-sack-ransom-preview-v1'||
+       ds.editorial_status!=='research_preview_not_published'||ev.length!==16||
+       ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+       ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+         e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+         e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+         e.fill_authorized!==false||e.territorial_claim!==false||
+         !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+         e.source_ids.some(id=>!ids.has(id))||
+         (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('T22 source/year/territory gate rejected');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=d&&e.year<d+10);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('T22 duplicate atlas ID');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'18c-eleven-topic-manila-'+d,period:{from:d,to:d+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    manila18cReady=true;
+   }catch(error){console.warn('T22 Manila source gate denied, preceding ten preserved',error)}
+  }
+  // T25 first British Cape occupation and the 1799 Khoekhoe/Xhosa war of land dispossession.
+  // The Cape is never mapped as modern South African territory in 1795, nor Xhosa communities as 1799 British districts.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-cape-1795-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('18C T25 Cape invasion and indigenous resistance source atlas unavailable');
+    const ds=await res.json(),ev=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-cape-first-british-occupation-indigenous-resistance-v1'||
+      ds.editorial_status!=='research_preview_not_published'||ev.length!==17||
+      ds.colonial_polygons?.length||(ds.routes||[]).length||(ds.places||[]).length||
+      ev.some(e=>e.year<1700||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+        e.fill_authorized!==false||e.territorial_claim!==false||
+        !Array.isArray(e.research_original_record_ids)||!e.source_ids?.length||
+        e.source_ids.some(id=>!ids.has(id))||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+      throw new Error('T25 archived ID, year and no-fake-colonial-boundary checks rejected');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const add=ev.filter(e=>e.year>=decade&&e.year<decade+10);
+      if(add.some(e=>base.events.some(old=>old.id===e.id)))throw new Error('T25 duplicate atlas historical ID');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twelve-topic-cape-'+decade,
+       period:{from:decade,to:decade+9},
+       events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    cape18cReady=true;
+   }catch(error){console.warn('T25 disputed Cape map withheld; first eleven previews remain',error)}
+  }
+  // Thirteenth study T26: Britain’s West African slave forts, coerced labour, human sales, and African resistance.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-west-africa-1727-1792.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T26 West Africa archive missing');
+    const ds=await r.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(x=>x.id));
+    if(ds.schema!=='atlas-18c-west-africa-slave-forts-trade-resistance-v1'||ds.editorial_status!=='research_preview_not_published'||e.length!==17||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+       x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||
+       x.territorial_claim!==false||x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(s=>!keys.has(s))||
+       (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))throw new Error('T26 GIS and source gate rejected');
+    for(let d=1700;d<=1790;d+=10){
+      const base=serialPreviewByDecade.get(d)||{...ds,events:[],sources:[],places:[],routes:[],colonial_polygons:[]};
+      const additions=e.filter(x=>x.year>=d&&x.year<d+10);
+      if(additions.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T26 duplicated historical ID');
+      serialPreviewByDecade.set(d,{...base,dataset_id:'18c-thirteen-topic-west-africa-'+d,period:{from:d,to:d+9},
+        events:[...base.events,...additions].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const x of ds.sources||[])sourcesById.set(x.id,x);
+    westafrica18cReady=true;
+   }catch(error){console.warn('T26 withheld; previous twelve episodes intact',error)}
+  }
+  // Fourteenth T27: Bunce slave trading, Black Nova Scotian settlers and Temne land rights.
+  // Three modern place georeferences never become eighteenth-century territory polygons.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-sierra-leone-1728-1799.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T27 Sierra Leone archival chronology missing');
+    const ds=await res.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-sierra-leone-bunce-black-settlement-land-rights-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==18||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+          x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+          x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+          x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(s=>!keys.has(s))||
+          (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T27 map gate rejected unverifiable history, source or area');
+    for(let decade=1700;decade<=1790;decade+=10){
+     const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+     const part=e.filter(x=>x.year>=decade&&x.year<decade+10);
+     if(part.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T27 duplicate Atlas event ID');
+     serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-fourteen-topic-sierra-leone-'+decade,period:{from:decade,to:decade+9},
+       events:[...base.events,...part].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    sierraLeone18cReady=true;
+   }catch(error){console.warn('T27 withheld; thirteen earlier historical research maps preserved',error)}
+  }
+  // Fifteenth T21: Bengal salt and opium monopolies, ryot and weaver coercion, and 1792 famine evidence.
+  // Economic monopolies are not colonial territorial boundaries; all event site pins are modern references.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-india-opium-salt-1761-1799.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T21 Indian colonial fiscal archive missing');
+    const ds=await r.json(),e=ds.events||[],ids=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-india-eic-opium-salt-famine-coercion-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==18||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+         x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+         x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.fill_authorized!==false||
+         x.territorial_claim!==false||!x.source_ids?.length||x.source_ids.some(id=>!ids.has(id))||
+         (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+       throw new Error('T21 failed mandatory archival and fake-geography gate');
+    for(let decade=1700;decade<=1790;decade+=10){
+     const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+     const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+     if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T21 duplicated event');
+     serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-fifteen-topic-indian-fiscal-'+decade,
+       period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    indiaFiscal18cReady=true;
+   }catch(error){console.warn('T21 map held back; fourteen earlier previews intact',error)}
+  }
+  // Sixteenth T24: British coastal Ceylon fortress invasions, independent Kandy and 1797 colonial-tax resistance.
+  // Cochin is on Indian mainland, NOT on Sri Lanka. No unproven coast or inland political polygons.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-ceylon-coastal-invasion-1791-1797.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T24 Ceylon archive missing');
+    const ds=await r.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-ceylon-british-coastal-invasion-kandy-tax-resistance-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==20||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||
+        x.territorial_claim!==false||x.fill_authorized!==false||
+        !x.source_ids?.length||x.source_ids.some(k=>!keys.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+       throw new Error('T24 invalid actor, source or GIS entry');
+    for(let decade=1700;decade<=1790;decade+=10){
+     const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+     const part=e.filter(x=>x.year>=decade&&x.year<decade+10);
+     if(part.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T24 duplicate historical event');
+     serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-sixteen-topic-ceylon-'+decade,
+       period:{from:decade,to:decade+9},events:[...base.events,...part].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+       places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    ceylon18cReady=true;
+   }catch(error){console.warn('T24 rejected, former fifteen research maps stay available',error)}
+  }
+  // Seventeenth T35: four previously missing original research IDs and 25 distinct colonial-frontier documentary actions.
+  // Earlier sixth Australia 23 events and 11 already consumed original IDs are never overwritten.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-australia-frontier-1788-1799.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T35 frontier source archive missing');
+    const ds=await r.json(),e=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-aboriginal-frontier-violence-archive-completion-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==25||
+       ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       ds.provenance?.originals_previously_registered_in_sixth_topic?.length!==11||
+       ds.provenance?.originals_newly_recovered_in_seventeenth_topic?.length!==4||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!src.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T35 original-source or historic-geography guard rejected');
+    for(let decade=1700;decade<=1790;decade+=10){
+     const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+     const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+     if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T35 duplicated atlas ID');
+     serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-seventeen-topic-frontier-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    frontier17Ready=true;
+   }catch(err){console.warn('T35 additional frontier map withheld; old 16 maps untouched',err)}
+  }
+  // 18th T05 British forced Garifuna displacement, source-bounded dates and island-only GPS.
+  if(preview18cReady){
+   try{
+    const r=await fetch('data/stories/serial/chronology-preview-garifuna-1763-1797.json',{cache:'no-store'});
+    if(!r.ok)throw new Error('T05 source research unavailable');
+    const ds=await r.json(),e=ds.events||[],keys=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-garifuna-forced-deportation-v1'||ds.editorial_status!=='research_preview_not_published'||
+       e.length!==23||ds.colonial_polygons?.length||ds.places?.length||ds.routes?.length||
+       ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_A_keys!==5||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+         x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+         x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.fill_authorized!==false||
+         x.territorial_claim!==false||!x.source_ids?.length||x.source_ids.some(k=>!keys.has(k))||
+         (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+        throw new Error('T05 GIS and evidence gate rejected');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T05 duplicate ID');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-eighteen-topic-garifuna-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const s of ds.sources||[])sourcesById.set(s.id,s);
+    garifuna18cReady=true;
+   }catch(error){console.warn('T05 held back, previous seventeen stories intact',error)}
+  }
+  // Nineteenth T06 Fédon slavery rebellion and partial 1793–1798 Haiti colonial military occupation.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-fedon-grenada-haiti-1789-1798.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T06 Fédon source research missing');
+    const ds=await res.json(),e=ds.events||[],sources=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-fedon-grenada-haiti-slavery-repression-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==25||
+       ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_A_keys!==8||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sources.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T06 rejected unsupported British slave-port colonial geographic claims');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T06 duplicated prior event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-nineteen-topic-fedon-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    fedon19Ready=true;
+   }catch(err){console.warn('T06 excluded, prior 18 research stories intact',err)}
+  }
+
+  // Twentieth research story: colonial slave law, 1712 New York resistance, Stono, 1741 trials.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t11-slavery-law-resistance-1702-1741.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T11 colonial slave law archival research missing');
+    const ds=await res.json(),e=ds.events||[],sources=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t11-slavery-laws-resistance-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==26||
+       ds.provenance?.original_candidate_ids!==10||ds.provenance?.original_A_keys!==21||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.year!==x.start_year||x.year!==x.end_year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sources.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T11 unsupported colonial law/point/territory claims');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T11 duplicated prior event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twenty-topic-virginia-ny-stono-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t11Slavery20Ready=true;
+   }catch(err){console.warn('T11 excluded: all 19 previous research stories intact',err);}
+  }
+
+  // Twenty-first T09: British colonial Indian slavery, Tuscarora burned forts, Yamasee anti-colonial war.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t09-tuscarora-yamasee-1702-1732.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T09 original indigenous research missing');
+    const ds=await res.json(),e=ds.events||[],sources=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t09-tuscarora-yamasee-captivity-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==23||
+       ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_A_keys!==9||
+       ds.provenance?.mapped_original_ids!==8||ds.provenance?.deferred_original_ids?.length!==1||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.year!==x.start_year||x.year!==x.end_year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sources.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T09 rejected unreviewed indigenous colonial border and enslavement data');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T09 duplicate event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyone-tuscarora-yamasee-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t09Tuscarora21Ready=true;
+   }catch(err){console.warn('T09 excluded; previous 20 stories intact',err);}
+  }
+
+  // Twenty-second: T08 Seven Years War conquest, Cherokee burned towns, disease attempt, settler killings.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t08-seven-years-1740-1775.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T08 official historical research unavailable');
+    const ds=await res.json(),e=ds.events||[],sources=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t08-seven-years-colonial-atrocities-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==32||
+       ds.provenance?.original_candidate_ids!==12||ds.provenance?.original_A_keys!==24||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sources.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T08 excluded due to unsupported British historic territory/war mapping');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T08 duplicated history event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentytwo-cherokee-pontiac-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t08SevenYears22Ready=true;
+   }catch(err){console.warn('T08 excluded; previous 21 stories intact',err);}
+  }
+
+  // Twenty-third T10: Penn family Walking Purchase fraud, Lenape expulsion and original Lancaster/Easton testimony.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t10-walking-purchase-1734-1762.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T10 Pennsylvania original archives unavailable');
+    const ds=await res.json(),e=ds.events||[],sources=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t10-walking-purchase-lenape-land-fraud-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==29||
+       ds.provenance?.original_candidate_ids!==6||ds.provenance?.original_A_keys!==7||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sources.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T10 excluded: unsupported walking-purchase cadastral line or invalid history data');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T10 duplicated event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentythree-lenape-walking-purchase-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((x,y)=>x.year-y.year||x.id.localeCompare(y.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t10Lenape23Ready=true;
+   }catch(err){console.warn('T10 excluded; prior 22 stories intact',err);}
+  }
+
+  // Twenty-fourth T12: colonial Boston repression, British prison ships, Black self-emancipation, 1783 re-enslavement.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t12-revolution-black-freedom-1764-1796.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T12 British colonial captivity source file unavailable');
+    const ds=await res.json(),e=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t12-revolution-prison-ships-black-freedom-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==35||
+       ds.provenance?.original_candidate_ids!==11||ds.provenance?.original_A_keys!==17||
+       ds.provenance?.mapped_original_ids!==11||ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sourceIds.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T12 invalid source integrity or unapproved colonial control boundary');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T12 duplicate event id');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyfour-revolution-black-freedom-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t12Revolution24Ready=true;
+   }catch(err){console.warn('T12 preview excluded; prior 23 draft stories intact',err);}
+  }
+
+  // Twenty-fifth T13: HBC fur-trade extraction, Beothuk colonial pressure, Dene-Cree diplomacy, French fort raids.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t13-hbc-beothuk-dene-1700-1792.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T13 source-backed Hudson Bay archives unavailable');
+    const ds=await res.json(),e=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t13-hbc-beothuk-dene-cree-fur-trade-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==29||
+       ds.provenance?.original_candidate_ids!==10||ds.provenance?.original_A_keys!==11||
+       ds.provenance?.original_C_keys!==2||ds.provenance?.mapped_original_ids!==10||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1700||x.year>1799||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sourceIds.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T13 rejected: invalid archive provenance or fabricated corporate/Indigenous territory');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T13 duplicated historic record');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyfive-HBC-Beothuk-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t13Hudson25Ready=true;
+   }catch(err){console.warn('T13 excluded; earlier 24 research stories preserved',err);}
+  }
+
+  // Twenty-sixth T15: original Bengal 1770 letters, tax, seed grain and farmers' petition/denial.
+  if(preview18cReady){
+   try{
+    const res=await fetch('data/stories/serial/chronology-preview-t15-bengal-famine-tax-1770-1772.json',{cache:'no-store'});
+    if(!res.ok)throw new Error('T15 famine archive missing');
+    const ds=await res.json(),e=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+    if(ds.schema!=='atlas-18c-t15-bengal-famine-original-letters-v1'||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==26||
+       ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_B_keys!==7||
+       ds.provenance?.mapped_original_ids!==9||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       e.some(x=>x.year<1770||x.year>1772||x.start_year!==x.year||x.end_year!==x.year||
+        x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
+        x.area_sqkm!==null||x.actual_English_land_area_sqkm!==null||x.territorial_claim!==false||
+        x.fill_authorized!==false||!x.source_ids?.length||x.source_ids.some(k=>!sourceIds.has(k))||
+        (x.lat===null?x.lng!==null:!Number.isFinite(x.lat)||!Number.isFinite(x.lng))))
+      throw new Error('T15 archive provenance or colonial polygon violation');
+    for(let decade=1700;decade<=1790;decade+=10){
+      const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+      const add=e.filter(x=>x.year>=decade&&x.year<decade+10);
+      if(add.some(x=>base.events.some(p=>p.id===x.id)))throw new Error('T15 duplicated map event');
+      serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentysix-bengal-famine-originals-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+        places:[],routes:[],colonial_polygons:[]});
+    }
+    for(const src of ds.sources||[])sourcesById.set(src.id,src);
+    t15Famine26Ready=true;
+   }catch(err){console.warn('T15 preview excluded; prior 25 stories preserved',err);}
+  }
+
+  // Twenty-seventh T16: Britain EIC 1793 permanent taxes, estate auctions and Adivasi/paik 1799 resistance.
+  if(preview18cReady){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-t16-permanent-settlement-1760-1799.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('T16 original Bengal land-revenue archive missing');
+      const ds=await response.json(),es=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+      if(ds.schema!=='atlas-18c-t16-permanent-settlement-adivasi-v1'||
+         ds.editorial_status!=='research_preview_not_published'||es.length!==29||
+         ds.provenance?.original_merge_groups!==6||ds.provenance?.original_candidate_ids!==8||
+         ds.provenance?.original_B_keys!==10||ds.provenance?.mapped_original_ids!==8||
+         ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+         es.some(e=>e.year<1760||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+           e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+           e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+           e.territorial_claim!==false||e.fill_authorized!==false||
+           !e.source_ids?.length||e.source_ids.some(s=>!sourceIds.has(s))||
+           (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+         throw new Error('T16 source or GIS audit failed; no unreviewed data may be rendered');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+        const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('duplicate T16 event');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyseven-bengal-land-revenue-'+decade,
+          period:{from:decade,to:decade+9},
+          events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const source of ds.sources||[])sourcesById.set(source.id,source);
+      t16Bengal27Ready=true;
+    }catch(error){console.warn('T16 preview excluded; all prior 26 stories retained',error);}
+  }
+  // Twenty-eighth T20: parliamentary EIC financial regulation and colonial company monopolies.
+  if(preview18cReady){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-t20-eic-parliament-loan-monopoly-1702-1793.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('T20 evidence file not available');
+      const ds=await response.json(),es=ds.events||[],sourceIds=new Set((ds.sources||[]).map(s=>s.id));
+      if(ds.schema!=='atlas-18c-t20-eic-parliament-finance-monopoly-v1'||
+        ds.editorial_status!=='research_preview_not_published'||es.length!==29||
+        ds.provenance?.original_merge_groups!==4||ds.provenance?.original_candidate_ids!==9||
+        ds.provenance?.original_B_keys!==9||ds.provenance?.mapped_original_ids!==9||
+        ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+        es.some(e=>e.year<1702||e.year>1793||e.start_year!==e.year||e.end_year!==e.year||
+          e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+          e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+          e.territorial_claim!==false||e.fill_authorized!==false||
+          !e.source_ids?.length||e.source_ids.some(s=>!sourceIds.has(s))||
+          (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+        throw new Error('T20 source/GIS audit failed');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+        const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('duplicate T20 event');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentyeight-eic-parliament-'+decade,
+          period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const source of ds.sources||[])sourcesById.set(source.id,source);
+      t20Eic28Ready=true;
+    }catch(error){console.warn('T20 preview excluded; prior 27 stories preserved',error);}
+  }
+  // Twenty-ninth T23: Sulu opposition, Kedah/Penang, Andaman Indigenous land and British seizure of VOC spice forts.
+  if(preview18cReady){
+    try{
+      const res=await fetch('data/stories/serial/chronology-preview-t23-penang-kedah-moluccas-1768-1796.json',{cache:'no-store'});
+      if(!res.ok)throw new Error('T23 source dataset missing');
+      const ds=await res.json(),es=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+      if(ds.schema!=='atlas-18c-t23-eic-penang-moluccas-indigenous-v1'||
+       ds.editorial_status!=='research_preview_not_published'||es.length!==36||
+       ds.provenance?.original_merge_groups!==5||ds.provenance?.original_candidate_ids!==12||
+       ds.provenance?.original_B_keys!==13||ds.provenance?.mapped_original_ids!==12||
+       ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+       es.some(e=>e.year<1768||e.year>1796||e.start_year!==e.year||e.end_year!==e.year||
+        e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||
+        e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||e.territorial_claim!==false||
+        e.fill_authorized!==false||!e.source_ids?.length||e.source_ids.some(id=>!src.has(id))||
+        (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+       throw new Error('T23 GIS, provenance or historical actor validation failed');
+      for(let decade=1700;decade<=1790;decade+=10){
+       const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+       const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+       if(add.some(x=>base.events.some(y=>y.id===x.id)))throw new Error('T23 duplicated Atlas event');
+       serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-twentynine-southeastasia-'+decade,
+        period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+        places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const s of ds.sources||[])sourcesById.set(s.id,s);
+      t23Penang29Ready=true;
+    }catch(err){console.warn('T23 preview excluded; 28 prior articles preserved',err);}
+  }
+  // Thirtieth T28: actual Havana fort seizure, disputed Port Egmont claims and independent Maltese resistance.
+  if(preview18cReady){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-t28-havana-egmont-malta-1762-1799.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('T28 historical evidence unavailable');
+      const ds=await response.json(),es=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+      if(ds.schema!=='atlas-18c-t28-havana-egmont-malta-v1'||ds.editorial_status!=='research_preview_not_published'||es.length!==33||
+        ds.provenance?.original_merge_groups!==2||ds.provenance?.original_candidate_ids!==4||ds.provenance?.original_B_keys!==4||ds.provenance?.mapped_original_ids!==4||
+        ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+        es.some(e=>e.year<1762||e.year>1799||e.start_year!==e.year||e.end_year!==e.year||
+          e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+          e.territorial_claim!==false||e.fill_authorized!==false||!e.source_ids?.length||e.source_ids.some(id=>!src.has(id))||
+          (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+        throw new Error('T28 source and GIS review failed');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+        const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('T28 duplicate Atlas event');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-thirty-havana-egmont-malta-'+decade,
+          period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const s of ds.sources||[])sourcesById.set(s.id,s);
+      t28HavanaMalta30Ready=true;
+    }catch(err){console.warn('T28 preview excluded; all 29 previous story drafts preserved',err);}
+  }
+  // Thirty-first 18C T33: Scottish merchants' slave-trade accounts, emancipatory lawsuits and the 1792 abolition debate.
+  if(preview18cReady){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-t33-scotland-slavery-courts-1707-1792.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('T33 verified Scots slavery lawsuit chronology missing');
+      const ds=await response.json(),es=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+      if(ds.schema!=='atlas-18c-t33-scotland-slavery-freedom-court-v1'||ds.editorial_status!=='research_preview_not_published'||es.length!==29||
+        ds.provenance?.original_merge_groups!==0||ds.provenance?.original_candidate_ids!==0||ds.provenance?.original_B_keys!==0||ds.provenance?.mapped_original_ids!==0||
+        ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+        es.some(e=>e.year<1707||e.year>1792||e.start_year!==e.year||e.end_year!==e.year||
+          e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||e.area_sqkm!==null||e.actual_English_land_area_sqkm!==null||
+          e.territorial_claim!==false||e.fill_authorized!==false||e.research_original_record_ids?.length||!e.source_ids?.length||e.source_ids.some(id=>!src.has(id))||
+          (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+        throw new Error('T33 false original provenance, time scope or GIS authority');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+        const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('T33 duplicate Atlas event');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-thirtyone-scottish-slavery-courts-'+decade,
+          period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const s of ds.sources||[])sourcesById.set(s.id,s);
+      t33ScottishFreedom31Ready=true;
+    }catch(err){console.warn('T33 slavery court research omitted; first 30 research articles retained',err);}
+  }
+  // Batch 33: 3 separate original-dossier readers; one chronology dataset with 5 individually verified 1126-crosswalk IDs.
+  if(preview18cReady){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-r33-three-archival-gaps-1761-1790.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('R33 original archive dossiers missing');
+      const ds=await response.json(),es=ds.events||[],src=new Set((ds.sources||[]).map(s=>s.id));
+      const originals=new Set(es.flatMap(e=>e.research_original_record_ids||[])),grps=new Set(es.map(e=>e.research_merge_group_id).filter(Boolean));
+      if(ds.schema!=='atlas-18c-r33-three-original-gaps-v1'||ds.editorial_status!=='research_preview_not_published'||
+         es.length!==26||originals.size!==5||grps.size!==3||ds.provenance?.original_merge_groups!==3||
+         ds.provenance?.mapped_original_ids!==5||ds.provenance?.original_source_key_count!==8||
+         ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
+         es.some(e=>e.year<1761||e.year>1790||e.start_year!==e.year||e.end_year!==e.year||
+          e.publication_status!=='research_only'||e.historical_control_boundary_verified!==false||e.area_sqkm!==null||
+          e.actual_English_land_area_sqkm!==null||e.territorial_claim!==false||e.fill_authorized!==false||
+          !e.source_ids?.length||e.source_ids.some(id=>!src.has(id))||
+          (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||!Number.isFinite(e.lng))))
+        throw new Error('R33 strict historical archive, chronological and GIS guard failed');
+      for(let decade=1700;decade<=1790;decade+=10){
+        const base=serialPreviewByDecade.get(decade)||{...ds,events:[],places:[],routes:[],colonial_polygons:[]};
+        const add=es.filter(e=>e.year>=decade&&e.year<decade+10);
+        if(add.some(e=>base.events.some(x=>x.id===e.id)))throw new Error('R33 event ID duplicate');
+        serialPreviewByDecade.set(decade,{...base,dataset_id:'18c-r33-awadh-calabar-mikmaq-'+decade,
+          period:{from:decade,to:decade+9},events:[...base.events,...add].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          places:[],routes:[],colonial_polygons:[]});
+      }
+      for(const s of ds.sources||[])sourcesById.set(s.id,s);
+      r33OriginalResearchThreeStoriesReady=true;
+    }catch(err){console.warn('R33 dossier review not loaded; 31 previous drafts preserved',err);}
+  }
+  // Independent historic urban-core date sources; unlike 18C events these
+  // are PERIODIC control states, never loaded as area polygons.
+  if(preview18cReady){
+   try{
+    const response=await fetch('data/eighteenth-century-acadia-control-cores-1710-1769.geojson',{cache:'no-store'});
+    if(!response.ok)throw new Error('18C historical control point file absent');
+    const geo=await response.json();
+    if(geo.type!=='FeatureCollection'||geo.metadata?.schema!=='atlas-18c-acadia-evidence-led-control-cores-v1'||
+      geo.features?.length!==4||geo.features.some(f=>{
+       const p=f.properties||{},c=f.geometry?.coordinates;
+       return f.geometry?.type!=='Point'||!Array.isArray(c)||c.length!==2||
+        !Number.isFinite(c[0])||!Number.isFinite(c[1])||
+        p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+        p.territorial_claim!==false||p.area_sqkm!==null||
+        p.exclude_from_area_aggregation!==true||
+        p.position_is_historical_survey!==false||
+        !Number.isInteger(p.start_year)||!Number.isInteger(p.observed_through_year)||
+        !p.source_urls?.length||!p.source_urls.every(u=>/^https:\/\//.test(u));
+      }))throw new Error('18C source-backed core Point geo semantics rejected');
+    eighteenthAcadiaControlCores=geo;
+   }catch(error){console.warn('18C historic urban control points held back',error)}
+  }
+  // Unpublished continuity/map points are separate from event episodes and area layers.
+  if(preview18cReady){
+   try{
+    const [continuityResponse,bengalResponse]=await Promise.all([
+     fetch('research/continuity/1700-1709/REFERENCE_CONTROL_CORES_1700_1709.geojson',{cache:'no-store'}),
+     fetch('data/eighteenth-century-bengal-control-cores-1710-1779.geojson',{cache:'no-store'})
+    ]);
+    if(!continuityResponse.ok||!bengalResponse.ok)throw new Error('18C evidence point file missing');
+    const docs=[await continuityResponse.json(),await bengalResponse.json()];
+    for(const [idx,g] of docs.entries()){
+     if(g.type!=='FeatureCollection'||g.metadata?.schema!==
+         (idx===0?'atlas-1700-continuity-site-references-v1':'atlas-18c-bengal-evidence-led-control-cores-v1')||
+       g.features?.length!==(idx===0?7:2)||g.features.some(f=>{
+        const p=f.properties||{},c=f.geometry?.coordinates;
+        return f.geometry?.type!=='Point'||!Array.isArray(c)||c.length!==2||
+         !Number.isFinite(c[0])||!Number.isFinite(c[1])||
+         p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+         p.territorial_claim!==false||p.area_sqkm!==null||
+         p.exclude_from_area_aggregation!==true||!p.source_urls?.length||
+         !p.source_urls.every(u=>/^https:\/\//.test(u));
+       }))throw new Error('18C evidence-only site geo field gate failed');
+    }
+    continuity1700References=docs[0];eighteenthBengalControlCores=docs[1];
+   }catch(error){console.warn('18C evidence location layer withheld',error)}
+  }
+  // Maroon self-government sites: these modern town points must NEVER be colored
+  // as British garrisons; no old treaty-defined boundary can be inferred from them.
+  if(jamaica18cReady){
+   try{
+    const response=await fetch('data/eighteenth-century-jamaica-maroon-autonomy-cores-1739-1799.geojson',{cache:'no-store'});
+    if(!response.ok)throw new Error('Jamaica autonomous town sources absent');
+    const doc=await response.json();
+    if(doc.type!=='FeatureCollection'||doc.metadata?.schema!=='atlas-18c-maroon-autonomy-reference-cores-v1'||
+      doc.features?.length!==2||doc.features.some(f=>{
+       const p=f.properties||{},c=f.geometry?.coordinates;
+       return f.geometry?.type!=='Point'||!Array.isArray(c)||c.length!==2||
+        !Number.isFinite(c[0])||!Number.isFinite(c[1])||
+        p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+        p.territorial_claim!==false||p.area_sqkm!==null||
+        p.exclude_from_area_aggregation!==true||
+        !p.control_class?.startsWith('maroon_')||!p.source_urls?.length||
+        !p.source_urls.every(u=>/^https:\/\//.test(u))||
+        !Array.isArray(p.periods)||!p.periods.length;
+      }))throw new Error('Autonomous community Point GIS meaning rejected');
+    eighteenthJamaicaMaroonAutonomyCores=doc;
+   }catch(error){console.warn('Jamaica autonomous site references withheld',error)}
   }
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
   // Constant-time citation lookup across all published years.
@@ -2725,9 +3849,9 @@ $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target
 function jumpToEnteredYear(){
  if(!atlas)return;
  const raw=$('jumpYear').value.trim(),v=Number(raw);
- if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>(serialPreviewAtlas?1699:lastPublishedYear)){
+ if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>(serialPreviewAtlas?previewYearCap():lastPublishedYear)){
   $('jumpYear').value=year;
-   timelineStatus('仅支持1497—'+(serialPreviewAtlas?1699:lastPublishedYear)+'年，其中1600—1699年仅提供专题试阅。');return;
+   timelineStatus('请输入1497—'+(serialPreviewAtlas?previewYearCap():lastPublishedYear)+'之间的年份。');return;
  }
  stopPlay();setYear(v);
 }
@@ -2745,15 +3869,51 @@ $('resetDossier').addEventListener('click',resetDossier);
  if(id==='toggleEvents'&&!$('toggleEvents').checked){focusedEventId=null;focusRequestToken++}
  if(atlas)renderPoints();
 }));
+// Separate 18C cartography module has an explicit internal facade because the Atlas
+// application is isolated in an IIFE. No historical geometry or official area stats
+// are exposed as editable data; only real Leaflet drawing and dossier callbacks.
+window.__eighteenthSpatialHost={
+ map,getYear:()=>year,element:$,escapeHTML,openPanel,
+ clearSelection:()=>{selectedItemYear=null;}
+};
+// Current rendered source-backed polygons, not invented historic polygons or
+// country-wide background. All source provenance comes from the existing Atlas.
+window.__historicOverlapHost={
+ map,getYear:()=>year,element:$,escapeHTML,openPanel,
+ sourceForId:id=>sourcesById.get(id)||null,
+ visibleAreaFeatures:()=>{
+  const included=['territory','colonialClaims','seventeenthStudies','archaeologyReference',
+   'warVicinity','warReach','contestedZones','earlyRegionalImpact','invasionImpact',
+   'tenthExtraction','nineYearsWar','atlanticContact','eleventhAreas',
+   'hypotheses','enslavementBands'];
+  const out=[],seen=new Set();
+  const traverse=(group,groupName)=>{
+   for(const item of group.getLayers()){
+    if(typeof item.getLayers==='function'){traverse(item,groupName);continue}
+    const f=item.feature,kind=f?.geometry?.type;
+    if(!['Polygon','MultiPolygon'].includes(kind)||!map.hasLayer(item))continue;
+    const key=String(f.id||f.properties?.id||'')+'|'+String(f.properties?.name||'')+'|'+String(f.properties?.start_year||'')+'|'+groupName;
+    if(seen.has(key))continue;seen.add(key);
+    out.push({group:groupName,layer:item,feature:f});
+   }
+  };
+  for(const name of included){
+   const group=groups[name];if(group&&map.hasLayer(group))traverse(group,name);
+  }
+  return out;
+ }
+};
 function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
-  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();
+  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
+  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();window.historicOverlapDossier?.render?.();
   return;
  }
  renderSeventeenthColonialClaims();
  renderSeventeenthRegionalStudies();
- renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
+ window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
+ renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderHypotheses();renderPoints();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();window.historicOverlapDossier?.render?.();
 }
 $('toggleHypotheses').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
 $('toggleControlAreas').addEventListener('change',()=>{if(atlas)refreshHistoricalLayers()});
@@ -2771,7 +3931,7 @@ $('clearSeventeenthEventSearch').addEventListener('click',()=>{
  if(atlas)renderEventList();
  $('seventeenthEventSearch').focus();
 });
-map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
+map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
 // Native capture handles clicks even where Leaflet Canvas or SVG layers consume
@@ -2779,7 +3939,7 @@ map.on('resize',()=>{if(atlas)renderPoints()});
 map.getContainer().addEventListener('click',event=>{
  if(!atlas)return;
  const t=event.target;
- if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-17c-expansive-claim,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
+ if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-17c-expansive-claim,.atlas-18c-dynamic-area,.atlas-18c-dynamic-core,.atlas-18c-mass-zone,.atlas-18c-mass-core,.atlas-18c-b36-zone,.atlas-18c-b36-site,.atlas-18c-b37-zone,.atlas-18c-b37-site,.atlas-18c-b38-zone,.atlas-18c-b38-site,.atlas-18c-b39-zone,.atlas-18c-b39-site,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
  openMapTerritoryAt(map.mouseEventToLatLng(event));
 },true);
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
@@ -2798,6 +3958,20 @@ window.atlasStoryBridge={
  activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
  activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
+ // A narrow read-only QA hook for independently dated military/admin site cores.
+ active18cControlCoreIds:()=>year>=1700&&preview18cReady&&$('toggleControlAreas').checked?
+  (eighteenthAcadiaControlCores?.features||[])
+    .filter(f=>year>=f.properties.start_year&&year<=f.properties.observed_through_year)
+    .map(f=>f.properties.stable_id):[],
+ active18cContinuityIds:()=>year>=1700&&year<=1709&&preview18cReady&&$('toggleControlAreas').checked?
+  (continuity1700References?.features||[]).filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year).map(f=>f.properties.stable_id):[],
+ active18cBengalCoreIds:()=>year>=1700&&bengal18cReady&&$('toggleControlAreas').checked?
+  (eighteenthBengalControlCores?.features||[]).filter(f=>(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year)).map(f=>f.properties.stable_id):[],
+ active18cMaroonCoreIds:()=>year>=1700&&jamaica18cReady&&$('toggleControlAreas').checked?
+  (eighteenthJamaicaMaroonAutonomyCores?.features||[])
+    .filter(f=>(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year))
+    .map(f=>f.properties.stable_id):[],
+
  // 17th-century decades are loaded separately; 16C inline readers worked
  // because all legacy chapter objects were in this list. Reuse the same
  // lookup over actual published 1600–1699 decade datasets so that source

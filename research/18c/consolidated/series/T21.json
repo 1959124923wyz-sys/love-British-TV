@@ -1,0 +1,344 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T21",
+  "story_arc_title": "印度织工采购、鸦片专卖、盐和区域性饥荒",
+  "status": "research_only",
+  "main_map_candidates": 2,
+  "topic_mode_candidates": 1,
+  "narrative_only_groups": 0,
+  "groups": [
+    {
+      "id": "E18-MRG-T21-01",
+      "story_arc_id": "T21",
+      "story_arc_title": "印度织工采购、鸦片专卖、盐和区域性饥荒",
+      "title_zh": "1773—1799年比哈尔鸦片专卖及合同/限制法令演变",
+      "start_year": 1773,
+      "end_year": 1799,
+      "source_years": [
+        1773,
+        1785,
+        1797,
+        1799
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "policy_series",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-B20"
+      ],
+      "original_candidate_count": 5,
+      "original_candidate_ids": [
+        "AB-B20-001",
+        "AB-R7-POL-019",
+        "AB-R7-POL-022",
+        "AB-R7-POL-033",
+        "AB-R7-POL-034"
+      ],
+      "source_keys": [
+        "B:BS18",
+        "B:BS253",
+        "B:BS252"
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/international-review-of-social-history/article/emancipation-of-the-opium-cultivators-in-benares/094C2D32BEC39A82574A5FA91E64226F",
+        "https://www.cambridge.org/core/journals/international-review-of-social-history/article/contract-work-and-resistance-boatmen-in-early-colonial-eastern-india-1760s1850s/F839EA9C4FFBB04A9DC2F6A9145CD0E8",
+        "https://www.cambridge.org/core/journals/modern-asian-studies/article/poor-mans-crop-evading-opium-monopoly/199D0743201BF76C8ADA72F625B85FAD"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 4,
+        "专题关键节点": 1
+      },
+      "merge_justification": "相同制度/政策机制多次立法或执行动作合为制度系列，禁止将中间没有证据的年份画为持续事件",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-B20-001",
+          "year": 1773,
+          "date": "",
+          "title": "公司在比哈尔建立鸦片承包垄断",
+          "description": "公司推出鸦片承包体系，初始合同明文禁令禁止强迫农民种植。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS18"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/emancipation-of-the-opium-cultivators-in-benares/094C2D32BEC39A82574A5FA91E64226F"
+          ],
+          "geo_status": "location_name_only_no_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-R7-POL-019",
+          "year": 1773,
+          "date": "",
+          "title": "1773年公司将比哈尔鸦片采购改为统一专卖管理",
+          "description": "公司实施鸦片垄断采购；最初合同曾明令不得强迫农民种罂粟，后此项保护被取消。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS18"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/emancipation-of-the-opium-cultivators-in-benares/094C2D32BEC39A82574A5FA91E64226F"
+          ],
+          "geo_status": "named_region_for_research_not_actual_control_boundary",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-R7-POL-022",
+          "year": 1785,
+          "date": "",
+          "title": "1785年7月公司对鸦片承包合同公开竞价",
+          "description": "Cambridge研究记公司因征收问题、农民压迫和质量变化，于11 July 1785决定公开竞价未来四年合同。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS253"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/contract-work-and-resistance-boatmen-in-early-colonial-eastern-india-1760s1850s/F839EA9C4FFBB04A9DC2F6A9145CD0E8"
+          ],
+          "geo_status": "named_region_for_research_not_actual_control_boundary",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-R7-POL-033",
+          "year": 1797,
+          "date": "",
+          "title": "1797年公司改行Patna与Benaras鸦片代理制",
+          "description": "公司撤销主要私人承包制，设两地代理统一管理种植数量与采购。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS252"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/modern-asian-studies/article/poor-mans-crop-evading-opium-monopoly/199D0743201BF76C8ADA72F625B85FAD"
+          ],
+          "geo_status": "named_region_for_research_not_actual_control_boundary",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-R7-POL-034",
+          "year": 1799,
+          "date": "",
+          "title": "1799年公司Regulation VI限制私种罂粟与私人鸦片贸易",
+          "description": "1799 Regulation VI限定鸦片种植田亩与交货，限制私人种植和交易并设惩罚；具体规章原版需对校。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS252"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/modern-asian-studies/article/poor-mans-crop-evading-opium-monopoly/199D0743201BF76C8ADA72F625B85FAD"
+          ],
+          "geo_status": "named_region_for_research_not_actual_control_boundary",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T21-02",
+      "story_arc_id": "T21",
+      "story_arc_title": "印度织工采购、鸦片专卖、盐和区域性饥荒",
+      "title_zh": "1780—1788年孟加拉盐业专卖收购与销售制度",
+      "start_year": 1780,
+      "end_year": 1788,
+      "source_years": [
+        1780,
+        1788
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "policy_series",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-B20",
+        "E18-B19"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "AB-R6-SALT-1780",
+        "AB-R7-POL-024"
+      ],
+      "source_keys": [
+        "B:BS237",
+        "B:BS113"
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/international-review-of-social-history/article/environmental-changes-the-emergence-of-a-fuel-market-and-the-working-conditions-of-salt-makers-in-bengal-c-17801845/EFF95B979EA1BC59C12DAFD1E623FB58",
+        "https://www.jstage.jst.go.jp/article/sehs/68/2/68_KJ00004582558/_article/-char/en"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1,
+        "主图核心": 1
+      },
+      "merge_justification": "相同制度/政策机制多次立法或执行动作合为制度系列，禁止将中间没有证据的年份画为持续事件",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-R6-SALT-1780",
+          "year": 1780,
+          "date": "",
+          "title": "孟加拉公司禁止私人制盐并加强直接生产控制",
+          "description": "Cambridge历史论文指出公司1772年设盐专卖，1780年开始直接控制生产并禁止私人制盐及其附属盐类和私人盐进口。该事件不同于1788年盐拍卖改革。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS237"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/environmental-changes-the-emergence-of-a-fuel-market-and-the-working-conditions-of-salt-makers-in-bengal-c-17801845/EFF95B979EA1BC59C12DAFD1E623FB58"
+          ],
+          "geo_status": "not_geolocatable_specific_town",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-R7-POL-024",
+          "year": 1788,
+          "date": "",
+          "title": "1788年孟加拉食盐专卖由定价销售改为拍卖",
+          "description": "公司为提高盐业收入实行拍卖定价，出产配额约300万maund系研究引用的制度概数，不是1790年某一批实际销售量。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS113",
+            "B:BS237"
+          ],
+          "source_urls": [
+            "https://www.jstage.jst.go.jp/article/sehs/68/2/68_KJ00004582558/_article/-char/en",
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/environmental-changes-the-emergence-of-a-fuel-market-and-the-working-conditions-of-salt-makers-in-bengal-c-17801845/EFF95B979EA1BC59C12DAFD1E623FB58"
+          ],
+          "geo_status": "named_region_for_research_not_actual_control_boundary",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T21-03",
+      "story_arc_id": "T21",
+      "story_arc_title": "印度织工采购、鸦片专卖、盐和区域性饥荒",
+      "title_zh": "1792年南印度歉收饥困与济助函件",
+      "start_year": 1792,
+      "end_year": 1792,
+      "source_years": [
+        1792
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "same_operation",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-B07"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "AB-R6-068-02",
+        "AB-R6-068-03"
+      ],
+      "source_keys": [
+        "B:BS229"
+      ],
+      "source_urls": [
+        "https://academic.oup.com/book/61892/chapter/548192041"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 2
+      },
+      "merge_justification": "同一事件/政策的不同记录、地点或阶段，保留多地行动细节和来源差异",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-R6-068-02",
+          "year": 1792,
+          "date": "",
+          "title": "北部Circars地方报告农民因饥饿食用未成熟庄稼",
+          "description": "当时的地方地主报告田间劳动力在成熟前食用作物，牲畜也被杀来充饥；资料是地方官和地主自述而非全区精确户数。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS229"
+          ],
+          "source_urls": [
+            "https://academic.oup.com/book/61892/chapter/548192041"
+          ],
+          "geo_status": "named_place_with_coordinates_pending_official_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-R6-068-03",
+          "year": 1792,
+          "date": "",
+          "title": "Madras行政人员提出公共开支供养受灾儿童",
+          "description": "担心父母售卖子女，Oakeley指示地方官员以公共资金供养儿童；资金拨付与执行仍待账目确认。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS229"
+          ],
+          "source_urls": [
+            "https://academic.oup.com/book/61892/chapter/548192041"
+          ],
+          "geo_status": "named_place_with_coordinates_pending_official_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}

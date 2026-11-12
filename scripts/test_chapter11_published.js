@@ -92,5 +92,5 @@ assert.ok(app.includes('atlasEleventh=await eleventhRes.json()')&&app.includes('
 assert.ok(app.includes('p.year_end_visible?.includes(year)'),'published annual precomputed status skipped');
 assert.ok(app.includes('const nearby=[],cells=new Map(),cellSize=clusterRadius')&&app.includes('const clusterRadius=year>=1600&&map.getZoom()<=4?56:32'),'16C 32px spatial index must remain while 17C world map can cluster more densely');
 assert.ok(app.includes("className:'atlas-voyage-continuity'"),'route continuity underlay absent');
-assert.ok(html.includes('max="1599"')&&html.includes('1497—1599'));
+assert.ok(html.includes('max="1599"')&&html.includes('1497—1799'));
 console.log('PASS ch11: 36 events, 70 sources, 31 places, 3 unresolved maritime/multi-site records, 10 sites, 2 dashed areas, zero fabricated boundaries');

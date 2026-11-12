@@ -1,0 +1,72 @@
+name: 18C batch39 Caribbean Gold Coast Persian Gulf 126 areas 83 cores
+on:
+  push:
+    branches:
+      - map/18c-39-caribbean-1759-gold-coast-persian-gulf-20261112
+  pull_request:
+    branches:
+      - map/18c-38-southern-campaign-hudson-bay-india-frontier-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  atlas39-static-source-gis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test all 629 annual reference footprints and 421 locality symbols
+        run: |
+          node --check app.js
+          for f in js/eighteenth-*.js; do node --check "$f"; done
+          node scripts/test_18c_batch39_126_83.js
+          node scripts/test_18c_batch38_127_90.js
+          node scripts/test_18c_batch37_141_108.js
+          node scripts/test_18c_batch36_130_83.js
+          node scripts/test_18c_mass_spatial_81_42.js
+          node scripts/test_18c_spatial_paint_24_15.js
+          for f in scripts/test_18c_*.js; do node "$f"; done
+          for region in caribbean-1759-1763 gold-coast-forts gulf-surat-factories; do
+            python3 -m json.tool "data/eighteenth-century-b39-$region.json" >/dev/null
+          done
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_r33_original_archive_gaps.py
+          python3 scripts/audit_spatial_semantics.py --strict
+  atlas39-chromium-desktop:
+    needs: atlas39-static-source-gis
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: 1780x1020 desktop annual historical reference overlays and six-generation regressions
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c39-http.log 2>&1 &
+          python3 scripts/browser_18c_batch39_126_83.py
+          python3 scripts/browser_18c_batch38_127_90.py
+          python3 scripts/browser_18c_batch37_141_108.py
+          python3 scripts/browser_18c_batch36_130_83.py
+          python3 scripts/browser_18c_mass_schematic_81_42.py
+          python3 scripts/browser_18c_map_first_dynamic_areas.py
+      - name: Preserve all source-dossier and desktop screenshot frames
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c39-desktop-629-zones-421-cores-history-evidence
+          path: browser-smoke-results/
+          if-no-files-found: ignore
+  atlas39-public-sha-preview:
+    needs: atlas39-static-source-gis
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Verify independent public SHA immutable preview
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          for f in index.html app.js js/eighteenth-dynamic-spatial.js js/eighteenth-mass-spatial.js js/eighteenth-batch36-spatial.js js/eighteenth-batch37-spatial.js js/eighteenth-batch38-spatial.js js/eighteenth-batch39-spatial.js data/eighteenth-century-b39-caribbean-1759-1763.json data/eighteenth-century-b39-gold-coast-forts.json data/eighteenth-century-b39-gulf-surat-factories.json; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$f"
+          done

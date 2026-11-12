@@ -1,0 +1,506 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T32",
+  "story_arc_title": "1715和1745詹姆斯党战争、1746后镇压与高地清场",
+  "status": "research_only",
+  "main_map_candidates": 3,
+  "topic_mode_candidates": 2,
+  "narrative_only_groups": 1,
+  "groups": [
+    {
+      "id": "E18-MRG-T32-01",
+      "story_arc_id": "T32",
+      "story_arc_title": "1715和1745詹姆斯党战争、1746后镇压与高地清场",
+      "title_zh": "1715—1716年詹姆斯党第一次起义及政府缴械",
+      "start_year": 1715,
+      "end_year": 1716,
+      "source_years": [
+        1715,
+        1716
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-F04"
+      ],
+      "original_candidate_count": 3,
+      "original_candidate_ids": [
+        "C-F04-001",
+        "C7-SCT-1715-SHER",
+        "C4-F04-001"
+      ],
+      "source_keys": [
+        "C:S01a",
+        "C:C7-S19",
+        "C:C4-SCO-DISARM"
+      ],
+      "source_urls": [],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "C"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 3
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "C-F04-001",
+          "year": 1715,
+          "date": "1715",
+          "title": "第一次詹姆斯党大起义",
+          "description": "企图恢复斯图亚特王朝，战争结局不等同后来的1745起义",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "C:S01a"
+          ],
+          "source_urls": [],
+          "geo_status": "event_only_site_pending_source",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        },
+        {
+          "original_id": "C7-SCT-1715-SHER",
+          "year": 1715,
+          "date": "1715-11-13",
+          "title": "Sheriffmuir发生詹姆斯党与政府军大会战",
+          "description": "两军会战并于其后分别退兵；1715起义延续至1716初",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "C:C7-S19"
+          ],
+          "source_urls": [],
+          "geo_status": "battle_needs_local_map_review",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        },
+        {
+          "original_id": "C4-F04-001",
+          "year": 1716,
+          "date": "1716",
+          "title": "英国在1715詹姆斯党起义后通过苏格兰缴械法",
+          "description": "以限制高地武器为手段压制潜在再次起义",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "C:C4-SCO-DISARM"
+          ],
+          "source_urls": [],
+          "geo_status": "source_attested_candidate_no_approved_map; source_precision_preserved",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T32-02",
+      "story_arc_id": "T32",
+      "story_arc_title": "1715和1745詹姆斯党战争、1746后镇压与高地清场",
+      "title_zh": "1719年Glenshiel詹姆斯党战争",
+      "start_year": 1719,
+      "end_year": 1719,
+      "source_years": [
+        1719
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-F04"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "C7-SCT-1719-GLEN"
+      ],
+      "source_keys": [
+        "C:C7-S20",
+        "C:C7-S19"
+      ],
+      "source_urls": [],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "C"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "C7-SCT-1719-GLEN",
+          "year": 1719,
+          "date": "1719-06-10",
+          "title": "Glenshiel战役结束1719詹姆斯党起义",
+          "description": "政府军击败山谷防线，其后西班牙分队投降",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "C:C7-S20",
+            "C:C7-S19"
+          ],
+          "source_urls": [],
+          "geo_status": "official_battlefield_reference_only",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T32-03",
+      "story_arc_id": "T32",
+      "story_arc_title": "1715和1745詹姆斯党战争、1746后镇压与高地清场",
+      "title_zh": "1725年苏格兰再次缴械政策",
+      "start_year": 1725,
+      "end_year": 1725,
+      "source_years": [
+        1725
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "article_only",
+      "editorial_merge_type": "context",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-F04"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "C4-F04-002"
+      ],
+      "source_keys": [
+        "C:C4-SCO-DISARM"
+      ],
+      "source_urls": [],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "C"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1
+      },
+      "merge_justification": "仅作历史背景材料或具体案例，不创建独立地图节点",
+      "candidate_subevents": [
+        {
+          "original_id": "C4-F04-002",
+          "year": 1725,
+          "date": "1725",
+          "title": "政府再次制定苏格兰缴械措施",
+          "description": "通过后续缴械法并以军队设施和道路推进治安军事网络",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "C:C4-SCO-DISARM"
+          ],
+          "source_urls": [],
+          "geo_status": "source_attested_candidate_no_approved_map; source_precision_preserved",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T32-04",
+      "story_arc_id": "T32",
+      "story_arc_title": "1715和1745詹姆斯党战争、1746后镇压与高地清场",
+      "title_zh": "1745—1746年詹姆斯党起义、Culloden及战俘外运",
+      "start_year": 1745,
+      "end_year": 1746,
+      "source_years": [
+        1745,
+        1746
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-F04"
+      ],
+      "original_candidate_count": 3,
+      "original_candidate_ids": [
+        "C-F04-002",
+        "C-F04-003",
+        "C7-SCT-1746-DEPORT"
+      ],
+      "source_keys": [
+        "C:S01a",
+        "C:C7-S21"
+      ],
+      "source_urls": [],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "C"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1,
+        "主图核心": 2
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "C-F04-002",
+          "year": 1745,
+          "date": "1745-08-19",
+          "title": "Charles Edward Stuart在Glenfinnan举旗",
+          "description": "举旗发动1745年战役",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "C:S01a"
+          ],
+          "source_urls": [],
+          "geo_status": "source_supported_event; mapping_review_required",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        },
+        {
+          "original_id": "C-F04-003",
+          "year": 1746,
+          "date": "1746-04-16",
+          "title": "Culloden政府军击败詹姆斯党军",
+          "description": "Drummossie Moor会战导致詹姆斯党军事失败",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "C:S01a"
+          ],
+          "source_urls": [],
+          "geo_status": "source_supported_event; mapping_review_required",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        },
+        {
+          "original_id": "C7-SCT-1746-DEPORT",
+          "year": 1746,
+          "date": "1746",
+          "title": "卡洛登战后詹姆斯党嫌疑人被监禁并强制运往海外",
+          "description": "逮捕数千人，部分被处决，936名幸存者被流放以供契约劳役（信托馆方口径）",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "C:C7-S21"
+          ],
+          "source_urls": [],
+          "geo_status": "multi_site_transport_not_route",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T32-05",
+      "story_arc_id": "T32",
+      "story_arc_title": "1715和1745詹姆斯党战争、1746后镇压与高地清场",
+      "title_zh": "1747—1748年高地服饰禁令及世袭法权终止",
+      "start_year": 1747,
+      "end_year": 1748,
+      "source_years": [
+        1747,
+        1748
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "policy_series",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-F04"
+      ],
+      "original_candidate_count": 2,
+      "original_candidate_ids": [
+        "C-F04-004",
+        "C3-F04-001"
+      ],
+      "source_keys": [
+        "C:NMS-TARTAN",
+        "C:C8-S07",
+        "C:C3-SCO-LEG-1746",
+        "C:C3-SCO-NRS-COURTS",
+        "C:C3-SCO-NRS-CAT"
+      ],
+      "source_urls": [],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "C"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1,
+        "专题关键节点": 1
+      },
+      "merge_justification": "相同制度/政策机制多次立法或执行动作合为制度系列，禁止将中间没有证据的年份画为持续事件",
+      "candidate_subevents": [
+        {
+          "original_id": "C-F04-004",
+          "year": 1747,
+          "date": "1747-08-01",
+          "title": "苏格兰高地男童与男子服饰禁令正式生效（部分例外）",
+          "description": "第二次定罪可被强制运往海外殖民地7年；实际执行例数需查法院档案",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "C:NMS-TARTAN",
+            "C:C8-S07"
+          ],
+          "source_urls": [],
+          "geo_status": "source_supported_event; mapping_review_required",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        },
+        {
+          "original_id": "C3-F04-001",
+          "year": 1748,
+          "date": "1748-03-25",
+          "title": "苏格兰大部分世袭司法权正式终止",
+          "description": "《Heritable Jurisdictions (Scotland) Act 1746》主要司法权停止行使，随后转入受领薪俸的郡司法体系",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "C:C3-SCO-LEG-1746",
+            "C:C3-SCO-NRS-COURTS",
+            "C:C3-SCO-NRS-CAT"
+          ],
+          "source_urls": [],
+          "geo_status": "primary_statutory_effective_date_no_region_polygon",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T32-06",
+      "story_arc_id": "T32",
+      "story_arc_title": "1715和1745詹姆斯党战争、1746后镇压与高地清场",
+      "title_zh": "1792年高地Year of the Sheep清场反抗",
+      "start_year": 1792,
+      "end_year": 1792,
+      "source_years": [
+        1792
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-F05"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "C2-F05-001"
+      ],
+      "source_keys": [
+        "C:C2-SCO-SHEEP",
+        "C:C2-SCO-PROTEST"
+      ],
+      "source_urls": [],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "C"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "C2-F05-001",
+          "year": 1792,
+          "date": "1792",
+          "title": "高地Year of the Sheep牧羊驱赶抗议",
+          "description": "为抗议大地主向高地引入牧羊场，约两百人参与将羊群向Inverness驱赶",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "C:C2-SCO-SHEEP",
+            "C:C2-SCO-PROTEST"
+          ],
+          "source_urls": [],
+          "geo_status": "source_supported_event; mapping_review_required",
+          "source_package": "AiYingTV_Assistant3_Round8_All_Research_20261108(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}

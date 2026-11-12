@@ -1,0 +1,537 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T23",
+  "story_arc_title": "1786槟城—吉打争议与苏门答腊公司据点反抗",
+  "status": "research_only",
+  "main_map_candidates": 3,
+  "topic_mode_candidates": 2,
+  "narrative_only_groups": 0,
+  "groups": [
+    {
+      "id": "E18-MRG-T23-01",
+      "story_arc_id": "T23",
+      "story_arc_title": "1786槟城—吉打争议与苏门答腊公司据点反抗",
+      "title_zh": "1775年Balambangan商馆被袭与撤离",
+      "start_year": 1775,
+      "end_year": 1775,
+      "source_years": [
+        1775
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E11"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "AB-NEW-009-002"
+      ],
+      "source_keys": [
+        "B:BS64",
+        "B:BS67"
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173310",
+        "https://www.cambridge.org/core/journals/urban-history/article/before-the-port-city-coastal-settlements-and-colonialism-in-borneo/25B301620F838F25444FA7C2C315BF88"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-NEW-009-002",
+          "year": 1775,
+          "date": "",
+          "title": "苏禄武装袭击导致Balambangan公司商馆撤销",
+          "description": "公司贸易站遭袭后撤离；对Sulu内部具体参与部族及精确日期待原档核。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS64",
+            "B:BS67"
+          ],
+          "source_urls": [
+            "https://searcharchives.bl.uk/catalog/036-000173310",
+            "https://www.cambridge.org/core/journals/urban-history/article/before-the-port-city-coastal-settlements-and-colonialism-in-borneo/25B301620F838F25444FA7C2C315BF88"
+          ],
+          "geo_status": "location_name_only_no_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T23-02",
+      "story_arc_id": "T23",
+      "story_arc_title": "1786槟城—吉打争议与苏门答腊公司据点反抗",
+      "title_zh": "1786—1791年槟城驻地及与吉打的年款条约",
+      "start_year": 1786,
+      "end_year": 1791,
+      "source_years": [
+        1786,
+        1791
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "policy_series",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E02",
+        "E18-E03"
+      ],
+      "original_candidate_count": 4,
+      "original_candidate_ids": [
+        "AB-E02-001",
+        "AB-NEW-037-001",
+        "AB-NEW-037-002",
+        "AB-NEW-037-003"
+      ],
+      "source_keys": [
+        "B:BS31",
+        "B:BS32",
+        "B:BS148",
+        "B:BS147",
+        "B:BS149"
+      ],
+      "source_urls": [
+        "https://ejournal.usm.my/kajh/article/view/kajh_vol28-no-2-2021_8",
+        "https://penangport.gov.my/en/contact-us/public/port-history",
+        "https://www.sabrizain.org/malaya/library/jmbras/jmbrasvol03-2.pdf",
+        "https://law.nus.edu.sg/sjls/wp-content/uploads/sites/14/2024/07/568-1969-11-mal-jul-1.pdf"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 2,
+        "专题关键节点": 2
+      },
+      "merge_justification": "相同制度/政策机制多次立法或执行动作合为制度系列，禁止将中间没有证据的年份画为持续事件",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-E02-001",
+          "year": 1786,
+          "date": "",
+          "title": "Francis Light登陆槟城并宣告公司驻地",
+          "description": "8月11日登陆并宣称公司取得岛屿；1786有无有效协议及抵御暹罗保护义务仍存在档案解释冲突。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS31",
+            "B:BS32"
+          ],
+          "source_urls": [
+            "https://ejournal.usm.my/kajh/article/view/kajh_vol28-no-2-2021_8",
+            "https://penangport.gov.my/en/contact-us/public/port-history"
+          ],
+          "geo_status": "modern_named_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-NEW-037-001",
+          "year": 1786,
+          "date": "",
+          "title": "吉打苏丹要求以每年三万西班牙元补偿槟城贸易垄断损失",
+          "description": "吉打苏丹1786书信提出每年30,000西班牙元并寻求防卫保护；此为原谈判要求，非公司已付金额或可合并赔款",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS148"
+          ],
+          "source_urls": [
+            "https://www.sabrizain.org/malaya/library/jmbras/jmbrasvol03-2.pdf"
+          ],
+          "geo_status": "named_place_no_verified_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-NEW-037-002",
+          "year": 1791,
+          "date": "",
+          "title": "吉打—槟城和约第1条确认公司占有条件与六千银元年款",
+          "description": "公司同意在占有槟城期间每年支付6000西班牙银元；法学研究指出条文没有明文“主权割让”，需保留吉打与暹罗复杂关系",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS147",
+            "B:BS148",
+            "B:BS149"
+          ],
+          "source_urls": [
+            "https://law.nus.edu.sg/sjls/wp-content/uploads/sites/14/2024/07/568-1969-11-mal-jul-1.pdf",
+            "https://www.sabrizain.org/malaya/library/jmbras/jmbrasvol03-2.pdf",
+            "https://penangport.gov.my/en/contact-us/public/port-history"
+          ],
+          "geo_status": "named_place_no_verified_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-NEW-037-003",
+          "year": 1791,
+          "date": "",
+          "title": "槟城和约含逃亡奴役者、造假者及叛乱者的跨辖区交还条款",
+          "description": "1791年和约第2—8条涉及奴役者、叛乱者和伪造者逃到公司管辖区后的拘捕与交还；须回查原文逐款与具体执行案，不能把条款自动等同每一名逃亡者实际遣返",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS147"
+          ],
+          "source_urls": [
+            "https://law.nus.edu.sg/sjls/wp-content/uploads/sites/14/2024/07/568-1969-11-mal-jul-1.pdf"
+          ],
+          "geo_status": "named_place_no_verified_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T23-03",
+      "story_arc_id": "T23",
+      "story_arc_title": "1786槟城—吉打争议与苏门答腊公司据点反抗",
+      "title_zh": "1789年南安达曼流放殖民试验",
+      "start_year": 1789,
+      "end_year": 1789,
+      "source_years": [
+        1789
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "topic_only",
+      "editorial_merge_type": "standalone",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": false,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E11"
+      ],
+      "original_candidate_count": 1,
+      "original_candidate_ids": [
+        "AB-R6-058-01"
+      ],
+      "source_keys": [
+        "B:BS211"
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/developing-terra-nullius-colonialism-nationalism-and-indigeneity-in-the-andaman-islands/8F0B5F996A88F1DB8E8B5D7B54AD8E8F"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 1
+      },
+      "merge_justification": "具有独立的具体时空、责任主体和历史价值，不强行与其他事件混合",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-R6-058-01",
+          "year": 1789,
+          "date": "",
+          "title": "公司在南安达曼Chatham岛开设流放殖民据点",
+          "description": "1789年公司建立港口与监禁殖民据点并清理Chatham岛及Phoenix Bay相邻林地。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS211"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/developing-terra-nullius-colonialism-nationalism-and-indigeneity-in-the-andaman-islands/8F0B5F996A88F1DB8E8B5D7B54AD8E8F"
+          ],
+          "geo_status": "named_place_with_coordinates_pending_official_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T23-04",
+      "story_arc_id": "T23",
+      "story_arc_title": "1786槟城—吉打争议与苏门答腊公司据点反抗",
+      "title_zh": "1796年英军夺取安汶及维持香料垄断",
+      "start_year": 1796,
+      "end_year": 1796,
+      "source_years": [
+        1796
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "same_operation",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E11"
+      ],
+      "original_candidate_count": 3,
+      "original_candidate_ids": [
+        "AB-F5-MO-001",
+        "AB-F5-MO-005",
+        "AB-F5-SE-003"
+      ],
+      "source_keys": [
+        "B:BS202",
+        "B:BS203",
+        "B:BS204",
+        "B:BS196",
+        "B:BS198"
+      ],
+      "source_urls": [
+        "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/download/pdf",
+        "https://masonicperiodicals.org/static/media/periodicals/119-FMM-1796-12-01-001-SINGLE.pdf",
+        "https://ir.canterbury.ac.nz/bitstream/10092/7184/1/noldus_thesis.pdf",
+        "https://searcharchives.bl.uk/catalog/040-000004502",
+        "https://morethannelson.com/the-capture-of-colombo-and-the-molucca-islands-february-march-1796/"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 1,
+        "主图核心": 2
+      },
+      "merge_justification": "同一事件/政策的不同记录、地点或阶段，保留多地行动细节和来源差异",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-F5-MO-001",
+          "year": 1796,
+          "date": "",
+          "title": "班达荷兰驻地长F. van Boeckholz的投降与物品交接",
+          "description": "荷兰国家档案馆1.10.59/407将投降日明确标为1796年3月9日，408为交接给Pieter Rainier的货物目录。英军称8日群岛投降、9日入堡；两记录可能对应不同过程而非两次独立征服。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS202",
+            "B:BS203"
+          ],
+          "source_urls": [
+            "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/download/pdf",
+            "https://masonicperiodicals.org/static/media/periodicals/119-FMM-1796-12-01-001-SINGLE.pdf"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-F5-MO-005",
+          "year": 1796,
+          "date": "",
+          "title": "英军接管安汶后维持荷属丁香专卖制度并提高收购价",
+          "description": "Noldus 1984 pp.34–35：许多原荷兰官员继续任职，英国占领当局保留丁香专卖制度并提高收购价格；金额和生产区域须查1796–1802税表。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS204"
+          ],
+          "source_urls": [
+            "https://ir.canterbury.ac.nz/bitstream/10092/7184/1/noldus_thesis.pdf"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-F5-SE-003",
+          "year": 1796,
+          "date": "",
+          "title": "John Kennedy率英军进驻安汶荷兰堡垒，荷军未战投降",
+          "description": "海军史研究称17日无战斗进入堡垒；1869历史回顾笼统称三月初占有，具体时日须向IOR/H/441核对。 1796年英国公报称16日已交出，二手海军史称17日英军进驻；暂将交付与实际进驻分开。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS196",
+            "B:BS198",
+            "B:BS203",
+            "B:BS204"
+          ],
+          "source_urls": [
+            "https://searcharchives.bl.uk/catalog/040-000004502",
+            "https://morethannelson.com/the-capture-of-colombo-and-the-molucca-islands-february-march-1796/",
+            "https://masonicperiodicals.org/static/media/periodicals/119-FMM-1796-12-01-001-SINGLE.pdf",
+            "https://ir.canterbury.ac.nz/bitstream/10092/7184/1/noldus_thesis.pdf"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    },
+    {
+      "id": "E18-MRG-T23-05",
+      "story_arc_id": "T23",
+      "story_arc_title": "1786槟城—吉打争议与苏门答腊公司据点反抗",
+      "title_zh": "1796年英军登陆及占据班达群岛堡垒",
+      "start_year": 1796,
+      "end_year": 1796,
+      "source_years": [
+        1796
+      ],
+      "temporal_semantics": "single_year_episode_group",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "same_operation",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E11"
+      ],
+      "original_candidate_count": 3,
+      "original_candidate_ids": [
+        "AB-F5-SE-001",
+        "AB-F5-SE-004",
+        "AB-F5-SE-005"
+      ],
+      "source_keys": [
+        "B:BS196",
+        "B:BS198",
+        "B:BS202"
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000004502",
+        "https://morethannelson.com/the-capture-of-colombo-and-the-molucca-islands-february-march-1796/",
+        "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/download/pdf"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "专题关键节点": 2,
+        "主图核心": 1
+      },
+      "merge_justification": "同一事件/政策的不同记录、地点或阶段，保留多地行动细节和来源差异",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-F5-SE-001",
+          "year": 1796,
+          "date": "",
+          "title": "英国海军从马六甲出发准备夺取荷属摩鹿加香料岛",
+          "description": "Rainier舰队从马六甲出航；舰队航路不得据此画精确海上轨迹。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS196",
+            "B:BS198"
+          ],
+          "source_urls": [
+            "https://searcharchives.bl.uk/catalog/040-000004502",
+            "https://morethannelson.com/the-capture-of-colombo-and-the-molucca-islands-february-march-1796/"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-F5-SE-004",
+          "year": 1796,
+          "date": "",
+          "title": "英军登陆班达群岛并遭荷属炮台抵抗",
+          "description": "舰队依战术船只掩护登陆，遭荷兰两座炮台抵抗；荷军打坏炮机撤退，同晚荷兰总督谈判投降。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS196",
+            "B:BS198"
+          ],
+          "source_urls": [
+            "https://searcharchives.bl.uk/catalog/040-000004502",
+            "https://morethannelson.com/the-capture-of-colombo-and-the-molucca-islands-february-march-1796/"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-F5-SE-005",
+          "year": 1796,
+          "date": "",
+          "title": "英军进入班达堡垒并驻留，不涵盖全部班达岛民地权",
+          "description": "英国海军纪事称3月9日Kennedy进入Fort Nassau，驻留部队以英印雇佣兵混编；当地生产和土地权未逐地核验。 荷兰国家档案馆1.10.59/407明确记录原驻地长F. van Boeckholz于1796-03-09向英方投降，而英国1796年公报记同一占领过程于3月8日交出；8日与9日属不同阶段、仍须据原卷区分。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS196",
+            "B:BS198",
+            "B:BS202"
+          ],
+          "source_urls": [
+            "https://searcharchives.bl.uk/catalog/040-000004502",
+            "https://morethannelson.com/the-capture-of-colombo-and-the-molucca-islands-february-march-1796/",
+            "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/download/pdf"
+          ],
+          "geo_status": "not_yet_geocoded",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}

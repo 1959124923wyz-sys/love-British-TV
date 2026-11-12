@@ -1,0 +1,69 @@
+name: Atlas native right overlap 1497-1699 mass rollout
+on:
+  push:
+    branches:
+      - ux/atlas-1497-1699-right-overlap-glow-scaleout-20261112
+  pull_request:
+    branches:
+      - ux/18c-right-overlap-hover-glow-concise-dossier-20261112
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-static-provenance-and-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: All 1497-1799 source geometry and original 18C data preserved
+        run: |
+          python3 -m py_compile scripts/browser_historic_overlap_1497_1699.py scripts/browser_editor23_expansive_17c_claims.py
+          node --check app.js
+          node --check js/historic-overlap-dossier-1497-1699.js
+          node --check js/eighteenth-overlap-right-dossier.js
+          node scripts/test_historic_overlap_1497_1699.js
+          node scripts/test_18c_right_overlap_hover.js
+          node scripts/test_18c_batch39_126_83.js
+          node scripts/test_editor23_expansive_17c_claims.js
+          node scripts/test_editor7_17c_regional_studies.js
+          node scripts/test_17c_tudor_parity_20261023.js
+          node scripts/test_shared_territorial_geometries.js
+          python3 scripts/audit_spatial_semantics.py --strict
+  real-desktop-original-atlas-1497-to-1799:
+    needs: historical-static-provenance-and-archive
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real 1780x1020 desktop, all early century historic regions and existing 18C right dossier
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-scaleout-http.log 2>&1 &
+          python3 scripts/browser_historic_overlap_1497_1699.py
+          python3 scripts/browser_18c_right_overlap_hover.py
+          python3 scripts/browser_18c_batch39_126_83.py
+          python3 scripts/browser_editor23_expansive_17c_claims.py
+          python3 scripts/browser_editor7_17c_regional.py
+          python3 scripts/browser_desktop_layer_timeline.py
+      - name: Preserve actual Tudor, 17C and 18C multi-layer desktop screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-1497-1799-native-right-overlap-hover-evidence
+          path: browser-smoke-results/
+          if-no-files-found: ignore
+  fixed-sha-public-preview:
+    needs: historical-static-provenance-and-archive
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Verify public page and original 16C/17C/18C source files at same commit
+        run: |
+          set -eu
+          BASE="https://raw.githack.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          for file in index.html app.js js/historic-overlap-dossier-1497-1699.js js/eighteenth-overlap-right-dossier.js css/eighteenth-overlap-right-dossier.css data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson data/seventeenth-century-regional-studies-1600-1699.geojson data/territorial-footprints-1497-1519.geojson data/territorial-footprints-1590-1599.geojson; do
+            curl --fail --location --silent --show-error --retry 5 --retry-delay 3 --output /dev/null "$BASE/$file"
+          done

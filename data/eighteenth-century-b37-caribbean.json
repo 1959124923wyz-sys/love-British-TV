@@ -1,0 +1,2168 @@
+{
+  "schema": "atlas-18c-batch37-region-v1",
+  "region": "caribbean",
+  "status": "research_preview_not_published",
+  "source_register": {
+    "1763": "https://avalon.law.yale.edu/18th_century/paris763.asp",
+    "1783": "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties",
+    "TNA": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/",
+    "AM": "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750",
+    "EH": "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/",
+    "FEDON": "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC",
+    "HAITI": "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358",
+    "JAMAICA": "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf",
+    "GARIFUNA": "https://tourism.gov.vc/tourism/index.php/51-culture-department/general-information/324-garifuna-exile-story"
+  },
+  "area_aggregation_forbidden": true,
+  "area_sqkm_totals": null,
+  "zones": [
+    {
+      "id": "B37-C-Z001",
+      "title": "1763后英属Grenada St George港行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        }
+      ],
+      "bbox": [
+        -61.8,
+        11.96,
+        -61.64,
+        12.12
+      ],
+      "source_key": "1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1779法国攻占英国驻岛核心",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z002",
+      "title": "1779—1782法国夺取Grenada St George港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -61.8,
+        11.96,
+        -61.64,
+        12.12
+      ],
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "法国军事控制期间移除英国常驻标记",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z003",
+      "title": "1783后Grenada St George恢复英国行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.8,
+        11.96,
+        -61.64,
+        12.12
+      ],
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1795—1796费东革命影响实际控制",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z004",
+      "title": "1795—1796 Grenada费东革命高地活动",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.84,
+        12.08,
+        -61.45,
+        12.35
+      ],
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "note": "自由有色人种与被奴役者共同反殖民起义",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z005",
+      "title": "1795—1796 Grenada英军缩守St George港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.79,
+        11.98,
+        -61.67,
+        12.14
+      ],
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "note": "殖民法令主张整岛，但山区存在反英控制",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z006",
+      "title": "1778法国夺占Dominica Roseau港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -61.45,
+        15.22,
+        -61.32,
+        15.43
+      ],
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "英国控制自1778中断",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z007",
+      "title": "1783后Dominica Roseau英方复占",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.45,
+        15.22,
+        -61.32,
+        15.43
+      ],
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "Kalinago社群仍保有自主管理空间",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z008",
+      "title": "1791 Dominica被奴役者反殖民起义",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791
+        }
+      ],
+      "bbox": [
+        -61.51,
+        15.16,
+        -61.2,
+        15.72
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "具体交战地点不明，使用全岛概略参考虚线",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z009",
+      "title": "1781—1792 Tobago法军控制Scarborough",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1792
+        }
+      ],
+      "bbox": [
+        -60.82,
+        11.06,
+        -60.67,
+        11.26
+      ],
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1783和约确认法方取得，英国1793重新占领",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z010",
+      "title": "1793后Tobago Scarborough英军夺岛",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -60.82,
+        11.06,
+        -60.67,
+        11.26
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英国1793攻占，1799仍有驻军",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z011",
+      "title": "1794英军短占Guadeloupe部分港口",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "bbox": [
+        -61.6,
+        16.1,
+        -61.43,
+        16.34
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "年内法方再夺，绝不画成1794年末完整英属领土",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z012",
+      "title": "1794 Victor Hugues夺回Guadeloupe",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "bbox": [
+        -61.79,
+        15.84,
+        -61.26,
+        16.42
+      ],
+      "source_key": "EH",
+      "source_urls": [
+        "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "note": "法国革命军反攻英军，释放被奴役者的战争史并列",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z013",
+      "title": "1794—1799英国占Martinique Fort de France",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.16,
+        14.49,
+        -60.98,
+        14.71
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "实际城镇驻军而非整个加勒比海",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z014",
+      "title": "1794—1799英国占Martinique Saint Pierre港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.21,
+        14.7,
+        -61.08,
+        14.83
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英国对法国殖民港战时军事控制",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z015",
+      "title": "1794—1795英国占Saint Lucia Castries",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1795
+        }
+      ],
+      "bbox": [
+        -61.07,
+        13.92,
+        -60.93,
+        14.09
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英法两军易手，1796重新攻取",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z016",
+      "title": "1796英军攻占Saint Lucia Fort Charlotte",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.05,
+        13.9,
+        -60.91,
+        14.06
+      ],
+      "source_key": "EH",
+      "source_urls": [
+        "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "note": "1796年5月26日法国守军向英军投降",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z017",
+      "title": "1796 Saint Lucia英国俘获黑人法国革命军",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.12,
+        13.8,
+        -60.84,
+        14.18
+      ],
+      "source_key": "EH",
+      "source_urls": [
+        "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "note": "英国将多族裔法国革命军俘获，面只作军事人权事件地理背景",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z018",
+      "title": "1795—1796 Saint Vincent Garifuna对英抵抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -61.37,
+        13.1,
+        -61.04,
+        13.44
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "第二次Carib战争时期的当地政治主体",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z019",
+      "title": "1796—1797 Baliceaux岛Garifuna强制拘留",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -61.17,
+        12.97,
+        -61.08,
+        13.06
+      ],
+      "source_key": "GARIFUNA",
+      "source_urls": [
+        "https://tourism.gov.vc/tourism/index.php/51-culture-department/general-information/324-garifuna-exile-story"
+      ],
+      "note": "被英国殖民军强制关押和流放",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z020",
+      "title": "1797英军占Trinidad Port of Spain",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.58,
+        10.58,
+        -61.44,
+        10.74
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "1802和约才最终确认割让",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z021",
+      "title": "1797 Trinidad西班牙殖民军政被英军击败",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -61.63,
+        10.5,
+        -61.35,
+        10.83
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "战争实际控制变动与正式主权让与不同",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z022",
+      "title": "1781英军短占St Eustatius Oranjestad",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -63.01,
+        17.45,
+        -62.93,
+        17.55
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "英军劫掠港口商人财产，年底法军重新占岛",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z023",
+      "title": "1781 St Eustatius商港财产被英军没收",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "bbox": [
+        -63.05,
+        17.43,
+        -62.91,
+        17.56
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "英国战时没收与商人产权抗议历史背景",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z024",
+      "title": "1793—1797英军Saint Domingue Jérémie海港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -74.16,
+        18.52,
+        -73.97,
+        18.78
+      ],
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "note": "英国与保王派联军占领部分沿海",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z025",
+      "title": "1793—1797英军Saint Domingue Môle St Nicolas",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -73.54,
+        19.6,
+        -73.2,
+        19.91
+      ],
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "note": "英军据点，不代表全岛被占",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z026",
+      "title": "1794—1797英军Saint Domingue Port au Prince",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1797
+        }
+      ],
+      "bbox": [
+        -72.48,
+        18.41,
+        -72.2,
+        18.65
+      ],
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "note": "黑人革命军继续进攻英国驻城",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z027",
+      "title": "1798英军从Saint Domingue各据点撤军",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1798
+        }
+      ],
+      "bbox": [
+        -74.54,
+        18.08,
+        -72.1,
+        19.98
+      ],
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "年内撤退，不延续前1797英国军事控制",
+      "marker": false,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z028",
+      "title": "18世纪Barbados Bridgetown英殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -59.65,
+        13.06,
+        -59.56,
+        13.18
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "糖园和奴隶贸易的殖民行政中心",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z029",
+      "title": "18世纪Barbados Speightstown糖业商港",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -59.69,
+        13.2,
+        -59.61,
+        13.28
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "港口贸易不是对整岛每座庄园实测",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z030",
+      "title": "18世纪Bermuda St George英方殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -64.73,
+        32.34,
+        -64.65,
+        32.41
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "百慕大圣乔治是王室殖民行政港口，岛外海上贸易和岛屿管辖需区分",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z031",
+      "title": "18世纪St Kitts Basseterre英殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -62.77,
+        17.24,
+        -62.66,
+        17.34
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782法国短占中断",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z032",
+      "title": "18世纪Nevis Charlestown英殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -62.67,
+        17.09,
+        -62.58,
+        17.19
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782战争期间英军据点中断",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z033",
+      "title": "18世纪Antigua St Johns殖民商港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.89,
+        17.05,
+        -61.78,
+        17.17
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "当地被奴役者反抗背景单列",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z034",
+      "title": "18世纪Antigua English Harbour军港",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -61.82,
+        16.97,
+        -61.68,
+        17.07
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "海军贸易后勤与岸上当地生活",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z035",
+      "title": "18世纪Montserrat Plymouth英殖民定居港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -62.27,
+        16.67,
+        -62.16,
+        16.78
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782战时易手，年份以离散阶段显示",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z036",
+      "title": "18世纪Bahamas Nassau英国殖民港镇",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        -77.43,
+        24.99,
+        -77.28,
+        25.14
+      ],
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "西班牙军队1782攻占后英军撤离",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z037",
+      "title": "1782 Bahamas Nassau西班牙军事占领",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        -77.43,
+        24.99,
+        -77.28,
+        25.14
+      ],
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1783英方收复驻地",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z038",
+      "title": "1762英国短占Havana港口而非整个古巴",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        -82.52,
+        22.93,
+        -82.21,
+        23.26
+      ],
+      "source_key": "1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763和约归还西班牙",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z039",
+      "title": "1762—1763 Manila英军占据港城附近",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        120.88,
+        14.44,
+        121.13,
+        14.75
+      ],
+      "source_key": "1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "作为加勒比/太平洋战时对照，勿填涂菲律宾全岛",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z040",
+      "title": "1795—1796 Jamaica第二次Maroon战争地区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "bbox": [
+        -77.92,
+        18.19,
+        -77.44,
+        18.59
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "note": "英国殖民军镇压与马龙政治自主抗争",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "B37-C-Z041",
+      "title": "1760 Jamaica圣玛丽教区Tacky奴隶反抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "bbox": [
+        -77.18,
+        18.17,
+        -76.8,
+        18.48
+      ],
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "note": "奴隶起义不能被记作英国军事扩张",
+      "marker": true,
+      "geometry_precision": "editorial_schematic_envelope_not_historical_survey",
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "precise_historic_border": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    }
+  ],
+  "sites": [
+    {
+      "id": "B37-C-P001",
+      "title": "1763后英属Grenada St George港行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778
+        }
+      ],
+      "coordinates": [
+        -61.72,
+        12.04
+      ],
+      "linked_zone_id": "B37-C-Z001",
+      "source_key": "1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1779法国攻占英国驻岛核心",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P002",
+      "title": "1779—1782法国夺取Grenada St George港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -61.72,
+        12.04
+      ],
+      "linked_zone_id": "B37-C-Z002",
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "法国军事控制期间移除英国常驻标记",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P003",
+      "title": "1783后Grenada St George恢复英国行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.72,
+        12.04
+      ],
+      "linked_zone_id": "B37-C-Z003",
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1795—1796费东革命影响实际控制",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P004",
+      "title": "1795—1796 Grenada费东革命高地活动",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -61.645,
+        12.215
+      ],
+      "linked_zone_id": "B37-C-Z004",
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "note": "自由有色人种与被奴役者共同反殖民起义",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P005",
+      "title": "1795—1796 Grenada英军缩守St George港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -61.730000000000004,
+        12.06
+      ],
+      "linked_zone_id": "B37-C-Z005",
+      "source_key": "FEDON",
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "note": "殖民法令主张整岛，但山区存在反英控制",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P006",
+      "title": "1778法国夺占Dominica Roseau港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -61.385000000000005,
+        15.325
+      ],
+      "linked_zone_id": "B37-C-Z006",
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "英国控制自1778中断",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P007",
+      "title": "1783后Dominica Roseau英方复占",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.385000000000005,
+        15.325
+      ],
+      "linked_zone_id": "B37-C-Z007",
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "Kalinago社群仍保有自主管理空间",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P009",
+      "title": "1781—1792 Tobago法军控制Scarborough",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1792
+        }
+      ],
+      "coordinates": [
+        -60.745000000000005,
+        11.16
+      ],
+      "linked_zone_id": "B37-C-Z009",
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1783和约确认法方取得，英国1793重新占领",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P010",
+      "title": "1793后Tobago Scarborough英军夺岛",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -60.745000000000005,
+        11.16
+      ],
+      "linked_zone_id": "B37-C-Z010",
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英国1793攻占，1799仍有驻军",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P011",
+      "title": "1794英军短占Guadeloupe部分港口",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "coordinates": [
+        -61.515,
+        16.22
+      ],
+      "linked_zone_id": "B37-C-Z011",
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "年内法方再夺，绝不画成1794年末完整英属领土",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P012",
+      "title": "1794 Victor Hugues夺回Guadeloupe",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794
+        }
+      ],
+      "coordinates": [
+        -61.525,
+        16.130000000000003
+      ],
+      "linked_zone_id": "B37-C-Z012",
+      "source_key": "EH",
+      "source_urls": [
+        "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "note": "法国革命军反攻英军，释放被奴役者的战争史并列",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P013",
+      "title": "1794—1799英国占Martinique Fort de France",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.06999999999999,
+        14.600000000000001
+      ],
+      "linked_zone_id": "B37-C-Z013",
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "实际城镇驻军而非整个加勒比海",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P014",
+      "title": "1794—1799英国占Martinique Saint Pierre港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.144999999999996,
+        14.765
+      ],
+      "linked_zone_id": "B37-C-Z014",
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英国对法国殖民港战时军事控制",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P015",
+      "title": "1794—1795英国占Saint Lucia Castries",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1795
+        }
+      ],
+      "coordinates": [
+        -61,
+        14.004999999999999
+      ],
+      "linked_zone_id": "B37-C-Z015",
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "英法两军易手，1796重新攻取",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P016",
+      "title": "1796英军攻占Saint Lucia Fort Charlotte",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -60.98,
+        13.98
+      ],
+      "linked_zone_id": "B37-C-Z016",
+      "source_key": "EH",
+      "source_urls": [
+        "https://production.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "note": "1796年5月26日法国守军向英军投降",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P018",
+      "title": "1795—1796 Saint Vincent Garifuna对英抵抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -61.205,
+        13.27
+      ],
+      "linked_zone_id": "B37-C-Z018",
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "第二次Carib战争时期的当地政治主体",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P019",
+      "title": "1796—1797 Baliceaux岛Garifuna强制拘留",
+      "kind": "displacement",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -61.125,
+        13.015
+      ],
+      "linked_zone_id": "B37-C-Z019",
+      "source_key": "GARIFUNA",
+      "source_urls": [
+        "https://tourism.gov.vc/tourism/index.php/51-culture-department/general-information/324-garifuna-exile-story"
+      ],
+      "note": "被英国殖民军强制关押和流放",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P020",
+      "title": "1797英军占Trinidad Port of Spain",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.51,
+        10.66
+      ],
+      "linked_zone_id": "B37-C-Z020",
+      "source_key": "AM",
+      "source_urls": [
+        "https://resources.amdigital.co.uk/coc/time/access.php?end=1820&start=1750"
+      ],
+      "note": "1802和约才最终确认割让",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P022",
+      "title": "1781英军短占St Eustatius Oranjestad",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -62.97,
+        17.5
+      ],
+      "linked_zone_id": "B37-C-Z022",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "英军劫掠港口商人财产，年底法军重新占岛",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P023",
+      "title": "1781 St Eustatius商港财产被英军没收",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "coordinates": [
+        -62.98,
+        17.494999999999997
+      ],
+      "linked_zone_id": "B37-C-Z023",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "英国战时没收与商人产权抗议历史背景",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P024",
+      "title": "1793—1797英军Saint Domingue Jérémie海港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -74.065,
+        18.65
+      ],
+      "linked_zone_id": "B37-C-Z024",
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "note": "英国与保王派联军占领部分沿海",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P025",
+      "title": "1793—1797英军Saint Domingue Môle St Nicolas",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -73.37,
+        19.755000000000003
+      ],
+      "linked_zone_id": "B37-C-Z025",
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "note": "英军据点，不代表全岛被占",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P026",
+      "title": "1794—1797英军Saint Domingue Port au Prince",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1797
+        }
+      ],
+      "coordinates": [
+        -72.34,
+        18.53
+      ],
+      "linked_zone_id": "B37-C-Z026",
+      "source_key": "HAITI",
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358"
+      ],
+      "note": "黑人革命军继续进攻英国驻城",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P028",
+      "title": "18世纪Barbados Bridgetown英殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -59.605000000000004,
+        13.120000000000001
+      ],
+      "linked_zone_id": "B37-C-Z028",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "糖园和奴隶贸易的殖民行政中心",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P029",
+      "title": "18世纪Barbados Speightstown糖业商港",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -59.65,
+        13.239999999999998
+      ],
+      "linked_zone_id": "B37-C-Z029",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "港口贸易不是对整岛每座庄园实测",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P030",
+      "title": "18世纪Bermuda St George英方殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -64.69,
+        32.375
+      ],
+      "linked_zone_id": "B37-C-Z030",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "百慕大圣乔治是王室殖民行政港口，岛外海上贸易和岛屿管辖需区分",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P031",
+      "title": "18世纪St Kitts Basseterre英殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -62.715,
+        17.29
+      ],
+      "linked_zone_id": "B37-C-Z031",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782法国短占中断",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P032",
+      "title": "18世纪Nevis Charlestown英殖民港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -62.625,
+        17.14
+      ],
+      "linked_zone_id": "B37-C-Z032",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782战争期间英军据点中断",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P033",
+      "title": "18世纪Antigua St Johns殖民商港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.835,
+        17.11
+      ],
+      "linked_zone_id": "B37-C-Z033",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "当地被奴役者反抗背景单列",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P034",
+      "title": "18世纪Antigua English Harbour军港",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -61.75,
+        17.02
+      ],
+      "linked_zone_id": "B37-C-Z034",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "海军贸易后勤与岸上当地生活",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P035",
+      "title": "18世纪Montserrat Plymouth英殖民定居港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -62.215,
+        16.725
+      ],
+      "linked_zone_id": "B37-C-Z035",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "1782战时易手，年份以离散阶段显示",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P036",
+      "title": "18世纪Bahamas Nassau英国殖民港镇",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        -77.355,
+        25.064999999999998
+      ],
+      "linked_zone_id": "B37-C-Z036",
+      "source_key": "TNA",
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "note": "西班牙军队1782攻占后英军撤离",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P037",
+      "title": "1782 Bahamas Nassau西班牙军事占领",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        -77.355,
+        25.064999999999998
+      ],
+      "linked_zone_id": "B37-C-Z037",
+      "source_key": "1783",
+      "source_urls": [
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "note": "1783英方收复驻地",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P038",
+      "title": "1762英国短占Havana港口而非整个古巴",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        -82.365,
+        23.095
+      ],
+      "linked_zone_id": "B37-C-Z038",
+      "source_key": "1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "1763和约归还西班牙",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P039",
+      "title": "1762—1763 Manila英军占据港城附近",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        121.005,
+        14.594999999999999
+      ],
+      "linked_zone_id": "B37-C-Z039",
+      "source_key": "1763",
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+      ],
+      "note": "作为加勒比/太平洋战时对照，勿填涂菲律宾全岛",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P040",
+      "title": "1795—1796 Jamaica第二次Maroon战争地区",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "coordinates": [
+        -77.68,
+        18.39
+      ],
+      "linked_zone_id": "B37-C-Z040",
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "note": "英国殖民军镇压与马龙政治自主抗争",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B37-C-P041",
+      "title": "1760 Jamaica圣玛丽教区Tacky奴隶反抗",
+      "kind": "resistance",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "coordinates": [
+        -76.99000000000001,
+        18.325000000000003
+      ],
+      "linked_zone_id": "B37-C-Z041",
+      "source_key": "JAMAICA",
+      "source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "note": "奴隶起义不能被记作英国军事扩张",
+      "location_confidence": "proxy_bbox_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}

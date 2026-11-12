@@ -24,7 +24,7 @@ assert.match(html,/id="browseDecadeNext"/);
 assert.match(html,/id="jumpYear"/);
 assert.match(html,/id="yearStartLabel"/);
 assert.match(html,/id="yearEndLabel"/);
-assert.match(html,/app\.js\?v=timeline-v1800-merged-ch1ch2/);
+assert.ok(html.includes('app.js?v=atlas46-click-notes-20261112'), 'Chapter uses current versioned production application script');
 assert.match(html,/css\/dark-atlas-v2\.css\?v=timeline-v1800-merged-ch1ch2/);
 assert.doesNotMatch(html,/nth-child\(/,'Inline year tick positioning must not depend on number of chapters');
 assert.doesNotMatch(html,/id="chapterOne"/,'Rendered navigation must use registry, not all hardcoded chapter buttons');

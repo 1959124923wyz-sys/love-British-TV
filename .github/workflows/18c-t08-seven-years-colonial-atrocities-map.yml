@@ -1,0 +1,157 @@
+name: 18C T08 Seven Years Cherokee Pontiac Paxton 22-story GIS/atrocities QA
+on:
+  push:
+    branches:
+      - map/18c-t08-seven-years-war-cherokee-pontiac-paxton-land-1740-1775-20261111
+  pull_request:
+    branches:
+      - map/18c-t09-tuscarora-yamasee-indigenous-enslavement-1702-1732-20261111
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  twentytwo-story-source-GIS-and-reader:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify T08 11 groups, 12 original IDs, 24 A source keys, 22 research stories, Cherokee towns, Fort Pitt and Paxton killings
+        run: |
+          node --check app.js
+          node --check js/history-stories.js
+          node scripts/test_major_story_pilot.js
+          node scripts/test_18c_t08_seven_years_war_map.js
+          node scripts/test_18c_t09_tuscarora_yamasee_map.js
+          node scripts/test_18c_t11_slavery_law_resistance_map.js
+          node scripts/test_18c_fedon_grenada_haiti_map.js
+          node scripts/test_18c_garifuna_deportation_map.js
+          node scripts/test_18c_frontier_archive_completion_map.js
+          node scripts/test_18c_ceylon_conquest_tax_rebellion_map.js
+          node scripts/test_18c_india_opium_salt_famine_map.js
+          node scripts/test_18c_sierra_leone_colonial_land_map.js
+          node scripts/test_18c_west_africa_slavery_map.js
+          node scripts/test_18c_cape_khoekhoe_xhosa_map.js
+          node scripts/test_18c_manila_sack_map.js
+          node scripts/test_18c_carnatic_hyderabad_map.js
+          node scripts/test_18c_maratha_rohilla_map.js
+          node scripts/test_18c_mysore_map.js
+          node scripts/test_18c_scotland_map.js
+          node scripts/test_18c_australia_map.js
+          node scripts/test_18c_ireland_map.js
+          node scripts/test_18c_atlantic_zong_map.js
+          node scripts/test_18c_jamaica_maroon_map.js
+          node scripts/test_18c_bengal_continuity_map.js
+          node scripts/test_18c_acadia_map_pilot.js
+          node scripts/test_editor7_17c_inline_story_map.js
+          node scripts/test_editor6_17c_spatial_batch01.js
+          python3 scripts/test_18c_archival_integrity.py
+          python3 scripts/audit_18c_t08_original_A_sources.py
+          python3 scripts/audit_18c_t09_original_A_sources.py
+          python3 scripts/audit_18c_t11_original_A_sources.py
+          python3 scripts/audit_18c_fedon_original_A_sources.py
+          python3 scripts/audit_18c_garifuna_original_A_sources.py
+          python3 scripts/audit_18c_frontier_original_C_sources.py
+          python3 scripts/audit_18c_ceylon_original_sources.py
+          python3 scripts/audit_18c_india_original_sources.py
+          python3 scripts/audit_18c_sierra_leone_original_sources.py
+          python3 scripts/audit_18c_west_africa_original_sources.py
+          python3 scripts/audit_18c_cape_source_registry.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m json.tool data/stories/serial/chronology-preview-t08-seven-years-1740-1775.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-t09-tuscarora-yamasee-1702-1732.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-t11-slavery-law-resistance-1702-1741.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-fedon-grenada-haiti-1789-1798.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-garifuna-1763-1797.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-australia-frontier-1788-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-ceylon-coastal-invasion-1791-1797.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-india-opium-salt-1761-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-sierra-leone-1728-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-west-africa-1727-1792.json >/dev/null
+          python3 -m json.tool data/stories/serial/chronology-preview-cape-1795-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t08-seven-years-cherokee-pontiac-paxton-1740-1775.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t09-tuscarora-yamasee-captivity-1702-1732.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t11-virginia-newyork-stono-slavery-1702-1741.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t06-fedon-grenada-haiti-colonial-repression-1789-1798.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t05-garifuna-forced-exile-1763-1797.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t35-aboriginal-frontier-violence-1788-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t24-ceylon-british-invasion-tax-rebellion-1791-1797.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t21-east-india-opium-salt-famine-1761-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t27-sierra-leone-bunce-black-settlers-1728-1799.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t26-west-africa-slave-forts-1727-1792.json >/dev/null
+          python3 -m json.tool data/stories/serial/e18-t25-cape-invasion-khoekhoe-xhosa-1795-1799.json >/dev/null
+          python3 -m json.tool research/continuity/1740-1775-seven-years/BRITISH_WAR_INDIGENOUS_LAND_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1702-1732-carolina/BRITISH_TRADE_CAPTIVITY_TUSCARORA_YAMASEE_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1702-1741-north-america-slavery/COLONIAL_LAW_REVOLT_MILITIA_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1789-1798-grenada-haiti/BRITISH_SLAVERY_REPRESSION_FEDON_HAITI_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1763-1797-garifuna/BRITISH_GARIFUNA_EXILE_LAND_CONTROL_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1788-1799-australia/BRITISH_FRONTIER_MASSACRE_RESISTANCE_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1791-1797-ceylon/BRITISH_COASTAL_FORTS_KANDY_TAX_REVOLT_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1761-1799-india/EIC_OPIUM_SALT_TEXTILE_FAMINE_ACTOR_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1728-1799-sierra-leone/BUNCE_FREETOWN_AFRICAN_LAND_CONTROL_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1727-1792-west-africa/BRITISH_SLAVE_FORTS_AFRICAN_STATES_CONTROL_TRANSITIONS.json >/dev/null
+          python3 -m json.tool research/continuity/1795-1799-cape/BRITISH_INVASION_INDIGENOUS_TERRITORIAL_TRANSITIONS.json >/dev/null
+  real-desktop-chromium:
+    needs: twentytwo-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: 1780x1020 British war, Cherokee town burning, Paxton murders, smallpox blankets, 21 older stories plus 16C
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/18c-cape-http.log 2>&1 &
+          python3 scripts/browser_18c_t08_seven_years_war.py
+          python3 scripts/browser_18c_t09_tuscarora_yamasee.py
+          python3 scripts/browser_18c_t11_slavery_law_resistance.py
+          python3 scripts/browser_18c_fedon_grenada_haiti.py
+          python3 scripts/browser_18c_garifuna_exile.py
+          python3 scripts/browser_18c_frontier_archive_completion.py
+          python3 scripts/browser_18c_ceylon_conquest_tax_rebellion.py
+          python3 scripts/browser_18c_india_opium_salt_famine.py
+          python3 scripts/browser_18c_sierra_leone_colonial_land.py
+          python3 scripts/browser_18c_west_africa_slavery.py
+          python3 scripts/browser_18c_cape_khoekhoe_xhosa.py
+          python3 scripts/browser_18c_manila_sack.py
+          python3 scripts/browser_18c_carnatic_hyderabad.py
+          python3 scripts/browser_18c_maratha_rohilla_awadh.py
+          python3 scripts/browser_18c_mysore_wars.py
+          python3 scripts/browser_18c_scotland_union.py
+          python3 scripts/browser_18c_australia_resistance.py
+          python3 scripts/browser_18c_ireland_rebellion.py
+          python3 scripts/browser_18c_atlantic_zong.py
+          python3 scripts/browser_18c_jamaica_maroon.py
+          python3 scripts/browser_18c_bengal_continuity.py
+          python3 scripts/browser_18c_acadia_pilot.py
+          python3 scripts/browser_major_story_pilot.py
+      - name: Upload 22-topic genuine desktop screenshots of Cherokee burning, Pontiac and Fort Pitt and Paxton
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 18c-t08-seven-years-war-cherokee-pontiac-paxton-desktop-images
+          path: |
+            browser-smoke-results/
+            story-pilot-browser-results/
+          if-no-files-found: ignore
+  public-draft-web-preview:
+    needs: twentytwo-story-source-GIS-and-reader
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify 22-story T08 public research preview files
+        run: |
+          set -e
+          BASE="https://raw.githack.com/${{ github.repository }}/${{ github.sha }}"
+          for path in index.html app.js js/history-stories.js css/history-stories.css data/stories/serial/preview-18c-index.json data/stories/serial/chronology-preview-t08-seven-years-1740-1775.json data/stories/serial/e18-t08-seven-years-cherokee-pontiac-paxton-1740-1775.json data/stories/serial/chronology-preview-t09-tuscarora-yamasee-1702-1732.json data/stories/serial/e18-t09-tuscarora-yamasee-captivity-1702-1732.json data/stories/serial/chronology-preview-t11-slavery-law-resistance-1702-1741.json data/stories/serial/e18-t11-virginia-newyork-stono-slavery-1702-1741.json data/stories/serial/chronology-preview-fedon-grenada-haiti-1789-1798.json data/stories/serial/e18-t06-fedon-grenada-haiti-colonial-repression-1789-1798.json; do
+            curl --fail --location --retry 3 --retry-delay 3 --max-time 30 --silent --show-error "$BASE/$path" -o "/tmp/t06-$(basename "$path")"
+          done
+          grep -q '帝国的代价' /tmp/t06-index.html
+          grep -q 'E18C-T08-1763-POX-BLANKETS' /tmp/t06-chronology-preview-t08-seven-years-1740-1775.json
+          grep -q 'E18-T08-SEVEN-YEARS-CHEROKEE-PONTIAC-PAXTON-1740-1775' /tmp/t06-preview-18c-index.json
+          grep -q 'E18C-T09-1713-MAR23-NEOHEROKA-BURNING' /tmp/t06-chronology-preview-t09-tuscarora-yamasee-1702-1732.json
+          grep -q 'E18-T09-TUSCARORA-YAMASEE-INDIGENOUS-CAPTIVITY-1702-1732' /tmp/t06-preview-18c-index.json
+          grep -q 'E18C-T11-1739-STONO-MILITIA-KILLINGS' /tmp/t06-chronology-preview-t11-slavery-law-resistance-1702-1741.json
+          grep -q 'E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741' /tmp/t06-preview-18c-index.json
+          grep -q 'E18C-FED-1796-JUN7-ENSLAVED-REBEL-LAW' /tmp/t06-chronology-preview-fedon-grenada-haiti-1789-1798.json
+          grep -q 'E18-T06-FEDON-GRENADA-HAITI-BRITISH-REPRESSION-1789-1798' /tmp/t06-preview-18c-index.json
+          if grep -q 'story-reading-toolbar' /tmp/t06-history-stories.js; then echo 'BUG: deleted dynamic TOC still present'; exit 1; fi
+          echo "T08_SEVEN_YEARS_REVIEW_URL=$BASE/index.html?review18c=1&year=1763"

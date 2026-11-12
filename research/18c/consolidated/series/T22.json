@@ -1,0 +1,148 @@
+{
+  "schema": "atlas-18c-consolidated-workstream-v1",
+  "story_arc_id": "T22",
+  "story_arc_title": "1762马尼拉占领与战利品/赎金",
+  "status": "research_only",
+  "main_map_candidates": 1,
+  "topic_mode_candidates": 0,
+  "narrative_only_groups": 0,
+  "groups": [
+    {
+      "id": "E18-MRG-T22-01",
+      "story_arc_id": "T22",
+      "story_arc_title": "1762马尼拉占领与战利品/赎金",
+      "title_zh": "1762—1764年英军占领马尼拉、赎金争议及撤离",
+      "start_year": 1762,
+      "end_year": 1764,
+      "source_years": [
+        1762,
+        1763,
+        1764
+      ],
+      "temporal_semantics": "series_of_distinct_actions",
+      "map_display_tier": "main_candidate",
+      "editorial_merge_type": "common_campaign",
+      "editorial_status": "research_only",
+      "history_verified": false,
+      "mapping_approved": false,
+      "publication_status": "not_submitted",
+      "no_assumed_continuous_activity": true,
+      "no_assumed_single_site": true,
+      "geometry": null,
+      "event_site_lat": null,
+      "event_site_lon": null,
+      "territorial_polygons": [],
+      "related_topic_ids": [
+        "E18-E01"
+      ],
+      "original_candidate_count": 4,
+      "original_candidate_ids": [
+        "AB-E01-002",
+        "AB-E01-003",
+        "AB-E01-005",
+        "AB-E01-004"
+      ],
+      "source_keys": [
+        "B:BS26",
+        "B:BS27",
+        "B:BS29",
+        "B:BS76"
+      ],
+      "source_urls": [
+        "https://www.cultura.gob.es/cultura/archivos/difusion/historial-destacados/destacados-anteriores-2006-2016/2012-12-22-toma-manila-1762.html",
+        "https://www.cambridge.org/core/journals/international-review-of-social-history/article/securing-trade-the-military-labor-of-the-british-occupation-of-manila-17621764/6DD8E645C2627FFD682DAA81FB59E35B",
+        "https://en.wikisource.org/wiki/A_Plain_Narrative_of_the_Reduction_of_Manila_and_the_Philippine_Islands",
+        "https://www.bankofengland.co.uk/CalmView/Record.aspx?id=M5%2F110&src=CalmView.Catalog"
+      ],
+      "source_url_verification": "original_assistant_citations_not_cross_verified",
+      "historical_actor_review_needed": true,
+      "assistant_origins": [
+        "B"
+      ],
+      "preliminary_grade_mix": {
+        "主图核心": 3,
+        "专题关键节点": 1
+      },
+      "merge_justification": "多次交战/军事行动属于同一战争或镇压过程，编辑阶段合为专题级事件，保留各具体行动",
+      "candidate_subevents": [
+        {
+          "original_id": "AB-E01-002",
+          "year": 1762,
+          "date": "",
+          "title": "英军攻占马尼拉并提出400万西班牙银元赎金",
+          "description": "10月6日攻入城内、订立投降条件，规定承诺四百万西班牙银元、半数立即支付、半数延期及担保；不能称已到账四百万。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "无显式警告，仍待编辑确认",
+          "source_keys": [
+            "B:BS26",
+            "B:BS27",
+            "B:BS29"
+          ],
+          "source_urls": [
+            "https://www.cultura.gob.es/cultura/archivos/difusion/historial-destacados/destacados-anteriores-2006-2016/2012-12-22-toma-manila-1762.html",
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/securing-trade-the-military-labor-of-the-british-occupation-of-manila-17621764/6DD8E645C2627FFD682DAA81FB59E35B",
+            "https://en.wikisource.org/wiki/A_Plain_Narrative_of_the_Reduction_of_Manila_and_the_Philippine_Islands"
+          ],
+          "geo_status": "modern_named_reference",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-E01-003",
+          "year": 1762,
+          "date": "",
+          "title": "Simon de Anda在马尼拉城外组织抗击",
+          "description": "英军控制围城及港口核心，城外Anda仍率军抵抗，英军不能有效统治吕宋各地。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS27"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/securing-trade-the-military-labor-of-the-british-occupation-of-manila-17621764/6DD8E645C2627FFD682DAA81FB59E35B"
+          ],
+          "geo_status": "location_name_only_no_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-E01-005",
+          "year": 1763,
+          "date": "",
+          "title": "英国央行就马尼拉赎金汇票开始追讨",
+          "description": "英国央行M5/110存有1763年2月至1771年4月追讨马尼拉赎金汇票的文件；汇票登记与实际支付分开。",
+          "original_editorial_tier": "专题关键节点",
+          "review_flags": "单一来源待交叉核对;馆藏目录并非原件核实",
+          "source_keys": [
+            "B:BS76"
+          ],
+          "source_urls": [
+            "https://www.bankofengland.co.uk/CalmView/Record.aspx?id=M5%2F110&src=CalmView.Catalog"
+          ],
+          "geo_status": "location_name_only_no_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        },
+        {
+          "original_id": "AB-E01-004",
+          "year": 1764,
+          "date": "",
+          "title": "英军撤离马尼拉",
+          "description": "巴黎和约后到1764年4月结束英军占领，西班牙方面恢复港城管治。",
+          "original_editorial_tier": "主图核心",
+          "review_flags": "单一来源待交叉核对",
+          "source_keys": [
+            "B:BS27"
+          ],
+          "source_urls": [
+            "https://www.cambridge.org/core/journals/international-review-of-social-history/article/securing-trade-the-military-labor-of-the-british-occupation-of-manila-17621764/6DD8E645C2627FFD682DAA81FB59E35B"
+          ],
+          "geo_status": "location_name_only_no_coordinates",
+          "source_package": "assistant2_round7_full(1).zip"
+        }
+      ],
+      "review_before_publication": [
+        "查证候审行动、日期、地点与历史主体；尤其要区分英国、当地独立国家、殖民民兵及土著反抗者",
+        "将可核日期拆为真实Atlas事件；没有地理证据不推断实际控制区域",
+        "专题正文可列全部子行动；默认地图只显示经过审核的主要节点"
+      ]
+    }
+  ]
+}
