@@ -56,7 +56,7 @@ def test():
     assert routes[0]['valid_years']==[1586]
     assert routes[0]['real_historical_track'] is False
   reader=(ROOT/'js/history-stories.js').read_text(encoding='utf-8')
-  assert 'const relatedStories=(article.related_story_ids||[])' in reader
+  assert 'const relatedStories=[' in reader and '...(article.related_story_ids||[])' in reader
   assert 'relatedMarkup+' in reader
   assert 'sourceEventId=current&&eventInMemory(current)?current:' in reader
   assert all(e['actual_English_land_area_sqkm'] is None for e in [e80['ROA1586-LANE-COLONY-EVACUATION'],e80['ROA1587-JOHN-WHITE-DEPARTURE']])
