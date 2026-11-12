@@ -9,6 +9,7 @@
  if(!host)throw new Error('18C spatial host is missing');
  const map=host.map,$=host.element,escapeHTML=host.escapeHTML,openPanel=host.openPanel;
  let year=host.getYear();
+ const reader=window.AtlasReaderCopy;
  const areaPane='eighteenthReferenceAreaPane',sitePane='eighteenthControlSitePane';
  map.createPane(areaPane);map.getPane(areaPane).style.zIndex='433';
  map.createPane(sitePane);map.getPane(sitePane).style.zIndex='466';
@@ -27,12 +28,11 @@
  }).join('');
  function dossier(p,period,isSite){
    host.clearSelection();
-   const category=isSite?'已核实的城市驻军/公司港口核心（圆形为屏幕符号）':p.category;
+   const category=isSite?'城市驻军／公司港口':reader.label(p.category);
    $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪地图优先 · '+escapeHTML(String(year))+'年</div>'+
     '<h2>'+escapeHTML(p.title||'历史地理范围')+'</h2>'+
     '<p><strong>'+escapeHTML(category)+'</strong>　历史阶段：'+period.start_year+'—'+period.end_year+'</p>'+
-    '<p>'+escapeHTML(p.note||'')+'</p>'+
-    '<p>边缘虚线与淡色底面是既有地理数据复用的概略参考，未经18世纪原件测绘；城镇实芯圆圈的半径以屏幕像素计，不能外推占领平方公里。当地原住民族/自治居民权利、军事占领与王室或公司纸面声索均需分开。</p>'+
+    (reader.clean(p.note||'')?'<p>'+escapeHTML(reader.clean(p.note))+'</p>':'')+
     '<details open><summary>可追溯来源</summary><ul class="source-list">'+urls(p.source_urls)+'</ul></details>';
    openPanel('dossier');
  }
@@ -58,7 +58,7 @@
      onEachFeature:(f,layer)=>{
        const p=f.properties,period=active(p.periods);
        layer.bindTooltip('<strong>'+escapeHTML(short(p.title))+'</strong><div class="atlas-hover-summary">'+
-         escapeHTML(p.category+' · '+period.start_year+'—'+period.end_year+' · 非实测历史边界')+'</div>',
+         escapeHTML(reader.label(p.category)+' · '+period.start_year+'—'+period.end_year)+'</div>',
         {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
        layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);dossier(p,period,false);});
      }
