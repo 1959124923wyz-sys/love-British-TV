@@ -209,6 +209,8 @@
  // Exclude real event icons/controls so their own detail actions still work.
  function captureMapClick(e){
   if(!loaded||!enabled()||!map.getContainer().contains(e.target))return;
+  // Keep legacy synthetic map-container tests on the ordinary Leaflet fallback.
+  if(!e.isTrusted&&e.target===map.getContainer())return;
   const target=e.target;
   if(target?.closest?.(
    '.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip,'+
