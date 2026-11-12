@@ -22,3 +22,39 @@ jobs:
           name: atlas46-comprehensive-ui-and-source-copy-inventory
           path: browser-smoke-results/atlas46-editorial-copy-audit.*
           if-no-files-found: error
+  pointer-and-copy-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: JS syntax and historical wording regression
+        run: |
+          node --check app.js
+          node --check js/atlas-reader-copy.js
+          node --check js/eighteenth-mass-spatial.js
+          node --check js/eighteenth-overlap-right-dossier.js
+          node scripts/test_atlas_46_copy_click.js
+          node scripts/test_atlas_44_single_area_clean_ui.js
+          node scripts/test_reader_clean_copy_1497_1799.js
+          python3 -m py_compile scripts/browser_atlas_46_real_pointer.py
+  pointer-real-chrome:
+    needs: pointer-and-copy-static
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Actual pointer click target rather than synthetic map container dispatch
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas46-http.log 2>&1 &
+          python3 scripts/browser_atlas_46_real_pointer.py
+          python3 scripts/browser_atlas_44_single_area_click.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atlas46-actual-pointer-click-havana-hudson
+          path: browser-smoke-results/
+          if-no-files-found: ignore
