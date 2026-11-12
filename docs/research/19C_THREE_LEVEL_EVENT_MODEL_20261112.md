@@ -50,3 +50,6 @@
 - 参考：`docs/templates/16c-story-map-standard/README.md`、`docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md`、`docs/APPROVED_MAP_INTERACTION_STANDARD.md`。
 
 **本分支是生产体系准备工作，而非把83个专题、532个事件或1,339个节点提前公开发布。**
+
+## V3复核追加（2026-11-12）
+上一版的532只是机器化分组，不是确立地图事件。最新针对346个单记录事件的编辑复核，改成**496个候审事件组**，其中18个原单记录与同链行动合并、18个作为已有事件的内层证据，另区分重大独立事件、政治制度状态与单纯背景。全部83个宏观专题、408个研究题目及1,339条史料保留。参见[逐项审核结果及差异](19C_SINGLETON_EVENT_REVIEW_V3_20261112.md)；归并别名表位于`data/research/19c/singleton-audit-v3-aliases.json`。所有研究几何仍为空，不能自动发布。
