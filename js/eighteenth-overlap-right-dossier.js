@@ -204,28 +204,33 @@
   selected=found[0].id;paint();glow(found[0]);
   return true;
  }
- // Capture BEFORE legacy Leaflet SVG handlers; no separate reader layer.
- // Only source-linked 18C map polygons or their own city symbols are intercepted.
+ // One capture-phase click path for stroke, filled areas, transparent interiors
+ // and overlapping polygons. The original Leaflet paths may disable bubbling.
+ // Exclude real event icons/controls so their own detail actions still work.
  function captureMapClick(e){
-  if(!loaded||!enabled())return;
+  if(!loaded||!enabled()||!map.getContainer().contains(e.target))return;
   const target=e.target;
-  if(!target?.closest?.(classSelector))return;
-  const isPoint=Boolean(target.closest(
+  if(target?.closest?.(
+   '.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip,'+
+   '.atlas-voyage-hit,[data-open-overlap],[data-historic-open]'))return;
+  const coordinate=map.mouseEventToLatLng(e);
+  const found=locate(coordinate,false);
+  if(!found.length)return;
+  const isPoint=Boolean(target.closest?.(
    '.atlas-18c-dynamic-core,.atlas-18c-mass-core,'+
    '.atlas-18c-b36-site,.atlas-18c-b37-site,.atlas-18c-b38-site,.atlas-18c-b39-site'));
-  const coordinate=map.mouseEventToLatLng(e);
-  if(!openAt(coordinate,isPoint))return;
-  e.preventDefault();e.stopPropagation();
-  if(e.stopImmediatePropagation)e.stopImmediatePropagation();
+  const onSource=Boolean(target.closest?.(classSelector));
+  const via=onSource?'source-layer':
+   found.length>1?'capture-transparent-overlap':'capture-transparent-single';
+  if(!openAt(coordinate,isPoint,via))return;
+  e.preventDefault();e.stopPropagation();e.stopImmediatePropagation?.();
  }
  map.getContainer().addEventListener('click',captureMapClick,true);
- // Fallback for intentionally hollow/transparent historical polygons.
- // Leaflet only targets the STROKE of fill:false outlines. A click inside two or
- // more reference envelopes must still open their source chooser, without
- // stealing clicks from unrelated marker layers or single-source plain map.
+ // Leaflet's ordinary map click remains a fallback for keyboard/plugin events.
  map.on('click',ev=>{
   if(!loaded||!enabled())return;
-  if(ev.originalEvent?.target?.closest?.('.leaflet-marker-icon,.leaflet-popup'))return;
+  if(ev.originalEvent?.target?.closest?.(
+   '.leaflet-control-container,.leaflet-marker-icon,.leaflet-popup,.leaflet-tooltip'))return;
   const matched=locate(ev.latlng,false);
   if(matched.length)openAt(ev.latlng,false,matched.length>1?'map-background-overlap':'map-background-single');
  });
