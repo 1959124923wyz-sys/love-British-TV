@@ -1,0 +1,2208 @@
+{
+  "schema": "atlas-18c-batch39-v1",
+  "region": "gulf-surat-factories",
+  "review_only": true,
+  "source_register": {
+    "BUSH": "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date",
+    "BUSH2": "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance",
+    "PERSIA": "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date",
+    "BASRA": "https://searcharchives.bl.uk/catalog/041-000177265",
+    "SURAT": "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy",
+    "THANA": "https://searcharchives.bl.uk/catalog/040-000178286",
+    "THANA2": "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date",
+    "BROACH": "https://searcharchives.bl.uk/catalog/036-000173372",
+    "BROACH_TAX": "https://searcharchives.bl.uk/catalog/040-000173377",
+    "TEL": "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy",
+    "MURSH": "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy",
+    "PATNA": "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy",
+    "ARMY": "https://www.nam.ac.uk/explore/armies-east-india-company",
+    "NAM_M": "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+  },
+  "area_aggregation_forbidden": true,
+  "area_sqkm_totals": null,
+  "notes": "British Library India Office archival fonds evidence of factory records, not continuous existence for gaps; Persian & Mughal local sovereignty, no area aggregation.",
+  "zones": [
+    {
+      "id": "B39-G-Z001",
+      "title": "1763年4月12日Bushire英东印度公司Residency开办",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1768
+        }
+      ],
+      "bbox": [
+        50.76,
+        28.9,
+        50.9,
+        29.03
+      ],
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "布什尔地方谢赫签贸易协定，英国设商政驻地；不能推断英方占领波斯领土",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z002",
+      "title": "1763年Bushire英公司与当地Shaikh贸易协定",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        50.71,
+        28.86,
+        50.93,
+        29.1
+      ],
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "英国图书馆IOR/R/15/1/1-5明确记载1763年4月12日设驻地，依据双方贸易协议",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z003",
+      "title": "1763—1768Bushire港内商船与贸易货栈",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1768
+        }
+      ],
+      "bbox": [
+        50.7,
+        28.84,
+        51.02,
+        29.14
+      ],
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "贸易影响属于海岸和地方政治关系，不代表对港城的军事控制",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z004",
+      "title": "1769—1774Bushire Residency临时停办",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1774
+        }
+      ],
+      "bbox": [
+        50.73,
+        28.87,
+        50.97,
+        29.11
+      ],
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "图书馆记载1769至1775年因贸易和政治恶化暂时停办，空心图示中断",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z005",
+      "title": "1775年后Bushire英国公司驻地重开",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        50.73,
+        28.87,
+        50.98,
+        29.14
+      ],
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "恢复商政通讯，不属于英国正式殖民行政省",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z006",
+      "title": "1775—1799Bushire—Basra公司商业函件网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        47.5,
+        28.5,
+        51.6,
+        31.4
+      ],
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "跨两港的商业通信路线概略，不能声称之间沙漠归公司所有",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z007",
+      "title": "1763英国Resident Benjamin Jervis与地方贸易谈判",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        50.72,
+        28.86,
+        50.92,
+        29.1
+      ],
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "1763年原始函件记录对Mir Muhanna和Zand政治势力的分析",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z008",
+      "title": "1763波斯湾Mir Muhanna阻断Shiraz—Bushire贸易",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        50.6,
+        28.6,
+        53.4,
+        30.7
+      ],
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "原信件提及贸易受阻，不能当英波双方军事占领",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z009",
+      "title": "1798年Bushire本地Agent Mirza Mehdi Ali Khan",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        50.73,
+        28.87,
+        50.98,
+        29.14
+      ],
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "英国图书馆IOR/R/15/1/5记载1798年10月起代理驻地事务",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z010",
+      "title": "1708—1710 Gombroon/Bandar Abbas英商日记",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1708,
+          "end_year": 1710
+        }
+      ],
+      "bbox": [
+        56.17,
+        27.1,
+        56.4,
+        27.3
+      ],
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "英国图书馆IOR/G/29载Gombroon商馆1708—1710年日记",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z011",
+      "title": "1726—1763 Gombroon/Bandar Abbas贸易日记时期",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1726,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        56.18,
+        27.1,
+        56.39,
+        27.3
+      ],
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "按有据日记年份提示港口商业联系，不能认为每年有英军驻守",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z012",
+      "title": "1710后Gombroon与Basra海上船运接触带",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1710,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        47.4,
+        25.1,
+        56.8,
+        31.4
+      ],
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "英国商业档案所载海湾往来广域示意，不等于英国海洋法定专属领土",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z013",
+      "title": "1763年前Gombroon与当地伊朗政权贸易关系",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1726,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        56.1,
+        27.04,
+        56.48,
+        27.36
+      ],
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "公司供应商网络依靠地方伊朗权力，各方政治主体分开",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z014",
+      "title": "1703—1762 Basra东印度公司通信业务",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1703,
+          "end_year": 1762
+        }
+      ],
+      "bbox": [
+        47.68,
+        30.38,
+        47.93,
+        30.67
+      ],
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "档案有来自巴士拉与Gombroon的公司通信，港城仍属当地政权",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z015",
+      "title": "1763—1790 Basra英商代理贸易和账目",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1790
+        }
+      ],
+      "bbox": [
+        47.67,
+        30.36,
+        47.95,
+        30.72
+      ],
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "波斯湾原始商馆档案，不是英国在两河流域取得领土",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z016",
+      "title": "1791—1794 Basra公司与Baghdad Pasha冲突",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1794
+        }
+      ],
+      "bbox": [
+        47.6,
+        30.25,
+        48.03,
+        30.78
+      ],
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "BL IOR/G/29/32载因巴格达帕夏与英代理争端，贸易据点发生调整",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z017",
+      "title": "1790年代Basra公司Factory撤出向Grain转移",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        47.6,
+        30.21,
+        48.03,
+        30.78
+      ],
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "原档未确定每一步确切年份，仅作为1790年代迁移参考，不能画英军控制巴士拉",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z018",
+      "title": "1790年代Grain/Kuwait收容公司交易站",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        47.87,
+        29.27,
+        48.13,
+        29.48
+      ],
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "档案提及Bussora商站迁往Grain即今科威特，起止只是十年末保守时段",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z019",
+      "title": "Grain/Kuwait与Basra贸易重组走廊",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        47.3,
+        29.1,
+        48.35,
+        30.8
+      ],
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "港口之间商贸搬迁通道示意，不能涂作英国租界",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z020",
+      "title": "1798 Baghdad东印度公司政治Residency成立",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        44.26,
+        33.19,
+        44.56,
+        33.47
+      ],
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "英国图书馆明确1798年设驻地，Harford Jones任Resident；奥斯曼地方政府继续存在",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z021",
+      "title": "1798 Baghdad公司Resident Harford Jones往来",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        44.2,
+        33.13,
+        44.64,
+        33.55
+      ],
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "贸易外交人员活动，不是英国占领巴格达",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z022",
+      "title": "1798 Baghdad至Basra商信路线",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        44.1,
+        30.15,
+        48.13,
+        33.7
+      ],
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "驻地及贸易商信通道，矩形仅用于大致定位",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z023",
+      "title": "1700—1704 Surat英国公司商馆和往来文件",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1704
+        }
+      ],
+      "bbox": [
+        72.76,
+        21.06,
+        72.92,
+        21.26
+      ],
+      "source_key": "SURAT",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "英国图书馆IOR/G/36保留1700—1704年公司询问记录",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z024",
+      "title": "1718—1799 Surat公司商馆日记咨询业务",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1718,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.75,
+        21.04,
+        72.94,
+        21.28
+      ],
+      "source_key": "SURAT",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "档案记录延续至1804，英商馆并非获得整个Gujarat治权",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z025",
+      "title": "1759—1800 Surat贸易文书与出口网络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.5,
+        20.8,
+        73.3,
+        21.6
+      ],
+      "source_key": "SURAT",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "广泛港口供应与当地商人合作关系，不代表国家主权",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z026",
+      "title": "1796—1799 Surat公司商馆司法日记",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.75,
+        21.04,
+        72.94,
+        21.28
+      ],
+      "source_key": "SURAT",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "IOR/G/36 1796—99司法日记，局部商站司法事务而非城市全部被公司统治",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z027",
+      "title": "1775—1780 Broach/Bharuch公司商业及税务日志",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        72.88,
+        21.58,
+        73.12,
+        21.83
+      ],
+      "source_key": "BROACH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173372"
+      ],
+      "note": "英国图书馆IOR/G/5载1775—1780年询问与1779—80税务咨询",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z028",
+      "title": "1779—1780 Broach公司收入账目独立登记",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        72.85,
+        21.53,
+        73.18,
+        21.91
+      ],
+      "source_key": "BROACH_TAX",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000173377"
+      ],
+      "note": "原档为收入咨询记录，不代表公司已经逐地实际征服整个古吉拉特",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z029",
+      "title": "1775—1780 Broach港口与Surat贸易联络",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        72.5,
+        21,
+        73.4,
+        22.1
+      ],
+      "source_key": "BROACH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173372"
+      ],
+      "note": "商贸网络宽幅参照，不等于两港之间所有土地皆为英领",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z030",
+      "title": "1775—1799 Thana东印度公司行政日志",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.94,
+        19.12,
+        73.11,
+        19.28
+      ],
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "英国图书馆IOR/G/38保存1775—99 Thana官署日记，城镇不是整个马拉塔土地",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z031",
+      "title": "1775—1776 Thana早期公司咨询卷宗",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1776
+        }
+      ],
+      "bbox": [
+        72.9,
+        19.06,
+        73.17,
+        19.34
+      ],
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "有据商政咨询，非精确税收界线",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z032",
+      "title": "1777—1782 Thana公司驻地档案连续阶段",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        72.9,
+        19.06,
+        73.17,
+        19.34
+      ],
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "BL IOR/G/38日志内具体阶段，按现存文件年份显示",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z033",
+      "title": "1783—1787 Thana公司驻地档案继续",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1787
+        }
+      ],
+      "bbox": [
+        72.9,
+        19.06,
+        73.17,
+        19.34
+      ],
+      "source_key": "THANA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000178286"
+      ],
+      "note": "1785至1787原始咨询日记，不能据此断言相邻村社放弃自治",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z034",
+      "title": "1788—1799 Thana公司土地政务记录延续",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        72.9,
+        19.06,
+        73.17,
+        19.34
+      ],
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "英国图书馆证明至1799官署档案延续，不是精细地籍测绘",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z035",
+      "title": "1716—1756 Tellicherry英公司商站来信",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1716,
+          "end_year": 1756
+        }
+      ],
+      "bbox": [
+        75.42,
+        11.65,
+        75.57,
+        11.84
+      ],
+      "source_key": "TEL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy"
+      ],
+      "note": "英图书馆IOR/G/37记录；1757后档案缺口不等于商馆实际撤离",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z036",
+      "title": "1777—1791 Tellicherry公司海港政商日记",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1791
+        }
+      ],
+      "bbox": [
+        75.43,
+        11.65,
+        75.59,
+        11.87
+      ],
+      "source_key": "TEL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy"
+      ],
+      "note": "港市与当地马拉巴尔王国和商人关系共存",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z037",
+      "title": "1792—1793 Tellicherry公司政治咨询和书信",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1793
+        }
+      ],
+      "bbox": [
+        75.43,
+        11.66,
+        75.59,
+        11.88
+      ],
+      "source_key": "TEL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy"
+      ],
+      "note": "IOR/G/37专门政治日记，对应迈索尔战后的外交和政务",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z038",
+      "title": "1781—1784 Tellicherry与Bombay选择委员会通信",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1784
+        }
+      ],
+      "bbox": [
+        72.45,
+        11.3,
+        75.9,
+        19.6
+      ],
+      "source_key": "TEL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy"
+      ],
+      "note": "长距离通信走廊，不是英国从孟买到马拉巴尔整片行政省",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z039",
+      "title": "1770—1779 Murshidabad省财税委员会文书",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1770,
+          "end_year": 1779
+        }
+      ],
+      "bbox": [
+        88.12,
+        24.09,
+        88.46,
+        24.42
+      ],
+      "source_key": "MURSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "IOR/G/27确认为省级财政议会审计资料",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z040",
+      "title": "1770 Murshidabad印度地方官员与公司来往",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1770,
+          "end_year": 1770
+        }
+      ],
+      "bbox": [
+        88.12,
+        24.09,
+        88.46,
+        24.42
+      ],
+      "source_key": "MURSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "档案收发函件，不能将当地纳瓦卜和地主排除历史",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z041",
+      "title": "1772—1780 Patna省税收委员会报告",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        84.96,
+        25.48,
+        85.29,
+        25.78
+      ],
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "IOR/G/28含财政议会纪要，影响周围县的税权未实测",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z042",
+      "title": "1779—1780 Patna税务上诉法院文书",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1780
+        }
+      ],
+      "bbox": [
+        84.91,
+        25.43,
+        85.36,
+        25.81
+      ],
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "公司主持税收上诉，但不代表每地在法律及文化上被同化",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z043",
+      "title": "1781—1782 Patna公司货运与账单记录",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "bbox": [
+        84.94,
+        25.46,
+        85.34,
+        25.82
+      ],
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "实物账目与地方财政网络往来",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z044",
+      "title": "1763年Patna屠杀档案中对暴力的记述",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "bbox": [
+        84.88,
+        25.39,
+        85.41,
+        25.87
+      ],
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "英国图书馆保存有关屠杀叙述，参与方责任与受害者人数尚待专题逐证，不在地图推断",
+      "marker": true,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-Z045",
+      "title": "1700—1799 Bombay公司海港与波斯湾商路",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "bbox": [
+        49,
+        17.5,
+        74.1,
+        29.8
+      ],
+      "source_key": "ARMY",
+      "source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "note": "连接印度洋和波斯湾的航路位置示意，非英国海权疆域",
+      "marker": false,
+      "geometry_precision": "unsurveyed_editorial_reference_bbox",
+      "precise_historic_border": false,
+      "uncertain_line_dashed": true,
+      "territorial_control_verified": false,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null
+    }
+  ],
+  "sites": [
+    {
+      "id": "B39-G-P001",
+      "title": "1763年4月12日Bushire英东印度公司Residency开办",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1768
+        }
+      ],
+      "coordinates": [
+        50.83,
+        28.965
+      ],
+      "linked_zone_id": "B39-G-Z001",
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "布什尔地方谢赫签贸易协定，英国设商政驻地；不能推断英方占领波斯领土",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P002",
+      "title": "1763年Bushire英公司与当地Shaikh贸易协定",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        50.82,
+        28.98
+      ],
+      "linked_zone_id": "B39-G-Z002",
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "英国图书馆IOR/R/15/1/1-5明确记载1763年4月12日设驻地，依据双方贸易协议",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P003",
+      "title": "1763—1768Bushire港内商船与贸易货栈",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1768
+        }
+      ],
+      "coordinates": [
+        50.86,
+        28.990000000000002
+      ],
+      "linked_zone_id": "B39-G-Z003",
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "贸易影响属于海岸和地方政治关系，不代表对港城的军事控制",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P004",
+      "title": "1769—1774Bushire Residency临时停办",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1774
+        }
+      ],
+      "coordinates": [
+        50.849999999999994,
+        28.990000000000002
+      ],
+      "linked_zone_id": "B39-G-Z004",
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "图书馆记载1769至1775年因贸易和政治恶化暂时停办，空心图示中断",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P005",
+      "title": "1775年后Bushire英国公司驻地重开",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        50.855,
+        29.005000000000003
+      ],
+      "linked_zone_id": "B39-G-Z005",
+      "source_key": "BUSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?per_page=20&q=037-000227428&sort=date"
+      ],
+      "note": "恢复商政通讯，不属于英国正式殖民行政省",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P007",
+      "title": "1763英国Resident Benjamin Jervis与地方贸易谈判",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        50.82,
+        28.98
+      ],
+      "linked_zone_id": "B39-G-Z007",
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "1763年原始函件记录对Mir Muhanna和Zand政治势力的分析",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P009",
+      "title": "1798年Bushire本地Agent Mirza Mehdi Ali Khan",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        50.855,
+        29.005000000000003
+      ],
+      "linked_zone_id": "B39-G-Z009",
+      "source_key": "BUSH2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance"
+      ],
+      "note": "英国图书馆IOR/R/15/1/5记载1798年10月起代理驻地事务",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P010",
+      "title": "1708—1710 Gombroon/Bandar Abbas英商日记",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1708,
+          "end_year": 1710
+        }
+      ],
+      "coordinates": [
+        56.285,
+        27.200000000000003
+      ],
+      "linked_zone_id": "B39-G-Z010",
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "英国图书馆IOR/G/29载Gombroon商馆1708—1710年日记",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P011",
+      "title": "1726—1763 Gombroon/Bandar Abbas贸易日记时期",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1726,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        56.285,
+        27.200000000000003
+      ],
+      "linked_zone_id": "B39-G-Z011",
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "按有据日记年份提示港口商业联系，不能认为每年有英军驻守",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P014",
+      "title": "1703—1762 Basra东印度公司通信业务",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1703,
+          "end_year": 1762
+        }
+      ],
+      "coordinates": [
+        47.805,
+        30.525
+      ],
+      "linked_zone_id": "B39-G-Z014",
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "档案有来自巴士拉与Gombroon的公司通信，港城仍属当地政权",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P015",
+      "title": "1763—1790 Basra英商代理贸易和账目",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1790
+        }
+      ],
+      "coordinates": [
+        47.81,
+        30.54
+      ],
+      "linked_zone_id": "B39-G-Z015",
+      "source_key": "PERSIA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
+      ],
+      "note": "波斯湾原始商馆档案，不是英国在两河流域取得领土",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P016",
+      "title": "1791—1794 Basra公司与Baghdad Pasha冲突",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1794
+        }
+      ],
+      "coordinates": [
+        47.815,
+        30.515
+      ],
+      "linked_zone_id": "B39-G-Z016",
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "BL IOR/G/29/32载因巴格达帕夏与英代理争端，贸易据点发生调整",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P017",
+      "title": "1790年代Basra公司Factory撤出向Grain转移",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        47.815,
+        30.495
+      ],
+      "linked_zone_id": "B39-G-Z017",
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "原档未确定每一步确切年份，仅作为1790年代迁移参考，不能画英军控制巴士拉",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P018",
+      "title": "1790年代Grain/Kuwait收容公司交易站",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        48,
+        29.375
+      ],
+      "linked_zone_id": "B39-G-Z018",
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "档案提及Bussora商站迁往Grain即今科威特，起止只是十年末保守时段",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P020",
+      "title": "1798 Baghdad东印度公司政治Residency成立",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        44.41,
+        33.33
+      ],
+      "linked_zone_id": "B39-G-Z020",
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "英国图书馆明确1798年设驻地，Harford Jones任Resident；奥斯曼地方政府继续存在",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P021",
+      "title": "1798 Baghdad公司Resident Harford Jones往来",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        44.42,
+        33.34
+      ],
+      "linked_zone_id": "B39-G-Z021",
+      "source_key": "BASRA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/041-000177265"
+      ],
+      "note": "贸易外交人员活动，不是英国占领巴格达",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P023",
+      "title": "1700—1704 Surat英国公司商馆和往来文件",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1704
+        }
+      ],
+      "coordinates": [
+        72.84,
+        21.16
+      ],
+      "linked_zone_id": "B39-G-Z023",
+      "source_key": "SURAT",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "英国图书馆IOR/G/36保留1700—1704年公司询问记录",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P024",
+      "title": "1718—1799 Surat公司商馆日记咨询业务",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1718,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        72.845,
+        21.16
+      ],
+      "linked_zone_id": "B39-G-Z024",
+      "source_key": "SURAT",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "档案记录延续至1804，英商馆并非获得整个Gujarat治权",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P026",
+      "title": "1796—1799 Surat公司商馆司法日记",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        72.845,
+        21.16
+      ],
+      "linked_zone_id": "B39-G-Z026",
+      "source_key": "SURAT",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "IOR/G/36 1796—99司法日记，局部商站司法事务而非城市全部被公司统治",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P027",
+      "title": "1775—1780 Broach/Bharuch公司商业及税务日志",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        73,
+        21.705
+      ],
+      "linked_zone_id": "B39-G-Z027",
+      "source_key": "BROACH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173372"
+      ],
+      "note": "英国图书馆IOR/G/5载1775—1780年询问与1779—80税务咨询",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P028",
+      "title": "1779—1780 Broach公司收入账目独立登记",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        73.015,
+        21.72
+      ],
+      "linked_zone_id": "B39-G-Z028",
+      "source_key": "BROACH_TAX",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000173377"
+      ],
+      "note": "原档为收入咨询记录，不代表公司已经逐地实际征服整个古吉拉特",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P030",
+      "title": "1775—1799 Thana东印度公司行政日志",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        73.025,
+        19.200000000000003
+      ],
+      "linked_zone_id": "B39-G-Z030",
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "英国图书馆IOR/G/38保存1775—99 Thana官署日记，城镇不是整个马拉塔土地",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P031",
+      "title": "1775—1776 Thana早期公司咨询卷宗",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1776
+        }
+      ],
+      "coordinates": [
+        73.035,
+        19.2
+      ],
+      "linked_zone_id": "B39-G-Z031",
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "有据商政咨询，非精确税收界线",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P032",
+      "title": "1777—1782 Thana公司驻地档案连续阶段",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        73.035,
+        19.2
+      ],
+      "linked_zone_id": "B39-G-Z032",
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "BL IOR/G/38日志内具体阶段，按现存文件年份显示",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P033",
+      "title": "1783—1787 Thana公司驻地档案继续",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1787
+        }
+      ],
+      "coordinates": [
+        73.035,
+        19.2
+      ],
+      "linked_zone_id": "B39-G-Z033",
+      "source_key": "THANA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-000178286"
+      ],
+      "note": "1785至1787原始咨询日记，不能据此断言相邻村社放弃自治",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P034",
+      "title": "1788—1799 Thana公司土地政务记录延续",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "coordinates": [
+        73.035,
+        19.2
+      ],
+      "linked_zone_id": "B39-G-Z034",
+      "source_key": "THANA2",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=5&per_page=20&sort=date"
+      ],
+      "note": "英国图书馆证明至1799官署档案延续，不是精细地籍测绘",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P035",
+      "title": "1716—1756 Tellicherry英公司商站来信",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1716,
+          "end_year": 1756
+        }
+      ],
+      "coordinates": [
+        75.495,
+        11.745000000000001
+      ],
+      "linked_zone_id": "B39-G-Z035",
+      "source_key": "TEL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy"
+      ],
+      "note": "英图书馆IOR/G/37记录；1757后档案缺口不等于商馆实际撤离",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P036",
+      "title": "1777—1791 Tellicherry公司海港政商日记",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1791
+        }
+      ],
+      "coordinates": [
+        75.51,
+        11.76
+      ],
+      "linked_zone_id": "B39-G-Z036",
+      "source_key": "TEL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy"
+      ],
+      "note": "港市与当地马拉巴尔王国和商人关系共存",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P037",
+      "title": "1792—1793 Tellicherry公司政治咨询和书信",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1793
+        }
+      ],
+      "coordinates": [
+        75.51,
+        11.77
+      ],
+      "linked_zone_id": "B39-G-Z037",
+      "source_key": "TEL",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?q=036-000178267&sort=hierarchy"
+      ],
+      "note": "IOR/G/37专门政治日记，对应迈索尔战后的外交和政务",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P039",
+      "title": "1770—1779 Murshidabad省财税委员会文书",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1770,
+          "end_year": 1779
+        }
+      ],
+      "coordinates": [
+        88.28999999999999,
+        24.255000000000003
+      ],
+      "linked_zone_id": "B39-G-Z039",
+      "source_key": "MURSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "IOR/G/27确认为省级财政议会审计资料",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P040",
+      "title": "1770 Murshidabad印度地方官员与公司来往",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1770,
+          "end_year": 1770
+        }
+      ],
+      "coordinates": [
+        88.28999999999999,
+        24.255000000000003
+      ],
+      "linked_zone_id": "B39-G-Z040",
+      "source_key": "MURSH",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "档案收发函件，不能将当地纳瓦卜和地主排除历史",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P041",
+      "title": "1772—1780 Patna省税收委员会报告",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        85.125,
+        25.630000000000003
+      ],
+      "linked_zone_id": "B39-G-Z041",
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "IOR/G/28含财政议会纪要，影响周围县的税权未实测",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P042",
+      "title": "1779—1780 Patna税务上诉法院文书",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1780
+        }
+      ],
+      "coordinates": [
+        85.13499999999999,
+        25.619999999999997
+      ],
+      "linked_zone_id": "B39-G-Z042",
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "公司主持税收上诉，但不代表每地在法律及文化上被同化",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P043",
+      "title": "1781—1782 Patna公司货运与账单记录",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "coordinates": [
+        85.14,
+        25.64
+      ],
+      "linked_zone_id": "B39-G-Z043",
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "实物账目与地方财政网络往来",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    },
+    {
+      "id": "B39-G-P044",
+      "title": "1763年Patna屠杀档案中对暴力的记述",
+      "kind": "coercion",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1763
+        }
+      ],
+      "coordinates": [
+        85.145,
+        25.630000000000003
+      ],
+      "linked_zone_id": "B39-G-Z044",
+      "source_key": "PATNA",
+      "source_urls": [
+        "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
+      ],
+      "note": "英国图书馆保存有关屠杀叙述，参与方责任与受害者人数尚待专题逐证，不在地图推断",
+      "location_confidence": "proxy_region_centre",
+      "historical_city_wall_survey": false,
+      "screen_radius_not_ground_area": true,
+      "area_sqkm": null
+    }
+  ]
+}
