@@ -31,6 +31,8 @@ assert(js.includes("get('review18c')!=='1'"),'only 18C study map can intercept')
 assert(!js.includes('reader18c'), 'no separate reader mode');
 assert(!html.includes('eighteenth-reader-overlap-pilot.js')&&!html.includes('reader18c=1'));
 assert(js.includes("map.getContainer().addEventListener('click',captureMapClick,true)"));
+assert(js.includes("map.on('click',ev=>"));
+assert(js.includes("'map-background-overlap'"));
 assert(js.includes('map.mouseEventToLatLng(e)'));
 assert(js.includes('const polygonInside=('));
 assert(js.includes("function showCollection")===false);
