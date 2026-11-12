@@ -209,7 +209,8 @@
  // directly inspectable, without demanding a pixel-perfect stroke click.
  map.on('click',ev=>{
   if(!enabled()||ev.originalEvent?.target?.closest?.('.leaflet-marker-icon,.leaflet-popup'))return;
-  if(at(ev.latlng).length>1)openAt(ev.latlng,'transparent-overlap');
+  const matches=at(ev.latlng);
+  if(matches.length)openAt(ev.latlng,matches.length>1?'transparent-overlap':'transparent-single');
  });
  // Do not leave historic hover focus behind after a normal story is opened.
  new MutationObserver(()=>{
