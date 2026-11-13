@@ -1599,7 +1599,7 @@ function renderTenthLandRaidImpactAreas(){
    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    const currentFeature=stage?{...feature,properties:{...p,name:stage.title,
     summary_zh:stage.summary_zh,source_ids:stage.source_ids}}:feature;
-   openTerritoryDossier(currentFeature,stage?'land-dispossession':'invasion-impact');
+   openTerritoryDossier(currentFeature,land?'land-dispossession':'invasion-impact');
   };
   if(lowZoom){
    const ring=feature.geometry.coordinates[0].slice(0,-1);
