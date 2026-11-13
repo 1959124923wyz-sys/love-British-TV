@@ -509,7 +509,7 @@ try:
               document.querySelector('#dossierBody .source-details a.source-link[href]')!==null &&
               window.AtlasPublicCopyGuard.visibleWarnings().length===0""",driver)
     click_map_path("#map .atlas-contested-zone")
-    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
+    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('战争争夺') && document.querySelector('#dossierBody .zone-dossier-facts')!==null"))
     verify("contested zone has no related evidence/campaign records",
            """!document.querySelector('#dossierBody .zone-precision-note') &&
               document.querySelectorAll('#dossierBody [data-zone-event]').length>0 &&
