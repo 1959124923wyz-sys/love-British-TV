@@ -534,7 +534,7 @@ function renderEventList(){
    '地图动态事件：'+range+' · 共'+windowEvents.length+'项，'+windowEvents.filter(e=>canLocateEvent(e,year)).length+'项可定位';
   $('clearSeventeenthEventSearch').hidden=!query;
   $('seventeenthSearchStatus').textContent=query||onlyYear||fullArchive?
-   '显示 '+visibleEvents.length+' / '+events.length+' 项'+(onlyYear?' · 仅'+year+'年':'')+(query?' · 搜索结果':'')+(fullArchive?' · 完整档案预览':''):
+   '显示 '+visibleEvents.length+' / '+events.length+' 项'+(onlyYear?' · 仅'+year+'年':'')+(query?' · 搜索结果':'')+(fullArchive?' · 完整档案':''):
    range+' · '+events.length+'项已入库事件';
  }
  const hint=$('yearArrivalSummary');
@@ -578,7 +578,7 @@ function focusEventFromSidebar(item){
  focusRequestToken++;
  focusedEventId=null;
  if(!canLocateEvent(item,year)){
-  const note=!occurredByYear(item,year)?'请先将时间轴移至事件发生年份。':'此事件位置尚未核实，无法地图定位。';
+  const note=!occurredByYear(item,year)?'请先将时间轴移至事件发生年份。':'暂无地图位置。';
   if(!options.keepDossier)$('dossierBody').insertAdjacentHTML('beforeend','<p class="atlas-location-note">'+escapeHTML(note)+'</p>');
   renderPoints();
   return;
@@ -2137,7 +2137,7 @@ function renderTimelineNavigation(){
   const onMap=!!chapter&&year>=from&&year<=to;
   return '<button type="button" class="chapter-segment'+(published?' published':partial?' published partial-century':preview?' published topic-preview':' unpublished')+
     (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
-    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:partial?'浏览'+from+'—'+to+'年已入库事件':preview?'浏览已核证的专题年表':'此十年无已发布年表')+'">'+
+    '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:partial?'浏览'+from+'—'+to+'年已入库事件':preview?'浏览专题年表':'此十年无已发布年表')+'">'+
     '<span>'+(chapter&&(published||partial||preview)?'第'+chapter.number+'章':'尚未发布')+'</span>'+
     '<small>'+from+'—'+to+(chapter&&(published||partial||preview)?' · '+escapeHTML(chapter.label):' · 尚未发布')+'</small></button>';
  }).join('');
@@ -2179,7 +2179,7 @@ function setYear(v){
   const changed=next!==year;
   if(selectedItemYear!==null&&selectedItemYear>next){
    selected='';selectedItemYear=null;
-   $('dossierBody').innerHTML='<div class="dossier-kicker">历史专题 · '+next+'年</div><h2>当年历史</h2><p>请选择已核证的历史记录。</p>';
+   $('dossierBody').innerHTML='<div class="dossier-kicker">历史专题 · '+next+'年</div><h2>当年历史</h2><p>请选择一条历史记录。</p>';
   }
   focusedEventId=null;focusRequestToken++;
   if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
