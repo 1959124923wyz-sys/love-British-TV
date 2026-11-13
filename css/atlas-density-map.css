@@ -1,0 +1,47 @@
+/* Atlas 52: light, reversible display-density treatment.
+ * These rules change only paint opacity. No hidden elements, blocked pointer
+ * targets, geometry changes, clipping or loss of source records.
+ * True occupation sites and selected glow outlines are never dimmed.
+ */
+#map.atlas-density-wide :is(
+ path.atlas-17c-expansive-claim,
+ path.atlas-18c-dynamic-area,
+ path.atlas-18c-mass-zone,
+ path.atlas-18c-b36-zone,
+ path.atlas-18c-b37-zone,
+ path.atlas-18c-b38-zone,
+ path.atlas-18c-b39-zone
+){
+ stroke-opacity:.44 !important;
+ fill-opacity:.016 !important;
+}
+#map.atlas-density-regional :is(
+ path.atlas-17c-expansive-claim,
+ path.atlas-18c-dynamic-area,
+ path.atlas-18c-mass-zone,
+ path.atlas-18c-b36-zone,
+ path.atlas-18c-b37-zone,
+ path.atlas-18c-b38-zone,
+ path.atlas-18c-b39-zone
+){
+ stroke-opacity:.72 !important;
+ fill-opacity:.04 !important;
+}
+/* Give readers a clear target under the pointer without changing hit geometry. */
+#map.atlas-density-wide :is(
+ path.atlas-17c-expansive-claim,
+ path.atlas-18c-dynamic-area,
+ path.atlas-18c-mass-zone,
+ path.atlas-18c-b36-zone,
+ path.atlas-18c-b37-zone,
+ path.atlas-18c-b38-zone,
+ path.atlas-18c-b39-zone
+):hover{
+ stroke-opacity:.94 !important;
+ fill-opacity:.08 !important;
+}
+/* Keep the selected source zone obvious at all zoom levels. */
+#map .atlas-18c-overlap-glow,
+#map .atlas-18c-overlap-halo{
+ stroke-opacity:1 !important;
+}

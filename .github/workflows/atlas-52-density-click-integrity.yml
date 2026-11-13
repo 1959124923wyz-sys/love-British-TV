@@ -1,0 +1,57 @@
+name: Atlas 52 desktop density and click integrity
+on:
+  push:
+    branches: [ux/atlas-52-zoom-density-complete-selection-20261113]
+  pull_request:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'css/atlas-density-map.css'
+      - 'js/atlas-density-policy.js'
+      - 'scripts/browser_atlas_52_density_selection.py'
+      - 'scripts/test_atlas_52_density_policy.js'
+      - '.github/workflows/atlas-52-density-click-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source syntax, point grouping, old map selection and public copy
+        run: |
+          node --check app.js
+          node --check js/atlas-density-policy.js
+          node scripts/test_atlas_52_density_policy.js
+          node scripts/test_atlas_44_single_area_clean_ui.js
+          node scripts/test_atlas_46_copy_click.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+          python3 -m py_compile scripts/browser_atlas_52_density_selection.py
+  desktop:
+    needs: contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: 1780x1020 desktop zoom grouping and real mouse selection
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas52-http.log 2>&1 &
+          python3 scripts/browser_atlas_52_density_selection.py
+          python3 scripts/browser_atlas_44_single_area_click.py
+          python3 scripts/browser_atlas_46_real_pointer.py
+          python3 scripts/browser_atlas_49_symbol_click.py
+      - name: Retain full-size desktop screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas52-zoom-density-click-evidence
+          path: browser-smoke-results/
+          if-no-files-found: ignore
