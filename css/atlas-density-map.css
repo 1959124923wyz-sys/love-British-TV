@@ -27,6 +27,19 @@
  stroke-opacity:.72 !important;
  fill-opacity:.04 !important;
 }
+/* Give readers a clear target under the pointer without changing hit geometry. */
+#map.atlas-density-wide :is(
+ path.atlas-17c-expansive-claim,
+ path.atlas-18c-dynamic-area,
+ path.atlas-18c-mass-zone,
+ path.atlas-18c-b36-zone,
+ path.atlas-18c-b37-zone,
+ path.atlas-18c-b38-zone,
+ path.atlas-18c-b39-zone
+):hover{
+ stroke-opacity:.94 !important;
+ fill-opacity:.08 !important;
+}
 /* Keep the selected source zone obvious at all zoom levels. */
 #map .atlas-18c-overlap-glow,
 #map .atlas-18c-overlap-halo{
