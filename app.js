@@ -622,7 +622,7 @@ function expandCluster(group,pin=false){
  const items=group.items,count=items.length;
  // Never fan dozens of icons into a screen-filling grid. Show a scrollable
  // chronological record list instead; all records and event provenance remain.
- if(count>8&&!(focusedEventId&&items.some(x=>x.item.id===focusedEventId))){
+ if(count>8||(map.getZoom()<=4&&pin)){
   if(pin)openCollection(items,'该地区的'+count+'项历史记录');
   return;
  }
@@ -678,8 +678,14 @@ function renderPoints(){
  // Screen-space regrouping restores compact anchor markers on year/zoom/layer changes.
  closeCluster();
  for(const name of ['event','candidate','routes','claim','place','cluster'])groups[name].clearLayers();
+ // All eligible positioned events participate in grouping at every zoom.
  const shown=[];
- const showAll=map.getZoom()>=6||$('toggleMinorEvents').checked||(year>=1600&&eventWindowMode17c==='rolling4');
+ const densityPolicy=window.AtlasDensityPolicy;
+ const densityMode=densityPolicy?.modeForZoom(map.getZoom())||'regional';
+ const mapNode=map.getContainer();
+ for(const mode of ['wide','regional','local']){
+  mapNode.classList.toggle('atlas-density-'+mode,densityMode===mode);
+ }
  if($('toggleEvents').checked||focusedEventId){
   for(const e of (year>=1600?seventeenthEventsForWindow(year):atlas.events)){
    if(!occurredByYear(e,year))continue;
@@ -687,7 +693,6 @@ function renderPoints(){
    if(!$('toggleEvents').checked&&e.id!==focusedEventId)continue;
    if(e.category==='status'&&e.id!==focusedEventId)continue;
    if(e.category==='claim'&&!$('toggleClaims').checked&&e.id!==focusedEventId)continue;
-   if(levelOf(e)===1&&!showAll&&e.id!==focusedEventId&&!e.map_priority&&!isNewEventThisYear(e))continue;
    shown.push({item:e,type:'event',lat:e.lat,lng:e.lng});
   }
  }
@@ -705,7 +710,7 @@ function renderPoints(){
  // Aggregate by screen distance, without changing the historically stored coordinates.
  // At world scale 17C accumulated events form a dense Atlantic icon wall.
  // Merge within a slightly larger SCREEN radius; do not alter source coordinates.
- const clusterRadius=year>=1600&&map.getZoom()<=4?56:32;
+ const clusterRadius=densityPolicy?.radiusForZoom(map.getZoom())??32;
  const nearby=[],cells=new Map(),cellSize=clusterRadius;
  // Spatial hashing limits grouping checks to neighboring 32-pixel cells.
  for(const record of shown.sort((a,b)=>levelOf(b.item)-levelOf(a.item)||a.item.id.localeCompare(b.item.id))){
@@ -728,6 +733,19 @@ function renderPoints(){
   const at=map.latLngToContainerPoint(g.latlng);
   return {x:at.x,y:at.y,key:g.items.map(x=>x.item.id).sort().join('|')};
  });
+ // QA: source records entering the point renderer must be preserved 1:1
+ // in cluster membership, irrespective of historical importance.
+ const densityAudit=Object.freeze({
+  year,zoom:map.getZoom(),mode:densityMode,
+  qualifiedRecords:shown.length,
+  groupedRecords:nearby.reduce((sum,g)=>sum+g.items.length,0),
+  hubCount:nearby.length,
+  clusterCount:nearby.filter(g=>g.items.length>1).length,
+  singletonCount:nearby.filter(g=>g.items.length===1).length,
+  unlocatedCurrentEvents:atlas.events.filter(e=>occurredByYear(e,year)&&
+   (!Number.isFinite(e.lat)||!Number.isFinite(e.lng))).length
+ });
+ window.atlasDensityAudit=()=>densityAudit;
  for(const g of nearby){
   if(g.items.length===1){
    const record=g.items[0],item=record.item;
@@ -747,8 +765,7 @@ function renderPoints(){
   // dotted uncertainty cue. Mixed hubs are not surveyed historical sites.
   const ico=L.divIcon({className:'',html:'<div class="atlas-aggregate'+(important?' key':'')+(containsUncertain?' atlas-cluster-uncertain':'')+(newCount?' atlas-cluster-new-this-year':'')+(g.items.some(x=>x.item.id===focusedEventId)?' atlas-target-aggregate':'')+'" aria-label="'+g.items.length+'项历史记录'+(newCount?'，其中本年新增'+newCount+'项':'')+(containsUncertain?'，包含大致位置参考':'')+'"><strong>'+g.items.length+'</strong>'+(newCount?'<span class="atlas-cluster-new-count" aria-hidden="true">+'+newCount+'新</span>':'')+'</div>',iconSize:[36,36],iconAnchor:[18,18]});
   L.marker(g.latlng,{icon:ico,zIndexOffset:950})
-   .on('mouseover',()=>{if(g.items.length<=8&&(!expandedPinned||activeClusterKey===g.items.map(x=>x.item.id).sort().join('|')))expandCluster(g)})
-   .on('mouseout',scheduleClusterClose)
+   // No hover flyouts: only a deliberate click expands a small group.
    .on('click',()=>expandCluster(g,true))
    .addTo(groups.cluster);
  }
@@ -3939,7 +3956,9 @@ map.on('resize',()=>{if(atlas)renderPoints()});
 map.getContainer().addEventListener('click',event=>{
  if(!atlas)return;
  const t=event.target;
- if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.atlas-17c-expansive-claim,.atlas-18c-dynamic-area,.atlas-18c-dynamic-core,.atlas-18c-mass-zone,.atlas-18c-mass-core,.atlas-18c-b36-zone,.atlas-18c-b36-site,.atlas-18c-b37-zone,.atlas-18c-b37-site,.atlas-18c-b38-zone,.atlas-18c-b38-site,.atlas-18c-b39-zone,.atlas-18c-b39-site,.atlas-local-english-garrison,.atlas-french-counterfort,.atlas-voyage-hit,.atlas-tenth-port-raid-impact'))return;
+ // SVG layers have their own historical click handlers. This background
+ // coordinate fallback must never pre-empt an independent symbol.
+ if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.leaflet-interactive'))return;
  openMapTerritoryAt(map.mouseEventToLatLng(event));
 },true);
 map.on('click',()=>{if(activeClusterKey)closeCluster()});
