@@ -60,6 +60,8 @@ assert.ok(region.includes("!$('toggleTerritorialFootprints').checked")&&region.i
 assert.ok(!region.includes('area_sqkm>0')&&!region.includes('calculateArea'));
 assert.ok(app.includes('tenthInvasionImpactAreas=await impactResponse.json()'));
 assert.ok(app.includes('renderTenthInvasionImpactAreas();'));
+assert.ok(app.includes("openTerritoryDossier(currentFeature,land?'land-dispossession':'invasion-impact')"),
+ 'Staged port raids must retain military category; only land policy may use dispossession dossier');
 assert.ok(app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener")).includes('renderTenthInvasionImpactAreas();'), 'Impact areas must refresh on territory checkbox without changing year');
 assert.ok(app.includes("invasionImpact?'英军入侵'"));
 assert.ok(app.includes('[atlas,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth'));
