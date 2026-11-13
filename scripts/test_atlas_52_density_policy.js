@@ -27,6 +27,8 @@ assert(mapApp.includes("if(count>8||(map.getZoom()<=4&&pin))"),
 assert(mapApp.includes('window.atlasDensityAudit=()=>densityAudit'),
  'auditable member conservation is mandatory');
 assert(mapApp.includes('groupedRecords:nearby.reduce((sum,g)=>sum+g.items.length,0)'));
+assert(mapApp.includes('eligibleKeys:Object.freeze(shown.map('));
+assert(mapApp.includes('groupedKeys:Object.freeze(nearby.flatMap('));
 assert(!mapApp.includes("on('mouseover',()=>{if(g.items.length<=8"),
  'moving mouse across dense hubs must not spray flyout icons');
 assert(mapApp.includes("if(t?.closest?.('.leaflet-marker-icon,.leaflet-control-container,.leaflet-popup,.leaflet-tooltip,.leaflet-interactive'))return"),
