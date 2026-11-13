@@ -1,0 +1,35 @@
+{
+  "schema": "19c-research-v2-staging-manifest",
+  "date": "2026-11-12",
+  "stage": "research_only_not_published",
+  "input_archive": "爱英TV_19世纪三助手史料整合_210篇故事_V1.zip",
+  "sha256_input_archive": "fa4b75c5b167392192917d30c899f2a0024741b72ff64e523af3e642380289d0",
+  "counts": {
+    "raw_topics": 408,
+    "prior_editorial_stories": 210,
+    "macro_topics": 83,
+    "provisional_aggregated_event_blocks": 532,
+    "original_evidence_nodes": 1339,
+    "source_reference_links": 2148,
+    "source_links_resolved": 2148,
+    "merge_review_pairs": 85,
+    "standalone_action_review_queue": 346,
+    "evidence_only_blocks": 15,
+    "post1899_or_later_record_nodes": 21,
+    "approved_map_polygons": 0,
+    "published_stories": 0
+  },
+  "required_local_files": [
+    "macro_topics.json",
+    "aggregated_events_candidates.json",
+    "historical_evidence_nodes.json",
+    "qa_summary.json",
+    "editorial_review_queue.csv"
+  ],
+  "meaning": "This manifest records locally exported V2 research-only files. The full source records have not been imported to GitHub and cannot be considered published. Human editor + GIS approval needed before Atlas integration.",
+  "repository_entrypoints": [
+    "docs/research/19C_THREE_LEVEL_EVENT_MODEL_20261112.md",
+    "data/research/19c/three-level-contract-v1.json",
+    "scripts/test_19c_three_level_release_gate.js"
+  ]
+}
