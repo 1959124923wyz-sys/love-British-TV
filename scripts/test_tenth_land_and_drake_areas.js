@@ -85,7 +85,7 @@ assert.ok(r.includes('f.properties')||r.includes('const p=f.properties'));
 assert.ok(r.includes("atlas-tenth-land-policy-impact")&&r.includes("atlas-tenth-port-raid-impact"));
 assert.ok(r.includes('year_stages?.find(item=>year>=item.start_year&&year<=item.end_year)'));
 assert.ok(r.includes("source_ids:stage.source_ids"),'Pre-1586 dossiers must not cite future legislation');
-assert.ok(r.includes("openTerritoryDossier(currentFeature,stage?'land-dispossession':'invasion-impact')"));
+assert.ok(r.includes("openTerritoryDossier(currentFeature,land?'land-dispossession':'invasion-impact')"));
 assert.ok(app.includes("renderTenthLandRaidImpactAreas();"));
 assert.ok(app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener")).includes('renderTenthLandRaidImpactAreas();'));
 assert.ok(app.includes("tenthLandRaidAreas=await extractionResponse.json()"));
