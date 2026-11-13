@@ -21,14 +21,14 @@ require("function expandCluster(group,pin=false)" in app,
         "open-on-demand multi-event cluster")
 require("atlas-aggregate" in app and "groups.clusterExpanded.clearLayers()" in app,
         "compact count hub and mutually exclusive expansion")
-# 2026-11-02 user-approved correction: small clusters still expand on hover,
-# but 9+ accumulated 17C records must open a readable dossier list on click.
-require((".on('mouseover',()=>{if(!expandedPinned" in app
-         or ".on('mouseover',()=>{if(g.items.length<=8" in app)
-        and ".on('click',()=>expandCluster(g,true))" in app,
-        "small cluster hover and all cluster click remain accessible")
-require("if(count>8&&" in app and "if(pin)openCollection(items," in app,
-        "dense cluster opens a scrollable list rather than an icon wall")
+# 2026-11-13 desktop density revision: preserve every record in a click-target
+# cluster, but suppress hover-triggered icon walls at wide zoom.
+require(".on('click',()=>expandCluster(g,true))" in app and
+        ".on('mouseover',()=>{if(g.items.length<=8" not in app,
+        "all cluster clicks remain accessible without hover icon explosions")
+require("if(count>8||(map.getZoom()<=4&&pin))" in app and
+        "if(pin)openCollection(items," in app,
+        "worldwide and dense cluster clicks show the complete right dossier list")
 require("if(activeClusterKey)closeCluster()" in app
         and ("map.on('click',e=>{" in app or "map.on('click',()=>{" in app)
         and (("openMapTerritoryAt(e.latlng)" in app) or
