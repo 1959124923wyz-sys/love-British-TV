@@ -739,6 +739,8 @@ function renderPoints(){
   year,zoom:map.getZoom(),mode:densityMode,
   qualifiedRecords:shown.length,
   groupedRecords:nearby.reduce((sum,g)=>sum+g.items.length,0),
+  eligibleKeys:Object.freeze(shown.map(r=>r.type+':'+r.item.id).sort()),
+  groupedKeys:Object.freeze(nearby.flatMap(g=>g.items.map(r=>r.type+':'+r.item.id)).sort()),
   hubCount:nearby.length,
   clusterCount:nearby.filter(g=>g.items.length>1).length,
   singletonCount:nearby.filter(g=>g.items.length===1).length,
