@@ -714,7 +714,7 @@ try:
     verify("occupied zone disappeared after actual wheel zoom",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     print("CLICK_CONTESTED",real_map_area_click("#map .atlas-contested-zone"),flush=True)
-    wait.until(lambda d:"交战与争夺区" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d:d.execute_script("return document.querySelector(\'#dossierBody .dossier-kicker\')?.textContent.includes(\'战争争夺\') && !!document.querySelector(\'#dossierBody .source-details\')"))
     # Zoom toward the documented Broughty stronghold for a meaningful area
     # target (at low zoom these tiny locality references are subpixel).
     driver.execute_script("""
@@ -736,7 +736,7 @@ try:
     # visually prominent garrison circles. The purple circle must provide the
     # same territorial introduction without falsifying the underlying geometry.
     print("CLICK_OCCUPIED_RING",real_map_area_click("#map .atlas-garrison-hit"),flush=True)
-    wait.until(lambda d:"英军驻地附近概略控制区" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d:d.execute_script("return document.querySelector(\'#dossierBody .dossier-kicker\')?.textContent.includes(\'英军驻地\') && !!document.querySelector(\'#dossierBody .source-details\')"))
     verify("actually clicked occupied zone did not disclose historical source",
            "document.querySelector('#dossierBody .source-details')!==null",driver)
     verify("year card was recreated after zoom",
