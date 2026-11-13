@@ -496,16 +496,18 @@ try:
         """,selector)
     click_map_path("#map .atlas-violet-wartime-vicinity")
     wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody .zone-dossier-facts')!==null"))
-    verify("occupied zone dossier has no precision warning or dated source",
-           """document.querySelector('#dossierBody').textContent.includes('英军驻地附近概略控制区') &&
+    verify("occupied zone dossier keeps historic facts and primary sources without editor commentary",
+           """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('英军驻地') &&
+              document.querySelector('#dossierBody .zone-dossier-facts')!==null &&
+              document.querySelector('#dossierBody .source-details a.source-link[href]')!==null &&
               !document.querySelector('#dossierBody .zone-precision-note') &&
-              document.querySelector('#dossierBody .source-details')!==null &&
-              document.querySelectorAll('#dossierBody .zone-record-link').length>0""",driver)
+              window.AtlasPublicCopyGuard.visibleWarnings().length===0""",driver)
     click_map_path("#map .atlas-war-reach-schematic")
-    verify("PR38 military reach must disclose non-annexation and sources",
-           """document.querySelector('#dossierBody').textContent.includes('有据军事行动方向示意') &&
+    verify("military movement details retain sources without cartographic disclaimers",
+           """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('军事行动') &&
               !document.querySelector('#dossierBody .zone-editorial-warning') &&
-              document.querySelector('#dossierBody .source-details')!==null""",driver)
+              document.querySelector('#dossierBody .source-details a.source-link[href]')!==null &&
+              window.AtlasPublicCopyGuard.visibleWarnings().length===0""",driver)
     click_map_path("#map .atlas-contested-zone")
     wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
     verify("contested zone has no related evidence/campaign records",
