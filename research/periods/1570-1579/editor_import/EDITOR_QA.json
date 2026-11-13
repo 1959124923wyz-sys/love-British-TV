@@ -1,0 +1,61 @@
+{
+  "schema": "ch09_third_archival_review_QA_v1",
+  "date": "2026-10-14",
+  "branch": "research/ch09-1570-1579-coercion-plunder-map-20261014",
+  "status": "PASS",
+  "files_verified": [
+    "SOURCE_REGISTRY.json",
+    "ATLAS_EVENT_REVIEW_CANDIDATE.json",
+    "CONTROL_TRANSITION_1569_1579.json",
+    "CONTROL_AND_VIOLENCE_PLACES_1570_1579.geojson",
+    "VIOLENCE_AND_CONTROL_DELTA_1570_1579.geojson",
+    "VIOLENT_EXTRACTION_ROUTE_REFERENCES.geojson",
+    "IRISH_COERCION_EVENT_ZONES.geojson",
+    "PLUNDER_VIOLENCE_ECONOMICS_LEDGER.json",
+    "ARCHIVAL_ACTION_QUEUE.json",
+    "PRIMARY_ORIGINAL_MANUSCRIPT_CATALOGUE_20261014.json",
+    "TRANSITION_1579_1580_RESEARCH_SEED.json",
+    "ENGLISH_GUINEA_AND_SLAVING_VENTURES_1570_1572_REASSESSMENT.json",
+    "EDITOR_IMPORT_README.md",
+    "SLAVE_TRADE_CONTINUITY_QA_20261014.json"
+  ],
+  "counts": {
+    "sources": 60,
+    "events": 41,
+    "atlas_places": 34,
+    "geo_sites": 35,
+    "annual_yearends": 10,
+    "control_ledger": 16,
+    "delta_features": 36,
+    "route_segments": 18,
+    "finance_and_victim_rows": 31,
+    "archive_issues": 36,
+    "original_folio_page_inventory": 14,
+    "verified_historic_Tudor_colonial_polygons": 0
+  },
+  "scoped_signoffs": [
+    "1579 June5 royal Irish garrison articles accessible by British Library archive locator but NOT transcribed or adopted as a map of annual occupation",
+    "1577 royal faculties profit and 1578 army victualling original fiscal contents unread, no fabricated Crown cash",
+    "1576 £10 portrait commission Cathay COMPANY COST, no royal receipts",
+    "1577 Kalicho and Arnaq Bristol verified church, graves not exact; London St Olave company payment not actual parish burial entry",
+    "1577 Nutaaq-only Bristol→London segment not an extra kidnapping",
+    "1578 planned winter fort actually failed, no new successful Inuit abductions",
+    "Chapter8 main published 27 sites inherited semantically, past Le Havre/Hawkins not resurrected",
+    "Loughrea British garrison 1576–79, Gaelic recapture 1580; all territory uncertainties continue",
+    "New 1570–72 West Africa slaving trade after the 1568 Hawkins defeat assessed from Southampton/Oxford theses, J W Blake 1937 and Spanish original-edited eyewitness files; no 1570–72 enslaved people tally certified",
+    "1571 Jamaican pirate attack and 1572 failed St Augustine attack represented as Spanish American ship/port depredations, not English territorial occupation or automatically an African slave shipment",
+    "New BL Harley MS7004 army and Pale forced transport entries June–Aug 1579 are identifiable folios, not transcribed garrisons or verified tax receipts"
+  ],
+  "limitations": [
+    "Full sixteenth-century troop ledgers not inspected",
+    "GIS lines are schematic; no surveyed Tudor polygons",
+    "not website screenshot or Pages deployment QA"
+  ],
+  "errors": [],
+  "primary_QA_current": "SLAVE_TRADE_CONTINUITY_QA_20261014.json",
+  "previous_second_round_QA": "DEEP_DIVE_QA_20261014.json",
+  "production_main_status": "Chapter 8 1560–1569 published; Chapter 9 PR56 research draft NOT published",
+  "historical_continuity_1579_to_1580": "TRANSITION_1579_1580_RESEARCH_SEED.json",
+  "reviewer_input": "60 source IDs, 41 Atlas events, Guinea post-1568 critical addendum, 36 archival tasks, and 34 historical point locators",
+  "previous_third_round_QA": "FOLIO_EVIDENCE_QA_20261014.json"
+}
