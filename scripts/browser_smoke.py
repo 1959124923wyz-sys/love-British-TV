@@ -1061,7 +1061,7 @@ try:
     driver.execute_script("""document.querySelector('#map .atlas-tenth-invasion-impact')
        .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
     verify("Munster war area dossier must cite sources and hide 1583 future",
-           """document.querySelector('#dossierBody').textContent.includes('英军入侵影响区') &&
+           """document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('英军入侵') &&
               document.querySelector('#dossierBody').textContent.includes('战争') &&
               document.querySelector('#dossierBody .source-link')!==null &&
               [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1583年'))""",driver)
@@ -1103,7 +1103,7 @@ try:
     driver.execute_script("""document.querySelector('#map .atlas-tenth-port-raid-impact')
       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
     verify("1586 raided port city must open source-linked dossier without falsely naming it a Crown colony",
-           """document.querySelector('#dossierBody').textContent.includes('英军入侵影响区') &&
+           """document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('英军入侵') &&
               document.querySelector('#dossierBody .source-link')!==null &&
               document.querySelector('#dossierBody').textContent.includes('1586')""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids-plus-StAugustine.png"))
