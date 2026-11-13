@@ -92,10 +92,26 @@ try:
  wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length===0"))
  d.find_element(By.ID,'mapLayerTerritory').click()
  wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length>=9"))
- # Leaflet SVG feature listeners open the original-source dossier, not merely a decorative fill.
- j("""const el=[...document.querySelectorAll('path.atlas-17c-expansive-claim')].find(e=>
-    e._leaflet_id!==undefined)||document.querySelector('path.atlas-17c-expansive-claim');
-    el.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,clientX:400,clientY:400}));""")
+ # Use a real desktop mouse click on a visible 17C source polygon.
+ # Synthetic MouseEvent intentionally leaves original Leaflet handlers intact.
+ pixel=j("""
+   const map=window.__eighteenthSpatialHost.map;
+   map.setView([40.0,-76.0],5,{animate:false});
+   const box=map.getContainer().getBoundingClientRect();
+   for(let x=box.left+75;x<box.right-55;x+=28){
+    for(let y=box.top+55;y<box.bottom-45;y+=28){
+     const t=document.elementFromPoint(x,y);
+     if(t?.closest?.('path.atlas-17c-expansive-claim'))
+      return {x,y,path:t.outerHTML.slice(0,200)};
+    }
+   }
+   return null;
+ """)
+ assert pixel, 'No unobstructed polygon click target in 1685 source-backed colonial claims'
+ for kind in ('mouseMoved','mousePressed','mouseReleased'):
+  event={'type':kind,'x':round(pixel['x']),'y':round(pixel['y'])}
+  if kind!='mouseMoved': event.update({'button':'left','clickCount':1})
+  d.execute_cdp_cmd('Input.dispatchMouseEvent',event)
  wait.until(lambda _:j("return window.historicOverlapDossier?.getAudit?.()?.open===true"))
  assert j("return document.querySelectorAll('#atlasHistoricOverlapPanel .atlas-18c-overlap-card').length>=1")
  assert j("return document.querySelectorAll('#atlasHistoricOverlapPanel .atlas-18c-overlap-source-links a[href^=https]').length>=1")
@@ -110,8 +126,8 @@ try:
  # decade entries while keeping all archived records intact and searchable.
  initial=j("return document.querySelectorAll('#eventList .event-item').length")
  assert initial>10 and j("return !document.getElementById('seventeenthEventTools').hidden")
- assert j("return document.getElementById('chapterIntro').textContent.includes('本十年已收录')")
- assert j("return document.getElementById('chapterLabel').textContent.includes('史料年表')")
+ assert j("return document.getElementById('chapterIntro').textContent===window.AtlasChapterNarratives?.forDecade(1699)?.intro")
+ assert j("return document.getElementById('chapterLabel').textContent.includes('第20章') && document.getElementById('chapterLabel').textContent.includes('1690—1699')")
  d.find_element(By.ID,'showYearEventsOnly').click()
  year_only=j("return document.querySelectorAll('#eventList .event-item').length")
  assert year_only>0 and year_only<initial,(year_only,initial)

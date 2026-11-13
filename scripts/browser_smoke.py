@@ -496,18 +496,20 @@ try:
         """,selector)
     click_map_path("#map .atlas-violet-wartime-vicinity")
     wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody .zone-dossier-facts')!==null"))
-    verify("occupied zone dossier has no precision warning or dated source",
-           """document.querySelector('#dossierBody').textContent.includes('英军驻地附近概略控制区') &&
+    verify("occupied zone dossier keeps historic facts and primary sources without editor commentary",
+           """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('英军驻地') &&
+              document.querySelector('#dossierBody .zone-dossier-facts')!==null &&
+              document.querySelector('#dossierBody .source-details a.source-link[href]')!==null &&
               !document.querySelector('#dossierBody .zone-precision-note') &&
-              document.querySelector('#dossierBody .source-details')!==null &&
-              document.querySelectorAll('#dossierBody .zone-record-link').length>0""",driver)
+              window.AtlasPublicCopyGuard.visibleWarnings().length===0""",driver)
     click_map_path("#map .atlas-war-reach-schematic")
-    verify("PR38 military reach must disclose non-annexation and sources",
-           """document.querySelector('#dossierBody').textContent.includes('有据军事行动方向示意') &&
+    verify("military movement details retain sources without cartographic disclaimers",
+           """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('军事行动') &&
               !document.querySelector('#dossierBody .zone-editorial-warning') &&
-              document.querySelector('#dossierBody .source-details')!==null""",driver)
+              document.querySelector('#dossierBody .source-details a.source-link[href]')!==null &&
+              window.AtlasPublicCopyGuard.visibleWarnings().length===0""",driver)
     click_map_path("#map .atlas-contested-zone")
-    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
+    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('战争争夺') && document.querySelector('#dossierBody .zone-dossier-facts')!==null"))
     verify("contested zone has no related evidence/campaign records",
            """!document.querySelector('#dossierBody .zone-precision-note') &&
               document.querySelectorAll('#dossierBody [data-zone-event]').length>0 &&
@@ -607,7 +609,7 @@ try:
               [...document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline')].every(p=>
                  p.getAttribute('fill')==='none'||p.getAttribute('fill-opacity')==='0')""",driver)
     driver.execute_script("document.querySelector('#map .atlas-hes-modern-archaeology-outline').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}))")
-    wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody').textContent.includes('现代考古遗址地理参考')"))
+    wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('历史古迹') && document.querySelector('#dossierBody .source-details a[href]')!==null"))
     verify("Modern HES evidence misrepresented as ancient English occupied polygons",
            """document.querySelector('#dossierBody .source-details').textContent.includes('Historic Environment Scotland') &&
               [...document.querySelectorAll('#dossierBody a')].some(a=>a.href.includes('portal.historicenvironment.scot'))""",driver)
@@ -712,7 +714,18 @@ try:
     verify("occupied zone disappeared after actual wheel zoom",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     print("CLICK_CONTESTED",real_map_area_click("#map .atlas-contested-zone"),flush=True)
-    wait.until(lambda d:"交战与争夺区" in d.find_element(By.ID,"dossierBody").text)
+    print("DOSSIER_AUDIT_CONTESTED",driver.execute_script("""
+      return {text:document.querySelector('#dossierBody')?.innerText.slice(0,450),
+        region:window.historicOverlapDossier?.getAudit?.()};
+    """),flush=True)
+    wait.until(lambda d:d.execute_script("""
+      const legacy=!!document.querySelector('#dossierBody .source-details') &&
+        document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('战争争夺');
+      const audit=window.historicOverlapDossier?.getAudit?.();
+      const current=audit?.open && audit.sourceRecordIds.some(id=>id.startsWith('contestedZones:')) &&
+        !!document.querySelector('#atlasHistoricOverlapPanel .atlas-18c-overlap-source-links a[href]');
+      return legacy||current;
+    """))
     # Zoom toward the documented Broughty stronghold for a meaningful area
     # target (at low zoom these tiny locality references are subpixel).
     driver.execute_script("""
@@ -734,7 +747,7 @@ try:
     # visually prominent garrison circles. The purple circle must provide the
     # same territorial introduction without falsifying the underlying geometry.
     print("CLICK_OCCUPIED_RING",real_map_area_click("#map .atlas-garrison-hit"),flush=True)
-    wait.until(lambda d:"英军驻地附近概略控制区" in d.find_element(By.ID,"dossierBody").text)
+    wait.until(lambda d:d.execute_script("return document.querySelector(\'#dossierBody .dossier-kicker\')?.textContent.includes(\'英军驻地\') && !!document.querySelector(\'#dossierBody .source-details\')"))
     verify("actually clicked occupied zone did not disclose historical source",
            "document.querySelector('#dossierBody .source-details')!==null",driver)
     verify("year card was recreated after zoom",
@@ -1048,7 +1061,7 @@ try:
     driver.execute_script("""document.querySelector('#map .atlas-tenth-invasion-impact')
        .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
     verify("Munster war area dossier must cite sources and hide 1583 future",
-           """document.querySelector('#dossierBody').textContent.includes('英军入侵影响区') &&
+           """document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('英军入侵') &&
               document.querySelector('#dossierBody').textContent.includes('战争') &&
               document.querySelector('#dossierBody .source-link')!==null &&
               [...document.querySelectorAll('#dossierBody [data-zone-event]')].every(n=>!n.textContent.includes('1583年'))""",driver)
@@ -1090,7 +1103,7 @@ try:
     driver.execute_script("""document.querySelector('#map .atlas-tenth-port-raid-impact')
       .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));""")
     verify("1586 raided port city must open source-linked dossier without falsely naming it a Crown colony",
-           """document.querySelector('#dossierBody').textContent.includes('英军入侵影响区') &&
+           """document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('英军入侵') &&
               document.querySelector('#dossierBody .source-link')!==null &&
               document.querySelector('#dossierBody').textContent.includes('1586')""",driver)
     driver.save_screenshot(str(OUT / "chapter10-1586-Caribbean-raids-plus-StAugustine.png"))

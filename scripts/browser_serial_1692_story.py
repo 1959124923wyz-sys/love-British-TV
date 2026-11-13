@@ -27,8 +27,8 @@ try:
     assert not run("return !!document.getElementById('serialStoriesButton')"),"Separate top story button must be removed"
     assert run("return document.getElementById('yearRange').min==='1690'")
     assert run("return document.getElementById('yearRange').max==='1699'")
-    assert run("return document.getElementById('chapterIntro').textContent.includes('本十年已收录')")
-    assert run("return document.getElementById('chapterLabel').textContent.includes('史料年表')")
+    assert run("return document.getElementById('chapterIntro').textContent===window.AtlasChapterNarratives?.forDecade(1692)?.intro")
+    assert run("return document.getElementById('chapterLabel').textContent.includes('第20章') && document.getElementById('chapterLabel').textContent.includes('1690—1699')")
     wait.until(lambda d:run("return document.querySelectorAll('#eventList .event-item').length>=37 && !!document.querySelector('#eventList [data-eid=\"1690S-E139\"]')"))  # wait for asynchronously loaded 1690s chapter after fast Glencoe preview
     assert run("return document.querySelectorAll('#map path.atlas-territory-solid').length===0"),"Unreviewed 17c control areas are visible"
     browser.save_screenshot(str(out/"1692-decade-slider-preview.png"))
@@ -54,8 +54,8 @@ try:
     assert run("return document.getElementById('yearRange').min==='1600'")
     assert run("return document.getElementById('yearRange').max==='1609'")
     wait.until(lambda d:run("return document.getElementById('eventCount').textContent==='2项'"))
-    assert run("return document.getElementById('chapterIntro').textContent.includes('本十年已收录')")
-    assert run("return document.getElementById('chapterLabel').textContent.includes('史料年表')")
+    assert run("return document.getElementById('chapterIntro').textContent===window.AtlasChapterNarratives?.forDecade(1600)?.intro")
+    assert run("return document.getElementById('chapterLabel').textContent.includes('第11章') && document.getElementById('chapterLabel').textContent.includes('1600—1609')")
     # Jumping to already-published history must restore original data and boundaries.
     run("""const field=document.getElementById('jumpYear');field.value='1599';
 field.dispatchEvent(new Event('change',{bubbles:true}));""")

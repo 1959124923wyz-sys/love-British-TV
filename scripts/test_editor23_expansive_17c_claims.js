@@ -226,7 +226,7 @@ assert(html.includes('id="seventeenthEventTools"')&&html.includes('id="seventeen
 assert(html.includes('id="showDecadeEventsToYear"')&&html.includes('id="clearSeventeenthEventSearch"'));
 assert(app.includes('const visibleEvents=query?events.filter(')&&app.includes('conciseEventTitle(e),e.description,e.short_description,e.date_label'),
  'search must include original full historical event titles and dates, not just edited snippets');
-assert(app.includes("'chapterIntro').textContent='本十年已收录'+decadeTotal")&&
+assert(app.includes('window.AtlasChapterNarratives?.forDecade(year)')&&app.includes("$('chapterIntro').textContent=chapterStory.intro")&&
  app.includes('const observed=atlas.events.filter(e=>occurredByYear(e,year)).length'),
  '17C annual chronology and counts must be derived from actual historic records');
 assert(!app.includes("textContent='年代介绍待定'"),'obsolete 17C placeholder must not appear in actual year summary');
