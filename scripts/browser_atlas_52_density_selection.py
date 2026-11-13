@@ -41,6 +41,7 @@ def check(year):
   """)
   assert a['correctClass'] and a['mode']==mode,(year,zoom,a)
   assert a['qualifiedRecords']==a['groupedRecords'],(year,zoom,a)
+  assert a['eligibleKeys']==a['groupedKeys'],(year,zoom,'source ID mismatch')
   assert a['hubCount']==a['clusterCount']+a['singletonCount'],(year,zoom,a)
   assert a['qualifiedRecords']>=1,(year,zoom,a)
   assert a['hubsDom']==a['hubCount'],(year,zoom,a)
