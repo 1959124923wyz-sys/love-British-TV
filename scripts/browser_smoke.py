@@ -609,7 +609,7 @@ try:
               [...document.querySelectorAll('#map .atlas-hes-modern-archaeology-outline')].every(p=>
                  p.getAttribute('fill')==='none'||p.getAttribute('fill-opacity')==='0')""",driver)
     driver.execute_script("document.querySelector('#map .atlas-hes-modern-archaeology-outline').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}))")
-    wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody').textContent.includes('现代考古遗址地理参考')"))
+    wait.until(lambda d:d.execute_script("return document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('历史古迹') && document.querySelector('#dossierBody .source-details a[href]')!==null"))
     verify("Modern HES evidence misrepresented as ancient English occupied polygons",
            """document.querySelector('#dossierBody .source-details').textContent.includes('Historic Environment Scotland') &&
               [...document.querySelectorAll('#dossierBody a')].some(a=>a.href.includes('portal.historicenvironment.scot'))""",driver)
