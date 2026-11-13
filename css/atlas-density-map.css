@@ -1,6 +1,6 @@
 /* Atlas 52: light, reversible display-density treatment.
- * These rules change only paint opacity. No display:none, pointer-events:none,
- * geometry changes, clipping, sovereignty semantics, or record deletion.
+ * These rules change only paint opacity. No hidden elements, blocked pointer
+ * targets, geometry changes, clipping or loss of source records.
  * True occupation sites and selected glow outlines are never dimmed.
  */
 #map.atlas-density-wide :is(
