@@ -714,7 +714,18 @@ try:
     verify("occupied zone disappeared after actual wheel zoom",
            "document.querySelectorAll('#map .atlas-violet-wartime-vicinity').length===9",driver)
     print("CLICK_CONTESTED",real_map_area_click("#map .atlas-contested-zone"),flush=True)
-    wait.until(lambda d:d.execute_script("return document.querySelector(\'#dossierBody .dossier-kicker\')?.textContent.includes(\'战争争夺\') && !!document.querySelector(\'#dossierBody .source-details\')"))
+    print("DOSSIER_AUDIT_CONTESTED",driver.execute_script("""
+      return {text:document.querySelector('#dossierBody')?.innerText.slice(0,450),
+        region:window.historicOverlapDossier?.getAudit?.()};
+    """),flush=True)
+    wait.until(lambda d:d.execute_script("""
+      const legacy=!!document.querySelector('#dossierBody .source-details') &&
+        document.querySelector('#dossierBody .dossier-kicker')?.textContent.includes('战争争夺');
+      const audit=window.historicOverlapDossier?.getAudit?.();
+      const current=audit?.open && audit.sourceRecordIds.some(id=>id.startsWith('contestedZones:')) &&
+        !!document.querySelector('#atlasHistoricOverlapPanel .atlas-18c-overlap-source-links a[href]');
+      return legacy||current;
+    """))
     # Zoom toward the documented Broughty stronghold for a meaningful area
     # target (at low zoom these tiny locality references are subpixel).
     driver.execute_script("""
