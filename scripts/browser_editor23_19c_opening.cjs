@@ -310,6 +310,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal((await audit()).focused,'nineteenthAreas:assam-buri-guma-duar-occupation');
   await page.locator('#resetDossier').click();
   await jump(1834);
+  await page.locator('#workspace').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished.catch(()=>{}))));
   await page.evaluate(()=>{
    const map=window.__historicOverlapHost.map;
    map.stop().invalidateSize({pan:false}).setView([26.74,92.075],9,{animate:false});
@@ -477,7 +478,8 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(-39.930902,175.052305),'#c5a6f5');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-MATAI-TAUA-HOROKIRI')));
   const ruaPosition=[-35.45641,174.14354];
-  await page.evaluate(position=>window.__historicOverlapHost.map.setView(position,10,{animate:false}),ruaPosition);
+  await page.locator('#workspace').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished.catch(()=>{}))));
+  await page.evaluate(position=>window.__historicOverlapHost.map.stop().invalidateSize({pan:false}).setView(position,10,{animate:false}),ruaPosition);
   const ruaMarker=await page.evaluate(([lat,lon])=>{
    const map=window.__historicOverlapHost.map,b=map.getContainer().getBoundingClientRect();
    const p=map.latLngToContainerPoint([lat,lon]);
