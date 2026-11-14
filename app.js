@@ -1141,6 +1141,9 @@ async function loadNineteenthAtlas(from,end,status){
  const [data,geo]=await Promise.all([chronology.json(),spatial.json()]);
  const sourceIds=new Set(data.sources?.map(s=>s.id));
  const eventIds=new Set(data.events?.map(e=>e.id));
+ const earlierEventIds=new Set([...serialPreviewByDecade.entries()]
+  .filter(([decade])=>decade>=1800&&decade<from)
+  .flatMap(([,chapter])=>chapter.events.map(event=>event.id)));
  const cited=row=>row.source_ids?.length&&row.source_ids.every(id=>sourceIds.has(id));
  const inPeriod=y=>Number.isInteger(y)&&y>=from&&y<=end;
  if(data.schema!=='atlas-19c-chronology-v1'||data.editorial_status!==status||
@@ -1152,7 +1155,7 @@ async function loadNineteenthAtlas(from,end,status){
      !cited(f.properties)||!inPeriod(f.properties.start_year)||!inPeriod(f.properties.end_year)||
      f.properties.historical_boundary_confirmed!==false||f.properties.fill_authorized!==false||
      f.properties.area_sqkm!==null||!f.properties.exclude_from_area_aggregation||
-     !f.properties.related_event_ids.every(id=>eventIds.has(id))))
+     !f.properties.related_event_ids.every(id=>eventIds.has(id)||earlierEventIds.has(id))))
   throw new Error('19C review failed chronology, source or spatial checks');
  for(let d=from;d<=end;d+=10){
   serialPreviewByDecade.set(d,{
@@ -1169,14 +1172,16 @@ function renderNineteenthSpatial(){
  const group=groups.nineteenthAreas;
  group.clearLayers();
  if(year<1800||!nineteenthSpatial||!$('toggleTerritorialFootprints').checked)return;
- const colors={land_dispossession:'#e4b571',political:'#79bacb'};
+ const colors={land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6'};
  for(const feature of nineteenthSpatial.features){
   const p=feature.properties;
   if(year<p.start_year||year>p.end_year)continue;
   const stage=p.year_stages?.find(x=>year>=x.start_year&&year<=x.end_year);
   const color=colors[p.display_kind]||'#ae97db';
+  const site=stage?{...feature,properties:{...p,name:stage.title,summary_zh:stage.summary_zh,
+   start_year:stage.start_year,end_year:stage.end_year}}:feature;
   if(feature.geometry.type==='Polygon'){
-   const layer=L.geoJSON(feature,{
+   const layer=L.geoJSON(site,{
     pane:'territoryPane',renderer:territoryRenderer,bubblingMouseEvents:false,
     style:{color,weight:2,dashArray:'7 6',fillColor:color,fillOpacity:.10,className:'atlas-19c-area'},
     onEachFeature:(_,shape)=>shape.on('click',e=>{
@@ -1188,8 +1193,6 @@ function renderNineteenthSpatial(){
    continue;
   }
   const [lon,lat]=feature.geometry.coordinates;
-  const site=stage?{...feature,properties:{...p,name:stage.title,summary_zh:stage.summary_zh,
-   start_year:stage.start_year,end_year:stage.end_year}}:feature;
   L.circleMarker([lat,lon],{
    pane:'controlAreaPane',renderer:wartimeRenderer,radius:21,weight:2.4,fill:false,
    dashArray:'5 3',color:stage?.controller==='british'?'#c5a6f5':'#65c7b6',
@@ -3909,9 +3912,12 @@ async function boot(){
   if(enable19cAtlas&&jamaica18cReady){
    try{await loadNineteenthAtlas(1800,1819,'published');}
    catch(error){console.warn('19C opening data unavailable',error);}
-   if(enable19cChapterReview&&nineteenthAtlasEnd===1819){
-    try{await loadNineteenthAtlas(1820,1829,'editorial_review');}
-    catch(error){console.warn('19C chapter 33 data unavailable',error);}
+   if(enable19cChapterReview){
+    for(const from of [1820,1830]){
+     if(nineteenthAtlasEnd!==from-1)break;
+     try{await loadNineteenthAtlas(from,from+9,'editorial_review');}
+     catch(error){console.warn('19C review data unavailable for '+from,error);}
+    }
    }
   }
 
