@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1830–1839 Chapter 34 first and second editorial batches",
+    "coverage": "1830–1839 Chapter 34 first through third editorial batches",
     "historical_area_statistics": false
   },
   "features": [
@@ -2489,6 +2489,237 @@
             "controller": "british",
             "title": "加尔各答 · 东印度公司鸦片拍卖",
             "summary_zh": "公司在加尔各答拍卖鸦片，私人商人购货后运往中国沿海。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fremantle-round-house-gaol",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.74127,
+          -32.05612
+        ]
+      },
+      "properties": {
+        "name": "弗里曼特尔 · 圆屋监狱",
+        "start_year": 1831,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "圆屋于1831年1月建成。瓦杰马普启用后，圆屋也承担押往岛上之前的暂押。",
+        "source_ids": [
+          "19C34-WA-ROUND",
+          "19C34-WA-ROUND-GEO",
+          "19C34-WA-WAD-HER"
+        ],
+        "source_urls": [
+          "https://www.wa.gov.au/government/document-collections/round-house-and-arthur-head-reserve",
+          "https://mapcarta.com/W49965210",
+          "https://inherit.dplh.wa.gov.au/Admin/api/file/32f72779-6f5c-4af4-a9c1-0c5ed7d842ee"
+        ],
+        "named_anchors": [
+          "弗里曼特尔"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-WA-1831-FREMANTLE-ROUND-HOUSE",
+          "E19-WA-1838-WADJEMUP-PRISONERS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "fremantle-round-house-gaol",
+        "year_stages": [
+          {
+            "start_year": 1831,
+            "end_year": 1837,
+            "controller": "british",
+            "title": "弗里曼特尔 · 圆屋监狱",
+            "summary_zh": "殖民政府于1831年1月建成圆屋监狱。"
+          },
+          {
+            "start_year": 1838,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "弗里曼特尔 · 圆屋监狱",
+            "summary_zh": "瓦杰马普启用后，殖民当局在圆屋暂押部分准备送上岛的原住民囚犯。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "perth-swan-river-government-house",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.861944,
+          -31.957833
+        ]
+      },
+      "properties": {
+        "name": "珀斯 · 天鹅河殖民政府总督府",
+        "start_year": 1834,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "1834年，斯特林迁入珀斯首座长期使用的总督府。殖民政府从珀斯处理平贾拉袭击与瓦杰马普监狱事务。",
+        "source_ids": [
+          "19C34-WA-PERTH",
+          "19C34-WA-PIN-HER",
+          "19C34-WA-WAD-WA"
+        ],
+        "source_urls": [
+          "https://tlcmap.org/layers/172",
+          "https://inherit.dplh.wa.gov.au/admin/api/file/a32f1bff-4af9-564a-68ce-8409d0c9f3cc",
+          "https://www.cits.wa.gov.au/aboriginal-culture/aboriginal-history/reconciliation-and-history-projects/wadjemup/wadjemup-timeline"
+        ],
+        "named_anchors": [
+          "珀斯"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-WA-1834-STIRLING-EXPEDITION",
+          "E19-WA-1834-STIRLING-DISPATCH",
+          "E19-WA-1839-WADJEMUP-PRISON-ANNOUNCEMENT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "perth-swan-river-government-house",
+        "year_stages": [
+          {
+            "start_year": 1834,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "珀斯 · 天鹅河殖民政府总督府",
+            "summary_zh": "1834年，斯特林迁入珀斯首座长期使用的总督府。殖民政府从珀斯处理平贾拉袭击与瓦杰马普监狱事务。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wadjemup-thomson-bay-prison",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.53989,
+          -31.99526
+        ]
+      },
+      "properties": {
+        "name": "瓦杰马普 · 汤姆森湾监狱设施",
+        "start_year": 1839,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "殖民政府宣布在岛上设立囚禁设施，迫使被押送来的原住民从事采盐和营建等劳动。",
+        "source_ids": [
+          "19C34-WA-WAD-RIA",
+          "19C34-WA-WAD-HER",
+          "19C34-WA-WAD-WA",
+          "19C34-WA-WAD-PDF",
+          "19C34-WA-THOM"
+        ],
+        "source_urls": [
+          "https://www.rottnestisland.com/learn/history/aboriginal-history",
+          "https://inherit.dplh.wa.gov.au/Admin/api/file/32f72779-6f5c-4af4-a9c1-0c5ed7d842ee",
+          "https://www.cits.wa.gov.au/aboriginal-culture/aboriginal-history/reconciliation-and-history-projects/wadjemup/wadjemup-timeline",
+          "https://www.dlgsc.wa.gov.au/docs/default-source/aboriginal-history/wadjemup-timeline.pdf",
+          "https://mapcarta.com/N9002733986"
+        ],
+        "named_anchors": [
+          "瓦杰马普"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-WA-1838-WADJEMUP-PRISONERS",
+          "E19-WA-1839-WADJEMUP-PRISON-ANNOUNCEMENT",
+          "E19-WA-1839-WADJEMUP-FORCED-LABOUR"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "wadjemup-thomson-bay-prison",
+        "year_stages": [
+          {
+            "start_year": 1839,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "瓦杰马普 · 汤姆森湾监狱设施",
+            "summary_zh": "殖民政府宣布在岛上设立囚禁设施，迫使被押送来的原住民从事采盐和营建等劳动。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bankura-company-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.0716,
+          23.23241
+        ]
+      },
+      "properties": {
+        "name": "班库拉 · 东印度公司行政驻地",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "1832年布米杰起义期间，公司部队曾退往班库拉。殖民当局随后改组了地方行政。",
+        "source_ids": [
+          "19C34-IN-BANK",
+          "19C34-IN-BHU",
+          "19C34-IN-BANK-HIS"
+        ],
+        "source_urls": [
+          "https://www.geonames.org/1277264/bankura.html",
+          "https://ignca.gov.in/Asi_data/6048.pdf",
+          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/1/38306/GIPE-017784.pdf?sequence=3"
+        ],
+        "named_anchors": [
+          "班库拉"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-IN-1832-BANKURA-WITHDRAWAL",
+          "E19-IN-1833-FRONTIER-REORGANIZATION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "bankura-company-administration",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1831,
+            "controller": "british",
+            "title": "班库拉 · 丛林马哈尔辖区",
+            "summary_zh": "班库拉属于公司统辖的丛林马哈尔辖区。"
+          },
+          {
+            "start_year": 1832,
+            "end_year": 1832,
+            "controller": "british",
+            "title": "班库拉 · 东印度公司驻地",
+            "summary_zh": "布米杰起义期间，公司军一度退往班库拉。"
+          },
+          {
+            "start_year": 1833,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "班库拉 · 殖民行政改组",
+            "summary_zh": "1833年，殖民当局将班库拉从原丛林马哈尔辖区划出。"
           }
         ]
       }
