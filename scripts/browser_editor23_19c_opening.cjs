@@ -399,7 +399,10 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1846,'E19-IR-1846-LABOUR-RATE-ACT','E19-IR-FAMINE-RELIEF','E19-IR-1847-QUARTER-ACRE-RULE',1847,false],
    [1847,'E19-IR-1847-SKIBBEREEN-ADMISSIONS-STOP','E19-IR-FAMINE-RELIEF','E19-IR-1848-SKIBBEREEN-MINORS-RETURN',1848],
    [1846,'E19-IR-1846-BALLINLASS-EVICTION','E19-IR-FAMINE-RELIEF','E19-IR-1849-CONCANNON-EVICTION',1849,false],
-   [1849,'E19-IR-1849-LOUISBURGH-INSPECTION-MOVED','E19-IR-FAMINE-RELIEF','E19-IR-1849-DELPHI-INSPECTION',1849]
+   [1849,'E19-IR-1849-LOUISBURGH-INSPECTION-MOVED','E19-IR-FAMINE-RELIEF','E19-IR-1849-DELPHI-INSPECTION',1849],
+   [1846,'E19-SA-1846-CAPE-BURNSHILL','E19-SA-CAPE-SEVENTH-FRONTIER-WAR','E19-SA-1847-CAPE-KAFFRARIA-PROCLAMATION',1847],
+   [1848,'E19-SA-1848-ORANGE-BOOMPLAATS','E19-SA-ORANGE-SOVEREIGNTY','E19-SA-1849-ORANGE-WARDEN-LINE',1849,false],
+   [1842,'E19-SA-1842-NATAL-PORT-OCCUPIED','E19-SA-NATAL-HUT-TAX','E19-SA-1849-NATAL-HUT-TAX',1849]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -457,6 +460,19 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1849);
   assert.equal(await pointStroke(53.63173,-9.74703),'#65c7b6');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-LOUISBURGH-DELPHI')));
+  await jump(1846);
+  assert.equal(await pointStroke(-32.786769,26.848597),'#65c7b6');
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(-32.70,27.70)),0);
+  await jump(1847);
+  assert.equal(await pointStroke(-32.786769,26.848597),'#c5a6f5');
+  assert.equal(await pointStroke(-32.8802,27.3938),'#c5a6f5');
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(-32.70,27.70)),1);
+  await jump(1848);
+  assert.equal(await pointStroke(-29.1196,26.2155),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1848-BOOMPLAATS-WINBURG')));
+  await jump(1849);
+  assert.equal(await pointStroke(-29.6,30.3789),'#c5a6f5');
+
   await jump(1839);
   await openEvent('E19-NEW-1839-MONMOUTH-TRIAL-OPENS');
   await openArticle('E19-NEWPORT-CHARTIST-RISING');
@@ -547,6 +563,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 54 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 57 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
