@@ -1,0 +1,4279 @@
+{
+  "schema": "atlas-19c-chronology-v1",
+  "dataset_id": "nineteenth-century-1840s",
+  "period": {
+    "from": 1840,
+    "to": 1849
+  },
+  "editorial_status": "editorial_review",
+  "sources": [
+    {
+      "id": "19C35-CN-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "第一次对华战争战事",
+      "label": "英国国家陆军博物馆｜第一次对华战争战事",
+      "url": "https://www.nam.ac.uk/explore/first-china-war-1839-1842",
+      "access": "用作战地和行动次序；签约日期、香港地位与赔款以原文及地方档案校正。"
+    },
+    {
+      "id": "19C35-CN-DING",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "定海地名位置",
+      "label": "GeoNames／Mapcarta｜定海地名位置",
+      "url": "https://mapcarta.com/15971282",
+      "access": "以定海城名对应英方记录中的 Ting-hai。"
+    },
+    {
+      "id": "19C35-CN-HK-Y",
+      "publisher": "香港政府年报",
+      "title": "穿鼻交涉、占领与签约",
+      "label": "香港政府年报｜穿鼻交涉、占领与签约",
+      "url": "https://www.yearbook.gov.hk/2017/en/pdf/E22.pdf",
+      "access": "1月20日宣布、1月26日占领、两国政府未批准初步条件、1842年8月29日签约。"
+    },
+    {
+      "id": "19C34-OP-CHUG",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "穿鼻角地名定位",
+      "label": "OpenStreetMap／Mapcarta｜穿鼻角地名定位",
+      "url": "https://mapcarta.com/N4392379185",
+      "access": "现代地岬坐标作为海上事件参照。"
+    },
+    {
+      "id": "19C35-CN-HK-T",
+      "publisher": "香港差饷物业估价署",
+      "title": "香港政府历史大事纪",
+      "label": "香港差饷物业估价署｜香港政府历史大事纪",
+      "url": "https://www.rvd.gov.hk/doc/en/Chronology_of_Events_EN.pdf",
+      "access": "1843年6月殖民政府成立，璞鼎查任首任总督。"
+    },
+    {
+      "id": "19C35-CN-HK-AMO",
+      "publisher": "香港古物古迹办事处",
+      "title": "上环荷李活道公园旧址",
+      "label": "香港古物古迹办事处｜上环荷李活道公园旧址",
+      "url": "https://www.amo.gov.hk/en/heritage-trails/cw-trails/sheungwan/section-b/b30/index.html",
+      "access": "旧岸边的1841年登陆、升旗处，后来建营房。"
+    },
+    {
+      "id": "19C35-CN-HK-G",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "荷李活道公园位置",
+      "label": "OpenStreetMap／Mapcarta｜荷李活道公园位置",
+      "url": "https://mapcarta.com/W148228845",
+      "access": "上环历史登陆地点的现代地名定位。"
+    },
+    {
+      "id": "19C35-CN-WITH1",
+      "publisher": "英国印度事务历史汇编",
+      "title": "定海第一次撤军",
+      "label": "英国印度事务历史汇编｜定海第一次撤军",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Political_and_Military_Events_in_British_India_from_the_years_1756-1849%2C_in_Two_Volumes%2C_Vol._II_%28IA_dli.granth.72398%29.pdf",
+      "access": "第二卷第186页，1841年2月23日撤旗。"
+    },
+    {
+      "id": "19C35-CN-QING",
+      "publisher": "《清史纪事本末》卷四十四转录",
+      "title": "四方炮台与广州议款",
+      "label": "《清史纪事本末》卷四十四转录｜四方炮台与广州议款",
+      "url": "https://ctext.org/wiki.pl?chapter=709772&if=gb",
+      "access": "中文纪事记余保纯交涉及六百万元军费。"
+    },
+    {
+      "id": "19C35-CN-RANSOM",
+      "publisher": "纽芬兰纪念大学馆藏",
+      "title": "《公共纪事报》1841年11月12日号",
+      "label": "纽芬兰纪念大学馆藏｜《公共纪事报》1841年11月12日号",
+      "url": "https://dai.mun.ca/pdfs/publicledger/PublicLedger18411112.pdf",
+      "access": "同期报纸转述广州赎城款与撤军，并将其作为独立于整体对华交涉的安排。"
+    },
+    {
+      "id": "19C34-OP-GUA",
+      "publisher": "GeoNames",
+      "title": "广州地名条目",
+      "label": "GeoNames｜广州地名条目",
+      "url": "https://www.geonames.org/1809858",
+      "access": "现代城市坐标。"
+    },
+    {
+      "id": "19C35-CN-SAN",
+      "publisher": "广州市文化广电旅游局",
+      "title": "三元里古庙、牛栏岗及地方抗英",
+      "label": "广州市文化广电旅游局｜三元里古庙、牛栏岗及地方抗英",
+      "url": "https://wglj.gz.gov.cn/gkmlpt/content/8/8225/post_8225925.html",
+      "access": "民众集结点与牛栏岗交战地分列。"
+    },
+    {
+      "id": "19C35-CN-FLAG",
+      "publisher": "广州市档案馆",
+      "title": "三元里平英团旗帜",
+      "label": "广州市档案馆｜三元里平英团旗帜",
+      "url": "https://www.gzdaj.gov.cn/gzjs/zdjm/content/post_267117.html",
+      "access": "当地居民记述的劫掠、誓师和抵抗。"
+    },
+    {
+      "id": "19C35-CN-SAN-G",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "三元里平英团旧址",
+      "label": "OpenStreetMap／Mapcarta｜三元里平英团旧址",
+      "url": "https://mapcarta.com/de/W1448280829",
+      "access": "三元古庙定位，用于誓师事件。"
+    },
+    {
+      "id": "19C35-CN-XM",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "厦门",
+      "label": "GeoNames／Mapcarta｜厦门",
+      "url": "https://mapcarta.com/Xiamen",
+      "access": "厦门城市定位。"
+    },
+    {
+      "id": "19C35-CN-GUEV",
+      "publisher": "Arnold Wright 编／历史资料转录",
+      "title": "鼓浪屿英军撤出",
+      "label": "Arnold Wright 编／历史资料转录｜鼓浪屿英军撤出",
+      "url": "https://en.wikisource.org/wiki/Twentieth_Century_Impressions_of_Hongkong,_Shanghai,_and_other_Treaty_Ports_of_China/Amoy",
+      "access": "1908年编纂资料记1845年3月英军撤出。"
+    },
+    {
+      "id": "19C35-CN-WITH2",
+      "publisher": "台州市椒江区政协",
+      "title": "定海交接与1846年退兵",
+      "label": "台州市椒江区政协｜定海交接与1846年退兵",
+      "url": "https://tzsz.zjtz.gov.cn/art/2022/7/7/art_1229142720_58904263.html",
+      "access": "4月议约、清方接收厅署及英军六月初三撤离，分开记载。"
+    },
+    {
+      "id": "19C35-CN-TREAT",
+      "publisher": "南加州大学美中学院",
+      "title": "1842年《南京条约》全文",
+      "label": "南加州大学美中学院｜1842年《南京条约》全文",
+      "url": "https://china.usc.edu/node/20462",
+      "access": "第II、III、IV至VII、XII条，签署地与日期。"
+    },
+    {
+      "id": "19C35-CN-ZHENHAI",
+      "publisher": "宁波地方志资料库",
+      "title": "1841年镇海与宁波陷落",
+      "label": "宁波地方志资料库｜1841年镇海与宁波陷落",
+      "url": "https://meta.librarydata.cn/bookview?gid=112932020230000667&sid=112910020230000001&vol=001",
+      "access": "镇海失守、宁波入城及英国占领期间的措施。"
+    },
+    {
+      "id": "19C35-CN-ZHAO",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "招宝山",
+      "label": "GeoNames／Mapcarta｜招宝山",
+      "url": "https://mapcarta.com/15915602",
+      "access": "镇海防御工事所在山丘的位置。"
+    },
+    {
+      "id": "19C35-CN-NB",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "宁波",
+      "label": "GeoNames／Mapcarta｜宁波",
+      "url": "https://mapcarta.com/Ningbo",
+      "access": "宁波城市定位。"
+    },
+    {
+      "id": "19C35-CN-ZP",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "乍浦",
+      "label": "GeoNames／Mapcarta｜乍浦",
+      "url": "https://mapcarta.com/15915278",
+      "access": "乍浦镇定位。"
+    },
+    {
+      "id": "19C35-CN-SH",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "上海",
+      "label": "GeoNames／Mapcarta｜上海",
+      "url": "https://mapcarta.com/Shanghai",
+      "access": "上海城市定位。"
+    },
+    {
+      "id": "19C35-CN-ZJ",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "镇江",
+      "label": "GeoNames／Mapcarta｜镇江",
+      "url": "https://mapcarta.com/Zhenjiang",
+      "access": "镇江城市定位。"
+    },
+    {
+      "id": "19C35-CN-MIT",
+      "publisher": "MIT Visualizing Cultures／John W. Dower",
+      "title": "第一次鸦片战争",
+      "label": "MIT Visualizing Cultures／John W. Dower｜第一次鸦片战争",
+      "url": "https://visualizingcultures.mit.edu/opium_wars_01/ow1_essay.pdf",
+      "access": "第60页起，镇江战事、毁坏、平民伤亡和多方行动。"
+    },
+    {
+      "id": "19C35-CN-TNA",
+      "publisher": "英国国家档案馆",
+      "title": "香港地图与《南京条约》手稿",
+      "label": "英国国家档案馆｜香港地图与《南京条约》手稿",
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/hong-kong-and-the-opium-wars/",
+      "access": "FO 925/2293 为1841年香港图；FO 93/23/1b 为条约手稿。"
+    },
+    {
+      "id": "19C35-CN-NJ",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "南京下关",
+      "label": "GeoNames／Mapcarta｜南京下关",
+      "url": "https://mapcarta.com/15927144",
+      "access": "以议和所在的南京下关一带定位。"
+    },
+    {
+      "id": "19C35-CN-BOGUE",
+      "publisher": "政策研究大学院大学／东京大学",
+      "title": "1843年《虎门条约》英文文本",
+      "label": "政策研究大学院大学／东京大学｜1843年《虎门条约》英文文本",
+      "url": "https://worldjpn.net/documents/texts/pw/18431008.T1E.html",
+      "access": "10月8日订立，通商章程、税则与附加权利。"
+    },
+    {
+      "id": "19C35-CN-GU",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "鼓浪屿",
+      "label": "GeoNames／Mapcarta｜鼓浪屿",
+      "url": "https://mapcarta.com/Xiamen/Gulangyu",
+      "access": "鼓浪屿岛的地名定位。"
+    },
+    {
+      "id": "19C35-CN-RETREAT",
+      "publisher": "《道光条约》转录",
+      "title": "1846年《英军退还舟山条约》",
+      "label": "《道光条约》转录｜1846年《英军退还舟山条约》",
+      "url": "https://zh.wikisource.org/wiki/英軍退還舟山條約",
+      "access": "4月4日文本，关于广州进城和归还舟山的条款。"
+    },
+    {
+      "id": "19C34-OP-CN",
+      "publisher": "中国国家博物馆",
+      "title": "《林则徐虎门销烟》藏品说明",
+      "label": "中国国家博物馆｜《林则徐虎门销烟》藏品说明",
+      "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210402_249493.shtml",
+      "access": "林则徐、虎门销烟起始日与鸦片战争背景。"
+    },
+    {
+      "id": "19C34-OP-HK",
+      "publisher": "香港特区政府新闻处",
+      "title": "《香港年报》香港历史",
+      "label": "香港特区政府新闻处｜《香港年报》香港历史",
+      "url": "https://www.yearbook.gov.hk/2019/en/pdf/E22.pdf",
+      "access": "广州禁烟、英国商务监督义律与缴烟数量，及后续远征。"
+    },
+    {
+      "id": "19C34-AF-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "第一次英阿战争",
+      "label": "英国国家陆军博物馆｜第一次英阿战争",
+      "url": "https://www.nam.ac.uk/explore/first-afghan-war",
+      "access": "英国和东印度公司干预的背景，1839年推进、加兹尼战斗与沙阿·舒贾复位。"
+    },
+    {
+      "id": "19C35-AF-WARS",
+      "publisher": "Adamec、Norris／Encyclopaedia Iranica",
+      "title": "英阿战争",
+      "label": "Adamec、Norris／Encyclopaedia Iranica｜英阿战争",
+      "url": "https://www.iranicaonline.org/articles/anglo-afghan-wars/",
+      "access": "喀布尔起事、撤军及1843年多斯特·穆罕默德回到喀布尔。"
+    },
+    {
+      "id": "19C35-AF-HIST",
+      "publisher": "Encyclopaedia Iranica",
+      "title": "阿富汗政治史",
+      "label": "Encyclopaedia Iranica｜阿富汗政治史",
+      "url": "https://www.iranicaonline.org/articles/afghanistan-x-political-history/?generate_pdf=1",
+      "access": "英军回城和撤离，沙阿·舒贾遇刺与当地政权变化。"
+    },
+    {
+      "id": "19C34-AF-KAB",
+      "publisher": "GeoNames",
+      "title": "喀布尔地名条目",
+      "label": "GeoNames｜喀布尔地名条目",
+      "url": "https://www.geonames.org/1138958",
+      "access": "现代城市坐标。"
+    },
+    {
+      "id": "19C35-AF-GAN",
+      "publisher": "Encyclopaedia Afghanica",
+      "title": "甘达马克",
+      "label": "Encyclopaedia Afghanica｜甘达马克",
+      "url": "https://afghanicaonline.org/en/places/gandamak.html",
+      "access": "同名村地理坐标及撤军末期战斗。"
+    },
+    {
+      "id": "19C35-AF-JAL",
+      "publisher": "GeoNames",
+      "title": "贾拉拉巴德",
+      "label": "GeoNames｜贾拉拉巴德",
+      "url": "https://www.geonames.org/1139715/jalalabad.html",
+      "access": "城市坐标。"
+    },
+    {
+      "id": "19C34-KAL-UOB",
+      "publisher": "俾路支省大学《Balochistan Review》",
+      "title": "Pervez Ahmed：1666—1871年的卡拉特事务",
+      "label": "俾路支省大学《Balochistan Review》｜Pervez Ahmed：1666—1871年的卡拉特事务",
+      "url": "https://www.uob.ac.pk/Journals/Balochistan-Review/data/BR%2002%202015/61-72%20The%20History%20of%20Kalat%20Affairs%201666%20to%201871%2C%20Pervez%20Ahmed.pdf",
+      "access": "卡拉特政治背景、英方扶立沙阿·纳瓦兹汗及1840年地方反攻。"
+    },
+    {
+      "id": "19C35-KAL-HUG",
+      "publisher": "A. W. Hughes",
+      "title": "1877年《俾路支》卡拉特章节",
+      "label": "A. W. Hughes｜1877年《俾路支》卡拉特章节",
+      "url": "https://library-sindhi-sp-2020.s3.us-east-2.amazonaws.com/files/The_Country_Of_Balochistan-A_W_Hughes-1877-Complete-cs.pdf",
+      "access": "英国方面记述英军再入、纳西尔在奎达交涉及正式即位。"
+    },
+    {
+      "id": "19C35-KAL-IR",
+      "publisher": "Encyclopaedia Iranica",
+      "title": "俾路支政治史",
+      "label": "Encyclopaedia Iranica｜俾路支政治史",
+      "url": "https://www.iranicaonline.org/articles/baluchistan-ia/?generate_pdf=1",
+      "access": "卡拉特汗位、地方反攻、1842年撤离与奎达归属。"
+    },
+    {
+      "id": "19C34-KAL-GEO",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "俾路支卡拉特地名定位",
+      "label": "GeoNames／Mapcarta｜俾路支卡拉特地名定位",
+      "url": "https://mapcarta.com/N271909274",
+      "access": "同名历史城镇的现代地名坐标。"
+    },
+    {
+      "id": "19C35-KAL-TEXT",
+      "publisher": "Aitchison／塔夫茨大学数字馆藏",
+      "title": "1841年卡拉特汗王协议",
+      "label": "Aitchison／塔夫茨大学数字馆藏｜1841年卡拉特汗王协议",
+      "url": "https://dl.tufts.edu/downloads/6108vp897?filename=9g54xw036.pdf",
+      "access": "卷十一第351页，1841年10月6日文本。"
+    },
+    {
+      "id": "19C34-NEW-SHIRE",
+      "publisher": "蒙茅斯郡地方政府",
+      "title": "蒙茅斯郡政厅与宪章派审判",
+      "label": "蒙茅斯郡地方政府｜蒙茅斯郡政厅与宪章派审判",
+      "url": "https://volunteer.monmouthshire.gov.uk/volunteers/opportunity/10045502",
+      "access": "审判于1839年12月31日开庭、1840年1月16日宣判。"
+    },
+    {
+      "id": "19C34-NEW-SHIRE-G",
+      "publisher": "英国地名志",
+      "title": "蒙茅斯郡政厅定位",
+      "label": "英国地名志｜蒙茅斯郡政厅定位",
+      "url": "https://gazetteer.org.uk/place/Shire_Hall,_Monmouthshire_320186",
+      "access": "法院点坐标。"
+    },
+    {
+      "id": "19C35-NEW-ADB",
+      "publisher": "澳大利亚国立大学《澳大利亚传记辞典》",
+      "title": "约翰·弗罗斯特",
+      "label": "澳大利亚国立大学《澳大利亚传记辞典》｜约翰·弗罗斯特",
+      "url": "https://adb.anu.edu.au/biography/frost-john-2071",
+      "access": "2月11日改判、三人同船抵达和分配到不同工作地点。"
+    },
+    {
+      "id": "19C34-NEW-PARDON",
+      "publisher": "英国议会档案",
+      "title": "1840年纽波特求赦请愿，HC/CL/JO/6/202",
+      "label": "英国议会档案｜1840年纽波特求赦请愿，HC/CL/JO/6/202",
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/newport-rising/1839-newp-ris/newp-ldn-pet/",
+      "access": "原件说明和后续时间线。"
+    },
+    {
+      "id": "19C34-NEW-HAN",
+      "publisher": "英国议会历史记录",
+      "title": "1840年2月4日弗罗斯特、威廉斯与琼斯",
+      "label": "英国议会历史记录｜1840年2月4日弗罗斯特、威廉斯与琼斯",
+      "url": "https://api.parliament.uk/historic-hansard/lords/1840/feb/04/frost-williams-and-jones",
+      "access": "当时上院讨论三人改判。"
+    },
+    {
+      "id": "19C34-NEW-MANDARIN",
+      "publisher": "英国运输名册转录",
+      "title": "1840年曼达林号乘员记录",
+      "label": "英国运输名册转录｜1840年曼达林号乘员记录",
+      "url": "https://hawkesbury.net.au/claimaconvict/shipDetails.php?shipId=746",
+      "access": "英国国家档案馆 HO 11/12，第149—158页；1840年6月30日抵达。"
+    },
+    {
+      "id": "19C34-NEW-NMA",
+      "publisher": "澳大利亚国家博物馆",
+      "title": "约翰·弗罗斯特纪念币与流放",
+      "label": "澳大利亚国家博物馆｜约翰·弗罗斯特纪念币与流放",
+      "url": "https://love-tokens.nma.gov.au/tokens/2008.0039.0209",
+      "access": "1840年死刑改终身流放，6月30日抵霍巴特；弗罗斯特后在亚瑟港服役。"
+    },
+    {
+      "id": "19C33-TAS-HOB-GEO",
+      "publisher": "联合国地名专家组",
+      "title": "霍巴特地名",
+      "label": "联合国地名专家组｜霍巴特地名",
+      "url": "https://ungegn.un.org/dashboard/cities/details?id=534",
+      "access": "城市位置，霍巴特为公告发布及报告送达地点"
+    },
+    {
+      "id": "19C35-NEW-PET41",
+      "publisher": "英国议会档案",
+      "title": "1841年《人民宪章》与释放请愿",
+      "label": "英国议会档案｜1841年《人民宪章》与释放请愿",
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/newport-rising/1839-newp-ris/1841-journ-newp/",
+      "access": "1841年6月下院日记登记请愿。"
+    },
+    {
+      "id": "19C35-TAS-PET",
+      "publisher": "澳大利亚原住民和托雷斯海峡岛民研究所",
+      "title": "怀巴莱纳请愿与拘禁",
+      "label": "澳大利亚原住民和托雷斯海峡岛民研究所｜怀巴莱纳请愿与拘禁",
+      "url": "https://aiatsis.gov.au/sites/default/files/research_pub/the_right_to_protect_sites_indigenous_heritage_management_in_the_era_of_native_title_3.pdf",
+      "access": "1846年2月请愿，档案号 CDO 18466，含请求及背景。"
+    },
+    {
+      "id": "19C35-TAS-ARTHUR",
+      "publisher": "塔斯马尼亚大学",
+      "title": "沃尔特·乔治·亚瑟",
+      "label": "塔斯马尼亚大学｜沃尔特·乔治·亚瑟",
+      "url": "https://www.utas.edu.au/tasmanian-companion/biogs/E000060b.htm",
+      "access": "参与1846年请愿及牡蛎湾社群。"
+    },
+    {
+      "id": "19C34-TAS-WY-GEO",
+      "publisher": "澳大利亚历史地名平台 TLCMap",
+      "title": "弗林德斯岛怀巴莱纳",
+      "label": "澳大利亚历史地名平台 TLCMap｜弗林德斯岛怀巴莱纳",
+      "url": "https://tlcmap.org/index.php/layers/718",
+      "access": "巴克豪斯旅行记录地名坐标。"
+    },
+    {
+      "id": "19C35-TAS-PUT",
+      "publisher": "澳大利亚国家博物馆",
+      "title": "普塔利纳（牡蛎湾）",
+      "label": "澳大利亚国家博物馆｜普塔利纳（牡蛎湾）",
+      "url": "https://www.nma.gov.au/learn/encounters-education/community-stories/putalina-oyster-cove",
+      "access": "1847年搬迁与旧流放所居住条件，附原住民长者口述。"
+    },
+    {
+      "id": "19C35-TAS-PUT-G",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "普塔利纳地名定位",
+      "label": "OpenStreetMap／Mapcarta｜普塔利纳地名定位",
+      "url": "https://mapcarta.com/N5854918348",
+      "access": "与金伯勒旧站路名核对，采用同名地点锚点。"
+    },
+    {
+      "id": "19C35-TAS-PUT-H",
+      "publisher": "金伯勒市政府",
+      "title": "牡蛎湾旧站路的普塔利纳",
+      "label": "金伯勒市政府｜牡蛎湾旧站路的普塔利纳",
+      "url": "https://www.kingborough.tas.gov.au/wp-content/uploads/2019/12/AttachmentA_LPS_draft_Kingborough_November2019.pdf",
+      "access": "遗产登记 KIN-C6.4.1，定位旧站路。"
+    },
+    {
+      "id": "19C34-TAS-ALC",
+      "publisher": "塔斯马尼亚原住民土地委员会",
+      "title": "怀巴莱纳：拘禁、抵抗与延续",
+      "label": "塔斯马尼亚原住民土地委员会｜怀巴莱纳：拘禁、抵抗与延续",
+      "url": "https://alctas.org.au/project/wybalenna/",
+      "access": "1831年11月移至弗林德斯岛泻湖营地，1833年在塞特尔门特角建怀巴莱纳。"
+    },
+    {
+      "id": "19C35-WA-TIME",
+      "publisher": "西澳原住民历史档案门户",
+      "title": "瓦杰马普年表",
+      "label": "西澳原住民历史档案门户｜瓦杰马普年表",
+      "url": "https://ahwaportal.dlgsc.wa.gov.au/online-catalogue/search-wadjemup/ahwa-wadjemup-beyond-the-shore/ahwa-wadjemup-info-timeline/",
+      "access": "1841年建造、1842和1846年虐待案、1849年转移与暂闭。"
+    },
+    {
+      "id": "19C35-WA-RIA",
+      "publisher": "罗特尼斯特岛管理局",
+      "title": "瓦杰马普原住民历史",
+      "label": "罗特尼斯特岛管理局｜瓦杰马普原住民历史",
+      "url": "https://www.ria.wa.gov.au/managing-the-island/cultural-heritage/aboriginal-history-of-wadjemup",
+      "access": "原住民囚犯劳役及1849—1855年停用。"
+    },
+    {
+      "id": "19C34-WA-THOM",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "汤姆森湾聚落",
+      "label": "OpenStreetMap／Mapcarta｜汤姆森湾聚落",
+      "url": "https://mapcarta.com/N9002733986",
+      "access": "瓦杰马普东北岸聚落定位；首座监舍用聚落点。"
+    },
+    {
+      "id": "19C35-AD-RECORD",
+      "publisher": "英国印度事务部／卡塔尔数字图书馆",
+      "title": "亚丁战事与拉赫季交涉",
+      "label": "英国印度事务部／卡塔尔数字图书馆｜亚丁战事与拉赫季交涉",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100023462214.0x000030",
+      "access": "第19叶背面，1840年两次反攻，1843和1844年交涉。"
+    },
+    {
+      "id": "19C34-AD-GEO",
+      "publisher": "Database.earth",
+      "title": "亚丁克雷特老城地名定位",
+      "label": "Database.earth｜亚丁克雷特老城地名定位",
+      "url": "https://database.earth/countries/yemen/regions/aden/cities/crater",
+      "access": "现代克雷特地点，代表亚丁旧城一带。"
+    },
+    {
+      "id": "19C35-AD-TERMS",
+      "publisher": "Aitchison／塔夫茨大学数字馆藏",
+      "title": "1843、1844及1849年亚丁协议",
+      "label": "Aitchison／塔夫茨大学数字馆藏｜1843、1844及1849年亚丁协议",
+      "url": "https://dl.tufts.edu/downloads/6108vp897?filename=9g54xw036.pdf",
+      "access": "第60—63页，协议原文含互不攻击、当地财产和通商安排。"
+    },
+    {
+      "id": "19C35-DU-1841",
+      "publisher": "Aitchison／塔夫茨大学数字馆藏",
+      "title": "阿萨姆杜阿尔交涉",
+      "label": "Aitchison／塔夫茨大学数字馆藏｜阿萨姆杜阿尔交涉",
+      "url": "https://dl.tufts.edu/downloads/f7623q75r?filename=q811kw83k.pdf",
+      "access": "英印条约集不丹章节。1834年交还、1841年接管七个阿萨姆杜阿尔、赔偿安排。"
+    },
+    {
+      "id": "19C35-DU-REPORT",
+      "publisher": "英印阿萨姆行政报告",
+      "title": "1901—1902年阿萨姆行政报告",
+      "label": "英印阿萨姆行政报告｜1901—1902年阿萨姆行政报告",
+      "url": "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1903%20Report%20on%20Administration%20of%20Province%20of%20Assam%20for%201901-1902.pdf",
+      "access": "第75页，布里古马与接管过程；另列1844年对达旺所属卡里亚帕拉的安排。"
+    },
+    {
+      "id": "19C33-DUAR-MAP",
+      "publisher": "北孟加拉大学资料库／R. B. 彭伯顿、H. C. K. 哈德森",
+      "title": "《不丹管辖的阿萨姆杜阿尔图》",
+      "label": "北孟加拉大学资料库／R. B. 彭伯顿、H. C. K. 哈德森｜《不丹管辖的阿萨姆杜阿尔图》",
+      "url": "https://ir.nbu.ac.in/server/api/core/bitstreams/675d06ff-47f4-466b-a598-fc913fb5c95d/content#page=15",
+      "access": "PDF第15页，1830年代末史图。已查看图版与经纬网，读出 Booree Gooma Dooar 及毗邻 Kalleng、Kooreeah 和 Chatgaree。"
+    },
+    {
+      "id": "19C33-DUAR-PEMB",
+      "publisher": "美国国会图书馆／R. B. 彭伯顿",
+      "title": "《不丹报告》及1828—1834年往来公文摘要",
+      "label": "美国国会图书馆／R. B. 彭伯顿｜《不丹报告》及1828—1834年往来公文摘要",
+      "url": "https://tile.loc.gov/storage-services/service/gdc/gdclccn/42/04/93/02/42049302/42049302.pdf",
+      "access": "彭伯顿报告第13—17页，第9—22段。第14—15段引斯科特1828年11月5日公函，第16—21段记交涉与交还。"
+    },
+    {
+      "id": "19C35-HBC-LANG",
+      "publisher": "加拿大公园管理局",
+      "title": "兰利堡迁建与1840年火灾",
+      "label": "加拿大公园管理局｜兰利堡迁建与1840年火灾",
+      "url": "https://parks.canada.ca/~/media/lhn-nhs/bc/langley/pdfs/histoire-history_e.ashx",
+      "access": "旧址弃用后，上游新堡使用约十个月即失火，1840年5月重建。"
+    },
+    {
+      "id": "19C34-HBC-LANG-GEO",
+      "publisher": "加拿大公园管理局",
+      "title": "兰利堡国家历史遗址坐标",
+      "label": "加拿大公园管理局｜兰利堡国家历史遗址坐标",
+      "url": "https://www.pc.gc.ca/lhn-nhs/bc/langley/info/contact",
+      "access": "现历史遗址访客中心坐标。"
+    },
+    {
+      "id": "19C35-HBC-VIC",
+      "publisher": "加拿大历史遗产名录",
+      "title": "维多利亚堡历史遗址",
+      "label": "加拿大历史遗产名录｜维多利亚堡历史遗址",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=16681",
+      "access": "1843年建立，1846年后成为太平洋贸易补给站。"
+    },
+    {
+      "id": "19C35-HBC-LEK",
+      "publisher": "卑诗省立法议会",
+      "title": "1843年哈德孙湾公司建立维多利亚堡",
+      "label": "卑诗省立法议会｜1843年哈德孙湾公司建立维多利亚堡",
+      "url": "https://www.leg.bc.ca/learn/discover-your-legislature/1843-fort-victoria-is-established",
+      "access": "勒夸门人的领地与公司到来。"
+    },
+    {
+      "id": "19C35-HBC-VIC-G",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "维多利亚堡旧址纪念点",
+      "label": "OpenStreetMap／Mapcarta｜维多利亚堡旧址纪念点",
+      "url": "https://mapcarta.com/N4409072170",
+      "access": "用于堡站所在街区的地名锚点。"
+    },
+    {
+      "id": "19C35-HBC-ORE",
+      "publisher": "美国国务院历史办公室",
+      "title": "1846年俄勒冈条约",
+      "label": "美国国务院历史办公室｜1846年俄勒冈条约",
+      "url": "https://history.state.gov/milestones/1830-1860/oregon-territory",
+      "access": "界线谈判、北纬49度与温哥华岛例外。"
+    },
+    {
+      "id": "19C35-HBC-VAN",
+      "publisher": "美国国家公园管理局",
+      "title": "温哥华堡",
+      "label": "美国国家公园管理局｜温哥华堡",
+      "url": "https://home.nps.gov/places/fortvancouver.htm",
+      "access": "1846年条约与1849年美军设营；公司到1860年退出。"
+    },
+    {
+      "id": "19C35-HBC-VAN-H",
+      "publisher": "美国国家公园管理局",
+      "title": "温哥华军营史，第9页",
+      "label": "美国国家公园管理局｜温哥华军营史，第9页",
+      "url": "https://home.nps.gov/fova/learn/historyculture/upload/VNHRHistoryPartOne1846_1898-Accessible-PDF.pdf",
+      "access": "条约后公司经营、税负及驻军。"
+    },
+    {
+      "id": "19C33-HBC-VAN-POINT",
+      "publisher": "美国国家公园管理局",
+      "title": "温哥华堡活动及遗址坐标",
+      "label": "美国国家公园管理局｜温哥华堡活动及遗址坐标",
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=AAAEAE5A-9652-4326-53B5B988D5481880",
+      "access": "重建温哥华堡入口位置"
+    },
+    {
+      "id": "19C33-HBC-KWANT",
+      "publisher": "加拿大能源监管机构／玛丽莲·加布里埃尔",
+      "title": "夸特伦民族酋长口述证据",
+      "label": "加拿大能源监管机构／玛丽莲·加布里埃尔｜夸特伦民族酋长口述证据",
+      "url": "https://docs2.cer-rec.gc.ca/ll-eng/llisapi.dll/fetch/2000/90464/90552/548311/956726/2392873/2449925/2450825/2784857/C198-11-1_-_Evidence_of_Chief_Marilyn_Gabriel_-_Vol._1_-_A4L8J5.pdf?nodeid=2784780&vernum=-2",
+      "access": "第5—7页第33—34段，夸特伦口述和兰利堡迁移"
+    },
+    {
+      "id": "19C-AMIENS",
+      "publisher": "佩皮尼昂大学法学院",
+      "title": "1802年《亚眠和约》",
+      "label": "佩皮尼昂大学法学院｜1802年《亚眠和约》",
+      "url": "https://mjp.univ-perp.fr/traites/1802amiens.htm",
+      "access": "条约法文转录，第五、六条"
+    },
+    {
+      "id": "19C-CAPE-TIMELINE",
+      "publisher": "South African History Online",
+      "title": "开普敦年表",
+      "label": "South African History Online｜开普敦年表",
+      "url": "https://sahistory.org.za/article/cape-town-timeline-1300-1997?id=2",
+      "access": "机构年表，1803、1806、1814年条目"
+    },
+    {
+      "id": "19C-CAPE-CASTLE",
+      "publisher": "South African History Online",
+      "title": "开普敦好望堡",
+      "label": "South African History Online｜开普敦好望堡",
+      "url": "https://sahistory.org.za/place/castle-good-hope-castle-street-cape-town",
+      "access": "遗址目录与坐标，−33.9250、18.4270"
+    },
+    {
+      "id": "19C-LONDON",
+      "publisher": "英国议会 Hansard",
+      "title": "1814年英荷公约",
+      "label": "英国议会 Hansard｜1814年英荷公约",
+      "url": "https://hansard.parliament.uk/Commons/1815-06-09/debates/f8babd0e-ce7b-48ef-878c-0038979c8cd5/CommonsChamber",
+      "access": "1815年6月9日公布的条约文本，正文第一条及第一项附加条款"
+    },
+    {
+      "id": "19C33-SETTLERS",
+      "publisher": "South African History Online",
+      "title": "1820年英国移民抵达阿尔戈阿湾",
+      "label": "South African History Online｜1820年英国移民抵达阿尔戈阿湾",
+      "url": "https://sahistory.org.za/dated-event/first-british-settlers-arrive-algoa-bay",
+      "access": "移民计划与第一批移民抵港"
+    },
+    {
+      "id": "19C33-ORD",
+      "publisher": "South African History Online",
+      "title": "开普1828年第50号法令及其历史",
+      "label": "South African History Online｜开普1828年第50号法令及其历史",
+      "url": "https://sahistory.org.za/archive/say-it-out-loud-1939-presidential-address-cape-town-11th-april-1939",
+      "access": "收录相关条款及废除通行和劳动限制的历史材料"
+    },
+    {
+      "id": "19C34-CAP-LAW",
+      "publisher": "剑桥大学出版社／Mark Finnane",
+      "title": "1830—1880年东开普戒严与法治",
+      "label": "剑桥大学出版社／Mark Finnane｜1830—1880年东开普戒严与法治",
+      "url": "https://www.cambridge.org/core/books/imperial-incarceration/martial-law-and-the-rule-of-law-in-the-eastern-cape-18301880/74A728D0C3640278D813E2E5C151D630",
+      "access": "第六次战争、1835年1月戒严、5月边界宣告、1836年撤军至1837年正式放弃。"
+    },
+    {
+      "id": "19C-CAPE-GRAHAM",
+      "publisher": "South African History Online",
+      "title": "格雷厄姆斯敦，今马坎达",
+      "label": "South African History Online｜格雷厄姆斯敦，今马坎达",
+      "url": "https://sahistory.org.za/place/grahamstown",
+      "access": "城镇历史和现代定位，含1812年军营与1819年反击"
+    },
+    {
+      "id": "19C-CAPE-WARS",
+      "publisher": "South African History Online",
+      "title": "东开普土地剥夺战争",
+      "label": "South African History Online｜东开普土地剥夺战争",
+      "url": "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+      "access": "机构历史综述，第三、第四、第五次边疆战争各节"
+    },
+    {
+      "id": "19C-CAPE-MAKHANDA",
+      "publisher": "Dictionary of African Christian Biography",
+      "title": "马坎达（Nxele）",
+      "label": "Dictionary of African Christian Biography｜马坎达（Nxele）",
+      "url": "https://dacb.org/stories/southafrica/makhanda/",
+      "access": "研究型人物传记，1818–1819年战争经过"
+    },
+    {
+      "id": "19C33-ALBANY-MAP",
+      "publisher": "罗兹大学 Cory 图书馆与历史档案馆",
+      "title": "J. Knobel 1822年《奥尔巴尼地区》",
+      "label": "罗兹大学 Cory 图书馆与历史档案馆｜J. Knobel 1822年《奥尔巴尼地区》",
+      "url": "https://digitalarchives.ru.ac.za/s/cory/item/10835",
+      "access": "历史地图影像与原图馆藏记录，记录1820年移民安置"
+    },
+    {
+      "id": "19C33-FORT-STUDY",
+      "publisher": "比勒陀利亚大学",
+      "title": "开普东部边疆驻地及威尔希尔堡",
+      "label": "比勒陀利亚大学｜开普东部边疆驻地及威尔希尔堡",
+      "url": "https://repository.up.ac.za/bitstream/handle/2263/26503/03chapter7-9.pdf",
+      "access": "第7—9章，1819年动工及1820年更换堡址"
+    },
+    {
+      "id": "19C34-CAP-ARCH",
+      "publisher": "佛罗里达大学资料库／D. D. Bugarin",
+      "title": "威尔希尔下堡与东开普边疆贸易",
+      "label": "佛罗里达大学资料库／D. D. Bugarin｜威尔希尔下堡与东开普边疆贸易",
+      "url": "https://ufdcimages.uflib.ufl.edu/AA/00/03/15/35/00001/tradeinteraction00buga.pdf",
+      "access": "第3章，第62—64页。1830年集市结束、撤离与1836年短暂返回、欣察之死及永久撤堡。"
+    },
+    {
+      "id": "19C-KANDY-CONVENTION",
+      "publisher": "斯里兰卡国家档案馆",
+      "title": "1815年《康提公约》",
+      "label": "斯里兰卡国家档案馆｜1815年《康提公约》",
+      "url": "https://archives.gov.lk/online-exhibits/path-to-freedom/1-1815-convention",
+      "access": "档案馆展览释读、签署页 LK-NA/6/12345，第四、第五条"
+    },
+    {
+      "id": "19C-CEYLON-COLOMBO",
+      "publisher": "GeoNames",
+      "title": "科伦坡地名",
+      "label": "GeoNames｜科伦坡地名",
+      "url": "https://www.geonames.org/1248991/colombo.html",
+      "access": "前期城市点沿用 6.93596、79.84405，地点用作城市定位"
+    },
+    {
+      "id": "19C33-ROAD",
+      "publisher": "剑桥大学出版社《现代亚洲研究》",
+      "title": "Sujit Sivasundaram：英国地理学与康提抵抗",
+      "label": "剑桥大学出版社《现代亚洲研究》｜Sujit Sivasundaram：英国地理学与康提抵抗",
+      "url": "https://eprints.lse.ac.uk/21723/1/Tales_of_the_land-British_geography_and_Kandyan_resistance_in_Sri_Lanka__c_1803-1850.pdf",
+      "access": "全文第945—952页，引用 CO 54/77、CO 54/82、CO 54/97、CO 54/101 等"
+    },
+    {
+      "id": "19C34-CEY-REF",
+      "publisher": "斯里兰卡国家档案馆",
+      "title": "1833年首次殖民行政改革",
+      "label": "斯里兰卡国家档案馆｜1833年首次殖民行政改革",
+      "url": "https://archives.gov.lk/online-exhibits/path-to-freedom/reforms",
+      "access": "调查委员会与行政、司法改革。"
+    },
+    {
+      "id": "19C-KANDY-SIVA",
+      "publisher": "Sujit Sivasundaram｜Modern Asian Studies",
+      "title": "康提的土地知识与抵抗",
+      "label": "Sujit Sivasundaram｜Modern Asian Studies｜康提的土地知识与抵抗",
+      "url": "https://eprints.lse.ac.uk/21723/1/Tales_of_the_land-British_geography_and_Kandyan_resistance_in_Sri_Lanka__c_1803-1850.pdf",
+      "access": "学术全文，第925–965页；1803战事、地方知识与随后道路测绘"
+    },
+    {
+      "id": "19C-KANDY-UNESCO",
+      "publisher": "联合国教科文组织",
+      "title": "康提圣城地图",
+      "label": "联合国教科文组织｜康提圣城地图",
+      "url": "https://whc.unesco.org/en/list/450/maps/",
+      "access": "遗产地点 N7°17′37″、E80°38′25″"
+    },
+    {
+      "id": "19C-KANDY-FREEDOM",
+      "publisher": "斯里兰卡国家档案馆",
+      "title": "1818年的自由斗争",
+      "label": "斯里兰卡国家档案馆｜1818年的自由斗争",
+      "url": "https://www.archives.gov.lk/English/online_exhibits/path_to_freedom/freedom_struggle",
+      "access": "档案展释读，LK-NA/5/10 Gazette 896 与 Brownrigg 信件"
+    },
+    {
+      "id": "19C-CEYLON-GALLE",
+      "publisher": "联合国教科文组织",
+      "title": "加勒老城和要塞",
+      "label": "联合国教科文组织｜加勒老城和要塞",
+      "url": "https://whc.unesco.org/en/list/451/",
+      "access": "遗产地点和殖民时期堡垒说明；UNESCO地图坐标 N6°1′40.984″、E80°12′58.846″"
+    },
+    {
+      "id": "19C-CEYLON-GALLE-LETTER",
+      "publisher": "麦考瑞大学图书馆",
+      "title": "1796年2月23日麦考瑞关于加勒接管的信",
+      "label": "麦考瑞大学图书馆｜1796年2月23日麦考瑞关于加勒接管的信",
+      "url": "https://www.mq.edu.au/macquarie-archive/lema/1796/letters/23feb1796.html",
+      "access": "信件转录，实际接管要塞"
+    },
+    {
+      "id": "19C-CEYLON-COAST",
+      "publisher": "麦考瑞大学图书馆",
+      "title": "1795—1796年英国夺取锡兰沿海据点",
+      "label": "麦考瑞大学图书馆｜1795—1796年英国夺取锡兰沿海据点",
+      "url": "https://www.mq.edu.au/macquarie-archive/under/research/background.html",
+      "access": "大学研究背景，亭可马里、贾夫纳、科伦坡等沿海行动"
+    },
+    {
+      "id": "19C-CEYLON-TRINCO",
+      "publisher": "GeoNames",
+      "title": "亭可马里弗雷德里克堡",
+      "label": "GeoNames｜亭可马里弗雷德里克堡",
+      "url": "https://www.geonames.org/advanced-search.html?country=LK&q=Fort",
+      "access": "具名堡址 8.5769、81.2421"
+    },
+    {
+      "id": "19C-CAPE-THOMPSON",
+      "publisher": "Leonard Thompson｜耶鲁大学出版社",
+      "title": "《南非史》第三版",
+      "label": "Leonard Thompson｜耶鲁大学出版社｜《南非史》第三版",
+      "url": "https://sahistory.org.za/sites/default/files/archive-files3/leonard_monteath_thompson_a_history_of_south_afrbook4me.org_.pdf",
+      "access": "第72–75页，含第74页地图3“Xhosa land losses, 1795–1850”"
+    },
+    {
+      "id": "19C-CAPE-COURT",
+      "publisher": "南非土地索赔法院",
+      "title": "Salem Community v Government，LCC217/2009",
+      "label": "南非土地索赔法院｜Salem Community v Government，LCC217/2009",
+      "url": "https://justice.gov.za/lcc/jdgm/2014/lcc-217-2009.pdf",
+      "access": "判决开篇第3页、论证中关于Zuurveld宽窄口径的证词"
+    },
+    {
+      "id": "19C-CAPE-RIVERS",
+      "publisher": "南非政府公报第52107号",
+      "title": "大鱼河和凯斯卡马河河口坐标",
+      "label": "南非政府公报第52107号｜大鱼河和凯斯卡马河河口坐标",
+      "url": "https://www.ddyn.com/downloads/docsofinterest/MLR_GG52107_R.5860_of_2025.pdf",
+      "access": "公报重刊，河口位置；不使用渔业分区作历史疆界"
+    },
+    {
+      "id": "19C-CAPE-BUSHMANS",
+      "publisher": "Kenton-on-Sea Ratepayers Association",
+      "title": "布什曼斯河口评估",
+      "label": "Kenton-on-Sea Ratepayers Association｜布什曼斯河口评估",
+      "url": "https://kentonratepayers.co.za/wp-content/uploads/2019/01/Final-Estuary-Assessment_Bushmans-Estuary_21Jul22_small.pdf",
+      "access": "河口环境评估的具名位置"
+    },
+    {
+      "id": "19C-CAPE-EASTERN-ANCHORS",
+      "publisher": "PlaceAtlas",
+      "title": "东开普城镇地理索引",
+      "label": "PlaceAtlas｜东开普城镇地理索引",
+      "url": "https://placeatlas.info/maps/south-africa/eastern-cape/",
+      "access": "现代城镇坐标：Fort Beaufort、Alice、East London"
+    },
+    {
+      "id": "19C33-SALEM",
+      "publisher": "南非最高上诉法院",
+      "title": "塞勒姆社区土地返还案",
+      "label": "南非最高上诉法院｜塞勒姆社区土地返还案",
+      "url": "https://www.saflii.org/za/cases/ZASCA/2016/203.pdf",
+      "access": "第35—36段，移民安置、Sephton队与塞勒姆"
+    },
+    {
+      "id": "19C33-LOWER",
+      "publisher": "威特沃特斯兰德大学研究资料",
+      "title": "开普东部佩迪地区土地与资源史",
+      "label": "威特沃特斯兰德大学研究资料｜开普东部佩迪地区土地与资源史",
+      "url": "https://files.core.ac.uk/download/145043057.pdf",
+      "access": "殖民者越过大鱼河耕作、1824年驻堡集市"
+    },
+    {
+      "id": "19C33-FAIR",
+      "publisher": "佛罗里达大学数字馆藏",
+      "title": "威尔希尔堡的交易、考古与边疆社会",
+      "label": "佛罗里达大学数字馆藏｜威尔希尔堡的交易、考古与边疆社会",
+      "url": "https://ufdcimages.uflib.ufl.edu/AA/00/03/15/35/00001/tradeinteraction00buga.pdf",
+      "access": "交易集市及各方往来专题研究"
+    },
+    {
+      "id": "19C33-FORT-LOC",
+      "publisher": "南非军事史学会",
+      "title": "威尔希尔堡两处遗址",
+      "label": "南非军事史学会｜威尔希尔堡两处遗址",
+      "url": "https://www.samilitaryhistory.org/memorial/willshire.html",
+      "access": "下堡坐标，区分早期上堡"
+    },
+    {
+      "id": "19C33-EVAC",
+      "publisher": "美国国会图书馆",
+      "title": "缅甸历史档案中的仰光撤军",
+      "label": "美国国会图书馆｜缅甸历史档案中的仰光撤军",
+      "url": "https://tile.loc.gov/storage-services/service/gdc/gdclccn/13/02/14/46/13021446/13021446.pdf",
+      "access": "历史著作扫描，确认英军1827年撤离仰光"
+    },
+    {
+      "id": "19C33-THANT",
+      "publisher": "剑桥大学出版社",
+      "title": "Thant Myint-U《现代缅甸的形成》",
+      "label": "剑桥大学出版社｜Thant Myint-U《现代缅甸的形成》",
+      "url": "https://www.burmalibrary.org/sites/burmalibrary.org/files/obl/the_making_of_modern_burma.pdf",
+      "access": "学术全文，第16—21页，阿瓦政治与付款后撤军；曼尼普尔采用条约原文"
+    },
+    {
+      "id": "19C33-YGN",
+      "publisher": "GeoNames",
+      "title": "Yangon（仰光）地名",
+      "label": "GeoNames｜Yangon（仰光）地名",
+      "url": "https://www.geonames.org/1298824/yangon.html",
+      "access": "现代城市坐标"
+    },
+    {
+      "id": "19C34-BUR-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "第一次和第二次英缅战争之间",
+      "label": "英国国家陆军博物馆｜第一次和第二次英缅战争之间",
+      "url": "https://www.nam.ac.uk/explore/second-burma-war",
+      "access": "1837年缅甸王位更迭与1852年再战。割让范围以杨达波原文为准。"
+    },
+    {
+      "id": "19C33-TREATY",
+      "publisher": "英国与阿瓦王国签署的条约印本",
+      "title": "1826年《杨达波条约》",
+      "label": "英国与阿瓦王国签署的条约印本｜1826年《杨达波条约》",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Treaty_of_Yandabo.pdf",
+      "access": "英文印本全文，第二至第七条及附加条款，核准页"
+    },
+    {
+      "id": "19C33-RAKHINE",
+      "publisher": "Myanmar Institute of Strategic and International Studies",
+      "title": "若开邦背景研究",
+      "label": "Myanmar Institute of Strategic and International Studies｜若开邦背景研究",
+      "url": "https://www.networkmyanmar.org/ESW/Files/MISIS-Rakhine-Paper-21022018.pdf",
+      "access": "若开在1826年并入英属印度及行政中心移往实兑"
+    },
+    {
+      "id": "19C33-SITTWE",
+      "publisher": "GeoNames",
+      "title": "Sittwe（实兑）地名",
+      "label": "GeoNames｜Sittwe（实兑）地名",
+      "url": "https://www.geonames.org/advanced-search.html?country=MM&q=Sittwe",
+      "access": "现代城市坐标"
+    },
+    {
+      "id": "19C34-BUR-HIST",
+      "publisher": "印度英迪拉·甘地国家艺术中心资料库",
+      "title": "《缅甸史》第16章：1826年后边疆",
+      "label": "印度英迪拉·甘地国家艺术中心资料库｜《缅甸史》第16章：1826年后边疆",
+      "url": "https://ignca.gov.in/Asi_data/4506.pdf",
+      "access": "若开与丹那沙林英方治理；1830年土瓦与丹老发生短时反抗。"
+    },
+    {
+      "id": "19C33-TEN-GEO",
+      "publisher": "GeoNames",
+      "title": "Tenasserim（德林达依）旧称与地名",
+      "label": "GeoNames｜Tenasserim（德林达依）旧称与地名",
+      "url": "https://www.geonames.org/advanced-search.html?country=MM&q=Tenasserim",
+      "access": "土瓦和丹老城市坐标，区分同名行政区"
+    },
+    {
+      "id": "19C33-DEM-1814",
+      "publisher": "国际法院馆载圭亚那政府陈述",
+      "title": "殖民时期历史文书与条约索引",
+      "label": "国际法院馆载圭亚那政府陈述｜殖民时期历史文书与条约索引",
+      "url": "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/171/171-20220308-WRI-01-00-EN.pdf",
+      "access": "第2.19段及脚注指向1814年《伦敦公约》，用于核对殖民管辖沿革"
+    },
+    {
+      "id": "19C33-DEM-COL",
+      "publisher": "圭亚那议会",
+      "title": "圭亚那议会历史",
+      "label": "圭亚那议会｜圭亚那议会历史",
+      "url": "https://parliament.gov.gy/GUYANA%20PARLIAMENT%20HISTORY%202009-1.pdf",
+      "access": "1831年才合并为英属圭亚那"
+    },
+    {
+      "id": "19C33-DEM-TRIAL",
+      "publisher": "英国下议院印行文件",
+      "title": "约翰·史密斯军事审判笔录",
+      "label": "英国下议院印行文件｜约翰·史密斯军事审判笔录",
+      "url": "https://www.cloudshare.regeneratedidentities.org/LA/Irish%20Publishing%20Press/Slave%20Trade%2066/Demerara.%20Minutes%20of%20Evidence%20on%20the%20Trial%20of%20John%20Smith%20a%20Missionary..pdf",
+      "access": "1824年印本影像，11月5日第十七日李希证言和审讯当日指控"
+    },
+    {
+      "id": "19C33-DEM-GEORGE",
+      "publisher": "盖蒂研究所历史地名索引",
+      "title": "乔治敦地名",
+      "label": "盖蒂研究所历史地名索引｜乔治敦地名",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&subjectid=7005275",
+      "access": "城市坐标，具体刑场与旧监狱地址不以城市点替代"
+    },
+    {
+      "id": "19C34-GY-UNION",
+      "publisher": "圭亚那议会",
+      "title": "圭亚那议会史",
+      "label": "圭亚那议会｜圭亚那议会史",
+      "url": "https://parliament.gov.gy/new2/GUYANA%20PARLIAMENT%20HISTORY%202009-1.pdf",
+      "access": "1831年德梅拉拉和埃塞奎博与伯比斯合并。"
+    },
+    {
+      "id": "19C33-TAS-ABS",
+      "publisher": "澳大利亚统计局",
+      "title": "殖民据点至十九世纪中叶",
+      "label": "澳大利亚统计局｜殖民据点至十九世纪中叶",
+      "url": "https://www.abs.gov.au/ausstats/abs%40.nsf/0/0D3893BEE905CA98CA256C3200241894",
+      "access": "霍巴特的延续及1825年成为单独殖民地"
+    },
+    {
+      "id": "19C33-TAS-HOB",
+      "publisher": "霍巴特市议会",
+      "title": "沙利文湾考古规划",
+      "label": "霍巴特市议会｜沙利文湾考古规划",
+      "url": "https://www.hobartcity.com.au/files/assets/public/v/1/development/planning-schemes/tasmanian-planning-scheme/hobart-draft-local-provisions-schedule/applied-adopted-or-incorporated-document-%E2%80%93-sullivans-cove-archaeological-zoning-plan-2003.pdf",
+      "access": "1804年殖民据点及1824年法院记载"
+    },
+    {
+      "id": "19C33-TAS-LAW-TEXT",
+      "publisher": "James Bonwick《The Last of the Tasmanians》",
+      "title": "1828年4月与11月公告转录",
+      "label": "James Bonwick《The Last of the Tasmanians》｜1828年4月与11月公告转录",
+      "url": "https://en.wikisource.org/wiki/The_Last_of_the_Tasmanians/Chapter_4",
+      "access": "原书第四章，公告用语、日期及例外"
+    },
+    {
+      "id": "19C34-TAS-NMA",
+      "publisher": "澳大利亚国家博物馆",
+      "title": "1830年“黑线”围捕",
+      "label": "澳大利亚国家博物馆｜1830年“黑线”围捕",
+      "url": "https://www.nma.gov.au/defining-moments/resources/the-black-line",
+      "access": "10月7日动员、原住民抵抗与强制迁移背景。"
+    },
+    {
+      "id": "19C33-ASH-ACT",
+      "publisher": "英国议会／Legislation.gov.uk",
+      "title": "1821年《西非洲法》",
+      "label": "英国议会／Legislation.gov.uk｜1821年《西非洲法》",
+      "url": "https://www.legislation.gov.uk/ukpga/Geo4/1-2/28/pdfs/ukpga_18210028_en.pdf",
+      "access": "法令原文，1821年7月3日起公司撤销、堡垒及公司财物转归王室"
+    },
+    {
+      "id": "19C33-ASH-CROOKS",
+      "publisher": "Routledge／J. J. Crooks",
+      "title": "《黄金海岸据点档案（1750—1874）》",
+      "label": "Routledge／J. J. Crooks｜《黄金海岸据点档案（1750—1874）》",
+      "url": "https://api.pageplace.de/preview/DT0400.9781136960703_A23876854/preview-9781136960703_A23876854.pdf",
+      "access": "印本公开页，驻军变动及1828年管理委托"
+    },
+    {
+      "id": "19C33-ASH-FORT",
+      "publisher": "加纳海岸角大学",
+      "title": "海岸角堡及其他历史遗址坐标",
+      "label": "加纳海岸角大学｜海岸角堡及其他历史遗址坐标",
+      "url": "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+      "access": "遗址表中 Cape Coast Castle 地点"
+    },
+    {
+      "id": "19C33-ASH-1828",
+      "publisher": "格林尼治皇家博物馆",
+      "title": "1828年海岸角堡图",
+      "label": "格林尼治皇家博物馆｜1828年海岸角堡图",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-106085",
+      "access": "馆藏原图及馆藏说明"
+    },
+    {
+      "id": "19C33-ASH-1824-FORTS",
+      "publisher": "英国皇家学会档案馆",
+      "title": "1824年黄金海岸据点记述",
+      "label": "英国皇家学会档案馆｜1824年黄金海岸据点记述",
+      "url": "https://catalogues.royalsociety.org/calmview/Record.aspx?id=MS%2F257%2F4%2F5&src=CalmView.Catalog",
+      "access": "馆藏摘要列举海岸角、阿诺马布、迪克斯科夫、阿克拉的英方堡垒"
+    },
+    {
+      "id": "19C34-ASH-COM",
+      "publisher": "英国下议院印行文件",
+      "title": "麦克莱恩关于黄金海岸的证词",
+      "label": "英国下议院印行文件｜麦克莱恩关于黄金海岸的证词",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Report_from_the_Select_Committee_on_the_West_Coast_of_Africa_together_with_the_Minutes_of_Evidence%2C_Part_II.-_Appendix_and_Index_%28IA_dli.granth.77953%29.pdf",
+      "access": "1842年议会调查记录，麦克莱恩述1830年后海岸角及与阿散蒂关系。"
+    },
+    {
+      "id": "19C35-GOLD-1843",
+      "publisher": "剑桥大学出版社／Mark Finnane",
+      "title": "黄金海岸据点治理",
+      "label": "剑桥大学出版社／Mark Finnane｜黄金海岸据点治理",
+      "url": "https://www.cambridge.org/core/books/imperial-incarceration/detention-without-trial-in-sierra-leoneand-the-gold-coast-18651890/A744242D012649270A72B2833A2E53E6",
+      "access": "商人委员会运营四处堡站，1843年英国王室重新直接管理。"
+    },
+    {
+      "id": "19C35-GOLD-BOND",
+      "publisher": "加纳司法机构",
+      "title": "独立前的司法制度与1844年协定",
+      "label": "加纳司法机构｜独立前的司法制度与1844年协定",
+      "url": "https://www.judicial.gov.gh/index.php/beforeindependence",
+      "access": "英国官员与沿海首领约定由双方共同审理严重刑事案件。"
+    },
+    {
+      "id": "19C33-KIT-NBT",
+      "publisher": "印度国家图书信托",
+      "title": "《Rani Chennamma》及公文转录",
+      "label": "印度国家图书信托｜《Rani Chennamma》及公文转录",
+      "url": "https://www.nbtindia.gov.in/writereaddata/freebooks/pdf/Rani%20Chinnamma.pdf",
+      "access": "第52—53、67—69、84—89、163—171页，封存、交战、投降、清点财物与囚禁"
+    },
+    {
+      "id": "19C33-KIT-PRAD",
+      "publisher": "《印度快报》历史专栏",
+      "title": "钦纳玛抵抗与 Queeny Pradhan 的研究",
+      "label": "《印度快报》历史专栏｜钦纳玛抵抗与 Queeny Pradhan 的研究",
+      "url": "https://indianexpress.com/article/explained/explained-history/rani-chennamma-kittur-10324770/lite/",
+      "access": "引述史学著作和英方记录，交叉核对两次交战"
+    },
+    {
+      "id": "19C33-KIT-HER",
+      "publisher": "印度法典",
+      "title": "卡纳塔克邦基图尔发展局法附表",
+      "label": "印度法典｜卡纳塔克邦基图尔发展局法附表",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/7820/1/10of2012%28e%29.pdf",
+      "access": "列明基图尔堡和拜尔洪加尔墓址，区分两地"
+    },
+    {
+      "id": "19C33-KIT-FORT",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "基图尔堡遗址",
+      "label": "OpenStreetMap／Mapcarta｜基图尔堡遗址",
+      "url": "https://mapcarta.com/W97204879",
+      "access": "遗址中心坐标"
+    },
+    {
+      "id": "19C34-KIT-GAZ",
+      "publisher": "马哈拉施特拉邦政府历史地志",
+      "title": "基图尔行政及1830年第七号规例",
+      "label": "马哈拉施特拉邦政府历史地志｜基图尔行政及1830年第七号规例",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Gazetteer%20of%20Bombay%20Presidency/history_of_the_bombay_karnatak/haidar_ali_ad_1759.pdf",
+      "access": "Revolt of Kittur, 1824 小节，1830年行政延续。"
+    },
+    {
+      "id": "19C33-TAS-CIRCULAR",
+      "publisher": "塔斯马尼亚公园与野生动物管理局",
+      "title": "海菲尔德与瑟克勒角公司驻地",
+      "label": "塔斯马尼亚公园与野生动物管理局｜海菲尔德与瑟克勒角公司驻地",
+      "url": "https://parks.tas.gov.au/explore-our-parks/highfield-historic-site",
+      "access": "公司驻地及1826年囚工建设背景"
+    },
+    {
+      "id": "19C33-TAS-HELLYER",
+      "publisher": "新南威尔士州立图书馆",
+      "title": "亨利·赫利尔1828年范迪门地公司调查图",
+      "label": "新南威尔士州立图书馆｜亨利·赫利尔1828年范迪门地公司调查图",
+      "url": "https://www.sl.nsw.gov.au/collection-items/map-interior-discoveries-made-van-diemens-land-company-1828",
+      "access": "馆藏历史地图与测绘说明"
+    },
+    {
+      "id": "19C33-TAS-UTAS",
+      "publisher": "塔斯马尼亚大学",
+      "title": "塔斯马尼亚的边疆冲突",
+      "label": "塔斯马尼亚大学｜塔斯马尼亚的边疆冲突",
+      "url": "https://www.utas.edu.au/library/companion_to_tasmanian_history/F/Frontier%20Conflict.htm",
+      "access": "土地授予、公司1826年进占西北、1828年戒严与巡捕"
+    },
+    {
+      "id": "19C33-TAS-CIRCULAR-GEO",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "斯坦利与瑟克勒角地名",
+      "label": "GeoNames／Mapcarta｜斯坦利与瑟克勒角地名",
+      "url": "https://mapcarta.com/Stanley_%28Tasmania%29",
+      "access": "现代斯坦利聚落位置"
+    },
+    {
+      "id": "19C34-TAS-HIGH",
+      "publisher": "塔斯马尼亚图书馆 eHeritage",
+      "title": "瑟克勒角海菲尔德庄园",
+      "label": "塔斯马尼亚图书馆 eHeritage｜瑟克勒角海菲尔德庄园",
+      "url": "https://eheritage.libraries.tas.gov.au/resources/detail50f4.html?ID=CHH_00227",
+      "access": "1832—1835年兴建，范迪门地公司代理人驻地。"
+    },
+    {
+      "id": "19C33-ASH-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "阿散蒂战号与第一次英阿散蒂战争",
+      "label": "英国国家陆军博物馆｜阿散蒂战号与第一次英阿散蒂战争",
+      "url": "https://www.nam.ac.uk/explore/trophy-worth-losing-your-head",
+      "access": "战号与1824年恩萨曼科战斗、英国带走物件的记载"
+    },
+    {
+      "id": "19C33-ASH-HIST",
+      "publisher": "Provenance Africa",
+      "title": "1824—1831年英阿散蒂战争史料述评",
+      "label": "Provenance Africa｜1824—1831年英阿散蒂战争史料述评",
+      "url": "https://provenanceafrica.com/history/articles/anglo-asante-wars/",
+      "access": "核对战役顺序及据 Ricketts、Reindorf、Wilks 所载的不同说法"
+    },
+    {
+      "id": "19C33-ASH-KUMASI",
+      "publisher": "《History in Africa》",
+      "title": "库马西的城市历史与档案",
+      "label": "《History in Africa》｜库马西的城市历史与档案",
+      "url": "https://www.cambridge.org/core/journals/history-in-africa/article/urban-history-in-kumase-ghana-a-note-on-archives/3E5DFF6BAB5ADAB7BF1150479C0ABF48",
+      "access": "库马西王权与档案背景"
+    },
+    {
+      "id": "19C33-ASH-KUM-GEO",
+      "publisher": "GeoNames",
+      "title": "库马西地名",
+      "label": "GeoNames｜库马西地名",
+      "url": "https://www.geonames.org/2298890/kumasi.html",
+      "access": "现代城市坐标"
+    },
+    {
+      "id": "19C33-HBC-YORK",
+      "publisher": "加拿大公园管理局",
+      "title": "约克贸易站的历史",
+      "label": "加拿大公园管理局｜约克贸易站的历史",
+      "url": "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history",
+      "access": "哈得孙湾公司贸易站、来自英国的物资及内陆交通"
+    },
+    {
+      "id": "19C33-HBC-YORK-GEO",
+      "publisher": "加拿大自然资源部",
+      "title": "约克贸易站地名",
+      "label": "加拿大自然资源部｜约克贸易站地名",
+      "url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=GBPLG",
+      "access": "约克贸易站地点"
+    },
+    {
+      "id": "19C33-HBC-UNION",
+      "publisher": "加拿大印第安权利委员会档案",
+      "title": "1821年哈德孙湾公司与西北公司协议",
+      "label": "加拿大印第安权利委员会档案｜1821年哈德孙湾公司与西北公司协议",
+      "url": "https://www.clic-icdc.ca/_files/ugd/855ab7_37e93e647b634736a69caa208d6ed9f3.pdf",
+      "access": "3月26日协议原文，合营名称与资本安排"
+    },
+    {
+      "id": "19C33-HBC-LIC",
+      "publisher": "加拿大图书档案馆／George Bryce",
+      "title": "1821年王室贸易许可证",
+      "label": "加拿大图书档案馆／George Bryce｜1821年王室贸易许可证",
+      "url": "https://data2.collectionscanada.gc.ca/080027/amicus-5372826_04.pdf",
+      "access": "第437—439页转录及释读，12月5日，卡尔顿府"
+    },
+    {
+      "id": "19C34-HBC-LIC",
+      "publisher": "加拿大政府出版物",
+      "title": "不列颠哥伦比亚印第安条约史",
+      "label": "加拿大政府出版物｜不列颠哥伦比亚印第安条约史",
+      "url": "https://publications.gc.ca/collections/collection_2012/ainc-inac/R32-266-1984-eng.pdf",
+      "access": "牌照与商站、与原住民签约的制度沿革。"
+    },
+    {
+      "id": "19C33-HBC-VAN",
+      "publisher": "美国国家公园管理局",
+      "title": "最早的温哥华堡",
+      "label": "美国国家公园管理局｜最早的温哥华堡",
+      "url": "https://www.nps.gov/fova/learn/historyculture/oldfova.htm",
+      "access": "1824—1829年建堡、命名、迁站与原址"
+    },
+    {
+      "id": "19C33-HBC-VAN-NEW",
+      "publisher": "美国国家公园管理局",
+      "title": "温哥华堡遗址",
+      "label": "美国国家公园管理局｜温哥华堡遗址",
+      "url": "https://home.nps.gov/places/fortvancouver.htm",
+      "access": "1829年河边堡址及现址地图"
+    },
+    {
+      "id": "19C34-HBC-FV",
+      "publisher": "美国国家公园管理局",
+      "title": "温哥华堡总管官邸",
+      "label": "美国国家公园管理局｜温哥华堡总管官邸",
+      "url": "https://www.nps.gov/fova/learn/historyculture/chieffactorshouse.htm",
+      "access": "麦克劳克林1838年进驻临河堡址新官邸；公司至1860年离开。"
+    },
+    {
+      "id": "19C33-HBC-LANG",
+      "publisher": "加拿大公园管理局／Mary K. Cullen",
+      "title": "兰利堡建造档案",
+      "label": "加拿大公园管理局／Mary K. Cullen｜兰利堡建造档案",
+      "url": "https://parkscanadahistory.com/series/chs/20/chs20-1r.htm",
+      "access": "Fort Langley 1827 节，7月29日靠岸、8月动工"
+    },
+    {
+      "id": "19C33-HBC-LANG-GEO",
+      "publisher": "不列颠哥伦比亚省地名局",
+      "title": "德比河段与旧兰利堡",
+      "label": "不列颠哥伦比亚省地名局｜德比河段与旧兰利堡",
+      "url": "https://apps.gov.bc.ca/pub/bcgnws/names/14503.html",
+      "access": "弗雷泽河南岸旧堡与河段位置，区别1839年迁入的新址"
+    },
+    {
+      "id": "19C33-HBC-LANG-PARK",
+      "publisher": "大温哥华都会区",
+      "title": "德比河段公园管理计划",
+      "label": "大温哥华都会区｜德比河段公园管理计划",
+      "url": "https://metrovancouver.org/services/regional-parks/Documents/derby-reach-management-plan.pdf",
+      "access": "原堡在弗雷泽河南岸，旧址纪念标志与图件"
+    },
+    {
+      "id": "19C34-HBC-LANG",
+      "publisher": "加拿大公园管理局",
+      "title": "兰利堡管理计划与堡址沿革",
+      "label": "加拿大公园管理局｜兰利堡管理计划与堡址沿革",
+      "url": "https://parks.canada.ca/agence-agency/bib-lib/~/media/dfe0874b9b5b4aecb30fdc1c9ece8fbe.ashx",
+      "access": "旧址1839年撤用，上游新堡同年建立，1840年火后原址重建。"
+    },
+    {
+      "id": "19C33-BAT-NMA",
+      "publisher": "澳大利亚国家博物馆",
+      "title": "巴瑟斯特的设立",
+      "label": "澳大利亚国家博物馆｜巴瑟斯特的设立",
+      "url": "https://digital-classroom.nma.gov.au/defining-moments/founding-bathurst",
+      "access": "1815年定居点、越过蓝山后的殖民扩张"
+    },
+    {
+      "id": "19C33-BAT-PROC",
+      "publisher": "Towards Truth／澳大利亚州档案",
+      "title": "巴瑟斯特戒严公告及撤销",
+      "label": "Towards Truth／澳大利亚州档案｜巴瑟斯特戒严公告及撤销",
+      "url": "https://www.towardstruth.org.au/themes/country/dispossession/120-frontier-wars/sub0250-martial-law-on-the-bathurst-plains",
+      "access": "1824年8月14日公告，12月11日撤销，见原件转录及引文"
+    },
+    {
+      "id": "19C33-BAT-LOCAL",
+      "publisher": "巴瑟斯特区议会",
+      "title": "当地原住民历史与遗产",
+      "label": "巴瑟斯特区议会｜当地原住民历史与遗产",
+      "url": "https://www.bathurst.nsw.gov.au/files/assets/public/v/1/council/plans-policies/aboriginal-heritage-study.pdf",
+      "access": "威拉杜里人的土地、殖民时期冲突与地方记录"
+    },
+    {
+      "id": "19C33-BAT-GEO",
+      "publisher": "GeoNames",
+      "title": "巴瑟斯特地名",
+      "label": "GeoNames｜巴瑟斯特地名",
+      "url": "https://www.geonames.org/2176632",
+      "access": "现代城市位置"
+    },
+    {
+      "id": "19C33-GUL-QDL",
+      "publisher": "卡塔尔数字图书馆",
+      "title": "英国在波斯湾的海军据点",
+      "label": "卡塔尔数字图书馆｜英国在波斯湾的海军据点",
+      "url": "https://qdl.qa/en/british-naval-bases-gulf-1820-1935-history-tensions",
+      "access": "格什姆岛驻军、波斯政府抗议、1822年交涉及1823年巴赛杜驻点"
+    },
+    {
+      "id": "19C33-GUL-IRAN",
+      "publisher": "Encyclopaedia Iranica",
+      "title": "格什姆岛与英方海军驻点",
+      "label": "Encyclopaedia Iranica｜格什姆岛与英方海军驻点",
+      "url": "https://www.iranicaonline.org/articles/qeshm-island/",
+      "access": "巴赛杜据点与波斯湾背景"
+    },
+    {
+      "id": "19C33-GUL-BAS-GEO",
+      "publisher": "盖蒂研究所／Mapcarta",
+      "title": "巴赛杜村地名",
+      "label": "盖蒂研究所／Mapcarta｜巴赛杜村地名",
+      "url": "https://mapcarta.com/12628008",
+      "access": "格什姆岛西部具名聚落，结合历史据点位置"
+    },
+    {
+      "id": "19C33-DUAR-FRONTIER",
+      "publisher": "R. B. 彭伯顿／英属印度政府印本",
+      "title": "《英属印度东部边境报告》",
+      "label": "R. B. 彭伯顿／英属印度政府印本｜《英属印度东部边境报告》",
+      "url": "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1835%20Report%20on%20Eastern%20Frontier%20of%20British%20India%20by%20Pemberton%20s.pdf",
+      "access": "第171—172页，第58段。1834年7月交回不丹方面及向死者家属补偿。"
+    },
+    {
+      "id": "19C33-DUAR-AIT",
+      "publisher": "塔夫茨大学资料库／Aitchison",
+      "title": "不丹与英属印度往来条约汇编",
+      "label": "塔夫茨大学资料库／Aitchison｜不丹与英属印度往来条约汇编",
+      "url": "https://dl.tufts.edu/downloads/f7623q75r?filename=q811kw83k.pdf",
+      "access": "不丹绪论，核对轮管、1828年暂扣、1834年交还，以及后来涉及其他杜阿尔的行动。"
+    },
+    {
+      "id": "19C34-TAS-PARL",
+      "publisher": "塔斯马尼亚议会馆载文件",
+      "title": "原住民领袖交涉与怀巴莱纳时间线",
+      "label": "塔斯马尼亚议会馆载文件｜原住民领袖交涉与怀巴莱纳时间线",
+      "url": "https://www.parliament.tas.gov.au/house-of-assembly/tabled-papers/2021/HATP23_25_11_2021.pdf",
+      "access": "时间线，1831年8月6日小马瑟尔罗湾交涉及1832年到霍巴特。"
+    },
+    {
+      "id": "19C34-JAM-SPANISH",
+      "publisher": "牙买加国家遗产信托",
+      "title": "西班牙镇旧王府与议会旧址",
+      "label": "牙买加国家遗产信托｜西班牙镇旧王府与议会旧址",
+      "url": "https://www.jnht.gov.jm/site_spanish_town.php",
+      "access": "1830年代殖民政府所在与旧王府、解放广场。"
+    },
+    {
+      "id": "19C34-JAM-SPANISH-GEO",
+      "publisher": "GeoNames",
+      "title": "西班牙镇",
+      "label": "GeoNames｜西班牙镇",
+      "url": "https://www.geonames.org/3488465/spanish-town.html",
+      "access": "牙买加圣凯瑟琳的西班牙镇坐标。"
+    },
+    {
+      "id": "19C34-JAM-LOCAL",
+      "publisher": "Jenny Jemmott／牙买加地方史项目",
+      "title": "圣凯瑟琳地方史",
+      "label": "Jenny Jemmott／牙买加地方史项目｜圣凯瑟琳地方史",
+      "url": "https://www.parishhistoriesofjamaica.org/wp-content/uploads/2020/03/Parish-History-of-St.-Catherine.pdf",
+      "access": "1834年与1838年西班牙镇两次宣告及民众集会。"
+    },
+    {
+      "id": "19C34-CAP-PROV",
+      "publisher": "Alan Lester／《非洲史期刊》",
+      "title": "阿德莱德女王省的殖民化",
+      "label": "Alan Lester／《非洲史期刊》｜阿德莱德女王省的殖民化",
+      "url": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/settlers-the-state-and-colonial-power-the-colonization-of-queen-adelaide-province-183437/9CA123B62EF2FFD2D1E24635D2454504",
+      "access": "论文公开摘要，殖民政府扩张及1836年末退出。"
+    },
+    {
+      "id": "19C34-CAP-QON",
+      "publisher": "盖蒂研究所历史地名索引",
+      "title": "威廉王城（今 Qonce）",
+      "label": "盖蒂研究所历史地名索引｜威廉王城（今 Qonce）",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&subjectid=1093231",
+      "access": "现代城市级定位。"
+    },
+    {
+      "id": "19C34-CAP-COX",
+      "publisher": "South African History Online",
+      "title": "考克斯堡",
+      "label": "South African History Online｜考克斯堡",
+      "url": "https://sahistory.org.za/place/fort-cox",
+      "access": "1835年英军设驻地及地点。"
+    },
+    {
+      "id": "19C34-NAN-CHEW",
+      "publisher": "剑桥大学出版社《现代亚洲研究》",
+      "title": "Emrys Chew：1831—1832年的南宁战争",
+      "label": "剑桥大学出版社《现代亚洲研究》｜Emrys Chew：1831—1832年的南宁战争",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/naning-war-18311832-colonial-authority-and-malay-resistance-in-the-early-period-of-british-expansion/65A3843F770784EBC76D0B106DB07E25",
+      "access": "第351—387页。早期交涉、两次远征、林茂转向、十月行政改制与1834年投降。"
+    },
+    {
+      "id": "19C34-NAN-TABOH",
+      "publisher": "FindLatitudeAndLongitude",
+      "title": "塔波南宁地名定位",
+      "label": "FindLatitudeAndLongitude｜塔波南宁地名定位",
+      "url": "https://www.findlatitudeandlongitude.com/l/Taboh%2BNaning%2C%2BKampung%2BTaboh%2BNaning%2BJaya%2C%2BAlor%2BGajah%2C%2BMalacca%2C%2B73000%2C%2BMalaysia/7980303/gps-coordinates-converter/",
+      "access": "同名村落坐标，用于定位原行政中心一带。"
+    },
+    {
+      "id": "19C34-AD-TREAT",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "title": "《艾奇逊条约集》亚丁条目",
+      "label": "大英图书馆／卡塔尔数字图书馆｜《艾奇逊条约集》亚丁条目",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100023462214.0x00002f",
+      "access": "印度事务部条约集，第19叶。沉船争端、谈判、1839年1月19日夺港及6月协议。"
+    },
+    {
+      "id": "19C34-AD-MIL",
+      "publisher": "印度事务部／卡塔尔数字图书馆",
+      "title": "《亚丁保护地军事报告》",
+      "label": "印度事务部／卡塔尔数字图书馆｜《亚丁保护地军事报告》",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023729267.0x000019",
+      "access": "亚丁港、拉赫季统治者及1839年1月行动。"
+    },
+    {
+      "id": "19C34-AD-GOV",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "title": "《亚丁事务》殖民行政原始往来",
+      "label": "大英图书馆／卡塔尔数字图书馆｜《亚丁事务》殖民行政原始往来",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100110385087.0x00000d",
+      "access": "档案 IOR/L/PS/5/376 亚丁案卷：占领后的行政、防务、财产损毁赔偿和周边关系。"
+    },
+    {
+      "id": "19C34-AD-RES",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "title": "《亚丁事务》1839年11月反攻与英军封锁",
+      "label": "大英图书馆／卡塔尔数字图书馆｜《亚丁事务》1839年11月反攻与英军封锁",
+      "url": "https://www.qdl.qa/archive/81055/vdc_100111230835.0x000009",
+      "access": "档案摘要载11月11日阿卜达利与法德利人员袭击亚丁及英方封锁舒格拉。"
+    },
+    {
+      "id": "19C34-AF-GAZ",
+      "publisher": "《印度帝国地名志》",
+      "title": "阿富汗条目",
+      "label": "《印度帝国地名志》｜阿富汗条目",
+      "url": "https://library.bjp.org/jspui/bitstream/123456789/1892/1/The%20Imperial%20Gazetteer%20of%20India%20%20%20Abrar%20to%20Balasinor%20Vol-1.pdf",
+      "access": "第一卷阿富汗条目，1839年进军与8月7日入喀布尔。"
+    },
+    {
+      "id": "19C34-AF-KAN",
+      "publisher": "盖蒂地名词库",
+      "title": "坎大哈地名条目",
+      "label": "盖蒂地名词库｜坎大哈地名条目",
+      "url": "https://vocab.getty.edu/page/tgn/7002248",
+      "access": "现代城市坐标。"
+    },
+    {
+      "id": "19C34-KAL-REP",
+      "publisher": "威尔希尔报告转录",
+      "title": "《印度河战役书信》第十四章",
+      "label": "威尔希尔报告转录｜《印度河战役书信》第十四章",
+      "url": "https://www.cyberlibrary.org/en/books/campaign-of-the-indus-in-a-series-of-letters-from-an-officer-of-0cd3a7ea/chapters/14/",
+      "access": "11月3日自奎达出发、11月13日攻城及梅赫拉布汗阵亡。"
+    },
+    {
+      "id": "19C34-OP-CAM",
+      "publisher": "剑桥大学出版社《现代亚洲研究》",
+      "title": "《穷人的作物：规避鸦片专卖》",
+      "label": "剑桥大学出版社《现代亚洲研究》｜《穷人的作物：规避鸦片专卖》",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/199D0743201BF76C8ADA72F625B85FAD/S0026749X17001093a.pdf/poor_mans_crop_evading_opium_monopoly.pdf",
+      "access": "巴特那及贝拿勒斯体系、东印度公司收购机制与种植户对专卖的回应。"
+    },
+    {
+      "id": "19C34-OP-HAN",
+      "publisher": "英国议会历史记录",
+      "title": "1840年7月27日下院拨款辩论（中国）",
+      "label": "英国议会历史记录｜1840年7月27日下院拨款辩论（中国）",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1840/jul/27/supply-china",
+      "access": "议员回顾公司鸦片收入、1839年的拍卖和对华纠纷。"
+    },
+    {
+      "id": "19C34-OP-PAT",
+      "publisher": "GeoNames",
+      "title": "巴特那地名条目",
+      "label": "GeoNames｜巴特那地名条目",
+      "url": "https://www.geonames.org/1260086",
+      "access": "现代城市坐标。"
+    },
+    {
+      "id": "19C34-OP-GHAZ",
+      "publisher": "印度财政部政府鸦片与生物碱工厂",
+      "title": "加济布尔工厂简介",
+      "label": "印度财政部政府鸦片与生物碱工厂｜加济布尔工厂简介",
+      "url": "https://goaf.gov.in/ghazipur/about-us/introduction-ghazipur",
+      "access": "工厂1820年在加济布尔恒河岸设立。"
+    },
+    {
+      "id": "19C34-OP-GHAZ-GEO",
+      "publisher": "GeoNames",
+      "title": "加济布尔市地名定位",
+      "label": "GeoNames｜加济布尔市地名定位",
+      "url": "https://www.geonames.org/search.html?country=IN&q=&startRow=650",
+      "access": "城市地名坐标用于工厂所在城市。"
+    },
+    {
+      "id": "19C34-OP-CAL",
+      "publisher": "GeoNames",
+      "title": "加尔各答地名条目",
+      "label": "GeoNames｜加尔各答地名条目",
+      "url": "https://www.geonames.org/1275004",
+      "access": "现代城市坐标。"
+    },
+    {
+      "id": "19C34-WA-ROUND",
+      "publisher": "西澳州政府",
+      "title": "弗里曼特尔圆屋与亚瑟角历史遗址",
+      "label": "西澳州政府｜弗里曼特尔圆屋与亚瑟角历史遗址",
+      "url": "https://www.wa.gov.au/government/document-collections/round-house-and-arthur-head-reserve",
+      "access": "首座监狱建成于1831年1月。"
+    },
+    {
+      "id": "19C34-WA-ROUND-GEO",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "弗里曼特尔圆屋",
+      "label": "OpenStreetMap／Mapcarta｜弗里曼特尔圆屋",
+      "url": "https://mapcarta.com/W49965210",
+      "access": "原监狱建筑的现代定位。"
+    },
+    {
+      "id": "19C34-WA-WAD-HER",
+      "publisher": "西澳州遗产委员会",
+      "title": "瓦杰马普囚禁设施遗产评估",
+      "label": "西澳州遗产委员会｜瓦杰马普囚禁设施遗产评估",
+      "url": "https://inherit.dplh.wa.gov.au/Admin/api/file/32f72779-6f5c-4af4-a9c1-0c5ed7d842ee",
+      "access": "1838—1839年首座囚禁建筑与早期管理。"
+    },
+    {
+      "id": "19C34-WA-PERTH",
+      "publisher": "TLCMap 澳大利亚历史地点集",
+      "title": "珀斯早期总督驻地",
+      "label": "TLCMap 澳大利亚历史地点集｜珀斯早期总督驻地",
+      "url": "https://tlcmap.org/layers/172",
+      "access": "1834年珀斯总督驻地坐标和州立图书馆馆藏。"
+    },
+    {
+      "id": "19C34-WA-PIN-HER",
+      "publisher": "西澳州遗产委员会",
+      "title": "平贾拉屠杀遗址永久登记及评估",
+      "label": "西澳州遗产委员会｜平贾拉屠杀遗址永久登记及评估",
+      "url": "https://inherit.dplh.wa.gov.au/admin/api/file/a32f1bff-4af9-564a-68ce-8409d0c9f3cc",
+      "access": "殖民扩张背景、宾贾雷布努恩加尔人及斯特林行动。"
+    },
+    {
+      "id": "19C34-WA-WAD-WA",
+      "publisher": "西澳州文化与艺术部门",
+      "title": "瓦杰马普囚禁制度年表",
+      "label": "西澳州文化与艺术部门｜瓦杰马普囚禁制度年表",
+      "url": "https://www.cits.wa.gov.au/aboriginal-culture/aboriginal-history/reconciliation-and-history-projects/wadjemup/wadjemup-timeline",
+      "access": "1838年原住民囚犯抵岛、1839年定为监狱及1840年代后续。"
+    },
+    {
+      "id": "19C34-WA-WAD-RIA",
+      "publisher": "罗特尼斯特岛管理方",
+      "title": "瓦杰马普原住民历史",
+      "label": "罗特尼斯特岛管理方｜瓦杰马普原住民历史",
+      "url": "https://www.rottnestisland.com/learn/history/aboriginal-history",
+      "access": "首批抵岛、巴瑟斯特角、早期囚犯劳动与阶段性停运。"
+    },
+    {
+      "id": "19C34-WA-WAD-PDF",
+      "publisher": "西澳州文化与艺术部门",
+      "title": "瓦杰马普历史年表及插图档案",
+      "label": "西澳州文化与艺术部门｜瓦杰马普历史年表及插图档案",
+      "url": "https://www.dlgsc.wa.gov.au/docs/default-source/aboriginal-history/wadjemup-timeline.pdf",
+      "access": "1839年盐仓与强迫劳动，1841年通过监狱立法。"
+    },
+    {
+      "id": "19C34-IN-BANK",
+      "publisher": "GeoNames",
+      "title": "班库拉城市条目",
+      "label": "GeoNames｜班库拉城市条目",
+      "url": "https://www.geonames.org/1277264/bankura.html",
+      "access": "公司军撤退地点的城市坐标。"
+    },
+    {
+      "id": "19C34-IN-BHU",
+      "publisher": "印度英迪拉·甘地国家艺术中心馆藏",
+      "title": "《Resistance Against the British》",
+      "label": "印度英迪拉·甘地国家艺术中心馆藏｜《Resistance Against the British》",
+      "url": "https://ignca.gov.in/Asi_data/6048.pdf",
+      "access": "第39页，巴拉巴扎尔、地方征收冲突与公司军退往班库拉。"
+    },
+    {
+      "id": "19C34-IN-BANK-HIS",
+      "publisher": "戈卡莱政治经济研究所馆藏",
+      "title": "《孟加拉地区地名志：班库拉》",
+      "label": "戈卡莱政治经济研究所馆藏｜《孟加拉地区地名志：班库拉》",
+      "url": "https://dspace.gipe.ac.in/xmlui/bitstream/handle/1/38306/GIPE-017784.pdf?sequence=3",
+      "access": "第40页附近记1832年巴拉布姆起义后1833年辖区改组。"
+    },
+    {
+      "id": "19C34-COORG-RICE",
+      "publisher": "泰米尔数字图书馆馆藏",
+      "title": "Lewis Rice：《迈索尔与库格地方志》第三卷",
+      "label": "泰米尔数字图书馆馆藏｜Lewis Rice：《迈索尔与库格地方志》第三卷",
+      "url": "https://tamildigitallibrary.in/assets/docs/uploads/primary_files/book/TVA_BOK_0046866/TVA_BOK_0046866_Mysore_and_Coorg_Vol_3.pdf",
+      "access": "第173—191、195—200页。进军、公告、地方应对及其后的抵抗。"
+    },
+    {
+      "id": "19C34-COORG-FORT",
+      "publisher": "印度卡纳塔克邦科达古县政府",
+      "title": "马迪凯里堡",
+      "label": "印度卡纳塔克邦科达古县政府｜马迪凯里堡",
+      "url": "https://kodagu.nic.in/en/tourist-place/madikeri-fort/",
+      "access": "首府堡垒的地方政府资料。"
+    },
+    {
+      "id": "19C34-COORG-FORT-GEO",
+      "publisher": "维基百科地名条目",
+      "title": "马迪凯里堡坐标",
+      "label": "维基百科地名条目｜马迪凯里堡坐标",
+      "url": "https://en.wikipedia.org/wiki/Madikeri_Fort",
+      "access": "只采用具名堡垒现代点坐标。"
+    },
+    {
+      "id": "19C34-COORG-COURTS",
+      "publisher": "印度卡纳塔克邦科达古县政府",
+      "title": "科达古法院沿革",
+      "label": "印度卡纳塔克邦科达古县政府｜科达古法院沿革",
+      "url": "https://kodagu.nic.in/en/courts/",
+      "access": "吞并后官员兼行政和司法的制度背景。"
+    },
+    {
+      "id": "19C34-LAB-MAU-ARCH",
+      "publisher": "毛里求斯国家档案馆",
+      "title": "英国档案目录，E287项T71奴隶制赔偿记录",
+      "label": "毛里求斯国家档案馆｜英国档案目录，E287项T71奴隶制赔偿记录",
+      "url": "https://nationalarchives.govmu.org/nationalarchives/wp-content/uploads/2020/12/Sections-a-f.pdf",
+      "access": "印页565—566，约七千名申请人，档号1109—1162；证书及修订裁定。"
+    },
+    {
+      "id": "19C34-LAB-MAU-APP",
+      "publisher": "剑桥大学出版社《非洲研究评论》",
+      "title": "毛里求斯及附属地的学徒制",
+      "label": "剑桥大学出版社《非洲研究评论》｜毛里求斯及附属地的学徒制",
+      "url": "https://www.cambridge.org/core/journals/african-studies-review/article/abs/apprenticeship-system-in-mauritius-its-character-and-its-impact-on-race-relations-in-the-immediate-postemancipation-period-18391879/25B97408BEEE67E7FAE3B43170FF18FD",
+      "access": "1835年2月1日起实施与学徒受原主控制。"
+    },
+    {
+      "id": "19C34-LAB-MAU-ARR",
+      "publisher": "阿普拉瓦西·加特信托基金",
+      "title": "毛里求斯契约移民史教学档案",
+      "label": "阿普拉瓦西·加特信托基金｜毛里求斯契约移民史教学档案",
+      "url": "https://aapravasi.govmu.org/aapravasi/wp-content/uploads/2020/09/Education-Kit-for-teachers.pdf",
+      "access": "阿特拉斯号首批36人，早期招工及1849年建入境站。"
+    },
+    {
+      "id": "19C34-LAB-MAU-UN",
+      "publisher": "联合国教科文组织",
+      "title": "阿普拉瓦西·加特世界遗产",
+      "label": "联合国教科文组织｜阿普拉瓦西·加特世界遗产",
+      "url": "https://whc.unesco.org/en/list/1227",
+      "access": "路易港契约移民及制糖业背景。"
+    },
+    {
+      "id": "19C34-LAB-MAU-G",
+      "publisher": "GeoNames",
+      "title": "路易港城市坐标",
+      "label": "GeoNames｜路易港城市坐标",
+      "url": "https://www.geonames.org/934154/port-louis.html",
+      "access": "早期抵港和殖民行政以城市位置落图。"
+    },
+    {
+      "id": "19C34-LAB-CHA-ICJ",
+      "publisher": "国际法院案卷",
+      "title": "毛里求斯政府书面陈述，查戈斯早期种植园史",
+      "label": "国际法院案卷｜毛里求斯政府书面陈述，查戈斯早期种植园史",
+      "url": "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/169/169-20180301-WRI-05-00-EN.pdf",
+      "access": "第2.9—2.14段，椰子种植园、奴役劳工、椰干外运与殖民政权。"
+    },
+    {
+      "id": "19C34-LAB-CHA-EDIS",
+      "publisher": "查戈斯保护信托刊物",
+      "title": "Richard Edis：迪戈加西亚奴役与劳工",
+      "label": "查戈斯保护信托刊物｜Richard Edis：迪戈加西亚奴役与劳工",
+      "url": "https://chagos-trust.org/images/uploads/documents/Chagos_News_14.pdf",
+      "access": "第14期，哈里森调查及学徒期；个别岛屿劳工细节需原档。"
+    },
+    {
+      "id": "19C34-LAB-CHA-G",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "迪戈加西亚东角",
+      "label": "GeoNames／Mapcarta｜迪戈加西亚东角",
+      "url": "https://mapcarta.com/14910822",
+      "access": "东角地岬用于附近种植园定位。"
+    },
+    {
+      "id": "19C34-EX-GOV",
+      "publisher": "巴哈马旅游部",
+      "title": "拿骚总督府",
+      "label": "巴哈马旅游部｜拿骚总督府",
+      "url": "https://www.bahamas.com/plan-your-trip/things-to-do/government-house",
+      "access": "总督府1801年启用，位于拿骚菲茨威廉山。"
+    },
+    {
+      "id": "19C34-EX-GOV-G",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "title": "拿骚总督府坐标",
+      "label": "OpenStreetMap／Mapcarta｜拿骚总督府坐标",
+      "url": "https://mapcarta.com/W371290296",
+      "access": "总督府建筑位置。"
+    },
+    {
+      "id": "19C34-EX-CRATON",
+      "publisher": "布里尔《新西印度指南》",
+      "title": "Michael Craton：1830年埃克苏马庞培反抗",
+      "label": "布里尔《新西印度指南》｜Michael Craton：1830年埃克苏马庞培反抗",
+      "url": "https://brill.com/view/journals/nwig/57/1-2/article-p19_2.pdf",
+      "access": "第19—35页，主要采用第26—29页，含总督及军警往来引证。"
+    },
+    {
+      "id": "19C33-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "第一次英缅战争",
+      "label": "英国国家陆军博物馆｜第一次英缅战争",
+      "url": "https://www.nam.ac.uk/explore/first-burma-war",
+      "access": "博物馆战役全文。仰光登陆用月份；领土法律效果采用条约原文"
+    },
+    {
+      "id": "19C33-HBC-VAN-OLD",
+      "publisher": "华盛顿州生态部门",
+      "title": "华盛顿州立聋人学校位置图",
+      "label": "华盛顿州生态部门｜华盛顿州立聋人学校位置图",
+      "url": "https://apps.ecology.wa.gov/cleanupsearch/document/135831",
+      "access": "图1，国家公园管理局确认的旧堡所在高地，坐标取学校附近"
+    },
+    {
+      "id": "19C33-HBC-VAN-MARK",
+      "publisher": "Historical Marker Database",
+      "title": "最早的温哥华堡纪念牌",
+      "label": "Historical Marker Database｜最早的温哥华堡纪念牌",
+      "url": "https://www.hmdb.org/m.asp?m=8403",
+      "access": "旧堡附近纪念点与街道"
+    },
+    {
+      "id": "19C33-HBC-CHINOOK",
+      "publisher": "美国国家公园管理局",
+      "title": "温哥华堡与当地原住民",
+      "label": "美国国家公园管理局｜温哥华堡与当地原住民",
+      "url": "https://www.nps.gov/articles/fovaclrindiancountry.htm",
+      "access": "钦努克语群、贸易与堡址所在地方"
+    },
+    {
+      "id": "19C33-GUL-RAK",
+      "publisher": "拉斯海马文化遗产部门",
+      "title": "拉斯海马与1820年条约",
+      "label": "拉斯海马文化遗产部门｜拉斯海马与1820年条约",
+      "url": "https://rakheritage.rak.ae/chapters/the-beginnings-of-the-uae/",
+      "access": "签约及英国部队1820年7月迁往格什姆岛"
+    },
+    {
+      "id": "19C33-GUL-MOVES",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "title": "洛里默记格什姆岛驻点迁移",
+      "label": "大英图书馆／卡塔尔数字图书馆｜洛里默记格什姆岛驻点迁移",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100023514760.0x000079",
+      "access": "1821年迁至盖斯又回格什姆镇，1822年迁往萨拉格与巴赛杜"
+    },
+    {
+      "id": "19C33-GUL-QESH-GEO",
+      "publisher": "GeoNames",
+      "title": "格什姆镇地名",
+      "label": "GeoNames｜格什姆镇地名",
+      "url": "https://www.geonames.org/search.html?country=IR&q=Qeshm",
+      "access": "区分格什姆镇与格什姆岛"
+    },
+    {
+      "id": "19C34-CAP-SA",
+      "publisher": "South African History Online",
+      "title": "特兰斯凯与第六次边疆战争",
+      "label": "South African History Online｜特兰斯凯与第六次边疆战争",
+      "url": "https://sahistory.org.za/place/transkei",
+      "access": "凯斯卡马河以东作战、5月宣告、9月和约与归还牲畜问题。"
+    },
+    {
+      "id": "19C34-JAM-NLJ",
+      "publisher": "牙买加国家图书馆",
+      "title": "1831年起义史料汇编",
+      "label": "牙买加国家图书馆｜1831年起义史料汇编",
+      "url": "https://beta.nlj.gov.jm/riots-and-rebellions/",
+      "access": "1831年起义专题目录，含当时报告、布告与地图。"
+    },
+    {
+      "id": "19C34-JAM-JIS",
+      "publisher": "牙买加新闻局",
+      "title": "塞缪尔·夏普与1831年起义",
+      "label": "牙买加新闻局｜塞缪尔·夏普与1831年起义",
+      "url": "https://jis.gov.jm/information/heroes/samuel-sharpe/",
+      "access": "筹划停工、肯辛顿起火及夏普被处决；废奴法年份采用法案原文。"
+    },
+    {
+      "id": "19C34-TAS-VOICES",
+      "publisher": "澳大利亚国家博物馆",
+      "title": "弗林德斯岛：原住民口述与物件",
+      "label": "澳大利亚国家博物馆｜弗林德斯岛：原住民口述与物件",
+      "url": "https://www.nma.gov.au/learn/encounters-education/community-stories/flinders-island",
+      "access": "原住民长者口述、拘禁生活、请愿和迁移。"
+    },
+    {
+      "id": "19C34-NAN-TREATY",
+      "publisher": "马来西亚国家博物馆志愿者",
+      "title": "塔波南宁地方史",
+      "label": "马来西亚国家博物馆志愿者｜塔波南宁地方史",
+      "url": "https://museumvolunteersjmm.com/2022/01/17/a-very-rough-guide-to-taboh-naning/",
+      "access": "1831年11月30日协议、第二次远征与塔波战事。"
+    },
+    {
+      "id": "19C34-AF-KAB-ARCH",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "title": "《阿富汗事务》1839年军政往来",
+      "label": "大英图书馆／卡塔尔数字图书馆｜《阿富汗事务》1839年军政往来",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100126983370.0x000016",
+      "access": "撤离喀布尔、英军8月7日入城、沙阿·舒贾复位。"
+    },
+    {
+      "id": "19C34-OP-LORDS",
+      "publisher": "英国议会历史记录",
+      "title": "1840年5月12日上院对华战争辩论",
+      "label": "英国议会历史记录｜1840年5月12日上院对华战争辩论",
+      "url": "https://api.parliament.uk/historic-hansard/lords/1840/may/12/war-with-china",
+      "access": "战前纠纷、英国外交决策及议会中的争论。"
+    },
+    {
+      "id": "19C34-WA-WAD-ACT",
+      "publisher": "西澳州法令数据库",
+      "title": "1841年《将罗特尼斯特岛定为合法监狱法》",
+      "label": "西澳州法令数据库｜1841年《将罗特尼斯特岛定为合法监狱法》",
+      "url": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/mrdoc_15952.pdf/%24FILE/Prison%20at%20Rottnest%20%281841%29%20-%20%5B00-00-00%5D.pdf?OpenElement=",
+      "access": "1841年11月26日批准的法规原文。"
+    },
+    {
+      "id": "19C34-NSW-SL",
+      "publisher": "新南威尔士州立图书馆",
+      "title": "詹姆斯·纳恩与1838年骑警行动",
+      "label": "新南威尔士州立图书馆｜詹姆斯·纳恩与1838年骑警行动",
+      "url": "https://www2.sl.nsw.gov.au/archive/curio/exhibit/1274/indexc049.html?from_collection=2&page=4",
+      "access": "1837年末派遣骑警、1838年1月交战、后续调查。"
+    },
+    {
+      "id": "19C34-NSW-WAT",
+      "publisher": "纽卡斯尔大学殖民边疆屠杀数据库",
+      "title": "滑铁卢溪／朱斯潟湖",
+      "label": "纽卡斯尔大学殖民边疆屠杀数据库｜滑铁卢溪／朱斯潟湖",
+      "url": "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=577",
+      "access": "日期、WGS84地名定位、科班与加米拉雷人遇袭。"
+    },
+    {
+      "id": "19C34-NSW-BIN",
+      "publisher": "纽卡斯尔大学殖民边疆屠杀数据库",
+      "title": "比尼盖",
+      "label": "纽卡斯尔大学殖民边疆屠杀数据库｜比尼盖",
+      "url": "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=1124",
+      "access": "1838年5月初遇袭区间、地点坐标及戴的议会证词。"
+    },
+    {
+      "id": "19C34-NSW-SLA",
+      "publisher": "纽卡斯尔大学殖民边疆屠杀数据库",
+      "title": "屠宰场溪",
+      "label": "纽卡斯尔大学殖民边疆屠杀数据库｜屠宰场溪",
+      "url": "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=578",
+      "access": "1838年5—6月日期区间、地点坐标、1838年9月10日戴致殖民秘书函。"
+    },
+    {
+      "id": "19C34-NSW-GROUP",
+      "publisher": "纽卡斯尔大学殖民边疆屠杀数据库",
+      "title": "屠宰场溪系列袭击",
+      "label": "纽卡斯尔大学殖民边疆屠杀数据库｜屠宰场溪系列袭击",
+      "url": "https://c21ch.newcastle.edu.au/colonialmassacres/groups.php",
+      "access": "比尼盖与屠宰场溪属于同一组；其他地点仍待辨认。"
+    },
+    {
+      "id": "19C34-IN-REG",
+      "publisher": "《原住民与土著研究杂志》",
+      "title": "科尔汉抵抗与1833年第十三号条例",
+      "label": "《原住民与土著研究杂志》｜科尔汉抵抗与1833年第十三号条例",
+      "url": "https://joais.in/Journal/JAIS%2C%20February%202019%2C%20Vol.%20IX%2C%20No.%201.pdf",
+      "access": "历史论文，1833年设西南边疆署与后续科尔汉抵抗。"
+    },
+    {
+      "id": "19C34-IN-SING",
+      "publisher": "印度英迪拉·甘地国家艺术中心馆藏",
+      "title": "《孟加拉地区地名志：辛格布姆》",
+      "label": "印度英迪拉·甘地国家艺术中心馆藏｜《孟加拉地区地名志：辛格布姆》",
+      "url": "https://ignca.gov.in/Asi_data/30185.pdf",
+      "access": "历史章记录科尔起义、1832年春镇压与布米杰起义。"
+    },
+    {
+      "id": "19C34-IN-TITU-BAR",
+      "publisher": "北孟加拉大学数字资料库",
+      "title": "巴拉萨特城市历史研究",
+      "label": "北孟加拉大学数字资料库｜巴拉萨特城市历史研究",
+      "url": "https://ir.nbu.ac.in/bitstreams/dafcf409-cfd8-4643-be2f-765150b2be64/download",
+      "access": "巴拉萨特地区、蒂图·米尔与纳里凯尔巴里亚。"
+    },
+    {
+      "id": "19C34-IN-TITU-NAR",
+      "publisher": "印度村落地名资料",
+      "title": "北24帕尔加纳斯县巴杜里亚辖纳里凯尔贝里亚村",
+      "label": "印度村落地名资料｜北24帕尔加纳斯县巴杜里亚辖纳里凯尔贝里亚村",
+      "url": "https://chennaiiq.com/west-bengal-state/north-24-parganas-district/baduria-subdivision/narikelberia-village/",
+      "access": "同名村在巴杜里亚辖内的地名坐标。"
+    },
+    {
+      "id": "19C34-IN-TITU-ENC",
+      "publisher": "布里尔《伊斯兰百科全书》",
+      "title": "Tītū Mīr 条目",
+      "label": "布里尔《伊斯兰百科全书》｜Tītū Mīr 条目",
+      "url": "https://isamveri.org/pdfdkm/19/DKM191337.pdf",
+      "access": "第10卷第550页，地主、种植园、公司炮击与1831年11月19日。"
+    },
+    {
+      "id": "19C34-COORG-HEB",
+      "publisher": "OpenStreetMap地形图",
+      "title": "科达古赫巴莱地名定位",
+      "label": "OpenStreetMap地形图｜科达古赫巴莱地名定位",
+      "url": "https://en-ca.topographic-map.com/map-dqdmkl/Hebbale/",
+      "access": "卡韦里河渡口附近同名村落定位。"
+    },
+    {
+      "id": "19C34-TITHE-GORT-NLI",
+      "publisher": "爱尔兰国家图书馆",
+      "title": "戈特罗屠杀图像档案",
+      "label": "爱尔兰国家图书馆｜戈特罗屠杀图像档案",
+      "url": "https://catalogue.nli.ie/Record/vtls000734592",
+      "access": "1834年12月18日戈特罗事件的图像目录及地名。"
+    },
+    {
+      "id": "19C34-TITHE-GORT-CORK",
+      "publisher": "科克历史与考古学会",
+      "title": "《1834年戈特罗的一件遗物》",
+      "label": "科克历史与考古学会｜《1834年戈特罗的一件遗物》",
+      "url": "https://corkhist.ie/wp-content/uploads/jfiles/1984/b1984-010.pdf",
+      "access": "第125页，戈特罗事件、瑞安一家及地方记忆。"
+    },
+    {
+      "id": "19C34-TITHE-GORT-I",
+      "publisher": "英国议会历史记录",
+      "title": "1835年3月3日拉斯科马克验尸调查",
+      "label": "英国议会历史记录｜1835年3月3日拉斯科马克验尸调查",
+      "url": "https://hansard.parliament.uk/commons/1835-03-03/debates/8aec0b2a-d716-4398-8153-92d84cf7fdd5/TheRathcormacInquest",
+      "access": "议员要求提交九名死者的验尸庭证词、裁定及相关往来。"
+    },
+    {
+      "id": "19C34-TITHE-GORT-BALLY",
+      "publisher": "OpenStreetMap／爱尔兰地方地名库",
+      "title": "戈特罗教区巴利纳基拉",
+      "label": "OpenStreetMap／爱尔兰地方地名库｜戈特罗教区巴利纳基拉",
+      "url": "https://www.townlands.ie/en/cork/barrymore/gortroe/gortroe/ballynakilla/",
+      "access": "科克郡戈特罗教区同名地块中心点，旁证是爱尔兰地名库编号10199。"
+    },
+    {
+      "id": "19C34-LAB-MAU-PAUSE",
+      "publisher": "阿普拉瓦西·加特信托基金",
+      "title": "世界遗产地简史",
+      "label": "阿普拉瓦西·加特信托基金｜世界遗产地简史",
+      "url": "https://aapravasi.govmu.org/aapravasi/wp-content/uploads/2020/09/Brief-History-of-the-Aapravasi-Ghat-World-Heritage-Site.pdf",
+      "access": "1839—1842年印度契约劳工外迁暂停。"
+    },
+    {
+      "id": "19C34-LAB-GUY-ARCH",
+      "publisher": "圭亚那国家档案馆",
+      "title": "印度移民档案",
+      "label": "圭亚那国家档案馆｜印度移民档案",
+      "url": "https://nationalarchives.gov.gy/indian-immigration/",
+      "access": "移民合同及早期记录的馆藏入口。"
+    },
+    {
+      "id": "19C34-LAB-GUY-RES",
+      "publisher": "《帝国与英联邦史杂志》",
+      "title": "格莱斯顿与废奴后英帝国的劳动制度",
+      "label": "《帝国与英联邦史杂志》｜格莱斯顿与废奴后英帝国的劳动制度",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/03086534.2021.1985335",
+      "access": "1837—1838年与殖民部通信、印度契约和后续争论。"
+    },
+    {
+      "id": "19C34-LAB-GUY-TRUST",
+      "publisher": "圭亚那国家信托",
+      "title": "印度移民抵达纪念碑",
+      "label": "圭亚那国家信托｜印度移民抵达纪念碑",
+      "url": "https://ntg.gov.gy/monument/indian-arrival-monument/",
+      "access": "两船首批抵达的纪念日期，位于乔治敦的纪念碑是后建。"
+    },
+    {
+      "id": "19C34-EX-MUSEUM",
+      "publisher": "巴哈马旅游部",
+      "title": "拿骚庞培奴隶制与解放博物馆",
+      "label": "巴哈马旅游部｜拿骚庞培奴隶制与解放博物馆",
+      "url": "https://www.bahamas.com/plan-your-trip/things-to-do/pompey-museum-of-slavery-emancipation-at-vendue-house",
+      "access": "确认历史人物和斯蒂文顿地名；今博物馆与1830年拘禁场所分开。"
+    },
+    {
+      "id": "19C34-EX-STEV",
+      "publisher": "GeoNames／Mapcarta",
+      "title": "斯蒂文顿村地名定位",
+      "label": "GeoNames／Mapcarta｜斯蒂文顿村地名定位",
+      "url": "https://mapcarta.com/19488386",
+      "access": "埃克苏马同名村坐标。"
+    },
+    {
+      "id": "19C34-TOL-TRAN",
+      "publisher": "托尔普德尔烈士博物馆",
+      "title": "流放与抵达澳大利亚",
+      "label": "托尔普德尔烈士博物馆｜流放与抵达澳大利亚",
+      "url": "https://www.tolpuddlemartyrs.org.uk/story/transportation",
+      "access": "朴次茅斯囚船、乔治另船赴范迪门地，其余五人赴新南威尔士。"
+    },
+    {
+      "id": "19C34-TOL-ADB",
+      "publisher": "澳大利亚国立大学《澳大利亚传记词典》",
+      "title": "乔治·洛夫莱斯",
+      "label": "澳大利亚国立大学《澳大利亚传记词典》｜乔治·洛夫莱斯",
+      "url": "https://adb.anu.edu.au/biography/loveless-george-2373",
+      "access": "六人审判、范迪门地劳役及分批返英。"
+    },
+    {
+      "id": "19C34-TOL-BRINE",
+      "publisher": "英国运输名册转录",
+      "title": "詹姆斯·布赖恩及萨里号",
+      "label": "英国运输名册转录｜詹姆斯·布赖恩及萨里号",
+      "url": "https://convictrecords.com.au/convicts/james-brine-30413",
+      "access": "据昆士兰州立图书馆转录记录核对1834年8月17日入新南威尔士及同船四人。"
+    },
+    {
+      "id": "19C34-TOL-HOME",
+      "publisher": "托尔普德尔烈士博物馆",
+      "title": "获赦与分批归来",
+      "label": "托尔普德尔烈士博物馆｜获赦与分批归来",
+      "url": "https://www.tolpuddlemartyrs.org.uk/story/homecoming",
+      "access": "乔治1837年6月13日归来，四人1838年返英，哈米特最后归来。"
+    }
+  ],
+  "events": [
+    {
+      "id": "E19-OP-1840-DINGHAI-FIRST",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年7月5日起",
+      "name": "英国远征军炮击并占领定海",
+      "description": "英国远征舰队六月抵华，继而北上舟山。7月5日舰队炮击定海，英军随后占领定海城。",
+      "short_description": "英国远征舰队六月抵华，继而北上舟山。7月5日舰队炮击定海，英军随后占领定海城。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 30.0216,
+      "lng": 122.1026,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-DING",
+        "19C35-CN-HK-Y"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-AFG-1840-DOST-SURRENDER",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年11月",
+      "name": "多斯特·穆罕默德向英方投降",
+      "description": "多斯特·穆罕默德在阿富汗继续抵抗。11月，他向英方投降，随后被送往英属印度拘押。",
+      "short_description": "多斯特·穆罕默德在阿富汗继续抵抗。11月，他向英方投降，随后被送往英属印度拘押。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-01"
+      ],
+      "research_original_node_ids": [
+        "A-02-E08"
+      ],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-KAL-1840-NASIR-RETAKES",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年",
+      "name": "纳西尔汗一方夺回卡拉特",
+      "description": "梅赫拉布汗死后，反对分割卡拉特的首领支持其子纳西尔。他们夺回卡拉特，推翻英方扶立的沙阿·纳瓦兹。",
+      "short_description": "梅赫拉布汗死后，反对分割卡拉特的首领支持其子纳西尔。他们夺回卡拉特，推翻英方扶立的沙阿·纳瓦兹。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 29.02914,
+      "lng": 66.58878,
+      "source_ids": [
+        "19C34-KAL-UOB",
+        "19C35-KAL-HUG",
+        "19C35-KAL-IR",
+        "19C34-KAL-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-03-01"
+      ],
+      "research_original_node_ids": [
+        "A-03-E07"
+      ],
+      "research_v6_stage_ids": [
+        "A-R1-02-ACTION03"
+      ]
+    },
+    {
+      "id": "E19-KAL-1840-NOTT-REENTERS",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年后期",
+      "name": "英印军再次进入卡拉特",
+      "description": "英印军继续出击。诺特率部再次进入卡拉特，此后部队返回坎大哈，英方仍留官员交涉。",
+      "short_description": "英印军继续出击。诺特率部再次进入卡拉特，此后部队返回坎大哈，英方仍留官员交涉。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 29.02914,
+      "lng": 66.58878,
+      "source_ids": [
+        "19C34-KAL-UOB",
+        "19C35-KAL-HUG",
+        "19C35-KAL-IR",
+        "19C34-KAL-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-03-01"
+      ],
+      "research_original_node_ids": [
+        "A-03-E08"
+      ],
+      "research_v6_stage_ids": [
+        "A-R1-02-ACTION04"
+      ]
+    },
+    {
+      "id": "E19-NEW-1840-DEATH-SENTENCE",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年1月16日",
+      "name": "蒙茅斯法庭判处纽波特三人死刑",
+      "description": "特别法庭在蒙茅斯宣布判决。弗罗斯特、泽法尼亚·威廉斯和威廉·琼斯因叛国罪被判处死刑。",
+      "short_description": "特别法庭在蒙茅斯宣布判决。弗罗斯特、泽法尼亚·威廉斯和威廉·琼斯因叛国罪被判处死刑。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": 51.811987,
+      "lng": -2.7153641,
+      "source_ids": [
+        "19C34-NEW-SHIRE",
+        "19C34-NEW-SHIRE-G",
+        "19C35-NEW-ADB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-180-01"
+      ],
+      "research_original_node_ids": [
+        "C-180-E01"
+      ],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-NEW-1840-LONDON-PETITION",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年2月3日",
+      "name": "伦敦请愿要求赦免纽波特三人",
+      "description": "伦敦一份有426人签名的请愿书要求完全赦免弗罗斯特、威廉斯和琼斯，现由英国议会档案保存。",
+      "short_description": "伦敦一份有426人签名的请愿书要求完全赦免弗罗斯特、威廉斯和琼斯，现由英国议会档案保存。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C34-NEW-PARDON"
+      ],
+      "geo_precision": "historical_place_no_confirmed_coordinate",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-180-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-NEW-1840-LIFE-TRANSPORTATION",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年2月11日",
+      "name": "纽波特三人由死刑改为终身流放",
+      "description": "三人的死刑被改为终身流放。英国随后把他们编入前往范迪门地的曼达林号囚犯运输。",
+      "short_description": "三人的死刑被改为终身流放。英国随后把他们编入前往范迪门地的曼达林号囚犯运输。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C35-NEW-ADB",
+        "19C34-NEW-HAN",
+        "19C34-NEW-PARDON"
+      ],
+      "geo_precision": "historical_place_no_confirmed_coordinate",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-180-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "C-stage-0238"
+      ]
+    },
+    {
+      "id": "E19-NEW-1840-MANDARIN-HOBART",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年6月30日",
+      "name": "曼达林号把三人运到霍巴特",
+      "description": "弗罗斯特、威廉斯和琼斯同船抵达霍巴特，随后被分别分配到塔斯曼半岛的流放机构工作。",
+      "short_description": "弗罗斯特、威廉斯和琼斯同船抵达霍巴特，随后被分别分配到塔斯曼半岛的流放机构工作。",
+      "category": "displacement",
+      "icon_code": "DIS",
+      "lat": -42.8821,
+      "lng": 147.3272,
+      "source_ids": [
+        "19C35-NEW-ADB",
+        "19C34-NEW-MANDARIN",
+        "19C34-NEW-NMA",
+        "19C33-TAS-HOB-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-180-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "C-stage-0239"
+      ]
+    },
+    {
+      "id": "E19-ADE-1840-MAY-ATTACK",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年5月",
+      "name": "当地力量反攻亚丁",
+      "description": "拉赫季方面及其盟友试图夺回港城，英军守住驻地。",
+      "short_description": "拉赫季方面及其盟友试图夺回港城，英军守住驻地。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 12.77522,
+      "lng": 45.03862,
+      "source_ids": [
+        "19C35-AD-RECORD",
+        "19C34-AD-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-b-40-01",
+        "19c-event-a-65-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R4-59-ACTION02"
+      ]
+    },
+    {
+      "id": "E19-ADE-1840-JULY-ATTACK",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年7月",
+      "name": "又一次反攻未能夺回亚丁",
+      "description": "继5月的进攻后，当地武装再度尝试夺回亚丁，英军再次击退进攻。",
+      "short_description": "继5月的进攻后，当地武装再度尝试夺回亚丁，英军再次击退进攻。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 12.77522,
+      "lng": 45.03862,
+      "source_ids": [
+        "19C35-AD-RECORD",
+        "19C34-AD-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-b-40-01",
+        "19c-event-a-65-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R4-59-ACTION02"
+      ]
+    },
+    {
+      "id": "E19-HBC-1840-LANGLEY-REBUILD",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年5月起",
+      "name": "哈德孙湾公司在兰利上游站点重建堡站",
+      "description": "火灾毁坏了使用约十个月的上游新堡。公司从1840年5月开始在当地重建，继续经营弗雷泽河的贸易和补给。",
+      "short_description": "火灾毁坏了使用约十个月的上游新堡。公司从1840年5月开始在当地重建，继续经营弗雷泽河的贸易和补给。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 49.1686747,
+      "lng": -122.5727865,
+      "source_ids": [
+        "19C35-HBC-LANG",
+        "19C34-HBC-LANG-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1841-BOGUE-ATTACK",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年1月7日",
+      "name": "英军夺取穿鼻与大角炮台",
+      "description": "英军从海上和陆上进攻珠江口两侧的穿鼻、大角炮台。清军战败，珠江水道进一步暴露在英军进攻之下。",
+      "short_description": "英军从海上和陆上进攻珠江口两侧的穿鼻、大角炮台。清军战败，珠江水道进一步暴露在英军进攻之下。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 22.7447,
+      "lng": 113.66979,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C34-OP-CHUG"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION02"
+      ]
+    },
+    {
+      "id": "E19-OP-1841-CHUENPI-PRELIMINARIES",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年1月20日",
+      "name": "义律公布穿鼻交涉的初步条件",
+      "description": "英国全权代表义律宣布与琦善交涉的初步条件，包括香港岛和赔款。清廷与伦敦后来均未接受这项安排。",
+      "short_description": "英国全权代表义律宣布与琦善交涉的初步条件，包括香港岛和赔款。清廷与伦敦后来均未接受这项安排。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C35-CN-HK-Y",
+        "19C35-CN-HK-T"
+      ],
+      "geo_precision": "historical_place_no_confirmed_coordinate",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1841-HONG-KONG-OCCUPATION",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年1月26日",
+      "name": "英军在上环登陆、升旗并占领香港岛",
+      "description": "英国海军登陆队在今上环荷李活道公园一带升旗。英方随后着手划售地段。",
+      "short_description": "英国海军登陆队在今上环荷李活道公园一带升旗。英方随后着手划售地段。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 22.28606,
+      "lng": 114.14767,
+      "source_ids": [
+        "19C35-CN-HK-Y",
+        "19C35-CN-HK-AMO",
+        "19C35-CN-HK-G"
+      ],
+      "geo_precision": "documented_site_anchor",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1841-DINGHAI-FIRST-WITHDRAWAL",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年2月23日",
+      "name": "英军首次撤出定海",
+      "description": "穿鼻交涉期间，英军依令撤出此前占领的定海。该年秋季英军再度进攻。",
+      "short_description": "穿鼻交涉期间，英军依令撤出此前占领的定海。该年秋季英军再度进攻。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 30.0216,
+      "lng": 122.1026,
+      "source_ids": [
+        "19C35-CN-WITH1",
+        "19C35-CN-DING",
+        "19C35-CN-NAM"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1841-CANTON-RANSOM",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年5月27日",
+      "name": "广州议款，英军以撤军换取赎城款",
+      "description": "英军攻占广州城外炮台后迫使清方交涉。义律与清方达成协议，清方须支付六百万银元，英军随后撤出所占广州外围阵地。",
+      "short_description": "英军攻占广州城外炮台后迫使清方交涉。义律与清方达成协议，清方须支付六百万银元，英军随后撤出所占广州外围阵地。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 23.11667,
+      "lng": 113.25,
+      "source_ids": [
+        "19C35-CN-QING",
+        "19C35-CN-RANSOM",
+        "19C35-CN-NAM",
+        "19C34-OP-GUA"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION03"
+      ]
+    },
+    {
+      "id": "E19-OP-1841-SANYUANLI-RESISTANCE",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年5月下旬",
+      "name": "三元里及附近乡民集结抗击英军",
+      "description": "广州城北三元里一带遭英军劫掠。当地居民在三元古庙集结，邻近乡民参与行动，双方在牛栏岗交战。",
+      "short_description": "广州城北三元里一带遭英军劫掠。当地居民在三元古庙集结，邻近乡民参与行动，双方在牛栏岗交战。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 23.16341,
+      "lng": 113.25473,
+      "source_ids": [
+        "19C35-CN-SAN",
+        "19C35-CN-FLAG",
+        "19C35-CN-SAN-G"
+      ],
+      "geo_precision": "documented_site_anchor",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1841-XIAMEN-CAPTURE",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年8月26—27日",
+      "name": "英军攻取厦门防御工事",
+      "description": "英军在璞鼎查接任全权代表后北上进攻厦门，夺取海防工事，随后在鼓浪屿留兵。",
+      "short_description": "英军在璞鼎查接任全权代表后北上进攻厦门，夺取海防工事，随后在鼓浪屿留兵。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 24.4798,
+      "lng": 118.0894,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-XM",
+        "19C35-CN-GUEV"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION04"
+      ]
+    },
+    {
+      "id": "E19-OP-1841-DINGHAI-SECOND",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年10月1日",
+      "name": "英军再占定海",
+      "description": "英军再次进攻舟山，夺取定海。清军在城外及周边阵地抵抗，英方再次派兵驻守。",
+      "short_description": "英军再次进攻舟山，夺取定海。清军在城外及周边阵地抵抗，英方再次派兵驻守。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 30.0216,
+      "lng": 122.1026,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-DING",
+        "19C35-CN-WITH2"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION04"
+      ]
+    },
+    {
+      "id": "E19-OP-1841-ZHENHAI-CAPTURE",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年10月10日",
+      "name": "英军攻占镇海",
+      "description": "英军攻占甬江口镇海的防御工事，随后向宁波推进。",
+      "short_description": "英军攻占甬江口镇海的防御工事，随后向宁波推进。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 29.96249,
+      "lng": 121.72168,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-TREAT",
+        "19C35-CN-ZHENHAI",
+        "19C35-CN-ZHAO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION04"
+      ]
+    },
+    {
+      "id": "E19-OP-1841-NINGBO-CAPTURE",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年10月13日",
+      "name": "英军进入宁波",
+      "description": "镇海失守后英军进占宁波。清军随后集结，并于次年反攻。",
+      "short_description": "镇海失守后英军进占宁波。清军随后集结，并于次年反攻。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 29.872,
+      "lng": 121.55,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-NB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION04"
+      ]
+    },
+    {
+      "id": "E19-AFG-1841-KABUL-RISING",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年11月",
+      "name": "喀布尔起事，英国使团成员伯恩斯遇害",
+      "description": "驻军与沙阿·舒贾的统治在喀布尔引发反抗。城中起事爆发，亚历山大·伯恩斯被杀，英印军困在营地。",
+      "short_description": "驻军与沙阿·舒贾的统治在喀布尔引发反抗。城中起事爆发，亚历山大·伯恩斯被杀，英印军困在营地。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [
+        "A-02-E09"
+      ],
+      "research_v6_stage_ids": [
+        "A-R3-15-ACTION01"
+      ]
+    },
+    {
+      "id": "E19-AFG-1841-MACNAGHTEN",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年12月23日",
+      "name": "英使麦克诺顿在谈判中被杀",
+      "description": "多斯特·穆罕默德之子阿克巴尔汗加入反抗。英国使节麦克诺顿与阿克巴尔汗会面谈判时被杀。",
+      "short_description": "多斯特·穆罕默德之子阿克巴尔汗加入反抗。英国使节麦克诺顿与阿克巴尔汗会面谈判时被杀。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [
+        "A-02-E10"
+      ],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-KAL-1841-NASIR-TREATY",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年10月6日",
+      "name": "纳西尔汗与英属印度当局订约",
+      "description": "纳西尔汗获英方承认为卡拉特统治者。新协议规定他同英方的关系及对外交涉条件，汗王继续治理卡拉特。",
+      "short_description": "纳西尔汗获英方承认为卡拉特统治者。新协议规定他同英方的关系及对外交涉条件，汗王继续治理卡拉特。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 29.02914,
+      "lng": 66.58878,
+      "source_ids": [
+        "19C34-KAL-UOB",
+        "19C35-KAL-HUG",
+        "19C35-KAL-IR",
+        "19C34-KAL-GEO",
+        "19C35-KAL-TEXT"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-03-01"
+      ],
+      "research_original_node_ids": [
+        "A-03-E09"
+      ],
+      "research_v6_stage_ids": [
+        "A-R1-02-ACTION04"
+      ]
+    },
+    {
+      "id": "E19-NEW-1841-CHARTER-PETITION",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年6月",
+      "name": "请愿再度要求释放三人并实施《人民宪章》",
+      "description": "下院日记登记一份请愿，既要求取消纽波特三人的判决，也要求实施《人民宪章》。",
+      "short_description": "下院日记登记一份请愿，既要求取消纽波特三人的判决，也要求实施《人民宪章》。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C35-NEW-PET41"
+      ],
+      "geo_precision": "historical_place_no_confirmed_coordinate",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-180-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-WA-1841-WADJEMUP-LABOUR",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年",
+      "name": "殖民当局使用原住民囚犯劳动建设瓦杰马普",
+      "description": "监狱主管亨利·文森特的住宅及附属设施由原住民囚犯修建，囚犯还从事采盐、收割和耕种。",
+      "short_description": "监狱主管亨利·文森特的住宅及附属设施由原住民囚犯修建，囚犯还从事采盐、收割和耕种。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": -31.99526,
+      "lng": 115.53989,
+      "source_ids": [
+        "19C35-WA-TIME",
+        "19C35-WA-RIA",
+        "19C34-WA-THOM"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-35-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-DUAR-1841-ASSAM-TAKEOVER",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "visible_from": 1841,
+      "date_label": "1841年",
+      "name": "英属印度当局接管阿萨姆七个杜阿尔",
+      "description": "英属印度当局把包括布里古马在内的七个阿萨姆杜阿尔纳入管理，安排每年向不丹方面给付一万卢比。",
+      "short_description": "英属印度当局把包括布里古马在内的七个阿萨姆杜阿尔纳入管理，安排每年向不丹方面给付一万卢比。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 26.754,
+      "lng": 92.067,
+      "source_ids": [
+        "19C35-DU-1841",
+        "19C35-DU-REPORT",
+        "19C33-DUAR-MAP"
+      ],
+      "geo_precision": "historical_named_region_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-05-04"
+      ],
+      "research_original_node_ids": [
+        "A-05-E05",
+        "A-05-E06"
+      ],
+      "research_v6_stage_ids": [
+        "A-R4-30-ACTION01"
+      ]
+    },
+    {
+      "id": "E19-OP-1842-NINGBO-COUNTERATTACK",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年3月10日",
+      "name": "清军在宁波发起反攻",
+      "description": "清军反攻英军控制的宁波，进攻被击退。此后英军转向杭州湾和长江下游。",
+      "short_description": "清军反攻英军控制的宁波，进攻被击退。此后英军转向杭州湾和长江下游。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 29.872,
+      "lng": 121.55,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-NB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1842-ZHAPU-CAPTURE",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年5月18日",
+      "name": "英军攻占乍浦",
+      "description": "英军攻打乍浦。城中清军持续抵抗，英国军队攻破防御工事并烧毁部分守军据点。",
+      "short_description": "英军攻打乍浦。城中清军持续抵抗，英国军队攻破防御工事并烧毁部分守军据点。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 30.60597,
+      "lng": 121.09107,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-ZP"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1842-SHANGHAI-CAPTURE",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年6月19日",
+      "name": "英军攻占上海",
+      "description": "英军进入上海后继续沿长江推进，长江下游的城镇与交通受到战争冲击。",
+      "short_description": "英军进入上海后继续沿长江推进，长江下游的城镇与交通受到战争冲击。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 31.2323,
+      "lng": 121.4691,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-SH"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1842-ZHENJIANG-CAPTURE",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年7月21日",
+      "name": "英军攻占镇江",
+      "description": "清军守城抵抗。镇江在攻城和随后发生的暴力中严重受损，军民伤亡。英军随后继续向南京施压。",
+      "short_description": "清军守城抵抗。镇江在攻城和随后发生的暴力中严重受损，军民伤亡。英军随后继续向南京施压。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 32.1894,
+      "lng": 119.42,
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-ZJ",
+        "19C35-CN-TREAT",
+        "19C35-CN-MIT"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1842-NANKING-TREATY",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年8月29日",
+      "name": "清英在南京签署《南京条约》",
+      "description": "清方与璞鼎查在南京江面英舰康华丽号上签约。条约规定割让香港岛、开放广州等五口，并列出清方须承担的赔款。",
+      "short_description": "清方与璞鼎查在南京江面英舰康华丽号上签约。条约规定割让香港岛、开放广州等五口，并列出清方须承担的赔款。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 32.09221,
+      "lng": 118.74445,
+      "source_ids": [
+        "19C35-CN-TREAT",
+        "19C35-CN-TNA",
+        "19C35-CN-HK-Y",
+        "19C35-CN-NJ"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION05"
+      ]
+    },
+    {
+      "id": "E19-OP-1842-INDEMNITY-SCHEDULE",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年8月29日",
+      "name": "《南京条约》规定二千一百万元赔款",
+      "description": "条约列鸦片赔款六百万元、行商债务三百万元、军费一千二百万元，以银元计。第七条规定分期至1845年，第六条另列部分赎城款的抵扣条件。",
+      "short_description": "条约列鸦片赔款六百万元、行商债务三百万元、军费一千二百万元，以银元计。第七条规定分期至1845年，第六条另列部分赎城款的抵扣条件。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 32.09221,
+      "lng": 118.74445,
+      "source_ids": [
+        "19C35-CN-TREAT",
+        "19C35-CN-NJ"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R2-13-ACTION05"
+      ]
+    },
+    {
+      "id": "E19-AFG-1842-KABUL-RETREAT",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年1月",
+      "name": "英印军和随军人员离开喀布尔",
+      "description": "英军司令埃尔芬斯通同意撤出。英印官兵及大批随军家属、仆役和其他民众从喀布尔向贾拉拉巴德撤退。",
+      "short_description": "英军司令埃尔芬斯通同意撤出。英印官兵及大批随军家属、仆役和其他民众从喀布尔向贾拉拉巴德撤退。",
+      "category": "displacement",
+      "icon_code": "DIS",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [
+        "A-02-E11"
+      ],
+      "research_v6_stage_ids": [
+        "A-R3-15-ACTION02"
+      ]
+    },
+    {
+      "id": "E19-AFG-1842-GANDAMAK",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年1月",
+      "name": "撤退队伍在甘达马克一带遭重创",
+      "description": "撤退途中，军民遭到伏击并受严寒和补给不足所困。残部在甘达马克一带再遭攻击。也有人在途中被俘或获释。",
+      "short_description": "撤退途中，军民遭到伏击并受严寒和补给不足所困。残部在甘达马克一带再遭攻击。也有人在途中被俘或获释。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 34.2891667,
+      "lng": 70.0383333,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C35-AF-GAN"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [
+        "A-02-E12"
+      ],
+      "research_v6_stage_ids": [
+        "A-R3-15-ACTION02"
+      ]
+    },
+    {
+      "id": "E19-AFG-1842-SHAH-SHUJA-DEATH",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年4月",
+      "name": "沙阿·舒贾在喀布尔遇刺",
+      "description": "英军撤离后，沙阿·舒贾失去主要军事支持。4月，他在喀布尔遇刺，王位随后出现争夺。",
+      "short_description": "英军撤离后，沙阿·舒贾失去主要军事支持。4月，他在喀布尔遇刺，王位随后出现争夺。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-AFG-1842-JALALABAD-SORTIE",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年4月7日",
+      "name": "塞尔部突袭贾拉拉巴德城外营地",
+      "description": "英印守军从贾拉拉巴德出击，焚烧并劫掠阿克巴尔汗的营地。波洛克的援军随后抵达。",
+      "short_description": "英印守军从贾拉拉巴德出击，焚烧并劫掠阿克巴尔汗的营地。波洛克的援军随后抵达。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 34.42647,
+      "lng": 70.45153,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C35-AF-JAL"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [
+        "A-02-E13"
+      ],
+      "research_v6_stage_ids": [
+        "A-R3-15-ACTION03"
+      ]
+    },
+    {
+      "id": "E19-AFG-1842-KABUL-REOCCUPATION",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年9月",
+      "name": "波洛克与诺特部重返喀布尔",
+      "description": "波洛克从东面向喀布尔推进，与由坎大哈北上的诺特部会合。英方随后找回一批被扣押人员。",
+      "short_description": "波洛克从东面向喀布尔推进，与由坎大哈北上的诺特部会合。英方随后找回一批被扣押人员。",
+      "category": "war",
+      "icon_code": "WAR",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [
+        "A-02-E14"
+      ],
+      "research_v6_stage_ids": [
+        "A-R3-15-ACTION04",
+        "A-R1-03-ACTION01"
+      ]
+    },
+    {
+      "id": "E19-AFG-1842-KABUL-BAZAAR",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年10月",
+      "name": "英军毁坏喀布尔有顶集市",
+      "description": "英国军队在撤离前毁坏喀布尔的恰尔恰塔集市。英方把拆毁这处市民经营和交易的场所当作报复。",
+      "short_description": "英国军队在撤离前毁坏喀布尔的恰尔恰塔集市。英方把拆毁这处市民经营和交易的场所当作报复。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02",
+        "19c-event-a-04-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R1-03-ACTION03"
+      ]
+    },
+    {
+      "id": "E19-AFG-1842-FINAL-WITHDRAWAL",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年10月12日",
+      "name": "波洛克部撤离喀布尔",
+      "description": "波洛克率军离开喀布尔，经贾拉拉巴德和开伯尔山口返回英属印度。东印度公司结束对阿富汗的军事占领。",
+      "short_description": "波洛克率军离开喀布尔，经贾拉拉巴德和开伯尔山口返回英属印度。东印度公司结束对阿富汗的军事占领。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [
+        "A-02-E15"
+      ],
+      "research_v6_stage_ids": [
+        "A-R1-03-ACTION04"
+      ]
+    },
+    {
+      "id": "E19-KAL-1842-BRITISH-WITHDRAWAL",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年",
+      "name": "英方从卡拉特一带撤出",
+      "description": "英军在阿富汗撤军期间撤出俾路支，卡拉特继续由纳西尔汗治理。",
+      "short_description": "英军在阿富汗撤军期间撤出俾路支，卡拉特继续由纳西尔汗治理。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 29.02914,
+      "lng": 66.58878,
+      "source_ids": [
+        "19C34-KAL-UOB",
+        "19C35-KAL-HUG",
+        "19C35-KAL-IR",
+        "19C34-KAL-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-03-01"
+      ],
+      "research_original_node_ids": [
+        "A-03-E10"
+      ],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-WA-1842-WADJEMUP-CRUELTY",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "visible_from": 1842,
+      "date_label": "1842年",
+      "name": "监狱主管因虐待瓦杰马普囚犯受查",
+      "description": "亨利·文森特被控虐待原住民囚犯，1842年获判无罪。1846年，他再受虐待指控，也未被定罪。",
+      "short_description": "亨利·文森特被控虐待原住民囚犯，1842年获判无罪。1846年，他再受虐待指控，也未被定罪。",
+      "category": "documentary",
+      "icon_code": "DOC",
+      "lat": -31.99526,
+      "lng": 115.53989,
+      "source_ids": [
+        "19C35-WA-TIME",
+        "19C35-WA-RIA",
+        "19C34-WA-THOM"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-35-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1843-HONG-KONG-COLONY",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年6月",
+      "name": "香港殖民政府成立",
+      "description": "香港岛在条约割让后建立殖民政府，璞鼎查就任首任总督。",
+      "short_description": "香港岛在条约割让后建立殖民政府，璞鼎查就任首任总督。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 22.28606,
+      "lng": 114.14767,
+      "source_ids": [
+        "19C35-CN-HK-T",
+        "19C35-CN-HK-Y",
+        "19C35-CN-TNA",
+        "19C35-CN-HK-G"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1843-BOGUE-TREATY",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年10月8日",
+      "name": "中英签署《虎门条约》",
+      "description": "中英签署《南京条约》的补充协议，把进出口税则及通商章程用于广州、厦门、福州、宁波和上海。",
+      "short_description": "中英签署《南京条约》的补充协议，把进出口税则及通商章程用于广州、厦门、福州、宁波和上海。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 22.7447,
+      "lng": 113.66979,
+      "source_ids": [
+        "19C35-CN-BOGUE",
+        "19C35-CN-HK-Y",
+        "19C34-OP-CHUG"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-AFG-1843-DOST-RETURNS",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年",
+      "name": "多斯特·穆罕默德回到喀布尔",
+      "description": "英军撤离后，先前被关押在印度的多斯特·穆罕默德获释，1843年回到喀布尔并恢复统治。",
+      "short_description": "英军撤离后，先前被关押在印度的多斯特·穆罕默德获释，1843年回到喀布尔并恢复统治。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 34.52813,
+      "lng": 69.17233,
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-02-02"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-ADE-1843-LAHEJ-AGREEMENT",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年2月11日",
+      "name": "拉赫季苏丹与亚丁英国代表达成协议",
+      "description": "苏丹穆赫辛赴亚丁求和。新协议安排不再攻击对方，并就双方属民持有财产订立条件。",
+      "short_description": "苏丹穆赫辛赴亚丁求和。新协议安排不再攻击对方，并就双方属民持有财产订立条件。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 12.77522,
+      "lng": 45.03862,
+      "source_ids": [
+        "19C35-AD-RECORD",
+        "19C35-AD-TERMS",
+        "19C34-AD-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-b-40-01",
+        "19c-event-a-65-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R4-59-ACTION03"
+      ]
+    },
+    {
+      "id": "E19-HBC-1843-FORT-VICTORIA",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年",
+      "name": "哈德孙湾公司在温哥华岛南端建堡",
+      "description": "哈德孙湾公司在勒夸门人的领地上建立维多利亚堡，经营公司在太平洋沿岸的贸易和补给。",
+      "short_description": "哈德孙湾公司在勒夸门人的领地上建立维多利亚堡，经营公司在太平洋沿岸的贸易和补给。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 48.42477,
+      "lng": -123.37004,
+      "source_ids": [
+        "19C35-HBC-VIC",
+        "19C35-HBC-LEK",
+        "19C35-HBC-VIC-G"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-03-05"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "C-stage-0617"
+      ]
+    },
+    {
+      "id": "E19-ADE-1844-STIPEND-AGREEMENT",
+      "year": 1844,
+      "start_year": 1844,
+      "end_year": 1844,
+      "visible_from": 1844,
+      "date_label": "1844年2月",
+      "name": "英方恢复给付拉赫季苏丹津贴",
+      "description": "英方要求苏丹重申遵守协议，随后恢复每月津贴，并安排补付一年欠款。",
+      "short_description": "英方要求苏丹重申遵守协议，随后恢复每月津贴，并安排补付一年欠款。",
+      "category": "wealth_flow",
+      "icon_code": "ECO",
+      "lat": 12.77522,
+      "lng": 45.03862,
+      "source_ids": [
+        "19C35-AD-RECORD",
+        "19C35-AD-TERMS",
+        "19C34-AD-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-b-40-01",
+        "19c-event-a-65-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-DUAR-1844-KARIAPARA-AGREEMENT",
+      "year": 1844,
+      "start_year": 1844,
+      "end_year": 1844,
+      "visible_from": 1844,
+      "date_label": "1844年",
+      "name": "英属印度当局另行接管卡里亚帕拉杜阿尔",
+      "description": "英印当局与隶属达旺方面的首领另订书面协议，约定以年付五千卢比换取在卡里亚帕拉平原的管辖和征收权。",
+      "short_description": "英印当局与隶属达旺方面的首领另订书面协议，约定以年付五千卢比换取在卡里亚帕拉平原的管辖和征收权。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C35-DU-1841",
+        "19C35-DU-REPORT"
+      ],
+      "geo_precision": "historical_place_no_confirmed_coordinate",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-05-05"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": [
+        "A-R4-31-ACTION01"
+      ]
+    },
+    {
+      "id": "E19-OP-1845-GULANGYU-WITHDRAWAL",
+      "year": 1845,
+      "start_year": 1845,
+      "end_year": 1845,
+      "visible_from": 1845,
+      "date_label": "1845年3月",
+      "name": "英国驻军撤出鼓浪屿",
+      "description": "《南京条约》原允许英军暂驻鼓浪屿，等待付款和通商安排。1845年3月，英国驻军撤出。",
+      "short_description": "《南京条约》原允许英军暂驻鼓浪屿，等待付款和通商安排。1845年3月，英国驻军撤出。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 24.44449,
+      "lng": 118.06664,
+      "source_ids": [
+        "19C35-CN-TREAT",
+        "19C35-CN-GUEV",
+        "19C35-CN-GU"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1846-CHUSAN-CONVENTION",
+      "year": 1846,
+      "start_year": 1846,
+      "end_year": 1846,
+      "visible_from": 1846,
+      "date_label": "1846年4月4日",
+      "name": "清英签署归还舟山的协议",
+      "description": "耆英与德庇时在虎门签署协议。清方同意不把舟山等岛让与其他国家，英方同意在清帝批准后把舟山交还清方。",
+      "short_description": "耆英与德庇时在虎门签署协议。清方同意不把舟山等岛让与其他国家，英方同意在清帝批准后把舟山交还清方。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 22.7447,
+      "lng": 113.66979,
+      "source_ids": [
+        "19C35-CN-RETREAT",
+        "19C35-CN-WITH2",
+        "19C34-OP-CHUG"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-OP-1846-DINGHAI-HANDOVER",
+      "year": 1846,
+      "start_year": 1846,
+      "end_year": 1846,
+      "visible_from": 1846,
+      "date_label": "1846年夏",
+      "name": "清方接收定海，英军撤离",
+      "description": "清朝官员到定海接收厅署。英军随后撤离，清方恢复当地管理。",
+      "short_description": "清朝官员到定海接收厅署。英军随后撤离，清方恢复当地管理。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 30.0216,
+      "lng": 122.1026,
+      "source_ids": [
+        "19C35-CN-WITH2",
+        "19C35-CN-RETREAT",
+        "19C35-CN-DING"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-a-27-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-TAS-1846-WYBALENNA-PETITION",
+      "year": 1846,
+      "start_year": 1846,
+      "end_year": 1846,
+      "visible_from": 1846,
+      "date_label": "1846年2月",
+      "name": "怀巴莱纳原住民向维多利亚女王请愿",
+      "description": "沃尔特·乔治·亚瑟等人要求殖民当局履行早年交涉中的承诺，并反对原拘禁地主管让内雷返回。",
+      "short_description": "沃尔特·乔治·亚瑟等人要求殖民当局履行早年交涉中的承诺，并反对原拘禁地主管让内雷返回。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": -40.01739052,
+      "lng": 147.8818023,
+      "source_ids": [
+        "19C35-TAS-PET",
+        "19C35-TAS-ARTHUR",
+        "19C34-TAS-WY-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-31-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-ADE-1846-AUGUST-ATTACK",
+      "year": 1846,
+      "start_year": 1846,
+      "end_year": 1846,
+      "visible_from": 1846,
+      "date_label": "1846年8月",
+      "name": "亚丁再遭进攻，英方暂停津贴",
+      "description": "拉赫季苏丹穆赫辛参与对亚丁的另一次进攻。英方随后停付给苏丹的津贴。",
+      "short_description": "拉赫季苏丹穆赫辛参与对亚丁的另一次进攻。英方随后停付给苏丹的津贴。",
+      "category": "resistance",
+      "icon_code": "RES",
+      "lat": 12.77522,
+      "lng": 45.03862,
+      "source_ids": [
+        "19C35-AD-RECORD",
+        "19C34-AD-GEO"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-b-40-01",
+        "19c-event-a-65-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-HBC-1846-OREGON-TREATY",
+      "year": 1846,
+      "start_year": 1846,
+      "end_year": 1846,
+      "visible_from": 1846,
+      "date_label": "1846年6月",
+      "name": "俄勒冈条约将温哥华堡划入美国一侧",
+      "description": "英国和美国议定分界。哥伦比亚河畔的温哥华堡处在美国一侧，哈德孙湾公司仍在堡内经营。",
+      "short_description": "英国和美国议定分界。哥伦比亚河畔的温哥华堡处在美国一侧，哈德孙湾公司仍在堡内经营。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 45.622603,
+      "lng": -122.662425,
+      "source_ids": [
+        "19C35-HBC-ORE",
+        "19C35-HBC-VAN",
+        "19C35-HBC-VAN-H",
+        "19C33-HBC-VAN-POINT"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-TAS-1847-PUTALINA-REMOVAL",
+      "year": 1847,
+      "start_year": 1847,
+      "end_year": 1847,
+      "visible_from": 1847,
+      "date_label": "1847年",
+      "name": "怀巴莱纳幸存者被迁往普塔利纳",
+      "description": "殖民当局关闭弗林德斯岛怀巴莱纳拘禁地，把幸存原住民迁往塔斯马尼亚岛的普塔利纳。当地原是已停用的流放囚犯站。",
+      "short_description": "殖民当局关闭弗林德斯岛怀巴莱纳拘禁地，把幸存原住民迁往塔斯马尼亚岛的普塔利纳。当地原是已停用的流放囚犯站。",
+      "category": "displacement",
+      "icon_code": "DIS",
+      "lat": -43.10762,
+      "lng": 147.26944,
+      "source_ids": [
+        "19C35-TAS-PUT",
+        "19C35-TAS-PUT-G",
+        "19C35-TAS-PUT-H",
+        "19C34-TAS-ALC"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-31-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-WA-1849-WADJEMUP-CLOSURE",
+      "year": 1849,
+      "start_year": 1849,
+      "end_year": 1849,
+      "visible_from": 1849,
+      "date_label": "1849年",
+      "name": "瓦杰马普监狱暂闭，囚犯被押回大陆",
+      "description": "部分原住民囚犯在1849年出逃。同年监狱停止运作，仍在岛上被拘禁的人被迁往西澳大利亚大陆。",
+      "short_description": "部分原住民囚犯在1849年出逃。同年监狱停止运作，仍在岛上被拘禁的人被迁往西澳大利亚大陆。",
+      "category": "displacement",
+      "icon_code": "DIS",
+      "lat": -31.99526,
+      "lng": 115.53989,
+      "source_ids": [
+        "19C35-WA-TIME",
+        "19C35-WA-RIA",
+        "19C34-WA-THOM"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-c-35-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-ADE-1849-COMMERCE-TREATY",
+      "year": 1849,
+      "start_year": 1849,
+      "end_year": 1849,
+      "visible_from": 1849,
+      "date_label": "1849年",
+      "name": "英国与拉赫季苏丹阿里订立通商条约",
+      "description": "新任苏丹阿里与英方签约。条约规定贸易和互访安排，并恢复此前停付的津贴。",
+      "short_description": "新任苏丹阿里与英方签约。条约规定贸易和互访安排，并恢复此前停付的津贴。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C35-AD-RECORD",
+        "19C35-AD-TERMS"
+      ],
+      "geo_precision": "historical_place_no_confirmed_coordinate",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "19c-event-b-40-01",
+        "19c-event-a-65-01"
+      ],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-HBC-1849-VANCOUVER-US-GARRISON",
+      "year": 1849,
+      "start_year": 1849,
+      "end_year": 1849,
+      "visible_from": 1849,
+      "date_label": "1849年",
+      "name": "美国陆军在温哥华堡旁设营",
+      "description": "美军在哈德孙湾公司温哥华堡旁建立驻地，军营与公司的贸易设施在随后数年并存。",
+      "short_description": "美军在哈德孙湾公司温哥华堡旁建立驻地，军营与公司的贸易设施在随后数年并存。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 45.622603,
+      "lng": -122.662425,
+      "source_ids": [
+        "19C35-HBC-VAN",
+        "19C35-HBC-VAN-H",
+        "19C33-HBC-VAN-POINT"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 3,
+        "rationale": "本章有明确史料的时间节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": [],
+      "research_v6_stage_ids": []
+    }
+  ],
+  "routes": [
+    {
+      "id": "E19-ROUTE-1841-DINGHAI-ZHENHAI-NINGBO",
+      "year": 1841,
+      "start_year": 1841,
+      "end_year": 1841,
+      "name": "定海、镇海与宁波的战事",
+      "note": "1841年10月英军相继攻占定海、镇海和宁波。",
+      "coords": [
+        [
+          30.0216,
+          122.1026
+        ],
+        [
+          29.96249,
+          121.72168
+        ],
+        [
+          29.872,
+          121.55
+        ]
+      ],
+      "route_kind": "documented-endpoints-connection",
+      "source_ids": [
+        "19C35-CN-NAM",
+        "19C35-CN-DING",
+        "19C35-CN-ZHENHAI",
+        "19C35-CN-ZHAO",
+        "19C35-CN-NB"
+      ],
+      "related_event_ids": [
+        "E19-OP-1841-DINGHAI-SECOND",
+        "E19-OP-1841-ZHENHAI-CAPTURE",
+        "E19-OP-1841-NINGBO-CAPTURE"
+      ],
+      "geo_precision": "documented_endpoints_only",
+      "position_is_historical_survey": false,
+      "territorial_claim": false,
+      "area_sqkm": null,
+      "dash_only": true
+    },
+    {
+      "id": "E19-ROUTE-1842-KABUL-GANDAMAK-JALALABAD",
+      "year": 1842,
+      "start_year": 1842,
+      "end_year": 1842,
+      "name": "喀布尔撤退与甘达马克",
+      "note": "1842年1月，英印军及随军民众由喀布尔向贾拉拉巴德撤退，残部在甘达马克一带遭到袭击。",
+      "coords": [
+        [
+          34.52813,
+          69.17233
+        ],
+        [
+          34.2891667,
+          70.0383333
+        ],
+        [
+          34.42647,
+          70.45153
+        ]
+      ],
+      "route_kind": "documented-endpoints-connection",
+      "source_ids": [
+        "19C34-AF-NAM",
+        "19C35-AF-WARS",
+        "19C35-AF-HIST",
+        "19C34-AF-KAB",
+        "19C35-AF-GAN",
+        "19C35-AF-JAL"
+      ],
+      "related_event_ids": [
+        "E19-AFG-1842-KABUL-RETREAT",
+        "E19-AFG-1842-GANDAMAK"
+      ],
+      "geo_precision": "documented_endpoints_only",
+      "position_is_historical_survey": false,
+      "territorial_claim": false,
+      "area_sqkm": null,
+      "dash_only": true
+    }
+  ]
+}

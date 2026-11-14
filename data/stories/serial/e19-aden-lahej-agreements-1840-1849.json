@@ -1,0 +1,113 @@
+{
+  "schema": "atlas-major-story-v1",
+  "id": "E19-ADEN-LAHEJ-AGREEMENTS",
+  "title": "亚丁反攻与拉赫季协议",
+  "region": "亚丁与拉赫季",
+  "start_year": 1840,
+  "end_year": 1849,
+  "period": "1840—1849年",
+  "subtitle": "夺港后，当地抵抗继续，英方与苏丹重订安排",
+  "lead": "英军夺取亚丁后，拉赫季方面多次试图夺回港城。军事行动失败后，苏丹穆赫辛赴亚丁交涉，双方就停战、财产和给付作出安排。",
+  "sections": [
+    {
+      "id": "resistance",
+      "heading": "两次反攻亚丁",
+      "period_start_year": 1840,
+      "period_end_year": 1840,
+      "paragraphs": [
+        "1839年英军夺取亚丁，随即面对当地反攻。[[E19-ADE-1840-MAY-ATTACK|1840年5月，当地武装再攻亚丁]]，未能夺回港城。",
+        "[[E19-ADE-1840-JULY-ATTACK|7月又一次反攻被英军击退]]。英国在港城继续驻军。"
+      ],
+      "source_keys": [
+        "19C35-AD-RECORD",
+        "19C34-AD-GEO"
+      ]
+    },
+    {
+      "id": "agreements",
+      "heading": "苏丹赴亚丁交涉",
+      "period_start_year": 1843,
+      "period_end_year": 1844,
+      "paragraphs": [
+        "[[E19-ADE-1843-LAHEJ-AGREEMENT|1843年2月11日，苏丹穆赫辛与亚丁英国代表达成协议]]。协议涉及停止袭击和各自辖区内的财产安排。",
+        "[[E19-ADE-1844-STIPEND-AGREEMENT|1844年2月，英方恢复对苏丹的月付津贴]]，并在他重申承诺后安排补付一年的欠款。"
+      ],
+      "source_keys": [
+        "19C35-AD-RECORD",
+        "19C35-AD-TERMS"
+      ]
+    },
+    {
+      "id": "renewal",
+      "heading": "再次交战与通商",
+      "period_start_year": 1846,
+      "period_end_year": 1849,
+      "paragraphs": [
+        "[[E19-ADE-1846-AUGUST-ATTACK|1846年8月，亚丁再遭进攻]]。因穆赫辛参与这次行动，英方暂停津贴。",
+        "[[E19-ADE-1849-COMMERCE-TREATY|1849年，新任苏丹阿里与英方签署通商条约]]。双方重订往来与贸易条件，英方恢复给付。"
+      ],
+      "source_keys": [
+        "19C35-AD-RECORD",
+        "19C35-AD-TERMS"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "19C35-AD-RECORD",
+      "publisher": "英国印度事务部／卡塔尔数字图书馆",
+      "title": "亚丁战事与拉赫季交涉",
+      "label": "英国印度事务部／卡塔尔数字图书馆｜亚丁战事与拉赫季交涉",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100023462214.0x000030",
+      "access": "第19叶背面，1840年两次反攻，1843和1844年交涉。"
+    },
+    {
+      "id": "19C34-AD-GEO",
+      "publisher": "Database.earth",
+      "title": "亚丁克雷特老城地名定位",
+      "label": "Database.earth｜亚丁克雷特老城地名定位",
+      "url": "https://database.earth/countries/yemen/regions/aden/cities/crater",
+      "access": "现代克雷特地点，代表亚丁旧城一带。"
+    },
+    {
+      "id": "19C35-AD-TERMS",
+      "publisher": "Aitchison／塔夫茨大学数字馆藏",
+      "title": "1843、1844及1849年亚丁协议",
+      "label": "Aitchison／塔夫茨大学数字馆藏｜1843、1844及1849年亚丁协议",
+      "url": "https://dl.tufts.edu/downloads/6108vp897?filename=9g54xw036.pdf",
+      "access": "第60—63页，协议原文含互不攻击、当地财产和通商安排。"
+    }
+  ],
+  "topic_source_claims": [
+    {
+      "section_id": "resistance",
+      "claim": "五月、七月两次反攻及英军守城。",
+      "source_keys": [
+        "19C35-AD-RECORD",
+        "19C34-AD-GEO"
+      ],
+      "verification_depth": "第19叶背面，1840年两次反攻，1843和1844年交涉。；现代克雷特地点，代表亚丁旧城一带。"
+    },
+    {
+      "section_id": "agreements",
+      "claim": "1843年协议及1844年重申承诺和恢复给付。",
+      "source_keys": [
+        "19C35-AD-RECORD",
+        "19C35-AD-TERMS"
+      ],
+      "verification_depth": "第19叶背面，1840年两次反攻，1843和1844年交涉。；第60—63页，协议原文含互不攻击、当地财产和通商安排。"
+    },
+    {
+      "section_id": "renewal",
+      "claim": "1846年再攻、1849年签署通商条约。",
+      "source_keys": [
+        "19C35-AD-RECORD",
+        "19C35-AD-TERMS"
+      ],
+      "verification_depth": "第19叶背面，1840年两次反攻，1843和1844年交涉。；第60—63页，协议原文含互不攻击、当地财产和通商安排。"
+    }
+  ],
+  "related_story_ids": [
+    "E19-ADEN-CAPTURE"
+  ]
+}
