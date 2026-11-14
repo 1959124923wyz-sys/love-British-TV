@@ -357,7 +357,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1830);
   assert.equal(await pointStroke(25.07564,-77.34458),'#c5a6f5');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1830-STEVENSTONE-ROLLEVILLE')));
-  await jump(1831);
+  await jump(1833);
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1830-STEVENSTONE-ROLLEVILLE')));
+  await jump(1834);
   assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1830-STEVENSTONE-ROLLEVILLE'))));
 
 
