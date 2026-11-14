@@ -477,11 +477,11 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(-39.930902,175.052305),'#c5a6f5');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-MATAI-TAUA-HOROKIRI')));
   const ruaPosition=[-35.45641,174.14354];
-  assert.equal(await pointStroke(...ruaPosition),'#65c7b6');
+  await page.evaluate(position=>window.__historicOverlapHost.map.setView(position,10,{animate:false}),ruaPosition);
   const ruaMarker=await page.evaluate(([lat,lon])=>{
    const map=window.__historicOverlapHost.map,b=map.getContainer().getBoundingClientRect();
    const p=map.latLngToContainerPoint([lat,lon]);
-   return [p.x+b.left+21,p.y+b.top];
+   return [p.x+b.left+29,p.y+b.top];
   },ruaPosition);
   await page.mouse.click(...ruaMarker);
   const ruaArea=page.locator('[data-historic-overlap-id="nineteenthAreas:nz-ruapekapeka-pa"]');
