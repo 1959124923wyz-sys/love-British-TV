@@ -26,7 +26,9 @@ assert.ok(app.includes("isNewEventThisYear(e)"),'Map glyph rendering should use 
 assert.ok(app.includes("newCount=g.items.filter"),'Mixed marker clusters need their own arrival counter');
 assert.ok(app.includes("event-new-this-year"),'Current-year sidebar events need a distinct style');
 assert.ok(app.includes("atlas-cluster-new-count"),'Map hub must disclose the newly introduced items');
-assert.ok(app.includes("!isNewEventThisYear(e))continue;"),'Minor current-year events cannot vanish only due to significance');
+const candidateLoop=app.slice(app.indexOf("if($('toggleEvents').checked||focusedEventId)"),app.indexOf('// Aggregate by screen distance'));
+assert(candidateLoop.includes("shown.push({item:e")&&!candidateLoop.includes('levelOf(e)'),
+ 'Current-year event eligibility must be independent of significance');
 assert.ok(app.includes('const changedYear=year!==next;'));
 assert.ok(!app.slice(app.indexOf('function setYear(v){'),app.indexOf('function stopPlay(){')).includes('map.flyTo('),
   'Changing a year must not surprise-pan or zoom to each new event');

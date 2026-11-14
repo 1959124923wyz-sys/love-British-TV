@@ -1,4 +1,4 @@
-/* 爱英TV 1497–1699 native right-hand territory history inspector.
+/* 爱英TV historical right-hand territory history inspector.
  * Applies the validated 18C experience to published Tudor territories and
  * 17C archival claims/studies. NO separate reader mode or inferred borders.
  * Only currently displayed, source-attached Leaflet polygons qualify.
@@ -85,7 +85,7 @@
   const end=stage?.end_year??p.end_year??p.observed_through_year??p.display_through_year??start;
   return start===end?String(start):start+'—'+end;
  };
- const validYear=()=>host.getYear()>=1497&&host.getYear()<=1699;
+ const validYear=()=>(host.getYear()>=1497&&host.getYear()<=1699)||host.hasNineteenthAreas?.();
  const enabled=()=>validYear()&&$('mapLayerTerritory')?.checked&&$('toggleTerritorialFootprints')?.checked;
  const urlHost=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch{return'历史资料'}};
  const links=r=>{
@@ -134,20 +134,25 @@
   make('#fff0b2',4,1,'atlas-18c-overlap-glow');
  }
  function card(r,i){
-  const isOpen=r.key===selected,desc=summary(r),src=links(r);
+  const isOpen=r.key===selected,desc=summary(r),src=links(r),is19c=r.group==='nineteenthAreas';
+  const events=is19c&&isOpen?(r.feature.properties.related_event_ids||[])
+   .map(id=>host.eventForId(id)).filter(e=>e&&e.year<=host.getYear()):[];
   return '<article class="atlas-18c-overlap-card'+(isOpen?' is-selected':'')+
    '" data-historic-overlap-id="'+esc(r.key)+'" data-historic-index="'+i+'">'+
    '<button class="atlas-18c-overlap-trigger" data-historic-open="'+i+
    '" type="button" aria-expanded="'+String(isOpen)+'">'+
-   '<span class="atlas-18c-overlap-topline"><span class="atlas-18c-overlap-order">'+String(i+1).padStart(2,'0')+'</span>'+
+   '<span class="atlas-18c-overlap-topline">'+(is19c?'':'<span class="atlas-18c-overlap-order">'+String(i+1).padStart(2,'0')+'</span>')+
    '<span class="atlas-18c-overlap-kind">'+esc(clip(category(r),47))+'</span>'+
    '<span class="atlas-18c-overlap-years">'+esc(period(r))+'</span></span>'+
    '<strong class="atlas-18c-overlap-title">'+esc(title(r))+'</strong>'+
    (desc&&!isOpen?'<span class="atlas-18c-overlap-summary">'+esc(clip(desc))+'</span>':'')+'</button>'+
    (isOpen?'<div class="atlas-18c-overlap-detail">'+
-    '<div class="atlas-18c-overlap-facts"><div><span>历史时段</span><b>'+esc(period(r))+'</b></div>'+
-    '<div><span>图层性质</span><b>'+esc(clip(category(r),75))+'</b></div></div>'+
+    (is19c?'':'<div class="atlas-18c-overlap-facts"><div><span>历史时段</span><b>'+esc(period(r))+'</b></div>'+
+    '<div><span>图层性质</span><b>'+esc(clip(category(r),75))+'</b></div></div>')+
     (desc?'<p>'+esc(desc)+'</p>':'')+
+    (events.length?'<div class="zone-related">'+events.map(e=>
+     '<button type="button" class="zone-record-link" data-area-event="'+esc(e.id)+'">'+esc(e.name)+'</button>'
+    ).join('')+'</div>':'')+
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源 ('+src.length+')</summary>'+
     '<div class="atlas-18c-overlap-source-links">'+src.map(u=>
      '<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">资料来源 · '+esc(urlHost(u))+' ↗</a>').join('')+
@@ -176,6 +181,9 @@
     if(!rec)return;
     selected=rec.key;renderCards();outline(rec);
    });
+  }
+  for(const btn of container.querySelectorAll('[data-area-event]')){
+   btn.addEventListener('click',()=>host.openEvent(host.eventForId(btn.dataset.areaEvent)));
   }
   host.openPanel('dossier');
  }
@@ -224,6 +232,9 @@
  }).observe($('dossierBody'),{childList:true});
  function render(){
   const newYear=host.getYear();
+  if(point&&!$('atlasHistoricOverlapPanel')){
+   activeRecords=[];point=null;selected=null;clearGlow();
+  }
   if(!enabled()){
    clearGlow();
    if($('atlasHistoricOverlapPanel')){
@@ -249,7 +260,7 @@
   }
  }
  window.historicOverlapDossier={
-  render,
+  render,openAt,
   hitCountAt:(lat,lng)=>at(L.latLng(lat,lng)).length,
   getAudit:()=>{
    const current=enabled()?live():[],groups={};

@@ -151,7 +151,7 @@
   const found=[],seen=new Set();
   for(const id of meta.event_ids||[]){
    const item=eventInMemory(id),y=Number(item?.year);
-   if(!item||seen.has(id)||!Number.isInteger(y)||y<1600||y>1799)continue;
+   if(!item||seen.has(id)||!Number.isInteger(y)||y<1600)continue;
    seen.add(id);found.push(item);
   }
   if(found.length<2)return '';
@@ -450,9 +450,10 @@
      }
     }
    }catch(_serialError){ /* No published long story yet; old articles remain available. */ }
-   // 18C editorial preview is opt-in and never included in the published story manifest.
-   if(new URLSearchParams(window.location.search).get('review18c')==='1'){
-    try{
+   // The two predecessor stories remain reachable from the public opening chapters.
+   const review=new URLSearchParams(window.location.search);
+   const review18c=review.get('review18c')==='1'||review.get('review19c')==='1';
+   try{
      const response=await fetch('data/stories/serial/preview-18c-index.json',{cache:'no-store'});
      if(response.ok){
       const draft=await response.json();
@@ -463,13 +464,14 @@
          draft.stories.every(t=>t.status==='research_preview'&&t.publication_review==='not_submitted'&&
           /^E18-[A-Z0-9-]+$/.test(t.id)&&/^data\/stories\/serial\/[a-z0-9-]+\.json$/.test(t.file)&&
           Array.isArray(t.event_ids)&&t.event_ids.length))
-       for(const item of draft.stories)registerStory({...item,is_serial_topic:true});
+       for(const item of draft.stories){
+        if(review18c||/^E18-T(?:24|25)-/.test(item.id))registerStory({...item,is_serial_topic:true});
+       }
      }
-    }catch(_previewError){ /* No 18C story in ordinary atlas mode. */ }
-   }
+   }catch(_previewError){ /* The 19C articles still load if predecessor data is unavailable. */ }
    // An event may already be open while the optional manifest is loading.
    const current=window.atlasStoryBridge?.selectedEventId?.();
-   if(current&&storyByEvent.has(current))activeBody()?.querySelector('.source-details')?.remove();
+   if(current&&storyByEvent.has(current)&&Number(eventInMemory(current)?.year)<1800)activeBody()?.querySelector('.source-details')?.remove();
    // An archive may already be open while the optional manifest is loading.
    if(window.atlasStoryBridge?.selectedEventId?.()){
     const record=eventInMemory(window.atlasStoryBridge.selectedEventId()),body=activeBody();

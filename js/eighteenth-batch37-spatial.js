@@ -5,7 +5,6 @@
  */
 (function(){
  'use strict';
- if(new URLSearchParams(location.search).get('review18c')!=='1')return;
  const host=window.__eighteenthSpatialHost;if(!host)return;
  const map=host.map,$=host.element,esc=host.escapeHTML;
  const areaPane='eighteenth37DatedZones',sitePane='eighteenth37DatedSites';

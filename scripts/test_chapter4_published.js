@@ -63,7 +63,7 @@ assert.match(html,/id="yearRange"/);
 assert.ok(html.includes('app.js?v=atlas46-click-notes-20261112'), 'Chapter uses current versioned production application script');
 assert.ok(app.includes("fetch('data/atlas-1520-1529.json'"),'Public frontend fetches research staging instead of released archive');
 assert.ok(app.includes("fetch('data/territorial-footprints-1497-1549.geojson'"));
-assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("serialPreviewAtlas?Math.min(1699"),'Published-year cap must remain, with optional 17c topic preview explicitly bounded');
+assert.ok(app.includes("Math.min(lastPublishedYear")&&app.includes("serialPreviewAtlas?Math.min(previewYearCap(),requested)"),'Published-year cap must remain, with optional 17c topic preview explicitly bounded');
 assert.ok(app.includes("year===lastPublishedYear"),'Autoplay must reach 1529 then stop');
 assert.ok(!app.includes('function renderMilestones()')&&!html.includes('id="milestoneDots"'),'Removed yellow timeline markers returned');
 assert.ok(app.includes("fullArchive||occurredByYear(e,year)"),'Chapter sidebar reveals future events');
