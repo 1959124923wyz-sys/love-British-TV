@@ -144,7 +144,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await goto('?year=1826',1819);
   assert.equal(await page.locator('[data-decade="1820"]').getAttribute('class').then(s=>s.includes('unpublished')),true);
   await goto('?review19c=1&year=1826',1826);
-  assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1839');
+  assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1849');
   assert.match(await page.locator('#chapterIntro').textContent(),/杨达波/);
   assert.match(await page.locator('[data-decade="1820"]').textContent(),/第33章/);
   await openEvent('E19-BUR-1826-YANDABO');
@@ -369,7 +369,88 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    const density=await page.evaluate(()=>window.atlasDensityAudit());
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
+  await goto('?review19c=1&year=1840',1840);
+  assert.match(await page.locator('#chapterLabel').textContent(),/第35章/);
+  assert.match(await page.locator('#chapterIntro').textContent(),/南京条约/);
+  assert.match(await page.locator('[data-decade="1840"]').textContent(),/战后条约与殖民边疆/);
+  const chapter35Topics=[
+   [1840,'E19-OP-1840-DINGHAI-FIRST','E19-OPIUM-WAR-TREATY-PORTS','E19-OP-1842-NANKING-TREATY',1842],
+   [1841,'E19-AFG-1841-KABUL-RISING','E19-AFGHAN-WAR-WITHDRAWAL-KALAT','E19-AFG-1842-KABUL-BAZAAR',1842],
+   [1840,'E19-NEW-1840-DEATH-SENTENCE','E19-NEWPORT-TRANSPORTATION','E19-NEW-1840-MANDARIN-HOBART',1840],
+   [1846,'E19-TAS-1846-WYBALENNA-PETITION','E19-WYBALENNA-PUTALINA','E19-TAS-1847-PUTALINA-REMOVAL',1847],
+   [1841,'E19-WA-1841-WADJEMUP-LABOUR','E19-WADJEMUP-FORCED-LABOUR','E19-WA-1849-WADJEMUP-CLOSURE',1849],
+   [1840,'E19-ADE-1840-MAY-ATTACK','E19-ADEN-LAHEJ-AGREEMENTS','E19-ADE-1843-LAHEJ-AGREEMENT',1843],
+   [1841,'E19-DUAR-1841-ASSAM-TAKEOVER','E19-ASSAM-DUARS-TAKEOVER','E19-DUAR-1834-BURI-GUMA-RESTORATION',1834],
+   [1843,'E19-HBC-1843-FORT-VICTORIA','E19-HBC-FRASER-OREGON','E19-HBC-1849-VANCOUVER-US-GARRISON',1849]
+  ];
+  for(const [year,entry,story,target,targetYear] of chapter35Topics){
+   if(await page.locator('#workspace:not(.dossier-collapsed)').count())
+    await page.locator('#resetDossier').click();
+   await jump(year);
+   await openEvent(entry);
+   await openArticle(story);
+   await link(target).click();
+   await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
+   assert(await focus(target));
+   await link(target).dblclick();
+   await page.locator('[data-story-back]').waitFor();
+   assert.equal(await selected(),target);
+   await assertClean();
+   await page.locator('[data-story-back]').click();
+   await page.locator('.major-story-article').waitFor();
+   await page.locator('[data-story-return]').first().click();
+   assert.equal(await selected(),entry);
+  }
+  await page.locator('#resetDossier').click();
+  await jump(1839);
+  await openEvent('E19-NEW-1839-MONMOUTH-TRIAL-OPENS');
+  await openArticle('E19-NEWPORT-CHARTIST-RISING');
+  await page.locator('[data-story-open="E19-NEWPORT-TRANSPORTATION"]').first().click();
+  await page.locator('.major-story-article[data-story-id="E19-NEWPORT-TRANSPORTATION"]').waitFor();
+  await link('E19-NEW-1840-MANDARIN-HOBART').click();
+  await page.waitForFunction(()=>window.atlasStoryBridge.currentYear()===1840);
+  await page.locator('#resetDossier').click();
+  assert.equal(await pointStroke(30.0216,122.1026),'#c5a6f5');
+  assert.equal(await pointStroke(34.52813,69.17233),'#c5a6f5');
+  assert.equal(await pointStroke(12.77522,45.03862),'#c5a6f5');
+  assert.notEqual(await pointStroke(22.28606,114.14767),'#c5a6f5');
+  await jump(1841);
+  assert.equal(await pointStroke(22.28606,114.14767),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1841-DINGHAI-ZHENHAI-NINGBO')));
+  await jump(1842);
+  assert.equal(await pointStroke(34.52813,69.17233),'#65c7b6');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1842-KABUL-GANDAMAK-JALALABAD')));
+  await jump(1843);
+  assert.equal(await pointStroke(22.28606,114.14767),'#c5a6f5');
+  const hongKong=await page.evaluate(()=>{
+   const map=window.__historicOverlapHost.map,bounds=map.getContainer().getBoundingClientRect();
+   const point=map.latLngToContainerPoint([22.28606,114.14767]);
+   return [point.x+bounds.left+21,point.y+bounds.top];
+  });
+  await page.mouse.click(...hongKong);
+  await page.locator('#dossierBody h2').filter({hasText:'英国殖民政府'}).waitFor();
+  await page.locator('#resetDossier').click();
+  await jump(1845);
+  assert.equal(await pointStroke(30.0216,122.1026),'#c5a6f5');
+  assert.notEqual(await pointStroke(24.44449,118.06664),'#c5a6f5');
+  await jump(1846);
+  assert.equal(await pointStroke(30.0216,122.1026),'#65c7b6');
+  assert.equal(await pointStroke(-40.01739052,147.8818023),'#c5a6f5');
+  await jump(1847);
+  assert.notEqual(await pointStroke(-40.01739052,147.8818023),'#c5a6f5');
+  assert.equal(await pointStroke(-43.10762,147.26944),'#c5a6f5');
+  await jump(1848);
+  assert.equal(await pointStroke(-31.99526,115.53989),'#c5a6f5');
+  await jump(1849);
+  assert.notEqual(await pointStroke(-31.99526,115.53989),'#c5a6f5');
+  assert.equal(await pointStroke(45.622603,-122.662425),'#65c7b6');
+  for(let y=1840;y<=1849;y++){
+   await jump(y);
+   await assertClean();
+   const density=await page.evaluate(()=>window.atlasDensityAudit());
+   assert.deepEqual(density.groupedKeys,density.eligibleKeys);
+  }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 20 review years, thirty-two stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 40 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
