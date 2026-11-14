@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1820–1829 Chapter 33 review, first through third editorial batches",
+    "coverage": "1820–1829 Chapter 33 review, first through fourth editorial batches",
     "historical_area_statistics": false
   },
   "features": [
@@ -1680,6 +1680,122 @@
             "controller": "british",
             "title": "巴赛杜 · 英国海军据点",
             "summary_zh": "英国在格什姆岛西端维持巴赛杜据点，波斯政府始终未批准。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "assam-buri-guma-duar-occupation",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92.012,
+              26.828
+            ],
+            [
+              92.058,
+              26.844
+            ],
+            [
+              92.132,
+              26.828
+            ],
+            [
+              92.143,
+              26.792
+            ],
+            [
+              92.132,
+              26.757
+            ],
+            [
+              92.136,
+              26.711
+            ],
+            [
+              92.134,
+              26.664
+            ],
+            [
+              92.093,
+              26.652
+            ],
+            [
+              92.048,
+              26.656
+            ],
+            [
+              92.0,
+              26.667
+            ],
+            [
+              91.992,
+              26.697
+            ],
+            [
+              92.002,
+              26.726
+            ],
+            [
+              91.998,
+              26.764
+            ],
+            [
+              92.008,
+              26.802
+            ],
+            [
+              92.012,
+              26.828
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "布里古马杜阿尔 · 东印度公司暂扣",
+        "start_year": 1828,
+        "end_year": 1829,
+        "display_kind": "political",
+        "summary_zh": "1828年边境冲突后，东印度公司接管布里古马杜阿尔。1834年7月，该地交回不丹方面管理。",
+        "source_ids": [
+          "19C33-DUAR-PEMB",
+          "19C33-DUAR-FRONTIER",
+          "19C33-DUAR-AIT",
+          "19C33-DUAR-MAP"
+        ],
+        "source_urls": [
+          "https://tile.loc.gov/storage-services/service/gdc/gdclccn/42/04/93/02/42049302/42049302.pdf",
+          "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1835%20Report%20on%20Eastern%20Frontier%20of%20British%20India%20by%20Pemberton%20s.pdf",
+          "https://dl.tufts.edu/downloads/f7623q75r?filename=q811kw83k.pdf",
+          "https://ir.nbu.ac.in/server/api/core/bitstreams/675d06ff-47f4-466b-a598-fc913fb5c95d/content#page=15"
+        ],
+        "named_anchors": [
+          "布里古马杜阿尔",
+          "卡林杜阿尔",
+          "库里阿帕拉杜阿尔",
+          "查特加里"
+        ],
+        "mapping_method": "Approximate trace from the geograticule of Pemberton/Hudson, Map of the Dooars in Assam Subject to Bootan, University of North Bengal scan PDF p.15. Rivers, foothills and southern dotted edge were simplified; no independent geodetic or cadastral verification.",
+        "related_event_ids": [
+          "E19-DUAR-1828-BURI-GUMA"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "assam-buri-guma-duar-occupation",
+        "uncertainty": "historical_sketch_approximate",
+        "year_stages": [
+          {
+            "start_year": 1828,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "布里古马杜阿尔 · 东印度公司暂扣",
+            "summary_zh": "1828年边境冲突后，东印度公司接管布里古马杜阿尔。1834年7月，该地交回不丹方面管理。"
           }
         ]
       }
