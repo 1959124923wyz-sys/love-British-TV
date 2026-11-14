@@ -1,0 +1,81 @@
+{
+  "schema": "atlas-major-story-v1",
+  "id": "E19-WADJEMUP-FORCED-LABOUR",
+  "title": "瓦杰马普的囚禁、劳役与暂闭",
+  "region": "西澳大利亚瓦杰马普岛",
+  "start_year": 1841,
+  "end_year": 1849,
+  "period": "1841—1849年",
+  "subtitle": "囚犯承担岛上建设和生产，虐待指控进入司法程序",
+  "lead": "西澳殖民当局把不同地区的原住民送往瓦杰马普。囚犯被迫劳动，管理者受到虐待指控。1849年监狱暂闭，岛上仍被关押的人被送回大陆。",
+  "sections": [
+    {
+      "id": "labour",
+      "heading": "殖民监狱的建设和生产",
+      "period_start_year": 1841,
+      "period_end_year": 1841,
+      "paragraphs": [
+        "[[E19-WA-1841-WADJEMUP-LABOUR|1841年，原住民囚犯修建主管住宅和附属设施]]。囚犯还负责生产盐和粮食，维持拘禁设施和岛上殖民聚落的运作。"
+      ],
+      "source_keys": [
+        "19C35-WA-TIME",
+        "19C35-WA-RIA"
+      ]
+    },
+    {
+      "id": "cruelty",
+      "heading": "虐待指控与囚犯转移",
+      "period_start_year": 1842,
+      "period_end_year": 1849,
+      "paragraphs": [
+        "[[E19-WA-1842-WADJEMUP-CRUELTY|1842年，主管亨利·文森特被控虐待囚犯]]。他未被定罪。1846年再受指控时，也未被定罪。",
+        "1849年，部分原住民囚犯出逃。[[E19-WA-1849-WADJEMUP-CLOSURE|当年殖民当局暂时关闭监狱，把仍在岛上的囚犯转往大陆]]。"
+      ],
+      "source_keys": [
+        "19C35-WA-TIME",
+        "19C35-WA-RIA"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "19C35-WA-TIME",
+      "publisher": "西澳原住民历史档案门户",
+      "title": "瓦杰马普年表",
+      "label": "西澳原住民历史档案门户｜瓦杰马普年表",
+      "url": "https://ahwaportal.dlgsc.wa.gov.au/online-catalogue/search-wadjemup/ahwa-wadjemup-beyond-the-shore/ahwa-wadjemup-info-timeline/",
+      "access": "1841年建造、1842和1846年虐待案、1849年转移与暂闭。"
+    },
+    {
+      "id": "19C35-WA-RIA",
+      "publisher": "罗特尼斯特岛管理局",
+      "title": "瓦杰马普原住民历史",
+      "label": "罗特尼斯特岛管理局｜瓦杰马普原住民历史",
+      "url": "https://www.ria.wa.gov.au/managing-the-island/cultural-heritage/aboriginal-history-of-wadjemup",
+      "access": "原住民囚犯劳役及1849—1855年停用。"
+    }
+  ],
+  "topic_source_claims": [
+    {
+      "section_id": "labour",
+      "claim": "囚犯参与建造、采盐和农业生产。",
+      "source_keys": [
+        "19C35-WA-TIME",
+        "19C35-WA-RIA"
+      ],
+      "verification_depth": "1841年建造、1842和1846年虐待案、1849年转移与暂闭。；原住民囚犯劳役及1849—1855年停用。"
+    },
+    {
+      "section_id": "cruelty",
+      "claim": "主管遭控、囚犯逃离与监狱暂闭。",
+      "source_keys": [
+        "19C35-WA-TIME",
+        "19C35-WA-RIA"
+      ],
+      "verification_depth": "1841年建造、1842和1846年虐待案、1849年转移与暂闭。；原住民囚犯劳役及1849—1855年停用。"
+    }
+  ],
+  "related_story_ids": [
+    "E19-WADJEMUP-PRISON-FOUNDATION"
+  ]
+}

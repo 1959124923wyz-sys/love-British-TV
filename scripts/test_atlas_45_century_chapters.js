@@ -8,10 +8,10 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const copy=require('../js/century-chapter-narratives.js');
 const html=read('index.html'),app=read('app.js');
 
-assert.equal(Object.keys(copy.chapters).length,24,'1600–1839 must include 24 independently authored decade introductions');
+assert.equal(Object.keys(copy.chapters).length,25,'1600–1849 must include 25 independently authored decade introductions');
 assert.equal(copy.forDecade(1599),null);
-assert.equal(copy.forDecade(1840),null);
-for(let year=1600;year<=1830;year+=10){
+assert.equal(copy.forDecade(1850),null);
+for(let year=1600;year<=1840;year+=10){
  const text=copy.forDecade(year);
  assert(text,`missing decade ${year}`);
  assert.equal(copy.forDecade(year+9),text,`end of ${year}s should show the same chapter`);
@@ -29,6 +29,7 @@ assert(copy.forDecade(1770).intro.includes('孟加拉大饥荒'));
 assert(copy.forDecade(1780).intro.includes('Zong'));
 assert(copy.forDecade(1790).intro.includes('提普苏丹'));
 assert(copy.forDecade(1820).intro.includes('杨达波'));
+assert(copy.forDecade(1840).intro.includes('南京条约'));
 
 // Representative historical anchors are all in the existing referenced datasets.
 const hasEvent=(p,term)=>JSON.parse(read(p)).events.some(e=>e.name.includes(term));
@@ -40,6 +41,7 @@ for(const [p,term] of [
  ['data/stories/serial/chronology-preview-scotland-1700-1799.json','1707'],
  ['data/stories/serial/chronology-preview-bengal-1750-1779.json','普拉西'],
  ['data/stories/serial/chronology-preview-australia-1700-1799.json','1788'],
+ ['data/stories/serial/chronology-1840-1849.json','南京条约'],
  ['data/stories/serial/chronology-preview-mysore-1700-1799.json','1799']
  ])assert(hasEvent(p,term),`historical event anchor absent: ${p}: ${term}`);
 
@@ -55,4 +57,4 @@ for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro'
 assert(app.includes("const decadeTotal=atlas.events.length"),'event statistics must remain intact');
 assert(app.includes("d>=1700?'topic_preview'"),'original research status must remain intact');
 assert(app.includes("$('chapterIntro').textContent=atlasFirstMerged.intro"),'16C chapter introduction must stay untouched');
-console.log('PASS: all 24 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
+console.log('PASS: all 25 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');

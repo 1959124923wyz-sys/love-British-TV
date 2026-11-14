@@ -438,7 +438,7 @@
      if(serial.schema==='atlas-serial-stories-v1'){
       for(const topic of serial.topics||[]){
        const published=topic.status==='published'&&topic.publication_review==='approved';
-       const chapterReview=review19c&&[1820,1830].includes(topic.review_chapter_start)&&topic.status==='editorial_review'&&
+       const chapterReview=review19c&&[1820,1830,1840].includes(topic.review_chapter_start)&&topic.status==='editorial_review'&&
         topic.publication_review==='not_submitted';
        if(!published&&!chapterReview)continue;
        if(typeof topic.id!=='string'||!/^[A-Za-z0-9-]+$/.test(topic.id))continue;

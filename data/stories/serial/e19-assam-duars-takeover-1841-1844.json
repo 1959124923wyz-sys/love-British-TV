@@ -1,0 +1,91 @@
+{
+  "schema": "atlas-major-story-v1",
+  "id": "E19-ASSAM-DUARS-TAKEOVER",
+  "title": "英印当局接管阿萨姆杜阿尔",
+  "region": "阿萨姆北缘、不丹与达旺",
+  "start_year": 1834,
+  "end_year": 1844,
+  "period": "1834—1844年",
+  "subtitle": "边境交涉转为接管，给付以地方收入为依据",
+  "lead": "布里古马曾在1834年交还不丹。几轮交涉后，英印当局把包括布里古马在内的七个阿萨姆杜阿尔纳入管理。随后又与达旺所属地区的首领订立另一项协议。",
+  "sections": [
+    {
+      "id": "bhutan",
+      "heading": "不丹方面的七个杜阿尔",
+      "period_start_year": 1834,
+      "period_end_year": 1841,
+      "paragraphs": [
+        "[[E19-DUAR-1834-BURI-GUMA-RESTORATION|1834年，英方把布里古马交还不丹]]。此后，边境管辖和贡赋继续发生争议。",
+        "[[E19-DUAR-1841-ASSAM-TAKEOVER|1841年，英印当局接管七个阿萨姆杜阿尔]]，包括布里古马。英印条约集记载，英方安排每年给付一万卢比，当时没有就这项安排订立书面协议。"
+      ],
+      "source_keys": [
+        "19C33-DUAR-PEMB",
+        "19C35-DU-1841",
+        "19C35-DU-REPORT"
+      ]
+    },
+    {
+      "id": "tawang",
+      "heading": "达旺所属卡里亚帕拉",
+      "period_start_year": 1844,
+      "period_end_year": 1844,
+      "paragraphs": [
+        "[[E19-DUAR-1844-KARIAPARA-AGREEMENT|1844年，英印当局与达旺所属卡里亚帕拉的首领另订书面协议]]。当地首领此前向平原居民征收费用。新协议把这些权利交给英印当局，安排每年给付五千卢比。"
+      ],
+      "source_keys": [
+        "19C35-DU-1841",
+        "19C35-DU-REPORT"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "19C33-DUAR-PEMB",
+      "publisher": "美国国会图书馆／R. B. 彭伯顿",
+      "title": "《不丹报告》及1828—1834年往来公文摘要",
+      "label": "美国国会图书馆／R. B. 彭伯顿｜《不丹报告》及1828—1834年往来公文摘要",
+      "url": "https://tile.loc.gov/storage-services/service/gdc/gdclccn/42/04/93/02/42049302/42049302.pdf",
+      "access": "彭伯顿报告第13—17页，第9—22段。第14—15段引斯科特1828年11月5日公函，第16—21段记交涉与交还。"
+    },
+    {
+      "id": "19C35-DU-1841",
+      "publisher": "Aitchison／塔夫茨大学数字馆藏",
+      "title": "阿萨姆杜阿尔交涉",
+      "label": "Aitchison／塔夫茨大学数字馆藏｜阿萨姆杜阿尔交涉",
+      "url": "https://dl.tufts.edu/downloads/f7623q75r?filename=q811kw83k.pdf",
+      "access": "英印条约集不丹章节。1834年交还、1841年接管七个阿萨姆杜阿尔、赔偿安排。"
+    },
+    {
+      "id": "19C35-DU-REPORT",
+      "publisher": "英印阿萨姆行政报告",
+      "title": "1901—1902年阿萨姆行政报告",
+      "label": "英印阿萨姆行政报告｜1901—1902年阿萨姆行政报告",
+      "url": "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1903%20Report%20on%20Administration%20of%20Province%20of%20Assam%20for%201901-1902.pdf",
+      "access": "第75页，布里古马与接管过程；另列1844年对达旺所属卡里亚帕拉的安排。"
+    }
+  ],
+  "topic_source_claims": [
+    {
+      "section_id": "bhutan",
+      "claim": "布里古马交还、1841年接管与年付补偿。",
+      "source_keys": [
+        "19C33-DUAR-PEMB",
+        "19C35-DU-1841",
+        "19C35-DU-REPORT"
+      ],
+      "verification_depth": "彭伯顿报告第13—17页，第9—22段。第14—15段引斯科特1828年11月5日公函，第16—21段记交涉与交还。；英印条约集不丹章节。1834年交还、1841年接管七个阿萨姆杜阿尔、赔偿安排。；第75页，布里古马与接管过程；另列1844年对达旺所属卡里亚帕拉的安排。"
+    },
+    {
+      "section_id": "tawang",
+      "claim": "另订书面协议，给付五千卢比。",
+      "source_keys": [
+        "19C35-DU-1841",
+        "19C35-DU-REPORT"
+      ],
+      "verification_depth": "英印条约集不丹章节。1834年交还、1841年接管七个阿萨姆杜阿尔、赔偿安排。；第75页，布里古马与接管过程；另列1844年对达旺所属卡里亚帕拉的安排。"
+    }
+  ],
+  "related_story_ids": [
+    "E19-BHUTAN-DUARS-NEGOTIATIONS"
+  ]
+}
