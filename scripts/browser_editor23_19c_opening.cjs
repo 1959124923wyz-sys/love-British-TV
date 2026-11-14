@@ -381,7 +381,11 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1841,'E19-WA-1841-WADJEMUP-LABOUR','E19-WADJEMUP-FORCED-LABOUR','E19-WA-1849-WADJEMUP-CLOSURE',1849],
    [1840,'E19-ADE-1840-MAY-ATTACK','E19-ADEN-LAHEJ-AGREEMENTS','E19-ADE-1843-LAHEJ-AGREEMENT',1843],
    [1841,'E19-DUAR-1841-ASSAM-TAKEOVER','E19-ASSAM-DUARS-TAKEOVER','E19-DUAR-1834-BURI-GUMA-RESTORATION',1834],
-   [1843,'E19-HBC-1843-FORT-VICTORIA','E19-HBC-FRASER-OREGON','E19-HBC-1849-VANCOUVER-US-GARRISON',1849]
+   [1843,'E19-HBC-1843-FORT-VICTORIA','E19-HBC-FRASER-OREGON','E19-HBC-1849-VANCOUVER-US-GARRISON',1849],
+   [1840,'E19-CEY-1840-CROWN-LANDS','E19-CEYLON-LAND-MATALE','E19-CEY-1848-MATALE-SUPPRESSION',1848],
+   [1842,'E19-SIN-1842-NEW-TERMS','E19-SINDH-ANNEXATION','E19-SIN-1843-MIANI',1843],
+   [1845,'E19-SIK-1845-MUDKI','E19-FIRST-SIKH-WAR-TREATIES','E19-SIK-1846-AMRITSAR-TREATY',1846],
+   [1848,'E19-SIK-1848-MULTAN-RISING','E19-SECOND-SIKH-WAR-ANNEXATION','E19-SIK-1849-KOH-I-NOOR',1849]
   ];
   for(const [year,entry,story,target,targetYear] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -391,7 +395,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    await openArticle(story);
    await link(target).click();
    await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
-   assert(await focus(target));
+   await page.waitForFunction(id=>window.atlasStoryBridge.activeFocusId()===id,target);
    await link(target).dblclick();
    await page.locator('[data-story-back]').waitFor();
    assert.equal(await selected(),target);
@@ -430,18 +434,32 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await page.mouse.click(...hongKong);
   await page.locator('#dossierBody h2').filter({hasText:'英国殖民政府'}).waitFor();
   await page.locator('#resetDossier').click();
+  await jump(1842);
+  assert.equal(await pointStroke(25.3844,68.3727),'#65c7b6');
+  await jump(1843);
+  assert.equal(await pointStroke(25.3844,68.3727),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1843-HYDERABAD-BOMBAY-CAPTIVES')));
   await jump(1845);
+  assert.equal(await pointStroke(31.558,74.35071),'#65c7b6');
   assert.equal(await pointStroke(30.0216,122.1026),'#c5a6f5');
   assert.notEqual(await pointStroke(24.44449,118.06664),'#c5a6f5');
   await jump(1846);
+  assert.equal(await pointStroke(31.32556,75.57917),'#c5a6f5');
+  assert.equal(await pointStroke(34.08565,74.80555),'#65c7b6');
   assert.equal(await pointStroke(30.0216,122.1026),'#65c7b6');
   assert.equal(await pointStroke(-40.01739052,147.8818023),'#c5a6f5');
   await jump(1847);
   assert.notEqual(await pointStroke(-40.01739052,147.8818023),'#c5a6f5');
   assert.equal(await pointStroke(-43.10762,147.26944),'#c5a6f5');
   await jump(1848);
+  assert.equal(await pointStroke(30.19679,71.47824),'#65c7b6');
+  assert.equal(await pointStroke(7.4698,80.6217),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1848-KANDY-MATALE-SUPPRESSION')));
   assert.equal(await pointStroke(-31.99526,115.53989),'#c5a6f5');
   await jump(1849);
+  assert.equal(await pointStroke(31.558,74.35071),'#c5a6f5');
+  assert.equal(await pointStroke(30.19679,71.47824),'#c5a6f5');
+  assert.notEqual(await pointStroke(7.4698,80.6217),'#c5a6f5');
   assert.notEqual(await pointStroke(-31.99526,115.53989),'#c5a6f5');
   assert.equal(await pointStroke(45.622603,-122.662425),'#65c7b6');
   for(let y=1840;y<=1849;y++){
@@ -451,6 +469,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 40 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 44 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
