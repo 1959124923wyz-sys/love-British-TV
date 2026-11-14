@@ -146,8 +146,8 @@ assert(app.includes("fill:!maxPaper")&&app.includes("fillOpacity:maxPaper?0"),'g
 assert(app.includes("function openSeventeenthClaimDirectory()")&&app.includes("data-colonial-directory"));
 assert(app.includes("openSeventeenthClaimDirectory);")&&app.includes("openTerritoryDossier(candidates[0],'seventeenth-claim',latlng)"),
  'archived reference and territory hit fallback must be wired');
-assert(app.includes("const clusterRadius=year>=1600&&map.getZoom()<=4?56:32"),'coarser clustering only at seventeenth-century world zoom');
-assert(app.includes("if(count>8&&!(focusedEventId&&items.some(x=>x.item.id===focusedEventId)))"),'giant clusters must not fan out into screen-filling icon walls');
+assert(app.includes("densityPolicy?.radiusForZoom(map.getZoom())"),'shared zoom-dependent clustering must apply');
+assert(app.includes("if(count>8||(map.getZoom()<=4&&pin))"),'giant clusters must not fan out into screen-filling icon walls');
 assert(app.includes("if(pin)openCollection(items,'该地区的'+count+'项历史记录')"),'large cluster click should reveal every event in a scrollable accessible dossier');
 assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
@@ -176,8 +176,8 @@ for(const f of fc.features)for(const id of f.properties.related_event_ids||[])
 const withoutLinks=fc.features.filter(f=>!f.properties.related_event_ids?.length);
 assert(withoutLinks.length<=7,'event links accidentally removed; manually investigate the remaining known editorial gaps');
 const index=json('data/stories/serial/index.json');
-assert.equal(index.topics.filter(t=>t.status==='published'&&t.publication_review==='approved').length,29,'published count unexpectedly changed: refresh public description');
-assert(html.includes('29篇正式发表的17世纪专题')&&!html.includes('仅1692年格伦科专题可试阅'),'public landing metadata must not contradict published stories');
+assert.equal(index.topics.filter(t=>t.status==='published'&&t.publication_review==='approved'&&t.origin_year<1700).length,29,'published count unexpectedly changed: refresh public description');
+assert(html.includes('1497—1819年')&&!html.includes('仅1692年格伦科专题可试阅'),'public landing metadata must not contradict published stories');
 // November 2026 desktop readability: compact historical overlap geometry and
 // scan-friendly 17C editorial headlines shared by event cards and long-form stories.
 assert(html.includes('id="showDetailedClaimBoundaries"')&&!html.includes('id="showDetailedClaimBoundaries" checked'),
@@ -199,7 +199,7 @@ for(const file of ['js/editorial-headlines-17c.js','js/history-stories.js']){
 const context={window:{}};vm.runInNewContext(titlesCode,context);
 const api=context.window.HistoryHeadlines;
 assert(api&&typeof api.eventTitle==='function'&&typeof api.storyTitle==='function');
-assert(api.counts.reviewedEvents>=60&&api.counts.reviewedStories===29);
+assert(api.counts.reviewedEvents>=60&&api.counts.reviewedStories>=29);
 let longEventCount=0;
 for(const e of eventRegister.values()){
  const label=api.eventTitle(e);
@@ -226,7 +226,7 @@ assert(html.includes('id="seventeenthEventTools"')&&html.includes('id="seventeen
 assert(html.includes('id="showDecadeEventsToYear"')&&html.includes('id="clearSeventeenthEventSearch"'));
 assert(app.includes('const visibleEvents=query?events.filter(')&&app.includes('conciseEventTitle(e),e.description,e.short_description,e.date_label'),
  'search must include original full historical event titles and dates, not just edited snippets');
-assert(app.includes("'chapterIntro').textContent='本十年已收录'+decadeTotal")&&
+assert(app.includes("'chapterIntro').textContent=chapterStory.intro")&&
  app.includes('const observed=atlas.events.filter(e=>occurredByYear(e,year)).length'),
  '17C annual chronology and counts must be derived from actual historic records');
 assert(!app.includes("textContent='年代介绍待定'"),'obsolete 17C placeholder must not appear in actual year summary');
@@ -261,8 +261,8 @@ assert(app.includes("for(const e of (year>=1600?seventeenthEventsForWindow(year)
  'map marker source must follow the selected rolling window');
 assert(app.includes('const windowEvents=tools17?seventeenthEventsForWindow(year)'),
  'sidebar must use same rolling window as the event markers');
-assert(app.includes("const showAll=map.getZoom()>=6||$('toggleMinorEvents').checked||(year>=1600&&eventWindowMode17c==='rolling4')"),
- 'all mapped event significance tiers must remain eligible inside the four-year window');
+assert(app.includes('eligibleKeys:Object.freeze(shown.map')&&app.includes('groupedKeys:Object.freeze(nearby.flatMap'),
+ 'all mapped event significance tiers must be accounted for by clustering');
 assert(app.includes('atlas-event-prior-year')&&css.includes('.atlas-event-prior-year'));
 assert(app.includes('function renderSeventeenthColonialClaims(){')&&app.includes('year>=f.properties.start_year&&year<=f.properties.end_year'),
  'existing territorial claims must continue to use a single selected year');

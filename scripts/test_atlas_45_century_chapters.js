@@ -52,6 +52,6 @@ for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro'
  assert(app.includes("$('"+field+"').textContent"),'chapter field missing: '+field);
 }
 assert(app.includes("const decadeTotal=atlas.events.length"),'event statistics must remain intact');
-assert(app.includes("status:d>=1700?'topic_preview'"),'original research status must remain intact');
+assert(app.includes("d>=1700?'topic_preview'"),'original research status must remain intact');
 assert(app.includes("$('chapterIntro').textContent=atlasFirstMerged.intro"),'16C chapter introduction must stay untouched');
 console.log('PASS: all 22 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');

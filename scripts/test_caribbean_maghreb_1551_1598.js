@@ -125,5 +125,5 @@ assert.ok(renderer.includes("openTerritoryDossier(f,'atlantic-contact')"));
 const refresh=app.slice(app.indexOf('function refreshHistoricalLayers(){'),app.indexOf("$('toggleHypotheses').addEventListener"));
 assert.ok(refresh.includes('renderAtlanticContactSites();'));
 assert.ok(app.includes('atlanticContactData=atlanticData;'));
-assert.ok(html.includes('1497—1799'));
+assert.ok(html.includes('1497—1819'));
 console.log('PASS 1551–88 Maghreb commercial contacts, 1595 Venezuelan raids & failed San Juan, 1598 temporary San Juan, no fictitious territorial claims');

@@ -227,13 +227,8 @@ function syncMapLayers(){
 let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthColonialClaims=null;
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
-const enable19cPilot=reviewParams.get('review19c')==='1';
-const enable18cPilot=enable19cPilot||reviewParams.get('review18c')==='1';
-if(enable19cPilot){
- document.title='帝国的代价 | 19世纪历史地图';
- document.querySelector('.map-stage').setAttribute('aria-label','英格兰、苏格兰及英国殖民史动态地图');
-}
-let nineteenthReviewEnd=null,nineteenthSpatial=null;
+const enable19cAtlas=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
+let nineteenthAtlasEnd=null,nineteenthSpatial=null;
 let preview18cReady=false;
 let eighteenthAcadiaControlCores=null;
 let bengal18cReady=false;
@@ -268,7 +263,7 @@ let t23Penang29Ready=false;
 let t28HavanaMalta30Ready=false;
 let t33ScottishFreedom31Ready=false;
 let r33OriginalResearchThreeStoriesReady=false;
-const previewYearCap=()=>nineteenthReviewEnd??(jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699); let selected=''; let selectedItemYear=null; let timer=null;
+const previewYearCap=()=>nineteenthAtlasEnd??(jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699); let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
@@ -1136,9 +1131,9 @@ function renderEighteenthReviewEvidenceCores(){
  }
 }
 
-async function loadNineteenthReview(){
+async function loadNineteenthAtlas(){
  const [chronology,spatial]=await Promise.all([
-  fetch('data/stories/serial/chronology-preview-1800-1819.json',{cache:'no-store'}),
+  fetch('data/stories/serial/chronology-1800-1819.json',{cache:'no-store'}),
   fetch('data/nineteenth-century-spatial-1800-1819.geojson',{cache:'no-store'})
  ]);
  if(!chronology.ok||!spatial.ok)throw new Error('19C chronology or map missing');
@@ -1147,7 +1142,7 @@ async function loadNineteenthReview(){
  const eventIds=new Set(data.events?.map(e=>e.id));
  const cited=row=>row.source_ids?.length&&row.source_ids.every(id=>sourceIds.has(id));
  const inPeriod=y=>Number.isInteger(y)&&y>=1800&&y<=end;
- if(data.schema!=='atlas-19c-chronology-review-v1'||data.period.from!==1800||
+ if(data.schema!=='atlas-19c-chronology-v1'||data.editorial_status!=='published'||data.period.from!==1800||
     !inPeriod(end)||end%10!==9||!data.events.length||eventIds.size!==data.events.length||
     data.events.some(e=>!inPeriod(e.year)||!cited(e)||
      (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||Math.abs(e.lat)>90||!Number.isFinite(e.lng)||Math.abs(e.lng)>180))||
@@ -1160,14 +1155,14 @@ async function loadNineteenthReview(){
   throw new Error('19C review failed chronology, source or spatial checks');
  for(let d=1800;d<=end;d+=10){
   serialPreviewByDecade.set(d,{
-   dataset_id:'nineteenth-century-review-'+d,period:{from:d,to:d+9},
+   dataset_id:'nineteenth-century-'+d,period:{from:d,to:d+9},
    events:data.events.filter(e=>decadeForYear(e.year)===d),
    routes:data.routes.filter(r=>decadeForYear(r.year)===d),places:[],colonial_polygons:[]
   });
  }
  for(const s of data.sources)sourcesById.set(s.id,s);
  nineteenthSpatial=geo;
- nineteenthReviewEnd=end;
+ nineteenthAtlasEnd=end;
 }
 function renderNineteenthSpatial(){
  const group=groups.nineteenthAreas;
@@ -2188,7 +2183,7 @@ const decadeForYear=y=>Math.floor(y/10)*10;
 const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=previewYearCap()&&d%10===0?
  ({id:(Math.floor(d/100)+1)+'c-'+d,start:d,end:d+9,number:11+(d-1600)/10,
  label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1800?'19世纪历史专题':d>=1700?'18世纪历史专题':'17世纪历史专题'),
- status:d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
+ status:d>=1800?'published':d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
  (y>=1600&&y<=previewYearCap()?storyPreviewChapterForDecade(decadeForYear(y)):null);
@@ -2662,8 +2657,8 @@ async function boot(){
     }
    }catch(_error){}
   }
-  // Explicitly opt-in unpublished 18C editorial pilot, with empty territorial geometry.
-  if(enable18cPilot&&serialPreviewByDecade.has(1690)){
+  // Load the eighteenth-century chronology before its nineteenth-century continuations.
+  if(serialPreviewByDecade.has(1690)){
    try{
     const response=await fetch('data/stories/serial/chronology-preview-1700-1769.json',{cache:'no-store'});
     if(!response.ok)throw new Error('18C review corpus missing');
@@ -3909,8 +3904,8 @@ async function boot(){
   atlanticContactData=atlanticData;
 
 
-  if(enable19cPilot&&jamaica18cReady){
-   try{await loadNineteenthReview();}
+  if(enable19cAtlas&&jamaica18cReady){
+   try{await loadNineteenthAtlas();}
    catch(error){console.warn('19C review data unavailable',error);}
   }
 

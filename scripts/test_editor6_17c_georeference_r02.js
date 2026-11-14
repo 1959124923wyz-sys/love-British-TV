@@ -55,10 +55,9 @@ assert(round3Refs>=187,'original 109 R03/R04 points, six Jamaica events and seve
 assert.equal(unmapped,1);
 assert.equal(admin+regional,219);
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
-assert(app.includes('atlas-representative-notice'),'representative reference disclaimer must be visible in event dossier');
+assert(!app.includes('atlas-representative-notice'),'editorial warnings stay out of reader dossiers');
 assert(app.includes('geo_precision')&&app.includes('representative_map_point'));
-assert(app.includes('地区参考点'),'left event list must disclose representative marker');
-assert(app.includes('非事件现场'),'map hover must disclose approximate interpretation');
+assert(app.includes('atlas-cluster-uncertain'),'representative locations retain a visual uncertainty cue');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert(!html.includes('serialStoriesButton'),'independent long-story navbar must remain removed');
 console.log('PASS R02 GIS contract: 219 immutable anchors, growing reviewed newer regional / policy points, 48 original named locations, one not placed, zero invented occupied-area geometry');

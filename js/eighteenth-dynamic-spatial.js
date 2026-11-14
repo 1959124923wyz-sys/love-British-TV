@@ -4,7 +4,6 @@
 */
 (function(){
  'use strict';
- if(new URLSearchParams(location.search).get('review18c')!=='1')return;
  const host=window.__eighteenthSpatialHost;
  if(!host)throw new Error('18C spatial host is missing');
  const map=host.map,$=host.element,escapeHTML=host.escapeHTML,openPanel=host.openPanel;
