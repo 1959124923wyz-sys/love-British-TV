@@ -268,7 +268,12 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1831,'E19-NAN-1831-FIRST-EXPEDITION','E19-NANING-WAR','E19-NAN-1832-TABOH-OCCUPATION',1832],
    [1838,'E19-AFG-1838-SIMLA-DECLARATION','E19-FIRST-AFGHAN-WAR-KALAT','E19-KAL-1839-STORMING',1839],
    [1837,'E19-ADE-1837-DERIA-DOWLUT','E19-ADEN-CAPTURE','E19-ADE-1839-RESISTANCE',1839],
-   [1839,'E19-OP-1839-HUMEN-DESTRUCTION','E19-OPIUM-TRADE-CRISIS','E19-OP-1839-CHUENPI-CLASH',1839]
+   [1839,'E19-OP-1839-HUMEN-DESTRUCTION','E19-OPIUM-TRADE-CRISIS','E19-OP-1839-CHUENPI-CLASH',1839],
+   [1837,'E19-NSW-1837-NAMOI-POLICE','E19-NSW-GWYDIR-FRONTIER-MASSACRES','E19-NSW-1838-MYALL-CREEK',1838],
+   [1834,'E19-WA-1834-PINJARRA-MASSACRE','E19-PINJARRA-MASSACRE','E19-WA-1834-STIRLING-DISPATCH',1834],
+   [1838,'E19-WA-1838-WADJEMUP-PRISONERS','E19-WADJEMUP-PRISON-FOUNDATION','E19-WA-1839-WADJEMUP-PRISON-ANNOUNCEMENT',1839],
+   [1831,'E19-IN-1831-KOL-RISING','E19-CHOTANAGPUR-KOL-BHUMIJ','E19-IN-1832-SILAGAI',1832],
+   [1831,'E19-IN-1831-TITU-EARLY-CLASH','E19-TITU-MIR-BAMBOO-FORT','E19-IN-1831-TITU-BAMBOO-FORT',1831]
   ];
   for(const [year,entry,story,target,targetYear] of chapter34Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -320,6 +325,15 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(2.486103,102.189942),'#c5a6f5');
   await jump(1831);
   assert.equal(await pointStroke(2.486103,102.189942),'#65c7b6');
+  assert.equal(await pointStroke(-32.05612,115.74127),'#c5a6f5');
+  assert.notEqual(await pointStroke(-31.957833,115.861944),'#c5a6f5');
+  await jump(1834);
+  assert.equal(await pointStroke(-31.957833,115.861944),'#c5a6f5');
+  await jump(1838);
+  assert.notEqual(await pointStroke(-31.99526,115.53989),'#c5a6f5');
+  await jump(1839);
+  assert.equal(await pointStroke(-31.99526,115.53989),'#c5a6f5');
+  assert.equal(await pointStroke(23.23241,87.07160),'#c5a6f5');
   for(let y=1830;y<=1839;y++){
    await jump(y);
    await assertClean();
@@ -327,6 +341,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 20 review years, nineteen stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 20 review years, twenty-four stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
