@@ -219,7 +219,8 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
     const m=window.__historicOverlapHost.map;
     const bounds=m.getContainer().getBoundingClientRect();
     const point=m.latLngToContainerPoint([lat,lng]);
-    return document.elementFromPoint(point.x+bounds.left+21,point.y+bounds.top)?.getAttribute('stroke');
+    return document.elementsFromPoint(point.x+bounds.left+21,point.y+bounds.top)
+     .find(el=>el.classList.contains('atlas-19c-site'))?.getAttribute('stroke');
    },[lat,lng]);
   };
   await jump(1823);
@@ -273,7 +274,12 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1834,'E19-WA-1834-PINJARRA-MASSACRE','E19-PINJARRA-MASSACRE','E19-WA-1834-STIRLING-DISPATCH',1834],
    [1838,'E19-WA-1838-WADJEMUP-PRISONERS','E19-WADJEMUP-PRISON-FOUNDATION','E19-WA-1839-WADJEMUP-PRISON-ANNOUNCEMENT',1839],
    [1831,'E19-IN-1831-KOL-RISING','E19-CHOTANAGPUR-KOL-BHUMIJ','E19-IN-1832-SILAGAI',1832],
-   [1831,'E19-IN-1831-TITU-EARLY-CLASH','E19-TITU-MIR-BAMBOO-FORT','E19-IN-1831-TITU-BAMBOO-FORT',1831]
+   [1831,'E19-IN-1831-TITU-EARLY-CLASH','E19-TITU-MIR-BAMBOO-FORT','E19-IN-1831-TITU-BAMBOO-FORT',1831],
+   [1834,'E19-COORG-1834-MERCARA-OCCUPATION','E19-COORG-ANNEXATION','E19-COORG-1837-REBELLION',1837],
+   [1831,'E19-IRL-1831-NEWTOWNBARRY-TITHE','E19-IRISH-TITHE-WAR','E19-IRL-1834-GORTROE-TITHE',1834],
+   [1834,'E19-CAPE-1834-SLAVERY-ABOLITION','E19-CAPE-EMANCIPATION-COMPENSATION','E19-CAPE-1838-APPRENTICESHIP-END',1838],
+   [1834,'E19-MAU-1834-ATLAS-ARRIVAL','E19-MAURITIUS-CHAGOS-LABOUR','E19-CHAGOS-1835-APPRENTICESHIP',1835],
+   [1837,'E19-GUI-1837-GLADSTONE-INDENTURE','E19-GUIANA-INDIAN-INDENTURE','E19-GUI-1838-VREED-EN-HOOP-LABOUR',1838]
   ];
   for(const [year,entry,story,target,targetYear] of chapter34Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -301,6 +307,10 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal((await audit()).focused,'nineteenthAreas:assam-buri-guma-duar-occupation');
   await page.locator('#resetDossier').click();
   await jump(1834);
+  await page.evaluate(()=>{
+   const map=window.__historicOverlapHost.map;
+   map.stop().invalidateSize({pan:false}).setView([26.74,92.075],9,{animate:false});
+  });
   await clickAt(26.70,92.086);
   const restoredDuar=page.locator('[data-historic-overlap-id="nineteenthAreas:assam-buri-guma-duar-restoration"]');
   await restoredDuar.waitFor();
@@ -334,6 +344,14 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1839);
   assert.equal(await pointStroke(-31.99526,115.53989),'#c5a6f5');
   assert.equal(await pointStroke(23.23241,87.07160),'#c5a6f5');
+  await jump(1833);
+  assert.equal(await pointStroke(12.4208474,75.7389661),'#65c7b6');
+  assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1834-HEBBALE-MADIKERI'))));
+  await jump(1834);
+  assert.equal(await pointStroke(12.4208474,75.7389661),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1834-HEBBALE-MADIKERI')));
+  assert.equal(await pointStroke(-20.16194,57.49889),'#c5a6f5');
+
   for(let y=1830;y<=1839;y++){
    await jump(y);
    await assertClean();
@@ -341,6 +359,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 20 review years, twenty-four stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 20 review years, twenty-nine stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

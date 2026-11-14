@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1830–1839 Chapter 34 first through third editorial batches",
+    "coverage": "1830–1839 Chapter 34 first through fourth editorial batches",
     "historical_area_statistics": false
   },
   "features": [
@@ -2720,6 +2720,210 @@
             "controller": "british",
             "title": "班库拉 · 殖民行政改组",
             "summary_zh": "1833年，殖民当局将班库拉从原丛林马哈尔辖区划出。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "coorg-madikeri-fort-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.7389661,
+          12.4208474
+        ]
+      },
+      "properties": {
+        "name": "马迪凯里堡 · 库格行政中心",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "东印度公司于1834年进驻马迪凯里堡，随后从库格首府实施新行政。",
+        "source_ids": [
+          "19C34-COORG-RICE",
+          "19C34-COORG-FORT",
+          "19C34-COORG-FORT-GEO",
+          "19C34-COORG-COURTS"
+        ],
+        "source_urls": [
+          "https://tamildigitallibrary.in/assets/docs/uploads/primary_files/book/TVA_BOK_0046866/TVA_BOK_0046866_Mysore_and_Coorg_Vol_3.pdf",
+          "https://kodagu.nic.in/en/tourist-place/madikeri-fort/",
+          "https://en.wikipedia.org/wiki/Madikeri_Fort",
+          "https://kodagu.nic.in/en/courts/"
+        ],
+        "named_anchors": [
+          "马迪凯里堡"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-COORG-1834-BANGALORE-PROCLAMATION",
+          "E19-COORG-1834-KAVERI-CROSSING",
+          "E19-COORG-1834-BUCK-STOCKADE",
+          "E19-COORG-1834-MERCARA-OCCUPATION",
+          "E19-COORG-1834-JUSTICE-PROCLAMATION",
+          "E19-COORG-1834-ANNEXATION",
+          "E19-COORG-1837-REBELLION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "coorg-madikeri-fort-government",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1833,
+            "controller": "coorg",
+            "title": "马迪凯里堡 · 哈莱里王廷",
+            "summary_zh": "维拉·拉贾从马迪凯里治理库格，堡垒是王国首府的一处核心据点。"
+          },
+          {
+            "start_year": 1834,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "马迪凯里堡 · 东印度公司行政中心",
+            "summary_zh": "1834年4月公司军进驻，5月吞并公告后改为公司管辖。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mauritius-port-louis-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.49889,
+          -20.16194
+        ]
+      },
+      "properties": {
+        "name": "路易港 · 毛里求斯殖民政府",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "路易港是英国殖民当局及对外贸易的驻地。废奴生效后，当局处理学徒制、赔偿与契约劳工事务。",
+        "source_ids": [
+          "19C34-LAB-MAU-ARCH",
+          "19C34-LAB-MAU-APP",
+          "19C34-LAB-MAU-ARR",
+          "19C34-LAB-MAU-UN",
+          "19C34-LAB-MAU-G"
+        ],
+        "source_urls": [
+          "https://nationalarchives.govmu.org/nationalarchives/wp-content/uploads/2020/12/Sections-a-f.pdf",
+          "https://www.cambridge.org/core/journals/african-studies-review/article/abs/apprenticeship-system-in-mauritius-its-character-and-its-impact-on-race-relations-in-the-immediate-postemancipation-period-18391879/25B97408BEEE67E7FAE3B43170FF18FD",
+          "https://aapravasi.govmu.org/aapravasi/wp-content/uploads/2020/09/Education-Kit-for-teachers.pdf",
+          "https://whc.unesco.org/en/list/1227",
+          "https://www.geonames.org/934154/port-louis.html"
+        ],
+        "named_anchors": [
+          "路易港"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-MAU-1834-ATLAS-ARRIVAL",
+          "E19-MAU-1835-SLAVERY-ABOLITION",
+          "E19-MAU-1835-SLAVEOWNER-CLAIMS",
+          "E19-MAU-1836-1839-AMENDED-AWARDS",
+          "E19-MAU-1839-APPRENTICESHIP-END"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "mauritius-port-louis-government",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1833,
+            "controller": "british",
+            "title": "路易港 · 毛里求斯殖民政府",
+            "summary_zh": "路易港是英国治理毛里求斯及相关岛屿的行政和贸易驻地。"
+          },
+          {
+            "start_year": 1834,
+            "end_year": 1834,
+            "controller": "british",
+            "title": "路易港 · 印度契约劳工抵达",
+            "summary_zh": "1834年11月，阿特拉斯号载三十六名印度契约劳工抵达。"
+          },
+          {
+            "start_year": 1835,
+            "end_year": 1838,
+            "controller": "british",
+            "title": "路易港 · 殖民政府与赔偿事务",
+            "summary_zh": "1835年废奴生效。殖民赔偿机构审核奴隶主的申请，强制学徒制继续运行。"
+          },
+          {
+            "start_year": 1839,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "路易港 · 学徒制结束",
+            "summary_zh": "1839年3月底，余下的强制学徒劳动义务终止。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "diego-garcia-east-point-plantations",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.46567,
+          -7.3482
+        ]
+      },
+      "properties": {
+        "name": "迪戈加西亚东角 · 椰子种植园",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "economic_network",
+        "summary_zh": "迪戈加西亚等岛生产椰干并供应毛里求斯。1835年后，殖民当局把废奴过渡期的学徒安排施行于附属岛屿。",
+        "source_ids": [
+          "19C34-LAB-CHA-ICJ",
+          "19C34-LAB-CHA-EDIS",
+          "19C34-LAB-CHA-G",
+          "19C34-LAB-MAU-APP"
+        ],
+        "source_urls": [
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/169/169-20180301-WRI-05-00-EN.pdf",
+          "https://chagos-trust.org/images/uploads/documents/Chagos_News_14.pdf",
+          "https://mapcarta.com/14910822",
+          "https://www.cambridge.org/core/journals/african-studies-review/article/abs/apprenticeship-system-in-mauritius-its-character-and-its-impact-on-race-relations-in-the-immediate-postemancipation-period-18391879/25B97408BEEE67E7FAE3B43170FF18FD"
+        ],
+        "named_anchors": [
+          "迪戈加西亚东角"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-CHAGOS-1835-APPRENTICESHIP",
+          "E19-MAU-1835-SLAVERY-ABOLITION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "diego-garcia-east-point-plantations",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1834,
+            "controller": "british",
+            "title": "迪戈加西亚东角 · 椰子种植园",
+            "summary_zh": "迪戈加西亚的椰子种植园依靠被奴役者劳动，生产椰干并供应毛里求斯。"
+          },
+          {
+            "start_year": 1835,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "迪戈加西亚东角 · 椰子种植园",
+            "summary_zh": "1835年废奴措施延伸到查戈斯，岛上的椰子种植园在学徒制过渡期继续经营。"
           }
         ]
       }
