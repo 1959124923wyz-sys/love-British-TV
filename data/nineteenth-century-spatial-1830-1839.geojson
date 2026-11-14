@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1830–1839 Chapter 34 first through fourth editorial batches",
+    "coverage": "1830–1839 Chapter 34 first through fifth editorial batches",
     "historical_area_statistics": false
   },
   "features": [
@@ -2924,6 +2924,59 @@
             "controller": "british",
             "title": "迪戈加西亚东角 · 椰子种植园",
             "summary_zh": "1835年废奴措施延伸到查戈斯，岛上的椰子种植园在学徒制过渡期继续经营。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nassau-government-house",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.34458,
+          25.07564
+        ]
+      },
+      "properties": {
+        "name": "拿骚 · 巴哈马总督府",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "总督府是巴哈马殖民总督的驻地。1830年，总督从拿骚发出将被拘禁者送返埃克苏马和派兵登岛的命令。",
+        "source_ids": [
+          "19C34-EX-GOV",
+          "19C34-EX-GOV-G",
+          "19C34-EX-CRATON"
+        ],
+        "source_urls": [
+          "https://www.bahamas.com/plan-your-trip/things-to-do/government-house",
+          "https://mapcarta.com/W371290296",
+          "https://brill.com/view/journals/nwig/57/1-2/article-p19_2.pdf"
+        ],
+        "named_anchors": [
+          "拿骚"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-EXU-1830-SALT-BOAT",
+          "E19-EXU-1830-NASSAU-FLOGGINGS",
+          "E19-EXU-1830-RETURN-STRIKE",
+          "E19-EXU-1830-STEVENSTONE-TROOPS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nassau-government-house",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "拿骚 · 巴哈马总督府",
+            "summary_zh": "总督府是巴哈马殖民总督的驻地。1830年，总督从拿骚发出将被拘禁者送返埃克苏马和派兵登岛的命令。"
           }
         ]
       }
