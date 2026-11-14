@@ -1,0 +1,83 @@
+{
+  "schema": "atlas-major-story-v1",
+  "id": "E19-IR-DOOLOUGH",
+  "title": "杜洛求济之路",
+  "region": "梅奥郡 · 路易斯堡与德尔菲",
+  "start_year": 1849,
+  "end_year": 1849,
+  "period": "1849—1849年",
+  "subtitle": "院外救济核查转移后的步行、死亡与报刊追问",
+  "lead": "1849年3月底，西港济贫联合区官员在路易斯堡原定举行的核查改在德尔菲。求济者夜间穿过山谷和山路。当地报刊在随后数周接连刊出读者来信，追问领取救济的人为何死在路上。",
+  "sections": [
+    {
+      "id": "move",
+      "heading": "核查改到德尔菲",
+      "period_start_year": 1849,
+      "period_end_year": 1849,
+      "paragraphs": [
+        "3月30日，西港济贫联合区的霍格罗夫和督察普里姆罗斯到达路易斯堡。[[E19-IR-1849-LOUISBURGH-INSPECTION-MOVED|原定在镇上举行的院外救济核查改到德尔菲庄园屋]]。《梅奥宪报》来信说，救济官通知领取救济者次日清早到场，缺席者会被从名册除去。",
+        "当晚至次日，[[E19-IR-1849-DOOLOUGH-RELIEF-WALK|求济者经杜洛一带的山路前往德尔菲]]。来信描述了年老者、妇女和儿童在饥饿和寒冷中赶路。3月31日，[[E19-IR-1849-DELPHI-INSPECTION|部分到达德尔菲的申请者接受了核查]]。"
+      ],
+      "source_keys": [
+        "19C35-IR-DOOLOUGH-NEWS",
+        "19C35-IR-DOOLOUGH-ATLAS"
+      ]
+    },
+    {
+      "id": "letters",
+      "heading": "死亡报告与重新安葬",
+      "period_start_year": 1849,
+      "period_end_year": 1849,
+      "paragraphs": [
+        "4月10日，[[E19-IR-1849-DOOLOUGH-FIVE-REPORTED|《梅奥宪报》刊出署名「纳税人」的来信，记载五具遗体被发现]]。其中一名妇女和她的两个孩子被发现死于路边，另外两人死在较靠近路易斯堡的地方。后续来信更正母子三人的姓氏为迪伦。",
+        "来信还记载，验尸官对其中两名死者查验后认定死因为饥饿和寒冷。4月12日，[[E19-IR-1849-DOOLOUGH-REBURIAL|当地神父提供棺木，沃尔什等人重新安葬死者]]。5月17日，[[E19-IR-1849-DOOLOUGH-FOLLOWUP|同一报纸刊出的后续来信又记下两具遗体]]，使来信所述发现人数增至七人。"
+      ],
+      "source_keys": [
+        "19C35-IR-DOOLOUGH-NEWS",
+        "19C35-IR-DOOLOUGH-ATLAS"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "19C35-IR-DOOLOUGH-NEWS",
+      "publisher": "梅奥郡图书馆｜《梅奥宪报》",
+      "title": "梅奥大饥荒展：杜洛事件同期来信",
+      "label": "梅奥郡图书馆｜《梅奥宪报》｜梅奥大饥荒展：杜洛事件同期来信",
+      "url": "https://www.mayo.ie/getmedia/f7ba7bd8-7354-4353-8877-30d0e3dac099/The-Famine-in-Mayo-1845-1850-Mayo-County-Library-Exhibition_2.pdf",
+      "access": "展板并排转录1849年4月10日及5月17日报道、五具与追加两具遗体、两人死因查验及重新安葬。"
+    },
+    {
+      "id": "19C35-IR-DOOLOUGH-ATLAS",
+      "publisher": "爱尔兰广播电视台｜《爱尔兰大饥荒地图集》专题",
+      "title": "杜洛求济事件",
+      "label": "爱尔兰广播电视台｜《爱尔兰大饥荒地图集》专题｜杜洛求济事件",
+      "url": "https://www.rte.ie/history/post-famine/2021/0309/1202980-living-skeletons-the-doolough-tragedy/",
+      "access": "核对西港济贫联合区的核查安排、3月30日至31日及纪念。"
+    }
+  ],
+  "topic_source_claims": [
+    {
+      "section_id": "move",
+      "claim": "3月30日改期、求济者步行、31日核查。",
+      "source_keys": [
+        "19C35-IR-DOOLOUGH-NEWS",
+        "19C35-IR-DOOLOUGH-ATLAS"
+      ],
+      "verification_depth": "展板并排转录1849年4月10日及5月17日报道、五具与追加两具遗体、两人死因查验及重新安葬。；核对西港济贫联合区的核查安排、3月30日至31日及纪念。"
+    },
+    {
+      "section_id": "letters",
+      "claim": "两封同期报道、死因查验和安葬。",
+      "source_keys": [
+        "19C35-IR-DOOLOUGH-NEWS",
+        "19C35-IR-DOOLOUGH-ATLAS"
+      ],
+      "verification_depth": "展板并排转录1849年4月10日及5月17日报道、五具与追加两具遗体、两人死因查验及重新安葬。；核对西港济贫联合区的核查安排、3月30日至31日及纪念。"
+    }
+  ],
+  "related_story_ids": [
+    "E19-IR-FAMINE-RELIEF",
+    "E19-IR-FAMINE-EVICTIONS"
+  ]
+}

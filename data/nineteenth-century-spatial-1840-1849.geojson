@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1840–1849 Chapter 35 batches 1–4",
+    "coverage": "1840–1849 Chapter 35 batches 1–5",
     "historical_area_statistics": false
   },
   "features": [
@@ -4457,6 +4457,333 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "stable_id": "au-gippsland-warrigal-creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-skibbereen-workhouse",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.262115,
+          51.563194
+        ]
+      },
+      "properties": {
+        "name": "斯基伯林 · 济贫院",
+        "start_year": 1842,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "1842年启用，主院设计容纳800人。饥荒期间，院内收容人数上升，地方机构另租建筑设附属院。",
+        "source_ids": [
+          "19C35-IR-SKIB-WORKHOUSE",
+          "19C35-IR-SKIB-WORKHOUSE-1902",
+          "19C35-IR-SKIB-HOSPITAL-GEO"
+        ],
+        "source_urls": [
+          "https://skibbheritage.com/skibbereen-workhouse/",
+          "https://workhouses.org.uk/Skibbereen/",
+          "https://www.openstreetmap.org/relation/5995457"
+        ],
+        "named_anchors": [
+          "斯基伯林"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-IR-1842-SKIBBEREEN-WORKHOUSE-OPENS",
+          "E19-IR-1846-SKIBBEREEN-DECEMBER-DEATHS",
+          "E19-IR-1847-SKIBBEREEN-ADMISSIONS-STOP",
+          "E19-IR-1847-SKIBBEREEN-DEATHS-PEAK",
+          "E19-IR-1848-SKIBBEREEN-MINORS-RETURN",
+          "E19-IR-1848-SKIBBEREEN-DECEMBER-RETURN"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ir-skibbereen-workhouse",
+        "year_stages": [
+          {
+            "start_year": 1842,
+            "end_year": 1846,
+            "controller": "british",
+            "title": "斯基伯林 · 济贫院",
+            "summary_zh": "济贫院启用，为当地济贫联合区服务。"
+          },
+          {
+            "start_year": 1847,
+            "end_year": 1847,
+            "controller": "british",
+            "title": "斯基伯林 · 济贫院拥挤与病亡",
+            "summary_zh": "济贫院在年初因拥挤和疾病暂停收容。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "斯基伯林 · 主院与附属院",
+            "summary_zh": "地方济贫机构使用主院，并另设附属院扩大收容。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-skibbereen-relief-town",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.26667,
+          51.55
+        ]
+      },
+      "properties": {
+        "name": "斯基伯林 · 工人抗议与地方施粥",
+        "start_year": 1846,
+        "end_year": 1846,
+        "display_kind": "local_governance",
+        "summary_zh": "公共工程工人进城讨薪。地方无偿救济委员会随后开设施粥点。",
+        "source_ids": [
+          "19C35-IR-CAHERAGH-MARCH",
+          "19C35-IR-SKIB-STUDY",
+          "19C35-IR-SKIB-SOUP",
+          "19C35-IR-SKIB-TOWN-GEO"
+        ],
+        "source_urls": [
+          "https://skibbheritage.com/historic-famine-building-restored/",
+          "https://www.cambridge.org/core/journals/irish-historical-studies/article/coping-with-the-great-irish-famine-the-agency-of-skibbereen/AFFF9993CF1049733C87D7798BF1B5F1",
+          "https://skibbheritage.com/the-provincial-bank-the-great-famine/",
+          "https://www.geonames.org/2961459/skibbereen.html"
+        ],
+        "named_anchors": [
+          "斯基伯林"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-IR-1846-SKIBBEREEN-WAGE-MARCH",
+          "E19-IR-1846-SKIBBEREEN-SOUP-HOUSE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ir-skibbereen-relief-town"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-abbeystrowry-burials",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.28819,
+          51.55173
+        ]
+      },
+      "properties": {
+        "name": "阿比斯特罗里 · 饥荒死者墓地",
+        "start_year": 1847,
+        "end_year": 1847,
+        "display_kind": "political",
+        "summary_zh": "达弗林于1847年到访，记录当地埋葬饥荒与疾病死者。",
+        "source_ids": [
+          "19C35-IR-ABBEYSTROWRY",
+          "19C35-IR-ABBEY-GEO"
+        ],
+        "source_urls": [
+          "https://skibbheritage.com/abbeystrowry-cemetery-skibbereen/",
+          "https://mapcarta.com/W236264185"
+        ],
+        "named_anchors": [
+          "阿比斯特罗里"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-IR-1847-ABBEYSTROWRY-BURIALS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ir-abbeystrowry-burials"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-ballinlass-evictions",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.462222,
+          53.489722
+        ]
+      },
+      "properties": {
+        "name": "巴林拉斯 · 驱逐与拆屋",
+        "start_year": 1846,
+        "end_year": 1846,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1846年3月13日，庄园驱逐61户居民，执达员拆屋。",
+        "source_ids": [
+          "19C35-IR-BALL-HANSARD",
+          "19C35-IR-BALL-LOCAL",
+          "19C35-IR-BALL-CENSUS",
+          "19C35-IR-BALL-PARISH-REVIEW",
+          "19C35-IR-BALL-GEO"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1846/apr/02/ejectment-of-tenantry-ireland",
+          "https://mountbellew.com/services/ballinlass-evictions/",
+          "https://www.cso.ie/en/media/csoie/statistics/archive/census1851/THE_CENSUS_OF_IRELAND_1851_-_Galway.pdf",
+          "https://divergentpathsstafford.wordpress.com/2015/06/",
+          "https://www.townlands.ie/galway/killian/ballynakill/ballynakill/ballinlass/"
+        ],
+        "named_anchors": [
+          "巴林拉斯"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-IR-1846-BALLINLASS-EVICTION",
+          "E19-IR-1846-BALLINLASS-ROADSIDE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ir-ballinlass-evictions"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-kilrush-poor-law",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.48333,
+          52.63972
+        ]
+      },
+      "properties": {
+        "name": "基尔拉什 · 济贫和租户驱逐调查",
+        "start_year": 1848,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "督察肯尼迪报告被逐住户的处境、院外救济人数及地方经费不足。",
+        "source_ids": [
+          "19C35-IR-KILRUSH-RETURNS",
+          "19C35-IR-KILRUSH-MARCH",
+          "19C35-IR-KILRUSH-JAN",
+          "19C35-IR-KENNEDY",
+          "19C35-IR-KILRUSH-GEO"
+        ],
+        "source_urls": [
+          "https://clarelibraries.ie/localstudies/history/agrarian-conflict-in-clare/kilrush_evictions_1849/",
+          "https://clarelibraries.ie/localstudies/history/agrarian-conflict-in-clare/kilrush_evictions_1849/evictions-in-the-kilrush-union-1849-extract-of-16-mar-1848/",
+          "https://clarelibraries.ie/localstudies/history/agrarian-conflict-in-clare/kilrush_evictions_1849/evictions-in-the-kilrush-union-1849-extract-of-22-jan-1849-a/",
+          "https://www.dib.ie/biography/kennedy-arthur-edward-a9945",
+          "https://mapcarta.com/18272114"
+        ],
+        "named_anchors": [
+          "基尔拉什"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-IR-1848-KILRUSH-DISPLACED-ADMISSIONS",
+          "E19-IR-1849-KILRUSH-JANUARY-RETURN",
+          "E19-IR-1849-KILRUSH-TREASURY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ir-kilrush-poor-law"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-louisburgh-relief",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.80849,
+          53.76353
+        ]
+      },
+      "properties": {
+        "name": "路易斯堡 · 救济核查转移",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "西港济贫联合区官员原定在这里核查院外救济资格，随后改在德尔菲举行。",
+        "source_ids": [
+          "19C35-IR-DOOLOUGH-NEWS",
+          "19C35-IR-DOOLOUGH-ATLAS",
+          "19C35-IR-LOUISBURGH-GEO"
+        ],
+        "source_urls": [
+          "https://www.mayo.ie/getmedia/f7ba7bd8-7354-4353-8877-30d0e3dac099/The-Famine-in-Mayo-1845-1850-Mayo-County-Library-Exhibition_2.pdf",
+          "https://www.rte.ie/history/post-famine/2021/0309/1202980-living-skeletons-the-doolough-tragedy/",
+          "https://mapcarta.com/18271268"
+        ],
+        "named_anchors": [
+          "路易斯堡"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-IR-1849-LOUISBURGH-INSPECTION-MOVED"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ir-louisburgh-relief"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ir-delphi-lodge-relief",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.74703,
+          53.63173
+        ]
+      },
+      "properties": {
+        "name": "德尔菲庄园屋 · 救济核查",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "求济者经山路抵达后，于3月31日接受核查。",
+        "source_ids": [
+          "19C35-IR-DOOLOUGH-NEWS",
+          "19C35-IR-DOOLOUGH-ATLAS",
+          "19C35-IR-DELPHI-GEO"
+        ],
+        "source_urls": [
+          "https://www.mayo.ie/getmedia/f7ba7bd8-7354-4353-8877-30d0e3dac099/The-Famine-in-Mayo-1845-1850-Mayo-County-Library-Exhibition_2.pdf",
+          "https://www.rte.ie/history/post-famine/2021/0309/1202980-living-skeletons-the-doolough-tragedy/",
+          "https://mapcarta.com/N2510362144"
+        ],
+        "named_anchors": [
+          "德尔菲庄园屋"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-IR-1849-DELPHI-INSPECTION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ir-delphi-lodge-relief"
       }
     }
   ]
