@@ -132,7 +132,7 @@ const archaeologyReferenceRenderer=L.svg({pane:'archaeologyReferencePane'});
 map.createPane('sovereigntyPane');
 map.getPane('sovereigntyPane').style.zIndex='410';
 const sovereigntyRenderer=L.svg({pane:'sovereigntyPane'});
-const groups={colonialClaims:L.layerGroup().addTo(map),seventeenthStudies:L.layerGroup().addTo(map),territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map),nineYearsWar:L.layerGroup().addTo(map),atlanticContact:L.layerGroup().addTo(map),chapter11ActionLinks:L.layerGroup().addTo(map),earlyRegionalImpact:L.layerGroup().addTo(map)};
+const groups={nineteenthAreas:L.layerGroup().addTo(map),colonialClaims:L.layerGroup().addTo(map),seventeenthStudies:L.layerGroup().addTo(map),territory:L.layerGroup().addTo(map),kingdom:L.layerGroup().addTo(map),controlAreas:L.layerGroup().addTo(map),wartimeControl:L.layerGroup().addTo(map),garrisonHit:L.layerGroup().addTo(map),warVicinity:L.layerGroup().addTo(map),warReach:L.layerGroup().addTo(map),contestedZones:L.layerGroup().addTo(map),politicalRelations:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),candidate:L.layerGroup().addTo(map),claim:L.layerGroup().addTo(map),event:L.layerGroup().addTo(map),place:L.layerGroup().addTo(map),cluster:L.layerGroup().addTo(map),clusterExpanded:L.layerGroup().addTo(map),archaeologyReference:L.layerGroup().addTo(map),enslavementBands:L.layerGroup().addTo(map),hypotheses:L.layerGroup().addTo(map),eleventhCores:L.layerGroup().addTo(map),eleventhHits:L.layerGroup().addTo(map),eleventhAreas:L.layerGroup().addTo(map),invasionImpact:L.layerGroup().addTo(map),tenthExtraction:L.layerGroup().addTo(map),nineYearsWar:L.layerGroup().addTo(map),atlanticContact:L.layerGroup().addTo(map),chapter11ActionLinks:L.layerGroup().addTo(map),earlyRegionalImpact:L.layerGroup().addTo(map)};
 const levelOf=(item)=>Math.max(1,Math.min(3,Number(item.significance?.level||1)));
 const rankName={3:'重大事件',2:'区域事件',1:'补充事件'};
 // Shared year gate for archive, map symbols and voyage tracks.
@@ -226,7 +226,14 @@ function syncMapLayers(){
 }
 let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthColonialClaims=null;
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
-const enable18cPilot=new URLSearchParams(window.location.search).get('review18c')==='1';
+const reviewParams=new URLSearchParams(window.location.search);
+const enable19cPilot=reviewParams.get('review19c')==='1';
+const enable18cPilot=enable19cPilot||reviewParams.get('review18c')==='1';
+if(enable19cPilot){
+ document.title='帝国的代价 | 19世纪历史地图';
+ document.querySelector('.map-stage').setAttribute('aria-label','英格兰、苏格兰及英国殖民史动态地图');
+}
+let nineteenthReviewEnd=null,nineteenthSpatial=null;
 let preview18cReady=false;
 let eighteenthAcadiaControlCores=null;
 let bengal18cReady=false;
@@ -261,7 +268,7 @@ let t23Penang29Ready=false;
 let t28HavanaMalta30Ready=false;
 let t33ScottishFreedom31Ready=false;
 let r33OriginalResearchThreeStoriesReady=false;
-const previewYearCap=()=>jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699; let selected=''; let selectedItemYear=null; let timer=null;
+const previewYearCap=()=>nineteenthReviewEnd??(jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699); let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
@@ -322,6 +329,7 @@ function openDossier(item,typ){
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
  const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ)); const representativeNote='';
+ const showEventSources=!storyChild||item.year>=1800;
  const canMapFocus=typ==='event'&&canLocateEvent(item,year);
  const locateAction=typ==='event'?
   (storyChild?
@@ -334,7 +342,7 @@ function openDossier(item,typ){
   (conciseEventTitle(item)!==item.name?'<details class="atlas-complete-title"><summary>完整事件名称</summary><p>'+escapeHTML(item.name)+'</p></details>':'')+
   (readerCopy.clean(description)?'<p>'+escapeHTML(readerCopy.clean(description))+'</p>':'')+representativeNote+
   (window.HistoryStories?.eventLinkMarkup?.(item,typ)||'')+locateAction+
-  (storyChild?'':listSources(item.source_ids,item));
+  (showEventSources?listSources(item.source_ids,item):'');
  openPanel('dossier');
  window.HistoryStories?.onEventOpened?.(item,typ);
  const locateButton=$('dossierBody').querySelector('[data-locate-event]');
@@ -469,7 +477,7 @@ let eventWindowMode17c='rolling4';
 function seventeenthEventWindowStart(atYear,mode=eventWindowMode17c){
  if(mode==='year')return atYear;
  if(mode==='decade')return decadeForYear(atYear);
- return Math.max(atYear>=1700?1700:1600,atYear-3);
+ return Math.max(Math.floor(atYear/100)*100,atYear-3);
 }
 function seventeenthEventsForWindow(atYear,mode=eventWindowMode17c){
  if(atYear<1600)return atlas?.events||[];
@@ -808,7 +816,7 @@ function renderPoints(){
    ? window.AtlasVoyageGeometry.routeGeometryForWorldWrap(r)
    : r.segments&&r.segments.length?r.segments:r.coords;
    // A faint unbroken foundation joins historical endpoints without implying GPS.
-   if(schematic)L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
+   if(schematic&&!r.dash_only)L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
     color:baseColor,weight:2.4,opacity:.48,interactive:false,
     className:'atlas-voyage-continuity'}).addTo(groups.routes);
   const line=L.polyline(routeGeometry,{...style,interactive:false}).addTo(groups.routes);
@@ -825,7 +833,8 @@ function renderPoints(){
  updateVisibility();
  // Expand a dense group so the exact target glyph, not only the hub, is highlighted.
  const targetGroup=focusedEventId&&nearby.find(g=>g.items.some(x=>x.item.id===focusedEventId));
- if(targetGroup&&targetGroup.items.length>1)expandCluster(targetGroup,true);
+ if(targetGroup&&targetGroup.items.length>1&&targetGroup.items.length<=8&&map.getZoom()>4)
+  expandCluster(targetGroup,true);
 }
 function ensureTerritorialPatterns(){
  // Geographic polygons are rendered with SVG so political classification can use true hatching.
@@ -1049,7 +1058,7 @@ function renderSeventeenthRegionalStudies(){
 // Eighteenth-century first-map pilot: evidence-led urban/garrison cores only.
 // Reuse approved map marker and dossier panels; each circle is SCREEN PX, not a territory polygon.
 function renderEighteenthAcadiaControlCores(){
- if(year<1700||!preview18cReady||!eighteenthAcadiaControlCores)return;
+ if(year<1700||year>=1800||!preview18cReady||!eighteenthAcadiaControlCores)return;
  groups.controlAreas.clearLayers();
  if(!$('toggleControlAreas').checked)return;
  for(const f of eighteenthAcadiaControlCores.features){
@@ -1085,7 +1094,7 @@ function renderEighteenthAcadiaControlCores(){
 // 1700 transition and Bengal research site cores: actor-differentiated dashed
 // Point references, never measured state polygons or territory area.
 function renderEighteenthReviewEvidenceCores(){
- if(!preview18cReady||year<1700||!$('toggleControlAreas').checked)return;
+ if(!preview18cReady||year<1700||year>=1800||!$('toggleControlAreas').checked)return;
  const visible=[];
  for(const f of continuity1700References?.features||[]){
   if(year>=f.properties.start_year&&year<=f.properties.end_year)
@@ -1124,6 +1133,77 @@ function renderEighteenthReviewEvidenceCores(){
    openPanel('dossier');
   });
   circle.addTo(groups.controlAreas);
+ }
+}
+
+async function loadNineteenthReview(){
+ const [chronology,spatial]=await Promise.all([
+  fetch('data/stories/serial/chronology-preview-1800-1819.json',{cache:'no-store'}),
+  fetch('data/nineteenth-century-spatial-1800-1819.geojson',{cache:'no-store'})
+ ]);
+ if(!chronology.ok||!spatial.ok)throw new Error('19C chronology or map missing');
+ const [data,geo]=await Promise.all([chronology.json(),spatial.json()]);
+ const end=data.period?.to,sourceIds=new Set(data.sources?.map(s=>s.id));
+ const eventIds=new Set(data.events?.map(e=>e.id));
+ const cited=row=>row.source_ids?.length&&row.source_ids.every(id=>sourceIds.has(id));
+ const inPeriod=y=>Number.isInteger(y)&&y>=1800&&y<=end;
+ if(data.schema!=='atlas-19c-chronology-review-v1'||data.period.from!==1800||
+    !inPeriod(end)||end%10!==9||!data.events.length||eventIds.size!==data.events.length||
+    data.events.some(e=>!inPeriod(e.year)||!cited(e)||
+     (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||Math.abs(e.lat)>90||!Number.isFinite(e.lng)||Math.abs(e.lng)>180))||
+    data.routes.some(r=>!inPeriod(r.year)||!cited(r))||geo.type!=='FeatureCollection'||
+    geo.features.some(f=>!['Point','Polygon'].includes(f.geometry?.type)||
+     !cited(f.properties)||!inPeriod(f.properties.start_year)||!inPeriod(f.properties.end_year)||
+     f.properties.historical_boundary_confirmed!==false||f.properties.fill_authorized!==false||
+     f.properties.area_sqkm!==null||!f.properties.exclude_from_area_aggregation||
+     !f.properties.related_event_ids.every(id=>eventIds.has(id))))
+  throw new Error('19C review failed chronology, source or spatial checks');
+ for(let d=1800;d<=end;d+=10){
+  serialPreviewByDecade.set(d,{
+   dataset_id:'nineteenth-century-review-'+d,period:{from:d,to:d+9},
+   events:data.events.filter(e=>decadeForYear(e.year)===d),
+   routes:data.routes.filter(r=>decadeForYear(r.year)===d),places:[],colonial_polygons:[]
+  });
+ }
+ for(const s of data.sources)sourcesById.set(s.id,s);
+ nineteenthSpatial=geo;
+ nineteenthReviewEnd=end;
+}
+function renderNineteenthSpatial(){
+ const group=groups.nineteenthAreas;
+ group.clearLayers();
+ if(year<1800||!nineteenthSpatial||!$('toggleTerritorialFootprints').checked)return;
+ const colors={land_dispossession:'#e4b571',political:'#79bacb'};
+ for(const feature of nineteenthSpatial.features){
+  const p=feature.properties;
+  if(year<p.start_year||year>p.end_year)continue;
+  const stage=p.year_stages?.find(x=>year>=x.start_year&&year<=x.end_year);
+  const color=colors[p.display_kind]||'#ae97db';
+  if(feature.geometry.type==='Polygon'){
+   const layer=L.geoJSON(feature,{
+    pane:'territoryPane',renderer:territoryRenderer,bubblingMouseEvents:false,
+    style:{color,weight:2,dashArray:'7 6',fillColor:color,fillOpacity:.10,className:'atlas-19c-area'},
+    onEachFeature:(_,shape)=>shape.on('click',e=>{
+     if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+     window.historicOverlapDossier?.openAt?.(e.latlng,'visible-polygon');
+    })
+   });
+   layer.addTo(group);
+   continue;
+  }
+  const [lon,lat]=feature.geometry.coordinates;
+  const site=stage?{...feature,properties:{...p,name:stage.title,summary_zh:stage.summary_zh,
+   start_year:stage.start_year,end_year:stage.end_year}}:feature;
+  L.circleMarker([lat,lon],{
+   pane:'controlAreaPane',renderer:wartimeRenderer,radius:21,weight:2.4,fill:false,
+   dashArray:'5 3',color:stage?.controller==='british'?'#c5a6f5':'#65c7b6',
+   bubblingMouseEvents:false,className:'atlas-19c-site'
+  }).bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
+   pane:'eventTooltipPane',className:'atlas-hover',direction:'auto',offset:[12,0]
+  }).on('click',e=>{
+   if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   openTerritoryDossier(site);
+  }).addTo(group);
  }
 }
 
@@ -2031,6 +2111,7 @@ function featureContainsCoordinate(feature,lon,lat){
   !rings.slice(1).some(hole=>insideWarPolygon(hole,lon,lat)));
 }
 function openMapTerritoryAt(latlng){
+ if(year>=1800)return false;
  const lon=latlng.lng,lat=latlng.lat;
  if(year>=1540&&$('toggleControlAreas').checked&&$('toggleTerritorialFootprints').checked){
   const active=activeEnglishGarrisonIds();
@@ -2104,9 +2185,9 @@ function updateVisibility(){
 // The chapter registry is the only authority for published decade cards.
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
-const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=(jamaica18cReady?1790:bengal18cReady?1770:preview18cReady?1760:1690)&&d%10===0?
- ({id:(d>=1700?'18c-':'17c-')+d,start:d,end:d+9,number:11+(d-1600)/10,
- label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1700?'18世纪历史专题':'17世纪历史专题'),
+const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=previewYearCap()&&d%10===0?
+ ({id:(Math.floor(d/100)+1)+'c-'+d,start:d,end:d+9,number:11+(d-1600)/10,
+ label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1800?'19世纪历史专题':d>=1700?'18世纪历史专题':'17世纪历史专题'),
  status:d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
@@ -2180,7 +2261,7 @@ function renderTimelineNavigation(){
   $('jumpYear').value=year;
  }
  $('timelineAvailability').textContent=year>lastPublishedYear
-  ?(year>=1700?'十八世纪历史年表':'十七世纪历史年表')
+  ?(year>=1800?'十九世纪历史年表':year>=1700?'十八世纪历史年表':'十七世纪历史年表')
   :browsingDecade===halfCenturyPageForYear(year)
    ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
    :'浏览目录中 · 地图为'+year+'年';
@@ -2188,10 +2269,7 @@ function renderTimelineNavigation(){
 function setYear(v){
  const requested=Math.round(Number(v)||1497);
  const publishedCap=Math.min(lastPublishedYear,requested);
- const next=Math.max(1497,jamaica18cReady?Math.min(1799,requested):
-  (bengal18cReady?Math.min(1779,requested):
-   (preview18cReady?Math.min(1769,requested):
-    (serialPreviewAtlas?Math.min(1699,requested):publishedCap))));
+ const next=Math.max(1497,serialPreviewAtlas?Math.min(previewYearCap(),requested):publishedCap);
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen)return;
  if(next>=1600){
@@ -2207,19 +2285,15 @@ function setYear(v){
   const decadeTotal=atlas.events.length;
   const observed=atlas.events.filter(e=>occurredByYear(e,year)).length;
   const fresh=atlas.events.filter(e=>e.category!=='status'&&Number(e.year)===year).length;
-  const eighteenthPilot=year>=1700;
+  const centuryLabel=year>=1800?'十九世纪':year>=1700?'十八世纪':'十七世纪';
   const chapterStory=window.AtlasChapterNarratives?.forDecade(year);
   if(chapterStory){
    $('chapterTitlePrimary').textContent=chapterStory.primary;
    $('chapterTitleSecondary').textContent=chapterStory.secondary;
    $('chapterIntro').textContent=chapterStory.intro;
-  }else if(eighteenthPilot){
-   $('chapterTitlePrimary').textContent='十八世纪';
-   $('chapterTitleSecondary').textContent='殖民扩张与抵抗';
-   $('chapterIntro').textContent='本十年收录'+decadeTotal+'项历史记录。';
   }else{
-   $('chapterTitlePrimary').textContent='十七世纪';
-   $('chapterTitleSecondary').textContent='历史专题';
+   $('chapterTitlePrimary').textContent=centuryLabel;
+   $('chapterTitleSecondary').textContent=year>=1700?'殖民扩张与抵抗':'历史专题';
    $('chapterIntro').textContent='本十年收录'+decadeTotal+'项历史记录。';
   }
   $('factA').textContent=decadeTotal;
@@ -2228,7 +2302,7 @@ function setYear(v){
   $('factADesc').textContent='本十年已入库事件';
   $('factBDesc').textContent='截至本年的记录';
   $('factCDesc').textContent='本年新增事件';
-  $('periodTitle').textContent=chapterStory?.title||(eighteenthPilot?'十八世纪历史专题':'十七世纪历史专题');
+  $('periodTitle').textContent=chapterStory?.title||(centuryLabel+'历史专题');
   const ch=chapterForYear(year);
   $('chapterNav').textContent=ch?'历史地图 · 第'+ch.number+'章':'历史地图';
   $('chapterNavName').textContent=chapterStory?.title||ch?.label||'历史事件';
@@ -2239,7 +2313,9 @@ function setYear(v){
   if(map.hasLayer(groups.kingdom))map.removeLayer(groups.kingdom);
   $('historicalRegionGuide').hidden=true;
   renderEventList();renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
-  // The 1600–1799 setYear branch bypasses refreshHistoricalLayers; redraw true annual 18C surfaces here.
+  renderNineteenthSpatial();
+  window.historicOverlapDossier?.render?.();
+  // The serial setYear branch bypasses refreshHistoricalLayers; redraw annual 18C surfaces here.
   window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
@@ -2347,7 +2423,9 @@ function setYear(v){
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineNotice').textContent='';
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
- // Also clear 18C-only area overlays when the user navigates back into the published 16C atlas.
+ renderNineteenthSpatial();
+ window.historicOverlapDossier?.render?.();
+ // Clear the 18C-only overlays when navigating back into the published 16C atlas.
  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
  if(changedYear)$('eventList').scrollTop=0;
   $('prevYear').disabled=year<=1497;
@@ -3831,6 +3909,11 @@ async function boot(){
   atlanticContactData=atlanticData;
 
 
+  if(enable19cPilot&&jamaica18cReady){
+   try{await loadNineteenthReview();}
+   catch(error){console.warn('19C review data unavailable',error);}
+  }
+
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
   let startYear=1497;
   try{
@@ -3899,12 +3982,15 @@ window.__eighteenthSpatialHost={
 // country-wide background. All source provenance comes from the existing Atlas.
 window.__historicOverlapHost={
  map,getYear:()=>year,element:$,escapeHTML,openPanel,
+ hasNineteenthAreas:()=>year>=1800&&nineteenthSpatial!==null,
  sourceForId:id=>sourcesById.get(id)||null,
+ eventForId:id=>window.atlasStoryBridge?.eventById(id),
+ openEvent:item=>openDossier(item,'event'),
  visibleAreaFeatures:()=>{
   const included=['territory','colonialClaims','seventeenthStudies','archaeologyReference',
    'warVicinity','warReach','contestedZones','earlyRegionalImpact','invasionImpact',
    'tenthExtraction','nineYearsWar','atlanticContact','eleventhAreas',
-   'hypotheses','enslavementBands'];
+   'hypotheses','enslavementBands','nineteenthAreas'];
   const out=[],seen=new Set();
   const traverse=(group,groupName)=>{
    for(const item of group.getLayers()){
@@ -3925,7 +4011,7 @@ window.__historicOverlapHost={
 function refreshHistoricalLayers(){
  if(year>lastPublishedYear){
   for(const [name,layer] of Object.entries(groups))if(name!=='kingdom')layer.clearLayers();
-  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();
+  renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();renderNineteenthSpatial();
   window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();window.historicOverlapDossier?.render?.();
   return;
  }

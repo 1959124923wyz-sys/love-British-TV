@@ -36,7 +36,10 @@ for(const file of ['app.js','app-continuity-1497-1529-preview.js']){
  assert.ok(app.includes("className:item.id===focusedEventId?'atlas-target-marker'")||
     app.includes("(item.id===focusedEventId?'atlas-target-marker '"),file+': no singleton SVG target');
  assert.ok(app.includes("className:'atlas-flyout-icon'+(item.id===focusedEventId?"),file+': no grouped SVG target');
- assert.ok(app.includes('if(targetGroup&&targetGroup.items.length>1)expandCluster(targetGroup,true)'),file+': grouped event not revealed');
+ const groupedFocus=file==='app.js'
+  ? /if\(targetGroup&&targetGroup\.items\.length>1&&targetGroup\.items\.length<=8&&map\.getZoom\(\)>4\)\s*expandCluster\(targetGroup,true\);/
+  : /if\(targetGroup&&targetGroup\.items\.length>1\)expandCluster\(targetGroup,true\)/;
+ assert.match(app,groupedFocus,file+': eligible focused group not expanded');
  assert.ok(app.includes("focusedEventId&&!chosen.events.some"),file+': selected target survives after switching chapters');
  assert.ok(app.includes("focusedEventId=null;focusRequestToken++;"),file+': closed dossier retains a stale highlight');
 }

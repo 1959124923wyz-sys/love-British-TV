@@ -8,10 +8,10 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const copy=require('../js/century-chapter-narratives.js');
 const html=read('index.html'),app=read('app.js');
 
-assert.equal(Object.keys(copy.chapters).length,20,'1600–1799 must include 20 independently authored decade introductions');
+assert.equal(Object.keys(copy.chapters).length,22,'1600–1819 must include 22 independently authored decade introductions');
 assert.equal(copy.forDecade(1599),null);
-assert.equal(copy.forDecade(1800),null);
-for(let year=1600;year<=1790;year+=10){
+assert.equal(copy.forDecade(1820),null);
+for(let year=1600;year<=1810;year+=10){
  const text=copy.forDecade(year);
  assert(text,`missing decade ${year}`);
  assert.equal(copy.forDecade(year+9),text,`end of ${year}s should show the same chapter`);
@@ -45,7 +45,7 @@ for(const [p,term] of [
 const newScript='js/century-chapter-narratives.js?v=';
 assert(html.includes(newScript),'new 17C/18C chapter file not loaded');
 assert(html.indexOf(newScript)<html.indexOf('app.js?v='),'chapter copy must load before map app');
-assert(html.includes('app.js?v=atlas45'),'map app cache URL must change');
+assert(/app[.]js[?]v=[^"]*editor23-19c-opening/.test(html),'map app cache URL must change');
 assert(app.includes('window.AtlasChapterNarratives?.forDecade(d)?.title'));
 assert(app.includes('window.AtlasChapterNarratives?.forDecade(year)'));
 for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro','chapterNav','chapterNavName','chapterLabel']){
@@ -54,4 +54,4 @@ for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro'
 assert(app.includes("const decadeTotal=atlas.events.length"),'event statistics must remain intact');
 assert(app.includes("status:d>=1700?'topic_preview'"),'original research status must remain intact');
 assert(app.includes("$('chapterIntro').textContent=atlasFirstMerged.intro"),'16C chapter introduction must stay untouched');
-console.log('PASS: all 20 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
+console.log('PASS: all 22 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');

@@ -1,6 +1,6 @@
 (function (root) {
  'use strict';
- // Historical chapter copy for the 1600–1799 decade atlas. Every entry is
+ // Historical chapter copy for the 1600–1819 decade atlas. Every entry is
  // grounded in source-linked events already present in the repository.
  // No geometry, event counts, publication statuses or map selection are changed.
  const chapters = {
@@ -23,12 +23,14 @@
   1760: {primary:'帝国扩张与',secondary:'跨洲反抗',intro:'1760年牙买加爆发被奴役者起义；1763年七年战争结束，英国取得新的海外殖民权益，北美多支原住民社群随即联合抵抗英军据点与殖民推进。印度方面，东印度公司在布克萨尔战役后取得孟加拉等地的财政征收权，迈索尔则以军事行动抵抗公司势力。'},
   1770: {primary:'孟加拉饥荒与',secondary:'帝国危机',intro:'1770年孟加拉大饥荒发生于干旱、粮食市场失序与公司财政征收交织的背景下。英国议会随后加强对东印度公司的监管。北美殖民地与伦敦的矛盾升级为独立战争；英国殖民地的原住民土地声索、被奴役者处境和战争中的自由承诺也在这一时期激烈变化。'},
   1780: {primary:'奴隶船暴行与',secondary:'澳洲殖民',intro:'1781年，Zong号奴隶船船员在海上杀害被奴役非洲人，随后引发保险索赔争议与反奴隶贸易舆论。印度迈索尔军队继续同东印度公司作战。1788年第一舰队在澳大利亚东岸建立英国流放殖民据点，囚犯劳动、土地占用和原住民抵抗随之展开。'},
-  1790: {primary:'战争、流放与',secondary:'殖民新边疆',intro:'英国在加勒比镇压马龙和加里富纳人的抵抗，并将加里富纳幸存者强制流放；1795年又夺取开普殖民港。在印度，公司军继续进攻迈索尔，1799年提普苏丹于斯里兰加帕特纳战死。澳洲殖民地的土地扩张与原住民冲突，以及锡兰沿海军事争夺，延续到世纪末。'}
+  1790: {primary:'战争、流放与',secondary:'殖民新边疆',intro:'英国在加勒比镇压马龙和加里富纳人的抵抗，并将加里富纳幸存者强制流放；1795年又夺取开普殖民港。在印度，公司军继续进攻迈索尔，1799年提普苏丹于斯里兰加帕特纳战死。澳洲殖民地的土地扩张与原住民冲突，以及锡兰沿海军事争夺，延续到世纪末。'},
+  1800: {primary:'港口易手与',secondary:'殖民军中的反抗',intro:'《亚眠和约》让英国保有锡兰沿海据点，同时把开普交还巴达维亚共和国。英国随后向康提王国进兵，并于1806年再次夺取开普。韦洛尔堡的印度士兵因军中服饰改革等矛盾起事，东印度公司军当天夺回堡垒。'},
+  1810: {primary:'驱逐、吞并与',secondary:'地方反抗',intro:'开普殖民军把科萨人逐过大鱼河，沿边疆设立驻点。马坎达随后领导科萨军队进攻格雷厄姆斯敦。英国在锡兰废除康提王权，两年后乌沃与韦拉萨爆发起义，殖民军破坏农田和灌溉设施，镇压持续至1818年。'}
  };
- for (let d=1600;d<=1790;d+=10) {
+ for (let d=1600;d<=1810;d+=10) {
   const c=chapters[d];
   if (!c || !c.primary || !c.secondary || !c.intro)
-   throw new Error('Missing 17C/18C historical chapter narrative: '+d);
+   throw new Error('Missing historical chapter narrative: '+d);
   c.title=c.primary+c.secondary;
   Object.freeze(c);
  }
