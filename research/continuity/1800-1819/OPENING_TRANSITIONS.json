@@ -1,0 +1,119 @@
+{
+  "schema": "atlas-19c-opening-continuity-v1",
+  "stage": "editorial_review",
+  "scope": {
+    "from": 1799,
+    "through": 1819,
+    "regions": ["开普及东部边疆", "锡兰沿海与康提"],
+    "unreviewed_prior_layers": "其他1799年全球地点及区域仍待逐项承接，1800年批次不裁定其终止。"
+  },
+  "year_end_geometry_file": "data/nineteenth-century-spatial-1800-1819.geojson",
+  "chronology_source_registry": "data/stories/serial/chronology-preview-1800-1819.json",
+  "transitions": [
+    {
+      "stable_id": "cape-town-government",
+      "prior_ids": ["CAPE_TOWN", "CAPE_TOWN_ZONE"],
+      "baseline_year": 1799,
+      "baseline_controller": "英国开普第一占领政府",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "episodes": [
+        {"from": 1795, "through": 1802, "controller": "英国", "historic_end_year": 1803, "sources": ["19C-AMIENS", "19C-CAPE-TIMELINE"]},
+        {"from": 1803, "through": 1805, "controller": "巴达维亚共和国", "historic_end_year": 1806, "sources": ["19C-CAPE-TIMELINE", "19C-CAPE-BATTLE"]},
+        {"from": 1806, "through": 1819, "controller": "英国", "historic_end_year": null, "sources": ["19C-CAPE-BATTLE", "19C-LONDON"]}
+      ],
+      "note": "1802年条约与1803年实际交接分别记账。1814年第一附加条款确立割让，未改变1813→1814年末治理方。旧港区参考面改用好望堡据点。"
+    },
+    {
+      "stable_id": "cape-zuurveld",
+      "prior_ids": ["E18C-CAP-1799-ZUURVELD-NEGOTIATED-RETENTION"],
+      "baseline_year": 1799,
+      "baseline_controller": "科萨诸社群居住、放牧与地方自主，殖民农场也存在",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "episodes": [
+        {"from": 1799, "through": 1810, "status": "科萨社群继续居住，边疆冲突与殖民声索延续", "sources": ["19C-CAPE-WARS", "19C-CAPE-THOMPSON"]},
+        {"from": 1811, "through": 1812, "status": "开普殖民军驱逐，1812年发生跨大鱼河的大规模强迁", "sources": ["19C-CAPE-WARS", "19C-CAPE-CAMBRIDGE"]},
+        {"from": 1813, "through": 1819, "status": "驻防与殖民扩张，科萨人尝试返回并继续抵抗", "sources": ["19C-CAPE-WARS", "19C-CAPE-GRAHAM"]}
+      ],
+      "historic_end_year": null,
+      "note": "前一篇以地区文字存档；本批虚线采用 Thompson 地图中的窄口径。Coerney与阿多单独用有据地点表示。"
+    },
+    {
+      "stable_id": "ceylon-colombo-government",
+      "prior_ids": ["COLOMBO", "CEYLON_COLOMBO", "B37-I-P056", "B37-I-Z056"],
+      "baseline_year": 1799,
+      "baseline_controller": "英方沿海政府",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "episodes": [
+        {"from": 1796, "through": 1801, "controller": "英国东印度公司及英方沿海政府", "historic_end_year": 1802, "sources": ["19C-KANDY-CONVENTION", "19C-CEYLON-COAST"]},
+        {"from": 1802, "through": 1819, "controller": "英国王室殖民政府", "historic_end_year": null, "sources": ["19C-AMIENS", "19C-KANDY-CONVENTION"]}
+      ]
+    },
+    {
+      "stable_id": "ceylon-trincomalee-frederick",
+      "prior_ids": ["CEYLON_TRINCOMALEE", "B37-I-P059", "B37-I-Z059"],
+      "baseline_year": 1799,
+      "baseline_controller": "英军占有原荷兰弗雷德里克堡",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "change_effective_year": 1802,
+      "historic_end_year": null,
+      "sources": ["19C-AMIENS", "19C-CEYLON-COAST", "19C-CEYLON-TRINCO"]
+    },
+    {
+      "stable_id": "ceylon-galle-fort",
+      "prior_ids": ["CEYLON_GALLE", "E18C-CEY-1796-GALLE-FORT-SURRENDER"],
+      "baseline_year": 1799,
+      "baseline_controller": "英军占有原荷兰加勒要塞",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "change_effective_year": 1802,
+      "historic_end_year": null,
+      "sources": ["19C-AMIENS", "19C-CEYLON-GALLE-LETTER", "19C-CEYLON-GALLE"]
+    },
+    {
+      "stable_id": "ceylon-kandy-court",
+      "prior_ids": ["B37-I-Z060", "E18C-CEY-1796-KANDY-PEACE-INDEPENDENT"],
+      "baseline_year": 1799,
+      "baseline_controller": "独立康提王国",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "episodes": [
+        {"from": 1799, "through": 1814, "controller": "康提王廷", "historic_end_year": 1815, "sources": ["19C-KANDY-CONVENTION", "19C-KANDY-SIVA"]},
+        {"from": 1815, "through": 1819, "controller": "英国王室殖民政府", "historic_end_year": null, "sources": ["19C-KANDY-CONVENTION-TEXT", "19C-KANDY-1818-LAW"]}
+      ],
+      "note": "1803年短期入城由同年事件记录。英国未维持到该年年末，康提王廷年末状态连续。1817—1818年反抗作为行动节点。"
+    },
+    {
+      "stable_id": "ceylon-jaffna",
+      "prior_ids": ["CEYLON_JAFFNA"],
+      "baseline_year": 1799,
+      "baseline_controller": "英国占据原荷兰沿海地点",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "change_effective_year": 1802,
+      "historic_end_year": null,
+      "sources": ["19C-AMIENS", "19C-CEYLON-COAST"],
+      "note": "史实纳入锡兰沿海政权承接；贾夫纳堡准确点位及独立驻防材料留待下一次锡兰制图复核。"
+    },
+    {
+      "stable_id": "cape-grahamstown-garrison",
+      "prior_ids": [],
+      "baseline_year": null,
+      "established_year": 1812,
+      "historic_end_year": null,
+      "sources": ["19C-CAPE-GRAHAM", "19C-CAPE-WARS"]
+    },
+    {
+      "stable_id": "cape-keiskamma-lower-neutral-belt",
+      "prior_ids": [],
+      "baseline_year": null,
+      "established_year": 1819,
+      "historic_end_year": null,
+      "sources": ["19C-CAPE-WARS", "19C-CAPE-THOMPSON"],
+      "note": "本批画下游的1819年禁居安排。北部、蒂尤梅河谷例外及1820年代的空间变更另核。"
+    }
+  ]
+}
