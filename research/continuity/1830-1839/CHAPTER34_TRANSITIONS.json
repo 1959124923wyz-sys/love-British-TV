@@ -924,6 +924,72 @@
         "E19-IN-1833-FRONTIER-REORGANIZATION"
       ],
       "finding": "1832年布米杰起义期间，公司部队曾退往班库拉。殖民当局随后改组了地方行政。"
+    },
+    {
+      "stable_id": "coorg-madikeri-fort-government",
+      "baseline_1829": false,
+      "transition": "new_site_with_controller_change",
+      "first_display_year": 1830,
+      "last_display_year": 1839,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C34-COORG-RICE",
+        "19C34-COORG-FORT",
+        "19C34-COORG-FORT-GEO",
+        "19C34-COORG-COURTS"
+      ],
+      "evidence_anchors": [
+        "E19-COORG-1834-BANGALORE-PROCLAMATION",
+        "E19-COORG-1834-KAVERI-CROSSING",
+        "E19-COORG-1834-BUCK-STOCKADE",
+        "E19-COORG-1834-MERCARA-OCCUPATION",
+        "E19-COORG-1834-JUSTICE-PROCLAMATION",
+        "E19-COORG-1834-ANNEXATION",
+        "E19-COORG-1837-REBELLION"
+      ],
+      "finding": "东印度公司于1834年进驻马迪凯里堡，随后从库格首府实施新行政。"
+    },
+    {
+      "stable_id": "mauritius-port-louis-government",
+      "baseline_1829": false,
+      "transition": "new_site_with_administrative_change",
+      "first_display_year": 1830,
+      "last_display_year": 1839,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C34-LAB-MAU-ARCH",
+        "19C34-LAB-MAU-APP",
+        "19C34-LAB-MAU-ARR",
+        "19C34-LAB-MAU-UN",
+        "19C34-LAB-MAU-G"
+      ],
+      "evidence_anchors": [
+        "E19-MAU-1834-ATLAS-ARRIVAL",
+        "E19-MAU-1835-SLAVERY-ABOLITION",
+        "E19-MAU-1835-SLAVEOWNER-CLAIMS",
+        "E19-MAU-1836-1839-AMENDED-AWARDS",
+        "E19-MAU-1839-APPRENTICESHIP-END"
+      ],
+      "finding": "路易港是英国殖民当局及对外贸易的驻地。废奴生效后，当局处理学徒制、赔偿与契约劳工事务。"
+    },
+    {
+      "stable_id": "diego-garcia-east-point-plantations",
+      "baseline_1829": false,
+      "transition": "new_site_with_labour_regime_change",
+      "first_display_year": 1830,
+      "last_display_year": 1839,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C34-LAB-CHA-ICJ",
+        "19C34-LAB-CHA-EDIS",
+        "19C34-LAB-CHA-G",
+        "19C34-LAB-MAU-APP"
+      ],
+      "evidence_anchors": [
+        "E19-CHAGOS-1835-APPRENTICESHIP",
+        "E19-MAU-1835-SLAVERY-ABOLITION"
+      ],
+      "finding": "迪戈加西亚等岛生产椰干并供应毛里求斯。1835年后，殖民当局把废奴过渡期的学徒安排施行于附属岛屿。"
     }
   ],
   "open_items": [
@@ -1158,6 +1224,69 @@
         "19C34-IN-TITU-BAR",
         "19C34-IN-TITU-NAR",
         "19C34-IN-TITU-ENC"
+      ],
+      "research_v6_stage_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "stable_id": "coorg-1834-military-site-research",
+      "status": "geography_pending",
+      "finding": "巴克寨实际位置及各路行军地名尚待与历史图配准。赫巴莱标注同名村，不作渡口精确位置。",
+      "source_ids": [
+        "19C34-COORG-RICE",
+        "19C34-COORG-HEB",
+        "19C34-COORG-FORT"
+      ],
+      "research_v6_stage_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "stable_id": "rathcormac-gortroe-field",
+      "status": "geography_pending",
+      "finding": "遇袭点用戈特罗教区巴利纳基拉地名定位，验尸调查用拉斯科马克城镇点。瑞安家地块仍待查。",
+      "source_ids": [
+        "19C34-TITHE-GORT-NLI",
+        "19C34-TITHE-GORT-CORK",
+        "19C34-TITHE-GORT-I",
+        "19C34-TITHE-GORT-BALLY"
+      ],
+      "research_v6_stage_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "stable_id": "mauritius-indentured-depot-1849",
+      "status": "carry_to_1840s",
+      "finding": "现存阿普拉瓦西·加特入境站1849年建成。1842年复招和迁移管理移交下一章。",
+      "source_ids": [
+        "19C34-LAB-MAU-ARR",
+        "19C34-LAB-MAU-UN",
+        "19C34-LAB-MAU-PAUSE"
+      ],
+      "research_v6_stage_ids": [
+        "C-stage-0349"
+      ],
+      "research_original_node_ids": []
+    },
+    {
+      "stable_id": "chagos-island-contract-dates",
+      "status": "source_pending",
+      "finding": "需逐岛核实学徒期终点及转入契约劳动的原档。迪戈加西亚学徒制不直接套用毛里求斯本岛的最后终止日。",
+      "source_ids": [
+        "19C34-LAB-CHA-EDIS",
+        "19C34-LAB-MAU-APP",
+        "19C34-LAB-CHA-ICJ"
+      ],
+      "research_v6_stage_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "stable_id": "guiana-indentured-resumption",
+      "status": "carry_to_1840s",
+      "finding": "1840年代重新招工与相关条例交下一章。首批船的具体停泊点和人数须以船档校验。",
+      "source_ids": [
+        "19C34-LAB-GUY-ARCH",
+        "19C34-LAB-GUY-RES",
+        "19C34-LAB-GUY-TRUST"
       ],
       "research_v6_stage_ids": [],
       "research_original_node_ids": []
