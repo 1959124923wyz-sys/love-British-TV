@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1820–1829 Chapter 33 review",
+    "coverage": "1820–1829 Chapter 33 review, first and second editorial batches",
     "historical_area_statistics": false
   },
   "features": [
@@ -917,6 +917,374 @@
             "controller": "british",
             "title": "丹老 · 条约割让地",
             "summary_zh": "《杨达波条约》第四条列明丹老及其属地的割让。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demerara-georgetown-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.1667,
+          6.8
+        ]
+      },
+      "properties": {
+        "name": "乔治敦 · 德梅拉拉与埃塞奎博殖民政府",
+        "start_year": 1820,
+        "end_year": 1829,
+        "display_kind": "control",
+        "summary_zh": "1814年荷兰将德梅拉拉与埃塞奎博割让给英国。乔治敦是联合殖民地的行政中心，1823年殖民当局在此举行军事审判。",
+        "source_ids": [
+          "19C33-DEM-1814",
+          "19C33-DEM-COL",
+          "19C33-DEM-TRIAL",
+          "19C33-DEM-GEORGE"
+        ],
+        "named_anchors": [
+          "乔治敦"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-DEM-1823-COURTS-EXECUTIONS",
+          "E19-DEM-1823-SMITH-TRIAL",
+          "E19-DEM-1824-SMITH-PRISON"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "demerara-georgetown-government",
+        "source_urls": [
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/171/171-20220308-WRI-01-00-EN.pdf",
+          "https://parliament.gov.gy/GUYANA%20PARLIAMENT%20HISTORY%202009-1.pdf",
+          "https://www.cloudshare.regeneratedidentities.org/LA/Irish%20Publishing%20Press/Slave%20Trade%2066/Demerara.%20Minutes%20of%20Evidence%20on%20the%20Trial%20of%20John%20Smith%20a%20Missionary..pdf",
+          "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=famagusta&nation=&place=&subjectid=7005275"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1822,
+            "controller": "british",
+            "title": "乔治敦 · 德梅拉拉与埃塞奎博殖民政府",
+            "summary_zh": "英国继续从乔治敦治理德梅拉拉与埃塞奎博。"
+          },
+          {
+            "start_year": 1823,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "乔治敦 · 德梅拉拉与埃塞奎博殖民政府",
+            "summary_zh": "英国继续在乔治敦治理德梅拉拉与埃塞奎博。1823年起义后，殖民当局在此举行军事审判。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tasmania-hobart-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.3272,
+          -42.8821
+        ]
+      },
+      "properties": {
+        "name": "霍巴特 · 英国殖民政府",
+        "start_year": 1820,
+        "end_year": 1829,
+        "display_kind": "control",
+        "summary_zh": "英国1804年在沙利文湾设立霍巴特殖民据点，1825年范迪门地成为单独殖民地。",
+        "source_ids": [
+          "19C33-TAS-ABS",
+          "19C33-TAS-HOB",
+          "19C33-TAS-HOB-GEO",
+          "19C33-TAS-LAW-TEXT"
+        ],
+        "named_anchors": [
+          "霍巴特"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-TAS-1825-SEPARATION",
+          "E19-TAS-1828-APRIL-PROCLAMATION",
+          "E19-TAS-1828-MARTIAL-LAW",
+          "E19-TAS-1829-GOLDIE-REPORT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "tasmania-hobart-government",
+        "source_urls": [
+          "https://www.abs.gov.au/ausstats/abs%40.nsf/0/0D3893BEE905CA98CA256C3200241894",
+          "https://www.hobartcity.com.au/files/assets/public/v/1/development/planning-schemes/tasmanian-planning-scheme/hobart-draft-local-provisions-schedule/applied-adopted-or-incorporated-document-%E2%80%93-sullivans-cove-archaeological-zoning-plan-2003.pdf",
+          "https://ungegn.un.org/dashboard/cities/details?id=534",
+          "https://en.wikisource.org/wiki/The_Last_of_the_Tasmanians/Chapter_4"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1824,
+            "controller": "british",
+            "title": "霍巴特 · 范迪门地殖民驻地",
+            "summary_zh": "霍巴特殖民驻地继续运作，范迪门地仍隶属新南威尔士。"
+          },
+          {
+            "start_year": 1825,
+            "end_year": 1827,
+            "controller": "british",
+            "title": "霍巴特 · 范迪门地殖民政府",
+            "summary_zh": "范迪门地已单独设立殖民政府，霍巴特仍是殖民行政中心。"
+          },
+          {
+            "start_year": 1828,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "霍巴特 · 范迪门地殖民政府",
+            "summary_zh": "范迪门地设立单独殖民政府。亚瑟在此发布限制原住民通行和实行戒严的公告。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gold-coast-cape-coast-castle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.241041,
+          5.103524
+        ]
+      },
+      "properties": {
+        "name": "海岸角堡 · 黄金海岸英方据点",
+        "start_year": 1820,
+        "end_year": 1829,
+        "display_kind": "control",
+        "summary_zh": "海岸角堡由英国非洲商人公司移交王室，1828年其管理又委托给商人委员会。",
+        "source_ids": [
+          "19C33-ASH-ACT",
+          "19C33-ASH-CROOKS",
+          "19C33-ASH-FORT",
+          "19C33-ASH-1828",
+          "19C33-ASH-1824-FORTS"
+        ],
+        "named_anchors": [
+          "海岸角堡"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-ASH-1821-CROWN-FORTS",
+          "E19-ASH-1824-NSAMANKOW",
+          "E19-ASH-1828-MERCHANTS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "gold-coast-cape-coast-castle",
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Geo4/1-2/28/pdfs/ukpga_18210028_en.pdf",
+          "https://api.pageplace.de/preview/DT0400.9781136960703_A23876854/preview-9781136960703_A23876854.pdf",
+          "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-106085",
+          "https://catalogues.royalsociety.org/calmview/Record.aspx?id=MS%2F257%2F4%2F5&src=CalmView.Catalog"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1820,
+            "controller": "british",
+            "title": "海岸角堡 · 非洲商人公司",
+            "summary_zh": "非洲商人公司经营海岸角堡，英国议会为堡垒管理提供经费。"
+          },
+          {
+            "start_year": 1821,
+            "end_year": 1827,
+            "controller": "british",
+            "title": "海岸角堡 · 英国王室管理",
+            "summary_zh": "1821年英国撤销非洲商人公司，王室接管海岸角堡等据点。"
+          },
+          {
+            "start_year": 1828,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "海岸角堡 · 商人委员会管理",
+            "summary_zh": "英国政府委托伦敦商人委员会管理堡垒。当地商人参加治安管理。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kittur-fort-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.79097,
+          15.60037
+        ]
+      },
+      "properties": {
+        "name": "基图尔堡 · 基图尔王室",
+        "start_year": 1820,
+        "end_year": 1829,
+        "display_kind": "control",
+        "summary_zh": "基图尔王室在本地治理。1824年，东印度公司因继承问题干预，随后攻占城堡。",
+        "source_ids": [
+          "19C33-KIT-NBT",
+          "19C33-KIT-PRAD",
+          "19C33-KIT-HER",
+          "19C33-KIT-FORT"
+        ],
+        "named_anchors": [
+          "基图尔堡"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-KIT-1824-TREASURY",
+          "E19-KIT-1824-OCTOBER-BATTLE",
+          "E19-KIT-1824-DECEMBER-SIEGE",
+          "E19-KIT-1824-INVENTORY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "kittur-fort-government",
+        "source_urls": [
+          "https://www.nbtindia.gov.in/writereaddata/freebooks/pdf/Rani%20Chinnamma.pdf",
+          "https://indianexpress.com/article/explained/explained-history/rani-chennamma-kittur-10324770/lite/",
+          "https://www.indiacode.nic.in/bitstream/123456789/7820/1/10of2012%28e%29.pdf",
+          "https://mapcarta.com/W97204879"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1823,
+            "controller": "kittur",
+            "title": "基图尔堡 · 基图尔王室",
+            "summary_zh": "基图尔王室从城堡管理当地事务。"
+          },
+          {
+            "start_year": 1824,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "基图尔堡 · 东印度公司接管",
+            "summary_zh": "1824年12月公司军占领城堡，查普林下令接管基图尔的行政。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tasmania-circular-head-company-post",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.2945,
+          -40.7606
+        ]
+      },
+      "properties": {
+        "name": "瑟克勒角 · 范迪门地公司驻地",
+        "start_year": 1826,
+        "end_year": 1829,
+        "display_kind": "control",
+        "summary_zh": "范迪门地公司于1826年在瑟克勒角建立驻地，动用囚工建设，并由此发展西北部的牧业。",
+        "source_ids": [
+          "19C33-TAS-CIRCULAR",
+          "19C33-TAS-HELLYER",
+          "19C33-TAS-UTAS",
+          "19C33-TAS-CIRCULAR-GEO"
+        ],
+        "named_anchors": [
+          "瑟克勒角"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-TAS-1826-COMPANY",
+          "E19-TAS-1828-HELLYER-SURVEY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "tasmania-circular-head-company-post",
+        "source_urls": [
+          "https://parks.tas.gov.au/explore-our-parks/highfield-historic-site",
+          "https://www.sl.nsw.gov.au/collection-items/map-interior-discoveries-made-van-diemens-land-company-1828",
+          "https://www.utas.edu.au/library/companion_to_tasmanian_history/F/Frontier%20Conflict.htm",
+          "https://mapcarta.com/Stanley_%28Tasmania%29"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1826,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "瑟克勒角 · 范迪门地公司驻地",
+            "summary_zh": "范迪门地公司自1826年在此建立驻地，组织工程和牧业。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asante-kumasi-court",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.62443,
+          6.68848
+        ]
+      },
+      "properties": {
+        "name": "库马西 · 阿散蒂王廷",
+        "start_year": 1820,
+        "end_year": 1829,
+        "display_kind": "political",
+        "summary_zh": "阿散蒂王廷继续在库马西治理。与英国及沿海盟军交战后，王廷仍处理地方关系并参与议和。",
+        "source_ids": [
+          "19C33-ASH-NAM",
+          "19C33-ASH-HIST",
+          "19C33-ASH-KUMASI",
+          "19C33-ASH-KUM-GEO"
+        ],
+        "named_anchors": [
+          "库马西"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-ASH-1824-NSAMANKOW",
+          "E19-ASH-1826-KATAMANSO"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "asante-kumasi-court",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/trophy-worth-losing-your-head",
+          "https://provenanceafrica.com/history/articles/anglo-asante-wars/",
+          "https://www.cambridge.org/core/journals/history-in-africa/article/urban-history-in-kumase-ghana-a-note-on-archives/3E5DFF6BAB5ADAB7BF1150479C0ABF48",
+          "https://www.geonames.org/2298890/kumasi.html"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1829,
+            "controller": "asante",
+            "title": "库马西 · 阿散蒂王廷",
+            "summary_zh": "库马西仍为阿散蒂王廷所在地，王廷在1820年代继续治理。"
           }
         ]
       }
