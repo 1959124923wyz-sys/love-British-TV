@@ -413,8 +413,19 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    await openArticle(story);
    if(story==='E19-IR-FAMINE-RELIEF'){
     assert.equal(await page.locator('.story-body .story-section').count(),7);
-    assert.equal(await page.locator('.story-body [data-story-event]').count(),34);
-    assert.match(await page.locator('.story-body .story-section').first().textContent(),/工人为什么进城/);
+    assert.equal(await page.locator('.story-body [data-story-event]').count(),19);
+    const chronology = page.locator('.story-chronology');
+    assert.equal(await chronology.locator('[data-story-index-event]').count(),34);
+    assert.match(await page.locator('.story-body .story-section').first().textContent(),/伦敦掌握立法权/);
+    if(entry==='E19-IR-1846-LABOUR-RATE-ACT'){
+     await chronology.locator('summary').click();
+     const archiveEntry = chronology.locator('[data-story-index-event="E19-IR-1846-BALLINLASS-COMMONS"]');
+     await archiveEntry.dblclick();
+     await page.locator('[data-story-back]').waitFor();
+     assert.equal(await selected(),'E19-IR-1846-BALLINLASS-COMMONS');
+     await page.locator('[data-story-back]').click();
+     await page.locator('.major-story-article').waitFor();
+    }
    }
    await link(target).click();
    await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
