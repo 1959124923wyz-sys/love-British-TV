@@ -306,6 +306,10 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal((await audit()).focused,'nineteenthAreas:assam-buri-guma-duar-occupation');
   await page.locator('#resetDossier').click();
   await jump(1834);
+  await page.evaluate(()=>{
+   const map=window.__historicOverlapHost.map;
+   map.stop().invalidateSize({pan:false}).setView([26.74,92.075],9,{animate:false});
+  });
   await clickAt(26.70,92.086);
   const restoredDuar=page.locator('[data-historic-overlap-id="nineteenthAreas:assam-buri-guma-duar-restoration"]');
   await restoredDuar.waitFor();
