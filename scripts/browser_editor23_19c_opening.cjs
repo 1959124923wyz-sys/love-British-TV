@@ -279,7 +279,10 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1831,'E19-IRL-1831-NEWTOWNBARRY-TITHE','E19-IRISH-TITHE-WAR','E19-IRL-1834-GORTROE-TITHE',1834],
    [1834,'E19-CAPE-1834-SLAVERY-ABOLITION','E19-CAPE-EMANCIPATION-COMPENSATION','E19-CAPE-1838-APPRENTICESHIP-END',1838],
    [1834,'E19-MAU-1834-ATLAS-ARRIVAL','E19-MAURITIUS-CHAGOS-LABOUR','E19-CHAGOS-1835-APPRENTICESHIP',1835],
-   [1837,'E19-GUI-1837-GLADSTONE-INDENTURE','E19-GUIANA-INDIAN-INDENTURE','E19-GUI-1838-VREED-EN-HOOP-LABOUR',1838]
+   [1837,'E19-GUI-1837-GLADSTONE-INDENTURE','E19-GUIANA-INDIAN-INDENTURE','E19-GUI-1838-VREED-EN-HOOP-LABOUR',1838],
+   [1830,'E19-EXU-1830-SALT-BOAT','E19-EXUMA-POMPEY-RESISTANCE','E19-EXU-1838-FULL-EMANCIPATION',1838],
+   [1834,'E19-TOL-1834-DORCHESTER-TRIAL','E19-TOLPUDDLE-TRANSPORTATION','E19-TOL-1838-FOUR-RETURN',1838],
+   [1839,'E19-NEW-1839-WESTGATE-SHOOTING','E19-NEWPORT-CHARTIST-RISING','E19-NEW-1839-MONMOUTH-TRIAL-OPENS',1839]
   ];
   for(const [year,entry,story,target,targetYear] of chapter34Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -351,6 +354,12 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(12.4208474,75.7389661),'#c5a6f5');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1834-HEBBALE-MADIKERI')));
   assert.equal(await pointStroke(-20.16194,57.49889),'#c5a6f5');
+  await jump(1830);
+  assert.equal(await pointStroke(25.07564,-77.34458),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1830-STEVENSTONE-ROLLEVILLE')));
+  await jump(1831);
+  assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1830-STEVENSTONE-ROLLEVILLE'))));
+
 
   for(let y=1830;y<=1839;y++){
    await jump(y);
@@ -359,6 +368,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 20 review years, twenty-nine stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 20 review years, thirty-two stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
