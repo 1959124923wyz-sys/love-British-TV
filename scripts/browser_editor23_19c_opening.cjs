@@ -184,11 +184,49 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.match(await west.textContent(),/奥尔巴尼/);
   await jump(1822);
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1822-COLOMBO-KANDY')));
+  const newTopics=[
+   [1823,'E19-DEM-1823-BACHELORS-ADVENTURE','E19-DEMERARA-REVOLT','E19-DEM-1824-SMITH-PRISON',1824],
+   [1828,'E19-TAS-1828-CAPE-GRIM-FEB','E19-TASMANIA-BLACK-WAR','E19-TAS-1827-QUAMBY-BROOK',1827],
+   [1824,'E19-KIT-1824-DECEMBER-SIEGE','E19-KITTUR-CHENNAMMA','E19-KIT-1829-CHENNAMMA',1829],
+   [1826,'E19-ASH-1826-KATAMANSO','E19-ASANTE-GOLD-COAST','E19-ASH-1824-NSAMANKOW',1824]
+  ];
+  for(const [year,entry,story,target,targetYear] of newTopics){
+   await page.locator('#resetDossier').click();
+   await jump(year);
+   await openEvent(entry);
+   await openArticle(story);
+   await link(target).click();
+   await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
+   await link(target).dblclick();
+   await page.locator('[data-story-back]').waitFor();
+   assert.equal(await selected(),target);
+   await assertClean();
+   await page.locator('[data-story-back]').click();
+   await page.locator('.major-story-article').waitFor();
+   await page.locator('[data-story-return]').first().click();
+   assert.equal(await selected(),entry);
+  }
+  await page.locator('#resetDossier').click();
+  const pointStroke=async (lat,lng)=>{
+   await page.evaluate(([lat,lng])=>window.__historicOverlapHost.map.setView([lat,lng],10,{animate:false}),[lat,lng]);
+   return page.evaluate(([lat,lng])=>{
+    const m=window.__historicOverlapHost.map;
+    const bounds=m.getContainer().getBoundingClientRect();
+    const point=m.latLngToContainerPoint([lat,lng]);
+    return document.elementFromPoint(point.x+bounds.left+21,point.y+bounds.top)?.getAttribute('stroke');
+   },[lat,lng]);
+  };
+  await jump(1823);
+  assert.equal(await pointStroke(15.60037,74.79097),'#65c7b6');
+  await jump(1824);
+  assert.equal(await pointStroke(15.60037,74.79097),'#c5a6f5');
   for(let y=1820;y<=1829;y++){
    await jump(y);
    await assertClean();
+   const density=await page.evaluate(()=>window.atlasDensityAudit());
+   assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 10 chapter 33 review years, story pan and return, Cape area clicks and hover, Rangoon handover, layer independence, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 10 review years, five chapter 33 stories, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
