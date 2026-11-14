@@ -1194,13 +1194,14 @@ function renderNineteenthSpatial(){
   }
   const [lon,lat]=feature.geometry.coordinates;
   L.circleMarker([lat,lon],{
-   pane:'controlAreaPane',renderer:wartimeRenderer,radius:21,weight:2.4,fill:false,
+   pane:'controlAreaPane',renderer:wartimeRenderer,radius:p.opens_area_id?29:21,weight:2.4,fill:false,
    dashArray:'5 3',color:stage?.controller==='british'?'#c5a6f5':'#65c7b6',
    bubblingMouseEvents:false,className:'atlas-19c-site'
   }).bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
    pane:'eventTooltipPane',className:'atlas-hover',direction:'auto',offset:[12,0]
   }).on('click',e=>{
    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   if(p.opens_area_id&&window.historicOverlapDossier?.openAt?.(L.latLng(lat,lon),'site-marker',p.opens_area_id))return;
    openTerritoryDossier(site);
   }).addTo(group);
  }

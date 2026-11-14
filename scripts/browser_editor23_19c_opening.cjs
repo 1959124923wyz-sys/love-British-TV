@@ -310,6 +310,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal((await audit()).focused,'nineteenthAreas:assam-buri-guma-duar-occupation');
   await page.locator('#resetDossier').click();
   await jump(1834);
+  await page.locator('#workspace').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished.catch(()=>{}))));
   await page.evaluate(()=>{
    const map=window.__historicOverlapHost.map;
    map.stop().invalidateSize({pan:false}).setView([26.74,92.075],9,{animate:false});
@@ -385,7 +386,12 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1840,'E19-CEY-1840-CROWN-LANDS','E19-CEYLON-LAND-MATALE','E19-CEY-1848-MATALE-SUPPRESSION',1848],
    [1842,'E19-SIN-1842-NEW-TERMS','E19-SINDH-ANNEXATION','E19-SIN-1843-MIANI',1843],
    [1845,'E19-SIK-1845-MUDKI','E19-FIRST-SIKH-WAR-TREATIES','E19-SIK-1846-AMRITSAR-TREATY',1846],
-   [1848,'E19-SIK-1848-MULTAN-RISING','E19-SECOND-SIKH-WAR-ANNEXATION','E19-SIK-1849-KOH-I-NOOR',1849]
+   [1848,'E19-SIK-1848-MULTAN-RISING','E19-SECOND-SIKH-WAR-ANNEXATION','E19-SIK-1849-KOH-I-NOOR',1849],
+   [1840,'E19-NZ-1840-WAITANGI','E19-NZ-WAIRAU','E19-NZ-1843-WAIRAU-CLASH',1843],
+   [1845,'E19-NZ-1845-KORORAREKA','E19-NZ-NORTHERN-WAR','E19-NZ-1846-RUA-ENTRY',1846],
+   [1846,'E19-NZ-1846-BOULCOTT','E19-NZ-HUTT','E19-NZ-1848-RAUPARAHA-RETURN',1848],
+   [1846,'E19-NZ-1846-WHANGANUI-GARRISON','E19-NZ-WHANGANUI','E19-NZ-1847-RUTLAND-EXECUTIONS',1847],
+   [1848,'E19-NZ-1848-KEMP-DEED','E19-NZ-KEMP','E19-NZ-1849-TIRAMOREHU-LETTER',1849]
   ];
   for(const [year,entry,story,target,targetYear] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -462,6 +468,33 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.notEqual(await pointStroke(7.4698,80.6217),'#c5a6f5');
   assert.notEqual(await pointStroke(-31.99526,115.53989),'#c5a6f5');
   assert.equal(await pointStroke(45.622603,-122.662425),'#65c7b6');
+  await jump(1840);
+  assert.equal(await pointStroke(-35.302508,174.120082),'#c5a6f5');
+  await jump(1841);
+  assert.notEqual(await pointStroke(-35.302508,174.120082),'#c5a6f5');
+  assert.equal(await pointStroke(-36.84988,174.77042),'#c5a6f5');
+  await jump(1846);
+  assert.equal(await pointStroke(-41.099357,174.865747),'#c5a6f5');
+  assert.equal(await pointStroke(-39.930902,175.052305),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-MATAI-TAUA-HOROKIRI')));
+  const ruaPosition=[-35.45641,174.14354];
+  await page.locator('#workspace').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished.catch(()=>{}))));
+  await page.evaluate(position=>window.__historicOverlapHost.map.stop().invalidateSize({pan:false}).setView(position,10,{animate:false}),ruaPosition);
+  const ruaMarker=await page.evaluate(([lat,lon])=>{
+   const map=window.__historicOverlapHost.map,b=map.getContainer().getBoundingClientRect();
+   const p=map.latLngToContainerPoint([lat,lon]);
+   return [p.x+b.left+29,p.y+b.top];
+  },ruaPosition);
+  await page.mouse.click(...ruaMarker);
+  const ruaArea=page.locator('[data-historic-overlap-id="nineteenthAreas:nz-ruapekapeka-pa"]');
+  await ruaArea.waitFor();
+  await ruaArea.hover();
+  assert.equal((await audit()).focused,'nineteenthAreas:nz-ruapekapeka-pa');
+  await ruaArea.locator('[data-area-event="E19-NZ-1846-RUA-ENTRY"]').click();
+  assert.equal(await selected(),'E19-NZ-1846-RUA-ENTRY');
+  await page.locator('#resetDossier').click();
+  await jump(1847);
+  assert.equal(await page.evaluate(([lat,lng])=>window.historicOverlapDossier.hitCountAt(lat,lng),ruaPosition),0);
   for(let y=1840;y<=1849;y++){
    await jump(y);
    await assertClean();
@@ -469,6 +502,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 44 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 49 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
