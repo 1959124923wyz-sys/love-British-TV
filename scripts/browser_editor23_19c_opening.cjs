@@ -188,7 +188,12 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1823,'E19-DEM-1823-BACHELORS-ADVENTURE','E19-DEMERARA-REVOLT','E19-DEM-1824-SMITH-PRISON',1824],
    [1828,'E19-TAS-1828-CAPE-GRIM-FEB','E19-TASMANIA-BLACK-WAR','E19-TAS-1827-QUAMBY-BROOK',1827],
    [1824,'E19-KIT-1824-DECEMBER-SIEGE','E19-KITTUR-CHENNAMMA','E19-KIT-1829-CHENNAMMA',1829],
-   [1826,'E19-ASH-1826-KATAMANSO','E19-ASANTE-GOLD-COAST','E19-ASH-1824-NSAMANKOW',1824]
+   [1826,'E19-ASH-1826-KATAMANSO','E19-ASANTE-GOLD-COAST','E19-ASH-1824-NSAMANKOW',1824],
+   [1824,'E19-HBC-1824-VANCOUVER-BLUFF','E19-HUDSON-BAY-PACIFIC','E19-HBC-1829-VANCOUVER-LOWER',1829],
+   [1823,'E19-BEO-1823-BADGER-BAY','E19-BEOTHUK-SHANAWDITHIT','E19-BEO-1829-DRAWINGS',1829],
+   [1829,'E19-KHA-1829-NONGKHLAW','E19-KHASI-TIROT-SING','E19-KHA-1826-PASSAGE',1826],
+   [1824,'E19-BAT-1824-MARTIAL-LAW','E19-BATHURST-WIRADJURI','E19-BAT-1824-PARRAMATTA-MEETING',1824],
+   [1820,'E19-GUL-1820-RAK-GENERAL-TREATY','E19-GULF-MARITIME-TREATY','E19-GUL-1823-BASAIDU',1823]
   ];
   for(const [year,entry,story,target,targetYear] of newTopics){
    await page.locator('#resetDossier').click();
@@ -220,6 +225,17 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(15.60037,74.79097),'#65c7b6');
   await jump(1824);
   assert.equal(await pointStroke(15.60037,74.79097),'#c5a6f5');
+  assert.equal(await pointStroke(45.625,-122.644),'#65c7b6');
+  await jump(1829);
+  assert.notEqual(await pointStroke(45.625,-122.644),'#65c7b6');
+  assert.equal(await pointStroke(45.622603,-122.662425),'#65c7b6');
+  await jump(1820);
+  assert.equal(await pointStroke(26.9492,56.2691),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1820-RAK-QESHM')));
+  await jump(1822);
+  assert.notEqual(await pointStroke(26.9492,56.2691),'#c5a6f5');
+  await jump(1823);
+  assert.equal(await pointStroke(26.64804,55.28701),'#c5a6f5');
   for(let y=1820;y<=1829;y++){
    await jump(y);
    await assertClean();
@@ -227,6 +243,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 10 review years, five chapter 33 stories, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 10 review years, ten chapter 33 stories, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
