@@ -397,16 +397,25 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1840,'E19-AU-1840-WANDO-FIGHTING-HILLS','E19-AU-WANDO-KONONGWOOTONG','E19-AU-1840-FIGHTING-WATERHOLES',1840],
    [1843,'E19-AU-1843-WARRIGAL-CREEK','E19-AU-GIPPSLAND-WARRIGAL','E19-AU-1844-GIPPSLAND-ROBINSON-JUNE',1844,false],
    [1846,'E19-IR-1846-LABOUR-RATE-ACT','E19-IR-FAMINE-RELIEF','E19-IR-1847-QUARTER-ACRE-RULE',1847,false],
-   [1847,'E19-IR-1847-SKIBBEREEN-ADMISSIONS-STOP','E19-IR-SKIBBEREEN','E19-IR-1848-SKIBBEREEN-MINORS-RETURN',1848],
-   [1846,'E19-IR-1846-BALLINLASS-EVICTION','E19-IR-FAMINE-EVICTIONS','E19-IR-1849-CONCANNON-EVICTION',1849,false],
-   [1849,'E19-IR-1849-LOUISBURGH-INSPECTION-MOVED','E19-IR-DOOLOUGH','E19-IR-1849-DELPHI-INSPECTION',1849]
+   [1847,'E19-IR-1847-SKIBBEREEN-ADMISSIONS-STOP','E19-IR-FAMINE-RELIEF','E19-IR-1848-SKIBBEREEN-MINORS-RETURN',1848],
+   [1846,'E19-IR-1846-BALLINLASS-EVICTION','E19-IR-FAMINE-RELIEF','E19-IR-1849-CONCANNON-EVICTION',1849,false],
+   [1849,'E19-IR-1849-LOUISBURGH-INSPECTION-MOVED','E19-IR-FAMINE-RELIEF','E19-IR-1849-DELPHI-INSPECTION',1849]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
     await page.locator('#resetDossier').click();
    await jump(year);
    await openEvent(entry);
+   if(story==='E19-IR-FAMINE-RELIEF'){
+    assert.equal(await page.locator('[data-story-open]').count(),1);
+    assert.match(await page.locator('[data-story-open]').textContent(),/爱尔兰大饥荒/);
+   }
    await openArticle(story);
+   if(story==='E19-IR-FAMINE-RELIEF'){
+    assert.equal(await page.locator('.story-body .story-section').count(),7);
+    assert.equal(await page.locator('.story-body [data-story-event]').count(),34);
+    assert.match(await page.locator('.story-body .story-section').first().textContent(),/工人为什么进城/);
+   }
    await link(target).click();
    await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
    if(located)await page.waitForFunction(id=>window.atlasStoryBridge.activeFocusId()===id,target);
@@ -527,6 +536,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 57 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 54 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

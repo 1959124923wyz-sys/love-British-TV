@@ -47,7 +47,7 @@
    '<span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>').join('');
   return '<section class="major-story-entry" aria-label="相关重大历史专题">'+
    '<span class="major-story-eyebrow">相关重大历史专题</span>'+choices+
-   (metas.length===1?'<small>'+esc(metas[0].period)+' · 了解战争的前因、经过及后果</small>':'')+'</section>';
+   (metas.length===1?'<small>'+esc(metas[0].period)+'</small>':'')+'</section>';
  }
  function onEventOpened(item,typ){
   // Cancel in-flight article fetches when a different dossier opens.
