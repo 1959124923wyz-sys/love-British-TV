@@ -219,7 +219,8 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
     const m=window.__historicOverlapHost.map;
     const bounds=m.getContainer().getBoundingClientRect();
     const point=m.latLngToContainerPoint([lat,lng]);
-    return document.elementFromPoint(point.x+bounds.left+21,point.y+bounds.top)?.getAttribute('stroke');
+    return document.elementsFromPoint(point.x+bounds.left+21,point.y+bounds.top)
+     .find(el=>el.classList.contains('atlas-19c-site'))?.getAttribute('stroke');
    },[lat,lng]);
   };
   await jump(1823);
