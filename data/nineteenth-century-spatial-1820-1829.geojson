@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1820–1829 Chapter 33 review, first and second editorial batches",
+    "coverage": "1820–1829 Chapter 33 review, first through third editorial batches",
     "historical_area_statistics": false
   },
   "features": [
@@ -1285,6 +1285,401 @@
             "controller": "asante",
             "title": "库马西 · 阿散蒂王廷",
             "summary_zh": "库马西仍为阿散蒂王廷所在地，王廷在1820年代继续治理。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hbc-york-factory",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.3,
+          57
+        ]
+      },
+      "properties": {
+        "name": "约克贸易站 · 哈德孙湾公司",
+        "start_year": 1820,
+        "end_year": 1829,
+        "display_kind": "economic_network",
+        "summary_zh": "公司合营后，约克贸易站继续承担北部贸易网络的仓储和转运。",
+        "source_ids": [
+          "19C33-HBC-YORK",
+          "19C33-HBC-YORK-GEO",
+          "19C33-HBC-UNION",
+          "19C33-HBC-LIC"
+        ],
+        "named_anchors": [
+          "约克贸易站"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-HBC-1821-UNION",
+          "E19-HBC-1821-LICENCE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "hbc-york-factory",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history",
+          "https://geonames.nrcan.gc.ca/search-place-names/unique?id=GBPLG",
+          "https://www.clic-icdc.ca/_files/ugd/855ab7_37e93e647b634736a69caa208d6ed9f3.pdf",
+          "https://data2.collectionscanada.gc.ca/080027/amicus-5372826_04.pdf"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1820,
+            "controller": "hbc",
+            "title": "约克贸易站 · 哈德孙湾公司",
+            "summary_zh": "约克贸易站继续接收来自英国的货物，并联系内陆各站。"
+          },
+          {
+            "start_year": 1821,
+            "end_year": 1829,
+            "controller": "hbc",
+            "title": "约克贸易站 · 哈德孙湾公司",
+            "summary_zh": "公司合营后，约克贸易站继续承担北部贸易网络的仓储和转运。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hbc-vancouver-first-site",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.644,
+          45.625
+        ]
+      },
+      "properties": {
+        "name": "温哥华堡旧址 · 高地贸易站",
+        "start_year": 1824,
+        "end_year": 1828,
+        "display_kind": "economic_network",
+        "summary_zh": "公司在高地经营堡站，接收从乔治堡运来的人员和货物。",
+        "source_ids": [
+          "19C33-HBC-VAN",
+          "19C33-HBC-VAN-OLD",
+          "19C33-HBC-VAN-MARK",
+          "19C33-HBC-CHINOOK"
+        ],
+        "named_anchors": [
+          "温哥华堡旧址"
+        ],
+        "mapping_method": "NPS locates the first fort near the modern Washington School for the Deaf. Site vicinity only.",
+        "related_event_ids": [
+          "E19-HBC-1824-VANCOUVER-BLUFF",
+          "E19-HBC-1825-VANCOUVER-TRADE",
+          "E19-HBC-1829-VANCOUVER-LOWER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "hbc-vancouver-first-site",
+        "source_urls": [
+          "https://www.nps.gov/fova/learn/historyculture/oldfova.htm",
+          "https://apps.ecology.wa.gov/cleanupsearch/document/135831",
+          "https://www.hmdb.org/m.asp?m=8403",
+          "https://www.nps.gov/articles/fovaclrindiancountry.htm"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1824,
+            "end_year": 1824,
+            "controller": "hbc",
+            "title": "温哥华堡旧址 · 高地建站",
+            "summary_zh": "公司在哥伦比亚河北岸高地开始建堡。"
+          },
+          {
+            "start_year": 1825,
+            "end_year": 1828,
+            "controller": "hbc",
+            "title": "温哥华堡旧址 · 高地贸易站",
+            "summary_zh": "公司在高地经营堡站，接收从乔治堡运来的人员和货物。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hbc-vancouver-lower-site",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.662425,
+          45.622603
+        ]
+      },
+      "properties": {
+        "name": "温哥华堡新址 · 哥伦比亚河低地",
+        "start_year": 1829,
+        "end_year": 1829,
+        "display_kind": "economic_network",
+        "summary_zh": "公司迁至靠近河流和农田的新堡。",
+        "source_ids": [
+          "19C33-HBC-VAN",
+          "19C33-HBC-VAN-NEW",
+          "19C33-HBC-VAN-POINT"
+        ],
+        "named_anchors": [
+          "温哥华堡新址"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-HBC-1829-VANCOUVER-LOWER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "hbc-vancouver-lower-site",
+        "source_urls": [
+          "https://www.nps.gov/fova/learn/historyculture/oldfova.htm",
+          "https://home.nps.gov/places/fortvancouver.htm",
+          "https://www.nps.gov/planyourvisit/event-details.htm?id=AAAEAE5A-9652-4326-53B5B988D5481880"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1829,
+            "end_year": 1829,
+            "controller": "hbc",
+            "title": "温哥华堡新址 · 哥伦比亚河低地",
+            "summary_zh": "公司迁至靠近河流和农田的新堡。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hbc-langley-first-site",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.63472,
+          49.20667
+        ]
+      },
+      "properties": {
+        "name": "兰利堡 · 德比河段贸易站",
+        "start_year": 1827,
+        "end_year": 1829,
+        "display_kind": "economic_network",
+        "summary_zh": "哈德孙湾公司在弗雷泽河南岸建立兰利堡，当地原住民供应鱼货。",
+        "source_ids": [
+          "19C33-HBC-LANG",
+          "19C33-HBC-LANG-GEO",
+          "19C33-HBC-LANG-PARK",
+          "19C33-HBC-KWANT"
+        ],
+        "named_anchors": [
+          "兰利堡"
+        ],
+        "mapping_method": "BC Geographical Names Derby Reach WGS84 reference and Parks Canada first-site history. River reach reference, not a palisade location.",
+        "related_event_ids": [
+          "E19-HBC-1827-LANGLEY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "hbc-langley-first-site",
+        "source_urls": [
+          "https://parkscanadahistory.com/series/chs/20/chs20-1r.htm",
+          "https://apps.gov.bc.ca/pub/bcgnws/names/14503.html",
+          "https://metrovancouver.org/services/regional-parks/Documents/derby-reach-management-plan.pdf",
+          "https://docs2.cer-rec.gc.ca/ll-eng/llisapi.dll/fetch/2000/90464/90552/548311/956726/2392873/2449925/2450825/2784857/C198-11-1_-_Evidence_of_Chief_Marilyn_Gabriel_-_Vol._1_-_A4L8J5.pdf?nodeid=2784780&vernum=-2"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1827,
+            "end_year": 1829,
+            "controller": "hbc",
+            "title": "兰利堡 · 德比河段贸易站",
+            "summary_zh": "哈德孙湾公司在弗雷泽河南岸建立兰利堡，当地原住民供应鱼货。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bathurst-colonial-settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.5806,
+          -33.41665
+        ]
+      },
+      "properties": {
+        "name": "巴瑟斯特 · 新南威尔士殖民据点",
+        "start_year": 1820,
+        "end_year": 1829,
+        "display_kind": "control",
+        "summary_zh": "戒严撤销后，殖民据点及地方治安管理继续运作。",
+        "source_ids": [
+          "19C33-BAT-NMA",
+          "19C33-BAT-PROC",
+          "19C33-BAT-LOCAL",
+          "19C33-BAT-GEO"
+        ],
+        "named_anchors": [
+          "巴瑟斯特"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-BAT-1824-BATHURST-CONFLICT",
+          "E19-BAT-1824-MARTIAL-LAW",
+          "E19-BAT-1824-PATROLS",
+          "E19-BAT-1824-MARTIAL-LAW-END"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "bathurst-colonial-settlement",
+        "source_urls": [
+          "https://digital-classroom.nma.gov.au/defining-moments/founding-bathurst",
+          "https://www.towardstruth.org.au/themes/country/dispossession/120-frontier-wars/sub0250-martial-law-on-the-bathurst-plains",
+          "https://www.bathurst.nsw.gov.au/files/assets/public/v/1/council/plans-policies/aboriginal-heritage-study.pdf",
+          "https://www.geonames.org/2176632"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1823,
+            "controller": "british",
+            "title": "巴瑟斯特 · 新南威尔士殖民据点",
+            "summary_zh": "英方1815年设立据点，定居者和牧场随后向巴瑟斯特平原扩展。"
+          },
+          {
+            "start_year": 1824,
+            "end_year": 1824,
+            "controller": "british",
+            "title": "巴瑟斯特 · 新南威尔士殖民据点",
+            "summary_zh": "巴瑟斯特殖民当局在1824年调集部队。8月宣布的戒严于12月撤销。"
+          },
+          {
+            "start_year": 1825,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "巴瑟斯特 · 新南威尔士殖民据点",
+            "summary_zh": "戒严撤销后，殖民据点及地方治安管理继续运作。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gulf-qeshm-town-garrison",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.2691,
+          26.9492
+        ]
+      },
+      "properties": {
+        "name": "格什姆镇 · 英方驻军",
+        "start_year": 1820,
+        "end_year": 1821,
+        "display_kind": "control",
+        "summary_zh": "驻军由拉斯海马转入格什姆镇。1821年一度转到盖斯，后来返回格什姆镇。",
+        "source_ids": [
+          "19C33-GUL-RAK",
+          "19C33-GUL-QDL",
+          "19C33-GUL-MOVES",
+          "19C33-GUL-QESH-GEO"
+        ],
+        "named_anchors": [
+          "格什姆镇"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-GUL-1820-QESHM-GARRISON",
+          "E19-GUL-1822-PERSIAN-PROTEST"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "gulf-qeshm-town-garrison",
+        "source_urls": [
+          "https://rakheritage.rak.ae/chapters/the-beginnings-of-the-uae/",
+          "https://qdl.qa/en/british-naval-bases-gulf-1820-1935-history-tensions",
+          "https://qdl.qa/en/archive/81055/vdc_100023514760.0x000079",
+          "https://www.geonames.org/search.html?country=IR&q=Qeshm"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1820,
+            "end_year": 1821,
+            "controller": "british",
+            "title": "格什姆镇 · 英方驻军",
+            "summary_zh": "驻军由拉斯海马转入格什姆镇。1821年一度转到盖斯，后来返回格什姆镇。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gulf-basaidu-naval-station",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.28701,
+          26.64804
+        ]
+      },
+      "properties": {
+        "name": "巴赛杜 · 英国海军据点",
+        "start_year": 1823,
+        "end_year": 1829,
+        "display_kind": "control",
+        "summary_zh": "英国在格什姆岛西端维持巴赛杜据点，波斯政府始终未批准。",
+        "source_ids": [
+          "19C33-GUL-QDL",
+          "19C33-GUL-IRAN",
+          "19C33-GUL-BAS-GEO"
+        ],
+        "named_anchors": [
+          "巴赛杜"
+        ],
+        "mapping_method": "Named-place WGS84 anchor and dated administrative record.",
+        "related_event_ids": [
+          "E19-GUL-1823-BASAIDU"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "gulf-basaidu-naval-station",
+        "source_urls": [
+          "https://qdl.qa/en/british-naval-bases-gulf-1820-1935-history-tensions",
+          "https://www.iranicaonline.org/articles/qeshm-island/",
+          "https://mapcarta.com/12628008"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1823,
+            "end_year": 1829,
+            "controller": "british",
+            "title": "巴赛杜 · 英国海军据点",
+            "summary_zh": "英国在格什姆岛西端维持巴赛杜据点，波斯政府始终未批准。"
           }
         ]
       }

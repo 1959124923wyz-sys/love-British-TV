@@ -424,6 +424,151 @@
       ],
       "finding": "阿散蒂王廷继续在库马西治理。与英国及沿海盟军交战后，王廷仍处理地方关系并参与议和。",
       "spatial_limit": "Named-place WGS84 anchor and dated administrative record."
+    },
+    {
+      "stable_id": "hbc-york-factory",
+      "baseline_1819": true,
+      "transition": "confirmed_continuation_not_previously_drawn",
+      "prior_record": "承接17世纪约克贸易站及后续公司据点。1821年合营前后延续。",
+      "first_display_year": 1820,
+      "last_display_year": 1829,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C33-HBC-YORK",
+        "19C33-HBC-YORK-GEO",
+        "19C33-HBC-UNION",
+        "19C33-HBC-LIC"
+      ],
+      "evidence_anchors": [
+        "E19-HBC-1821-UNION",
+        "E19-HBC-1821-LICENCE"
+      ],
+      "finding": "公司合营后，约克贸易站继续承担北部贸易网络的仓储和转运。",
+      "spatial_limit": "Named-place WGS84 anchor and dated administrative record."
+    },
+    {
+      "stable_id": "hbc-vancouver-first-site",
+      "baseline_1819": false,
+      "transition": "new_site_later_relocated",
+      "prior_record": "1824年末动工，1829年迁至低地。",
+      "first_display_year": 1824,
+      "last_display_year": 1828,
+      "historical_end_year": 1829,
+      "source_ids": [
+        "19C33-HBC-VAN",
+        "19C33-HBC-VAN-OLD",
+        "19C33-HBC-VAN-MARK",
+        "19C33-HBC-CHINOOK"
+      ],
+      "evidence_anchors": [
+        "E19-HBC-1824-VANCOUVER-BLUFF",
+        "E19-HBC-1825-VANCOUVER-TRADE",
+        "E19-HBC-1829-VANCOUVER-LOWER"
+      ],
+      "finding": "公司在高地经营堡站，接收从乔治堡运来的人员和货物。",
+      "spatial_limit": "NPS locates the first fort near the modern Washington School for the Deaf. Site vicinity only."
+    },
+    {
+      "stable_id": "hbc-vancouver-lower-site",
+      "baseline_1819": false,
+      "transition": "relocated_from_preceding_site",
+      "prior_record": "1829年从高地迁入；后续持续年份随下一章审查。",
+      "first_display_year": 1829,
+      "last_display_year": 1829,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C33-HBC-VAN",
+        "19C33-HBC-VAN-NEW",
+        "19C33-HBC-VAN-POINT"
+      ],
+      "evidence_anchors": [
+        "E19-HBC-1829-VANCOUVER-LOWER"
+      ],
+      "finding": "公司迁至靠近河流和农田的新堡。",
+      "spatial_limit": "Named-place WGS84 anchor and dated administrative record."
+    },
+    {
+      "stable_id": "hbc-langley-first-site",
+      "baseline_1819": false,
+      "transition": "new_trade_post",
+      "prior_record": "1827年建站。此处与1839年起使用的新址分开。",
+      "first_display_year": 1827,
+      "last_display_year": 1829,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C33-HBC-LANG",
+        "19C33-HBC-LANG-GEO",
+        "19C33-HBC-LANG-PARK",
+        "19C33-HBC-KWANT"
+      ],
+      "evidence_anchors": [
+        "E19-HBC-1827-LANGLEY"
+      ],
+      "finding": "哈德孙湾公司在弗雷泽河南岸建立兰利堡，当地原住民供应鱼货。",
+      "spatial_limit": "BC Geographical Names Derby Reach WGS84 reference and Parks Canada first-site history. River reach reference, not a palisade location."
+    },
+    {
+      "stable_id": "bathurst-colonial-settlement",
+      "baseline_1819": true,
+      "transition": "confirmed_continuation_not_previously_drawn",
+      "prior_record": "承接1815年英方据点。1824年12月已结束戒严。",
+      "first_display_year": 1820,
+      "last_display_year": 1829,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C33-BAT-NMA",
+        "19C33-BAT-PROC",
+        "19C33-BAT-LOCAL",
+        "19C33-BAT-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-BAT-1824-BATHURST-CONFLICT",
+        "E19-BAT-1824-MARTIAL-LAW",
+        "E19-BAT-1824-PATROLS",
+        "E19-BAT-1824-MARTIAL-LAW-END"
+      ],
+      "finding": "戒严撤销后，殖民据点及地方治安管理继续运作。",
+      "spatial_limit": "Named-place WGS84 anchor and dated administrative record."
+    },
+    {
+      "stable_id": "gulf-qeshm-town-garrison",
+      "baseline_1819": false,
+      "transition": "temporary_garrison_then_relocated",
+      "prior_record": "1820年转入。1822年另迁萨拉格和巴赛杜；翌年设常驻海军据点。",
+      "first_display_year": 1820,
+      "last_display_year": 1821,
+      "historical_end_year": 1822,
+      "source_ids": [
+        "19C33-GUL-RAK",
+        "19C33-GUL-QDL",
+        "19C33-GUL-MOVES",
+        "19C33-GUL-QESH-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-GUL-1820-QESHM-GARRISON",
+        "E19-GUL-1822-PERSIAN-PROTEST"
+      ],
+      "finding": "驻军由拉斯海马转入格什姆镇。1821年一度转到盖斯，后来返回格什姆镇。",
+      "spatial_limit": "Named-place WGS84 anchor and dated administrative record."
+    },
+    {
+      "stable_id": "gulf-basaidu-naval-station",
+      "baseline_1819": false,
+      "transition": "new_permanent_naval_station",
+      "prior_record": "1822年曾有临时驻军，撤离后1823年设常驻据点。1829年仍存。",
+      "first_display_year": 1823,
+      "last_display_year": 1829,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C33-GUL-QDL",
+        "19C33-GUL-IRAN",
+        "19C33-GUL-BAS-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-GUL-1823-BASAIDU"
+      ],
+      "finding": "英国在格什姆岛西端维持巴赛杜据点，波斯政府始终未批准。",
+      "spatial_limit": "Named-place WGS84 anchor and dated administrative record."
     }
   ],
   "open_items": [
@@ -467,6 +612,67 @@
         "C-08-E08"
       ],
       "finding": "1830年罗宾逊访谈与柯尔函件作为1828年屠杀的后续调查依据。"
+    },
+    {
+      "stable_id": "gulf-ras-al-khaimah-garrison",
+      "status": "ended_before_1820_year_end",
+      "source_ids": [
+        "19C33-GUL-RAK",
+        "19C33-GUL-RAK-1819"
+      ],
+      "original_node_ids": [
+        "A-73-E01",
+        "B-EV-0345"
+      ],
+      "finding": "1819年12月英方占领城镇。1820年7月撤出，使用事件点记录退出，不将短期驻军延长到1820年末。"
+    },
+    {
+      "stable_id": "gulf-qeshm-station-intermediate",
+      "status": "site_geography_pending",
+      "source_ids": [
+        "19C33-GUL-MOVES",
+        "19C33-GUL-QDL"
+      ],
+      "finding": "1821年盖斯、1822年萨拉格和初次巴赛杜驻留待单独核对日期、旧址及年末状态，常驻点只从1823年起画。"
+    },
+    {
+      "stable_id": "bathurst-1824-martial-law",
+      "status": "documented_boundary_pending",
+      "source_ids": [
+        "19C33-BAT-PROC",
+        "19C33-BAT-MOUNT",
+        "19C33-BAT-LOCAL",
+        "19C33-BAT-MASS"
+      ],
+      "finding": "公告仅给出约克山以西的范围描述。未用现代行政区绘制戒严面；巴瑟斯特马铃薯地事件的史实、地点与不同报复案仍待分别核验。"
+    },
+    {
+      "stable_id": "khasi-1826-road-and-1829-reprisals",
+      "status": "historical_alignment_pending",
+      "source_ids": [
+        "19C33-KHA-TREATY",
+        "19C33-KHA-CENSUS",
+        "19C33-KHA-QUEENS",
+        "19C33-KHA-TICI"
+      ],
+      "finding": "过境条款与反击均有据，施工分段和焚毁地点仍待一手记录确认。1833年节点留给下一章。",
+      "research_v6_evidence_ids": [
+        "A-R3-12-ACTION03"
+      ]
+    },
+    {
+      "stable_id": "hbc-1821-trade-licence",
+      "status": "legal_extent_separate_from_control",
+      "source_ids": [
+        "19C33-HBC-ACT",
+        "19C33-HBC-LIC",
+        "19C33-HBC-1818",
+        "19C33-HBC-1827"
+      ],
+      "finding": "王室许可证、鲁珀特地旧特许、英美共同开放条款分别核对，未据其绘制主权面。1838年新许可证留给下一章。",
+      "original_node_ids": [
+        "C-03-E04"
+      ]
     }
   ]
 }
