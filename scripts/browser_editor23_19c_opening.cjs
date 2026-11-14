@@ -391,9 +391,13 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1845,'E19-NZ-1845-KORORAREKA','E19-NZ-NORTHERN-WAR','E19-NZ-1846-RUA-ENTRY',1846],
    [1846,'E19-NZ-1846-BOULCOTT','E19-NZ-HUTT','E19-NZ-1848-RAUPARAHA-RETURN',1848],
    [1846,'E19-NZ-1846-WHANGANUI-GARRISON','E19-NZ-WHANGANUI','E19-NZ-1847-RUTLAND-EXECUTIONS',1847],
-   [1848,'E19-NZ-1848-KEMP-DEED','E19-NZ-KEMP','E19-NZ-1849-TIRAMOREHU-LETTER',1849]
+   [1848,'E19-NZ-1848-KEMP-DEED','E19-NZ-KEMP','E19-NZ-1849-TIRAMOREHU-LETTER',1849],
+   [1840,'E19-AU-1840-COORONG-EXPEDITION','E19-AU-COORONG-MARIA','E19-AU-1841-COORONG-CROWN-OPINION',1841],
+   [1841,'E19-AU-1841-RUFUS-EAST-SHOOTING','E19-AU-RUFUS-MURRAY','E19-AU-1846-MOORUNDIE-POLICE',1846],
+   [1840,'E19-AU-1840-WANDO-FIGHTING-HILLS','E19-AU-WANDO-KONONGWOOTONG','E19-AU-1840-FIGHTING-WATERHOLES',1840],
+   [1843,'E19-AU-1843-WARRIGAL-CREEK','E19-AU-GIPPSLAND-WARRIGAL','E19-AU-1844-GIPPSLAND-ROBINSON-JUNE',1844,false]
   ];
-  for(const [year,entry,story,target,targetYear] of chapter35Topics){
+  for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
     await page.locator('#resetDossier').click();
    await jump(year);
@@ -401,7 +405,8 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    await openArticle(story);
    await link(target).click();
    await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
-   await page.waitForFunction(id=>window.atlasStoryBridge.activeFocusId()===id,target);
+   if(located)await page.waitForFunction(id=>window.atlasStoryBridge.activeFocusId()===id,target);
+   else await page.locator('.story-event-preview').waitFor();
    await link(target).dblclick();
    await page.locator('[data-story-back]').waitFor();
    assert.equal(await selected(),target);
@@ -412,6 +417,16 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.equal(await selected(),entry);
   }
   await page.locator('#resetDossier').click();
+  await jump(1840);
+  assert.equal(await pointStroke(-37.497,141.424),'#a5cdec');
+  assert.equal(await pointStroke(-37.47,141.568),'#a5cdec');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1840-COORONG-GOOLWA')));
+  await jump(1841);
+  assert.equal(await pointStroke(-34.049,141.274),'#a5cdec');
+  assert.equal(await pointStroke(-34.142,141.455),'#a5cdec');
+  assert.equal(await pointStroke(-34.395516,139.613129),'#c5a6f5');
+  await jump(1846);
+  assert.equal(await pointStroke(-34.395516,139.613129),'#c5a6f5');
   await jump(1839);
   await openEvent('E19-NEW-1839-MONMOUTH-TRIAL-OPENS');
   await openArticle('E19-NEWPORT-CHARTIST-RISING');
@@ -502,6 +517,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 49 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 53 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
