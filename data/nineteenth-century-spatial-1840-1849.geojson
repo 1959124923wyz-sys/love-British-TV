@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1840–1849 Chapter 35 batches 1–5",
+    "coverage": "1840–1849 Chapter 35 batches 1–6",
     "historical_area_statistics": false
   },
   "features": [
@@ -4784,6 +4784,858 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "stable_id": "ir-delphi-lodge-relief"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cape-burnshill-frontier",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0591,
+          -32.7661
+        ]
+      },
+      "properties": {
+        "name": "伯恩斯希尔 · 科萨抵抗",
+        "start_year": 1846,
+        "end_year": 1846,
+        "display_kind": "conflict",
+        "summary_zh": "恩吉卡部队袭击殖民军的运输车队，迫使殖民军后撤。",
+        "source_ids": [
+          "19C35-SA-THEAL-VOL3",
+          "19C35-SA-CAPE-WARS",
+          "19C35-SA-CAPE-WARD",
+          "19C35-SA-BURNSHILL-GEO"
+        ],
+        "source_urls": [
+          "https://emandulo.apc.uct.ac.za/collection/FHYA%20Depot/Theal_G_M_History_of_South_Africa_since_September_1795_vol_3.pdf",
+          "https://sahistory.org.za/article/eastern-cape-wars-dispossession-1779-1878",
+          "https://www.gutenberg.org/files/35308/35308-h/35308-h.htm",
+          "https://www.statssa.gov.za/?id=1984&page_id=4286"
+        ],
+        "named_anchors": [
+          "伯恩斯希尔"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1846-CAPE-BURNSHILL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "cape-burnshill-frontier"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cape-fort-hare",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.848597,
+          -32.786769
+        ]
+      },
+      "properties": {
+        "name": "泰胡梅河黑尔堡",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "英国工兵1846年底绘出营址，1847年建立黑尔堡。",
+        "source_ids": [
+          "19C35-SA-FORT-HARE-PLAN",
+          "19C35-SA-FORT-HARE-GEO",
+          "19C35-SA-THEAL-VOL3"
+        ],
+        "source_urls": [
+          "https://wiredspace-extra.wits.ac.za/browse/dateissued?scope=9e0768be-6511-48f4-8912-0850d9eb6d72",
+          "https://www.artefacts.co.za/main/Buildings/bldgframes.php?bldgid=10168",
+          "https://emandulo.apc.uct.ac.za/collection/FHYA%20Depot/Theal_G_M_History_of_South_Africa_since_September_1795_vol_3.pdf"
+        ],
+        "named_anchors": [
+          "泰胡梅河黑尔堡"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1846-CAPE-FORT-HARE-PLAN",
+          "E19-SA-1847-CAPE-FORT-HARE-BUILT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "cape-fort-hare",
+        "year_stages": [
+          {
+            "start_year": 1846,
+            "end_year": 1846,
+            "controller": "local",
+            "title": "泰胡梅河 · 黑尔堡营址",
+            "summary_zh": "皇家工兵绘出临时哨所位置。"
+          },
+          {
+            "start_year": 1847,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "泰胡梅河 · 黑尔堡驻地",
+            "summary_zh": "英军建堡，并在战后维持驻军。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cape-king-williams-town-kaffraria",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3938,
+          -32.8802
+        ]
+      },
+      "properties": {
+        "name": "威廉王城 · 英属卡弗拉里亚驻地",
+        "start_year": 1847,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "1847年12月，史密斯在此宣布王室主权，并把行政和军事总部设在威廉王城。",
+        "source_ids": [
+          "19C35-SA-CAPE-LAW",
+          "19C35-SA-THEAL-VOL3",
+          "19C35-SA-CAPE-GAZETTE",
+          "19C35-SA-QONCE-GEO"
+        ],
+        "source_urls": [
+          "https://www.cambridge.org/core/books/imperial-incarceration/martial-law-and-the-rule-of-law-in-the-eastern-cape-18301880/74A728D0C3640278D813E2E5C151D630",
+          "https://emandulo.apc.uct.ac.za/collection/FHYA%20Depot/Theal_G_M_History_of_South_Africa_since_September_1795_vol_3.pdf",
+          "https://upload.wikimedia.org/wikipedia/commons/7/74/The_Examiner_1848-03-04-_Iss_2092_%28IA_sim_examiner-a-weekly-paper-on-politics-literature-music_1848-03-04_2092%29.pdf",
+          "https://mapcarta.com/King_William%27s_Town"
+        ],
+        "named_anchors": [
+          "威廉王城"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1847-CAPE-KAFFRARIA-PROCLAMATION",
+          "E19-SA-1848-CAPE-CHIEFS-OATH"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "cape-king-williams-town-kaffraria",
+        "year_stages": [
+          {
+            "start_year": 1847,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "威廉王城 · 英属卡弗拉里亚驻地",
+            "summary_zh": "高级专员以下的行政与军事机构在此运作。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cape-peddie-victoria-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.097,
+          -33.2105
+        ]
+      },
+      "properties": {
+        "name": "佩迪 · 维多利亚区南部设治",
+        "start_year": 1848,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "开普殖民政府划出佩迪行政区，并任命第一位民政专员。",
+        "source_ids": [
+          "19C35-SA-PEDDIE",
+          "19C35-SA-CAPE-GAZETTE",
+          "19C35-SA-PEDDIE-GEO"
+        ],
+        "source_urls": [
+          "https://sahistory.org.za/place/peddie",
+          "https://upload.wikimedia.org/wikipedia/commons/7/74/The_Examiner_1848-03-04-_Iss_2092_%28IA_sim_examiner-a-weekly-paper-on-politics-literature-music_1848-03-04_2092%29.pdf",
+          "https://www.statssa.gov.za/?id=2083&page_id=4286"
+        ],
+        "named_anchors": [
+          "佩迪"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1847-CAPE-VICTORIA-ANNEX",
+          "E19-SA-1848-CAPE-PEDDIE-DISTRICT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "cape-peddie-victoria-administration",
+        "year_stages": [
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "佩迪 · 维多利亚区南部设治",
+            "summary_zh": "开普当局另设佩迪行政区。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cape-east-london-port",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.90989,
+          -33.02241
+        ]
+      },
+      "properties": {
+        "name": "布法罗河口 · 东伦敦港",
+        "start_year": 1848,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "1848年1月，史密斯把港口和周围土地并入开普。",
+        "source_ids": [
+          "19C35-SA-BUFFALO-PORT",
+          "19C35-SA-PIPER-1849",
+          "19C35-SA-BUFFALO-GEO"
+        ],
+        "source_urls": [
+          "https://sahistory.org.za/place/kugompo-was-called-east-london-eastern-cape",
+          "https://digitalarchives.ru.ac.za/s/cory/item/10841",
+          "https://documents.easytenders.co.za/public/tenders/2025/11/207020/blobname32e3d16a-2d50-4ad1-a130-24008dbdef15pdfdownloadedfilenamerfp-detection-and-mapping-of-underground-services.pdf"
+        ],
+        "named_anchors": [
+          "布法罗河口"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1848-CAPE-EAST-LONDON-PORT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "cape-east-london-port",
+        "year_stages": [
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "布法罗河口 · 东伦敦港",
+            "summary_zh": "开普控制港口，用于向边疆输送军队和补给。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cape-british-kaffraria-1847",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.4912,
+              -33.2815
+            ],
+            [
+              27.4283,
+              -33.1935
+            ],
+            [
+              27.421,
+              -33.1215
+            ],
+            [
+              27.3259,
+              -33.0553
+            ],
+            [
+              27.2593,
+              -33.0267
+            ],
+            [
+              27.1725,
+              -33.041
+            ],
+            [
+              27.1113,
+              -33.1143
+            ],
+            [
+              27.0248,
+              -33.0352
+            ],
+            [
+              26.9567,
+              -33.0406
+            ],
+            [
+              26.9134,
+              -32.9523
+            ],
+            [
+              26.8375,
+              -32.8815
+            ],
+            [
+              26.7901,
+              -32.8017
+            ],
+            [
+              26.8251,
+              -32.7119
+            ],
+            [
+              26.8645,
+              -32.6179
+            ],
+            [
+              26.9452,
+              -32.5443
+            ],
+            [
+              26.9496,
+              -32.4424
+            ],
+            [
+              26.8974,
+              -32.316
+            ],
+            [
+              26.8719,
+              -32.2103
+            ],
+            [
+              26.8202,
+              -32.0882
+            ],
+            [
+              26.9197,
+              -32.0058
+            ],
+            [
+              27.0227,
+              -31.9106
+            ],
+            [
+              27.1565,
+              -31.9719
+            ],
+            [
+              27.2728,
+              -32.0547
+            ],
+            [
+              27.3624,
+              -32.0191
+            ],
+            [
+              27.4844,
+              -32.1103
+            ],
+            [
+              27.5845,
+              -32.1297
+            ],
+            [
+              27.6925,
+              -32.1787
+            ],
+            [
+              27.7793,
+              -32.3088
+            ],
+            [
+              27.8631,
+              -32.4091
+            ],
+            [
+              28.023,
+              -32.4869
+            ],
+            [
+              28.1861,
+              -32.5476
+            ],
+            [
+              28.2892,
+              -32.5967
+            ],
+            [
+              28.386,
+              -32.6799
+            ],
+            [
+              28.29,
+              -32.742
+            ],
+            [
+              28.205,
+              -32.79
+            ],
+            [
+              28.103,
+              -32.87
+            ],
+            [
+              28.031,
+              -32.929
+            ],
+            [
+              27.9517,
+              -32.9864
+            ],
+            [
+              27.9281,
+              -33.0242
+            ],
+            [
+              27.898,
+              -33.052
+            ],
+            [
+              27.79,
+              -33.142
+            ],
+            [
+              27.689,
+              -33.178
+            ],
+            [
+              27.5834,
+              -33.2258
+            ],
+            [
+              27.4912,
+              -33.2815
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "英属卡弗拉里亚 · 1847年王室公告",
+        "start_year": 1847,
+        "end_year": 1849,
+        "display_kind": "land_dispossession",
+        "summary_zh": "开普总督宣布王室对凯斯卡马河与大凯河间土地的主权，并以威廉王城为行政据点。科萨首领受英国高级专员节制。",
+        "source_ids": [
+          "19C35-SA-THEAL-VOL3",
+          "19C35-SA-CAPE-GAZETTE",
+          "19C35-SA-CAPE-LAW",
+          "19C35-SA-THEAL-1848",
+          "19C35-SA-PIPER-1849",
+          "19C35-SA-KEI-RIVERS",
+          "19C35-SA-KLIPPLAAT-GEO"
+        ],
+        "source_urls": [
+          "https://emandulo.apc.uct.ac.za/collection/FHYA%20Depot/Theal_G_M_History_of_South_Africa_since_September_1795_vol_3.pdf",
+          "https://upload.wikimedia.org/wikipedia/commons/7/74/The_Examiner_1848-03-04-_Iss_2092_%28IA_sim_examiner-a-weekly-paper-on-politics-literature-music_1848-03-04_2092%29.pdf",
+          "https://www.cambridge.org/core/books/imperial-incarceration/martial-law-and-the-rule-of-law-in-the-eastern-cape-18301880/74A728D0C3640278D813E2E5C151D630",
+          "https://sahistory.org.za/sites/default/files/2019-05/a_history_of_zonnebloem_college_1858_to_1870_-_a_study_of_church_and_society_by_janet_k.h._hodgson.pdf#page=30",
+          "https://digitalarchives.ru.ac.za/s/cory/item/10841",
+          "https://www.dws.gov.za/wem/WRCS/doc/WP11354_Keis_Fish_Tsits_RQOs%20Report_Final_23Jan26.pdf",
+          "https://mapcarta.com/14323940"
+        ],
+        "named_anchors": [
+          "凯斯卡马河口",
+          "泰胡梅河",
+          "克利普普拉特河汇入黑凯河",
+          "大凯河口",
+          "威廉王城"
+        ],
+        "mapping_method": "Approximate tracing of Theal vol. III, map facing printed p. 54 (scan p. 79), calibrated to the Keiskamma and Great Kei mouths and Klipplaat–Black Kei confluence; coastal edge aligned to named river mouths; checked against Piper 1849 and the proclamation description.",
+        "related_event_ids": [
+          "E19-SA-1847-CAPE-KAFFRARIA-PROCLAMATION",
+          "E19-SA-1848-CAPE-CHIEFS-OATH"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "cape-british-kaffraria-1847",
+        "uncertainty": "History-map tracing of the 1847 proclamation; dashed only. East London port and the Cape division of Victoria are separate records."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "orange-philippolis-griqua",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2652,
+          -30.2484
+        ]
+      },
+      "properties": {
+        "name": "菲利波利斯 · 格里夸首领驻地",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "格里夸的政治中心。1846年英国承认其土地权，1848年重谈保留地之外的管辖。",
+        "source_ids": [
+          "19C35-SA-ORANGE-DOCS",
+          "19C35-SA-SMITH",
+          "19C35-SA-GRIQUA-LAND",
+          "19C35-SA-PHILIPPOLIS-GEO"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf#page=353",
+          "https://www.gutenberg.org/files/57094/57094-h/57094-h.htm",
+          "https://journals.co.za/doi/10.10520/EJC34428",
+          "https://www.statssa.gov.za/?id=7087&page_id=4286"
+        ],
+        "named_anchors": [
+          "菲利波利斯"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1846-ORANGE-GRIQUA-TREATY",
+          "E19-SA-1848-ORANGE-KOK-AGREEMENT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "orange-philippolis-griqua"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "orange-bloemfontein-residency",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.2155,
+          -29.1196
+        ]
+      },
+      "properties": {
+        "name": "布隆方丹 · 英国驻官公署",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "英国驻官1846年设公署，1848年布尔反对者迫使驻官暂退；布姆普拉茨战后英国恢复行政。",
+        "source_ids": [
+          "19C35-SA-ORANGE-DOCS",
+          "19C35-SA-BLOEM-START",
+          "19C35-SA-BLOEM-RESIDENCY",
+          "19C35-SA-THEAL-VOL3",
+          "19C35-SA-BLOEM-GEO"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf#page=353",
+          "https://sahistory.org.za/article/colonial-history-bloemfontein",
+          "https://journals.co.za/doi/10.10520/AJA00679208_1912",
+          "https://emandulo.apc.uct.ac.za/collection/FHYA%20Depot/Theal_G_M_History_of_South_Africa_since_September_1795_vol_3.pdf",
+          "https://en.wikipedia.org/wiki/Old_Presidency"
+        ],
+        "named_anchors": [
+          "布隆方丹"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1846-ORANGE-BLOEMFONTEIN-RESIDENCY",
+          "E19-SA-1848-ORANGE-PROVISIONAL-GOVERNMENT",
+          "E19-SA-1848-ORANGE-WARDEN-OUSTED",
+          "E19-SA-1848-ORANGE-BOOMPLAATS",
+          "E19-SA-1848-ORANGE-CONFISCATION",
+          "E19-SA-1848-ORANGE-COURT-MARTIAL",
+          "E19-SA-1849-ORANGE-NEW-REGULATIONS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "orange-bloemfontein-residency",
+        "year_stages": [
+          {
+            "start_year": 1846,
+            "end_year": 1847,
+            "controller": "british",
+            "title": "布隆方丹 · 英国驻官公署",
+            "summary_zh": "沃登进驻，受开普委任处理英国臣民相关事务。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "布隆方丹 · 奥兰治河主权区驻官公署",
+            "summary_zh": "英国设临时政府，驻官在布姆普拉茨战后恢复行政。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "orange-winburg-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0134,
+          -28.5059
+        ]
+      },
+      "properties": {
+        "name": "温堡 · 协议与英国驻地",
+        "start_year": 1848,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "史密斯在温堡与莫舒舒议定限制移民扩地，布姆普拉茨战后英军在此重宣主权。",
+        "source_ids": [
+          "19C35-SA-ORANGE-DOCS",
+          "19C35-SA-SMITH",
+          "19C35-SA-WINBURG-GEO"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf#page=353",
+          "https://www.gutenberg.org/files/57094/57094-h/57094-h.htm",
+          "https://www.statssa.gov.za/?id=7113&page_id=4286"
+        ],
+        "named_anchors": [
+          "温堡"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1848-ORANGE-WINBURG-AGREEMENT",
+          "E19-SA-1848-ORANGE-WINBURG-REASSERTED"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "orange-winburg-administration",
+        "year_stages": [
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "温堡 · 英国行政区",
+            "summary_zh": "殖民军在此重新宣读主权公告，1849年仍为治安区治所。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "orange-boomplaats-battle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.646,
+          -29.8498
+        ]
+      },
+      "properties": {
+        "name": "布姆普拉茨 · 英军击败布尔武装",
+        "start_year": 1848,
+        "end_year": 1848,
+        "display_kind": "conflict",
+        "summary_zh": "1848年8月29日，史密斯率部击败普雷托里乌斯的部队。",
+        "source_ids": [
+          "19C35-SA-BOOMPLAATS",
+          "19C35-SA-ORANGE-DOCS",
+          "19C35-SA-SMITH"
+        ],
+        "source_urls": [
+          "https://www.sahra.org.za/Wordpress/wp-content/uploads/2020/01/SAHRA-Properties-Booklet.pdf#page=20",
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf#page=353",
+          "https://www.gutenberg.org/files/57094/57094-h/57094-h.htm"
+        ],
+        "named_anchors": [
+          "布姆普拉茨"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1848-ORANGE-BOOMPLAATS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "orange-boomplaats-battle"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "orange-thaba-bosiu-basotho",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.670556,
+          -29.355833
+        ]
+      },
+      "properties": {
+        "name": "塔巴博休 · 巴索托政治中心",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "莫舒舒以塔巴博休为政治中心。沃登划界后，巴索托人拒绝离开争议土地。",
+        "source_ids": [
+          "19C35-SA-THABA-BOSIU",
+          "19C35-SA-ORANGE-DOCS",
+          "19C35-SA-WARDEN-LINE"
+        ],
+        "source_urls": [
+          "https://whc.unesco.org/en/tentativelists/6920/",
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf#page=353",
+          "https://journals.ufs.ac.za/index.php/jch/article/download/3938/3581/7517"
+        ],
+        "named_anchors": [
+          "塔巴博休"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1848-ORANGE-WINBURG-AGREEMENT",
+          "E19-SA-1849-ORANGE-WARDEN-LINE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "orange-thaba-bosiu-basotho"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "natal-durban-old-fort",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0255,
+          -29.8511
+        ]
+      },
+      "properties": {
+        "name": "纳塔尔港 · 德班英军营地",
+        "start_year": 1842,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "英军1842年设营，海上增援解除围困，纳塔尔港此后成为英国的沿海据点。",
+        "source_ids": [
+          "19C35-SA-DURBAN-GEO",
+          "19C35-SA-NATAL-WAR",
+          "19C35-SA-DURBAN-TIMELINE"
+        ],
+        "source_urls": [
+          "https://sahistory.org.za/place/old-fort-and-cemetery-durban",
+          "https://www.samilitaryhistory.org/jnl2/vol181ua.html",
+          "https://sahistory.org.za/article/durban-timeline-1497-1990"
+        ],
+        "named_anchors": [
+          "纳塔尔港"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1842-NATAL-PORT-OCCUPIED",
+          "E19-SA-1842-NATAL-SIEGE-LIFTED",
+          "E19-SA-1843-NATAL-BRITISH-ANNOUNCEMENT",
+          "E19-SA-1845-NATAL-WEST-ADMINISTRATION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "natal-durban-old-fort",
+        "year_stages": [
+          {
+            "start_year": 1842,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "纳塔尔港 · 德班英军营地",
+            "summary_zh": "英国取得并继续维持港边驻地。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "natal-pietermaritzburg-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3789,
+          -29.6
+        ]
+      },
+      "properties": {
+        "name": "彼得马里茨堡 · 纳塔尔殖民行政",
+        "start_year": 1845,
+        "end_year": 1849,
+        "display_kind": "political",
+        "summary_zh": "英国在彼得马里茨堡设行政机关，随后组织划地、任免首领和征收茅屋税。",
+        "source_ids": [
+          "19C35-SA-NATAL-GOVERNORS",
+          "19C35-SA-NATAL-DOCS",
+          "19C35-SA-NATAL-LOCATIONS",
+          "19C35-SA-NATAL-1849-ORD",
+          "19C35-SA-NATAL-COLLECTION",
+          "19C35-SA-PIETERMARITZBURG-GEO"
+        ],
+        "source_urls": [
+          "https://www.archontology.org/nations/south_africa/natal/00_1845_80.php",
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf#page=274",
+          "https://southafrica.fes.de/fileadmin/user_upload/publications/Fiscal-Histories-240817-1.compressed.pdf",
+          "https://api.repository.cam.ac.uk/server/api/core/bitstreams/13a48d8d-bcb7-4695-91c6-b0ebbe2a2736/content",
+          "https://phambo.wiser.org.za/files/seminars/Guy2009.pdf",
+          "https://mapcarta.com/Pietermaritzburg"
+        ],
+        "named_anchors": [
+          "彼得马里茨堡"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-SA-1845-NATAL-WEST-ADMINISTRATION",
+          "E19-SA-1846-NATAL-LOCATIONS-COMMISSION",
+          "E19-SA-1847-NATAL-LOCATIONS-REPORT",
+          "E19-SA-1849-NATAL-SUPREME-CHIEF",
+          "E19-SA-1849-NATAL-HUT-TAX",
+          "E19-SA-1849-NATAL-FIRST-TAX-TOUR"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "natal-pietermaritzburg-government",
+        "year_stages": [
+          {
+            "start_year": 1845,
+            "end_year": 1848,
+            "controller": "british",
+            "title": "彼得马里茨堡 · 纳塔尔副总督驻地",
+            "summary_zh": "副总督主持地方行政，殖民政府组织保留地调查。"
+          },
+          {
+            "start_year": 1849,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "彼得马里茨堡 · 茅屋税征收",
+            "summary_zh": "副总督公布税令，谢普斯通从此出发向非洲住户征收。"
+          }
+        ]
       }
     }
   ]
