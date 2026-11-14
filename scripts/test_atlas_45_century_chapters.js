@@ -8,10 +8,10 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const copy=require('../js/century-chapter-narratives.js');
 const html=read('index.html'),app=read('app.js');
 
-assert.equal(Object.keys(copy.chapters).length,22,'1600–1819 must include 22 independently authored decade introductions');
+assert.equal(Object.keys(copy.chapters).length,23,'1600–1829 must include 23 independently authored decade introductions');
 assert.equal(copy.forDecade(1599),null);
-assert.equal(copy.forDecade(1820),null);
-for(let year=1600;year<=1810;year+=10){
+assert.equal(copy.forDecade(1830),null);
+for(let year=1600;year<=1820;year+=10){
  const text=copy.forDecade(year);
  assert(text,`missing decade ${year}`);
  assert.equal(copy.forDecade(year+9),text,`end of ${year}s should show the same chapter`);
@@ -28,6 +28,7 @@ assert(copy.forDecade(1750).intro.includes('普拉西'));
 assert(copy.forDecade(1770).intro.includes('孟加拉大饥荒'));
 assert(copy.forDecade(1780).intro.includes('Zong'));
 assert(copy.forDecade(1790).intro.includes('提普苏丹'));
+assert(copy.forDecade(1820).intro.includes('杨达波'));
 
 // Representative historical anchors are all in the existing referenced datasets.
 const hasEvent=(p,term)=>JSON.parse(read(p)).events.some(e=>e.name.includes(term));
@@ -54,4 +55,4 @@ for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro'
 assert(app.includes("const decadeTotal=atlas.events.length"),'event statistics must remain intact');
 assert(app.includes("d>=1700?'topic_preview'"),'original research status must remain intact');
 assert(app.includes("$('chapterIntro').textContent=atlasFirstMerged.intro"),'16C chapter introduction must stay untouched');
-console.log('PASS: all 22 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
+console.log('PASS: all 23 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
