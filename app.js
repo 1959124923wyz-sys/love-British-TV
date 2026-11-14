@@ -1172,7 +1172,7 @@ function renderNineteenthSpatial(){
  const group=groups.nineteenthAreas;
  group.clearLayers();
  if(year<1800||!nineteenthSpatial||!$('toggleTerritorialFootprints').checked)return;
- const colors={land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6'};
+ const colors={land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6',conflict:'#a5cdec'};
  for(const feature of nineteenthSpatial.features){
   const p=feature.properties;
   if(year<p.start_year||year>p.end_year)continue;
@@ -1195,7 +1195,7 @@ function renderNineteenthSpatial(){
   const [lon,lat]=feature.geometry.coordinates;
   L.circleMarker([lat,lon],{
    pane:'controlAreaPane',renderer:wartimeRenderer,radius:p.opens_area_id?29:21,weight:2.4,fill:false,
-   dashArray:'5 3',color:stage?.controller==='british'?'#c5a6f5':'#65c7b6',
+   dashArray:'5 3',color:stage?.controller==='british'?'#c5a6f5':p.display_kind==='conflict'?color:'#65c7b6',
    bubblingMouseEvents:false,className:'atlas-19c-site'
   }).bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
    pane:'eventTooltipPane',className:'atlas-hover',direction:'auto',offset:[12,0]
