@@ -264,7 +264,11 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1830,'E19-TAS-1830-BLACK-LINE-ORDER','E19-TASMANIA-BLACK-LINE-WYBALENNA','E19-TAS-1833-WYBALENNA',1833],
    [1832,'E19-JAM-1832-SHARPE-EXECUTION','E19-JAMAICA-BAPTIST-WAR-EMANCIPATION','E19-JAM-1838-EMANCIPATION',1838],
    [1835,'E19-CAP-1835-QUEEN-ADELAIDE','E19-CAPE-SIXTH-FRONTIER-WAR','E19-CAP-1830-WILLSHIRE-FAIR-END',1830],
-   [1834,'E19-DUAR-1834-BURI-GUMA-RESTORATION','E19-BHUTAN-DUARS-NEGOTIATIONS','E19-DUAR-1838-PUNAKHA-MISSION',1838]
+   [1834,'E19-DUAR-1834-BURI-GUMA-RESTORATION','E19-BHUTAN-DUARS-NEGOTIATIONS','E19-DUAR-1838-PUNAKHA-MISSION',1838],
+   [1831,'E19-NAN-1831-FIRST-EXPEDITION','E19-NANING-WAR','E19-NAN-1832-TABOH-OCCUPATION',1832],
+   [1838,'E19-AFG-1838-SIMLA-DECLARATION','E19-FIRST-AFGHAN-WAR-KALAT','E19-KAL-1839-STORMING',1839],
+   [1837,'E19-ADE-1837-DERIA-DOWLUT','E19-ADEN-CAPTURE','E19-ADE-1839-RESISTANCE',1839],
+   [1839,'E19-OP-1839-HUMEN-DESTRUCTION','E19-OPIUM-TRADE-CRISIS','E19-OP-1839-CHUENPI-CLASH',1839]
   ];
   for(const [year,entry,story,target,targetYear] of chapter34Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -304,6 +308,18 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1839);
   assert.notEqual(await pointStroke(49.20667,-122.63472),'#65c7b6');
   assert.equal(await pointStroke(49.1686747,-122.5727865),'#65c7b6');
+  assert.equal(await pointStroke(12.77522,45.03862),'#c5a6f5');
+  assert.equal(await pointStroke(34.52813,69.17233),'#c5a6f5');
+  const routeIds=await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds);
+  assert(routeIds.includes('E19-ROUTE-1839-KANDAHAR-GHAZNI-KABUL'));
+  assert(routeIds.includes('E19-ROUTE-1839-QUETTA-KALAT'));
+  await jump(1838);
+  assert.equal(await pointStroke(12.77522,45.03862),'#65c7b6');
+  assert.notEqual(await pointStroke(34.52813,69.17233),'#c5a6f5');
+  await jump(1832);
+  assert.equal(await pointStroke(2.486103,102.189942),'#c5a6f5');
+  await jump(1831);
+  assert.equal(await pointStroke(2.486103,102.189942),'#65c7b6');
   for(let y=1830;y<=1839;y++){
    await jump(y);
    await assertClean();
@@ -311,6 +327,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 20 review years, fifteen stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 20 review years, nineteen stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
