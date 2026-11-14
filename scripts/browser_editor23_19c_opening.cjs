@@ -141,7 +141,122 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await page.locator('.atlas-19c-area,.atlas-19c-site').count(),0);
   await jump(1806);
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1806-ARCOT-VELLORE')));
+  await goto('?year=1826',1819);
+  assert.equal(await page.locator('[data-decade="1820"]').getAttribute('class').then(s=>s.includes('unpublished')),true);
+  await goto('?review19c=1&year=1826',1826);
+  assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1829');
+  assert.match(await page.locator('#chapterIntro').textContent(),/杨达波/);
+  assert.match(await page.locator('[data-decade="1820"]').textContent(),/第33章/);
+  await openEvent('E19-BUR-1826-YANDABO');
+  await openArticle('E19-BURMA-YANDABO');
+  assert.match(await page.locator('.story-body').textContent(),/一千万卢比/);
+  const warStart=await view();
+  await link('E19-BUR-1825-DANUBYU').click();
+  await page.waitForFunction(()=>window.atlasStoryBridge.currentYear()===1825);
+  await page.waitForFunction(()=>{const c=window.atlasReadViewport().center;return Math.abs(c.lat-17.25684)<.35&&Math.abs(c.lng-95.59234)<.35});
+  assert(await focus('E19-BUR-1825-DANUBYU'));
+  assert.equal((await view()).zoom,warStart.zoom);
+  await link('E19-BUR-1825-DANUBYU').dblclick();
+  await page.locator('[data-story-back]').waitFor();
+  assert.equal(await selected(),'E19-BUR-1825-DANUBYU');
+  await page.locator('[data-story-back]').click();
+  await page.locator('.major-story-article').waitFor();
+  await page.locator('[data-story-return]').first().click();
+  await page.waitForFunction(()=>window.atlasStoryBridge.currentYear()===1826);
+  assert.equal(await selected(),'E19-BUR-1826-YANDABO');
+  await page.locator('#resetDossier').click();
+  await page.evaluate(()=>window.__historicOverlapHost.map.setView([16.80528,96.15611],10,{animate:false}));
+  const rangoonRing=()=>page.evaluate(()=>{
+   const m=window.__historicOverlapHost.map,r=m.getContainer().getBoundingClientRect();
+   const p=m.latLngToContainerPoint([16.80528,96.15611]);
+   return document.elementFromPoint(p.x+r.left+21,p.y+r.top)?.getAttribute('stroke');
+  });
+  assert.equal(await rangoonRing(),'#c5a6f5');
+  await jump(1827);
+  assert.equal(await rangoonRing(),'#65c7b6');
+  await jump(1820);
+  assert.equal((await audit()).liveAreas,2);
+  await page.evaluate(()=>window.__historicOverlapHost.map.setView([-33.3,26.9],8,{animate:false}));
+  await clickAt(-33.46,26.64);
+  await west.waitFor();
+  await west.hover();
+  assert.equal((await audit()).focused,'nineteenthAreas:cape-zuurveld');
+  assert.match(await west.textContent(),/奥尔巴尼/);
+  await jump(1822);
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1822-COLOMBO-KANDY')));
+  const newTopics=[
+   [1823,'E19-DEM-1823-BACHELORS-ADVENTURE','E19-DEMERARA-REVOLT','E19-DEM-1824-SMITH-PRISON',1824],
+   [1828,'E19-TAS-1828-CAPE-GRIM-FEB','E19-TASMANIA-BLACK-WAR','E19-TAS-1827-QUAMBY-BROOK',1827],
+   [1824,'E19-KIT-1824-DECEMBER-SIEGE','E19-KITTUR-CHENNAMMA','E19-KIT-1829-CHENNAMMA',1829],
+   [1826,'E19-ASH-1826-KATAMANSO','E19-ASANTE-GOLD-COAST','E19-ASH-1824-NSAMANKOW',1824],
+   [1824,'E19-HBC-1824-VANCOUVER-BLUFF','E19-HUDSON-BAY-PACIFIC','E19-HBC-1829-VANCOUVER-LOWER',1829],
+   [1823,'E19-BEO-1823-BADGER-BAY','E19-BEOTHUK-SHANAWDITHIT','E19-BEO-1829-DRAWINGS',1829],
+   [1829,'E19-KHA-1829-NONGKHLAW','E19-KHASI-TIROT-SING','E19-KHA-1826-PASSAGE',1826],
+   [1824,'E19-BAT-1824-MARTIAL-LAW','E19-BATHURST-WIRADJURI','E19-BAT-1824-PARRAMATTA-MEETING',1824],
+   [1820,'E19-GUL-1820-RAK-GENERAL-TREATY','E19-GULF-MARITIME-TREATY','E19-GUL-1823-BASAIDU',1823],
+   [1828,'E19-DUAR-1828-BURI-GUMA','E19-BURI-GUMA-DUAR','E19-DUAR-1828-CHATGAREE',1828]
+  ];
+  for(const [year,entry,story,target,targetYear] of newTopics){
+   await page.locator('#resetDossier').click();
+   await jump(year);
+   await openEvent(entry);
+   await openArticle(story);
+   await link(target).click();
+   await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
+   await link(target).dblclick();
+   await page.locator('[data-story-back]').waitFor();
+   assert.equal(await selected(),target);
+   await assertClean();
+   await page.locator('[data-story-back]').click();
+   await page.locator('.major-story-article').waitFor();
+   await page.locator('[data-story-return]').first().click();
+   assert.equal(await selected(),entry);
+  }
+  await page.locator('#resetDossier').click();
+  const pointStroke=async (lat,lng)=>{
+   await page.evaluate(([lat,lng])=>window.__historicOverlapHost.map.setView([lat,lng],10,{animate:false}),[lat,lng]);
+   return page.evaluate(([lat,lng])=>{
+    const m=window.__historicOverlapHost.map;
+    const bounds=m.getContainer().getBoundingClientRect();
+    const point=m.latLngToContainerPoint([lat,lng]);
+    return document.elementFromPoint(point.x+bounds.left+21,point.y+bounds.top)?.getAttribute('stroke');
+   },[lat,lng]);
+  };
+  await jump(1823);
+  assert.equal(await pointStroke(15.60037,74.79097),'#65c7b6');
+  await jump(1824);
+  assert.equal(await pointStroke(15.60037,74.79097),'#c5a6f5');
+  assert.equal(await pointStroke(45.625,-122.644),'#65c7b6');
+  await jump(1829);
+  assert.notEqual(await pointStroke(45.625,-122.644),'#65c7b6');
+  assert.equal(await pointStroke(45.622603,-122.662425),'#65c7b6');
+  await jump(1820);
+  assert.equal(await pointStroke(26.9492,56.2691),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1820-RAK-QESHM')));
+  await jump(1822);
+  assert.notEqual(await pointStroke(26.9492,56.2691),'#c5a6f5');
+  await jump(1823);
+  assert.equal(await pointStroke(26.64804,55.28701),'#c5a6f5');
+  await jump(1827);
+  assert.equal((await audit()).liveAreas,2);
+  await jump(1828);
+  assert.equal((await audit()).liveAreas,3);
+  await page.evaluate(()=>window.__historicOverlapHost.map.setView([26.74,92.075],9,{animate:false}));
+  await clickAt(26.70,92.086);
+  const duar=page.locator('[data-historic-overlap-id="nineteenthAreas:assam-buri-guma-duar-occupation"]');
+  await duar.waitFor();
+  await duar.hover();
+  assert.equal((await audit()).focused,'nineteenthAreas:assam-buri-guma-duar-occupation');
+  assert.match(await duar.textContent(),/布里古马/);
+  await jump(1829);
+  assert.equal((await audit()).liveAreas,3);
+  for(let y=1820;y<=1829;y++){
+   await jump(y);
+   await assertClean();
+   const density=await page.evaluate(()=>window.atlasDensityAudit());
+   assert.deepEqual(density.groupedKeys,density.eligibleKeys);
+  }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: public and independent review navigation, 323 years, story cross-century/cross-decade navigation, pan and return, GIS clicks and hover, layer independence, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 10 review years, eleven chapter 33 stories, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

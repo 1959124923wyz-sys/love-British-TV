@@ -426,6 +426,8 @@
     }
    }
    for(const story of index.stories||[])registerStory(story);
+   const review=new URLSearchParams(window.location.search);
+   const review19c=review.get('review19c')==='1';
    // Long-running histories are keyed by one stable parent ID rather than one
    // new article every ten years. The existing decade/year atlas stays intact.
    // The independent serial manifest is OPTIONAL; research records never render.
@@ -435,7 +437,10 @@
      const serial=await serialRes.json();
      if(serial.schema==='atlas-serial-stories-v1'){
       for(const topic of serial.topics||[]){
-       if(topic.status!=='published'||topic.publication_review!=='approved')continue;
+       const published=topic.status==='published'&&topic.publication_review==='approved';
+       const chapterReview=review19c&&topic.review_chapter_start===1820&&topic.status==='editorial_review'&&
+        topic.publication_review==='not_submitted';
+       if(!published&&!chapterReview)continue;
        if(typeof topic.id!=='string'||!/^[A-Za-z0-9-]+$/.test(topic.id))continue;
        if(typeof topic.article_file!=='string'||!topic.article_file.startsWith('data/stories/serial/')||
           !/^[a-z0-9-]+[.]json$/.test(topic.article_file.slice('data/stories/serial/'.length)))continue;
@@ -451,8 +456,7 @@
     }
    }catch(_serialError){ /* No published long story yet; old articles remain available. */ }
    // The two predecessor stories remain reachable from the public opening chapters.
-   const review=new URLSearchParams(window.location.search);
-   const review18c=review.get('review18c')==='1'||review.get('review19c')==='1';
+   const review18c=review.get('review18c')==='1'||review19c;
    try{
      const response=await fetch('data/stories/serial/preview-18c-index.json',{cache:'no-store'});
      if(response.ok){

@@ -228,6 +228,7 @@ let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthC
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
 const enable19cAtlas=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
+const enable19cChapterReview=reviewParams.get('review19c')==='1';
 let nineteenthAtlasEnd=null,nineteenthSpatial=null;
 let preview18cReady=false;
 let eighteenthAcadiaControlCores=null;
@@ -1131,19 +1132,19 @@ function renderEighteenthReviewEvidenceCores(){
  }
 }
 
-async function loadNineteenthAtlas(){
+async function loadNineteenthAtlas(from,end,status){
  const [chronology,spatial]=await Promise.all([
-  fetch('data/stories/serial/chronology-1800-1819.json',{cache:'no-store'}),
-  fetch('data/nineteenth-century-spatial-1800-1819.geojson',{cache:'no-store'})
+  fetch(`data/stories/serial/chronology-${from}-${end}.json`,{cache:'no-store'}),
+  fetch(`data/nineteenth-century-spatial-${from}-${end}.geojson`,{cache:'no-store'})
  ]);
  if(!chronology.ok||!spatial.ok)throw new Error('19C chronology or map missing');
  const [data,geo]=await Promise.all([chronology.json(),spatial.json()]);
- const end=data.period?.to,sourceIds=new Set(data.sources?.map(s=>s.id));
+ const sourceIds=new Set(data.sources?.map(s=>s.id));
  const eventIds=new Set(data.events?.map(e=>e.id));
  const cited=row=>row.source_ids?.length&&row.source_ids.every(id=>sourceIds.has(id));
- const inPeriod=y=>Number.isInteger(y)&&y>=1800&&y<=end;
- if(data.schema!=='atlas-19c-chronology-v1'||data.editorial_status!=='published'||data.period.from!==1800||
-    !inPeriod(end)||end%10!==9||!data.events.length||eventIds.size!==data.events.length||
+ const inPeriod=y=>Number.isInteger(y)&&y>=from&&y<=end;
+ if(data.schema!=='atlas-19c-chronology-v1'||data.editorial_status!==status||
+    data.period?.from!==from||data.period?.to!==end||!data.events.length||eventIds.size!==data.events.length||
     data.events.some(e=>!inPeriod(e.year)||!cited(e)||
      (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||Math.abs(e.lat)>90||!Number.isFinite(e.lng)||Math.abs(e.lng)>180))||
     data.routes.some(r=>!inPeriod(r.year)||!cited(r))||geo.type!=='FeatureCollection'||
@@ -1153,15 +1154,15 @@ async function loadNineteenthAtlas(){
      f.properties.area_sqkm!==null||!f.properties.exclude_from_area_aggregation||
      !f.properties.related_event_ids.every(id=>eventIds.has(id))))
   throw new Error('19C review failed chronology, source or spatial checks');
- for(let d=1800;d<=end;d+=10){
+ for(let d=from;d<=end;d+=10){
   serialPreviewByDecade.set(d,{
-   dataset_id:'nineteenth-century-'+d,period:{from:d,to:d+9},
+   dataset_id:'nineteenth-century-'+d,period:{from:d,to:d+9},editorial_status:status,
    events:data.events.filter(e=>decadeForYear(e.year)===d),
    routes:data.routes.filter(r=>decadeForYear(r.year)===d),places:[],colonial_polygons:[]
   });
  }
  for(const s of data.sources)sourcesById.set(s.id,s);
- nineteenthSpatial=geo;
+ nineteenthSpatial={...geo,features:[...(nineteenthSpatial?.features||[]),...geo.features]};
  nineteenthAtlasEnd=end;
 }
 function renderNineteenthSpatial(){
@@ -2183,7 +2184,8 @@ const decadeForYear=y=>Math.floor(y/10)*10;
 const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=previewYearCap()&&d%10===0?
  ({id:(Math.floor(d/100)+1)+'c-'+d,start:d,end:d+9,number:11+(d-1600)/10,
  label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1800?'19世纪历史专题':d>=1700?'18世纪历史专题':'17世纪历史专题'),
- status:d>=1800?'published':d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
+ status:d>=1800?(serialPreviewByDecade.get(d).editorial_status==='published'?'published':'topic_preview'):
+  d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
  (y>=1600&&y<=previewYearCap()?storyPreviewChapterForDecade(decadeForYear(y)):null);
@@ -3905,8 +3907,12 @@ async function boot(){
 
 
   if(enable19cAtlas&&jamaica18cReady){
-   try{await loadNineteenthAtlas();}
-   catch(error){console.warn('19C review data unavailable',error);}
+   try{await loadNineteenthAtlas(1800,1819,'published');}
+   catch(error){console.warn('19C opening data unavailable',error);}
+   if(enable19cChapterReview&&nineteenthAtlasEnd===1819){
+    try{await loadNineteenthAtlas(1820,1829,'editorial_review');}
+    catch(error){console.warn('19C chapter 33 data unavailable',error);}
+   }
   }
 
   // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
