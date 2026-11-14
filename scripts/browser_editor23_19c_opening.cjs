@@ -144,7 +144,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await goto('?year=1826',1819);
   assert.equal(await page.locator('[data-decade="1820"]').getAttribute('class').then(s=>s.includes('unpublished')),true);
   await goto('?review19c=1&year=1826',1826);
-  assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1829');
+  assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1839');
   assert.match(await page.locator('#chapterIntro').textContent(),/杨达波/);
   assert.match(await page.locator('[data-decade="1820"]').textContent(),/第33章/);
   await openEvent('E19-BUR-1826-YANDABO');
@@ -256,7 +256,61 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    const density=await page.evaluate(()=>window.atlasDensityAudit());
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
+  await goto('?review19c=1&year=1830',1830);
+  assert.match(await page.locator('#chapterLabel').textContent(),/第34章/);
+  assert.match(await page.locator('#chapterIntro').textContent(),/牙买加/);
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1830-ORDER-WATERLOO-ECHO')));
+  const chapter34Topics=[
+   [1830,'E19-TAS-1830-BLACK-LINE-ORDER','E19-TASMANIA-BLACK-LINE-WYBALENNA','E19-TAS-1833-WYBALENNA',1833],
+   [1832,'E19-JAM-1832-SHARPE-EXECUTION','E19-JAMAICA-BAPTIST-WAR-EMANCIPATION','E19-JAM-1838-EMANCIPATION',1838],
+   [1835,'E19-CAP-1835-QUEEN-ADELAIDE','E19-CAPE-SIXTH-FRONTIER-WAR','E19-CAP-1830-WILLSHIRE-FAIR-END',1830],
+   [1834,'E19-DUAR-1834-BURI-GUMA-RESTORATION','E19-BHUTAN-DUARS-NEGOTIATIONS','E19-DUAR-1838-PUNAKHA-MISSION',1838]
+  ];
+  for(const [year,entry,story,target,targetYear] of chapter34Topics){
+   if(await page.locator('#workspace:not(.dossier-collapsed)').count())
+    await page.locator('#resetDossier').click();
+   await jump(year);
+   await openEvent(entry);
+   await openArticle(story);
+   await link(target).click();
+   await page.waitForFunction(y=>window.atlasStoryBridge.currentYear()===y,targetYear);
+   await link(target).dblclick();
+   await page.locator('[data-story-back]').waitFor();
+   assert.equal(await selected(),target);
+   await assertClean();
+   await page.locator('[data-story-back]').click();
+   await page.locator('.major-story-article').waitFor();
+   await page.locator('[data-story-return]').first().click();
+   assert.equal(await selected(),entry);
+  }
+  await page.locator('#resetDossier').click();
+  await jump(1833);
+  await page.evaluate(()=>window.__historicOverlapHost.map.setView([26.74,92.075],9,{animate:false}));
+  await clickAt(26.70,92.086);
+  await duar.waitFor();
+  await duar.hover();
+  assert.equal((await audit()).focused,'nineteenthAreas:assam-buri-guma-duar-occupation');
+  await page.locator('#resetDossier').click();
+  await jump(1834);
+  await clickAt(26.70,92.086);
+  const restoredDuar=page.locator('[data-historic-overlap-id="nineteenthAreas:assam-buri-guma-duar-restoration"]');
+  await restoredDuar.waitFor();
+  assert.match(await restoredDuar.textContent(),/不丹恢复管理/);
+  assert.equal(await duar.count(),0);
+  assert.equal(await page.locator('.atlas-19c-area[stroke="#65c7b6"][stroke-dasharray="7 6"]').count(),1);
+  await page.locator('#resetDossier').click();
+  await jump(1838);
+  assert.equal(await pointStroke(49.20667,-122.63472),'#65c7b6');
+  await jump(1839);
+  assert.notEqual(await pointStroke(49.20667,-122.63472),'#65c7b6');
+  assert.equal(await pointStroke(49.1686747,-122.5727865),'#65c7b6');
+  for(let y=1830;y<=1839;y++){
+   await jump(y);
+   await assertClean();
+   const density=await page.evaluate(()=>window.atlasDensityAudit());
+   assert.deepEqual(density.groupedKeys,density.eligibleKeys);
+  }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 10 review years, eleven chapter 33 stories, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 20 review years, fifteen stories across chapters 33 and 34, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

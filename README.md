@@ -4,6 +4,8 @@
 
 **[打开正式历史地图](https://1959124923wyz-sys.github.io/love-British-TV/)** · **[第33章网页预览（1820—1829）](https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1820)**
 
+**[第34章网页预览（1830—1839）](https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1830)**
+
 ## 当前状态
 
 - **正式发表**：1497—1599年，共10章。逐年导航、历史事件、长篇专题、史料与地图图层均以 `main` 分支为准。
