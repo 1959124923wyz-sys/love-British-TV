@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1830–1839 Chapter 34 first editorial batch",
+    "coverage": "1830–1839 Chapter 34 first and second editorial batches",
     "historical_area_statistics": false
   },
   "features": [
@@ -2057,6 +2057,438 @@
             "controller": "british",
             "title": "考克斯堡 · 殖民军驻地",
             "summary_zh": "殖民军在第六次边疆战争期间设立考克斯堡。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "naning-taboh-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.189942,
+          2.486103
+        ]
+      },
+      "properties": {
+        "name": "塔波 · 南宁行政中心",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "塔波于1832年6月失守。同年10月，马六甲殖民当局在南宁任命新的辖区首领。",
+        "source_ids": [
+          "19C34-NAN-CHEW",
+          "19C34-NAN-TABOH"
+        ],
+        "source_urls": [
+          "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/naning-war-18311832-colonial-authority-and-malay-resistance-in-the-early-period-of-british-expansion/65A3843F770784EBC76D0B106DB07E25",
+          "https://www.findlatitudeandlongitude.com/l/Taboh%2BNaning%2C%2BKampung%2BTaboh%2BNaning%2BJaya%2C%2BAlor%2BGajah%2C%2BMalacca%2C%2B73000%2C%2BMalaysia/7980303/gps-coordinates-converter/"
+        ],
+        "named_anchors": [
+          "塔波"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-NAN-1831-FIRST-EXPEDITION",
+          "E19-NAN-1831-REMBAU-AGREEMENT",
+          "E19-NAN-1832-TABOH-OCCUPATION",
+          "E19-NAN-1832-ADMINISTRATION",
+          "E19-NAN-1834-DOL-SAID-SURRENDER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "naning-taboh-administration",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1831,
+            "controller": "naning",
+            "title": "塔波 · 南宁地方政权",
+            "summary_zh": "多尔·赛义德在塔波治理南宁，并抵制马六甲殖民当局征税。"
+          },
+          {
+            "start_year": 1832,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "塔波 · 马六甲殖民管辖",
+            "summary_zh": "塔波于1832年6月失守。同年10月，马六甲殖民当局在南宁任命新的辖区首领。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aden-port-governance",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.03862,
+          12.77522
+        ]
+      },
+      "properties": {
+        "name": "亚丁 · 港城",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "1839年1月19日，英军攻占亚丁。孟买当局随后着手筹建民政与防务。",
+        "source_ids": [
+          "19C34-AD-TREAT",
+          "19C34-AD-MIL",
+          "19C34-AD-GOV",
+          "19C34-AD-GEO",
+          "19C34-AD-RES"
+        ],
+        "source_urls": [
+          "https://qdl.qa/en/archive/81055/vdc_100023462214.0x00002f",
+          "https://www.qdl.qa/en/archive/81055/vdc_100023729267.0x000019",
+          "https://qdl.qa/en/archive/81055/vdc_100110385087.0x00000d",
+          "https://database.earth/countries/yemen/regions/aden/cities/crater",
+          "https://www.qdl.qa/archive/81055/vdc_100111230835.0x000009"
+        ],
+        "named_anchors": [
+          "亚丁"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-ADE-1838-PORT-NEGOTIATIONS",
+          "E19-ADE-1839-CAPTURE",
+          "E19-ADE-1839-AGREEMENT",
+          "E19-ADE-1839-CIVIL-ADMINISTRATION",
+          "E19-ADE-1839-RESISTANCE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "aden-port-governance",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1838,
+            "controller": "lahij",
+            "title": "亚丁 · 拉赫季苏丹辖港",
+            "summary_zh": "拉赫季苏丹管辖亚丁。1838年，苏丹与英方围绕港口转交及司法权展开交涉。"
+          },
+          {
+            "start_year": 1839,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "亚丁 · 东印度公司驻地",
+            "summary_zh": "1839年1月19日，英军攻占亚丁。孟买当局随后着手筹建民政与防务。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "afghanistan-kandahar-garrison",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.71667,
+          31.61667
+        ]
+      },
+      "properties": {
+        "name": "坎大哈 · 英印军驻地",
+        "start_year": 1839,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "英印军4月进入坎大哈，主力向加兹尼推进时，诺特率部留驻。",
+        "source_ids": [
+          "19C34-AF-NAM",
+          "19C34-AF-GAZ",
+          "19C34-AF-KAN"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/first-afghan-war",
+          "https://library.bjp.org/jspui/bitstream/123456789/1892/1/The%20Imperial%20Gazetteer%20of%20India%20%20%20Abrar%20to%20Balasinor%20Vol-1.pdf",
+          "https://vocab.getty.edu/page/tgn/7002248"
+        ],
+        "named_anchors": [
+          "坎大哈"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-AFG-1839-BOLAN-PASS",
+          "E19-AFG-1839-KANDAHAR",
+          "E19-AFG-1839-GHAZNI"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "afghanistan-kandahar-garrison",
+        "year_stages": [
+          {
+            "start_year": 1839,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "坎大哈 · 英印军驻地",
+            "summary_zh": "英印军4月进入坎大哈，主力向加兹尼推进时，诺特率部留驻。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "afghanistan-kabul-garrison",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.17233,
+          34.52813
+        ]
+      },
+      "properties": {
+        "name": "喀布尔 · 沙阿·舒贾王廷与英印军驻地",
+        "start_year": 1839,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "沙阿·舒贾在英印军支持下复位，英印军留驻喀布尔。",
+        "source_ids": [
+          "19C34-AF-NAM",
+          "19C34-AF-GAZ",
+          "19C34-AF-KAB"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/first-afghan-war",
+          "https://library.bjp.org/jspui/bitstream/123456789/1892/1/The%20Imperial%20Gazetteer%20of%20India%20%20%20Abrar%20to%20Balasinor%20Vol-1.pdf",
+          "https://www.geonames.org/1138958"
+        ],
+        "named_anchors": [
+          "喀布尔"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-AFG-1839-GHAZNI",
+          "E19-AFG-1839-KABUL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "afghanistan-kabul-garrison",
+        "year_stages": [
+          {
+            "start_year": 1839,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "喀布尔 · 沙阿·舒贾王廷与英印军驻地",
+            "summary_zh": "沙阿·舒贾在英印军支持下复位，英印军留驻喀布尔。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "baluchistan-kalat-political-seat",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.58878,
+          29.02914
+        ]
+      },
+      "properties": {
+        "name": "卡拉特 · 英方扶立沙阿·纳瓦兹汗",
+        "start_year": 1839,
+        "end_year": 1839,
+        "display_kind": "control",
+        "summary_zh": "英印军11月攻城，梅赫拉布汗战死。英方随后扶立沙阿·纳瓦兹汗。",
+        "source_ids": [
+          "19C34-KAL-UOB",
+          "19C34-KAL-REP",
+          "19C34-KAL-GEO"
+        ],
+        "source_urls": [
+          "https://www.uob.ac.pk/Journals/Balochistan-Review/data/BR%2002%202015/61-72%20The%20History%20of%20Kalat%20Affairs%201666%20to%201871%2C%20Pervez%20Ahmed.pdf",
+          "https://www.cyberlibrary.org/en/books/campaign-of-the-indus-in-a-series-of-letters-from-an-officer-of-0cd3a7ea/chapters/14/",
+          "https://mapcarta.com/N271909274"
+        ],
+        "named_anchors": [
+          "卡拉特"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-KAL-1839-QUETTA-MARCH",
+          "E19-KAL-1839-STORMING",
+          "E19-KAL-1839-INSTALLATION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "baluchistan-kalat-political-seat",
+        "year_stages": [
+          {
+            "start_year": 1839,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "卡拉特 · 英方扶立沙阿·纳瓦兹汗",
+            "summary_zh": "英印军11月攻城，梅赫拉布汗战死。英方随后扶立沙阿·纳瓦兹汗。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "patna-opium-agency",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.13563,
+          25.59408
+        ]
+      },
+      "properties": {
+        "name": "巴特那 · 东印度公司鸦片专卖",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "economic_network",
+        "summary_zh": "公司通过巴特那代理机构向种植者提供预付款，并指定鸦片的收购条件。",
+        "source_ids": [
+          "19C34-OP-CAM",
+          "19C34-OP-HAN",
+          "19C34-OP-PAT"
+        ],
+        "source_urls": [
+          "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/199D0743201BF76C8ADA72F625B85FAD/S0026749X17001093a.pdf/poor_mans_crop_evading_opium_monopoly.pdf",
+          "https://api.parliament.uk/historic-hansard/commons/1840/jul/27/supply-china",
+          "https://www.geonames.org/1260086"
+        ],
+        "named_anchors": [
+          "巴特那"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-OP-1839-PATNA-MONOPOLY",
+          "E19-OP-1839-CALCUTTA-AUCTIONS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "patna-opium-agency",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "巴特那 · 东印度公司鸦片专卖",
+            "summary_zh": "公司通过巴特那代理机构向种植者提供预付款，并指定鸦片的收购条件。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ghazipur-opium-factory",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.58526,
+          25.58333
+        ]
+      },
+      "properties": {
+        "name": "加济布尔 · 鸦片工厂",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "economic_network",
+        "summary_zh": "公司在恒河岸边的工厂加工专卖体系收购的鸦片。",
+        "source_ids": [
+          "19C34-OP-GHAZ",
+          "19C34-OP-CAM",
+          "19C34-OP-GHAZ-GEO"
+        ],
+        "source_urls": [
+          "https://goaf.gov.in/ghazipur/about-us/introduction-ghazipur",
+          "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/199D0743201BF76C8ADA72F625B85FAD/S0026749X17001093a.pdf/poor_mans_crop_evading_opium_monopoly.pdf",
+          "https://www.geonames.org/search.html?country=IN&q=&startRow=650"
+        ],
+        "named_anchors": [
+          "加济布尔"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-OP-1839-GHAZIPUR-FACTORY",
+          "E19-OP-1839-CALCUTTA-AUCTIONS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ghazipur-opium-factory",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "加济布尔 · 鸦片工厂",
+            "summary_zh": "公司在恒河岸边的工厂加工专卖体系收购的鸦片。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "calcutta-opium-auctions",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.36304,
+          22.56263
+        ]
+      },
+      "properties": {
+        "name": "加尔各答 · 东印度公司鸦片拍卖",
+        "start_year": 1830,
+        "end_year": 1839,
+        "display_kind": "economic_network",
+        "summary_zh": "公司在加尔各答拍卖鸦片，私人商人购货后运往中国沿海。",
+        "source_ids": [
+          "19C34-OP-CAM",
+          "19C34-OP-HAN",
+          "19C34-OP-CAL"
+        ],
+        "source_urls": [
+          "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/199D0743201BF76C8ADA72F625B85FAD/S0026749X17001093a.pdf/poor_mans_crop_evading_opium_monopoly.pdf",
+          "https://api.parliament.uk/historic-hansard/commons/1840/jul/27/supply-china",
+          "https://www.geonames.org/1275004"
+        ],
+        "named_anchors": [
+          "加尔各答"
+        ],
+        "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
+        "related_event_ids": [
+          "E19-OP-1839-PATNA-MONOPOLY",
+          "E19-OP-1839-CALCUTTA-AUCTIONS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "calcutta-opium-auctions",
+        "year_stages": [
+          {
+            "start_year": 1830,
+            "end_year": 1839,
+            "controller": "british",
+            "title": "加尔各答 · 东印度公司鸦片拍卖",
+            "summary_zh": "公司在加尔各答拍卖鸦片，私人商人购货后运往中国沿海。"
           }
         ]
       }
