@@ -1201,6 +1201,7 @@ function renderNineteenthSpatial(){
    pane:'eventTooltipPane',className:'atlas-hover',direction:'auto',offset:[12,0]
   }).on('click',e=>{
    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+   if(p.opens_area_id&&window.historicOverlapDossier?.openAt?.(L.latLng(lat,lon),'site-marker',p.opens_area_id))return;
    openTerritoryDossier(site);
   }).addTo(group);
  }

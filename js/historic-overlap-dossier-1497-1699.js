@@ -187,13 +187,14 @@
   }
   host.openPanel('dossier');
  }
- function openAt(ll,source){
+ function openAt(ll,source,preferredFeatureId){
   if(!enabled())return false;
   const found=at(ll);
   if(!found.length)return false;
+  const first=found.find(r=>r.feature.id===preferredFeatureId)||found[0];
   activeRecords=found;point=ll;currentYear=host.getYear();
-  selected=found[0].key;openedVia=source;
-  renderCards();outline(found[0]);
+  selected=first.key;openedVia=source;
+  renderCards();outline(first);
   return true;
  }
  // Capture actual map pixels before other Leaflet layers can stop propagation.

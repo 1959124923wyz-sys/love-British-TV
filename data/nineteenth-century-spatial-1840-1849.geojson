@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1840–1849 Chapter 35 batches 1–2",
+    "coverage": "1840–1849 Chapter 35 batches 1–3",
     "historical_area_statistics": false
   },
   "features": [
@@ -3354,6 +3354,752 @@
             "summary_zh": "1849年1月，穆尔拉杰投降，英印军控制木尔坦。"
           }
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-waitangi-treaty-grounds",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.082083,
+          -35.265639
+        ]
+      },
+      "properties": {
+        "name": "怀唐伊 · 条约签署",
+        "start_year": 1840,
+        "end_year": 1840,
+        "display_kind": "political",
+        "summary_zh": "英国王室代表与首批毛利首领在这里签署条约。",
+        "source_ids": [
+          "19C35-NZ-TREATY-ARCH",
+          "19C35-NZ-TREATY-TEXT",
+          "19C35-NZ-WAITANGI",
+          "19C35-NZ-WAITANGI-PLACE"
+        ],
+        "source_urls": [
+          "https://www.archives.govt.nz/discover-our-stories/the-treaty-of-waitangi/timeline-of-te-tiriti-o-waitangi-the-treaty-of-waitangi",
+          "https://www.waitangitribunal.govt.nz/en/about/the-treaty/maori-and-english-versions",
+          "https://www.heritage.org.nz/list-details/6/Waitangi%20Treaty%20Grounds",
+          "https://commons.wikimedia.org/wiki/File:Treaty_House_at_Waitangi_Treaty_Grounds.jpg"
+        ],
+        "named_anchors": [
+          "怀唐伊"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1840-WAITANGI"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-waitangi-treaty-grounds"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-okiato-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.120082,
+          -35.302508
+        ]
+      },
+      "properties": {
+        "name": "奥基亚托 · 临时殖民首府",
+        "start_year": 1840,
+        "end_year": 1840,
+        "display_kind": "control",
+        "summary_zh": "1840年，霍布森把殖民政府设在奥基亚托。",
+        "source_ids": [
+          "19C35-NZ-CAPITAL",
+          "19C35-NZ-OKIATO",
+          "19C35-NZ-OKIATO-PLACE"
+        ],
+        "source_urls": [
+          "https://teara.govt.nz/en/nation-and-government/page-2",
+          "https://www.doc.govt.nz/parks-and-recreation/places-to-go/northland/places/russell-area/heritage-sites/okiato-historic-reserve/",
+          "https://commons.wikimedia.org/wiki/File:Okiato_water_well.jpg"
+        ],
+        "named_anchors": [
+          "奥基亚托"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1840-OKIATO-CAPITAL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-okiato-government",
+        "year_stages": [
+          {
+            "start_year": 1840,
+            "end_year": 1840,
+            "controller": "british",
+            "title": "奥基亚托 · 临时殖民首府",
+            "summary_zh": "霍布森在这里设置殖民行政驻地。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-auckland-government",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.77042,
+          -36.84988
+        ]
+      },
+      "properties": {
+        "name": "奥克兰 · 殖民政府",
+        "start_year": 1841,
+        "end_year": 1849,
+        "display_kind": "control",
+        "summary_zh": "1841年殖民政府从岛屿湾迁入奥克兰。",
+        "source_ids": [
+          "19C35-NZ-CAPITAL",
+          "19C35-NZ-AUCKLAND-HOUSE",
+          "19C35-NZ-AUCKLAND-PLACE"
+        ],
+        "source_urls": [
+          "https://teara.govt.nz/en/nation-and-government/page-2",
+          "https://www.auckland.ac.nz/en/about-us/community-services/old-government-house/history-of-old-government-house.html",
+          "https://en.wikipedia.org/wiki/Old_Government_House,_Auckland"
+        ],
+        "named_anchors": [
+          "奥克兰"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1841-AUCKLAND-CAPITAL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-auckland-government",
+        "year_stages": [
+          {
+            "start_year": 1841,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "奥克兰 · 殖民政府",
+            "summary_zh": "1841年殖民政府从岛屿湾迁入奥克兰。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-maiki-flagstaff",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.119176,
+          -35.255266
+        ]
+      },
+      "properties": {
+        "name": "迈基山 · 英国旗杆与殖民驻军",
+        "start_year": 1840,
+        "end_year": 1845,
+        "display_kind": "political",
+        "summary_zh": "英国殖民当局在迈基山升起旗帜。赫克一方四度砍倒旗杆，1845年科罗拉雷卡驻军撤离。",
+        "source_ids": [
+          "19C35-NZ-NORTH-ORIGINS",
+          "19C35-NZ-FORTS"
+        ],
+        "source_urls": [
+          "https://nzhistory.govt.nz/war/northern-war/origins",
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf"
+        ],
+        "named_anchors": [
+          "迈基山"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1844-MAIKI-FIRST-FLAGSTAFF",
+          "E19-NZ-1845-MAIKI-JAN10",
+          "E19-NZ-1845-MAIKI-JAN19",
+          "E19-NZ-1845-KORORAREKA"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-maiki-flagstaff",
+        "year_stages": [
+          {
+            "start_year": 1840,
+            "end_year": 1844,
+            "controller": "british",
+            "title": "迈基山 · 英国旗杆",
+            "summary_zh": "殖民当局在1840年设置旗杆，1844年7月赫克一方首次砍倒它。"
+          },
+          {
+            "start_year": 1845,
+            "end_year": 1845,
+            "controller": "local",
+            "title": "迈基山 · 旗杆倒下与驻军撤离",
+            "summary_zh": "赫克与卡维蒂一方进攻科罗拉雷卡，英军撤出。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-otuihu-pa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.126325,
+          -35.32008
+        ]
+      },
+      "properties": {
+        "name": "奥图伊胡寨 · 波马雷二世",
+        "start_year": 1845,
+        "end_year": 1845,
+        "display_kind": "local_governance",
+        "summary_zh": "英军在1845年4月拘捕波马雷二世并毁坏寨堡。",
+        "source_ids": [
+          "19C35-NZ-FORTS",
+          "19C35-NZ-NORTH"
+        ],
+        "source_urls": [
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf",
+          "https://nzhistory.govt.nz/war/northern-war"
+        ],
+        "named_anchors": [
+          "奥图伊胡寨"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1845-OTUIHU"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-otuihu-pa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-ohaeawai-pa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.854389,
+          -35.377419
+        ]
+      },
+      "properties": {
+        "name": "奥哈埃瓦伊寨 · 抵抗与撤出",
+        "start_year": 1845,
+        "end_year": 1845,
+        "display_kind": "local_governance",
+        "summary_zh": "佩内·陶伊与卡维蒂一方击退英军突击，后来撤出，殖民军毁坏寨堡。",
+        "source_ids": [
+          "19C35-NZ-FORTS",
+          "19C35-NZ-OHAEAWAI"
+        ],
+        "source_urls": [
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf",
+          "https://nzhistory.govt.nz/memorial/ohaeawai-nz-wars-memorial-cross"
+        ],
+        "named_anchors": [
+          "奥哈埃瓦伊寨"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1845-OHAEAWAI"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-ohaeawai-pa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-ruapekapeka-pa",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              174.142945,
+              -35.4561437
+            ],
+            [
+              174.1431419,
+              -35.4560529
+            ],
+            [
+              174.1434599,
+              -35.4559241
+            ],
+            [
+              174.1437097,
+              -35.4559771
+            ],
+            [
+              174.1439141,
+              -35.4561059
+            ],
+            [
+              174.1441261,
+              -35.4563103
+            ],
+            [
+              174.1441716,
+              -35.456545
+            ],
+            [
+              174.1440883,
+              -35.4567191
+            ],
+            [
+              174.143846,
+              -35.4567949
+            ],
+            [
+              174.1436643,
+              -35.4569311
+            ],
+            [
+              174.1434144,
+              -35.4568706
+            ],
+            [
+              174.1431797,
+              -35.4567343
+            ],
+            [
+              174.1430283,
+              -35.4565526
+            ],
+            [
+              174.1429147,
+              -35.4563027
+            ],
+            [
+              174.142945,
+              -35.4561437
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "鲁阿佩卡佩卡寨",
+        "start_year": 1845,
+        "end_year": 1846,
+        "display_kind": "local_governance",
+        "summary_zh": "卡维蒂一方修筑寨堡。英军1846年1月炮击，后与毛利盟军进入寨内，后方林地仍在交战。",
+        "source_ids": [
+          "19C35-NZ-RUA-PLAN",
+          "19C35-NZ-RUA-IMAGERY",
+          "19C35-NZ-FORTS",
+          "19C35-NZ-RUAPEKAPEKA"
+        ],
+        "source_urls": [
+          "https://www.doc.govt.nz/documents/conservation/historic/by-region/northland/ruapekapeka-heritage-assessment.pdf",
+          "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=174.1395,-35.4586,174.1448,-35.4529&bboxSR=4326&imageSR=4326&size=700,900&format=png&f=image",
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf",
+          "https://nzhistory.govt.nz/ruapekapeka-pa-occupied-by-british-forces"
+        ],
+        "named_anchors": [
+          "鲁阿佩卡佩卡寨"
+        ],
+        "mapping_method": "Visible earthwork perimeter traced in WGS84 imagery and compared with Department of Conservation Appendix B and C. Partial historic extent; dashed.",
+        "related_event_ids": [
+          "E19-NZ-1845-RUA-SIEGE",
+          "E19-NZ-1846-RUA-BOMBARDMENT",
+          "E19-NZ-1846-RUA-ENTRY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-ruapekapeka-pa",
+        "year_stages": [
+          {
+            "start_year": 1845,
+            "end_year": 1845,
+            "controller": "local",
+            "title": "鲁阿佩卡佩卡寨 · 卡维蒂的防御工事",
+            "summary_zh": "卡维蒂一方修筑寨堡，英军在年末推进。"
+          },
+          {
+            "start_year": 1846,
+            "end_year": 1846,
+            "controller": "local",
+            "title": "鲁阿佩卡佩卡寨 · 炮击与交战",
+            "summary_zh": "英军炮击后进入寨内，毛利守军继续在后方林地交战。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-ruapekapeka-pa-site",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.14354,
+          -35.45641
+        ]
+      },
+      "properties": {
+        "name": "鲁阿佩卡佩卡 · 寨址",
+        "start_year": 1845,
+        "end_year": 1846,
+        "display_kind": "local_governance",
+        "summary_zh": "殖民军与毛利盟军于1846年1月进入寨内，交战随后在后方林地继续。",
+        "source_ids": [
+          "19C35-NZ-RUA-PLAN",
+          "19C35-NZ-RUAPEKAPEKA",
+          "19C35-NZ-FORTS"
+        ],
+        "source_urls": [
+          "https://www.doc.govt.nz/documents/conservation/historic/by-region/northland/ruapekapeka-heritage-assessment.pdf",
+          "https://nzhistory.govt.nz/ruapekapeka-pa-occupied-by-british-forces",
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf"
+        ],
+        "named_anchors": [
+          "鲁阿佩卡佩卡"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1845-RUA-SIEGE",
+          "E19-NZ-1846-RUA-BOMBARDMENT",
+          "E19-NZ-1846-RUA-ENTRY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-ruapekapeka-pa-site",
+        "opens_area_id": "nz-ruapekapeka-pa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-ruapekapeka-british-battery",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.141277,
+          -35.453752
+        ]
+      },
+      "properties": {
+        "name": "鲁阿佩卡佩卡 · 殖民军前沿工事",
+        "start_year": 1845,
+        "end_year": 1846,
+        "display_kind": "control",
+        "summary_zh": "殖民军在寨外布阵，1846年1月以炮火攻击寨堡。",
+        "source_ids": [
+          "19C35-NZ-RUA-PLAN",
+          "19C35-NZ-RUA-MEM",
+          "19C35-NZ-FORTS"
+        ],
+        "source_urls": [
+          "https://www.doc.govt.nz/documents/conservation/historic/by-region/northland/ruapekapeka-heritage-assessment.pdf",
+          "https://nzhistory.govt.nz/memorial/te-ruapekapeka-soldiers-memorial",
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf"
+        ],
+        "named_anchors": [
+          "鲁阿佩卡佩卡"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1845-RUA-SIEGE",
+          "E19-NZ-1846-RUA-BOMBARDMENT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-ruapekapeka-british-battery",
+        "year_stages": [
+          {
+            "start_year": 1845,
+            "end_year": 1846,
+            "controller": "british",
+            "title": "鲁阿佩卡佩卡 · 殖民军前沿工事",
+            "summary_zh": "殖民军和毛利盟军在寨外布阵，炮击后进入鲁阿佩卡佩卡寨。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-paremata-garrison",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.865747,
+          -41.099357
+        ]
+      },
+      "properties": {
+        "name": "帕雷马塔 · 殖民驻军",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "control",
+        "summary_zh": "殖民军1846年进驻、1847年建成石兵营。地震损毁建筑后，驻军迁入相邻栅堡。",
+        "source_ids": [
+          "19C35-NZ-PAREMATA",
+          "19C35-NZ-FORTS"
+        ],
+        "source_urls": [
+          "https://www.heritage.org.nz/list-details/1329/Paremata%2BBarracks%2BRuins",
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf"
+        ],
+        "named_anchors": [
+          "帕雷马塔"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1846-PAREMATA-GARRISON",
+          "E19-NZ-1847-PAREMATA-BARRACKS",
+          "E19-NZ-1848-PAREMATA-QUAKE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-paremata-garrison",
+        "year_stages": [
+          {
+            "start_year": 1846,
+            "end_year": 1846,
+            "controller": "british",
+            "title": "帕雷马塔 · 栅堡和临时军营",
+            "summary_zh": "殖民军进驻波里鲁阿港渡口附近。"
+          },
+          {
+            "start_year": 1847,
+            "end_year": 1847,
+            "controller": "british",
+            "title": "帕雷马塔 · 石兵营",
+            "summary_zh": "石兵营于8月建成。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "帕雷马塔 · 相邻栅堡驻军",
+            "summary_zh": "地震损坏石兵营，殖民军迁往相邻栅堡的木屋。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-matai-taua-pa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.91717,
+          -41.107073
+        ]
+      },
+      "properties": {
+        "name": "马泰陶阿寨 · 特·朗伊哈埃阿塔",
+        "start_year": 1846,
+        "end_year": 1846,
+        "display_kind": "local_governance",
+        "summary_zh": "特·朗伊哈埃阿塔于8月撤出波瓦塔哈努伊的寨堡。",
+        "source_ids": [
+          "19C35-NZ-FORTS",
+          "19C35-NZ-HUTT"
+        ],
+        "source_urls": [
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf",
+          "https://nzhistory.govt.nz/war/wellington-war"
+        ],
+        "named_anchors": [
+          "马泰陶阿寨"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1846-MATAI-TAUA",
+          "E19-NZ-1846-BATTLE-HILL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-matai-taua-pa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-battle-hill",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.936989,
+          -41.051798
+        ]
+      },
+      "properties": {
+        "name": "霍罗基里 · 战斗丘",
+        "start_year": 1846,
+        "end_year": 1846,
+        "display_kind": "local_governance",
+        "summary_zh": "特·朗伊哈埃阿塔在山脊抵抗追击，战后率部撤向北方。",
+        "source_ids": [
+          "19C35-NZ-FORTS",
+          "19C35-NZ-BATTLE-HILL",
+          "19C35-NZ-HUTT"
+        ],
+        "source_urls": [
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf",
+          "https://www.gw.govt.nz/parks/battle-hill-farm-forest-park/",
+          "https://nzhistory.govt.nz/war/wellington-war"
+        ],
+        "named_anchors": [
+          "霍罗基里"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1846-BATTLE-HILL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-battle-hill"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-rutland-stockade",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.052305,
+          -39.930902
+        ]
+      },
+      "properties": {
+        "name": "普凯纳穆 · 鲁特兰栅堡",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "control",
+        "summary_zh": "殖民军进驻原有毛利寨址的高地，修筑栅堡。1847年军法处刑与围攻发生于其驻守期间。",
+        "source_ids": [
+          "19C35-NZ-WHANGANUI",
+          "19C35-NZ-FORTS",
+          "19C35-NZ-RUTLAND",
+          "19C35-NZ-WHANGANUI-SIEGE"
+        ],
+        "source_urls": [
+          "https://nzhistory.govt.nz/war/wanganui-war",
+          "https://www.doc.govt.nz/Documents/science-and-technical/sap261entire.pdf",
+          "https://www.whanganui.govt.nz/Services/Parks-and-Reserves/Find-a-Park/Pukenamu-Queen%E2%80%99s-Park",
+          "https://nzhistory.govt.nz/war/wanganui-war/siege-of-wanganui"
+        ],
+        "named_anchors": [
+          "普凯纳穆"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1846-WHANGANUI-GARRISON",
+          "E19-NZ-1847-RUTLAND-STOCKADE",
+          "E19-NZ-1847-RUTLAND-EXECUTIONS",
+          "E19-NZ-1847-WHANGANUI-SIEGE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-rutland-stockade",
+        "year_stages": [
+          {
+            "start_year": 1846,
+            "end_year": 1846,
+            "controller": "british",
+            "title": "普凯纳穆 · 英军开始筑堡",
+            "summary_zh": "英国部队12月开始修建栅堡。"
+          },
+          {
+            "start_year": 1847,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "普凯纳穆 · 鲁特兰栅堡",
+            "summary_zh": "栅堡在1847年4月完工，成为殖民军的驻地。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nz-moeraki-reserves",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.85151,
+          -45.36099
+        ]
+      },
+      "properties": {
+        "name": "莫埃拉基 · 保留地与恩盖塔胡申诉",
+        "start_year": 1848,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "蒂拉莫雷胡1848年在莫埃拉基质疑保留地范围，翌年致信王室申诉。",
+        "source_ids": [
+          "19C35-NZ-MOERAKI",
+          "19C35-NZ-NGAI-TRIBUNAL",
+          "19C35-NZ-TIRAMOREHU",
+          "19C35-NZ-MOERAKI-PLACE"
+        ],
+        "source_urls": [
+          "https://moeraki.org.nz/whakapapa-our-history",
+          "https://forms.justice.govt.nz/search/Documents/WT/wt_DOC_68476209/Wai27.pdf",
+          "https://ngaitahu.iwi.nz/connect-2/connect/news-and-stories/matiaha-tiramorehu-the-first-formal-statement-of-ngai-tahu-grievances-against-the-crown/",
+          "https://mapcarta.com/16719140"
+        ],
+        "named_anchors": [
+          "莫埃拉基"
+        ],
+        "mapping_method": "Named historical location referenced to a cited WGS84 point.",
+        "related_event_ids": [
+          "E19-NZ-1848-MANTELL-MOERAKI",
+          "E19-NZ-1849-TIRAMOREHU-LETTER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nz-moeraki-reserves"
       }
     }
   ]
