@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1840–1849 Chapter 35 batches 1–8",
+    "coverage": "1840–1849 Chapter 35 batches 1–9",
     "historical_area_statistics": false
   },
   "features": [
@@ -737,13 +737,16 @@
         "start_year": 1840,
         "end_year": 1849,
         "display_kind": "control",
-        "summary_zh": "乔治敦继续是殖民行政中心，1831年德梅拉拉、埃塞奎博与伯比斯合并。",
+        "summary_zh": "殖民政府经乔治敦组织新的劳工输入，又以公共收入担保招工债务。",
         "source_ids": [
           "19C33-DEM-1814",
           "19C33-DEM-COL",
           "19C33-DEM-TRIAL",
           "19C33-DEM-GEORGE",
-          "19C34-GY-UNION"
+          "19C34-GY-UNION",
+          "19C35-IND-GY-SHIPS",
+          "19C35-IND-LOAN-ACT",
+          "19C35-IND-GY-SUSPEND"
         ],
         "named_anchors": [
           "乔治敦"
@@ -753,7 +756,10 @@
           "E19-DEM-1823-COURTS-EXECUTIONS",
           "E19-DEM-1823-SMITH-TRIAL",
           "E19-DEM-1824-SMITH-PRISON",
-          "E19-GUI-1831-COLONIAL-UNION"
+          "E19-GUI-1831-COLONIAL-UNION",
+          "E19-MIG-GY-1845-HUNGERFORD",
+          "E19-MIG-GY-1845-MADRAS",
+          "E19-MIG-GY-1848-BONDS"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -766,15 +772,32 @@
           "https://parliament.gov.gy/GUYANA%20PARLIAMENT%20HISTORY%202009-1.pdf",
           "https://www.cloudshare.regeneratedidentities.org/LA/Irish%20Publishing%20Press/Slave%20Trade%2066/Demerara.%20Minutes%20of%20Evidence%20on%20the%20Trial%20of%20John%20Smith%20a%20Missionary..pdf",
           "https://www.getty.edu/vow/TGNFullDisplay?english=Y&subjectid=7005275",
-          "https://parliament.gov.gy/new2/GUYANA%20PARLIAMENT%20HISTORY%202009-1.pdf"
+          "https://parliament.gov.gy/new2/GUYANA%20PARLIAMENT%20HISTORY%202009-1.pdf",
+          "https://guyanachronicle.com/2009/05/05/the-coolie-ships/",
+          "https://www.legislation.gov.uk/ukpga/Vict/11-12/22/pdfs/ukpga_18480022_en.pdf",
+          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/25601/GIPE-016392.pdf?isAllowed=y&sequence=3"
         ],
         "year_stages": [
           {
             "start_year": 1840,
-            "end_year": 1849,
+            "end_year": 1844,
             "controller": "british",
             "title": "乔治敦 · 英属圭亚那殖民政府",
             "summary_zh": "乔治敦继续是殖民行政中心，1831年德梅拉拉、埃塞奎博与伯比斯合并。"
+          },
+          {
+            "start_year": 1845,
+            "end_year": 1847,
+            "controller": "british",
+            "title": "乔治敦 · 重开印度招工",
+            "summary_zh": "1845年，英属圭亚那恢复从印度招工，先后接收从加尔各答和马德拉斯来的船只。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "乔治敦 · 殖民政府筹措招工债务",
+            "summary_zh": "殖民政府以公共收入担保借款。印度劳工输入到1848年再次暂停。"
           }
         ]
       }
@@ -2344,20 +2367,26 @@
         "start_year": 1840,
         "end_year": 1849,
         "display_kind": "control",
-        "summary_zh": "1839年3月底，余下的强制学徒劳动义务终止。",
+        "summary_zh": "废奴后，殖民政府恢复印度招工，并配合就业、登记与证件规定管束移民。",
         "source_ids": [
           "19C34-LAB-MAU-ARCH",
           "19C34-LAB-MAU-APP",
           "19C34-LAB-MAU-ARR",
           "19C34-LAB-MAU-UN",
-          "19C34-LAB-MAU-G"
+          "19C34-LAB-MAU-G",
+          "19C35-IND-MU-CHRON",
+          "19C35-IND-MU-PASS",
+          "19C35-IND-MU-GHAT"
         ],
         "source_urls": [
           "https://nationalarchives.govmu.org/nationalarchives/wp-content/uploads/2020/12/Sections-a-f.pdf",
           "https://www.cambridge.org/core/journals/african-studies-review/article/abs/apprenticeship-system-in-mauritius-its-character-and-its-impact-on-race-relations-in-the-immediate-postemancipation-period-18391879/25B97408BEEE67E7FAE3B43170FF18FD",
           "https://aapravasi.govmu.org/aapravasi/wp-content/uploads/2020/09/Education-Kit-for-teachers.pdf",
           "https://whc.unesco.org/en/list/1227",
-          "https://www.geonames.org/934154/port-louis.html"
+          "https://www.geonames.org/934154/port-louis.html",
+          "https://aapravasi.govmu.org/aapravasi/wp-content/uploads/2020/09/Brief-History-of-the-Aapravasi-Ghat-World-Heritage-Site.pdf",
+          "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/BD64E93B3FCDE195B7DAA56276060896/S0738248022000542a.pdf/oceanic_mobility_and_the_empire_of_the_pass_system.pdf",
+          "https://aapravasi.govmu.org/aapravasi/?page_id=794"
         ],
         "named_anchors": [
           "路易港"
@@ -2368,7 +2397,10 @@
           "E19-MAU-1835-SLAVERY-ABOLITION",
           "E19-MAU-1835-SLAVEOWNER-CLAIMS",
           "E19-MAU-1836-1839-AMENDED-AWARDS",
-          "E19-MAU-1839-APPRENTICESHIP-END"
+          "E19-MAU-1839-APPRENTICESHIP-END",
+          "E19-MIG-MU-1842-REOPENING",
+          "E19-MIG-MU-1846-PASSPORTS",
+          "E19-MIG-MU-1847-PASSES"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -2379,10 +2411,24 @@
         "year_stages": [
           {
             "start_year": 1840,
-            "end_year": 1849,
+            "end_year": 1841,
             "controller": "british",
             "title": "路易港 · 学徒制结束",
             "summary_zh": "1839年3月底，余下的强制学徒劳动义务终止。"
+          },
+          {
+            "start_year": 1842,
+            "end_year": 1846,
+            "controller": "british",
+            "title": "路易港 · 政府接管招工",
+            "summary_zh": "1842年，殖民政府恢复并接管赴毛里求斯的印度劳工招募。"
+          },
+          {
+            "start_year": 1847,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "路易港 · 殖民政府管理劳工证件",
+            "summary_zh": "1847年第22号条例通过后，已经完成契约的工人仍被要求继续就业和随身带证。"
           }
         ]
       }
@@ -6746,6 +6792,384 @@
             "controller": "local",
             "title": "圣卡洛斯 · 尼加拉瓜据点",
             "summary_zh": "1848年英军撤出后，圣卡洛斯由尼加拉瓜管理。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mauritius-aapravasi-ghat-depot",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.5031667,
+          -20.1586389
+        ]
+      },
+      "properties": {
+        "name": "路易港移民站 · 阿普拉瓦西加特",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "economic_network",
+        "summary_zh": "殖民政府在特鲁凡法龙湾设站登记新到港移民，并向糖业庄园分派劳工。",
+        "source_ids": [
+          "19C35-IND-MU-GHAT",
+          "19C35-IND-MU-UNESCO",
+          "19C35-IND-MU-ICOMOS"
+        ],
+        "source_urls": [
+          "https://aapravasi.govmu.org/aapravasi/?page_id=794",
+          "https://whc.unesco.org/en/list/1227",
+          "https://whc.unesco.org/document/152100"
+        ],
+        "named_anchors": [
+          "路易港移民站"
+        ],
+        "mapping_method": "UNESCO designated-site anchor at the 1849 Immigration Depot location. Extant buildings include later works.",
+        "related_event_ids": [
+          "E19-MIG-MU-1849-DEPOT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "mauritius-aapravasi-ghat-depot",
+        "year_stages": [
+          {
+            "start_year": 1849,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "路易港移民站 · 阿普拉瓦西加特",
+            "summary_zh": "殖民政府在特鲁凡法龙湾设站登记新到港移民，并向糖业庄园分派劳工。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trinidad-south-quay-indenture",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.50948,
+          10.64738
+        ]
+      },
+      "properties": {
+        "name": "西班牙港南码头 · 契约劳工抵达",
+        "start_year": 1845,
+        "end_year": 1849,
+        "display_kind": "economic_network",
+        "summary_zh": "1848年5月末班船到港后，特立尼达暂停输入印度契约劳工。下一艘印度劳工船于1851年4月抵达。",
+        "source_ids": [
+          "19C35-IND-TT-LAND",
+          "19C35-IND-TT-WHARF",
+          "19C35-IND-TT-REGISTER",
+          "19C35-IND-TT-WHARF-GEO",
+          "19C35-IND-TT-PAUSE"
+        ],
+        "source_urls": [
+          "https://nationaltrust.tt/beginning-of-indian-indentureship-trinidad/",
+          "https://chanceht.org/lighthouse/port-of-spain-lighthouse/",
+          "https://h.natt.gov.tt/sites/default/files/General-Registers-of-Indian-Indentured-Labourers.pdf",
+          "https://mapcarta.com/36592122",
+          "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-QMM-73708&oclc_number=894986857&op=pdf"
+        ],
+        "named_anchors": [
+          "西班牙港南码头"
+        ],
+        "mapping_method": "Use the surviving Old Lighthouse as the anchor for the historic South Quay arrival. Later ships use the capital anchor.",
+        "related_event_ids": [
+          "E19-MIG-TT-1845-ARRIVAL",
+          "E19-MIG-TT-1848-SUSPEND"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "trinidad-south-quay-indenture",
+        "year_stages": [
+          {
+            "start_year": 1845,
+            "end_year": 1845,
+            "controller": "british",
+            "title": "西班牙港南码头 · 首批印度契约劳工",
+            "summary_zh": "1845年5月30日，「法特·拉扎克」号抵达旧灯塔旁，首批劳工随后被分派到庄园。"
+          },
+          {
+            "start_year": 1846,
+            "end_year": 1847,
+            "controller": "british",
+            "title": "西班牙港南码头 · 印度契约劳工入境港",
+            "summary_zh": "1845年首航后，特立尼达继续接收契约劳工，由殖民当局登记到港和庄园分派。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "西班牙港南码头 · 第一轮招工船运暂停",
+            "summary_zh": "1848年5月末班船到港后，特立尼达暂停输入印度契约劳工。下一艘印度劳工船于1851年4月抵达。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trinidad-colonial-labour-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.51889,
+          10.66668
+        ]
+      },
+      "properties": {
+        "name": "西班牙港 · 殖民政府的雇佣与移民条例",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "control",
+        "summary_zh": "殖民政府授权赴英国发行债券，筹措引入劳工的费用。",
+        "source_ids": [
+          "19C35-IND-TT-LAW",
+          "19C35-IND-LOAN-ACT",
+          "19C35-IND-TT-CAP"
+        ],
+        "source_urls": [
+          "https://laws.gov.tt/ttdll-web/revision/byrepealed?format=&max=30&offset=2280",
+          "https://www.legislation.gov.uk/ukpga/Vict/11-12/22/pdfs/ukpga_18480022_en.pdf",
+          "https://digital.library.unt.edu/explore/locations/p15414/"
+        ],
+        "named_anchors": [
+          "西班牙港"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIG-TT-1846-MASTERS",
+          "E19-MIG-TT-1846-IMMIGRATION",
+          "E19-MIG-TT-1848-BONDS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "trinidad-colonial-labour-administration",
+        "year_stages": [
+          {
+            "start_year": 1846,
+            "end_year": 1847,
+            "controller": "british",
+            "title": "西班牙港 · 殖民雇佣与农业移民立法",
+            "summary_zh": "1846年，殖民当局分别颁布《主仆条例》与农业劳工移民条例。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "西班牙港 · 殖民财政担保招工",
+            "summary_zh": "殖民政府授权赴英国发行债券，筹措引入劳工的费用。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trinidad-lopinot-la-reconnaissance",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.32392,
+          10.69199
+        ]
+      },
+      "properties": {
+        "name": "洛皮诺 · 拉雷科奈桑斯庄园",
+        "start_year": 1845,
+        "end_year": 1845,
+        "display_kind": "economic_network",
+        "summary_zh": "「法特·拉扎克」号抵达后，部分工人被分派到这座庄园。",
+        "source_ids": [
+          "19C35-IND-TT-LAND",
+          "19C35-IND-TT-LOP",
+          "19C35-IND-TT-LOP-GEO"
+        ],
+        "source_urls": [
+          "https://nationaltrust.tt/beginning-of-indian-indentureship-trinidad/",
+          "https://nationaltrust.tt/location/lopinot-house/",
+          "https://mapcarta.com/N1360999530"
+        ],
+        "named_anchors": [
+          "洛皮诺"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIG-TT-1845-LOPINOT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "trinidad-lopinot-la-reconnaissance",
+        "year_stages": [
+          {
+            "start_year": 1845,
+            "end_year": 1845,
+            "controller": "british",
+            "title": "洛皮诺 · 拉雷科奈桑斯庄园",
+            "summary_zh": "「法特·拉扎克」号抵达后，部分工人被分派到这座庄园。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "saint-helena-james-bay-indenture",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.725,
+          -15.923333
+        ]
+      },
+      "properties": {
+        "name": "圣赫勒拿詹姆斯湾 · 劳工船补给",
+        "start_year": 1845,
+        "end_year": 1845,
+        "display_kind": "economic_network",
+        "summary_zh": "1845年4月18日，「法特·拉扎克」号在英属圣赫勒拿补给，当天驶往特立尼达。",
+        "source_ids": [
+          "19C35-IND-TT-HELENA",
+          "19C35-IND-SH-PORT"
+        ],
+        "source_urls": [
+          "https://nationaltrust.tt/arriving-at-st-helena/",
+          "https://www.sainthelena.gov.sh/st-helena/government/portfolios/safety-security-and-home-affairs/port-control/"
+        ],
+        "named_anchors": [
+          "圣赫勒拿詹姆斯湾"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIG-TT-1845-STHELENA"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "saint-helena-james-bay-indenture",
+        "year_stages": [
+          {
+            "start_year": 1845,
+            "end_year": 1845,
+            "controller": "british",
+            "title": "圣赫勒拿詹姆斯湾 · 劳工船补给",
+            "summary_zh": "1845年4月18日，「法特·拉扎克」号在英属圣赫勒拿补给，当天驶往特立尼达。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "madras-indenture-recruitment",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.27847,
+          13.08784
+        ]
+      },
+      "properties": {
+        "name": "马德拉斯 · 英属圭亚那招工港",
+        "start_year": 1845,
+        "end_year": 1848,
+        "display_kind": "economic_network",
+        "summary_zh": "「内斯托尔」号开出首航后，陆续有劳工船从马德拉斯驶向英属圭亚那。",
+        "source_ids": [
+          "19C35-IND-GY-CENSUS",
+          "19C35-IND-GY-SHIPS",
+          "19C35-IND-MAD-GEO"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/f/fe/On_the_Population_of_the_Colony_of_British_Guiana%2C_as_Enumerated_on_the_31st_of_March%2C_1851._Being_the_Substance_of_a_Despatch_from_Governor_Barkly_%28IA_jstor-2338128%29.pdf",
+          "https://guyanachronicle.com/2009/05/05/the-coolie-ships/",
+          "https://www.geonames.org/1264527/chennai.html"
+        ],
+        "named_anchors": [
+          "马德拉斯"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIG-GY-1845-MADRAS",
+          "E19-MIG-GY-1846-MADRAS-SEASON"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "madras-indenture-recruitment",
+        "year_stages": [
+          {
+            "start_year": 1845,
+            "end_year": 1848,
+            "controller": "british",
+            "title": "马德拉斯 · 英属圭亚那招工港",
+            "summary_zh": "「内斯托尔」号开出首航后，陆续有劳工船从马德拉斯驶向英属圭亚那。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "guiana-buxton-freedpeople-village",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.02566,
+          6.79499
+        ]
+      },
+      "properties": {
+        "name": "巴克斯顿 · 获释者集资建村",
+        "start_year": 1840,
+        "end_year": 1849,
+        "display_kind": "economic_network",
+        "summary_zh": "获得自由的非洲裔居民在1840年集资购下原种植园，建立巴克斯顿村。",
+        "source_ids": [
+          "19C35-IND-GY-VILLAGE",
+          "19C35-IND-GY-PUBLIC",
+          "19C35-IND-GY-VILLAGE-GEO"
+        ],
+        "source_urls": [
+          "https://dpi.gov.gy/buxton-rich-in-african-cultures/",
+          "https://www.bl.uk/stories/blogs/posts/chinese-indentured-labour-in-post-emancipation-british-guiana",
+          "https://mapcarta.com/19104120"
+        ],
+        "named_anchors": [
+          "巴克斯顿"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIG-GY-1840-BUXTON",
+          "E19-MIG-GY-1841-FRIENDSHIP"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "guiana-buxton-freedpeople-village",
+        "year_stages": [
+          {
+            "start_year": 1840,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "巴克斯顿 · 获释者集资建村",
+            "summary_zh": "获得自由的非洲裔居民在1840年集资购下原种植园，建立巴克斯顿村。"
           }
         ]
       }

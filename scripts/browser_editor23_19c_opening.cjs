@@ -411,7 +411,10 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1849,'E19-BOR-1849-KANOWIT-FINE','E19-BORNEO-BROOKE-LABUAN','E19-BOR-1843-PADEH',1843,false],
    [1843,'E19-HAW-1843-CESSION','E19-HAWAII-PAULET','E19-HAW-1843-RESTORATION',1843],
    [1848,'E19-MIS-1848-GREYTOWN-TAKEOVER','E19-MISKITU-GREYTOWN','E19-MIS-1847-BLUEFIELDS-DEPARTURE',1847],
-   [1848,'E19-MIS-1848-AGREEMENT','E19-MISKITU-GREYTOWN','E19-MIS-1848-SARAPIQUI-BATTLE',1848]
+   [1848,'E19-MIS-1848-AGREEMENT','E19-MISKITU-GREYTOWN','E19-MIS-1848-SARAPIQUI-BATTLE',1848],
+   [1849,'E19-MIG-MU-1849-DEPOT','E19-MAURITIUS-IMMIGRATION-DEPOT','E19-MIG-MU-1847-PASSES',1847],
+   [1845,'E19-MIG-TT-1845-ARRIVAL','E19-TRINIDAD-INDENTURE','E19-MIG-TT-1848-SUSPEND',1848],
+   [1848,'E19-MIG-GY-1848-PARLIAMENT','E19-GUIANA-INDENTURE-FINANCE','E19-MIG-GY-1840-BUXTON',1840]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -511,6 +514,19 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1849);
   assert.equal(await pointStroke(11.123,-84.7787),'#65c7b6');
 
+  assert.equal(await pointStroke(-20.1586389,57.5031667),'#c5a6f5');
+  await jump(1848);
+  assert.equal(await pointStroke(-20.1586389,57.5031667),undefined);
+  assert.equal(await pointStroke(10.66668,-61.51889),'#c5a6f5');
+  await jump(1845);
+  assert.equal(await pointStroke(10.64738,-61.50948),'#c5a6f5');
+  assert.equal(await pointStroke(10.69199,-61.32392),'#c5a6f5');
+  assert.equal(await pointStroke(10.66668,-61.51889),undefined);
+  assert.equal(await pointStroke(-15.923333,-5.725),'#c5a6f5');
+  await jump(1846);
+  assert.equal(await pointStroke(13.08784,80.27847),'#c5a6f5');
+  assert.equal(await pointStroke(-15.923333,-5.725),undefined);
+
   await jump(1839);
   await openEvent('E19-NEW-1839-MONMOUTH-TRIAL-OPENS');
   await openArticle('E19-NEWPORT-CHARTIST-RISING');
@@ -601,6 +617,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 60 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 63 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
