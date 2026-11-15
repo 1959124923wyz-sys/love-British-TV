@@ -3914,7 +3914,7 @@ async function boot(){
    try{await loadNineteenthAtlas(1800,1819,'published');}
    catch(error){console.warn('19C opening data unavailable',error);}
    if(enable19cChapterReview){
-    for(const from of [1820,1830,1840]){
+    for(const from of [1820,1830,1840,1850]){
      if(nineteenthAtlasEnd!==from-1)break;
      try{await loadNineteenthAtlas(from,from+9,'editorial_review');}
      catch(error){console.warn('19C review data unavailable for '+from,error);}
