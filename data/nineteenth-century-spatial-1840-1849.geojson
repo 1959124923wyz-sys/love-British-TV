@@ -2919,12 +2919,16 @@
         "source_ids": [
           "19C35-HBC-VIC",
           "19C35-HBC-LEK",
-          "19C35-HBC-VIC-G"
+          "19C35-HBC-VIC-G",
+          "19C35-VA-DOUGLAS",
+          "19C35-VA-LETTERS"
         ],
         "source_urls": [
           "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=16681",
           "https://www.leg.bc.ca/learn/discover-your-legislature/1843-fort-victoria-is-established",
-          "https://mapcarta.com/N4409072170"
+          "https://mapcarta.com/N4409072170",
+          "https://www.biographi.ca/en/bio/douglas_james_10E.html",
+          "https://royalbcmuseum.bc.ca/assets/Douglas_Treaties_Correspondence1.pdf"
         ],
         "named_anchors": [
           "维多利亚堡"
@@ -2932,7 +2936,9 @@
         "mapping_method": "Named historical site or locality anchored to cited WGS84 place reference.",
         "related_event_ids": [
           "E19-HBC-1843-FORT-VICTORIA",
-          "E19-HBC-1846-OREGON-TREATY"
+          "E19-HBC-1846-OREGON-TREATY",
+          "E19-VA-1849-HQ",
+          "E19-VA-1849-DOUGLAS"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -2943,10 +2949,17 @@
         "year_stages": [
           {
             "start_year": 1843,
-            "end_year": 1849,
+            "end_year": 1848,
             "controller": "hbc",
             "title": "维多利亚堡 · 哈德孙湾公司贸易站",
             "summary_zh": "哈德孙湾公司在勒夸门人领地建立堡站，后来用作太平洋沿岸贸易补给站。"
+          },
+          {
+            "start_year": 1849,
+            "end_year": 1849,
+            "controller": "hbc",
+            "title": "维多利亚堡 · 公司太平洋总部",
+            "summary_zh": "道格拉斯把公司太平洋总部、货运和补给中心迁到维多利亚堡。"
           }
         ]
       }
@@ -7630,6 +7643,683 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "stable_id": "tasmania-darlington-probation-station"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "vancouver-island-1849-royal-grant",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -123.321197,
+              48.495836
+            ],
+            [
+              -123.416819,
+              48.691107
+            ],
+            [
+              -123.472035,
+              48.684882
+            ],
+            [
+              -123.437327,
+              48.650092
+            ],
+            [
+              -123.535471,
+              48.540107
+            ],
+            [
+              -123.526682,
+              48.678046
+            ],
+            [
+              -123.650787,
+              48.753119
+            ],
+            [
+              -123.572987,
+              48.746243
+            ],
+            [
+              -123.579945,
+              48.821601
+            ],
+            [
+              -123.835113,
+              49.00019
+            ],
+            [
+              -123.764882,
+              48.987535
+            ],
+            [
+              -123.756907,
+              49.042141
+            ],
+            [
+              -123.828359,
+              49.12995
+            ],
+            [
+              -123.930776,
+              49.143541
+            ],
+            [
+              -123.954945,
+              49.229193
+            ],
+            [
+              -124.164866,
+              49.254869
+            ],
+            [
+              -124.109486,
+              49.280097
+            ],
+            [
+              -124.794749,
+              49.472561
+            ],
+            [
+              -124.976226,
+              49.668036
+            ],
+            [
+              -124.875844,
+              49.677436
+            ],
+            [
+              -124.882069,
+              49.724921
+            ],
+            [
+              -125.178334,
+              49.924994
+            ],
+            [
+              -125.259145,
+              50.064643
+            ],
+            [
+              -125.369537,
+              50.138577
+            ],
+            [
+              -125.476715,
+              50.339016
+            ],
+            [
+              -125.957509,
+              50.395006
+            ],
+            [
+              -126.193105,
+              50.469713
+            ],
+            [
+              -126.864247,
+              50.530097
+            ],
+            [
+              -126.857289,
+              50.559149
+            ],
+            [
+              -127.350087,
+              50.678534
+            ],
+            [
+              -127.405344,
+              50.747382
+            ],
+            [
+              -127.473622,
+              50.698961
+            ],
+            [
+              -127.518056,
+              50.779771
+            ],
+            [
+              -127.882476,
+              50.866889
+            ],
+            [
+              -128.076975,
+              50.870307
+            ],
+            [
+              -128.417226,
+              50.771877
+            ],
+            [
+              -128.373443,
+              50.682318
+            ],
+            [
+              -128.27774,
+              50.669135
+            ],
+            [
+              -128.338694,
+              50.647162
+            ],
+            [
+              -128.319814,
+              50.609809
+            ],
+            [
+              -128.06017,
+              50.452582
+            ],
+            [
+              -128.050038,
+              50.495795
+            ],
+            [
+              -127.95051,
+              50.477281
+            ],
+            [
+              -127.5926,
+              50.543606
+            ],
+            [
+              -127.877675,
+              50.630113
+            ],
+            [
+              -127.545806,
+              50.570217
+            ],
+            [
+              -127.419016,
+              50.603461
+            ],
+            [
+              -127.562489,
+              50.521064
+            ],
+            [
+              -127.446929,
+              50.376899
+            ],
+            [
+              -127.591176,
+              50.485745
+            ],
+            [
+              -127.925771,
+              50.462104
+            ],
+            [
+              -127.968088,
+              50.342231
+            ],
+            [
+              -127.808909,
+              50.321763
+            ],
+            [
+              -127.850982,
+              50.281236
+            ],
+            [
+              -127.746978,
+              50.243232
+            ],
+            [
+              -127.898101,
+              50.114081
+            ],
+            [
+              -127.796376,
+              50.082709
+            ],
+            [
+              -127.649892,
+              50.178046
+            ],
+            [
+              -127.610829,
+              50.185045
+            ],
+            [
+              -127.614166,
+              50.118801
+            ],
+            [
+              -127.46345,
+              50.186957
+            ],
+            [
+              -127.426422,
+              50.17886
+            ],
+            [
+              -127.487904,
+              50.130439
+            ],
+            [
+              -127.419016,
+              50.130439
+            ],
+            [
+              -127.467437,
+              50.089504
+            ],
+            [
+              -127.362538,
+              50.032538
+            ],
+            [
+              -127.283315,
+              50.062445
+            ],
+            [
+              -127.285268,
+              50.150946
+            ],
+            [
+              -127.189687,
+              50.095649
+            ],
+            [
+              -127.096913,
+              50.150946
+            ],
+            [
+              -127.088735,
+              50.110745
+            ],
+            [
+              -127.237538,
+              49.961819
+            ],
+            [
+              -127.141916,
+              49.866645
+            ],
+            [
+              -126.936147,
+              49.866645
+            ],
+            [
+              -126.919342,
+              49.973456
+            ],
+            [
+              -126.891591,
+              49.891018
+            ],
+            [
+              -126.839467,
+              49.88817
+            ],
+            [
+              -126.802642,
+              49.928127
+            ],
+            [
+              -126.843617,
+              49.973456
+            ],
+            [
+              -126.726389,
+              49.882392
+            ],
+            [
+              -126.649729,
+              49.898017
+            ],
+            [
+              -126.57311,
+              49.706936
+            ],
+            [
+              -126.49356,
+              49.71894
+            ],
+            [
+              -126.467356,
+              49.792304
+            ],
+            [
+              -126.411204,
+              49.778225
+            ],
+            [
+              -126.487375,
+              49.695054
+            ],
+            [
+              -126.453236,
+              49.674302
+            ],
+            [
+              -126.324371,
+              49.648261
+            ],
+            [
+              -126.107493,
+              49.683295
+            ],
+            [
+              -126.089508,
+              49.660875
+            ],
+            [
+              -126.548818,
+              49.596015
+            ],
+            [
+              -126.572662,
+              49.414293
+            ],
+            [
+              -126.487375,
+              49.383734
+            ],
+            [
+              -126.487375,
+              49.438381
+            ],
+            [
+              -126.432118,
+              49.472561
+            ],
+            [
+              -126.288075,
+              49.362698
+            ],
+            [
+              -126.254791,
+              49.450507
+            ],
+            [
+              -126.185699,
+              49.404242
+            ],
+            [
+              -126.055084,
+              49.445299
+            ],
+            [
+              -126.076487,
+              49.383734
+            ],
+            [
+              -126.014394,
+              49.322333
+            ],
+            [
+              -125.911977,
+              49.438381
+            ],
+            [
+              -125.950917,
+              49.320258
+            ],
+            [
+              -126.028066,
+              49.273871
+            ],
+            [
+              -125.956044,
+              49.232896
+            ],
+            [
+              -125.843739,
+              49.267035
+            ],
+            [
+              -125.77477,
+              49.370103
+            ],
+            [
+              -125.802113,
+              49.253404
+            ],
+            [
+              -125.740549,
+              49.267401
+            ],
+            [
+              -125.746693,
+              49.148139
+            ],
+            [
+              -125.612945,
+              49.206366
+            ],
+            [
+              -125.69225,
+              49.133368
+            ],
+            [
+              -125.871693,
+              49.090155
+            ],
+            [
+              -125.606557,
+              48.961859
+            ],
+            [
+              -125.469472,
+              48.91767
+            ],
+            [
+              -125.333404,
+              49.041815
+            ],
+            [
+              -125.260854,
+              49.020697
+            ],
+            [
+              -125.336008,
+              48.972235
+            ],
+            [
+              -125.240387,
+              48.955471
+            ],
+            [
+              -125.146881,
+              48.998521
+            ],
+            [
+              -124.907704,
+              49.006415
+            ],
+            [
+              -124.828033,
+              49.119859
+            ],
+            [
+              -124.80842,
+              49.246568
+            ],
+            [
+              -124.779408,
+              49.152045
+            ],
+            [
+              -124.846995,
+              49.020453
+            ],
+            [
+              -125.18517,
+              48.800971
+            ],
+            [
+              -125.093984,
+              48.730048
+            ],
+            [
+              -124.665395,
+              48.573228
+            ],
+            [
+              -124.401438,
+              48.565253
+            ],
+            [
+              -124.437896,
+              48.525539
+            ],
+            [
+              -123.65392,
+              48.314276
+            ],
+            [
+              -123.550608,
+              48.313056
+            ],
+            [
+              -123.437327,
+              48.444648
+            ],
+            [
+              -123.30248,
+              48.414293
+            ],
+            [
+              -123.280629,
+              48.448391
+            ],
+            [
+              -123.321197,
+              48.495836
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "温哥华主岛 · 1849年王室授地",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "land_dispossession",
+        "summary_zh": "王室保留主权，把温哥华岛授予哈德孙湾公司。公司取得售地和矿产经营权，负责招募移民与出资建设。",
+        "source_ids": [
+          "19C35-VA-GRANT",
+          "19C35-VA-OFFICE",
+          "19C35-VA-WYLD",
+          "19C35-VA-COAST"
+        ],
+        "source_urls": [
+          "https://free.bcpublications.ca/civix/document/id/hstats/hstats/1404714123",
+          "https://bcgenesis.uvic.ca/V495PA03.html",
+          "https://bcgenesis.uvic.ca/fo_925-1864_van_isl_1848.html",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "named_anchors": [
+          "温哥华主岛",
+          "维多利亚堡",
+          "比弗港"
+        ],
+        "mapping_method": "Main-island outline compared with Wyld 1848 (FO 925/1864), anchored to the isolated Natural Earth 1:10m main-island coastline and generalized at 0.028 degrees. Adjacent islands and waters excluded.",
+        "related_event_ids": [
+          "E19-VA-1849-GRANT",
+          "E19-VA-1849-LAND-SALE",
+          "E19-VA-1849-HQ",
+          "E19-VA-1849-BARCLAY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "vancouver-island-1849-royal-grant"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hbc-fort-rupert",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.410833,
+          50.692778
+        ]
+      },
+      "properties": {
+        "name": "鲁珀特堡 · 公司采购煤炭",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "economic_network",
+        "summary_zh": "公司在比弗港开始建堡，从附近第一民族购买煤，同时经营毛皮贸易。",
+        "source_ids": [
+          "19C35-VA-KWAK",
+          "19C35-VA-SCT",
+          "19C35-VA-RUPERT"
+        ],
+        "source_urls": [
+          "https://www.kwakiutl.bc.ca/treaty/",
+          "https://decisia.lexum.com/sct/rod/en/520904/1/document.do",
+          "https://apps.gov.bc.ca/pub/bcgnws/names/26140.html"
+        ],
+        "named_anchors": [
+          "鲁珀特堡",
+          "塔萨基斯"
+        ],
+        "mapping_method": "Named historical coastal locality anchored to the British Columbia geographical names register.",
+        "related_event_ids": [
+          "E19-VA-1849-RUPERT",
+          "E19-VA-1849-COAL-TRADE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "hbc-fort-rupert"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kwagulth-suquash-coal",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.251389,
+          50.633056
+        ]
+      },
+      "properties": {
+        "name": "苏夸什 · 原住民采煤",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "economic_network",
+        "summary_zh": "当地原住民自己开采苏夸什的煤，再运往鲁珀特堡卖给哈德孙湾公司。",
+        "source_ids": [
+          "19C35-VA-KWAK",
+          "19C35-VA-SCT",
+          "19C35-VA-SUQ"
+        ],
+        "source_urls": [
+          "https://www.kwakiutl.bc.ca/treaty/",
+          "https://decisia.lexum.com/sct/rod/en/520904/1/document.do",
+          "https://apps.gov.bc.ca/pub/bcgnws/names/24520.html"
+        ],
+        "named_anchors": [
+          "苏夸什"
+        ],
+        "mapping_method": "Named historical coastal locality anchored to the British Columbia geographical names register.",
+        "related_event_ids": [
+          "E19-VA-1849-COAL-TRADE",
+          "E19-VA-1848-COAL-CONTRACT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "kwagulth-suquash-coal"
       }
     }
   ]

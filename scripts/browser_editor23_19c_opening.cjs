@@ -418,7 +418,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1845,'E19-HC-1845-GLEN-EVICTION','E19-HIGHLAND-CLEARANCES','E19-HC-1849-SOLLAS-POLICE',1849],
    [1849,'E19-HC-1849-INVERNESS-TRIAL','E19-HIGHLAND-CLEARANCES','E19-HC-1845-CROICK',1845],
    [1848,'E19-YI-1848-BALLINGARRY','E19-YOUNG-IRELAND-REPRESSION','E19-YI-1849-DARLINGTON',1849],
-   [1849,'E19-YI-1849-HOBART','E19-YOUNG-IRELAND-REPRESSION','E19-YI-1848-MITCHEL',1848]
+   [1849,'E19-YI-1849-HOBART','E19-YOUNG-IRELAND-REPRESSION','E19-YI-1848-MITCHEL',1848],
+   [1849,'E19-VA-1849-GRANT','E19-VANCOUVER-ISLAND-GRANT','E19-VA-1842-CLOVER',1842],
+   [1848,'E19-VA-1848-COAL-CONTRACT','E19-VANCOUVER-ISLAND-GRANT','E19-VA-1849-RUPERT',1849]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -478,11 +480,18 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-LOUISBURGH-DELPHI')));
   assert.equal(await pointStroke(57.650136,-7.345310),'#a5cdec');
   assert.equal(await pointStroke(-42.581667,148.070000),'#65c7b6');
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(49.72,-125.63)),1);
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(49.72,-124.1)),0);
+  assert.equal(await pointStroke(50.692778,-127.410833),'#65c7b6');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-SUQUASH-RUPERT')));
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-HOBART-DARLINGTON')));
   assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1845-GLENCALVIE-CROICK'))));
   await jump(1848);
   assert.equal(await pointStroke(52.619252,-7.522602),'#a5cdec');
   assert.equal(await pointStroke(-42.581667,148.070000),undefined);
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(49.72,-125.63)),0);
+  assert.equal(await pointStroke(50.692778,-127.410833),undefined);
+  assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-SUQUASH-RUPERT'))));
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1848-THURLES-KILMAINHAM')));
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1845-GLENCALVIE-CROICK')));
   await jump(1845);

@@ -1208,13 +1208,15 @@
       "source_ids": [
         "19C35-HBC-VIC",
         "19C35-HBC-LEK",
-        "19C35-HBC-VIC-G"
+        "19C35-HBC-VIC-G",
+        "19C35-VA-DOUGLAS"
       ],
       "evidence_anchors": [
         "E19-HBC-1843-FORT-VICTORIA",
-        "E19-HBC-1846-OREGON-TREATY"
+        "E19-HBC-1846-OREGON-TREATY",
+        "E19-VA-1849-HQ"
       ],
-      "finding": "哈德孙湾公司在勒夸门人领地建立堡站，后来用作太平洋沿岸贸易补给站。"
+      "finding": "1843年在勒夸门人领地建堡，1849年接纳从哥伦比亚河迁来的公司太平洋总部。布兰沙德1850年3月正式到任另记。"
     },
     {
       "stable_id": "assam-buri-guma-british-management",
@@ -2729,6 +2731,63 @@
         "E19-YI-1849-DARLINGTON"
       ],
       "finding": "按世界遗产点位标当年拘禁；设施既有的管教功能与1850年转押不可混为一体。"
+    },
+    {
+      "stable_id": "vancouver-island-1849-royal-grant",
+      "baseline_1839": false,
+      "transition": "legal_grant_scope",
+      "first_display_year": 1849,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-VA-GRANT",
+        "19C35-VA-OFFICE",
+        "19C35-VA-WYLD",
+        "19C35-VA-COAST"
+      ],
+      "evidence_anchors": [
+        "E19-VA-1849-GRANT",
+        "E19-VA-1849-LAND-SALE",
+        "E19-VA-1849-HQ",
+        "E19-VA-1849-BARCLAY"
+      ],
+      "finding": "1849年文书对温哥华主岛的授予范围。所绘为虚线授地面，不表示全岛有效管理、原住民族权灭失或实际测量面积。后章延续至牌照期满与土地交还另行核日。"
+    },
+    {
+      "stable_id": "hbc-fort-rupert",
+      "baseline_1839": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1849,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-VA-KWAK",
+        "19C35-VA-SCT",
+        "19C35-VA-RUPERT"
+      ],
+      "evidence_anchors": [
+        "E19-VA-1849-RUPERT",
+        "E19-VA-1849-COAL-TRADE"
+      ],
+      "finding": "使用塔萨基斯即鲁珀特堡现聚落地名点。"
+    },
+    {
+      "stable_id": "kwagulth-suquash-coal",
+      "baseline_1839": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1849,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-VA-KWAK",
+        "19C35-VA-SCT",
+        "19C35-VA-SUQ"
+      ],
+      "evidence_anchors": [
+        "E19-VA-1849-COAL-TRADE",
+        "E19-VA-1848-COAL-CONTRACT"
+      ],
+      "finding": "使用苏夸什具名海岸点，具体矿段与泊位待核。"
     }
   ],
   "open_items": [
@@ -3931,6 +3990,23 @@
       ],
       "research_original_node_ids": [
         "C-107-E01"
+      ]
+    },
+    {
+      "stable_id": "vancouver-grant-to-douglas-treaties",
+      "status": "research_pending",
+      "finding": "接续1850年3月11日总督宣读委任状、1850—1854年分民族谈判与1851年鲁珀特堡两份协议。按附图核原住民族用地和契据表述，并区别1859年期满、公司财产回购与1867年归还契据。1849文书前言所载1838年5月13日与此前贸易牌照核定用的5月30日并存，待核各件转录及签发关系。",
+      "source_ids": [
+        "19C35-VA-GRANT",
+        "19C35-VA-BLBIO",
+        "19C35-VA-TREATIES",
+        "19C35-VA-LETTERS"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-03-06"
+      ],
+      "research_original_node_ids": [
+        "C-03-E06"
       ]
     }
   ]
