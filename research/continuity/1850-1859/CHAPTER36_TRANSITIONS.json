@@ -7,6 +7,267 @@
   "geometry_file": "data/nineteenth-century-spatial-1850-1859.geojson",
   "transitions": [
     {
+      "stable_id": "delhi-meerut-1857-route",
+      "baseline_1849": false,
+      "transition": "documented_movement_connection",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": 1857,
+      "source_ids": [
+        "19C36-DEL-NAM",
+        "19C36-DEL-FAN",
+        "19C36-DEL-PLAN",
+        "19C36-DEL-MEERUT",
+        "19C36-DEL-RED"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-MEERUT",
+        "E19-DEL-1857-PALACE"
+      ],
+      "finding": "档案证实起义队伍先在密拉特起事，次日到达德里宫城。仅作两地顺序关系。"
+    },
+    {
+      "stable_id": "delhi-1857-nizam",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-BURN",
+        "19C36-DEL-GHALIB",
+        "19C36-DEL-NIZAM"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-SHELTER"
+      ],
+      "finding": "1857年12月的记述提到尼扎穆丁等避难地的疾病。"
+    },
+    {
+      "stable_id": "delhi-1857-purana",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1858,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-RETURN",
+        "19C36-DEL-GHALIB",
+        "19C36-DEL-PURANA"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1858-SHELTER"
+      ],
+      "finding": "1858年，未能进城的居民有些在旧堡一带避难。"
+    },
+    {
+      "stable_id": "delhi-1857-neel",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-BURN",
+        "19C36-DEL-PRIZE",
+        "19C36-DEL-NEEL"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-NEEL",
+        "E19-DEL-1858-REPORT"
+      ],
+      "finding": "军方收取街区赎金，给这里派了卫兵。"
+    },
+    {
+      "stable_id": "delhi-1857-jama",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-CITY",
+        "19C36-DEL-SOAS",
+        "19C36-DEL-JAMA",
+        "19C36-DEL-PLAN"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-LOOT-MOSQUE",
+        "E19-DEL-1858-MOSQUE-MOVE"
+      ],
+      "finding": "英军占城后把这座清真寺用作兵营。"
+    },
+    {
+      "stable_id": "delhi-1857-bloody",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-FAN",
+        "19C36-DEL-BLOODY"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-PRINCES"
+      ],
+      "finding": "霍德森在德里城墙以南射杀两名皇子与一名皇孙。"
+    },
+    {
+      "stable_id": "delhi-1857-tomb",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-WILSON",
+        "19C36-DEL-HOD",
+        "19C36-DEL-FAN",
+        "19C36-DEL-TOMB"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-SURRENDER"
+      ],
+      "finding": "莫卧儿末代皇帝在围城结束时由此向英方投降。"
+    },
+    {
+      "stable_id": "delhi-1857-city",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-BURN",
+        "19C36-DEL-OCC",
+        "19C36-DEL-GHALIB",
+        "19C36-DEL-NAM",
+        "19C36-DEL-KOTWALI",
+        "19C36-DEL-PLAN",
+        "19C36-DEL-SEARCH",
+        "19C36-DEL-PRIZE",
+        "19C36-DEL-SEIZE",
+        "19C36-DEL-RESTART",
+        "19C36-DEL-COMPLAINT",
+        "19C36-DEL-RETURN",
+        "19C36-DEL-CITY",
+        "19C36-DEL-EXILE",
+        "19C36-DEL-EXILE-DATE",
+        "19C36-DEL-LETTERS"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-EVICTION",
+        "E19-DEL-1857-PASS",
+        "E19-DEL-1857-SEARCH",
+        "E19-DEL-1857-STOP",
+        "E19-DEL-1857-SELECTIVE",
+        "E19-DEL-1857-COMPLAINT",
+        "E19-DEL-1858-HINDUS",
+        "E19-DEL-1858-ATTACH",
+        "E19-DEL-1858-DEPART",
+        "E19-DEL-1858-PETITION",
+        "E19-DEL-1859-RETURN",
+        "E19-DEL-1859-GATE-CHECK",
+        "E19-DEL-1859-PASS-END",
+        "E19-DEL-1859-TENANTS"
+      ],
+      "finding": "军事总督要求持证返回的居民到科特瓦利登记。"
+    },
+    {
+      "stable_id": "delhi-1857-gate",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-EXAM",
+        "19C36-DEL-WILSON",
+        "19C36-DEL-NAM",
+        "19C36-DEL-FAN",
+        "19C36-DEL-GATE",
+        "19C36-DEL-PLAN",
+        "19C36-DEL-CITY"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-ASSAULT",
+        "E19-DEL-1858-WALL"
+      ],
+      "finding": "1857年9月14日，英印军攻入克什米尔门和北面城墙，城内战斗继续。"
+    },
+    {
+      "stable_id": "delhi-1857-tower",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-FAN",
+        "19C36-DEL-TOWER"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-TOWER",
+        "E19-DEL-1857-RIDGE",
+        "E19-DEL-1857-TOWER-ATTACK"
+      ],
+      "finding": "5月11日有人在信号塔避难。6月，起义队伍向山脊上的英印军据点发动进攻。"
+    },
+    {
+      "stable_id": "delhi-1857-red",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-NAM",
+        "19C36-DEL-FAN",
+        "19C36-DEL-TRIAL",
+        "19C36-DEL-RED",
+        "19C36-DEL-PLAN",
+        "19C36-DEL-WILSON",
+        "19C36-DEL-OCC",
+        "19C36-DEL-BURN",
+        "19C36-DEL-COLLECTION",
+        "19C36-DEL-JEWELS",
+        "19C36-DEL-VERDICT",
+        "19C36-DEL-CITY",
+        "19C36-DEL-SOAS"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-PALACE",
+        "E19-DEL-1857-FORT",
+        "E19-DEL-1857-MUSLIM-EXPULSION",
+        "E19-DEL-1857-CLOSE-GATES",
+        "E19-DEL-1857-WHISK",
+        "E19-DEL-1857-JEWELS",
+        "E19-DEL-1858-TRIAL",
+        "E19-DEL-1858-VERDICT",
+        "E19-DEL-1858-KEEP",
+        "E19-DEL-1859-DEMOLITION"
+      ],
+      "finding": "1857年5—9月起义者据城，9月20日红堡转至英印军。1858年政务改由王室治下机构办理，军事驻用延续至本章结尾。该点为旧址新录。"
+    },
+    {
+      "stable_id": "delhi-1857-meerut",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DEL-NAM",
+        "19C36-DEL-VERDICT",
+        "19C36-DEL-MEERUT"
+      ],
+      "evidence_anchors": [
+        "E19-DEL-1857-MEERUT"
+      ],
+      "finding": "密拉特驻军起事后，一支队伍于5月11日抵达德里。"
+    },
+    {
       "stable_id": "santal-kochpara-column",
       "baseline_1849": false,
       "transition": "documented_site_episode",
@@ -3091,6 +3352,18 @@
     }
   ],
   "open_items": [
+    {
+      "stable_id": "delhi-1857-clearance-and-geography",
+      "status": "research_pending",
+      "finding": "待按同期地产册及驻军绘图核红堡拆迁、旧城军营与房屋扣押地块。初案与调整后的清场尺度不进入版图。军械库尚待校确遗存门址，第181号命令和公司董事函待核办公处，均随年表。设驻处与放行不改变旧城区周边地权。",
+      "source_ids": [
+        "19C36-DEL-PLAN",
+        "19C36-DEL-FAN",
+        "19C36-DEL-CITY",
+        "19C36-DEL-RULE",
+        "19C36-DEL-HANSARD"
+      ]
+    },
     {
       "stable_id": "santal-hul-historical-jurisdictions-and-battlefields",
       "status": "research_pending",
