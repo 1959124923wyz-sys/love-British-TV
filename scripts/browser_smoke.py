@@ -249,16 +249,22 @@ try:
         assert zoom_after==zoom_before, "Maynooth focus incorrectly zoomed map"
     assert driver.execute_script("return document.querySelector('#yearRange').value")=="1535", "Maynooth double-click changed date"
     driver.save_screenshot(str(OUT / "focus-maynooth-1535.png"))
-    # The century strip is informational navigation: it cannot turn a researched 1535
-    # atlas into a fictitious 1700s/1900s territorial snapshot.
+    # Browsing a century keeps the current map. An indexed chapter can be opened,
+    # while choosing a decade without a chapter keeps the current year.
     current = driver.execute_script("return document.getElementById('bigYear').textContent")
     driver.execute_script("document.querySelector('#centuryNav [data-century=\"1700\"]').click()")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     verify("century browser must retain five decade slots",
            "document.querySelectorAll('#chapterTrack .chapter-segment').length===5", driver)
-    verify("1700s century is not a published map",
-           "document.querySelector('#chapterTrack [data-decade=\"1700\"]').classList.contains('unpublished')", driver)
+    verify("1700 must offer its historical chapter",
+           "document.querySelector('#chapterTrack [data-decade=\"1700\"]').classList.contains('published')", driver)
     driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1700\"]').click()")
+    wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent==='1700'"))
+    current = "1700"
+    driver.execute_script("document.querySelector('#centuryNav [data-century=\"1900\"]').click()")
+    verify("1900s decade is still unavailable",
+           "document.querySelector('#chapterTrack [data-decade=\"1900\"]').classList.contains('unpublished')", driver)
+    driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1900\"]').click()")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     # Stress a 500-year navigation span: card count and slot widths must remain bounded.
     driver.execute_script("""

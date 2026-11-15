@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const ix=read('data/stories/serial/index.json'),led=read('data/research/editor22-four-17c-gap-evidence-20261028.json');
-assert.equal(ix.topics.filter(t=>t.status==='published').length,29);assert(led.source_count>=27);
+assert.equal(ix.topics.filter(t=>t.status==='published'&&t.id.startsWith('E6-')).length,29);assert(led.source_count>=27);
 const expected={
 'E6-T09-PENNSYLVANIA':{sections:10,ids:['1680S-E129','1680S-E130','1680S-E131','1680S-E132','1680S-E133','1690S-E140']},
 'E6-T10-QUEBEC-KIRKE':{sections:9,ids:['1620S-E030','1620S-E032','1630S-E026','1630S-E027']},
