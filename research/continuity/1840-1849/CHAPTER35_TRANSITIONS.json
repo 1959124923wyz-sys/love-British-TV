@@ -295,15 +295,21 @@
         "19C33-DEM-COL",
         "19C33-DEM-TRIAL",
         "19C33-DEM-GEORGE",
-        "19C34-GY-UNION"
+        "19C34-GY-UNION",
+        "19C35-IND-GY-SHIPS",
+        "19C35-IND-LOAN-ACT",
+        "19C35-IND-GY-SUSPEND"
       ],
       "evidence_anchors": [
         "E19-DEM-1823-COURTS-EXECUTIONS",
         "E19-DEM-1823-SMITH-TRIAL",
         "E19-DEM-1824-SMITH-PRISON",
-        "E19-GUI-1831-COLONIAL-UNION"
+        "E19-GUI-1831-COLONIAL-UNION",
+        "E19-MIG-GY-1845-HUNGERFORD",
+        "E19-MIG-GY-1845-MADRAS",
+        "E19-MIG-GY-1848-BONDS"
       ],
-      "finding": "乔治敦继续是殖民行政中心，1831年德梅拉拉、埃塞奎博与伯比斯合并。"
+      "finding": "殖民政府经乔治敦组织新的劳工输入，又以公共收入担保招工债务。"
     },
     {
       "stable_id": "tasmania-hobart-government",
@@ -950,16 +956,22 @@
         "19C34-LAB-MAU-APP",
         "19C34-LAB-MAU-ARR",
         "19C34-LAB-MAU-UN",
-        "19C34-LAB-MAU-G"
+        "19C34-LAB-MAU-G",
+        "19C35-IND-MU-CHRON",
+        "19C35-IND-MU-PASS",
+        "19C35-IND-MU-GHAT"
       ],
       "evidence_anchors": [
         "E19-MAU-1834-ATLAS-ARRIVAL",
         "E19-MAU-1835-SLAVERY-ABOLITION",
         "E19-MAU-1835-SLAVEOWNER-CLAIMS",
         "E19-MAU-1836-1839-AMENDED-AWARDS",
-        "E19-MAU-1839-APPRENTICESHIP-END"
+        "E19-MAU-1839-APPRENTICESHIP-END",
+        "E19-MIG-MU-1842-REOPENING",
+        "E19-MIG-MU-1846-PASSPORTS",
+        "E19-MIG-MU-1847-PASSES"
       ],
-      "finding": "1839年3月底，余下的强制学徒劳动义务终止。"
+      "finding": "废奴后，殖民政府恢复印度招工，并配合就业、登记与证件规定管束移民。"
     },
     {
       "stable_id": "diego-garcia-east-point-plantations",
@@ -2400,6 +2412,129 @@
       ],
       "finding": "1848年英军撤出后，圣卡洛斯由尼加拉瓜管理。",
       "occupation_end_month": "1848-03"
+    },
+    {
+      "stable_id": "mauritius-aapravasi-ghat-depot",
+      "baseline_1839": false,
+      "transition": "documented_immigration_depot",
+      "first_display_year": 1849,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-IND-MU-GHAT",
+        "19C35-IND-MU-UNESCO",
+        "19C35-IND-MU-ICOMOS"
+      ],
+      "evidence_anchors": [
+        "E19-MIG-MU-1849-DEPOT"
+      ],
+      "finding": "殖民政府在特鲁凡法龙湾设站登记新到港移民，并向糖业庄园分派劳工。"
+    },
+    {
+      "stable_id": "trinidad-south-quay-indenture",
+      "baseline_1839": false,
+      "transition": "existing_port_begins_receiving_indian_workers",
+      "first_display_year": 1845,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-IND-TT-LAND",
+        "19C35-IND-TT-WHARF",
+        "19C35-IND-TT-REGISTER",
+        "19C35-IND-TT-WHARF-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-MIG-TT-1845-ARRIVAL"
+      ],
+      "finding": "1845年首航后，特立尼达继续接收契约劳工，由殖民当局登记到港和庄园分派。"
+    },
+    {
+      "stable_id": "trinidad-colonial-labour-administration",
+      "baseline_1839": false,
+      "transition": "newly_documented_colonial_administration_feature",
+      "first_display_year": 1846,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-IND-TT-LAW",
+        "19C35-IND-LOAN-ACT",
+        "19C35-IND-TT-CAP"
+      ],
+      "evidence_anchors": [
+        "E19-MIG-TT-1846-MASTERS",
+        "E19-MIG-TT-1846-IMMIGRATION",
+        "E19-MIG-TT-1848-BONDS"
+      ],
+      "finding": "殖民政府授权赴英国发行债券，筹措引入劳工的费用。"
+    },
+    {
+      "stable_id": "trinidad-lopinot-la-reconnaissance",
+      "baseline_1839": false,
+      "transition": "documented_first_ship_allocation",
+      "first_display_year": 1845,
+      "last_display_year": 1845,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-IND-TT-LAND",
+        "19C35-IND-TT-LOP",
+        "19C35-IND-TT-LOP-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-MIG-TT-1845-LOPINOT"
+      ],
+      "finding": "「法特·拉扎克」号抵达后，部分工人被分派到这座庄园。"
+    },
+    {
+      "stable_id": "saint-helena-james-bay-indenture",
+      "baseline_1839": false,
+      "transition": "documented_ship_stop_on_one_date",
+      "first_display_year": 1845,
+      "last_display_year": 1845,
+      "historical_end_year": 1845,
+      "source_ids": [
+        "19C35-IND-TT-HELENA",
+        "19C35-IND-SH-PORT"
+      ],
+      "evidence_anchors": [
+        "E19-MIG-TT-1845-STHELENA"
+      ],
+      "finding": "1845年4月18日，「法特·拉扎克」号在英属圣赫勒拿补给，当天驶往特立尼达。"
+    },
+    {
+      "stable_id": "madras-indenture-recruitment",
+      "baseline_1839": false,
+      "transition": "documented_embarkation_during_second_recruitment_phase",
+      "first_display_year": 1845,
+      "last_display_year": 1848,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-IND-GY-CENSUS",
+        "19C35-IND-GY-SHIPS",
+        "19C35-IND-MAD-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-MIG-GY-1845-MADRAS",
+        "E19-MIG-GY-1846-MADRAS-SEASON"
+      ],
+      "finding": "「内斯托尔」号开出首航后，陆续有劳工船从马德拉斯驶向英属圭亚那。"
+    },
+    {
+      "stable_id": "guiana-buxton-freedpeople-village",
+      "baseline_1839": false,
+      "transition": "collective_purchase_of_former_plantation",
+      "first_display_year": 1840,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-IND-GY-VILLAGE",
+        "19C35-IND-GY-PUBLIC",
+        "19C35-IND-GY-VILLAGE-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-MIG-GY-1840-BUXTON",
+        "E19-MIG-GY-1841-FRIENDSHIP"
+      ],
+      "finding": "获得自由的非洲裔居民在1840年集资购下原种植园，建立巴克斯顿村。"
     }
   ],
   "open_items": [
@@ -3518,6 +3653,73 @@
       ],
       "research_original_node_ids": [
         "C-04-E02"
+      ]
+    },
+    {
+      "stable_id": "mauritius-depot-next-period",
+      "status": "research_pending",
+      "finding": "1849年建站，建筑多期扩建，已查到1860年代遗存和后续设施。须在下一章续接，不能提前套用现有遗址整体平面。",
+      "source_ids": [
+        "19C35-IND-MU-GHAT",
+        "19C35-IND-MU-UNESCO",
+        "19C35-IND-MU-ICOMOS"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-b-39-03"
+      ],
+      "research_original_node_ids": [
+        "B-EV-0273",
+        "B-EV-0274"
+      ]
+    },
+    {
+      "stable_id": "trinidad-estates-and-ordinances",
+      "status": "research_pending",
+      "finding": "港内旧灯塔参照及洛皮诺庄园已绘。其余庄园逐一核旧产权图和分派名册。1846年第6号及第14号条例罚则与生效日待核，1899年第19号条例交后续章节。首船正文采用A卷登记号范围，馆方刊文的成人、婴儿、性别小计互相有异，继续对照船单和登陆原册。",
+      "source_ids": [
+        "19C35-IND-TT-LAND",
+        "19C35-IND-TT-REGISTER",
+        "19C35-IND-TT-LAW",
+        "19C35-IND-TT-1906"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-135-01",
+        "19c-event-c-177-01"
+      ],
+      "research_original_node_ids": [
+        "C-135-E01",
+        "C-177-E01"
+      ]
+    },
+    {
+      "stable_id": "guiana-recruitment-expenses-and-reopening",
+      "status": "research_pending",
+      "finding": "1848年法可证两地财政担保及17万镑总贷款上限，逐省实际拨款及垫支账册待核。1851年制度性复航及此后的返乡条件交下一章。1850年年底个别船次与长期重启应分列。",
+      "source_ids": [
+        "19C35-IND-LOAN-ACT",
+        "19C35-IND-LOAN-HAN",
+        "19C35-IND-GY-CENSUS",
+        "19C35-IND-GY-SUSPEND"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-175-01"
+      ],
+      "research_original_node_ids": [
+        "C-175-E01"
+      ]
+    },
+    {
+      "stable_id": "guiana-friendship-estate",
+      "status": "research_pending",
+      "finding": "友谊庄园购置在1841年，未采用现代巴克斯顿—友谊村同一参考点替代当年单独庄园。",
+      "source_ids": [
+        "19C35-IND-GY-VILLAGE"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-175-01"
+      ],
+      "research_original_node_ids": [
+        "C-175-E01"
       ]
     }
   ]
