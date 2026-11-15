@@ -414,7 +414,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1848,'E19-MIS-1848-AGREEMENT','E19-MISKITU-GREYTOWN','E19-MIS-1848-SARAPIQUI-BATTLE',1848],
    [1849,'E19-MIG-MU-1849-DEPOT','E19-MAURITIUS-IMMIGRATION-DEPOT','E19-MIG-MU-1847-PASSES',1847],
    [1845,'E19-MIG-TT-1845-ARRIVAL','E19-TRINIDAD-INDENTURE','E19-MIG-TT-1848-SUSPEND',1848],
-   [1848,'E19-MIG-GY-1848-PARLIAMENT','E19-GUIANA-INDENTURE-FINANCE','E19-MIG-GY-1840-BUXTON',1840]
+   [1848,'E19-MIG-GY-1848-PARLIAMENT','E19-GUIANA-INDENTURE-FINANCE','E19-MIG-GY-1840-BUXTON',1840],
+   [1845,'E19-HC-1845-GLEN-EVICTION','E19-HIGHLAND-CLEARANCES','E19-HC-1849-SOLLAS-POLICE',1849],
+   [1849,'E19-HC-1849-INVERNESS-TRIAL','E19-HIGHLAND-CLEARANCES','E19-HC-1845-CROICK',1845]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -472,6 +474,13 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1849);
   assert.equal(await pointStroke(53.63173,-9.74703),'#65c7b6');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-LOUISBURGH-DELPHI')));
+  assert.equal(await pointStroke(57.650136,-7.345310),'#a5cdec');
+  assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1845-GLENCALVIE-CROICK'))));
+  await jump(1845);
+  assert.equal(await pointStroke(57.856009,-4.590177),'#65c7b6');
+  assert.equal(await pointStroke(57.885964,-4.604445),'#65c7b6');
+  assert.equal(await pointStroke(57.650136,-7.345310),undefined);
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1845-GLENCALVIE-CROICK')));
   await jump(1846);
   assert.equal(await pointStroke(-32.786769,26.848597),'#65c7b6');
   assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(-32.70,27.70)),0);

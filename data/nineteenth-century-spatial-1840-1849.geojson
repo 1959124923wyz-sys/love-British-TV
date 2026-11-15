@@ -7173,6 +7173,135 @@
           }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "scotland-glencalvie-clearance",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.590177,
+          57.856009
+        ]
+      },
+      "properties": {
+        "name": "格伦卡尔维 · 庄园驱逐佃户",
+        "start_year": 1845,
+        "end_year": 1845,
+        "display_kind": "land_dispossession",
+        "summary_zh": "庄园驱逐18户佃农，原租地转作牧羊用途。",
+        "source_ids": [
+          "19C35-HC-CROICK",
+          "19C35-HC-HANSARD",
+          "19C35-HC-GLEN-GEO"
+        ],
+        "source_urls": [
+          "https://www.croickchurch.com/clearances.htm",
+          "https://hansard.parliament.uk/commons/1845-06-12/debates/8d15a910-05ca-4d78-afe2-13eded897d3a/CommonsChamber",
+          "https://her.highland.gov.uk/Monument/MHG7362"
+        ],
+        "named_anchors": [
+          "格伦卡尔维"
+        ],
+        "mapping_method": "Source-identified locality anchored to the cited geographic record.",
+        "related_event_ids": [
+          "E19-HC-1845-GLEN-EVICTION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "scotland-glencalvie-clearance"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "scotland-croick-kirkyard",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.604445,
+          57.885964
+        ]
+      },
+      "properties": {
+        "name": "克罗伊克教堂墓地 · 佃户临时避难",
+        "start_year": 1845,
+        "end_year": 1845,
+        "display_kind": "local_governance",
+        "summary_zh": "约80名遭逐佃户夜宿教堂墓地。",
+        "source_ids": [
+          "19C35-HC-CROICK",
+          "19C35-HC-TIMES",
+          "19C35-HC-HANSARD",
+          "19C35-HC-KIRK-GEO"
+        ],
+        "source_urls": [
+          "https://www.croickchurch.com/clearances.htm",
+          "https://www.tainmuseum.org.uk/article.php?id=194",
+          "https://hansard.parliament.uk/commons/1845-06-12/debates/8d15a910-05ca-4d78-afe2-13eded897d3a/CommonsChamber",
+          "https://portal.historicenvironment.scot/designation/LB7181"
+        ],
+        "named_anchors": [
+          "克罗伊克教堂墓地"
+        ],
+        "mapping_method": "Source-identified locality anchored to the cited geographic record.",
+        "related_event_ids": [
+          "E19-HC-1845-CROICK"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "scotland-croick-kirkyard"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "scotland-sollas-eviction",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.34531,
+          57.650136
+        ]
+      },
+      "properties": {
+        "name": "索拉斯 · 北尤伊斯特岛抗逐",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "conflict",
+        "summary_zh": "因弗内斯警察协助拆屋，岛上佃户组织抵抗。",
+        "source_ids": [
+          "19C35-HC-DAY",
+          "19C35-HC-CAM",
+          "19C35-HC-SOLLAS",
+          "19C35-HC-SOLLAS-GEO"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/5/53/Public_administration_in_the_Highlands_and_islands_of_Scotland_%28IA_publicadministra00dayjrich%29.pdf",
+          "https://theses.gla.ac.uk/3516/2/1971cameronphdl2.pdf",
+          "https://coast.scot/stories/the-battle-of-sollas/",
+          "https://www.getthedata.com/sollas/where-is-sollas"
+        ],
+        "named_anchors": [
+          "索拉斯"
+        ],
+        "mapping_method": "Source-identified locality anchored to the cited geographic record.",
+        "related_event_ids": [
+          "E19-HC-1849-SOLLAS-REFUSAL",
+          "E19-HC-1849-SOLLAS-POLICE",
+          "E19-HC-1849-SOLLAS-AGREEMENT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "scotland-sollas-eviction"
+      }
     }
   ]
 }
