@@ -217,10 +217,14 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    await page.evaluate(([lat,lng])=>window.__historicOverlapHost.map.setView([lat,lng],10,{animate:false}),[lat,lng]);
    return page.evaluate(([lat,lng,radius])=>{
     const m=window.__historicOverlapHost.map;
-    const bounds=m.getContainer().getBoundingClientRect();
-    const point=m.latLngToContainerPoint([lat,lng]);
-    return document.elementsFromPoint(point.x+bounds.left+radius,point.y+bounds.top)
-     .find(el=>el.classList.contains('atlas-19c-site'))?.getAttribute('stroke');
+    const point=m.latLngToLayerPoint([lat,lng]);
+    const marker=Array.from(document.querySelectorAll('.atlas-19c-site')).find(path=>{
+     const box=path.getBBox();
+     return Math.abs(box.x+box.width/2-point.x)<1
+      && Math.abs(box.y+box.height/2-point.y)<1
+      && Math.abs(box.width/2-radius)<1;
+    });
+    return marker?.getAttribute('stroke');
    },[lat,lng,radius]);
   };
   await jump(1823);
