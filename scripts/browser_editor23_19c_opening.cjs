@@ -424,7 +424,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1848,'E19-NP-1848-BUDGET','E19-NATIVE-POLICE-MACINTYRE','E19-NP-1849-CARBUCKY',1849],
    [1849,'E19-NP-1849-PROTECT-ORDER','E19-NATIVE-POLICE-MACINTYRE','E19-NP-1847-CALLANDOON',1847],
    [1848,'E19-CF-1848-DETOUR','E19-CEYLON-COFFEE-LABOUR','E19-CF-1841-MASTER',1841],
-   [1849,'E19-CF-1849-EXPORT','E19-CEYLON-COFFEE-LABOUR','E19-CF-1847-INDIA-ACT',1847,false]
+   [1849,'E19-CF-1849-EXPORT','E19-CEYLON-COFFEE-LABOUR','E19-CF-1847-INDIA-ACT',1847,false],
+   [1843,'E19-SP-1843-BISA','E19-SINGPHO-ASSAM-TEA-FRONTIER','E19-SP-1845-TRIAL',1845],
+   [1844,'E19-SP-1844-JAYPUR-HQ','E19-SINGPHO-ASSAM-TEA-FRONTIER','E19-SP-1842-WASTE-LAND',1842,false]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -629,7 +631,18 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1841);
   assert.notEqual(await pointStroke(-35.302508,174.120082),'#c5a6f5');
   assert.equal(await pointStroke(-36.84988,174.77042),'#c5a6f5');
+  await jump(1843);
+  assert.equal(await pointStroke(27.32523,95.76689),'#a5cdec');
+  assert.equal(await pointStroke(27.268262,95.388955),'#65c7b6');
+  await jump(1844);
+  assert.equal(await pointStroke(27.32523,95.76689),undefined);
+  assert.equal(await pointStroke(27.268262,95.388955),'#c5a6f5');
+  await jump(1847);
+  assert.equal(await pointStroke(27.268262,95.388955),undefined);
+  assert.equal(await pointStroke(27.47989,94.90837),'#c5a6f5');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1847-JAYPUR-DIBRUGARH')));
   await jump(1846);
+  assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1847-JAYPUR-DIBRUGARH'))));
   assert.equal(await pointStroke(-41.099357,174.865747),'#c5a6f5');
   assert.equal(await pointStroke(-39.930902,175.052305),'#c5a6f5');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-MATAI-TAUA-HOROKIRI')));
