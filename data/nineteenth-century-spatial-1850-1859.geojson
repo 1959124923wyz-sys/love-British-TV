@@ -2,10 +2,618 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1850–1859 Chapter 36 batches 1–5 and predecessor continuity",
+    "coverage": "1850–1859 Chapter 36 batches 1–6 and predecessor continuity",
     "historical_area_statistics": false
   },
   "features": [
+    {
+      "type": "Feature",
+      "id": "canton-qing-old-city-1856",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.25,
+          23.11667
+        ]
+      },
+      "properties": {
+        "name": "广州 · 炮击与英法占领",
+        "start_year": 1856,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "英国1856年派舰攻打广州。英法联军于1857年末占领广州，设置委员会监督清方原有官署。",
+        "source_ids": [
+          "19C36-CAN-GZ56",
+          "19C36-CAN-GZ57",
+          "19C36-CAN-REGIME",
+          "19C36-CAN-COLLECTIVE",
+          "19C34-OP-GUA"
+        ],
+        "source_urls": [
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4046.jhtml",
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4045.jhtml",
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=156",
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=373",
+          "https://www.geonames.org/1809858"
+        ],
+        "named_anchors": [
+          "广州旧城"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1856-ARROW",
+          "E19-CAN-1857-WEST",
+          "E19-CAN-1858-TERMS",
+          "E19-CAN-1858-COM",
+          "E19-CAN-1858-HOUSES"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-qing-old-city-1856",
+        "year_stages": [
+          {
+            "start_year": 1856,
+            "end_year": 1856,
+            "controller": "qing",
+            "title": "广州 · 广东水师与英国舰队交战",
+            "summary_zh": "广东当局仍治理城内，英军炮击、攻入外城后撤回舰上。"
+          },
+          {
+            "start_year": 1857,
+            "end_year": 1857,
+            "controller": "allied",
+            "title": "广州 · 英法联军攻占城市",
+            "summary_zh": "英法联军年底夺取主要城门和高地，清方守军及练勇撤出。"
+          },
+          {
+            "start_year": 1858,
+            "end_year": 1859,
+            "controller": "allied",
+            "title": "广州 · 英法驻军和联军委员会",
+            "summary_zh": "柏贵从巡抚衙门维持行政，联军监督告示、巡逻与涉外审判。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-liede-fort-site",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.33238,
+          23.11713
+        ]
+      },
+      "properties": {
+        "name": "猎德 · 广东水师江防",
+        "start_year": 1856,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "猎德炮台位于广州东侧珠江航段。1856年先后有英舰炮击和清军回守。",
+        "source_ids": [
+          "19C36-CAN-GZ56",
+          "19C36-CAN-HUMEN-ARCH",
+          "19C36-CAN-G-LIE"
+        ],
+        "source_urls": [
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4046.jhtml",
+          "https://huacheng.gz-cmc.com/pages/2023/02/10/e99d5670a9e94f17a48559d41fc6ab7a.html",
+          "https://mapcarta.com/N6434345185"
+        ],
+        "named_anchors": [
+          "猎德"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1856-FORTS",
+          "E19-CAN-1856-LIEDE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-liede-fort-site"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-weiyuan-battery-1856",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.62079,
+          22.79821
+        ]
+      },
+      "properties": {
+        "name": "威远炮台 · 虎门江防",
+        "start_year": 1856,
+        "end_year": 1856,
+        "display_kind": "conflict",
+        "summary_zh": "英国舰队先夺横档，随后夺威远及东岸其他炮台。",
+        "source_ids": [
+          "19C36-CAN-GZ56",
+          "19C36-CAN-HUMEN-ARCH",
+          "19C36-CAN-G-HUMEN"
+        ],
+        "source_urls": [
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4046.jhtml",
+          "https://huacheng.gz-cmc.com/pages/2023/02/10/e99d5670a9e94f17a48559d41fc6ab7a.html",
+          "https://mapcarta.com/W583396711"
+        ],
+        "named_anchors": [
+          "威远炮台"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1856-HUMEN"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-weiyuan-battery-1856"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-yamen-bombarded",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.25474,
+          23.11739
+        ]
+      },
+      "properties": {
+        "name": "两广总督署 · 遭炮击与劫掠",
+        "start_year": 1856,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "1856年英军炮击、攻入外城并劫掠总督署，1857年底督署再受炮击破坏。",
+        "source_ids": [
+          "19C36-CAN-CAT",
+          "19C36-CAN-GZ56",
+          "19C36-CAN-GZ57",
+          "19C36-CAN-G-YAM"
+        ],
+        "source_urls": [
+          "https://www.gdwsw.gov.cn/shsy/content/post_30312.html",
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4046.jhtml",
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4045.jhtml",
+          "https://mapcarta.com/W542890833"
+        ],
+        "named_anchors": [
+          "两广总督署旧址"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1856-SHELL",
+          "E19-CAN-1856-HOMES",
+          "E19-CAN-1856-YAMEN",
+          "E19-CAN-1857-BOMB"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-yamen-bombarded"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-thirteen-factories-fire",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.24609,
+          23.11232
+        ]
+      },
+      "properties": {
+        "name": "十三行外商馆 · 大火与周边民房焚烧",
+        "start_year": 1856,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "1856年底外商馆发生火灾。1857年1月英军奉命在原商馆花园两侧近郊纵火。",
+        "source_ids": [
+          "19C36-CAN-FIRE",
+          "19C36-CAN-NAVY",
+          "19C36-CAN-FACTORY",
+          "19C36-CAN-GZ56",
+          "19C36-CAN-G-FAC"
+        ],
+        "source_urls": [
+          "https://iqh.ruc.edu.cn/old/qdzwgxyj/zwgx_yjqy/js/8dc4c27eedd147dfae8a3618a7bcd549.htm",
+          "https://upload.wikimedia.org/wikipedia/commons/8/83/Papers_relating_to_the_Proceddings_of_Her_Majesty%E2%80%99s_Naval_Forces_at_Canton%2C_with_Appendix_%28IA_dli.granth.106505%29.pdf#page=261",
+          "https://wglj.gz.gov.cn/attachment/7/7717/7717518/9968210.pdf",
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4046.jhtml",
+          "https://mapcarta.com/W331716008"
+        ],
+        "named_anchors": [
+          "十三行商馆旧址一带"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1856-FACTORIES",
+          "E19-CAN-1857-FIRE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-thirteen-factories-fire"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-ersha-landing",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.29957,
+          23.11237
+        ]
+      },
+      "properties": {
+        "name": "二沙岛 · 英军工兵前沿",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "1857年底广州攻城前夜，英军工兵在岛东端展开。",
+        "source_ids": [
+          "19C36-CAN-GZ57",
+          "19C36-CAN-WYLD",
+          "19C36-CAN-HUMEN-ARCH",
+          "19C36-CAN-G-ERS"
+        ],
+        "source_urls": [
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4045.jhtml",
+          "https://lbezone.hkust.edu.hk/bib/b536709",
+          "https://huacheng.gz-cmc.com/pages/2023/02/10/e99d5670a9e94f17a48559d41fc6ab7a.html",
+          "https://mapcarta.com/29077798"
+        ],
+        "named_anchors": [
+          "二沙岛"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1857-ERSHA"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-ersha-landing"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-north-bank-landing",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.298,
+          23.119
+        ]
+      },
+      "properties": {
+        "name": "珠江北岸 · 英法部队登陆",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "12月28日英法部队从城东江岸登陆，转向城东高地及城墙。",
+        "source_ids": [
+          "19C36-CAN-LANDING",
+          "19C36-CAN-ATTACK",
+          "19C36-CAN-GZ57",
+          "19C36-CAN-BNF"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=147",
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=159",
+          "https://www.gzsqw.org.cn/c/sdfzpc/gmfy/4045.jhtml",
+          "https://gallica.bnf.fr/ark:/12148/btv1b531028112/"
+        ],
+        "named_anchors": [
+          "珠江北岸联军登陆区"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1857-LAND",
+          "E19-CAN-1857-NORTH"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-north-bank-landing"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-zhenhai-tower",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.26028,
+          23.1406
+        ]
+      },
+      "properties": {
+        "name": "镇海楼 · 被英法联军占领的城墙高地",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "英法联军于12月29日登上城墙并攻占镇海楼。",
+        "source_ids": [
+          "19C36-CAN-ATTACK",
+          "19C36-CAN-BNF",
+          "19C36-CAN-WYLD",
+          "19C36-CAN-G-TOWER"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=159",
+          "https://gallica.bnf.fr/ark:/12148/btv1b531028112/",
+          "https://lbezone.hkust.edu.hk/bib/b536709",
+          "https://mapcarta.com/W146688561"
+        ],
+        "named_anchors": [
+          "镇海楼"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1857-NORTH"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-zhenhai-tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-guanyin-allied-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.2591,
+          23.1388
+        ]
+      },
+      "properties": {
+        "name": "观音阁一带 · 联军总部与军械储备",
+        "start_year": 1857,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "英法联军在此设总部。1858年1月英方报告称三处军械储备已被转运至这里。",
+        "source_ids": [
+          "19C36-CAN-ATTACK",
+          "19C36-CAN-ARSENALS",
+          "19C36-CAN-HILL",
+          "19C36-CAN-HILL-LOCAL",
+          "19C36-CAN-BNF"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=159",
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=174",
+          "https://hpcbristol.net/visual/AB-s01",
+          "https://www.yuexiu.gov.cn/yxdt/rdzt/zdlyxxgk/shgysyjs/content/post_3523038.html",
+          "https://gallica.bnf.fr/ark:/12148/btv1b531028112/"
+        ],
+        "named_anchors": [
+          "越秀山观音阁旧址一带"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1857-NORTH",
+          "E19-CAN-1858-ARMS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-guanyin-allied-hq"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-east-gate-punishment",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.27441,
+          23.12984
+        ]
+      },
+      "properties": {
+        "name": "广州大东门一带 · 联军拆毁民房",
+        "start_year": 1858,
+        "end_year": 1858,
+        "display_kind": "land_dispossession",
+        "summary_zh": "英军司令报告称联军为报复士兵遇刺，拆掉东门外事发地点附近的房屋。",
+        "source_ids": [
+          "19C36-CAN-COLLECTIVE",
+          "19C36-CAN-EAST",
+          "19C36-CAN-BNF"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/1/1f/Parliamentary_Papers_-_1859_Sess._2_-_Volume_33.pdf#page=373",
+          "https://mzj.gz.gov.cn/attachment/7/7537/7537434/8753411.pdf",
+          "https://gallica.bnf.fr/ark:/12148/btv1b531028112/"
+        ],
+        "named_anchors": [
+          "大东门旧址一带"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1858-HOUSES"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-east-gate-punishment"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canton-shamian-site-agreement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.23943,
+          23.10976
+        ]
+      },
+      "properties": {
+        "name": "沙面 · 英法新商埠用地",
+        "start_year": 1859,
+        "end_year": 1859,
+        "display_kind": "land_dispossession",
+        "summary_zh": "广州占领期间，英法取得另建商埠的沙面用地同意，正式租约后于1861年订立。",
+        "source_ids": [
+          "19C36-CAN-SHAMIAN",
+          "19C36-CAN-LEIBO",
+          "19C36-CAN-G-SHA"
+        ],
+        "source_urls": [
+          "https://www.gzsqw.org.cn/c/sdfzpc/ztyj/6506.jhtml",
+          "https://stevenleibo.com/wp-content/uploads/2011/08/the-anglo-french-occupation-of-canton.pdf",
+          "https://mapcarta.com/16286238"
+        ],
+        "named_anchors": [
+          "沙面"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1859-SHAMIAN"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "canton-shamian-site-agreement"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tianjin-dagu-batteries-1858-59",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.7052969,
+          38.9771289
+        ]
+      },
+      "properties": {
+        "name": "大沽口 · 清军江防与英法进攻",
+        "start_year": 1858,
+        "end_year": 1859,
+        "display_kind": "conflict",
+        "summary_zh": "英法舰队1858年夺取炮台，次年再攻时被清军击退。",
+        "source_ids": [
+          "19C36-CAN-TAKU58",
+          "19C36-CAN-TAKU59",
+          "19C36-CAN-NAM",
+          "19C36-CAN-DAGU",
+          "19C36-CAN-DAGU-GEO"
+        ],
+        "source_urls": [
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-148229",
+          "https://www.dpm.org.cn/lemmas/243072.html",
+          "https://www.nam.ac.uk/explore/second-china-war",
+          "https://www.tj.gov.cn/sq/yztj/jqjs/202005/t20200520_2467984.html",
+          "https://www.wikidata.org/wiki/Q548289"
+        ],
+        "named_anchors": [
+          "大沽口炮台"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1858-TAKU",
+          "E19-CAN-1859-REBUFF"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "tianjin-dagu-batteries-1858-59",
+        "year_stages": [
+          {
+            "start_year": 1858,
+            "end_year": 1858,
+            "controller": "allied",
+            "title": "大沽口 · 英法舰队攻取炮台",
+            "summary_zh": "英法舰队在5月攻取白河口炮台，并前往天津交涉。"
+          },
+          {
+            "start_year": 1859,
+            "end_year": 1859,
+            "controller": "qing",
+            "title": "大沽口 · 清军击退英法舰队",
+            "summary_zh": "清军加固炮台。6月25日击退要求从白河口进入的英法舰队。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tianjin-beitang-ratification-alternative",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.70182,
+          39.09931
+        ]
+      },
+      "properties": {
+        "name": "北塘 · 清方指定的使节登岸处",
+        "start_year": 1859,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "清方要求英法使节由北塘上岸赴京换约。英国公使坚持由大沽进白河。",
+        "source_ids": [
+          "19C36-CAN-TAKU59",
+          "19C36-CAN-NAM",
+          "19C36-CAN-G-BEI"
+        ],
+        "source_urls": [
+          "https://www.dpm.org.cn/lemmas/243072.html",
+          "https://www.nam.ac.uk/explore/second-china-war",
+          "https://mapcarta.com/15978788"
+        ],
+        "named_anchors": [
+          "北塘"
+        ],
+        "mapping_method": "Documented WGS84 named-place reference; dated episode where indicated.",
+        "related_event_ids": [
+          "E19-CAN-1859-BEITANG"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "tianjin-beitang-ratification-alternative"
+      }
+    },
     {
       "type": "Feature",
       "id": "awadh-lucknow-capital",
