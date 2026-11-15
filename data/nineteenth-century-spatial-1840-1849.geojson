@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1840–1849 Chapter 35 batches 1–7",
+    "coverage": "1840–1849 Chapter 35 batches 1–8",
     "historical_area_statistics": false
   },
   "features": [
@@ -6395,6 +6395,357 @@
             "controller": "british",
             "title": "纳闽岛 · 文莱割让与英国接管",
             "summary_zh": "文莱签约后，英国海军登岛接管，港口及煤矿陆续纳入英国经营。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haw-honolulu-harbor",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.867,
+          21.3067
+        ]
+      },
+      "properties": {
+        "name": "檀香山港 · 夏威夷王国",
+        "start_year": 1843,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "1843年7月恢复主权后，港口和海关由夏威夷王国管理。",
+        "source_ids": [
+          "19C35-OCEAN-HAW-LETTERS",
+          "19C35-OCEAN-HAW-FRUS",
+          "19C35-OCEAN-HAW-TREATY",
+          "19C35-OCEAN-HAW-HARBOR"
+        ],
+        "source_urls": [
+          "https://digitalarchives.hawaii.gov/item/ark:70111/521s",
+          "https://history.state.gov/historicaldocuments/frus1894app2/d6",
+          "https://history.state.gov/historicaldocuments/frus1894app2/d7",
+          "https://tidesandcurrents.noaa.gov/benchmarks.html?id=1612340"
+        ],
+        "named_anchors": [
+          "檀香山港"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-HAW-1843-PAULET-ARRIVES",
+          "E19-HAW-1843-ULTIMATUM",
+          "E19-HAW-1843-CESSION",
+          "E19-HAW-1843-COMMISSION",
+          "E19-HAW-1843-IMPORT-DUTY",
+          "E19-HAW-1843-THOMAS-ARRIVES",
+          "E19-HAW-1843-RESTORATION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "haw-honolulu-harbor",
+        "year_stages": [
+          {
+            "start_year": 1843,
+            "end_year": 1843,
+            "controller": "local",
+            "title": "檀香山港 · 临时接管与主权恢复",
+            "summary_zh": "保莱特于2月迫使王国临时让渡权力，英方参与临时委员会并介入港口税务。夏威夷王国于7月31日恢复主权。"
+          },
+          {
+            "start_year": 1844,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "檀香山港 · 夏威夷王国",
+            "summary_zh": "1843年7月恢复主权后，港口和海关由夏威夷王国管理。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haw-thomas-square",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.84904,
+          21.30275
+        ]
+      },
+      "properties": {
+        "name": "托马斯广场 · 夏威夷王旗复升",
+        "start_year": 1843,
+        "end_year": 1843,
+        "display_kind": "political",
+        "summary_zh": "7月31日，夏威夷王国在公开仪式上恢复主权并重新升起王旗。",
+        "source_ids": [
+          "19C35-OCEAN-HAW-RESTORE",
+          "19C35-OCEAN-HAW-KS",
+          "19C35-OCEAN-HAW-TREATY",
+          "19C35-OCEAN-HAW-SQUARE"
+        ],
+        "source_urls": [
+          "https://digitalarchives.hawaii.gov/item/ark:70111/2nLW",
+          "https://www.ksbe.edu/article/laa-hoihoi-ea-celebrates-the-return-of-sovereignty-to-the-hawaiian-kingdom",
+          "https://history.state.gov/historicaldocuments/frus1894app2/d7",
+          "https://npgallery.nps.gov/AssetDetail/NRIS/72000423"
+        ],
+        "named_anchors": [
+          "托马斯广场"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-HAW-1843-RESTORATION",
+          "E19-HAW-1843-CHURCH"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "haw-thomas-square",
+        "year_stages": [
+          {
+            "start_year": 1843,
+            "end_year": 1843,
+            "controller": "local",
+            "title": "托马斯广场 · 夏威夷王旗复升",
+            "summary_zh": "7月31日，夏威夷王国在公开仪式上恢复主权并重新升起王旗。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miskitu-bluefields-council",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.76449,
+          12.01292
+        ]
+      },
+      "properties": {
+        "name": "布卢菲尔兹 · 米斯基托政权",
+        "start_year": 1847,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "米斯基托政权在此组织民兵；英国设有代理人，并出动军舰协助夺取圣胡安河口。",
+        "source_ids": [
+          "19C35-OCEAN-M-CLAIM",
+          "19C35-OCEAN-M-GOMEZ",
+          "19C35-OCEAN-M-BLUE"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/2/2e/Correspondence_respecting_the_Mosquito_territory._Presented_to_the_House_of_Commons%2C_July_3%2C_1848%2C_in_pursuance_of_their_address_of_April_3%2C_1848.pdf#page=107",
+          "https://discovery.ucl.ac.uk/id/eprint/10129631/1/David%20Maurice%20Gomez_PhD%20Dissertation_e-thesis.pdf",
+          "https://www.geonames.org/3620680/bluefields.html"
+        ],
+        "named_anchors": [
+          "布卢菲尔兹"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIS-1847-BLUEFIELDS-DEPARTURE",
+          "E19-MIS-1848-GREYTOWN-TAKEOVER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "miskitu-bluefields-council",
+        "year_stages": [
+          {
+            "start_year": 1847,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "布卢菲尔兹 · 米斯基托政权",
+            "summary_zh": "米斯基托政权在此组织民兵；英国设有代理人，并出动军舰协助夺取圣胡安河口。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miskitu-old-greytown",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.705,
+          10.92056
+        ]
+      },
+      "properties": {
+        "name": "圣胡安德尔北港 · 格雷敦旧址",
+        "start_year": 1847,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "英国海军支持米斯基托政权夺港并接管海关。尼加拉瓜军反击，英国通过停战协议保留了夺港后设立的关税。",
+        "source_ids": [
+          "19C35-OCEAN-M-CLAIM",
+          "19C35-OCEAN-M-PACT",
+          "19C35-OCEAN-M-GOMEZ",
+          "19C35-OCEAN-M-GREY",
+          "19C35-OCEAN-M-GREY-GEO",
+          "19C35-OCEAN-M-GREY-MAP"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/2/2e/Correspondence_respecting_the_Mosquito_territory._Presented_to_the_House_of_Commons%2C_July_3%2C_1848%2C_in_pursuance_of_their_address_of_April_3%2C_1848.pdf#page=107",
+          "https://upload.wikimedia.org/wikipedia/commons/2/2e/Correspondence_respecting_the_Mosquito_territory._Presented_to_the_House_of_Commons%2C_July_3%2C_1848%2C_in_pursuance_of_their_address_of_April_3%2C_1848.pdf#page=133",
+          "https://discovery.ucl.ac.uk/id/eprint/10129631/1/David%20Maurice%20Gomez_PhD%20Dissertation_e-thesis.pdf",
+          "https://www.eaai.com.ni/en/san-juan-nicaragua-2/",
+          "https://en.wikisource.org/wiki/Page:Encyclop%C3%A6dia_Britannica,_Ninth_Edition,_v._11.djvu/206",
+          "https://sajurin.enriquebolanos.org/docs/ABG-SO-P15-ATLAS%20HISTORIOGRAFICO.pdf"
+        ],
+        "named_anchors": [
+          "圣胡安德尔北港"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIS-1848-GREYTOWN-TAKEOVER",
+          "E19-MIS-1848-CUSTOMHOUSE",
+          "E19-MIS-1848-SALAS-RETURNS",
+          "E19-MIS-1848-FLEET-RETURNS",
+          "E19-MIS-1848-AGREEMENT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "miskitu-old-greytown",
+        "year_stages": [
+          {
+            "start_year": 1847,
+            "end_year": 1847,
+            "controller": "local",
+            "title": "圣胡安德尔北港 · 尼加拉瓜海关",
+            "summary_zh": "尼加拉瓜在圣胡安河口管理港务。米斯基托政权在英国支持下提出争议。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "圣胡安德尔北港 · 米斯基托港务",
+            "summary_zh": "英国海军支持米斯基托政权夺港并接管海关。尼加拉瓜军反击，英国通过停战协议保留了夺港后设立的关税。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miskitu-sarapiqui-trinidad",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.93725,
+          10.71465
+        ]
+      },
+      "properties": {
+        "name": "萨拉皮基河口 · 拉特立尼达战斗",
+        "start_year": 1848,
+        "end_year": 1848,
+        "display_kind": "conflict",
+        "summary_zh": "2月12日，尼加拉瓜守军抵抗沿河上溯的英军。英军攻占并焚毁工事。",
+        "source_ids": [
+          "19C35-OCEAN-M-WAR",
+          "19C35-OCEAN-M-NICARAGUA",
+          "19C35-OCEAN-M-CUBA",
+          "19C35-OCEAN-M-BOCA",
+          "19C35-OCEAN-M-SAR",
+          "19C35-OCEAN-M-LOCH-CHART"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/2/2e/Correspondence_respecting_the_Mosquito_territory._Presented_to_the_House_of_Commons%2C_July_3%2C_1848%2C_in_pursuance_of_their_address_of_April_3%2C_1848.pdf#page=117",
+          "https://sajurin.enriquebolanos.org/docs/CCBA%20-%20SERIE%20HISTORICA%20-%2007%20-%2016.pdf",
+          "https://sajurin.enriquebolanos.org/docs/CCBA%20-%20SERIE%20FUENTES%20HISTORICAS%20-%2008%20-%2003.pdf",
+          "https://mapcarta.com/19588670",
+          "https://museojuansantamaria.go.cr/coleccion-arqueologica-la-trinidad-sarapiqui/",
+          "https://sajurin.enriquebolanos.org/docs/ABG-SO-P15-ATLAS%20HISTORIOGRAFICO.pdf#page=31"
+        ],
+        "named_anchors": [
+          "萨拉皮基河口"
+        ],
+        "mapping_method": "Use the named tributary confluence corroborated by Nicaraguan historical accounts. The exact nineteenth-century earthworks have not been located.",
+        "related_event_ids": [
+          "E19-MIS-1848-SARAPIQUI-BATTLE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "miskitu-sarapiqui-trinidad",
+        "year_stages": [
+          {
+            "start_year": 1848,
+            "end_year": 1848,
+            "controller": "local",
+            "title": "萨拉皮基河口 · 拉特立尼达战斗",
+            "summary_zh": "2月12日，尼加拉瓜守军抵抗沿河上溯的英军。英军攻占并焚毁工事。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miskitu-san-carlos",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.7787,
+          11.123
+        ]
+      },
+      "properties": {
+        "name": "圣卡洛斯 · 尼加拉瓜湖出口",
+        "start_year": 1848,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "1848年英军撤出后，圣卡洛斯由尼加拉瓜管理。",
+        "source_ids": [
+          "19C35-OCEAN-M-WAR",
+          "19C35-OCEAN-M-PACT",
+          "19C35-OCEAN-M-SCARLOS"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/2/2e/Correspondence_respecting_the_Mosquito_territory._Presented_to_the_House_of_Commons%2C_July_3%2C_1848%2C_in_pursuance_of_their_address_of_April_3%2C_1848.pdf#page=117",
+          "https://upload.wikimedia.org/wikipedia/commons/2/2e/Correspondence_respecting_the_Mosquito_territory._Presented_to_the_House_of_Commons%2C_July_3%2C_1848%2C_in_pursuance_of_their_address_of_April_3%2C_1848.pdf#page=133",
+          "https://www.municipio.co.ni/municipio-san-carlos.html"
+        ],
+        "named_anchors": [
+          "圣卡洛斯"
+        ],
+        "mapping_method": "Named location anchored to the cited historical or modern geographic reference.",
+        "related_event_ids": [
+          "E19-MIS-1848-SAN-CARLOS",
+          "E19-MIS-1848-AGREEMENT",
+          "E19-MIS-1848-SAN-CARLOS-EXIT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "miskitu-san-carlos",
+        "year_stages": [
+          {
+            "start_year": 1848,
+            "end_year": 1848,
+            "controller": "local",
+            "title": "圣卡洛斯 · 英军进驻后撤出",
+            "summary_zh": "英军2月占领湖口据点，征用房屋驻扎。停战后交还尼加拉瓜。"
+          },
+          {
+            "start_year": 1849,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "圣卡洛斯 · 尼加拉瓜据点",
+            "summary_zh": "1848年英军撤出后，圣卡洛斯由尼加拉瓜管理。"
           }
         ]
       }

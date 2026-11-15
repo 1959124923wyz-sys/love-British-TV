@@ -376,7 +376,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   }
   await goto('?review19c=1&year=1840',1840);
   assert.match(await page.locator('#chapterLabel').textContent(),/第35章/);
-  assert.match(await page.locator('#chapterIntro').textContent(),/南京条约/);
+  await page.waitForFunction(()=>document.querySelector('#chapterIntro')?.textContent.includes('南京条约'));
   assert.match(await page.locator('[data-decade="1840"]').textContent(),/战后条约与殖民边疆/);
   const chapter35Topics=[
    [1840,'E19-OP-1840-DINGHAI-FIRST','E19-OPIUM-WAR-TREATY-PORTS','E19-OP-1842-NANKING-TREATY',1842],
@@ -408,7 +408,10 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1848,'E19-SA-1848-ORANGE-BOOMPLAATS','E19-SA-ORANGE-SOVEREIGNTY','E19-SA-1849-ORANGE-WARDEN-LINE',1849,false],
    [1842,'E19-SA-1842-NATAL-PORT-OCCUPIED','E19-SA-NATAL-HUT-TAX','E19-SA-1849-NATAL-HUT-TAX',1849],
    [1846,'E19-BOR-1846-LABUAN-TREATY','E19-BORNEO-BROOKE-LABUAN','E19-BOR-1849-BETING-MARAU',1849],
-   [1849,'E19-BOR-1849-KANOWIT-FINE','E19-BORNEO-BROOKE-LABUAN','E19-BOR-1843-PADEH',1843,false]
+   [1849,'E19-BOR-1849-KANOWIT-FINE','E19-BORNEO-BROOKE-LABUAN','E19-BOR-1843-PADEH',1843,false],
+   [1843,'E19-HAW-1843-CESSION','E19-HAWAII-PAULET','E19-HAW-1843-RESTORATION',1843],
+   [1848,'E19-MIS-1848-GREYTOWN-TAKEOVER','E19-MISKITU-GREYTOWN','E19-MIS-1847-BLUEFIELDS-DEPARTURE',1847],
+   [1848,'E19-MIS-1848-AGREEMENT','E19-MISKITU-GREYTOWN','E19-MIS-1848-SARAPIQUI-BATTLE',1848]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -492,6 +495,21 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(4.8842,114.94447),'#65c7b6');
   await jump(1849);
   assert.equal(await pointStroke(1.757833,111.081667),'#a5cdec');
+  await jump(1843);
+  assert.equal(await pointStroke(21.3067,-157.867),'#65c7b6');
+  assert.equal(await pointStroke(21.30275,-157.84904),'#65c7b6');
+  await jump(1844);
+  assert.equal(await pointStroke(21.3067,-157.867),'#65c7b6');
+  assert.equal(await pointStroke(21.30275,-157.84904),undefined);
+  await jump(1847);
+  assert.equal(await pointStroke(12.01292,-83.76449),'#65c7b6');
+  assert.equal(await pointStroke(10.92056,-83.705),'#65c7b6');
+  await jump(1848);
+  assert.equal(await pointStroke(11.123,-84.7787),'#65c7b6');
+  assert.equal(await pointStroke(10.71465,-83.93725),'#a5cdec');
+  assert.equal(await pointStroke(10.92056,-83.705),'#65c7b6');
+  await jump(1849);
+  assert.equal(await pointStroke(11.123,-84.7787),'#65c7b6');
 
   await jump(1839);
   await openEvent('E19-NEW-1839-MONMOUTH-TRIAL-OPENS');
@@ -583,6 +601,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 58 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 60 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
