@@ -8,6 +8,560 @@
   "features": [
     {
       "type": "Feature",
+      "id": "delhi-1857-nizam",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.24222,
+          28.59111
+        ]
+      },
+      "properties": {
+        "name": "尼扎穆丁陵区",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "civilian",
+        "summary_zh": "1857年12月的记述提到尼扎穆丁等避难地的疾病。",
+        "source_ids": [
+          "19C36-DEL-BURN",
+          "19C36-DEL-GHALIB",
+          "19C36-DEL-NIZAM"
+        ],
+        "source_urls": [
+          "https://www.scribd.com/document/511024272/Delhi-Between-Two-Empires-1803-1930-Society-Government-and-Urban-Growth-by-Narayani-Gupta",
+          "https://franpritchett.com/00ghalib/texts/txt_dastanbu_kafaruqi.pdf",
+          "https://nmma.nic.in/nmma/builtDetail.do?dynasty=28&refId=11583"
+        ],
+        "named_anchors": [
+          "尼扎穆丁陵区"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-SHELTER"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-nizam"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-purana",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.24374,
+          28.60957
+        ]
+      },
+      "properties": {
+        "name": "德里旧堡",
+        "start_year": 1858,
+        "end_year": 1858,
+        "display_kind": "civilian",
+        "summary_zh": "1858年，未能进城的居民有些在旧堡一带避难。",
+        "source_ids": [
+          "19C36-DEL-RETURN",
+          "19C36-DEL-GHALIB",
+          "19C36-DEL-PURANA"
+        ],
+        "source_urls": [
+          "https://franpritchett.com/00ghalib/texts/txt_dastanbu_kafaruqi.pdf",
+          "https://www.scribd.com/document/511024272/Delhi-Between-Two-Empires-1803-1930-Society-Government-and-Urban-Growth-by-Narayani-Gupta",
+          "https://shop.museumsofindia.org/index.php/node/303"
+        ],
+        "named_anchors": [
+          "德里旧堡"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1858-SHELTER"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-purana"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-neel",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.22778,
+          28.65861
+        ]
+      },
+      "properties": {
+        "name": "卡特拉尼尔染坊街",
+        "start_year": 1857,
+        "end_year": 1858,
+        "display_kind": "economic",
+        "summary_zh": "军方收取街区赎金，给这里派了卫兵。",
+        "source_ids": [
+          "19C36-DEL-BURN",
+          "19C36-DEL-PRIZE",
+          "19C36-DEL-NEEL"
+        ],
+        "source_urls": [
+          "https://www.scribd.com/document/511024272/Delhi-Between-Two-Empires-1803-1930-Society-Government-and-Urban-Growth-by-Narayani-Gupta",
+          "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1911%20Government%20Records%20Punjab--Mutiny%20Records%20Correspondence%20part%202%20s.pdf",
+          "https://nmma.nic.in/nmma/builtDetail.do?dynasty=119&refId=11994"
+        ],
+        "named_anchors": [
+          "卡特拉尼尔染坊街"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-NEEL",
+          "E19-DEL-1858-REPORT"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-neel"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-jama",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2334,
+          28.6507
+        ]
+      },
+      "properties": {
+        "name": "贾玛清真寺",
+        "start_year": 1857,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "英军占城后把这座清真寺用作兵营。",
+        "year_stages": [
+          {
+            "start_year": 1857,
+            "end_year": 1857,
+            "controller": "british",
+            "title": "贾玛清真寺 · 军队驻地",
+            "summary_zh": "英印军夺取德里后在清真寺驻兵。"
+          },
+          {
+            "start_year": 1858,
+            "end_year": 1859,
+            "title": "贾玛清真寺 · 调驻令与礼拜限制",
+            "summary_zh": "1858年12月，当局要求把驻寺步兵调到达里亚甘杰。清真寺仍未向居民恢复礼拜。"
+          }
+        ],
+        "source_ids": [
+          "19C36-DEL-CITY",
+          "19C36-DEL-SOAS",
+          "19C36-DEL-JAMA",
+          "19C36-DEL-PLAN"
+        ],
+        "source_urls": [
+          "https://www.scribd.com/document/511024272/Delhi-Between-Two-Empires-1803-1930-Society-Government-and-Urban-Growth-by-Narayani-Gupta",
+          "https://eprints.soas.ac.uk/13540/1/Siddique_3333.pdf",
+          "https://artsandculture.google.com/asset/delhi-great-britain-ordnanace-survey-office/GQFUnv-2ICzB7g",
+          "https://en.wikipedia.org/wiki/Jama_Masjid,_Delhi"
+        ],
+        "named_anchors": [
+          "贾玛清真寺"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-LOOT-MOSQUE",
+          "E19-DEL-1858-MOSQUE-MOVE"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-jama"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-bloody",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.241,
+          28.636
+        ]
+      },
+      "properties": {
+        "name": "血门",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "霍德森在德里城墙以南射杀两名皇子与一名皇孙。",
+        "source_ids": [
+          "19C36-DEL-FAN",
+          "19C36-DEL-BLOODY"
+        ],
+        "source_urls": [
+          "https://ignca.gov.in/Asi_data/12048.pdf",
+          "https://en.wikipedia.org/wiki/Khooni_Darwaza"
+        ],
+        "named_anchors": [
+          "血门"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-PRINCES"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-bloody"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-tomb",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.25056,
+          28.59333
+        ]
+      },
+      "properties": {
+        "name": "胡马雍陵",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "political",
+        "summary_zh": "莫卧儿末代皇帝在围城结束时由此向英方投降。",
+        "source_ids": [
+          "19C36-DEL-WILSON",
+          "19C36-DEL-HOD",
+          "19C36-DEL-FAN",
+          "19C36-DEL-TOMB"
+        ],
+        "source_urls": [
+          "https://www.scribd.com/document/33766529/Crisis-in-Punjab-1857",
+          "https://ignca.gov.in/Asi_data/12048.pdf",
+          "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1911%20Government%20Records%20Punjab--Mutiny%20Records%20Correspondence%20part%202%20s.pdf",
+          "https://whc.unesco.org/en/list/232/maps"
+        ],
+        "named_anchors": [
+          "胡马雍陵"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-SURRENDER"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-tomb"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-city",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2325,
+          28.6558
+        ]
+      },
+      "properties": {
+        "name": "德里月光市场与科特瓦利",
+        "start_year": 1857,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "军事总督要求持证返回的居民到科特瓦利登记。",
+        "source_ids": [
+          "19C36-DEL-BURN",
+          "19C36-DEL-OCC",
+          "19C36-DEL-GHALIB",
+          "19C36-DEL-NAM",
+          "19C36-DEL-KOTWALI",
+          "19C36-DEL-PLAN",
+          "19C36-DEL-SEARCH",
+          "19C36-DEL-PRIZE",
+          "19C36-DEL-SEIZE",
+          "19C36-DEL-RESTART",
+          "19C36-DEL-COMPLAINT",
+          "19C36-DEL-RETURN",
+          "19C36-DEL-CITY",
+          "19C36-DEL-EXILE",
+          "19C36-DEL-EXILE-DATE",
+          "19C36-DEL-LETTERS"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1911%20Government%20Records%20Punjab--Mutiny%20Records%20Correspondence%20part%202%20s.pdf",
+          "https://franpritchett.com/00ghalib/texts/russell_islam_1969/08chap8.pdf",
+          "https://www.scribd.com/document/511024272/Delhi-Between-Two-Empires-1803-1930-Society-Government-and-Urban-Growth-by-Narayani-Gupta",
+          "https://franpritchett.com/00ghalib/texts/txt_dastanbu_kafaruqi.pdf",
+          "https://searcharchives.bl.uk/catalog/041-000540059",
+          "https://www.news9live.com/knowledge/bahadur-shah-zafar-how-the-last-mughal-emperor-endured-tragedy-and-breathed-his-last-in-a-foreign-country-2567810/amp",
+          "https://artsandculture.google.com/asset/delhi-great-britain-ordnanace-survey-office/GQFUnv-2ICzB7g",
+          "https://nmma.nic.in/nmma/builtDetail.do?CultAff=15&refId=11616"
+        ],
+        "named_anchors": [
+          "德里月光市场与科特瓦利"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-EVICTION",
+          "E19-DEL-1857-PASS",
+          "E19-DEL-1857-SEARCH",
+          "E19-DEL-1857-STOP",
+          "E19-DEL-1857-SELECTIVE",
+          "E19-DEL-1857-COMPLAINT",
+          "E19-DEL-1858-HINDUS",
+          "E19-DEL-1858-ATTACH",
+          "E19-DEL-1858-DEPART",
+          "E19-DEL-1858-PETITION",
+          "E19-DEL-1859-RETURN",
+          "E19-DEL-1859-GATE-CHECK",
+          "E19-DEL-1859-PASS-END",
+          "E19-DEL-1859-TENANTS"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-city"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-gate",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.229,
+          28.66644
+        ]
+      },
+      "properties": {
+        "name": "克什米尔门",
+        "start_year": 1857,
+        "end_year": 1858,
+        "display_kind": "conflict",
+        "summary_zh": "1857年9月14日，英印军攻入克什米尔门和北面城墙，城内战斗继续。",
+        "source_ids": [
+          "19C36-DEL-EXAM",
+          "19C36-DEL-WILSON",
+          "19C36-DEL-NAM",
+          "19C36-DEL-FAN",
+          "19C36-DEL-GATE",
+          "19C36-DEL-PLAN",
+          "19C36-DEL-CITY"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://www.scribd.com/document/33766529/Crisis-in-Punjab-1857",
+          "https://upload.wikimedia.org/wikipedia/commons/a/ac/The_Examiner_1857-11-21-_Iss_2599_%28IA_sim_examiner-a-weekly-paper-on-politics-literature-music_1857-11-21_2599%29.pdf",
+          "https://ignca.gov.in/Asi_data/12048.pdf",
+          "https://www.scribd.com/document/511024272/Delhi-Between-Two-Empires-1803-1930-Society-Government-and-Urban-Growth-by-Narayani-Gupta",
+          "https://artsandculture.google.com/asset/delhi-great-britain-ordnanace-survey-office/GQFUnv-2ICzB7g",
+          "https://commons.wikimedia.org/wiki/Category:Kashmere_Gate_Monument,_Delhi"
+        ],
+        "named_anchors": [
+          "克什米尔门"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-ASSAULT",
+          "E19-DEL-1858-WALL"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-gate"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-tower",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.21806,
+          28.68806
+        ]
+      },
+      "properties": {
+        "name": "德里山脊旗杆塔",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "5月11日有人在信号塔避难。6月，起义队伍向山脊上的英印军据点发动进攻。",
+        "source_ids": [
+          "19C36-DEL-FAN",
+          "19C36-DEL-TOWER"
+        ],
+        "source_urls": [
+          "https://ignca.gov.in/Asi_data/12048.pdf",
+          "https://commons.wikimedia.org/wiki/Category:Flagstaff_Tower"
+        ],
+        "named_anchors": [
+          "德里山脊旗杆塔"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-TOWER",
+          "E19-DEL-1857-RIDGE",
+          "E19-DEL-1857-TOWER-ATTACK"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-tower"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-red",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.24083,
+          28.65556
+        ]
+      },
+      "properties": {
+        "name": "德里红堡",
+        "start_year": 1857,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "巴哈杜尔·沙阿在此接受起义者拥戴。英印军9月夺取宫城，以红堡为司令部。",
+        "year_stages": [
+          {
+            "start_year": 1857,
+            "end_year": 1857,
+            "controller": "british",
+            "title": "德里红堡 · 英印军占领",
+            "summary_zh": "5月起义者在红堡得到莫卧儿皇帝支持。9月20日英印军占领宫城，并在宫内设司令部。"
+          },
+          {
+            "start_year": 1858,
+            "end_year": 1859,
+            "controller": "british",
+            "title": "德里红堡 · 英军驻地",
+            "summary_zh": "军事委员会在原王宫审理巴哈杜尔·沙阿。英方随后保留红堡作为军事据点，并拆除部分宫殿建筑。"
+          }
+        ],
+        "source_ids": [
+          "19C36-DEL-NAM",
+          "19C36-DEL-FAN",
+          "19C36-DEL-TRIAL",
+          "19C36-DEL-RED",
+          "19C36-DEL-PLAN",
+          "19C36-DEL-WILSON",
+          "19C36-DEL-OCC",
+          "19C36-DEL-BURN",
+          "19C36-DEL-COLLECTION",
+          "19C36-DEL-JEWELS",
+          "19C36-DEL-VERDICT",
+          "19C36-DEL-CITY",
+          "19C36-DEL-SOAS"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1911%20Government%20Records%20Punjab--Mutiny%20Records%20Correspondence%20part%202%20s.pdf",
+          "https://www.scribd.com/document/33766529/Crisis-in-Punjab-1857",
+          "https://ignca.gov.in/Asi_data/12048.pdf",
+          "https://www.scribd.com/document/511024272/Delhi-Between-Two-Empires-1803-1930-Society-Government-and-Urban-Growth-by-Narayani-Gupta",
+          "https://eprints.soas.ac.uk/13540/1/Siddique_3333.pdf",
+          "https://collection.nam.ac.uk/detail.php?acc=1953-10-69-1",
+          "https://en.wikisource.org/wiki/Page:Trial_of_Muhammad_Bahadur_Shah,_Titular_King_of_Delhi,_etc.pdf/3",
+          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/23167/GIPE-000095-Contents.pdf?isAllowed=y&sequence=2",
+          "https://artsandculture.google.com/asset/delhi-great-britain-ordnanace-survey-office/GQFUnv-2ICzB7g",
+          "https://whc.unesco.org/en/list/231"
+        ],
+        "named_anchors": [
+          "德里红堡"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-PALACE",
+          "E19-DEL-1857-FORT",
+          "E19-DEL-1857-MUSLIM-EXPULSION",
+          "E19-DEL-1857-CLOSE-GATES",
+          "E19-DEL-1857-WHISK",
+          "E19-DEL-1857-JEWELS",
+          "E19-DEL-1858-TRIAL",
+          "E19-DEL-1858-VERDICT",
+          "E19-DEL-1858-KEEP",
+          "E19-DEL-1859-DEMOLITION"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-red"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "delhi-1857-meerut",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70636,
+          28.98002
+        ]
+      },
+      "properties": {
+        "name": "密拉特",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "密拉特驻军起事后，一支队伍于5月11日抵达德里。",
+        "source_ids": [
+          "19C36-DEL-NAM",
+          "19C36-DEL-VERDICT",
+          "19C36-DEL-MEERUT"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/23167/GIPE-000095-Contents.pdf?isAllowed=y&sequence=2",
+          "https://www.geonames.org/1263214/meerut.html"
+        ],
+        "named_anchors": [
+          "密拉特"
+        ],
+        "related_event_ids": [
+          "E19-DEL-1857-MEERUT"
+        ],
+        "mapping_method": "WGS84 reference point of the surviving site or the named city or quarter; no occupied extent or area.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "delhi-1857-meerut"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "santal-kochpara-column",
       "geometry": {
         "type": "Point",
