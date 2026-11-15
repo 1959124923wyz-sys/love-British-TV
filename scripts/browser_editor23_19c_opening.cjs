@@ -144,7 +144,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await goto('?year=1826',1819);
   assert.equal(await page.locator('[data-decade="1820"]').getAttribute('class').then(s=>s.includes('unpublished')),true);
   await goto('?review19c=1&year=1826',1826);
-  assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1849');
+  assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1859');
   assert.match(await page.locator('#chapterIntro').textContent(),/杨达波/);
   assert.match(await page.locator('[data-decade="1820"]').textContent(),/第33章/);
   await openEvent('E19-BUR-1826-YANDABO');
