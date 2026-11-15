@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1850–1859 Chapter 36 first batch and predecessor continuity",
+    "coverage": "1850–1859 Chapter 36 batches 1–2 and predecessor continuity",
     "historical_area_statistics": false
   },
   "features": [
@@ -2457,14 +2457,24 @@
           "19C35-HBC-LEK",
           "19C35-HBC-VIC-G",
           "19C35-VA-DOUGLAS",
-          "19C35-VA-LETTERS"
+          "19C35-VA-LETTERS",
+          "19C36-DT-DEEDS",
+          "19C36-DT-MAY",
+          "19C36-DT-WLC",
+          "19C36-DT-ASSEMBLY",
+          "19C36-DT-BLAN"
         ],
         "source_urls": [
           "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=16681",
           "https://www.leg.bc.ca/learn/discover-your-legislature/1843-fort-victoria-is-established",
           "https://mapcarta.com/N4409072170",
           "https://www.biographi.ca/en/bio/douglas_james_10E.html",
-          "https://royalbcmuseum.bc.ca/assets/Douglas_Treaties_Correspondence1.pdf"
+          "https://royalbcmuseum.bc.ca/assets/Douglas_Treaties_Correspondence1.pdf",
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/fort_victoria_treaties.pdf",
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/douglas_treaties_correspondence.pdf",
+          "https://wsanec.com/the-douglas-treaties/",
+          "https://www.leg.bc.ca/learn/discover-your-legislature/1856-first-house-of-assembly-elected",
+          "https://bcgenesis.uvic.ca/V50002.html"
         ],
         "named_anchors": [
           "维多利亚堡"
@@ -2474,7 +2484,12 @@
           "E19-HBC-1843-FORT-VICTORIA",
           "E19-HBC-1846-OREGON-TREATY",
           "E19-VA-1849-HQ",
-          "E19-VA-1849-DOUGLAS"
+          "E19-VA-1849-DOUGLAS",
+          "E19-DT-1850-BLANSHARD",
+          "E19-DT-1850-BLANK-SHEETS",
+          "E19-DT-1851-DOUGLAS",
+          "E19-DT-1852-SAANICH-SOUTH",
+          "E19-DT-1856-ASSEMBLY"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -2485,10 +2500,24 @@
         "year_stages": [
           {
             "start_year": 1850,
+            "end_year": 1850,
+            "controller": "hbc",
+            "title": "维多利亚堡 · 公司总部及首批岛上协议",
+            "summary_zh": "首任总督到岛履职，道格拉斯作为哈德孙湾公司主管与第一民族代表交涉，留下九份土地文书。"
+          },
+          {
+            "start_year": 1851,
+            "end_year": 1855,
+            "controller": "hbc",
+            "title": "维多利亚堡 · 公司总部与总督驻地",
+            "summary_zh": "道格拉斯兼任公司主管与殖民地总督，在这里经办土地交涉和殖民事务。"
+          },
+          {
+            "start_year": 1856,
             "end_year": 1859,
             "controller": "hbc",
-            "title": "维多利亚堡 · 公司太平洋总部",
-            "summary_zh": "道格拉斯把公司太平洋总部、货运和补给中心迁到维多利亚堡。"
+            "title": "维多利亚堡 · 公司总部与殖民地政务",
+            "summary_zh": "温哥华岛第一届民选议会于1856年开会。哈德孙湾公司继续在维多利亚开展业务。"
           }
         ]
       }
@@ -5631,7 +5660,8 @@
           "19C35-VA-WYLD",
           "19C35-VA-COAST",
           "19C36-VAN-LIC",
-          "19C36-VAN-PAY"
+          "19C36-VAN-PAY",
+          "19C36-DT-DEEDS"
         ],
         "source_urls": [
           "https://free.bcpublications.ca/civix/document/id/hstats/hstats/1404714123",
@@ -5639,7 +5669,8 @@
           "https://bcgenesis.uvic.ca/fo_925-1864_van_isl_1848.html",
           "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
           "https://hcmc.uvic.ca/~coldesp/V607026.html",
-          "https://vihistory-dev.uvic.ca/V627124.html"
+          "https://vihistory-dev.uvic.ca/V627124.html",
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/fort_victoria_treaties.pdf"
         ],
         "named_anchors": [
           "温哥华主岛",
@@ -5652,7 +5683,9 @@
           "E19-VA-1849-LAND-SALE",
           "E19-VA-1849-HQ",
           "E19-VA-1849-BARCLAY",
-          "E19-36-1859-ISLAND-TRADE-LICENCE"
+          "E19-36-1859-ISLAND-TRADE-LICENCE",
+          "E19-DT-1850-BLANK-SHEETS",
+          "E19-DT-1854-SARLEQUUN"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -5681,12 +5714,16 @@
         "source_ids": [
           "19C35-VA-KWAK",
           "19C35-VA-SCT",
-          "19C35-VA-RUPERT"
+          "19C35-VA-RUPERT",
+          "19C36-DT-DEEDS",
+          "19C36-DT-TEXT"
         ],
         "source_urls": [
           "https://www.kwakiutl.bc.ca/treaty/",
           "https://decisia.lexum.com/sct/rod/en/520904/1/document.do",
-          "https://apps.gov.bc.ca/pub/bcgnws/names/26140.html"
+          "https://apps.gov.bc.ca/pub/bcgnws/names/26140.html",
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/fort_victoria_treaties.pdf",
+          "https://www.rcaanc-cirnac.gc.ca/eng/1100100029052/1581515763202"
         ],
         "named_anchors": [
           "鲁珀特堡",
@@ -5695,14 +5732,39 @@
         "mapping_method": "Named historical coastal locality anchored to the British Columbia geographical names register.",
         "related_event_ids": [
           "E19-VA-1849-RUPERT",
-          "E19-VA-1849-COAL-TRADE"
+          "E19-VA-1849-COAL-TRADE",
+          "E19-DT-1851-QUEACKAR",
+          "E19-DT-1851-QUAKEOLTH"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
-        "stable_id": "hbc-fort-rupert"
+        "stable_id": "hbc-fort-rupert",
+        "year_stages": [
+          {
+            "start_year": 1850,
+            "end_year": 1850,
+            "controller": "hbc",
+            "title": "鲁珀特堡 · 公司采购煤炭",
+            "summary_zh": "公司在比弗港经营贸易，并试图扩大煤炭供应。"
+          },
+          {
+            "start_year": 1851,
+            "end_year": 1851,
+            "controller": "hbc",
+            "title": "鲁珀特堡 · 两份土地文书",
+            "summary_zh": "同日两份文书均写麦克尼尔港至哈迪湾，列村地、围耕地和渔猎条款。"
+          },
+          {
+            "start_year": 1852,
+            "end_year": 1859,
+            "controller": "hbc",
+            "title": "鲁珀特堡 · 公司贸易站",
+            "summary_zh": "公司继续经营堡站。"
+          }
+        ]
       }
     },
     {
@@ -6095,6 +6157,167 @@
             "controller": "british",
             "title": "沃特克卢夫 · 殖民军设哨占据",
             "summary_zh": "卡思卡特部队设哨巡查，1852年11月向外宣布已经占据沃特克卢夫。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sooke-1850-treaty-harbour",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.673889,
+          48.375278
+        ]
+      },
+      "properties": {
+        "name": "苏克港 · 维多利亚堡文书所涉水域",
+        "start_year": 1850,
+        "end_year": 1850,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1850年5月1日的切韦特瑟姆和苏克文书都提到苏克湾。",
+        "source_ids": [
+          "19C36-DT-DEEDS",
+          "19C36-DT-TEXT",
+          "19C36-DT-SOOKE"
+        ],
+        "source_urls": [
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/fort_victoria_treaties.pdf",
+          "https://www.rcaanc-cirnac.gc.ca/eng/1100100029052/1581515763202",
+          "https://apps.gov.bc.ca/pub/bcgnws/names/19767.html"
+        ],
+        "named_anchors": [
+          "苏克港"
+        ],
+        "related_event_ids": [
+          "E19-DT-1850-CHEWHAYTSUM",
+          "E19-DT-1850-SOKE"
+        ],
+        "mapping_method": "Named place anchored to the gazetteer and archival or First Nation evidence.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "sooke-1850-treaty-harbour"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pkols-1852-saanich-meeting",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.346667,
+          48.493056
+        ]
+      },
+      "properties": {
+        "name": "PKOLS · W̱SÁNEĆ与道格拉斯会面",
+        "start_year": 1852,
+        "end_year": 1852,
+        "display_kind": "political",
+        "summary_zh": "W̱SÁNEĆ领导委员会记载，1852年2月11日双方在PKOLS会面。",
+        "source_ids": [
+          "19C36-DT-DEEDS",
+          "19C36-DT-WLC",
+          "19C36-DT-PKOLS",
+          "19C36-DT-PK-GEO"
+        ],
+        "source_urls": [
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/fort_victoria_treaties.pdf",
+          "https://wsanec.com/the-douglas-treaties/",
+          "https://wsanec.com/celebration-and-ceremony-help-complete-pkols-naming-process/",
+          "https://geonames.nrcan.gc.ca/search-place-names/unique?id=JBAKZ"
+        ],
+        "named_anchors": [
+          "PKOLS"
+        ],
+        "related_event_ids": [
+          "E19-DT-1852-SAANICH-NORTH",
+          "E19-DT-1852-SAWMILL-REPORT"
+        ],
+        "mapping_method": "Named place anchored to the gazetteer and archival or First Nation evidence.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "pkols-1852-saanich-meeting"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nanaimo-hbc-coal-and-treaty",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.938056,
+          49.163889
+        ]
+      },
+      "properties": {
+        "name": "奈奈莫 · 公司煤矿与斯努奈穆克斯条约",
+        "start_year": 1852,
+        "end_year": 1859,
+        "display_kind": "economic_network",
+        "summary_zh": "麦凯奉命前往奈奈莫，公司在此开始经营煤矿，并从第一民族居民手中收购煤。",
+        "source_ids": [
+          "19C36-DT-N-GEO",
+          "19C36-DT-N-BC",
+          "19C36-DT-PARK",
+          "19C36-DT-MCKAY",
+          "19C36-DT-NCOAL",
+          "19C36-DT-DEEDS",
+          "19C36-DT-SNUNEY"
+        ],
+        "source_urls": [
+          "https://geonames.nrcan.gc.ca/search-place-names/unique?id=JAQAL",
+          "https://apps.gov.bc.ca/pub/bcgnws/names/9032.html",
+          "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=929",
+          "https://www.nanaimoarchives.ca/transcripts-and-recordings/hbc-mckay-letters-1852-1853",
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/douglas_treaties_correspondence.pdf",
+          "https://bcarchives.ca/wp-content/uploads/sites/2/2025/11/fort_victoria_treaties.pdf",
+          "https://www.snuneymuxw.ca/nation"
+        ],
+        "named_anchors": [
+          "奈奈莫"
+        ],
+        "related_event_ids": [
+          "E19-DT-1852-MCKAY-COAL",
+          "E19-DT-1852-RECOVERY",
+          "E19-DT-1853-COAL-LAND",
+          "E19-DT-1854-SARLEQUUN"
+        ],
+        "mapping_method": "Named place anchored to the gazetteer and archival or First Nation evidence.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "nanaimo-hbc-coal-and-treaty",
+        "year_stages": [
+          {
+            "start_year": 1852,
+            "end_year": 1852,
+            "controller": "hbc",
+            "title": "奈奈莫 · 公司开始经营煤矿",
+            "summary_zh": "麦凯奉命前往奈奈莫，公司在此开始经营煤矿，并从第一民族居民手中收购煤。"
+          },
+          {
+            "start_year": 1853,
+            "end_year": 1853,
+            "controller": "hbc",
+            "title": "奈奈莫 · 公司划定煤区",
+            "summary_zh": "道格拉斯把港湾大部和邻近两岛列入公司打算取得的煤区。"
+          },
+          {
+            "start_year": 1854,
+            "end_year": 1859,
+            "controller": "hbc",
+            "title": "奈奈莫 · 公司煤矿与斯努奈穆克斯条约",
+            "summary_zh": "公司继续开采煤炭。斯努奈穆克斯人与王室于1854年在奈奈莫达成协议。"
           }
         ]
       }
