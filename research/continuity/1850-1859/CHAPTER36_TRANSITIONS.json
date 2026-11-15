@@ -7,6 +7,231 @@
   "geometry_file": "data/nineteenth-century-spatial-1850-1859.geojson",
   "transitions": [
     {
+      "stable_id": "awadh-lucknow-capital",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-TAKE",
+        "19C36-AWD-MUKH",
+        "19C36-AWD-NAM",
+        "19C36-AWD-G-LUCK"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1856-ANNEX",
+        "E19-AWD-1857-REGENT",
+        "E19-AWD-1858-QAS",
+        "E19-AWD-1859-SANAD"
+      ],
+      "finding": "阿瓦德都城于1856年被英国接管。1857年恢复阿瓦德政权，1858年英军重新攻占。"
+    },
+    {
+      "stable_id": "awadh-faizabad-admin",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1856,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-DIST",
+        "19C36-AWD-MUKH",
+        "19C36-AWD-AHMAD",
+        "19C36-AWD-G-FAIZ"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1856-FAIZ-ADMIN",
+        "E19-AWD-1857-FAIZ-TAX",
+        "E19-AWD-1857-FAIZ-REBELS"
+      ],
+      "finding": "1856年英国派员接管。1857年当地出现有组织的抵抗。"
+    },
+    {
+      "stable_id": "awadh-khairabad-admin",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1856,
+      "last_display_year": 1856,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-DIST",
+        "19C36-AWD-G-KHAIR"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1856-KHAIR-ADMIN"
+      ],
+      "finding": "1856年从勒克瑙派员接收海拉巴德辖区。"
+    },
+    {
+      "stable_id": "awadh-bahraich-admin",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1856,
+      "last_display_year": 1856,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-DIST",
+        "19C36-AWD-G-BAH"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1856-BAH-ADMIN"
+      ],
+      "finding": "1856年从勒克瑙派温菲尔德接收当地行政。"
+    },
+    {
+      "stable_id": "awadh-chattar-palace",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1856,
+      "last_display_year": 1856,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-ANNEX",
+        "19C36-AWD-CHR"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1856-PALACE"
+      ],
+      "finding": "1856年殖民官清出王族住处及财物，瓦吉德随后申诉。"
+    },
+    {
+      "stable_id": "awadh-chinhat-battle",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-RES",
+        "19C36-AWD-MUKH",
+        "19C36-AWD-G-CHINHAT"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1857-CHINHAT"
+      ],
+      "finding": "起事军1857年6月击退劳伦斯部，使殖民军退入勒克瑙城内。"
+    },
+    {
+      "stable_id": "awadh-lucknow-residency",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-RES",
+        "19C36-AWD-RES-IND",
+        "19C36-AWD-NAM",
+        "19C36-AWD-G-RES"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1857-SIEGE",
+        "E19-AWD-1857-REINFORCE",
+        "E19-AWD-1857-WITHDRAW"
+      ],
+      "finding": "殖民军和城中撤至此处的人员被围，11月英军撤出驻节署。"
+    },
+    {
+      "stable_id": "awadh-dilkusha-palace",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1857,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-DIL",
+        "19C36-AWD-NAM",
+        "19C36-AWD-ASI-DIL"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1857-WITHDRAW",
+        "E19-AWD-1858-CAMP"
+      ],
+      "finding": "英军1857年11月经此撤离，1858年3月将此处用作攻城的基地。"
+    },
+    {
+      "stable_id": "awadh-alambagh-outpost",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1857,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-ALAM",
+        "19C36-AWD-ASI-ALAM",
+        "19C36-AWD-ALAM-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1857-ALAM",
+        "E19-AWD-1858-CAMP"
+      ],
+      "finding": "在撤出驻节署后，奥特拉姆继续在此驻兵，等待次年坎贝尔的部队。"
+    },
+    {
+      "stable_id": "awadh-qaiserbagh-looting",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1858,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-QAS",
+        "19C36-AWD-CAMP",
+        "19C36-AWD-TELE",
+        "19C36-AWD-PRIZE",
+        "19C36-AWD-G-QAS"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1858-QAS"
+      ],
+      "finding": "1858年3月英印军打开这处王室宫苑，随即发生劫掠。"
+    },
+    {
+      "stable_id": "awadh-baundi-resistance",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1858,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-MUKH",
+        "19C36-AWD-G-BAU"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1858-BAU",
+        "E19-AWD-1858-REBUT"
+      ],
+      "finding": "勒克瑙失守后，哈兹拉特·玛哈尔在包恩迪主持抵抗，并继续借比尔吉斯名义发令。"
+    },
+    {
+      "stable_id": "awadh-kingdom-boundary-1855",
+      "baseline_1849": false,
+      "transition": "documented_admin_frontier_reference",
+      "first_display_year": 1855,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AWD-OLDMAP",
+        "19C36-AWD-TAKE",
+        "19C36-AWD-TAKE-TEXT",
+        "19C36-AWD-DIST",
+        "19C36-AWD-MUKH",
+        "19C36-AWD-PROCL",
+        "19C36-AWD-ESTATE",
+        "19C36-AWD-TARAI"
+      ],
+      "evidence_anchors": [
+        "E19-AWD-1855-MINUTE",
+        "E19-AWD-1856-ANNEX",
+        "E19-AWD-1856-SETTLE",
+        "E19-AWD-1857-REGENT",
+        "E19-AWD-1858-CONFISCATE",
+        "E19-AWD-1859-SANAD"
+      ],
+      "finding": "1855版地图显示旧王国外缘。1856宣布接管，1857地方政权恢复并与英军争夺，1858重占首都及没收权，1859再订地税。1860阿瓦德塔莱一段归尼泊尔另查。"
+    },
+    {
       "stable_id": "cape-town-government",
       "baseline_1849": true,
       "transition": "continued",
@@ -2411,6 +2636,20 @@
     }
   ],
   "open_items": [
+    {
+      "stable_id": "awadh-further-cadastral-measures",
+      "status": "research_pending",
+      "finding": "1855年的印图只作王国旧界。待核祖尔德宫的可独立定位遗址、包恩迪旧堡、王室赴尼泊尔的线路及各地发契范围。法案附表保留的下级地权没有按现代村界回填。加尔各答抵达只有月份互证，印度档案存卷日期不充作哈兹拉特反公告发布日。",
+      "source_ids": [
+        "19C36-AWD-DRAFT",
+        "19C36-AWD-MUKH",
+        "19C36-AWD-OLDMAP",
+        "19C36-AWD-TARAI",
+        "19C36-AWD-ESTATE",
+        "19C36-AWD-CAL",
+        "19C36-AWD-GHAT-DATE"
+      ]
+    },
     {
       "stable_id": "cape-1853-ngqika-allotment",
       "status": "research_pending",

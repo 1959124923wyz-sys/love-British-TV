@@ -818,7 +818,7 @@ function renderPoints(){
   const line=L.polyline(routeGeometry,{...style,interactive:false}).addTo(groups.routes);
   // Historical territory polygons cannot intercept this upper SVG hit stroke.
   L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
-   color:baseColor,weight:22,opacity:.025,interactive:true,
+   color:baseColor,weight:22,opacity:.025,interactive:true,bubblingMouseEvents:false,
    className:'atlas-voyage-hit'})
    .bindTooltip(hoverCard(year>=1600?(Number(r.start_year??r.year)+'年 · '+r.name):r.name,r.note),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('mouseover',()=>line.setStyle({weight:coastal?5.6:schematic?3.2:4}))

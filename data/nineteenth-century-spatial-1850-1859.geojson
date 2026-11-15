@@ -2,10 +2,937 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1850–1859 Chapter 36 batches 1–4 and predecessor continuity",
+    "coverage": "1850–1859 Chapter 36 batches 1–5 and predecessor continuity",
     "historical_area_statistics": false
   },
   "features": [
+    {
+      "type": "Feature",
+      "id": "awadh-lucknow-capital",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.9346,
+          26.8381
+        ]
+      },
+      "properties": {
+        "name": "勒克瑙 · 阿瓦德都城",
+        "start_year": 1850,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "阿瓦德都城于1856年被英国接管。1857年恢复阿瓦德政权，1858年英军重新攻占。",
+        "source_ids": [
+          "19C36-AWD-TAKE",
+          "19C36-AWD-MUKH",
+          "19C36-AWD-NAM",
+          "19C36-AWD-G-LUCK"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Oude_Paper_Relating_To._%28IA_dli.ministry.04930%29.pdf#page=302",
+          "https://mughal-library.s3.me-central-1.amazonaws.com/Images/ebooks/pdfs/ebook_awadh_in_revolt_18571858_a_9vztWjy.pdf",
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://mapcarta.com/Lucknow"
+        ],
+        "named_anchors": [
+          "勒克瑙"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1856-ANNEX",
+          "E19-AWD-1857-REGENT",
+          "E19-AWD-1858-QAS",
+          "E19-AWD-1859-SANAD"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-lucknow-capital",
+        "year_stages": [
+          {
+            "start_year": 1850,
+            "end_year": 1855,
+            "controller": "awadh",
+            "title": "勒克瑙 · 阿瓦德王廷",
+            "summary_zh": "瓦吉德·阿里·沙阿的王廷设于勒克瑙。"
+          },
+          {
+            "start_year": 1856,
+            "end_year": 1856,
+            "controller": "british",
+            "title": "勒克瑙 · 东印度公司接管",
+            "summary_zh": "英国接收城防、机关及财政，设首席专员。"
+          },
+          {
+            "start_year": 1857,
+            "end_year": 1857,
+            "controller": "awadh",
+            "title": "勒克瑙 · 哈兹拉特·玛哈尔摄政",
+            "summary_zh": "比尔吉斯·卡德尔在勒克瑙登位，哈兹拉特·玛哈尔主持政务。"
+          },
+          {
+            "start_year": 1858,
+            "end_year": 1859,
+            "controller": "british",
+            "title": "勒克瑙 · 英军重新占领",
+            "summary_zh": "英军于1858年3月重占城内，随后这里是阿瓦德殖民行政中心。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-faizabad-admin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.1487,
+          26.7808
+        ]
+      },
+      "properties": {
+        "name": "法扎巴德 · 东部行政与抵抗",
+        "start_year": 1856,
+        "end_year": 1857,
+        "display_kind": "political",
+        "summary_zh": "1856年英国派员接管。1857年当地出现有组织的抵抗。",
+        "source_ids": [
+          "19C36-AWD-DIST",
+          "19C36-AWD-MUKH",
+          "19C36-AWD-AHMAD",
+          "19C36-AWD-G-FAIZ"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Oude_Paper_Relating_To._%28IA_dli.ministry.04930%29.pdf#page=306",
+          "https://mughal-library.s3.me-central-1.amazonaws.com/Images/ebooks/pdfs/ebook_awadh_in_revolt_18571858_a_9vztWjy.pdf",
+          "https://culture.gov.in/files/publications_documents/Martyrs_Vol_2_Part_II_06_03_2019_4.pdf",
+          "https://mapcarta.com/14889630"
+        ],
+        "named_anchors": [
+          "法扎巴德"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1856-FAIZ-ADMIN",
+          "E19-AWD-1857-FAIZ-TAX",
+          "E19-AWD-1857-FAIZ-REBELS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-faizabad-admin",
+        "year_stages": [
+          {
+            "start_year": 1856,
+            "end_year": 1856,
+            "controller": "british",
+            "title": "法扎巴德 · 东部辖区接收",
+            "summary_zh": "殖民政府派戈德尼前往法扎巴德。"
+          },
+          {
+            "start_year": 1857,
+            "end_year": 1857,
+            "controller": "awadh",
+            "title": "法扎巴德 · 东部反抗者集结",
+            "summary_zh": "艾哈迈杜拉·沙阿等组织地方抵抗。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-khairabad-admin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.7546,
+          27.527
+        ]
+      },
+      "properties": {
+        "name": "海拉巴德 · 西部辖区接收",
+        "start_year": 1856,
+        "end_year": 1856,
+        "display_kind": "political",
+        "summary_zh": "1856年从勒克瑙派员接收海拉巴德辖区。",
+        "source_ids": [
+          "19C36-AWD-DIST",
+          "19C36-AWD-G-KHAIR"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Oude_Paper_Relating_To._%28IA_dli.ministry.04930%29.pdf#page=306",
+          "https://latitude.to/map/in/india/cities/khairabad"
+        ],
+        "named_anchors": [
+          "海拉巴德"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1856-KHAIR-ADMIN"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-khairabad-admin"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-bahraich-admin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.6264,
+          27.59
+        ]
+      },
+      "properties": {
+        "name": "巴赫赖奇 · 北部辖区接收",
+        "start_year": 1856,
+        "end_year": 1856,
+        "display_kind": "political",
+        "summary_zh": "1856年从勒克瑙派温菲尔德接收当地行政。",
+        "source_ids": [
+          "19C36-AWD-DIST",
+          "19C36-AWD-G-BAH"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Oude_Paper_Relating_To._%28IA_dli.ministry.04930%29.pdf#page=306",
+          "https://mapcarta.com/37711990"
+        ],
+        "named_anchors": [
+          "巴赫赖奇"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1856-BAH-ADMIN"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-bahraich-admin"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-chattar-palace",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.93238,
+          26.85873
+        ]
+      },
+      "properties": {
+        "name": "查塔尔宫 · 王族家眷被逐",
+        "start_year": 1856,
+        "end_year": 1856,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1856年殖民官清出王族住处及财物，瓦吉德随后申诉。",
+        "source_ids": [
+          "19C36-AWD-ANNEX",
+          "19C36-AWD-CHR"
+        ],
+        "source_urls": [
+          "https://files.core.ac.uk/download/pdf/144516634.pdf",
+          "https://commons.wikimedia.org/wiki/File%3AChattar_Manzil%2C_Lucknow.jpg"
+        ],
+        "named_anchors": [
+          "查塔尔宫"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1856-PALACE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-chattar-palace"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-chinhat-battle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.03556,
+          26.87514
+        ]
+      },
+      "properties": {
+        "name": "钦哈特 · 起事军击退殖民军",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "起事军1857年6月击退劳伦斯部，使殖民军退入勒克瑙城内。",
+        "source_ids": [
+          "19C36-AWD-RES",
+          "19C36-AWD-MUKH",
+          "19C36-AWD-G-CHINHAT"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/their-own-words-captain-george-fulton",
+          "https://mughal-library.s3.me-central-1.amazonaws.com/Images/ebooks/pdfs/ebook_awadh_in_revolt_18571858_a_9vztWjy.pdf",
+          "https://mapcarta.com/14894000"
+        ],
+        "named_anchors": [
+          "钦哈特"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1857-CHINHAT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-chinhat-battle"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-lucknow-residency",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.92588,
+          26.8609
+        ]
+      },
+      "properties": {
+        "name": "勒克瑙驻节署 · 围困与撤离",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "殖民军和城中撤至此处的人员被围，11月英军撤出驻节署。",
+        "source_ids": [
+          "19C36-AWD-RES",
+          "19C36-AWD-RES-IND",
+          "19C36-AWD-NAM",
+          "19C36-AWD-G-RES"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/their-own-words-captain-george-fulton",
+          "https://lucknow.nic.in/tourist-place/residency/",
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://mapcarta.com/N5839453488"
+        ],
+        "named_anchors": [
+          "勒克瑙驻节署"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1857-SIEGE",
+          "E19-AWD-1857-REINFORCE",
+          "E19-AWD-1857-WITHDRAW"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-lucknow-residency"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-dilkusha-palace",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.96516944,
+          26.82873889
+        ]
+      },
+      "properties": {
+        "name": "迪尔库沙宫 · 撤离中转与进攻基地",
+        "start_year": 1857,
+        "end_year": 1858,
+        "display_kind": "conflict",
+        "summary_zh": "英军1857年11月经此撤离，1858年3月将此处用作攻城的基地。",
+        "source_ids": [
+          "19C36-AWD-DIL",
+          "19C36-AWD-NAM",
+          "19C36-AWD-ASI-DIL"
+        ],
+        "source_urls": [
+          "https://collection.nam.ac.uk/detail.php?acc=1965-11-113-24",
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://github.com/prachatos/asi-wikidata/blob/master/monuments_min.csv"
+        ],
+        "named_anchors": [
+          "迪尔库沙宫"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1857-WITHDRAW",
+          "E19-AWD-1858-CAMP"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-dilkusha-palace"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-alambagh-outpost",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.90443889,
+          26.81251944
+        ]
+      },
+      "properties": {
+        "name": "阿拉姆巴格 · 英军城外驻点",
+        "start_year": 1857,
+        "end_year": 1858,
+        "display_kind": "conflict",
+        "summary_zh": "在撤出驻节署后，奥特拉姆继续在此驻兵，等待次年坎贝尔的部队。",
+        "source_ids": [
+          "19C36-AWD-ALAM",
+          "19C36-AWD-ASI-ALAM",
+          "19C36-AWD-ALAM-GEO"
+        ],
+        "source_urls": [
+          "https://collection.nam.ac.uk/detail.php?acc=1962-11-63-3",
+          "https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700002912",
+          "https://commons.wikimedia.org/wiki/Category%3AAlambagh_Palace"
+        ],
+        "named_anchors": [
+          "阿拉姆巴格宫"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1857-ALAM",
+          "E19-AWD-1858-CAMP"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-alambagh-outpost"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-qaiserbagh-looting",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.92848,
+          26.85639
+        ]
+      },
+      "properties": {
+        "name": "凯萨尔巴格 · 宫苑遭劫掠",
+        "start_year": 1858,
+        "end_year": 1858,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1858年3月英印军打开这处王室宫苑，随即发生劫掠。",
+        "source_ids": [
+          "19C36-AWD-QAS",
+          "19C36-AWD-CAMP",
+          "19C36-AWD-TELE",
+          "19C36-AWD-PRIZE",
+          "19C36-AWD-G-QAS"
+        ],
+        "source_urls": [
+          "https://collection.nam.ac.uk/detail.php?acc=1965-11-113--4",
+          "https://searcharchives.bl.uk/catalog/040-003316179",
+          "https://dai.mun.ca/PDFs/morncourier/Courier18580428.pdf",
+          "https://doi.org/10.1093/jhc/fhab042",
+          "https://mapcarta.com/N9914269791"
+        ],
+        "named_anchors": [
+          "凯萨尔巴格宫园"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1858-QAS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-qaiserbagh-looting"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-baundi-resistance",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.40975,
+          27.45471
+        ]
+      },
+      "properties": {
+        "name": "包恩迪 · 阿瓦德抵抗驻地",
+        "start_year": 1858,
+        "end_year": 1858,
+        "display_kind": "local_governance",
+        "summary_zh": "勒克瑙失守后，哈兹拉特·玛哈尔在包恩迪主持抵抗，并继续借比尔吉斯名义发令。",
+        "source_ids": [
+          "19C36-AWD-MUKH",
+          "19C36-AWD-G-BAU"
+        ],
+        "source_urls": [
+          "https://mughal-library.s3.me-central-1.amazonaws.com/Images/ebooks/pdfs/ebook_awadh_in_revolt_18571858_a_9vztWjy.pdf",
+          "https://mapcarta.com/14899042"
+        ],
+        "named_anchors": [
+          "包恩迪"
+        ],
+        "mapping_method": "Historical named site matched to a WGS84 reference point.",
+        "related_event_ids": [
+          "E19-AWD-1858-BAU",
+          "E19-AWD-1858-REBUT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-baundi-resistance"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "awadh-kingdom-boundary-1855",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.15,
+              29.08
+            ],
+            [
+              80.1,
+              28.89
+            ],
+            [
+              80.06,
+              28.81
+            ],
+            [
+              80.08,
+              28.73
+            ],
+            [
+              80.26,
+              28.6
+            ],
+            [
+              80.37,
+              28.44
+            ],
+            [
+              80.34,
+              28.39
+            ],
+            [
+              80.38,
+              28.3
+            ],
+            [
+              80.31,
+              28.26
+            ],
+            [
+              80.23,
+              28.12
+            ],
+            [
+              80.24,
+              28.05
+            ],
+            [
+              80.2,
+              28.0
+            ],
+            [
+              80.03,
+              27.87
+            ],
+            [
+              80.09,
+              27.74
+            ],
+            [
+              79.97,
+              27.72
+            ],
+            [
+              79.8,
+              27.67
+            ],
+            [
+              79.71,
+              27.72
+            ],
+            [
+              79.66,
+              27.62
+            ],
+            [
+              79.72,
+              27.46
+            ],
+            [
+              79.68,
+              27.24
+            ],
+            [
+              79.95,
+              27.14
+            ],
+            [
+              79.95,
+              27.05
+            ],
+            [
+              80.09,
+              26.84
+            ],
+            [
+              80.07,
+              26.77
+            ],
+            [
+              80.13,
+              26.71
+            ],
+            [
+              80.31,
+              26.62
+            ],
+            [
+              80.28,
+              26.57
+            ],
+            [
+              80.39,
+              26.44
+            ],
+            [
+              80.55,
+              26.29
+            ],
+            [
+              80.57,
+              26.22
+            ],
+            [
+              80.69,
+              26.09
+            ],
+            [
+              80.83,
+              26.02
+            ],
+            [
+              80.99,
+              26.05
+            ],
+            [
+              81.07,
+              26.01
+            ],
+            [
+              81.19,
+              25.94
+            ],
+            [
+              81.31,
+              25.82
+            ],
+            [
+              81.39,
+              25.75
+            ],
+            [
+              81.36,
+              25.72
+            ],
+            [
+              81.43,
+              25.6
+            ],
+            [
+              81.56,
+              25.59
+            ],
+            [
+              81.69,
+              25.72
+            ],
+            [
+              81.84,
+              25.72
+            ],
+            [
+              81.92,
+              25.67
+            ],
+            [
+              82.04,
+              25.64
+            ],
+            [
+              82.11,
+              25.63
+            ],
+            [
+              82.17,
+              25.78
+            ],
+            [
+              82.25,
+              25.83
+            ],
+            [
+              82.44,
+              25.92
+            ],
+            [
+              82.4,
+              26.09
+            ],
+            [
+              82.62,
+              26.23
+            ],
+            [
+              82.8,
+              26.12
+            ],
+            [
+              82.84,
+              26.2
+            ],
+            [
+              82.79,
+              26.28
+            ],
+            [
+              82.85,
+              26.39
+            ],
+            [
+              83.07,
+              26.26
+            ],
+            [
+              83.03,
+              26.38
+            ],
+            [
+              82.9,
+              26.45
+            ],
+            [
+              82.67,
+              26.54
+            ],
+            [
+              82.51,
+              26.62
+            ],
+            [
+              82.22,
+              26.71
+            ],
+            [
+              82.2,
+              26.77
+            ],
+            [
+              82.21,
+              26.87
+            ],
+            [
+              82.3,
+              26.94
+            ],
+            [
+              82.48,
+              26.93
+            ],
+            [
+              82.57,
+              26.99
+            ],
+            [
+              82.45,
+              27.15
+            ],
+            [
+              82.52,
+              27.24
+            ],
+            [
+              82.5,
+              27.35
+            ],
+            [
+              82.59,
+              27.4
+            ],
+            [
+              82.76,
+              27.38
+            ],
+            [
+              82.71,
+              27.7
+            ],
+            [
+              82.4,
+              27.69
+            ],
+            [
+              82.13,
+              27.86
+            ],
+            [
+              81.8,
+              27.97
+            ],
+            [
+              81.87,
+              28.12
+            ],
+            [
+              81.64,
+              28.24
+            ],
+            [
+              81.39,
+              28.42
+            ],
+            [
+              81.45,
+              28.5
+            ],
+            [
+              81.3,
+              28.57
+            ],
+            [
+              81.02,
+              28.72
+            ],
+            [
+              80.47,
+              28.93
+            ],
+            [
+              80.15,
+              29.08
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "阿瓦德 · 勒克瑙王廷辖地",
+        "start_year": 1855,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "王廷设于勒克瑙。1856年东印度公司宣布接管阿瓦德。此后阿瓦德各地发生反抗，殖民政府于1858年宣布没收省内大部分地权。",
+        "source_ids": [
+          "19C36-AWD-OLDMAP",
+          "19C36-AWD-TAKE",
+          "19C36-AWD-TAKE-TEXT",
+          "19C36-AWD-DIST",
+          "19C36-AWD-MUKH",
+          "19C36-AWD-PROCL",
+          "19C36-AWD-ESTATE",
+          "19C36-AWD-TARAI"
+        ],
+        "source_urls": [
+          "https://zenodo.org/records/20404623/files/1855%20Oudh%20and%20Adjacent%20Districts.jpeg?download=1",
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Oude_Paper_Relating_To._%28IA_dli.ministry.04930%29.pdf#page=302",
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Oude_Paper_Relating_To._%28IA_dli.ministry.04930%29.pdf#page=266",
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Oude_Paper_Relating_To._%28IA_dli.ministry.04930%29.pdf#page=306",
+          "https://mughal-library.s3.me-central-1.amazonaws.com/Images/ebooks/pdfs/ebook_awadh_in_revolt_18571858_a_9vztWjy.pdf",
+          "https://paperspast.natlib.govt.nz/newspapers/TC18580827.2.21",
+          "https://www.indiacode.nic.in/bitstream/123456789/19149/1/A1869-1.pdf",
+          "https://searcharchives.bl.uk/catalog/041-000541682"
+        ],
+        "named_anchors": [
+          "恒河",
+          "勒克瑙",
+          "巴赫赖奇",
+          "法扎巴德",
+          "萨尔达河"
+        ],
+        "mapping_method": "Dashed generalized outline read from the red boundary shading of the Survey of India map printed April 1855, based on the January 1848 map. Piecewise interpolation against labeled latitude and longitude lines. Outer jurisdiction only; no year-by-year combat area or calculated land area.",
+        "related_event_ids": [
+          "E19-AWD-1855-MINUTE",
+          "E19-AWD-1856-ANNEX",
+          "E19-AWD-1856-SETTLE",
+          "E19-AWD-1857-REGENT",
+          "E19-AWD-1858-CONFISCATE",
+          "E19-AWD-1859-SANAD"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "awadh-kingdom-boundary-1855",
+        "year_stages": [
+          {
+            "start_year": 1855,
+            "end_year": 1855,
+            "controller": "awadh",
+            "title": "阿瓦德王国 · 勒克瑙王廷辖地",
+            "summary_zh": "王廷设于勒克瑙，阿瓦德位于恒河中游平原。"
+          },
+          {
+            "start_year": 1856,
+            "end_year": 1856,
+            "controller": "british",
+            "title": "阿瓦德 · 东印度公司接管",
+            "summary_zh": "公司宣布原阿瓦德王国归其统治，并分派专员接收各辖区。"
+          },
+          {
+            "start_year": 1857,
+            "end_year": 1857,
+            "controller": "awadh",
+            "title": "阿瓦德 · 起事与地方政权",
+            "summary_zh": "比尔吉斯·卡德尔在勒克瑙登位。起事军控制勒克瑙城内多处，英军仍据守阿拉姆巴格等地。"
+          },
+          {
+            "start_year": 1858,
+            "end_year": 1859,
+            "controller": "british",
+            "title": "阿瓦德 · 重占、没收与重新授地",
+            "summary_zh": "殖民军重占勒克瑙后，印度总督宣布没收省内大部分土地的所有权，随后重新发给归顺者。"
+          }
+        ]
+      }
+    },
     {
       "type": "Feature",
       "id": "cape-town-government",
