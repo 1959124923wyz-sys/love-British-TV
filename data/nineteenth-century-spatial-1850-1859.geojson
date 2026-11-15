@@ -2,10 +2,520 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1850–1859 Chapter 36 batches 1–6 and predecessor continuity",
+    "coverage": "1850–1859 Chapter 36 batches 1–7 and predecessor continuity",
     "historical_area_statistics": false
   },
   "features": [
+    {
+      "type": "Feature",
+      "id": "santal-kochpara-column",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.68465,
+          24.83219
+        ]
+      },
+      "properties": {
+        "name": "库奇帕拉 · 图古德部镇压行动起点",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "conflict",
+        "summary_zh": "7月24日，图古德部由古马尼河旁的营地出发，向巴尔海特推进。",
+        "source_ids": [
+          "19C36-HUL-RESEARCH",
+          "19C36-HUL-KOCH-CENSUS",
+          "19C36-HUL-KOCH-RIVER",
+          "19C36-HUL-KOCH-POINT"
+        ],
+        "source_urls": [
+          "https://doi.org/10.4324/b23196",
+          "https://www.censusindia.gov.in/nada/index.php/catalog/41030",
+          "https://tenders.infralens.in/tender/anti-erosion-work-at-right-bank-of-gumani-river-2023-wrd-70762-1",
+          "https://www.mapsofindia.com/pincode/india/jharkhand/sahibganj/kuchpara.html"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-KOCH"
+        ],
+        "named_anchors": [
+          "库奇帕拉",
+          "古马尼河"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-kochpara-column"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-bhognadih-hul",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.60354,
+          24.86783
+        ]
+      },
+      "properties": {
+        "name": "博格纳迪 · 起事与焚村",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "conflict",
+        "summary_zh": "6月底桑塔尔人集会，7月24日公司军焚毁村庄和祭祀场所。",
+        "source_ids": [
+          "19C36-HUL-MEM",
+          "19C36-HUL-BURN",
+          "19C36-HUL-RESEARCH",
+          "19C36-HUL-MOV",
+          "19C36-HUL-G-BHO"
+        ],
+        "source_urls": [
+          "https://sahibganj.nic.in/places-of-interest/",
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=22",
+          "https://doi.org/10.4324/b23196",
+          "https://upload.wikimedia.org/wikipedia/commons/1/19/Santal_Movement.pdf",
+          "https://mapcarta.com/34714216"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-ASSEMBLY",
+          "E19-HUL-1855-MEMORANDUM",
+          "E19-HUL-1855-BURN"
+        ],
+        "named_anchors": [
+          "博格纳迪"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-bhognadih-hul"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-barhait-damin-town",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.60728,
+          24.88997
+        ]
+      },
+      "properties": {
+        "name": "巴尔海特 · 达明伊科市场与驻军",
+        "start_year": 1851,
+        "end_year": 1857,
+        "display_kind": "political",
+        "summary_zh": "桑塔尔村落在市镇周边开垦。起义后公司军进入巴尔海特并在镇上留兵。",
+        "source_ids": [
+          "19C36-HUL-MOV",
+          "19C36-HUL-RESEARCH",
+          "19C36-HUL-BID",
+          "19C36-HUL-PAKUR",
+          "19C36-HUL-G-BAR"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/1/19/Santal_Movement.pdf",
+          "https://doi.org/10.4324/b23196",
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=111",
+          "https://pakur.nic.in/about-district/history/",
+          "https://mapcarta.com/14898560"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1851-FIELDS",
+          "E19-HUL-1855-REVENUE",
+          "E19-HUL-1855-BAR",
+          "E19-HUL-1855-BAR-POST"
+        ],
+        "named_anchors": [
+          "巴尔海特"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-barhait-damin-town",
+        "year_stages": [
+          {
+            "start_year": 1851,
+            "end_year": 1854,
+            "controller": "british",
+            "title": "巴尔海特 · 达明伊科的村落与集市",
+            "summary_zh": "桑塔尔村落在这一带开垦，殖民官员征收地租。"
+          },
+          {
+            "start_year": 1855,
+            "end_year": 1855,
+            "controller": "british",
+            "title": "巴尔海特 · 市镇争夺与驻军",
+            "summary_zh": "起事者袭击镇上放贷人。图古德于7月24日在此留军。"
+          },
+          {
+            "start_year": 1856,
+            "end_year": 1857,
+            "controller": "british",
+            "title": "巴尔海特 · 桑塔尔帕尔加纳专区",
+            "summary_zh": "殖民官府按1855年的专辖法重组行政，1857年调整专区辖区名录。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-panchkathia-bazar",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.58636,
+          24.91527
+        ]
+      },
+      "properties": {
+        "name": "潘奇卡蒂亚 · 7月初的集市冲突",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "conflict",
+        "summary_zh": "起事者袭击集市放贷人。地方警官马赫什随后在冲突中被杀。",
+        "source_ids": [
+          "19C36-HUL-MEM",
+          "19C36-HUL-MOV",
+          "19C36-HUL-HUL-ART",
+          "19C36-HUL-G-PAN"
+        ],
+        "source_urls": [
+          "https://sahibganj.nic.in/places-of-interest/",
+          "https://upload.wikimedia.org/wikipedia/commons/1/19/Santal_Movement.pdf",
+          "https://scroll.in/article/1032155/santal-rebellion-1855-this-book-explores-why-it-took-place-how-it-was-fought-and-the-way-it-ended",
+          "https://mapcarta.com/N11377923155"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-MARKET",
+          "E19-HUL-1855-POLICE"
+        ],
+        "named_anchors": [
+          "潘奇卡蒂亚集市"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-panchkathia-bazar"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-pealapur-column",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.4078,
+          25.2317
+        ]
+      },
+      "properties": {
+        "name": "佩亚拉普尔 · 桑塔尔起事者抵达",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "conflict",
+        "summary_zh": "巴加尔布尔来报记桑塔尔起事者于1855年7月10日下午抵达佩亚拉普尔。",
+        "source_ids": [
+          "19C36-HUL-BHA-CENSUS",
+          "19C36-HUL-RESEARCH",
+          "19C36-HUL-G-PEA"
+        ],
+        "source_urls": [
+          "https://censusindia.gov.in/nada/index.php/catalog/258/download/682/DH_2011_1022_PART_A_DCHB_BHAGALPUR.pdf",
+          "https://doi.org/10.4324/b23196",
+          "https://www.mapsofindia.com/villages/bihar/bhagalpur/pirpainti/pealapur.html"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-ADVANCE"
+        ],
+        "named_anchors": [
+          "佩亚拉普尔"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-pealapur-column"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-pakur-resistance",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.8424,
+          24.6393
+        ]
+      },
+      "properties": {
+        "name": "帕库尔 · 起事者进至市镇",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "conflict",
+        "summary_zh": "起事者进至帕库尔，附近铁路建设和靛蓝生产也受到冲击。",
+        "source_ids": [
+          "19C36-HUL-PAKUR",
+          "19C36-HUL-OMALLEY",
+          "19C36-HUL-G-PAK"
+        ],
+        "source_urls": [
+          "https://pakur.nic.in/about-district/history/",
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=89",
+          "https://mapcarta.com/Pakur"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-PAK"
+        ],
+        "named_anchors": [
+          "帕库尔"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-pakur-resistance"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-maheshpur-clash",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.76285,
+          24.47889
+        ]
+      },
+      "properties": {
+        "name": "马赫什普尔 · 公司军与起事者交战",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "conflict",
+        "summary_zh": "7月15日图古德率英印军在镇周交战。",
+        "source_ids": [
+          "19C36-HUL-RESEARCH",
+          "19C36-HUL-OMALLEY",
+          "19C36-HUL-PAKUR",
+          "19C36-HUL-G-MAH"
+        ],
+        "source_urls": [
+          "https://doi.org/10.4324/b23196",
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=89",
+          "https://pakur.nic.in/about-district/history/",
+          "https://mapcarta.com/14874450"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-MAH"
+        ],
+        "named_anchors": [
+          "马赫什普尔"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-maheshpur-clash"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-rajmahal-lloyd",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.83045,
+          25.05306
+        ]
+      },
+      "properties": {
+        "name": "拉杰马哈尔 · 镇压部队指定赴任地",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "political",
+        "summary_zh": "殖民政府7月30日来文命劳埃德先赴拉杰马哈尔，督率军队镇压起义。",
+        "source_ids": [
+          "19C36-HUL-GREY",
+          "19C36-HUL-RESEARCH",
+          "19C36-HUL-G-RAJ"
+        ],
+        "source_urls": [
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=20",
+          "https://doi.org/10.4324/b23196",
+          "https://mapcarta.com/14863364"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-LLOYD"
+        ],
+        "named_anchors": [
+          "拉杰马哈尔"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-rajmahal-lloyd"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-bhagalpur-records",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.9828,
+          25.2495
+        ]
+      },
+      "properties": {
+        "name": "巴加尔布尔 · 处置起义的殖民官署",
+        "start_year": 1855,
+        "end_year": 1856,
+        "display_kind": "political",
+        "summary_zh": "比德韦尔由此发出政令、回复投降条件并呈送调查。镇压期间这里也是审理地点。",
+        "source_ids": [
+          "19C36-HUL-BID",
+          "19C36-HUL-SUB",
+          "19C36-HUL-WARD",
+          "19C36-HUL-REVIEW",
+          "19C36-HUL-G-BHA"
+        ],
+        "source_urls": [
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=111",
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=32",
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=43",
+          "https://images.eap.bl.uk/EAP921/EAP921_7_2_280/252.jp2/full/!1350,1800/0/default.jpg",
+          "https://mapcarta.com/Bhagalpur"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-SURRENDER",
+          "E19-HUL-1855-HEADS",
+          "E19-HUL-1855-TRIALS",
+          "E19-HUL-1855-REPORT"
+        ],
+        "named_anchors": [
+          "巴加尔布尔"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-bhagalpur-records"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-suri-birbhum",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.5277,
+          23.9081
+        ]
+      },
+      "properties": {
+        "name": "苏里 · 比尔布姆官署与审判",
+        "start_year": 1855,
+        "end_year": 1855,
+        "display_kind": "political",
+        "summary_zh": "苏里官员报告县内警署失守、邮路被切断，并留有拘禁与转监清册。",
+        "source_ids": [
+          "19C36-HUL-WARD",
+          "19C36-HUL-DET",
+          "19C36-HUL-REVIEW",
+          "19C36-HUL-G-SUR"
+        ],
+        "source_urls": [
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=43",
+          "https://cloud-1de12d.becdn.net/customfile/84c29c67bf0b863bb2ddc851183a88cd.pdf#page=49",
+          "https://images.eap.bl.uk/EAP921/EAP921_7_2_280/252.jp2/full/!1350,1800/0/default.jpg",
+          "https://mapcarta.com/Suri"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1855-REPORT-SUR",
+          "E19-HUL-1855-PRISON"
+        ],
+        "named_anchors": [
+          "苏里"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-suri-birbhum"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "santal-dumka-special-office",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.24855,
+          24.26778
+        ]
+      },
+      "properties": {
+        "name": "杜姆卡 · 桑塔尔帕尔加纳行政中心",
+        "start_year": 1856,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "战后设立专辖区，由殖民政府任命官员，村级负责人按新警务章程承担职责。",
+        "source_ids": [
+          "19C36-HUL-ACT55",
+          "19C36-HUL-GAZ",
+          "19C36-HUL-ACT57",
+          "19C36-HUL-CENSUS",
+          "19C36-HUL-G-DUM"
+        ],
+        "source_urls": [
+          "https://www.indiacode.nic.in/repealedfileopen?rfilename=A1855-37.pdf",
+          "https://dutchinkerala.com/IG/ImperialGazofIndiaVol22.pdf",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/The_Acts_of_Legislative_Council_of_India_in_1857.pdf",
+          "https://censusindia.gov.in/nada/index.php/catalog/534/download/1784/DH_2011_2007_PART_A_DCHB_SAHIBGANJ.pdf",
+          "https://mapcarta.com/14890152"
+        ],
+        "related_event_ids": [
+          "E19-HUL-1856-POLICE",
+          "E19-HUL-1857-ACT"
+        ],
+        "named_anchors": [
+          "杜姆卡"
+        ],
+        "mapping_method": "Named settlement or government seat reference point in WGS84; verified historical events linked individually.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "santal-dumka-special-office"
+      }
+    },
     {
       "type": "Feature",
       "id": "canton-qing-old-city-1856",
