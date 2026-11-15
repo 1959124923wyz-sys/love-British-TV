@@ -2273,6 +2273,133 @@
         "E19-BOR-1848-LABUAN-GOVERNOR"
       ],
       "finding": "1846年12月18日，文莱割让纳闽及邻近小岛。24日英国海军登岛升旗，随后把港口发展为王室殖民地的行政和补给据点。"
+    },
+    {
+      "stable_id": "haw-honolulu-harbor",
+      "baseline_1839": true,
+      "transition": "temporary_commission_reversed_in_1843",
+      "first_display_year": 1843,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-OCEAN-HAW-LETTERS",
+        "19C35-OCEAN-HAW-FRUS",
+        "19C35-OCEAN-HAW-TREATY",
+        "19C35-OCEAN-HAW-HARBOR"
+      ],
+      "evidence_anchors": [
+        "E19-HAW-1843-PAULET-ARRIVES",
+        "E19-HAW-1843-ULTIMATUM",
+        "E19-HAW-1843-CESSION",
+        "E19-HAW-1843-COMMISSION",
+        "E19-HAW-1843-IMPORT-DUTY",
+        "E19-HAW-1843-THOMAS-ARRIVES",
+        "E19-HAW-1843-RESTORATION"
+      ],
+      "finding": "1843年2月25日至7月31日英方参加临时政务。1843年年末及1844年为夏威夷王国管辖。",
+      "occupation_start_date": "1843-02-25",
+      "occupation_end_date": "1843-07-31"
+    },
+    {
+      "stable_id": "haw-thomas-square",
+      "baseline_1839": false,
+      "transition": "documented_restoration_site",
+      "first_display_year": 1843,
+      "last_display_year": 1843,
+      "historical_end_year": 1843,
+      "source_ids": [
+        "19C35-OCEAN-HAW-RESTORE",
+        "19C35-OCEAN-HAW-KS",
+        "19C35-OCEAN-HAW-TREATY",
+        "19C35-OCEAN-HAW-SQUARE"
+      ],
+      "evidence_anchors": [
+        "E19-HAW-1843-RESTORATION",
+        "E19-HAW-1843-CHURCH"
+      ],
+      "finding": "7月31日，夏威夷王国在公开仪式上恢复主权并重新升起王旗。"
+    },
+    {
+      "stable_id": "miskitu-bluefields-council",
+      "baseline_1839": true,
+      "transition": "local_seat_under_british_protection",
+      "first_display_year": 1847,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-OCEAN-M-CLAIM",
+        "19C35-OCEAN-M-GOMEZ",
+        "19C35-OCEAN-M-BLUE"
+      ],
+      "evidence_anchors": [
+        "E19-MIS-1847-BLUEFIELDS-DEPARTURE",
+        "E19-MIS-1848-GREYTOWN-TAKEOVER"
+      ],
+      "finding": "米斯基托政权在此组织民兵；英国设有代理人，并出动军舰协助夺取圣胡安河口。"
+    },
+    {
+      "stable_id": "miskitu-old-greytown",
+      "baseline_1839": true,
+      "transition": "customs_transferred_with_british_naval_support",
+      "first_display_year": 1847,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-OCEAN-M-CLAIM",
+        "19C35-OCEAN-M-PACT",
+        "19C35-OCEAN-M-GOMEZ",
+        "19C35-OCEAN-M-GREY",
+        "19C35-OCEAN-M-GREY-GEO",
+        "19C35-OCEAN-M-GREY-MAP"
+      ],
+      "evidence_anchors": [
+        "E19-MIS-1848-GREYTOWN-TAKEOVER",
+        "E19-MIS-1848-CUSTOMHOUSE",
+        "E19-MIS-1848-SALAS-RETURNS",
+        "E19-MIS-1848-FLEET-RETURNS",
+        "E19-MIS-1848-AGREEMENT"
+      ],
+      "finding": "英国海军支持米斯基托政权夺港并接管海关。尼加拉瓜军反击，英国通过停战协议保留了夺港后设立的关税。"
+    },
+    {
+      "stable_id": "miskitu-sarapiqui-trinidad",
+      "baseline_1839": false,
+      "transition": "documented_conflict_site",
+      "first_display_year": 1848,
+      "last_display_year": 1848,
+      "historical_end_year": 1848,
+      "source_ids": [
+        "19C35-OCEAN-M-WAR",
+        "19C35-OCEAN-M-NICARAGUA",
+        "19C35-OCEAN-M-CUBA",
+        "19C35-OCEAN-M-BOCA",
+        "19C35-OCEAN-M-SAR",
+        "19C35-OCEAN-M-LOCH-CHART"
+      ],
+      "evidence_anchors": [
+        "E19-MIS-1848-SARAPIQUI-BATTLE"
+      ],
+      "finding": "2月12日，尼加拉瓜守军抵抗沿河上溯的英军。英军攻占并焚毁工事。"
+    },
+    {
+      "stable_id": "miskitu-san-carlos",
+      "baseline_1839": true,
+      "transition": "temporary_occupation_reversed_in_1848",
+      "first_display_year": 1848,
+      "last_display_year": 1849,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C35-OCEAN-M-WAR",
+        "19C35-OCEAN-M-PACT",
+        "19C35-OCEAN-M-SCARLOS"
+      ],
+      "evidence_anchors": [
+        "E19-MIS-1848-SAN-CARLOS",
+        "E19-MIS-1848-AGREEMENT",
+        "E19-MIS-1848-SAN-CARLOS-EXIT"
+      ],
+      "finding": "1848年英军撤出后，圣卡洛斯由尼加拉瓜管理。",
+      "occupation_end_month": "1848-03"
     }
   ],
   "open_items": [
@@ -3341,6 +3468,57 @@
       ],
       "research_v6_event_ids": [],
       "research_original_node_ids": []
+    },
+    {
+      "stable_id": "haw-paulet-no-survey",
+      "status": "research_pending",
+      "finding": "临时让渡书表述涉及群岛，年内可定位的行政与交接在檀香山。王国年末行政治权恢复，各岛升降旗现场及日期待地方档案核实。",
+      "source_ids": [
+        "19C35-OCEAN-HAW-LETTERS",
+        "19C35-OCEAN-HAW-RESTORE",
+        "19C35-OCEAN-HAW-DIPLO"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-17-01"
+      ],
+      "research_original_node_ids": [
+        "C-17-E07",
+        "C-17-E11"
+      ]
+    },
+    {
+      "stable_id": "miskitu-sarapiqui-fort-and-cuba",
+      "status": "research_pending",
+      "finding": "尼加拉瓜史料把1848年萨拉皮基炮台定位到拉特立尼达河口，已加参考点；炮台遗址仍待确认。古巴岛后称公司岛，旁证指格拉纳达近岸岛群；岛址待核。",
+      "source_ids": [
+        "19C35-OCEAN-M-WAR",
+        "19C35-OCEAN-M-PACT",
+        "19C35-OCEAN-M-SAR",
+        "19C35-OCEAN-M-NICARAGUA",
+        "19C35-OCEAN-M-CUBA"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-04-01"
+      ],
+      "research_original_node_ids": [
+        "C-04-E01"
+      ]
+    },
+    {
+      "stable_id": "miskitu-canals-1850",
+      "status": "research_pending",
+      "finding": "1850年4月19日《克莱顿—布尔沃条约》（C-V6-092-OBS02）与随后港务、对米斯基托政权的承诺在第36章继续；年末承接格雷敦、布卢菲尔兹与圣卡洛斯。",
+      "source_ids": [
+        "19C35-OCEAN-M-PACT",
+        "19C35-OCEAN-M-US",
+        "19C35-OCEAN-M-BULWER"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-04-01"
+      ],
+      "research_original_node_ids": [
+        "C-04-E02"
+      ]
     }
   ]
 }
