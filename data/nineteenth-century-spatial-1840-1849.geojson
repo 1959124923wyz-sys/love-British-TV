@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1840–1849 Chapter 35 batches 1–6",
+    "coverage": "1840–1849 Chapter 35 batches 1–7",
     "historical_area_statistics": false
   },
   "features": [
@@ -5634,6 +5634,767 @@
             "controller": "british",
             "title": "彼得马里茨堡 · 茅屋税征收",
             "summary_zh": "副总督公布税令，谢普斯通从此出发向非洲住户征收。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "borneo-kuching-brooke",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.345501,
+          1.563591
+        ]
+      },
+      "properties": {
+        "name": "古晋 · 布鲁克政权",
+        "start_year": 1841,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "布鲁克从文莱贵族手中接过当地治理权，以古晋为统治和出兵的中心。",
+        "source_ids": [
+          "19C35-BORNEO-MUSEUM",
+          "19C35-BORNEO-IRWIN",
+          "19C35-BORNEO-SARAWAK",
+          "19C35-BORNEO-ASTANA",
+          "19C35-BORNEO-SAR-GEO"
+        ],
+        "source_urls": [
+          "https://museum.sarawak.gov.my/web/subpage/webpage_view/472",
+          "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/65/31/2020716531/2020716531.pdf",
+          "https://www.sarawak.gov.my/web/home/article_apps_view/228/244/?id=228&lang=en&swkid_auth=",
+          "https://sarawak.kehakiman.gov.my/index.php/en/about-us/sarawak-court-history",
+          "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2016_in_Malaysia"
+        ],
+        "named_anchors": [
+          "古晋砂拉越河畔"
+        ],
+        "mapping_method": "Documented named place with a cited modern WGS84 reference point.",
+        "related_event_ids": [
+          "E19-BOR-1841-KUCHING",
+          "E19-BOR-1845-CROWN-AGENT",
+          "E19-BOR-1849-EXPEDITION-KUCHING"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "borneo-kuching-brooke",
+        "year_stages": [
+          {
+            "start_year": 1841,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "古晋 · 布鲁克政权",
+            "summary_zh": "布鲁克掌管砂拉越河流域的政务，多次从古晋发起军事行动。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "borneo-brunei-capital",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.94447,
+          4.8842
+        ]
+      },
+      "properties": {
+        "name": "文莱首都 · 苏丹与王廷",
+        "start_year": 1840,
+        "end_year": 1849,
+        "display_kind": "local_governance",
+        "summary_zh": "苏丹在文莱河治政。1846年英国舰队短暂攻入首都，苏丹其后回宫并签署割让条约。",
+        "source_ids": [
+          "19C35-BORNEO-IRWIN",
+          "19C35-BORNEO-BRU-GEO",
+          "19C35-BORNEO-TREATY46",
+          "19C35-BORNEO-TREATY47",
+          "19C35-BORNEO-BRU-POINT"
+        ],
+        "source_urls": [
+          "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/65/31/2020716531/2020716531.pdf",
+          "https://www.bruneitourism.com/wp-content/uploads/2025/02/Brunei-Heritage-River-Trail.pdf",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20050125-WRI-01-02-EN.pdf#page=164",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20050125-WRI-01-02-EN.pdf#page=206",
+          "https://mapcarta.com/W318518567"
+        ],
+        "named_anchors": [
+          "文莱河水村"
+        ],
+        "mapping_method": "Documented named place with a cited modern WGS84 reference point.",
+        "related_event_ids": [
+          "E19-BOR-1842-BRUNEI-DEED",
+          "E19-BOR-1843-BRUNEI-GRANT",
+          "E19-BOR-1846-BRUNEI-BOMBARDMENT",
+          "E19-BOR-1846-SULTAN-RETURNS",
+          "E19-BOR-1846-LABUAN-TREATY",
+          "E19-BOR-1847-BRUNEI-CONSULAR"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "borneo-brunei-capital",
+        "year_stages": [
+          {
+            "start_year": 1840,
+            "end_year": 1845,
+            "controller": "local",
+            "title": "文莱首都 · 苏丹与王廷",
+            "summary_zh": "苏丹在文莱河畔处理政务，先后签署涉及砂拉越的文书。"
+          },
+          {
+            "start_year": 1846,
+            "end_year": 1846,
+            "controller": "local",
+            "title": "文莱首都 · 苏丹在英军进攻后回宫",
+            "summary_zh": "英国舰队炮击并攻入首都，苏丹逃向内陆，8月回宫。12月文莱签署纳闽割让条约。"
+          },
+          {
+            "start_year": 1847,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "文莱首都 · 英国取得通商与领事权",
+            "summary_zh": "苏丹继续治政。英国商船获得贸易权，英国领事取得约定的裁判权。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "borneo-labuan-porto",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.2454,
+          5.27687
+        ]
+      },
+      "properties": {
+        "name": "纳闽镇 · 港口与行政驻地",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "control",
+        "summary_zh": "1846年12月英国海军登岛接管。此后在港镇设立殖民行政。",
+        "source_ids": [
+          "19C35-BORNEO-IRWIN",
+          "19C35-BORNEO-TREATY46",
+          "19C35-BORNEO-SUPPLY",
+          "19C35-BORNEO-LAB-TOWN",
+          "19C35-BORNEO-CHART"
+        ],
+        "source_urls": [
+          "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/65/31/2020716531/2020716531.pdf",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20050125-WRI-01-02-EN.pdf#page=164",
+          "https://api.parliament.uk/historic-hansard/commons/1848/aug/21/supply-labuan",
+          "https://labuangeopark.com/muzium-labuan",
+          "https://commons.wikimedia.org/wiki/File:Admiralty_Chart_No_1844_Labuan_Island,_Published_1848,_Large_Corrections_1902.jpg"
+        ],
+        "named_anchors": [
+          "纳闽镇维多利亚港"
+        ],
+        "mapping_method": "Documented named place with a cited modern WGS84 reference point.",
+        "related_event_ids": [
+          "E19-BOR-1846-LABUAN-FLAG",
+          "E19-BOR-1848-LABUAN-GOVERNOR"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "borneo-labuan-porto",
+        "year_stages": [
+          {
+            "start_year": 1846,
+            "end_year": 1847,
+            "controller": "british",
+            "title": "纳闽镇 · 港口接管",
+            "summary_zh": "英国海军在岛上升旗，开始经营港口。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "纳闽镇 · 英国王室殖民地行政",
+            "summary_zh": "布鲁克就任总督，港镇成为殖民行政驻地。"
+          }
+        ],
+        "opens_area_id": "borneo-labuan-island"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "borneo-labuan-coal",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.2487,
+          5.38112
+        ]
+      },
+      "properties": {
+        "name": "丹戎库邦 · 纳闽煤矿",
+        "start_year": 1847,
+        "end_year": 1849,
+        "display_kind": "economic_network",
+        "summary_zh": "英方勘查库邦岬一带煤层并尝试为皇家海军供煤。英国商人次年取得岛上的采煤租约。",
+        "source_ids": [
+          "19C35-BORNEO-IRWIN",
+          "19C35-BORNEO-LAB-COAL",
+          "19C35-BORNEO-CHART",
+          "19C35-BORNEO-LAB-COAL-GEO"
+        ],
+        "source_urls": [
+          "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/65/31/2020716531/2020716531.pdf",
+          "https://www.jmm.gov.my/en/chimney-historical-complex",
+          "https://commons.wikimedia.org/wiki/File:Admiralty_Chart_No_1844_Labuan_Island,_Published_1848,_Large_Corrections_1902.jpg",
+          "https://labuangeopark.com/muzium-chimney"
+        ],
+        "named_anchors": [
+          "丹戎库邦"
+        ],
+        "mapping_method": "Documented named place with a cited modern WGS84 reference point.",
+        "related_event_ids": [
+          "E19-BOR-1847-LABUAN-COAL",
+          "E19-BOR-1848-LABUAN-LEASE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "borneo-labuan-coal",
+        "year_stages": [
+          {
+            "start_year": 1847,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "丹戎库邦 · 纳闽煤矿",
+            "summary_zh": "英国海军组织勘查和试采，商人随后取得岛上的煤矿租约。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "borneo-saribas-marau",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.081667,
+          1.757833
+        ]
+      },
+      "properties": {
+        "name": "萨里巴斯河口 · 贝廷马劳交战",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "conflict",
+        "summary_zh": "英舰、东印度公司汽船和布鲁克盟军拦截伊班船队，随后进攻萨里巴斯河上游的聚落。",
+        "source_ids": [
+          "19C35-BORNEO-IRWIN",
+          "19C35-BORNEO-HANSARD",
+          "19C35-BORNEO-IBAN",
+          "19C35-BORNEO-MOTS"
+        ],
+        "source_urls": [
+          "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/65/31/2020716531/2020716531.pdf",
+          "https://api.parliament.uk/historic-hansard/commons/1851/jul/10/borneo-sir-james-brooke",
+          "https://zulfaqarjdmssh.upnm.edu.my/index.php/zjdmssh/article/download/140/88/299",
+          "https://mot.sarawak.gov.my/web/subpage/webpage_view/113"
+        ],
+        "named_anchors": [
+          "萨里巴斯河口丹戎巴当马劳"
+        ],
+        "mapping_method": "Documented named place with a cited modern WGS84 reference point.",
+        "related_event_ids": [
+          "E19-BOR-1849-BETING-MARAU",
+          "E19-BOR-1849-LUPAR-PURSUIT",
+          "E19-BOR-1849-SARIBAS-BURNINGS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "borneo-saribas-marau",
+        "year_stages": [
+          {
+            "start_year": 1849,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "萨里巴斯河口 · 贝廷马劳交战",
+            "summary_zh": "7月31日夜，联军在河口截击伊班船队，造成数百人死亡。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "borneo-kanowit-fine",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.158062,
+          2.101626
+        ]
+      },
+      "properties": {
+        "name": "加诺逸镇 · 布鲁克罚款",
+        "start_year": 1849,
+        "end_year": 1849,
+        "display_kind": "conflict",
+        "summary_zh": "英军与布鲁克的地方部队焚毁沿岸村庄。布鲁克随后要求镇上居民缴纳罚款。",
+        "source_ids": [
+          "19C35-BORNEO-HANSARD",
+          "19C35-BORNEO-IRWIN",
+          "19C35-BORNEO-SAR-GEO",
+          "19C35-BORNEO-MOTS"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1851/jul/10/borneo-sir-james-brooke",
+          "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/65/31/2020716531/2020716531.pdf",
+          "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2016_in_Malaysia",
+          "https://mot.sarawak.gov.my/web/subpage/webpage_view/113"
+        ],
+        "named_anchors": [
+          "加诺逸镇"
+        ],
+        "mapping_method": "Documented named place with a cited modern WGS84 reference point.",
+        "related_event_ids": [
+          "E19-BOR-1849-KANOWIT-BURNINGS",
+          "E19-BOR-1849-KANOWIT-FINE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "borneo-kanowit-fine",
+        "year_stages": [
+          {
+            "start_year": 1849,
+            "end_year": 1849,
+            "controller": "local",
+            "title": "加诺逸镇 · 布鲁克罚款",
+            "summary_zh": "8月，联军沿河焚毁村庄，继而向加诺逸镇居民强征罚款。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "borneo-labuan-island",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.25177,
+              5.38881
+            ],
+            [
+              115.25,
+              5.38595
+            ],
+            [
+              115.24889,
+              5.38119
+            ],
+            [
+              115.24801,
+              5.37262
+            ],
+            [
+              115.24624,
+              5.36452
+            ],
+            [
+              115.24492,
+              5.35548
+            ],
+            [
+              115.24359,
+              5.34952
+            ],
+            [
+              115.24403,
+              5.34119
+            ],
+            [
+              115.24337,
+              5.335
+            ],
+            [
+              115.24691,
+              5.32952
+            ],
+            [
+              115.24867,
+              5.32405
+            ],
+            [
+              115.25177,
+              5.31857
+            ],
+            [
+              115.25707,
+              5.31452
+            ],
+            [
+              115.26105,
+              5.30929
+            ],
+            [
+              115.2626,
+              5.30452
+            ],
+            [
+              115.26592,
+              5.29905
+            ],
+            [
+              115.27078,
+              5.29357
+            ],
+            [
+              115.26945,
+              5.2881
+            ],
+            [
+              115.26702,
+              5.28333
+            ],
+            [
+              115.26415,
+              5.27905
+            ],
+            [
+              115.25906,
+              5.27524
+            ],
+            [
+              115.25221,
+              5.27357
+            ],
+            [
+              115.24624,
+              5.27524
+            ],
+            [
+              115.24072,
+              5.27857
+            ],
+            [
+              115.23674,
+              5.27905
+            ],
+            [
+              115.23165,
+              5.27667
+            ],
+            [
+              115.23143,
+              5.2731
+            ],
+            [
+              115.23408,
+              5.26881
+            ],
+            [
+              115.2374,
+              5.26476
+            ],
+            [
+              115.24226,
+              5.25976
+            ],
+            [
+              115.24558,
+              5.255
+            ],
+            [
+              115.24403,
+              5.24905
+            ],
+            [
+              115.24204,
+              5.24476
+            ],
+            [
+              115.23895,
+              5.24286
+            ],
+            [
+              115.23762,
+              5.24619
+            ],
+            [
+              115.23475,
+              5.24905
+            ],
+            [
+              115.22944,
+              5.25048
+            ],
+            [
+              115.22723,
+              5.25476
+            ],
+            [
+              115.2237,
+              5.25833
+            ],
+            [
+              115.22126,
+              5.26238
+            ],
+            [
+              115.21905,
+              5.26738
+            ],
+            [
+              115.21706,
+              5.27071
+            ],
+            [
+              115.21485,
+              5.27238
+            ],
+            [
+              115.21065,
+              5.2719
+            ],
+            [
+              115.20601,
+              5.27238
+            ],
+            [
+              115.20159,
+              5.27357
+            ],
+            [
+              115.19761,
+              5.27143
+            ],
+            [
+              115.19496,
+              5.26976
+            ],
+            [
+              115.19187,
+              5.26619
+            ],
+            [
+              115.18744,
+              5.26286
+            ],
+            [
+              115.18302,
+              5.26071
+            ],
+            [
+              115.17905,
+              5.2581
+            ],
+            [
+              115.1775,
+              5.25548
+            ],
+            [
+              115.17219,
+              5.25357
+            ],
+            [
+              115.16645,
+              5.25
+            ],
+            [
+              115.15893,
+              5.24929
+            ],
+            [
+              115.15716,
+              5.25143
+            ],
+            [
+              115.15871,
+              5.25595
+            ],
+            [
+              115.16092,
+              5.26048
+            ],
+            [
+              115.16446,
+              5.26619
+            ],
+            [
+              115.166,
+              5.27262
+            ],
+            [
+              115.16866,
+              5.27738
+            ],
+            [
+              115.17065,
+              5.28262
+            ],
+            [
+              115.17087,
+              5.2881
+            ],
+            [
+              115.17131,
+              5.295
+            ],
+            [
+              115.1733,
+              5.30095
+            ],
+            [
+              115.17706,
+              5.30643
+            ],
+            [
+              115.18059,
+              5.30929
+            ],
+            [
+              115.1828,
+              5.31452
+            ],
+            [
+              115.18501,
+              5.31976
+            ],
+            [
+              115.18789,
+              5.32381
+            ],
+            [
+              115.19142,
+              5.33048
+            ],
+            [
+              115.19496,
+              5.33452
+            ],
+            [
+              115.19629,
+              5.34
+            ],
+            [
+              115.20004,
+              5.34476
+            ],
+            [
+              115.20248,
+              5.35048
+            ],
+            [
+              115.20557,
+              5.35476
+            ],
+            [
+              115.21043,
+              5.35881
+            ],
+            [
+              115.21441,
+              5.36524
+            ],
+            [
+              115.22038,
+              5.37071
+            ],
+            [
+              115.22502,
+              5.37762
+            ],
+            [
+              115.22812,
+              5.3819
+            ],
+            [
+              115.23232,
+              5.38405
+            ],
+            [
+              115.23718,
+              5.38714
+            ],
+            [
+              115.24381,
+              5.38738
+            ],
+            [
+              115.24801,
+              5.38857
+            ],
+            [
+              115.25177,
+              5.38881
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "纳闽岛 · 文莱割让与英国接管",
+        "start_year": 1846,
+        "end_year": 1849,
+        "display_kind": "control",
+        "summary_zh": "1846年12月18日，文莱割让纳闽及邻近小岛。24日英国海军登岛升旗，随后把港口发展为王室殖民地的行政和补给据点。",
+        "source_ids": [
+          "19C35-BORNEO-TREATY46",
+          "19C35-BORNEO-IRWIN",
+          "19C35-BORNEO-CHART",
+          "19C35-BORNEO-MODERN",
+          "19C35-BORNEO-LAB-TOWN",
+          "19C35-BORNEO-LAB-COAL-GEO"
+        ],
+        "source_urls": [
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20050125-WRI-01-02-EN.pdf#page=164",
+          "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/65/31/2020716531/2020716531.pdf",
+          "https://commons.wikimedia.org/wiki/File:Admiralty_Chart_No_1844_Labuan_Island,_Published_1848,_Large_Corrections_1902.jpg",
+          "https://www.jwp.gov.my/storage/article/Labuan-Map-%26-Guide.pdf",
+          "https://labuangeopark.com/muzium-labuan",
+          "https://labuangeopark.com/muzium-chimney"
+        ],
+        "named_anchors": [
+          "纳闽主岛",
+          "纳闽镇维多利亚港",
+          "丹戎库邦"
+        ],
+        "mapping_method": "Generalized main-island outline compared against the 1847 Admiralty survey (1848 edition with later corrections); coordinate reference from the Malaysian map graticule. Neighboring islands and waters excluded.",
+        "related_event_ids": [
+          "E19-BOR-1846-LABUAN-TREATY",
+          "E19-BOR-1846-LABUAN-FLAG",
+          "E19-BOR-1847-LABUAN-COAL",
+          "E19-BOR-1848-LABUAN-GOVERNOR"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "borneo-labuan-island",
+        "year_stages": [
+          {
+            "start_year": 1846,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "纳闽岛 · 文莱割让与英国接管",
+            "summary_zh": "文莱签约后，英国海军登岛接管，港口及煤矿陆续纳入英国经营。"
           }
         ]
       }
