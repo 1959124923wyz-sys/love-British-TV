@@ -213,15 +213,15 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.equal(await selected(),entry);
   }
   await page.locator('#resetDossier').click();
-  const pointStroke=async (lat,lng)=>{
+  const pointStroke=async (lat,lng,radius=21)=>{
    await page.evaluate(([lat,lng])=>window.__historicOverlapHost.map.setView([lat,lng],10,{animate:false}),[lat,lng]);
-   return page.evaluate(([lat,lng])=>{
+   return page.evaluate(([lat,lng,radius])=>{
     const m=window.__historicOverlapHost.map;
     const bounds=m.getContainer().getBoundingClientRect();
     const point=m.latLngToContainerPoint([lat,lng]);
-    return document.elementsFromPoint(point.x+bounds.left+21,point.y+bounds.top)
+    return document.elementsFromPoint(point.x+bounds.left+radius,point.y+bounds.top)
      .find(el=>el.classList.contains('atlas-19c-site'))?.getAttribute('stroke');
-   },[lat,lng]);
+   },[lat,lng,radius]);
   };
   await jump(1823);
   assert.equal(await pointStroke(15.60037,74.79097),'#65c7b6');
@@ -402,7 +402,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1849,'E19-IR-1849-LOUISBURGH-INSPECTION-MOVED','E19-IR-FAMINE-RELIEF','E19-IR-1849-DELPHI-INSPECTION',1849],
    [1846,'E19-SA-1846-CAPE-BURNSHILL','E19-SA-CAPE-SEVENTH-FRONTIER-WAR','E19-SA-1847-CAPE-KAFFRARIA-PROCLAMATION',1847],
    [1848,'E19-SA-1848-ORANGE-BOOMPLAATS','E19-SA-ORANGE-SOVEREIGNTY','E19-SA-1849-ORANGE-WARDEN-LINE',1849,false],
-   [1842,'E19-SA-1842-NATAL-PORT-OCCUPIED','E19-SA-NATAL-HUT-TAX','E19-SA-1849-NATAL-HUT-TAX',1849]
+   [1842,'E19-SA-1842-NATAL-PORT-OCCUPIED','E19-SA-NATAL-HUT-TAX','E19-SA-1849-NATAL-HUT-TAX',1849],
+   [1846,'E19-BOR-1846-LABUAN-TREATY','E19-BORNEO-BROOKE-LABUAN','E19-BOR-1849-BETING-MARAU',1849],
+   [1849,'E19-BOR-1849-KANOWIT-FINE','E19-BORNEO-BROOKE-LABUAN','E19-BOR-1843-PADEH',1843,false]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -472,6 +474,20 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1848-BOOMPLAATS-WINBURG')));
   await jump(1849);
   assert.equal(await pointStroke(-29.6,30.3789),'#c5a6f5');
+  await jump(1845);
+  assert.equal(await pointStroke(1.563591,110.345501),'#65c7b6');
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(5.335,115.224)),0);
+  await jump(1846);
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(5.335,115.224)),1);
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(5.33,115.28)),0);
+  assert.equal(await pointStroke(5.38112,115.2487),undefined);
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-BRUNEI-LABUAN')));
+  await jump(1848);
+  assert.equal(await pointStroke(5.27687,115.2454,29),'#c5a6f5');
+  assert.equal(await pointStroke(5.38112,115.2487),'#c5a6f5');
+  assert.equal(await pointStroke(4.8842,114.94447),'#65c7b6');
+  await jump(1849);
+  assert.equal(await pointStroke(1.757833,111.081667),'#a5cdec');
 
   await jump(1839);
   await openEvent('E19-NEW-1839-MONMOUTH-TRIAL-OPENS');
@@ -563,6 +579,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, 57 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, 58 stories across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
