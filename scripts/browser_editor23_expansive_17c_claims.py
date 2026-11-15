@@ -110,8 +110,8 @@ try:
  # decade entries while keeping all archived records intact and searchable.
  initial=j("return document.querySelectorAll('#eventList .event-item').length")
  assert initial>10 and j("return !document.getElementById('seventeenthEventTools').hidden")
- assert j("return document.getElementById('chapterIntro').textContent.includes('本十年已收录')")
- assert j("return document.getElementById('chapterLabel').textContent.includes('史料年表')")
+ assert j("return document.getElementById('chapterIntro').textContent.includes('波因河')")
+ assert j("return document.getElementById('chapterLabel').textContent.includes('1690—1699')")
  d.find_element(By.ID,'showYearEventsOnly').click()
  year_only=j("return document.querySelectorAll('#eventList .event-item').length")
  assert year_only>0 and year_only<initial,(year_only,initial)
