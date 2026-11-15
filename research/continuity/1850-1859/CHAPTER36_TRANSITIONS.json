@@ -887,15 +887,25 @@
         "19C35-HBC-LEK",
         "19C35-HBC-VIC-G",
         "19C35-VA-DOUGLAS",
-        "19C35-VA-LETTERS"
+        "19C35-VA-LETTERS",
+        "19C36-DT-DEEDS",
+        "19C36-DT-MAY",
+        "19C36-DT-WLC",
+        "19C36-DT-ASSEMBLY",
+        "19C36-DT-BLAN"
       ],
       "evidence_anchors": [
         "E19-HBC-1843-FORT-VICTORIA",
         "E19-HBC-1846-OREGON-TREATY",
         "E19-VA-1849-HQ",
-        "E19-VA-1849-DOUGLAS"
+        "E19-VA-1849-DOUGLAS",
+        "E19-DT-1850-BLANSHARD",
+        "E19-DT-1850-BLANK-SHEETS",
+        "E19-DT-1851-DOUGLAS",
+        "E19-DT-1852-SAANICH-SOUTH",
+        "E19-DT-1856-ASSEMBLY"
       ],
-      "finding": "哈德孙湾公司在勒夸门人领地建立堡站，后来用作太平洋沿岸贸易补给站。"
+      "finding": "沿用堡站地名。1850年首任总督宣读委任状、1851—1855年公司与总督双重体制、1856年首届议会分年。堡站自身继续属于公司经济网络。"
     },
     {
       "stable_id": "assam-buri-guma-british-management",
@@ -1813,14 +1823,17 @@
         "19C35-VA-WYLD",
         "19C35-VA-COAST",
         "19C36-VAN-LIC",
-        "19C36-VAN-PAY"
+        "19C36-VAN-PAY",
+        "19C36-DT-DEEDS"
       ],
       "evidence_anchors": [
         "E19-VA-1849-GRANT",
         "E19-VA-1849-LAND-SALE",
         "E19-VA-1849-HQ",
         "E19-VA-1849-BARCLAY",
-        "E19-36-1859-ISLAND-TRADE-LICENCE"
+        "E19-36-1859-ISLAND-TRADE-LICENCE",
+        "E19-DT-1850-BLANK-SHEETS",
+        "E19-DT-1854-SARLEQUUN"
       ],
       "finding": "1859年独占贸易执照到期，公司授地的正式赎回另跨入1860年代。"
     },
@@ -1834,13 +1847,17 @@
       "source_ids": [
         "19C35-VA-KWAK",
         "19C35-VA-SCT",
-        "19C35-VA-RUPERT"
+        "19C35-VA-RUPERT",
+        "19C36-DT-DEEDS",
+        "19C36-DT-TEXT"
       ],
       "evidence_anchors": [
         "E19-VA-1849-RUPERT",
-        "E19-VA-1849-COAL-TRADE"
+        "E19-VA-1849-COAL-TRADE",
+        "E19-DT-1851-QUEACKAR",
+        "E19-DT-1851-QUAKEOLTH"
       ],
-      "finding": "公司在比弗港开始建堡，从附近第一民族购买煤，同时经营毛皮贸易。"
+      "finding": "保留比弗港的公司贸易站身份。1851年两份文书都称相同海岸与向内陆两英里，不双计面积。"
     },
     {
       "stable_id": "kwagulth-suquash-coal",
@@ -2066,6 +2083,67 @@
         "E19-X8-1852-WATERKLOOF-FORTS"
       ],
       "finding": "1851年马科马持续抵抗。次年殖民军一方杀害当地平民，随后筑哨所并占据山地。采用姆波富—福代斯堡保护区地名点作为沃特克卢夫战区参照。"
+    },
+    {
+      "stable_id": "sooke-1850-treaty-harbour",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1850,
+      "last_display_year": 1850,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DT-DEEDS",
+        "19C36-DT-TEXT",
+        "19C36-DT-SOOKE"
+      ],
+      "evidence_anchors": [
+        "E19-DT-1850-CHEWHAYTSUM",
+        "E19-DT-1850-SOKE"
+      ],
+      "finding": "1850年5月1日的切韦特瑟姆和苏克文书都提到苏克湾。苏克港水域中心点。"
+    },
+    {
+      "stable_id": "pkols-1852-saanich-meeting",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1852,
+      "last_display_year": 1852,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DT-DEEDS",
+        "19C36-DT-WLC",
+        "19C36-DT-PKOLS",
+        "19C36-DT-PK-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-DT-1852-SAANICH-NORTH",
+        "E19-DT-1852-SAWMILL-REPORT"
+      ],
+      "finding": "W̱SÁNEĆ领导委员会记载，1852年2月11日双方在PKOLS会面。W̱SÁNEĆ领导委员会认定的会面山地，采用地名参照点。"
+    },
+    {
+      "stable_id": "nanaimo-hbc-coal-and-treaty",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1852,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-DT-N-GEO",
+        "19C36-DT-N-BC",
+        "19C36-DT-PARK",
+        "19C36-DT-MCKAY",
+        "19C36-DT-NCOAL",
+        "19C36-DT-DEEDS",
+        "19C36-DT-SNUNEY"
+      ],
+      "evidence_anchors": [
+        "E19-DT-1852-MCKAY-COAL",
+        "E19-DT-1852-RECOVERY",
+        "E19-DT-1853-COAL-LAND",
+        "E19-DT-1854-SARLEQUUN"
+      ],
+      "finding": "哈德孙湾公司开始在奈奈莫采煤。1854年斯努奈穆克斯人与王室在奈奈莫达成协议。奈奈莫市镇点，用于旧堡、港区或煤矿事件的具名地点。"
     }
   ],
   "open_items": [
@@ -2105,6 +2183,24 @@
         "19C36-DAR",
         "19C36-INDIA",
         "19C35-VA-LETTERS"
+      ]
+    },
+    {
+      "stable_id": "vancouver-island-treaty-land-extents",
+      "status": "research_pending",
+      "finding": "两份鲁珀特堡协议文字界址重叠。1850年多份以旧名地标描述内地山脊，南北萨尼奇有不同文本端点，1854年奈奈莫存本只存范围短述及签署纸。此批保留签署、会面、经营与文书所指水域等可核具名点。煤船用两端点连接。各族的传统领地、文件上的转让范围及保留地后续实划分案，待早期测量图、各民族材料和后续档案。20世纪判例留给后续年代。",
+      "source_ids": [
+        "19C36-DT-DEEDS",
+        "19C36-DT-TEXT",
+        "19C36-DT-WLC",
+        "19C36-DT-PKOLS",
+        "19C36-DT-SNUNEY",
+        "19C36-DT-NCOAL",
+        "19C36-DT-OMIT",
+        "19C36-DT-MCKAY"
+      ],
+      "research_v6_event_ids": [
+        "19c-event-c-81-01"
       ]
     }
   ]
