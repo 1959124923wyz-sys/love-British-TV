@@ -6861,25 +6861,28 @@
         "start_year": 1845,
         "end_year": 1849,
         "display_kind": "economic_network",
-        "summary_zh": "1845年首航后，特立尼达继续接收契约劳工，由殖民当局登记到港和庄园分派。",
+        "summary_zh": "1848年5月末班船到港后，特立尼达暂停输入印度契约劳工。下一艘印度劳工船于1851年4月抵达。",
         "source_ids": [
           "19C35-IND-TT-LAND",
           "19C35-IND-TT-WHARF",
           "19C35-IND-TT-REGISTER",
-          "19C35-IND-TT-WHARF-GEO"
+          "19C35-IND-TT-WHARF-GEO",
+          "19C35-IND-TT-PAUSE"
         ],
         "source_urls": [
           "https://nationaltrust.tt/beginning-of-indian-indentureship-trinidad/",
           "https://chanceht.org/lighthouse/port-of-spain-lighthouse/",
           "https://h.natt.gov.tt/sites/default/files/General-Registers-of-Indian-Indentured-Labourers.pdf",
-          "https://mapcarta.com/36592122"
+          "https://mapcarta.com/36592122",
+          "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-QMM-73708&oclc_number=894986857&op=pdf"
         ],
         "named_anchors": [
           "西班牙港南码头"
         ],
         "mapping_method": "Use the surviving Old Lighthouse as the anchor for the historic South Quay arrival. Later ships use the capital anchor.",
         "related_event_ids": [
-          "E19-MIG-TT-1845-ARRIVAL"
+          "E19-MIG-TT-1845-ARRIVAL",
+          "E19-MIG-TT-1848-SUSPEND"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -6897,10 +6900,17 @@
           },
           {
             "start_year": 1846,
-            "end_year": 1849,
+            "end_year": 1847,
             "controller": "british",
             "title": "西班牙港南码头 · 印度契约劳工入境港",
             "summary_zh": "1845年首航后，特立尼达继续接收契约劳工，由殖民当局登记到港和庄园分派。"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1849,
+            "controller": "british",
+            "title": "西班牙港南码头 · 第一轮招工船运暂停",
+            "summary_zh": "1848年5月末班船到港后，特立尼达暂停输入印度契约劳工。下一艘印度劳工船于1851年4月抵达。"
           }
         ]
       }
