@@ -416,7 +416,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    [1845,'E19-MIG-TT-1845-ARRIVAL','E19-TRINIDAD-INDENTURE','E19-MIG-TT-1848-SUSPEND',1848],
    [1848,'E19-MIG-GY-1848-PARLIAMENT','E19-GUIANA-INDENTURE-FINANCE','E19-MIG-GY-1840-BUXTON',1840],
    [1845,'E19-HC-1845-GLEN-EVICTION','E19-HIGHLAND-CLEARANCES','E19-HC-1849-SOLLAS-POLICE',1849],
-   [1849,'E19-HC-1849-INVERNESS-TRIAL','E19-HIGHLAND-CLEARANCES','E19-HC-1845-CROICK',1845]
+   [1849,'E19-HC-1849-INVERNESS-TRIAL','E19-HIGHLAND-CLEARANCES','E19-HC-1845-CROICK',1845],
+   [1848,'E19-YI-1848-BALLINGARRY','E19-YOUNG-IRELAND-REPRESSION','E19-YI-1849-DARLINGTON',1849],
+   [1849,'E19-YI-1849-HOBART','E19-YOUNG-IRELAND-REPRESSION','E19-YI-1848-MITCHEL',1848]
   ];
   for(const [year,entry,story,target,targetYear,located=true] of chapter35Topics){
    if(await page.locator('#workspace:not(.dossier-collapsed)').count())
@@ -475,6 +477,12 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(53.63173,-9.74703),'#65c7b6');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-LOUISBURGH-DELPHI')));
   assert.equal(await pointStroke(57.650136,-7.345310),'#a5cdec');
+  assert.equal(await pointStroke(-42.581667,148.070000),'#65c7b6');
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-HOBART-DARLINGTON')));
+  await jump(1848);
+  assert.equal(await pointStroke(52.619252,-7.522602),'#a5cdec');
+  assert.equal(await pointStroke(-42.581667,148.070000),undefined);
+  assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1848-THURLES-KILMAINHAM')));
   assert(!(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1845-GLENCALVIE-CROICK'))));
   await jump(1845);
   assert.equal(await pointStroke(57.856009,-4.590177),'#65c7b6');
