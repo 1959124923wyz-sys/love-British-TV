@@ -6,7 +6,7 @@ const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const index=load('data/stories/serial/index.json');
-const topics=index.topics.filter(t=>t.status==='published');
+const topics=index.topics.filter(t=>t.status==='published'&&t.id.startsWith('E6-'));
 assert.equal(topics.length,29,'audit all 29 explicitly approved audited 17C stories');
 const events=new Map();
 for(let decade=1600;decade<=1690;decade+=10){

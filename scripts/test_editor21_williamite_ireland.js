@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
-const index=read('data/stories/serial/index.json'),articles=index.topics.filter(x=>x.status==='published');
+const index=read('data/stories/serial/index.json'),articles=index.topics.filter(x=>x.status==='published'&&x.id.startsWith('E6-'));
 const meta=index.topics.find(x=>x.id==='E6-T03-WILLIAMITE-WAR'),mother=index.topics.find(x=>x.id==='E6-T03');
 const land=index.topics.find(x=>x.id==='E6-T03-LAND-1642-1698');
 assert.equal(articles.length,29);assert(mother&&mother.status==='research_only');

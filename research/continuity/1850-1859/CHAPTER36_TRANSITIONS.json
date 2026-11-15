@@ -169,14 +169,20 @@
         "19C33-THANT",
         "19C33-YGN",
         "19C34-BUR-NAM",
-        "19C36-BURMA"
+        "19C36-BURMA",
+        "19C36-BUR-GAZ-APR",
+        "19C36-BUR-ANNEX",
+        "19C36-BUR-RANGOON-READ"
       ],
       "evidence_anchors": [
         "E19-BUR-1827-RANGOON-EVAC",
         "E19-36-1852-RANGOON",
-        "E19-36-1853-PEGU"
+        "E19-36-1853-PEGU",
+        "E19-BUR2-1852-SEIZE",
+        "E19-BUR2-1852-ANNEX",
+        "E19-BUR2-1852-SHWEDAGON"
       ],
-      "finding": "1850—1851年：缅甸王廷仍控制仰光。 1852—1852年：英印远征军于4月登陆后占领仰光。 1853—1859年：1853年公布吞并勃固后，仰光为英属下缅甸港口。"
+      "finding": "1850—1851年缅甸王廷治理仰光。1852年4月14日英印军占领，12月20日在仰光宣读勃固吞并令。1853—1859年属勃固殖民行政。"
     },
     {
       "stable_id": "burma-sittwe-administration",
@@ -2205,6 +2211,203 @@
         "E19-IND-MU-1856-QUAR"
       ],
       "finding": "1856年，卫生委员会把两艘船上的劳工送到这里隔离。军医记录岛上271人死亡。日期限此两船安置，不代表全岛检疫行政终结。"
+    },
+    {
+      "stable_id": "burma-shwedagon-occupation",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1852,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-GAZ-APR",
+        "19C36-BUR-SHWEDAGON",
+        "19C36-BUR-IRRAWADDY",
+        "19C36-BUR-MOORE",
+        "19C36-BUR-UNESCO"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1852-SHWEDAGON",
+        "E19-BUR2-1853-ROYAL-OFFERINGS"
+      ],
+      "finding": "英印军1852年攻下大金塔，英方随后在塔山西侧设置军用设施。"
+    },
+    {
+      "stable_id": "burma-martaban-port",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-GAZ-APR",
+        "19C36-BUR-ANNEX",
+        "19C36-BUR-HALL",
+        "19C36-BUR-MOT-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1852-MARTABAN",
+        "E19-BUR2-1852-FORT-NOTICE",
+        "E19-BUR2-1853-TOUNGOO"
+      ],
+      "finding": "1852年4月5日英印军攻下马达班，12月归博格尔主管。"
+    },
+    {
+      "stable_id": "burma-bassein-port",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-BASSEIN",
+        "19C36-BUR-LAURIE",
+        "19C36-BUR-HALL",
+        "19C36-BUR-BAS-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1852-BASSEIN",
+        "E19-BUR2-1852-FORT-NOTICE"
+      ],
+      "finding": "1852年5月19日英印军攻下勃生，年底任命地方副专员与海关官员。"
+    },
+    {
+      "stable_id": "burma-bago-mawdaw-garrison",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1852,
+      "last_display_year": 1852,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BURMA",
+        "19C36-BUR-PEGU-OP",
+        "19C36-BUR-LAURIE",
+        "19C36-BUR-PAG-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1852-PEGU-JUNE",
+        "E19-BUR2-1852-PEGU-NOV",
+        "E19-BUR2-1852-PEGU-RELIEF"
+      ],
+      "finding": "6月英印军在瑞摩都塔一带夺城。11月再夺城后留下驻军，12月缅军围攻塔区。"
+    },
+    {
+      "stable_id": "burma-bago-pegu-town",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-PEGU-OP",
+        "19C36-BUR-LAURIE",
+        "19C36-BUR-HALL",
+        "19C36-BUR-BAG-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1852-PEGU-NOV",
+        "E19-BUR2-1852-PEGU-RELIEF"
+      ],
+      "finding": "英印军1852年11月重新占领勃固城，并留下守军。"
+    },
+    {
+      "stable_id": "burma-pyay-prome",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BURMA",
+        "19C36-BUR-LAURIE",
+        "19C36-BUR-BURMESE-MS",
+        "19C36-BUR-PARL-ANNEX",
+        "19C36-BUR-HALL",
+        "19C33-PYAY"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1852-PROME",
+        "E19-BUR2-1853-PROME-TALKS"
+      ],
+      "finding": "英印军于1852年10月占领卑谬。翌年缅甸使团在这里与英方谈判。"
+    },
+    {
+      "stable_id": "burma-danubyu-1853-post",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1853,
+      "last_display_year": 1853,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-DON-PHAYRE",
+        "19C36-BUR-LAURIE",
+        "19C33-DAN"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1853-LOCH",
+        "E19-BUR2-1853-CHEAPE",
+        "E19-BUR2-1853-DON-REPORT"
+      ],
+      "finding": "地方首领妙吞率众抗击英军。费尔在达努彪收到攻寨军报，英方随后在此驻军。"
+    },
+    {
+      "stable_id": "burma-taungoo-garrison",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-LAURIE",
+        "19C36-BUR-PEACE-GAZ",
+        "19C36-BUR-HALL",
+        "19C36-BUR-BRANDIS",
+        "19C36-BUR-TAU-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1853-TOUNGOO"
+      ],
+      "finding": "1853年2月英印军进入东吁，缴获兵器；终战通知记其继续驻军。"
+    },
+    {
+      "stable_id": "burma-myede-frontier-1853",
+      "baseline_1849": false,
+      "transition": "documented_site_episode",
+      "first_display_year": 1853,
+      "last_display_year": 1853,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-HALL",
+        "19C36-BURMA",
+        "19C36-BUR-PEACE-GAZ",
+        "19C36-BUR-MYE-GEO"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1853-MYEDE",
+        "E19-BUR2-1853-PEACE"
+      ],
+      "finding": "英军1853年推进到缅德，敏东的使者在这里接触英方。"
+    },
+    {
+      "stable_id": "burma-pegu-northern-frontier-yule-1857",
+      "baseline_1849": false,
+      "transition": "documented_admin_frontier_reference",
+      "first_display_year": 1857,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-BUR-YULE",
+        "19C36-BUR-YULE-BL",
+        "19C36-BUR-IRAWADI",
+        "19C36-BUR-DON-PHAYRE",
+        "19C36-BUR-PEACE-GAZ"
+      ],
+      "evidence_anchors": [
+        "E19-BUR2-1853-FRONTIER-DRAFT",
+        "E19-BUR2-1854-BOUNDARY",
+        "E19-BUR2-1857-FRONTIER-MAP"
+      ],
+      "finding": "1852公告没有边界线。1853年勘划，1854年缅王拒认。1857年尤尔地图留存的英方北界横段在1857—1859年显示。"
     }
   ],
   "open_items": [
@@ -2284,6 +2487,19 @@
         "19c-event-b-39-03",
         "19c-event-c-175-01",
         "19c-event-c-177-01"
+      ]
+    },
+    {
+      "stable_id": "pegu-annexation-boundaries-villages-and-timber",
+      "status": "research_pending",
+      "finding": "达努彪收报与妙吞木寨分列；木寨旧名 Kyoung Kazeen／Kyoukazeen、采曼与德沃特两村现代位置待核。1857北界只采用旧图所见横段及官志河道交点，未补全若开省际线、东界或南界，未把1857图回填至1852年。福克斯号当日锚位、换防后的缅德营址及1853年林权公告原刊待查。",
+      "source_ids": [
+        "19C36-BUR-DON-PHAYRE",
+        "19C36-BUR-LAURIE",
+        "19C36-BUR-DALHI-LAW",
+        "19C36-BUR-YULE",
+        "19C36-BUR-IRAWADI",
+        "19C36-BUR-TEAK"
       ]
     }
   ]

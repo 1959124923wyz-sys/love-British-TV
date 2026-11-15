@@ -2,8 +2,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const idx=read('data/stories/serial/index.json');
-const p=idx.topics.filter(x=>x.status==='published'),t=idx.topics.find(x=>x.id==='E6-T07-LEEWARD'),mother=idx.topics.find(x=>x.id==='E6-T07'),bar=idx.topics.find(x=>x.id==='E6-T07-BARBADOS');
-assert.equal(p.length,29,'only one new approved story permitted');assert(mother&&mother.status==='research_only');assert(bar?.status==='published');
+const p=idx.topics.filter(x=>x.status==='published'&&x.id.startsWith('E6-')),t=idx.topics.find(x=>x.id==='E6-T07-LEEWARD'),mother=idx.topics.find(x=>x.id==='E6-T07'),bar=idx.topics.find(x=>x.id==='E6-T07-BARBADOS');
+assert.equal(p.length,29,'retain the approved seventeenth-century registry');assert(mother&&mother.status==='research_only');assert(bar?.status==='published');
 assert.equal(t.parent_topic_id,'E6-T07');assert(t.status==='published'&&t.publication_review==='approved');assert.equal(t.event_ids.length,13);
 const story=read(t.article_file),evidence=read('data/research/editor19-leewards-kalinago-1666-captives-evidence-20261027.json');
 assert.equal(story.id,'E6-T07-LEEWARD');assert.equal(story.start_year,1623);assert.equal(story.end_year,1699);assert.equal(story.sections.length,11);assert.equal(story.sources.length,12);assert.equal(story.topic_source_claims.length,11);

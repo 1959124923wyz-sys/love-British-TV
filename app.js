@@ -1146,12 +1146,18 @@ async function loadNineteenthAtlas(from,end,status){
   .flatMap(([,chapter])=>chapter.events.map(event=>event.id)));
  const cited=row=>row.source_ids?.length&&row.source_ids.every(id=>sourceIds.has(id));
  const inPeriod=y=>Number.isInteger(y)&&y>=from&&y<=end;
+ const validGeometry=f=>{
+  const {type,coordinates}=f.geometry||{};
+  if(type==='Point'||type==='Polygon')return true;
+  return type==='LineString'&&f.properties?.dash_only===true&&Array.isArray(coordinates)&&coordinates.length>=2&&
+   coordinates.every(p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite)&&Math.abs(p[0])<=180&&Math.abs(p[1])<=90);
+ };
  if(data.schema!=='atlas-19c-chronology-v1'||data.editorial_status!==status||
     data.period?.from!==from||data.period?.to!==end||!data.events.length||eventIds.size!==data.events.length||
     data.events.some(e=>!inPeriod(e.year)||!cited(e)||
      (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||Math.abs(e.lat)>90||!Number.isFinite(e.lng)||Math.abs(e.lng)>180))||
     data.routes.some(r=>!inPeriod(r.year)||!cited(r))||geo.type!=='FeatureCollection'||
-    geo.features.some(f=>!['Point','Polygon'].includes(f.geometry?.type)||
+    geo.features.some(f=>!validGeometry(f)||
      !cited(f.properties)||!inPeriod(f.properties.start_year)||!inPeriod(f.properties.end_year)||
      f.properties.historical_boundary_confirmed!==false||f.properties.fill_authorized!==false||
      f.properties.area_sqkm!==null||!f.properties.exclude_from_area_aggregation||
@@ -1190,6 +1196,21 @@ function renderNineteenthSpatial(){
     })
    });
    layer.addTo(group);
+   continue;
+  }
+  if(feature.geometry.type==='LineString'){
+   L.geoJSON(site,{
+    pane:'warReachPane',renderer:warReachRenderer,bubblingMouseEvents:false,
+    style:{color,weight:3,dashArray:'7 6',className:'atlas-19c-frontier'},
+    onEachFeature:(_,line)=>{
+     line.bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
+      pane:'eventTooltipPane',className:'atlas-hover',direction:'auto'});
+     line.on('click',e=>{
+      if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+      openTerritoryDossier(site);
+     });
+    }
+   }).addTo(group);
    continue;
   }
   const [lon,lat]=feature.geometry.coordinates;
