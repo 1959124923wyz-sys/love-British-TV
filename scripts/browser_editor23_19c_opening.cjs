@@ -376,7 +376,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   }
   await goto('?review19c=1&year=1840',1840);
   assert.match(await page.locator('#chapterLabel').textContent(),/第35章/);
-  assert.match(await page.locator('#chapterIntro').textContent(),/南京条约/);
+  await page.waitForFunction(()=>document.querySelector('#chapterIntro')?.textContent.includes('南京条约'));
   assert.match(await page.locator('[data-decade="1840"]').textContent(),/战后条约与殖民边疆/);
   const chapter35Topics=[
    [1840,'E19-OP-1840-DINGHAI-FIRST','E19-OPIUM-WAR-TREATY-PORTS','E19-OP-1842-NANKING-TREATY',1842],
