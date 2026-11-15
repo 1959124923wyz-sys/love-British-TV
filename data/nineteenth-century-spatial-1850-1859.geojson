@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "schema": "atlas-19c-spatial-review-v1",
-    "coverage": "1850–1859 Chapter 36 batches 1–2 and predecessor continuity",
+    "coverage": "1850–1859 Chapter 36 batches 1–3 and predecessor continuity",
     "historical_area_statistics": false
   },
   "features": [
@@ -765,7 +765,13 @@
           "19C34-GY-UNION",
           "19C35-IND-GY-SHIPS",
           "19C35-IND-LOAN-ACT",
-          "19C35-IND-GY-SUSPEND"
+          "19C35-IND-GY-SUSPEND",
+          "19C36-IND-FISC-OPEN",
+          "19C36-IND-GY-GAZ",
+          "19C36-IND-GY-ORD",
+          "19C36-IND-GY-AGENT",
+          "19C36-IND-GY-REPLY",
+          "19C36-IND-CLAR"
         ],
         "named_anchors": [
           "乔治敦"
@@ -778,7 +784,13 @@
           "E19-GUI-1831-COLONIAL-UNION",
           "E19-MIG-GY-1845-HUNGERFORD",
           "E19-MIG-GY-1845-MADRAS",
-          "E19-MIG-GY-1848-BONDS"
+          "E19-MIG-GY-1848-BONDS",
+          "E19-IND-GY-1850-FINANCE",
+          "E19-IND-GY-1851-REGISTER",
+          "E19-IND-GY-1851-CONTROL",
+          "E19-IND-GY-1853-ALLOCATE",
+          "E19-IND-GY-1858-CLARENDON",
+          "E19-IND-GY-1858-REPLY"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -794,15 +806,35 @@
           "https://parliament.gov.gy/new2/GUYANA%20PARLIAMENT%20HISTORY%202009-1.pdf",
           "https://guyanachronicle.com/2009/05/05/the-coolie-ships/",
           "https://www.legislation.gov.uk/ukpga/Vict/11-12/22/pdfs/ukpga_18480022_en.pdf",
-          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/25601/GIPE-016392.pdf?isAllowed=y&sequence=3"
+          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/25601/GIPE-016392.pdf?isAllowed=y&sequence=3",
+          "https://www.academia.edu/79764686/Indenture_as_compensation_state_financing_for_indentured_labor_migration_in_the_era_of_emancipation",
+          "https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Economist_1852-02-21-_Vol_10_Iss_443_%28IA_sim_economist_1852-02-21_10_443%29.pdf",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6e/Papers_relating_to_Chinese_Immigrants_recently_introduced_into_British_Guiana_and_Trinidad_%28IA_dli.granth.106499%29.pdf",
+          "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2025/08/BG-Immigration-Correspondence-b.pdf",
+          "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2025/08/BG-Immigration-Correspondence-b.pdf",
+          "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2025/08/BG-Immigration-Correspondence-b.pdf"
         ],
         "year_stages": [
           {
             "start_year": 1850,
+            "end_year": 1850,
+            "controller": "british",
+            "title": "乔治敦 · 殖民政府借款和安排税收",
+            "summary_zh": "政务委员会筹措招工款，并以殖民地一般收入担保债务。"
+          },
+          {
+            "start_year": 1851,
+            "end_year": 1857,
+            "controller": "british",
+            "title": "乔治敦 · 殖民政府恢复招工与庄园分派",
+            "summary_zh": "印度劳工船重新到港。殖民当局负责登记、分派，并以准假票等规定管束离园。"
+          },
+          {
+            "start_year": 1858,
             "end_year": 1859,
             "controller": "british",
-            "title": "乔治敦 · 殖民政府筹措招工债务",
-            "summary_zh": "殖民政府以公共收入担保借款。印度劳工输入到1848年再次暂停。"
+            "title": "乔治敦 · 殖民政府另设印度招工代理",
+            "summary_zh": "殖民政府安排在加尔各答直接设代理，并就返乡工人的申诉回复伦敦。"
           }
         ]
       }
@@ -2068,7 +2100,9 @@
           "19C34-LAB-MAU-G",
           "19C35-IND-MU-CHRON",
           "19C35-IND-MU-PASS",
-          "19C35-IND-MU-GHAT"
+          "19C35-IND-MU-GHAT",
+          "19C36-IND-MU-WAGES",
+          "19C36-IND-MU-HAY"
         ],
         "source_urls": [
           "https://nationalarchives.govmu.org/nationalarchives/wp-content/uploads/2020/12/Sections-a-f.pdf",
@@ -2078,7 +2112,9 @@
           "https://www.geonames.org/934154/port-louis.html",
           "https://aapravasi.govmu.org/aapravasi/wp-content/uploads/2020/09/Brief-History-of-the-Aapravasi-Ghat-World-Heritage-Site.pdf",
           "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/BD64E93B3FCDE195B7DAA56276060896/S0738248022000542a.pdf/oceanic_mobility_and_the_empire_of_the_pass_system.pdf",
-          "https://aapravasi.govmu.org/aapravasi/?page_id=794"
+          "https://aapravasi.govmu.org/aapravasi/?page_id=794",
+          "https://www.cambridge.org/core/books/abs/overseer-state/man-in-his-natural-state-must-either-be-led-by-conviction-or-by-force/BE12669272A6F3075F6C6A097584E478",
+          "https://www.persee.fr/doc/outre_1631-0438_2002_num_89_336_3985?pageId=T1_132"
         ],
         "named_anchors": [
           "路易港"
@@ -2092,7 +2128,9 @@
           "E19-MAU-1839-APPRENTICESHIP-END",
           "E19-MIG-MU-1842-REOPENING",
           "E19-MIG-MU-1846-PASSPORTS",
-          "E19-MIG-MU-1847-PASSES"
+          "E19-MIG-MU-1847-PASSES",
+          "E19-IND-MU-1854-WAGES",
+          "E19-IND-MU-1855-HAY"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -2103,10 +2141,17 @@
         "year_stages": [
           {
             "start_year": 1850,
-            "end_year": 1859,
+            "end_year": 1853,
             "controller": "british",
             "title": "路易港 · 殖民政府管理劳工证件",
-            "summary_zh": "1847年第22号条例通过后，已经完成契约的工人仍被要求继续就业和随身带证。"
+            "summary_zh": "已经完成契约的工人仍被要求继续就业和随身带证。"
+          },
+          {
+            "start_year": 1854,
+            "end_year": 1859,
+            "controller": "british",
+            "title": "路易港 · 劳工证件和缺工处罚",
+            "summary_zh": "殖民法规准许园主按擅自缺工一天扣两天工资。"
           }
         ]
       }
@@ -4898,19 +4943,35 @@
         "source_ids": [
           "19C35-IND-MU-GHAT",
           "19C35-IND-MU-UNESCO",
-          "19C35-IND-MU-ICOMOS"
+          "19C35-IND-MU-ICOMOS",
+          "19C36-IND-MU-CON",
+          "19C36-IND-MU-QUAR",
+          "19C36-IND-MU-RECR",
+          "19C36-IND-MU-HAREL",
+          "19C36-IND-MU-CERT"
         ],
         "source_urls": [
           "https://aapravasi.govmu.org/aapravasi/?page_id=794",
           "https://whc.unesco.org/en/list/1227",
-          "https://whc.unesco.org/document/152100"
+          "https://whc.unesco.org/document/152100",
+          "https://aapravasi.govmu.org/aapravasi/wp-content/uploads/2020/09/Conservation-Plan.pdf",
+          "https://wellcomecollection.org/works/n4nkfhw5",
+          "https://www.pure.ed.ac.uk/ws/files/25061873/crispin_bates_accepted.pdf",
+          "https://globalgirmitinstitute.org/wp-content/uploads/2021/06/They-came-to-Mtius-Book-180-pgs-LR.pdf",
+          "https://globalgirmitinstitute.org/wp-content/uploads/2021/06/They-came-to-Mtius-Book-180-pgs-LR.pdf"
         ],
         "named_anchors": [
           "路易港移民站"
         ],
         "mapping_method": "UNESCO designated-site anchor at the 1849 Immigration Depot location. Extant buildings include later works.",
         "related_event_ids": [
-          "E19-MIG-MU-1849-DEPOT"
+          "E19-MIG-MU-1849-DEPOT",
+          "E19-IND-MU-1852-ALLOT",
+          "E19-IND-MU-1853-CAPACITY",
+          "E19-IND-MU-1856-EXPAND",
+          "E19-IND-MU-1857-RESTART",
+          "E19-IND-MU-1858-DOCK",
+          "E19-IND-MU-1859-HAREL"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -4921,10 +4982,24 @@
         "year_stages": [
           {
             "start_year": 1850,
+            "end_year": 1855,
+            "controller": "british",
+            "title": "路易港移民站 · 登记和分派契约劳工",
+            "summary_zh": "移民保护官主持到港登记和分派，并在1853年报告站内有时过于拥挤。"
+          },
+          {
+            "start_year": 1856,
+            "end_year": 1856,
+            "controller": "british",
+            "title": "路易港移民站 · 当局批准扩建",
+            "summary_zh": "赴毛里求斯的印度契约劳工输送在检疫灾难后暂停。殖民当局批准扩建移民站。"
+          },
+          {
+            "start_year": 1857,
             "end_year": 1859,
             "controller": "british",
-            "title": "路易港移民站 · 阿普拉瓦西加特",
-            "summary_zh": "殖民政府在特鲁凡法龙湾设站登记新到港移民，并向糖业庄园分派劳工。"
+            "title": "路易港移民站 · 复航、扩建与契约登记",
+            "summary_zh": "赴毛里求斯招工恢复。站内继续登记和见证签约。"
           }
         ]
       }
@@ -4950,14 +5025,20 @@
           "19C35-IND-TT-WHARF",
           "19C35-IND-TT-REGISTER",
           "19C35-IND-TT-WHARF-GEO",
-          "19C35-IND-TT-PAUSE"
+          "19C35-IND-TT-PAUSE",
+          "19C36-IND-TT-REG",
+          "19C36-IND-TT-PORT",
+          "19C36-IND-CAL-MORT"
         ],
         "source_urls": [
           "https://nationaltrust.tt/beginning-of-indian-indentureship-trinidad/",
           "https://chanceht.org/lighthouse/port-of-spain-lighthouse/",
           "https://h.natt.gov.tt/sites/default/files/General-Registers-of-Indian-Indentured-Labourers.pdf",
           "https://mapcarta.com/36592122",
-          "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-QMM-73708&oclc_number=894986857&op=pdf"
+          "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-QMM-73708&oclc_number=894986857&op=pdf",
+          "https://www.natt.gov.tt/sites/default/files/images/General-Registers-of-Indian-Indentured-Labourers.pdf",
+          "https://www.natt.gov.tt/sites/default/files/pdfs/Nelson-Island-and-Indian-Indentureship-in-Trinidad_02.pdf",
+          "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2025/08/BG-Immigration-Correspondence-b.pdf"
         ],
         "named_anchors": [
           "西班牙港南码头"
@@ -4965,7 +5046,12 @@
         "mapping_method": "Use the surviving Old Lighthouse as the anchor for the historic South Quay arrival. Later ships use the capital anchor.",
         "related_event_ids": [
           "E19-MIG-TT-1845-ARRIVAL",
-          "E19-MIG-TT-1848-SUSPEND"
+          "E19-MIG-TT-1848-SUSPEND",
+          "E19-IND-TT-1851-ELIZA",
+          "E19-IND-TT-1852-SHIPS",
+          "E19-IND-TT-1858-SALADIN",
+          "E19-IND-TT-1858-MADRAS",
+          "E19-IND-TT-1859-MADRAS"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -4983,10 +5069,17 @@
           },
           {
             "start_year": 1851,
+            "end_year": 1857,
+            "controller": "british",
+            "title": "西班牙港南码头 · 印度劳工船复航",
+            "summary_zh": "1851年4月伊丽莎·斯图尔特号到港。移民办公室继续按船次登记劳工。"
+          },
+          {
+            "start_year": 1858,
             "end_year": 1859,
             "controller": "british",
-            "title": "西班牙港南码头 · 印度招工恢复",
-            "summary_zh": "殖民当局于1851年4月恢复接收来自印度的契约劳工。"
+            "title": "西班牙港南码头 · 马德拉斯船进入登记册",
+            "summary_zh": "1858年12月，专记马德拉斯来船的分册录入罗马皇帝号。"
           }
         ]
       }
@@ -5010,12 +5103,20 @@
         "source_ids": [
           "19C35-IND-TT-LAW",
           "19C35-IND-LOAN-ACT",
-          "19C35-IND-TT-CAP"
+          "19C35-IND-TT-CAP",
+          "19C36-IND-TT-LAW50",
+          "19C36-IND-TT-PEN",
+          "19C36-IND-TT-LAW59",
+          "19C36-IND-FISC-OPEN"
         ],
         "source_urls": [
           "https://laws.gov.tt/ttdll-web/revision/byrepealed?format=&max=30&offset=2280",
           "https://www.legislation.gov.uk/ukpga/Vict/11-12/22/pdfs/ukpga_18480022_en.pdf",
-          "https://digital.library.unt.edu/explore/locations/p15414/"
+          "https://digital.library.unt.edu/explore/locations/p15414/",
+          "https://laws.gov.tt/ttdll-web/revision/byrepealed?format=&max=30&offset=2220",
+          "https://learn.moe.gov.tt/pluginfile.php/2808516/mod_resource/content/1/Immigration.pdf",
+          "https://laws.gov.tt/ttdll-web/revision/byrepealed?format=&max=30&offset=2040",
+          "https://www.academia.edu/79764686/Indenture_as_compensation_state_financing_for_indentured_labor_migration_in_the_era_of_emancipation"
         ],
         "named_anchors": [
           "西班牙港"
@@ -5024,7 +5125,10 @@
         "related_event_ids": [
           "E19-MIG-TT-1846-MASTERS",
           "E19-MIG-TT-1846-IMMIGRATION",
-          "E19-MIG-TT-1848-BONDS"
+          "E19-MIG-TT-1848-BONDS",
+          "E19-IND-TT-1850-FINANCE",
+          "E19-IND-TT-1854-LEAVES",
+          "E19-IND-TT-1859-FINANCE"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -5035,10 +5139,24 @@
         "year_stages": [
           {
             "start_year": 1850,
+            "end_year": 1853,
+            "controller": "british",
+            "title": "西班牙港 · 殖民地筹措招工款",
+            "summary_zh": "殖民政府在恢复招工前通过第14号筹款条例。"
+          },
+          {
+            "start_year": 1854,
+            "end_year": 1858,
+            "controller": "british",
+            "title": "西班牙港 · 殖民政府以准假票管理劳工",
+            "summary_zh": "劳工在工作时段离开被分派的庄园须持准假票。"
+          },
+          {
+            "start_year": 1859,
             "end_year": 1859,
             "controller": "british",
-            "title": "西班牙港 · 殖民财政担保招工",
-            "summary_zh": "殖民政府授权赴英国发行债券，筹措引入劳工的费用。"
+            "title": "西班牙港 · 殖民政府调整筹款和续约",
+            "summary_zh": "新增条例涉及私人出资招工、续约和首份合同征费。"
           }
         ]
       }
@@ -6320,6 +6438,51 @@
             "summary_zh": "公司继续开采煤炭。斯努奈穆克斯人与王室于1854年在奈奈莫达成协议。"
           }
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gabriel-island-1856-immigrant-quarantine",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.672967,
+          -19.885683
+        ]
+      },
+      "properties": {
+        "name": "加布里埃尔岛 · 两艘移民船的隔离地",
+        "start_year": 1856,
+        "end_year": 1856,
+        "display_kind": "political",
+        "summary_zh": "1856年，卫生委员会把两艘船上的劳工送到这里隔离。军医记录岛上271人死亡。",
+        "source_ids": [
+          "19C36-IND-MU-QUAR",
+          "19C36-IND-MU-QUAR-TABLE",
+          "19C36-IND-MU-ISLET",
+          "19C36-IND-MU-ISLET-GEO",
+          "19C36-IND-MU-QUAR-STUDY"
+        ],
+        "source_urls": [
+          "https://wellcomecollection.org/works/n4nkfhw5",
+          "https://iiif.wellcomecollection.org/image/b21297514_0247.jp2/full/max/0/default.jpg",
+          "https://ode.govmu.org/ode-data/efforts-on-offshore-islet-nature-reserves",
+          "https://doi.org/10.13140/RG.2.1.1923.4404",
+          "https://iris.unive.it/bitstream/10278/5016704/2/Cianciosi-2023-International_Journal_of_Historical_Archaeology.pdf"
+        ],
+        "named_anchors": [
+          "加布里埃尔岛"
+        ],
+        "related_event_ids": [
+          "E19-IND-MU-1856-QUAR"
+        ],
+        "mapping_method": "Named island matched to the colonial inquiry and island gazetteer.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "gabriel-island-1856-immigrant-quarantine"
       }
     }
   ]
