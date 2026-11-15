@@ -36,7 +36,7 @@
  ];
  const isWarning=value=>{
   const v=String(value||'');
-  return v.length>0&&warnings.some(rx=>rx.test(v));
+  return v.split(/[。；！？\n]+/).some(sentence=>warnings.some(rx=>rx.test(sentence)));
  };
  // The reader-copy parser retains documented historical clauses while removing
  // cartographic notes. Fail closed only for the remaining editorial clauses.

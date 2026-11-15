@@ -40,6 +40,9 @@ for(const [s,expected] of [
  assert(!guard.isWarning(s),'historical fact misclassified: '+s);
  assert.equal(guard.strip(s),expected,'historical fact changed');
 }
+const chapter35=require('../js/century-chapter-narratives.js').forDecade(1840).intro;
+assert.match(chapter35,/焚毁沿河聚落。夏威夷王国在英舰逼签临时割让书后恢复主权/);
+assert.equal(guard.strip(chapter35),chapter35,'historical chapter copy must survive across sentence boundaries');
 const withFact='1762年英军攻占哈瓦那。虚线为概略历史地理参考，边界未经历史地图实测配准。';
 assert.equal(guard.strip(withFact),'1762年英军攻占哈瓦那');
 const waterway=JSON.parse(read('data/eighteenth-century-b38-hudson-company.json'))
