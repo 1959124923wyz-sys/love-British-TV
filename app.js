@@ -321,8 +321,8 @@ function openDossier(item,typ){
  const candidate=typ==='candidate',route=typ==='route',place=typ==='place';
  selected=item.id;
  selectedItemYear=(typ==='event'||typ==='route')&&Number.isFinite(Number(item.year))?Number(item.year):null;
- const date=place?'历史政治关系':candidate?'1497年':route?item.year+'年':item.date_label;
- const caption=place?'地理与政治':candidate?'候选登陆地点':route?'航海':categoryName[item.category]||'历史事件';
+ const date=place?'历史政治关系':candidate?'1497年':route?(item.date_label||item.year+'年'):item.date_label;
+ const caption=place?'地理与政治':candidate?'候选登陆地点':route?(item.travel_mode==='land'?'陆路':'航海'):categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
  const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ)); const representativeNote='';
  const showEventSources=!storyChild||item.year>=1800;
