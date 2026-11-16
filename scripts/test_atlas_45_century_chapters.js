@@ -8,10 +8,10 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const copy=require('../js/century-chapter-narratives.js');
 const html=read('index.html'),app=read('app.js');
 
-assert.equal(Object.keys(copy.chapters).length,35,'1600–1949 must include 35 independently authored decade introductions');
+assert.equal(Object.keys(copy.chapters).length,36,'1600–1959 must include 36 independently authored decade introductions');
 assert.equal(copy.forDecade(1599),null);
-assert.equal(copy.forDecade(1950),null);
-for(let year=1600;year<=1940;year+=10){
+assert.equal(copy.forDecade(1960),null);
+for(let year=1600;year<=1950;year+=10){
  const text=copy.forDecade(year);
  assert(text,`missing decade ${year}`);
  assert.equal(copy.forDecade(year+9),text,`end of ${year}s should show the same chapter`);
@@ -55,6 +55,7 @@ for(const [p,term] of [
  ['data/stories/serial/chronology-1920-1929.json','焚毁科克市政厅'],
  ['data/stories/serial/chronology-1930-1939.json','在丹迪海边公开取盐'],
  ['data/stories/serial/chronology-1940-1949.json','在巴当加里射杀23名被拘平民'],
+ ['data/stories/serial/chronology-1950-1959.json','霍拉拘禁营看守殴打被拘人员致11人死亡'],
  ['data/stories/serial/chronology-preview-mysore-1700-1799.json','1799']
  ])assert(hasEvent(p,term),`historical event anchor absent: ${p}: ${term}`);
 
@@ -70,4 +71,4 @@ for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro'
 assert(app.includes("const decadeTotal=atlas.events.length"),'event statistics must remain intact');
 assert(app.includes("d>=1700?'topic_preview'"),'original research status must remain intact');
 assert(app.includes("$('chapterIntro').textContent=atlasFirstMerged.intro"),'16C chapter introduction must stay untouched');
-console.log('PASS: all 35 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
+console.log('PASS: all 36 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
