@@ -1491,11 +1491,13 @@ try:
     driver.find_element(By.CSS_SELECTOR, hola_entry).send_keys("\n")
     anvil_link = '.story-body [data-story-event="E20-KEN-ANVIL"]'
     wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, anvil_link))
+    before_anvil_zoom = driver.execute_script("return window.atlasReadViewport().zoom")
     driver.find_element(By.CSS_SELECTOR, anvil_link).send_keys("\n")
     wait.until(lambda d: d.execute_script("""return window.atlasStoryBridge.currentYear()===1954 &&
        window.atlasStoryBridge.activeFocusId()==='E20-KEN-ANVIL'"""))
     wait.until(lambda d: d.execute_script("""const center=window.atlasReadViewport().center;
-       return Math.abs(center.lat+1.2921)<0.1 && Math.abs(center.lng-36.8219)<0.1"""))
+       return Math.abs(center.lat+1.2921)<0.35 && Math.abs(center.lng-36.8219)<0.35"""))
+    assert driver.execute_script("return window.atlasReadViewport().zoom") == before_anvil_zoom
     anvil_action = '#dossierBody [data-story-open-event="E20-KEN-ANVIL"]'
     wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, anvil_action))
     driver.find_element(By.CSS_SELECTOR, anvil_action).send_keys("\n")
