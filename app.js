@@ -313,7 +313,7 @@ function listSources(ids,item){
    (questions?'<h3>待进一步核对的档案</h3><ul>'+questions+'</ul>':'')+
    (sums?'<h3>原始账目字段</h3><ul class="accounting-list">'+sums+'</ul>':'')+
    '</div>'+
-   (refs.length?'<div class="mini-heading">文献出处 · '+refs.length+'项</div><div class="source-list">'+refs.map(x=>'<a class="source-link" href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.publisher)+' · '+escapeHTML(x.title)+' ↗</a>').join('')+'</div>':'')+'</details>';
+   (refs.length?'<div class="mini-heading">文献出处 · '+refs.length+'项</div><div class="source-list">'+refs.map(x=>'<a class="source-link" href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML([x.publisher,x.title||x.label].filter(Boolean).join(' · '))+' ↗</a>').join('')+'</div>':'')+'</details>';
 }
 function conciseEventTitle(item){return window.HistoryHeadlines?.eventTitle?.(item)||item?.name||'';}
 function conciseRegionTitle(name){
@@ -330,7 +330,7 @@ function openDossier(item,typ){
  const caption=place?'地理与政治':candidate?'候选登陆地点':route?({land:'陆路',river:'水路'}[item.travel_mode]||'航海'):(item.category==='political'&&Number(item.year)>=1800?'政治与行政':categoryName[item.category]||'历史事件');
  const description=candidate?item.note:route?item.note:item.description;
  const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ)); const representativeNote='';
- const showEventSources=!storyChild||item.year>=1800;
+ const showEventSources=!storyChild||item.year>=1800||item.show_dossier_sources===true;
  const locateAction=typ==='event'?
    '<div class="dossier-map-action"><button type="button" data-locate-event="'+escapeHTML(item.id)+'">在地图上定位</button>'+
    '<small data-locate-note hidden></small></div>':'';
@@ -3658,6 +3658,38 @@ async function boot(){
       for(const s of ds.sources||[])sourcesById.set(s.id,s);
       r33OriginalResearchThreeStoriesReady=true;
     }catch(err){console.warn('R33 dossier review not loaded; 31 previous drafts preserved',err);}
+  }
+  if(preview18cReady&&reviewParams.get('review18c')==='1'){
+    try{
+      const response=await fetch('data/stories/serial/chronology-preview-statia-bencoolen-1704-1786.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('18C topic supplement unavailable');
+      const {schema,editorial_status:status,events,routes,sources}=await response.json();
+      const sourceIds=new Set(sources.map(source=>source.id));
+      const eventIds=new Set(events.map(event=>event.id));
+      const routeIds=new Set(routes.map(route=>route.id));
+      const eventYears=new Map(events.map(event=>[event.id,event.year]));
+      const decades=new Set(events.map(event=>decadeForYear(event.year)));
+      const knownEventIds=new Set([...serialPreviewByDecade.values()].flatMap(dataset=>dataset.events.map(event=>event.id)));
+      const validPoint=([lat,lng])=>Number.isFinite(lat)&&Math.abs(lat)<=90&&Number.isFinite(lng)&&Math.abs(lng)<=180;
+      const cited=item=>item.source_ids?.length&&item.source_ids.every(id=>sourceIds.has(id));
+      if(schema!=='atlas-18c-topic-supplement-v1'||status!=='research_preview_not_published'||
+         eventIds.size!==events.length||routeIds.size!==routes.length||sourceIds.size!==sources.length||
+         sources.some(source=>sourcesById.has(source.id))||[...decades].some(decade=>!serialPreviewByDecade.has(decade))||
+         events.some(event=>knownEventIds.has(event.id)||!Number.isInteger(event.year)||event.year<1700||event.year>=1800||
+          event.start_year!==event.year||event.end_year!==event.year||!cited(event)||event.publication_status!=='research_only'||event.territorial_claim!==false||
+          (event.lat===null?event.lng!==null:!validPoint([event.lat,event.lng])))||
+         routes.some(route=>route.dash_only!==true||!cited(route)||route.coords?.length!==2||!route.coords.every(validPoint)||
+          !route.related_event_ids?.length||!route.related_event_ids.every(id=>eventYears.get(id)===route.year)))
+        throw new Error('18C topic supplement failed chronology, source or geography checks');
+      for(const decade of decades){
+        const base=serialPreviewByDecade.get(decade);
+        const sameDecade=item=>decadeForYear(item.year)===decade;
+        serialPreviewByDecade.set(decade,{...base,
+          events:[...base.events,...events.filter(sameDecade)].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          routes:[...base.routes,...routes.filter(sameDecade)]});
+      }
+      for(const source of sources)sourcesById.set(source.id,source);
+    }catch(error){console.warn('18C topic supplement excluded',error);}
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.

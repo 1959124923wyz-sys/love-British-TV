@@ -1,0 +1,30 @@
+name: 18C Statia and Bencoolen
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'js/history-stories.js'
+      - 'data/stories/serial/**'
+      - 'data/eighteenth-century-b37-india-ocean.json'
+      - 'data/eighteenth-century-dynamic-spatial-1700-1799.json'
+      - 'scripts/*18c_statia_bencoolen*'
+      - '.github/workflows/18c-statia-bencoolen.yml'
+permissions:
+  contents: read
+jobs:
+  topics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/test_18c_statia_bencoolen.js
+      - run: python3 scripts/audit_spatial_semantics.py --strict
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - name: Verify desktop chronology, map and dossier navigation
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-topics-http.log 2>&1 &
+          node scripts/browser_18c_statia_bencoolen.cjs

@@ -20,7 +20,7 @@ const previousSites=old34.control_sites.length+old35.sites.length+old36.sites.le
 assert.equal(previousZones,376);assert.equal(previousSites,248);
 assert.equal(previousZones+zones.length,503);assert.equal(previousSites+sites.length,338);
 const previousPhases=[...old34.area_references,...old34.control_sites,...old35.zones,...old35.sites,...old36.zones,...old36.sites,...old37.flatMap(d=>[...d.zones,...d.sites])].reduce((n,x)=>n+x.periods.length,0);
-assert.equal(previousPhases,673);assert.equal(previousPhases+217,890);
+assert.equal(previousPhases,675);assert.equal(previousPhases+217,892);
 const ids=new Set(),kinds=new Set(['administration','military','displacement','resistance','paper_claim','diplomacy','trade_influence','battle','revenue','coercion','foreign_occupation']);
 for(const d of docs){
  assert.equal(d.schema,'atlas-18c-batch38-v1');assert.equal(d.review_only,true);
