@@ -4,7 +4,7 @@
   "scope": {
     "from": 1799,
     "through": 1819,
-    "regions": ["开普及东部边疆", "锡兰沿海与康提"],
+    "regions": ["开普及东部边疆", "锡兰沿海与康提", "德文特河", "巴巴多斯"],
     "unreviewed_prior_layers": "其他1799年全球地点及区域仍待逐项承接，1800年批次不裁定其终止。"
   },
   "year_end_geometry_file": "data/nineteenth-century-spatial-1800-1819.geojson",
@@ -114,6 +114,90 @@
       "historic_end_year": null,
       "sources": ["19C-CAPE-WARS", "19C-CAPE-THOMPSON"],
       "note": "本批画下游的1819年禁居安排。北部、蒂尤梅河谷例外及1820年代的空间变更另核。"
+    },
+    {
+      "stable_id": "tasmania-risdon-early-post",
+      "prior_ids": [],
+      "baseline_year": 1799,
+      "baseline_controller": null,
+      "at_1800": "not_yet_recorded",
+      "at_1810": "not_active",
+      "episodes": [
+        {
+          "from": 1803,
+          "through": 1803,
+          "controller": "新南威尔士殖民政府",
+          "historic_end_year": 1804,
+          "sources": [
+            "19C-O2-BOW",
+            "19C-O2-RYAN"
+          ]
+        }
+      ],
+      "note": "1803年设立里斯登湾殖民驻点，1804年撤去。"
+    },
+    {
+      "stable_id": "tasmania-risdon-shooting-1804",
+      "prior_ids": [],
+      "baseline_year": 1799,
+      "baseline_controller": null,
+      "at_1800": "not_yet_recorded",
+      "at_1810": "not_active",
+      "episodes": [
+        {
+          "from": 1804,
+          "through": 1804,
+          "controller": "新南威尔士军团",
+          "historic_end_year": 1804,
+          "sources": [
+            "19C-O2-NEWC",
+            "19C-O2-DIARY"
+          ]
+        }
+      ],
+      "note": "1804年枪击地点，按历史事件显示。"
+    },
+    {
+      "stable_id": "tasmania-hobart-government",
+      "prior_ids": [],
+      "baseline_year": 1799,
+      "baseline_controller": null,
+      "at_1800": "not_yet_recorded",
+      "at_1810": "continued",
+      "episodes": [
+        {
+          "from": 1804,
+          "through": 1819,
+          "controller": "英国新南威尔士殖民政府",
+          "historic_end_year": null,
+          "sources": [
+            "19C-O2-COL",
+            "19C-O2-THR"
+          ]
+        }
+      ],
+      "note": "1804年萨利文湾建驻点，沿用第33章霍巴特据点编号及坐标。"
+    },
+    {
+      "stable_id": "barbados-st-ann-garrison-1816",
+      "prior_ids": [],
+      "baseline_year": 1799,
+      "baseline_controller": null,
+      "at_1800": "not_yet_recorded",
+      "at_1810": "not_active",
+      "episodes": [
+        {
+          "from": 1816,
+          "through": 1816,
+          "controller": "英国殖民驻军",
+          "historic_end_year": null,
+          "sources": [
+            "19C-O2-TNA",
+            "19C-O2-ANN"
+          ]
+        }
+      ],
+      "note": "此点记1816年驻军出兵，与长期驻军情况分别记录。"
     }
   ]
 }
