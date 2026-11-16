@@ -504,16 +504,18 @@ try:
     click_map_path("#map .atlas-war-reach-schematic")
     verify("dated military movement dossier must retain sources",
            "document.querySelector('#dossierBody .source-details a')!==null", driver)
-    driver.execute_script("""
-      const m=window.__historicOverlapHost.map, point=L.latLng(50.75,1.63);
-      m.stop().setView(point,9,{animate:false});
-      window.historicOverlapDossier.openAt(point,'visible-polygon','front-boulonnais-1545-1549');
-    """)
+    def open_boulonnais_archive():
+        driver.execute_script("""
+          const m=window.__historicOverlapHost.map, point=L.latLng(50.75,1.63);
+          m.stop().setView(point,9,{animate:false});
+          window.historicOverlapDossier.openAt(point,'visible-polygon','front-boulonnais-1545-1549');
+        """)
+    open_boulonnais_archive()
     verify("dated contested zone archive lost its source links",
            "document.querySelector('#atlasHistoricOverlapPanel .is-selected .atlas-18c-overlap-source-links a')!==null",driver)
     related_event = "#dossierBody .is-selected [data-area-event]"
     verify("contested zone dossier lost its dated events",
-           f"!!document.querySelector('{related_event}')", driver)
+           f"!!document.querySelector('{related_event}') && !document.querySelector('[data-area-event=1540S-033]')", driver)
     driver.execute_script("document.querySelector(arguments[0]).click()", related_event)
     verify("selecting the related event did not open its dossier",
            "document.querySelector('#dossierBody h2')!==null && !document.querySelector('#atlasHistoricOverlapPanel')", driver)
@@ -560,10 +562,9 @@ try:
     driver.save_screenshot(str(OUT / "norfolk-1549-two-localized-schematic-studies.png"))
     verify("1549 border influence must contract away from withdrawn Haddington",
            "document.querySelectorAll('#map .atlas-war-reach-schematic').length>=1",driver)
-    driver.execute_script("document.querySelector('#map .atlas-contested-zone').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}))")
+    open_boulonnais_archive()
     verify("1549 documented Boulogne theater linked event disappeared after its correct date",
-           """[...document.querySelectorAll('#dossierBody [data-zone-event]')]
-               .some(n=>n.textContent.includes('1549年'))""",driver)
+           """!!document.querySelector('#atlasHistoricOverlapPanel .is-selected [data-area-event="1540S-033"]')""",driver)
     verify("1549 withdrew Ambleteuse/Boulemberg/Haddington, kept Boulogne",
            "document.querySelectorAll('#map .atlas-local-english-garrison').length===8", driver)
     verify("1549 French defensive Outreau missing",
