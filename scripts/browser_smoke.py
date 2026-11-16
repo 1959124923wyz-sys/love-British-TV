@@ -1515,11 +1515,15 @@ try:
         (1809, 'E19-G09-FIRE', 'E19-GULF-EXPEDITION-1809', 'E19-G19-TAKE', 1819, 'E19-ROUTE-1809-RAK-LINGEH'),
         (1819, 'E19-G19-TAKE', 'E19-GULF-EXPEDITION-1819', 'E19-GUL-1820-RAK-GENERAL-TREATY', 1820, 'E19-ROUTE-1819-RAMS-DHAYAH'),
         (1820, 'E19-GUL-1820-RAK-GENERAL-TREATY', 'E19-GULF-MARITIME-TREATY', 'E19-G19-DHAYAH', 1819, 'E19-ROUTE-1820-RAK-QESHM'),
+        (1820, 'E19-GUL-1820-RAK-GENERAL-TREATY', 'E19-GULF-MARITIME-TREATY', 'E19-GO-SIMLA92', 1892, None),
+        (1868, 'E19-GO-FORT68', 'E19-GULF-MARITIME-TREATY', 'E19-GO-TRUCE35', 1835, None),
+        (1892, 'E19-GO-ABU92', 'E19-GULF-MARITIME-TREATY', 'E19-GO-FORT68', 1868, None),
     ]:
         driver.get(f"http://127.0.0.1:8765/?year={origin}")
         wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
-        wait.until(lambda d: d.execute_script(
-            "return window.atlasStoryBridge.activeEventWindow().routeIds.includes(arguments[0])", route))
+        if route:
+            wait.until(lambda d: d.execute_script(
+                "return window.atlasStoryBridge.activeEventWindow().routeIds.includes(arguments[0])", route))
         driver.find_element(By.CSS_SELECTOR, f'#eventList [data-eid="{anchor}"]').send_keys("\n")
         story_open = f'#dossierBody [data-story-open="{topic}"]'
         wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, story_open))
@@ -1538,7 +1542,7 @@ try:
         driver.find_element(By.CSS_SELECTOR, '.major-story-article [data-story-return]').send_keys("\n")
         wait.until(lambda d: d.execute_script("""return window.atlasStoryBridge.currentYear()===arguments[0] &&
               window.atlasStoryBridge.selectedEventId()===arguments[1]""", origin, anchor))
-    print("PASS: Risdon, Bussa and the Gulf expeditions: dated routes, cross-year navigation and original dossiers")
+    print("PASS: Risdon, Bussa and Gulf stories: dated routes, cross-decade navigation through 1892, and original dossiers")
 
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
