@@ -1,6 +1,6 @@
 (function (root) {
  'use strict';
- // Historical chapter copy for the 1600–1939 decade atlas. Every entry is
+ // Historical chapter copy for the 1600–1949 decade atlas. Every entry is
  // grounded in source-linked events already present in the repository.
  // No geometry, event counts, publication statuses or map selection are changed.
  const chapters = {
@@ -38,9 +38,10 @@
   1900: {primary:'焚毁农场与',secondary:'南非集中营',intro:'南非战争中，英军焚毁农场、转运居民，将布尔平民和非洲黑人分别关入集中营。霍布豪斯记录了营里的食物、供水和疾病，黑人营居民也写信抗议口粮收费与劳动条件。两共和国代表于1902年在比勒陀利亚签署和约，营地随后分批清退。'},
   1910: {primary:'反罗拉特罢市与',secondary:'阿姆利则屠杀',intro:'英属印度政府宣布由加尔各答迁往德里。战后出台的《罗拉特法》引发罢市。旁遮普政府押走两名组织者，殖民兵警向要求交涉的群众开枪。4月13日，戴尔命令向札连瓦拉园内人群开火，殖民当局随后在旁遮普实行戒严。泰戈尔致信抗议，印度政府任命亨特委员会。同期，南非联邦成立后通过限制土地买卖与租赁的法律，英国合并尼日利亚南北殖民行政。'},
   1920: {primary:'科克焚城与',secondary:'爱尔兰自由邦',intro:'爱尔兰独立战争期间，英国王室部队在科克焚烧住家、商街、市政厅和公共图书馆。居民作证，商户提出索赔，公共设施的筹款重建延续多年。英爱双方停战后签署条约，科克英军兵营转交爱方，爱尔兰自由邦成立。同年，英国终止对埃及的保护国安排，同时保留若干事项。'},
-  1930: {primary:'食盐进军与',secondary:'殖民紧急条例',intro:'甘地与志愿者从萨巴尔马蒂修院步行至丹迪，公开取盐。印度各地展开盐法抗议，殖民警察在达拉萨纳以警棍驱散队伍，殖民部队在白沙瓦向人群开枪。甘地—欧文协定给产盐地邻近村庄有限的取盐许可。1932年当局再次逮捕甘地，颁布紧急条例。后来，英属印度开始实行省自治，缅甸另设殖民政府。'}
+  1930: {primary:'食盐进军与',secondary:'殖民紧急条例',intro:'甘地与志愿者从萨巴尔马蒂修院步行至丹迪，公开取盐。印度各地展开盐法抗议，殖民警察在达拉萨纳以警棍驱散队伍，殖民部队在白沙瓦向人群开枪。甘地—欧文协定给产盐地邻近村庄有限的取盐许可。1932年当局再次逮捕甘地，颁布紧急条例。后来，英属印度开始实行省自治，缅甸另设殖民政府。'},
+  1940: {primary:'巴当加里屠杀与',secondary:'马来亚紧急状态',intro:'日本投降后，英国恢复在马来亚的殖民统治。英国供应部专购熔炼后的锡，橡胶和锡的出口为英镑区赚取美元。1948年进入紧急状态，军警焚烧村舍，苏格兰卫队在巴当加里橡胶园射杀24名未持武器的平民。殖民当局随后采用整村拘押与遣送。同期，英属印度分治，缅甸和锡兰独立。'}
  };
- for (let d=1600;d<=1930;d+=10) {
+ for (let d=1600;d<=1940;d+=10) {
   const c=chapters[d];
   if (!c || !c.primary || !c.secondary || !c.intro)
    throw new Error('Missing historical chapter narrative: '+d);
