@@ -445,7 +445,7 @@
    for(const story of index.stories||[])registerStory(story);
    const review=new URLSearchParams(window.location.search);
    const review19c=review.get('review19c')==='1';
-   const allowNineteenthPreview=review.get('review18c')!=='1'||review19c;
+   const allowModernPreview=review.get('review18c')!=='1'||review19c;
    // Long-running histories are keyed by one stable parent ID rather than one
    // new article every ten years. The existing decade/year atlas stays intact.
    // The independent serial manifest is OPTIONAL; research records never render.
@@ -456,7 +456,7 @@
      if(serial.schema==='atlas-serial-stories-v1'){
       for(const topic of serial.topics||[]){
        const published=topic.status==='published'&&topic.publication_review==='approved';
-       const chapterReview=allowNineteenthPreview&&[1820,1830,1840,1850,1860,1870,1880].includes(topic.review_chapter_start)&&topic.status==='editorial_review'&&
+       const chapterReview=allowModernPreview&&window.AtlasChapterNarratives?.previewDecades?.includes(topic.review_chapter_start)&&topic.status==='editorial_review'&&
         topic.publication_review==='not_submitted';
        if(!published&&!chapterReview)continue;
        if(typeof topic.id!=='string'||!/^[A-Za-z0-9-]+$/.test(topic.id))continue;
