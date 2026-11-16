@@ -7,6 +7,209 @@
   "geometry_file": "data/nineteenth-century-spatial-1850-1859.geojson",
   "transitions": [
     {
+      "stable_id": "fraser-royal-engineers-camp-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1859,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-CAMP",
+        "19C36-FR-CERLAND",
+        "19C36-FR-GSAPP"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1859-ENGINEERS"
+      ],
+      "finding": "工程兵在新首府东北设营并负责测量和道路工程。"
+    },
+    {
+      "stable_id": "fraser-new-westminster-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1859,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-LAND",
+        "19C36-FR-LANDMAIL",
+        "19C36-FR-CERLAND",
+        "19C36-FR-GNEW",
+        "19C36-FR-NAME",
+        "19C36-FR-PREEMPT",
+        "19C36-FR-ICC",
+        "19C36-FR-RESERVEGUIDE"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1859-CAPITAL",
+        "E19-FR-1859-NAME",
+        "E19-FR-1859-CIRCULAR",
+        "E19-FR-1859-FIVE"
+      ],
+      "finding": "殖民政府1859年在弗雷泽河北岸选定新首府，7月将其更名为新威斯敏斯特。"
+    },
+    {
+      "stable_id": "fraser-lytton-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1858,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-PEGG",
+        "19C36-FR-SPINT",
+        "19C36-FR-SNYDER",
+        "19C36-FR-KANAKA",
+        "19C36-FR-GLYTTON"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1858-PEACE"
+      ],
+      "finding": "两河汇流处的纳拉卡帕穆克聚落。首领在此与矿工队议和。"
+    },
+    {
+      "stable_id": "fraser-spuzzum-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1859,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-CHINESE",
+        "19C36-FR-GSPUZZ"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1859-CHINESE"
+      ],
+      "finding": "此处已有纳拉卡帕穆克人居住与公司补给站，淘金者继续向上游移动。"
+    },
+    {
+      "stable_id": "fraser-hills-bar-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1858,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-HICKS",
+        "19C36-FR-DISPOS",
+        "19C36-FR-GHILLS"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1858-HILLS"
+      ],
+      "finding": "此地原有原住民渔业活动，淘金潮中成为河岸采矿地点。"
+    },
+    {
+      "stable_id": "fraser-yale-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-HICKS",
+        "19C36-FR-GYALE",
+        "19C36-FR-PEGG",
+        "19C36-FR-SNYDER",
+        "19C36-FR-KANAKA",
+        "19C36-FR-AUTUMN",
+        "19C36-FR-GMAP",
+        "19C36-FR-DOUGLASMAP"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1858-HICKS",
+        "E19-FR-1858-YALE-MILITIA",
+        "E19-FR-1858-YALE-ARRIVE",
+        "E19-FR-1858-YALE-POLICE",
+        "E19-FR-1858-YALE-LICENSE"
+      ],
+      "finding": "河轮终点与矿区行政据点。殖民政府派驻收税官并任命警察。"
+    },
+    {
+      "stable_id": "fraser-hope-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1850,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-TRIP",
+        "19C36-FR-GHOPE",
+        "19C36-FR-AUTUMN",
+        "19C36-FR-SPINT"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1858-HOPE",
+        "E19-FR-1858-HOPE-MEET",
+        "E19-FR-1858-HOPE-LOTS"
+      ],
+      "finding": "公司原有堡站。淘金潮中，殖民官在此办案、测地并发放租约。"
+    },
+    {
+      "stable_id": "hbc-langley-first-site",
+      "baseline_1849": false,
+      "transition": "earlier_place_reused_as_colonial_townsite",
+      "first_display_year": 1858,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-FR-AUTUMN",
+        "19C36-FR-AUCTION",
+        "19C36-FR-CERLAND",
+        "19C36-FR-GDERBY",
+        "19C36-FR-CEREMONY",
+        "19C36-FR-KWANT",
+        "19C36-FR-DERBYSALE",
+        "19C36-FR-REVIEW"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1858-DERBY-NOTICE",
+        "E19-FR-1858-DERBY-CAMP",
+        "E19-FR-1859-FAMILIES",
+        "E19-FR-1858-AUCTION"
+      ],
+      "finding": "殖民当局测划和出售此地，皇家工程兵曾驻扎在旧兰利堡一带。"
+    },
+    {
+      "stable_id": "e19-route-1858-langley-hope",
+      "baseline_1849": false,
+      "transition": "documented_movement_connection",
+      "first_display_year": 1858,
+      "last_display_year": 1858,
+      "historical_end_year": 1858,
+      "source_ids": [
+        "19C36-FR-TRIP",
+        "19C36-FR-GLANGLEY",
+        "19C36-FR-GHOPE",
+        "19C36-FR-GMAP"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1858-LANGLEY",
+        "E19-FR-1858-HOPE"
+      ],
+      "finding": "1858年五六月之交，道格拉斯一行从兰利堡沿河前往霍普堡，原住民船员协助行船。仅连文献明确的起讫点。"
+    },
+    {
+      "stable_id": "e19-route-1858-hope-yale",
+      "baseline_1849": false,
+      "transition": "documented_movement_connection",
+      "first_display_year": 1858,
+      "last_display_year": 1858,
+      "historical_end_year": 1858,
+      "source_ids": [
+        "19C36-FR-AUTUMN",
+        "19C36-FR-DOUGLASMAP",
+        "19C36-FR-GHOPE",
+        "19C36-FR-GYALE"
+      ],
+      "evidence_anchors": [
+        "E19-FR-1858-HOPE-LOTS",
+        "E19-FR-1858-YALE-ARRIVE"
+      ],
+      "finding": "1858年秋，道格拉斯一行从霍普堡到耶尔，沿途察看河滩矿场及引水设施。仅连文献明确的起讫点。"
+    },
+    {
       "stable_id": "ballarat-eureka-movement-1854",
       "baseline_1849": false,
       "transition": "documented_movement_connection",
@@ -1694,13 +1897,30 @@
         "19C34-HBC-LANG",
         "19C34-HBC-LANG-GEO",
         "19C33-HBC-KWANT",
-        "19C35-HBC-LANG"
+        "19C35-HBC-LANG",
+        "19C36-FR-TRIP",
+        "19C36-FR-BOATS",
+        "19C36-FR-GLANGLEY",
+        "19C36-FR-JULYRULES",
+        "19C36-FR-BIRTH",
+        "19C36-FR-CEREMONY",
+        "19C36-FR-ACT",
+        "19C36-FR-KWANT",
+        "19C36-FR-LICENSEEND",
+        "19C36-FR-IMMUNITY"
       ],
       "evidence_anchors": [
         "E19-HBC-1839-LANGLEY-RELOCATION",
-        "E19-HBC-1840-LANGLEY-REBUILD"
+        "E19-HBC-1840-LANGLEY-REBUILD",
+        "E19-FR-1858-LANGLEY",
+        "E19-FR-1858-CANOES",
+        "E19-FR-1858-JULY",
+        "E19-FR-1858-PROCLAIM",
+        "E19-FR-1858-REVOKE",
+        "E19-FR-1858-INDEMNITY",
+        "E19-FR-1858-ENGLISHLAW"
       ],
-      "finding": "1839年迁到上游的新堡失火后，公司于1840年开始原地重建。"
+      "finding": "1839年迁到上游的新堡失火后，公司于1840年开始原地重建。 英国在公司兰利堡宣告设立不列颠哥伦比亚殖民政权。公司商站仍营业。"
     },
     {
       "stable_id": "naning-taboh-administration",
@@ -2098,7 +2318,31 @@
         "19C36-DT-MAY",
         "19C36-DT-WLC",
         "19C36-DT-ASSEMBLY",
-        "19C36-DT-BLAN"
+        "19C36-DT-BLAN",
+        "19C36-FR-GOLD",
+        "19C36-FR-GVICTORIA",
+        "19C36-FR-FEE",
+        "19C36-FR-ARRIVE",
+        "19C36-FR-HBCSHIP",
+        "19C36-FR-GOLDCOAST",
+        "19C36-FR-BOATS",
+        "19C36-FR-SUMMER",
+        "19C36-FR-DEPOSIT",
+        "19C36-FR-ENDDEPOSIT",
+        "19C36-FR-LICENSEEND",
+        "19C36-FR-CEREMONY",
+        "19C36-FR-AUCTION",
+        "19C36-FR-REVIEW",
+        "19C36-FR-DERBYSALE",
+        "19C36-FR-GDERBY",
+        "19C36-FR-LAND",
+        "19C36-FR-LANDMAIL",
+        "19C36-FR-RESERVE",
+        "19C36-FR-ICC",
+        "19C36-FR-CAMP",
+        "19C36-FR-DISPOS",
+        "19C36-FR-MINING",
+        "19C36-FR-RULE"
       ],
       "evidence_anchors": [
         "E19-HBC-1843-FORT-VICTORIA",
@@ -2109,9 +2353,24 @@
         "E19-DT-1850-BLANK-SHEETS",
         "E19-DT-1851-DOUGLAS",
         "E19-DT-1852-SAANICH-SOUTH",
-        "E19-DT-1856-ASSEMBLY"
+        "E19-DT-1856-ASSEMBLY",
+        "E19-FR-1857-CROWN",
+        "E19-FR-1857-LICENCE",
+        "E19-FR-1858-FEE",
+        "E19-FR-1858-COMMODORE",
+        "E19-FR-1858-NOCOLLECT",
+        "E19-FR-1858-BOATS",
+        "E19-FR-1858-RUMOUR",
+        "E19-FR-1858-PREPAY",
+        "E19-FR-1858-STOP",
+        "E19-FR-1858-REVOKE-SIGN",
+        "E19-FR-1858-AUCTION",
+        "E19-FR-1859-LANDACT",
+        "E19-FR-1859-RESERVE-PROPOSE",
+        "E19-FR-1859-FAMINE",
+        "E19-FR-1859-GOLDLAW"
       ],
-      "finding": "沿用堡站地名。1850年首任总督宣读委任状、1851—1855年公司与总督双重体制、1856年首届议会分年。堡站自身继续属于公司经济网络。"
+      "finding": "沿用堡站地名。1850年首任总督宣读委任状、1851—1855年公司与总督双重体制、1856年首届议会分年。堡站自身继续属于公司经济网络。 道格拉斯在温哥华岛首府发布采金许可及河口航运措施。公司商站仍营业。"
     },
     {
       "stable_id": "assam-buri-guma-british-management",
@@ -3595,6 +3854,23 @@
     }
   ],
   "open_items": [
+    {
+      "stable_id": "fraser-1858-1859-claimed-colonial-limits-and-fishery",
+      "status": "research_pending",
+      "finding": "1858法定文字及1859阿罗史密斯图与地方驻点分列；北界河名对应及当时实际可行政范围待核，不推定实控面。冲突村落、约定文本、耶尔保留河岸确址及上游华人矿地待证；绘制两段行政巡行首尾。德比为旧兰利堡历史参考点，实际拍卖在维多利亚。1860年第15号公告和矿法同年在海达瓜依生效留给下一章。",
+      "source_ids": [
+        "19C36-FR-ACT",
+        "19C36-FR-BORDERMAP",
+        "19C36-FR-AUTUMN",
+        "19C36-FR-PEGG",
+        "19C36-FR-KANAKA",
+        "19C36-FR-SPINT",
+        "19C36-FR-CHINESE",
+        "19C36-FR-DERBYSALE",
+        "19C36-FR-MINING",
+        "19C36-FR-NEXT"
+      ]
+    },
     {
       "stable_id": "eureka-stockade-and-martial-law-boundaries",
       "status": "research_pending",
