@@ -7,6 +7,109 @@
   "geometry_file": "data/nineteenth-century-spatial-1850-1859.geojson",
   "transitions": [
     {
+      "stable_id": "andaman-chatham-1850s",
+      "baseline_1849": false,
+      "transition": "new_colonial_penal_station",
+      "first_display_year": 1858,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AND-REPORT",
+        "19C36-AND-PORTMAN",
+        "19C36-AND-SOI",
+        "19C36-AND-UNESCO",
+        "19C36-AND-CHART"
+      ],
+      "evidence_anchors": [
+        "E19-AND-1858-FIRST-LANDING",
+        "E19-AND-1858-NARAIN",
+        "E19-AND-1858-HOSPITAL"
+      ],
+      "finding": "首批从印度运来的200名囚犯抵港后在查塔姆岛清林。1858年夏，医院迁回岛上。"
+    },
+    {
+      "stable_id": "andaman-ross-1850s",
+      "baseline_1849": false,
+      "transition": "new_colonial_penal_station",
+      "first_display_year": 1858,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AND-REPORT",
+        "19C36-AND-PORTMAN",
+        "19C36-AND-SOI",
+        "19C36-AND-UNESCO",
+        "19C36-AND-CHART"
+      ],
+      "evidence_anchors": [
+        "E19-AND-1858-ROSS-GANGS",
+        "E19-AND-1858-TEWARI-ESCAPE",
+        "E19-AND-1858-CORDON",
+        "E19-AND-1859-HAUGHTON"
+      ],
+      "finding": "1858年3月，沃克派75名囚犯上罗斯岛清林。年底，英印政府公函称殖民总部已设于岛上。"
+    },
+    {
+      "stable_id": "andaman-viper-1850s",
+      "baseline_1849": false,
+      "transition": "new_colonial_penal_station",
+      "first_display_year": 1858,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AND-PORTMAN",
+        "19C36-AND-SOI",
+        "19C36-AND-UNESCO",
+        "19C36-AND-CHART"
+      ],
+      "evidence_anchors": [
+        "E19-AND-1858-VIPER",
+        "E19-AND-1859-REDISTRIBUTE"
+      ],
+      "finding": "1858年10月8日，四个囚犯小班在海军监押下进驻蝰蛇岛。次年哈多劳役营遭袭后，一支劳役队被调到这里。"
+    },
+    {
+      "stable_id": "andaman-haddo-1850s",
+      "baseline_1849": false,
+      "transition": "named_location_of_local_resistance",
+      "first_display_year": 1859,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AND-PORTMAN",
+        "19C36-AND-MATHUR",
+        "19C36-AND-GHADDO",
+        "19C36-AND-CHART"
+      ],
+      "evidence_anchors": [
+        "E19-AND-1859-HADDO-APR6",
+        "E19-AND-1859-HADDO-APR14"
+      ],
+      "finding": "1859年4月，岛民两度袭击哈多劳役队，并带走工具和12名被解开脚镣的囚犯。"
+    },
+    {
+      "stable_id": "andaman-aber-1850s",
+      "baseline_1849": false,
+      "transition": "named_location_of_local_resistance",
+      "first_display_year": 1859,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AND-PORTMAN",
+        "19C36-AND-MATHUR",
+        "19C36-AND-HOMFRAY",
+        "19C36-AND-CHART",
+        "19C36-AND-ATLAS",
+        "19C36-AND-GAZETTE"
+      ],
+      "evidence_anchors": [
+        "E19-AND-1859-REDISTRIBUTE",
+        "E19-AND-1859-WARNING",
+        "E19-AND-1859-ABERDEEN"
+      ],
+      "finding": "1859年5月，岛民短暂占领阿伯丁劳役站，殖民海军开火后夺回营地。"
+    },
+    {
       "stable_id": "ajnala-mian-1850s",
       "baseline_1849": false,
       "transition": "documented_station_within_inherited_colonial_control",
@@ -4429,6 +4532,19 @@
     }
   ],
   "open_items": [
+    {
+      "stable_id": "andaman-1850s-camps-and-indigenous-land",
+      "status": "research_pending",
+      "finding": "1858年英方升旗宣称占有群岛；确认的殖民使用限于具名港湾据点。1858年9月沃克划约五十平方英里及驱逐岛民作为提案入档，12月复函否决强行驱逐。北岸被毁村落及两处营地边界未定。阿塔兰塔角用1859年海图校定；阿伯丁与阿塔兰塔角属同一5月交锋，保持一条年表。蒂瓦里1860年获赦及岛民1866年口述仅交叉核查，不入本章年表。",
+      "source_ids": [
+        "19C36-AND-PORTMAN",
+        "19C36-AND-REPORT",
+        "19C36-AND-ANDERSON",
+        "19C36-AND-CHART",
+        "19C36-AND-SOI",
+        "19C36-AND-HOMFRAY"
+      ]
+    },
     {
       "stable_id": "ajnala-1857-capture-sites-and-returns",
       "status": "research_pending",
