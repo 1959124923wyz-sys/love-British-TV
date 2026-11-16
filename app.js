@@ -228,7 +228,7 @@ let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthC
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
 const enable19cAtlas=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
-const nineteenthPreviewDecades=[1820,1830,1840,1850,1860];
+const nineteenthPreviewDecades=[1820,1830,1840,1850,1860,1870];
 const initialYearParam=reviewParams.get('year')||'';
 const initialYear=/^\d{4}$/.test(initialYearParam)?Number(initialYearParam):1497;
 let nineteenthAtlasEnd=null,nineteenthSpatial=null;
