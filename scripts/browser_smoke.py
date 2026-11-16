@@ -507,7 +507,7 @@ try:
     def open_boulonnais_archive():
         driver.execute_script("""
           const m=window.__historicOverlapHost.map, point=L.latLng(50.75,1.63);
-          m.stop().setView(point,9,{animate:false});
+          m.stop().panTo(point,{animate:false});
           window.historicOverlapDossier.openAt(point,'visible-polygon','front-boulonnais-1545-1549');
         """)
     open_boulonnais_archive()
