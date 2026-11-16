@@ -258,9 +258,11 @@ try:
            "document.querySelectorAll('#chapterTrack .chapter-segment').length===5", driver)
     verify("1900s is available as a historical preview",
            """document.querySelector('#chapterTrack [data-decade="1900"]').classList.contains('topic-preview')""", driver)
-    verify("1910s remain unavailable",
-           """document.querySelector('#chapterTrack [data-decade="1910"]').classList.contains('unpublished')""", driver)
-    driver.execute_script("""document.querySelector('#chapterTrack [data-decade="1910"]').click()""")
+    verify("1910s are available as a historical preview",
+           """document.querySelector('#chapterTrack [data-decade="1910"]').classList.contains('topic-preview')""", driver)
+    verify("1920s remain unavailable",
+           """document.querySelector('#chapterTrack [data-decade="1920"]').classList.contains('unpublished')""", driver)
+    driver.execute_script("""document.querySelector('#chapterTrack [data-decade="1920"]').click()""")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     # Stress a 500-year navigation span: card count and slot widths must remain bounded.
     driver.execute_script("""
@@ -837,7 +839,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1909'""",driver)
+              document.querySelector('#jumpYear').max==='1919'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560, expected_count(1560))
@@ -845,7 +847,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第七章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1909'""",driver)
+              document.querySelector('#jumpYear').max==='1919'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562, expected_count(1562))
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
@@ -928,7 +930,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
-              document.querySelector('#jumpYear').max==='1909'""",driver)
+              document.querySelector('#jumpYear').max==='1919'""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
     verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
            """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
@@ -1162,7 +1164,7 @@ try:
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
-              document.querySelector('#jumpYear').max==='1909'""",driver)
+              document.querySelector('#jumpYear').max==='1919'""",driver)
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
@@ -1191,7 +1193,7 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
-              document.querySelector('#jumpYear').max==='1909'""",driver)
+              document.querySelector('#jumpYear').max==='1919'""",driver)
     set_year(1591, expected_count(1591))
     verify("1591 Santos year-end English occupation not displayed",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
@@ -1342,7 +1344,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1599-Essex-town-order-route.png"))
     verify("1599 chapter terminal count wrong",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
-              document.querySelector('#jumpYear').max==='1909'""",driver)
+              document.querySelector('#jumpYear').max==='1919'""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1599-Ireland.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("1599 historical territory toggle must hide Essex route without hiding events",
@@ -1356,6 +1358,33 @@ try:
     verify("Back to 1589 leaked year 1590 military area",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===0 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===0""",driver)
+    driver.get("http://127.0.0.1:8765/?year=1919")
+    wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
+    verify("1919 must show the correct chapter and title",
+           """document.querySelector('#bigYear').textContent==='1919' &&
+              document.querySelector('#chapterLabel').textContent.includes('第42章') &&
+              document.querySelector('#chapterIntro').textContent.includes('札连瓦拉园')""", driver)
+    driver.find_element(By.CSS_SELECTOR, '#eventList [data-eid="E20-AMR-MASSACRE"]').click()
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '#dossierBody [data-story-open="E20-AMRITSAR-MASSACRE"]'))
+    driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-story-open="E20-AMRITSAR-MASSACRE"]').click()
+    link_selector = '.story-body [data-story-event="E20-AMR-DELHI"]'
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, link_selector))
+    driver.find_element(By.CSS_SELECTOR, link_selector).click()
+    wait.until(lambda d: d.execute_script("return window.atlasStoryBridge.currentYear()===1911"))
+    driver.execute_script("""document.querySelector('.story-body [data-story-event="E20-AMR-DELHI"]')
+       .dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true,view:window}));""")
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '#dossierBody [data-story-back]'))
+    verify("The article link should open the 1911 Delhi event archive",
+           "window.atlasStoryBridge.selectedEventId()==='E20-AMR-DELHI'", driver)
+    driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-story-back]').click()
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.major-story-article [data-story-return]'))
+    driver.find_element(By.CSS_SELECTOR, '.major-story-article [data-story-return]').click()
+    wait.until(lambda d: d.execute_script("""return window.atlasStoryBridge.currentYear()===1919 &&
+       window.atlasStoryBridge.selectedEventId()==='E20-AMR-MASSACRE' &&
+       !!document.querySelector('#dossierBody [data-locate-event]:enabled')"""))
+    verify("The 1919 chapter should render both source-backed land routes",
+           """['E20-AMR-ROUTE-DHARAMSALA','E20-AMR-ROUTE-FUNERAL']
+               .every(id=>window.atlasStoryBridge.activeEventWindow().routeIds.includes(id))""", driver)
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()
