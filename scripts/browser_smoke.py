@@ -256,9 +256,11 @@ try:
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     verify("century browser must retain five decade slots",
            "document.querySelectorAll('#chapterTrack .chapter-segment').length===5", driver)
-    verify("1900s has no event atlas",
-           "document.querySelector('#chapterTrack [data-decade=\"1900\"]').classList.contains('unpublished')", driver)
-    driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1900\"]').click()")
+    verify("1900s is available as a historical preview",
+           """document.querySelector('#chapterTrack [data-decade="1900"]').classList.contains('topic-preview')""", driver)
+    verify("1910s remain unavailable",
+           """document.querySelector('#chapterTrack [data-decade="1910"]').classList.contains('unpublished')""", driver)
+    driver.execute_script("""document.querySelector('#chapterTrack [data-decade="1910"]').click()""")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     # Stress a 500-year navigation span: card count and slot widths must remain bounded.
     driver.execute_script("""
