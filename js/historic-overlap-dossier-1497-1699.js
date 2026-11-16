@@ -135,7 +135,7 @@
  }
  function card(r,i){
   const isOpen=r.key===selected,desc=summary(r),src=links(r),is19c=r.group==='nineteenthAreas';
-  const events=is19c&&isOpen?(r.feature.properties.related_event_ids||[])
+  const events=isOpen?(r.feature.properties.related_event_ids||[])
    .map(id=>host.eventForId(id)).filter(e=>e&&e.year<=host.getYear()):[];
   return '<article class="atlas-18c-overlap-card'+(isOpen?' is-selected':'')+
    '" data-historic-overlap-id="'+esc(r.key)+'" data-historic-index="'+i+'">'+
