@@ -515,7 +515,7 @@ try:
            "document.querySelector('#atlasHistoricOverlapPanel .is-selected .atlas-18c-overlap-source-links a')!==null",driver)
     related_event = "#dossierBody .is-selected [data-area-event]"
     verify("contested zone dossier lost its dated events",
-           f"!!document.querySelector('{related_event}') && !document.querySelector('[data-area-event=1540S-033]')", driver)
+           f"!!document.querySelector('{related_event}') && !document.querySelector('[data-area-event=\"1540S-033\"]')", driver)
     driver.execute_script("document.querySelector(arguments[0]).click()", related_event)
     verify("selecting the related event did not open its dossier",
            "document.querySelector('#dossierBody h2')!==null && !document.querySelector('#atlasHistoricOverlapPanel')", driver)
