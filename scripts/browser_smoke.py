@@ -53,6 +53,7 @@ try:
     # Initialize the historical year before testing base-map switching; fetches
     # across published decades are asynchronous and may finish after DOM load.
     wait.until(lambda d: d.execute_script("return document.querySelector(\'#yearRange\')?.value===\'1520\' && document.querySelector(\'#eventCount\')?.textContent===\'5项\'"))
+    wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
     # Default must provide familiar contemporary place names for comparison.
     # Switching only changes the basemap, never the selected Tudor year or zoom.
     verify("modern OSM reference must be default",
@@ -249,16 +250,15 @@ try:
         assert zoom_after==zoom_before, "Maynooth focus incorrectly zoomed map"
     assert driver.execute_script("return document.querySelector('#yearRange').value")=="1535", "Maynooth double-click changed date"
     driver.save_screenshot(str(OUT / "focus-maynooth-1535.png"))
-    # The century strip is informational navigation: it cannot turn a researched 1535
-    # atlas into a fictitious 1700s/1900s territorial snapshot.
+    # Browsing the century index keeps the current map year. Unavailable cards stay inert.
     current = driver.execute_script("return document.getElementById('bigYear').textContent")
-    driver.execute_script("document.querySelector('#centuryNav [data-century=\"1700\"]').click()")
+    driver.execute_script("document.querySelector('#centuryNav [data-century=\"1900\"]').click()")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     verify("century browser must retain five decade slots",
            "document.querySelectorAll('#chapterTrack .chapter-segment').length===5", driver)
-    verify("1700s century is not a published map",
-           "document.querySelector('#chapterTrack [data-decade=\"1700\"]').classList.contains('unpublished')", driver)
-    driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1700\"]').click()")
+    verify("1900s has no event atlas",
+           "document.querySelector('#chapterTrack [data-decade=\"1900\"]').classList.contains('unpublished')", driver)
+    driver.execute_script("document.querySelector('#chapterTrack [data-decade=\"1900\"]').click()")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     # Stress a 500-year navigation span: card count and slot widths must remain bounded.
     driver.execute_script("""
@@ -825,7 +825,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1819'""",driver)
+              document.querySelector('#jumpYear').max==='1859'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560, expected_count(1560))
@@ -833,7 +833,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第七章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1819'""",driver)
+              document.querySelector('#jumpYear').max==='1859'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562, expected_count(1562))
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
@@ -916,7 +916,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
-              document.querySelector('#jumpYear').max==='1819'""",driver)
+              document.querySelector('#jumpYear').max==='1859'""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
     verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
            """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
@@ -1140,7 +1140,7 @@ try:
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
-              document.querySelector('#jumpYear').max==='1819'""",driver)
+              document.querySelector('#jumpYear').max==='1859'""",driver)
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
@@ -1169,7 +1169,7 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
-              document.querySelector('#jumpYear').max==='1819'""",driver)
+              document.querySelector('#jumpYear').max==='1859'""",driver)
     set_year(1591, expected_count(1591))
     verify("1591 Santos year-end English occupation not displayed",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
@@ -1299,7 +1299,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1599-Essex-town-order-route.png"))
     verify("1599 chapter terminal count wrong",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
-              document.querySelector('#jumpYear').max==='1819'""",driver)
+              document.querySelector('#jumpYear').max==='1859'""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1599-Ireland.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("1599 historical territory toggle must hide Essex route without hiding events",

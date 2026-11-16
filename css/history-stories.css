@@ -95,3 +95,14 @@
 .story-chronology-events{display:grid;grid-template-columns:1fr;gap:5px}
 .story-chronology-event{width:100%;border:1px solid #38546d;border-radius:6px;background:#20394e;color:#e5d4be;text-align:left;padding:7px 9px;font:inherit;font-size:11px;line-height:1.55;cursor:pointer}
 .story-chronology-event:hover,.story-chronology-event:focus-visible{color:#ffe0b6;background:#305068;outline:2px solid #9f7e59;outline-offset:1px}
+
+.story-inline-action,.story-preview-open{
+ border:1px solid #a4876a;border-radius:5px;background:#3a4759;color:#ffddae;
+ padding:3px 8px;cursor:pointer;font-family:inherit;font-size:12px;font-weight:650;line-height:1.4
+}
+.story-inline-action{margin-inline-start:6px;white-space:nowrap}
+.story-preview-open{display:block;margin-top:10px}
+.story-inline-action:hover,.story-preview-open:hover,
+.story-inline-action:focus-visible,.story-preview-open:focus-visible{
+ background:#566176;color:#fff1d8
+}

@@ -957,3 +957,20 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  .atlas-event-prior-year{opacity:.66}
  .atlas-event-prior-year:hover,.atlas-event-prior-year:focus-visible{opacity:1}
 }
+
+.time-panel .timeline-year-line{
+ display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:24px
+}
+.latest-preview-chapter,.atlas-search-entire-chapter{
+ border:1px solid #8c705b;border-radius:5px;background:#303d53;color:#f4d3a8;
+ padding:3px 8px;font:inherit;cursor:pointer
+}
+.latest-preview-chapter:hover,.atlas-search-entire-chapter:hover{
+ background:#4a4050
+}
+.latest-preview-chapter[hidden]{display:none}
+.atlas-event-search-details{
+ display:flex;justify-content:space-between;gap:8px;color:#bfcee1;font-size:11px;
+ margin-top:4px
+}
+.atlas-search-entire-chapter{display:block;margin-top:8px}

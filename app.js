@@ -228,7 +228,9 @@ let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthC
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
 const enable19cAtlas=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
-const enable19cChapterReview=reviewParams.get('review19c')==='1';
+const nineteenthPreviewDecades=[1820,1830,1840,1850];
+const initialYearParam=reviewParams.get('year')||'';
+const initialYear=/^\d{4}$/.test(initialYearParam)?Number(initialYearParam):1497;
 let nineteenthAtlasEnd=null,nineteenthSpatial=null;
 let preview18cReady=false;
 let eighteenthAcadiaControlCores=null;
@@ -264,7 +266,7 @@ let t23Penang29Ready=false;
 let t28HavanaMalta30Ready=false;
 let t33ScottishFreedom31Ready=false;
 let r33OriginalResearchThreeStoriesReady=false;
-const previewYearCap=()=>nineteenthAtlasEnd??(jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:1699); let selected=''; let selectedItemYear=null; let timer=null;
+const availableYearCap=()=>nineteenthAtlasEnd??(jamaica18cReady?1799:bengal18cReady?1779:preview18cReady?1769:serialPreviewAtlas?1699:lastPublishedYear); let selected=''; let selectedItemYear=null; let timer=null;
 let researchNotes={};const sourcesById=new Map();let geographicHypotheses=null;let geographicHypothesesThird=null;let frenchCityAreas=null;let politicalRelationAreas=null;let territorialFootprints=null;let militaryControlPoints=null;let warVicinityAreas=null;let occupiedZoneAreas=null;let contestedZoneAreas=null;let warReachAreas=null;let seventhControlSites=null;let eighthControlSites=null;let ninthControlSites=null;let tenthControlSites=null;let tenthInvasionImpactAreas=null;let tenthLandRaidAreas=null;let eleventhControlCores=null;let eleventhInfluenceAreas=null;let nineYearsWarImpact=null;let atlanticContactData=null;let chapter11ActionLinks=null;let earlyRegionalAreas=null;let followupRegionalAreas=null;let centuryViolenceAreas=null;let eighthSlaveCoastalAreas=null;let archaeologicalReferenceAreas=null;let sovereigntyReferenceAreas=[];
 // Resolve continuing political identities even when their first detailed entry is in a later chapter.
 const findPlaceAcrossChapters=id=>[atlas,atlasFirstMerged,atlasEleventh,atlasTenth,atlasNinth,atlasEighth,atlasSeventh,atlasSixth,atlasFifth,atlasFourth,atlasThird,atlasLater,atlasEarly]
@@ -328,12 +330,9 @@ function openDossier(item,typ){
  const showEventSources=!storyChild||item.year>=1800;
  const canMapFocus=typ==='event'&&canLocateEvent(item,year);
  const locateAction=typ==='event'?
-  (storyChild?
-   (canMapFocus?'<div class="dossier-map-action"><button type="button" data-locate-event>◎ 地图定位</button></div>':''):
    '<div class="dossier-map-action"><button type="button" data-locate-event'+
-   (canMapFocus?'':' disabled')+'>◎ 在地图上定位</button><small>'+
-   (canMapFocus?'保留当前年份与缩放；手机上返回地图查看':'该事件暂无可定位地点，或尚未发生')+
-   '</small></div>'):'';
+   (canMapFocus?'':' disabled')+'>在地图上定位</button>'+
+   (canMapFocus?'':'<small>该事件暂无可定位地点，或尚未发生</small>')+'</div>':'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(conciseEventTitle(item))+'</h2>'+
   (conciseEventTitle(item)!==item.name?'<details class="atlas-complete-title"><summary>完整事件名称</summary><p>'+escapeHTML(item.name)+'</p></details>':'')+
   (readerCopy.clean(description)?'<p>'+escapeHTML(readerCopy.clean(description))+'</p>':'')+representativeNote+
@@ -524,7 +523,6 @@ function renderEventList(){
  const currentEvents=atlas.events.filter(isNewEventThisYear);
  const locatable=currentEvents.filter(e=>canLocateEvent(e,year)).length;
  $('seventeenthEventTools').hidden=!tools17;
- const onlyYear=tools17&&eventWindowMode17c==='year'&&!fullArchive;
  const query=tools17?$('seventeenthEventSearch').value.trim().toLocaleLowerCase():'';
  const visibleEvents=query?events.filter(e=>[e.name,conciseEventTitle(e),e.description,e.short_description,e.date_label,String(e.year)].some(v=>String(v||'').toLocaleLowerCase().includes(query))):events;
  $('eventCount').textContent=visibleEvents.length+'项';
@@ -537,9 +535,9 @@ function renderEventList(){
    '正在浏览完整十年档案（含未来记录），地图事件仍按所选窗口显示':
    '地图动态事件：'+range+' · 共'+windowEvents.length+'项，'+windowEvents.filter(e=>canLocateEvent(e,year)).length+'项可定位';
   $('clearSeventeenthEventSearch').hidden=!query;
-  $('seventeenthSearchStatus').textContent=query||onlyYear||fullArchive?
-   '显示 '+visibleEvents.length+' / '+events.length+' 项'+(onlyYear?' · 仅'+year+'年':'')+(query?' · 搜索结果':'')+(fullArchive?' · 完整档案预览':''):
-   range+' · '+events.length+'项已入库事件';
+  const searchRange=fullArchive?'本章 '+atlas.period.from+'—'+atlas.period.to+'年':range;
+  $('seventeenthSearchScope').textContent='搜索范围：'+searchRange;
+  $('seventeenthSearchStatus').textContent=query?'找到 '+visibleEvents.length+' / '+events.length+' 项':'';
  }
  const hint=$('yearArrivalSummary');
  if(hint){
@@ -550,7 +548,7 @@ function renderEventList(){
     '本年无新增记录';
   hint.classList.toggle('none',!currentEvents.length);
  }
- $('eventList').innerHTML=(visibleEvents.length?visibleEvents.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" aria-label="'+escapeHTML(e.name)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.representative_map_point?' · ◎地区参考点':'')+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(conciseEventTitle(e))+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join(''):'<div class="atlas-event-empty">'+(query?'没有匹配的事件。清除搜索或更换关键词。':'本年暂无已收录事件。切换「本十年至今」可查看之前发生的事件。')+'</div>');
+ $('eventList').innerHTML=(visibleEvents.length?visibleEvents.map(e=>'<button type="button" data-tier="'+levelOf(e)+'" data-eid="'+escapeHTML(e.id)+'" aria-label="'+escapeHTML(e.name)+'" class="event-item '+(isNewEventThisYear(e)?'event-new-this-year ':'')+(e.id===selected?'selected':'')+(e.year>year?' event-upcoming':'')+'" title="'+escapeHTML(Number.isFinite(e.lat)&&Number.isFinite(e.lng)?'双击定位地图（保持当前缩放）':'暂无可靠地图坐标')+'"><span class="event-icon">'+svgIcon(e,'atlas-list-icon')+'</span><span><small>'+escapeHTML(e.date_label)+(e.representative_map_point?' · ◎地区参考点':'')+(e.year>year?' · 档案预览':'')+'</small><strong>'+escapeHTML(conciseEventTitle(e))+(isNewEventThisYear(e)?' <span class="year-arrival-tag">本年新</span>':'')+(levelOf(e)===3?' <span class="priority-tag">关键</span>':'')+'</strong></span></button>').join(''):'<div class="atlas-event-empty">'+(query?'没有匹配的事件。'+(!fullArchive?'<button type="button" class="atlas-search-entire-chapter" data-search-chapter>搜索本章全部事件</button>':'请更换关键词。'):'本年暂无已收录事件。切换「本十年至今」可查看之前发生的事件。')+'</div>');
  $('eventList').querySelectorAll('.event-item').forEach(node=>{
   node.addEventListener('click',ev=>{
    // A double-click must complete before the first click hides its target.
@@ -582,7 +580,7 @@ function focusEventFromSidebar(item){
  focusRequestToken++;
  focusedEventId=null;
  if(!canLocateEvent(item,year)){
-  const note=!occurredByYear(item,year)?'请先将时间轴移至事件发生年份。':'此事件位置尚未核实，无法地图定位。';
+  const note=!occurredByYear(item,year)?'请先将时间轴移至事件发生年份。':'该事件暂无可定位地点。';
   if(!options.keepDossier)$('dossierBody').insertAdjacentHTML('beforeend','<p class="atlas-location-note">'+escapeHTML(note)+'</p>');
   renderPoints();
   return;
@@ -1132,13 +1130,15 @@ function renderEighteenthReviewEvidenceCores(){
  }
 }
 
-async function loadNineteenthAtlas(from,end,status){
+async function fetchNineteenthAtlas(from,end){
  const [chronology,spatial]=await Promise.all([
   fetch(`data/stories/serial/chronology-${from}-${end}.json`,{cache:'no-store'}),
   fetch(`data/nineteenth-century-spatial-${from}-${end}.geojson`,{cache:'no-store'})
  ]);
  if(!chronology.ok||!spatial.ok)throw new Error('19C chronology or map missing');
- const [data,geo]=await Promise.all([chronology.json(),spatial.json()]);
+ return Promise.all([chronology.json(),spatial.json()]);
+}
+function loadNineteenthAtlas(from,end,status,[data,geo]){
  const sourceIds=new Set(data.sources?.map(s=>s.id));
  const eventIds=new Set(data.events?.map(e=>e.id));
  const earlierEventIds=new Set([...serialPreviewByDecade.entries()]
@@ -2206,14 +2206,14 @@ function updateVisibility(){
 // The chapter registry is the only authority for published decade cards.
 // Future centuries remain navigable, but never render fictitious future atlas states.
 const decadeForYear=y=>Math.floor(y/10)*10;
-const storyPreviewChapterForDecade=d=>serialPreviewAtlas&&serialPreviewByDecade.has(d)&&d>=1600&&d<=previewYearCap()&&d%10===0?
+const storyPreviewChapterForDecade=d=>serialPreviewByDecade.has(d)&&d>=1600&&d<=availableYearCap()&&d%10===0?
  ({id:(Math.floor(d/100)+1)+'c-'+d,start:d,end:d+9,number:11+(d-1600)/10,
  label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1800?'19世纪历史专题':d>=1700?'18世纪历史专题':'17世纪历史专题'),
  status:d>=1800?(serialPreviewByDecade.get(d).editorial_status==='published'?'published':'topic_preview'):
   d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
 const chapterForYear=y=>chapterRegistry?.chapters?.find(c=>c.start<=y&&y<=c.end)||
- (y>=1600&&y<=previewYearCap()?storyPreviewChapterForDecade(decadeForYear(y)):null);
+ (y>=1600&&y<=availableYearCap()?storyPreviewChapterForDecade(decadeForYear(y)):null);
 // 1497–1499 is an exceptional prologue; normal pages align to 1500–1549 / 1550–1599.
 const halfCenturyPageForYear=y=>y<1500?1490:Math.floor(y/50)*50;
 const pageForBrowse=d=>d<=1490?1490:Math.floor(d/50)*50;
@@ -2231,6 +2231,12 @@ function browseDecade(decade){
 function browseCentury(century){
  const first=chapterRegistry.navigation.firstDecade;
  browseDecade(century===1400?1490:Math.max(first,century));
+}
+function renderTimelineAvailability(){
+ const cap=availableYearCap();
+ $('jumpYear').max=cap;
+ $('timelineAvailability').textContent='可浏览至'+cap+'年'+(cap>=1820?' · 含预览章节':'');
+ $('nextYear').disabled=year>=cap;
 }
 function renderTimelineNavigation(){
  if(!chapterRegistry)return;
@@ -2260,7 +2266,7 @@ function renderTimelineNavigation(){
   return '<button type="button" class="chapter-segment'+(published?' published':partial?' published partial-century':preview?' published topic-preview':' unpublished')+
     (i===2?' centered':'')+(onMap?' active':'')+'" data-decade="'+d+
     '" aria-pressed="'+onMap+'" title="'+escapeHTML(published?'跳到'+Math.max(d,from)+'年：'+chapter.label:partial?'浏览'+from+'—'+to+'年已入库事件':preview?'浏览已核证的专题年表':'此十年无已发布年表')+'">'+
-    '<span>'+(chapter&&(published||partial||preview)?'第'+chapter.number+'章':'尚未发布')+'</span>'+
+    '<span>'+(chapter?'第'+chapter.number+'章'+(preview&&d>=1820?' · 预览':''):'尚未发布')+'</span>'+
     '<small>'+from+'—'+to+(chapter&&(published||partial||preview)?' · '+escapeHTML(chapter.label):' · 尚未发布')+'</small></button>';
  }).join('');
  frame.querySelectorAll('button[data-decade]').forEach(btn=>btn.addEventListener('click',()=>{
@@ -2279,21 +2285,16 @@ function renderTimelineNavigation(){
   slider.min=currentChapter.start;slider.max=currentChapter.end;slider.value=year;
   $('yearStartLabel').textContent=currentChapter.start;
   $('yearEndLabel').textContent=currentChapter.end;
-  $('jumpYear').max=serialPreviewAtlas?previewYearCap():lastPublishedYear;
-  $('jumpYear').value=year;
  }
- $('timelineAvailability').textContent=year>lastPublishedYear
-  ?(year>=1800?'十九世纪历史年表':year>=1700?'十八世纪历史年表':'十七世纪历史年表')
-  :browsingDecade===halfCenturyPageForYear(year)
-   ?'逐年精确选择 · 已发布至'+lastPublishedYear+'年'
-   :'浏览目录中 · 地图为'+year+'年';
+ $('latestPreviewChapter').hidden=browsingDecade!==1800||!storyPreviewChapterForDecade(1850);
+ renderTimelineAvailability();
 }
 function setYear(v){
  const requested=Math.round(Number(v)||1497);
- const publishedCap=Math.min(lastPublishedYear,requested);
- const next=Math.max(1497,serialPreviewAtlas?Math.min(previewYearCap(),requested):publishedCap);
+ const next=Math.max(1497,Math.min(availableYearCap(),requested));
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
- if(!chosen)return;
+ if(!chosen){timelineStatus(next+'年的事件正在加载。请稍后再试。');return;}
+ $('jumpYear').value=next;
  if(next>=1600){
   const changed=next!==year;
   if(selectedItemYear!==null&&selectedItemYear>next){
@@ -2341,7 +2342,6 @@ function setYear(v){
   window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
   if(changed)$('eventList').scrollTop=0;
   $('prevYear').disabled=false;
-  $('nextYear').disabled=year>=previewYearCap();
   return;
  }
  if($('toggleKingdom').checked&&!map.hasLayer(groups.kingdom))map.addLayer(groups.kingdom);
@@ -2360,7 +2360,7 @@ function setYear(v){
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540&&year<1550,seventh=year>=1550&&year<1560,eighth=year>=1560&&year<1570,ninth=year>=1570&&year<1580,tenth=year>=1580&&year<1590,eleventh=year>=1590;
  $('chapterTitlePrimary').textContent=sixth?'布洛涅与':fifth?'王权与':fourth?'边区与':third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
  $('chapterTitleSecondary').textContent=sixth?'英苏边境':fifth?'边区变动':fourth?'远航':third?'海峡':second?'的第二程':'的第一道声索';
- $('chapterIntro').textContent=sixth?(typeof atlasSixth.intro==='string'?atlasSixth.intro:atlasSixth.intro?.description||''):fifth?(typeof atlasFifth.intro==='string'?atlasFifth.intro:atlasFifth.intro?.description||''):fourth?(typeof atlasFourth.intro==='string'?atlasFourth.intro:atlasFourth.intro?.description||''):third?atlasThird.intro.description:second?atlasLater.intro.description:earlyIntro;
+ $('chapterIntro').textContent=sixth?(typeof atlasSixth.intro==='string'?atlasSixth.intro:atlasSixth.intro?.description||''):fifth?(typeof atlasFifth.intro==='string'?atlasFifth.intro:atlasFifth.intro?.description||''):fourth?(typeof atlasFourth.intro==='string'?atlasFourth.intro:atlasFourth.intro?.description||''):third?atlasThird.intro.description:second?atlasLater?.intro.description||atlasFirstMerged.intro:earlyIntro;
  $('factA').textContent=sixth?(year>=1544?'布洛涅':'加来'):fifth?'加来':fourth?'加来':third?(year>=1513?'1513':'—'):second?'加来':'0';
  $('factADesc').innerHTML=sixth?(year>=1544?'英军占领布洛涅<br>局部驻军持续':'加来英王据点<br>仍在控制'):fifth?'英王驻军据点<br>持续控制':fourth?'英王控制核心<br>持续存在':third?(year>=1513?'弗洛登战役<br>苏格兰国王阵亡':''):second?'英王在法国的<br>控制据点':'已证实北美<br>永久殖民据点';
  $('factB').textContent=sixth?(year>=1547?'1547':year>=1544?'1544':'—'):fifth?(year>=1534?'1534':'—'):fourth?(year>=1523?'1523':'—'):third?(year>=1513?'1513':'—'):second?(year>=1502?'1502':'—'):'1497';
@@ -2451,10 +2451,9 @@ function setYear(v){
  window.eighteenthSpatial?.render?.();window.eighteenthMassSpatial?.render?.();window.eighteenthBatch36Spatial?.render?.();window.eighteenthBatch37Spatial?.render?.();window.eighteenthBatch38Spatial?.render?.();window.eighteenthBatch39Spatial?.render?.();window.eighteenthOverlapDossier?.render?.();
  if(changedYear)$('eventList').scrollTop=0;
   $('prevYear').disabled=year<=1497;
-  $('nextYear').disabled=year>=(serialPreviewAtlas?previewYearCap():lastPublishedYear);
 }
 function stopPlay(){if(timer){clearInterval(timer);timer=null;$('playBtn').textContent='▶'}}
-function togglePlay(){if(timer){stopPlay();return}const animationEnd=serialPreviewAtlas?previewYearCap():lastPublishedYear;if(year===lastPublishedYear&&!serialPreviewAtlas)setYear(1497);else if(year>=animationEnd)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year>=animationEnd){stopPlay();return}setYear(year+1)},1250)}
+function togglePlay(){if(timer){stopPlay();return}const animationEnd=availableYearCap();if(year>=animationEnd)setYear(1497);$('playBtn').textContent='Ⅱ';timer=setInterval(()=>{if(year>=animationEnd){stopPlay();return}setYear(year+1)},1250)}
 async function loadKingdomBoundaries(){
  // ONS regional geometry is MODERN and only a geographic reference, never a 1497 boundary reconstruction.
  try{
@@ -2491,7 +2490,7 @@ async function loadKingdomBoundaries(){
  }catch(err){console.warn('Modern background geography unavailable',err);}
 }
 function openPolity(group){
- const p=atlasEarly.polities.find(x=>x.id===(group==='scotland'?'scotland':'england'));if(!p)return;
+ const p=(atlasEarly||atlasFirstMerged)?.polities?.find(x=>x.id===(group==='scotland'?'scotland':'england'));if(!p)return;
  const title=group==='wales'?'英王治下的威尔士':p.name;
  const isScotland=group==='scotland';
  const text=isScotland?
@@ -2502,8 +2501,13 @@ function openPolity(group){
  openPanel('dossier');
 }
 async function boot(){
+ const chapterRequest=fetch('data/chapters.json',{cache:'no-store'}).catch(()=>null);
+ const periods=[[1800,1819,'published'],...nineteenthPreviewDecades.map(from=>[from,from+9,'editorial_review'])];
+ const nineteenthRequests=enable19cAtlas?periods.map(([from,end])=>
+  fetchNineteenthAtlas(from,end).catch(error=>{console.warn('19C data unavailable for '+from,error);return null;})):[];
+ const drakeRequest=fetch('data/drake-circumnavigation-1577-1580.json',{cache:'no-store'}).catch(()=>null);
  try{
-  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes,eighthRes,ninthRes,tenthRes,eleventhRes,combinedRes]=await Promise.all([
+  const legacyRequest=Promise.all([
     fetch('data/atlas-1497-1500.json',{cache:'no-store'}),
     fetch('data/atlas-1500-1509.json',{cache:'no-store'}),
     fetch('data/atlas-1510-1519.json',{cache:'no-store'}),
@@ -2514,10 +2518,36 @@ async function boot(){
     fetch('data/atlas-1560-1569.json',{cache:'no-store'}),
     fetch('data/atlas-1570-1579.json',{cache:'no-store'}),
     fetch('data/atlas-1580-1589.json',{cache:'no-store'}),
-    fetch('data/atlas-1590-1599.json',{cache:'no-store'}),
-    fetch('data/atlas-1497-1509.json',{cache:'no-store'})
-  ]);
-  if(!res.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok||!eighthRes.ok||!ninthRes.ok||!tenthRes.ok||!eleventhRes.ok||!combinedRes.ok)throw new Error('历史切片未正确加载');
+    fetch('data/atlas-1590-1599.json',{cache:'no-store'})
+  ]).catch(()=>[]);
+  const combinedRequest=fetch('data/atlas-1497-1509.json',{cache:'no-store'});
+  const combinedRes=await combinedRequest;
+  if(!combinedRes.ok)throw new Error('第一章节未正确加载');
+  atlasFirstMerged=await combinedRes.json();
+  if(!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('第一章结构错误');
+  for(const source of atlasFirstMerged.sources||[])sourcesById.set(source.id,source);
+  const chapterRes=await chapterRequest;
+  if(!chapterRes?.ok)throw new Error('章节目录未正确加载');
+  chapterRegistry=await chapterRes.json();
+  if(!Array.isArray(chapterRegistry?.chapters)||!chapterRegistry.chapters.length)throw new Error('历史章节目录为空');
+  const ordered=chapterRegistry.chapters;
+  if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
+  lastPublishedYear=ordered[ordered.length-1].end;
+  $('showFullChapterArchive').checked=false;
+  if(initialYear<1510)setYear(initialYear);
+  else renderTimelineNavigation();
+  if(nineteenthRequests.length){
+   for(const [i,[from,end,status]] of periods.entries()){
+    const records=await nineteenthRequests[i];
+    if(!records)break;
+    try{loadNineteenthAtlas(from,end,status,records);}
+    catch(error){console.warn('19C validation failed for '+from,error);break;}
+   }
+   if(!atlas&&initialYear>=1800&&nineteenthAtlasEnd)setYear(initialYear);
+   renderTimelineNavigation();
+  }
+  const [res,laterRes,thirdRes,fourthRes,fifthRes,sixthRes,seventhRes,eighthRes,ninthRes,tenthRes,eleventhRes]=await legacyRequest;
+  if(!res?.ok||!laterRes.ok||!thirdRes.ok||!fourthRes.ok||!fifthRes.ok||!sixthRes.ok||!seventhRes.ok||!eighthRes.ok||!ninthRes.ok||!tenthRes.ok||!eleventhRes.ok)throw new Error('历史切片未正确加载');
   atlasEarly=await res.json();
   atlasLater=await laterRes.json();
   atlasThird=await thirdRes.json();
@@ -2529,21 +2559,16 @@ async function boot(){
   atlasNinth=await ninthRes.json();
   atlasTenth=await tenthRes.json();
   atlasEleventh=await eleventhRes.json();
-  atlasFirstMerged=await combinedRes.json();
-  const drakeRes=await fetch('data/drake-circumnavigation-1577-1580.json',{cache:'no-store'});
-  if(!drakeRes.ok)throw new Error('德雷克环球航线补丁数据未能加载');
+  for(const dataset of [atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])
+   for(const source of dataset.sources||[])sourcesById.set(source.id,source);
+  if(!atlas&&initialYear>=1510&&initialYear<1600)setYear(initialYear);
+  const drakeRes=await drakeRequest;
+  if(!drakeRes?.ok)throw new Error('德雷克环球航线补丁数据未能加载');
   drakeCircumnavigation=await drakeRes.json();
   if(drakeCircumnavigation.voyage_id!=='drake-circumnavigation-1577-1580'||
      !Array.isArray(drakeCircumnavigation.routes)||!Array.isArray(drakeCircumnavigation.duplicate_old_route_ids)||
      drakeCircumnavigation.routes.length!==14||!window.AtlasVoyageGeometry)
    throw new Error('德雷克1577—1580航线补丁结构错误');
-  const chapterRes=await fetch('data/chapters.json',{cache:'no-store'});
-  if(!chapterRes.ok)throw new Error('章节目录未正确加载');
-  chapterRegistry=await chapterRes.json();
-  if(!Array.isArray(chapterRegistry?.chapters)||!chapterRegistry.chapters.length)throw new Error('历史章节目录为空');
-  const ordered=chapterRegistry.chapters;
-  if(ordered.some((c,i)=>c.status!=='published'||!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.end<c.start||(i>0&&c.start!==ordered[i-1].end+1)))throw new Error('历史章节时间顺序或审核状态错误');
-  lastPublishedYear=ordered[ordered.length-1].end;
   // Ten partial 17th-century decades; the original 1497-1599 chapters remain
   // immutable. The published Glencoe event gets one stable extra ID in 1692.
   try{
@@ -2575,35 +2600,40 @@ async function boot(){
     serialPreviewByDecade.set(decade,ds);
     for(const source of ds.sources)sourcesById.set(source.id,source);
    }
+   serialPreviewAtlas={schema:'atlas-17c-source-linked-batch01',from_year:1600,to_year:1699};
+   if(!atlas&&initialYear>=1600&&initialYear<1700)setYear(initialYear);
+   renderTimelineNavigation();
    // Independent source-linked place/impact cues. No historical territory polygon.
    const spatialResponse=await fetch('data/seventeenth-century-spatial-evidence-1600-1699.geojson',{cache:'no-store'});
-   if(!spatialResponse.ok)throw new Error('17c spatial source reference file missing');
-   const spatialData=await spatialResponse.json();
-   if(spatialData.type!=='FeatureCollection'||!Array.isArray(spatialData.features)||
-      spatialData.features.some(f=>{
-       const p=f.properties||{},a=f.geometry?.coordinates;
-       return f.geometry?.type!=='Point'||!Array.isArray(a)||a.length!==2||
-        !Number.isFinite(a[0])||!Number.isFinite(a[1])||Math.abs(a[0])>180||Math.abs(a[1])>90||
-        !Number.isInteger(p.start_year)||!Number.isInteger(p.display_through_year)||
-        p.start_year>p.display_through_year||
-        !['economic_network','military_impact','local_governance','land_dispossession'].includes(p.display_kind)||
-        p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
-        p.territorial_claim!==false||p.area_sqkm!==null||
-        p.exclude_from_area_aggregation!==true||
-        !p.source_urls?.length||!p.source_urls.every(u=>/^https:\/\//.test(u))||
-        (p.episodes!=null&&(!Array.isArray(p.episodes)||!p.episodes.length||
-         p.episodes.some(e=>!Number.isInteger(e.start_year)||!Number.isInteger(e.end_year)||
-          e.start_year<p.start_year||e.end_year>p.display_through_year||
-          e.start_year>e.end_year||!e.description||
-          // Source-only law (e.g. documented Barbados 1688) has evidence but no
-          // published Atlas event ID: do not erase ALL 1600s history or invent a link.
-          !Array.isArray(e.related_event_ids)||
-          (!e.related_event_ids.length&&e.source_only!==true)||
-          (e.source_only===true&&e.related_event_ids.length!==0)||
-          !Array.isArray(e.source_urls)||!e.source_urls.length||
-          !e.source_urls.every(u=>/^https:\/\//.test(u)))));
-      }))throw new Error('17c location reference failed no-invented-boundary gate');
-   seventeenthSpatialEvidence=spatialData;
+   try{
+    if(!spatialResponse.ok)throw new Error('17c spatial source reference file missing');
+    const spatialData=await spatialResponse.json();
+    if(spatialData.type!=='FeatureCollection'||!Array.isArray(spatialData.features)||
+       spatialData.features.some(f=>{
+        const p=f.properties||{},a=f.geometry?.coordinates;
+        return f.geometry?.type!=='Point'||!Array.isArray(a)||a.length!==2||
+         !Number.isFinite(a[0])||!Number.isFinite(a[1])||Math.abs(a[0])>180||Math.abs(a[1])>90||
+         !Number.isInteger(p.start_year)||!Number.isInteger(p.display_through_year)||
+         p.start_year>p.display_through_year||
+         !['economic_network','military_impact','local_governance','land_dispossession'].includes(p.display_kind)||
+         p.historical_boundary_confirmed!==false||p.fill_authorized!==false||
+         p.territorial_claim!==false||p.area_sqkm!==null||
+         p.exclude_from_area_aggregation!==true||
+         !p.source_urls?.length||!p.source_urls.every(u=>/^https:\/\//.test(u))||
+         (p.episodes!=null&&(!Array.isArray(p.episodes)||!p.episodes.length||
+          p.episodes.some(e=>!Number.isInteger(e.start_year)||!Number.isInteger(e.end_year)||
+           e.start_year<p.start_year||e.end_year>p.display_through_year||
+           e.start_year>e.end_year||!e.description||
+           // Source-only law (e.g. documented Barbados 1688) has evidence but no
+           // published Atlas event ID: do not erase ALL 1600s history or invent a link.
+           !Array.isArray(e.related_event_ids)||
+           (!e.related_event_ids.length&&e.source_only!==true)||
+           (e.source_only===true&&e.related_event_ids.length!==0)||
+           !Array.isArray(e.source_urls)||!e.source_urls.length||
+           !e.source_urls.every(u=>/^https:\/\//.test(u)))));
+       }))throw new Error('17c location reference failed no-invented-boundary gate');
+    seventeenthSpatialEvidence=spatialData;
+   }catch(error){console.warn('17C point overlays unavailable',error);}
    // A separate soft-fail boundary for optional reference envelopes: failure
    // must never erase the source-backed 1600–1699 event corpus or 44 point cues.
    try{
@@ -2665,10 +2695,9 @@ async function boot(){
     seventeenthColonialClaims=null;
     console.warn('Wide legal paper-claim map withheld, event records unaffected',err);
    }
-   serialPreviewAtlas={schema:'atlas-17c-source-linked-batch01',from_year:1600,to_year:1699};
   }catch(error){
    console.warn('17c batch unavailable; Glencoe-only preview retained',error);
-   serialPreviewByDecade.clear();
+   for(const decade of serialPreviewByDecade.keys())if(decade<1700)serialPreviewByDecade.delete(decade);
    try{
     const response=await fetch('data/stories/serial/chronology-preview-1600-1699.json',{cache:'no-store'});
     if(response.ok){
@@ -3681,9 +3710,8 @@ async function boot(){
    }catch(error){console.warn('Jamaica autonomous site references withheld',error)}
   }
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
-  // Constant-time citation lookup across all published years.
-  for(const dataset of [atlasFirstMerged,atlasEarly,atlasLater,atlasThird,atlasFourth,atlasFifth,atlasSixth,atlasSeventh,atlasEighth,atlasNinth,atlasTenth,atlasEleventh])
-   for(const source of dataset.sources||[])sourcesById.set(source.id,source);
+  if(!atlas)setYear(initialYear);
+  renderTimelineNavigation();
   const spatialCitationResponse=await fetch('data/spatial-citation-registry.json',{cache:'no-store'});
   if(!spatialCitationResponse.ok)throw new Error('历史地理独立文献索引未能读取');
   const spatialCitations=await spatialCitationResponse.json();
@@ -3931,27 +3959,14 @@ async function boot(){
   atlanticContactData=atlanticData;
 
 
-  if(enable19cAtlas&&jamaica18cReady){
-   try{await loadNineteenthAtlas(1800,1819,'published');}
-   catch(error){console.warn('19C opening data unavailable',error);}
-   if(enable19cChapterReview){
-    for(const from of [1820,1830,1840,1850]){
-     if(nineteenthAtlasEnd!==from-1)break;
-     try{await loadNineteenthAtlas(from,from+9,'editorial_review');}
-     catch(error){console.warn('19C review data unavailable for '+from,error);}
-    }
-   }
+  if(!atlas)setYear(initialYear);
+  renderTimelineNavigation();
+  if(atlas){
+   if(year>=1700&&year<1800)renderEventList();
+   refreshHistoricalLayers();
   }
-
-  // Optional deep link: ?year=1510 opens the new historical decade, while the global atlas still starts in 1497.
-  let startYear=1497;
-  try{
-   const param=new URLSearchParams(window.location?.search||'').get('year');
-   if(param && /^[0-9]{4}$/.test(param))startYear=Number(param);
-  }catch(_error){}
-  // Open each load in chronological mode. Full-period archival preview stays opt-in.
-  $('showFullChapterArchive').checked=false;
-  setYear(startYear);loadKingdomBoundaries();
+  await loadKingdomBoundaries();
+  workspace.dataset.atlasReady='true';
  }catch(e){
   $('eventList').innerHTML='<div class="loading">无法读取历史资料，请刷新页面或查看 GitHub 原始数据。</div>';
   setWarning('历史数据未能加载：'+String(e.message||e));
@@ -3980,14 +3995,18 @@ $('yearRange').addEventListener('input',e=>{stopPlay();if(atlas)setYear(e.target
 function jumpToEnteredYear(){
  if(!atlas)return;
  const raw=$('jumpYear').value.trim(),v=Number(raw);
- if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>(serialPreviewAtlas?previewYearCap():lastPublishedYear)){
+ if(!/^\d{4}$/.test(raw)||!Number.isInteger(v)||v<1497||v>availableYearCap()){
   $('jumpYear').value=year;
-   timelineStatus('请输入1497—'+(serialPreviewAtlas?previewYearCap():lastPublishedYear)+'之间的年份。');return;
+  timelineStatus('请输入1497—'+availableYearCap()+'之间的年份。');return;
+ }
+ if(!chapterForYear(v)){
+  timelineStatus(v+'年的事件正在加载。请稍后再试。');return;
  }
  stopPlay();setYear(v);
 }
 $('jumpYear').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();jumpToEnteredYear()}});
 $('jumpYear').addEventListener('change',jumpToEnteredYear);
+$('latestPreviewChapter').addEventListener('click',()=>{stopPlay();setYear(1850)});
 $('chapterTrack').addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&chapterRegistry){e.preventDefault();browseDecade(adjacentHalfCenturyPage(browsingDecade,e.deltaX>0?1:-1))}},{passive:false});
 $('browseDecadePrev').addEventListener('click',()=>{if(chapterRegistry)browseDecade(adjacentHalfCenturyPage(browsingDecade,-1))});
 $('browseDecadeNext').addEventListener('click',()=>{if(chapterRegistry)browseDecade(adjacentHalfCenturyPage(browsingDecade,1))});
@@ -4060,6 +4079,12 @@ $('showYearEventsOnly').addEventListener('click',()=>setSeventeenthEventWindowMo
 $('showRollingFourYears').addEventListener('click',()=>setSeventeenthEventWindowMode('rolling4'));
 $('showDecadeEventsToYear').addEventListener('click',()=>setSeventeenthEventWindowMode('decade'));
 $('seventeenthEventSearch').addEventListener('input',()=>{if(atlas)renderEventList()});
+$('eventList').addEventListener('click',event=>{
+ if(!event.target.closest('[data-search-chapter]'))return;
+ $('showFullChapterArchive').checked=true;
+ renderEventList();
+ $('seventeenthEventSearch').focus();
+});
 $('clearSeventeenthEventSearch').addEventListener('click',()=>{
  $('seventeenthEventSearch').value='';
  if(atlas)renderEventList();
