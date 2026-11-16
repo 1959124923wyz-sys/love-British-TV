@@ -8,10 +8,10 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const copy=require('../js/century-chapter-narratives.js');
 const html=read('index.html'),app=read('app.js');
 
-assert.equal(Object.keys(copy.chapters).length,27,'1600–1869 must include 27 independently authored decade introductions');
+assert.equal(Object.keys(copy.chapters).length,28,'1600–1879 must include 28 independently authored decade introductions');
 assert.equal(copy.forDecade(1599),null);
-assert.equal(copy.forDecade(1870),null);
-for(let year=1600;year<=1860;year+=10){
+assert.equal(copy.forDecade(1880),null);
+for(let year=1600;year<=1870;year+=10){
  const text=copy.forDecade(year);
  assert(text,`missing decade ${year}`);
  assert.equal(copy.forDecade(year+9),text,`end of ${year}s should show the same chapter`);
@@ -47,6 +47,7 @@ for(const [p,term] of [
  ['data/stories/serial/chronology-1840-1849.json','南京条约'],
  ['data/stories/serial/chronology-1850-1859.json','没收恩吉卡旧居地'],
  ['data/stories/serial/chronology-1860-1869.json','签署中英《北京条约》'],
+ ['data/stories/serial/chronology-1870-1879.json','签署《割让契据》'],
  ['data/stories/serial/chronology-preview-mysore-1700-1799.json','1799']
  ])assert(hasEvent(p,term),`historical event anchor absent: ${p}: ${term}`);
 
@@ -62,4 +63,4 @@ for(const field of ['chapterTitlePrimary','chapterTitleSecondary','chapterIntro'
 assert(app.includes("const decadeTotal=atlas.events.length"),'event statistics must remain intact');
 assert(app.includes("d>=1700?'topic_preview'"),'original research status must remain intact');
 assert(app.includes("$('chapterIntro').textContent=atlasFirstMerged.intro"),'16C chapter introduction must stay untouched');
-console.log('PASS: all 27 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');
+console.log('PASS: all 28 historical decade chapters have independent titles and substantial intros; index and navigation wired; source events, 16C chapters and review statuses preserved.');

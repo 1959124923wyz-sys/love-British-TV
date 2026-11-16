@@ -69,7 +69,7 @@
  const title=r=>{
   const p=r.feature.properties||{},y=host.getYear();
   const stage=p.year_stages?.find(x=>x.start_year<=y&&y<=x.end_year);
-  return String(stage?.title||p.name||p.title||r.feature.id||'历史区域参考');
+  return String(stage?.title||p.public_name||p.name||p.title||r.feature.id||'历史区域参考');
  };
  const summary=r=>{
   const p=r.feature.properties||{},y=host.getYear();
@@ -89,7 +89,7 @@
  const enabled=()=>validYear()&&$('mapLayerTerritory')?.checked&&$('toggleTerritorialFootprints')?.checked;
  const urlHost=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch{return'历史资料'}};
  const links=r=>{
-  const p=r.feature.properties||{},urls=[...(p.source_urls||[])];
+  const p=r.feature.properties||{},urls=[...(p.source_urls||[]),p.designation_source_url,p.data_source_url];
   for(const sid of p.source_ids||[]){
    const ref=host.sourceForId(sid);
    if(ref?.url)urls.push(ref.url);
@@ -135,6 +135,7 @@
  }
  function card(r,i){
   const isOpen=r.key===selected,desc=summary(r),src=links(r),is19c=r.group==='nineteenthAreas';
+  const periodLabel=r.group==='archaeologyReference'?'地图显示年份':'历史时段';
   const events=isOpen?(r.feature.properties.related_event_ids||[])
    .map(id=>host.eventForId(id)).filter(e=>e&&e.year<=host.getYear()):[];
   return '<article class="atlas-18c-overlap-card'+(isOpen?' is-selected':'')+
@@ -147,7 +148,7 @@
    '<strong class="atlas-18c-overlap-title">'+esc(title(r))+'</strong>'+
    (desc&&!isOpen?'<span class="atlas-18c-overlap-summary">'+esc(clip(desc))+'</span>':'')+'</button>'+
    (isOpen?'<div class="atlas-18c-overlap-detail">'+
-    (is19c?'':'<div class="atlas-18c-overlap-facts"><div><span>历史时段</span><b>'+esc(period(r))+'</b></div>'+
+    (is19c?'':'<div class="atlas-18c-overlap-facts"><div><span>'+periodLabel+'</span><b>'+esc(period(r))+'</b></div>'+
     '<div><span>图层性质</span><b>'+esc(clip(category(r),75))+'</b></div></div>')+
     (desc?'<p>'+esc(desc)+'</p>':'')+
     (events.length?'<div class="zone-related">'+events.map(e=>
@@ -209,11 +210,12 @@
   if(!hit&&e.target.closest?.('.leaflet-interactive'))return;
   const ll=map.mouseEventToLatLng(e),records=at(ll);
   if(!records.length&&!hit)return;
-  if(!records.length&&hit){
-   activeRecords=[hit];point=ll;currentYear=host.getYear();openedVia='visible-polygon';
+  if(hit&&!records.some(record=>record.key===hit.key)){
+   activeRecords=[hit,...records];point=ll;currentYear=host.getYear();openedVia='visible-polygon';
    selected=hit.key;renderCards();outline(hit);
   }else{
-   openAt(ll,hit?'visible-polygon':records.length>1?'capture-transparent-overlap':'capture-transparent-single');
+   openAt(ll,hit?'visible-polygon':records.length>1?'capture-transparent-overlap':'capture-transparent-single',
+    hit?.feature.id);
   }
   e.preventDefault();e.stopPropagation();e.stopImmediatePropagation?.();
  }
