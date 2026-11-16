@@ -1414,7 +1414,7 @@ try:
        window.atlasStoryBridge.selectedEventId()==='E20-CORK-BURN'"""))
     driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-locate-event]').click()
     wait.until(lambda d: d.execute_script(
-        "return Math.abs(window.atlasReadViewport().center.lat-51.8955)<0.012"))
+        "return Math.abs(window.atlasReadViewport().center.lat-51.89726)<0.001"))
     map_element = driver.find_element(By.ID, 'map')
     origin = ScrollOrigin.from_element(map_element)
     while (zoom := driver.execute_script("return window.atlasReadViewport().zoom")) < 16:
@@ -1426,6 +1426,8 @@ try:
         ('E20-CORK-ROUTE-BRIDGE-STREET', 'E20-CORK-BRIDGE', 51.900624,
          '辅助警察从圣帕特里克桥进入商街'),
     ]:
+        if not driver.find_element(By.ID, 'eventList').is_displayed():
+            driver.find_element(By.ID, 'mobileEventsToggle').click()
         driver.find_element(By.CSS_SELECTOR, f'#eventList [data-eid="{event_id}"]').click()
         locator = f'#dossierBody [data-locate-event="{event_id}"]'
         wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, locator))
