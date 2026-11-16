@@ -1,6 +1,6 @@
 (function (root) {
  'use strict';
- // Historical chapter copy for the 1600–1889 decade atlas. Every entry is
+ // Historical chapter copy for the 1600–1909 decade atlas. Every entry is
  // grounded in source-linked events already present in the repository.
  // No geometry, event counts, publication statuses or map selection are changed.
  const chapters = {
@@ -33,9 +33,11 @@
   1850: {primary:'夺地战争与',secondary:'殖民政权重组',intro:'开普殖民军焚屋夺牛，战后没收恩吉卡旧居地。英国退出奥兰治河主权区，哈德孙湾公司取得温哥华岛部分土地。弗雷泽河淘金潮中，英国设立新殖民政府。英国恢复从印度向加勒比糖园招工，澳洲殖民军警攻破尤里卡栅寨，昆士兰政府接管骑警。英印军夺取仰光，英国吞并勃固。桑塔尔人起事后，殖民军焚村并实行戒严。公司吞并阿瓦德，镇压起事后没收地权。英印军重占坎普尔与德里，阿杰纳拉的俘虏未经审判遭处决。安达曼岛民攻入劳役营地。英国议会把印度政务移交王室。英法联军炮击并占领广州，1859年清军在大沽口击退英法舰队。'},
   1860: {primary:'武力开埠与',secondary:'殖民边疆扩张',intro:'英法联军由北塘登陆，攻下大沽炮台后进军北京。两军掠取圆明园中的财物，额尔金随后下令英军焚毁园林。中英《北京条约》提高赔款，开放天津，将先前租借的九龙南部割归英方。天津海关开关后，广州的联军占领也告结束，沙面租界继续留存。'},
   1870: {primary:'割让条约与',secondary:'殖民劳工制度',intro:'斐济首领在莱武卡签署割让契据。英国殖民政府登记土地权利，向村社征收实物税，并出兵进入维提岛内陆。1879年，首批印度契约劳工乘莱奥尼达斯号抵达斐济，随后在亚努卡莱莱岛隔离。'},
-  1880: {primary:'吞并上缅甸与',secondary:'重建殖民税制',intro:'英属印度由伊洛瓦底江进军曼德勒，拘押提婆王并将王室送往印度。吞并公告发出后，多个地区继续抵抗。殖民当局以迁村、集体罚款和军警驻点压制抵抗，随后把抹谷红宝石矿的开采和收费纳入殖民租约。'}
+  1880: {primary:'吞并上缅甸与',secondary:'重建殖民税制',intro:'英属印度由伊洛瓦底江进军曼德勒，拘押提婆王并将王室送往印度。吞并公告发出后，多个地区继续抵抗。殖民当局以迁村、集体罚款和军警驻点压制抵抗，随后把抹谷红宝石矿的开采和收费纳入殖民租约。'},
+  1890: {primary:'贝宁王廷覆亡与',secondary:'南非战争爆发',intro:'英国官员在贝宁签下保护条约，试图扩大沿海与内陆的贸易。菲利普斯一行遭伏击后，英军攻陷贝宁城，劫走王宫及多处宅邸的财物，并将奥冯拉姆文流放到旧卡拉巴尔。1899年，南非共和国最后通牒到期，英国与两个布尔共和国开战。'},
+  1900: {primary:'焚毁农场与',secondary:'南非集中营',intro:'南非战争中，英军焚毁农场、转运居民，将布尔平民和非洲黑人分别关入集中营。霍布豪斯记录了营里的食物、供水和疾病，黑人营居民也写信抗议口粮收费与劳动条件。两共和国代表于1902年在比勒陀利亚签署和约，营地随后分批清退。'}
  };
- for (let d=1600;d<=1880;d+=10) {
+ for (let d=1600;d<=1900;d+=10) {
   const c=chapters[d];
   if (!c || !c.primary || !c.secondary || !c.intro)
    throw new Error('Missing historical chapter narrative: '+d);
@@ -44,6 +46,7 @@
  }
  const api=Object.freeze({
   chapters:Object.freeze(chapters),
+  previewDecades:Object.freeze(Object.keys(chapters).map(Number).filter(decade=>decade>=1820)),
   forDecade(year) {
    const decade=Math.floor(Number(year)/10)*10;
    return Object.prototype.hasOwnProperty.call(chapters,decade)?chapters[decade]:null;

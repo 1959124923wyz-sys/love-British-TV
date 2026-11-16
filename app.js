@@ -227,8 +227,9 @@ function syncMapLayers(){
 let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthColonialClaims=null;
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
-const enable19cAtlas=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
-const nineteenthPreviewDecades=[1820,1830,1840,1850,1860,1870,1880];
+const enableModernPreview=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
+const modernPreviewDecades=window.AtlasChapterNarratives?.previewDecades||[];
+const modernCenturyName=y=>y>=1900?'二十世纪':y>=1800?'十九世纪':y>=1700?'十八世纪':'十七世纪';
 const initialYearParam=reviewParams.get('year')||'';
 const initialYear=/^\d{4}$/.test(initialYearParam)?Number(initialYearParam):1497;
 let nineteenthAtlasEnd=null,nineteenthSpatial=null;
@@ -1139,15 +1140,16 @@ function renderEighteenthReviewEvidenceCores(){
  }
 }
 
-async function fetchNineteenthAtlas(from,end){
+const modernAtlasCentury=from=>from>=1900?'twentieth':'nineteenth';
+async function fetchModernAtlas(from,end){
  const [chronology,spatial]=await Promise.all([
   fetch(`data/stories/serial/chronology-${from}-${end}.json`,{cache:'no-store'}),
-  fetch(`data/nineteenth-century-spatial-${from}-${end}.geojson`,{cache:'no-store'})
+  fetch(`data/${modernAtlasCentury(from)}-century-spatial-${from}-${end}.geojson`,{cache:'no-store'})
  ]);
- if(!chronology.ok||!spatial.ok)throw new Error('19C chronology or map missing');
+ if(!chronology.ok||!spatial.ok)throw new Error('Modern chronology or map missing');
  return Promise.all([chronology.json(),spatial.json()]);
 }
-function loadNineteenthAtlas(from,end,status,[data,geo]){
+function loadModernAtlas(from,end,status,[data,geo]){
  const sourceIds=new Set(data.sources?.map(s=>s.id));
  const eventIds=new Set(data.events?.map(e=>e.id));
  const earlierEventIds=new Set([...serialPreviewByDecade.entries()]
@@ -1161,7 +1163,7 @@ function loadNineteenthAtlas(from,end,status,[data,geo]){
   return type==='LineString'&&f.properties?.dash_only===true&&Array.isArray(coordinates)&&coordinates.length>=2&&
    coordinates.every(p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite)&&Math.abs(p[0])<=180&&Math.abs(p[1])<=90);
  };
- if(data.schema!=='atlas-19c-chronology-v1'||data.editorial_status!==status||
+ if(data.schema!==(from>=1900?'atlas-20c-chronology-v1':'atlas-19c-chronology-v1')||data.editorial_status!==status||
     data.period?.from!==from||data.period?.to!==end||!data.events.length||eventIds.size!==data.events.length||
     data.events.some(e=>!inPeriod(e.year)||!cited(e)||
      (e.lat===null?e.lng!==null:!Number.isFinite(e.lat)||Math.abs(e.lat)>90||!Number.isFinite(e.lng)||Math.abs(e.lng)>180))||
@@ -1171,10 +1173,10 @@ function loadNineteenthAtlas(from,end,status,[data,geo]){
      f.properties.historical_boundary_confirmed!==false||f.properties.fill_authorized!==false||
      f.properties.area_sqkm!==null||!f.properties.exclude_from_area_aggregation||
      !f.properties.related_event_ids.every(id=>eventIds.has(id)||earlierEventIds.has(id))))
-  throw new Error('19C review failed chronology, source or spatial checks');
+  throw new Error('Modern review failed chronology, source or spatial checks');
  for(let d=from;d<=end;d+=10){
   serialPreviewByDecade.set(d,{
-   dataset_id:'nineteenth-century-'+d,period:{from:d,to:d+9},editorial_status:status,
+   dataset_id:modernAtlasCentury(d)+'-century-'+d,period:{from:d,to:d+9},editorial_status:status,
    events:data.events.filter(e=>decadeForYear(e.year)===d),
    routes:data.routes.filter(r=>decadeForYear(r.year)===d),places:[],colonial_polygons:[]
   });
@@ -2217,7 +2219,7 @@ function updateVisibility(){
 const decadeForYear=y=>Math.floor(y/10)*10;
 const storyPreviewChapterForDecade=d=>serialPreviewByDecade.has(d)&&d>=1600&&d<=availableYearCap()&&d%10===0?
  ({id:(Math.floor(d/100)+1)+'c-'+d,start:d,end:d+9,number:11+(d-1600)/10,
- label:window.AtlasChapterNarratives?.forDecade(d)?.title||(d>=1800?'19世纪历史专题':d>=1700?'18世纪历史专题':'17世纪历史专题'),
+ label:window.AtlasChapterNarratives?.forDecade(d)?.title||(modernCenturyName(d)+'历史专题'),
  status:d>=1800?(serialPreviewByDecade.get(d).editorial_status==='published'?'published':'topic_preview'):
   d>=1700?'topic_preview':serialPreviewByDecade.get(d)?.dataset_id?.startsWith('seventeenth-century-')?'published_partial':'topic_preview'}):null;
 const chapterForDecade=d=>chapterRegistry?.chapters?.find(c=>c.start<=d+9&&c.end>=d)||storyPreviewChapterForDecade(d);
@@ -2319,7 +2321,7 @@ function setYear(v){
   const decadeTotal=atlas.events.length;
   const observed=atlas.events.filter(e=>occurredByYear(e,year)).length;
   const fresh=atlas.events.filter(e=>e.category!=='status'&&Number(e.year)===year).length;
-  const centuryLabel=year>=1800?'十九世纪':year>=1700?'十八世纪':'十七世纪';
+  const centuryLabel=modernCenturyName(year);
   const chapterStory=window.AtlasChapterNarratives?.forDecade(year);
   if(chapterStory){
    $('chapterTitlePrimary').textContent=chapterStory.primary;
@@ -2514,9 +2516,9 @@ function openPolity(group){
 }
 async function boot(){
  const chapterRequest=fetch('data/chapters.json',{cache:'no-store'}).catch(()=>null);
- const periods=[[1800,1819,'published'],...nineteenthPreviewDecades.map(from=>[from,from+9,'editorial_review'])];
- const nineteenthRequests=enable19cAtlas?periods.map(([from,end])=>
-  fetchNineteenthAtlas(from,end).catch(error=>{console.warn('19C data unavailable for '+from,error);return null;})):[];
+ const periods=[[1800,1819,'published'],...modernPreviewDecades.map(from=>[from,from+9,'editorial_review'])];
+ const modernRequests=enableModernPreview?periods.map(([from,end])=>
+  fetchModernAtlas(from,end).catch(error=>{console.warn('Modern chronology unavailable for '+from,error);return null;})):[];
  const drakeRequest=fetch('data/drake-circumnavigation-1577-1580.json',{cache:'no-store'}).catch(()=>null);
  try{
   const legacyRequest=Promise.all([
@@ -2548,12 +2550,12 @@ async function boot(){
   $('showFullChapterArchive').checked=false;
   if(initialYear<1510)setYear(initialYear);
   else renderTimelineNavigation();
-  if(nineteenthRequests.length){
+  if(modernRequests.length){
    for(const [i,[from,end,status]] of periods.entries()){
-    const records=await nineteenthRequests[i];
+    const records=await modernRequests[i];
     if(!records)break;
-    try{loadNineteenthAtlas(from,end,status,records);}
-    catch(error){console.warn('19C validation failed for '+from,error);break;}
+    try{loadModernAtlas(from,end,status,records);}
+    catch(error){console.warn('Modern chronology validation failed for '+from,error);break;}
    }
    if(!atlas&&initialYear>=1800&&nineteenthAtlasEnd)setYear(initialYear);
    renderTimelineNavigation();
