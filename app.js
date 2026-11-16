@@ -5,7 +5,9 @@
 'use strict';
 const $ = id=>document.getElementById(id);
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const map = L.map('map',{zoomControl:false,worldCopyJump:false,preferCanvas:true,minZoom:2,maxZoom:11,scrollWheelZoom:true}).setView([51,-31],3);
+// Street-scale evidence needs room between nearby points and route endpoints.
+const streetZoom = 17, regionalZoom = 11;
+const map = L.map('map',{zoomControl:false,worldCopyJump:false,preferCanvas:true,minZoom:2,maxZoom:regionalZoom,scrollWheelZoom:true}).setView([51,-31],3);
 // Zoom by wheel, touch or double-click; the map surface stays free of floating controls.
 // Read-only viewport status for visual regression; no external command can mutate historical geometry.
 window.atlasReadViewport=()=>({zoom:map.getZoom(),center:{lat:map.getCenter().lat,lng:map.getCenter().lng}});
@@ -19,7 +21,7 @@ const modernTiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
 }).addTo(map);
 const physicalTiles=L.tileLayer(
  'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpg',{
- maxZoom:11,maxNativeZoom:8,noWrap:true,
+ maxZoom:streetZoom,maxNativeZoom:8,noWrap:true,
  bounds:[[-85.05112878,-180],[85.05112878,180]],
  attribution:'Physical imagery: <a href="https://www.earthdata.nasa.gov/data/tools/gibs" target="_blank" rel="noopener">NASA GIBS</a>'
 });
@@ -825,7 +827,7 @@ function renderPoints(){
     className:'atlas-voyage-continuity'}).addTo(groups.routes);
   const line=L.polyline(routeGeometry,{...style,interactive:false}).addTo(groups.routes);
   // Historical territory polygons cannot intercept this upper SVG hit stroke.
-  L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
+  const hitLine=L.polyline(routeGeometry,{renderer:voyageRenderer,pane:'voyagePane',
    color:baseColor,weight:22,opacity:.025,interactive:true,bubblingMouseEvents:false,
    className:'atlas-voyage-hit'})
    .bindTooltip(hoverCard(year>=1600?(Number(r.start_year??r.year)+'年 · '+r.name):r.name,r.note),{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
@@ -833,6 +835,7 @@ function renderPoints(){
    .on('mouseout',()=>line.setStyle({weight:style.weight}))
    .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openDossier(r,'route')})
    .addTo(groups.routes);
+  hitLine.getElement()?.setAttribute('data-route-id',r.id);
  }
  updateVisibility();
  // Expand a dense group so the exact target glyph, not only the hub, is highlighted.
@@ -2306,6 +2309,8 @@ function setYear(v){
  const next=Math.max(1497,Math.min(availableYearCap(),requested));
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen){timelineStatus(next+'年的事件正在加载。请稍后再试。');return;}
+ const zoomCap=next>=1800?streetZoom:regionalZoom;
+ if(map.getMaxZoom()!==zoomCap)map.setMaxZoom(zoomCap);
  $('jumpYear').value=next;
  if(next>=1600){
   const changed=next!==year;

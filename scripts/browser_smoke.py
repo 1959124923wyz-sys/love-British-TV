@@ -1412,6 +1412,43 @@ try:
     driver.find_element(By.CSS_SELECTOR, '.major-story-article [data-story-return]').click()
     wait.until(lambda d: d.execute_script("""return window.atlasStoryBridge.currentYear()===1920 &&
        window.atlasStoryBridge.selectedEventId()==='E20-CORK-BURN'"""))
+    driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-locate-event]').click()
+    wait.until(lambda d: d.execute_script(
+        "return Math.abs(window.atlasReadViewport().center.lat-51.89726)<0.35"))
+    map_element = driver.find_element(By.ID, 'map')
+    origin = ScrollOrigin.from_element(map_element)
+    while (zoom := driver.execute_script("return window.atlasReadViewport().zoom")) < 16:
+        ActionChains(driver).scroll_from_origin(origin, 0, -620).perform()
+        wait.until(lambda d: d.execute_script("return window.atlasReadViewport().zoom>arguments[0]", zoom))
+    for route_id, event_id, latitude, title in [
+        ('E20-CORK-ROUTE-BARR-DILLON', 'E20-CORK-DILLON', 51.90908,
+         '辅助警察车队由维多利亚兵营驶往迪伦十字路口'),
+        ('E20-CORK-ROUTE-BRIDGE-STREET', 'E20-CORK-BRIDGE', 51.900624,
+         '辅助警察从圣帕特里克桥进入商街'),
+    ]:
+        driver.find_element(By.ID, 'mobileEventsToggle').click()
+        wait.until(lambda d: d.execute_script(
+            "return document.querySelector('#sidebar').getBoundingClientRect().width > 200"))
+        driver.find_element(By.CSS_SELECTOR, f'#eventList [data-eid="{event_id}"]').click()
+        locator = f'#dossierBody [data-locate-event="{event_id}"]'
+        wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, locator))
+        driver.find_element(By.CSS_SELECTOR, locator).click()
+        wait.until(lambda d: d.execute_script(
+            "return Math.abs(window.atlasReadViewport().center.lat-arguments[0])<0.001", latitude))
+        hit = wait.until(lambda d: d.execute_script("""
+          const line=document.querySelector('[data-route-id="'+arguments[0]+'"]');
+          if(!line?.getTotalLength())return null;
+          const r=document.querySelector('#map').getBoundingClientRect();
+          for(const fraction of [0.5,0.4,0.6,0.3,0.7]){
+            const p=line.getPointAtLength(line.getTotalLength()*fraction).matrixTransform(line.getScreenCTM());
+            if(document.elementFromPoint(Math.round(p.x),Math.round(p.y))===line)
+              return [Math.round(p.x-r.left-r.width/2),Math.round(p.y-r.top-r.height/2)];
+          }
+          return null;
+        """, route_id))
+        ActionChains(driver).move_to_element_with_offset(map_element, *hit).click().perform()
+        wait.until(lambda d: d.find_element(By.CSS_SELECTOR,'#dossierBody h2').text == title)
+    print("PASS: 1920 Cork street routes remain reachable at street-scale zoom")
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()
