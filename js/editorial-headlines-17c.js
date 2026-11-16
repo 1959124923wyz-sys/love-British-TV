@@ -75,6 +75,8 @@
  const storyTitles={
  'E19-CAPE-OPENING':'开普再占与科萨人失地',
  'E19-KANDY-OPENING':'康提覆灭与高地起义',
+ 'E19-RISDON-COVE':'里斯登湾枪击与原住民幼童',
+ 'E19-BUSSA-REBELLION':'布萨起义与巴巴多斯戒严',
  'E6-T01':'阿尔斯特殖民与土地没收',
  'E6-T02':'爱尔兰征服与财产转移',
  'E6-T03-LAND-1642-1698':'爱尔兰土地剥夺与再分配',
