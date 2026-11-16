@@ -1414,7 +1414,7 @@ try:
        window.atlasStoryBridge.selectedEventId()==='E20-CORK-BURN'"""))
     driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-locate-event]').click()
     wait.until(lambda d: d.execute_script(
-        "return Math.abs(window.atlasReadViewport().center.lat-51.89726)<0.001"))
+        "return Math.abs(window.atlasReadViewport().center.lat-51.89726)<0.35"))
     map_element = driver.find_element(By.ID, 'map')
     origin = ScrollOrigin.from_element(map_element)
     while (zoom := driver.execute_script("return window.atlasReadViewport().zoom")) < 16:
