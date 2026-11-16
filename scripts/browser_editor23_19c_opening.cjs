@@ -707,7 +707,26 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    const density=await page.evaluate(()=>window.atlasDensityAudit());
    assert.deepEqual(density.groupedKeys,density.eligibleKeys);
   }
+  await page.locator('#centuryNav [data-century="1800"]').click();
+  await page.locator('#latestPreviewChapter').click();
+  const fijiPreview=page.locator('[data-decade="1870"]');
+  assert.match(await fijiPreview.textContent(),/第38章 · 预览/);
+  await fijiPreview.click();
+  assert.equal(await page.evaluate(()=>window.atlasStoryBridge.currentYear()),1870);
+  await jump(1874);
+  await openEvent('E19-FIJ-1874-CESSION');
+  await openArticle('E19-FIJI-CESSION-INDENTURE');
+  const quarantine='E19-FIJ-1879-YANUCA';
+  await link(quarantine).click();
+  await page.waitForFunction(()=>window.atlasStoryBridge.currentYear()===1879);
+  await page.getByRole('button',{name:'查看事件档案'}).click();
+  assert.equal(await selected(),quarantine);
+  await page.locator('[data-story-back]').click();
+  await page.locator('[data-story-return]').first().click();
+  assert.equal(await selected(),'E19-FIJ-1874-CESSION');
+  assert.equal(await page.evaluate(()=>window.atlasStoryBridge.currentYear()),1874);
+  await assertClean();
   assert.deepEqual(errors,[]);
-  console.log('PASS Chrome: 323 public years and 30 review years, story entry points across chapters 33–35, map transitions, all qualified events reachable, no public warnings.');
+  console.log('PASS Chrome: 323 public years and 30 review years, story entry points across chapters 33–38, map transitions, all qualified events reachable, no public warnings.');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

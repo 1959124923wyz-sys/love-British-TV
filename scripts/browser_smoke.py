@@ -1291,9 +1291,10 @@ try:
     wait.until(lambda d: d.execute_script(
         "return document.querySelector('#dossierBody h2')?.textContent.includes(arguments[0])", "黄渡口战役"))
     verify("1598 Yellow Ford main record now localizable with uncertain battlefield noted",
-           """document.querySelector('#dossierBody').textContent.includes('黄渡口') &&
-              document.querySelector('#dossierBody').textContent.includes('实测') &&
-              document.querySelector('#dossierBody .source-link')!==null""",driver)
+           """document.querySelector('#dossierBody h2').textContent.includes('黄渡口') &&
+              !!document.querySelector('#dossierBody [data-locate-event]:enabled') &&
+              window.atlasStoryBridge.eventById('1590S-E029')?.geo_precision.includes('battle_vicinity_not_verified_field') &&
+              !!document.querySelector('#dossierBody a.source-link')""",driver)
     verify("1598 San Juan should show a brief urban occupation, not 1595 failed raid",
            """document.querySelectorAll('#map .atlas-caribbean-urban-occupation').length===1 &&
               document.querySelectorAll('#map .atlas-caribbean-raid-site').length===0""",driver)
