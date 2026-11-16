@@ -7,6 +7,249 @@
   "geometry_file": "data/nineteenth-century-spatial-1850-1859.geojson",
   "transitions": [
     {
+      "stable_id": "ballarat-eureka-movement-1854",
+      "baseline_1849": false,
+      "transition": "documented_movement_connection",
+      "first_display_year": 1854,
+      "last_display_year": 1854,
+      "historical_end_year": 1854,
+      "source_ids": [
+        "19C36-EUR-LOCAL",
+        "19C36-EUR-MAP",
+        "19C36-EUR-THOMAS",
+        "19C36-EUR-GCAMP",
+        "19C36-EUR-GEUR",
+        "19C36-EUR-SITE"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1854-CAMP",
+        "E19-EUR-1854-ATTACK"
+      ],
+      "finding": "政府营为出发点，尤里卡矿脉为终点；军报中近寨的次级营地与出发的政府营分别处理。"
+    },
+    {
+      "stable_id": "eureka-cemetery-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1854,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-LOCAL",
+        "19C36-EUR-GCEM"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1854-BURIAL"
+      ],
+      "finding": "在尤里卡冲突中死亡的矿工及政府军人葬在这座墓园。"
+    },
+    {
+      "stable_id": "eureka-gaol-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1855,
+      "last_display_year": 1855,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-LOCAL",
+        "19C36-EUR-CAR",
+        "19C36-EUR-PROV",
+        "19C36-EUR-GGAOL"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1855-GAOL"
+      ],
+      "finding": "部分被控叛国的尤里卡参加者在庭审前关在这里。"
+    },
+    {
+      "stable_id": "eureka-eureka-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1854,
+      "last_display_year": 1854,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-CAR",
+        "19C36-EUR-NMA",
+        "19C36-EUR-SITE",
+        "19C36-EUR-GEUR",
+        "19C36-EUR-HER",
+        "19C36-EUR-REP-FIRE",
+        "19C36-EUR-THOMAS",
+        "19C36-EUR-MARTIAL",
+        "19C36-EUR-REVOKE"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1854-STOCKADE",
+        "E19-EUR-1854-ATTACK",
+        "E19-EUR-1854-PURSUIT",
+        "E19-EUR-1854-MARTIAL",
+        "E19-EUR-1854-MARTIAL-END"
+      ],
+      "finding": "矿工在尤里卡矿脉一带建起栅寨，英军与殖民警察于12月3日攻入。"
+    },
+    {
+      "stable_id": "eureka-camp-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1854,
+      "last_display_year": 1855,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-LOCAL",
+        "19C36-EUR-MAP",
+        "19C36-EUR-REP-FIRE",
+        "19C36-EUR-GCAMP",
+        "19C36-EUR-THOMAS",
+        "19C36-EUR-LOCAL-HIST",
+        "19C36-EUR-CAR",
+        "19C36-EUR-ACT55"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1854-CAMP",
+        "E19-EUR-1855-LOCAL-FIRST"
+      ],
+      "finding": "英军和殖民警察从政府营出发，向尤里卡矿区进军。"
+    },
+    {
+      "stable_id": "eureka-bakery-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1854,
+      "last_display_year": 1855,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-CHARTER",
+        "19C36-EUR-OLD",
+        "19C36-EUR-LOCAL",
+        "19C36-EUR-GBA",
+        "19C36-EUR-CHARTER-ITEM",
+        "19C36-EUR-CAL",
+        "19C36-EUR-REP-FIRE",
+        "19C36-EUR-CAR",
+        "19C36-EUR-ACT55"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1854-CHARTER",
+        "E19-EUR-1854-FLAG",
+        "E19-EUR-1854-OATH",
+        "E19-EUR-1855-LOCAL"
+      ],
+      "finding": "改革联盟通过宪章，矿工在此升起南十字旗。"
+    },
+    {
+      "stable_id": "eureka-court-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1855,
+      "last_display_year": 1855,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-JOSEPH",
+        "19C36-EUR-CAL",
+        "19C36-EUR-PROV",
+        "19C36-EUR-GCOURT",
+        "19C36-EUR-LOCAL",
+        "19C36-EUR-NMA",
+        "19C36-EUR-TRIAL-END"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1855-JOSEPH",
+        "E19-EUR-1855-JOSEPH-VERDICT",
+        "E19-EUR-1855-TRIALS"
+      ],
+      "finding": "殖民政府在这里以叛国罪审理起义参加者。"
+    },
+    {
+      "stable_id": "eureka-melbourne-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1851,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-GAZ51",
+        "19C36-EUR-REP-START",
+        "19C36-EUR-GMEL",
+        "19C36-EUR-OLD",
+        "19C36-EUR-REG51",
+        "19C36-EUR-ACT53",
+        "19C36-EUR-CHARTER",
+        "19C36-EUR-NMA",
+        "19C36-EUR-CHARTER-ITEM",
+        "19C36-EUR-REPLY",
+        "19C36-EUR-CAR",
+        "19C36-EUR-MARTIAL",
+        "19C36-EUR-REVOKE",
+        "19C36-EUR-REP-REFORM",
+        "19C36-EUR-DESPATCH",
+        "19C36-EUR-THOMAS",
+        "19C36-EUR-BILL",
+        "19C36-EUR-REP-LOSS",
+        "19C36-EUR-ACT55",
+        "19C36-EUR-CHINESE",
+        "19C36-EUR-EXPORT",
+        "19C36-EUR-COUNCIL",
+        "19C36-EUR-LALOR"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1851-CROWN",
+        "E19-EUR-1851-FEE",
+        "E19-EUR-1851-DOUBLE",
+        "E19-EUR-1853-PETITION",
+        "E19-EUR-1853-ACT",
+        "E19-EUR-1854-DEPUTATION",
+        "E19-EUR-1854-REPLY",
+        "E19-EUR-1854-PROCLAIM",
+        "E19-EUR-1854-COMMISSION",
+        "E19-EUR-1854-LONDON",
+        "E19-EUR-1855-REPORT",
+        "E19-EUR-1855-CLAIMS",
+        "E19-EUR-1855-BILL",
+        "E19-EUR-1855-RIGHT",
+        "E19-EUR-1855-CHINESE",
+        "E19-EUR-1855-EXPORT",
+        "E19-EUR-1855-CHINESE-START",
+        "E19-EUR-1855-SEAT"
+      ],
+      "finding": "殖民当局在此处理矿工请愿，并颁发法令。"
+    },
+    {
+      "stable_id": "eureka-bendigo-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1853,
+      "last_display_year": 1853,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-OLD",
+        "19C36-EUR-REP-START",
+        "19C36-EUR-GBEN"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1853-RED"
+      ],
+      "finding": "1853年，本迪戈矿工以红带表明抗议，组织请愿。"
+    },
+    {
+      "stable_id": "eureka-chewton-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1851,
+      "last_display_year": 1851,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-EUR-MC",
+        "19C36-EUR-REP-START",
+        "19C36-EUR-OLD",
+        "19C36-EUR-GCHEW"
+      ],
+      "evidence_anchors": [
+        "E19-EUR-1851-CHEWTON"
+      ],
+      "finding": "1851年12月，弗雷斯特溪矿工集会反对牌照费加倍。"
+    },
+    {
       "stable_id": "delhi-meerut-1857-route",
       "baseline_1849": false,
       "transition": "documented_movement_connection",
@@ -3352,6 +3595,21 @@
     }
   ],
   "open_items": [
+    {
+      "stable_id": "eureka-stockade-and-martial-law-boundaries",
+      "status": "research_pending",
+      "finding": "栅寨旧址仍有分歧；矿区点采用尤里卡中心参考点。审判地图被质疑，未作为尺度或真实行军线。12月戒严的历史地界、初发牌照点、搜查和焚毁帐篷逐点、旅店址及报社旧址仍待用现代地籍与史图互证。没有新增殖民控制面积。",
+      "source_ids": [
+        "19C36-EUR-SITE",
+        "19C36-EUR-HER",
+        "19C36-EUR-MAP",
+        "19C36-EUR-MARTIAL",
+        "19C36-EUR-REVOKE",
+        "19C36-EUR-REP-START",
+        "19C36-EUR-REP-LOSS",
+        "19C36-EUR-PROV"
+      ]
+    },
     {
       "stable_id": "delhi-1857-clearance-and-geography",
       "status": "research_pending",
