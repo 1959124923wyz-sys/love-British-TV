@@ -4,7 +4,7 @@
   "scope": {
     "from": 1799,
     "through": 1819,
-    "regions": ["开普及东部边疆", "锡兰沿海与康提", "德文特河", "巴巴多斯"],
+    "regions": ["开普及东部边疆", "锡兰沿海与康提", "德文特河", "巴巴多斯", "波斯湾两岸"],
     "unreviewed_prior_layers": "其他1799年全球地点及区域仍待逐项承接，1800年批次不裁定其终止。"
   },
   "year_end_geometry_file": "data/nineteenth-century-spatial-1800-1819.geojson",
@@ -198,6 +198,59 @@
         }
       ],
       "note": "此点记1816年驻军出兵，与长期驻军情况分别记录。"
+    },
+    {
+      "stable_id": "gulf-ras-al-khaimah-garrison",
+      "prior_ids": [],
+      "baseline_year": 1799,
+      "baseline_controller": "卡西米地方政权",
+      "at_1800": "continued",
+      "at_1810": "continued",
+      "episodes": [
+        {
+          "from": 1799,
+          "through": 1818,
+          "controller": "卡西米地方政权",
+          "historic_end_year": 1819,
+          "sources": [
+            "19C-GULF3-JUL",
+            "19C-GULF3-RAK",
+            "19C-GULF3-L13"
+          ]
+        },
+        {
+          "from": 1819,
+          "through": 1819,
+          "controller": "英国远征军驻点",
+          "historic_end_year": 1820,
+          "sources": [
+            "19C-GULF3-MAP",
+            "19C-GULF3-KEIR",
+            "19C-GULF3-L19",
+            "19C-GULF3-OUT"
+          ]
+        }
+      ],
+      "note": "1809年11月14日撤出，年末没有英国驻点。1819年12月9日占据旧城港。1820年7月撤离，年末英军驻点续接第33章 gulf-qeshm-town-garrison。"
+    },
+    {
+      "stable_id": "gulf-laft-1809-fort-transfer",
+      "prior_ids": [],
+      "baseline_year": null,
+      "at_1800": "unreviewed",
+      "at_1810": "unreviewed",
+      "episodes": [
+        {
+          "from": 1809,
+          "through": 1809,
+          "status": "11月28日代表马斯喀特伊玛目的谢赫代维什接收堡垒",
+          "sources": [
+            "19C-GULF3-LAF",
+            "19C-GULF3-L14"
+          ]
+        }
+      ],
+      "note": "无证据显示英方留下长驻军或接管格什姆全岛。此堡后续接管范围和终年有待另查。"
     }
   ]
 }
