@@ -9,9 +9,9 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=pilot1">
-<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-regions-1544-1599-mobile-focus-20261015-newyear-focus-v1-compact-no-milestones-v2-two-pane-desktop-v1-legend-wrap-20261015-year-badge-flush-top-left-v2">
+<link rel="stylesheet" href="css/dark-atlas-v2.css?v=timeline-v1800-merged-ch1ch2-singlecard-stablewidth-basemap-compare-20261015-regions-1544-1599-mobile-focus-20261015-newyear-focus-v1-compact-no-milestones-v2-two-pane-desktop-v1-legend-wrap-20261015-year-badge-flush-top-left-v2-reader-navigation">
 
-<link rel="stylesheet" href="css/history-stories.css?v=remove-dynamic-toc-20261110">
+<link rel="stylesheet" href="css/history-stories.css?v=reader-event-action-20261116">
 <link rel="stylesheet" href="css/eighteenth-overlap-right-dossier.css?v=18c-native-right-overlap-20261112-fix44-single-region-">
 <link rel="stylesheet" href="css/atlas-density-map.css?v=atlas52-display-density-20261113">
 </head>
@@ -53,11 +53,14 @@
     </div>
     <div id="seventeenthEventWindowRange" class="atlas-event-window-summary" role="status" aria-live="polite">地图默认展示所选年份及此前三年事件；疆域始终按当前年份</div>
     <div class="atlas-event-query-row">
-     <label for="seventeenthEventSearch" class="sr-only">搜索本十年历史事件</label>
-     <input type="search" id="seventeenthEventSearch" autocomplete="off" placeholder="搜索事件名称、人物或地点" aria-describedby="seventeenthSearchStatus">
+     <label for="seventeenthEventSearch" class="sr-only">搜索历史事件</label>
+     <input type="search" id="seventeenthEventSearch" autocomplete="off" placeholder="搜索事件名称、人物或地点" aria-describedby="seventeenthSearchScope seventeenthSearchStatus">
      <button type="button" id="clearSeventeenthEventSearch" aria-label="清除事件搜索" hidden>清除</button>
     </div>
-    <div id="seventeenthSearchStatus" class="atlas-event-search-status" role="status" aria-live="polite"></div>
+    <div class="atlas-event-search-details">
+     <span id="seventeenthSearchScope"></span>
+     <span id="seventeenthSearchStatus" role="status" aria-live="polite"></span>
+    </div>
    </div>
    <label class="chapter-archive-toggle"><input type="checkbox" id="showFullChapterArchive">查阅本章完整档案</label>
    <div id="eventList" class="event-list"><div class="loading">正在读取历史资料……</div></div>
@@ -110,7 +113,7 @@
    <div class="timeline-head">
     <div><strong>历史时间轴</strong></div>
     <div class="year-buttons">
-     <label class="timeline-direct-year"><span>直达</span><input id="jumpYear" type="number" inputmode="numeric" min="1497" max="1599" value="1497" step="1" aria-label="输入已发布的历史年份，回车跳转" title="输入已发布年份，按回车跳转"></label>
+     <label class="timeline-direct-year"><span>直达</span><input id="jumpYear" type="number" inputmode="numeric" min="1497" max="1497" value="1497" step="1" aria-label="输入历史年份，回车跳转" title="输入年份，按回车跳转"></label>
      <button type="button" id="prevYear" aria-label="上一年">‹</button><span id="timeYear">1497</span><button type="button" id="nextYear" aria-label="下一年">›</button>
      <button type="button" id="playBtn" aria-label="播放时间轴">▶</button>
     </div>
@@ -121,7 +124,7 @@
     <div class="chapter-track" id="chapterTrack" role="group" aria-label="第二层：邻近十年章节"></div>
     <button type="button" class="timeline-decade-arrow" id="browseDecadeNext" aria-label="向后浏览十年章节">›</button>
    </div>
-   <div class="timeline-year-line"><span id="timelineAvailability">已发布至1599年</span></div>
+   <div class="timeline-year-line"><span id="timelineAvailability">正在加载年份</span><button type="button" id="latestPreviewChapter" class="latest-preview-chapter" hidden>第36章 · 1850—1859 · 预览 ›</button></div>
    <div class="range-wrap">
     <input id="yearRange" type="range" min="1497" max="1509" value="1497" step="1" aria-label="第三层：当前章节逐年选择">
     <div class="ticks"><span id="yearStartLabel">1497</span><span id="yearEndLabel">1509</span></div>
@@ -149,8 +152,8 @@
 <script src="js/atlas-reader-copy.js?v=atlas47-public-copy-lock-20261112"></script>
 <script src="js/century-chapter-narratives.js?v=atlas45-chapter36-batch14"></script>
 <script src="js/atlas-density-policy.js?v=atlas52-display-density-20261113"></script>
- <script src="app.js?v=atlas46-click-notes-20261112-atlas52-display-density-20261113-editor24-chapter35-batch4-editor23-19c-opening-editor26-chapter36-awadh-kanpur-route"></script>
-<script src="js/history-stories.js?v=18c12-cape-indigenous-resistance-20261110-18c13-westafrica-20261110-18c14-sierra-leone-20261110-18c15-india-fiscal-20261110-18c16-ceylon-20261110-18c17-frontier-20261110-18c18-garifuna-20261110-18c19-fedon-20261110-18c20-t11-20261111-18c28-t20-20261111-18c29-t23-20261111-18c30-t28-20261111-18c31-t33-20261111-18c33-gaps-20261112-fix44-single-region-editor23-19c-opening-release-chapter35-irish-narrative-editor25-chapter36"></script>
+ <script src="app.js?v=atlas46-click-notes-20261112-atlas52-display-density-20261113-editor24-chapter35-batch4-editor23-19c-opening-editor26-chapter36-awadh-kanpur-route-reader-navigation"></script>
+<script src="js/history-stories.js?v=18c12-cape-indigenous-resistance-20261110-18c13-westafrica-20261110-18c14-sierra-leone-20261110-18c15-india-fiscal-20261110-18c16-ceylon-20261110-18c17-frontier-20261110-18c18-garifuna-20261110-18c19-fedon-20261110-18c20-t11-20261111-18c28-t20-20261111-18c29-t23-20261111-18c30-t28-20261111-18c31-t33-20261111-18c33-gaps-20261112-fix44-single-region-editor23-19c-opening-release-chapter35-irish-narrative-editor25-chapter36-reader-event-action"></script>
 <script src="js/eighteenth-dynamic-spatial.js?v=18c-map-first-dynamic-areas-20261112-19c-release"></script>
 <script src="js/eighteenth-mass-spatial.js?v=atlas46-click-notes-20261112-19c-release"></script>
 <script src="js/eighteenth-batch36-spatial.js?v=18c-batch36-frontiers-mysore-130-83-20261112-19c-release"></script>
