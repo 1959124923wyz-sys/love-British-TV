@@ -7150,6 +7150,54 @@
       "label": "《孟买政府公报》／英国图书馆｜1852年11月3日卑谬占领战报",
       "url": "https://www.qdl.qa/en/archive/81055/vdc_100023612307.0x000004",
       "access": "IOR/R/15/1/129 ff.53–55，戈德温与兰伯特报告记1852年10月9日夺取卑谬。"
+    },
+    {
+      "id": "19C-GO-ABG",
+      "title": "阿布扎比历史城区赫森宫",
+      "publisher": "OpenStreetMap／Mapcarta",
+      "label": "OpenStreetMap／Mapcarta｜阿布扎比历史城区赫森宫",
+      "url": "https://mapcarta.com/N4001910834",
+      "access": "历史城区参照点，文件只写阿布扎比，不认定宫内具体签署室。"
+    },
+    {
+      "id": "19C-GO-K53",
+      "title": "肯博尔1853年5月11日呈报签约与海上争端",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "label": "大英图书馆／卡塔尔数字图书馆｜肯博尔1853年5月11日呈报签约与海上争端",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023547163.0x000040",
+      "access": "IOR/L/PS/20/C248C f.131v。沙迦外海盖印、迪拜处置案件。"
+    },
+    {
+      "id": "19C-GO-K53B",
+      "title": "肯博尔报告阿布扎比用印及近岸争端",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "label": "大英图书馆／卡塔尔数字图书馆｜肯博尔报告阿布扎比用印及近岸争端",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023547163.0x000041",
+      "access": "IOR/L/PS/20/C248C f.132r。5月11日阿布扎比首领用印。"
+    },
+    {
+      "id": "19C-GO-L53",
+      "title": "洛里默记1853年驻扎官出海与签约",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "label": "大英图书馆／卡塔尔数字图书馆｜洛里默记1853年驻扎官出海与签约",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100022770472.0x000047",
+      "access": "IOR/R/15/1/729 f.33r；当地领袖用印、停战效力与履行监督。"
+    },
+    {
+      "id": "19C-GO-SHG",
+      "title": "沙迦",
+      "publisher": "GeoNames",
+      "label": "GeoNames｜沙迦",
+      "url": "https://www.geonames.org/292672/sharjah.html",
+      "access": "沿用1820年专题沙迦旧港相关地点坐标。"
+    },
+    {
+      "id": "19C-GO-T53",
+      "title": "1853年《永久海上休战条约》及批准",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "label": "大英图书馆／卡塔尔数字图书馆｜1853年《永久海上休战条约》及批准",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100023462215.0x000061",
+      "access": "IOR/L/PS/20/G3/12 f.144r；签约方、英国政府执行与8月24日批准。"
     }
   ],
   "events": [
@@ -23409,6 +23457,127 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E19-GO-DUBAI53",
+      "year": 1853,
+      "start_year": 1853,
+      "end_year": 1853,
+      "visible_from": 1853,
+      "date_label": "1853年5月",
+      "name": "迪拜方面在英国代理人催办后将一名被奴役者送回原奴主",
+      "description": "肯博尔报告英方代理人提出交涉后，迪拜方面严惩被控夺人的男子，又把从沙迦船上被夺走的人从阿布扎比带回并交给原奴主。",
+      "short_description": "肯博尔报告英方代理人提出交涉后，迪拜方面严惩被控夺人的男子，又把从沙迦船上被夺走的人从阿布扎比带回并交给原奴主。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-GO-K53"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 6,
+        "rationale": "有据的制度、经济或军事变化"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "id": "E19-GO-ABUSIGN53",
+      "year": 1853,
+      "start_year": 1853,
+      "end_year": 1853,
+      "visible_from": 1853,
+      "date_label": "1853年5月11日",
+      "name": "阿布扎比领袖在肯博尔到访时为永久休战用印",
+      "description": "肯博尔报告，赛义德·本·塔赫农亲自在阿布扎比为条约用印。",
+      "short_description": "肯博尔报告，赛义德·本·塔赫农亲自在阿布扎比为条约用印。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 24.48227,
+      "lng": 54.35504,
+      "source_ids": [
+        "19C-GO-K53B",
+        "19C-GO-T53",
+        "19C-GO-ABG"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 6,
+        "rationale": "有据的制度、经济或军事变化"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "id": "E19-GO-TRUCE53",
+      "year": 1853,
+      "start_year": 1853,
+      "end_year": 1853,
+      "visible_from": 1853,
+      "date_label": "1853年5月4日",
+      "name": "《永久海上休战条约》开始生效",
+      "description": "阿拉伯海岸五方承诺停止彼此的海上敌对行动，约束其继承人。条约由英方监督执行，苏丹·本·萨格尔在沙迦外海先行用印，其他地方领袖陆续加入。",
+      "short_description": "阿拉伯海岸五方承诺停止彼此的海上敌对行动，约束其继承人。条约由英方监督执行，苏丹·本·萨格尔在沙迦外海先行用印，其他地方领袖陆续加入。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 25.33737,
+      "lng": 55.41206,
+      "source_ids": [
+        "19C-GO-T53",
+        "19C-GO-L53",
+        "19C-GO-K53",
+        "19C-GO-SHG"
+      ],
+      "geo_precision": "modern_named_place_reference",
+      "significance": {
+        "level": 6,
+        "rationale": "有据的制度、经济或军事变化"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "id": "E19-GO-APPROVE53",
+      "year": 1853,
+      "start_year": 1853,
+      "end_year": 1853,
+      "visible_from": 1853,
+      "date_label": "1853年8月24日",
+      "name": "英属印度总督参事会批准永久休战条约",
+      "description": "条约汇编记8月24日为英方批准日，与5月初地方领袖用印及条文生效分开。",
+      "short_description": "条约汇编记8月24日为英方批准日，与5月初地方领袖用印及条文生效分开。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-GO-T53"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 6,
+        "rationale": "有据的制度、经济或军事变化"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": []
     }
   ],
   "routes": [

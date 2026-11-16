@@ -5510,6 +5510,30 @@
       "label": "GeoNames｜Dibrugarh 城镇",
       "url": "https://www.geonames.org/1272648/dibrugarh.html",
       "access": "城镇参考点 27.47989、94.90837，不标作历史军营或关押设施建筑。"
+    },
+    {
+      "id": "19C-GO-ARB",
+      "title": "洛里默记逃亡潜水工与采珠争端",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "label": "大英图书馆／卡塔尔数字图书馆｜洛里默记逃亡潜水工与采珠争端",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100022770472.0x00003b",
+      "access": "IOR/R/15/1/729 f.27r；债务追索、庇护与1840年海上争端。"
+    },
+    {
+      "id": "19C-GO-T43",
+      "title": "1843年十年海上休战条文首页",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "label": "大英图书馆／卡塔尔数字图书馆｜1843年十年海上休战条文首页",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100023462215.0x00005e",
+      "access": "IOR/L/PS/20/G3/12 f.142v；署期、五方及采珠缘由。"
+    },
+    {
+      "id": "19C-GO-T43B",
+      "title": "1843年休战条文续页",
+      "publisher": "大英图书馆／卡塔尔数字图书馆",
+      "label": "大英图书馆／卡塔尔数字图书馆｜1843年休战条文续页",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100023462215.0x00005f",
+      "access": "IOR/L/PS/20/G3/12 f.143r；期限、赔偿与报告渠道。"
     }
   ],
   "events": [
@@ -20869,6 +20893,65 @@
       ],
       "research_v6_stage_ids": [],
       "geolocation_limit_zh": "北部省汇总统计，不分配至单个入境港。"
+    },
+    {
+      "id": "E19-GO-BANKS40",
+      "year": 1840,
+      "start_year": 1840,
+      "end_year": 1840,
+      "visible_from": 1840,
+      "date_label": "1840年",
+      "name": "英国驻扎官受理采珠水域船只争端",
+      "description": "洛里默记载，阿布扎比、迪拜、沙迦方面的船户在采珠水域及海上发生争端，英国驻扎官按休战约定调处。",
+      "short_description": "洛里默记载，阿布扎比、迪拜、沙迦方面的船户在采珠水域及海上发生争端，英国驻扎官按休战约定调处。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-GO-ARB"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 6,
+        "rationale": "有据的制度、经济或军事变化"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": []
+    },
+    {
+      "id": "E19-GO-TRUCE43",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年6月1日",
+      "name": "海岸五方订立十年海上休战",
+      "description": "正文定期至1853年5月底，暂停各方争索。发生海上袭击后，受害方先向英方报告，获证实的损失由英方催办补偿。",
+      "short_description": "正文定期至1853年5月底，暂停各方争索。发生海上袭击后，受害方先向英方报告，获证实的损失由英方催办补偿。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-GO-T43",
+        "19C-GO-T43B"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 6,
+        "rationale": "有据的制度、经济或军事变化"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [],
+      "research_original_node_ids": []
     }
   ],
   "routes": [
