@@ -269,7 +269,6 @@ try:
     driver.find_element(By.ID, "browseDecadeNext").click()
     verify("1950s are available as a historical preview",
            """document.querySelector('#chapterTrack [data-decade="1950"]').classList.contains('topic-preview')""", driver)
-    driver.find_element(By.ID, "browseDecadeNext").click()
     verify("1960s remain unavailable",
            """document.querySelector('#chapterTrack [data-decade="1960"]').classList.contains('unpublished')""", driver)
     driver.execute_script("""document.querySelector('#chapterTrack [data-decade="1960"]').click()""")
