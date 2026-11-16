@@ -20,7 +20,7 @@ browser=webdriver.Chrome(options=opt)
 wait=WebDriverWait(browser,40)
 try:
     browser.get("http://127.0.0.1:8765/?year=1544")
-    wait.until(lambda d:d.execute_script("return document.getElementById('bigYear')?.textContent==='1544' && document.querySelector('#eventCount')?.textContent.endsWith('项')"))
+    wait.until(lambda d:d.execute_script("return document.getElementById('bigYear')?.textContent==='1544' && document.querySelector('#workspace')?.dataset.atlasReady==='true'"))
     assert browser.execute_script("return !document.getElementById('milestoneDots') && !document.querySelector('.milestone-dot')"), "Yellow timeline markers returned"
     assert browser.execute_script("return !document.getElementById('historicalRegionGuideDetails').open"), "Regional notes must be collapsed by default"
     assert browser.execute_script("return document.getElementById('mapLayerTerritory').checked && document.getElementById('mapLayerEvents').checked"), "Approved two-map-layer format regressed"
