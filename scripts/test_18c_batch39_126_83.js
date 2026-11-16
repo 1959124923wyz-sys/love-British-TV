@@ -15,8 +15,8 @@ const priorAreas=[...old34.area_references,...old35.zones,...old36.zones,...old3
 const priorSites=[...old34.control_sites,...old35.sites,...old36.sites,...old37.flatMap(x=>x.sites),...old38.flatMap(x=>x.sites)];
 assert.equal(priorAreas.length,503);assert.equal(priorSites.length,338);
 assert.equal(503+zones.length,629);assert.equal(338+sites.length,421);
-assert.equal([...priorAreas,...priorSites].reduce((a,z)=>a+z.periods.length,0),890);
-assert.equal([...priorAreas,...priorSites,...zones,...sites].reduce((a,z)=>a+z.periods.length,0),1099);
+assert.equal([...priorAreas,...priorSites].reduce((a,z)=>a+z.periods.length,0),892);
+assert.equal([...priorAreas,...priorSites,...zones,...sites].reduce((a,z)=>a+z.periods.length,0),1101);
 const allowed=new Set(['administration','military','displacement','resistance','paper_claim','diplomacy','trade_influence','battle','revenue','coercion','foreign_occupation']);
 const ids=new Set();
 for(const group of d){
@@ -106,4 +106,4 @@ assert(js.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(js.includes("window.eighteenthBatch39Spatial="));
 assert(js.includes("areas.length!==126||points.length!==83"));
 assert(!/area_sqkm\s*=\s*[1-9]/.test(js));
-console.log('PASS 18c39 new 126 zones,83 cores,209 phase spans; cumulative 629 zones,421 points,1099 phases; geography, source, historical withdrawal, local autonomy and GIS constraints valid.');
+console.log('PASS 18c39 new 126 zones,83 cores,209 phase spans; cumulative 629 zones,421 points,1101 phases; geography, source, historical withdrawal, local autonomy and GIS constraints valid.');

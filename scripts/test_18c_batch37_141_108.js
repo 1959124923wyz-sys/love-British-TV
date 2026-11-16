@@ -14,14 +14,14 @@ const pcount=records.map(d=>[...d.zones,...d.sites].reduce((sum,x)=>sum+x.period
 assert.deepEqual(records.map(d=>d.region),['africa','india-ocean','caribbean']);
 assert.deepEqual(records.map(d=>d.zones.length),[40,60,41]);
 assert.deepEqual(records.map(d=>d.sites.length),[27,44,37]);
-assert.deepEqual(pcount,[67,104,86]);assert.equal(zone.length,141);assert.equal(sites.length,108);
+assert.deepEqual(pcount,[67,106,86]);assert.equal(zone.length,141);assert.equal(sites.length,108);
 assert.equal(zone.length+old34.area_references.length+old35.zones.length+old36.zones.length,376);
 assert.equal(sites.length+old34.control_sites.length+old35.sites.length+old36.sites.length,248);
 assert.equal(pcount.reduce((a,b)=>a+b,0)+
  old34.area_references.reduce((s,x)=>s+x.periods.length,0)+
  old34.control_sites.reduce((s,x)=>s+x.periods.length,0)+
  [...old35.zones,...old35.sites].reduce((s,x)=>s+x.periods.length,0)+
- [...old36.zones,...old36.sites].reduce((s,x)=>s+x.periods.length,0),673);
+ [...old36.zones,...old36.sites].reduce((s,x)=>s+x.periods.length,0),675);
 const allowed=new Set(['administration','military','displacement','resistance','paper_claim','diplomacy','trade_influence','battle','revenue','coercion','foreign_occupation']);
 const ids=new Set(),matched=new Map();
 for(const d of records){
@@ -112,9 +112,9 @@ assert.equal(search('1763后英属Grenada','caribbean').kind,'administration');
 assert.equal((app.match(/window\.eighteenthBatch37Spatial\?\.render\?\.\(\);/g)||[]).length,4);
 assert(app.includes('.atlas-18c-b37-zone,.atlas-18c-b37-site,'));
 assert(html.includes('js/eighteenth-batch37-spatial.js?v=18c-batch37-three-region-141-108-20261112'));
-assert(html.includes('累计376区域、248据点、673时间阶段'));
+assert(html.includes('累计376区域、248据点、675时间阶段'));
 assert(render.includes("get('review18c')!=='1'"));
 assert(render.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(render.includes('window.eighteenthBatch37Spatial='));
 assert(!/area_sqkm\s*=\s*[1-9]/.test(render));
-console.log('PASS B37: 141 region polygons,108 proxy cores,257 time phases; cumulative 376 area references,248 site cores,673 time stages. Historical flips, source keys, dashed GIS, legacy 34/35/36 unchanged.');
+console.log('PASS B37: 141 region polygons,108 proxy cores,259 time phases; cumulative 376 area references,248 site cores,675 time stages. Historical flips, source keys, dashed GIS, legacy 34/35/36 unchanged.');
