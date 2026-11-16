@@ -7,6 +7,192 @@
   "geometry_file": "data/nineteenth-century-spatial-1850-1859.geojson",
   "transitions": [
     {
+      "stable_id": "kanpur-entrenchment-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-FORREST",
+        "19C36-KAN-DODD",
+        "19C36-KAN-NAM",
+        "19C36-KAN-PLAN",
+        "19C36-KAN-ASI",
+        "19C36-KAN-GASI",
+        "19C36-KAN-FORT",
+        "19C36-KAN-SEN"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1857-SIEGE",
+        "E19-KAN-1857-TERMS",
+        "E19-KAN-1857-EVAC"
+      ],
+      "finding": "惠勒所部与避难者在土垒内据守，6月27日撤往萨蒂乔拉渡口。"
+    },
+    {
+      "stable_id": "kanpur-ghat-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-FORREST",
+        "19C36-KAN-DELAFOSSE",
+        "19C36-KAN-SEN",
+        "19C36-KAN-MUK",
+        "19C36-KAN-PLAN",
+        "19C36-KAN-GAT"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1857-GHAT"
+      ],
+      "finding": "6月27日，离开惠勒营垒的人群在萨蒂乔拉渡口登船时遇袭。"
+    },
+    {
+      "stable_id": "kanpur-sawada-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-PLAN",
+        "19C36-KAN-FORREST",
+        "19C36-KAN-DODD",
+        "19C36-KAN-ASI",
+        "19C36-KAN-GASI"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1857-SAWADA"
+      ],
+      "finding": "渡口遇袭后，部分幸存妇孺被带到萨瓦达宅拘押。"
+    },
+    {
+      "stable_id": "kanpur-bibighar-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-PLAN",
+        "19C36-KAN-DODD",
+        "19C36-KAN-MUK",
+        "19C36-KAN-ASI",
+        "19C36-KAN-GASI",
+        "19C36-KAN-WELL",
+        "19C36-KAN-NAM",
+        "19C36-KAN-KAYE",
+        "19C36-KAN-EVE"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1857-BIBI-TRANSFER",
+        "E19-KAN-1857-BIBI",
+        "E19-KAN-1857-WELL",
+        "E19-KAN-1857-NEILL-ORDER",
+        "E19-KAN-1857-EXECUTION"
+      ],
+      "finding": "俘虏7月在比比加尔被杀。尼尔在同一处命令囚犯清理血迹，随后施以绞刑。"
+    },
+    {
+      "stable_id": "kanpur-bithur-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1858,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-DISPATCH",
+        "19C36-KAN-KAYE",
+        "19C36-KAN-GB",
+        "19C36-KAN-DODD",
+        "19C36-KAN-GRANT",
+        "19C36-KAN-TREAS",
+        "19C36-KAN-CUSTODY"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1857-BITHUR",
+        "E19-KAN-1857-BITHUR-AUG",
+        "E19-KAN-1857-BITHUR-DEC",
+        "E19-KAN-1857-TREASURE"
+      ],
+      "finding": "英印军于7月搜掠并焚烧比图尔宫。12月再次进入比图尔，毁坏庙宇，从宫址的一处井中取走金银器。"
+    },
+    {
+      "stable_id": "kanpur-kanpur-1850s",
+      "baseline_1849": false,
+      "transition": "local_stage_changes_and_year_end_garrison",
+      "first_display_year": 1857,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-FORREST",
+        "19C36-KAN-DODD",
+        "19C36-KAN-NAM",
+        "19C36-KAN-GK",
+        "19C36-KAN-NANA",
+        "19C36-KAN-SEN",
+        "19C36-KAN-DISPATCH",
+        "19C36-KAN-KAYE",
+        "19C36-KAN-DELAFOSSE",
+        "19C36-KAN-PAPERS",
+        "19C36-KAN-TREAS"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1857-RISING",
+        "E19-KAN-1857-NANA-GOV",
+        "E19-KAN-1857-NANA-KOTWAL",
+        "E19-KAN-1857-REOCCUPY",
+        "E19-KAN-1857-LOOT",
+        "E19-KAN-1857-SHERER",
+        "E19-KAN-1857-NEILL",
+        "E19-KAN-1857-LOOT-ORDER",
+        "E19-KAN-1857-LIST",
+        "E19-KAN-1857-RETURN",
+        "E19-KAN-1857-CONVOY",
+        "E19-KAN-1857-CAMPBELL",
+        "E19-KAN-1858-BOXES"
+      ],
+      "finding": "1857年坎普尔数度易手。12月6日反攻后，英方维持对城市和渡河据点的控制。 6月起事、7月重占、11月再次易手与12月的年末状态分列。"
+    },
+    {
+      "stable_id": "kanpur-fatehpur-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-RENAUD",
+        "19C36-KAN-DODD",
+        "19C36-KAN-GF"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1857-FATEHPUR"
+      ],
+      "finding": "1857年7月12日，哈夫洛克与里诺在法泰赫普尔会合，与起事军交战。"
+    },
+    {
+      "stable_id": "kanpur-shivpuri-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1859,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-KAN-SHIV",
+        "19C36-KAN-MARTYR",
+        "19C36-KAN-GS"
+      ],
+      "evidence_anchors": [
+        "E19-KAN-1859-TRIAL",
+        "E19-KAN-1859-EXEC"
+      ],
+      "finding": "塔蒂亚·托佩在这里受军事审讯，1859年4月18日被处决。"
+    },
+    {
       "stable_id": "queensland-nsw-29th-parallel-1859",
       "baseline_1849": false,
       "transition": "documented_administrative_boundary_segment",
@@ -4147,6 +4333,19 @@
     }
   ],
   "open_items": [
+    {
+      "stable_id": "kanpur-1857-sites-and-custody",
+      "status": "research_pending",
+      "finding": "萨蒂乔拉撤离虚线只接有据起点和终点。阿赫尔瓦旧路口、两处潘杜河战地、坎普尔火药库、浮桥和比图尔宫井确址待旧图；比图尔7月与8月行动分列。沿途报复总数和1858年财物保管后续待查档。",
+      "source_ids": [
+        "19C36-KAN-FORREST",
+        "19C36-KAN-DISPATCH",
+        "19C36-KAN-DODD",
+        "19C36-KAN-PLAN",
+        "19C36-KAN-CUSTODY",
+        "19C36-KAN-TREAS"
+      ]
+    },
     {
       "stable_id": "queensland-native-police-sites-and-boundary",
       "status": "research_pending",
