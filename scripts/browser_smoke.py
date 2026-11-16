@@ -266,6 +266,7 @@ try:
            """document.querySelector('#chapterTrack [data-decade="1930"]').classList.contains('topic-preview')""", driver)
     verify("1940s are available as a historical preview",
            """document.querySelector('#chapterTrack [data-decade="1940"]').classList.contains('topic-preview')""", driver)
+    driver.find_element(By.ID, "browseDecadeNext").click()
     verify("1950s remain unavailable",
            """document.querySelector('#chapterTrack [data-decade="1950"]').classList.contains('unpublished')""", driver)
     driver.execute_script("""document.querySelector('#chapterTrack [data-decade="1950"]').click()""")
@@ -1455,7 +1456,7 @@ try:
     print("PASS: 1920 Cork street routes remain reachable at street-scale zoom")
     driver.get("http://127.0.0.1:8765/?year=1948")
     wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
-    verify("1948 must be available with the Batang Kali route and year-end Ceylon",
+    verify("1948 must be available with the Batang Kali route",
            """document.querySelector('#chapterLabel').textContent.includes('第45章') &&
               window.atlasStoryBridge.activeEventWindow().routeIds.includes('E20-MAL-ROUTE-ULU')""", driver)
     driver.find_element(By.CSS_SELECTOR, '#eventList [data-eid="E20-MAL-KILL"]').click()
