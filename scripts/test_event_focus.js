@@ -16,9 +16,11 @@ for(const file of ['app.js','app-continuity-1497-1529-preview.js']){
  const app=read(file);
  new vm.Script(app,{filename:file});
  const occurred=app.match(/function occurredByYear\(item,selectedYear\)\{[^}]*\}/)?.[0];
- const start=app.indexOf('function canLocateEvent(item,atYear){');
+ const gateStart=app.indexOf('function canLocateEvent(item,atYear){');
+ const coordinatesStart=app.indexOf('function hasEventCoordinates(item){');
+ const start=coordinatesStart<0?gateStart:coordinatesStart;
  const end=app.indexOf('function focusEventFromSidebar(item){',start);
- assert.ok(start>=0&&end>start,file+': target coordinate validator absent');
+ assert.ok(gateStart>=0&&end>gateStart,file+': target coordinate validator absent');
  const locationGate=vm.runInNewContext(occurred+'\n'+app.slice(start,end)+'\ncanLocateEvent');
  assert.equal(locationGate(flodden,1513),true,'Confirmed Flodden location should be navigable');
  assert.equal(locationGate(flodden,1512),false,'Cannot locate future event');

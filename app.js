@@ -228,7 +228,7 @@ let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthC
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
 const enable19cAtlas=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
-const nineteenthPreviewDecades=[1820,1830,1840,1850,1860,1870];
+const nineteenthPreviewDecades=[1820,1830,1840,1850,1860,1870,1880];
 const initialYearParam=reviewParams.get('year')||'';
 const initialYear=/^\d{4}$/.test(initialYearParam)?Number(initialYearParam):1497;
 let nineteenthAtlasEnd=null,nineteenthSpatial=null;
@@ -324,15 +324,13 @@ function openDossier(item,typ){
  selected=item.id;
  selectedItemYear=(typ==='event'||typ==='route')&&Number.isFinite(Number(item.year))?Number(item.year):null;
  const date=place?'历史政治关系':candidate?'1497年':route?(item.date_label||item.year+'年'):item.date_label;
- const caption=place?'地理与政治':candidate?'候选登陆地点':route?(item.travel_mode==='land'?'陆路':'航海'):categoryName[item.category]||'历史事件';
+ const caption=place?'地理与政治':candidate?'候选登陆地点':route?({land:'陆路',river:'水路'}[item.travel_mode]||'航海'):categoryName[item.category]||'历史事件';
  const description=candidate?item.note:route?item.note:item.description;
  const storyChild=typ==='event'&&Boolean(window.HistoryStories?.isLinkedEvent?.(item,typ)); const representativeNote='';
  const showEventSources=!storyChild||item.year>=1800;
- const canMapFocus=typ==='event'&&canLocateEvent(item,year);
  const locateAction=typ==='event'?
-   '<div class="dossier-map-action"><button type="button" data-locate-event'+
-   (canMapFocus?'':' disabled')+'>在地图上定位</button>'+
-   (canMapFocus?'':'<small>该事件暂无可定位地点，或尚未发生</small>')+'</div>':'';
+   '<div class="dossier-map-action"><button type="button" data-locate-event="'+escapeHTML(item.id)+'">在地图上定位</button>'+
+   '<small data-locate-note hidden></small></div>':'';
  $('dossierBody').innerHTML='<div class="dossier-kicker">'+escapeHTML(caption)+' · '+escapeHTML(date)+'</div><h2>'+escapeHTML(conciseEventTitle(item))+'</h2>'+
   (conciseEventTitle(item)!==item.name?'<details class="atlas-complete-title"><summary>完整事件名称</summary><p>'+escapeHTML(item.name)+'</p></details>':'')+
   (readerCopy.clean(description)?'<p>'+escapeHTML(readerCopy.clean(description))+'</p>':'')+representativeNote+
@@ -341,8 +339,10 @@ function openDossier(item,typ){
  openPanel('dossier');
  window.HistoryStories?.onEventOpened?.(item,typ);
  const locateButton=$('dossierBody').querySelector('[data-locate-event]');
- if(locateButton&&!locateButton.disabled)
+ if(locateButton){
+  updateDossierMapAction(locateButton,item);
   locateButton.addEventListener('click',()=>focusEventFromSidebar(item,{revealMap:true}));
+ }
  document.querySelectorAll('.event-item').forEach(el=>el.classList.toggle('selected',el.dataset.eid===selected));
 }
 // Modern heritage scheduled boundaries were fetched from the official HES ArcGIS service.
@@ -567,11 +567,22 @@ function renderEventList(){
   });
  });
 }
+function hasEventCoordinates(item){
+ return Boolean(item&&Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&
+  Math.abs(item.lat)<=90&&Math.abs(item.lng)<=180);
+}
 // No map movement without a valid and already occurred source location.
 function canLocateEvent(item,atYear){
- return Boolean(item&&occurredByYear(item,atYear)&&
-  Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&
-  Math.abs(item.lat)<=90&&Math.abs(item.lng)<=180);
+ return hasEventCoordinates(item)&&occurredByYear(item,atYear);
+}
+function updateDossierMapAction(button=$('dossierBody').querySelector('[data-locate-event]'),item){
+ if(!button)return;
+ item??=window.atlasStoryBridge?.eventById(button.dataset.locateEvent);
+ const note=button.parentElement.querySelector('[data-locate-note]');
+ button.disabled=!canLocateEvent(item,year);
+ note.hidden=!button.disabled;
+ note.textContent=!hasEventCoordinates(item)?'该事件暂无可定位地点。':
+  button.disabled?'将时间轴移至'+item.year+'年后即可定位。':'';
 }
 function focusEventFromSidebar(item){
  const options=arguments[1]||{};
@@ -580,8 +591,6 @@ function focusEventFromSidebar(item){
  focusRequestToken++;
  focusedEventId=null;
  if(!canLocateEvent(item,year)){
-  const note=!occurredByYear(item,year)?'请先将时间轴移至事件发生年份。':'该事件暂无可定位地点。';
-  if(!options.keepDossier)$('dossierBody').insertAdjacentHTML('beforeend','<p class="atlas-location-note">'+escapeHTML(note)+'</p>');
   renderPoints();
   return;
  }
@@ -2305,6 +2314,7 @@ function setYear(v){
   focusedEventId=null;focusRequestToken++;
   if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
   year=next;atlas=chosen;
+  updateDossierMapAction();
   $('bigYear').textContent=year;$('timeYear').textContent=year;
   const decadeTotal=atlas.events.length;
   const observed=atlas.events.filter(e=>occurredByYear(e,year)).length;
@@ -2357,6 +2367,7 @@ function setYear(v){
  if(atlas&&chosen!==atlas)$('showFullChapterArchive').checked=false;
  const changedYear=year!==next;
  year=next;atlas=chosen;
+ updateDossierMapAction();
  $('bigYear').textContent=year;$('timeYear').textContent=year;
  const first=year<1500,second=year>=1500&&year<1510,third=year>=1510&&year<1520,fourth=year>=1520&&year<1530,fifth=year>=1530&&year<1540,sixth=year>=1540&&year<1550,seventh=year>=1550&&year<1560,eighth=year>=1560&&year<1570,ninth=year>=1570&&year<1580,tenth=year>=1580&&year<1590,eleventh=year>=1590;
  $('chapterTitlePrimary').textContent=sixth?'布洛涅与':fifth?'王权与':fourth?'边区与':third?'王冠越过':second?'通往未知海岸':'大西洋彼岸';
