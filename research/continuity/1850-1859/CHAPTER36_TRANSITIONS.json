@@ -7,6 +7,102 @@
   "geometry_file": "data/nineteenth-century-spatial-1850-1859.geojson",
   "transitions": [
     {
+      "stable_id": "ajnala-mian-1850s",
+      "baseline_1849": false,
+      "transition": "documented_station_within_inherited_colonial_control",
+      "first_display_year": 1857,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AJN-COOPER",
+        "19C36-AJN-CORR",
+        "19C36-AJN-BLUE",
+        "19C36-AJN-GAZ",
+        "19C36-AJN-GMIAN"
+      ],
+      "evidence_anchors": [
+        "E19-AJN-1857-DISARM",
+        "E19-AJN-1857-OUTBREAK",
+        "E19-AJN-1857-MIAN-TRIAL"
+      ],
+      "finding": "1857年5月，第26团在米安米尔被解除武装。7月士兵起事离营。后来在别处被捕的一批士兵被押回这里受审。"
+    },
+    {
+      "stable_id": "ajnala-dadian-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AJN-CORR",
+        "19C36-AJN-BLUE",
+        "19C36-AJN-CONDOS",
+        "19C36-AJN-CENSUS",
+        "19C36-AJN-SURVEY",
+        "19C36-AJN-GDAD"
+      ],
+      "evidence_anchors": [
+        "E19-AJN-1857-SIGHTING"
+      ],
+      "finding": "7月31日，达迪安村民发现拉维河一带的第26团士兵，向地方官报信。"
+    },
+    {
+      "stable_id": "ajnala-town-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AJN-COOPER",
+        "19C36-AJN-CORR",
+        "19C36-AJN-GAJN"
+      ],
+      "evidence_anchors": [
+        "E19-AJN-1857-DETENTION",
+        "E19-AJN-1857-SHOOTING",
+        "E19-AJN-1857-CUSTODY-DEATHS"
+      ],
+      "finding": "7月31日夜，被俘士兵被押进阿杰纳拉。库珀次日命人枪决囚犯。"
+    },
+    {
+      "stable_id": "ajnala-well-1850s",
+      "baseline_1849": false,
+      "transition": "new_atlas_record_existing_historic_place",
+      "first_display_year": 1857,
+      "last_display_year": 1857,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AJN-COOPER",
+        "19C36-AJN-BLUE",
+        "19C36-AJN-CONDOS",
+        "19C36-AJN-EXHUME",
+        "19C36-AJN-GWELL"
+      ],
+      "evidence_anchors": [
+        "E19-AJN-1857-BURIAL"
+      ],
+      "finding": "据库珀记录，8月1日，枪决和拘押中死亡者的遗体被投入这口旧井。"
+    },
+    {
+      "stable_id": "ajnala-fort-1850s",
+      "baseline_1849": false,
+      "transition": "documented_station_within_inherited_colonial_control",
+      "first_display_year": 1857,
+      "last_display_year": 1859,
+      "historical_end_year": null,
+      "source_ids": [
+        "19C36-AJN-BLUE",
+        "19C36-AJN-FORT",
+        "19C36-AJN-GFORT"
+      ],
+      "evidence_anchors": [
+        "E19-AJN-1857-FORT"
+      ],
+      "finding": "1857年5月，英军派第81团的一部分进入戈宾德格尔堡，随后逐步接替印度部队的驻防。"
+    },
+    {
       "stable_id": "kanpur-entrenchment-1850s",
       "baseline_1849": false,
       "transition": "new_atlas_record_existing_historic_place",
@@ -4333,6 +4429,20 @@
     }
   ],
   "open_items": [
+    {
+      "stable_id": "ajnala-1857-capture-sites-and-returns",
+      "status": "research_pending",
+      "finding": "达迪安为首次发现的一带，河中岛、巴尔渡口的1857年位置、警署与拘押建筑及枪决点待史图。陆路虚线仅接米安米尔军营和阿杰纳拉，不连入村庄或推断越河。沿河争斗、拘押和后捕后审判分别录入。米安米尔和戈宾德格尔堡承接既有旁遮普殖民控制，驻地完整边界不绘。2014年发掘与现代研究仅作证据。",
+      "source_ids": [
+        "19C36-AJN-COOPER",
+        "19C36-AJN-CORR",
+        "19C36-AJN-BLUE",
+        "19C36-AJN-CONDOS",
+        "19C36-AJN-SURVEY",
+        "19C36-AJN-FORENSIC",
+        "19C36-AJN-ORIGIN"
+      ]
+    },
     {
       "stable_id": "kanpur-1857-sites-and-custody",
       "status": "research_pending",
