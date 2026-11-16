@@ -494,31 +494,30 @@ try:
           if(!el)throw new Error('Missing map layer: '+arguments[0]);
           el.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,view:window}));
         """,selector)
-    click_map_path("#map .atlas-violet-wartime-vicinity")
-    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody .zone-dossier-facts')!==null"))
-    verify("occupied zone dossier has no precision warning or dated source",
-           """document.querySelector('#dossierBody').textContent.includes('英军驻地附近概略控制区') &&
-              !document.querySelector('#dossierBody .zone-precision-note') &&
-              document.querySelector('#dossierBody .source-details')!==null &&
-              document.querySelectorAll('#dossierBody .zone-record-link').length>0""",driver)
+    def verify_region_sources(selector):
+        click_map_path(selector)
+        wait.until(lambda d: d.execute_script(
+            "return document.querySelector('#atlasHistoricOverlapPanel .is-selected .atlas-18c-overlap-source-links a')!==null"))
+        verify("historical region dossier lost its title",
+               "!!document.querySelector('#atlasHistoricOverlapPanel .is-selected .atlas-18c-overlap-title').textContent.trim()", driver)
+    verify_region_sources("#map .atlas-violet-wartime-vicinity")
     click_map_path("#map .atlas-war-reach-schematic")
-    verify("PR38 military reach must disclose non-annexation and sources",
-           """document.querySelector('#dossierBody').textContent.includes('有据军事行动方向示意') &&
-              !document.querySelector('#dossierBody .zone-editorial-warning') &&
-              document.querySelector('#dossierBody .source-details')!==null""",driver)
-    click_map_path("#map .atlas-contested-zone")
-    wait.until(lambda d: d.execute_script("return document.querySelector('#dossierBody').textContent.includes('交战与争夺区')"))
-    verify("contested zone has no related evidence/campaign records",
-           """!document.querySelector('#dossierBody .zone-precision-note') &&
-              document.querySelectorAll('#dossierBody [data-zone-event]').length>0 &&
-              document.querySelector('#dossierBody .source-details')!==null""",driver)
-    driver.execute_script("document.querySelector('#dossierBody [data-zone-event]').click()")
-    verify("selecting a zone's related event did not open the event dossier",
-           "document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史事件') || document.querySelector('#dossierBody .dossier-kicker').textContent.includes('地理与政治') || document.querySelector('#dossierBody .dossier-kicker').textContent.includes('王室授权') || document.querySelector('#dossierBody .dossier-kicker').textContent.includes('战事')",driver)
-    click_map_path("#map .atlas-territory-solid")
-    verify("old clickable territory intro and source URLs disappeared",
-           """document.querySelector('#dossierBody .dossier-kicker').textContent.includes('历史政治地理') &&
-              document.querySelector('#dossierBody .zone-dossier-facts')!==null""",driver)
+    verify("dated military movement dossier must retain sources",
+           "document.querySelector('#dossierBody .source-details a')!==null", driver)
+    driver.execute_script("""
+      const m=window.__historicOverlapHost.map, point=L.latLng(50.75,1.63);
+      m.stop().setView(point,9,{animate:false});
+      window.historicOverlapDossier.openAt(point,'visible-polygon','front-boulonnais-1545-1549');
+    """)
+    verify("dated contested zone archive lost its source links",
+           "document.querySelector('#atlasHistoricOverlapPanel .is-selected .atlas-18c-overlap-source-links a')!==null",driver)
+    related_event = "#dossierBody .is-selected [data-area-event]"
+    verify("contested zone dossier lost its dated events",
+           f"!!document.querySelector('{related_event}')", driver)
+    driver.execute_script("document.querySelector(arguments[0]).click()", related_event)
+    verify("selecting the related event did not open its dossier",
+           "document.querySelector('#dossierBody h2')!==null && !document.querySelector('#atlasHistoricOverlapPanel')", driver)
+    verify_region_sources("#map .atlas-territory-solid")
     verify("terrains rendered atop Scotland are preventing sovereignty click",
            "document.querySelectorAll('.leaflet-sovereignty-pane path.leaflet-interactive').length>0",driver)
     click_map_path(".leaflet-sovereignty-pane path.leaflet-interactive")
@@ -825,7 +824,7 @@ try:
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
               document.querySelector('#yearRange').max==='1559' &&
-              document.querySelector('#jumpYear').max==='1859'""",driver)
+              document.querySelector('#jumpYear').max==='1869'""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1559-years-end-status.png"))
     # CH8 published historic and source-specific GIS year-end regression.
     set_year(1560, expected_count(1560))
@@ -833,7 +832,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第七章') &&
               document.querySelectorAll('#map .atlas-eighth-enslavement-coast').length===0 &&
               document.querySelectorAll('#map .atlas-eighth-english').length===0 &&
-              document.querySelector('#jumpYear').max==='1859'""",driver)
+              document.querySelector('#jumpYear').max==='1869'""",driver)
     driver.save_screenshot(str(OUT / "chapter8-1560-independent-scotland.png"))
     set_year(1562, expected_count(1562))
     verify("1562 English garrison Le Havre, first noncolonial slaving band, departure route missing",
@@ -916,7 +915,7 @@ try:
            """document.querySelector('#chapterNav').textContent.includes('第八章') &&
               document.querySelectorAll('#map .atlas-ninth-english-garrison').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===0 &&
-              document.querySelector('#jumpYear').max==='1859'""",driver)
+              document.querySelector('#jumpYear').max==='1869'""",driver)
     driver.save_screenshot(str(OUT / "chapter9-1570-existing-Irish-castle-no-new-coast.png"))
     verify("1570 Winter Guinea fleet historical marker missing or wrongly treated as proven slaving sales",
            """document.querySelector('#eventList [data-eid="1570S-E038"] use').getAttribute('href').endsWith('#EXP') &&
@@ -1140,7 +1139,7 @@ try:
     verify("1589 event source routes or chronology lost",
            """document.querySelectorAll('#map .atlas-tenth-english-site').length===1 &&
               document.querySelectorAll('#map .atlas-voyage-hit').length===6 &&
-              document.querySelector('#jumpYear').max==='1859'""",driver)
+              document.querySelector('#jumpYear').max==='1869'""",driver)
     verify("1589 Jobson map should still retain policy reference region",
            "document.querySelectorAll('#map .atlas-tenth-land-policy-impact').length===1",driver)
     driver.save_screenshot(str(OUT / "chapter10-1589-English-raids-Munster.png"))
@@ -1169,7 +1168,7 @@ try:
               document.querySelectorAll('#map .atlas-eleventh-core').length===3 &&
               document.querySelectorAll('#map .atlas-eleventh-research-area').length===2 &&
               document.querySelectorAll('#map .atlas-tenth-english-site').length===0 &&
-              document.querySelector('#jumpYear').max==='1859'""",driver)
+              document.querySelector('#jumpYear').max==='1869'""",driver)
     set_year(1591, expected_count(1591))
     verify("1591 Santos year-end English occupation not displayed",
            "document.querySelectorAll('#map .atlas-eleventh-core').length===4",driver)
@@ -1299,7 +1298,7 @@ try:
     driver.save_screenshot(str(OUT / "chapter10-1599-Essex-town-order-route.png"))
     verify("1599 chapter terminal count wrong",
            """document.querySelectorAll('#map .atlas-eleventh-core').length===2 &&
-              document.querySelector('#jumpYear').max==='1859'""",driver)
+              document.querySelector('#jumpYear').max==='1869'""",driver)
     driver.save_screenshot(str(OUT / "chapter11-1599-Ireland.png"))
     driver.execute_script("document.querySelector('#mapLayerTerritory').click()")
     verify("1599 historical territory toggle must hide Essex route without hiding events",

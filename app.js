@@ -228,7 +228,7 @@ let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthC
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
 const enable19cAtlas=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
-const nineteenthPreviewDecades=[1820,1830,1840,1850];
+const nineteenthPreviewDecades=[1820,1830,1840,1850,1860];
 const initialYearParam=reviewParams.get('year')||'';
 const initialYear=/^\d{4}$/.test(initialYearParam)?Number(initialYearParam):1497;
 let nineteenthAtlasEnd=null,nineteenthSpatial=null;
@@ -2286,7 +2286,8 @@ function renderTimelineNavigation(){
   $('yearStartLabel').textContent=currentChapter.start;
   $('yearEndLabel').textContent=currentChapter.end;
  }
- $('latestPreviewChapter').hidden=browsingDecade!==1800||!storyPreviewChapterForDecade(1850);
+ const nextPageChapter=storyPreviewChapterForDecade(1850);
+ $('latestPreviewChapter').hidden=browsingDecade!==1800||!nextPageChapter;
  renderTimelineAvailability();
 }
 function setYear(v){
@@ -4006,7 +4007,7 @@ function jumpToEnteredYear(){
 }
 $('jumpYear').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();jumpToEnteredYear()}});
 $('jumpYear').addEventListener('change',jumpToEnteredYear);
-$('latestPreviewChapter').addEventListener('click',()=>{stopPlay();setYear(1850)});
+$('latestPreviewChapter').addEventListener('click',()=>browseDecade(1850));
 $('chapterTrack').addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&chapterRegistry){e.preventDefault();browseDecade(adjacentHalfCenturyPage(browsingDecade,e.deltaX>0?1:-1))}},{passive:false});
 $('browseDecadePrev').addEventListener('click',()=>{if(chapterRegistry)browseDecade(adjacentHalfCenturyPage(browsingDecade,-1))});
 $('browseDecadeNext').addEventListener('click',()=>{if(chapterRegistry)browseDecade(adjacentHalfCenturyPage(browsingDecade,1))});
