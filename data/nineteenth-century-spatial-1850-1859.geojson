@@ -8,6 +8,741 @@
   "features": [
     {
       "type": "Feature",
+      "id": "queensland-nsw-29th-parallel-1859",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            141.0,
+            -29.0
+          ],
+          [
+            148.95788398333332,
+            -29.0
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-nsw-29th-parallel-1859",
+        "name": "昆士兰与新南威尔士 · 南纬29度边段",
+        "start_year": 1859,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "1859年王室敕令把两殖民地的西段分界定在南纬29度，从巴旺河到东经141度。两地后来才开展联合测量。",
+        "source_ids": [
+          "19C36-QNP-PATTEXT",
+          "19C36-QNP-BOUND",
+          "19C36-QNP-SURVEY",
+          "19C36-QNP-CORNER"
+        ],
+        "source_urls": [
+          "https://www.foundingdocs.gov.au/resources/transcripts/qld1i_doc_1859.pdf",
+          "https://www.nrmmrrd.qld.gov.au/data-mapping/history/establishing-queenslands-borders/since-proclamation",
+          "https://www.ga.gov.au/scientific-topics/national-location-information/geography/state-territory-borders",
+          "https://qspatial.information.qld.gov.au/SurveyReport/SCR750221.pdf"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1859-PATENT",
+          "E19-QNP-1859-FOUND"
+        ],
+        "named_anchors": [
+          "巴旺河",
+          "南纬29度",
+          "东经141度"
+        ],
+        "mapping_method": "Statutory 29° S segment. 141° E is the exact western endpoint in the instrument; east uses the official survey monument longitude near the Barwon River, snapped to the named statutory parallel. No modern boundary traced.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "outline_style": "dashed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-charter-london-1859",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.14158,
+          51.50114
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-charter-london-1859",
+        "name": "伦敦 · 白金汉宫",
+        "start_year": 1859,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "英国王室签发设立昆士兰殖民地的敕令。",
+        "source_ids": [
+          "19C36-QNP-BIRTH",
+          "19C36-QNP-PATTEXT",
+          "19C36-QNP-ORD",
+          "19C36-QNP-BOUND",
+          "19C36-QNP-LON",
+          "19C36-QNP-GLON"
+        ],
+        "source_urls": [
+          "https://www.foundingdocs.gov.au/item-did-60.html",
+          "https://www.foundingdocs.gov.au/resources/transcripts/qld1i_doc_1859.pdf",
+          "https://www.foundingdocs.gov.au/item-sdid-48.html",
+          "https://www.nrmmrrd.qld.gov.au/data-mapping/history/establishing-queenslands-borders/since-proclamation",
+          "https://www.royal.uk/royal-residences-buckingham-palace",
+          "https://www.geograph.org.uk/photo/8009759"
+        ],
+        "named_anchors": [
+          "伦敦 · 白金汉宫"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1859-PATENT"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-sydney-government-1850s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.20732,
+          -33.86785
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-sydney-government-1850s",
+        "name": "悉尼 · 新南威尔士殖民政府",
+        "start_year": 1854,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "殖民秘书、行政会议和立法议会在悉尼处理骑警事务。",
+        "source_ids": [
+          "19C36-QNP-NOTICE",
+          "19C36-QNP-WALK",
+          "19C36-QNP-GEOSYD",
+          "19C36-QNP-EXEC",
+          "19C36-QNP-WALKADB",
+          "19C36-QNP-DISSINDEX",
+          "19C36-QNP-IND1857",
+          "19C36-QNP-CALLPOST",
+          "19C36-QNP-QSA",
+          "19C36-QNP-MORAPPT",
+          "19C36-QNP-MORGAZ",
+          "19C36-QNP-REP3",
+          "19C36-QNP-DAW",
+          "19C36-QNP-GCAL",
+          "19C36-QNP-RECRUIT",
+          "19C36-QNP-BIRTH",
+          "19C36-QNP-GAZ"
+        ],
+        "source_urls": [
+          "https://files.parliament.nsw.gov.au/fileapi/ParlFiles/GetArtifact?serverRelativeUrl=%2Ffcdocs%2FFCDocuments%2F1855%2F04420.pdf",
+          "https://www.fromthepage.com/slqld/colonial-secretary-s-correspondence/work-33054-010863",
+          "https://www.nsw.gov.au/visiting-and-exploring-nsw/locations-and-attractions/parliament-house",
+          "https://fromthepage.com/slqld/colonial-secretary-s-correspondence/work-33054-010873/display/35448346",
+          "https://adbonline.anu.edu.au/biography/walker-frederick-4784",
+          "https://www.parliament.nsw.gov.au/about-parliament/heritage-history/history-of-the-lc/first-council",
+          "https://files02.sl.nsw.gov.au/fotoweb/pdf/1576/157655870.pdf",
+          "https://frontierconflict.org/frederick-walker",
+          "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/424a1fff-432a-4574-a89d-c025efb574be/200-frontier-wars-records-at-queensland-state-archives.pdf",
+          "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/0fc07ca9-365d-43d0-add7-5408fe4b657d/research-guide-to-pre-separation-records-queenslands-early-history.pdf#page=30",
+          "https://trove.nla.gov.au/newspaper/article/229956855",
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=992",
+          "https://aiatsis.gov.au/sites/default/files/catalogue_resources/91884.pdf",
+          "https://www.grc.qld.gov.au/files/assets/public/v/1/council/documents/goondiwindi_regional_council_heritage_survey.pdf",
+          "https://archaeologyonthefrontier.com/wp-content/uploads/2018/06/burke-et-al-2018-recruitment.pdf",
+          "https://www.foundingdocs.gov.au/item-did-60.html",
+          "https://www.slq.qld.gov.au/media/48418"
+        ],
+        "named_anchors": [
+          "悉尼 · 新南威尔士殖民政府"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1854-SUSPEND",
+          "E19-QNP-1854-INSTRUCT",
+          "E19-QNP-1855-COUNCIL",
+          "E19-QNP-1855-DISMISS",
+          "E19-QNP-1855-TABLED",
+          "E19-QNP-1856-COMMIT",
+          "E19-QNP-1856-MARSH",
+          "E19-QNP-1856-CAL-END",
+          "E19-QNP-1857-ORDER1",
+          "E19-QNP-1857-REPORT",
+          "E19-QNP-1857-MORISSET",
+          "E19-QNP-1857-APPOINT",
+          "E19-QNP-1858-CENSURE",
+          "E19-QNP-1858-COMMIT",
+          "E19-QNP-1858-TOOTH",
+          "E19-QNP-1858-RETURN",
+          "E19-QNP-1858-REPORT",
+          "E19-QNP-1858-INQUEST",
+          "E19-QNP-1859-NSWGAZ"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-adelaide-house-1859",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.03005556,
+          -27.46336111
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-adelaide-house-1859",
+        "name": "布里斯班 · 阿德莱德屋",
+        "start_year": 1859,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "1859年12月，昆士兰新殖民政府在临时总督府宣告成立。",
+        "source_ids": [
+          "19C36-QNP-BIRTH",
+          "19C36-QNP-GAZ",
+          "19C36-QNP-ORD",
+          "19C36-QNP-DEAN",
+          "19C36-QNP-GDEAN",
+          "19C36-QNP-QA",
+          "19C36-QNP-QSACONT"
+        ],
+        "source_urls": [
+          "https://www.foundingdocs.gov.au/item-did-60.html",
+          "https://www.slq.qld.gov.au/media/48418",
+          "https://www.foundingdocs.gov.au/item-sdid-48.html",
+          "https://heritage.brisbane.qld.gov.au/heritage-places/309",
+          "https://mappingbrisbanehistory.com.au/location/adelaide-house-370/",
+          "https://blogs.archives.qld.gov.au/2022/10/13/queensland-frontier-wars/",
+          "https://www.qld.gov.au/recreation/arts/heritage/archives/collection/war/frontier-wars"
+        ],
+        "named_anchors": [
+          "布里斯班 · 阿德莱德屋"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1859-FOUND",
+          "E19-QNP-1859-TRANSFER"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-taroom-1858",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.798069,
+          -25.640753
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-taroom-1858",
+        "name": "塔鲁姆",
+        "start_year": 1858,
+        "end_year": 1858,
+        "display_kind": "political",
+        "summary_zh": "1858年调查委员会建议在塔鲁姆附近常驻两支骑警分队。",
+        "source_ids": [
+          "19C36-QNP-DAW",
+          "19C36-QNP-GTARO"
+        ],
+        "source_urls": [
+          "https://aiatsis.gov.au/sites/default/files/catalogue_resources/91884.pdf",
+          "https://tlcmap.org/index.php/layers/654"
+        ],
+        "named_anchors": [
+          "塔鲁姆"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1858-TAROOM"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-dawson-river-1858",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.264,
+          -25.699
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-dawson-river-1858",
+        "name": "上道森河 · 伊曼人遭报复",
+        "start_year": 1858,
+        "end_year": 1858,
+        "display_kind": "conflict",
+        "summary_zh": "1858年4月，骑警分队在上道森河山区追杀伊曼人。",
+        "source_ids": [
+          "19C36-QNP-REP3"
+        ],
+        "source_urls": [
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=992"
+        ],
+        "named_anchors": [
+          "上道森河 · 伊曼人遭报复"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1858-APRIL"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-hornet-bank-1857",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.407,
+          -25.757
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-hornet-bank-1857",
+        "name": "霍尼特班克牧场",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "1857年10月，伊曼人袭击牧场，弗雷泽一家及其雇工中有11人被杀。",
+        "source_ids": [
+          "19C36-QNP-HOR",
+          "19C36-QNP-QSA"
+        ],
+        "source_urls": [
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=622",
+          "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/424a1fff-432a-4574-a89d-c025efb574be/200-frontier-wars-records-at-queensland-state-archives.pdf"
+        ],
+        "named_anchors": [
+          "霍尼特班克牧场"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1857-HORNET"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-ipswich-1857",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.76067,
+          -27.62343
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-ipswich-1857",
+        "name": "伊普斯威奇",
+        "start_year": 1856,
+        "end_year": 1857,
+        "display_kind": "political",
+        "summary_zh": "霍尼特班克牧场袭击的幸存者在此提交证词。",
+        "source_ids": [
+          "19C36-QNP-IND1857",
+          "19C36-QNP-GIPS",
+          "19C36-QNP-QSA",
+          "19C36-QNP-HOR"
+        ],
+        "source_urls": [
+          "https://files02.sl.nsw.gov.au/fotoweb/pdf/1576/157655870.pdf",
+          "https://www.geonames.org/2162644",
+          "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/424a1fff-432a-4574-a89d-c025efb574be/200-frontier-wars-records-at-queensland-state-archives.pdf",
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=622"
+        ],
+        "named_anchors": [
+          "伊普斯威奇"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1856-LETTER",
+          "E19-QNP-1857-DEPOSITION"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-nankin-creek-1856",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.646,
+          -23.384
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-nankin-creek-1856",
+        "name": "南金溪 · 菲茨罗伊河",
+        "start_year": 1856,
+        "end_year": 1856,
+        "display_kind": "conflict",
+        "summary_zh": "默里带骑警等人袭击达兰巴尔人的营地。",
+        "source_ids": [
+          "19C36-QNP-NAN"
+        ],
+        "source_urls": [
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=945"
+        ],
+        "named_anchors": [
+          "南金溪 · 菲茨罗伊河"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1856-NANKIN"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-brisbane-government-1850s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.02809,
+          -27.46794
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-brisbane-government-1850s",
+        "name": "布里斯班 · 摩顿湾殖民行政",
+        "start_year": 1854,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "摩顿湾的驻地官员在这里处理骑警事务并向悉尼报告。",
+        "source_ids": [
+          "19C36-QNP-WALK",
+          "19C36-QNP-GBRIS",
+          "19C36-QNP-WALKEV",
+          "19C36-QNP-WALKPAY",
+          "19C36-QNP-QSA",
+          "19C36-QNP-RECRUIT",
+          "19C36-QNP-ORD",
+          "19C36-QNP-ORDTEXT"
+        ],
+        "source_urls": [
+          "https://www.fromthepage.com/slqld/colonial-secretary-s-correspondence/work-33054-010863",
+          "https://www.geonames.org/2174003/brisbane.html",
+          "https://www.fromthepage.com/slqld/colonial-secretary-s-correspondence/work-33054-010863/display/35445258",
+          "https://www.fromthepage.com/slqld/colonial-secretary-s-correspondence/work-33054-010863/display/35445261",
+          "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/424a1fff-432a-4574-a89d-c025efb574be/200-frontier-wars-records-at-queensland-state-archives.pdf",
+          "https://archaeologyonthefrontier.com/wp-content/uploads/2018/06/burke-et-al-2018-recruitment.pdf",
+          "https://www.foundingdocs.gov.au/item-sdid-48.html",
+          "https://www.foundingdocs.gov.au/resources/transcripts/qld1ii_doc_1859.pdf"
+        ],
+        "named_anchors": [
+          "布里斯班 · 摩顿湾殖民行政"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1854-FIRST",
+          "E19-QNP-1854-WALK",
+          "E19-QNP-1854-WALKREPORT",
+          "E19-QNP-1857-DISCONTENT",
+          "E19-QNP-1857-ORDER",
+          "E19-QNP-1859-ORDER",
+          "E19-QNP-1859-LAND"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "year_stages": [
+          {
+            "start_year": 1854,
+            "end_year": 1858,
+            "controller": "british",
+            "title": "布里斯班 · 摩顿湾殖民行政",
+            "summary_zh": "摩顿湾的驻地官员在这里处理骑警事务并向悉尼报告。"
+          },
+          {
+            "start_year": 1859,
+            "end_year": 1859,
+            "controller": "british",
+            "title": "布里斯班 · 昆士兰殖民政府",
+            "summary_zh": "原摩顿湾行政官署所在的城市成为昆士兰殖民政府驻地。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-wandai-gumbal-1850s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.737778,
+          -26.981944
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-wandai-gumbal-1850s",
+        "name": "查宁溪 · 旺代贡巴尔营地",
+        "start_year": 1853,
+        "end_year": 1859,
+        "display_kind": "political",
+        "summary_zh": "地方牧场主为驻地骑警提供营房。",
+        "source_ids": [
+          "19C36-QNP-WAL",
+          "19C36-QNP-WANDAI",
+          "19C36-QNP-CAMP",
+          "19C36-QNP-GWANDAI"
+        ],
+        "source_urls": [
+          "https://researchnow-admin.flinders.edu.au/ws/portalfiles/portal/35711200/Wallis_Fatal_AM2021.pdf",
+          "https://frontierconflict.org/wandai-gumbal",
+          "https://researchdata.edu.au/frontier-conflict-native-police-queensland/1793412",
+          "https://www.wikidata.org/wiki/Q21900384"
+        ],
+        "named_anchors": [
+          "查宁溪 · 旺代贡巴尔营地"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1853-WANDAI"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "year_stages": [
+          {
+            "start_year": 1853,
+            "end_year": 1858,
+            "controller": "british",
+            "title": "查宁溪 · 旺代贡巴尔营地",
+            "summary_zh": "地方牧场主为驻地骑警提供营房。"
+          },
+          {
+            "start_year": 1859,
+            "end_year": 1859,
+            "controller": "british",
+            "title": "查宁溪 · 旺代贡巴尔营地",
+            "summary_zh": "昆士兰殖民政府接管警务时，骑警继续在查宁溪一带驻扎。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-surat-1850s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.067822,
+          -27.152873
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-surat-1850s",
+        "name": "苏拉特 · 马拉诺阿牧区",
+        "start_year": 1851,
+        "end_year": 1852,
+        "display_kind": "political",
+        "summary_zh": "牧场扩张和巡警活动改变了曼丹丹吉人的居住和生计。",
+        "source_ids": [
+          "19C36-QNP-BUS",
+          "19C36-QNP-GTARO"
+        ],
+        "source_urls": [
+          "https://ia.anu.edu.au/biography/bussamarai-29700",
+          "https://tlcmap.org/index.php/layers/654"
+        ],
+        "named_anchors": [
+          "苏拉特 · 马拉诺阿牧区"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1851-PATROL",
+          "E19-QNP-1852-HELY",
+          "E19-QNP-1852-RETURN"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-ukabulla-1852",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.009,
+          -27.147
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-ukabulla-1852",
+        "name": "乌卡布拉牧场 · 耶尔本溪一带",
+        "start_year": 1852,
+        "end_year": 1852,
+        "display_kind": "conflict",
+        "summary_zh": "布萨马赖等人在这一带被殖民骑警枪杀。",
+        "source_ids": [
+          "19C36-QNP-BUS",
+          "19C36-QNP-UKA"
+        ],
+        "source_urls": [
+          "https://ia.anu.edu.au/biography/bussamarai-29700",
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=618"
+        ],
+        "named_anchors": [
+          "乌卡布拉牧场 · 耶尔本溪一带"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1852-BUS"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "queensland-yamboucal-1852",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.056,
+          -27.146
+        ]
+      },
+      "properties": {
+        "stable_id": "queensland-yamboucal-1852",
+        "name": "扬布卡尔牧场",
+        "start_year": 1852,
+        "end_year": 1852,
+        "display_kind": "conflict",
+        "summary_zh": "骑警和牧场人员袭击扬布卡尔一带的曼丹丹吉人。",
+        "source_ids": [
+          "19C36-QNP-YAM",
+          "19C36-QNP-BUS"
+        ],
+        "source_urls": [
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=616",
+          "https://ia.anu.edu.au/biography/bussamarai-29700"
+        ],
+        "named_anchors": [
+          "扬布卡尔牧场"
+        ],
+        "related_event_ids": [
+          "E19-QNP-1852-YAM"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "callandoon-1849-native-police",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.152,
+          -28.525
+        ]
+      },
+      "properties": {
+        "stable_id": "callandoon-1849-native-police",
+        "name": "卡兰杜恩 · 原住民骑警驻点",
+        "start_year": 1850,
+        "end_year": 1852,
+        "display_kind": "political",
+        "summary_zh": "卡兰杜恩牧场曾为殖民骑警提供早期固定营地。",
+        "source_ids": [
+          "19C35-NP-REPORT3",
+          "19C35-NP-CALL",
+          "19C35-NP-CALL1847",
+          "19C35-NP-CAMPS",
+          "19C36-QNP-WAL",
+          "19C36-QNP-GCAL",
+          "19C36-QNP-CALLPOST",
+          "19C36-QNP-IND1857"
+        ],
+        "source_urls": [
+          "https://fromthepage.com/slqld/colonial-secretary-s-correspondence/work-33054-011772/display/35645894",
+          "https://www.grc.qld.gov.au/files/assets/public/v/1/council/documents/goondiwindi_regional_council_heritage_survey.pdf",
+          "https://c21ch.newcastle.edu.au/colonialmassacres/detail.php?r=602",
+          "https://researchnow-admin.flinders.edu.au/ws/portalfiles/portal/35711200/Wallis_Fatal_AM2021.pdf",
+          "https://frontierconflict.org/frederick-walker",
+          "https://files02.sl.nsw.gov.au/fotoweb/pdf/1576/157655870.pdf"
+        ],
+        "named_anchors": [
+          "卡兰杜恩 · 原住民骑警驻点"
+        ],
+        "related_event_ids": [
+          "E19-NP-1849-CALLANDOON-DEPOT",
+          "E19-QNP-1850-CAL",
+          "E19-QNP-1856-CAL-END"
+        ],
+        "mapping_method": "Cited published placename or heritage reference. Survey and event record dates are kept separately.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
       "id": "fraser-royal-engineers-camp-1850s",
       "geometry": {
         "type": "Point",
