@@ -1509,6 +1509,34 @@ try:
        window.atlasStoryBridge.selectedEventId()==='E20-KEN-HO-KILL'"""))
     print("PASS: Hola dossier, 1954 Nairobi event, map center and return to 1959")
 
+    for origin, anchor, topic, link, destination, route in [
+        (1804, 'E19-RIS-FIRE', 'E19-RISDON-COVE', 'E19-RIS-POST', 1803, 'E19-ROUTE-1804-RISDON-CHILD'),
+        (1816, 'E19-BUS-RISE', 'E19-BUSSA-REBELLION', 'E19-BUS-EXILE', 1819, 'E19-ROUTE-1816-BARBADOS-LOWTHERS'),
+    ]:
+        driver.get(f"http://127.0.0.1:8765/?year={origin}")
+        wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
+        wait.until(lambda d: d.execute_script(
+            "return window.atlasStoryBridge.activeEventWindow().routeIds.includes(arguments[0])", route))
+        driver.find_element(By.CSS_SELECTOR, f'#eventList [data-eid="{anchor}"]').send_keys("\n")
+        story_open = f'#dossierBody [data-story-open="{topic}"]'
+        wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, story_open))
+        driver.find_element(By.CSS_SELECTOR, story_open).send_keys("\n")
+        paragraph_link = f'.story-body [data-story-event="{link}"]'
+        wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, paragraph_link))
+        driver.find_element(By.CSS_SELECTOR, paragraph_link).send_keys("\n")
+        wait.until(lambda d: d.execute_script("""return window.atlasStoryBridge.currentYear()===arguments[0] &&
+               window.atlasStoryBridge.activeFocusId()===arguments[1]""", destination, link))
+        open_archive = f'#dossierBody [data-story-open-event="{link}"]'
+        wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, open_archive))
+        driver.find_element(By.CSS_SELECTOR, open_archive).send_keys("\n")
+        wait.until(lambda d: d.execute_script("return window.atlasStoryBridge.selectedEventId()===arguments[0]", link))
+        driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-story-back]').send_keys("\n")
+        wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.major-story-article [data-story-return]'))
+        driver.find_element(By.CSS_SELECTOR, '.major-story-article [data-story-return]').send_keys("\n")
+        wait.until(lambda d: d.execute_script("""return window.atlasStoryBridge.currentYear()===arguments[0] &&
+              window.atlasStoryBridge.selectedEventId()===arguments[1]""", origin, anchor))
+    print("PASS: Risdon and Bussa story links, dated routes, cross-year navigation and original dossiers")
+
     print("PASS: 1520/1529/1519 year display, 4th-chapter integrity, source-location double click and unchanged zoom")
 finally:
     driver.quit()
