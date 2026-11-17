@@ -355,7 +355,6 @@
     if(chronology)chronology.open=chronologyExpanded;
    }
    container.scrollTop=restore?readingScroll:0;
-   if(restore){requestAnimationFrame(()=>{container.scrollTop=readingScroll});}
   }catch(err){
    if(serial!==requestSerial)return;
    container.innerHTML='<p>历史专题暂时无法读取，请稍后再试。</p><button class="story-back" type="button" data-story-return="1">← 返回原事件</button>';

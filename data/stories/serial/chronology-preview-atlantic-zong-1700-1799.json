@@ -165,10 +165,10 @@
       "start_year": 1750,
       "end_year": 1750,
       "visible_from": 1750,
-      "date_label": "1750年",
+      "date_label": "1750年4月12日（御准）",
       "name": "1750年英国议会改组对非洲贸易机构",
-      "description": "大不列颠议会制定《An Act for Extending and Improving the Trade to Africa》，把皇家非洲公司的贸易架构改组为Company of Merchants Trading to Africa，公开法案前言直指殖民种植园购买被奴役人口的需求。",
-      "short_description": "大不列颠议会制定《An Act for Extending and Improving the Trade to Africa》，把皇家非洲公司的贸易架构改组为Company of Merchants Trading to Africa，公开法案前言直指殖民种植园购买被奴役人口的需求。",
+      "description": "法令设立对非贸易商人公司。伦敦、布里斯托尔和利物浦的公司成员各选出三名管理委员，合组九人委员会，负责管理非洲堡垒。法案前言明确把向英属种植园供应被奴役人口列为政策目的。",
+      "short_description": "法令设立对非贸易商人公司。伦敦、布里斯托尔和利物浦的公司成员各选出三名管理委员，合组九人委员会，负责管理非洲堡垒。法案前言明确把向英属种植园供应被奴役人口列为政策目的。",
       "category": "slave_trade_legislation",
       "icon_code": "POL",
       "lat": 51.4995,
@@ -178,7 +178,8 @@
       "representative_map_point": true,
       "geolocation_limit_zh": "现代参考点仅用于阅读，不是当年海上事故定位、当年楼内审判室位置或殖民主权疆界。",
       "source_ids": [
-        "18ATL-A04"
+        "18ATL-A04",
+        "415-ACT"
       ],
       "certainty": "institutional_source_linked_research_preview",
       "significance": {
@@ -200,7 +201,7 @@
       "publication_status": "research_only",
       "editorial_status": "research_preview",
       "research_merge_group_id": "E18-MRG-T26-02",
-      "research_merge_review": "原T26-02直接记录1750年议会改革及种植园劳工供给，T01-03仅是该制度的三港委员选举细节",
+      "research_merge_review": "同一法令的总体改革（T26-02）及三港管理委员安排（T01-03）分别有原始台账编号。",
       "historical_context_limit": "政策意图、实际执行、船旗、受害人数、保险争议、司法结局、地理位置分别核查。",
       "research_original_record_ids": [
         "AB-R7-POL-005",
@@ -215,7 +216,13 @@
       "research_related_group_ids": [
         "E18-MRG-T01-03"
       ],
-      "research_provenance_kind": "direct_group_member_or_documented_policy_step"
+      "research_provenance_kind": "direct_group_member_or_documented_policy_step",
+      "research_audited_cross_arc_group_ids": [
+        "E18-MRG-T01-03"
+      ],
+      "research_audited_cross_arc_original_ids": [
+        "E18A5-RAC-1750-ELECTION"
+      ]
     },
     {
       "id": "E18C-ATL-1765-SALLY-REVOLT",
@@ -965,6 +972,13 @@
       "reading_level": "retrospective_parliamentary_primary_text_read",
       "original_manuscript_personally_inspected": false,
       "notes": null
+    },
+    {
+      "id": "415-ACT",
+      "label": "《扩大并改进对非洲贸易法》印本转录，23 Geo. II c.31",
+      "title": "《扩大并改进对非洲贸易法》印本转录，23 Geo. II c.31",
+      "url": "https://en.wikisource.org/wiki/An_act_for_extending_and_improving_the_trade_to_Africa_(1750)",
+      "access": "primary_statute_transcript"
     }
   ],
   "provenance": {

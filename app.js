@@ -3665,7 +3665,8 @@ async function boot(){
    const supplements=reviewEarlyTopics?[
     ['chronology-preview-statia-bencoolen-1704-1786.json',1799],
     ['chronology-preview-antigua-bermuda-bahamas-1701-1796.json',1799],
-    ['chronology-preview-acadia-jamaica-1704-1774.json',1799]
+    ['chronology-preview-acadia-jamaica-1704-1774.json',1799],
+    ['chronology-preview-archive-gaps-1719-1798.json',1799]
    ]:[];
    supplements.push(['chronology-preview-barbados-west-india-regiments-1701-1807.json',1807]);
    supplements.push(['chronology-preview-privateering-malacca-1702-1825.json',1825]);

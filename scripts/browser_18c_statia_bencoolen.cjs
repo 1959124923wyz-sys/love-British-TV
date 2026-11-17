@@ -88,6 +88,39 @@ const topics = [
     other: 'E18C-JWH-1767-YORK-CUFFEE',
     otherYear: 1767,
     archiveSource: '1767年第9章'
+  },
+  {
+    id: 'E18-E10-HANNOVER-1719-1727',
+    entry: 'E18C-HNV-1720-CALABAR',
+    year: 1720,
+    other: 'E18C-HNV-1719-DEPART',
+    otherYear: 1719,
+    route: 'R18-HNV-1720-ANNOBON-BARBADOS',
+    archiveSource: '汉诺威号账簿'
+  },
+  {
+    id: 'E18-A04-INDIGO-BOUNTY-1748-1771',
+    entry: 'E18C-IND-1748-BOUNTY',
+    year: 1748,
+    other: 'E18C-IND-1749-LOBBY',
+    otherYear: 1749,
+    archiveSource: '卡罗来纳贸易'
+  },
+  {
+    id: 'E18-B18-CARNATIC-NABOB-DEBTS-1785-1787',
+    entry: 'E18C-ARC-1785-DEBT',
+    year: 1785,
+    other: 'E18C-ARC-1787-DEFENCE',
+    otherYear: 1787,
+    archiveSource: 'IOR/H/320'
+  },
+  {
+    id: 'E18-F06-CARNEW-REPRISALS-1798',
+    entry: 'E18C-CAR-1798-ATTACK',
+    year: 1798,
+    other: 'E18C-CAR-1798-HOSPITAL',
+    otherYear: 1798,
+    archiveSource: '克洛尼回忆录'
   }
 ];
 
@@ -125,8 +158,8 @@ const topics = [
       assert((await page.locator('#dossierBody .source-details').innerText()).includes(topic.archiveSource));
       await page.locator('#dossierBody [data-story-back]').click();
       await article.waitFor();
-      assert.equal(await page.evaluate(() => window.AtlasPublicCopyGuard.visibleWarnings().length), 0);
       await article.locator('header [data-story-return]').click();
+      assert.equal(await page.evaluate(() => window.AtlasPublicCopyGuard.visibleWarnings().length), 0);
       await yearIs(topic.year);
       await page.waitForFunction(event => window.atlasStoryBridge.selectedEventId() === event, topic.entry);
     }

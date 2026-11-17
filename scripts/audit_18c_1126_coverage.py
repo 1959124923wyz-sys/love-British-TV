@@ -102,12 +102,11 @@ def audit():
             for oid in items(ev.get("research_original_record_ids")):
                 if oid in ids:
                     explicit_records[oid].add(eid)
-            # Explicit cross-arc equivalences: T14 selected originals already had the same dated T20 historical events.
-            # These aliases preserve the original T20 selected-count and do not generate duplicate events.
+            # Explicit cross-arc equivalences reuse the same dated event for separately catalogued originals.
             cross_groups=set(items(ev.get("research_audited_cross_arc_group_ids")))
             cross_originals=items(ev.get("research_audited_cross_arc_original_ids"))
             for gid in cross_groups:
-                assert gid in by_group and gid.startswith("E18-MRG-T14-"),(eid,gid)
+                assert gid in by_group,(eid,gid)
                 event_groups[gid].add(eid)
             for oid in cross_originals:
                 assert oid in ids and ids[oid]["year"]==str(ev["year"]),(eid,oid)
