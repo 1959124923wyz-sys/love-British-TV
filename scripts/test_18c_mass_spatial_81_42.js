@@ -14,8 +14,8 @@ a.equal(data.area_aggregation_forbidden,true);
 a.equal(data.approved_actual_control_polygons,0);
 a.equal(data.square_km_totals,null);
 const phases=[...data.zones,...data.sites].reduce((n,x)=>n+x.periods.length,0);
-a.equal(phases,149);
-a.equal(phases+previous.area_references.reduce((n,x)=>n+x.periods.length,0)+previous.control_sites.reduce((n,x)=>n+x.periods.length,0),195);
+a.equal(phases,154);
+a.equal(phases+previous.area_references.reduce((n,x)=>n+x.periods.length,0)+previous.control_sites.reduce((n,x)=>n+x.periods.length,0),200);
 const ids=new Set(),kindCounts={};
 for(const [arr,site] of [[data.zones,false],[data.sites,true]]){
  for(const x of arr){
@@ -32,7 +32,7 @@ for(const [arr,site] of [[data.zones,false],[data.sites,true]]){
    a(x.bbox.length===4&&x.bbox.every(Number.isFinite));
    a(x.bbox[0]<x.bbox[2]&&x.bbox[1]<x.bbox[3]);
    a(x.bbox[0]>=-180&&x.bbox[2]<=180&&x.bbox[1]>=-90&&x.bbox[3]<=90);
-   a.equal(x.geometry_precision,'editorial_schematic_bounding_envelope_not_historical_survey');
+   a.equal(x.geometry_precision,x.geometry?'source_backed_historical_outline':'editorial_schematic_bounding_envelope_not_historical_survey');
    a.equal(x.precise_historic_border,false);
    a.equal(x.territorial_control_verified,false);
    a.equal(x.uncertain_line_dashed,true);
@@ -55,15 +55,25 @@ for(const [id,y,expected] of [
  ['FALKLAND_PAPER',1774,true],['TRINIDAD_1797',1796,false],['TRINIDAD_1797',1797,true],
  ['CEYLON_COLOMBO',1795,false],['CEYLON_COLOMBO',1796,true],
  ['NSW_CROWN_CLAIM',1787,false],['NSW_CROWN_CLAIM',1788,true],
- ['MENORCA_ISLAND',1755,true],['MENORCA_ISLAND',1756,false],['MENORCA_ISLAND',1798,true],
+ ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
+const successors=JSON.parse(read('data/nineteenth-century-territorial-areas-batch7.geojson')).features;
+for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND']){
+ const row=z(id),successor=successors.find(f=>f.id===row.cross_century_feature_id);
+ a.equal(successor.properties.start_year,1800);
+ a.deepEqual(row.geometry,successor.geometry);
+ a.equal(row.periods.at(-1).end_year,1799);
+ for(let i=1;i<row.periods.length;i++)a.equal(row.periods[i].start_year,row.periods[i-1].end_year+1);
+}
+a.equal(z('MENORCA_ISLAND').periods.find(p=>p.start_year===1756).kind,'foreign_occupation');
+a.equal(z('MENORCA_ISLAND').periods.find(p=>p.start_year===1782).kind,'foreign_occupation');
+a.equal(z('GIBRALTAR_PENINSULA').periods.find(p=>p.start_year===1713).kind,'administration');
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
-a(app.includes('.atlas-18c-mass-zone,.atlas-18c-mass-core,'));
-a(html.includes('js/eighteenth-mass-spatial.js?v=18c-81zones-42cores-20261112'));
-a(html.includes('共105组区域面、57处核心'));
-a(js.includes("if(new URLSearchParams(location.search).get('review18c')!=='1')return;"));
+a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
+a(html.includes('js/eighteenth-mass-spatial.js?v='));
+a(js.includes("!$('mapLayerTerritory').checked"));
 a(js.includes("areaGroup.clearLayers();siteGroup.clearLayers();"));
 a(js.includes("fill:!outline"));
 a(js.includes("window.eighteenthMassSpatial={render,getAudit:"));
-console.log('PASS 18C batch35: 81 extra rectangles +42 dated cores +149 year-stages; combined 105 zone polygons/57 cores/195 time stages; yearly switch, no km², inherited base unchanged.');
+console.log('PASS eighteenth-century layer: 81 areas, 42 sites and 154 dated phases, including identical Gibraltar and Menorca outlines across 1799–1800.');

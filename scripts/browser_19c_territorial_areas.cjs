@@ -303,6 +303,43 @@ async function verify() {
   assert.equal(await siteMarkers.count(), 0);
   assert.deepEqual(await ids(), layers1879);
 
+  await page.goto(root + '?year=1703', { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
+   window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthOverlapDossier?.getAudit().loaded &&
+   window.atlasStoryBridge.currentYear() === 1703, undefined, { timeout: 45000 });
+  await page.locator('#mapLayerEvents').uncheck();
+  const outline = page.locator('.atlas-18c-source-outline');
+  assert.equal(await outline.count(), 0);
+  await jump(1704);
+  assert.equal(await outline.count(), 1);
+  assert.equal(await outline.getAttribute('stroke-dasharray'), '5 6');
+  const historicalHit = (lat, lng) => page.evaluate(([y, x]) => window.eighteenthOverlapDossier.hitCountAt(y, x), [lat, lng]);
+  assert.equal(await historicalHit(36.1408, -5.3526), 1);
+  assert.equal(await historicalHit(36.147, -5.354), 0);
+  await jump(1713);
+  await page.evaluate(() => window.__historicOverlapHost.map.setView([36.130, -5.345], 10, { animate: false }));
+  await clickAreaAt(36.130, -5.345);
+  const mediterraneanDrawer = page.locator('#atlas18cOverlapPanel');
+  const gibraltarCard = mediterraneanDrawer.locator('[data-overlap-id="18c:GIBRALTAR_PENINSULA"]');
+  await gibraltarCard.waitFor();
+  assert.match(await gibraltarCard.textContent(), /乌得勒支和约割让/);
+  await gibraltarCard.locator('summary').click();
+  assert(await gibraltarCard.locator('a[href*="36615.htm"]').isVisible());
+  await jump(1756);
+  await page.evaluate(() => window.__historicOverlapHost.map.setView([39.982, 4.09], 8, { animate: false }));
+  assert.equal(await historicalHit(40.07, 3.82), 0);
+  await clickAreaAt(39.982, 4.09);
+  const menorcaCard = mediterraneanDrawer.locator('[data-overlap-id="18c:MENORCA_ISLAND"]');
+  await menorcaCard.waitFor();
+  assert.match(await menorcaCard.textContent(), /法国占领/);
+  await menorcaCard.locator('.atlas-18c-overlap-title').hover();
+  assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+  for (const [year, title] of [[1763, /英国接收/], [1782, /西班牙管辖/], [1798, /英军第三次占领/]]) {
+   await jump(year);
+   assert.match(await menorcaCard.textContent(), title);
+  }
+  await page.screenshot({ path: join(screenshotDir, '18c-mediterranean-1798-menorca.png') });
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
