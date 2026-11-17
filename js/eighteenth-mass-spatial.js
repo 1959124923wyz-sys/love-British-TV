@@ -1,5 +1,5 @@
 /* 18C batch 35 — generous schematic geography for desktop historical map.
- * All outlines are editorial reference envelopes and NEVER verified real 18C boundaries.
+ * Outlines use either a dated geographic source or a legacy reference envelope.
  * No area square kilometers, no blanket transfer of Indigenous sovereignty.
  */
 (function(){
@@ -16,18 +16,18 @@ let meta=null,loaded=false,error=null,year=host.getYear();
  const reader=window.AtlasReaderCopy;
 const active=(x,y)=>x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
 const color={administration:'#a78bfa',wartime_occupation:'#e0a17c',paper_claim:'#e2ba79',
-revenue:'#dfb66c',trade_influence:'#73cbbf',military_vicinity:'#d0a8ff'};
+revenue:'#dfb66c',trade_influence:'#73cbbf',military_vicinity:'#d0a8ff',foreign_occupation:'#7faab6'};
 const classText={administration:'殖民行政涉及区',wartime_occupation:'英军短期占领',
 paper_claim:'法律/主权名义声索',revenue:'公司税收及财政权',trade_influence:'贸易、外交与间接影响',
-military_vicinity:'驻军活动地区'};
+military_vicinity:'驻军活动地区',foreign_occupation:'其他国家管辖'};
 function showDossier(x,period,isSite){
  host.clearSelection();
  const urls=[...new Set(x.source_urls||[])].filter(u=>/^https:\/\//.test(u));
  $('dossierBody').innerHTML=
   '<div class="dossier-kicker">18世纪 · 批量动态版图 · '+year+'年</div>'+
-  '<h2>'+escapeHTML(x.title)+'</h2>'+
-  '<p><strong>'+escapeHTML(isSite?'地点驻军/港口核心':classText[x.kind]||x.kind)+'</strong>　阶段：'+period.start_year+'—'+period.end_year+'</p>'+
-  (reader.clean(x.note||'')?'<p>'+escapeHTML(reader.clean(x.note))+'</p>':'')+
+  '<h2>'+escapeHTML(period.title||x.title)+'</h2>'+
+  '<p><strong>'+escapeHTML(isSite?'地点驻军/港口核心':classText[period.kind||x.kind])+'</strong>　阶段：'+period.start_year+'—'+period.end_year+'</p>'+
+  (reader.clean(period.note||x.note||'')?'<p>'+escapeHTML(reader.clean(period.note||x.note))+'</p>':'')+
   '<details open><summary>历史依据</summary><ul class="source-list">'+urls.map(u=>{
    let h=u;try{h=new URL(u).hostname}catch{}
    return '<li><a href="'+escapeHTML(u)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(h)+'</a></li>';
@@ -47,16 +47,19 @@ function render(){
   let bb=(b.bbox[2]-b.bbox[0])*(b.bbox[3]-b.bbox[1]);return bb-aa;
  });
  for(const z of zones){
-  const [w,s,e,n]=z.bbox,c=color[z.kind],outline=['paper_claim','trade_influence','military_vicinity'].includes(z.kind);
-  const opacity=z.kind==='wartime_occupation'?.12:z.kind==='administration'?.075:z.kind==='revenue'?.07:0;
   const p=z.periods.find(p=>p.start_year<=year&&year<=p.end_year);
-  L.rectangle([[s,w],[n,e]],{pane:areaPane,renderer:polyRenderer,
-   color:c,weight:z.kind==='wartime_occupation'?1.9:1.55,opacity:.84,
+  const [w,s,e,n]=z.bbox,kind=p.kind||z.kind,c=color[kind];
+  const outline=['paper_claim','trade_influence','military_vicinity'].includes(kind);
+  const opacity=kind==='wartime_occupation'?.12:kind==='administration'||kind==='foreign_occupation'?.075:kind==='revenue'?.07:0;
+  const style={pane:areaPane,renderer:polyRenderer,
+   color:c,weight:kind==='wartime_occupation'?1.9:1.55,opacity:.84,
    dashArray:outline?'3 8':'5 6',lineCap:'round',
    fill:!outline,fillColor:c,fillOpacity:opacity,
-   interactive:true,bubblingMouseEvents:false,className:'atlas-18c-mass-zone'
-  }).bindTooltip('<strong>'+escapeHTML(z.title)+'</strong><div class="atlas-hover-summary">'+
-   escapeHTML(classText[z.kind]+' · '+p.start_year+'—'+p.end_year)+'</div>',
+   interactive:true,bubblingMouseEvents:false,className:'atlas-18c-mass-zone'+(z.geometry?' atlas-18c-source-outline':'')
+  };
+  const layer=z.geometry?L.geoJSON(z.geometry,style):L.rectangle([[s,w],[n,e]],style);
+  layer.bindTooltip('<strong>'+escapeHTML(p.title||z.title)+'</strong><div class="atlas-hover-summary">'+
+   escapeHTML(classText[kind]+' · '+p.start_year+'—'+p.end_year)+'</div>',
    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
    .on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);showDossier(z,p,false)})
    .addTo(areaGroup);
@@ -77,6 +80,15 @@ function render(){
 }
 const validPeriods=ps=>Array.isArray(ps)&&ps.length>0&&ps.every(p=>Number.isInteger(p.start_year)&&Number.isInteger(p.end_year)&&
  p.start_year>=1700&&p.end_year<=1799&&p.start_year<=p.end_year);
+function validOutline(geometry,bbox){
+ const polygons=geometry?.type==='Polygon'?[geometry.coordinates]:
+  geometry?.type==='MultiPolygon'?geometry.coordinates:[];
+ return Array.isArray(polygons)&&polygons.length>0&&polygons.every(polygon=>
+  Array.isArray(polygon)&&polygon.length>0&&polygon.every(ring=>Array.isArray(ring)&&ring.length>=4&&
+   ring.every(point=>Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&
+    point[0]>=bbox[0]&&point[0]<=bbox[2]&&point[1]>=bbox[1]&&point[1]<=bbox[3])&&
+   ring[0][0]===ring.at(-1)[0]&&ring[0][1]===ring.at(-1)[1]));
+}
 function validate(m){
  if(m.schema!=='atlas-18c-mass-schematic-zones-v1'||m.editorial_status!=='research_preview_not_published'||
  m.area_aggregation_forbidden!==true||m.approved_actual_control_polygons!==0||m.square_km_totals!==null||
@@ -96,7 +108,9 @@ function validate(m){
     const b=x.bbox;
     if(!knownKinds.has(x.kind)||b?.length!==4||!b.every(Number.isFinite)||
     !(b[0]<b[2]&&b[1]<b[3])||b[0]<-180||b[2]>180||b[1]<-90||b[3]>90||
-    x.geometry_precision!=='editorial_schematic_bounding_envelope_not_historical_survey'||
+    (x.geometry?x.geometry_precision!=='source_backed_historical_outline'||!validOutline(x.geometry,b):
+     x.geometry_precision!=='editorial_schematic_bounding_envelope_not_historical_survey')||
+    x.periods.some(p=>p.kind!==undefined&&!knownKinds.has(p.kind))||
     x.precise_historic_border!==false||x.territorial_control_verified!==false||
     x.uncertain_line_dashed!==true||x.exclude_from_territorial_area_totals!==true)throw Error('invalid envelope '+x.id);
    }

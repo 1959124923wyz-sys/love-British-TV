@@ -113,7 +113,6 @@
  }
  const sources=o=>[...new Set(o.source_urls||[])].filter(u=>/^https:\/\//.test(u));
  const urlName=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch{return'资料来源'}};
- const note=o=>reader.clean(o.note||'');
  const enabled=()=>host.getYear()>=1700&&host.getYear()<=1799&&
   $('mapLayerTerritory').checked&&$('toggleControlAreas').checked&&$('toggleTerritorialFootprints').checked;
  const intersects=(o,lng,lat)=>o.geometry?polygonInside(o.geometry,lng,lat):within(o.bbox,lng,lat);
@@ -136,27 +135,29 @@
     }
    }
   }
-  hits.sort((a,b)=>(rank[a.kind]??99)-(rank[b.kind]??99)||
+  const sortRank=o=>rank[phase(o,y).kind||o.kind]??99;
+  hits.sort((a,b)=>sortRank(a)-sortRank(b)||
    (a.bbox?square(a.bbox):0)-(b.bbox?square(b.bbox):0)||
    a.title.localeCompare(b.title,'zh'));
   return hits;
  }
  function selectedRecord(){return activeRecords.find(r=>r.id===selected)||activeRecords[0]||null}
  function inlineCard(record,i,isOpen){
-  const y=host.getYear(),p=phase(record,y),n=note(record);
+  const p=phase(record,host.getYear()),n=reader.clean(p.note||record.note||'');
+  const kind=reader.label(named[p.kind||record.kind]||record.category||'历史地理记录');
   const desc=n.length>105?clip(n,105):n;
   return '<article class="atlas-18c-overlap-card'+(isOpen?' is-selected':'')+
    '" data-overlap-id="'+esc(record.id)+'" data-overlap-index="'+i+'">'+
    '<button class="atlas-18c-overlap-trigger" type="button" data-open-overlap="'+i+
    '" aria-expanded="'+String(isOpen)+'">'+
    '<span class="atlas-18c-overlap-topline"><span class="atlas-18c-overlap-order">'+String(i+1).padStart(2,'0')+
-   '</span><span class="atlas-18c-overlap-kind">'+esc(reader.label(named[record.kind]||record.category||'历史地理记录'))+
+   '</span><span class="atlas-18c-overlap-kind">'+esc(kind)+
    '</span><span class="atlas-18c-overlap-years">'+p.start_year+'—'+p.end_year+'</span></span>'+
-   '<strong class="atlas-18c-overlap-title">'+esc(record.title)+'</strong>'+
+   '<strong class="atlas-18c-overlap-title">'+esc(p.title||record.title)+'</strong>'+
    (desc&&!isOpen?'<span class="atlas-18c-overlap-summary">'+esc(desc)+'</span>':'')+'</button>'+
    (isOpen?'<div class="atlas-18c-overlap-detail">'+
     '<div class="atlas-18c-overlap-facts"><div><span>历史时期</span><b>'+p.start_year+'—'+p.end_year+'</b></div>'+
-    '<div><span>图层性质</span><b>'+esc(reader.label(named[record.kind]||record.category||'历史记录'))+'</b></div></div>'+
+    '<div><span>图层性质</span><b>'+esc(kind)+'</b></div></div>'+
     (n?'<p>'+esc(n)+'</p>':'')+
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源</summary>'+
     '<div class="atlas-18c-overlap-source-links">'+sources(record).map(u=>
