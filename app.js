@@ -2576,7 +2576,8 @@ async function boot(){
   'data/nineteenth-century-territorial-areas-batch2.geojson',
   'data/nineteenth-century-territorial-areas-batch3.geojson',
   'data/nineteenth-century-territorial-areas-batch4.geojson',
-  'data/nineteenth-century-territorial-areas-batch5.geojson'
+  'data/nineteenth-century-territorial-areas-batch5.geojson',
+  'data/nineteenth-century-territorial-areas-batch6.geojson'
  ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
   if(!response.ok)throw new Error('HTTP '+response.status);
   return response.json();
