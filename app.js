@@ -3660,8 +3660,12 @@ async function boot(){
     }catch(err){console.warn('R33 dossier review not loaded; 31 previous drafts preserved',err);}
   }
   if(preview18cReady&&reviewParams.get('review18c')==='1'){
+   for(const file of [
+    'chronology-preview-statia-bencoolen-1704-1786.json',
+    'chronology-preview-antigua-bermuda-bahamas-1701-1796.json'
+   ]){
     try{
-      const response=await fetch('data/stories/serial/chronology-preview-statia-bencoolen-1704-1786.json',{cache:'no-store'});
+      const response=await fetch('data/stories/serial/'+file,{cache:'no-store'});
       if(!response.ok)throw new Error('18C topic supplement unavailable');
       const {schema,editorial_status:status,events,routes,sources}=await response.json();
       const sourceIds=new Set(sources.map(source=>source.id));
@@ -3689,7 +3693,8 @@ async function boot(){
           routes:[...base.routes,...routes.filter(sameDecade)]});
       }
       for(const source of sources)sourcesById.set(source.id,source);
-    }catch(error){console.warn('18C topic supplement excluded',error);}
+    }catch(error){console.warn('18C topic supplement excluded',file,error);}
+   }
   }
   // Independent historic urban-core date sources; unlike 18C events these
   // are PERIODIC control states, never loaded as area polygons.

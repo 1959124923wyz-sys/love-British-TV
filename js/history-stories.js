@@ -289,7 +289,9 @@
    ["E18-R33-AWADH-BAHU-BEGAM-1765-1783","E18-R33-OLD-CALABAR-ROBIN-JOHNS-1766-1790","E18-R33-MIKMAQ-PEACE-TREATIES-1761"].filter(id=>storyMeta.has(id)):[];
   const bencoolenContinuation=article.id==='E6-T12'&&storyMeta.has('E18-E15-BENCOOLEN-1704-1723')?
    ['E18-E15-BENCOOLEN-1704-1723']:[];
-  const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,
+  const islandsContinuation=article.id==='E6-T16-ATLANTIC-ISLANDS'&&storyMeta.has('E18-A22-BERMUDA-BAHAMAS-1718-1796')?
+   ['E18-A22-BERMUDA-BAHAMAS-1718-1796']:[];
+  const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,...islandsContinuation,
     ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...virginiaNewYorkSlaveContinuation,...carolinaTuscaroraContinuation,...sevenYearsContinuation,...lenapePurchaseContinuation,...revolution24Continuation,...hudsonBay25Continuation,...bengalFamine26Continuation,...bengalLand27Continuation,...eicParliament28Continuation,...penangT23Continuation,...t28HavanaMaltaContinuation,...t33ScottishFreedomContinuation,...r33Dossiers,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation,...bencoolenContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');

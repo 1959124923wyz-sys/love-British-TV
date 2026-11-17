@@ -20,6 +20,22 @@ const topics = [
     otherYear: 1721,
     route: 'R18-BENCOOLEN-BATAVIA-1719',
     archiveSource: '英国图书馆'
+  },
+  {
+    id: 'E18-A21-ANTIGUA-TRIALS-1701-1738',
+    entry: 'E18C-ANT-1736-INQUIRY',
+    year: 1736,
+    other: 'E18C-ANT-1737-BANISH',
+    otherYear: 1737,
+    archiveSource: 'David Barry Gaspar'
+  },
+  {
+    id: 'E18-A22-BERMUDA-BAHAMAS-1718-1796',
+    entry: 'E18C-ISL-1730-EXCLUSION',
+    year: 1730,
+    other: 'E18C-ISL-1784-AUCTION',
+    otherYear: 1784,
+    archiveSource: '英国下院刊本'
   }
 ];
 
@@ -36,9 +52,11 @@ const topics = [
     for (const topic of topics) {
       await visit('?review18c=1&year=' + topic.year);
       await yearIs(topic.year);
-      const route = page.locator('[data-route-id="' + topic.route + '"]');
-      await route.waitFor({ state: 'attached' });
-      assert(await route.evaluate(element => element instanceof SVGElement));
+      if (topic.route) {
+        const route = page.locator('[data-route-id="' + topic.route + '"]');
+        await route.waitFor({ state: 'attached' });
+        assert(await route.evaluate(element => element instanceof SVGElement));
+      }
       const article = page.locator('article[data-story-id="' + topic.id + '"]');
       await page.locator('#eventList [data-eid="' + topic.entry + '"]').click();
       await page.locator('#dossierBody [data-story-open="' + topic.id + '"]').click();
@@ -74,6 +92,7 @@ const topics = [
     }
     await visit('?year=1781');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-STATIA-1781-PETITION') === null));
+    assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-ISL-1784-AUCTION') === null));
     await visit('?review19c=1&year=1820');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-BENCOOLEN-1719-SIEGE') === null));
     console.log('PASS desktop 18C topics: route hit targets, cross-year links, original sources and return paths, garrison transition, preview isolation');
