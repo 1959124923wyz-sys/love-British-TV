@@ -3318,9 +3318,9 @@ async function boot(){
     if(!res.ok)throw new Error('T09 original indigenous research missing');
     const ds=await res.json(),e=ds.events||[],sources=new Set((ds.sources||[]).map(s=>s.id));
     if(ds.schema!=='atlas-18c-t09-tuscarora-yamasee-captivity-v1'||
-       ds.editorial_status!=='research_preview_not_published'||e.length!==23||
+       ds.editorial_status!=='research_preview_not_published'||e.length!==24||
        ds.provenance?.original_candidate_ids!==9||ds.provenance?.original_A_keys!==9||
-       ds.provenance?.mapped_original_ids!==8||ds.provenance?.deferred_original_ids?.length!==1||
+       ds.provenance?.mapped_original_ids!==9||ds.provenance?.deferred_original_ids?.length!==0||
        ds.places?.length||ds.routes?.length||ds.colonial_polygons?.length||
        e.some(x=>x.year<1700||x.year>1799||x.year!==x.start_year||x.year!==x.end_year||
         x.publication_status!=='research_only'||x.historical_control_boundary_verified!==false||
@@ -3667,6 +3667,7 @@ async function boot(){
     ['chronology-preview-archive-gaps-1719-1798.json',1799],
     ['chronology-preview-deportation-and-slave-laws-1755-1788.json',1799],
     ['chronology-preview-ship-resistance-and-company-treaties-1722-1765.json',1799],
+    ['chronology-preview-final-priority-records-1700-1798.json',1799],
     ['chronology-preview-barbados-west-india-regiments-1701-1807.json',1807],
     ['chronology-preview-privateering-malacca-1702-1825.json',1825]
    ];

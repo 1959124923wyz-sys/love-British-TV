@@ -154,6 +154,32 @@ const topics = [
     otherYear: 1756,
     archiveSource: '希尔编《1756—1757年的孟加拉》',
     nineteenthOnly: true
+  },
+  {
+    id: 'E18-T31-DARIEN-SIEGE-CAPITULATION-1700',
+    entry: 'E18C-SCT-1700-DARIEN-SURRENDER',
+    year: 1700,
+    other: 'E18C-DAR-1700-APR01-VEITCH',
+    otherYear: 1700,
+    archiveSource: '苏格兰国家图书馆'
+  },
+  {
+    id: 'E18-T29-IRISH-PENAL-BILL-RESIDENCE-1703-1705',
+    entry: 'E18C-PL-1705-URBAN-DEPARTURE',
+    year: 1705,
+    other: 'E18C-PL-1703-COMMONS-BILL',
+    otherYear: 1703,
+    archiveSource: '爱尔兰历史研究',
+    unlocated: true
+  },
+  {
+    id: 'E18-T30-IRISH-REBELLION-PRISONERS-REPRISALS-1798',
+    entry: 'E18C-IR-1798-JUL17-MCCRACKEN',
+    year: 1798,
+    other: 'E18C-CAR-1798-HOSPITAL',
+    otherYear: 1798,
+    archiveSource: '爱德华·海',
+    nineteenthOnly: true
   }
 ];
 
@@ -185,7 +211,7 @@ const topics = [
       const before = await page.evaluate(() => window.atlasReadViewport().zoom);
       await anchor.click();
       await yearIs(topic.otherYear);
-      await page.waitForFunction(event => window.atlasStoryBridge.activeFocusId() === event, topic.other);
+      await page.waitForFunction(event => window.atlasStoryBridge.activeFocusId() === event, topic.unlocated ? null : topic.other);
       assert.equal(await page.evaluate(() => window.atlasReadViewport().zoom), before);
       await anchor.dblclick();
       await page.waitForFunction(event => window.atlasStoryBridge.selectedEventId() === event, topic.other);

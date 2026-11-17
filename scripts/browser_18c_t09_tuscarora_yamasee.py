@@ -26,8 +26,8 @@ try:
  wait.until(lambda d:js("return !!document.querySelector(arguments[0])",entry))
  driver.find_element(By.CSS_SELECTOR,entry).click()
  wait.until(lambda d:js("return document.querySelector('.major-story-article')?.dataset.storyId===arguments[0]",topic))
- wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-event-link').length===23"))
- assert js("return document.querySelectorAll('.major-story-article .story-section').length===23")
+ wait.until(lambda d:js("return document.querySelectorAll('.major-story-article .story-event-link').length===24"))
+ assert js("return document.querySelectorAll('.major-story-article .story-section').length===24")
  assert js("return !document.querySelector('.story-reading-toolbar,.story-toc,.story-reading-progress-meter,[data-story-nav]')")
  driver.save_screenshot(str(shots/'18c21-1715-Yamasee-war-colonial-trade-violence.png'))
  zoom=js("return window.atlasReadViewport().zoom")
@@ -62,7 +62,7 @@ try:
  driver.get('http://127.0.0.1:8765/?year=1572')
  wait.until(lambda d:at(1572))
  assert js("return [...document.querySelectorAll('#eventList [data-eid]')].some(x=>x.dataset.eid==='1570S-E004')")
- print('PASS T09 21-story Chromium: 23 chapter links, 1710 New Bern, 1712 Barnwell enslavement, 1713 Nooheroka deaths/captives distinction, 1716 British trade monopoly, 1723 archival double-click and history return; original 20 stories and 16C unaffected.')
+ print('PASS T09 21-story Chromium: 24 chapter links, 1710 New Bern, 1712 Barnwell enslavement, 1713 Nooheroka deaths/captives distinction, 1716 British trade monopoly, 1723 archival double-click and history return; original 20 stories and 16C unaffected.')
 except Exception:
  driver.save_screenshot(str(shots/'18c21-T09-browser-failure.png'))
  raise
