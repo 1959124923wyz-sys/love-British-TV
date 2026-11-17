@@ -3666,6 +3666,7 @@ async function boot(){
     ['chronology-preview-acadia-jamaica-1704-1774.json',1799],
     ['chronology-preview-archive-gaps-1719-1798.json',1799],
     ['chronology-preview-deportation-and-slave-laws-1755-1788.json',1799],
+    ['chronology-preview-ship-resistance-and-company-treaties-1722-1765.json',1799],
     ['chronology-preview-barbados-west-india-regiments-1701-1807.json',1807],
     ['chronology-preview-privateering-malacca-1702-1825.json',1825]
    ];
