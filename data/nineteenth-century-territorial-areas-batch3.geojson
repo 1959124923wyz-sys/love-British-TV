@@ -1,0 +1,1284 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "schema": "atlas-19c-territorial-areas-v1",
+    "coverage": "1800–1899, third dated territorial sequence",
+    "historical_area_statistics": false,
+    "coastline_attribution": "Natural Earth public domain; LINZ NZ Coastlines and Islands Polygons Topo 1:50k, CC BY 4.0 (generalized); contains information licensed under the Open Government Licence – Canada (Natural Resources Canada, Atlas of Canada, Territorial Evolution, generalized); includes outline traced from HKRS1035-1-1, Government Records Service, Hong Kong."
+  },
+  "sources": [
+    {
+      "id": "19CT3-NE",
+      "label": "Natural Earth｜1:10m陆地与海岸",
+      "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+    },
+    {
+      "id": "19CT3-LINZ",
+      "label": "新西兰土地信息局｜海岸及岛屿（CC BY 4.0）",
+      "url": "https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/"
+    },
+    {
+      "id": "19CT3-HK-TAKE",
+      "label": "英国国家档案馆｜香港与鸦片战争档案",
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/hong-kong-and-the-opium-wars/"
+    },
+    {
+      "id": "19CT3-HK-NANKING",
+      "label": "英国国家档案馆｜《南京条约》第三条原件",
+      "url": "https://www.nationalarchives.gov.uk/image/15145c50-9990-417c-a98e-4371c2d2aa7b/"
+    },
+    {
+      "id": "19CT3-HK-CROWN",
+      "label": "香港政府档案处｜1843年枢密令及批准书交换档案",
+      "url": "https://www.grs.gov.hk/ws/rhk/en/1840s.html"
+    },
+    {
+      "id": "19CT3-HK-PEKING",
+      "label": "东京大学东洋文化研究所｜《北京条约》第六条",
+      "url": "https://worldjpn.net/documents/texts/pw/18601024.T1E.html"
+    },
+    {
+      "id": "19CT3-HK-GRS1860",
+      "label": "香港政府档案处｜1860年九龙租批及附图 HKRS1035-1-1",
+      "url": "https://www.grs.gov.hk/ws/rhk/en/1860s.html"
+    },
+    {
+      "id": "19CT3-HK-KOWLAW",
+      "label": "香港大学图书馆｜1861年香港法例适用于九龙的公告",
+      "url": "https://digitalrepository.lib.hku.hk/catalog/8049pr69v"
+    },
+    {
+      "id": "19CT3-HK-HKUBOUND",
+      "label": "香港大学｜界限街与九龙旧界",
+      "url": "https://arthistory.hku.hk/HKinTransition/image_detail.php?id=58736"
+    },
+    {
+      "id": "19CT3-HK-TSIM",
+      "label": "香港环境保护署｜尖沙咀海岸及信号山历史图",
+      "url": "https://www.epd.gov.hk/eia/files/applications/en/pp_16/eia_1442/progress/action_3558/r0561203.htm"
+    },
+    {
+      "id": "19CT3-HK-GRS1898",
+      "label": "香港政府档案处｜1898年《展拓香港界址专条》",
+      "url": "https://www.grs.gov.hk/ws/rhk/en/1890s.html"
+    },
+    {
+      "id": "19CT3-HK-ANNEX1",
+      "label": "1898年《展拓香港界址专条》附图一",
+      "url": "https://commons.wikimedia.org/wiki/File:Map_of_The_Convention_for_the_Extension_of_Hong_Kong_Territory_in_1898_-_1.jpg"
+    },
+    {
+      "id": "19CT3-HK-1899",
+      "label": "美国国务院地理办公室｜1899年勘界文本，附录一",
+      "url": "https://library.law.fsu.edu/Digital-Collections/LimitsinSeas/pdf/ibs013.pdf#page=6"
+    },
+    {
+      "id": "19CT3-SG-1824",
+      "label": "1824年克劳福德条约｜第一、二条",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Crawfurd_Treaty_1824.pdf"
+    },
+    {
+      "id": "19CT3-SG-NLB",
+      "label": "新加坡国家图书馆｜克劳福德签约与津贴施压",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-1-apr-jun-2019-making-history/"
+    },
+    {
+      "id": "19CT3-SG-ICJ",
+      "label": "国际法院案卷｜新加坡提交的海峡殖民地宪制文书",
+      "url": "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20040325-WRI-02-04-EN.pdf"
+    },
+    {
+      "id": "19CT3-STRAITS",
+      "label": "英国国会｜1866年《海峡殖民地法》",
+      "url": "https://www.legislation.gov.uk/ukpga/Vict/29-30/115/pdfs/ukpga_18660115_en.pdf"
+    },
+    {
+      "id": "19CT3-INDIA-1858",
+      "label": "英国国会｜1858年《印度政府法》",
+      "url": "https://www.legislation.gov.uk/ukpga/Vict/21-22/106/pdfs/ukpga_18580106_en.pdf"
+    },
+    {
+      "id": "19CT3-PENANG",
+      "label": "槟城州政府｜槟榔屿与威省行政沿革",
+      "url": "https://www.penang.gov.my/index.php/en/component/content/article/28-struktur-pentadbiran-negeri?Itemid=988&catid=5%3Adiscover-penang"
+    },
+    {
+      "id": "19CT3-STRAITS-LIST",
+      "label": "英国《殖民部名录》｜海峡殖民地，印刷页103",
+      "url": "https://tile.loc.gov/storage-services/public/gdc/23004826/23004826.pdf"
+    },
+    {
+      "id": "19CT3-MOR-TRIB",
+      "label": "怀唐伊审裁庭｜雷科胡报告，1842年并入",
+      "url": "https://forms.justice.govt.nz/search/Documents/WT/wt_DOC_68595363/Rekohu%20Report%202016%20Reprint.pdf#page=76"
+    },
+    {
+      "id": "19CT3-MOR-DEED",
+      "label": "莫里奥里人与新西兰王室和解契约｜历史条款",
+      "url": "https://www.govt.nz/assets/Documents/OTS/Moriori/1.-Moriori-Deed-of-Settlement-Historical-Claims.pdf"
+    },
+    {
+      "id": "19CT3-MOR-COURT",
+      "label": "新西兰政府｜莫里奥里人与1870年原住民土地法院裁决",
+      "url": "https://whakatau.govt.nz/te-tira-kurapounamu-treaty-settlements/find-a-treaty-settlement/moriori"
+    },
+    {
+      "id": "19CT3-KER-1887",
+      "label": "新西兰立法档案｜克马德克群岛并入公告与王室制诰",
+      "url": "https://www.legislation.govt.nz/regulation/public/1887/0001/latest/whole.html"
+    },
+    {
+      "id": "19CT3-ROT-GAZ",
+      "label": "新西兰政府公报｜重印斐济1880年11月5日公告",
+      "url": "https://library.victoria.ac.nz/databases/nzgazettearchive/pubs/gazettes/1881/1881%20ISSUE%20073.pdf"
+    },
+    {
+      "id": "19CT3-ROT-1881",
+      "label": "斐济议会｜1881年罗图马割让及土地制度",
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2017/03/Rotuma-Lands-Bill-summary.pdf"
+    },
+    {
+      "id": "19CT3-PAC-1892",
+      "label": "阿德莱德大学档案｜1892年保护公告逐岛清单",
+      "url": "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/aa6b2cc9-4235-45ca-8896-1c703dfac641/content"
+    },
+    {
+      "id": "19CT3-PAC-HANS",
+      "label": "英国议会｜吉尔伯特与埃利斯群岛保护地及后续区划",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1977/jun/20/gilbert-and-ellice-islands"
+    },
+    {
+      "id": "19CT3-CA-BC-1858",
+      "label": "英国国会｜1858年《不列颠哥伦比亚政府法》",
+      "url": "https://www.legislation.gov.uk/ukpga/Vict/21-22/99/pdfs/ukpga_18580099_en.pdf"
+    },
+    {
+      "id": "19CT3-CA-BC-PROCLAMATION",
+      "label": "维多利亚大学殖民公文｜兰利堡公告回报",
+      "url": "https://bcgenesis.uvic.ca/B58034.html"
+    },
+    {
+      "id": "19CT3-CA-BC-ARROWSMITH",
+      "label": "英国国家档案馆藏｜阿罗史密斯1859年地图",
+      "url": "https://bcgenesis.uvic.ca/mpg_1-646_bc_and_vi_arrowsmith_1859.html"
+    },
+    {
+      "id": "19CT3-CA-BC-RUMSEY",
+      "label": "戴维·拉姆齐地图馆｜阿罗史密斯1859年彩绘图",
+      "url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~360129~90127238"
+    },
+    {
+      "id": "19CT3-CA-BC-NAME",
+      "label": "不列颠哥伦比亚省地名局｜纳斯河沿革",
+      "url": "https://apps.gov.bc.ca/pub/bcgnws/names/39106.html"
+    },
+    {
+      "id": "19CT3-CA-HAIDA-COMMISSION",
+      "label": "维多利亚大学殖民公文｜1853年道格拉斯确认受命",
+      "url": "https://bcgenesis.uvic.ca/V53004.html"
+    },
+    {
+      "id": "19CT3-CA-HAIDA-LAAS",
+      "label": "海达民族委员会｜采金、英国殖民声索与海达社会",
+      "url": "https://www.haidanation.ca/wp-content/uploads/2017/03/jl_mar.09.pdf"
+    },
+    {
+      "id": "19CT3-CA-HAIDA-GOVERNANCE",
+      "label": "海达民族委员会与加拿大公园局｜海达氏族管辖沿革",
+      "url": "https://www.haidanation.ca/wp-content/uploads/2018/11/Gwaii-Haanas-LSP-Plan-2018_EN_lowres.pdf"
+    },
+    {
+      "id": "19CT3-CA-MAP-1867",
+      "label": "加拿大自然资源部｜1867年地图集海达瓜伊岛屿轮廓",
+      "url": "https://geoappext.nrcan.gc.ca/arcgis/rest/services/FGP/TE/MapServer/8"
+    },
+    {
+      "id": "19CT3-CA-ATLAS-LICENSE",
+      "label": "加拿大开放数据｜国土演变地图集",
+      "url": "https://open.canada.ca/data/dataset/cb568551-8893-11e0-a3fc-6cf049291510"
+    },
+    {
+      "id": "19CT3-CA-OGL",
+      "label": "加拿大开放政府许可",
+      "url": "https://open.canada.ca/en/open-government-licence-canada/"
+    },
+    {
+      "id": "19CT3-CA-BC-1863-STATUTE",
+      "label": "英国国会｜1863年《不列颠哥伦比亚边界法》",
+      "url": "https://www.legislation.gov.uk/ukpga/Vict/26-27/83/pdfs/ukpga_18630083_en.pdf"
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "id": "hong-kong-island-1841-occupation",
+      "properties": {
+        "name": "香港岛 · 英军占领",
+        "stable_id": "hong-kong-main-island",
+        "start_year": 1841,
+        "end_year": 1841,
+        "display_kind": "conflict",
+        "label_type": "战时占领",
+        "summary_zh": "1841年1月，英军在上环登陆并升旗。义律公布穿鼻交涉的初步条件，清英双方政府随后均撤换各自谈判代表。",
+        "source_ids": [
+          "19CT3-HK-TAKE",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.nationalarchives.gov.uk/education/teaching-resources/hong-kong-and-the-opium-wars/",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [
+          "E19-OP-1841-HONG-KONG-OCCUPATION",
+          "E19-OP-1841-CHUENPI-PRELIMINARIES"
+        ],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.215587,22.285631],[114.221772,22.279364],[114.228119,22.280911],[114.23585,22.277818],[114.243663,22.264594],[114.251475,22.25906],[114.251475,22.248887],[114.245291,22.241889],[114.253754,22.223985],[114.249034,22.222398],[114.256114,22.203599],[114.243663,22.20128],[114.232758,22.211493],[114.232677,22.221991],[114.229503,22.233588],[114.222667,22.238837],[114.216807,22.23432],[114.222667,22.23253],[114.222667,22.224758],[114.218679,22.223985],[114.211762,22.216132],[114.218679,22.206],[114.215587,22.198961],[114.219493,22.191881],[114.207693,22.189561],[114.206065,22.205227],[114.209321,22.207546],[114.206554,22.212388],[114.196056,22.207546],[114.191417,22.209947],[114.196056,22.215318],[114.189057,22.219224],[114.193696,22.225531],[114.191417,22.230984],[114.182709,22.23253],[114.183849,22.241034],[114.171153,22.233303],[114.167247,22.227851],[114.164887,22.227851],[114.160981,22.240383],[114.152192,22.245022],[114.135997,22.245754],[114.12908,22.248887],[114.118826,22.269192],[114.112559,22.271511],[114.113373,22.277818],[114.115652,22.279364],[114.12908,22.285631],[114.139089,22.288723],[114.165701,22.279364],[114.178884,22.279364],[114.188162,22.287177],[114.196788,22.291856],[114.215587,22.285631]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hong-kong-island-1842-treaty",
+      "properties": {
+        "name": "香港岛 · 《南京条约》签署",
+        "stable_id": "hong-kong-main-island",
+        "start_year": 1842,
+        "end_year": 1842,
+        "display_kind": "political",
+        "label_type": "条约割让地",
+        "summary_zh": "1842年8月29日，清英签署《南京条约》。第三条载明清廷将香港岛割让英国。次年6月双方交换批准书。",
+        "source_ids": [
+          "19CT3-HK-NANKING",
+          "19CT3-HK-CROWN",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.nationalarchives.gov.uk/image/15145c50-9990-417c-a98e-4371c2d2aa7b/",
+          "https://www.grs.gov.hk/ws/rhk/en/1840s.html",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [
+          "E19-OP-1842-NANKING-TREATY"
+        ],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.215587,22.285631],[114.221772,22.279364],[114.228119,22.280911],[114.23585,22.277818],[114.243663,22.264594],[114.251475,22.25906],[114.251475,22.248887],[114.245291,22.241889],[114.253754,22.223985],[114.249034,22.222398],[114.256114,22.203599],[114.243663,22.20128],[114.232758,22.211493],[114.232677,22.221991],[114.229503,22.233588],[114.222667,22.238837],[114.216807,22.23432],[114.222667,22.23253],[114.222667,22.224758],[114.218679,22.223985],[114.211762,22.216132],[114.218679,22.206],[114.215587,22.198961],[114.219493,22.191881],[114.207693,22.189561],[114.206065,22.205227],[114.209321,22.207546],[114.206554,22.212388],[114.196056,22.207546],[114.191417,22.209947],[114.196056,22.215318],[114.189057,22.219224],[114.193696,22.225531],[114.191417,22.230984],[114.182709,22.23253],[114.183849,22.241034],[114.171153,22.233303],[114.167247,22.227851],[114.164887,22.227851],[114.160981,22.240383],[114.152192,22.245022],[114.135997,22.245754],[114.12908,22.248887],[114.118826,22.269192],[114.112559,22.271511],[114.113373,22.277818],[114.115652,22.279364],[114.12908,22.285631],[114.139089,22.288723],[114.165701,22.279364],[114.178884,22.279364],[114.188162,22.287177],[114.196788,22.291856],[114.215587,22.285631]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hong-kong-island-1843-crown",
+      "properties": {
+        "name": "香港岛 · 王室殖民行政",
+        "stable_id": "hong-kong-main-island",
+        "start_year": 1843,
+        "end_year": 1899,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1843年清英在香港交换《南京条约》批准书。英国任命砵甸乍为首任港督，在岛上建立殖民政府。",
+        "source_ids": [
+          "19CT3-HK-CROWN",
+          "19CT3-HK-NANKING",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.grs.gov.hk/ws/rhk/en/1840s.html",
+          "https://www.nationalarchives.gov.uk/image/15145c50-9990-417c-a98e-4371c2d2aa7b/",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [
+          "E19-OP-1843-HONG-KONG-COLONY"
+        ],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.215587,22.285631],[114.221772,22.279364],[114.228119,22.280911],[114.23585,22.277818],[114.243663,22.264594],[114.251475,22.25906],[114.251475,22.248887],[114.245291,22.241889],[114.253754,22.223985],[114.249034,22.222398],[114.256114,22.203599],[114.243663,22.20128],[114.232758,22.211493],[114.232677,22.221991],[114.229503,22.233588],[114.222667,22.238837],[114.216807,22.23432],[114.222667,22.23253],[114.222667,22.224758],[114.218679,22.223985],[114.211762,22.216132],[114.218679,22.206],[114.215587,22.198961],[114.219493,22.191881],[114.207693,22.189561],[114.206065,22.205227],[114.209321,22.207546],[114.206554,22.212388],[114.196056,22.207546],[114.191417,22.209947],[114.196056,22.215318],[114.189057,22.219224],[114.193696,22.225531],[114.191417,22.230984],[114.182709,22.23253],[114.183849,22.241034],[114.171153,22.233303],[114.167247,22.227851],[114.164887,22.227851],[114.160981,22.240383],[114.152192,22.245022],[114.135997,22.245754],[114.12908,22.248887],[114.118826,22.269192],[114.112559,22.271511],[114.113373,22.277818],[114.115652,22.279364],[114.12908,22.285631],[114.139089,22.288723],[114.165701,22.279364],[114.178884,22.279364],[114.188162,22.287177],[114.196788,22.291856],[114.215587,22.285631]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kowloon-south-1860-cession",
+      "properties": {
+        "name": "九龙半岛南部 · 《北京条约》割让",
+        "stable_id": "kowloon-south-peninsula",
+        "start_year": 1860,
+        "end_year": 1860,
+        "display_kind": "political",
+        "label_type": "条约割让地",
+        "summary_zh": "1860年3月，清方与巴夏礼签订九龙租批。同年10月，《北京条约》第六条废除租批并将其中列明的九龙土地割让英国。",
+        "source_ids": [
+          "19CT3-HK-GRS1860",
+          "19CT3-HK-PEKING",
+          "19CT3-HK-HKUBOUND",
+          "19CT3-HK-TSIM"
+        ],
+        "source_urls": [
+          "https://www.grs.gov.hk/ws/rhk/en/1860s.html",
+          "https://worldjpn.net/documents/texts/pw/18601024.T1E.html",
+          "https://arthistory.hku.hk/HKinTransition/image_detail.php?id=58736",
+          "https://www.epd.gov.hk/eia/files/applications/en/pp_16/eia_1442/progress/action_3558/r0561203.htm"
+        ],
+        "related_event_ids": [
+          "E19-PEK-1860-LEASE",
+          "E19-PEK-1860-KOWLOON"
+        ],
+        "mapping_method": "1860 deed map HKRS1035-1-1 traced at period shoreline; affine reference fit from four mapped anchors; generalized",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.153356,22.327631],[114.161278,22.32792],[114.170567,22.327332],[114.180153,22.326652],[114.189457,22.32598],[114.189257,22.32439],[114.18729,22.323267],[114.187647,22.321158],[114.19121,22.320054],[114.191315,22.318875],[114.188024,22.318377],[114.187245,22.316886],[114.18678,22.31354],[114.187345,22.310753],[114.189229,22.30793],[114.19169,22.306688],[114.190463,22.30563],[114.190089,22.30396],[114.19181,22.302654],[114.19322,22.301524],[114.191379,22.301322],[114.188447,22.302577],[114.185727,22.304246],[114.181353,22.305708],[114.178536,22.306289],[114.176734,22.304742],[114.176255,22.30148],[114.176175,22.298626],[114.175385,22.295541],[114.174662,22.293713],[114.171982,22.294037],[114.170392,22.292905],[114.16893,22.293784],[114.167169,22.296435],[114.165704,22.298994],[114.166044,22.301421],[114.164773,22.303387],[114.166757,22.305516],[114.167973,22.307751],[114.16819,22.310348],[114.167705,22.313217],[114.166566,22.315515],[114.164473,22.316244],[114.162526,22.31722],[114.162009,22.319166],[114.162109,22.321347],[114.160842,22.324404],[114.159548,22.325951],[114.158061,22.325319],[114.157425,22.322985],[114.156897,22.320564],[114.155555,22.320181],[114.153748,22.321993],[114.15381,22.323839],[114.154518,22.325751],[114.153356,22.327631]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kowloon-south-1861-hong-kong",
+      "properties": {
+        "name": "九龙半岛南部 · 并入香港殖民地",
+        "stable_id": "kowloon-south-peninsula",
+        "start_year": 1861,
+        "end_year": 1899,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1861年英方接收九龙，英国枢密院宣布九龙并入香港殖民地，港督颁令将香港法例施用于九龙。",
+        "source_ids": [
+          "19CT3-HK-GRS1860",
+          "19CT3-HK-PEKING",
+          "19CT3-HK-HKUBOUND",
+          "19CT3-HK-TSIM",
+          "19CT3-HK-KOWLAW"
+        ],
+        "source_urls": [
+          "https://www.grs.gov.hk/ws/rhk/en/1860s.html",
+          "https://worldjpn.net/documents/texts/pw/18601024.T1E.html",
+          "https://arthistory.hku.hk/HKinTransition/image_detail.php?id=58736",
+          "https://www.epd.gov.hk/eia/files/applications/en/pp_16/eia_1442/progress/action_3558/r0561203.htm",
+          "https://digitalrepository.lib.hku.hk/catalog/8049pr69v"
+        ],
+        "related_event_ids": [
+          "E19-PEK-1861-KOW-TAKE",
+          "E19-PEK-1861-KOW-ORDER",
+          "E19-PEK-1861-KOW-LAW"
+        ],
+        "mapping_method": "1860 deed map HKRS1035-1-1 traced at period shoreline; affine reference fit from four mapped anchors; generalized",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.153356,22.327631],[114.161278,22.32792],[114.170567,22.327332],[114.180153,22.326652],[114.189457,22.32598],[114.189257,22.32439],[114.18729,22.323267],[114.187647,22.321158],[114.19121,22.320054],[114.191315,22.318875],[114.188024,22.318377],[114.187245,22.316886],[114.18678,22.31354],[114.187345,22.310753],[114.189229,22.30793],[114.19169,22.306688],[114.190463,22.30563],[114.190089,22.30396],[114.19181,22.302654],[114.19322,22.301524],[114.191379,22.301322],[114.188447,22.302577],[114.185727,22.304246],[114.181353,22.305708],[114.178536,22.306289],[114.176734,22.304742],[114.176255,22.30148],[114.176175,22.298626],[114.175385,22.295541],[114.174662,22.293713],[114.171982,22.294037],[114.170392,22.292905],[114.16893,22.293784],[114.167169,22.296435],[114.165704,22.298994],[114.166044,22.301421],[114.164773,22.303387],[114.166757,22.305516],[114.167973,22.307751],[114.16819,22.310348],[114.167705,22.313217],[114.166566,22.315515],[114.164473,22.316244],[114.162526,22.31722],[114.162009,22.319166],[114.162109,22.321347],[114.160842,22.324404],[114.159548,22.325951],[114.158061,22.325319],[114.157425,22.322985],[114.156897,22.320564],[114.155555,22.320181],[114.153748,22.321993],[114.15381,22.323839],[114.154518,22.325751],[114.153356,22.327631]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stonecutters-1860-cession",
+      "properties": {
+        "name": "昂船洲 · 《北京条约》割让",
+        "stable_id": "stonecutters-island",
+        "start_year": 1860,
+        "end_year": 1860,
+        "display_kind": "political",
+        "label_type": "条约割让地",
+        "summary_zh": "昂船洲列于1860年九龙租批附图，10月随租批所列土地一并割让。",
+        "source_ids": [
+          "19CT3-HK-GRS1860",
+          "19CT3-HK-PEKING"
+        ],
+        "source_urls": [
+          "https://www.grs.gov.hk/ws/rhk/en/1860s.html",
+          "https://worldjpn.net/documents/texts/pw/18601024.T1E.html"
+        ],
+        "related_event_ids": [
+          "E19-PEK-1860-STONE"
+        ],
+        "mapping_method": "1860 deed map HKRS1035-1-1 traced at period shoreline; affine reference fit from four mapped anchors; generalized",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.129086,22.327533],[114.131056,22.326975],[114.132235,22.326104],[114.132015,22.325186],[114.134767,22.324439],[114.136331,22.324061],[114.137342,22.322522],[114.138835,22.322565],[114.138718,22.32492],[114.138763,22.325759],[114.140157,22.323621],[114.141016,22.322422],[114.139774,22.321448],[114.139292,22.319866],[114.137708,22.318145],[114.136923,22.317242],[114.135284,22.316951],[114.13457,22.315627],[114.132606,22.315596],[114.132044,22.316703],[114.132997,22.318273],[114.131501,22.319909],[114.129446,22.320972],[114.12773,22.321691],[114.126223,22.321732],[114.12509,22.32067],[114.123394,22.320716],[114.122463,22.322337],[114.124205,22.32313],[114.125946,22.323923],[114.127376,22.324892],[114.128538,22.325784],[114.129086,22.327533]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stonecutters-1861-hong-kong",
+      "properties": {
+        "name": "昂船洲 · 香港殖民行政",
+        "stable_id": "stonecutters-island",
+        "start_year": 1861,
+        "end_year": 1899,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1861年九龙并入香港殖民地，昂船洲随同接受殖民政府管辖。",
+        "source_ids": [
+          "19CT3-HK-GRS1860",
+          "19CT3-HK-PEKING",
+          "19CT3-HK-KOWLAW"
+        ],
+        "source_urls": [
+          "https://www.grs.gov.hk/ws/rhk/en/1860s.html",
+          "https://worldjpn.net/documents/texts/pw/18601024.T1E.html",
+          "https://digitalrepository.lib.hku.hk/catalog/8049pr69v"
+        ],
+        "related_event_ids": [
+          "E19-PEK-1860-STONE",
+          "E19-PEK-1861-KOW-ORDER"
+        ],
+        "mapping_method": "1860 deed map HKRS1035-1-1 traced at period shoreline; affine reference fit from four mapped anchors; generalized",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.129086,22.327533],[114.131056,22.326975],[114.132235,22.326104],[114.132015,22.325186],[114.134767,22.324439],[114.136331,22.324061],[114.137342,22.322522],[114.138835,22.322565],[114.138718,22.32492],[114.138763,22.325759],[114.140157,22.323621],[114.141016,22.322422],[114.139774,22.321448],[114.139292,22.319866],[114.137708,22.318145],[114.136923,22.317242],[114.135284,22.316951],[114.13457,22.315627],[114.132606,22.315596],[114.132044,22.316703],[114.132997,22.318273],[114.131501,22.319909],[114.129446,22.320972],[114.12773,22.321691],[114.126223,22.321732],[114.12509,22.32067],[114.123394,22.320716],[114.122463,22.322337],[114.124205,22.32313],[114.125946,22.323923],[114.127376,22.324892],[114.128538,22.325784],[114.129086,22.327533]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "lantau-1898-new-territories-lease",
+      "properties": {
+        "name": "大屿山 · 新界租借",
+        "stable_id": "lantau-new-territories",
+        "start_year": 1898,
+        "end_year": 1899,
+        "display_kind": "political",
+        "label_type": "条约租借地",
+        "summary_zh": "1898年《展拓香港界址专条》自7月1日起租借新界九十九年。大屿山列入租借范围，1899年英方接收新界。",
+        "source_ids": [
+          "19CT3-HK-GRS1898",
+          "19CT3-HK-ANNEX1",
+          "19CT3-HK-1899",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.grs.gov.hk/ws/rhk/en/1890s.html",
+          "https://commons.wikimedia.org/wiki/File:Map_of_The_Convention_for_the_Extension_of_Hong_Kong_Territory_in_1898_-_1.jpg",
+          "https://library.law.fsu.edu/Digital-Collections/LimitsinSeas/pdf/ibs013.pdf#page=6",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[113.846446,22.197089],[113.839203,22.204901],[113.837332,22.228624],[113.839203,22.234198],[113.849213,22.234198],[113.849213,22.244127],[113.856781,22.245998],[113.856781,22.252265],[113.850597,22.256781],[113.866954,22.268988],[113.867605,22.270738],[113.876801,22.272284],[113.883962,22.279364],[113.892507,22.292711],[113.921479,22.291856],[113.928396,22.284857],[113.93865,22.288723],[113.961925,22.301174],[113.976736,22.298082],[113.983735,22.309027],[113.992442,22.310574],[113.999522,22.322252],[114.017345,22.335517],[114.020518,22.328518],[114.043793,22.345771],[114.049327,22.342231],[114.054861,22.33633],[114.051768,22.328518],[114.050222,22.319932],[114.046153,22.323147],[114.031423,22.324571],[114.029633,22.308987],[114.012706,22.311347],[114.012706,22.298082],[114.022146,22.301907],[114.017589,22.289049],[114.018891,22.264594],[114.004161,22.264594],[113.995372,22.267768],[114.007253,22.252102],[113.992442,22.241197],[114.014985,22.227078],[114.000173,22.216132],[113.981944,22.208238],[113.980642,22.215318],[113.980642,22.23725],[113.945649,22.23725],[113.928396,22.223985],[113.921479,22.223985],[113.918305,22.219224],[113.928396,22.216905],[113.928396,22.210761],[113.919119,22.205024],[113.906261,22.204006],[113.894054,22.215318],[113.892507,22.222398],[113.883962,22.219997],[113.859141,22.201402],[113.846446,22.197089]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "lamma-1898-new-territories-lease",
+      "properties": {
+        "name": "南丫岛 · 新界租借",
+        "stable_id": "lamma-new-territories",
+        "start_year": 1898,
+        "end_year": 1899,
+        "display_kind": "political",
+        "label_type": "条约租借地",
+        "summary_zh": "1898年《展拓香港界址专条》自7月1日起租借新界九十九年。南丫岛列入租借范围，1899年英方接收新界。",
+        "source_ids": [
+          "19CT3-HK-GRS1898",
+          "19CT3-HK-ANNEX1",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.grs.gov.hk/ws/rhk/en/1890s.html",
+          "https://commons.wikimedia.org/wiki/File:Map_of_The_Convention_for_the_Extension_of_Hong_Kong_Territory_in_1898_-_1.jpg",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.145356,22.178697],[114.11085,22.177069],[114.114106,22.185736],[114.114106,22.216132],[114.104259,22.215969],[114.106375,22.222398],[114.1067,22.235785],[114.113292,22.233344],[114.117442,22.221869],[114.125743,22.213446],[114.132823,22.216132],[114.132823,22.209947],[114.125743,22.205227],[114.149669,22.206041],[114.154633,22.203599],[114.143077,22.196112],[114.139089,22.191107],[114.145356,22.178697]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "singapore-1824-crawfurd-cession",
+      "properties": {
+        "name": "新加坡岛 · 1824年割让条约",
+        "stable_id": "singapore-main-island",
+        "start_year": 1824,
+        "end_year": 1825,
+        "display_kind": "political",
+        "label_type": "条约割让地",
+        "summary_zh": "1824年8月2日，柔佛苏丹胡先与天猛公阿都拉曼签署条约，将新加坡岛及约定范围内的附近岛屿交给东印度公司。驻新加坡长官克劳福德曾以停发津贴施压。",
+        "source_ids": [
+          "19CT3-SG-1824",
+          "19CT3-SG-NLB",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Crawfurd_Treaty_1824.pdf",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-1-apr-jun-2019-making-history/",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[103.960785,1.391099],[103.985688,1.385443],[103.999522,1.380316],[104.003429,1.374172],[103.991873,1.354926],[103.974864,1.334459],[103.954356,1.318101],[103.931895,1.311469],[103.907237,1.308743],[103.887706,1.301256],[103.852712,1.277289],[103.844086,1.2685],[103.838878,1.266262],[103.82602,1.264309],[103.801606,1.264797],[103.789561,1.26789],[103.784434,1.273871],[103.77589,1.287584],[103.755138,1.297105],[103.730154,1.302924],[103.708751,1.305243],[103.665294,1.304104],[103.647634,1.308417],[103.640391,1.322252],[103.644705,1.338039],[103.674571,1.380316],[103.678884,1.399237],[103.683849,1.409898],[103.695079,1.421332],[103.708344,1.429389],[103.717947,1.430976],[103.739757,1.428127],[103.762218,1.430976],[103.79005,1.444281],[103.804942,1.448635],[103.831554,1.447089],[103.857188,1.438707],[103.932465,1.401109],[103.960785,1.391099]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "penang-1800-company",
+      "properties": {
+        "name": "槟榔屿 · 东印度公司行政",
+        "stable_id": "penang-main-island",
+        "start_year": 1800,
+        "end_year": 1825,
+        "display_kind": "administrative",
+        "label_type": "公司殖民行政",
+        "summary_zh": "东印度公司自1786年起在槟榔屿建立殖民据点。1800年，公司再从吉打取得海峡对岸的一片土地，称威省。",
+        "source_ids": [
+          "19CT3-PENANG",
+          "19CT3-STRAITS-LIST",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.penang.gov.my/index.php/en/component/content/article/28-struktur-pentadbiran-negeri?Itemid=988&catid=5%3Adiscover-penang",
+          "https://tile.loc.gov/storage-services/public/gdc/23004826/23004826.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100.309825,5.450751],[100.318533,5.435289],[100.333995,5.426947],[100.343435,5.417629],[100.325206,5.383287],[100.320811,5.34455],[100.316661,5.326646],[100.292247,5.280463],[100.288748,5.262681],[100.234711,5.272691],[100.194998,5.272284],[100.192719,5.267646],[100.189708,5.266506],[100.184337,5.268541],[100.180024,5.273342],[100.178966,5.277981],[100.192719,5.285956],[100.196137,5.299994],[100.191173,5.352525],[100.193126,5.399319],[100.190929,5.408433],[100.179454,5.426907],[100.181651,5.436591],[100.185232,5.444281],[100.185883,5.451117],[100.179454,5.458197],[100.192068,5.462958],[100.197113,5.457261],[100.201182,5.448472],[100.210623,5.443996],[100.218598,5.446723],[100.22934,5.459906],[100.234711,5.464504],[100.253754,5.469062],[100.274099,5.468492],[100.293305,5.462592],[100.309825,5.450751]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "singapore-1826-straits-company",
+      "properties": {
+        "name": "新加坡岛 · 海峡殖民地",
+        "stable_id": "singapore-main-island",
+        "start_year": 1826,
+        "end_year": 1857,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1826年，东印度公司将新加坡、槟榔屿和马六甲归入海峡殖民地的共同管辖。",
+        "source_ids": [
+          "19CT3-SG-ICJ",
+          "19CT3-STRAITS-LIST",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20040325-WRI-02-04-EN.pdf",
+          "https://tile.loc.gov/storage-services/public/gdc/23004826/23004826.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[103.960785,1.391099],[103.985688,1.385443],[103.999522,1.380316],[104.003429,1.374172],[103.991873,1.354926],[103.974864,1.334459],[103.954356,1.318101],[103.931895,1.311469],[103.907237,1.308743],[103.887706,1.301256],[103.852712,1.277289],[103.844086,1.2685],[103.838878,1.266262],[103.82602,1.264309],[103.801606,1.264797],[103.789561,1.26789],[103.784434,1.273871],[103.77589,1.287584],[103.755138,1.297105],[103.730154,1.302924],[103.708751,1.305243],[103.665294,1.304104],[103.647634,1.308417],[103.640391,1.322252],[103.644705,1.338039],[103.674571,1.380316],[103.678884,1.399237],[103.683849,1.409898],[103.695079,1.421332],[103.708344,1.429389],[103.717947,1.430976],[103.739757,1.428127],[103.762218,1.430976],[103.79005,1.444281],[103.804942,1.448635],[103.831554,1.447089],[103.857188,1.438707],[103.932465,1.401109],[103.960785,1.391099]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "singapore-1858-straits-india",
+      "properties": {
+        "name": "新加坡岛 · 海峡殖民地",
+        "stable_id": "singapore-main-island",
+        "start_year": 1858,
+        "end_year": 1866,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1858年，英国王室接收东印度公司在印度的管治权，海峡殖民地继续由英属印度政府管辖。",
+        "source_ids": [
+          "19CT3-INDIA-1858",
+          "19CT3-SG-ICJ",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Vict/21-22/106/pdfs/ukpga_18580106_en.pdf",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20040325-WRI-02-04-EN.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[103.960785,1.391099],[103.985688,1.385443],[103.999522,1.380316],[104.003429,1.374172],[103.991873,1.354926],[103.974864,1.334459],[103.954356,1.318101],[103.931895,1.311469],[103.907237,1.308743],[103.887706,1.301256],[103.852712,1.277289],[103.844086,1.2685],[103.838878,1.266262],[103.82602,1.264309],[103.801606,1.264797],[103.789561,1.26789],[103.784434,1.273871],[103.77589,1.287584],[103.755138,1.297105],[103.730154,1.302924],[103.708751,1.305243],[103.665294,1.304104],[103.647634,1.308417],[103.640391,1.322252],[103.644705,1.338039],[103.674571,1.380316],[103.678884,1.399237],[103.683849,1.409898],[103.695079,1.421332],[103.708344,1.429389],[103.717947,1.430976],[103.739757,1.428127],[103.762218,1.430976],[103.79005,1.444281],[103.804942,1.448635],[103.831554,1.447089],[103.857188,1.438707],[103.932465,1.401109],[103.960785,1.391099]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "singapore-1867-straits-crown",
+      "properties": {
+        "name": "新加坡岛 · 海峡殖民地",
+        "stable_id": "singapore-main-island",
+        "start_year": 1867,
+        "end_year": 1899,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1867年4月1日，海峡殖民地脱离英属印度政府，改由英国殖民部管理。",
+        "source_ids": [
+          "19CT3-STRAITS",
+          "19CT3-SG-ICJ",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Vict/29-30/115/pdfs/ukpga_18660115_en.pdf",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20040325-WRI-02-04-EN.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[103.960785,1.391099],[103.985688,1.385443],[103.999522,1.380316],[104.003429,1.374172],[103.991873,1.354926],[103.974864,1.334459],[103.954356,1.318101],[103.931895,1.311469],[103.907237,1.308743],[103.887706,1.301256],[103.852712,1.277289],[103.844086,1.2685],[103.838878,1.266262],[103.82602,1.264309],[103.801606,1.264797],[103.789561,1.26789],[103.784434,1.273871],[103.77589,1.287584],[103.755138,1.297105],[103.730154,1.302924],[103.708751,1.305243],[103.665294,1.304104],[103.647634,1.308417],[103.640391,1.322252],[103.644705,1.338039],[103.674571,1.380316],[103.678884,1.399237],[103.683849,1.409898],[103.695079,1.421332],[103.708344,1.429389],[103.717947,1.430976],[103.739757,1.428127],[103.762218,1.430976],[103.79005,1.444281],[103.804942,1.448635],[103.831554,1.447089],[103.857188,1.438707],[103.932465,1.401109],[103.960785,1.391099]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "penang-1826-straits-company",
+      "properties": {
+        "name": "槟榔屿 · 海峡殖民地",
+        "stable_id": "penang-main-island",
+        "start_year": 1826,
+        "end_year": 1857,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1826年，东印度公司将新加坡、槟榔屿和马六甲归入海峡殖民地的共同管辖。",
+        "source_ids": [
+          "19CT3-SG-ICJ",
+          "19CT3-STRAITS-LIST",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20040325-WRI-02-04-EN.pdf",
+          "https://tile.loc.gov/storage-services/public/gdc/23004826/23004826.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100.309825,5.450751],[100.318533,5.435289],[100.333995,5.426947],[100.343435,5.417629],[100.325206,5.383287],[100.320811,5.34455],[100.316661,5.326646],[100.292247,5.280463],[100.288748,5.262681],[100.234711,5.272691],[100.194998,5.272284],[100.192719,5.267646],[100.189708,5.266506],[100.184337,5.268541],[100.180024,5.273342],[100.178966,5.277981],[100.192719,5.285956],[100.196137,5.299994],[100.191173,5.352525],[100.193126,5.399319],[100.190929,5.408433],[100.179454,5.426907],[100.181651,5.436591],[100.185232,5.444281],[100.185883,5.451117],[100.179454,5.458197],[100.192068,5.462958],[100.197113,5.457261],[100.201182,5.448472],[100.210623,5.443996],[100.218598,5.446723],[100.22934,5.459906],[100.234711,5.464504],[100.253754,5.469062],[100.274099,5.468492],[100.293305,5.462592],[100.309825,5.450751]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "penang-1858-straits-india",
+      "properties": {
+        "name": "槟榔屿 · 海峡殖民地",
+        "stable_id": "penang-main-island",
+        "start_year": 1858,
+        "end_year": 1866,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1858年，英国王室接收东印度公司在印度的管治权，海峡殖民地继续由英属印度政府管辖。",
+        "source_ids": [
+          "19CT3-INDIA-1858",
+          "19CT3-SG-ICJ",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Vict/21-22/106/pdfs/ukpga_18580106_en.pdf",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20040325-WRI-02-04-EN.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100.309825,5.450751],[100.318533,5.435289],[100.333995,5.426947],[100.343435,5.417629],[100.325206,5.383287],[100.320811,5.34455],[100.316661,5.326646],[100.292247,5.280463],[100.288748,5.262681],[100.234711,5.272691],[100.194998,5.272284],[100.192719,5.267646],[100.189708,5.266506],[100.184337,5.268541],[100.180024,5.273342],[100.178966,5.277981],[100.192719,5.285956],[100.196137,5.299994],[100.191173,5.352525],[100.193126,5.399319],[100.190929,5.408433],[100.179454,5.426907],[100.181651,5.436591],[100.185232,5.444281],[100.185883,5.451117],[100.179454,5.458197],[100.192068,5.462958],[100.197113,5.457261],[100.201182,5.448472],[100.210623,5.443996],[100.218598,5.446723],[100.22934,5.459906],[100.234711,5.464504],[100.253754,5.469062],[100.274099,5.468492],[100.293305,5.462592],[100.309825,5.450751]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "penang-1867-straits-crown",
+      "properties": {
+        "name": "槟榔屿 · 海峡殖民地",
+        "stable_id": "penang-main-island",
+        "start_year": 1867,
+        "end_year": 1899,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1867年4月1日，海峡殖民地脱离英属印度政府，改由英国殖民部管理。",
+        "source_ids": [
+          "19CT3-STRAITS",
+          "19CT3-SG-ICJ",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Vict/29-30/115/pdfs/ukpga_18660115_en.pdf",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/130/130-20040325-WRI-02-04-EN.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100.309825,5.450751],[100.318533,5.435289],[100.333995,5.426947],[100.343435,5.417629],[100.325206,5.383287],[100.320811,5.34455],[100.316661,5.326646],[100.292247,5.280463],[100.288748,5.262681],[100.234711,5.272691],[100.194998,5.272284],[100.192719,5.267646],[100.189708,5.266506],[100.184337,5.268541],[100.180024,5.273342],[100.178966,5.277981],[100.192719,5.285956],[100.196137,5.299994],[100.191173,5.352525],[100.193126,5.399319],[100.190929,5.408433],[100.179454,5.426907],[100.181651,5.436591],[100.185232,5.444281],[100.185883,5.451117],[100.179454,5.458197],[100.192068,5.462958],[100.197113,5.457261],[100.201182,5.448472],[100.210623,5.443996],[100.218598,5.446723],[100.22934,5.459906],[100.234711,5.464504],[100.253754,5.469062],[100.274099,5.468492],[100.293305,5.462592],[100.309825,5.450751]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "chatham-1842-annexation",
+      "properties": {
+        "name": "查塔姆群岛（雷科胡） · 王室宣布并入",
+        "stable_id": "chatham-islands-rekohu",
+        "start_year": 1842,
+        "end_year": 1853,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1842年11月，新西兰殖民政府公告将查塔姆群岛并入。公告出台前，殖民政府没有与莫里奥里人签订协议。",
+        "source_ids": [
+          "19CT3-MOR-TRIB",
+          "19CT3-MOR-DEED",
+          "19CT3-LINZ"
+        ],
+        "source_urls": [
+          "https://forms.justice.govt.nz/search/Documents/WT/wt_DOC_68595363/Rekohu%20Report%202016%20Reprint.pdf#page=76",
+          "https://www.govt.nz/assets/Documents/OTS/Moriori/1.-Moriori-Deed-of-Settlement-Historical-Claims.pdf",
+          "https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected LINZ NZ Coastlines and Islands Polygons Topo 1:50k objects; generalized in WGS84, CC BY 4.0",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[-176.224327,-44.224235],[-176.227891,-44.234122],[-176.236501,-44.240369],[-176.255161,-44.240599],[-176.260627,-44.24507],[-176.268984,-44.243724],[-176.274994,-44.239003],[-176.276925,-44.242142],[-176.25697,-44.248952],[-176.249593,-44.259249],[-176.244894,-44.258419],[-176.239552,-44.263888],[-176.241704,-44.273598],[-176.257959,-44.277502],[-176.261106,-44.283479],[-176.269163,-44.286329],[-176.261708,-44.284728],[-176.255394,-44.288451],[-176.254919,-44.293488],[-176.262232,-44.300984],[-176.25847,-44.302676],[-176.260232,-44.306299],[-176.252152,-44.31074],[-176.258612,-44.322294],[-176.267892,-44.324833],[-176.246381,-44.3293],[-176.248583,-44.336496],[-176.255895,-44.339425],[-176.25687,-44.344782],[-176.24794,-44.346536],[-176.243788,-44.352055],[-176.237498,-44.350491],[-176.238195,-44.34677],[-176.228753,-44.342134],[-176.230013,-44.339965],[-176.226812,-44.342168],[-176.227137,-44.334208],[-176.220855,-44.332068],[-176.215788,-44.334339],[-176.209981,-44.327277],[-176.202554,-44.326894],[-176.202349,-44.31641],[-176.196262,-44.312259],[-176.199512,-44.303248],[-176.189417,-44.29053],[-176.172841,-44.279901],[-176.154666,-44.272949],[-176.159267,-44.266443],[-176.154359,-44.262246],[-176.164274,-44.263897],[-176.172247,-44.259085],[-176.197196,-44.23192],[-176.212498,-44.224656],[-176.224327,-44.224235]]],[[[-176.627309,-43.692943],[-176.630642,-43.696674],[-176.629914,-43.702327],[-176.6408,-43.703855],[-176.633082,-43.712465],[-176.63772,-43.715787],[-176.631589,-43.721793],[-176.635155,-43.729739],[-176.646023,-43.740167],[-176.66187,-43.749136],[-176.726001,-43.763831],[-176.747364,-43.76591],[-176.791653,-43.759308],[-176.802908,-43.7524],[-176.80351,-43.744432],[-176.817799,-43.747061],[-176.815913,-43.750024],[-176.820514,-43.750451],[-176.819849,-43.754652],[-176.824984,-43.757444],[-176.820075,-43.757157],[-176.812301,-43.763881],[-176.809138,-43.774203],[-176.811312,-43.784212],[-176.831058,-43.788131],[-176.867485,-43.789368],[-176.873449,-43.79257],[-176.875474,-43.796187],[-176.873027,-43.797492],[-176.87857,-43.799853],[-176.872734,-43.802636],[-176.877351,-43.805357],[-176.871856,-43.805885],[-176.879507,-43.811148],[-176.875808,-43.811076],[-176.878762,-43.812743],[-176.873826,-43.816138],[-176.877694,-43.819692],[-176.892292,-43.821155],[-176.893609,-43.824994],[-176.885963,-43.826372],[-176.891539,-43.826912],[-176.888059,-43.828621],[-176.871438,-43.831084],[-176.882357,-43.836824],[-176.88228,-43.840907],[-176.860383,-43.838277],[-176.860412,-43.842113],[-176.847635,-43.845111],[-176.848261,-43.838045],[-176.844481,-43.83666],[-176.816489,-43.845482],[-176.786766,-43.838336],[-176.788878,-43.83601],[-176.784453,-43.835554],[-176.795523,-43.825868],[-176.79446,-43.821449],[-176.760113,-43.828478],[-176.75569,-43.8336],[-176.745228,-43.83038],[-176.742887,-43.826687],[-176.715823,-43.830351],[-176.701279,-43.822413],[-176.703009,-43.817622],[-176.709612,-43.814273],[-176.707643,-43.808394],[-176.696858,-43.811537],[-176.689821,-43.817584],[-176.685166,-43.812831],[-176.688221,-43.810293],[-176.68483,-43.807429],[-176.688307,-43.799722],[-176.683334,-43.798304],[-176.676137,-43.807041],[-176.669807,-43.808094],[-176.66359,-43.797384],[-176.657455,-43.808606],[-176.650928,-43.80945],[-176.646517,-43.804208],[-176.640518,-43.810754],[-176.633399,-43.807992],[-176.623366,-43.811732],[-176.609158,-43.811709],[-176.571198,-43.84848],[-176.548322,-43.880408],[-176.543211,-43.891592],[-176.545713,-43.898815],[-176.535362,-43.911006],[-176.53313,-43.929431],[-176.536766,-43.941777],[-176.546234,-43.950152],[-176.556111,-43.952815],[-176.562504,-43.949375],[-176.560343,-43.945822],[-176.572814,-43.941922],[-176.571305,-43.946154],[-176.576775,-43.949694],[-176.573943,-43.95278],[-176.575138,-43.957397],[-176.580513,-43.962814],[-176.588095,-43.966409],[-176.595022,-43.965424],[-176.616049,-43.976214],[-176.619824,-43.981384],[-176.632248,-43.984196],[-176.652136,-43.995886],[-176.653715,-43.99967],[-176.67438,-44.004212],[-176.683448,-44.010909],[-176.678835,-44.015218],[-176.681847,-44.021911],[-176.675369,-44.02457],[-176.677011,-44.026551],[-176.671584,-44.029481],[-176.669725,-44.03694],[-176.655514,-44.042085],[-176.659259,-44.048593],[-176.656671,-44.062013],[-176.653583,-44.064103],[-176.662707,-44.070688],[-176.658552,-44.069883],[-176.64722,-44.077215],[-176.642925,-44.087267],[-176.648269,-44.10629],[-176.638611,-44.105094],[-176.633245,-44.111219],[-176.632047,-44.114895],[-176.636931,-44.118796],[-176.634996,-44.124015],[-176.62516,-44.11984],[-176.618832,-44.120896],[-176.614476,-44.126838],[-176.603247,-44.125585],[-176.592214,-44.130469],[-176.584706,-44.1279],[-176.580209,-44.132065],[-176.535203,-44.113225],[-176.533086,-44.104472],[-176.525931,-44.098651],[-176.517969,-44.099171],[-176.500539,-44.087972],[-176.495704,-44.08713],[-176.490281,-44.090688],[-176.491501,-44.085918],[-176.477976,-44.074619],[-176.461469,-44.071992],[-176.447615,-44.065195],[-176.417882,-44.062385],[-176.393235,-44.054214],[-176.377513,-44.058713],[-176.358083,-44.057992],[-176.34383,-44.050372],[-176.328523,-44.052399],[-176.325188,-44.048629],[-176.328211,-44.03776],[-176.325847,-44.032459],[-176.341843,-44.03287],[-176.356695,-44.023517],[-176.374319,-44.024779],[-176.395933,-44.007808],[-176.408092,-43.984051],[-176.413665,-43.965069],[-176.417298,-43.923188],[-176.422691,-43.927025],[-176.419964,-43.934598],[-176.423225,-43.928375],[-176.424475,-43.934414],[-176.429844,-43.938434],[-176.42967,-43.961776],[-176.436037,-43.967955],[-176.440144,-43.96638],[-176.4388,-43.963574],[-176.436551,-43.963564],[-176.44104,-43.960279],[-176.443151,-43.962328],[-176.440848,-43.963968],[-176.4417,-43.965725],[-176.45375,-43.96491],[-176.483193,-43.952582],[-176.482917,-43.946683],[-176.485403,-43.945564],[-176.482137,-43.943212],[-176.48457,-43.941578],[-176.481196,-43.939749],[-176.479182,-43.940768],[-176.478681,-43.937698],[-176.474115,-43.931177],[-176.469306,-43.928881],[-176.47494,-43.923741],[-176.4738,-43.916158],[-176.513096,-43.887618],[-176.51257,-43.883334],[-176.523831,-43.867021],[-176.521554,-43.85888],[-176.524612,-43.853803],[-176.514592,-43.842602],[-176.502166,-43.840776],[-176.50531,-43.834801],[-176.498357,-43.830161],[-176.492583,-43.830337],[-176.495435,-43.825751],[-176.493637,-43.823423],[-176.482713,-43.822542],[-176.476977,-43.827763],[-176.476629,-43.82367],[-176.466096,-43.815738],[-176.44286,-43.808324],[-176.450012,-43.802926],[-176.463758,-43.800988],[-176.480804,-43.80316],[-176.497349,-43.796967],[-176.526584,-43.797987],[-176.541089,-43.793134],[-176.545857,-43.78807],[-176.545915,-43.78205],[-176.555589,-43.78015],[-176.561453,-43.774016],[-176.5603,-43.760737],[-176.555357,-43.75361],[-176.549148,-43.751949],[-176.549748,-43.744695],[-176.553684,-43.742594],[-176.544414,-43.737676],[-176.520317,-43.741497],[-176.506151,-43.750281],[-176.503523,-43.755333],[-176.506161,-43.761169],[-176.499981,-43.763835],[-176.477303,-43.747185],[-176.458102,-43.751381],[-176.435856,-43.750969],[-176.3957,-43.765985],[-176.385666,-43.77521],[-176.375,-43.791652],[-176.36417,-43.800348],[-176.361949,-43.805551],[-176.366203,-43.810693],[-176.397887,-43.817084],[-176.402771,-43.82471],[-176.404557,-43.823506],[-176.40342,-43.831816],[-176.408003,-43.838578],[-176.421373,-43.847428],[-176.426085,-43.846393],[-176.424742,-43.844004],[-176.429493,-43.837063],[-176.42943,-43.843174],[-176.420548,-43.864513],[-176.417158,-43.885965],[-176.41959,-43.898753],[-176.427841,-43.91016],[-176.429002,-43.917232],[-176.419245,-43.918527],[-176.419696,-43.92317],[-176.416187,-43.920389],[-176.412562,-43.899586],[-176.401077,-43.869848],[-176.384217,-43.842181],[-176.363344,-43.816288],[-176.337324,-43.791296],[-176.312689,-43.774961],[-176.280832,-43.763145],[-176.257219,-43.763032],[-176.240234,-43.774952],[-176.236888,-43.770298],[-176.241506,-43.76403],[-176.241264,-43.757666],[-176.232907,-43.747757],[-176.223086,-43.740995],[-176.217436,-43.743553],[-176.213134,-43.739365],[-176.206181,-43.740631],[-176.198933,-43.734605],[-176.205647,-43.729319],[-176.213147,-43.733767],[-176.218694,-43.731927],[-176.224436,-43.735083],[-176.237657,-43.729823],[-176.244688,-43.731396],[-176.247361,-43.72825],[-176.253083,-43.728952],[-176.253144,-43.734332],[-176.259038,-43.736344],[-176.272619,-43.729452],[-176.271293,-43.735862],[-176.277772,-43.741244],[-176.302259,-43.74696],[-176.321016,-43.746187],[-176.335059,-43.736761],[-176.342733,-43.737658],[-176.346112,-43.733855],[-176.349911,-43.734155],[-176.353778,-43.740486],[-176.366271,-43.744488],[-176.438802,-43.747687],[-176.473058,-43.742151],[-176.488865,-43.736391],[-176.497692,-43.72656],[-176.492066,-43.720602],[-176.510175,-43.72397],[-176.539451,-43.721697],[-176.547642,-43.716076],[-176.581998,-43.705112],[-176.60944,-43.702906],[-176.614996,-43.696998],[-176.621563,-43.697145],[-176.627309,-43.692943]]],[[[-176.443846,-43.962736],[-176.442296,-43.964205],[-176.443297,-43.963203],[-176.443846,-43.962736]]],[[[-176.479082,-43.943086],[-176.479189,-43.943101],[-176.479102,-43.943519],[-176.479082,-43.943086]]],[[[-176.479837,-43.940961],[-176.47991,-43.940803],[-176.480218,-43.940967],[-176.479837,-43.940961]]],[[[-176.477062,-43.937216],[-176.477088,-43.93712],[-176.47757,-43.937139],[-176.477062,-43.937216]]],[[[-176.430585,-43.935315],[-176.432293,-43.93647],[-176.428842,-43.93563],[-176.430585,-43.935315]]],[[[-176.424927,-43.933602],[-176.424812,-43.932767],[-176.427243,-43.93467],[-176.424927,-43.933602]]],[[[-176.424226,-43.929891],[-176.425574,-43.926131],[-176.428561,-43.929252],[-176.436152,-43.933315],[-176.429774,-43.934316],[-176.424226,-43.929891]]],[[[-176.435904,-43.921792],[-176.435824,-43.921547],[-176.437453,-43.922306],[-176.435904,-43.921792]]],[[[-176.432444,-43.921156],[-176.450177,-43.925615],[-176.434912,-43.932133],[-176.425462,-43.925371],[-176.431747,-43.921858],[-176.436829,-43.925285],[-176.435707,-43.927474],[-176.439049,-43.927025],[-176.432444,-43.921156]]],[[[-176.428591,-43.920913],[-176.430116,-43.920875],[-176.422323,-43.924819],[-176.428591,-43.920913]]],[[[-176.43547,-43.917111],[-176.433024,-43.918214],[-176.433273,-43.916868],[-176.43547,-43.917111]]],[[[-176.428247,-43.90912],[-176.43192,-43.911494],[-176.431903,-43.913213],[-176.430793,-43.91452],[-176.431803,-43.911916],[-176.428247,-43.90912]]],[[[-176.486904,-43.900075],[-176.487201,-43.900137],[-176.486806,-43.900399],[-176.486904,-43.900075]]],[[[-176.488262,-43.895807],[-176.48933,-43.896885],[-176.488076,-43.8968],[-176.488262,-43.895807]]],[[[-176.504068,-43.88164],[-176.504371,-43.880629],[-176.504605,-43.881374],[-176.504068,-43.88164]]],[[[-176.425613,-43.840731],[-176.426311,-43.841021],[-176.425978,-43.841366],[-176.425613,-43.840731]]],[[[-176.426297,-43.839985],[-176.426574,-43.840065],[-176.426375,-43.84029],[-176.426297,-43.839985]]],[[[-176.412327,-43.838705],[-176.412652,-43.838736],[-176.412557,-43.838987],[-176.412327,-43.838705]]],[[[-176.413616,-43.838525],[-176.41485,-43.838186],[-176.414582,-43.838865],[-176.413616,-43.838525]]],[[[-176.411506,-43.837886],[-176.411449,-43.837688],[-176.4124,-43.837861],[-176.411506,-43.837886]]],[[[-176.415441,-43.836805],[-176.415891,-43.836654],[-176.415706,-43.837102],[-176.415441,-43.836805]]],[[[-176.41599,-43.836398],[-176.41599,-43.83631],[-176.41669,-43.836462],[-176.41599,-43.836398]]],[[[-176.411987,-43.836173],[-176.414029,-43.836274],[-176.414822,-43.837601],[-176.414229,-43.836745],[-176.411987,-43.836173]]],[[[-176.414939,-43.836333],[-176.415181,-43.835938],[-176.41588,-43.836159],[-176.414939,-43.836333]]],[[[-176.407727,-43.83581],[-176.407661,-43.835633],[-176.408308,-43.83568],[-176.407727,-43.83581]]],[[[-176.409856,-43.834349],[-176.40979,-43.834204],[-176.410167,-43.834124],[-176.409856,-43.834349]]],[[[-176.424529,-43.833227],[-176.426518,-43.834922],[-176.423564,-43.835],[-176.424529,-43.833227]]],[[[-176.429722,-43.833699],[-176.427241,-43.831616],[-176.431647,-43.833873],[-176.429722,-43.833699]]],[[[-176.494845,-43.830782],[-176.495464,-43.830595],[-176.495519,-43.830906],[-176.494845,-43.830782]]],[[[-176.406285,-43.830525],[-176.406595,-43.830437],[-176.406584,-43.830767],[-176.406285,-43.830525]]],[[[-176.427658,-43.830252],[-176.428312,-43.830313],[-176.428355,-43.830736],[-176.427658,-43.830252]]],[[[-176.407399,-43.830648],[-176.407843,-43.829988],[-176.408829,-43.830568],[-176.407399,-43.830648]]],[[[-176.404472,-43.829779],[-176.405148,-43.829834],[-176.405098,-43.829916],[-176.404472,-43.829779]]],[[[-176.404987,-43.82876],[-176.405553,-43.828885],[-176.405464,-43.829022],[-176.404987,-43.82876]]],[[[-176.404854,-43.827323],[-176.405821,-43.827528],[-176.40571,-43.827721],[-176.404854,-43.827323]]],[[[-176.423424,-43.82728],[-176.423424,-43.827244],[-176.42374,-43.827224],[-176.423424,-43.82728]]],[[[-176.424158,-43.827194],[-176.424186,-43.827069],[-176.424541,-43.827158],[-176.424158,-43.827194]]],[[[-176.420902,-43.826207],[-176.420926,-43.826119],[-176.421212,-43.826143],[-176.420902,-43.826207]]],[[[-176.405524,-43.826689],[-176.406065,-43.826088],[-176.406321,-43.826832],[-176.405524,-43.826689]]],[[[-176.425781,-43.826454],[-176.426059,-43.825721],[-176.426576,-43.826507],[-176.425781,-43.826454]]],[[[-176.427272,-43.825664],[-176.427549,-43.82576],[-176.427499,-43.825901],[-176.427272,-43.825664]]],[[[-176.419263,-43.825478],[-176.41954,-43.825543],[-176.419506,-43.825591],[-176.419263,-43.825478]]],[[[-176.432449,-43.831421],[-176.429057,-43.825751],[-176.436051,-43.830972],[-176.432858,-43.833613],[-176.428499,-43.831277],[-176.432449,-43.831421]]],[[[-176.405897,-43.825446],[-176.406938,-43.825616],[-176.406882,-43.825777],[-176.405897,-43.825446]]],[[[-176.471823,-43.825786],[-176.472265,-43.824997],[-176.472707,-43.826015],[-176.471823,-43.825786]]],[[[-176.422081,-43.825296],[-176.421864,-43.824877],[-176.42313,-43.825157],[-176.422081,-43.825296]]],[[[-176.43692,-43.829341],[-176.43364,-43.826344],[-176.433499,-43.824816],[-176.439136,-43.82753],[-176.43692,-43.829341]]],[[[-176.420603,-43.824529],[-176.420531,-43.824372],[-176.42123,-43.824653],[-176.420603,-43.824529]]],[[[-176.423307,-43.824395],[-176.423263,-43.824281],[-176.423695,-43.824411],[-176.423307,-43.824395]]],[[[-176.419713,-43.823991],[-176.420533,-43.824079],[-176.420484,-43.82428],[-176.419713,-43.823991]]],[[[-176.420983,-43.823965],[-176.421186,-43.824053],[-176.421164,-43.824117],[-176.420983,-43.823965]]],[[[-176.405157,-43.824755],[-176.405169,-43.823894],[-176.406099,-43.824498],[-176.405157,-43.824755]]],[[[-176.43607,-43.824497],[-176.435405,-43.823907],[-176.439523,-43.825175],[-176.43607,-43.824497]]],[[[-176.419674,-43.823768],[-176.419662,-43.823323],[-176.420168,-43.823664],[-176.419674,-43.823768]]],[[[-176.419981,-43.823116],[-176.419969,-43.822976],[-176.420571,-43.823169],[-176.419981,-43.823116]]],[[[-176.469914,-43.824711],[-176.470207,-43.822899],[-176.470586,-43.825037],[-176.469914,-43.824711]]],[[[-176.420716,-43.822861],[-176.420777,-43.822713],[-176.42144,-43.82287],[-176.420716,-43.822861]]],[[[-176.421469,-43.822817],[-176.421445,-43.822625],[-176.421903,-43.822852],[-176.421469,-43.822817]]],[[[-176.422209,-43.82278],[-176.421944,-43.822641],[-176.422619,-43.822754],[-176.422209,-43.82278]]],[[[-176.415269,-43.822384],[-176.414944,-43.822026],[-176.415715,-43.822166],[-176.415269,-43.822384]]],[[[-176.417977,-43.82195],[-176.417988,-43.821885],[-176.418342,-43.821918],[-176.417977,-43.82195]]],[[[-176.418751,-43.821525],[-176.418972,-43.821718],[-176.418828,-43.821822],[-176.418751,-43.821525]]],[[[-176.420538,-43.821678],[-176.420551,-43.821486],[-176.421587,-43.8216],[-176.420538,-43.821678]]],[[[-176.41408,-43.821069],[-176.414586,-43.821105],[-176.414586,-43.821192],[-176.41408,-43.821069]]],[[[-176.424872,-43.821105],[-176.424817,-43.820872],[-176.425471,-43.821162],[-176.424872,-43.821105]]],[[[-176.421249,-43.820942],[-176.421056,-43.820776],[-176.421972,-43.820942],[-176.421249,-43.820942]]],[[[-176.40316,-43.821625],[-176.40204,-43.820135],[-176.403824,-43.821866],[-176.40316,-43.821625]]],[[[-176.416862,-43.820525],[-176.416248,-43.819739],[-176.418393,-43.820552],[-176.416862,-43.820525]]],[[[-176.382203,-43.811418],[-176.383045,-43.811849],[-176.380202,-43.811523],[-176.382203,-43.811418]]],[[[-176.488664,-43.760784],[-176.490227,-43.761859],[-176.490179,-43.761985],[-176.488664,-43.760784]]],[[[-176.239513,-44.434967],[-176.238081,-44.434598],[-176.238045,-44.43319],[-176.237528,-44.432388],[-176.237909,-44.431318],[-176.241073,-44.4318],[-176.241875,-44.432735],[-176.241589,-44.433712],[-176.239513,-44.434967]]],[[[-176.334372,-44.286084],[-176.338682,-44.286009],[-176.341108,-44.286685],[-176.341808,-44.287546],[-176.340696,-44.288286],[-176.338883,-44.287031],[-176.335625,-44.28745],[-176.334577,-44.28705],[-176.334372,-44.286084]]],[[[-176.178997,-44.335599],[-176.178749,-44.336197],[-176.180727,-44.337296],[-176.180436,-44.337935],[-176.182097,-44.33926],[-176.182148,-44.340375],[-176.182921,-44.34112],[-176.182755,-44.342564],[-176.184603,-44.343889],[-176.183423,-44.346252],[-176.183621,-44.34721],[-176.184654,-44.347718],[-176.184723,-44.348338],[-176.185599,-44.348433],[-176.18558,-44.349341],[-176.184142,-44.349275],[-176.183545,-44.350759],[-176.182179,-44.350745],[-176.181541,-44.351682],[-176.180437,-44.351009],[-176.179785,-44.351894],[-176.178171,-44.352633],[-176.17538,-44.352707],[-176.172993,-44.355521],[-176.167929,-44.356807],[-176.166842,-44.355788],[-176.164845,-44.356046],[-176.165272,-44.355415],[-176.164919,-44.354758],[-176.163738,-44.354611],[-176.163515,-44.349165],[-176.164496,-44.348135],[-176.167421,-44.34806],[-176.169214,-44.347133],[-176.169962,-44.346169],[-176.168871,-44.345588],[-176.169687,-44.3446],[-176.168512,-44.343579],[-176.167547,-44.341539],[-176.165128,-44.341923],[-176.165053,-44.341392],[-176.166189,-44.340458],[-176.168376,-44.339695],[-176.17287,-44.339264],[-176.173274,-44.338369],[-176.17296,-44.337965],[-176.173509,-44.337389],[-176.176872,-44.335581],[-176.178997,-44.335599]]],[[[-176.315813,-44.27681],[-176.316179,-44.27645],[-176.318408,-44.276698],[-176.319847,-44.277472],[-176.319556,-44.279288],[-176.31897,-44.279737],[-176.316469,-44.279166],[-176.316642,-44.280339],[-176.317497,-44.281014],[-176.316939,-44.281082],[-176.317087,-44.28159],[-176.316301,-44.280788],[-176.316046,-44.279644],[-176.313126,-44.278477],[-176.311723,-44.279295],[-176.310897,-44.278102],[-176.311225,-44.277526],[-176.313921,-44.276475],[-176.315813,-44.27681]]],[[[-176.294627,-44.262289],[-176.297042,-44.262748],[-176.301111,-44.266648],[-176.300106,-44.26713],[-176.299918,-44.267724],[-176.301611,-44.269016],[-176.300091,-44.269188],[-176.299117,-44.270475],[-176.298112,-44.271124],[-176.297046,-44.271122],[-176.29706,-44.271482],[-176.300516,-44.272548],[-176.300631,-44.273801],[-176.3018,-44.274031],[-176.303408,-44.275377],[-176.309275,-44.276836],[-176.308498,-44.277832],[-176.308941,-44.279158],[-176.30451,-44.278631],[-176.302116,-44.277484],[-176.300794,-44.276459],[-176.300686,-44.275419],[-176.299766,-44.274553],[-176.299993,-44.274182],[-176.297861,-44.273829],[-176.296008,-44.272833],[-176.295232,-44.273764],[-176.294595,-44.273826],[-176.293192,-44.27302],[-176.293178,-44.272265],[-176.292547,-44.272542],[-176.290579,-44.27154],[-176.287622,-44.271221],[-176.288569,-44.268505],[-176.288493,-44.267262],[-176.2878,-44.266622],[-176.288438,-44.26444],[-176.28933,-44.263594],[-176.292386,-44.263112],[-176.294627,-44.262289]]],[[[-176.197213,-43.736188],[-176.198282,-43.736735],[-176.199028,-43.737763],[-176.198926,-43.738906],[-176.196257,-43.740665],[-176.194253,-43.740356],[-176.194558,-43.737192],[-176.197213,-43.736188]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "chatham-1854-resident-magistrate",
+      "properties": {
+        "name": "查塔姆群岛（雷科胡） · 驻地行政",
+        "stable_id": "chatham-islands-rekohu",
+        "start_year": 1854,
+        "end_year": 1869,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1854年，殖民政府任命驻地行政官。1862年，莫里奥里人联名向总督请愿，请求承认当地的土地权利，并记述遭杀戮和奴役的经过。",
+        "source_ids": [
+          "19CT3-MOR-DEED",
+          "19CT3-MOR-COURT",
+          "19CT3-LINZ"
+        ],
+        "source_urls": [
+          "https://www.govt.nz/assets/Documents/OTS/Moriori/1.-Moriori-Deed-of-Settlement-Historical-Claims.pdf",
+          "https://whakatau.govt.nz/te-tira-kurapounamu-treaty-settlements/find-a-treaty-settlement/moriori",
+          "https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected LINZ NZ Coastlines and Islands Polygons Topo 1:50k objects; generalized in WGS84, CC BY 4.0",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[-176.224327,-44.224235],[-176.227891,-44.234122],[-176.236501,-44.240369],[-176.255161,-44.240599],[-176.260627,-44.24507],[-176.268984,-44.243724],[-176.274994,-44.239003],[-176.276925,-44.242142],[-176.25697,-44.248952],[-176.249593,-44.259249],[-176.244894,-44.258419],[-176.239552,-44.263888],[-176.241704,-44.273598],[-176.257959,-44.277502],[-176.261106,-44.283479],[-176.269163,-44.286329],[-176.261708,-44.284728],[-176.255394,-44.288451],[-176.254919,-44.293488],[-176.262232,-44.300984],[-176.25847,-44.302676],[-176.260232,-44.306299],[-176.252152,-44.31074],[-176.258612,-44.322294],[-176.267892,-44.324833],[-176.246381,-44.3293],[-176.248583,-44.336496],[-176.255895,-44.339425],[-176.25687,-44.344782],[-176.24794,-44.346536],[-176.243788,-44.352055],[-176.237498,-44.350491],[-176.238195,-44.34677],[-176.228753,-44.342134],[-176.230013,-44.339965],[-176.226812,-44.342168],[-176.227137,-44.334208],[-176.220855,-44.332068],[-176.215788,-44.334339],[-176.209981,-44.327277],[-176.202554,-44.326894],[-176.202349,-44.31641],[-176.196262,-44.312259],[-176.199512,-44.303248],[-176.189417,-44.29053],[-176.172841,-44.279901],[-176.154666,-44.272949],[-176.159267,-44.266443],[-176.154359,-44.262246],[-176.164274,-44.263897],[-176.172247,-44.259085],[-176.197196,-44.23192],[-176.212498,-44.224656],[-176.224327,-44.224235]]],[[[-176.627309,-43.692943],[-176.630642,-43.696674],[-176.629914,-43.702327],[-176.6408,-43.703855],[-176.633082,-43.712465],[-176.63772,-43.715787],[-176.631589,-43.721793],[-176.635155,-43.729739],[-176.646023,-43.740167],[-176.66187,-43.749136],[-176.726001,-43.763831],[-176.747364,-43.76591],[-176.791653,-43.759308],[-176.802908,-43.7524],[-176.80351,-43.744432],[-176.817799,-43.747061],[-176.815913,-43.750024],[-176.820514,-43.750451],[-176.819849,-43.754652],[-176.824984,-43.757444],[-176.820075,-43.757157],[-176.812301,-43.763881],[-176.809138,-43.774203],[-176.811312,-43.784212],[-176.831058,-43.788131],[-176.867485,-43.789368],[-176.873449,-43.79257],[-176.875474,-43.796187],[-176.873027,-43.797492],[-176.87857,-43.799853],[-176.872734,-43.802636],[-176.877351,-43.805357],[-176.871856,-43.805885],[-176.879507,-43.811148],[-176.875808,-43.811076],[-176.878762,-43.812743],[-176.873826,-43.816138],[-176.877694,-43.819692],[-176.892292,-43.821155],[-176.893609,-43.824994],[-176.885963,-43.826372],[-176.891539,-43.826912],[-176.888059,-43.828621],[-176.871438,-43.831084],[-176.882357,-43.836824],[-176.88228,-43.840907],[-176.860383,-43.838277],[-176.860412,-43.842113],[-176.847635,-43.845111],[-176.848261,-43.838045],[-176.844481,-43.83666],[-176.816489,-43.845482],[-176.786766,-43.838336],[-176.788878,-43.83601],[-176.784453,-43.835554],[-176.795523,-43.825868],[-176.79446,-43.821449],[-176.760113,-43.828478],[-176.75569,-43.8336],[-176.745228,-43.83038],[-176.742887,-43.826687],[-176.715823,-43.830351],[-176.701279,-43.822413],[-176.703009,-43.817622],[-176.709612,-43.814273],[-176.707643,-43.808394],[-176.696858,-43.811537],[-176.689821,-43.817584],[-176.685166,-43.812831],[-176.688221,-43.810293],[-176.68483,-43.807429],[-176.688307,-43.799722],[-176.683334,-43.798304],[-176.676137,-43.807041],[-176.669807,-43.808094],[-176.66359,-43.797384],[-176.657455,-43.808606],[-176.650928,-43.80945],[-176.646517,-43.804208],[-176.640518,-43.810754],[-176.633399,-43.807992],[-176.623366,-43.811732],[-176.609158,-43.811709],[-176.571198,-43.84848],[-176.548322,-43.880408],[-176.543211,-43.891592],[-176.545713,-43.898815],[-176.535362,-43.911006],[-176.53313,-43.929431],[-176.536766,-43.941777],[-176.546234,-43.950152],[-176.556111,-43.952815],[-176.562504,-43.949375],[-176.560343,-43.945822],[-176.572814,-43.941922],[-176.571305,-43.946154],[-176.576775,-43.949694],[-176.573943,-43.95278],[-176.575138,-43.957397],[-176.580513,-43.962814],[-176.588095,-43.966409],[-176.595022,-43.965424],[-176.616049,-43.976214],[-176.619824,-43.981384],[-176.632248,-43.984196],[-176.652136,-43.995886],[-176.653715,-43.99967],[-176.67438,-44.004212],[-176.683448,-44.010909],[-176.678835,-44.015218],[-176.681847,-44.021911],[-176.675369,-44.02457],[-176.677011,-44.026551],[-176.671584,-44.029481],[-176.669725,-44.03694],[-176.655514,-44.042085],[-176.659259,-44.048593],[-176.656671,-44.062013],[-176.653583,-44.064103],[-176.662707,-44.070688],[-176.658552,-44.069883],[-176.64722,-44.077215],[-176.642925,-44.087267],[-176.648269,-44.10629],[-176.638611,-44.105094],[-176.633245,-44.111219],[-176.632047,-44.114895],[-176.636931,-44.118796],[-176.634996,-44.124015],[-176.62516,-44.11984],[-176.618832,-44.120896],[-176.614476,-44.126838],[-176.603247,-44.125585],[-176.592214,-44.130469],[-176.584706,-44.1279],[-176.580209,-44.132065],[-176.535203,-44.113225],[-176.533086,-44.104472],[-176.525931,-44.098651],[-176.517969,-44.099171],[-176.500539,-44.087972],[-176.495704,-44.08713],[-176.490281,-44.090688],[-176.491501,-44.085918],[-176.477976,-44.074619],[-176.461469,-44.071992],[-176.447615,-44.065195],[-176.417882,-44.062385],[-176.393235,-44.054214],[-176.377513,-44.058713],[-176.358083,-44.057992],[-176.34383,-44.050372],[-176.328523,-44.052399],[-176.325188,-44.048629],[-176.328211,-44.03776],[-176.325847,-44.032459],[-176.341843,-44.03287],[-176.356695,-44.023517],[-176.374319,-44.024779],[-176.395933,-44.007808],[-176.408092,-43.984051],[-176.413665,-43.965069],[-176.417298,-43.923188],[-176.422691,-43.927025],[-176.419964,-43.934598],[-176.423225,-43.928375],[-176.424475,-43.934414],[-176.429844,-43.938434],[-176.42967,-43.961776],[-176.436037,-43.967955],[-176.440144,-43.96638],[-176.4388,-43.963574],[-176.436551,-43.963564],[-176.44104,-43.960279],[-176.443151,-43.962328],[-176.440848,-43.963968],[-176.4417,-43.965725],[-176.45375,-43.96491],[-176.483193,-43.952582],[-176.482917,-43.946683],[-176.485403,-43.945564],[-176.482137,-43.943212],[-176.48457,-43.941578],[-176.481196,-43.939749],[-176.479182,-43.940768],[-176.478681,-43.937698],[-176.474115,-43.931177],[-176.469306,-43.928881],[-176.47494,-43.923741],[-176.4738,-43.916158],[-176.513096,-43.887618],[-176.51257,-43.883334],[-176.523831,-43.867021],[-176.521554,-43.85888],[-176.524612,-43.853803],[-176.514592,-43.842602],[-176.502166,-43.840776],[-176.50531,-43.834801],[-176.498357,-43.830161],[-176.492583,-43.830337],[-176.495435,-43.825751],[-176.493637,-43.823423],[-176.482713,-43.822542],[-176.476977,-43.827763],[-176.476629,-43.82367],[-176.466096,-43.815738],[-176.44286,-43.808324],[-176.450012,-43.802926],[-176.463758,-43.800988],[-176.480804,-43.80316],[-176.497349,-43.796967],[-176.526584,-43.797987],[-176.541089,-43.793134],[-176.545857,-43.78807],[-176.545915,-43.78205],[-176.555589,-43.78015],[-176.561453,-43.774016],[-176.5603,-43.760737],[-176.555357,-43.75361],[-176.549148,-43.751949],[-176.549748,-43.744695],[-176.553684,-43.742594],[-176.544414,-43.737676],[-176.520317,-43.741497],[-176.506151,-43.750281],[-176.503523,-43.755333],[-176.506161,-43.761169],[-176.499981,-43.763835],[-176.477303,-43.747185],[-176.458102,-43.751381],[-176.435856,-43.750969],[-176.3957,-43.765985],[-176.385666,-43.77521],[-176.375,-43.791652],[-176.36417,-43.800348],[-176.361949,-43.805551],[-176.366203,-43.810693],[-176.397887,-43.817084],[-176.402771,-43.82471],[-176.404557,-43.823506],[-176.40342,-43.831816],[-176.408003,-43.838578],[-176.421373,-43.847428],[-176.426085,-43.846393],[-176.424742,-43.844004],[-176.429493,-43.837063],[-176.42943,-43.843174],[-176.420548,-43.864513],[-176.417158,-43.885965],[-176.41959,-43.898753],[-176.427841,-43.91016],[-176.429002,-43.917232],[-176.419245,-43.918527],[-176.419696,-43.92317],[-176.416187,-43.920389],[-176.412562,-43.899586],[-176.401077,-43.869848],[-176.384217,-43.842181],[-176.363344,-43.816288],[-176.337324,-43.791296],[-176.312689,-43.774961],[-176.280832,-43.763145],[-176.257219,-43.763032],[-176.240234,-43.774952],[-176.236888,-43.770298],[-176.241506,-43.76403],[-176.241264,-43.757666],[-176.232907,-43.747757],[-176.223086,-43.740995],[-176.217436,-43.743553],[-176.213134,-43.739365],[-176.206181,-43.740631],[-176.198933,-43.734605],[-176.205647,-43.729319],[-176.213147,-43.733767],[-176.218694,-43.731927],[-176.224436,-43.735083],[-176.237657,-43.729823],[-176.244688,-43.731396],[-176.247361,-43.72825],[-176.253083,-43.728952],[-176.253144,-43.734332],[-176.259038,-43.736344],[-176.272619,-43.729452],[-176.271293,-43.735862],[-176.277772,-43.741244],[-176.302259,-43.74696],[-176.321016,-43.746187],[-176.335059,-43.736761],[-176.342733,-43.737658],[-176.346112,-43.733855],[-176.349911,-43.734155],[-176.353778,-43.740486],[-176.366271,-43.744488],[-176.438802,-43.747687],[-176.473058,-43.742151],[-176.488865,-43.736391],[-176.497692,-43.72656],[-176.492066,-43.720602],[-176.510175,-43.72397],[-176.539451,-43.721697],[-176.547642,-43.716076],[-176.581998,-43.705112],[-176.60944,-43.702906],[-176.614996,-43.696998],[-176.621563,-43.697145],[-176.627309,-43.692943]]],[[[-176.443846,-43.962736],[-176.442296,-43.964205],[-176.443297,-43.963203],[-176.443846,-43.962736]]],[[[-176.479082,-43.943086],[-176.479189,-43.943101],[-176.479102,-43.943519],[-176.479082,-43.943086]]],[[[-176.479837,-43.940961],[-176.47991,-43.940803],[-176.480218,-43.940967],[-176.479837,-43.940961]]],[[[-176.477062,-43.937216],[-176.477088,-43.93712],[-176.47757,-43.937139],[-176.477062,-43.937216]]],[[[-176.430585,-43.935315],[-176.432293,-43.93647],[-176.428842,-43.93563],[-176.430585,-43.935315]]],[[[-176.424927,-43.933602],[-176.424812,-43.932767],[-176.427243,-43.93467],[-176.424927,-43.933602]]],[[[-176.424226,-43.929891],[-176.425574,-43.926131],[-176.428561,-43.929252],[-176.436152,-43.933315],[-176.429774,-43.934316],[-176.424226,-43.929891]]],[[[-176.435904,-43.921792],[-176.435824,-43.921547],[-176.437453,-43.922306],[-176.435904,-43.921792]]],[[[-176.432444,-43.921156],[-176.450177,-43.925615],[-176.434912,-43.932133],[-176.425462,-43.925371],[-176.431747,-43.921858],[-176.436829,-43.925285],[-176.435707,-43.927474],[-176.439049,-43.927025],[-176.432444,-43.921156]]],[[[-176.428591,-43.920913],[-176.430116,-43.920875],[-176.422323,-43.924819],[-176.428591,-43.920913]]],[[[-176.43547,-43.917111],[-176.433024,-43.918214],[-176.433273,-43.916868],[-176.43547,-43.917111]]],[[[-176.428247,-43.90912],[-176.43192,-43.911494],[-176.431903,-43.913213],[-176.430793,-43.91452],[-176.431803,-43.911916],[-176.428247,-43.90912]]],[[[-176.486904,-43.900075],[-176.487201,-43.900137],[-176.486806,-43.900399],[-176.486904,-43.900075]]],[[[-176.488262,-43.895807],[-176.48933,-43.896885],[-176.488076,-43.8968],[-176.488262,-43.895807]]],[[[-176.504068,-43.88164],[-176.504371,-43.880629],[-176.504605,-43.881374],[-176.504068,-43.88164]]],[[[-176.425613,-43.840731],[-176.426311,-43.841021],[-176.425978,-43.841366],[-176.425613,-43.840731]]],[[[-176.426297,-43.839985],[-176.426574,-43.840065],[-176.426375,-43.84029],[-176.426297,-43.839985]]],[[[-176.412327,-43.838705],[-176.412652,-43.838736],[-176.412557,-43.838987],[-176.412327,-43.838705]]],[[[-176.413616,-43.838525],[-176.41485,-43.838186],[-176.414582,-43.838865],[-176.413616,-43.838525]]],[[[-176.411506,-43.837886],[-176.411449,-43.837688],[-176.4124,-43.837861],[-176.411506,-43.837886]]],[[[-176.415441,-43.836805],[-176.415891,-43.836654],[-176.415706,-43.837102],[-176.415441,-43.836805]]],[[[-176.41599,-43.836398],[-176.41599,-43.83631],[-176.41669,-43.836462],[-176.41599,-43.836398]]],[[[-176.411987,-43.836173],[-176.414029,-43.836274],[-176.414822,-43.837601],[-176.414229,-43.836745],[-176.411987,-43.836173]]],[[[-176.414939,-43.836333],[-176.415181,-43.835938],[-176.41588,-43.836159],[-176.414939,-43.836333]]],[[[-176.407727,-43.83581],[-176.407661,-43.835633],[-176.408308,-43.83568],[-176.407727,-43.83581]]],[[[-176.409856,-43.834349],[-176.40979,-43.834204],[-176.410167,-43.834124],[-176.409856,-43.834349]]],[[[-176.424529,-43.833227],[-176.426518,-43.834922],[-176.423564,-43.835],[-176.424529,-43.833227]]],[[[-176.429722,-43.833699],[-176.427241,-43.831616],[-176.431647,-43.833873],[-176.429722,-43.833699]]],[[[-176.494845,-43.830782],[-176.495464,-43.830595],[-176.495519,-43.830906],[-176.494845,-43.830782]]],[[[-176.406285,-43.830525],[-176.406595,-43.830437],[-176.406584,-43.830767],[-176.406285,-43.830525]]],[[[-176.427658,-43.830252],[-176.428312,-43.830313],[-176.428355,-43.830736],[-176.427658,-43.830252]]],[[[-176.407399,-43.830648],[-176.407843,-43.829988],[-176.408829,-43.830568],[-176.407399,-43.830648]]],[[[-176.404472,-43.829779],[-176.405148,-43.829834],[-176.405098,-43.829916],[-176.404472,-43.829779]]],[[[-176.404987,-43.82876],[-176.405553,-43.828885],[-176.405464,-43.829022],[-176.404987,-43.82876]]],[[[-176.404854,-43.827323],[-176.405821,-43.827528],[-176.40571,-43.827721],[-176.404854,-43.827323]]],[[[-176.423424,-43.82728],[-176.423424,-43.827244],[-176.42374,-43.827224],[-176.423424,-43.82728]]],[[[-176.424158,-43.827194],[-176.424186,-43.827069],[-176.424541,-43.827158],[-176.424158,-43.827194]]],[[[-176.420902,-43.826207],[-176.420926,-43.826119],[-176.421212,-43.826143],[-176.420902,-43.826207]]],[[[-176.405524,-43.826689],[-176.406065,-43.826088],[-176.406321,-43.826832],[-176.405524,-43.826689]]],[[[-176.425781,-43.826454],[-176.426059,-43.825721],[-176.426576,-43.826507],[-176.425781,-43.826454]]],[[[-176.427272,-43.825664],[-176.427549,-43.82576],[-176.427499,-43.825901],[-176.427272,-43.825664]]],[[[-176.419263,-43.825478],[-176.41954,-43.825543],[-176.419506,-43.825591],[-176.419263,-43.825478]]],[[[-176.432449,-43.831421],[-176.429057,-43.825751],[-176.436051,-43.830972],[-176.432858,-43.833613],[-176.428499,-43.831277],[-176.432449,-43.831421]]],[[[-176.405897,-43.825446],[-176.406938,-43.825616],[-176.406882,-43.825777],[-176.405897,-43.825446]]],[[[-176.471823,-43.825786],[-176.472265,-43.824997],[-176.472707,-43.826015],[-176.471823,-43.825786]]],[[[-176.422081,-43.825296],[-176.421864,-43.824877],[-176.42313,-43.825157],[-176.422081,-43.825296]]],[[[-176.43692,-43.829341],[-176.43364,-43.826344],[-176.433499,-43.824816],[-176.439136,-43.82753],[-176.43692,-43.829341]]],[[[-176.420603,-43.824529],[-176.420531,-43.824372],[-176.42123,-43.824653],[-176.420603,-43.824529]]],[[[-176.423307,-43.824395],[-176.423263,-43.824281],[-176.423695,-43.824411],[-176.423307,-43.824395]]],[[[-176.419713,-43.823991],[-176.420533,-43.824079],[-176.420484,-43.82428],[-176.419713,-43.823991]]],[[[-176.420983,-43.823965],[-176.421186,-43.824053],[-176.421164,-43.824117],[-176.420983,-43.823965]]],[[[-176.405157,-43.824755],[-176.405169,-43.823894],[-176.406099,-43.824498],[-176.405157,-43.824755]]],[[[-176.43607,-43.824497],[-176.435405,-43.823907],[-176.439523,-43.825175],[-176.43607,-43.824497]]],[[[-176.419674,-43.823768],[-176.419662,-43.823323],[-176.420168,-43.823664],[-176.419674,-43.823768]]],[[[-176.419981,-43.823116],[-176.419969,-43.822976],[-176.420571,-43.823169],[-176.419981,-43.823116]]],[[[-176.469914,-43.824711],[-176.470207,-43.822899],[-176.470586,-43.825037],[-176.469914,-43.824711]]],[[[-176.420716,-43.822861],[-176.420777,-43.822713],[-176.42144,-43.82287],[-176.420716,-43.822861]]],[[[-176.421469,-43.822817],[-176.421445,-43.822625],[-176.421903,-43.822852],[-176.421469,-43.822817]]],[[[-176.422209,-43.82278],[-176.421944,-43.822641],[-176.422619,-43.822754],[-176.422209,-43.82278]]],[[[-176.415269,-43.822384],[-176.414944,-43.822026],[-176.415715,-43.822166],[-176.415269,-43.822384]]],[[[-176.417977,-43.82195],[-176.417988,-43.821885],[-176.418342,-43.821918],[-176.417977,-43.82195]]],[[[-176.418751,-43.821525],[-176.418972,-43.821718],[-176.418828,-43.821822],[-176.418751,-43.821525]]],[[[-176.420538,-43.821678],[-176.420551,-43.821486],[-176.421587,-43.8216],[-176.420538,-43.821678]]],[[[-176.41408,-43.821069],[-176.414586,-43.821105],[-176.414586,-43.821192],[-176.41408,-43.821069]]],[[[-176.424872,-43.821105],[-176.424817,-43.820872],[-176.425471,-43.821162],[-176.424872,-43.821105]]],[[[-176.421249,-43.820942],[-176.421056,-43.820776],[-176.421972,-43.820942],[-176.421249,-43.820942]]],[[[-176.40316,-43.821625],[-176.40204,-43.820135],[-176.403824,-43.821866],[-176.40316,-43.821625]]],[[[-176.416862,-43.820525],[-176.416248,-43.819739],[-176.418393,-43.820552],[-176.416862,-43.820525]]],[[[-176.382203,-43.811418],[-176.383045,-43.811849],[-176.380202,-43.811523],[-176.382203,-43.811418]]],[[[-176.488664,-43.760784],[-176.490227,-43.761859],[-176.490179,-43.761985],[-176.488664,-43.760784]]],[[[-176.239513,-44.434967],[-176.238081,-44.434598],[-176.238045,-44.43319],[-176.237528,-44.432388],[-176.237909,-44.431318],[-176.241073,-44.4318],[-176.241875,-44.432735],[-176.241589,-44.433712],[-176.239513,-44.434967]]],[[[-176.334372,-44.286084],[-176.338682,-44.286009],[-176.341108,-44.286685],[-176.341808,-44.287546],[-176.340696,-44.288286],[-176.338883,-44.287031],[-176.335625,-44.28745],[-176.334577,-44.28705],[-176.334372,-44.286084]]],[[[-176.178997,-44.335599],[-176.178749,-44.336197],[-176.180727,-44.337296],[-176.180436,-44.337935],[-176.182097,-44.33926],[-176.182148,-44.340375],[-176.182921,-44.34112],[-176.182755,-44.342564],[-176.184603,-44.343889],[-176.183423,-44.346252],[-176.183621,-44.34721],[-176.184654,-44.347718],[-176.184723,-44.348338],[-176.185599,-44.348433],[-176.18558,-44.349341],[-176.184142,-44.349275],[-176.183545,-44.350759],[-176.182179,-44.350745],[-176.181541,-44.351682],[-176.180437,-44.351009],[-176.179785,-44.351894],[-176.178171,-44.352633],[-176.17538,-44.352707],[-176.172993,-44.355521],[-176.167929,-44.356807],[-176.166842,-44.355788],[-176.164845,-44.356046],[-176.165272,-44.355415],[-176.164919,-44.354758],[-176.163738,-44.354611],[-176.163515,-44.349165],[-176.164496,-44.348135],[-176.167421,-44.34806],[-176.169214,-44.347133],[-176.169962,-44.346169],[-176.168871,-44.345588],[-176.169687,-44.3446],[-176.168512,-44.343579],[-176.167547,-44.341539],[-176.165128,-44.341923],[-176.165053,-44.341392],[-176.166189,-44.340458],[-176.168376,-44.339695],[-176.17287,-44.339264],[-176.173274,-44.338369],[-176.17296,-44.337965],[-176.173509,-44.337389],[-176.176872,-44.335581],[-176.178997,-44.335599]]],[[[-176.315813,-44.27681],[-176.316179,-44.27645],[-176.318408,-44.276698],[-176.319847,-44.277472],[-176.319556,-44.279288],[-176.31897,-44.279737],[-176.316469,-44.279166],[-176.316642,-44.280339],[-176.317497,-44.281014],[-176.316939,-44.281082],[-176.317087,-44.28159],[-176.316301,-44.280788],[-176.316046,-44.279644],[-176.313126,-44.278477],[-176.311723,-44.279295],[-176.310897,-44.278102],[-176.311225,-44.277526],[-176.313921,-44.276475],[-176.315813,-44.27681]]],[[[-176.294627,-44.262289],[-176.297042,-44.262748],[-176.301111,-44.266648],[-176.300106,-44.26713],[-176.299918,-44.267724],[-176.301611,-44.269016],[-176.300091,-44.269188],[-176.299117,-44.270475],[-176.298112,-44.271124],[-176.297046,-44.271122],[-176.29706,-44.271482],[-176.300516,-44.272548],[-176.300631,-44.273801],[-176.3018,-44.274031],[-176.303408,-44.275377],[-176.309275,-44.276836],[-176.308498,-44.277832],[-176.308941,-44.279158],[-176.30451,-44.278631],[-176.302116,-44.277484],[-176.300794,-44.276459],[-176.300686,-44.275419],[-176.299766,-44.274553],[-176.299993,-44.274182],[-176.297861,-44.273829],[-176.296008,-44.272833],[-176.295232,-44.273764],[-176.294595,-44.273826],[-176.293192,-44.27302],[-176.293178,-44.272265],[-176.292547,-44.272542],[-176.290579,-44.27154],[-176.287622,-44.271221],[-176.288569,-44.268505],[-176.288493,-44.267262],[-176.2878,-44.266622],[-176.288438,-44.26444],[-176.28933,-44.263594],[-176.292386,-44.263112],[-176.294627,-44.262289]]],[[[-176.197213,-43.736188],[-176.198282,-43.736735],[-176.199028,-43.737763],[-176.198926,-43.738906],[-176.196257,-43.740665],[-176.194253,-43.740356],[-176.194558,-43.737192],[-176.197213,-43.736188]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "chatham-1870-land-court",
+      "properties": {
+        "name": "查塔姆群岛（雷科胡） · 原住民土地法院裁决",
+        "stable_id": "chatham-islands-rekohu",
+        "start_year": 1870,
+        "end_year": 1899,
+        "display_kind": "land_dispossession",
+        "label_type": "殖民行政区",
+        "summary_zh": "1870年，原住民土地法院审理雷科胡等地的土地权利。按新西兰政府与莫里奥里人的和解记录，法院将超过97%的受审土地判给毛利申索人，莫里奥里人所得不足3%。",
+        "source_ids": [
+          "19CT3-MOR-COURT",
+          "19CT3-MOR-DEED",
+          "19CT3-LINZ"
+        ],
+        "source_urls": [
+          "https://whakatau.govt.nz/te-tira-kurapounamu-treaty-settlements/find-a-treaty-settlement/moriori",
+          "https://www.govt.nz/assets/Documents/OTS/Moriori/1.-Moriori-Deed-of-Settlement-Historical-Claims.pdf",
+          "https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected LINZ NZ Coastlines and Islands Polygons Topo 1:50k objects; generalized in WGS84, CC BY 4.0",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[-176.224327,-44.224235],[-176.227891,-44.234122],[-176.236501,-44.240369],[-176.255161,-44.240599],[-176.260627,-44.24507],[-176.268984,-44.243724],[-176.274994,-44.239003],[-176.276925,-44.242142],[-176.25697,-44.248952],[-176.249593,-44.259249],[-176.244894,-44.258419],[-176.239552,-44.263888],[-176.241704,-44.273598],[-176.257959,-44.277502],[-176.261106,-44.283479],[-176.269163,-44.286329],[-176.261708,-44.284728],[-176.255394,-44.288451],[-176.254919,-44.293488],[-176.262232,-44.300984],[-176.25847,-44.302676],[-176.260232,-44.306299],[-176.252152,-44.31074],[-176.258612,-44.322294],[-176.267892,-44.324833],[-176.246381,-44.3293],[-176.248583,-44.336496],[-176.255895,-44.339425],[-176.25687,-44.344782],[-176.24794,-44.346536],[-176.243788,-44.352055],[-176.237498,-44.350491],[-176.238195,-44.34677],[-176.228753,-44.342134],[-176.230013,-44.339965],[-176.226812,-44.342168],[-176.227137,-44.334208],[-176.220855,-44.332068],[-176.215788,-44.334339],[-176.209981,-44.327277],[-176.202554,-44.326894],[-176.202349,-44.31641],[-176.196262,-44.312259],[-176.199512,-44.303248],[-176.189417,-44.29053],[-176.172841,-44.279901],[-176.154666,-44.272949],[-176.159267,-44.266443],[-176.154359,-44.262246],[-176.164274,-44.263897],[-176.172247,-44.259085],[-176.197196,-44.23192],[-176.212498,-44.224656],[-176.224327,-44.224235]]],[[[-176.627309,-43.692943],[-176.630642,-43.696674],[-176.629914,-43.702327],[-176.6408,-43.703855],[-176.633082,-43.712465],[-176.63772,-43.715787],[-176.631589,-43.721793],[-176.635155,-43.729739],[-176.646023,-43.740167],[-176.66187,-43.749136],[-176.726001,-43.763831],[-176.747364,-43.76591],[-176.791653,-43.759308],[-176.802908,-43.7524],[-176.80351,-43.744432],[-176.817799,-43.747061],[-176.815913,-43.750024],[-176.820514,-43.750451],[-176.819849,-43.754652],[-176.824984,-43.757444],[-176.820075,-43.757157],[-176.812301,-43.763881],[-176.809138,-43.774203],[-176.811312,-43.784212],[-176.831058,-43.788131],[-176.867485,-43.789368],[-176.873449,-43.79257],[-176.875474,-43.796187],[-176.873027,-43.797492],[-176.87857,-43.799853],[-176.872734,-43.802636],[-176.877351,-43.805357],[-176.871856,-43.805885],[-176.879507,-43.811148],[-176.875808,-43.811076],[-176.878762,-43.812743],[-176.873826,-43.816138],[-176.877694,-43.819692],[-176.892292,-43.821155],[-176.893609,-43.824994],[-176.885963,-43.826372],[-176.891539,-43.826912],[-176.888059,-43.828621],[-176.871438,-43.831084],[-176.882357,-43.836824],[-176.88228,-43.840907],[-176.860383,-43.838277],[-176.860412,-43.842113],[-176.847635,-43.845111],[-176.848261,-43.838045],[-176.844481,-43.83666],[-176.816489,-43.845482],[-176.786766,-43.838336],[-176.788878,-43.83601],[-176.784453,-43.835554],[-176.795523,-43.825868],[-176.79446,-43.821449],[-176.760113,-43.828478],[-176.75569,-43.8336],[-176.745228,-43.83038],[-176.742887,-43.826687],[-176.715823,-43.830351],[-176.701279,-43.822413],[-176.703009,-43.817622],[-176.709612,-43.814273],[-176.707643,-43.808394],[-176.696858,-43.811537],[-176.689821,-43.817584],[-176.685166,-43.812831],[-176.688221,-43.810293],[-176.68483,-43.807429],[-176.688307,-43.799722],[-176.683334,-43.798304],[-176.676137,-43.807041],[-176.669807,-43.808094],[-176.66359,-43.797384],[-176.657455,-43.808606],[-176.650928,-43.80945],[-176.646517,-43.804208],[-176.640518,-43.810754],[-176.633399,-43.807992],[-176.623366,-43.811732],[-176.609158,-43.811709],[-176.571198,-43.84848],[-176.548322,-43.880408],[-176.543211,-43.891592],[-176.545713,-43.898815],[-176.535362,-43.911006],[-176.53313,-43.929431],[-176.536766,-43.941777],[-176.546234,-43.950152],[-176.556111,-43.952815],[-176.562504,-43.949375],[-176.560343,-43.945822],[-176.572814,-43.941922],[-176.571305,-43.946154],[-176.576775,-43.949694],[-176.573943,-43.95278],[-176.575138,-43.957397],[-176.580513,-43.962814],[-176.588095,-43.966409],[-176.595022,-43.965424],[-176.616049,-43.976214],[-176.619824,-43.981384],[-176.632248,-43.984196],[-176.652136,-43.995886],[-176.653715,-43.99967],[-176.67438,-44.004212],[-176.683448,-44.010909],[-176.678835,-44.015218],[-176.681847,-44.021911],[-176.675369,-44.02457],[-176.677011,-44.026551],[-176.671584,-44.029481],[-176.669725,-44.03694],[-176.655514,-44.042085],[-176.659259,-44.048593],[-176.656671,-44.062013],[-176.653583,-44.064103],[-176.662707,-44.070688],[-176.658552,-44.069883],[-176.64722,-44.077215],[-176.642925,-44.087267],[-176.648269,-44.10629],[-176.638611,-44.105094],[-176.633245,-44.111219],[-176.632047,-44.114895],[-176.636931,-44.118796],[-176.634996,-44.124015],[-176.62516,-44.11984],[-176.618832,-44.120896],[-176.614476,-44.126838],[-176.603247,-44.125585],[-176.592214,-44.130469],[-176.584706,-44.1279],[-176.580209,-44.132065],[-176.535203,-44.113225],[-176.533086,-44.104472],[-176.525931,-44.098651],[-176.517969,-44.099171],[-176.500539,-44.087972],[-176.495704,-44.08713],[-176.490281,-44.090688],[-176.491501,-44.085918],[-176.477976,-44.074619],[-176.461469,-44.071992],[-176.447615,-44.065195],[-176.417882,-44.062385],[-176.393235,-44.054214],[-176.377513,-44.058713],[-176.358083,-44.057992],[-176.34383,-44.050372],[-176.328523,-44.052399],[-176.325188,-44.048629],[-176.328211,-44.03776],[-176.325847,-44.032459],[-176.341843,-44.03287],[-176.356695,-44.023517],[-176.374319,-44.024779],[-176.395933,-44.007808],[-176.408092,-43.984051],[-176.413665,-43.965069],[-176.417298,-43.923188],[-176.422691,-43.927025],[-176.419964,-43.934598],[-176.423225,-43.928375],[-176.424475,-43.934414],[-176.429844,-43.938434],[-176.42967,-43.961776],[-176.436037,-43.967955],[-176.440144,-43.96638],[-176.4388,-43.963574],[-176.436551,-43.963564],[-176.44104,-43.960279],[-176.443151,-43.962328],[-176.440848,-43.963968],[-176.4417,-43.965725],[-176.45375,-43.96491],[-176.483193,-43.952582],[-176.482917,-43.946683],[-176.485403,-43.945564],[-176.482137,-43.943212],[-176.48457,-43.941578],[-176.481196,-43.939749],[-176.479182,-43.940768],[-176.478681,-43.937698],[-176.474115,-43.931177],[-176.469306,-43.928881],[-176.47494,-43.923741],[-176.4738,-43.916158],[-176.513096,-43.887618],[-176.51257,-43.883334],[-176.523831,-43.867021],[-176.521554,-43.85888],[-176.524612,-43.853803],[-176.514592,-43.842602],[-176.502166,-43.840776],[-176.50531,-43.834801],[-176.498357,-43.830161],[-176.492583,-43.830337],[-176.495435,-43.825751],[-176.493637,-43.823423],[-176.482713,-43.822542],[-176.476977,-43.827763],[-176.476629,-43.82367],[-176.466096,-43.815738],[-176.44286,-43.808324],[-176.450012,-43.802926],[-176.463758,-43.800988],[-176.480804,-43.80316],[-176.497349,-43.796967],[-176.526584,-43.797987],[-176.541089,-43.793134],[-176.545857,-43.78807],[-176.545915,-43.78205],[-176.555589,-43.78015],[-176.561453,-43.774016],[-176.5603,-43.760737],[-176.555357,-43.75361],[-176.549148,-43.751949],[-176.549748,-43.744695],[-176.553684,-43.742594],[-176.544414,-43.737676],[-176.520317,-43.741497],[-176.506151,-43.750281],[-176.503523,-43.755333],[-176.506161,-43.761169],[-176.499981,-43.763835],[-176.477303,-43.747185],[-176.458102,-43.751381],[-176.435856,-43.750969],[-176.3957,-43.765985],[-176.385666,-43.77521],[-176.375,-43.791652],[-176.36417,-43.800348],[-176.361949,-43.805551],[-176.366203,-43.810693],[-176.397887,-43.817084],[-176.402771,-43.82471],[-176.404557,-43.823506],[-176.40342,-43.831816],[-176.408003,-43.838578],[-176.421373,-43.847428],[-176.426085,-43.846393],[-176.424742,-43.844004],[-176.429493,-43.837063],[-176.42943,-43.843174],[-176.420548,-43.864513],[-176.417158,-43.885965],[-176.41959,-43.898753],[-176.427841,-43.91016],[-176.429002,-43.917232],[-176.419245,-43.918527],[-176.419696,-43.92317],[-176.416187,-43.920389],[-176.412562,-43.899586],[-176.401077,-43.869848],[-176.384217,-43.842181],[-176.363344,-43.816288],[-176.337324,-43.791296],[-176.312689,-43.774961],[-176.280832,-43.763145],[-176.257219,-43.763032],[-176.240234,-43.774952],[-176.236888,-43.770298],[-176.241506,-43.76403],[-176.241264,-43.757666],[-176.232907,-43.747757],[-176.223086,-43.740995],[-176.217436,-43.743553],[-176.213134,-43.739365],[-176.206181,-43.740631],[-176.198933,-43.734605],[-176.205647,-43.729319],[-176.213147,-43.733767],[-176.218694,-43.731927],[-176.224436,-43.735083],[-176.237657,-43.729823],[-176.244688,-43.731396],[-176.247361,-43.72825],[-176.253083,-43.728952],[-176.253144,-43.734332],[-176.259038,-43.736344],[-176.272619,-43.729452],[-176.271293,-43.735862],[-176.277772,-43.741244],[-176.302259,-43.74696],[-176.321016,-43.746187],[-176.335059,-43.736761],[-176.342733,-43.737658],[-176.346112,-43.733855],[-176.349911,-43.734155],[-176.353778,-43.740486],[-176.366271,-43.744488],[-176.438802,-43.747687],[-176.473058,-43.742151],[-176.488865,-43.736391],[-176.497692,-43.72656],[-176.492066,-43.720602],[-176.510175,-43.72397],[-176.539451,-43.721697],[-176.547642,-43.716076],[-176.581998,-43.705112],[-176.60944,-43.702906],[-176.614996,-43.696998],[-176.621563,-43.697145],[-176.627309,-43.692943]]],[[[-176.443846,-43.962736],[-176.442296,-43.964205],[-176.443297,-43.963203],[-176.443846,-43.962736]]],[[[-176.479082,-43.943086],[-176.479189,-43.943101],[-176.479102,-43.943519],[-176.479082,-43.943086]]],[[[-176.479837,-43.940961],[-176.47991,-43.940803],[-176.480218,-43.940967],[-176.479837,-43.940961]]],[[[-176.477062,-43.937216],[-176.477088,-43.93712],[-176.47757,-43.937139],[-176.477062,-43.937216]]],[[[-176.430585,-43.935315],[-176.432293,-43.93647],[-176.428842,-43.93563],[-176.430585,-43.935315]]],[[[-176.424927,-43.933602],[-176.424812,-43.932767],[-176.427243,-43.93467],[-176.424927,-43.933602]]],[[[-176.424226,-43.929891],[-176.425574,-43.926131],[-176.428561,-43.929252],[-176.436152,-43.933315],[-176.429774,-43.934316],[-176.424226,-43.929891]]],[[[-176.435904,-43.921792],[-176.435824,-43.921547],[-176.437453,-43.922306],[-176.435904,-43.921792]]],[[[-176.432444,-43.921156],[-176.450177,-43.925615],[-176.434912,-43.932133],[-176.425462,-43.925371],[-176.431747,-43.921858],[-176.436829,-43.925285],[-176.435707,-43.927474],[-176.439049,-43.927025],[-176.432444,-43.921156]]],[[[-176.428591,-43.920913],[-176.430116,-43.920875],[-176.422323,-43.924819],[-176.428591,-43.920913]]],[[[-176.43547,-43.917111],[-176.433024,-43.918214],[-176.433273,-43.916868],[-176.43547,-43.917111]]],[[[-176.428247,-43.90912],[-176.43192,-43.911494],[-176.431903,-43.913213],[-176.430793,-43.91452],[-176.431803,-43.911916],[-176.428247,-43.90912]]],[[[-176.486904,-43.900075],[-176.487201,-43.900137],[-176.486806,-43.900399],[-176.486904,-43.900075]]],[[[-176.488262,-43.895807],[-176.48933,-43.896885],[-176.488076,-43.8968],[-176.488262,-43.895807]]],[[[-176.504068,-43.88164],[-176.504371,-43.880629],[-176.504605,-43.881374],[-176.504068,-43.88164]]],[[[-176.425613,-43.840731],[-176.426311,-43.841021],[-176.425978,-43.841366],[-176.425613,-43.840731]]],[[[-176.426297,-43.839985],[-176.426574,-43.840065],[-176.426375,-43.84029],[-176.426297,-43.839985]]],[[[-176.412327,-43.838705],[-176.412652,-43.838736],[-176.412557,-43.838987],[-176.412327,-43.838705]]],[[[-176.413616,-43.838525],[-176.41485,-43.838186],[-176.414582,-43.838865],[-176.413616,-43.838525]]],[[[-176.411506,-43.837886],[-176.411449,-43.837688],[-176.4124,-43.837861],[-176.411506,-43.837886]]],[[[-176.415441,-43.836805],[-176.415891,-43.836654],[-176.415706,-43.837102],[-176.415441,-43.836805]]],[[[-176.41599,-43.836398],[-176.41599,-43.83631],[-176.41669,-43.836462],[-176.41599,-43.836398]]],[[[-176.411987,-43.836173],[-176.414029,-43.836274],[-176.414822,-43.837601],[-176.414229,-43.836745],[-176.411987,-43.836173]]],[[[-176.414939,-43.836333],[-176.415181,-43.835938],[-176.41588,-43.836159],[-176.414939,-43.836333]]],[[[-176.407727,-43.83581],[-176.407661,-43.835633],[-176.408308,-43.83568],[-176.407727,-43.83581]]],[[[-176.409856,-43.834349],[-176.40979,-43.834204],[-176.410167,-43.834124],[-176.409856,-43.834349]]],[[[-176.424529,-43.833227],[-176.426518,-43.834922],[-176.423564,-43.835],[-176.424529,-43.833227]]],[[[-176.429722,-43.833699],[-176.427241,-43.831616],[-176.431647,-43.833873],[-176.429722,-43.833699]]],[[[-176.494845,-43.830782],[-176.495464,-43.830595],[-176.495519,-43.830906],[-176.494845,-43.830782]]],[[[-176.406285,-43.830525],[-176.406595,-43.830437],[-176.406584,-43.830767],[-176.406285,-43.830525]]],[[[-176.427658,-43.830252],[-176.428312,-43.830313],[-176.428355,-43.830736],[-176.427658,-43.830252]]],[[[-176.407399,-43.830648],[-176.407843,-43.829988],[-176.408829,-43.830568],[-176.407399,-43.830648]]],[[[-176.404472,-43.829779],[-176.405148,-43.829834],[-176.405098,-43.829916],[-176.404472,-43.829779]]],[[[-176.404987,-43.82876],[-176.405553,-43.828885],[-176.405464,-43.829022],[-176.404987,-43.82876]]],[[[-176.404854,-43.827323],[-176.405821,-43.827528],[-176.40571,-43.827721],[-176.404854,-43.827323]]],[[[-176.423424,-43.82728],[-176.423424,-43.827244],[-176.42374,-43.827224],[-176.423424,-43.82728]]],[[[-176.424158,-43.827194],[-176.424186,-43.827069],[-176.424541,-43.827158],[-176.424158,-43.827194]]],[[[-176.420902,-43.826207],[-176.420926,-43.826119],[-176.421212,-43.826143],[-176.420902,-43.826207]]],[[[-176.405524,-43.826689],[-176.406065,-43.826088],[-176.406321,-43.826832],[-176.405524,-43.826689]]],[[[-176.425781,-43.826454],[-176.426059,-43.825721],[-176.426576,-43.826507],[-176.425781,-43.826454]]],[[[-176.427272,-43.825664],[-176.427549,-43.82576],[-176.427499,-43.825901],[-176.427272,-43.825664]]],[[[-176.419263,-43.825478],[-176.41954,-43.825543],[-176.419506,-43.825591],[-176.419263,-43.825478]]],[[[-176.432449,-43.831421],[-176.429057,-43.825751],[-176.436051,-43.830972],[-176.432858,-43.833613],[-176.428499,-43.831277],[-176.432449,-43.831421]]],[[[-176.405897,-43.825446],[-176.406938,-43.825616],[-176.406882,-43.825777],[-176.405897,-43.825446]]],[[[-176.471823,-43.825786],[-176.472265,-43.824997],[-176.472707,-43.826015],[-176.471823,-43.825786]]],[[[-176.422081,-43.825296],[-176.421864,-43.824877],[-176.42313,-43.825157],[-176.422081,-43.825296]]],[[[-176.43692,-43.829341],[-176.43364,-43.826344],[-176.433499,-43.824816],[-176.439136,-43.82753],[-176.43692,-43.829341]]],[[[-176.420603,-43.824529],[-176.420531,-43.824372],[-176.42123,-43.824653],[-176.420603,-43.824529]]],[[[-176.423307,-43.824395],[-176.423263,-43.824281],[-176.423695,-43.824411],[-176.423307,-43.824395]]],[[[-176.419713,-43.823991],[-176.420533,-43.824079],[-176.420484,-43.82428],[-176.419713,-43.823991]]],[[[-176.420983,-43.823965],[-176.421186,-43.824053],[-176.421164,-43.824117],[-176.420983,-43.823965]]],[[[-176.405157,-43.824755],[-176.405169,-43.823894],[-176.406099,-43.824498],[-176.405157,-43.824755]]],[[[-176.43607,-43.824497],[-176.435405,-43.823907],[-176.439523,-43.825175],[-176.43607,-43.824497]]],[[[-176.419674,-43.823768],[-176.419662,-43.823323],[-176.420168,-43.823664],[-176.419674,-43.823768]]],[[[-176.419981,-43.823116],[-176.419969,-43.822976],[-176.420571,-43.823169],[-176.419981,-43.823116]]],[[[-176.469914,-43.824711],[-176.470207,-43.822899],[-176.470586,-43.825037],[-176.469914,-43.824711]]],[[[-176.420716,-43.822861],[-176.420777,-43.822713],[-176.42144,-43.82287],[-176.420716,-43.822861]]],[[[-176.421469,-43.822817],[-176.421445,-43.822625],[-176.421903,-43.822852],[-176.421469,-43.822817]]],[[[-176.422209,-43.82278],[-176.421944,-43.822641],[-176.422619,-43.822754],[-176.422209,-43.82278]]],[[[-176.415269,-43.822384],[-176.414944,-43.822026],[-176.415715,-43.822166],[-176.415269,-43.822384]]],[[[-176.417977,-43.82195],[-176.417988,-43.821885],[-176.418342,-43.821918],[-176.417977,-43.82195]]],[[[-176.418751,-43.821525],[-176.418972,-43.821718],[-176.418828,-43.821822],[-176.418751,-43.821525]]],[[[-176.420538,-43.821678],[-176.420551,-43.821486],[-176.421587,-43.8216],[-176.420538,-43.821678]]],[[[-176.41408,-43.821069],[-176.414586,-43.821105],[-176.414586,-43.821192],[-176.41408,-43.821069]]],[[[-176.424872,-43.821105],[-176.424817,-43.820872],[-176.425471,-43.821162],[-176.424872,-43.821105]]],[[[-176.421249,-43.820942],[-176.421056,-43.820776],[-176.421972,-43.820942],[-176.421249,-43.820942]]],[[[-176.40316,-43.821625],[-176.40204,-43.820135],[-176.403824,-43.821866],[-176.40316,-43.821625]]],[[[-176.416862,-43.820525],[-176.416248,-43.819739],[-176.418393,-43.820552],[-176.416862,-43.820525]]],[[[-176.382203,-43.811418],[-176.383045,-43.811849],[-176.380202,-43.811523],[-176.382203,-43.811418]]],[[[-176.488664,-43.760784],[-176.490227,-43.761859],[-176.490179,-43.761985],[-176.488664,-43.760784]]],[[[-176.239513,-44.434967],[-176.238081,-44.434598],[-176.238045,-44.43319],[-176.237528,-44.432388],[-176.237909,-44.431318],[-176.241073,-44.4318],[-176.241875,-44.432735],[-176.241589,-44.433712],[-176.239513,-44.434967]]],[[[-176.334372,-44.286084],[-176.338682,-44.286009],[-176.341108,-44.286685],[-176.341808,-44.287546],[-176.340696,-44.288286],[-176.338883,-44.287031],[-176.335625,-44.28745],[-176.334577,-44.28705],[-176.334372,-44.286084]]],[[[-176.178997,-44.335599],[-176.178749,-44.336197],[-176.180727,-44.337296],[-176.180436,-44.337935],[-176.182097,-44.33926],[-176.182148,-44.340375],[-176.182921,-44.34112],[-176.182755,-44.342564],[-176.184603,-44.343889],[-176.183423,-44.346252],[-176.183621,-44.34721],[-176.184654,-44.347718],[-176.184723,-44.348338],[-176.185599,-44.348433],[-176.18558,-44.349341],[-176.184142,-44.349275],[-176.183545,-44.350759],[-176.182179,-44.350745],[-176.181541,-44.351682],[-176.180437,-44.351009],[-176.179785,-44.351894],[-176.178171,-44.352633],[-176.17538,-44.352707],[-176.172993,-44.355521],[-176.167929,-44.356807],[-176.166842,-44.355788],[-176.164845,-44.356046],[-176.165272,-44.355415],[-176.164919,-44.354758],[-176.163738,-44.354611],[-176.163515,-44.349165],[-176.164496,-44.348135],[-176.167421,-44.34806],[-176.169214,-44.347133],[-176.169962,-44.346169],[-176.168871,-44.345588],[-176.169687,-44.3446],[-176.168512,-44.343579],[-176.167547,-44.341539],[-176.165128,-44.341923],[-176.165053,-44.341392],[-176.166189,-44.340458],[-176.168376,-44.339695],[-176.17287,-44.339264],[-176.173274,-44.338369],[-176.17296,-44.337965],[-176.173509,-44.337389],[-176.176872,-44.335581],[-176.178997,-44.335599]]],[[[-176.315813,-44.27681],[-176.316179,-44.27645],[-176.318408,-44.276698],[-176.319847,-44.277472],[-176.319556,-44.279288],[-176.31897,-44.279737],[-176.316469,-44.279166],[-176.316642,-44.280339],[-176.317497,-44.281014],[-176.316939,-44.281082],[-176.317087,-44.28159],[-176.316301,-44.280788],[-176.316046,-44.279644],[-176.313126,-44.278477],[-176.311723,-44.279295],[-176.310897,-44.278102],[-176.311225,-44.277526],[-176.313921,-44.276475],[-176.315813,-44.27681]]],[[[-176.294627,-44.262289],[-176.297042,-44.262748],[-176.301111,-44.266648],[-176.300106,-44.26713],[-176.299918,-44.267724],[-176.301611,-44.269016],[-176.300091,-44.269188],[-176.299117,-44.270475],[-176.298112,-44.271124],[-176.297046,-44.271122],[-176.29706,-44.271482],[-176.300516,-44.272548],[-176.300631,-44.273801],[-176.3018,-44.274031],[-176.303408,-44.275377],[-176.309275,-44.276836],[-176.308498,-44.277832],[-176.308941,-44.279158],[-176.30451,-44.278631],[-176.302116,-44.277484],[-176.300794,-44.276459],[-176.300686,-44.275419],[-176.299766,-44.274553],[-176.299993,-44.274182],[-176.297861,-44.273829],[-176.296008,-44.272833],[-176.295232,-44.273764],[-176.294595,-44.273826],[-176.293192,-44.27302],[-176.293178,-44.272265],[-176.292547,-44.272542],[-176.290579,-44.27154],[-176.287622,-44.271221],[-176.288569,-44.268505],[-176.288493,-44.267262],[-176.2878,-44.266622],[-176.288438,-44.26444],[-176.28933,-44.263594],[-176.292386,-44.263112],[-176.294627,-44.262289]]],[[[-176.197213,-43.736188],[-176.198282,-43.736735],[-176.199028,-43.737763],[-176.198926,-43.738906],[-176.196257,-43.740665],[-176.194253,-43.740356],[-176.194558,-43.737192],[-176.197213,-43.736188]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kermadec-1887-annexation",
+      "properties": {
+        "name": "克马德克群岛 · 并入新西兰殖民地",
+        "stable_id": "kermadec-islands",
+        "start_year": 1887,
+        "end_year": 1899,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "根据英国王室制诰，克马德克群岛于1887年8月1日起并入新西兰殖民地。",
+        "source_ids": [
+          "19CT3-KER-1887",
+          "19CT3-LINZ"
+        ],
+        "source_urls": [
+          "https://www.legislation.govt.nz/regulation/public/1887/0001/latest/whole.html",
+          "https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected LINZ NZ Coastlines and Islands Polygons Topo 1:50k objects; generalized in WGS84, CC BY 4.0",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[-177.959627,-29.239242],[-177.982171,-29.242633],[-177.963745,-29.253369],[-177.95732,-29.251919],[-177.942312,-29.269637],[-177.959297,-29.293149],[-177.958015,-29.297005],[-177.942856,-29.295221],[-177.928174,-29.296497],[-177.92462,-29.299575],[-177.921284,-29.285856],[-177.914236,-29.278862],[-177.894519,-29.276795],[-177.895473,-29.281319],[-177.891617,-29.283515],[-177.884899,-29.277878],[-177.88759,-29.27552],[-177.887607,-29.266825],[-177.899274,-29.251524],[-177.918117,-29.249164],[-177.92975,-29.242624],[-177.959627,-29.239242]]],[[[-178.430836,-30.225655],[-178.432474,-30.226498],[-178.435992,-30.226879],[-178.436813,-30.227816],[-178.438043,-30.228221],[-178.438536,-30.229175],[-178.439611,-30.229591],[-178.440165,-30.230945],[-178.439546,-30.233553],[-178.437196,-30.237081],[-178.435618,-30.237527],[-178.434697,-30.239869],[-178.431739,-30.241077],[-178.431346,-30.241929],[-178.43072,-30.241798],[-178.430604,-30.241089],[-178.429167,-30.240388],[-178.428773,-30.240622],[-178.428619,-30.240008],[-178.426858,-30.239476],[-178.425582,-30.239784],[-178.42611,-30.239501],[-178.425781,-30.238412],[-178.424061,-30.237719],[-178.420752,-30.234944],[-178.420689,-30.232952],[-178.419935,-30.232697],[-178.419184,-30.233504],[-178.41815,-30.23235],[-178.418294,-30.231658],[-178.420264,-30.229982],[-178.420792,-30.228478],[-178.4228,-30.226612],[-178.42463,-30.225628],[-178.430836,-30.225655]]],[[[-178.557346,-30.537784],[-178.56001,-30.539322],[-178.560108,-30.542241],[-178.55976,-30.542726],[-178.55894,-30.542535],[-178.557517,-30.544741],[-178.556974,-30.544704],[-178.55711,-30.54429],[-178.554487,-30.54481],[-178.55469,-30.543217],[-178.554121,-30.543474],[-178.554733,-30.54292],[-178.553647,-30.542689],[-178.554885,-30.541482],[-178.55486,-30.540795],[-178.554402,-30.540691],[-178.555006,-30.540724],[-178.555447,-30.540041],[-178.555059,-30.539958],[-178.555797,-30.538613],[-178.555405,-30.538368],[-178.556172,-30.5378],[-178.557346,-30.537784]]],[[[-177.876985,-29.246719],[-177.878063,-29.245687],[-177.881039,-29.247641],[-177.8798,-29.248252],[-177.879413,-29.247692],[-177.878553,-29.248053],[-177.876985,-29.246719]]],[[[-177.876365,-29.242506],[-177.877002,-29.241253],[-177.876708,-29.242657],[-177.877248,-29.242574],[-177.877237,-29.243739],[-177.878973,-29.244896],[-177.876453,-29.246327],[-177.875924,-29.246183],[-177.874903,-29.244512],[-177.875677,-29.24344],[-177.875001,-29.242439],[-177.875647,-29.242692],[-177.875645,-29.24208],[-177.876365,-29.242506]]],[[[-178.824326,-31.353296],[-178.825273,-31.353406],[-178.825378,-31.353811],[-178.824933,-31.353849],[-178.825953,-31.354689],[-178.8252,-31.355824],[-178.823932,-31.354563],[-178.824326,-31.353296]]],[[[-178.569159,-30.534124],[-178.569701,-30.534532],[-178.569103,-30.536436],[-178.569494,-30.536516],[-178.569525,-30.537486],[-178.568721,-30.537335],[-178.568534,-30.538305],[-178.567664,-30.538037],[-178.567356,-30.539125],[-178.566735,-30.538983],[-178.566091,-30.538158],[-178.566503,-30.535528],[-178.568554,-30.53496],[-178.569159,-30.534124]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rotuma-1880-fiji-proclamation",
+      "properties": {
+        "name": "罗图马岛 · 斐济总督并入公告",
+        "stable_id": "rotuma-main-island",
+        "start_year": 1880,
+        "end_year": 1880,
+        "display_kind": "administrative",
+        "label_type": "殖民地并入公告",
+        "summary_zh": "1880年11月5日，斐济总督戈登公告罗图马此后视为斐济殖民地的一部分。",
+        "source_ids": [
+          "19CT3-ROT-GAZ",
+          "19CT3-ROT-1881",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://library.victoria.ac.nz/databases/nzgazettearchive/pubs/gazettes/1881/1881%20ISSUE%20073.pdf",
+          "https://www.parliament.gov.fj/wp-content/uploads/2017/03/Rotuma-Lands-Bill-summary.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[177.124766,-12.486098],[177.111176,-12.480645],[177.075206,-12.480645],[177.059744,-12.475274],[177.03297,-12.491388],[177.020844,-12.493585],[177.00587,-12.489516],[177.006602,-12.494724],[177.011485,-12.509454],[177.02711,-12.507257],[177.04363,-12.508477],[177.059581,-12.511977],[177.073416,-12.51686],[177.091075,-12.516371],[177.113617,-12.511407],[177.12908,-12.501642],[177.124766,-12.486098]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rotuma-1881-fiji-cession",
+      "properties": {
+        "name": "罗图马岛 · 斐济殖民地属地",
+        "stable_id": "rotuma-main-island",
+        "start_year": 1881,
+        "end_year": 1899,
+        "display_kind": "administrative",
+        "label_type": "殖民行政区",
+        "summary_zh": "1881年5月13日，斐济总督德沃厄赴罗图马的莫图萨参加正式割让仪式，罗图马划归斐济殖民政府。",
+        "source_ids": [
+          "19CT3-ROT-GAZ",
+          "19CT3-ROT-1881",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://library.victoria.ac.nz/databases/nzgazettearchive/pubs/gazettes/1881/1881%20ISSUE%20073.pdf",
+          "https://www.parliament.gov.fj/wp-content/uploads/2017/03/Rotuma-Lands-Bill-summary.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[177.124766,-12.486098],[177.111176,-12.480645],[177.075206,-12.480645],[177.059744,-12.475274],[177.03297,-12.491388],[177.020844,-12.493585],[177.00587,-12.489516],[177.006602,-12.494724],[177.011485,-12.509454],[177.02711,-12.507257],[177.04363,-12.508477],[177.059581,-12.511977],[177.073416,-12.51686],[177.091075,-12.516371],[177.113617,-12.511407],[177.12908,-12.501642],[177.124766,-12.486098]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gilbert-1892-protectorate",
+      "properties": {
+        "name": "吉尔伯特群岛 · 英国保护地",
+        "stable_id": "gilbert-islands",
+        "start_year": 1892,
+        "end_year": 1899,
+        "display_kind": "political",
+        "label_type": "英国保护地",
+        "summary_zh": "1892年5月27日，英国军官在阿贝马马宣布对吉尔伯特群岛实施保护。保护公告逐岛列名。",
+        "source_ids": [
+          "19CT3-PAC-1892",
+          "19CT3-PAC-HANS",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/aa6b2cc9-4235-45ca-8896-1c703dfac641/content",
+          "https://api.parliament.uk/historic-hansard/written-answers/1977/jun/20/gilbert-and-ellice-islands",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[176.786143,-2.608168],[176.782237,-2.604913],[176.778982,-2.605157],[176.772309,-2.608168],[176.827322,-2.656183],[176.840668,-2.662774],[176.850922,-2.654067],[176.838227,-2.633884],[176.813162,-2.614435],[176.786143,-2.608168]]],[[[175.9817,-2.505955],[175.984711,-2.507908],[175.98699,-2.509861],[175.989431,-2.510919],[175.993175,-2.510349],[175.989268,-2.503839],[175.985118,-2.498305],[175.979991,-2.493585],[175.973155,-2.489679],[175.976817,-2.497817],[175.9817,-2.505955]]],[[[175.591482,-1.8742],[175.559581,-1.826104],[175.552257,-1.819268],[175.559093,-1.832289],[175.576182,-1.856052],[175.586274,-1.870782],[175.583263,-1.911065],[175.586274,-1.922459],[175.599946,-1.895115],[175.591482,-1.8742]]],[[[175.058767,-1.436293],[175.051117,-1.434503],[175.048106,-1.432794],[175.045095,-1.428888],[175.038259,-1.436293],[175.051768,-1.452732],[175.058849,-1.480564],[175.058279,-1.506768],[175.048839,-1.518243],[175.045665,-1.524184],[175.037852,-1.535252],[175.028005,-1.541192],[175.018321,-1.531915],[175.018565,-1.519627],[175.02589,-1.507257],[175.036143,-1.497166],[175.045095,-1.490981],[175.045095,-1.484145],[175.020844,-1.499933],[175.008474,-1.526788],[175.012543,-1.549249],[175.038259,-1.552423],[175.060557,-1.531671],[175.068614,-1.497003],[175.066661,-1.461033],[175.058767,-1.436293]]],[[[176.409353,-1.332696],[176.405447,-1.3235],[176.402354,-1.320489],[176.395681,-1.319594],[176.401134,-1.336358],[176.41033,-1.350356],[176.429861,-1.374282],[176.436778,-1.390395],[176.442149,-1.408787],[176.44988,-1.425388],[176.464041,-1.436293],[176.459321,-1.405857],[176.444835,-1.373793],[176.426443,-1.347101],[176.409353,-1.332696]]],[[[176.009288,-1.334242],[175.989268,-1.306817],[175.977306,-1.284845],[175.958018,-1.280206],[175.942149,-1.284845],[175.937022,-1.293064],[175.949392,-1.298517],[175.945567,-1.292169],[175.944347,-1.289321],[175.943126,-1.284845],[175.955903,-1.286554],[175.965831,-1.29518],[175.983572,-1.319594],[176.006358,-1.342706],[176.014903,-1.356541],[176.018321,-1.374282],[175.993175,-1.362563],[175.983572,-1.36061],[175.983572,-1.367446],[176.002778,-1.375584],[176.011974,-1.38128],[176.018321,-1.387872],[176.023448,-1.362888],[176.009288,-1.334242]]],[[[173.620616,0.133368],[173.637543,0.1765],[173.640798,0.192125],[173.641368,0.200019],[173.641124,0.208441],[173.636485,0.216742],[173.628673,0.219143],[173.606212,0.215969],[173.623302,0.207994],[173.6338,0.200873],[173.638357,0.195217],[173.634125,0.174018],[173.614513,0.155097],[173.609874,0.143052],[173.620616,0.133368]]],[[[173.832286,0.448676],[173.82545,0.455512],[173.818614,0.451321],[173.813243,0.446926],[173.808767,0.441596],[173.804942,0.434394],[173.832042,0.436347],[173.867686,0.419582],[173.921641,0.379788],[173.917247,0.399482],[173.89088,0.418402],[173.832286,0.448676]]],[[[172.987153,0.832343],[172.983409,0.831285],[172.986339,0.829169],[172.990001,0.825426],[172.989757,0.82803],[172.990001,0.830268],[172.990245,0.83397],[172.988943,0.833197],[172.987153,0.832343]]],[[[172.977794,0.83633],[172.975759,0.839667],[172.969412,0.839667],[172.972179,0.83454],[172.975352,0.831692],[172.97934,0.830756],[172.982432,0.831163],[172.979503,0.834215],[172.977794,0.83633]]],[[[172.983165,1.531195],[172.972341,1.590237],[172.962901,1.620592],[172.948985,1.627346],[172.959158,1.609687],[172.963145,1.560248],[172.969412,1.537991],[172.972992,1.53559],[172.975352,1.532945],[172.978282,1.531195],[172.983165,1.531195]]],[[[173.289724,2.03384],[173.291515,2.026679],[173.29184,2.019477],[173.291515,2.015123],[173.293712,2.005439],[173.296153,1.997016],[173.296723,1.99372],[173.297618,1.991441],[173.297374,1.989895],[173.300792,1.985663],[173.305919,1.980699],[173.306814,1.976467],[173.307872,1.973293],[173.305919,1.969875],[173.304698,1.96955],[173.301524,1.968695],[173.293712,1.969143],[173.289317,1.970038],[173.271658,1.97484],[173.263927,1.978013],[173.26352,1.983588],[173.263927,1.988471],[173.263031,1.9914],[173.261485,1.993232],[173.258474,1.992825],[173.256196,1.989976],[173.25587,1.985663],[173.257498,1.974595],[173.260265,1.971137],[173.269216,1.967719],[173.284841,1.963772],[173.297374,1.961575],[173.304454,1.961575],[173.308849,1.963121],[173.31072,1.964179],[173.312999,1.965522],[173.315929,1.96776],[173.317882,1.970771],[173.318044,1.974026],[173.31837,1.976996],[173.315684,1.979967],[173.312511,1.982082],[173.309418,1.98432],[173.305431,1.993313],[173.29835,2.013983],[173.295909,2.033637],[173.293712,2.042304],[173.293468,2.043443],[173.289073,2.05036],[173.282888,2.056342],[173.278005,2.058661],[173.273611,2.059556],[173.268565,2.059312],[173.264659,2.055162],[173.262055,2.049872],[173.259613,2.043402],[173.258067,2.034003],[173.257498,2.028469],[173.26002,2.018785],[173.260509,2.012844],[173.260265,2.007229],[173.259288,2.000881],[173.258067,1.997626],[173.257823,1.997016],[173.262706,1.997463],[173.266775,2.004299],[173.268565,2.01142],[173.266938,2.020413],[173.264659,2.03677],[173.266124,2.04385],[173.270518,2.045559],[173.277029,2.044379],[173.281586,2.041815],[173.284679,2.040269],[173.28712,2.03856],[173.289724,2.03384]]],[[[173.038259,1.341051],[173.054454,1.353583],[173.078624,1.360012],[173.104503,1.361965],[173.126475,1.36107],[173.150645,1.356431],[173.162934,1.356513],[173.171397,1.362372],[173.171723,1.374172],[173.164317,1.383246],[173.153168,1.386542],[173.143321,1.380316],[173.160655,1.374945],[173.151541,1.371812],[173.084727,1.366685],[173.059581,1.359768],[173.011241,1.337348],[173.018077,1.335924],[173.024425,1.336615],[173.038259,1.341051]]],[[[174.765147,-1.202895],[174.747569,-1.166111],[174.743988,-1.14837],[174.737478,-1.142267],[174.731619,-1.137953],[174.725352,-1.135512],[174.716645,-1.134698],[174.746755,-1.185968],[174.750743,-1.199477],[174.748302,-1.237481],[174.75587,-1.257501],[174.778819,-1.264418],[174.772716,-1.247735],[174.765147,-1.202895]]],[[[174.476573,-0.709568],[174.476573,-0.669122],[174.462901,-0.648126],[174.476573,-0.74033],[174.493907,-0.775486],[174.497732,-0.794773],[174.497732,-0.796319],[174.497569,-0.796889],[174.483409,-0.812595],[174.481944,-0.806817],[174.480805,-0.805759],[174.48113,-0.80462],[174.483409,-0.798923],[174.472341,-0.801853],[174.469737,-0.806736],[174.473888,-0.812758],[174.483409,-0.819431],[174.497325,-0.805108],[174.497895,-0.796482],[174.497976,-0.795831],[174.498383,-0.789158],[174.490733,-0.747166],[174.47934,-0.720392],[174.476573,-0.709568]]],[[[174.438731,-0.627618],[174.429942,-0.623468],[174.402599,-0.602227],[174.393891,-0.592869],[174.38087,-0.592869],[174.391612,-0.605645],[174.437185,-0.640802],[174.452647,-0.648126],[174.463634,-0.644789],[174.458669,-0.637872],[174.447113,-0.630792],[174.438731,-0.627618]]],[[[173.075938,0.965888],[173.064952,0.976264],[173.014659,1.008857],[173.003673,1.024075],[172.990001,1.024075],[172.995616,1.018052],[173.000499,1.010647],[173.003429,1.00141],[173.003673,0.989936],[173.009776,0.989936],[173.009532,1.00023],[173.009776,1.003607],[173.025564,0.998033],[173.044932,0.987779],[173.062266,0.975165],[173.071788,0.962592],[173.0713,0.949897],[173.064138,0.9383],[173.055919,0.92772],[173.046641,0.901516],[173.022716,0.882717],[173.013682,0.860338],[172.996593,0.845038],[172.990977,0.834418],[173.011241,0.854153],[173.049815,0.904202],[173.061209,0.914211],[173.079275,0.945217],[173.079926,0.960395],[173.075938,0.965888]]],[[[173.036143,1.777167],[173.027354,1.810452],[173.02711,1.808905],[173.026622,1.807522],[173.02589,1.806138],[173.024669,1.804877],[173.033376,1.774319],[173.035492,1.743557],[173.023774,1.721096],[172.990001,1.715522],[172.993175,1.712063],[172.996349,1.710679],[173.003673,1.709296],[173.029307,1.716295],[173.038341,1.742377],[173.036143,1.777167]]],[[[172.980317,1.882025],[172.975759,1.89765],[172.969412,1.90705],[172.941742,1.926947],[172.934744,1.942694],[172.933604,1.931464],[172.938487,1.923163],[172.955089,1.907945],[172.961436,1.899644],[172.975759,1.873765],[173.023448,1.821438],[173.020274,1.82807],[172.980317,1.882025]]],[[[172.750336,3.031968],[172.753429,3.024807],[172.757579,3.019029],[172.763357,3.014594],[172.770274,3.011461],[172.786469,3.016913],[172.812266,3.040473],[172.844412,3.059801],[172.880138,3.052476],[172.885753,3.061916],[172.886892,3.066392],[172.886974,3.072943],[172.868012,3.067776],[172.829112,3.064276],[172.814626,3.05622],[172.802257,3.041693],[172.788259,3.029039],[172.771495,3.023871],[172.750336,3.031968]]],[[[172.962087,3.141832],[172.944184,3.127387],[172.886974,3.100246],[172.89975,3.100246],[172.947032,3.123033],[172.969412,3.12816],[172.968272,3.132392],[172.967052,3.135403],[172.962087,3.141832]]],[[[174.234141,-0.529718],[174.236746,-0.529636],[174.240896,-0.528253],[174.245779,-0.531183],[174.245291,-0.529311],[174.237478,-0.526544],[174.234141,-0.529718]]],[[[173.525076,0.178778],[173.529714,0.174343],[173.537283,0.171942],[173.542003,0.171576],[173.550466,0.173896],[173.550466,0.181057],[173.534434,0.18358],[173.525076,0.178778]]],[[[173.398529,0.22309],[173.389171,0.225775],[173.379731,0.223334],[173.377615,0.214748],[173.383149,0.199571],[173.391449,0.192776],[173.41391,0.20718],[173.414073,0.211859],[173.398529,0.22309]]],[[[173.354828,0.268297],[173.347585,0.263292],[173.348155,0.254381],[173.368337,0.23786],[173.372895,0.242092],[173.371104,0.253567],[173.36435,0.261623],[173.354828,0.268297]]],[[[173.937511,0.388861],[173.932465,0.401272],[173.928315,0.405829],[173.925466,0.399563],[173.937999,0.357245],[173.937755,0.349392],[173.93865,0.344428],[173.940522,0.340399],[173.938975,0.327623],[173.936046,0.320746],[173.930512,0.318468],[173.927094,0.315538],[173.927582,0.312079],[173.933604,0.308987],[173.937104,0.310004],[173.9428,0.315375],[173.947032,0.322577],[173.946951,0.360338],[173.937511,0.388861]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ellice-1892-protectorate",
+      "properties": {
+        "name": "埃利斯群岛 · 英国保护地",
+        "stable_id": "ellice-islands",
+        "start_year": 1892,
+        "end_year": 1899,
+        "display_kind": "political",
+        "label_type": "英国保护地",
+        "summary_zh": "1892年9月，英国军舰在埃利斯群岛各岛陆续宣布实施保护。富纳富提等岛各有公告记录。",
+        "source_ids": [
+          "19CT3-PAC-1892",
+          "19CT3-PAC-HANS",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/aa6b2cc9-4235-45ca-8896-1c703dfac641/content",
+          "https://api.parliament.uk/historic-hansard/written-answers/1977/jun/20/gilbert-and-ellice-islands",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "selected Natural Earth 1:10m physical land polygon, topology-preserving simplification",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[177.152599,-7.197361],[177.152599,-7.200291],[177.153331,-7.199151],[177.153005,-7.195001],[177.150076,-7.188165],[177.150401,-7.190362],[177.152354,-7.195082],[177.152599,-7.197361]]],[[[176.314301,-6.302341],[176.322439,-6.295099],[176.322927,-6.288832],[176.319184,-6.289239],[176.314301,-6.302341]]],[[[177.344086,-6.121026],[177.356293,-6.118748],[177.356619,-6.114516],[177.348806,-6.110528],[177.337169,-6.108168],[177.338145,-6.111017],[177.339854,-6.114516],[177.344086,-6.121026]]],[[[176.135265,-5.692804],[176.148448,-5.70672],[176.140391,-5.687188],[176.129893,-5.677504],[176.125255,-5.679132],[176.135265,-5.692804]]],[[[179.906749,-9.399347],[179.901215,-9.387953],[179.898611,-9.386814],[179.904063,-9.400486],[179.905284,-9.420668],[179.906098,-9.418634],[179.906749,-9.399347]]],[[[179.867849,-9.343194],[179.867442,-9.344334],[179.871755,-9.350193],[179.876964,-9.36297],[179.878429,-9.360772],[179.873302,-9.346856],[179.867849,-9.343194]]],[[[179.191254,-8.542087],[179.209727,-8.529962],[179.21754,-8.520603],[179.215505,-8.511326],[179.207205,-8.498468],[179.206391,-8.474054],[179.199392,-8.460626],[179.19752,-8.481541],[179.19809,-8.497817],[179.202322,-8.509698],[179.204112,-8.518976],[179.200043,-8.529555],[179.191254,-8.542087]]],[[[178.380544,-8.070001],[178.390636,-8.026544],[178.383149,-8.039239],[178.375499,-8.056085],[178.373302,-8.069024],[178.380544,-8.070001]]],[[[178.682791,-7.491469],[178.691417,-7.49863],[178.694102,-7.493829],[178.69337,-7.483982],[178.691091,-7.475356],[178.688324,-7.474379],[178.665212,-7.454034],[178.667979,-7.463637],[178.682791,-7.491469]]],[[[179.503103,-10.772068],[179.504649,-10.769138],[179.499197,-10.76808],[179.503103,-10.772068]]],[[[178.429698,-7.973321],[178.428884,-7.970473],[178.42685,-7.974461],[178.429698,-7.973321]]],[[[177.164561,-7.290297],[177.161713,-7.294041],[177.16684,-7.296563],[177.17156,-7.291274],[177.169607,-7.289972],[177.164561,-7.290297]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "british-columbia-mainland-1858",
+      "properties": {
+        "name": "不列颠哥伦比亚大陆 · 1858年设立殖民地",
+        "stable_id": "british-columbia-polity",
+        "start_year": 1858,
+        "end_year": 1862,
+        "display_kind": "administrative",
+        "label_type": "英国殖民地",
+        "summary_zh": "1858年8月2日，英国议会通过殖民地政府法，南至美国边界，东至落基山主脉，北界指定辛普森河与芬利河。11月19日，道格拉斯在兰利堡宣告设立殖民地。",
+        "source_ids": [
+          "19CT3-CA-BC-1858",
+          "19CT3-CA-BC-PROCLAMATION",
+          "19CT3-CA-BC-ARROWSMITH",
+          "19CT3-CA-BC-RUMSEY",
+          "19CT3-CA-BC-NAME",
+          "19CT3-NE"
+        ],
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Vict/21-22/99/pdfs/ukpga_18580099_en.pdf",
+          "https://bcgenesis.uvic.ca/B58034.html",
+          "https://bcgenesis.uvic.ca/mpg_1-646_bc_and_vi_arrowsmith_1859.html",
+          "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~360129~90127238",
+          "https://apps.gov.bc.ca/pub/bcgnws/names/39106.html",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+        ],
+        "related_event_ids": [
+          "E19-FR-1858-ACT",
+          "E19-FR-1858-PROCLAIM"
+        ],
+        "mapping_method": "historic_map_georeferenced_boundary_and_modern_physical_coastline",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false,
+        "source_snapshot_year": 1859
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-114.16355,49.0],[-114.71103,49.66415],[-115.27552,50.71121],[-115.48737,50.91565],[-116.12099,51.26987],[-116.36,51.48908],[-116.6283,51.66441],[-116.93336,51.69993],[-117.25345,51.85347],[-117.77342,52.24616],[-118.15992,52.3775],[-118.8888,53.66503],[-119.1759,53.82336],[-119.56727,54.20406],[-119.73233,54.442],[-120.67345,55.33517],[-120.83544,55.48374],[-121.12511,55.64739],[-121.28904,55.84007],[-121.36458,56.0473],[-121.55619,56.37301],[-121.74906,56.31397],[-121.92917,56.33615],[-122.11037,56.45436],[-122.34248,56.46138],[-122.47029,56.39448],[-122.65157,56.44571],[-123.41306,56.84891],[-124.38402,57.27001],[-124.51747,57.31301],[-124.76333,57.25835],[-125.02089,57.38842],[-125.21935,57.40797],[-125.41361,57.36817],[-125.51046,57.08527],[-125.60406,56.9431],[-125.80637,56.86578],[-125.79627,56.74002],[-125.96856,56.47042],[-125.57711,56.07693],[-125.81159,55.96198],[-125.98981,55.79592],[-126.35265,55.71513],[-126.6193,55.56905],[-126.72917,55.38894],[-126.90862,55.28136],[-127.48243,55.09028],[-128.54245,54.89167],[-128.86554,54.85991],[-129.17881,54.93928],[-129.85628,54.97714],[-129.98925,54.92032],[-129.95665,54.95742],[-130.02204,54.97386],[-130.15532,54.85218],[-130.05012,54.89301],[-130.15315,54.82469],[-130.20153,54.7285],[-129.98986,54.63052],[-129.87955,54.62059],[-130.01163,54.61986],[-130.08487,54.6739],[-130.23445,54.71141],[-130.37243,54.66425],[-130.21166,54.49335],[-130.10115,54.42634],[-130.06379,54.50194],[-129.98144,54.51545],[-130.0631,54.47895],[-130.08487,54.39208],[-129.96386,54.31883],[-130.05297,54.33739],[-130.3627,54.61225],[-130.43956,54.62393],[-130.37971,54.5777],[-130.43122,54.56778],[-130.44115,54.5268],[-130.37971,54.46101],[-130.4654,54.44424],[-130.48253,54.37368],[-130.34887,54.33373],[-130.27221,54.3581],[-130.24938,54.4064],[-130.23941,54.28685],[-130.19473,54.26301],[-130.29288,54.23745],[-130.27725,54.20775],[-130.11217,54.15933],[-129.82897,54.24213],[-129.59512,54.20034],[-129.51789,54.24722],[-129.47533,54.23505],[-129.63695,54.18114],[-129.83812,54.22207],[-129.92723,54.18732],[-129.71496,53.95384],[-129.83845,54.03022],[-129.96133,54.16681],[-130.05012,54.15619],[-130.10473,53.94709],[-130.01968,53.87568],[-129.96133,53.88898],[-129.99616,53.85151],[-129.71573,53.69546],[-129.70189,53.67276],[-129.74291,53.68016],[-129.66991,53.61835],[-129.33495,53.39692],[-129.28978,53.3854],[-129.24201,53.44741],[-129.26244,53.52253],[-129.22834,53.63272],[-129.03327,53.7495],[-129.06383,53.81049],[-129.00178,53.76211],[-128.97322,53.77757],[-129.00919,53.89932],[-128.9403,53.86514],[-128.94713,53.81049],[-128.90616,53.84467],[-128.93285,53.77635],[-128.62194,54.03213],[-128.5983,54.03022],[-128.68969,53.8937],[-128.47374,53.8415],[-128.67785,53.85932],[-128.69347,53.82123],[-128.77514,53.79828],[-128.80773,53.61538],[-128.52941,53.43374],[-128.42052,53.4527],[-128.37413,53.50357],[-128.11107,53.48835],[-128.03018,53.38227],[-127.93293,53.33759],[-127.93293,53.28913],[-127.87149,53.22834],[-127.95344,53.2652],[-127.97696,53.34235],[-128.05102,53.37385],[-128.10424,53.33759],[-128.07014,53.39899],[-128.12702,53.45087],[-128.35192,53.48151],[-128.50837,53.41266],[-128.48209,53.39802],[-128.49389,53.34406],[-128.49755,53.38715],[-128.63927,53.47476],[-128.69392,53.48835],[-128.67284,53.4536],[-128.74853,53.49518],[-128.78946,53.5703],[-128.86461,53.5362],[-128.97448,53.55663],[-128.91763,53.45869],[-128.83104,53.48835],[-128.88634,53.42695],[-128.8876,53.3771],[-128.84472,53.37165],[-128.88427,53.32632],[-128.84911,53.27855],[-128.68025,53.19282],[-128.66173,53.24217],[-128.57592,53.15034],[-128.48103,53.14574],[-128.55675,53.12873],[-128.49527,53.09736],[-128.53624,53.08027],[-128.49747,52.89472],[-128.44298,52.8277],[-128.2482,52.80317],[-128.13834,52.92666],[-128.0288,52.91665],[-128.13223,52.87311],[-128.1256,52.75283],[-128.24205,52.57038],[-128.22623,52.46052],[-128.39224,52.29605],[-128.2967,52.27558],[-128.09236,52.51325],[-127.87767,52.58405],[-127.93423,52.50593],[-127.98449,52.52196],[-128.05309,52.48517],[-128.06387,52.40591],[-128.01594,52.34675],[-127.96768,52.3227],[-127.90258,52.38532],[-127.92614,52.44685],[-127.88825,52.51512],[-127.91869,52.45026],[-127.84748,52.37132],[-127.93293,52.31647],[-127.87243,52.21955],[-127.80053,52.25629],[-127.73664,52.3544],[-127.71447,52.3581],[-127.75544,52.28181],[-127.61657,52.29853],[-127.45246,52.41177],[-127.26887,52.46898],[-127.25866,52.55329],[-126.98689,52.71088],[-127.0764,52.88508],[-126.96955,52.82941],[-126.93179,52.71284],[-126.98233,52.64472],[-127.22765,52.52285],[-127.22496,52.45612],[-127.14403,52.34931],[-127.00231,52.3393],[-126.75304,52.39338],[-126.73375,52.37116],[-126.87466,52.3581],[-126.93855,52.30585],[-126.88512,52.19452],[-126.67219,52.04735],[-126.67227,51.98749],[-126.94665,52.21284],[-126.94302,52.25312],[-126.99763,52.29751],[-127.1726,52.31647],[-127.26374,52.24604],[-127.45173,52.18187],[-127.40534,52.10423],[-127.43049,52.08881],[-127.54955,52.08226],[-127.62442,52.02851],[-127.57653,52.09369],[-127.46744,52.1247],[-127.47704,52.15058],[-127.54735,52.14326],[-127.63809,52.08373],[-127.66609,51.95962],[-127.8496,51.92011],[-127.89196,51.81623],[-127.87369,51.67341],[-127.8026,51.60395],[-127.79638,51.52827],[-127.65925,51.51459],[-127.76163,51.49409],[-127.71386,51.45775],[-127.62271,51.47818],[-127.5716,51.52814],[-127.59032,51.57665],[-127.55883,51.61884],[-127.46744,51.6623],[-127.64558,51.70014],[-127.49267,51.69872],[-127.35009,51.87018],[-127.36238,51.78022],[-127.43269,51.75479],[-127.42321,51.67186],[-127.35009,51.71381],[-126.69933,51.66543],[-126.6444,51.72004],[-126.66613,51.80256],[-126.60342,51.71381],[-126.67723,51.64574],[-127.04353,51.66861],[-127.49201,51.62059],[-127.55187,51.47089],[-127.77843,51.36489],[-127.77965,51.33055],[-127.48449,51.35757],[-127.51521,51.3166],[-127.28185,51.30231],[-127.17602,51.33641],[-127.11734,51.39851],[-127.12662,51.33881],[-127.22102,51.28925],[-127.57144,51.3006],[-127.7364,51.25788],[-127.78954,51.23338],[-127.77701,51.16722],[-127.66194,51.09748],[-127.48107,51.10993],[-127.53075,51.00373],[-127.04235,50.8229],[-126.92199,50.87226],[-127.16576,50.93919],[-126.89916,50.90693],[-126.84618,50.94343],[-126.67422,50.87816],[-126.53506,50.94172],[-126.55215,51.00507],[-126.51472,51.07636],[-126.45946,50.95173],[-126.17309,50.93879],[-126.22326,50.90501],[-126.49893,50.92235],[-126.56241,50.87714],[-126.54735,50.83739],[-126.48868,50.81672],[-126.18383,50.86787],[-126.17886,50.78095],[-126.03454,50.79511],[-126.22667,50.69282],[-126.18663,50.67186],[-126.00756,50.71332],[-125.93977,50.68342],[-125.7674,50.70649],[-125.64769,50.78242],[-125.67927,50.87031],[-125.54206,50.93919],[-125.63703,51.1037],[-125.56257,51.05533],[-125.50731,50.93919],[-125.55968,50.86563],[-125.64542,50.85493],[-125.60814,50.78091],[-125.70564,50.68171],[-126.27725,50.62588],[-126.16031,50.59772],[-125.95987,50.64558],[-125.95812,50.61831],[-126.17886,50.57551],[-126.17886,50.52025],[-126.22777,50.54434],[-126.28063,50.51944],[-126.00772,50.4715],[-125.78722,50.53164],[-125.74006,50.52025],[-125.79528,50.49356],[-125.70328,50.43793],[-125.61775,50.47126],[-125.55557,50.6662],[-125.45458,50.72036],[-125.42471,50.71332],[-125.51744,50.65078],[-125.54125,50.50625],[-125.57706,50.47069],[-125.43224,50.46605],[-125.35668,50.54312],[-125.32543,50.4737],[-125.25573,50.50666],[-125.19689,50.42056],[-125.12784,50.437],[-125.10216,50.49893],[-124.90819,50.62739],[-124.90001,50.73526],[-124.98648,50.80825],[-124.86059,50.92744],[-124.81383,50.92719],[-124.78726,50.88459],[-124.91047,50.79361],[-124.82364,50.73452],[-124.86986,50.58295],[-124.97045,50.50088],[-125.05744,50.47728],[-125.08153,50.32469],[-124.99519,50.3603],[-125.00699,50.43212],[-124.95214,50.39179],[-124.95177,50.32844],[-124.83015,50.31761],[-124.67199,50.43085],[-124.50426,50.43846],[-124.3485,50.49726],[-124.53405,50.39737],[-124.65982,50.39208],[-124.71345,50.33137],[-124.60294,50.2403],[-124.62833,50.16938],[-124.70539,50.10318],[-124.67186,50.08271],[-124.70446,50.04096],[-124.68488,49.98648],[-124.82038,50.07148],[-124.76439,49.97736],[-124.58312,49.88247],[-124.51325,49.79751],[-124.28303,49.74657],[-124.274,49.77416],[-124.08161,49.8083],[-124.03746,49.92499],[-124.00113,49.81184],[-123.93822,49.8288],[-123.91088,49.86978],[-123.989,49.93378],[-123.99315,50.01081],[-123.80785,50.10318],[-123.99348,50.21979],[-123.82836,50.15839],[-123.75455,50.09374],[-123.9536,49.98969],[-123.88362,49.90111],[-123.9276,49.76362],[-123.79454,49.64403],[-123.53352,49.70527],[-123.58975,49.65363],[-123.76008,49.60969],[-123.77709,49.50532],[-123.86925,49.67178],[-123.93928,49.7436],[-124.00609,49.74079],[-124.06607,49.64403],[-123.97545,49.53091],[-123.88557,49.47728],[-123.51618,49.39167],[-123.47321,49.43452],[-123.50267,49.50544],[-123.25642,49.593],[-123.24743,49.65827],[-123.17101,49.70527],[-123.25113,49.52285],[-123.24547,49.41108],[-123.29394,49.3701],[-123.27001,49.33535],[-122.93814,49.32583],[-122.87829,49.45734],[-122.8557,49.4418],[-122.89249,49.33369],[-122.96085,49.28189],[-123.13854,49.30903],[-123.14306,49.2801],[-123.2469,49.27464],[-123.1376,49.1957],[-123.19831,49.20563],[-123.21198,49.12995],[-123.1234,49.11587],[-123.04068,49.15103],[-123.14297,49.06094],[-123.09242,49.0],[-123.03467,49.0],[-123.03283,49.0506],[-122.90661,49.08832],[-122.86775,49.08047],[-122.85302,49.01703],[-114.16355,49.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haida-gwaii-colonial-jurisdiction-1853-1857",
+      "properties": {
+        "name": "海达瓜伊群岛 · 英国设立副总督职务",
+        "stable_id": "haida-gwaii-colonial-jurisdiction",
+        "start_year": 1853,
+        "end_year": 1857,
+        "display_kind": "administrative",
+        "label_type": "英国殖民管辖主张",
+        "summary_zh": "1852年7月9日，英国授予道格拉斯群岛副总督委任。1853年，道格拉斯向殖民部确认收到委任，并报告采矿许可的安排。海达各氏族继续按自身制度管理土地和海域。",
+        "source_ids": [
+          "19CT3-CA-HAIDA-COMMISSION",
+          "19CT3-CA-HAIDA-LAAS",
+          "19CT3-CA-HAIDA-GOVERNANCE",
+          "19CT3-CA-MAP-1867",
+          "19CT3-CA-ATLAS-LICENSE",
+          "19CT3-CA-OGL"
+        ],
+        "source_urls": [
+          "https://bcgenesis.uvic.ca/V53004.html",
+          "https://www.haidanation.ca/wp-content/uploads/2017/03/jl_mar.09.pdf",
+          "https://www.haidanation.ca/wp-content/uploads/2018/11/Gwaii-Haanas-LSP-Plan-2018_EN_lowres.pdf",
+          "https://geoappext.nrcan.gc.ca/arcgis/rest/services/FGP/TE/MapServer/8",
+          "https://open.canada.ca/data/dataset/cb568551-8893-11e0-a3fc-6cf049291510",
+          "https://open.canada.ca/en/open-government-licence-canada/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "natural_resources_canada_historical_atlas_digitized_polygon_simplified",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false,
+        "source_snapshot_year": 1867
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[-132.45,53.56],[-132.13,53.71],[-132.08,53.89],[-132.16,54.02],[-131.83,54.05],[-131.68,54.14],[-131.95,53.27],[-132.31,53.21],[-132.17,53.15],[-132.43,53.14],[-132.71,53.25],[-132.56,53.31],[-132.74,53.35],[-132.42,53.33],[-132.98,53.56],[-132.86,53.57],[-133.15,53.87],[-133.05,54.16],[-132.63,54.12],[-132.65,53.94],[-132.36,54.08],[-132.21,54.02],[-132.14,53.84],[-132.63,53.67],[-132.4,53.64],[-132.45,53.56]]],[[[-131.18,52.3],[-131.01,52.19],[-131.15,52.1],[-131.24,52.2],[-131.24,52.11],[-131.38,52.18],[-131.59,52.35],[-131.53,52.4],[-132.08,52.71],[-131.94,52.74],[-132.07,52.84],[-132.12,52.74],[-132.25,52.81],[-132.34,52.92],[-132.14,52.98],[-132.51,53.05],[-131.8,53.23],[-131.62,53.03],[-131.95,53.03],[-131.86,52.79],[-131.73,52.77],[-131.8,52.7],[-131.35,52.29],[-131.24,52.24],[-131.18,52.3]]],[[[-133.04,54.2],[-133.04,54.24],[-132.95,54.23],[-133.04,54.2]]],[[[-131.67,52.87],[-131.81,52.87],[-131.91,53.02],[-131.65,52.96],[-131.67,52.87]]],[[[-131.46,52.6],[-131.6,52.58],[-131.7,52.7],[-131.46,52.7],[-131.46,52.6]]],[[[-131.28,52.32],[-131.35,52.39],[-131.3,52.41],[-131.25,52.4],[-131.28,52.32]]],[[[-131.04,51.94],[-131.12,52.08],[-131.07,52.13],[-130.97,52.07],[-131.04,51.94]]],[[[-132.52,53.09],[-132.6,53.14],[-132.43,53.12],[-132.52,53.09]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haida-gwaii-colonial-jurisdiction-1858-1862",
+      "properties": {
+        "name": "海达瓜伊群岛 · 1858年英国立法",
+        "stable_id": "haida-gwaii-colonial-jurisdiction",
+        "start_year": 1858,
+        "end_year": 1862,
+        "display_kind": "administrative",
+        "label_type": "英国殖民管辖主张",
+        "summary_zh": "1858年8月2日，英国议会在《不列颠哥伦比亚政府法》中把海达瓜伊列入新设殖民地的法定范围。法条称其为夏洛特女王岛。海达各氏族继续管理土地和海域。",
+        "source_ids": [
+          "19CT3-CA-BC-1858",
+          "19CT3-CA-BC-ARROWSMITH",
+          "19CT3-CA-HAIDA-LAAS",
+          "19CT3-CA-HAIDA-GOVERNANCE",
+          "19CT3-CA-MAP-1867",
+          "19CT3-CA-ATLAS-LICENSE",
+          "19CT3-CA-OGL"
+        ],
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Vict/21-22/99/pdfs/ukpga_18580099_en.pdf",
+          "https://bcgenesis.uvic.ca/mpg_1-646_bc_and_vi_arrowsmith_1859.html",
+          "https://www.haidanation.ca/wp-content/uploads/2017/03/jl_mar.09.pdf",
+          "https://www.haidanation.ca/wp-content/uploads/2018/11/Gwaii-Haanas-LSP-Plan-2018_EN_lowres.pdf",
+          "https://geoappext.nrcan.gc.ca/arcgis/rest/services/FGP/TE/MapServer/8",
+          "https://open.canada.ca/data/dataset/cb568551-8893-11e0-a3fc-6cf049291510",
+          "https://open.canada.ca/en/open-government-licence-canada/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "natural_resources_canada_historical_atlas_digitized_polygon_simplified",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false,
+        "source_snapshot_year": 1867
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[-132.45,53.56],[-132.13,53.71],[-132.08,53.89],[-132.16,54.02],[-131.83,54.05],[-131.68,54.14],[-131.95,53.27],[-132.31,53.21],[-132.17,53.15],[-132.43,53.14],[-132.71,53.25],[-132.56,53.31],[-132.74,53.35],[-132.42,53.33],[-132.98,53.56],[-132.86,53.57],[-133.15,53.87],[-133.05,54.16],[-132.63,54.12],[-132.65,53.94],[-132.36,54.08],[-132.21,54.02],[-132.14,53.84],[-132.63,53.67],[-132.4,53.64],[-132.45,53.56]]],[[[-131.18,52.3],[-131.01,52.19],[-131.15,52.1],[-131.24,52.2],[-131.24,52.11],[-131.38,52.18],[-131.59,52.35],[-131.53,52.4],[-132.08,52.71],[-131.94,52.74],[-132.07,52.84],[-132.12,52.74],[-132.25,52.81],[-132.34,52.92],[-132.14,52.98],[-132.51,53.05],[-131.8,53.23],[-131.62,53.03],[-131.95,53.03],[-131.86,52.79],[-131.73,52.77],[-131.8,52.7],[-131.35,52.29],[-131.24,52.24],[-131.18,52.3]]],[[[-133.04,54.2],[-133.04,54.24],[-132.95,54.23],[-133.04,54.2]]],[[[-131.67,52.87],[-131.81,52.87],[-131.91,53.02],[-131.65,52.96],[-131.67,52.87]]],[[[-131.46,52.6],[-131.6,52.58],[-131.7,52.7],[-131.46,52.7],[-131.46,52.6]]],[[[-131.28,52.32],[-131.35,52.39],[-131.3,52.41],[-131.25,52.4],[-131.28,52.32]]],[[[-131.04,51.94],[-131.12,52.08],[-131.07,52.13],[-130.97,52.07],[-131.04,51.94]]],[[[-132.52,53.09],[-132.6,53.14],[-132.43,53.12],[-132.52,53.09]]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haida-gwaii-colonial-jurisdiction-1863-1865",
+      "properties": {
+        "name": "海达瓜伊群岛 · 1863年英国改界",
+        "stable_id": "haida-gwaii-colonial-jurisdiction",
+        "start_year": 1863,
+        "end_year": 1865,
+        "display_kind": "administrative",
+        "label_type": "英国殖民管辖主张",
+        "summary_zh": "1863年7月28日，英国议会向北扩展不列颠哥伦比亚殖民地的法定范围，新法继续列明海达瓜伊群岛。海达各氏族继续管理土地和海域。",
+        "source_ids": [
+          "19CT3-CA-BC-1863-STATUTE",
+          "19CT3-CA-BC-ARROWSMITH",
+          "19CT3-CA-HAIDA-LAAS",
+          "19CT3-CA-HAIDA-GOVERNANCE",
+          "19CT3-CA-MAP-1867",
+          "19CT3-CA-ATLAS-LICENSE",
+          "19CT3-CA-OGL"
+        ],
+        "source_urls": [
+          "https://www.legislation.gov.uk/ukpga/Vict/26-27/83/pdfs/ukpga_18630083_en.pdf",
+          "https://bcgenesis.uvic.ca/mpg_1-646_bc_and_vi_arrowsmith_1859.html",
+          "https://www.haidanation.ca/wp-content/uploads/2017/03/jl_mar.09.pdf",
+          "https://www.haidanation.ca/wp-content/uploads/2018/11/Gwaii-Haanas-LSP-Plan-2018_EN_lowres.pdf",
+          "https://geoappext.nrcan.gc.ca/arcgis/rest/services/FGP/TE/MapServer/8",
+          "https://open.canada.ca/data/dataset/cb568551-8893-11e0-a3fc-6cf049291510",
+          "https://open.canada.ca/en/open-government-licence-canada/"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "natural_resources_canada_historical_atlas_digitized_polygon_simplified",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "dash_only": true,
+        "territorial_claim": false,
+        "source_snapshot_year": 1867
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [[[[-132.45,53.56],[-132.13,53.71],[-132.08,53.89],[-132.16,54.02],[-131.83,54.05],[-131.68,54.14],[-131.95,53.27],[-132.31,53.21],[-132.17,53.15],[-132.43,53.14],[-132.71,53.25],[-132.56,53.31],[-132.74,53.35],[-132.42,53.33],[-132.98,53.56],[-132.86,53.57],[-133.15,53.87],[-133.05,54.16],[-132.63,54.12],[-132.65,53.94],[-132.36,54.08],[-132.21,54.02],[-132.14,53.84],[-132.63,53.67],[-132.4,53.64],[-132.45,53.56]]],[[[-131.18,52.3],[-131.01,52.19],[-131.15,52.1],[-131.24,52.2],[-131.24,52.11],[-131.38,52.18],[-131.59,52.35],[-131.53,52.4],[-132.08,52.71],[-131.94,52.74],[-132.07,52.84],[-132.12,52.74],[-132.25,52.81],[-132.34,52.92],[-132.14,52.98],[-132.51,53.05],[-131.8,53.23],[-131.62,53.03],[-131.95,53.03],[-131.86,52.79],[-131.73,52.77],[-131.8,52.7],[-131.35,52.29],[-131.24,52.24],[-131.18,52.3]]],[[[-133.04,54.2],[-133.04,54.24],[-132.95,54.23],[-133.04,54.2]]],[[[-131.67,52.87],[-131.81,52.87],[-131.91,53.02],[-131.65,52.96],[-131.67,52.87]]],[[[-131.46,52.6],[-131.6,52.58],[-131.7,52.7],[-131.46,52.7],[-131.46,52.6]]],[[[-131.28,52.32],[-131.35,52.39],[-131.3,52.41],[-131.25,52.4],[-131.28,52.32]]],[[[-131.04,51.94],[-131.12,52.08],[-131.07,52.13],[-130.97,52.07],[-131.04,51.94]]],[[[-132.52,53.09],[-132.6,53.14],[-132.43,53.12],[-132.52,53.09]]]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "schema": "territory-transition-v2",
+  "stage": "research_draft",
+  "template_only": false,
+  "scope": "第三批19世纪新增区域；记录1899年末现状并交接1900年。",
+  "period": {
+    "previous_from": 1890,
+    "previous_to": 1899,
+    "next_from": 1900,
+    "next_to": 1909
+  },
+  "previous_snapshot": {
+    "year": 1899,
+    "source_file": "data/nineteenth-century-territorial-areas-batch3.geojson",
+    "active_stable_ids": [
+      "hong-kong-main-island",
+      "kowloon-south-peninsula",
+      "stonecutters-island",
+      "lantau-new-territories",
+      "lamma-new-territories",
+      "singapore-main-island",
+      "penang-main-island",
+      "chatham-islands-rekohu",
+      "kermadec-islands",
+      "rotuma-main-island",
+      "gilbert-islands",
+      "ellice-islands",
+      "british-columbia-polity"
+    ],
+    "other_source_files": [
+      "data/nineteenth-century-territorial-areas-batch2.geojson"
+    ]
+  },
+  "records": [
+    {
+      "stable_id": "hong-kong-main-island",
+      "name_zh": "香港岛 · 王室殖民行政",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-HK-CROWN",
+        "19CT3-HK-NANKING",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "hong-kong-island-1843-crown"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "kowloon-south-peninsula",
+      "name_zh": "九龙半岛南部 · 并入香港殖民地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-HK-GRS1860",
+        "19CT3-HK-PEKING",
+        "19CT3-HK-HKUBOUND",
+        "19CT3-HK-TSIM",
+        "19CT3-HK-KOWLAW"
+      ],
+      "geography": {
+        "feature_ids": [
+          "kowloon-south-1861-hong-kong"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "stonecutters-island",
+      "name_zh": "昂船洲 · 香港殖民行政",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-HK-GRS1860",
+        "19CT3-HK-PEKING",
+        "19CT3-HK-KOWLAW"
+      ],
+      "geography": {
+        "feature_ids": [
+          "stonecutters-1861-hong-kong"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "lantau-new-territories",
+      "name_zh": "大屿山 · 新界租借",
+      "transition": "continued",
+      "evidence_scope": "条约租借地",
+      "source_ids": [
+        "19CT3-HK-GRS1898",
+        "19CT3-HK-ANNEX1",
+        "19CT3-HK-1899",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "lantau-1898-new-territories-lease"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "lamma-new-territories",
+      "name_zh": "南丫岛 · 新界租借",
+      "transition": "continued",
+      "evidence_scope": "条约租借地",
+      "source_ids": [
+        "19CT3-HK-GRS1898",
+        "19CT3-HK-ANNEX1",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "lamma-1898-new-territories-lease"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "singapore-main-island",
+      "name_zh": "新加坡岛 · 海峡殖民地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-STRAITS",
+        "19CT3-SG-ICJ",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "singapore-1867-straits-crown"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "penang-main-island",
+      "name_zh": "槟榔屿 · 海峡殖民地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-STRAITS",
+        "19CT3-SG-ICJ",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "penang-1867-straits-crown"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "chatham-islands-rekohu",
+      "name_zh": "查塔姆群岛（雷科胡） · 原住民土地法院裁决",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-MOR-COURT",
+        "19CT3-MOR-DEED",
+        "19CT3-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "chatham-1870-land-court"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "kermadec-islands",
+      "name_zh": "克马德克群岛 · 并入新西兰殖民地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-KER-1887",
+        "19CT3-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "kermadec-1887-annexation"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "rotuma-main-island",
+      "name_zh": "罗图马岛 · 斐济殖民地属地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-ROT-GAZ",
+        "19CT3-ROT-1881",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "rotuma-1881-fiji-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "gilbert-islands",
+      "name_zh": "吉尔伯特群岛 · 英国保护地",
+      "transition": "continued",
+      "evidence_scope": "英国保护地",
+      "source_ids": [
+        "19CT3-PAC-1892",
+        "19CT3-PAC-HANS",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "gilbert-1892-protectorate"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "ellice-islands",
+      "name_zh": "埃利斯群岛 · 英国保护地",
+      "transition": "continued",
+      "evidence_scope": "英国保护地",
+      "source_ids": [
+        "19CT3-PAC-1892",
+        "19CT3-PAC-HANS",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "ellice-1892-protectorate"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "相关制度延至1900年。地图跨世纪承接及1900年地理档案待复核。"
+    },
+    {
+      "stable_id": "haida-gwaii-colonial-jurisdiction",
+      "name_zh": "海达瓜伊群岛",
+      "transition": "transferred",
+      "evidence_scope": "1866年并入联合殖民地图层，1871年由联邦省图层承接。",
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT3-CA-HAIDA-GOVERNANCE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "british-columbia-1871-province"
+        ],
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "海达氏族管辖另见来源。"
+    },
+    {
+      "stable_id": "british-columbia-polity",
+      "name_zh": "不列颠哥伦比亚",
+      "transition": "continued",
+      "evidence_scope": "1871年加入加拿大联邦后的省级行政。",
+      "source_ids": [
+        "19CT2-CA-MAP-1871",
+        "19CT2-CA-BC-1871",
+        "19CT2-CA-HIST",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "british-columbia-1871-province"
+        ],
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1900年图层接续待核。"
+    }
+  ],
+  "new_entities": [],
+  "cartography": {
+    "geojson_files": [
+      "data/nineteenth-century-territorial-areas-batch3.geojson",
+      "data/nineteenth-century-territorial-areas-batch2.geojson"
+    ],
+    "verified_new_or_changed_control_polygons": 0,
+    "open_spatial_questions": [
+      "1900—1909年范围须分年复核。",
+      "核对已并入前批区域图形的海达瓜伊及不列颠哥伦比亚跨世纪承接。"
+    ]
+  },
+  "editorial": {
+    "source_registry_file": "data/nineteenth-century-territorial-areas-batch3.geojson",
+    "handoff_file": "docs/research/EDITOR30_19C_TERRITORY_THIRD_20261117.md"
+  }
+}
