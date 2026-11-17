@@ -41,6 +41,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    await page.locator('.major-story-article[data-story-id="'+id+'"]').waitFor();
   };
   const audit=()=>page.evaluate(()=>window.historicOverlapDossier.getAudit());
+  const chapterAreaDashes=()=>page.evaluate(()=>window.__historicOverlapHost.visibleAreaFeatures()
+   .filter(row=>row.group==='nineteenthAreas'&&!row.feature.properties.source_ids.some(id=>id.startsWith('19CT-')))
+   .map(row=>row.layer._path.getAttribute('stroke-dasharray')));
   const assertClean=async()=>{
    const found=await page.evaluate(()=>{
     const guard=window.AtlasPublicCopyGuard;
@@ -91,7 +94,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await selected(),'E19-CAP-1806-BLAAUWBERG');
   await page.locator('#resetDossier').click();
   await jump(1819);
-  assert.equal((await audit()).liveAreas,2);
+  assert.equal((await chapterAreaDashes()).length,2);
   await page.evaluate(()=>window.__historicOverlapHost.map.setView([-33.3,26.9],8,{animate:false}));
   const clickAt=async(lat,lon)=>{
    const p=await page.evaluate(([lat,lon])=>{const m=window.__historicOverlapHost.map,r=m.getContainer().getBoundingClientRect(),p=m.latLngToContainerPoint([lat,lon]);return [p.x+r.left,p.y+r.top]},[lat,lon]);
@@ -102,8 +105,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await west.waitFor();
   await west.hover();
   assert.equal((await audit()).focused,'nineteenthAreas:cape-zuurveld');
-  const marks=await page.locator('.atlas-19c-area').evaluateAll(els=>els.map(e=>e.getAttribute('stroke-dasharray')));
-  assert.deepEqual(marks,['7 6','7 6']);
+  assert.deepEqual(await chapterAreaDashes(),['7 6','7 6']);
   await clickAt(-33.32,27.26);
   const east=page.locator('[data-historic-overlap-id="nineteenthAreas:cape-keiskamma-lower-neutral-belt"]');
   await east.waitFor();
@@ -117,7 +119,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await page.locator('#mapLayerTerritory').check();
   await page.locator('#mapLayerEvents').uncheck();
   assert.equal(await page.evaluate(()=>window.atlasDensityAudit().qualifiedRecords),0);
-  assert.equal(await page.locator('.atlas-19c-area').count(),2);
+  assert.equal((await chapterAreaDashes()).length,2);
   await page.locator('#mapLayerEvents').check();
   await page.locator('#resetDossier').click();
   await jump(1815);
@@ -206,13 +208,13 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   const rangoonRing=()=>page.evaluate(()=>{
    const m=window.__historicOverlapHost.map,r=m.getContainer().getBoundingClientRect();
    const p=m.latLngToContainerPoint([16.80528,96.15611]);
-   return document.elementFromPoint(p.x+r.left+21,p.y+r.top)?.getAttribute('stroke');
+   return document.elementFromPoint(p.x+r.left+9,p.y+r.top)?.getAttribute('stroke');
   });
   assert.equal(await rangoonRing(),'#c5a6f5');
   await jump(1827);
   assert.equal(await rangoonRing(),'#65c7b6');
   await jump(1820);
-  assert.equal((await audit()).liveAreas,2);
+  assert.equal((await chapterAreaDashes()).length,2);
   await page.evaluate(()=>window.__historicOverlapHost.map.setView([-33.3,26.9],8,{animate:false}));
   await clickAt(-33.46,26.64);
   await west.waitFor();
@@ -250,7 +252,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.equal(await selected(),entry);
   }
   await page.locator('#resetDossier').click();
-  const pointStroke=async (lat,lng,radius=21)=>{
+  const pointStroke=async (lat,lng,radius=9)=>{
    await page.evaluate(([lat,lng])=>window.__historicOverlapHost.map.setView([lat,lng],10,{animate:false}),[lat,lng]);
    return page.evaluate(([lat,lng,radius])=>{
     const m=window.__historicOverlapHost.map;
@@ -280,9 +282,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await jump(1823);
   assert.equal(await pointStroke(26.64804,55.28701),'#c5a6f5');
   await jump(1827);
-  assert.equal((await audit()).liveAreas,2);
+  assert.equal((await chapterAreaDashes()).length,2);
   await jump(1828);
-  assert.equal((await audit()).liveAreas,3);
+  assert.equal((await chapterAreaDashes()).length,3);
   await page.evaluate(()=>window.__historicOverlapHost.map.setView([26.74,92.075],9,{animate:false}));
   await clickAt(26.70,92.086);
   const duar=page.locator('[data-historic-overlap-id="nineteenthAreas:assam-buri-guma-duar-occupation"]');
@@ -291,7 +293,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal((await audit()).focused,'nineteenthAreas:assam-buri-guma-duar-occupation');
   assert.match(await duar.textContent(),/布里古马/);
   await jump(1829);
-  assert.equal((await audit()).liveAreas,3);
+  assert.equal((await chapterAreaDashes()).length,3);
   for(let y=1820;y<=1829;y++){
    await jump(y);
    await assertClean();
@@ -361,7 +363,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await restoredDuar.waitFor();
   assert.match(await restoredDuar.textContent(),/不丹恢复管理/);
   assert.equal(await duar.count(),0);
-  assert.equal(await page.locator('.atlas-19c-area[stroke="#65c7b6"][stroke-dasharray="7 6"]').count(),1);
+  assert(await page.evaluate(()=>window.__historicOverlapHost.visibleAreaFeatures().some(row=>
+   row.feature.id==='assam-buri-guma-duar-restoration'&&row.layer._path.getAttribute('stroke')==='#65c7b6'&&
+   row.layer._path.getAttribute('stroke-dasharray')==='7 6')));
   await page.locator('#resetDossier').click();
   await jump(1838);
   assert.equal(await pointStroke(49.20667,-122.63472),'#65c7b6');
@@ -573,7 +577,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(5.38112,115.2487),undefined);
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-BRUNEI-LABUAN')));
   await jump(1848);
-  assert.equal(await pointStroke(5.27687,115.2454,29),'#c5a6f5');
+  assert.equal(await pointStroke(5.27687,115.2454,13),'#c5a6f5');
   assert.equal(await pointStroke(5.38112,115.2487),'#c5a6f5');
   assert.equal(await pointStroke(4.8842,114.94447),'#65c7b6');
   await jump(1849);
@@ -630,7 +634,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   const hongKong=await page.evaluate(()=>{
    const map=window.__historicOverlapHost.map,bounds=map.getContainer().getBoundingClientRect();
    const point=map.latLngToContainerPoint([22.28606,114.14767]);
-   return [point.x+bounds.left+21,point.y+bounds.top];
+   return [point.x+bounds.left+9,point.y+bounds.top];
   });
   await page.mouse.click(...hongKong);
   await page.locator('#dossierBody h2').filter({hasText:'英国殖民政府'}).waitFor();
@@ -689,7 +693,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   const ruaMarker=await page.evaluate(([lat,lon])=>{
    const map=window.__historicOverlapHost.map,b=map.getContainer().getBoundingClientRect();
    const p=map.latLngToContainerPoint([lat,lon]);
-   return [p.x+b.left+29,p.y+b.top];
+   return [p.x+b.left+13,p.y+b.top];
   },ruaPosition);
   await page.mouse.click(...ruaMarker);
   const ruaArea=page.locator('[data-historic-overlap-id="nineteenthAreas:nz-ruapekapeka-pa"]');
