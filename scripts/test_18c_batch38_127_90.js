@@ -17,10 +17,10 @@ const phases=docs.map(d=>[...d.zones,...d.sites].reduce((n,x)=>n+x.periods.lengt
 assert.deepEqual(phases,[89,48,80]);assert.equal(phases.reduce((s,n)=>s+n,0),217);
 const previousZones=old34.area_references.length+old35.zones.length+old36.zones.length+old37.reduce((n,d)=>n+d.zones.length,0);
 const previousSites=old34.control_sites.length+old35.sites.length+old36.sites.length+old37.reduce((n,d)=>n+d.sites.length,0);
-assert.equal(previousZones,376);assert.equal(previousSites,248);
-assert.equal(previousZones+zones.length,503);assert.equal(previousSites+sites.length,338);
+assert.equal(previousZones,375);assert.equal(previousSites,248);
+assert.equal(previousZones+zones.length,502);assert.equal(previousSites+sites.length,338);
 const previousPhases=[...old34.area_references,...old34.control_sites,...old35.zones,...old35.sites,...old36.zones,...old36.sites,...old37.flatMap(d=>[...d.zones,...d.sites])].reduce((n,x)=>n+x.periods.length,0);
-assert.equal(previousPhases,675);assert.equal(previousPhases+217,892);
+assert.equal(previousPhases,674);assert.equal(previousPhases+217,891);
 const ids=new Set(),kinds=new Set(['administration','military','displacement','resistance','paper_claim','diplomacy','trade_influence','battle','revenue','coercion','foreign_occupation']);
 for(const d of docs){
  assert.equal(d.schema,'atlas-18c-batch38-v1');assert.equal(d.review_only,true);

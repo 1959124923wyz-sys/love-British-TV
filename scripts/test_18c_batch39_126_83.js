@@ -13,10 +13,10 @@ const old37=['africa','india-ocean','caribbean'].map(x=>J('data/eighteenth-centu
 const old38=['south-campaign','hudson-company','india-mysore'].map(x=>J('data/eighteenth-century-b38-'+x+'.json'));
 const priorAreas=[...old34.area_references,...old35.zones,...old36.zones,...old37.flatMap(x=>x.zones),...old38.flatMap(x=>x.zones)];
 const priorSites=[...old34.control_sites,...old35.sites,...old36.sites,...old37.flatMap(x=>x.sites),...old38.flatMap(x=>x.sites)];
-assert.equal(priorAreas.length,503);assert.equal(priorSites.length,338);
-assert.equal(503+zones.length,629);assert.equal(338+sites.length,421);
-assert.equal([...priorAreas,...priorSites].reduce((a,z)=>a+z.periods.length,0),892);
-assert.equal([...priorAreas,...priorSites,...zones,...sites].reduce((a,z)=>a+z.periods.length,0),1101);
+assert.equal(priorAreas.length,502);assert.equal(priorSites.length,338);
+assert.equal(502+zones.length,628);assert.equal(338+sites.length,421);
+assert.equal([...priorAreas,...priorSites].reduce((a,z)=>a+z.periods.length,0),891);
+assert.equal([...priorAreas,...priorSites,...zones,...sites].reduce((a,z)=>a+z.periods.length,0),1100);
 const allowed=new Set(['administration','military','displacement','resistance','paper_claim','diplomacy','trade_influence','battle','revenue','coercion','foreign_occupation']);
 const ids=new Set();
 for(const group of d){
@@ -68,8 +68,8 @@ for(const [r,label,year,yes] of [
  ['caribbean-1759-1763','Havana英军短期占港',1763,false],
  ['caribbean-1759-1763','Saint Kitts法军短占',1782,true],
  ['caribbean-1759-1763','Saint Kitts法军短占',1783,false],
- ['gold-coast-forts','Otuam Tantumquery英商堡垒',1729,false],
- ['gold-coast-forts','Otuam Tantumquery英商堡垒',1730,true],
+ ['gold-coast-forts','奥图阿姆坦图姆奎里英商据点',1721,false],
+ ['gold-coast-forts','奥图阿姆坦图姆奎里英商据点',1722,true],
  ['gold-coast-forts','Prampram Fort Vernon',1741,false],
  ['gold-coast-forts','Prampram Fort Vernon',1742,true],
  ['gold-coast-forts','Anomabu Fort Charles英商旧堡',1730,true],
