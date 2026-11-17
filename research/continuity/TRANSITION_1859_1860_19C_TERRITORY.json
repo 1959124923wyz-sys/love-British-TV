@@ -2,7 +2,7 @@
   "schema": "territory-transition-v2",
   "stage": "research_draft",
   "template_only": false,
-  "scope": "19世纪两批公开参考区域及章节已有Polygon/MultiPolygon，地点与路线保留在原数据。",
+  "scope": "19世纪三批公开参考区域及章节已有Polygon/MultiPolygon，地点与路线保留在原数据。",
   "period": {
     "previous_from": 1850,
     "previous_to": 1859,
@@ -45,11 +45,18 @@
       "cape-zuurveld",
       "cape-british-kaffraria-1847",
       "borneo-labuan-island",
-      "vancouver-island-1849-royal-grant"
+      "vancouver-island-1849-royal-grant",
+      "hong-kong-main-island",
+      "singapore-main-island",
+      "penang-main-island",
+      "chatham-islands-rekohu",
+      "british-columbia-polity",
+      "haida-gwaii-colonial-jurisdiction"
     ],
     "other_source_files": [
       "data/nineteenth-century-territorial-areas.geojson",
-      "data/nineteenth-century-territorial-areas-batch2.geojson"
+      "data/nineteenth-century-territorial-areas-batch2.geojson",
+      "data/nineteenth-century-territorial-areas-batch3.geojson"
     ]
   },
   "records": [
@@ -771,6 +778,133 @@
         "draw_mode": "dashed_reference"
       },
       "notes": "地图转看自治岛殖民地的省域；公司独占贸易执照1859年到期，王室土地等权利的交接另见旧档。"
+    },
+    {
+      "stable_id": "hong-kong-main-island",
+      "name_zh": "香港岛 · 王室殖民行政",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-HK-CROWN",
+        "19CT3-HK-NANKING",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "hong-kong-island-1843-crown"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859与1860年末均沿用此分期。"
+    },
+    {
+      "stable_id": "singapore-main-island",
+      "name_zh": "新加坡岛 · 海峡殖民地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-INDIA-1858",
+        "19CT3-SG-ICJ",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "singapore-1858-straits-india"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859与1860年末均沿用此分期。"
+    },
+    {
+      "stable_id": "penang-main-island",
+      "name_zh": "槟榔屿 · 海峡殖民地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-INDIA-1858",
+        "19CT3-SG-ICJ",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "penang-1858-straits-india"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859与1860年末均沿用此分期。"
+    },
+    {
+      "stable_id": "chatham-islands-rekohu",
+      "name_zh": "查塔姆群岛（雷科胡） · 驻地行政",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT3-MOR-DEED",
+        "19CT3-MOR-COURT",
+        "19CT3-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "chatham-1854-resident-magistrate"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859与1860年末均沿用此分期。"
+    },
+    {
+      "stable_id": "british-columbia-polity",
+      "name_zh": "不列颠哥伦比亚大陆 · 1858年设立殖民地",
+      "transition": "continued",
+      "evidence_scope": "英国殖民地",
+      "source_ids": [
+        "19CT3-CA-BC-1858",
+        "19CT3-CA-BC-PROCLAMATION",
+        "19CT3-CA-BC-ARROWSMITH",
+        "19CT3-CA-BC-RUMSEY",
+        "19CT3-CA-BC-NAME",
+        "19CT3-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "british-columbia-mainland-1858"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859与1860年末均沿用此分期。"
+    },
+    {
+      "stable_id": "haida-gwaii-colonial-jurisdiction",
+      "name_zh": "海达瓜伊群岛 · 1858年英国立法",
+      "transition": "continued",
+      "evidence_scope": "英国殖民管辖主张",
+      "source_ids": [
+        "19CT3-CA-BC-1858",
+        "19CT3-CA-BC-ARROWSMITH",
+        "19CT3-CA-HAIDA-LAAS",
+        "19CT3-CA-HAIDA-GOVERNANCE",
+        "19CT3-CA-MAP-1867",
+        "19CT3-CA-ATLAS-LICENSE",
+        "19CT3-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "haida-gwaii-colonial-jurisdiction-1858-1862"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859与1860年末均沿用此分期。"
     }
   ],
   "new_entities": [
@@ -785,24 +919,6 @@
       "geography": {
         "feature_ids": [
           "south-australia-northern-territory-1863"
-        ],
-        "draw_mode": "dashed_reference"
-      }
-    },
-    {
-      "stable_id": "british-columbia-polity",
-      "first_explicitly_mapped_year": 1863,
-      "source_ids": [
-        "19CT2-CA-MAP-1867",
-        "19CT2-CA-BC-1863",
-        "19CT2-CA-BC-STIKINE",
-        "19CT2-CA-BC-1866",
-        "19CT2-CA-ATLAS-LICENSE",
-        "19CT2-CA-OGL"
-      ],
-      "geography": {
-        "feature_ids": [
-          "british-columbia-mainland-1863-boundary"
         ],
         "draw_mode": "dashed_reference"
       }
@@ -840,6 +956,40 @@
         ],
         "draw_mode": "dashed_reference"
       }
+    },
+    {
+      "stable_id": "kowloon-south-peninsula",
+      "first_explicitly_mapped_year": 1860,
+      "source_ids": [
+        "19CT3-HK-GRS1860",
+        "19CT3-HK-PEKING",
+        "19CT3-HK-HKUBOUND",
+        "19CT3-HK-TSIM"
+      ],
+      "geography": {
+        "feature_ids": [
+          "kowloon-south-1860-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "stonecutters-island",
+      "first_explicitly_mapped_year": 1860,
+      "source_ids": [
+        "19CT3-HK-GRS1860",
+        "19CT3-HK-PEKING"
+      ],
+      "geography": {
+        "feature_ids": [
+          "stonecutters-1860-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      }
     }
   ],
   "annual_snapshots": [
@@ -875,7 +1025,15 @@
         "vancouver-island-separate-colony",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu",
+        "british-columbia-polity",
+        "haida-gwaii-colonial-jurisdiction"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -943,7 +1101,15 @@
         "vancouver-island-separate-colony",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu",
+        "british-columbia-polity",
+        "haida-gwaii-colonial-jurisdiction"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1011,7 +1177,15 @@
         "vancouver-island-separate-colony",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu",
+        "british-columbia-polity",
+        "haida-gwaii-colonial-jurisdiction"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1081,7 +1255,14 @@
         "british-columbia-polity",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu",
+        "haida-gwaii-colonial-jurisdiction"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1153,7 +1334,14 @@
         "british-columbia-polity",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu",
+        "haida-gwaii-colonial-jurisdiction"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1225,7 +1413,14 @@
         "british-columbia-polity",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu",
+        "haida-gwaii-colonial-jurisdiction"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1296,7 +1491,13 @@
         "british-columbia-polity",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1368,7 +1569,13 @@
         "british-columbia-polity",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1442,7 +1649,13 @@
         "british-columbia-polity",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1516,7 +1729,13 @@
         "british-columbia-polity",
         "newfoundland-island-polity",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "hong-kong-main-island",
+        "kowloon-south-peninsula",
+        "stonecutters-island",
+        "singapore-main-island",
+        "penang-main-island",
+        "chatham-islands-rekohu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1559,7 +1778,8 @@
   "cartography": {
     "geojson_files": [
       "data/nineteenth-century-territorial-areas.geojson",
-      "data/nineteenth-century-territorial-areas-batch2.geojson"
+      "data/nineteenth-century-territorial-areas-batch2.geojson",
+      "data/nineteenth-century-territorial-areas-batch3.geojson"
     ],
     "verified_new_or_changed_control_polygons": 0,
     "open_spatial_questions": [
@@ -1568,6 +1788,7 @@
   },
   "editorial": {
     "source_registry_file": "data/nineteenth-century-territorial-areas-batch2.geojson",
-    "handoff_file": "docs/research/EDITOR29_19C_TERRITORY_SECOND_20261117.md"
+    "handoff_file": "docs/research/EDITOR29_19C_TERRITORY_SECOND_20261117.md",
+    "additional_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_THIRD_20261117.md"
   }
 }

@@ -81,28 +81,48 @@ async function verify() {
    [1831, ['western-australia-commission-1831'], ['western-australia-1829-proclamation']],
    [1835, ['nsw-1825-westward'], ['south-australia-1836-province']],
    [1836, ['nsw-1836-south-australia', 'south-australia-1836-province'], ['nsw-1825-westward']],
+   [1840, [], ['hong-kong-island-1841-occupation', 'chatham-1842-annexation']],
+   [1841, ['hong-kong-island-1841-occupation'], ['hong-kong-island-1842-treaty']],
+   [1842, ['hong-kong-island-1842-treaty', 'chatham-1842-annexation'], ['hong-kong-island-1841-occupation']],
+   [1843, ['hong-kong-island-1843-crown'], ['hong-kong-island-1842-treaty']],
    [1850, ['nsw-1836-south-australia'], ['victoria-1851-mainland']],
    [1851, ['victoria-1851-mainland', 'nsw-1851-victoria'], ['nsw-1836-south-australia']],
-   [1859, ['queensland-1859-separation', 'borneo-labuan-island'], ['borneo-labuan-1860']],
-   [1860, ['borneo-labuan-1860', 'cape-kaffraria-1860'], ['borneo-labuan-island']],
-   [1861, ['south-australia-1861-southern'], ['south-australia-1836-province']],
+   [1857, ['haida-gwaii-colonial-jurisdiction-1853-1857', 'singapore-1826-straits-company'], ['british-columbia-mainland-1858']],
+   [1858, ['british-columbia-mainland-1858', 'haida-gwaii-colonial-jurisdiction-1858-1862', 'singapore-1858-straits-india'],
+    ['haida-gwaii-colonial-jurisdiction-1853-1857', 'singapore-1826-straits-company']],
+   [1859, ['queensland-1859-separation', 'borneo-labuan-island', 'british-columbia-mainland-1858'],
+    ['borneo-labuan-1860', 'kowloon-south-1860-cession', 'stonecutters-1860-cession']],
+   [1860, ['borneo-labuan-1860', 'cape-kaffraria-1860', 'kowloon-south-1860-cession', 'stonecutters-1860-cession'], ['borneo-labuan-island']],
+   [1861, ['south-australia-1861-southern', 'kowloon-south-1861-hong-kong', 'stonecutters-1861-hong-kong'],
+    ['south-australia-1836-province', 'kowloon-south-1860-cession', 'stonecutters-1860-cession']],
    [1862, ['queensland-1862-western-extension', 'nsw-1862-queensland-westward'], ['queensland-1859-separation']],
-   [1863, ['south-australia-northern-territory-1863', 'nsw-1863-northern-territory-transfer'], ['nsw-1862-queensland-westward']],
-   [1866, ['cape-kaffraria-1866', 'british-columbia-united-colony'], ['cape-kaffraria-1860', 'vancouver-island-separate-colony']],
+   [1863, ['south-australia-northern-territory-1863', 'nsw-1863-northern-territory-transfer', 'british-columbia-mainland-1863-boundary',
+    'haida-gwaii-colonial-jurisdiction-1863-1865'], ['nsw-1862-queensland-westward', 'british-columbia-mainland-1858']],
+   [1866, ['cape-kaffraria-1866', 'british-columbia-united-colony'], ['cape-kaffraria-1860', 'vancouver-island-separate-colony',
+    'haida-gwaii-colonial-jurisdiction-1863-1865']],
+   [1867, ['singapore-1867-straits-crown', 'penang-1867-straits-crown'], ['singapore-1858-straits-india', 'penang-1858-straits-india']],
+   [1870, ['chatham-1870-land-court'], ['chatham-1854-resident-magistrate']],
    [1871, ['british-columbia-1871-province'], ['british-columbia-united-colony']],
    [1877, ['canada-nwt-1876-era', 'keewatin-1876-phase'], [colony, 'cape-kaffraria-1866']],
    [1879, [colony, 'canada-nwt-1876-era'], ['canada-nwt-1880-arctic-transfer']],
-   [1881, ['manitoba-1881-expansion', 'manitoba-ontario-disputed-area'], ['manitoba-1870-postage-stamp']],
+   [1880, ['rotuma-1880-fiji-proclamation'], ['rotuma-1881-fiji-cession']],
+   [1881, ['manitoba-1881-expansion', 'manitoba-ontario-disputed-area', 'rotuma-1881-fiji-cession'],
+    ['manitoba-1870-postage-stamp', 'rotuma-1880-fiji-proclamation']],
    [1882, ['canada-nwt-1882-districting', 'saskatchewan-1882-district'], ['canada-nwt-1880-arctic-transfer']],
    [1884, [], ['mandalay-walled-city-garrison', 'png-1885-protectorate-delimitation']],
    [1885, ['mandalay-walled-city-garrison', 'png-1885-protectorate-delimitation'], ['png-1888-separate-possession']],
+   [1887, ['kermadec-1887-annexation'], []],
    [1888, ['png-1888-separate-possession'], ['png-1885-protectorate-delimitation']],
    [1889, ['manitoba-1889-confirmed', 'trinidad-tobago-1889-union', 'ontario-1889-boundary-act', 'canada-nwt-1889-ontario-boundary'],
     ['manitoba-ontario-disputed-area', 'trinidad-1802-cession', 'tobago-1814-cession', 'canada-nwt-1882-districting']],
    [1890, ['borneo-labuan-1890'], ['borneo-labuan-1860']],
+   [1891, [], ['gilbert-1892-protectorate', 'ellice-1892-protectorate']],
+   [1892, ['gilbert-1892-protectorate', 'ellice-1892-protectorate'], []],
    [1896, ['canada-nwt-1889-ontario-boundary'], ['yukon-1897-phase']],
-   [1897, ['yukon-1897-phase', 'franklin-1897-district'], ['canada-nwt-1889-ontario-boundary']],
-   [1898, ['yukon-1898-phase', 'quebec-1898-northern-boundary'], ['yukon-1897-phase', 'quebec-1867-founding-province']],
+   [1897, ['yukon-1897-phase', 'franklin-1897-district'], ['canada-nwt-1889-ontario-boundary', 'lantau-1898-new-territories-lease']],
+   [1898, ['yukon-1898-phase', 'quebec-1898-northern-boundary', 'hong-kong-island-1843-crown',
+    'kowloon-south-1861-hong-kong', 'lantau-1898-new-territories-lease', 'lamma-1898-new-territories-lease'],
+    ['yukon-1897-phase', 'quebec-1867-founding-province']],
    [1900, [], [colony, 'yukon-1898-phase']]
   ]) {
    await jump(year);
@@ -119,6 +139,20 @@ async function verify() {
   assert(await drawer.locator('a[href="https://www.foundingdocs.gov.au/item-sdid-51.html"]').isVisible());
   assert(await drawer.locator('[data-area-event="E19-QNP-1859-PATENT"]').isVisible());
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1880-queensland-dossier.png') });
+
+  await page.goto(root + '?year=1860', { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
+   window.atlasStoryBridge.currentYear() === 1860);
+  await page.locator('#mapLayerEvents').uncheck();
+  await page.evaluate(() => window.__historicOverlapHost.map.setView([22.317, 114.176], 12, { animate: false }));
+  assert(await page.evaluate(() => window.historicOverlapDossier.hitCountAt(22.316, 114.175)));
+  await clickAreaAt(22.316, 114.175);
+  await drawer.waitFor();
+  assert.match(await drawer.textContent(), /九龙半岛南部 · 《北京条约》割让/);
+  await drawer.locator('summary').click();
+  assert(await drawer.locator('a[href="https://www.grs.gov.hk/ws/rhk/en/1860s.html"]').isVisible());
+  assert(await drawer.locator('[data-area-event="E19-PEK-1860-KOWLOON"]').isVisible());
+  await page.screenshot({ path: join(screenshotDir, '19c-territory-1860-kowloon-dossier.png') });
 
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
