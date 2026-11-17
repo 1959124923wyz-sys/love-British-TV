@@ -4,6 +4,23 @@ const { chromium } = require('playwright');
 const root = process.env.ATLAS_TEST_URL || 'http://127.0.0.1:8765/';
 const topics = [
   {
+    id: 'E18-T26-GOLD-COAST-GOREE-1722-1783',
+    entry: 'E18C-419-1754-QUODJEBAH',
+    year: 1754,
+    other: 'E18C-419-1779-GOREE-REOCCUPATION',
+    otherYear: 1779,
+    archiveSource: '英国历史手稿委员会'
+  },
+  {
+    id: 'E18-T02-OLD-CALABAR-AFTERMATH-1767-1773',
+    entry: 'E18C-419-1769-EPHRAIM-LETTER',
+    year: 1769,
+    other: 'E18C-419-1773-CALABAR-SHELLING-LETTER',
+    otherYear: 1773,
+    archiveSource: '罗德岛历史学会',
+    unlocated: true
+  },
+  {
     id: 'E18-STATIA-CONFISCATION-1776-1786',
     entry: 'E18C-STATIA-1781-PETITION',
     year: 1781,
@@ -226,7 +243,8 @@ const topics = [
       await page.waitForFunction(event => window.atlasStoryBridge.selectedEventId() === event, topic.entry);
     }
     await visit('?review18c=1&year=1718');
-    await page.waitForFunction(() => window.eighteenthBatch37Spatial?.getAudit().loaded);
+    await page.waitForFunction(() => window.eighteenthBatch37Spatial?.getAudit().loaded &&
+      window.eighteenthBatch39Spatial?.getAudit().loaded);
     for (const [year, present] of [[1718,true],[1719,false],[1720,false],[1721,true],[1723,true]]) {
       await page.evaluate(year => window.atlasStoryBridge.setYear(year), year);
       await yearIs(year);
@@ -236,6 +254,17 @@ const topics = [
           window.eighteenthSpatial.getAudit().activeAreas.includes('BENCOOLEN')];
       });
       assert.deepEqual(state, [present,present,present], 'Bencoolen in ' + year);
+    }
+    for (const [year, present] of [[1721, false], [1722, true]]) {
+      await page.evaluate(year => window.atlasStoryBridge.setYear(year), year);
+      await yearIs(year);
+      const state = await page.evaluate(() => {
+        const africa = window.eighteenthBatch37Spatial.getAudit();
+        const coast = window.eighteenthBatch39Spatial.getAudit();
+        return [africa.activeZoneIds.includes('B37-A-Z009'), africa.activeSiteIds.includes('B37-A-P008'),
+          coast.activeZoneIds.includes('B39-A-Z001'), coast.activeSiteIds.includes('B39-A-P001')];
+      });
+      assert.deepEqual(state, [false, true, present, present], 'Gold Coast records in ' + year);
     }
     await visit('?year=1781');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-STATIA-1781-PETITION') === null));

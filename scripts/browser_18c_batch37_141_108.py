@@ -30,7 +30,7 @@ try:
  wait.until(lambda _:b37() and b37()['loaded'] and b36() and b36()['loaded'] and b35() and b35()['loaded'] and b34() and b34()['loaded'])
  wait.until(lambda _:js("return document.querySelector('#jumpYear')?.max==='1799'"))
  d=b37()
- assert (d['zoneCount'],d['siteCount'],d['phases'])==(141,108,259),d
+ assert (d['zoneCount'],d['siteCount'],d['phases'])==(140,108,258),d
  assert b34()['areaReferences']==24 and b35()['zoneCount']==81 and b36()['zoneCount']==130
  examples=[
   (1700,['海岸角Cape Coast英国','Fort Charles旧英国堡'],['Beyin Fort Apollonia','马德拉斯Fort St George法军占城'],'1700-forts'),
@@ -73,7 +73,7 @@ try:
  driver.get('http://127.0.0.1:8765/?year=1767')
  wait.until(lambda d:d.find_element(By.ID,'bigYear').text=='1699')
  assert not js('return Boolean(window.eighteenthBatch37Spatial)')
- print('PASS Batch37 real 1780x1020 Chrome: 141/108/259, 15 sample years, 3 datasets, dossier, integrated territory toggle, 1572 backward and non-preview isolation.')
+ print('PASS Batch37 real 1780x1020 Chrome: 140/108/258, 15 sample years, 3 datasets, dossier, integrated territory toggle, 1572 backward and non-preview isolation.')
 except Exception:
  snapshot('FAILED')
  raise

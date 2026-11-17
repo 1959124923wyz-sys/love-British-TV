@@ -70,3 +70,13 @@ for (const record of [inherited.find(r => r.id === 'BENCOOLEN'),
 assert.deepEqual(events.get('E18C-BENCOOLEN-1719-SIEGE').research_predecessor_event_ids,
   ['E18-BRIDGE-1719-BENCOOLEN-UPRISING']);
 console.log('PASS 18C Statia and Bencoolen: 28 events, 16 geocoded, 2 dashed connections, sources and 1719–1721 garrison transition');
+
+const westAfrica = read(dir + 'chronology-preview-west-africa-archive-followup-1722-1779.json');
+assert.equal(westAfrica.events.length, 10);
+assert.equal(westAfrica.events.filter(event => Number.isFinite(event.lat)).length, 6);
+for (const event of westAfrica.events) {
+  assert.equal(event.start_year, event.year, event.id);
+  assert.equal(event.end_year, event.year, event.id);
+}
+assert.equal(westAfrica.events.find(event => event.id === 'E18C-419-1769-DOBSON-ACCOUNTS').date_label, '1769—1770年');
+console.log('PASS West Africa supplement: all ten records use annual timeline anchors while preserving historical date ranges');
