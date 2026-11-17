@@ -72,6 +72,22 @@ const topics = [
     otherYear: 1825,
     crossCentury: true,
     archiveSource: '马六甲移交公告'
+  },
+  {
+    id: 'E18-C01-C05-ACADIA-RAIDS-BOUNTIES-1704-1752',
+    entry: 'E18C-ACR-1704-GRAND-PRE',
+    year: 1704,
+    other: 'E18C-ACR-1749-BOUNTY',
+    otherYear: 1749,
+    archiveSource: '新斯科舍省公文选编'
+  },
+  {
+    id: 'E18-A06-A07-JAMAICA-WHITEHALL-MANUMISSION-1760-1774',
+    entry: 'E18C-JWH-1765-WHITEHALL',
+    year: 1765,
+    other: 'E18C-JWH-1767-YORK-CUFFEE',
+    otherYear: 1767,
+    archiveSource: '1767年第9章'
   }
 ];
 
@@ -131,6 +147,7 @@ const topics = [
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-ISL-1784-AUCTION') === null));
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-WIR-1807-FREE') === null));
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-ML-1825-HANDOVER') === null));
+    assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-JWH-1765-WHITEHALL') === null));
     await visit('?review18c=1&year=1798');
     assert.equal(await page.locator('#jumpYear').getAttribute('max'), '1799');
     const wir = 'E18-A17-WEST-INDIA-REGIMENTS-1795-1807';
