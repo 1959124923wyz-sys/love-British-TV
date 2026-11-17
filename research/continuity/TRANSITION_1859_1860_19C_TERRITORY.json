@@ -2,7 +2,7 @@
   "schema": "territory-transition-v2",
   "stage": "research_draft",
   "template_only": false,
-  "scope": "19世纪三批公开参考区域及章节已有Polygon/MultiPolygon，地点与路线保留在原数据。",
+  "scope": "19世纪四批公开参考区域及章节已有Polygon/MultiPolygon，地点与路线保留在原数据。",
   "period": {
     "previous_from": 1850,
     "previous_to": 1859,
@@ -51,12 +51,15 @@
       "penang-main-island",
       "chatham-islands-rekohu",
       "british-columbia-polity",
-      "haida-gwaii-colonial-jurisdiction"
+      "haida-gwaii-colonial-jurisdiction",
+      "malacca-mainland",
+      "province-wellesley-mainland"
     ],
     "other_source_files": [
       "data/nineteenth-century-territorial-areas.geojson",
       "data/nineteenth-century-territorial-areas-batch2.geojson",
-      "data/nineteenth-century-territorial-areas-batch3.geojson"
+      "data/nineteenth-century-territorial-areas-batch3.geojson",
+      "data/nineteenth-century-territorial-areas-batch4.geojson"
     ]
   },
   "records": [
@@ -905,6 +908,50 @@
         "draw_mode": "dashed_reference"
       },
       "notes": "1859与1860年末均沿用此分期。"
+    },
+    {
+      "stable_id": "malacca-mainland",
+      "name_zh": "马六甲大陆 · 英属印度辖下的海峡殖民地",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT4-ML-1833",
+        "19CT4-ML-1839",
+        "19CT4-RAS1898-SCAN",
+        "19CT4-INDIA-1858",
+        "19CT4-STRAITS-ORDERS"
+      ],
+      "geography": {
+        "feature_ids": [
+          "malacca-mainland-1858-india"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      },
+      "notes": "1859及1860年末继续显示该区域。"
+    },
+    {
+      "stable_id": "province-wellesley-mainland",
+      "name_zh": "威省 · 1831年划界后的沿海地带",
+      "transition": "continued",
+      "evidence_scope": "殖民行政区",
+      "source_ids": [
+        "19CT4-WW-1831",
+        "19CT4-WW-TREATIES",
+        "19CT4-WW-1820",
+        "19CT4-WW-1853",
+        "19CT4-WW-1867"
+      ],
+      "geography": {
+        "feature_ids": [
+          "wellesley-core-1831"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      },
+      "notes": "1859及1860年末继续显示该区域。"
     }
   ],
   "new_entities": [
@@ -1033,7 +1080,9 @@
         "penang-main-island",
         "chatham-islands-rekohu",
         "british-columbia-polity",
-        "haida-gwaii-colonial-jurisdiction"
+        "haida-gwaii-colonial-jurisdiction",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1109,7 +1158,9 @@
         "penang-main-island",
         "chatham-islands-rekohu",
         "british-columbia-polity",
-        "haida-gwaii-colonial-jurisdiction"
+        "haida-gwaii-colonial-jurisdiction",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1185,7 +1236,9 @@
         "penang-main-island",
         "chatham-islands-rekohu",
         "british-columbia-polity",
-        "haida-gwaii-colonial-jurisdiction"
+        "haida-gwaii-colonial-jurisdiction",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1262,7 +1315,9 @@
         "singapore-main-island",
         "penang-main-island",
         "chatham-islands-rekohu",
-        "haida-gwaii-colonial-jurisdiction"
+        "haida-gwaii-colonial-jurisdiction",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1341,7 +1396,9 @@
         "singapore-main-island",
         "penang-main-island",
         "chatham-islands-rekohu",
-        "haida-gwaii-colonial-jurisdiction"
+        "haida-gwaii-colonial-jurisdiction",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1420,7 +1477,9 @@
         "singapore-main-island",
         "penang-main-island",
         "chatham-islands-rekohu",
-        "haida-gwaii-colonial-jurisdiction"
+        "haida-gwaii-colonial-jurisdiction",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1497,7 +1556,9 @@
         "stonecutters-island",
         "singapore-main-island",
         "penang-main-island",
-        "chatham-islands-rekohu"
+        "chatham-islands-rekohu",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1575,7 +1636,9 @@
         "stonecutters-island",
         "singapore-main-island",
         "penang-main-island",
-        "chatham-islands-rekohu"
+        "chatham-islands-rekohu",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1655,7 +1718,9 @@
         "stonecutters-island",
         "singapore-main-island",
         "penang-main-island",
-        "chatham-islands-rekohu"
+        "chatham-islands-rekohu",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1735,7 +1800,9 @@
         "stonecutters-island",
         "singapore-main-island",
         "penang-main-island",
-        "chatham-islands-rekohu"
+        "chatham-islands-rekohu",
+        "malacca-mainland",
+        "province-wellesley-mainland"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1779,7 +1846,8 @@
     "geojson_files": [
       "data/nineteenth-century-territorial-areas.geojson",
       "data/nineteenth-century-territorial-areas-batch2.geojson",
-      "data/nineteenth-century-territorial-areas-batch3.geojson"
+      "data/nineteenth-century-territorial-areas-batch3.geojson",
+      "data/nineteenth-century-territorial-areas-batch4.geojson"
     ],
     "verified_new_or_changed_control_polygons": 0,
     "open_spatial_questions": [
@@ -1789,6 +1857,7 @@
   "editorial": {
     "source_registry_file": "data/nineteenth-century-territorial-areas-batch2.geojson",
     "handoff_file": "docs/research/EDITOR29_19C_TERRITORY_SECOND_20261117.md",
-    "additional_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_THIRD_20261117.md"
+    "additional_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_THIRD_20261117.md",
+    "fourth_batch_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_FOURTH_20261117.md"
   }
 }
