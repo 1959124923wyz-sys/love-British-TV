@@ -73,6 +73,9 @@ async function verify() {
 
   for (const [year, present, absent] of [
    [1800, ['wellesley-cession-1800'], ['wellesley-core-1831', 'malacca-mainland-1833-settled']],
+   [1806, [], ['heligoland-1807-occupation']],
+   [1807, ['heligoland-1807-occupation'], ['heligoland-1814-british']],
+   [1814, ['heligoland-1814-british'], ['heligoland-1807-occupation']],
    [1819, ['cape-breton-separate-colony'], ['nova-scotia-1820-cape-breton-union']],
    [1820, ['nova-scotia-1820-cape-breton-union'], ['cape-breton-separate-colony']],
    [1824, ['nsw-1800-commission'], ['tasmania-1825-van-diemens-land']],
@@ -104,14 +107,24 @@ async function verify() {
    [1862, ['queensland-1862-western-extension', 'nsw-1862-queensland-westward'], ['queensland-1859-separation']],
    [1863, ['south-australia-northern-territory-1863', 'nsw-1863-northern-territory-transfer', 'british-columbia-mainland-1863-boundary',
     'haida-gwaii-colonial-jurisdiction-1863-1865'], ['nsw-1862-queensland-westward', 'british-columbia-mainland-1858']],
+   [1864, [], ['tauranga-proclaimed-1865', 'taranaki-waitara-south-1865', 'taranaki-ngatiruanui-coast-1865']],
+   [1865, ['tauranga-proclaimed-1865', 'taranaki-waitara-south-1865', 'taranaki-oakura-1865',
+    'taranaki-ngatiawa-coast-1865', 'taranaki-ngatiruanui-coast-1865'], ['tauranga-revised-1868']],
    [1866, ['cape-kaffraria-1866', 'british-columbia-united-colony'], ['cape-kaffraria-1860', 'vancouver-island-separate-colony',
     'haida-gwaii-colonial-jurisdiction-1863-1865']],
-   [1867, ['singapore-1867-straits-crown', 'penang-1867-straits-crown', 'malacca-mainland-1867-crown'],
-    ['singapore-1858-straits-india', 'penang-1858-straits-india', 'malacca-mainland-1858-india']],
-   [1868, ['wellesley-core-1831'], ['wellesley-redemarcation-1869']],
-   [1869, ['wellesley-redemarcation-1869'], ['wellesley-core-1831']],
-   [1870, ['chatham-1870-land-court'], ['chatham-1854-resident-magistrate']],
-   [1871, ['british-columbia-1871-province'], ['british-columbia-united-colony']],
+   [1867, ['singapore-1867-straits-crown', 'penang-1867-straits-crown', 'malacca-mainland-1867-crown',
+    'taranaki-ngatiruanui-coast-1867'],
+    ['singapore-1858-straits-india', 'penang-1858-straits-india', 'malacca-mainland-1858-india',
+     'taranaki-ngatiruanui-coast-1865']],
+   [1868, ['wellesley-core-1831', 'tauranga-revised-1868'],
+    ['wellesley-redemarcation-1869', 'tauranga-proclaimed-1865', 'tauranga-retained-confiscated-block',
+     'basutoland-aliwal-north-1869']],
+   [1869, ['wellesley-redemarcation-1869', 'tauranga-retained-confiscated-block', 'basutoland-aliwal-north-1869'],
+    ['wellesley-core-1831', 'basutoland-leribe-return-1870']],
+   [1870, ['chatham-1870-land-court', 'basutoland-leribe-return-1870'],
+    ['chatham-1854-resident-magistrate', 'basutoland-aliwal-north-1869']],
+   [1871, ['british-columbia-1871-province', 'basutoland-cape-annexation-1871'],
+    ['british-columbia-united-colony', 'basutoland-leribe-return-1870']],
    [1873, ['wellesley-redemarcation-1869'], ['wellesley-pangkor-1874', 'pangkor-islands-1874-straits']],
    [1874, ['wellesley-pangkor-1874', 'pangkor-islands-1874-straits'], ['wellesley-redemarcation-1869']],
    [1877, ['canada-nwt-1876-era', 'keewatin-1876-phase'], [colony, 'cape-kaffraria-1866']],
@@ -120,14 +133,18 @@ async function verify() {
    [1881, ['manitoba-1881-expansion', 'manitoba-ontario-disputed-area', 'rotuma-1881-fiji-cession'],
     ['manitoba-1870-postage-stamp', 'rotuma-1880-fiji-proclamation']],
    [1882, ['canada-nwt-1882-districting', 'saskatchewan-1882-district'], ['canada-nwt-1880-arctic-transfer']],
-   [1884, [], ['mandalay-walled-city-garrison', 'png-1885-protectorate-delimitation']],
+   [1884, ['basutoland-high-commission-1884'],
+    ['mandalay-walled-city-garrison', 'png-1885-protectorate-delimitation', 'basutoland-cape-annexation-1871']],
    [1885, ['mandalay-walled-city-garrison', 'png-1885-protectorate-delimitation'], ['png-1888-separate-possession']],
    [1887, ['kermadec-1887-annexation'], []],
    [1888, ['png-1888-separate-possession'], ['png-1885-protectorate-delimitation']],
-   [1889, ['manitoba-1889-confirmed', 'trinidad-tobago-1889-union', 'ontario-1889-boundary-act', 'canada-nwt-1889-ontario-boundary'],
-    ['manitoba-ontario-disputed-area', 'trinidad-1802-cession', 'tobago-1814-cession', 'canada-nwt-1882-districting']],
-   [1890, ['borneo-labuan-1890'], ['borneo-labuan-1860']],
-   [1891, [], ['gilbert-1892-protectorate', 'ellice-1892-protectorate']],
+   [1889, ['manitoba-1889-confirmed', 'trinidad-tobago-1889-union', 'ontario-1889-boundary-act', 'canada-nwt-1889-ontario-boundary', 'heligoland-1814-british'],
+    ['manitoba-ontario-disputed-area', 'trinidad-1802-cession', 'tobago-1814-cession', 'canada-nwt-1882-districting',
+     'zanzibar-unguja-1890-protectorate', 'zanzibar-pemba-1890-protectorate']],
+   [1890, ['borneo-labuan-1890', 'zanzibar-unguja-1890-protectorate', 'zanzibar-pemba-1890-protectorate'],
+    ['borneo-labuan-1860', 'heligoland-1814-british']],
+   [1891, ['basutoland-quaneka-marker-1891'],
+    ['gilbert-1892-protectorate', 'ellice-1892-protectorate', 'basutoland-high-commission-1884']],
    [1892, ['gilbert-1892-protectorate', 'ellice-1892-protectorate'], []],
    [1896, ['canada-nwt-1889-ontario-boundary'], ['yukon-1897-phase']],
    [1897, ['yukon-1897-phase', 'franklin-1897-district'], ['canada-nwt-1889-ontario-boundary',
@@ -184,6 +201,33 @@ async function verify() {
   await drawer.locator('summary').click();
   assert(await drawer.locator('a[href="https://cdn.nationalarchives.gov.uk/documents/hong-kong-and-the-opium-wars.pdf#page=16"]').isVisible());
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1899-new-territories-dossier.png') });
+
+  for (const [year, lat, lon, zoom, title, source, screenshot] of [
+   [1867, -39.5003, 174.1992, 9, /恩加蒂鲁阿努伊海岸 · 怀托塔拉以南撤销后/,
+    'https://forms.justice.govt.nz/search/Documents/WT/wt_DOC_68453721/Taranaki%201996.compressed.pdf#page=142', 'taranaki'],
+   [1868, -37.6809, 175.9530, 9, /陶朗加大陆 · 1868年重划没收区/,
+    'https://www.legislation.govt.nz/act/public/1868/35/en/1868-10-16/official_scan.pdf', 'tauranga'],
+   [1884, -29.6599, 28.1448, 7, /巴苏陀兰 · 英国高级专员管辖/,
+    'https://www.loc.gov/item/98681209/', 'basutoland'],
+   [1889, 54.1829, 7.8853, 13, /赫尔戈兰主岛 · 英国统治/,
+    'https://www.legislation.gov.uk/ukpga/Vict/53-54/32/pdfs/ukpga_18900032_en.pdf', 'heligoland'],
+   [1890, -5.16, 39.77, 9, /奔巴主岛 · 桑给巴尔苏丹辖下的英国保护地/,
+    'https://history.state.gov/historicaldocuments/frus1890/d292', 'pemba']
+  ]) {
+   await page.goto(root + '?year=' + year, { waitUntil: 'domcontentloaded' });
+   await page.waitForFunction(value => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
+    window.atlasStoryBridge.currentYear() === value, year);
+   await page.locator('#mapLayerEvents').uncheck();
+   await page.evaluate(([y, x, value]) =>
+    window.__historicOverlapHost.map.setView([y, x], value, { animate: false }), [lat, lon, zoom]);
+   await clickAreaAt(lat, lon);
+   await drawer.waitFor();
+   assert.match(await drawer.textContent(), title);
+   await drawer.locator('.atlas-18c-overlap-trigger', { hasText: title }).click();
+   await drawer.locator('summary').click();
+   assert(await drawer.locator('a[href="' + source + '"]').isVisible(), 'Missing archive link for ' + screenshot);
+   await page.screenshot({ path: join(screenshotDir, '19c-territory-' + year + '-' + screenshot + '-dossier.png') });
+  }
 
   await page.goto(root + '?year=1879', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
