@@ -1217,10 +1217,24 @@ function loadNineteenthTerritorialAreas(data){
  for(const source of sources)sourcesById.set(source.id,source);
  nineteenthSpatial.features=[...features,...nineteenthSpatial.features];
 }
+// Keep archival site markers on their own scale while territorial shapes stay visible.
+const nineteenthSiteMarkers=L.layerGroup();
+function syncNineteenthSiteVisibility(){
+ const group=groups.nineteenthAreas;
+ const local=window.AtlasDensityPolicy?.modeForZoom(map.getZoom())==='local';
+ if(local&&year>=1800&&year<1900&&$('toggleTerritorialFootprints').checked){
+  group.addLayer(nineteenthSiteMarkers);
+ }else{
+  group.removeLayer(nineteenthSiteMarkers);
+ }
+}
+
 function renderNineteenthSpatial(){
  const group=groups.nineteenthAreas;
  group.clearLayers();
+ nineteenthSiteMarkers.clearLayers();
  if(year<1800||!nineteenthSpatial||!$('toggleTerritorialFootprints').checked)return;
+ const localSiteStyle=year<1900;
  const colors={land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6',conflict:'#a5cdec',
   administrative:'#ba9ced',charter:'#d5ac70',military_impact:'#d5937d'};
  for(const feature of nineteenthSpatial.features){
@@ -1259,8 +1273,10 @@ function renderNineteenthSpatial(){
   }
   const [lon,lat]=feature.geometry.coordinates;
   L.circleMarker([lat,lon],{
-   pane:'controlAreaPane',renderer:wartimeRenderer,radius:p.opens_area_id?13:9,weight:1.8,fill:false,
-   dashArray:'5 3',color:stage?.controller==='british'?'#c5a6f5':p.display_kind==='conflict'?color:'#65c7b6',
+   pane:'controlAreaPane',renderer:wartimeRenderer,
+   radius:localSiteStyle?(p.opens_area_id?7:5):(p.opens_area_id?13:9),
+   weight:1.8,fill:localSiteStyle,fillOpacity:.45,
+   dashArray:localSiteStyle?'3 3':'5 3',color:stage?.controller==='british'?'#c5a6f5':p.display_kind==='conflict'?color:'#65c7b6',
    bubblingMouseEvents:false,className:'atlas-19c-site'
   }).bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
    pane:'eventTooltipPane',className:'atlas-hover',direction:'auto',offset:[12,0]
@@ -1268,8 +1284,9 @@ function renderNineteenthSpatial(){
    if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    if(p.opens_area_id&&window.historicOverlapDossier?.openAt?.(L.latLng(lat,lon),'site-marker',p.opens_area_id))return;
    openTerritoryDossier(site);
-  }).addTo(group);
+  }).addTo(localSiteStyle?nineteenthSiteMarkers:group);
  }
+ syncNineteenthSiteVisibility();
 }
 
 function renderSeventeenthSpatialEvidence(){
@@ -4206,6 +4223,7 @@ $('clearSeventeenthEventSearch').addEventListener('click',()=>{
  if(atlas)renderEventList();
  $('seventeenthEventSearch').focus();
 });
+map.on('zoomend',syncNineteenthSiteVisibility);
 map.on('zoomend',()=>{if(atlas){if(year>lastPublishedYear){renderPoints();renderSeventeenthSpatialEvidence();renderSeventeenthRegionalStudies();renderEighteenthAcadiaControlCores();renderEighteenthReviewEvidenceCores();return;}renderPoints();renderControlAreas();renderWartimeControls();renderSeventhControlSites();renderEighthControlSites();renderNinthControlSites();renderTenthControlSites();renderEleventhControlCores();renderEleventhInfluenceAreas();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEarlyRegionalImpactAreas();renderAtlanticContactSites()}});
 // Opening/closing dossier or sidebar changes the map viewport without changing zoom.
 map.on('resize',()=>{if(atlas)renderPoints()});
