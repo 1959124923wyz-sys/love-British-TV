@@ -84,8 +84,9 @@
   action.textContent='查看事件档案';
   anchor.insertAdjacentElement('afterend',action);
  }
- function renderInline(text,crossPreviewEventYears){
+ function renderInline(text){
   const regex=/\[\[([A-Za-z0-9-]+)\|([^\]\n]{1,90})\]\]/g;
+  const crossPreviewEventYears=storyCache.get(lastStoryId)?.cross_preview_event_years;
   let last=0,out='',match;
   while((match=regex.exec(text))){
    out+=esc(text.slice(last,match.index));
@@ -313,7 +314,7 @@
     relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+
     '<div class="story-body">'+article.sections.map(sec=>
      '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3 title="'+esc(sec.heading)+'">'+esc(sectionHeadline(sec.heading))+'</h3>'+
-      sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p),article.cross_preview_event_years)+'</p>').join('')+
+      sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p))+'</p>').join('')+
      '</section>').join('')+'</div>'+
     '<details class="story-sources"><summary>参考资料 · '+article.sources.length+'项 <span aria-hidden="true">▾</span></summary>'+
 
