@@ -1070,7 +1070,7 @@ function renderEighteenthAcadiaControlCores(){
  if(!$('toggleControlAreas').checked)return;
  for(const f of eighteenthAcadiaControlCores.features){
   const p=f.properties||{};
-  if(year<p.start_year||year>p.observed_through_year)continue;
+  if(p.superseded_by||year<p.start_year||year>p.observed_through_year)continue;
   const coords=f.geometry.coordinates;
   const stage=p.year_stages?.find(x=>year>=x.start_year&&year<=x.end_year);
   if(!stage)continue;
@@ -1104,7 +1104,7 @@ function renderEighteenthReviewEvidenceCores(){
  if(!preview18cReady||year<1700||year>=1800||!$('toggleControlAreas').checked)return;
  const visible=[];
  for(const f of continuity1700References?.features||[]){
-  if(year>=f.properties.start_year&&year<=f.properties.end_year)
+  if(!f.properties.superseded_by&&year>=f.properties.start_year&&year<=f.properties.end_year)
    visible.push({f,mode:'continuity',text:'驻军或商馆活动'});
  }
  for(const f of eighteenthBengalControlCores?.features||[]){

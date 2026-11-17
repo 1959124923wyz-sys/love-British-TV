@@ -49,7 +49,7 @@
   year=host.getYear();zonesLayer.clearLayers();pointsLayer.clearLayers();
   if(!loaded||year<1700||year>1799||!$('mapLayerTerritory').checked||
    !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
-  const items=meta.zones.filter(x=>active(x,year));
+  const items=meta.zones.filter(x=>!x.superseded_by&&active(x,year));
   const bboxArea=x=>(x.bbox[2]-x.bbox[0])*(x.bbox[3]-x.bbox[1]);
   items.sort((a,b)=>bboxArea(b)-bboxArea(a));
   for(const z of items){
@@ -67,7 +67,7 @@
   }
   const zoom=map.getZoom();
   for(const s of meta.sites){
-   if(!active(s,year))continue;
+   if(s.superseded_by||!active(s,year))continue;
    const c=colors[s.kind],p=period(s),isHollow=hollow.has(s.kind);
    L.circleMarker([s.coordinates[1],s.coordinates[0]],{
     pane:pointPane,renderer:pointRenderer,radius:zoom<5?4:6.5,weight:1.4,color:c,opacity:.95,

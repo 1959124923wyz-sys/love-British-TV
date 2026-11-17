@@ -48,7 +48,7 @@
   areaLayer.clearLayers();siteLayer.clearLayers();
   if(!loaded||year<1700||year>1799||!$('mapLayerTerritory').checked||
      !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
-  const sorted=areas.filter(x=>active(x,year)).sort((a,b)=>{
+  const sorted=areas.filter(x=>!x.superseded_by&&active(x,year)).sort((a,b)=>{
    const size=x=>(x.bbox[2]-x.bbox[0])*(x.bbox[3]-x.bbox[1]);
    return size(b)-size(a);
   });
@@ -67,7 +67,7 @@
     .addTo(areaLayer);
   }
   for(const x of points){
-   if(!active(x,year))continue;
+   if(x.superseded_by||!active(x,year))continue;
    const p=phase(x,year),c=colors[x.kind],hollow=outline.has(x.kind);
    L.circleMarker([x.coordinates[1],x.coordinates[0]],{
     pane:sitePane,renderer:siteRenderer,radius:5.7,color:c,weight:1.5,opacity:.98,

@@ -37,7 +37,7 @@
   resistance:3,foreign_occupation:4,battle:5,coercion:6,
   displacement:7,revenue:8,military_vicinity:9,
   trade_influence:10,diplomacy:11,paper_claim:12};
- const active=(o,y)=>o.periods.some(p=>p.start_year<=y&&y<=p.end_year);
+ const active=(o,y)=>!o.superseded_by&&o.periods.some(p=>p.start_year<=y&&y<=p.end_year);
  const phase=(o,y)=>o.periods.find(p=>p.start_year<=y&&y<=p.end_year);
  const square=b=>(b[2]-b[0])*(b[3]-b[1]);
  const within=(b,lng,lat)=>lng>=b[0]-1e-8&&lng<=b[2]+1e-8&&lat>=b[1]-1e-8&&lat<=b[3]+1e-8;
@@ -313,6 +313,10 @@
      coordinates:row.geometry.coordinates});
    }
    if(areas.length!==628||sites.length!==421)throw Error('unexpected original archive totals: '+areas.length+'/'+sites.length);
+   for(const zone of docs[0].regional_zones||[]){
+    const o={...zone,id:'18c:'+zone.id};
+    areas.push(o);byId.set(zone.id,o);
+   }
    loaded=true;render();
   }catch(e){error=String(e);console.error('18C overlap selector rejected missing historical source:',e)}
  }
