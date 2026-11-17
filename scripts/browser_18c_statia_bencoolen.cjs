@@ -121,6 +121,22 @@ const topics = [
     other: 'E18C-CAR-1798-HOSPITAL',
     otherYear: 1798,
     archiveSource: '克洛尼回忆录'
+  },
+  {
+    id: 'E18-C07-GRAND-PRE-MARYLAND-1755',
+    entry: 'E18C-DA-1755-OCT8-FAMILIES',
+    year: 1755,
+    other: 'E18C-DA-1755-MARYLAND-ARRIVAL',
+    otherYear: 1755,
+    archiveSource: '马里兰历史杂志'
+  },
+  {
+    id: 'E18-A06-JAMAICA-PUNISHMENT-LAWS-1718-1788',
+    entry: 'E18C-JLC-1788-CONSOLIDATION',
+    year: 1788,
+    other: 'E18C-JAM-1760-TAKY-REVOLT',
+    otherYear: 1760,
+    archiveSource: '牙买加政府新闻署'
   }
 ];
 
@@ -155,7 +171,8 @@ const topics = [
       await anchor.dblclick();
       await page.waitForFunction(event => window.atlasStoryBridge.selectedEventId() === event, topic.other);
       await page.locator('#dossierBody .source-details summary').click();
-      assert((await page.locator('#dossierBody .source-details').innerText()).includes(topic.archiveSource));
+      const archiveText = await page.locator('#dossierBody .source-details').innerText();
+      assert(archiveText.includes(topic.archiveSource), `${topic.id} missing ${topic.archiveSource} in ${archiveText}`);
       await page.locator('#dossierBody [data-story-back]').click();
       await article.waitFor();
       await article.locator('header [data-story-return]').click();
