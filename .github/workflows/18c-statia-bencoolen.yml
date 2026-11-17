@@ -13,6 +13,7 @@ on:
       - 'scripts/*18c_prizes_malacca*'
       - 'scripts/*18c_acadia_jamaica*'
       - 'scripts/*18c_archive_gaps*'
+      - 'scripts/*18c_original_records*'
       - '.github/workflows/18c-statia-bencoolen.yml'
 permissions:
   contents: read
@@ -31,6 +32,7 @@ jobs:
       - run: node scripts/test_18c_prizes_malacca.js
       - run: node scripts/test_18c_acadia_jamaica.js
       - run: node scripts/test_18c_archive_gaps.js
+      - run: node scripts/test_18c_original_records.js
       - run: python3 scripts/audit_18c_1126_coverage.py --out-dir /tmp/atlas-18c-coverage
       - run: python3 scripts/audit_spatial_semantics.py --strict
       - run: npm install --no-save --package-lock=false playwright@1.58.2

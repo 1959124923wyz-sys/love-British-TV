@@ -136,7 +136,7 @@ assert(jamaica.includes("fetch('data/eighteenth-century-jamaica-maroon-autonomy-
 assert(jamaica.includes("jamaica18cReady?1799:"));
 assert(jamaica.includes('active18cMaroonCoreIds:()'));
 assert(jamaica.includes('renderEighteenthReviewEvidenceCores()'));
-assert(jamaica.includes("serialPreviewAtlas?Math.min(1699"),'original nonopt-in year cap regression');
+assert(jamaica.includes("serialPreviewAtlas?1699:lastPublishedYear"),'original nonopt-in year cap regression');
 assert(ui.includes('Array.isArray(draft.stories)'));
 assert(ui.includes("article.id==='E6-T08'"));
 assert(ui.includes("storyMeta.has('E18-T03-T04-JAMAICA-MAROONS-1718-1799')"));
