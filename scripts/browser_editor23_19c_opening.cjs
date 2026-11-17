@@ -42,7 +42,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   };
   const audit=()=>page.evaluate(()=>window.historicOverlapDossier.getAudit());
   const chapterAreaDashes=()=>page.evaluate(()=>window.__historicOverlapHost.visibleAreaFeatures()
-   .filter(row=>row.group==='nineteenthAreas'&&!row.feature.properties.source_ids.some(id=>/^19CT(?:2)?-/.test(id)))
+   .filter(row=>row.group==='nineteenthAreas'&&!row.feature.properties.source_ids.some(id=>/^19CT(?:\d+)?-/.test(id)))
    .map(row=>row.layer._path.getAttribute('stroke-dasharray')));
   const assertClean=async()=>{
    const found=await page.evaluate(()=>{
@@ -51,6 +51,21 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
      ['title','aria-label','placeholder'].map(n=>el.getAttribute(n)).filter(guard.isWarning))];
    });
    assert.deepEqual(found,[]);
+  };
+  const pointStroke=async (lat,lng,radius)=>{
+   await page.evaluate(([lat,lng])=>window.__historicOverlapHost.map.setView([lat,lng],10,{animate:false}),[lat,lng]);
+   return page.evaluate(([lat,lng,radius])=>{
+    const m=window.__historicOverlapHost.map;
+    const point=m.latLngToLayerPoint([lat,lng]);
+    const expectedRadius=radius??(window.atlasStoryBridge.currentYear()>=1900?9:5);
+    const marker=Array.from(document.querySelectorAll('.atlas-19c-site')).find(path=>{
+     const box=path.getBBox();
+     return Math.abs(box.x+box.width/2-point.x)<1
+      && Math.abs(box.y+box.height/2-point.y)<1
+      && Math.abs(box.width/2-expectedRadius)<1;
+    });
+    return marker?.getAttribute('stroke');
+   },[lat,lng,radius]);
   };
   await goto('?year=1819',1819);
   assert.equal(await page.locator('#jumpYear').getAttribute('max'),'1959');
@@ -63,7 +78,11 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.match(await page.locator('#chapterIntro').textContent(),/亚眠/);
   await jump(1802);
   const sites=()=>page.locator('.atlas-19c-site');
+  assert.equal(await sites().count(),0);
+  const overviewZoom=(await view()).zoom;
+  await page.evaluate(()=>window.__historicOverlapHost.map.setZoom(7,{animate:false}));
   assert.equal(await sites().count(),5);
+  await page.evaluate(zoom=>window.__historicOverlapHost.map.setZoom(zoom,{animate:false}),overviewZoom);
   await jump(1803);
   const eventLabels=await page.locator('#eventList .event-item').allTextContents();
   assert(eventLabels.some(t=>t.includes('巴达维亚')));
@@ -204,15 +223,9 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await page.waitForFunction(()=>window.atlasStoryBridge.currentYear()===1826);
   assert.equal(await selected(),'E19-BUR-1826-YANDABO');
   await page.locator('#resetDossier').click();
-  await page.evaluate(()=>window.__historicOverlapHost.map.setView([16.80528,96.15611],10,{animate:false}));
-  const rangoonRing=()=>page.evaluate(()=>{
-   const m=window.__historicOverlapHost.map,r=m.getContainer().getBoundingClientRect();
-   const p=m.latLngToContainerPoint([16.80528,96.15611]);
-   return document.elementFromPoint(p.x+r.left+9,p.y+r.top)?.getAttribute('stroke');
-  });
-  assert.equal(await rangoonRing(),'#c5a6f5');
+  assert.equal(await pointStroke(16.80528,96.15611),'#c5a6f5');
   await jump(1827);
-  assert.equal(await rangoonRing(),'#65c7b6');
+  assert.equal(await pointStroke(16.80528,96.15611),'#65c7b6');
   await jump(1820);
   assert.equal((await chapterAreaDashes()).length,2);
   await page.evaluate(()=>window.__historicOverlapHost.map.setView([-33.3,26.9],8,{animate:false}));
@@ -252,20 +265,6 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
    assert.equal(await selected(),entry);
   }
   await page.locator('#resetDossier').click();
-  const pointStroke=async (lat,lng,radius=9)=>{
-   await page.evaluate(([lat,lng])=>window.__historicOverlapHost.map.setView([lat,lng],10,{animate:false}),[lat,lng]);
-   return page.evaluate(([lat,lng,radius])=>{
-    const m=window.__historicOverlapHost.map;
-    const point=m.latLngToLayerPoint([lat,lng]);
-    const marker=Array.from(document.querySelectorAll('.atlas-19c-site')).find(path=>{
-     const box=path.getBBox();
-     return Math.abs(box.x+box.width/2-point.x)<1
-      && Math.abs(box.y+box.height/2-point.y)<1
-      && Math.abs(box.width/2-radius)<1;
-    });
-    return marker?.getAttribute('stroke');
-   },[lat,lng,radius]);
-  };
   await jump(1823);
   assert.equal(await pointStroke(15.60037,74.79097),'#65c7b6');
   await jump(1824);
@@ -577,7 +576,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(5.38112,115.2487),undefined);
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-BRUNEI-LABUAN')));
   await jump(1848);
-  assert.equal(await pointStroke(5.27687,115.2454,13),'#c5a6f5');
+  assert.equal(await pointStroke(5.27687,115.2454,7),'#c5a6f5');
   assert.equal(await pointStroke(5.38112,115.2487),'#c5a6f5');
   assert.equal(await pointStroke(4.8842,114.94447),'#65c7b6');
   await jump(1849);
@@ -634,7 +633,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   const hongKong=await page.evaluate(()=>{
    const map=window.__historicOverlapHost.map,bounds=map.getContainer().getBoundingClientRect();
    const point=map.latLngToContainerPoint([22.28606,114.14767]);
-   return [point.x+bounds.left+9,point.y+bounds.top];
+   return [point.x+bounds.left+4,point.y+bounds.top];
   });
   await page.mouse.click(...hongKong);
   await page.locator('#dossierBody h2').filter({hasText:'英国殖民政府'}).waitFor();
@@ -693,7 +692,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   const ruaMarker=await page.evaluate(([lat,lon])=>{
    const map=window.__historicOverlapHost.map,b=map.getContainer().getBoundingClientRect();
    const p=map.latLngToContainerPoint([lat,lon]);
-   return [p.x+b.left+13,p.y+b.top];
+   return [p.x+b.left+6,p.y+b.top];
   },ruaPosition);
   await page.mouse.click(...ruaMarker);
   const ruaArea=page.locator('[data-historic-overlap-id="nineteenthAreas:nz-ruapekapeka-pa"]');

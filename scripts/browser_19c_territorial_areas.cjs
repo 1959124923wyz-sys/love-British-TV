@@ -185,6 +185,39 @@ async function verify() {
   assert(await drawer.locator('a[href="https://cdn.nationalarchives.gov.uk/documents/hong-kong-and-the-opium-wars.pdf#page=16"]').isVisible());
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1899-new-territories-dossier.png') });
 
+  await page.goto(root + '?year=1879', { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
+   window.atlasStoryBridge.currentYear() === 1879);
+  const siteMarkers = page.locator('.atlas-19c-site');
+  const layers1879 = await ids();
+  assert(layers1879.includes('canada-nwt-1876-era'));
+  assert.equal(await siteMarkers.count(), 0);
+  const events1879 = await page.evaluate(() => window.atlasDensityAudit());
+  assert(events1879.eligibleKeys.length > 0);
+  assert.deepEqual(events1879.groupedKeys, events1879.eligibleKeys);
+  await page.screenshot({ path: join(screenshotDir, '19c-territory-1879-overview.png') });
+
+  const showCapeTown = zoom => page.evaluate(value =>
+   window.__historicOverlapHost.map.setView([-33.925, 18.427], value, { animate: false }), zoom);
+  await showCapeTown(6);
+  assert.equal(await siteMarkers.count(), 0);
+  await showCapeTown(10);
+  assert((await siteMarkers.count()) > 0);
+  assert(await siteMarkers.evaluateAll(markers => markers.every(marker => marker.getAttribute('stroke-dasharray') === '3 3')));
+  assert.deepEqual(await ids(), layers1879);
+  await page.locator('#mapLayerEvents').uncheck();
+  await clickAreaAt(-33.925, 18.427);
+  const siteDossier = page.locator('#dossierBody h2').filter({ hasText: '开普敦' });
+  await siteDossier.waitFor();
+  await page.locator('#resetDossier').click();
+  await page.locator('#mapLayerTerritory').uncheck();
+  assert.equal(await siteMarkers.count(), 0);
+  await page.locator('#mapLayerTerritory').check();
+  assert((await siteMarkers.count()) > 0);
+  await showCapeTown(6);
+  assert.equal(await siteMarkers.count(), 0);
+  assert.deepEqual(await ids(), layers1879);
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {
