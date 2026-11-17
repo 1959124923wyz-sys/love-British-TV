@@ -340,6 +340,60 @@ async function verify() {
   }
   await page.screenshot({ path: join(screenshotDir, '18c-mediterranean-1798-menorca.png') });
 
+  await page.goto(root + '?year=1713', { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
+   window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthOverlapDossier?.getAudit().loaded &&
+   window.atlasStoryBridge.currentYear() === 1713, undefined, { timeout: 45000 });
+  await page.locator('#mapLayerEvents').uncheck();
+  const atlantic = () => page.evaluate(() => window.eighteenthMassSpatial.getAudit());
+  const coast = page.locator('.atlas-18c-treaty-shore');
+  const shownSite = page.locator('.atlas-18c-regional-site');
+  const dossierTitle = page.locator('#dossierBody h2');
+  const setView = ([lat, lon, zoom]) => page.evaluate(([y, x, z]) =>
+   window.__historicOverlapHost.map.setView([y, x], z, { animate: false }), [lat, lon, zoom]);
+  assert.equal(await shownSite.count(), 0);
+  assert.deepEqual((await atlantic()).activeCoastalRights, ['NF_FRENCH_SHORE_1713']);
+  assert.equal(await coast.getAttribute('stroke-dasharray'), '6 5');
+  await setView([47.25098, -53.97172, 10]);
+  await clickAreaAt(47.25098, -53.97172);
+  await dossierTitle.filter({ hasText: '条约与先遣驻军' }).waitFor();
+  await jump(1714);
+  await setView([47.25098, -53.97172, 10]);
+  await clickAreaAt(47.25098, -53.97172);
+  await dossierTitle.filter({ hasText: '普拉森舍皇家堡 · 交接完成' }).waitFor();
+  await jump(1715);
+  assert(!(await atlantic()).activeRegionalSites.includes('PLACENTIA_FORT_ROYAL'));
+  await jump(1762);
+  assert((await atlantic()).activeRegionalSites.includes('PLACENTIA_FORT_ROYAL'));
+  await jump(1726);
+  await setView([44.74169, -65.51969, 10]);
+  await clickAreaAt(44.74169, -65.51969);
+  const treatyCard = page.locator('[data-overlap-id="18c:FORT_ANNE_FLAG_BASTION_1726"]');
+  await treatyCard.waitFor();
+  assert.match(await treatyCard.textContent(), /西面旗堡缔约地/);
+  assert(!(await page.locator('[data-overlap-id="18c:B36-Z001"]').count()));
+  await jump(1782);
+  await setView([57.008, -92.2955, 10]);
+  await clickAreaAt(57.008, -92.2955);
+  await dossierTitle.filter({ hasText: '约克堡旧址 · 法军袭击与毁堡' }).waitFor();
+  await jump(1783);
+  assert.deepEqual((await atlantic()).activeCoastalRights, ['NF_FRENCH_SHORE_1783']);
+  await setView([49.999829, -55.523341, 8]);
+  await clickAreaAt(49.999829, -55.523341);
+  await dossierTitle.filter({ hasText: '圣约翰角至雷角' }).waitFor();
+  await page.screenshot({ path: join(screenshotDir, '18c-atlantic-1783-treaty-shore.png') });
+  await page.locator('#mapLayerTerritory').uncheck();
+  assert.equal(await coast.count(), 0);
+  await page.locator('#mapLayerTerritory').check();
+  assert.equal(await coast.count(), 1);
+  await jump(1800);
+  assert((await ids()).includes('annapolis-fort-anne-1800'));
+  assert.equal(await coast.count(), 1);
+  await jump(1854);
+  assert(!(await ids()).includes('annapolis-fort-anne-1800'));
+  await jump(1904);
+  assert.equal(await coast.count(), 0);
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&

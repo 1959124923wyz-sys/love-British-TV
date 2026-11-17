@@ -17,18 +17,18 @@
   },
   "counts": {
     "1799_prior_records_reviewed": 298,
-    "linked_to_1800_public_geometry": 74,
+    "linked_to_1800_public_geometry": 75,
     "by_disposition": {
       "anchor": 31,
       "claim_evidence": 7,
       "continued": 17,
       "event_history": 7,
       "fiscal_evidence": 37,
-      "needs_boundary_or_site_review": 90,
+      "needs_boundary_or_site_review": 89,
       "network_evidence": 69,
       "occupation": 13,
       "political_relation_evidence": 14,
-      "renewed_scope": 13
+      "renewed_scope": 14
     }
   },
   "records": [
@@ -1553,8 +1553,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1713后安纳波利斯罗亚尔英驻军港区",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "annapolis-fort-anne-1800"
+      ],
+      "notes": "复用1799年四角主堡地理核心。英方持续驻军，1854年最后一支部队撤走。"
     },
     {
       "prior_id": "B36-Z002",

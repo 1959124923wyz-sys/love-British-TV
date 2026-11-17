@@ -68,6 +68,30 @@ for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND']){
 a.equal(z('MENORCA_ISLAND').periods.find(p=>p.start_year===1756).kind,'foreign_occupation');
 a.equal(z('MENORCA_ISLAND').periods.find(p=>p.start_year===1782).kind,'foreign_occupation');
 a.equal(z('GIBRALTAR_PENINSULA').periods.find(p=>p.start_year===1713).kind,'administration');
+const regional=[...data.regional_zones,...data.regional_sites,...data.coastal_rights];
+a.equal(regional.length,new Set(regional.map(item=>item.id)).size);
+for(const item of regional){
+ a.equal(item.area_sqkm,null);
+ a.equal(item.uncertain_line_dashed,true);
+ a(item.source_urls.every(url=>url.startsWith('https://')));
+ for(let i=1;i<item.periods.length;i++)a(item.periods[i].start_year>item.periods[i-1].end_year);
+ if(item.cross_century_feature_id){
+  const successor=successors.find(f=>f.id===item.cross_century_feature_id);
+  a.equal(successor.properties.start_year,1800);
+  a.deepEqual(item.geometry,successor.geometry);
+ }
+}
+const atlantic=id=>regional.find(item=>item.id===id);
+for(const [id,y,expected] of [
+ ['PLACENTIA_FORT_ROYAL',1713,true],['PLACENTIA_FORT_ROYAL',1715,false],['PLACENTIA_FORT_ROYAL',1761,false],
+ ['PLACENTIA_FORT_ROYAL',1762,true],['FORT_ANNE_FLAG_BASTION_1726',1725,false],['FORT_ANNE_FLAG_BASTION_1726',1726,true],
+ ['YORK_FACTORY_I_II',1791,true],['YORK_FACTORY_I_II',1792,false],['YORK_FACTORY_III',1792,true],
+ ['NF_FRENCH_SHORE_1713',1712,false],['NF_FRENCH_SHORE_1713',1782,true],['NF_FRENCH_SHORE_1713',1783,false],
+ ['NF_FRENCH_SHORE_1783',1783,true],['NF_FRENCH_SHORE_1783',1800,true],['NF_FRENCH_SHORE_1783',1904,false],
+])a.equal(isOn(atlantic(id),y),expected,id+' '+y);
+a(data.coastal_rights.every(item=>item.geometry.type==='LineString'&&item.geometry.coordinates.length>500));
+a.equal(atlantic('YORK_FACTORY_I_II').periods.find(p=>p.start_year===1782).kind,'conflict_damage');
+a.equal(successors.find(f=>f.id==='annapolis-fort-anne-1800').properties.end_year,1853);
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));

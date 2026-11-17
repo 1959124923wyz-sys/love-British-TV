@@ -516,6 +516,21 @@
       "id": "19CT7-MALACCA-1824-TREATY",
       "label": "1824年《英荷条约》｜第9、10和13条",
       "url": "https://en.wikisource.org/wiki/Anglo-Dutch_Treaty_of_1824"
+    },
+    {
+      "id": "19CT7-HBC-YORK-DEPOT",
+      "label": "马尼托巴历史学会｜约克工厂第三站址坐标",
+      "url": "https://mhs.mb.ca/docs/sites/yorkfactory.shtml"
+    },
+    {
+      "id": "19CT7-FORT-ANNE-LOC",
+      "label": "美国国会图书馆｜安纳波利斯皇家城堡测绘图",
+      "url": "https://www.loc.gov/resource/g3424a.ct008155/"
+    },
+    {
+      "id": "19CT7-FORT-ANNE-PARKS",
+      "label": "加拿大公园局｜安妮堡历史与1854年撤军",
+      "url": "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history"
     }
   ],
   "features": [
@@ -1430,14 +1445,16 @@
         "summary_zh": "1788年在海斯河岸较高处建立的第三个站址在19世纪继续经营。它接收和转运内陆毛皮，并向公司驻站供应物资。",
         "source_ids": [
           "19CT7-HBC-YORK",
-          "19CT7-HBC-YORK-LOC"
+          "19CT7-HBC-YORK-LOC",
+          "19CT7-HBC-YORK-DEPOT"
         ],
         "source_urls": [
           "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=158",
-          "https://geonames.nrcan.gc.ca/search-place-names/unique?id=GBPLG"
+          "https://geonames.nrcan.gc.ca/search-place-names/unique?id=GBPLG",
+          "https://mhs.mb.ca/docs/sites/yorkfactory.shtml"
         ],
         "related_event_ids": [],
-        "mapping_method": "Parks Canada York Factory III site, CGNDB representative coordinate",
+        "mapping_method": "York Factory III identified at the existing depot locality, shared with the 1799 state",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "dash_only": true,
@@ -1451,7 +1468,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-92.3,57]
+        "coordinates": [-92.30443,57.00271]
       }
     },
     {
@@ -3702,6 +3719,189 @@
       "geometry": {
         "type": "Point",
         "coordinates": [102.24956,2.19327]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "annapolis-fort-anne-1800",
+      "properties": {
+        "name": "安纳波利斯皇家城 · 安妮堡驻军",
+        "stable_id": "annapolis-royal-fort-anne-core",
+        "start_year": 1800,
+        "end_year": 1853,
+        "display_kind": "administrative",
+        "label_type": "驻堡",
+        "summary_zh": "安纳波利斯皇家城在失去殖民首府地位后，仍有英军驻守安妮堡。1854年，最后一支英国驻军撤出。",
+        "source_ids": [
+          "19CT7-FORT-ANNE-LOC",
+          "19CT7-FORT-ANNE-PARKS"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/resource/g3424a.ct008155/",
+          "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Manually traced the visible main rampart on the ca. 1744 Library of Congress manuscript. Excludes projected works, detached ravelins, wharf, ditch, glacis and town. Four extant bastion tips registered by affine transformation. RMS ca. 1.6 m at calibration points and ca. 10 m at the independent 1708 powder magazine. © OpenStreetMap contributors, ODbL, for modern ground control only. The dated 1708 French chart and 1756 Dixon existing works corroborate the common four-bastion shape.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "prior_record_ids": [
+          "B36-Z001"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -65.5177838,
+              44.7415022
+            ],
+            [
+              -65.5181368,
+              44.7417265
+            ],
+            [
+              -65.5182948,
+              44.7417153
+            ],
+            [
+              -65.5183339,
+              44.741718
+            ],
+            [
+              -65.5184243,
+              44.7418055
+            ],
+            [
+              -65.5184127,
+              44.7418235
+            ],
+            [
+              -65.5184915,
+              44.7418998
+            ],
+            [
+              -65.5185166,
+              44.7419006
+            ],
+            [
+              -65.5186362,
+              44.7420164
+            ],
+            [
+              -65.5186357,
+              44.7420334
+            ],
+            [
+              -65.5185798,
+              44.7421141
+            ],
+            [
+              -65.5187911,
+              44.7423713
+            ],
+            [
+              -65.5190492,
+              44.7421874
+            ],
+            [
+              -65.5190556,
+              44.7421467
+            ],
+            [
+              -65.5190456,
+              44.742055
+            ],
+            [
+              -65.5194477,
+              44.7418581
+            ],
+            [
+              -65.5195475,
+              44.7419077
+            ],
+            [
+              -65.519618,
+              44.7418998
+            ],
+            [
+              -65.5200482,
+              44.7417652
+            ],
+            [
+              -65.5196806,
+              44.7415854
+            ],
+            [
+              -65.5196387,
+              44.7415799
+            ],
+            [
+              -65.5194941,
+              44.74161
+            ],
+            [
+              -65.5191567,
+              44.7412777
+            ],
+            [
+              -65.5192406,
+              44.7412006
+            ],
+            [
+              -65.5192551,
+              44.7411561
+            ],
+            [
+              -65.5192288,
+              44.7411013
+            ],
+            [
+              -65.5190874,
+              44.7408532
+            ],
+            [
+              -65.5187792,
+              44.7410941
+            ],
+            [
+              -65.51876,
+              44.7411283
+            ],
+            [
+              -65.5187998,
+              44.7412019
+            ],
+            [
+              -65.518763,
+              44.7412191
+            ],
+            [
+              -65.5183912,
+              44.7414102
+            ],
+            [
+              -65.518351,
+              44.7414123
+            ],
+            [
+              -65.5182851,
+              44.7413719
+            ],
+            [
+              -65.5182378,
+              44.7413731
+            ],
+            [
+              -65.5177838,
+              44.7415022
+            ]
+          ]
+        ]
       }
     }
   ]

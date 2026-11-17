@@ -6,7 +6,7 @@
 
 - 正式站的十八世纪区域档案选择器读取 628 条区域记录及 421 条地点记录，其中包含不同批次对同一地点的补充、矩形参考区和贸易或法权记录。它是检索起点。各地真实外廓和可延续的控制关系须按稳定 ID 分别复核。
 - [1699 → 1700 初查](../../research/continuity/1700-1709/HANDOFF.md) 已清点 27 条旧参考面、17 条旧空间点，核实七处欧洲商馆或要塞及达连撤离，保留尚待追查的范围。
-- [1799 → 1800 台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已清点 298 条旧期末记录，74 条已有 1800 年对应空间记录，90 条待查几何、驻地或退出时间。修订 1799 年且仍延续的对象时，核对 1800 年地图中的 ID、位置和首期治理状态。
+- [1799 → 1800 台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已清点 298 条旧期末记录，75 条已有 1800 年对应空间记录，89 条待查几何、驻地或退出时间。修订 1799 年且仍延续的对象时，核对 1800 年地图中的 ID、位置和首期治理状态。
 - 原 [18 世纪专题与档案总目录](../../research/18c/consolidated/README.md) 和 [优先档案核对](EDITOR29_18C_FINAL_PRIORITY_RECORDS_20261117.md) 提供事件和源链接。地图进度按区域、机构或政体的交接计算。
 
 ## 固定补绘顺序
@@ -30,7 +30,7 @@
 
 ## 当前进度
 
-第一组先补绘直布罗陀与梅诺卡。前者依据直布罗陀城、堡、港及工事原始条款和旧测图，后者依据早期岛图及历次接收记录。下一组保持在同一战后体系内，续做皇家港、纽芬兰与哈德孙湾。
+第一组完成西地中海和北大西洋两批。沿同一时间主线，下一批从皇家岛与路易堡的建立、战时易手和归还开始。
 
 ### 第 1A 批 · 西地中海
 
@@ -43,12 +43,9 @@
 - 梅诺卡用 1708 年岛图及 1780 年全岛图核对范围，采用已在 1800 年地图使用的 Natural Earth 公版主岛海岸。既有马翁军港驻点独立保留。1782 年实际投降与 1783 年条约确认分别写入阶段档案，港内圣费利佩堡的逐阶段范围待后续考证。 [1708 年格林尼治皇家博物馆图](https://www.rmg.co.uk/collections/objects/rmgc-object-545045) · [1780 年西班牙国防部图档](https://bibliotecavirtual.defensa.gob.es/BVMDefensa/es/consulta/registro.do?control=BMDB20200518013) · [梅诺卡军史博物馆](https://www.consorciomilitarmenorca.com/es/sala-dedicada-a-la-paz-de-amiens-en-el-museo-militar-de-menorca/)
 - 两地的地理 ID 保持不变。图上描边、点击命中和档案悬停高亮使用同一个多边形。旧矩形参考不再显示。
 
-### 第 1B 批 · 北大西洋待绘顺序
+### 第 1B 批 · 北大西洋
 
-1. 普拉森舍先区分 1713 年少量英军先驻与 1714 年法国人员撤出，再用考古报告图 9、10 校核当年堡垒局部。 [加拿大公园局考古报告](https://parkscanadahistory.com/series/mrs/46-1.pdf)
-2. 纽芬兰按条约绘制法国渔岸。1713 年邦纳维斯塔海角到里什角为渔权海岸线，1783 年海岸权利端点变更。 [纽芬兰历史遗产资料](https://www.heritage.nf.ca/articles/exploration/french-shore.php)
-3. 按 1714 年 9 月 11 日实际移交查约克堡。旧址与 1788 年后的现存商站分开，侵蚀地带先画历史驻地。 [马尼托巴档案馆公司日志](https://www.gov.mb.ca/chc/archives/hbca/spotlight/knights_tale.html) · [加拿大公园局站址记录](https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?i=73034&id=158)
-4. 复核已有安纳波利斯皇家港的 1710／1713 阶段。阿卡迪亚条约旧界和米克马克治理独立查证。路易堡分开早期法方到达与后来的要塞建造。 [1713 年英法条约](https://primarydocuments.ca/wp-content/uploads/2018/04/TreatyUtrecht1713.pdf) · [加拿大公园局路易堡史](https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/histoire-history)
+普拉森舍皇家堡、纽芬兰法国渔岸、海斯河约克堡和阿卡迪亚安妮堡已按交接阶段绘制。渔岸只沿海岸，安妮堡与约克堡第三站同址接入 1800 年。普拉森舍以遗址点呈现，史图图像页和旧堡墙线仍待取得。下一批查皇家岛与路易堡的建立和首次易手。 [分期、史料与方法](18C_UTRECHT_NORTH_ATLANTIC_HANDOFF.md)
 
 ### 后续子批已定位的原图
 
