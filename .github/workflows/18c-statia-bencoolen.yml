@@ -9,6 +9,7 @@ on:
       - 'data/eighteenth-century-dynamic-spatial-1700-1799.json'
       - 'scripts/*18c_statia_bencoolen*'
       - 'scripts/*18c_antigua_bermuda_bahamas*'
+      - 'scripts/*18c_barbados_wir*'
       - '.github/workflows/18c-statia-bencoolen.yml'
 permissions:
   contents: read
@@ -23,6 +24,7 @@ jobs:
           node-version: 22
       - run: node scripts/test_18c_statia_bencoolen.js
       - run: node scripts/test_18c_antigua_bermuda_bahamas.js
+      - run: node scripts/test_18c_barbados_wir.js
       - run: python3 scripts/audit_spatial_semantics.py --strict
       - run: npm install --no-save --package-lock=false playwright@1.58.2
       - run: npx playwright install --with-deps chromium

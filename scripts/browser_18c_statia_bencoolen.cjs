@@ -36,6 +36,24 @@ const topics = [
     other: 'E18C-ISL-1784-AUCTION',
     otherYear: 1784,
     archiveSource: '英国下院刊本'
+  },
+  {
+    id: 'E18-A06-BARBADOS-SUGAR-LAW-1701-1785',
+    entry: 'E18C-BBD-1738-PETITION',
+    year: 1738,
+    other: 'E18C-BBD-1783-PAYNE',
+    otherYear: 1783,
+    route: 'R18-CODRINGTON-BRIDGETOWN-1738',
+    archiveSource: '大英图书馆'
+  },
+  {
+    id: 'E18-A17-WEST-INDIA-REGIMENTS-1795-1807',
+    entry: 'E18C-WIR-1798-CABRITS',
+    year: 1798,
+    other: 'E18C-WIR-1807-FREE',
+    otherYear: 1807,
+    crossCentury: true,
+    archiveSource: '英国国家档案馆立法库'
   }
 ];
 
@@ -50,7 +68,7 @@ const topics = [
       await page.waitForFunction(() => document.querySelector('#workspace')?.dataset.atlasReady === 'true');
     }
     for (const topic of topics) {
-      await visit('?review18c=1&year=' + topic.year);
+      await visit((topic.crossCentury ? '?review18c=1&review19c=1&year=' : '?review18c=1&year=') + topic.year);
       await yearIs(topic.year);
       if (topic.route) {
         const route = page.locator('[data-route-id="' + topic.route + '"]');
@@ -93,6 +111,19 @@ const topics = [
     await visit('?year=1781');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-STATIA-1781-PETITION') === null));
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-ISL-1784-AUCTION') === null));
+    assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-WIR-1807-FREE') === null));
+    await visit('?review18c=1&year=1798');
+    assert.equal(await page.locator('#jumpYear').getAttribute('max'), '1799');
+    const wir = 'E18-A17-WEST-INDIA-REGIMENTS-1795-1807';
+    await page.locator('#eventList [data-eid="E18C-WIR-1798-CABRITS"]').click();
+    await page.locator('#dossierBody [data-story-open="' + wir + '"]').click();
+    const crossYearLink = page.locator('article[data-story-id="' + wir + '"] a[href="?review18c=1&review19c=1&year=1807"]').first();
+    await crossYearLink.click();
+    await page.waitForFunction(() => document.querySelector('#workspace')?.dataset.atlasReady === 'true');
+    await yearIs(1807);
+    await page.locator('#eventList [data-eid="E18C-WIR-1807-FREE"]').click();
+    await page.locator('#dossierBody [data-story-open="' + wir + '"]').click();
+    await page.locator('article[data-story-id="' + wir + '"]').waitFor();
     await visit('?review19c=1&year=1820');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-BENCOOLEN-1719-SIEGE') === null));
     console.log('PASS desktop 18C topics: route hit targets, cross-year links, original sources and return paths, garrison transition, preview isolation');
