@@ -63,13 +63,23 @@ def audit():
     stories=index["stories"]
     assert len(stories)>=34 and len({s["id"] for s in stories})==len(stories)
     coverage_arcs=set()
+    story_sections={}
     for s in stories:
         story=read_json(ROOT/s["file"])
         assert story["id"]==s["id"] and story.get("publication_status")=="research_only"
+        story_sections[s["id"]]={section["id"] for section in story.get("sections",[]) if "id" in section}
         coverage_arcs.update(arc for arc in items(story.get("series_family")) if arc.startswith("T") and len(arc)==3 and arc[1:].isdigit())
         if story["id"].startswith("E18-C07-"):
             coverage_arcs.add("T07")
     assert len(coverage_arcs)==35 and all("T%02d"%x in coverage_arcs for x in range(1,36))
+    prehistory={}
+    for review in read_json(ROOT/"research/18c/DEFERRED_PREHISTORY.json"):
+        oid=review["original_id"]
+        assert oid not in prehistory and ids[oid]["consolidation_disposition"]=="historical_or_chronology_deferred",oid
+        assert review["start_year"]<=review["end_year"]<1700,oid
+        assert review["section_id"] in story_sections[review["story_id"]],oid
+        assert review["source_urls"] and all(url.startswith("https://") for url in review["source_urls"]),oid
+        prehistory[oid]=review
     event_groups=collections.defaultdict(set)
     documented_groups=collections.defaultdict(set)
     explicit_records=collections.defaultdict(set)
@@ -145,7 +155,17 @@ def audit():
             elif state=="metadata_group_only":next_step="仅数据集来源声明提及此组合，地图未见直接group事件关联；按原档逐项审核"
             else:next_step="当前专题虽覆盖母题，但本条缺机器级地图关联；优先独立补核或说明舍弃原因"
         elif disp=="historical_or_chronology_deferred":
-            state="deferred_no_map_approval";next_step="按年月、实际责任主体、第一手来源逐条重审，不自动生成地图"
+            if ev:
+                assert oid not in prehistory,oid
+                state="deferred_review_chronology"
+                next_step="已复核并关联年表，日期精度和异文见事件档案"
+            elif oid in prehistory:
+                state="deferred_review_pre_1700"
+                review=prehistory[oid]
+                next_step=f"已复核为{review['start_year']}—{review['end_year']}年前史，见{review['story_id']}／{review['section_id']}"
+            else:
+                state="deferred_no_map_approval"
+                next_step="按年月、实际责任主体、第一手来源逐条重审，不自动生成地图"
         elif disp=="story_narrative_evidence":
             state="narrative_only_original";next_step="正文辅助材料，必要时确认已在正文可查；不自动提升地图"
         else:
@@ -201,10 +221,10 @@ def to_md(report):
         period=f"{g['start_year']}—{g['end_year']}" if g["start_year"]!=g["end_year"] else str(g["start_year"])
         s.append(f"| {g['id']}：{g['title'].replace('|','／')} | {period} | {g['main_candidate_count']} | {g['original_candidate_count']} | {g['status']} |")
     s.extend(["",
-       "## 必须单独复核的16条年代／史实延期条目","",
-       "| 原研究ID | 年份 | 弧线 | 原候审标题 |","|---|---:|---|---|"])
+       "## 原16条年代／史实延期条目复核进度","",
+       "| 原研究ID | 年份 | 弧线 | 原候审标题 | 复核状态 |","|---|---:|---|---|---|"])
     for r in report["deferred_16_originals"]:
-        s.append(f"| {r['original_id']} | {r['year']} | {r['arc']} | {r['original_title'].replace('|','／')} |")
+        s.append(f"| {r['original_id']} | {r['year']} | {r['arc']} | {r['original_title'].replace('|','／')} | {r['research_followup']} |")
     s.extend(["","## 正确使用审计结果","",
        "1. 对每一条标为未映射或仅metadata的原始候审，先检查既有中文正文是否已有描述，再读取机构/一手文献，明确行动者、真实日期和受害者立场。",
        "2. 只有已核日期、可信地点并通过现有测试的具体史实才能进入研究预览地图；**没有精确GIS的地点保持null，边界无据不画Polygon**。",

@@ -4,6 +4,23 @@ const { chromium } = require('playwright');
 const root = process.env.ATLAS_TEST_URL || 'http://127.0.0.1:8765/';
 const topics = [
   {
+    id: 'E18-T26-GOLD-COAST-GOREE-1722-1783',
+    entry: 'E18C-419-1754-QUODJEBAH',
+    year: 1754,
+    other: 'E18C-419-1779-GOREE-REOCCUPATION',
+    otherYear: 1779,
+    archiveSource: '英国历史手稿委员会'
+  },
+  {
+    id: 'E18-T02-OLD-CALABAR-AFTERMATH-1767-1773',
+    entry: 'E18C-419-1769-EPHRAIM-LETTER',
+    year: 1769,
+    other: 'E18C-419-1773-CALABAR-SHELLING-LETTER',
+    otherYear: 1773,
+    archiveSource: '罗德岛历史学会',
+    unlocated: true
+  },
+  {
     id: 'E18-STATIA-CONFISCATION-1776-1786',
     entry: 'E18C-STATIA-1781-PETITION',
     year: 1781,
