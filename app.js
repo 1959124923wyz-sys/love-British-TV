@@ -3667,6 +3667,7 @@ async function boot(){
     ['chronology-preview-antigua-bermuda-bahamas-1701-1796.json',1799]
    ]:[];
    supplements.push(['chronology-preview-barbados-west-india-regiments-1701-1807.json',1807]);
+   supplements.push(['chronology-preview-privateering-malacca-1702-1825.json',1825]);
    for(const [file,lastYear] of supplements){
     try{
       const response=await fetch('data/stories/serial/'+file,{cache:'no-store'});
