@@ -2,7 +2,7 @@
   "schema": "territory-transition-v2",
   "stage": "research_draft",
   "template_only": false,
-  "scope": "19世纪四批公开参考区域及章节已有Polygon/MultiPolygon，地点与路线保留在原数据。",
+  "scope": "19世纪六批公开参考区域及章节已有Polygon/MultiPolygon，地点与路线保留在原数据。",
   "period": {
     "previous_from": 1850,
     "previous_to": 1859,
@@ -53,13 +53,19 @@
       "british-columbia-polity",
       "haida-gwaii-colonial-jurisdiction",
       "malacca-mainland",
-      "province-wellesley-mainland"
+      "province-wellesley-mainland",
+      "heligoland-main-island",
+      "aden-main-peninsula",
+      "perim-island",
+      "kuria-muria-islands"
     ],
     "other_source_files": [
       "data/nineteenth-century-territorial-areas.geojson",
       "data/nineteenth-century-territorial-areas-batch2.geojson",
       "data/nineteenth-century-territorial-areas-batch3.geojson",
-      "data/nineteenth-century-territorial-areas-batch4.geojson"
+      "data/nineteenth-century-territorial-areas-batch4.geojson",
+      "data/nineteenth-century-territorial-areas-batch5.geojson",
+      "data/nineteenth-century-territorial-areas-batch6.geojson"
     ]
   },
   "records": [
@@ -952,6 +958,99 @@
         "measured_area_sqkm": null
       },
       "notes": "1859及1860年末继续显示该区域。"
+    },
+    {
+      "stable_id": "heligoland-main-island",
+      "name_zh": "赫尔戈兰主岛 · 英国统治",
+      "transition": "continued",
+      "evidence_scope": "英国领地",
+      "source_ids": [
+        "19CT5-HELG-KIEL",
+        "19CT5-HELG-1890",
+        "19CT5-HELG-TAISDAI",
+        "19CT5-HELG-1888",
+        "19CT5-HELG-ROCK",
+        "19CT5-HELG-ROCK-GEO",
+        "19CT5-HELG-LIGHT",
+        "19CT5-HELG-LIGHT-GEO"
+      ],
+      "geography": {
+        "feature_ids": [
+          "heligoland-1814-british"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859年与1860年沿用同一地理范围及管辖记录。"
+    },
+    {
+      "stable_id": "aden-main-peninsula",
+      "name_zh": "亚丁半岛 · 英属印度管辖",
+      "transition": "continued",
+      "evidence_scope": "英属印度辖区",
+      "source_ids": [
+        "19CT6-ADEN-TREATIES",
+        "19CT6-ADEN-1880-MAP",
+        "19CT6-ADEN-1863-PLAN",
+        "19CT6-ADEN-1907-CH",
+        "19CT6-ADEN-CONTROL",
+        "19CT6-ADEN-1858-ACT",
+        "19CT6-ADEN-ADMIN"
+      ],
+      "geography": {
+        "feature_ids": [
+          "aden-main-1858-india"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859年与1860年沿用同一地理范围及管辖记录。"
+    },
+    {
+      "stable_id": "perim-island",
+      "name_zh": "佩里姆岛 · 亚丁所属岛屿",
+      "transition": "continued",
+      "evidence_scope": "英属印度辖区",
+      "source_ids": [
+        "19CT6-PERIM-1857",
+        "19CT6-PERIM-1858",
+        "19CT6-ADEN-1858-ACT",
+        "19CT6-ADEN-ADMIN",
+        "19CT6-OSM"
+      ],
+      "geography": {
+        "feature_ids": [
+          "perim-1858-aden-dependency"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859年与1860年沿用同一地理范围及管辖记录。"
+    },
+    {
+      "stable_id": "kuria-muria-islands",
+      "name_zh": "库里亚穆里亚群岛 · 马斯喀特割让五岛",
+      "transition": "continued",
+      "evidence_scope": "英国属地",
+      "source_ids": [
+        "19CT6-KURIA-CESSION",
+        "19CT6-KURIA-HANSARD",
+        "19CT6-KURIA-LICENCE",
+        "19CT6-KURIA-NGA",
+        "19CT6-OSM"
+      ],
+      "geography": {
+        "feature_ids": [
+          "kuria-muria-1854-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1859年与1860年沿用同一地理范围及管辖记录。"
     }
   ],
   "new_entities": [
@@ -1037,6 +1136,184 @@
         "measured_area_sqkm": null,
         "draw_mode": "dashed_reference"
       }
+    },
+    {
+      "stable_id": "tauranga-mainland-raupatu",
+      "first_explicitly_mapped_year": 1865,
+      "source_ids": [
+        "19CT5-TAU-1867",
+        "19CT5-TAU-WT",
+        "19CT5-TAU-MARU",
+        "19CT5-TAU-LINZ",
+        "19CT5-TAU-1868",
+        "19CT5-TAU-PARL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "tauranga-proclaimed-1865",
+          "tauranga-revised-1868"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "tauranga-retained-block",
+      "first_explicitly_mapped_year": 1869,
+      "source_ids": [
+        "19CT5-TAU-WT",
+        "19CT5-TAU-SURVEY",
+        "19CT5-TAU-PARL",
+        "19CT5-TAU-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "tauranga-retained-confiscated-block"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "taranaki-waitara-south",
+      "first_explicitly_mapped_year": 1865,
+      "source_ids": [
+        "19CT5-TAR-WT",
+        "19CT5-TAR-NGATI",
+        "19CT5-TAR-1866",
+        "19CT5-TAU-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "taranaki-waitara-south-1865"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "taranaki-oakura",
+      "first_explicitly_mapped_year": 1865,
+      "source_ids": [
+        "19CT5-TAR-WT",
+        "19CT5-TAR-NGATI",
+        "19CT5-TAR-RAURU",
+        "19CT5-TAR-1866",
+        "19CT5-TAU-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "taranaki-oakura-1865"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "taranaki-ngatiawa-coast",
+      "first_explicitly_mapped_year": 1865,
+      "source_ids": [
+        "19CT5-TAR-WT",
+        "19CT5-TAR-GAZETTE",
+        "19CT5-TAR-1866",
+        "19CT5-TAU-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "taranaki-ngatiawa-coast-1865"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "taranaki-ngatiruanui-coast",
+      "first_explicitly_mapped_year": 1865,
+      "source_ids": [
+        "19CT5-TAR-WT",
+        "19CT5-TAR-GAZETTE",
+        "19CT5-TAR-1867",
+        "19CT5-TAR-1866",
+        "19CT5-TAU-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "taranaki-ngatiruanui-coast-1865",
+          "taranaki-ngatiruanui-coast-1867"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "basutoland",
+      "first_explicitly_mapped_year": 1869,
+      "source_ids": [
+        "19CT5-BAS-ALIWAL",
+        "19CT5-BAS-BND",
+        "19CT5-BAS-WALKER",
+        "19CT5-BAS-WELLER",
+        "19CT5-BAS-THEAL",
+        "19CT5-BAS-THESIS",
+        "19CT5-BAS-HERTSLET",
+        "19CT5-BAS-RHODES",
+        "19CT5-BAS-DEBATE",
+        "19CT5-BAS-WAROFFICE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "basutoland-aliwal-north-1869",
+          "basutoland-leribe-return-1870",
+          "basutoland-cape-annexation-1871",
+          "basutoland-high-commission-1884",
+          "basutoland-quaneka-marker-1891"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "little-aden-main-peninsula",
+      "first_explicitly_mapped_year": 1869,
+      "source_ids": [
+        "19CT6-ADEN-TREATIES",
+        "19CT6-ADEN-1869-REPORT",
+        "19CT6-ADEN-1863-DIP",
+        "19CT6-ADEN-1893-MAP",
+        "19CT6-ADEN-1907-CH"
+      ],
+      "geography": {
+        "feature_ids": [
+          "little-aden-1869-purchase"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "waikato-1865-raupatu",
+      "first_explicitly_mapped_year": 1865,
+      "source_ids": [
+        "19CT6-NZ-HR",
+        "19CT6-NZ-WAI-MAY",
+        "19CT6-NZ-WAI-SEP",
+        "19CT6-NZ-WAI-RAUKAWA",
+        "19CT6-NZ-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "waikato-confiscated-1865"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "eastern-bay-of-plenty-raupatu",
+      "first_explicitly_mapped_year": 1866,
+      "source_ids": [
+        "19CT6-NZ-EBP-1866",
+        "19CT6-NZ-EBP-1870",
+        "19CT6-NZ-EBP-TRIB",
+        "19CT6-NZ-LINZ"
+      ],
+      "geography": {
+        "feature_ids": [
+          "eastern-bay-of-plenty-raupatu-1866"
+        ],
+        "draw_mode": "dashed_reference"
+      }
     }
   ],
   "annual_snapshots": [
@@ -1082,7 +1359,11 @@
         "british-columbia-polity",
         "haida-gwaii-colonial-jurisdiction",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1114,7 +1395,11 @@
         "vancouver-island-separate-colony",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession"
       ],
       "note": "纳闽续绘，卡弗拉里亚升为单独王室殖民地。"
     },
@@ -1160,7 +1445,11 @@
         "british-columbia-polity",
         "haida-gwaii-colonial-jurisdiction",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1192,7 +1481,11 @@
         "vancouver-island-separate-colony",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession"
       ],
       "note": "南澳西扩；新南威尔士南部范围收缩。"
     },
@@ -1238,7 +1531,11 @@
         "british-columbia-polity",
         "haida-gwaii-colonial-jurisdiction",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1270,7 +1567,11 @@
         "vancouver-island-separate-colony",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession"
       ],
       "note": "昆士兰西扩，原新南威尔士北部范围再次调整。"
     },
@@ -1317,7 +1618,11 @@
         "chatham-islands-rekohu",
         "haida-gwaii-colonial-jurisdiction",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1351,7 +1656,11 @@
         "british-columbia-mainland-1863-boundary",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession"
       ],
       "note": "北领地移归南澳，不列颠哥伦比亚大陆按这一年可核法定边线起画。"
     },
@@ -1398,7 +1707,11 @@
         "chatham-islands-rekohu",
         "haida-gwaii-colonial-jurisdiction",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1432,7 +1745,11 @@
         "british-columbia-mainland-1863-boundary",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession"
       ],
       "note": "沿用前一年已绘的区域。"
     },
@@ -1479,7 +1796,17 @@
         "chatham-islands-rekohu",
         "haida-gwaii-colonial-jurisdiction",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "tauranga-mainland-raupatu",
+        "taranaki-waitara-south",
+        "taranaki-oakura",
+        "taranaki-ngatiawa-coast",
+        "taranaki-ngatiruanui-coast",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands",
+        "waikato-1865-raupatu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1513,7 +1840,17 @@
         "british-columbia-mainland-1863-boundary",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "tauranga-proclaimed-1865",
+        "taranaki-waitara-south-1865",
+        "taranaki-oakura-1865",
+        "taranaki-ngatiawa-coast-1865",
+        "taranaki-ngatiruanui-coast-1865",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession",
+        "waikato-confiscated-1865"
       ],
       "note": "沿用前一年已绘的区域。"
     },
@@ -1558,7 +1895,18 @@
         "penang-main-island",
         "chatham-islands-rekohu",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "tauranga-mainland-raupatu",
+        "taranaki-waitara-south",
+        "taranaki-oakura",
+        "taranaki-ngatiawa-coast",
+        "taranaki-ngatiruanui-coast",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands",
+        "waikato-1865-raupatu",
+        "eastern-bay-of-plenty-raupatu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1591,7 +1939,18 @@
         "british-columbia-united-colony",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "tauranga-proclaimed-1865",
+        "taranaki-waitara-south-1865",
+        "taranaki-oakura-1865",
+        "taranaki-ngatiawa-coast-1865",
+        "taranaki-ngatiruanui-coast-1865",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession",
+        "waikato-confiscated-1865",
+        "eastern-bay-of-plenty-raupatu-1866"
       ],
       "note": "温哥华岛与不列颠哥伦比亚合并；卡弗拉里亚并入开普。"
     },
@@ -1638,7 +1997,18 @@
         "penang-main-island",
         "chatham-islands-rekohu",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "tauranga-mainland-raupatu",
+        "taranaki-waitara-south",
+        "taranaki-oakura",
+        "taranaki-ngatiawa-coast",
+        "taranaki-ngatiruanui-coast",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands",
+        "waikato-1865-raupatu",
+        "eastern-bay-of-plenty-raupatu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1673,7 +2043,18 @@
         "british-columbia-united-colony",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "tauranga-proclaimed-1865",
+        "taranaki-waitara-south-1865",
+        "taranaki-oakura-1865",
+        "taranaki-ngatiawa-coast-1865",
+        "taranaki-ngatiruanui-coast-1867",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession",
+        "waikato-confiscated-1865",
+        "eastern-bay-of-plenty-raupatu-1866"
       ],
       "note": "安大略、魁北克、新斯科舍和新布伦瑞克作为加拿大创始省。"
     },
@@ -1720,7 +2101,18 @@
         "penang-main-island",
         "chatham-islands-rekohu",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "tauranga-mainland-raupatu",
+        "taranaki-waitara-south",
+        "taranaki-oakura",
+        "taranaki-ngatiawa-coast",
+        "taranaki-ngatiruanui-coast",
+        "aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands",
+        "waikato-1865-raupatu",
+        "eastern-bay-of-plenty-raupatu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1755,7 +2147,18 @@
         "british-columbia-united-colony",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "tauranga-revised-1868",
+        "taranaki-waitara-south-1865",
+        "taranaki-oakura-1865",
+        "taranaki-ngatiawa-coast-1865",
+        "taranaki-ngatiruanui-coast-1867",
+        "aden-main-1858-india",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession",
+        "waikato-confiscated-1865",
+        "eastern-bay-of-plenty-raupatu-1866"
       ],
       "note": "沿用前一年已绘的区域。"
     },
@@ -1802,7 +2205,21 @@
         "penang-main-island",
         "chatham-islands-rekohu",
         "malacca-mainland",
-        "province-wellesley-mainland"
+        "province-wellesley-mainland",
+        "heligoland-main-island",
+        "tauranga-mainland-raupatu",
+        "tauranga-retained-block",
+        "taranaki-waitara-south",
+        "taranaki-oakura",
+        "taranaki-ngatiawa-coast",
+        "taranaki-ngatiruanui-coast",
+        "basutoland",
+        "aden-main-peninsula",
+        "little-aden-main-peninsula",
+        "perim-island",
+        "kuria-muria-islands",
+        "waikato-1865-raupatu",
+        "eastern-bay-of-plenty-raupatu"
       ],
       "active_feature_ids": [
         "uk-great-britain-ireland-union",
@@ -1837,7 +2254,21 @@
         "british-columbia-united-colony",
         "newfoundland-responsible-government",
         "arakan-ramree-island-cession",
-        "arakan-cheduba-island-cession"
+        "arakan-cheduba-island-cession",
+        "heligoland-1814-british",
+        "tauranga-revised-1868",
+        "tauranga-retained-confiscated-block",
+        "taranaki-waitara-south-1865",
+        "taranaki-oakura-1865",
+        "taranaki-ngatiawa-coast-1865",
+        "taranaki-ngatiruanui-coast-1867",
+        "basutoland-aliwal-north-1869",
+        "aden-main-1858-india",
+        "little-aden-1869-purchase",
+        "perim-1858-aden-dependency",
+        "kuria-muria-1854-cession",
+        "waikato-confiscated-1865",
+        "eastern-bay-of-plenty-raupatu-1866"
       ],
       "note": "沿用前一年已绘的区域。"
     }
@@ -1847,7 +2278,9 @@
       "data/nineteenth-century-territorial-areas.geojson",
       "data/nineteenth-century-territorial-areas-batch2.geojson",
       "data/nineteenth-century-territorial-areas-batch3.geojson",
-      "data/nineteenth-century-territorial-areas-batch4.geojson"
+      "data/nineteenth-century-territorial-areas-batch4.geojson",
+      "data/nineteenth-century-territorial-areas-batch5.geojson",
+      "data/nineteenth-century-territorial-areas-batch6.geojson"
     ],
     "verified_new_or_changed_control_polygons": 0,
     "open_spatial_questions": [
@@ -1858,6 +2291,8 @@
     "source_registry_file": "data/nineteenth-century-territorial-areas-batch2.geojson",
     "handoff_file": "docs/research/EDITOR29_19C_TERRITORY_SECOND_20261117.md",
     "additional_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_THIRD_20261117.md",
-    "fourth_batch_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_FOURTH_20261117.md"
+    "fourth_batch_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_FOURTH_20261117.md",
+    "fifth_batch_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_FIFTH_20261117.md",
+    "sixth_batch_handoff_file": "docs/research/EDITOR30_19C_TERRITORY_SIXTH_20261117.md"
   }
 }
