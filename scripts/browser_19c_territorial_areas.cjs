@@ -72,14 +72,30 @@ async function verify() {
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1880-cyprus-dossier.png') });
 
   for (const [year, present, absent] of [
-   [1800, ['wellesley-cession-1800'], ['wellesley-core-1831', 'malacca-mainland-1833-settled']],
-   [1806, [], ['heligoland-1807-occupation']],
-   [1807, ['heligoland-1807-occupation'], ['heligoland-1814-british']],
-   [1814, ['heligoland-1814-british'], ['heligoland-1807-occupation']],
+   [1800, ['wellesley-cession-1800', 'great-britain-1800-kingdom', 'ireland-1800-kingdom',
+    'menorca-1800-third-occupation', 'barbados-continuity-1800', 'grenada-continuity-1800',
+    'martinique-occupation-1800', 'tobago-occupation-1800', 'st-lucia-occupation-1800',
+    '19CT7-ceylon-maritime-1800', '19CT7-kandy-kingdom-1800', 'upper-canada-1800', 'lower-canada-1800',
+    '19CT7-malacca-garrison-fort'],
+    ['wellesley-core-1831', 'malacca-mainland-1833-settled', 'uk-great-britain-ireland-union', 'ceylon-crown-island']],
+   [1801, ['uk-great-britain-ireland-union', 'martinique-occupation-1800'],
+    ['great-britain-1800-kingdom', 'ireland-1800-kingdom']],
+   [1802, ['trinidad-1802-cession', '19CT7-ceylon-maritime-1802', '19CT7-kandy-kingdom-1800'],
+    ['martinique-occupation-1800', 'tobago-occupation-1800', 'st-lucia-occupation-1800',
+     'menorca-1800-third-occupation', '19CT7-ceylon-maritime-1800']],
+   [1803, ['tobago-occupation-1803', 'st-lucia-occupation-1803'], ['martinique-occupation-1809']],
+   [1806, ['19CT7-malacca-garrison-fort'], ['heligoland-1807-occupation']],
+   [1807, ['heligoland-1807-occupation'], ['heligoland-1814-british', '19CT7-malacca-garrison-fort']],
+   [1809, ['martinique-occupation-1809', 'lower-canada-1809', 'newfoundland-anticosti-1809'], ['lower-canada-1800']],
+   [1814, ['heligoland-1814-british', 'tobago-1814-cession', 'saint-lucia-1814-cession',
+    'norfolk-1814-settlement-evacuated'],
+    ['heligoland-1807-occupation', 'martinique-occupation-1809', 'norfolk-1800-first-penal']],
+   [1815, ['ceylon-crown-island'], ['19CT7-kandy-kingdom-1800', '19CT7-ceylon-maritime-1802']],
    [1819, ['cape-breton-separate-colony'], ['nova-scotia-1820-cape-breton-union']],
    [1820, ['nova-scotia-1820-cape-breton-union'], ['cape-breton-separate-colony']],
-   [1824, ['nsw-1800-commission'], ['tasmania-1825-van-diemens-land']],
-   [1825, ['nsw-1825-westward', 'tasmania-1825-van-diemens-land'], ['nsw-1800-commission']],
+   [1824, ['nsw-1800-commission', '19CT7-bencoolen-marlborough-company'], ['tasmania-1825-van-diemens-land']],
+   [1825, ['nsw-1825-westward', 'tasmania-1825-van-diemens-land', 'lower-canada-1825', 'norfolk-1825-second-penal-nsw'],
+    ['nsw-1800-commission', '19CT7-bencoolen-marlborough-company', 'newfoundland-anticosti-1809']],
    [1826, ['arakan-ramree-island-cession', 'arakan-cheduba-island-cession'], []],
    [1829, ['western-australia-1829-proclamation'], ['western-australia-commission-1831']],
    [1830, ['wellesley-cession-1800'], ['wellesley-core-1831']],
@@ -91,8 +107,9 @@ async function verify() {
    [1836, ['nsw-1836-south-australia', 'south-australia-1836-province'], ['nsw-1825-westward']],
    [1838, [], ['aden-main-1839-company']],
    [1839, ['aden-main-1839-company'], ['aden-main-1858-india']],
-   [1840, [], ['hong-kong-island-1841-occupation', 'chatham-1842-annexation']],
-   [1841, ['hong-kong-island-1841-occupation'], ['hong-kong-island-1842-treaty']],
+   [1840, ['upper-canada-1800', 'lower-canada-1825'], ['hong-kong-island-1841-occupation', 'chatham-1842-annexation']],
+   [1841, ['hong-kong-island-1841-occupation', 'province-of-canada-1841'],
+    ['hong-kong-island-1842-treaty', 'upper-canada-1800', 'lower-canada-1825']],
    [1842, ['hong-kong-island-1842-treaty', 'chatham-1842-annexation'], ['hong-kong-island-1841-occupation']],
    [1843, ['hong-kong-island-1843-crown'], ['hong-kong-island-1842-treaty']],
    [1850, ['nsw-1836-south-australia'], ['victoria-1851-mainland']],
@@ -285,6 +302,37 @@ async function verify() {
   await showCapeTown(6);
   assert.equal(await siteMarkers.count(), 0);
   assert.deepEqual(await ids(), layers1879);
+
+  await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
+   window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
+   window.atlasStoryBridge.currentYear() === 1799, undefined, { timeout: 45000 });
+  const oldZones = await page.evaluate(() => window.eighteenthMassSpatial.getAudit().activeZones);
+  for (const id of ['GRENADA', 'MENORCA_ISLAND', 'UPPER_CANADA', 'LOWER_CANADA']) assert(oldZones.includes(id));
+  assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 2);
+  assert.deepEqual(await ids(), []);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  const nextZones = await ids();
+  for (const id of ['grenada-continuity-1800', 'menorca-1800-third-occupation',
+   'upper-canada-1800', 'lower-canada-1800']) assert(nextZones.includes(id));
+  assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 0);
+  assert.equal(await siteMarkers.count(), 0);
+  await page.screenshot({ path: join(screenshotDir, '19c-territory-1800-handoff.png') });
+  await page.locator('#prevYear').click();
+  assert.equal(await page.evaluate(() => window.atlasStoryBridge.currentYear()), 1799);
+  assert.deepEqual(await ids(), []);
+  await page.locator('#nextYear').click();
+  await page.locator('#mapLayerEvents').uncheck();
+  await page.evaluate(() => window.__historicOverlapHost.map.setView([18.233333, -77.75], 10, { animate: false }));
+  await clickAreaAt(18.233333, -77.75);
+  await page.locator('#dossierBody h2').filter({ hasText: '阿康蓬' }).waitFor();
+  assert.match(await page.locator('#dossierBody h2').textContent(), /马龙条约社区/);
+  await page.locator('#resetDossier').click();
+  await jump(1842);
+  await clickAreaAt(18.233333, -77.75);
+  await page.locator('#dossierBody h2').filter({ hasText: '阿康蓬' }).waitFor();
+  assert.match(await page.locator('#dossierBody h2').textContent(), /马龙社区与地方治理/);
 
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');

@@ -1,0 +1,2610 @@
+{
+  "schema": "atlas-18c-to-19c-spatial-continuity-v1",
+  "scope": "1799年末在12个十八世纪地图数据集内仍有效的区域记录和明示社区核心。各批仅作点位代理的从属站点随其区域记录归类。",
+  "baseline_year": 1799,
+  "next_year": 1800,
+  "policy": {
+    "continued": "旧记录所涉区域延续，采用当前有来源的形状",
+    "renewed_scope": "承接史实，变更旧框范围或重新表达法律范围",
+    "occupation": "军事占据延续，按移交及归还文书更新",
+    "anchor": "以有地点证据的港口、城市、驻堡或社区核心承接",
+    "event_history": "继续保存事件、战争或历史影响，既有图形不作为下一年控制面",
+    "network_evidence": "继续保存商业网络资料；地理管辖另核",
+    "political_relation_evidence": "继续保存外交或间接影响资料；独立或法定范围另核",
+    "fiscal_evidence": "继续保存财税关系资料；行政管辖及范围另核",
+    "claim_evidence": "先保存过去的法律声索类别；同期具体权属与实地管辖须分查",
+    "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
+  },
+  "counts": {
+    "1799_prior_records_reviewed": 298,
+    "linked_to_1800_public_geometry": 74,
+    "by_disposition": {
+      "anchor": 31,
+      "claim_evidence": 7,
+      "continued": 17,
+      "event_history": 7,
+      "fiscal_evidence": 37,
+      "needs_boundary_or_site_review": 90,
+      "network_evidence": 69,
+      "occupation": 13,
+      "political_relation_evidence": 14,
+      "renewed_scope": 13
+    }
+  },
+  "records": [
+    {
+      "prior_id": "B37-A-Z001",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "海岸角Cape Coast英国贩奴堡核心",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-coast-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-A-Z002",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "海岸角附近登陆和船只商贸水域",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z006",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "1757后阿诺马布Fort William新英堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "anomabu-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-A-Z007",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "阿诺马布湾外奴隶贸易船运航区",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z008",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Dixcove Fort Metal Cross英方堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "dixcove-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-A-Z010",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Dixcove近岸英商黄金贸易企图",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z012",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "1768后Beyin Fort Apollonia英堡",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z013",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Beyin及Nzema海岸英商关系",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z014",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Accra Jamestown Fort James英国要塞",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z015",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Accra附近英商海岸接驳网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z016",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "English Komenda英堡",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z017",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Komenda英荷堡垒竞争海岸",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z018",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Gold Coast英荷丹葡多国堡垒共存",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z028",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "1795—1799 Bunce Island英国私人贸易",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z029",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Sierra Leone河港奴隶贸易船运流域",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z031",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "1792—1799 Freetown黑人定居与公司治理",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "freetown-office-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-A-Z032",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Old Calabar Duke Town英国贩奴商接触区",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z033",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Old Calabar Old Town当地商人政治活动",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z034",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Old Calabar Creek Town与英奴隶船商交往",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z038",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Ouidah原住王国及1727后Dahomey政治",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z039",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Ouidah英国商馆与奴役交易",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-A-Z040",
+      "source_dataset": "data/eighteenth-century-b37-africa.json",
+      "name_zh": "Ouidah奴役押运路线至海岸泻湖",
+      "prior_record_kind": "displacement",
+      "resolution": "event_history",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-C-Z003",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "1783后Grenada St George恢复英国行政",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-C-Z007",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "1783后Dominica Roseau英方复占",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-C-Z010",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "1793后Tobago Scarborough英军夺岛",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "tobago-occupation-1800"
+      ],
+      "notes": "1802年归法国，1803年重新占领，1814年正式割让。"
+    },
+    {
+      "prior_id": "B37-C-Z013",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "1794—1799英国占Martinique Fort de France",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-occupation-1800"
+      ],
+      "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
+    },
+    {
+      "prior_id": "B37-C-Z014",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "1794—1799英国占Martinique Saint Pierre港",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-occupation-1800"
+      ],
+      "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
+    },
+    {
+      "prior_id": "B37-C-Z016",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "1796英军攻占Saint Lucia Fort Charlotte",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "st-lucia-occupation-1800"
+      ],
+      "notes": "1802年法国接收，1803年英军再次占领，1814年正式割让。"
+    },
+    {
+      "prior_id": "B37-C-Z020",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "1797英军占Trinidad Port of Spain",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "trinidad-1800-occupation"
+      ],
+      "notes": "1797年英军占领延至1800年，1802年正式割让。"
+    },
+    {
+      "prior_id": "B37-C-Z028",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Barbados Bridgetown英殖民港",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bridgetown-port-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-C-Z029",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Barbados Speightstown糖业商港",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-C-Z030",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Bermuda St George英方殖民港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-C-Z031",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪St Kitts Basseterre英殖民港",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "basseterre-port-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-C-Z032",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Nevis Charlestown英殖民港",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charlestown-nevis-port-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-C-Z033",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Antigua St Johns殖民商港",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "st-johns-antigua-port-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-C-Z034",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Antigua English Harbour军港",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-C-Z035",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Montserrat Plymouth英殖民定居港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-C-Z036",
+      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
+      "name_zh": "18世纪Bahamas Nassau英国殖民港镇",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "nassau-port-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-I-Z001",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1757后加尔各答Fort William公司军政堡",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z002",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1757后加尔各答胡格利河商船出口航道",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z003",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1757后穆尔希达巴德纳瓦卜与公司政治干预",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z004",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1765后加尔各答Diwani行政税务中心",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z005",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1765后巴特那财政管理中心",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z006",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1765后普尔尼亚税务涉及区",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z007",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1765后巴加尔布尔税务涉及区",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z008",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1765后达卡公司税务商贸中枢",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z014",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "马德拉斯Fort St George英公司恢复",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z017",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1751后Trichinopoly公司参与的军事联盟",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z018",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1765后卡纳提克纳瓦卜政府英方政治影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z019",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1775后阿瓦德Lucknow英国驻扎官政治影响",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z022",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1775后贝拿勒斯财税权干预地区",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z026",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1782后Salsette公司岛港参考",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z027",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1798海得拉巴Nizam与公司附属条约",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z028",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1798后海得拉巴周边公司政治军事影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z031",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1792后Malabar Calicut割让沿海区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z032",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1792后Salem Baramahal公司行政区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z033",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1799 Seringapatam英军攻城和战利品掠夺",
+      "prior_record_kind": "battle",
+      "resolution": "event_history",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z034",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1799后Coimbatore公司接管地区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z035",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1799后South Canara公司沿海接管",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z036",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1799后Mysore王室政治附属关系",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z038",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "明古伦马尔伯勒堡与公司驻点",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z040",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1786—1799 Bencoolen行政降格港堡保留",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z041",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1765后Fort Marlborough公司文书和商贸",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z042",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1700—1799西苏门答腊胡椒贸易契约影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z047",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1786 Penang岛英国公司乔治市港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z048",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1786 Penang Fort Cornwallis英国公司堡垒",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z051",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1795 Malacca荷兰旧港英军战时接管",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "19CT7-malacca-garrison-fort"
+      ],
+      "notes": "采用荷兰测图中的堡城驻防核心。1807年开始拆堡，直至1818年交还前保留具名驻地。"
+    },
+    {
+      "prior_id": "B37-I-Z052",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1795 Malacca海峡商航网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z053",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796 Ambon旧荷兰香料港战时英占",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z054",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796 Banda岛荷兰商站战时英占",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z055",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796后Moluccas香料商业联系",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B37-I-Z056",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796 Colombo旧荷兰港英方驻地",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-colombo-government"
+      ],
+      "notes": "保留科伦坡政务驻地。"
+    },
+    {
+      "prior_id": "B37-I-Z057",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796 Galle旧荷兰沿海堡垒",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-galle-fort"
+      ],
+      "notes": "保留加勒要塞。"
+    },
+    {
+      "prior_id": "B37-I-Z058",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796 Jaffna旧荷兰沿海行政港",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jaffna-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "B37-I-Z059",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796 Trincomalee旧荷兰英方海军港",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-trincomalee-frederick"
+      ],
+      "notes": "保留亭可马里驻军要塞。"
+    },
+    {
+      "prior_id": "B37-I-Z060",
+      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+      "name_zh": "1796—1799 Kandy内陆王国仍自主",
+      "prior_record_kind": "resistance",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-kandy-court",
+        "19CT7-kandy-kingdom-1800"
+      ],
+      "notes": "独立康提王国的外廓与王廷驻地均可查询。"
+    },
+    {
+      "prior_id": "B38-H-Z004",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1788后York Factory III公司贸易仓库群",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "york-factory-1800-post"
+      ]
+    },
+    {
+      "prior_id": "B38-H-Z005",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "York Factory向Hayes River上游运输走廊",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z006",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "York Factory向Nelson River河口通航网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z007",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "York Factory沿Hudson Bay英国商业船只航道",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z012",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1783—1799 Prince of Wales Fort废堡遗迹",
+      "prior_record_kind": "battle",
+      "resolution": "event_history",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z013",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1783后Fort Churchill重新建立英商驻站",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z014",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "Churchill Sloop Cove英国船只冬季停泊地",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z015",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "Cree Dene Inuit在Churchill河岸长期利用区域",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z017",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1774 Cumberland House首处内陆HBC商馆",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cumberland-house-1800-post"
+      ]
+    },
+    {
+      "prior_id": "B38-H-Z018",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1774后Saskatchewan River河路公司交易联系",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z019",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "Cumberland House周围Cree原住民贸易外交",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z020",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1774后York Factory至Cumberland House货运往来",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z023",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1760后The Forks苏格兰和Métis贸易者网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z024",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "Assiniboin原住民湖湾交易中介政治影响",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z025",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "HBC在Hudson Bay北部纸面特许范围",
+      "prior_record_kind": "paper_claim",
+      "resolution": "claim_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z026",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1763后上五大湖英国毛皮商路联系",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-H-Z029",
+      "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
+      "name_zh": "1796—1799加拿大河岸Fort George英方修建",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z002",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1749年后Madras Fort St George英方军驻市区",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z006",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1757年Clive重新攻取Calcutta要塞",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z012",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1765年公司获得Bengal税关Diwani权利",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z013",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1765年公司获得Bihar名义Diwani权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z014",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1765年公司名义Orissa Diwani税权声索",
+      "prior_record_kind": "paper_claim",
+      "resolution": "claim_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z015",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1765年Murshidabad纳瓦卜宫廷受英公司财政干涉",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z022",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1793年Pondicherry英军再次占领法属城",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z028",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1781年Negapatam英军夺取荷兰港堡",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z036",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1792年Malabar海岸公司获得割让土地",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z037",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1792年Baramahal和Salem公司取得地区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z038",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1792年Dindigul公司财政管理权转移",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z039",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1798年Hyderabad Nizam与公司附属条约",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z040",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1798年Hyderabad条约军事援助及财政义务影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z041",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1799年Seringapatam英军攻破王都",
+      "prior_record_kind": "battle",
+      "resolution": "event_history",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z042",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1799年Coimbatore公司接管局部辖区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z043",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1799年South Canara公司接管沿海地",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z044",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1799年Mysore保留本地王室及间接控制",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z045",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1784年Burma征服Arakan与英属Chittagong边境",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B38-I-Z046",
+      "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
+      "name_zh": "1784后Chittagong与Arakan边界英国公司警戒",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-C-Z012",
+      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
+      "name_zh": "1763后多米尼克Kalinago政治独立背景",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-C-Z029",
+      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
+      "name_zh": "1763 Grenadines岛链英方声索并存地方权属",
+      "prior_record_kind": "paper_claim",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "grenadines-continuity-1800"
+      ],
+      "notes": "按主要陆地岛屿承接，保存岛链中各行政关系。"
+    },
+    {
+      "prior_id": "B39-C-Z036",
+      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
+      "name_zh": "1763 Havana撤出与西班牙恢复",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-C-Z043",
+      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
+      "name_zh": "1796 Saint Lucia英国重夺Fort Charlotte",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "st-lucia-occupation-1800"
+      ],
+      "notes": "1802年法国接收，1803年英军再次占领，1814年正式割让。"
+    },
+    {
+      "prior_id": "B39-C-Z044",
+      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
+      "name_zh": "1797 Trinidad英军攻占西班牙岛港",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "trinidad-1800-occupation"
+      ],
+      "notes": "1797年英军占领延至1800年，1802年正式割让。"
+    },
+    {
+      "prior_id": "B39-A-Z001",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "奥图阿姆坦图姆奎里英商据点",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z002",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Otuam Tantumquery周围Fante社群海岸商贸",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z003",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Tantumquery英国商人沿岸小船运输",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z004",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1742年Prampram Fort Vernon英方小型贸易堡",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z005",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1742年Prampram海岸英国商人补给地",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z006",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1742年Prampram当地渔业社群与商站往来",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z007",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1750前后英国Winneba贸易堡所在沿岸",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z008",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Winneba附近Fante沿岸政治商贸关系",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z009",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1750英国Succondee/Sekondi商馆参考",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z010",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1700—1799荷兰Sekondi Fort Orange对英国竞争",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z011",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1704后Sekondi Dutch Fort Orange防御提升",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z012",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Sekondi附近Ahanta当地反欧洲据点行动背景",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z013",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1702后Apam Fort Patience荷兰炮堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z015",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Apam荷兰贸易与邻近英商贸易竞争岸段",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z016",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1700—1799Kormantin Fort Amsterdam荷兰统治堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z017",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Kormantin旧英国堡在18世纪的地方商路背景",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z018",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1700—1799 Accra Christiansborg丹麦贸易堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z019",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "18世纪Christiansborg丹麦商堡与地方贸易互动",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z020",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1700—1799Accra英国Fort James与丹麦堡竞争",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z021",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1783年Ada丹麦Fort Kongenstein建堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z022",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Volta河口Ada当地贸易与丹麦小堡关系",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z023",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "English Komenda英国堡与Dutch Komenda对立",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z024",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "English Komenda英国商站附近河道交易",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z025",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Dutch Komenda Fort Vredenburg荷兰旧堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z029",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1757后Anomabu Fort William英堡完工",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "anomabu-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "B39-A-Z031",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1768 Beyin Apollonia英方筑堡开端",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z032",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1750年英方在Whydah/Ouidah的贸易堡登记",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z033",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1727后Ouidah当地Dahomey王国政治控制",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z034",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "Ouidah经内陆到海岸的被奴役者转运",
+      "prior_record_kind": "displacement",
+      "resolution": "event_history",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z035",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1750英国Cape Coast至Winneba稀疏堡垒网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-A-Z036",
+      "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "name_zh": "1750 Gold Coast英国与荷丹多堡并存主权图",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z005",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1775年后Bushire英国公司驻地重开",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z006",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1775—1799Bushire—Basra公司商业函件网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z009",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1798年Bushire本地Agent Mirza Mehdi Ali Khan",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z017",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1790年代Basra公司Factory撤出向Grain转移",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z018",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1790年代Grain/Kuwait收容公司交易站",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z019",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "Grain/Kuwait与Basra贸易重组走廊",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z020",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1798 Baghdad东印度公司政治Residency成立",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z021",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1798 Baghdad公司Resident Harford Jones往来",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z022",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1798 Baghdad至Basra商信路线",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z024",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1718—1799 Surat公司商馆日记咨询业务",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z025",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1759—1800 Surat贸易文书与出口网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z026",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1796—1799 Surat公司商馆司法日记",
+      "prior_record_kind": "diplomacy",
+      "resolution": "political_relation_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z030",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1775—1799 Thana东印度公司行政日志",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z034",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1788—1799 Thana公司土地政务记录延续",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B39-G-Z045",
+      "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
+      "name_zh": "1700—1799 Bombay公司海港与波斯湾商路",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "JAMAICA",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1655年后英格兰占领牙买加：全岛殖民声索与马龙抵抗",
+      "prior_record_kind": "殖民行政参考",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-assembly-colony-main-island"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1627年后巴巴多斯殖民地：全岛经营与糖园奴役",
+      "prior_record_kind": "殖民行政参考",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-continuity-1800"
+      ]
+    },
+    {
+      "prior_id": "BERMUDA",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1612年后百慕大：英格兰公司与王室海岛殖民",
+      "prior_record_kind": "殖民行政参考",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bermuda-st-george-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_HELENA",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1659年后东印度公司圣赫勒拿岛：南大西洋补给殖民地",
+      "prior_record_kind": "公司港岛行政参考",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-helena-1800"
+      ]
+    },
+    {
+      "prior_id": "CAPE_COAST",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1665年后英方海岸角城堡：加纳黄金海岸奴隶贸易据点",
+      "prior_record_kind": "公司商贸影响范围",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-coast-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "BOMBAY",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1668年后东印度公司孟买岛：王室授予的港口司法和军事管辖",
+      "prior_record_kind": "公司港岛行政参考",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "19CT7-bombay-company-main-island"
+      ],
+      "notes": "按1812年东印度公司图的历史孟买主岛复核，萨尔塞特岛及周边各点另立台账。"
+    },
+    {
+      "prior_id": "MADRAS",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1640年后东印度公司圣乔治堡：马德拉斯沿海商馆与城镇",
+      "prior_record_kind": "公司驻防与港口参考",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "CALCUTTA",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1690—1699年东印度公司苏塔纳蒂—加尔各答三村商馆与1698扎明达里",
+      "prior_record_kind": "公司港市参考",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "RUPERT_LAND",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1670年哈德孙湾公司鲁珀特地：浩大流域纸面声索",
+      "prior_record_kind": "王室公司纸面声索",
+      "resolution": "claim_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "BAHAMAS",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1670年巴哈马领主特许：群岛广泛声索而非实际逐岛占领",
+      "prior_record_kind": "纸面群岛声索",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "bahamas-crown-1800",
+        "turks-caicos-bahamas-1800"
+      ],
+      "notes": "旧图是宽幅岛链声索。1800年分别显示巴哈马主要岛屿和该行政下的特克斯、凯科斯陆地。"
+    },
+    {
+      "prior_id": "NEWFOUNDLAND",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1610年后英格兰纽芬兰殖民特许：整岛声索与英法争夺",
+      "prior_record_kind": "纸面沿岸声索",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "newfoundland-naval-governors"
+      ],
+      "notes": "1800年使用纽芬兰本岛。拉布拉多需按法定交接年份识别。"
+    },
+    {
+      "prior_id": "ULSTER",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1609年阿尔斯特六郡王室殖民授地计划",
+      "prior_record_kind": "殖民土地剥夺影响",
+      "resolution": "event_history",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "IRELAND",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1652—1699年英格兰征服后爱尔兰王国政权的大范围控制",
+      "prior_record_kind": "王室法政行政参考",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "ireland-1800-kingdom"
+      ],
+      "notes": "按1800年法律地位呈现，1801年接联合王国。"
+    },
+    {
+      "prior_id": "LEEWARD_ISLANDS",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "1632年后背风群岛英格兰殖民据点：圣基茨、尼维斯、安提瓜、蒙特塞拉特",
+      "prior_record_kind": "多岛海上贸易影响",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "BENCOOLEN",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "明古伦东印度公司商站",
+      "prior_record_kind": "公司商站参考",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "19CT7-bencoolen-marlborough-company"
+      ],
+      "notes": "落实到马尔堡堡防务核心，1825年实际移交荷兰。"
+    },
+    {
+      "prior_id": "B36-Z001",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1713后安纳波利斯罗亚尔英驻军港区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z002",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1749后哈利法克斯海军与军事港口",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z003",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1755年博塞茹尔堡英军攻占",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z009",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1750年后新斯科舍Fort Edward军事核心",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z010",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1750年代达特茅斯殖民港市",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z011",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪大阴郁沼泽逃奴与原住民避难社区",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z028",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1767后密西西比上游英商毛皮贸易网络",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z029",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1767后草原之犬原住民—欧洲毛皮贸易点",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z030",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1763后休伦湖毛皮交易联系带",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z031",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1763后渥太华河商旅联系带",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z032",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1763后圣劳伦斯河三河市殖民港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z033",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1763后拉欣港口毛皮商站往来",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z034",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1784后新不伦瑞克弗雷德里克顿殖民行政",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fredericton-administration-1800"
+      ]
+    },
+    {
+      "prior_id": "B36-Z035",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1783后谢尔本保皇派移民定居港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z036",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1783后迪格比保皇派定居港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z037",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1796英军交还尼亚加拉堡后在加拿大一侧筑防",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z047",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1784后莫霍克社群迁往加拿大大河流域",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z048",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1757后加尔各答威廉堡公司军政据点",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z049",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1757后穆尔希达巴德纳瓦卜与公司政治干预",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z058",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1799斯里兰加帕特南攻陷及战利品掠夺",
+      "prior_record_kind": "battle",
+      "resolution": "event_history",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z059",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后伯德万地区东印度公司地税权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z060",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后胡格利地区东印度公司地税权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z061",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后纳迪亚地区公司财政影响",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z062",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后杰索尔地区公司财政影响",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z063",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后达卡地区公司财政影响",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z064",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后迈门辛地区公司财政权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z065",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后拉杰沙希地区公司财政权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z066",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后朗布尔地区公司财政权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z067",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后巴特那地区公司地税权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z068",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后伽耶地区公司财政影响",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z069",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后蒂尔胡特地区公司财政权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z070",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后普尔尼亚地区公司财政权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z071",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后巴加尔布尔地区公司财政权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z072",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765后沙哈巴德地区公司财政权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z073",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765年奥里萨巴拉索尔名义Diwani授予",
+      "prior_record_kind": "paper_claim",
+      "resolution": "claim_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z074",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1765年奥里萨克塔克名义Diwani授予",
+      "prior_record_kind": "paper_claim",
+      "resolution": "claim_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z075",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1766后北萨卡尔维沙卡帕特南税政介入",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z076",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1766后北萨卡尔斯里卡库拉姆财政介入",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z077",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1766后北萨卡尔拉贾蒙德里财政介入",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z078",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1766后北萨卡尔埃卢鲁财政介入",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z079",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1788后北萨卡尔贡土尔公司财政辖区",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z080",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1775后贝拿勒斯地区公司Zamindari税务干预",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z082",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1792后马拉巴尔卡利卡特割让地区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z083",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1792后马拉巴尔坎纳诺尔公司辖区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z084",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1792后马拉巴尔帕拉卡德地区",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z085",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1792迈索尔割让丁迪古尔",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z086",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1792迈索尔割让巴拉马哈尔塞勒姆",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z087",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1792迈索尔割让达尔马普里附近巴拉马哈尔",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z088",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1792后库格王公与公司附属贡赋关系",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z089",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1799迈索尔战后哥印拜陀划归公司",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z090",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1799迈索尔战后南卡纳拉沿海易手",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z091",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1799迈索尔战后北卡纳拉沿海易手",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z092",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1799怀纳德地区迈索尔战后划转",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z093",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1799尼尔吉里山地条约辖区变化",
+      "prior_record_kind": "paper_claim",
+      "resolution": "claim_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z094",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1799坦贾武尔地区公司财政和统治权增强",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z095",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1781英军夺取荷兰纳加帕蒂南港",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z096",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪特利切里英公司沿海商馆",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z097",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪安詹戈英公司沿海商馆",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z098",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪古德洛尔圣大卫堡商港与法英易手",
+      "prior_record_kind": "military",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z100",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1739后阿康蓬马龙条约自治土地",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z101",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1740后摩尔镇东部马龙自治社区",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z102",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1754后查尔斯镇马龙独立社区",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z123",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1763后多米尼克卡利纳戈社群生活区",
+      "prior_record_kind": "resistance",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z126",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪牙买加罗亚尔港英国海军驻地",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z127",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪牙买加西班牙镇殖民行政中心",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z128",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪牙买加金斯敦英国殖民商港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z129",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "18世纪牙买加蒙特哥贝糖业外贸港",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "B36-Z130",
+      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "name_zh": "1763—1778及1783后格林纳达圣乔治殖民港",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "NS_REVISED",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1784年后新斯科舍省缩减参考区",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nova-scotia-peninsular-colony"
+      ]
+    },
+    {
+      "prior_id": "CAPE_BRETON",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1758年后布雷顿角岛英军及殖民行政",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cape-breton-separate-colony"
+      ]
+    },
+    {
+      "prior_id": "NEW_BRUNSWICK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1784年新不伦瑞克殖民省",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fredericton-administration-1800"
+      ]
+    },
+    {
+      "prior_id": "UPPER_CANADA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1791年上加拿大行政参考",
+      "prior_record_kind": "administration",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "upper-canada-1800"
+      ],
+      "notes": "按自然资源部历史图集1780—1849册的1791图幅重绘法定外廓。"
+    },
+    {
+      "prior_id": "LOWER_CANADA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1791年下加拿大行政参考",
+      "prior_record_kind": "administration",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "lower-canada-1800"
+      ],
+      "notes": "按1791图幅重绘；1809年转隶、1825年转回的沿岸和安蒂科斯蒂岛分期处理。"
+    },
+    {
+      "prior_id": "PRINCE_EDWARD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1769年圣约翰岛独立殖民行政",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "prince-edward-island-assembly-colony"
+      ]
+    },
+    {
+      "prior_id": "GRENADA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "格林纳达1763后英国殖民行政",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "grenada-continuity-1800"
+      ]
+    },
+    {
+      "prior_id": "GRENADINES",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "格林纳丁斯群岛1763后英方声索",
+      "prior_record_kind": "paper_claim",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "grenadines-continuity-1800"
+      ],
+      "notes": "按主要陆地岛屿承接，保存岛链中各行政关系。"
+    },
+    {
+      "prior_id": "ST_VINCENT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣文森特1763后英属殖民争夺",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-vincent-continuity-1800"
+      ]
+    },
+    {
+      "prior_id": "DOMINICA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "多米尼克1763后英方殖民行政",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "dominica-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "TOBAGO",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "多巴哥1763及1793后英国控制",
+      "prior_record_kind": "administration",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "tobago-occupation-1800"
+      ],
+      "notes": "1802年归法国，1803年重新占领，1814年正式割让。"
+    },
+    {
+      "prior_id": "ST_LUCIA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣卢西亚英国短期军事控制范围",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "st-lucia-occupation-1800"
+      ],
+      "notes": "1802年法国接收，1803年英军再次占领，1814年正式割让。"
+    },
+    {
+      "prior_id": "MARTINIQUE_1794",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1794年后马提尼克英军占领",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-occupation-1800"
+      ],
+      "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
+    },
+    {
+      "prior_id": "ST_KITTS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣基茨英国殖民岛屿参考",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-kitts-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "NEVIS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "尼维斯英国殖民岛屿参考",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nevis-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "ANTIGUA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "安提瓜英国殖民行政参考",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "antigua-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "MONTSERRAT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "蒙特塞拉特英国殖民岛屿参考",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "montserrat-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBUDA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴布达英国殖民行政参考",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbuda-lease-1800"
+      ]
+    },
+    {
+      "prior_id": "CAYMAN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "开曼群岛殖民隶属及奴役贸易参考",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cayman-local-1800"
+      ]
+    },
+    {
+      "prior_id": "NASSAU_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拿骚1783年归英后的岛港行政参考",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "nassau-port-1800"
+      ]
+    },
+    {
+      "prior_id": "TRINIDAD_1797",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1797年英军夺取特立尼达后的殖民区域",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "trinidad-1800-occupation"
+      ],
+      "notes": "1797年英军占领延至1800年，1802年正式割让。"
+    },
+    {
+      "prior_id": "BELIZE_LOGGING",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1783/1786条约下伯利兹英商采木权范围",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "BENGAL_DIWANI",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1765年孟加拉地区东印度公司税收权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "BIHAR_DIWANI",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1765年比哈尔地区东印度公司税收权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "ORISSA_DIWANI",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1765年奥里萨财税权名义辖区",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "CALCUTTA_24_PARGANAS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答周边24 Parganas公司税收/产权",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "NORTHERN_CIRCARS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1760年代北萨卡尔公司财税与驻军势力",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "CARNATIC_RELATIONS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡纳提克英公司与纳瓦卜联盟及财政影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "SURAT_FACTORY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "苏拉特东印度公司商馆贸易影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "BENARES_ESTATES",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1775年后贝拿勒斯地区公司征税及驻扎官介入",
+      "prior_record_kind": "revenue",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "SALSETTE_BOMBAY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "18世纪末萨尔塞特岛及孟买周边英公司经营",
+      "prior_record_kind": "administration",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "PONDICHERRY_BRITISH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "本地治里英军阶段性占据商站周边",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "HYDERABAD_INFLUENCE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1798年海得拉巴与英公司附属同盟影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "MYSORE_1799_PARTITION",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1799年迈索尔战后瓜分与附属政权影响",
+      "prior_record_kind": "trade_influence",
+      "resolution": "network_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "SERINGAPATAM_ZONE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1799年斯里兰加帕特南城堡英军攻占核心",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "needs_boundary_or_site_review",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "CEYLON_JAFFNA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1796年后锡兰贾夫纳沿海英国公司管辖",
+      "prior_record_kind": "administration",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "19CT7-ceylon-maritime-1800"
+      ],
+      "notes": "锡兰沿海有历史外廓，贾夫纳另有单独的堡垒点。"
+    },
+    {
+      "prior_id": "CEYLON_COLOMBO",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1796年后锡兰科伦坡西岸英国公司管辖",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-colombo-government",
+        "19CT7-ceylon-maritime-1800"
+      ],
+      "notes": "沿海行政外廓和驻地同时有呈现。"
+    },
+    {
+      "prior_id": "CEYLON_GALLE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1796年后锡兰加勒南岸英国公司管辖",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-galle-fort",
+        "19CT7-ceylon-maritime-1800"
+      ],
+      "notes": "沿海行政外廓和驻地同时有呈现。"
+    },
+    {
+      "prior_id": "CEYLON_TRINCOMALEE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1796年后锡兰亭可马里东海岸英国公司控制",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-trincomalee-frederick",
+        "19CT7-ceylon-maritime-1800"
+      ],
+      "notes": "沿海行政外廓和驻地同时有呈现。"
+    },
+    {
+      "prior_id": "PENANG_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1786年槟榔屿英公司港岛概略范围",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "penang-1800-company"
+      ],
+      "notes": "槟榔屿已有独立历史形状。1800年新增对岸威省。"
+    },
+    {
+      "prior_id": "FREETOWN_1792",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1792年后塞拉利昂公司弗里敦聚落",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "freetown-office-1800"
+      ]
+    },
+    {
+      "prior_id": "GOLD_COAST_TRADE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "黄金海岸英商堡垒与贩运贸易海岸",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-coast-fort-1800",
+        "anomabu-fort-1800",
+        "dixcove-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CAPE_TOWN_ZONE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1795年英军开普敦与桌湾军事控制",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-town-government"
+      ],
+      "notes": "旧桌湾参考框按既有好望堡点位承接；1803年由巴达维亚共和国接收，1806年英国再次占领。"
+    },
+    {
+      "prior_id": "NSW_CROWN_CLAIM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1788年新南威尔士殖民法律声索宽幅",
+      "prior_record_kind": "paper_claim",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "nsw-1800-commission"
+      ],
+      "notes": "复用十九世纪现有法定范围；地方原住民族的土地仍另有治理。"
+    },
+    {
+      "prior_id": "SYDNEY_COVE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1788年后悉尼湾强制流放及殖民定居区",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sydney-cove-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "PARRAMATTA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1788年后帕拉马塔流放殖民聚落",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "parramatta-government-1800"
+      ]
+    },
+    {
+      "prior_id": "NORFOLK_SETTLEMENT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1788年后诺福克岛英国流放定居区",
+      "prior_record_kind": "administration",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "norfolk-1800-first-penal"
+      ],
+      "notes": "按主岛实形承接；1814年结束第一次流放定居，法定管辖延续。"
+    },
+    {
+      "prior_id": "FALKLAND_PAPER",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1774年撤兵后英国持续提出群岛主权声索",
+      "prior_record_kind": "paper_claim",
+      "resolution": "claim_evidence",
+      "features_at_1800": []
+    },
+    {
+      "prior_id": "MENORCA_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "米诺卡岛英国海军与殖民驻军控制阶段",
+      "prior_record_kind": "administration",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "menorca-1800-third-occupation"
+      ],
+      "notes": "1802年实际交还西班牙。"
+    },
+    {
+      "prior_id": "GIBRALTAR_PENINSULA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "1704年后直布罗陀英军据守半岛",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "gibraltar-1800-garrison"
+      ],
+      "notes": "按条约的城港与防线核心重绘，北侧地峡另核。"
+    },
+    {
+      "prior_id": "18C-MAROON-ACCOMPONG",
+      "source_dataset": "data/eighteenth-century-jamaica-maroon-autonomy-cores-1739-1799.geojson",
+      "name_zh": "Accompong Town：西部马龙社区自治与受限条约关系",
+      "prior_record_kind": "defined-core",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "accompong-maroon-1800"
+      ]
+    },
+    {
+      "prior_id": "18C-MAROON-MOORE-TOWN",
+      "source_dataset": "data/eighteenth-century-jamaica-maroon-autonomy-cores-1739-1799.geojson",
+      "name_zh": "Moore Town：Nanny相关Windward Maroons自治社区",
+      "prior_record_kind": "defined-core",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "moore-town-maroon-1800"
+      ]
+    }
+  ]
+}
