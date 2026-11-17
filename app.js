@@ -3659,11 +3659,15 @@ async function boot(){
       r33OriginalResearchThreeStoriesReady=true;
     }catch(err){console.warn('R33 dossier review not loaded; 31 previous drafts preserved',err);}
   }
-  if(preview18cReady&&reviewParams.get('review18c')==='1'){
-   for(const file of [
-    'chronology-preview-statia-bencoolen-1704-1786.json',
-    'chronology-preview-antigua-bermuda-bahamas-1701-1796.json'
-   ]){
+  const reviewEarlyTopics=reviewParams.get('review18c')==='1';
+  const reviewCrossCenturyTopics=reviewParams.get('review19c')==='1';
+  if(preview18cReady&&(reviewEarlyTopics||reviewCrossCenturyTopics)){
+   const supplements=reviewEarlyTopics?[
+    ['chronology-preview-statia-bencoolen-1704-1786.json',1799],
+    ['chronology-preview-antigua-bermuda-bahamas-1701-1796.json',1799]
+   ]:[];
+   supplements.push(['chronology-preview-barbados-west-india-regiments-1701-1807.json',1807]);
+   for(const [file,lastYear] of supplements){
     try{
       const response=await fetch('data/stories/serial/'+file,{cache:'no-store'});
       if(!response.ok)throw new Error('18C topic supplement unavailable');
@@ -3672,14 +3676,16 @@ async function boot(){
       const eventIds=new Set(events.map(event=>event.id));
       const routeIds=new Set(routes.map(route=>route.id));
       const eventYears=new Map(events.map(event=>[event.id,event.year]));
-      const decades=new Set(events.map(event=>decadeForYear(event.year)));
+      const visibleEvents=events.filter(event=>event.year<1800||
+       (reviewCrossCenturyTopics&&serialPreviewByDecade.has(decadeForYear(event.year))));
+      const decades=new Set(visibleEvents.map(event=>decadeForYear(event.year)));
       const knownEventIds=new Set([...serialPreviewByDecade.values()].flatMap(dataset=>dataset.events.map(event=>event.id)));
       const validPoint=([lat,lng])=>Number.isFinite(lat)&&Math.abs(lat)<=90&&Number.isFinite(lng)&&Math.abs(lng)<=180;
       const cited=item=>item.source_ids?.length&&item.source_ids.every(id=>sourceIds.has(id));
       if(schema!=='atlas-18c-topic-supplement-v1'||status!=='research_preview_not_published'||
          eventIds.size!==events.length||routeIds.size!==routes.length||sourceIds.size!==sources.length||
          sources.some(source=>sourcesById.has(source.id))||[...decades].some(decade=>!serialPreviewByDecade.has(decade))||
-         events.some(event=>knownEventIds.has(event.id)||!Number.isInteger(event.year)||event.year<1700||event.year>=1800||
+         events.some(event=>knownEventIds.has(event.id)||!Number.isInteger(event.year)||event.year<1700||event.year>lastYear||
           event.start_year!==event.year||event.end_year!==event.year||!cited(event)||event.publication_status!=='research_only'||event.territorial_claim!==false||
           (event.lat===null?event.lng!==null:!validPoint([event.lat,event.lng])))||
          routes.some(route=>route.dash_only!==true||!cited(route)||route.coords?.length!==2||!route.coords.every(validPoint)||
@@ -3689,7 +3695,7 @@ async function boot(){
         const base=serialPreviewByDecade.get(decade);
         const sameDecade=item=>decadeForYear(item.year)===decade;
         serialPreviewByDecade.set(decade,{...base,
-          events:[...base.events,...events.filter(sameDecade)].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
+          events:[...base.events,...visibleEvents.filter(sameDecade)].sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id)),
           routes:[...base.routes,...routes.filter(sameDecade)]});
       }
       for(const source of sources)sourcesById.set(source.id,source);
@@ -3767,6 +3773,7 @@ async function boot(){
   }
   if(!Array.isArray(atlasEarly.events)||!Array.isArray(atlasLater.events)||!Array.isArray(atlasLater.places)||!Array.isArray(atlasThird.events)||!Array.isArray(atlasThird.places)||!Array.isArray(atlasFourth.events)||!Array.isArray(atlasFourth.places)||!Array.isArray(atlasFifth.events)||!Array.isArray(atlasFifth.places)||!Array.isArray(atlasSixth.events)||!Array.isArray(atlasSixth.places)||!Array.isArray(atlasSeventh.events)||!Array.isArray(atlasSeventh.places)||!Array.isArray(atlasEighth.events)||!Array.isArray(atlasEighth.places)||!Array.isArray(atlasNinth.events)||!Array.isArray(atlasNinth.places)||!Array.isArray(atlasTenth.events)||!Array.isArray(atlasTenth.places)||!Array.isArray(atlasEleventh.events)||!Array.isArray(atlasEleventh.places)||!Array.isArray(atlasFirstMerged.events)||!Array.isArray(atlasFirstMerged.places))throw new Error('历史数据结构错误');
   if(!atlas)setYear(initialYear);
+  else if(reviewCrossCenturyTopics&&year>=1800&&serialPreviewByDecade.get(decadeForYear(year))!==atlas)setYear(year);
   renderTimelineNavigation();
   const spatialCitationResponse=await fetch('data/spatial-citation-registry.json',{cache:'no-store'});
   if(!spatialCitationResponse.ok)throw new Error('历史地理独立文献索引未能读取');

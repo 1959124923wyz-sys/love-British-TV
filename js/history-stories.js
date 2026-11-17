@@ -84,7 +84,7 @@
   action.textContent='查看事件档案';
   anchor.insertAdjacentElement('afterend',action);
  }
- function renderInline(text){
+ function renderInline(text,crossPreviewEventYears){
   const regex=/\[\[([A-Za-z0-9-]+)\|([^\]\n]{1,90})\]\]/g;
   let last=0,out='',match;
   while((match=regex.exec(text))){
@@ -94,8 +94,14 @@
    // prose: shortening a 10-person transfer label must never erase the 10 people.
    const hasCriticalNumber=/\d[\d,.]*\s*(?:名|人|艘|吨|镑|英镑|英里|亩|英亩|%|％)/.test(label);
    const linked=eventInMemory(id),short=linked&&label.length>22&&!hasCriticalNumber?eventHeadline(linked):label;
-   out+='<button type="button" class="story-event-link" data-story-event="'+esc(id)+
-    '" title="'+esc(label)+' · 单击定位或查看简介，双击阅读详情">'+esc(short)+'</button>';
+   const crossYear=crossPreviewEventYears?.[id];
+   if(!linked&&Number.isInteger(crossYear)&&crossYear>=1800&&crossYear<=1819){
+    out+='<a class="story-event-link" href="?review18c=1&amp;review19c=1&amp;year='+crossYear+
+     '" title="打开'+crossYear+'年年表">'+esc(label)+'</a>';
+   }else{
+    out+='<button type="button" class="story-event-link" data-story-event="'+esc(id)+
+     '" title="'+esc(label)+' · 单击定位或查看简介，双击阅读详情">'+esc(short)+'</button>';
+   }
    last=regex.lastIndex;
   }
   return out+esc(text.slice(last));
@@ -291,7 +297,8 @@
    ['E18-E15-BENCOOLEN-1704-1723']:[];
   const islandsContinuation=article.id==='E6-T16-ATLANTIC-ISLANDS'&&storyMeta.has('E18-A22-BERMUDA-BAHAMAS-1718-1796')?
    ['E18-A22-BERMUDA-BAHAMAS-1718-1796']:[];
-  const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,...islandsContinuation,
+  const barbadosContinuation=article.id==='E6-T07-BARBADOS'?['E18-A06-BARBADOS-SUGAR-LAW-1701-1785']:[];
+  const relatedStories=[...(article.related_story_ids||[]),...oldStoryContinuation,...islandsContinuation,...barbadosContinuation,
     ...eicStoryContinuation,...mysoreEicContinuation,...marathaEicContinuation,...carnaticEicContinuation,...manilaEicContinuation,...capeIndigenousContinuation,...westAfricanSlaveryContinuation,...sierraLeoneContinuation,...indianFiscalContinuation,...ceylonColonialContinuation,...frontierArchiveContinuation,...garifunaContinuation,...fedonRebellionContinuation,...virginiaNewYorkSlaveContinuation,...carolinaTuscaroraContinuation,...sevenYearsContinuation,...lenapePurchaseContinuation,...revolution24Continuation,...hudsonBay25Continuation,...bengalFamine26Continuation,...bengalLand27Continuation,...eicParliament28Continuation,...penangT23Continuation,...t28HavanaMaltaContinuation,...t33ScottishFreedomContinuation,...r33Dossiers,...jamaicaStoryContinuation,...atlanticContinuation,...irelandContinuation,...scotlandContinuation,...bencoolenContinuation].map(id=>storyMeta.get(id)).filter(Boolean)
    .map(meta=>'<button type="button" class="major-story-enter" data-story-open="'+esc(meta.id)+'" data-story-source="'+esc(sourceEventId||'')+'"><span>'+esc(storyHeadline(meta))+'</span><span aria-hidden="true">›</span></button>')
    .join('');
@@ -306,7 +313,7 @@
     relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+
     '<div class="story-body">'+article.sections.map(sec=>
      '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3 title="'+esc(sec.heading)+'">'+esc(sectionHeadline(sec.heading))+'</h3>'+
-      sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p))+'</p>').join('')+
+      sec.paragraphs.map(p=>'<p>'+renderInline(readerFriendly(p),article.cross_preview_event_years)+'</p>').join('')+
      '</section>').join('')+'</div>'+
     '<details class="story-sources"><summary>参考资料 · '+article.sources.length+'项 <span aria-hidden="true">▾</span></summary>'+
 
