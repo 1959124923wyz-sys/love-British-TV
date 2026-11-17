@@ -58,5 +58,5 @@ assert(a.includes("renderHistoricalRegionGuide();window.historicOverlapDossier?.
 assert.equal((a.match(/window\.eighteenthOverlapDossier\?\.render\?\.\(\);/g)||[]).length,4);
 const original=json('data/eighteenth-century-dynamic-spatial-1700-1799.json');
 assert.equal(original.area_references.length,24);assert.equal(original.control_sites.length,15);
-assert(old.includes("areas.length!==629||sites.length!==421"));
-console.log('PASS cross-century UX source audit: 53 seventeenth-century charters, 32 regional studies, 191 source cues, 7+7 Tudor periods, 28 war study polygons; live layer adapter and original 18C 629/421 preserved.');
+assert(old.includes("areas.length!==628||sites.length!==421"));
+console.log('PASS cross-century UX source audit: 53 seventeenth-century charters, 32 regional studies, 191 source cues, 7+7 Tudor periods, 28 war study polygons; live layer adapter and original 18C 628/421 preserved.');

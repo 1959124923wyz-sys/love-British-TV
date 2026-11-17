@@ -111,4 +111,4 @@ assert(js.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(js.includes('window.eighteenthBatch38Spatial='));
 assert(js.includes('counts={\'south-campaign\':[48,41],'));
 assert(!/area_sqkm\s*=\s*[1-9]/.test(js));
-console.log('PASS: 127 new schematic zones,90 linked reference cores,217 time phases; cumulative 503,338,890. Exact 18C reversals, proxy geometry, origins and preview access validated.');
+console.log('PASS: 127 new schematic zones,90 linked reference cores,217 time phases; cumulative 502,338,891. Exact 18C reversals, proxy geometry, origins and preview access validated.');

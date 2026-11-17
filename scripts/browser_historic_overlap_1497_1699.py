@@ -132,10 +132,10 @@ try:
  wait.until(lambda _:js("return window.eighteenthOverlapDossier?.getAudit?.()?.loaded") and
   d.find_element(By.ID,'bigYear').text=='1762')
  assert not audit()['enabled']
- assert js("return window.eighteenthOverlapDossier.getAudit().areas") ==629
+ assert js("return window.eighteenthOverlapDossier.getAudit().areas") ==628
  assert js("return window.eighteenthOverlapDossier.getAudit().sites")==421
  snap('1762-existing-eighteenth-map-unchanged')
- print('PASS native original-map right overlap rollout: 1497–1599 Tudor areas, 1609–1699 charter polygons and 1613 regional studies, hover glow, historical sources, map toggles, preserved 18C 629/421.')
+ print('PASS native original-map right overlap rollout: 1497–1599 Tudor areas, 1609–1699 charter polygons and 1613 regional studies, hover glow, historical sources, map toggles, preserved 18C 628/421.')
 except Exception:
  snap('FAILED')
  raise

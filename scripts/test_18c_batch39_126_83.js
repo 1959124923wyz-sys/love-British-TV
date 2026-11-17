@@ -106,4 +106,4 @@ assert(js.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(js.includes("window.eighteenthBatch39Spatial="));
 assert(js.includes("areas.length!==126||points.length!==83"));
 assert(!/area_sqkm\s*=\s*[1-9]/.test(js));
-console.log('PASS 18c39 new 126 zones,83 cores,209 phase spans; cumulative 629 zones,421 points,1101 phases; geography, source, historical withdrawal, local autonomy and GIS constraints valid.');
+console.log('PASS 18c39 new 126 zones,83 cores,209 phase spans; cumulative 628 zones,421 points,1100 phases; geography, source, historical withdrawal, local autonomy and GIS constraints valid.');

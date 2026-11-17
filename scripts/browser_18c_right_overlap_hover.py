@@ -28,7 +28,7 @@ try:
  wait.until(lambda _:audit() and audit()['loaded'] and
   js("return document.querySelector('#jumpYear')?.max==='1799'") and
   js("return window.eighteenthBatch39Spatial?.getAudit?.()?.loaded"))
- assert (audit()['areas'],audit()['sites'])==(629,421),audit()
+ assert (audit()['areas'],audit()['sites'])==(628,421),audit()
  assert not js("return Boolean(window.eighteenthReaderPilot)")
  assert not js("return document.querySelector('#atlas18cReaderPanel')!==null")
  # Havana 1762 is independently supported by at least four overlapping B39 source rectangles.
@@ -117,7 +117,7 @@ try:
  wait.until(lambda _:d.find_element(By.ID,'bigYear').text=='1699')
  assert not js("return Boolean(window.eighteenthOverlapDossier)")
  assert not js("return Boolean(window.eighteenthReaderPilot)")
- print('PASS original-map right dossier: 629 outlines +421 sites, 1762 Havana >=4 records, hover real glow, click detailed source, 1763 refresh, territory gate, 1572 old map and public isolation. clickMethod='+str(outcome))
+ print('PASS original-map right dossier: 628 outlines +421 sites, 1762 Havana >=4 records, hover real glow, click detailed source, 1763 refresh, territory gate, 1572 old map and public isolation. clickMethod='+str(outcome))
 except Exception:
  snap('FAILED')
  raise

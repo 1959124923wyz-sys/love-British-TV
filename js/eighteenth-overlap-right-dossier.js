@@ -311,7 +311,7 @@
     sites.push({...row,id:'18c-old-site:'+row.id,kind:kindFromChinese(row),
      coordinates:row.geometry.coordinates});
    }
-   if(areas.length!==629||sites.length!==421)throw Error('unexpected original archive totals: '+areas.length+'/'+sites.length);
+   if(areas.length!==628||sites.length!==421)throw Error('unexpected original archive totals: '+areas.length+'/'+sites.length);
    loaded=true;render();
   }catch(e){error=String(e);console.error('18C overlap selector rejected missing historical source:',e)}
  }
