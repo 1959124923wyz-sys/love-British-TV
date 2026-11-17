@@ -1,0 +1,1573 @@
+{
+  "schema": "territory-transition-v2",
+  "stage": "research_draft",
+  "template_only": false,
+  "scope": "19世纪两批公开参考区域及章节已有Polygon/MultiPolygon，地点与路线保留在原数据。",
+  "period": {
+    "previous_from": 1850,
+    "previous_to": 1859,
+    "next_from": 1860,
+    "next_to": 1869
+  },
+  "previous_snapshot": {
+    "year": 1859,
+    "source_file": "data/nineteenth-century-spatial-1850-1859.geojson",
+    "active_stable_ids": [
+      "uk-great-britain-ireland-union",
+      "ceylon-crown-island",
+      "jamaica-main-island",
+      "mauritius-british-main-island",
+      "western-australia-commission-1831",
+      "tasmania-1856-main-island",
+      "new-zealand-crown-proclamation",
+      "australia-colony-nsw",
+      "australia-colony-sa",
+      "australia-colony-victoria",
+      "australia-colony-queensland",
+      "malta-maltese-islands",
+      "trinidad-main-island",
+      "tobago-main-island",
+      "saint-lucia-main-island",
+      "seychelles-principal-inner-islands",
+      "rodrigues-island",
+      "st-helena-main-island",
+      "ascension-main-island",
+      "tristan-da-cunha-main-island",
+      "falklands-malvinas-main-islands",
+      "nova-scotia-polity",
+      "new-brunswick-polity",
+      "prince-edward-island-polity",
+      "vancouver-island-separate-colony",
+      "newfoundland-island-polity",
+      "arakan-ramree-island-cession",
+      "arakan-cheduba-island-cession",
+      "awadh-kingdom-boundary-1855",
+      "cape-zuurveld",
+      "cape-british-kaffraria-1847",
+      "borneo-labuan-island",
+      "vancouver-island-1849-royal-grant"
+    ],
+    "other_source_files": [
+      "data/nineteenth-century-territorial-areas.geojson",
+      "data/nineteenth-century-territorial-areas-batch2.geojson"
+    ]
+  },
+  "records": [
+    {
+      "stable_id": "uk-great-britain-ireland-union",
+      "name_zh": "大不列颠及爱尔兰联合王国",
+      "transition": "continued",
+      "evidence_scope": "本土政治联合",
+      "source_ids": [
+        "19CT-UK",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "uk-great-britain-ireland-union"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "ceylon-crown-island",
+      "name_zh": "锡兰岛 · 英属殖民行政",
+      "transition": "continued",
+      "evidence_scope": "王室殖民地",
+      "source_ids": [
+        "19CT-LK",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "ceylon-crown-island"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "jamaica-main-island",
+      "name_zh": "牙买加本岛 · 总督与议会",
+      "transition": "continued",
+      "evidence_scope": "英国殖民行政",
+      "source_ids": [
+        "19CT-JAM",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "jamaica-assembly-colony-main-island"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "mauritius-british-main-island",
+      "name_zh": "毛里求斯本岛 · 英属殖民行政",
+      "transition": "continued",
+      "evidence_scope": "王室殖民地",
+      "source_ids": [
+        "19CT-MAU",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "mauritius-british-main-island"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "western-australia-commission-1831",
+      "name_zh": "西澳大利亚 · 殖民辖区",
+      "transition": "continued",
+      "evidence_scope": "总督委任状所定辖区",
+      "source_ids": [
+        "19CT-WA",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "western-australia-commission-1831"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "tasmania-1856-main-island",
+      "name_zh": "塔斯马尼亚本岛 · 殖民政府",
+      "transition": "continued",
+      "evidence_scope": "殖民行政",
+      "source_ids": [
+        "19CT-TAS",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "tasmania-1856-main-island"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "new-zealand-crown-proclamation",
+      "name_zh": "新西兰 · 英国王室宣布主权",
+      "transition": "continued",
+      "evidence_scope": "王室主权宣告",
+      "source_ids": [
+        "19CT-NZ",
+        "19CT-WAITANGI",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "new-zealand-crown-proclamation"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "australia-colony-nsw",
+      "name_zh": "新南威尔士 · 昆士兰分设后",
+      "transition": "continued",
+      "evidence_scope": "英方划定的殖民辖区",
+      "source_ids": [
+        "19CT2-AU-QLD",
+        "19CT2-AU-QLDS",
+        "19CT2-AU-GAH",
+        "19CT2-AU-GA",
+        "19CT2-NE50"
+      ],
+      "geography": {
+        "feature_ids": [
+          "nsw-1859-queensland"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "australia-colony-sa",
+      "name_zh": "南澳大利亚 · 建省制诰",
+      "transition": "continued",
+      "evidence_scope": "英方划定的殖民辖区",
+      "source_ids": [
+        "19CT2-AU-SAP",
+        "19CT2-AU-SAT",
+        "19CT2-AU-ABS",
+        "19CT2-NE50"
+      ],
+      "geography": {
+        "feature_ids": [
+          "south-australia-1836-province"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "australia-colony-victoria",
+      "name_zh": "维多利亚 · 菲利普港区分设",
+      "transition": "continued",
+      "evidence_scope": "英方划定的殖民辖区",
+      "source_ids": [
+        "19CT2-AU-VIC",
+        "19CT2-AU-VICT",
+        "19CT2-AU-GAH",
+        "19CT2-AU-GA",
+        "19CT2-NE50"
+      ],
+      "geography": {
+        "feature_ids": [
+          "victoria-1851-mainland"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "australia-colony-queensland",
+      "name_zh": "昆士兰 · 设立殖民地",
+      "transition": "continued",
+      "evidence_scope": "英方划定的殖民辖区",
+      "source_ids": [
+        "19CT2-AU-QLD",
+        "19CT2-AU-QLDS",
+        "19CT2-AU-QLDX",
+        "19CT2-AU-GA",
+        "19CT2-NE50"
+      ],
+      "geography": {
+        "feature_ids": [
+          "queensland-1859-separation"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "malta-maltese-islands",
+      "name_zh": "马耳他群岛 · 巴黎和约割让",
+      "transition": "continued",
+      "evidence_scope": "英国殖民行政",
+      "source_ids": [
+        "19CT2-P-1814",
+        "19CT2-MT-1800",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "malta-1814-treaty"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "trinidad-main-island",
+      "name_zh": "特立尼达本岛 · 英国殖民行政",
+      "transition": "continued",
+      "evidence_scope": "英国殖民行政",
+      "source_ids": [
+        "19CT2-AMIENS",
+        "19CT2-TT-PARL",
+        "19CT2-TT-UNION",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "trinidad-1802-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "tobago-main-island",
+      "name_zh": "多巴哥本岛 · 巴黎和约割让",
+      "transition": "continued",
+      "evidence_scope": "英国殖民行政",
+      "source_ids": [
+        "19CT2-P-1814",
+        "19CT2-TT-PARL",
+        "19CT2-TT-UNION",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "tobago-1814-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "saint-lucia-main-island",
+      "name_zh": "圣卢西亚本岛 · 巴黎和约割让",
+      "transition": "continued",
+      "evidence_scope": "英国殖民行政",
+      "source_ids": [
+        "19CT2-P-1814",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "saint-lucia-1814-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "seychelles-principal-inner-islands",
+      "name_zh": "塞舌尔主要内岛 · 毛里求斯附属地",
+      "transition": "continued",
+      "evidence_scope": "殖民地附属管辖",
+      "source_ids": [
+        "19CT2-P-1814",
+        "19CT2-MU-ARCH",
+        "19CT2-SEY-US",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "seychelles-1814-mauritius-dependency"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "rodrigues-island",
+      "name_zh": "罗德里格斯 · 毛里求斯附属地",
+      "transition": "continued",
+      "evidence_scope": "殖民地附属管辖",
+      "source_ids": [
+        "19CT2-P-1814",
+        "19CT2-MU-ARCH",
+        "19CT2-MU-ROD",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "rodrigues-1814-mauritius-dependency"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "st-helena-main-island",
+      "name_zh": "圣赫勒拿岛 · 王室殖民行政",
+      "transition": "continued",
+      "evidence_scope": "王室殖民地",
+      "source_ids": [
+        "19CT2-SH-ACT",
+        "19CT2-SH-LEDGER",
+        "19CT2-SH-HISTORY",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "st-helena-1836"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "ascension-main-island",
+      "name_zh": "阿森松岛 · 英国海军驻岛",
+      "transition": "continued",
+      "evidence_scope": "英国海军部管理",
+      "source_ids": [
+        "19CT2-ASC-GOV",
+        "19CT2-TR-LAW",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "ascension-1815-admiralty"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "tristan-da-cunha-main-island",
+      "name_zh": "特里斯坦达库尼亚 · 驻军撤离后的社区",
+      "transition": "continued",
+      "evidence_scope": "岛上社区自治",
+      "source_ids": [
+        "19CT2-TR-COL",
+        "19CT2-TR-LAW",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "tristan-settlement"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "falklands-malvinas-main-islands",
+      "name_zh": "福克兰群岛（马尔维纳斯群岛） · 英属殖民行政",
+      "transition": "continued",
+      "evidence_scope": "英国殖民行政与主权争议",
+      "source_ids": [
+        "19CT2-F-FA",
+        "19CT2-F-AR",
+        "19CT2-F-AP",
+        "19CT2-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "malvinas-1843-british-colonial-administration"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "nova-scotia-polity",
+      "name_zh": "新斯科舍 · 责任政府时期",
+      "transition": "continued",
+      "evidence_scope": "英国殖民地责任政府",
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-NS-1848",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "nova-scotia-1848-responsible-government"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "new-brunswick-polity",
+      "name_zh": "新布伦瑞克 · 西部与北部边界划定后",
+      "transition": "continued",
+      "evidence_scope": "英国殖民地",
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-NB-1784",
+        "19CT2-CA-NB-1842",
+        "19CT2-CA-NB-1854",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL",
+        "19CT2-CA-NB-1851",
+        "19CT2-CA-NB-1852"
+      ],
+      "geography": {
+        "feature_ids": [
+          "new-brunswick-1851-colonial-boundary"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "prince-edward-island-polity",
+      "name_zh": "爱德华王子岛 · 责任政府时期",
+      "transition": "continued",
+      "evidence_scope": "英国殖民地责任政府",
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-PEI-ASSEMBLY",
+        "19CT2-CA-PEI-1873",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "prince-edward-island-1851-responsible-government"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "vancouver-island-separate-colony",
+      "name_zh": "温哥华岛本岛 · 单设英国殖民地",
+      "transition": "continued",
+      "evidence_scope": "英国殖民地",
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-BC-STATUTES",
+        "19CT2-CA-BC-1866-DISPATCH",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "vancouver-island-separate-colony"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "newfoundland-island-polity",
+      "name_zh": "纽芬兰本岛 · 单独殖民地的责任政府",
+      "transition": "continued",
+      "evidence_scope": "英国殖民地责任政府",
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-NF-ASSEMBLY",
+        "19CT2-CA-NF-1855",
+        "19CT2-CA-HIST",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "newfoundland-responsible-government"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "arakan-ramree-island-cession",
+      "name_zh": "兰里岛 · 若开割让地",
+      "transition": "continued",
+      "evidence_scope": "条约具名割让地",
+      "source_ids": [
+        "19CT2-BUR-YANDABO",
+        "19CT2-BUR-WYLD",
+        "19CT2-BUR-CHART",
+        "19CT2-BUR-GAZ",
+        "19CT2-BUR-RAMREE-ANCHOR"
+      ],
+      "geography": {
+        "feature_ids": [
+          "arakan-ramree-island-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "arakan-cheduba-island-cession",
+      "name_zh": "马纳昂岛 · 若开割让地",
+      "transition": "continued",
+      "evidence_scope": "条约具名割让地",
+      "source_ids": [
+        "19CT2-BUR-YANDABO",
+        "19CT2-BUR-WYLD",
+        "19CT2-BUR-CHART",
+        "19CT2-BUR-GAZ",
+        "19CT2-BUR-CHEDUBA-ANCHOR",
+        "19CT2-BUR-NE10"
+      ],
+      "geography": {
+        "feature_ids": [
+          "arakan-cheduba-island-cession"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "延续地图已核的区域。"
+    },
+    {
+      "stable_id": "awadh-kingdom-boundary-1855",
+      "name_zh": "阿瓦德 · 勒克瑙王廷辖地",
+      "transition": "uncertain_continuity",
+      "evidence_scope": "1855年旧王国地理参考",
+      "source_ids": [
+        "19C36-AWD-OLDMAP",
+        "19C36-AWD-TAKE",
+        "19C36-AWD-TAKE-TEXT",
+        "19C36-AWD-DIST",
+        "19C36-AWD-MUKH",
+        "19C36-AWD-PROCL",
+        "19C36-AWD-ESTATE",
+        "19C36-AWD-TARAI"
+      ],
+      "geography": {
+        "feature_ids": [
+          "awadh-kingdom-boundary-1855"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "旧记录以1855年奥德王国档案边线为基础，1860年殖民行政区边界待查。"
+    },
+    {
+      "stable_id": "cape-zuurveld",
+      "name_zh": "聚尔费尔德与奥尔巴尼移民安置",
+      "transition": "uncertain_continuity",
+      "evidence_scope": "旧地理范围",
+      "source_ids": [
+        "19C-CAPE-WARS",
+        "19C-CAPE-THOMPSON",
+        "19C-CAPE-COURT",
+        "19C-CAPE-GRAHAM",
+        "19C-CAPE-RIVERS",
+        "19C-CAPE-BUSHMANS",
+        "19C-CAPE-EASTERN-ANCHORS",
+        "19C33-ALBANY-MAP",
+        "19C33-SALEM",
+        "19C34-CAP-LAW"
+      ],
+      "geography": {
+        "feature_ids": [
+          "cape-zuurveld"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "附英国殖民定居的前期地理记录保留，阿尔巴尼后续有效辖区边线另考。"
+    },
+    {
+      "stable_id": "cape-british-kaffraria-1847",
+      "name_zh": "英属卡弗拉里亚 · 1847年王室公告",
+      "transition": "transferred",
+      "evidence_scope": "此前的公告范围",
+      "source_ids": [
+        "19C35-SA-THEAL-VOL3",
+        "19C35-SA-CAPE-GAZETTE",
+        "19C35-SA-CAPE-LAW",
+        "19C35-SA-THEAL-1848",
+        "19C35-SA-PIPER-1849",
+        "19C35-SA-KEI-RIVERS",
+        "19C35-SA-KLIPPLAAT-GEO",
+        "19C36-PEACE",
+        "19C36-KAFF",
+        "19CT2-AF-KMAP",
+        "19CT2-AF-PIPER",
+        "19CT2-AF-KAFF",
+        "19CT2-AF-KACT"
+      ],
+      "geography": {
+        "feature_ids": [
+          "cape-british-kaffraria-1847",
+          "cape-kaffraria-1860"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "1860年升为单独的王室殖民地。"
+    },
+    {
+      "stable_id": "borneo-labuan-island",
+      "name_zh": "纳闽岛 · 文莱割让与英国接管",
+      "transition": "continued",
+      "evidence_scope": "英国殖民政府",
+      "source_ids": [
+        "19C35-BORNEO-TREATY46",
+        "19C35-BORNEO-IRWIN",
+        "19C35-BORNEO-CHART",
+        "19C35-BORNEO-MODERN",
+        "19C35-BORNEO-LAB-TOWN",
+        "19C35-BORNEO-LAB-COAL-GEO",
+        "19CT2-BOR-LAW",
+        "19CT2-BOR-IRWIN",
+        "19CT2-BOR-CHART",
+        "19CT2-BOR-COAST"
+      ],
+      "geography": {
+        "feature_ids": [
+          "borneo-labuan-island",
+          "borneo-labuan-1860"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "纳闽王室殖民政府继续管理，此期沿用旧海图所校正的主岛。"
+    },
+    {
+      "stable_id": "vancouver-island-1849-royal-grant",
+      "name_zh": "温哥华主岛 · 1849年王室授地",
+      "transition": "transferred",
+      "evidence_scope": "公司授地记录，独立殖民地参见 vancouver-island-separate-colony",
+      "source_ids": [
+        "19C35-VA-GRANT",
+        "19C35-VA-OFFICE",
+        "19C35-VA-WYLD",
+        "19C35-VA-COAST",
+        "19C36-VAN-LIC",
+        "19C36-VAN-PAY",
+        "19C36-DT-DEEDS"
+      ],
+      "geography": {
+        "feature_ids": [
+          "vancouver-island-1849-royal-grant"
+        ],
+        "fill_authorized": false,
+        "measured_area_sqkm": null,
+        "draw_mode": "dashed_reference"
+      },
+      "notes": "地图转看自治岛殖民地的省域；公司独占贸易执照1859年到期，王室土地等权利的交接另见旧档。"
+    }
+  ],
+  "new_entities": [
+    {
+      "stable_id": "south-australia-northern-territory-1863",
+      "first_explicitly_mapped_year": 1863,
+      "source_ids": [
+        "19CT-NT",
+        "19CT-NT-TEXT",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "south-australia-northern-territory-1863"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "british-columbia-polity",
+      "first_explicitly_mapped_year": 1863,
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-BC-1863",
+        "19CT2-CA-BC-STIKINE",
+        "19CT2-CA-BC-1866",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "british-columbia-mainland-1863-boundary"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "ontario-province",
+      "first_explicitly_mapped_year": 1867,
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-1867-ACT",
+        "19CT2-CA-1867-PROCLAMATION",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "ontario-1867-founding-province"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    },
+    {
+      "stable_id": "quebec-province",
+      "first_explicitly_mapped_year": 1867,
+      "source_ids": [
+        "19CT2-CA-MAP-1867",
+        "19CT2-CA-1867-ACT",
+        "19CT2-CA-1867-PROCLAMATION",
+        "19CT2-CA-ATLAS-LICENSE",
+        "19CT2-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "quebec-1867-founding-province"
+        ],
+        "draw_mode": "dashed_reference"
+      }
+    }
+  ],
+  "annual_snapshots": [
+    {
+      "year": 1860,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "vancouver-island-separate-colony",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-assembly-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1859-queensland",
+        "south-australia-1836-province",
+        "victoria-1851-mainland",
+        "queensland-1859-separation",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1860",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "nova-scotia-1848-responsible-government",
+        "new-brunswick-1851-colonial-boundary",
+        "prince-edward-island-1851-responsible-government",
+        "vancouver-island-separate-colony",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "纳闽续绘，卡弗拉里亚升为单独王室殖民地。"
+    },
+    {
+      "year": 1861,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "vancouver-island-separate-colony",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-assembly-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1861-sa-westward",
+        "south-australia-1861-southern",
+        "victoria-1851-mainland",
+        "queensland-1859-separation",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1860",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "nova-scotia-1848-responsible-government",
+        "new-brunswick-1851-colonial-boundary",
+        "prince-edward-island-1851-responsible-government",
+        "vancouver-island-separate-colony",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "南澳西扩；新南威尔士南部范围收缩。"
+    },
+    {
+      "year": 1862,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "vancouver-island-separate-colony",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-assembly-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1862-queensland-westward",
+        "south-australia-1861-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1860",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "nova-scotia-1848-responsible-government",
+        "new-brunswick-1851-colonial-boundary",
+        "prince-edward-island-1851-responsible-government",
+        "vancouver-island-separate-colony",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "昆士兰西扩，原新南威尔士北部范围再次调整。"
+    },
+    {
+      "year": 1863,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "vancouver-island-separate-colony",
+        "british-columbia-polity",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-assembly-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1863-northern-territory-transfer",
+        "south-australia-1863-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1860",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "nova-scotia-1848-responsible-government",
+        "new-brunswick-1851-colonial-boundary",
+        "prince-edward-island-1851-responsible-government",
+        "vancouver-island-separate-colony",
+        "british-columbia-mainland-1863-boundary",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "北领地移归南澳，不列颠哥伦比亚大陆按这一年可核法定边线起画。"
+    },
+    {
+      "year": 1864,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "vancouver-island-separate-colony",
+        "british-columbia-polity",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-assembly-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1863-northern-territory-transfer",
+        "south-australia-1863-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1860",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "nova-scotia-1848-responsible-government",
+        "new-brunswick-1851-colonial-boundary",
+        "prince-edward-island-1851-responsible-government",
+        "vancouver-island-separate-colony",
+        "british-columbia-mainland-1863-boundary",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "沿用前一年已绘的区域。"
+    },
+    {
+      "year": 1865,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "vancouver-island-separate-colony",
+        "british-columbia-polity",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-assembly-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1863-northern-territory-transfer",
+        "south-australia-1863-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1860",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "nova-scotia-1848-responsible-government",
+        "new-brunswick-1851-colonial-boundary",
+        "prince-edward-island-1851-responsible-government",
+        "vancouver-island-separate-colony",
+        "british-columbia-mainland-1863-boundary",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "沿用前一年已绘的区域。"
+    },
+    {
+      "year": 1866,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "british-columbia-polity",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1863-northern-territory-transfer",
+        "south-australia-1863-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1866",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "nova-scotia-1848-responsible-government",
+        "new-brunswick-1851-colonial-boundary",
+        "prince-edward-island-1851-responsible-government",
+        "british-columbia-united-colony",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "温哥华岛与不列颠哥伦比亚合并；卡弗拉里亚并入开普。"
+    },
+    {
+      "year": 1867,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "ontario-province",
+        "quebec-province",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "british-columbia-polity",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1863-northern-territory-transfer",
+        "south-australia-1863-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1866",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "ontario-1867-founding-province",
+        "quebec-1867-founding-province",
+        "nova-scotia-1867-founding-province",
+        "new-brunswick-1867-founding-province",
+        "prince-edward-island-1851-responsible-government",
+        "british-columbia-united-colony",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "安大略、魁北克、新斯科舍和新布伦瑞克作为加拿大创始省。"
+    },
+    {
+      "year": 1868,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "ontario-province",
+        "quebec-province",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "british-columbia-polity",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1863-northern-territory-transfer",
+        "south-australia-1863-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1866",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "ontario-1867-founding-province",
+        "quebec-1867-founding-province",
+        "nova-scotia-1867-founding-province",
+        "new-brunswick-1867-founding-province",
+        "prince-edward-island-1851-responsible-government",
+        "british-columbia-united-colony",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "沿用前一年已绘的区域。"
+    },
+    {
+      "year": 1869,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "australia-colony-nsw",
+        "australia-colony-sa",
+        "australia-colony-victoria",
+        "australia-colony-queensland",
+        "borneo-labuan-island",
+        "cape-british-kaffraria-1847",
+        "malta-maltese-islands",
+        "trinidad-main-island",
+        "tobago-main-island",
+        "saint-lucia-main-island",
+        "seychelles-principal-inner-islands",
+        "rodrigues-island",
+        "st-helena-main-island",
+        "ascension-main-island",
+        "tristan-da-cunha-main-island",
+        "falklands-malvinas-main-islands",
+        "ontario-province",
+        "quebec-province",
+        "nova-scotia-polity",
+        "new-brunswick-polity",
+        "prince-edward-island-polity",
+        "british-columbia-polity",
+        "newfoundland-island-polity",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "nsw-1863-northern-territory-transfer",
+        "south-australia-1863-southern",
+        "victoria-1851-mainland",
+        "queensland-1862-western-extension",
+        "borneo-labuan-1860",
+        "cape-kaffraria-1866",
+        "malta-1814-treaty",
+        "trinidad-1802-cession",
+        "tobago-1814-cession",
+        "saint-lucia-1814-cession",
+        "seychelles-1814-mauritius-dependency",
+        "rodrigues-1814-mauritius-dependency",
+        "st-helena-1836",
+        "ascension-1815-admiralty",
+        "tristan-settlement",
+        "malvinas-1843-british-colonial-administration",
+        "ontario-1867-founding-province",
+        "quebec-1867-founding-province",
+        "nova-scotia-1867-founding-province",
+        "new-brunswick-1867-founding-province",
+        "prince-edward-island-1851-responsible-government",
+        "british-columbia-united-colony",
+        "newfoundland-responsible-government",
+        "arakan-ramree-island-cession",
+        "arakan-cheduba-island-cession"
+      ],
+      "note": "沿用前一年已绘的区域。"
+    }
+  ],
+  "cartography": {
+    "geojson_files": [
+      "data/nineteenth-century-territorial-areas.geojson",
+      "data/nineteenth-century-territorial-areas-batch2.geojson"
+    ],
+    "verified_new_or_changed_control_polygons": 0,
+    "open_spatial_questions": [
+      "奥德后续疆界及开普阿尔巴尼继续查阅同期档案。"
+    ]
+  },
+  "editorial": {
+    "source_registry_file": "data/nineteenth-century-territorial-areas-batch2.geojson",
+    "handoff_file": "docs/research/EDITOR29_19C_TERRITORY_SECOND_20261117.md"
+  }
+}

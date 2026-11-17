@@ -42,7 +42,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   };
   const audit=()=>page.evaluate(()=>window.historicOverlapDossier.getAudit());
   const chapterAreaDashes=()=>page.evaluate(()=>window.__historicOverlapHost.visibleAreaFeatures()
-   .filter(row=>row.group==='nineteenthAreas'&&!row.feature.properties.source_ids.some(id=>id.startsWith('19CT-')))
+   .filter(row=>row.group==='nineteenthAreas'&&!row.feature.properties.source_ids.some(id=>/^19CT(?:2)?-/.test(id)))
    .map(row=>row.layer._path.getAttribute('stroke-dasharray')));
   const assertClean=async()=>{
    const found=await page.evaluate(()=>{

@@ -2554,8 +2554,13 @@ async function boot(){
  const periods=[[1800,1819,'published'],...modernPreviewDecades.map(from=>[from,from+9,'editorial_review'])];
  const modernRequests=enableModernPreview?periods.map(([from,end])=>
   fetchModernAtlas(from,end).catch(error=>{console.warn('Modern chronology unavailable for '+from,error);return null;})):[];
- const modernTerritoryRequest=enableModernPreview?fetch('data/nineteenth-century-territorial-areas.geojson',{cache:'no-store'})
-  .then(response=>response.ok?response.json():null).catch(()=>null):null;
+ const modernTerritoryRequests=enableModernPreview?[
+  'data/nineteenth-century-territorial-areas.geojson',
+  'data/nineteenth-century-territorial-areas-batch2.geojson'
+ ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  return response.json();
+ }).catch(error=>{console.warn('Nineteenth-century territory areas not loaded: '+path,error);return null;})):[];
  const drakeRequest=fetch('data/drake-circumnavigation-1577-1580.json',{cache:'no-store'}).catch(()=>null);
  try{
   const legacyRequest=Promise.all([
@@ -2594,8 +2599,8 @@ async function boot(){
     try{loadModernAtlas(from,end,status,records);}
     catch(error){console.warn('Modern chronology validation failed for '+from,error);break;}
    }
-   const modernTerritories=await modernTerritoryRequest;
-   if(modernTerritories&&nineteenthSpatial){
+   for(const modernTerritories of await Promise.all(modernTerritoryRequests)){
+    if(!modernTerritories||!nineteenthSpatial)continue;
     try{loadNineteenthTerritorialAreas(modernTerritories);}
     catch(error){console.warn('Nineteenth-century territory areas not loaded',error);}
    }
