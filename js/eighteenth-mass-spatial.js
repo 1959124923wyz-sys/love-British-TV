@@ -23,11 +23,12 @@ military_vicinity:'驻军活动地区',foreign_occupation:'其他国家管辖'};
 function showDossier(x,period,isSite){
  host.clearSelection();
  const urls=[...new Set(x.source_urls||[])].filter(u=>/^https:\/\//.test(u));
+ const historicalNote=reader.clean(period.note||x.note||'');
  $('dossierBody').innerHTML=
   '<div class="dossier-kicker">18世纪 · 批量动态版图 · '+year+'年</div>'+
   '<h2>'+escapeHTML(period.title||x.title)+'</h2>'+
   '<p><strong>'+escapeHTML(isSite?'地点驻军/港口核心':classText[period.kind||x.kind])+'</strong>　阶段：'+period.start_year+'—'+period.end_year+'</p>'+
-  (reader.clean(period.note||x.note||'')?'<p>'+escapeHTML(reader.clean(period.note||x.note))+'</p>':'')+
+  (historicalNote?'<p>'+escapeHTML(historicalNote)+'</p>':'')+
   '<details open><summary>历史依据</summary><ul class="source-list">'+urls.map(u=>{
    let h=u;try{h=new URL(u).hostname}catch{}
    return '<li><a href="'+escapeHTML(u)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(h)+'</a></li>';
