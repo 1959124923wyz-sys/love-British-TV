@@ -26,11 +26,11 @@ assert.equal(story.editorial_status,'research_preview_not_published');
 assert.equal(story.sections.length,15);
 assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),45);
 assert.equal(data.schema,'atlas-18c-atlantic-zong-insurance-preview-v1');
-assert.equal(data.events.length,14);assert.equal(data.sources.length,23);
+assert.equal(data.events.length,14);assert.equal(data.sources.length,24);
 assert.equal(data.places.length,0);assert.equal(data.routes.length,0);assert.equal(data.colonial_polygons.length,0);
-assert.equal(story.sources.length,23);
+assert.equal(story.sources.length,24);
 const registry=new Set(data.sources.map(s=>s.id)),sourceLocal=new Set(story.sources.map(s=>s.id));
-assert.equal(registry.size,23);assert.equal(sourceLocal.size,23);
+assert.equal(registry.size,24);assert.equal(sourceLocal.size,24);
 const allGroups=[...a.groups,...b.groups,...c.groups];
 const merged=new Map(allGroups.map(g=>[g.id,g]));
 assert.equal(provenance.counts.preview_events,14);
@@ -72,6 +72,10 @@ for(const e of data.events){
  }
 }
 assert.equal(points,7);
+const tradeAct=events.get('E18C-ATL-1750-AFRICAN-TRADE-ACT');
+assert(tradeAct.source_ids.includes('415-ACT'));
+assert.deepEqual(tradeAct.research_audited_cross_arc_group_ids,['E18-MRG-T01-03']);
+assert.deepEqual(tradeAct.research_audited_cross_arc_original_ids,['E18A5-RAC-1750-ELECTION']);
 for(const suffix of ['1781-ZONG-MASS-KILLING','1765-SALLY-REVOLT'])assert.equal(events.get('E18C-ATL-'+suffix).lat,null);
 const black=events.get('E18C-ATL-1781-ZONG-BLACK-RIVER');
 const trial=events.get('E18C-ATL-1783-ZONG-INSURANCE-TRIAL');
@@ -98,9 +102,9 @@ assert.deepEqual(new Set(links),new Set(story.related_event_ids));
 assert.deepEqual(new Set(links),new Set(index.stories[3].event_ids));
 assert(app.includes("fetch('data/stories/serial/chronology-preview-atlantic-zong-1700-1799.json'"));
 assert(app.includes('atlantic18cReady=true'));
-assert(app.includes("const enable18cPilot=new URLSearchParams(window.location.search).get('review18c')==='1'"));
+assert(app.includes("const reviewEarlyTopics=reviewParams.get('review18c')==='1'"));
 assert(ui.includes('Array.isArray(draft.stories)'));
 assert(ui.includes("article.id==='E6-T11-VOYAGES'"));
 assert(ui.includes("storyMeta.has('E18-T01-T02-ATLANTIC-ZONG-1711-1799')"));
-assert(html.includes('18c-scotland-union-20261108'),'Fifth story cache revision must not revert Atlantic source files');
-console.log('PASS 18C Atlantic/Zong fourth story: 14 dated candidates, 23 source entries, 15 sections/45 paragraphs, 14 valid inline map links, 7 modern place references, 0 ocean fake locations and 0 colonial polygons, E6-T11 link and prior 3 stories intact.');
+assert(html.includes('src="js/history-stories.js?v='),'Story reader must load with a versioned script URL');
+console.log('PASS 18C Atlantic/Zong fourth story: 14 dated candidates, 24 source entries, 15 sections/45 paragraphs, 14 valid inline map links, 7 modern place references, 0 ocean fake locations and 0 colonial polygons, E6-T11 link and prior 3 stories intact.');
