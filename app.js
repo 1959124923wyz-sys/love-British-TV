@@ -3662,15 +3662,17 @@ async function boot(){
   const reviewEarlyTopics=reviewParams.get('review18c')==='1';
   const reviewCrossCenturyTopics=reviewParams.get('review19c')==='1';
   if(preview18cReady&&(reviewEarlyTopics||reviewCrossCenturyTopics)){
-   const supplements=reviewEarlyTopics?[
-    ['chronology-preview-statia-bencoolen-1704-1786.json',1799],
-    ['chronology-preview-antigua-bermuda-bahamas-1701-1796.json',1799],
+   const supplements=[
     ['chronology-preview-acadia-jamaica-1704-1774.json',1799],
     ['chronology-preview-archive-gaps-1719-1798.json',1799],
-    ['chronology-preview-deportation-and-slave-laws-1755-1788.json',1799]
-   ]:[];
-   supplements.push(['chronology-preview-barbados-west-india-regiments-1701-1807.json',1807]);
-   supplements.push(['chronology-preview-privateering-malacca-1702-1825.json',1825]);
+    ['chronology-preview-deportation-and-slave-laws-1755-1788.json',1799],
+    ['chronology-preview-barbados-west-india-regiments-1701-1807.json',1807],
+    ['chronology-preview-privateering-malacca-1702-1825.json',1825]
+   ];
+   if(reviewEarlyTopics)supplements.unshift(
+    ['chronology-preview-statia-bencoolen-1704-1786.json',1799],
+    ['chronology-preview-antigua-bermuda-bahamas-1701-1796.json',1799]
+   );
    for(const [file,lastYear] of supplements){
     try{
       const response=await fetch('data/stories/serial/'+file,{cache:'no-store'});

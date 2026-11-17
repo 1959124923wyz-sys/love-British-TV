@@ -220,6 +220,15 @@ const topics = [
     await page.locator('#eventList [data-eid="E18C-ML-1825-HANDOVER"]').waitFor();
     await visit('?review19c=1&year=1820');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-BENCOOLEN-1719-SIEGE') === null));
+    const priorPreviewEvents = [
+      'E18C-JWH-1765-WHITEHALL',
+      'E18C-HNV-1720-CALABAR',
+      'E18C-DA-1755-MARYLAND-ARRIVAL',
+      'E18C-JLC-1788-CONSOLIDATION'
+    ];
+    for (const id of priorPreviewEvents) {
+      assert(await page.evaluate(eventId => window.atlasStoryBridge.eventById(eventId)?.id === eventId, id), id);
+    }
     console.log('PASS desktop 18C topics: route hit targets, cross-year links, original sources and return paths, garrison transition, preview isolation');
   } finally {
     await browser.close();
