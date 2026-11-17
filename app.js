@@ -1195,16 +1195,19 @@ function loadNineteenthTerritorialAreas(data){
   throw new Error('Nineteenth-century territory dataset is incomplete');
  const sourceIds=new Set(sources.map(source=>source.id));
  const eventIds=new Set([...serialPreviewByDecade.values()].flatMap(chapter=>chapter.events.map(event=>event.id)));
- const validRing=ring=>Array.isArray(ring)&&ring.length>=4&&ring.every(point=>
+ const validCoordinate=point=>
   Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&
-  Math.abs(point[0])<=180&&Math.abs(point[1])<=90)&&
+  Math.abs(point[0])<=180&&Math.abs(point[1])<=90;
+ const validRing=ring=>Array.isArray(ring)&&ring.length>=4&&ring.every(validCoordinate)&&
   ring[0][0]===ring.at(-1)[0]&&ring[0][1]===ring.at(-1)[1];
  const validFeature=feature=>{
   const {geometry,properties:p}=feature;
   const polygons=geometry?.type==='Polygon'?[geometry.coordinates]:
    geometry?.type==='MultiPolygon'?geometry.coordinates:[];
-  return feature.type==='Feature'&&typeof feature.id==='string'&&p?.stable_id&&p.name&&p.summary_zh&&
-   polygons.length>0&&polygons.every(polygon=>Array.isArray(polygon)&&polygon.length&&polygon.every(validRing))&&
+  const validShape=geometry?.type==='Point'?
+   p?.geometry_precision==='named_place_anchor'&&validCoordinate(geometry.coordinates):
+   polygons.length>0&&polygons.every(polygon=>Array.isArray(polygon)&&polygon.length&&polygon.every(validRing));
+  return feature.type==='Feature'&&typeof feature.id==='string'&&p?.stable_id&&p.name&&p.summary_zh&&validShape&&
    [p.start_year,p.end_year].every(y=>Number.isInteger(y)&&y>=1800&&y<=1899)&&p.start_year<=p.end_year&&
    p.historical_boundary_confirmed===false&&p.fill_authorized===false&&p.dash_only===true&&
    p.exclude_from_area_aggregation===true&&p.area_sqkm===null&&p.source_ids?.length&&
@@ -2577,7 +2580,8 @@ async function boot(){
   'data/nineteenth-century-territorial-areas-batch3.geojson',
   'data/nineteenth-century-territorial-areas-batch4.geojson',
   'data/nineteenth-century-territorial-areas-batch5.geojson',
-  'data/nineteenth-century-territorial-areas-batch6.geojson'
+  'data/nineteenth-century-territorial-areas-batch6.geojson',
+  'data/nineteenth-century-territorial-areas-batch7.geojson'
  ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
   if(!response.ok)throw new Error('HTTP '+response.status);
   return response.json();
@@ -4140,7 +4144,9 @@ function jumpToEnteredYear(){
  stopPlay();setYear(v);
 }
 $('jumpYear').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();jumpToEnteredYear()}});
-$('jumpYear').addEventListener('change',jumpToEnteredYear);
+$('jumpYear').addEventListener('change',e=>{
+ if(e.target.value.trim()!==String(year))jumpToEnteredYear();
+});
 $('latestPreviewChapter').addEventListener('click',()=>browseDecade(1850));
 $('chapterTrack').addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&chapterRegistry){e.preventDefault();browseDecade(adjacentHalfCenturyPage(browsingDecade,e.deltaX>0?1:-1))}},{passive:false});
 $('browseDecadePrev').addEventListener('click',()=>{if(chapterRegistry)browseDecade(adjacentHalfCenturyPage(browsingDecade,-1))});
