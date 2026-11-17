@@ -329,7 +329,13 @@ async function verify() {
   await page.locator('#dossierBody h2').filter({ hasText: '阿康蓬' }).waitFor();
   assert.match(await page.locator('#dossierBody h2').textContent(), /马龙条约社区/);
   await page.locator('#resetDossier').click();
+  await page.waitForFunction(() => {
+   const map = window.__historicOverlapHost.map;
+   return document.querySelector('#workspace').getAnimations().every(animation => animation.playState !== 'running') &&
+    map.getSize().x === map.getContainer().clientWidth;
+  });
   await jump(1842);
+  await page.evaluate(() => window.__historicOverlapHost.map.setView([18.233333, -77.75], 10, { animate: false }));
   await clickAreaAt(18.233333, -77.75);
   await page.locator('#dossierBody h2').filter({ hasText: '阿康蓬' }).waitFor();
   assert.match(await page.locator('#dossierBody h2').textContent(), /马龙社区与地方治理/);
