@@ -1188,11 +1188,41 @@ function loadModernAtlas(from,end,status,[data,geo]){
  nineteenthSpatial={...geo,features:[...(nineteenthSpatial?.features||[]),...geo.features]};
  nineteenthAtlasEnd=end;
 }
+function loadNineteenthTerritorialAreas(data){
+ const {metadata,features,sources}=data||{};
+ if(data?.type!=='FeatureCollection'||metadata?.schema!=='atlas-19c-territorial-areas-v1'||
+    metadata.historical_area_statistics!==false||!features?.length||!sources?.length)
+  throw new Error('Nineteenth-century territory dataset is incomplete');
+ const sourceIds=new Set(sources.map(source=>source.id));
+ const eventIds=new Set([...serialPreviewByDecade.values()].flatMap(chapter=>chapter.events.map(event=>event.id)));
+ const validRing=ring=>Array.isArray(ring)&&ring.length>=4&&ring.every(point=>
+  Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&
+  Math.abs(point[0])<=180&&Math.abs(point[1])<=90)&&
+  ring[0][0]===ring.at(-1)[0]&&ring[0][1]===ring.at(-1)[1];
+ const validFeature=feature=>{
+  const {geometry,properties:p}=feature;
+  const polygons=geometry?.type==='Polygon'?[geometry.coordinates]:
+   geometry?.type==='MultiPolygon'?geometry.coordinates:[];
+  return feature.type==='Feature'&&typeof feature.id==='string'&&p?.stable_id&&p.name&&p.summary_zh&&
+   polygons.length>0&&polygons.every(polygon=>Array.isArray(polygon)&&polygon.length&&polygon.every(validRing))&&
+   [p.start_year,p.end_year].every(y=>Number.isInteger(y)&&y>=1800&&y<=1899)&&p.start_year<=p.end_year&&
+   p.historical_boundary_confirmed===false&&p.fill_authorized===false&&p.dash_only===true&&
+   p.exclude_from_area_aggregation===true&&p.area_sqkm===null&&p.source_ids?.length&&
+   p.source_ids.every(id=>sourceIds.has(id))&&Array.isArray(p.related_event_ids)&&
+   p.related_event_ids.every(id=>eventIds.has(id));
+ };
+ if(sourceIds.size!==sources.length||sources.some(s=>!s.id||!s.label||!s.url?.startsWith('https://')||sourcesById.has(s.id))||
+    new Set(features.map(f=>f.id)).size!==features.length||!features.every(validFeature))
+  throw new Error('Nineteenth-century territories failed source, date or geometry validation');
+ for(const source of sources)sourcesById.set(source.id,source);
+ nineteenthSpatial.features=[...features,...nineteenthSpatial.features];
+}
 function renderNineteenthSpatial(){
  const group=groups.nineteenthAreas;
  group.clearLayers();
  if(year<1800||!nineteenthSpatial||!$('toggleTerritorialFootprints').checked)return;
- const colors={land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6',conflict:'#a5cdec'};
+ const colors={land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6',conflict:'#a5cdec',
+  administrative:'#ba9ced',charter:'#d5ac70',military_impact:'#d5937d'};
  for(const feature of nineteenthSpatial.features){
   const p=feature.properties;
   if(year<p.start_year||year>p.end_year)continue;
@@ -1200,7 +1230,7 @@ function renderNineteenthSpatial(){
   const color=colors[p.display_kind]||'#ae97db';
   const site=stage?{...feature,properties:{...p,name:stage.title,summary_zh:stage.summary_zh,
    start_year:stage.start_year,end_year:stage.end_year}}:feature;
-  if(feature.geometry.type==='Polygon'){
+  if(['Polygon','MultiPolygon'].includes(feature.geometry.type)){
    const layer=L.geoJSON(site,{
     pane:'territoryPane',renderer:territoryRenderer,bubblingMouseEvents:false,
     style:{color,weight:2,dashArray:'7 6',fillColor:color,fillOpacity:.10,className:'atlas-19c-area'},
@@ -1229,7 +1259,7 @@ function renderNineteenthSpatial(){
   }
   const [lon,lat]=feature.geometry.coordinates;
   L.circleMarker([lat,lon],{
-   pane:'controlAreaPane',renderer:wartimeRenderer,radius:p.opens_area_id?29:21,weight:2.4,fill:false,
+   pane:'controlAreaPane',renderer:wartimeRenderer,radius:p.opens_area_id?13:9,weight:1.8,fill:false,
    dashArray:'5 3',color:stage?.controller==='british'?'#c5a6f5':p.display_kind==='conflict'?color:'#65c7b6',
    bubblingMouseEvents:false,className:'atlas-19c-site'
   }).bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
@@ -2524,6 +2554,8 @@ async function boot(){
  const periods=[[1800,1819,'published'],...modernPreviewDecades.map(from=>[from,from+9,'editorial_review'])];
  const modernRequests=enableModernPreview?periods.map(([from,end])=>
   fetchModernAtlas(from,end).catch(error=>{console.warn('Modern chronology unavailable for '+from,error);return null;})):[];
+ const modernTerritoryRequest=enableModernPreview?fetch('data/nineteenth-century-territorial-areas.geojson',{cache:'no-store'})
+  .then(response=>response.ok?response.json():null).catch(()=>null):null;
  const drakeRequest=fetch('data/drake-circumnavigation-1577-1580.json',{cache:'no-store'}).catch(()=>null);
  try{
   const legacyRequest=Promise.all([
@@ -2561,6 +2593,11 @@ async function boot(){
     if(!records)break;
     try{loadModernAtlas(from,end,status,records);}
     catch(error){console.warn('Modern chronology validation failed for '+from,error);break;}
+   }
+   const modernTerritories=await modernTerritoryRequest;
+   if(modernTerritories&&nineteenthSpatial){
+    try{loadNineteenthTerritorialAreas(modernTerritories);}
+    catch(error){console.warn('Nineteenth-century territory areas not loaded',error);}
    }
    if(!atlas&&initialYear>=1800&&nineteenthAtlasEnd)setYear(initialYear);
    renderTimelineNavigation();

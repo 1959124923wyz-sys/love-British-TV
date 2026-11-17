@@ -1,0 +1,36 @@
+name: Nineteenth-century historical territory
+on:
+  pull_request:
+    paths:
+      - app.js
+      - index.html
+      - js/historic-overlap-dossier-1497-1699.js
+      - data/nineteenth-century-territorial-areas.geojson
+      - scripts/browser_19c_territorial_areas.cjs
+      - .github/workflows/19c-territorial-areas.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dated-area-desktop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check spatial semantics
+        run: python3 scripts/audit_spatial_semantics.py --strict
+      - name: Install Chromium test dependencies
+        run: |
+          npm install --no-save --package-lock=false playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Check 1880 overview and dated shapes on desktop
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/atlas-http.log 2>&1 &
+          node scripts/browser_19c_territorial_areas.cjs
+      - name: Save desktop atlas screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nineteenth-century-territory-desktop
+          path: browser-smoke-results/
+          if-no-files-found: ignore

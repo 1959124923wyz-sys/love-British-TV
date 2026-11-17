@@ -1,0 +1,860 @@
+{
+  "schema": "territory-transition-v2",
+  "template_only": false,
+  "stage": "research_draft",
+  "scope": "首批19世纪区域图层；原逐十年据点保留在其各自地图文件。",
+  "period": {
+    "previous_from": 1870,
+    "previous_to": 1879,
+    "next_from": 1880,
+    "next_to": 1889
+  },
+  "previous_snapshot": {
+    "year": 1879,
+    "source_file": "data/nineteenth-century-territorial-areas.geojson",
+    "active_stable_ids": [
+      "uk-great-britain-ireland-union",
+      "ceylon-crown-island",
+      "jamaica-main-island",
+      "mauritius-british-main-island",
+      "fiji-cession-principal-islands",
+      "cyprus-1878-convention-administration",
+      "western-australia-commission-1831",
+      "south-australia-northern-territory-1863",
+      "tasmania-1856-main-island",
+      "new-zealand-crown-proclamation",
+      "manitoba-province",
+      "canada-northwest-territories"
+    ],
+    "historical_exits_kept_in_archive": []
+  },
+  "records": [
+    {
+      "stable_id": "uk-great-britain-ireland-union",
+      "name_zh": "大不列颠及爱尔兰联合王国",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-UK",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "uk-great-britain-ireland-union"
+        ],
+        "geometry_type": "MultiPolygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "ceylon-crown-island",
+      "name_zh": "锡兰岛 · 英属殖民行政",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-LK",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "ceylon-crown-island"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "jamaica-main-island",
+      "name_zh": "牙买加本岛 · 王室殖民行政",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-JAM",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "jamaica-crown-colony-main-island"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "mauritius-british-main-island",
+      "name_zh": "毛里求斯本岛 · 英属殖民行政",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-MAU",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "mauritius-british-main-island"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "fiji-cession-principal-islands",
+      "name_zh": "斐济主要岛屿 · 王室殖民行政",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-FIJ",
+        "19CT-FCLAIMS",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "fiji-cession-principal-islands"
+        ],
+        "geometry_type": "MultiPolygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "cyprus-1878-convention-administration",
+      "name_zh": "塞浦路斯 · 奥斯曼领土上的英国行政",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-CY-TREATY",
+        "19CT-CY-LOC",
+        "19CT-CY-DIG"
+      ],
+      "geography": {
+        "feature_ids": [
+          "cyprus-1878-convention-administration"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "western-australia-commission-1831",
+      "name_zh": "西澳大利亚 · 殖民辖区",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-WA",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "western-australia-commission-1831"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "south-australia-northern-territory-1863",
+      "name_zh": "南澳大利亚管辖的北领地",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-NT",
+        "19CT-NT-TEXT",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "south-australia-northern-territory-1863"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "tasmania-1856-main-island",
+      "name_zh": "塔斯马尼亚本岛 · 殖民政府",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-TAS",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "tasmania-1856-main-island"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "new-zealand-crown-proclamation",
+      "name_zh": "新西兰 · 英国王室宣布主权",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-NZ",
+        "19CT-WAITANGI",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "new-zealand-crown-proclamation"
+        ],
+        "geometry_type": "MultiPolygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "manitoba-province",
+      "name_zh": "曼尼托巴 · 1870年设省范围",
+      "transition": "continued",
+      "change_effective_date": null,
+      "source_ids": [
+        "19CT-MB-HIST",
+        "19CT-CA",
+        "19CT-CA-OPEN",
+        "19CT-CA-REST",
+        "19CT-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "manitoba-1870-postage-stamp"
+        ],
+        "geometry_type": "Polygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    },
+    {
+      "stable_id": "canada-northwest-territories",
+      "name_zh": "加拿大西北领地 · 1880年北极转授",
+      "transition": "expanded",
+      "change_effective_date": "1880-09-01",
+      "source_ids": [
+        "19CT-CA-ARCTIC",
+        "19CT-CA",
+        "19CT-CA-OPEN",
+        "19CT-CA-REST",
+        "19CT-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "canada-nwt-1876-era",
+          "canada-nwt-1880-arctic-transfer"
+        ],
+        "geometry_type": "MultiPolygon",
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false,
+        "measured_area_sqkm": null
+      }
+    }
+  ],
+  "new_entities": [
+    {
+      "stable_id": "manitoba-ontario-disputed-area",
+      "first_explicitly_mapped_year": 1881,
+      "classification": "not_a_control_area",
+      "source_ids": [
+        "19CT-MB",
+        "19CT-ONT",
+        "19CT-CA",
+        "19CT-CA-OPEN",
+        "19CT-CA-REST",
+        "19CT-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "manitoba-ontario-disputed-area"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false
+      }
+    },
+    {
+      "stable_id": "assiniboia-district",
+      "first_explicitly_mapped_year": 1882,
+      "classification": "documented_new_control",
+      "source_ids": [
+        "19CT-ASS",
+        "19CT-ASS-LAW",
+        "19CT-CA",
+        "19CT-CA-OPEN",
+        "19CT-CA-REST",
+        "19CT-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "assiniboia-1882-district"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false
+      }
+    },
+    {
+      "stable_id": "alberta-district",
+      "first_explicitly_mapped_year": 1882,
+      "classification": "documented_new_control",
+      "source_ids": [
+        "19CT-ASS",
+        "19CT-ASS-LAW",
+        "19CT-CA",
+        "19CT-CA-OPEN",
+        "19CT-CA-REST",
+        "19CT-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "alberta-1882-district"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false
+      }
+    },
+    {
+      "stable_id": "saskatchewan-district",
+      "first_explicitly_mapped_year": 1882,
+      "classification": "documented_new_control",
+      "source_ids": [
+        "19CT-ASS",
+        "19CT-ASS-LAW",
+        "19CT-CA",
+        "19CT-CA-OPEN",
+        "19CT-CA-REST",
+        "19CT-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "saskatchewan-1882-district"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false
+      }
+    },
+    {
+      "stable_id": "athabaska-district",
+      "first_explicitly_mapped_year": 1882,
+      "classification": "documented_new_control",
+      "source_ids": [
+        "19CT-ASS",
+        "19CT-ASS-LAW",
+        "19CT-CA",
+        "19CT-CA-OPEN",
+        "19CT-CA-REST",
+        "19CT-CA-OGL"
+      ],
+      "geography": {
+        "feature_ids": [
+          "athabaska-1882-district"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false
+      }
+    },
+    {
+      "stable_id": "british-new-guinea-mainland",
+      "first_explicitly_mapped_year": 1885,
+      "classification": "documented_new_control",
+      "source_ids": [
+        "19CT-PNG-PORT",
+        "19CT-PNG-ANU",
+        "19CT-PNG-LAW",
+        "19CT-PNG-GEO",
+        "19CT-NE"
+      ],
+      "geography": {
+        "feature_ids": [
+          "png-1885-protectorate-delimitation"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false
+      }
+    },
+    {
+      "stable_id": "mandalay-walled-city-garrison",
+      "first_explicitly_mapped_year": 1885,
+      "classification": "documented_new_control",
+      "source_ids": [
+        "19CT-MAND-DISPATCH",
+        "19CT-MAND-MAP",
+        "19CT-MAND-GAZ",
+        "19CT-MAND-WALL",
+        "19CT-MAND-WHS"
+      ],
+      "geography": {
+        "feature_ids": [
+          "mandalay-walled-city-garrison"
+        ],
+        "draw_mode": "dashed_reference",
+        "fill_authorized": false
+      }
+    }
+  ],
+  "annual_snapshots": [
+    {
+      "year": 1880,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "canada-northwest-territories"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1870-postage-stamp",
+        "canada-nwt-1880-arctic-transfer"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "北极转授。此前已画的11个其它稳定范围继续显示。"
+    },
+    {
+      "year": 1881,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1880-arctic-transfer"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "曼尼托巴扩界，东部争议地带单独上图。"
+    },
+    {
+      "year": 1882,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "saskatchewan-district",
+        "athabaska-district"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "saskatchewan-1882-district",
+        "athabaska-1882-district"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "西北领地划设四个临时行政区。"
+    },
+    {
+      "year": 1883,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "saskatchewan-district",
+        "athabaska-district"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "saskatchewan-1882-district",
+        "athabaska-1882-district"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "沿用前一年已绘区域。"
+    },
+    {
+      "year": 1884,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "saskatchewan-district",
+        "athabaska-district"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "saskatchewan-1882-district",
+        "athabaska-1882-district"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "沿用前一年已绘区域。"
+    },
+    {
+      "year": 1885,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "saskatchewan-district",
+        "athabaska-district",
+        "british-new-guinea-mainland",
+        "mandalay-walled-city-garrison"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "saskatchewan-1882-district",
+        "athabaska-1882-district",
+        "png-1885-protectorate-delimitation",
+        "mandalay-walled-city-garrison"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "曼德勒宫城驻营与新几内亚东南部保护地划分上图。"
+    },
+    {
+      "year": 1886,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "athabaska-district",
+        "saskatchewan-district",
+        "british-new-guinea-mainland",
+        "mandalay-walled-city-garrison"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "athabaska-1882-district",
+        "saskatchewan-1886-district",
+        "png-1885-protectorate-delimitation",
+        "mandalay-walled-city-garrison"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "萨斯喀彻温临时行政区东界调整。"
+    },
+    {
+      "year": 1887,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "athabaska-district",
+        "saskatchewan-district",
+        "british-new-guinea-mainland",
+        "mandalay-walled-city-garrison"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "athabaska-1882-district",
+        "saskatchewan-1886-district",
+        "png-1885-protectorate-delimitation",
+        "mandalay-walled-city-garrison"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "沿用前一年已绘区域。"
+    },
+    {
+      "year": 1888,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "manitoba-ontario-disputed-area",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "athabaska-district",
+        "saskatchewan-district",
+        "british-new-guinea-mainland",
+        "mandalay-walled-city-garrison"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1881-expansion",
+        "manitoba-ontario-disputed-area",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "athabaska-1882-district",
+        "saskatchewan-1886-district",
+        "png-1888-separate-possession",
+        "mandalay-walled-city-garrison"
+      ],
+      "confirmed_ended_stable_ids": [],
+      "note": "新几内亚东南部状态转为英属地。"
+    },
+    {
+      "year": 1889,
+      "active_reference_stable_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-province",
+        "canada-northwest-territories",
+        "assiniboia-district",
+        "alberta-district",
+        "athabaska-district",
+        "saskatchewan-district",
+        "british-new-guinea-mainland",
+        "mandalay-walled-city-garrison"
+      ],
+      "active_feature_ids": [
+        "uk-great-britain-ireland-union",
+        "ceylon-crown-island",
+        "jamaica-crown-colony-main-island",
+        "mauritius-british-main-island",
+        "fiji-cession-principal-islands",
+        "cyprus-1878-convention-administration",
+        "western-australia-commission-1831",
+        "south-australia-northern-territory-1863",
+        "tasmania-1856-main-island",
+        "new-zealand-crown-proclamation",
+        "manitoba-1889-confirmed",
+        "canada-nwt-1882-districting",
+        "assiniboia-1882-district",
+        "alberta-1882-district",
+        "athabaska-1882-district",
+        "saskatchewan-1886-district",
+        "png-1888-separate-possession",
+        "mandalay-walled-city-garrison"
+      ],
+      "confirmed_ended_stable_ids": [
+        "manitoba-ontario-disputed-area"
+      ],
+      "note": "《安大略边界法》确认两省边界，争议地带结束。"
+    }
+  ],
+  "cartography": {
+    "verified_new_or_changed_control_polygons": 0,
+    "geojson_files": [
+      "data/nineteenth-century-territorial-areas.geojson"
+    ],
+    "open_spatial_questions": [
+      "其余省域和边界见交接记录。"
+    ]
+  },
+  "editorial": {
+    "ready_for_publication": false,
+    "source_registry_file": "data/nineteenth-century-territorial-areas.geojson",
+    "handoff_file": "docs/research/EDITOR29_19C_TERRITORY_FIRST_20261117.md"
+  }
+}
