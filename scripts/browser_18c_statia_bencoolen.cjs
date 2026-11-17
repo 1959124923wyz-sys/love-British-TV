@@ -171,7 +171,8 @@ const topics = [
       await anchor.dblclick();
       await page.waitForFunction(event => window.atlasStoryBridge.selectedEventId() === event, topic.other);
       await page.locator('#dossierBody .source-details summary').click();
-      assert((await page.locator('#dossierBody .source-details').innerText()).includes(topic.archiveSource));
+      const archiveText = await page.locator('#dossierBody .source-details').innerText();
+      assert(archiveText.includes(topic.archiveSource), `${topic.id} missing ${topic.archiveSource} in ${archiveText}`);
       await page.locator('#dossierBody [data-story-back]').click();
       await article.waitFor();
       await article.locator('header [data-story-return]').click();
