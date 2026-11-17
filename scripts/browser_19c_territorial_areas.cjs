@@ -72,13 +72,18 @@ async function verify() {
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1880-cyprus-dossier.png') });
 
   for (const [year, present, absent] of [
+   [1800, ['wellesley-cession-1800'], ['wellesley-core-1831', 'malacca-mainland-1833-settled']],
    [1819, ['cape-breton-separate-colony'], ['nova-scotia-1820-cape-breton-union']],
    [1820, ['nova-scotia-1820-cape-breton-union'], ['cape-breton-separate-colony']],
    [1824, ['nsw-1800-commission'], ['tasmania-1825-van-diemens-land']],
    [1825, ['nsw-1825-westward', 'tasmania-1825-van-diemens-land'], ['nsw-1800-commission']],
    [1826, ['arakan-ramree-island-cession', 'arakan-cheduba-island-cession'], []],
    [1829, ['western-australia-1829-proclamation'], ['western-australia-commission-1831']],
-   [1831, ['western-australia-commission-1831'], ['western-australia-1829-proclamation']],
+   [1830, ['wellesley-cession-1800'], ['wellesley-core-1831']],
+   [1831, ['western-australia-commission-1831', 'wellesley-core-1831'],
+    ['western-australia-1829-proclamation', 'wellesley-cession-1800']],
+   [1832, ['wellesley-core-1831'], ['malacca-mainland-1833-settled']],
+   [1833, ['malacca-mainland-1833-settled'], ['malacca-mainland-1858-india']],
    [1835, ['nsw-1825-westward'], ['south-australia-1836-province']],
    [1836, ['nsw-1836-south-australia', 'south-australia-1836-province'], ['nsw-1825-westward']],
    [1840, [], ['hong-kong-island-1841-occupation', 'chatham-1842-annexation']],
@@ -88,8 +93,9 @@ async function verify() {
    [1850, ['nsw-1836-south-australia'], ['victoria-1851-mainland']],
    [1851, ['victoria-1851-mainland', 'nsw-1851-victoria'], ['nsw-1836-south-australia']],
    [1857, ['haida-gwaii-colonial-jurisdiction-1853-1857', 'singapore-1826-straits-company'], ['british-columbia-mainland-1858']],
-   [1858, ['british-columbia-mainland-1858', 'haida-gwaii-colonial-jurisdiction-1858-1862', 'singapore-1858-straits-india'],
-    ['haida-gwaii-colonial-jurisdiction-1853-1857', 'singapore-1826-straits-company']],
+   [1858, ['british-columbia-mainland-1858', 'haida-gwaii-colonial-jurisdiction-1858-1862',
+    'singapore-1858-straits-india', 'malacca-mainland-1858-india'],
+    ['haida-gwaii-colonial-jurisdiction-1853-1857', 'singapore-1826-straits-company', 'malacca-mainland-1833-settled']],
    [1859, ['queensland-1859-separation', 'borneo-labuan-island', 'british-columbia-mainland-1858'],
     ['borneo-labuan-1860', 'kowloon-south-1860-cession', 'stonecutters-1860-cession']],
    [1860, ['borneo-labuan-1860', 'cape-kaffraria-1860', 'kowloon-south-1860-cession', 'stonecutters-1860-cession'], ['borneo-labuan-island']],
@@ -100,9 +106,14 @@ async function verify() {
     'haida-gwaii-colonial-jurisdiction-1863-1865'], ['nsw-1862-queensland-westward', 'british-columbia-mainland-1858']],
    [1866, ['cape-kaffraria-1866', 'british-columbia-united-colony'], ['cape-kaffraria-1860', 'vancouver-island-separate-colony',
     'haida-gwaii-colonial-jurisdiction-1863-1865']],
-   [1867, ['singapore-1867-straits-crown', 'penang-1867-straits-crown'], ['singapore-1858-straits-india', 'penang-1858-straits-india']],
+   [1867, ['singapore-1867-straits-crown', 'penang-1867-straits-crown', 'malacca-mainland-1867-crown'],
+    ['singapore-1858-straits-india', 'penang-1858-straits-india', 'malacca-mainland-1858-india']],
+   [1868, ['wellesley-core-1831'], ['wellesley-redemarcation-1869']],
+   [1869, ['wellesley-redemarcation-1869'], ['wellesley-core-1831']],
    [1870, ['chatham-1870-land-court'], ['chatham-1854-resident-magistrate']],
    [1871, ['british-columbia-1871-province'], ['british-columbia-united-colony']],
+   [1873, ['wellesley-redemarcation-1869'], ['wellesley-pangkor-1874', 'pangkor-islands-1874-straits']],
+   [1874, ['wellesley-pangkor-1874', 'pangkor-islands-1874-straits'], ['wellesley-redemarcation-1869']],
    [1877, ['canada-nwt-1876-era', 'keewatin-1876-phase'], [colony, 'cape-kaffraria-1866']],
    [1879, [colony, 'canada-nwt-1876-era'], ['canada-nwt-1880-arctic-transfer']],
    [1880, ['rotuma-1880-fiji-proclamation'], ['rotuma-1881-fiji-cession']],
@@ -119,10 +130,14 @@ async function verify() {
    [1891, [], ['gilbert-1892-protectorate', 'ellice-1892-protectorate']],
    [1892, ['gilbert-1892-protectorate', 'ellice-1892-protectorate'], []],
    [1896, ['canada-nwt-1889-ontario-boundary'], ['yukon-1897-phase']],
-   [1897, ['yukon-1897-phase', 'franklin-1897-district'], ['canada-nwt-1889-ontario-boundary', 'lantau-1898-new-territories-lease']],
+   [1897, ['yukon-1897-phase', 'franklin-1897-district'], ['canada-nwt-1889-ontario-boundary',
+    'lantau-1898-new-territories-lease', 'hong-kong-new-territories-mainland-1898', 'dindings-mainland-1898-survey']],
    [1898, ['yukon-1898-phase', 'quebec-1898-northern-boundary', 'hong-kong-island-1843-crown',
-    'kowloon-south-1861-hong-kong', 'lantau-1898-new-territories-lease', 'lamma-1898-new-territories-lease'],
-    ['yukon-1897-phase', 'quebec-1867-founding-province']],
+    'kowloon-south-1861-hong-kong', 'lantau-1898-new-territories-lease', 'lamma-1898-new-territories-lease',
+    'hong-kong-new-territories-mainland-1898', 'dindings-mainland-1898-survey'],
+    ['yukon-1897-phase', 'quebec-1867-founding-province', 'hong-kong-new-territories-mainland-1899']],
+   [1899, ['hong-kong-new-territories-mainland-1899', 'dindings-mainland-1898-survey'],
+    ['hong-kong-new-territories-mainland-1898']],
    [1900, [], [colony, 'yukon-1898-phase']]
   ]) {
    await jump(year);
@@ -153,6 +168,22 @@ async function verify() {
   assert(await drawer.locator('a[href="https://www.grs.gov.hk/ws/rhk/en/1860s.html"]').isVisible());
   assert(await drawer.locator('[data-area-event="E19-PEK-1860-KOWLOON"]').isVisible());
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1860-kowloon-dossier.png') });
+
+  await page.goto(root + '?year=1898', { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
+   window.atlasStoryBridge.currentYear() === 1898);
+  const walledCityHits = () => page.evaluate(() => window.historicOverlapDossier.hitCountAt(22.33233, 114.19021));
+  assert.equal(await walledCityHits(), 0);
+  await jump(1899);
+  assert.equal(await walledCityHits(), 1);
+  await page.locator('#mapLayerEvents').uncheck();
+  await page.evaluate(() => window.__historicOverlapHost.map.setView([22.417, 114.143], 10, { animate: false }));
+  await clickAreaAt(22.417, 114.143);
+  await drawer.waitFor();
+  assert.match(await drawer.textContent(), /新界大陆 · 清英勘界与英国接收/);
+  await drawer.locator('summary').click();
+  assert(await drawer.locator('a[href="https://cdn.nationalarchives.gov.uk/documents/hong-kong-and-the-opium-wars.pdf#page=16"]').isVisible());
+  await page.screenshot({ path: join(screenshotDir, '19c-territory-1899-new-territories-dossier.png') });
 
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
