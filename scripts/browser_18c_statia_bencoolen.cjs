@@ -137,6 +137,23 @@ const topics = [
     other: 'E18C-JAM-1760-TAKY-REVOLT',
     otherYear: 1760,
     archiveSource: '牙买加政府新闻署'
+  },
+  {
+    id: 'E18-A01-SHIPBOARD-RESISTANCE-1722-1765',
+    entry: 'E18C-SR-1750-KING-DAVID',
+    year: 1750,
+    other: 'E18C-SR-1722-ANOMABO',
+    otherYear: 1722,
+    archiveSource: '斯内尔格雷夫1734年著作'
+  },
+  {
+    id: 'E18-B03-B06-BENGAL-AWADH-COMPANY-REVENUE-1756-1765',
+    entry: 'E18C-CT-1765-AWADH-INDEMNITY',
+    year: 1765,
+    other: 'E18C-BNG-1756-FORT-WILLIAM-FALL',
+    otherYear: 1756,
+    archiveSource: '希尔编《1756—1757年的孟加拉》',
+    nineteenthOnly: true
   }
 ];
 
@@ -151,7 +168,9 @@ const topics = [
       await page.waitForFunction(() => document.querySelector('#workspace')?.dataset.atlasReady === 'true');
     }
     for (const topic of topics) {
-      await visit((topic.crossCentury ? '?review18c=1&review19c=1&year=' : '?review18c=1&year=') + topic.year);
+      const review = topic.nineteenthOnly ? '?review19c=1'
+        : topic.crossCentury ? '?review18c=1&review19c=1' : '?review18c=1';
+      await visit(review + '&year=' + topic.year);
       await yearIs(topic.year);
       if (topic.route) {
         const route = page.locator('[data-route-id="' + topic.route + '"]');
@@ -220,6 +239,15 @@ const topics = [
     await page.locator('#eventList [data-eid="E18C-ML-1825-HANDOVER"]').waitFor();
     await visit('?review19c=1&year=1820');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-BENCOOLEN-1719-SIEGE') === null));
+    const priorPreviewEvents = [
+      'E18C-JWH-1765-WHITEHALL',
+      'E18C-HNV-1720-CALABAR',
+      'E18C-DA-1755-MARYLAND-ARRIVAL',
+      'E18C-JLC-1788-CONSOLIDATION'
+    ];
+    for (const id of priorPreviewEvents) {
+      assert(await page.evaluate(eventId => window.atlasStoryBridge.eventById(eventId)?.id === eventId, id), id);
+    }
     console.log('PASS desktop 18C topics: route hit targets, cross-year links, original sources and return paths, garrison transition, preview isolation');
   } finally {
     await browser.close();
