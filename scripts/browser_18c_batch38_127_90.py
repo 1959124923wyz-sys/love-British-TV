@@ -28,7 +28,7 @@ try:
  wait.until(lambda _:audit() and audit()['loaded'] and b37() and b37()['loaded'] and b36() and b36()['loaded'] and b35() and b35()['loaded'] and b34() and b34()['loaded'])
  wait.until(lambda _:js("return document.querySelector('#jumpYear')?.max==='1799'"))
  assert (audit()['zoneCount'],audit()['siteCount'],audit()['phases'])==(127,90,217),audit()
- assert b37()['zoneCount']==141 and b36()['zoneCount']==130 and b35()['zoneCount']==81 and b34()['areaReferences']==24
+ assert b37()['zoneCount']==140 and b36()['zoneCount']==130 and b35()['zoneCount']==81 and b34()['areaReferences']==24
  examples=[
   (1714,['1714年后York Factory'],['Prince of Wales Fort英军'],'1714-york-recovered'),
   (1731,['Prince of Wales Fort英公司石堡建设'],['Churchill River Post英国公司'],'1731-stone-fort-start'),

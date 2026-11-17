@@ -32,7 +32,7 @@ try:
  q=b39()
  assert (q['zoneCount'],q['siteCount'],q['phases'])==(126,83,209),q
  assert audit('eighteenthBatch38Spatial')['zoneCount']==127
- assert audit('eighteenthBatch37Spatial')['zoneCount']==141
+ assert audit('eighteenthBatch37Spatial')['zoneCount']==140
  assert audit('eighteenthBatch36Spatial')['zoneCount']==130
  assert audit('eighteenthMassSpatial')['zoneCount']==81
  assert audit('eighteenthSpatial')['areaReferences']==24

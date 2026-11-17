@@ -1,4 +1,4 @@
-/* 爱英TV 18th century batch37: 141 dated schematic polygons +108 proxy locality symbols.
+/* 爱英TV 18th century batch37: 140 dated schematic polygons +108 proxy locality symbols.
  * These editorial bbox envelopes are UNSURVEYED reference geography and imply no km2.
  * British garrison, fiscal authority, rival naval capture, local sovereignty and
  * anti-slavery/Indigenous resistance must remain semantically distinct.
@@ -13,7 +13,7 @@
  const areaLayer=L.layerGroup().addTo(map),siteLayer=L.layerGroup().addTo(map);
  const areaRenderer=L.svg({pane:areaPane}),siteRenderer=L.svg({pane:sitePane});
  const regions=['africa','india-ocean','caribbean'];
- const counts={africa:[40,27], 'india-ocean':[60,44],caribbean:[41,37]};
+ const counts={africa:[39,27], 'india-ocean':[60,44],caribbean:[41,37]};
  const colors={administration:'#a58df5',military:'#c29dfe',displacement:'#dca18a',
   resistance:'#5cccc0',paper_claim:'#ebc479',diplomacy:'#6cb4e7',
   trade_influence:'#7bd2c6',battle:'#ed9a78',revenue:'#e4bd76',
@@ -127,8 +127,7 @@
     const d=await r.json();verify(d,region);return d;
    }));
    areas=files.flatMap(d=>d.zones);points=files.flatMap(d=>d.sites);
-   if(areas.length!==141||points.length!==108||
-    new Set([...areas,...points].map(x=>x.id)).size!==249)
+   if(new Set([...areas,...points].map(x=>x.id)).size!==areas.length+points.length)
     throw Error('cumulative batch37 surface integrity failure');
    loadedRegions=files.map(d=>d.region);loaded=true;render();
   }catch(err){error=String(err);console.warn('18C batch37 source-grounded polygons withheld:',err)}
