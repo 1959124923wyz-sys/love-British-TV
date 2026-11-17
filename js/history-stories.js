@@ -96,7 +96,7 @@
    const hasCriticalNumber=/\d[\d,.]*\s*(?:名|人|艘|吨|镑|英镑|英里|亩|英亩|%|％)/.test(label);
    const linked=eventInMemory(id),short=linked&&label.length>22&&!hasCriticalNumber?eventHeadline(linked):label;
    const crossYear=crossPreviewEventYears?.[id];
-   if(!linked&&Number.isInteger(crossYear)&&crossYear>=1800&&crossYear<=1819){
+   if(!linked&&Number.isInteger(crossYear)&&crossYear>=1800&&crossYear<=1829){
     out+='<a class="story-event-link" href="?review18c=1&amp;review19c=1&amp;year='+crossYear+
      '" title="打开'+crossYear+'年年表">'+esc(label)+'</a>';
    }else{
