@@ -10,9 +10,9 @@ const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html'),
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 A(idx.stories.length>=34);A.equal(idx.stories[20].id,story.id);A.equal(idx.stories[20].status,'research_preview');A.equal(idx.stories[20].publication_review,'not_submitted');
 A.equal(data.schema,'atlas-18c-t09-tuscarora-yamasee-captivity-v1');A.equal(data.editorial_status,'research_preview_not_published');
-A.equal(data.events.length,23);A.equal(data.sources.length,32);A.equal(data.sources.filter(s=>s.original_registry_key?.startsWith('A:')).length,9);
-A.equal(raw.groups.length,5);A.equal(data.provenance.original_candidate_ids,9);A.equal(data.provenance.mapped_original_ids,8);
-A.deepEqual(data.provenance.deferred_original_ids,['E18A2-TUS-FEBTREATY']);
+A.equal(data.events.length,24);A.equal(data.sources.length,35);A.equal(data.sources.filter(s=>s.original_registry_key?.startsWith('A:')).length,9);
+A.equal(raw.groups.length,5);A.equal(data.provenance.original_candidate_ids,9);A.equal(data.provenance.mapped_original_ids,9);
+A.deepEqual(data.provenance.deferred_original_ids,[]);
 A.equal(data.routes.length,0);A.equal(data.places.length,0);A.equal(data.colonial_polygons.length,0);
 A.equal(data.publication.actual_control_polygons_approved,0);
 A(data.sources.every(s=>s.url.startsWith('https://')&&!s.original_manuscript_personally_inspected));
@@ -36,19 +36,19 @@ for(const e of data.events){
    A(cross.includes('\n'+id+','),'missing 1126 crosswalk '+id);
  }
 }
-A.equal(known.size,23);A.equal(used.size,8);A.equal(pins,4);
-A([...originals.keys()].filter(id=>!used.has(id)).length===1);
-A.equal(story.sections.length,23);A.equal(story.publication_status,'research_only');A.equal(story.publication_approval,'not_submitted');
+A.equal(known.size,24);A.equal(used.size,9);A.equal(pins,4);
+A([...originals.keys()].filter(id=>!used.has(id)).length===0);
+A.equal(story.sections.length,24);A.equal(story.publication_status,'research_only');A.equal(story.publication_approval,'not_submitted');
 let links=[];for(const sec of story.sections){A.equal(sec.paragraphs.length,3);A(sec.source_keys.length&&sec.source_keys.every(k=>names.has(k)));
  for(const p of sec.paragraphs)for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|([^\]\n]+)\]\]/g)){A(known.has(m[1]),'bad inline event '+m[1]);links.push(m[1]);}}
-A.equal(links.length,23);A.equal(new Set(links).size,23);
+A.equal(links.length,24);A.equal(new Set(links).size,24);
 A.deepEqual(new Set(links),new Set(story.related_event_ids));A.deepEqual(new Set(links),new Set(idx.stories[20].event_ids));
-A.equal(geo.transitions.length,23);
+A.equal(geo.transitions.length,24);
 A(geo.transitions.every(e=>e.polygon_allowed===false&&e.area_sqkm===null&&e.territorial_control_verified===false));
 A(app.includes("fetch('data/stories/serial/chronology-preview-t09-tuscarora-yamasee-1702-1732.json'"));
 A(app.includes('t09Tuscarora21Ready=true'));A(reader.includes('Array.isArray(draft.stories)'));
 A(reader.includes("storyMeta.has('E18-T09-TUSCARORA-YAMASEE-INDIGENOUS-CAPTIVITY-1702-1732')"));
-A(html.includes('18c21-t09-20261111'));
+A(html.includes('app.js?v='));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
 A(!css.includes('.story-reading-toolbar')&&!css.includes('.story-toc'));
 const E=tag=>data.events.find(e=>e.id==='E18C-T09-'+tag);
@@ -58,7 +58,8 @@ A(E('1715-APR15-YAMASEE-RISING').research_original_record_ids.length===1);
 A(E('1716-SC-GOVERNMENT-TRADE-MONOPOLY').research_original_record_ids.length===1);
 A(E('1723-NC-FREED-PERSON-DEPORT').description.includes('六个月'));
 A(E('1732-GEORGIA-CHARTER').lat===null);
-A(!data.events.some(e=>e.research_original_record_ids.includes('E18A2-TUS-FEBTREATY')));
+A.deepEqual(E('1715-FEB11-COREE-PEACE').research_original_record_ids,['E18A2-TUS-FEBTREATY']);
+A.match(E('1715-FEB11-COREE-PEACE').description,/科里人及其他交战者/);
 A.equal(data.statistics.nooherooka_1713_reported_killed_or_captured_total,950);
 A.equal(data.statistics.verified_british_killed_at_neoheroka_total,null);
-console.log('PASS 21 research stories: T09 23 unique dated events/23 sections/69 paragraphs/32 sources/23 true Atlas links; 5 originals groups 9 registry keys 8 integrated 1 deferred; four modern city references, zero invented British polygons.');
+console.log('PASS 21 research stories: T09 24 unique dated events/24 sections/72 paragraphs/35 sources/24 true Atlas links; 5 original groups, 9 registry keys, all 9 integrated; four modern city references, zero invented British polygons.');

@@ -58,7 +58,8 @@
       "research_provenance_kind": "original_editor15_T29_T30_group",
       "research_related_group_ids": [],
       "research_merge_review": "Original C series T29/T30; subevent and actor checked against official museum/archives or named legal text; no group is inferred for independent supplemental nodes.",
-      "historical_context_limit": "Ireland was a separate crown-ruled kingdom with a Dublin parliament; legal discrimination, London-appointed administration, local loyalist violence and rebel atrocities require distinct attribution. No verified colonial polygons."
+      "historical_context_limit": "Ireland was a separate crown-ruled kingdom with a Dublin parliament; legal discrimination, London-appointed administration, local loyalist violence and rebel atrocities require distinct attribution. No verified colonial polygons.",
+      "show_dossier_sources": true
     },
     {
       "id": "E18C-IRL-1720-DECLARATORY-ACT",
@@ -718,10 +719,10 @@
       "start_year": 1798,
       "end_year": 1798,
       "visible_from": 1798,
-      "date_label": "1798年",
+      "date_label": "1798年6月5日",
       "name": "1798年6月5日Scullabogue起义方杀害被拘亲政府居民",
-      "description": "New Ross战役当日，Scullabogue农舍谷仓遭起义方人员纵火并造成100多名被拘亲政府人士死亡。这件重大暴行要明确起义方责任；历史谷仓具体地籍未核，地图不随意把New Ross城镇点当作杀人地点。",
-      "short_description": "New Ross战役当日，Scullabogue农舍谷仓遭起义方人员纵火并造成100多名被拘亲政府人士死亡。这件重大暴行要明确起义方责任；历史谷仓具体地籍未核，地图不随意把New Ross城镇点当作杀人地点。",
+      "description": "新罗斯交战当天，驻斯卡拉博格的起义者杀害被囚人员，并点燃关押部分人的谷仓。受害者多数是新教徒，里面有妇女和儿童。爱尔兰国家档案馆概述为逾百名被囚者遇害。",
+      "short_description": "新罗斯交战当天，驻斯卡拉博格的起义者杀害被囚人员，并点燃关押部分人的谷仓。受害者多数是新教徒，里面有妇女和儿童。爱尔兰国家档案馆概述为逾百名被囚者遇害。",
       "category": "rebel_prisoner_massacre",
       "icon_code": "WAR",
       "lat": null,
@@ -733,7 +734,9 @@
       "source_ids": [
         "18IR-IR09",
         "18IR-IR17",
-        "18IR-IR10"
+        "18IR-IR10",
+        "418-IRL-GRANDY",
+        "418-IRL-NLI"
       ],
       "certainty": "source_linked_existing_assistant_C_plus_institutional_cross_check",
       "significance": {
@@ -761,7 +764,14 @@
       "research_provenance_kind": "original_editor15_T29_T30_group",
       "research_related_group_ids": [],
       "research_merge_review": "Original C series T29/T30; subevent and actor checked against official museum/archives or named legal text; no group is inferred for independent supplemental nodes.",
-      "historical_context_limit": "Ireland was a separate crown-ruled kingdom with a Dublin parliament; legal discrimination, London-appointed administration, local loyalist violence and rebel atrocities require distinct attribution. No verified colonial polygons."
+      "historical_context_limit": "Ireland was a separate crown-ruled kingdom with a Dublin parliament; legal discrimination, London-appointed administration, local loyalist violence and rebel atrocities require distinct attribution. No verified colonial polygons.",
+      "show_dossier_sources": true,
+      "research_audited_cross_arc_group_ids": [
+        "E18-MRG-T30-02"
+      ],
+      "research_audited_cross_arc_original_ids": [
+        "C-F06-004"
+      ]
     },
     {
       "id": "E18C-IRL-1798-ANTRIM",
@@ -1029,7 +1039,8 @@
       "reading_level": "statutory_excerpt_not_manuscript",
       "original_registry_key": "C:S53a",
       "original_manuscript_personally_inspected": false,
-      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。"
+      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。",
+      "label": "University of Minnesota Law Library · 1703/1704爱尔兰2 Anne c.6土地、监护、宗教与城居法规转录"
     },
     {
       "id": "18IR-IR02",
@@ -1039,7 +1050,8 @@
       "reading_level": "peer_reviewed_abstract",
       "original_registry_key": "C:S53",
       "original_manuscript_personally_inspected": false,
-      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。"
+      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。",
+      "label": "Cambridge Irish Historical Studies · 1703—1704天主教惩罚法立法过程与历史背景"
     },
     {
       "id": "18IR-IR03",
@@ -1109,7 +1121,8 @@
       "reading_level": "national_military_museum_detailed_history",
       "original_registry_key": "C:S23",
       "original_manuscript_personally_inspected": false,
-      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。"
+      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。",
+      "label": "National Army Museum · 1798起义、双方暴力、Oulart、New Ross、Antrim、Vinegar Hill及法军登陆"
     },
     {
       "id": "18IR-IR10",
@@ -1119,7 +1132,8 @@
       "reading_level": "national_archive_educational_facsimile_transcription",
       "original_registry_key": "C:C5-IRL-NAI-1798",
       "original_manuscript_personally_inspected": false,
-      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。"
+      "notes": "主编15档案SOURCE_C.json原始来源编号；馆方网络文本/转写不等同亲读手写原卷。",
+      "label": "National Archives of Ireland · 1798年叛乱17份历史档案影印和馆方说明（包含Oulart原信和军事镇压）"
     },
     {
       "id": "18IR-IR11",
@@ -1189,7 +1203,8 @@
       "reading_level": "specialist_heritage_rebellion_chronology",
       "original_registry_key": null,
       "original_manuscript_personally_inspected": false,
-      "notes": "本轮由机构公开材料或经核现代地名补充，非主编15原始C来源编号。"
+      "notes": "本轮由机构公开材料或经核现代地名补充，非主编15原始C来源编号。",
+      "label": "National 1798 Rebellion Centre · 国家1798起义纪念中心按日期的战事年表"
     },
     {
       "id": "18IR-IR18",
@@ -1310,6 +1325,24 @@
       "original_registry_key": null,
       "original_manuscript_personally_inspected": false,
       "notes": "本轮由机构公开材料或经核现代地名补充，非主编15原始C来源编号。"
+    },
+    {
+      "id": "418-IRL-GRANDY",
+      "publisher": "爱尔兰国家档案馆",
+      "title": "1798年展档第13件：理查德·格兰迪6月23日证词印本，Frazer Mss. 1/30",
+      "label": "爱尔兰国家档案馆 · 1798年展档第13件：理查德·格兰迪6月23日证词印本，Frazer Mss. 1/30",
+      "url": "https://www.nationalarchives.ie/PDF/1798.pdf",
+      "access": "institutional_guide_to_contemporary_testimony",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "418-IRL-NLI",
+      "publisher": "爱尔兰国家图书馆",
+      "title": "斯卡拉博格事件馆藏解说，vtls000734418",
+      "label": "爱尔兰国家图书馆 · 斯卡拉博格事件馆藏解说，vtls000734418",
+      "url": "https://catalogue.nli.ie/Record/vtls000734418",
+      "access": "heritage_catalogue_historical_context",
+      "original_manuscript_personally_inspected": false
     }
   ],
   "provenance": {

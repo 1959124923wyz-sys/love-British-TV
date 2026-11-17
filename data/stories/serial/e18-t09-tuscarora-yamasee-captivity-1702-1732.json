@@ -23,7 +23,7 @@
     "E18-T11-VIRGINIA-NEWYORK-STONO-SLAVERY-1702-1741"
   ],
   "successor_story_ids": [],
-  "source_verification_scope": "主编15 T09原5合并组9候审ID9 A源键、1126档案保留；8条原候审作为具年史事直接复核，1715二月据称和约缺条约原文暂存待核，不冒充确定行动。北卡州政府、南卡大学百科、NPS、UNB法条和NOAA现代地理资料交叉核对。",
+  "source_verification_scope": "原T09五个归并组的九条优先候选均依据具体史料逐项对应。1715年2月的议事录与州图书馆概述的记法分别保留。",
   "reading_note": "Nooherooka官方392杀死或焚死+558杀死或俘虏=950人合并伤亡俘获值，不能当950死亡；整个Tuscarora战争约1000被卖作奴役者为另一个汇总估计；Yamasee战争殖民者死亡与土著被殖民军杀害分开；1715二月和约保留待核。",
   "map_note": "仅4个现代New Bern/Charleston代表坐标记录；历史堡垒、Pocotaligo和战事路线缺可靠WGS84不伪造；0英国殖民新Polygon。",
   "sources": [
@@ -282,6 +282,33 @@
       "original_registry_key": null,
       "access": "institutional_public_history_or_edited_primary_statute_examined",
       "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "418-NC-MINUTES",
+      "publisher": "《北卡罗来纳殖民记录》",
+      "title": "卷二第168页：1714/15年2月11日殖民议事录",
+      "label": "《北卡罗来纳殖民记录》 · 卷二第168页：1714/15年2月11日殖民议事录",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/The_State_records_of_North_Carolina_%28IA_cu31924032284188%29.pdf",
+      "access": "published_transcription_of_colonial_council_minutes",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "418-NC-MATTAMUSKEET",
+      "publisher": "北卡罗来纳文化与自然资源厅",
+      "title": "马塔默斯基特历史标记B-42",
+      "label": "北卡罗来纳文化与自然资源厅 · 马塔默斯基特历史标记B-42",
+      "url": "https://www.dncr.nc.gov/blog/2023/12/05/mattamuskeet-b-42",
+      "access": "state_historical_marker_and_context",
+      "original_manuscript_personally_inspected": false
+    },
+    {
+      "id": "418-NCPEDIA-WAR",
+      "publisher": "北卡罗来纳州图书馆NCpedia",
+      "title": "1770年前的北卡罗来纳：塔斯卡罗拉战争",
+      "label": "北卡罗来纳州图书馆NCpedia · 1770年前的北卡罗来纳：塔斯卡罗拉战争",
+      "url": "https://www.ncpedia.org/waywelived/tuscarora-war",
+      "access": "state_library_historical_synthesis",
+      "original_manuscript_personally_inspected": false
     }
   ],
   "sections": [
@@ -463,6 +490,22 @@
         "1713年，[[E18C-T09-1713-TUSCARORA-ENSLAVED|Tuscarora战争后的战俘被输送进殖民奴隶市场]]。北卡州官方回顾称整场Tuscarora战争约有1000名Tuscarora被卖作奴隶，另有3000余人失去家园。",
         "这些为包含整个战争过程的回顾性估计，而非1713年3月23日某一次战斗的精确统计。",
         "原住民被掳往其他英国殖民地的贸易网络需要进一步逐船考证，不据此绘制未经证实的海上转运路线。"
+      ]
+    },
+    {
+      "id": "1715-feb11-coree-peace",
+      "heading": "北卡殖民议事会与科里人议和",
+      "period_start_year": 1715,
+      "period_end_year": 1715,
+      "source_keys": [
+        "418-NC-MINUTES",
+        "418-NC-MATTAMUSKEET",
+        "418-NCPEDIA-WAR"
+      ],
+      "paragraphs": [
+        "[[E18C-T09-1715-FEB11-COREE-PEACE|1715年2月11日，北卡殖民议事会记录与科里人及其他交战者达成和平]]。会议在总督伊登位于乔万的住所召开，准许这些人和议事录所称帕杰特一部定居马塔默斯基特，并计划派人同住监督。",
+        "北卡州史把二月和议列作塔斯卡罗拉战争最后一幕。同期会议记录点名科里人，没有列出其他交战者的完整名册。北卡文化与自然资源厅记，马塔默斯基特后来容纳科里、科奇尼与马塔默斯基特诸群体。",
+        "参加和议的部众此前在战争中失去居地。总督获授权委任监督人员，财政规定日薪2先令6便士。"
       ]
     },
     {
@@ -668,6 +711,7 @@
     "E18C-T09-1713-MAR20-NEOHEROKA-SIEGE",
     "E18C-T09-1713-MAR23-NEOHEROKA-BURNING",
     "E18C-T09-1713-TUSCARORA-ENSLAVED",
+    "E18C-T09-1715-FEB11-COREE-PEACE",
     "E18C-T09-1715-APR14-POCOTALIGO-MEETING",
     "E18C-T09-1715-APR15-YAMASEE-RISING",
     "E18C-T09-1715-APR-TRADE-CREDIT-KILLINGS",
