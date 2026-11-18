@@ -26,7 +26,7 @@
   foreign_occupation:'非英军控制／英国失去据点'};
  const outline=new Set(['displacement','resistance','paper_claim','diplomacy',
   'trade_influence','battle','coercion','foreign_occupation']);
- const active=(obj,yr)=>obj.periods.some(p=>p.start_year<=yr&&yr<=p.end_year);
+ const active=(obj,yr)=>!obj.superseded_by&&obj.periods.some(p=>p.start_year<=yr&&yr<=p.end_year);
  const phase=(obj,yr)=>obj.periods.find(p=>p.start_year<=yr&&yr<=p.end_year);
  let year=host.getYear(),loaded=false,error=null,areas=[],points=[],loadedRegions=[];
  const reader=window.AtlasReaderCopy;

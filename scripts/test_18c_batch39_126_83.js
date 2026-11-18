@@ -15,8 +15,8 @@ const priorAreas=[...old34.area_references,...old35.zones,...old36.zones,...old3
 const priorSites=[...old34.control_sites,...old35.sites,...old36.sites,...old37.flatMap(x=>x.sites),...old38.flatMap(x=>x.sites)];
 assert.equal(priorAreas.length,502);assert.equal(priorSites.length,338);
 assert.equal(502+zones.length,628);assert.equal(338+sites.length,421);
-assert.equal([...priorAreas,...priorSites].reduce((a,z)=>a+z.periods.length,0),891);
-assert.equal([...priorAreas,...priorSites,...zones,...sites].reduce((a,z)=>a+z.periods.length,0),1100);
+assert.equal([...priorAreas,...priorSites].reduce((a,z)=>a+z.periods.length,0),903);
+assert.equal([...priorAreas,...priorSites,...zones,...sites].reduce((a,z)=>a+z.periods.length,0),1112);
 const allowed=new Set(['administration','military','displacement','resistance','paper_claim','diplomacy','trade_influence','battle','revenue','coercion','foreign_occupation']);
 const ids=new Set();
 for(const group of d){
@@ -53,8 +53,13 @@ for(const group of d){
  }
 }
 assert.equal(ids.size,209);
+const surveyedIds=new Set([...old35.regional_zones,...old35.regional_sites].map(record=>record.id));
+assert.equal([...d[0].zones,...d[0].sites].filter(record=>record.superseded_by).length,8);
+for(const record of [...d[0].zones,...d[0].sites].filter(record=>record.superseded_by)){
+ assert(surveyedIds.has(record.superseded_by),record.id);
+}
 const lookup=(r,s)=>{const g=d.find(x=>x.region===r);const z=g.zones.find(x=>x.title.includes(s));assert(z,'missing '+r+' '+s);return z;};
-const active=(x,y)=>x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
+const active=(x,y)=>!x.superseded_by&&x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
 for(const [r,label,year,yes] of [
  ['caribbean-1759-1763','法国瓜德罗普岛英军短期占领',1758,false],
  ['caribbean-1759-1763','法国瓜德罗普岛英军短期占领',1759,true],
@@ -64,8 +69,9 @@ for(const [r,label,year,yes] of [
  ['caribbean-1759-1763','英国占Martinique法属殖民岛',1763,false],
  ['caribbean-1759-1763','Saint Lucia英国短期占据',1762,true],
  ['caribbean-1759-1763','Saint Lucia英国短期占据',1763,false],
- ['caribbean-1759-1763','Havana英军短期占港',1762,true],
+ ['caribbean-1759-1763','Havana英军短期占港',1762,false],
  ['caribbean-1759-1763','Havana英军短期占港',1763,false],
+ ['caribbean-1759-1763','Havana撤出与西班牙恢复',1763,false],
  ['caribbean-1759-1763','Saint Kitts法军短占',1782,true],
  ['caribbean-1759-1763','Saint Kitts法军短占',1783,false],
  ['gold-coast-forts','奥图阿姆坦图姆奎里英商据点',1721,false],
@@ -98,12 +104,13 @@ assert.equal(lookup('gulf-surat-factories','Bushire Residency临时停办').kind
 assert.equal(lookup('gulf-surat-factories','Baghdad东印度公司政治Residency成立').kind,'diplomacy');
 const app=read('app.js'),html=read('index.html'),js=read('js/eighteenth-batch39-spatial.js');
 assert.equal((app.match(/window\.eighteenthBatch39Spatial\?\.render\?\.\(\);/g)||[]).length,4);
-assert(app.includes('.atlas-18c-b39-zone,.atlas-18c-b39-site,'));
-assert(html.includes('js/eighteenth-batch39-spatial.js?v=18c-batch39-caribbean-goldcoast-gulf-126-83-20261112'));
+const overlap=read('js/eighteenth-overlap-right-dossier.js');
+assert(overlap.includes("'.atlas-18c-b39-zone','.atlas-18c-b39-site'"));
+assert(html.includes('js/eighteenth-batch39-spatial.js?v=18c-batch39-caribbean-goldcoast-gulf-126-83-20261118-havana'));
 assert(!html.includes('第39批地图扩容')&&html.includes('地图图例'),'release log should live in research docs, not the reader legend');
-assert(js.includes("get('review18c')!=='1'"));
+assert(js.includes("!obj.superseded_by&&obj.periods.some"));
 assert(js.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(js.includes("window.eighteenthBatch39Spatial="));
 assert(js.includes("areas.length!==126||points.length!==83"));
 assert(!/area_sqkm\s*=\s*[1-9]/.test(js));
-console.log('PASS 18c39 new 126 zones,83 cores,209 phase spans; cumulative 628 zones,421 points,1100 phases; geography, source, historical withdrawal, local autonomy and GIS constraints valid.');
+console.log('PASS 18c39 new 126 zones,83 cores,209 phase spans; cumulative 628 zones,421 points,1112 phases; geography, source, historical withdrawal, local autonomy and GIS constraints valid.');

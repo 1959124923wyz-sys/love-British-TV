@@ -809,6 +809,57 @@ async function verify() {
   await depot.waitFor();
   assert.match(await depot.textContent(), /英军军械库/);
 
+  // Havana: the siege positions, fortified city and permanent defenses have separate dates.
+  const havanaTown = [23.136595, -82.3527393];
+  const morro = [23.150584, -82.3568209];
+  const cabana = [23.1464735, -82.3491753];
+  const arsenalSite = [23.12843, -82.35515];
+  for (const { point, stages } of [
+   { point: havanaTown, stages: [[1762, 'HAVANA_WALLED_TOWN', /8月14日英军进城/],
+    [1763, 'HAVANA_WALLED_TOWN', /7月6日西班牙接收/]] },
+   { point: morro, stages: [[1762, 'HAVANA_CASTILLO_DEL_MORRO', /7月30日英军夺堡/]] },
+   { point: cabana, stages: [[1774, 'HAVANA_CABANA_FORT', /西班牙建成后驻守/]] },
+  ]) {
+   await setView([...point, 16]);
+   for (const [year, id, title] of stages) {
+    await jump(year);
+    const atlas = await atlantic();
+    assert(atlas.activeRegionalZones.includes(id));
+    assert(!atlas.activeZones.includes('HAVANA_HARBOR'));
+    const legacy = await page.evaluate(() => window.eighteenthBatch39Spatial.getAudit());
+    assert(!legacy.activeZoneIds.some(id => /^B39-C-Z03[2-6]$/.test(id)));
+    assert(!legacy.activeSiteIds.some(id => /^B39-C-P03[2-4]$/.test(id)));
+    await clickAreaAt(...point);
+    const record = page.locator('[data-overlap-id="18c:' + id + '"]');
+    await record.waitFor();
+    assert.match(await record.textContent(), title);
+   }
+  }
+  await jump(1762);
+  assert(!(await atlantic()).activeRegionalZones.includes('HAVANA_CABANA_FORT'));
+  assert((await atlantic()).activeRegionalSites.includes('HAVANA_CABANA_HEIGHTS'));
+  await jump(1763);
+  await setView([...arsenalSite, 16]);
+  await clickAreaAt(...arsenalSite);
+  await dossierTitle.filter({ hasText: '王家船坞 · 英军撤离前拆毁设备' }).waitFor();
+  await jump(1799);
+  assert((await atlantic()).activeRegionalZones.includes('HAVANA_WALLED_TOWN'));
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...havanaTown, 16]);
+  await clickAreaAt(...havanaTown);
+  const havanaWall = page.locator('[data-historic-overlap-id$=":havana-walled-town-1800"]');
+  await havanaWall.waitFor();
+  assert.match(await havanaWall.textContent(), /石城垣继续围合/);
+  await jump(1864);
+  assert(!(await ids()).includes('havana-walled-town-1800'));
+  await jump(1899);
+  await setView([...morro, 16]);
+  await clickAreaAt(...morro);
+  const havanaFort = page.locator('[data-historic-overlap-id$=":havana-morro-fort-1800"]');
+  await havanaFort.waitFor();
+  assert.match(await havanaFort.textContent(), /1月1日美军接收/);
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
