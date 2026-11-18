@@ -68,7 +68,7 @@ for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISE
 a.equal(z('MENORCA_ISLAND').periods.find(p=>p.start_year===1756).kind,'foreign_occupation');
 a.equal(z('MENORCA_ISLAND').periods.find(p=>p.start_year===1782).kind,'foreign_occupation');
 a.equal(z('GIBRALTAR_PENINSULA').periods.find(p=>p.start_year===1713).kind,'administration');
-const regional=[...data.regional_zones,...data.regional_sites,...data.coastal_rights];
+const regional=[...data.regional_zones,...data.regional_sites,...data.regional_lines,...data.coastal_rights];
 a.equal(regional.length,new Set(regional.map(item=>item.id)).size);
 for(const item of regional){
  a.equal(item.area_sqkm,null);
@@ -158,6 +158,30 @@ a.equal(s('CAVITE').superseded_by,'CAVITE_FORT_SAN_FELIPE');
 a(isOn(atlantic('MANILA_PUERTA_REAL_OLD'),1762)&&!isOn(atlantic('MANILA_PUERTA_REAL_OLD'),1780));
 a(!isOn(atlantic('MANILA_PUERTA_REAL_1780'),1779)&&isOn(atlantic('MANILA_PUERTA_REAL_1780'),1780));
 a(isOn(atlantic('ZAMBOANGA_LA_CALDERA_PORT'),1764)&&!isOn(atlantic('ZAMBOANGA_LA_CALDERA_PORT'),1765));
+
+const stageAt=(name,year)=>atlantic(name).periods.find(p=>p.start_year<=year&&year<=p.end_year);
+a.equal(stageAt('MADRAS_ST_GEORGE_EARLY',1748).kind,'foreign_occupation');
+a.match(stageAt('MADRAS_ST_GEORGE_EARLY',1749).title,/8月21日/);
+a.equal(stageAt('CALCUTTA_OLD_FORT_WILLIAM',1756).kind,'foreign_occupation');
+a.match(stageAt('CALCUTTA_OLD_FORT_WILLIAM',1757).title,/1月2日/);
+a.equal(stageAt('CALCUTTA_OLD_FORT_WILLIAM',1767),undefined);
+a.match(stageAt('CALCUTTA_OLD_FORT_CUSTOMS',1767).title,/海关/);
+for (const id of ['MADRAS_ST_GEORGE_EARLY','MADRAS_ST_GEORGE_SIEGE','MADRAS_ST_GEORGE_LATE'])
+ a.equal(atlantic(id).stable_id,atlantic('MADRAS_ST_GEORGE_LATE').stable_id);
+for(const id of ['BENGAL_DIWANI','BIHAR_DIWANI','ORISSA_DIWANI','CALCUTTA_24_PARGANAS'])
+ a(atlantic(z(id).superseded_by),id);
+for(const row of data.regional_lines){
+ a.equal(row.geometry.type,'LineString');
+ const next=successors.find(f=>f.id===row.cross_century_feature_id);
+ a.equal(next.properties.geometry_precision,'source_backed_historical_line');
+ a.equal(next.properties.stable_id,row.stable_id);
+}
+const blackTown=successors.find(f=>f.id==='madras-new-black-town-1800');
+const blackTownAfter=successors.find(f=>f.id==='madras-new-black-town-after-demolition');
+a.equal(blackTown.properties.end_year,1858);
+a.equal(blackTownAfter.properties.start_year,1859);
+a.equal(blackTown.properties.stable_id,blackTownAfter.properties.stable_id);
+a.equal(blackTownAfter.geometry.type,'Point');
 
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);

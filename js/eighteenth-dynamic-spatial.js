@@ -40,7 +40,7 @@
    areaLayer.clearLayers();coreLayer.clearLayers();
    if(!loaded||year<1700||year>1799||!$('mapLayerTerritory').checked||
       !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
-   const shapes=areas.filter(f=>active(f.properties.periods));
+   const shapes=areas.filter(f=>!f.properties.superseded_by&&active(f.properties.periods));
    // Approximate bounding rectangle only influences display ordering, NEVER a territorial area metric.
    const span=f=>{const pts=f.geometry.coordinates[0],xx=pts.map(c=>c[0]),yy=pts.map(c=>c[1]);
      return (Math.max(...xx)-Math.min(...xx))*(Math.max(...yy)-Math.min(...yy));};
@@ -132,7 +132,7 @@
  }
  window.eighteenthSpatial={render,getAudit:()=>({
    loaded,areaReferences:areas.length,documentedCityCores:sites.length,
-   activeYear:year,activeAreas:areas.filter(x=>active(x.properties.periods)).map(x=>x.properties.id),
+   activeYear:year,activeAreas:areas.filter(x=>!x.properties.superseded_by&&active(x.properties.periods)).map(x=>x.properties.id),
    activeSites:sites.filter(x=>!x.superseded_by&&active(x.periods)).map(x=>x.id),
    visibleAreaLayerObjects:areaLayer.getLayers().length,visibleSiteLayerObjects:coreLayer.getLayers().length,error
  })};

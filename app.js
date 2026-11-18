@@ -95,6 +95,9 @@ const voyageRenderer=L.svg({pane:'voyagePane'});
 map.createPane('territoryPane');
 map.getPane('territoryPane').style.zIndex='455';
 const territoryRenderer=L.svg({pane:'territoryPane'});
+map.createPane('nineteenthBoundaryPane');
+map.getPane('nineteenthBoundaryPane').style.zIndex='474';
+const nineteenthBoundaryRenderer=L.svg({pane:'nineteenthBoundaryPane'});
 // 17C cited region readers sit below events and above the base map, separate
 // from exact control geometry; polygons are only schematic orientation aids.
 map.createPane('seventeenthStudiesPane');
@@ -1115,7 +1118,7 @@ function renderEighteenthReviewEvidenceCores(){
  for(const f of eighteenthBengalControlCores?.features||[]){
   const p=f.properties||{};
   const period=(p.periods||[]).find(x=>year>=x.start_year&&year<=x.end_year);
-  if(period)visible.push({f,mode:'bengal',text:period.status});
+  if(!p.superseded_by&&period)visible.push({f,mode:'bengal',text:period.status});
  }
  for(const f of eighteenthJamaicaMaroonAutonomyCores?.features||[]){
   const p=f.properties||{};
@@ -1211,7 +1214,10 @@ function loadNineteenthTerritorialAreas(data){
    geometry?.type==='MultiPolygon'?geometry.coordinates:[];
   const validShape=geometry?.type==='Point'?
    p?.geometry_precision==='named_place_anchor'&&validCoordinate(geometry.coordinates):
-   polygons.length>0&&polygons.every(polygon=>Array.isArray(polygon)&&polygon.length&&polygon.every(validRing));
+   geometry?.type==='LineString'?
+    p?.geometry_precision==='source_backed_historical_line'&&Array.isArray(geometry.coordinates)&&
+    geometry.coordinates.length>=2&&geometry.coordinates.every(validCoordinate):
+    polygons.length>0&&polygons.every(polygon=>Array.isArray(polygon)&&polygon.length&&polygon.every(validRing));
   return feature.type==='Feature'&&typeof feature.id==='string'&&p?.stable_id&&p.name&&p.summary_zh&&validShape&&
    [p.start_year,p.end_year].every(y=>Number.isInteger(y)&&y>=1800&&y<=1899)&&p.start_year<=p.end_year&&
    p.historical_boundary_confirmed===false&&p.fill_authorized===false&&p.dash_only===true&&
@@ -1265,18 +1271,17 @@ function renderNineteenthSpatial(){
    continue;
   }
   if(feature.geometry.type==='LineString'){
-   L.geoJSON(site,{
-    pane:'warReachPane',renderer:warReachRenderer,bubblingMouseEvents:false,
-    style:{color,weight:3,dashArray:'7 6',className:'atlas-19c-frontier'},
-    onEachFeature:(_,line)=>{
-     line.bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
-      pane:'eventTooltipPane',className:'atlas-hover',direction:'auto'});
-     line.on('click',e=>{
-      if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
-      openTerritoryDossier(site);
-     });
-    }
-   }).addTo(group);
+   const points=feature.geometry.coordinates.map(([lon,lat])=>[lat,lon]);
+   const style={pane:'nineteenthBoundaryPane',renderer:nineteenthBoundaryRenderer,color,bubblingMouseEvents:false};
+   L.polyline(points,{...style,weight:3,dashArray:'7 6',interactive:false,
+    className:'atlas-19c-frontier'}).addTo(group);
+   L.polyline(points,{...style,weight:10,opacity:.001,className:'atlas-19c-frontier-hit'})
+    .bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
+     pane:'eventTooltipPane',className:'atlas-hover',direction:'auto'})
+    .on('click',e=>{
+     if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+     openTerritoryDossier(site);
+    }).addTo(group);
    continue;
   }
   const [lon,lat]=feature.geometry.coordinates;
@@ -4274,7 +4279,7 @@ window.atlasStoryBridge={
  active18cContinuityIds:()=>year>=1700&&year<=1709&&preview18cReady&&$('toggleControlAreas').checked?
   (continuity1700References?.features||[]).filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year).map(f=>f.properties.stable_id):[],
  active18cBengalCoreIds:()=>year>=1700&&bengal18cReady&&$('toggleControlAreas').checked?
-  (eighteenthBengalControlCores?.features||[]).filter(f=>(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year)).map(f=>f.properties.stable_id):[],
+  (eighteenthBengalControlCores?.features||[]).filter(f=>!f.properties.superseded_by&&(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year)).map(f=>f.properties.stable_id):[],
  active18cMaroonCoreIds:()=>year>=1700&&jamaica18cReady&&$('toggleControlAreas').checked?
   (eighteenthJamaicaMaroonAutonomyCores?.features||[])
     .filter(f=>(f.properties.periods||[]).some(p=>year>=p.start_year&&year<=p.end_year))

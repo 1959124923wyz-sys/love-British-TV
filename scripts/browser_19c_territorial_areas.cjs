@@ -911,6 +911,81 @@ async function verify() {
   await caviteLater.waitFor();
   assert.match(await caviteLater.textContent(), /菲律宾革命政府短驻/);
 
+  const madrasFort = [13.079915, 80.287055];
+  const calcuttaOldFort = [22.573896, 88.347533];
+  for (const [point, id, stages] of [
+   [madrasFort, 'MADRAS_ST_GEORGE_EARLY', [[1746, /法军攻占/],
+    [1748, /仍由法军驻守/], [1749, /8月21日东印度公司接收/]]],
+   [calcuttaOldFort, 'CALCUTTA_OLD_FORT_WILLIAM', [[1756, /6月20日西拉杰夺堡/],
+    [1757, /1月2日公司军收复/], [1766, /海关开始进驻/]]],
+  ]) {
+   await setView([...point, 17]);
+   for (const [year, title] of stages) {
+    await jump(year);
+    await clickAreaAt(...point);
+    const card = page.locator('[data-overlap-id="18c:' + id + '"]');
+    await card.waitFor();
+    assert.match(await card.textContent(), title);
+   }
+  }
+  await jump(1767);
+  assert(!(await atlantic()).activeRegionalZones.includes('CALCUTTA_OLD_FORT_WILLIAM'));
+  await clickAreaAt(...calcuttaOldFort);
+  await dossierTitle.filter({ hasText: '旧威廉堡原址 · 海关与仓库' }).waitFor();
+
+  const tolyNullah = [22.54443, 88.32625];
+  await setView([...tolyNullah, 16]);
+  const clickDatedLine = async selector => {
+   const point = await page.waitForFunction(({ selector, origin }) => {
+    const map = window.__historicOverlapHost.map;
+    const center = map.latLngToContainerPoint(origin);
+    const frame = map.getContainer().getBoundingClientRect();
+    for (const path of document.querySelectorAll(selector)) {
+     const matrix = path.getScreenCTM();
+     for (let length = 1; length < path.getTotalLength(); length += 2) {
+      const pixel = path.getPointAtLength(length).matrixTransform(matrix);
+      if (Math.hypot(pixel.x - frame.left - center.x, pixel.y - frame.top - center.y) < 130 &&
+          document.elementFromPoint(pixel.x, pixel.y) === path) return [pixel.x, pixel.y];
+     }
+    }
+    return null;
+   }, { selector, origin: tolyNullah }, { timeout: 8000 }).then(handle => handle.jsonValue())
+    .catch(async error => {
+     const details = await page.locator(selector).evaluateAll(paths => paths.map(path => {
+      const matrix = path.getScreenCTM();
+      const length = path.getTotalLength();
+      const samples = [.25, .5, .75].map(fraction => {
+       const {x, y} = path.getPointAtLength(length * fraction).matrixTransform(matrix);
+       const hit = document.elementFromPoint(x, y);
+       return {x, y, hit: hit?.getAttribute('class'), tag: hit?.tagName};
+      });
+      return {d: path.getAttribute('d')?.slice(0, 250), events: getComputedStyle(path).pointerEvents, length, samples};
+     }));
+     throw new Error('Cannot click ' + selector + ' ' + JSON.stringify(details), { cause: error });
+    });
+   await page.mouse.click(...point);
+  };
+  await jump(1793);
+  assert(!(await atlantic()).activeRegionalLines.length);
+  await jump(1799);
+  assert((await atlantic()).activeRegionalLines.includes('CALCUTTA_1794_TOLLYS_NULLAH_BOUNDARY'));
+  await clickDatedLine('.atlas-18c-boundary-line');
+  await dossierTitle.filter({ hasText: '1794 年公告划定的南界' }).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...tolyNullah, 16]);
+  assert((await page.locator('.atlas-19c-frontier[stroke-dasharray="7 6"]').count()) >= 2);
+  await clickDatedLine('.atlas-19c-frontier-hit');
+  await dossierTitle.filter({ hasText: '沿用 1794 年的法定南界' }).waitFor();
+
+  const newWilliam = [22.557465, 88.337476];
+  await setView([...newWilliam, 16]);
+  await clickAreaAt(...newWilliam);
+  await page.locator('[data-historic-overlap-id$=":calcutta-new-fort-william-1800"]').waitFor();
+  await setView([...madrasFort, 16]);
+  await clickAreaAt(...madrasFort);
+  await page.locator('[data-historic-overlap-id$=":madras-fort-st-george-1800"]').waitFor();
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&

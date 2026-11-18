@@ -41,9 +41,11 @@ try:
   assert all(s not in a['activeSites'] for s in missing),(yr,a)
   assert a['visibleAreaLayerObjects']>0 and a['visibleSiteLayerObjects']>0,(yr,a)
   if yr==1776:assert 'VIRGINIA' not in a['activeAreas'] and 'PENNSYLVANIA' not in a['activeAreas']
-  if yr==1763:assert 'MADRAS' in a['activeAreas'] and 'CALCUTTA' in a['activeAreas']
-  if yr==1746:assert 'MADRAS' not in a['activeAreas'] and 'CALCUTTA' in a['activeAreas']
-  if yr==1756:assert 'MADRAS' in a['activeAreas'] and 'CALCUTTA' not in a['activeAreas']
+  if yr in (1746,1756,1763):
+   active_regions=js('return window.eighteenthMassSpatial.getAudit().activeRegionalZones')
+   assert all(x not in a['activeAreas'] for x in ('MADRAS','CALCUTTA')),a
+   madras='MADRAS_ST_GEORGE_SIEGE' if yr==1763 else 'MADRAS_ST_GEORGE_EARLY'
+   assert {madras,'CALCUTTA_OLD_FORT_WILLIAM'}.issubset(active_regions),active_regions
   if yr in (1762,1763):
    active_regional=js('return window.eighteenthMassSpatial.getAudit().activeRegionalZones')
    assert 'MANILA_INTRAMUROS' in active_regional,active_regional
