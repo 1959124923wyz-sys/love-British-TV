@@ -404,15 +404,13 @@ async function verify() {
   assert.match(await capeBreton.textContent(), /乌得勒支和约确认法方权利/);
   await setView([45.891667, -59.982778, 11]);
   await clickAreaAt(45.891667, -59.982778);
-  await page.locator('[data-overlap-id="18c:LOUISBOURG_EARLY_PORT"]').waitFor();
+  await dossierTitle.filter({ hasText: '路易堡 · 法国初设港站' }).waitFor();
   await jump(1719);
   assert((await atlantic()).activeRegionalSites.includes('LOUISBOURG_EARLY_PORT'));
   assert(!(await atlantic()).activeRegionalZones.includes('LOUISBOURG_WALLED_TOWN'));
   await jump(1724);
   await clickAreaAt(45.909214, -59.97979);
-  const royalBattery = page.locator('[data-overlap-id="18c:LOUISBOURG_ROYAL_BATTERY"]');
-  await royalBattery.waitFor();
-  assert.match(await royalBattery.textContent(), /法军开工/);
+  await dossierTitle.filter({ hasText: '皇家炮台 · 法军开工' }).waitFor();
   const louisbourg = page.locator('[data-overlap-id="18c:LOUISBOURG_WALLED_TOWN"]');
   for (const [year, title] of [[1744, /法军驻守/], [1745, /英军接管/], [1748, /条约议定归还/],
    [1749, /法军恢复驻防/], [1758, /英军再次接管/]]) {
@@ -432,11 +430,10 @@ async function verify() {
   await jump(1760);
   assert(!(await atlantic()).activeRegionalZones.includes('LOUISBOURG_WALLED_TOWN'));
   await clickAreaAt(45.891667, -59.982778);
-  const oldTown = page.locator('[data-overlap-id="18c:LOUISBOURG_AFTER_DEMOLITION"]');
-  await oldTown.waitFor();
-  assert.match(await oldTown.textContent(), /拆防与驻军留守/);
+  await dossierTitle.filter({ hasText: '路易堡 · 拆防与驻军留守' }).waitFor();
   await jump(1768);
-  assert.match(await oldTown.textContent(), /英军撤离后的旧城遗址/);
+  await clickAreaAt(45.891667, -59.982778);
+  await dossierTitle.filter({ hasText: '路易堡 · 英军撤离后的旧城遗址' }).waitFor();
 
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
