@@ -1083,6 +1083,13 @@ async function verify() {
    assert.match(await savannahTown.textContent(), title);
    assert(!(await atlantic()).activeZones.includes('SAVANNAH_GARRISON'));
   }
+  await jump(1799);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...savannah, 15]);
+  await clickAreaAt(...savannah);
+  const savannah1800 = page.locator('[data-historic-overlap-id$=":savannah-town-1778-1800"]');
+  assert.match(await savannah1800.textContent(), /港市原有六区/);
 
   const saintLucia = [13.91, -60.96];
   const island = page.locator('[data-overlap-id="18c:ST_LUCIA_MAIN_ISLAND"]');
@@ -1102,11 +1109,15 @@ async function verify() {
   await page.locator('[data-historic-overlap-id$=":st-lucia-occupation-1800"]').waitFor();
 
   await jump(1795);
-  assert((await atlantic()).activeRegionalSites.includes('TRINCOMALEE_FORT_FREDERICK'));
-  const frederick = [8.5769, 81.2421];
-  await setView([...frederick, 15]);
-  await clickAreaAt(...frederick);
-  assert.match(await page.locator('#dossierBody').textContent(), /8月26日/);
+  for (const [point, id, date] of [
+   [[8.5769, 81.2421], 'TRINCOMALEE_FORT_FREDERICK', /8月26日/],
+   [[8.5445, 81.2234], 'TRINCOMALEE_FORT_OOSTENBURG', /8月31日/],
+  ]) {
+   assert((await atlantic()).activeRegionalSites.includes(id));
+   await setView([...point, 15]);
+   await clickAreaAt(...point);
+   assert.match(await page.locator('#dossierBody').textContent(), date);
+  }
 
   const charleston = [32.7756125, -79.93197257];
   const charlestonTown = page.locator('[data-overlap-id="18c:CHARLESTON_OLD_TOWN_1780"]');
@@ -1119,6 +1130,7 @@ async function verify() {
   }
   await jump(1799);
   await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
   await setView([...charleston, 15]);
   await clickAreaAt(...charleston);
   const charleston1800 = page.locator('[data-historic-overlap-id$=":charleston-old-town-1780-1800"]');
