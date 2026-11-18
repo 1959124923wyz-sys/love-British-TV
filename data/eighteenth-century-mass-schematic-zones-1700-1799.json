@@ -3270,6 +3270,7 @@
     },
     {
       "id": "MANILA_PORT",
+      "superseded_by": "MANILA_INTRAMUROS",
       "title": "1762—1763马尼拉英占城及港湾",
       "kind": "wartime_occupation",
       "periods": [
@@ -3298,6 +3299,7 @@
     },
     {
       "id": "CAVITE_PORT",
+      "superseded_by": "CAVITE_PUERTO",
       "title": "1762—1763甲米地西班牙舰队基地英占",
       "kind": "wartime_occupation",
       "periods": [
@@ -5267,6 +5269,7 @@
     },
     {
       "id": "CAVITE",
+      "superseded_by": "CAVITE_FORT_SAN_FELIPE",
       "title": "甲米地1762—1763英军海港驻点",
       "periods": [
         {
@@ -9253,6 +9256,754 @@
       "stable_id": "havana-tenaza-royal-arsenal",
       "position_uncertainty_m": 130,
       "cross_century_feature_id": "havana-royal-dockyard-1800"
+    },
+    {
+      "id": "MANILA_SAN_AGUSTIN",
+      "title": "马尼拉 · 圣奥古斯丁教堂",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "圣奥古斯丁教堂 · 奥古斯丁会院址",
+          "note": "现存石教堂由奥古斯丁会于1607年完工，毗邻该修会在菲律宾的主要院舍。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "圣奥古斯丁教堂 · 英军掠取堂内财物",
+          "note": "1762年英军占城后，教堂内的贵重物件被掠走或毁损，墓葬遭破坏。修院的记载说，12月8日书籍和档案被移交本地律师奥伦达因审查。部分手稿后来进入东印度公司人员达尔林普尔的伦敦藏书。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "圣奥古斯丁教堂 · 英军仍占据旧城",
+          "note": "教堂仍在英军占据的城墙内。教会保存的部分文物和建筑幸存。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1799,
+          "title": "圣奥古斯丁教堂 · 奥古斯丁会继续使用",
+          "note": "英军退出后，石教堂及修院继续为奥古斯丁会所用。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-san-agustin-2/",
+        "https://whc.unesco.org/document/185204",
+        "https://whc.unesco.org/en/list/677/maps/",
+        "https://new.1762archive.org/museum-exhibit/",
+        "https://dpul.princeton.edu/1762-archive"
+      ],
+      "geometry_method": "Representative point from UNESCO property component 677bis-001. The heritage nomination separates the standing church from convent buildings damaged or lost after the eighteenth century.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9751319,
+          14.5887439
+        ]
+      },
+      "stable_id": "manila-san-agustin-church",
+      "position_uncertainty_m": 30,
+      "cross_century_feature_id": "manila-san-agustin-church-1800"
+    },
+    {
+      "id": "MANILA_BINONDO_CHURCH",
+      "title": "马尼拉 · 岷伦洛教堂",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "岷伦洛教堂 · 多明我会华人堂区",
+          "note": "多明我会在岷伦洛设立向华人传教的会所，1596年成为堂区。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "岷伦洛教堂 · 教堂毁损与街区焚掠",
+          "note": "英军进入后，岷伦洛教堂受损。菲律宾大学刊发的研究引述档案，记录英军在岷伦洛和圣克鲁斯两区劫掠并烧毁民居。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "岷伦洛教堂 · 受战事损坏的堂区",
+          "note": "英占期间，岷伦洛堂区教堂受损。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1768,
+          "title": "岷伦洛教堂 · 多明我会继续管理堂区",
+          "note": "西班牙于1764年接回马尼拉，多明我会继续管理岷伦洛堂区。"
+        },
+        {
+          "start_year": 1769,
+          "end_year": 1799,
+          "title": "岷伦洛教堂 · 堂区神职人员接管",
+          "note": "1769年，西班牙殖民时期的该堂区从多明我会转交给教区神父。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-binondo/",
+        "https://journals.upd.edu.ph/index.php/pssr/article/download/4046/7733/",
+        "https://www.openstreetmap.org/way/108850879"
+      ],
+      "geometry_method": "NHCP landmark on Plaza San Lorenzo Ruiz, located at the parish site. The fabric suffered damage and later reconstruction. The marker identifies the parish, and residential losses nearby are discussed in the dossier.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9747,
+          14.6002
+        ]
+      },
+      "stable_id": "manila-binondo-parish",
+      "position_uncertainty_m": 45,
+      "cross_century_feature_id": "manila-binondo-parish-1800"
+    },
+    {
+      "id": "MANILA_SANTA_CRUZ_PLAZA",
+      "title": "马尼拉 · 圣克鲁斯教堂前广场",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "圣克鲁斯 · 民居遭焚掠",
+          "note": "马尼拉城陷后，英军在帕西格河彼岸的圣克鲁斯和岷伦洛劫掠并烧毁民居。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1764,
+          "title": "圣克鲁斯广场 · 归还马尼拉纪念地",
+          "note": "菲律宾国家历史委员会在圣克鲁斯教堂设置的铭牌记载，英方在邻接广场将马尼拉交还西班牙方面。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-santa-cruz-2/",
+        "https://journals.upd.edu.ph/index.php/pssr/article/download/4046/7733/",
+        "https://commons.wikimedia.org/wiki/File:Plaza_Santa_Cruz,_Manila_City,_Nov_2026_(2).jpg"
+      ],
+      "geometry_method": "Locality point in the square adjoining the church named in the NHCP historical marker. The 1762 phase refers to residential losses in the surrounding district.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.98023,
+          14.59984
+        ]
+      },
+      "stable_id": "manila-santa-cruz-plaza",
+      "position_uncertainty_m": 70
+    },
+    {
+      "id": "BACOLOR_ANDA_HEADQUARTERS",
+      "title": "邦板牙 · 巴科洛尔",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "巴科洛尔 · 安达集结抗英力量",
+          "note": "马尼拉失守后，西班牙官员西蒙·德·安达在邦板牙的巴科洛尔设总部，组织当地部队反击。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1764,
+          "title": "巴科洛尔 · 邦板牙部队集结与铸造军械",
+          "note": "西班牙档案记载安达在此组织邦板牙长戟连，并留下2月的军械调集记录和3月的铸造记录。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1799,
+          "title": "巴科洛尔 · 西班牙王室授予城镇地位",
+          "note": "1765年11月9日，西班牙王室授予巴科洛尔城镇地位。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/bacolor/",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/7240573",
+        "https://www.bacolorpampanga.gov.ph/inventory-of-cultural-property/",
+        "https://www.openstreetmap.org/way/49475608"
+      ],
+      "geometry_method": "Town anchor at the San Guillermo parish centre, cross-checked against the municipal inventory. AGI correspondence places the resistance headquarters and foundry at Bacolor without identifying individual buildings.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.64833,
+          15.00031
+        ]
+      },
+      "stable_id": "bacolor-town-centre",
+      "position_uncertainty_m": 220,
+      "cross_century_feature_id": "bacolor-town-centre-1800"
+    },
+    {
+      "id": "PASIG_CHURCH_WARTIME_SITE",
+      "title": "帕西格 · 圣母无染原罪教堂",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1764,
+          "title": "帕西格教堂 · 英军作军事用途",
+          "note": "英占马尼拉期间，英军与安达部队在周边交战。菲律宾国家历史委员会记载，英军曾把帕西格堂区教堂用于对安达部队作战。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-pasig/",
+        "https://www.cambridge.org/core/journals/international-review-of-social-history/article/securing-trade-the-military-labor-of-the-british-occupation-of-manila-17621764/6DD8E645C2627FFD682DAA81FB59E35B",
+        "https://www.openstreetmap.org/node/12669326618"
+      ],
+      "geometry_method": "The NHCP marker identifies the parish church at A. Luna Street and Caruncho Avenue, now the cathedral. The named site locates the episode during the British occupation period.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.07739,
+          14.5604
+        ]
+      },
+      "stable_id": "pasig-church-wartime-site",
+      "position_uncertainty_m": 65
+    },
+    {
+      "id": "ZAMBOANGA_LA_CALDERA_PORT",
+      "title": "三宝颜 · 拉卡尔德拉港",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1764,
+          "title": "拉卡尔德拉港 · 西班牙出兵收回",
+          "note": "西班牙代理总督的报告将拉卡尔德拉列为英军曾占用的港口。1764年3月14日英方已下令交还据点。命令传递延误，三宝颜方面仍派兵夺回这里。"
+        }
+      ],
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/7184550",
+        "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps0450.pdf",
+        "https://www.ppa.com.ph/sites/default/files/issuances_docs/PPA_AO_No_01_2025.pdf",
+        "https://www.petersoncutter.org/ftp/SailingDirections/162%20Philippine%20Islands%20Pilot/Pub162bk.pdf"
+      ],
+      "geometry_method": "Named Caldera Bay and Recodo port anchor at 6°57′N, 121°58′E, cross-checked against PIDS and Philippine Ports Authority. The AGI report concerns only the named harbor.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.96667,
+          6.95
+        ]
+      },
+      "stable_id": "zamboanga-la-caldera-port",
+      "position_uncertainty_m": 500
+    },
+    {
+      "id": "MANILA_SAN_DIEGO_BREACH",
+      "title": "马尼拉 · 圣迭戈堡破口",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "圣迭戈堡破口 · 10月英军突破",
+          "note": "英军炮火击破面向巴贡巴延的墙段。德雷珀10月5日报告破口已可通行，英军次日攻城。"
+        }
+      ],
+      "source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e",
+        "https://philippinediaryproject.com/diarists/william-draper/1762-10-05/",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/r/h/rhm_008.pdf#page=43"
+      ],
+      "geometry_method": "Approximate breach locality on exposed southwest outer angle identified by key 29 of RCIN 733067 against the present bastion. Wall fabric was rebuilt after the siege.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.975538,
+          14.584935
+        ]
+      },
+      "stable_id": "manila-san-diego-siege-breach",
+      "position_uncertainty_m": 42
+    },
+    {
+      "id": "MANILA_PUERTA_REAL_OLD",
+      "title": "马尼拉 · 旧王门",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "旧王门 · 旧城南侧出入口",
+          "note": "1636年修筑的旧王门位于圣安德烈斯堡附近，通往城外的巴贡巴延。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "旧王门 · 英军攻城时毁损",
+          "note": "1762年英军围攻期间，旧王门被毁。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://intramuros.gov.ph/2022/07/18/puerta-real-de-bagumbayan-1985/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/r/h/rhm_008.pdf#page=43",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18954"
+      ],
+      "geometry_method": "Site of the earlier gate at the later General Luna Gap, on the San Andrés section. The old entrance is shown on the siege plan; its replacement is at a separate point.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.977471,
+          14.58647
+        ]
+      },
+      "stable_id": "manila-puerta-real-old-gate",
+      "position_uncertainty_m": 30
+    },
+    {
+      "id": "MANILA_PUERTA_REAL_1780",
+      "title": "马尼拉 · 1780年新王门",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "新王门 · 西班牙在两座棱堡之间另辟城门",
+          "note": "1780年，西班牙在圣迭戈堡与圣安德烈斯堡之间完成新王门，用于总督出行等礼仪。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/pintong-real/",
+        "https://intramuros.gov.ph/2022/07/18/puerta-real-de-bagumbayan-1985/",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/r/h/rhm_008.pdf#page=43",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18954",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18964"
+      ],
+      "geometry_method": "The surviving gate between San Diego and San Andrés is indicated in the late-eighteenth-century Spanish plans. It is southwest of the seventeenth-century entrance.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.977048,
+          14.586163
+        ]
+      },
+      "stable_id": "manila-puerta-real-1780-gate",
+      "position_uncertainty_m": 20,
+      "cross_century_feature_id": "manila-puerta-real-gate-1800"
+    },
+    {
+      "id": "MANILA_MALATE_CHURCH",
+      "title": "马尼拉 · 马拉特教堂",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "马拉特教堂 · 登陆后掩护后卫",
+          "note": "9月24日，英军在马拉特教堂和村庄附近登陆，当晚控制村庄。教堂用于掩护后卫。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-malate/",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://philippinediaryproject.com/diarists/william-draper/1762-09-24/"
+      ],
+      "geometry_method": "The Malate church locality on Museo/NHCP registry cross-checked against the 1762 English plan and label C in AGI MP-FILIPINAS,43. Historic and reconstructed church fabric differ.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.984742,
+          14.569326
+        ]
+      },
+      "stable_id": "manila-malate-church-site",
+      "position_uncertainty_m": 50
+    },
+    {
+      "id": "MANILA_SAN_ANTONIO_ABAD",
+      "title": "马尼拉南郊 · 圣安东尼奥阿巴德堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "圣安东尼奥阿巴德堡 · 西班牙城南堡垒",
+          "note": "西班牙在城南旧港岸设置防御工事。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "圣安东尼奥阿巴德堡 · 英军控制南郊据点",
+          "note": "9月25日，英军进占西班牙守军已经撤出的堡垒，用它保护军需登陆并与舰队保持联络。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1764,
+          "title": "圣安东尼奥阿巴德堡 · 3月26日交还",
+          "note": "西班牙海军史研究记载，英方于3月26日将城南堡垒交回西班牙。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1799,
+          "title": "圣安东尼奥阿巴德堡 · 西班牙收回旧址",
+          "note": "西班牙收回城南港岸旧堡，后来于十九世纪初在原址重建。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-antonio-abad/",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/69cuaderno/CM69.pdf#page=98",
+        "https://www.gutenberg.org/files/56778/56778-h/56778-h.htm",
+        "https://philippinediaryproject.com/diarists/william-draper/1762-09-25/"
+      ],
+      "geometry_method": "Locator point on the fort grounds, label B/La Polvorista in AGI MP-FILIPINAS,43. The NHCP records early nineteenth-century rebuilding, so later extant masonry is not used to define the 1762 footprint.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.98683,
+          14.56261
+        ]
+      },
+      "stable_id": "manila-san-antonio-abad-fort-site",
+      "position_uncertainty_m": 130,
+      "cross_century_feature_id": "manila-san-antonio-abad-1800"
+    },
+    {
+      "id": "MANILA_ERMITA_CHURCH",
+      "title": "马尼拉 · 埃尔米塔教堂",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "埃尔米塔教堂 · 英军临时司令部",
+          "note": "德雷珀的9月25日战地日记记载，蒙森率部进入埃尔米塔教堂，英军把神父住所用作临时司令部。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-nuestra-senora-de-guia/",
+        "https://philippinediaryproject.com/diarists/william-draper/1762-09-25/",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0"
+      ],
+      "geometry_method": "Named Nuestra Señora de Guía parish site, approximately 80 m from the transformed position of label D of AGI MP-FILIPINAS,43. The church was rebuilt after the eighteenth century.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9798,
+          14.5788
+        ]
+      },
+      "stable_id": "manila-ermita-church-site",
+      "position_uncertainty_m": 100
+    },
+    {
+      "id": "CAVITE_PUERTA_VAGA",
+      "title": "甲米地 · 巴加陆门",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "巴加陆门 · 旧港城陆上通道",
+          "note": "半岛西端的陆门通向圣罗克。十八世纪工程报告记载门前有独立防御工事，主墙两端有塔。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "巴加陆门 · 位于英占港城西端",
+          "note": "英军接收甲米地后，史蒂文森绘下陆门、两座门塔与相连的陆颈防线。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1799,
+          "title": "巴加陆门 · 西班牙港城的陆上入口",
+          "note": "1764年港城归还。该陆门的位置可由1763年与1815年港城图对照。"
+        }
+      ],
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18977",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://readingroo.ms/5/4/0/4/54041/54041-h/54041-h.htm",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/64833"
+      ],
+      "geometry_method": "Estimated locality of Puerta Vaga in the west-neck defenses, aligned by historical streets, the modern Samonte Park, and fieldwork identification of the south tower foundations. The earlier front barrier and inner gate were related works.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9092,
+          14.4823
+        ]
+      },
+      "stable_id": "cavite-puerta-vaga",
+      "position_uncertainty_m": 55,
+      "cross_century_feature_id": "cavite-puerta-vaga-1800"
+    },
+    {
+      "id": "CAVITE_NAVAL_YARD",
+      "title": "甲米地 · 殖民造船厂旧址",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "甲米地船厂 · 新西班牙跨太平洋航线",
+          "note": "1602年的航运条例指定甲米地造船。约1750年港图把大帆船船厂标在圣费利佩堡东侧船岸。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "甲米地船厂 · 英军取得舰船和海军物资",
+          "note": "英军接收港口并拿到舰船、军用物资和海军储备。英国海军地图标注舰船在甲米地附近维修。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1799,
+          "title": "甲米地船厂 · 西班牙恢复海军设施",
+          "note": "港口归还后，西班牙恢复舰船运行。1797年海军图记载西班牙舰队驻泊甲米地。"
+        }
+      ],
+      "source_urls": [
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/41cuaderno/cap03.pdf",
+        "https://dev.gutenberg.org/cache/epub/56778/pg56778-images.html",
+        "https://collections.leventhalmap.org/search/commonwealth:9s16ld438",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/19026",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en"
+      ],
+      "geometry_method": "Approximate naval-yard locality combining the c.1750 Astillero de los Galeones and Stevenson naval-yard plots. Historical plans show related facilities near each other at the southeast end of the old peninsula and current wharf construction extensively transformed this shoreline.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.91875,
+          14.48175
+        ]
+      },
+      "stable_id": "cavite-colonial-naval-yard",
+      "position_uncertainty_m": 110,
+      "cross_century_feature_id": "cavite-colonial-naval-yard-1800"
+    },
+    {
+      "id": "CAVITE_CAREENING_WHARF",
+      "title": "甲米地 · 船体检修栈桥旧址",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1761,
+          "title": "检修栈桥 · 西班牙翻倾船体检修",
+          "note": "十八世纪图上的 Carenero 为修船设施，将船体翻倾以检修吃水线以下的部位。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "检修栈桥 · 英占图登记",
+          "note": "史蒂文森的甲米地图把此处标为翻倾检修用的栈桥和旧船。英国舰船于占领期间在甲米地附近维修。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1799,
+          "title": "检修栈桥 · 西班牙港口设施",
+          "note": "1764年港口交回西班牙。1815年港图标出这一带已扩展的修船栈桥。"
+        }
+      ],
+      "source_urls": [
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://collections.leventhalmap.org/search/commonwealth:9s16ld438",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en"
+      ],
+      "geometry_method": "Representative shore tie-in, c.1750 Carenero and 1763 Wharf and Hulk for Careening. Registered the historic plans using west gate and bastion landmarks. Current dock facilities and reclaimed ground greatly enlarged the shoreline.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9185,
+          14.4811
+        ]
+      },
+      "stable_id": "cavite-careening-wharf",
+      "position_uncertainty_m": 85,
+      "cross_century_feature_id": "cavite-careening-wharf-1800"
+    },
+    {
+      "id": "CAVITE_GALERAS_FORZADOS",
+      "title": "甲米地 · 苦役监所旧址",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1761,
+          "title": "苦役监所 · 西班牙拘禁苦役囚犯",
+          "note": "十八世纪港图在仓库与圣费利佩堡之间标出 Galera。建筑史研究据图确认此处用于拘禁被判处苦役的人。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "苦役监所旧址 · 位于英占甲米地",
+          "note": "英军夺取港城。港口工事与原有监所都位于圣费利佩堡一带。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1799,
+          "title": "苦役监所 · 西班牙场所延续",
+          "note": "港口于1764年归还西班牙。1815年港图与十九世纪记述仍将苦役监所标在军港内。"
+        }
+      ],
+      "source_urls": [
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en",
+        "https://www.e-rara.ch/download/pdf/18886726.pdf"
+      ],
+      "geometry_method": "Approximate locality of Galeras de forzados derived from Jiménez Verdejo et al. historical and fieldwork panels and the Galera label on BL Maps K.Top.116.41. Position lies between the southern warehouses and San Felipe; individual buildings were lost.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.915,
+          14.4814
+        ]
+      },
+      "stable_id": "cavite-forced-labor-galera",
+      "position_uncertainty_m": 100,
+      "cross_century_feature_id": "cavite-forced-labor-galera-1800"
+    },
+    {
+      "id": "CAVITE_SANTA_CATALINA_BATTERY",
+      "title": "甲米地 · 圣卡塔利娜角炮台旧址",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "圣卡塔利娜角炮台 · 港城东端工事",
+          "note": "炮台位于半岛东端。约1750年的港图标为圣卡塔利娜棱堡。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "圣卡塔利娜角炮台 · 英占港图标注",
+          "note": "史蒂文森将半岛尖端的既有工事标作里韦拉角炮台。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1799,
+          "title": "圣卡塔利娜角炮台旧址 · 西班牙港防",
+          "note": "港口交回后，东端仍作为港防工事的位置。1815年港图把这里标作已毁损的瓜达卢佩炮台。"
+        }
+      ],
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18977",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en",
+        "https://www.e-rara.ch/download/pdf/18886726.pdf"
+      ],
+      "geometry_method": "Earliest site at the eastern cape on AGI MP-FILIPINAS,143, British Library K.Top.116.41 and Stevenson label 8 Battery of Rivera Point. Successive port works changed the shore and the later Guadalupe battery is indicated here as a historical locality.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9202,
+          14.4812
+        ]
+      },
+      "stable_id": "cavite-santa-catalina-point",
+      "position_uncertainty_m": 95,
+      "cross_century_feature_id": "cavite-santa-catalina-point-1800"
     }
   ],
   "regional_zones": [
@@ -17002,6 +17753,1388 @@
       "outline_only": true,
       "geometry_precision": "source_backed_historical_outline",
       "cross_century_feature_id": "havana-walled-town-1800"
+    },
+    {
+      "id": "MANILA_FORT_SANTIAGO",
+      "title": "马尼拉 · 圣地亚哥堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1714,
+          "end_year": 1761,
+          "title": "圣地亚哥堡 · 西班牙守卫帕西格河口",
+          "note": "河口石堡连接旧城城墙，保护帕西格河通海道口。西班牙工程师绘下1714年时的堡形。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "圣地亚哥堡 · 英军占领后的司令部",
+          "note": "10月6日马尼拉失守后，英军把圣地亚哥堡用作司令部。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1764,
+          "title": "圣地亚哥堡 · 西班牙接回要塞",
+          "note": "1764年英军将马尼拉交回西班牙，圣地亚哥堡恢复西班牙驻军。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1799,
+          "title": "圣地亚哥堡 · 西班牙军队总部",
+          "note": "西班牙继续以堡垒作为军队总部，守卫旧城和帕西格河口。"
+        }
+      ],
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18789",
+        "https://intramuros.gov.ph/fs/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://intramuros.gov.ph/2022/02/17/as-built-plan-of-fort-santiago-gate-ruins-1981/",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/64833"
+      ],
+      "geometry_method": "Esri orthophoto trace of the main defensive enclosure shared with the 1714 state on AGI MP-FILIPINAS,19BIS and RCIN 733067 (1762). Preserve the riverward angles, two landward bastions and intervening gate wall. Omit outer moat and Plaza Moriones.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.968933,
+              14.595254
+            ],
+            [
+              120.968952,
+              14.595143
+            ],
+            [
+              120.96901,
+              14.595068
+            ],
+            [
+              120.96925,
+              14.594799
+            ],
+            [
+              120.969404,
+              14.594603
+            ],
+            [
+              120.969856,
+              14.593933
+            ],
+            [
+              120.969808,
+              14.593868
+            ],
+            [
+              120.970029,
+              14.593542
+            ],
+            [
+              120.970144,
+              14.593617
+            ],
+            [
+              120.970231,
+              14.593812
+            ],
+            [
+              120.970106,
+              14.593942
+            ],
+            [
+              120.97074,
+              14.594519
+            ],
+            [
+              120.970865,
+              14.594398
+            ],
+            [
+              120.971173,
+              14.594566
+            ],
+            [
+              120.970856,
+              14.594705
+            ],
+            [
+              120.970413,
+              14.594882
+            ],
+            [
+              120.969952,
+              14.595078
+            ],
+            [
+              120.969865,
+              14.595161
+            ],
+            [
+              120.969654,
+              14.595282
+            ],
+            [
+              120.969663,
+              14.59531
+            ],
+            [
+              120.969615,
+              14.595375
+            ],
+            [
+              120.969558,
+              14.595385
+            ],
+            [
+              120.9695,
+              14.595357
+            ],
+            [
+              120.969481,
+              14.595301
+            ],
+            [
+              120.969231,
+              14.595338
+            ],
+            [
+              120.969135,
+              14.595394
+            ],
+            [
+              120.969067,
+              14.595394
+            ],
+            [
+              120.968981,
+              14.595348
+            ],
+            [
+              120.968933,
+              14.595254
+            ]
+          ]
+        ]
+      },
+      "stable_id": "manila-fort-santiago",
+      "position_uncertainty_m": 23,
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "bbox": [
+        120.968933,
+        14.593542,
+        120.971173,
+        14.595394
+      ],
+      "cross_century_feature_id": "manila-fort-santiago-1800"
+    },
+    {
+      "id": "MANILA_BALUARTE_SAN_DIEGO",
+      "title": "马尼拉 · 圣迭戈堡垒",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "圣迭戈堡垒 · 西班牙旧城西南防御",
+          "note": "这座铲形棱堡在十七世纪中叶砌成，包含更早的圆形堡址，守卫马尼拉旧城西南。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "圣迭戈堡垒 · 英军炮轰打开缺口",
+          "note": "英军围城图记10月3日炮火已在圣迭戈堡打开缺口。10月6日，英军攻破旧城。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "圣迭戈堡垒 · 英军占城期间封堵缺口",
+          "note": "英军占城后曾临时堵塞堡墙破口。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1778,
+          "title": "圣迭戈堡垒 · 西班牙接收受损城防",
+          "note": "西班牙恢复旧城防务，随后重新修筑面向巴贡巴延的堡墙。"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1799,
+          "title": "圣迭戈堡垒 · 西班牙完成修复",
+          "note": "1779年，面向巴贡巴延的墙段重砌完成。"
+        }
+      ],
+      "source_urls": [
+        "https://intramuros.gov.ph/bsd/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18830",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/r/h/rhm_008.pdf#page=43"
+      ],
+      "geometry_method": "Esri orthophoto trace of the outer principal masonry and acute salient checked against Cotsford RCIN 733067 and eighteenth-century Spanish engineering records. Excludes moat, glacis and later detached elements.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.97501,
+              14.585596
+            ],
+            [
+              120.975442,
+              14.58486
+            ],
+            [
+              120.976173,
+              14.585354
+            ],
+            [
+              120.976106,
+              14.585484
+            ],
+            [
+              120.976067,
+              14.585465
+            ],
+            [
+              120.97601,
+              14.585568
+            ],
+            [
+              120.975913,
+              14.585614
+            ],
+            [
+              120.975817,
+              14.585568
+            ],
+            [
+              120.975721,
+              14.585661
+            ],
+            [
+              120.975587,
+              14.585642
+            ],
+            [
+              120.9755,
+              14.585689
+            ],
+            [
+              120.975442,
+              14.585679
+            ],
+            [
+              120.975481,
+              14.585763
+            ],
+            [
+              120.975394,
+              14.585921
+            ],
+            [
+              120.975327,
+              14.585875
+            ],
+            [
+              120.975269,
+              14.585651
+            ],
+            [
+              120.975192,
+              14.585624
+            ],
+            [
+              120.975125,
+              14.585679
+            ],
+            [
+              120.975067,
+              14.585679
+            ],
+            [
+              120.975029,
+              14.585651
+            ],
+            [
+              120.97501,
+              14.585596
+            ]
+          ]
+        ]
+      },
+      "stable_id": "manila-baluarte-san-diego",
+      "position_uncertainty_m": 23,
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "bbox": [
+        120.97501,
+        14.58486,
+        120.976173,
+        14.585921
+      ],
+      "cross_century_feature_id": "manila-san-diego-bastion-1800"
+    },
+    {
+      "id": "MANILA_BALUARTE_SAN_ANDRES",
+      "title": "马尼拉 · 圣安德烈斯堡垒",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1732,
+          "title": "圣安德烈斯堡垒 · 西班牙旧城东南防御",
+          "note": "西班牙于1603年修建棱堡，用以守卫旧城东南和旧王门。"
+        },
+        {
+          "start_year": 1733,
+          "end_year": 1761,
+          "title": "圣安德烈斯堡垒 · 西班牙增建军械设施",
+          "note": "1733年，西班牙增设火药库和岗亭。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "圣安德烈斯堡垒 · 英军炮火毁损",
+          "note": "围城时，英军对圣安德烈斯堡凸肩上的火炮实施压制。堡垒在攻城中严重受损。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1778,
+          "title": "圣安德烈斯堡垒 · 西班牙接收后重建",
+          "note": "西班牙接收马尼拉后重新修缮东南城防。"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1799,
+          "title": "圣安德烈斯堡垒 · 西班牙完成重建",
+          "note": "1779年完成修复，棱堡继续作为旧城东南部防御工事。"
+        }
+      ],
+      "source_urls": [
+        "https://intramuros.gov.ph/2022/09/30/baluarte-de-san-andres/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18830",
+        "https://philippinediaryproject.com/diarists/william-draper/1762-10-05/",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/r/h/rhm_008.pdf#page=43"
+      ],
+      "geometry_method": "Esri orthophoto trace of the main faces and rounded orillons confirmed by RCIN 733067 and Spanish engineering studies. Detached works, moat and later structures omitted.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.978154,
+              14.586759
+            ],
+            [
+              120.978221,
+              14.586638
+            ],
+            [
+              120.978279,
+              14.586647
+            ],
+            [
+              120.978221,
+              14.586601
+            ],
+            [
+              120.978183,
+              14.586545
+            ],
+            [
+              120.978202,
+              14.586489
+            ],
+            [
+              120.97826,
+              14.586452
+            ],
+            [
+              120.978317,
+              14.586461
+            ],
+            [
+              120.979106,
+              14.586777
+            ],
+            [
+              120.979077,
+              14.587606
+            ],
+            [
+              120.979048,
+              14.587671
+            ],
+            [
+              120.978981,
+              14.587689
+            ],
+            [
+              120.978923,
+              14.587652
+            ],
+            [
+              120.978885,
+              14.587568
+            ],
+            [
+              120.978769,
+              14.587587
+            ],
+            [
+              120.97875,
+              14.587224
+            ],
+            [
+              120.978702,
+              14.587066
+            ],
+            [
+              120.978154,
+              14.586759
+            ]
+          ]
+        ]
+      },
+      "stable_id": "manila-baluarte-san-andres",
+      "position_uncertainty_m": 25,
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "bbox": [
+        120.978154,
+        14.586452,
+        120.979106,
+        14.587689
+      ],
+      "cross_century_feature_id": "manila-san-andres-bastion-1800"
+    },
+    {
+      "id": "MANILA_INTRAMUROS",
+      "title": "马尼拉 · 城墙内旧城",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "马尼拉旧城 · 西班牙石砌城墙",
+          "note": "十七世纪已有石城垣和棱堡，保卫帕西格河口、殖民行政和驻军。1734年，穆里略·贝拉尔德把环城防线和圣地亚哥堡绘入地图。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "马尼拉旧城 · 10月6日英军攻陷",
+          "note": "德雷珀和科尼什指挥英国陆海军及东印度公司部队攻破城墙。英军入城后劫掠民居和教会财物，并向代理总督罗霍强索400万西班牙银元，降约把现款与马德里国库汇票分别列项。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "马尼拉旧城 · 和约后英军仍占城",
+          "note": "2月10日，《巴黎和约》第二十三条规定归还未另列的战时占地。英军当年仍驻马尼拉。英格兰银行后来追讨交给科尼什的赎金汇票。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1764,
+          "title": "马尼拉旧城 · 西班牙接收",
+          "note": "3月，西班牙代理总督德拉托雷与英国驻军交涉撤离。德拉托雷发往马德里的公函列有3月31日的交接文书，西班牙军队另有5月31日入城的记载。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1799,
+          "title": "马尼拉旧城 · 西班牙恢复行政与城防",
+          "note": "西班牙恢复旧城行政，整修受损城墙和棱堡。1779年完成圣迭戈和圣安德烈斯两座棱堡的修复。"
+        }
+      ],
+      "source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18779",
+        "https://www.loc.gov/item/2013585226/",
+        "https://www.gutenberg.org/files/56778/56778-h/56778-h.htm",
+        "https://www.cambridge.org/core/journals/international-review-of-social-history/article/securing-trade-the-military-labor-of-the-british-occupation-of-manila-17621764/6DD8E645C2627FFD682DAA81FB59E35B",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://www.bankofengland.co.uk/CalmView/Record.aspx?id=M5%2F110&src=CalmView.Catalog",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/64833",
+        "https://www.cambridge.org/core/journals/camden-fourth-series/article/abs/part-iii-aftermath-of-conquest/2B0ACF4C45AB1305C1CDAFA9BAB3BFA1",
+        "https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/69cuaderno/CM69.pdf#page=98",
+        "https://intramuros.gov.ph/2015/01/04/intramuros/",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/c/o/congreso_internacional_icofort_2021_1.pdf",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/r/h/rhm_008.pdf#page=43"
+      ],
+      "geometry_method": "Trace of the principal masonry enceinte on Cotsford RCIN 733067 (1762), registered on ten surviving or restored control points. AGI MP-FILIPINAS,43 and Ignacio Muñoz’s 1671 plan and Murillo Velarde’s 1734 inset corroborate the shared city outline. The standalone garrison at Fort Santiago is also mapped for its role. Detached positions, ground outside the enceinte and later land reclamation are omitted.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.969193,
+              14.595286
+            ],
+            [
+              120.969079,
+              14.595217
+            ],
+            [
+              120.96901,
+              14.595108
+            ],
+            [
+              120.969035,
+              14.595011
+            ],
+            [
+              120.96912,
+              14.59504
+            ],
+            [
+              120.96959,
+              14.594317
+            ],
+            [
+              120.969495,
+              14.594259
+            ],
+            [
+              120.970545,
+              14.592825
+            ],
+            [
+              120.970488,
+              14.592742
+            ],
+            [
+              120.970517,
+              14.592589
+            ],
+            [
+              120.970602,
+              14.592519
+            ],
+            [
+              120.970725,
+              14.592569
+            ],
+            [
+              120.971552,
+              14.591444
+            ],
+            [
+              120.971439,
+              14.591375
+            ],
+            [
+              120.971454,
+              14.591205
+            ],
+            [
+              120.971591,
+              14.591133
+            ],
+            [
+              120.971733,
+              14.591193
+            ],
+            [
+              120.97295,
+              14.589557
+            ],
+            [
+              120.97285,
+              14.589432
+            ],
+            [
+              120.972872,
+              14.589315
+            ],
+            [
+              120.973018,
+              14.589207
+            ],
+            [
+              120.973141,
+              14.589216
+            ],
+            [
+              120.97453,
+              14.587123
+            ],
+            [
+              120.974423,
+              14.587056
+            ],
+            [
+              120.974458,
+              14.586898
+            ],
+            [
+              120.974606,
+              14.586762
+            ],
+            [
+              120.974734,
+              14.586762
+            ],
+            [
+              120.975089,
+              14.586221
+            ],
+            [
+              120.974963,
+              14.586149
+            ],
+            [
+              120.974992,
+              14.586037
+            ],
+            [
+              120.975135,
+              14.585977
+            ],
+            [
+              120.975259,
+              14.586014
+            ],
+            [
+              120.975492,
+              14.585607
+            ],
+            [
+              120.975477,
+              14.585521
+            ],
+            [
+              120.975351,
+              14.585452
+            ],
+            [
+              120.975229,
+              14.585449
+            ],
+            [
+              120.975164,
+              14.585399
+            ],
+            [
+              120.975442,
+              14.584797
+            ],
+            [
+              120.976246,
+              14.585217
+            ],
+            [
+              120.976275,
+              14.585283
+            ],
+            [
+              120.976183,
+              14.585318
+            ],
+            [
+              120.976867,
+              14.585678
+            ],
+            [
+              120.978277,
+              14.586524
+            ],
+            [
+              120.978288,
+              14.586425
+            ],
+            [
+              120.978322,
+              14.586364
+            ],
+            [
+              120.978439,
+              14.586363
+            ],
+            [
+              120.979127,
+              14.586756
+            ],
+            [
+              120.978958,
+              14.587404
+            ],
+            [
+              120.978922,
+              14.58747
+            ],
+            [
+              120.978844,
+              14.587526
+            ],
+            [
+              120.979217,
+              14.589777
+            ],
+            [
+              120.979337,
+              14.58974
+            ],
+            [
+              120.979415,
+              14.59052
+            ],
+            [
+              120.979106,
+              14.590982
+            ],
+            [
+              120.978978,
+              14.591074
+            ],
+            [
+              120.978907,
+              14.590883
+            ],
+            [
+              120.978301,
+              14.592029
+            ],
+            [
+              120.978374,
+              14.592083
+            ],
+            [
+              120.978164,
+              14.592503
+            ],
+            [
+              120.978108,
+              14.592463
+            ],
+            [
+              120.97748,
+              14.593788
+            ],
+            [
+              120.977555,
+              14.593839
+            ],
+            [
+              120.977478,
+              14.594157
+            ],
+            [
+              120.977108,
+              14.593987
+            ],
+            [
+              120.976595,
+              14.594033
+            ],
+            [
+              120.975094,
+              14.593941
+            ],
+            [
+              120.974672,
+              14.593942
+            ],
+            [
+              120.973201,
+              14.594304
+            ],
+            [
+              120.973118,
+              14.594161
+            ],
+            [
+              120.971564,
+              14.594537
+            ],
+            [
+              120.971247,
+              14.594561
+            ],
+            [
+              120.970716,
+              14.59486
+            ],
+            [
+              120.969687,
+              14.595299
+            ],
+            [
+              120.969509,
+              14.595256
+            ],
+            [
+              120.969381,
+              14.595311
+            ],
+            [
+              120.969193,
+              14.595286
+            ]
+          ]
+        ]
+      },
+      "stable_id": "manila-intramuros-walled-core",
+      "position_uncertainty_m": 110,
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "bbox": [
+        120.96901,
+        14.584797,
+        120.979415,
+        14.595311
+      ],
+      "cross_century_feature_id": "manila-intramuros-1800"
+    },
+    {
+      "id": "CAVITE_PUERTO",
+      "title": "甲米地 · 旧港城",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "甲米地旧港城 · 西班牙驻守的造船港",
+          "note": "港城自西侧陆门延伸至东端炮台。西班牙船厂为跨太平洋的马尼拉大帆船航线造船和配装。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "甲米地旧港城 · 10月英军接收",
+          "note": "1762年10月6日马尼拉降约纳入甲米地，英军随后接收港城。英方行动图与科尼什报告分别记载10月8日和10日出动。英军取得港内舰船和海军物资。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "甲米地旧港城 · 和约后仍由英军占用",
+          "note": "1763年英国舰船利用甲米地附近的船坞和岸边设施维修，港城直到翌年才交还。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1781,
+          "title": "甲米地旧港城 · 4月9日西班牙接回",
+          "note": "1764年4月9日，英国委员威廉·史蒂文森交还甲米地皇家要塞和港口。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1796,
+          "title": "甲米地旧港城 · 风灾后港口继续运作",
+          "note": "1782年台风重创城防。1787年到访的法国探险队留下港城图像，港口仍可停泊、补给。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "甲米地旧港城 · 西班牙舰队驻泊",
+          "note": "1797年6月的海图记载伊格纳西奥·玛丽亚·德·阿拉瓦舰队在港内的布置。"
+        }
+      ],
+      "source_urls": [
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://dev.gutenberg.org/cache/epub/56778/pg56778-images.html",
+        "https://collections.leventhalmap.org/search/commonwealth:9s16ld438",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/64833",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18977",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/19026"
+      ],
+      "geometry_method": "Traced the historic headland shore and western gate in William Stevenson, British Library IOR/X/3809 (1763), and affine-registered it on the old gate, San Juan and San Miguel bastions, San Felipe west wall and Ribera Point. Approximate historical land extent excluding harbor water, isolated jetties and modern naval reclamation. Compared against British Library K.Top.116.41 and historical/modern plans in Jiménez Verdejo et al.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.909058,
+              14.481727
+            ],
+            [
+              120.909089,
+              14.481513
+            ],
+            [
+              120.909235,
+              14.481367
+            ],
+            [
+              120.90938,
+              14.481363
+            ],
+            [
+              120.909474,
+              14.481531
+            ],
+            [
+              120.909651,
+              14.48144
+            ],
+            [
+              120.910055,
+              14.481301
+            ],
+            [
+              120.910417,
+              14.481291
+            ],
+            [
+              120.910788,
+              14.481579
+            ],
+            [
+              120.911141,
+              14.481612
+            ],
+            [
+              120.91144,
+              14.481561
+            ],
+            [
+              120.912058,
+              14.48143
+            ],
+            [
+              120.912713,
+              14.481397
+            ],
+            [
+              120.913892,
+              14.481335
+            ],
+            [
+              120.914397,
+              14.481193
+            ],
+            [
+              120.914728,
+              14.481127
+            ],
+            [
+              120.915231,
+              14.480928
+            ],
+            [
+              120.915521,
+              14.480649
+            ],
+            [
+              120.915826,
+              14.480498
+            ],
+            [
+              120.916048,
+              14.480606
+            ],
+            [
+              120.91613,
+              14.480831
+            ],
+            [
+              120.916264,
+              14.480742
+            ],
+            [
+              120.916514,
+              14.480991
+            ],
+            [
+              120.916641,
+              14.481273
+            ],
+            [
+              120.916824,
+              14.481495
+            ],
+            [
+              120.9172,
+              14.481627
+            ],
+            [
+              120.917678,
+              14.481542
+            ],
+            [
+              120.918144,
+              14.481316
+            ],
+            [
+              120.918487,
+              14.481121
+            ],
+            [
+              120.918918,
+              14.481536
+            ],
+            [
+              120.919264,
+              14.481669
+            ],
+            [
+              120.919556,
+              14.481717
+            ],
+            [
+              120.91993,
+              14.48165
+            ],
+            [
+              120.920251,
+              14.481427
+            ],
+            [
+              120.920496,
+              14.481221
+            ],
+            [
+              120.920749,
+              14.481456
+            ],
+            [
+              120.920381,
+              14.481765
+            ],
+            [
+              120.92026,
+              14.481655
+            ],
+            [
+              120.91952,
+              14.48243
+            ],
+            [
+              120.918456,
+              14.482901
+            ],
+            [
+              120.91745,
+              14.482958
+            ],
+            [
+              120.916895,
+              14.483201
+            ],
+            [
+              120.916343,
+              14.483018
+            ],
+            [
+              120.915718,
+              14.48332
+            ],
+            [
+              120.914936,
+              14.483271
+            ],
+            [
+              120.914544,
+              14.483424
+            ],
+            [
+              120.913633,
+              14.483848
+            ],
+            [
+              120.91323,
+              14.483646
+            ],
+            [
+              120.913297,
+              14.483331
+            ],
+            [
+              120.911496,
+              14.483268
+            ],
+            [
+              120.911457,
+              14.483383
+            ],
+            [
+              120.91132,
+              14.483486
+            ],
+            [
+              120.911181,
+              14.483461
+            ],
+            [
+              120.911142,
+              14.483306
+            ],
+            [
+              120.909378,
+              14.483071
+            ],
+            [
+              120.908967,
+              14.48331
+            ],
+            [
+              120.90881,
+              14.483101
+            ],
+            [
+              120.909058,
+              14.481727
+            ]
+          ]
+        ]
+      },
+      "stable_id": "cavite-historic-puerto",
+      "position_uncertainty_m": 65,
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "bbox": [
+        120.90881,
+        14.480498,
+        120.920749,
+        14.483848
+      ],
+      "cross_century_feature_id": "cavite-historic-puerto-1800"
+    },
+    {
+      "id": "CAVITE_FORT_SAN_FELIPE",
+      "title": "甲米地 · 圣费利佩堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1761,
+          "title": "圣费利佩堡 · 西班牙四棱堡",
+          "note": "西班牙于1609至1616年间修筑甲米地港首座石堡。十八世纪工程记载描述四座棱堡、西面入口和面向造船岸的南侧炮台。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "title": "圣费利佩堡 · 英军接收并驻守",
+          "note": "1762年10月，英军依马尼拉降约接收甲米地和石堡。1763年英方所绘图把石堡标为圣费利佩城堡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1781,
+          "title": "圣费利佩堡 · 西班牙收回城堡",
+          "note": "1764年4月9日的交接文书明确记载甲米地皇家要塞和港口一并归还西班牙。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1799,
+          "title": "圣费利佩堡 · 风灾后的旧堡址",
+          "note": "菲律宾国家历史委员会记载1782年8月14日台风重创城防。1815年的地图仍辨认出四座棱堡，1819年下令永久加固甲米地城防。"
+        }
+      ],
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-felipe/",
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://dev.gutenberg.org/cache/epub/56778/pg56778-images.html",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/64833",
+        "https://readingroo.ms/5/4/0/4/54041/54041-h/54041-h.htm",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en",
+        "https://www.e-rara.ch/download/pdf/18886726.pdf"
+      ],
+      "geometry_method": "Traced the four-bastion envelope on Stevenson IOR/X/3809 and compared it with BL K.Top.116.41. Similarity fit to surviving western bastion and curtain landmarks on georeferenced imagery. West wall is a surviving anchor; the lost eastern half and full perimeter are reconstructed. NHCP records major storm damage in 1782; 1815 map still shows the fort.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.9164,
+              14.482234
+            ],
+            [
+              120.916441,
+              14.482153
+            ],
+            [
+              120.916502,
+              14.482212
+            ],
+            [
+              120.916554,
+              14.482218
+            ],
+            [
+              120.916583,
+              14.482136
+            ],
+            [
+              120.916596,
+              14.48167
+            ],
+            [
+              120.916561,
+              14.48165
+            ],
+            [
+              120.916483,
+              14.481728
+            ],
+            [
+              120.916451,
+              14.481681
+            ],
+            [
+              120.916416,
+              14.48154
+            ],
+            [
+              120.916399,
+              14.481404
+            ],
+            [
+              120.916759,
+              14.481439
+            ],
+            [
+              120.916753,
+              14.4815
+            ],
+            [
+              120.916681,
+              14.481576
+            ],
+            [
+              120.916679,
+              14.481616
+            ],
+            [
+              120.917601,
+              14.481952
+            ],
+            [
+              120.917644,
+              14.481896
+            ],
+            [
+              120.917638,
+              14.481831
+            ],
+            [
+              120.917695,
+              14.481807
+            ],
+            [
+              120.918007,
+              14.481938
+            ],
+            [
+              120.917731,
+              14.482162
+            ],
+            [
+              120.917676,
+              14.482092
+            ],
+            [
+              120.917639,
+              14.482157
+            ],
+            [
+              120.917319,
+              14.48261
+            ],
+            [
+              120.917408,
+              14.482614
+            ],
+            [
+              120.917435,
+              14.482677
+            ],
+            [
+              120.917285,
+              14.482903
+            ],
+            [
+              120.917039,
+              14.482671
+            ],
+            [
+              120.917109,
+              14.482629
+            ],
+            [
+              120.917104,
+              14.482564
+            ],
+            [
+              120.916655,
+              14.482343
+            ],
+            [
+              120.916634,
+              14.482382
+            ],
+            [
+              120.916689,
+              14.482446
+            ],
+            [
+              120.916651,
+              14.482475
+            ],
+            [
+              120.916563,
+              14.482501
+            ],
+            [
+              120.91635,
+              14.482465
+            ],
+            [
+              120.9164,
+              14.482234
+            ]
+          ]
+        ]
+      },
+      "stable_id": "cavite-fort-san-felipe",
+      "position_uncertainty_m": 45,
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "bbox": [
+        120.91635,
+        14.481404,
+        120.918007,
+        14.482903
+      ],
+      "cross_century_feature_id": "cavite-fort-san-felipe-1800"
     }
   ]
 }

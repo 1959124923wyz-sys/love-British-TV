@@ -860,6 +860,52 @@ async function verify() {
   await havanaFort.waitFor();
   assert.match(await havanaFort.textContent(), /1月1日美军接收/);
 
+  const manilaTown = [14.590149, 120.975944];
+  const caviteTown = [14.4822, 120.9120];
+  for (const [point, id, stages] of [
+   [manilaTown, 'MANILA_INTRAMUROS', [[1762, /10月6日英军攻陷/],
+    [1763, /和约后英军仍占城/], [1764, /西班牙接收/]]],
+   [caviteTown, 'CAVITE_PUERTO', [[1762, /10月英军接收/], [1764, /4月9日/]]],
+  ]) {
+   await setView([...point, 16]);
+   for (const [year, title] of stages) {
+    await jump(year);
+    await clickAreaAt(...point);
+    const card = page.locator('[data-overlap-id="18c:' + id + '"]');
+    await card.waitFor();
+    assert.match(await card.textContent(), title);
+   }
+  }
+  await jump(1762);
+  const manilaLegacy = await page.evaluate(() => ({
+   b37: window.eighteenthBatch37Spatial.getAudit(),
+   b39: window.eighteenthBatch39Spatial.getAudit(),
+   old: window.eighteenthSpatial.getAudit(),
+  }));
+  assert(!manilaLegacy.b37.activeZoneIds.includes('B37-C-Z039'));
+  assert(!manilaLegacy.b37.activeSiteIds.includes('B37-C-P039'));
+  assert(!manilaLegacy.b39.activeZoneIds.includes('B39-C-Z037'));
+  assert(!manilaLegacy.b39.activeSiteIds.includes('B39-C-P037'));
+  assert(!manilaLegacy.old.activeSites.includes('MANILA'));
+  assert(!(await atlantic()).activeRegionalSites.includes('ZAMBOANGA_LA_CALDERA_PORT'));
+  const sanAgustin = [14.5887439, 120.9751319];
+  await setView([...sanAgustin, 17]);
+  await clickAreaAt(...sanAgustin);
+  await dossierTitle.filter({ hasText: '圣奥古斯丁教堂 · 英军掠取堂内财物' }).waitFor();
+  await jump(1764);
+  assert((await atlantic()).activeRegionalSites.includes('ZAMBOANGA_LA_CALDERA_PORT'));
+  await jump(1799);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...manilaTown, 16]);
+  await clickAreaAt(...manilaTown);
+  const manila1800 = page.locator('[data-historic-overlap-id$=":manila-intramuros-1800"]');
+  await manila1800.waitFor();
+  assert.match(await manila1800.textContent(), /西班牙续修城防/);
+  await setView([...caviteTown, 16]);
+  await clickAreaAt(...caviteTown);
+  await page.locator('[data-historic-overlap-id$=":cavite-historic-puerto-1800"]').waitFor();
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&

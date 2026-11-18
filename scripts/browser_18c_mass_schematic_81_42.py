@@ -34,7 +34,7 @@ try:
  cases=[
  (1704,['ST_KITTS','ANTIGUA','GIBRALTAR_PENINSULA'],['QUEBEC_1763','BENGAL_DIWANI'],'1704-atlantic'),
  (1759,['GUADELOUPE','CAPE_BRETON'],['BENGAL_DIWANI','ST_LUCIA'],'1759-war'),
- (1762,['MANILA_PORT','MARTINIQUE_1762'],['HAVANA_HARBOR','QUEBEC_1763'],'1762-global-raids'),
+ (1762,['MARTINIQUE_1762'],['MANILA_PORT','CAVITE_PORT','HAVANA_HARBOR','QUEBEC_1763'],'1762-global-raids'),
  (1763,['QUEBEC_1763','EAST_FLORIDA','GRENADA'],['HAVANA_HARBOR','GUADELOUPE'],'1763-treaty'),
  (1765,['BENGAL_DIWANI','BIHAR_DIWANI','ORISSA_DIWANI'],['PONDICHERRY_BRITISH'],'1765-diwani'),
  (1774,['QUEBEC_1774','FALKLAND_PAPER'],['QUEBEC_1763','PORT_EGMONT'],'1774-laws-vs-posts'),
@@ -52,6 +52,7 @@ try:
   assert all(k in a['activeZones'] for k in show),(y,'missing',show,a)
   assert all(k not in a['activeZones'] for k in hide),(y,'incorrect',hide,a)
   assert a['visibleZoneLayers']>0 and a['visibleCoreLayers']>0,(y,a)
+  if y==1762:assert {'MANILA_INTRAMUROS','CAVITE_PUERTO'}.issubset(a['activeRegionalZones']),a
   shot(name)
  set_year(1762)
  assert 'HAVANA_WALLED_TOWN' in audit()['activeRegionalZones']

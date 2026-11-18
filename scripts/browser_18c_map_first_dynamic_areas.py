@@ -29,8 +29,8 @@ try:
   (1746,['MENORCA'],['HAVANA','MANILA'],'1746-madras-under-french-occupation'),
   (1749,['MENORCA'],['HAVANA','MANILA'],'1749-minorca-madras-restored'),
   (1756,['GIBRALTAR'],['MENORCA','HAVANA'],'1756-france-takes-minorca-and-madras'),
-  (1762,['HAVANA','MANILA'],['PENANG','ST_EUSTATIUS'],'1762-havana-manila-short-occupation'),
-  (1763,['MANILA','MENORCA'],['HAVANA'],'1763-havana-returned-minorca-restored'),
+  (1762,[],['HAVANA','MANILA','PENANG','ST_EUSTATIUS'],'1762-havana-manila-short-occupation'),
+  (1763,['MENORCA'],['HAVANA','MANILA'],'1763-havana-returned-minorca-restored'),
   (1776,['NEW_YORK_CITY'],['HAVANA','MANILA'],'1776-american-revolution'),
   (1781,['ST_EUSTATIUS','MENORCA'],['HAVANA','MANILA'],'1781-statia-temporary-british-occupation'),
   (1782,['GIBRALTAR'],['ST_EUSTATIUS','MENORCA'],'1782-minorca-lost-statia-lost'),
@@ -44,6 +44,9 @@ try:
   if yr==1763:assert 'MADRAS' in a['activeAreas'] and 'CALCUTTA' in a['activeAreas']
   if yr==1746:assert 'MADRAS' not in a['activeAreas'] and 'CALCUTTA' in a['activeAreas']
   if yr==1756:assert 'MADRAS' in a['activeAreas'] and 'CALCUTTA' not in a['activeAreas']
+  if yr in (1762,1763):
+   active_regional=js('return window.eighteenthMassSpatial.getAudit().activeRegionalZones')
+   assert 'MANILA_INTRAMUROS' in active_regional,active_regional
   snap(name)
  set_year(1762)
  assert js('return document.querySelectorAll(".atlas-18c-dynamic-area").length')>=10
