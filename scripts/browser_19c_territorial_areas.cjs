@@ -1184,6 +1184,35 @@ async function verify() {
   const mysoreCession = page.locator('[data-historic-overlap-id$=":mysore-nizam-cession-1799-1800"]');
   assert.match(await mysoreCession.textContent(), /10月12日转让公司/);
 
+  await jump(1788);
+  const australia1788 = await atlantic();
+  assert(australia1788.activeRegionalZones.includes('SYDNEY_MARINE_CAMP_1788'));
+  assert(!australia1788.activeZones.includes('SYDNEY_COVE'));
+  const camp = [-33.86427696, 151.20781003];
+  await setView([...camp, 17]);
+  await clickAreaAt(...camp);
+  const campCard = page.locator('[data-overlap-id="18c:SYDNEY_MARINE_CAMP_1788"]');
+  await campCard.waitFor();
+  assert.match(await campCard.textContent(), /海军陆战队营地/);
+  await campCard.locator('.atlas-18c-overlap-title').hover();
+  await page.locator('.atlas-18c-overlap-glow').first().waitFor();
+  await page.screenshot({ path: join(screenshotDir, '18c-sydney-camp-1788.png') });
+
+  const huts = [-33.813517, 151.00083328];
+  await jump(1799);
+  await setView([...huts, 16]);
+  await clickAreaAt(...huts);
+  const hutsCard = page.locator('[data-overlap-id="18c:PARRAMATTA_CONVICT_HUT_ROWS"]');
+  await hutsCard.waitFor();
+  assert.match(await hutsCard.textContent(), /囚犯棚屋和园地/);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...huts);
+  const huts1800 = page.locator('[data-historic-overlap-id$=":parramatta-convict-hut-rows-1800"]');
+  await huts1800.waitFor();
+  assert.match(await huts1800.textContent(), /流放住区/);
+  await page.screenshot({ path: join(screenshotDir, '19c-parramatta-1800-handoff.png') });
+
   const charleston = [32.7756125, -79.93197257];
   const charlestonTown = page.locator('[data-overlap-id="18c:CHARLESTON_OLD_TOWN_1780"]');
   for (const [year, title] of [[1780, /5月12日英军占城/], [1782, /12月14日英军撤离/]]) {

@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 505,
-    "linked_to_1800_public_geometry": 344,
+    "1799_prior_records_reviewed": 526,
+    "linked_to_1800_public_geometry": 364,
     "by_disposition": {
-      "anchor": 202,
+      "anchor": 217,
       "claim_evidence": 7,
-      "continued": 108,
-      "event_history": 4,
+      "continued": 112,
+      "event_history": 5,
       "fiscal_evidence": 36,
       "needs_boundary_or_site_review": 49,
       "network_evidence": 63,
       "occupation": 9,
       "political_relation_evidence": 11,
-      "renewed_scope": 16
+      "renewed_scope": 17
     }
   },
   "records": [
@@ -2024,17 +2024,20 @@
       "resolution": "anchor",
       "features_at_1800": [
         "sydney-cove-colonial-1800"
-      ]
+      ],
+      "notes": "旧框由悉尼湾港口档案与两岸具名地点接替。"
     },
     {
       "prior_id": "PARRAMATTA",
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "1788年后帕拉马塔流放殖民聚落",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "renewed_scope",
       "features_at_1800": [
+        "parramatta-convict-hut-rows-1800",
         "parramatta-government-1800"
-      ]
+      ],
+      "notes": "旧城区框由高街流放住区和核实到旧总督府的驻地等档案接替。"
     },
     {
       "prior_id": "NORFOLK_SETTLEMENT",
@@ -2045,7 +2048,7 @@
       "features_at_1800": [
         "norfolk-1800-first-penal"
       ],
-      "notes": "按主岛实形承接；1814年结束第一次流放定居，法定管辖延续。"
+      "notes": "以诺福克主岛岸形接续法定管辖；金斯敦、亚瑟谷和卡斯凯德另有具名驻地。"
     },
     {
       "prior_id": "FALKLAND_PAPER",
@@ -4804,6 +4807,235 @@
       "features_at_1800": [
         "seringapatam-west-wall-breach-1800"
       ]
+    },
+    {
+      "prior_id": "WARRANE_SYDNEY_COVE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "瓦兰／悉尼湾 · 殖民港口",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sydney-cove-colonial-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SYDNEY_FIRST_GOVERNMENT_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "悉尼湾 · 首座总督府",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sydney-first-government-house-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SYDNEY_FIRST_HOSPITAL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "悉尼岩石区 · 首座流放地医院",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sydney-first-hospital-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SYDNEY_DAWES_BATTERY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塔拉／道斯角 · 炮台",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sydney-dawes-battery-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SYDNEY_FARM_COVE_GARDEN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "沃卡马古利／农场湾 · 早期种植与总督庄园",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sydney-farm-cove-garden-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_GOVERNMENT_FARM_1792",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔 · 河以北政府农场围栏",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "parramatta-government-farm-1792-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_CONVICT_HUT_ROWS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔 · 乔治街流放犯住区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "parramatta-convict-hut-rows-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_HIGH_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔 · 早期高街",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "parramatta-high-street-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_GOVERNMENT_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔 · 旧总督府",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "parramatta-government-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_COLONIAL_HOSPITAL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔 · 河岸早期医院",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "parramatta-colonial-hospital-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_EAST_BARRACKS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔高街东端 · 旧军营",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "parramatta-east-barracks-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_EXPERIMENT_FARM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔 · 鲁斯试验农场",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "parramatta-experiment-farm-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PARRAMATTA_ELIZABETH_FARM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕拉马塔 · 伊丽莎白农场",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "parramatta-elizabeth-farm-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "TOONGABBIE_GOVERNMENT_FARM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "图恩加比溪 · 官办农场与流放劳役",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "toongabbie-government-farm-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "HAWKESBURY_GREEN_HILLS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "迪拉宾／霍克斯伯里河 · 绿丘聚落与粮仓",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "hawkesbury-green-hills-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "HAWKESBURY_GREEN_HILLS_POWELL_CASE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "绿丘 · 小杰米与小乔治遇害案",
+      "prior_record_kind": "conflict_damage",
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "年份档案随当年显示，行为在1800年另查。"
+    },
+    {
+      "prior_id": "NORFOLK_FIRST_COLONIAL_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "诺福克主岛 · 新南威尔士属流放殖民地",
+      "prior_record_kind": "paper_claim",
+      "resolution": "continued",
+      "features_at_1800": [
+        "norfolk-1800-first-penal"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "NORFOLK_KINGSTON_LANDING",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "诺福克金斯敦 · 首次登陆与补给",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "norfolk-kingston-landing-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "NORFOLK_FIRST_GOVERNMENT_HOUSES",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "诺福克金斯敦 · 前两座司令官官邸",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "norfolk-first-government-houses-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "NORFOLK_ARTHURS_VALE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "诺福克 · 亚瑟谷官办屯垦",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "norfolk-arthurs-vale-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "NORFOLK_PHILLIPSBURG",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "诺福克卡斯凯德 · 菲利普斯堡聚落",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "norfolk-phillipsburg-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
     }
   ]
 }
