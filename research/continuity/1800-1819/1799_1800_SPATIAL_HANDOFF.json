@@ -16,15 +16,15 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 307,
-    "linked_to_1800_public_geometry": 87,
+    "1799_prior_records_reviewed": 317,
+    "linked_to_1800_public_geometry": 98,
     "by_disposition": {
-      "anchor": 43,
+      "anchor": 54,
       "claim_evidence": 7,
       "continued": 17,
       "event_history": 7,
       "fiscal_evidence": 37,
-      "needs_boundary_or_site_review": 86,
+      "needs_boundary_or_site_review": 85,
       "network_evidence": 69,
       "occupation": 13,
       "political_relation_evidence": 14,
@@ -1009,8 +1009,20 @@
       "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
       "name_zh": "1763 Havana撤出与西班牙恢复",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-walled-town-1800",
+        "havana-morro-fort-1800",
+        "havana-punta-fort-1800",
+        "havana-real-fuerza-1800",
+        "havana-cabana-fort-1800",
+        "havana-atares-fort-1800",
+        "havana-principe-fort-1800",
+        "havana-cojimar-tower-1800",
+        "havana-chorrera-tower-site-1800",
+        "havana-royal-dockyard-1800"
+      ],
+      "note_zh": "旧港区矩形以旧城、沿岸要塞、塔堡和王家船坞逐处接续。"
     },
     {
       "prior_id": "B39-C-Z043",
@@ -2704,6 +2716,106 @@
       "resolution": "anchor",
       "features_at_1800": [
         "fort-oswegatchie-lighthouse-point-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_WALLED_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 城墙内旧城",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-walled-town-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_CASTILLO_DEL_MORRO",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 莫罗堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-morro-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_SAN_SALVADOR_LA_PUNTA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 蓬塔堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-punta-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_CASTILLO_REAL_FUERZA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 皇家力量堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-real-fuerza-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_CABANA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 卡瓦尼亚圣卡洛斯要塞",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-cabana-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_ATARES_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 阿塔雷斯堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-atares-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_CASTILLO_DEL_PRINCIPE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 王子堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-principe-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_COJIMAR_REBUILT_TOWER",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科希马尔 · 重建河口塔堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-cojimar-tower-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_CHORRERA_TOWER",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拉乔雷拉 · 塔堡旧址",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-chorrera-tower-site-1800"
+      ]
+    },
+    {
+      "prior_id": "HAVANA_REAL_ARSENAL_TENAZA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈瓦那 · 王家船坞",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "havana-royal-dockyard-1800"
       ]
     }
   ]

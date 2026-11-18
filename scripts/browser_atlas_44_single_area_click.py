@@ -148,13 +148,15 @@ try:
  js("""const t=document.querySelector('#jumpYear');t.value='1762';t.dispatchEvent(new Event('change',{bubbles:true}));""")
  check(lambda _:d.find_element(By.ID,'bigYear').text=='1762')
  js("""
-  const host=window.__eighteenthSpatialHost,ll=L.latLng(23.14,-82.36);
-  host.map.setView(ll,9,{animate:false});
+  const host=window.__eighteenthSpatialHost,ll=L.latLng(23.141081,-82.349694);
+  host.map.setView(ll,16,{animate:false});
   const p=host.map.latLngToContainerPoint(ll),r=host.map.getContainer().getBoundingClientRect();
   host.map.getContainer().dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,
     clientX:r.left+p.x,clientY:r.top+p.y}));
  """)
- check(lambda _:js("return window.eighteenthOverlapDossier.getAudit().selectedCount>=4"))
+ check(lambda _:js("""return ['HAVANA_WALLED_TOWN','HAVANA_CASTILLO_REAL_FUERZA'].every(
+  id=>document.querySelector('[data-overlap-id="18c:'+id+'"]'))"""))
+ assert js("return window.eighteenthOverlapDossier.getAudit().selectedCount")>=2
  assert js("return window.eighteenthOverlapDossier.getAudit().lastActivation")=='map-background-overlap'
  clean()
  snap('1762-havana-multiple-records-clean')

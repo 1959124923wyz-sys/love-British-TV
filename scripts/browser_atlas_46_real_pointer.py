@@ -23,7 +23,8 @@ def sample(year,selector,need):
  d.get('http://127.0.0.1:8765/?review18c=1&year='+str(year))
  wait.until(lambda _:js("return window.eighteenthOverlapDossier?.getAudit?.()?.loaded && document.querySelector('#jumpYear')?.max==='1799'"))
  if selector=='havana':
-  lat,lon=23.14,-82.36
+  # The Real Fuerza survives within the surveyed city enclosure.
+  lat,lon=23.141081,-82.349694
  else:
   x=json.loads((root/'data/eighteenth-century-b38-hudson-company.json').read_text(encoding='utf-8'))
   z=next(a for a in x['zones'] if a['id']=='B38-H-Z006')
@@ -31,7 +32,7 @@ def sample(year,selector,need):
  res=js("""
   const lat=arguments[0],lon=arguments[1],which=arguments[2],
     host=window.__eighteenthSpatialHost,map=host.map;
-  map.setView([lat,lon],which==='havana'?9:7,{animate:false});
+  map.setView([lat,lon],which==='havana'?16:7,{animate:false});
   const base=map.latLngToContainerPoint([lat,lon]),
     rect=map.getContainer().getBoundingClientRect(),api=window.eighteenthOverlapDossier;
   const margin=45;let choice=null;

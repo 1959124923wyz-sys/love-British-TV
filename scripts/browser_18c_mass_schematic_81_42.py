@@ -25,16 +25,16 @@ def shot(name):d.save_screenshot(str(screen/('18c-map-35-'+name+'.png')))
 try:
  d.get('http://127.0.0.1:8765/?review18c=1&year=1762')
  wait.until(lambda _:bool(audit()) and audit()['loaded'] and bool(old()) and old()['loaded'])
- # Leaflet layers may fetch faster than the unpublished 18C chronology and year-input cap.
+ # Leaflet layers may fetch faster than the 18C chronology and year-input cap.
  # Await the actual year navigation controller before automated year changes.
- wait.until(lambda _:js("return document.querySelector('#jumpYear')?.max==='1799' && Boolean(document.querySelector('#jumpYear')?.value)"))
+ wait.until(lambda _:js("return Number(document.querySelector('#jumpYear')?.max)>=1799 && Boolean(document.querySelector('#jumpYear')?.value)"))
  a=audit()
  assert (a['zoneCount'],a['coreCount'],a['timePhases'])==(81,42,161),a
  assert old()['areaReferences']==24 and old()['documentedCityCores']==15,old()
  cases=[
  (1704,['ST_KITTS','ANTIGUA','GIBRALTAR_PENINSULA'],['QUEBEC_1763','BENGAL_DIWANI'],'1704-atlantic'),
  (1759,['GUADELOUPE','CAPE_BRETON'],['BENGAL_DIWANI','ST_LUCIA'],'1759-war'),
- (1762,['HAVANA_HARBOR','MANILA_PORT','MARTINIQUE_1762'],['QUEBEC_1763'],'1762-global-raids'),
+ (1762,['MANILA_PORT','MARTINIQUE_1762'],['HAVANA_HARBOR','QUEBEC_1763'],'1762-global-raids'),
  (1763,['QUEBEC_1763','EAST_FLORIDA','GRENADA'],['HAVANA_HARBOR','GUADELOUPE'],'1763-treaty'),
  (1765,['BENGAL_DIWANI','BIHAR_DIWANI','ORISSA_DIWANI'],['PONDICHERRY_BRITISH'],'1765-diwani'),
  (1774,['QUEBEC_1774','FALKLAND_PAPER'],['QUEBEC_1763','PORT_EGMONT'],'1774-laws-vs-posts'),
@@ -54,6 +54,7 @@ try:
   assert a['visibleZoneLayers']>0 and a['visibleCoreLayers']>0,(y,a)
   shot(name)
  set_year(1762)
+ assert 'HAVANA_WALLED_TOWN' in audit()['activeRegionalZones']
  assert js("return document.querySelectorAll('.atlas-18c-mass-zone').length")>5
  assert js("return document.querySelectorAll('.atlas-18c-mass-core').length")>4
  js("document.querySelector('.atlas-18c-mass-core').dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));")
@@ -69,9 +70,9 @@ try:
  assert audit()['visibleZoneLayers']==0 and audit()['visibleCoreLayers']==0
  shot('1572-original-map-intact')
  d.get('http://127.0.0.1:8765/?year=1762')
- wait.until(lambda x:x.find_element(By.ID,'bigYear').text=='1699')
- assert not js('return Boolean(window.eighteenthMassSpatial)'), 'research preview must stay gated'
- print('PASS 18C batch35 81 supplementary polygon areas,42 city cores, 13 year-sample dates, legend control, dossier, unpublished isolation and 16C regression')
+ wait.until(lambda x:x.find_element(By.ID,'bigYear').text=='1762')
+ wait.until(lambda _: (js('return window.eighteenthMassSpatial?.getAudit()?.loaded') is True))
+ print('PASS 18C batch35 81 supplementary polygon areas,42 city cores, 13 year-sample dates, legend control, dossier, public availability and 16C regression')
 except Exception:
  shot('FAILED')
  raise
