@@ -58,6 +58,7 @@ for(const [id,y,expected] of [
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
 const successors=[2,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features);
+successors.push(...JSON.parse(read('data/nineteenth-century-spatial-1800-1819.geojson')).features);
 for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISED','UPPER_CANADA','LOWER_CANADA']){
  const row=z(id),successor=successors.find(f=>f.id===row.cross_century_feature_id);
  a.equal(successor.properties.start_year,1800);
@@ -239,6 +240,24 @@ a.equal(atlantic('DELAWARE_FORT_MIFFLIN_ORIGINAL_SCARP').geometry.type,'LineStri
 const jay=late('nyc-governors-island-fort-1800');
 a.match(jay.properties.year_stages[0].title,/交联邦政府/);
 a.equal(jay.properties.stable_id,atlantic('NYC_FORT_JAY').stable_id);
+
+const saintLucia=atlantic('ST_LUCIA_MAIN_ISLAND');
+a.equal(z('ST_LUCIA').superseded_by,saintLucia.id);
+for(const [year,kind] of [[1762,'wartime_occupation'],[1763,'foreign_occupation'],[1778,'wartime_occupation'],
+ [1782,'wartime_occupation'],[1783,'foreign_occupation'],[1794,'wartime_occupation'],
+ [1795,'foreign_occupation'],[1796,'wartime_occupation']])
+ a.equal(stageAt(saintLucia.id,year).kind||saintLucia.kind,kind);
+const b39Caribbean=JSON.parse(read('data/eighteenth-century-b39-caribbean-1759-1763.json'));
+a.equal(b39Caribbean.zones.find(x=>x.id==='B39-C-Z025').superseded_by,saintLucia.id);
+a.match(stageAt('ST_LUCIA_MORNE_FORTUNE',1796).title,/5月26日/);
+a.match(stageAt('SAVANNAH_TOWN_1778',1778).title,/12月29日英军占城/);
+a.match(stageAt('SAVANNAH_TOWN_1778',1782).title,/7月11日英军撤离/);
+a.equal(z('SAVANNAH_GARRISON').superseded_by,'SAVANNAH_TOWN_1778');
+a.match(stageAt('CHARLESTON_OLD_TOWN_1780',1780).title,/5月12日英军占城/);
+a.match(stageAt('CHARLESTON_OLD_TOWN_1780',1782).title,/12月14日英军撤离/);
+a.equal(z('CHARLESTON_GARRISON').superseded_by,'CHARLESTON_OLD_TOWN_1780');
+a.match(stageAt('TRINCOMALEE_FORT_FREDERICK',1795).title,/8月26日/);
+a.match(stageAt('TRINCOMALEE_FORT_OOSTENBURG',1795).title,/8月31日/);
 
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);

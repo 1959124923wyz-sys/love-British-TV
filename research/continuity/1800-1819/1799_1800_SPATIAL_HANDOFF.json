@@ -16,17 +16,17 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 392,
-    "linked_to_1800_public_geometry": 188,
+    "1799_prior_records_reviewed": 409,
+    "linked_to_1800_public_geometry": 205,
     "by_disposition": {
-      "anchor": 106,
+      "anchor": 123,
       "claim_evidence": 7,
-      "continued": 43,
+      "continued": 45,
       "event_history": 7,
       "fiscal_evidence": 37,
       "needs_boundary_or_site_review": 79,
       "network_evidence": 69,
-      "occupation": 13,
+      "occupation": 11,
       "political_relation_evidence": 14,
       "renewed_scope": 17
     }
@@ -264,17 +264,6 @@
         "martinique-occupation-1800"
       ],
       "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
-    },
-    {
-      "prior_id": "B37-C-Z016",
-      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
-      "name_zh": "1796英军攻占Saint Lucia Fort Charlotte",
-      "prior_record_kind": "military",
-      "resolution": "occupation",
-      "features_at_1800": [
-        "st-lucia-occupation-1800"
-      ],
-      "notes": "1802年法国接收，1803年英军再次占领，1814年正式割让。"
     },
     {
       "prior_id": "B37-C-Z020",
@@ -676,17 +665,6 @@
       ]
     },
     {
-      "prior_id": "B37-I-Z059",
-      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
-      "name_zh": "1796 Trincomalee旧荷兰英方海军港",
-      "prior_record_kind": "military",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "ceylon-trincomalee-frederick"
-      ],
-      "notes": "保留亭可马里驻军要塞。"
-    },
-    {
       "prior_id": "B37-I-Z060",
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1796—1799 Kandy内陆王国仍自主",
@@ -1041,17 +1019,6 @@
         "havana-royal-dockyard-1800"
       ],
       "note_zh": "旧港区矩形以旧城、沿岸要塞、塔堡和王家船坞逐处接续。"
-    },
-    {
-      "prior_id": "B39-C-Z043",
-      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
-      "name_zh": "1796 Saint Lucia英国重夺Fort Charlotte",
-      "prior_record_kind": "military",
-      "resolution": "occupation",
-      "features_at_1800": [
-        "st-lucia-occupation-1800"
-      ],
-      "notes": "1802年法国接收，1803年英军再次占领，1814年正式割让。"
     },
     {
       "prior_id": "B39-C-Z044",
@@ -2256,17 +2223,6 @@
         "tobago-occupation-1800"
       ],
       "notes": "1802年归法国，1803年重新占领，1814年正式割让。"
-    },
-    {
-      "prior_id": "ST_LUCIA",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "圣卢西亚英国短期军事控制范围",
-      "prior_record_kind": "wartime_occupation",
-      "resolution": "occupation",
-      "features_at_1800": [
-        "st-lucia-occupation-1800"
-      ],
-      "notes": "1802年法国接收，1803年英军再次占领，1814年正式割让。"
     },
     {
       "prior_id": "MARTINIQUE_1794",
@@ -3605,6 +3561,216 @@
       "resolution": "anchor",
       "features_at_1800": [
         "red-bank-whitall-house-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_LUCIA_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣卢西亚本岛",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "st-lucia-occupation-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_LUCIA_CASTRIES_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣卢西亚 · 卡斯特里旧港",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "saint-lucia-castries-port-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_LUCIA_MORNE_FORTUNE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡斯特里 · 莫尔讷福蒂内／夏洛特堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "saint-lucia-morne-fortune-1800"
+      ]
+    },
+    {
+      "prior_id": "TRINCOMALEE_FORT_FREDERICK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "亭可马里 · 弗雷德里克堡",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-trincomalee-frederick"
+      ]
+    },
+    {
+      "prior_id": "TRINCOMALEE_FORT_OOSTENBURG",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "亭可马里 · 奥斯滕堡",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-trincomalee-oostenburg-1800"
+      ]
+    },
+    {
+      "prior_id": "SAVANNAH_TOWN_1778",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨凡纳 · 河崖旧城六区",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "savannah-town-1778-1800"
+      ]
+    },
+    {
+      "prior_id": "SAVANNAH_FORT_PREVOST_WAYNE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨凡纳 · 普雷沃堡与韦恩堡址",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "savannah-fort-prevost-wayne-1800"
+      ]
+    },
+    {
+      "prior_id": "SAVANNAH_COLONIAL_CEMETERY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨凡纳 · 殖民时期墓地",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "savannah-colonial-cemetery-1800"
+      ]
+    },
+    {
+      "prior_id": "SAVANNAH_BRYAN_STREET_CHURCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨凡纳 · 西布赖恩街黑人浸信会旧地",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "savannah-bryan-street-church-1800"
+      ]
+    },
+    {
+      "prior_id": "COCKSPUR_FORT_GREENE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科克斯珀岛东南部 · 格林堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cockspur-fort-greene-1800"
+      ]
+    },
+    {
+      "prior_id": "TYBEE_LIGHT_1773",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "泰比岛 · 第三代航标与灯塔",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "tybee-light-1773-1800"
+      ]
+    },
+    {
+      "prior_id": "SUNBURY_FORT_MORRIS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "森伯里 · 莫里斯堡与乔治堡址",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sunbury-fort-morris-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_OLD_TOWN_1780",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "查尔斯敦旧城与商港",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "charleston-old-town-1780-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_HORN_REMAINS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马里恩广场角堡旧址",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charleston-horn-work-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_OLD_EXCHANGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "查尔斯敦旧交易所与军警监所",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charleston-old-exchange-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_GADSDEN_WHARF",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "查尔斯敦加兹登码头",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charleston-gadsden-wharf-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_ST_MICHAEL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "查尔斯敦圣迈克尔教堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charleston-st-michael-church-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_OLD_STATE_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "查尔斯敦旧议会楼与县法院",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charleston-old-state-house-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_FORT_MOULTRIE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "沙利文岛莫尔特里堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sullivans-island-fort-moultrie-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_FORT_JOHNSON",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "詹姆斯岛约翰逊堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "james-island-fort-johnson-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTON_FORT_PINCKNEY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "舒茨福利岛平克尼堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "shutes-folly-fort-pinckney-1800"
       ]
     }
   ]
