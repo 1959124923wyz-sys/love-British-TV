@@ -114,6 +114,27 @@ a.equal(atlantic('LOUISBOURG_ROYAL_BATTERY').periods.at(-1).start_year,1760);
 a.equal(previous.control_sites.find(x=>x.id==='LOUISBOURG').superseded_by,town.id);
 
 a.equal(successors.find(f=>f.id==='annapolis-fort-anne-1800').properties.end_year,1853);
+const frenchCumberland=atlantic('FORT_BEAUSEJOUR_FRENCH');
+const firstCumberland=atlantic('FORT_BEAUSEJOUR_CUMBERLAND');
+const rebuiltCumberland=atlantic('FORT_CUMBERLAND_REBUILT');
+a(!isOn(frenchCumberland,1750)&&isOn(frenchCumberland,1751)&&!isOn(frenchCumberland,1755));
+a(isOn(firstCumberland,1755)&&!isOn(firstCumberland,1784)&&isOn(rebuiltCumberland,1784));
+a.equal(firstCumberland.periods.find(p=>p.start_year===1768).kind,'historic_ruins');
+const cumberland1776=firstCumberland.periods.find(p=>p.start_year===1776);
+a.equal(cumberland1776.kind||firstCumberland.kind,'military');
+a.notDeepEqual(frenchCumberland.geometry,firstCumberland.geometry);
+a.notDeepEqual(firstCumberland.geometry,rebuiltCumberland.geometry);
+a([frenchCumberland,firstCumberland,rebuiltCumberland].every(f=>f.stable_id===rebuiltCumberland.stable_id));
+const nextCumberland=successors.find(f=>f.id===rebuiltCumberland.cross_century_feature_id);
+a.equal(nextCumberland.properties.end_year,1834);
+a.deepEqual(nextCumberland.properties.year_stages.map(x=>x.start_year),[1800,1809,1812,1815]);
+a(isOn(atlantic('BEAUBASSIN_VILLAGE'),1750)&&!isOn(atlantic('BEAUBASSIN_VILLAGE'),1751));
+a(isOn(atlantic('FORT_LAWRENCE'),1753)&&!isOn(atlantic('FORT_LAWRENCE'),1754));
+a(isOn(atlantic('FORT_LAWRENCE_DITCH'),1754)&&isOn(atlantic('FORT_LAWRENCE_DITCH'),1755));
+a(!isOn(atlantic('FORT_LAWRENCE_DITCH'),1756));
+a(isOn(atlantic('FORT_LAWRENCE_DISMANTLED'),1756));
+a(isOn(atlantic('FORT_GASPAREAUX_MONCKTON'),1756)&&!isOn(atlantic('FORT_GASPAREAUX_MONCKTON'),1757));
+
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));

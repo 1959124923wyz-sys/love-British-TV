@@ -531,6 +531,26 @@
       "id": "19CT7-FORT-ANNE-PARKS",
       "label": "加拿大公园局｜安妮堡历史与1854年撤军",
       "url": "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history"
+    },
+    {
+      "id": "19CT7-CUMBERLAND-PARKS",
+      "label": "加拿大公园局｜第二次围城后的坎伯兰堡",
+      "url": "https://parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/modifications"
+    },
+    {
+      "id": "19CT7-CUMBERLAND-DESIGNATION",
+      "label": "加拿大国家历史遗址｜博塞茹尔与坎伯兰堡",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=159"
+    },
+    {
+      "id": "19CT7-CUMBERLAND-ARCHAEOLOGY",
+      "label": "加拿大公园局｜坎伯兰堡考古报告",
+      "url": "https://publications.gc.ca/collections/collection_2019/pc/R61-2-7-112-eng.pdf"
+    },
+    {
+      "id": "19CT7-CUMBERLAND-PLAN",
+      "label": "坎伯兰堡历史图与考古",
+      "url": "https://archives.novascotia.ca/pdf/library/FortsOfChignecto-F197C43W3.pdf#page=95"
     }
   ],
   "features": [
@@ -3899,6 +3919,183 @@
             [
               -65.5177838,
               44.7415022
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fort-cumberland-1800",
+      "properties": {
+        "name": "坎伯兰堡 · 19世纪初的英国军事设施",
+        "stable_id": "fort-cumberland-main-enceinte",
+        "start_year": 1800,
+        "end_year": 1834,
+        "display_kind": "military_impact",
+        "label_type": "驻堡",
+        "summary_zh": "坎伯兰堡由看守人员维护，1812年战争期间增兵。1835年英方废弃此堡。",
+        "source_ids": [
+          "19CT7-CUMBERLAND-PARKS",
+          "19CT7-CUMBERLAND-DESIGNATION",
+          "19CT7-CUMBERLAND-ARCHAEOLOGY",
+          "19CT7-CUMBERLAND-PLAN"
+        ],
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/modifications",
+          "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=159",
+          "https://publications.gc.ca/collections/collection_2019/pc/R61-2-7-112-eng.pdf",
+          "https://archives.novascotia.ca/pdf/library/FortsOfChignecto-F197C43W3.pdf#page=95",
+          "https://open.canada.ca/data/dataset/0fe65119-e96e-4a57-8bfe-9d9245fba06b",
+          "https://datacube.services.geo.ca/stac/api/collections/hrdem-mosaic-1m/items/10_3-mosaic-1m",
+          "https://open.canada.ca/en/open-government-licence-canada"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1808,
+            "title": "坎伯兰堡 · 看守驻地",
+            "summary_zh": "驻堡正规部队于1793年撤出，少量看守人员接替。"
+          },
+          {
+            "start_year": 1809,
+            "end_year": 1811,
+            "title": "坎伯兰堡 · 英军再次进驻",
+            "summary_zh": "加拿大公园局考古报告将英军本轮驻守的起点记在1809年。"
+          },
+          {
+            "start_year": 1812,
+            "end_year": 1814,
+            "title": "坎伯兰堡 · 1812年战争期间增兵",
+            "summary_zh": "战争期间，英国第99团、第104团与皇家炮兵进驻坎伯兰堡。"
+          },
+          {
+            "start_year": 1815,
+            "end_year": 1834,
+            "title": "坎伯兰堡 · 战后保留的军事设施",
+            "summary_zh": "战后坎伯兰堡仍是军事设施。考古报告把这一轮驻军记至1833年，英方于1835年正式弃用。"
+          }
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "related_event_ids": [],
+        "mapping_method": "Main rampart traced from Robert Morse’s 1784 survey, matched by affine fit to five surviving bastion breaks on Natural Resources Canada HRDEM LiDAR, tile 10_3-mosaic-1m. RMS at control points 3.6 m. Outer ditches, detached works and later modifications excluded. Terrain data adapted under the Open Government Licence – Canada.",
+        "prior_record_ids": [
+          "FORT_CUMBERLAND_REBUILT",
+          "B36-Z003"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -64.2916681,
+              45.8651637
+            ],
+            [
+              -64.2918306,
+              45.8649357
+            ],
+            [
+              -64.2917301,
+              45.8648704
+            ],
+            [
+              -64.2919212,
+              45.8647125
+            ],
+            [
+              -64.2919817,
+              45.8647573
+            ],
+            [
+              -64.292233,
+              45.8646224
+            ],
+            [
+              -64.2920586,
+              45.8644682
+            ],
+            [
+              -64.2919497,
+              45.8645217
+            ],
+            [
+              -64.2917952,
+              45.8643482
+            ],
+            [
+              -64.2918995,
+              45.8643028
+            ],
+            [
+              -64.2917915,
+              45.8640491
+            ],
+            [
+              -64.2914596,
+              45.864174
+            ],
+            [
+              -64.2914829,
+              45.8642829
+            ],
+            [
+              -64.2912784,
+              45.8643222
+            ],
+            [
+              -64.291239,
+              45.8642336
+            ],
+            [
+              -64.2908587,
+              45.8642332
+            ],
+            [
+              -64.2909177,
+              45.864467
+            ],
+            [
+              -64.2910275,
+              45.8644789
+            ],
+            [
+              -64.2910017,
+              45.8646798
+            ],
+            [
+              -64.290899,
+              45.8646854
+            ],
+            [
+              -64.2907523,
+              45.8649084
+            ],
+            [
+              -64.2911246,
+              45.8649376
+            ],
+            [
+              -64.2911603,
+              45.8648762
+            ],
+            [
+              -64.2914001,
+              45.8649399
+            ],
+            [
+              -64.2913585,
+              45.8649966
+            ],
+            [
+              -64.2916681,
+              45.8651637
             ]
           ]
         ]
