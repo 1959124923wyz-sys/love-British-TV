@@ -63,6 +63,7 @@
      }
    }).addTo(areaLayer);
    for(const site of sites){
+     if(site.superseded_by)continue;
      const period=active(site.periods);if(!period)continue;
      const ephemeral=site.category.includes('年内短占');
      const company=site.category.includes('公司')||site.category.includes('商贸')||site.category.includes('港口');

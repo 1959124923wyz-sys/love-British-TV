@@ -16,6 +16,7 @@ for arg in ["--headless=new","--disable-gpu","--no-sandbox","--disable-dev-shm-u
 opt.set_capability('goog:loggingPrefs', {'browser':'ALL'})
 driver=webdriver.Chrome(options=opt)
 wait=WebDriverWait(driver,45)
+story_entry='.major-story-enter[data-story-open="munster-desmond-1579-1586"]'
 try:
     driver.get("http://127.0.0.1:8765/?year=1580")
     wait.until(lambda d:d.execute_script("""return document.querySelector('#bigYear')?.textContent==='1580' &&
@@ -24,10 +25,10 @@ try:
     item=driver.find_element(By.CSS_SELECTOR,'#eventList .event-item[data-eid="1580S-E002"]')
     driver.execute_script("arguments[0].scrollIntoView({block:'center'})",item)
     item.click()
-    wait.until(lambda d: d.execute_script("return !!document.querySelector('.major-story-entry .major-story-enter')"))
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR,story_entry))
     assert driver.execute_script("return document.getElementById('bigYear').textContent==='1580'")
     driver.save_screenshot(str(OUT/"01-short-event-and-story-entry.png"))
-    driver.find_element(By.CSS_SELECTOR,'.major-story-enter').click()
+    driver.find_element(By.CSS_SELECTOR,story_entry).click()
     try:
         wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article .story-section:nth-of-type(8)')"))
     except Exception:
@@ -125,7 +126,7 @@ try:
     assert not driver.execute_script("return !!document.querySelector('.major-story-article')")
     driver.save_screenshot(str(OUT/"08-return-to-original-child-year-1580.png"))
     # Re-entering must capture this same child event once again.
-    driver.find_element(By.CSS_SELECTOR,'.major-story-enter').click()
+    driver.find_element(By.CSS_SELECTOR,story_entry).click()
     wait.until(lambda d:d.execute_script("return !!document.querySelector('.major-story-article')"))
     driver.find_element(By.CSS_SELECTOR,'[data-story-return]').click()
     wait.until(lambda d:d.execute_script("""return document.querySelector('#dossierBody h2')?.textContent.includes('佩勒姆与奥蒙德会师')"""))

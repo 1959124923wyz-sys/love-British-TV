@@ -29,7 +29,7 @@ try:
  # Await the actual year navigation controller before automated year changes.
  wait.until(lambda _:js("return document.querySelector('#jumpYear')?.max==='1799' && Boolean(document.querySelector('#jumpYear')?.value)"))
  a=audit()
- assert (a['zoneCount'],a['coreCount'],a['timePhases'])==(81,42,154),a
+ assert (a['zoneCount'],a['coreCount'],a['timePhases'])==(81,42,161),a
  assert old()['areaReferences']==24 and old()['documentedCityCores']==15,old()
  cases=[
  (1704,['ST_KITTS','ANTIGUA','GIBRALTAR_PENINSULA'],['QUEBEC_1763','BENGAL_DIWANI'],'1704-atlantic'),

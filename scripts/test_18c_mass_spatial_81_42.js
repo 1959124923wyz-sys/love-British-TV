@@ -14,8 +14,8 @@ a.equal(data.area_aggregation_forbidden,true);
 a.equal(data.approved_actual_control_polygons,0);
 a.equal(data.square_km_totals,null);
 const phases=[...data.zones,...data.sites].reduce((n,x)=>n+x.periods.length,0);
-a.equal(phases,154);
-a.equal(phases+previous.area_references.reduce((n,x)=>n+x.periods.length,0)+previous.control_sites.reduce((n,x)=>n+x.periods.length,0),200);
+a.equal(phases,161);
+a.equal(phases+previous.area_references.reduce((n,x)=>n+x.periods.length,0)+previous.control_sites.reduce((n,x)=>n+x.periods.length,0),207);
 const ids=new Set(),kindCounts={};
 for(const [arr,site] of [[data.zones,false],[data.sites,true]]){
  for(const x of arr){
@@ -57,8 +57,8 @@ for(const [id,y,expected] of [
  ['NSW_CROWN_CLAIM',1787,false],['NSW_CROWN_CLAIM',1788,true],
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
-const successors=JSON.parse(read('data/nineteenth-century-territorial-areas-batch7.geojson')).features;
-for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND']){
+const successors=[2,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features);
+for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISED']){
  const row=z(id),successor=successors.find(f=>f.id===row.cross_century_feature_id);
  a.equal(successor.properties.start_year,1800);
  a.deepEqual(row.geometry,successor.geometry);
@@ -91,6 +91,28 @@ for(const [id,y,expected] of [
 ])a.equal(isOn(atlantic(id),y),expected,id+' '+y);
 a(data.coastal_rights.every(item=>item.geometry.type==='LineString'&&item.geometry.coordinates.length>500));
 a.equal(atlantic('YORK_FACTORY_I_II').periods.find(p=>p.start_year===1782).kind,'conflict_damage');
+const town=atlantic('LOUISBOURG_WALLED_TOWN');
+a.equal(town.outline_only,true);
+a.equal(town.geometry.type,'Polygon');
+a(town.geometry.coordinates[0].length>50);
+a.deepEqual(town.periods.map(p=>[p.start_year,p.end_year,p.kind]),[
+ [1744,1744,'foreign_occupation'],[1745,1747,'wartime_occupation'],[1748,1748,'wartime_occupation'],
+ [1749,1757,'foreign_occupation'],[1758,1759,'wartime_occupation'],
+]);
+a.deepEqual(z('CAPE_BRETON').periods.map(p=>[p.start_year,p.kind]),[
+ [1713,'paper_claim'],[1745,'paper_claim'],[1748,'paper_claim'],[1749,'paper_claim'],
+ [1758,'paper_claim'],[1763,'administration'],[1784,'administration'],
+]);
+a(!isOn(atlantic('LOUISBOURG_EARLY_PORT'),1712)&&isOn(atlantic('LOUISBOURG_EARLY_PORT'),1743));
+a(!isOn(atlantic('LOUISBOURG_EARLY_PORT'),1744)&&isOn(atlantic('LOUISBOURG_AFTER_DEMOLITION'),1760));
+a.equal(atlantic('PORT_DAUPHIN_SAINTE_ANNE').periods[2].start_year,1719);
+a.deepEqual(z('NS_MAIN').geometry,z('NS_REVISED').geometry);
+a(z('NS_MAIN').bbox[2]<-60.9,'mainland outline cannot reach Louisbourg');
+a(z('CAPE_BRETON').geometry.coordinates[0].length>1000);
+
+a.equal(atlantic('LOUISBOURG_ROYAL_BATTERY').periods.at(-1).start_year,1760);
+a.equal(previous.control_sites.find(x=>x.id==='LOUISBOURG').superseded_by,town.id);
+
 a.equal(successors.find(f=>f.id==='annapolis-fort-anne-1800').properties.end_year,1853);
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
@@ -100,4 +122,4 @@ a(js.includes("!$('mapLayerTerritory').checked"));
 a(js.includes("areaGroup.clearLayers();siteGroup.clearLayers();"));
 a(js.includes("fill:!outline"));
 a(js.includes("window.eighteenthMassSpatial={render,getAudit:"));
-console.log('PASS eighteenth-century layer: 81 areas, 42 sites and 154 dated phases, including identical Gibraltar and Menorca outlines across 1799–1800.');
+console.log('PASS eighteenth-century layer: 81 areas, 42 sites and 161 dated phases, including identical Gibraltar, Menorca, Cape Breton and Nova Scotia outlines across 1799–1800.');
