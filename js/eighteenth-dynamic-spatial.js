@@ -133,7 +133,7 @@
  window.eighteenthSpatial={render,getAudit:()=>({
    loaded,areaReferences:areas.length,documentedCityCores:sites.length,
    activeYear:year,activeAreas:areas.filter(x=>active(x.properties.periods)).map(x=>x.properties.id),
-   activeSites:sites.filter(x=>active(x.periods)).map(x=>x.id),
+   activeSites:sites.filter(x=>!x.superseded_by&&active(x.periods)).map(x=>x.id),
    visibleAreaLayerObjects:areaLayer.getLayers().length,visibleSiteLayerObjects:coreLayer.getLayers().length,error
  })};
  void load();
