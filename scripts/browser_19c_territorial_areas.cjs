@@ -1074,6 +1074,68 @@ async function verify() {
   await clickAreaAt(...fortJay);
   await dossierTitle.filter({ hasText: '杰伊堡 · 交联邦政府' }).waitFor();
 
+  const savannah = [32.08062, -81.09182];
+  const savannahTown = page.locator('[data-overlap-id="18c:SAVANNAH_TOWN_1778"]');
+  for (const [year, title] of [[1778, /12月29日英军占城/], [1782, /7月11日英军撤离/]]) {
+   await jump(year);
+   await setView([...savannah, 15]);
+   await clickAreaAt(...savannah);
+   assert.match(await savannahTown.textContent(), title);
+   assert(!(await atlantic()).activeZones.includes('SAVANNAH_GARRISON'));
+  }
+  await jump(1799);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...savannah, 15]);
+  await clickAreaAt(...savannah);
+  const savannah1800 = page.locator('[data-historic-overlap-id$=":savannah-town-1778-1800"]');
+  assert.match(await savannah1800.textContent(), /港市原有六区/);
+
+  const saintLucia = [13.91, -60.96];
+  const island = page.locator('[data-overlap-id="18c:ST_LUCIA_MAIN_ISLAND"]');
+  for (const [year, title] of [[1778, /英军占领/], [1783, /凡尔赛和约后归法国/],
+   [1795, /共和派与岛上抵抗者夺回/], [1796, /英军再占/]]) {
+   await jump(year);
+   await setView([...saintLucia, 10]);
+   await clickAreaAt(...saintLucia);
+   assert.match(await island.textContent(), title);
+   assert(!(await atlantic()).activeZones.includes('ST_LUCIA'));
+  }
+  await jump(1799);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...saintLucia, 10]);
+  await clickAreaAt(...saintLucia);
+  await page.locator('[data-historic-overlap-id$=":st-lucia-occupation-1800"]').waitFor();
+
+  await jump(1795);
+  for (const [point, id, date] of [
+   [[8.5769, 81.2421], 'TRINCOMALEE_FORT_FREDERICK', /8月26日/],
+   [[8.5445, 81.2234], 'TRINCOMALEE_FORT_OOSTENBURG', /8月31日/],
+  ]) {
+   assert((await atlantic()).activeRegionalSites.includes(id));
+   await setView([...point, 15]);
+   await clickAreaAt(...point);
+   assert.match(await page.locator('#dossierBody').textContent(), date);
+  }
+
+  const charleston = [32.7756125, -79.93197257];
+  const charlestonTown = page.locator('[data-overlap-id="18c:CHARLESTON_OLD_TOWN_1780"]');
+  for (const [year, title] of [[1780, /5月12日英军占城/], [1782, /12月14日英军撤离/]]) {
+   await jump(year);
+   await setView([...charleston, 15]);
+   await clickAreaAt(...charleston);
+   assert.match(await charlestonTown.textContent(), title);
+   assert(!(await atlantic()).activeZones.includes('CHARLESTON_GARRISON'));
+  }
+  await jump(1799);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...charleston, 15]);
+  await clickAreaAt(...charleston);
+  const charleston1800 = page.locator('[data-historic-overlap-id$=":charleston-old-town-1780-1800"]');
+  assert.match(await charleston1800.textContent(), /港口与市政延续/);
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
