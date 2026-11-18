@@ -1268,18 +1268,17 @@ function renderNineteenthSpatial(){
    continue;
   }
   if(feature.geometry.type==='LineString'){
-   L.geoJSON(site,{
-    pane:'warReachPane',renderer:warReachRenderer,bubblingMouseEvents:false,
-    style:{color,weight:3,dashArray:'7 6',className:'atlas-19c-frontier'},
-    onEachFeature:(_,line)=>{
-     line.bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
-      pane:'eventTooltipPane',className:'atlas-hover',direction:'auto'});
-     line.on('click',e=>{
-      if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
-      openTerritoryDossier(site);
-     });
-    }
-   }).addTo(group);
+   const points=feature.geometry.coordinates.map(([lon,lat])=>[lat,lon]);
+   const style={pane:'warReachPane',renderer:warReachRenderer,color,bubblingMouseEvents:false};
+   L.polyline(points,{...style,weight:3,dashArray:'7 6',interactive:false,
+    className:'atlas-19c-frontier'}).addTo(group);
+   L.polyline(points,{...style,weight:10,opacity:0,className:'atlas-19c-frontier-hit'})
+    .bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
+     pane:'eventTooltipPane',className:'atlas-hover',direction:'auto'})
+    .on('click',e=>{
+     if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
+     openTerritoryDossier(site);
+    }).addTo(group);
    continue;
   }
   const [lon,lat]=feature.geometry.coordinates;

@@ -936,22 +936,20 @@ async function verify() {
   const tolyNullah = [22.54443, 88.32625];
   await setView([...tolyNullah, 16]);
   const clickDatedLine = async selector => {
-   const point = await page.evaluate(({ selector, origin }) => {
+   const point = await page.waitForFunction(({ selector, origin }) => {
     const map = window.__historicOverlapHost.map;
     const center = map.latLngToContainerPoint(origin);
     const frame = map.getContainer().getBoundingClientRect();
     for (const path of document.querySelectorAll(selector)) {
      const matrix = path.getScreenCTM();
-     for (let length = 2; length < path.getTotalLength(); length += 5) {
-      const local = path.getPointAtLength(length);
-      const pixel = local.matrixTransform(matrix);
-      if (Math.hypot(pixel.x - frame.left - center.x, pixel.y - frame.top - center.y) < 65 &&
+     for (let length = 1; length < path.getTotalLength(); length += 2) {
+      const pixel = path.getPointAtLength(length).matrixTransform(matrix);
+      if (Math.hypot(pixel.x - frame.left - center.x, pixel.y - frame.top - center.y) < 130 &&
           document.elementFromPoint(pixel.x, pixel.y) === path) return [pixel.x, pixel.y];
      }
     }
     return null;
-   }, { selector, origin: tolyNullah });
-   assert(point, 'visible dashed line has a clickable stroke');
+   }, { selector, origin: tolyNullah }, { timeout: 8000 }).then(handle => handle.jsonValue());
    await page.mouse.click(...point);
   };
   await jump(1793);
@@ -962,7 +960,9 @@ async function verify() {
   await dossierTitle.filter({ hasText: '1794 年公告划定的南界' }).waitFor();
   await page.locator('#nextYear').click();
   await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
-  await clickDatedLine('.atlas-19c-frontier');
+  await setView([...tolyNullah, 16]);
+  assert((await page.locator('.atlas-19c-frontier[stroke-dasharray="7 6"]').count()) >= 2);
+  await clickDatedLine('.atlas-19c-frontier-hit');
   await dossierTitle.filter({ hasText: '沿用 1794 年的法定南界' }).waitFor();
 
   const newWilliam = [22.557465, 88.337476];
