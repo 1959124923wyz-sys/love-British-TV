@@ -1136,22 +1136,56 @@ async function verify() {
   const charleston1800 = page.locator('[data-historic-overlap-id$=":charleston-old-town-1780-1800"]');
   assert.match(await charleston1800.textContent(), /港口与市政延续/);
 
+  const caribbeanIslands = [
+   { point: [15.42534, -61.34543], id: 'DOMINICA_ISLAND_MAIN', next: 'dominica-colonial-1800', zoom: 10,
+    stages: [[1778, /9月7日签降/], [1783, /凡尔赛和约约定归还/], [1784, /1月10日英方接收/]] },
+   { point: [12.121934, -61.67828], id: 'GRENADA_ISLAND_MAIN', next: 'grenada-continuity-1800', zoom: 11,
+    stages: [[1779, /7月法国接管/], [1783, /凡尔赛约定归还/], [1784, /1月英治恢复/]] },
+   { point: [16.1537135, -61.66926], id: 'GUADELOUPE_MAIN_ISLANDS', next: 'guadeloupe-main-islands-1800', zoom: 10,
+    stages: [[1763, /7月6日实际归还法国/], [1794, /英军短占与法国共和军收复/]] },
+   { point: [10.45549, -61.25587], id: 'TRINIDAD_MAIN_ISLAND', next: 'trinidad-1800-occupation', zoom: 9,
+    stages: [[1796, /移民敕令与种植园扩张/], [1797, /2月18日全岛签降/]] },
+  ];
+  for (const { point, id, zoom, stages } of caribbeanIslands) {
+   for (const [year, title] of stages) {
+    await jump(year);
+    await setView([...point, zoom]);
+    await clickAreaAt(...point);
+    const islandCard = page.locator('[data-overlap-id="18c:' + id + '"]');
+    assert.match(await islandCard.textContent(), title);
+   }
+  }
+  const portOfSpain = [10.65217, -61.50731];
+  await jump(1797);
+  await setView([...portOfSpain, 16]);
+  await clickAreaAt(...portOfSpain);
+  const portOfSpainCore = page.locator('[data-overlap-id="18c:TRINIDAD_PORT_OF_SPAIN_CORE"]');
+  assert.match(await portOfSpainCore.textContent(), /2月17日英军进入港城/);
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
    window.atlasStoryBridge.currentYear() === 1799, undefined, { timeout: 45000 });
-  const oldZones = await page.evaluate(() => window.eighteenthMassSpatial.getAudit().activeZones);
-  for (const id of ['GRENADA', 'MENORCA_ISLAND', 'UPPER_CANADA', 'LOWER_CANADA', 'CAPE_BRETON', 'NS_REVISED']) assert(oldZones.includes(id));
+  const { activeZones, activeRegionalZones } = await atlantic();
+  for (const id of ['MENORCA_ISLAND', 'UPPER_CANADA', 'LOWER_CANADA', 'CAPE_BRETON', 'NS_REVISED']) assert(activeZones.includes(id));
+  for (const { id } of caribbeanIslands) assert(activeRegionalZones.includes(id));
+  for (const id of ['DOMINICA', 'GRENADA', 'GUADELOUPE', 'TRINIDAD_1797']) assert(!activeZones.includes(id));
   assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 2);
   assert.deepEqual(await ids(), []);
   await page.locator('#nextYear').click();
   await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
   const nextZones = await ids();
-  for (const id of ['grenada-continuity-1800', 'menorca-1800-third-occupation',
+  for (const id of [...caribbeanIslands.map(island => island.next), 'menorca-1800-third-occupation',
    'upper-canada-1800', 'lower-canada-1800', 'cape-breton-separate-colony', 'nova-scotia-peninsular-colony']) assert(nextZones.includes(id));
   assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 0);
   assert.equal(await siteMarkers.count(), 0);
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1800-handoff.png') });
+  await page.locator('#mapLayerEvents').uncheck();
+  for (const { point, next, zoom } of caribbeanIslands) {
+   await setView([...point, zoom]);
+   await clickAreaAt(...point);
+   await page.locator('[data-historic-overlap-id$=":' + next + '"]').waitFor();
+  }
   await page.locator('#prevYear').click();
   assert.equal(await page.evaluate(() => window.atlasStoryBridge.currentYear()), 1799);
   assert.deepEqual(await ids(), []);

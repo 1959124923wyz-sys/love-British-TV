@@ -16,17 +16,17 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 409,
-    "linked_to_1800_public_geometry": 205,
+    "1799_prior_records_reviewed": 421,
+    "linked_to_1800_public_geometry": 222,
     "by_disposition": {
-      "anchor": 123,
+      "anchor": 138,
       "claim_evidence": 7,
-      "continued": 45,
+      "continued": 49,
       "event_history": 7,
       "fiscal_evidence": 37,
-      "needs_boundary_or_site_review": 79,
+      "needs_boundary_or_site_review": 74,
       "network_evidence": 69,
-      "occupation": 11,
+      "occupation": 9,
       "political_relation_evidence": 14,
       "renewed_scope": 17
     }
@@ -217,22 +217,6 @@
       "features_at_1800": []
     },
     {
-      "prior_id": "B37-C-Z003",
-      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
-      "name_zh": "1783后Grenada St George恢复英国行政",
-      "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B37-C-Z007",
-      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
-      "name_zh": "1783后Dominica Roseau英方复占",
-      "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
       "prior_id": "B37-C-Z010",
       "source_dataset": "data/eighteenth-century-b37-caribbean.json",
       "name_zh": "1793后Tobago Scarborough英军夺岛",
@@ -264,17 +248,6 @@
         "martinique-occupation-1800"
       ],
       "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
-    },
-    {
-      "prior_id": "B37-C-Z020",
-      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
-      "name_zh": "1797英军占Trinidad Port of Spain",
-      "prior_record_kind": "military",
-      "resolution": "occupation",
-      "features_at_1800": [
-        "trinidad-1800-occupation"
-      ],
-      "notes": "1797年英军占领延至1800年，1802年正式割让。"
     },
     {
       "prior_id": "B37-C-Z028",
@@ -982,14 +955,6 @@
       "features_at_1800": []
     },
     {
-      "prior_id": "B39-C-Z012",
-      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
-      "name_zh": "1763后多米尼克Kalinago政治独立背景",
-      "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
       "prior_id": "B39-C-Z029",
       "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
       "name_zh": "1763 Grenadines岛链英方声索并存地方权属",
@@ -1019,17 +984,6 @@
         "havana-royal-dockyard-1800"
       ],
       "note_zh": "旧港区矩形以旧城、沿岸要塞、塔堡和王家船坞逐处接续。"
-    },
-    {
-      "prior_id": "B39-C-Z044",
-      "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
-      "name_zh": "1797 Trinidad英军攻占西班牙岛港",
-      "prior_record_kind": "military",
-      "resolution": "occupation",
-      "features_at_1800": [
-        "trinidad-1800-occupation"
-      ],
-      "notes": "1797年英军占领延至1800年，1802年正式割让。"
     },
     {
       "prior_id": "B39-A-Z001",
@@ -2063,14 +2017,6 @@
       "features_at_1800": []
     },
     {
-      "prior_id": "B36-Z123",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "1763后多米尼克卡利纳戈社群生活区",
-      "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
       "prior_id": "B36-Z126",
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "18世纪牙买加罗亚尔港英国海军驻地",
@@ -2100,14 +2046,6 @@
       "name_zh": "18世纪牙买加蒙特哥贝糖业外贸港",
       "prior_record_kind": "trade_influence",
       "resolution": "network_evidence",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z130",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "1763—1778及1783后格林纳达圣乔治殖民港",
-      "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
       "features_at_1800": []
     },
     {
@@ -2173,16 +2111,6 @@
       ]
     },
     {
-      "prior_id": "GRENADA",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "格林纳达1763后英国殖民行政",
-      "prior_record_kind": "administration",
-      "resolution": "continued",
-      "features_at_1800": [
-        "grenada-continuity-1800"
-      ]
-    },
-    {
       "prior_id": "GRENADINES",
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "格林纳丁斯群岛1763后英方声索",
@@ -2201,16 +2129,6 @@
       "resolution": "continued",
       "features_at_1800": [
         "st-vincent-continuity-1800"
-      ]
-    },
-    {
-      "prior_id": "DOMINICA",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "多米尼克1763后英方殖民行政",
-      "prior_record_kind": "administration",
-      "resolution": "continued",
-      "features_at_1800": [
-        "dominica-colonial-1800"
       ]
     },
     {
@@ -2304,17 +2222,6 @@
       "features_at_1800": [
         "nassau-port-1800"
       ]
-    },
-    {
-      "prior_id": "TRINIDAD_1797",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "1797年英军夺取特立尼达后的殖民区域",
-      "prior_record_kind": "wartime_occupation",
-      "resolution": "occupation",
-      "features_at_1800": [
-        "trinidad-1800-occupation"
-      ],
-      "notes": "1797年英军占领延至1800年，1802年正式割让。"
     },
     {
       "prior_id": "BELIZE_LOGGING",
@@ -3771,6 +3678,226 @@
       "resolution": "anchor",
       "features_at_1800": [
         "shutes-folly-fort-pinckney-1800"
+      ]
+    },
+    {
+      "prior_id": "DOMINICA_ISLAND_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "多米尼克主岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "dominica-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "DOMINICA_ROSEAU_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗索 · 港城",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "dominica-roseau-port-1800"
+      ]
+    },
+    {
+      "prior_id": "DOMINICA_FORT_YOUNG",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗索扬堡",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "dominica-fort-young-1800"
+      ]
+    },
+    {
+      "prior_id": "DOMINICA_PORTSMOUTH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "朴次茅斯 · 鲁珀特王子湾",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "dominica-portsmouth-prince-rupert-1800"
+      ]
+    },
+    {
+      "prior_id": "DOMINICA_FORT_SHIRLEY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡布里茨半岛雪莉堡",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "dominica-fort-shirley-1800"
+      ]
+    },
+    {
+      "prior_id": "DOMINICA_SALYBIA_KALINAGO",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨利比亚 · 卡利纳戈社群",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "dominica-salybia-kalinago-1800"
+      ]
+    },
+    {
+      "prior_id": "GRENADA_ISLAND_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "格林纳达本岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "grenada-continuity-1800"
+      ]
+    },
+    {
+      "prior_id": "GRENADA_ST_GEORGES_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣乔治 · 卡里纳日港",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "grenada-st-georges-port-1800"
+      ]
+    },
+    {
+      "prior_id": "GRENADA_FORT_GEORGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣乔治 · 皇家堡／乔治堡",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "grenada-fort-george-1800"
+      ]
+    },
+    {
+      "prior_id": "GRENADA_FORT_FREDERICK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "里士满山 · 弗雷德里克堡",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "grenada-fort-frederick-1800"
+      ]
+    },
+    {
+      "prior_id": "GRENADA_FORT_MATTHEW",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "里士满山 · 马修堡",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "grenada-fort-matthew-1800"
+      ]
+    },
+    {
+      "prior_id": "GUADELOUPE_MAIN_ISLANDS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "瓜德罗普 · 巴斯特尔与格朗德特尔",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "guadeloupe-main-islands-1800"
+      ]
+    },
+    {
+      "prior_id": "GUADELOUPE_SAINT_CHARLES_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴斯特尔 · 圣夏尔堡后期主堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "guadeloupe-saint-charles-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "GUADELOUPE_BASSE_TERRE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "瓜德罗普 · 巴斯特尔旧港城",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "guadeloupe-basse-terre-1800"
+      ]
+    },
+    {
+      "prior_id": "GUADELOUPE_POINTE_A_PITRE_HARBOUR",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "瓜德罗普 · 皮特尔角旧锚地与港城",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "guadeloupe-pointe-a-pitre-harbour-1800"
+      ]
+    },
+    {
+      "prior_id": "GUADELOUPE_FORT_LOUIS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "瓜德罗普 · 路易堡旧址",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "guadeloupe-fort-louis-1800"
+      ]
+    },
+    {
+      "prior_id": "GUADELOUPE_FLEUR_DEPEE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "瓜德罗普 · 弗勒代佩堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "guadeloupe-fleur-depee-1800"
+      ]
+    },
+    {
+      "prior_id": "TRINIDAD_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "特立尼达本岛",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "trinidad-1800-occupation"
+      ]
+    },
+    {
+      "prior_id": "TRINIDAD_PORT_OF_SPAIN_CORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "西班牙港 · 旧街区",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "trinidad-port-of-spain-core-1800"
+      ]
+    },
+    {
+      "prior_id": "TRINIDAD_FORT_SAN_ANDRES",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "西班牙港 · 圣安德烈斯堡",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "trinidad-fort-san-andres-1800"
+      ]
+    },
+    {
+      "prior_id": "TRINIDAD_ARIMA_SANTA_ROSA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿里马 · 圣罗莎传教区旧址",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "trinidad-arima-santa-rosa-1800"
+      ]
+    },
+    {
+      "prior_id": "TRINIDAD_ST_ANNS_DIVERSION",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "西班牙港 · 圣安娜河改道段",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "trinidad-st-anns-diversion-1800"
       ]
     }
   ]
