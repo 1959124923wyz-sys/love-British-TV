@@ -99,6 +99,22 @@ for (const id of ['047','048','049','050']) {
  a.equal(prevZone.superseded_by,prevSite.superseded_by);
 }
 
+for (const [oldId, replacementId] of [
+ ['SYDNEY_COVE','WARRANE_SYDNEY_COVE'],
+ ['PARRAMATTA','PARRAMATTA_CONVICT_HUT_ROWS'],
+ ['NORFOLK_SETTLEMENT','NORFOLK_FIRST_COLONIAL_ISLAND'],
+]) a.equal(z(oldId).superseded_by,replacementId);
+a.equal(islandPhase('SYDNEY_MARINE_CAMP_1788',1787),undefined);
+a.match(islandPhase('SYDNEY_MARINE_CAMP_1788',1788).title,/海军陆战队/);
+a.equal(islandPhase('SYDNEY_MARINE_CAMP_1788',1789),undefined);
+a.match(islandPhase('TOONGABBIE_GOVERNMENT_FARM',1796).title,/暂停/);
+a.match(islandPhase('TOONGABBIE_GOVERNMENT_FARM',1797).title,/恢复/);
+a.match(islandPhase('HAWKESBURY_1794_GRANT_50',1794).note,/弗里博迪/);
+a.equal(islandPhase('HAWKESBURY_1794_GRANT_50',1795),undefined);
+a.match(islandPhase('HAWKESBURY_GREEN_HILLS_POWELL_CASE',1799).note,/小杰米.*小乔治/);
+a.equal(atlantic('HAWKESBURY_GREEN_HILLS_POWELL_CASE').cross_century_feature_id,undefined);
+a.match(islandPhase('NORFOLK_PHILLIPSBURG',1793).note,/图基和胡鲁/);
+
 for(const id of ['CEYLON_JAFFNA','CEYLON_COLOMBO','CEYLON_GALLE','CEYLON_TRINCOMALEE']){
  a.equal(z(id).superseded_by,'CEYLON_BRITISH_MARITIME_ESTATES');
 }
