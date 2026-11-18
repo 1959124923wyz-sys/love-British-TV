@@ -223,6 +223,10 @@ a.match(stageAt('NYC_LOWER_MANHATTAN_1767',1776).title,/9月15日/);
 a(!isOn(atlantic('NYC_LOWER_MANHATTAN_1767'),1783));
 a.match(stageAt('NYC_GOVERNORS_ISLAND_EARTHWORK',1783).title,/12月3日/);
 a.match(stageAt('NYC_WALLABOUT_PRISON_SHIPS',1776).title,/惠特比号/);
+const batch36=JSON.parse(read('data/eighteenth-century-expansion-batch36-1700-1799.json'));
+for(const record of [batch36.zones.find(x=>x.id==='B36-Z039'),batch36.sites.find(x=>x.id==='B36-P039')])
+ a.equal(record.superseded_by,'NYC_FORT_WASHINGTON');
+a.match(stageAt('NYC_FORT_WASHINGTON',1776).title,/11月16日陷落/);
 a.match(stageAt('NYC_BLACK_EVACUATION_PORT',1783).note,/艾丽莎白·特鲁安特/);
 a.match(stageAt('NEWPORT_TOWN_1777',1776).title,/12月8日/);
 a.match(stageAt('NEWPORT_TOWN_1777',1779).title,/10月25日英军撤离/);
