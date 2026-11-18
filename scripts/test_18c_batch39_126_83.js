@@ -54,7 +54,7 @@ for(const group of d){
 }
 assert.equal(ids.size,209);
 const surveyedIds=new Set([...old35.regional_zones,...old35.regional_sites].map(record=>record.id));
-assert.equal([...d[0].zones,...d[0].sites].filter(record=>record.superseded_by).length,8);
+assert.equal([...d[0].zones,...d[0].sites].filter(record=>record.superseded_by).length,10);
 for(const record of [...d[0].zones,...d[0].sites].filter(record=>record.superseded_by)){
  assert(surveyedIds.has(record.superseded_by),record.id);
 }

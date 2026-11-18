@@ -49,6 +49,7 @@ A(active(city('HAVANA'),1762));A(!active(city('HAVANA'),1763));
 A.equal(city('HAVANA').superseded_by,'HAVANA_WALLED_TOWN');
 A(code.includes('if(site.superseded_by)continue'));
 A(active(city('MANILA'),1763));A(!active(city('MANILA'),1764));
+A.equal(city('MANILA').superseded_by,'MANILA_INTRAMUROS');
 A(active(city('LOUISBOURG'),1748));A(!active(city('LOUISBOURG'),1749));A(active(city('LOUISBOURG'),1758));
 A(active(city('ST_EUSTATIUS'),1781));A(!active(city('ST_EUSTATIUS'),1782));
 A(city('ST_EUSTATIUS').category.includes('年内短占'));A(city('ST_EUSTATIUS').note.includes('11月'));

@@ -135,6 +135,30 @@ a(!isOn(atlantic('FORT_LAWRENCE_DITCH'),1756));
 a(isOn(atlantic('FORT_LAWRENCE_DISMANTLED'),1756));
 a(isOn(atlantic('FORT_GASPAREAUX_MONCKTON'),1756)&&!isOn(atlantic('FORT_GASPAREAUX_MONCKTON'),1757));
 
+const manila=atlantic('MANILA_INTRAMUROS');
+const cavite=atlantic('CAVITE_PUERTO');
+for (const port of [manila,cavite]) {
+ a.equal(port.outline_only,true);
+ a.equal(port.periods.find(p=>p.start_year<=1763&&p.end_year>=1763).kind,'wartime_occupation');
+ const handover=port.periods.find(p=>p.start_year<=1764&&p.end_year>=1764);
+ a.equal(handover.kind||port.kind,'foreign_occupation');
+}
+const philippines=[...data.regional_zones,...data.regional_sites].filter(x=>
+ /^(MANILA_|CAVITE_|BACOLOR_|PASIG_|ZAMBOANGA_)/.test(x.id));
+for (const place of philippines.filter(x=>isOn(x,1799))) {
+ const next=successors.find(x=>x.id===place.cross_century_feature_id);
+ a(next,place.id);
+ a.equal(next.properties.stable_id,place.stable_id);
+ a.deepEqual(next.geometry,place.geometry);
+ a.equal(next.properties.start_year,1800);
+}
+a.equal(z('MANILA_PORT').superseded_by,manila.id);
+a.equal(z('CAVITE_PORT').superseded_by,cavite.id);
+a.equal(s('CAVITE').superseded_by,'CAVITE_FORT_SAN_FELIPE');
+a(isOn(atlantic('MANILA_PUERTA_REAL_OLD'),1762)&&!isOn(atlantic('MANILA_PUERTA_REAL_OLD'),1780));
+a(!isOn(atlantic('MANILA_PUERTA_REAL_1780'),1779)&&isOn(atlantic('MANILA_PUERTA_REAL_1780'),1780));
+a(isOn(atlantic('ZAMBOANGA_LA_CALDERA_PORT'),1764)&&!isOn(atlantic('ZAMBOANGA_LA_CALDERA_PORT'),1765));
+
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
