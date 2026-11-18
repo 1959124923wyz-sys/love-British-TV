@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 505,
-    "linked_to_1800_public_geometry": 344,
+    "1799_prior_records_reviewed": 517,
+    "linked_to_1800_public_geometry": 354,
     "by_disposition": {
-      "anchor": 202,
+      "anchor": 206,
       "claim_evidence": 7,
-      "continued": 108,
-      "event_history": 4,
+      "continued": 113,
+      "event_history": 8,
       "fiscal_evidence": 36,
-      "needs_boundary_or_site_review": 49,
+      "needs_boundary_or_site_review": 47,
       "network_evidence": 63,
       "occupation": 9,
       "political_relation_evidence": 11,
-      "renewed_scope": 16
+      "renewed_scope": 17
     }
   },
   "records": [
@@ -469,16 +469,20 @@
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1786 Penang岛英国公司乔治市港",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "penang-george-town-grid-1800"
+      ]
     },
     {
       "prior_id": "B37-I-Z048",
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1786 Penang Fort Cornwallis英国公司堡垒",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "penang-cornwallis-old-stockade-1800"
+      ]
     },
     {
       "prior_id": "B37-I-Z051",
@@ -1970,7 +1974,7 @@
       "features_at_1800": [
         "penang-1800-company"
       ],
-      "notes": "槟榔屿已有独立历史形状。1800年新增对岸威省。"
+      "notes": "十八世纪新图沿主岛地理外廓同形接续。对岸威省另以1800年协议为起点。"
     },
     {
       "prior_id": "FREETOWN_1792",
@@ -4804,6 +4808,130 @@
       "features_at_1800": [
         "seringapatam-west-wall-breach-1800"
       ]
+    },
+    {
+      "prior_id": "PENANG_MAIN_ISLAND_HISTORY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "槟榔屿 · 吉打与东印度公司的管辖变化",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "penang-1800-company"
+      ],
+      "notes": "同一主岛轮廓接入1800年。威省另由1800年起显示。"
+    },
+    {
+      "prior_id": "PENANG_GEORGE_TOWN_GRID",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市 · 波帕姆图旧街网",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "penang-george-town-grid-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PENANG_CORNWALLIS_OLD_STOCKADE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "康华丽堡 · 十八世纪末的主堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "penang-cornwallis-old-stockade-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PENANG_MALAY_OLD_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市 · 牛干冬街南侧马来聚落",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "penang-malay-old-town-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PENANG_MALAY_OLD_MOSQUE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市 · 晚十八世纪马来清真寺与墓地",
+      "prior_record_kind": "settlement",
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "年份档案随当年显示，行为在1800年另查。"
+    },
+    {
+      "prior_id": "PENANG_LIGHT_OLD_GOVERNMENT_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "莱特街 · 莱特与罗泽尔斯宅邸",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "penang-light-old-government-house-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PENANG_PROTESTANT_BURYING_GROUND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市 · 诺瑟姆路旧墓地",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "penang-protestant-burying-ground-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PENANG_EARLY_PORTUGUESE_CHURCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市教堂街 · 早期葡裔天主教堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "penang-early-portuguese-church-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PENANG_EARLY_HOSPITAL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市 · 康华丽堡西早期医院",
+      "prior_record_kind": "settlement",
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "年份档案随当年显示，行为在1800年另查。"
+    },
+    {
+      "prior_id": "PENANG_EARLY_CUSTOM_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市 · 早期港口海关屋",
+      "prior_record_kind": "administration",
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "年份档案随当年显示，行为在1800年另查。"
+    },
+    {
+      "prior_id": "PENANG_PRAI_KEDAH_SHORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "北赖河口 · 吉打海岸与东印度公司行动",
+      "prior_record_kind": "diplomacy",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "penang-prai-kedah-shore-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PENANG_GEORGE_TOWN_OLD_SHORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "乔治市 · 波帕姆图港城旧岸",
+      "prior_record_kind": "settlement",
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "年份档案随当年显示，行为在1800年另查。"
     }
   ]
 }

@@ -1184,6 +1184,28 @@ async function verify() {
   const mysoreCession = page.locator('[data-historic-overlap-id$=":mysore-nizam-cession-1799-1800"]');
   assert.match(await mysoreCession.textContent(), /10月12日转让公司/);
 
+  await jump(1791);
+  const penangFort = [5.420264, 100.344261];
+  await setView([...penangFort, 17]);
+  await clickAreaAt(...penangFort);
+  const penangTreaty = page.locator('#dossierBody h2').filter({ hasText: '吉打与东印度公司协议' });
+  await penangTreaty.waitFor();
+  assert.match(await page.locator('#dossierBody').textContent(), /5月1日.*被奴役者.*债务人/);
+  await jump(1799);
+  await clickAreaAt(...penangFort);
+  const penangOldFort = page.locator('[data-overlap-id="18c:PENANG_CORNWALLIS_OLD_STOCKADE"]');
+  await penangOldFort.waitFor();
+  assert.match(await penangOldFort.textContent(), /十八世纪末的驻堡工事/);
+  assert(!(await ids()).includes('wellesley-cession-1800'));
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...penangFort);
+  const penangFort1800 = page.locator('[data-historic-overlap-id$=":penang-cornwallis-old-stockade-1800"]');
+  await penangFort1800.waitFor();
+  assert.match(await penangFort1800.textContent(), /旧堡继续驻用/);
+  assert((await ids()).includes('wellesley-cession-1800'));
+  await page.screenshot({ path: join(screenshotDir, '19c-penang-1800-handoff.png') });
+
   const charleston = [32.7756125, -79.93197257];
   const charlestonTown = page.locator('[data-overlap-id="18c:CHARLESTON_OLD_TOWN_1780"]');
   for (const [year, title] of [[1780, /5月12日英军占城/], [1782, /12月14日英军撤离/]]) {
