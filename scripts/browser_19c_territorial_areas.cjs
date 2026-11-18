@@ -697,6 +697,72 @@ async function verify() {
    assert.match(await bonete.textContent(), title);
   }
 
+  // Lake Ontario. These coordinates lie inside the mapped fort or an individual barrack.
+  for (const { point, stages } of [
+   { point: [43.4616497, -76.5142832], stages: [[1727, 'OSWEGO_STONE_REDOUT', /石砌堡屋/],
+    [1755, 'OSWEGO_WEST_EARTHWORKS', /西岸增筑土垒/], [1756, 'OSWEGO_WEST_EARTHWORKS', /法军攻取后拆除/]] },
+   { point: [43.4658875, -76.5082375], stages: [[1755, 'FORT_ONTARIO_FIRST', /第一期木栅堡/],
+    [1763, 'FORT_ONTARIO_SECOND', /间歇驻防/], [1778, 'FORT_ONTARIO_SECOND', /堡垒被焚/],
+    [1782, 'FORT_ONTARIO_THIRD', /英军重筑/], [1796, 'FORT_ONTARIO_THIRD', /美军接收/]] },
+   { point: [44.2334986, -76.4785832], stages: [[1758, 'FORT_FRONTENAC_FRENCH_WALLS', /夺取船只/],
+    [1759, 'FORT_FRONTENAC_FRENCH_WALLS', /旧堡遗址/]] },
+   { point: [44.2333329, -76.4785073], stages: [[1799, 'FORT_FRONTENAC_BRITISH_BARRACKS', /桥头营房/]] },
+   { point: [43.2630097, -79.0641267], stages: [[1726, 'FORT_NIAGARA_FRENCH_HOUSE', /法国石屋与贸易站/]] },
+   { point: [43.2629078, -79.0634523], stages: [[1759, 'FORT_NIAGARA_MAIN', /7月25日法军投降/],
+    [1783, 'FORT_NIAGARA_MAIN', /和约后英军延迟撤离/], [1796, 'FORT_NIAGARA_MAIN', /美军接收/]] },
+   { point: [43.2499284, -79.0601398], stages: [[1796, 'FORT_GEORGE_NIAGARA_MAGAZINE', /西岸建火药库/]] },
+   { point: [43.2507592, -79.0612168], stages: [[1799, 'FORT_GEORGE_NIAGARA_MAIN', /六棱堡防线施工/]] },
+  ]) {
+   await setView([...point, 16]);
+   for (const [year, id, title] of stages) {
+    await jump(year);
+    assert((await atlantic()).activeRegionalZones.includes(id));
+    assert(!(await atlantic()).activeSites.includes('NIAGARA_BRITISH'));
+    await clickAreaAt(...point);
+    const record = page.locator('[data-overlap-id="18c:' + id + '"]');
+    await record.waitFor();
+    assert.match(await record.textContent(), title);
+   }
+  }
+  const westGeorge = [43.4600667, -76.5195167];
+  await jump(1756);
+  await setView([...westGeorge, 15]);
+  await clickAreaAt(...westGeorge);
+  await dossierTitle.filter({ hasText: '奥斯威戈乔治堡 · 河口失守后拆除' }).waitFor();
+  await jump(1757);
+  assert(!(await atlantic()).activeRegionalSites.includes('OSWEGO_FORT_GEORGE_SITE'));
+  assert(!(await atlantic()).activeRegionalZones.includes('FORT_ONTARIO_FIRST'));
+  await jump(1759);
+  assert((await atlantic()).activeRegionalSites.includes('FORT_ONTARIO_SECOND_CONSTRUCTION'));
+  await jump(1763);
+  assert(!(await atlantic()).activeRegionalSites.includes('FORT_ONTARIO_SECOND_CONSTRUCTION'));
+
+  for (const { point, stages } of [
+   { point: [43.4659353, -76.5083256], stages: [[1800, 'oswego-fort-ontario-third-1800', /美军驻守延续/],
+    [1814, 'oswego-fort-ontario-third-1800', /英军突袭拆防后撤回加拿大/]] },
+   { point: [44.2333329, -76.4785073], stages: [[1800, 'frontenac-tete-de-pont-1800', /英军继续驻守/],
+    [1812, 'frontenac-tete-de-pont-1800', /英美战争期间驻用/]] },
+   { point: [43.2629078, -79.0634523], stages: [[1800, 'fort-niagara-east-bank-1800', /美军驻守延续/],
+    [1813, 'fort-niagara-east-bank-1800', /英军夜渡夺堡/], [1815, 'fort-niagara-east-bank-1800', /5月22日美军复驻/]] },
+   { point: [43.2507592, -79.0612168], stages: [[1800, 'fort-george-niagara-main-1800', /继续施工/],
+    [1813, 'fort-george-niagara-main-1800', /美军攻占后撤离/]] },
+   { point: [43.2511058, -79.061725], stages: [[1814, 'fort-george-niagara-reduced', /缩小后的工事/]] },
+  ]) {
+   await setView([...point, 16]);
+   for (const [year, id, title] of stages) {
+    await jump(year);
+    assert((await ids()).includes(id));
+    await clickAreaAt(...point);
+    const record = page.locator('[data-historic-overlap-id$=":' + id + '"]');
+    await record.waitFor();
+    assert.match(await record.textContent(), title);
+   }
+  }
+  await jump(1814);
+  assert(!(await ids()).includes('fort-george-niagara-main-1800'));
+  await jump(1828);
+  assert(!(await ids()).includes('fort-george-niagara-reduced'));
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&

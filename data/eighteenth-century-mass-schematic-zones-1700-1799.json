@@ -4609,6 +4609,7 @@
     },
     {
       "id": "NIAGARA_BRITISH",
+      "superseded_by": "FORT_NIAGARA_MAIN",
       "title": "尼亚加拉堡英军据点",
       "periods": [
         {
@@ -8530,6 +8531,182 @@
         ]
       },
       "stable_id": "portobelo-san-jeronimo-old-platform"
+    },
+    {
+      "id": "OSWEGO_TRADING_POST",
+      "title": "奥斯威戈河西岸商站",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1722,
+          "end_year": 1726,
+          "title": "奥斯威戈 · 河西岸商站",
+          "note": "纽约殖民政府在河口西岸设毛皮商站。1724年，纽约总督伯内特向豪德诺索尼联盟说明在河口建商站的计划。"
+        }
+      ],
+      "source_urls": [
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=50",
+        "https://www.hmdb.org/m.asp?m=75339",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-oswego-1756-oswego-new-york-usa-43deg2719n-76deg3037w",
+        "https://parkplanning.nps.gov/showFile.cfm?projectID=89569&sfid=754109"
+      ],
+      "geometry_method": "Representative location at the historic west-bank site marker, where the 1727 redoubt was subsequently built.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5142833,
+          43.46165
+        ]
+      },
+      "stable_id": "fort-oswego-west-bank",
+      "position_uncertainty_m": 45
+    },
+    {
+      "id": "OSWEGO_FORT_GEORGE_SITE",
+      "title": "奥斯威戈 · 乔治堡旧址",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1755,
+          "title": "奥斯威戈乔治堡 · 西岸高地筑垒",
+          "note": "英方于1755年在奥斯威戈堡西侧高地开建乔治堡，有两侧开挖壕沟，其余部分以木栅围护。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1756,
+          "title": "奥斯威戈乔治堡 · 河口失守后拆除",
+          "note": "1756年8月，法军攻下奥斯威戈河口后拆毁乔治堡。此处后来没有重修。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.hmdb.org/m.asp?m=75348",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=57",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=59",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=88",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-oswego-1756-oswego-new-york-usa-43deg2719n-76deg3037w"
+      ],
+      "geometry_method": "Published historical marker coordinate on the west-bank ridge. Mackellar’s construction inspection shows that the proposed three-bastion design was unfinished, and the mapped ridge distance and modern marker offsets differ; this uses an approximate site location.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5195167,
+          43.4600667
+        ]
+      },
+      "stable_id": "fort-george-oswego-west-bank",
+      "position_uncertainty_m": 165
+    },
+    {
+      "id": "FORT_ONTARIO_SECOND_CONSTRUCTION",
+      "title": "安大略堡 · 第二期工程",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762,
+          "title": "安大略堡 · 英军返回后重筑",
+          "note": "英军1759年回到河口，在东岸修临时防御工程，同年8月测量并开始修筑第二期主堡。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/resource/g3804o.ar307400r/",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=87",
+        "https://parkplanning.nps.gov/showFile.cfm?projectID=89569&sfid=754109"
+      ],
+      "geometry_method": "Representative construction site of the second fort near the first on the east-bank bluff; the separate 1763 surveyed parapet is used after construction.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5082375,
+          43.4658875
+        ]
+      },
+      "stable_id": "fort-ontario-east-bank",
+      "position_uncertainty_m": 65
+    },
+    {
+      "id": "FORT_FRONTENAC_EARLY",
+      "title": "弗龙特纳克堡 · 卡塔拉奎据点",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1719,
+          "title": "弗龙特纳克堡 · 法国重新驻守",
+          "note": "法国在17世纪末重建卡塔拉奎河口的堡垒。法国守军在18世纪初继续把此处用作连接圣劳伦斯河与安大略湖的驻地。"
+        }
+      ],
+      "source_urls": [
+        "https://ontarioarchaeology.org/wp-content/uploads/an1985-04.pdf#page=20",
+        "https://publications.gc.ca/collections/collection_2023/mdn-dnd/D2-455-2022-eng.pdf",
+        "https://www.carf.info/kingston-past/kingston-archaeology/fort-frontenac.html",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=392"
+      ],
+      "geometry_method": "Representative site inside the excavator’s later reconstructed fort polygon, for the French re-established post before the 1720 plan.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.47862,
+          44.23349
+        ]
+      },
+      "stable_id": "fort-frontenac-cataraqui",
+      "position_uncertainty_m": 30
+    },
+    {
+      "id": "FORT_FRONTENAC_BRITISH_RETURN",
+      "title": "弗龙特纳克旧址 · 英军新驻地",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "弗龙特纳克旧址 · 英军返回设营",
+          "note": "1783年，约翰·罗斯率英军到卡塔拉奎，一部分人员利用旧营房，另建英国营房。"
+        }
+      ],
+      "source_urls": [
+        "https://publications.gc.ca/collections/collection_2023/mdn-dnd/D2-455-2022-eng.pdf",
+        "https://www.argomaps.org/maps/commonwealth%3A2r36xx573/",
+        "https://www.carf.info/kingston-past/kingston-archaeology/fort-frontenac.html"
+      ],
+      "geometry_method": "West-curtain barracks vicinity from excavator W. Bruce Stewart and the 1784 plan. The exact stage of the British barrack works in 1783 is left open.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4788661,
+          44.2334233
+        ]
+      },
+      "stable_id": "fort-frontenac-cataraqui",
+      "position_uncertainty_m": 25
     }
   ],
   "regional_zones": [
@@ -12233,6 +12410,1437 @@
       "outline_only": true,
       "stable_id": "bocachica-san-jose-fortification",
       "cross_century_feature_id": "bocachica-san-jose-1800"
+    },
+    {
+      "id": "OSWEGO_STONE_REDOUT",
+      "title": "奥斯威戈堡 · 石砌堡屋",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1727,
+          "end_year": 1740,
+          "title": "奥斯威戈堡 · 石砌堡屋",
+          "note": "纽约总督伯内特于1727年派人在河口西岸修筑两层石砌堡屋，供驻军守卫贸易站。"
+        },
+        {
+          "start_year": 1741,
+          "end_year": 1754,
+          "title": "奥斯威戈堡 · 外围增筑石墙",
+          "note": "英方在堡屋外围加筑石墙。每年贸易季，原住民和欧洲商人在堡旁的商站交换毛皮和货物。"
+        }
+      ],
+      "source_urls": [
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=50",
+        "https://www.hmdb.org/m.asp?m=75339",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-oswego-1756-oswego-new-york-usa-43deg2719n-76deg3037w",
+        "https://parkplanning.nps.gov/showFile.cfm?projectID=89569&sfid=754109"
+      ],
+      "geometry_method": "Outer masonry blockhouse in Chaussegros de Léry’s 1727 survey (Hetzler fig. 1.6), width scaled to 56 ft and checked against the documented 26 ft side. Placement follows the west-bank site marker, and orientation follows the redoubt relative to the north arrow on the survey. The later U-shaped enceinte is excluded from this core trace.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.5143969,
+              43.4616697
+            ],
+            [
+              -76.5141904,
+              43.4617019
+            ],
+            [
+              -76.5141695,
+              43.4616297
+            ],
+            [
+              -76.5143762,
+              43.4615981
+            ],
+            [
+              -76.5143969,
+              43.4616697
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-oswego-west-bank",
+      "position_uncertainty_m": 45,
+      "bbox": [
+        -76.5143969,
+        43.4615981,
+        -76.5141695,
+        43.4617019
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "OSWEGO_WEST_EARTHWORKS",
+      "title": "奥斯威戈堡 · 西岸堡屋和土垒",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1755,
+          "title": "奥斯威戈堡 · 西岸增筑土垒",
+          "note": "威廉·雪莱在原有石墙外增筑土垒，掩护堡和河口，同时在两岸另修据点。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1756,
+          "title": "奥斯威戈堡 · 法军攻取后拆除",
+          "note": "8月14日，守军向蒙卡尔姆投降。法军和原住民盟军攻占河口，守军被俘，法军拆毁各堡后撤出。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=50",
+        "https://www.hmdb.org/m.asp?m=75339",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-oswego-1756-oswego-new-york-usa-43deg2719n-76deg3037w",
+        "https://parkplanning.nps.gov/showFile.cfm?projectID=89569&sfid=754109",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=88"
+      ],
+      "geometry_method": "Outer works and the bluff edge traced from Charles Demter’s May 1756 plan (Hetzler fig. 1.38), scaled against the surviving-on-plan 56 ft redoubt and checked against Alexander fig. 1.11 and Mackellar RCIN 731085. Position anchored to the local west-bank fort marker. The shoreline closure follows the bluff edge, not a wall.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.5151933,
+              43.4620182
+            ],
+            [
+              -76.5148646,
+              43.4619815
+            ],
+            [
+              -76.5145236,
+              43.4619427
+            ],
+            [
+              -76.514174,
+              43.4618987
+            ],
+            [
+              -76.513976,
+              43.4618185
+            ],
+            [
+              -76.5139022,
+              43.4617069
+            ],
+            [
+              -76.5139666,
+              43.4615805
+            ],
+            [
+              -76.5140522,
+              43.4614964
+            ],
+            [
+              -76.5141984,
+              43.461449
+            ],
+            [
+              -76.5142714,
+              43.4613598
+            ],
+            [
+              -76.5146663,
+              43.4612845
+            ],
+            [
+              -76.5147142,
+              43.4613483
+            ],
+            [
+              -76.5148221,
+              43.461315
+            ],
+            [
+              -76.5148363,
+              43.4612356
+            ],
+            [
+              -76.5150963,
+              43.4611051
+            ],
+            [
+              -76.5151326,
+              43.4611725
+            ],
+            [
+              -76.5151183,
+              43.46138
+            ],
+            [
+              -76.5153484,
+              43.461525
+            ],
+            [
+              -76.5151753,
+              43.4616789
+            ],
+            [
+              -76.5152008,
+              43.4617878
+            ],
+            [
+              -76.5151933,
+              43.4620182
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-oswego-west-bank",
+      "position_uncertainty_m": 55,
+      "bbox": [
+        -76.5153484,
+        43.4611051,
+        -76.5139022,
+        43.4620182
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "FORT_ONTARIO_FIRST",
+      "title": "安大略堡 · 第一期木栅堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1755,
+          "title": "安大略堡 · 第一期木栅堡",
+          "note": "英方在奥斯威戈河东岸高地建八尖角的木栅堡，又称六族堡，和西岸据点相望。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1756,
+          "title": "安大略堡 · 守军撤过河后拆防",
+          "note": "法军从东面逼近后，英军弃守东岸堡垒，渡河撤入奥斯威戈堡。1756年河口失守后，法军拆除第一期安大略堡。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=85",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-oswego-1756-oswego-new-york-usa-43deg2719n-76deg3037w",
+        "https://parkplanning.nps.gov/showFile.cfm?projectID=89569&sfid=754109",
+        "https://parks.ny.gov/historic-sites/20/details.aspx",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=88"
+      ],
+      "geometry_method": "Actual 1756 outline from the enlarged Fort Ontario detail in Demter’s May 1756 plan, checked against the 1755 design and the New York State Military Museum’s 192 ft dimension. The bluff site is anchored to the present parade center on Esri World Imagery; earlier centres may differ within the bluff site.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.5086408,
+              43.4661009
+            ],
+            [
+              -76.5083687,
+              43.4660673
+            ],
+            [
+              -76.5082775,
+              43.4661632
+            ],
+            [
+              -76.5081534,
+              43.4660878
+            ],
+            [
+              -76.5079207,
+              43.4661587
+            ],
+            [
+              -76.507999,
+              43.4659588
+            ],
+            [
+              -76.5078902,
+              43.4659124
+            ],
+            [
+              -76.5079729,
+              43.4658427
+            ],
+            [
+              -76.5078515,
+              43.4656473
+            ],
+            [
+              -76.5081239,
+              43.465683
+            ],
+            [
+              -76.508206,
+              43.4656091
+            ],
+            [
+              -76.5083063,
+              43.4656818
+            ],
+            [
+              -76.5085395,
+              43.4655916
+            ],
+            [
+              -76.5084797,
+              43.4657989
+            ],
+            [
+              -76.5086063,
+              43.4658462
+            ],
+            [
+              -76.5085067,
+              43.4659213
+            ],
+            [
+              -76.5086408,
+              43.4661009
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-ontario-east-bank",
+      "position_uncertainty_m": 65,
+      "bbox": [
+        -76.5086408,
+        43.4655916,
+        -76.5078515,
+        43.4661632
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "FORT_ONTARIO_SECOND",
+      "title": "安大略堡 · 第二期主堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1774,
+          "title": "安大略堡 · 第二期主堡与间歇驻防",
+          "note": "五棱主堡的工程延续到1763年。七年战争结束后，驻军缩减，有时撤空。1766年，奥达瓦领袖庞蒂亚克在此与威廉·约翰逊会晤。"
+        },
+        {
+          "start_year": 1775,
+          "end_year": 1777,
+          "title": "安大略堡 · 独立战争期间再作集结地",
+          "note": "独立战争初期，英方曾在堡内集结部队。1777年，英军经此进攻斯坦威克斯堡。"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1781,
+          "title": "安大略堡 · 第二期堡垒被焚",
+          "note": "美军自斯坦威克斯堡出兵焚毁堡内工事。此后英军仍有部队经过河口，直到1782年才重新整修并部署常驻守军。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=117",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=119",
+        "https://parkplanning.nps.gov/showFile.cfm?projectID=89569&sfid=754109",
+        "https://www.loc.gov/resource/g3804o.ar307400r/"
+      ],
+      "geometry_method": "Main parapet from Hetzler fig. 1.53, based on Sowers’s 1763 plan and checked against the original Sowers drawing reproduced in fig. 1.54. Scaled to the printed 200 ft and rotated to its north arrow; the east-bank fort plateau is anchored to the mapped present parade. The outer ditch and detached earthworks are outside this outline.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.5093972,
+              43.466334
+            ],
+            [
+              -76.508918,
+              43.4664105
+            ],
+            [
+              -76.5088208,
+              43.4662974
+            ],
+            [
+              -76.5083553,
+              43.4664562
+            ],
+            [
+              -76.5083953,
+              43.4665727
+            ],
+            [
+              -76.5080488,
+              43.4667947
+            ],
+            [
+              -76.5078246,
+              43.4665244
+            ],
+            [
+              -76.5079241,
+              43.466418
+            ],
+            [
+              -76.5075753,
+              43.4661245
+            ],
+            [
+              -76.5074014,
+              43.4661985
+            ],
+            [
+              -76.5070103,
+              43.4660363
+            ],
+            [
+              -76.5073008,
+              43.4657786
+            ],
+            [
+              -76.5075181,
+              43.4658027
+            ],
+            [
+              -76.507716,
+              43.4654875
+            ],
+            [
+              -76.5075627,
+              43.4653811
+            ],
+            [
+              -76.5076759,
+              43.4650743
+            ],
+            [
+              -76.5080545,
+              43.4651999
+            ],
+            [
+              -76.5081323,
+              43.4653271
+            ],
+            [
+              -76.5086344,
+              43.4653595
+            ],
+            [
+              -76.5086996,
+              43.4652664
+            ],
+            [
+              -76.5090999,
+              43.4652431
+            ],
+            [
+              -76.5091273,
+              43.4655349
+            ],
+            [
+              -76.5089283,
+              43.4656347
+            ],
+            [
+              -76.5090404,
+              43.4659607
+            ],
+            [
+              -76.5091799,
+              43.4659989
+            ],
+            [
+              -76.5093972,
+              43.466334
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-ontario-east-bank",
+      "position_uncertainty_m": 55,
+      "bbox": [
+        -76.5093972,
+        43.4650743,
+        -76.5070103,
+        43.4667947
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "FORT_ONTARIO_THIRD",
+      "title": "安大略堡 · 第三期主堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "安大略堡 · 英军重筑第三期主堡",
+          "note": "英军修复并重筑河口堡垒，利用原有壕沟，恢复东岸常驻守军。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1795,
+          "title": "安大略堡 · 《巴黎和约》后英军留驻",
+          "note": "1783年《巴黎和约》确立美国边界后，英军继续驻守安大略堡，直到1796年才实地移交。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "安大略堡 · 美军接收",
+          "note": "1796年，英军撤出河口，美军接收安大略堡。1798年奥斯威戈镇图仍记有东岸五棱堡。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=142",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=165",
+        "https://parkplanning.nps.gov/showFile.cfm?projectID=89569&sfid=754109",
+        "https://www.archives.gov/milestone-documents/treaty-of-paris"
+      ],
+      "geometry_method": "Third-fort bastion line traced from George A. Mitchell’s unscaled 1812 plan (Hetzler fig. 2.14), oriented with its north arrow and approximately scaled using documented bastion width of about 80 ft. DeWitt’s 1798 town plan (fig. 2.1) confirms the five-point outline; the site anchor is the shared east-bank parade on World Imagery.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.5071194,
+              43.4660632
+            ],
+            [
+              -76.5072993,
+              43.465888
+            ],
+            [
+              -76.5076315,
+              43.4659379
+            ],
+            [
+              -76.5078065,
+              43.4655643
+            ],
+            [
+              -76.5076116,
+              43.4654773
+            ],
+            [
+              -76.5076282,
+              43.4652519
+            ],
+            [
+              -76.5079442,
+              43.4653366
+            ],
+            [
+              -76.5079776,
+              43.4654741
+            ],
+            [
+              -76.5084699,
+              43.4654861
+            ],
+            [
+              -76.5085113,
+              43.4653218
+            ],
+            [
+              -76.5088193,
+              43.4652526
+            ],
+            [
+              -76.5088144,
+              43.4655099
+            ],
+            [
+              -76.5086234,
+              43.4655855
+            ],
+            [
+              -76.508812,
+              43.4659327
+            ],
+            [
+              -76.509013,
+              43.4659308
+            ],
+            [
+              -76.5092217,
+              43.466102
+            ],
+            [
+              -76.5089269,
+              43.4661809
+            ],
+            [
+              -76.5087322,
+              43.4660843
+            ],
+            [
+              -76.508287,
+              43.4663134
+            ],
+            [
+              -76.5083804,
+              43.4664367
+            ],
+            [
+              -76.5081766,
+              43.4666157
+            ],
+            [
+              -76.5080131,
+              43.4664428
+            ],
+            [
+              -76.5081194,
+              43.466301
+            ],
+            [
+              -76.5077116,
+              43.4660708
+            ],
+            [
+              -76.5075443,
+              43.4661716
+            ],
+            [
+              -76.5071194,
+              43.4660632
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-ontario-east-bank",
+      "position_uncertainty_m": 60,
+      "bbox": [
+        -76.5092217,
+        43.4652519,
+        -76.5071194,
+        43.4666157
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "oswego-fort-ontario-third-1800"
+    },
+    {
+      "id": "FORT_FRONTENAC_FRENCH_WALLS",
+      "title": "弗龙特纳克堡 · 法国石城墙",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1720,
+          "end_year": 1754,
+          "title": "弗龙特纳克堡 · 法国石堡和毛皮商站",
+          "note": "法国守军从卡塔拉奎河口维持与安大略湖各据点的水上交通，并经营毛皮贸易。"
+        },
+        {
+          "start_year": 1755,
+          "end_year": 1757,
+          "title": "弗龙特纳克堡 · 法军加派驻守",
+          "note": "七年战争前后，法国在堡内增建营房，用此处储运军需。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1758,
+          "title": "弗龙特纳克堡 · 英军夺取船只与军需后撤离",
+          "note": "8月27日，法国守方向布拉德斯特里特投降。英方军报记载缴获九艘船，两艘带回奥斯威戈，其余焚毁。英军带走部分物资，焚毁军需并拆防后撤出。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1782,
+          "title": "弗龙特纳克堡 · 拆防后的旧堡遗址",
+          "note": "1758年秋，法国派人重返堡址，因毁损严重撤往拉普雷桑塔西翁堡过冬。1763年后，英国接管原新法兰西的殖民地。直到1783年，才在旧堡遗址旁建立新的驻地。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://ontarioarchaeology.org/wp-content/uploads/an1985-04.pdf#page=20",
+        "https://publications.gc.ca/collections/collection_2023/mdn-dnd/D2-455-2022-eng.pdf",
+        "https://www.carf.info/kingston-past/kingston-archaeology/fort-frontenac.html",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=392",
+        "https://deriv.nls.uk/dcn23/2428/8911/242889114.23.pdf",
+        "https://www.biographi.ca/bio.php?id=benoist_antoine_gabriel_francois_4F.html"
+      ],
+      "geometry_method": "Composite of the excavated 1720/1726/1738 French walls in W. Bruce Stewart Fig. 1, fitted by five surviving/reconstructed northwest bastion corners to Esri World Imagery. Fit RMS 0.48 m at the anchoring bastion; the far walls are extrapolated across roughly 120 m and the local uncertainty is estimated at 15 m.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.4791867,
+              44.2337006
+            ],
+            [
+              -76.4789598,
+              44.2337128
+            ],
+            [
+              -76.4789435,
+              44.2336695
+            ],
+            [
+              -76.4783967,
+              44.2337738
+            ],
+            [
+              -76.4784033,
+              44.2338335
+            ],
+            [
+              -76.4782311,
+              44.2338982
+            ],
+            [
+              -76.4782212,
+              44.2337581
+            ],
+            [
+              -76.4782816,
+              44.2337241
+            ],
+            [
+              -76.4782162,
+              44.2335851
+            ],
+            [
+              -76.4782049,
+              44.2335578
+            ],
+            [
+              -76.4781505,
+              44.2334243
+            ],
+            [
+              -76.4780978,
+              44.2334393
+            ],
+            [
+              -76.4779823,
+              44.2333054
+            ],
+            [
+              -76.4782279,
+              44.2332932
+            ],
+            [
+              -76.4782429,
+              44.2333347
+            ],
+            [
+              -76.4787539,
+              44.233207
+            ],
+            [
+              -76.4787401,
+              44.2331538
+            ],
+            [
+              -76.4789337,
+              44.2330339
+            ],
+            [
+              -76.4789627,
+              44.2332179
+            ],
+            [
+              -76.4788911,
+              44.233247
+            ],
+            [
+              -76.4790107,
+              44.2335649
+            ],
+            [
+              -76.4790824,
+              44.2335582
+            ],
+            [
+              -76.4791867,
+              44.2337006
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-frontenac-cataraqui",
+      "position_uncertainty_m": 15,
+      "bbox": [
+        -76.4791867,
+        44.2330339,
+        -76.4779823,
+        44.2338982
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "FORT_NIAGARA_FRENCH_HOUSE",
+      "title": "尼亚加拉堡 · 法国石屋",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1726,
+          "end_year": 1754,
+          "title": "尼亚加拉堡 · 法国石屋与贸易站",
+          "note": "法国与豪德诺索尼人谈判，获准设立贸易房屋。1726年开始建造的石屋后来作为河口驻地的核心。"
+        },
+        {
+          "start_year": 1755,
+          "end_year": 1756,
+          "title": "尼亚加拉堡 · 石屋外围扩建",
+          "note": "皮埃尔·普肖监督法国守军修建陆侧防线、棱堡和外围土工。此前的石屋留在防御工事内。"
+        }
+      ],
+      "source_urls": [
+        "https://nysarchaeology.org/download/nysaa/bulletin/number_114.pdf#page=55",
+        "https://npgallery.nps.gov/GetAsset/a177b303-6c93-45ef-9412-2bb19b34ec6d",
+        "https://www.oldfortniagara.org/old-fort-niagara-s-long-history",
+        "https://www.argomaps.org/maps/commonwealth%3Ap8418t471/"
+      ],
+      "geometry_method": "Original French château footprint matched to the surviving house in orthophotography. The National Historic Landmark nomination describes the original 96 by 48 foot stone building and the negotiated trading house.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.0643262,
+              43.2629908
+            ],
+            [
+              -79.0640278,
+              43.2631374
+            ],
+            [
+              -79.0639271,
+              43.2630287
+            ],
+            [
+              -79.0642256,
+              43.2628821
+            ],
+            [
+              -79.0643262,
+              43.2629908
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-niagara-east-bank",
+      "position_uncertainty_m": 8,
+      "bbox": [
+        -79.0643262,
+        43.2628821,
+        -79.0639271,
+        43.2631374
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "FORT_NIAGARA_MAIN",
+      "title": "尼亚加拉堡 · 河口主堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1758,
+          "title": "尼亚加拉堡 · 法国扩建主堡",
+          "note": "法国1757年基本建成扩建的陆侧城防，继续驻守尼亚加拉河东岸河口。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1759,
+          "title": "尼亚加拉堡 · 7月25日法军投降",
+          "note": "英军、纽约殖民部队与豪德诺索尼盟军围攻堡垒。法国援军受阻，普肖于7月25日向威廉·约翰逊交出堡垒。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1778,
+          "title": "尼亚加拉堡 · 英军驻守",
+          "note": "英军接收河东岸要塞，把它用于尼亚加拉河的转运和补给。1763年原住民抵抗期间，英方继续驻堡。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1782,
+          "title": "尼亚加拉堡 · 战争与流离失所",
+          "note": "效忠英王的部队与原住民盟军从堡周出动。1779年，美国远征军焚毁豪德诺索尼人的村镇，数千人来到堡周避难，许多人在随后冬季死于饥饿和寒冷。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1795,
+          "title": "尼亚加拉堡 · 和约后英军延迟撤离",
+          "note": "1783年《巴黎和约》签订后，英军在新的美方边界内仍驻守尼亚加拉堡，直到1796年才交出。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "尼亚加拉堡 · 美军接收河东岸要塞",
+          "note": "1796年8月美军实际接收旧堡。撤离的英军在尼亚加拉河西岸另筑乔治堡。"
+        }
+      ],
+      "source_urls": [
+        "https://nysarchaeology.org/download/nysaa/bulletin/number_114.pdf#page=55",
+        "https://npgallery.nps.gov/GetAsset/a177b303-6c93-45ef-9412-2bb19b34ec6d",
+        "https://www.oldfortniagara.org/old-fort-niagara-s-long-history",
+        "https://www.argomaps.org/maps/commonwealth%3Ap8418t471/",
+        "https://www.archives.gov/milestone-documents/treaty-of-paris",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?i=44507&id=432"
+      ],
+      "geometry_method": "Pouchot’s 1757 plans and the National Historic Landmark nomination support the preserved landward enceinte and demi-bastions. Trace aligns those works with the present orthophoto, and follows the interior bluff line where subsequent river and lake works obscure the earlier edge. Detached outer works and later masonry are outside the mapped core.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.0644533,
+              43.2629855
+            ],
+            [
+              -79.06414,
+              43.263136
+            ],
+            [
+              -79.0637267,
+              43.263403
+            ],
+            [
+              -79.0633133,
+              43.2635923
+            ],
+            [
+              -79.0631267,
+              43.26367
+            ],
+            [
+              -79.0626733,
+              43.2637816
+            ],
+            [
+              -79.0621333,
+              43.2639418
+            ],
+            [
+              -79.0622467,
+              43.2633738
+            ],
+            [
+              -79.06252,
+              43.2633156
+            ],
+            [
+              -79.0624533,
+              43.2627573
+            ],
+            [
+              -79.0621933,
+              43.2627136
+            ],
+            [
+              -79.0619067,
+              43.2619708
+            ],
+            [
+              -79.0622733,
+              43.2620825
+            ],
+            [
+              -79.06234,
+              43.2621601
+            ],
+            [
+              -79.0623933,
+              43.2621456
+            ],
+            [
+              -79.06256,
+              43.261864
+            ],
+            [
+              -79.0628067,
+              43.2619174
+            ],
+            [
+              -79.0631333,
+              43.2619951
+            ],
+            [
+              -79.0634467,
+              43.2620922
+            ],
+            [
+              -79.06408,
+              43.2622621
+            ],
+            [
+              -79.0641667,
+              43.2624029
+            ],
+            [
+              -79.0642867,
+              43.2626359
+            ],
+            [
+              -79.0644133,
+              43.2628301
+            ],
+            [
+              -79.0644533,
+              43.2629855
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-niagara-east-bank",
+      "position_uncertainty_m": 30,
+      "bbox": [
+        -79.0644533,
+        43.261864,
+        -79.0619067,
+        43.2639418
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "fort-niagara-east-bank-1800"
+    },
+    {
+      "id": "FORT_FRONTENAC_BRITISH_BARRACKS",
+      "title": "弗龙特纳克堡旧址 · 英军营房",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1788,
+          "title": "弗龙特纳克旧址 · 英军营房",
+          "note": "1784年图分别标出英军营房和法国旧堡废墟。英军以卡塔拉奎河口作为五大湖东端的驻地。"
+        },
+        {
+          "start_year": 1789,
+          "end_year": 1799,
+          "title": "弗龙特纳克旧址 · 桥头营房",
+          "note": "1789年，这处英军营地定名为桥头营房（Tête-de-Pont Barracks）。"
+        }
+      ],
+      "source_urls": [
+        "https://www.argomaps.org/maps/commonwealth%3A2r36xx573/",
+        "https://publications.gc.ca/collections/collection_2023/mdn-dnd/D2-455-2022-eng.pdf",
+        "https://ontarioarchaeology.org/wp-content/uploads/an1985-04.pdf#page=20"
+      ],
+      "geometry_method": "Five barrack buildings labeled B and C in the 1784 survey. Four historical French bastion tips matched on the older reconstruction, with an RMS of 3.6 m and an approximate 15 m overall placement uncertainty. The 1784 survey separately labels the French walls A as ruins.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -76.47884,
+                44.2332727
+              ],
+              [
+                -76.478956,
+                44.2335624
+              ],
+              [
+                -76.4788936,
+                44.2335758
+              ],
+              [
+                -76.4787756,
+                44.2332841
+              ],
+              [
+                -76.47884,
+                44.2332727
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -76.4787203,
+                44.2332545
+              ],
+              [
+                -76.4787469,
+                44.2333251
+              ],
+              [
+                -76.4782961,
+                44.2334067
+              ],
+              [
+                -76.4782701,
+                44.2333407
+              ],
+              [
+                -76.4787203,
+                44.2332545
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -76.4789002,
+                44.2335815
+              ],
+              [
+                -76.4789249,
+                44.2336415
+              ],
+              [
+                -76.4784517,
+                44.2337385
+              ],
+              [
+                -76.4784279,
+                44.2336752
+              ],
+              [
+                -76.4789002,
+                44.2335815
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -76.4782702,
+                44.2334049
+              ],
+              [
+                -76.4783202,
+                44.2335208
+              ],
+              [
+                -76.4782372,
+                44.2335376
+              ],
+              [
+                -76.4781864,
+                44.2334194
+              ],
+              [
+                -76.4782702,
+                44.2334049
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -76.4783418,
+                44.2335674
+              ],
+              [
+                -76.4783947,
+                44.2336882
+              ],
+              [
+                -76.4783171,
+                44.2337046
+              ],
+              [
+                -76.4782638,
+                44.2335831
+              ],
+              [
+                -76.4783418,
+                44.2335674
+              ]
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-frontenac-cataraqui",
+      "position_uncertainty_m": 15,
+      "bbox": [
+        -76.478956,
+        44.2332545,
+        -76.4781864,
+        44.2337385
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "frontenac-tete-de-pont-1800"
+    },
+    {
+      "id": "FORT_GEORGE_NIAGARA_MAGAZINE",
+      "title": "尼亚加拉河西岸 · 乔治堡火药库",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1798,
+          "title": "乔治堡 · 西岸建火药库",
+          "note": "美军接收尼亚加拉旧堡后，英方在河西岸修筑新据点。火药库建于1796年，是西岸乔治堡最早的一批工事。"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/visit/-/media/b0eb3443d2304faab91ed3dd58f2d818.ashx",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?i=44507&id=432",
+        "https://www.parkscanadahistory.com/publications/fortgeorge/nha-v44-7-2015.pdf"
+      ],
+      "geometry_method": "Extant 1796 powder magazine identified in the Parks Canada interpretive plan and matched to its present roof footprint. Separate from the six-bastion enclosure ordered in 1799.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.0602356,
+              43.2499121
+            ],
+            [
+              -79.0601463,
+              43.2499901
+            ],
+            [
+              -79.0600482,
+              43.2499446
+            ],
+            [
+              -79.0601285,
+              43.2498536
+            ],
+            [
+              -79.0602356,
+              43.2499121
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-george-niagara-west-bank",
+      "position_uncertainty_m": 7,
+      "bbox": [
+        -79.0602356,
+        43.2498536,
+        -79.0600482,
+        43.2499901
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "FORT_GEORGE_NIAGARA_MAIN",
+      "title": "尼亚加拉河西岸 · 乔治堡主堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "乔治堡 · 西岸六棱堡防线施工",
+          "note": "英方下令以六座棱堡围筑西岸主堡。工程延续到1802年。"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/on/fortgeorge/visit/-/media/b0eb3443d2304faab91ed3dd58f2d818.ashx",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?i=44507&id=432",
+        "https://www.parkscanadahistory.com/publications/fortgeorge/nha-v44-7-2015.pdf"
+      ],
+      "geometry_method": "Royal Engineers plan of 1799, LAC NMC 0016811, reproduced in Leskovec (Fig. 3), georeferenced by six bastion positions on the site reconstruction and the original magazine. Fit RMS 6.3 m, estimated historic uncertainty 25 m. Checked against the c.1800 Parks Canada plan.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.0603913,
+              43.2493184
+            ],
+            [
+              -79.0606497,
+              43.2494567
+            ],
+            [
+              -79.0606322,
+              43.2495503
+            ],
+            [
+              -79.0617792,
+              43.2500509
+            ],
+            [
+              -79.0618572,
+              43.2500117
+            ],
+            [
+              -79.0621285,
+              43.2501145
+            ],
+            [
+              -79.0622249,
+              43.2502797
+            ],
+            [
+              -79.0621245,
+              43.2503464
+            ],
+            [
+              -79.0627105,
+              43.2512359
+            ],
+            [
+              -79.0628313,
+              43.2512453
+            ],
+            [
+              -79.0629572,
+              43.2514201
+            ],
+            [
+              -79.0627635,
+              43.2515409
+            ],
+            [
+              -79.062619,
+              43.2514991
+            ],
+            [
+              -79.0617898,
+              43.2520293
+            ],
+            [
+              -79.0618931,
+              43.2521322
+            ],
+            [
+              -79.0616817,
+              43.2522721
+            ],
+            [
+              -79.0614575,
+              43.2521102
+            ],
+            [
+              -79.0615212,
+              43.2520216
+            ],
+            [
+              -79.0609435,
+              43.2515665
+            ],
+            [
+              -79.0607946,
+              43.2516324
+            ],
+            [
+              -79.0605279,
+              43.2514964
+            ],
+            [
+              -79.0603225,
+              43.2512512
+            ],
+            [
+              -79.0604299,
+              43.2511719
+            ],
+            [
+              -79.0595491,
+              43.2502464
+            ],
+            [
+              -79.0594284,
+              43.2502618
+            ],
+            [
+              -79.0592609,
+              43.2500488
+            ],
+            [
+              -79.0594984,
+              43.2499372
+            ],
+            [
+              -79.0596252,
+              43.2499733
+            ],
+            [
+              -79.060224,
+              43.2495669
+            ],
+            [
+              -79.060206,
+              43.2494866
+            ],
+            [
+              -79.0603913,
+              43.2493184
+            ]
+          ]
+        ]
+      },
+      "stable_id": "fort-george-niagara-west-bank",
+      "position_uncertainty_m": 25,
+      "bbox": [
+        -79.0629572,
+        43.2493184,
+        -79.0592609,
+        43.2522721
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "fort-george-niagara-main-1800"
     }
   ]
 }
