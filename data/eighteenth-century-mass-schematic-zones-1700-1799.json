@@ -1740,7 +1740,7 @@
       "periods": [
         {
           "start_year": 1763,
-          "end_year": 1782
+          "end_year": 1783
         }
       ],
       "bbox": [
@@ -1751,11 +1751,13 @@
       ],
       "source_key": "PARIS1783",
       "source_urls": [
-        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties",
+        "https://www.nps.gov/casa/learn/historyculture/the-british-period.htm"
       ],
-      "note": "依和约从西班牙取得，1783和约归还西班牙",
+      "note": "1763年英国接收东佛罗里达。1783年和约议定归还，1784年7月西班牙在圣奥古斯丁实际接收。此框仅供查找当时的省级档案。",
       "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
       "precise_historic_border": false,
+      "outline_only": true,
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
@@ -8367,6 +8369,61 @@
         ]
       },
       "position_uncertainty_m": 1000
+    },
+    {
+      "id": "FORT_MOSE_SECOND",
+      "title": "莫塞堡 · 第二处聚落遗址",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1752,
+          "end_year": 1762,
+          "title": "莫塞堡 · 自由黑人聚落与驻防",
+          "note": "1752年，西班牙当局在另一处地点重新安置莫塞社区。居民包括从英属殖民地奴役中逃出的人及其家属。考古发掘确认了壕沟、土墙和聚落遗迹。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "莫塞堡 · 社区迁往古巴，英军接管",
+          "note": "英国依和约接管东佛罗里达，莫塞社区的居民迁往古巴。英军随后使用第二处莫塞堡。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1774,
+          "title": "莫塞堡 · 英军驻守第二处堡址",
+          "note": "佛罗里达州的遗址管理报告记录了英军接管后在第二处莫塞堡驻军的阶段。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1775,
+          "end_year": 1775,
+          "title": "莫塞堡 · 英军拆除部分堡体",
+          "note": "1775年部分堡体被英方拆除。第二次西班牙时期，来自梅诺卡岛的农民曾间歇使用旧址。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://www.npshistory.com/publications/nha/fl-nations-oldest-port-fs.pdf",
+        "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/8/2023/01/Florida-Museum_For-Mose-Education-Package-2023.pdf",
+        "https://floridadep.gov/sites/default/files/Fort%20Mose%20Historic%20State%20Park_Interp%20Project%20Amendment_August%202022.pdf",
+        "https://floridadep.gov/sites/default/files/FMHSP_Approved_WithMaps_20160427.pdf",
+        "https://www.sjcfl.us/lamp/lamp-acquired-properties/"
+      ],
+      "geometry_method": "Representative coordinate for the second archaeological site from the Nation’s Oldest Port National Heritage Area feasibility study, page 107, rounded to four decimals. Fort Mose I is not assigned this location. No settlement or modern park boundary drawn.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3253,
+          29.9278
+        ]
+      },
+      "stable_id": "fort-mose-second-settlement"
     }
   ],
   "regional_zones": [
@@ -10756,6 +10813,645 @@
       "outline_only": true,
       "stable_id": "fort-cumberland-main-enceinte",
       "cross_century_feature_id": "fort-cumberland-1800"
+    },
+    {
+      "id": "FREDERICA_TOWN_ENCLOSURE",
+      "title": "弗雷德丽卡镇 · 镇防外廓",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1743,
+          "end_year": 1757,
+          "title": "弗雷德丽卡镇 · 镇防外廓",
+          "note": "1743年来访者爱德华·金伯记下镇外的土垒、壕沟和两端堡楼。临河主堡在镇防外廓西侧。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1758,
+          "title": "弗雷德丽卡镇 · 大火与镇址遗存",
+          "note": "1758年大火烧毁镇上大部分建筑。图中虚线标示考古与旧图定位的镇防外廓。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://npshistory.com/publications/fofr/manucy.pdf#page=136",
+        "https://npshistory.com/publications/fofr/manucy.pdf#page=44",
+        "https://npshistory.com/publications/fofr/manucy.pdf#page=137",
+        "https://www.sciencebase.gov/catalog/item/629ae906d34ec53d276f4d9b",
+        "https://npgallery.nps.gov/GetAsset/22bcda01-dcab-4f94-8881-1d33cc09c5de"
+      ],
+      "geometry_method": "Manucy Plate 28 outer town earthwork trace, checked against the 1796 Miller survey and Kimber’s 1743 observations. Six present-day ground controls checked against USGS bare-earth elevation, RMS about 7 m. The river edge closes the enclosure; portions of the south and west are reconstructed. Riverside main fort separately mapped.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.3923534,
+              31.2267081
+            ],
+            [
+              -81.3928586,
+              31.2206743
+            ],
+            [
+              -81.3926658,
+              31.2208389
+            ],
+            [
+              -81.3927252,
+              31.2209294
+            ],
+            [
+              -81.3901155,
+              31.2221794
+            ],
+            [
+              -81.3900264,
+              31.222088
+            ],
+            [
+              -81.3898577,
+              31.2221442
+            ],
+            [
+              -81.3898867,
+              31.2223292
+            ],
+            [
+              -81.3900142,
+              31.2223195
+            ],
+            [
+              -81.3899837,
+              31.2225027
+            ],
+            [
+              -81.3900463,
+              31.2228183
+            ],
+            [
+              -81.3899834,
+              31.2234711
+            ],
+            [
+              -81.3900496,
+              31.2235686
+            ],
+            [
+              -81.3899796,
+              31.2243917
+            ],
+            [
+              -81.3898538,
+              31.2244697
+            ],
+            [
+              -81.3897722,
+              31.2249037
+            ],
+            [
+              -81.3896281,
+              31.2249333
+            ],
+            [
+              -81.3895822,
+              31.2251229
+            ],
+            [
+              -81.3897028,
+              31.2251948
+            ],
+            [
+              -81.3898097,
+              31.225164
+            ],
+            [
+              -81.3898914,
+              31.2251665
+            ],
+            [
+              -81.3922678,
+              31.2264873
+            ],
+            [
+              -81.3922077,
+              31.2265809
+            ],
+            [
+              -81.3922506,
+              31.2266027
+            ],
+            [
+              -81.3923534,
+              31.2267081
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -81.3928586,
+        31.2206743,
+        -81.3895822,
+        31.2267081
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "frederica-town-outer-earthworks"
+    },
+    {
+      "id": "FORT_FREDERICA_MAIN",
+      "title": "弗雷德丽卡堡 · 主堡旧址",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1736,
+          "end_year": 1739,
+          "title": "弗雷德丽卡堡 · 英方筑堡",
+          "note": "奥格尔索普于1736年在圣西蒙斯岛设镇筑堡。早期主堡使用土垒和木栅。主堡虚线据结合旧图与考古的复原。"
+        },
+        {
+          "start_year": 1740,
+          "end_year": 1741,
+          "title": "弗雷德丽卡堡 · 英方加固主堡",
+          "note": "圣奥古斯丁围城之后，英方加固主堡。堡内增建军械库，并在四角土垒内侧增筑贝壳灰夯墙。"
+        },
+        {
+          "start_year": 1742,
+          "end_year": 1742,
+          "title": "弗雷德丽卡堡 · 英方驻防与河上交火",
+          "note": "西班牙在圣西蒙斯岛登陆，主攻部队在抵达镇区前受阻。7月11日，堡内炮兵曾向进至附近水道的西班牙船只开火。"
+        },
+        {
+          "start_year": 1743,
+          "end_year": 1748,
+          "title": "弗雷德丽卡堡 · 英军驻守",
+          "note": "1743年的记载描述了四棱堡、木栅和壕沟。英军在此驻守至战争结束。"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1755,
+          "title": "弗雷德丽卡堡 · 主力解散后小部驻守",
+          "note": "1749年奥格尔索普的部队解散，堡内起初只留少量驻兵。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1761,
+          "title": "弗雷德丽卡堡 · 防御拆卸后的旧址",
+          "note": "1756年英方记载防御设施已拆卸，火炮未架设。图上标记的是原四角主堡位置。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "弗雷德丽卡堡 · 英方短暂修缮",
+          "note": "1762年英方修缮旧堡，部分火炮同时调往科克斯珀岛。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "弗雷德丽卡堡 · 最后一批常驻士兵撤出",
+          "note": "1763年余下的少数驻兵撤离。旧堡仍存，后续偶有军事用途。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1775,
+          "title": "弗雷德丽卡堡 · 撤防后的旧堡",
+          "note": "最后一批常驻士兵撤离后，旧堡仍留有军械。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "弗雷德丽卡堡 · 乔治亚革命方调走军械",
+          "note": "5月23日，乔治亚安全委员会下令把堡内火炮等军械转运到桑伯里。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "弗雷德丽卡堡 · 军官短访旧址",
+          "note": "5月11日，乔治亚革命方军官塞缪尔·埃尔伯特短时登岸。日记记下已焚毁的城镇，以及修整后尚可使用的旧堡。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://npshistory.com/publications/fofr/fort-frederica.pdf#page=37",
+        "https://www.nps.gov/fofr/learn/historyculture/index.htm",
+        "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer",
+        "https://npgallery.nps.gov/GetAsset/22bcda01-dcab-4f94-8881-1d33cc09c5de",
+        "https://archaeology.uga.edu/sites/default/files/2021-12/uga_lab_series_87.pdf#page=135"
+      ],
+      "geometry_method": "NPS archaeological reconstruction of the historical main enceinte (The Fort at Frederica, Fig. 14) georeferenced using the corners of the extant King’s Magazine. Checked against the USGS bare-earth model. Reconstructed west wall and part of south wall are shown at their historic position, across the present eroded bank. Town enclosure and outworks excluded.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.3934856,
+              31.2236392
+            ],
+            [
+              -81.3932649,
+              31.2236488
+            ],
+            [
+              -81.393243,
+              31.2237032
+            ],
+            [
+              -81.3929622,
+              31.2236535
+            ],
+            [
+              -81.3929706,
+              31.2236047
+            ],
+            [
+              -81.3928993,
+              31.2235673
+            ],
+            [
+              -81.3927519,
+              31.2235062
+            ],
+            [
+              -81.3927643,
+              31.2236379
+            ],
+            [
+              -81.3927758,
+              31.2237074
+            ],
+            [
+              -81.3928403,
+              31.2237277
+            ],
+            [
+              -81.3927905,
+              31.2239413
+            ],
+            [
+              -81.3927402,
+              31.2239392
+            ],
+            [
+              -81.3927026,
+              31.2239949
+            ],
+            [
+              -81.3926677,
+              31.2240523
+            ],
+            [
+              -81.3926331,
+              31.2241085
+            ],
+            [
+              -81.3928479,
+              31.2241045
+            ],
+            [
+              -81.3928727,
+              31.2240969
+            ],
+            [
+              -81.3928887,
+              31.2240481
+            ],
+            [
+              -81.3929923,
+              31.2240659
+            ],
+            [
+              -81.393152,
+              31.2240934
+            ],
+            [
+              -81.3931479,
+              31.2241509
+            ],
+            [
+              -81.3933511,
+              31.2242295
+            ],
+            [
+              -81.3933381,
+              31.2240408
+            ],
+            [
+              -81.3932757,
+              31.2240248
+            ],
+            [
+              -81.3933234,
+              31.2238069
+            ],
+            [
+              -81.393393,
+              31.2238123
+            ],
+            [
+              -81.3934856,
+              31.2236392
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -81.3934856,
+        31.2235062,
+        -81.3926331,
+        31.2242295
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "fort-frederica-main-enceinte"
+    },
+    {
+      "id": "CASTILLO_SAN_MARCOS",
+      "title": "圣马科斯堡 · 圣奥古斯丁主堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1701,
+          "title": "圣马科斯堡 · 西班牙石堡",
+          "note": "1695年第一期主堡建成。四座石砌棱堡和堡墙围住内庭，西班牙在此驻防。"
+        },
+        {
+          "start_year": 1702,
+          "end_year": 1702,
+          "title": "圣马科斯堡 · 英军围城，西班牙守住主堡",
+          "note": "南卡罗来纳殖民军围攻圣奥古斯丁。撤退前，英军烧毁镇上大部分建筑。西班牙守住主堡。"
+        },
+        {
+          "start_year": 1703,
+          "end_year": 1739,
+          "title": "圣马科斯堡 · 西班牙驻防",
+          "note": "西班牙继续在主堡驻军。阿雷东多1737年工程图绘出了主堡四座棱堡。"
+        },
+        {
+          "start_year": 1740,
+          "end_year": 1740,
+          "title": "圣马科斯堡 · 英军围城，西班牙守住主堡",
+          "note": "詹姆斯·奥格尔索普率军围攻圣奥古斯丁，又从对岸炮击主堡。西班牙守军坚守，英军撤回乔治亚。附近的第一座莫塞堡曾被英军攻占，后被西班牙一方夺回，当时的堡址仍待考证。"
+        },
+        {
+          "start_year": 1741,
+          "end_year": 1762,
+          "title": "圣马科斯堡 · 西班牙修整与驻防",
+          "note": "西班牙继续使用四角石堡，改建炮室并加高部分墙段。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1782,
+          "title": "圣马克堡 · 英军接管",
+          "note": "1763年《巴黎和约》第二十条规定西班牙割让佛罗里达。7月21日，西班牙在圣奥古斯丁把主堡交给英军。英方称其为圣马克堡。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "圣马克堡 · 约定归还，英军仍守",
+          "note": "9月3日的英西和约规定将佛罗里达交还西班牙。圣奥古斯丁主堡到1784年才实际移交。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "圣马科斯堡 · 西班牙恢复驻防",
+          "note": "1784年7月12日，英方总督帕特里克·托宁把圣奥古斯丁主堡交还西班牙。西班牙继续驻防至19世纪初。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/resource/hhh.fl0095.sheet/?sp=12",
+        "https://www.floridamemory.com/items/show/3220",
+        "https://www.argomaps.org/maps/commonwealth%3Ahx11z076s/",
+        "https://npshistory.com/publications/casa/cli-casa.pdf",
+        "https://www.nps.gov/casa/learn/historyculture/the-siege-of-1740.htm",
+        "https://home.nps.gov/casa/learn/historyculture/a-change-of-flags.htm",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://www.floridabar.org/the-florida-bar-journal/florida-land-titles-and-british-not-just-spanish-orgins/",
+        "https://www.amphilsoc.org/sites/default/files/2020-01/attachments/CO5EastFlorida.pdf",
+        "https://www.loc.gov/collections/east-florida-papers/about-this-collection/",
+        "https://www.govinfo.gov/content/pkg/SERIALSET-00063_00_00-002-0001-0000/pdf/SERIALSET-00063_00_00-002-0001-0000.pdf",
+        "https://npshistory.com/series/source/3/sb3l.htm",
+        "https://floridadep.gov/sites/default/files/Fort%20Mose%20Historic%20State%20Park_Interp%20Project%20Amendment_August%202022.pdf",
+        "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer",
+        "https://www.openstreetmap.org/way/47990365",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Library of Congress HABS FL-17 sheet 2-2 main wall perimeter trace, georeferenced to the four extant bastion apexes (OpenStreetMap coordinate controls, © contributors, ODbL). Checked against USGS orthoimagery and the 1737 and 1763 plans. Main enceinte only, excluding the moat, ravelin and city wall.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.3110333,
+              29.898274
+            ],
+            [
+              -81.3113293,
+              29.898199
+            ],
+            [
+              -81.3113279,
+              29.8981192
+            ],
+            [
+              -81.3117076,
+              29.8981153
+            ],
+            [
+              -81.3117125,
+              29.898197
+            ],
+            [
+              -81.3120031,
+              29.8982609
+            ],
+            [
+              -81.3119232,
+              29.8980135
+            ],
+            [
+              -81.3118247,
+              29.8980106
+            ],
+            [
+              -81.3118113,
+              29.8976405
+            ],
+            [
+              -81.311906,
+              29.8976296
+            ],
+            [
+              -81.3119575,
+              29.897371
+            ],
+            [
+              -81.3116845,
+              29.8974596
+            ],
+            [
+              -81.3116827,
+              29.8975522
+            ],
+            [
+              -81.3113148,
+              29.8975757
+            ],
+            [
+              -81.311311,
+              29.897492
+            ],
+            [
+              -81.311009,
+              29.8974282
+            ],
+            [
+              -81.3110994,
+              29.8976853
+            ],
+            [
+              -81.3111932,
+              29.8976833
+            ],
+            [
+              -81.3112026,
+              29.8980181
+            ],
+            [
+              -81.3111111,
+              29.89802
+            ],
+            [
+              -81.3110333,
+              29.898274
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -81.3120031,
+        29.897371,
+        -81.311009,
+        29.898274
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "castillo-de-san-marcos-st-augustine",
+      "cross_century_feature_id": "castillo-san-marcos-1800"
+    },
+    {
+      "id": "FORT_MATANZAS",
+      "title": "马坦萨斯石堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1762,
+          "title": "马坦萨斯石堡 · 西班牙驻防",
+          "note": "1740年围城结束后，西班牙在马坦萨斯水道旁修筑石堡。1742年夏建成，驻军以此防守通往圣奥古斯丁的南侧水道。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1782,
+          "title": "马坦萨斯石堡 · 英军接管",
+          "note": "1763年东佛罗里达移交英国后，英军在石堡驻防。美国独立战争期间，英方增加了堡上火炮。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "马坦萨斯石堡 · 约定归还，英军仍守",
+          "note": "1783年和约约定佛罗里达归还西班牙。英方驻守延续至1784年实际移交。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1795,
+          "title": "马坦萨斯石堡 · 西班牙接收",
+          "note": "1784年7月英方交还石堡。1789年的记录显示驻军仍在，堡况良好。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "马坦萨斯石堡 · 西班牙修缮地基",
+          "note": "1796年西班牙守军修补受到水流侵蚀的堡基，石堡继续守卫水道。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/fl0166/",
+        "https://irma.nps.gov/DataStore/FileSource/Get/2278051?filename=NPS_Fort+Matanzas_CLI_2020-02-24.pdf",
+        "https://www.nps.gov/foma/learn/historyculture/index.htm",
+        "https://www.nps.gov/foma/learn/historyculture/fort-matanzas.htm",
+        "https://www.openstreetmap.org/way/246845463"
+      ],
+      "geometry_method": "Library of Congress HABS FL-15-5 sheet 2 gives measured 48 ft first-floor walls. WGS84 standing wall trace from OpenStreetMap way 246845463 (© OpenStreetMap contributors, ODbL), checked against the measured plan. Simplified small corner turret. Fort only, with no inlet, shoreline or park parcel.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.2391228,
+              29.7152309
+            ],
+            [
+              -81.239029,
+              29.7153377
+            ],
+            [
+              -81.2389091,
+              29.7152577
+            ],
+            [
+              -81.2390018,
+              29.715148
+            ],
+            [
+              -81.2390575,
+              29.7151862
+            ],
+            [
+              -81.2391228,
+              29.7152309
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -81.2391228,
+        29.715148,
+        -81.2389091,
+        29.7153377
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "fort-matanzas-stone-walls",
+      "cross_century_feature_id": "fort-matanzas-1800"
     }
   ]
 }

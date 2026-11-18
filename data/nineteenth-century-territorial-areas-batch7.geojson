@@ -551,6 +551,41 @@
       "id": "19CT7-CUMBERLAND-PLAN",
       "label": "坎伯兰堡历史图与考古",
       "url": "https://archives.novascotia.ca/pdf/library/FortsOfChignecto-F197C43W3.pdf#page=95"
+    },
+    {
+      "id": "19CT7-CASTILLO-HABS",
+      "label": "美国国会图书馆｜HABS FL-17，2-2 主堡测绘平面，圣马科斯城堡",
+      "url": "https://www.loc.gov/resource/hhh.fl0095.sheet/?sp=12"
+    },
+    {
+      "id": "19CT7-CASTILLO-NPS-CLI",
+      "label": "美国国家公园管理局｜2020 年文化景观清单，1695、1740、1763、1784、1821 时间段及现存主堡",
+      "url": "https://npshistory.com/publications/casa/cli-casa.pdf"
+    },
+    {
+      "id": "19CT7-CASTILLO-EAST-FLORIDA-PAPERS",
+      "label": "美国国会图书馆｜第二次西班牙统治时期的东佛罗里达总督档案 1784–1821",
+      "url": "https://www.loc.gov/collections/east-florida-papers/about-this-collection/"
+    },
+    {
+      "id": "19CT7-CASTILLO-ACT-OF-CESSION",
+      "label": "美国政府出版局｜1821 年国会文书《东佛罗里达交接书》，1821 年 7 月 10 日派员接管防御工事",
+      "url": "https://www.govinfo.gov/content/pkg/SERIALSET-00063_00_00-002-0001-0000/pdf/SERIALSET-00063_00_00-002-0001-0000.pdf"
+    },
+    {
+      "id": "19CT7-CASTILLO-NPS-1821",
+      "label": "美国国家公园管理局｜圣马科斯城堡原始资料汇编，1821 年 7 月 10 日交接程序",
+      "url": "https://npshistory.com/series/source/3/sb3l.htm"
+    },
+    {
+      "id": "19CT7-MATANZAS-CLI",
+      "label": "美国国家公园管理局｜马坦萨斯文化景观调查",
+      "url": "https://irma.nps.gov/DataStore/FileSource/Get/2278051?filename=NPS_Fort+Matanzas_CLI_2020-02-24.pdf"
+    },
+    {
+      "id": "19CT7-MATANZAS-HABS",
+      "label": "美国国会图书馆｜马坦萨斯石堡首层实测",
+      "url": "https://www.loc.gov/item/fl0166/"
     }
   ],
   "features": [
@@ -4096,6 +4131,262 @@
             [
               -64.2916681,
               45.8651637
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "castillo-san-marcos-1800",
+      "properties": {
+        "name": "圣马科斯堡 · 西班牙驻堡与移交",
+        "stable_id": "castillo-de-san-marcos-st-augustine",
+        "start_year": 1800,
+        "end_year": 1821,
+        "display_kind": "military_impact",
+        "label_type": "驻堡",
+        "summary_zh": "圣马科斯堡在1800年仍由西班牙驻守。1821年美国于圣奥古斯丁接收主堡。",
+        "source_ids": [
+          "19CT7-CASTILLO-HABS",
+          "19CT7-CASTILLO-NPS-CLI",
+          "19CT7-CASTILLO-EAST-FLORIDA-PAPERS",
+          "19CT7-CASTILLO-ACT-OF-CESSION",
+          "19CT7-CASTILLO-NPS-1821"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/resource/hhh.fl0095.sheet/?sp=12",
+          "https://npshistory.com/publications/casa/cli-casa.pdf",
+          "https://www.loc.gov/collections/east-florida-papers/about-this-collection/",
+          "https://www.govinfo.gov/content/pkg/SERIALSET-00063_00_00-002-0001-0000/pdf/SERIALSET-00063_00_00-002-0001-0000.pdf",
+          "https://npshistory.com/series/source/3/sb3l.htm",
+          "https://www.floridamemory.com/items/show/3220",
+          "https://www.argomaps.org/maps/commonwealth%3Ahx11z076s/"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1818,
+            "title": "圣马科斯堡 · 西班牙驻防延续",
+            "summary_zh": "19世纪初继续使用同一座主堡。同期修筑的城门及城防另有范围。"
+          },
+          {
+            "start_year": 1819,
+            "end_year": 1820,
+            "title": "圣马科斯堡 · 割让条约与实际接收之间",
+            "summary_zh": "1819年2月22日签订《亚当斯—奥尼斯条约》。主堡在实际移交前由西班牙驻军掌管。"
+          },
+          {
+            "start_year": 1821,
+            "end_year": 1821,
+            "title": "圣马科斯堡 · 美国接收",
+            "summary_zh": "7月10日，西班牙与美国代表在圣奥古斯丁签署《东佛罗里达交接书》，美国军队接管主堡。"
+          }
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "related_event_ids": [],
+        "mapping_method": "Library of Congress HABS FL-17 sheet 2-2 main wall perimeter trace, georeferenced to the four extant bastion apexes (OpenStreetMap coordinate controls, © contributors, ODbL). Checked against USGS orthoimagery and the 1737 and 1763 plans. Main enceinte only, excluding the moat, ravelin and city wall.",
+        "prior_record_ids": [
+          "CASTILLO_SAN_MARCOS",
+          "B36-Z046",
+          "B36-P046",
+          "ST_AUGUSTINE"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.3110333,
+              29.898274
+            ],
+            [
+              -81.3113293,
+              29.898199
+            ],
+            [
+              -81.3113279,
+              29.8981192
+            ],
+            [
+              -81.3117076,
+              29.8981153
+            ],
+            [
+              -81.3117125,
+              29.898197
+            ],
+            [
+              -81.3120031,
+              29.8982609
+            ],
+            [
+              -81.3119232,
+              29.8980135
+            ],
+            [
+              -81.3118247,
+              29.8980106
+            ],
+            [
+              -81.3118113,
+              29.8976405
+            ],
+            [
+              -81.311906,
+              29.8976296
+            ],
+            [
+              -81.3119575,
+              29.897371
+            ],
+            [
+              -81.3116845,
+              29.8974596
+            ],
+            [
+              -81.3116827,
+              29.8975522
+            ],
+            [
+              -81.3113148,
+              29.8975757
+            ],
+            [
+              -81.311311,
+              29.897492
+            ],
+            [
+              -81.311009,
+              29.8974282
+            ],
+            [
+              -81.3110994,
+              29.8976853
+            ],
+            [
+              -81.3111932,
+              29.8976833
+            ],
+            [
+              -81.3112026,
+              29.8980181
+            ],
+            [
+              -81.3111111,
+              29.89802
+            ],
+            [
+              -81.3110333,
+              29.898274
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fort-matanzas-1800",
+      "properties": {
+        "name": "马坦萨斯石堡 · 西班牙驻堡与移交",
+        "stable_id": "fort-matanzas-stone-walls",
+        "start_year": 1800,
+        "end_year": 1821,
+        "display_kind": "military_impact",
+        "label_type": "驻堡",
+        "summary_zh": "西班牙在19世纪初继续维护水道旁的石堡，1821年美国接收时堡况已恶化。",
+        "source_ids": [
+          "19CT7-MATANZAS-CLI",
+          "19CT7-MATANZAS-HABS"
+        ],
+        "source_urls": [
+          "https://irma.nps.gov/DataStore/FileSource/Get/2278051?filename=NPS_Fort+Matanzas_CLI_2020-02-24.pdf",
+          "https://www.loc.gov/item/fl0166/",
+          "https://www.nps.gov/foma/learn/historyculture/index.htm"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1808,
+            "title": "马坦萨斯石堡 · 西班牙驻防",
+            "summary_zh": "西班牙继续在石堡驻军并关注堡基受水流侵蚀的情况。"
+          },
+          {
+            "start_year": 1809,
+            "end_year": 1809,
+            "title": "马坦萨斯石堡 · 局部坍塌与修复",
+            "summary_zh": "1809年石堡一部分坍塌，西班牙当局调动人力修复。"
+          },
+          {
+            "start_year": 1810,
+            "end_year": 1817,
+            "title": "马坦萨斯石堡 · 西班牙继续持有",
+            "summary_zh": "修复后石堡仍由西班牙当局管理。"
+          },
+          {
+            "start_year": 1818,
+            "end_year": 1818,
+            "title": "马坦萨斯石堡 · 堡况恶化",
+            "summary_zh": "1818年的西班牙报告再次记录石堡严重失修。"
+          },
+          {
+            "start_year": 1819,
+            "end_year": 1820,
+            "title": "马坦萨斯石堡 · 割让条约与实际接收之间",
+            "summary_zh": "1819年西美签署割让条约。西班牙在实际接收前继续持有石堡。"
+          },
+          {
+            "start_year": 1821,
+            "end_year": 1821,
+            "title": "马坦萨斯石堡 · 美国接收",
+            "summary_zh": "东佛罗里达于1821年正式移交美国。美方接收时石堡已经失修。"
+          }
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "related_event_ids": [],
+        "mapping_method": "Library of Congress HABS FL-15-5 sheet 2 gives measured 48 ft first-floor walls. WGS84 standing wall trace from OpenStreetMap way 246845463 (© OpenStreetMap contributors, ODbL), checked against the measured plan. Simplified small corner turret. Fort only, with no inlet, shoreline or park parcel.",
+        "prior_record_ids": [
+          "FORT_MATANZAS"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.2391228,
+              29.7152309
+            ],
+            [
+              -81.239029,
+              29.7153377
+            ],
+            [
+              -81.2389091,
+              29.7152577
+            ],
+            [
+              -81.2390018,
+              29.715148
+            ],
+            [
+              -81.2390575,
+              29.7151862
+            ],
+            [
+              -81.2391228,
+              29.7152309
             ]
           ]
         ]
