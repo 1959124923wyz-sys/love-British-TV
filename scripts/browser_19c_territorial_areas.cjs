@@ -636,10 +636,21 @@ async function verify() {
   assert(!(await atlantic()).activeRegionalZones.includes(oldSanJose.id));
   const rebuiltSanJose = [10.314321, -75.5783776];
   await setView([...rebuiltSanJose, 16]);
-  await jump(1777);
-  assert(!(await atlantic()).activeRegionalZones.includes('BOCACHICA_SAN_JOSE_REBUILT'));
+  const reconstructionSite = 'BOCACHICA_SAN_JOSE_RECONSTRUCTION_SITE';
+  await jump(1750);
+  assert(!(await atlantic()).activeRegionalSites.includes(reconstructionSite));
+  for (const [year, title] of [[1751, '圣何塞堡 · 西班牙重筑工程'],
+   [1759, '圣何塞堡 · 重筑完成'], [1777, '圣何塞堡 · 重筑完成']]) {
+   await jump(year);
+   const active = await atlantic();
+   assert(active.activeRegionalSites.includes(reconstructionSite));
+   assert(!active.activeRegionalZones.includes('BOCACHICA_SAN_JOSE_REBUILT'));
+   await clickAreaAt(...rebuiltSanJose);
+   await dossierTitle.filter({ hasText: title }).waitFor();
+  }
   for (const year of [1778, 1799]) {
    await jump(year);
+   assert(!(await atlantic()).activeRegionalSites.includes(reconstructionSite));
    await clickAreaAt(...rebuiltSanJose);
    const fort = page.locator('[data-overlap-id="18c:BOCACHICA_SAN_JOSE_REBUILT"]');
    await fort.waitFor();
