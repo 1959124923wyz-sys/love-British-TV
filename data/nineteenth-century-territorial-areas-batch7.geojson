@@ -586,6 +586,51 @@
       "id": "19CT7-MATANZAS-HABS",
       "label": "美国国会图书馆｜马坦萨斯石堡首层实测",
       "url": "https://www.loc.gov/item/fl0166/"
+    },
+    {
+      "id": "19CT7-BONETE-PLAN",
+      "label": "卡塔赫纳堡垒管理机构｜圣费利佩堡平面与堡垒沿革",
+      "url": "https://fortificacionescartagena.com.co/wp-content/uploads/2026/04/MANUAL-DE-USO-2.pdf"
+    },
+    {
+      "id": "19CT7-BONETE-1811",
+      "label": "哥伦比亚共和国银行文化馆藏｜卡塔赫纳1811年独立与保卫",
+      "url": "https://colecciones.banrepcultural.org/es/documento/cartagena-ciudad-heroica-1811-1812-1815/63a069185d96b8790f351365"
+    },
+    {
+      "id": "19CT7-BONETE-1815",
+      "label": "哥伦比亚共和国银行史料研究｜1815年莫里略围攻卡塔赫纳",
+      "url": "https://repositorio.banrep.gov.co/items/f1808b92-f76b-47e0-9978-757fdf2b2c81"
+    },
+    {
+      "id": "19CT7-BONETE-1821",
+      "label": "哥伦比亚海军｜1821年卡塔赫纳投降及实际交接",
+      "url": "https://www.armada.mil.co/sites/default/files/gbb-uploads/Libros/1_cartagena_de_indias_y_su_revuelo_andaluz.pdf"
+    },
+    {
+      "id": "19CT7-BOCACHICA-AREVALO",
+      "label": "西印度总档案馆｜1763 年博卡奇卡水道和要塞图",
+      "url": "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22221"
+    },
+    {
+      "id": "19CT7-BOCACHICA-SAN-JOSE",
+      "label": "卡塔赫纳遗产机构｜圣何塞堡建筑史",
+      "url": "https://www.smpcartagena.org/anterior/es/fortificaciones/fuerte_san_jose.htm"
+    },
+    {
+      "id": "19CT7-BOCACHICA-1815",
+      "label": "哥伦比亚共和国银行史料研究｜1815年莫里略围攻卡塔赫纳",
+      "url": "https://repositorio.banrep.gov.co/items/f1808b92-f76b-47e0-9978-757fdf2b2c81"
+    },
+    {
+      "id": "19CT7-BOCACHICA-1815-FORTS",
+      "label": "哥伦比亚海军｜1815年博卡奇卡诸堡交接",
+      "url": "https://www.armada.mil.co/sites/default/files/gbb-uploads/Libros/1_cartagena_de_indias_y_su_revuelo_andaluz.pdf"
+    },
+    {
+      "id": "19CT7-BOCACHICA-1821",
+      "label": "哥伦比亚历史学会｜1821年博卡奇卡防线投降",
+      "url": "https://academiahistoria.org.co/wp-content/uploads/2023/08/BHA-875.pdf#page=78"
     }
   ],
   "features": [
@@ -4387,6 +4432,315 @@
             [
               -81.2391228,
               29.7152309
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cartagena-san-felipe-bonete-1800",
+      "properties": {
+        "name": "圣费利佩堡 · 从殖民驻守到共和国接收",
+        "stable_id": "cartagena-san-felipe-bonete",
+        "start_year": 1800,
+        "end_year": 1821,
+        "display_kind": "military_impact",
+        "label_type": "驻堡",
+        "summary_zh": "山顶旧堡在1800年仍是西班牙卡塔赫纳设防的一部分。卡塔赫纳1811年宣布独立，1815年短暂被西班牙夺回，1821年移交共和国。",
+        "source_ids": [
+          "19CT7-BONETE-PLAN",
+          "19CT7-BONETE-1811",
+          "19CT7-BONETE-1815",
+          "19CT7-BONETE-1821"
+        ],
+        "source_urls": [
+          "https://fortificacionescartagena.com.co/wp-content/uploads/2026/04/MANUAL-DE-USO-2.pdf",
+          "https://colecciones.banrepcultural.org/es/documento/cartagena-ciudad-heroica-1811-1812-1815/63a069185d96b8790f351365",
+          "https://repositorio.banrep.gov.co/items/f1808b92-f76b-47e0-9978-757fdf2b2c81",
+          "https://www.armada.mil.co/sites/default/files/gbb-uploads/Libros/1_cartagena_de_indias_y_su_revuelo_andaluz.pdf",
+          "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22219",
+          "https://www.muhca.gov.co/cartapedia_las-obras-de-construccion-del-castillo-san-felipe-de-barajas-82",
+          "https://www.muhca.gov.co/cartapedia_castillo-san-felipe-de-barajas-76"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1810,
+            "title": "圣费利佩堡 · 西班牙驻防延续",
+            "summary_zh": "山顶旧堡与1799年为同一处防御设施，随卡塔赫纳由西班牙管理。"
+          },
+          {
+            "start_year": 1811,
+            "end_year": 1814,
+            "title": "圣费利佩堡 · 卡塔赫纳独立政府管辖",
+            "summary_zh": "1811年11月11日卡塔赫纳宣布独立，城区与山顶要塞由当地独立政府掌管。"
+          },
+          {
+            "start_year": 1815,
+            "end_year": 1815,
+            "title": "圣费利佩堡 · 西班牙围城后接收",
+            "summary_zh": "莫里略率西班牙远征军封锁卡塔赫纳。独立军撤出后，西班牙军于12月6日接管城防。"
+          },
+          {
+            "start_year": 1816,
+            "end_year": 1820,
+            "title": "圣费利佩堡 · 西班牙再度管辖",
+            "summary_zh": "1815年西班牙重新夺取卡塔赫纳后，该城及堡垒再受殖民军管辖。"
+          },
+          {
+            "start_year": 1821,
+            "end_year": 1821,
+            "title": "圣费利佩堡 · 共和国接收卡塔赫纳城防",
+            "summary_zh": "西班牙守军协议交出卡塔赫纳，10月1日马里亚诺·蒙蒂利亚率共和国军进入城区。"
+          }
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "related_event_ids": [],
+        "mapping_method": "Trace of the Bonete wall outline from Escuela Taller Cartagena de Indias 2019 manual, fig. 2. Four extant corners and parapet changes anchored to Esri World Imagery Web Mercator tiles at zoom 19 (internal fit RMS 0.85 m, local positional estimate 5 m). AGI MP-PANAMA,170 separates the 1762 additions. The geometry shows only the summit core after the 1728–1739 repairs.",
+        "prior_record_ids": [
+          "CARTAGENA_SAN_FELIPE_BONETE"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.5392091,
+              10.4222055
+            ],
+            [
+              -75.5390452,
+              10.4221586
+            ],
+            [
+              -75.5390032,
+              10.4221347
+            ],
+            [
+              -75.5389242,
+              10.4221387
+            ],
+            [
+              -75.5389132,
+              10.4221563
+            ],
+            [
+              -75.5386776,
+              10.4221759
+            ],
+            [
+              -75.5388409,
+              10.42197
+            ],
+            [
+              -75.5388158,
+              10.4219582
+            ],
+            [
+              -75.5389085,
+              10.4217874
+            ],
+            [
+              -75.5391276,
+              10.4219269
+            ],
+            [
+              -75.5391676,
+              10.4219053
+            ],
+            [
+              -75.5392062,
+              10.4219748
+            ],
+            [
+              -75.5391921,
+              10.4220364
+            ],
+            [
+              -75.5391994,
+              10.4220661
+            ],
+            [
+              -75.5392091,
+              10.4222055
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bocachica-san-jose-1800",
+      "properties": {
+        "name": "圣何塞堡 · 近代博卡奇卡防线",
+        "stable_id": "bocachica-san-jose-fortification",
+        "start_year": 1800,
+        "end_year": 1821,
+        "display_kind": "military_impact",
+        "label_type": "驻堡",
+        "summary_zh": "18世纪重筑的圣何塞平台在1800年仍属博卡奇卡防线。该海峡于1821年由共和国军接收。",
+        "source_ids": [
+          "19CT7-BOCACHICA-AREVALO",
+          "19CT7-BOCACHICA-SAN-JOSE",
+          "19CT7-BOCACHICA-1815",
+          "19CT7-BOCACHICA-1815-FORTS",
+          "19CT7-BOCACHICA-1821"
+        ],
+        "source_urls": [
+          "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22221",
+          "https://www.smpcartagena.org/anterior/es/fortificaciones/fuerte_san_jose.htm",
+          "https://repositorio.banrep.gov.co/items/f1808b92-f76b-47e0-9978-757fdf2b2c81",
+          "https://www.armada.mil.co/sites/default/files/gbb-uploads/Libros/1_cartagena_de_indias_y_su_revuelo_andaluz.pdf",
+          "https://academiahistoria.org.co/wp-content/uploads/2023/08/BHA-875.pdf#page=78",
+          "https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/cartagena-situado.pdf",
+          "https://bibliotecavirtual.defensa.gob.es/BVMDefensa/es/consulta/registro.do?control=BMDB20200482581"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1810,
+            "title": "圣何塞堡 · 西班牙外湾防线",
+            "summary_zh": "圣何塞堡在博卡奇卡南岸与对岸要塞相望，继续列入卡塔赫纳外湾防线。"
+          },
+          {
+            "start_year": 1811,
+            "end_year": 1814,
+            "title": "圣何塞堡 · 卡塔赫纳独立时期",
+            "summary_zh": "卡塔赫纳独立后，外湾成为城市防务的一部分。"
+          },
+          {
+            "start_year": 1815,
+            "end_year": 1815,
+            "title": "圣何塞堡 · 博卡奇卡在围城中易手",
+            "summary_zh": "莫里略的西班牙远征军围攻卡塔赫纳。12月7日，西军接收博卡奇卡的圣何塞、圣费尔南多与天使炮台。"
+          },
+          {
+            "start_year": 1816,
+            "end_year": 1820,
+            "title": "圣何塞堡 · 西班牙重掌外湾防线",
+            "summary_zh": "西班牙再度掌管卡塔赫纳及博卡奇卡水道。"
+          },
+          {
+            "start_year": 1821,
+            "end_year": 1821,
+            "title": "圣何塞堡 · 博卡奇卡防线移交共和国",
+            "summary_zh": "7月4日博卡奇卡的西班牙驻军提出投降条件。共和国军官帕迪利亚的公函记载，7月6日哥伦比亚旗已在博卡奇卡两堡升起。"
+          }
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "related_event_ids": [],
+        "mapping_method": "对照阿雷瓦洛1778年平面、塞维利亚大学论文图49–50与加的斯大学海岸考古图1，复核OpenStreetMap现存主堡与长臂炮位的WGS84构筑物轮廓。 OSM present-day geographic controls © OpenStreetMap contributors, ODbL.",
+        "prior_record_ids": [
+          "BOCACHICA_SAN_JOSE_REBUILT"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.578383,
+              10.314047
+            ],
+            [
+              -75.578234,
+              10.314565
+            ],
+            [
+              -75.57821,
+              10.314651
+            ],
+            [
+              -75.578192,
+              10.314706
+            ],
+            [
+              -75.578157,
+              10.314754
+            ],
+            [
+              -75.578099,
+              10.314786
+            ],
+            [
+              -75.577801,
+              10.314823
+            ],
+            [
+              -75.577797,
+              10.314828
+            ],
+            [
+              -75.577818,
+              10.31497
+            ],
+            [
+              -75.57829,
+              10.314908
+            ],
+            [
+              -75.578518,
+              10.314077
+            ],
+            [
+              -75.578858,
+              10.313671
+            ],
+            [
+              -75.578749,
+              10.313589
+            ],
+            [
+              -75.57874,
+              10.313603
+            ],
+            [
+              -75.578583,
+              10.313489
+            ],
+            [
+              -75.578512,
+              10.313597
+            ],
+            [
+              -75.578317,
+              10.313621
+            ],
+            [
+              -75.578315,
+              10.313624
+            ],
+            [
+              -75.578327,
+              10.313667
+            ],
+            [
+              -75.578348,
+              10.313745
+            ],
+            [
+              -75.578367,
+              10.31382
+            ],
+            [
+              -75.578292,
+              10.313913
+            ],
+            [
+              -75.578383,
+              10.314047
             ]
           ]
         ]

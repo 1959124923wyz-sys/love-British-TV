@@ -8424,6 +8424,112 @@
         ]
       },
       "stable_id": "fort-mose-second-settlement"
+    },
+    {
+      "id": "BOCACHICA_SAN_JOSE_RECONSTRUCTION_SITE",
+      "title": "卡塔赫纳 · 圣何塞堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1751,
+          "end_year": 1758,
+          "title": "圣何塞堡 · 西班牙重筑工程",
+          "note": "重建博卡奇卡防线时，西班牙于1751年在圣何塞旧堡附近动工，利用部分旧堡遗构新筑炮台。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1777,
+          "title": "圣何塞堡 · 重筑完成",
+          "note": "1759年圣何塞重筑完成。工程师安东尼奥·德·阿雷瓦洛增筑水下石堤，阻挡小艇靠近炮台外侧。"
+        }
+      ],
+      "source_urls": [
+        "https://bibliotecavirtual.defensa.gob.es/BVMDefensa/en/consulta/registro.do?id=83947",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22205",
+        "https://cvc.cervantes.es/artes/ciudades_patrimonio/cartagena_indias/paseo/bateria_jose.htm",
+        "https://www.smpcartagena.org/anterior/es/fortificaciones/fuerte_san_jose.htm"
+      ],
+      "geometry_method": "Representative point at the existing fortification on the south side of the channel, shared with the later surveyed footprint. Sala's 1751 plan and the institutional building histories establish the site and the 1751–1759 reconstruction sequence.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5783776,
+          10.314321
+        ]
+      },
+      "stable_id": "bocachica-san-jose-fortification"
+    },
+    {
+      "id": "PORTOBELO_CASTILLO_DEL_FIERRO",
+      "title": "波托韦洛 · 铁堡",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1739,
+          "end_year": 1739,
+          "title": "铁堡 · 英军攻占后拆防",
+          "note": "韦尔农舰队攻入港口时先夺取北岸铁堡。守方随后交出港口及其他堡垒。英国部队破坏港防后撤离，西班牙后来另建圣费尔南多防御工事。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/2002622163/",
+        "https://photoarchives.getarchive.net/media/a-plan-of-the-town-harbour-and-fortifications-of-porto-bello-as-it-appears-918806",
+        "https://michiganmemories.library.wmich.edu/records/plan-de-lattaque-de-porto-bello-par-lamiral-vernon",
+        "https://whc.unesco.org/en/list/135/",
+        "https://discovery.ucl.ac.uk/id/eprint/18765/1/18765.pdf"
+      ],
+      "geometry_method": "Approximate representative location of Castillo del Fierro (Iron Castle) on the north headland from independent WGS84 fits of the Durell/Rentone plan and Watson 1742 plan (BL Maps K.Top.124.23), using two islands and two old fort shoreline anchors. Estimated position uncertainty 150 m. Later San Fernando batteries excluded.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.6768,
+          9.55795
+        ]
+      },
+      "stable_id": "portobelo-castillo-del-fierro",
+      "position_uncertainty_m": 150
+    },
+    {
+      "id": "PORTOBELO_SAN_JERONIMO_OLD_SITE",
+      "title": "波托韦洛 · 圣赫罗尼莫旧炮台",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1739,
+          "end_year": 1739,
+          "title": "圣赫罗尼莫旧炮台 · 攻港时火炮已卸架",
+          "note": "圣赫罗尼莫是波托韦洛南岸据点之一。西班牙一方的记述称，1739年韦尔农攻港时，旧炮台的火炮已卸下炮架，未开炮。后来的工程保留并改造了旧堡，另建伸出的炮位和炮台。"
+        }
+      ],
+      "source_urls": [
+        "https://ipc.org.pa/ojs/index.php/ipc/article/download/71/69/226",
+        "https://www.loc.gov/item/2002622163/",
+        "https://whc.unesco.org/en/list/135/"
+      ],
+      "geometry_method": "Approximate representative location of the pre-1739 San Jerónimo structure at the north end of the rebuilt battery. Ignacio Sala's 1753 plan (CGE PAN 04-09) identifies the old platform separately. Conflicting project plans from 1666 do not fix its completed boundary.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.65534,
+          9.55559
+        ]
+      },
+      "stable_id": "portobelo-san-jeronimo-old-platform"
     }
   ],
   "regional_zones": [
@@ -11452,6 +11558,681 @@
       "outline_only": true,
       "stable_id": "fort-matanzas-stone-walls",
       "cross_century_feature_id": "fort-matanzas-1800"
+    },
+    {
+      "id": "CARTAGENA_SAN_FELIPE_BONETE",
+      "title": "圣费利佩堡 · 山顶旧堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1740,
+          "end_year": 1740,
+          "title": "圣费利佩堡 · 西班牙山顶驻堡",
+          "note": "旧堡于1657年竣工，西班牙工程师埃雷拉于1728至1739年重修。山顶堡控制陆路通向城墙和赫特塞马尼城区的通道。"
+        },
+        {
+          "start_year": 1741,
+          "end_year": 1741,
+          "title": "圣费利佩堡 · 西班牙守住山顶旧堡",
+          "note": "英军进入卡塔赫纳湾后，在4月20日进攻圣拉萨罗山上的旧堡。西班牙守军击退进攻，韦尔农舰队随后撤离。"
+        },
+        {
+          "start_year": 1742,
+          "end_year": 1761,
+          "title": "圣费利佩堡 · 围城后西班牙续守",
+          "note": "西班牙继续驻防山顶旧堡。"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1769,
+          "title": "圣费利佩堡 · 旧堡与山坡防御增建",
+          "note": "西班牙工程师安东尼奥·德·阿雷瓦洛主持增建周边炮台。山顶旧堡继续沿用，1763年测绘记录了周边的增建工程。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1799,
+          "title": "圣费利佩堡 · 西班牙山顶驻堡",
+          "note": "山顶旧堡保留在扩建的防御设施内，仍随卡塔赫纳由西班牙管理。"
+        }
+      ],
+      "source_urls": [
+        "https://fortificacionescartagena.com.co/wp-content/uploads/2026/04/MANUAL-DE-USO-2.pdf",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22219",
+        "https://www.muhca.gov.co/cartapedia_las-obras-de-construccion-del-castillo-san-felipe-de-barajas-82",
+        "https://www.muhca.gov.co/cartapedia_castillo-san-felipe-de-barajas-76",
+        "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2013/2013120.pdf",
+        "https://www.congreso.es/public_oficiales/L14/CONG/BOCG/D/BOCG-14-D-455.PDF",
+        "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
+      ],
+      "geometry_method": "Trace of the Bonete wall outline from Escuela Taller Cartagena de Indias 2019 manual, fig. 2. Four extant corners and parapet changes anchored to Esri World Imagery Web Mercator tiles at zoom 19 (internal fit RMS 0.85 m, local positional estimate 5 m). AGI MP-PANAMA,170 separates the 1762 additions. The geometry shows only the summit core after the 1728–1739 repairs.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.5392091,
+              10.4222055
+            ],
+            [
+              -75.5390452,
+              10.4221586
+            ],
+            [
+              -75.5390032,
+              10.4221347
+            ],
+            [
+              -75.5389242,
+              10.4221387
+            ],
+            [
+              -75.5389132,
+              10.4221563
+            ],
+            [
+              -75.5386776,
+              10.4221759
+            ],
+            [
+              -75.5388409,
+              10.42197
+            ],
+            [
+              -75.5388158,
+              10.4219582
+            ],
+            [
+              -75.5389085,
+              10.4217874
+            ],
+            [
+              -75.5391276,
+              10.4219269
+            ],
+            [
+              -75.5391676,
+              10.4219053
+            ],
+            [
+              -75.5392062,
+              10.4219748
+            ],
+            [
+              -75.5391921,
+              10.4220364
+            ],
+            [
+              -75.5391994,
+              10.4220661
+            ],
+            [
+              -75.5392091,
+              10.4222055
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -75.5392091,
+        10.4217874,
+        -75.5386776,
+        10.4222055
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "position_uncertainty_m": 5,
+      "stable_id": "cartagena-san-felipe-bonete",
+      "cross_century_feature_id": "cartagena-san-felipe-bonete-1800"
+    },
+    {
+      "id": "PORTOBELO_SANTIAGO_OLD",
+      "title": "波托韦洛 · 圣地亚哥旧堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1738,
+          "title": "圣地亚哥旧堡 · 西班牙驻防",
+          "note": "西班牙修筑圣地亚哥旧堡，守卫港湾南岸和进城道路。17世纪工程图已标出面向港湾的两座棱堡。"
+        },
+        {
+          "start_year": 1739,
+          "end_year": 1739,
+          "title": "圣地亚哥旧堡 · 英军接收与破坏",
+          "kind": "conflict_damage",
+          "note": "铁堡失守后，波托韦洛守方投降。韦尔农的部队接收包括圣地亚哥在内的港防工事。英方记录称，他们从各堡搬走青铜火炮与弹药，破坏防御设施后撤离。"
+        }
+      ],
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22097",
+        "https://www.loc.gov/item/2002622163/",
+        "https://aahpanama.org/wp-content/uploads/2021/04/Quiles-y-Marchena-eds-2021-Viaje-al-corazon-del-mundo.-Las-ciudades-coloniales-del-Istmo.pdf#page=226",
+        "https://whc.unesco.org/en/list/135/",
+        "https://michiganmemories.library.wmich.edu/records/plan-de-lattaque-de-porto-bello-par-lamiral-vernon",
+        "https://archive.org/details/memorialofadmira00vern/page/28/mode/2up",
+        "https://discovery.ucl.ac.uk/id/eprint/18765/1/18765.pdf",
+        "https://www.openstreetmap.org/way/670927188"
+      ],
+      "geometry_method": "Trace of AGI MP-PANAMA,60 as-built plan of 1639, transferred by three surviving wall controls via BNE MR/43/238 (reproduced in Marchena, fig. 37). Extant bastion remnants, upper castle and later Santiago works were checked separately. Approximate local placement 10–30 m. OSM controls © OpenStreetMap contributors, ODbL.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.6580984,
+              9.5542571
+            ],
+            [
+              -79.6583299,
+              9.5541434
+            ],
+            [
+              -79.6583157,
+              9.5540821
+            ],
+            [
+              -79.6585453,
+              9.5540269
+            ],
+            [
+              -79.6585609,
+              9.5540879
+            ],
+            [
+              -79.6588163,
+              9.554081
+            ],
+            [
+              -79.6587667,
+              9.5538836
+            ],
+            [
+              -79.6586864,
+              9.5538906
+            ],
+            [
+              -79.6585965,
+              9.5535189
+            ],
+            [
+              -79.6586921,
+              9.5534996
+            ],
+            [
+              -79.6586718,
+              9.5534071
+            ],
+            [
+              -79.6586061,
+              9.55342
+            ],
+            [
+              -79.6584467,
+              9.5533129
+            ],
+            [
+              -79.65844,
+              9.5532883
+            ],
+            [
+              -79.6584106,
+              9.5532939
+            ],
+            [
+              -79.6583684,
+              9.5531056
+            ],
+            [
+              -79.6581514,
+              9.5531498
+            ],
+            [
+              -79.6581943,
+              9.5533379
+            ],
+            [
+              -79.6581675,
+              9.553345
+            ],
+            [
+              -79.658173,
+              9.5533735
+            ],
+            [
+              -79.6580723,
+              9.5535373
+            ],
+            [
+              -79.6580052,
+              9.5535563
+            ],
+            [
+              -79.6580307,
+              9.553649
+            ],
+            [
+              -79.6581258,
+              9.5536247
+            ],
+            [
+              -79.6582174,
+              9.5540032
+            ],
+            [
+              -79.6581506,
+              9.5540265
+            ],
+            [
+              -79.6580998,
+              9.5540467
+            ],
+            [
+              -79.6580984,
+              9.5542571
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -79.6588163,
+        9.5531056,
+        -79.6580052,
+        9.5542571
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "portobelo-santiago-old-fort",
+      "position_uncertainty_m": 30
+    },
+    {
+      "id": "BOCACHICA_SAN_LUIS_OLD",
+      "title": "卡塔赫纳 · 圣路易斯旧堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1728,
+          "end_year": 1740,
+          "title": "圣路易斯旧堡 · 西班牙驻守海峡",
+          "note": "旧堡位于蒂耶拉邦巴岛一侧，与对岸的圣何塞堡共同扼守博卡奇卡水道。"
+        },
+        {
+          "start_year": 1741,
+          "end_year": 1741,
+          "title": "圣路易斯旧堡 · 英军占取并拆防",
+          "note": "英国远征军攻打外湾入口，4月5日西班牙守军撤离圣路易斯，英军进占堡垒并拆毁防御设施。西班牙后来另建圣费尔南多堡。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/2004632081/",
+        "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/829/",
+        "https://rodin.uca.es/bitstream/handle/10498/40323/ACTAS%20INMAR%20web.pdf?isAllowed=y&sequence=1#page=158",
+        "https://www.cervantesvirtual.com/descargaPdf/una-mirada-critica-a-la-arqueologia-maritima-en-colombia-apuntes-sobre-algunos-pecios-y-restos-de-la-batalla-por-catagena-de-indias-en-1741-1130685/",
+        "https://revistas.javeriana.edu.co/index.php/revApuntesArq/article/view/9244",
+        "https://www.flickr.com/photos/britishlibrary/50264806118",
+        "https://www.iberoamericadigital.net/BDPI/CompleteSearch.do?doctype=Material+cartogr%C3%A1fico+manuscrito&institution=Biblioteca+Nacional+de+Espa%C3%B1a&matter=Cartagena+%28Colombia%2C+Bah%C3%ADa%29+-+Cartas+n%C3%A1uticas&pageNumber=4&pageSize=1&pageSizeAbrv=20",
+        "https://fortificacionescartagena.com/es/historia/defensas-desaparecidas/san-luis-de-bocachica/",
+        "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2013/2013120.pdf",
+        "https://www.smpcartagena.org/anterior/es/fortificaciones/castillo_san_fernando.htm",
+        "https://www.openstreetmap.org/way/1506982977"
+      ],
+      "geometry_method": "描画加的斯大学公开海岸考古团队图1内堡，按图示公里尺及北向转为WGS84，以博卡奇卡码头、防波岬角及圣费尔南多东岸边缘三点校准。用1741年约翰·托马斯测绘图核对四棱堡及尺度。位置误差约15–35米。 OSM present-day geographic controls © OpenStreetMap contributors, ODbL.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.583656,
+              10.320548
+            ],
+            [
+              -75.583552,
+              10.320546
+            ],
+            [
+              -75.583568,
+              10.320061
+            ],
+            [
+              -75.583639,
+              10.320057
+            ],
+            [
+              -75.583747,
+              10.319699
+            ],
+            [
+              -75.583403,
+              10.319737
+            ],
+            [
+              -75.583389,
+              10.319828
+            ],
+            [
+              -75.582889,
+              10.319792
+            ],
+            [
+              -75.582869,
+              10.319707
+            ],
+            [
+              -75.582562,
+              10.319641
+            ],
+            [
+              -75.582608,
+              10.320013
+            ],
+            [
+              -75.582716,
+              10.320011
+            ],
+            [
+              -75.582671,
+              10.320472
+            ],
+            [
+              -75.582555,
+              10.32048
+            ],
+            [
+              -75.582488,
+              10.32082
+            ],
+            [
+              -75.58285,
+              10.32081
+            ],
+            [
+              -75.58284,
+              10.320691
+            ],
+            [
+              -75.583342,
+              10.320709
+            ],
+            [
+              -75.583344,
+              10.3208
+            ],
+            [
+              -75.583672,
+              10.320887
+            ],
+            [
+              -75.583656,
+              10.320548
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -75.583747,
+        10.319641,
+        -75.582488,
+        10.320887
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "bocachica-san-luis-old-fort",
+      "position_uncertainty_m": 35
+    },
+    {
+      "id": "BOCACHICA_SAN_JOSE_OLD",
+      "title": "卡塔赫纳 · 圣何塞旧堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1725,
+          "end_year": 1740,
+          "title": "圣何塞旧堡 · 西班牙外湾驻防",
+          "note": "西班牙在水道南岸的圣何塞旧堡驻军，水道对岸是圣路易斯堡。"
+        },
+        {
+          "start_year": 1741,
+          "end_year": 1741,
+          "title": "圣何塞旧堡 · 英军攻入外湾",
+          "note": "4月5日西班牙守军撤出外湾入口工事，英军进占圣何塞旧堡。旧堡在战事中被毁，西班牙其后利用部分旧构重筑。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/2004632081/",
+        "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/829/",
+        "https://www.smpcartagena.org/anterior/es/fortificaciones/fuerte_san_jose.htm",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22221",
+        "https://rodin.uca.es/bitstream/handle/10498/40323/ACTAS%20INMAR%20web.pdf?isAllowed=y&sequence=1#page=158",
+        "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2013/2013120.pdf",
+        "https://normograma.mincultura.gov.co/compilacion/docs/13001-23-33-000-2011-00348-01%28AP%29_20221028.htm",
+        "https://idus.us.es/server/api/core/bitstreams/8398c684-2077-47fe-8351-90e69c5886e5/content#page=154"
+      ],
+      "geometry_method": "描画约翰·托马斯1741年圣何塞200英尺比例放大图，按主图恢复墙走向，再以海峡两堡相对方位调整。绘图中心取现存炮台主堡与一处官方坐标之间的旧址，绝对位置约 ±40 米。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.578358,
+              10.314047
+            ],
+            [
+              -75.578315,
+              10.314115
+            ],
+            [
+              -75.578405,
+              10.314211
+            ],
+            [
+              -75.57844,
+              10.314202
+            ],
+            [
+              -75.578528,
+              10.314261
+            ],
+            [
+              -75.578719,
+              10.313973
+            ],
+            [
+              -75.578591,
+              10.313929
+            ],
+            [
+              -75.578608,
+              10.313902
+            ],
+            [
+              -75.578499,
+              10.313831
+            ],
+            [
+              -75.578453,
+              10.313903
+            ],
+            [
+              -75.578334,
+              10.313932
+            ],
+            [
+              -75.578358,
+              10.314047
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -75.578719,
+        10.313831,
+        -75.578315,
+        10.314261
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "bocachica-san-jose-fortification",
+      "position_uncertainty_m": 40
+    },
+    {
+      "id": "BOCACHICA_SAN_JOSE_REBUILT",
+      "title": "卡塔赫纳 · 圣何塞重筑堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1799,
+          "title": "圣何塞堡 · 西班牙重筑炮台",
+          "note": "西班牙于1751年开始重筑圣何塞，并增设伸向水道的曲尺形炮台。1778年阿雷瓦洛的工程图记下这座后期炮台的布局。"
+        }
+      ],
+      "source_urls": [
+        "https://www.smpcartagena.org/anterior/es/fortificaciones/fuerte_san_jose.htm",
+        "https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/cartagena-situado.pdf",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22221",
+        "https://bibliotecavirtual.defensa.gob.es/BVMDefensa/es/consulta/registro.do?control=BMDB20200482581",
+        "https://idus.us.es/server/api/core/bitstreams/8398c684-2077-47fe-8351-90e69c5886e5/content#page=154",
+        "https://rodin.uca.es/bitstream/handle/10498/40323/ACTAS%20INMAR%20web.pdf?isAllowed=y&sequence=1#page=158",
+        "https://normograma.mincultura.gov.co/compilacion/docs/13001-23-33-000-2011-00348-01%28AP%29_20221028.htm",
+        "https://www.openstreetmap.org/way/101805714",
+        "https://academiahistoria.org.co/wp-content/uploads/2023/08/BHA-875.pdf"
+      ],
+      "geometry_method": "对照阿雷瓦洛1778年平面、塞维利亚大学论文图49–50与加的斯大学海岸考古图1，复核OpenStreetMap现存主堡与长臂炮位的WGS84构筑物轮廓。 OSM present-day geographic controls © OpenStreetMap contributors, ODbL.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.578383,
+              10.314047
+            ],
+            [
+              -75.578234,
+              10.314565
+            ],
+            [
+              -75.57821,
+              10.314651
+            ],
+            [
+              -75.578192,
+              10.314706
+            ],
+            [
+              -75.578157,
+              10.314754
+            ],
+            [
+              -75.578099,
+              10.314786
+            ],
+            [
+              -75.577801,
+              10.314823
+            ],
+            [
+              -75.577797,
+              10.314828
+            ],
+            [
+              -75.577818,
+              10.31497
+            ],
+            [
+              -75.57829,
+              10.314908
+            ],
+            [
+              -75.578518,
+              10.314077
+            ],
+            [
+              -75.578858,
+              10.313671
+            ],
+            [
+              -75.578749,
+              10.313589
+            ],
+            [
+              -75.57874,
+              10.313603
+            ],
+            [
+              -75.578583,
+              10.313489
+            ],
+            [
+              -75.578512,
+              10.313597
+            ],
+            [
+              -75.578317,
+              10.313621
+            ],
+            [
+              -75.578315,
+              10.313624
+            ],
+            [
+              -75.578327,
+              10.313667
+            ],
+            [
+              -75.578348,
+              10.313745
+            ],
+            [
+              -75.578367,
+              10.31382
+            ],
+            [
+              -75.578292,
+              10.313913
+            ],
+            [
+              -75.578383,
+              10.314047
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -75.578858,
+        10.313489,
+        -75.577797,
+        10.31497
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "stable_id": "bocachica-san-jose-fortification",
+      "cross_century_feature_id": "bocachica-san-jose-1800"
     }
   ]
 }
