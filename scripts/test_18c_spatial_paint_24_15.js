@@ -56,6 +56,7 @@ A(city('ST_EUSTATIUS').category.includes('年内短占'));A(city('ST_EUSTATIUS')
 A(active(city('PENANG'),1786));A(!active(city('PENANG'),1785));
 A(!active(city('CAPE_TOWN'),1794));A(active(city('CAPE_TOWN'),1795));
 A(active(city('NEW_YORK_CITY'),1782));A(!active(city('NEW_YORK_CITY'),1783));
+A.equal(city('NEW_YORK_CITY').superseded_by,'NYC_LOWER_MANHATTAN_1767');
 A(app.includes('window.eighteenthSpatial?.render?.()'), 'no annual area render integration');
 A(text('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-dynamic-area','.atlas-18c-dynamic-core'"), 'map click interception not protected');
 A(html.includes('eighteenth-dynamic-spatial.js?v=18c-map-first-dynamic-areas-20261112'));

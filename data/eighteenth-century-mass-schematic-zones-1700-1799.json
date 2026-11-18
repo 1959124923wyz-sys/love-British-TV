@@ -4395,6 +4395,7 @@
     },
     {
       "id": "NEWPORT_GARRISON",
+      "superseded_by": "NEWPORT_TOWN_1777",
       "title": "纽波特1776—1779英国占领城镇",
       "kind": "wartime_occupation",
       "periods": [
@@ -4423,6 +4424,7 @@
     },
     {
       "id": "PHILADELPHIA_GARRISON",
+      "superseded_by": "PHILADELPHIA_TOWN_1777",
       "title": "费城1777—1778英军占城",
       "kind": "wartime_occupation",
       "periods": [
@@ -4507,6 +4509,7 @@
     },
     {
       "id": "NEW_YORK_HARBOR",
+      "superseded_by": "NYC_LOWER_MANHATTAN_1767",
       "title": "1776—1783纽约英国港湾驻军范围",
       "kind": "wartime_occupation",
       "periods": [
@@ -7040,6 +7043,7 @@
     },
     {
       "id": "NEWPORT_OCCUPIED",
+      "superseded_by": "NEWPORT_TOWN_1777",
       "title": "独立战争纽波特英军驻城",
       "periods": [
         {
@@ -7062,6 +7066,7 @@
     },
     {
       "id": "PHILADELPHIA_OCCUPIED",
+      "superseded_by": "PHILADELPHIA_TOWN_1777",
       "title": "独立战争费城英军驻城",
       "periods": [
         {
@@ -13933,6 +13938,1440 @@
       "stable_id": "gaspe-paspebiac-cod-station",
       "position_uncertainty_m": 100,
       "cross_century_feature_id": "gaspe-paspebiac-cod-station-1800"
+    },
+    {
+      "id": "NYC_BOWLING_GREEN",
+      "title": "纽约 · 鲍灵格林",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "鲍灵格林 · 拆除乔治三世像",
+          "note": "1776年7月9日纽约宣读《独立宣言》后，独立派来到鲍灵格林推倒乔治三世的雕像。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "鲍灵格林 · 纽约撤军日",
+          "note": "1783年11月25日英军撤出纽约城。华盛顿入城队伍走到鲍灵格林。",
+          "kind": "diplomacy"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/places/bowling-green.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://libguides.nypl.org/americanrevolutionresources/newyork"
+      ],
+      "geometry_method": "National Park Service site in the Oval Green in front of the former fort.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01372,
+          40.70493
+        ]
+      },
+      "stable_id": "nyc-bowling-green",
+      "position_uncertainty_m": 30
+    },
+    {
+      "id": "NYC_OLD_CITY_HALL",
+      "title": "纽约 · 旧市政厅与联邦大厅",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1703,
+          "end_year": 1775,
+          "title": "旧市政厅 · 英属纽约政府",
+          "note": "旧市政厅于1699至1703年间兴建，作为英属纽约殖民地的政府办公地。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1782,
+          "title": "旧市政厅 · 英军占领期间",
+          "note": "旧市政厅位于英军占领的纽约港城，旧城的军政活动持续到1783年撤军。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1787,
+          "title": "旧市政厅 · 美国邦联时期",
+          "note": "英军撤离以后，纽约成为美国邦联国会的驻地。"
+        },
+        {
+          "start_year": 1788,
+          "end_year": 1789,
+          "title": "联邦大厅 · 第一届国会",
+          "note": "朗方1788年改建旧市政厅。华盛顿于1789年4月30日在这里宣誓就职。"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1799,
+          "title": "旧市政厅 · 联邦政府迁往费城",
+          "note": "1790年首都迁至费城后，纽约市政府重新使用该楼。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/feha/learn/hc.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://home.nps.gov/feha/learn/historyculture/the-congress-at-federal-hall.htm"
+      ],
+      "geometry_method": "National Park Service, 26 Wall Street, at the same site as the original city hall.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01027,
+          40.70729
+        ]
+      },
+      "stable_id": "nyc-old-city-hall",
+      "position_uncertainty_m": 20,
+      "cross_century_feature_id": "nyc-old-city-hall-1800"
+    },
+    {
+      "id": "NYC_FRAUNCES_TAVERN",
+      "title": "纽约 · 弗朗西斯酒馆",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1774,
+          "title": "弗朗西斯酒馆 · 港城酒馆",
+          "note": "塞缪尔·弗朗西斯1762年购入珍珠街与宽街交角的房屋，在此经营酒馆。"
+        },
+        {
+          "start_year": 1775,
+          "end_year": 1775,
+          "title": "弗朗西斯酒馆 · 英舰炮击波及",
+          "note": "1775年独立派试图拆走岸炮时，英国军舰开炮，一枚炮弹打穿了酒馆屋顶。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1782,
+          "title": "弗朗西斯酒馆 · 英军占领期间",
+          "note": "酒馆坐落于被英军占领的纽约旧港城。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "弗朗西斯酒馆 · 华盛顿与军官告别",
+          "note": "英军撤出纽约后，华盛顿在酒馆长厅与军官告别。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1788,
+          "title": "弗朗西斯酒馆 · 邦联政府办公",
+          "note": "外交、战争和财政部门曾在这里设办公室。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1789,
+          "end_year": 1799,
+          "title": "弗朗西斯酒馆 · 继续营业",
+          "note": "酒馆继续兼作旅店，营业延续到十九世纪。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/places/000/fraunces-tavern.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99"
+      ],
+      "geometry_method": "National Park Service, 54 Pearl Street at Broad Street.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01134,
+          40.7034
+        ]
+      },
+      "stable_id": "nyc-fraunces-tavern",
+      "position_uncertainty_m": 15,
+      "cross_century_feature_id": "nyc-fraunces-tavern-1800"
+    },
+    {
+      "id": "NYC_TRINITY_CHURCH",
+      "title": "纽约 · 三一教堂",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1775,
+          "title": "三一教堂 · 王室敕许教区",
+          "note": "三一教堂1697年获英王特许，第一座教堂位于华尔街端的百老汇。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "三一教堂 · 纽约大火",
+          "note": "1776年英军进入纽约数日后，城中大火烧毁第一座三一教堂。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1789,
+          "title": "三一教堂 · 火灾后的旧址",
+          "note": "第一座教堂焚毁后，原址直至第二座教堂建成才恢复使用。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1799,
+          "title": "三一教堂 · 第二座教堂落成",
+          "note": "第二座教堂于1790年奉献启用。"
+        }
+      ],
+      "source_urls": [
+        "https://trinitychurchnyc.org/sites/default/files/inline-files/200520_Cemetery%20Walking%20tour_v7_PDF%20only_0.pdf",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://s-media.nyc.gov/agencies/lpc/arch_reports/1935.pdf"
+      ],
+      "geometry_method": "Historical churchyard and church site on Broadway at Wall Street.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01214,
+          40.70812
+        ]
+      },
+      "stable_id": "nyc-trinity-church",
+      "position_uncertainty_m": 45,
+      "cross_century_feature_id": "nyc-trinity-church-1800"
+    },
+    {
+      "id": "NYC_SUGAR_HOUSE_LIBERTY",
+      "title": "纽约 · 自由街糖厂监狱",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1782,
+          "title": "自由街糖厂 · 英军关押战俘",
+          "note": "英军征用自由街近百老汇的五层糖厂作为监狱。部分囚犯在华盛顿堡失守后被押到这里，囚禁者经历拥挤、饥饿与疾病。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/articles/000/prison-ship-martyrs.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99"
+      ],
+      "geometry_method": "Vicinity of the former five-story Livingston sugar house on Liberty Street near Broadway, as identified by NPS.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01043,
+          40.70929
+        ]
+      },
+      "stable_id": "nyc-sugar-house-liberty",
+      "position_uncertainty_m": 100
+    },
+    {
+      "id": "NYC_FORT_WASHINGTON",
+      "title": "纽约 · 华盛顿堡",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "华盛顿堡 · 11月16日陷落",
+          "note": "1776年11月16日，英国及黑森部队攻下曼哈顿北端的华盛顿堡。被俘士兵随后被关押在纽约监狱。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1782,
+          "title": "克尼普豪森堡 · 英军驻防",
+          "note": "攻下华盛顿堡后，英方以黑森将领克尼普豪森命名此堡，将它纳入曼哈顿防御。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/gm71000652/",
+        "https://www.loc.gov/item/gm71000989/",
+        "https://www.nps.gov/articles/000/prison-ship-martyrs.htm"
+      ],
+      "geometry_method": "Site on Bennett Park height, checked against Faden’s attack plan, without tracing later commemorative walls.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93805,
+          40.85302
+        ]
+      },
+      "stable_id": "nyc-fort-washington",
+      "position_uncertainty_m": 75
+    },
+    {
+      "id": "NYC_WALLABOUT_PRISON_SHIPS",
+      "title": "布鲁克林 · 瓦拉鲍特湾监狱船",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "瓦拉鲍特湾 · 惠特比号拘押俘虏",
+          "note": "1776年10月，英军将惠特比号停在布鲁克林瓦拉鲍特湾，关押被俘人员。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1782,
+          "title": "瓦拉鲍特湾 · 英军监狱船",
+          "note": "英方把被俘陆军士兵、水手和私掠船船员等关押于湾内多艘船上。船内长期拥挤，囚犯死于饥饿和疾病。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "瓦拉鲍特湾 · 监狱船拘押随英军撤离结束",
+          "note": "纽约港军事占领结束，英军使用的战时监狱船体系随之终止。"
+        }
+      ],
+      "source_urls": [
+        "https://s-media.nyc.gov/agencies/lpc/arch_reports/1954.pdf",
+        "https://www.nan.usace.army.mil/Portals/37/Appendix%20A8_Tier%201%20Cultural%20Resources_HATS.pdf",
+        "https://www.nps.gov/articles/000/prison-ship-martyrs.htm",
+        "https://npgallery.nps.gov/GetAsset/314d2a7b-7525-4998-8a77-dd3b9dba7073"
+      ],
+      "geometry_method": "Anchor in the historical sheltered cove documented by the Brooklyn Navy Yard nomination and NYC LPC archaeology. Individual moorings changed.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97155,
+          40.70366
+        ]
+      },
+      "stable_id": "nyc-wallabout-prison-ships",
+      "position_uncertainty_m": 400
+    },
+    {
+      "id": "NYC_BROOKLYN_FERRY",
+      "title": "布鲁克林 · 旧渡口",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "布鲁克林旧渡口 · 大陆军撤过东河",
+          "note": "1776年8月27日独立派在长岛战败。8月29至30日夜，大陆军渡过东河撤向曼哈顿。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1782,
+          "title": "布鲁克林旧渡口 · 英军占领期间",
+          "note": "英军控制纽约港两岸的主要驻点。布鲁克林旧渡口连接东河两岸。"
+        }
+      ],
+      "source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities",
+        "https://www.loc.gov/item/gm71000989/",
+        "https://www.nan.usace.army.mil/Portals/37/Appendix%20A8_Tier%201%20Cultural%20Resources_HATS.pdf"
+      ],
+      "geometry_method": "East River Brooklyn ferry landing on Ratzer; cross-checked with the 1776 battle sequence.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99404,
+          40.70314
+        ]
+      },
+      "stable_id": "nyc-brooklyn-ferry",
+      "position_uncertainty_m": 115
+    },
+    {
+      "id": "NYC_BROOKLYN_PUTNAM",
+      "title": "布鲁克林 · 旧普特南堡",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "旧普特南堡 · 长岛战役中的堡垒",
+          "note": "格林在1776年督建普特南堡。独立派在长岛战役后放弃布鲁克林工事，撤往曼哈顿。"
+        }
+      ],
+      "source_urls": [
+        "https://nycgovparks.org/parks/fort-greene-park/monuments/1222",
+        "https://www.loc.gov/item/gm71000989/",
+        "https://www.loc.gov/item/gm71000992/"
+      ],
+      "geometry_method": "Fort Greene Park hill where NYC Parks locates Fort Putnam. The later monument is a locator.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97562,
+          40.69148
+        ]
+      },
+      "stable_id": "nyc-brooklyn-putnam",
+      "position_uncertainty_m": 100
+    },
+    {
+      "id": "NYC_GOVERNORS_ISLAND_EARTHWORK",
+      "title": "总督岛 · 革命战争土堡",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1775,
+          "title": "总督岛 · 大陆军修筑土垒",
+          "note": "大陆军于1775至1776年在总督岛高处构筑防务。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1782,
+          "title": "总督岛 · 英军占驻",
+          "note": "长岛战役后大陆军撤岛。黑森部队占用岛上阵地，英军继续驻留。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "总督岛 · 12月3日交还纽约州",
+          "note": "英军于11月25日撤出纽约城。12月3日，海军少将迪格比将总督岛及军营、医院、仓房等交给纽约州州长。",
+          "kind": "diplomacy"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/parkhistory/online_books/gate/fort_jay_hsr.pdf",
+        "https://www.nps.gov/gois/learn/historyculture/fortjay.htm",
+        "https://www.loc.gov/item/gm71000992/"
+      ],
+      "geometry_method": "North-side high ground on Governor’s Island. NPS HSR distinguishes the missing occupation-era earthwork from the later fort.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01601,
+          40.6914
+        ]
+      },
+      "stable_id": "nyc-governors-island-fort",
+      "position_uncertainty_m": 125
+    },
+    {
+      "id": "NYC_FORT_JAY",
+      "title": "总督岛 · 杰伊堡",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1795,
+          "title": "总督岛 · 重修海防工事",
+          "note": "1794年纽约州和联邦国会拨款重建岛上防务。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1797,
+          "title": "总督岛 · 新土堡与两座炮台",
+          "note": "1796年战争部长报告岛上已有一座土堡、两座炮台和军营。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "杰伊堡 · 纽约州所辖海防据点",
+          "note": "工事继续修整，1798年前后以州长约翰·杰伊命名。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/gois/learn/historyculture/fortjay.htm",
+        "https://www.nps.gov/parkhistory/online_books/gate/fort_jay_hsr.pdf"
+      ],
+      "geometry_method": "Fort Jay high ground; NPS describes the early coastal defenses and the different 1800 and 1808 building states.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01601,
+          40.6914
+        ]
+      },
+      "stable_id": "nyc-governors-island-fort",
+      "position_uncertainty_m": 35,
+      "cross_century_feature_id": "nyc-governors-island-fort-1800"
+    },
+    {
+      "id": "NYC_BLACK_EVACUATION_PORT",
+      "title": "纽约港 · 1783年黑人撤离登记",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "纽约港 · 黑人登船查验与奴役主追索",
+          "note": "1783年英国撤离前，官员在纽约港登记约3000名黑人男女和儿童。许多自行逃离奴役的人登船，亦有人被审查官退还给声称拥有他们的奴役主。艾丽莎白·特鲁安特持有英方签发的自由证明，仍被托马斯·史密斯索回。"
+        }
+      ],
+      "source_urls": [
+        "https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history/loyalists/book-of-negroes.html",
+        "https://www.nationalarchives.gov.uk/explore-the-collection/stories/the-book-of-negroes/",
+        "https://archives.novascotia.ca/africanns/book-of-negroes/",
+        "https://www.archives.gov/milestone-documents/treaty-of-paris"
+      ],
+      "geometry_method": "Port-level anchor off Ratzer’s Whitehall Slip, without assigning the inspection to a specific pier.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01095,
+          40.7021
+        ]
+      },
+      "stable_id": "nyc-black-evacuation-port",
+      "position_uncertainty_m": 650
+    },
+    {
+      "id": "NYC_GOVERNMENT_HOUSE",
+      "title": "纽约 · 政府大楼",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1790,
+          "end_year": 1799,
+          "title": "政府大楼 · 旧堡拆除后改建",
+          "note": "1790年纽约拆除乔治堡，在原址筹建政府大楼。联邦首都迁往费城后，这里改作纽约州州长官邸。"
+        }
+      ],
+      "source_urls": [
+        "https://s-media.nyc.gov/agencies/lpc/arch_reports/1935.pdf"
+      ],
+      "geometry_method": "Former Fort George site at the south end of Bowling Green, from the City of New York Phase IA archaeological report and the 1794 view it cites.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01384,
+          40.70409
+        ]
+      },
+      "stable_id": "nyc-government-house",
+      "position_uncertainty_m": 50,
+      "cross_century_feature_id": "nyc-government-house-1800"
+    },
+    {
+      "id": "NEWPORT_COLONY_HOUSE",
+      "title": "纽波特殖民地议会楼",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1739,
+          "end_year": 1775,
+          "title": "殖民地议会楼 · 罗得岛议会",
+          "note": "1739年议会楼完工，成为殖民地主要会议场所。1773年英国官员在此调查加斯皮号被焚。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1778,
+          "title": "殖民地议会楼 · 英军营房",
+          "note": "1776年7月20日独立宣言在楼前宣读。12月英军进驻纽波特，此后把议会楼用作营房。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "殖民地议会楼 · 英军撤离后",
+          "note": "英军撤离后，议会楼留有严重损毁。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1781,
+          "title": "殖民地议会楼 · 法国军医院",
+          "note": "法国军队把议会楼用作医院。1781年罗尚博在楼内设宴接待华盛顿。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1799,
+          "title": "殖民地议会楼 · 恢复州议会用途",
+          "note": "法国部队离开后，楼房继续作为罗得岛州议会开会场所。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://newporthistoricalsociety.org/properties/colony-house/",
+        "https://newporthistory.org/properties/the-colony-house/",
+        "https://mapcarta.com/22788764"
+      ],
+      "geometry_method": "按现存建筑或地名位置定位。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.31306,
+          41.49033
+        ]
+      },
+      "stable_id": "newport-colony-house",
+      "position_uncertainty_m": 30,
+      "cross_century_feature_id": "newport-colony-house-1800"
+    },
+    {
+      "id": "NEWPORT_GREAT_FRIENDS",
+      "title": "纽波特大教友会集会所",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1775,
+          "title": "大教友会集会所 · 纽波特教友聚会",
+          "note": "集会所建成于1699年，是纽波特教友会的聚会场所。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1778,
+          "title": "大教友会集会所 · 黑森部队医院",
+          "note": "英国占领期间，集会所被用于英国雇用的德意志士兵的医院。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "大教友会集会所 · 黑森部队撤离",
+          "note": "英军及其黑森部队于1779年10月撤离纽波特。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1781,
+          "title": "大教友会集会所 · 法军营房",
+          "note": "1780—1781年法军把集会所用作营房，随后把受损建筑退还教友会。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1799,
+          "title": "大教友会集会所 · 返还教友会",
+          "note": "教友会收回受损建筑，将其恢复为聚会场所。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://newporthistory.org/john-g-wanton/",
+        "https://newporthistoricalsociety.org/properties/great-friends-meeting-house/",
+        "https://mapcarta.com/W560756426"
+      ],
+      "geometry_method": "按现存建筑或地名位置定位。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.31311,
+          41.492
+        ]
+      },
+      "stable_id": "newport-great-friends-meeting-house",
+      "position_uncertainty_m": 30,
+      "cross_century_feature_id": "newport-great-friends-meeting-house-1800"
+    },
+    {
+      "id": "NEWPORT_REDWOOD_LIBRARY",
+      "title": "雷德伍德图书馆",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1775,
+          "title": "雷德伍德图书馆 · 开馆",
+          "note": "1750年图书馆在贝尔维尤大道地段开放，首批书籍由伦敦购入。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1778,
+          "title": "雷德伍德图书馆 · 英军军官会所",
+          "note": "英国占领时期，军官使用图书馆作会所。馆藏在战时发生散失。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1780,
+          "title": "雷德伍德图书馆 · 部分藏书散失",
+          "note": "1779年英军撤离。1780年旧馆房曾借作罗得岛州议会会场。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1799,
+          "title": "雷德伍德图书馆 · 战后馆藏",
+          "note": "战后原馆址保留。图书馆通过捐赠和购入逐步充实馆藏。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www.battlefields.org/visit/heritage-sites/redwood-library-newport-ri",
+        "https://redwoodlibrary.org/rare-book-collections/",
+        "https://www.hmdb.org/m.asp?m=198206",
+        "https://www.discovernewport.org/blog/post/newports-oldest-places/"
+      ],
+      "geometry_method": "按现存建筑或地名位置定位。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.30863,
+          41.48643
+        ]
+      },
+      "stable_id": "newport-redwood-library",
+      "position_uncertainty_m": 40,
+      "cross_century_feature_id": "newport-redwood-library-1800"
+    },
+    {
+      "id": "NEWPORT_BUTTS_HILL",
+      "title": "巴茨山阵地与堡址",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "巴茨山 · 民兵阵地转入英军",
+          "note": "1776年12月英军占据岛北民兵阵地，沿用风车山之名，扩建驻垒。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "巴茨山 · 英军驻垒",
+          "note": "英军利用高地监视布里斯托渡口及豪兰渡口。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "巴茨山 · 美军退守与英军重返",
+          "note": "1778年8月美军一度据守高地，8月29日自此附近抵御英军攻势，随后撤过渡口。",
+          "kind": "military"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "巴茨山 · 英军撤岛",
+          "note": "英军在10月撤出阿奎德内克岛，撤去岛上驻军。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1781,
+          "title": "巴茨山 · 美法盟军扩建新堡",
+          "note": "美军与法国盟军在当地增筑围垒。今天留存的主要地垒形成于这次扩建。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://battleofrhodeisland.org/butts-hill-fort/",
+        "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/74002054_text",
+        "https://www.geonames.org/search.html?q=Portsmouth%2F&startRow=350",
+        "https://encompass.rihs.org/rhode-island-in-the-american-revolution/primary-sources/map-of-the-siege-of-newport/",
+        "https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/newport/newp_newport-hd_amendment.pdf"
+      ],
+      "geometry_method": "按全国历史地标巴茨山区域与地名中心定位。现存美法营垒与英军时期红堡的分界尚未逐段查勘。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.251159,
+          41.615658
+        ]
+      },
+      "stable_id": "newport-butts-hill",
+      "position_uncertainty_m": 50
+    },
+    {
+      "id": "NEWPORT_BATTERY_POINT",
+      "title": "伊斯顿角北炮台与格林堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "北炮台 · 英军扩建与驻防",
+          "note": "1778年5月英军扩建炮台并派兵驻守。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "北炮台 · 英军撤离拆除",
+          "note": "1779年10月英军撤走时拆除炮位。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1781,
+          "title": "北炮台 · 法军港防",
+          "note": "法国军图标出伊斯顿角炮台，见证港口的法军防御部署。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "格林堡 · 港口岸炮",
+          "note": "北炮台旧址增设新的岸防炮位，以罗得岛将领纳撒内尔·格林命名。"
+        }
+      ],
+      "source_urls": [
+        "https://battleofrhodeisland.org/fortifications/",
+        "https://www.northamericanforts.com/East/ri2.html",
+        "https://www.northamericanforts.com/East/ri3.html",
+        "https://www.loc.gov/item/gm71002156/",
+        "https://www.newportri.gov/en-us/city-hall/departments/public-services/tree-parks-open-space/guide-to-newport",
+        "https://mapcarta.com/W547697348"
+      ],
+      "geometry_method": "按纽波特市炮台公园位置及旧阵地记载定位。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.32165,
+          41.49686
+        ]
+      },
+      "stable_id": "newport-north-battery",
+      "position_uncertainty_m": 60,
+      "cross_century_feature_id": "newport-north-battery-1800"
+    },
+    {
+      "id": "NEWPORT_ADAMS_BRENTON",
+      "title": "布伦顿角炮台与亚当斯堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "布伦顿角炮台 · 本地民兵开工后落入英军",
+          "note": "1776年春纽波特民兵在旧布伦顿角修炮台，城陷后被英军接管。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1778,
+          "title": "布伦顿角炮台 · 英军港防",
+          "note": "英军仍在纽波特港内驻守布伦顿角防地。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "布伦顿角炮台 · 英军撤离",
+          "note": "1779年10月英军撤离，原有炮台设施遭毁。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1781,
+          "title": "布伦顿角 · 法国盟军港防",
+          "note": "法国舰队与炮台协同防守纽波特港口入口。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "亚当斯堡 · 第一座联邦堡",
+          "note": "1799年美国联邦在原港防驻地重建炮台，以约翰·亚当斯总统命名。"
+        }
+      ],
+      "source_urls": [
+        "https://riparks.ri.gov/History-HistoryFortAdams",
+        "https://planning.ri.gov/sites/g/files/xkgbur826/files/documents/comp/2017/NewportCompPlan2017.pdf",
+        "https://mapcarta.com/22789974",
+        "https://www.loc.gov/item/gm71002156/"
+      ],
+      "geometry_method": "以纽波特港口第一代亚当斯堡和前身炮位共同所在地名定位。现代同名州公园与更南面的布伦顿角州公园分开。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.33818,
+          41.47847
+        ]
+      },
+      "stable_id": "newport-fort-adams-brenton",
+      "position_uncertainty_m": 155,
+      "cross_century_feature_id": "newport-fort-adams-brenton-1800"
+    },
+    {
+      "id": "NEWPORT_FORT_WOLCOTT",
+      "title": "羊岛联邦岸防堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1797,
+          "title": "羊岛 · 美国接手并改设炮位",
+          "note": "1794年罗得岛把羊岛土地交美国联邦用作港防，并利用旧堡驻地修建新炮位。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "羊岛沃尔科特堡 · 联邦要塞改建",
+          "note": "1798年联邦在旧堡驻地改建沃尔科特堡，安装岸防火炮。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip",
+        "https://dem.ri.gov/sites/g/files/xkgbur861/files/programs/benviron/waste/coffeys/150213p1.pdf",
+        "https://www.northamericanforts.com/East/ri3.html",
+        "https://cdsg.org/wp-content/uploads/pdfs/CDSG/CDSG%20WEBSITE%20UPDATES/CDSG%20Downloads/AMERICAN%20SEACOAST%20DEFENSES%20FORTS%2C%20MILITARY%20RESERVATIONS%20and%20BATTERIES%201794-1945/123list.pdf"
+      ],
+      "geometry_method": "以前身乔治堡的同期图位置与史籍所载的羊岛西岸驻地定位。联邦改建堡体的轮廓另待核对。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.327635,
+          41.486914
+        ]
+      },
+      "stable_id": "newport-goat-island-fort",
+      "position_uncertainty_m": 110,
+      "cross_century_feature_id": "newport-goat-island-fort-1800"
+    },
+    {
+      "id": "NEWPORT_LONG_WHARF_REBUILD",
+      "title": "纽波特公共长码头原址",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "纽波特公共长码头 · 英军拆毁焚烧",
+          "note": "1779年10月撤离前，英军拆毁长码头的木结构，将木料予以焚烧。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "纽波特公共长码头 · 受托人募资重建",
+          "note": "1795年码头受托人发起重建，拟用租金收入支持免费公立学校。",
+          "kind": "settlement"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip",
+        "https://newporthistory.org/properties/the-colony-house/",
+        "https://tile.loc.gov/storage-services/public/gdcmassbookdig/inaroundnewport100stanh/inaroundnewport100stanh.pdf",
+        "https://musei.difesa.it/allegati/Conflitti%20Militari%20e%20Popolazioni%20Civili%20-%20Tomo%20I/files/basic-html/page233.html",
+        "https://thepointassociation.org/wp-content/uploads/2018/08/1982-June.pdf",
+        "https://newporthistory.org/wp-content/uploads/2022/04/2022_04_Web-Inventory.pdf"
+      ],
+      "geometry_method": "以1777年布拉斯科维茨—法登城图（LOC 74692105）旋转后的图像，在泰晤士街与斯普林街九处延续街口与美国人口普查局 TIGER/Line 道路对照做仿射定位，控制点内均方根误差7.9米。取原公共长码头轴线中部作同一遗址定位。1795年后重建码头长度仍待比对。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.318212,
+          41.48953
+        ]
+      },
+      "stable_id": "newport-long-wharf",
+      "position_uncertainty_m": 100,
+      "cross_century_feature_id": "newport-long-wharf-1800"
+    },
+    {
+      "id": "BEAVERTAIL_OLD_LIGHT",
+      "title": "海狸尾旧灯塔",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1778,
+          "title": "海狸尾旧灯塔 · 港口航标",
+          "note": "1749年灯塔开始在科纳尼卡特岛南端引导航行。1753年木塔失火后重建。"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "海狸尾旧灯塔 · 英军撤离前纵火",
+          "note": "英军撤离纽波特时焚烧灯塔并拆走照明设备。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1789,
+          "title": "海狸尾旧灯塔 · 灯光停用",
+          "note": "旧灯塔在战后仍有一段时间未恢复常态运转。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1799,
+          "title": "海狸尾旧灯塔 · 修复启用",
+          "note": "1790年旧塔修复并恢复航标照明。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/resource/g3772n.ar100300/",
+        "https://www.history.uscg.mil/Browse-by-Topic/Assets/Land/All/Article/2014780/beavertail-lighthouse/",
+        "https://riparks.ri.gov/History-Beavertail",
+        "https://www.beavertaillight.org/timeline/",
+        "https://digitalcommons.unf.edu/historical_architecture_main/2770/"
+      ],
+      "geometry_method": "按灯塔园区位置及1856年现存塔相对旧基座的短距离退让定位，保留原灯塔及后继塔的地址关系。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39978,
+          41.44945
+        ]
+      },
+      "stable_id": "beavertail-old-light",
+      "position_uncertainty_m": 45,
+      "cross_century_feature_id": "beavertail-old-light-1800"
+    },
+    {
+      "id": "PHILADELPHIA_STATE_HOUSE",
+      "title": "费城 · 宾夕法尼亚州议事厅",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1753,
+          "end_year": 1775,
+          "title": "州议事厅 · 宾夕法尼亚议会",
+          "note": "1753年塔楼和尖顶完工。1775年5月，第二届大陆会议在议事厅集会。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "州议事厅 · 大陆会议通过独立宣言",
+          "note": "1776年7月4日，大陆会议通过《独立宣言》。英军进逼后，代表于12月短期移往巴尔的摩。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "州议事厅 · 英军改作医院和营房",
+          "note": "9月英军占城，在宾夕法尼亚州议事厅安置病伤军人及部队。驻军损坏建筑，毁坏大量陈设。大陆会议转往兰开斯特、约克。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1789,
+          "title": "州议事厅 · 议会回城并修复",
+          "note": "英军撤离后，宾夕法尼亚议会修复建筑。大陆会议于1778年7月2日回到州议事厅。1787年制宪会议在此召开。"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1798,
+          "title": "州议事厅 · 费城成为临时首都",
+          "note": "1790年，费城成为联邦临时首都，国会使用州议事厅西侧的县法院。"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "州议事厅 · 州政府迁往兰开斯特",
+          "note": "宾夕法尼亚州政府迁往兰开斯特。联邦国会仍在隔壁的县法院开会。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/teachers/classrooms/upload/TwHP-Lessons_132independence.pdf",
+        "https://www.nps.gov/inde/learn/historyculture/places-independencehall-architecture-changeovertime.htm",
+        "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+        "https://www.loc.gov/item/gm71002155/",
+        "https://www.nps.gov/inde/learn/historyculture/places-independencehall-assemblyroom.htm"
+      ],
+      "geometry_method": "Independence Hall surviving principal building, Chestnut Street between 5th and 6th; NPS 18th-century architectural study and Easburn plate.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.15005,
+          39.94883
+        ]
+      },
+      "stable_id": "philadelphia-state-house",
+      "position_uncertainty_m": 20,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "philadelphia-state-house-1800"
+    },
+    {
+      "id": "PHILADELPHIA_WALNUT_STREET_GAOL",
+      "title": "费城 · 胡桃街监狱",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1776,
+          "title": "胡桃街监狱 · 费城县监狱",
+          "note": "费城于1773至1775年在第六街与胡桃街的东南角修建县监狱，设计者为罗伯特·史密斯。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "胡桃街监狱 · 英军关押战俘",
+          "note": "英军占城后在这里关押被俘的美国军人。囚犯遭受狱卒虐待，有人在饥饿和寒冷中死亡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1789,
+          "title": "胡桃街监狱 · 撤军后恢复县监狱",
+          "note": "占城最后几个月仍有战俘死于狱中。英军撤出以后，宾夕法尼亚当局重新管辖监狱。"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1799,
+          "title": "胡桃街监狱 · 州立监禁设施",
+          "note": "1790年宾夕法尼亚州命令在监狱院内增设单人牢房，部分被定罪者在隔离中服苦役。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/parkhistory/online_books/inde/washington_square_clr.pdf",
+        "https://irma.nps.gov/DataStore/FileSource/Get/2302283?filename=INDE_Washington+Square_CLI+Park+Report_2023rev.pdf",
+        "https://philadelphiaencyclopedia.org/essays/british-occupation-of-philadelphia/",
+        "https://www.pacourts.us/Storage/media/pdfs/manual_uploads/file-7663.pdf?cb=f5a492",
+        "https://pubs.nps.gov/eTIC/HOSP-INDU/INDE_391_D107_0001_of_0073.pdf"
+      ],
+      "geometry_method": "Pennsylvania State Historical Marker and NPS Cultural Landscapes Inventory agree on southeast corner of Sixth and Walnut. Anchor marks the historic compound, not its footprint.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1514,
+          39.94746
+        ]
+      },
+      "stable_id": "philadelphia-walnut-street-gaol",
+      "position_uncertainty_m": 25,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "philadelphia-walnut-street-gaol-1800"
+    },
+    {
+      "id": "PHILADELPHIA_SOUTHEAST_SQUARE",
+      "title": "费城 · 东南广场墓地",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1706,
+          "end_year": 1776,
+          "title": "东南广场 · 公共墓地",
+          "note": "1706年威廉·佩恩划定公共墓地。贫民、自由与被奴役的非洲裔居民葬于此，1763年死于天花的原住民也被葬于这里。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1778,
+          "title": "东南广场 · 战俘和阵亡者墓地",
+          "note": "被囚禁在胡桃街监狱、死于严寒和饥饿的一些战俘葬在广场的集体墓坑中。这里也埋有英美双方的士兵。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1792,
+          "title": "东南广场 · 居民的墓地及聚会地点",
+          "note": "战后广场继续作为墓地。费城的非洲裔居民在此聚会，并曾联名请求为墓地设置围栏。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "title": "东南广场 · 黄热病死者入葬",
+          "note": "黄热病席卷费城，许多死者葬于东南广场。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "东南广场 · 停止安葬",
+          "note": "1794年，费城关闭公墓，原有墓葬留在广场。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/inde/learn/historyculture/places-washingtonsquare.htm",
+        "https://irma.nps.gov/DataStore/FileSource/Get/2302283?filename=INDE_Washington+Square_CLI+Park+Report_2023rev.pdf",
+        "https://www.nps.gov/parkhistory/online_books/inde/washington_square_clr.pdf",
+        "https://www.loc.gov/item/gm71002155/"
+      ],
+      "geometry_method": "Center anchor of the historically named Southeast Square, bounded by 6th, 7th, Walnut and Locust; individual graves are not located.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.15264,
+          39.94686
+        ]
+      },
+      "stable_id": "philadelphia-southeast-square",
+      "position_uncertainty_m": 25,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "philadelphia-southeast-square-1800"
+    },
+    {
+      "id": "PHILADELPHIA_CARPENTERS_HALL",
+      "title": "费城 · 木匠会堂",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1776,
+          "title": "木匠会堂 · 大陆会议和宾夕法尼亚代表",
+          "note": "1774年9月，第一届大陆会议在木匠会堂开会。1776年，宾夕法尼亚代表在这里推动脱离英国。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "木匠会堂 · 英军占城医院",
+          "note": "3月大陆军先把一楼用于治疗士兵。9月英军进城后，继续把会堂用作医院。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1779,
+          "title": "木匠会堂 · 大陆军接回会堂",
+          "note": "1778年6月大陆军回到费城，重新使用会堂。同年10月军需部门租用会堂底层和地窖。"
+        }
+      ],
+      "source_urls": [
+        "https://irma.nps.gov/DataStore/FileSource/Get/2280011?filename=Folder01_NotesCarpentersHall_1948.pdf",
+        "https://www.nps.gov/inde/learn/historyculture/places-carpentershall.htm",
+        "https://history.house.gov/People/Continental-Congress/Meeting-Places/"
+      ],
+      "geometry_method": "Center of surviving Carpenters’ Hall at 320 Chestnut Street, National Register 70000552.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1472,
+          39.9481
+        ]
+      },
+      "stable_id": "philadelphia-carpenters-hall",
+      "position_uncertainty_m": 12,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "RED_BANK_WHITALL_HOUSE",
+      "title": "红岸 · 惠托尔农宅",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1748,
+          "end_year": 1776,
+          "title": "惠托尔农宅 · 河岸农场",
+          "note": "詹姆斯与安·惠托尔于1748年建成现存农宅的主体。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "惠托尔农宅 · 默瑟堡战地医院",
+          "note": "默瑟堡修筑及红岸一战损坏惠托尔家的农场。10月22日战斗之后，农宅用作战地医院，收治包括黑森军在内的伤者。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1799,
+          "title": "惠托尔农宅 · 战后的家庭农场",
+          "note": "惠托尔一家战后继续在红岸生活。农宅原址保留。"
+        }
+      ],
+      "source_urls": [
+        "https://www.gloucestercountynj.gov/DocumentCenter/View/959/Red-Bank-Battlefield-Archeology-Report-PDF",
+        "https://www.nj.gov/dca/njht/funded/sitedetails/whitall_house.shtml",
+        "https://www.openstreetmap.org/way/266455713"
+      ],
+      "geometry_method": "Surviving James and Ann Whitall House, mapped building center. Gloucester County field inventory and OSM 266455713 (ODbL).",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19064,
+          39.86949
+        ]
+      },
+      "stable_id": "red-bank-whitall-house",
+      "position_uncertainty_m": 12,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "red-bank-whitall-house-1800"
+    },
+    {
+      "id": "DELAWARE_FORT_MERCER",
+      "title": "特拉华河 · 红岸默瑟堡",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "默瑟堡 · 拒守、撤离与英军毁堡",
+          "note": "10月22日，克里斯托弗·格林指挥的守军击退冯·多诺普的黑森部队。11月21日英军在守军撤退后占堡，拆走火炮并破坏工事。"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "默瑟堡 · 毁坏后留下的土垒",
+          "note": "英军拆取火炮和破坏工事后，堡址仍留下部分土垒。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://www.gloucestercountynj.gov/DocumentCenter/View/959/Red-Bank-Battlefield-Archeology-Report-PDF",
+        "https://www.loc.gov/resource/g3814n.ar127500/",
+        "https://www.nps.gov/articles/000/philadelphia-campaign-1777.htm",
+        "https://npgallery.nps.gov/GetAsset/e575508c-3566-475f-8c22-eab5613ed56c"
+      ],
+      "geometry_method": "Red Bank bluff, around the extant public rampart area north of the Whitall House. Army Corps 1872 remnant and modern park are compared with Mauduit du Plessis 1777. Gloucester County 2017 excavation report documents materially different period layouts and gives the place, garrison and occupation chronology.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19004,
+          39.87095
+        ]
+      },
+      "stable_id": "delaware-fort-mercer",
+      "position_uncertainty_m": 45,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "DELAWARE_BILLINGSPORT_FORT",
+      "title": "特拉华河 · 比林斯波特堡",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "比林斯波特堡 · 河道拦阻据点",
+          "note": "大陆会议于1776年决定购地筑堡，部队在这段河道设置水下木桩障碍，阻挡驶向费城的军舰。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "比林斯波特堡 · 守军撤出与英军拆拦",
+          "note": "10月2日，美军封堵火炮、焚烧营房后撤离。英军接收堡垒，5日撤出，7日返回清除河道里的障碍。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/gm71000679/",
+        "https://paulsboronj.org/historic-tour/",
+        "https://www.marines.mil/portals/1/Publications/A%20Pictorial%20History-The%20Marines%20in%20the%20Revolution%20PCN%2019000317900.pdf?ver=2012-10-11-164042-950",
+        "https://www.hmdb.org/m.asp?m=69761"
+      ],
+      "geometry_method": "Fort Billingsport historic riverbank park anchor, checked against Faden’s Delaware survey; modern marker is local to the site rather than fossilized shore walls.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2509,
+          39.8478
+        ]
+      },
+      "stable_id": "delaware-billingsport-fort",
+      "position_uncertainty_m": 100,
+      "geometry_precision": "named_place_anchor"
     }
   ],
   "regional_zones": [
@@ -27422,6 +28861,3214 @@
       ],
       "outline_only": true,
       "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "NYC_LOWER_MANHATTAN_1767",
+      "title": "纽约 · 曼哈顿旧城",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1775,
+          "title": "曼哈顿旧城 · 殖民地港城",
+          "note": "拉策在1766至1767年测绘纽约的街道、码头、公共建筑和岸边防务。英属纽约的行政机构与商人聚集在曼哈顿南端。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "曼哈顿旧城 · 9月15日英军入城",
+          "note": "9月15日英军在曼哈顿登陆后进入纽约城。9月21日大火焚毁城内大片街区，第一座三一教堂被烧毁。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1782,
+          "title": "曼哈顿旧城 · 英军占领与城市监狱",
+          "note": "英国将纽约作为海军与陆军基地。占领当局征用糖厂、监狱和教堂羁押独立派战俘。"
+        }
+      ],
+      "source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities",
+        "https://s-media.nyc.gov/agencies/lpc/arch_reports/1935.pdf",
+        "https://libguides.nypl.org/americanrevolutionresources/newyork",
+        "https://www.loc.gov/item/gm71000989/"
+      ],
+      "geometry_method": "Ratzer 1766–1767 survey via Map Warper 71257 WMS, EPSG:4326. Manually traced on a 1240 × 1000 pixel rendering spanning −74.016, 40.699 to −73.985, 40.724. Checked against the South Battery Park City Phase IA archaeological report.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.0151,
+              40.7052
+            ],
+            [
+              -74.014825,
+              40.7056
+            ],
+            [
+              -74.014575,
+              40.706375
+            ],
+            [
+              -74.014175,
+              40.707225
+            ],
+            [
+              -74.0138,
+              40.70795
+            ],
+            [
+              -74.01375,
+              40.7085
+            ],
+            [
+              -74.0135,
+              40.709125
+            ],
+            [
+              -74.01355,
+              40.709575
+            ],
+            [
+              -74.013175,
+              40.71005
+            ],
+            [
+              -74.013375,
+              40.710425
+            ],
+            [
+              -74.013125,
+              40.71125
+            ],
+            [
+              -74.012875,
+              40.711675
+            ],
+            [
+              -74.012625,
+              40.712325
+            ],
+            [
+              -74.012325,
+              40.712475
+            ],
+            [
+              -74.012075,
+              40.7134
+            ],
+            [
+              -74.01165,
+              40.71355
+            ],
+            [
+              -74.011325,
+              40.714475
+            ],
+            [
+              -74.01115,
+              40.714925
+            ],
+            [
+              -74.01035,
+              40.7147
+            ],
+            [
+              -74.009325,
+              40.715375
+            ],
+            [
+              -74.008325,
+              40.71505
+            ],
+            [
+              -74.007425,
+              40.715275
+            ],
+            [
+              -74.00655,
+              40.714875
+            ],
+            [
+              -74.005725,
+              40.715275
+            ],
+            [
+              -74.004675,
+              40.714525
+            ],
+            [
+              -74.00425,
+              40.714125
+            ],
+            [
+              -74.004575,
+              40.713175
+            ],
+            [
+              -74.0036,
+              40.713
+            ],
+            [
+              -74.002875,
+              40.71265
+            ],
+            [
+              -74.001925,
+              40.712825
+            ],
+            [
+              -74.00085,
+              40.713275
+            ],
+            [
+              -74.000325,
+              40.71305
+            ],
+            [
+              -73.998925,
+              40.71305
+            ],
+            [
+              -73.99835,
+              40.712675
+            ],
+            [
+              -73.9984,
+              40.71165
+            ],
+            [
+              -73.9972,
+              40.711375
+            ],
+            [
+              -73.99715,
+              40.710375
+            ],
+            [
+              -73.997725,
+              40.71
+            ],
+            [
+              -73.99905,
+              40.709775
+            ],
+            [
+              -74.0002,
+              40.709525
+            ],
+            [
+              -74.0003,
+              40.709025
+            ],
+            [
+              -74.0008,
+              40.709
+            ],
+            [
+              -74.001775,
+              40.708875
+            ],
+            [
+              -74.00215,
+              40.708425
+            ],
+            [
+              -74.002625,
+              40.708275
+            ],
+            [
+              -74.003475,
+              40.707775
+            ],
+            [
+              -74.0042,
+              40.70725
+            ],
+            [
+              -74.005375,
+              40.7068
+            ],
+            [
+              -74.006025,
+              40.70625
+            ],
+            [
+              -74.00655,
+              40.7057
+            ],
+            [
+              -74.0071,
+              40.705175
+            ],
+            [
+              -74.00775,
+              40.70475
+            ],
+            [
+              -74.00835,
+              40.70435
+            ],
+            [
+              -74.00895,
+              40.703975
+            ],
+            [
+              -74.009525,
+              40.70345
+            ],
+            [
+              -74.009925,
+              40.7032
+            ],
+            [
+              -74.010225,
+              40.702375
+            ],
+            [
+              -74.01085,
+              40.7021
+            ],
+            [
+              -74.012225,
+              40.702175
+            ],
+            [
+              -74.0129,
+              40.702125
+            ],
+            [
+              -74.0135,
+              40.70185
+            ],
+            [
+              -74.0146,
+              40.70195
+            ],
+            [
+              -74.014725,
+              40.70275
+            ],
+            [
+              -74.014925,
+              40.703325
+            ],
+            [
+              -74.0154,
+              40.70395
+            ],
+            [
+              -74.0157,
+              40.704025
+            ],
+            [
+              -74.015625,
+              40.70435
+            ],
+            [
+              -74.015325,
+              40.704575
+            ],
+            [
+              -74.0151,
+              40.7052
+            ]
+          ]
+        ]
+      },
+      "stable_id": "nyc-lower-manhattan-1767",
+      "position_uncertainty_m": 130,
+      "bbox": [
+        -74.0157,
+        40.70185,
+        -73.99715,
+        40.715375
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "NYC_FORT_GEORGE",
+      "title": "纽约 · 乔治堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1775,
+          "title": "乔治堡 · 殖民政府与港防",
+          "note": "殖民当局利用曼哈顿南端的乔治堡与下方岸炮保护港口。1775年，独立派移除火炮，英国舰船向岸上开火。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1782,
+          "title": "乔治堡 · 英军重新占驻",
+          "note": "英军于1776年9月攻取纽约，在乔治堡和岸炮阵地驻防。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1789,
+          "title": "乔治堡 · 美方接收与废弃",
+          "note": "1783年11月25日英军撤出纽约，美方接收乔治堡。旧堡停止军事使用，1790年拆除，其石料用作岸边填土。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities",
+        "https://s-media.nyc.gov/agencies/lpc/arch_reports/1935.pdf"
+      ],
+      "geometry_method": "Ratzer 1766–1767 survey via Map Warper 71257 WMS, EPSG:4326. Manually traced on a 1240 × 1000 pixel rendering spanning −74.016, 40.699 to −73.985, 40.724. Checked against the South Battery Park City Phase IA archaeological report.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.0147,
+              40.704825
+            ],
+            [
+              -74.01455,
+              40.704975
+            ],
+            [
+              -74.0143,
+              40.7049
+            ],
+            [
+              -74.01415,
+              40.7051
+            ],
+            [
+              -74.0137,
+              40.70505
+            ],
+            [
+              -74.0136,
+              40.704825
+            ],
+            [
+              -74.013375,
+              40.704725
+            ],
+            [
+              -74.013575,
+              40.70445
+            ],
+            [
+              -74.0135,
+              40.70415
+            ],
+            [
+              -74.0137,
+              40.70395
+            ],
+            [
+              -74.0136,
+              40.7037
+            ],
+            [
+              -74.01395,
+              40.7037
+            ],
+            [
+              -74.0141,
+              40.7039
+            ],
+            [
+              -74.014425,
+              40.7039
+            ],
+            [
+              -74.01465,
+              40.70365
+            ],
+            [
+              -74.014825,
+              40.703975
+            ],
+            [
+              -74.014675,
+              40.7042
+            ],
+            [
+              -74.0147,
+              40.704475
+            ],
+            [
+              -74.014825,
+              40.70465
+            ],
+            [
+              -74.0147,
+              40.704825
+            ]
+          ]
+        ]
+      },
+      "stable_id": "nyc-fort-george",
+      "position_uncertainty_m": 100,
+      "bbox": [
+        -74.014825,
+        40.70365,
+        -74.013375,
+        40.7051
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "NEWPORT_TOWN_1777",
+      "title": "纽波特旧城与港埠",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1775,
+          "title": "纽波特旧城 · 革命阵营控制港口",
+          "note": "战争初期，当地革命阵营掌握纽波特。港埠集中在泰晤士街和公共长码头沿岸。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "纽波特旧城 · 12月8日英军进城",
+          "note": "亨利·克林顿率英国舰队及陆军占领纽波特，士兵进入民居和教堂寄驻。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1778,
+          "title": "纽波特旧城 · 英军驻城和征用",
+          "note": "英军与黑森部队占用民居及公共建筑，征集食物和木材。1778年美军发动围城，8月底撤出，英军仍驻城。"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "纽波特旧城 · 10月25日英军撤离",
+          "note": "2月9日，英方水兵强抓当地青年入海军。英军撤离前拆毁并焚烧商业长码头，拆屋取材并填塞水井。10月25日，英军命居民撤军期间留在室内。10月26日美军入城。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "纽波特旧城 · 法国盟军抵达",
+          "note": "罗尚博率法国盟军7月10日抵达，法国军队在城内布置司令部、军营和医院。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1783,
+          "title": "纽波特旧城 · 法国主力南下",
+          "note": "法国主力于1781年6月离开纽波特，南下与华盛顿会师，随后参与约克镇战事。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "纽波特旧城 · 战后港城",
+          "note": "撤军后商贸复苏缓慢。1795年码头受托人启动公共长码头重建，1798—1799年联邦陆续改建港口防御。",
+          "kind": "settlement"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip",
+        "https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/newport/newp_newport-hd_amendment.pdf",
+        "https://preservation.ri.gov/sites/g/files/xkgbur406/files/2022-11/NRD_Newport%20HD%20%28Additional%20Documentation%29.pdf",
+        "https://www.neh.gov/project/occupied-newport-and-fight-independence",
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D",
+        "https://musei.difesa.it/allegati/Conflitti%20Militari%20e%20Popolazioni%20Civili%20-%20Tomo%20I/files/basic-html/page233.html",
+        "https://thepointassociation.org/wp-content/uploads/2018/08/1982-June.pdf"
+      ],
+      "geometry_method": "以1777年布拉斯科维茨—法登城图（LOC 74692105）旋转后的图像，在泰晤士街与斯普林街九处延续街口与美国人口普查局 TIGER/Line 道路对照做仿射定位，控制点内均方根误差7.9米。沿史图连片街区、东角旧聚落和历史岸线描绘，省略单个伸水桥墩及外围零散农舍。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.32185,
+              41.496389
+            ],
+            [
+              -71.321262,
+              41.496633
+            ],
+            [
+              -71.320245,
+              41.496742
+            ],
+            [
+              -71.320239,
+              41.497104
+            ],
+            [
+              -71.319439,
+              41.49719
+            ],
+            [
+              -71.318964,
+              41.49435
+            ],
+            [
+              -71.316805,
+              41.49456
+            ],
+            [
+              -71.315783,
+              41.49363
+            ],
+            [
+              -71.315453,
+              41.493124
+            ],
+            [
+              -71.314443,
+              41.492668
+            ],
+            [
+              -71.313555,
+              41.491995
+            ],
+            [
+              -71.312997,
+              41.492033
+            ],
+            [
+              -71.31228,
+              41.492855
+            ],
+            [
+              -71.311522,
+              41.493614
+            ],
+            [
+              -71.310461,
+              41.493841
+            ],
+            [
+              -71.309717,
+              41.494486
+            ],
+            [
+              -71.309088,
+              41.494869
+            ],
+            [
+              -71.308711,
+              41.494865
+            ],
+            [
+              -71.309243,
+              41.494062
+            ],
+            [
+              -71.310019,
+              41.493414
+            ],
+            [
+              -71.310849,
+              41.492715
+            ],
+            [
+              -71.31181,
+              41.492047
+            ],
+            [
+              -71.312386,
+              41.491127
+            ],
+            [
+              -71.312484,
+              41.490349
+            ],
+            [
+              -71.312308,
+              41.489623
+            ],
+            [
+              -71.311578,
+              41.489159
+            ],
+            [
+              -71.310506,
+              41.48871
+            ],
+            [
+              -71.309526,
+              41.48825
+            ],
+            [
+              -71.309115,
+              41.488227
+            ],
+            [
+              -71.308633,
+              41.488143
+            ],
+            [
+              -71.30833,
+              41.487204
+            ],
+            [
+              -71.308093,
+              41.486891
+            ],
+            [
+              -71.308718,
+              41.486485
+            ],
+            [
+              -71.309478,
+              41.486539
+            ],
+            [
+              -71.310463,
+              41.48623
+            ],
+            [
+              -71.310215,
+              41.485443
+            ],
+            [
+              -71.311081,
+              41.485373
+            ],
+            [
+              -71.312327,
+              41.485329
+            ],
+            [
+              -71.311658,
+              41.484859
+            ],
+            [
+              -71.311469,
+              41.484247
+            ],
+            [
+              -71.31165,
+              41.483799
+            ],
+            [
+              -71.312686,
+              41.48362
+            ],
+            [
+              -71.312596,
+              41.482839
+            ],
+            [
+              -71.312607,
+              41.481708
+            ],
+            [
+              -71.312331,
+              41.480541
+            ],
+            [
+              -71.314223,
+              41.480225
+            ],
+            [
+              -71.314136,
+              41.479669
+            ],
+            [
+              -71.31506,
+              41.47957
+            ],
+            [
+              -71.315405,
+              41.478969
+            ],
+            [
+              -71.315795,
+              41.479062
+            ],
+            [
+              -71.315738,
+              41.479497
+            ],
+            [
+              -71.315616,
+              41.48012
+            ],
+            [
+              -71.315722,
+              41.480402
+            ],
+            [
+              -71.315566,
+              41.480803
+            ],
+            [
+              -71.315771,
+              41.480917
+            ],
+            [
+              -71.315741,
+              41.481123
+            ],
+            [
+              -71.315345,
+              41.481595
+            ],
+            [
+              -71.31551,
+              41.482051
+            ],
+            [
+              -71.315877,
+              41.482193
+            ],
+            [
+              -71.315843,
+              41.48258
+            ],
+            [
+              -71.315738,
+              41.483111
+            ],
+            [
+              -71.315804,
+              41.483533
+            ],
+            [
+              -71.315993,
+              41.483738
+            ],
+            [
+              -71.315792,
+              41.484257
+            ],
+            [
+              -71.315902,
+              41.484561
+            ],
+            [
+              -71.316097,
+              41.484811
+            ],
+            [
+              -71.315766,
+              41.485299
+            ],
+            [
+              -71.315907,
+              41.4856
+            ],
+            [
+              -71.315812,
+              41.485994
+            ],
+            [
+              -71.315765,
+              41.486292
+            ],
+            [
+              -71.316015,
+              41.486491
+            ],
+            [
+              -71.315797,
+              41.486899
+            ],
+            [
+              -71.315787,
+              41.487239
+            ],
+            [
+              -71.316048,
+              41.487504
+            ],
+            [
+              -71.315929,
+              41.487743
+            ],
+            [
+              -71.316121,
+              41.487971
+            ],
+            [
+              -71.315752,
+              41.488417
+            ],
+            [
+              -71.315917,
+              41.48867
+            ],
+            [
+              -71.316082,
+              41.488923
+            ],
+            [
+              -71.316253,
+              41.489221
+            ],
+            [
+              -71.316394,
+              41.489522
+            ],
+            [
+              -71.316439,
+              41.489811
+            ],
+            [
+              -71.316526,
+              41.490163
+            ],
+            [
+              -71.316694,
+              41.490439
+            ],
+            [
+              -71.317171,
+              41.490884
+            ],
+            [
+              -71.31752,
+              41.491321
+            ],
+            [
+              -71.317912,
+              41.491821
+            ],
+            [
+              -71.318473,
+              41.491806
+            ],
+            [
+              -71.318879,
+              41.491401
+            ],
+            [
+              -71.319371,
+              41.490941
+            ],
+            [
+              -71.320103,
+              41.490614
+            ],
+            [
+              -71.320236,
+              41.490261
+            ],
+            [
+              -71.320111,
+              41.489665
+            ],
+            [
+              -71.320302,
+              41.489283
+            ],
+            [
+              -71.320525,
+              41.489304
+            ],
+            [
+              -71.32068,
+              41.4901
+            ],
+            [
+              -71.32088,
+              41.490779
+            ],
+            [
+              -71.320987,
+              41.491264
+            ],
+            [
+              -71.321211,
+              41.491692
+            ],
+            [
+              -71.321105,
+              41.49202
+            ],
+            [
+              -71.32127,
+              41.492476
+            ],
+            [
+              -71.321268,
+              41.49286
+            ],
+            [
+              -71.321299,
+              41.49306
+            ],
+            [
+              -71.321341,
+              41.49353
+            ],
+            [
+              -71.321119,
+              41.493915
+            ],
+            [
+              -71.321415,
+              41.494403
+            ],
+            [
+              -71.321542,
+              41.495022
+            ],
+            [
+              -71.321612,
+              41.495466
+            ],
+            [
+              -71.321476,
+              41.496
+            ],
+            [
+              -71.32185,
+              41.496389
+            ]
+          ]
+        ]
+      },
+      "stable_id": "newport-old-port-town",
+      "position_uncertainty_m": 95,
+      "bbox": [
+        -71.32185,
+        41.478969,
+        -71.308093,
+        41.49719
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "newport-old-port-town-1800"
+    },
+    {
+      "id": "AQUIDNECK_GARRISON_REQUISITIONS",
+      "title": "阿奎德内克岛 · 驻军与补给征用",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "阿奎德内克岛 · 英军登陆驻防",
+          "note": "1776年12月英军占领岛上港埠与驻地，陆续控制通往大陆的渡口。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "阿奎德内克岛 · 农村供应征集",
+          "note": "英军及黑森部队在岛上取用粮食、牲畜和木材，农场被用于扎营。"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "阿奎德内克岛 · 巴茨山一带战事",
+          "note": "1778年8月美军在岛北登陆，围攻纽波特后撤至巴茨山。8月29日英军和黑森部队同美军交战，英军继续驻守纽波特。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/resource/g3772n.ar100300/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/FACES/tl_2025_44005_faces.zip",
+        "https://www.neh.gov/project/occupied-newport-and-fight-independence",
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D",
+        "https://encompass.rihs.org/rhode-island-in-the-american-revolution/primary-sources/map-of-the-siege-of-newport/",
+        "https://battleofrhodeisland.org/butts-hill-fort/"
+      ],
+      "geometry_method": "1777年纳拉甘西特湾海图与地名核对主要岛岸。合并美国人口普查局2025年 TIGER/Line 纽波特县 LWFLAG=L 陆地面，选取包含阿奎德内克岛内陆控制点的独立组件，在 NAD83 UTM 19N 下按60米简化。此面用于岛规模的驻军及征集补给活动，港内后期工程与逐地驻军时段不在岛岸几何中推定。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.333749,
+              41.454636
+            ],
+            [
+              -71.334545,
+              41.4531
+            ],
+            [
+              -71.336166,
+              41.456499
+            ],
+            [
+              -71.341303,
+              41.455543
+            ],
+            [
+              -71.339384,
+              41.454876
+            ],
+            [
+              -71.339277,
+              41.453966
+            ],
+            [
+              -71.337753,
+              41.454696
+            ],
+            [
+              -71.336364,
+              41.454193
+            ],
+            [
+              -71.33672,
+              41.451136
+            ],
+            [
+              -71.334993,
+              41.450626
+            ],
+            [
+              -71.334817,
+              41.449489
+            ],
+            [
+              -71.33803,
+              41.449418
+            ],
+            [
+              -71.337403,
+              41.451561
+            ],
+            [
+              -71.339172,
+              41.451993
+            ],
+            [
+              -71.340121,
+              41.453512
+            ],
+            [
+              -71.340912,
+              41.452804
+            ],
+            [
+              -71.340938,
+              41.453788
+            ],
+            [
+              -71.342776,
+              41.453161
+            ],
+            [
+              -71.343756,
+              41.454372
+            ],
+            [
+              -71.346148,
+              41.452367
+            ],
+            [
+              -71.347744,
+              41.45286
+            ],
+            [
+              -71.351455,
+              41.451101
+            ],
+            [
+              -71.35131,
+              41.449822
+            ],
+            [
+              -71.35551,
+              41.448967
+            ],
+            [
+              -71.356469,
+              41.451261
+            ],
+            [
+              -71.357657,
+              41.450957
+            ],
+            [
+              -71.357369,
+              41.455702
+            ],
+            [
+              -71.359398,
+              41.457308
+            ],
+            [
+              -71.358916,
+              41.459552
+            ],
+            [
+              -71.361242,
+              41.460234
+            ],
+            [
+              -71.362203,
+              41.459254
+            ],
+            [
+              -71.363448,
+              41.461507
+            ],
+            [
+              -71.361382,
+              41.464941
+            ],
+            [
+              -71.359206,
+              41.464901
+            ],
+            [
+              -71.360088,
+              41.462397
+            ],
+            [
+              -71.359684,
+              41.462328
+            ],
+            [
+              -71.357733,
+              41.46593
+            ],
+            [
+              -71.353139,
+              41.46953
+            ],
+            [
+              -71.348059,
+              41.470634
+            ],
+            [
+              -71.342268,
+              41.475451
+            ],
+            [
+              -71.337331,
+              41.481775
+            ],
+            [
+              -71.337561,
+              41.480836
+            ],
+            [
+              -71.336679,
+              41.481452
+            ],
+            [
+              -71.335171,
+              41.478857
+            ],
+            [
+              -71.335132,
+              41.476034
+            ],
+            [
+              -71.337724,
+              41.473026
+            ],
+            [
+              -71.336477,
+              41.471794
+            ],
+            [
+              -71.337669,
+              41.469736
+            ],
+            [
+              -71.336771,
+              41.469241
+            ],
+            [
+              -71.33448,
+              41.470387
+            ],
+            [
+              -71.333996,
+              41.471858
+            ],
+            [
+              -71.333269,
+              41.471039
+            ],
+            [
+              -71.328424,
+              41.473474
+            ],
+            [
+              -71.328335,
+              41.474283
+            ],
+            [
+              -71.325803,
+              41.474611
+            ],
+            [
+              -71.323916,
+              41.475919
+            ],
+            [
+              -71.323784,
+              41.477495
+            ],
+            [
+              -71.323125,
+              41.476102
+            ],
+            [
+              -71.316222,
+              41.477511
+            ],
+            [
+              -71.317019,
+              41.479902
+            ],
+            [
+              -71.315604,
+              41.480497
+            ],
+            [
+              -71.316905,
+              41.481918
+            ],
+            [
+              -71.315521,
+              41.483247
+            ],
+            [
+              -71.317736,
+              41.484122
+            ],
+            [
+              -71.315887,
+              41.484766
+            ],
+            [
+              -71.317857,
+              41.485029
+            ],
+            [
+              -71.316092,
+              41.48544
+            ],
+            [
+              -71.316977,
+              41.486165
+            ],
+            [
+              -71.316197,
+              41.486532
+            ],
+            [
+              -71.317726,
+              41.48651
+            ],
+            [
+              -71.31653,
+              41.487046
+            ],
+            [
+              -71.317672,
+              41.487154
+            ],
+            [
+              -71.317385,
+              41.48954
+            ],
+            [
+              -71.319392,
+              41.488398
+            ],
+            [
+              -71.320344,
+              41.489143
+            ],
+            [
+              -71.322603,
+              41.48883
+            ],
+            [
+              -71.321309,
+              41.489817
+            ],
+            [
+              -71.322888,
+              41.489975
+            ],
+            [
+              -71.323039,
+              41.490712
+            ],
+            [
+              -71.321527,
+              41.490922
+            ],
+            [
+              -71.323029,
+              41.491419
+            ],
+            [
+              -71.321621,
+              41.491548
+            ],
+            [
+              -71.322442,
+              41.492279
+            ],
+            [
+              -71.321417,
+              41.49284
+            ],
+            [
+              -71.321887,
+              41.498396
+            ],
+            [
+              -71.322686,
+              41.498393
+            ],
+            [
+              -71.32184,
+              41.499312
+            ],
+            [
+              -71.322924,
+              41.500831
+            ],
+            [
+              -71.321983,
+              41.501755
+            ],
+            [
+              -71.32309,
+              41.505562
+            ],
+            [
+              -71.3249,
+              41.506399
+            ],
+            [
+              -71.322972,
+              41.506861
+            ],
+            [
+              -71.322347,
+              41.509917
+            ],
+            [
+              -71.320461,
+              41.510755
+            ],
+            [
+              -71.322775,
+              41.511547
+            ],
+            [
+              -71.322451,
+              41.514964
+            ],
+            [
+              -71.323395,
+              41.51641
+            ],
+            [
+              -71.328338,
+              41.518274
+            ],
+            [
+              -71.330445,
+              41.517349
+            ],
+            [
+              -71.330806,
+              41.517856
+            ],
+            [
+              -71.327896,
+              41.519073
+            ],
+            [
+              -71.327305,
+              41.521409
+            ],
+            [
+              -71.323869,
+              41.523151
+            ],
+            [
+              -71.322402,
+              41.520795
+            ],
+            [
+              -71.319434,
+              41.519474
+            ],
+            [
+              -71.314931,
+              41.519904
+            ],
+            [
+              -71.311976,
+              41.521752
+            ],
+            [
+              -71.312751,
+              41.522272
+            ],
+            [
+              -71.311311,
+              41.522774
+            ],
+            [
+              -71.311627,
+              41.524661
+            ],
+            [
+              -71.313113,
+              41.524217
+            ],
+            [
+              -71.313228,
+              41.524932
+            ],
+            [
+              -71.311655,
+              41.524759
+            ],
+            [
+              -71.312347,
+              41.526705
+            ],
+            [
+              -71.313691,
+              41.526413
+            ],
+            [
+              -71.313478,
+              41.525733
+            ],
+            [
+              -71.313774,
+              41.526417
+            ],
+            [
+              -71.312292,
+              41.526837
+            ],
+            [
+              -71.312841,
+              41.52811
+            ],
+            [
+              -71.318477,
+              41.527137
+            ],
+            [
+              -71.312952,
+              41.528387
+            ],
+            [
+              -71.313758,
+              41.530633
+            ],
+            [
+              -71.31931,
+              41.529982
+            ],
+            [
+              -71.313946,
+              41.531168
+            ],
+            [
+              -71.313092,
+              41.534237
+            ],
+            [
+              -71.314199,
+              41.535216
+            ],
+            [
+              -71.313177,
+              41.536226
+            ],
+            [
+              -71.314096,
+              41.536375
+            ],
+            [
+              -71.311916,
+              41.536549
+            ],
+            [
+              -71.314363,
+              41.537039
+            ],
+            [
+              -71.322892,
+              41.534393
+            ],
+            [
+              -71.324759,
+              41.532235
+            ],
+            [
+              -71.324495,
+              41.533037
+            ],
+            [
+              -71.323687,
+              41.533972
+            ],
+            [
+              -71.322566,
+              41.534643
+            ],
+            [
+              -71.314868,
+              41.536991
+            ],
+            [
+              -71.313917,
+              41.537249
+            ],
+            [
+              -71.311841,
+              41.536709
+            ],
+            [
+              -71.308457,
+              41.539723
+            ],
+            [
+              -71.307569,
+              41.542336
+            ],
+            [
+              -71.310796,
+              41.544405
+            ],
+            [
+              -71.311083,
+              41.546422
+            ],
+            [
+              -71.306129,
+              41.553124
+            ],
+            [
+              -71.305142,
+              41.556001
+            ],
+            [
+              -71.306041,
+              41.556356
+            ],
+            [
+              -71.304938,
+              41.556404
+            ],
+            [
+              -71.299737,
+              41.563896
+            ],
+            [
+              -71.297638,
+              41.565213
+            ],
+            [
+              -71.294471,
+              41.571133
+            ],
+            [
+              -71.288672,
+              41.572916
+            ],
+            [
+              -71.284956,
+              41.576709
+            ],
+            [
+              -71.285636,
+              41.582646
+            ],
+            [
+              -71.287611,
+              41.583846
+            ],
+            [
+              -71.28736,
+              41.588077
+            ],
+            [
+              -71.288579,
+              41.588169
+            ],
+            [
+              -71.288841,
+              41.587197
+            ],
+            [
+              -71.288927,
+              41.588189
+            ],
+            [
+              -71.287087,
+              41.588776
+            ],
+            [
+              -71.286546,
+              41.590761
+            ],
+            [
+              -71.284273,
+              41.588608
+            ],
+            [
+              -71.282851,
+              41.591468
+            ],
+            [
+              -71.285549,
+              41.591098
+            ],
+            [
+              -71.286376,
+              41.592421
+            ],
+            [
+              -71.280398,
+              41.593454
+            ],
+            [
+              -71.277956,
+              41.599641
+            ],
+            [
+              -71.272723,
+              41.607923
+            ],
+            [
+              -71.272233,
+              41.61451
+            ],
+            [
+              -71.274713,
+              41.616689
+            ],
+            [
+              -71.273997,
+              41.617384
+            ],
+            [
+              -71.275073,
+              41.619124
+            ],
+            [
+              -71.272005,
+              41.623662
+            ],
+            [
+              -71.266148,
+              41.624992
+            ],
+            [
+              -71.265892,
+              41.622665
+            ],
+            [
+              -71.264351,
+              41.621502
+            ],
+            [
+              -71.263961,
+              41.622685
+            ],
+            [
+              -71.265409,
+              41.624781
+            ],
+            [
+              -71.264721,
+              41.626897
+            ],
+            [
+              -71.264262,
+              41.625403
+            ],
+            [
+              -71.261298,
+              41.628247
+            ],
+            [
+              -71.258884,
+              41.63342
+            ],
+            [
+              -71.253199,
+              41.636418
+            ],
+            [
+              -71.253378,
+              41.637879
+            ],
+            [
+              -71.252065,
+              41.637625
+            ],
+            [
+              -71.249831,
+              41.63913
+            ],
+            [
+              -71.244941,
+              41.638726
+            ],
+            [
+              -71.244575,
+              41.63775
+            ],
+            [
+              -71.246292,
+              41.637419
+            ],
+            [
+              -71.245655,
+              41.630693
+            ],
+            [
+              -71.243263,
+              41.634798
+            ],
+            [
+              -71.240244,
+              41.636332
+            ],
+            [
+              -71.241615,
+              41.636558
+            ],
+            [
+              -71.241774,
+              41.637813
+            ],
+            [
+              -71.243141,
+              41.637229
+            ],
+            [
+              -71.244144,
+              41.637867
+            ],
+            [
+              -71.241686,
+              41.638227
+            ],
+            [
+              -71.243621,
+              41.638568
+            ],
+            [
+              -71.244867,
+              41.638944
+            ],
+            [
+              -71.240007,
+              41.638141
+            ],
+            [
+              -71.235758,
+              41.638593
+            ],
+            [
+              -71.232612,
+              41.640772
+            ],
+            [
+              -71.232495,
+              41.642554
+            ],
+            [
+              -71.231675,
+              41.641467
+            ],
+            [
+              -71.230992,
+              41.642453
+            ],
+            [
+              -71.232441,
+              41.642604
+            ],
+            [
+              -71.232081,
+              41.643398
+            ],
+            [
+              -71.22496,
+              41.647108
+            ],
+            [
+              -71.22432,
+              41.649403
+            ],
+            [
+              -71.223242,
+              41.646669
+            ],
+            [
+              -71.222585,
+              41.649288
+            ],
+            [
+              -71.223575,
+              41.650565
+            ],
+            [
+              -71.224119,
+              41.649539
+            ],
+            [
+              -71.224417,
+              41.650521
+            ],
+            [
+              -71.220163,
+              41.655786
+            ],
+            [
+              -71.219188,
+              41.65368
+            ],
+            [
+              -71.22127,
+              41.649356
+            ],
+            [
+              -71.220003,
+              41.647853
+            ],
+            [
+              -71.217571,
+              41.647285
+            ],
+            [
+              -71.216982,
+              41.645878
+            ],
+            [
+              -71.218351,
+              41.644837
+            ],
+            [
+              -71.216759,
+              41.643218
+            ],
+            [
+              -71.218162,
+              41.642819
+            ],
+            [
+              -71.217229,
+              41.642772
+            ],
+            [
+              -71.218094,
+              41.642165
+            ],
+            [
+              -71.216834,
+              41.639496
+            ],
+            [
+              -71.21396,
+              41.638876
+            ],
+            [
+              -71.216773,
+              41.638554
+            ],
+            [
+              -71.218731,
+              41.636539
+            ],
+            [
+              -71.218133,
+              41.630726
+            ],
+            [
+              -71.2193,
+              41.630225
+            ],
+            [
+              -71.220044,
+              41.630924
+            ],
+            [
+              -71.21985,
+              41.632755
+            ],
+            [
+              -71.220972,
+              41.633261
+            ],
+            [
+              -71.222622,
+              41.637824
+            ],
+            [
+              -71.225311,
+              41.637028
+            ],
+            [
+              -71.22615,
+              41.63756
+            ],
+            [
+              -71.229703,
+              41.636502
+            ],
+            [
+              -71.229476,
+              41.63595
+            ],
+            [
+              -71.226606,
+              41.636806
+            ],
+            [
+              -71.230038,
+              41.634684
+            ],
+            [
+              -71.232158,
+              41.634766
+            ],
+            [
+              -71.230552,
+              41.633746
+            ],
+            [
+              -71.235051,
+              41.631419
+            ],
+            [
+              -71.234513,
+              41.629902
+            ],
+            [
+              -71.235619,
+              41.629185
+            ],
+            [
+              -71.235776,
+              41.628244
+            ],
+            [
+              -71.235508,
+              41.628994
+            ],
+            [
+              -71.233905,
+              41.629011
+            ],
+            [
+              -71.233501,
+              41.630306
+            ],
+            [
+              -71.232111,
+              41.630033
+            ],
+            [
+              -71.23108,
+              41.629292
+            ],
+            [
+              -71.23372,
+              41.628881
+            ],
+            [
+              -71.232502,
+              41.627928
+            ],
+            [
+              -71.23318,
+              41.627046
+            ],
+            [
+              -71.230558,
+              41.626638
+            ],
+            [
+              -71.231264,
+              41.627714
+            ],
+            [
+              -71.229279,
+              41.629236
+            ],
+            [
+              -71.227515,
+              41.629295
+            ],
+            [
+              -71.229081,
+              41.627775
+            ],
+            [
+              -71.227343,
+              41.624164
+            ],
+            [
+              -71.225797,
+              41.62476
+            ],
+            [
+              -71.222752,
+              41.623998
+            ],
+            [
+              -71.219174,
+              41.629543
+            ],
+            [
+              -71.217822,
+              41.628108
+            ],
+            [
+              -71.21814,
+              41.62952
+            ],
+            [
+              -71.217295,
+              41.629067
+            ],
+            [
+              -71.217732,
+              41.627792
+            ],
+            [
+              -71.219664,
+              41.625875
+            ],
+            [
+              -71.218102,
+              41.625654
+            ],
+            [
+              -71.219959,
+              41.625075
+            ],
+            [
+              -71.219749,
+              41.624042
+            ],
+            [
+              -71.220995,
+              41.623476
+            ],
+            [
+              -71.233855,
+              41.621878
+            ],
+            [
+              -71.240213,
+              41.619547
+            ],
+            [
+              -71.240618,
+              41.606394
+            ],
+            [
+              -71.241616,
+              41.60534
+            ],
+            [
+              -71.242466,
+              41.595607
+            ],
+            [
+              -71.243502,
+              41.593929
+            ],
+            [
+              -71.242855,
+              41.585339
+            ],
+            [
+              -71.237739,
+              41.577696
+            ],
+            [
+              -71.234472,
+              41.576385
+            ],
+            [
+              -71.236154,
+              41.574081
+            ],
+            [
+              -71.23609,
+              41.567099
+            ],
+            [
+              -71.238239,
+              41.560637
+            ],
+            [
+              -71.237245,
+              41.55469
+            ],
+            [
+              -71.233761,
+              41.552898
+            ],
+            [
+              -71.23622,
+              41.545471
+            ],
+            [
+              -71.235209,
+              41.542196
+            ],
+            [
+              -71.236856,
+              41.536125
+            ],
+            [
+              -71.234646,
+              41.532153
+            ],
+            [
+              -71.231045,
+              41.529866
+            ],
+            [
+              -71.228644,
+              41.530594
+            ],
+            [
+              -71.229307,
+              41.528942
+            ],
+            [
+              -71.227951,
+              41.52836
+            ],
+            [
+              -71.22975,
+              41.521859
+            ],
+            [
+              -71.23316,
+              41.516408
+            ],
+            [
+              -71.232998,
+              41.513631
+            ],
+            [
+              -71.234837,
+              41.513665
+            ],
+            [
+              -71.236549,
+              41.509549
+            ],
+            [
+              -71.24063,
+              41.505845
+            ],
+            [
+              -71.240684,
+              41.504563
+            ],
+            [
+              -71.239656,
+              41.504337
+            ],
+            [
+              -71.241617,
+              41.499221
+            ],
+            [
+              -71.246666,
+              41.494265
+            ],
+            [
+              -71.247865,
+              41.490767
+            ],
+            [
+              -71.246601,
+              41.487309
+            ],
+            [
+              -71.244157,
+              41.485781
+            ],
+            [
+              -71.241526,
+              41.485322
+            ],
+            [
+              -71.237298,
+              41.486144
+            ],
+            [
+              -71.237479,
+              41.481997
+            ],
+            [
+              -71.239642,
+              41.479765
+            ],
+            [
+              -71.239878,
+              41.476408
+            ],
+            [
+              -71.240762,
+              41.475234
+            ],
+            [
+              -71.243736,
+              41.475105
+            ],
+            [
+              -71.247878,
+              41.471875
+            ],
+            [
+              -71.245322,
+              41.480418
+            ],
+            [
+              -71.246272,
+              41.481789
+            ],
+            [
+              -71.253579,
+              41.486312
+            ],
+            [
+              -71.264757,
+              41.489119
+            ],
+            [
+              -71.26762,
+              41.488722
+            ],
+            [
+              -71.269959,
+              41.482709
+            ],
+            [
+              -71.270384,
+              41.483466
+            ],
+            [
+              -71.27127,
+              41.481729
+            ],
+            [
+              -71.271651,
+              41.482417
+            ],
+            [
+              -71.275623,
+              41.479521
+            ],
+            [
+              -71.277697,
+              41.480745
+            ],
+            [
+              -71.278347,
+              41.483461
+            ],
+            [
+              -71.279552,
+              41.483678
+            ],
+            [
+              -71.282254,
+              41.488242
+            ],
+            [
+              -71.285915,
+              41.489247
+            ],
+            [
+              -71.297224,
+              41.48505
+            ],
+            [
+              -71.296495,
+              41.479773
+            ],
+            [
+              -71.297988,
+              41.474452
+            ],
+            [
+              -71.296429,
+              41.469038
+            ],
+            [
+              -71.297972,
+              41.46736
+            ],
+            [
+              -71.301219,
+              41.467153
+            ],
+            [
+              -71.302744,
+              41.465711
+            ],
+            [
+              -71.303983,
+              41.462749
+            ],
+            [
+              -71.302339,
+              41.460114
+            ],
+            [
+              -71.304006,
+              41.458471
+            ],
+            [
+              -71.304264,
+              41.454484
+            ],
+            [
+              -71.305636,
+              41.454115
+            ],
+            [
+              -71.30566,
+              41.453056
+            ],
+            [
+              -71.306658,
+              41.453256
+            ],
+            [
+              -71.307918,
+              41.45168
+            ],
+            [
+              -71.308875,
+              41.452118
+            ],
+            [
+              -71.309909,
+              41.451101
+            ],
+            [
+              -71.311979,
+              41.451129
+            ],
+            [
+              -71.311316,
+              41.455621
+            ],
+            [
+              -71.315356,
+              41.456293
+            ],
+            [
+              -71.317494,
+              41.454247
+            ],
+            [
+              -71.317618,
+              41.455599
+            ],
+            [
+              -71.319496,
+              41.456463
+            ],
+            [
+              -71.319429,
+              41.459345
+            ],
+            [
+              -71.323408,
+              41.459913
+            ],
+            [
+              -71.327145,
+              41.458559
+            ],
+            [
+              -71.327196,
+              41.456924
+            ],
+            [
+              -71.329426,
+              41.454822
+            ],
+            [
+              -71.330729,
+              41.454916
+            ],
+            [
+              -71.331466,
+              41.452803
+            ],
+            [
+              -71.333707,
+              41.452873
+            ],
+            [
+              -71.332921,
+              41.454391
+            ],
+            [
+              -71.333749,
+              41.454636
+            ]
+          ]
+        ]
+      },
+      "stable_id": "aquidneck-garrison-requisitions",
+      "position_uncertainty_m": 125,
+      "bbox": [
+        -71.363448,
+        41.448967,
+        -71.21396,
+        41.655786
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "NEWPORT_GOAT_ISLAND_1777",
+      "title": "纽波特羊岛",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1778,
+          "title": "纽波特羊岛 · 英军占据港口防地",
+          "note": "英军于1776年12月占据纽波特，使用羊岛的原有港防设施。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "纽波特羊岛 · 英军撤港",
+          "note": "1779年10月英军撤离纽波特，羊岛港防随之转手。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1781,
+          "title": "纽波特羊岛 · 法国舰队与海岸炮台",
+          "note": "法国舰队与陆军进入纽波特后，法国军图标出羊岛炮台、舰队及港口火力范围。",
+          "kind": "military_vicinity"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip",
+        "https://www.loc.gov/resource/g3772n.ar100300/",
+        "https://battleofrhodeisland.org/fortifications/",
+        "https://www.loc.gov/item/gm71002156/",
+        "https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/newport/newp_newport-hd_amendment.pdf"
+      ],
+      "geometry_method": "以1777年布拉斯科维茨—法登城图（LOC 74692105）旋转后的图像，在泰晤士街与斯普林街九处延续街口与美国人口普查局 TIGER/Line 道路对照做仿射定位，控制点内均方根误差7.9米。按城图标记的 Goat Island 水陆交线描绘，不纳入后来的堤道与填海。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.326733,
+              41.490963
+            ],
+            [
+              -71.32715,
+              41.490422
+            ],
+            [
+              -71.327354,
+              41.489925
+            ],
+            [
+              -71.327356,
+              41.489135
+            ],
+            [
+              -71.327402,
+              41.48843
+            ],
+            [
+              -71.327549,
+              41.487962
+            ],
+            [
+              -71.327736,
+              41.487558
+            ],
+            [
+              -71.328201,
+              41.487124
+            ],
+            [
+              -71.328367,
+              41.486587
+            ],
+            [
+              -71.328517,
+              41.486142
+            ],
+            [
+              -71.328598,
+              41.485659
+            ],
+            [
+              -71.328381,
+              41.485072
+            ],
+            [
+              -71.328059,
+              41.48461
+            ],
+            [
+              -71.327654,
+              41.484021
+            ],
+            [
+              -71.327201,
+              41.483528
+            ],
+            [
+              -71.326731,
+              41.483127
+            ],
+            [
+              -71.325977,
+              41.482711
+            ],
+            [
+              -71.325272,
+              41.482606
+            ],
+            [
+              -71.324454,
+              41.482581
+            ],
+            [
+              -71.324198,
+              41.482744
+            ],
+            [
+              -71.324396,
+              41.482813
+            ],
+            [
+              -71.32518,
+              41.482819
+            ],
+            [
+              -71.325735,
+              41.482963
+            ],
+            [
+              -71.32617,
+              41.483345
+            ],
+            [
+              -71.326459,
+              41.483788
+            ],
+            [
+              -71.326723,
+              41.484279
+            ],
+            [
+              -71.326913,
+              41.484891
+            ],
+            [
+              -71.326972,
+              41.485472
+            ],
+            [
+              -71.326894,
+              41.485977
+            ],
+            [
+              -71.326683,
+              41.486429
+            ],
+            [
+              -71.326468,
+              41.486859
+            ],
+            [
+              -71.325969,
+              41.487274
+            ],
+            [
+              -71.325648,
+              41.487624
+            ],
+            [
+              -71.325245,
+              41.487848
+            ],
+            [
+              -71.325789,
+              41.487925
+            ],
+            [
+              -71.326341,
+              41.488047
+            ],
+            [
+              -71.326622,
+              41.488446
+            ],
+            [
+              -71.326832,
+              41.488988
+            ],
+            [
+              -71.327052,
+              41.489596
+            ],
+            [
+              -71.327166,
+              41.489923
+            ],
+            [
+              -71.327105,
+              41.490336
+            ],
+            [
+              -71.326733,
+              41.490963
+            ]
+          ]
+        ]
+      },
+      "stable_id": "newport-goat-island",
+      "position_uncertainty_m": 110,
+      "bbox": [
+        -71.328598,
+        41.482581,
+        -71.324198,
+        41.490963
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "NEWPORT_FORT_GEORGE_1777",
+      "title": "羊岛乔治堡旧垣",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1778,
+          "title": "羊岛乔治堡旧垣 · 英军占用",
+          "note": "革命阵营在此前使用羊岛堡防守，1776年12月英军夺取纽波特并接管原炮台。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "羊岛乔治堡旧垣 · 英军撤离",
+          "note": "英军撤出纽波特，羊岛回到罗得岛一方。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1781,
+          "title": "羊岛乔治堡旧垣 · 法国盟军港防驻地",
+          "note": "1780年法国军图将羊岛纳入港口防御。岛上炮台配合法国舰队封锁航道。",
+          "kind": "military_vicinity"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip",
+        "https://battleofrhodeisland.org/fortifications/",
+        "https://www.northamericanforts.com/East/ri2.html",
+        "https://www.loc.gov/item/gm71002156/",
+        "https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/newport/newp_newport-hd_amendment.pdf"
+      ],
+      "geometry_method": "以1777年布拉斯科维茨—法登城图（LOC 74692105）旋转后的图像，在泰晤士街与斯普林街九处延续街口与美国人口普查局 TIGER/Line 道路对照做仿射定位，控制点内均方根误差7.9米。描取羊岛西岸原图 Fort George 的封闭形主堡角垒。后续联邦堡另留点位。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.327695,
+              41.487495
+            ],
+            [
+              -71.327199,
+              41.487525
+            ],
+            [
+              -71.327308,
+              41.48722
+            ],
+            [
+              -71.327143,
+              41.486967
+            ],
+            [
+              -71.327358,
+              41.48674
+            ],
+            [
+              -71.327374,
+              41.486445
+            ],
+            [
+              -71.327778,
+              41.486424
+            ],
+            [
+              -71.327697,
+              41.486704
+            ],
+            [
+              -71.327909,
+              41.486862
+            ],
+            [
+              -71.328187,
+              41.487035
+            ],
+            [
+              -71.327872,
+              41.487227
+            ],
+            [
+              -71.327739,
+              41.487377
+            ],
+            [
+              -71.327695,
+              41.487495
+            ]
+          ]
+        ]
+      },
+      "stable_id": "newport-goat-island-fort",
+      "position_uncertainty_m": 110,
+      "bbox": [
+        -71.328187,
+        41.486424,
+        -71.327143,
+        41.487525
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "NEWPORT_NORTH_BATTERY_1777",
+      "title": "纽波特北炮台旧垣",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "title": "纽波特北炮台 · 罗得岛民兵开工",
+          "note": "1776年当地民兵在伊斯顿角修筑城防，北炮台尚未全部完工。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "纽波特北炮台 · 英军修筑城防",
+          "note": "1777年驻军扩建纽波特城防，英军军官麦肯齐记下从伊斯顿海滩向城北炮台延伸的营垒。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip",
+        "https://battleofrhodeisland.org/fortifications/",
+        "https://www.northamericanforts.com/East/ri2.html",
+        "https://www.newportri.gov/en-us/city-hall/departments/public-services/tree-parks-open-space/guide-to-newport"
+      ],
+      "geometry_method": "以1777年布拉斯科维茨—法登城图（LOC 74692105）旋转后的图像，在泰晤士街与斯普林街九处延续街口与美国人口普查局 TIGER/Line 道路对照做仿射定位，控制点内均方根误差7.9米。描取1777年城图图例 T 的沿岸土垒闭合边。1778年后增筑及撤离拆毁另记有据地名点。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.32134,
+              41.496534
+            ],
+            [
+              -71.320741,
+              41.496508
+            ],
+            [
+              -71.320754,
+              41.49619
+            ],
+            [
+              -71.320952,
+              41.496056
+            ],
+            [
+              -71.320795,
+              41.495847
+            ],
+            [
+              -71.320866,
+              41.495704
+            ],
+            [
+              -71.321168,
+              41.49583
+            ],
+            [
+              -71.321387,
+              41.495829
+            ],
+            [
+              -71.321414,
+              41.496007
+            ],
+            [
+              -71.32134,
+              41.496534
+            ]
+          ]
+        ]
+      },
+      "stable_id": "newport-north-battery",
+      "position_uncertainty_m": 95,
+      "bbox": [
+        -71.321414,
+        41.495704,
+        -71.320741,
+        41.496534
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "PHILADELPHIA_TOWN_1777",
+      "title": "费城 · 特拉华河沿岸城区",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "费城沿岸城区 · 9月26日英军入城",
+          "note": "威廉·豪的部队占据费城，在民宅驻扎，征用部分建筑为军医院。居民记录了英军和黑森士兵夺取马牛、木柴、粮食及衣物。伊丽莎白·德林克在10月的日记记下粮食短缺和物价上涨。"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "费城沿岸城区 · 6月18日英军撤出",
+          "note": "亨利·克林顿的部队撤出费城，途经新泽西前往纽约。英军撤出后宾夕法尼亚恢复管辖。7月2日，大陆会议重新在州议事厅开会。",
+          "kind": "settlement"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/gm71005415/",
+        "https://www.argomaps.org/maps/commonwealth:cj82m2470/",
+        "https://www.loc.gov/item/gm71002155/",
+        "https://www.argomaps.org/maps/commonwealth:q524nb358/",
+        "https://www.loc.gov/item/gm71000933/",
+        "https://philadelphiaencyclopedia.org/essays/british-occupation-of-philadelphia/",
+        "https://history.army.mil/Research/Reference-Topics/Army-Campaigns/Brief-Summaries/Revolutionary-War-Campaigns/"
+      ],
+      "geometry_method": "Red built-up core and contiguous Southwark blocks on the 1777 Scull–Heap–Faden map (Leventhal Map & Education Center, commonwealth:cj82m2470). Affine registration using the visible centers of Centre, Northeast and Southeast squares, compared with the Easburn 1776 grid and Nicole–Montresor 1777–1778 map. Historical shoreline generalized on the inked shore; wharf ends, unbuilt yellow blocks, and detached outer works are excluded.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.145783,
+              39.959115
+            ],
+            [
+              -75.141657,
+              39.959031
+            ],
+            [
+              -75.138044,
+              39.958453
+            ],
+            [
+              -75.138804,
+              39.956643
+            ],
+            [
+              -75.13953,
+              39.954477
+            ],
+            [
+              -75.140453,
+              39.952423
+            ],
+            [
+              -75.141155,
+              39.950021
+            ],
+            [
+              -75.141926,
+              39.948328
+            ],
+            [
+              -75.142396,
+              39.945459
+            ],
+            [
+              -75.143133,
+              39.943412
+            ],
+            [
+              -75.143299,
+              39.941267
+            ],
+            [
+              -75.143278,
+              39.93913
+            ],
+            [
+              -75.14299,
+              39.93617
+            ],
+            [
+              -75.150588,
+              39.937313
+            ],
+            [
+              -75.148682,
+              39.94273
+            ],
+            [
+              -75.157586,
+              39.943824
+            ],
+            [
+              -75.156554,
+              39.948615
+            ],
+            [
+              -75.155746,
+              39.951853
+            ],
+            [
+              -75.154554,
+              39.954987
+            ],
+            [
+              -75.153957,
+              39.956553
+            ],
+            [
+              -75.1513,
+              39.956177
+            ],
+            [
+              -75.148456,
+              39.955808
+            ],
+            [
+              -75.147407,
+              39.95656
+            ],
+            [
+              -75.145783,
+              39.959115
+            ]
+          ]
+        ]
+      },
+      "stable_id": "philadelphia-town-1777",
+      "position_uncertainty_m": 160,
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -75.157586,
+        39.93617,
+        -75.138044,
+        39.959115
+      ],
+      "outline_only": true
+    },
+    {
+      "id": "DELAWARE_FORT_MIFFLIN",
+      "title": "特拉华河 · 米夫林堡主堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "米夫林堡主堡 · 联邦重修",
+          "note": "亚当斯政府任内，工程师路易·图萨尔督修主堡。重建工程沿旧堡走向，并在原有石墙上砌筑新的砖面。"
+        }
+      ],
+      "source_urls": [
+        "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/70000554.pdf",
+        "https://www.fortmifflin.us/about/",
+        "https://www.openstreetmap.org/way/50114315",
+        "https://www.loc.gov/item/gm71000933/"
+      ],
+      "geometry_method": "Main enclosure as surveyed in HABS PA-1225 Sheet 3, compared with remnants mapped by OSM way 50114315 (ODbL). NPS NHL registration describes 1798 reconstruction as following the earlier line. The later detached demi-lune and outworks do not enter this perimeter. Northern and eastern masonry contain later work.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.211823,
+              39.875608
+            ],
+            [
+              -75.212112,
+              39.875708
+            ],
+            [
+              -75.212271,
+              39.875634
+            ],
+            [
+              -75.21302,
+              39.876018
+            ],
+            [
+              -75.212924,
+              39.876174
+            ],
+            [
+              -75.213175,
+              39.876377
+            ],
+            [
+              -75.213418,
+              39.876016
+            ],
+            [
+              -75.213563,
+              39.8758
+            ],
+            [
+              -75.213772,
+              39.875777
+            ],
+            [
+              -75.213637,
+              39.875442
+            ],
+            [
+              -75.213744,
+              39.875305
+            ],
+            [
+              -75.21395,
+              39.875042
+            ],
+            [
+              -75.213752,
+              39.874948
+            ],
+            [
+              -75.213634,
+              39.874568
+            ],
+            [
+              -75.213142,
+              39.87466
+            ],
+            [
+              -75.212844,
+              39.87452
+            ],
+            [
+              -75.21281,
+              39.874858
+            ],
+            [
+              -75.212551,
+              39.874824
+            ],
+            [
+              -75.212517,
+              39.875159
+            ],
+            [
+              -75.212261,
+              39.875123
+            ],
+            [
+              -75.212232,
+              39.875379
+            ],
+            [
+              -75.212046,
+              39.87544
+            ],
+            [
+              -75.211823,
+              39.875608
+            ]
+          ]
+        ]
+      },
+      "stable_id": "delaware-fort-mifflin",
+      "position_uncertainty_m": 35,
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -75.21395,
+        39.87452,
+        -75.211823,
+        39.876377
+      ],
+      "cross_century_feature_id": "delaware-fort-mifflin-1800",
+      "outline_only": true
     }
   ],
   "regional_lines": [
@@ -29839,6 +34486,225 @@
       "position_uncertainty_m": 2200,
       "geometry_precision": "source_backed_historical_line",
       "cross_century_feature_id": "gaspe-chaleur-coast-1800"
+    },
+    {
+      "id": "NEWPORT_LONG_WHARF_1777",
+      "title": "纽波特公共长码头",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1775,
+          "title": "纽波特公共长码头 · 港口装卸与渡运",
+          "note": "长码头与公共广场相接，经营港口装卸与通往詹姆斯敦的渡运。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1778,
+          "title": "纽波特公共长码头 · 英军占领期",
+          "note": "英军进城后掌握长码头及港口装卸设施，战争冲击了本地商贸和沿岸补给。",
+          "kind": "wartime_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip",
+        "https://tile.loc.gov/storage-services/public/gdcmassbookdig/inaroundnewport100stanh/inaroundnewport100stanh.pdf",
+        "https://history.army.mil/Portals/143/Images/Publications/ArmyHistoryMag/pdf/20102019/AH74%28W%29.pdf?ver=gKqXdSgm5kr2C1kppD20aQ%3D%3D"
+      ],
+      "geometry_method": "以1777年布拉斯科维茨—法登城图（LOC 74692105）旋转后的图像，在泰晤士街与斯普林街九处延续街口与美国人口普查局 TIGER/Line 道路对照做仿射定位，控制点内均方根误差7.9米。描取史图跨入海港的长码头轴线。重建工程另用同一地名档案定位。",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.322502,
+            41.488934
+          ],
+          [
+            -71.321212,
+            41.489095
+          ],
+          [
+            -71.320265,
+            41.489242
+          ],
+          [
+            -71.318763,
+            41.489448
+          ],
+          [
+            -71.317076,
+            41.489675
+          ],
+          [
+            -71.315296,
+            41.489911
+          ]
+        ]
+      },
+      "stable_id": "newport-long-wharf",
+      "position_uncertainty_m": 90,
+      "geometry_precision": "source_backed_historical_line"
+    },
+    {
+      "id": "DELAWARE_FORT_MIFFLIN_ORIGINAL_SCARP",
+      "title": "特拉华河 · 米夫林堡旧石墙",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1776,
+          "title": "米夫林堡旧石墙 · 泥岛防务",
+          "note": "英方工程师约翰·蒙特雷索在泥岛修筑石砌工事。独立战争期间，美国守军接手并继续施工。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "米夫林堡旧石墙 · 11月炮击与失守",
+          "note": "英军陆上和舰上炮火于11月10至15日猛烈轰击泥岛。守军于15日夜撤离，英军随后接收重损堡址。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1797,
+          "title": "米夫林堡旧石墙 · 受损堡址与重建计划",
+          "note": "英军撤离费城后，堡址回到美国一方。1790年代，宾夕法尼亚州和联邦方面筹划重建，并委托皮埃尔·朗方拟定方案。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/70000554.pdf",
+        "https://www.loc.gov/item/gm71000933/",
+        "https://www.loc.gov/item/gm71000679/",
+        "https://www.nps.gov/articles/000/philadelphia-campaign-1777.htm",
+        "https://www.openstreetmap.org/way/50114315"
+      ],
+      "geometry_method": "Southern visible side of Fort Mifflin scarp identified as original in NPS HABS PA-1225 Sheet 3, 1971, Appendix of NHL register 70000554. Corresponding scarp vertices from OSM contributors (ODbL), way 50114315. Timber works and water battery excluded.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.21395,
+            39.875042
+          ],
+          [
+            -75.213752,
+            39.874948
+          ],
+          [
+            -75.213634,
+            39.874568
+          ],
+          [
+            -75.213142,
+            39.87466
+          ],
+          [
+            -75.212844,
+            39.87452
+          ],
+          [
+            -75.21281,
+            39.874858
+          ],
+          [
+            -75.212551,
+            39.874824
+          ],
+          [
+            -75.212517,
+            39.875159
+          ],
+          [
+            -75.212261,
+            39.875123
+          ]
+        ]
+      },
+      "stable_id": "delaware-fort-mifflin-original-scarp",
+      "position_uncertainty_m": 25,
+      "geometry_precision": "source_backed_historical_line"
+    },
+    {
+      "id": "DELAWARE_RED_BANK_HESSIAN_AVENUE",
+      "title": "红岸 · 黑森部队接近默瑟堡的旧路",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1777,
+          "end_year": 1777,
+          "title": "红岸旧路 · 黑森部队进攻的最后一段",
+          "note": "10月22日，冯·多诺普的黑森部队沿旧路接近红岸。受奴役的迪克·埃利斯为队伍引路，战斗后被美方捕获并处绞刑。另有一名叫米奇的非洲裔居民被黑森部队强征作向导。"
+        }
+      ],
+      "source_urls": [
+        "https://www.gloucestercountynj.gov/DocumentCenter/View/959/Red-Bank-Battlefield-Archeology-Report-PDF",
+        "https://www.openstreetmap.org/way/11628809"
+      ],
+      "geometry_method": "Short final approach on extant Hessian Avenue only. The 2017 Red Bank Battlefield Archaeology Assessment, pp. 34–41, compares Ewald, Wurmb and Martin with township road histories and expressly identifies the modern Hessian Avenue alignment. Road centerline from OpenStreetMap contributors (ODbL) way 11628809.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.182246,
+            39.866781
+          ],
+          [
+            -75.183122,
+            39.867056
+          ],
+          [
+            -75.184017,
+            39.867342
+          ],
+          [
+            -75.18419,
+            39.867396
+          ],
+          [
+            -75.185736,
+            39.867885
+          ],
+          [
+            -75.186609,
+            39.868159
+          ],
+          [
+            -75.18749,
+            39.86844
+          ],
+          [
+            -75.188294,
+            39.868701
+          ],
+          [
+            -75.18843,
+            39.868745
+          ],
+          [
+            -75.189562,
+            39.869101
+          ]
+        ]
+      },
+      "stable_id": "delaware-red-bank-hessian-avenue",
+      "position_uncertainty_m": 80,
+      "geometry_precision": "source_backed_historical_line"
     }
   ]
 }
