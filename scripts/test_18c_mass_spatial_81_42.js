@@ -56,7 +56,8 @@ for(const [id,y,expected] of [
  ['NSW_CROWN_CLAIM',1787,false],['NSW_CROWN_CLAIM',1788,true],
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
-const successors=[2,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features);
+const successors=JSON.parse(read('data/nineteenth-century-territorial-areas.geojson')).features;
+successors.push(...[2,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features));
 successors.push(...JSON.parse(read('data/nineteenth-century-spatial-1800-1819.geojson')).features);
 for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISED','UPPER_CANADA','LOWER_CANADA']){
  const row=z(id),successor=successors.find(f=>f.id===row.cross_century_feature_id);
@@ -101,6 +102,30 @@ a.match(islandPhase('TRINIDAD_PORT_OF_SPAIN_CORE',1797).title,/2月17日/);
 a.match(islandPhase('TRINIDAD_MAIN_ISLAND',1797).title,/2月18日/);
 a.equal(atlantic('GUADELOUPE_MAIN_ISLANDS').geometry.coordinates.length,2);
 a.equal(atlantic('TRINIDAD_CHAGUARAMAS_ANCHORAGE').geometry.coordinates.length,4);
+const earlyIslandData=id=>previous.area_references.find(x=>x.id===id);
+a.equal(earlyIslandData('JAMAICA').superseded_by,'JAMAICA_MAIN_ISLAND');
+a.match(islandPhase('JAMAICA_MAIN_ISLAND',1754).title,/令议会赴金斯敦/);
+a.match(islandPhase('JAMAICA_MAIN_ISLAND',1758).title,/回到西班牙镇/);
+a.match(islandPhase('JAMAICA_PORT_ROYAL_TOWN_EARLY',1700).title,/1692年沉城后的重建/);
+a.match(islandPhase('JAMAICA_PORT_ROYAL_TOWN_EARLY',1703).title,/重建镇火灾/);
+a.match(islandPhase('JAMAICA_FORT_HALDANE_TACKY',1760).title,/夺取军需/);
+a.match(islandPhase('JAMAICA_PORT_ROYAL_VICTUALLING_EAST',1799).title,/被奴役者住处/);
+a.match(islandPhase('KINGSTON_COLONIAL_PORT',1792).title,/上岸出售/);
+a.match(islandPhase('KINGSTON_COLONIAL_PORT',1799).title,/85,528人/);
+a.match(islandPhase('JAMAICA_TRELAWNY_FLAGSTAFF',1796).title,/驱逐与土地没收/);
+a.match(islandPhase('JAMAICA_TRELAWNY_FLAGSTAFF',1799).title,/旧镇地上的殖民军营/);
+a.equal(earlyIslandData('BARBADOS').superseded_by,'BARBADOS_MAIN_ISLAND');
+a.match(islandPhase('BARBADOS_BRIDGETOWN_1766',1766).title,/5月14日大火/);
+a.equal(islandPhase('BARBADOS_BRIDGETOWN_FIRE_BLOCKS_1766',1767),undefined);
+a.match(islandPhase('BARBADOS_ST_ANNS_CASTLE',1705).title,/施工/);
+a.match(islandPhase('BARBADOS_ST_ANNS_CASTLE',1707).title,/竣工/);
+a.equal(atlantic('BARBADOS_BRIDGETOWN_BROAD_STREET').geometry.type,'LineString');
+a.equal(successors.find(f=>f.id==='bridgetown-port-1800').geometry.type,'Polygon');
+const maroonCores=JSON.parse(read('data/eighteenth-century-jamaica-maroon-autonomy-cores-1739-1799.geojson')).features;
+for(const [index,id] of ['accompong-maroon-1800','moore-town-maroon-1800'].entries()){
+ a.deepEqual(maroonCores[index].geometry,successors.find(f=>f.id===id).geometry);
+ a.equal(maroonCores[index].properties.periods.at(-1).end_year,1799);
+}
 for(const [id,y,expected] of [
  ['PLACENTIA_FORT_ROYAL',1713,true],['PLACENTIA_FORT_ROYAL',1715,false],['PLACENTIA_FORT_ROYAL',1761,false],
  ['PLACENTIA_FORT_ROYAL',1762,true],['FORT_ANNE_FLAG_BASTION_1726',1725,false],['FORT_ANNE_FLAG_BASTION_1726',1726,true],
