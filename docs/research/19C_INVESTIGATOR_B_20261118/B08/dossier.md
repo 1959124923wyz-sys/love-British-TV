@@ -1,0 +1,23 @@
+# B08 锡兰夺地、镇压和咖啡园
+
+康提权力转移、乌沃—韦拉萨镇压、1840土地条例、马特莱、咖啡雇佣与劳工欠薪分别登记。康提公约签署点可接会见大厅，按条核剥除王权与保护佛教。1840年第12号条例的土地推定触及森林、荒地及未耕地。地块化必须见地契、当地人占有线索及实际建园记录。［B08-S01–S03］
+
+咖啡园以 Worms 兄弟经营的 Pussellawa Rothschild estate 为具名入口。1848年托灵顿致格雷的信所录2,584件欠薪投诉是康提法院辖区合计，统计期为截至1848年3月的十个月。该件证明政府收到职工欠薪信息，仍需用该庄园登记、法庭姓名与投诉去向对读。［B08-S04–S06］
+
+## 既有稿件与核查
+
+- [E19-KANDY-OPENING 从沿海占领到高地焦土：康提王国的覆灭与乌沃—韦拉萨起义](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-ceylon-kandy-uva-resistance-1802-1818.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR23_19C_OPENING_1800_1819.md)
+- [E19-CEYLON-LAND-MATALE 锡兰土地法与马特莱起义](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-ceylon-land-matale-1840-1848.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR23_19C_CHAPTER35_1840_1849.md)
+- [E19-CEYLON-COFFEE-LABOUR 锡兰咖啡园：咖啡免税出港，劳工追讨欠薪](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-ceylon-coffee-labour-1840-1849.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR23_19C_CHAPTER35_1840_1849.md)
+
+本仓 [事件年表](events.csv)、[史料索引](sources.csv)、[地图线索](map-leads.csv) 与 [待核记录](open-items.csv) 随题收录。完整版 ZIP 提供地图稳定 ID 和原件影像。
+
+## 待核记录
+
+**庄园与劳工同地**　已定位Pussellawa庄园和省级官函。具体地籍、庄园入账工钱、法院判付及工人去向未见。
+
+下一入口　Sri Lanka National Archives CO 54／Kandy District Court wage books，Rothschild Archive Worms documents；南印度 kangany 招工名册。
+
+**乌沃与马特莱细日**　现核国家档案展品、戒严指令线索。需按营地、村社、审理所与执行日登记。
+
+下一入口　1817–1818、1848政府公报、原戒严令、马特莱和库鲁内格勒军事法庭卷；找本地家族与寺院史料。
