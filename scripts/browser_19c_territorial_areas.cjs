@@ -560,7 +560,12 @@ async function verify() {
   await jump(1763);
   await clickAreaAt(...moseCenter);
   await dossierTitle.filter({ hasText: '莫塞堡 · 社区迁往古巴' }).waitFor();
-  await jump(1764);
+  for (const [year, title] of [[1764, '英军驻守第二处堡址'], [1775, '英军拆除部分堡体']]) {
+   await jump(year);
+   await clickAreaAt(...moseCenter);
+   await dossierTitle.filter({ hasText: title }).waitFor();
+  }
+  await jump(1776);
   assert(!(await atlantic()).activeRegionalSites.includes('FORT_MOSE_SECOND'));
 
   await jump(1741);
