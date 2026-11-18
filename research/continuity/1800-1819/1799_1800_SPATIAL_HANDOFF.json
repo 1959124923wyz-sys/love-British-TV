@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 333,
-    "linked_to_1800_public_geometry": 114,
+    "1799_prior_records_reviewed": 357,
+    "linked_to_1800_public_geometry": 153,
     "by_disposition": {
-      "anchor": 64,
+      "anchor": 83,
       "claim_evidence": 7,
-      "continued": 23,
+      "continued": 29,
       "event_history": 7,
       "fiscal_evidence": 37,
-      "needs_boundary_or_site_review": 85,
+      "needs_boundary_or_site_review": 79,
       "network_evidence": 69,
       "occupation": 13,
       "political_relation_evidence": 14,
-      "renewed_scope": 14
+      "renewed_scope": 19
     }
   },
   "records": [
@@ -374,8 +374,10 @@
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1757后加尔各答Fort William公司军政堡",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "calcutta-new-fort-william-1800"
+      ]
     },
     {
       "prior_id": "B37-I-Z002",
@@ -399,7 +401,10 @@
       "name_zh": "1765后加尔各答Diwani行政税务中心",
       "prior_record_kind": "revenue",
       "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "calcutta-company-revenue-seat-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "B37-I-Z005",
@@ -438,8 +443,10 @@
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "马德拉斯Fort St George英公司恢复",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "madras-fort-st-george-1800"
+      ]
     },
     {
       "prior_id": "B37-I-Z017",
@@ -838,8 +845,10 @@
       "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
       "name_zh": "1749年后Madras Fort St George英方军驻市区",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "madras-fort-st-george-1800"
+      ]
     },
     {
       "prior_id": "B38-I-Z006",
@@ -855,7 +864,10 @@
       "name_zh": "1765年公司获得Bengal税关Diwani权利",
       "prior_record_kind": "revenue",
       "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "calcutta-company-revenue-seat-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "B38-I-Z013",
@@ -863,7 +875,10 @@
       "name_zh": "1765年公司获得Bihar名义Diwani权",
       "prior_record_kind": "revenue",
       "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "patna-diwani-seat-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "B38-I-Z014",
@@ -871,7 +886,10 @@
       "name_zh": "1765年公司名义Orissa Diwani税权声索",
       "prior_record_kind": "paper_claim",
       "resolution": "claim_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "cuttack-barabati-fort-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "B38-I-Z015",
@@ -1482,16 +1500,20 @@
       "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
       "name_zh": "1640年后东印度公司圣乔治堡：马德拉斯沿海商馆与城镇",
       "prior_record_kind": "公司驻防与港口参考",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "madras-fort-st-george-1800"
+      ]
     },
     {
       "prior_id": "CALCUTTA",
       "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
       "name_zh": "1690—1699年东印度公司苏塔纳蒂—加尔各答三村商馆与1698扎明达里",
       "prior_record_kind": "公司港市参考",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-sutanuti-market-area-1800"
+      ]
     },
     {
       "prior_id": "RUPERT_LAND",
@@ -1713,8 +1735,10 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1757后加尔各答威廉堡公司军政据点",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "calcutta-new-fort-william-1800"
+      ]
     },
     {
       "prior_id": "B36-Z049",
@@ -1858,7 +1882,10 @@
       "name_zh": "1765年奥里萨克塔克名义Diwani授予",
       "prior_record_kind": "paper_claim",
       "resolution": "claim_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "cuttack-barabati-fort-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "B36-Z075",
@@ -2347,7 +2374,10 @@
       "name_zh": "1765年孟加拉地区东印度公司税收权",
       "prior_record_kind": "revenue",
       "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "calcutta-company-revenue-seat-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "BIHAR_DIWANI",
@@ -2355,7 +2385,10 @@
       "name_zh": "1765年比哈尔地区东印度公司税收权",
       "prior_record_kind": "revenue",
       "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "patna-diwani-seat-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "ORISSA_DIWANI",
@@ -2363,7 +2396,10 @@
       "name_zh": "1765年奥里萨财税权名义辖区",
       "prior_record_kind": "revenue",
       "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "cuttack-barabati-fort-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "CALCUTTA_24_PARGANAS",
@@ -2371,7 +2407,10 @@
       "name_zh": "加尔各答周边24 Parganas公司税收/产权",
       "prior_record_kind": "revenue",
       "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "kulpi-parganas-land-grant-1800"
+      ],
+      "handoff_note_zh": "按具名征收据点或有实物的当地堡址接续。原档保留财税文书与范围记载。"
     },
     {
       "prior_id": "NORTHERN_CIRCARS",
@@ -2976,6 +3015,246 @@
       "resolution": "anchor",
       "features_at_1800": [
         "cavite-santa-catalina-point-1800"
+      ]
+    },
+    {
+      "prior_id": "BURDWAN_REVENUE_SEAT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布尔德万 · 地租与征收驻地",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "burdwan-revenue-seat-1800"
+      ]
+    },
+    {
+      "prior_id": "MIDNAPORE_REVENUE_SEAT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "米德纳普尔 · 征收驻地",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "midnapore-revenue-seat-1800"
+      ]
+    },
+    {
+      "prior_id": "CHITTAGONG_REVENUE_SEAT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "吉大港 · 公司征收驻地",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "chittagong-revenue-seat-1800"
+      ]
+    },
+    {
+      "prior_id": "MURSHIDABAD_MOTIJHEEL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "穆尔希达巴德 · 莫蒂吉尔",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "murshidabad-motijheel-1800"
+      ]
+    },
+    {
+      "prior_id": "PATNA_DIWANI",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴特那 · 比哈尔财税驻地",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "patna-diwani-seat-1800"
+      ]
+    },
+    {
+      "prior_id": "KULPI_PARGANAS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "库尔皮 · 二十四帕尔加纳授地南端",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "kulpi-parganas-land-grant-1800"
+      ]
+    },
+    {
+      "prior_id": "PATNA_GOLGHAR",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴特那 · 戈尔加尔粮仓",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "patna-golghar-1800"
+      ]
+    },
+    {
+      "prior_id": "CUTTACK_BARABATI_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "克塔克 · 巴拉巴蒂堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cuttack-barabati-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_COMPANY_REVENUE_SEAT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答 · 公司财税中枢",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-company-revenue-seat-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_SUTANUTI",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答北部 · 苏塔努蒂",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-sutanuti-market-area-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_OLD_FORT_CUSTOMS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答 · 旧威廉堡原址",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-old-fort-customs-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_NEW_FORT_WILLIAM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答 · 新威廉堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "calcutta-new-fort-william-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_ST_JOHN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答 · 圣约翰教堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-st-johns-church-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_WRITERS_BUILDING",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答 · 东印度公司文书大楼",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-writers-building-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_LAL_DIGHI",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答 · 拉尔迪吉大水池",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-lal-dighi-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_1794_TOLLYS_NULLAH_BOUNDARY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答法定南界 · 托利水道段",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "calcutta-1794-tollys-nullah-boundary-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_1794_BYTACONNAH_ROAD_BOUNDARY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答法定东界 · 贝塔卡纳路段",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "calcutta-1794-bytaconnah-road-boundary-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_SOUTH_PARK_STREET_BURIAL_GROUND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加尔各答基督教大墓地",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-south-park-street-burial-ground-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_BAITHAKKHANA_MARKET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "贝塔卡纳集市 · 界树旧址一带",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-baithakkhana-market-1800"
+      ]
+    },
+    {
+      "prior_id": "CALCUTTA_BAGBAZAR_OLD_POWDER_MILL_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴格巴扎 · 旧火药厂市集路",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-bagbazar-old-powder-mill-street-1800"
+      ]
+    },
+    {
+      "prior_id": "MADRAS_ST_GEORGE_LATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马德拉斯 · 圣乔治堡扩建后主堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "madras-fort-st-george-1800"
+      ]
+    },
+    {
+      "prior_id": "MADRAS_NEW_BLACK_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马德拉斯 · 新黑镇",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "madras-new-black-town-1800"
+      ]
+    },
+    {
+      "prior_id": "MADRAS_ARMENIAN_CHURCH_SITE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马德拉斯 · 亚美尼亚教堂旧址",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "madras-armenian-church-1800"
+      ]
+    },
+    {
+      "prior_id": "MADRAS_ST_MARY_CHURCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马德拉斯 · 圣乔治堡内圣玛丽教堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "madras-st-marys-fort-church-1800"
       ]
     }
   ]

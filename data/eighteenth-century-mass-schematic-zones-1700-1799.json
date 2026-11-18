@@ -2758,6 +2758,7 @@
     },
     {
       "id": "BENGAL_DIWANI",
+      "superseded_by": "CALCUTTA_COMPANY_REVENUE_SEAT",
       "title": "1765年孟加拉地区东印度公司税收权",
       "kind": "revenue",
       "periods": [
@@ -2786,6 +2787,7 @@
     },
     {
       "id": "BIHAR_DIWANI",
+      "superseded_by": "PATNA_DIWANI",
       "title": "1765年比哈尔地区东印度公司税收权",
       "kind": "revenue",
       "periods": [
@@ -2814,6 +2816,7 @@
     },
     {
       "id": "ORISSA_DIWANI",
+      "superseded_by": "CUTTACK_BARABATI_FORT",
       "title": "1765年奥里萨财税权名义辖区",
       "kind": "revenue",
       "periods": [
@@ -2842,6 +2845,7 @@
     },
     {
       "id": "CALCUTTA_24_PARGANAS",
+      "superseded_by": "KULPI_PARGANAS",
       "title": "加尔各答周边24 Parganas公司税收/产权",
       "kind": "revenue",
       "periods": [
@@ -5063,6 +5067,7 @@
     },
     {
       "id": "CUTTACK",
+      "superseded_by": "CUTTACK_BARABATI_FORT",
       "title": "克塔克名义奥里萨Diwani背景点",
       "periods": [
         {
@@ -10004,6 +10009,1092 @@
       "stable_id": "cavite-santa-catalina-point",
       "position_uncertainty_m": 95,
       "cross_century_feature_id": "cavite-santa-catalina-point-1800"
+    },
+    {
+      "id": "BURDWAN_REVENUE_SEAT",
+      "title": "布尔德万 · 地租与征收驻地",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1764,
+          "title": "布尔德万 · 收入拨付东印度公司",
+          "note": "米尔·卡西姆同意将布尔德万收入拨给东印度公司负担军费。1760年12月，地方领主蒂拉克·钱德与比尔布姆地主联合抵抗，英方击败他们。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1769,
+          "title": "布尔德万 · 公司保有地租收入",
+          "note": "沙阿·阿拉姆二世的敕令确认这笔早先拨付给公司的收入。公司通过布尔德万地方领主与承包人收取地租。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1771,
+          "title": "布尔德万 · 饥荒中的佃租和欠款",
+          "note": "饥荒造成佃户死亡和逃离。公司最初允许承包人把部分税租留到下一年补付，后因承包人收不上欠款而减少追缴额。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1792,
+          "title": "布尔德万 · 公司扩展包税制度",
+          "note": "公司将布尔德万的包税做法用于孟加拉其他地区，设征收机构，以数年期合同向地主和其他承包人征收。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1796,
+          "title": "布尔德万 · 永久地税制实施",
+          "note": "公司固定地主应缴的地税额，并规定欠缴地产可被出售。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "布尔德万 · 欠税地产被下令出售",
+          "note": "1797年，公司税务委员会下令出售布尔德万领主的部分地产，以追缴地税。"
+        }
+      ],
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00175_en_narrativeoftransactionsinbengal_vol01",
+        "https://purbabardhaman.nic.in/history/",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00224_en_fortwilliam-indiahouse_vol06",
+        "https://www.cambridge.org/core/books/abs/land-and-local-kingship-in-eighteenthcentury-bengal/revenue-farming-17711777/76FAB9C8821817E0AA532CA837805D38",
+        "https://searcharchives.bl.uk/catalog/040-000004083",
+        "https://www.geonames.org/1277029/barddhaman.html"
+      ],
+      "geometry_method": "Historical district seat referenced at Barddhaman town scale. The 1760 agreement, later Collectorate and local ruler all concern the named seat.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.8569,
+          23.2557
+        ]
+      },
+      "stable_id": "burdwan-revenue-seat",
+      "position_uncertainty_m": 2400,
+      "cross_century_feature_id": "burdwan-revenue-seat-1800"
+    },
+    {
+      "id": "MIDNAPORE_REVENUE_SEAT",
+      "title": "米德纳普尔 · 征收驻地",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1764,
+          "title": "米德纳普尔 · 公司取得收入与驻地",
+          "note": "按1760年协议第五条，米德纳普尔收入拨给东印度公司。约翰·约翰斯通在此接管事务，对抗来自克塔克方向的马拉塔部队。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1771,
+          "title": "米德纳普尔 · 敕令确认早前拨付",
+          "note": "沙阿·阿拉姆二世确认米德纳普尔既有拨付。边缘地区仍有马拉塔驻地，米德纳普尔行政范围多次调整。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1789,
+          "title": "米德纳普尔 · 公司设征收官",
+          "note": "1772至1773年间成立米德纳普尔征收机构，贾莱斯瓦尔一度划入此处。"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1792,
+          "title": "米德纳普尔 · 纳入塔姆卢克和马希萨达尔",
+          "note": "1790年2月10日，两处财税分区由胡格利转入米德纳普尔。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799,
+          "title": "米德纳普尔 · 永久地税与边境争夺",
+          "note": "公司推行永久地税制。马拉塔方面仍控制部分毗邻乡区，1799年又有袭击和驻点争夺。"
+        }
+      ],
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00175_en_narrativeoftransactionsinbengal_vol01",
+        "https://censusindia.gov.in/nada/index.php/catalog/1358/download/4446/DH_2011_1919_PART_A_DCHB_PURBA_MEDINIPUR.pdf",
+        "https://searcharchives.bl.uk/catalog/040-000004083",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00211_en_considerationsonindiaaffairs",
+        "https://indiankanoon.org/doc/183597006/",
+        "https://www.geonames.org/1263220/midnapore.html"
+      ],
+      "geometry_method": "Named district seat at Medinipur town scale, read with the 2011 census district historical account and 1761 officer description in IOR/H/47.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.3218,
+          22.424
+        ]
+      },
+      "stable_id": "midnapore-revenue-seat",
+      "position_uncertainty_m": 2000,
+      "cross_century_feature_id": "midnapore-revenue-seat-1800"
+    },
+    {
+      "id": "CHITTAGONG_REVENUE_SEAT",
+      "title": "吉大港 · 公司征收驻地",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760,
+          "title": "吉大港 · 米尔·卡西姆签署收入拨付",
+          "note": "9月27日的协议将吉大港收入拨给东印度公司。英方主管次年才接管。"
+        },
+        {
+          "start_year": 1761,
+          "end_year": 1764,
+          "title": "吉大港 · 维雷尔斯特接管",
+          "note": "1761年1月5日，维雷尔斯特从纳瓦卜的财税官穆罕默德·礼萨汗手里接管吉大港。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1771,
+          "title": "吉大港 · 公司测量并重估耕地",
+          "note": "1764至1767年公司测量耕地，1767年重新核定地税。1765年的敕令确认早先的收入拨付。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1789,
+          "title": "吉大港 · 包税与地方地主反对",
+          "note": "公司试行分区包税，引起地方地主反对。后来公司恢复由部分地主承包征收。"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1792,
+          "title": "吉大港 · 十年定税",
+          "note": "公司核定十年地税。部分新垦地与免税地另受征收办法约束。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799,
+          "title": "吉大港 · 按永久地税制固定已定税地",
+          "note": "1793年维持既定地税；新垦地仍可能另定税。"
+        }
+      ],
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00175_en_narrativeoftransactionsinbengal_vol01",
+        "https://ignca.gov.in/Asi_data/31276.pdf",
+        "https://asiaticsociety.org.bd/wp-content/uploads/2022/05/Humanities_June_2015.pdf",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00211_en_considerationsonindiaaffairs",
+        "https://searcharchives.bl.uk/catalog/040-000004083"
+      ],
+      "geometry_method": "Town-scale anchor at historic Chittagong (Islamabad) near Anderkilla. Indian Office correspondence and the names on Rennell identify the town and revenue office district.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.833,
+          22.344
+        ]
+      },
+      "stable_id": "chittagong-revenue-seat",
+      "position_uncertainty_m": 2300,
+      "cross_century_feature_id": "chittagong-revenue-seat-1800"
+    },
+    {
+      "id": "MURSHIDABAD_MOTIJHEEL",
+      "title": "穆尔希达巴德 · 莫蒂吉尔",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1743,
+          "end_year": 1755,
+          "title": "莫蒂吉尔 · 纳瓦兹什汗建宫殿与施舍院",
+          "note": "1743年前后，纳瓦兹什汗在湖弯营建宫殿、清真寺、学校和施舍院。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1757,
+          "title": "莫蒂吉尔 · 纳瓦卜家族权力争夺",
+          "note": "西拉杰即位后夺取姨母加塞蒂·贝古姆财产。1757年普拉西战后，英方扶持米尔·贾法尔继任纳瓦卜。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1764,
+          "title": "莫蒂吉尔 · 公司驻纳瓦卜宫廷",
+          "note": "东印度公司在穆尔希达巴德宫廷设置驻扎代表，黑斯廷斯曾在此任职。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1768,
+          "title": "莫蒂吉尔 · 征税权授予后的开征典礼",
+          "note": "1765年8月12日，沙阿·阿拉姆二世授予东印度公司孟加拉、比哈尔和奥里萨财税权。1766年，克莱武在莫蒂吉尔主持年度地税开征仪式。",
+          "kind": "revenue"
+        },
+        {
+          "start_year": 1769,
+          "end_year": 1771,
+          "title": "莫蒂吉尔 · 公司督察与地方税务官并存",
+          "note": "公司从1769年派人监督地方税务。礼萨汗继续负责孟加拉税务日常运作，公司又在穆尔希达巴德设监督机构。",
+          "kind": "revenue"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1772,
+          "title": "穆尔希达巴德 · 公司将税务与金库迁往加尔各答",
+          "note": "公司撤换礼萨汗，直接管收，并把税务事务及金库从穆尔希达巴德迁到加尔各答。",
+          "kind": "revenue"
+        },
+        {
+          "start_year": 1773,
+          "end_year": 1799,
+          "title": "莫蒂吉尔 · 纳瓦卜旧宫及宗教设施",
+          "note": "税务中心迁走后，湖旁宫苑和清真寺仍在。1789年，施舍院人员提交了请愿。"
+        }
+      ],
+      "source_urls": [
+        "https://censusindia.gov.in/nada/index.php/catalog/30076/download/33257/41833_1951_MUR.pdf",
+        "https://www.asiraiganj.in/?page_id=1540",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00211_en_considerationsonindiaaffairs",
+        "https://www.cambridge.org/core/books/abs/ideology-and-empire-in-eighteenthcentury-india/colonial-encounters-and-the-crisis-in-bengal-17651772/7E01A04973FE339B0AB74603A58A1C39",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00316_en_wholecouncil20thnovember-30thdecember1772"
+      ],
+      "geometry_method": "Motijheel lake bend and palace-group locality anchored at the Archaeological Survey’s 1743 mosque. The treasury-transfer phase refers to the seat of Murshidabad, not to a claimed room in the mosque.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.27558,
+          24.16146
+        ]
+      },
+      "stable_id": "murshidabad-motijheel-court",
+      "position_uncertainty_m": 2800,
+      "cross_century_feature_id": "murshidabad-motijheel-1800"
+    },
+    {
+      "id": "PATNA_DIWANI",
+      "title": "巴特那 · 比哈尔财税驻地",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1769,
+          "title": "巴特那 · 比哈尔收入及皇帝汇款",
+          "note": "1765年敕令把比哈尔的财政征收权授给公司。随后约定从巴特那商馆按月交款给希塔布·拉伊，再转往莫卧儿朝廷。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1771,
+          "title": "巴特那 · 饥荒与税务监督",
+          "note": "巴特那受到饥荒重创。希塔布·拉伊采取救济措施，公司同时设税务监督委员会。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1792,
+          "title": "巴特那 · 公司直接接管税务",
+          "note": "公司撤换希塔布·拉伊，重组比哈尔的财税征收机构。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799,
+          "title": "巴特那 · 比哈尔永久地税制",
+          "note": "永久地税制固定纳税地主的应缴额，并规定欠税地产可被出售。"
+        }
+      ],
+      "source_urls": [
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00211_en_considerationsonindiaaffairs",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00089_en_bdgazetteerspatna",
+        "https://www.cambridge.org/core/books/abs/ideology-and-empire-in-eighteenthcentury-india/colonial-encounters-and-the-crisis-in-bengal-17651772/7E01A04973FE339B0AB74603A58A1C39",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00316_en_wholecouncil20thnovember-30thdecember1772",
+        "https://research-information.bris.ac.uk/files/352495747/PGR_submission_Pearson_Sarah_P1353533_redacted.pdf"
+      ],
+      "geometry_method": "Named seat in historic Patna’s river wards, with separate documented government granary at Bankipore. Dated sources establish the city’s role in collection and transfer of revenue.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.193,
+          25.61
+        ]
+      },
+      "stable_id": "patna-diwani-seat",
+      "position_uncertainty_m": 2800,
+      "cross_century_feature_id": "patna-diwani-seat-1800"
+    },
+    {
+      "id": "KULPI_PARGANAS",
+      "title": "库尔皮 · 二十四帕尔加纳授地南端",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1758,
+          "title": "二十四帕尔加纳 · 公司取得扎明达里权",
+          "note": "1757年12月20日，米尔·贾法尔把加尔各答以南至库尔皮一带的扎明达里权拨给公司。公司向佃农收地租，也须向纳瓦卜缴纳核定土地税。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1764,
+          "title": "二十四帕尔加纳 · 应付地税拨给克莱武",
+          "note": "1759年，纳瓦卜把公司原先应交的地税另授予克莱武作为个人收益。佃租仍由公司征收。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1773,
+          "title": "二十四帕尔加纳 · 莫卧儿敕令确认",
+          "note": "沙阿·阿拉姆二世的敕令确认二十四帕尔加纳与1760年三处收入拨付。克莱武仍持有相关地税收益。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1793,
+          "title": "二十四帕尔加纳 · 克莱武死后收益归公司",
+          "note": "1774年克莱武去世，原先给他的地税收益归公司。近世纪末的伦内尔地图在加尔各答南面标有公司土地。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "二十四帕尔加纳 · 公司地租与加尔各答市界",
+          "note": "公司继续征收土地收入。1794年公告另行界定加尔各答城的司法和市政范围。"
+        }
+      ],
+      "source_urls": [
+        "https://ignca.gov.in/Asi_data/30214.pdf",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00211_en_considerationsonindiaaffairs",
+        "https://geo.nyu.edu/catalog/stanford-qg874nw4556",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://www.geonames.org/12680840/kulpi.html"
+      ],
+      "geometry_method": "Named Kulpi (Culpee) river locality from the original grant area described in the Calcutta census appendix. The late Rennell Company Lands map and Gazetteer use differing survey units.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.24,
+          22.08
+        ]
+      },
+      "stable_id": "kulpi-parganas-land-grant",
+      "position_uncertainty_m": 2300,
+      "cross_century_feature_id": "kulpi-parganas-land-grant-1800"
+    },
+    {
+      "id": "PATNA_GOLGHAR",
+      "title": "巴特那 · 戈尔加尔粮仓",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1799,
+          "title": "戈尔加尔粮仓 · 饥荒后兴建",
+          "note": "1770年大饥荒后，公司下令筹建储粮设施。约翰·加斯廷于1786年建成这座圆顶粮仓。"
+        }
+      ],
+      "source_urls": [
+        "https://patna.nic.in/tourist-place/gol-ghar/",
+        "https://library.bjp.org/jspui/bitstream/123456789/1923/1/The%20Imperial-Gazetteer-Of-India-Vol-11-1886%20%28Pali%20to%20Ratia%29.pdf",
+        "https://searcharchives.bl.uk/catalog/040-003278541",
+        "https://tourism.bihar.gov.in/in/en/home/destinations/patna/gol-ghar"
+      ],
+      "geometry_method": "Standing masonry granary beside Gandhi Maidan, located on Esri imagery and confirmed by the District of Patna and the 1814–15 Sita Ram depiction.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.139448,
+          25.620337
+        ]
+      },
+      "stable_id": "patna-golghar-granary",
+      "position_uncertainty_m": 40,
+      "cross_century_feature_id": "patna-golghar-1800"
+    },
+    {
+      "id": "CALCUTTA_COMPANY_REVENUE_SEAT",
+      "title": "加尔各答 · 公司财税中枢",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1770,
+          "title": "加尔各答 · 公司监督地方税务",
+          "note": "1765年取得财税权后，公司从威廉堡驻地监督孟加拉和比哈尔的财税事务。当地税务官仍经办征收。"
+        },
+        {
+          "start_year": 1771,
+          "end_year": 1771,
+          "title": "加尔各答 · 设税务委员会",
+          "note": "1771年4月，驻加尔各答参事会设立税务委员会，向地方监督机关索取账目。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1773,
+          "title": "加尔各答 · 接收金库并直接征收",
+          "note": "1772年公司接过征收事务，参事会兼理税务，从穆尔希达巴德移入金库与税务机关。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1792,
+          "title": "加尔各答 · 公司税务机构持续改组",
+          "note": "公司持续改组征收和审计机构。加尔各答保有地方账目管理和土地收入决策职能。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799,
+          "title": "加尔各答 · 公司推行永久地税制",
+          "note": "1793年3月22日公告固定缔约地主应缴的地税，拖欠者可能被迫出售地产。"
+        }
+      ],
+      "source_urls": [
+        "https://sadte.wb.gov.in/assets/upload/office_brochure.pdf",
+        "https://tile.loc.gov/storage-services/service/gdc/gdclccn/23/00/48/26/23004826/23004826.pdf",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00316_en_wholecouncil20thnovember-30thdecember1772",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00211_en_considerationsonindiaaffairs",
+        "https://ignca.gov.in/Asi_data/31285.pdf",
+        "https://indiankanoon.org/doc/183597006/"
+      ],
+      "geometry_method": "City-centre reference by the old Council House area. Estate deeds describe the old Council House west of Government House; the dossier refers to institutions at the city scale and keeps treasury and council premises distinct.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.3472,
+          22.5694
+        ]
+      },
+      "stable_id": "calcutta-company-revenue-seat",
+      "position_uncertainty_m": 500,
+      "cross_century_feature_id": "calcutta-company-revenue-seat-1800"
+    },
+    {
+      "id": "CALCUTTA_SUTANUTI",
+      "title": "加尔各答北部 · 苏塔努蒂",
+      "kind": "revenue",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1755,
+          "title": "苏塔努蒂 · 胡格利河岸市场与三村租权",
+          "note": "苏塔努蒂原有棉纱贸易和河岸市场。1698年东印度公司取得苏塔努蒂、卡利卡塔和戈宾达普尔的扎明达里权。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1757,
+          "title": "苏塔努蒂 · 旧堡易手期间的北岸聚落",
+          "note": "1756年西拉杰占领加尔各答。英国次年夺回城镇，苏塔努蒂仍为北部商业聚落。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1793,
+          "title": "苏塔努蒂 · 加尔各答北部市镇扩张",
+          "note": "北部河岸商业区继续成长，苏塔努蒂所在聚落逐渐并入加尔各答城市。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "苏塔努蒂 · 划定城界后的北部街区",
+          "note": "1794年公布城界时，加尔各答北边界循巴格巴扎尔水道，苏塔努蒂所在街区留在城内。"
+        }
+      ],
+      "source_urls": [
+        "https://censusindia.gov.in/nada/index.php/catalog/32357/download/35538/20180_1901_CAL.pdf",
+        "https://censusindia.gov.in/nada/index.php/catalog/27868/download/31037/DH_19_2001_KOL.pdf",
+        "https://ignca.gov.in/Asi_data/30214.pdf",
+        "https://www.persee.fr/doc/adh_0066-2062_1989_num_1988_1_1718",
+        "https://en.wikisource.org/wiki/Page:Calcutta,_Past_and_Present.djvu/29"
+      ],
+      "geometry_method": "Representative point in the north riverfront Hatkhola–Sutanuti locality identified by Cotton, the 1901 census and district history, at village/quarter scale.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.356,
+          22.591
+        ]
+      },
+      "stable_id": "calcutta-sutanuti-market-area",
+      "position_uncertainty_m": 1100,
+      "cross_century_feature_id": "calcutta-sutanuti-market-area-1800"
+    },
+    {
+      "id": "CALCUTTA_OLD_FORT_BUILDING",
+      "title": "加尔各答 · 旧威廉堡工地",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1706,
+          "title": "旧威廉堡 · 东印度公司营建商馆与城防",
+          "note": "东印度公司在卡利卡塔河岸修建棱堡与仓房，1706年完成堡内主要商馆建筑。"
+        },
+        {
+          "start_year": 1707,
+          "end_year": 1711,
+          "title": "旧威廉堡 · 孟加拉公司驻地",
+          "note": "1707年加尔各答成为单设管辖区，堡防继续施工。1710至1712年间修建西侧幕墙。"
+        }
+      ],
+      "source_urls": [
+        "https://ignca.gov.in/Asi_data/17544.pdf",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://censusindia.gov.in/nada/index.php/catalog/32357/download/35538/20180_1901_CAL.pdf"
+      ],
+      "geometry_method": "Same site as the later surveyed old fort. Earliest work is located at the named company factory, as the full curtains were still being built.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.347533,
+          22.573896
+        ]
+      },
+      "stable_id": "calcutta-old-fort-william",
+      "position_uncertainty_m": 120
+    },
+    {
+      "id": "CALCUTTA_OLD_FORT_CUSTOMS",
+      "title": "加尔各答 · 旧威廉堡原址",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1769,
+          "title": "旧威廉堡原址 · 海关与仓库",
+          "note": "军事人员于1767年初撤出。海关利用原堡内房屋，旧堡也增设仓库。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1799,
+          "title": "旧威廉堡原址 · 临河一侧逐渐沉陷",
+          "note": "1770年起，旧址临河部分下沉，位于南端的海关房屋逐渐受到河流侵蚀。"
+        }
+      ],
+      "source_urls": [
+        "https://kolkatacustoms.gov.in/page/history",
+        "https://www.kolkatacustoms.gov.in/page/about-us",
+        "https://commons.wikimedia.org/wiki/File:Old_Fort_William_plate32.jpg",
+        "https://www.rarebooksocietyofindia.org/book_archive/196174216674_10154587845996675.pdf",
+        "https://www.gutenberg.org/files/45092/old/45092-h/45092-h.htm#CHAPTER_XIX"
+      ],
+      "geometry_method": "Same named site at the Old Fort William. There were decades of piecemeal demolition, erosion, and rebuilding instead of a persistent complete enceinte.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.347533,
+          22.573896
+        ]
+      },
+      "stable_id": "calcutta-old-fort-william",
+      "position_uncertainty_m": 115,
+      "cross_century_feature_id": "calcutta-old-fort-customs-1800"
+    },
+    {
+      "id": "CALCUTTA_FORT_WILLIAM_CONSTRUCTION",
+      "title": "加尔各答 · 戈宾达普尔与新堡工地",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1756,
+          "title": "戈宾达普尔 · 加尔各答南面的原聚落",
+          "note": "戈宾达普尔是1698年公司取得扎明达里权的三处聚落之一。"
+        },
+        {
+          "start_year": 1757,
+          "end_year": 1768,
+          "title": "戈宾达普尔 · 清迁居民并开建新威廉堡",
+          "note": "收复加尔各答后，公司征用戈宾达普尔并迁出居民。根据公司文件的研究，1768年还有314名原居民的补偿未处理。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1769,
+          "end_year": 1780,
+          "title": "新威廉堡 · 原戈宾达普尔工地",
+          "note": "公司继续修筑新堡，在周围清出空地，供部署防御并限制邻近营建。",
+          "kind": "military"
+        }
+      ],
+      "source_urls": [
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://rajbhavankolkata.gov.in/writereaddata/PDF/CHAPTERIII.pdf",
+        "https://kolkatacustoms.gov.in/page/history",
+        "https://www.bankurauniv.ac.in/uploads/naacpdf/1657192313.pdf",
+        "https://smarthistory.org/a-map-of-kolkata-in-1785/"
+      ],
+      "geometry_method": "Named Gobindapur and later new fort site, anchored within the surviving fort. Contemporary episode refers to village clearance and construction at this location.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.337476,
+          22.557465
+        ]
+      },
+      "stable_id": "calcutta-new-fort-william",
+      "position_uncertainty_m": 420
+    },
+    {
+      "id": "CALCUTTA_ST_ANNE",
+      "title": "加尔各答 · 圣安妮教堂旧址",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1709,
+          "end_year": 1755,
+          "title": "圣安妮教堂 · 公司城旁开设教堂",
+          "note": "1709年，圣安妮教堂建成，位于旧威廉堡东侧。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1756,
+          "title": "圣安妮教堂 · 围城中被毁",
+          "note": "1756年西拉杰攻城期间，旧堡旁的圣安妮教堂被毁。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://ignca.gov.in/Asi_data/8530.pdf",
+        "https://rajbhavankolkata.gov.in/pdf/the.pdf",
+        "https://commons.wikimedia.org/wiki/File:Old_Fort_William_plate32.jpg"
+      ],
+      "geometry_method": "The 1753 Wells church symbol tied to old-fort controls. Its site is in the vicinity of the later Writers’ Building.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.349046,
+          22.573632
+        ]
+      },
+      "stable_id": "calcutta-st-anne-old-church",
+      "position_uncertainty_m": 37
+    },
+    {
+      "id": "CALCUTTA_ST_JOHN",
+      "title": "加尔各答 · 圣约翰教堂",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1786,
+          "title": "圣约翰教堂 · 在旧墓地旁动工",
+          "note": "1784年4月6日奠基。"
+        },
+        {
+          "start_year": 1787,
+          "end_year": 1796,
+          "title": "圣约翰教堂 · 建成启用",
+          "note": "1787年，教堂建成。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "圣约翰教堂 · 首次改建",
+          "note": "1797年，建筑师爱德华·蒂雷塔主持首次改建。"
+        }
+      ],
+      "source_urls": [
+        "https://asikolkata.in/monument-sites/st-johns-church/",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://rajbhavankolkata.gov.in/writereaddata/PDF/CHAPTERIII.pdf"
+      ],
+      "geometry_method": "Archaeological Survey / National Monuments coordinates for the existing church at the former burial ground.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.346111,
+          22.569861
+        ]
+      },
+      "stable_id": "calcutta-st-johns-church-site",
+      "position_uncertainty_m": 20,
+      "cross_century_feature_id": "calcutta-st-johns-church-1800"
+    },
+    {
+      "id": "CALCUTTA_WRITERS_BUILDING",
+      "title": "加尔各答 · 东印度公司文书大楼",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "文书大楼 · 公司初级文书住所",
+          "note": "1776年地契写明拟建文书住所。建筑于1780年前后启用，安置公司派来的初级文书。"
+        }
+      ],
+      "source_urls": [
+        "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3",
+        "https://discovery.ucl.ac.uk/10091168/1/82_T-Sengupta_Indian-Subcontinent-1750-1950%20OS.pdf",
+        "https://heritagecal.org/Writers%27%20Building%20Calcutta.pdf"
+      ],
+      "geometry_method": "Named Writers’ Building site circa 1780. The contemporary office frontage was significantly altered in the nineteenth century.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.349412,
+          22.573707
+        ]
+      },
+      "stable_id": "calcutta-writers-building-site",
+      "position_uncertainty_m": 40,
+      "cross_century_feature_id": "calcutta-writers-building-1800"
+    },
+    {
+      "id": "CALCUTTA_LAL_DIGHI",
+      "title": "加尔各答 · 拉尔迪吉大水池",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1753,
+          "end_year": 1799,
+          "title": "拉尔迪吉 · 旧威廉堡以东的城市供水池",
+          "note": "1753年测图在旧堡东侧标出大水池。附近单位和居民用其取水。"
+        }
+      ],
+      "source_urls": [
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://censusindia.gov.in/nada/index.php/catalog/32357/download/35538/20180_1901_CAL.pdf",
+        "https://smarthistory.org/a-map-of-kolkata-in-1785/"
+      ],
+      "geometry_method": "Named water tank appearing on Wells 1753 and Wood 1784–85. Its old shoreline differs from the present setting.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.349114,
+          22.57195
+        ]
+      },
+      "stable_id": "calcutta-lal-dighi-tank-site",
+      "position_uncertainty_m": 95,
+      "cross_century_feature_id": "calcutta-lal-dighi-1800"
+    },
+    {
+      "id": "CALCUTTA_SOUTH_PARK_STREET_BURIAL_GROUND",
+      "title": "加尔各答基督教大墓地",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1793,
+          "title": "加尔各答基督教大墓地 · 乔林基基督教大墓地开设",
+          "note": "1767年在乔林基东面设置新教墓地，与之相通的街道称墓地路。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "加尔各答基督教大墓地 · 乔林基墓地纳入公布城界",
+          "note": "1794年公告将新教墓地、乔林基等纳入加尔各答城镇法定范围。"
+        }
+      ],
+      "source_urls": [
+        "https://www.bacsa.org.uk/wp-content/uploads/2024/03/chowkidar_16_06-Autumn-2023.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://www.bacsa.org.uk/wp-content/uploads/2020/01/Calcutta-and-West-Bengal.pdf",
+        "https://www.iima.ac.in/sites/default/files/rnpfiles/17719931472020-12-03.pdf"
+      ],
+      "geometry_method": "Named location connected with the September 1794 limits and anchored at the cemetery or the inherited street network.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.36028,
+          22.54639
+        ]
+      },
+      "stable_id": "calcutta-south-park-street-burial-ground",
+      "position_uncertainty_m": 90,
+      "cross_century_feature_id": "calcutta-south-park-street-burial-ground-1800"
+    },
+    {
+      "id": "CALCUTTA_BAITHAKKHANA_MARKET",
+      "title": "贝塔卡纳集市 · 界树旧址一带",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1798,
+          "title": "贝塔卡纳集市 · 界树旧址一带 · 城界界树与贝塔卡纳集市",
+          "note": "1794年公告用贝塔卡纳集市对面的界树与第9、10号界桩定位东界。"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "贝塔卡纳集市 · 界树旧址一带 · 填壕拓路，界树被砍",
+          "note": "1799年填壕拓建环城路，贝塔卡纳界树被砍。"
+        }
+      ],
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/1/16/Thacker%27s_guide_to_Calcutta_%28IA_thackersguidetoc00firm%29.pdf",
+        "https://en.wikisource.org/wiki/Page:Calcutta,_Past_and_Present.djvu/292",
+        "https://assets.cambridge.org/97811084/20624/excerpt/9781108420624_excerpt.pdf",
+        "https://indianexpress.com/article/cities/kolkata/streetwise-kolkata-bowbazar-calcutta-8112009/"
+      ],
+      "geometry_method": "Named location connected with the September 1794 limits and anchored at the cemetery or the inherited street network.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.36864,
+          22.56704
+        ]
+      },
+      "stable_id": "calcutta-baithakkhana-market",
+      "position_uncertainty_m": 90,
+      "cross_century_feature_id": "calcutta-baithakkhana-market-1800"
+    },
+    {
+      "id": "CALCUTTA_BAGBAZAR_OLD_POWDER_MILL_STREET",
+      "title": "巴格巴扎 · 旧火药厂市集路",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "巴格巴扎 · 旧火药厂市集路 · 北界经过旧火药厂市集",
+          "note": "1794年公告规定北界沿奇特普尔水道南岸经过旧火药厂市集，再通往邓邓桥。"
+        }
+      ],
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://doi.org/10.1093/acprof:oso/9780199468102.003.0004",
+        "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3"
+      ],
+      "geometry_method": "Named location connected with the September 1794 limits and anchored at the cemetery or the inherited street network.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.36804,
+          22.60382
+        ]
+      },
+      "stable_id": "calcutta-bagbazar-old-powder-mill-street",
+      "position_uncertainty_m": 90,
+      "cross_century_feature_id": "calcutta-bagbazar-old-powder-mill-street-1800"
+    },
+    {
+      "id": "MADRAS_OLD_BLACK_TOWN_CLEARANCE",
+      "title": "马德拉斯 · 旧黑镇拆迁地",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1746,
+          "end_year": 1748,
+          "title": "马德拉斯旧黑镇 · 法军拆除旧城南部",
+          "note": "法军占领马德拉斯后拆毁旧黑镇南部建筑和工事，改变圣乔治堡与居民区之间的地带。"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1756,
+          "title": "马德拉斯旧黑镇 · 战后残余街区",
+          "note": "东印度公司重新接管马德拉斯时，旧黑镇部分街区已经拆去，原有居民区继续向北发展。"
+        },
+        {
+          "start_year": 1757,
+          "end_year": 1758,
+          "title": "马德拉斯旧黑镇 · 英方进一步清除房屋",
+          "note": "东印度公司继续拆除旧黑镇建筑，在堡北清出空地。城区北移形成新黑镇。"
+        }
+      ],
+      "source_urls": [
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://militarymaps.rct.uk/war-of-the-austrian-succession-1740-8/map-of-the-bay-of-madras-1746-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-madras-1758-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "geometry_method": "Named demolished district, anchored at surviving urban plot references near the courts. Successive French and British clearance is recorded at locality level.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.28586,
+          13.08725
+        ]
+      },
+      "stable_id": "madras-old-black-town",
+      "position_uncertainty_m": 260
+    },
+    {
+      "id": "MADRAS_ARMENIAN_CHURCH_SITE",
+      "title": "马德拉斯 · 亚美尼亚教堂旧址",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1757,
+          "title": "亚美尼亚教堂旧址 · 墓地礼拜堂",
+          "note": "1755年城图在亚美尼亚社区墓地标出礼拜堂。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1758,
+          "title": "亚美尼亚教堂旧址 · 法军围城期间占用",
+          "note": "1758年法军在围城期间占用亚美尼亚人墓地的礼拜堂。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1763,
+          "title": "亚美尼亚教堂旧址 · 英方作医院用途",
+          "note": "法军撤围后，英国方面用这片场地设置医院。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1771,
+          "title": "亚美尼亚教堂旧址 · 归还亚美尼亚教团",
+          "note": "1764年，英方返还场地。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1799,
+          "title": "亚美尼亚教堂 · 教团在原地重建",
+          "note": "1772年亚美尼亚社群在原场地修建现存教堂，由当地亚美尼亚商人出资。"
+        }
+      ],
+      "source_urls": [
+        "https://modernarmenianhistory.history.ucla.edu/2020/02/11/chairs-blog-2/",
+        "https://upload.wikimedia.org/wikipedia/commons/7/77/Vestiges_of_old_Madras%2C_1640-1800%3B_traced_from_the_East_India_company%27s_records_preserved_at_Fort_St._George_and_the_India_office%2C_and_from_other_sources_%28IA_vestigesofoldmad04love%29.pdf",
+        "https://gallica.bnf.fr/ark:/12148/btv1b530986164",
+        "https://oxbridgepartners.com/hratch/images/research_library/Mirzaian_1958_Short_Record_of_Armenian_Churches_India_Far_East.pdf"
+      ],
+      "geometry_method": "Named Armenian cemetery and church on Armenian Street. A chapel was drawn at this locality before the surviving church of 1772.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2873,
+          13.0891
+        ]
+      },
+      "stable_id": "madras-armenian-church-site",
+      "position_uncertainty_m": 100,
+      "cross_century_feature_id": "madras-armenian-church-1800"
+    },
+    {
+      "id": "MADRAS_ST_MARY_CHURCH",
+      "title": "马德拉斯 · 圣乔治堡内圣玛丽教堂",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1760,
+          "title": "圣玛丽教堂 · 圣乔治堡内礼拜堂",
+          "note": "教堂于1680年启用，位于圣乔治堡内。"
+        },
+        {
+          "start_year": 1761,
+          "end_year": 1799,
+          "title": "圣玛丽教堂 · 英军带入本地治里的祭坛画",
+          "note": "1761年英国攻占本地治里后，把一幅《最后的晚餐》摹本从那里带到圣乔治堡内的圣玛丽教堂。"
+        }
+      ],
+      "source_urls": [
+        "https://govtmuseumchennai.org/uploads/topics/16529639911706.pdf",
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg",
+        "https://www.asichennai.gov.in/downloads/MTS_EXTENT.pdf"
+      ],
+      "geometry_method": "Present St Mary’s church building in Fort St George, identified on the 1733 plan and Tamil Nadu monument inventory.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.28664,
+          13.07875
+        ]
+      },
+      "stable_id": "madras-st-marys-fort-church",
+      "position_uncertainty_m": 25,
+      "cross_century_feature_id": "madras-st-marys-fort-church-1800"
     }
   ],
   "regional_zones": [
@@ -19135,6 +20226,2350 @@
         14.482903
       ],
       "cross_century_feature_id": "cavite-fort-san-felipe-1800"
+    },
+    {
+      "id": "CUTTACK_BARABATI_FORT",
+      "title": "克塔克 · 巴拉巴蒂堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1740,
+          "title": "巴拉巴蒂堡 · 克塔克行政与防御驻地",
+          "note": "巴拉巴蒂堡在莫卧儿统治时期用作奥里萨行政与防御据点。"
+        },
+        {
+          "start_year": 1741,
+          "end_year": 1750,
+          "title": "巴拉巴蒂堡 · 孟加拉与马拉塔争夺",
+          "note": "马拉塔进攻奥里萨，克塔克在两方之间数次易手。"
+        },
+        {
+          "start_year": 1751,
+          "end_year": 1764,
+          "title": "巴拉巴蒂堡 · 马拉塔接管克塔克",
+          "note": "1751年协议后，马拉塔控制克塔克，改进巴拉巴蒂堡工事。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1799,
+          "title": "巴拉巴蒂堡 · 马拉塔仍据克塔克",
+          "note": "1765年敕令列入奥里萨财税权。克塔克当地仍由马拉塔治理，巴拉巴蒂堡继续作行政据点。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nma.gov.in/showfile.php?lang=1&level=1&lid=2201&ls_id=1764&nma_type=0",
+        "https://censusindia.gov.in/nada/index.php/catalog/28906/download/32088/21925_1961_CUT.pdf",
+        "https://magazines.odisha.gov.in/orissareview/sept-oct-2005/engpdf/Barabati%20Fort.pdf",
+        "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00211_en_considerationsonindiaaffairs",
+        "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
+      ],
+      "geometry_method": "Trapezoid traced on the inner edge of the extant moat, including bridged sections where the archaeological survey plot shows continuity. Compared with National Monuments Authority p. 13 and Annexure I. The missing curtain and later stadium buildings are resolved through the moat, distinct from the larger modern protected perimeter.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8627462,
+              20.4876778
+            ],
+            [
+              85.8626175,
+              20.4872457
+            ],
+            [
+              85.8624995,
+              20.4867532
+            ],
+            [
+              85.8623707,
+              20.4862607
+            ],
+            [
+              85.8621991,
+              20.4856577
+            ],
+            [
+              85.8620274,
+              20.4850949
+            ],
+            [
+              85.8618665,
+              20.4845522
+            ],
+            [
+              85.8617914,
+              20.4842406
+            ],
+            [
+              85.8616734,
+              20.4837984
+            ],
+            [
+              85.8615339,
+              20.483326
+            ],
+            [
+              85.861448,
+              20.4829039
+            ],
+            [
+              85.8617163,
+              20.4827933
+            ],
+            [
+              85.8624351,
+              20.4826024
+            ],
+            [
+              85.8632183,
+              20.4824416
+            ],
+            [
+              85.8640981,
+              20.4823009
+            ],
+            [
+              85.8648491,
+              20.4822808
+            ],
+            [
+              85.8656108,
+              20.4822506
+            ],
+            [
+              85.8663404,
+              20.4822908
+            ],
+            [
+              85.8668447,
+              20.4823612
+            ],
+            [
+              85.8671129,
+              20.4824516
+            ],
+            [
+              85.8672953,
+              20.4829039
+            ],
+            [
+              85.8674455,
+              20.4833461
+            ],
+            [
+              85.8675957,
+              20.4837582
+            ],
+            [
+              85.8677459,
+              20.4842004
+            ],
+            [
+              85.8679175,
+              20.4846426
+            ],
+            [
+              85.868057,
+              20.4850848
+            ],
+            [
+              85.8682394,
+              20.4855974
+            ],
+            [
+              85.8680677,
+              20.4858286
+            ],
+            [
+              85.8675313,
+              20.4860798
+            ],
+            [
+              85.867027,
+              20.4863813
+            ],
+            [
+              85.8665121,
+              20.4866426
+            ],
+            [
+              85.8660507,
+              20.4868738
+            ],
+            [
+              85.8654606,
+              20.487115
+            ],
+            [
+              85.8650315,
+              20.4873562
+            ],
+            [
+              85.8648169,
+              20.4872758
+            ],
+            [
+              85.864495,
+              20.4873663
+            ],
+            [
+              85.8639908,
+              20.4874969
+            ],
+            [
+              85.8634436,
+              20.4875874
+            ],
+            [
+              85.8627462,
+              20.4876778
+            ]
+          ]
+        ]
+      },
+      "stable_id": "cuttack-barabati-fort",
+      "position_uncertainty_m": 55,
+      "bbox": [
+        85.861448,
+        20.4822506,
+        85.8682394,
+        20.4876778
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "cuttack-barabati-fort-1800"
+    },
+    {
+      "id": "CALCUTTA_OLD_FORT_WILLIAM",
+      "title": "加尔各答 · 旧威廉堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1712,
+          "end_year": 1755,
+          "title": "旧威廉堡 · 西侧幕墙竣工后驻守",
+          "note": "1712年西墙完工。旧威廉堡兼作公司仓储、军防和孟加拉行政驻地。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1756,
+          "title": "旧威廉堡 · 6月20日西拉杰夺堡",
+          "note": "孟加拉纳瓦卜西拉杰进攻加尔各答。6月20日，守军投降，孟加拉军队接管旧堡。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1757,
+          "end_year": 1757,
+          "title": "旧威廉堡 · 1月2日公司军收复",
+          "note": "克莱武和沃森率部夺回加尔各答。2月9日《阿利纳加尔条约》恢复公司的既有商贸特权与产业。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1765,
+          "title": "旧威廉堡 · 公司继续驻防",
+          "note": "公司继续使用河边旧堡，并在更南面的戈宾达普尔营建新堡。"
+        },
+        {
+          "start_year": 1766,
+          "end_year": 1766,
+          "title": "旧威廉堡 · 海关开始进驻",
+          "note": "9月8日，旧堡内原供少校使用的房间划给海关。驻军次年初全部撤出。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Old_Fort_William_plate32.jpg",
+        "https://ignca.gov.in/Asi_data/17544.pdf",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://searcharchives.bl.uk/catalog/040-003394100",
+        "https://en.banglapedia.org/index.php?title=Clive%2C_Robert",
+        "https://kolkatacustoms.gov.in/page/history"
+      ],
+      "geometry_method": "1700s principal fortification digitized from Wilson’s excavated foundations superimposed on the 1903–1906 cadastral base. Registered against the extant old Collectorate building corners, cross-checked with Wells’s 1753 survey.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.347522,
+              22.575185
+            ],
+            [
+              88.347498,
+              22.575026
+            ],
+            [
+              88.347528,
+              22.574989
+            ],
+            [
+              88.34735,
+              22.57469
+            ],
+            [
+              88.34716,
+              22.574366
+            ],
+            [
+              88.346894,
+              22.573932
+            ],
+            [
+              88.346628,
+              22.573482
+            ],
+            [
+              88.346511,
+              22.573471
+            ],
+            [
+              88.34645,
+              22.573372
+            ],
+            [
+              88.346712,
+              22.57339
+            ],
+            [
+              88.346826,
+              22.573392
+            ],
+            [
+              88.34778,
+              22.57307
+            ],
+            [
+              88.34775,
+              22.572971
+            ],
+            [
+              88.347859,
+              22.572898
+            ],
+            [
+              88.347915,
+              22.573085
+            ],
+            [
+              88.347869,
+              22.573153
+            ],
+            [
+              88.348385,
+              22.574718
+            ],
+            [
+              88.348465,
+              22.574737
+            ],
+            [
+              88.348513,
+              22.574873
+            ],
+            [
+              88.348362,
+              22.574906
+            ],
+            [
+              88.34833,
+              22.574852
+            ],
+            [
+              88.347646,
+              22.575061
+            ],
+            [
+              88.347619,
+              22.575134
+            ],
+            [
+              88.347522,
+              22.575185
+            ]
+          ]
+        ]
+      },
+      "stable_id": "calcutta-old-fort-william",
+      "position_uncertainty_m": 24,
+      "bbox": [
+        88.34645,
+        22.572898,
+        88.348513,
+        22.575185
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "CALCUTTA_NEW_FORT_WILLIAM",
+      "title": "加尔各答 · 新威廉堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1799,
+          "title": "新威廉堡 · 主堡竣工后的公司驻军",
+          "note": "新围堡于1781年完成。公司驻军占据原戈宾达普尔地块，河岸堡垒和周边开阔地形成新的城防中心。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:%22Plan_of_Fort_William,_near_Calcutta,%22_c.1762-99.jpg",
+        "https://smarthistory.org/a-map-of-kolkata-in-1785/",
+        "https://rajbhavankolkata.gov.in/writereaddata/PDF/CHAPTERIII.pdf",
+        "https://kolkatacustoms.gov.in/page/history",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://www.bankurauniv.ac.in/uploads/naacpdf/1657192313.pdf"
+      ],
+      "geometry_method": "Principal scarp wall digitized from the British Library historic plan with 15 corresponding bends in the modern moat inner edge. In-fit horizontal residual approximately 15 m. East side follows common trace, without detached outworks or the Maidan.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.333795,
+              22.556859
+            ],
+            [
+              88.334362,
+              22.556534
+            ],
+            [
+              88.334429,
+              22.556661
+            ],
+            [
+              88.334706,
+              22.556826
+            ],
+            [
+              88.335025,
+              22.556649
+            ],
+            [
+              88.335819,
+              22.555488
+            ],
+            [
+              88.335686,
+              22.55514
+            ],
+            [
+              88.335409,
+              22.554944
+            ],
+            [
+              88.335673,
+              22.554015
+            ],
+            [
+              88.336683,
+              22.55433
+            ],
+            [
+              88.3364,
+              22.554477
+            ],
+            [
+              88.336673,
+              22.554829
+            ],
+            [
+              88.33804,
+              22.554811
+            ],
+            [
+              88.338116,
+              22.554502
+            ],
+            [
+              88.339073,
+              22.553971
+            ],
+            [
+              88.339413,
+              22.554513
+            ],
+            [
+              88.339027,
+              22.554531
+            ],
+            [
+              88.338739,
+              22.554897
+            ],
+            [
+              88.338944,
+              22.555153
+            ],
+            [
+              88.340115,
+              22.556191
+            ],
+            [
+              88.340468,
+              22.556078
+            ],
+            [
+              88.340579,
+              22.5558
+            ],
+            [
+              88.341552,
+              22.556207
+            ],
+            [
+              88.341116,
+              22.556974
+            ],
+            [
+              88.340945,
+              22.55675
+            ],
+            [
+              88.340456,
+              22.556702
+            ],
+            [
+              88.340307,
+              22.557135
+            ],
+            [
+              88.340178,
+              22.558349
+            ],
+            [
+              88.340591,
+              22.558706
+            ],
+            [
+              88.340942,
+              22.558686
+            ],
+            [
+              88.341105,
+              22.559316
+            ],
+            [
+              88.340087,
+              22.559408
+            ],
+            [
+              88.339711,
+              22.558927
+            ],
+            [
+              88.338544,
+              22.559451
+            ],
+            [
+              88.338468,
+              22.559761
+            ],
+            [
+              88.338775,
+              22.560177
+            ],
+            [
+              88.338165,
+              22.560907
+            ],
+            [
+              88.337579,
+              22.560388
+            ],
+            [
+              88.336347,
+              22.560691
+            ],
+            [
+              88.336153,
+              22.559873
+            ],
+            [
+              88.33486,
+              22.559705
+            ],
+            [
+              88.334776,
+              22.558609
+            ],
+            [
+              88.333801,
+              22.558296
+            ],
+            [
+              88.334276,
+              22.557343
+            ],
+            [
+              88.333795,
+              22.556859
+            ]
+          ]
+        ]
+      },
+      "stable_id": "calcutta-new-fort-william",
+      "position_uncertainty_m": 27,
+      "bbox": [
+        88.333795,
+        22.553971,
+        88.341552,
+        22.560907
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "calcutta-new-fort-william-1800"
+    },
+    {
+      "id": "MADRAS_ST_GEORGE_EARLY",
+      "title": "马德拉斯 · 圣乔治堡早期堡墙",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1745,
+          "title": "圣乔治堡 · 东印度公司城堡与商馆",
+          "note": "圣乔治堡的城垣包围东印度公司仓库、行政设施和欧洲人街区。堡外的印度居民聚居区另有自己的街道与工事。"
+        },
+        {
+          "start_year": 1746,
+          "end_year": 1747,
+          "title": "圣乔治堡 · 法军攻占并驻守",
+          "note": "1746年9月，法国舰队在拉布尔多内指挥下攻取马德拉斯。公司交出圣乔治堡，法方在堡内驻军。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1748,
+          "end_year": 1748,
+          "title": "圣乔治堡 · 亚琛和约后仍由法军驻守",
+          "note": "10月18日《亚琛和约》规定归还战时所占地点。马德拉斯当年仍由法方驻守。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1749,
+          "title": "圣乔治堡 · 8月21日东印度公司接收",
+          "note": "印度事务部档案记载，法方于1749年8月21日正式交出圣乔治堡。"
+        },
+        {
+          "start_year": 1750,
+          "end_year": 1757,
+          "title": "圣乔治堡 · 公司复驻并加修城防",
+          "note": "东印度公司恢复驻守。随着马德拉斯军事地位上升，公司修筑和加固白镇堡墙，并清除城外旧黑镇的部分建筑。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg",
+        "https://militarymaps.rct.uk/war-of-the-austrian-succession-1740-8/map-of-the-bay-of-madras-1746-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://tile.loc.gov/storage-services/service/gdc/gdclccn/23/00/48/26/23004826/23004826.pdf",
+        "https://wellcomecollection.org/works/wkf8wftz",
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "geometry_method": "Core of the white-town enclosure digitized from G. M. Pitt’s 1733 survey, checked against the 1746 Rocque military chart and aligned to common roads and surviving structures.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.286293,
+              13.082556
+            ],
+            [
+              80.286296,
+              13.08233
+            ],
+            [
+              80.286412,
+              13.082244
+            ],
+            [
+              80.286468,
+              13.081275
+            ],
+            [
+              80.28636,
+              13.080388
+            ],
+            [
+              80.286358,
+              13.080318
+            ],
+            [
+              80.28631,
+              13.080327
+            ],
+            [
+              80.286195,
+              13.080252
+            ],
+            [
+              80.286194,
+              13.080156
+            ],
+            [
+              80.28624,
+              13.080141
+            ],
+            [
+              80.285934,
+              13.079159
+            ],
+            [
+              80.285815,
+              13.079079
+            ],
+            [
+              80.285428,
+              13.077672
+            ],
+            [
+              80.285292,
+              13.077664
+            ],
+            [
+              80.285195,
+              13.077503
+            ],
+            [
+              80.285434,
+              13.077425
+            ],
+            [
+              80.285496,
+              13.077486
+            ],
+            [
+              80.286532,
+              13.077163
+            ],
+            [
+              80.286482,
+              13.077006
+            ],
+            [
+              80.286697,
+              13.07692
+            ],
+            [
+              80.286797,
+              13.077111
+            ],
+            [
+              80.286769,
+              13.077163
+            ],
+            [
+              80.28731,
+              13.07837
+            ],
+            [
+              80.287364,
+              13.078345
+            ],
+            [
+              80.287494,
+              13.078478
+            ],
+            [
+              80.287466,
+              13.078664
+            ],
+            [
+              80.287404,
+              13.078686
+            ],
+            [
+              80.287695,
+              13.079284
+            ],
+            [
+              80.2878,
+              13.079229
+            ],
+            [
+              80.287986,
+              13.079368
+            ],
+            [
+              80.287938,
+              13.079621
+            ],
+            [
+              80.287832,
+              13.079689
+            ],
+            [
+              80.288787,
+              13.081694
+            ],
+            [
+              80.288843,
+              13.081701
+            ],
+            [
+              80.28894,
+              13.081887
+            ],
+            [
+              80.288714,
+              13.081991
+            ],
+            [
+              80.288629,
+              13.081857
+            ],
+            [
+              80.287973,
+              13.082038
+            ],
+            [
+              80.287947,
+              13.082108
+            ],
+            [
+              80.287818,
+              13.082141
+            ],
+            [
+              80.287785,
+              13.082086
+            ],
+            [
+              80.287211,
+              13.082261
+            ],
+            [
+              80.287196,
+              13.082339
+            ],
+            [
+              80.287078,
+              13.082367
+            ],
+            [
+              80.287039,
+              13.082315
+            ],
+            [
+              80.286629,
+              13.08242
+            ],
+            [
+              80.28653,
+              13.082556
+            ],
+            [
+              80.286293,
+              13.082556
+            ]
+          ]
+        ]
+      },
+      "stable_id": "madras-fort-st-george",
+      "position_uncertainty_m": 45,
+      "bbox": [
+        80.285195,
+        13.07692,
+        80.28894,
+        13.082556
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "MADRAS_ST_GEORGE_SIEGE",
+      "title": "马德拉斯 · 圣乔治堡围城时期堡墙",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1758,
+          "title": "圣乔治堡 · 12月法军围城",
+          "note": "拉利所部从城外接近马德拉斯。法军进入北面的街区，东印度公司及驻军继续守卫圣乔治堡。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1759,
+          "title": "圣乔治堡 · 2月法军撤围",
+          "note": "1759年2月，英国舰队抵达后，法军撤离。堡内的东印度公司驻军仍在。"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1782,
+          "title": "圣乔治堡 · 围城后继续扩建",
+          "note": "围城结束后，公司继续改建城防。扩建工程到十八世纪后期使圣乔治堡形成新的外围堡墙。"
+        }
+      ],
+      "source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-madras-1758-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://gallica.bnf.fr/ark:/12148/btv1b6903954f",
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://gallica.bnf.fr/ark:/12148/btv1b59628955"
+      ],
+      "geometry_method": "Fort enclosure traced from the 12 December 1758 survey. Three corresponding anchors in the streets and surviving fort give an in-fit residual of about eight metres. Detached and subsequent works are excluded.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.286365,
+              13.083253
+            ],
+            [
+              80.28617,
+              13.082934
+            ],
+            [
+              80.285878,
+              13.082589
+            ],
+            [
+              80.285772,
+              13.082391
+            ],
+            [
+              80.285822,
+              13.082328
+            ],
+            [
+              80.285854,
+              13.082189
+            ],
+            [
+              80.285609,
+              13.081816
+            ],
+            [
+              80.285432,
+              13.081766
+            ],
+            [
+              80.28515,
+              13.081559
+            ],
+            [
+              80.284977,
+              13.081632
+            ],
+            [
+              80.284791,
+              13.081544
+            ],
+            [
+              80.284732,
+              13.081335
+            ],
+            [
+              80.284813,
+              13.081267
+            ],
+            [
+              80.284711,
+              13.080925
+            ],
+            [
+              80.284559,
+              13.080604
+            ],
+            [
+              80.284472,
+              13.080314
+            ],
+            [
+              80.284292,
+              13.07993
+            ],
+            [
+              80.284162,
+              13.07991
+            ],
+            [
+              80.284087,
+              13.079724
+            ],
+            [
+              80.284134,
+              13.079579
+            ],
+            [
+              80.284261,
+              13.079441
+            ],
+            [
+              80.284432,
+              13.079477
+            ],
+            [
+              80.284696,
+              13.078109
+            ],
+            [
+              80.284561,
+              13.078057
+            ],
+            [
+              80.284591,
+              13.077759
+            ],
+            [
+              80.284833,
+              13.077724
+            ],
+            [
+              80.284968,
+              13.077775
+            ],
+            [
+              80.285348,
+              13.077664
+            ],
+            [
+              80.285311,
+              13.077562
+            ],
+            [
+              80.2854,
+              13.077491
+            ],
+            [
+              80.285563,
+              13.077472
+            ],
+            [
+              80.285622,
+              13.077564
+            ],
+            [
+              80.285783,
+              13.077521
+            ],
+            [
+              80.286712,
+              13.077176
+            ],
+            [
+              80.286784,
+              13.077087
+            ],
+            [
+              80.286881,
+              13.077113
+            ],
+            [
+              80.286899,
+              13.077365
+            ],
+            [
+              80.286847,
+              13.07742
+            ],
+            [
+              80.287292,
+              13.078337
+            ],
+            [
+              80.287323,
+              13.07829
+            ],
+            [
+              80.287411,
+              13.078295
+            ],
+            [
+              80.287523,
+              13.078431
+            ],
+            [
+              80.287557,
+              13.078584
+            ],
+            [
+              80.287485,
+              13.078807
+            ],
+            [
+              80.287565,
+              13.078966
+            ],
+            [
+              80.287646,
+              13.078898
+            ],
+            [
+              80.287801,
+              13.078975
+            ],
+            [
+              80.287903,
+              13.079124
+            ],
+            [
+              80.287842,
+              13.0792
+            ],
+            [
+              80.287953,
+              13.079295
+            ],
+            [
+              80.287965,
+              13.079474
+            ],
+            [
+              80.288074,
+              13.079545
+            ],
+            [
+              80.288103,
+              13.07986
+            ],
+            [
+              80.287963,
+              13.079969
+            ],
+            [
+              80.288679,
+              13.081683
+            ],
+            [
+              80.288805,
+              13.081772
+            ],
+            [
+              80.28887,
+              13.081878
+            ],
+            [
+              80.288749,
+              13.081972
+            ],
+            [
+              80.288896,
+              13.08232
+            ],
+            [
+              80.28893,
+              13.082531
+            ],
+            [
+              80.288417,
+              13.082498
+            ],
+            [
+              80.288235,
+              13.082341
+            ],
+            [
+              80.288059,
+              13.08214
+            ],
+            [
+              80.287853,
+              13.08216
+            ],
+            [
+              80.287447,
+              13.082291
+            ],
+            [
+              80.287172,
+              13.082349
+            ],
+            [
+              80.286895,
+              13.082441
+            ],
+            [
+              80.286961,
+              13.082531
+            ],
+            [
+              80.286955,
+              13.082785
+            ],
+            [
+              80.286365,
+              13.083253
+            ]
+          ]
+        ]
+      },
+      "stable_id": "madras-fort-st-george",
+      "position_uncertainty_m": 36,
+      "bbox": [
+        80.284087,
+        13.077087,
+        80.28893,
+        13.083253
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "MADRAS_ST_GEORGE_LATE",
+      "title": "马德拉斯 · 圣乔治堡扩建后主堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1799,
+          "title": "圣乔治堡 · 扩建完成后驻军",
+          "note": "1783年前后堡墙达到扩建后的形态。公司在堡内继续设置驻军与马德拉斯行政机构。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg",
+        "https://archive.org/details/vestigesofoldmad03loveuoft",
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-madras-1758-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://www.amrut.mohua.gov.in/uploads/basic_deatils_document/Statstical_Hand_Book_Chennai.pdf",
+        "https://rarebooksocietyofindia.org/book_archive/ID-1606381884.pdf#page=291"
+      ],
+      "geometry_method": "Principal late enceinte traced from the 1862 government survey, registered on extant fort landmarks. The route follows the late-eighteenth-century perimeter completed in 1783, excluding outworks, modern shoreline and harbor reclamation.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.28562,
+              13.083135
+            ],
+            [
+              80.285415,
+              13.083029
+            ],
+            [
+              80.285123,
+              13.082584
+            ],
+            [
+              80.284648,
+              13.082782
+            ],
+            [
+              80.284537,
+              13.082684
+            ],
+            [
+              80.284413,
+              13.082029
+            ],
+            [
+              80.284114,
+              13.082045
+            ],
+            [
+              80.283944,
+              13.081967
+            ],
+            [
+              80.283933,
+              13.081798
+            ],
+            [
+              80.284084,
+              13.081527
+            ],
+            [
+              80.283622,
+              13.081414
+            ],
+            [
+              80.283191,
+              13.081128
+            ],
+            [
+              80.283233,
+              13.080975
+            ],
+            [
+              80.283505,
+              13.080657
+            ],
+            [
+              80.283206,
+              13.080443
+            ],
+            [
+              80.283141,
+              13.080285
+            ],
+            [
+              80.283211,
+              13.080075
+            ],
+            [
+              80.283483,
+              13.079886
+            ],
+            [
+              80.283039,
+              13.079582
+            ],
+            [
+              80.282965,
+              13.07944
+            ],
+            [
+              80.283108,
+              13.079244
+            ],
+            [
+              80.283601,
+              13.078884
+            ],
+            [
+              80.283344,
+              13.078538
+            ],
+            [
+              80.283364,
+              13.078433
+            ],
+            [
+              80.283658,
+              13.078397
+            ],
+            [
+              80.283606,
+              13.077698
+            ],
+            [
+              80.283706,
+              13.077626
+            ],
+            [
+              80.284248,
+              13.077671
+            ],
+            [
+              80.284283,
+              13.07729
+            ],
+            [
+              80.284382,
+              13.077161
+            ],
+            [
+              80.284542,
+              13.077104
+            ],
+            [
+              80.284981,
+              13.077108
+            ],
+            [
+              80.285023,
+              13.076725
+            ],
+            [
+              80.285172,
+              13.0767
+            ],
+            [
+              80.285552,
+              13.077032
+            ],
+            [
+              80.285677,
+              13.076868
+            ],
+            [
+              80.285866,
+              13.076712
+            ],
+            [
+              80.286063,
+              13.076503
+            ],
+            [
+              80.286183,
+              13.076556
+            ],
+            [
+              80.28638,
+              13.076785
+            ],
+            [
+              80.286409,
+              13.076686
+            ],
+            [
+              80.286767,
+              13.076449
+            ],
+            [
+              80.286835,
+              13.076491
+            ],
+            [
+              80.287008,
+              13.077401
+            ],
+            [
+              80.287076,
+              13.077443
+            ],
+            [
+              80.287164,
+              13.077682
+            ],
+            [
+              80.287082,
+              13.077772
+            ],
+            [
+              80.287313,
+              13.079093
+            ],
+            [
+              80.28749,
+              13.079097
+            ],
+            [
+              80.287531,
+              13.079167
+            ],
+            [
+              80.287498,
+              13.079382
+            ],
+            [
+              80.287799,
+              13.079603
+            ],
+            [
+              80.287808,
+              13.079687
+            ],
+            [
+              80.287606,
+              13.079976
+            ],
+            [
+              80.28783,
+              13.080149
+            ],
+            [
+              80.287856,
+              13.080244
+            ],
+            [
+              80.287659,
+              13.080323
+            ],
+            [
+              80.288121,
+              13.081385
+            ],
+            [
+              80.288036,
+              13.081461
+            ],
+            [
+              80.288512,
+              13.082519
+            ],
+            [
+              80.288485,
+              13.082575
+            ],
+            [
+              80.288204,
+              13.08263
+            ],
+            [
+              80.288252,
+              13.082907
+            ],
+            [
+              80.288167,
+              13.082933
+            ],
+            [
+              80.287254,
+              13.082818
+            ],
+            [
+              80.287072,
+              13.082312
+            ],
+            [
+              80.286463,
+              13.082382
+            ],
+            [
+              80.286506,
+              13.082688
+            ],
+            [
+              80.286362,
+              13.082856
+            ],
+            [
+              80.28562,
+              13.083135
+            ]
+          ]
+        ]
+      },
+      "stable_id": "madras-fort-st-george",
+      "position_uncertainty_m": 31,
+      "bbox": [
+        80.282965,
+        13.076449,
+        80.288512,
+        13.083135
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "madras-fort-st-george-1800"
+    },
+    {
+      "id": "MADRAS_OLD_BLACK_TOWN",
+      "title": "马德拉斯 · 旧黑镇围合街区",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1745,
+          "title": "马德拉斯旧黑镇 · 堡外印度居民街区",
+          "note": "圣乔治堡北面有城墙围合的印度居民城区，商人、工匠与其他居民在这里居住和交易。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Fort_St_George_and_the_City_of_Madras_1726.jpg",
+        "https://militarymaps.rct.uk/war-of-the-austrian-succession-1740-8/map-of-the-bay-of-madras-1746-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "geometry_method": "Pre-occupation town traced from the Moll 1726 plan and checked against Pitt’s 1733 survey. Four anchors are three fort landmarks and the old burial ground by Yale’s memorial. In-fit residual about 16 m.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.284697,
+              13.088721
+            ],
+            [
+              80.28459,
+              13.088073
+            ],
+            [
+              80.284448,
+              13.087108
+            ],
+            [
+              80.284239,
+              13.085833
+            ],
+            [
+              80.28413,
+              13.085654
+            ],
+            [
+              80.284057,
+              13.085324
+            ],
+            [
+              80.284082,
+              13.085278
+            ],
+            [
+              80.283711,
+              13.083266
+            ],
+            [
+              80.283522,
+              13.082962
+            ],
+            [
+              80.283529,
+              13.082676
+            ],
+            [
+              80.283762,
+              13.082542
+            ],
+            [
+              80.284122,
+              13.082584
+            ],
+            [
+              80.284185,
+              13.082793
+            ],
+            [
+              80.284881,
+              13.082454
+            ],
+            [
+              80.285982,
+              13.082126
+            ],
+            [
+              80.286261,
+              13.081961
+            ],
+            [
+              80.286996,
+              13.081959
+            ],
+            [
+              80.288152,
+              13.081883
+            ],
+            [
+              80.288294,
+              13.081729
+            ],
+            [
+              80.288569,
+              13.081789
+            ],
+            [
+              80.288642,
+              13.0822
+            ],
+            [
+              80.288463,
+              13.082261
+            ],
+            [
+              80.288591,
+              13.083168
+            ],
+            [
+              80.289087,
+              13.085986
+            ],
+            [
+              80.289634,
+              13.089119
+            ],
+            [
+              80.289977,
+              13.089245
+            ],
+            [
+              80.289882,
+              13.089531
+            ],
+            [
+              80.28956,
+              13.08942
+            ],
+            [
+              80.289368,
+              13.089423
+            ],
+            [
+              80.288615,
+              13.089266
+            ],
+            [
+              80.28783,
+              13.089116
+            ],
+            [
+              80.287584,
+              13.089192
+            ],
+            [
+              80.287358,
+              13.089121
+            ],
+            [
+              80.287437,
+              13.089001
+            ],
+            [
+              80.286952,
+              13.088866
+            ],
+            [
+              80.28666,
+              13.088972
+            ],
+            [
+              80.286029,
+              13.08889
+            ],
+            [
+              80.285532,
+              13.088859
+            ],
+            [
+              80.285186,
+              13.088794
+            ],
+            [
+              80.284927,
+              13.088893
+            ],
+            [
+              80.284697,
+              13.088721
+            ]
+          ]
+        ]
+      },
+      "stable_id": "madras-old-black-town",
+      "position_uncertainty_m": 62,
+      "bbox": [
+        80.283522,
+        13.081729,
+        80.289977,
+        13.089531
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "MADRAS_NEW_BLACK_TOWN",
+      "title": "马德拉斯 · 新黑镇",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1799,
+          "title": "马德拉斯新黑镇 · 印度居民街区与外围城墙",
+          "note": "旧黑镇拆除后，印度居民城区北移。约1769年开筑新黑镇防线，1772年前后形成新的围合街区。"
+        }
+      ],
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b530986164",
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://archive.org/details/vestigesofoldmad03loveuoft",
+        "https://www.amrut.mohua.gov.in/uploads/basic_deatils_document/Statstical_Hand_Book_Chennai.pdf"
+      ],
+      "geometry_method": "Enclosure and early shoreline traced on the 1822 Ravenshaw survey. Five corresponding fort, road and wall landmarks give an in-fit residual of about 39 m. Depicts the late-eighteenth-century urban core, retaining west and north wall lines documented after 1772.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.273987,
+              13.103503
+            ],
+            [
+              80.274644,
+              13.102124
+            ],
+            [
+              80.275231,
+              13.100988
+            ],
+            [
+              80.275076,
+              13.100858
+            ],
+            [
+              80.274967,
+              13.100513
+            ],
+            [
+              80.275192,
+              13.100347
+            ],
+            [
+              80.275318,
+              13.097752
+            ],
+            [
+              80.275139,
+              13.097676
+            ],
+            [
+              80.27503,
+              13.097331
+            ],
+            [
+              80.275204,
+              13.097113
+            ],
+            [
+              80.275115,
+              13.093961
+            ],
+            [
+              80.275279,
+              13.092033
+            ],
+            [
+              80.275316,
+              13.09131
+            ],
+            [
+              80.275214,
+              13.091286
+            ],
+            [
+              80.275105,
+              13.090915
+            ],
+            [
+              80.275304,
+              13.090749
+            ],
+            [
+              80.27554,
+              13.088579
+            ],
+            [
+              80.275382,
+              13.088288
+            ],
+            [
+              80.275298,
+              13.087916
+            ],
+            [
+              80.275647,
+              13.08756
+            ],
+            [
+              80.275749,
+              13.086355
+            ],
+            [
+              80.27591,
+              13.085523
+            ],
+            [
+              80.275627,
+              13.085342
+            ],
+            [
+              80.275518,
+              13.084971
+            ],
+            [
+              80.275921,
+              13.084774
+            ],
+            [
+              80.275872,
+              13.083626
+            ],
+            [
+              80.27626,
+              13.082734
+            ],
+            [
+              80.276297,
+              13.082038
+            ],
+            [
+              80.277287,
+              13.082041
+            ],
+            [
+              80.277579,
+              13.082675
+            ],
+            [
+              80.278063,
+              13.082744
+            ],
+            [
+              80.278721,
+              13.083931
+            ],
+            [
+              80.279507,
+              13.083885
+            ],
+            [
+              80.279499,
+              13.084767
+            ],
+            [
+              80.28011,
+              13.084859
+            ],
+            [
+              80.280379,
+              13.08691
+            ],
+            [
+              80.280004,
+              13.087187
+            ],
+            [
+              80.280028,
+              13.088362
+            ],
+            [
+              80.280419,
+              13.088887
+            ],
+            [
+              80.280893,
+              13.088448
+            ],
+            [
+              80.282388,
+              13.088358
+            ],
+            [
+              80.285259,
+              13.088502
+            ],
+            [
+              80.287316,
+              13.088559
+            ],
+            [
+              80.289879,
+              13.088577
+            ],
+            [
+              80.290024,
+              13.089482
+            ],
+            [
+              80.290495,
+              13.091448
+            ],
+            [
+              80.291147,
+              13.09357
+            ],
+            [
+              80.291886,
+              13.096225
+            ],
+            [
+              80.292536,
+              13.098267
+            ],
+            [
+              80.293186,
+              13.100309
+            ],
+            [
+              80.293406,
+              13.101159
+            ],
+            [
+              80.29367,
+              13.101661
+            ],
+            [
+              80.293047,
+              13.102237
+            ],
+            [
+              80.293001,
+              13.102505
+            ],
+            [
+              80.292701,
+              13.1027
+            ],
+            [
+              80.292395,
+              13.102627
+            ],
+            [
+              80.29093,
+              13.102984
+            ],
+            [
+              80.290605,
+              13.103259
+            ],
+            [
+              80.290224,
+              13.103215
+            ],
+            [
+              80.290101,
+              13.103431
+            ],
+            [
+              80.288794,
+              13.104051
+            ],
+            [
+              80.288571,
+              13.104324
+            ],
+            [
+              80.288244,
+              13.104492
+            ],
+            [
+              80.287964,
+              13.104419
+            ],
+            [
+              80.286502,
+              13.104909
+            ],
+            [
+              80.286158,
+              13.105479
+            ],
+            [
+              80.28583,
+              13.105593
+            ],
+            [
+              80.285468,
+              13.105255
+            ],
+            [
+              80.28519,
+              13.105342
+            ],
+            [
+              80.283447,
+              13.105732
+            ],
+            [
+              80.283125,
+              13.106114
+            ],
+            [
+              80.282793,
+              13.106042
+            ],
+            [
+              80.282613,
+              13.105912
+            ],
+            [
+              80.280768,
+              13.106278
+            ],
+            [
+              80.28047,
+              13.106606
+            ],
+            [
+              80.280165,
+              13.106587
+            ],
+            [
+              80.279983,
+              13.106351
+            ],
+            [
+              80.279754,
+              13.106329
+            ],
+            [
+              80.277705,
+              13.105417
+            ],
+            [
+              80.277377,
+              13.105532
+            ],
+            [
+              80.276967,
+              13.105328
+            ],
+            [
+              80.276912,
+              13.105116
+            ],
+            [
+              80.274327,
+              13.104003
+            ],
+            [
+              80.274127,
+              13.104195
+            ],
+            [
+              80.273514,
+              13.103996
+            ],
+            [
+              80.273738,
+              13.10375
+            ],
+            [
+              80.273987,
+              13.103503
+            ]
+          ]
+        ]
+      },
+      "stable_id": "madras-new-black-town",
+      "position_uncertainty_m": 75,
+      "bbox": [
+        80.273514,
+        13.082038,
+        80.29367,
+        13.106606
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "madras-new-black-town-1800"
+    }
+  ],
+  "regional_lines": [
+    {
+      "id": "CALCUTTA_1794_TOLLYS_NULLAH_BOUNDARY",
+      "title": "加尔各答法定南界 · 托利水道段",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "加尔各答法定南界 · 托利水道段 · 1794 年公告划定的南界",
+          "note": "1794年9月10日，威廉堡总督参事会公布城界。南界的一段沿托利水道南岸高潮线，经过瑟曼桥南端。"
+        }
+      ],
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3",
+        "https://gyanganga.ai/admin/fileupload/KOLKATA%20NH%20MERGED.pdf",
+        "https://www.calcuttahighcourt.gov.in/page/History",
+        "https://www.indiacode.nic.in/bitstream/123456789/2364/1/A1919-15.pdf",
+        "https://www.kmcgov.in/KMCPortal/jsp/MunicipalHistoryHome.jsp"
+      ],
+      "geometry_method": "1794 Gazette articles on urban legal limits, compared with Upjohn’s 1792–1793 survey published 2 April 1794. Stable crossings, the riverbank and modern street alignments anchor this verified segment.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            88.32455,
+            22.54962
+          ],
+          [
+            88.32433,
+            22.54907
+          ],
+          [
+            88.32428,
+            22.5484
+          ],
+          [
+            88.32433,
+            22.5477
+          ],
+          [
+            88.32455,
+            22.5471
+          ],
+          [
+            88.32505,
+            22.54642
+          ],
+          [
+            88.32555,
+            22.5458
+          ],
+          [
+            88.32592,
+            22.54512
+          ],
+          [
+            88.32625,
+            22.54443
+          ],
+          [
+            88.32677,
+            22.5438
+          ],
+          [
+            88.32713,
+            22.54317
+          ],
+          [
+            88.32757,
+            22.54265
+          ],
+          [
+            88.32795,
+            22.54215
+          ],
+          [
+            88.32842,
+            22.54168
+          ],
+          [
+            88.3289,
+            22.54135
+          ],
+          [
+            88.32953,
+            22.5411
+          ],
+          [
+            88.33028,
+            22.54105
+          ],
+          [
+            88.33102,
+            22.54105
+          ],
+          [
+            88.33178,
+            22.54087
+          ],
+          [
+            88.33237,
+            22.54055
+          ],
+          [
+            88.3329,
+            22.54005
+          ],
+          [
+            88.33317,
+            22.5396
+          ]
+        ]
+      },
+      "stable_id": "calcutta-1794-tollys-nullah-boundary",
+      "position_uncertainty_m": 75,
+      "geometry_precision": "source_backed_historical_line",
+      "cross_century_feature_id": "calcutta-1794-tollys-nullah-boundary-1800"
+    },
+    {
+      "id": "CALCUTTA_1794_BYTACONNAH_ROAD_BOUNDARY",
+      "title": "加尔各答法定东界 · 贝塔卡纳路段",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1798,
+          "title": "加尔各答法定东界 · 贝塔卡纳路段 · 1794 年公告沿贝塔卡纳路东侧划界",
+          "note": "1794年公告沿贝塔卡纳路东侧划定城镇东界，经过旧达尔马塔拉路口。"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "加尔各答法定东界 · 贝塔卡纳路段 · 环城路工程改变旧界地标",
+          "note": "1799年填壕拓宽环城路，贝塔卡纳集市附近的界树被砍。公告中的道路继续使用。"
+        }
+      ],
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3",
+        "https://censusindia.gov.in/nada/index.php/catalog/27868/download/31037/DH_19_2001_KOL.pdf",
+        "https://ignca.gov.in/Asi_data/14027.pdf",
+        "https://calcuttachronicle.co.in/uploads/magzines/pdf/Nov%20Issue%202023%20-%20Calcutta%20Chronicle.pdf",
+        "https://en.wikisource.org/wiki/Page:Calcutta,_Past_and_Present.djvu/292",
+        "https://www.calcuttahighcourt.gov.in/page/History",
+        "https://www.indiacode.nic.in/bitstream/123456789/2364/1/A1919-15.pdf",
+        "https://www.kmcgov.in/KMCPortal/jsp/MunicipalHistoryHome.jsp"
+      ],
+      "geometry_method": "1794 Gazette articles on urban legal limits, compared with Upjohn’s 1792–1793 survey published 2 April 1794. Stable crossings, the riverbank and modern street alignments anchor this verified segment.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            88.36837,
+            22.56428
+          ],
+          [
+            88.3682,
+            22.56383
+          ],
+          [
+            88.36791,
+            22.56305
+          ],
+          [
+            88.36765,
+            22.56227
+          ],
+          [
+            88.36749,
+            22.56187
+          ],
+          [
+            88.36733,
+            22.56146
+          ],
+          [
+            88.36714,
+            22.56092
+          ],
+          [
+            88.36692,
+            22.56036
+          ],
+          [
+            88.36672,
+            22.55983
+          ],
+          [
+            88.36647,
+            22.55912
+          ],
+          [
+            88.36618,
+            22.55837
+          ]
+        ]
+      },
+      "stable_id": "calcutta-1794-bytaconnah-road-boundary",
+      "position_uncertainty_m": 75,
+      "geometry_precision": "source_backed_historical_line",
+      "cross_century_feature_id": "calcutta-1794-bytaconnah-road-boundary-1800"
     }
   ]
 }

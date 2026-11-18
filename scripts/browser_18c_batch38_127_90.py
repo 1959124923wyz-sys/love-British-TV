@@ -32,10 +32,10 @@ try:
  examples=[
   (1714,['1714年后York Factory'],['Prince of Wales Fort英军'],'1714-york-recovered'),
   (1731,['Prince of Wales Fort英公司石堡建设'],['Churchill River Post英国公司'],'1731-stone-fort-start'),
-  (1756,['1756年Bengal纳瓦卜','1714年后York Factory'],['1757年Clive重新攻取'],'1756-calcutta-lost'),
-  (1757,['1757年Clive重新攻取','1757年Plassey'],['1756年Bengal纳瓦卜'],'1757-calcutta-recapture'),
+  (1756,['1714年后York Factory'],['1756年Bengal纳瓦卜','1757年Clive重新攻取'],'1756-calcutta-lost'),
+  (1757,['1757年Plassey'],['1756年Bengal纳瓦卜','1757年Clive重新攻取'],'1757-calcutta-recapture'),
   (1761,['1761年Pondicherry法国商馆'],['1765年后Pondicherry'],'1761-india-war'),
-  (1765,['1765年公司获得Bengal','1765年后Pondicherry法属'],['1761年Pondicherry法国商馆'],'1765-diwan-french-recovery'),
+  (1765,['1765年后Pondicherry法属'],['1761年Pondicherry法国商馆','1765年公司获得Bengal'],'1765-diwan-french-recovery'),
   (1774,['1774 Cumberland House'],['1782法国舰队攻取'],'1774-hbc-inland'),
   (1780,['1780年英军在卡姆登','1780年Ninety Six','1780年Fort Watson'],['1781年Fort Watson美军'],'1780-british-garrisons'),
   (1781,['1781年Fort Watson美军','1781年Augusta Fort Cornwallis投降','1780—1781 Charleston'],['1780年Fort Watson英方'],'1781-forts-fall'),

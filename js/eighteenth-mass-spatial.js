@@ -54,11 +54,14 @@ function render(){
  regionalSites.clearLayers();coastalRights.clearLayers();
  if(!loaded||year<1700||!$('mapLayerTerritory').checked||
  !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
- for(const record of meta.coastal_rights||[]){
+ const datedLines=[...(meta.coastal_rights||[]),...(meta.regional_lines||[])];
+ for(const record of datedLines){
   const period=record.periods.find(p=>p.start_year<=year&&year<=p.end_year);
   if(!period)continue;
-  const line=L.geoJSON(record.geometry,{pane:corePane,renderer:pointRenderer,color:color.treaty_fishing,
-   weight:3.5,dashArray:'6 5',lineCap:'round',fill:false,bubblingMouseEvents:false,className:'atlas-18c-treaty-shore'});
+  const treatyShore=record.kind==='treaty_fishing';
+  const line=L.geoJSON(record.geometry,{pane:corePane,renderer:pointRenderer,color:color[period.kind||record.kind],
+   weight:treatyShore?3.5:2.5,dashArray:'6 5',lineCap:'round',fill:false,bubblingMouseEvents:false,
+   className:treatyShore?'atlas-18c-treaty-shore':'atlas-18c-boundary-line'});
   bindRecord(line,record,period).addTo(coastalRights);
  }
  if(year>1799)return;
@@ -147,14 +150,15 @@ function validate(m){
    }
   }
  }
- for(const [records,geometryType] of [[m.regional_zones,'Polygon'],[m.regional_sites,'Point'],[m.coastal_rights,'LineString']]){
+ for(const [records,geometryType,treatyShore] of [[m.regional_zones,'Polygon'],[m.regional_sites,'Point'],
+  [m.regional_lines,'LineString'],[m.coastal_rights,'LineString',true]]){
   for(const x of records||[]){
-   const g=x.geometry,kind=geometryType==='LineString'?'treaty_fishing':x.kind;
+   const g=x.geometry;
    const matchesGeometry=g?.type===geometryType||(geometryType==='Polygon'&&g?.type==='MultiPolygon');
-   if(!x.id||ids.has(x.id)||!matchesGeometry||!knownKinds.has(kind)||kind!==x.kind||
+   if(!x.id||ids.has(x.id)||!matchesGeometry||!knownKinds.has(x.kind)||(treatyShore&&x.kind!=='treaty_fishing')||
     !x.title||x.area_sqkm!==null||x.uncertain_line_dashed!==true||x.exclude_from_territorial_area_totals!==true||
     !x.source_urls?.length||x.source_urls.some(url=>!url?.startsWith('https://'))||
-    !validPeriods(x.periods,geometryType==='LineString'?1903:1799)||
+    !validPeriods(x.periods,treatyShore?1903:1799)||
     x.periods.some((p,i)=>!p.title||!p.note||(p.kind!==undefined&&!knownKinds.has(p.kind))||
      (i>0&&p.start_year<=x.periods[i-1].end_year)))throw Error('invalid regional record '+x.id);
    const coords=g.coordinates;
@@ -180,6 +184,7 @@ window.eighteenthMassSpatial={render,getAudit:()=>({
  activeSites:meta?meta.sites.filter(x=>active(x,year)).map(x=>x.id):[],
  activeRegionalZones:(meta?.regional_zones||[]).filter(x=>active(x,year)).map(x=>x.id),
  activeRegionalSites:(meta?.regional_sites||[]).filter(x=>active(x,year)).map(x=>x.id),
+ activeRegionalLines:(meta?.regional_lines||[]).filter(x=>active(x,year)).map(x=>x.id),
  activeCoastalRights:(meta?.coastal_rights||[]).filter(x=>active(x,year)).map(x=>x.id),
  visibleZoneLayers:areaGroup.getLayers().length,visibleCoreLayers:siteGroup.getLayers().length
  })};
