@@ -48,11 +48,10 @@ for(const [id,y,expected] of [
  ['QUEBEC_1763',1774,true],['QUEBEC_1763',1775,false],
  ['QUEBEC_1774',1774,false],['QUEBEC_1774',1775,true],['QUEBEC_1774',1783,false],['UPPER_CANADA',1791,true],
  ['BENGAL_DIWANI',1764,false],['BENGAL_DIWANI',1765,true],
- ['GRENADA',1778,true],['GRENADA',1779,false],['GRENADA',1783,true],
  ['SAVANNAH_GARRISON',1779,true],['SAVANNAH_GARRISON',1782,false],
  ['PONDICHERRY_BRITISH',1761,true],['PONDICHERRY_BRITISH',1765,false],
  ['PORT_EGMONT',1773,true],['PORT_EGMONT',1774,false],
- ['FALKLAND_PAPER',1774,true],['TRINIDAD_1797',1796,false],['TRINIDAD_1797',1797,true],
+ ['FALKLAND_PAPER',1774,true],
  ['CEYLON_COLOMBO',1795,false],['CEYLON_COLOMBO',1796,true],
  ['NSW_CROWN_CLAIM',1787,false],['NSW_CROWN_CLAIM',1788,true],
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
@@ -83,6 +82,25 @@ for(const item of regional){
  }
 }
 const atlantic=id=>regional.find(item=>item.id===id);
+const islandPhase=(id,year)=>atlantic(id).periods.find(p=>p.start_year<=year&&year<=p.end_year);
+for(const id of ['GRENADA','DOMINICA','GUADELOUPE','TRINIDAD_1797'])a(z(id).superseded_by);
+for(const [id,year,kind] of [
+ ['GRENADA_ISLAND_MAIN',1762,'wartime_occupation'],['GRENADA_ISLAND_MAIN',1779,'foreign_occupation'],
+ ['GRENADA_ISLAND_MAIN',1783,'foreign_occupation'],['GRENADA_ISLAND_MAIN',1784,'administration'],
+ ['DOMINICA_ISLAND_MAIN',1761,'wartime_occupation'],['DOMINICA_ISLAND_MAIN',1778,'foreign_occupation'],
+ ['DOMINICA_ISLAND_MAIN',1783,'foreign_occupation'],['DOMINICA_ISLAND_MAIN',1784,'administration'],
+ ['GUADELOUPE_MAIN_ISLANDS',1759,'wartime_occupation'],['GUADELOUPE_MAIN_ISLANDS',1763,'foreign_occupation'],
+ ['GUADELOUPE_MAIN_ISLANDS',1794,'foreign_occupation'],['TRINIDAD_MAIN_ISLAND',1796,'foreign_occupation'],
+ ['TRINIDAD_MAIN_ISLAND',1797,'wartime_occupation'],
+])a.equal(islandPhase(id,year).kind||atlantic(id).kind,kind,id+' '+year);
+a.match(islandPhase('GRENADA_ISLAND_MAIN',1783).note,/次年1月/);
+a.match(islandPhase('DOMINICA_ISLAND_MAIN',1784).title,/1月10日/);
+a.match(islandPhase('GUADELOUPE_MAIN_ISLANDS',1763).note,/7月6日/);
+a.match(islandPhase('GUADELOUPE_MAIN_ISLANDS',1794).note,/10月.*12月/);
+a.match(islandPhase('TRINIDAD_PORT_OF_SPAIN_CORE',1797).title,/2月17日/);
+a.match(islandPhase('TRINIDAD_MAIN_ISLAND',1797).title,/2月18日/);
+a.equal(atlantic('GUADELOUPE_MAIN_ISLANDS').geometry.coordinates.length,2);
+a.equal(atlantic('TRINIDAD_CHAGUARAMAS_ANCHORAGE').geometry.coordinates.length,4);
 for(const [id,y,expected] of [
  ['PLACENTIA_FORT_ROYAL',1713,true],['PLACENTIA_FORT_ROYAL',1715,false],['PLACENTIA_FORT_ROYAL',1761,false],
  ['PLACENTIA_FORT_ROYAL',1762,true],['FORT_ANNE_FLAG_BASTION_1726',1725,false],['FORT_ANNE_FLAG_BASTION_1726',1726,true],

@@ -33,19 +33,19 @@ try:
  assert old()['areaReferences']==24 and old()['documentedCityCores']==15,old()
  cases=[
  (1704,['ST_KITTS','ANTIGUA','GIBRALTAR_PENINSULA'],['QUEBEC_1763','BENGAL_DIWANI'],'1704-atlantic'),
- (1759,['GUADELOUPE','CAPE_BRETON'],['BENGAL_DIWANI','ST_LUCIA'],'1759-war'),
+ (1759,['CAPE_BRETON'],['BENGAL_DIWANI','ST_LUCIA','GUADELOUPE'],'1759-war'),
  (1762,['MARTINIQUE_1762'],['MANILA_PORT','CAVITE_PORT','HAVANA_HARBOR','QUEBEC_1763'],'1762-global-raids'),
- (1763,['QUEBEC_1763','EAST_FLORIDA','GRENADA'],['HAVANA_HARBOR','GUADELOUPE'],'1763-treaty'),
+ (1763,['QUEBEC_1763','EAST_FLORIDA'],['HAVANA_HARBOR','GUADELOUPE','GRENADA'],'1763-treaty'),
  (1765,[],['BENGAL_DIWANI','BIHAR_DIWANI','ORISSA_DIWANI','PONDICHERRY_BRITISH'],'1765-diwani'),
  (1774,['QUEBEC_1763','FALKLAND_PAPER'],['QUEBEC_1774','PORT_EGMONT'],'1774-act-passed'),
  (1775,['QUEBEC_1774'],['QUEBEC_1763'],'1775-act-effective'),
  (1779,[],['SAVANNAH_GARRISON','ST_LUCIA','GRENADA','DOMINICA'],'1779-war'),
- (1783,['GRENADA','DOMINICA','NASSAU_PORT','EAST_FLORIDA'],['WEST_FLORIDA'],'1783-treaty'),
+ (1783,['NASSAU_PORT','EAST_FLORIDA'],['WEST_FLORIDA','GRENADA','DOMINICA'],'1783-treaty'),
  (1784,[],['EAST_FLORIDA','WEST_FLORIDA'],'1784-florida-handover'),
  (1788,['NSW_CROWN_CLAIM','SYDNEY_COVE','NORFOLK_SETTLEMENT'],['PORT_EGMONT'],'1788-pacific'),
  (1791,['UPPER_CANADA','LOWER_CANADA','NS_REVISED'],['QUEBEC_1774'],'1791-canada'),
  (1796,['CEYLON_COLOMBO','CEYLON_GALLE','CORSICA_1794'],['TRINIDAD_1797'],'1796-indian-ocean'),
- (1797,['TRINIDAD_1797','CEYLON_JAFFNA'],['ELBA_1796'],'1797-caribbean'),
+ (1797,['CEYLON_JAFFNA'],['ELBA_1796','TRINIDAD_1797'],'1797-caribbean'),
  (1799,['MYSORE_1799_PARTITION','SERINGAPATAM_ZONE','PENANG_ISLAND'],['CORSICA_1794'],'1799-asia'),
  ]
  for y,show,hide,name in cases:
@@ -56,6 +56,11 @@ try:
   assert a['visibleZoneLayers']>0 and a['visibleCoreLayers']>0,(y,a)
   if y==1762:assert {'MANILA_INTRAMUROS','CAVITE_PUERTO'}.issubset(a['activeRegionalZones']),a
   if y==1779:assert {'SAVANNAH_TOWN_1778','ST_LUCIA_MAIN_ISLAND'}.issubset(a['activeRegionalZones']),a
+  if y in (1759,1763):assert 'GUADELOUPE_MAIN_ISLANDS' in a['activeRegionalZones'],a
+  if y in (1783,1784):assert {'GRENADA_ISLAND_MAIN','DOMINICA_ISLAND_MAIN'}.issubset(a['activeRegionalZones']),a
+  if y==1797:
+   assert {'TRINIDAD_MAIN_ISLAND','TRINIDAD_PORT_OF_SPAIN_CORE'}.issubset(a['activeRegionalZones']),a
+   assert 'TRINIDAD_CHAGUARAMAS_ANCHORAGE' in a['activeRegionalLines'],a
   if y==1765:
    assert {'PATNA_DIWANI','MURSHIDABAD_MOTIJHEEL'}.issubset(a['activeRegionalSites']),a
    assert 'CUTTACK_BARABATI_FORT' in a['activeRegionalZones'],a

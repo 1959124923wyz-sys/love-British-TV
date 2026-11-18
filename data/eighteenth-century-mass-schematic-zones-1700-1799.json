@@ -4540,6 +4540,7 @@
     },
     {
       "id": "GRENADA",
+      "superseded_by": "GRENADA_ISLAND_MAIN",
       "title": "格林纳达1763后英国殖民行政",
       "kind": "administration",
       "periods": [
@@ -4636,6 +4637,7 @@
     },
     {
       "id": "DOMINICA",
+      "superseded_by": "DOMINICA_ISLAND_MAIN",
       "title": "多米尼克1763后英方殖民行政",
       "kind": "administration",
       "periods": [
@@ -4737,6 +4739,7 @@
     },
     {
       "id": "GUADELOUPE",
+      "superseded_by": "GUADELOUPE_MAIN_ISLANDS",
       "title": "瓜德罗普1759—1763英军占领",
       "kind": "wartime_occupation",
       "periods": [
@@ -5086,6 +5089,7 @@
     },
     {
       "id": "TRINIDAD_1797",
+      "superseded_by": "TRINIDAD_MAIN_ISLAND",
       "title": "1797年英军夺取特立尼达后的殖民区域",
       "kind": "wartime_occupation",
       "periods": [
@@ -7138,6 +7142,7 @@
     },
     {
       "id": "ST_GEORGES_GRENADA",
+      "superseded_by": "GRENADA_ST_GEORGES_PORT",
       "title": "格林纳达圣乔治英军殖民港",
       "periods": [
         {
@@ -7164,6 +7169,7 @@
     },
     {
       "id": "ROSEAU",
+      "superseded_by": "DOMINICA_ROSEAU_PORT",
       "title": "多米尼克罗索英军行政港",
       "periods": [
         {
@@ -7321,6 +7327,7 @@
     },
     {
       "id": "POINTE_A_PITRE",
+      "superseded_by": "GUADELOUPE_POINTE_A_PITRE_HARBOUR",
       "title": "瓜德罗普英军战时港口",
       "periods": [
         {
@@ -7369,6 +7376,7 @@
     },
     {
       "id": "PORT_OF_SPAIN",
+      "superseded_by": "TRINIDAD_PORT_OF_SPAIN_CORE",
       "title": "西班牙港1797英军夺城",
       "periods": [
         {
@@ -16691,6 +16699,1253 @@
       "uncertain_line_dashed": true,
       "area_sqkm": null,
       "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "DOMINICA_ROSEAU_PORT",
+      "stable_id": "dominica-roseau-port",
+      "title": "罗索 · 港城",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.3882,
+          15.299
+        ]
+      },
+      "geometry_method": "采用拜尔斯和布阿什史图所示罗索河南岸旧港城，点落于现存旧街区。",
+      "position_uncertainty_m": 160,
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b53121722t",
+        "https://www.loc.gov/item/74690598/",
+        "https://loyalist.lib.unb.ca/sites/default/files/Map%20Listing%20%28West%20Indies%20or%20Caribbean%29-%20parts%201%20and%202_0.pdf",
+        "https://catalogs.marinersmuseum.org/object/CL16143",
+        "https://stars.library.ucf.edu/bwi-british-parliamentary-acts/index.2.html",
+        "https://content.www.wellcomecollection.org/works/pqr6pwyj",
+        "https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/1442/CARRINGTONEconomicAnd1975.pdf?isAllowed=y&sequence=1",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/7/",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/8/",
+        "https://electronicsandbooks.com/edt/manual/Art/Auction/Bonhams/2016/20160615%20S-23576-0-1%20Fine%20Books%2C%20Manuscripts%20and%20Original%20Illustrations%20%5B200%5D.pdf",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/9/",
+        "https://www.e-rara.ch/download/pdf/22838061.pdf"
+      ],
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762,
+          "title": "罗索 · 6月6日英军抵达并攻占",
+          "note": "罗洛与道格拉斯率部抵达罗索，英军攻取港城附近防御阵地。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1765,
+          "title": "罗索 · 英属管治及测绘",
+          "note": "《巴黎和约》割让后，英国测绘罗索及邻近夏洛特镇。"
+        },
+        {
+          "start_year": 1766,
+          "end_year": 1777,
+          "title": "罗索 · 自由港",
+          "note": "英国自由港法将罗索设为自由港，准许外国船只在规定条件下贸易。殖民当局对运入多米尼克的被奴役者征税，罗索海关也记录该港的转运船舶。",
+          "kind": "trade_influence"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "罗索 · 9月7日法方接收",
+          "note": "签降条款要求向法国驻军交出扬堡和港城炮台。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1780,
+          "title": "罗索 · 法方占领",
+          "note": "法国驻军控制罗索城防和港口。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "罗索 · 港城火灾",
+          "note": "占领期间城内发生大火。阿特伍德记载，多处房屋被毁，随后募集筹款以救济居民。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1783,
+          "title": "罗索 · 法军驻城等候交接",
+          "note": "法军保持驻城。1783年和约约定归还，港城的现场交接延至次年1月。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1784,
+          "title": "罗索 · 1月10日英军入城",
+          "note": "英军移入扬堡，法军撤离，奥德在法院宣誓。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1799,
+          "title": "罗索 · 殖民港务及市场重建",
+          "note": "英属殖民当局继续使用港口和旧城，海滨市场改建。"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "dominica-roseau-port-1800"
+    },
+    {
+      "id": "DOMINICA_FORT_YOUNG",
+      "stable_id": "dominica-fort-young",
+      "title": "罗索扬堡",
+      "kind": "military_vicinity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.38624,
+          15.29647
+        ]
+      },
+      "geometry_method": "按法国国家图书馆 GE C-1139 所载王后堡与今扬堡旧址定位。图纸所见各期工事保留在档案中。",
+      "position_uncertainty_m": 95,
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b53025365d",
+        "https://gallica.bnf.fr/ark:/12148/btv1b53121722t",
+        "https://www.fortyounghotel.com/wp-content/uploads/2020/09/FYH-August-2020-Brochure.pdf",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/7/",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/8/",
+        "https://electronicsandbooks.com/edt/manual/Art/Auction/Bonhams/2016/20160615%20S-23576-0-1%20Fine%20Books%2C%20Manuscripts%20and%20Original%20Illustrations%20%5B200%5D.pdf",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/9/"
+      ],
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "扬堡 · 9月7日交给法国驻军",
+          "note": "降约条款规定立即交出扬堡。法方随后将它称为王后堡。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1783,
+          "title": "王后堡 · 法军占领及改建",
+          "note": "法国占领期间的工程图标出王后堡拟增改的工事。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1784,
+          "title": "扬堡 · 1月10日英国部队入驻",
+          "note": "英军进入扬堡，法军离堡前往港口登船。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1799,
+          "title": "扬堡 · 英军重新驻守",
+          "note": "罗索海滨原址继续用作英国驻军的防地。"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "dominica-fort-young-1800"
+    },
+    {
+      "id": "DOMINICA_PORTSMOUTH",
+      "stable_id": "dominica-portsmouth-prince-rupert",
+      "title": "朴次茅斯 · 鲁珀特王子湾",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.46093,
+          15.58313
+        ]
+      },
+      "geometry_method": "在1765年朴次茅斯镇规划和1771年鲁珀特王子湾军用地图所载港湾，以现存朴次茅斯岸上街区定位。",
+      "position_uncertainty_m": 320,
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/sites/default/files/Map%20Listing%20%28West%20Indies%20or%20Caribbean%29-%20parts%201%20and%202_0.pdf",
+        "https://www.loc.gov/item/74690598/",
+        "https://stars.library.ucf.edu/bwi-british-parliamentary-acts/index.2.html",
+        "https://content.www.wellcomecollection.org/works/pqr6pwyj",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/7/",
+        "https://whc.unesco.org/en/tentativelists/6020/",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/9/"
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1765,
+          "title": "朴次茅斯 · 港口城镇规划",
+          "note": "英国测绘员绘制朴次茅斯规划和港湾用地。"
+        },
+        {
+          "start_year": 1766,
+          "end_year": 1777,
+          "title": "鲁珀特王子湾 · 自由港",
+          "note": "1766年英国议会将此湾和罗索同时列入多米尼克自由港。",
+          "kind": "trade_influence"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "鲁珀特王子湾 · 9月8日法方接收据点",
+          "note": "9月7日签订的降约明确要求在次日交付鲁珀特王子湾的驻防据点。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1783,
+          "title": "鲁珀特王子湾 · 法方驻防",
+          "note": "法国占领期间继续使用港湾据点，并在卡布里茨半岛开展工程。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "朴次茅斯 · 英方恢复湾内驻防",
+          "note": "多米尼克归还后，英国继续利用鲁珀特王子湾，修建并完善湾口的防务。"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "dominica-portsmouth-prince-rupert-1800"
+    },
+    {
+      "id": "DOMINICA_FORT_SHIRLEY",
+      "stable_id": "dominica-fort-shirley",
+      "title": "卡布里茨半岛雪莉堡",
+      "kind": "military_vicinity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.47348,
+          15.58342
+        ]
+      },
+      "geometry_method": "以联合国教科文组织预备名单所列卡布里茨驻地中心的存世雪莉堡定位。法国占领期和英国复建的各条围垒有待工程图分别勘定。",
+      "position_uncertainty_m": 130,
+      "source_urls": [
+        "https://www.loc.gov/item/74690598/",
+        "https://whc.unesco.org/en/tentativelists/6020/",
+        "https://legacy.discoverdominica.com/en/posts/33/the-complexities-of-dominican-history-cabrits-national-park",
+        "https://mapcarta.com/W750939951",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/9/",
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1783,
+          "title": "卡布里茨驻地 · 法国占领与增筑",
+          "note": "法军接收港湾据点后，在卡布里茨半岛继续修建防御。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1787,
+          "title": "卡布里茨驻地 · 英国复设与征调劳工",
+          "note": "英方重新控制港湾。殖民议会授权将约一百名黑人劳工投入卡布里茨工程，任务包括伐木、排水和筑路。"
+        },
+        {
+          "start_year": 1788,
+          "end_year": 1799,
+          "title": "卡布里茨半岛雪莉堡 · 英属驻地",
+          "note": "湾口驻地继续为皇家海军锚地提供防护，并使用被奴役者参与修筑的防御设施。"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "dominica-fort-shirley-1800"
+    },
+    {
+      "id": "DOMINICA_SALYBIA_KALINAGO",
+      "stable_id": "dominica-salybia-kalinago",
+      "title": "萨利比亚 · 卡利纳戈社群",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.25703,
+          15.49277
+        ]
+      },
+      "geometry_method": "在现存萨利比亚镇定位，拜尔斯和杰弗里斯史图所标卡利纳戈地块与此村和会合河口邻近。村落为独立具名记录。",
+      "position_uncertainty_m": 220,
+      "source_urls": [
+        "https://www.piu.agriculture.gov.dm/images/docs/dominica_Emergency_Agriculture_IPPF.pdf",
+        "https://mapcarta.com/es/19496906",
+        "https://www.loc.gov/item/74690596/",
+        "https://www.loc.gov/item/74690598/"
+      ],
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1772,
+          "title": "萨利比亚 · 卡利纳戈社群及划地",
+          "note": "英国取得多米尼克条约权利后，在东岸萨利比亚附近划出卡利纳戈社群土地。"
+        },
+        {
+          "start_year": 1773,
+          "end_year": 1777,
+          "title": "萨利比亚 · 史图标出卡利纳戈地块",
+          "note": "杰弗里斯和拜尔斯史图在萨利比亚河口南侧画出并标名沿岸地块。"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1783,
+          "title": "萨利比亚 · 法国占领期内的卡利纳戈社群",
+          "note": "法方占领期间，卡利纳戈人继续居于岛东的萨利比亚一带。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "萨利比亚 · 英方重设管治后的卡利纳戈社群",
+          "note": "英国接收多米尼克后，萨利比亚一带仍是卡利纳戈社群的居地。"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "dominica-salybia-kalinago-1800"
+    },
+    {
+      "id": "DOMINICA_POINTE_MICHEL",
+      "stable_id": "dominica-pointe-michel",
+      "title": "米歇尔角 · 登陆及反抗档案",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.37668,
+          15.26049
+        ]
+      },
+      "geometry_method": "按现存米歇尔角村定位，阿特伍德记录英军在附近登陆，研究记录周边社群与1791年的反抗。",
+      "position_uncertainty_m": 300,
+      "source_urls": [
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/8/",
+        "https://electronicsandbooks.com/edt/manual/Art/Auction/Bonhams/2016/20160615%20S-23576-0-1%20Fine%20Books%2C%20Manuscripts%20and%20Original%20Illustrations%20%5B200%5D.pdf",
+        "https://mapcarta.com/19496998",
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/25F4CEF27A430F4653C59D16174A9DE7/S002193712400087Xa.pdf/place_of_refuge_to_republicans_and_royalists_the_french_revolution_in_british_dominica.pdf",
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1784,
+          "title": "米歇尔角 · 英军交接前登陆",
+          "note": "英军从圣卢西亚调来，在米歇尔角一带登陆。随后开往罗索，在1月完成交接。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1791,
+          "end_year": 1791,
+          "title": "米歇尔角 · 被奴役者反抗",
+          "note": "米歇尔角是被奴役者反抗涉及的地方之一。殖民当局随后逮捕并审判多名参与者。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "DOMINICA_CACHACROU_LANDING",
+      "stable_id": "dominica-cachacrou-landing",
+      "title": "卡沙克鲁角 · 法军登陆一带",
+      "kind": "military_vicinity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.37391,
+          15.21556
+        ]
+      },
+      "geometry_method": "按1778年布阿什战图和同期报道所载海角的现存斯科茨角定位。点落在海角，实际滩头有待核实。",
+      "position_uncertainty_m": 450,
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b53121722t",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/7/",
+        "https://mapcarta.com/19496892",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2021/12/The-French-Invasions-of-Dominica.pdf"
+      ],
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "卡沙克鲁角 · 法军进攻登岛",
+          "note": "法国部队在岛南卡沙克鲁一带登陆，随后向罗索推进。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "GRENADA_ST_GEORGES_PORT",
+      "stable_id": "grenada-st-georges-port",
+      "title": "圣乔治 · 卡里纳日港",
+      "kind": "settlement",
+      "source_urls": [
+        "https://www.loc.gov/item/2010593380/",
+        "https://www.loc.gov/item/90683958/",
+        "https://www.openstreetmap.org/node/288869612",
+        "https://www.boe.es/diario_gazeta/comun/pdf.php?do=1&p=1762%2F06%2F01%2Fpdfs%2FGMD-1762-22.pdf",
+        "https://www.uottawa.ca/about-us/official-languages-bilingualism-institute/clmc/linguistic-history/historic-documents/treaty-paris-1763",
+        "https://archives.bpl.org/repositories/2/archival_objects/31003",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2025/09/An-Epic-on-the-Miserable-State-of-Grenada.pdf",
+        "https://loyalist.lib.unb.ca/sites/default/files/Document-List_Vol-348_reel-137_William-Pitt.pdf",
+        "https://www.tandfonline.com/doi/full/10.1080/0144039X.2024.2337727",
+        "https://grenadanationalarchives.wordpress.com/2004/08/01/grenada-heritage-governors-of-grenada/"
+      ],
+      "geometry_method": "1762年德凯吕港图及1793年西班牙海军海图对照同名卡里纳日内港，采用 OpenStreetMap 节点288869612。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 150,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.7500225,
+          12.0513709
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "卡里纳日港 · 英军接管圣乔治港",
+          "note": "3月5日法方投降后，英军接管以皇家堡为港防的内港。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1778,
+          "title": "卡里纳日港 · 英国殖民港与种植园贸易",
+          "note": "岛屿正式割让后，圣乔治为英国殖民行政和港口贸易据点。圣乔治将种植园生产与跨大西洋贸易连接起来。",
+          "kind": "trade_influence"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1782,
+          "title": "卡里纳日港 · 法军接管与占领",
+          "note": "1779年7月上旬，法军取得圣乔治并接管港区，英国补给舰队抵达近海后的海战未能改变陆上交接。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "卡里纳日港 · 议定归还",
+          "note": "9月英法议定归还本岛及据点，英国港务文书至1784年1月起重新统计来港船只。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1794,
+          "title": "卡里纳日港 · 恢复英治与跨大西洋奴隶贸易",
+          "note": "皮特文件留有1784年1月至1788年5月圣乔治港接收自非洲沿岸运来被奴役者的船舶清单。",
+          "kind": "trade_influence"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1796,
+          "title": "卡里纳日港 · 费东起义期间英殖民据点",
+          "note": "费东起义席卷本岛，英殖民政军据守圣乔治和港区，利用海路接运增援。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "卡里纳日港 · 英国殖民施政与港务",
+          "note": "查尔斯·格林任期始于1797年。岛上殖民政府继续利用圣乔治行政与通商。",
+          "kind": "administration"
+        }
+      ],
+      "cross_century_feature_id": "grenada-st-georges-port-1800"
+    },
+    {
+      "id": "GRENADA_FORT_GEORGE",
+      "stable_id": "grenada-fort-george",
+      "title": "圣乔治 · 皇家堡／乔治堡",
+      "kind": "military_vicinity",
+      "source_urls": [
+        "https://www.loc.gov/item/2010593380/",
+        "https://www.oas.org/en/sedi/dsd/Biodiversity/Sustainable_Cities/Sustainable_Communities/Proposals/T%26T-Caribbean%20Network%20for%20Urban%20Land%20Mngmnt%20%28Transport%29/Technical%20Cooperation%20Mission%20Report%20prepared%20by%20David%20Lesterhuis%20in%20August%202004%5B1%5D%5B1%5D.pdf",
+        "https://whc.unesco.org/en/tentativelists/1926/",
+        "https://www.puregrenada.com/fort-george-2/",
+        "https://www.openstreetmap.org/way/456184228",
+        "https://www.boe.es/diario_gazeta/comun/pdf.php?do=1&p=1762%2F06%2F01%2Fpdfs%2FGMD-1762-22.pdf",
+        "https://archives.bpl.org/repositories/2/archival_objects/31003",
+        "https://clements.umich.edu/recent-acquisition-map-of-grenada/",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2025/09/An-Epic-on-the-Miserable-State-of-Grenada.pdf",
+        "https://www.tandfonline.com/doi/full/10.1080/0144039X.2024.2337727"
+      ],
+      "geometry_method": "1762年德凯吕港图、2004年文化遗产现场普查和 OpenStreetMap 路径456184228 对照同一港口岬角堡址。采用堡址中心点，工事线尚需配准。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 40,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.753918,
+          12.049295
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1706,
+          "end_year": 1710,
+          "title": "皇家堡 · 法国兴建圣乔治港防堡垒",
+          "note": "法国在港口岬角早期炮位上兴建皇家堡，1710年前后完成这一阶段。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1711,
+          "end_year": 1761,
+          "title": "皇家堡 · 法国港防驻地",
+          "note": "皇家堡控制首府港口入口。堡垒、港口和下方城镇可在十八世纪港图中分别辨认。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "皇家堡 · 3月5日向英国部队投降",
+          "note": "居民签署投降条款后，法方总督交出堡垒。英国海军指挥官罗德尼记投降发生于3月5日。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1778,
+          "title": "乔治堡 · 英属港防据点",
+          "note": "格林纳达正式割让后，英国将堡垒改称乔治堡。英方另在附近医院山设置工事。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1782,
+          "title": "乔治堡 · 法军夺取与占领",
+          "note": "1779年7月法军夺取医院山，英国总督麦卡特尼退至乔治堡。7月4日法军发来投降条款，当期记载分别以4日或5日作攻取日期。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "乔治堡 · 和约约定交还",
+          "note": "《凡尔赛和约》第八条约定归还格林纳达堡垒，英治自次年1月恢复。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1794,
+          "title": "乔治堡 · 英国恢复驻守",
+          "note": "英国恢复驻守港口旧堡，并继续扩建港口东侧里士满山防务。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1796,
+          "title": "乔治堡 · 费东起义期间英国据点",
+          "note": "英国殖民部队在起义期间继续掌握圣乔治的堡垒与港区。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "乔治堡 · 英国港防驻地",
+          "note": "起义被镇压后，乔治堡继续作为圣乔治港防据点。",
+          "kind": "administration"
+        }
+      ],
+      "cross_century_feature_id": "grenada-fort-george-1800"
+    },
+    {
+      "id": "GRENADA_HOSPITAL_HILL",
+      "stable_id": "grenada-hospital-hill",
+      "title": "圣乔治 · 医院山旧工事",
+      "kind": "military_vicinity",
+      "source_urls": [
+        "https://www.oas.org/en/sedi/dsd/Biodiversity/Sustainable_Cities/Sustainable_Communities/Proposals/T%26T-Caribbean%20Network%20for%20Urban%20Land%20Mngmnt%20%28Transport%29/Technical%20Cooperation%20Mission%20Report%20prepared%20by%20David%20Lesterhuis%20in%20August%202004%5B1%5D%5B1%5D.pdf",
+        "https://clements.umich.edu/recent-acquisition-map-of-grenada/",
+        "https://archives.bpl.org/repositories/2/archival_objects/31003",
+        "https://www.oas.org/dsd/IABIN/Component1/ReefFix/Grenada%20Feb25-26.09/Jessamy%20Overview%20of%20Grenada.pdf",
+        "https://www.openstreetmap.org/way/48611296"
+      ],
+      "geometry_method": "Cockburn 1763年旧港防图及1779年战图核名。根据 OAS 的旧堡与医院山同址清册，以及 OpenStreetMap 旧堡路48611296西段高地定位。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 300,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.752,
+          12.0548
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1778,
+          "title": "医院山 · 王后炮台与后续工事",
+          "note": "1763年军用测绘已绘出医院山王后炮台。1778年英军评估了加强高地工事的方案。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "医院山 · 7月4日法军夺取高地",
+          "note": "法军攻下医院山工事，取得俯瞰乔治堡的位置。德斯坦于当日向英国总督送交可接受的投降条款。",
+          "kind": "wartime_occupation"
+        }
+      ]
+    },
+    {
+      "id": "GRENADA_FORT_FREDERICK",
+      "stable_id": "grenada-fort-frederick",
+      "title": "里士满山 · 弗雷德里克堡",
+      "kind": "military_vicinity",
+      "source_urls": [
+        "https://www.oas.org/en/sedi/dsd/Biodiversity/Sustainable_Cities/Sustainable_Communities/Proposals/T%26T-Caribbean%20Network%20for%20Urban%20Land%20Mngmnt%20%28Transport%29/Technical%20Cooperation%20Mission%20Report%20prepared%20by%20David%20Lesterhuis%20in%20August%202004%5B1%5D%5B1%5D.pdf",
+        "https://whc.unesco.org/en/tentativelists/1926/",
+        "https://www.puregrenada.com/fort-frederick/",
+        "https://www.tandfonline.com/doi/full/10.1080/0144039X.2024.2337727",
+        "https://www.openstreetmap.org/way/234434352"
+      ],
+      "geometry_method": "2004年文化遗产普查图4、图5辨认山脊堡址，采用 OpenStreetMap 路径234434352 现存堡址中心。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 35,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.737311,
+          12.047926
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1783,
+          "title": "弗雷德里克堡 · 法国启动里士满山工事",
+          "note": "法军夺取医院山后，在首府东侧里士满山启动筑堡，加强来自陆侧的防御。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "弗雷德里克堡 · 英国续建和役使被奴役劳工",
+          "note": "英殖民政府接手工事，继续在里士满山修筑防御。1787年前后当地修筑档案登记了261名为殖民政府服强制劳役的被奴役工人，有石匠、木匠及搬运工。该统计涵盖里士满山堡群。",
+          "kind": "military_vicinity"
+        }
+      ],
+      "cross_century_feature_id": "grenada-fort-frederick-1800"
+    },
+    {
+      "id": "GRENADA_FORT_MATTHEW",
+      "stable_id": "grenada-fort-matthew",
+      "title": "里士满山 · 马修堡",
+      "kind": "military_vicinity",
+      "source_urls": [
+        "https://www.oas.org/en/sedi/dsd/Biodiversity/Sustainable_Cities/Sustainable_Communities/Proposals/T%26T-Caribbean%20Network%20for%20Urban%20Land%20Mngmnt%20%28Transport%29/Technical%20Cooperation%20Mission%20Report%20prepared%20by%20David%20Lesterhuis%20in%20August%202004%5B1%5D%5B1%5D.pdf",
+        "https://whc.unesco.org/en/tentativelists/1926/",
+        "https://www.puregrenada.com/fort-matthew/",
+        "https://www.tandfonline.com/doi/full/10.1080/0144039X.2024.2337727",
+        "https://www.openstreetmap.org/way/234434348"
+      ],
+      "geometry_method": "2004年文化遗产普查图4、图5辨认山脊堡址，采用 OpenStreetMap 路径234434348 现存堡址中心。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 55,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.73814,
+          12.050212
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1790,
+          "title": "马修堡 · 英国在里士满山筑堡",
+          "note": "英国复治后在里士满山修筑马修堡。格林纳达旅游局将其营建时段列为1784–1790年。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1791,
+          "end_year": 1799,
+          "title": "马修堡 · 英国里士满山据点",
+          "note": "堡垒与弗雷德里克堡同处里士满山，由矮墙相连。十八世纪末两堡已成为圣乔治东侧防御体系的一部分。",
+          "kind": "administration"
+        }
+      ],
+      "cross_century_feature_id": "grenada-fort-matthew-1800"
+    },
+    {
+      "id": "GRENADA_GRENVILLE_1795",
+      "stable_id": "grenada-grenville-1795",
+      "title": "格伦维尔 · 费东起义东岸据点",
+      "kind": "military_vicinity",
+      "source_urls": [
+        "https://www.loc.gov/item/90683958/",
+        "https://www.geonames.org/GD/largest-cities-in-grenada.html",
+        "https://journals.openedition.org/lrf/2017",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2021/12/Narrative-of-the-insurrection-in-the-island-of-Grenada.pdf"
+      ],
+      "geometry_method": "以1793年西班牙海军海图区分本岛东岸港镇，依 GeoNames 的 Grenville／La Baye 城镇点定位。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.624978,
+          12.122783
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "格伦维尔 · 3月2日至3日夜起义",
+          "note": "费东一方在东岸格伦维尔袭击当地英裔居民，杀死一部分居民并扣押其他人。俘虏被带入山区。",
+          "kind": "conflict_damage"
+        }
+      ]
+    },
+    {
+      "id": "GRENADA_GOUYAVE_1795",
+      "stable_id": "grenada-gouyave-1795",
+      "title": "古亚夫 · 费东起义西岸据点",
+      "kind": "military_vicinity",
+      "source_urls": [
+        "https://www.loc.gov/item/90683958/",
+        "https://www.geonames.org/GD/largest-cities-in-grenada.html",
+        "https://journals.openedition.org/lrf/2017",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2021/12/Narrative-of-the-insurrection-in-the-island-of-Grenada.pdf"
+      ],
+      "geometry_method": "以1793年西班牙海军海图区分本岛西岸港镇，依 GeoNames 的 Gouyave／Charlotte Town 城镇点定位。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.729646,
+          12.164618
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "古亚夫 · 3月2日至3日夜起义",
+          "note": "起义者同期在西岸的古亚夫扣押部分当地居民，后把俘虏押往费东的贝尔维代尔庄园。",
+          "kind": "military_vicinity"
+        }
+      ]
+    },
+    {
+      "id": "GRENADA_FEDON_MORNE",
+      "stable_id": "grenada-fedon-morne",
+      "title": "费东山 · 贝尔维代尔营地",
+      "kind": "military_vicinity",
+      "source_urls": [
+        "https://www.oas.org/dsd/publications/Unit/oea51e/ch08.htm",
+        "https://www.puregrenada.com/product/grand-etang-national-park-forest-reserve/",
+        "https://en.wikipedia.org/wiki/Fedon%27s_Camp",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2021/12/Narrative-of-the-insurrection-in-the-island-of-Grenada.pdf",
+        "https://journals.openedition.org/lrf/2017",
+        "https://www.tandfonline.com/doi/abs/10.1080/0144039X.2018.1464623"
+      ],
+      "geometry_method": "OAS国家公园清册将费东营地指为夸夸山北侧独立山峰，按现今独立峰顶点近似定位。庄园地块及山地控制线待考。",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 550,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.69816,
+          12.11843
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "费东山 · 贝尔维代尔起义营地",
+          "note": "费东及其联盟在贝尔维代尔庄园附近高地组织营地，关押包括殖民总督尼尼安·霍姆在内的人质。4月英军一次进攻失败后，起义者处死多数人质。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1796,
+          "title": "费东山 · 6月英军攻破山区营地",
+          "note": "英军在6月攻破山区抵抗中心。费东去向在同期记录中未获确认，殖民当局处决或流放部分被指参与者并没收财产。",
+          "kind": "conflict_damage"
+        }
+      ]
+    },
+    {
+      "id": "GUADELOUPE_BASSE_TERRE",
+      "stable_id": "guadeloupe-basse-terre",
+      "title": "瓜德罗普 · 巴斯特尔旧港城",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1758,
+          "title": "巴斯特尔旧港城 · 法国殖民行政",
+          "note": "巴斯特尔是法国在瓜德罗普的行政与对外贸易驻地。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1759,
+          "title": "巴斯特尔旧港城 · 1月22日至23日炮击和失守",
+          "note": "约翰·穆尔舰队炮击城镇与堡垒。城中建筑遭焚毁。法国驻军撤到内陆，英方随后进入。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1762,
+          "title": "巴斯特尔旧港城 · 英方驻港行政与贸易",
+          "note": "英方保留巴斯特尔的行政和接运功能，英国商人经岛港出口糖和咖啡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "巴斯特尔旧港城 · 法国重新接收",
+          "note": "7月6日法方恢复驻地行政。7月8日在城中主要教堂举行庆祝仪式。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1793,
+          "title": "巴斯特尔旧港城 · 法国驻地",
+          "note": "巴斯特尔保有行政机构和港口，与另行建设的皮特尔角城分工。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "巴斯特尔旧港城 · 12月英军最后撤离",
+          "note": "英军留驻巴斯特尔至12月。法国共和军恢复城市行政。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "巴斯特尔旧港城 · 法国共和行政",
+          "note": "港城重新由法国共和当局管理。"
+        }
+      ],
+      "source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-basseterre-1759-basse-terre-guadeloupe-west-indies-15deg5954n-61deg4331w",
+        "https://www.argomaps.org/maps/commonwealth:q524n536h/",
+        "https://clements.umich.edu/exhibit/1759-britains-year-of-victories/case-13/",
+        "https://www.erudit.org/fr/revues/bshg/1971-n15-16-bshg03540/1044152ar.pdf",
+        "https://pop.culture.gouv.fr/notice/merimee/IA97100904",
+        "https://scholarshare.temple.edu/server/api/core/bitstreams/182a6688-515d-437f-8246-97a1ca3c19f7/content",
+        "https://www.lameca.org/publications-numeriques/dossiers-et-articles/1802-la-rebellion-en-guadeloupe/histoire-chronologie/"
+      ],
+      "geometry_method": "Town anchor at the historic Basse-Terre seafront where the cathedral and old market streets meet, Rycaut 1759 urban core. Not a Fort Saint-Charles anchor.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.728,
+          16.0003
+        ]
+      },
+      "cross_century_feature_id": "guadeloupe-basse-terre-1800"
+    },
+    {
+      "id": "GUADELOUPE_POINTE_A_PITRE_HARBOUR",
+      "stable_id": "guadeloupe-pointe-a-pitre-harbour",
+      "title": "瓜德罗普 · 皮特尔角旧锚地与港城",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1758,
+          "title": "皮特尔角 · 港湾锚地",
+          "note": "船只在小库尔德萨克湾内停泊，湾口由路易堡守卫。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1762,
+          "title": "皮特尔角 · 英方使用锚地",
+          "note": "英军于1759年2月夺取湾口的路易堡。英方港图记录随后使用的锚地和商船航道。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "皮特尔角 · 法方创设港城",
+          "note": "布尔拉马克3月24日发布建城条例，法方于7月正式接收岛上行政。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1793,
+          "title": "皮特尔角 · 法国港城扩建",
+          "note": "殖民政府整治码头和街巷。临海地段逐渐集中贸易商人、仓库和商船设施。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "皮特尔角 · 法国共和军入城与废奴公告",
+          "note": "6月法国共和军夺回港城，6月7日于当地宣布废奴。法国国民公会9月11日确认将港口改名为自由港。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "自由港 · 法国共和军与港口管理",
+          "note": "法国共和政府治理皮特尔角城，并在此组织港口军务和对外补给。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/75693288/",
+        "https://www.erudit.org/fr/revues/bshg/2021-n190-bshg06948/1088451ar.pdf",
+        "https://greatercaribbeanmaps.org/maps/plan-of-the-attack-against-fort-louis-now-fort-george-at-point-a-pitre-on-the-island-of-guadaloupe-by-a-squadron-of-his-majestys-ships-of-war-detached-from-commodore-moore-commanded-by-capt/",
+        "https://www.persee.fr/doc/arcpa_0000-0000_1993_num_97_1_15881_t1_0091_0000_4",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://archivesdiplomatiques.diplomatie.gouv.fr/ark%3A/14366/9sx12mlfdv75",
+        "https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/focus-thematiques-dossier-napoleon-et-le-retablissement",
+        "https://www.lameca.org/publications-numeriques/dossiers-et-articles/1802-la-rebellion-en-guadeloupe/references-textes-historiques/"
+      ],
+      "geometry_method": "Historic harbor core around Quai de la Marine and the waterfront market, checked against LOC 75693288 and published excavation of the medieval/modern waterfront. Fort Louis sits elsewhere at the entrance.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 95,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.53403,
+          16.23771
+        ]
+      },
+      "cross_century_feature_id": "guadeloupe-pointe-a-pitre-harbour-1800"
+    },
+    {
+      "id": "GUADELOUPE_FORT_LOUIS",
+      "stable_id": "guadeloupe-fort-louis",
+      "title": "瓜德罗普 · 路易堡旧址",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1726,
+          "title": "路易堡 · 港湾入口瞭望与守备",
+          "note": "法国在港湾入口高地建立防御据点，为驶入皮特尔角锚地的船只提供防护。"
+        },
+        {
+          "start_year": 1727,
+          "end_year": 1758,
+          "title": "路易堡 · 石砌扩建",
+          "note": "1727年起重筑石防，七年战争前进一步扩建。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1759,
+          "title": "路易堡 · 2月14日英军攻占",
+          "note": "哈曼率英舰攻击湾口路易堡，英方夺占后称为乔治堡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1762,
+          "title": "乔治堡 · 英军驻守",
+          "note": "英方港图记录乔治堡及通往皮特尔角湾内锚地的航道。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1793,
+          "title": "路易堡 · 法方收回并重建港防",
+          "note": "法国接收瓜德罗普，路易堡继续参与港湾防务，附近另筑炮台。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "路易堡 · 英占后共和军收复",
+          "note": "1794年4月英方短占，随后法国共和军重获湾口驻地。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "联合堡 · 法国共和军驻堡",
+          "note": "法国革命期间，原路易堡改称联合堡，继续守备港湾入口。"
+        }
+      ],
+      "source_urls": [
+        "https://pop.culture.gouv.fr/notice/merimee/IA97100808",
+        "https://greatercaribbeanmaps.org/maps/plan-of-the-attack-against-fort-louis-now-fort-george-at-point-a-pitre-on-the-island-of-guadaloupe-by-a-squadron-of-his-majestys-ships-of-war-detached-from-commodore-moore-commanded-by-capt/",
+        "https://www.loc.gov/item/75693288/",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-guadeloupe-1759-guadeloupe-leeward-islands-lesser-antilles-16deg1500n-61deg3500w-0",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://www.culture.gouv.fr/content/download/159914/file/BILAN%202003.pdf?inLanguage=fre-FR&version=1",
+        "https://pop.culture.gouv.fr/notice/merimee/PA00105890",
+        "https://www.geonames.org/advanced-search.html?country=GP&featureClass=S&q=&startRow=0"
+      ],
+      "geometry_method": "Named Fort Louis / Fort de l’Union on the coastal rise opposite the islet, cadastre 1986 CI 39 and Rycaut’s February 1759 drawing. Exact pre-war walls remain a separate research problem.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.52588,
+          16.21637
+        ]
+      },
+      "cross_century_feature_id": "guadeloupe-fort-louis-1800"
+    },
+    {
+      "id": "GUADELOUPE_FLEUR_DEPEE",
+      "stable_id": "guadeloupe-fleur-depee",
+      "title": "瓜德罗普 · 弗勒代佩堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "title": "弗勒代佩堡 · 炮台扩筑",
+          "note": "总督科洛下令把既有高地炮台改为永久工事，保护路易堡火力覆盖不到的泊地。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "弗勒代佩堡 · 英军夺堡与法国共和军反攻",
+          "note": "4月英军夺取工事，6月法国共和军从英方手中收回它，并继续进攻皮特尔角。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "弗勒代佩堡 · 法国保持湾口炮台",
+          "note": "法国共和军留在海湾入口，继续建设山丘工事。"
+        }
+      ],
+      "source_urls": [
+        "https://pop.culture.gouv.fr/notice/merimee/IA97100809",
+        "https://www.culture.gouv.fr/content/download/159914/file/BILAN%202003.pdf?inLanguage=fre-FR&version=1",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://archivesdiplomatiques.diplomatie.gouv.fr/ark%3A/14366/9sx12mlfdv75",
+        "https://scholarshare.temple.edu/server/api/core/bitstreams/182a6688-515d-437f-8246-97a1ca3c19f7/content",
+        "https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/focus-thematiques-dossier-napoleon-et-le-retablissement",
+        "https://www.geonames.org/advanced-search.html?country=GP&featureClass=S&q=&startRow=0"
+      ],
+      "geometry_method": "Documented hilltop site, not the later completed enceinte used as a proxy for the 1794 incomplete battery. Mérimée IA97100809 and DRAC document different construction phases at this same site.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 50,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.51278,
+          16.21667
+        ]
+      },
+      "cross_century_feature_id": "guadeloupe-fleur-depee-1800"
+    },
+    {
+      "id": "GUADELOUPE_SAINT_CHARLES_REBUILD",
+      "stable_id": "guadeloupe-saint-charles-rebuild",
+      "title": "巴斯特尔 · 圣夏尔堡重建驻地",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1784,
+          "title": "圣夏尔堡 · 法方修复和扩建",
+          "note": "法方扩建堡墙和外工事，增设营房、工场、仓库、监狱与供水设施。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1793,
+          "title": "圣夏尔堡 · 新棱堡和外壕施工",
+          "note": "法方继续加筑向城市和海岸伸展的防御设施。"
+        }
+      ],
+      "source_urls": [
+        "https://pop.culture.gouv.fr/notice/merimee/IA97100904",
+        "https://www.culture.gouv.fr/mc/content/download/157808/file/BSR%202011%20-%202013.pdf?inLanguage=fre-FR&version=3",
+        "https://pop.culture.gouv.fr/notice/merimee/PA00105850",
+        "https://www.erudit.org/fr/revues/bshg/1971-n15-16-bshg03540/1044152ar.pdf"
+      ],
+      "geometry_method": "Same fort anchor after the 1763 transfer. The wall line changed through multiple documented projects in the years preceding the late enclosure.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 35,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.72317,
+          15.9887
+        ]
+      }
+    },
+    {
+      "id": "TRINIDAD_FORT_SAN_ANDRES",
+      "stable_id": "trinidad-fort-san-andres",
+      "title": "西班牙港 · 圣安德烈斯堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1796,
+          "title": "圣安德烈斯堡 · 西班牙港近岸炮台",
+          "note": "新堡于1787年完工，建在近岸突堤，经木桥与陆地相连。堡址基础留有1785年的年代标记。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "圣安德烈斯堡 · 随西班牙港转手",
+          "note": "英军进入西班牙港后，投降书要求移交西班牙王室各堡和军需。此处标出圣安德烈斯堡遗址所在。",
+          "kind": "wartime_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://nationaltrust.tt/location/fort-san-andres/",
+        "https://citizensforconservationtt.org/home/sites/fort-san-andres-port-of-spain/",
+        "https://journals.sta.uwi.edu/ojs/index.php/hia/article/download/1329/1207/2520",
+        "https://library2.nalis.gov.tt/greenstone/collect/hist3/index/assoc/HASH01bb.dir/doc.pdf"
+      ],
+      "geometry_method": "Recorded on the 1757–1803 town plan; surviving structure at South Quay cross-checked against the National Trust and contemporary site mapping.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.51056,
+          10.64778
+        ]
+      },
+      "position_uncertainty_m": 25,
+      "cross_century_feature_id": "trinidad-fort-san-andres-1800"
+    },
+    {
+      "id": "TRINIDAD_ARIMA_SANTA_ROSA",
+      "stable_id": "trinidad-arima-santa-rosa",
+      "title": "阿里马 · 圣罗莎传教区旧址",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1789,
+          "end_year": 1796,
+          "title": "阿里马旧址 · 圣罗莎教堂与原住民聚落",
+          "note": "西班牙殖民当局把原有的几个原住民村落居民集中到阿里马。1789年，圣罗莎教堂在原住民聚落内现址建成。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "阿里马旧址 · 英国接管后原住民社群仍在",
+          "note": "英方接管特立尼达后，阿里马传教聚落延续。这一处标出传教区旧址，居民历史用地范围仍待测定。"
+        }
+      ],
+      "source_urls": [
+        "https://www.srmarima.com/arima",
+        "https://www.nalis.gov.tt/resources/tt-content-guide/first-peoples/",
+        "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/01104/28_Boomert.pdf",
+        "https://www.openstreetmap.org/node/1890218473",
+        "https://nationaltrust.tt/home/wp-content/uploads/2020/12/hispanic-heritage-printable.pdf"
+      ],
+      "geometry_method": "Modern parish anchor (OSM node 1890218473); the parish confirms that the first church was erected on the surviving church site.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.2829523,
+          10.643212
+        ]
+      },
+      "position_uncertainty_m": 35,
+      "cross_century_feature_id": "trinidad-arima-santa-rosa-1800"
     }
   ],
   "regional_zones": [
@@ -34217,6 +35472,2289 @@
       ],
       "outline_only": true,
       "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "DOMINICA_ISLAND_MAIN",
+      "stable_id": "dominica-19c-islands",
+      "title": "多米尼克主岛",
+      "kind": "administration",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.362864,
+              15.201809
+            ],
+            [
+              -61.350738,
+              15.205146
+            ],
+            [
+              -61.342681,
+              15.219672
+            ],
+            [
+              -61.328725,
+              15.225572
+            ],
+            [
+              -61.323598,
+              15.238593
+            ],
+            [
+              -61.318186,
+              15.243394
+            ],
+            [
+              -61.311879,
+              15.244534
+            ],
+            [
+              -61.303375,
+              15.24258
+            ],
+            [
+              -61.289296,
+              15.243598
+            ],
+            [
+              -61.284413,
+              15.244818
+            ],
+            [
+              -61.277211,
+              15.25023
+            ],
+            [
+              -61.256663,
+              15.285346
+            ],
+            [
+              -61.253733,
+              15.324693
+            ],
+            [
+              -61.255523,
+              15.364569
+            ],
+            [
+              -61.249257,
+              15.401068
+            ],
+            [
+              -61.262929,
+              15.407904
+            ],
+            [
+              -61.256012,
+              15.43594
+            ],
+            [
+              -61.25768,
+              15.472602
+            ],
+            [
+              -61.267161,
+              15.507799
+            ],
+            [
+              -61.284047,
+              15.531399
+            ],
+            [
+              -61.29955,
+              15.557196
+            ],
+            [
+              -61.307688,
+              15.57925
+            ],
+            [
+              -61.35733,
+              15.598293
+            ],
+            [
+              -61.36974,
+              15.595933
+            ],
+            [
+              -61.384633,
+              15.588365
+            ],
+            [
+              -61.397572,
+              15.596625
+            ],
+            [
+              -61.413726,
+              15.619574
+            ],
+            [
+              -61.425933,
+              15.628485
+            ],
+            [
+              -61.437245,
+              15.632636
+            ],
+            [
+              -61.468984,
+              15.633857
+            ],
+            [
+              -61.480621,
+              15.59101
+            ],
+            [
+              -61.488881,
+              15.57925
+            ],
+            [
+              -61.481191,
+              15.578559
+            ],
+            [
+              -61.462148,
+              15.572984
+            ],
+            [
+              -61.467275,
+              15.562974
+            ],
+            [
+              -61.483998,
+              15.551581
+            ],
+            [
+              -61.488881,
+              15.545071
+            ],
+            [
+              -61.488922,
+              15.535712
+            ],
+            [
+              -61.47936,
+              15.525458
+            ],
+            [
+              -61.475209,
+              15.517768
+            ],
+            [
+              -61.474273,
+              15.493476
+            ],
+            [
+              -61.472076,
+              15.481391
+            ],
+            [
+              -61.460032,
+              15.472886
+            ],
+            [
+              -61.454254,
+              15.46483
+            ],
+            [
+              -61.444203,
+              15.436835
+            ],
+            [
+              -61.421213,
+              15.41474
+            ],
+            [
+              -61.41808,
+              15.405951
+            ],
+            [
+              -61.413726,
+              15.380561
+            ],
+            [
+              -61.399566,
+              15.351142
+            ],
+            [
+              -61.395009,
+              15.333075
+            ],
+            [
+              -61.39094,
+              15.296291
+            ],
+            [
+              -61.378285,
+              15.28205
+            ],
+            [
+              -61.372792,
+              15.270697
+            ],
+            [
+              -61.372792,
+              15.237209
+            ],
+            [
+              -61.376129,
+              15.212836
+            ],
+            [
+              -61.374094,
+              15.20482
+            ],
+            [
+              -61.362864,
+              15.201809
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "原样沿用十九世纪批次7的多米尼克主岛地理外廓，与杰弗里斯图所据1773年测量及拜尔斯1776年史图的主岛形态核对。虚线表示近似主岛岸形，档案下分各年度的条约、军事接管及行政复设。",
+      "position_uncertainty_m": 900,
+      "source_urls": [
+        "https://www.loc.gov/item/74690598/",
+        "https://www.loc.gov/item/74690596/",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "https://catalogs.marinersmuseum.org/object/CL16143",
+        "https://loyalist.lib.unb.ca/sites/default/files/WO%2034%20Volume%2055_Document%20List.pdf",
+        "https://www.uottawa.ca/about-us/official-languages-bilingualism-institute/clmc/linguistic-history/historic-documents/treaty-paris-1763",
+        "https://knowledge.uchicago.edu/record/727",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/7/",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://www.cyberlibrary.org/en/books/the-history-of-the-island-of-dominica-containing-a-description-facd86f1/chapters/8/",
+        "https://electronicsandbooks.com/edt/manual/Art/Auction/Bonhams/2016/20160615%20S-23576-0-1%20Fine%20Books%2C%20Manuscripts%20and%20Original%20Illustrations%20%5B200%5D.pdf",
+        "https://whc.unesco.org/en/tentativelists/6020/",
+        "https://www.piu.agriculture.gov.dm/images/docs/dominica_Emergency_Agriculture_IPPF.pdf"
+      ],
+      "periods": [
+        {
+          "start_year": 1761,
+          "end_year": 1762,
+          "title": "多米尼克主岛 · 英军作战与驻岛",
+          "note": "1761年6月6日，罗洛与道格拉斯率英国陆海军抵达罗索并发起攻占。英国驻军随后在岛上设立据点。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "多米尼克主岛 · 巴黎和约割让",
+          "note": "2月10日《巴黎和约》第九条将多米尼克正式划归英国。岛东的卡利纳戈人继续维持社群。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1777,
+          "title": "多米尼克主岛 · 英属殖民管治",
+          "note": "英国殖民机关测绘岛屿并组织土地出售。1766年西岸两港开放受规管的对外贸易。历史学者泰莎·墨菲据跨大西洋贩奴航次资料统计，1764至1773年有28,876名被奴役者在全岛各港登陆，其中一部分随后被再次贩运。"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1778,
+          "title": "多米尼克主岛 · 9月7日签降",
+          "note": "法军自马提尼克出兵，9月7日签降后接收罗索城防，8日接收鲁珀特王子湾据点。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1782,
+          "title": "多米尼克主岛 · 法方占领及管治",
+          "note": "法国驻军和行政人员继续在岛上执行占领条款。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "多米尼克主岛 · 凡尔赛和约约定归还",
+          "note": "9月3日《凡尔赛和约》第八条约定法国将多米尼克归还英国，法军在这一年仍驻岛。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1784,
+          "title": "多米尼克主岛 · 1月10日英方接收",
+          "note": "英国部队进入扬堡，法国驻军登船撤离。总督约翰·奥德在罗索法院宣誓就任。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1799,
+          "title": "多米尼克主岛 · 英属管治与岛内反抗",
+          "note": "英国殖民当局继续管治。1791年，被奴役者在岛内多处争取更多耕作时间及人身自由。"
+        }
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "bbox": [
+        -61.488922,
+        15.201809,
+        -61.249257,
+        15.633857
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "dominica-colonial-1800"
+    },
+    {
+      "id": "GRENADA_ISLAND_MAIN",
+      "stable_id": "grenada-19c-islands",
+      "title": "格林纳达本岛",
+      "kind": "administration",
+      "source_urls": [
+        "https://www.loc.gov/item/90683958/",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "https://www.boe.es/diario_gazeta/comun/pdf.php?do=1&p=1762%2F06%2F01%2Fpdfs%2FGMD-1762-22.pdf",
+        "https://www.uottawa.ca/about-us/official-languages-bilingualism-institute/clmc/linguistic-history/historic-documents/treaty-paris-1763",
+        "https://archives.bpl.org/repositories/2/archival_objects/31003",
+        "https://clements.umich.edu/recent-acquisition-map-of-grenada/",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2025/09/An-Epic-on-the-Miserable-State-of-Grenada.pdf",
+        "https://loyalist.lib.unb.ca/sites/default/files/Document-List_Vol-348_reel-137_William-Pitt.pdf",
+        "https://journals.openedition.org/lrf/2017",
+        "https://www.tandfonline.com/doi/abs/10.1080/0144039X.2018.1464623"
+      ],
+      "geometry_method": "按西班牙海军1793年全岛海图核识本岛，复用十九世纪现有的 Natural Earth 概化本岛陆岸及同一 stable_id。虚线沿物理岸线，可点阅行政阶段，起义活动按各地点显示。",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 1200,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.612945,
+              12.214423
+            ],
+            [
+              -61.606679,
+              12.220282
+            ],
+            [
+              -61.606028,
+              12.223375
+            ],
+            [
+              -61.627675,
+              12.236721
+            ],
+            [
+              -61.650502,
+              12.239732
+            ],
+            [
+              -61.671457,
+              12.23607
+            ],
+            [
+              -61.729644,
+              12.166653
+            ],
+            [
+              -61.730295,
+              12.149319
+            ],
+            [
+              -61.751047,
+              12.110093
+            ],
+            [
+              -61.756418,
+              12.087836
+            ],
+            [
+              -61.753774,
+              12.074164
+            ],
+            [
+              -61.745961,
+              12.05093
+            ],
+            [
+              -61.749501,
+              12.036322
+            ],
+            [
+              -61.755849,
+              12.03026
+            ],
+            [
+              -61.790517,
+              12.008368
+            ],
+            [
+              -61.775543,
+              12.00434
+            ],
+            [
+              -61.756947,
+              12.003404
+            ],
+            [
+              -61.73998,
+              12.006903
+            ],
+            [
+              -61.729644,
+              12.015815
+            ],
+            [
+              -61.713246,
+              12.00727
+            ],
+            [
+              -61.694936,
+              12.002834
+            ],
+            [
+              -61.69343,
+              12.012274
+            ],
+            [
+              -61.689361,
+              12.019761
+            ],
+            [
+              -61.682973,
+              12.025377
+            ],
+            [
+              -61.674428,
+              12.029486
+            ],
+            [
+              -61.674428,
+              12.02204
+            ],
+            [
+              -61.631581,
+              12.044094
+            ],
+            [
+              -61.626047,
+              12.053046
+            ],
+            [
+              -61.624501,
+              12.069037
+            ],
+            [
+              -61.621571,
+              12.074937
+            ],
+            [
+              -61.616363,
+              12.077297
+            ],
+            [
+              -61.61384,
+              12.08039
+            ],
+            [
+              -61.619456,
+              12.096747
+            ],
+            [
+              -61.619781,
+              12.10456
+            ],
+            [
+              -61.606313,
+              12.133775
+            ],
+            [
+              -61.602773,
+              12.182929
+            ],
+            [
+              -61.604563,
+              12.197455
+            ],
+            [
+              -61.612945,
+              12.214423
+            ]
+          ]
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "格林纳达本岛 · 3月5日英军实际接管",
+          "note": "法国居民代表签署投降条款，法方总督同日投降。英军接管岛屿及首府港堡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "格林纳达本岛 · 《巴黎和约》割让",
+          "note": "2月10日签订的《巴黎和约》第九条将格林纳达及格林纳丁群岛割让给英国。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1778,
+          "title": "格林纳达本岛 · 英国殖民行政与奴隶制",
+          "note": "英殖民当局在格林纳达经营糖业种植园和奴隶制经济。圣乔治仍为行政与港务中心。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "格林纳达本岛 · 7月法国接管",
+          "note": "法军7月2日登陆，4日夺医院山工事。4日档案记议降及法方条款，另一张当期法军图记5日攻取。6日英法另在岛外海战，法国仍控制本岛。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1782,
+          "title": "格林纳达本岛 · 法国占领",
+          "note": "法国殖民当局在美国独立战争期间管治格林纳达。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "格林纳达本岛 · 凡尔赛约定归还",
+          "note": "9月3日《凡尔赛和约》第八条约定法国归还格林纳达及格林纳丁群岛。英治在次年1月恢复。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1794,
+          "title": "格林纳达本岛 · 1月英治恢复",
+          "note": "当期港务文书以1784年1月为本岛归还之时，英总督马修至迟1月10日已在圣乔治施政。殖民当局调集被奴役劳工营建港口周边工事。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "格林纳达本岛 · 费东起义与英军据点并存",
+          "note": "3月2日至3日夜，起义者在东西两岸发动袭击。有色自由人和被奴役者的动机与处境各异，圣乔治仍由英殖民当局维持。起义活动见东西岸城镇和山区营地的各自档案。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1796,
+          "title": "格林纳达本岛 · 英军镇压起义",
+          "note": "6月英军攻破费东山区营地。此后殖民当局处决或流放部分被指参与者，并没收财产。学者基特·坎德林估计战争造成约七千名被奴役者死亡。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "格林纳达本岛 · 起义后英国殖民行政",
+          "note": "殖民政府恢复常规施政，继续维持种植园奴隶制。查尔斯·格林于1797年接任总督。",
+          "kind": "administration"
+        }
+      ],
+      "bbox": [
+        -61.790517,
+        12.002834,
+        -61.602773,
+        12.239732
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "grenada-continuity-1800"
+    },
+    {
+      "id": "GUADELOUPE_MAIN_ISLANDS",
+      "stable_id": "guadeloupe-main-islands",
+      "title": "瓜德罗普 · 巴斯特尔与格朗德特尔",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1758,
+          "title": "瓜德罗普两大岛 · 法国殖民行政",
+          "note": "法国行政驻地设在巴斯特尔。糖业和其他种植业依赖被奴役的劳工。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1759,
+          "title": "瓜德罗普两大岛 · 5月1日降约",
+          "note": "英方1月炮击巴斯特尔，2月攻取路易堡。英军袭击沿海种植园，5月1日居民代表和法国总督分别签署投降条款。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1762,
+          "title": "瓜德罗普两大岛 · 英国军事与贸易管制",
+          "note": "英国商人扩大糖和咖啡贸易，并运入大量被奴役者。历史学者施纳肯堡据贸易档案统计，1760、1761及1762年分别有5,291、8,017和3,490名被奴役者被运入。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "瓜德罗普两大岛 · 7月6日实际归还法国",
+          "note": "《巴黎和约》约定归还。7月6日最后一批英军离开，法国总督布尔拉马克接收圣夏尔堡。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1793,
+          "title": "瓜德罗普两大岛 · 法国恢复殖民行政",
+          "note": "法国当局恢复管辖并扩筑岸防和港口设施，殖民种植园继续使用被奴役劳动。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "瓜德罗普两大岛 · 英军短占与法国共和军收复",
+          "note": "4月英方接收降约。6月法国共和军夺回格朗德特尔岛皮特尔角城并宣布废奴，英军仍守巴斯特尔岛上的据点。10月贝尔维尔英营失守，12月巴斯特尔最后一处英军据点撤离。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "瓜德罗普两大岛 · 法国共和政府",
+          "note": "法国共和当局继续管理两岛。废奴后，殖民当局仍以种植园劳动规章约束获释者。"
+        }
+      ],
+      "source_urls": [
+        "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-guadeloupe-1759-guadeloupe-leeward-islands-lesser-antilles-16deg1500n-61deg3500w-0",
+        "https://guides.loc.gov/francophone-caribbean-collections-library-of-congress/online-resources",
+        "https://clements.umich.edu/exhibit/1759-britains-year-of-victories/case-13/",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://www.erudit.org/fr/revues/bshg/1971-n15-16-bshg03540/1044152ar.pdf",
+        "https://www.erudit.org/en/books/hors-collection/les-occupations-anglaises-guadeloupe-978-2-900339-41-1/004484co.pdf",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://archivesdiplomatiques.diplomatie.gouv.fr/ark%3A/14366/9sx12mlfdv75",
+        "https://www.erudit.org/fr/revues/bshg/1981-n47-bshg03503/1043893ar.pdf",
+        "https://www.lameca.org/publications-numeriques/dossiers-et-articles/1802-la-rebellion-en-guadeloupe/histoire-chronologie/"
+      ],
+      "geometry_method": "Natural Earth 1:10m public-domain physical outlines of the two principal islands only, checked against the 1759 campaign map (Royal Collection RCIN 731067.ar). Forts, coast raids and administrations are independently dated. Minor dependencies and town-scale shoreline shifts excluded.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 1000,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.551666,
+                16.285549
+              ],
+              [
+                -61.549184,
+                16.280585
+              ],
+              [
+                -61.555409,
+                16.258246
+              ],
+              [
+                -61.547963,
+                16.23843
+              ],
+              [
+                -61.554596,
+                16.236518
+              ],
+              [
+                -61.572662,
+                16.232571
+              ],
+              [
+                -61.579457,
+                16.222317
+              ],
+              [
+                -61.577301,
+                16.17593
+              ],
+              [
+                -61.564565,
+                16.140937
+              ],
+              [
+                -61.557729,
+                16.08633
+              ],
+              [
+                -61.565989,
+                16.033515
+              ],
+              [
+                -61.597483,
+                15.996731
+              ],
+              [
+                -61.643422,
+                15.970364
+              ],
+              [
+                -61.694936,
+                15.949164
+              ],
+              [
+                -61.696523,
+                15.955024
+              ],
+              [
+                -61.702382,
+                15.969631
+              ],
+              [
+                -61.694936,
+                15.976467
+              ],
+              [
+                -61.702016,
+                15.989895
+              ],
+              [
+                -61.710805,
+                15.997382
+              ],
+              [
+                -61.721059,
+                16.003852
+              ],
+              [
+                -61.732777,
+                16.013983
+              ],
+              [
+                -61.740061,
+                16.025824
+              ],
+              [
+                -61.743642,
+                16.037299
+              ],
+              [
+                -61.747792,
+                16.046698
+              ],
+              [
+                -61.756418,
+                16.052191
+              ],
+              [
+                -61.768625,
+                16.087633
+              ],
+              [
+                -61.769439,
+                16.16649
+              ],
+              [
+                -61.784291,
+                16.202338
+              ],
+              [
+                -61.779449,
+                16.217231
+              ],
+              [
+                -61.784006,
+                16.229315
+              ],
+              [
+                -61.7919,
+                16.240058
+              ],
+              [
+                -61.797353,
+                16.2508
+              ],
+              [
+                -61.797841,
+                16.26789
+              ],
+              [
+                -61.793853,
+                16.299058
+              ],
+              [
+                -61.797353,
+                16.312201
+              ],
+              [
+                -61.787587,
+                16.320299
+              ],
+              [
+                -61.770823,
+                16.348822
+              ],
+              [
+                -61.756418,
+                16.360663
+              ],
+              [
+                -61.737864,
+                16.365302
+              ],
+              [
+                -61.728586,
+                16.359605
+              ],
+              [
+                -61.722035,
+                16.350898
+              ],
+              [
+                -61.712026,
+                16.346381
+              ],
+              [
+                -61.687001,
+                16.341702
+              ],
+              [
+                -61.650136,
+                16.329332
+              ],
+              [
+                -61.615834,
+                16.311835
+              ],
+              [
+                -61.598744,
+                16.291693
+              ],
+              [
+                -61.612945,
+                16.285549
+              ],
+              [
+                -61.604644,
+                16.282294
+              ],
+              [
+                -61.603139,
+                16.281195
+              ],
+              [
+                -61.603017,
+                16.282213
+              ],
+              [
+                -61.598744,
+                16.285549
+              ],
+              [
+                -61.59557,
+                16.281643
+              ],
+              [
+                -61.585072,
+                16.271308
+              ],
+              [
+                -61.58023,
+                16.282131
+              ],
+              [
+                -61.570546,
+                16.28974
+              ],
+              [
+                -61.557973,
+                16.291693
+              ],
+              [
+                -61.551666,
+                16.285549
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.544179,
+                16.285386
+              ],
+              [
+                -61.544097,
+                16.285468
+              ],
+              [
+                -61.527659,
+                16.337836
+              ],
+              [
+                -61.518137,
+                16.348944
+              ],
+              [
+                -61.499664,
+                16.353217
+              ],
+              [
+                -61.49706,
+                16.356757
+              ],
+              [
+                -61.495513,
+                16.365139
+              ],
+              [
+                -61.495229,
+                16.374457
+              ],
+              [
+                -61.496246,
+                16.381171
+              ],
+              [
+                -61.500356,
+                16.385647
+              ],
+              [
+                -61.507314,
+                16.389838
+              ],
+              [
+                -61.515614,
+                16.393052
+              ],
+              [
+                -61.52359,
+                16.394761
+              ],
+              [
+                -61.529164,
+                16.430487
+              ],
+              [
+                -61.533844,
+                16.439439
+              ],
+              [
+                -61.534291,
+                16.449286
+              ],
+              [
+                -61.525624,
+                16.462307
+              ],
+              [
+                -61.509918,
+                16.480414
+              ],
+              [
+                -61.505849,
+                16.486965
+              ],
+              [
+                -61.496246,
+                16.49372
+              ],
+              [
+                -61.465321,
+                16.509833
+              ],
+              [
+                -61.462514,
+                16.513088
+              ],
+              [
+                -61.459299,
+                16.511786
+              ],
+              [
+                -61.426829,
+                16.489203
+              ],
+              [
+                -61.409413,
+                16.47248
+              ],
+              [
+                -61.397613,
+                16.45185
+              ],
+              [
+                -61.393219,
+                16.425482
+              ],
+              [
+                -61.39566,
+                16.399237
+              ],
+              [
+                -61.394154,
+                16.38935
+              ],
+              [
+                -61.386464,
+                16.373684
+              ],
+              [
+                -61.376617,
+                16.359565
+              ],
+              [
+                -61.365712,
+                16.348822
+              ],
+              [
+                -61.353139,
+                16.340277
+              ],
+              [
+                -61.338694,
+                16.332709
+              ],
+              [
+                -61.331776,
+                16.340155
+              ],
+              [
+                -61.321523,
+                16.334906
+              ],
+              [
+                -61.311838,
+                16.334174
+              ],
+              [
+                -61.301666,
+                16.33454
+              ],
+              [
+                -61.290191,
+                16.332709
+              ],
+              [
+                -61.280588,
+                16.327053
+              ],
+              [
+                -61.258901,
+                16.309231
+              ],
+              [
+                -61.253,
+                16.305406
+              ],
+              [
+                -61.242584,
+                16.30036
+              ],
+              [
+                -61.188385,
+                16.263821
+              ],
+              [
+                -61.169179,
+                16.258694
+              ],
+              [
+                -61.163564,
+                16.252997
+              ],
+              [
+                -61.174794,
+                16.243964
+              ],
+              [
+                -61.183176,
+                16.244127
+              ],
+              [
+                -61.211252,
+                16.250718
+              ],
+              [
+                -61.218861,
+                16.254218
+              ],
+              [
+                -61.234446,
+                16.258287
+              ],
+              [
+                -61.410715,
+                16.219468
+              ],
+              [
+                -61.444447,
+                16.205064
+              ],
+              [
+                -61.462148,
+                16.202338
+              ],
+              [
+                -61.483713,
+                16.205878
+              ],
+              [
+                -61.503407,
+                16.213284
+              ],
+              [
+                -61.520416,
+                16.222968
+              ],
+              [
+                -61.533844,
+                16.233385
+              ],
+              [
+                -61.544097,
+                16.245673
+              ],
+              [
+                -61.548329,
+                16.258043
+              ],
+              [
+                -61.547963,
+                16.271064
+              ],
+              [
+                -61.544179,
+                16.285386
+              ]
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -61.797841,
+        15.949164,
+        -61.163564,
+        16.513088
+      ],
+      "cross_century_feature_id": "guadeloupe-main-islands-1800"
+    },
+    {
+      "id": "GUADELOUPE_SAINT_CHARLES_FORT",
+      "stable_id": "guadeloupe-saint-charles-fort",
+      "title": "巴斯特尔 · 圣夏尔堡后期主堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "圣夏尔堡 · 英军驻守至12月",
+          "note": "4月20日科洛签署降约后，英方接管堡垒，称为马蒂尔达堡。贝尔维尔英军在10月投降后，堡内英军仍驻防至12月，随后撤离。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "圣夏尔堡 · 法国共和军驻堡",
+          "note": "法国共和军重新保有巴斯特尔城防和圣夏尔堡。"
+        }
+      ],
+      "source_urls": [
+        "https://pop.culture.gouv.fr/notice/merimee/IA97100904",
+        "https://www.culture.gouv.fr/mc/content/download/157808/file/BSR%202011%20-%202013.pdf?inLanguage=fre-FR&version=3",
+        "https://pop.culture.gouv.fr/notice/merimee/PA00105850",
+        "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://scholarshare.temple.edu/server/api/core/bitstreams/182a6688-515d-437f-8246-97a1ca3c19f7/content",
+        "https://www.erudit.org/fr/revues/bshg/1981-n47-bshg03503/1043893ar.pdf",
+        "https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/focus-thematiques-dossier-napoleon-et-le-retablissement",
+        "https://www.lameca.org/publications-numeriques/dossiers-et-articles/1802-la-rebellion-en-guadeloupe/histoire-chronologie/"
+      ],
+      "geometry_method": "Surviving principal enclosure traced along the masonry scarp visible on WGS84 World Imagery and compared to DRAC archaeology synthesis (BSR 2011–2013, p. 26) and Mérimée IA97100904. The late perimeter was developed in 1785–1794. Later buildings and modern public access outside the walls excluded.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 18,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.7225,
+              15.98974
+            ],
+            [
+              -61.72214,
+              15.989545
+            ],
+            [
+              -61.72187,
+              15.9895
+            ],
+            [
+              -61.721525,
+              15.98953
+            ],
+            [
+              -61.72145,
+              15.989425
+            ],
+            [
+              -61.721585,
+              15.98914
+            ],
+            [
+              -61.72169,
+              15.988915
+            ],
+            [
+              -61.72187,
+              15.98881
+            ],
+            [
+              -61.72202,
+              15.988645
+            ],
+            [
+              -61.722065,
+              15.988495
+            ],
+            [
+              -61.72226,
+              15.988315
+            ],
+            [
+              -61.72229,
+              15.988135
+            ],
+            [
+              -61.72247,
+              15.987985
+            ],
+            [
+              -61.722635,
+              15.987685
+            ],
+            [
+              -61.722785,
+              15.987505
+            ],
+            [
+              -61.722965,
+              15.987355
+            ],
+            [
+              -61.722965,
+              15.98719
+            ],
+            [
+              -61.7231,
+              15.98704
+            ],
+            [
+              -61.723265,
+              15.986965
+            ],
+            [
+              -61.723445,
+              15.98704
+            ],
+            [
+              -61.723625,
+              15.98704
+            ],
+            [
+              -61.723775,
+              15.987145
+            ],
+            [
+              -61.723955,
+              15.98737
+            ],
+            [
+              -61.724075,
+              15.98755
+            ],
+            [
+              -61.72421,
+              15.98776
+            ],
+            [
+              -61.72412,
+              15.98791
+            ],
+            [
+              -61.723955,
+              15.988075
+            ],
+            [
+              -61.72394,
+              15.9883
+            ],
+            [
+              -61.72367,
+              15.988465
+            ],
+            [
+              -61.72331,
+              15.9886
+            ],
+            [
+              -61.72298,
+              15.98875
+            ],
+            [
+              -61.722785,
+              15.98896
+            ],
+            [
+              -61.722725,
+              15.989275
+            ],
+            [
+              -61.72259,
+              15.989515
+            ],
+            [
+              -61.7225,
+              15.98974
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -61.72421,
+        15.986965,
+        -61.72145,
+        15.98974
+      ],
+      "cross_century_feature_id": "guadeloupe-saint-charles-fort-1800"
+    },
+    {
+      "id": "TRINIDAD_MAIN_ISLAND",
+      "stable_id": "trinidad-main-island",
+      "title": "特立尼达本岛",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1782,
+          "title": "特立尼达本岛 · 西班牙殖民时期",
+          "note": "西班牙殖民当局在圣何塞德奥鲁尼亚设驻地。岛上原住民社群继续生活；传教区和殖民聚落的范围另据地方档案定位。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1796,
+          "title": "特立尼达本岛 · 移民敕令与种植园扩张",
+          "note": "1783年西班牙颁布人口敕令，以授地和税务优惠吸引天主教移民。部分移民从邻岛带入被奴役的非洲人，纳帕里马等地的种植园随之扩张。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1797,
+          "title": "特立尼达本岛 · 2月18日全岛签降",
+          "note": "2月16日英军舰队入帕里亚湾，17日英军进入西班牙港，18日西班牙总督查孔签署全岛投降书，交出原属西班牙王室的堡垒和物资。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "特立尼达本岛 · 英军占领下的殖民政府",
+          "note": "英国占领期间任命皮克顿治理，部分西班牙法律继续施行。奴役制度延续。西班牙在1802年《亚眠和约》第四条中正式割让特立尼达。",
+          "kind": "wartime_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/2018588013/",
+        "https://greatercaribbeanmaps.org/maps/plan-of-the-isle-of-trinidad-from-actual-surveys-made-in-the-year-1797/",
+        "https://www.thegazette.co.uk/London/issue/13995/page/286/data.pdf",
+        "https://library2.nalis.gov.tt/greenstone/collect/hist3/index/assoc/HASH01bb.dir/doc.pdf",
+        "https://www.napoleon.org/en/history-of-the-two-empires/articles/peace-of-amiens/",
+        "https://www.natt.gov.tt/sites/default/files/pdfs/Our_African_Legacy_Roots_and_Routes.pdf",
+        "https://www.ttparliament.org/wp-content/uploads/2022/01/2183.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+      ],
+      "geometry_method": "Natural Earth 10m land coast already used in the 1800 successor, checked against the 1797 Laurie & Whittle survey. Main island only, excluding Tobago.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.020863,
+              10.702704
+            ],
+            [
+              -61.032704,
+              10.683539
+            ],
+            [
+              -61.036977,
+              10.624905
+            ],
+            [
+              -61.013539,
+              10.534491
+            ],
+            [
+              -61.04247,
+              10.509955
+            ],
+            [
+              -61.02302,
+              10.394843
+            ],
+            [
+              -60.998443,
+              10.355943
+            ],
+            [
+              -60.961293,
+              10.330024
+            ],
+            [
+              -60.990224,
+              10.299262
+            ],
+            [
+              -61.002797,
+              10.247545
+            ],
+            [
+              -60.996002,
+              10.138251
+            ],
+            [
+              -61.041575,
+              10.135647
+            ],
+            [
+              -61.09968,
+              10.095201
+            ],
+            [
+              -61.19164,
+              10.073798
+            ],
+            [
+              -61.253,
+              10.083645
+            ],
+            [
+              -61.338694,
+              10.069322
+            ],
+            [
+              -61.544097,
+              10.076158
+            ],
+            [
+              -61.622914,
+              10.05565
+            ],
+            [
+              -61.686187,
+              10.08161
+            ],
+            [
+              -61.793324,
+              10.084133
+            ],
+            [
+              -61.88976,
+              10.042304
+            ],
+            [
+              -61.9287,
+              10.056464
+            ],
+            [
+              -61.881947,
+              10.090481
+            ],
+            [
+              -61.838531,
+              10.09984
+            ],
+            [
+              -61.805898,
+              10.13288
+            ],
+            [
+              -61.669057,
+              10.184027
+            ],
+            [
+              -61.638783,
+              10.210517
+            ],
+            [
+              -61.639638,
+              10.240668
+            ],
+            [
+              -61.626943,
+              10.24726
+            ],
+            [
+              -61.506581,
+              10.240668
+            ],
+            [
+              -61.462148,
+              10.282213
+            ],
+            [
+              -61.487945,
+              10.430121
+            ],
+            [
+              -61.468984,
+              10.480862
+            ],
+            [
+              -61.462148,
+              10.558173
+            ],
+            [
+              -61.496246,
+              10.624905
+            ],
+            [
+              -61.488881,
+              10.631049
+            ],
+            [
+              -61.577626,
+              10.679918
+            ],
+            [
+              -61.656361,
+              10.689765
+            ],
+            [
+              -61.667592,
+              10.706773
+            ],
+            [
+              -61.602122,
+              10.747748
+            ],
+            [
+              -61.485748,
+              10.754584
+            ],
+            [
+              -61.460439,
+              10.774359
+            ],
+            [
+              -61.447865,
+              10.76203
+            ],
+            [
+              -61.447865,
+              10.775702
+            ],
+            [
+              -61.43342,
+              10.756537
+            ],
+            [
+              -61.400054,
+              10.768256
+            ],
+            [
+              -61.366567,
+              10.802965
+            ],
+            [
+              -61.180084,
+              10.797553
+            ],
+            [
+              -61.154856,
+              10.816474
+            ],
+            [
+              -61.078521,
+              10.830959
+            ],
+            [
+              -60.948842,
+              10.845282
+            ],
+            [
+              -60.907297,
+              10.837144
+            ],
+            [
+              -61.002268,
+              10.699368
+            ],
+            [
+              -61.020863,
+              10.702704
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -61.9287,
+        10.042304,
+        -60.907297,
+        10.845282
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "cross_century_feature_id": "trinidad-1800-occupation"
+    },
+    {
+      "id": "TRINIDAD_PORT_OF_SPAIN_CORE",
+      "stable_id": "trinidad-port-of-spain-core",
+      "title": "西班牙港 · 旧街区",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1796,
+          "title": "西班牙港 · 西班牙殖民首府旧街区",
+          "note": "西班牙港在1784年成为首府。1787年改移圣安娜河后，旧港街区继续扩展，海滨广场仍在旧岸线上。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1797,
+          "title": "西班牙港 · 2月17日英军进入港城",
+          "note": "英军17日登陆并于傍晚进入港城。次日的投降书要求居民在30天内宣誓，已受西班牙法律承认为自由有色人种的居民须宣誓才获条款所列的保护。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "西班牙港 · 英方殖民驻地",
+          "note": "港城成为皮克顿治下的殖民驻地。投降书对自由身份与财产的保护有宣誓条件，奴役制度继续，英国当局随后对自由有色居民施加差别规管。",
+          "kind": "administration"
+        }
+      ],
+      "source_urls": [
+        "https://journals.sta.uwi.edu/ojs/index.php/hia/article/download/1329/1207/2520",
+        "https://www.openstreetmap.org/node/1085675381",
+        "https://nationaltrust.tt/home/wp-content/uploads/2020/12/hispanic-heritage-printable.pdf",
+        "https://www.thegazette.co.uk/London/issue/13995/page/286/data.pdf",
+        "https://library2.nalis.gov.tt/greenstone/collect/hist3/index/assoc/HASH01bb.dir/doc.pdf",
+        "https://loyalist.lib.unb.ca/sites/default/files/Document%20List%20-%20CO%20318%20Vol.%2076.pdf",
+        "https://www.natt.gov.tt/sites/default/files/pdfs/Our_African_Legacy_Roots_and_Routes.pdf"
+      ],
+      "geometry_method": "Traced the solid street blocks and adjacent foreshore of University of the West Indies Fig. 1 (1757–1803 reconstruction), using 15 extant intersections in OpenStreetMap; fit RMS 5.3 m. Projected blocks excluded.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.5096392,
+              10.6547933
+            ],
+            [
+              -61.5053881,
+              10.6549552
+            ],
+            [
+              -61.5052675,
+              10.6542525
+            ],
+            [
+              -61.5052082,
+              10.653577
+            ],
+            [
+              -61.5050609,
+              10.6528017
+            ],
+            [
+              -61.5049136,
+              10.6520264
+            ],
+            [
+              -61.5047205,
+              10.6513265
+            ],
+            [
+              -61.5045762,
+              10.6506394
+            ],
+            [
+              -61.504515,
+              10.6499051
+            ],
+            [
+              -61.5046675,
+              10.649413
+            ],
+            [
+              -61.5049795,
+              10.6493422
+            ],
+            [
+              -61.5054163,
+              10.6493845
+            ],
+            [
+              -61.5059154,
+              10.6494834
+            ],
+            [
+              -61.5064337,
+              10.6494341
+            ],
+            [
+              -61.5069319,
+              10.6495036
+            ],
+            [
+              -61.5073279,
+              10.6494148
+            ],
+            [
+              -61.5077692,
+              10.6492359
+            ],
+            [
+              -61.5082649,
+              10.6492318
+            ],
+            [
+              -61.508763,
+              10.6493012
+            ],
+            [
+              -61.509148,
+              10.6492424
+            ],
+            [
+              -61.509547,
+              10.6492419
+            ],
+            [
+              -61.5096189,
+              10.6499317
+            ],
+            [
+              -61.5096072,
+              10.6506541
+            ],
+            [
+              -61.5096498,
+              10.6515513
+            ],
+            [
+              -61.5096758,
+              10.6523165
+            ],
+            [
+              -61.5097129,
+              10.6530518
+            ],
+            [
+              -61.5097279,
+              10.6538469
+            ],
+            [
+              -61.5097127,
+              10.6544663
+            ],
+            [
+              -61.5096392,
+              10.6547933
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -61.5097279,
+        10.6492318,
+        -61.504515,
+        10.6549552
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "position_uncertainty_m": 45,
+      "cross_century_feature_id": "trinidad-port-of-spain-core-1800"
+    },
+    {
+      "id": "TRINIDAD_GASPAR_GRANDE",
+      "stable_id": "trinidad-gaspar-grande",
+      "title": "查瓜拉马斯 · 加斯帕尔大岛",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1797,
+          "title": "加斯帕尔大岛 · 查瓜拉马斯湾外岛",
+          "note": "法登图把加斯帕尔大岛绘在西班牙舰队锚地西侧。国家图书馆记载岛屿曾用于港防；法登图上的拟建炮位另有文字标明。"
+        }
+      ],
+      "source_urls": [
+        "https://militarymaps.rct.uk/french-revolutionary-wars-1792-1802/map-of-chaguaramas-1797-chaguaramas-trinidad-and-tobago-10deg4121n-61deg3822w",
+        "https://commons.wikimedia.org/wiki/File:Chaguaramas,_1797_RCIN_735052.jpg",
+        "https://www.nalis.gov.tt/resources/tt-content-guide/towns-and-villages/towns-and-villages-j-r/",
+        "https://www.openstreetmap.org/way/103542163",
+        "https://www.thegazette.co.uk/London/issue/13995/page/286/data.pdf"
+      ],
+      "geometry_method": "Land-only generalized OpenStreetMap coast at Gaspar Grande, verified against Faden chart RCIN 735052. It identifies the island shown on that map, whose proposed batteries are excluded.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.6500659,
+              10.6618706
+            ],
+            [
+              -61.6495845,
+              10.6622607
+            ],
+            [
+              -61.649162,
+              10.6616755
+            ],
+            [
+              -61.6485398,
+              10.6620393
+            ],
+            [
+              -61.6486269,
+              10.6623582
+            ],
+            [
+              -61.6491634,
+              10.6625282
+            ],
+            [
+              -61.6496649,
+              10.6635167
+            ],
+            [
+              -61.648981,
+              10.6640307
+            ],
+            [
+              -61.6484459,
+              10.6648386
+            ],
+            [
+              -61.6483858,
+              10.6660903
+            ],
+            [
+              -61.6478109,
+              10.6660109
+            ],
+            [
+              -61.6476687,
+              10.6655555
+            ],
+            [
+              -61.6471189,
+              10.6650718
+            ],
+            [
+              -61.6465804,
+              10.6650712
+            ],
+            [
+              -61.6460896,
+              10.6658995
+            ],
+            [
+              -61.6460668,
+              10.6666942
+            ],
+            [
+              -61.6454445,
+              10.6673664
+            ],
+            [
+              -61.6454458,
+              10.6680807
+            ],
+            [
+              -61.6462613,
+              10.6685624
+            ],
+            [
+              -61.6465486,
+              10.6682422
+            ],
+            [
+              -61.6467946,
+              10.6682859
+            ],
+            [
+              -61.6471349,
+              10.6690237
+            ],
+            [
+              -61.6468117,
+              10.6693123
+            ],
+            [
+              -61.6471631,
+              10.6697349
+            ],
+            [
+              -61.6476505,
+              10.6698469
+            ],
+            [
+              -61.6478192,
+              10.6702565
+            ],
+            [
+              -61.6483291,
+              10.6699138
+            ],
+            [
+              -61.6485882,
+              10.6702106
+            ],
+            [
+              -61.6493663,
+              10.66983
+            ],
+            [
+              -61.6497079,
+              10.6688675
+            ],
+            [
+              -61.6501028,
+              10.6693867
+            ],
+            [
+              -61.6506915,
+              10.669658
+            ],
+            [
+              -61.6516373,
+              10.6689343
+            ],
+            [
+              -61.6531706,
+              10.6692797
+            ],
+            [
+              -61.6533609,
+              10.6690775
+            ],
+            [
+              -61.652987,
+              10.6682164
+            ],
+            [
+              -61.6536809,
+              10.6685295
+            ],
+            [
+              -61.653882,
+              10.6682082
+            ],
+            [
+              -61.6549761,
+              10.6685769
+            ],
+            [
+              -61.6553677,
+              10.6682843
+            ],
+            [
+              -61.6556129,
+              10.6683684
+            ],
+            [
+              -61.6557314,
+              10.6686971
+            ],
+            [
+              -61.6564281,
+              10.6689123
+            ],
+            [
+              -61.6572949,
+              10.6706374
+            ],
+            [
+              -61.6578233,
+              10.6706801
+            ],
+            [
+              -61.6580293,
+              10.6704774
+            ],
+            [
+              -61.6578638,
+              10.6701189
+            ],
+            [
+              -61.6580638,
+              10.6693155
+            ],
+            [
+              -61.6582543,
+              10.6692868
+            ],
+            [
+              -61.6584088,
+              10.6698617
+            ],
+            [
+              -61.6586131,
+              10.6699501
+            ],
+            [
+              -61.6587578,
+              10.6696919
+            ],
+            [
+              -61.6592008,
+              10.6699851
+            ],
+            [
+              -61.6596561,
+              10.6694357
+            ],
+            [
+              -61.6597664,
+              10.6688459
+            ],
+            [
+              -61.6599492,
+              10.6688524
+            ],
+            [
+              -61.6602159,
+              10.6699365
+            ],
+            [
+              -61.6610253,
+              10.6700535
+            ],
+            [
+              -61.6612877,
+              10.6695643
+            ],
+            [
+              -61.6611943,
+              10.6692894
+            ],
+            [
+              -61.6616408,
+              10.669634
+            ],
+            [
+              -61.6621627,
+              10.6690512
+            ],
+            [
+              -61.6616512,
+              10.6678192
+            ],
+            [
+              -61.6622447,
+              10.6678461
+            ],
+            [
+              -61.6626096,
+              10.6675941
+            ],
+            [
+              -61.6634632,
+              10.667853
+            ],
+            [
+              -61.6639616,
+              10.6673952
+            ],
+            [
+              -61.6640176,
+              10.6669036
+            ],
+            [
+              -61.6643499,
+              10.6670268
+            ],
+            [
+              -61.6649143,
+              10.6668171
+            ],
+            [
+              -61.6649468,
+              10.6661077
+            ],
+            [
+              -61.6653633,
+              10.6664672
+            ],
+            [
+              -61.6662464,
+              10.6660882
+            ],
+            [
+              -61.6662536,
+              10.6655411
+            ],
+            [
+              -61.665923,
+              10.6650759
+            ],
+            [
+              -61.6661293,
+              10.6646589
+            ],
+            [
+              -61.6658804,
+              10.66431
+            ],
+            [
+              -61.6645472,
+              10.6640108
+            ],
+            [
+              -61.6638479,
+              10.6643427
+            ],
+            [
+              -61.6621537,
+              10.664264
+            ],
+            [
+              -61.6616881,
+              10.6646015
+            ],
+            [
+              -61.6613911,
+              10.6643877
+            ],
+            [
+              -61.6601447,
+              10.6645649
+            ],
+            [
+              -61.659985,
+              10.6640324
+            ],
+            [
+              -61.6605712,
+              10.6639278
+            ],
+            [
+              -61.6606086,
+              10.6636589
+            ],
+            [
+              -61.6597675,
+              10.6631026
+            ],
+            [
+              -61.6571476,
+              10.6631581
+            ],
+            [
+              -61.6560947,
+              10.6626904
+            ],
+            [
+              -61.6556109,
+              10.6627435
+            ],
+            [
+              -61.655379,
+              10.6629094
+            ],
+            [
+              -61.6548852,
+              10.6645236
+            ],
+            [
+              -61.6539655,
+              10.6644867
+            ],
+            [
+              -61.6536856,
+              10.6642521
+            ],
+            [
+              -61.6538103,
+              10.6632663
+            ],
+            [
+              -61.6543516,
+              10.6629035
+            ],
+            [
+              -61.6550082,
+              10.6618089
+            ],
+            [
+              -61.6543455,
+              10.6612943
+            ],
+            [
+              -61.6534888,
+              10.6612866
+            ],
+            [
+              -61.6526873,
+              10.6623575
+            ],
+            [
+              -61.6522012,
+              10.6623696
+            ],
+            [
+              -61.6518603,
+              10.66156
+            ],
+            [
+              -61.6512971,
+              10.6614048
+            ],
+            [
+              -61.6512882,
+              10.6608533
+            ],
+            [
+              -61.6508116,
+              10.6605154
+            ],
+            [
+              -61.6499989,
+              10.6614739
+            ],
+            [
+              -61.6500659,
+              10.6618706
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -61.6662536,
+        10.6605154,
+        -61.6454445,
+        10.6706801
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "position_uncertainty_m": 150
     }
   ],
   "regional_lines": [
@@ -37263,6 +40801,284 @@
       "area_sqkm": null,
       "exclude_from_territorial_area_totals": true,
       "geometry_precision": "source_backed_historical_line"
+    },
+    {
+      "id": "GUADELOUPE_SAINT_CHARLES_1759_LINE",
+      "stable_id": "guadeloupe-saint-charles-1759-line",
+      "title": "巴斯特尔 · 圣夏尔堡七年战争旧堡线",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1728,
+          "end_year": 1758,
+          "title": "圣夏尔堡旧堡线 · 法方增筑棱堡",
+          "note": "自1728年前后，法方在北端增筑巴斯特尔棱堡，并整修东翼。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1759,
+          "title": "圣夏尔堡旧堡线 · 1月23日英军入堡",
+          "note": "英舰炮击后，法军撤离圣夏尔堡。英军攻入，并把堡名改为皇家堡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1762,
+          "title": "皇家堡旧堡线 · 英军继续驻堡",
+          "note": "英国驻军使用既有堡垒，圣夏尔堡由英国改称皇家堡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "圣夏尔堡旧堡线 · 法方实际接收",
+          "note": "1763年7月6日，法国总督布尔拉马克重新接收圣夏尔堡。"
+        }
+      ],
+      "source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-basseterre-1759-basse-terre-guadeloupe-west-indies-15deg5954n-61deg4331w",
+        "https://www.argomaps.org/maps/commonwealth:q524n536h/",
+        "https://pop.culture.gouv.fr/notice/merimee/IA97100904",
+        "https://www.culture.gouv.fr/mc/content/download/157808/file/BSR%202011%20-%202013.pdf?inLanguage=fre-FR&version=3",
+        "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "https://clements.umich.edu/exhibit/1759-britains-year-of-victories/case-13/",
+        "https://www.erudit.org/fr/revues/bshg/1971-n15-16-bshg03540/1044152ar.pdf"
+      ],
+      "geometry_method": "Rycaut 1759 Fort Royal inset: bastion and visible east scarp, aligned with two inland bastion corners and the south-side shared trace identified in the surviving work. Old moat and west slope are excluded where the early line was not established. Modern control positions from geolocated World Imagery and DRAC comparative phasing. Rectification away from the north-end controls approximate.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 55,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -61.722794,
+            15.989376
+          ],
+          [
+            -61.722482,
+            15.989749
+          ],
+          [
+            -61.722222,
+            15.989588
+          ],
+          [
+            -61.722189,
+            15.989436
+          ],
+          [
+            -61.721866,
+            15.989374
+          ],
+          [
+            -61.721781,
+            15.989495
+          ],
+          [
+            -61.721469,
+            15.989506
+          ],
+          [
+            -61.721461,
+            15.989403
+          ],
+          [
+            -61.721376,
+            15.989353
+          ],
+          [
+            -61.72161,
+            15.989133
+          ],
+          [
+            -61.7219,
+            15.988873
+          ],
+          [
+            -61.722193,
+            15.988513
+          ],
+          [
+            -61.722368,
+            15.988313
+          ],
+          [
+            -61.722557,
+            15.988228
+          ],
+          [
+            -61.72257,
+            15.988082
+          ],
+          [
+            -61.722808,
+            15.987663
+          ],
+          [
+            -61.722874,
+            15.987555
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TRINIDAD_ST_ANNS_DIVERSION",
+      "stable_id": "trinidad-st-anns-diversion",
+      "title": "西班牙港 · 圣安娜河改道段",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1799,
+          "title": "西班牙港 · 1787年开挖的圣安娜河东渠",
+          "note": "查孔任内把原来穿过城西一带的河道引向拉文蒂耶山麓。虚线勾出旧街区东侧的改道段。"
+        }
+      ],
+      "source_urls": [
+        "https://journals.sta.uwi.edu/ojs/index.php/hia/article/download/1329/1207/2520",
+        "https://academic.oup.com/gji/article/222/3/1936/5850756",
+        "https://citizensforconservationtt.org/home/sites/fort-san-andres-port-of-spain/",
+        "https://www.openstreetmap.org/node/1085675381"
+      ],
+      "geometry_method": "Traced the diverted urban reach from the eastern channel on UWI Figure 1, using the same fifteen road intersection anchors as the adjacent town (RMS 5.3 m).",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -61.5073666,
+            10.6558818
+          ],
+          [
+            -61.5074048,
+            10.6555857
+          ],
+          [
+            -61.507266,
+            10.6554141
+          ],
+          [
+            -61.5068172,
+            10.6553723
+          ],
+          [
+            -61.5064141,
+            10.655255
+          ],
+          [
+            -61.5061047,
+            10.6550458
+          ],
+          [
+            -61.5058406,
+            10.6547464
+          ],
+          [
+            -61.5056474,
+            10.6544002
+          ],
+          [
+            -61.505498,
+            10.6539196
+          ],
+          [
+            -61.5053854,
+            10.6534524
+          ],
+          [
+            -61.505233,
+            10.6528835
+          ],
+          [
+            -61.5050826,
+            10.6523736
+          ],
+          [
+            -61.5049308,
+            10.6518194
+          ],
+          [
+            -61.5047688,
+            10.6513246
+          ],
+          [
+            -61.5046542,
+            10.6507986
+          ],
+          [
+            -61.5046256,
+            10.6503134
+          ],
+          [
+            -61.5046247,
+            10.6499303
+          ],
+          [
+            -61.5047566,
+            10.6495422
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 65,
+      "cross_century_feature_id": "trinidad-st-anns-diversion-1800"
+    },
+    {
+      "id": "TRINIDAD_CHAGUARAMAS_ANCHORAGE",
+      "stable_id": "trinidad-chaguaramas-anchorage",
+      "title": "查瓜拉马斯湾 · 西班牙舰队锚泊列",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1797,
+          "end_year": 1797,
+          "title": "查瓜拉马斯湾 · 2月16日西班牙舰队锚泊",
+          "note": "法登图标出2月16日湾内的西班牙舰列。17日西班牙海军焚毁多艘军舰，英国海军截获其中一艘。"
+        }
+      ],
+      "source_urls": [
+        "https://militarymaps.rct.uk/french-revolutionary-wars-1792-1802/map-of-chaguaramas-1797-chaguaramas-trinidad-and-tobago-10deg4121n-61deg3822w",
+        "https://commons.wikimedia.org/wiki/File:Chaguaramas,_1797_RCIN_735052.jpg",
+        "https://www.thegazette.co.uk/London/issue/13995/page/286/data.pdf"
+      ],
+      "geometry_method": "Estimated alignment from four ship symbols in Faden RCIN 735052, mapped using eight coastal controls (RMS 227.5 m) on the 1250 px preview. This is a dated anchorage, without a sailed route.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -61.642837,
+            10.6693926
+          ],
+          [
+            -61.6415447,
+            10.6704295
+          ],
+          [
+            -61.6402668,
+            10.6713888
+          ],
+          [
+            -61.6389408,
+            10.6721837
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 400
     }
   ]
 }
