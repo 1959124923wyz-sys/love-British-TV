@@ -935,7 +935,7 @@ async function verify() {
 
   const tolyNullah = [22.54443, 88.32625];
   await setView([...tolyNullah, 16]);
-  const clickDatedLine = async selector => {
+  const clickDatedLine = async (selector, origin) => {
    const point = await page.waitForFunction(({ selector, origin }) => {
     const map = window.__historicOverlapHost.map;
     const center = map.latLngToContainerPoint(origin);
@@ -949,7 +949,7 @@ async function verify() {
      }
     }
     return null;
-   }, { selector, origin: tolyNullah }, { timeout: 8000 }).then(handle => handle.jsonValue())
+   }, { selector, origin }, { timeout: 8000 }).then(handle => handle.jsonValue())
     .catch(async error => {
      const details = await page.locator(selector).evaluateAll(paths => paths.map(path => {
       const matrix = path.getScreenCTM();
@@ -966,16 +966,16 @@ async function verify() {
    await page.mouse.click(...point);
   };
   await jump(1793);
-  assert(!(await atlantic()).activeRegionalLines.length);
+  assert(!(await atlantic()).activeRegionalLines.includes('CALCUTTA_1794_TOLLYS_NULLAH_BOUNDARY'));
   await jump(1799);
   assert((await atlantic()).activeRegionalLines.includes('CALCUTTA_1794_TOLLYS_NULLAH_BOUNDARY'));
-  await clickDatedLine('.atlas-18c-boundary-line');
+  await clickDatedLine('.atlas-18c-boundary-line', tolyNullah);
   await dossierTitle.filter({ hasText: '1794 年公告划定的南界' }).waitFor();
   await page.locator('#nextYear').click();
   await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
   await setView([...tolyNullah, 16]);
   assert((await page.locator('.atlas-19c-frontier[stroke-dasharray="7 6"]').count()) >= 2);
-  await clickDatedLine('.atlas-19c-frontier-hit');
+  await clickDatedLine('.atlas-19c-frontier-hit', tolyNullah);
   await dossierTitle.filter({ hasText: '沿用 1794 年的法定南界' }).waitFor();
 
   const newWilliam = [22.557465, 88.337476];
@@ -985,6 +985,45 @@ async function verify() {
   await setView([...madrasFort, 16]);
   await clickAreaAt(...madrasFort);
   await page.locator('[data-historic-overlap-id$=":madras-fort-st-george-1800"]').waitFor();
+
+  // The legal transfer in 1783 and the British garrison’s withdrawal in 1796 are separate.
+  const lernoult = [42.33013, -83.048721];
+  await setView([...lernoult, 17]);
+  await jump(1774);
+  assert((await atlantic()).activeZones.includes('QUEBEC_1763'));
+  assert(!(await atlantic()).activeZones.includes('QUEBEC_1774'));
+  await jump(1775);
+  assert((await atlantic()).activeZones.includes('QUEBEC_1774'));
+  await jump(1783);
+  assert((await atlantic()).activeRegionalZones.includes('QUEBEC_POST_PARIS'));
+  assert(!(await atlantic()).activeZones.includes('QUEBEC_1774'));
+  await clickAreaAt(...lernoult);
+  const lernoult18 = page.locator('[data-overlap-id="18c:DETROIT_FORT_LERNOULT"]');
+  await lernoult18.waitFor();
+  assert.match(await lernoult18.textContent(), /和约后英军仍驻/);
+  await jump(1796);
+  await clickAreaAt(...lernoult);
+  await lernoult18.waitFor();
+  assert.match(await lernoult18.textContent(), /7月11日美方接收/);
+  await jump(1799);
+  await page.locator('#nextYear').click();
+  await setView([...lernoult, 17]);
+  await clickAreaAt(...lernoult);
+  await page.locator('[data-historic-overlap-id$=":detroit-fort-lernoult-1800"]').waitFor();
+
+  const capeChidley = [60.3735, -64.4303];
+  await jump(1799);
+  await setView([...capeChidley, 11]);
+  assert((await atlantic()).activeRegionalLines.includes('LABRADOR_OUTER_COAST'));
+  await clickDatedLine('.atlas-18c-boundary-line', capeChidley);
+  await dossierTitle.filter({ hasText: '布朗萨布隆以东 · 下加拿大管辖' }).waitFor();
+  await page.locator('#nextYear').click();
+  await setView([...capeChidley, 11]);
+  await clickDatedLine('.atlas-19c-frontier-hit', capeChidley);
+  await dossierTitle.filter({ hasText: '布朗萨布隆以东 · 下加拿大管辖' }).waitFor();
+  await jump(1809);
+  await clickDatedLine('.atlas-19c-frontier-hit', capeChidley);
+  await dossierTitle.filter({ hasText: '布朗萨布隆以东 · 纽芬兰管辖' }).waitFor();
 
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&

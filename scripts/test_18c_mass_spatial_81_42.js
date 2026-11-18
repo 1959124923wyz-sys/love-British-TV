@@ -45,8 +45,8 @@ const z=id=>data.zones.find(x=>x.id===id);
 const s=id=>data.sites.find(x=>x.id===id);
 const isOn=(o,y)=>o.periods.some(p=>p.start_year<=y&&y<=p.end_year);
 for(const [id,y,expected] of [
- ['QUEBEC_1763',1773,true],['QUEBEC_1763',1774,false],
- ['QUEBEC_1774',1774,true],['QUEBEC_1774',1791,false],['UPPER_CANADA',1791,true],
+ ['QUEBEC_1763',1774,true],['QUEBEC_1763',1775,false],
+ ['QUEBEC_1774',1774,false],['QUEBEC_1774',1775,true],['QUEBEC_1774',1783,false],['UPPER_CANADA',1791,true],
  ['BENGAL_DIWANI',1764,false],['BENGAL_DIWANI',1765,true],
  ['GRENADA',1778,true],['GRENADA',1779,false],['GRENADA',1783,true],
  ['SAVANNAH_GARRISON',1779,true],['SAVANNAH_GARRISON',1782,false],
@@ -58,7 +58,7 @@ for(const [id,y,expected] of [
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
 const successors=[2,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features);
-for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISED']){
+for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISED','UPPER_CANADA','LOWER_CANADA']){
  const row=z(id),successor=successors.find(f=>f.id===row.cross_century_feature_id);
  a.equal(successor.properties.start_year,1800);
  a.deepEqual(row.geometry,successor.geometry);
@@ -171,7 +171,8 @@ for (const id of ['MADRAS_ST_GEORGE_EARLY','MADRAS_ST_GEORGE_SIEGE','MADRAS_ST_G
 for(const id of ['BENGAL_DIWANI','BIHAR_DIWANI','ORISSA_DIWANI','CALCUTTA_24_PARGANAS'])
  a(atlantic(z(id).superseded_by),id);
 for(const row of data.regional_lines){
- a.equal(row.geometry.type,'LineString');
+ a(['LineString','MultiLineString'].includes(row.geometry.type));
+ if(!row.cross_century_feature_id)continue;
  const next=successors.find(f=>f.id===row.cross_century_feature_id);
  a.equal(next.properties.geometry_precision,'source_backed_historical_line');
  a.equal(next.properties.stable_id,row.stable_id);
@@ -182,6 +183,30 @@ a.equal(blackTown.properties.end_year,1858);
 a.equal(blackTownAfter.properties.start_year,1859);
 a.equal(blackTown.properties.stable_id,blackTownAfter.properties.stable_id);
 a.equal(blackTownAfter.geometry.type,'Point');
+
+const quebecAfterParis=atlantic('QUEBEC_POST_PARIS');
+a(!isOn(quebecAfterParis,1782)&&isOn(quebecAfterParis,1783)&&!isOn(quebecAfterParis,1791));
+a.equal(z('QUEBEC_1763').stable_id,quebecAfterParis.stable_id);
+a.equal(z('QUEBEC_1774').stable_id,quebecAfterParis.stable_id);
+a.match(stageAt('DETROIT_FORT_LERNOULT',1783).title,/英军仍驻/);
+a.match(stageAt('DETROIT_FORT_LERNOULT',1796).title,/7月11日/);
+a.match(stageAt('MACKINAC_ISLAND_FORT',1796).title,/9月1日/);
+a(!isOn(atlantic('LABRADOR_YORK_FORT'),1775));
+a.match(stageAt('LABRADOR_YORK_FORT_REMNANT',1775).title,/撤去驻军/);
+const late=id=>successors.find(f=>f.id===id);
+const anticosti=z=>late(z).properties;
+a.equal(anticosti('anticosti-island-lower-canada-1800').end_year,1808);
+a.equal(anticosti('newfoundland-anticosti-1809').end_year,1824);
+a.equal(anticosti('anticosti-island-lower-canada-1825').start_year,1825);
+a.deepEqual(late('newfoundland-anticosti-1809').geometry,late('anticosti-island-lower-canada-1825').geometry);
+const block=late('fort-st-joseph-blockhouse-1800'),palisade=late('fort-st-joseph-palisade-1802');
+a.equal(block.properties.end_year,1801);
+a.equal(palisade.properties.start_year,1802);
+a.equal(block.properties.stable_id,palisade.properties.stable_id);
+a.notDeepEqual(block.geometry,palisade.geometry);
+const shore=late('labrador-lower-north-shore-1800');
+a.deepEqual(shore.properties.year_stages.map(p=>p.start_year),[1800,1809,1825]);
+a.equal(atlantic('LABRADOR_OUTER_COAST').geometry.coordinates.length,2);
 
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
