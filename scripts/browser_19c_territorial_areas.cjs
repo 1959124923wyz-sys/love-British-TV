@@ -1188,10 +1188,9 @@ async function verify() {
   const penangFort = [5.420264, 100.344261];
   await setView([...penangFort, 17]);
   await clickAreaAt(...penangFort);
-  const penangTreaty = page.locator('[data-overlap-id="18c:PENANG_CORNWALLIS_1786_POST"]');
+  const penangTreaty = page.locator('#dossierBody h2').filter({ hasText: '吉打与东印度公司协议' });
   await penangTreaty.waitFor();
-  await penangTreaty.locator('.atlas-18c-overlap-title').hover();
-  assert.match(await penangTreaty.textContent(), /吉打与东印度公司协议/);
+  assert.match(await page.locator('#dossierBody').textContent(), /5月1日.*被奴役者.*债务人/);
   await jump(1799);
   await clickAreaAt(...penangFort);
   const penangOldFort = page.locator('[data-overlap-id="18c:PENANG_CORNWALLIS_OLD_STOCKADE"]');
