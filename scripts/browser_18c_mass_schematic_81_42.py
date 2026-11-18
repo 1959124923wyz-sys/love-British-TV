@@ -45,10 +45,11 @@ try:
  (1788,['NSW_CROWN_CLAIM','SYDNEY_COVE','NORFOLK_SETTLEMENT'],['PORT_EGMONT'],'1788-pacific'),
  (1791,['UPPER_CANADA','LOWER_CANADA','NS_REVISED'],['QUEBEC_1774'],'1791-canada'),
  (1789,[],[],'1789-kandy-and-dutch-coast'),
+ (1792,[],[],'1792-mysore-partition'),
  (1795,[],['CEYLON_JAFFNA','CEYLON_TRINCOMALEE'],'1795-ceylon-first-surrenders'),
  (1796,['CORSICA_1794'],['CEYLON_COLOMBO','CEYLON_GALLE','TRINIDAD_1797'],'1796-indian-ocean'),
  (1797,[],['ELBA_1796','TRINIDAD_1797'],'1797-caribbean'),
- (1799,['MYSORE_1799_PARTITION','SERINGAPATAM_ZONE','PENANG_ISLAND'],['CORSICA_1794'],'1799-asia'),
+ (1799,['PENANG_ISLAND'],['CORSICA_1794','MYSORE_1799_PARTITION','SERINGAPATAM_ZONE','HYDERABAD_INFLUENCE'],'1799-asia'),
  ]
  for y,show,hide,name in cases:
   set_year(y)
@@ -68,6 +69,13 @@ try:
   if y==1796:
    assert {'CEYLON_BRITISH_MARITIME_ESTATES','CEYLON_KANDY_INLAND_KINGDOM','CEYLON_COLOMBO_DUTCH_FORT','CEYLON_GALLE_FORTIFIED_TOWN'}.issubset(a['activeRegionalZones']),a
    assert {'CEYLON_DUTCH_COAST_1766','CEYLON_KANDY_1766'}.isdisjoint(a['activeRegionalZones']),a
+  if y==1792:
+   assert {'MYSORE_TIPU_RETAINED_1792','MYSORE_COMPANY_BARAMAHAL_1792','MYSORE_NIZAM_1792','MYSORE_MARATHA_1792','SERINGAPATAM_WALLED_CITY_1792'}.issubset(a['activeRegionalZones']),a
+   assert 'MYSORE_WODEYAR_1799' not in a['activeRegionalZones'],a
+  if y==1799:
+   assert {'MYSORE_WODEYAR_1799','MYSORE_PESHWA_PROPOSED_1799','MYSORE_NIZAM_1799','SERINGAPATAM_WALLED_CITY_1799','SERINGAPATAM_ISLAND'}.issubset(a['activeRegionalZones']),a
+   assert {'MYSORE_TIPU_RETAINED_1792','SERINGAPATAM_WALLED_CITY_1792'}.isdisjoint(a['activeRegionalZones']),a
+   assert 'SERINGAPATAM_WEST_WALL_BREACH' in a['activeRegionalLines'],a
   if y==1797:
    assert {'TRINIDAD_MAIN_ISLAND','TRINIDAD_PORT_OF_SPAIN_CORE'}.issubset(a['activeRegionalZones']),a
    assert 'TRINIDAD_CHAGUARAMAS_ANCHORAGE' in a['activeRegionalLines'],a
@@ -94,7 +102,7 @@ try:
  d.get('http://127.0.0.1:8765/?year=1762')
  wait.until(lambda x:x.find_element(By.ID,'bigYear').text=='1762')
  wait.until(lambda _: (js('return window.eighteenthMassSpatial?.getAudit()?.loaded') is True))
- print('PASS 18C batch35 81 supplementary polygon areas,42 city cores, 15 year-sample dates, legend control, dossier, public availability and 16C regression')
+ print('PASS 18C batch35 81 supplementary polygon areas,42 city cores, 16 year-sample dates, legend control, dossier, public availability and 16C regression')
 except Exception:
  shot('FAILED')
  raise
