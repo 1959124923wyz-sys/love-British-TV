@@ -763,6 +763,52 @@ async function verify() {
   await jump(1828);
   assert(!(await ids()).includes('fort-george-niagara-reduced'));
 
+  // Saint Lawrence: distinct dated plans on the same island, and cities changing hands.
+  for (const { point, stages } of [
+   { point: [46.8119093, -71.2084106], stages: [[1759, 'QUEBEC_UPPER_TOWN_CORE', /9月18日英军接收/],
+    [1760, 'QUEBEC_UPPER_TOWN_CORE', /圣福瓦战败后据城/], [1775, 'QUEBEC_UPPER_TOWN_CORE', /大陆军攻城失败/]] },
+   { point: [45.5059843, -73.5551906], stages: [[1760, 'MONTREAL_STONE_ENCEINTE', /9月8日英军接收/],
+    [1775, 'MONTREAL_STONE_ENCEINTE', /大陆军进城/], [1776, 'MONTREAL_STONE_ENCEINTE', /6月15日英军复入/]] },
+   { point: [44.74099, -75.44107], stages: [[1760, 'FORT_LEVIS_FRENCH_WORKS', /8月25日法军投降/],
+    [1761, 'FORT_WILLIAM_AUGUSTUS_WORKS', /英军重建后驻守/]] },
+   { point: [46.3434895, -72.5369530], stages: [[1776, 'TROIS_RIVIERES_RECOLLETS_COMPOUND', /修会离开，英方接收/],
+    [1799, 'TROIS_RIVIERES_RECOLLETS_COMPOUND', /改作法院与监狱/]] },
+  ]) {
+   await setView([...point, 17]);
+   for (const [year, id, title] of stages) {
+    await jump(year);
+    assert((await atlantic()).activeRegionalZones.includes(id));
+    await clickAreaAt(...point);
+    const record = page.locator('[data-overlap-id="18c:' + id + '"]');
+    await record.waitFor();
+    assert.match(await record.textContent(), title);
+   }
+  }
+  const threeRivers = [46.3434895, -72.5369530];
+  await jump(1800);
+  await setView([...threeRivers, 17]);
+  await clickAreaAt(...threeRivers);
+  const convent = page.locator('[data-historic-overlap-id$=":trois-rivieres-recollets-compound-1800"]');
+  await convent.waitFor();
+  assert.match(await convent.textContent(), /法院与监狱延续/);
+  const cityWalls = [45.5059843, -73.5551906];
+  await jump(1804);
+  await setView([...cityWalls, 16]);
+  await clickAreaAt(...cityWalls);
+  const montrealWall = page.locator('[data-historic-overlap-id$=":montreal-stone-enceinte-1800"]');
+  await montrealWall.waitFor();
+  assert.match(await montrealWall.textContent(), /石城墙分段拆除/);
+  await jump(1818);
+  assert(!(await ids()).includes('montreal-stone-enceinte-1800'));
+  assert(!(await ids()).includes('sainte-helene-imperial-depot'));
+  await jump(1825);
+  const arsenal = [45.5195182, -73.5365442];
+  await setView([...arsenal, 17]);
+  await clickAreaAt(...arsenal);
+  const depot = page.locator('[data-historic-overlap-id$=":sainte-helene-imperial-depot"]');
+  await depot.waitFor();
+  assert.match(await depot.textContent(), /英军军械库/);
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
