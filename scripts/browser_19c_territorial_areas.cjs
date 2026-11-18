@@ -949,7 +949,20 @@ async function verify() {
      }
     }
     return null;
-   }, { selector, origin: tolyNullah }, { timeout: 8000 }).then(handle => handle.jsonValue());
+   }, { selector, origin: tolyNullah }, { timeout: 8000 }).then(handle => handle.jsonValue())
+    .catch(async error => {
+     const details = await page.locator(selector).evaluateAll(paths => paths.map(path => {
+      const matrix = path.getScreenCTM();
+      const length = path.getTotalLength();
+      const samples = [.25, .5, .75].map(fraction => {
+       const {x, y} = path.getPointAtLength(length * fraction).matrixTransform(matrix);
+       const hit = document.elementFromPoint(x, y);
+       return {x, y, hit: hit?.getAttribute('class'), tag: hit?.tagName};
+      });
+      return {d: path.getAttribute('d')?.slice(0, 250), events: getComputedStyle(path).pointerEvents, length, samples};
+     }));
+     throw new Error('Cannot click ' + selector + ' ' + JSON.stringify(details), { cause: error });
+    });
    await page.mouse.click(...point);
   };
   await jump(1793);

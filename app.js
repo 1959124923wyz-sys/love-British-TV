@@ -95,6 +95,9 @@ const voyageRenderer=L.svg({pane:'voyagePane'});
 map.createPane('territoryPane');
 map.getPane('territoryPane').style.zIndex='455';
 const territoryRenderer=L.svg({pane:'territoryPane'});
+map.createPane('nineteenthBoundaryPane');
+map.getPane('nineteenthBoundaryPane').style.zIndex='474';
+const nineteenthBoundaryRenderer=L.svg({pane:'nineteenthBoundaryPane'});
 // 17C cited region readers sit below events and above the base map, separate
 // from exact control geometry; polygons are only schematic orientation aids.
 map.createPane('seventeenthStudiesPane');
@@ -1269,10 +1272,10 @@ function renderNineteenthSpatial(){
   }
   if(feature.geometry.type==='LineString'){
    const points=feature.geometry.coordinates.map(([lon,lat])=>[lat,lon]);
-   const style={pane:'warReachPane',renderer:warReachRenderer,color,bubblingMouseEvents:false};
+   const style={pane:'nineteenthBoundaryPane',renderer:nineteenthBoundaryRenderer,color,bubblingMouseEvents:false};
    L.polyline(points,{...style,weight:3,dashArray:'7 6',interactive:false,
     className:'atlas-19c-frontier'}).addTo(group);
-   L.polyline(points,{...style,weight:10,opacity:0,className:'atlas-19c-frontier-hit'})
+   L.polyline(points,{...style,weight:10,opacity:.001,className:'atlas-19c-frontier-hit'})
     .bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
      pane:'eventTooltipPane',className:'atlas-hover',direction:'auto'})
     .on('click',e=>{
