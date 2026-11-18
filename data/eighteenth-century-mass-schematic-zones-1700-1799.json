@@ -5665,7 +5665,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "PENANG_MAIN_ISLAND_HISTORY"
     },
     {
       "id": "MANILA_PORT",
@@ -22195,6 +22196,376 @@
         ]
       },
       "cross_century_feature_id": "seringapatam-ganjam-town-1800"
+    },
+    {
+      "id": "PENANG_GEORGE_TOWN_PORT_EARLY",
+      "stable_id": "penang-george-town-port-early",
+      "title": "乔治市 · 东印度公司早期港口",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1786,
+          "title": "乔治市 · 东印度公司升旗建站",
+          "note": "8月11日，莱特代表东印度公司在海岬升旗。殖民方搭建木围与补给驻地，港务区从海边扩展。"
+        },
+        {
+          "start_year": 1787,
+          "end_year": 1797,
+          "title": "乔治市 · 港口经营与土地分配",
+          "note": "公司经营转口贸易，招徕商人和移民。莱特向来者提供开垦和取得土地的机会，港内逐步形成商铺和仓储街区。"
+        }
+      ],
+      "source_urls": [
+        "https://penangport.gov.my/en/contact-us/public/port-history",
+        "https://ejournal.usm.my/kajh/article/view/kajh_vol28-no-2-2021_8",
+        "https://whc.unesco.org/document/105988"
+      ],
+      "geometry_method": "Named George Town harbour core, within the identified Light Street–Beach Street–Chulia Street–Pitt Street district.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 160,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3427,
+          5.4192
+        ]
+      }
+    },
+    {
+      "id": "PENANG_CORNWALLIS_1786_POST",
+      "stable_id": "penang-cornwallis-1786-post",
+      "title": "康华丽堡 · 木围驻地与早期条约",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1790,
+          "title": "康华丽堡 · 公司木围驻地",
+          "note": "莱特在海岬建以妮蓬棕木为材料的围栅，保护港端驻地及补给。"
+        },
+        {
+          "start_year": 1791,
+          "end_year": 1791,
+          "title": "康华丽堡 · 吉打与东印度公司协议",
+          "note": "英译副本的落款称1791年5月1日在康华丽堡签署。第三条要求互相交还逃亡的被奴役者，第四条要求交出未还债逃亡的债务人。"
+        },
+        {
+          "start_year": 1792,
+          "end_year": 1797,
+          "title": "康华丽堡 · 继续驻军",
+          "note": "港口驻军继续使用海岬工事，乔治市的行政和商贸区向西、南扩展。"
+        }
+      ],
+      "source_urls": [
+        "https://penangport.gov.my/en/contact-us/public/port-history",
+        "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf",
+        "https://pht.org.my/pht-site-visit-fort-cornwallis/",
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Map_to_illustrate_the_Siamese_question_%28IA_apf3019.0001.001.umich.edu%29.pdf"
+      ],
+      "geometry_method": "Fort promontory named site; the original 1786 stockade is represented by a point before the late-1790s plan.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.344261,
+          5.420264
+        ]
+      }
+    },
+    {
+      "id": "PENANG_MALAY_OLD_MOSQUE",
+      "stable_id": "penang-malay-old-mosque",
+      "title": "乔治市 · 晚十八世纪马来清真寺与墓地",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "乔治市南部 · 波帕姆图所见清真寺",
+          "note": "晚十八世纪地图在马来聚落附近画有清真寺和墓地，是当时的社区设施。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://whc.unesco.org/document/105988"
+      ],
+      "geometry_method": "Named mosque and tomb west of the Malay Town block on Popham’s chart; the 1808 Acheen Street Mosque was a later building.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 240,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3364028,
+          5.4164929
+        ]
+      }
+    },
+    {
+      "id": "PENANG_LIGHT_OLD_GOVERNMENT_HOUSE",
+      "stable_id": "penang-light-old-government-house",
+      "title": "莱特街 · 莱特与罗泽尔斯宅邸",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1789,
+          "end_year": 1794,
+          "title": "莱特街宅邸 · 莱特与玛蒂娜·罗泽尔斯",
+          "note": "约1789年起莱特在其地段建砖造宅楼。他与玛蒂娜·罗泽尔斯曾住在该片地段。1794年莱特去世。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "莱特街宅邸 · 所有权与公司租用",
+          "note": "乔治市遗产档案记录，地产后来归詹姆斯·斯科特，斯科特出租楼房供公司行政使用。"
+        }
+      ],
+      "source_urls": [
+        "https://gtwhi.com.my/wp-content/uploads/2019/05/A-Guide-to-George-Town_s-Historic-Commercial-and-Civic-Precincts.pdf",
+        "https://whc.unesco.org/document/105988",
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg"
+      ],
+      "geometry_method": "Surviving historic house within Convent Light Street, positioned using the heritage precinct guide, not the whole seven-acre estate.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 85,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.33915,
+          5.4221
+        ]
+      },
+      "cross_century_feature_id": "penang-light-old-government-house-1800"
+    },
+    {
+      "id": "PENANG_PROTESTANT_BURYING_GROUND",
+      "stable_id": "penang-protestant-burying-ground",
+      "title": "乔治市 · 诺瑟姆路旧墓地",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1793,
+          "title": "乔治市旧墓地 · 早期入葬",
+          "note": "档案记威廉·默里于1787年下葬。墓地位于当时镇区以西，早期接纳新教和天主教居民。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "乔治市旧墓地 · 莱特等人入葬",
+          "note": "弗朗西斯·莱特于1794年去世后葬在这里。波帕姆图在旧城西侧标有墓地。"
+        }
+      ],
+      "source_urls": [
+        "https://gtwhi.com.my/wp-content/uploads/2019/05/George-Town_s-Northam-Road-Protestant-Cemetery-English.pdf",
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg"
+      ],
+      "geometry_method": "Northam Road extant burial-ground core, OSM way 263442397, checked against GTWHI cemetery history and Popham's marked site.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 55,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.333558,
+          5.4226841
+        ]
+      },
+      "cross_century_feature_id": "penang-protestant-burying-ground-1800"
+    },
+    {
+      "id": "PENANG_EARLY_PORTUGUESE_CHURCH",
+      "stable_id": "penang-early-portuguese-church",
+      "title": "乔治市教堂街 · 早期葡裔天主教堂",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1797,
+          "title": "乔治市葡裔天主教会 · 自吉打迁来",
+          "note": "部分吉打天主教社群渡海定居，嘉诺神父建立早期教会，社群在港城逐步形成。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "乔治市教堂街 · 旧图中的葡裔教堂",
+          "note": "波帕姆图标有葡裔教堂。社群成员的家族和商业联系延伸到吉打、暹罗及海峡两岸。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://thesiamsociety.org/wp-content/uploads/2012/04/JSS_100_0s_Khoo_ExploringSharedHistoryPreservingSharedHeritagePenangsLinksToASiamesePast.pdf",
+        "https://penangstory.net.my/mino-content-paperanthony.html"
+      ],
+      "geometry_method": "Named Portuguese Church on Popham’s published plan and Church Street association in the community history. Later Farquhar Street church is separate.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 220,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3413666,
+          5.4175691
+        ]
+      },
+      "cross_century_feature_id": "penang-early-portuguese-church-1800"
+    },
+    {
+      "id": "PENANG_EARLY_HOSPITAL",
+      "stable_id": "penang-early-hospital",
+      "title": "乔治市 · 康华丽堡西早期医院",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "乔治市 · 康华丽堡西医院",
+          "note": "波帕姆地图标明医院在堡西，靠近港端营地。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7"
+      ],
+      "geometry_method": "Point at named hospital (b in the annotated contemporary plan) west of the cantonments and fort.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 190,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3422389,
+          5.4197795
+        ]
+      }
+    },
+    {
+      "id": "PENANG_EARLY_CUSTOM_HOUSE",
+      "stable_id": "penang-early-custom-house",
+      "title": "乔治市 · 早期港口海关屋",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "乔治市 · 海岸边的海关屋",
+          "note": "镇图在堡东南的海边标出海关屋。公司在港内处理船只、通商及进口事务。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://penangport.gov.my/en/contact-us/public/port-history"
+      ],
+      "geometry_method": "Position of the Custom House near the old shoreline, independent of reclaimed modern port land and later customs buildings.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 170,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3435527,
+          5.417781
+        ]
+      }
+    },
+    {
+      "id": "PENANG_PRAI_KEDAH_SHORE",
+      "stable_id": "penang-prai-kedah-shore",
+      "title": "北赖河口 · 吉打海岸与东印度公司行动",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1786,
+          "end_year": 1789,
+          "title": "北赖 · 吉打苏丹国海峡对岸",
+          "note": "槟城设驻后，对岸北赖仍由吉打治理。槟岛的供给和贸易与这段海岸相连。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1790,
+          "title": "北赖 · 吉打集结反攻兵力",
+          "note": "苏丹阿卜杜拉试图迫使公司撤离槟岛。地方军力和战船在北赖一带集结。"
+        },
+        {
+          "start_year": 1791,
+          "end_year": 1791,
+          "title": "北赖 · 东印度公司先行出击",
+          "note": "莱特调兵在海峡对岸发动夜袭，击散集结的吉打船队。交战后双方另行缔结槟岛协议。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1792,
+          "end_year": 1799,
+          "title": "北赖 · 战后吉打海岸",
+          "note": "北赖和槟城海峡对岸沿海一带继续处于吉打治理。"
+        }
+      ],
+      "source_urls": [
+        "https://mygeoname.mygeoportal.gov.my/exportpdffasa3.jsp?kodnegeri=07",
+        "https://penangport.gov.my/en/contact-us/public/port-history",
+        "https://ejournal.usm.my/kajh/article/view/kajh_vol28-no-2-2021_8",
+        "https://openresearch-repository.anu.edu.au/bitstreams/d22c8eeb-0d1d-4833-8c46-f7c281ced000/download",
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Map_to_illustrate_the_Siamese_question_%28IA_apf3019.0001.001.umich.edu%29.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/9/92/Return_to_an_order_of_the_House_of_Lords_dated_16th_June_1853_for_copies_of_the_treaties_and_engagements_between_the_East_India_Company_and_the_native_powers_in_India_with_the_introductory_and_%28IA_dli.ministry.05714%29.pdf",
+        "https://gtwhi.com.my/penang-island-and-province-wellesley-6/"
+      ],
+      "geometry_method": "Named Prai shore locality using the Malaysian national gazetteer, checked against Fletcher’s 1820 mainland survey; the 1791 stockade footprint is unconfirmed.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1050,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3799972,
+          5.3897095
+        ]
+      },
+      "cross_century_feature_id": "penang-prai-kedah-shore-1800"
     }
   ],
   "regional_zones": [
@@ -62297,6 +62668,587 @@
         12.410144
       ],
       "cross_century_feature_id": "seringapatam-gumbaz-1800"
+    },
+    {
+      "id": "PENANG_MAIN_ISLAND_HISTORY",
+      "stable_id": "penang-main-island",
+      "title": "槟榔屿 · 吉打与东印度公司的管辖变化",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1785,
+          "title": "槟榔屿 · 吉打苏丹国",
+          "note": "槟榔屿是吉打苏丹国海岸与岛屿网络的一部分，居民在岛上生活、耕作并参与海峡交通。"
+        },
+        {
+          "start_year": 1786,
+          "end_year": 1790,
+          "title": "槟榔屿 · 东印度公司据港与岛屿声索",
+          "note": "1786年8月11日，弗朗西斯·莱特在港端升旗。吉打把军事保护作为交涉条件，公司继续驻港。",
+          "kind": "paper_claim"
+        },
+        {
+          "start_year": 1791,
+          "end_year": 1791,
+          "title": "槟榔屿 · 冲突后的吉打协议",
+          "note": "英方从港内出击对岸吉打舰船。协议第一条规定，公司继续占有槟榔屿期间，每年向吉打苏丹给付六千西班牙银元。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1792,
+          "end_year": 1799,
+          "title": "槟榔屿 · 东印度公司行政与本地社区",
+          "note": "东印度公司从乔治市继续经营港务、授地和贸易。吉打王廷仍管理海峡对岸的北赖及其邻地。",
+          "kind": "administration"
+        }
+      ],
+      "source_urls": [
+        "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+        "https://ejournal.usm.my/kajh/article/view/kajh_vol28-no-2-2021_8",
+        "https://openresearch-repository.anu.edu.au/bitstreams/d22c8eeb-0d1d-4833-8c46-f7c281ced000/download",
+        "https://penangport.gov.my/en/contact-us/public/port-history",
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Map_to_illustrate_the_Siamese_question_%28IA_apf3019.0001.001.umich.edu%29.pdf"
+      ],
+      "geometry_method": "Identical physical main-island coastline to the published 1800 layer. Before 1791 the company claim is drawn as a claim and the George Town occupation is mapped separately.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 900,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.309825,
+              5.450751
+            ],
+            [
+              100.318533,
+              5.435289
+            ],
+            [
+              100.333995,
+              5.426947
+            ],
+            [
+              100.343435,
+              5.417629
+            ],
+            [
+              100.325206,
+              5.383287
+            ],
+            [
+              100.320811,
+              5.34455
+            ],
+            [
+              100.316661,
+              5.326646
+            ],
+            [
+              100.292247,
+              5.280463
+            ],
+            [
+              100.288748,
+              5.262681
+            ],
+            [
+              100.234711,
+              5.272691
+            ],
+            [
+              100.194998,
+              5.272284
+            ],
+            [
+              100.192719,
+              5.267646
+            ],
+            [
+              100.189708,
+              5.266506
+            ],
+            [
+              100.184337,
+              5.268541
+            ],
+            [
+              100.180024,
+              5.273342
+            ],
+            [
+              100.178966,
+              5.277981
+            ],
+            [
+              100.192719,
+              5.285956
+            ],
+            [
+              100.196137,
+              5.299994
+            ],
+            [
+              100.191173,
+              5.352525
+            ],
+            [
+              100.193126,
+              5.399319
+            ],
+            [
+              100.190929,
+              5.408433
+            ],
+            [
+              100.179454,
+              5.426907
+            ],
+            [
+              100.181651,
+              5.436591
+            ],
+            [
+              100.185232,
+              5.444281
+            ],
+            [
+              100.185883,
+              5.451117
+            ],
+            [
+              100.179454,
+              5.458197
+            ],
+            [
+              100.192068,
+              5.462958
+            ],
+            [
+              100.197113,
+              5.457261
+            ],
+            [
+              100.201182,
+              5.448472
+            ],
+            [
+              100.210623,
+              5.443996
+            ],
+            [
+              100.218598,
+              5.446723
+            ],
+            [
+              100.22934,
+              5.459906
+            ],
+            [
+              100.234711,
+              5.464504
+            ],
+            [
+              100.253754,
+              5.469062
+            ],
+            [
+              100.274099,
+              5.468492
+            ],
+            [
+              100.293305,
+              5.462592
+            ],
+            [
+              100.309825,
+              5.450751
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        100.178966,
+        5.262681,
+        100.343435,
+        5.469062
+      ],
+      "cross_century_feature_id": "penang-1800-company"
+    },
+    {
+      "id": "PENANG_GEORGE_TOWN_GRID",
+      "stable_id": "penang-george-town-grid",
+      "title": "乔治市 · 波帕姆图旧街网",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "乔治市 · 旧街网、港口与商住地",
+          "note": "莱特街、海墘街、牛干冬街和椰脚街围出早期镇中心。靠海分布经营商铺和仓储的街块，南侧马来聚落独立发展。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://whc.unesco.org/document/105988",
+        "https://gtwhi.com.my/george-town-map/"
+      ],
+      "geometry_method": "Popham survey, late-1790s publication. Affine transfer via the published named-street key and extant street axes plus Northam cemetery and the fort. Geometry represents only the named blocks or shore on the plan. The hatched town blocks are traced within Light, Chulia, Beach and Pitt; plan preserves district envelope rather than separate lots.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 240,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.3404592,
+              5.4199334
+            ],
+            [
+              100.3400232,
+              5.4195561
+            ],
+            [
+              100.3396124,
+              5.419249
+            ],
+            [
+              100.3391143,
+              5.4186597
+            ],
+            [
+              100.3386274,
+              5.4180546
+            ],
+            [
+              100.3381208,
+              5.41767
+            ],
+            [
+              100.3375738,
+              5.4174642
+            ],
+            [
+              100.3372426,
+              5.4171344
+            ],
+            [
+              100.3376171,
+              5.4167901
+            ],
+            [
+              100.3382327,
+              5.416392
+            ],
+            [
+              100.338821,
+              5.4159966
+            ],
+            [
+              100.3394823,
+              5.4156229
+            ],
+            [
+              100.3400302,
+              5.4154064
+            ],
+            [
+              100.3403796,
+              5.4157635
+            ],
+            [
+              100.3408087,
+              5.4160979
+            ],
+            [
+              100.3414085,
+              5.4164584
+            ],
+            [
+              100.3419247,
+              5.4169876
+            ],
+            [
+              100.3423703,
+              5.4175095
+            ],
+            [
+              100.3419842,
+              5.4177822
+            ],
+            [
+              100.3419563,
+              5.4182945
+            ],
+            [
+              100.3421509,
+              5.4186385
+            ],
+            [
+              100.342218,
+              5.4189664
+            ],
+            [
+              100.3418319,
+              5.419239
+            ],
+            [
+              100.3411411,
+              5.4196013
+            ],
+            [
+              100.3404592,
+              5.4199334
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        100.3372426,
+        5.4154064,
+        100.3423703,
+        5.4199334
+      ],
+      "cross_century_feature_id": "penang-george-town-grid-1800"
+    },
+    {
+      "id": "PENANG_CORNWALLIS_OLD_STOCKADE",
+      "stable_id": "penang-cornwallis-old-stockade",
+      "title": "康华丽堡 · 十八世纪末的主堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "康华丽堡 · 十八世纪末的驻堡工事",
+          "note": "波帕姆镇图绘出海岬上的旧堡。堡西有医院和营地，海峡另一岸仍属吉打。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf",
+        "https://pht.org.my/pht-site-visit-fort-cornwallis/",
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Map_to_illustrate_the_Siamese_question_%28IA_apf3019.0001.001.umich.edu%29.pdf"
+      ],
+      "geometry_method": "Direct exterior trace of the old fort (a) on the Popham engraved plate; scale estimate from the 300 yard bar, centered on the independently identified historic fort site. The 1804 reconstruction is a separate record.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 95,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.3440195,
+              5.4206228
+            ],
+            [
+              100.3439919,
+              5.4203675
+            ],
+            [
+              100.3440609,
+              5.4203399
+            ],
+            [
+              100.3440195,
+              5.4202295
+            ],
+            [
+              100.343916,
+              5.420195
+            ],
+            [
+              100.343847,
+              5.4200501
+            ],
+            [
+              100.3439436,
+              5.4200156
+            ],
+            [
+              100.3440954,
+              5.420126
+            ],
+            [
+              100.3442541,
+              5.4200915
+            ],
+            [
+              100.3442748,
+              5.419988
+            ],
+            [
+              100.3444197,
+              5.4198776
+            ],
+            [
+              100.344468,
+              5.4200156
+            ],
+            [
+              100.3444059,
+              5.4201053
+            ],
+            [
+              100.3444059,
+              5.4202571
+            ],
+            [
+              100.3445232,
+              5.4202916
+            ],
+            [
+              100.344606,
+              5.4204572
+            ],
+            [
+              100.3444128,
+              5.4204917
+            ],
+            [
+              100.3442955,
+              5.4204641
+            ],
+            [
+              100.3441644,
+              5.4205538
+            ],
+            [
+              100.3440195,
+              5.4206228
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        100.343847,
+        5.4198776,
+        100.344606,
+        5.4206228
+      ],
+      "cross_century_feature_id": "penang-cornwallis-old-stockade-1800"
+    },
+    {
+      "id": "PENANG_MALAY_OLD_TOWN",
+      "stable_id": "penang-malay-old-town",
+      "title": "乔治市 · 牛干冬街南侧马来聚落",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "乔治市南部 · 马来聚落、清真寺与墓地",
+          "note": "旧图在牛干冬街以南记有马来聚落、清真寺和墓地。该街区以本地和海峡来往的商人为主，连接港口和内街。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://whc.unesco.org/document/105988"
+      ],
+      "geometry_method": "Popham survey, late-1790s publication. Affine transfer via the published named-street key and extant street axes plus Northam cemetery and the fort. Geometry represents only the named blocks or shore on the plan. Trace Burying Ground–Chulia map’s dotted built plots marked Malay Town, omitting large adjoining fields and tidal bank.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 230,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.3370475,
+              5.4159316
+            ],
+            [
+              100.3367353,
+              5.4151193
+            ],
+            [
+              100.3364883,
+              5.4147954
+            ],
+            [
+              100.3363025,
+              5.4143341
+            ],
+            [
+              100.3360985,
+              5.4139329
+            ],
+            [
+              100.335933,
+              5.4134258
+            ],
+            [
+              100.3361486,
+              5.4132144
+            ],
+            [
+              100.3366386,
+              5.4134115
+            ],
+            [
+              100.3371607,
+              5.4136344
+            ],
+            [
+              100.3376008,
+              5.4138657
+            ],
+            [
+              100.3380711,
+              5.4142832
+            ],
+            [
+              100.3386669,
+              5.4147896
+            ],
+            [
+              100.3384722,
+              5.4151299
+            ],
+            [
+              100.3378557,
+              5.4152661
+            ],
+            [
+              100.3374289,
+              5.4156303
+            ],
+            [
+              100.3370475,
+              5.4159316
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        100.335933,
+        5.4132144,
+        100.3386669,
+        5.4159316
+      ],
+      "cross_century_feature_id": "penang-malay-old-town-1800"
     }
   ],
   "regional_lines": [
@@ -66416,6 +67368,86 @@
         ]
       },
       "cross_century_feature_id": "seringapatam-west-wall-breach-1800"
+    },
+    {
+      "id": "PENANG_GEORGE_TOWN_OLD_SHORE",
+      "stable_id": "penang-george-town-old-shore",
+      "title": "乔治市 · 波帕姆图港城旧岸",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "乔治市 · 海岬、海墘街与河口旧岸",
+          "note": "图中海岸沿堡、海关屋、海墘街一侧和马来聚落外缘延伸。外侧泥滩在低潮时露出。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://gtwhi.com.my/george-town-map/"
+      ],
+      "geometry_method": "Popham survey, late-1790s publication. Affine transfer via the published named-street key and extant street axes plus Northam cemetery and the fort. Geometry represents only the named blocks or shore on the plan. Traces only the line between the cape and southern named settlement from the published harbour plan.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 210,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            100.3445446,
+            5.4197025
+          ],
+          [
+            100.3445548,
+            5.4193375
+          ],
+          [
+            100.3443806,
+            5.4189478
+          ],
+          [
+            100.3441357,
+            5.4185508
+          ],
+          [
+            100.3437839,
+            5.4181794
+          ],
+          [
+            100.3433615,
+            5.4178006
+          ],
+          [
+            100.3427021,
+            5.4173298
+          ],
+          [
+            100.3417348,
+            5.4166723
+          ],
+          [
+            100.340827,
+            5.4161251
+          ],
+          [
+            100.3400395,
+            5.4154637
+          ],
+          [
+            100.3394233,
+            5.415003
+          ],
+          [
+            100.3387093,
+            5.4145378
+          ]
+        ]
+      }
     }
   ]
 }
