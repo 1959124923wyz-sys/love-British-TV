@@ -1,6 +1,6 @@
 # 马尼拉、甲米地与战后交接｜第 3D 批
 
-本批延续七年战争制图，跟踪英国陆海军、东印度公司部队、西班牙驻军和菲律宾地方部队在马尼拉、甲米地与周边据点的行动。城墙、独立堡垒、堂区、临时阵地和船厂分别建档。共补入 6 个虚线轮廓、17 处具名地点和 70 条十八世纪分期。16 处以同形或同点接入 1800 年，在十九世纪有 32 条分期。
+本批延续七年战争制图，跟踪英国陆海军、东印度公司部队、西班牙驻军和菲律宾地方部队在马尼拉、甲米地与周边据点的行动。城墙、独立堡垒、堂区、临时阵地和船厂分别建档。共补入 6 个虚线轮廓、17 处具名地点和 70 条十八世纪分期。16 处以同形或同点接入 1800 年，在十九世纪有 35 条分期。
 
 ## 日期和证据
 
@@ -34,6 +34,8 @@
 | 甲米地 | 用约 1750 年西班牙语港图和史蒂文森 1763 年港图比对实际城港、圣费利佩堡和船厂设施。以旧陆门、北侧两座棱堡、圣费利佩堡西墙和里韦拉角配准，港图控制点残差约 11 米。圣费利佩堡西侧以遗存定位，东侧主堡旧边沿原图回绘。对照 1797 年卡斯蒂利亚图、1815 年海图及 1819 年重筑命令，辨识 1782 年台风后的港城和堡垒变化。 |
 
 [RCIN 733067](https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0) · [1714 年圣地亚哥堡 AGI MP-FILIPINAS,19BIS](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18789) · [1785 年竣工图](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18954) · [1796 年克拉韦罗图](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18964) · [1800 年克拉韦罗图](https://searcharchives.bl.uk/catalog/040-002027897) · [1814 年阿拉贡图](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18966) · [甲米地城市历史图研究](https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en)
+
+甲米地旧城持续追至 1899 年。1898 年 5 月美军接管的是军械库。同年 6 月，阿奎纳尔多在原省署组建菲律宾革命政府，7 月迁往巴科奥尔。菲律宾委员会第 1039 号法令列出后续分别划给美国海军、省和市镇的旧城用地，包含船厂、西侧陆门工事和通往圣罗克的公共道路。 [菲律宾国家历史委员会旧港城铭牌](https://nhcphistoricsites.blogspot.com/2023/09/cavite-puerto-bilang-kabesera-ng.html) · [法令第 1039 号](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/28/21755)
 
 ## 后续定位
 

@@ -904,7 +904,12 @@ async function verify() {
   assert.match(await manila1800.textContent(), /西班牙续修城防/);
   await setView([...caviteTown, 16]);
   await clickAreaAt(...caviteTown);
-  await page.locator('[data-historic-overlap-id$=":cavite-historic-puerto-1800"]').waitFor();
+  const caviteLater = page.locator('[data-historic-overlap-id$=":cavite-historic-puerto-1800"]');
+  await caviteLater.waitFor();
+  await jump(1898);
+  await clickAreaAt(...caviteTown);
+  await caviteLater.waitFor();
+  assert.match(await caviteLater.textContent(), /菲律宾革命政府短驻/);
 
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
