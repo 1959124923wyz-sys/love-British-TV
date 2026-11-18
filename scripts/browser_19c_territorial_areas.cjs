@@ -309,10 +309,10 @@ async function verify() {
    window.atlasStoryBridge.currentYear() === 1703, undefined, { timeout: 45000 });
   await page.locator('#mapLayerEvents').uncheck();
   const outline = page.locator('.atlas-18c-source-outline');
-  assert.equal(await outline.count(), 0);
+  const preGibraltarOutlines = await outline.count();
   await jump(1704);
-  assert.equal(await outline.count(), 1);
-  assert.equal(await outline.getAttribute('stroke-dasharray'), '5 6');
+  assert.equal(await outline.count(), preGibraltarOutlines + 1);
+  assert((await outline.evaluateAll(paths => paths.some(path => path.getAttribute('stroke-dasharray') === '5 6'))));
   const historicalHit = (lat, lng) => page.evaluate(([y, x]) => window.eighteenthOverlapDossier.hitCountAt(y, x), [lat, lng]);
   assert.equal(await historicalHit(36.1408, -5.3526), 1);
   assert.equal(await historicalHit(36.147, -5.354), 0);
@@ -500,6 +500,97 @@ async function verify() {
   assert.match(await nextCumberland.textContent(), /战争期间增兵/);
   await jump(1835);
   assert(!(await ids()).includes('fort-cumberland-1800'));
+
+  const fredericaCenter = [31.2238567, -81.392998];
+  await jump(1735);
+  assert(!(await atlantic()).activeRegionalZones.includes('FORT_FREDERICA_MAIN'));
+  await setView([...fredericaCenter, 16]);
+  for (const [year, title] of [[1736, /英方筑堡/], [1740, /英方加固主堡/],
+   [1749, /主力解散后小部驻守/], [1756, /防御拆卸后的旧址/],
+   [1762, /英方短暂修缮/], [1763, /最后一批常驻士兵撤出/], [1776, /革命方调走军械/]]) {
+   await jump(year);
+   await clickAreaAt(...fredericaCenter);
+   const frederica = page.locator('[data-overlap-id="18c:FORT_FREDERICA_MAIN"]');
+   await frederica.waitFor();
+   assert.match(await frederica.textContent(), title);
+  }
+  await setView([31.22386, -81.3913, 15]);
+  await jump(1742);
+  assert(!(await atlantic()).activeRegionalZones.includes('FREDERICA_TOWN_ENCLOSURE'));
+  for (const [year, title] of [[1743, /镇防外廓/], [1758, /大火与镇址遗存/]]) {
+   await jump(year);
+   await clickAreaAt(31.22386, -81.3913);
+   const town = page.locator('[data-overlap-id="18c:FREDERICA_TOWN_ENCLOSURE"]');
+   await town.waitFor();
+   assert.match(await town.textContent(), title);
+  }
+  await jump(1799);
+  assert(!(await atlantic()).activeRegionalZones.includes('FORT_FREDERICA_MAIN'));
+
+  const castilloCenter = [29.89784, -81.31149];
+  const matanzasCenter = [29.71524, -81.23902];
+  await setView([...castilloCenter, 16]);
+  for (const [year, title] of [[1700, /西班牙石堡/], [1740, /英军围城，西班牙守住主堡/],
+   [1763, /英军接管/], [1783, /约定归还，英军仍守/], [1784, /西班牙恢复驻防/], [1799, /西班牙恢复驻防/]]) {
+   await jump(year);
+   await clickAreaAt(...castilloCenter);
+   const castillo = page.locator('[data-overlap-id="18c:CASTILLO_SAN_MARCOS"]');
+   await castillo.waitFor();
+   assert.match(await castillo.textContent(), title);
+   for (const id of ['B36-Z046', 'B36-P046', 'ST_AUGUSTINE']) {
+    assert.equal(await page.locator('[data-overlap-id="18c:' + id + '"]').count(), 0);
+   }
+   if (year === 1763) {
+    await castillo.locator('details summary').click();
+    assert(await castillo.locator('a[href*="paris763.asp"]').isVisible());
+    await castillo.locator('.atlas-18c-overlap-title').hover();
+    assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+   }
+  }
+  const moseCenter = [29.9278, -81.3253];
+  await jump(1740);
+  assert(!(await atlantic()).activeRegionalSites.includes('FORT_MOSE_SECOND'));
+  await setView([...moseCenter, 6]);
+  await jump(1752);
+  assert((await atlantic()).activeRegionalSites.includes('FORT_MOSE_SECOND'));
+  assert.equal(await shownSite.count(), 0);
+  await setView([...moseCenter, 15]);
+  await clickAreaAt(...moseCenter);
+  await dossierTitle.filter({ hasText: '莫塞堡 · 自由黑人聚落与驻防' }).waitFor();
+  await jump(1763);
+  await clickAreaAt(...moseCenter);
+  await dossierTitle.filter({ hasText: '莫塞堡 · 社区迁往古巴' }).waitFor();
+  await jump(1764);
+  assert(!(await atlantic()).activeRegionalSites.includes('FORT_MOSE_SECOND'));
+
+  await jump(1741);
+  assert(!(await atlantic()).activeRegionalZones.includes('FORT_MATANZAS'));
+  await setView([...matanzasCenter, 17]);
+  for (const [year, title] of [[1742, /西班牙驻防/], [1783, /英军仍守/], [1784, /西班牙接收/],
+   [1799, /修缮地基/]]) {
+   await jump(year);
+   await clickAreaAt(...matanzasCenter);
+   const matanzas = page.locator('[data-overlap-id="18c:FORT_MATANZAS"]');
+   await matanzas.waitFor();
+   assert.match(await matanzas.textContent(), title);
+  }
+  for (const [year, title] of [[1800, /西班牙驻防/], [1809, /局部坍塌与修复/], [1821, /美国接收/]]) {
+   await jump(year);
+   assert((await ids()).includes('fort-matanzas-1800'));
+   await clickAreaAt(...matanzasCenter);
+   const matanzas = page.locator('[data-historic-overlap-id$=":fort-matanzas-1800"]');
+   await matanzas.waitFor();
+   assert.match(await matanzas.textContent(), title);
+  }
+  await setView([...castilloCenter, 16]);
+  for (const [year, title] of [[1800, /西班牙驻防延续/], [1819, /割让条约与实际接收之间/], [1821, /美国接收/]]) {
+   await jump(year);
+   assert((await ids()).includes('castillo-san-marcos-1800'));
+   await clickAreaAt(...castilloCenter);
+   const castillo = page.locator('[data-historic-overlap-id$=":castillo-san-marcos-1800"]');
+   await castillo.waitFor();
+   assert.match(await castillo.textContent(), title);
+  }
 
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
