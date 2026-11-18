@@ -16,16 +16,16 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 421,
-    "linked_to_1800_public_geometry": 222,
+    "1799_prior_records_reviewed": 448,
+    "linked_to_1800_public_geometry": 257,
     "by_disposition": {
-      "anchor": 138,
+      "anchor": 158,
       "claim_evidence": 7,
-      "continued": 49,
+      "continued": 64,
       "event_history": 7,
       "fiscal_evidence": 37,
-      "needs_boundary_or_site_review": 74,
-      "network_evidence": 69,
+      "needs_boundary_or_site_review": 68,
+      "network_evidence": 67,
       "occupation": 9,
       "political_relation_evidence": 14,
       "renewed_scope": 17
@@ -248,24 +248,6 @@
         "martinique-occupation-1800"
       ],
       "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
-    },
-    {
-      "prior_id": "B37-C-Z028",
-      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
-      "name_zh": "18世纪Barbados Bridgetown英殖民港",
-      "prior_record_kind": "administration",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "bridgetown-port-1800"
-      ]
-    },
-    {
-      "prior_id": "B37-C-Z029",
-      "source_dataset": "data/eighteenth-century-b37-caribbean.json",
-      "name_zh": "18世纪Barbados Speightstown糖业商港",
-      "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
     },
     {
       "prior_id": "B37-C-Z030",
@@ -1356,26 +1338,6 @@
       "features_at_1800": []
     },
     {
-      "prior_id": "JAMAICA",
-      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
-      "name_zh": "1655年后英格兰占领牙买加：全岛殖民声索与马龙抵抗",
-      "prior_record_kind": "殖民行政参考",
-      "resolution": "continued",
-      "features_at_1800": [
-        "jamaica-assembly-colony-main-island"
-      ]
-    },
-    {
-      "prior_id": "BARBADOS",
-      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
-      "name_zh": "1627年后巴巴多斯殖民地：全岛经营与糖园奴役",
-      "prior_record_kind": "殖民行政参考",
-      "resolution": "continued",
-      "features_at_1800": [
-        "barbados-continuity-1800"
-      ]
-    },
-    {
       "prior_id": "BERMUDA",
       "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
       "name_zh": "1612年后百慕大：英格兰公司与王室海岛殖民",
@@ -1990,62 +1952,6 @@
       "name_zh": "18世纪古德洛尔圣大卫堡商港与法英易手",
       "prior_record_kind": "military",
       "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z100",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "1739后阿康蓬马龙条约自治土地",
-      "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z101",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "1740后摩尔镇东部马龙自治社区",
-      "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z102",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "1754后查尔斯镇马龙独立社区",
-      "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z126",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "18世纪牙买加罗亚尔港英国海军驻地",
-      "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z127",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "18世纪牙买加西班牙镇殖民行政中心",
-      "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z128",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "18世纪牙买加金斯敦英国殖民商港",
-      "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
-    },
-    {
-      "prior_id": "B36-Z129",
-      "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
-      "name_zh": "18世纪牙买加蒙特哥贝糖业外贸港",
-      "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
       "features_at_1800": []
     },
     {
@@ -3898,6 +3804,386 @@
       "resolution": "continued",
       "features_at_1800": [
         "trinidad-st-anns-diversion-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "牙买加主岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-assembly-colony-main-island"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_SPANISH_TOWN_OLD_CORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "西班牙镇 · 旧街区",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-spanish-town-old-core-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_SPANISH_TOWN_PARADE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "西班牙镇 · 官署广场",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-spanish-town-parade-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_MONTEGO_OLD_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "蒙特哥贝 · 查尔斯广场与旧商港",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-montego-old-town-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_TRELAWNY_FLAGSTAFF",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "特里劳尼镇旧址 · 弗拉格斯塔夫",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-trelawny-flagstaff-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_MAROON_CHARLES_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "波特兰 · 查尔斯镇马龙社群",
+      "prior_record_kind": "diplomacy",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-maroon-charles-town-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_MAROON_SCOTTS_HALL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣玛丽 · 斯科茨霍尔马龙社群",
+      "prior_record_kind": "diplomacy",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-maroon-scotts-hall-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_HAY_TOWN_1745",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦 · 海伊地籍图旧城",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-kingston-hay-town-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_PARADE_GROUND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦阅兵广场",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-kingston-parade-ground-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_COLONIAL_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦 · 殖民商港",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-kingston-colonial-port-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_HIBBERT_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦希伯特宅",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-kingston-hibbert-house-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_PARISH_CHURCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦堂区教堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-kingston-parish-church-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_PUBLIC_HOSPITAL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦公立医院",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-kingston-public-hospital-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_COKE_CHAPEL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦科克礼拜堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-kingston-coke-chapel-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTON_WINDWARD_CHAPEL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦迎风路礼拜堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-kingston-windward-chapel-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_PORT_ROYAL_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 1772年重建镇区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-port-royal-town-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_PORT_ROYAL_DOCKYARD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 皇家海军船坞核心",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-port-royal-dockyard-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_FORT_CHARLES",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 查尔斯堡",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-fort-charles-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_PORT_ROYAL_VICTUALLING_EAST",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 船坞东端军需院与被奴役者住处",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-port-royal-victualling-east-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_FORT_AUGUSTA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦港西口 · 奥古斯塔堡",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-fort-augusta-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_ROCKFORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦港东侧 · 岩堡",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-rockfort-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_PORT_ROYAL_NAVAL_HOSPITAL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 海军医院旧址",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-port-royal-naval-hospital-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_PORT_ROYAL_ST_PETERS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 圣彼得堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jamaica-port-royal-st-peters-1800"
+      ]
+    },
+    {
+      "prior_id": "JAMAICA_PORT_ROYAL_TOWN_BATTERY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 二十炮镇线",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "continued",
+      "features_at_1800": [
+        "jamaica-port-royal-town-battery-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴巴多斯 · 殖民总督、地方议会与岛岸",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-continuity-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_BRIDGETOWN_1766",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦 · 1766年图示旧港城",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bridgetown-port-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_CHARLES_FORT_1748",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "尼达姆角 · 查尔斯堡主堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-charles-fort-1748-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_ST_ANNS_CASTLE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦驻军区 · 圣安堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-st-anns-castle-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_GARRISON_DRILL_HALL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦驻军区 · 操练厅",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-garrison-drill-hall-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_GARRISON_STONE_BARRACKS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦驻军区 · 石兵营",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-garrison-stone-barracks-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_BRIDGETOWN_CAREENAGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦 · 卡里纳吉旧内港",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "barbados-bridgetown-careenage-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_BRIDGETOWN_ST_MICHAEL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦 · 圣米迦勒教堂原址",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "barbados-bridgetown-st-michael-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_SPEIGHTSTOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "斯佩茨敦 · 十八世纪港城参照",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "barbados-speightstown-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_GARRISON_OLD_PARADE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦驻军区 · 早期操练场参照",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "barbados-garrison-old-parade-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_GARRISON_WEST_INDIA_BARRACKS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦驻军区 · 西印度兵营",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "barbados-garrison-west-india-barracks-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_BRIDGETOWN_BROAD_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦 · 布罗德街旧段",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-bridgetown-broad-street-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_BRIDGETOWN_SWAN_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦 · 天鹅街旧段",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-bridgetown-swan-street-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBADOS_BRIDGETOWN_HIGH_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里奇敦 · 高街旧段",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbados-bridgetown-high-street-1800"
       ]
     }
   ]

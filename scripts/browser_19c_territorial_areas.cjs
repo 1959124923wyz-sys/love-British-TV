@@ -1146,13 +1146,31 @@ async function verify() {
    { point: [10.45549, -61.25587], id: 'TRINIDAD_MAIN_ISLAND', next: 'trinidad-1800-occupation', zoom: 9,
     stages: [[1796, /移民敕令与种植园扩张/], [1797, /2月18日全岛签降/]] },
   ];
-  for (const { point, id, zoom, stages } of caribbeanIslands) {
+  const jamaicaBarbados = [
+   { point: [18.099707, -77.1580353], id: 'JAMAICA_MAIN_ISLAND', next: 'jamaica-assembly-colony-main-island', zoom: 9,
+    stages: [[1755, /官署与文书暂迁金斯敦/], [1758, /行政机关回到西班牙镇/]] },
+   { point: [17.972293, -76.7922003], id: 'KINGSTON_HAY_TOWN_1745', next: 'jamaica-kingston-hay-town-1800', zoom: 15,
+    stages: [[1757, /牙买加临时政务中心/], [1780, /城区火灾/]] },
+   { point: [17.9393601, -76.8407993], id: 'JAMAICA_PORT_ROYAL_DOCKYARD', next: 'jamaica-port-royal-dockyard-1800', zoom: 16,
+    stages: [[1779, /战时调度/], [1799, /栈桥核心与东端军需区/]] },
+   { point: [17.9961363, -76.9552759], id: 'JAMAICA_SPANISH_TOWN_OLD_CORE', next: 'jamaica-spanish-town-old-core-1800', zoom: 15,
+    stages: [[1786, /官署、教堂与市集/]] },
+   { point: [13.193671, -59.56616], id: 'BARBADOS_MAIN_ISLAND', next: 'barbados-continuity-1800', zoom: 10,
+    stages: [[1733, /两港公开宣读的奴役法规/]] },
+   { point: [13.0970555, -59.6177361], id: 'BARBADOS_BRIDGETOWN_1766', next: 'bridgetown-port-1800', zoom: 16,
+    stages: [[1766, /5月14日大火/], [1767, /火后重建/]] },
+  ];
+  for (const { point, id, zoom, stages } of [...caribbeanIslands, ...jamaicaBarbados]) {
    for (const [year, title] of stages) {
     await jump(year);
     await setView([...point, zoom]);
     await clickAreaAt(...point);
     const islandCard = page.locator('[data-overlap-id="18c:' + id + '"]');
     assert.match(await islandCard.textContent(), title);
+    if (id === 'BARBADOS_BRIDGETOWN_1766' && year === 1766) {
+     const fire = page.locator('[data-overlap-id="18c:BARBADOS_BRIDGETOWN_FIRE_BLOCKS_1766"]');
+     assert.match(await fire.textContent(), /5月14日大火受灾街块/);
+    }
    }
   }
   const portOfSpain = [10.65217, -61.50731];
@@ -1164,24 +1182,27 @@ async function verify() {
 
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
-   window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
+   window.eighteenthSpatial?.getAudit().loaded && window.eighteenthMassSpatial?.getAudit().loaded &&
+   window.eighteenthBatch37Spatial?.getAudit().loaded &&
    window.atlasStoryBridge.currentYear() === 1799, undefined, { timeout: 45000 });
   const { activeZones, activeRegionalZones } = await atlantic();
   for (const id of ['MENORCA_ISLAND', 'UPPER_CANADA', 'LOWER_CANADA', 'CAPE_BRETON', 'NS_REVISED']) assert(activeZones.includes(id));
-  for (const { id } of caribbeanIslands) assert(activeRegionalZones.includes(id));
+  for (const { id } of [...caribbeanIslands, ...jamaicaBarbados]) assert(activeRegionalZones.includes(id));
   for (const id of ['DOMINICA', 'GRENADA', 'GUADELOUPE', 'TRINIDAD_1797']) assert(!activeZones.includes(id));
+  const earlyAreas = await page.evaluate(() => window.eighteenthSpatial.getAudit().activeAreas);
+  for (const id of ['JAMAICA', 'BARBADOS']) assert(!earlyAreas.includes(id));
   assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 2);
   assert.deepEqual(await ids(), []);
   await page.locator('#nextYear').click();
   await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
   const nextZones = await ids();
-  for (const id of [...caribbeanIslands.map(island => island.next), 'menorca-1800-third-occupation',
+  for (const id of [...caribbeanIslands.map(island => island.next), ...jamaicaBarbados.map(site => site.next), 'menorca-1800-third-occupation',
    'upper-canada-1800', 'lower-canada-1800', 'cape-breton-separate-colony', 'nova-scotia-peninsular-colony']) assert(nextZones.includes(id));
   assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 0);
   assert.equal(await siteMarkers.count(), 0);
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1800-handoff.png') });
   await page.locator('#mapLayerEvents').uncheck();
-  for (const { point, next, zoom } of caribbeanIslands) {
+  for (const { point, next, zoom } of [...caribbeanIslands, ...jamaicaBarbados]) {
    await setView([...point, zoom]);
    await clickAreaAt(...point);
    await page.locator('[data-historic-overlap-id$=":' + next + '"]').waitFor();
