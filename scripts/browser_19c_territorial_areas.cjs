@@ -597,6 +597,95 @@ async function verify() {
    assert.match(await castillo.textContent(), title);
   }
 
+  const santiagoCenter = [9.5538067, -79.6584031];
+  await setView([...santiagoCenter, 16]);
+  for (const [year, title] of [[1738, /西班牙驻防/], [1739, /英军接收与破坏/]]) {
+   await jump(year);
+   await clickAreaAt(...santiagoCenter);
+   const santiago = page.locator('[data-overlap-id="18c:PORTOBELO_SANTIAGO_OLD"]');
+   await santiago.waitFor();
+   assert.match(await santiago.textContent(), title);
+  }
+  const ironFortCenter = [9.55795, -79.6768];
+  await setView([...ironFortCenter, 14]);
+  await clickAreaAt(...ironFortCenter);
+  await dossierTitle.filter({ hasText: '铁堡 · 英军攻占后拆防' }).waitFor();
+  const sanJeronimoCenter = [9.55559, -79.65534];
+  await setView([...sanJeronimoCenter, 16]);
+  await clickAreaAt(...sanJeronimoCenter);
+  await dossierTitle.filter({ hasText: '圣赫罗尼莫旧炮台 · 攻港时火炮已卸架' }).waitFor();
+  await jump(1740);
+  assert(!(await atlantic()).activeRegionalSites.includes('PORTOBELO_CASTILLO_DEL_FIERRO'));
+  assert(!(await atlantic()).activeRegionalZones.includes('PORTOBELO_SANTIAGO_OLD'));
+
+  const sanLuis = { id: 'BOCACHICA_SAN_LUIS_OLD', point: [10.3202665, -75.5831261] };
+  const oldSanJose = { id: 'BOCACHICA_SAN_JOSE_OLD', point: [10.31401, -75.5785224] };
+  for (const { id, point } of [sanLuis, oldSanJose]) {
+   await setView([...point, 16]);
+   for (const [year, title] of [[1740, /西班牙/], [1741, /4月5日/]]) {
+    await jump(year);
+    assert((await atlantic()).activeRegionalZones.includes(id));
+    await clickAreaAt(...point);
+    const fort = page.locator('[data-overlap-id="18c:' + id + '"]');
+    await fort.waitFor();
+    assert.match(await fort.textContent(), title);
+   }
+  }
+  await jump(1742);
+  assert(!(await atlantic()).activeRegionalZones.includes(sanLuis.id));
+  assert(!(await atlantic()).activeRegionalZones.includes(oldSanJose.id));
+  const rebuiltSanJose = [10.314321, -75.5783776];
+  await setView([...rebuiltSanJose, 16]);
+  await jump(1777);
+  assert(!(await atlantic()).activeRegionalZones.includes('BOCACHICA_SAN_JOSE_REBUILT'));
+  for (const year of [1778, 1799]) {
+   await jump(year);
+   await clickAreaAt(...rebuiltSanJose);
+   const fort = page.locator('[data-overlap-id="18c:BOCACHICA_SAN_JOSE_REBUILT"]');
+   await fort.waitFor();
+   assert.match(await fort.textContent(), /西班牙重筑炮台/);
+  }
+  for (const [year, title] of [[1800, /西班牙外湾防线/], [1815, /12月7日/], [1821, /7月6日/]]) {
+   await jump(year);
+   assert((await ids()).includes('bocachica-san-jose-1800'));
+   await clickAreaAt(...rebuiltSanJose);
+   const fort = page.locator('[data-historic-overlap-id$=":bocachica-san-jose-1800"]');
+   await fort.waitFor();
+   assert.match(await fort.textContent(), title);
+  }
+
+  const boneteCenter = [10.4220056, -75.5390059];
+  await jump(1739);
+  assert(!(await atlantic()).activeRegionalZones.includes('CARTAGENA_SAN_FELIPE_BONETE'));
+  await setView([...boneteCenter, 17]);
+  for (const [year, title] of [[1740, /西班牙山顶驻堡/], [1741, /西班牙守住山顶旧堡/],
+   [1762, /旧堡与山坡防御增建/], [1799, /西班牙山顶驻堡/]]) {
+   await jump(year);
+   assert((await atlantic()).activeRegionalZones.includes('CARTAGENA_SAN_FELIPE_BONETE'));
+   await clickAreaAt(...boneteCenter);
+   const bonete = page.locator('[data-overlap-id="18c:CARTAGENA_SAN_FELIPE_BONETE"]');
+   await bonete.waitFor();
+   assert.match(await bonete.textContent(), title);
+   if (year === 1741) {
+    assert.match(await bonete.textContent(), /4月20日/);
+    await bonete.locator('details summary').click();
+    assert(await bonete.locator('a[href*="MANUAL-DE-USO-2.pdf"]').isVisible());
+    await bonete.locator('.atlas-18c-overlap-title').hover();
+    assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+    await page.screenshot({ path: join(screenshotDir, '18c-cartagena-1741-bonete.png') });
+   }
+  }
+  assert.equal(await historicalHit(10.42284, -75.53855), 0);
+  for (const [year, title] of [[1800, /西班牙驻防延续/], [1811, /独立政府管辖/], [1815, /西班牙围城后接收/],
+   [1821, /共和国接收卡塔赫纳城防/]]) {
+   await jump(year);
+   assert((await ids()).includes('cartagena-san-felipe-bonete-1800'));
+   await clickAreaAt(...boneteCenter);
+   const bonete = page.locator('[data-historic-overlap-id$=":cartagena-san-felipe-bonete-1800"]');
+   await bonete.waitFor();
+   assert.match(await bonete.textContent(), title);
+  }
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
