@@ -2359,7 +2359,7 @@ function setYear(v){
  const next=Math.max(1497,Math.min(availableYearCap(),requested));
  const chosen=next>=1600?serialPreviewByDecade.get(decadeForYear(next)):next>=1590?atlasEleventh:next>=1580?atlasTenth:next>=1570?atlasNinth:next>=1560?atlasEighth:next>=1550?atlasSeventh:next>=1540?atlasSixth:next>=1530?atlasFifth:next>=1520?atlasFourth:next>=1510?atlasThird:atlasFirstMerged;
  if(!chosen){timelineStatus(next+'年的事件正在加载。请稍后再试。');return;}
- const zoomCap=next>=1800?streetZoom:regionalZoom;
+ const zoomCap=next>=1700?streetZoom:regionalZoom;
  if(map.getMaxZoom()!==zoomCap)map.setMaxZoom(zoomCap);
  $('jumpYear').value=next;
  if(next>=1600){

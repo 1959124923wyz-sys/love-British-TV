@@ -14,8 +14,8 @@ a.equal(data.area_aggregation_forbidden,true);
 a.equal(data.approved_actual_control_polygons,0);
 a.equal(data.square_km_totals,null);
 const phases=[...data.zones,...data.sites].reduce((n,x)=>n+x.periods.length,0);
-a.equal(phases,160);
-a.equal(phases+previous.area_references.reduce((n,x)=>n+x.periods.length,0)+previous.control_sites.reduce((n,x)=>n+x.periods.length,0),206);
+a.equal(phases,161);
+a.equal(phases+previous.area_references.reduce((n,x)=>n+x.periods.length,0)+previous.control_sites.reduce((n,x)=>n+x.periods.length,0),207);
 const ids=new Set(),kindCounts={};
 for(const [arr,site] of [[data.zones,false],[data.sites,true]]){
  for(const x of arr){
@@ -58,7 +58,7 @@ for(const [id,y,expected] of [
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
 const successors=[2,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features);
-for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON']){
+for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISED']){
  const row=z(id),successor=successors.find(f=>f.id===row.cross_century_feature_id);
  a.equal(successor.properties.start_year,1800);
  a.deepEqual(row.geometry,successor.geometry);
@@ -106,6 +106,10 @@ a.deepEqual(z('CAPE_BRETON').periods.map(p=>[p.start_year,p.kind]),[
 a(!isOn(atlantic('LOUISBOURG_EARLY_PORT'),1712)&&isOn(atlantic('LOUISBOURG_EARLY_PORT'),1743));
 a(!isOn(atlantic('LOUISBOURG_EARLY_PORT'),1744)&&isOn(atlantic('LOUISBOURG_AFTER_DEMOLITION'),1760));
 a.equal(atlantic('PORT_DAUPHIN_SAINTE_ANNE').periods[2].start_year,1719);
+a.deepEqual(z('NS_MAIN').geometry,z('NS_REVISED').geometry);
+a(z('NS_MAIN').bbox[2]<-60.9,'mainland outline cannot reach Louisbourg');
+a(z('CAPE_BRETON').geometry.coordinates[0].length>1000);
+
 a.equal(atlantic('LOUISBOURG_ROYAL_BATTERY').periods.at(-1).start_year,1760);
 a.equal(previous.control_sites.find(x=>x.id==='LOUISBOURG').superseded_by,town.id);
 
@@ -118,4 +122,4 @@ a(js.includes("!$('mapLayerTerritory').checked"));
 a(js.includes("areaGroup.clearLayers();siteGroup.clearLayers();"));
 a(js.includes("fill:!outline"));
 a(js.includes("window.eighteenthMassSpatial={render,getAudit:"));
-console.log('PASS eighteenth-century layer: 81 areas, 42 sites and 160 dated phases, including identical Gibraltar, Menorca and Cape Breton outlines across 1799–1800.');
+console.log('PASS eighteenth-century layer: 81 areas, 42 sites and 161 dated phases, including identical Gibraltar, Menorca, Cape Breton and Nova Scotia outlines across 1799–1800.');
