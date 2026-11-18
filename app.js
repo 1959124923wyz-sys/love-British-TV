@@ -178,6 +178,11 @@ syncMobileEventsButton();
 function syncPanels(){
 setTimeout(()=>map.invalidateSize({pan:false}),250);
 }
+workspace.addEventListener('transitionend',event=>{
+ if(event.target===workspace&&event.propertyName==='grid-template-columns'){
+  map.invalidateSize({pan:false});
+ }
+});
 function openPanel(which){
  // One readable sidebar at a time, including the desktop layout.
  // This prevents the historical dossier from obscuring the map or timeline.
