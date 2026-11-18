@@ -208,6 +208,34 @@ const shore=late('labrador-lower-north-shore-1800');
 a.deepEqual(shore.properties.year_stages.map(p=>p.start_year),[1800,1809,1825]);
 a.equal(atlantic('LABRADOR_OUTER_COAST').geometry.coordinates.length,2);
 
+for(const [legacyId,replacement] of [
+ ['NEW_YORK_HARBOR','NYC_LOWER_MANHATTAN_1767'],
+ ['NEWPORT_GARRISON','NEWPORT_TOWN_1777'],
+ ['PHILADELPHIA_GARRISON','PHILADELPHIA_TOWN_1777'],
+]){
+ a.equal(z(legacyId).superseded_by,replacement);
+ a.equal(atlantic(replacement).geometry.type,'Polygon');
+ a.equal(atlantic(replacement).outline_only,true);
+}
+a.equal(s('NEWPORT_OCCUPIED').superseded_by,'NEWPORT_TOWN_1777');
+a.equal(s('PHILADELPHIA_OCCUPIED').superseded_by,'PHILADELPHIA_TOWN_1777');
+a.match(stageAt('NYC_LOWER_MANHATTAN_1767',1776).title,/9月15日/);
+a(!isOn(atlantic('NYC_LOWER_MANHATTAN_1767'),1783));
+a.match(stageAt('NYC_GOVERNORS_ISLAND_EARTHWORK',1783).title,/12月3日/);
+a.match(stageAt('NYC_WALLABOUT_PRISON_SHIPS',1776).title,/惠特比号/);
+a.match(stageAt('NYC_BLACK_EVACUATION_PORT',1783).note,/艾丽莎白·特鲁安特/);
+a.match(stageAt('NEWPORT_TOWN_1777',1776).title,/12月8日/);
+a.match(stageAt('NEWPORT_TOWN_1777',1779).title,/10月25日英军撤离/);
+a.equal(stageAt('NEWPORT_TOWN_1777',1779).kind,'settlement');
+a.equal(stageAt('NEWPORT_TOWN_1777',1780).kind,'military_vicinity');
+a.match(stageAt('PHILADELPHIA_TOWN_1777',1777).title,/9月26日英军入城/);
+a.match(stageAt('PHILADELPHIA_TOWN_1777',1778).title,/6月18日英军撤出/);
+a.equal(stageAt('PHILADELPHIA_TOWN_1777',1778).kind,'settlement');
+a.equal(atlantic('DELAWARE_FORT_MIFFLIN_ORIGINAL_SCARP').geometry.type,'LineString');
+const jay=late('nyc-governors-island-fort-1800');
+a.match(jay.properties.year_stages[0].title,/交联邦政府/);
+a.equal(jay.properties.stable_id,atlantic('NYC_FORT_JAY').stable_id);
+
 a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));

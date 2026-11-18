@@ -1025,6 +1025,55 @@ async function verify() {
   await clickDatedLine('.atlas-19c-frontier-hit', capeChidley);
   await dossierTitle.filter({ hasText: '布朗萨布隆以东 · 纽芬兰管辖' }).waitFor();
 
+  // The original city plan and Fort George overlap at the foot of Broadway.
+  await jump(1776);
+  const fortGeorge = [40.70423, -74.01417];
+  await setView([...fortGeorge, 16]);
+  await clickAreaAt(...fortGeorge);
+  const nyTown = page.locator('[data-overlap-id="18c:NYC_LOWER_MANHATTAN_1767"]');
+  const nyFort = page.locator('[data-overlap-id="18c:NYC_FORT_GEORGE"]');
+  assert.match(await nyTown.textContent(), /9月15日英军入城/);
+  assert.match(await nyFort.textContent(), /英军重新占驻/);
+  await nyFort.hover();
+  assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+  assert(!(await atlantic()).activeZones.includes('NEW_YORK_HARBOR'));
+  await page.screenshot({ path: join(screenshotDir, '18c-1776-new-york-occupation.png') });
+
+  const newport = [41.488057, -71.312328];
+  const newportTown = page.locator('[data-overlap-id="18c:NEWPORT_TOWN_1777"]');
+  for (const [year, title] of [[1776, /12月8日英军进城/], [1779, /10月25日英军撤离/], [1780, /法国盟军抵达/]]) {
+   await jump(year);
+   await setView([...newport, 15]);
+   await clickAreaAt(...newport);
+   assert.match(await newportTown.textContent(), title);
+   assert(!(await atlantic()).activeZones.includes('NEWPORT_GARRISON'));
+  }
+
+  const philadelphia = [39.9529, -75.1517];
+  const philaTown = page.locator('[data-overlap-id="18c:PHILADELPHIA_TOWN_1777"]');
+  for (const [year, title] of [[1777, /9月26日英军入城/], [1778, /6月18日英军撤出/]]) {
+   await jump(year);
+   await setView([...philadelphia, 15]);
+   await clickAreaAt(...philadelphia);
+   assert.match(await philaTown.textContent(), title);
+   assert(!(await atlantic()).activeZones.includes('PHILADELPHIA_GARRISON'));
+  }
+
+  const fortJay = [40.69140, -74.01601];
+  await jump(1783);
+  await setView([...fortJay, 16]);
+  await clickAreaAt(...fortJay);
+  await dossierTitle.filter({ hasText: '12月3日交还纽约州' }).waitFor();
+  assert(!(await atlantic()).activeRegionalZones.includes('NYC_LOWER_MANHATTAN_1767'));
+  await jump(1799);
+  await clickAreaAt(...fortJay);
+  await dossierTitle.filter({ hasText: '纽约州所辖海防据点' }).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await setView([...fortJay, 16]);
+  await clickAreaAt(...fortJay);
+  await dossierTitle.filter({ hasText: '杰伊堡 · 交联邦政府' }).waitFor();
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
