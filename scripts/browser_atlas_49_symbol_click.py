@@ -19,13 +19,15 @@ def click(x,y):
   payload={'type':kind,'x':round(x),'y':round(y)}
   if kind!='mouseMoved':payload.update(button='left',clickCount=1)
   browser.execute_cdp_cmd('Input.dispatchMouseEvent',payload)
+# Place the test marker over the Real Fuerza and the surveyed city enclosure.
+havana_lat,havana_lon=23.141081,-82.349694
 try:
  browser.get('http://127.0.0.1:8765/?review18c=1&year=1762')
- wait.until(lambda _:js("return window.eighteenthOverlapDossier?.getAudit?.()?.loaded && !!window.AtlasPublicCopyGuard && Number(document.getElementById('bigYear').textContent)===1762 && window.eighteenthOverlapDossier.hitCountAt(23.14,-82.36)>=2"))
+ wait.until(lambda _:js("return window.eighteenthOverlapDossier?.getAudit?.()?.loaded && !!window.AtlasPublicCopyGuard && Number(document.getElementById('bigYear').textContent)===1762 && window.eighteenthOverlapDossier.hitCountAt(...arguments)>=2",havana_lat,havana_lon))
  result=js("""
   const host=window.__eighteenthSpatialHost, map=host.map;
-  const lat=23.14,lng=-82.36;
-  map.setView([lat,lng],9,{animate:false});
+  const [lat,lng]=arguments;
+  map.setView([lat,lng],16,{animate:false});
   const pane='atlas49IndependentMarkerPane';
   if(!map.getPane(pane))map.createPane(pane);
   map.getPane(pane).style.zIndex='780';
@@ -41,7 +43,7 @@ try:
   const x=rect.left+local.x,y=rect.top+local.y,target=document.elementFromPoint(x,y);
   return {x,y,target:target?.outerHTML.slice(0,450),
      hits:window.eighteenthOverlapDossier.hitCountAt(lat,lng)};
- """)
+ """,havana_lat,havana_lon)
  assert result['hits']>=2, result
  assert 'atlas49-independent-pin' in (result['target'] or ''),result
  click(result['x'],result['y'])
@@ -52,7 +54,7 @@ try:
  js("window.atlas49TestMarker.remove()")
  position=js("""
   const map=window.__eighteenthSpatialHost.map,api=window.eighteenthOverlapDossier;
-  const center=map.latLngToContainerPoint([23.14,-82.36]),
+  const center=map.latLngToContainerPoint([arguments[0],arguments[1]]),
     rect=map.getContainer().getBoundingClientRect();
   let choice=null;
   for(const dy of [24,-24,40,-40,64,-64,0]){
@@ -69,7 +71,7 @@ try:
    if(choice)break;
   }
   return choice||{error:'No exposed polygon interior beside event marker'};
- """)
+ """,havana_lat,havana_lon)
  assert 'error' not in position,position
  click(position['x'],position['y'])
  wait.until(lambda _:js("return window.eighteenthOverlapDossier.getAudit().open"))
