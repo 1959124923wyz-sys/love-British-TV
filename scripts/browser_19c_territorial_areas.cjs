@@ -394,19 +394,63 @@ async function verify() {
   await jump(1904);
   assert.equal(await coast.count(), 0);
 
+  await jump(1712);
+  assert(!(await atlantic()).activeZones.includes('CAPE_BRETON'));
+  await jump(1713);
+  await setView([46.295, -60.927928, 8]);
+  await clickAreaAt(46.295, -60.927928);
+  const capeBreton = page.locator('[data-overlap-id="18c:CAPE_BRETON"]');
+  await capeBreton.waitFor();
+  assert.match(await capeBreton.textContent(), /乌得勒支和约确认法方权利/);
+  await setView([45.891667, -59.982778, 11]);
+  await clickAreaAt(45.891667, -59.982778);
+  await page.locator('[data-overlap-id="18c:LOUISBOURG_EARLY_PORT"]').waitFor();
+  await jump(1719);
+  assert((await atlantic()).activeRegionalSites.includes('LOUISBOURG_EARLY_PORT'));
+  assert(!(await atlantic()).activeRegionalZones.includes('LOUISBOURG_WALLED_TOWN'));
+  await jump(1724);
+  await clickAreaAt(45.909214, -59.97979);
+  const royalBattery = page.locator('[data-overlap-id="18c:LOUISBOURG_ROYAL_BATTERY"]');
+  await royalBattery.waitFor();
+  assert.match(await royalBattery.textContent(), /法军开工/);
+  const louisbourg = page.locator('[data-overlap-id="18c:LOUISBOURG_WALLED_TOWN"]');
+  for (const [year, title] of [[1744, /法军驻守/], [1745, /英军接管/], [1748, /条约议定归还/],
+   [1749, /法军恢复驻防/], [1758, /英军再次接管/]]) {
+   await jump(year);
+   assert((await atlantic()).activeRegionalZones.includes('LOUISBOURG_WALLED_TOWN'));
+   assert(!(await atlantic()).activeRegionalSites.includes('LOUISBOURG_EARLY_PORT'));
+   await clickAreaAt(45.8921228, -59.9827624);
+   await louisbourg.waitFor();
+   assert.match(await louisbourg.textContent(), title);
+   for (const obsolete of ['B36-Z008', 'B36-P008', 'LOUISBOURG']) {
+    assert.equal(await page.locator('[data-overlap-id="18c:' + obsolete + '"]').count(), 0);
+   }
+  }
+  await louisbourg.locator('.atlas-18c-overlap-title').hover();
+  assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+  await page.screenshot({ path: join(screenshotDir, '18c-louisbourg-1758-walled-town.png') });
+  await jump(1760);
+  assert(!(await atlantic()).activeRegionalZones.includes('LOUISBOURG_WALLED_TOWN'));
+  await clickAreaAt(45.891667, -59.982778);
+  const oldTown = page.locator('[data-overlap-id="18c:LOUISBOURG_AFTER_DEMOLITION"]');
+  await oldTown.waitFor();
+  assert.match(await oldTown.textContent(), /拆防与驻军留守/);
+  await jump(1768);
+  assert.match(await oldTown.textContent(), /英军撤离后的旧城遗址/);
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&
    window.atlasStoryBridge.currentYear() === 1799, undefined, { timeout: 45000 });
   const oldZones = await page.evaluate(() => window.eighteenthMassSpatial.getAudit().activeZones);
-  for (const id of ['GRENADA', 'MENORCA_ISLAND', 'UPPER_CANADA', 'LOWER_CANADA']) assert(oldZones.includes(id));
+  for (const id of ['GRENADA', 'MENORCA_ISLAND', 'UPPER_CANADA', 'LOWER_CANADA', 'CAPE_BRETON']) assert(oldZones.includes(id));
   assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 2);
   assert.deepEqual(await ids(), []);
   await page.locator('#nextYear').click();
   await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
   const nextZones = await ids();
   for (const id of ['grenada-continuity-1800', 'menorca-1800-third-occupation',
-   'upper-canada-1800', 'lower-canada-1800']) assert(nextZones.includes(id));
+   'upper-canada-1800', 'lower-canada-1800', 'cape-breton-separate-colony']) assert(nextZones.includes(id));
   assert.equal(await page.evaluate(() => window.atlasStoryBridge.active18cMaroonCoreIds().length), 0);
   assert.equal(await siteMarkers.count(), 0);
   await page.screenshot({ path: join(screenshotDir, '19c-territory-1800-handoff.png') });

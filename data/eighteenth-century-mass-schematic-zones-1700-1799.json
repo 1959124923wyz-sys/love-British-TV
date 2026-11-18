@@ -11,6 +11,7 @@
   "area_aggregation_forbidden": true,
   "approved_actual_control_polygons": 0,
   "sources": {
+    "UTRECHT1713-CAPE-BRETON": "https://www.heritage.nl.ca/articles/exploration/utrecht-treaty-1713.php",
     "NA": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782",
     "NA1763": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/",
     "INDIGENOUS": "https://www.nationalarchives.gov.uk/explore-the-collection/stories/anglo-indigenous-diplomacy-in-colonial-north-america/",
@@ -94,31 +95,333 @@
     },
     {
       "id": "CAPE_BRETON",
-      "title": "1758年后布雷顿角岛英军及殖民行政",
+      "title": "皇家岛／布雷顿角岛 · 条约与殖民行政",
       "kind": "administration",
       "periods": [
         {
+          "start_year": 1713,
+          "end_year": 1744,
+          "title": "皇家岛 · 乌得勒支和约确认法方权利",
+          "note": "1713年条约第十三条确认法国对布雷顿角岛的权利。法国称该岛为皇家岛，在岛上经营渔港并逐渐筑堡。该岛属于米克马克世居地域。",
+          "kind": "paper_claim"
+        },
+        {
+          "start_year": 1745,
+          "end_year": 1747,
+          "title": "皇家岛 · 路易堡及附近要塞失守",
+          "note": "1745年，新英格兰部队在英国舰队支援下攻占路易堡。降约涉及城内、要塞及附近有关地区，英军随后接收驻地。",
+          "kind": "paper_claim"
+        },
+        {
+          "start_year": 1748,
+          "end_year": 1748,
+          "title": "皇家岛 · 和约约定归还",
+          "note": "1748年《亚琛和约》议定归还路易堡与皇家岛，英国军队仍在城内，现场交接在次年进行。",
+          "kind": "paper_claim"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1757,
+          "title": "皇家岛 · 法国恢复殖民行政",
+          "note": "1749年7月23日英国将路易堡交还法国，法国恢复皇家岛的殖民行政和港口贸易。",
+          "kind": "paper_claim"
+        },
+        {
           "start_year": 1758,
-          "end_year": 1799
+          "end_year": 1762,
+          "title": "布雷顿角岛 · 英国接收殖民军政驻地",
+          "note": "1758年英国再次夺取路易堡，接收法国的殖民军政驻地。英方将路易堡文职居民及附近部分人口强制运往法国。",
+          "kind": "paper_claim"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1783,
+          "title": "布雷顿角岛 · 纳入英国新斯科舍",
+          "note": "1763年《巴黎和约》将布雷顿角等地割让给英国。英国王室同年把该岛纳入新斯科舍的殖民行政体系。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "布雷顿角岛 · 单设英国殖民地",
+          "note": "1784年英国从新斯科舍划出布雷顿角岛，设置单独殖民行政和政务委员会。殖民地没有民选议会。",
+          "kind": "administration"
         }
       ],
       "bbox": [
-        -61.7,
-        45.4,
-        -59.6,
-        47.1
+        -61.6,
+        45.55,
+        -59.82,
+        47.03
       ],
-      "source_key": "PARIS1763",
+      "source_key": "UTRECHT1713-CAPE-BRETON",
       "source_urls": [
-        "https://avalon.law.yale.edu/18th_century/paris763.asp"
+        "https://www.heritage.nl.ca/articles/exploration/utrecht-treaty-1713.php",
+        "https://parkscanadahistory.com/series/chs/18/chs18-1j.htm",
+        "https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/histoire-history",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303",
+        "https://parks.canada.ca/lhn-nhs/ns/louisbourg/info/plan/plan-2024",
+        "https://nouvelle-france.org/fra/item/details?id=11685",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://archives.novascotia.ca/maps/county/",
+        "https://loyalist.lib.unb.ca/record/records-cape-breton-separate-colony-1780-1844",
+        "https://archives.novascotia.ca/cape-breton-land/",
+        "https://geoappext.nrcan.gc.ca/arcgis/rest/services/FGP/TE/MapServer/8",
+        "https://open.canada.ca/data/dataset/cb568551-8893-11e0-a3fc-6cf049291510",
+        "https://open.canada.ca/en/open-government-licence-canada/"
       ],
-      "note": "1758攻陷路易堡，1763和约确认加拿大与附属海岛",
-      "geometry_precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+      "note": "布雷顿角岛先后由英法条约和英国行政文书列入殖民管辖。米克马克人在岛上有自己长期使用的海岸、河道和陆地。",
+      "geometry_precision": "source_backed_historical_outline",
       "precise_historic_border": false,
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.88,
+              45.65
+            ],
+            [
+              -60.86,
+              45.74
+            ],
+            [
+              -60.97,
+              45.76
+            ],
+            [
+              -61.19,
+              45.7
+            ],
+            [
+              -60.96,
+              45.88
+            ],
+            [
+              -61.14,
+              45.85
+            ],
+            [
+              -60.87,
+              45.93
+            ],
+            [
+              -60.78,
+              46.05
+            ],
+            [
+              -61.16,
+              45.93
+            ],
+            [
+              -60.95,
+              46.07
+            ],
+            [
+              -60.7,
+              46.1
+            ],
+            [
+              -60.47,
+              46.3
+            ],
+            [
+              -60.51,
+              46.32
+            ],
+            [
+              -60.65,
+              46.21
+            ],
+            [
+              -60.38,
+              46.59
+            ],
+            [
+              -60.42,
+              46.65
+            ],
+            [
+              -60.34,
+              46.82
+            ],
+            [
+              -60.52,
+              46.9
+            ],
+            [
+              -60.44,
+              47.03
+            ],
+            [
+              -60.5,
+              46.99
+            ],
+            [
+              -60.67,
+              47.02
+            ],
+            [
+              -60.75,
+              46.88
+            ],
+            [
+              -61.09,
+              46.61
+            ],
+            [
+              -61.06,
+              46.57
+            ],
+            [
+              -61.27,
+              46.29
+            ],
+            [
+              -61.49,
+              46.15
+            ],
+            [
+              -61.52,
+              46.1
+            ],
+            [
+              -61.45,
+              46.06
+            ],
+            [
+              -61.6,
+              46.02
+            ],
+            [
+              -61.52,
+              45.74
+            ],
+            [
+              -61.31,
+              45.55
+            ],
+            [
+              -61.25,
+              45.6
+            ],
+            [
+              -61.17,
+              45.56
+            ],
+            [
+              -60.93,
+              45.63
+            ],
+            [
+              -60.73,
+              45.57
+            ],
+            [
+              -60.44,
+              45.64
+            ],
+            [
+              -60.25,
+              45.73
+            ],
+            [
+              -60.24,
+              45.78
+            ],
+            [
+              -60.12,
+              45.79
+            ],
+            [
+              -60.19,
+              45.86
+            ],
+            [
+              -59.82,
+              45.94
+            ],
+            [
+              -59.99,
+              46.02
+            ],
+            [
+              -59.85,
+              46.11
+            ],
+            [
+              -59.94,
+              46.1
+            ],
+            [
+              -59.86,
+              46.18
+            ],
+            [
+              -60.1,
+              46.2
+            ],
+            [
+              -60.08,
+              46.23
+            ],
+            [
+              -60.15,
+              46.25
+            ],
+            [
+              -60.23,
+              46.21
+            ],
+            [
+              -60.23,
+              46.13
+            ],
+            [
+              -60.32,
+              46.15
+            ],
+            [
+              -60.25,
+              46.22
+            ],
+            [
+              -60.3,
+              46.26
+            ],
+            [
+              -60.82,
+              45.93
+            ],
+            [
+              -60.72,
+              45.89
+            ],
+            [
+              -60.45,
+              45.98
+            ],
+            [
+              -60.78,
+              45.78
+            ],
+            [
+              -60.78,
+              45.7
+            ],
+            [
+              -60.88,
+              45.65
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Main island land outline reused verbatim from the Canadian Atlas-based 1800 state. Treaty and Crown jurisdiction dates are recorded separately from local garrisons. No Indigenous concession or settlement coverage is inferred.",
+      "cross_century_feature_id": "cape-breton-separate-colony"
     },
     {
       "id": "QUEBEC_1763",
@@ -6526,6 +6829,195 @@
           44.741615
         ]
       }
+    },
+    {
+      "id": "PORT_DAUPHIN_SAINTE_ANNE",
+      "title": "圣安妮 · 多凡港",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1714,
+          "title": "圣安妮 · 法国选定海军基地",
+          "note": "法方1713年测绘圣安妮港，选为皇家岛的主要驻地之一，称多凡港。"
+        },
+        {
+          "start_year": 1715,
+          "end_year": 1718,
+          "title": "多凡港 · 早期法国驻地",
+          "note": "1715年前后法方一度选定这里为首府。港内修有兵营、火药库和官员驻所。"
+        },
+        {
+          "start_year": 1719,
+          "end_year": 1733,
+          "title": "多凡港 · 驻军留守与民居",
+          "note": "1719年皇家岛首府改设路易堡，法方在多凡港留下小队驻军和工匠。1722年当地石料和灰泥运往路易堡。1733年港图仍记录民居和渔业设施。"
+        }
+      ],
+      "source_urls": [
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=817",
+        "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBVVO",
+        "https://archives.novascotia.ca/pdf/library/NovaScotiaHistoricalReview-10-2-1990.pdf",
+        "https://ojs.library.dal.ca/NSM/article/download/4021/3680"
+      ],
+      "geometry_method": "Canadian Geographical Names Database CBVVO historic-site anchor, checked against the 1713 harbour chart and the dated 1715–17 and 1733 site plans. The last mapped stage denotes the last dated map evidence, not a closure date.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.541804,
+          46.291273
+        ]
+      }
+    },
+    {
+      "id": "LOUISBOURG_EARLY_PORT",
+      "title": "路易堡 · 法国早期港城",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1713,
+          "end_year": 1718,
+          "title": "路易堡 · 法国初设港站",
+          "note": "法国人1713年迁入皇家岛，在当时称为英吉利港的港湾建立聚落，发展渔业和补给。"
+        },
+        {
+          "start_year": 1719,
+          "end_year": 1743,
+          "title": "路易堡 · 筑城与行政驻地",
+          "note": "1719年路易堡成为皇家岛的行政中心，法方开始修筑城墙、棱堡和港防工事。港镇的渔业与海上贸易随之扩大。"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/histoire-history",
+        "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBUWT",
+        "https://archives.novascotia.ca/pdf/library/NovaScotiaHistoricalReview-10-2-1990.pdf",
+        "https://nouvelle-france.org/fra/item/details?id=41178"
+      ],
+      "geometry_method": "Canadian Geographical Names Database CBUWT. The 1718 plan locates the early settlement between the two ponds on the old town shore.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.982778,
+          45.891667
+        ]
+      }
+    },
+    {
+      "id": "LOUISBOURG_AFTER_DEMOLITION",
+      "title": "路易堡 · 拆防后遗址",
+      "kind": "historic_ruins",
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1767,
+          "title": "路易堡 · 拆防与驻军留守",
+          "note": "英军从1760年起拆毁城防，驻军继续留在当地，直到1768年撤出。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1768,
+          "end_year": 1799,
+          "title": "路易堡 · 英军撤离后的旧城遗址",
+          "note": "英军于1768年撤出。旧城与工事逐渐成为遗址，港湾一带仍有居民活动。"
+        }
+      ],
+      "source_urls": [
+        "https://parkscanadahistory.com/publications/louisbourg/preserving-louisbourg-1983.pdf",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303",
+        "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBUWT"
+      ],
+      "geometry_method": "Canadian Geographical Names Database CBUWT old town anchor, with the dated demolition and troop withdrawal from Parks Canada.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.982778,
+          45.891667
+        ]
+      }
+    },
+    {
+      "id": "LOUISBOURG_ROYAL_BATTERY",
+      "title": "路易堡 · 皇家炮台",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1724,
+          "end_year": 1727,
+          "title": "皇家炮台 · 法军开工",
+          "note": "1724年法方在港湾北岸开建皇家炮台。"
+        },
+        {
+          "start_year": 1728,
+          "end_year": 1731,
+          "title": "皇家炮台 · 主体基本就绪",
+          "note": "1728年主体已可使用，随后继续施工，至1732年定型。"
+        },
+        {
+          "start_year": 1732,
+          "end_year": 1744,
+          "title": "皇家炮台 · 法军驻守",
+          "note": "炮台控制港湾入口一带，两面炮墙各设十五个炮口。"
+        },
+        {
+          "start_year": 1745,
+          "end_year": 1748,
+          "title": "皇家炮台 · 英军接管",
+          "note": "1745年法军撤出炮台，攻方接手，用其中部分火炮射击路易堡城。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1757,
+          "title": "皇家炮台 · 法军恢复驻守",
+          "note": "1749年随路易堡交还法国，重新成为港防设施。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1759,
+          "title": "皇家炮台 · 英军再接管",
+          "note": "1758年法军在交出炮台前使其失去使用能力，炮台随后由英军接收。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1760,
+          "title": "皇家炮台 · 英军拆毁",
+          "note": "1760年英军拆毁炮台，旧址后来被居民用作取石地点。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=11172",
+        "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBVRU"
+      ],
+      "geometry_method": "Canadian Geographical Names Database CBVRU archaeology anchor; the successive battery footprints require a separate plan registration.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.97979,
+          45.909214
+        ]
+      }
     }
   ],
   "regional_zones": [
@@ -6679,6 +7171,354 @@
         44.7415799,
         -65.5194739,
         44.7419077
+      ],
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "LOUISBOURG_WALLED_TOWN",
+      "title": "路易堡 · 城防主体",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1744,
+          "end_year": 1744,
+          "title": "路易堡城垣 · 法军驻守",
+          "note": "法国从1719年开始修建城防，至1740年代形成由海岸、城垣和棱堡围合的主要城防。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1745,
+          "end_year": 1747,
+          "title": "路易堡城垣 · 英军接管",
+          "note": "1745年6月28日，法国守军向由英国舰队支援的新英格兰军队投降，交出城内工事、火炮与其他军用物资。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1748,
+          "end_year": 1748,
+          "title": "路易堡城垣 · 条约议定归还",
+          "note": "1748年《亚琛和约》议定归还路易堡。英军继续驻守，次年完成现场交接。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1757,
+          "title": "路易堡城垣 · 法军恢复驻防",
+          "note": "1749年7月23日，英国向法国交还路易堡。交接清册逐项记下现有火炮和弹药，并与1745年法方交出的物资核对。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1759,
+          "title": "路易堡城垣 · 英军再次接管",
+          "note": "1758年7月英军第二次围城后接管路易堡，法军成为战俘。城内文职居民及附近部分人口被强制运往法国。",
+          "kind": "wartime_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://jcb.lunaimaging.com/luna/servlet/detail/JCBMAPS~1~1~1352~115900929",
+        "https://www.servicehistorique.sga.defense.gouv.fr/les-tresors-du-shd/plan-de-louisbourg-1744",
+        "https://www.loc.gov/resource/g3424l.ct008143/",
+        "https://www.argomaps.org/maps/commonwealth%3Ahx11z0462",
+        "https://cha-shc.ca/wp-content/uploads/2025/03/Louisbourg_Terry-Crowley.pdf",
+        "https://publications.gc.ca/collections/collection_2016/rncan-nrcan/M46-140-eng.pdf",
+        "https://www.openstreetmap.org/#map=17/45.892/-59.984",
+        "https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/histoire-history",
+        "https://parcs.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/visite-tour",
+        "https://publications.gc.ca/collections/collection_2018/pc/R61-2-1-2-eng.pdf",
+        "https://nouvelle-france.org/fra/item/details?id=11685",
+        "https://www.loc.gov/item/2017593646/",
+        "https://parkscanadahistory.com/publications/louisbourg/preserving-louisbourg-1983.pdf",
+        "https://parkscanadahistory.com/series/chs/18/chs18-1j.htm",
+        "https://www.parkscanadahistory.com/series/chs/18/chs18-2h.htm"
+      ],
+      "geometry_method": "Manually traced the principal 1745 enceinte in the Gridley survey (LOC ct008143, first published as an engraving in this edition in 1757); checked against two independent French and British enclosure plans. Affine registration based on five archaeology or reconstructed landmarks, four physical structures (two tips of the same barracks); GCP fit RMS about 4 m, leave-one-out check 7–15 m, and independent reconstructed powder magazine about 11 m. East of the hospital the historic shoreline shows substantial erosion; the source plot and the fort core remain approximate in that sector. GCP coordinates © OpenStreetMap contributors (ODbL). Used from the 1744–45 pre-siege phase only, in conjunction with the 1744 Bellin and French archives plans.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.988907,
+              45.8935794
+            ],
+            [
+              -59.9890626,
+              45.893457
+            ],
+            [
+              -59.9892275,
+              45.8933892
+            ],
+            [
+              -59.9893483,
+              45.8932626
+            ],
+            [
+              -59.9891502,
+              45.8931564
+            ],
+            [
+              -59.9883183,
+              45.8927169
+            ],
+            [
+              -59.9878738,
+              45.8928535
+            ],
+            [
+              -59.9865882,
+              45.8914899
+            ],
+            [
+              -59.9867987,
+              45.8913448
+            ],
+            [
+              -59.986884,
+              45.8912821
+            ],
+            [
+              -59.9865372,
+              45.8906186
+            ],
+            [
+              -59.9854035,
+              45.8904785
+            ],
+            [
+              -59.9852184,
+              45.8905731
+            ],
+            [
+              -59.9850823,
+              45.8907368
+            ],
+            [
+              -59.9835295,
+              45.8901968
+            ],
+            [
+              -59.9836568,
+              45.8899106
+            ],
+            [
+              -59.982821,
+              45.8893589
+            ],
+            [
+              -59.9817285,
+              45.8895835
+            ],
+            [
+              -59.9814511,
+              45.8899344
+            ],
+            [
+              -59.9796725,
+              45.8900627
+            ],
+            [
+              -59.9795256,
+              45.8898215
+            ],
+            [
+              -59.9790786,
+              45.8897099
+            ],
+            [
+              -59.9788499,
+              45.8896778
+            ],
+            [
+              -59.9788343,
+              45.8897489
+            ],
+            [
+              -59.97848,
+              45.889833
+            ],
+            [
+              -59.9785385,
+              45.8899566
+            ],
+            [
+              -59.9786864,
+              45.8900958
+            ],
+            [
+              -59.9791128,
+              45.8902682
+            ],
+            [
+              -59.9791218,
+              45.891849
+            ],
+            [
+              -59.9785325,
+              45.8920267
+            ],
+            [
+              -59.9781473,
+              45.8922189
+            ],
+            [
+              -59.9780968,
+              45.8922858
+            ],
+            [
+              -59.9784867,
+              45.892624
+            ],
+            [
+              -59.9788508,
+              45.8925604
+            ],
+            [
+              -59.9789918,
+              45.8928932
+            ],
+            [
+              -59.9791279,
+              45.8932157
+            ],
+            [
+              -59.9787486,
+              45.8933163
+            ],
+            [
+              -59.9787389,
+              45.8937818
+            ],
+            [
+              -59.9791813,
+              45.8938491
+            ],
+            [
+              -59.9796989,
+              45.8938671
+            ],
+            [
+              -59.9798548,
+              45.8937107
+            ],
+            [
+              -59.9817251,
+              45.8943663
+            ],
+            [
+              -59.9816945,
+              45.8944404
+            ],
+            [
+              -59.9816732,
+              45.8945691
+            ],
+            [
+              -59.9821728,
+              45.894896
+            ],
+            [
+              -59.982532,
+              45.8948222
+            ],
+            [
+              -59.9829061,
+              45.8947452
+            ],
+            [
+              -59.9830301,
+              45.8947989
+            ],
+            [
+              -59.9835173,
+              45.8943709
+            ],
+            [
+              -59.9836516,
+              45.8943772
+            ],
+            [
+              -59.9837759,
+              45.8943969
+            ],
+            [
+              -59.9839186,
+              45.8940736
+            ],
+            [
+              -59.9840003,
+              45.8938646
+            ],
+            [
+              -59.9838941,
+              45.893536
+            ],
+            [
+              -59.9844726,
+              45.8934397
+            ],
+            [
+              -59.9848464,
+              45.8933967
+            ],
+            [
+              -59.9849762,
+              45.8933587
+            ],
+            [
+              -59.9857193,
+              45.8932286
+            ],
+            [
+              -59.9859188,
+              45.8931989
+            ],
+            [
+              -59.9868564,
+              45.8930288
+            ],
+            [
+              -59.9869929,
+              45.8933172
+            ],
+            [
+              -59.9870326,
+              45.8933317
+            ],
+            [
+              -59.9873208,
+              45.8933855
+            ],
+            [
+              -59.9877086,
+              45.8934414
+            ],
+            [
+              -59.9882453,
+              45.8935346
+            ],
+            [
+              -59.9887869,
+              45.893638
+            ],
+            [
+              -59.988907,
+              45.8935794
+            ]
+          ]
+        ]
+      },
+      "outline_only": true,
+      "bbox": [
+        -59.9893483,
+        45.8893589,
+        -59.9780968,
+        45.894896
       ],
       "geometry_precision": "source_backed_historical_outline"
     }

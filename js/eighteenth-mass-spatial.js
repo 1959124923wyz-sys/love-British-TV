@@ -72,7 +72,7 @@ function render(){
  for(const z of zones){
   const p=z.periods.find(p=>p.start_year<=year&&year<=p.end_year);
   const [w,s,e,n]=z.bbox,kind=p.kind||z.kind,c=color[kind];
-  const outline=['paper_claim','trade_influence','military_vicinity','diplomacy'].includes(kind);
+  const outline=z.outline_only===true||['paper_claim','trade_influence','military_vicinity','diplomacy'].includes(kind);
   const opacity=kind==='wartime_occupation'?.12:kind==='administration'||kind==='foreign_occupation'?.075:kind==='revenue'?.07:0;
   const style={pane:areaPane,renderer:polyRenderer,
    color:c,weight:kind==='wartime_occupation'?1.9:1.55,opacity:.84,
