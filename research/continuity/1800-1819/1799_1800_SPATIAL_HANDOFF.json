@@ -16,15 +16,15 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 302,
-    "linked_to_1800_public_geometry": 81,
+    "1799_prior_records_reviewed": 307,
+    "linked_to_1800_public_geometry": 87,
     "by_disposition": {
-      "anchor": 37,
+      "anchor": 43,
       "claim_evidence": 7,
       "continued": 17,
       "event_history": 7,
       "fiscal_evidence": 37,
-      "needs_boundary_or_site_review": 87,
+      "needs_boundary_or_site_review": 86,
       "network_evidence": 69,
       "occupation": 13,
       "political_relation_evidence": 14,
@@ -1638,8 +1638,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1763后圣劳伦斯河三河市殖民港",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "trois-rivieres-platon-barracks-1800"
+      ],
+      "note_zh": "以普拉通高地旧官邸及英军营房的具名地点接续。"
     },
     {
       "prior_id": "B36-Z033",
@@ -2651,6 +2654,56 @@
       "resolution": "anchor",
       "features_at_1800": [
         "fort-george-niagara-main-1800"
+      ]
+    },
+    {
+      "prior_id": "QUEBEC_UPPER_TOWN_CORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "魁北克上城 · 西墙与岬角",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "quebec-upper-town-core-1800"
+      ]
+    },
+    {
+      "prior_id": "MONTREAL_STONE_ENCEINTE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "蒙特利尔 · 石砌城垣",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "montreal-stone-enceinte-1800"
+      ]
+    },
+    {
+      "prior_id": "TROIS_RIVIERES_GOVERNORS_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "三河市 · 普拉通高地官邸及营房",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "trois-rivieres-platon-barracks-1800"
+      ]
+    },
+    {
+      "prior_id": "TROIS_RIVIERES_RECOLLETS_COMPOUND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "三河市 · 雷科莱修院与礼拜堂",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "trois-rivieres-recollets-compound-1800"
+      ]
+    },
+    {
+      "prior_id": "FORT_OSWEGATCHIE_LIGHTHOUSE_POINT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣献堡／奥斯韦加奇堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fort-oswegatchie-lighthouse-point-1800"
       ]
     }
   ]
