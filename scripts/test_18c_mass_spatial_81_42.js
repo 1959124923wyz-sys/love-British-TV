@@ -56,7 +56,7 @@ for(const [id,y,expected] of [
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
 const successors=JSON.parse(read('data/nineteenth-century-territorial-areas.geojson')).features;
-successors.push(...[2,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features));
+successors.push(...[2,3,7].flatMap(batch=>JSON.parse(read('data/nineteenth-century-territorial-areas-batch'+batch+'.geojson')).features));
 successors.push(...JSON.parse(read('data/nineteenth-century-spatial-1800-1819.geojson')).features);
 for(const id of ['GIBRALTAR_PENINSULA','MENORCA_ISLAND','CAPE_BRETON','NS_REVISED','UPPER_CANADA','LOWER_CANADA']){
  const row=z(id),successor=successors.find(f=>f.id===row.cross_century_feature_id);
@@ -83,6 +83,22 @@ for(const item of regional){
 }
 const atlantic=id=>regional.find(item=>item.id===id);
 const islandPhase=(id,year)=>atlantic(id).periods.find(p=>p.start_year<=year&&year<=p.end_year);
+a.equal(z('PENANG_ISLAND').superseded_by,'PENANG_MAIN_ISLAND_HISTORY');
+a.equal(islandPhase('PENANG_MAIN_ISLAND_HISTORY',1785).kind || atlantic('PENANG_MAIN_ISLAND_HISTORY').kind,'foreign_occupation');
+a.equal(islandPhase('PENANG_MAIN_ISLAND_HISTORY',1786).kind,'paper_claim');
+a.match(islandPhase('PENANG_MAIN_ISLAND_HISTORY',1791).note,/六千西班牙银元/);
+a.match(islandPhase('PENANG_CORNWALLIS_1786_POST',1791).note,/5月1日.*被奴役者.*债务人/);
+a.equal(islandPhase('PENANG_CORNWALLIS_OLD_STOCKADE',1797),undefined);
+a.equal(islandPhase('PENANG_CORNWALLIS_OLD_STOCKADE',1798).start_year,1798);
+a.match(islandPhase('PENANG_PRAI_KEDAH_SHORE',1799).note,/吉打治理/);
+const oldPenang=JSON.parse(read('data/eighteenth-century-b37-india-ocean.json'));
+for (const id of ['047','048','049','050']) {
+ const prevZone=oldPenang.zones.find(x=>x.id==='B37-I-Z'+id);
+ const prevSite=oldPenang.sites.find(x=>x.id==='B37-I-P'+id);
+ a(atlantic(prevZone.superseded_by));
+ a.equal(prevZone.superseded_by,prevSite.superseded_by);
+}
+
 for (const [oldId, replacementId] of [
  ['SYDNEY_COVE','WARRANE_SYDNEY_COVE'],
  ['PARRAMATTA','PARRAMATTA_CONVICT_HUT_ROWS'],
