@@ -1,6 +1,6 @@
 {
   "schema": "atlas-18c-to-19c-spatial-continuity-v1",
-  "scope": "1799年末在12个十八世纪地图数据集内仍有效的区域记录和明示社区核心。各批仅作点位代理的从属站点随其区域记录归类。",
+  "scope": "1799年末在12个十八世纪地图数据集内仍有效的区域记录和明示社区核心。各批仅作点位代理的从属站点随其区域记录归类。 后续批次补入有实测或史图的期末堡址。",
   "baseline_year": 1799,
   "next_year": 1800,
   "policy": {
@@ -16,15 +16,15 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 298,
-    "linked_to_1800_public_geometry": 75,
+    "1799_prior_records_reviewed": 302,
+    "linked_to_1800_public_geometry": 81,
     "by_disposition": {
-      "anchor": 31,
+      "anchor": 37,
       "claim_evidence": 7,
       "continued": 17,
       "event_history": 7,
       "fiscal_evidence": 37,
-      "needs_boundary_or_site_review": 89,
+      "needs_boundary_or_site_review": 87,
       "network_evidence": 69,
       "occupation": 13,
       "political_relation_evidence": 14,
@@ -828,8 +828,10 @@
       "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
       "name_zh": "1796—1799加拿大河岸Fort George英方修建",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fort-george-niagara-main-1800"
+      ]
     },
     {
       "prior_id": "B38-I-Z002",
@@ -1678,8 +1680,10 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1796英军交还尼亚加拉堡后在加拿大一侧筑防",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fort-george-niagara-main-1800"
+      ]
     },
     {
       "prior_id": "B36-Z047",
@@ -2607,6 +2611,46 @@
       "resolution": "anchor",
       "features_at_1800": [
         "moore-town-maroon-1800"
+      ]
+    },
+    {
+      "prior_id": "FORT_ONTARIO_THIRD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "安大略堡 · 第三期主堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "oswego-fort-ontario-third-1800"
+      ]
+    },
+    {
+      "prior_id": "FORT_FRONTENAC_BRITISH_BARRACKS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "弗龙特纳克堡旧址 · 英军营房",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "frontenac-tete-de-pont-1800"
+      ]
+    },
+    {
+      "prior_id": "FORT_NIAGARA_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "尼亚加拉堡 · 河口主堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fort-niagara-east-bank-1800"
+      ]
+    },
+    {
+      "prior_id": "FORT_GEORGE_NIAGARA_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "尼亚加拉河西岸 · 乔治堡主堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fort-george-niagara-main-1800"
       ]
     }
   ]

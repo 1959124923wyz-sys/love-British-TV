@@ -15,7 +15,7 @@ const coastalRights=L.layerGroup().addTo(map),regionalSites=L.layerGroup();
 const polyRenderer=L.svg({pane:areaPane}),pointRenderer=L.svg({pane:corePane});
 let meta=null,loaded=false,error=null,year=host.getYear();
  const reader=window.AtlasReaderCopy;
-const active=(x,y)=>x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
+const active=(x,y)=>!x.superseded_by&&x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
 const color={military:'#ae95df',settlement:'#8eccab',administration:'#a78bfa',wartime_occupation:'#e0a17c',paper_claim:'#e2ba79',
 revenue:'#dfb66c',trade_influence:'#73cbbf',military_vicinity:'#d0a8ff',foreign_occupation:'#7faab6',
  treaty_fishing:'#61c9ca',company_post:'#cbb2f5',conflict_damage:'#e2af7a',diplomacy:'#65c7b6',historic_ruins:'#c2b6a2'};
@@ -150,7 +150,8 @@ function validate(m){
  for(const [records,geometryType] of [[m.regional_zones,'Polygon'],[m.regional_sites,'Point'],[m.coastal_rights,'LineString']]){
   for(const x of records||[]){
    const g=x.geometry,kind=geometryType==='LineString'?'treaty_fishing':x.kind;
-   if(!x.id||ids.has(x.id)||g?.type!==geometryType||!knownKinds.has(kind)||kind!==x.kind||
+   const matchesGeometry=g?.type===geometryType||(geometryType==='Polygon'&&g?.type==='MultiPolygon');
+   if(!x.id||ids.has(x.id)||!matchesGeometry||!knownKinds.has(kind)||kind!==x.kind||
     !x.title||x.area_sqkm!==null||x.uncertain_line_dashed!==true||x.exclude_from_territorial_area_totals!==true||
     !x.source_urls?.length||x.source_urls.some(url=>!url?.startsWith('https://'))||
     !validPeriods(x.periods,geometryType==='LineString'?1903:1799)||
