@@ -437,6 +437,70 @@ async function verify() {
   await clickAreaAt(45.891667, -59.982778);
   await dossierTitle.filter({ hasText: '路易堡 · 英军撤离后的旧城遗址' }).waitFor();
 
+  await jump(1749);
+  await setView([45.847633, -64.262064, 15]);
+  await clickAreaAt(45.847633, -64.262064);
+  await dossierTitle.filter({ hasText: '博巴桑 · 阿卡迪亚村庄' }).waitFor();
+  await jump(1750);
+  await clickAreaAt(45.847633, -64.262064);
+  await dossierTitle.filter({ hasText: '博巴桑 · 焚村与居民外逃' }).waitFor();
+  await jump(1755);
+  await clickAreaAt(45.8474984, -64.2617181);
+  const lawrenceCard = page.locator('[data-overlap-id="18c:FORT_LAWRENCE_DITCH"]');
+  await lawrenceCard.waitFor();
+  assert.match(await lawrenceCard.textContent(), /拘押与越狱/);
+  assert.match(await lawrenceCard.textContent(), /10月13日/);
+  await jump(1756);
+  assert(!(await atlantic()).activeRegionalZones.includes('FORT_LAWRENCE_DITCH'));
+  await clickAreaAt(45.847762, -64.26171);
+  await dossierTitle.filter({ hasText: '劳伦斯堡 · 拆除' }).waitFor();
+  await setView([46.043211, -64.070743, 13]);
+  await clickAreaAt(46.043211, -64.070743);
+  await dossierTitle.filter({ hasText: '蒙克顿堡 · 英军撤出并焚毁' }).waitFor();
+
+  await jump(1755);
+  await setView([45.887, -64.246, 13]);
+  await clickAreaAt(45.887, -64.246);
+  await dossierTitle.filter({ hasText: '庞特阿布奥渡口一带 · 英军过河' }).waitFor();
+  await setView([45.866963, -64.371598, 13]);
+  await clickAreaAt(45.866963, -64.371598);
+  await dossierTitle.filter({ hasText: '韦斯特科克 · 英军焚毁民居' }).waitFor();
+
+  const cumberlandCenter = [45.8646248, -64.2914647];
+  await setView([...cumberlandCenter, 16]);
+  for (const [year, title] of [[1751, /法方驻守/], [1755, /接管与强制驱逐/], [1768, /主力撤走/],
+   [1776, /重新进驻/], [1784, /修缮后的英方主堡/], [1799, /看守驻地/]]) {
+   await jump(year);
+   const id = year < 1755 ? 'FORT_BEAUSEJOUR_FRENCH' :
+    year < 1784 ? 'FORT_BEAUSEJOUR_CUMBERLAND' : 'FORT_CUMBERLAND_REBUILT';
+   assert((await atlantic()).activeRegionalZones.includes(id));
+   await clickAreaAt(...cumberlandCenter);
+   const cumberland = page.locator('[data-overlap-id="18c:' + id + '"]');
+   await cumberland.waitFor();
+   assert.match(await cumberland.textContent(), title);
+   assert.equal(await page.locator('[data-overlap-id="18c:B36-Z003"]').count(), 0);
+   if (year === 1755) {
+    assert.match(await cumberland.textContent(), /四百余人/);
+    await cumberland.locator('.atlas-18c-overlap-title').hover();
+    assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+    await page.screenshot({ path: join(screenshotDir, '18c-chignecto-1755-cumberland.png') });
+   }
+  }
+  await jump(1800);
+  assert((await ids()).includes('fort-cumberland-1800'));
+  await clickAreaAt(...cumberlandCenter);
+  const nextCumberland = page.locator('[data-historic-overlap-id$=":fort-cumberland-1800"]');
+  await nextCumberland.waitFor();
+  assert.match(await nextCumberland.textContent(), /看守驻地/);
+  await jump(1809);
+  await clickAreaAt(...cumberlandCenter);
+  assert.match(await nextCumberland.textContent(), /英军再次进驻/);
+  await jump(1812);
+  await clickAreaAt(...cumberlandCenter);
+  assert.match(await nextCumberland.textContent(), /战争期间增兵/);
+  await jump(1835);
+  assert(!(await ids()).includes('fort-cumberland-1800'));
+
   await page.goto(root + '?year=1799', { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => document.querySelector('#workspace').dataset.atlasReady === 'true' &&
    window.eighteenthMassSpatial?.getAudit().loaded && window.eighteenthBatch37Spatial?.getAudit().loaded &&

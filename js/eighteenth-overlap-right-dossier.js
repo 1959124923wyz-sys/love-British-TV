@@ -31,7 +31,7 @@
   paper_claim:'法理声索',diplomacy:'外交与条约',
   resistance:'当地自主与抵抗',displacement:'强制迁移',
   coercion:'暴力与掠夺',battle:'战斗与撤离',
-  foreign_occupation:'其他国家控制'
+  foreign_occupation:'其他国家控制',historic_ruins:'历史遗址'
  };
  const rank={military:0,wartime_occupation:1,administration:2,
   resistance:3,foreign_occupation:4,battle:5,coercion:6,

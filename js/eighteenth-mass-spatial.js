@@ -16,10 +16,10 @@ const polyRenderer=L.svg({pane:areaPane}),pointRenderer=L.svg({pane:corePane});
 let meta=null,loaded=false,error=null,year=host.getYear();
  const reader=window.AtlasReaderCopy;
 const active=(x,y)=>x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
-const color={administration:'#a78bfa',wartime_occupation:'#e0a17c',paper_claim:'#e2ba79',
+const color={military:'#ae95df',settlement:'#8eccab',administration:'#a78bfa',wartime_occupation:'#e0a17c',paper_claim:'#e2ba79',
 revenue:'#dfb66c',trade_influence:'#73cbbf',military_vicinity:'#d0a8ff',foreign_occupation:'#7faab6',
  treaty_fishing:'#61c9ca',company_post:'#cbb2f5',conflict_damage:'#e2af7a',diplomacy:'#65c7b6',historic_ruins:'#c2b6a2'};
-const classText={administration:'殖民行政涉及区',wartime_occupation:'英军短期占领',
+const classText={military:'英方驻堡',settlement:'聚落',administration:'殖民行政涉及区',wartime_occupation:'英军短期占领',
 paper_claim:'法律/主权名义声索',revenue:'公司税收及财政权',trade_influence:'贸易、外交与间接影响',
 military_vicinity:'驻军活动地区',foreign_occupation:'其他国家管辖',
  treaty_fishing:'条约渔权',company_post:'公司商站',conflict_damage:'战时毁损',diplomacy:'外交与条约',historic_ruins:'堡垒遗迹'};
