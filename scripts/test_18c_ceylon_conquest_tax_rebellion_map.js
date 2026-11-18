@@ -17,9 +17,9 @@ A.equal(story.publication_status,'research_only');A.equal(story.publication_appr
 A.deepEqual(story.predecessor_17c_story_ids,['E6-T12']);A(published.topics.some(x=>x.id==='E6-T12'&&x.status==='published'));A(!published.topics.some(x=>x.id===story.id));
 A.equal(ds.schema,'atlas-18c-ceylon-british-coastal-invasion-kandy-tax-resistance-v1');
 A.equal(ds.editorial_status,'research_preview_not_published');
-A.equal(ds.events.length,20);A.equal(ds.sources.length,34);
+A.equal(ds.events.length,20);A.equal(ds.sources.length,35);
 A.equal(ds.sources.filter(x=>x.original_registry_key?.startsWith('B:')).length,9);
-A.equal(ds.sources.filter(x=>x.original_registry_key===null).length,25);
+A.equal(ds.sources.filter(x=>x.original_registry_key===null).length,26);
 A(ds.sources.every(x=>x.url.startsWith('https://')&&x.original_manuscript_personally_inspected===false));
 A.equal(story.sections.length,23);A.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),69);
 A.equal(ds.routes.length,0);A.equal(ds.places.length,0);A.equal(ds.colonial_polygons.length,0);
@@ -60,6 +60,8 @@ A.equal(E('1795-FORT-FREDERICK-CAPTURE').lng,81.2421);
 A(E('1795-COCHIN-DUTCH-FORT-CAPTURE').lng<E('1795-FORT-FREDERICK-CAPTURE').lng-4);
 A.equal(E('1795-KANDY-ALLIANCE-TREATY').lat,7.2930778);
 A(E('1795-KANDY-ALLIANCE-TREATY').control_state.includes('Independent Kandyan'));
+A.match(E('1796-KANDY-PEACE-INDEPENDENT').description,/国王最终未予批准/);
+A(E('1796-KANDY-PEACE-INDEPENDENT').source_ids.includes('18CCEY-KANDY-MILLS'));
 A(E('1796-COLOMBO-CAPITULATION').description.includes('15日'));
 A(E('1796-COLOMBO-FORT-ENTRY').description.includes('16日'));
 A(E('1796-GALLE-FORT-SURRENDER').description.includes('23日'));
@@ -85,4 +87,4 @@ A(reader.includes("storyMeta.has('E18-T24-CEYLON-COASTAL-INVASION-KANDY-RESISTAN
 A(html.includes('18c16-ceylon-20261110'));
 A(!reader.includes('story-reading-toolbar')&&!reader.includes('story-toc')&&!reader.includes('story-reading-progress-meter')&&!reader.includes('data-story-nav'));
 A(!css.includes('.story-reading-toolbar')&&!css.includes('.story-toc'));
-console.log('PASS T24 16th story: 20 dated real events, 34 sources, 23 chapters 69 paragraphs / 20 links; seven editor15 originals and 9 B keys preserved; Cochin India not Sri Lanka, Kandy independent; 10 modern heritage site references, 0 invented territorial polygons or deaths.');
+console.log('PASS T24 16th story: 20 dated real events, 35 sources, 23 chapters 69 paragraphs / 20 links; seven editor15 originals and 9 B keys preserved; Cochin India not Sri Lanka, Kandy independent; 10 modern heritage site references, 0 invented territorial polygons or deaths.');

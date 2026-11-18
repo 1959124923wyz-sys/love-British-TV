@@ -1116,8 +1116,45 @@ async function verify() {
    assert((await atlantic()).activeRegionalSites.includes(id));
    await setView([...point, 15]);
    await clickAreaAt(...point);
+   const fortCard = page.locator('[data-overlap-id="18c:' + id + '"]');
+   if (await fortCard.count()) await fortCard.locator('summary').click();
    assert.match(await page.locator('#dossierBody').textContent(), date);
   }
+
+  await jump(1789);
+  await setView([7.52272, 80.721304, 9]);
+  await clickAreaAt(7.52272, 80.721304);
+  assert.match(await page.locator('[data-overlap-id="18c:CEYLON_KANDY_1766"]').textContent(), /1789年荷方所绘王境/);
+
+  await jump(1795);
+  await setView([7.71186005, 81.70217922, 17]);
+  await clickAreaAt(7.71186005, 81.70217922);
+  assert.match(await page.locator('[data-overlap-id="18c:CEYLON_BATTICALOA_FORT"]').textContent(), /9月18日英军接收/);
+  assert(await page.locator('[data-overlap-id="18c:CEYLON_DUTCH_COAST_1766"]').isVisible());
+
+  const galle = [6.02815475, 80.2184438];
+  await jump(1796);
+  await setView([...galle, 17]);
+  await clickAreaAt(...galle);
+  assert.match(await page.locator('[data-overlap-id="18c:CEYLON_GALLE_FORTIFIED_TOWN"]').textContent(), /2月23日实际交接/);
+  const galleWarehouse = page.locator('[data-overlap-id="18c:CEYLON_GALLE_DUTCH_WAREHOUSE"]');
+  assert.match(await galleWarehouse.textContent(), /仓库/);
+  await galleWarehouse.locator('.atlas-18c-overlap-title').hover();
+  assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+  await jump(1799);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...galle);
+  await page.locator('[data-historic-overlap-id$=":ceylon-galle-fortified-town-1800"]').waitFor();
+  await page.locator('[data-historic-overlap-id$=":ceylon-galle-dutch-warehouse-1800"]').waitFor();
+
+  await jump(1802);
+  assert((await ids()).includes('19CT7-kandy-kingdom-1800'));
+  await setView([7.878892, 81.34865716, 9]);
+  await clickAreaAt(7.878892, 81.34865716);
+  const ceylonAmiens = page.locator('[data-historic-overlap-id$=":19CT7-ceylon-maritime-1802"]');
+  await ceylonAmiens.locator('summary').click();
+  assert.match(await ceylonAmiens.textContent(), /亚眠和约.*第五条/);
 
   const charleston = [32.7756125, -79.93197257];
   const charlestonTown = page.locator('[data-overlap-id="18c:CHARLESTON_OLD_TOWN_1780"]');

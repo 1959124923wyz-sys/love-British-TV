@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 448,
-    "linked_to_1800_public_geometry": 257,
+    "1799_prior_records_reviewed": 478,
+    "linked_to_1800_public_geometry": 287,
     "by_disposition": {
-      "anchor": 158,
+      "anchor": 174,
       "claim_evidence": 7,
-      "continued": 64,
+      "continued": 79,
       "event_history": 7,
       "fiscal_evidence": 37,
       "needs_boundary_or_site_review": 68,
       "network_evidence": 67,
       "occupation": 9,
       "political_relation_evidence": 14,
-      "renewed_scope": 17
+      "renewed_scope": 16
     }
   },
   "records": [
@@ -586,50 +586,6 @@
       "prior_record_kind": "trade_influence",
       "resolution": "network_evidence",
       "features_at_1800": []
-    },
-    {
-      "prior_id": "B37-I-Z056",
-      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
-      "name_zh": "1796 Colombo旧荷兰港英方驻地",
-      "prior_record_kind": "military",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "ceylon-colombo-government"
-      ],
-      "notes": "保留科伦坡政务驻地。"
-    },
-    {
-      "prior_id": "B37-I-Z057",
-      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
-      "name_zh": "1796 Galle旧荷兰沿海堡垒",
-      "prior_record_kind": "military",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "ceylon-galle-fort"
-      ],
-      "notes": "保留加勒要塞。"
-    },
-    {
-      "prior_id": "B37-I-Z058",
-      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
-      "name_zh": "1796 Jaffna旧荷兰沿海行政港",
-      "prior_record_kind": "administration",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "jaffna-fort-1800"
-      ]
-    },
-    {
-      "prior_id": "B37-I-Z060",
-      "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
-      "name_zh": "1796—1799 Kandy内陆王国仍自主",
-      "prior_record_kind": "resistance",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "ceylon-kandy-court",
-        "19CT7-kandy-kingdom-1800"
-      ],
-      "notes": "独立康提王国的外廓与王廷驻地均可查询。"
     },
     {
       "prior_id": "B38-H-Z004",
@@ -2252,53 +2208,6 @@
       "prior_record_kind": "wartime_occupation",
       "resolution": "needs_boundary_or_site_review",
       "features_at_1800": []
-    },
-    {
-      "prior_id": "CEYLON_JAFFNA",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "1796年后锡兰贾夫纳沿海英国公司管辖",
-      "prior_record_kind": "administration",
-      "resolution": "renewed_scope",
-      "features_at_1800": [
-        "19CT7-ceylon-maritime-1800"
-      ],
-      "notes": "锡兰沿海有历史外廓，贾夫纳另有单独的堡垒点。"
-    },
-    {
-      "prior_id": "CEYLON_COLOMBO",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "1796年后锡兰科伦坡西岸英国公司管辖",
-      "prior_record_kind": "administration",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "ceylon-colombo-government",
-        "19CT7-ceylon-maritime-1800"
-      ],
-      "notes": "沿海行政外廓和驻地同时有呈现。"
-    },
-    {
-      "prior_id": "CEYLON_GALLE",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "1796年后锡兰加勒南岸英国公司管辖",
-      "prior_record_kind": "administration",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "ceylon-galle-fort",
-        "19CT7-ceylon-maritime-1800"
-      ],
-      "notes": "沿海行政外廓和驻地同时有呈现。"
-    },
-    {
-      "prior_id": "CEYLON_TRINCOMALEE",
-      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-      "name_zh": "1796年后锡兰亭可马里东海岸英国公司控制",
-      "prior_record_kind": "administration",
-      "resolution": "anchor",
-      "features_at_1800": [
-        "ceylon-trincomalee-frederick",
-        "19CT7-ceylon-maritime-1800"
-      ],
-      "notes": "沿海行政外廓和驻地同时有呈现。"
     },
     {
       "prior_id": "PENANG_ISLAND",
@@ -4184,6 +4093,386 @@
       "resolution": "continued",
       "features_at_1800": [
         "barbados-bridgetown-high-street-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_BRITISH_MARITIME_ESTATES",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "锡兰 · 英方接管原荷属沿岸",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "19CT7-ceylon-maritime-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_KANDY_INLAND_KINGDOM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "康提王国 · 英占沿岸后的内陆",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "19CT7-kandy-kingdom-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_KALPITIYA_VOC_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡尔皮蒂亚 · 荷兰旧堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-kalpitiya-voc-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_KANDY_ROYAL_COURT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "康提 · 王宫与王廷",
+      "prior_record_kind": "diplomacy",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-kandy-court"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_PUTTALAM_SALT_LAGOON",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "普塔勒姆 · 潟湖盐业与通海交涉",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-puttalam-salt-lagoon-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_ARIPPU_PEARL_FISHERY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿里普 · 珍珠渔场岸站",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-arippu-pearl-fishery-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_COLOMBO_DUTCH_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科伦坡 · 荷兰旧堡城",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-colombo-dutch-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_COLOMBO_DUTCH_HOSPITAL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科伦坡旧堡城 · 荷兰医院",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-colombo-dutch-hospital-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_GALLE_FORTIFIED_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加勒 · 有墙旧城与要塞",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-galle-fortified-town-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_GALLE_DUTCH_WAREHOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加勒旧城要塞 · 荷兰港务仓库",
+      "prior_record_kind": "trade_influence",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-galle-dutch-warehouse-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_GALLE_REFORMED_CHURCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加勒旧城要塞 · 荷兰归正会教堂",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-galle-reformed-church-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_MATARA_STAR_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马特勒 · 范埃克星堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-matara-star-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_MATARA_REFORMED_CHURCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马特勒主堡 · 荷兰归正会教堂",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-matara-reformed-church-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_COLOMBO_DELFT_GATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科伦坡旧堡城 · 代尔夫特门",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-colombo-delft-gate-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_COLOMBO_GALLE_GATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科伦坡旧堡城 · 加勒门",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-colombo-galle-gate-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_COLOMBO_WATER_GATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科伦坡旧堡城 · 水门",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-colombo-water-gate-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_COLOMBO_DEN_BRIEL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科伦坡旧堡城 · 登布里尔棱堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-colombo-den-briel-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_GALLE_OLD_GATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加勒旧城要塞 · 旧港门",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-galle-old-gate-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_GALLE_STAR_BASTION",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加勒旧城要塞 · 星棱堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-galle-star-bastion-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_GALLE_BLACK_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加勒旧城要塞 · 黑堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-galle-black-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_NEGOMBO_DUTCH_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "尼甘布 · 荷兰旧堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-negombo-dutch-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_KALUTARA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡卢特勒 · 卡卢河河口旧堡址",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-kalutara-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_MATARA_MAIN_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马特勒 · 河口主堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-matara-main-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_TANGALLE_DUTCH_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "坦加勒 · 荷兰旧堡参照",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-tangalle-dutch-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_MATARA_MAIN_FORT_WALL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马特勒主堡 · 陆侧旧墙",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-matara-main-fort-wall-1800"
+      ]
+    },
+    {
+      "prior_id": "JAFFNA_FORT_1792",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "贾夫纳堡 · 五棱堡主墙",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-jaffna-fort-1792-1800"
+      ]
+    },
+    {
+      "prior_id": "MANNAR_FORT_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马纳尔堡 · 四棱堡主墙",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-mannar-fort-main-1800"
+      ]
+    },
+    {
+      "prior_id": "HAMMENHIEL_FORT_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈门希尔堡 · 潟湖入口",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-hammenhiel-fort-main-1800"
+      ]
+    },
+    {
+      "prior_id": "JAFFNA_FORT_ADMIN_CORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "贾夫纳堡 · 沿海驻地",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "jaffna-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "JAFFNA_TOWN_TRADE_AND_TAX",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "贾夫纳旧港城 · 贸易与税务",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-jaffna-town-trade-tax-1800"
+      ]
+    },
+    {
+      "prior_id": "KAYTS_URATARAI_OLD_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "凯茨 · 乌拉塔赖旧堡",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-kayts-uratarai-old-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "NALLUR_KANDASWAMY_KOVIL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "纳卢尔坎达斯瓦米寺",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-jaffna-nallur-kovil-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_BATTICALOA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拜蒂克洛 · 1721年要塞外墙",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ceylon-batticaloa-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_BATTICALOA_PULIYANTIVU",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拜蒂克洛 · 普利扬蒂武港镇",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-batticaloa-puliyantivu-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_KOTTIYAR_MUTTUR",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科蒂亚尔 · 穆图尔港镇",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-kottiyar-muttur-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_KALLAR_DYKE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡拉尔 · 挡盐堤所在村",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-kallar-dyke-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_THAMPALAKAMAM_KONESWARAM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "坦帕拉卡曼 · 阿迪科内斯瓦拉姆庙",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-thampalakamam-koneswaram-1800"
+      ]
+    },
+    {
+      "prior_id": "CEYLON_IRAKKAMAM_TANK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "伊拉卡曼 · 蓄灌水库",
+      "prior_record_kind": "revenue",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ceylon-irakkamam-tank-1800"
       ]
     }
   ]

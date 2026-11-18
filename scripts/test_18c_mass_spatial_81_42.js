@@ -52,7 +52,6 @@ for(const [id,y,expected] of [
  ['PONDICHERRY_BRITISH',1761,true],['PONDICHERRY_BRITISH',1765,false],
  ['PORT_EGMONT',1773,true],['PORT_EGMONT',1774,false],
  ['FALKLAND_PAPER',1774,true],
- ['CEYLON_COLOMBO',1795,false],['CEYLON_COLOMBO',1796,true],
  ['NSW_CROWN_CLAIM',1787,false],['NSW_CROWN_CLAIM',1788,true],
  ['MENORCA_ISLAND',1707,false],['MENORCA_ISLAND',1708,true],['MENORCA_ISLAND',1756,true],['MENORCA_ISLAND',1798,true],
 ])a.equal(isOn(z(id),y),expected,id+' '+y);
@@ -84,6 +83,28 @@ for(const item of regional){
 }
 const atlantic=id=>regional.find(item=>item.id===id);
 const islandPhase=(id,year)=>atlantic(id).periods.find(p=>p.start_year<=year&&year<=p.end_year);
+for(const id of ['CEYLON_JAFFNA','CEYLON_COLOMBO','CEYLON_GALLE','CEYLON_TRINCOMALEE']){
+ a.equal(z(id).superseded_by,'CEYLON_BRITISH_MARITIME_ESTATES');
+}
+for(const id of ['CEYLON_DUTCH_COAST_1766','CEYLON_KANDY_1766']){
+ a.equal(islandPhase(id,1765),undefined);
+ a(islandPhase(id,1766));
+ a(islandPhase(id,1795));
+ a.equal(islandPhase(id,1796),undefined);
+}
+for(const id of ['CEYLON_BRITISH_MARITIME_ESTATES','CEYLON_KANDY_INLAND_KINGDOM']){
+ a.equal(islandPhase(id,1795),undefined);
+ a(islandPhase(id,1796));
+ a(islandPhase(id,1799));
+}
+a.match(islandPhase('CEYLON_COLOMBO_DUTCH_FORT',1796).note,/2月15日|15日/);
+a.match(islandPhase('CEYLON_GALLE_FORTIFIED_TOWN',1796).note,/23日/);
+a.match(islandPhase('JAFFNA_FORT_1792',1795).note,/28日/);
+a.match(islandPhase('CEYLON_BATTICALOA_FORT',1795).note,/18日/);
+const maritimeAfterAmiens=successors.find(feature=>feature.id==='19CT7-ceylon-maritime-1802');
+const maritimeBeforeAmiens=successors.find(feature=>feature.id==='19CT7-ceylon-maritime-1800');
+a.match(maritimeAfterAmiens.properties.summary_zh,/亚眠和约.*第五条/);
+a.deepEqual(maritimeAfterAmiens.geometry,maritimeBeforeAmiens.geometry);
 for(const id of ['GRENADA','DOMINICA','GUADELOUPE','TRINIDAD_1797'])a(z(id).superseded_by);
 for(const [id,year,kind] of [
  ['GRENADA_ISLAND_MAIN',1762,'wartime_occupation'],['GRENADA_ISLAND_MAIN',1779,'foreign_occupation'],

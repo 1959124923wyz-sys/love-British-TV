@@ -44,8 +44,10 @@ try:
  (1784,[],['EAST_FLORIDA','WEST_FLORIDA'],'1784-florida-handover'),
  (1788,['NSW_CROWN_CLAIM','SYDNEY_COVE','NORFOLK_SETTLEMENT'],['PORT_EGMONT'],'1788-pacific'),
  (1791,['UPPER_CANADA','LOWER_CANADA','NS_REVISED'],['QUEBEC_1774'],'1791-canada'),
- (1796,['CEYLON_COLOMBO','CEYLON_GALLE','CORSICA_1794'],['TRINIDAD_1797'],'1796-indian-ocean'),
- (1797,['CEYLON_JAFFNA'],['ELBA_1796','TRINIDAD_1797'],'1797-caribbean'),
+ (1789,[],[],'1789-kandy-and-dutch-coast'),
+ (1795,[],['CEYLON_JAFFNA','CEYLON_TRINCOMALEE'],'1795-ceylon-first-surrenders'),
+ (1796,['CORSICA_1794'],['CEYLON_COLOMBO','CEYLON_GALLE','TRINIDAD_1797'],'1796-indian-ocean'),
+ (1797,[],['ELBA_1796','TRINIDAD_1797'],'1797-caribbean'),
  (1799,['MYSORE_1799_PARTITION','SERINGAPATAM_ZONE','PENANG_ISLAND'],['CORSICA_1794'],'1799-asia'),
  ]
  for y,show,hide,name in cases:
@@ -58,6 +60,14 @@ try:
   if y==1779:assert {'SAVANNAH_TOWN_1778','ST_LUCIA_MAIN_ISLAND'}.issubset(a['activeRegionalZones']),a
   if y in (1759,1763):assert 'GUADELOUPE_MAIN_ISLANDS' in a['activeRegionalZones'],a
   if y in (1783,1784):assert {'GRENADA_ISLAND_MAIN','DOMINICA_ISLAND_MAIN'}.issubset(a['activeRegionalZones']),a
+  if y in (1789,1795):
+   assert {'CEYLON_DUTCH_COAST_1766','CEYLON_KANDY_1766'}.issubset(a['activeRegionalZones']),a
+   assert 'CEYLON_BRITISH_MARITIME_ESTATES' not in a['activeRegionalZones'],a
+  if y==1795:
+   assert {'JAFFNA_FORT_1792','CEYLON_BATTICALOA_FORT'}.issubset(a['activeRegionalZones']),a
+  if y==1796:
+   assert {'CEYLON_BRITISH_MARITIME_ESTATES','CEYLON_KANDY_INLAND_KINGDOM','CEYLON_COLOMBO_DUTCH_FORT','CEYLON_GALLE_FORTIFIED_TOWN'}.issubset(a['activeRegionalZones']),a
+   assert {'CEYLON_DUTCH_COAST_1766','CEYLON_KANDY_1766'}.isdisjoint(a['activeRegionalZones']),a
   if y==1797:
    assert {'TRINIDAD_MAIN_ISLAND','TRINIDAD_PORT_OF_SPAIN_CORE'}.issubset(a['activeRegionalZones']),a
    assert 'TRINIDAD_CHAGUARAMAS_ANCHORAGE' in a['activeRegionalLines'],a
@@ -84,7 +94,7 @@ try:
  d.get('http://127.0.0.1:8765/?year=1762')
  wait.until(lambda x:x.find_element(By.ID,'bigYear').text=='1762')
  wait.until(lambda _: (js('return window.eighteenthMassSpatial?.getAudit()?.loaded') is True))
- print('PASS 18C batch35 81 supplementary polygon areas,42 city cores, 13 year-sample dates, legend control, dossier, public availability and 16C regression')
+ print('PASS 18C batch35 81 supplementary polygon areas,42 city cores, 15 year-sample dates, legend control, dossier, public availability and 16C regression')
 except Exception:
  shot('FAILED')
  raise
