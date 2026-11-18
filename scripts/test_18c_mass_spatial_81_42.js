@@ -101,6 +101,23 @@ a.match(islandPhase('CEYLON_COLOMBO_DUTCH_FORT',1796).note,/2月15日|15日/);
 a.match(islandPhase('CEYLON_GALLE_FORTIFIED_TOWN',1796).note,/23日/);
 a.match(islandPhase('JAFFNA_FORT_1792',1795).note,/28日/);
 a.match(islandPhase('CEYLON_BATTICALOA_FORT',1795).note,/18日/);
+a.equal(z('MYSORE_1799_PARTITION').superseded_by,'MYSORE_WODEYAR_1799');
+a.equal(z('SERINGAPATAM_ZONE').superseded_by,'SERINGAPATAM_WALLED_CITY_1799');
+a.equal(z('HYDERABAD_INFLUENCE').superseded_by,'MYSORE_HYDERABAD_SUBSIDIARY');
+a(islandPhase('MYSORE_TIPU_RETAINED_1792',1792));
+a(islandPhase('MYSORE_TIPU_RETAINED_1792',1798));
+a.equal(islandPhase('MYSORE_TIPU_RETAINED_1792',1799),undefined);
+a.equal(islandPhase('MYSORE_WODEYAR_1799',1798),undefined);
+a.match(islandPhase('MYSORE_WODEYAR_1799',1799).note,/6月30日.*7月8日/);
+a.equal(islandPhase('MYSORE_PESHWA_PROPOSED_1799',1799).kind || atlantic('MYSORE_PESHWA_PROPOSED_1799').kind,'paper_claim');
+a.equal(atlantic('MYSORE_PESHWA_PROPOSED_1799').cross_century_feature_id,undefined);
+for(const id of ['mysore-nizam-cession-1792-1800','mysore-nizam-cession-1799-1800']){
+ const later=successors.find(f=>f.id===id);
+ a.match(later.properties.year_stages[0].title,/10月12日转让公司/);
+}
+a.match(islandPhase('MYSORE_BANGALORE_PETTAH',1791).note,/财物|织物|民居/);
+a.match(islandPhase('SERINGAPATAM_WALLED_CITY_1799',1799).note,/5月4日|掠夺/);
+a.equal(atlantic('SERINGAPATAM_WEST_WALL_BREACH').geometry.type,'LineString');
 const maritimeAfterAmiens=successors.find(feature=>feature.id==='19CT7-ceylon-maritime-1802');
 const maritimeBeforeAmiens=successors.find(feature=>feature.id==='19CT7-ceylon-maritime-1800');
 a.match(maritimeAfterAmiens.properties.summary_zh,/亚眠和约.*第五条/);

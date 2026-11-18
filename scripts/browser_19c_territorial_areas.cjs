@@ -1156,6 +1156,34 @@ async function verify() {
   await ceylonAmiens.locator('summary').click();
   assert.match(await ceylonAmiens.textContent(), /亚眠和约.*第五条/);
 
+  await jump(1792);
+  const mysore1792 = await atlantic();
+  for (const id of ['MYSORE_TIPU_RETAINED_1792','MYSORE_COMPANY_BARAMAHAL_1792','MYSORE_MARATHA_1792','MYSORE_NIZAM_1792']) {
+   assert(mysore1792.activeRegionalZones.includes(id));
+  }
+  assert(!mysore1792.activeRegionalZones.includes('MYSORE_WODEYAR_1799'));
+
+  const oldCapital = [12.4224178, 76.6889206];
+  await jump(1799);
+  await setView([...oldCapital, 17]);
+  await clickAreaAt(...oldCapital);
+  assert.match(await page.locator('[data-overlap-id="18c:SERINGAPATAM_WALLED_CITY_1799"]').textContent(), /5月4日失守与掠夺/);
+  assert(await page.locator('[data-overlap-id="18c:SERINGAPATAM_ISLAND"]').isVisible());
+  const mosque = page.locator('[data-overlap-id="18c:SERINGAPATAM_MASJID_E_ALA"]');
+  await mosque.locator('.atlas-18c-overlap-title').hover();
+  assert((await page.locator('.atlas-18c-overlap-glow').count()) > 0);
+  assert.equal(await page.locator('[data-overlap-id="18c:MYSORE_WODEYAR_1799"]').count(), 0);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...oldCapital);
+  for (const id of ['seringapatam-island-1800','seringapatam-walled-city-1799-1800','seringapatam-masjid-e-ala-1800']) {
+   assert(await page.locator('[data-historic-overlap-id$=":' + id + '"]').isVisible());
+  }
+  await setView([14.724348, 77.327359, 9]);
+  await clickAreaAt(14.724348, 77.327359);
+  const mysoreCession = page.locator('[data-historic-overlap-id$=":mysore-nizam-cession-1799-1800"]');
+  assert.match(await mysoreCession.textContent(), /10月12日转让公司/);
+
   const charleston = [32.7756125, -79.93197257];
   const charlestonTown = page.locator('[data-overlap-id="18c:CHARLESTON_OLD_TOWN_1780"]');
   for (const [year, title] of [[1780, /5月12日英军占城/], [1782, /12月14日英军撤离/]]) {
