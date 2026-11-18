@@ -275,7 +275,7 @@
       "lat": 7.2930778,
       "lng": 80.63505,
       "representative_map_point": true,
-      "geography_label": "联合国UNGEGN/斯里兰卡测绘局Kandy现代城市中心，独立康提王国无核实1795疆界",
+      "geography_label": "联合国UNGEGN/斯里兰卡测绘局Kandy现代城市中心，近似王境另见区域图层",
       "geo_precision": "modern_named_heritage_or_city_reference",
       "geolocation_limit_zh": "现代幸存遗址或地名点不能充当1795—1797年堡垒防区、独立康提王国边界、部队行军路线或沿海税区地图。",
       "source_ids": [
@@ -421,8 +421,8 @@
       "visible_from": 1796,
       "date_label": "1796年",
       "name": "英国部队在Negombo附近登陆，逼近科伦坡",
-      "description": "英国对荷兰在锡兰沿海的军事占领于1796年2月向西南推进。关于麦考瑞的历史资料记录2月5日在Negombo登陆，随后英军向科伦坡前进。",
-      "short_description": "英国对荷兰在锡兰沿海的军事占领于1796年2月向西南推进。关于麦考瑞的历史资料记录2月5日在Negombo登陆，随后英军向科伦坡前进。",
+      "description": "麦考瑞日记记载，1796年2月4日晚，马德拉斯先遣部队在尼甘布登陆、进入荷方撤出的堡镇。5日马德拉斯与孟买部队完成登陆，随后向科伦坡推进。",
+      "short_description": "麦考瑞日记记载，1796年2月4日晚，马德拉斯先遣部队在尼甘布登陆、进入荷方撤出的堡镇。5日马德拉斯与孟买部队完成登陆，随后向科伦坡推进。",
       "category": "ceylon_british_military_coastal_conquest",
       "icon_code": "MIL",
       "lat": 7.2083,
@@ -433,6 +433,7 @@
       "geolocation_limit_zh": "现代幸存遗址或地名点不能充当1795—1797年堡垒防区、独立康提王国边界、部队行军路线或沿海税区地图。",
       "source_ids": [
         "18CCEY-MQ-BG",
+        "18CCEY-MQ-DIARY",
         "18CCEY-GEO-NEGOMBO"
       ],
       "certainty": "T24_editor15_source_keys_plus_primary_accounts_and_peer_review",
@@ -459,7 +460,7 @@
       "research_provenance_kind": "independent_source_crosschecked_T24_subevent",
       "research_merge_review": "Additional historic episode independent from 315 original IDs.",
       "historical_context_limit": "Cochin is on mainland India, not Ceylon; treaty with Kandy does not conquer it; fiscal coercion and British violence not same as unverified massacre deaths.",
-      "control_state": "British advance landing toward Colombo before 15 February surrender"
+      "control_state": "Advance party occupies Negombo on 4 February; disembarkation of both forces completed on 5 February"
     },
     {
       "id": "E18C-CEY-1796-KANDY-PEACE-INDEPENDENT",
@@ -468,20 +469,21 @@
       "end_year": 1796,
       "visible_from": 1796,
       "date_label": "1796年",
-      "name": "康提王国与英国另有正式和平条约，内陆王权延续",
-      "description": "英国在锡兰沿海扩大占领之际，1909年印度政府条约汇编还记录1796年2月12日英国与康提国王达成正式和平条约。双方互为政治交涉对象。",
-      "short_description": "英国在锡兰沿海扩大占领之际，1909年印度政府条约汇编还记录1796年2月12日英国与康提国王达成正式和平条约。双方互为政治交涉对象。",
+      "name": "马德拉斯签出协定，康提国王最终未批准",
+      "description": "1796年2月12日，英属印度政府在马德拉斯签署与康提使节谈妥的修订协定，涉及盐鱼补给与通商。康提国王最终未予批准，康提继续作为独立王国与英国交涉。",
+      "short_description": "1796年2月12日，英属印度政府在马德拉斯签署与康提使节谈妥的修订协定，涉及盐鱼补给与通商。康提国王最终未予批准，康提继续作为独立王国与英国交涉。",
       "category": "ceylon_independent_kingdom_diplomacy",
       "icon_code": "DIP",
       "lat": 7.2930778,
       "lng": 80.63505,
       "representative_map_point": true,
-      "geography_label": "联合国UNGEGN/斯里兰卡测绘局Kandy现代城市中心，独立康提王国无核实1795疆界",
+      "geography_label": "联合国UNGEGN/斯里兰卡测绘局Kandy现代城市中心，近似王境另见区域图层",
       "geo_precision": "modern_named_heritage_or_city_reference",
       "geolocation_limit_zh": "现代幸存遗址或地名点不能充当1795—1797年堡垒防区、独立康提王国边界、部队行军路线或沿海税区地图。",
       "source_ids": [
         "18CCEY-IND-GOV-TREATIES",
         "18CCEY-KANDY-ACADEMIC",
+        "18CCEY-KANDY-MILLS",
         "18CCEY-UN-KANDY"
       ],
       "certainty": "T24_editor15_source_keys_plus_primary_accounts_and_peer_review",
@@ -507,8 +509,8 @@
       "research_original_record_ids": [],
       "research_provenance_kind": "independent_source_crosschecked_T24_subevent",
       "research_merge_review": "Additional historic episode independent from 315 original IDs.",
-      "historical_context_limit": "Cochin is on mainland India, not Ceylon; treaty with Kandy does not conquer it; fiscal coercion and British violence not same as unverified massacre deaths.",
-      "control_state": "12 Feb 1796 treaty with Kandyan king, independent kingdom persists"
+      "historical_context_limit": "Cochin is on mainland India, not Ceylon; the Kandyan king did not ratify the Madras agreement; fiscal coercion and British violence not same as unverified massacre deaths.",
+      "control_state": "12 Feb 1796 Madras agreement, never ratified by the Kandyan king"
     },
     {
       "id": "E18C-CEY-1796-COLOMBO-CAPITULATION",
@@ -1020,6 +1022,14 @@
   "routes": [],
   "colonial_polygons": [],
   "sources": [
+    {
+      "id": "18CCEY-KANDY-MILLS",
+      "label": "Lennox A. Mills, Ceylon Under British Rule 1795–1932, pp. 6–7, on the unratified 1796 agreement",
+      "url": "https://api.pageplace.de/preview/DT0400.9781136262647_A23817444/preview-9781136262647_A23817444.pdf",
+      "access": "editor32_scholarly_history_crosscheck",
+      "original_registry_key": null,
+      "original_manuscript_personally_inspected": false
+    },
     {
       "id": "18CCEY-B-BS189",
       "label": "主编15 T24原始档案来源键 B:BS189（原ZIP完整保留）",
