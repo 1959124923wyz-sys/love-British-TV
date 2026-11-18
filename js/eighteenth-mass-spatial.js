@@ -114,6 +114,7 @@ function render(){
 const validPeriods=(ps,end=1799)=>Array.isArray(ps)&&ps.length>0&&ps.every(p=>
  Number.isInteger(p.start_year)&&Number.isInteger(p.end_year)&&p.start_year>=1700&&p.end_year<=end&&p.start_year<=p.end_year);
 const validCoordinate=c=>Array.isArray(c)&&c.length===2&&c.every(Number.isFinite)&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90;
+const validLine=c=>Array.isArray(c)&&c.length>=2&&c.every(validCoordinate);
 function validOutline(geometry,bbox){
  const polygons=geometry?.type==='Polygon'?[geometry.coordinates]:
   geometry?.type==='MultiPolygon'?geometry.coordinates:[];
@@ -154,7 +155,8 @@ function validate(m){
   [m.regional_lines,'LineString'],[m.coastal_rights,'LineString',true]]){
   for(const x of records||[]){
    const g=x.geometry;
-   const matchesGeometry=g?.type===geometryType||(geometryType==='Polygon'&&g?.type==='MultiPolygon');
+   const matchesGeometry=g?.type===geometryType||(geometryType==='Polygon'&&g?.type==='MultiPolygon')||
+    (geometryType==='LineString'&&!treatyShore&&g?.type==='MultiLineString');
    if(!x.id||ids.has(x.id)||!matchesGeometry||!knownKinds.has(x.kind)||(treatyShore&&x.kind!=='treaty_fishing')||
     !x.title||x.area_sqkm!==null||x.uncertain_line_dashed!==true||x.exclude_from_territorial_area_totals!==true||
     !x.source_urls?.length||x.source_urls.some(url=>!url?.startsWith('https://'))||
@@ -164,7 +166,8 @@ function validate(m){
    const coords=g.coordinates;
    if(geometryType==='Polygon'&&(!x.bbox?.length||!validOutline(g,x.bbox))||
     geometryType==='Point'&&!validCoordinate(coords)||
-    geometryType==='LineString'&&(!Array.isArray(coords)||coords.length<2||!coords.every(validCoordinate)))
+    geometryType==='LineString'&&(g.type==='MultiLineString'?
+     (!Array.isArray(coords)||!coords.length||!coords.every(validLine)):!validLine(coords)))
     throw Error('invalid regional geometry '+x.id);
    ids.add(x.id);
   }

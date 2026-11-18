@@ -1206,17 +1206,19 @@ function loadNineteenthTerritorialAreas(data){
  const validCoordinate=point=>
   Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&
   Math.abs(point[0])<=180&&Math.abs(point[1])<=90;
+ const validLine=line=>Array.isArray(line)&&line.length>=2&&line.every(validCoordinate);
  const validRing=ring=>Array.isArray(ring)&&ring.length>=4&&ring.every(validCoordinate)&&
   ring[0][0]===ring.at(-1)[0]&&ring[0][1]===ring.at(-1)[1];
  const validFeature=feature=>{
   const {geometry,properties:p}=feature;
   const polygons=geometry?.type==='Polygon'?[geometry.coordinates]:
    geometry?.type==='MultiPolygon'?geometry.coordinates:[];
+  const lines=geometry?.type==='LineString'?[geometry.coordinates]:
+   geometry?.type==='MultiLineString'?geometry.coordinates:[];
   const validShape=geometry?.type==='Point'?
    p?.geometry_precision==='named_place_anchor'&&validCoordinate(geometry.coordinates):
-   geometry?.type==='LineString'?
-    p?.geometry_precision==='source_backed_historical_line'&&Array.isArray(geometry.coordinates)&&
-    geometry.coordinates.length>=2&&geometry.coordinates.every(validCoordinate):
+   Array.isArray(lines)&&lines.length?
+    p?.geometry_precision==='source_backed_historical_line'&&lines.every(validLine):
     polygons.length>0&&polygons.every(polygon=>Array.isArray(polygon)&&polygon.length&&polygon.every(validRing));
   return feature.type==='Feature'&&typeof feature.id==='string'&&p?.stable_id&&p.name&&p.summary_zh&&validShape&&
    [p.start_year,p.end_year].every(y=>Number.isInteger(y)&&y>=1800&&y<=1899)&&p.start_year<=p.end_year&&
@@ -1270,8 +1272,9 @@ function renderNineteenthSpatial(){
    layer.addTo(group);
    continue;
   }
-  if(feature.geometry.type==='LineString'){
-   const points=feature.geometry.coordinates.map(([lon,lat])=>[lat,lon]);
+  if(['LineString','MultiLineString'].includes(feature.geometry.type)){
+   const {type,coordinates}=feature.geometry;
+   const points=L.GeoJSON.coordsToLatLngs(coordinates,type==='MultiLineString'?1:0);
    const style={pane:'nineteenthBoundaryPane',renderer:nineteenthBoundaryRenderer,color,bubblingMouseEvents:false};
    L.polyline(points,{...style,weight:3,dashArray:'7 6',interactive:false,
     className:'atlas-19c-frontier'}).addTo(group);

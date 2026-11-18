@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 357,
-    "linked_to_1800_public_geometry": 153,
+    "1799_prior_records_reviewed": 373,
+    "linked_to_1800_public_geometry": 169,
     "by_disposition": {
-      "anchor": 83,
+      "anchor": 89,
       "claim_evidence": 7,
-      "continued": 29,
+      "continued": 41,
       "event_history": 7,
       "fiscal_evidence": 37,
       "needs_boundary_or_site_review": 79,
       "network_evidence": 69,
       "occupation": 13,
       "political_relation_evidence": 14,
-      "renewed_scope": 19
+      "renewed_scope": 17
     }
   },
   "records": [
@@ -2178,22 +2178,22 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "1791年上加拿大行政参考",
       "prior_record_kind": "administration",
-      "resolution": "renewed_scope",
+      "resolution": "continued",
       "features_at_1800": [
         "upper-canada-1800"
       ],
-      "notes": "按自然资源部历史图集1780—1849册的1791图幅重绘法定外廓。"
+      "notes": "1791—1799与1800年采用同一法定大陆轮廓。两组岛岸随原地理对象单列。"
     },
     {
       "prior_id": "LOWER_CANADA",
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "1791年下加拿大行政参考",
       "prior_record_kind": "administration",
-      "resolution": "renewed_scope",
+      "resolution": "continued",
       "features_at_1800": [
         "lower-canada-1800"
       ],
-      "notes": "按1791图幅重绘；1809年转隶、1825年转回的沿岸和安蒂科斯蒂岛分期处理。"
+      "notes": "1791—1799与1800年采用同一法定大陆轮廓。两组岛岸随原地理对象单列。"
     },
     {
       "prior_id": "PRINCE_EDWARD",
@@ -3255,6 +3255,166 @@
       "resolution": "anchor",
       "features_at_1800": [
         "madras-st-marys-fort-church-1800"
+      ]
+    },
+    {
+      "prior_id": "STANWIX_TREATY_COUNCIL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "斯坦威克斯堡旧址",
+      "prior_record_kind": "diplomacy",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "stanwix-council-grounds-1800"
+      ]
+    },
+    {
+      "prior_id": "PITT_FORT_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "皮特堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "pitt-fort-site-1800"
+      ]
+    },
+    {
+      "prior_id": "PITT_BOUQUET_BLOCKHOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布凯碉楼",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "pitt-bouquet-blockhouse-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARTRES_POWDER_MAGAZINE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "沙特尔堡火药库",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "chartres-powder-magazine-1800"
+      ]
+    },
+    {
+      "prior_id": "DETROIT_FORT_LERNOULT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "勒努尔堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "detroit-fort-lernoult-1800"
+      ]
+    },
+    {
+      "prior_id": "DETROIT_OLD_PALISADED_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "底特律旧城木栅镇",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "detroit-old-palisaded-town-1800"
+      ]
+    },
+    {
+      "prior_id": "MACKINAC_ISLAND_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "麦基诺岛堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "fort-mackinac-garrison-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_JOSEPH_BLOCKHOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣约瑟夫堡碉楼",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "fort-st-joseph-blockhouse-1800"
+      ]
+    },
+    {
+      "prior_id": "AMHERSTBURG_FIRST_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿默斯特堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fort-amherstburg-1800"
+      ]
+    },
+    {
+      "prior_id": "QUEBEC_TREATY_45_PARALLEL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "魁北克法界 · 北纬 45 度条文线",
+      "prior_record_kind": "diplomacy",
+      "resolution": "continued",
+      "features_at_1800": [
+        "quebec-treaty-45-parallel-1800"
+      ]
+    },
+    {
+      "prior_id": "LABRADOR_LOWER_NORTH_SHORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拉布拉多旧公告渔岸 · 圣让河至布朗萨布隆",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "labrador-lower-north-shore-1800"
+      ]
+    },
+    {
+      "prior_id": "LABRADOR_OUTER_COAST",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拉布拉多旧公告渔岸 · 布朗萨布隆以东",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "labrador-outer-coast-1800"
+      ]
+    },
+    {
+      "prior_id": "GASPE_CHALEUR_COAST",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "加斯佩海岸 · 沙勒尔湾至罗西耶角",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "gaspe-chaleur-coast-1800"
+      ]
+    },
+    {
+      "prior_id": "ANTICOSTI_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "安蒂科斯蒂岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "anticosti-island-lower-canada-1800"
+      ]
+    },
+    {
+      "prior_id": "MAGDALEN_ISLANDS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马德莱娜群岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "magdalen-islands-lower-canada-1800"
+      ]
+    },
+    {
+      "prior_id": "GASPE_PASPEBIAC_COD_STATION",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "帕斯佩比亚克鳕鱼站",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "gaspe-paspebiac-cod-station-1800"
       ]
     }
   ]
