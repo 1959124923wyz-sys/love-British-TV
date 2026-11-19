@@ -10203,6 +10203,68 @@
   ],
   "regional_sites": [
     {
+      "id": "CHURCHILL_UPRIVER_COMPANY_POST",
+      "title": "丘吉尔河上游商站",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1717,
+          "end_year": 1717,
+          "title": "丘吉尔河上游商站 · 公司重建木站",
+          "note": "詹姆斯·奈特率哈德孙湾公司人员在西岸旧站地段重建木堡。"
+        },
+        {
+          "start_year": 1718,
+          "end_year": 1730,
+          "title": "丘吉尔河上游商站 · 木堡贸易",
+          "note": "公司以木堡为贸易点，向克里、德内和因纽特交易者购取皮毛及其他物资。"
+        },
+        {
+          "start_year": 1731,
+          "end_year": 1739,
+          "title": "丘吉尔河上游商站 · 石堡筹建期间",
+          "note": "公司在上游维持商站，同时在河口另建石堡。石堡于1740年开始入驻。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "丘吉尔河上游商站 · 赫恩恢复驻站",
+          "note": "法军破坏河口石堡后，塞缪尔·赫恩率公司人员在上游旧址复建商站。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "丘吉尔河上游商站 · 哈德孙湾公司贸易",
+          "note": "商站继续经营皮毛贸易。当地交易者提供货物、物资和劳务。"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/-/media/lhn-nhs/mb/prince/wet4/visit/pwf-carte-map-churchill-en-2-pdf.pdf",
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024",
+        "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
+        "https://www.mhs.mb.ca/docs/sites/capeMerry.shtml",
+        "https://mhs.mb.ca/docs/mb_history/20/fortchurchill.shtml",
+        "https://manitoba.ca/chc/archives/hbca/post_maps/manitoba.html"
+      ],
+      "geometry_method": "Locality of the Old Fort & Churchill Site marker on the Parks Canada 2022 Churchill regional map. Similarity registration in NAD83 / UTM 15N using Prince of Wales Fort, Cape Merry and Sloop Cove. The recreational map symbol marks the site area; the building and stockade remain untraced.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.251,
+          58.7398
+        ]
+      },
+      "stable_id": "churchill-upriver-company-post",
+      "position_uncertainty_m": 400,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "churchill-upriver-company-post-1800",
+      "uncertain_line_dashed": true
+    },
+    {
       "id": "MICHILIMACKINAC_MAINLAND_EARLY_SITE",
       "title": "米希利麦基诺克大陆旧堡",
       "kind": "military",
@@ -10268,9 +10330,15 @@
         },
         {
           "start_year": 1732,
-          "end_year": 1770,
+          "end_year": 1739,
           "title": "威尔士亲王堡 · 石堡施工",
           "note": "1732年6月3日铺下第一块基石。工人开采并搬运石材，逐步砌筑堡墙、棱堡和内部设施。"
+        },
+        {
+          "start_year": 1740,
+          "end_year": 1770,
+          "title": "威尔士亲王堡 · 公司迁入河口石堡",
+          "note": "哈德孙湾公司自1740年起使用河口石堡，工人继续修筑堡墙和内部设施。"
         },
         {
           "start_year": 1771,
@@ -10282,6 +10350,7 @@
       "source_urls": [
         "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024",
         "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
+        "https://www.mhs.mb.ca/docs/sites/capeMerry.shtml",
         "https://www.openstreetmap.org/way/324277534",
         "https://www.openstreetmap.org/copyright"
       ],
@@ -10315,9 +10384,21 @@
         },
         {
           "start_year": 1775,
-          "end_year": 1793,
+          "end_year": 1781,
           "title": "坎伯兰豪斯 · 湖南岸旧商馆",
-          "note": "公司在原址经营，依靠当地贸易者、向导和供应者。洪水、建筑失修和近处薪柴短缺促使公司另择站址。"
+          "note": "公司在原址经营，依靠克里人等当地贸易者、向导和供应者。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "坎伯兰豪斯 · 天花流行与旧商馆",
+          "note": "掌管商馆的威廉·托米森收留病人，并向部分幸存者提供食物。公司雇员也被派往疫区，从死者遗下的物品中收取毛皮及衣物。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1793,
+          "title": "坎伯兰豪斯 · 筹划迁站",
+          "note": "洪水、建筑失修和近处薪柴短缺促使公司另择站址。1788年已筹备迁移，旧商馆仍继续经营。"
         }
       ],
       "source_urls": [

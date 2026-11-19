@@ -8,23 +8,43 @@
   },
   "sources": [
     {
+      "id": "19CT7-18C5K-CHURCHILL-MAP",
+      "label": "加拿大公园局丘吉尔区域图，标出上游旧站",
+      "url": "https://parks.canada.ca/-/media/lhn-nhs/mb/prince/wet4/visit/pwf-carte-map-churchill-en-2-pdf.pdf"
+    },
+    {
+      "id": "19CT7-18C5K-CHURCHILL-PLAQUE",
+      "label": "马尼托巴历史学会上游旧站与历史铭牌",
+      "url": "https://www.mhs.mb.ca/docs/sites/capeMerry.shtml"
+    },
+    {
+      "id": "19CT7-18C5K-CHURCHILL-STUDY",
+      "label": "马尼托巴历史学会丘吉尔商站史",
+      "url": "https://mhs.mb.ca/docs/mb_history/20/fortchurchill.shtml"
+    },
+    {
+      "id": "19CT7-18C5K-CHURCHILL-ARCHIVE",
+      "label": "曼尼托巴档案馆哈德孙湾公司商站目录 B.42",
+      "url": "https://manitoba.ca/chc/archives/hbca/post_maps/manitoba.html"
+    },
+    {
       "id": "19CT7-18C5K-PA-CHURCHILL",
-      "title": "加拿大公园局威尔士亲王堡管理计划",
+      "label": "加拿大公园局威尔士亲王堡管理计划",
       "url": "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
     },
     {
       "id": "19CT7-18C5K-PA-BUILD",
-      "title": "加拿大公园局威尔士亲王堡筑堡史",
+      "label": "加拿大公园局威尔士亲王堡筑堡史",
       "url": "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1"
     },
     {
       "id": "19CT7-18C5K-OSM-CHURCHILL",
-      "title": "OpenStreetMap 威尔士亲王堡存墙及 ODbL",
+      "label": "OpenStreetMap 威尔士亲王堡存墙及 ODbL",
       "url": "https://www.openstreetmap.org/way/324277534"
     },
     {
       "id": "19CT7-18C5K-CUMBERLAND",
-      "title": "坎伯兰旧商馆考古及迁址日志，引 HBCA B.49/a/25a",
+      "label": "坎伯兰旧商馆考古及迁址日志，引 HBCA B.49/a/25a",
       "url": "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-SSU-06182009145051&oclc_number=1032941317&op=pdf"
     },
     {
@@ -5919,6 +5939,54 @@
     }
   ],
   "features": [
+    {
+      "type": "Feature",
+      "id": "churchill-upriver-company-post-1800",
+      "properties": {
+        "name": "丘吉尔河上游商站 · 哈德孙湾公司",
+        "stable_id": "churchill-upriver-company-post",
+        "start_year": 1800,
+        "end_year": 1899,
+        "display_kind": "local_governance",
+        "label_type": "公司贸易驻地",
+        "summary_zh": "哈德孙湾公司在1783年重建的上游商站继续经营，皮毛贸易依赖当地交易者与劳务。公司驻地沿用至二十世纪。",
+        "source_ids": [
+          "19CT7-18C5K-CHURCHILL-MAP",
+          "19CT7-18C5K-CHURCHILL-PLAQUE",
+          "19CT7-18C5K-CHURCHILL-STUDY",
+          "19CT7-18C5K-CHURCHILL-ARCHIVE"
+        ],
+        "source_urls": [
+          "https://parks.canada.ca/-/media/lhn-nhs/mb/prince/wet4/visit/pwf-carte-map-churchill-en-2-pdf.pdf",
+          "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024",
+          "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
+          "https://www.mhs.mb.ca/docs/sites/capeMerry.shtml",
+          "https://mhs.mb.ca/docs/mb_history/20/fortchurchill.shtml",
+          "https://manitoba.ca/chc/archives/hbca/post_maps/manitoba.html"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Locality of the Old Fort & Churchill Site marker on the Parks Canada 2022 Churchill regional map. Similarity registration in NAD83 / UTM 15N using Prince of Wales Fort, Cape Merry and Sloop Cove. The recreational map symbol marks the site area; the building and stockade remain untraced.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "prior_record_ids": [
+          "CHURCHILL_UPRIVER_COMPANY_POST",
+          "B38-H-Z013"
+        ],
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 400
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.251,
+          58.7398
+        ]
+      }
+    },
     {
       "type": "Feature",
       "id": "prince-of-wales-fort-ruins-1800",
