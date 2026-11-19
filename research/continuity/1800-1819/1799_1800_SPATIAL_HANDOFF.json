@@ -16,12 +16,12 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 640,
-    "linked_to_1800_public_geometry": 504,
+    "1799_prior_records_reviewed": 646,
+    "linked_to_1800_public_geometry": 510,
     "by_disposition": {
-      "anchor": 297,
+      "anchor": 299,
       "claim_evidence": 7,
-      "continued": 172,
+      "continued": 176,
       "event_history": 12,
       "fiscal_evidence": 35,
       "needs_boundary_or_site_review": 20,
@@ -1489,7 +1489,8 @@
       "resolution": "anchor",
       "features_at_1800": [
         "fredericton-administration-1800"
-      ]
+      ],
+      "notes": "旧矩形及代理点退役，殖民行政驻地同坐标接续。"
     },
     {
       "prior_id": "B36-Z035",
@@ -1808,10 +1809,12 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "1784年新不伦瑞克殖民省",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
+        "new-brunswick-early-colonial-province-1800",
         "fredericton-administration-1800"
-      ]
+      ],
+      "notes": "分省初期沿东岸和行政驻地绘制，1798年后用虚线省廓，原形进入1800年。"
     },
     {
       "prior_id": "UPPER_CANADA",
@@ -1843,7 +1846,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "prince-edward-island-assembly-colony"
-      ]
+      ],
+      "notes": "经1765年霍兰德史图核对范围，原形接续1800年，1799年更名。"
     },
     {
       "prior_id": "GRENADINES",
@@ -6383,6 +6387,72 @@
         "bombay-mazagon-kasara-dock-1800"
       ],
       "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "NB_COLONIAL_PROVINCE_1798",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "新不伦瑞克 · 殖民省",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "new-brunswick-early-colonial-province-1800"
+      ],
+      "notes": "沿同一虚线几何接续1800年。"
+    },
+    {
+      "prior_id": "PEI_ST_JOHN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣约翰岛／爱德华王子岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "prince-edward-island-assembly-colony"
+      ],
+      "notes": "沿同一虚线几何接续1800年。"
+    },
+    {
+      "prior_id": "NB_ST_CROIX_AWARD_RIVER",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣克罗伊河 · 界河裁决",
+      "prior_record_kind": "diplomacy",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-croix-river-award-1800"
+      ],
+      "notes": "沿同一虚线几何接续1800年。"
+    },
+    {
+      "prior_id": "PEI_CHARLOTTETOWN_CIVIC",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "夏洛特敦 · 殖民行政旧城",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charlottetown-early-civic-centre-1800"
+      ],
+      "notes": "沿同一具名地点接续1800年。"
+    },
+    {
+      "prior_id": "NB_FREDERICTON_EARLY_ADMIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "弗雷德里克顿 · 殖民驻地",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "fredericton-administration-1800"
+      ],
+      "notes": "沿同一具名地点接续1800年。"
+    },
+    {
+      "prior_id": "NB_SAINT_JOHN_CHARTER_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣约翰 · 殖民港与城市特许状",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "saint-john-charter-port-1800"
+      ],
+      "notes": "沿同一具名地点接续1800年。"
     }
   ]
 }

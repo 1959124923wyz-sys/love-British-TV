@@ -1645,6 +1645,47 @@ async function verify() {
   await clickAreaAt(...bombayVasai);
   await bombay19('bombay-vasai-bassein-fort-1800').filter({ hasText: /马拉塔驻地延续/ }).waitFor();
 
+  const skmaqn = [46.19544, -63.135538];
+  const peiInterior = [46.371, -63.243];
+  const newBrunswickInterior = [46.6, -66.1];
+  await jump(1758);
+  await setView([...skmaqn, 15]);
+  await openSeamDossier(skmaqn, 1758, /拉茹瓦港.*关押并驱逐/);
+  assert.match(await page.locator('#dossierBody').textContent(), /约三千名/);
+
+  await jump(1784);
+  const earlyNewBrunswick = await page.evaluate(() => window.eighteenthMassSpatial.getAudit());
+  assert(earlyNewBrunswick.activeRegionalLines.includes('NB_PROVINCE_EARLY_COAST'));
+  assert(!earlyNewBrunswick.activeRegionalZones.includes('NB_COLONIAL_PROVINCE_1798'));
+  assert(!earlyNewBrunswick.activeRegionalLines.includes('NB_ST_CROIX_AWARD_RIVER'));
+
+  await jump(1799);
+  const atlanticLayers = await page.evaluate(() => ({
+   mass: window.eighteenthMassSpatial.getAudit(),
+   batch36: window.eighteenthBatch36Spatial.getAudit()
+  }));
+  assert(!atlanticLayers.mass.activeZones.includes('PRINCE_EDWARD'));
+  assert(!atlanticLayers.mass.activeZones.includes('NEW_BRUNSWICK'));
+  assert(!atlanticLayers.batch36.activeZoneIds.includes('B36-Z034'));
+  assert(atlanticLayers.mass.activeRegionalLines.includes('NB_ST_CROIX_AWARD_RIVER'));
+  await setView([...newBrunswickInterior, 7]);
+  await clickAreaAt(...newBrunswickInterior);
+  await page.locator('[data-overlap-id="18c:NB_COLONIAL_PROVINCE_1798"]')
+   .filter({ hasText: /总测量师绘制西界/ }).waitFor();
+  await setView([...peiInterior, 9]);
+  await clickAreaAt(...peiInterior);
+  await page.locator('[data-overlap-id="18c:PEI_ST_JOHN_ISLAND"]')
+   .filter({ hasText: /更名获御准/ }).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...peiInterior);
+  await page.locator('[data-historic-overlap-id$=":prince-edward-island-assembly-colony"]')
+   .filter({ hasText: /爱德华王子岛/ }).waitFor();
+  await setView([...newBrunswickInterior, 7]);
+  await clickAreaAt(...newBrunswickInterior);
+  await page.locator('[data-historic-overlap-id$=":new-brunswick-early-colonial-province-1800"]')
+   .filter({ hasText: /殖民省与北方争界/ }).waitFor();
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {
