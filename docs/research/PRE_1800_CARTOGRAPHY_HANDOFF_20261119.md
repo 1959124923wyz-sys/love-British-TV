@@ -24,7 +24,7 @@
 | 5H | [马六甲、河西旧城与南宁](18C_MALACCA_FORT_AND_PORT_HANDOFF.md) · [#461](https://github.com/1959124923wyz-sys/love-British-TV/pull/461) | 2 | 356 | 153 | 23 |
 | 5I | [孟买港岛、萨尔塞特、塔纳与瓦赛](18C_BOMBAY_SALSETTE_THANA_HANDOFF.md) · [#462](https://github.com/1959124923wyz-sys/love-British-TV/pull/462) | 8 | 348 | 149 | 20 |
 | 5J | [新不伦瑞克与圣约翰岛](18C_MARITIME_PROVINCES_HANDOFF.md) · [#464](https://github.com/1959124923wyz-sys/love-British-TV/pull/464) | 3 | 345 | 146 | 20 |
-| 5K | [五大湖与哈德孙湾](18C_GREAT_LAKES_HUDSON_BAY_HANDOFF.md) | 11 | **334** | **143** | **19** |
+| 5K | [五大湖与哈德孙湾](18C_GREAT_LAKES_HUDSON_BAY_HANDOFF.md) · [#466](https://github.com/1959124923wyz-sys/love-British-TV/pull/466) | 11 | **334** | **143** | **19** |
 
 更早批次见 [十八世纪制图路线图](18C_CARTOGRAPHY_ROADMAP.md)。第 5J 批发布后，正式站桌面实点了拉茹瓦港 1758 年驱逐、马德堡 1774 年受降，并从 1799 年原位打开新不伦瑞克和爱德华王子岛的 1800 年档案。
 
@@ -166,7 +166,7 @@
 
 </details>
 
-## 1799 → 1800 年尚待核对的 20 条
+## 1799 → 1800 年尚待核对的 19 条
 
 [期末台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已查 649 条期末记录，515 条关联到 1800 年公开几何。下表按原 ID 保留 19 条待核记录。原住民政权和活动范围需按其各自证据处理。
 
