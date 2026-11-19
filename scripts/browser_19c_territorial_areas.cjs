@@ -1449,6 +1449,37 @@ async function verify() {
   await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
   await openSeamDossier(nagapattinam, 1800, /坦焦尔地区行政驻地/);
 
+  const patienceFort = [5.286231, -0.728184];
+  for (const [year, title] of [[1782, /忍耐堡.*英军攻占/], [1785, /忍耐堡.*荷方恢复据点/]]) {
+   await jump(year);
+   await setView([...patienceFort, 15]);
+   await clickAreaAt(...patienceFort);
+   await dossierTitle.filter({ hasText: title }).or(page.locator(
+    '[data-overlap-id="18c:GOLD_COAST_APAM_PATIENCE_FORT"] .atlas-18c-overlap-title'
+   ).filter({ hasText: title })).waitFor();
+  }
+
+  const orangeFort = [4.93565, -1.70731];
+  await jump(1799);
+  await setView([...orangeFort, 16]);
+  await clickAreaAt(...orangeFort);
+  const orangeCard = page.locator('[data-overlap-id="18c:GOLD_COAST_ORANGE_FORT"]');
+  await orangeCard.filter({ hasText: /荷兰国家接管公司橙堡/ }).waitFor();
+  const oldOrange = ['B39-A-Z010', 'B39-A-Z011'];
+  const goldCoastAudit = await page.evaluate(() => ({
+   active: window.eighteenthMassSpatial.getAudit().activeRegionalZones,
+   oldActive: window.eighteenthBatch39Spatial.getAudit().activeZoneIds
+  }));
+  for (const id of ['GOLD_COAST_APOLLONIA_FORT', 'GOLD_COAST_ORANGE_FORT', 'GOLD_COAST_KORMANTIN_AMSTERDAM_FORT']) {
+   assert(goldCoastAudit.active.includes(id), id);
+  }
+  for (const id of oldOrange) assert(!goldCoastAudit.oldActive.includes(id), id);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...orangeFort);
+  await page.locator('[data-historic-overlap-id$=":sekondi-orange-fort-1800"]')
+   .filter({ hasText: /橙堡.*荷方驻地/ }).waitFor();
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {

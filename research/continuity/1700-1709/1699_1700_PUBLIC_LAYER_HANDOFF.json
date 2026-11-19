@@ -3,9 +3,9 @@
   "source_claims": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
   "scope": "逐项对照1699年旧区域记录和1700年实际启用的同形参考、岛屿外廓和具名地点。地域、法律声索类别及挂接的地方地点均保留独立身份。",
   "counts": {
-    "legacy_geometry_retained": 17,
+    "legacy_geometry_retained": 16,
     "legacy_replacement_envelope": 3,
-    "named_sites": 2,
+    "named_sites": 3,
     "no_area_inherited": 1,
     "redrawn_land": 4
   },
@@ -236,15 +236,11 @@
     },
     {
       "previous_id": "claim-cape-coast-castle-1665",
-      "display_at_1700": "legacy_geometry_retained",
+      "display_at_1700": "named_sites",
       "records_at_1700": [
         {
-          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
-          "id": "CAPE_COAST"
-        },
-        {
-          "source_dataset": "research/continuity/1700-1709/REFERENCE_CONTROL_CORES_1700_1709.geojson",
-          "id": "C1700-ENGLISH-CAPE-COAST"
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "GOLD_COAST_CAPE_COAST_CASTLE"
         }
       ]
     },
