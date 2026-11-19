@@ -1549,6 +1549,51 @@ async function verify() {
   await openSeamDossier(bandaBojauw, 1803, /博尧.*庄园奴役与交割/);
   assert.match(await page.locator('#dossierBody').textContent(), /作价每人25里克斯达勒/);
 
+  const malaccaFort = [2.19295, 102.24953];
+  const malaccaTown = [2.1956597, 102.2466064];
+  const malaccaRoadstead = [2.189, 102.2331];
+  const malaccaStJohn = [2.18935, 102.26427];
+  const malaccaEighteenth = id => page.locator('[data-overlap-id="18c:' + id + '"]');
+  const malaccaNineteenth = id => page.locator('[data-historic-overlap-id$=":' + id + '"]');
+
+  await jump(1786);
+  const malaccaSurvey = await page.evaluate(() => window.eighteenthMassSpatial.getAudit().activeRegionalLines);
+  assert(malaccaSurvey.includes('MALACCA_TRANQUERA_RAMPART'));
+  await jump(1795);
+  await setView([...malaccaStJohn, 16]);
+  await openSeamDossier(malaccaStJohn, 1795, /圣约翰山炮台.*英方先行接收/);
+  await setView([...malaccaRoadstead, 14]);
+  await openSeamDossier(malaccaRoadstead, 1795, /外锚地.*英舰抵达与夺船/);
+  await setView([...malaccaFort, 16]);
+  await clickAreaAt(...malaccaFort);
+  await malaccaEighteenth('MALACCA_MAIN_FORT').filter({ hasText: /8月18日英军实际接收/ }).waitFor();
+
+  await jump(1799);
+  const malaccaPrevious = await page.evaluate(() => window.eighteenthBatch37Spatial.getAudit());
+  for (const id of ['B37-I-Z051', 'B37-I-Z052']) assert(!malaccaPrevious.activeZoneIds.includes(id), id);
+  assert(!malaccaPrevious.activeSiteIds.includes('B37-I-P051'));
+  await clickAreaAt(...malaccaFort);
+  await malaccaEighteenth('MALACCA_MAIN_FORT').filter({ hasText: /古堡.*英方驻军/ }).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...malaccaFort);
+  await malaccaNineteenth('19CT7-malacca-garrison-fort').filter({ hasText: /英方驻军延续/ }).waitFor();
+
+  await jump(1803);
+  await setView([...malaccaRoadstead, 14]);
+  await openSeamDossier(malaccaRoadstead, 1803, /外锚地.*荷商双桅船扣押案/);
+  await jump(1807);
+  assert(!(await ids()).includes('19CT7-malacca-garrison-fort'));
+  await setView([2.19327, 102.24956, 17]);
+  await openSeamDossier([2.19327, 102.24956], 1807, /圣保罗山.*英方爆破拆堡/);
+
+  for (const [year, title] of [[1818, /9月21日实际交还/], [1819, /奴役输入与隐匿债役/], [1825, /4月9日交割/]]) {
+   await jump(year);
+   await setView([...malaccaTown, 16]);
+   await clickAreaAt(...malaccaTown);
+   await malaccaNineteenth('malacca-west-bank-mercantile-town-1800').filter({ hasText: title }).waitFor();
+  }
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {

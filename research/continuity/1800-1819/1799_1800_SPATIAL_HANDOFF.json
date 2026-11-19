@@ -16,17 +16,17 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 602,
-    "linked_to_1800_public_geometry": 461,
+    "1799_prior_records_reviewed": 616,
+    "linked_to_1800_public_geometry": 476,
     "by_disposition": {
-      "anchor": 269,
+      "anchor": 278,
       "claim_evidence": 7,
-      "continued": 155,
+      "continued": 162,
       "event_history": 12,
       "fiscal_evidence": 36,
       "needs_boundary_or_site_review": 23,
-      "network_evidence": 60,
-      "occupation": 9,
+      "network_evidence": 59,
+      "occupation": 8,
       "political_relation_evidence": 11,
       "renewed_scope": 20
     },
@@ -512,19 +512,22 @@
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1795 Malacca荷兰旧港英军战时接管",
       "prior_record_kind": "military",
-      "resolution": "occupation",
+      "resolution": "continued",
       "features_at_1800": [
         "19CT7-malacca-garrison-fort"
       ],
-      "notes": "采用荷兰测图中的堡城驻防核心。1807年开始拆堡，直至1818年交还前保留具名驻地。"
+      "notes": "旧矩形和代理点由古堡原形与独立的旧市、港口档案接替。"
     },
     {
       "prior_id": "B37-I-Z052",
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1795 Malacca海峡商航网络",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-historic-roadstead-1800"
+      ],
+      "notes": "旧海峡商贸矩形由具名旧港外锚地及分期接替。"
     },
     {
       "prior_id": "B37-I-Z053",
@@ -5950,6 +5953,160 @@
         "wajer-fort-concordia-1800"
       ],
       "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_MAIN_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 圣保罗山古堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "19CT7-malacca-garrison-fort"
+      ],
+      "notes": "沿同一轮廓接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_ROADSTEAD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 旧港外锚地",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-historic-roadstead-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_BANDA_HILIR_SHORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 班达希利尔旧海岸",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "malacca-banda-hilir-old-shore-1800"
+      ],
+      "notes": "沿同一历史线接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_TABOH_NANING",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "南宁 · 塔波地方首领驻地",
+      "prior_record_kind": "diplomacy",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-taboh-naning-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_WEST_BANK_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 河西商住旧城",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "malacca-west-bank-mercantile-town-1800"
+      ],
+      "notes": "沿同一轮廓接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_STADTHUYS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 荷兰官署",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-stadthuys-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_TRANQUERA_GATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 特兰克拉旧门",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-tranquera-historic-gate-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_CHENG_HOON_TENG",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 青云亭",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-cheng-hoon-teng-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_KAMPUNG_KLING_MOSQUE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 甘榜吉宁清真寺",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-kampung-kling-mosque-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_JONKER_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 鸡场街／旧桥街",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "malacca-jonker-old-bridge-street-1800"
+      ],
+      "notes": "沿同一历史线接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_HEEREN_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 荷兰街／何连街",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "malacca-heeren-historic-axis-1800"
+      ],
+      "notes": "沿同一历史线接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_GOLDSMITH_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 打金街及相连街段",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "malacca-goldsmith-historic-axis-1800"
+      ],
+      "notes": "沿同一历史线接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_CHETTI_TEMPLE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 斯里波亚塔毗那夜迦庙",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-sri-poyatha-chetti-temple-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "MALACCA_ST_JOHN_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马六甲 · 圣约翰山炮台",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "malacca-st-john-hill-fort-1800"
+      ],
+      "notes": "沿原址点接入1800年。"
     }
   ]
 }
