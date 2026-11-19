@@ -16,16 +16,16 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 585,
-    "linked_to_1800_public_geometry": 440,
+    "1799_prior_records_reviewed": 589,
+    "linked_to_1800_public_geometry": 446,
     "by_disposition": {
-      "anchor": 252,
+      "anchor": 257,
       "claim_evidence": 7,
-      "continued": 151,
+      "continued": 152,
       "event_history": 12,
       "fiscal_evidence": 36,
-      "needs_boundary_or_site_review": 26,
-      "network_evidence": 61,
+      "needs_boundary_or_site_review": 25,
+      "network_evidence": 60,
       "occupation": 9,
       "political_relation_evidence": 11,
       "renewed_scope": 20
@@ -967,8 +967,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1700—1799 Accra Christiansborg丹麦贸易堡",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "accra-christiansborg-castle-1800"
+      ],
+      "notes": "旧矩形由同址堡点和相邻独立驻堡档案接替，堡点原位接续1800年。"
     },
     {
       "prior_id": "B39-A-Z019",
@@ -983,8 +986,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1700—1799Accra英国Fort James与丹麦堡竞争",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "accra-james-fort-1800"
+      ],
+      "notes": "旧矩形由同址堡点和相邻独立驻堡档案接替，堡点原位接续1800年。"
     },
     {
       "prior_id": "B39-A-Z021",
@@ -5751,6 +5757,50 @@
         "cape-coast-fort-1800"
       ],
       "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_MOREE_NASSAU_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "莫雷 · 拿骚堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "moree-nassau-fort-1800"
+      ],
+      "notes": "同一轮廓或具名堡址接入1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_BERAKU_GOOD_HOPE_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塞尼亚贝拉库 · 荷兰好望堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "beraku-good-hope-fort-1800"
+      ],
+      "notes": "同一轮廓或具名堡址接入1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_ACCRA_CREVECOEUR",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿克拉金卡 · 克雷沃克尔堡旧址",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "accra-crevecoeur-fort-1800"
+      ],
+      "notes": "同一轮廓或具名堡址接入1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_ACCRA_CHRISTIANSBORG",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿克拉奥苏 · 丹麦克里斯蒂安堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "accra-christiansborg-castle-1800"
+      ],
+      "notes": "同一轮廓或具名堡址接入1800年。"
     }
   ]
 }
