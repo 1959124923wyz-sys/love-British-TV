@@ -8,6 +8,7 @@ on:
       - 'docs/RESEARCH_TERRITORY_CONTINUITY_PLAYBOOK.md'
       - 'docs/TERRITORY_CONTINUITY_RULE.md'
       - 'scripts/validate_control_transition.py'
+      - 'scripts/test_century_seam_handoffs.py'
       - 'scripts/test_continuity_preview.js'
       - 'app-continuity-1497-1529-preview.js'
       - 'data/atlas-1520-1529.json'
@@ -28,6 +29,7 @@ on:
       - 'data/*control*.geojson'
       - 'data/political-relations*.geojson'
       - 'scripts/validate_control_transition.py'
+      - 'scripts/test_century_seam_handoffs.py'
       - 'scripts/test_continuity_preview.js'
       - 'app-continuity-1497-1529-preview.js'
       - 'preview-continuity-1497-1529.html'
@@ -46,6 +48,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Validate both eighteenth-century published handoffs
+        run: python3 scripts/test_century_seam_handoffs.py
       - name: Generic ten-year transition checker self-test
         run: python3 scripts/validate_control_transition.py --self-test
       - name: Audit every completed standardized transition

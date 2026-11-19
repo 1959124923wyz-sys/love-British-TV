@@ -14,7 +14,7 @@ const late=json('data/territorial-footprints-1590-1599.geojson');
 const war=json('data/century-violence-regions-1544-1589.geojson');
 assert.equal(claims.features.length,53);
 assert.equal(studies.features.length,32);
-assert.equal(evidence.features.length,191);
+assert.equal(evidence.features.length,192);
 assert.equal(early.features.length,7);assert.equal(late.features.length,7);
 assert.equal(war.features.length,28);
 assert(claims.features.every(f=>f.geometry?.type==='Polygon'&&f.properties.source_urls?.length&&f.properties.area_sqkm===null),'53 17C claim polygon source & area semantics');
@@ -59,4 +59,4 @@ assert.equal((a.match(/window\.eighteenthOverlapDossier\?\.render\?\.\(\);/g)||[
 const original=json('data/eighteenth-century-dynamic-spatial-1700-1799.json');
 assert.equal(original.area_references.length,24);assert.equal(original.control_sites.length,15);
 assert(old.includes("areas.length!==628||sites.length!==421"));
-console.log('PASS cross-century UX source audit: 53 seventeenth-century charters, 32 regional studies, 191 source cues, 7+7 Tudor periods, 28 war study polygons; live layer adapter and original 18C 628/421 preserved.');
+console.log('PASS cross-century UX source audit: 53 seventeenth-century charters, 32 regional studies, 192 source cues, 7+7 Tudor periods, 28 war study polygons; live layer adapter and original 18C 628/421 preserved.');

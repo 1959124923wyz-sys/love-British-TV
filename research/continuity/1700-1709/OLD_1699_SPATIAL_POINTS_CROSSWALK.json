@@ -13,7 +13,8 @@
       "https://vga.virginia.gov/visit/about-capitol/three-capital-cities/"
     ],
     "not_a_1700_territorial_conquest": true,
-    "need_williamsburg_site_historical_geometry_review": true
+    "published_1699_feature_id": "williamsburg-wren-1699",
+    "published_1700_feature_id": "WILLIAMSBURG_WREN_SEAT"
   },
   "official_st_helena_1700_note": {
     "actor": "English East India Company settlement/administration, local social and slavery history distinct",
@@ -425,5 +426,65 @@
       "no_auto_carry_1699_event_to_new_year": true,
       "review_status": "17c_reference_1700_crosswalk_research_only"
     }
-  ]
+  ],
+  "publication_seam_5c": {
+    "dated_events_stop_in_1699": 8,
+    "same_coordinate_new_capital": "williamsburg-wren-1699",
+    "records": [
+      {
+        "previous_id": "jamestown-governance-1607",
+        "disposition": "seat_relocated",
+        "current_id": "WILLIAMSBURG_WREN_SEAT",
+        "notes": "1699年迁都。1699年新增威廉斯堡点与1700年临时官署共用同一点位。"
+      },
+      {
+        "previous_id": "barbados-bridgetown-sugar",
+        "disposition": "place_refined",
+        "current_id": "BARBADOS_BRIDGETOWN_CAREENAGE",
+        "notes": "17世纪一般港市点在1700年细化为旧内港具名点。"
+      },
+      {
+        "previous_id": "jamaica-spanish-town-1655",
+        "disposition": "place_refined",
+        "current_id": "JAMAICA_SPANISH_TOWN_PARADE",
+        "notes": "既有城镇核心延续到1700年，在官署广场位置上呈现。"
+      },
+      {
+        "previous_id": "bombay-1668",
+        "disposition": "place_preserved",
+        "current_id": "C1700-ENGLISH-BOMBAY",
+        "notes": "现行1700证据点。"
+      },
+      {
+        "previous_id": "eic-sthelena-1659",
+        "disposition": "place_refined",
+        "current_id": "ST_HELENA_JAMESTOWN",
+        "notes": "旧岛屿中心点在1700年细化为詹姆斯敦公司港口，岛屿外廓另画。"
+      },
+      {
+        "previous_id": "eic-bencoolen-1687",
+        "disposition": "place_preserved",
+        "current_id": "C1700-ENGLISH-BENCOOLEN",
+        "notes": "现行1700证据点，指向旧约克堡阶段。"
+      },
+      {
+        "previous_id": "eic-fortdavid-1692",
+        "disposition": "place_refined",
+        "current_id": "CUDDALORE_FORT_ST_DAVID",
+        "notes": "将旧城镇级点在1700年细化到加迪拉姆河口旧堡位置。"
+      },
+      {
+        "previous_id": "eic-sutanuti-1699",
+        "disposition": "place_refined",
+        "current_id": "CALCUTTA_OLD_FORT_BUILDING",
+        "notes": "现行旧威廉堡取代早期加尔各答证据点；苏塔努蒂是三村之一。"
+      },
+      {
+        "previous_id": "rac-cape-coast-castle-1665",
+        "disposition": "place_preserved",
+        "current_id": "C1700-ENGLISH-CAPE-COAST",
+        "notes": "现行1700证据点。"
+      }
+    ]
+  }
 }

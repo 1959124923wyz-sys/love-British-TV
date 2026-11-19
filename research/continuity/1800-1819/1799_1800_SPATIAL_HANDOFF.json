@@ -16,20 +16,21 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 557,
-    "linked_to_1800_public_geometry": 392,
+    "1799_prior_records_reviewed": 575,
+    "linked_to_1800_public_geometry": 414,
     "by_disposition": {
-      "anchor": 227,
+      "anchor": 238,
       "claim_evidence": 7,
-      "continued": 129,
+      "continued": 141,
       "event_history": 11,
       "fiscal_evidence": 36,
-      "needs_boundary_or_site_review": 47,
+      "needs_boundary_or_site_review": 42,
       "network_evidence": 62,
       "occupation": 9,
       "political_relation_evidence": 11,
       "renewed_scope": 18
-    }
+    },
+    "continue_in_original_public_layer": 1
   },
   "records": [
     {
@@ -443,16 +444,22 @@
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "明古伦马尔伯勒堡与公司驻点",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "19CT7-bencoolen-marlborough-company"
+      ],
+      "notes": "马尔伯勒堡重建后的本体同形，初建与撤离另有点档。"
     },
     {
       "prior_id": "B37-I-Z040",
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1786—1799 Bencoolen行政降格港堡保留",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "19CT7-bencoolen-marlborough-company"
+      ],
+      "notes": "公司职位降格后的活动由港堡接续。"
     },
     {
       "prior_id": "B37-I-Z041",
@@ -1175,7 +1182,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "bermuda-st-george-1800"
-      ]
+      ],
+      "notes": "旧岛屿框由同形虚线岛群接替。"
     },
     {
       "prior_id": "ST_HELENA",
@@ -1185,7 +1193,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "st-helena-1800"
-      ]
+      ],
+      "notes": "旧岛屿框由同形陆地虚线接替。"
     },
     {
       "prior_id": "CAPE_COAST",
@@ -1313,8 +1322,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1749后哈利法克斯海军与军事港口",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "halifax-citadel-hill-1800"
+      ],
+      "notes": "旧港区矩形退役，堡垒山作为历代驻堡的地点接续。"
     },
     {
       "prior_id": "B36-Z003",
@@ -1329,8 +1341,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1750年后新斯科舍Fort Edward军事核心",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "pisiquid-fort-edward-1800"
+      ],
+      "notes": "旧军事矩形由碉楼所在山丘接替，按1812年短期复驻分期。"
     },
     {
       "prior_id": "B36-Z010",
@@ -1693,8 +1708,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "18世纪古德洛尔圣大卫堡商港与法英易手",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cuddalore-fort-st-david-1800"
+      ],
+      "notes": "河口旧堡遗址接续。1783年围城所涉港城另待落图。"
     },
     {
       "prior_id": "NS_REVISED",
@@ -1839,7 +1857,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "montserrat-colonial-1800"
-      ]
+      ],
+      "notes": "旧框由主岛陆地外廓接替，1783年和约与1784年恢复行政分开。"
     },
     {
       "prior_id": "BARBUDA",
@@ -5378,6 +5397,203 @@
         "cape-town-government"
       ],
       "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "ST_HELENA_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣赫勒拿岛 · 东印度公司治理",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-helena-1800"
+      ],
+      "notes": "1799与1800共用同一岛屿陆地外廓及稳定ID。"
+    },
+    {
+      "prior_id": "BERMUDA_ISLANDS_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "百慕大 · 以圣乔治为首府",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bermuda-st-george-1800"
+      ],
+      "notes": "1799与1800共用同一岛屿陆地外廓及稳定ID。"
+    },
+    {
+      "prior_id": "MONTSERRAT_ISLAND_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "蒙特塞拉特 · 主岛行政",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "montserrat-colonial-1800"
+      ],
+      "notes": "1799与1800共用同一岛屿陆地外廓及稳定ID。"
+    },
+    {
+      "prior_id": "ST_HELENA_JAMESTOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣赫勒拿 · 詹姆斯敦公司港口",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "st-helena-jamestown-company-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CUDDALORE_FORT_ST_DAVID",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "古德洛尔 · 圣大卫堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cuddalore-fort-st-david-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "HALIFAX_CITADEL_HILL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈利法克斯 · 堡垒山",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "halifax-citadel-hill-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "PISIQUID_FORT_EDWARD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "皮西吉德 · 爱德华堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "pisiquid-fort-edward-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "BENCOOLEN_MARLBOROUGH_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "明古伦 · 马尔伯勒堡公司驻地",
+      "prior_record_kind": "company_post",
+      "resolution": "continued",
+      "features_at_1800": [
+        "19CT7-bencoolen-marlborough-company"
+      ],
+      "notes": "与1800年沿用同一现存主堡轮廓。1714—1719年的旧工事以具名施工点显示。"
+    },
+    {
+      "prior_id": "FORT_ANNE_ROYAL_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿卡迪亚皇家港 · 安妮堡",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "annapolis-fort-anne-1800"
+      ],
+      "notes": "已上线的同形或同点交接补登台账。"
+    },
+    {
+      "prior_id": "FORT_CUMBERLAND_REBUILT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "坎伯兰堡 · 修缮后的主堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "fort-cumberland-1800"
+      ],
+      "notes": "已上线的同形或同点交接补登台账。"
+    },
+    {
+      "prior_id": "CASTILLO_SAN_MARCOS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣马科斯堡 · 圣奥古斯丁主堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "castillo-san-marcos-1800"
+      ],
+      "notes": "已上线的同形或同点交接补登台账。"
+    },
+    {
+      "prior_id": "FORT_MATANZAS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马坦萨斯石堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "fort-matanzas-1800"
+      ],
+      "notes": "已上线的同形或同点交接补登台账。"
+    },
+    {
+      "prior_id": "CARTAGENA_SAN_FELIPE_BONETE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣费利佩堡 · 山顶旧堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cartagena-san-felipe-bonete-1800"
+      ],
+      "notes": "已上线的同形或同点交接补登台账。"
+    },
+    {
+      "prior_id": "BOCACHICA_SAN_JOSE_REBUILT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡塔赫纳 · 圣何塞重筑堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bocachica-san-jose-1800"
+      ],
+      "notes": "已上线的同形或同点交接补登台账。"
+    },
+    {
+      "prior_id": "YORK_FACTORY_III",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "约克堡 · 第三站址",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "york-factory-1800-post"
+      ],
+      "notes": "已上线的同形或同点交接补登台账。"
+    },
+    {
+      "prior_id": "PLACENTIA_FORT_ROYAL",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "普拉森舍城堡山 · 皇家堡",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "placentia-castle-hill-ruins-1800"
+      ],
+      "notes": "同一堡址以遗迹接续。"
+    },
+    {
+      "prior_id": "LOUISBOURG_AFTER_DEMOLITION",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "路易堡 · 拆防后遗址",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "louisbourg-old-town-ruins-1800"
+      ],
+      "notes": "同一堡址以遗迹接续。"
+    },
+    {
+      "prior_id": "NF_FRENCH_SHORE_1783",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "纽芬兰法国渔岸",
+      "prior_record_kind": "treaty_fishing",
+      "resolution": "continued",
+      "features_at_1800": [],
+      "continues_in_source_at_1800": true,
+      "notes": "条约渔岸沿同一图层线段和档案继续，按条约权利呈现。"
     }
   ]
 }

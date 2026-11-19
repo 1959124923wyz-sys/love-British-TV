@@ -1,0 +1,345 @@
+{
+  "schema": "atlas-1699-to-1700-published-reference-handoff-v1",
+  "source_claims": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+  "scope": "逐项对照1699年旧区域记录和1700年实际启用的同形参考、岛屿外廓和具名地点。地域、法律声索类别及挂接的地方地点均保留独立身份。",
+  "counts": {
+    "legacy_geometry_retained": 17,
+    "legacy_replacement_envelope": 3,
+    "named_sites": 2,
+    "no_area_inherited": 1,
+    "redrawn_land": 4
+  },
+  "records": [
+    {
+      "previous_id": "claim-carolina-1665",
+      "display_at_1700": "legacy_replacement_envelope",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "CAROLINA_PROPRIETORS"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-hudson-bay-1670",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "RUPERT_LAND"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "YORK_FACTORY_I_II"
+        }
+      ],
+      "notes": "纸面特许继续单列。1697年后约克堡的法方驻地另有具名点。"
+    },
+    {
+      "previous_id": "claim-pennsylvania-1681",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "PENNSYLVANIA"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-ulster-1609",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "ULSTER"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-ireland-conquest-1653",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "IRELAND"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-jamaica-island-1655",
+      "display_at_1700": "redrawn_land",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "JAMAICA_MAIN_ISLAND"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "JAMAICA_SPANISH_TOWN_PARADE"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-barbados-island-1627",
+      "display_at_1700": "redrawn_land",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "BARBADOS_MAIN_ISLAND"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "BARBADOS_BRIDGETOWN_CAREENAGE"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-bermuda-islands-1612",
+      "display_at_1700": "redrawn_land",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "BERMUDA_ISLANDS_18C"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-bahamas-1670",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "BAHAMAS"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-virginia-crown-1625",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "VIRGINIA"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "WILLIAMSBURG_WREN_SEAT"
+        }
+      ],
+      "notes": "旧殖民省参考仍在。1699年威廉斯堡接替詹姆斯敦为首府。"
+    },
+    {
+      "previous_id": "claim-maryland-1632",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "MARYLAND"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-connecticut-1662",
+      "display_at_1700": "legacy_replacement_envelope",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "CONNECTICUT"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-new-york-duke-1674",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "NEW_YORK"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-newfoundland-island-1610",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "NEWFOUNDLAND"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "PLACENTIA_FORT_ROYAL"
+        }
+      ],
+      "notes": "整岛参考与普拉森舍的法国皇家堡同时在图上，仍需辨明早期定居和两国实际驻防。"
+    },
+    {
+      "previous_id": "claim-leeward-islands-1632",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "LEEWARD_ISLANDS"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "ST_KITTS"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "NEVIS"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "ANTIGUA"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "MONTSERRAT_ISLAND_18C"
+        }
+      ],
+      "notes": "旧群岛概括范围仍在。蒙特塞拉特子图已换成主岛外廓，其他三岛仍各有旧范围。"
+    },
+    {
+      "previous_id": "claim-st-helena-1659",
+      "display_at_1700": "redrawn_land",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "ST_HELENA_ISLAND"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "ST_HELENA_JAMESTOWN"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-massachusetts-province-1692",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "MASSACHUSETTS"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-rhode-island-1663",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "RHODE_ISLAND"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-cape-coast-castle-1665",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "CAPE_COAST"
+        },
+        {
+          "source_dataset": "research/continuity/1700-1709/REFERENCE_CONTROL_CORES_1700_1709.geojson",
+          "id": "C1700-ENGLISH-CAPE-COAST"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-bombay-east-india-company-1668",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "BOMBAY"
+        },
+        {
+          "source_dataset": "research/continuity/1700-1709/REFERENCE_CONTROL_CORES_1700_1709.geojson",
+          "id": "C1700-ENGLISH-BOMBAY"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-madras-fort-st-george-1640",
+      "display_at_1700": "named_sites",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "MADRAS_ST_GEORGE_EARLY"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "MADRAS_OLD_BLACK_TOWN"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-new-jersey-proprietors-1674",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "NEW_JERSEY"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-delaware-penn-lower-counties-1682",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "DELAWARE"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-new-hampshire-royal-1692",
+      "display_at_1700": "legacy_geometry_retained",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+          "id": "NEW_HAMPSHIRE"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-scottish-darien-1698",
+      "display_at_1700": "no_area_inherited",
+      "records_at_1700": [],
+      "notes": "1699年老声索面未被继承。1700年第二次定居点投降及撤出是另一个具年事实。"
+    },
+    {
+      "previous_id": "claim-eic-calcutta-sutanati-1690",
+      "display_at_1700": "named_sites",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "CALCUTTA_OLD_FORT_BUILDING"
+        },
+        {
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "CALCUTTA_SUTANUTI"
+        }
+      ]
+    },
+    {
+      "previous_id": "claim-eic-bencoolen-1685",
+      "display_at_1700": "legacy_replacement_envelope",
+      "records_at_1700": [
+        {
+          "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
+          "id": "B37-I-Z037"
+        },
+        {
+          "source_dataset": "research/continuity/1700-1709/REFERENCE_CONTROL_CORES_1700_1709.geojson",
+          "id": "C1700-ENGLISH-BENCOOLEN"
+        }
+      ],
+      "notes": "港口商站通用旧框已退出。旧约克堡仍需历史地图与考古确认原地；马尔伯勒堡是后建站址。"
+    }
+  ]
+}
