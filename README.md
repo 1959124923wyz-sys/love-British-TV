@@ -24,6 +24,7 @@
 | 查看正式地图已出版了哪些年代 | [正式章节索引](data/chapters.json) |
 | 查看长篇历史专题 | [专题文章索引](data/stories/index.json) |
 | 新智能体接手研究或修改代码 | [AGENTS.md](AGENTS.md) |
+| 接手 19 世纪以前的地图制图 | [已上线批次、逐条待办和跨年接续](docs/research/PRE_1800_CARTOGRAPHY_HANDOFF_20261119.md) |
 | 历史空间考证、地点定位与不确定性规范 | [历史空间叙事正式标准](docs/HISTORICAL_SPATIAL_NARRATIVE_STANDARD.md) · [审核清单](docs/HISTORICAL_SPATIAL_REVIEW_CHECKLIST.md) |
 | 保持现有地图交互和16种事件图标 | [批准版地图交互](docs/APPROVED_MAP_INTERACTION_STANDARD.md) · [图标规范](docs/ICON_SYSTEM_V2_APPROVED.md) |
 | 地图研究与编审如何交接 | [研究交接](RESEARCH_HANDOFF.md) · [制图审核](docs/WAR_CONTROL_AND_CONTESTED_ZONES.md) |
