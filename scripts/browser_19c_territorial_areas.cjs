@@ -1409,6 +1409,14 @@ async function verify() {
    await openSeamDossier(point, year + 1, title);
   }
 
+  const fortLouis = [11.9336, 79.83472];
+  for (const [year, title] of [[1756, /法国五棱主堡/], [1760, /法方主堡/]]) {
+   await jump(year);
+   await setView([...fortLouis, 15]);
+   await openSeamDossier(fortLouis, year, title);
+   assert.match(await page.locator('#dossierBody strong').first().textContent(), /其他国家管辖/);
+  }
+
   const pondicherry = [11.9341, 79.8309];
   const pondicherryCard = page.locator('[data-overlap-id="18c:PONDICHERRY_BOULEVARD_TOWN"]');
   for (const [year, title] of [
