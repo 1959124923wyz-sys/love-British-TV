@@ -16,16 +16,16 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 577,
-    "linked_to_1800_public_geometry": 420,
+    "1799_prior_records_reviewed": 585,
+    "linked_to_1800_public_geometry": 440,
     "by_disposition": {
-      "anchor": 241,
+      "anchor": 252,
       "claim_evidence": 7,
-      "continued": 142,
-      "event_history": 11,
+      "continued": 151,
+      "event_history": 12,
       "fiscal_evidence": 36,
-      "needs_boundary_or_site_review": 38,
-      "network_evidence": 62,
+      "needs_boundary_or_site_review": 26,
+      "network_evidence": 61,
       "occupation": 9,
       "political_relation_evidence": 11,
       "renewed_scope": 20
@@ -41,7 +41,8 @@
       "resolution": "anchor",
       "features_at_1800": [
         "cape-coast-fort-1800"
-      ]
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B37-A-Z002",
@@ -92,8 +93,11 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "1768后Beyin Fort Apollonia英堡",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "beyin-apollonia-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B37-A-Z013",
@@ -108,8 +112,11 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Accra Jamestown Fort James英国要塞",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "accra-james-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B37-A-Z015",
@@ -124,8 +131,11 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "English Komenda英堡",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "komenda-english-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B37-A-Z017",
@@ -697,8 +707,11 @@
       "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
       "name_zh": "1757年Clive重新攻取Calcutta要塞",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calcutta-old-fort-customs-1800"
+      ],
+      "notes": "1757年攻堡旧框由旧威廉堡分期接替。其后驻军撤出，1799年旧址海关原点接续1800年。"
     },
     {
       "prior_id": "B38-I-Z012",
@@ -877,24 +890,31 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1750英国Succondee/Sekondi商馆参考",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "塞康第英堡于1782年被摧毁。荷兰橙堡是另一处驻地。"
     },
     {
       "prior_id": "B39-A-Z010",
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1700—1799荷兰Sekondi Fort Orange对英国竞争",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "sekondi-orange-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B39-A-Z011",
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1704后Sekondi Dutch Fort Orange防御提升",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "sekondi-orange-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B39-A-Z012",
@@ -909,8 +929,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1702后Apam Fort Patience荷兰炮堡",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "apam-patience-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B39-A-Z015",
@@ -925,8 +948,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1700—1799Kormantin Fort Amsterdam荷兰统治堡",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "kormantin-amsterdam-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B39-A-Z017",
@@ -981,8 +1007,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "English Komenda英国堡与Dutch Komenda对立",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "komenda-english-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B39-A-Z024",
@@ -997,8 +1026,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "Dutch Komenda Fort Vredenburg荷兰旧堡",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "komenda-vredenburg-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B39-A-Z029",
@@ -1015,8 +1047,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1768 Beyin Apollonia英方筑堡开端",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "beyin-apollonia-fort-1800"
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "B39-A-Z032",
@@ -1208,7 +1243,8 @@
       "resolution": "anchor",
       "features_at_1800": [
         "cape-coast-fort-1800"
-      ]
+      ],
+      "notes": "沿岸旧框由具名堡址分期接替。1799年堡址原位接入1800年。"
     },
     {
       "prior_id": "BOMBAY",
@@ -1337,8 +1373,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1755年博塞茹尔堡英军攻占",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "fort-cumberland-1800"
+      ],
+      "notes": "旧攻堡示意框由主堡分期接替。1799年看守阶段的主堡沿同一轮廓接入1800年。"
     },
     {
       "prior_id": "B36-Z009",
@@ -5624,6 +5663,94 @@
         "nagapattinam-port-town-1800"
       ],
       "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "GOLD_COAST_APOLLONIA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "贝因 · 阿波罗尼亚堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "beyin-apollonia-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_ORANGE_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塞康第 · 荷兰橙堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "sekondi-orange-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_KORMANTIN_AMSTERDAM_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科尔曼廷 · 阿姆斯特丹堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "kormantin-amsterdam-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_ENGLISH_KOMENDA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科门达河右岸 · 英方堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "komenda-english-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_DUTCH_KOMENDA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "科门达河左岸 · 维雷登堡所在聚落",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "komenda-vredenburg-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_APAM_PATIENCE_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿帕姆 · 忍耐堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "apam-patience-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_ACCRA_JAMES_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿克拉詹姆斯镇 · 詹姆斯堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "accra-james-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_CAPE_COAST_CASTLE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "海岸角 · 英方城堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-coast-fort-1800"
+      ],
+      "notes": "以相同围墙轮廓或堡址坐标承接1799至1800年。"
     }
   ]
 }
