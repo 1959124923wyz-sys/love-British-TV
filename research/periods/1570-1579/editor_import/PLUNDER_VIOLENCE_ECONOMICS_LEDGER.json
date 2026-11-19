@@ -1,0 +1,534 @@
+{
+  "schema": "ch09_colonial_violence_and_extraction_accounting_v1",
+  "period": [
+    1570,
+    1579
+  ],
+  "records": [
+    {
+      "id": "C9-F01",
+      "year": 1573,
+      "theme": "planned Crown rent from Essex Clandeboye colony",
+      "kind": "unrealised_expected_revenue",
+      "quantity": 5000,
+      "currency": "GBP_per_year",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "explanation": "£5k annual rent was projected by Essex, not realised colonial profit. Do not add to actual cash."
+    },
+    {
+      "id": "C9-F02",
+      "year": 1573,
+      "theme": "Queen loan to Essex Ulster scheme",
+      "kind": "loan_principal_not_income",
+      "quantity": 10000,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "explanation": "Loan guaranteed by Essex estate, cannot count as Crown income or plunder."
+    },
+    {
+      "id": "C9-F03",
+      "year": 1574,
+      "theme": "royal outlay proposed for six Ulster garrisons next two years",
+      "kind": "unfunded_budget_proposal",
+      "quantity": 40000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "explanation": "Projected expense c40k, do not add to actual royal spending."
+    },
+    {
+      "id": "C9-F04",
+      "year": 1575,
+      "theme": "Essex colonisation Crown expenditure retrospectively estimated",
+      "kind": "royal_colonial_expenditure",
+      "quantity": 80000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "original_accounts_checked": false,
+      "explanation": "DIB c80k Crown spent, uncertain exact period/overlap with other campaign accounts."
+    },
+    {
+      "id": "C9-F05",
+      "year": 1575,
+      "theme": "Essex colonial venture personal losses",
+      "kind": "private_colonial_expenditure",
+      "quantity": 35000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_actual_income": false,
+      "original_accounts_checked": false,
+      "explanation": "DIB c35k spent, venture failed and Essex sold lands; is COST not profit."
+    },
+    {
+      "id": "C9-F06",
+      "year": 1573,
+      "theme": "Drake Anglo-French private raid Panama mule-train bullion seized",
+      "kind": "private_prize_reported_gross_plunder",
+      "quantity": 20000,
+      "currency": "GBP",
+      "approximate": true,
+      "source_ids": [
+        "C9-S08"
+      ],
+      "audited_actual_income": false,
+      "English_Exchequer_net_profit": null,
+      "explanation": "Library of Congress historical essay says ~£20k gold/silver, a retrospective gross prize estimate; no verified survivor shares, ship expenses, King/Queen remittance."
+    },
+    {
+      "id": "C9-F07",
+      "year": 1574,
+      "theme": "Essex seized Brian O'Neill cattle then Piers aided recovering",
+      "kind": "livestock_lost_then_partly_restored",
+      "quantity": 10000,
+      "unit": "head_cattle",
+      "source_ids": [
+        "C9-S03"
+      ],
+      "audited_remaining_possession_count": null,
+      "amount_in_gbp": null,
+      "explanation": "DIB reports 10,000 head seized and then recovered with Piers help; do NOT count as English net extracted cattle."
+    },
+    {
+      "id": "C9-F08",
+      "year": 1574,
+      "theme": "Essex massacre near Belfast following banquet",
+      "kind": "historical_victims_reported",
+      "quantity": 200,
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "original_roll_of_deaths_available": false,
+      "explanation": "About 200 women, children and followers, not a financial profit metric."
+    },
+    {
+      "id": "C9-F09",
+      "year": 1575,
+      "theme": "Rathlin castle defenders killed",
+      "kind": "historical_victims_reported_subset",
+      "quantity": 200,
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "explanation": "Part of one massacre 1575, never add to later alternative total c600."
+    },
+    {
+      "id": "C9-F10",
+      "year": 1575,
+      "theme": "Rathlin noncombatant refugees killed",
+      "kind": "historical_victims_reported_subset",
+      "quantity_range": [
+        300,
+        400
+      ],
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S03"
+      ],
+      "explanation": "300–400 noncombatants in caves, largely women children; 200 defenders + 300–400 equals approximate 500–600 with uncertainties."
+    },
+    {
+      "id": "C9-F11",
+      "year": 1575,
+      "theme": "Rathlin alternative academic biography rounded total",
+      "kind": "alternative_victims_total_DO_NOT_ADD",
+      "quantity": 600,
+      "unit": "people_reported_killed",
+      "approximate": true,
+      "source_ids": [
+        "C9-S04"
+      ],
+      "explanation": "Same Rathlin killing as F09/F10; DIB Norreys c600 not additional 600. No audited named-person registry."
+    },
+    {
+      "id": "C9-F12",
+      "year": 1577,
+      "theme": "Elizabeth I investment in Cathay Company Frobisher ore voyage",
+      "kind": "royal_investment_not_gold_revenue",
+      "quantity": 1000,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S16"
+      ],
+      "audited_actual_income": false,
+      "explanation": "Queen contributed 1000 pounds; no proof of positive realized mining profits."
+    },
+    {
+      "id": "C9-F13",
+      "year": 1578,
+      "theme": "Frobisher 1576–78 ore removed across voyages",
+      "kind": "extracted_worthless_ore",
+      "quantity": 1400,
+      "unit": "tonnes_approx",
+      "approximate": true,
+      "source_ids": [
+        "C9-S15",
+        "C9-S17"
+      ],
+      "year_span": [
+        1576,
+        1578
+      ],
+      "estimated_gold_yield_kg": null,
+      "explanation": "Parks Canada calls the ~1,400 tons of extracted ore worthless; no independently audited mineral assay or profit, thus exact gold yield remains null."
+    },
+    {
+      "id": "C9-F14",
+      "year": 1576,
+      "theme": "Frobisher kidnapped Inuit man",
+      "kind": "forcibly_transport_human_being",
+      "quantity": 1,
+      "unit": "person",
+      "source_ids": [
+        "C9-S16"
+      ],
+      "economic_valuation": null,
+      "person_died_after_capture": true,
+      "explanation": "Person cannot be priced as chattel; voyage 1576 from Canadian Bay; source biog."
+    },
+    {
+      "id": "C9-F15",
+      "year": 1577,
+      "theme": "Frobisher kidnapped Inuit Arnaq, Nutaaq, Kalicho",
+      "kind": "forcibly_transport_human_beings",
+      "quantity": 3,
+      "unit": "persons",
+      "source_ids": [
+        "C9-S16",
+        "C9-S23"
+      ],
+      "economic_valuation": null,
+      "all_died_after_abduction": true,
+      "explanation": "British Museum and Canada DCB; not a documented slave sale or sold human beings."
+    },
+    {
+      "id": "C9-F16",
+      "year": 1579,
+      "theme": "Cacafuego captured 1 March 1579",
+      "kind": "Spanish_ship_bullion_spoils_not_yet_accounted",
+      "quantity": null,
+      "currency": null,
+      "source_ids": [
+        "C9-S09",
+        "C9-S11"
+      ],
+      "UK_royal_income_1579_verified": null,
+      "final_cash_Distribution_1580_or_later": true,
+      "explanation": "Rich prize clearly captured but original manifest, metal weights, English cash distribution require documentary review; 1580 homecoming cannot be brought back to 1579. Period English captain account also gives 26 'tons' silver, 80 'pounds' gold and 13 chests reals: UNVERIFIED English narrative weights, cannot silently convert to tonnes/GBP or count separately from the same Cacafuego prize.",
+      "period_voyage_narrator_report": {
+        "source_id": "C9-S31",
+        "source_attribution": "Francis Pretty voyage narrative surviving in Fordham University historical sourcebook",
+        "reported_silver_mass_historical_tons": 26,
+        "reported_gold_mass_historical_pounds": 80,
+        "reported_silver_reales_coin_chests": 13,
+        "reported_jewels_stones": true,
+        "ship_taken": "Nuestra Señora de la Concepción aka Cacafuego",
+        "historical_quoted_location": "Cape de San Francisco (about 150 leagues south of Panama)",
+        "precise_ship_capture_latlon": null,
+        "independent_Spanish_manifest_checked": false,
+        "weights_authoritative_audited": false,
+        "profit_conversion_to_GBP_authorized": false
+      }
+    },
+    {
+      "id": "C9-F17",
+      "year": 1579,
+      "theme": "Desmond Rebellion Munster 1579–83 later war death/depopulation",
+      "kind": "cross_decade_loss_not_backdated",
+      "quantity": null,
+      "source_ids": [
+        "C9-S19"
+      ],
+      "measured_1579_dead": null,
+      "measured_1579_English_seized_land_hectares": null,
+      "explanation": "Severe depopulation evidenced across 1579–83, not attributed wholly to first six months of uprising."
+    },
+    {
+      "id": "C9-F18",
+      "year": 1578,
+      "theme": "Mullaghmast O'More followers slain under promised protection; earliest individual number",
+      "kind": "reported_people_followers_in_one_early_chronicle_NOT_verified_total",
+      "quantity": 40,
+      "unit": "followers_together_with_named_chief",
+      "source_ids": [
+        "C9-S27",
+        "C9-S28"
+      ],
+      "victim_total_accurately_known": null,
+      "year_primary_source_conflict": [
+        1577,
+        1578
+      ],
+      "explanation": "Dowling mentions named victim and forty followers. Not a full researched death roll, and no justification to add to broad modern 100–400 estimates without nonoverlap."
+    },
+    {
+      "id": "C9-F19",
+      "year": 1576,
+      "theme": "William Drury beheaded local Munster chiefs and commoners around Limerick",
+      "kind": "Crown_political_execution_number_missing",
+      "quantity": null,
+      "unit": "people",
+      "source_ids": [
+        "C9-S26",
+        "C9-S40"
+      ],
+      "royal_income": null,
+      "number_died_audited": null,
+      "explanation": "AFM M1576.15 independently records decapitations but no audited names/count/precise streets."
+    },
+    {
+      "id": "C9-F20",
+      "year": 1577,
+      "theme": "Drury coerces Dal Cais homage/tax and enforces with troops after Ennis court",
+      "kind": "political_fiscal_coercion_unquantified",
+      "quantity": null,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S26",
+        "C9-S40"
+      ],
+      "Crown_cash_received": null,
+      "explanation": "Tax/taking of submission described in AFM M1577.16; no tax receipts linked to event, do not invent alleged yearly profit."
+    },
+    {
+      "id": "C9-F21",
+      "year": 1579,
+      "theme": "Nicholas Malby 1579 sack and plunder of Askeaton Franciscan friary",
+      "kind": "religious_property_plunder_value_unquantified",
+      "quantity": null,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S26",
+        "C9-S41",
+        "C9-S42",
+        "C9-S43"
+      ],
+      "friars_killed_verified_total": null,
+      "actual_English_Askeaton_castle_capture": false,
+      "explanation": "Irish government OPW confirms 1579 plunder; OPW separately confirms adjoining Askeaton Castle held out against Malby. No documented confiscated value nor verified 1579 victim count."
+    },
+    {
+      "id": "C9-F22",
+      "year": 1579,
+      "theme": "1579 Crown troop depredations in Munster despite safe-conduct/pledge to Desmond",
+      "kind": "agriculture_and_cattle_loss_unquantified",
+      "quantity": null,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S26"
+      ],
+      "actual_burned_farm_houses": null,
+      "actual_cattle_loss_number": null,
+      "explanation": "Gaelic annal M1579.11 attests damaged fields/cattle/corn and royal broken promise, no quantified land/treasure/dues; destroyers also included other warfare sides, separate perpetrators."
+    },
+    {
+      "id": "C9-F23",
+      "year": 1576,
+      "theme": "Henry Sidney 1576 local Loughrea conquest, seized hostages and prolonged garrison",
+      "kind": "political_forced_hostage_and_territorial_fort_core",
+      "quantity": null,
+      "unit": "captives",
+      "source_ids": [
+        "C9-S26",
+        "C9-S38"
+      ],
+      "hostages_identified_count": null,
+      "England_land_gained_square_km": null,
+      "explanation": "AFM M1576.13 and retrospective M1580.26 support site garrison; NOT value of entire Clanrickard estates as UK cash."
+    },
+    {
+      "id": "C9-F24",
+      "year": 1575,
+      "theme": "Henry Sidney compulsory replacement of arbitrary military cess with composition cash dues in Irish Pale",
+      "kind": "proposed_coercive_fiscal_composition_without_audited_receipts",
+      "quantity": null,
+      "currency": "GBP",
+      "source_ids": [
+        "C9-S40"
+      ],
+      "Crown_income_verified": null,
+      "day_Crown_governor_arrived": "1575-09-08",
+      "place": "Drogheda modern town regional reference",
+      "explanation": "DIB scholarly account: Sidney sought to commute military cess exactions into cash composition; local gentry resisted and governors' actions were challenged. No historical estate list, levy figure, realized Crown revenue or complete land territorial acquisition can be inferred."
+    },
+    {
+      "id": "C9-F25",
+      "year": 1576,
+      "theme": "Cathay Company commissioned Cornelius Ketel to paint two portraits of first captured Inuit man",
+      "kind": "company_spend_on_commodification_portraits_not_revenue",
+      "quantity": 10,
+      "currency": "GBP_reported_company_expenditure",
+      "unit_cost_gbp": 5,
+      "portrait_commissions": 2,
+      "source_ids": [
+        "C9-S47"
+      ],
+      "Royal_Treasury_revenue": null,
+      "victim_income": false,
+      "underlying_primary_company_account_not_independently_viewed": true,
+      "explanation": "Cambridge University Press Alden Vaughan paraphrases Cathay Company ledgers, 2 paintings at £5 each. Financial spending associated with display of captive person; not sale price, not Crown receipts or profit.",
+      "royal_income": null,
+      "audited_actual_income": false,
+      "commercial_public_display_income": null
+    },
+    {
+      "id": "C9-F26",
+      "year": 1577,
+      "theme": "Kalicho and Arnaq captured in Baffin Island and buried in Bristol 1577 parish St Stephen",
+      "kind": "nonfinancial_human_violence_and_captive_death_history",
+      "quantity": 2,
+      "unit": "named_adult_victims_buried",
+      "source_ids": [
+        "C9-S47",
+        "C9-S48",
+        "C9-S52"
+      ],
+      "subset_of_existing_record": "C9-F15",
+      "new_people_to_aggregate": 0,
+      "burial_dates": [
+        "1577-11-08",
+        "1577-11-12"
+      ],
+      "exact_grave_coordinates": null,
+      "royal_income": null,
+      "explanation": "Same two adults already counted in C9-F15 captive trio. Captivity and death documented; this adds exact parish placement and dates, not two additional victims."
+    },
+    {
+      "id": "C9-F27",
+      "year": 1577,
+      "theme": "Queen Elizabeth received profits from 1577 faculties commission, manuscript amount not transcribed",
+      "kind": "crown_faculties_commission_revenue_original_accounts_unread",
+      "quantity": null,
+      "currency": "GBP_unread",
+      "source_ids": [
+        "C9-S45"
+      ],
+      "historical_document": "Cotton MS Titus B XIII/1 ff 270r–270v",
+      "faculties_profit_original_sum": null,
+      "profit_explicitly_from_colonial_plunder": false,
+      "explanation": "British Library manuscript catalogue names profit accruing to Queen via English/Irish church faculties commission in 1577. The accounts are not read; not possible to assign any exact Crown receipt nor classify as violence profit without identifying payers/collection."
+    },
+    {
+      "id": "C9-F28",
+      "year": 1578,
+      "theme": "Royal Irish field army supply cost estimates 14 June1578 per Sidney MS document",
+      "kind": "army_victualling_budget_document_unread",
+      "quantity": null,
+      "currency": "GBP_unread",
+      "source_ids": [
+        "C9-S46"
+      ],
+      "original_manuscript": "Cotton MS Titus B X/1 ff157v–161r",
+      "audited_actual_Crown_military_cost": null,
+      "explanation": "BL original catalogue proves estimate of victuals attached to 14 June1578 letter. Without figures and paid vouchers, no cash total or assumed quantities of seized peasant crops."
+    },
+    {
+      "id": "C9-F29",
+      "year": 1570,
+      "theme": "William Winter financed Guinea-bound vessels for possible transatlantic slave trade",
+      "kind": "maritime_human_trafficking_venture_reported_number_of_captives_unverified",
+      "quantity": null,
+      "unit": "enslaved_people_transported",
+      "ships_reported": 3,
+      "one_ship_returned_without_Caribbean": true,
+      "source_ids": [
+        "C9-S54",
+        "C9-S55",
+        "C9-S59"
+      ],
+      "captives_captured": null,
+      "receipts_realized_gbp": null,
+      "port_and_ship_identification_unknown": true,
+      "explanation": "One of Winter's Guinea ships returned direct England, not Spanish Caribbean. No verified number of people sold or caught can be assigned."
+    },
+    {
+      "id": "C9-F30",
+      "year": 1571,
+      "theme": "William Winter related fleet alleged robbery and burning of Spanish vessel near Jamaica",
+      "kind": "private_sea_robbery_reported_stolen_goods_unquantified",
+      "quantity": null,
+      "currency": "GBP_unverified",
+      "source_ids": [
+        "C9-S57"
+      ],
+      "ships_reported": 3,
+      "Spanish_ship_damage_reported": true,
+      "loot_cash_value": null,
+      "enslaved_people_aboard_or_sold": null,
+      "explanation": "Wright edition of Spanish reports associates 1571 fleet with Borburata and Jamaican attacks; exact booty and slaves sold unsupported."
+    },
+    {
+      "id": "C9-F31",
+      "year": 1572,
+      "theme": "Hawkins-backed three vessels to West Africa possibly seeking slaving trade",
+      "kind": "maritime_slave_trade_intent_unproved_execution",
+      "quantity": null,
+      "unit": "enslaved_people",
+      "ships_reported": 3,
+      "source_ids": [
+        "C9-S54",
+        "C9-S55"
+      ],
+      "claimed_sales": null,
+      "actual_capital_investment": null,
+      "Queen_actual_net_income": null,
+      "explanation": "Lior Blum academic research describes ships owned/backed by Hawkins in autumn1572 as probably slaving, not confirmed African persons kidnapped or transported; must not count as Hawkins fourth commanded voyage."
+    }
+  ],
+  "summary": {
+    "royal_total_realized_profit_gbp": null,
+    "private_net_1570s_colonial_profit_gbp": null,
+    "known_reported_private_gross_bullion_prize_gbp_1573": 20000,
+    "reported_1579_Cacafuego_haul_gbp": null,
+    "Essex_plan_queen_rent_gbp_yearly_not_earned": 5000,
+    "Essex_campaign_Crown_outlay_gbp_approx": 80000,
+    "Essex_personal_cost_gbp_approx": 35000,
+    "Inuit_kidnappings_1576_77_reported_total": 4,
+    "Rathlin_victims_total_range_historiography": [
+      500,
+      600
+    ],
+    "historically_measured_English_conquered_African_or_Canadian_sqkm": 0,
+    "Cacafuego_English_narrator_reported_silver_tons_1579_not_verified": 26,
+    "Cacafuego_English_narrator_reported_gold_pounds_1579_not_verified": 80,
+    "Cacafuego_English_narrator_reported_coin_chests_1579_not_verified": 13,
+    "Cacafuego_actual_royal_net_GBP_1579": null,
+    "reported_1570_to_1572_English_Guinea_trading_or_potential_slaving_ventures": true,
+    "new_actually_verified_enslaved_victims_in_1570s_Guinea_ventures": null
+  },
+  "do_not_sum": [
+    "1575 Rathlin 200 defenders and 300–400 civilians and alternative total 600 overlap",
+    "£5k proposed yearly rent not income, £10k royal loan not revenue and £40k fort budget proposal not spend",
+    "£80k actual royal cost and £35k Essex cost not colony fiscal return",
+    "£20k privately seized Spain bullion cannot equal Crown net",
+    "Frobisher £1000 royal investment not profitable ore gain; 1400t worthless ore not realized gold",
+    "1579 prize would be distributed after return 1580 not recognized in 1579 English Exchequer",
+    "Francis Pretty's 26 tons silver, 80 lb gold, 13 chests reales are not independent events or certified customs ledger; treat as a single narrator's Cacafuego prize narrative, no automatic gold equivalent or sterling conversion",
+    "Mullaghmast 40 followers named in one source are NOT another 40 to add to every other modern victim estimate; incident date contested 1577 vs reconstructed March1578",
+    "C9-F26 named Kalicho and Arnaq Bristol burial records are the SAME adult victims in C9-F15, not additional 2 Inuit taken.",
+    "Cathay Company £5 each portrait costs are expenditures for exploitation/displays of captive Inuit, not received income nor human monetary valuation.",
+    "1577 Crown commission for faculties archive ledger and 1578 army victualling estimate identified only by shelfmarks, amounts unread. Do not invent or classify automatically as income from massacres.",
+    "1570 Winter Guinea voyage and 1571 English ships reported by Spanish envoy could overlap; neither is proof of a particular number of enslaved people actually shipped.",
+    "1572 Hawkins-backed suspected slaving fleet is distinct from his three PERSONALLY COMMANDED 1562/1564/1567 ventures; no total captives or profit computed."
+  ]
+}
