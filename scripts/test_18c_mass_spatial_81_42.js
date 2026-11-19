@@ -388,10 +388,18 @@ a.equal(stageAt('SIERRA_FREETOWN_EARLY_GRID',1793),undefined);
 a.match(stageAt('SIERRA_FREETOWN_COMPANY_OFFICE',1792).title,/黑人移民建镇/);
 a.match(stageAt('SIERRA_FREETOWN_EARLY_GRID',1794).title,/法国舰队袭击/);
 a.match(late('sierra-freetown-early-grid-1800').properties.year_stages[0].summary_zh,/9月25日.*10月15日/);
+for(const id of ['sierra-freetown-early-grid-1800','sierra-freetown-cross-street-1800']){
+ const profile=late(id).properties;
+ a.deepEqual(profile.historical_map_reference_years,[1794,1815,1885]);
+ a.equal(profile.end_year,1899);
+ a(profile.year_stages.some(p=>p.start_year<=1816&&p.end_year>=1885));
+}
+a.match(late('cape-castle-five-bastions-1800').properties.year_stages.find(p=>p.start_year===1811).title,/民政机关迁出/);
+
 a.equal(stageAt('SIERRA_BUNCE_EARLY_POST',1730).kind,'historic_ruins');
 a.equal(stageAt('SIERRA_BUNCE_SLAVE_FORT',1747),undefined);
 a.match(stageAt('SIERRA_BUNCE_SLAVE_FORT',1784).title,/安德森接手/);
-a.match(late('sierra-bunce-slave-fort-1800').properties.year_stages.at(-1).title,/停止大西洋贩奴/);
+a.match(late('sierra-bunce-slave-fort-1800').properties.year_stages.find(p=>p.start_year===1807).title,/停止大西洋贩奴/);
 const batch37Africa=JSON.parse(read('data/eighteenth-century-b37-africa.json'));
 for(const id of [22,23,24,25,26,27,28,30,31]){
  const ref=String(id).padStart(3,'0');

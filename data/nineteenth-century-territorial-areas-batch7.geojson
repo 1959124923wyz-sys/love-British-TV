@@ -7,7 +7,37 @@
     "coastline_attribution": "Natural Earth physical island coastlines and historical maps separately cited; named heritage and administrative sites are point anchors."
   },
   "sources": [
+{
+      "id": "19CT7-18C5B-CASTLE-CMP",
+      "label": "好望堡官方保护计划｜1811年民政机关迁出及其后军事用途",
+      "url": "https://castleofgoodhope.co.za/reps_pubs/ccb_Integrated-Conservation-Management-Plan_Sep18.pdf"
+    },
     {
+      "id": "19CT7-18C5B-GARDEN-CMP",
+      "label": "开普敦市政府｜公司花园历次改造、1848年植物园与1892年市政接手",
+      "url": "https://resource.capetown.gov.za/documentcentre/Documents/City%20strategies%2C%20plans%20and%20frameworks/Draft-Conservation-Management-Plan-for-Companys-Garden.pdf"
+    },
+    {
+      "id": "19CT7-18C5B-SIMON-MUSEUM",
+      "label": "西蒙镇博物馆与南非历史在线｜西船坞与1814年常设海军基地",
+      "url": "https://sahistory.org.za/place/simons-town-museum"
+    },
+    {
+      "id": "19CT7-18C5B-SIMON-SOCIETY",
+      "label": "西蒙镇历史学会｜1814年海军基地及1898年移交海军部",
+      "url": "https://simonstown.org/wp-content/uploads/2022/03/Vol-1-No1_WM.pdf"
+    },
+    {
+      "id": "19CT7-18C5B-EAST-FORT",
+      "label": "比勒陀利亚大学｜弗雷德里克堡留存、巴达维亚时期与东部军政",
+      "url": "https://repository.up.ac.za/server/api/core/bitstreams/8cdd4822-ca0b-4037-bb8c-546846284040/content"
+    },
+    {
+      "id": "19CT7-18C5B-MAROONS",
+      "label": "爱丁堡大学库｜1800年马龙人安置、迁入弗里敦与1803年永久安置",
+      "url": "https://era.ed.ac.uk/server/api/core/bitstreams/1ba02345-896f-48d4-9188-65ebdc97c512/content"
+    },
+        {
       "id": "19CT7-UK-1800-UNION",
       "label": "英国议会｜《1800年联合法案》及其生效日",
       "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/collections/ireland/act-of-union-1800/"
@@ -45551,7 +45581,7 @@
         "name": "开普敦 · 旧城街区",
         "stable_id": "cape-old-town-1795",
         "start_year": 1800,
-        "end_year": 1819,
+        "end_year": 1899,
         "display_kind": "control",
         "label_type": "旧城街区",
         "summary_zh": "英国殖民政府继续在开普敦运作。1795年接收的港口和要塞仍由英军驻用。",
@@ -45598,9 +45628,9 @@
           },
           {
             "start_year": 1814,
-            "end_year": 1819,
+            "end_year": 1899,
             "title": "开普敦旧城 · 8月13日英荷公约",
-            "summary_zh": "英荷公约确认英国保有开普，开普敦继续为殖民行政中心。",
+            "summary_zh": "1814年英荷公约确认英国保有开普。城市继续沿外围拓展，旧城街网留在开普敦市中心。",
             "controller": "british"
           }
         ],
@@ -45617,7 +45647,12 @@
         "prior_record_ids": [
           "CAPE_OLD_TOWN_1795",
           "CAPE_TOWN_ZONE"
-        ]
+        ],
+        "historical_map_reference_years": [
+          1795,
+          1810
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Polygon",
@@ -45822,7 +45857,7 @@
         "name": "开普敦 · 好望堡五棱堡",
         "stable_id": "cape-castle-five-bastions",
         "start_year": 1800,
-        "end_year": 1819,
+        "end_year": 1899,
         "display_kind": "control",
         "label_type": "好望堡五棱堡",
         "summary_zh": "英国殖民政府继续在开普敦运作。1795年接收的港口和要塞仍由英军驻用。",
@@ -45831,14 +45866,16 @@
           "https://open.uct.ac.za/server/api/core/bitstreams/a176e1c5-9a05-4482-9d1a-d906765780e6/content#page=46",
           "https://www.castleofgoodhope.co.za/",
           "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf",
-          "https://sahistory.org.za/dated-event/britain-returns-cape-netherlands-and-flag-batavian-republic-hoisted-castle"
+          "https://sahistory.org.za/dated-event/britain-returns-cape-netherlands-and-flag-batavian-republic-hoisted-castle",
+          "https://castleofgoodhope.co.za/reps_pubs/ccb_Integrated-Conservation-Management-Plan_Sep18.pdf"
         ],
         "source_ids": [
           "19CT7-18C5B-GORDON",
           "19CT7-18C5B-CAPEPLAN",
           "19CT7-18C5B-CASTLE",
           "19CT7-18C5B-TERMS",
-          "19CT7-18C5B-CAPE1803"
+          "19CT7-18C5B-CAPE1803",
+          "19CT7-18C5B-CASTLE-CMP"
         ],
         "year_stages": [
           {
@@ -45864,16 +45901,30 @@
           },
           {
             "start_year": 1806,
-            "end_year": 1813,
+            "end_year": 1810,
             "title": "好望堡 · 1月10日开普敦与好望堡再度签降",
             "summary_zh": "1806年布劳乌贝赫战役之后，英军夺取开普敦、好望堡及附近防御设施。1月19日扬森斯签署全殖民地投降条款。",
             "controller": "british"
           },
           {
-            "start_year": 1814,
-            "end_year": 1819,
-            "title": "好望堡 · 8月13日英荷公约",
-            "summary_zh": "英荷公约确认英国保有开普，开普敦继续为殖民行政中心。",
+            "start_year": 1811,
+            "end_year": 1869,
+            "title": "好望堡 · 民政机关迁出，军方留驻",
+            "summary_zh": "1811年民政机关迁出好望堡，军方继续驻用。英国陆军部接管城堡，1830年代抬高了堡顶防护墙。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1870,
+            "end_year": 1898,
+            "title": "好望堡 · 继续由英军使用",
+            "summary_zh": "英国陆军部尝试把城堡卖给开普政府未果。铁路建设后来占用外围部分工事。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1899,
+            "end_year": 1899,
+            "title": "好望堡 · 南非战争期间用于拘押",
+            "summary_zh": "南非战争期间，军方将堡内部分房间用作牢房。",
             "controller": "british"
           }
         ],
@@ -45889,7 +45940,8 @@
         "position_uncertainty_m": 30,
         "prior_record_ids": [
           "CAPE_CASTLE_FIVE_BASTIONS"
-        ]
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Polygon",
@@ -46062,7 +46114,7 @@
         "name": "开普敦 · 奴隶收容所",
         "stable_id": "cape-slave-lodge",
         "start_year": 1800,
-        "end_year": 1828,
+        "end_year": 1899,
         "display_kind": "settlement",
         "label_type": "奴隶收容所",
         "summary_zh": "部分建筑兼作医院和监狱，被奴役者仍住在收容所。",
@@ -46104,6 +46156,13 @@
             "title": "奴隶收容所 · 部分改作殖民官署",
             "summary_zh": "部分建筑改为殖民政府办公场所，最高法院迁入。此建筑继续收容被奴役者至1828年。",
             "controller": "british"
+          },
+          {
+            "start_year": 1829,
+            "end_year": 1899,
+            "title": "原奴隶收容所 · 殖民办公与司法",
+            "summary_zh": "到1828年，该设施结束作为奴役关押所的用途。开普的殖民机构继续在这处建筑办公。",
+            "controller": "british"
           }
         ],
         "related_event_ids": [],
@@ -46118,7 +46177,8 @@
         "position_uncertainty_m": 35,
         "prior_record_ids": [
           "CAPE_SLAVE_LODGE"
-        ]
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Polygon",
@@ -46155,19 +46215,21 @@
         "name": "开普敦 · 公司花园",
         "stable_id": "cape-company-garden",
         "start_year": 1800,
-        "end_year": 1802,
+        "end_year": 1899,
         "display_kind": "administrative",
         "label_type": "公司花园",
         "summary_zh": "旧园地继续存在，英国殖民政府管理开普敦及其旧公司设施。",
         "source_urls": [
           "https://open.uct.ac.za/server/api/core/bitstreams/a176e1c5-9a05-4482-9d1a-d906765780e6/content#page=46",
           "https://www.rijksmuseum.nl/en/collection/object/Kaart-van-Kaapstad-en-omgeving--7f5fc37a9d374b166801b7ad3df8501d",
-          "https://resource.capetown.gov.za/documentcentre/Documents/Procedures%2C%20guidelines%20and%20regulations/Company%27s%20Garden%20Self%20Guided%20Walk.pdf"
+          "https://resource.capetown.gov.za/documentcentre/Documents/Procedures%2C%20guidelines%20and%20regulations/Company%27s%20Garden%20Self%20Guided%20Walk.pdf",
+          "https://resource.capetown.gov.za/documentcentre/Documents/City%20strategies%2C%20plans%20and%20frameworks/Draft-Conservation-Management-Plan-for-Companys-Garden.pdf"
         ],
         "source_ids": [
           "19CT7-18C5B-CAPEPLAN",
           "19CT7-18C5B-GORDON",
-          "19CT7-18C5B-GARDEN"
+          "19CT7-18C5B-GARDEN",
+          "19CT7-18C5B-GARDEN-CMP"
         ],
         "year_stages": [
           {
@@ -46175,6 +46237,34 @@
             "end_year": 1802,
             "title": "公司花园 · 第一次英占后期",
             "summary_zh": "旧园地继续存在，英国殖民政府管理开普敦及其旧公司设施。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1803,
+            "end_year": 1805,
+            "title": "公司花园旧址 · 巴达维亚当局改造",
+            "summary_zh": "巴达维亚时期，当局延长政府大道，并在大道东侧修建围墙和入口。",
+            "controller": "batavian"
+          },
+          {
+            "start_year": 1806,
+            "end_year": 1847,
+            "title": "公司花园旧址 · 补给园地逐步退用",
+            "summary_zh": "第二次英占后，原来服务船只的食物生产功能逐步衰减。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1848,
+            "end_year": 1891,
+            "title": "公司花园旧址 · 改作植物园及官署区",
+            "summary_zh": "1848年开始改造旧菜园，大道以西开放为植物园，东侧逐步发展为政府和议会地段。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1892,
+            "end_year": 1899,
+            "title": "公司花园旧址 · 市政府接管公共园区",
+            "summary_zh": "1892年开普敦市政府接手公共园区。园址继续包含政府大道、植物园和周边公共机构。",
             "controller": "british"
           }
         ],
@@ -46190,7 +46280,8 @@
         "position_uncertainty_m": 350,
         "prior_record_ids": [
           "CAPE_COMPANY_GARDEN"
-        ]
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Polygon",
@@ -46267,7 +46358,7 @@
         "name": "西蒙镇 · 旧仓库和兵营",
         "stable_id": "cape-simons-town-dock",
         "start_year": 1800,
-        "end_year": 1802,
+        "end_year": 1899,
         "display_kind": "control",
         "label_type": "旧仓库和兵营",
         "summary_zh": "第一次英占末期，英国海军继续在西蒙湾使用这处船用补给设施。",
@@ -46275,13 +46366,17 @@
           "https://archive.parliament.gov.za/items/78d46680-7a19-4d9b-ab16-1bad2db89080",
           "https://www.artefacts.co.za/main/Buildings/bldgframes.php?bldgid=16225",
           "https://simonstown.org/wp-content/uploads/2022/03/Vol-IV-No-1_WM.pdf",
-          "https://ir.unisa.ac.za/bitstream/handle/10500/3636/Van%20Niekerk%20Johan%208%20December%202005.pdf?isAllowed=y&sequence=1"
+          "https://ir.unisa.ac.za/bitstream/handle/10500/3636/Van%20Niekerk%20Johan%208%20December%202005.pdf?isAllowed=y&sequence=1",
+          "https://sahistory.org.za/place/simons-town-museum",
+          "https://simonstown.org/wp-content/uploads/2022/03/Vol-1-No1_WM.pdf"
         ],
         "source_ids": [
           "19CT7-18C5B-SIMONPLAN",
           "19CT7-18C5B-SIMONSTORE",
           "19CT7-18C5B-SIMONOLD",
-          "19CT7-18C5B-SHIPS"
+          "19CT7-18C5B-SHIPS",
+          "19CT7-18C5B-SIMON-MUSEUM",
+          "19CT7-18C5B-SIMON-SOCIETY"
         ],
         "year_stages": [
           {
@@ -46289,6 +46384,34 @@
             "end_year": 1802,
             "title": "西蒙镇 · 英军补给设施继续使用",
             "summary_zh": "第一次英占末期，英国海军继续在西蒙湾使用这处船用补给设施。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1803,
+            "end_year": 1805,
+            "title": "西蒙镇旧仓库 · 开普交还巴达维亚",
+            "summary_zh": "1803年开普由巴达维亚当局接收。西蒙镇仍有荷兰公司旧建仓库及湾岸设施。",
+            "controller": "batavian"
+          },
+          {
+            "start_year": 1806,
+            "end_year": 1813,
+            "title": "西蒙镇旧仓库 · 第二次英占",
+            "summary_zh": "英国再次占领开普，继续使用西蒙湾的海事设施。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1814,
+            "end_year": 1897,
+            "title": "西蒙镇旧船坞 · 英国常设海军基地",
+            "summary_zh": "1814年英国皇家海军改在西蒙湾设永久基地。旧西船坞逐步扩建，旧仓库地段继续服务船厂。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1898,
+            "end_year": 1899,
+            "title": "西蒙镇旧船坞 · 移交英国海军部",
+            "summary_zh": "1898年港口移交英国海军部。",
             "controller": "british"
           }
         ],
@@ -46304,7 +46427,8 @@
         "position_uncertainty_m": 160,
         "prior_record_ids": [
           "CAPE_SIMONS_TOWN_DOCK"
-        ]
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Point",
@@ -46321,17 +46445,19 @@
         "name": "西蒙镇 · 马特洛塔",
         "stable_id": "cape-simons-martello",
         "start_year": 1800,
-        "end_year": 1802,
+        "end_year": 1899,
         "display_kind": "control",
         "label_type": "马特洛塔",
         "summary_zh": "英军继续沿用这座港防圆塔。",
         "source_urls": [
           "https://sahistory.org.za/place/martello-tower-simonstown",
-          "https://sahistory.org.za/place/dutch-and-british-coastal-fortifications-cape-good-hope-1665-1829"
+          "https://sahistory.org.za/place/dutch-and-british-coastal-fortifications-cape-good-hope-1665-1829",
+          "https://simonstown.org/wp-content/uploads/2022/03/Vol-1-No1_WM.pdf"
         ],
         "source_ids": [
           "19CT7-18C5B-MARTELLO",
-          "19CT7-18C5B-COASTAL"
+          "19CT7-18C5B-COASTAL",
+          "19CT7-18C5B-SIMON-SOCIETY"
         ],
         "year_stages": [
           {
@@ -46340,6 +46466,12 @@
             "title": "西蒙镇马特洛塔 · 继续守卫港湾",
             "summary_zh": "英军继续沿用这座港防圆塔。",
             "controller": "british"
+          },
+          {
+            "start_year": 1803,
+            "end_year": 1899,
+            "title": "西蒙镇 · 旧马特洛塔",
+            "summary_zh": "第一次英占建造的圆形炮塔留在港口。1814年皇家海军在西蒙湾设常驻基地。"
           }
         ],
         "related_event_ids": [],
@@ -46354,7 +46486,9 @@
         "position_uncertainty_m": 125,
         "prior_record_ids": [
           "CAPE_SIMONS_MARTELLO"
-        ]
+        ],
+        "continuity_note": "1803年之后保留旧塔这一地理对象，逐年配属或兵额待考。",
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Point",
@@ -46371,7 +46505,7 @@
         "name": "魔鬼峰 · 国王碉堡",
         "stable_id": "cape-kings-blockhouse",
         "start_year": 1800,
-        "end_year": 1806,
+        "end_year": 1899,
         "display_kind": "control",
         "label_type": "国王碉堡",
         "summary_zh": "碉堡继续用于防务。",
@@ -46408,6 +46542,12 @@
             "title": "国王碉堡 · 1月10日列入投降条款",
             "summary_zh": "开普敦投降条款将国王碉堡和附近炮台列入交接。",
             "controller": "british"
+          },
+          {
+            "start_year": 1807,
+            "end_year": 1899,
+            "title": "魔鬼峰 · 国王碉堡及旧讯号站",
+            "summary_zh": "位于魔鬼峰的碉堡继续留存。此处曾连通好望堡、桌湾及半岛其他传讯点。"
           }
         ],
         "related_event_ids": [],
@@ -46422,7 +46562,9 @@
         "position_uncertainty_m": 25,
         "prior_record_ids": [
           "CAPE_KINGS_BLOCKHOUSE"
-        ]
+        ],
+        "continuity_note": "1806年后保留现存碉堡的位置，驻军和传讯编制去向待考。",
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Point",
@@ -46439,19 +46581,21 @@
         "name": "赫拉夫－里内特 · 地方衙署",
         "stable_id": "cape-graaff-reinet",
         "start_year": 1800,
-        "end_year": 1802,
+        "end_year": 1899,
         "display_kind": "administrative",
         "label_type": "地方衙署",
         "summary_zh": "英国地方官继续在镇内运作，东部牧地、牲畜和劳役争端仍引发武装冲突。",
         "source_urls": [
           "https://sahistory.org.za/place/graaff-reinet",
           "https://scientiamilitaria.journals.ac.za/pub/article/view/1094",
-          "https://samilitaryhistory.org/vol035jd.html"
+          "https://samilitaryhistory.org/vol035jd.html",
+          "https://repository.up.ac.za/server/api/core/bitstreams/8cdd4822-ca0b-4037-bb8c-546846284040/content"
         ],
         "source_ids": [
           "19CT7-18C5B-GRAAFF",
           "19CT7-18C5B-WAR",
-          "19CT7-18C5B-KHOE"
+          "19CT7-18C5B-KHOE",
+          "19CT7-18C5B-EAST-FORT"
         ],
         "year_stages": [
           {
@@ -46460,6 +46604,19 @@
             "title": "赫拉夫－里内特 · 英国地方衙署",
             "summary_zh": "英国地方官继续在镇内运作，东部牧地、牲畜和劳役争端仍引发武装冲突。",
             "controller": "british"
+          },
+          {
+            "start_year": 1803,
+            "end_year": 1805,
+            "title": "赫拉夫－里内特 · 巴达维亚共和国时期",
+            "summary_zh": "巴达维亚当局接收开普。1804年另设厄滕哈赫区，赫拉夫－里内特继续是东部殖民城镇。",
+            "controller": "batavian"
+          },
+          {
+            "start_year": 1806,
+            "end_year": 1899,
+            "title": "赫拉夫－里内特 · 第二次英占后的城镇",
+            "summary_zh": "英国再次占领开普，赫拉夫－里内特继续为东部城镇。"
           }
         ],
         "related_event_ids": [],
@@ -46474,7 +46631,9 @@
         "position_uncertainty_m": 600,
         "prior_record_ids": [
           "CAPE_GRAAFF_REINET"
-        ]
+        ],
+        "continuity_note": "1806年后保留镇址，各任地方官和辖界另查。",
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Point",
@@ -46491,17 +46650,19 @@
         "name": "阿尔戈阿湾 · 弗雷德里克堡",
         "stable_id": "cape-algoa-fort-frederick",
         "start_year": 1800,
-        "end_year": 1802,
+        "end_year": 1899,
         "display_kind": "control",
         "label_type": "弗雷德里克堡",
         "summary_zh": "石堡继续作为英国在阿尔戈阿湾的军事据点。",
         "source_urls": [
           "https://sahistory.org.za/place/fort-frederick-port-elizabeth",
-          "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+          "https://scientiamilitaria.journals.ac.za/pub/article/view/1094",
+          "https://repository.up.ac.za/server/api/core/bitstreams/8cdd4822-ca0b-4037-bb8c-546846284040/content"
         ],
         "source_ids": [
           "19CT7-18C5B-FREDERICK",
-          "19CT7-18C5B-WAR"
+          "19CT7-18C5B-WAR",
+          "19CT7-18C5B-EAST-FORT"
         ],
         "year_stages": [
           {
@@ -46509,6 +46670,20 @@
             "end_year": 1802,
             "title": "弗雷德里克堡 · 阿尔戈阿湾英军驻地",
             "summary_zh": "石堡继续作为英国在阿尔戈阿湾的军事据点。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1803,
+            "end_year": 1805,
+            "title": "弗雷德里克堡 · 巴达维亚时期的石堡",
+            "summary_zh": "巴达维亚当局接收开普。1804年另设厄滕哈赫行政区，阿尔戈阿湾留下已有军事设施。",
+            "controller": "batavian"
+          },
+          {
+            "start_year": 1806,
+            "end_year": 1899,
+            "title": "阿尔戈阿湾 · 弗雷德里克石堡",
+            "summary_zh": "英国重新接收开普。后来伊丽莎白港在湾口发展，巴肯斯河上方的弗雷德里克石堡留存。",
             "controller": "british"
           }
         ],
@@ -46524,7 +46699,9 @@
         "position_uncertainty_m": 25,
         "prior_record_ids": [
           "CAPE_ALGOA_FORT_FREDERICK"
-        ]
+        ],
+        "continuity_note": "1806年后保留石堡位置，历年驻员和撤防日期待考。",
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Polygon",
@@ -46561,7 +46738,7 @@
         "name": "克莱恩镇邻近 · 第二处格兰维尔镇",
         "stable_id": "sierra-granville-second",
         "start_year": 1800,
-        "end_year": 1800,
+        "end_year": 1803,
         "display_kind": "settlement",
         "label_type": "第二处格兰维尔镇",
         "summary_zh": "新从新斯科舍迁来的马龙人由公司分置，格兰维尔镇是其定居地之一。",
@@ -46569,13 +46746,15 @@
           "https://www.sierra-leone.org/Books/Two%20Voyages%20to%20Sierra%20Leone%20during%20the%20years%201791-2-3.pdf",
           "https://sierraleoneheritage.org/sites/monuments/oldfourahbay",
           "https://www.perlego.com/book/1663049/the-rise-of-british-west-africa-pdf",
-          "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+          "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801",
+          "https://era.ed.ac.uk/server/api/core/bitstreams/1ba02345-896f-48d4-9188-65ebdc97c512/content"
         ],
         "source_ids": [
           "19CT7-18C5B-FALCON",
           "19CT7-18C5B-CLINE",
           "19CT7-18C5B-CLINEHISTORY",
-          "19CT7-18C5B-LOY"
+          "19CT7-18C5B-LOY",
+          "19CT7-18C5B-MAROONS"
         ],
         "year_stages": [
           {
@@ -46583,6 +46762,18 @@
             "end_year": 1800,
             "title": "格兰维尔镇 · 新到的牙买加马龙人",
             "summary_zh": "新从新斯科舍迁来的马龙人由公司分置，格兰维尔镇是其定居地之一。"
+          },
+          {
+            "start_year": 1801,
+            "end_year": 1802,
+            "title": "格兰维尔镇 · 马龙人由此迁往弗里敦",
+            "summary_zh": "特姆内势力进攻弗里敦前后，公司把部分马龙居民移往弗里敦。"
+          },
+          {
+            "start_year": 1803,
+            "end_year": 1803,
+            "title": "格兰维尔镇 · 弗里敦安置转为长期",
+            "summary_zh": "公司将迁往弗里敦的安排转为长期，撤销马龙事务专管职位。"
           }
         ],
         "related_event_ids": [],
@@ -46597,7 +46788,8 @@
         "position_uncertainty_m": 900,
         "prior_record_ids": [
           "SIERRA_GRANVILLE_SECOND"
-        ]
+        ],
+        "continuity_note": "1803年阶段结束条件是这次马龙人安置转为弗里敦长期居住，第二处格兰维尔镇后续与克莱恩镇的空间关系待查。"
       },
       "geometry": {
         "type": "Point",
@@ -46614,7 +46806,7 @@
         "name": "弗里敦 · 早期街网",
         "stable_id": "sierra-freetown-early-grid",
         "start_year": 1800,
-        "end_year": 1815,
+        "end_year": 1899,
         "display_kind": "settlement",
         "label_type": "早期街网",
         "summary_zh": "9月25日，一部分居民反抗公司管治。公司用武力镇压。10月15日，新司法特许在当地抵达。",
@@ -46652,6 +46844,12 @@
             "end_year": 1815,
             "title": "弗里敦旧街区 · 转入英国王室殖民地",
             "summary_zh": "英国王室接收塞拉利昂公司在本地的权利和土地，旧街网继续使用。"
+          },
+          {
+            "start_year": 1816,
+            "end_year": 1899,
+            "title": "弗里敦旧街区 · 王室殖民地的老城核心",
+            "summary_zh": "弗里敦继续扩展，早期临河街区留在城内。1885年华莱士绘制的城图仍记录了旧街网。"
           }
         ],
         "related_event_ids": [],
@@ -46668,7 +46866,13 @@
           "SIERRA_FREETOWN_EARLY_GRID",
           "FREETOWN_1792",
           "B37-A-Z031"
-        ]
+        ],
+        "historical_map_reference_years": [
+          1794,
+          1815,
+          1885
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Polygon",
@@ -46833,7 +47037,7 @@
         "name": "弗里敦 · 早期横街",
         "stable_id": "sierra-freetown-cross-street",
         "start_year": 1800,
-        "end_year": 1815,
+        "end_year": 1899,
         "display_kind": "settlement",
         "label_type": "早期横街",
         "summary_zh": "1815年的镇图仍绘出这条横向街道及沿线地块。",
@@ -46851,6 +47055,12 @@
             "end_year": 1815,
             "title": "早期横街 · 原街轴继续使用",
             "summary_zh": "1815年的镇图仍绘出这条横向街道及沿线地块。"
+          },
+          {
+            "start_year": 1816,
+            "end_year": 1899,
+            "title": "弗里敦早期横街 · 继续贯穿老城",
+            "summary_zh": "乔治街、格洛斯特街及夏洛特街等早期街道仍与横街相接。1885年街图与今日市中心保有这套旧街网。"
           }
         ],
         "related_event_ids": [],
@@ -46865,7 +47075,13 @@
         "position_uncertainty_m": 65,
         "prior_record_ids": [
           "SIERRA_FREETOWN_CROSS_STREET"
-        ]
+        ],
+        "historical_map_reference_years": [
+          1794,
+          1815,
+          1885
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "LineString",
@@ -46912,7 +47128,7 @@
         "name": "弗里敦 · 桑顿堡",
         "stable_id": "sierra-fort-thornton",
         "start_year": 1800,
-        "end_year": 1801,
+        "end_year": 1899,
         "display_kind": "control",
         "label_type": "桑顿堡",
         "summary_zh": "公司继续修筑这处防御设施。",
@@ -46940,6 +47156,18 @@
             "end_year": 1801,
             "title": "桑顿堡 · 特姆内部队突入堡区",
             "summary_zh": "当地特姆内部队进攻弗里敦；堡垒仍未完工，进攻者一度进入堡区。"
+          },
+          {
+            "start_year": 1802,
+            "end_year": 1807,
+            "title": "桑顿堡 · 公司驻地及工事",
+            "summary_zh": "塞拉利昂公司继续使用山岗驻地，1805年塔山另发展为防御据点。"
+          },
+          {
+            "start_year": 1808,
+            "end_year": 1899,
+            "title": "桑顿堡 · 王室接管后的政府驻地",
+            "summary_zh": "塞拉利昂成为王室殖民地后，政府公署和邮政等设施在政府府邸附近设立。"
           }
         ],
         "related_event_ids": [],
@@ -46954,7 +47182,8 @@
         "position_uncertainty_m": 65,
         "prior_record_ids": [
           "SIERRA_FORT_THORNTON"
-        ]
+        ],
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Point",
@@ -46971,7 +47200,7 @@
         "name": "邦斯岛 · 私营贩奴堡",
         "stable_id": "sierra-bunce-slave-fort",
         "start_year": 1800,
-        "end_year": 1807,
+        "end_year": 1899,
         "display_kind": "settlement",
         "label_type": "私营贩奴堡",
         "summary_zh": "伦敦安德森企业继续利用堡垒关押、买卖并贩运被奴役者。",
@@ -46999,6 +47228,18 @@
             "end_year": 1807,
             "title": "邦斯岛贩奴堡 · 英国禁令后停止大西洋贩奴",
             "summary_zh": "英国议会通过禁止奴隶贸易的法案，安德森企业关闭岛上的贩奴业务。"
+          },
+          {
+            "start_year": 1808,
+            "end_year": 1839,
+            "title": "邦斯岛旧堡 · 改作其他经营和驻留",
+            "summary_zh": "停止大西洋贩奴后，岛上先后尝试种植、商业和锯木，也曾短期驻军。"
+          },
+          {
+            "start_year": 1840,
+            "end_year": 1899,
+            "title": "邦斯岛旧堡 · 弃置后的遗存",
+            "summary_zh": "19世纪中叶前后旧堡弃置，南北两处棱堡和部分旧建筑遗存仍在。"
           }
         ],
         "related_event_ids": [],
@@ -47014,7 +47255,9 @@
         "prior_record_ids": [
           "SIERRA_BUNCE_SLAVE_FORT",
           "B37-A-Z028"
-        ]
+        ],
+        "continuity_note": "奴隶贸易在1807年停止。遗产档案把最后弃置约记在1840年。",
+        "continues_past_display_scope": true
       },
       "geometry": {
         "type": "Polygon",
@@ -47179,7 +47422,8 @@
         "position_uncertainty_m": 45,
         "prior_record_ids": [
           "SIERRA_BUNCE_SLAVE_YARD"
-        ]
+        ],
+        "continuity_note": "此档的终止年对应关押设施随商号结束贩奴的时间，1808年后建筑遗存沿邦斯岛旧堡继续呈现。"
       },
       "geometry": {
         "type": "Point",

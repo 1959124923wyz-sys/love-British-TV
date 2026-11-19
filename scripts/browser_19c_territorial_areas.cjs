@@ -1253,6 +1253,13 @@ async function verify() {
   await freetown1800.waitFor();
   assert.match(await freetown1800.textContent(), /新司法特许/);
   await page.screenshot({ path: join(screenshotDir, '19c-freetown-1800-handoff.png') });
+  for (const year of [1816, 1885]) {
+   await jump(year);
+   await clickAreaAt(...freetown);
+   await freetown1800.waitFor();
+   assert.match(await freetown1800.textContent(), /老城核心/);
+  }
+
 
   const capeCastle = [-33.92579, 18.42825];
   await jump(1795);
