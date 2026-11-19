@@ -248,7 +248,7 @@ const topics = [
       window.eighteenthMassSpatial?.getAudit().loaded);
     for (const [year, earlySite, rebuiltOutline] of [
       [1718, true, false], [1719, true, false], [1720, false, false],
-      [1721, true, false], [1723, false, true]
+      [1721, true, false], [1722, true, false], [1723, false, true]
     ]) {
       await page.evaluate(year => window.atlasStoryBridge.setYear(year), year);
       await yearIs(year);

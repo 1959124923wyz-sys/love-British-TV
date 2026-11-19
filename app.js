@@ -103,6 +103,10 @@ const nineteenthBoundaryRenderer=L.svg({pane:'nineteenthBoundaryPane'});
 map.createPane('seventeenthStudiesPane');
 map.getPane('seventeenthStudiesPane').style.zIndex='452';
 const seventeenthStudiesRenderer=L.svg({pane:'seventeenthStudiesPane'});
+// Named points stay clickable above regional canvas layers and below event markers.
+map.createPane('seventeenthEvidencePane');
+map.getPane('seventeenthEvidencePane').style.zIndex='469';
+const seventeenthEvidenceRenderer=L.svg({pane:'seventeenthEvidencePane'});
 // Sourced but deliberately expansive cartographic claims; no historical cadastral truth asserted.
 map.createPane('seventeenthColonialClaimsPane');
 map.getPane('seventeenthColonialClaimsPane').style.zIndex='418';
@@ -1333,7 +1337,7 @@ function renderSeventeenthSpatialEvidence(){
   const radius=display==='land_dispossession'?23:
    display==='military_impact'?20:display==='economic_network'?18:18;
   const center=[coordinate[1],coordinate[0]];
-  const layer=L.circleMarker(center,{renderer:territoryRenderer,pane:'territoryPane',
+  const layer=L.circleMarker(center,{renderer:seventeenthEvidenceRenderer,pane:'seventeenthEvidencePane',
    radius,weight:2.4,color,opacity:.95,dashArray:'5 5',
    fill:true,fillColor:color,fillOpacity:display==='land_dispossession'?.12:.085,
    bubblingMouseEvents:false,
