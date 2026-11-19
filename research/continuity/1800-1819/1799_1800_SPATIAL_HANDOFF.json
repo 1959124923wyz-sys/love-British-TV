@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 575,
-    "linked_to_1800_public_geometry": 414,
+    "1799_prior_records_reviewed": 577,
+    "linked_to_1800_public_geometry": 420,
     "by_disposition": {
-      "anchor": 238,
+      "anchor": 241,
       "claim_evidence": 7,
-      "continued": 141,
+      "continued": 142,
       "event_history": 11,
       "fiscal_evidence": 36,
-      "needs_boundary_or_site_review": 42,
+      "needs_boundary_or_site_review": 38,
       "network_evidence": 62,
       "occupation": 9,
       "political_relation_evidence": 11,
-      "renewed_scope": 18
+      "renewed_scope": 20
     },
     "continue_in_original_public_layer": 1
   },
@@ -746,16 +746,20 @@
       "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
       "name_zh": "1793年Pondicherry英军再次占领法属城",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "pondicherry-boulevard-town-1800"
+      ]
     },
     {
       "prior_id": "B38-I-Z028",
       "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
       "name_zh": "1781年Negapatam英军夺取荷兰港堡",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "nagapattinam-port-town-1800"
+      ]
     },
     {
       "prior_id": "B38-I-Z045",
@@ -1684,8 +1688,10 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1781英军夺取荷兰纳加帕蒂南港",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "nagapattinam-port-town-1800"
+      ]
     },
     {
       "prior_id": "B36-Z096",
@@ -1987,8 +1993,10 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "本地治里英军阶段性占据商站周边",
       "prior_record_kind": "wartime_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "pondicherry-boulevard-town-1800"
+      ]
     },
     {
       "prior_id": "PENANG_ISLAND",
@@ -5594,6 +5602,28 @@
       "features_at_1800": [],
       "continues_in_source_at_1800": true,
       "notes": "条约渔岸沿同一图层线段和档案继续，按条约权利呈现。"
+    },
+    {
+      "prior_id": "PONDICHERRY_BOULEVARD_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "本地治里 · 旧城街区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "pondicherry-boulevard-town-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "NAGAPATTINAM_PORT_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "纳加帕蒂南 · 旧港与荷兰驻地",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "nagapattinam-port-town-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
     }
   ]
 }

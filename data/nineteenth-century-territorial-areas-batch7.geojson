@@ -7,6 +7,46 @@
     "coastline_attribution": "Natural Earth physical island coastlines and historical maps separately cited; named heritage and administrative sites are point anchors."
   },
   "sources": [
+    {
+      "id": "19CT7-18C5D-PON-GAZ",
+      "label": "本地治里政府地方志，第223—226页｜英国占领、比诺签降及实际归还",
+      "url": "https://statistics.py.gov.in/sites/default/files/ii-iii-the-modern-period.pdf"
+    },
+    {
+      "id": "19CT7-18C5D-PON-AMIENS",
+      "label": "《亚眠和约》｜归还条款",
+      "url": "https://www.oas.org/sap/peacefund/belizeandguatemala/timelinedocuments/amiensTreaty.pdf"
+    },
+    {
+      "id": "19CT7-18C5D-PON-BINOT",
+      "label": "法属印度历史档案，193号馆藏条目｜比诺登陆、英方军队进驻及居民请求",
+      "url": "https://www.ifpindia.org/rare-monographs/pdf/ETABL-FR_0011_SS3356.pdf"
+    },
+    {
+      "id": "19CT7-18C5D-PON-BINOTUK",
+      "label": "伦敦大学亚非学院论文及所引1803年马德拉斯行政函｜威尔斯利暂缓交还",
+      "url": "https://eprints.soas.ac.uk/33568/1/11010327.pdf"
+    },
+    {
+      "id": "19CT7-18C5D-PON-PLAN",
+      "label": "本地治里规划局报告，第272—273页、图8-1与8-2｜旧城街网",
+      "url": "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf#page=292"
+    },
+    {
+      "id": "19CT7-18C5D-NAG-TREATY",
+      "label": "1784年英荷和约，第四条｜纳加帕蒂南及属地",
+      "url": "https://www.emersonkent.com/historic_documents/treaty_of_paris_1784_transcript_translation.htm"
+    },
+    {
+      "id": "19CT7-18C5D-NAG-GAZ",
+      "label": "《印度帝国地志》马德拉斯卷，第161页｜港城与坦焦尔行政驻地",
+      "url": "https://ignca.gov.in/Asi_data/30077.pdf"
+    },
+    {
+      "id": "19CT7-18C5D-NAG-LOCATION",
+      "label": "荷兰国家档案馆合作项目｜纳加帕蒂南港城",
+      "url": "https://www.atlasofmutualheritage.nl/page/4946/nagappattinam"
+    },
 {
       "id": "19CT7-18C5B-CASTLE-CMP",
       "label": "好望堡官方保护计划｜1811年民政机关迁出及其后军事用途",
@@ -4649,6 +4689,261 @@
     }
   ],
   "features": [
+    {
+      "type": "Feature",
+      "id": "pondicherry-boulevard-town-1800",
+      "properties": {
+        "name": "本地治里 · 旧城街区",
+        "stable_id": "pondicherry-boulevard-town",
+        "start_year": 1800,
+        "end_year": 1899,
+        "display_kind": "local_governance",
+        "label_type": "港城与殖民行政",
+        "summary_zh": "公司军延续1793年起的军事占领，地方行政由英方军官和警务机构管理。",
+        "source_urls": [
+          "https://statistics.py.gov.in/sites/default/files/ii-iii-the-modern-period.pdf",
+          "https://www.oas.org/sap/peacefund/belizeandguatemala/timelinedocuments/amiensTreaty.pdf",
+          "https://www.ifpindia.org/rare-monographs/pdf/ETABL-FR_0011_SS3356.pdf",
+          "https://eprints.soas.ac.uk/33568/1/11010327.pdf",
+          "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf#page=292"
+        ],
+        "source_ids": [
+          "19CT7-18C5D-PON-GAZ",
+          "19CT7-18C5D-PON-AMIENS",
+          "19CT7-18C5D-PON-BINOT",
+          "19CT7-18C5D-PON-BINOTUK",
+          "19CT7-18C5D-PON-PLAN"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1801,
+            "title": "本地治里旧城 · 英军继续管治",
+            "summary_zh": "公司军延续1793年起的军事占领，地方行政由英方军官和警务机构管理。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1802,
+            "end_year": 1802,
+            "title": "本地治里旧城 · 亚眠和约约定归还",
+            "summary_zh": "亚眠和约约定归还法国战时被占据的领地。英方仍驻城。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1803,
+            "end_year": 1803,
+            "title": "本地治里旧城 · 法国来使未获交割",
+            "summary_zh": "6月比诺抵达要求交收，英方暂缓办理。战事重启后，公司军在政府广场设炮。9月13日，比诺签降。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1804,
+            "end_year": 1813,
+            "title": "本地治里旧城 · 英军继续占领",
+            "summary_zh": "英国东印度公司继续驻城，并先后任命军政长官。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1814,
+            "end_year": 1815,
+            "title": "本地治里旧城 · 战后和约约定归还",
+            "summary_zh": "1814年和约约定恢复法国1792年初的在印据点，1815年和约促成交割，城镇仍由英方掌管。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1816,
+            "end_year": 1817,
+            "title": "本地治里旧城 · 12月4日法国接收",
+            "summary_zh": "1816年12月4日法国正式接收本地治里，当年另行办理了昌德纳戈尔的交割。",
+            "controller": "french"
+          },
+          {
+            "start_year": 1818,
+            "end_year": 1818,
+            "title": "本地治里旧城 · 马德拉斯盐务公约",
+            "summary_zh": "1818年5月公约要求法属印度停止制盐，盐由英方供应。公约规定由英方每年支付四千星塔为制盐损失补偿。",
+            "controller": "french"
+          },
+          {
+            "start_year": 1819,
+            "end_year": 1899,
+            "title": "本地治里旧城 · 法国殖民行政",
+            "summary_zh": "法国继续管理本地治里。1819年改设皇家法院及初审法院。",
+            "controller": "french"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Historic street core cross-checked between BnF 1756 plan index, the 1778 siege-plan catalogue and PPA draft CDP pp. 272–273, figs. 8-1–2. Trace follows the surviving outer boulevards and beachfront street on OSM tiles z16 x47299–47302 y30578–30581 (© OpenStreetMap contributors, ODbL); this is the old street envelope, with no bastion or exact historic shoreline reconstruction.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 150,
+        "prior_record_ids": [
+          "PONDICHERRY_BOULEVARD_TOWN",
+          "PONDICHERRY_BRITISH",
+          "B38-I-Z022"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.830394,
+              11.942139
+            ],
+            [
+              79.828334,
+              11.941509
+            ],
+            [
+              79.827411,
+              11.940544
+            ],
+            [
+              79.826295,
+              11.939116
+            ],
+            [
+              79.825137,
+              11.937017
+            ],
+            [
+              79.824278,
+              11.93328
+            ],
+            [
+              79.82372,
+              11.930425
+            ],
+            [
+              79.824471,
+              11.927716
+            ],
+            [
+              79.825094,
+              11.926772
+            ],
+            [
+              79.825888,
+              11.926142
+            ],
+            [
+              79.827261,
+              11.925512
+            ],
+            [
+              79.830823,
+              11.924882
+            ],
+            [
+              79.834149,
+              11.925638
+            ],
+            [
+              79.834857,
+              11.927339
+            ],
+            [
+              79.835758,
+              11.931978
+            ],
+            [
+              79.836423,
+              11.935526
+            ],
+            [
+              79.836466,
+              11.937668
+            ],
+            [
+              79.836144,
+              11.939074
+            ],
+            [
+              79.833119,
+              11.940796
+            ],
+            [
+              79.830394,
+              11.942139
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nagapattinam-port-town-1800",
+      "properties": {
+        "name": "纳加帕蒂南 · 旧港与荷兰驻地",
+        "stable_id": "nagapattinam-port-town",
+        "start_year": 1800,
+        "end_year": 1899,
+        "display_kind": "local_governance",
+        "label_type": "港城与殖民行政",
+        "summary_zh": "港城延续英国公司管治，地区行政机关设于纳加帕蒂南。",
+        "source_urls": [
+          "https://www.emersonkent.com/historic_documents/treaty_of_paris_1784_transcript_translation.htm",
+          "https://ignca.gov.in/Asi_data/30077.pdf",
+          "https://www.atlasofmutualheritage.nl/page/4946/nagappattinam"
+        ],
+        "source_ids": [
+          "19CT7-18C5D-NAG-TREATY",
+          "19CT7-18C5D-NAG-GAZ",
+          "19CT7-18C5D-NAG-LOCATION"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1844,
+            "title": "纳加帕蒂南旧港 · 坦焦尔地区行政驻地",
+            "summary_zh": "港城延续英国公司管治，地区行政机关设于纳加帕蒂南。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1845,
+            "end_year": 1857,
+            "title": "纳加帕蒂南旧港 · 地区首府迁出",
+            "summary_zh": "地区行政驻地由纳加帕蒂南迁往坦焦尔，旧港继续在英国公司管治之下。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1858,
+            "end_year": 1899,
+            "title": "纳加帕蒂南旧港 · 英属马德拉斯港口",
+            "summary_zh": "英国王室接手公司领地后，纳加帕蒂南作为港口继续隶属马德拉斯管区。",
+            "controller": "british"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Named historic settlement coordinates from the Atlas of Mutual Heritage Nagappattinam site entry. VEL1080 and RCIN 734070.b identify the fortress separately, but they are not tied to sufficient modern controls to assert a fortress footprint.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 850,
+        "prior_record_ids": [
+          "NAGAPATTINAM_PORT_TOWN",
+          "B36-Z095",
+          "B38-I-Z028"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.84732,
+          10.764993
+        ]
+      }
+    },
     {
       "type": "Feature",
       "id": "great-britain-1800-kingdom",

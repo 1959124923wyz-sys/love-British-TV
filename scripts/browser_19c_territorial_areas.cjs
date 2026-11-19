@@ -1409,6 +1409,38 @@ async function verify() {
    await openSeamDossier(point, year + 1, title);
   }
 
+  const pondicherry = [11.9341, 79.8309];
+  const pondicherryCard = page.locator('[data-overlap-id="18c:PONDICHERRY_BOULEVARD_TOWN"]');
+  for (const [year, title] of [
+   [1761, /英军占领与拆城/], [1765, /4月11日法国接收/], [1783, /条约约定交还/],
+   [1785, /2月1日正式交还法国/], [1799, /按名单驱逐居民/]
+  ]) {
+   await jump(year);
+   await setView([...pondicherry, 14]);
+   await clickAreaAt(...pondicherry);
+   await pondicherryCard.filter({ hasText: title }).waitFor();
+  }
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...pondicherry);
+  const pondicherry1800 = page.locator('[data-historic-overlap-id$=":pondicherry-boulevard-town-1800"]');
+  await pondicherry1800.filter({ hasText: /英军继续管治/ }).waitFor();
+  for (const [year, title] of [[1803, /法国来使未获交割/], [1816, /12月4日法国接收/]]) {
+   await jump(year);
+   await clickAreaAt(...pondicherry);
+   await pondicherry1800.filter({ hasText: title }).waitFor();
+  }
+
+  const nagapattinam = [10.764993, 79.84732];
+  for (const [year, title] of [[1781, /英军围攻与受降/], [1784, /条约正式割让/], [1799, /坦焦尔行政驻地/]]) {
+   await jump(year);
+   await setView([...nagapattinam, 14]);
+   await openSeamDossier(nagapattinam, year, title);
+  }
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await openSeamDossier(nagapattinam, 1800, /坦焦尔地区行政驻地/);
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {
