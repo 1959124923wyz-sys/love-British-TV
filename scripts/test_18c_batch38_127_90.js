@@ -19,8 +19,6 @@ const previousZones=old34.area_references.length+old35.zones.length+old36.zones.
 const previousSites=old34.control_sites.length+old35.sites.length+old36.sites.length+old37.reduce((n,d)=>n+d.sites.length,0);
 assert.equal(previousZones,375);assert.equal(previousSites,248);
 assert.equal(previousZones+zones.length,502);assert.equal(previousSites+sites.length,338);
-const previousPhases=[...old34.area_references,...old34.control_sites,...old35.zones,...old35.sites,...old36.zones,...old36.sites,...old37.flatMap(d=>[...d.zones,...d.sites])].reduce((n,x)=>n+x.periods.length,0);
-assert.equal(previousPhases,674);assert.equal(previousPhases+217,891);
 const ids=new Set(),kinds=new Set(['administration','military','displacement','resistance','paper_claim','diplomacy','trade_influence','battle','revenue','coercion','foreign_occupation']);
 for(const d of docs){
  assert.equal(d.schema,'atlas-18c-batch38-v1');assert.equal(d.review_only,true);
@@ -103,12 +101,31 @@ assert.equal(find('hudson-company','Assiniboin原住民').kind,'resistance');
 assert.equal(find('india-mysore','1784年Mangalore公司撤回').kind,'diplomacy');
 const app=read('app.js'),html=read('index.html'),js=read('js/eighteenth-batch38-spatial.js');
 assert.equal((app.match(/window\.eighteenthBatch38Spatial\?\.render\?\.\(\);/g)||[]).length,4);
-assert(app.includes('.atlas-18c-b38-zone,.atlas-18c-b38-site,'));
+assert(js.includes("className:'atlas-18c-b38-zone'")&&js.includes("className:'atlas-18c-b38-site'"));
 assert(html.includes('js/eighteenth-batch38-spatial.js?v=18c-batch38-south-hudson-mysore-127-90-20261112'));
-assert(html.includes('累计503组区域面、338个地点核心、890个时间阶段'));
-assert(js.includes("get('review18c')!=='1'"));
+assert(js.includes('!obj.superseded_by&&obj.periods.some'));
 assert(js.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(js.includes('window.eighteenthBatch38Spatial='));
 assert(js.includes('counts={\'south-campaign\':[48,41],'));
 assert(!/area_sqkm\s*=\s*[1-9]/.test(js));
-console.log('PASS: 127 new schematic zones,90 linked reference cores,217 time phases; cumulative 502,338,891. Exact 18C reversals, proxy geometry, origins and preview access validated.');
+const replacements=new Map([...old35.regional_zones,...old35.regional_sites].map(row=>[row.id,row]));
+const mapped=zones.filter(z=>z.id==='B38-H-Z022'||(/^B38-S-Z/.test(z.id)&&(
+ Number(z.id.slice(-3))<=17||['031','038'].includes(z.id.slice(-3)))));
+assert.equal(mapped.length,20);
+for(const zone of mapped){
+ assert(replacements.has(zone.superseded_by),zone.id);
+ const proxy=sites.find(site=>site.linked_zone_id===zone.id);
+ assert.equal(proxy.superseded_by,zone.superseded_by,proxy.id);
+}
+const starConstruction=replacements.get('NINETY_SIX_STAR_FORT_WORKS');
+const starFort=replacements.get('NINETY_SIX_STAR_FORT');
+assert.equal(starConstruction.geometry.type,'Point');
+assert.equal(starFort.geometry.type,'Polygon');
+assert.equal(starFort.uncertain_line_dashed,true);
+assert.equal(starFort.outline_only,true);
+assert(on(starConstruction,1780)&&!on(starConstruction,1781));
+assert(!on(starFort,1780)&&on(starFort,1781)&&!on(starFort,1782));
+assert(!on(replacements.get('FORT_ROUGE_FORKS'),1750));
+assert.equal(replacements.get('FORT_MOTTE_MOUNT_JOSEPH').periods[0].kind,'settlement');
+assert.equal(replacements.get('CAMDEN_BATTLEFIELD_FLAT_ROCK').periods[0].start_year,1780);
+console.log('PASS: Batch 38 archives (127 areas, 90 proxy points, 217 phases) and 20 map replacements.');

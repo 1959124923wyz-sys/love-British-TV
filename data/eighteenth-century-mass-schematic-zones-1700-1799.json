@@ -10203,6 +10203,564 @@
   ],
   "regional_sites": [
     {
+      "id": "FORT_ROUGE_FORKS",
+      "title": "尼斯塔瓦亚克／福克斯 · 红堡",
+      "stable_id": "fort-rouge-forks",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1738,
+          "end_year": 1748,
+          "title": "尼斯塔瓦亚克／福克斯 · 法国红堡",
+          "note": "拉韦朗德里的同伴德卢维耶于1738年在红河与阿西尼博因河交汇处附近建立贸易站。这里长期是原住民停留和交易的地点。"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1749,
+          "title": "尼斯塔瓦亚克／福克斯 · 红堡废弃",
+          "note": "红堡至1749年已废弃。河流交汇一带仍有原住民往来，后续另有季节性贸易营地。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://www.theforks.com/uploads/bibliographies/1996-Heritage_Resource_Impact_Assessment_Portage_East_Site.pdf",
+        "https://www.theforks.com/uploads/bibliographies/1988-Forks_Archaeological_Impact_Assessment_and_Mngm_Plan.pdf",
+        "https://www.mhs.mb.ca/docs/sites/theforks.shtml"
+      ],
+      "geometry_method": "Named Forks locality at the publicly recorded historic-site plaque. The archaeological reports identify two candidate banks; this point refers to the confluence.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.12817,
+          49.88908
+        ]
+      },
+      "position_uncertainty_m": 650,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "CAMDEN_KERSHAW_HEADQUARTERS",
+      "title": "卡姆登 · 克肖宅邸英军总部",
+      "stable_id": "camden-kershaw-headquarters",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "卡姆登 · 英军占镇并征用克肖宅邸",
+          "note": "6月1日康沃利斯进入卡姆登，征用约瑟夫·克肖的店铺、磨坊和住宅。英军以宅邸为总部，在镇内外修筑工事。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "卡姆登 · 英军焚毁房屋并撤离",
+          "note": "5月9日至10日罗登所部撤出卡姆登。美方当时报告英军焚毁军营及多处私人住宅，罗登也向康沃利斯报告已毁工事。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://nationalregister.sc.gov/SurveyReports/HC28001.pdf",
+        "https://www.nationalregister.sc.gov/kershaw/S10817728002/index.htm",
+        "https://thelibertytrail.org/sc/trail-sites/historic-sites/kershaw-cornwallis-house",
+        "https://southcarolina250.com/wp-content/uploads/2026/01/Francis_Marion_Papers_Volume_II_101525.pdf"
+      ],
+      "geometry_method": "Historic Camden public site near the Kershaw house reconstruction on Magazine Hill. The state survey identifies the headquarters locality.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6059,
+          34.2349
+        ]
+      },
+      "position_uncertainty_m": 125,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "CAMDEN_SOUTHWEST_REDOUBT",
+      "title": "卡姆登 · 西南堡垒",
+      "stable_id": "camden-southwest-redoubt",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "卡姆登 · 英军西南堡垒",
+          "note": "英军在木栅外、旧长老会教堂西南设堡，防守卡姆登镇及仓储设施。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "卡姆登 · 西南外防结束",
+          "note": "罗登所部5月撤离卡姆登，英军在镇内外的驻防结束。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.nationalregister.sc.gov/kershaw/S10817728002/index.htm",
+        "https://www.hmdb.org/m.asp?m=111225",
+        "https://nationalregister.sc.gov/SurveyReports/HC28001.pdf",
+        "https://southcarolina250.com/wp-content/uploads/2026/01/Francis_Marion_Papers_Volume_II_101525.pdf"
+      ],
+      "geometry_method": "Kershaw County location marker at the cemetery, a few yards north of the historical work, compared with the state nomination for Historic Camden.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.60792,
+          34.2335
+        ]
+      },
+      "position_uncertainty_m": 70,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "CAMDEN_BATTLEFIELD_FLAT_ROCK",
+      "title": "卡姆登战场 · 弗拉特罗克路",
+      "stable_id": "camden-battlefield-flat-rock",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "卡姆登镇以北 · 8月16日交战",
+          "note": "康沃利斯指挥英军在卡姆登镇以北击败盖茨所率大陆军。美军多人伤亡或被俘。"
+        }
+      ],
+      "source_urls": [
+        "https://www.battlefields.org/learn/revolutionary-war/battles/camden",
+        "https://thelibertytrail.org/sc/trail-sites/battlefields/camden-battlefield/visit",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Public Camden battlefield marker along Flat Rock Road at the protected battlefield north of town.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.61125,
+          34.35858
+        ]
+      },
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "HOBKIRK_HILL_BATTLEFIELD",
+      "title": "霍布柯克山战场",
+      "stable_id": "hobkirk-hill-battlefield",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "霍布柯克山 · 4月25日交战",
+          "note": "罗登率英军从卡姆登北上，击退格林所部。5月英军仍撤离卡姆登。"
+        }
+      ],
+      "source_urls": [
+        "https://www.battlefields.org/visit/battlefields/hobkirk-hill-battlefield",
+        "https://www.hmdb.org/m.asp?m=268859",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Public battlefield marker at Broad and Greene streets, as located by the American Battlefield Trust.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.60897,
+          34.26378
+        ]
+      },
+      "position_uncertainty_m": 300,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "NINETY_SIX_STAR_FORT_WORKS",
+      "title": "九十六镇 · 星堡工地",
+      "stable_id": "ninety-six-star-fort-works",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "九十六镇 · 12月开始筑星堡",
+          "note": "工程由英方工程军官亨利·霍尔丹设计。保皇派士兵和从周边农场、种植园征用的被奴役者承担筑堡劳动。"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/nisi/learn/historyculture/the-star-fort.htm",
+        "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer"
+      ],
+      "geometry_method": "Worksite anchor inside the surviving Star Fort. NPS dates construction from December 1780 to early 1781.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.01833,
+          34.14612
+        ]
+      },
+      "position_uncertainty_m": 30,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "AUGUSTA_FORT_CORNWALLIS",
+      "title": "奥古斯塔 · 康沃利斯堡",
+      "stable_id": "augusta-fort-cornwallis",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "奥古斯塔 · 英军设康沃利斯堡",
+          "note": "英军在圣保罗教堂和旧奥古斯塔堡一带设防。9月美方民兵进攻，英方继续驻守。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "奥古斯塔 · 康沃利斯堡守军投降",
+          "note": "大陆军和民兵围攻，托马斯·布朗指挥的守军于6月投降，英方失去此堡。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://www.georgiahistory.com/ghmi_marker_updated/fort-augusta-fort-cornwallis-st-pauls-church/",
+        "https://saintpauls.org/welcome/directions/",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "St Paul's churchyard at Sixth and Reynolds, the fort locality identified by the Georgia Historical Society.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.9615,
+          33.4761
+        ]
+      },
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "AUGUSTA_FORT_GRIERSON",
+      "title": "奥古斯塔 · 格里尔森临时堡",
+      "stable_id": "augusta-fort-grierson",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "奥古斯塔 · 格里尔森堡失守",
+          "note": "詹姆斯·格里尔森指挥英方临时堡。美军和民兵进攻时，部分守军试图沿河撤往康沃利斯堡。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.georgiahistory.com/ghmi_marker_updated/fort-grierson/",
+        "https://dlg.usg.edu/record/dlg_ghm_fort-grierson",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Generalized riverfront vicinity of the Fort Grierson historical marker. The Georgia Historical Society distinguishes it from the fort at St Paul's.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.9702,
+          33.4788
+        ]
+      },
+      "position_uncertainty_m": 260,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "FORT_WATSON_SANTEE_MOUND",
+      "title": "桑蒂土丘 · 沃森堡",
+      "stable_id": "fort-watson-santee-mound",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "桑蒂土丘 · 英军筹筑沃森堡",
+          "note": "1780年12月下旬至次年1月初，约翰·沃森下令在原住民土丘上设防，守护从查尔斯顿通往内陆的补给线。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "桑蒂土丘 · 沃森堡守军投降",
+          "note": "弗朗西斯·马里昂和亨利·李所部围攻堡垒，英方守军于4月23日投降。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://www.fws.gov/sites/default/files/documents/2024-03/santee-map-tearsheet-2024_508.pdf",
+        "https://www.nationalregister.sc.gov/clarendon/S10817714004/",
+        "https://www.battlefields.org/learn/revolutionary-war/battles/siege-fort-watson",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Public Santee Indian Mound/Fort Watson monument site in the US Fish and Wildlife Service Bluff Unit map. The station occupied the precolonial mound.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.43765,
+          33.539
+        ]
+      },
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "FORT_MOTTE_MOUNT_JOSEPH",
+      "title": "莫特堡 · 约瑟夫山种植园",
+      "stable_id": "fort-motte-mount-joseph",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1780,
+          "title": "约瑟夫山 · 莫特家族种植园",
+          "note": "莫特家族于1767年修建宅邸。独立战争期间，英军起初在附近的贝尔维尔种植园设防。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "莫特堡 · 英军征用宅邸，守军投降",
+          "note": "英军年初转入丽贝卡·莫特的宅邸，并在宅外筑垒，保障查尔斯顿至卡姆登的运输。5月围攻期间美方引燃屋顶，守军于12日投降。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.nationalregister.sc.gov/calhoun/S10817709008/index.htm",
+        "https://www.academia.edu/48226471/Obstinate_and_Strong_The_History_and_Archaeology_of_the_Siege_of_Fort_Motte",
+        "https://southcarolina250.com/wp-content/uploads/2026/01/Francis_Marion_Papers_Volume_II_101525.pdf",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Fort Motte populated-place anchor from the modern USGS locality. The National Register restricts the archaeological address; the anchor identifies the named vicinity.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6925,
+          33.73917
+        ]
+      },
+      "position_uncertainty_m": 4500,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "FORT_GRANBY_FRIDAYS_FERRY",
+      "title": "康加里河渡口 · 格兰比堡",
+      "stable_id": "fort-granby-fridays-ferry",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "格兰比 · 英军在商站设营",
+          "note": "查尔斯顿失守后，英军在康加里河渡口附近的旧贸易站设营，随后筑堡。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "格兰比堡 · 5月15日守军投降",
+          "note": "格兰比堡在年初已建成。萨姆特两度围攻，5月15日守军向亨利·李所部投降。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://carolinaquotes.com/trail/sc/marker/32-60",
+        "https://southcarolina250.com/wp-content/uploads/2026/01/Francis_Marion_Papers_Volume_II_101525.pdf",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Public state marker 32-60 at Granby Locks. It describes the former trading-post garrison west of the marker near the Friday’s Ferry crossing.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.0428,
+          33.9714
+        ]
+      },
+      "position_uncertainty_m": 550,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "ORANGEBURG_COLONIAL_POST",
+      "title": "奥兰治堡 · 殖民旧镇驻点",
+      "stable_id": "orangeburg-colonial-post",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "奥兰治堡 · 英方内陆驻点",
+          "note": "查尔斯顿失守后，英军与保皇派在南卡罗来纳内陆维持多个据点，奥兰治堡是其中之一。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "奥兰治堡 · 法院及监狱守军投降",
+          "note": "5月托马斯·萨姆特率军攻打驻守砖砌法院和监狱的保皇派，守军于11日投降。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://southcarolina250.com/wp-content/uploads/2026/01/Francis_Marion_Papers_Volume_II_101525.pdf",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Central Orangeburg locality. The Marion papers locate the garrison at the brick court and jail; building-level geometry has not been traced.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.855,
+          33.491
+        ]
+      },
+      "position_uncertainty_m": 850,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "SILVER_BLUFF_GALPHIN_POST",
+      "title": "银崖 · 加尔芬贸易站与堡",
+      "stable_id": "silver-bluff-galphin-post",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1740,
+          "end_year": 1759,
+          "title": "银崖 · 加尔芬经营贸易站",
+          "note": "乔治·加尔芬于1740年代初在萨凡纳河银崖经营贸易站，与克里克人多有交涉。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1779,
+          "title": "银崖 · 带木栅的贸易驻地",
+          "note": "贸易站及加尔芬的宅邸约于1760年设防。加尔芬在南卡罗来纳殖民当局与克里克各方之间担任交涉中间人。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "银崖 · 加尔芬在战争中去世",
+          "note": "乔治·加尔芬于1780年去世。战争期间，英方在其旧商站设置驻军。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "银崖 · 加尔芬堡失守与货物被缴",
+          "note": "5月亨利·李所部夺取英方驻站，扣下准备用于原住民贸易的货物。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://schpr.sc.gov/index.php/Detail/properties/S10817702008",
+        "https://www.audubon.org/silver-bluff/about-us",
+        "https://treealive.com/m/sc-02-75",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "geometry_method": "Public Silver Bluff Audubon sanctuary locality marker at 4542 Silver Bluff Road. The state register establishes the named settlement and trading site.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.84597,
+          33.3244
+        ]
+      },
+      "position_uncertainty_m": 1400,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "WILMINGTON_CAPE_FEAR_PORT",
+      "title": "威尔明顿 · 开普菲尔河港",
+      "stable_id": "wilmington-cape-fear-port",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "威尔明顿 · 英军占港、补给与撤离",
+          "note": "詹姆斯·克雷格1月攻占威尔明顿，将港口作为补给基地。康沃利斯在吉尔福德法院战役后到此整补。英军11月18日撤离。"
+        }
+      ],
+      "source_urls": [
+        "https://www.dncr.nc.gov/blog/2016/11/18/british-forces-leave-wilmington-and-nc-1781",
+        "https://www.ncpedia.org/wilmington-campaign-1781",
+        "https://www.dncr.nc.gov/blog/2023/12/14/battle-rockfish-f-7"
+      ],
+      "geometry_method": "Historic waterfront at Market and Water streets, the public Tryon marker locality. Town and port occupation attested by NC DNCR.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.94968,
+          34.23523
+        ]
+      },
+      "position_uncertainty_m": 220,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
       "id": "CHURCHILL_UPRIVER_COMPANY_POST",
       "title": "丘吉尔河上游商站",
       "kind": "company_post",
@@ -28674,6 +29232,117 @@
     }
   ],
   "regional_zones": [
+    {
+      "id": "NINETY_SIX_STAR_FORT",
+      "title": "九十六镇星堡",
+      "stable_id": "ninety-six-star-fort",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "九十六镇星堡 · 围城与撤守",
+          "note": "土堡于年初完工。5月至6月，格林所率大陆军围攻未能夺堡。克鲁格所部随后焚毁镇区，销毁储备，7月撤离。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://www.nps.gov/nisi/learn/historyculture/the-star-fort.htm",
+        "https://www.nps.gov/nisi/learn/historyculture/colonel-cruger.htm",
+        "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+        "https://pure.lib.usf.edu/ws/portalfiles/portal/41034383/Terrestrial%2Band%2BAirborne%2BLiDAR%2BDigital%2BDocumentation%2Bof%2BKosciuszk.pdf"
+      ],
+      "geometry_method": "Trace of the surviving eight-point earthwork crest from multidirectional hillshade and local relief of the USGS 3DEP elevation service in WGS84. Compared with the NPS Star Fort record and archaeological LiDAR study. Detached siege works and modern paths omitted.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -82.01856481,
+              34.14635253
+            ],
+            [
+              -82.01845888,
+              34.14633871
+            ],
+            [
+              -82.01833146,
+              34.14641087
+            ],
+            [
+              -82.01822246,
+              34.14629419
+            ],
+            [
+              -82.01805665,
+              34.14628651
+            ],
+            [
+              -82.01808889,
+              34.14615909
+            ],
+            [
+              -82.01799985,
+              34.14605009
+            ],
+            [
+              -82.01813188,
+              34.14598408
+            ],
+            [
+              -82.01810885,
+              34.14589504
+            ],
+            [
+              -82.01823474,
+              34.14590732
+            ],
+            [
+              -82.01833299,
+              34.14585358
+            ],
+            [
+              -82.01840515,
+              34.14594723
+            ],
+            [
+              -82.01857402,
+              34.14596258
+            ],
+            [
+              -82.0185817,
+              34.14606391
+            ],
+            [
+              -82.01864925,
+              34.14617444
+            ],
+            [
+              -82.01858016,
+              34.14625274
+            ],
+            [
+              -82.01856481,
+              34.14635253
+            ]
+          ]
+        ]
+      },
+      "position_uncertainty_m": 8,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "bbox": [
+        -82.01864925,
+        34.14585358,
+        -82.01799985,
+        34.14641087
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
     {
       "id": "MICHILIMACKINAC_MAINLAND_STOCKADE",
       "title": "米希利麦基诺克大陆旧堡 · 木栅",
