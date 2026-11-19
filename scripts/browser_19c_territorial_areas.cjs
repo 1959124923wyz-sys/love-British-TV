@@ -1480,6 +1480,38 @@ async function verify() {
   await page.locator('[data-historic-overlap-id$=":sekondi-orange-fort-1800"]')
    .filter({ hasText: /橙堡.*荷方驻地/ }).waitFor();
 
+  const moreeNassau = [5.130398, -1.199809];
+  for (const [year, title] of [[1782, /拿骚堡.*英军攻占/], [1785, /拿骚堡.*荷方实际收回/]]) {
+   await jump(year);
+   await setView([...moreeNassau, 15]);
+   await clickAreaAt(...moreeNassau);
+   await dossierTitle.filter({ hasText: title }).or(page.locator(
+    '[data-overlap-id="18c:GOLD_COAST_MOREE_NASSAU_FORT"] .atlas-18c-overlap-title'
+   ).filter({ hasText: title })).waitFor();
+  }
+  const osuCastle = [5.5467, -0.18272];
+  await jump(1799);
+  await setView([...osuCastle, 15]);
+  await clickAreaAt(...osuCastle);
+  await dossierTitle.filter({ hasText: /奥苏.*王室暂停撤堡令/ }).or(page.locator(
+   '[data-overlap-id="18c:GOLD_COAST_ACCRA_CHRISTIANSBORG"] .atlas-18c-overlap-title'
+  ).filter({ hasText: /奥苏.*王室暂停撤堡令/ })).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await openSeamDossier(osuCastle, 1800, /克里斯蒂安堡.*丹麦驻地延续/);
+
+  const berakuFort = [5.38755, -0.48982];
+  await jump(1799);
+  await setView([...berakuFort, 16]);
+  await clickAreaAt(...berakuFort);
+  await page.locator('[data-overlap-id="18c:GOLD_COAST_BERAKU_GOOD_HOPE_FORT"]')
+   .filter({ hasText: /好望堡.*荷方延续驻地/ }).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...berakuFort);
+  await page.locator('[data-historic-overlap-id$=":beraku-good-hope-fort-1800"]')
+   .filter({ hasText: /好望堡.*荷方驻地/ }).waitFor();
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {
